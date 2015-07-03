@@ -1,0 +1,11 @@
+eclipse/
+bin/
+.gradle/
+gradle/
+build.gradle
+gradlew
+gradlew.bat
+Textures/
+*.jar
+*.exe
+.settings/org.eclipse.jdt.ui.prefs
