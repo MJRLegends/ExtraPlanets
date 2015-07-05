@@ -33,6 +33,11 @@ public class Config {
     public static boolean neptune;
     public static boolean pluto;
     public static boolean eris;
+    
+    public static boolean europa;
+    public static boolean io;
+    public static boolean deimos;
+    public static boolean phobos;
 
     public static int mercuryID;
     public static int venusID;
@@ -106,6 +111,11 @@ public class Config {
 	ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 	mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
 	pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
+	
+	europa = config.get(dimensionsCustom, "Europa", true, "").getBoolean(true);
+	io = config.get(dimensionsCustom, "IO", true, "").getBoolean(true);
+	deimos = config.get(dimensionsCustom, "Deimos", true, "").getBoolean(true);
+	phobos = config.get(dimensionsCustom, "Phobos", true, "").getBoolean(true);
 	
 	venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block!").getBoolean(true);
 	jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block!").getBoolean(true);

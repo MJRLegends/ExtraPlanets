@@ -34,7 +34,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
     @Override
     public boolean canRainOrSnow() {
-	return true;
+	return false;
     }
 
     @Override
