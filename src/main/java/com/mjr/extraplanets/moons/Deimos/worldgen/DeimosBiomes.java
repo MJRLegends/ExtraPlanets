@@ -1,12 +1,14 @@
 package com.mjr.extraplanets.moons.Deimos.worldgen;
 
+import com.mjr.extraplanets.Config;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
 
 public class DeimosBiomes extends BiomeGenBase {
 
-    public static final BiomeGenBase deimos = new BiomeGenDeimos(154).setBiomeName("deimos");
+    public static final BiomeGenBase deimos = new BiomeGenDeimos(Config.deimosBiomeID).setBiomeName("deimos");
 
     @SuppressWarnings("unchecked")
     DeimosBiomes(int var1)

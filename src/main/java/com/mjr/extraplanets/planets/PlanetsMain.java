@@ -45,7 +45,6 @@ public class PlanetsMain {
     public static void init() {
 	initializePlanets();
 	registerPlanets();
-	MoonsMain.init();
     }
 
     private static void initializePlanets() {

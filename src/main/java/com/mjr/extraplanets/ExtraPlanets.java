@@ -64,7 +64,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
-@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = "required-after:GalacticraftCore;")
+@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = "required-after:GalacticraftCore;required-after:GalacticraftMars;")
 public class ExtraPlanets {
 
     @SidedProxy(clientSide = "com.mjr.extraplanets.proxy.ClientProxy", serverSide = "com.mjr.extraplanets.proxy.CommonProxy")
@@ -142,6 +142,7 @@ public class ExtraPlanets {
     @EventHandler
     public void init(FMLInitializationEvent event) {
 	PlanetsMain.init();
+	MoonsMain.init();
 	registerNonMobEntities();
 	registerCreatures();
 	ExtraPlanets.proxy.init(event);
@@ -149,7 +150,6 @@ public class ExtraPlanets {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-	MoonsMain.initializeUnReachableMoons();
 	registerSchematics();
 	addDungeonLoot();
 	Recipes.init();

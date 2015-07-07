@@ -34,6 +34,7 @@ public class Config {
     public static boolean pluto;
     public static boolean eris;
     
+    public static boolean triton;
     public static boolean europa;
     public static boolean io;
     public static boolean deimos;
@@ -48,6 +49,12 @@ public class Config {
     public static int neptuneID;
     public static int plutoID;
     public static int erisID;
+    
+    public static int tritonID;
+    public static int europaID;
+    public static int ioID;
+    public static int deimosID;
+    public static int phobosID;
 
     public static int mercuryBiomeID;
     public static int venusBiomeID;
@@ -58,6 +65,12 @@ public class Config {
     public static int neptuneBiomeID;
     public static int plutoBiomeID;
     public static int erisBiomeID;
+    
+    public static int tritonBiomeID;
+    public static int europaBiomeID;
+    public static int ioBiomeID;
+    public static int deimosBiomeID;
+    public static int phobosBiomeID;
 
     public static int mercuryRocketTier;
     public static int ceresRocketTier;
@@ -91,7 +104,7 @@ public class Config {
     public static void load() {
 	Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
 	config.load();
-
+	
 	config.addCustomCategoryComment(dimensionID, "Change if a dimension ID is causing conflicts!");
 	config.addCustomCategoryComment(biomeID, "Change if a biome ID is causing conflicts!");
 	config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet with all the related items/block!");
@@ -111,7 +124,8 @@ public class Config {
 	ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 	mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
 	pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
-	
+
+	triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
 	europa = config.get(dimensionsCustom, "Europa", true, "").getBoolean(true);
 	io = config.get(dimensionsCustom, "IO", true, "").getBoolean(true);
 	deimos = config.get(dimensionsCustom, "Deimos", true, "").getBoolean(true);
@@ -123,10 +137,16 @@ public class Config {
 	uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block!").getBoolean(true);
 	neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block!").getBoolean(true);
 
-	mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket reqiured", 4).getInt();
-	ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket reqiured", 4).getInt();
-	plutoRocketTier = config.get(dimensionSettings, "Pluto Rocket reqiured", 8).getInt();
-	erisRocketTier = config.get(dimensionSettings, "Eris Rocket reqiured", 8).getInt();
+	mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
+	ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
+	plutoRocketTier = config.get(dimensionSettings, "Pluto Rocket required", 8).getInt();
+	erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 8).getInt();
+	
+//	venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
+//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
+//	saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
+//	uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
+//	neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
 	
 	venusLiquid = config.get(dimensionBlockSettings, "Venus's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
 	jupiterLiquid = config.get(dimensionBlockSettings, "Jupiter's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
@@ -144,6 +164,12 @@ public class Config {
 	plutoID = config.get(dimensionID, "Pluto Dimension ID", -19).getInt();
 	erisID = config.get(dimensionID, "Eris Dimension ID", -21).getInt();
 	
+	ioID = config.get(dimensionID, "Io Dimension ID", -31).getInt();
+	europaID = config.get(dimensionID, "Europa Dimension ID", -34).getInt();
+	phobosID = config.get(dimensionID, "Phobos Dimension ID", -33).getInt();
+	deimosID = config.get(dimensionID, "Deimos Dimension ID", -35).getInt();
+	tritonID = config.get(dimensionID, "Triton Dimension ID", -36).getInt();
+	
 	mercuryBiomeID = config.get(biomeID, "Mercury Biome ID", 148).getInt();
 	venusBiomeID = config.get(biomeID, "Venus Biome ID", 149).getInt();
 	ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();
@@ -153,13 +179,11 @@ public class Config {
 	neptuneBiomeID = config.get(biomeID, "Neptune Biome ID", 153).getInt();
 	plutoBiomeID = config.get(biomeID, "Pluto Biome ID", 154).getInt();
 	erisBiomeID = config.get(biomeID, "Eris Biome ID", 156).getInt();
-	
-	
-//	venusRocketTier = config.get(dimensionSettings, "Venus Rocket reqiured", 3).getInt();
-//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket reqiured", 4).getInt();
-//	saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket reqiured", 5).getInt();
-//	uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket reqiured", 6).getInt();
-//	neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket reqiured", 7).getInt();
+	europaBiomeID = config.get(biomeID, "Europa Biome ID", 157).getInt();
+	ioBiomeID = config.get(biomeID, "Io Biome ID", 158).getInt();
+	deimosBiomeID = config.get(biomeID, "Deimos Biome ID", 159).getInt();
+	phobosBiomeID = config.get(biomeID, "Phobos Biome ID", 160).getInt();
+	tritonBiomeID = config.get(biomeID, "Triton Biome ID", 161).getInt();
 	
 	schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 	schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();

@@ -4,9 +4,11 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
 
+import com.mjr.extraplanets.Config;
+
 public class PhobosBiomes extends BiomeGenBase {
 
-    public static final BiomeGenBase phobos = new BiomeGenPhobos(154).setBiomeName("phobos");
+    public static final BiomeGenBase phobos = new BiomeGenPhobos(Config.phobosBiomeID).setBiomeName("phobos");
 
     @SuppressWarnings("unchecked")
     PhobosBiomes(int var1)

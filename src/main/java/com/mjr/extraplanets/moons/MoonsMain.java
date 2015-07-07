@@ -12,6 +12,7 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.Deimos.TeleportTypeDeimos;
 import com.mjr.extraplanets.moons.Deimos.WorldProviderDeimos;
@@ -21,10 +22,11 @@ import com.mjr.extraplanets.moons.Io.TeleportTypeIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
 import com.mjr.extraplanets.moons.Phobos.TeleportTypePhobos;
 import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
+import com.mjr.extraplanets.moons.triton.TeleportTypeTriton;
+import com.mjr.extraplanets.moons.triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.PlanetsMain;
 
 public class MoonsMain {
-
     public static Moon triton;
 
     public static Moon callisto;
@@ -45,6 +47,7 @@ public class MoonsMain {
     public static void init() {
 	initializeMoons();
 	registerMoons();
+	initializeUnReachableMoons();
     }
 
     public static void initializeUnReachableMoons() {
@@ -89,91 +92,99 @@ public class MoonsMain {
     }
 
     private static void initializeMoons() {
-	europa = new Moon("europa").setParentPlanet(PlanetsMain.jupiter);
-	europa.setPhaseShift(2.436F);
-	europa.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-	europa.setRelativeOrbitTime(100.0F);
-	europa.setTierRequired(7);
-	europa.setRelativeSize(0.3867F);
-	europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-		.atmosphereComponent(IAtmosphericGas.METHANE);
-	europa.setBodyIcon(new ResourceLocation("textures/gui/celestialbodies/europa.png"));
-	europa.setDimensionInfo(19, WorldProviderEuropa.class);
-
-	io = new Moon("io").setParentPlanet(PlanetsMain.jupiter);
-	io.setPhaseShift(2.436F);
-	io.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-	io.setRelativeOrbitTime(100.0F);
-	io.setTierRequired(7);
-	io.setRelativeSize(0.3867F);
-	io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-		.atmosphereComponent(IAtmosphericGas.METHANE);
-	io.setBodyIcon(new ResourceLocation("textures/gui/celestialbodies/io.png"));
-	io.setDimensionInfo(19, WorldProviderIo.class);
-
-	deimos = new Moon("deimos").setParentPlanet(MarsModule.planetMars);
-	deimos.setPhaseShift(2.436F);
-	deimos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-	deimos.setRelativeOrbitTime(100.0F);
-	deimos.setTierRequired(7);
-	deimos.setRelativeSize(0.3867F);
-	deimos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-		.atmosphereComponent(IAtmosphericGas.METHANE);
-	deimos.setBodyIcon(new ResourceLocation("textures/gui/celestialbodies/deimos.png"));
-	deimos.setDimensionInfo(19, WorldProviderDeimos.class);
-
-	phobos = new Moon("phobos").setParentPlanet(MarsModule.planetMars);
-	phobos.setPhaseShift(2.436F);
-	phobos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-	phobos.setRelativeOrbitTime(100.0F);
-	phobos.setTierRequired(7);
-	phobos.setRelativeSize(0.3867F);
-	deimos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-		.atmosphereComponent(IAtmosphericGas.METHANE);
-	phobos.setBodyIcon(new ResourceLocation("textures/gui/celestialbodies/phobos.png"));
-	phobos.setDimensionInfo(19, WorldProviderPhobos.class);
-
-	// triton = new Moon("Triton").setParentPlanet(neptune);
-	// triton.setPhaseShift(2.436F);
-	// triton.setRelativeDistanceFromCenter(new
-	// CelestialBody.ScalableDistance(9F, 9F));
-	// triton.setRelativeOrbitTime(100.0F);
-	// triton.setTierRequired(7);
-	// triton.setRelativeSize(0.3867F);
-	// triton.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-	// triton.setBodyIcon(new
-	// ResourceLocation("textures/gui/celestialbodies/triton.png"));
-	// triton.setDimensionInfo(19, WorldProviderTriton.class);
-
+	if (Config.triton) {
+	    triton = new Moon("Triton").setParentPlanet(PlanetsMain.neptune);
+	    triton.setPhaseShift(2.436F);
+	    triton.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
+	    triton.setRelativeOrbitTime(100.0F);
+	    triton.setTierRequired(7);
+	    triton.setRelativeSize(0.3867F);
+	    triton.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
+	    triton.setBodyIcon(new ResourceLocation("textures/gui/celestialbodies/triton.png"));
+	    triton.setDimensionInfo(Config.tritonID, WorldProviderTriton.class);
+	}
+	if (Config.europa) {
+	    europa = new Moon("europa").setParentPlanet(PlanetsMain.jupiter);
+	    europa.setPhaseShift(2.436F);
+	    europa.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
+	    europa.setRelativeOrbitTime(100.0F);
+	    europa.setTierRequired(4);
+	    europa.setRelativeSize(0.3867F);
+	    europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
+	    europa.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
+	    europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
+	}
+	if (Config.io) {
+	    io = new Moon("io").setParentPlanet(PlanetsMain.jupiter);
+	    io.setPhaseShift(2.436F);
+	    io.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
+	    io.setRelativeOrbitTime(100.0F);
+	    io.setTierRequired(4);
+	    io.setRelativeSize(0.3867F);
+	    io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
+	    io.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
+	    io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
+	}
+	if (Config.deimos) {
+	    deimos = new Moon("deimos").setParentPlanet(MarsModule.planetMars);
+	    deimos.setPhaseShift(2.436F);
+	    deimos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
+	    deimos.setRelativeOrbitTime(100.0F);
+	    deimos.setTierRequired(2);
+	    deimos.setRelativeSize(0.3867F);
+	    deimos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
+	    deimos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/deimos.png"));
+	    deimos.setDimensionInfo(Config.deimosID, WorldProviderDeimos.class);
+	}
+	if (Config.phobos) {
+	    phobos = new Moon("phobos").setParentPlanet(MarsModule.planetMars);
+	    phobos.setPhaseShift(2.436F);
+	    phobos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
+	    phobos.setRelativeOrbitTime(100.0F);
+	    phobos.setTierRequired(2);
+	    phobos.setRelativeSize(0.3867F);
+	    phobos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
+	    phobos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/phobos.png"));
+	    phobos.setDimensionInfo(Config.phobosID, WorldProviderPhobos.class);
+	}
     }
 
     private static void registerMoons() {
-	// GalaxyRegistry.registerMoon(triton);
-	// GalacticraftRegistry.registerTeleportType(WorldProviderTriton.class,
-	// new TeleportTypeTriton());
-	// GalacticraftRegistry.registerRocketGui(WorldProviderTriton.class, new
-	// ResourceLocation(Constants.ASSET_PREFIX,
-	// "textures/gui/tritonRocketGui.png"));
-
-	GalaxyRegistry.registerMoon(europa);
-	GalacticraftRegistry.registerTeleportType(WorldProviderEuropa.class, new TeleportTypeEuropa());
-	GalacticraftRegistry.registerRocketGui(WorldProviderEuropa.class, new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/gui/europaRocketGui.png"));
-	
-	GalaxyRegistry.registerMoon(io);
-	GalacticraftRegistry.registerTeleportType(WorldProviderIo.class, new TeleportTypeIo());
-	GalacticraftRegistry.registerRocketGui(WorldProviderIo.class, new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/gui/ioRocketGui.png"));
-	
-	GalaxyRegistry.registerMoon(deimos);
-	GalacticraftRegistry.registerTeleportType(WorldProviderDeimos.class, new TeleportTypeDeimos());
-	GalacticraftRegistry.registerRocketGui(WorldProviderDeimos.class, new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/gui/deimosRocketGui.png"));
-	
-	GalaxyRegistry.registerMoon(phobos);
-	GalacticraftRegistry.registerTeleportType(WorldProviderPhobos.class, new TeleportTypePhobos());
-	GalacticraftRegistry.registerRocketGui(WorldProviderPhobos.class, new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/gui/phobosRocketGui.png"));
+	if (Config.triton) {
+	    GalaxyRegistry.registerMoon(triton);
+	    GalacticraftRegistry.registerTeleportType(WorldProviderTriton.class, new TeleportTypeTriton());
+	    GalacticraftRegistry.registerRocketGui(WorldProviderTriton.class, new ResourceLocation(Constants.ASSET_PREFIX,
+		    "textures/gui/tritonRocketGui.png"));
+	}
+	if (Config.europa) {
+	    GalaxyRegistry.registerMoon(europa);
+	    GalacticraftRegistry.registerTeleportType(WorldProviderEuropa.class, new TeleportTypeEuropa());
+	    GalacticraftRegistry.registerRocketGui(WorldProviderEuropa.class, new ResourceLocation(Constants.ASSET_PREFIX,
+		    "textures/gui/europaRocketGui.png"));
+	}
+	if (Config.io) {
+	    GalaxyRegistry.registerMoon(io);
+	    GalacticraftRegistry.registerTeleportType(WorldProviderIo.class, new TeleportTypeIo());
+	    GalacticraftRegistry.registerRocketGui(WorldProviderIo.class, new ResourceLocation(Constants.ASSET_PREFIX,
+		    "textures/gui/ioRocketGui.png"));
+	}
+	if (Config.deimos) {
+	    GalaxyRegistry.registerMoon(deimos);
+	    GalacticraftRegistry.registerTeleportType(WorldProviderDeimos.class, new TeleportTypeDeimos());
+	    GalacticraftRegistry.registerRocketGui(WorldProviderDeimos.class, new ResourceLocation(Constants.ASSET_PREFIX,
+		    "textures/gui/deimosRocketGui.png"));
+	}
+	if (Config.phobos) {
+	    GalaxyRegistry.registerMoon(phobos);
+	    GalacticraftRegistry.registerTeleportType(WorldProviderPhobos.class, new TeleportTypePhobos());
+	    GalacticraftRegistry.registerRocketGui(WorldProviderPhobos.class, new ResourceLocation(Constants.ASSET_PREFIX,
+		    "textures/gui/phobosRocketGui.png"));
+	}
     }
 
     private static Moon makeUnreachableMoon(String name, Planet parent) {

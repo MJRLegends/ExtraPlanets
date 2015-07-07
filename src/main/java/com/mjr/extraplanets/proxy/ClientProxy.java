@@ -223,7 +223,8 @@ public class ClientProxy extends CommonProxy {
 	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX,
 		"textures/model/treasureT8.png")));
     }
-
+    
+    @SideOnly(Side.CLIENT)
     public static int getBlockRender(Block blockID) {
 	if (blockID == ExtraPlanetsBlocks.advancedRefinery) {
 	    return ClientProxy.renderIdMachine;
@@ -231,6 +232,7 @@ public class ClientProxy extends CommonProxy {
 	return -1;
     }
     
+    @SideOnly(Side.CLIENT)
     public static void registerTileEntityRenderers()
     {
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());

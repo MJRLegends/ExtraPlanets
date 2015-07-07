@@ -1,12 +1,14 @@
 package com.mjr.extraplanets.moons.Io.worldgen;
 
+import com.mjr.extraplanets.Config;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
 
 public class IoBiomes extends BiomeGenBase {
 
-    public static final BiomeGenBase io = new BiomeGenIo(154).setBiomeName("io");
+    public static final BiomeGenBase io = new BiomeGenIo(Config.ioBiomeID).setBiomeName("io");
 
     @SuppressWarnings("unchecked")
     IoBiomes(int var1)

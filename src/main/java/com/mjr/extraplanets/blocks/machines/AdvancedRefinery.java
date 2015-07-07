@@ -51,6 +51,7 @@ public class AdvancedRefinery extends BlockAdvancedTile implements ItemBlockDesc
 
 
     @Override
+    @SideOnly(Side.CLIENT)
     public int getRenderType()
     {
 	return ClientProxy.getBlockRender(this);
