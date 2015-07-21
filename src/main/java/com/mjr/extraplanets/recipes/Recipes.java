@@ -15,7 +15,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.armor.ExtraPlanetsArmor;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
-import com.mjr.extraplanets.tools.ExtraPlanetsTools;
+import com.mjr.extraplanets.items.tools.ExtraPlanetsTools;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

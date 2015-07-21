@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.worldGen;
+package com.mjr.extraplanets.worldGen.features;
 
 import java.util.Random;
 
@@ -10,12 +10,12 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class WorldGenCustomLakes extends WorldGenerator
+public class WorldGenCustomLake extends WorldGenerator
 {
     private Block field_150556_a;
     private static final String __OBFID = "CL_00000418";
 
-    public WorldGenCustomLakes(Block p_i45455_1_)
+    public WorldGenCustomLake(Block p_i45455_1_)
     {
 	this.field_150556_a = p_i45455_1_;
     }

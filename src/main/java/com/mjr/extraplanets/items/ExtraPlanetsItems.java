@@ -134,7 +134,12 @@ public class ExtraPlanetsItems {
     public static Item nitrogen_bucket;
     public static Item frozen_water_bucket;
     public static Item salt_bucket;
+    
+    public static Item cannedFood;
+    public static Item diamondApple;
 
+    public static Item bodyParts;
+    
     public static void init() {
 	initializeItems();
 	registerItems();
@@ -219,6 +224,10 @@ public class ExtraPlanetsItems {
 	nitrogen_bucket = new BasicItemBucket("bucket_nitrogen", ExtraPlanetsFluids.nitrogen);
 	frozen_water_bucket = new BasicItemBucket("bucket_frozen_water", ExtraPlanetsFluids.frozen_water);
 	salt_bucket = new BasicItemBucket("bucket_salt", ExtraPlanetsFluids.salt);
+	
+	cannedFood = new CannedFood("cannedfood");
+	diamondApple = new ItemAppleDiamond(8, 2.2F, false);
+	bodyParts = new ItemBodyParts();
     }
 
     private static void registerItems() {
@@ -298,6 +307,10 @@ public class ExtraPlanetsItems {
 	GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 	GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
 	GameRegistry.registerItem(salt_bucket, "bucket_salt");
+	
+	GameRegistry.registerItem(cannedFood, "cannedFood");
+	GameRegistry.registerItem(diamondApple, "diamondApple");
+	GameRegistry.registerItem(bodyParts, "bodyParts");
     }
 
     private static void registerFluidContainer() {

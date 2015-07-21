@@ -10,7 +10,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
-import com.mjr.extraplanets.worldGen.WorldGenCustomLakes;
+import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
 public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 
@@ -57,7 +57,7 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 		// int y = this.rand.nextInt(16) + 16;
 		int z = this.chunkZ + this.rand.nextInt(16) + 8;
 		int y = this.currentWorld.getHeightValue(x, z);
-		new WorldGenCustomLakes(ExtraPlanetsFluids.nitrogen).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.neptuneStone);
+		new WorldGenCustomLake(ExtraPlanetsFluids.nitrogen).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.neptuneStone);
 	    }
 	}
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

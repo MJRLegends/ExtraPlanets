@@ -10,8 +10,8 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
-import com.mjr.extraplanets.worldGen.WorldGenCustomIceSpike;
-import com.mjr.extraplanets.worldGen.WorldGenCustomLakes;
+import com.mjr.extraplanets.worldGen.features.WorldGenCustomIceSpike;
+import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
 public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
@@ -66,7 +66,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 		// int y = this.rand.nextInt(16) + 16;
 		int z = this.chunkZ + this.rand.nextInt(16) + 8;
 		int y = this.currentWorld.getHeightValue(x, z);
-		new WorldGenCustomLakes(ExtraPlanetsFluids.frozen_water).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.uranusStone);
+		new WorldGenCustomLake(ExtraPlanetsFluids.frozen_water).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.uranusStone);
 	    }
 	}
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

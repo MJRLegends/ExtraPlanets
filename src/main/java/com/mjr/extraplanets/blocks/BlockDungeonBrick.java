@@ -7,9 +7,9 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class DungeonBlock extends Block{
+public class BlockDungeonBrick extends Block{
 
-    protected DungeonBlock(Material material) {
+    protected BlockDungeonBrick(Material material) {
 	super(material);
 	this.setCreativeTab(ExtraPlanets.BlocksTab);
     }

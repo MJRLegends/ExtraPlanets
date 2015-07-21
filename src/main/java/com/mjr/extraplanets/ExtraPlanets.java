@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,6 +22,7 @@ import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
+import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
@@ -33,6 +35,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.items.tools.ExtraPlanetsTools;
 import com.mjr.extraplanets.moons.MoonsMain;
 import com.mjr.extraplanets.planets.PlanetsMain;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
@@ -52,7 +55,6 @@ import com.mjr.extraplanets.schematic.SchematicTier5Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier7Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier8Rocket;
-import com.mjr.extraplanets.tools.ExtraPlanetsTools;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -158,11 +160,13 @@ public class ExtraPlanets {
     }
 
     private void registerNonMobEntities() {
-	registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "Tier4Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "Tier5Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "Tier6Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "Tier7Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "Tier8Rocket", 150, 1, false);
+	registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, "NuclearBombPrimed", 150, 1, true);
+
+	registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "EntityTier4RocketTier4Rocket", 150, 1, false);
+	registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "EntityTier4RocketTier5Rocket", 150, 1, false);
+	registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "EntityTier4RocketTier6Rocket", 150, 1, false);
+	registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "EntityTier4RocketTier7Rocket", 150, 1, false);
+	registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "EntityTier4RocketTier8Rocket", 150, 1, false);
     }
 
     private void registerCreatures() {

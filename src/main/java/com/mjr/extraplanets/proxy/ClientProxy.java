@@ -31,6 +31,7 @@ import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedPowerSkeleton;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedRedCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedWitch;
+import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderTier4Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier5Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier6Rocket;
@@ -54,6 +55,7 @@ import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
+import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
@@ -114,6 +116,7 @@ public class ClientProxy extends CommonProxy {
 	FMLCommonHandler.instance().bus().register(new NeptuneHandlerClient());
 	FMLCommonHandler.instance().bus().register(new PlutoHandlerClient());
 	FMLCommonHandler.instance().bus().register(new ErisHandlerClient());
+	RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
     }
 
     @Override
@@ -143,7 +146,6 @@ public class ClientProxy extends CommonProxy {
 	RenderingRegistry.registerEntityRenderingHandler(EntityBlueCreeper.class, new RenderEvolvedBlueCreeper());
 	RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedRedCreeper.class, new RenderEvolvedRedCreeper());
 	RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedPowerSkeleton.class, new RenderEvolvedPowerSkeleton());
-
 	// RenderingRegistry.registerEntityRenderingHandler(
 	// EvolvedIceBlaze.class, new RenderEvolvedIceBlaze());
 	// RenderingRegistry.registerEntityRenderingHandler(
@@ -223,7 +225,7 @@ public class ClientProxy extends CommonProxy {
 	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX,
 		"textures/model/treasureT8.png")));
     }
-    
+
     @SideOnly(Side.CLIENT)
     public static int getBlockRender(Block blockID) {
 	if (blockID == ExtraPlanetsBlocks.advancedRefinery) {
@@ -231,10 +233,9 @@ public class ClientProxy extends CommonProxy {
 	}
 	return -1;
     }
-    
+
     @SideOnly(Side.CLIENT)
-    public static void registerTileEntityRenderers()
-    {
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
+    public static void registerTileEntityRenderers() {
+	ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
     }
 }

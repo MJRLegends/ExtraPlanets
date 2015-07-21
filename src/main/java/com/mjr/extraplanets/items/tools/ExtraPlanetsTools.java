@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tools;
+package com.mjr.extraplanets.items.tools;
 
 import com.mjr.extraplanets.Config;
 
