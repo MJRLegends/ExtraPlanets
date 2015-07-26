@@ -1,0 +1,44 @@
+package com.mjr.extraplanets.blocks;
+
+import java.util.Random;
+
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.items.ItemBodyParts;
+
+import net.minecraft.block.material.Material;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+public class BlockFossil extends BlockBasic {
+
+    int randomItem = 0;
+    protected BlockFossil(Material material) {
+	super(material);
+    }
+
+    @Override
+    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
+	Random random = new Random();
+	int itemRandom = random.nextInt((2 - 0) + 1) + 0;
+	this.randomItem = itemRandom;
+	switch (itemRandom) {
+	case 0:
+	    return Items.bone;
+	case 1:
+	    return ExtraPlanetsItems.bodyParts;
+	case 2:
+	    return ExtraPlanetsItems.bodyParts;
+	default:
+	    return Items.bone;
+	}
+    }
+    @Override
+    public int damageDropped(int p_149692_1_){
+	if(randomItem == 1)
+	    return 0;
+	else
+	    return 1;
+    }
+}
