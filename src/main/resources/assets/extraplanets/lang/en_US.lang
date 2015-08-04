@@ -294,6 +294,8 @@ item.crystalChest.name=Crystal Chestplate
 item.crystalLegings.name=Crystal Leggings
 item.crystalBoots.name=Crystal Boots
 
+item.appleDiamond.name=Diamond Apple
+
 schematic.tier4.rocket.name=Tier 4 Rocket
 schematic.tier5.rocket.name=Tier 5 Rocket
 schematic.tier6.rocket.name=Tier 6 Rocket
