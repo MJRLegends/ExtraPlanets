@@ -44,7 +44,6 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
 
-import com.mjr.extraplanets.Achievements;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 
@@ -294,7 +293,7 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 	    @SuppressWarnings("unchecked")
 	    List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(
 		    this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX()
-			    + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(),
+		    + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(),
 		    this.roomCoords.intZ() + this.roomSize.intZ()));
 
 	    this.entitiesWithin = entitiesWithin.size();
@@ -303,8 +302,8 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 		@SuppressWarnings("unchecked")
 		List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(
 			this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX()
-				+ this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ()
-				+ this.roomSize.intZ() + 10));
+			+ this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ()
+			+ this.roomSize.intZ() + 10));
 
 		for (EntityPlayer p : entitiesWithin2) {
 		    p.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.skeletonBoss.message")));

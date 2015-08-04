@@ -184,44 +184,44 @@ item.noseConeTier6.name=Tier 6 Nose Cone
 item.noseConeTier7.name=Tier 7 Nose Cone
 item.noseConeTier8.name=Tier 8 Nose Cone
 
-item.rocketFinsT4.name=Tier 4 Rocket Fins
-item.rocketFinsT5.name=Tier 5 Rocket Fins
-item.rocketFinsT6.name=Tier 6 Rocket Fins
-item.rocketFinsT7.name=Tier 7 Rocket Fins
-item.rocketFinsT8.name=Tier 8 Rocket Fins
+item.tier4.tier4Fin.name=Tier 4 Rocket Fins
+item.tier5.tier5Fin.name=Tier 5 Rocket Fins
+item.tier6.tier6Fin.name=Tier 6 Rocket Fins
+item.tier7.tier7Fin.name=Tier 7 Rocket Fins
+item.tier8.tier8Fin.name=Tier 8 Rocket Fins
 
-item.engine.tier4engine.name=Tier 4 Rocket Engine
-item.engine.tier5engine.name=Tier 5 Rocket Engine
-item.engine.tier6engine.name=Tier 6 Rocket Engine
-item.engine.tier7engine.name=Tier 7 Rocket Engine
-item.engine.tier8engine.name=Tier 8 Rocket Engine
+item.tier4.tier4engine.name=Tier 4 Rocket Engine
+item.tier5.tier5engine.name=Tier 5 Rocket Engine
+item.tier6.tier6engine.name=Tier 6 Rocket Engine
+item.tier7.tier7engine.name=Tier 7 Rocket Engine
+item.tier8.tier8engine.name=Tier 8 Rocket Engine
 
-item.engine.tier4booster.name=Tier 4 Booster
-item.engine.tier5booster.name=Tier 5 Booster
-item.engine.tier6booster.name=Tier 6 Booster
-item.engine.tier7booster.name=Tier 7 Booster
-item.engine.tier8booster.name=Tier 8 Booster
+item.tier4.tier4booster.name=Tier 4 Booster
+item.tier5.tier5booster.name=Tier 5 Booster
+item.tier6.tier6booster.name=Tier 6 Booster
+item.tier7.tier7booster.name=Tier 7 Booster
+item.tier8.tier8booster.name=Tier 8 Booster
 
-item.reinforcedPlateT4.name=Heavy-Duty Plate
-item.reinforcedPlateT5.name=Heavy-Duty Plate
-item.reinforcedPlateT6.name=Heavy-Duty Plate
-item.reinforcedPlateT7.name=Heavy-Duty Plate
-item.reinforcedPlateT8.name=Heavy-Duty Plate
+item.tier4.tier4HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier5.tier5HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier6.tier6HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier7.tier7HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier8.tier8HeavyDutyPlate.name=Heavy-Duty Plate
 
-item.compressedCarbon.name=Compressed Carbon
-item.compressedPalladium.name=Compressed Palladium
-item.compressedMagnesium.name=Compressed Magnesium
-item.compressedReinforcedCrystal.name=Compressed Reinforced Crystal
-item.compressedCrystal.name=Compressed Crystal
+item.tier4.compressedCarbon.name=Compressed Carbon
+item.tier5.compressedPalladium.name=Compressed Palladium
+item.tier6.compressedMagnesium.name=Compressed Magnesium
+item.tier7.compressedReinforcedCrystal.name=Compressed Reinforced Crystal
+item.tier7.compressedCrystal.name=Compressed Crystal
 
 item.compressedZinc.name=Compressed Zinc
 item.compressedNickel.name=Compressed Nickel
 item.compressedMercury.name=Compressed Mercury
 
-item.ingotCarbon.name=Carbon Ingot
-item.ingotPalladium.name=Palladium Ingot
-item.ingotMagnesium.name=Magnesium Ingot
-item.ingotCrystal.name=Crystal Ingot
+item.tier4.ingotCarbon.name=Carbon Ingot
+item.tier5.ingotPalladium.name=Palladium Ingot
+item.tier6.ingotMagnesium.name=Magnesium Ingot
+item.tier7.ingotCrystal.name=Crystal Ingot
 
 item.ingotZinc.name=Zinc Ingot
 item.ingotNickel.name=Nickel Ingot

@@ -36,7 +36,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IPacketReceiver, IDisableableMachine,
-	IInventory, ISidedInventory, IConnector {
+IInventory, ISidedInventory, IConnector {
     @NetworkedField(targetSide = Side.CLIENT)
     public int solarStrength = 0;
     public float targetAngle;

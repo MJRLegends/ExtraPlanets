@@ -324,76 +324,76 @@ public class SkyProviderVenus extends IRenderHandler
 
     private void renderStars()
     {
-        final Random rand = new Random(10842L);
-        final Tessellator var2 = Tessellator.instance;
-        var2.startDrawingQuads();
+	final Random rand = new Random(10842L);
+	final Tessellator var2 = Tessellator.instance;
+	var2.startDrawingQuads();
 
-        for (int starIndex = 0; starIndex < (ConfigManagerCore.moreStars ? 35000 : 6000); ++starIndex)
-        {
-            double var4 = rand.nextFloat() * 2.0F - 1.0F;
-            double var6 = rand.nextFloat() * 2.0F - 1.0F;
-            double var8 = rand.nextFloat() * 2.0F - 1.0F;
-            final double var10 = 0.15F + rand.nextFloat() * 0.1F;
-            double var12 = var4 * var4 + var6 * var6 + var8 * var8;
+	for (int starIndex = 0; starIndex < (ConfigManagerCore.moreStars ? 35000 : 6000); ++starIndex)
+	{
+	    double var4 = rand.nextFloat() * 2.0F - 1.0F;
+	    double var6 = rand.nextFloat() * 2.0F - 1.0F;
+	    double var8 = rand.nextFloat() * 2.0F - 1.0F;
+	    final double var10 = 0.15F + rand.nextFloat() * 0.1F;
+	    double var12 = var4 * var4 + var6 * var6 + var8 * var8;
 
-            if (var12 < 1.0D && var12 > 0.01D)
-            {
-                var12 = 1.0D / Math.sqrt(var12);
-                var4 *= var12;
-                var6 *= var12;
-                var8 *= var12;
-                final double var14 = var4 * (ConfigManagerCore.moreStars ? rand.nextDouble() * 150D + 130D : 100.0D);
-                final double var16 = var6 * (ConfigManagerCore.moreStars ? rand.nextDouble() * 150D + 130D : 100.0D);
-                final double var18 = var8 * (ConfigManagerCore.moreStars ? rand.nextDouble() * 150D + 130D : 100.0D);
-                final double var20 = Math.atan2(var4, var8);
-                final double var22 = Math.sin(var20);
-                final double var24 = Math.cos(var20);
-                final double var26 = Math.atan2(Math.sqrt(var4 * var4 + var8 * var8), var6);
-                final double var28 = Math.sin(var26);
-                final double var30 = Math.cos(var26);
-                final double var32 = rand.nextDouble() * Math.PI * 2.0D;
-                final double var34 = Math.sin(var32);
-                final double var36 = Math.cos(var32);
+	    if (var12 < 1.0D && var12 > 0.01D)
+	    {
+		var12 = 1.0D / Math.sqrt(var12);
+		var4 *= var12;
+		var6 *= var12;
+		var8 *= var12;
+		final double var14 = var4 * (ConfigManagerCore.moreStars ? rand.nextDouble() * 150D + 130D : 100.0D);
+		final double var16 = var6 * (ConfigManagerCore.moreStars ? rand.nextDouble() * 150D + 130D : 100.0D);
+		final double var18 = var8 * (ConfigManagerCore.moreStars ? rand.nextDouble() * 150D + 130D : 100.0D);
+		final double var20 = Math.atan2(var4, var8);
+		final double var22 = Math.sin(var20);
+		final double var24 = Math.cos(var20);
+		final double var26 = Math.atan2(Math.sqrt(var4 * var4 + var8 * var8), var6);
+		final double var28 = Math.sin(var26);
+		final double var30 = Math.cos(var26);
+		final double var32 = rand.nextDouble() * Math.PI * 2.0D;
+		final double var34 = Math.sin(var32);
+		final double var36 = Math.cos(var32);
 
-                for (int var38 = 0; var38 < 4; ++var38)
-                {
-                    final double var39 = 0.0D;
-                    final double var41 = ((var38 & 2) - 1) * var10;
-                    final double var43 = ((var38 + 1 & 2) - 1) * var10;
-                    final double var47 = var41 * var36 - var43 * var34;
-                    final double var49 = var43 * var36 + var41 * var34;
-                    final double var53 = var47 * var28 + var39 * var30;
-                    final double var55 = var39 * var28 - var47 * var30;
-                    final double var57 = var55 * var22 - var49 * var24;
-                    final double var61 = var49 * var22 + var55 * var24;
-                    var2.addVertex(var14 + var57, var16 + var53, var18 + var61);
-                }
-            }
-        }
+		for (int var38 = 0; var38 < 4; ++var38)
+		{
+		    final double var39 = 0.0D;
+		    final double var41 = ((var38 & 2) - 1) * var10;
+		    final double var43 = ((var38 + 1 & 2) - 1) * var10;
+		    final double var47 = var41 * var36 - var43 * var34;
+		    final double var49 = var43 * var36 + var41 * var34;
+		    final double var53 = var47 * var28 + var39 * var30;
+		    final double var55 = var39 * var28 - var47 * var30;
+		    final double var57 = var55 * var22 - var49 * var24;
+		    final double var61 = var49 * var22 + var55 * var24;
+		    var2.addVertex(var14 + var57, var16 + var53, var18 + var61);
+		}
+	    }
+	}
 
-        var2.draw();
+	var2.draw();
     }
 
     private Vec3 getCustomSkyColor()
     {
-        return Vec3.createVectorHelper(0.26796875D, 0.1796875D, 0.0D);
+	return Vec3.createVectorHelper(0.26796875D, 0.1796875D, 0.0D);
     }
 
     public float getSkyBrightness(float par1)
     {
-        final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
-        float var3 = 1.0F - (MathHelper.sin(var2 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
+	final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
+	float var3 = 1.0F - (MathHelper.sin(var2 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
 
-        if (var3 < 0.0F)
-        {
-            var3 = 0.0F;
-        }
+	if (var3 < 0.0F)
+	{
+	    var3 = 0.0F;
+	}
 
-        if (var3 > 1.0F)
-        {
-            var3 = 1.0F;
-        }
+	if (var3 > 1.0F)
+	{
+	    var3 = 1.0F;
+	}
 
-        return var3 * var3 * 1F;
+	return var3 * var3 * 1F;
     }
 }

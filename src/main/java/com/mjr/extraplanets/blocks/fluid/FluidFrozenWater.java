@@ -26,6 +26,7 @@ public class FluidFrozenWater extends FluidBasic {
 	}
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
 	super.randomDisplayTick(world, x, y, z, rand);
@@ -50,10 +51,12 @@ public class FluidFrozenWater extends FluidBasic {
 	}
     }
 
+    @Override
     public String getStillTextures() {
 	return Constants.TEXTURE_PREFIX + "frozen_water_still";
     }
 
+    @Override
     public String getFlowingTextures() {
 	return Constants.TEXTURE_PREFIX + "frozen_water_flow";
     }

@@ -55,7 +55,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 	this.generateOre(20, this.palladiumGen, 0, 64);
 	this.generateOre(20, this.nickelGen, 0, 64);
 	this.generateOre(15, this.gravelGen, 0, 80);
-	
+
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	for (int i = 0; i < this.LakesPerChunk; i++) {
 	    if (this.rand.nextInt(10) == 0) {

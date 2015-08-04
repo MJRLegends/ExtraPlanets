@@ -27,6 +27,7 @@ public abstract class FluidBasic extends BlockFluidClassic {
 	this.fluid = fluid;
     }
 
+    @Override
     public boolean canDisplace(IBlockAccess world, int x, int y, int z) {
 	if (world.getBlock(x, y, z).getMaterial().isLiquid()) {
 	    return false;
@@ -37,6 +38,7 @@ public abstract class FluidBasic extends BlockFluidClassic {
 	return super.canDisplace(world, x, y, z);
     }
 
+    @Override
     public boolean displaceIfPossible(World world, int x, int y, int z) {
 	if (world.getBlock(x, y, z).getMaterial().isLiquid()) {
 	    return false;
@@ -47,6 +49,7 @@ public abstract class FluidBasic extends BlockFluidClassic {
 	return super.displaceIfPossible(world, x, y, z);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
 	this.stillIcon = iconRegister.registerIcon(getStillTextures());

@@ -479,7 +479,7 @@ public class ExtraPlanetsBlocks {
 	erisGravel = new BlockCustomGravel("erisGravel");
 
 	nuclearBomb = new BlockNuclearBomb();
-	
+
 	fossil = new BlockFossil(Material.rock);
     }
 
@@ -625,7 +625,7 @@ public class ExtraPlanetsBlocks {
 		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterDungeonBrick").setHardness(4.0F).setResistance(40.0F)
 		    .setStepSound(Block.soundTypeMetal);
 	    jupiterDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
-							       // // 2
+	    // // 2
 	}
 	if (Config.saturn) {
 	    saturnDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("saturnDungeonBrick")

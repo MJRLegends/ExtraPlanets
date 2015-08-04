@@ -1,17 +1,10 @@
 package com.mjr.extraplanets.planets.KuiperBelt;
 
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
-import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
-import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;
-import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.WorldServer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.PlanetsMain;
 
 import cpw.mods.fml.client.FMLClientHandler;
@@ -20,30 +13,30 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class KuiperBeltEvents {
-//    @SubscribeEvent
-//    public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-//	if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
-//	    if (event.entity instanceof EntityPlayer) {
-//		event.setCanceled(false);
-//	    } else {
-//		if (Config.mobSuffocation)
-//		    event.setCanceled(false);
-//		else
-//		    event.setCanceled(true);
-//	    }
-//	}
-//    }
-//
-//    @SubscribeEvent
-//    public void GCCoreEventWakePlayer(EventWakePlayer event) {
-//	if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
-//	    event.entityPlayer.heal(5.0F);
-//
-//	    for (WorldServer worldServer : MinecraftServer.getServer().worldServers) {
-//		worldServer.setWorldTime(0);
-//	    }
-//	}
-//    }
+    //    @SubscribeEvent
+    //    public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
+    //	if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
+    //	    if (event.entity instanceof EntityPlayer) {
+    //		event.setCanceled(false);
+    //	    } else {
+    //		if (Config.mobSuffocation)
+    //		    event.setCanceled(false);
+    //		else
+    //		    event.setCanceled(true);
+    //	    }
+    //	}
+    //    }
+    //
+    //    @SubscribeEvent
+    //    public void GCCoreEventWakePlayer(EventWakePlayer event) {
+    //	if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
+    //	    event.entityPlayer.heal(5.0F);
+    //
+    //	    for (WorldServer worldServer : MinecraftServer.getServer().worldServers) {
+    //		worldServer.setWorldTime(0);
+    //	    }
+    //	}
+    //    }
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent

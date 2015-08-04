@@ -2,22 +2,16 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
-import com.mjr.extraplanets.Constants;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
+
 import com.mjr.extraplanets.ExtraPlanets;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import micdoodle8.mods.galacticraft.core.items.GCItems;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 
 public class ItemBodyParts extends Item {
     public static final String[] names = { "arm", "leg"};
@@ -26,60 +20,60 @@ public class ItemBodyParts extends Item {
 
     public ItemBodyParts()
     {
-        super();
-        this.setMaxDamage(0);
-        this.setHasSubtypes(true);
-        this.setUnlocalizedName("bodyparts");
+	super();
+	this.setMaxDamage(0);
+	this.setHasSubtypes(true);
+	this.setUnlocalizedName("bodyparts");
     }
 
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return ExtraPlanets.ItemsTab;
+	return ExtraPlanets.ItemsTab;
     }
 
-   
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconRegister)
     {
-        int i = 0;
+	int i = 0;
 
-        for (final String name : ItemBodyParts.names)
-        {
-            this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
-        }
+	for (final String name : ItemBodyParts.names)
+	{
+	    this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
+	}
     }
     @Override
     public String getUnlocalizedName(ItemStack itemStack)
     {
-        return this.getUnlocalizedName() + "." + ItemBodyParts.names[itemStack.getItemDamage()];
+	return this.getUnlocalizedName() + "." + ItemBodyParts.names[itemStack.getItemDamage()];
     }
-    
+
     @Override
     public IIcon getIconFromDamage(int damage)
     {
-        if (this.icons.length > damage)
-        {
-            return this.icons[damage];
-        }
+	if (this.icons.length > damage)
+	{
+	    return this.icons[damage];
+	}
 
-        return super.getIconFromDamage(damage);
+	return super.getIconFromDamage(damage);
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int i = 0; i < ItemBodyParts.names.length; i++)
-        {
-            par3List.add(new ItemStack(par1, 1, i));
-        }
+	for (int i = 0; i < ItemBodyParts.names.length; i++)
+	{
+	    par3List.add(new ItemStack(par1, 1, i));
+	}
     }
 
     @Override
     public int getMetadata(int par1)
     {
-        return par1;
+	return par1;
     }
 }

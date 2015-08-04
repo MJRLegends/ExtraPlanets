@@ -58,7 +58,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	    }
 	}
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-	
+
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	for (int i = 0; i < this.LakesPerChunk; i++) {
 	    if (this.rand.nextInt(10) == 0) {

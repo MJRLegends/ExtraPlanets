@@ -1,10 +1,11 @@
 package com.mjr.extraplanets.items.tools;
 
-import com.mjr.extraplanets.Config;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+
+import com.mjr.extraplanets.Config;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanetsTools {

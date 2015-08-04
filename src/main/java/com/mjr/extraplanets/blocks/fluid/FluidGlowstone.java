@@ -2,14 +2,14 @@ package com.mjr.extraplanets.blocks.fluid;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+
+import com.mjr.extraplanets.Constants;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -26,6 +26,7 @@ public class FluidGlowstone extends FluidBasic {
 	}
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
 	super.randomDisplayTick(world, x, y, z, rand);
@@ -50,10 +51,12 @@ public class FluidGlowstone extends FluidBasic {
 	}
     }
 
+    @Override
     public String getStillTextures() {
 	return Constants.TEXTURE_PREFIX + "glowstone_still";
     }
 
+    @Override
     public String getFlowingTextures() {
 	return Constants.TEXTURE_PREFIX + "glowstone_flow";
     }

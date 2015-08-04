@@ -33,7 +33,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 	this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
 	this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreMagnesium, 8, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
 	this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnGravel, 12, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
-	
+
 	//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
     }
 
@@ -55,7 +55,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 	this.generateOre(4, this.iceGen, 60, 120);
 	this.generateOre(20, this.magnesiumGen, 60, 120);
 	this.generateOre(15, this.gravelGen, 0, 80);
-	
+
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	for (int i = 0; i < this.LakesPerChunk; i++) {
 	    if (this.rand.nextInt(10) == 0) {

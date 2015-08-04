@@ -178,6 +178,6 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
     @Override
     public void recreateStructures(int par1, int par2) {
 	if(!Config.jupiterLiquid)
-	this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
+	    this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
     }
 }

@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.triton.worldgen;
 
-import com.mjr.extraplanets.Config;
-
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
+
+import com.mjr.extraplanets.Config;
 
 public class TritonBiomes extends BiomeGenBase {
 

@@ -31,16 +31,16 @@ public class Achievements {
 
     public static void init() {
 	venusPlanet = new Achievement("achievement.venusPlanet", "venusPlanet", 5, 4, ExtraPlanetsBlocks.venusSurface, (Achievement) null)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	jupiterPlanet = new Achievement("achievement.jupiterPlanet", "jupiterPlanet", 7, 4, ExtraPlanetsBlocks.jupiterSurface, venusPlanet)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	saturnPlanet = new Achievement("achievement.saturnPlanet", "saturnPlanet", 9, 4, ExtraPlanetsBlocks.saturnSurface, jupiterPlanet)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	uranusPlanet = new Achievement("achievement.uranusPlanet", "uranusPlanet", 11, 4, ExtraPlanetsBlocks.uranusSurface, saturnPlanet)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	neptunePlanet = new Achievement("achievement.neptunePlanet", "neptunePlanet", 13, 4, ExtraPlanetsBlocks.neptuneSurface,
 		uranusPlanet).initIndependentStat().registerStat();
@@ -49,25 +49,25 @@ public class Achievements {
 		(Achievement) null).registerStat();
 
 	ceresPlanet = new Achievement("achievement.ceresPlanet", "ceresPlanet", 7, 5, ExtraPlanetsBlocks.ceresSurface, (Achievement) null)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	plutoPlanet = new Achievement("achievement.plutoPlanet", "plutoPlanet", 9, 5, ExtraPlanetsBlocks.plutoSurface, (Achievement) null)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	erisPlanet = new Achievement("achievement.erisPlanet", "erisPlanet", 11, 5, ExtraPlanetsBlocks.erisSurface, (Achievement) null)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	venusBoss = new Achievement("achievement.venusBoss", "venusBoss", 5, 3, ExtraPlanetsBlocks.veunsDungeonBrick, venusPlanet)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	jupiterBoss = new Achievement("achievement.jupiterBoss", "jupiterBoss", 7, 3, ExtraPlanetsBlocks.jupiterDungeonBrick, jupiterPlanet)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	saturnBoss = new Achievement("achievement.saturnBoss", "saturnBoss", 9, 3, ExtraPlanetsBlocks.saturnDungeonBrick, saturnPlanet)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	uranusBoss = new Achievement("achievement.uranusBoss", "uranusBoss", 11, 3, ExtraPlanetsBlocks.uranusDungeonBrick, uranusPlanet)
-		.initIndependentStat().registerStat();
+	.initIndependentStat().registerStat();
 
 	neptuneBoss = new Achievement("achievement.neptuneBoss", "neptuneBoss", 13, 3, ExtraPlanetsBlocks.neptuneDungeonBrick,
 		neptunePlanet).initIndependentStat().registerStat();

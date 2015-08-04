@@ -8,7 +8,6 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 

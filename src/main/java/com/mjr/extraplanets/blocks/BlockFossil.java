@@ -2,14 +2,11 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.items.ExtraPlanetsItems;
-import com.mjr.extraplanets.items.ItemBodyParts;
-
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+
+import com.mjr.extraplanets.items.ExtraPlanetsItems;
 
 public class BlockFossil extends BlockBasic {
 

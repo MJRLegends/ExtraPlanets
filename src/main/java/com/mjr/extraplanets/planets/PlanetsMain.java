@@ -10,7 +10,6 @@ import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.moons.MoonsMain;
 import com.mjr.extraplanets.planets.Ceres.TeleportTypeCeres;
 import com.mjr.extraplanets.planets.Ceres.WorldProviderCeres;
 import com.mjr.extraplanets.planets.Eris.TeleportTypeEris;

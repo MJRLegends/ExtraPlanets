@@ -45,9 +45,9 @@ public class GuiHandler implements IGuiHandler
 		return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile);
 	    }
 	    else if (tile instanceof TileEntitySolar)
-            {
-                return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
-            }
+	    {
+		return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
+	    }
 	}
 	return null;
     }
@@ -77,9 +77,9 @@ public class GuiHandler implements IGuiHandler
 		return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position.intX(), position.intY(), position.intZ()));
 	    }
 	    else if (tile instanceof TileEntitySolar)
-            {
-                return new GuiSolar(player.inventory, (TileEntitySolar) tile);
-            }
+	    {
+		return new GuiSolar(player.inventory, (TileEntitySolar) tile);
+	    }
 	}
 	return null;
     }

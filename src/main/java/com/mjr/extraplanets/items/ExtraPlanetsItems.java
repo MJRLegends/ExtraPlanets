@@ -6,50 +6,26 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
-import com.mjr.extraplanets.items.Tier4.CarbonCompressed;
-import com.mjr.extraplanets.items.Tier4.CarbonIngot;
-import com.mjr.extraplanets.items.Tier4.ItemKeyT4;
-import com.mjr.extraplanets.items.Tier4.SchematicTier4;
-import com.mjr.extraplanets.items.Tier4.Tier4Engine;
-import com.mjr.extraplanets.items.Tier4.Tier4Fin;
-import com.mjr.extraplanets.items.Tier4.Tier4HeavyDutyPlate;
-import com.mjr.extraplanets.items.Tier4.Tier4NoseCone;
-import com.mjr.extraplanets.items.Tier4.Tier4Rocket;
-import com.mjr.extraplanets.items.Tier5.ItemKeyT5;
-import com.mjr.extraplanets.items.Tier5.PalladiumCompressed;
-import com.mjr.extraplanets.items.Tier5.PalladiumIngot;
-import com.mjr.extraplanets.items.Tier5.SchematicTier5;
-import com.mjr.extraplanets.items.Tier5.Tier5Engine;
-import com.mjr.extraplanets.items.Tier5.Tier5Fin;
-import com.mjr.extraplanets.items.Tier5.Tier5HeavyDutyPlate;
-import com.mjr.extraplanets.items.Tier5.Tier5NoseCone;
-import com.mjr.extraplanets.items.Tier5.Tier5Rocket;
-import com.mjr.extraplanets.items.Tier6.ItemKeyT6;
-import com.mjr.extraplanets.items.Tier6.MagnesiumCompressed;
-import com.mjr.extraplanets.items.Tier6.MagnesiumIngot;
-import com.mjr.extraplanets.items.Tier6.SchematicTier6;
-import com.mjr.extraplanets.items.Tier6.Tier6Engine;
-import com.mjr.extraplanets.items.Tier6.Tier6Fin;
-import com.mjr.extraplanets.items.Tier6.Tier6HeavyDutyPlate;
-import com.mjr.extraplanets.items.Tier6.Tier6NoseCone;
-import com.mjr.extraplanets.items.Tier6.Tier6Rocket;
-import com.mjr.extraplanets.items.Tier7.CrystalCompressed;
-import com.mjr.extraplanets.items.Tier7.CrystalIngot;
-import com.mjr.extraplanets.items.Tier7.ItemKeyT7;
-import com.mjr.extraplanets.items.Tier7.ReinforcedCrystalCompressed;
-import com.mjr.extraplanets.items.Tier7.SchematicTier7;
-import com.mjr.extraplanets.items.Tier7.Tier7Engine;
-import com.mjr.extraplanets.items.Tier7.Tier7Fin;
-import com.mjr.extraplanets.items.Tier7.Tier7HeavyDutyPlate;
-import com.mjr.extraplanets.items.Tier7.Tier7NoseCone;
-import com.mjr.extraplanets.items.Tier7.Tier7Rocket;
-import com.mjr.extraplanets.items.Tier8.ItemKeyT8;
-import com.mjr.extraplanets.items.Tier8.SchematicTier8;
-import com.mjr.extraplanets.items.Tier8.Tier8Engine;
-import com.mjr.extraplanets.items.Tier8.Tier8Fin;
-import com.mjr.extraplanets.items.Tier8.Tier8HeavyDutyPlate;
-import com.mjr.extraplanets.items.Tier8.Tier8NoseCone;
-import com.mjr.extraplanets.items.Tier8.Tier8Rocket;
+import com.mjr.extraplanets.items.keys.ItemKeyT4;
+import com.mjr.extraplanets.items.keys.ItemKeyT5;
+import com.mjr.extraplanets.items.keys.ItemKeyT6;
+import com.mjr.extraplanets.items.keys.ItemKeyT7;
+import com.mjr.extraplanets.items.keys.ItemKeyT8;
+import com.mjr.extraplanets.items.noseCones.Tier4NoseCone;
+import com.mjr.extraplanets.items.noseCones.Tier5NoseCone;
+import com.mjr.extraplanets.items.noseCones.Tier6NoseCone;
+import com.mjr.extraplanets.items.noseCones.Tier7NoseCone;
+import com.mjr.extraplanets.items.noseCones.Tier8NoseCone;
+import com.mjr.extraplanets.items.rockets.Tier4Rocket;
+import com.mjr.extraplanets.items.rockets.Tier5Rocket;
+import com.mjr.extraplanets.items.rockets.Tier6Rocket;
+import com.mjr.extraplanets.items.rockets.Tier7Rocket;
+import com.mjr.extraplanets.items.rockets.Tier8Rocket;
+import com.mjr.extraplanets.items.schematics.SchematicTier4;
+import com.mjr.extraplanets.items.schematics.SchematicTier5;
+import com.mjr.extraplanets.items.schematics.SchematicTier6;
+import com.mjr.extraplanets.items.schematics.SchematicTier7;
+import com.mjr.extraplanets.items.schematics.SchematicTier8;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -67,49 +43,18 @@ public class ExtraPlanetsItems {
     public static Item schematicTier8;
 
     public static Item noseConeTier4;
-    public static Item engineTier4;
-    public static Item finTier4;
-    public static Item heavyDutyPlateTier4;
-
     public static Item noseConeTier5;
-    public static Item engineTier5;
-    public static Item finTier5;
-    public static Item heavyDutyPlateTier5;
-
     public static Item noseConeTier6;
-    public static Item engineTier6;
-    public static Item finTier6;
-    public static Item heavyDutyPlateTier6;
-
     public static Item noseConeTier7;
-    public static Item engineTier7;
-    public static Item finTier7;
-    public static Item heavyDutyPlateTier7;
-
     public static Item noseConeTier8;
-    public static Item engineTier8;
-    public static Item finTier8;
-    public static Item heavyDutyPlateTier8;
 
-    // Tier 4
-    public static Item ingotCarbon;
-    public static Item compressedCarbon;
+    public static Item tier4Items;
+    public static Item tier5Items;
+    public static Item tier6Items;
+    public static Item tier7Items;
+    public static Item tier8Items;
 
-    // Tier 5
-    public static Item ingotPalladium;
-    public static Item compressedPalladium;
-
-    // Tier 6
-    public static Item ingotMagnesium;
-    public static Item compressedMagnesium;
-
-    // Tier 7
-    public static Item ingotCrystal;
-    public static Item compressedCrystal;
-    
     public static Item ingotUranium;
-
-    public static Item compressedReinforcedCrystal;
 
     public static Item T4key;
     public static Item T5key;
@@ -134,12 +79,12 @@ public class ExtraPlanetsItems {
     public static Item nitrogen_bucket;
     public static Item frozen_water_bucket;
     public static Item salt_bucket;
-    
+
     public static Item cannedFood;
     public static Item diamondApple;
 
     public static Item bodyParts;
-    
+
     public static void init() {
 	initializeItems();
 	registerItems();
@@ -166,66 +111,39 @@ public class ExtraPlanetsItems {
 	schematicTier8 = new SchematicTier8("schematicTier8");
 
 	noseConeTier4 = new Tier4NoseCone("noseConeTier4");
-	engineTier4 = new Tier4Engine("engine");
-	finTier4 = new Tier4Fin("rocketFinsT4");
-	heavyDutyPlateTier4 = new Tier4HeavyDutyPlate("reinforcedPlateT4");
-
 	noseConeTier5 = new Tier5NoseCone("noseConeTier5");
-	engineTier5 = new Tier5Engine("engine");
-	finTier5 = new Tier5Fin("rocketFinsT5");
-	heavyDutyPlateTier5 = new Tier5HeavyDutyPlate("reinforcedPlateT5");
-
 	noseConeTier6 = new Tier6NoseCone("noseConeTier6");
-	engineTier6 = new Tier6Engine("engine");
-	finTier6 = new Tier6Fin("rocketFinsT6");
-	heavyDutyPlateTier6 = new Tier6HeavyDutyPlate("reinforcedPlateT6");
-
 	noseConeTier7 = new Tier7NoseCone("noseConeTier7");
-	engineTier7 = new Tier7Engine("engine");
-	finTier7 = new Tier7Fin("rocketFinsT7");
-	heavyDutyPlateTier7 = new Tier7HeavyDutyPlate("reinforcedPlateT7");
-
 	noseConeTier8 = new Tier8NoseCone("noseConeTier8");
-	engineTier8 = new Tier8Engine("engine");
-	finTier8 = new Tier8Fin("rocketFinsT8");
-	heavyDutyPlateTier8 = new Tier8HeavyDutyPlate("reinforcedPlateT8");
 
-	ingotCarbon = new CarbonIngot("ingotCarbon");
-	compressedCarbon = new CarbonCompressed("compressedCarbon");
+	tier4Items = new ItemTier4Items("tier4");
+	tier5Items = new ItemTier5Items("tier5");
+	tier6Items = new ItemTier6Items("tier6");
+	tier7Items = new ItemTier7Items("tier7");
+	tier8Items = new ItemTier8Items("tier8");
 
-	ingotPalladium = new PalladiumIngot("ingotPalladium");
-	compressedPalladium = new PalladiumCompressed("compressedPalladium");
+	nickelBattery = new ItemBasicBattery("nickelBattery", 45000f, 2);
+	mercuryBattery = new ItemBasicBattery("mercuryBattery", 85000f, 2);
+	zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
 
-	ingotMagnesium = new MagnesiumIngot("ingotMagnesium");
-	compressedMagnesium = new MagnesiumCompressed("compressedMagnesium");
+	ingotZinc = new ItemBasicItem("ingotZinc");
+	compressedZinc = new ItemZincCompressed("compressedZinc");
 
-	ingotCrystal = new CrystalIngot("ingotCrystal");
-	compressedCrystal = new CrystalCompressed("compressedCrystal");
+	ingotNickel = new ItemBasicItem("ingotNickel");
+	compressedNickel = new ItemNickelCompressed("compressedNickel");
 
-	ingotUranium = new CrystalIngot("ingotUranium");
+	ingotMercury = new ItemBasicItem("ingotMercury");
+	compressedMercury = new ItemMercuryCompressed("compressedMercury");
 	
-	compressedReinforcedCrystal = new ReinforcedCrystalCompressed("compressedReinforcedCrystal");
+	ingotUranium = new ItemBasicItem("ingotUranium");
 
-	nickelBattery = new BasicBattery("nickelBattery", 45000f, 2);
-	mercuryBattery = new BasicBattery("mercuryBattery", 85000f, 2);
-	zincBattery = new BasicBattery("zincBattery", 125000f, 2);
+	glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanetsFluids.glowstone);
+	magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanetsFluids.magma);
+	nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanetsFluids.nitrogen);
+	frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanetsFluids.frozen_water);
+	salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanetsFluids.salt);
 
-	ingotZinc = new CrystalIngot("ingotZinc");
-	compressedZinc = new ZincCompressed("compressedZinc");
-
-	ingotNickel = new CrystalIngot("ingotNickel");
-	compressedNickel = new NickelCompressed("compressedNickel");
-
-	ingotMercury = new CrystalIngot("ingotMercury");
-	compressedMercury = new MercuryCompressed("compressedMercury");
-
-	glowstone_bucket = new BasicItemBucket("bucket_glowstone", ExtraPlanetsFluids.glowstone);
-	magma_bucket = new BasicItemBucket("bucket_magma", ExtraPlanetsFluids.magma);
-	nitrogen_bucket = new BasicItemBucket("bucket_nitrogen", ExtraPlanetsFluids.nitrogen);
-	frozen_water_bucket = new BasicItemBucket("bucket_frozen_water", ExtraPlanetsFluids.frozen_water);
-	salt_bucket = new BasicItemBucket("bucket_salt", ExtraPlanetsFluids.salt);
-	
-	cannedFood = new CannedFood("cannedfood");
+	cannedFood = new ItemCannedFood("cannedfood");
 	diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 	bodyParts = new ItemBodyParts();
     }
@@ -250,45 +168,18 @@ public class ExtraPlanetsItems {
 	GameRegistry.registerItem(schematicTier8, "schematicTier8");
 
 	GameRegistry.registerItem(noseConeTier4, "noseConeTier4");
-	GameRegistry.registerItem(engineTier4, "engineTier4");
-	GameRegistry.registerItem(finTier4, "finTier4");
-	GameRegistry.registerItem(heavyDutyPlateTier4, "heavyDutyPlateTier4");
-
 	GameRegistry.registerItem(noseConeTier5, "noseConeTier5");
-	GameRegistry.registerItem(engineTier5, "engineTier5");
-	GameRegistry.registerItem(finTier5, "finTier5");
-	GameRegistry.registerItem(heavyDutyPlateTier5, "heavyDutyPlateTier5");
-
 	GameRegistry.registerItem(noseConeTier6, "noseConeTier6");
-	GameRegistry.registerItem(engineTier6, "engineTier6");
-	GameRegistry.registerItem(finTier6, "finTier6");
-	GameRegistry.registerItem(heavyDutyPlateTier6, "heavyDutyPlateTier6");
-
 	GameRegistry.registerItem(noseConeTier7, "noseConeTier7");
-	GameRegistry.registerItem(engineTier7, "engineTier7");
-	GameRegistry.registerItem(finTier7, "finTier7");
-	GameRegistry.registerItem(heavyDutyPlateTier7, "heavyDutyPlateTier7");
-
 	GameRegistry.registerItem(noseConeTier8, "noseConeTier8");
-	GameRegistry.registerItem(engineTier8, "engineTier8");
-	GameRegistry.registerItem(finTier8, "finTier8");
-	GameRegistry.registerItem(heavyDutyPlateTier8, "heavyDutyPlateTier8");
 
-	GameRegistry.registerItem(ingotCarbon, "ingotCarbon");
-	GameRegistry.registerItem(compressedCarbon, "compressedCarbon");
-
-	GameRegistry.registerItem(ingotPalladium, "ingotPalladium");
-	GameRegistry.registerItem(compressedPalladium, "compressedPalladium");
-
-	GameRegistry.registerItem(ingotMagnesium, "ingotMagnesium");
-	GameRegistry.registerItem(compressedMagnesium, "compressedMagnesium");
-
-	GameRegistry.registerItem(ingotCrystal, "ingotCrystal");
-	GameRegistry.registerItem(compressedCrystal, "compressedCrystal");
-
+	GameRegistry.registerItem(tier4Items, "tier4Items");
+	GameRegistry.registerItem(tier5Items, "tier5Items");
+	GameRegistry.registerItem(tier6Items, "tier6Items");
+	GameRegistry.registerItem(tier7Items, "tier7Items");
+	GameRegistry.registerItem(tier8Items, "tier8Items");
+	
 	GameRegistry.registerItem(ingotUranium, "ingotUranium");
-
-	GameRegistry.registerItem(compressedReinforcedCrystal, "compressedReinforcedCrystal");
 
 	GameRegistry.registerItem(nickelBattery, "nickelBattery");
 	GameRegistry.registerItem(mercuryBattery, "mercuryBattery");
@@ -307,7 +198,7 @@ public class ExtraPlanetsItems {
 	GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 	GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
 	GameRegistry.registerItem(salt_bucket, "bucket_salt");
-	
+
 	GameRegistry.registerItem(cannedFood, "cannedFood");
 	GameRegistry.registerItem(diamondApple, "diamondApple");
 	GameRegistry.registerItem(bodyParts, "bodyParts");

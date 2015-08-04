@@ -41,24 +41,24 @@ public class Tier5RocketRecipes {
 	HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 	input.put(1, new ItemStack(ExtraPlanetsItems.noseConeTier5)); // Cone
 	//Body
-	input.put(2, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(3, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(4, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(5, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(6, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(7, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(8, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(9, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(10, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
-	input.put(11, new ItemStack(ExtraPlanetsItems.heavyDutyPlateTier5, 1, 0));
+	input.put(2, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(3, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(4, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(5, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(6, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(7, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(8, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(9, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(10, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
+	input.put(11, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3));
 
-	input.put(12, new ItemStack(ExtraPlanetsItems.engineTier5, 1, 1)); // Booster
-	input.put(13, new ItemStack(ExtraPlanetsItems.finTier5, 1, 0)); // Fin
-	input.put(14, new ItemStack(ExtraPlanetsItems.finTier5, 1, 0)); // Fin
-	input.put(15, new ItemStack(ExtraPlanetsItems.engineTier5, 1, 0)); // Engine
-	input.put(16, new ItemStack(ExtraPlanetsItems.engineTier5, 1, 1)); // Booster
-	input.put(17, new ItemStack(ExtraPlanetsItems.finTier5, 1, 0)); // Fin
-	input.put(18, new ItemStack(ExtraPlanetsItems.finTier5, 1, 0)); // Fin
+	input.put(12, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 1)); // Booster
+	input.put(13, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 2)); // Fin
+	input.put(14, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 2)); // Fin
+	input.put(15, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 0)); // Engine
+	input.put(16, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 1)); // Booster
+	input.put(17, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 2)); // Fin
+	input.put(18, new ItemStack(ExtraPlanetsItems.tier5Items, 1, 2)); // Fin
 	input.put(19, null);
 	input.put(20, null);
 	input.put(21, null);
