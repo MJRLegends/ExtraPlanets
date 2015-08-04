@@ -18,6 +18,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
     private WorldGenerator ironGen;
     private WorldGenerator gravelGen;
     private WorldGenerator uraniumGen;
+    private WorldGenerator fossilsGen;
 
     private int LakesPerChunk = 5;
 
@@ -29,6 +30,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 	this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresOreIron, 8, 0, false, ExtraPlanetsBlocks.ceresStone, 1);
 	this.uraniumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreUranium, 2, 0, false, ExtraPlanetsBlocks.ceresStone, 1);
 	this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresGravel, 12, 0, false, ExtraPlanetsBlocks.ceresStone, 1);
+	this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.ceresSubSurface, 1);
 
 	// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 	// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -51,6 +53,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 	this.generateOre(20, this.ironGen, 0, 64);
 	this.generateOre(5, this.uraniumGen, 0, 64);
 	this.generateOre(15, this.gravelGen, 0, 80);
+	this.generateOre(1, this.fossilsGen, 0, 256);
 
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	for (int i = 0; i < this.LakesPerChunk; i++) {
@@ -59,7 +62,8 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		// int y = this.rand.nextInt(16) + 16;
 		int z = this.chunkZ + this.rand.nextInt(16) + 8;
 		int y = this.currentWorld.getHeightValue(x, z);
-		new WorldGenCustomLake(ExtraPlanetsFluids.salt).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.ceresStone);
+		new WorldGenCustomLake(ExtraPlanetsFluids.salt).generate(this.currentWorld, this.rand, x, y, z,
+			ExtraPlanetsBlocks.ceresStone);
 	    }
 	}
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
