@@ -3,6 +3,7 @@ package com.mjr.extraplanets.blocks;
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockIce;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -249,6 +250,9 @@ public class ExtraPlanetsBlocks {
 
     public static Block nuclearBomb;
     public static Block fossil;
+    public static Block denseIce;
+    public static Block volcanicRock;
+    public static Block frozenNitrogen;
 
     public static void init() {
 	initializeBlocks();
@@ -266,351 +270,396 @@ public class ExtraPlanetsBlocks {
     }
 
     private static void initializeBlocks() {
-	mercurySurface = new BlockBasic(Material.rock).setBlockName("mercurySurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "mercurySurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	mercurySurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	if (Config.mercury) {
+	    mercurySurface = new BlockBasic(Material.rock).setBlockName("mercurySurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "mercurySurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    mercurySurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	mercurySubSurface = new BlockBasic(Material.rock).setBlockName("mercurySubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "mercurySubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	mercurySubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    mercurySubSurface = new BlockBasic(Material.rock).setBlockName("mercurySubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "mercurySubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    mercurySubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	mercuryStone = new BlockBasic(Material.rock).setBlockName("mercuryStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	mercuryStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    mercuryStone = new BlockBasic(Material.rock).setBlockName("mercuryStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    mercuryStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	venusSurface = new BlockBasic(Material.rock).setBlockName("venusSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "venusSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	venusSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    mercuryGravel = new BlockCustomGravel("mercuryGravel");
 
-	venusSubSurface = new BlockBasic(Material.rock).setBlockName("venusSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "venusSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	venusSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	}
+	if (Config.venus) {
+	    venusSurface = new BlockBasic(Material.rock).setBlockName("venusSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "venusSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    venusSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	venusStone = new BlockBasic(Material.rock).setBlockName("venusStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "venusStone")
-		.setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
-	venusStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    venusSubSurface = new BlockBasic(Material.rock).setBlockName("venusSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "venusSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    venusSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	ceresSurface = new BlockBasic(Material.rock).setBlockName("ceresSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	ceresSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    venusStone = new BlockBasic(Material.rock).setBlockName("venusStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "venusStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    venusStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	ceresSubSurface = new BlockBasic(Material.rock).setBlockName("ceresSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	ceresSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    venusGravel = new BlockCustomGravel("venusGravel");
 
-	ceresStone = new BlockBasic(Material.rock).setBlockName("ceresStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresStone")
-		.setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
-	ceresStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanicRock").setBlockTextureName("volcanicRock").setHardness(3.0F)
+		    .setResistance(6.0F).setStepSound(Block.soundTypeStone);
+	}
+	if (Config.ceres) {
+	    ceresSurface = new BlockBasic(Material.rock).setBlockName("ceresSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    ceresSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	jupiterSurface = new BlockBasic(Material.rock).setBlockName("jupiterSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	jupiterSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    ceresSubSurface = new BlockBasic(Material.rock).setBlockName("ceresSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    ceresSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	jupiterSubSurface = new BlockBasic(Material.rock).setBlockName("jupiterSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	jupiterSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    ceresStone = new BlockBasic(Material.rock).setBlockName("ceresStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    ceresStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	jupiterStone = new BlockBasic(Material.rock).setBlockName("jupiterStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	jupiterStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    ceresGravel = new BlockCustomGravel("ceresGravel");
+	}
+	if (Config.jupiter) {
+	    jupiterSurface = new BlockBasic(Material.rock).setBlockName("jupiterSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    jupiterSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	saturnSurface = new BlockBasic(Material.rock).setBlockName("saturnSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	saturnSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    jupiterSubSurface = new BlockBasic(Material.rock).setBlockName("jupiterSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    jupiterSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	saturnSubSurfacee = new BlockBasic(Material.rock).setBlockName("saturnSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	saturnSubSurfacee.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    jupiterStone = new BlockBasic(Material.rock).setBlockName("jupiterStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    jupiterStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	saturnStone = new BlockBasic(Material.rock).setBlockName("saturnStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	saturnStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    jupiterGravel = new BlockCustomGravel("jupiterGravel");
+	}
+	if (Config.saturn) {
+	    saturnSurface = new BlockBasic(Material.rock).setBlockName("saturnSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    saturnSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	uranusSurface = new BlockBasic(Material.ice).setBlockName("uranusSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "uranusSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	uranusSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    saturnSubSurfacee = new BlockBasic(Material.rock).setBlockName("saturnSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    saturnSubSurfacee.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	uranusSubSurface = new BlockBasic(Material.ice).setBlockName("uranusSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "uranusSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	uranusSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    saturnStone = new BlockBasic(Material.rock).setBlockName("saturnStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    saturnStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	uranusStone = new BlockBasic(Material.ice).setBlockName("uranusStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "uranusStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	uranusStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    saturnGravel = new BlockCustomGravel("saturnGravel");
+	}
+	if (Config.uranus) {
+	    uranusSurface = new BlockBasic(Material.ice).setBlockName("uranusSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "uranusSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    uranusSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	neptuneSurface = new BlockBasic(Material.rock).setBlockName("neptuneSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	neptuneSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    uranusSubSurface = new BlockBasic(Material.ice).setBlockName("uranusSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "uranusSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    uranusSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	neptuneSubSurface = new BlockBasic(Material.rock).setBlockName("neptuneSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	neptuneSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    uranusStone = new BlockBasic(Material.ice).setBlockName("uranusStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "uranusStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    uranusStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	neptuneStone = new BlockBasic(Material.rock).setBlockName("neptuneStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	neptuneStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    denseIce = new BlockBasic(Material.ice).setBlockName("denseIce").setBlockTextureName("denseIce").setHardness(2.2F)
+		    .setResistance(3.0F).setStepSound(Block.soundTypeSnow);
+	}
+	if (Config.neptune) {
+	    neptuneSurface = new BlockBasic(Material.rock).setBlockName("neptuneSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    neptuneSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	plutoSurface = new BlockBasic(Material.rock).setBlockName("plutoSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	plutoSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    neptuneSubSurface = new BlockBasic(Material.rock).setBlockName("neptuneSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    neptuneSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	plutoSubSurface = new BlockBasic(Material.rock).setBlockName("plutoSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	plutoSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    neptuneStone = new BlockBasic(Material.rock).setBlockName("neptuneStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    neptuneStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	plutoStone = new BlockBasic(Material.rock).setBlockName("plutoStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoStone")
-		.setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
-	plutoStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    frozenNitrogen = new BlockBasic(Material.ice).setBlockName("denseIce").setBlockTextureName("denseIce")
+		    .setStepSound(Block.soundTypeSnow);
 
-	erisSurface = new BlockBasic(Material.rock).setBlockName("erisSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "erisSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	erisSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	}
+	if (Config.pluto) {
+	    plutoSurface = new BlockBasic(Material.rock).setBlockName("plutoSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    plutoSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	erisSubSurface = new BlockBasic(Material.rock).setBlockName("erisSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "erisSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	erisSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    plutoSubSurface = new BlockBasic(Material.rock).setBlockName("plutoSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    plutoSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	erisStone = new BlockBasic(Material.rock).setBlockName("erisStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "erisStone")
-		.setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
-	erisStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    plutoStone = new BlockBasic(Material.rock).setBlockName("plutoStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    plutoStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	europaSurface = new BlockBasic(Material.rock).setBlockName("europaSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "europaSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	europaSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    plutoGravel = new BlockCustomGravel("plutoGravel");
+	}
+	if (Config.eris) {
+	    erisSurface = new BlockBasic(Material.rock).setBlockName("erisSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "erisSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    erisSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	europaSubSurface = new BlockBasic(Material.rock).setBlockName("europaSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "europaSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	europaSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    erisSubSurface = new BlockBasic(Material.rock).setBlockName("erisSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "erisSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    erisSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	europaStone = new BlockBasic(Material.rock).setBlockName("europaStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "europaStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	europaStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    erisStone = new BlockBasic(Material.rock).setBlockName("erisStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "erisStone")
+		    .setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
+	    erisStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	ioSurface = new BlockBasic(Material.rock).setBlockName("ioSurface").setBlockTextureName(Constants.TEXTURE_PREFIX + "ioSurface")
-		.setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
-	ioSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    erisGravel = new BlockCustomGravel("erisGravel");
+	}
+	if (Config.europa) {
+	    europaSurface = new BlockBasic(Material.rock).setBlockName("europaSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "europaSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    europaSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	ioSubSurface = new BlockBasic(Material.rock).setBlockName("ioSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "ioSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	ioSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    europaSubSurface = new BlockBasic(Material.rock).setBlockName("europaSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "europaSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    europaSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	ioStone = new BlockBasic(Material.rock).setBlockName("ioStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "ioStone")
-		.setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
-	ioStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    europaStone = new BlockBasic(Material.rock).setBlockName("europaStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "europaStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    europaStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	}
+	if (Config.io) {
+	    ioSurface = new BlockBasic(Material.rock).setBlockName("ioSurface").setBlockTextureName(Constants.TEXTURE_PREFIX + "ioSurface")
+		    .setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
+	    ioSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	deimosSurface = new BlockBasic(Material.rock).setBlockName("deimosSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "deimosSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	deimosSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    ioSubSurface = new BlockBasic(Material.rock).setBlockName("ioSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "ioSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    ioSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	deimosSubSurface = new BlockBasic(Material.rock).setBlockName("deimosSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "deimosSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	deimosSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    ioStone = new BlockBasic(Material.rock).setBlockName("ioStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "ioStone")
+		    .setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
+	    ioStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	}
+	if (Config.deimos) {
+	    deimosSurface = new BlockBasic(Material.rock).setBlockName("deimosSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "deimosSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    deimosSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	deimosStone = new BlockBasic(Material.rock).setBlockName("deimosStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "deimosStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	deimosStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    deimosSubSurface = new BlockBasic(Material.rock).setBlockName("deimosSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "deimosSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    deimosSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	phobosSurface = new BlockBasic(Material.rock).setBlockName("phobosSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "phobosSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	phobosSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    deimosStone = new BlockBasic(Material.rock).setBlockName("deimosStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "deimosStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    deimosStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	}
+	if (Config.phobos) {
+	    phobosSurface = new BlockBasic(Material.rock).setBlockName("phobosSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "phobosSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    phobosSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	phobosSubSurface = new BlockBasic(Material.rock).setBlockName("phobosSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "phobosSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	phobosSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    phobosSubSurface = new BlockBasic(Material.rock).setBlockName("phobosSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "phobosSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    phobosSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	phobosStone = new BlockBasic(Material.rock).setBlockName("phobosStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "phobosStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	phobosStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    phobosStone = new BlockBasic(Material.rock).setBlockName("phobosStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "phobosStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    phobosStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	}
+	if (Config.triton) {
+	    tritonSurface = new BlockBasic(Material.rock).setBlockName("tritonSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    tritonSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	tritonSurface = new BlockBasic(Material.rock).setBlockName("tritonSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	tritonSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    tritonSubSurface = new BlockBasic(Material.rock).setBlockName("tritonSubSurface")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonSubSurface").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    tritonSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	tritonSubSurface = new BlockBasic(Material.rock).setBlockName("tritonSubSurface")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonSubSurface").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	tritonSubSurface.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
-
-	tritonStone = new BlockBasic(Material.rock).setBlockName("tritonStone")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonStone").setHardness(2.2F).setResistance(3.0F)
-		.setStepSound(Block.soundTypeMetal);
-	tritonStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
-
-	mercuryGravel = new BlockCustomGravel("mercuryGravel");
-	venusGravel = new BlockCustomGravel("venusGravel");
-	ceresGravel = new BlockCustomGravel("ceresGravel");
-	jupiterGravel = new BlockCustomGravel("jupiterGravel");
-	saturnGravel = new BlockCustomGravel("saturnGravel");
-	plutoGravel = new BlockCustomGravel("plutoGravel");
-	erisGravel = new BlockCustomGravel("erisGravel");
-
+	    tritonStone = new BlockBasic(Material.rock).setBlockName("tritonStone")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonStone").setHardness(2.2F).setResistance(3.0F)
+		    .setStepSound(Block.soundTypeMetal);
+	    tritonStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	}
+	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
+	    fossil = new BlockFossil(Material.rock);
 	nuclearBomb = new BlockNuclearBomb();
 
-	fossil = new BlockFossil(Material.rock);
     }
 
     private static void initializeOreBlocks() {
-	mercuryOreCopper = new BlockOre(Material.rock).setBlockName("mercuryOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryOreCopper").setStepSound(Block.soundTypeMetal);
-	mercuryOreCopper.setHarvestLevel("pickaxe", 2);
+	if (Config.mercury) {
+	    mercuryOreCopper = new BlockOre(Material.rock).setBlockName("mercuryOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryOreCopper").setStepSound(Block.soundTypeMetal);
+	    mercuryOreCopper.setHarvestLevel("pickaxe", 2);
 
-	mercuryOreTin = new BlockOre(Material.rock).setBlockName("mercuryOreTin")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryOreTin").setStepSound(Block.soundTypeMetal);
-	mercuryOreTin.setHarvestLevel("pickaxe", 2);
+	    mercuryOreTin = new BlockOre(Material.rock).setBlockName("mercuryOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryOreTin").setStepSound(Block.soundTypeMetal);
+	    mercuryOreTin.setHarvestLevel("pickaxe", 2);
 
-	mercuryOreIron = new BlockOre(Material.rock).setBlockName("mercuryOreIron")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryOreIron").setStepSound(Block.soundTypeMetal);
-	mercuryOreIron.setHarvestLevel("pickaxe", 1);
+	    mercuryOreIron = new BlockOre(Material.rock).setBlockName("mercuryOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "mercuryOreIron").setStepSound(Block.soundTypeMetal);
+	    mercuryOreIron.setHarvestLevel("pickaxe", 1);
 
-	venusOreCopper = new BlockOre(Material.rock).setBlockName("venusOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "venusOreCopper").setStepSound(Block.soundTypeMetal);
-	venusOreCopper.setHarvestLevel("pickaxe", 2);
+	    OreMercury = new BlockOre(Material.rock).setBlockName("OreMercury")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "OreMercury").setStepSound(Block.soundTypeMetal);
+	    OreMercury.setHarvestLevel("pickaxe", 4);
+	}
+	if (Config.venus) {
+	    venusOreCopper = new BlockOre(Material.rock).setBlockName("venusOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "venusOreCopper").setStepSound(Block.soundTypeMetal);
+	    venusOreCopper.setHarvestLevel("pickaxe", 2);
 
-	venusOreTin = new BlockOre(Material.rock).setBlockName("venusOreTin").setBlockTextureName(Constants.TEXTURE_PREFIX + "venusOreTin")
-		.setStepSound(Block.soundTypeMetal);
-	venusOreTin.setHarvestLevel("pickaxe", 2);
+	    venusOreTin = new BlockOre(Material.rock).setBlockName("venusOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "venusOreTin").setStepSound(Block.soundTypeMetal);
+	    venusOreTin.setHarvestLevel("pickaxe", 2);
 
-	venusOreIron = new BlockOre(Material.rock).setBlockName("venusOreIron")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "venusOreIron").setStepSound(Block.soundTypeMetal);
-	venusOreIron.setHarvestLevel("pickaxe", 1);
+	    venusOreIron = new BlockOre(Material.rock).setBlockName("venusOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "venusOreIron").setStepSound(Block.soundTypeMetal);
+	    venusOreIron.setHarvestLevel("pickaxe", 1);
 
-	ceresOreCopper = new BlockOre(Material.rock).setBlockName("ceresOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresOreCopper").setStepSound(Block.soundTypeMetal);
-	ceresOreCopper.setHarvestLevel("pickaxe", 2);
+	    OreCarbon = new BlockOre(Material.rock).setBlockName("OreCarbon").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreCarbon")
+		    .setStepSound(Block.soundTypeMetal);
+	    OreCarbon.setHarvestLevel("pickaxe", 2);
+	}
+	if (Config.ceres) {
+	    ceresOreCopper = new BlockOre(Material.rock).setBlockName("ceresOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresOreCopper").setStepSound(Block.soundTypeMetal);
+	    ceresOreCopper.setHarvestLevel("pickaxe", 2);
 
-	ceresOreTin = new BlockOre(Material.rock).setBlockName("ceresOreTin").setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresOreTin")
-		.setStepSound(Block.soundTypeMetal);
-	ceresOreTin.setHarvestLevel("pickaxe", 2);
+	    ceresOreTin = new BlockOre(Material.rock).setBlockName("ceresOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresOreTin").setStepSound(Block.soundTypeMetal);
+	    ceresOreTin.setHarvestLevel("pickaxe", 2);
 
-	ceresOreIron = new BlockOre(Material.rock).setBlockName("ceresOreIron")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresOreIron").setStepSound(Block.soundTypeMetal);
-	ceresOreIron.setHarvestLevel("pickaxe", 1);
+	    ceresOreIron = new BlockOre(Material.rock).setBlockName("ceresOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "ceresOreIron").setStepSound(Block.soundTypeMetal);
+	    ceresOreIron.setHarvestLevel("pickaxe", 1);
 
-	jupiterOreCopper = new BlockOre(Material.rock).setBlockName("jupiterOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterOreCopper").setStepSound(Block.soundTypeMetal);
-	jupiterOreCopper.setHarvestLevel("pickaxe", 2);
+	    OreUranium = new BlockOre(Material.rock).setBlockName("OreUranium")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "OreUranium").setStepSound(Block.soundTypeMetal);
+	    OreUranium.setHarvestLevel("pickaxe", 4);
+	}
+	if (Config.jupiter) {
+	    jupiterOreCopper = new BlockOre(Material.rock).setBlockName("jupiterOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterOreCopper").setStepSound(Block.soundTypeMetal);
+	    jupiterOreCopper.setHarvestLevel("pickaxe", 2);
 
-	jupiterOreTin = new BlockOre(Material.rock).setBlockName("jupiterOreTin")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterOreTin").setStepSound(Block.soundTypeMetal);
-	jupiterOreTin.setHarvestLevel("pickaxe", 2);
+	    jupiterOreTin = new BlockOre(Material.rock).setBlockName("jupiterOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterOreTin").setStepSound(Block.soundTypeMetal);
+	    jupiterOreTin.setHarvestLevel("pickaxe", 2);
 
-	jupiterOreIron = new BlockOre(Material.rock).setBlockName("jupiterOreIron")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterOreIron").setStepSound(Block.soundTypeMetal);
-	jupiterOreIron.setHarvestLevel("pickaxe", 1);
+	    jupiterOreIron = new BlockOre(Material.rock).setBlockName("jupiterOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterOreIron").setStepSound(Block.soundTypeMetal);
+	    jupiterOreIron.setHarvestLevel("pickaxe", 1);
 
-	saturnOreCopper = new BlockOre(Material.rock).setBlockName("saturnOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnOreCopper").setStepSound(Block.soundTypeMetal);
-	saturnOreCopper.setHarvestLevel("pickaxe", 2);
+	    OrePalladium = new BlockOre(Material.rock).setBlockName("OrePalladium")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "OrePalladium").setStepSound(Block.soundTypeMetal);
+	    OrePalladium.setHarvestLevel("pickaxe", 3);
 
-	saturnOreTin = new BlockOre(Material.rock).setBlockName("saturnOreTin")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnOreTin").setStepSound(Block.soundTypeMetal);
-	saturnOreTin.setHarvestLevel("pickaxe", 2);
+	    OreNickel = new BlockOre(Material.rock).setBlockName("OreNickel").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreNickel")
+		    .setStepSound(Block.soundTypeMetal);
+	    OreNickel.setHarvestLevel("pickaxe", 4);
+	}
+	if (Config.saturn) {
+	    saturnOreCopper = new BlockOre(Material.rock).setBlockName("saturnOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnOreCopper").setStepSound(Block.soundTypeMetal);
+	    saturnOreCopper.setHarvestLevel("pickaxe", 2);
 
-	saturnOreIron = new BlockOre(Material.rock).setBlockName("saturnOreIron")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnOreIron").setStepSound(Block.soundTypeMetal);
-	saturnOreIron.setHarvestLevel("pickaxe", 1);
+	    saturnOreTin = new BlockOre(Material.rock).setBlockName("saturnOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnOreTin").setStepSound(Block.soundTypeMetal);
+	    saturnOreTin.setHarvestLevel("pickaxe", 2);
 
-	neptuneOreCopper = new BlockOre(Material.rock).setBlockName("neptuneOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneOreCopper").setStepSound(Block.soundTypeMetal);
-	neptuneOreCopper.setHarvestLevel("pickaxe", 2);
+	    saturnOreIron = new BlockOre(Material.rock).setBlockName("saturnOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnOreIron").setStepSound(Block.soundTypeMetal);
+	    saturnOreIron.setHarvestLevel("pickaxe", 1);
 
-	neptuneOreTin = new BlockOre(Material.rock).setBlockName("neptuneOreTin")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneOreTin").setStepSound(Block.soundTypeMetal);
-	neptuneOreTin.setHarvestLevel("pickaxe", 2);
+	    OreMagnesium = new BlockOre(Material.rock).setBlockName("OreMagnesium")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "OreMagnesium").setStepSound(Block.soundTypeMetal);
+	    OreMagnesium.setHarvestLevel("pickaxe", 4);
 
-	neptuneOreIron = new BlockOre(Material.rock).setBlockName("neptuneOreIron")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneOreIron").setStepSound(Block.soundTypeMetal);
-	neptuneOreIron.setHarvestLevel("pickaxe", 1);
+	}
+	if (Config.neptune) {
+	    neptuneOreCopper = new BlockOre(Material.rock).setBlockName("neptuneOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneOreCopper").setStepSound(Block.soundTypeMetal);
+	    neptuneOreCopper.setHarvestLevel("pickaxe", 2);
 
-	plutoOreCopper = new BlockOre(Material.rock).setBlockName("plutoOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoOreCopper").setStepSound(Block.soundTypeMetal);
-	plutoOreCopper.setHarvestLevel("pickaxe", 2);
+	    neptuneOreTin = new BlockOre(Material.rock).setBlockName("neptuneOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneOreTin").setStepSound(Block.soundTypeMetal);
+	    neptuneOreTin.setHarvestLevel("pickaxe", 2);
 
-	plutoOreTin = new BlockOre(Material.rock).setBlockName("plutoOreTin").setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoOreTin")
-		.setStepSound(Block.soundTypeMetal);
-	plutoOreTin.setHarvestLevel("pickaxe", 2);
+	    neptuneOreIron = new BlockOre(Material.rock).setBlockName("neptuneOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneOreIron").setStepSound(Block.soundTypeMetal);
+	    neptuneOreIron.setHarvestLevel("pickaxe", 1);
 
-	plutoOreIron = new BlockOre(Material.rock).setBlockName("plutoOreIron")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoOreIron").setStepSound(Block.soundTypeMetal);
-	plutoOreIron.setHarvestLevel("pickaxe", 1);
+	    OreCrystal = new BlockOre(Material.rock).setBlockName("OreCrystal")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "OreCrystal").setStepSound(Block.soundTypeMetal);
+	    OreCrystal.setHarvestLevel("pickaxe", 5);
 
-	erisOreCopper = new BlockOre(Material.rock).setBlockName("erisOreCopper")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "erisOreCopper").setStepSound(Block.soundTypeMetal);
-	erisOreCopper.setHarvestLevel("pickaxe", 2);
+	    OreZinc = new BlockOre(Material.rock).setBlockName("OreZinc").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreZinc")
+		    .setStepSound(Block.soundTypeMetal);
+	    OreZinc.setHarvestLevel("pickaxe", 6);
+	}
+	if (Config.pluto) {
+	    plutoOreCopper = new BlockOre(Material.rock).setBlockName("plutoOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoOreCopper").setStepSound(Block.soundTypeMetal);
+	    plutoOreCopper.setHarvestLevel("pickaxe", 2);
 
-	erisOreTin = new BlockOre(Material.rock).setBlockName("erisOreTin").setBlockTextureName(Constants.TEXTURE_PREFIX + "erisOreTin")
-		.setStepSound(Block.soundTypeMetal);
-	erisOreTin.setHarvestLevel("pickaxe", 2);
+	    plutoOreTin = new BlockOre(Material.rock).setBlockName("plutoOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoOreTin").setStepSound(Block.soundTypeMetal);
+	    plutoOreTin.setHarvestLevel("pickaxe", 2);
 
-	erisOreIron = new BlockOre(Material.rock).setBlockName("erisOreIron").setBlockTextureName(Constants.TEXTURE_PREFIX + "erisOreIron")
-		.setStepSound(Block.soundTypeMetal);
-	erisOreIron.setHarvestLevel("pickaxe", 1);
+	    plutoOreIron = new BlockOre(Material.rock).setBlockName("plutoOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoOreIron").setStepSound(Block.soundTypeMetal);
+	    plutoOreIron.setHarvestLevel("pickaxe", 1);
+	}
+	if (Config.eris) {
+	    erisOreCopper = new BlockOre(Material.rock).setBlockName("erisOreCopper")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "erisOreCopper").setStepSound(Block.soundTypeMetal);
+	    erisOreCopper.setHarvestLevel("pickaxe", 2);
 
-	OreCarbon = new BlockOre(Material.rock).setBlockName("OreCarbon").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreCarbon")
-		.setStepSound(Block.soundTypeMetal);
-	OreCarbon.setHarvestLevel("pickaxe", 2);
+	    erisOreTin = new BlockOre(Material.rock).setBlockName("erisOreTin")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "erisOreTin").setStepSound(Block.soundTypeMetal);
+	    erisOreTin.setHarvestLevel("pickaxe", 2);
 
-	OrePalladium = new BlockOre(Material.rock).setBlockName("OrePalladium")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "OrePalladium").setStepSound(Block.soundTypeMetal);
-	OrePalladium.setHarvestLevel("pickaxe", 3);
-
-	OreMagnesium = new BlockOre(Material.rock).setBlockName("OreMagnesium")
-		.setBlockTextureName(Constants.TEXTURE_PREFIX + "OreMagnesium").setStepSound(Block.soundTypeMetal);
-	OreMagnesium.setHarvestLevel("pickaxe", 4);
-
-	OreCrystal = new BlockOre(Material.rock).setBlockName("OreCrystal").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreCrystal")
-		.setStepSound(Block.soundTypeMetal);
-	OreCrystal.setHarvestLevel("pickaxe", 5);
-
-	OreNickel = new BlockOre(Material.rock).setBlockName("OreNickel").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreNickel")
-		.setStepSound(Block.soundTypeMetal);
-	OreNickel.setHarvestLevel("pickaxe", 4);
-
-	OreZinc = new BlockOre(Material.rock).setBlockName("OreZinc").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreZinc")
-		.setStepSound(Block.soundTypeMetal);
-	OreZinc.setHarvestLevel("pickaxe", 6);
-
-	OreMercury = new BlockOre(Material.rock).setBlockName("OreMercury").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreMercury")
-		.setStepSound(Block.soundTypeMetal);
-	OreMercury.setHarvestLevel("pickaxe", 4);
-
-	OreUranium = new BlockOre(Material.rock).setBlockName("OreUranium").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreUranium")
-		.setStepSound(Block.soundTypeMetal);
-	OreUranium.setHarvestLevel("pickaxe", 4);
+	    erisOreIron = new BlockOre(Material.rock).setBlockName("erisOreIron")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "erisOreIron").setStepSound(Block.soundTypeMetal);
+	    erisOreIron.setHarvestLevel("pickaxe", 1);
+	}
     }
 
     private static void initializeDungeonBlocks() {
@@ -701,7 +750,8 @@ public class ExtraPlanetsBlocks {
 
 	    venusDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "venusDungeonBrickStoneBlockhalfslab",
 		    "veunsDungeonBrick");
-	    venusDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "mercuryDungeonBrickStoneBlockfullslab", "veunsDungeonBrick");
+	    venusDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "mercuryDungeonBrickStoneBlockfullslab",
+		    "veunsDungeonBrick");
 	    venusDungeonBrickStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.veunsDungeonBrick, 0, "venusDungeonBrickStoneStairs");
 	}
 	if (Config.ceres) {
@@ -714,20 +764,22 @@ public class ExtraPlanetsBlocks {
 	    jupiterStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "jupiterStoneBlockfullslab", "jupiterStone");
 	    jupiterStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.jupiterStone, 0, "jupiterStoneStairs");
 
-	    jupiterDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "jupiterDungeonBrickStoneBlockhalfslab",
-		    "jupiterDungeonBrick");
+	    jupiterDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab,
+		    "jupiterDungeonBrickStoneBlockhalfslab", "jupiterDungeonBrick");
 	    jupiterDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "jupiterDungeonBrickStoneBlockfullslab",
 		    "jupiterDungeonBrick");
-	    jupiterDungeonBrickStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.jupiterDungeonBrick, 0, "jupiterDungeonBrickStoneStairs");
+	    jupiterDungeonBrickStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.jupiterDungeonBrick, 0,
+		    "jupiterDungeonBrickStoneStairs");
 	}
 	if (Config.saturn) {
 	    saturnStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "saturnStoneBlockhalfslab", "saturnStone");
 	    saturnStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "saturnStoneBlockfullslab", "saturnStone");
 	    saturnStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.saturnStone, 0, "saturnStoneStairs");
 
-	    saturnDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "saturnDungeonBrickStoneBlockhalfslab",
+	    saturnDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab,
+		    "saturnDungeonBrickStoneBlockhalfslab", "saturnDungeonBrick");
+	    saturnDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "saturnDungeonBrickStoneBlockfullslab",
 		    "saturnDungeonBrick");
-	    saturnDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "saturnDungeonBrickStoneBlockfullslab", "saturnDungeonBrick");
 	    saturnDungeonBrickStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.saturnDungeonBrick, 0, "saturnDungeonBrickStoneStairs");
 	}
 	if (Config.uranus) {
@@ -735,9 +787,10 @@ public class ExtraPlanetsBlocks {
 	    uranusStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "uranusStoneBlockfullslab", "uranusStone");
 	    uranusStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.uranusStone, 0, "uranusStoneStairs");
 
-	    uranusDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "uranusDungeonBrickStoneBlockhalfslab",
+	    uranusDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab,
+		    "uranusDungeonBrickStoneBlockhalfslab", "uranusDungeonBrick");
+	    uranusDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "uranusDungeonBrickStoneBlockfullslab",
 		    "uranusDungeonBrick");
-	    uranusDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "uranusDungeonBrickStoneBlockfullslab", "uranusDungeonBrick");
 	    uranusDungeonBrickStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.uranusDungeonBrick, 0, "uranusDungeonBrickStoneStairs");
 	}
 	if (Config.neptune) {
@@ -745,11 +798,12 @@ public class ExtraPlanetsBlocks {
 	    neptuneStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "neptuneStoneBlockfullslab", "neptuneStone");
 	    neptuneStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.neptuneStone, 0, "neptuneStoneStairs");
 
-	    neptuneDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "neptuneDungeonBrickStoneBlockhalfslab",
-		    "neptuneDungeonBrick");
+	    neptuneDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab,
+		    "neptuneDungeonBrickStoneBlockhalfslab", "neptuneDungeonBrick");
 	    neptuneDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "neptuneDungeonBrickStoneBlockfullslab",
 		    "neptuneDungeonBrick");
-	    neptuneDungeonBrickStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.neptuneDungeonBrick, 0, "neptuneDungeonBrickStoneStairs");
+	    neptuneDungeonBrickStoneStairs = new BlockBasicStairs(ExtraPlanetsBlocks.neptuneDungeonBrick, 0,
+		    "neptuneDungeonBrickStoneStairs");
 	}
 	if (Config.pluto) {
 	    plutoStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "plutoStoneBlockhalfslab", "plutoStone");
@@ -764,17 +818,8 @@ public class ExtraPlanetsBlocks {
     }
 
     private static void registerBlocks() {
-	GameRegistry.registerBlock(OreCarbon, "OreCarbon");
-	GameRegistry.registerBlock(OrePalladium, "OrePalladium");
-	GameRegistry.registerBlock(OreMagnesium, "OreMagnesium");
-	GameRegistry.registerBlock(OreCrystal, "OreCrystal");
-
-	GameRegistry.registerBlock(OreMercury, "OreMercury");
-	GameRegistry.registerBlock(OreZinc, "OreZinc");
-	GameRegistry.registerBlock(OreNickel, "OreNickel");
-	GameRegistry.registerBlock(OreUranium, "OreUranium");
-
 	if (Config.mercury) {
+	    GameRegistry.registerBlock(OreMercury, "OreMercury");
 	    GameRegistry.registerBlock(mercurySurface, "mercurySurface");
 	    GameRegistry.registerBlock(mercurySubSurface, "mercurySubSurface");
 	    GameRegistry.registerBlock(mercuryStone, "mercuryStone");
@@ -786,6 +831,7 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(mercuryGravel, "mercuryGravel");
 	}
 	if (Config.venus) {
+	    GameRegistry.registerBlock(OreCarbon, "OreCarbon");
 	    GameRegistry.registerBlock(venusSurface, "venusSurface");
 	    GameRegistry.registerBlock(venusSubSurface, "venusSubSurface");
 	    GameRegistry.registerBlock(venusStone, "venusStone");
@@ -799,8 +845,10 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(venusSpawner, "venusSpawner");
 	    GameRegistry.registerBlock(veunsDungeonBrick, "veunsDungeonBrick");
 	    GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName());
+	    GameRegistry.registerBlock(volcanicRock, "volcanicRock");
 	}
 	if (Config.ceres) {
+	    GameRegistry.registerBlock(OreUranium, "OreUranium");
 	    GameRegistry.registerBlock(ceresSurface, "ceresSurface");
 	    GameRegistry.registerBlock(ceresSubSurface, "ceresSubSurface");
 	    GameRegistry.registerBlock(ceresStone, "ceresStone");
@@ -812,6 +860,8 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(ceresGravel, "ceresGravel");
 	}
 	if (Config.jupiter) {
+	    GameRegistry.registerBlock(OreNickel, "OreNickel");
+	    GameRegistry.registerBlock(OrePalladium, "OrePalladium");
 	    GameRegistry.registerBlock(jupiterSurface, "jupiterSurface");
 	    GameRegistry.registerBlock(jupiterSubSurface, "jupiterSubSurface");
 	    GameRegistry.registerBlock(jupiterStone, "jupiterStone");
@@ -827,6 +877,7 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName());
 	}
 	if (Config.saturn) {
+	    GameRegistry.registerBlock(OreMagnesium, "OreMagnesium");
 	    GameRegistry.registerBlock(saturnSurface, "saturnSurface");
 	    GameRegistry.registerBlock(saturnSubSurfacee, "saturnSubSurface");
 	    GameRegistry.registerBlock(saturnStone, "saturnStone");
@@ -842,6 +893,7 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(treasureChestTier6, ItemBlockDesc.class, treasureChestTier6.getUnlocalizedName());
 	}
 	if (Config.uranus) {
+	    GameRegistry.registerBlock(OreCrystal, "OreCrystal");
 	    GameRegistry.registerBlock(uranusSurface, "uranusSurface");
 	    GameRegistry.registerBlock(uranusSubSurface, "uranusSubSurface");
 	    GameRegistry.registerBlock(uranusStone, "uranusStone");
@@ -849,8 +901,10 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(uranusSpawner, "uranusSpawner");
 	    GameRegistry.registerBlock(uranusDungeonBrick, "uranusDungeonBrick");
 	    GameRegistry.registerBlock(treasureChestTier7, ItemBlockDesc.class, treasureChestTier7.getUnlocalizedName());
+	    GameRegistry.registerBlock(denseIce, "denseIce");
 	}
 	if (Config.neptune) {
+	    GameRegistry.registerBlock(OreZinc, "OreZinc");
 	    GameRegistry.registerBlock(neptuneSurface, "neptuneSurface");
 	    GameRegistry.registerBlock(neptuneSubSurface, "neptuneSubSurface");
 	    GameRegistry.registerBlock(neptuneStone, "neptuneStone");
@@ -862,6 +916,7 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(neptuneSpawner, "neptuneSpawner");
 	    GameRegistry.registerBlock(neptuneDungeonBrick, "neptuneDungeonBrick");
 	    GameRegistry.registerBlock(treasureChestTier8, ItemBlockDesc.class, treasureChestTier8.getUnlocalizedName());
+	    GameRegistry.registerBlock(frozenNitrogen, "frozenNitrogen");
 	}
 	if (Config.pluto) {
 	    GameRegistry.registerBlock(plutoSurface, "plutoSurface");
@@ -909,8 +964,9 @@ public class ExtraPlanetsBlocks {
 	// GameRegistry.registerBlock(tritonSubSurface, "tritonSubSurface");
 	// GameRegistry.registerBlock(tritonStone, "tritonStone");
 
+	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
+	    GameRegistry.registerBlock(fossil, "fossil");
 	GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
-	GameRegistry.registerBlock(fossil, "fossil");
     }
 
     private static void registerMachines() {
