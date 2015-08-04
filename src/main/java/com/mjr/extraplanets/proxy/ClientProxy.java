@@ -7,6 +7,7 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlime;
@@ -107,15 +108,25 @@ public class ClientProxy extends CommonProxy {
 	super.init(event);
 	renderMobEntities();
 	renderNonMobEntities();
-	FMLCommonHandler.instance().bus().register(new MercuryHandlerClient());
-	FMLCommonHandler.instance().bus().register(new CeresHandlerClient());
-	FMLCommonHandler.instance().bus().register(new VenusHandlerClient());
-	FMLCommonHandler.instance().bus().register(new JupiterHandlerClient());
-	FMLCommonHandler.instance().bus().register(new SaturnHandlerClient());
-	FMLCommonHandler.instance().bus().register(new UranusHandlerClient());
-	FMLCommonHandler.instance().bus().register(new NeptuneHandlerClient());
-	FMLCommonHandler.instance().bus().register(new PlutoHandlerClient());
-	FMLCommonHandler.instance().bus().register(new ErisHandlerClient());
+	if (Config.mercury)
+	    FMLCommonHandler.instance().bus().register(new MercuryHandlerClient());
+	if (Config.venus)
+	    FMLCommonHandler.instance().bus().register(new VenusHandlerClient());
+	if (Config.ceres)
+	    FMLCommonHandler.instance().bus().register(new CeresHandlerClient());
+	if (Config.jupiter)
+	    FMLCommonHandler.instance().bus().register(new JupiterHandlerClient());
+	if (Config.saturn)
+	    FMLCommonHandler.instance().bus().register(new SaturnHandlerClient());
+	if (Config.uranus)
+	    FMLCommonHandler.instance().bus().register(new UranusHandlerClient());
+	if (Config.neptune)
+	    FMLCommonHandler.instance().bus().register(new NeptuneHandlerClient());
+	if (Config.pluto)
+	    FMLCommonHandler.instance().bus().register(new PlutoHandlerClient());
+	if (Config.eris)
+	    FMLCommonHandler.instance().bus().register(new ErisHandlerClient());
+
 	RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
     }
 
@@ -129,11 +140,16 @@ public class ClientProxy extends CommonProxy {
 
     @SideOnly(Side.CLIENT)
     private void renderMobEntities() {
-	RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, new RenderCreeperBossVenus());
-	RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, new RenderCreeperBossJupiter());
-	RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
-	RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, new RenderCreeperBossUranus());
-	RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
+	if (Config.venus)
+	    RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, new RenderCreeperBossVenus());
+	if (Config.jupiter)
+	    RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, new RenderCreeperBossJupiter());
+	if (Config.saturn)
+	    RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
+	if (Config.uranus)
+	    RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, new RenderCreeperBossUranus());
+	if (Config.neptune)
+	    RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
 
 	RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, new RenderEvolvedMagmaCubeBoss());
 
@@ -155,75 +171,96 @@ public class ClientProxy extends CommonProxy {
 
     @SideOnly(Side.CLIENT)
     private void renderNonMobEntities() {
-	IModelCustom rocketModelTier4 = AdvancedModelLoader
-		.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-	RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, new RenderTier4Rocket(rocketModelTier4,
-		Constants.ASSET_PREFIX, "tier4rocket"));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier4Rocket, new ItemRendererTier4Rocket(rocketModelTier4));
-
-	IModelCustom rocketModelTier5 = AdvancedModelLoader
-		.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-	RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, new RenderTier5Rocket(rocketModelTier5,
-		Constants.ASSET_PREFIX, "tier5rocket"));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier5Rocket, new ItemRendererTier5Rocket(rocketModelTier5));
-
-	IModelCustom rocketModelTier6 = AdvancedModelLoader
-		.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-	RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, new RenderTier6Rocket(rocketModelTier6,
-		Constants.ASSET_PREFIX, "tier6rocket"));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier6Rocket, new ItemRendererTier6Rocket(rocketModelTier6));
-
-	IModelCustom rocketModelTier7 = AdvancedModelLoader
-		.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-	RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, new RenderTier7Rocket(rocketModelTier7,
-		Constants.ASSET_PREFIX, "tier7rocket"));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier7Rocket, new ItemRendererTier7Rocket(rocketModelTier7));
-
-	IModelCustom rocketModelTier8 = AdvancedModelLoader
-		.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-	RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8,
-		Constants.ASSET_PREFIX, "tier8rocket"));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier8Rocket, new ItemRendererTier8Rocket(rocketModelTier8));
+	if (Config.venus) {
+	    IModelCustom rocketModelTier4 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX,
+		    "models/tier4rocket.obj"));
+	    RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, new RenderTier4Rocket(rocketModelTier4,
+		    Constants.ASSET_PREFIX, "tier4rocket"));
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier4Rocket, new ItemRendererTier4Rocket(rocketModelTier4));
+	}
+	if (Config.jupiter) {
+	    IModelCustom rocketModelTier5 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX,
+		    "models/tier4rocket.obj"));
+	    RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, new RenderTier5Rocket(rocketModelTier5,
+		    Constants.ASSET_PREFIX, "tier5rocket"));
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier5Rocket, new ItemRendererTier5Rocket(rocketModelTier5));
+	}
+	if (Config.saturn) {
+	    IModelCustom rocketModelTier6 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX,
+		    "models/tier4rocket.obj"));
+	    RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, new RenderTier6Rocket(rocketModelTier6,
+		    Constants.ASSET_PREFIX, "tier6rocket"));
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier6Rocket, new ItemRendererTier6Rocket(rocketModelTier6));
+	}
+	if (Config.uranus) {
+	    IModelCustom rocketModelTier7 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX,
+		    "models/tier4rocket.obj"));
+	    RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, new RenderTier7Rocket(rocketModelTier7,
+		    Constants.ASSET_PREFIX, "tier7rocket"));
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier7Rocket, new ItemRendererTier7Rocket(rocketModelTier7));
+	}
+	if (Config.neptune) {
+	    IModelCustom rocketModelTier8 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX,
+		    "models/tier4rocket.obj"));
+	    RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8,
+		    Constants.ASSET_PREFIX, "tier8rocket"));
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier8Rocket, new ItemRendererTier8Rocket(rocketModelTier8));
+	}
     }
 
     @SideOnly(Side.CLIENT)
     private static void renderBlocks() {
-	ExtraPlanetsBlocks.treasureT4ChestID = RenderingRegistry.getNextAvailableRenderId();
-	RenderingRegistry.registerBlockHandler(new BlockRendererTier4TreasureChest(ExtraPlanetsBlocks.treasureT4ChestID));
-	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
-
-	ExtraPlanetsBlocks.treasureT5ChestID = RenderingRegistry.getNextAvailableRenderId();
-	RenderingRegistry.registerBlockHandler(new BlockRendererTier5TreasureChest(ExtraPlanetsBlocks.treasureT5ChestID));
-	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT5TreasureChest.class, new TileEntityT5TreasureChestRenderer());
-
-	ExtraPlanetsBlocks.treasureT6ChestID = RenderingRegistry.getNextAvailableRenderId();
-	RenderingRegistry.registerBlockHandler(new BlockRendererTier6TreasureChest(ExtraPlanetsBlocks.treasureT6ChestID));
-	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT6TreasureChest.class, new TileEntityT6TreasureChestRenderer());
-
-	ExtraPlanetsBlocks.treasureT7ChestID = RenderingRegistry.getNextAvailableRenderId();
-	RenderingRegistry.registerBlockHandler(new BlockRendererTier7TreasureChest(ExtraPlanetsBlocks.treasureT7ChestID));
-	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT7TreasureChest.class, new TileEntityT7TreasureChestRenderer());
-
-	ExtraPlanetsBlocks.treasureT8ChestID = RenderingRegistry.getNextAvailableRenderId();
-	RenderingRegistry.registerBlockHandler(new BlockRendererTier8TreasureChest(ExtraPlanetsBlocks.treasureT8ChestID));
-	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
-
+	if (Config.venus) {
+	    ExtraPlanetsBlocks.treasureT4ChestID = RenderingRegistry.getNextAvailableRenderId();
+	    RenderingRegistry.registerBlockHandler(new BlockRendererTier4TreasureChest(ExtraPlanetsBlocks.treasureT4ChestID));
+	    ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
+	}
+	if (Config.jupiter) {
+	    ExtraPlanetsBlocks.treasureT5ChestID = RenderingRegistry.getNextAvailableRenderId();
+	    RenderingRegistry.registerBlockHandler(new BlockRendererTier5TreasureChest(ExtraPlanetsBlocks.treasureT5ChestID));
+	    ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT5TreasureChest.class, new TileEntityT5TreasureChestRenderer());
+	}
+	if (Config.saturn) {
+	    ExtraPlanetsBlocks.treasureT6ChestID = RenderingRegistry.getNextAvailableRenderId();
+	    RenderingRegistry.registerBlockHandler(new BlockRendererTier6TreasureChest(ExtraPlanetsBlocks.treasureT6ChestID));
+	    ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT6TreasureChest.class, new TileEntityT6TreasureChestRenderer());
+	}
+	if (Config.uranus) {
+	    ExtraPlanetsBlocks.treasureT7ChestID = RenderingRegistry.getNextAvailableRenderId();
+	    RenderingRegistry.registerBlockHandler(new BlockRendererTier7TreasureChest(ExtraPlanetsBlocks.treasureT7ChestID));
+	    ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT7TreasureChest.class, new TileEntityT7TreasureChestRenderer());
+	}
+	if (Config.neptune) {
+	    ExtraPlanetsBlocks.treasureT8ChestID = RenderingRegistry.getNextAvailableRenderId();
+	    RenderingRegistry.registerBlockHandler(new BlockRendererTier8TreasureChest(ExtraPlanetsBlocks.treasureT8ChestID));
+	    ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
+	}
 	ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();
 	RenderingRegistry.registerBlockHandler(new BlockRendererMachine(renderIdMachine));
     }
 
     @SideOnly(Side.CLIENT)
     private static void renderItems() {
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T4key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/model/treasureT4.png")));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T5key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/model/treasureT5.png")));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T6key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/model/treasureT6.png")));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T7key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/model/treasureT7.png")));
-	MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX,
-		"textures/model/treasureT8.png")));
+	if (Config.venus) {
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T4key, new ItemRendererKey(new ResourceLocation(
+		    Constants.ASSET_PREFIX, "textures/model/treasureT4.png")));
+	}
+	if (Config.jupiter) {
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T5key, new ItemRendererKey(new ResourceLocation(
+		    Constants.ASSET_PREFIX, "textures/model/treasureT5.png")));
+	}
+	if (Config.saturn) {
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T6key, new ItemRendererKey(new ResourceLocation(
+		    Constants.ASSET_PREFIX, "textures/model/treasureT6.png")));
+	}
+	if (Config.uranus) {
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T7key, new ItemRendererKey(new ResourceLocation(
+		    Constants.ASSET_PREFIX, "textures/model/treasureT7.png")));
+	}
+	if (Config.neptune) {
+	    MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T8key, new ItemRendererKey(new ResourceLocation(
+		    Constants.ASSET_PREFIX, "textures/model/treasureT8.png")));
+	}
     }
 
     @SideOnly(Side.CLIENT)

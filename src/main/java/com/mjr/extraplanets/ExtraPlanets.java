@@ -130,11 +130,16 @@ public class ExtraPlanets {
 	ExtraPlanetsArmor.init();
 	ExtraPlanetsItems.init();
 
-	BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.glowstone, ExtraPlanetsItems.glowstone_bucket);
-	BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.magma, ExtraPlanetsItems.magma_bucket);
-	BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.nitrogen, ExtraPlanetsItems.nitrogen_bucket);
-	BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.frozen_water, ExtraPlanetsItems.frozen_water_bucket);
-	BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.salt, ExtraPlanetsItems.salt_bucket);
+	if (Config.ceres)
+	    BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.salt, ExtraPlanetsItems.salt_bucket);
+	if (Config.jupiter)
+	    BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.magma, ExtraPlanetsItems.magma_bucket);
+	if (Config.saturn)
+	    BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.glowstone, ExtraPlanetsItems.glowstone_bucket);
+	if (Config.uranus)
+	    BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.frozen_water, ExtraPlanetsItems.frozen_water_bucket);
+	if (Config.neptune)
+	    BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.nitrogen, ExtraPlanetsItems.nitrogen_bucket);
 
 	MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
 	ExtraPlanets.proxy.preInit(event);
@@ -160,21 +165,30 @@ public class ExtraPlanets {
 
     private void registerNonMobEntities() {
 	registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, "NuclearBombPrimed", 150, 1, true);
-
-	registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "EntityTier4RocketTier4Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "EntityTier4RocketTier5Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "EntityTier4RocketTier6Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "EntityTier4RocketTier7Rocket", 150, 1, false);
-	registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "EntityTier4RocketTier8Rocket", 150, 1, false);
+	if (Config.venus)
+	    registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "EntityTier4Rocket", 150, 1, false);
+	if (Config.jupiter)
+	    registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "EntityTier5Rocket", 150, 1, false);
+	if (Config.saturn)
+	    registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "EntityTier6Rocket", 150, 1, false);
+	if (Config.uranus)
+	    registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "EntityTier7Rocket", 150, 1, false);
+	if (Config.neptune)
+	    registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "EntityTier8Rocket", 150, 1, false);
     }
 
     private void registerCreatures() {
 	// Default Bosses
-	registerExtraPlanetsCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
-	registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
-	registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, "CreeperBossSaturn", 894731, 0);
-	registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
-	registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, "CreeperBossNeptune", 894731, 0);
+	if (Config.venus)
+	    registerExtraPlanetsCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
+	if (Config.jupiter)
+	    registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
+	if (Config.saturn)
+	    registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, "CreeperBossSaturn", 894731, 0);
+	if (Config.uranus)
+	    registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
+	if (Config.neptune)
+	    registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, "CreeperBossNeptune", 894731, 0);
 
 	// Custom Bosses
 	// registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class,
@@ -194,19 +208,29 @@ public class ExtraPlanets {
     }
 
     private void registerSchematics() {
-	SchematicRegistry.registerSchematicRecipe(new SchematicTier4Rocket());
-	SchematicRegistry.registerSchematicRecipe(new SchematicTier5Rocket());
-	SchematicRegistry.registerSchematicRecipe(new SchematicTier6Rocket());
-	SchematicRegistry.registerSchematicRecipe(new SchematicTier7Rocket());
-	SchematicRegistry.registerSchematicRecipe(new SchematicTier8Rocket());
+	if (Config.venus)
+	    SchematicRegistry.registerSchematicRecipe(new SchematicTier4Rocket());
+	if (Config.jupiter)
+	    SchematicRegistry.registerSchematicRecipe(new SchematicTier5Rocket());
+	if (Config.saturn)
+	    SchematicRegistry.registerSchematicRecipe(new SchematicTier6Rocket());
+	if (Config.uranus)
+	    SchematicRegistry.registerSchematicRecipe(new SchematicTier7Rocket());
+	if (Config.neptune)
+	    SchematicRegistry.registerSchematicRecipe(new SchematicTier8Rocket());
     }
 
     private void addDungeonLoot() {
-	GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanetsItems.schematicTier4, 1, 0));
-	GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanetsItems.schematicTier5, 1, 0));
-	GalacticraftRegistry.addDungeonLoot(6, new ItemStack(ExtraPlanetsItems.schematicTier6, 1, 0));
-	GalacticraftRegistry.addDungeonLoot(7, new ItemStack(ExtraPlanetsItems.schematicTier7, 1, 0));
-	GalacticraftRegistry.addDungeonLoot(8, new ItemStack(ExtraPlanetsItems.schematicTier8, 1, 0));
+	if (Config.venus)
+	    GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanetsItems.schematicTier4, 1, 0));
+	if (Config.jupiter)
+	    GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanetsItems.schematicTier5, 1, 0));
+	if (Config.saturn)
+	    GalacticraftRegistry.addDungeonLoot(6, new ItemStack(ExtraPlanetsItems.schematicTier6, 1, 0));
+	if (Config.uranus)
+	    GalacticraftRegistry.addDungeonLoot(7, new ItemStack(ExtraPlanetsItems.schematicTier7, 1, 0));
+	if (Config.neptune)
+	    GalacticraftRegistry.addDungeonLoot(8, new ItemStack(ExtraPlanetsItems.schematicTier8, 1, 0));
     }
 
     public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq,
