@@ -37,7 +37,8 @@ public class Recipes {
 
     private static void registerFurnaceRecipes() {
 	if (Config.venus)
-	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCarbon, 0), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 0.0F);
+	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCarbon, 0), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5),
+		    0.0F);
 	if (Config.jupiter)
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OrePalladium, 0), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5),
 		    0.0F);
@@ -45,7 +46,8 @@ public class Recipes {
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreMagnesium, 0), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5),
 		    0.0F);
 	if (Config.uranus)
-	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCrystal, 0), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 0.0F);
+	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCrystal, 0), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5),
+		    0.0F);
 	if (Config.mercury)
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreMercury, 0), new ItemStack(ExtraPlanetsItems.ingotMercury), 0.0F);
 	if (Config.jupiter)
@@ -61,13 +63,13 @@ public class Recipes {
 	}
 	if (Config.venus) {
 	    GameRegistry
-	    .addSmelting(new ItemStack(ExtraPlanetsBlocks.venusOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+		    .addSmelting(new ItemStack(ExtraPlanetsBlocks.venusOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 	}
 	if (Config.ceres) {
 	    GameRegistry
-	    .addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+		    .addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreUranium, 0), new ItemStack(ExtraPlanetsItems.ingotUranium), 0.0F);
@@ -92,7 +94,7 @@ public class Recipes {
 	}
 	if (Config.pluto) {
 	    GameRegistry
-	    .addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+		    .addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 	}
@@ -101,242 +103,250 @@ public class Recipes {
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 	    GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 	}
-	// GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreZinc,
-	// 0), new ItemStack(), 0.0F);
     }
 
     private static void registerCraftingRecipes() {
 	if (Config.venus) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.noseConeTier4, 1), new Object[] { " Y ", " X ", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4), 'Y', Blocks.redstone_torch });
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), 'Y', Blocks.redstone_torch });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 0) });
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 0) });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 0), new Object[] { " YV", "XWX", "XZX", 'V',
-		Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
+		    Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V',
-		GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), 'Y',
-		new ItemStack(Blocks.wool, 1, 1), 'Z', new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4 ) });
+		    GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 1), 'Z',
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4) });
 	}
 	if (Config.jupiter) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.noseConeTier5, 1), new Object[] { " Y ", " X ", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', Blocks.redstone_torch });
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', Blocks.redstone_torch });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4) });
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3) });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 0), new Object[] { " YV", "XWX", "XZX", 'V',
-		Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
+		    Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V',
-		GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y',
-		new ItemStack(Blocks.wool, 1, 11), 'Z', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5) });
+		    GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 11), 'Z',
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4) });
 	}
 	if (Config.saturn) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.noseConeTier6, 1), new Object[] { " Y ", " X ", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', Blocks.redstone_torch });
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', Blocks.redstone_torch });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3) });
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3) });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 0), new Object[] { " YV", "XWX", "XZX", 'V',
-		Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
+		    Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V',
-		GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y',
-		new ItemStack(Blocks.wool, 1, 5), 'Z', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
+		    GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 5), 'Z',
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
 	}
 	if (Config.uranus) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.noseConeTier7, 1), new Object[] { " Y ", " X ", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', Blocks.redstone_torch });
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', Blocks.redstone_torch });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3) });
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3) });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 0), new Object[] { " YV", "XWX", "XZX", 'V',
-		Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
+		    Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V',
-		GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y',
-		new ItemStack(Blocks.wool, 1, 2), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
+		    GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 2), 'Z',
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
 	}
 	if (Config.neptune) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.noseConeTier8, 1), new Object[] { " Y ", " X ", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', Blocks.redstone_torch });
+		    new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', Blocks.redstone_torch });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X',
-		new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3) });
+		    new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3) });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 0), new Object[] { " YV", "XWX", "XZX", 'V',
-		Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
-		new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
+		    Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V',
-		GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y',
-		new ItemStack(Blocks.wool, 1, 2), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
+		    GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X',
+		    new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 2), 'Z',
+		    new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0) });
 	}
 	if (Config.carbonItems) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.carbonPickaxe), new Object[] { "XXX", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.carbonAxe), new Object[] { "XX ", "XS ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.carbonHoe), new Object[] { "XX ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.carbonSword), new Object[] { " X ", " X ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.carbonShovel), new Object[] { " X ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	}
 	if (Config.palladiumItems) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.palladiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.palladiumAxe), new Object[] { "XX ", "XS ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.palladiumHoe), new Object[] { "XX ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.palladiumSword), new Object[] { " X ", " X ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.palladiumShovel), new Object[] { " X ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	}
 	if (Config.magnesiumItems) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.magnesiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.magnesiumAxe), new Object[] { "XX ", "XS ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.magnesiumHoe), new Object[] { "XX ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.magnesiumSword), new Object[] { " X ", " X ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.magnesiumShovel), new Object[] { " X ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	}
 	if (Config.crystalItems) {
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.crystalPickaxe), new Object[] { "XXX", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.crystalAxe), new Object[] { "XX ", "XS ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.crystalHoe), new Object[] { "XX ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.crystalSword), new Object[] { " X ", " X ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	    GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.crystalShovel), new Object[] { " X ", " S ", " S ", 'X',
-		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+		    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 	}
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.zincBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T',
-	    new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0), 'R', Items.redstone, 'C', Items.coal });
+		new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0), 'R', Items.redstone, 'C', Items.coal });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.nickelBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T',
-	    new ItemStack(ExtraPlanetsItems.compressedNickel, 1, 0), 'R', Items.redstone, 'C', Items.coal });
+		new ItemStack(ExtraPlanetsItems.compressedNickel, 1, 0), 'R', Items.redstone, 'C', Items.coal });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.mercuryBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T',
-	    new ItemStack(ExtraPlanetsItems.compressedMercury, 1, 0), 'R', Items.redstone, 'C', Items.coal });
+		new ItemStack(ExtraPlanetsItems.compressedMercury, 1, 0), 'R', Items.redstone, 'C', Items.coal });
+
+	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.diamondApple, 1, 0), new Object[] { "DDD", "DAD", "DDD", 'D',
+		new ItemStack(Items.diamond, 1, 0), 'A', Items.apple });
+	
+	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.diamondApple, 1, 1), new Object[] { "DDD", "DAD", "DDD", 'D',
+		new ItemStack(Blocks.diamond_block, 1, 0), 'A', Items.apple });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.carbonHelmet), new Object[] { "   ", "MMM", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
+		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.carbonChest), new Object[] { "M M", "MMM", "MMM", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
+		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.carbonLegings), new Object[] { "MMM", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
+		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.carbonBoots), new Object[] { "   ", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
+		new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.palladiumHelmet), new Object[] { "   ", "MMM", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.palladiumChest), new Object[] { "M M", "MMM", "MMM", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.palladiumLegings), new Object[] { "MMM", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.palladiumBoots), new Object[] { "   ", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5) });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.magnesiumHelmet), new Object[] { "   ", "MMM", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.magnesiumChest), new Object[] { "M M", "MMM", "MMM", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.magnesiumLegings), new Object[] { "MMM", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.magnesiumBoots), new Object[] { "   ", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5) });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.crystalHelmet), new Object[] { "   ", "MMM", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.crystalChest), new Object[] { "M M", "MMM", "MMM", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.crystalLegings), new Object[] { "MMM", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.crystalBoots), new Object[] { "   ", "M M", "M M", 'M',
-	    new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5)});
+		new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5) });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.mercuryStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.mercuryStone });
+		ExtraPlanetsBlocks.mercuryStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.venusStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.venusStone });
+		ExtraPlanetsBlocks.venusStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.ceresStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.ceresStone });
+		ExtraPlanetsBlocks.ceresStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.jupiterStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.jupiterStone });
+		ExtraPlanetsBlocks.jupiterStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.saturnStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.saturnStone });
+		ExtraPlanetsBlocks.saturnStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.uranusStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.uranusStone });
+		ExtraPlanetsBlocks.uranusStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.neptuneStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.neptuneStone });
+		ExtraPlanetsBlocks.neptuneStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.plutoStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.plutoStone });
+		ExtraPlanetsBlocks.plutoStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.erisStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.erisStone });
+		ExtraPlanetsBlocks.erisStone });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.mercuryStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.mercuryStone });
+		ExtraPlanetsBlocks.mercuryStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.venusStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.venusStone });
+		ExtraPlanetsBlocks.venusStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.ceresStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.ceresStone });
+		ExtraPlanetsBlocks.ceresStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.jupiterStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.jupiterStone });
+		ExtraPlanetsBlocks.jupiterStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.saturnStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.saturnStone });
+		ExtraPlanetsBlocks.saturnStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.uranusStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.uranusStone });
+		ExtraPlanetsBlocks.uranusStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.neptuneStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.neptuneStone });
+		ExtraPlanetsBlocks.neptuneStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.plutoStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.plutoStone });
+		ExtraPlanetsBlocks.plutoStone });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.erisStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.erisStone });
+		ExtraPlanetsBlocks.erisStone });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.venusDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.veunsDungeonBrick });
+		ExtraPlanetsBlocks.veunsDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.jupiterDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.jupiterDungeonBrick });
+		ExtraPlanetsBlocks.jupiterDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.saturnDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.saturnDungeonBrick });
+		ExtraPlanetsBlocks.saturnDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.uranusDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.uranusDungeonBrick });
+		ExtraPlanetsBlocks.uranusDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.neptuneDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-	    ExtraPlanetsBlocks.neptuneDungeonBrick });
+		ExtraPlanetsBlocks.neptuneDungeonBrick });
 
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.venusDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.veunsDungeonBrick });
+		ExtraPlanetsBlocks.veunsDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.jupiterDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.jupiterDungeonBrick });
+		ExtraPlanetsBlocks.jupiterDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.saturnDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.saturnDungeonBrick });
+		ExtraPlanetsBlocks.saturnDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.uranusDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.uranusDungeonBrick });
+		ExtraPlanetsBlocks.uranusDungeonBrick });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.neptuneDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-	    ExtraPlanetsBlocks.neptuneDungeonBrick });
+		ExtraPlanetsBlocks.neptuneDungeonBrick });
 
-	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.advancedRefinery), new Object[] { "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0)});
-	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 0), new Object[] { "ZYZ", 'Y', new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4)});
-	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 4), new Object[] { "ZYZ", 'Y', new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 0), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4)});
+	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.advancedRefinery), new Object[] { "ZYZ", 'Y', GCBlocks.refinery, 'Z',
+		new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0) });
+	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 0), new Object[] { "ZYZ", 'Y',
+		new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
+	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 4), new Object[] { "ZYZ", 'Y',
+		new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 0), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
     }
 
     private static void registerCompressorRecipes() {
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4), new ItemStack(
-		ExtraPlanetsItems.tier4Items, 1, 5), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4), new ItemStack(
-		ExtraPlanetsItems.tier5Items, 1, 5), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4), new ItemStack(
-		ExtraPlanetsItems.tier6Items, 1, 5), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4), new ItemStack(
-		ExtraPlanetsItems.tier7Items, 1, 5), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 6), new ItemStack(
-		ExtraPlanetsItems.tier7Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier4Items,
+		1, 5), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier5Items,
+		1, 5), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier6Items,
+		1, 5), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier7Items,
+		1, 5), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 6), new ItemStack(ExtraPlanetsItems.tier7Items,
+		1, 4), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4));
 
 	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0), new ItemStack(
 		ExtraPlanetsItems.ingotZinc, 1, 0), new ItemStack(ExtraPlanetsItems.ingotZinc, 1, 0));
@@ -345,16 +355,16 @@ public class Recipes {
 	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.compressedNickel, 1, 0), new ItemStack(
 		ExtraPlanetsItems.ingotNickel, 1, 0), new ItemStack(ExtraPlanetsItems.ingotNickel, 1, 0));
 
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4), new ItemStack(
-		AsteroidsItems.basicItem, 1, 0), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), new ItemStack(
-		ExtraPlanetsItems.tier4Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), new ItemStack(
-		ExtraPlanetsItems.tier5Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), new ItemStack(
-		ExtraPlanetsItems.tier6Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 6));
-	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), new ItemStack(
-		ExtraPlanetsItems.tier7Items, 1, 3), new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), new ItemStack(AsteroidsItems.basicItem, 1,
+		0), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier4Items,
+		1, 3), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier5Items,
+		1, 3), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier6Items,
+		1, 3), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 6));
+	CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier7Items,
+		1, 3), new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0));
 
     }
 }
