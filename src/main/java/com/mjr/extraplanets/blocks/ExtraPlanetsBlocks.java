@@ -1094,7 +1094,7 @@ public class ExtraPlanetsBlocks {
 	    OreDictionary.registerOre("oreCopper", new ItemStack(ceresOreCopper));
 	    OreDictionary.registerOre("oreTin", new ItemStack(ceresOreTin));
 	    OreDictionary.registerOre("oreIron", new ItemStack(ceresOreIron));
-	    OreDictionary.registerOre("OreUranium", new ItemStack(OreUranium));
+	    OreDictionary.registerOre("oreUranium", new ItemStack(OreUranium));
 	}
 	if (Config.jupiter) {
 	    OreDictionary.registerOre("oreCopper", new ItemStack(jupiterOreCopper));

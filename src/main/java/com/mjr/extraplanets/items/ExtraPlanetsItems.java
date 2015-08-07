@@ -4,6 +4,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
@@ -176,6 +177,7 @@ public class ExtraPlanetsItems {
 	}
 	if (Config.ceres) {
 	    GameRegistry.registerItem(ingotUranium, "ingotUranium");
+	    OreDictionary.registerOre("ingotUranium", new ItemStack(ingotUranium));
 
 	    GameRegistry.registerItem(salt_bucket, "bucket_salt");
 	}
