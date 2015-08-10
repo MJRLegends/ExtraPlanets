@@ -247,6 +247,12 @@ public class ExtraPlanetsBlocks {
     public static Block plutoGravel;
     public static Block erisGravel;
 
+    public static Block ioGravel;
+    public static Block europaGravel;
+    public static Block deimosGravel;
+    public static Block phobosGravel;
+    public static Block tritonGravel;
+
     public static Block nuclearBomb;
     public static Block fossil;
     public static Block denseIce;
@@ -452,6 +458,7 @@ public class ExtraPlanetsBlocks {
 		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "europaStone").setHardness(2.2F).setResistance(3.0F)
 		    .setStepSound(Block.soundTypeMetal);
 	    europaStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    europaGravel = new BlockCustomGravel("europaGravel");
 	}
 	if (Config.io) {
 	    ioSurface = new BlockBasic(Material.rock).setBlockName("ioSurface").setBlockTextureName(Constants.TEXTURE_PREFIX + "ioSurface")
@@ -466,6 +473,7 @@ public class ExtraPlanetsBlocks {
 	    ioStone = new BlockBasic(Material.rock).setBlockName("ioStone").setBlockTextureName(Constants.TEXTURE_PREFIX + "ioStone")
 		    .setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeMetal);
 	    ioStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    ioGravel = new BlockCustomGravel("ioGravel");
 	}
 	if (Config.deimos) {
 	    deimosSurface = new BlockBasic(Material.rock).setBlockName("deimosSurface")
@@ -482,6 +490,7 @@ public class ExtraPlanetsBlocks {
 		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "deimosStone").setHardness(2.2F).setResistance(3.0F)
 		    .setStepSound(Block.soundTypeMetal);
 	    deimosStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    deimosGravel = new BlockCustomGravel("deimosGravel");
 	}
 	if (Config.phobos) {
 	    phobosSurface = new BlockBasic(Material.rock).setBlockName("phobosSurface")
@@ -498,6 +507,7 @@ public class ExtraPlanetsBlocks {
 		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "phobosStone").setHardness(2.2F).setResistance(3.0F)
 		    .setStepSound(Block.soundTypeMetal);
 	    phobosStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    phobosGravel = new BlockCustomGravel("phobosGravel");
 	}
 	if (Config.triton) {
 	    tritonSurface = new BlockBasic(Material.rock).setBlockName("tritonSurface")
@@ -514,6 +524,7 @@ public class ExtraPlanetsBlocks {
 		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonStone").setHardness(2.2F).setResistance(3.0F)
 		    .setStepSound(Block.soundTypeMetal);
 	    tritonStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
+	    tritonGravel = new BlockCustomGravel("tritonGravel");
 	}
 	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 	    fossil = new BlockFossil(Material.rock);
@@ -943,26 +954,33 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(europaSurface, "europaSurface");
 	    GameRegistry.registerBlock(europaSubSurface, "europaSubSurface");
 	    GameRegistry.registerBlock(europaStone, "europaStone");
+	    GameRegistry.registerBlock(europaGravel, "europaGravel");
 	}
 	if (Config.io) {
 	    GameRegistry.registerBlock(ioSurface, "ioSurface");
 	    GameRegistry.registerBlock(ioSubSurface, "ioSubSurface");
 	    GameRegistry.registerBlock(ioStone, "ioStone");
+	    GameRegistry.registerBlock(ioGravel, "ioGravel");
+
 	}
 	if (Config.deimos) {
 	    GameRegistry.registerBlock(deimosSurface, "deimosSurface");
 	    GameRegistry.registerBlock(deimosSubSurface, "deimosSubSurface");
 	    GameRegistry.registerBlock(deimosStone, "deimosStone");
+	    GameRegistry.registerBlock(deimosGravel, "deimosGravel");
 	}
 	if (Config.phobos) {
 	    GameRegistry.registerBlock(phobosSurface, "phobosSurface");
 	    GameRegistry.registerBlock(phobosSubSurface, "phobosSubSurface");
 	    GameRegistry.registerBlock(phobosStone, "phobosStone");
+	    GameRegistry.registerBlock(phobosGravel, "phobosGravel");
 	}
-	// GameRegistry.registerBlock(tritonSurface, "tritonSurface");
-	// GameRegistry.registerBlock(tritonSubSurface, "tritonSubSurface");
-	// GameRegistry.registerBlock(tritonStone, "tritonStone");
-
+	if (Config.triton) {
+            GameRegistry.registerBlock(tritonSurface, "tritonSurface");
+            GameRegistry.registerBlock(tritonSubSurface, "tritonSubSurface");
+            GameRegistry.registerBlock(tritonStone, "tritonStone");
+            GameRegistry.registerBlock(tritonGravel, "tritonGravel");
+	}
 	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 	    GameRegistry.registerBlock(fossil, "fossil");
 	GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");

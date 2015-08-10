@@ -19,6 +19,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
     private WorldGenerator ironGen;
     private WorldGenerator carbonGen;
     private WorldGenerator gravelGen;
+    private WorldGenerator volcanicRockGen;
 
     private World currentWorld;
 
@@ -30,6 +31,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 	this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusOreIron, 8, 0, false, ExtraPlanetsBlocks.venusStone, 1);
 	this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreCarbon, 4, 0, false, ExtraPlanetsBlocks.venusStone, 1);
 	this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusGravel, 12, 0, false, ExtraPlanetsBlocks.venusStone, 1);
+	this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.volcanicRock, 20, 0, false, ExtraPlanetsBlocks.venusSurface, 1);
 
 	// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 	// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -52,6 +54,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 	this.generateOre(20, this.ironGen, 0, 64);
 	this.generateOre(20, this.carbonGen, 0, 64);
 	this.generateOre(15, this.gravelGen, 0, 80);
+	this.generateOre(15, this.volcanicRockGen, 0, 256);
 	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	for (int i = 0; i < this.LakesPerChunk; i++) {
 	    if (this.rand.nextInt(10) == 0) {
