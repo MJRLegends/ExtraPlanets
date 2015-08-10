@@ -55,40 +55,40 @@ public class MoonsMain {
 	triton = makeUnreachableMoon("triton", PlanetsMain.neptune);
 	if (triton != null)
 	    triton.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
 
 	ganymede = makeUnreachableMoon("ganymede", PlanetsMain.jupiter);
 	if (ganymede != null)
 	    ganymede.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(100.0F);
 
 	callisto = makeUnreachableMoon("callisto", PlanetsMain.jupiter);
 	if (callisto != null)
 	    callisto.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F)).setRelativeOrbitTime(100.0F);
 
 	rhea = makeUnreachableMoon("rhea", PlanetsMain.saturn);
 	if (rhea != null)
 	    rhea.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
 	titan = makeUnreachableMoon("titan", PlanetsMain.saturn);
 	if (titan != null)
 	    titan.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(100.0F);
 	iapetus = makeUnreachableMoon("iapetus", PlanetsMain.saturn);
 	if (iapetus != null)
 	    iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(100.0F);
 
 	// Uranus Moons
 	titania = makeUnreachableMoon("titania", PlanetsMain.uranus);
 	if (titania != null)
 	    titania.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
 	oberon = makeUnreachableMoon("oberon", PlanetsMain.uranus);
 	if (oberon != null)
 	    oberon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-	    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(100.0F);
+		    .setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(100.0F);
     }
 
     private static void initializeMoons() {
@@ -100,7 +100,7 @@ public class MoonsMain {
 	    triton.setTierRequired(7);
 	    triton.setRelativeSize(0.3867F);
 	    triton.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-	    .atmosphereComponent(IAtmosphericGas.METHANE);
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
 	    triton.setBodyIcon(new ResourceLocation("textures/gui/celestialbodies/triton.png"));
 	    triton.setDimensionInfo(Config.tritonID, WorldProviderTriton.class);
 	}
@@ -112,7 +112,7 @@ public class MoonsMain {
 	    europa.setTierRequired(4);
 	    europa.setRelativeSize(0.3867F);
 	    europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-	    .atmosphereComponent(IAtmosphericGas.METHANE);
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
 	    europa.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
 	    europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
 	}
@@ -124,7 +124,7 @@ public class MoonsMain {
 	    io.setTierRequired(4);
 	    io.setRelativeSize(0.3867F);
 	    io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-	    .atmosphereComponent(IAtmosphericGas.METHANE);
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
 	    io.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
 	    io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
 	}
@@ -136,7 +136,7 @@ public class MoonsMain {
 	    deimos.setTierRequired(2);
 	    deimos.setRelativeSize(0.3867F);
 	    deimos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-	    .atmosphereComponent(IAtmosphericGas.METHANE);
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
 	    deimos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/deimos.png"));
 	    deimos.setDimensionInfo(Config.deimosID, WorldProviderDeimos.class);
 	}
@@ -148,7 +148,7 @@ public class MoonsMain {
 	    phobos.setTierRequired(2);
 	    phobos.setRelativeSize(0.3867F);
 	    phobos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
-	    .atmosphereComponent(IAtmosphericGas.METHANE);
+		    .atmosphereComponent(IAtmosphericGas.METHANE);
 	    phobos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/phobos.png"));
 	    phobos.setDimensionInfo(Config.phobosID, WorldProviderPhobos.class);
 	}

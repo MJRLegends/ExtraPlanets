@@ -25,10 +25,13 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.moons.triton.worldgen.village.MapGenVillageTriton;
 
 public class ChunkProviderTriton extends ChunkProviderSpace {
 
     private final BiomeDecoratorTriton greenPixelBiomeDecorator = new BiomeDecoratorTriton();
+
+    private final MapGenVillageTriton villageGenerator = new MapGenVillageTriton();
 
     public ChunkProviderTriton(World par1World, long seed, boolean mapFeaturesEnabled) {
 	super(par1World, seed, mapFeaturesEnabled);
@@ -79,17 +82,17 @@ public class ChunkProviderTriton extends ChunkProviderSpace {
 
     @Override
     protected BlockMetaPair getGrassBlock() {
-	return new BlockMetaPair(ExtraPlanetsBlocks.tritonSurface,(byte) 1);
+	return new BlockMetaPair(ExtraPlanetsBlocks.tritonSurface, (byte) 1);
     }
 
     @Override
     protected BlockMetaPair getDirtBlock() {
-	return new BlockMetaPair(ExtraPlanetsBlocks.tritonSubSurface,(byte) 1);
+	return new BlockMetaPair(ExtraPlanetsBlocks.tritonSubSurface, (byte) 1);
     }
 
     @Override
     protected BlockMetaPair getStoneBlock() {
-	return new BlockMetaPair(ExtraPlanetsBlocks.tritonStone,(byte) 1);
+	return new BlockMetaPair(ExtraPlanetsBlocks.tritonStone, (byte) 1);
     }
 
     @Override
@@ -123,6 +126,12 @@ public class ChunkProviderTriton extends ChunkProviderSpace {
 
     @Override
     public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+    }
+
+    @Override
+    public void recreateStructures(int par1, int par2) {
+	this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
     }
 
 }
