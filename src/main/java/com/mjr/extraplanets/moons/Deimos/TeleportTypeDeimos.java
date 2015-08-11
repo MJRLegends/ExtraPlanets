@@ -2,6 +2,8 @@ package com.mjr.extraplanets.moons.Deimos;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Achievements;
+
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
@@ -43,5 +45,6 @@ public class TeleportTypeDeimos implements ITeleportType {
     @Override
     public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
 	    boolean ridingAutoRocket) {
+	player.addStat(Achievements.deimosMoon, 1);
     }
 }
