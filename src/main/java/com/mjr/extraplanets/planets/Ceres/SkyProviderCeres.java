@@ -19,6 +19,8 @@ import net.minecraftforge.client.IRenderHandler;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
+import com.mjr.extraplanets.planets.Ceres.SkyProviderCeres;
+
 import cpw.mods.fml.client.FMLClientHandler;
 
 
@@ -33,9 +35,9 @@ public class SkyProviderCeres extends IRenderHandler
     public int glSkyList2;
     private float sunSize;
 
-    public SkyProviderCeres(IGalacticraftWorldProvider plutoProvider)
+    public SkyProviderCeres(IGalacticraftWorldProvider ceresProvider)
     {
-	this.sunSize = 17.5F * plutoProvider.getSolarSize();
+	this.sunSize = 17.5F * ceresProvider.getSolarSize();
 
 	int displayLists = GLAllocation.generateDisplayLists(3);
 	this.starList = displayLists;
@@ -259,7 +261,6 @@ public class SkyProviderCeres extends IRenderHandler
 	tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
 	tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
 	tessellator1.draw();
-
 
 	GL11.glDisable(GL11.GL_TEXTURE_2D);
 

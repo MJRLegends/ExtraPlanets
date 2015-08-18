@@ -10,6 +10,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.moons.MoonsMain;
 import com.mjr.extraplanets.moons.triton.worldgen.ChunkProviderTriton;
 import com.mjr.extraplanets.moons.triton.worldgen.WorldChunkManagerTriton;
@@ -117,7 +118,7 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
     @Override
     public boolean canSpaceshipTierPass(int tier) {
-	return tier > 0;
+	return tier >= 7;
     }
 
     @Override

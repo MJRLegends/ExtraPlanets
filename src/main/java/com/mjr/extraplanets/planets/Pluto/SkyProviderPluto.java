@@ -20,6 +20,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.planets.Pluto.SkyProviderPluto;
 
 import cpw.mods.fml.client.FMLClientHandler;
 

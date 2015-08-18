@@ -93,7 +93,7 @@ public class MoonsMain {
 
     private static void initializeMoons() {
 	if (Config.triton) {
-	    triton = new Moon("Triton").setParentPlanet(PlanetsMain.neptune);
+	    triton = new Moon("triton").setParentPlanet(PlanetsMain.neptune);
 	    triton.setPhaseShift(2.436F);
 	    triton.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 	    triton.setRelativeOrbitTime(100.0F);
@@ -101,7 +101,7 @@ public class MoonsMain {
 	    triton.setRelativeSize(0.3867F);
 	    triton.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM)
 		    .atmosphereComponent(IAtmosphericGas.METHANE);
-	    triton.setBodyIcon(new ResourceLocation("textures/gui/celestialbodies/triton.png"));
+	    triton.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/triton.png"));
 	    triton.setDimensionInfo(Config.tritonID, WorldProviderTriton.class);
 	}
 	if (Config.europa) {
