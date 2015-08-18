@@ -1,8 +1,10 @@
+#Creative Tabs
 itemGroup.SpaceItemsTab=Extra Planets Items
 itemGroup.SpaceBlocksTab=Extra Planets Blocks
 itemGroup.SpaceToolsTab=Extra Planets Tools
 itemGroup.SpaceArmorTab=Extra Planets Armor
 
+#Planets
 planet.Mercury=Mercury
 planet.Venus=Venus
 planet.Ceres=Ceres
@@ -14,6 +16,7 @@ planet.Pluto=Pluto
 planet.Eris=Eris
 planet.kuiperBelt=Kuiper Belt
 
+#Moons
 moon.triton=Triton
 moon.callisto=Callisto
 moon.europa=Europa
@@ -27,6 +30,7 @@ moon.titan=Titan
 moon.oberon=Oberon
 moon.titania=Titania
 
+#Planet Blocks
 tile.mercurySurface.name=Mercury Surface Rock
 tile.mercurySubSurface.name=Mercury Sub-Surface Rock
 tile.mercuryStone.name=Mercury Stone
@@ -70,6 +74,32 @@ tile.erisSubSurface.name=Eris Sub-Surface Rock
 tile.erisStone.name=Eris Stone
 tile.erisGravel.name=Eris Gravel
 
+tile.ioSurface.name=IO Surface Rock
+tile.ioSubSurface.name=IO Sub-Surface Rock
+tile.ioStone.name=IO Stone
+tile.ioGravel.name=IO Gravel
+
+tile.europaSurface.name=Europa Surface Rock
+tile.europaSubSurface.name=Europa Sub-Surface Rock
+tile.europaStone.name=Europa Stone
+tile.europaGravel.name=Europa Gravel
+
+tile.deimosSurface.name=Deimos Surface Rock
+tile.deimosSubSurface.name=Deimos Sub-Surface Rock
+tile.deimosStone.name=Deimos Stone
+tile.deimosGravel.name=Deimos Gravel
+
+tile.phobosSurface.name=Phobos Surface Rock
+tile.phobosSubSurface.name=Phobos Sub-Surface Rock
+tile.phobosStone.name=Phobos Stone
+tile.phobosGravel.name=Phobos Gravel
+
+tile.tritonSurface.name=Triton Surface Rock
+tile.tritonSubSurface.name=Triton Sub-Surface Rock
+tile.tritonStone.name=Triton Stone
+tile.tritonGravel.name=Triton Gravel
+
+#Planet Ore Blocks
 tile.mercuryOreTin.name=Mercury Tin Ore
 tile.mercuryOreIron.name=Mercury Iron Ore
 tile.mercuryOreCopper.name=Mercury Copper Ore
@@ -106,6 +136,7 @@ tile.erisOreTin.name=Eris Tin Ore
 tile.erisOreIron.name=Eris Iron Ore
 tile.erisOreCopper.name=Eris Copper Ore
 
+#Ore Blocks
 tile.OreCarbon.name=Carbon Ore
 tile.OrePalladium.name=Palladium Ore
 tile.OreMagnesium.name=Magnesium Ore
@@ -115,12 +146,14 @@ tile.OreNickel.name=Nickel Ore
 tile.OreMercury.name=Mercury Ore
 tile.OreUranium.name=Uranium Ore
 
+#Dungeon Bricks
 tile.veunsDungeonBrick.name=Venus Dungeon Brick
 tile.jupiterDungeonBrick.name=Jupiter Dungeon Brick
 tile.saturnDungeonBrick.name=Saturn Dungeon Brick
 tile.uranusDungeonBrick.name=Uranus Dungeon Brick
 tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
 
+#Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab
 tile.ExtraPlanets_venusStoneBlockhalfslab.name=Venus Stone Slab
 tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Ceres Stone Slab
@@ -131,18 +164,7 @@ tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Neptune Stone Slab
 tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Stone Slab
 tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Stone Slab
 
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeon Brick Slab
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeon Brick Slab
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeon Brick Slab
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeon Brick Slab
-
-tile.venusDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs
-tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeon Brick Stairs
-tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs
-tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs
-tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs
-
+#Planet Blocks Stairs
 tile.mercuryStoneStairs.name=Mercury Stairs
 tile.venusStoneStairs.name=Venus Stairs
 tile.ceresStoneStairs.name=Ceres Stairs
@@ -153,148 +175,149 @@ tile.neptuneStoneStairs.name=Neptune Stairs
 tile.plutoStoneStairs.name=Pluto Stairs
 tile.erisStoneStairs.name=Eris Stairs
 
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeon Brick Slab
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeon Brick Slab
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeon Brick Slab
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeon Brick Slab
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs
+tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeon Brick Stairs
+tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs
+tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs
+tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs
+
+#Treasure Chests
 tile.treasureChestT4.name=Tier 4 Treasure Chest
 tile.treasureChestT5.name=Tier 5 Treasure Chest
 tile.treasureChestT6.name=Tier 6 Treasure Chest
 tile.treasureChestT7.name=Tier 7 Treasure Chest
 tile.treasureChestT8.name=Tier 8 Treasure Chest
-
 tile.treasureChestT4.description=Tier 4 Treasure Chests will generate in Venus Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT5.description=Tier 5 Treasure Chests will generate in Jupiter Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT6.description=Tier 6 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT7.description=Tier 7 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT8.description=Tier 8 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
 
+#Machines
 tile.advancedRefinery.name=Advanced Refinery
 tile.solar.hybrid.name=Hybrid Solar Panel
 tile.solar.ultimate.name=Ultimate Solar Panel
-
 tile.solarhybrid.description=This Solar Panel will work during the day and night
 tile.solarultimate.description=This Solar Panel will work during the day and night
+container.solarhybrid.name=Hybrid Solar Panel
+container.solarultimate.name=Ultimate Solar Panel
 
+#Other Blocks
+tile.nuclearBomb.name=Nuclear
+tile.volcanicRock.name=Volcanic Rock
+tile.frozenNitrogen.name=Frozen Nitrogen
+tile.denseIce.name=Dense Ice
+
+#Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Tier 4 Rocket
 item.itemTier5Rocket.t5Rocket.name=Tier 5 Rocket
 item.itemTier6Rocket.t6Rocket.name=Tier 6 Rocket
 item.itemTier7Rocket.t7Rocket.name=Tier 7 Rocket
 item.itemTier8Rocket.t8Rocket.name=Tier 8 Rocket
 
+#Rocket Tiered Items
 item.noseConeTier4.name=Tier 4 Nose Cone
 item.noseConeTier5.name=Tier 5 Nose Cone
 item.noseConeTier6.name=Tier 6 Nose Cone
 item.noseConeTier7.name=Tier 7 Nose Cone
 item.noseConeTier8.name=Tier 8 Nose Cone
-
 item.tier4.tier4Fin.name=Tier 4 Rocket Fins
 item.tier5.tier5Fin.name=Tier 5 Rocket Fins
 item.tier6.tier6Fin.name=Tier 6 Rocket Fins
 item.tier7.tier7Fin.name=Tier 7 Rocket Fins
 item.tier8.tier8Fin.name=Tier 8 Rocket Fins
-
 item.tier4.tier4engine.name=Tier 4 Rocket Engine
 item.tier5.tier5engine.name=Tier 5 Rocket Engine
 item.tier6.tier6engine.name=Tier 6 Rocket Engine
 item.tier7.tier7engine.name=Tier 7 Rocket Engine
 item.tier8.tier8engine.name=Tier 8 Rocket Engine
-
 item.tier4.tier4booster.name=Tier 4 Booster
 item.tier5.tier5booster.name=Tier 5 Booster
 item.tier6.tier6booster.name=Tier 6 Booster
 item.tier7.tier7booster.name=Tier 7 Booster
 item.tier8.tier8booster.name=Tier 8 Booster
-
 item.tier4.tier4HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier5.tier5HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier6.tier6HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier7.tier7HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier8.tier8HeavyDutyPlate.name=Heavy-Duty Plate
 
+tier4.heavyDutyPlate.name=Tier 4
+tier5.heavyDutyPlate.name=Tier 5
+tier6.heavyDutyPlate.name=Tier 6
+tier7.heavyDutyPlate.name=Tier 7
+tier8.heavyDutyPlate.name=Tier 8
+
+#Compressed Items
 item.tier4.compressedCarbon.name=Compressed Carbon
 item.tier5.compressedPalladium.name=Compressed Palladium
 item.tier6.compressedMagnesium.name=Compressed Magnesium
 item.tier7.compressedReinforcedCrystal.name=Compressed Reinforced Crystal
 item.tier7.compressedCrystal.name=Compressed Crystal
-
 item.compressedZinc.name=Compressed Zinc
 item.compressedNickel.name=Compressed Nickel
 item.compressedMercury.name=Compressed Mercury
 
+#Ingots
 item.tier4.ingotCarbon.name=Carbon Ingot
 item.tier5.ingotPalladium.name=Palladium Ingot
 item.tier6.ingotMagnesium.name=Magnesium Ingot
 item.tier7.ingotCrystal.name=Crystal Ingot
-
 item.ingotZinc.name=Zinc Ingot
 item.ingotNickel.name=Nickel Ingot
 item.ingotMercury.name=Mercury Ingot
 item.ingotUranium.name=Uranium Ingot
 
+#Buckets
 item.bucket_glowstone.name=Glowstone Bucket
 item.bucket_salt.name=Salt Bucket
 item.bucket_magma.name=Magma Bucket
 item.bucket_frozen_water.name=Frozen Water Bucket
 item.bucket_nitrogen.name=Nitrogen Bucket
 
+#Keys
 item.key.T4.name=Tier 4 Dungeon Key
 item.key.T5.name=Tier 5 Dungeon Key
 item.key.T6.name=Tier 6 Dungeon Key
 item.key.T7.name=Tier 7 Dungeon Key
 item.key.T8.name=Tier 8 Dungeon Key
 
+#Tools
 item.carbonPickaxe.name=Carbon Pickaxe
 item.carbonAxe.name=Carbon Axe
 item.carbonSword.name=Carbon Sword
 item.carbonHoe.name=Carbon Hoe
 item.carbonShovel.name=Carbon Shovel
-
 item.palladiumPickaxe.name=Palladium Pickaxe
 item.palladiumAxe.name=Palladium Axe
 item.palladiumSword.name=Palladium Sword
 item.palladiumHoe.name=Palladium Hoe
 item.palladiumShovel.name=Palladium Shovel
-
 item.magnesiumPickaxe.name=Magnesium Pickaxe
 item.magnesiumAxe.name=Magnesium Axe
 item.magnesiumSword.name=Magnesium Sword
 item.magnesiumHoe.name=Magnesium Hoe
 item.magnesiumShovel.name=Magnesium Shovel
-
 item.crystalPickaxe.name=Crystal Pickaxe
 item.crystalAxe.name=Crystal Axe
 item.crystalSword.name=Crystal Sword
 item.crystalHoe.name=Crystal Hoe
 item.crystalShovel.name=Crystal Shovel
 
+#Schematics
 item.schematicTier4.name=NASA Workbench Schematic
 item.schematicTier5.name=NASA Workbench Schematic
 item.schematicTier6.name=NASA Workbench Schematic
 item.schematicTier7.name=NASA Workbench Schematic
 item.schematicTier8.name=NASA Workbench Schematic
-
-item.mercuryBattery.name=Mercury Battery
-item.nickelBattery.name=Nickel Battery
-item.zincBattery.name=Zinc Battery
-
-item.carbonHelmet.name=Carbon Helmet
-item.carbonChest.name=Carbon Chestplate
-item.carbonLegings.name=Carbon Leggings
-item.carbonBoots.name=Carbon Boots
-
-item.palladiumHelmet.name=Palladium Helmet
-item.palladiumChest.name=Palladium Chestplate
-item.palladiumLegings.name=Palladium Leggings
-item.palladiumBoots.name=Palladium Boots
-
-item.magnesiumHelmet.name=Magnesium Helmet
-item.magnesiumChest.name=Magnesium Chestplate
-item.magnesiumLegings.name=Magnesium Leggings
-item.magnesiumBoots.name=Magnesium Boots
-
-item.crystalHelmet.name=Crystal Helmet
-item.crystalChest.name=Crystal Chestplate
-item.crystalLegings.name=Crystal Leggings
-item.crystalBoots.name=Crystal Boots
-
-item.appleDiamond.name=Diamond Apple
 
 schematic.tier4.rocket.name=Tier 4 Rocket
 schematic.tier5.rocket.name=Tier 5 Rocket
@@ -308,12 +331,36 @@ schematic.rocketT6.name=Tier 6 Rocket
 schematic.rocketT7.name=Tier 7 Rocket
 schematic.rocketT8.name=Tier 8 Rocket
 
-tier4.heavyDutyPlate.name=Tier 4
-tier5.heavyDutyPlate.name=Tier 5
-tier6.heavyDutyPlate.name=Tier 6
-tier7.heavyDutyPlate.name=Tier 7
-tier8.heavyDutyPlate.name=Tier 8
+#Batteries
+item.mercuryBattery.name=Mercury Battery
+item.nickelBattery.name=Nickel Battery
+item.zincBattery.name=Zinc Battery
 
+#Armor
+item.carbonHelmet.name=Carbon Helmet
+item.carbonChest.name=Carbon Chestplate
+item.carbonLegings.name=Carbon Leggings
+item.carbonBoots.name=Carbon Boots
+item.palladiumHelmet.name=Palladium Helmet
+item.palladiumChest.name=Palladium Chestplate
+item.palladiumLegings.name=Palladium Leggings
+item.palladiumBoots.name=Palladium Boots
+item.magnesiumHelmet.name=Magnesium Helmet
+item.magnesiumChest.name=Magnesium Chestplate
+item.magnesiumLegings.name=Magnesium Leggings
+item.magnesiumBoots.name=Magnesium Boots
+item.crystalHelmet.name=Crystal Helmet
+item.crystalChest.name=Crystal Chestplate
+item.crystalLegings.name=Crystal Leggings
+item.crystalBoots.name=Crystal Boots
+
+#Other Items
+item.appleDiamond.name=Diamond Apple
+item.cannedfood.cannedFood.name=Can of Food
+item.bodyparts.arm.name=Arm
+item.bodyparts.leg.name=Leg
+
+#Entities
 entity.CreeperBossVenus.name=Creeper Boss Venus
 entity.CreeperBossJupiter.name=Creeper Boss Jupiter
 entity.CreeperBossSaturn.name=Creeper Boss Saturn
@@ -329,6 +376,7 @@ entity.EvolvedBlueCreeper.name=Evolved Blue Creeper
 entity.EvolvedRedCreeper.name=Evolved Red Creeper
 entity.EvolvedPowerSkeleton.name=Evolved Power Skeleton
 
+#Achievement
 achievement.mercuryPlanet=Land on Mercury!
 achievement.venusPlanet=Land on Venus!
 achievement.ceresPlanet=Land on Ceres!
@@ -360,6 +408,3 @@ achievement.uranusPlanet.desc=Take a Tier 6 rocket to Uranus
 achievement.neptunePlanet.desc=Take a Tier 7 rocket to Neptune
 achievement.plutoPlanet.desc=Take a Tier 8 rocket to Pluto
 achievement.erisPlanet.desc=Take a Tier 8 rocket to Eris
-
-container.solarhybrid.name=Hybrid Solar Panel
-container.solarultimate.name=Ultimate Solar Panel

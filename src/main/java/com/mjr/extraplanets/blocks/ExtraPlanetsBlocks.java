@@ -404,7 +404,7 @@ public class ExtraPlanetsBlocks {
 		    .setStepSound(Block.soundTypeMetal);
 	    neptuneStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	    frozenNitrogen = new BlockBasic(Material.ice).setBlockName("denseIce").setBlockTextureName("denseIce")
+	    frozenNitrogen = new BlockBasic(Material.ice).setBlockName("frozenNitrogen").setBlockTextureName("frozenNitrogen")
 		    .setStepSound(Block.soundTypeSnow);
 
 	}
@@ -527,7 +527,8 @@ public class ExtraPlanetsBlocks {
 	    tritonGravel = new BlockCustomGravel("tritonGravel");
 	}
 	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-	    fossil = new BlockFossil(Material.rock);
+	    fossil = new BlockFossil(Material.rock).setBlockName("fossil")
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonSubSurface").setHardness(2.5F).setResistance(1.0F);
 	nuclearBomb = new BlockNuclearBomb();
 
     }
@@ -976,10 +977,10 @@ public class ExtraPlanetsBlocks {
 	    GameRegistry.registerBlock(phobosGravel, "phobosGravel");
 	}
 	if (Config.triton) {
-            GameRegistry.registerBlock(tritonSurface, "tritonSurface");
-            GameRegistry.registerBlock(tritonSubSurface, "tritonSubSurface");
-            GameRegistry.registerBlock(tritonStone, "tritonStone");
-            GameRegistry.registerBlock(tritonGravel, "tritonGravel");
+	    GameRegistry.registerBlock(tritonSurface, "tritonSurface");
+	    GameRegistry.registerBlock(tritonSubSurface, "tritonSubSurface");
+	    GameRegistry.registerBlock(tritonStone, "tritonStone");
+	    GameRegistry.registerBlock(tritonGravel, "tritonGravel");
 	}
 	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 	    GameRegistry.registerBlock(fossil, "fossil");
