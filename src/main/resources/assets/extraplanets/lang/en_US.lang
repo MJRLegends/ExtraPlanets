@@ -215,6 +215,7 @@ tile.nuclearBomb.name=Nuclear
 tile.volcanicRock.name=Volcanic Rock
 tile.frozenNitrogen.name=Frozen Nitrogen
 tile.denseIce.name=Dense Ice
+tile.fossil.name=Fossil Block
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Tier 4 Rocket
@@ -359,6 +360,12 @@ item.appleDiamond.name=Diamond Apple
 item.cannedfood.cannedFood.name=Can of Food
 item.bodyparts.arm.name=Arm
 item.bodyparts.leg.name=Leg
+
+item.cannedfood.dehydratedPorkchop.name=Dehydrated Porkchop
+item.cannedfood.dehydratedFish.name=Dehydrated Fish
+item.cannedfood.dehydratedSalmon.name=Dehydrated Salmon
+item.cannedfood.dehydratedChicken.name=Dehydrated Chicken
+item.cannedfood.dehydratedBeef.name=Dehydrated Beef
 
 #Entities
 entity.CreeperBossVenus.name=Creeper Boss Venus

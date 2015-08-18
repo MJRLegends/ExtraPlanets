@@ -529,8 +529,8 @@ public class ExtraPlanetsBlocks {
 	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 	    fossil = new BlockFossil(Material.rock).setBlockName("fossil")
 		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonSubSurface").setHardness(2.5F).setResistance(1.0F);
-	nuclearBomb = new BlockNuclearBomb();
-
+	if (Config.ceres)
+	    nuclearBomb = new BlockNuclearBomb();
     }
 
     private static void initializeOreBlocks() {
@@ -984,7 +984,8 @@ public class ExtraPlanetsBlocks {
 	}
 	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 	    GameRegistry.registerBlock(fossil, "fossil");
-	GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
+	if (Config.ceres)
+	    GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
     }
 
     private static void registerMachines() {
