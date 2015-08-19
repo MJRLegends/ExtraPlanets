@@ -312,7 +312,7 @@ public class ExtraPlanetsBlocks {
 
 	    venusGravel = new BlockCustomGravel("venusGravel");
 
-	    volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanicRock").setBlockTextureName("volcanicRock").setHardness(3.0F)
+	    volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanicRock").setBlockTextureName(Constants.TEXTURE_PREFIX + "volcanicRock").setHardness(3.0F)
 		    .setResistance(6.0F).setStepSound(Block.soundTypeStone);
 	}
 	if (Config.ceres) {

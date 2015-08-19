@@ -378,13 +378,26 @@ public class Recipes {
 		new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
 	GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 4), new Object[] { "ZYZ", 'Y',
 		new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 0), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
-	
-	//Can of Food
-	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1 ,0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.cooked_porkchop, Items.cooked_porkchop });
-	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1 ,1), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.cooked_fished, 1, 0), new ItemStack(Items.cooked_fished, 1, 0) });
-	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1 ,2), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.cooked_fished, 1, 1), new ItemStack(Items.cooked_fished, 1, 1) });
-	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1 ,3), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.cooked_chicken, Items.cooked_chicken });
-	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1 ,4), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.cooked_beef, Items.cooked_beef });
+
+	// Can of Food
+	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1, 0), new Object[] {
+		new ItemStack(GCItems.canister, 1, 0), Items.cooked_porkchop, Items.cooked_porkchop });
+	GameRegistry
+		.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1, 1), new Object[] {
+			new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.cooked_fished, 1, 0),
+			new ItemStack(Items.cooked_fished, 1, 0) });
+	GameRegistry
+		.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1, 2), new Object[] {
+			new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.cooked_fished, 1, 1),
+			new ItemStack(Items.cooked_fished, 1, 1) });
+	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1, 3), new Object[] {
+		new ItemStack(GCItems.canister, 1, 0), Items.cooked_chicken, Items.cooked_chicken });
+	GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1, 4), new Object[] {
+		new ItemStack(GCItems.canister, 1, 0), Items.cooked_beef, Items.cooked_beef });
+
+	// Others
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 6, 15), new Object[] { new ItemStack(ExtraPlanetsItems.bodyParts, 1, 0) });
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 6, 15), new Object[] { new ItemStack(ExtraPlanetsItems.bodyParts, 1, 1) });
     }
 
     private static void registerCompressorRecipes() {

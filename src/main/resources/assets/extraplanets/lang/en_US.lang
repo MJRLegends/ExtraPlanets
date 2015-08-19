@@ -211,7 +211,7 @@ container.solarhybrid.name=Hybrid Solar Panel
 container.solarultimate.name=Ultimate Solar Panel
 
 #Other Blocks
-tile.nuclearBomb.name=Nuclear
+tile.nuclearBomb.name=Nuclear Bomb
 tile.volcanicRock.name=Volcanic Rock
 tile.frozenNitrogen.name=Frozen Nitrogen
 tile.denseIce.name=Dense Ice

@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
 import cpw.mods.fml.relauncher.Side;
@@ -31,6 +32,7 @@ public class ItemCannedFood extends Item {
 	this.setMaxDamage(0);
 	this.setHasSubtypes(true);
 	this.setUnlocalizedName(assetName);
+	this.setTextureName(Constants.TEXTURE_PREFIX + assetName);
     }
 
     @Override
