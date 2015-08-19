@@ -385,7 +385,7 @@ public class ExtraPlanetsBlocks {
 		    .setStepSound(Block.soundTypeMetal);
 	    uranusStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	    denseIce = new BlockBasic(Material.ice).setBlockName("denseIce").setBlockTextureName("denseIce").setHardness(2.2F)
+	    denseIce = new BlockBasic(Material.ice).setBlockName("denseIce").setBlockTextureName(Constants.TEXTURE_PREFIX + "denseIce").setHardness(2.2F)
 		    .setResistance(3.0F).setStepSound(Block.soundTypeSnow);
 	}
 	if (Config.neptune) {
@@ -404,7 +404,7 @@ public class ExtraPlanetsBlocks {
 		    .setStepSound(Block.soundTypeMetal);
 	    neptuneStone.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 
-	    frozenNitrogen = new BlockBasic(Material.ice).setBlockName("frozenNitrogen").setBlockTextureName("frozenNitrogen")
+	    frozenNitrogen = new BlockBasic(Material.ice).setBlockName("frozenNitrogen").setBlockTextureName(Constants.TEXTURE_PREFIX + "frozenNitrogen")
 		    .setStepSound(Block.soundTypeSnow);
 
 	}
@@ -528,7 +528,7 @@ public class ExtraPlanetsBlocks {
 	}
 	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 	    fossil = new BlockFossil(Material.rock).setBlockName("fossil")
-		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "tritonSubSurface").setHardness(2.5F).setResistance(1.0F);
+		    .setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 	if (Config.ceres)
 	    nuclearBomb = new BlockNuclearBomb();
     }
