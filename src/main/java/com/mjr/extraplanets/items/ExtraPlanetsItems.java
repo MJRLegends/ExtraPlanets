@@ -228,8 +228,8 @@ public class ExtraPlanetsItems {
 
 	GameRegistry.registerItem(cannedFood, "cannedFood");
 	GameRegistry.registerItem(diamondApple, "diamondApple");
-	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-	    GameRegistry.registerItem(bodyParts, "bodyParts");
+//	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
+//	    GameRegistry.registerItem(bodyParts, "bodyParts");
     }
 
     private static void registerFluidContainer() {

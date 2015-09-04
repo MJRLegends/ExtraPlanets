@@ -9,3 +9,8 @@ TexturesFolder/
 *.jar
 *.exe
 .settings/org.eclipse.jdt.ui.prefs
+saves/
+logs/
+config/
+usernamecache.json
+options.txt

@@ -1,5 +1,6 @@
 package micdoodle8.mods.galacticraft.api;
 
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.client.IGameScreen;
@@ -7,10 +8,6 @@ import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
-import micdoodle8.mods.galacticraft.core.client.gui.screen.GameScreenBasic;
-import micdoodle8.mods.galacticraft.core.client.gui.screen.GameScreenCelestial;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityScreen;
-import micdoodle8.mods.galacticraft.core.util.GCLog;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.WorldProvider;
@@ -36,6 +33,7 @@ public class GalacticraftRegistry
     private static Map<Integer, List<ItemStack>> dungeonLootMap = new HashMap<Integer, List<ItemStack>>();
     private static List<Integer> worldProviderIDs = new ArrayList<Integer>();
     private static List<IGameScreen> gameScreens = new ArrayList<IGameScreen>();
+    private static int maxScreenTypes;
 
     /**
      * Register a new Teleport type for the world provider passed
@@ -201,7 +199,7 @@ public class GalacticraftRegistry
     	else
     	{
     		GalacticraftRegistry.worldProviderIDs.add(0);
-    		GCLog.severe("Could not register dimension " + id + " - does it clash with another mod?  Change the ID in config.");
+    		FMLLog.severe("Could not register dimension " + id + " - does it clash with another mod?  Change the ID in config.");
     	}
     }
     
@@ -219,24 +217,17 @@ public class GalacticraftRegistry
     public static int registerScreen(IGameScreen screen)
     {
     	GalacticraftRegistry.gameScreens.add(screen);
-        TileEntityScreen.maxTypes++;
-    	screen.setFrameSize(TileEntityScreen.FRAMEBORDER);
-    	return TileEntityScreen.maxTypes - 1;
+        maxScreenTypes++;
+    	screen.setFrameSize(0.098F);
+    	return maxScreenTypes - 1;
+    }
+
+    public static int getMaxScreenTypes() {
+        return maxScreenTypes;
     }
 
     public static IGameScreen getGameScreen(int type)
     {
     	return GalacticraftRegistry.gameScreens.get(type);
-    }
-    
-    public static void registerCoreGameScreens()
-    {
-        IGameScreen rendererBasic = new GameScreenBasic();
-        IGameScreen rendererCelest = new GameScreenCelestial();
-        registerScreen(rendererBasic);  //Type 0 - blank
-        registerScreen(rendererBasic);  //Type 1 - local satellite view
-        registerScreen(rendererCelest);  //Type 2 - solar system
-        registerScreen(rendererCelest);  //Type 3 - local planet
-        registerScreen(rendererCelest);  //Type 4 - render test
     }
 }
