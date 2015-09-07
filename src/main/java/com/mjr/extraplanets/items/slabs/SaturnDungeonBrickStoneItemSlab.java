@@ -8,12 +8,12 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class SaturnDungeonBrickStoneItemSlab extends ItemSlab{
-    public SaturnDungeonBrickStoneItemSlab(Block block) {
-	super(block, ((BlockSlab) (ExtraPlanetsBlocks.saturnDungeonBrickStoneBlockHalfSlab)),
-		((BlockSlab) (ExtraPlanetsBlocks.saturnDungeonBrickStoneBlockDoubleSlab)), false);
-	this.setMaxDamage(0);
-	this.setHasSubtypes(true);
-	setUnlocalizedName(Constants.TEXTURE_PREFIX + "saturnDungeonBrickStone");
-    }
+	public SaturnDungeonBrickStoneItemSlab(Block block) {
+		super(block, ((BlockSlab) (ExtraPlanetsBlocks.saturnDungeonBrickStoneBlockHalfSlab)),
+				((BlockSlab) (ExtraPlanetsBlocks.saturnDungeonBrickStoneBlockDoubleSlab)), false);
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+		setUnlocalizedName(Constants.TEXTURE_PREFIX + "saturnDungeonBrickStone");
+	}
 
 }

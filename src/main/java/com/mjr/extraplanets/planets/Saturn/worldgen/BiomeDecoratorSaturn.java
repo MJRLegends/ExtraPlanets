@@ -14,59 +14,59 @@ import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
 public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 
-    private WorldGenerator tinGen;
-    private WorldGenerator copperGen;
-    private WorldGenerator ironGen;
-    private WorldGenerator iceGen;
-    private WorldGenerator magnesiumGen;
-    private WorldGenerator gravelGen;
+	private WorldGenerator tinGen;
+	private WorldGenerator copperGen;
+	private WorldGenerator ironGen;
+	private WorldGenerator iceGen;
+	private WorldGenerator magnesiumGen;
+	private WorldGenerator gravelGen;
 
-    private int LakesPerChunk = 5;
+	private int LakesPerChunk = 5;
 
-    private World currentWorld;
+	private World currentWorld;
 
-    public BiomeDecoratorSaturn()
-    {
-	this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnOreCopper, 4, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
-	this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnOreTin, 4, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
-	this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnOreIron, 8, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
-	this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
-	this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreMagnesium, 8, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
-	this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnGravel, 12, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
+	public BiomeDecoratorSaturn()
+	{
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnOreCopper, 4, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnOreTin, 4, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnOreIron, 8, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
+		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreMagnesium, 8, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnGravel, 12, 0, false, ExtraPlanetsBlocks.saturnStone, 1);
 
-	//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
-    }
-
-    @Override
-    protected void setCurrentWorld(World world) {
-	this.currentWorld = world;
-    }
-
-    @Override
-    protected World getCurrentWorld() {
-	return this.currentWorld;
-    }
-
-    @Override
-    protected void decorate() {
-	this.generateOre(26, this.copperGen, 0, 60);
-	this.generateOre(23, this.tinGen, 0, 60);
-	this.generateOre(20, this.ironGen, 0, 64);
-	this.generateOre(4, this.iceGen, 60, 120);
-	this.generateOre(20, this.magnesiumGen, 60, 120);
-	this.generateOre(15, this.gravelGen, 0, 80);
-
-	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-	for (int i = 0; i < this.LakesPerChunk; i++) {
-	    if (this.rand.nextInt(10) == 0) {
-		int x = this.chunkX + this.rand.nextInt(16) + 8;
-		// int y = this.rand.nextInt(16) + 16;
-		int z = this.chunkZ + this.rand.nextInt(16) + 8;
-		int y = this.currentWorld.getHeightValue(x, z);
-		new WorldGenCustomLake(ExtraPlanetsFluids.glowstone).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.saturnStone);
-	    }
+		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
-	MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-	//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
-    }
+
+	@Override
+	protected void setCurrentWorld(World world) {
+		this.currentWorld = world;
+	}
+
+	@Override
+	protected World getCurrentWorld() {
+		return this.currentWorld;
+	}
+
+	@Override
+	protected void decorate() {
+		this.generateOre(26, this.copperGen, 0, 60);
+		this.generateOre(23, this.tinGen, 0, 60);
+		this.generateOre(20, this.ironGen, 0, 64);
+		this.generateOre(4, this.iceGen, 60, 120);
+		this.generateOre(20, this.magnesiumGen, 60, 120);
+		this.generateOre(15, this.gravelGen, 0, 80);
+
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		for (int i = 0; i < this.LakesPerChunk; i++) {
+			if (this.rand.nextInt(10) == 0) {
+				int x = this.chunkX + this.rand.nextInt(16) + 8;
+				// int y = this.rand.nextInt(16) + 16;
+				int z = this.chunkZ + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z);
+				new WorldGenCustomLake(ExtraPlanetsFluids.glowstone).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.saturnStone);
+			}
+		}
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+	}
 }

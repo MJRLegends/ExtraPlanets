@@ -10,27 +10,27 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ErisHandlerClient {
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public void onClientTick(ClientTickEvent event)
-    {
-	Minecraft minecraft = Minecraft.getMinecraft();
-	WorldClient world = minecraft.theWorld;
-
-	if (world != null)
+	@SideOnly(Side.CLIENT)
+	@SubscribeEvent
+	public void onClientTick(ClientTickEvent event)
 	{
-	    if (world.provider instanceof WorldProviderEris)
-	    {
-		if (world.provider.getSkyRenderer() == null)
-		{
-		    world.provider.setSkyRenderer(new SkyProviderEris((IGalacticraftWorldProvider) world.provider));
-		}
+		Minecraft minecraft = Minecraft.getMinecraft();
+		WorldClient world = minecraft.theWorld;
 
-		if (world.provider.getCloudRenderer() == null)
+		if (world != null)
 		{
-		    world.provider.setCloudRenderer(new CloudRenderer());
+			if (world.provider instanceof WorldProviderEris)
+			{
+				if (world.provider.getSkyRenderer() == null)
+				{
+					world.provider.setSkyRenderer(new SkyProviderEris((IGalacticraftWorldProvider) world.provider));
+				}
+
+				if (world.provider.getCloudRenderer() == null)
+				{
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
 		}
-	    }
 	}
-    }
 }

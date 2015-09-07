@@ -13,20 +13,20 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemNickelCompressed extends Item
 {
-    public ItemNickelCompressed(String assetName)
-    {
-	super();
-	this.setMaxDamage(0);
-	this.setHasSubtypes(true);
-	this.setUnlocalizedName(assetName);
-	this.setTextureName(Constants.TEXTURE_PREFIX + assetName);
-	this.setCreativeTab(ExtraPlanets.ItemsTab);
-    }
+	public ItemNickelCompressed(String assetName)
+	{
+		super();
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+		this.setUnlocalizedName(assetName);
+		this.setTextureName(Constants.TEXTURE_PREFIX + assetName);
+		this.setCreativeTab(ExtraPlanets.ItemsTab);
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-	return ClientProxyCore.galacticraftItem;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumRarity getRarity(ItemStack par1ItemStack)
+	{
+		return ClientProxyCore.galacticraftItem;
+	}
 }

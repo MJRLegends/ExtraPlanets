@@ -19,137 +19,137 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class WorldProviderUranus extends WorldProviderSpace implements
 IGalacticraftWorldProvider, ISolarLevel {
 
-    @Override
-    public Vector3 getFogColor() {
-	float f = 1.0F - this.getStarBrightness(1.0F);
-	return new Vector3(100 / 255F * f, 210 / 255F * f, 222 / 255F * f);
-    }
-
-    @Override
-    public Vector3 getSkyColor() {
-	float f = 1.0F - this.getStarBrightness(1.0F);
-	return new Vector3(24 / 255.0F * f, 154 / 255.0F * f, 253 / 255.0F * f);
-    }
-
-    @Override
-    public boolean canRainOrSnow() {
-	return false;
-    }
-
-    @Override
-    public boolean hasSunset() {
-	return false;
-    }
-
-    @Override
-    public long getDayLength() {
-	return 24000L;
-    }
-
-    @Override
-    public boolean shouldForceRespawn() {
-	return true;
-    }
-
-    @Override
-    public Class<? extends IChunkProvider> getChunkProviderClass() {
-	return ChunkProviderUranus.class;
-    }
-
-    @Override
-    public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-	return WorldChunkManagerUranus.class;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public float getStarBrightness(float par1) {
-	float f1 = this.worldObj.getCelestialAngle(par1);
-	float f2 = 1.0F - (MathHelper.cos(f1 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
-
-	if (f2 < 0.0F) {
-	    f2 = 1.0F;
+	@Override
+	public Vector3 getFogColor() {
+		float f = 1.0F - this.getStarBrightness(1.0F);
+		return new Vector3(100 / 255F * f, 210 / 255F * f, 222 / 255F * f);
 	}
 
-	if (f2 > 1.0F) {
-	    f2 = 1.0F;
+	@Override
+	public Vector3 getSkyColor() {
+		float f = 1.0F - this.getStarBrightness(1.0F);
+		return new Vector3(24 / 255.0F * f, 154 / 255.0F * f, 253 / 255.0F * f);
 	}
 
-	return f2 * f2 * 0.7F;
-    }
+	@Override
+	public boolean canRainOrSnow() {
+		return false;
+	}
 
-    @Override
-    public double getHorizon() {
-	return 44.0D;
-    }
+	@Override
+	public boolean hasSunset() {
+		return false;
+	}
 
-    @Override
-    public int getAverageGroundLevel() {
-	return 44;
-    }
+	@Override
+	public long getDayLength() {
+		return 24000L;
+	}
 
-    @Override
-    public boolean canCoordinateBeSpawn(int var1, int var2) {
-	return true;
-    }
+	@Override
+	public boolean shouldForceRespawn() {
+		return true;
+	}
 
-    @Override
-    public float getGravity() {
-	return 0.058F;
-    }
+	@Override
+	public Class<? extends IChunkProvider> getChunkProviderClass() {
+		return ChunkProviderUranus.class;
+	}
 
-    @Override
-    public int getHeight() {
-	return 800;
-    }
+	@Override
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerUranus.class;
+	}
 
-    @Override
-    public double getMeteorFrequency() {
-	return 10.0D;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public float getStarBrightness(float par1) {
+		float f1 = this.worldObj.getCelestialAngle(par1);
+		float f2 = 1.0F - (MathHelper.cos(f1 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
 
-    @Override
-    public double getFuelUsageMultiplier() {
-	return 1.4D;
-    }
+		if (f2 < 0.0F) {
+			f2 = 1.0F;
+		}
 
-    @Override
-    public boolean canSpaceshipTierPass(int tier) {
-	return tier >= 6;
-    }
+		if (f2 > 1.0F) {
+			f2 = 1.0F;
+		}
 
-    @Override
-    public float getFallDamageModifier() {
-	return 0.38F;
-    }
+		return f2 * f2 * 0.7F;
+	}
 
-    @Override
-    public float getSoundVolReductionAmount() {
-	return 10.0F;
-    }
+	@Override
+	public double getHorizon() {
+		return 44.0D;
+	}
 
-    @Override
-    public CelestialBody getCelestialBody() {
-	return PlanetsMain.uranus;
-    }
+	@Override
+	public int getAverageGroundLevel() {
+		return 44;
+	}
 
-    @Override
-    public boolean hasBreathableAtmosphere() {
-	return false;
-    }
+	@Override
+	public boolean canCoordinateBeSpawn(int var1, int var2) {
+		return true;
+	}
 
-    @Override
-    public float getThermalLevelModifier() {
-	return -40.0F;
-    }
+	@Override
+	public float getGravity() {
+		return 0.058F;
+	}
 
-    @Override
-    public float getWindLevel() {
-	return 4.0F;
-    }
+	@Override
+	public int getHeight() {
+		return 800;
+	}
 
-    @Override
-    public double getSolarEnergyMultiplier() {
-	return 4.0D;
-    }
+	@Override
+	public double getMeteorFrequency() {
+		return 10.0D;
+	}
+
+	@Override
+	public double getFuelUsageMultiplier() {
+		return 1.4D;
+	}
+
+	@Override
+	public boolean canSpaceshipTierPass(int tier) {
+		return tier >= 6;
+	}
+
+	@Override
+	public float getFallDamageModifier() {
+		return 0.38F;
+	}
+
+	@Override
+	public float getSoundVolReductionAmount() {
+		return 10.0F;
+	}
+
+	@Override
+	public CelestialBody getCelestialBody() {
+		return PlanetsMain.uranus;
+	}
+
+	@Override
+	public boolean hasBreathableAtmosphere() {
+		return false;
+	}
+
+	@Override
+	public float getThermalLevelModifier() {
+		return -40.0F;
+	}
+
+	@Override
+	public float getWindLevel() {
+		return 4.0F;
+	}
+
+	@Override
+	public double getSolarEnergyMultiplier() {
+		return 4.0D;
+	}
 }

@@ -16,34 +16,34 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class SchematicTier6Rocket extends SchematicPage
 {
-    @Override
-    public int getPageID()
-    {
-	return Config.schematicTier6PageID;
-    }
+	@Override
+	public int getPageID()
+	{
+		return Config.schematicTier6PageID;
+	}
 
-    @Override
-    public int getGuiID()
-    {
-	return Config.schematicTier6GUIID;
-    }
+	@Override
+	public int getGuiID()
+	{
+		return Config.schematicTier6GUIID;
+	}
 
-    @Override
-    public ItemStack getRequiredItem()
-    {
-	return new ItemStack(ExtraPlanetsItems.schematicTier6, 1, 0);
-    }
+	@Override
+	public ItemStack getRequiredItem()
+	{
+		return new ItemStack(ExtraPlanetsItems.schematicTier6, 1, 0);
+	}
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z)
-    {
-	return new GuiSchematicTier6Rocket(player.inventory, x, y, z);
-    }
+	@SideOnly(Side.CLIENT)
+	@Override
+	public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z)
+	{
+		return new GuiSchematicTier6Rocket(player.inventory, x, y, z);
+	}
 
-    @Override
-    public Container getResultContainer(EntityPlayer player, int x, int y, int z)
-    {
-	return new ContainerSchematicTier6Rocket(player.inventory, x, y, z);
-    }
+	@Override
+	public Container getResultContainer(EntityPlayer player, int x, int y, int z)
+	{
+		return new ContainerSchematicTier6Rocket(player.inventory, x, y, z);
+	}
 }

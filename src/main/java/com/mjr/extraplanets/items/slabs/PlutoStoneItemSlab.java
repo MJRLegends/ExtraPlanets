@@ -9,12 +9,12 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class PlutoStoneItemSlab extends ItemSlab {
 
-    public PlutoStoneItemSlab(Block block) {
-	super(block, ((BlockSlab) (ExtraPlanetsBlocks.plutoStoneBlockHalfSlab)),
-		((BlockSlab) (ExtraPlanetsBlocks.plutoStoneBlockDoubleSlab)), false);
-	this.setMaxDamage(0);
-	this.setHasSubtypes(true);
-	setUnlocalizedName(Constants.TEXTURE_PREFIX + "plutoStone");
-    }
+	public PlutoStoneItemSlab(Block block) {
+		super(block, ((BlockSlab) (ExtraPlanetsBlocks.plutoStoneBlockHalfSlab)),
+				((BlockSlab) (ExtraPlanetsBlocks.plutoStoneBlockDoubleSlab)), false);
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+		setUnlocalizedName(Constants.TEXTURE_PREFIX + "plutoStone");
+	}
 
 }

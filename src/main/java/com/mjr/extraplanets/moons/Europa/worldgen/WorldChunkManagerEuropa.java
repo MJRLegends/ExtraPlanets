@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerEuropa extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return EuropaBiomes.europa;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return EuropaBiomes.europa;
+	}
 
 }

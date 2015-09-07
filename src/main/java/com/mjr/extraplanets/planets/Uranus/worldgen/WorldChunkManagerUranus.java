@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerUranus extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return UranusBiomes.uranus;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return UranusBiomes.uranus;
+	}
 
 }

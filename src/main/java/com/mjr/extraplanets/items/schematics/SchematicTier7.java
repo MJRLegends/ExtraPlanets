@@ -17,26 +17,26 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class SchematicTier7 extends Item implements ISchematicItem {
-    public SchematicTier7(String name) {
-	super();
-	this.setUnlocalizedName(name);
-	this.setCreativeTab(ExtraPlanets.ItemsTab);
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister) {
-	this.itemIcon = iconRegister
-		.registerIcon(Constants.TEXTURE_PREFIX + "tier7_schematic_rocket");
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack itemStack, EntityPlayer player,
-	    List list, boolean par4) {
-	if (player.worldObj.isRemote) {
-	    list.add(EnumChatFormatting.GRAY
-		    + GCCoreUtil.translate("schematic.tier7.rocket.name"));
+	public SchematicTier7(String name) {
+		super();
+		this.setUnlocalizedName(name);
+		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
-    }
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister iconRegister) {
+		this.itemIcon = iconRegister
+				.registerIcon(Constants.TEXTURE_PREFIX + "tier7_schematic_rocket");
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack itemStack, EntityPlayer player,
+			List list, boolean par4) {
+		if (player.worldObj.isRemote) {
+			list.add(EnumChatFormatting.GRAY
+					+ GCCoreUtil.translate("schematic.tier7.rocket.name"));
+		}
+	}
 }

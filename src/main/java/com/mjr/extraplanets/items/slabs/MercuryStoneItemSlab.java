@@ -9,12 +9,12 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class MercuryStoneItemSlab extends ItemSlab {
 
-    public MercuryStoneItemSlab(Block block) {
-	super(block, ((BlockSlab) (ExtraPlanetsBlocks.mercuryStoneBlockHalfSlab)),
-		((BlockSlab) (ExtraPlanetsBlocks.mercuryStoneBlockDoubleSlab)), false);
-	this.setMaxDamage(0);
-	this.setHasSubtypes(true);
-	setUnlocalizedName(Constants.TEXTURE_PREFIX + "mercuryStone");
-    }
+	public MercuryStoneItemSlab(Block block) {
+		super(block, ((BlockSlab) (ExtraPlanetsBlocks.mercuryStoneBlockHalfSlab)),
+				((BlockSlab) (ExtraPlanetsBlocks.mercuryStoneBlockDoubleSlab)), false);
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+		setUnlocalizedName(Constants.TEXTURE_PREFIX + "mercuryStone");
+	}
 
 }

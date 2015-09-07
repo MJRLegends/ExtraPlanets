@@ -7,9 +7,9 @@ import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasic extends Block{
 
-    protected BlockBasic(Material material) {
-	super(material);
-	this.setCreativeTab(ExtraPlanets.BlocksTab);
-    }
+	protected BlockBasic(Material material) {
+		super(material);
+		this.setCreativeTab(ExtraPlanets.BlocksTab);
+	}
 
 }

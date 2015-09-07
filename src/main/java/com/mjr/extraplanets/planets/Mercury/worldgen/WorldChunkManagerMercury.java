@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerMercury extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return MercuryBiomes.mercury;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return MercuryBiomes.mercury;
+	}
 
 }

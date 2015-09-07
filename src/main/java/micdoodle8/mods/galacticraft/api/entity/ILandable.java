@@ -7,7 +7,7 @@ public interface ILandable extends IDockable
 {
 	/**
 	 * Called when the entity lands on a dock
-	 * 
+	 *
 	 * @param x coordinate of the dock on the x-axis
 	 * @param y coordinate of the dock on the y-axis
 	 * @param z coordinate of the dock on the z-axis

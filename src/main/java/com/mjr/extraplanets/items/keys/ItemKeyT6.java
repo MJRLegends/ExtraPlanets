@@ -19,73 +19,73 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemKeyT6 extends Item implements IKeyItem
 {
-    public static String[] keyTypes = new String[] { "T6" };
-    public IIcon[] keyIcons = new IIcon[1];
+	public static String[] keyTypes = new String[] { "T6" };
+	public IIcon[] keyIcons = new IIcon[1];
 
-    public ItemKeyT6()
-    {
-	super();
-	this.setMaxStackSize(1);
-	this.setMaxDamage(0);
-	this.setHasSubtypes(true);
-	this.setCreativeTab(ExtraPlanets.ItemsTab);
-    }
-
-    @Override
-    public String getUnlocalizedName(ItemStack itemStack)
-    {
-	return "item." + "key." + ItemKeyT6.keyTypes[itemStack.getItemDamage()];
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-	return ClientProxyCore.galacticraftItem;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister)
-    {
-	int i = 0;
-
-	for (final String name : ItemKeyT6.keyTypes)
+	public ItemKeyT6()
 	{
-	    this.keyIcons[i++] = iconRegister.registerIcon(MarsModule.TEXTURE_PREFIX + "key_" + name);
-	}
-    }
-
-    @Override
-    public IIcon getIconFromDamage(int damage)
-    {
-	if (this.keyIcons.length > damage)
-	{
-	    return this.keyIcons[damage];
+		super();
+		this.setMaxStackSize(1);
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
-	return super.getIconFromDamage(damage);
-    }
-
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
-    {
-	for (int i = 0; i < ItemKeyT6.keyTypes.length; i++)
+	@Override
+	public String getUnlocalizedName(ItemStack itemStack)
 	{
-	    par3List.add(new ItemStack(par1, 1, i));
+		return "item." + "key." + ItemKeyT6.keyTypes[itemStack.getItemDamage()];
 	}
-    }
 
-    @Override
-    public int getMetadata(int par1)
-    {
-	return par1;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumRarity getRarity(ItemStack par1ItemStack)
+	{
+		return ClientProxyCore.galacticraftItem;
+	}
 
-    @Override
-    public int getTier(ItemStack keyStack)
-    {
-	return 6;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister iconRegister)
+	{
+		int i = 0;
+
+		for (final String name : ItemKeyT6.keyTypes)
+		{
+			this.keyIcons[i++] = iconRegister.registerIcon(MarsModule.TEXTURE_PREFIX + "key_" + name);
+		}
+	}
+
+	@Override
+	public IIcon getIconFromDamage(int damage)
+	{
+		if (this.keyIcons.length > damage)
+		{
+			return this.keyIcons[damage];
+		}
+
+		return super.getIconFromDamage(damage);
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
+	{
+		for (int i = 0; i < ItemKeyT6.keyTypes.length; i++)
+		{
+			par3List.add(new ItemStack(par1, 1, i));
+		}
+	}
+
+	@Override
+	public int getMetadata(int par1)
+	{
+		return par1;
+	}
+
+	@Override
+	public int getTier(ItemStack keyStack)
+	{
+		return 6;
+	}
 }

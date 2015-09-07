@@ -7,68 +7,68 @@ import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
 
 public class EntityAIRedCreeperSwell extends EntityAIBase
 {
-    /** The creeper that is swelling. */
-    EntityEvolvedRedCreeper swellingCreeper;
-    /** The creeper's attack target. This is used for the changing of the creeper's state. */
-    EntityLivingBase creeperAttackTarget;
-    private static final String __OBFID = "CL_00001614";
+	/** The creeper that is swelling. */
+	EntityEvolvedRedCreeper swellingCreeper;
+	/** The creeper's attack target. This is used for the changing of the creeper's state. */
+	EntityLivingBase creeperAttackTarget;
+	private static final String __OBFID = "CL_00001614";
 
-    public EntityAIRedCreeperSwell(EntityEvolvedRedCreeper evolvedBlueCreeper)
-    {
-	this.swellingCreeper = evolvedBlueCreeper;
-	this.setMutexBits(1);
-    }
-
-    /**
-     * Returns whether the EntityAIBase should begin execution.
-     */
-    @Override
-    public boolean shouldExecute()
-    {
-	EntityLivingBase entitylivingbase = this.swellingCreeper.getAttackTarget();
-	return this.swellingCreeper.getCreeperState() > 0 || entitylivingbase != null && this.swellingCreeper.getDistanceSqToEntity(entitylivingbase) < 9.0D;
-    }
-
-    /**
-     * Execute a one shot task or start executing a continuous task
-     */
-    @Override
-    public void startExecuting()
-    {
-	this.swellingCreeper.getNavigator().clearPathEntity();
-	this.creeperAttackTarget = this.swellingCreeper.getAttackTarget();
-    }
-
-    /**
-     * Resets the task
-     */
-    @Override
-    public void resetTask()
-    {
-	this.creeperAttackTarget = null;
-    }
-
-    /**
-     * Updates the task
-     */
-    @Override
-    public void updateTask()
-    {
-	if (this.creeperAttackTarget == null)
+	public EntityAIRedCreeperSwell(EntityEvolvedRedCreeper evolvedBlueCreeper)
 	{
-	    this.swellingCreeper.setCreeperState(-1);
+		this.swellingCreeper = evolvedBlueCreeper;
+		this.setMutexBits(1);
 	}
-	else if (this.swellingCreeper.getDistanceSqToEntity(this.creeperAttackTarget) > 49.0D)
+
+	/**
+	 * Returns whether the EntityAIBase should begin execution.
+	 */
+	@Override
+	public boolean shouldExecute()
 	{
-	    this.swellingCreeper.setCreeperState(-1);
+		EntityLivingBase entitylivingbase = this.swellingCreeper.getAttackTarget();
+		return this.swellingCreeper.getCreeperState() > 0 || entitylivingbase != null && this.swellingCreeper.getDistanceSqToEntity(entitylivingbase) < 9.0D;
 	}
-	else if (!this.swellingCreeper.getEntitySenses().canSee(this.creeperAttackTarget))
+
+	/**
+	 * Execute a one shot task or start executing a continuous task
+	 */
+	@Override
+	public void startExecuting()
 	{
-	    this.swellingCreeper.setCreeperState(-1);
+		this.swellingCreeper.getNavigator().clearPathEntity();
+		this.creeperAttackTarget = this.swellingCreeper.getAttackTarget();
 	}
-	else
+
+	/**
+	 * Resets the task
+	 */
+	@Override
+	public void resetTask()
 	{
-	    this.swellingCreeper.setCreeperState(1);
+		this.creeperAttackTarget = null;
 	}
-    }
+
+	/**
+	 * Updates the task
+	 */
+	@Override
+	public void updateTask()
+	{
+		if (this.creeperAttackTarget == null)
+		{
+			this.swellingCreeper.setCreeperState(-1);
+		}
+		else if (this.swellingCreeper.getDistanceSqToEntity(this.creeperAttackTarget) > 49.0D)
+		{
+			this.swellingCreeper.setCreeperState(-1);
+		}
+		else if (!this.swellingCreeper.getEntitySenses().canSee(this.creeperAttackTarget))
+		{
+			this.swellingCreeper.setCreeperState(-1);
+		}
+		else
+		{
+			this.swellingCreeper.setCreeperState(1);
+		}
+	}
 }

@@ -9,43 +9,43 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 
-    private WorldGenerator copperGen;
-    private WorldGenerator tinGen;
-    private WorldGenerator ironGen;
-    private WorldGenerator gravelGen;
-    private WorldGenerator fossilsGen;
+	private WorldGenerator copperGen;
+	private WorldGenerator tinGen;
+	private WorldGenerator ironGen;
+	private WorldGenerator gravelGen;
+	private WorldGenerator fossilsGen;
 
-    private World currentWorld;
+	private World currentWorld;
 
-    public BiomeDecoratorEris()
-    {
-	this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisOreCopper, 4, 0, false, ExtraPlanetsBlocks.erisStone, 1);
-	this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisOreTin, 4, 0, false, ExtraPlanetsBlocks.erisStone, 1);
-	this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisOreIron, 8, 0, false, ExtraPlanetsBlocks.erisStone, 1);
-	this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisGravel, 12, 0, false, ExtraPlanetsBlocks.erisStone, 1);
-	this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.erisSubSurface, 1);
+	public BiomeDecoratorEris()
+	{
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisOreCopper, 4, 0, false, ExtraPlanetsBlocks.erisStone, 1);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisOreTin, 4, 0, false, ExtraPlanetsBlocks.erisStone, 1);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisOreIron, 8, 0, false, ExtraPlanetsBlocks.erisStone, 1);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisGravel, 12, 0, false, ExtraPlanetsBlocks.erisStone, 1);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.erisSubSurface, 1);
 
-	//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
-    }
+		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
+	}
 
-    @Override
-    protected void setCurrentWorld(World world) {
-	this.currentWorld = world;
-    }
+	@Override
+	protected void setCurrentWorld(World world) {
+		this.currentWorld = world;
+	}
 
-    @Override
-    protected World getCurrentWorld() {
-	return this.currentWorld;
-    }
+	@Override
+	protected World getCurrentWorld() {
+		return this.currentWorld;
+	}
 
-    @Override
-    protected void decorate() {
-	this.generateOre(26, this.copperGen, 0, 60);
-	this.generateOre(23, this.tinGen, 0, 60);
-	this.generateOre(20, this.ironGen, 0, 64);
-	this.generateOre(15, this.gravelGen, 0, 80);
-	this.generateOre(1, this.fossilsGen, 0, 256);
+	@Override
+	protected void decorate() {
+		this.generateOre(26, this.copperGen, 0, 60);
+		this.generateOre(23, this.tinGen, 0, 60);
+		this.generateOre(20, this.ironGen, 0, 64);
+		this.generateOre(15, this.gravelGen, 0, 80);
+		this.generateOre(1, this.fossilsGen, 0, 256);
 
-	//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
-    }
+		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+	}
 }

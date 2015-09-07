@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerDeimos extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return DeimosBiomes.deimos;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return DeimosBiomes.deimos;
+	}
 
 }

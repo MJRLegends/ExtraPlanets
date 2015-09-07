@@ -34,294 +34,294 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockSolar extends BlockTileGC implements ItemBlockDesc.IBlockShiftDesc, IPartialSealableBlock
 {
-    public static final int HYBRID_METADATA = 0;
-    public static final int ULTIMATE_METADATA = 4;
+	public static final int HYBRID_METADATA = 0;
+	public static final int ULTIMATE_METADATA = 4;
 
-    public static String[] names = { "hybrid", "ultimate" };
+	public static String[] names = { "hybrid", "ultimate" };
 
-    private IIcon[] icons = new IIcon[6];
+	private IIcon[] icons = new IIcon[6];
 
-    public BlockSolar(String assetName)
-    {
-	super(Material.iron);
-	this.setHardness(1.0F);
-	this.setStepSound(Block.soundTypeMetal);
-	this.setBlockTextureName(Constants.TEXTURE_PREFIX + assetName);
-	this.setBlockName(assetName);
-    }
-
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List)
-    {
-	par3List.add(new ItemStack(par1, 1, BlockSolar.HYBRID_METADATA));
-	par3List.add(new ItemStack(par1, 1, BlockSolar.ULTIMATE_METADATA));
-    }
-
-    @Override
-    public void registerBlockIcons(IIconRegister par1IconRegister)
-    {
-	this.icons[0] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_0");
-	this.icons[1] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_1");
-	this.icons[2] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_0");
-	this.icons[3] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_1");
-	this.icons[4] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_blank");
-	this.icons[5] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_output");
-	this.blockIcon = this.icons[0];
-    }
-
-    @Override
-    public CreativeTabs getCreativeTabToDisplayOn()
-    {
-	return ExtraPlanets.BlocksTab;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta)
-    {
-	if (meta >= BlockSolar.ULTIMATE_METADATA)
+	public BlockSolar(String assetName)
 	{
-	    int shiftedMeta = meta -= BlockSolar.ULTIMATE_METADATA;
-
-	    if (side == ForgeDirection.getOrientation(shiftedMeta + 2).getOpposite().ordinal())
-	    {
-		return this.icons[5];
-	    }
-	    else if (side == ForgeDirection.UP.ordinal())
-	    {
-		return this.icons[2];
-	    }
-	    else if (side == ForgeDirection.DOWN.ordinal())
-	    {
-		return this.icons[4];
-	    }
-	    else
-	    {
-		return this.icons[3];
-	    }
-	}
-	else if (meta >= BlockSolar.HYBRID_METADATA)
-	{
-	    int shiftedMeta = meta -= BlockSolar.HYBRID_METADATA;
-
-	    if (side == ForgeDirection.getOrientation(shiftedMeta + 2).getOpposite().ordinal())
-	    {
-		return this.icons[5];
-	    }
-	    else if (side == ForgeDirection.UP.ordinal())
-	    {
-		return this.icons[0];
-	    }
-	    else if (side == ForgeDirection.DOWN.ordinal())
-	    {
-		return this.icons[4];
-	    }
-	    else
-	    {
-		return this.icons[1];
-	    }
+		super(Material.iron);
+		this.setHardness(1.0F);
+		this.setStepSound(Block.soundTypeMetal);
+		this.setBlockTextureName(Constants.TEXTURE_PREFIX + assetName);
+		this.setBlockName(assetName);
 	}
 
-	return this.blockIcon;
-    }
-
-    @Override
-    public boolean canPlaceBlockOnSide(World world, int x1, int y1, int z1, int side)
-    {
-	for (int y = 1; y <= 2; y++)
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List)
 	{
-	    for (int x = -1; x <= 1; x++)
-	    {
-		for (int z = -1; z <= 1; z++)
+		par3List.add(new ItemStack(par1, 1, BlockSolar.HYBRID_METADATA));
+		par3List.add(new ItemStack(par1, 1, BlockSolar.ULTIMATE_METADATA));
+	}
+
+	@Override
+	public void registerBlockIcons(IIconRegister par1IconRegister)
+	{
+		this.icons[0] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_0");
+		this.icons[1] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_1");
+		this.icons[2] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_0");
+		this.icons[3] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_1");
+		this.icons[4] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_blank");
+		this.icons[5] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_output");
+		this.blockIcon = this.icons[0];
+	}
+
+	@Override
+	public CreativeTabs getCreativeTabToDisplayOn()
+	{
+		return ExtraPlanets.BlocksTab;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int side, int meta)
+	{
+		if (meta >= BlockSolar.ULTIMATE_METADATA)
 		{
-		    Block block = world.getBlock(x1 + (y == 2 ? x : 0), y1 + y, z1 + (y == 2 ? z : 0));
+			int shiftedMeta = meta -= BlockSolar.ULTIMATE_METADATA;
 
-		    if (block.getMaterial() != Material.air && !block.isReplaceable(world, x1 + x, y1 + y, z1 + z))
-		    {
-			return false;
-		    }
+			if (side == ForgeDirection.getOrientation(shiftedMeta + 2).getOpposite().ordinal())
+			{
+				return this.icons[5];
+			}
+			else if (side == ForgeDirection.UP.ordinal())
+			{
+				return this.icons[2];
+			}
+			else if (side == ForgeDirection.DOWN.ordinal())
+			{
+				return this.icons[4];
+			}
+			else
+			{
+				return this.icons[3];
+			}
 		}
-	    }
+		else if (meta >= BlockSolar.HYBRID_METADATA)
+		{
+			int shiftedMeta = meta -= BlockSolar.HYBRID_METADATA;
+
+			if (side == ForgeDirection.getOrientation(shiftedMeta + 2).getOpposite().ordinal())
+			{
+				return this.icons[5];
+			}
+			else if (side == ForgeDirection.UP.ordinal())
+			{
+				return this.icons[0];
+			}
+			else if (side == ForgeDirection.DOWN.ordinal())
+			{
+				return this.icons[4];
+			}
+			else
+			{
+				return this.icons[1];
+			}
+		}
+
+		return this.blockIcon;
 	}
 
-	return new BlockVec3(x1, y1, z1).newVecSide(side ^ 1).getBlock(world) != GCBlocks.fakeBlock;
-    }
-
-    @Override
-    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLiving, ItemStack itemStack)
-    {
-	int metadata = world.getBlockMetadata(x, y, z);
-
-	int angle = MathHelper.floor_double(entityLiving.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
-	int change = 0;
-
-	switch (angle)
+	@Override
+	public boolean canPlaceBlockOnSide(World world, int x1, int y1, int z1, int side)
 	{
-	case 0:
-	    change = 1;
-	    break;
-	case 1:
-	    change = 2;
-	    break;
-	case 2:
-	    change = 0;
-	    break;
-	case 3:
-	    change = 3;
-	    break;
+		for (int y = 1; y <= 2; y++)
+		{
+			for (int x = -1; x <= 1; x++)
+			{
+				for (int z = -1; z <= 1; z++)
+				{
+					Block block = world.getBlock(x1 + (y == 2 ? x : 0), y1 + y, z1 + (y == 2 ? z : 0));
+
+					if (block.getMaterial() != Material.air && !block.isReplaceable(world, x1 + x, y1 + y, z1 + z))
+					{
+						return false;
+					}
+				}
+			}
+		}
+
+		return new BlockVec3(x1, y1, z1).newVecSide(side ^ 1).getBlock(world) != GCBlocks.fakeBlock;
 	}
 
-	if (metadata >= BlockSolar.ULTIMATE_METADATA)
+	@Override
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLiving, ItemStack itemStack)
 	{
-	    world.setBlockMetadataWithNotify(x, y, z, BlockSolar.ULTIMATE_METADATA + change, 3);
+		int metadata = world.getBlockMetadata(x, y, z);
+
+		int angle = MathHelper.floor_double(entityLiving.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
+		int change = 0;
+
+		switch (angle)
+		{
+		case 0:
+			change = 1;
+			break;
+		case 1:
+			change = 2;
+			break;
+		case 2:
+			change = 0;
+			break;
+		case 3:
+			change = 3;
+			break;
+		}
+
+		if (metadata >= BlockSolar.ULTIMATE_METADATA)
+		{
+			world.setBlockMetadataWithNotify(x, y, z, BlockSolar.ULTIMATE_METADATA + change, 3);
+		}
+		else
+		{
+			world.setBlockMetadataWithNotify(x, y, z, BlockSolar.HYBRID_METADATA + change, 3);
+		}
+
+		TileEntity tile = world.getTileEntity(x, y, z);
+
+		if (tile instanceof TileEntitySolar)
+		{
+			((TileEntitySolar) tile).onCreate(new BlockVec3(x, y, z));
+		}
 	}
-	else
+
+	@Override
+	public void breakBlock(World var1, int var2, int var3, int var4, Block var5, int var6)
 	{
-	    world.setBlockMetadataWithNotify(x, y, z, BlockSolar.HYBRID_METADATA + change, 3);
+		final TileEntity var9 = var1.getTileEntity(var2, var3, var4);
+
+		if (var9 instanceof TileEntitySolar)
+		{
+			((TileEntitySolar) var9).onDestroy(var9);
+		}
+
+		super.breakBlock(var1, var2, var3, var4, var5, var6);
 	}
 
-	TileEntity tile = world.getTileEntity(x, y, z);
-
-	if (tile instanceof TileEntitySolar)
+	@Override
+	public boolean onUseWrench(World par1World, int x, int y, int z, EntityPlayer par5EntityPlayer, int side, float hitX, float hitY, float hitZ)
 	{
-	    ((TileEntitySolar) tile).onCreate(new BlockVec3(x, y, z));
+		int metadata = par1World.getBlockMetadata(x, y, z);
+		int original = metadata;
+
+		int change = 0;
+
+		if (metadata >= BlockSolar.ULTIMATE_METADATA)
+		{
+			original -= BlockSolar.ULTIMATE_METADATA;
+		}
+
+		switch (original)
+		{
+		case 0:
+			change = 3;
+			break;
+		case 3:
+			change = 1;
+			break;
+		case 1:
+			change = 2;
+			break;
+		case 2:
+			change = 0;
+			break;
+		}
+
+		if (metadata >= BlockSolar.ULTIMATE_METADATA)
+		{
+			change += BlockSolar.ULTIMATE_METADATA;
+		}
+
+		TileEntity te = par1World.getTileEntity(x, y, z);
+		if (te instanceof TileBaseUniversalElectrical)
+		{
+			((TileBaseUniversalElectrical) te).updateFacing();
+		}
+
+		par1World.setBlockMetadataWithNotify(x, y, z, change, 3);
+		return true;
 	}
-    }
 
-    @Override
-    public void breakBlock(World var1, int var2, int var3, int var4, Block var5, int var6)
-    {
-	final TileEntity var9 = var1.getTileEntity(var2, var3, var4);
-
-	if (var9 instanceof TileEntitySolar)
+	@Override
+	public boolean onMachineActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int side, float hitX, float hitY, float hitZ)
 	{
-	    ((TileEntitySolar) var9).onDestroy(var9);
+		entityPlayer.openGui(ExtraPlanets.instance, -1, world, x, y, z);
+		return true;
 	}
 
-	super.breakBlock(var1, var2, var3, var4, var5, var6);
-    }
-
-    @Override
-    public boolean onUseWrench(World par1World, int x, int y, int z, EntityPlayer par5EntityPlayer, int side, float hitX, float hitY, float hitZ)
-    {
-	int metadata = par1World.getBlockMetadata(x, y, z);
-	int original = metadata;
-
-	int change = 0;
-
-	if (metadata >= BlockSolar.ULTIMATE_METADATA)
+	@Override
+	public int damageDropped(int metadata)
 	{
-	    original -= BlockSolar.ULTIMATE_METADATA;
+		if (metadata >= BlockSolar.ULTIMATE_METADATA)
+		{
+			return BlockSolar.ULTIMATE_METADATA;
+		}
+		else
+		{
+			return BlockSolar.HYBRID_METADATA;
+		}
 	}
 
-	switch (original)
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)
 	{
-	case 0:
-	    change = 3;
-	    break;
-	case 3:
-	    change = 1;
-	    break;
-	case 1:
-	    change = 2;
-	    break;
-	case 2:
-	    change = 0;
-	    break;
+		int metadata = this.getDamageValue(world, x, y, z);
+
+		return new ItemStack(this, 1, metadata);
 	}
 
-	if (metadata >= BlockSolar.ULTIMATE_METADATA)
+	@Override
+	public TileEntity createTileEntity(World world, int metadata)
 	{
-	    change += BlockSolar.ULTIMATE_METADATA;
+		if (metadata >= BlockSolar.ULTIMATE_METADATA)
+		{
+			return new TileEntitySolar(2);
+		}
+		else
+		{
+			return new TileEntitySolar(1);
+		}
 	}
 
-	TileEntity te = par1World.getTileEntity(x, y, z);
-	if (te instanceof TileBaseUniversalElectrical)
+	@Override
+	public boolean renderAsNormalBlock()
 	{
-	    ((TileBaseUniversalElectrical) te).updateFacing();
+		return false;
 	}
 
-	par1World.setBlockMetadataWithNotify(x, y, z, change, 3);
-	return true;
-    }
-
-    @Override
-    public boolean onMachineActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int side, float hitX, float hitY, float hitZ)
-    {
-	entityPlayer.openGui(ExtraPlanets.instance, -1, world, x, y, z);
-	return true;
-    }
-
-    @Override
-    public int damageDropped(int metadata)
-    {
-	if (metadata >= BlockSolar.ULTIMATE_METADATA)
+	@Override
+	public String getShiftDescription(int meta)
 	{
-	    return BlockSolar.ULTIMATE_METADATA;
+		switch (meta)
+		{
+		case HYBRID_METADATA:
+			return GCCoreUtil.translate("tile.solarhybrid.description");
+		case ULTIMATE_METADATA:
+			return GCCoreUtil.translate("tile.solarultimate.description");
+		}
+		return "";
 	}
-	else
+
+	@Override
+	public boolean showDescription(int meta)
 	{
-	    return BlockSolar.HYBRID_METADATA;
+		return true;
 	}
-    }
 
-    @Override
-    public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)
-    {
-	int metadata = this.getDamageValue(world, x, y, z);
-
-	return new ItemStack(this, 1, metadata);
-    }
-
-    @Override
-    public TileEntity createTileEntity(World world, int metadata)
-    {
-	if (metadata >= BlockSolar.ULTIMATE_METADATA)
+	@Override
+	public boolean isOpaqueCube()
 	{
-	    return new TileEntitySolar(2);
+		return false;
 	}
-	else
+
+	@Override
+	public boolean isSealed(World world, int x, int y, int z, ForgeDirection direction)
 	{
-	    return new TileEntitySolar(1);
+		return true;
 	}
-    }
-
-    @Override
-    public boolean renderAsNormalBlock()
-    {
-	return false;
-    }
-
-    @Override
-    public String getShiftDescription(int meta)
-    {
-	switch (meta)
-	{
-	case HYBRID_METADATA:
-	    return GCCoreUtil.translate("tile.solarhybrid.description");
-	case ULTIMATE_METADATA:
-	    return GCCoreUtil.translate("tile.solarultimate.description");
-	}
-	return "";
-    }
-
-    @Override
-    public boolean showDescription(int meta)
-    {
-	return true;
-    }
-
-    @Override
-    public boolean isOpaqueCube()
-    {
-	return false;
-    }
-
-    @Override
-    public boolean isSealed(World world, int x, int y, int z, ForgeDirection direction)
-    {
-	return true;
-    }
 }

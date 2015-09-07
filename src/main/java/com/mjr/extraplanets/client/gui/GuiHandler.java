@@ -22,65 +22,65 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GuiHandler implements IGuiHandler
 {
-    @Override
-    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
-    {
-	EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
-
-	if (playerBase == null)
+	@Override
+	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
 	{
-	    player.addChatMessage(new ChatComponentText("ExtraPlanets player instance null server-side. This is a bug."));
-	    return null;
+		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
+
+		if (playerBase == null)
+		{
+			player.addChatMessage(new ChatComponentText("ExtraPlanets player instance null server-side. This is a bug."));
+			return null;
+		}
+
+		GCPlayerStats stats = GCPlayerStats.get(playerBase);
+
+
+		TileEntity tile = world.getTileEntity(x, y, z);
+
+		if (tile != null)
+		{
+			if (tile instanceof TileEntityAdvancedRefinery)
+			{
+				return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile);
+			}
+			else if (tile instanceof TileEntitySolar)
+			{
+				return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
+			}
+		}
+		return null;
 	}
 
-	GCPlayerStats stats = GCPlayerStats.get(playerBase);
-
-
-	TileEntity tile = world.getTileEntity(x, y, z);
-
-	if (tile != null)
+	@Override
+	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
 	{
-	    if (tile instanceof TileEntityAdvancedRefinery)
-	    {
-		return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile);
-	    }
-	    else if (tile instanceof TileEntitySolar)
-	    {
-		return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
-	    }
-	}
-	return null;
-    }
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
+		{
+			return this.getClientGuiElement(ID, player, world, new Vector3(x, y, z));
+		}
 
-    @Override
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
-    {
-	if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
-	{
-	    return this.getClientGuiElement(ID, player, world, new Vector3(x, y, z));
+		return null;
 	}
 
-	return null;
-    }
-
-    @SideOnly(Side.CLIENT)
-    private Object getClientGuiElement(int ID, EntityPlayer player, World world, Vector3 position)
-    {
-	EntityClientPlayerMP playerClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
-
-	TileEntity tile = world.getTileEntity(position.intX(), position.intY(), position.intZ());
-
-	if (tile != null)
+	@SideOnly(Side.CLIENT)
+	private Object getClientGuiElement(int ID, EntityPlayer player, World world, Vector3 position)
 	{
-	    if (tile instanceof TileEntityAdvancedRefinery)
-	    {
-		return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position.intX(), position.intY(), position.intZ()));
-	    }
-	    else if (tile instanceof TileEntitySolar)
-	    {
-		return new GuiSolar(player.inventory, (TileEntitySolar) tile);
-	    }
+		EntityClientPlayerMP playerClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
+
+		TileEntity tile = world.getTileEntity(position.intX(), position.intY(), position.intZ());
+
+		if (tile != null)
+		{
+			if (tile instanceof TileEntityAdvancedRefinery)
+			{
+				return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position.intX(), position.intY(), position.intZ()));
+			}
+			else if (tile instanceof TileEntitySolar)
+			{
+				return new GuiSolar(player.inventory, (TileEntitySolar) tile);
+			}
+		}
+		return null;
 	}
-	return null;
-    }
 }

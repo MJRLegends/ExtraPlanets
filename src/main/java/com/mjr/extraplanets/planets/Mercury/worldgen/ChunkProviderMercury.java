@@ -25,113 +25,113 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.village.MapGenVillageMercur
 
 public class ChunkProviderMercury extends ChunkProviderSpace {
 
-    private final BiomeDecoratorMercury greenPixelBiomeDecorator = new BiomeDecoratorMercury();
+	private final BiomeDecoratorMercury greenPixelBiomeDecorator = new BiomeDecoratorMercury();
 
-    private final MapGenCaveMercury caveGenerator = new MapGenCaveMercury();
+	private final MapGenCaveMercury caveGenerator = new MapGenCaveMercury();
 
-    private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();
+	private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();
 
 
-    public ChunkProviderMercury(World par1World, long seed, boolean mapFeaturesEnabled) {
-	super(par1World, seed, mapFeaturesEnabled);
+	public ChunkProviderMercury(World par1World, long seed, boolean mapFeaturesEnabled) {
+		super(par1World, seed, mapFeaturesEnabled);
 
-    }
+	}
 
-    @Override
-    protected BiomeDecoratorSpace getBiomeGenerator() {
-	return this.greenPixelBiomeDecorator;
-    }
+	@Override
+	protected BiomeDecoratorSpace getBiomeGenerator() {
+		return this.greenPixelBiomeDecorator;
+	}
 
-    @Override
-    protected BiomeGenBase[] getBiomesForGeneration() {
-	return new BiomeGenBase[] { MercuryBiomes.mercury };
-    }
+	@Override
+	protected BiomeGenBase[] getBiomesForGeneration() {
+		return new BiomeGenBase[] { MercuryBiomes.mercury };
+	}
 
-    @Override
-    protected int getSeaLevel() {
-	return 64;
-    }
+	@Override
+	protected int getSeaLevel() {
+		return 64;
+	}
 
-    @Override
-    protected List<MapGenBaseMeta> getWorldGenerators() {
-	List<MapGenBaseMeta> generators = Lists.newArrayList();
-	generators.add(this.caveGenerator);
-	return generators;
-    }
+	@Override
+	protected List<MapGenBaseMeta> getWorldGenerators() {
+		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		generators.add(this.caveGenerator);
+		return generators;
+	}
 
-    @Override
-    protected BiomeGenBase.SpawnListEntry[] getMonsters()
-    {
-	List<BiomeGenBase.SpawnListEntry> monsters = new ArrayList<BiomeGenBase.SpawnListEntry>();
-	monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-	monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-	monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-	monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-	monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-	monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-	//monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWizard.class, 8, 2, 3));
-	//monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class, 8, 2, 3));
-	monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedBlaze.class, 8, 2, 3));
-	return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
-    }
+	@Override
+	protected BiomeGenBase.SpawnListEntry[] getMonsters()
+	{
+		List<BiomeGenBase.SpawnListEntry> monsters = new ArrayList<BiomeGenBase.SpawnListEntry>();
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
+		//monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWizard.class, 8, 2, 3));
+		//monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedBlaze.class, 8, 2, 3));
+		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
+	}
 
-    @Override
-    protected BiomeGenBase.SpawnListEntry[] getCreatures()
-    {
-	return new BiomeGenBase.SpawnListEntry[0];
-    }
+	@Override
+	protected BiomeGenBase.SpawnListEntry[] getCreatures()
+	{
+		return new BiomeGenBase.SpawnListEntry[0];
+	}
 
-    @Override
-    protected BlockMetaPair getGrassBlock() {
-	return new BlockMetaPair(ExtraPlanetsBlocks.mercurySurface,(byte) 1);
-    }
+	@Override
+	protected BlockMetaPair getGrassBlock() {
+		return new BlockMetaPair(ExtraPlanetsBlocks.mercurySurface,(byte) 1);
+	}
 
-    @Override
-    protected BlockMetaPair getDirtBlock() {
-	return new BlockMetaPair(ExtraPlanetsBlocks.mercurySubSurface,(byte) 1);
-    }
+	@Override
+	protected BlockMetaPair getDirtBlock() {
+		return new BlockMetaPair(ExtraPlanetsBlocks.mercurySubSurface,(byte) 1);
+	}
 
-    @Override
-    protected BlockMetaPair getStoneBlock() {
-	return new BlockMetaPair(ExtraPlanetsBlocks.mercuryStone,(byte) 1);
-    }
+	@Override
+	protected BlockMetaPair getStoneBlock() {
+		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryStone,(byte) 1);
+	}
 
-    @Override
-    public double getHeightModifier() {
-	return 12;
-    }
+	@Override
+	public double getHeightModifier() {
+		return 12;
+	}
 
-    @Override
-    public double getSmallFeatureHeightModifier() {
-	return 26;
-    }
+	@Override
+	public double getSmallFeatureHeightModifier() {
+		return 26;
+	}
 
-    @Override
-    public double getMountainHeightModifier() {
-	return 95;
-    }
+	@Override
+	public double getMountainHeightModifier() {
+		return 95;
+	}
 
-    @Override
-    public double getValleyHeightModifier() {
-	return 50;
-    }
+	@Override
+	public double getValleyHeightModifier() {
+		return 50;
+	}
 
-    @Override
-    public int getCraterProbability() {
-	return 25;
-    }
+	@Override
+	public int getCraterProbability() {
+		return 25;
+	}
 
-    @Override
-    public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
-    }
+	@Override
+	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+	}
 
-    @Override
-    public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-	this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
-    }
+	@Override
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+	}
 
-    @Override
-    public void recreateStructures(int par1, int par2) {
-	this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
-    }
+	@Override
+	public void recreateStructures(int par1, int par2) {
+		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
+	}
 }

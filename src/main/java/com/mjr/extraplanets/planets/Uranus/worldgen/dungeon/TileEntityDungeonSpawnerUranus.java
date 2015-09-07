@@ -15,24 +15,24 @@ import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
 
 public class TileEntityDungeonSpawnerUranus extends TileEntityDungeonSpawner
 {
-    public TileEntityDungeonSpawnerUranus()
-    {
-	super(EntityCreeperBossUranus.class);
-    }
+	public TileEntityDungeonSpawnerUranus()
+	{
+		super(EntityCreeperBossUranus.class);
+	}
 
-    @Override
-    public List<Class<? extends EntityLiving>> getDisabledCreatures()
-    {
-	List<Class<? extends EntityLiving>> list = new ArrayList<Class<? extends EntityLiving>>();
-	list.add(EntityEvolvedSkeleton.class);
-	list.add(EntityEvolvedZombie.class);
-	list.add(EntityEvolvedSpider.class);
-	return list;
-    }
+	@Override
+	public List<Class<? extends EntityLiving>> getDisabledCreatures()
+	{
+		List<Class<? extends EntityLiving>> list = new ArrayList<Class<? extends EntityLiving>>();
+		list.add(EntityEvolvedSkeleton.class);
+		list.add(EntityEvolvedZombie.class);
+		list.add(EntityEvolvedSpider.class);
+		return list;
+	}
 
-    @Override
-    public void playSpawnSound(Entity entity)
-    {
-	this.worldObj.playSoundAtEntity(entity, GalacticraftCore.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
-    }
+	@Override
+	public void playSpawnSound(Entity entity)
+	{
+		this.worldObj.playSoundAtEntity(entity, GalacticraftCore.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
+	}
 }

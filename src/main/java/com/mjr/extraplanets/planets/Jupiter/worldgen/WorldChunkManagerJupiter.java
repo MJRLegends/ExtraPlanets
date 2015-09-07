@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerJupiter extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return JupiterBiomes.jupiter;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return JupiterBiomes.jupiter;
+	}
 
 }

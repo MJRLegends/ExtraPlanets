@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerEris extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return ErisBiomes.eris;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return ErisBiomes.eris;
+	}
 
 }

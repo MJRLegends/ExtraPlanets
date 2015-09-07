@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerSaturn extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return SaturnBiomes.saturn;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return SaturnBiomes.saturn;
+	}
 
 }

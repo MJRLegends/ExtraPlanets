@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerPluto extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return PlutoBiomes.pluto;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return PlutoBiomes.pluto;
+	}
 
 }

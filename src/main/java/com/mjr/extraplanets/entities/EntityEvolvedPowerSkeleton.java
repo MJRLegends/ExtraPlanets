@@ -29,117 +29,117 @@ import net.minecraftforge.common.ForgeHooks;
 
 public class EntityEvolvedPowerSkeleton extends EntitySkeleton implements IEntityBreathable
 {
-    public EntityEvolvedPowerSkeleton(World par1World)
-    {
-	super(par1World);
-	this.tasks.addTask(1, new EntityAISwimming(this));
-	this.tasks.addTask(2, new EntityAIRestrictSun(this));
-	this.tasks.addTask(3, new EntityAIFleeSun(this, 0.25F));
-	this.tasks.addTask(4, new EntityAIArrowAttack(this, 0.85F, 25, 20));
-	this.tasks.addTask(5, new EntityAIWander(this, 0.25F));
-	this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 15.0F));
-	this.tasks.addTask(6, new EntityAILookIdle(this));
-	this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-	this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
-    }
-
-    @Override
-    protected void applyEntityAttributes()
-    {
-	super.applyEntityAttributes();
-	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(25);
-	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.55F);
-    }
-
-    @Override
-    public boolean canBreath()
-    {
-	return true;
-    }
-
-    @Override
-    public void attackEntityWithRangedAttack(EntityLivingBase par1EntityLivingBase, float par2)
-    {
-	EntityArrow entityarrow = new EntityArrow(this.worldObj, this, par1EntityLivingBase, 0.4F, 17 - this.worldObj.difficultySetting.getDifficultyId() * 4);
-	int i = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, this.getHeldItem());
-	int j = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, this.getHeldItem());
-	entityarrow.setDamage(par2 * 2.0F + this.rand.nextGaussian() * 0.25D + this.worldObj.difficultySetting.getDifficultyId() * 0.11F);
-
-	if (i > 0)
+	public EntityEvolvedPowerSkeleton(World par1World)
 	{
-	    entityarrow.setDamage(entityarrow.getDamage() + i * 0.8D + 0.8D);
+		super(par1World);
+		this.tasks.addTask(1, new EntityAISwimming(this));
+		this.tasks.addTask(2, new EntityAIRestrictSun(this));
+		this.tasks.addTask(3, new EntityAIFleeSun(this, 0.25F));
+		this.tasks.addTask(4, new EntityAIArrowAttack(this, 0.85F, 25, 20));
+		this.tasks.addTask(5, new EntityAIWander(this, 0.25F));
+		this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 15.0F));
+		this.tasks.addTask(6, new EntityAILookIdle(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 	}
 
-	if (j > 0)
+	@Override
+	protected void applyEntityAttributes()
 	{
-	    entityarrow.setKnockbackStrength(j);
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(25);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.55F);
 	}
 
-	if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, this.getHeldItem()) > 0 || this.getSkeletonType() == 1)
+	@Override
+	public boolean canBreath()
 	{
-	    entityarrow.setFire(100);
+		return true;
 	}
 
-	this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
-	this.worldObj.spawnEntityInWorld(entityarrow);
-    }
-
-    @Override
-    protected void jump()
-    {
-	this.motionY = 0.45D / WorldUtil.getGravityFactor(this);
-	if (this.motionY < 0.24D) this.motionY = 0.24D;
-
-	if (this.isPotionActive(Potion.jump))
+	@Override
+	public void attackEntityWithRangedAttack(EntityLivingBase par1EntityLivingBase, float par2)
 	{
-	    this.motionY += (this.getActivePotionEffect(Potion.jump).getAmplifier() + 1) * 0.1F;
+		EntityArrow entityarrow = new EntityArrow(this.worldObj, this, par1EntityLivingBase, 0.4F, 17 - this.worldObj.difficultySetting.getDifficultyId() * 4);
+		int i = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, this.getHeldItem());
+		int j = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, this.getHeldItem());
+		entityarrow.setDamage(par2 * 2.0F + this.rand.nextGaussian() * 0.25D + this.worldObj.difficultySetting.getDifficultyId() * 0.11F);
+
+		if (i > 0)
+		{
+			entityarrow.setDamage(entityarrow.getDamage() + i * 0.8D + 0.8D);
+		}
+
+		if (j > 0)
+		{
+			entityarrow.setKnockbackStrength(j);
+		}
+
+		if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, this.getHeldItem()) > 0 || this.getSkeletonType() == 1)
+		{
+			entityarrow.setFire(100);
+		}
+
+		this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
+		this.worldObj.spawnEntityInWorld(entityarrow);
 	}
 
-	if (this.isSprinting())
+	@Override
+	protected void jump()
 	{
-	    float f = this.rotationYaw * 0.017453292F;
-	    this.motionX -= MathHelper.sin(f) * 0.2F;
-	    this.motionZ += MathHelper.cos(f) * 0.2F;
+		this.motionY = 0.45D / WorldUtil.getGravityFactor(this);
+		if (this.motionY < 0.24D) this.motionY = 0.24D;
+
+		if (this.isPotionActive(Potion.jump))
+		{
+			this.motionY += (this.getActivePotionEffect(Potion.jump).getAmplifier() + 1) * 0.1F;
+		}
+
+		if (this.isSprinting())
+		{
+			float f = this.rotationYaw * 0.017453292F;
+			this.motionX -= MathHelper.sin(f) * 0.2F;
+			this.motionZ += MathHelper.cos(f) * 0.2F;
+		}
+
+		this.isAirBorne = true;
+		ForgeHooks.onLivingJump(this);
 	}
 
-	this.isAirBorne = true;
-	ForgeHooks.onLivingJump(this);
-    }
-
-    @Override
-    protected void dropRareDrop(int p_70600_1_)
-    {
-	if (this.getSkeletonType() == 1)
+	@Override
+	protected void dropRareDrop(int p_70600_1_)
 	{
-	    this.entityDropItem(new ItemStack(Items.skull, 1, 1), 0.0F);
-	    return;
-	}
+		if (this.getSkeletonType() == 1)
+		{
+			this.entityDropItem(new ItemStack(Items.skull, 1, 1), 0.0F);
+			return;
+		}
 
-	switch (this.rand.nextInt(10))
-	{
-	case 0:
-	case 1:
-	case 9:
-	    this.dropItem(Items.arrow, 1);
-	    break;
-	case 2:
-	case 3:
-	    this.dropItem(Items.arrow, 2);
-	    break;
-	case 4:
-	case 5:
-	    this.dropItem(Items.arrow, 3);
-	    break;
-	case 6:
-	    //Oxygen tank half empty or less
-	    this.entityDropItem(new ItemStack(GCItems.oxTankMedium, 1, 901 + this.rand.nextInt(900)), 0.0F);
-	    break;
-	case 7:
-	    this.dropItem(GCItems.canister, 1);
-	    break;
-	case 8:
-	    this.entityDropItem(new ItemStack(GCBlocks.oxygenPipe), 0.0F);
-	    break;
+		switch (this.rand.nextInt(10))
+		{
+		case 0:
+		case 1:
+		case 9:
+			this.dropItem(Items.arrow, 1);
+			break;
+		case 2:
+		case 3:
+			this.dropItem(Items.arrow, 2);
+			break;
+		case 4:
+		case 5:
+			this.dropItem(Items.arrow, 3);
+			break;
+		case 6:
+			//Oxygen tank half empty or less
+			this.entityDropItem(new ItemStack(GCItems.oxTankMedium, 1, 901 + this.rand.nextInt(900)), 0.0F);
+			break;
+		case 7:
+			this.dropItem(GCItems.canister, 1);
+			break;
+		case 8:
+			this.entityDropItem(new ItemStack(GCBlocks.oxygenPipe), 0.0F);
+			break;
+		}
 	}
-    }
 }

@@ -9,29 +9,29 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeGenJupiter;
 
 public class ErisBiomes extends BiomeGenBase  {
 
-    public static final BiomeGenBase eris = new BiomeGenJupiter(Config.erisBiomeID).setBiomeName("eris");
+	public static final BiomeGenBase eris = new BiomeGenJupiter(Config.erisBiomeID).setBiomeName("eris");
 
-    @SuppressWarnings("unchecked")
-    ErisBiomes(int var1)
-    {
-	super(var1);
-	this.spawnableMonsterList.clear();
-	this.spawnableWaterCreatureList.clear();
-	this.spawnableCreatureList.clear();
-	this.spawnableMonsterList.add(new SpawnListEntry(EntityEvolvedZombie.class, 10, 4, 4));
-	this.spawnableMonsterList.add(new SpawnListEntry(EntityEvolvedSpider.class, 10, 4, 4));
-	this.rainfall = 0F;
-    }
+	@SuppressWarnings("unchecked")
+	ErisBiomes(int var1)
+	{
+		super(var1);
+		this.spawnableMonsterList.clear();
+		this.spawnableWaterCreatureList.clear();
+		this.spawnableCreatureList.clear();
+		this.spawnableMonsterList.add(new SpawnListEntry(EntityEvolvedZombie.class, 10, 4, 4));
+		this.spawnableMonsterList.add(new SpawnListEntry(EntityEvolvedSpider.class, 10, 4, 4));
+		this.rainfall = 0F;
+	}
 
-    @Override
-    public ErisBiomes setColor(int var1)
-    {
-	return (ErisBiomes) super.setColor(var1);
-    }
+	@Override
+	public ErisBiomes setColor(int var1)
+	{
+		return (ErisBiomes) super.setColor(var1);
+	}
 
-    @Override
-    public float getSpawningChance()
-    {
-	return 0.01F;
-    }
+	@Override
+	public float getSpawningChance()
+	{
+		return 0.01F;
+	}
 }

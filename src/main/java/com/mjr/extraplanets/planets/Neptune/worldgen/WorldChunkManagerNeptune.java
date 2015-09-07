@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerNeptune extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return NeptuneBiomes.neptune;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return NeptuneBiomes.neptune;
+	}
 
 }

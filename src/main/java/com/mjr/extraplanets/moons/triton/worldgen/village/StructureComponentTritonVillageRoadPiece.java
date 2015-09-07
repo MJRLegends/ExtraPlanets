@@ -2,10 +2,10 @@ package com.mjr.extraplanets.moons.triton.worldgen.village;
 
 
 public abstract class StructureComponentTritonVillageRoadPiece extends StructureComponentTritonVillage {
-    public StructureComponentTritonVillageRoadPiece() {
-    }
+	public StructureComponentTritonVillageRoadPiece() {
+	}
 
-    protected StructureComponentTritonVillageRoadPiece(StructureComponentTritonVillageStartPiece par1ComponentVillageStartPiece, int par2) {
-	super(par1ComponentVillageStartPiece, par2);
-    }
+	protected StructureComponentTritonVillageRoadPiece(StructureComponentTritonVillageStartPiece par1ComponentVillageStartPiece, int par2) {
+		super(par1ComponentVillageStartPiece, par2);
+	}
 }

@@ -5,9 +5,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class WorldChunkManagerTriton extends WorldChunkManagerSpace {
 
-    @Override
-    public BiomeGenBase getBiome() {
-	return TritonBiomes.triton;
-    }
+	@Override
+	public BiomeGenBase getBiome() {
+		return TritonBiomes.triton;
+	}
 
 }

@@ -11,32 +11,32 @@ import com.mjr.extraplanets.Config;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class PlutoEvents {
-    @SubscribeEvent
-    public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event){
-	if (event.entityLiving.worldObj.provider.dimensionId == Config.plutoID)
-	{
-	    if(event.entity instanceof EntityPlayer) {
-		event.setCanceled(false);
-	    }
-	    else{
-		if(Config.mobSuffocation)
-		    event.setCanceled(false);
-		else
-		    event.setCanceled(true);
-	    }
+	@SubscribeEvent
+	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event){
+		if (event.entityLiving.worldObj.provider.dimensionId == Config.plutoID)
+		{
+			if(event.entity instanceof EntityPlayer) {
+				event.setCanceled(false);
+			}
+			else{
+				if(Config.mobSuffocation)
+					event.setCanceled(false);
+				else
+					event.setCanceled(true);
+			}
+		}
 	}
-    }
 
-    @SubscribeEvent
-    public void GCCoreEventWakePlayer(EventWakePlayer event){
-	if (event.entityLiving.worldObj.provider.dimensionId == Config.plutoID)
-	{
-	    event.entityPlayer.heal(5.0F);
+	@SubscribeEvent
+	public void GCCoreEventWakePlayer(EventWakePlayer event){
+		if (event.entityLiving.worldObj.provider.dimensionId == Config.plutoID)
+		{
+			event.entityPlayer.heal(5.0F);
 
-	    for (WorldServer worldServer : MinecraftServer.getServer().worldServers)
-	    {
-		worldServer.setWorldTime(0);
-	    }
+			for (WorldServer worldServer : MinecraftServer.getServer().worldServers)
+			{
+				worldServer.setWorldTime(0);
+			}
+		}
 	}
-    }
 }

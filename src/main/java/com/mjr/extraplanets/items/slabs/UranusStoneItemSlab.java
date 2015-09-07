@@ -9,12 +9,12 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class UranusStoneItemSlab extends ItemSlab {
 
-    public UranusStoneItemSlab(Block block) {
-	super(block, ((BlockSlab) (ExtraPlanetsBlocks.uranusStoneBlockHalfSlab)),
-		((BlockSlab) (ExtraPlanetsBlocks.uranusStoneBlockDoubleSlab)), false);
-	this.setMaxDamage(0);
-	this.setHasSubtypes(true);
-	setUnlocalizedName(Constants.TEXTURE_PREFIX + "uranusStone");
-    }
+	public UranusStoneItemSlab(Block block) {
+		super(block, ((BlockSlab) (ExtraPlanetsBlocks.uranusStoneBlockHalfSlab)),
+				((BlockSlab) (ExtraPlanetsBlocks.uranusStoneBlockDoubleSlab)), false);
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+		setUnlocalizedName(Constants.TEXTURE_PREFIX + "uranusStone");
+	}
 
 }
