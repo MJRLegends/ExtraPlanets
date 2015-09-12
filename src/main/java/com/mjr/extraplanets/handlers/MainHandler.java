@@ -1,0 +1,33 @@
+package com.mjr.extraplanets.handlers;
+
+import java.util.Random;
+
+import com.mjr.extraplanets.Config;
+
+import net.minecraft.entity.effect.EntityLightningBolt;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
+
+public class MainHandler {
+	@SubscribeEvent
+	public void onPlayer(PlayerTickEvent event) {
+		if (event.player.worldObj.provider.dimensionId == Config.jupiterID) {
+			Random rand = new Random();
+			int addX = rand.nextInt(25);
+			int addZ = rand.nextInt(25);
+			if (rand.nextInt(2) == 1)
+				addX = -addX;
+			if (rand.nextInt(2) == 1)
+				addZ = -addZ;
+			int lightingSpawnChance = rand.nextInt(50);
+			//int rainingSpawnChance = rand.nextInt(100);
+			if (lightingSpawnChance == 10)
+				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(
+						event.player.worldObj, event.player.posX + addX,
+						event.player.posY, event.player.posZ + addZ));
+//			if (rainingSpawnChance == 1
+//					&& event.player.worldObj.isRaining() == false)
+//				event.player.worldObj.setRainStrength(10);
+		}
+	}
+}

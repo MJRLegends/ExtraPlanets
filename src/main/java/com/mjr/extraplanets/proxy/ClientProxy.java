@@ -68,6 +68,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
+import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
 import com.mjr.extraplanets.planets.Eris.ErisHandlerClient;
@@ -108,6 +109,7 @@ public class ClientProxy extends CommonProxy {
 		super.init(event);
 		renderMobEntities();
 		renderNonMobEntities();
+		FMLCommonHandler.instance().bus().register(new MainHandler());
 		if (Config.mercury)
 			FMLCommonHandler.instance().bus().register(new MercuryHandlerClient());
 		if (Config.venus)

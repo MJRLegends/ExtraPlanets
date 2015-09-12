@@ -33,6 +33,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.handlers.BucketHandler;
+import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.items.tools.ExtraPlanetsTools;
 import com.mjr.extraplanets.moons.MoonsMain;
@@ -235,19 +236,19 @@ public class ExtraPlanets {
 	private void registerSchematics() {
 		if (Config.venus)
 			SchematicRegistry
-			.registerSchematicRecipe(new SchematicTier4Rocket());
+					.registerSchematicRecipe(new SchematicTier4Rocket());
 		if (Config.jupiter)
 			SchematicRegistry
-			.registerSchematicRecipe(new SchematicTier5Rocket());
+					.registerSchematicRecipe(new SchematicTier5Rocket());
 		if (Config.saturn)
 			SchematicRegistry
-			.registerSchematicRecipe(new SchematicTier6Rocket());
+					.registerSchematicRecipe(new SchematicTier6Rocket());
 		if (Config.uranus)
 			SchematicRegistry
-			.registerSchematicRecipe(new SchematicTier7Rocket());
+					.registerSchematicRecipe(new SchematicTier7Rocket());
 		if (Config.neptune)
 			SchematicRegistry
-			.registerSchematicRecipe(new SchematicTier8Rocket());
+					.registerSchematicRecipe(new SchematicTier8Rocket());
 	}
 
 	private void addDungeonLoot() {
@@ -282,7 +283,7 @@ public class ExtraPlanets {
 		int newID = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(var0, var1, newID, back, fore);
 		EntityRegistry
-		.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(),
-				ExtraPlanets.instance, 80, 3, true);
+				.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(),
+						ExtraPlanets.instance, 80, 3, true);
 	}
 }

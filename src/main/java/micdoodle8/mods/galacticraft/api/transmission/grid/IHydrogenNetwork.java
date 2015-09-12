@@ -10,17 +10,17 @@ import net.minecraft.tileentity.TileEntity;
  */
 public interface IHydrogenNetwork extends IGridNetwork<IHydrogenNetwork, ITransmitter, TileEntity>
 {
-	/**
-	 * Produces hydrogen in this hydrogen network.
-	 *
-	 * @return Rejected energy in Joules.
-	 */
-	public float produce(float sendAmount, TileEntity... ignoreTiles);
+    /**
+     * Produces hydrogen in this hydrogen network.
+     *
+     * @return Rejected energy in Joules.
+     */
+    public float produce(float sendAmount, TileEntity... ignoreTiles);
 
-	/**
-	 * Gets the total amount of hydrogen requested/needed in the network.
-	 *
-	 * @param ignoreTiles The TileEntities to ignore during this calculation (optional).
-	 */
-	public float getRequest(TileEntity... ignoreTiles);
+    /**
+     * Gets the total amount of hydrogen requested/needed in the network.
+     *
+     * @param ignoreTiles The TileEntities to ignore during this calculation (optional).
+     */
+    public float getRequest(TileEntity... ignoreTiles);
 }
