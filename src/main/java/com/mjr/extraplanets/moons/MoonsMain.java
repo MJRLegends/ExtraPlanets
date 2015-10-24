@@ -52,11 +52,6 @@ public class MoonsMain {
 
 	public static void initializeUnReachableMoons() {
 		// Neptune Moons
-		triton = makeUnreachableMoon("triton", PlanetsMain.neptune);
-		if (triton != null)
-			triton.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)
-			.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
-
 		ganymede = makeUnreachableMoon("ganymede", PlanetsMain.jupiter);
 		if (ganymede != null)
 			ganymede.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F)

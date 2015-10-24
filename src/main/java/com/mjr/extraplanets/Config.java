@@ -55,6 +55,36 @@ public class Config {
 	public static int ioID;
 	public static int deimosID;
 	public static int phobosID;
+	
+	public static int mercurySpaceStationID;
+	public static int mercurySpaceStationStaticID;
+	
+	public static int venusSpaceStationID;
+	public static int venusSpaceStationStaticID;
+	
+	public static int ceresSpaceStationID;
+	public static int ceresSpaceStationStaticID;
+
+	public static int marsSpaceStationID;
+	public static int marsSpaceStationStaticID;
+	
+	public static int jupiterSpaceStationID;
+	public static int jupiterSpaceStationStaticID;
+	
+	public static int saturnSpaceStationID;
+	public static int saturnSpaceStationStaticID;
+	
+	public static int uranusSpaceStationID;
+	public static int uranusSpaceStationStaticID;
+	
+	public static int neptuneSpaceStationID;
+	public static int neptuneSpaceStationStaticID;
+	
+	public static int plutoSpaceStationID;
+	public static int plutoSpaceStationStaticID;
+	
+	public static int erisSpaceStationID;
+	public static int erisSpaceStationStaticID;
 
 	public static int mercuryBiomeID;
 	public static int venusBiomeID;
@@ -170,6 +200,36 @@ public class Config {
 		deimosID = config.get(dimensionID, "Deimos Dimension ID", -35).getInt();
 		tritonID = config.get(dimensionID, "Triton Dimension ID", -36).getInt();
 
+		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -41).getInt();
+		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -40).getInt();
+		
+		venusSpaceStationID = config.get(dimensionID, "Venus SpaceStation Dimension ID", -43).getInt();
+		venusSpaceStationStaticID = config.get(dimensionID, "Venus SpaceStation Static Dimension ID", -42).getInt();
+		
+		ceresSpaceStationID = config.get(dimensionID, "Ceres SpaceStation Dimension ID", -45).getInt();
+		ceresSpaceStationStaticID = config.get(dimensionID, "Ceres SpaceStation Static Dimension ID", -44).getInt();
+	
+		marsSpaceStationID = config.get(dimensionID, "Jupiter SpaceStation Dimension ID", -47).getInt();
+		marsSpaceStationStaticID = config.get(dimensionID, "Jupiter SpaceStation Static Dimension ID", -46).getInt();
+		
+		jupiterSpaceStationID = config.get(dimensionID, "Jupiter SpaceStation Dimension ID", -48).getInt();
+		jupiterSpaceStationStaticID = config.get(dimensionID, "Jupiter SpaceStation Static Dimension ID", -47).getInt();
+		
+		saturnSpaceStationID = config.get(dimensionID, "Saturn SpaceStation Dimension ID", -50).getInt();
+		saturnSpaceStationStaticID = config.get(dimensionID, "Saturn SpaceStation Static Dimension ID", -49).getInt();
+		
+		uranusSpaceStationID = config.get(dimensionID, "Uranus SpaceStation Dimension ID", -51).getInt();
+		uranusSpaceStationStaticID = config.get(dimensionID, "Uranus SpaceStation Static Dimension ID", -50).getInt();
+		
+		neptuneSpaceStationID = config.get(dimensionID, "Neptune SpaceStation Dimension ID", -53).getInt();
+		neptuneSpaceStationStaticID = config.get(dimensionID, "Neptune SpaceStation Static Dimension ID", -52).getInt();
+		
+		plutoSpaceStationID = config.get(dimensionID, "Pluto SpaceStation Dimension ID", -54).getInt();
+		plutoSpaceStationStaticID = config.get(dimensionID, "Pluto SpaceStation Static Dimension ID", -53).getInt();
+		
+		erisSpaceStationID = config.get(dimensionID, "Eris SpaceStation Dimension ID", -56).getInt();
+		erisSpaceStationStaticID = config.get(dimensionID, "Eris SpaceStation Static Dimension ID", -55).getInt();
+		
 		mercuryBiomeID = config.get(biomeID, "Mercury Biome ID", 148).getInt();
 		venusBiomeID = config.get(biomeID, "Venus Biome ID", 149).getInt();
 		ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();

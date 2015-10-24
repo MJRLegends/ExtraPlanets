@@ -1,12 +1,16 @@
 package micdoodle8.mods.galacticraft.api.vector;
 
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.CrashReportCategory;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ReportedException;
 import net.minecraft.world.World;
@@ -86,7 +90,7 @@ public class BlockVec3Dim implements Cloneable
             return null;
         }
 
-   		World world = GalacticraftCore.proxy.getWorldForID(this.dim);
+   		World world = getWorldForId(this.dim);
    		if (world == null) return null;
    
    		int chunkx = this.x >> 4;
@@ -134,7 +138,7 @@ public class BlockVec3Dim implements Cloneable
             return null;
         }
 
-   		World world = GalacticraftCore.proxy.getWorldForID(this.dim);
+   		World world = getWorldForId(this.dim);
    		if (world == null) return null;
 
    		int chunkx = this.x >> 4;
@@ -174,7 +178,7 @@ public class BlockVec3Dim implements Cloneable
 
     public Block getBlock()
     {
-   		World world = GalacticraftCore.proxy.getWorldForID(this.dim);
+   		World world = getWorldForId(this.dim);
    		if (world == null) return null;
         return world.getBlock(this.x, this.y, this.z);
     }
@@ -267,14 +271,14 @@ public class BlockVec3Dim implements Cloneable
      */
     public TileEntity getTileEntity()
     {
-   		World world = GalacticraftCore.proxy.getWorldForID(this.dim);
+   		World world = getWorldForId(this.dim);
    		if (world == null) return null;
         return world.getTileEntity(this.x, this.y, this.z);
     }
 
     public int getBlockMetadata()
     {
-   		World world = GalacticraftCore.proxy.getWorldForID(this.dim);
+   		World world = getWorldForId(this.dim);
    		if (world == null) return 0;
         return world.getBlockMetadata(this.x, this.y, this.z);
     }
@@ -318,14 +322,14 @@ public class BlockVec3Dim implements Cloneable
 
     public void setBlock(Block block)
     {
-   		World world = GalacticraftCore.proxy.getWorldForID(this.dim);
+   		World world = getWorldForId(this.dim);
    		if (world == null) return;
         world.setBlock(this.x, this.y, this.z, block, 0, 3);
     }
 
     public boolean blockExists()
     {
-   		World world = GalacticraftCore.proxy.getWorldForID(this.dim);
+   		World world = getWorldForId(this.dim);
    		if (world == null) return false;
         return world.blockExists(this.x, this.y, this.z);
     }
@@ -347,5 +351,32 @@ public class BlockVec3Dim implements Cloneable
         int var4 = vector.y - this.y;
         int var6 = vector.z - this.z;
         return var2 * var2 + var4 * var4 + var6 * var6;
+    }
+
+    private World getWorldForId(int dimensionID)
+    {
+        if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER)
+        {
+            MinecraftServer theServer = FMLCommonHandler.instance().getMinecraftServerInstance();
+            if (theServer == null) return null;
+            return theServer.worldServerForDimension(dimensionID);
+        }
+        else
+        {
+            return getWorldForIdClient(dimensionID);
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+    private World getWorldForIdClient(int dimensionID)
+    {
+        World world = FMLClientHandler.instance().getClient().theWorld;
+
+        if (world != null && world.provider.dimensionId == dimensionID)
+        {
+            return world;
+        }
+
+        return null;
     }
 }

@@ -1,6 +1,5 @@
 package micdoodle8.mods.galacticraft.api.world;
 
-import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -8,12 +7,22 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 
+import java.lang.reflect.Method;
+
 public class OxygenHooks
 {
+    private static Class<?> oxygenUtilClass;
+    private static Method combusionTestMethod;
+    private static Method breathableAirBlockMethod;
+    private static Method breathableAirBlockEntityMethod;
+    private static Method torchHasOxygenMethod;
+    private static Method oxygenBubbleMethod;
+    private static Method validOxygenSetupMethod;
+
     /**
      * Test whether fire can burn in this world's atmosphere (outside any oxygen bubble).
      * 
-     * @param WorldProvider   The WorldProvider for this dimension
+     * @param provider   The WorldProvider for this dimension
      * 
      * @return   False if fire burns normally
      *            True if fire cannot burn in this world
@@ -21,7 +30,24 @@ public class OxygenHooks
      */
 	public static boolean noAtmosphericCombustion(WorldProvider provider)
     {
-    	return OxygenUtil.noAtmosphericCombustion(provider);
+        try
+        {
+            if (combusionTestMethod == null)
+            {
+                if (oxygenUtilClass == null)
+                {
+                    oxygenUtilClass = Class.forName("micdoodle8.mods.galacticraft.core.util.OxygenUtil");
+                }
+                combusionTestMethod = oxygenUtilClass.getDeclaredMethod("noAtmosphericCombustion", WorldProvider.class);
+            }
+            return (Boolean)combusionTestMethod.invoke(null, provider);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     
@@ -44,7 +70,24 @@ public class OxygenHooks
 	 */
 	public static boolean isAABBInBreathableAirBlock(World world, AxisAlignedBB bb)
     {
-    	return OxygenUtil.isAABBInBreathableAirBlock(world, bb);
+        try
+        {
+            if (breathableAirBlockMethod == null)
+            {
+                if (oxygenUtilClass == null)
+                {
+                    oxygenUtilClass = Class.forName("micdoodle8.mods.galacticraft.core.util.OxygenUtil");
+                }
+                breathableAirBlockMethod = oxygenUtilClass.getDeclaredMethod("isAABBInBreathableAirBlock", World.class, AxisAlignedBB.class);
+            }
+            return (Boolean)breathableAirBlockMethod.invoke(null, world, bb);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 	
    
@@ -60,7 +103,24 @@ public class OxygenHooks
      */
 	public static boolean isAABBInBreathableAirBlock(EntityLivingBase entity)
     {
-    	return OxygenUtil.isAABBInBreathableAirBlock(entity);
+        try
+        {
+            if (breathableAirBlockEntityMethod == null)
+            {
+                if (oxygenUtilClass == null)
+                {
+                    oxygenUtilClass = Class.forName("micdoodle8.mods.galacticraft.core.util.OxygenUtil");
+                }
+                breathableAirBlockEntityMethod = oxygenUtilClass.getDeclaredMethod("isAABBInBreathableAirBlock", EntityLivingBase.class);
+            }
+            return (Boolean)breathableAirBlockEntityMethod.invoke(null, entity);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return false;
     }
     
     
@@ -81,7 +141,24 @@ public class OxygenHooks
 	 */
     public static boolean checkTorchHasOxygen(World world, Block block, int x, int y, int z)
     {
-    	return OxygenUtil.checkTorchHasOxygen(world, block, x, y, z);
+        try
+        {
+            if (torchHasOxygenMethod == null)
+            {
+                if (oxygenUtilClass == null)
+                {
+                    oxygenUtilClass = Class.forName("micdoodle8.mods.galacticraft.core.util.OxygenUtil");
+                }
+                torchHasOxygenMethod = oxygenUtilClass.getDeclaredMethod("isAABBInBreathableAirBlock", World.class, Block.class, int.class, int.class, int.class);
+            }
+            return (Boolean)torchHasOxygenMethod.invoke(null, world, block, x, y, z);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
 	
@@ -96,7 +173,24 @@ public class OxygenHooks
      */
     public static boolean inOxygenBubble(World worldObj, double avgX, double avgY, double avgZ)
 	{
-		return OxygenUtil.inOxygenBubble(worldObj, avgX, avgY, avgZ);
+        try
+        {
+            if (oxygenBubbleMethod == null)
+            {
+                if (oxygenUtilClass == null)
+                {
+                    oxygenUtilClass = Class.forName("micdoodle8.mods.galacticraft.core.util.OxygenUtil");
+                }
+                oxygenBubbleMethod = oxygenUtilClass.getDeclaredMethod("inOxygenBubble", World.class, double.class, double.class, double.class);
+            }
+            return (Boolean)oxygenBubbleMethod.invoke(null, worldObj, avgX, avgY, avgZ);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return false;
 	}
 
     /**
@@ -108,6 +202,23 @@ public class OxygenHooks
      */
     public static boolean hasValidOxygenSetup(EntityPlayerMP player)
     {
-    	return OxygenUtil.hasValidOxygenSetup(player);
+        try
+        {
+            if (validOxygenSetupMethod == null)
+            {
+                if (oxygenUtilClass == null)
+                {
+                    oxygenUtilClass = Class.forName("micdoodle8.mods.galacticraft.core.util.OxygenUtil");
+                }
+                validOxygenSetupMethod = oxygenUtilClass.getDeclaredMethod("hasValidOxygenSetup", EntityPlayerMP.class);
+            }
+            return (Boolean)validOxygenSetupMethod.invoke(null, player);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 }

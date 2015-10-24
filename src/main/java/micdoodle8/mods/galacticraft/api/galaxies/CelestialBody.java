@@ -156,9 +156,9 @@ public abstract class CelestialBody implements Comparable<CelestialBody>
         return this.setDimensionInfo(dimID, providerClass, true);
     }
 
-    public CelestialBody setDimensionInfo(int dimID, Class<? extends WorldProvider> providerClass, boolean autoRegister)
+    public CelestialBody setDimensionInfo(int providerId, Class<? extends WorldProvider> providerClass, boolean autoRegister)
     {
-        this.dimensionID = dimID;
+        this.dimensionID = providerId;
         this.providerClass = providerClass;
         this.autoRegisterDimension = autoRegister;
         this.isReachable = true;
