@@ -1,26 +1,44 @@
 package com.mjr.extraplanets.entities.bosses;
 
+import java.util.List;
+import java.util.Random;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.IBoss;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.IBossDisplayData;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
+import net.minecraftforge.common.ChestGenHooks;
 
-public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreathable, IBossDisplayData, IBoss
-{
+import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
+
+import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
+
+public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreathable, IBossDisplayData, IBoss {
+	public int deathTicks = 0;
+
 	public float squishAmount;
 	public float squishFactor;
 	public float prevSquishFactor;
@@ -33,29 +51,26 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	private Vector3 roomCoords;
 	private Vector3 roomSize;
 
-	public EntityEvolvedIceSlimeBoss(World p_i1742_1_)
-	{
+	public EntityEvolvedIceSlimeBoss(World p_i1742_1_) {
 		super(p_i1742_1_);
-		int i = 1 << this.rand.nextInt(3);
-		//int i = 5;
+		int i = 10;
+		// int i = 5;
 		this.yOffset = 0.0F;
 		this.slimeJumpDelay = this.rand.nextInt(20) + 10;
 		this.setSlimeSize(i);
 	}
 
 	@Override
-	protected void entityInit()
-	{
+	protected void entityInit() {
 		super.entityInit();
-		this.dataWatcher.addObject(16, new Byte((byte)1));
+		this.dataWatcher.addObject(16, new Byte((byte) 1));
 	}
 
-	protected void setSlimeSize(int p_70799_1_)
-	{
-		this.dataWatcher.updateObject(16, new Byte((byte)p_70799_1_));
+	protected void setSlimeSize(int p_70799_1_) {
+		this.dataWatcher.updateObject(16, new Byte((byte) p_70799_1_));
 		this.setSize(0.6F * p_70799_1_, 0.6F * p_70799_1_);
 		this.setPosition(this.posX, this.posY, this.posZ);
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(p_70799_1_ * p_70799_1_);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((p_70799_1_ * p_70799_1_) * 2);
 		this.setHealth(this.getMaxHealth());
 		this.experienceValue = p_70799_1_;
 	}
@@ -63,8 +78,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	/**
 	 * Returns the size of the slime.
 	 */
-	public int getSlimeSize()
-	{
+	public int getSlimeSize() {
 		return this.dataWatcher.getWatchableObjectByte(16);
 	}
 
@@ -72,42 +86,56 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
 	@Override
-	public void writeEntityToNBT(NBTTagCompound p_70014_1_)
-	{
-		super.writeEntityToNBT(p_70014_1_);
-		p_70014_1_.setInteger("Size", this.getSlimeSize() - 1);
+	public void writeEntityToNBT(NBTTagCompound nbt) {
+		super.writeEntityToNBT(nbt);
+		nbt.setInteger("Size", this.getSlimeSize() - 1);
+		nbt.setInteger("Size", this.getSlimeSize() - 1);
+
+		if (this.roomCoords != null) {
+			nbt.setDouble("roomCoordsX", this.roomCoords.x);
+			nbt.setDouble("roomCoordsY", this.roomCoords.y);
+			nbt.setDouble("roomCoordsZ", this.roomCoords.z);
+			nbt.setDouble("roomSizeX", this.roomSize.x);
+			nbt.setDouble("roomSizeY", this.roomSize.y);
+			nbt.setDouble("roomSizeZ", this.roomSize.z);
+		}
 	}
 
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
 	@Override
-	public void readEntityFromNBT(NBTTagCompound p_70037_1_)
-	{
-		super.readEntityFromNBT(p_70037_1_);
-		int i = p_70037_1_.getInteger("Size");
+	public void readEntityFromNBT(NBTTagCompound nbt) {
+		super.readEntityFromNBT(nbt);
+		int i = nbt.getInteger("Size");
 
-		if (i < 0)
-		{
+		if (i < 0) {
 			i = 0;
 		}
 
 		this.setSlimeSize(i + 1);
+		this.roomCoords = new Vector3();
+		this.roomCoords.x = nbt.getDouble("roomCoordsX");
+		this.roomCoords.y = nbt.getDouble("roomCoordsY");
+		this.roomCoords.z = nbt.getDouble("roomCoordsZ");
+		this.roomSize = new Vector3();
+		this.roomSize.x = nbt.getDouble("roomSizeX");
+		this.roomSize.y = nbt.getDouble("roomSizeY");
+		this.roomSize.z = nbt.getDouble("roomSizeZ");
 	}
 
 	/**
-	 * Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
+	 * Returns the name of a particle effect that may be randomly created by
+	 * EntitySlime.onUpdate()
 	 */
-	protected String getSlimeParticle()
-	{
+	protected String getSlimeParticle() {
 		return "slime";
 	}
 
 	/**
 	 * Returns the name of the sound played when the slime jumps.
 	 */
-	protected String getJumpSound()
-	{
+	protected String getJumpSound() {
 		return "mob.slime." + (this.getSlimeSize() > 1 ? "big" : "small");
 	}
 
@@ -115,10 +143,9 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	 * Called to update the entity's position/logic.
 	 */
 	@Override
-	public void onUpdate()
-	{
-		if (!this.worldObj.isRemote && this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0)
-		{
+	public void onUpdate() {
+		System.out.println(this.getHealth());
+		if (!this.worldObj.isRemote && this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0) {
 			this.isDead = true;
 		}
 
@@ -128,121 +155,197 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 		super.onUpdate();
 		int i;
 
-		if (this.onGround && !flag)
-		{
+		if (this.onGround && !flag) {
 			i = this.getSlimeSize();
 
-			for (int j = 0; j < i * 8; ++j)
-			{
-				float f = this.rand.nextFloat() * (float)Math.PI * 2.0F;
+			for (int j = 0; j < i * 8; ++j) {
+				float f = this.rand.nextFloat() * (float) Math.PI * 2.0F;
 				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
 				float f2 = MathHelper.sin(f) * i * 0.5F * f1;
 				float f3 = MathHelper.cos(f) * i * 0.5F * f1;
 				this.worldObj.spawnParticle(this.getSlimeParticle(), this.posX + f2, this.boundingBox.minY, this.posZ + f3, 0.0D, 0.0D, 0.0D);
 			}
 
-			if (this.makesSoundOnLand())
-			{
+			if (this.makesSoundOnLand()) {
 				this.playSound(this.getJumpSound(), this.getSoundVolume(), ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F) / 0.8F);
 			}
 
 			this.squishAmount = -0.5F;
-		}
-		else if (!this.onGround && flag)
-		{
+		} else if (!this.onGround && flag) {
 			this.squishAmount = 1.0F;
 		}
 
 		this.alterSquishAmount();
 
-		if (this.worldObj.isRemote)
-		{
+		if (this.worldObj.isRemote) {
 			i = this.getSlimeSize();
 			this.setSize(0.6F * i, 0.6F * i);
 		}
 	}
 
 	@Override
-	protected void updateEntityActionState()
-	{
+	protected void updateEntityActionState() {
 		this.despawnEntity();
 		EntityPlayer entityplayer = this.worldObj.getClosestVulnerablePlayerToEntity(this, 16.0D);
 
-		if (entityplayer != null)
-		{
+		if (entityplayer != null) {
 			this.faceEntity(entityplayer, 10.0F, 20.0F);
 		}
 
-		if (this.onGround && this.slimeJumpDelay-- <= 0)
-		{
+		if (this.onGround && this.slimeJumpDelay-- <= 0) {
 			this.slimeJumpDelay = this.getJumpDelay();
 
-			if (entityplayer != null)
-			{
+			if (entityplayer != null) {
 				this.slimeJumpDelay /= 3;
 			}
 
 			this.isJumping = true;
 
-			if (this.makesSoundOnJump())
-			{
+			if (this.makesSoundOnJump()) {
 				this.playSound(this.getJumpSound(), this.getSoundVolume(), ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F) * 0.8F);
 			}
 
 			this.moveStrafing = 1.0F - this.rand.nextFloat() * 2.0F;
 			this.moveForward = 1 * this.getSlimeSize();
-		}
-		else
-		{
+		} else {
 			this.isJumping = false;
 
-			if (this.onGround)
-			{
+			if (this.onGround) {
 				this.moveStrafing = this.moveForward = 0.0F;
 			}
 		}
 	}
 
-	protected void alterSquishAmount()
-	{
+	protected void alterSquishAmount() {
 		this.squishAmount *= 0.6F;
 	}
 
 	/**
 	 * Gets the amount of time the slime needs to wait between jumps.
 	 */
-	protected int getJumpDelay()
-	{
+	protected int getJumpDelay() {
 		return this.rand.nextInt(20) + 10;
 	}
 
-	protected EntityEvolvedIceSlimeBoss createInstance()
-	{
+	protected EntityEvolvedIceSlimeBoss createInstance() {
 		return new EntityEvolvedIceSlimeBoss(this.worldObj);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	protected void onDeathUpdate() {
+		++this.deathTicks;
+
+		if (this.deathTicks >= 180 && this.deathTicks <= 200) {
+			final float f = (this.rand.nextFloat() - 0.5F) * 1.5F;
+			final float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F;
+			final float f2 = (this.rand.nextFloat() - 0.5F) * 1.5F;
+			this.worldObj.spawnParticle("hugeexplosion", this.posX + f, this.posY + 2.0D + f1, this.posZ + f2, 0.0D, 0.0D, 0.0D);
+		}
+
+		int i;
+		int j;
+
+		if (!this.worldObj.isRemote) {
+			if (this.deathTicks >= 180 && this.deathTicks % 5 == 0) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_EXPLODE, new Object[] {}), new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 40.0D));
+				// PacketDispatcher.sendPacketToAllAround(this.posX, this.posY,
+				// this.posZ, 40.0, this.worldObj.provider.dimensionId,
+				// PacketUtil.createPacket(GalacticraftCore.CHANNEL,
+				// EnumPacketClient.PLAY_SOUND_EXPLODE, new Object[] { 0 }));
+			}
+
+			if (this.deathTicks > 150 && this.deathTicks % 5 == 0) {
+				i = 30;
+
+				while (i > 0) {
+					j = EntityXPOrb.getXPSplit(i);
+					i -= j;
+					this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
+				}
+			}
+
+			if (this.deathTicks == 1) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, new Object[] {}), new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 40.0D));
+				// PacketDispatcher.sendPacketToAllAround(this.posX, this.posY,
+				// this.posZ, 40.0, this.worldObj.provider.dimensionId,
+				// PacketUtil.createPacket(GalacticraftCore.CHANNEL,
+				// EnumPacketClient.PLAY_SOUND_BOSS_DEATH, new Object[] { 0 }));
+			}
+		}
+
+		this.moveEntity(0.0D, 0.10000000149011612D, 0.0D);
+		this.renderYawOffset = this.rotationYaw += 20.0F;
+
+		if (this.deathTicks == 200 && !this.worldObj.isRemote) {
+			i = 20;
+
+			while (i > 0) {
+				j = EntityXPOrb.getXPSplit(i);
+				i -= j;
+				this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
+			}
+
+			for (final TileEntity tile : (List<TileEntity>) this.worldObj.loadedTileEntityList) {
+				if (tile instanceof TileEntityT7TreasureChest) {
+					final double d3 = tile.xCoord + 0.5D - this.posX;
+					final double d4 = tile.yCoord + 0.5D - this.posY;
+					final double d5 = tile.zCoord + 0.5D - this.posZ;
+					final double dSq = d3 * d3 + d4 * d4 + d5 * d5;
+					TileEntityT7TreasureChest chest = (TileEntityT7TreasureChest) tile;
+
+					if (dSq < 10000) {
+						if (!chest.locked) {
+							chest.locked = true;
+						}
+
+						for (int k = 0; k < chest.getSizeInventory(); k++) {
+							chest.setInventorySlotContents(k, null);
+						}
+
+						ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+						// Generate three times, since it's an extra extra
+						// special chest
+						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
+						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
+						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
+
+						chest.setInventorySlotContents(this.rand.nextInt(chest.getSizeInventory()), this.getGuaranteedLoot(this.rand));
+
+						break;
+					}
+				}
+			}
+
+			this.entityDropItem(new ItemStack(ExtraPlanetsItems.T7key, 1, 0), 0.5F);
+
+			super.setDead();
+
+			if (this.spawner != null) {
+				this.spawner.isBossDefeated = true;
+				this.spawner.boss = null;
+				this.spawner.spawned = false;
+			}
+		}
+	}
+
+	public ItemStack getGuaranteedLoot(Random rand) {
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(6);
+		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 
 	/**
 	 * Will get destroyed next tick.
 	 */
 	@Override
-	public void setDead()
-	{
-		int i = this.getSlimeSize();
-
-		if (!this.worldObj.isRemote && i > 1 && this.getHealth() <= 0.0F)
-		{
-			int j = 2 + this.rand.nextInt(3);
-
-			for (int k = 0; k < j; ++k)
-			{
-				float f = (k % 2 - 0.5F) * i / 4.0F;
-				float f1 = (k / 2 - 0.5F) * i / 4.0F;
-				EntityEvolvedIceSlimeBoss entityslime = this.createInstance();
-				entityslime.setSlimeSize(i / 2);
-				entityslime.setLocationAndAngles(this.posX + f, this.posY + 0.5D, this.posZ + f1, this.rand.nextFloat() * 360.0F, 0.0F);
-				this.worldObj.spawnEntityInWorld(entityslime);
-			}
+	public void setDead() {
+		if (this.spawner != null) {
+			this.spawner.isBossDefeated = false;
+			this.spawner.boss = null;
+			this.spawner.spawned = false;
 		}
+		int i = this.getSlimeSize();
 
 		super.setDead();
 	}
@@ -251,32 +354,29 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	 * Called by a player entity when they collide with an entity
 	 */
 	@Override
-	public void onCollideWithPlayer(EntityPlayer p_70100_1_)
-	{
-		if (this.canDamagePlayer())
-		{
+	public void onCollideWithPlayer(EntityPlayer p_70100_1_) {
+		if (this.canDamagePlayer()) {
 			int i = this.getSlimeSize();
 
-			if (this.canEntityBeSeen(p_70100_1_) && this.getDistanceSqToEntity(p_70100_1_) < 0.6D * i * 0.6D * i && p_70100_1_.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength()))
-			{
+			if (this.canEntityBeSeen(p_70100_1_) && this.getDistanceSqToEntity(p_70100_1_) < 0.6D * i * 0.6D * i && p_70100_1_.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength())) {
 				this.playSound("mob.attack", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
 			}
 		}
 	}
 
 	/**
-	 * Indicates weather the slime is able to damage the player (based upon the slime's size)
+	 * Indicates weather the slime is able to damage the player (based upon the
+	 * slime's size)
 	 */
-	protected boolean canDamagePlayer()
-	{
+	protected boolean canDamagePlayer() {
 		return this.getSlimeSize() > 1;
 	}
 
 	/**
-	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
+	 * Gets the amount of damage dealt to the player when "attacked" by the
+	 * slime.
 	 */
-	protected int getAttackStrength()
-	{
+	protected int getAttackStrength() {
 		return this.getSlimeSize();
 	}
 
@@ -284,8 +384,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	 * Returns the sound this mob makes when it is hurt.
 	 */
 	@Override
-	protected String getHurtSound()
-	{
+	protected String getHurtSound() {
 		return "mob.slime." + (this.getSlimeSize() > 1 ? "big" : "small");
 	}
 
@@ -293,42 +392,35 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	 * Returns the sound this mob makes on death.
 	 */
 	@Override
-	protected String getDeathSound()
-	{
+	protected String getDeathSound() {
 		return "mob.slime." + (this.getSlimeSize() > 1 ? "big" : "small");
 	}
 
 	@Override
-	protected Item getDropItem()
-	{
+	protected Item getDropItem() {
 		return this.getSlimeSize() == 1 ? Items.slime_ball : Item.getItemById(0);
 	}
 
 	/**
-	 * Checks if the entity's current position is a valid location to spawn this entity.
+	 * Checks if the entity's current position is a valid location to spawn this
+	 * entity.
 	 */
 	@Override
-	public boolean getCanSpawnHere()
-	{
+	public boolean getCanSpawnHere() {
 		Chunk chunk = this.worldObj.getChunkFromBlockCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
 
-		if (this.worldObj.getWorldInfo().getTerrainType().handleSlimeSpawnReduction(rand, worldObj))
-		{
+		if (this.worldObj.getWorldInfo().getTerrainType().handleSlimeSpawnReduction(rand, worldObj)) {
 			return false;
-		}
-		else
-		{
-			if (this.getSlimeSize() == 1 || this.worldObj.difficultySetting != EnumDifficulty.PEACEFUL)
-			{
+		} else {
+			if (this.getSlimeSize() == 1 || this.worldObj.difficultySetting != EnumDifficulty.PEACEFUL) {
 				BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
 
-				if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor() && this.worldObj.getBlockLightValue(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) <= this.rand.nextInt(8))
-				{
+				if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor()
+						&& this.worldObj.getBlockLightValue(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) <= this.rand.nextInt(8)) {
 					return super.getCanSpawnHere();
 				}
 
-				if (this.rand.nextInt(10) == 0 && chunk.getRandomWithSeed(987234911L).nextInt(10) == 0 && this.posY < 40.0D)
-				{
+				if (this.rand.nextInt(10) == 0 && chunk.getRandomWithSeed(987234911L).nextInt(10) == 0 && this.posY < 40.0D) {
 					return super.getCanSpawnHere();
 				}
 			}
@@ -341,34 +433,32 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	 * Returns the volume for the sounds this mob makes.
 	 */
 	@Override
-	protected float getSoundVolume()
-	{
+	protected float getSoundVolume() {
 		return 0.4F * this.getSlimeSize();
 	}
 
 	/**
-	 * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently
-	 * use in wolves.
+	 * The speed it takes to move the entityliving's rotationPitch through the
+	 * faceEntity method. This is only currently use in wolves.
 	 */
 	@Override
-	public int getVerticalFaceSpeed()
-	{
+	public int getVerticalFaceSpeed() {
 		return 0;
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it jumps (based upon the slime's size)
+	 * Returns true if the slime makes a sound when it jumps (based upon the
+	 * slime's size)
 	 */
-	protected boolean makesSoundOnJump()
-	{
+	protected boolean makesSoundOnJump() {
 		return this.getSlimeSize() > 0;
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
+	 * Returns true if the slime makes a sound when it lands after a jump (based
+	 * upon the slime's size)
 	 */
-	protected boolean makesSoundOnLand()
-	{
+	protected boolean makesSoundOnLand() {
 		return this.getSlimeSize() > 2;
 	}
 

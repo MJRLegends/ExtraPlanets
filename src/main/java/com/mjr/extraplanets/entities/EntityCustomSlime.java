@@ -11,7 +11,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
-public class CustomSlime extends EntityLiving implements IMob
+public class EntityCustomSlime extends EntityLiving implements IMob
 {
 	public float squishAmount;
 	public float squishFactor;
@@ -20,7 +20,7 @@ public class CustomSlime extends EntityLiving implements IMob
 	private int slimeJumpDelay;
 	private static final String __OBFID = "CL_00001698";
 
-	public CustomSlime(World p_i1742_1_)
+	public EntityCustomSlime(World p_i1742_1_)
 	{
 		super(p_i1742_1_);
 		int i = 1 << this.rand.nextInt(3);
@@ -175,9 +175,9 @@ public class CustomSlime extends EntityLiving implements IMob
 		return this.rand.nextInt(20) + 10;
 	}
 
-	protected CustomSlime createInstance()
+	protected EntityCustomSlime createInstance()
 	{
-		return new CustomSlime(this.worldObj);
+		return new EntityCustomSlime(this.worldObj);
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class CustomSlime extends EntityLiving implements IMob
 			{
 				float f = (k % 2 - 0.5F) * i / 4.0F;
 				float f1 = (k / 2 - 0.5F) * i / 4.0F;
-				CustomSlime entityslime = this.createInstance();
+				EntityCustomSlime entityslime = this.createInstance();
 				entityslime.setSlimeSize(0);
 				entityslime.setLocationAndAngles(this.posX + f, this.posY + 0.5D, this.posZ + f1, this.rand.nextFloat() * 360.0F, 0.0F);
 				//this.worldObj.spawnEntityInWorld(entityslime);

@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.mjr.extraplanets.planets.PlanetsMain;
-
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
@@ -24,8 +22,6 @@ import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
-import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.material.Material;
@@ -45,6 +41,9 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.client.IRenderHandler;
+
+import com.mjr.extraplanets.planets.PlanetsMain;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -102,7 +101,7 @@ public class WorldProviderMarsOrbit extends WorldProviderSpace implements IOrbit
     @Override
     public CelestialBody getCelestialBody()
     {
-        return MarsModule.planetMars;
+        return PlanetsMain.marsSpaceStation;
     }
 
     @Override

@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class CustomRedCreeper extends EntityMob {
+public class EntityCustomRedCreeper extends EntityMob {
 	/**
 	 * Time when this creeper was last in an active state (Messed up code here,
 	 * probably causes creeper animation to go weird)
@@ -34,7 +34,7 @@ public class CustomRedCreeper extends EntityMob {
 	private int explosionRadius = 3;
 	private static final String __OBFID = "CL_00001684";
 
-	public CustomRedCreeper(World p_i1733_1_) {
+	public EntityCustomRedCreeper(World p_i1733_1_) {
 		super(p_i1733_1_);
 	}
 

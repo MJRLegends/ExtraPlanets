@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class CustomBlueCreeper extends EntityMob {
+public class EntityCustomBlueCreeper extends EntityMob {
 	/**
 	 * Time when this creeper was last in an active state (Messed up code here,
 	 * probably causes creeper animation to go weird)
@@ -36,7 +36,7 @@ public class CustomBlueCreeper extends EntityMob {
 	private int explosionRadius = 3;
 	private static final String __OBFID = "CL_00001684";
 
-	public CustomBlueCreeper(World p_i1733_1_) {
+	public EntityCustomBlueCreeper(World p_i1733_1_) {
 		super(p_i1733_1_);
 	}
 
@@ -278,7 +278,7 @@ public class CustomBlueCreeper extends EntityMob {
 						if (list.get(i) instanceof EntityPlayer) {
 							System.out.println(i + " = yes");
 							EntityPlayer entity = (EntityPlayer) list.get(i);
-							entity.addPotionEffect((new PotionEffect(Potion.weakness.getId(), 50, 1)));
+							entity.addPotionEffect(new PotionEffect(Potion.weakness.getId(), 50, 1));
 						}
 					}
 				}

@@ -136,7 +136,7 @@ tile.erisOreTin.name=Eris Tin Ore
 tile.erisOreIron.name=Eris Iron Ore
 tile.erisOreCopper.name=Eris Copper Ore
 
-#Ore Blocks
+#Other Ore Blocks
 tile.OreCarbon.name=Carbon Ore
 tile.OrePalladium.name=Palladium Ore
 tile.OreMagnesium.name=Magnesium Ore

@@ -28,7 +28,7 @@ import net.minecraftforge.common.ForgeHooks;
 
 import com.mjr.extraplanets.entities.ai.EntityAIRedCreeperSwell;
 
-public class EntityEvolvedRedCreeper extends CustomRedCreeper implements IEntityBreathable
+public class EntityEvolvedRedCreeper extends EntityCustomRedCreeper implements IEntityBreathable
 {
 	private float sizeXBase = -1.0F;
 	private float sizeYBase;

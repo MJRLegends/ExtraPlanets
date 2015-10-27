@@ -9,19 +9,19 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderEvolvedIceSlime extends RenderLiving
+public class RenderEvolvedIceSlimeBoss extends RenderLiving
 {
 	private static final ResourceLocation slimeTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/slime/iceSlime.png");
 	private ModelBase scaleAmount;
 	private static final String __OBFID = "CL_00001024";
 
-	public RenderEvolvedIceSlime(ModelBase p_i1267_1_, ModelBase p_i1267_2_, float p_i1267_3_)
+	public RenderEvolvedIceSlimeBoss(ModelBase p_i1267_1_, ModelBase p_i1267_2_, float p_i1267_3_)
 	{
 		super(p_i1267_1_, p_i1267_3_);
 		this.scaleAmount = p_i1267_2_;
@@ -30,7 +30,7 @@ public class RenderEvolvedIceSlime extends RenderLiving
 	/**
 	 * Queries whether should render the specified pass or not.
 	 */
-	protected int shouldRenderPass(EntityEvolvedIceSlime p_77032_1_, int p_77032_2_, float p_77032_3_)
+	protected int shouldRenderPass(EntityEvolvedIceSlimeBoss p_77032_1_, int p_77032_2_, float p_77032_3_)
 	{
 		if (p_77032_1_.isInvisible())
 		{
@@ -60,7 +60,7 @@ public class RenderEvolvedIceSlime extends RenderLiving
 	 * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
 	 * entityLiving, partialTickTime
 	 */
-	protected void preRenderCallback(EntityEvolvedIceSlime p_77041_1_, float p_77041_2_)
+	protected void preRenderCallback(EntityEvolvedIceSlimeBoss p_77041_1_, float p_77041_2_)
 	{
 		float f1 = p_77041_1_.getSlimeSize();
 		float f2 = (p_77041_1_.prevSquishFactor + (p_77041_1_.squishFactor - p_77041_1_.prevSquishFactor) * p_77041_2_) / (f1 * 0.5F + 1.0F);
@@ -71,7 +71,7 @@ public class RenderEvolvedIceSlime extends RenderLiving
 	/**
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
-	protected ResourceLocation getEntityTexture(EntityEvolvedIceSlime p_110775_1_)
+	protected ResourceLocation getEntityTexture(EntityEvolvedIceSlimeBoss p_110775_1_)
 	{
 		return slimeTextures;
 	}
@@ -83,7 +83,7 @@ public class RenderEvolvedIceSlime extends RenderLiving
 	@Override
 	protected void preRenderCallback(EntityLivingBase p_77041_1_, float p_77041_2_)
 	{
-		this.preRenderCallback((EntityEvolvedIceSlime)p_77041_1_, p_77041_2_);
+		this.preRenderCallback((EntityEvolvedIceSlimeBoss)p_77041_1_, p_77041_2_);
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class RenderEvolvedIceSlime extends RenderLiving
 	@Override
 	protected int shouldRenderPass(EntityLivingBase p_77032_1_, int p_77032_2_, float p_77032_3_)
 	{
-		return this.shouldRenderPass((EntityEvolvedIceSlime)p_77032_1_, p_77032_2_, p_77032_3_);
+		return this.shouldRenderPass((EntityEvolvedIceSlimeBoss)p_77032_1_, p_77032_2_, p_77032_3_);
 	}
 
 	/**
@@ -101,6 +101,6 @@ public class RenderEvolvedIceSlime extends RenderLiving
 	@Override
 	protected ResourceLocation getEntityTexture(Entity p_110775_1_)
 	{
-		return this.getEntityTexture((EntityEvolvedIceSlime)p_110775_1_);
+		return this.getEntityTexture((EntityEvolvedIceSlimeBoss)p_110775_1_);
 	}
 }
