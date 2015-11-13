@@ -3,6 +3,7 @@ package com.mjr.extraplanets;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -13,6 +14,7 @@ import com.mjr.extraplanets.armor.ExtraPlanetsArmor;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.client.gui.GuiHandler;
+import com.mjr.extraplanets.client.gui.RadiationBarOverlay;
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
@@ -25,8 +27,6 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
@@ -125,6 +125,8 @@ public class ExtraPlanets {
 
 		MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
+
+		MinecraftForge.EVENT_BUS.register(new RadiationBarOverlay(Minecraft.getMinecraft()));
 
 		ExtraPlanetsBlocks.init();
 		ExtraPlanetsFluids.init();

@@ -22,8 +22,6 @@ import com.mjr.extraplanets.client.render.block.TileEntitySolarPanelRenderer;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossJupiter;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossNeptune;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossSaturn;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossUranus;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossVenus;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlaze;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlueCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedEnderman;
@@ -62,8 +60,6 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
@@ -72,6 +68,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.handlers.MainHandler;
+import com.mjr.extraplanets.handlers.PlayerRadiationHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
 import com.mjr.extraplanets.planets.Eris.ErisHandlerClient;
@@ -113,6 +110,8 @@ public class ClientProxy extends CommonProxy {
 		renderMobEntities();
 		renderNonMobEntities();
 		FMLCommonHandler.instance().bus().register(new MainHandler());
+		FMLCommonHandler.instance().bus().register(new PlayerRadiationHandler());
+
 		if (Config.mercury)
 			FMLCommonHandler.instance().bus().register(new MercuryHandlerClient());
 		if (Config.venus)

@@ -12,6 +12,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomIceSpike;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
+import com.mjr.extraplanets.worldGen.features.WorldGenIgloo;
 
 public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
@@ -21,7 +22,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 	private World currentWorld;
 
-	private int iceSpikesPerChunk = 10;
+	private int iceSpikesPerChunk = 5;
 	private int LakesPerChunk = 5;
 
 	public BiomeDecoratorUranus()
@@ -71,6 +72,15 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenCustomLake(ExtraPlanetsFluids.frozen_water).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.uranusStone);
 			}
+		}
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		if (this.rand.nextInt(250) == 1) {
+			int x = this.chunkX + this.rand.nextInt(16) + 8;
+			int z = this.chunkZ + this.rand.nextInt(16) + 8;
+			int y = this.currentWorld.getHeightValue(x, z);
+			new WorldGenIgloo().generate(this.currentWorld, this.rand, x, y, z);
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	}

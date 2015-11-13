@@ -40,7 +40,7 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 	private final MapGenCaveUranus caveGenerator = new MapGenCaveUranus();
 
 	private final MapGenVillageUranus villageGenerator = new MapGenVillageUranus();
-
+	
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.uranusDungeonBrick, 14, 8, 16, 3);
 
 	public ChunkProviderUranus(World par1World, long seed, boolean mapFeaturesEnabled) {
