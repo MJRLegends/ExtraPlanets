@@ -97,6 +97,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ClientProxy extends CommonProxy {
 
 	public static int renderIdMachine;
+	public static int treasureT4ChestID;
+	public static int treasureT5ChestID;
+	public static int treasureT6ChestID;
+	public static int treasureT7ChestID;
+	public static int treasureT8ChestID;
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -204,28 +209,28 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	private static void renderBlocks() {
 		if (Config.venus) {
-			ExtraPlanetsBlocks.treasureT4ChestID = RenderingRegistry.getNextAvailableRenderId();
-			RenderingRegistry.registerBlockHandler(new BlockRendererTier4TreasureChest(ExtraPlanetsBlocks.treasureT4ChestID));
+			treasureT4ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier4TreasureChest(treasureT4ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
 		}
 		if (Config.jupiter) {
-			ExtraPlanetsBlocks.treasureT5ChestID = RenderingRegistry.getNextAvailableRenderId();
-			RenderingRegistry.registerBlockHandler(new BlockRendererTier5TreasureChest(ExtraPlanetsBlocks.treasureT5ChestID));
+			treasureT5ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier5TreasureChest(treasureT5ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT5TreasureChest.class, new TileEntityT5TreasureChestRenderer());
 		}
 		if (Config.saturn) {
-			ExtraPlanetsBlocks.treasureT6ChestID = RenderingRegistry.getNextAvailableRenderId();
-			RenderingRegistry.registerBlockHandler(new BlockRendererTier6TreasureChest(ExtraPlanetsBlocks.treasureT6ChestID));
+			treasureT6ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier6TreasureChest(treasureT6ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT6TreasureChest.class, new TileEntityT6TreasureChestRenderer());
 		}
 		if (Config.uranus) {
-			ExtraPlanetsBlocks.treasureT7ChestID = RenderingRegistry.getNextAvailableRenderId();
-			RenderingRegistry.registerBlockHandler(new BlockRendererTier7TreasureChest(ExtraPlanetsBlocks.treasureT7ChestID));
+			treasureT7ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier7TreasureChest(treasureT7ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT7TreasureChest.class, new TileEntityT7TreasureChestRenderer());
 		}
 		if (Config.neptune) {
-			ExtraPlanetsBlocks.treasureT8ChestID = RenderingRegistry.getNextAvailableRenderId();
-			RenderingRegistry.registerBlockHandler(new BlockRendererTier8TreasureChest(ExtraPlanetsBlocks.treasureT8ChestID));
+			treasureT8ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier8TreasureChest(treasureT8ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
 		}
 		ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();

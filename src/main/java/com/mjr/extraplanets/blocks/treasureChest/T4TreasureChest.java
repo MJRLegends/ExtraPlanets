@@ -28,7 +28,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.mjr.extraplanets.Achievements;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.proxy.ClientProxy;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 
 import cpw.mods.fml.relauncher.Side;
@@ -76,7 +76,7 @@ public class T4TreasureChest extends BlockContainer implements ITileEntityProvid
 	@Override
 	public int getRenderType()
 	{
-		return ExtraPlanetsBlocks.treasureT4ChestID;
+		return ClientProxy.treasureT4ChestID;
 	}
 
 	@Override
