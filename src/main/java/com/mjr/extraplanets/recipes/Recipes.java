@@ -13,6 +13,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.armor.ExtraPlanetsArmor;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanetsMachines;
 import com.mjr.extraplanets.blocks.ExtraPlanetsSlabsStairsBlocks;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.items.tools.ExtraPlanetsTools;
@@ -265,9 +266,9 @@ public class Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.diamondApple, 1, 1), new Object[] { "DDD", "DAD", "DDD", 'D', new ItemStack(Blocks.diamond_block, 1, 0), 'A', Items.apple });
 
 		// Machines
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.advancedRefinery), new Object[] { "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 0), new Object[] { "ZYZ", 'Y', new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 4), new Object[] { "ZYZ", 'Y', new ItemStack(ExtraPlanetsBlocks.solarPanel, 1, 0), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsMachines.advancedRefinery), new Object[] { "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsMachines.solarPanel, 1, 0), new Object[] { "ZYZ", 'Y', new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsMachines.solarPanel, 1, 4), new Object[] { "ZYZ", 'Y', new ItemStack(ExtraPlanetsMachines.solarPanel, 1, 0), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
 
 		// Can of Food
 		GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.cannedFood, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.cooked_porkchop, Items.cooked_porkchop });

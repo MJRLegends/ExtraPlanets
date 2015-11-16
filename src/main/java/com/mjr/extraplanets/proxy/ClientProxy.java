@@ -9,7 +9,7 @@ import net.minecraftforge.client.model.IModelCustom;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanetsMachines;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlime;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.block.BlockRendererMachine;
@@ -258,7 +258,7 @@ public class ClientProxy extends CommonProxy {
 
 	@SideOnly(Side.CLIENT)
 	public static int getBlockRender(Block blockID) {
-		if (blockID == ExtraPlanetsBlocks.advancedRefinery) {
+		if (blockID == ExtraPlanetsMachines.advancedRefinery) {
 			return ClientProxy.renderIdMachine;
 		}
 		return -1;

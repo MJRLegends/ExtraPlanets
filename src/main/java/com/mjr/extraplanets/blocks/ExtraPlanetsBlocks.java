@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.blocks;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
@@ -9,8 +8,6 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
-import com.mjr.extraplanets.blocks.machines.BlockSolar;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
@@ -25,7 +22,6 @@ import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
-import com.mjr.extraplanets.items.ItemBlockSolar;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCeres;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockDeimos;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEris;
@@ -45,8 +41,6 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.DungeonSpawnerUranus
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.DungeonSpawnerVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.TileEntityDungeonSpawnerVenus;
-import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
-import com.mjr.extraplanets.tile.TileEntitySolar;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
@@ -68,10 +62,6 @@ public class ExtraPlanetsBlocks {
 	public static Block phobosBlocks;
 	public static Block tritonBlocks;
 	public static Block ganymedeBlocks;
-
-	// Machines
-	public static Block advancedRefinery;
-	public static Block solarPanel;
 
 	// Gravel
 	public static Block mercuryGravel;
@@ -95,7 +85,14 @@ public class ExtraPlanetsBlocks {
 	public static Block volcanicRock;
 	public static Block frozenNitrogen;
 
-	// Need Changing to meta block -----------------------------------------
+	// Treasure Chests
+	public static Block treasureChestTier4;
+	public static Block treasureChestTier5;
+	public static Block treasureChestTier6;
+	public static Block treasureChestTier7;
+	public static Block treasureChestTier8;
+
+	// Need changing to meta blocks -----------------------------------------
 	public static Block venusSurface;
 	public static Block venusSubSurface;
 	public static Block venusStone;
@@ -147,34 +144,27 @@ public class ExtraPlanetsBlocks {
 	public static Block uranusDungeonBrick;
 	public static Block neptuneDungeonBrick;
 
-	public static Block treasureChestTier4;
-	public static Block treasureChestTier5;
-	public static Block treasureChestTier6;
-	public static Block treasureChestTier7;
-	public static Block treasureChestTier8;
-
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
 	public static Block saturnSpawner;
 	public static Block uranusSpawner;
 	public static Block neptuneSpawner;
 
-	// ----------------------------------------------------------------------
+	// -----------------------------------------------------------------------
 
 	public static void init() {
 		initializeBlocks();
+		initializeTreasureChestBlocks();
+
+		// Need changing to meta blocks -----------------------------------------
 		initializeOreBlocks();
 		initializeDungeonBlocks();
-		initializeTreasureChestBlocks();
 		initializeSpawnerBlocks();
-		initializeMachinesBlocks();
+		// ----------------------------------------------------------------------
 
 		registerBlocks();
-		registerMachines();
-
 		registerTileEntitys();
 		OreDictionaryRegister();
-		ExtraPlanetsSlabsStairsBlocks.init();
 	}
 
 	private static void initializeBlocks() {
@@ -409,11 +399,6 @@ public class ExtraPlanetsBlocks {
 		}
 	}
 
-	private static void initializeMachinesBlocks() {
-		advancedRefinery = new AdvancedRefinery("advancedRefinery");
-		solarPanel = new BlockSolar("solar");
-	}
-
 	private static void registerBlocks() {
 		if (Config.mercury) {
 			GameRegistry.registerBlock(mercuryBlocks, ItemBlockMercury.class, mercuryBlocks.getUnlocalizedName());
@@ -534,13 +519,6 @@ public class ExtraPlanetsBlocks {
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
 	}
 
-	private static void registerMachines() {
-		GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
-		GCCoreUtil.registerGalacticraftBlock("solarPanelHybrid", solarPanel, 0);
-		GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);
-		GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName());
-	}
-
 	private static void registerTileEntitys() {
 		if (Config.venus) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerVenus.class, Constants.modName + "Veuns Dungeon Spawner");
@@ -562,9 +540,6 @@ public class ExtraPlanetsBlocks {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
-
-		GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
-		GameRegistry.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
 	}
 
 	public static void OreDictionaryRegister() {

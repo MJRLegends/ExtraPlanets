@@ -12,6 +12,8 @@ import net.minecraftforge.common.MinecraftForge;
 
 import com.mjr.extraplanets.armor.ExtraPlanetsArmor;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanetsMachines;
+import com.mjr.extraplanets.blocks.ExtraPlanetsSlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.client.gui.RadiationBarOverlay;
@@ -79,7 +81,7 @@ public class ExtraPlanets {
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
 		@Override
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(ExtraPlanetsBlocks.advancedRefinery);
+			return Item.getItemFromBlock(ExtraPlanetsMachines.advancedRefinery);
 		}
 	};
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
@@ -129,6 +131,8 @@ public class ExtraPlanets {
 		MinecraftForge.EVENT_BUS.register(new RadiationBarOverlay(Minecraft.getMinecraft()));
 
 		ExtraPlanetsBlocks.init();
+		ExtraPlanetsSlabsStairsBlocks.init();
+		ExtraPlanetsMachines.init();
 		ExtraPlanetsFluids.init();
 		ExtraPlanetsTools.init();
 		ExtraPlanetsArmor.init();
@@ -184,23 +188,25 @@ public class ExtraPlanets {
 	private void registerCreatures() {
 		// Default Bosses
 		if (Config.venus)
-			//registerExtraPlanetsCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
-			registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class,"EvolvedMagmaCubeBoss", 3407872, 16579584);
+			// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,
+			// "CreeperBossVenus", 894731, 0);
+			registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
 			registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
 			registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, "CreeperBossSaturn", 894731, 0);
 		if (Config.uranus)
-			//registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
-			registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class,"EntityEvolvedIceSlimeBoss", 16382457, 44975);
+			// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus",
+			// 894731, 0);
+			registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, "EntityEvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
 			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, "CreeperBossNeptune", 894731, 0);
-
 
 		// Entities
 		registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, "EvolvedMagmaCube", 3407872, 16579584);
 		registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, "EvolvedIceSlime", 16382457, 44975);
-		// registerExtraPlanetsCreature(EvolvedIceBlaze.class, "EvolvedIceBlaze", 3407872, 16579584);
+		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,
+		// "EvolvedIceBlaze", 3407872, 16579584);
 		registerExtraPlanetsCreature(EntityEvolvedWitch.class, "EvolvedWitch", 3407872, 5349438);
 		registerExtraPlanetsCreature(EntityEvolvedEnderman.class, "EvolvedEnderman", 1447446, 0);
 		registerExtraPlanetsCreature(EntityEvolvedBlaze.class, "EvolvedBlaze", 16167425, 16775294);
