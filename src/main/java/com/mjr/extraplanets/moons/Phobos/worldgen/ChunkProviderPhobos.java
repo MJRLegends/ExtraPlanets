@@ -82,17 +82,17 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.phobosSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.phobosBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.phobosSubSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.phobosBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.phobosStone, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.phobosBlocks, (byte) 2);
 	}
 
 	@Override

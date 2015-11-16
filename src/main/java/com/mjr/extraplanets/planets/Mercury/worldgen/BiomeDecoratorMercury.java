@@ -21,12 +21,12 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorMercury()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryOreCopper, 4, 0, false, ExtraPlanetsBlocks.mercuryStone, 1);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryOreIron, 4, 0, false, ExtraPlanetsBlocks.mercuryStone, 1);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryOreIron, 8, 0, false, ExtraPlanetsBlocks.mercuryStone, 1);
-		this.mercuryGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreMercury, 8, 0, false, ExtraPlanetsBlocks.mercuryStone, 1);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryGravel, 12, 0, false, ExtraPlanetsBlocks.mercuryStone, 1);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.mercurySubSurface, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 4, 5, false, ExtraPlanetsBlocks.mercuryBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 4, 4, false, ExtraPlanetsBlocks.mercuryBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 8, 3, false, ExtraPlanetsBlocks.mercuryBlocks, 2);
+		this.mercuryGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 8, 6, false, ExtraPlanetsBlocks.mercuryBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryGravel, 12, 0, false, ExtraPlanetsBlocks.mercuryBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.mercuryBlocks, 1);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

@@ -82,17 +82,17 @@ public class ChunkProviderTriton extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.tritonSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.tritonBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.tritonSubSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.tritonBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.tritonStone, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.tritonBlocks, (byte) 2);
 	}
 
 	@Override

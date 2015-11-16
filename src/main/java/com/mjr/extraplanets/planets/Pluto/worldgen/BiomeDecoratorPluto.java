@@ -19,11 +19,11 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorPluto()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoOreCopper, 4, 0, false, ExtraPlanetsBlocks.plutoStone, 1);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoOreTin, 4, 0, false, ExtraPlanetsBlocks.plutoStone, 1);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoOreIron, 8, 0, false, ExtraPlanetsBlocks.plutoStone, 1);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoGravel, 12, 0, false, ExtraPlanetsBlocks.plutoStone, 1);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.plutoSubSurface, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoBlocks, 4, 5, false, ExtraPlanetsBlocks.plutoBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoBlocks, 4, 4, false, ExtraPlanetsBlocks.plutoBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoBlocks, 8, 3, false, ExtraPlanetsBlocks.plutoBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoGravel, 12, 0, false, ExtraPlanetsBlocks.plutoBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.plutoBlocks, 1);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

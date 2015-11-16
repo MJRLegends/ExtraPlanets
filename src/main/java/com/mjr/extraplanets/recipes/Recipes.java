@@ -42,10 +42,10 @@ public class Recipes {
 
 	private static void registerFurnaceRecipes() {
 		if (Config.mercury) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.mercuryOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0),
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.mercuryBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0),
 					0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.mercuryOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.mercuryOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.mercuryBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.mercuryBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreMercury, 0), new ItemStack(ExtraPlanetsItems.ingotMercury), 0.0F);
 		}
 		if (Config.venus) {
@@ -58,9 +58,9 @@ public class Recipes {
 		}
 		if (Config.ceres) {
 			GameRegistry
-			.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreUranium, 0), new ItemStack(ExtraPlanetsItems.ingotUranium, 1),
 					0.0F);
 		}
@@ -94,14 +94,14 @@ public class Recipes {
 		}
 		if (Config.pluto) {
 			GameRegistry
-			.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
 		if (Config.eris) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
 	}
 
@@ -113,9 +113,9 @@ public class Recipes {
 
 			// Slab's & Stairs
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.mercuryStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-				ExtraPlanetsBlocks.mercuryStone });
+				new ItemStack(ExtraPlanetsBlocks.mercuryBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.mercuryStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-				ExtraPlanetsBlocks.mercuryStone });
+				new ItemStack(ExtraPlanetsBlocks.mercuryBlocks, 1, 2) });
 		}
 		if (Config.venus) {
 			// Rocket
@@ -167,9 +167,9 @@ public class Recipes {
 		if (Config.ceres) {
 			// Slab's & Stairs
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.ceresStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-				ExtraPlanetsBlocks.ceresStone });
+				new ItemStack(ExtraPlanetsBlocks.ceresBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.ceresStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-				ExtraPlanetsBlocks.ceresStone });
+				new ItemStack(ExtraPlanetsBlocks.ceresBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.nuclearBomb), new Object[] { "GSG", "SUS", "GSG", 'G', Items.gunpowder,
 				'S', Blocks.sand, 'U', new ItemStack(ExtraPlanetsItems.ingotUranium, 1, OreDictionary.WILDCARD_VALUE) });
 		}
@@ -352,16 +352,16 @@ public class Recipes {
 		if (Config.pluto) {
 			// Slab's & Stairs
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.plutoStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-				ExtraPlanetsBlocks.plutoStone });
+				new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.plutoStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-				ExtraPlanetsBlocks.plutoStone });
+				new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 1, 2) });
 		}
 		if (Config.eris) {
 			// Slab's & Stairs
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.erisStoneBlockHalfSlab), new Object[] { "MMM", 'M',
-				ExtraPlanetsBlocks.erisStone });
+				new ItemStack(ExtraPlanetsBlocks.erisBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsBlocks.erisStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M',
-				ExtraPlanetsBlocks.erisStone });
+				new ItemStack(ExtraPlanetsBlocks.erisBlocks, 1, 2) });
 		}
 
 		// Diamond Apples

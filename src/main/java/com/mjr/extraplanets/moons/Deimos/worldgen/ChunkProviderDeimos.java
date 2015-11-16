@@ -82,17 +82,17 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.deimosSurface,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.deimosBlocks,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.deimosSubSurface,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.deimosBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.deimosStone,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.deimosBlocks,(byte) 2);
 	}
 
 	@Override

@@ -30,21 +30,82 @@ moon.titan=Titan
 moon.oberon=Oberon
 moon.titania=Titania
 
-#Planet Blocks
-tile.mercurySurface.name=Mercury Surface Rock
-tile.mercurySubSurface.name=Mercury Sub-Surface Rock
-tile.mercuryStone.name=Mercury Stone
-tile.mercuryGravel.name=Mercury Gravel
+#Planet/Moon Blocks
+tile.callisto.surface.name=Callisto Surface Rock
+tile.callisto.subSurface.name=Callisto Sub-Surface Rock
+tile.callisto.stone.name=Callisto Stone
+tile.callisto.oreIron.name=Callisto Iron Ore
+tile.callisto.oreTin.name=Callisto Tin Ore
+tile.callisto.oreCopper.name=Callisto Copper Ore
+
+tile.ceres.surface.name=Ceres Surface Rock
+tile.ceres.subSurface.name=Ceres Sub-Surface Rock
+tile.ceres.stone.name=Ceres Stone
+tile.ceres.oreIron.name=Ceres Iron Ore
+tile.ceres.oreTin.name=Ceres Tin Ore
+tile.ceres.oreCopper.name=Ceres Copper Ore
+
+tile.deimos.surface.name=Deimos Surface Rock
+tile.deimos.subSurface.name=Deimos Sub-Surface Rock
+tile.deimos.stone.name=Deimos Stone
+tile.deimos.oreIron.name=Deimos Iron Ore
+tile.deimos.oreTin.name=Deimos Tin Ore
+tile.deimos.oreCopper.name=Deimos Copper Ore
+
+tile.eris.surface.name=Eris Surface Rock
+tile.eris.subSurface.name=Eris Sub-Surface Rock
+tile.eris.stone.name=Eris Stone
+tile.eris.oreIron.name=Eris Iron Ore
+tile.eris.oreTin.name=Eris Tin Ore
+tile.eris.oreCopper.name=Eris Copper Ore
+
+tile.europa.surface.name=Europa Surface Rock
+tile.europa.subSurface.name=Europa Sub-Surface Rock
+tile.europa.stone.name=Europa Stone
+tile.europa.oreIron.name=Europa Iron Ore
+tile.europa.oreTin.name=Europa Tin Ore
+tile.europa.oreCopper.name=Europa Copper Ore
+
+tile.io.surface.name=IO Surface Rock
+tile.io.subSurface.name=IO Sub-Surface Rock
+tile.io.stone.name=IO Stone
+tile.io.oreIron.name=IO Iron Ore
+tile.io.oreTin.name=IO Tin Ore
+tile.io.oreCopper.name=IO Copper Ore
+
+tile.mercury.surface.name=Mercury Surface Rock
+tile.mercury.subSurface.name=Mercury Sub-Surface Rock
+tile.mercury.stone.name=Mercury Stone
+tile.mercury.oreIron.name=Mercury Iron Ore
+tile.mercury.oreTin.name=Mercury Tin Ore
+tile.mercury.oreCopper.name=Mercury Copper Ore
+tile.mercury.oreMercury.name=Mercury Ore
+
+tile.phobos.surface.name=Phobos Surface Rock
+tile.phobos.subSurface.name=Phobos Sub-Surface Rock
+tile.phobos.stone.name=Phobos Stone
+tile.phobos.oreIron.name=Phobos Iron Ore
+tile.phobos.oreTin.name=Phobos Tin Ore
+tile.phobos.oreCopper.name=Phobos Copper Ore
+
+tile.pluto.surface.name=Pluto Surface Rock
+tile.pluto.subSurface.name=Pluto Sub-Surface Rock
+tile.pluto.stone.name=Pluto Stone
+tile.pluto.oreIron.name=Pluto Iron Ore
+tile.pluto.oreTin.name=Pluto Tin Ore
+tile.pluto.oreCopper.name=Pluto Copper Ore
+
+tile.triton.surface.name=Triton Surface Rock
+tile.triton.subSurface.name=Triton Sub-Surface Rock
+tile.triton.stone.name=Triton Stone
+tile.triton.oreIron.name=Triton Iron Ore
+tile.triton.oreTin.name=Triton Tin Ore
+tile.triton.oreCopper.name=Triton Copper Ore
 
 tile.venusSurface.name=Venus Surface Rock
 tile.venusSubSurface.name=Venus Sub-Surface Rock
 tile.venusStone.name=Venus Stone
 tile.venusGravel.name=Venus Gravel
-
-tile.ceresSurface.name=Ceres Surface Rock
-tile.ceresSubSurface.name=Ceres Sub-Surface Rock
-tile.ceresStone.name=Ceres Stone
-tile.ceresGravel.name=Ceres Gravel
 
 tile.jupiterSurface.name=Jupiter Surface Rock
 tile.jupiterSubSurface.name=Jupiter Sub-Surface Rock
@@ -64,53 +125,21 @@ tile.neptuneSurface.name=Neptune Surface Rock
 tile.neptuneSubSurface.name=Neptune Sub-Surface Rock
 tile.neptuneStone.name=Neptune Stone
 
-tile.plutoSurface.name=Pluto Surface Rock
-tile.plutoSubSurface.name=Pluto Sub-Surface Rock
-tile.plutoStone.name=Pluto Stone
+#Planet Gravel Blocks
+tile.mercuryGravel.name=Mercury Gravel
+tile.ceresGravel.name=Ceres Gravel
 tile.plutoGravel.name=Pluto Gravel
-
-tile.erisSurface.name=Eris Surface Rock
-tile.erisSubSurface.name=Eris Sub-Surface Rock
-tile.erisStone.name=Eris Stone
 tile.erisGravel.name=Eris Gravel
-
-tile.ioSurface.name=IO Surface Rock
-tile.ioSubSurface.name=IO Sub-Surface Rock
-tile.ioStone.name=IO Stone
 tile.ioGravel.name=IO Gravel
-
-tile.europaSurface.name=Europa Surface Rock
-tile.europaSubSurface.name=Europa Sub-Surface Rock
-tile.europaStone.name=Europa Stone
 tile.europaGravel.name=Europa Gravel
-
-tile.deimosSurface.name=Deimos Surface Rock
-tile.deimosSubSurface.name=Deimos Sub-Surface Rock
-tile.deimosStone.name=Deimos Stone
 tile.deimosGravel.name=Deimos Gravel
-
-tile.phobosSurface.name=Phobos Surface Rock
-tile.phobosSubSurface.name=Phobos Sub-Surface Rock
-tile.phobosStone.name=Phobos Stone
 tile.phobosGravel.name=Phobos Gravel
-
-tile.tritonSurface.name=Triton Surface Rock
-tile.tritonSubSurface.name=Triton Sub-Surface Rock
-tile.tritonStone.name=Triton Stone
 tile.tritonGravel.name=Triton Gravel
 
 #Planet Ore Blocks
-tile.mercuryOreTin.name=Mercury Tin Ore
-tile.mercuryOreIron.name=Mercury Iron Ore
-tile.mercuryOreCopper.name=Mercury Copper Ore
-
 tile.venusOreTin.name=Venus Tin Ore
 tile.venusOreIron.name=Venus Iron Ore
 tile.venusOreCopper.name=Venus Copper Ore
-
-tile.ceresOreTin.name=Ceres Tin Ore
-tile.ceresOreIron.name=Ceres Iron Ore
-tile.ceresOreCopper.name=Ceres Copper Ore
 
 tile.jupiterOreTin.name=Jupiter Tin Ore
 tile.jupiterOreIron.name=Jupiter Iron Ore
@@ -128,14 +157,6 @@ tile.neptuneOreTin.name=Neptune Tin Ore
 tile.neptuneOreIron.name=Neptune Iron Ore
 tile.neptuneOreCopper.name=Neptune Copper Ore
 
-tile.plutoOreTin.name=Pluto Tin Ore
-tile.plutoOreIron.name=Pluto Iron Ore
-tile.plutoOreCopper.name=Pluto Copper Ore
-
-tile.erisOreTin.name=Eris Tin Ore
-tile.erisOreIron.name=Eris Iron Ore
-tile.erisOreCopper.name=Eris Copper Ore
-
 #Other Ore Blocks
 tile.OreCarbon.name=Carbon Ore
 tile.OrePalladium.name=Palladium Ore
@@ -143,7 +164,6 @@ tile.OreMagnesium.name=Magnesium Ore
 tile.OreCrystal.name=Crystal Ore
 tile.OreZinc.name=Zinc Ore
 tile.OreNickel.name=Nickel Ore
-tile.OreMercury.name=Mercury Ore
 tile.OreUranium.name=Uranium Ore
 
 #Dungeon Bricks

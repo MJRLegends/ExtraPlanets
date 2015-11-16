@@ -101,7 +101,9 @@ public class Config {
 	public static int ioBiomeID;
 	public static int deimosBiomeID;
 	public static int phobosBiomeID;
-
+	public static int callistoBiomeID;
+	public static int ganymedeBiomeID;
+	
 	public static int mercuryRocketTier;
 	public static int ceresRocketTier;
 	public static int plutoRocketTier;
@@ -244,7 +246,9 @@ public class Config {
 		deimosBiomeID = config.get(biomeID, "Deimos Biome ID", 159).getInt();
 		phobosBiomeID = config.get(biomeID, "Phobos Biome ID", 160).getInt();
 		tritonBiomeID = config.get(biomeID, "Triton Biome ID", 161).getInt();
-
+		callistoBiomeID = config.get(biomeID, "Callisto Biome ID", 162).getInt();
+		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 163).getInt();
+		
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();

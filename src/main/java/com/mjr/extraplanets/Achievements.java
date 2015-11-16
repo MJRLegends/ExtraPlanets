@@ -36,7 +36,7 @@ public class Achievements {
 	public static Achievement tritonMoon;
 
 	public static void init() {
-		if (Config.venus)
+		/*if (Config.venus)
 			venusPlanet = new Achievement("achievement.venusPlanet", "venusPlanet", 5, 4, ExtraPlanetsBlocks.venusSurface,
 					(Achievement) null).initIndependentStat().registerStat();
 		if (Config.jupiter && Config.venus)
@@ -114,6 +114,6 @@ public class Achievements {
 		.initIndependentStat().registerStat();
 		if (Config.triton)
 			tritonMoon = new Achievement("achievement.tritonMoon", "tritonMoon", 7, 6, ExtraPlanetsBlocks.tritonSurface, (Achievement) null)
-		.initIndependentStat().registerStat();
+		.initIndependentStat().registerStat();*/
 	}
 }

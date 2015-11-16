@@ -82,17 +82,17 @@ public class ChunkProviderEuropa extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.europaSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.europaBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.europaSubSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.europaBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.europaStone, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.europaBlocks, (byte) 2);
 	}
 
 	@Override

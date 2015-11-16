@@ -83,17 +83,17 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.plutoSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.plutoBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.plutoSubSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.plutoBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.plutoStone, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.plutoBlocks, (byte) 2);
 	}
 
 	@Override

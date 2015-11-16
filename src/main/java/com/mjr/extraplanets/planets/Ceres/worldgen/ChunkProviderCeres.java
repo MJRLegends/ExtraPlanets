@@ -84,17 +84,17 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.ceresSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.ceresBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.ceresSubSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.ceresBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.ceresStone, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.ceresBlocks, (byte) 2);
 	}
 
 	@Override

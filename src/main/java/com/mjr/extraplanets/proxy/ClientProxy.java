@@ -68,7 +68,6 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.handlers.MainHandler;
-import com.mjr.extraplanets.handlers.PlayerRadiationHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
 import com.mjr.extraplanets.planets.Eris.ErisHandlerClient;
@@ -110,7 +109,6 @@ public class ClientProxy extends CommonProxy {
 		renderMobEntities();
 		renderNonMobEntities();
 		FMLCommonHandler.instance().bus().register(new MainHandler());
-		FMLCommonHandler.instance().bus().register(new PlayerRadiationHandler());
 
 		if (Config.mercury)
 			FMLCommonHandler.instance().bus().register(new MercuryHandlerClient());
@@ -145,18 +143,19 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	private void renderMobEntities() {
 		if (Config.venus)
-			//RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, new RenderCreeperBossVenus());
+			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class,
+			// new RenderCreeperBossVenus());
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, new RenderEvolvedMagmaCubeBoss());
 		if (Config.jupiter)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, new RenderCreeperBossJupiter());
 		if (Config.saturn)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
 		if (Config.uranus)
-			//RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, new RenderCreeperBossUranus());
-		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, new RenderEvolvedIceSlimeBoss(new ModelEvolvedIceSlimeBoss(16), new ModelEvolvedIceSlimeBoss(0), 0.25F));
+			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class,
+			// new RenderCreeperBossUranus());
+			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, new RenderEvolvedIceSlimeBoss(new ModelEvolvedIceSlimeBoss(16), new ModelEvolvedIceSlimeBoss(0), 0.25F));
 		if (Config.neptune)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
-
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCube.class, new RenderEvolvedMagmaCube());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlime.class, new RenderEvolvedIceSlime(new ModelEvolvedIceSlime(16), new ModelEvolvedIceSlime(0), 0.25F));

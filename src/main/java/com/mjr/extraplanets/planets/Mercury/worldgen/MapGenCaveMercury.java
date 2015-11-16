@@ -12,9 +12,9 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class MapGenCaveMercury extends MapGenBaseMeta
 {
-	private Block grassblock = ExtraPlanetsBlocks.mercurySurface;
-	private Block dirtblock = ExtraPlanetsBlocks.mercurySubSurface;
-	private Block stoneblock = ExtraPlanetsBlocks.mercuryStone;
+	private Block grassblock = ExtraPlanetsBlocks.mercuryBlocks;
+	private Block dirtblock = ExtraPlanetsBlocks.mercuryBlocks;
+	private Block stoneblock = ExtraPlanetsBlocks.mercuryBlocks;
 
 	public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
 	protected void generateLargeCaveNode(long par1, int par3, int par4, Block[] blockIdArray, byte[] metaArray, double par6, double par8, double par10)

@@ -85,17 +85,17 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.erisSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.erisBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.erisSubSurface, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.erisBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.erisStone, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.erisBlocks, (byte) 2);
 	}
 
 	@Override

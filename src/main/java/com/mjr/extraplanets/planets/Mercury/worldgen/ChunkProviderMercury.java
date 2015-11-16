@@ -83,17 +83,17 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.mercurySurface,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryBlocks,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.mercurySubSurface,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryStone,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryBlocks,(byte) 2);
 	}
 
 	@Override
