@@ -132,7 +132,7 @@ public class MoonsMain {
 			phobos.setDimensionInfo(Config.phobosID, WorldProviderPhobos.class);
 		}
 		if (Config.callisto) {
-			callisto = new Moon("phobos").setParentPlanet(PlanetsMain.jupiter);
+			callisto = new Moon("callisto").setParentPlanet(PlanetsMain.jupiter);
 			callisto.setPhaseShift(2.436F);
 			callisto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F));
 			callisto.setRelativeOrbitTime(100.0F);
@@ -143,7 +143,7 @@ public class MoonsMain {
 			callisto.setDimensionInfo(Config.callistoID, WorldProviderCallisto.class);
 		}
 		if (Config.ganymede) {
-			ganymede = new Moon("phobos").setParentPlanet(PlanetsMain.jupiter);
+			ganymede = new Moon("ganymede").setParentPlanet(PlanetsMain.jupiter);
 			ganymede.setPhaseShift(2.436F);
 			ganymede.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			ganymede.setRelativeOrbitTime(100.0F);
