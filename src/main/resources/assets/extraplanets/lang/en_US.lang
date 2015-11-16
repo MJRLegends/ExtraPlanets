@@ -102,6 +102,13 @@ tile.triton.oreIron.name=Triton Iron Ore
 tile.triton.oreTin.name=Triton Tin Ore
 tile.triton.oreCopper.name=Triton Copper Ore
 
+tile.ganymede.surface.name=Ganymede Surface Rock
+tile.ganymede.subSurface.name=Ganymede Sub-Surface Rock
+tile.ganymede.stone.name=Ganymede Stone
+tile.ganymede.oreIron.name=Ganymede Iron Ore
+tile.ganymede.oreTin.name=Ganymede Tin Ore
+tile.ganymede.oreCopper.name=Ganymede Copper Ore
+
 tile.venusSurface.name=Venus Surface Rock
 tile.venusSubSurface.name=Venus Sub-Surface Rock
 tile.venusStone.name=Venus Stone
@@ -135,6 +142,8 @@ tile.europaGravel.name=Europa Gravel
 tile.deimosGravel.name=Deimos Gravel
 tile.phobosGravel.name=Phobos Gravel
 tile.tritonGravel.name=Triton Gravel
+tile.callistoGravel.name=Callisto Gravel
+tile.ganymedeGravel.name=Ganymede Gravel
 
 #Planet Ore Blocks
 tile.venusOreTin.name=Venus Tin Ore

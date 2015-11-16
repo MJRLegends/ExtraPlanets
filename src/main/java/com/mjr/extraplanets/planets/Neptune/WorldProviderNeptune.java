@@ -10,8 +10,8 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.planets.PlanetsMain;
-import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptuneNew;
-import com.mjr.extraplanets.planets.Neptune.worldgen.WorldChunkManagerNeptuneNew;
+import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.WorldChunkManagerNeptune;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -54,12 +54,12 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Class<? extends IChunkProvider> getChunkProviderClass() {
-		return ChunkProviderNeptuneNew.class;
+		return ChunkProviderNeptune.class;
 	}
 
 	@Override
 	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerNeptuneNew.class;
+		return WorldChunkManagerNeptune.class;
 	}
 
 	@Override
