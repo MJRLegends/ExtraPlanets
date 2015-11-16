@@ -3,7 +3,6 @@ package com.mjr.extraplanets;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -16,7 +15,6 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsMachines;
 import com.mjr.extraplanets.blocks.ExtraPlanetsSlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.client.gui.GuiHandler;
-import com.mjr.extraplanets.client.gui.RadiationBarOverlay;
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
@@ -40,9 +38,15 @@ import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.items.tools.ExtraPlanetsTools;
 import com.mjr.extraplanets.moons.MoonsMain;
+import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
+import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
+import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
+import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
+import com.mjr.extraplanets.moons.Io.event.IoEvents;
+import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
+import com.mjr.extraplanets.moons.triton.event.TritonEvents;
 import com.mjr.extraplanets.planets.PlanetsMain;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
-import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
@@ -106,6 +110,7 @@ public class ExtraPlanets {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		Config.load();
+		//Planets
 		if (Config.mercury)
 			MinecraftForge.EVENT_BUS.register(new MercuryEvents());
 		if (Config.venus)
@@ -122,9 +127,23 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new NeptuneEvents());
 		if (Config.pluto)
 			MinecraftForge.EVENT_BUS.register(new PlutoEvents());
-		if (Config.eris)
-			MinecraftForge.EVENT_BUS.register(new ErisEvents());
-
+		
+		//Moons
+		if (Config.callisto)
+			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
+		if (Config.deimos)
+			MinecraftForge.EVENT_BUS.register(new DeimosEvents());
+		if (Config.europa)
+			MinecraftForge.EVENT_BUS.register(new EuropaEvents());
+		if (Config.ganymede)
+			MinecraftForge.EVENT_BUS.register(new GanymedeEvents());
+		if (Config.io)
+			MinecraftForge.EVENT_BUS.register(new IoEvents());
+		if (Config.phobos)
+			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
+		if (Config.triton)
+			MinecraftForge.EVENT_BUS.register(new TritonEvents());
+		
 		MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 		//MinecraftForge.EVENT_BUS.register(new RadiationBarOverlay(Minecraft.getMinecraft()));
