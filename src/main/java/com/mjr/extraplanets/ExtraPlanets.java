@@ -127,8 +127,7 @@ public class ExtraPlanets {
 
 		MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
-
-		MinecraftForge.EVENT_BUS.register(new RadiationBarOverlay(Minecraft.getMinecraft()));
+		//MinecraftForge.EVENT_BUS.register(new RadiationBarOverlay(Minecraft.getMinecraft()));
 
 		ExtraPlanetsBlocks.init();
 		ExtraPlanetsSlabsStairsBlocks.init();

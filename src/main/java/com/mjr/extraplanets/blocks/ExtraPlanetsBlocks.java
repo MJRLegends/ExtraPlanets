@@ -8,10 +8,12 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicGanymede;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPhobos;
@@ -22,10 +24,12 @@ import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCallisto;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCeres;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockDeimos;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEris;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEuropa;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockGanymede;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockIo;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockMercury;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockPhobos;
@@ -77,6 +81,8 @@ public class ExtraPlanetsBlocks {
 	public static Block deimosGravel;
 	public static Block phobosGravel;
 	public static Block tritonGravel;
+	public static Block ganymedeGravel;
+	public static Block callistoGravel;
 
 	// Other Special Blocks
 	public static Block nuclearBomb;
@@ -156,7 +162,8 @@ public class ExtraPlanetsBlocks {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
 
-		// Need changing to meta blocks -----------------------------------------
+		// Need changing to meta blocks
+		// -----------------------------------------
 		initializeOreBlocks();
 		initializeDungeonBlocks();
 		initializeSpawnerBlocks();
@@ -267,6 +274,15 @@ public class ExtraPlanetsBlocks {
 			tritonBlocks = new BlockBasicTriton("triton");
 			tritonGravel = new BlockCustomGravel("tritonGravel");
 		}
+		if (Config.callisto) {
+			callistoBlocks = new BlockBasicCallisto("callisto");
+			callistoGravel = new BlockCustomGravel("callistoGravel");
+		}
+		if (Config.ganymede) {
+			ganymedeBlocks = new BlockBasicGanymede("ganymede");
+			ganymedeGravel = new BlockCustomGravel("ganymedeGravel");
+		}
+
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres)
@@ -513,6 +529,15 @@ public class ExtraPlanetsBlocks {
 			GameRegistry.registerBlock(tritonBlocks, ItemBlockTriton.class, tritonBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(tritonGravel, "tritonGravel");
 		}
+		if (Config.callisto) {
+			GameRegistry.registerBlock(callistoBlocks, ItemBlockCallisto.class, callistoBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(callistoGravel, "callistoGravel");
+		}
+		if (Config.ganymede) {
+			GameRegistry.registerBlock(ganymedeBlocks, ItemBlockGanymede.class, ganymedeBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(ganymedeGravel, "ganymedeGravel");
+		}
+
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");
 		if (Config.ceres)

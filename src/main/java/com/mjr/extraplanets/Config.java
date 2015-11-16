@@ -39,7 +39,8 @@ public class Config {
 	public static boolean io;
 	public static boolean deimos;
 	public static boolean phobos;
-
+	public static boolean callisto;
+	public static boolean ganymede;
 	public static int mercuryID;
 	public static int venusID;
 	public static int ceresID;
@@ -55,6 +56,8 @@ public class Config {
 	public static int ioID;
 	public static int deimosID;
 	public static int phobosID;
+	public static int callistoID;
+	public static int ganymedeID;
 	
 	public static int mercurySpaceStationID;
 	public static int mercurySpaceStationStaticID;
@@ -162,7 +165,9 @@ public class Config {
 		io = config.get(dimensionsCustom, "IO", true, "").getBoolean(true);
 		deimos = config.get(dimensionsCustom, "Deimos", true, "").getBoolean(true);
 		phobos = config.get(dimensionsCustom, "Phobos", true, "").getBoolean(true);
-
+		callisto = config.get(dimensionsCustom, "Callisto", true, "").getBoolean(true);
+		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
+		
 		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block!").getBoolean(true);
 		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block!").getBoolean(true);
 		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block!").getBoolean(true);
@@ -201,7 +206,9 @@ public class Config {
 		phobosID = config.get(dimensionID, "Phobos Dimension ID", -33).getInt();
 		deimosID = config.get(dimensionID, "Deimos Dimension ID", -35).getInt();
 		tritonID = config.get(dimensionID, "Triton Dimension ID", -36).getInt();
-
+		callistoID = config.get(dimensionID, "Callisto Dimension ID", -37).getInt();
+		ganymedeID = config.get(dimensionID, "Ganymede Dimension ID", -38).getInt();
+		
 		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
 		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -60).getInt();
 		

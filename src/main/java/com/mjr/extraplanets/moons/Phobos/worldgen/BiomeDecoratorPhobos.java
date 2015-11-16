@@ -2,32 +2,30 @@ package com.mjr.extraplanets.moons.Phobos.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
-import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+
 public class BiomeDecoratorPhobos extends BiomeDecoratorSpace {
 
-	private WorldGenerator deshGen;
-	private WorldGenerator tinGen;
 	private WorldGenerator copperGen;
+	private WorldGenerator tinGen;
 	private WorldGenerator ironGen;
-	private WorldGenerator iceGen;
-	// private WorldGenerator dirtGen;
+	private WorldGenerator gravelGen;
+	private WorldGenerator fossilsGen;
 
 	private World currentWorld;
 
-	public BiomeDecoratorPhobos()
-	{
-		this.copperGen = new WorldGenMinableMeta(MarsBlocks.marsBlock, 4, 0, true, MarsBlocks.marsBlock, 9);
-		this.tinGen = new WorldGenMinableMeta(MarsBlocks.marsBlock, 4, 1, true, MarsBlocks.marsBlock, 9);
-		this.deshGen = new WorldGenMinableMeta(MarsBlocks.marsBlock, 6, 2, true, MarsBlocks.marsBlock, 9);
-		this.ironGen = new WorldGenMinableMeta(MarsBlocks.marsBlock, 8, 3, true, MarsBlocks.marsBlock, 9);
-		//this.dirtGen = new WorldGenMinableMeta(MarsBlocks.marsBlock, 32, 6, true, MarsBlocks.marsBlock, 9);
-		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, MarsBlocks.marsBlock, 6);
+	public BiomeDecoratorPhobos() {
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.phobosBlocks, 4, 5, false, ExtraPlanetsBlocks.phobosBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.phobosBlocks, 4, 4, false, ExtraPlanetsBlocks.phobosBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.phobosBlocks, 8, 3, false, ExtraPlanetsBlocks.phobosBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.phobosGravel, 12, 0, false, ExtraPlanetsBlocks.phobosBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.phobosBlocks, 1);
 
-		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
+		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -42,13 +40,13 @@ public class BiomeDecoratorPhobos extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		this.generateOre(4, this.iceGen, 60, 120);
-		//this.generateOre(20, this.dirtGen, 0, 200);
-		this.generateOre(15, this.deshGen, 20, 64);
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
 		this.generateOre(20, this.ironGen, 0, 64);
+		this.generateOre(15, this.gravelGen, 0, 80);
+		this.generateOre(1, this.fossilsGen, 0, 256);
 
-		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
+		// minY, int maxY);
 	}
 }
