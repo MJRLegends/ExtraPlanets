@@ -340,6 +340,7 @@ public class ExtraPlanetsBlocks {
 		}
 		if (Config.jupiter) {
 			GameRegistry.registerBlock(OreNickel, "OreNickel");
+			GameRegistry.registerBlock(OrePalladium, "OrePalladium");
 			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(jupiterGravel, "jupiterGravel");
 
