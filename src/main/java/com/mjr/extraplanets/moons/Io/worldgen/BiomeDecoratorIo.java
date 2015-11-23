@@ -18,11 +18,11 @@ public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorIo() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioBlocks, 4, 5, false, ExtraPlanetsBlocks.ioBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioBlocks, 4, 4, false, ExtraPlanetsBlocks.ioBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioBlocks, 8, 3, false, ExtraPlanetsBlocks.ioBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioGravel, 12, 0, false, ExtraPlanetsBlocks.ioBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.ioBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioBlocks, 4, 5, true, ExtraPlanetsBlocks.ioBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioBlocks, 4, 4, true, ExtraPlanetsBlocks.ioBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioBlocks, 8, 3, true, ExtraPlanetsBlocks.ioBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ioGravel, 12, 0, true, ExtraPlanetsBlocks.ioBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.ioBlocks, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);

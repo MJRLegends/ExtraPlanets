@@ -1,5 +1,6 @@
 package com.mjr.extraplanets;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.stats.Achievement;
 
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
@@ -29,14 +30,8 @@ public class Achievements {
 
 	public static Achievement erisPlanet;
 
-	public static Achievement deimosMoon;
-	public static Achievement europaMoon;
-	public static Achievement ioMoon;
-	public static Achievement phobosMoon;
-	public static Achievement tritonMoon;
-
 	public static void init() {
-		/*if (Config.venus)
+		if (Config.venus)
 			venusPlanet = new Achievement("achievement.venusPlanet", "venusPlanet", 5, 4, ExtraPlanetsBlocks.venusSurface,
 					(Achievement) null).initIndependentStat().registerStat();
 		if (Config.jupiter && Config.venus)
@@ -65,19 +60,19 @@ public class Achievements {
 					(Achievement) null).initIndependentStat().registerStat();
 
 		if (Config.mercury)
-			mercuryPlanet = new Achievement("achievement.mercuryPlanet", "mercuryPlanet", 5, 5, ExtraPlanetsBlocks.mercurySurface,
+			mercuryPlanet = new Achievement("achievement.mercuryPlanet", "mercuryPlanet", 5, 5, ExtraPlanetsBlocks.mercuryBlocks,
 					(Achievement) null).registerStat();
 
 		if (Config.ceres)
-			ceresPlanet = new Achievement("achievement.ceresPlanet", "ceresPlanet", 7, 5, ExtraPlanetsBlocks.ceresSurface,
+			ceresPlanet = new Achievement("achievement.ceresPlanet", "ceresPlanet", 7, 5, ExtraPlanetsBlocks.ceresBlocks,
 					(Achievement) null).initIndependentStat().registerStat();
 
 		if (Config.pluto)
-			plutoPlanet = new Achievement("achievement.plutoPlanet", "plutoPlanet", 9, 5, ExtraPlanetsBlocks.plutoSurface,
+			plutoPlanet = new Achievement("achievement.plutoPlanet", "plutoPlanet", 9, 5, ExtraPlanetsBlocks.plutoBlocks,
 					(Achievement) null).initIndependentStat().registerStat();
 
 		if (Config.eris)
-			erisPlanet = new Achievement("achievement.erisPlanet", "erisPlanet", 11, 5, ExtraPlanetsBlocks.erisSurface, (Achievement) null)
+			erisPlanet = new Achievement("achievement.erisPlanet", "erisPlanet", 11, 5, ExtraPlanetsBlocks.erisBlocks, (Achievement) null)
 		.initIndependentStat().registerStat();
 
 		if (Config.venus)
@@ -100,20 +95,5 @@ public class Achievements {
 			neptuneBoss = new Achievement("achievement.neptuneBoss", "neptuneBoss", 13, 3, ExtraPlanetsBlocks.neptuneDungeonBrick,
 					neptunePlanet).registerStat();
 
-		if (Config.deimos)
-			deimosMoon = new Achievement("achievement.deimosMoon", "deimosMoon", 13, 5, ExtraPlanetsBlocks.deimosSurface,
-					(Achievement) null).initIndependentStat().registerStat();
-		if (Config.europa)
-			europaMoon = new Achievement("achievement.europaMoon", "europaMoon", 15, 5, ExtraPlanetsBlocks.europaSurface,
-					(Achievement) null).initIndependentStat().registerStat();
-		if (Config.io)
-			ioMoon = new Achievement("achievement.ioMoon", "ioMoon", 13, 3, ExtraPlanetsBlocks.ioSurface, (Achievement) null)
-		.initIndependentStat().registerStat();
-		if (Config.phobos)
-			phobosMoon = new Achievement("achievement.phobosMoon", "phobosMoon", 5, 6, ExtraPlanetsBlocks.phobosSurface, (Achievement) null)
-		.initIndependentStat().registerStat();
-		if (Config.triton)
-			tritonMoon = new Achievement("achievement.tritonMoon", "tritonMoon", 7, 6, ExtraPlanetsBlocks.tritonSurface, (Achievement) null)
-		.initIndependentStat().registerStat();*/
 	}
 }

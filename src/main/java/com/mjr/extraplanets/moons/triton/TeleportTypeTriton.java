@@ -45,6 +45,6 @@ public class TeleportTypeTriton implements ITeleportType {
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
 			boolean ridingAutoRocket) {
-		player.addStat(Achievements.tritonMoon, 1);
+		//player.addStat(Achievements.tritonMoon, 1);
 	}
 }

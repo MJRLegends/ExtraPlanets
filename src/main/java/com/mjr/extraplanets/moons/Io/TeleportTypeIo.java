@@ -45,6 +45,6 @@ public class TeleportTypeIo implements ITeleportType {
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
 			boolean ridingAutoRocket) {
-		player.addStat(Achievements.ioMoon, 1);
+		//player.addStat(Achievements.ioMoon, 1);
 	}
 }

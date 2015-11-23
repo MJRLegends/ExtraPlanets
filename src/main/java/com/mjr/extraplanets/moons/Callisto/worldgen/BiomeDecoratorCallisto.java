@@ -18,11 +18,11 @@ public class BiomeDecoratorCallisto extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorCallisto() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoBlocks, 4, 5, false, ExtraPlanetsBlocks.callistoBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoBlocks, 4, 4, false, ExtraPlanetsBlocks.callistoBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoBlocks, 8, 3, false, ExtraPlanetsBlocks.callistoBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoGravel, 12, 0, false, ExtraPlanetsBlocks.callistoBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.callistoBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoBlocks, 4, 5, true, ExtraPlanetsBlocks.callistoBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoBlocks, 4, 4, true, ExtraPlanetsBlocks.callistoBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoBlocks, 8, 3, true, ExtraPlanetsBlocks.callistoBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.callistoGravel, 12, 0, true, ExtraPlanetsBlocks.callistoBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.callistoBlocks, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);

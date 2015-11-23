@@ -19,11 +19,11 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorEris()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 4, 5, false, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 4, 4, false, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 8, 3, false, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisGravel, 12, 0, false, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, false, ExtraPlanetsBlocks.erisBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 4, 5, true, ExtraPlanetsBlocks.erisBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 4, 4, true, ExtraPlanetsBlocks.erisBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 8, 3, true, ExtraPlanetsBlocks.erisBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisGravel, 12, 0, true, ExtraPlanetsBlocks.erisBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.erisBlocks, 2);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

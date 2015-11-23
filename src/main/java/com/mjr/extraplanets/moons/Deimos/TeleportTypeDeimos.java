@@ -45,6 +45,6 @@ public class TeleportTypeDeimos implements ITeleportType {
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
 			boolean ridingAutoRocket) {
-		player.addStat(Achievements.deimosMoon, 1);
+		//player.addStat(Achievements.deimosMoon, 1);
 	}
 }

@@ -45,6 +45,6 @@ public class TeleportTypeEuropa implements ITeleportType {
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
 			boolean ridingAutoRocket) {
-		player.addStat(Achievements.europaMoon, 1);
+		//player.addStat(Achievements.europaMoon, 1);
 	}
 }

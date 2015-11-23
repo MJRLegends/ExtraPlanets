@@ -45,6 +45,6 @@ public class TeleportTypePhobos implements ITeleportType {
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
 			boolean ridingAutoRocket) {
-		player.addStat(Achievements.phobosMoon, 1);
+		//player.addStat(Achievements.phobosMoon, 1);
 	}
 }
