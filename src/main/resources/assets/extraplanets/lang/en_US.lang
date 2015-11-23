@@ -109,28 +109,37 @@ tile.ganymede.oreIron.name=Ganymede Iron Ore
 tile.ganymede.oreTin.name=Ganymede Tin Ore
 tile.ganymede.oreCopper.name=Ganymede Copper Ore
 
-tile.venusSurface.name=Venus Surface Rock
-tile.venusSubSurface.name=Venus Sub-Surface Rock
-tile.venusStone.name=Venus Stone
-tile.venusGravel.name=Venus Gravel
+tile.venus.surface.name=Venus Surface Rock
+tile.venus.subSurface.name=Venus Sub-Surface Rock
+tile.venus.stone.name=Venus Stone
+tile.venus.oreIron.name=Venus Iron Ore
+tile.venus.oreTin.name=Venus Tin Ore
+tile.venus.oreCopper.name=Venus Copper Ore
 
-tile.jupiterSurface.name=Jupiter Surface Rock
-tile.jupiterSubSurface.name=Jupiter Sub-Surface Rock
-tile.jupiterStone.name=Jupiter Stone
-tile.jupiterGravel.name=Jupiter Gravel
+tile.jupiter.surface.name=Jupiter Surface Rock
+tile.jupiter.subSurface.name=Jupiter Sub-Surface Rock
+tile.jupiter.stone.name=Jupiter Stone
+tile.jupiter.oreIron.name=Jupiter Iron Ore
+tile.jupiter.oreTin.name=Jupiter Tin Ore
+tile.jupiter.oreCopper.name=Jupiter Copper Ore
 
-tile.saturnSurface.name=Saturn Surface Rock
-tile.saturnSubSurface.name=Saturn Sub-Surface Rock
-tile.saturnStone.name=Saturn Stone
-tile.saturnGravel.name=Saturn Gravel
+tile.saturn.surface.name=Saturn Surface Rock
+tile.saturn.subSurface.name=Saturn Sub-Surface Rock
+tile.saturn.stone.name=Saturn Stone
+tile.saturn.oreIron.name=Saturn Iron Ore
+tile.saturn.oreTin.name=Saturn Tin Ore
+tile.saturn.oreCopper.name=Saturn Copper Ore
 
-tile.uranusSurface.name=Uranus Surface Rock
-tile.uranusSubSurface.name=Uranus Sub-Surface Rock
-tile.uranusStone.name=Uranus Stone
+tile.uranus.surface.name=Uranus Surface Rock
+tile.uranus.subSurface.name=Uranus Sub-Surface Rock
+tile.uranus.stone.name=Uranus Stone
 
-tile.neptuneSurface.name=Neptune Surface Rock
-tile.neptuneSubSurface.name=Neptune Sub-Surface Rock
-tile.neptuneStone.name=Neptune Stone
+tile.neptune.surface.name=Neptune Surface Rock
+tile.neptune.subSurface.name=Neptune Sub-Surface Rock
+tile.neptune.stone.name=Neptune Stone
+tile.neptune.oreIron.name=Neptune Iron Ore
+tile.neptune.oreTin.name=Neptune Tin Ore
+tile.neptune.oreCopper.name=Neptune Copper Ore
 
 #Planet Gravel Blocks
 tile.mercuryGravel.name=Mercury Gravel
@@ -145,26 +154,11 @@ tile.tritonGravel.name=Triton Gravel
 tile.callistoGravel.name=Callisto Gravel
 tile.ganymedeGravel.name=Ganymede Gravel
 
-#Planet Ore Blocks
-tile.venusOreTin.name=Venus Tin Ore
-tile.venusOreIron.name=Venus Iron Ore
-tile.venusOreCopper.name=Venus Copper Ore
-
-tile.jupiterOreTin.name=Jupiter Tin Ore
-tile.jupiterOreIron.name=Jupiter Iron Ore
-tile.jupiterOreCopper.name=Jupiter Copper Ore
-
-tile.saturnOreTin.name=Saturn Tin Ore
-tile.saturnOreIron.name=Saturn Iron Ore
-tile.saturnOreCopper.name=Saturn Copper Ore
-
-tile.uranusOreTin.name=Uranus Tin Ore
-tile.uranusOreIron.name=Uranus Iron Ore
-tile.uranusOreCopper.name=Uranus Copper Ore
-
-tile.neptuneOreTin.name=Neptune Tin Ore
-tile.neptuneOreIron.name=Neptune Iron Ore
-tile.neptuneOreCopper.name=Neptune Copper Ore
+tile.venusGravel.name=Venus Gravel
+tile.jupiterGravel.name=Jupiter Gravel
+tile.saturnGravel.name=Saturn Gravel
+tile.uranusGravel.name=Uranus Gravel
+tile.neptuneGravel.name=Neptune Gravel
 
 #Other Ore Blocks
 tile.OreCarbon.name=Carbon Ore

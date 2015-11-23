@@ -119,7 +119,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 		if(Config.saturnLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.glowstone,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.saturnSurface,(byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.saturnBlocks,(byte) 0);
 	}
 
 	@Override
@@ -127,12 +127,12 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 		if(Config.saturnLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.glowstone,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.saturnSubSurfacee,(byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.saturnBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.saturnStone,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.saturnBlocks,(byte) 2);
 	}
 
 	@Override

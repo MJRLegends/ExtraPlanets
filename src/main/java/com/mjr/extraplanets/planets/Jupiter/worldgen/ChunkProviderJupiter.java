@@ -121,7 +121,7 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 		if(Config.jupiterLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.magma,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.jupiterSurface,(byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.jupiterBlocks,(byte) 0);
 	}
 
 	@Override
@@ -129,12 +129,12 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 		if(Config.jupiterLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.magma,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.jupiterSubSurface,(byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.jupiterBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.jupiterStone,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.jupiterBlocks,(byte) 2);
 	}
 
 	@Override

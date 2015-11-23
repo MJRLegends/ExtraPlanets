@@ -110,17 +110,17 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.venusSurface,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.venusBlocks,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.venusSubSurface,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.venusBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.venusStone,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.venusBlocks,(byte) 2);
 	}
 
 	@Override

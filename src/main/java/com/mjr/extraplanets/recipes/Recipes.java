@@ -52,9 +52,9 @@ public class Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.mercuryBlocks, 0, 6), new ItemStack(ExtraPlanetsItems.ingotMercury), 0.0F);
 		}
 		if (Config.venus) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCarbon, 0), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 0.0F);
 		}
 		if (Config.ceres) {
@@ -64,25 +64,25 @@ public class Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreUranium, 0), new ItemStack(ExtraPlanetsItems.ingotUranium, 1), 0.0F);
 		}
 		if (Config.jupiter) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OrePalladium, 0), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreNickel, 0), new ItemStack(ExtraPlanetsItems.ingotNickel), 0.0F);
 		}
 		if (Config.saturn) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.saturnOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.saturnOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.saturnOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.saturnBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.saturnBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.saturnBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreMagnesium, 0), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 0.0F);
 		}
 		if (Config.uranus) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCrystal, 0), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 0.0F);
 		}
 		if (Config.neptune) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneOreCopper, 0), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneOreTin, 0), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneOreIron, 0), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreZinc, 0), new ItemStack(ExtraPlanetsItems.ingotZinc), 0.0F);
 		}
 		if (Config.pluto) {
@@ -130,8 +130,8 @@ public class Recipes {
 			}
 
 			// Slab's & Stairs
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.venusStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.venusStone });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.venusStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.venusStone });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.venusStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.venusBlocks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.venusStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.venusBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.venusDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.veunsDungeonBrick });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.venusDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.veunsDungeonBrick });
 		}
@@ -169,8 +169,8 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.palladiumBoots), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5) });
 
 			// Slab's & Stairs
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.jupiterStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.jupiterStone });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.jupiterStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.jupiterStone });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.jupiterStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.jupiterStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.jupiterDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.jupiterDungeonBrick });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.jupiterDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.jupiterDungeonBrick });
 
@@ -200,8 +200,8 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.magnesiumBoots), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5) });
 
 			// Slab's & Stairs
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.saturnStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.saturnStone });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.saturnStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.saturnStone });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.saturnStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.saturnBlocks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.saturnStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.saturnBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.saturnDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.saturnDungeonBrick });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.saturnDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.saturnDungeonBrick });
 		}
@@ -229,8 +229,8 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.crystalBoots), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5) });
 
 			// Slab's & Stairs
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.uranusStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.uranusStone });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.uranusStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.uranusStone });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.uranusStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.uranusBlocks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.uranusStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.uranusBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.uranusDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.uranusDungeonBrick });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.uranusDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.uranusDungeonBrick });
 		}
@@ -247,8 +247,8 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.zincBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0), 'R', Items.redstone, 'C', Items.coal });
 
 			// Slab's & Stairs
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.neptuneStone });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.neptuneStone });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneDungeonBrickStoneBlockHalfSlab), new Object[] { "MMM", 'M', ExtraPlanetsBlocks.neptuneDungeonBrick });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.neptuneDungeonBrick });
 		}

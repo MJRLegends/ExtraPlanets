@@ -27,9 +27,9 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorUranus()
 	{
-		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, false, ExtraPlanetsBlocks.uranusStone, 1);
-		this.crystalGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreCrystal, 8, 0, false, ExtraPlanetsBlocks.uranusStone, 1);
-		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.denseIce, 8, 0, false, ExtraPlanetsBlocks.uranusSurface, 1);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, false, ExtraPlanetsBlocks.uranusBlocks, 2);
+		this.crystalGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreCrystal, 8, 0, false, ExtraPlanetsBlocks.uranusBlocks, 2);
+		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.denseIce, 8, 0, false, ExtraPlanetsBlocks.uranusBlocks, 0);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -58,7 +58,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 				int x = this.chunkX + this.rand.nextInt(16) + 8;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomIceSpike().generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.uranusSurface);
+				new WorldGenCustomIceSpike().generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.uranusBlocks);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
@@ -70,7 +70,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(ExtraPlanetsFluids.frozen_water).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.uranusStone);
+				new WorldGenCustomLake(ExtraPlanetsFluids.frozen_water).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.uranusBlocks);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

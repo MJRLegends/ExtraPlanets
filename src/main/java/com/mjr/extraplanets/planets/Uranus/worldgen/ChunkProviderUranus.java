@@ -116,7 +116,7 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 		if(Config.uranusLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.frozen_water,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.uranusSurface,(byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.uranusBlocks,(byte) 0);
 	}
 
 	@Override
@@ -124,12 +124,12 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 		if(Config.uranusLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.frozen_water,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.uranusSubSurface,(byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.uranusBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.uranusStone,(byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.uranusBlocks,(byte) 2);
 	}
 
 	@Override

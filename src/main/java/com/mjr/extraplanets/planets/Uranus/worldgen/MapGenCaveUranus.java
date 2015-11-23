@@ -12,9 +12,9 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class MapGenCaveUranus extends MapGenBaseMeta
 {
-	private Block grassblock = ExtraPlanetsBlocks.uranusSurface;
-	private Block dirtblock = ExtraPlanetsBlocks.uranusSubSurface;
-	private Block stoneblock = ExtraPlanetsBlocks.uranusStone;
+	private Block grassblock = ExtraPlanetsBlocks.uranusBlocks;
+	private Block dirtblock = ExtraPlanetsBlocks.uranusBlocks;
+	private Block stoneblock = ExtraPlanetsBlocks.uranusBlocks;
 
 	public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
 	protected void generateLargeCaveNode(long par1, int par3, int par4, Block[] blockIdArray, byte[] metaArray, double par6, double par8, double par10)
@@ -173,10 +173,10 @@ public class MapGenCaveUranus extends MapGenBaseMeta
 
 										if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
 										{
-											if (((blockIdArray[coords] == dirtblock) && (metaArray[coords] == 1)) || ((blockIdArray[coords] == stoneblock) && (metaArray[coords] == 1))) {
+											if (((blockIdArray[coords] == dirtblock) && (metaArray[coords] == 1)) || ((blockIdArray[coords] == stoneblock) && (metaArray[coords] == 2))) {
 												blockIdArray[coords] = Blocks.air;
 											}
-											else if ((blockIdArray[coords] == grassblock) && (metaArray[coords] == 1) && (random.nextInt(BREAK_THROUGH_CHANCE) == 0)) {
+											else if ((blockIdArray[coords] == grassblock) && (metaArray[coords] == 0) && (random.nextInt(BREAK_THROUGH_CHANCE) == 0)) {
 												blockIdArray[coords] = Blocks.air;
 											}
 										}

@@ -10,11 +10,11 @@ public class BiomeGenNeptune extends BiomeGenBaseNeptune
 		super(224);
 		this.enableRain = true;
 		this.enableSnow = true;
-		this.topBlock = ExtraPlanetsBlocks.neptuneSurface;
+		this.topBlock = ExtraPlanetsBlocks.neptuneBlocks;
 		this.topMeta = 0;
-		this.fillerBlock = ExtraPlanetsBlocks.neptuneSubSurface;
-		this.fillerMeta = 0;
-		this.stoneBlock = ExtraPlanetsBlocks.neptuneStone;
-		this.stoneMeta = 0;
+		this.fillerBlock = ExtraPlanetsBlocks.neptuneBlocks;
+		this.fillerMeta = 1;
+		this.stoneBlock = ExtraPlanetsBlocks.neptuneBlocks;
+		this.stoneMeta = 2;
 	}
 }

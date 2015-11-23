@@ -41,8 +41,8 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 		this.setColor(-16744448);
 		this.enableRain = true;
 		this.enableSnow = true;
-		this.topBlock = ExtraPlanetsBlocks.neptuneSurface;
-		this.fillerBlock = ExtraPlanetsBlocks.neptuneSubSurface;
+		this.topBlock = ExtraPlanetsBlocks.neptuneBlocks;
+		this.fillerBlock = ExtraPlanetsBlocks.neptuneBlocks;
 
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
@@ -107,8 +107,8 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 							if (maxFillerDepth <= 0) {
 								topBlock = null;
 								topMeta = 0;
-								fillerBlock = ExtraPlanetsBlocks.neptuneStone;
-								fillerMeta = 0;
+								fillerBlock = ExtraPlanetsBlocks.neptuneBlocks;
+								fillerMeta = 2;
 							} else if (y >= seaLevel - 5 && y <= seaLevel) {
 								topBlock = this.topBlock;
 								topMeta = this.topMeta;
@@ -132,8 +132,8 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 								meta[index] = topMeta;
 							} else if (y < seaLevel - 8 - maxFillerDepth) {
 								topBlock = null;
-								fillerBlock = ExtraPlanetsBlocks.neptuneStone;
-								fillerMeta = 0;
+								fillerBlock = ExtraPlanetsBlocks.neptuneBlocks;
+								fillerMeta = 2;
 								block[index] = Blocks.gravel;
 							} else {
 								block[index] = fillerBlock;

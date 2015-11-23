@@ -27,12 +27,12 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorJupiter()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterOreCopper, 4, 0, false, ExtraPlanetsBlocks.jupiterStone, 1);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterOreIron, 4, 0, false, ExtraPlanetsBlocks.jupiterStone, 1);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterOreIron, 8, 0, false, ExtraPlanetsBlocks.jupiterStone, 1);
-		this.palladiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OrePalladium, 8, 0, false, ExtraPlanetsBlocks.jupiterStone, 1);
-		this.nickelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreNickel, 8, 0, false, ExtraPlanetsBlocks.jupiterStone, 1);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterGravel, 12, 0, false, ExtraPlanetsBlocks.jupiterStone, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 4, 5, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 4, 4, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 8, 3, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
+		this.palladiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OrePalladium, 8, 0, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
+		this.nickelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreNickel, 8, 0, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterGravel, 12, 0, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -63,7 +63,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(ExtraPlanetsFluids.magma).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.jupiterStone);
+				new WorldGenCustomLake(ExtraPlanetsFluids.magma).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.jupiterBlocks);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

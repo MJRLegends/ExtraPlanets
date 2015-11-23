@@ -118,7 +118,7 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 		if(Config.neptuneLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.nitrogen,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.neptuneSurface, (byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.neptuneBlocks, (byte) 0);
 	}
 
 	@Override
@@ -126,12 +126,12 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 		if(Config.neptuneLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.nitrogen,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.neptuneSubSurface, (byte) 1);
+			return new BlockMetaPair(ExtraPlanetsBlocks.neptuneBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.neptuneStone, (byte) 1);
+		return new BlockMetaPair(ExtraPlanetsBlocks.neptuneBlocks, (byte) 2);
 	}
 
 	@Override

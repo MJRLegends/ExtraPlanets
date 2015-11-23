@@ -25,12 +25,12 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 	private int LakesPerChunk = 10;
 
 	public BiomeDecoratorVenus() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusOreCopper, 4, 0, false, ExtraPlanetsBlocks.venusStone, 1);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusOreTin, 4, 0, false, ExtraPlanetsBlocks.venusStone, 1);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusOreIron, 8, 0, false, ExtraPlanetsBlocks.venusStone, 1);
-		this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreCarbon, 4, 0, false, ExtraPlanetsBlocks.venusStone, 1);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusGravel, 12, 0, false, ExtraPlanetsBlocks.venusStone, 1);
-		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.volcanicRock, 20, 0, false, ExtraPlanetsBlocks.venusSurface, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 5, false, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 4, false, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 8, 3, false, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreCarbon, 4, 0, false, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusGravel, 12, 0, false, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.volcanicRock, 20, 0, false, ExtraPlanetsBlocks.venusBlocks, 0);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -61,7 +61,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.venusStone);
+				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.venusBlocks);
 			}
 		}
 

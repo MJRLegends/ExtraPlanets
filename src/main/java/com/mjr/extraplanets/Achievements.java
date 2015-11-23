@@ -31,7 +31,7 @@ public class Achievements {
 	public static Achievement erisPlanet;
 
 	public static void init() {
-		if (Config.venus)
+		/*if (Config.venus)
 			venusPlanet = new Achievement("achievement.venusPlanet", "venusPlanet", 5, 4, ExtraPlanetsBlocks.venusSurface,
 					(Achievement) null).initIndependentStat().registerStat();
 		if (Config.jupiter && Config.venus)
@@ -93,7 +93,7 @@ public class Achievements {
 
 		if (Config.neptune)
 			neptuneBoss = new Achievement("achievement.neptuneBoss", "neptuneBoss", 13, 3, ExtraPlanetsBlocks.neptuneDungeonBrick,
-					neptunePlanet).registerStat();
+					neptunePlanet).registerStat();*/
 
 	}
 }
