@@ -13,21 +13,25 @@ import com.mjr.extraplanets.items.keys.ItemKeyT5;
 import com.mjr.extraplanets.items.keys.ItemKeyT6;
 import com.mjr.extraplanets.items.keys.ItemKeyT7;
 import com.mjr.extraplanets.items.keys.ItemKeyT8;
+import com.mjr.extraplanets.items.keys.ItemKeyT9;
 import com.mjr.extraplanets.items.noseCones.Tier4NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier5NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier6NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier7NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier8NoseCone;
+import com.mjr.extraplanets.items.noseCones.Tier9NoseCone;
 import com.mjr.extraplanets.items.rockets.Tier4Rocket;
 import com.mjr.extraplanets.items.rockets.Tier5Rocket;
 import com.mjr.extraplanets.items.rockets.Tier6Rocket;
 import com.mjr.extraplanets.items.rockets.Tier7Rocket;
 import com.mjr.extraplanets.items.rockets.Tier8Rocket;
+import com.mjr.extraplanets.items.rockets.Tier9Rocket;
 import com.mjr.extraplanets.items.schematics.SchematicTier4;
 import com.mjr.extraplanets.items.schematics.SchematicTier5;
 import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
+import com.mjr.extraplanets.items.schematics.SchematicTier9;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -37,24 +41,28 @@ public class ExtraPlanetsItems {
 	public static Item tier6Rocket;
 	public static Item tier7Rocket;
 	public static Item tier8Rocket;
+	public static Item tier9Rocket;
 
 	public static Item schematicTier4;
 	public static Item schematicTier5;
 	public static Item schematicTier6;
 	public static Item schematicTier7;
 	public static Item schematicTier8;
+	public static Item schematicTier9;
 
 	public static Item noseConeTier4;
 	public static Item noseConeTier5;
 	public static Item noseConeTier6;
 	public static Item noseConeTier7;
 	public static Item noseConeTier8;
+	public static Item noseConeTier9;
 
 	public static Item tier4Items;
 	public static Item tier5Items;
 	public static Item tier6Items;
 	public static Item tier7Items;
 	public static Item tier8Items;
+	public static Item tier9Items;
 
 	public static Item ingotUranium;
 
@@ -63,6 +71,7 @@ public class ExtraPlanetsItems {
 	public static Item T6key;
 	public static Item T7key;
 	public static Item T8key;
+	public static Item T9key;
 
 	public static Item nickelBattery;
 	public static Item zincBattery;
@@ -160,6 +169,14 @@ public class ExtraPlanetsItems {
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
+		
+		if (Config.pluto) {
+			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
+			schematicTier9 = new SchematicTier9("schematicTier9");
+			noseConeTier9 = new Tier9NoseCone("noseConeTier9");
+			tier9Items = new ItemTier9Items("tier9");
+			T9key = new ItemKeyT9().setUnlocalizedName("key");
+		}
 	}
 
 	private static void registerItems() {
@@ -226,32 +243,35 @@ public class ExtraPlanetsItems {
 			GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		}
 
+		if (Config.pluto) {
+			GameRegistry.registerItem(tier9Rocket, "itemTier9Rocket");
+			GameRegistry.registerItem(schematicTier9, "schematicTier9");
+			GameRegistry.registerItem(noseConeTier9, "noseConeTier9");
+			GameRegistry.registerItem(tier9Items, "tier9Items");
+			GameRegistry.registerItem(T9key, "T9key");
+		}
+
 		GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(diamondApple, "diamondApple");
-		//	if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-		//	    GameRegistry.registerItem(bodyParts, "bodyParts");
+		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
+		// GameRegistry.registerItem(bodyParts, "bodyParts");
 	}
 
 	private static void registerFluidContainer() {
 		if (Config.saturn) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.glowstone_fluid, new ItemStack(glowstone_bucket, 1, 0),
-					new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.glowstone_fluid, new ItemStack(glowstone_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.jupiter) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.magma_fluid, new ItemStack(magma_bucket, 1, 0), new ItemStack(
-					Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.magma_fluid, new ItemStack(magma_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.neptune) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0),
-					new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.uranus) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0),
-					new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.ceres) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(
-					Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 	}
 }

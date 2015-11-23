@@ -38,11 +38,13 @@ import com.mjr.extraplanets.client.render.entities.RenderTier5Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier8Rocket;
+import com.mjr.extraplanets.client.render.entities.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier7Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier8Rocket;
+import com.mjr.extraplanets.client.render.item.ItemRendererTier9Rocket;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer;
@@ -67,6 +69,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
 import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
@@ -102,6 +105,7 @@ public class ClientProxy extends CommonProxy {
 	public static int treasureT6ChestID;
 	public static int treasureT7ChestID;
 	public static int treasureT8ChestID;
+	public static int treasureT9ChestID;
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -204,6 +208,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8, Constants.ASSET_PREFIX, "tier8rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier8Rocket, new ItemRendererTier8Rocket(rocketModelTier8));
 		}
+		if (Config.pluto) {
+			IModelCustom rocketModelTier9 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "tier9rocket"));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -233,6 +242,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerBlockHandler(new BlockRendererTier8TreasureChest(treasureT8ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
 		}
+		if (Config.pluto) {
+			/*treasureT9ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier9TreasureChest(treasureT9ChestID));
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());*/
+		}
 		ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(new BlockRendererMachine(renderIdMachine));
 	}
@@ -253,6 +267,9 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.neptune) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT8.png")));
+		}
+		if (Config.pluto) {
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
 		}
 	}
 

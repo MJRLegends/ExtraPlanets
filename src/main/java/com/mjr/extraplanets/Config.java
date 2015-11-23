@@ -129,12 +129,14 @@ public class Config {
 	public static int schematicTier6GUIID;
 	public static int schematicTier7GUIID;
 	public static int schematicTier8GUIID;
+	public static int schematicTier9GUIID;
 
 	public static int schematicTier4PageID;
 	public static int schematicTier5PageID;
 	public static int schematicTier6PageID;
 	public static int schematicTier7PageID;
 	public static int schematicTier8PageID;
+	public static int schematicTier9PageID;
 
 	public static void load() {
 		Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
@@ -261,12 +263,14 @@ public class Config {
 		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();
 		schematicTier7GUIID = config.get(schematicsGUI, "Schematic Tier 7 GUI ID", 5558).getInt();
 		schematicTier8GUIID = config.get(schematicsGUI, "Schematic Tier 8 GUI ID", 5559).getInt();
+		schematicTier9GUIID = config.get(schematicsGUI, "Schematic Tier 9 GUI ID", 5560).getInt();
 
 		schematicTier4PageID = config.get(schematicsPage, "Schematic Tier 4 Page ID", 6666).getInt();
 		schematicTier5PageID = config.get(schematicsPage, "Schematic Tier 5 Page ID", 6667).getInt();
 		schematicTier6PageID = config.get(schematicsPage, "Schematic Tier 6 Page ID", 6668).getInt();
 		schematicTier7PageID = config.get(schematicsPage, "Schematic Tier 7 Page ID", 6669).getInt();
 		schematicTier8PageID = config.get(schematicsPage, "Schematic Tier 8 Page ID", 6670).getInt();
+		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
 
 		config.save();
 	}
