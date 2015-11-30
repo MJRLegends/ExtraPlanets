@@ -115,6 +115,7 @@ tile.venus.stone.name=Venus Stone
 tile.venus.oreIron.name=Venus Iron Ore
 tile.venus.oreTin.name=Venus Tin Ore
 tile.venus.oreCopper.name=Venus Copper Ore
+tile.venus.oreCarbon.name=Carbon Ore
 
 tile.jupiter.surface.name=Jupiter Surface Rock
 tile.jupiter.subSurface.name=Jupiter Sub-Surface Rock
@@ -133,6 +134,7 @@ tile.saturn.oreCopper.name=Saturn Copper Ore
 tile.uranus.surface.name=Uranus Surface Rock
 tile.uranus.subSurface.name=Uranus Sub-Surface Rock
 tile.uranus.stone.name=Uranus Stone
+tile.uranus.oreCrystal.name=Crystal Stone
 
 tile.neptune.surface.name=Neptune Surface Rock
 tile.neptune.subSurface.name=Neptune Sub-Surface Rock
@@ -140,6 +142,7 @@ tile.neptune.stone.name=Neptune Stone
 tile.neptune.oreIron.name=Neptune Iron Ore
 tile.neptune.oreTin.name=Neptune Tin Ore
 tile.neptune.oreCopper.name=Neptune Copper Ore
+tile.neptune.oreZinc.name=Zinc Ore
 
 #Planet Gravel Blocks
 tile.mercuryGravel.name=Mercury Gravel
@@ -161,11 +164,8 @@ tile.uranusGravel.name=Uranus Gravel
 tile.neptuneGravel.name=Neptune Gravel
 
 #Other Ore Blocks
-tile.OreCarbon.name=Carbon Ore
 tile.OrePalladium.name=Palladium Ore
 tile.OreMagnesium.name=Magnesium Ore
-tile.OreCrystal.name=Crystal Ore
-tile.OreZinc.name=Zinc Ore
 tile.OreNickel.name=Nickel Ore
 tile.OreUranium.name=Uranium Ore
 

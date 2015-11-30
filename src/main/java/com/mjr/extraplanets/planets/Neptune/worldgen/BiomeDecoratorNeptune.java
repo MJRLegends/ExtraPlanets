@@ -27,7 +27,7 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 4, 5, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 4, 4, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 8, 3, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
-		this.zincGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreZinc, 8, 0, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
+		this.zincGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 8, 6, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
 		this.frozenNitrogenGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.frozenNitrogen, 8, 0, true, ExtraPlanetsBlocks.neptuneBlocks, 0);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);

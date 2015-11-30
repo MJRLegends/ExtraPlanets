@@ -55,7 +55,7 @@ public class Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCarbon, 0), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.venusBlocks, 6), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5), 0.0F);
 		}
 		if (Config.ceres) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.ceresBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -77,13 +77,13 @@ public class Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreMagnesium, 0), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 5), 0.0F);
 		}
 		if (Config.uranus) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreCrystal, 0), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.uranusBlocks, 3), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 0.0F);
 		}
 		if (Config.neptune) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.OreZinc, 0), new ItemStack(ExtraPlanetsItems.ingotZinc), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 6), new ItemStack(ExtraPlanetsItems.ingotZinc), 0.0F);
 		}
 		if (Config.pluto) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -253,6 +253,14 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneDungeonBrickStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', ExtraPlanetsBlocks.neptuneDungeonBrick });
 		}
 		if (Config.pluto) {
+			// Rocket
+			//TODO Change to compressed material for rocket tier 9
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.noseConeTier9, 1), new Object[] { " Y ", " X ", "X X", 'X', new ItemStack(ExtraPlanetsItems.tier9Items, 1, 3), 'Y', Blocks.redstone_torch });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier9Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X', new ItemStack(ExtraPlanetsItems.tier9Items, 1, 3), 'Y', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier9Items, 1, 0),
+					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier9Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier9Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier9Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 2), 'Z',
+					new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0) });
 			// Slab's & Stairs
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.plutoStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.plutoStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 1, 2) });

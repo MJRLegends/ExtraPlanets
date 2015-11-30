@@ -28,7 +28,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	public BiomeDecoratorUranus()
 	{
 		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, false, ExtraPlanetsBlocks.uranusBlocks, 2);
-		this.crystalGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreCrystal, 8, 0, false, ExtraPlanetsBlocks.uranusBlocks, 2);
+		this.crystalGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.uranusBlocks, 8, 3, false, ExtraPlanetsBlocks.uranusBlocks, 2);
 		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.denseIce, 8, 0, false, ExtraPlanetsBlocks.uranusBlocks, 0);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);

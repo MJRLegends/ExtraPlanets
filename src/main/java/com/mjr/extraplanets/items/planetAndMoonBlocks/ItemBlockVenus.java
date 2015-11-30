@@ -56,10 +56,14 @@ public class ItemBlockVenus extends ItemBlock
             name = "oreCopper";
             break;
         }
+        case 6:
+        {
+            name = "oreCarbon";
+            break;
+        }
         default:
             name = "null";
         }
-
         return this.field_150939_a.getUnlocalizedName() + "." + name;
     }
 

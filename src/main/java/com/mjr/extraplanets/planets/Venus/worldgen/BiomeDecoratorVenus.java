@@ -28,7 +28,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 5, false, ExtraPlanetsBlocks.venusBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 4, false, ExtraPlanetsBlocks.venusBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 8, 3, false, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreCarbon, 4, 0, false, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 6, false, ExtraPlanetsBlocks.venusBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusGravel, 12, 0, false, ExtraPlanetsBlocks.venusBlocks, 2);
 		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.volcanicRock, 20, 0, false, ExtraPlanetsBlocks.venusBlocks, 0);
 
