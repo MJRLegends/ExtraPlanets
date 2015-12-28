@@ -3,7 +3,10 @@ package com.mjr.extraplanets.client.render.entities;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.boss.BossStatus;
+import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -27,6 +30,13 @@ public class RenderEvolvedIceSlimeBoss extends RenderLiving
 		this.scaleAmount = p_i1267_2_;
 	}
 
+	@Override
+	public void doRender(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9)
+	{
+		BossStatus.setBossStatus((IBossDisplayData) par1EntityLiving, false);
+
+		super.doRender(par1EntityLiving, par2, par4, par6, par8, par9);
+	}
 	/**
 	 * Queries whether should render the specified pass or not.
 	 */

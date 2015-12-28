@@ -11,6 +11,8 @@ import micdoodle8.mods.galacticraft.core.entities.IBoss;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.item.EntityXPOrb;
@@ -21,6 +23,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
@@ -48,6 +52,9 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 
 	private TileEntityDungeonSpawner spawner;
 
+	public int entitiesWithin;
+	public int entitiesWithinLast;
+	public Entity targetEntity;
 	private Vector3 roomCoords;
 	private Vector3 roomSize;
 
@@ -88,7 +95,6 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	@Override
 	public void writeEntityToNBT(NBTTagCompound nbt) {
 		super.writeEntityToNBT(nbt);
-		nbt.setInteger("Size", this.getSlimeSize() - 1);
 		nbt.setInteger("Size", this.getSlimeSize() - 1);
 
 		if (this.roomCoords != null) {
@@ -144,7 +150,6 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	 */
 	@Override
 	public void onUpdate() {
-		System.out.println(this.getHealth());
 		if (!this.worldObj.isRemote && this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0) {
 			this.isDead = true;
 		}
@@ -230,6 +235,58 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	protected EntityEvolvedIceSlimeBoss createInstance() {
 		return new EntityEvolvedIceSlimeBoss(this.worldObj);
 	}
+	
+	@Override
+	public void onLivingUpdate()
+	{
+		final EntityPlayer player = this.worldObj.getClosestPlayer(this.posX, this.posY, this.posZ, 20.0);
+
+		if (player != null && !player.equals(this.targetEntity))
+		{
+			if (this.getDistanceSqToEntity(player) < 400.0D)
+			{
+				this.getNavigator().getPathToEntityLiving(player);
+				this.targetEntity = player;
+			}
+		}
+		else
+		{
+			this.targetEntity = null;
+		}
+
+		new Vector3(this);
+
+		if (this.roomCoords != null && this.roomSize != null)
+		{
+			@SuppressWarnings("unchecked")
+			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ() + this.roomSize.intZ()));
+
+			this.entitiesWithin = entitiesWithin.size();
+
+			if (this.entitiesWithin == 0 && this.entitiesWithinLast != 0)
+			{
+				@SuppressWarnings("unchecked")
+				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX() + this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
+
+				for (EntityPlayer p : entitiesWithin2)
+				{
+					p.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.skeletonBoss.message")));
+				}
+
+				this.setDead();
+
+				if (this.spawner != null)
+				{
+					this.spawner.playerCheated = true;
+				}
+
+				return;
+			}
+		}
+
+		super.onLivingUpdate();
+	}
+
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -468,18 +525,15 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	@Override
-	public void setRoom(Vector3 roomCoords, Vector3 roomSize) {
+	public void setRoom(Vector3 roomCoords, Vector3 roomSize)
+	{
 		this.roomCoords = roomCoords;
 		this.roomSize = roomSize;
 	}
 
 	@Override
-	public void onBossSpawned(TileEntityDungeonSpawner spawner) {
+	public void onBossSpawned(TileEntityDungeonSpawner spawner)
+	{
 		this.spawner = spawner;
-	}
-
-	@Override
-	public IChatComponent func_145748_c_() {
-		return null;
 	}
 }

@@ -2,7 +2,10 @@ package com.mjr.extraplanets.client.render.entities;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.boss.BossStatus;
+import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -33,6 +36,13 @@ public class RenderEvolvedMagmaCubeBoss extends RenderLiving
 		return magmaCubeTextures;
 	}
 
+	@Override
+	public void doRender(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9)
+	{
+		BossStatus.setBossStatus((IBossDisplayData) par1EntityLiving, false);
+
+		super.doRender(par1EntityLiving, par2, par4, par6, par8, par9);
+	}
 	/**
 	 * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
 	 * entityLiving, partialTickTime

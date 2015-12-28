@@ -207,8 +207,8 @@ public class ExtraPlanets {
 			registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "EntityTier7Rocket", 150, 1, false);
 		if (Config.neptune)
 			registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "EntityTier8Rocket", 150, 1, false);
-		if (Config.pluto)
-			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, "EntityTier9Rocket", 150, 1, false);
+		/*if (Config.pluto)
+			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, "EntityTier9Rocket", 150, 1, false);*/
 	}
 
 	private void registerCreatures() {
@@ -252,8 +252,8 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier7Rocket());
 		if (Config.neptune)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier8Rocket());
-		if (Config.pluto)
-			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
+		/*if (Config.pluto)
+			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());*/
 	}
 
 	private void addDungeonLoot() {
@@ -267,8 +267,8 @@ public class ExtraPlanets {
 			GalacticraftRegistry.addDungeonLoot(7, new ItemStack(ExtraPlanetsItems.schematicTier7, 1, 0));
 		if (Config.neptune)
 			GalacticraftRegistry.addDungeonLoot(8, new ItemStack(ExtraPlanetsItems.schematicTier8, 1, 0));
-		if (Config.pluto)
-			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanetsItems.schematicTier9, 1, 0));
+		/*if (Config.pluto)
+			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanetsItems.schematicTier9, 1, 0));*/
 	}
 
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {

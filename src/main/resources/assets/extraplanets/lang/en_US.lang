@@ -412,6 +412,9 @@ entity.CreeperBossSaturn.name=Creeper Boss Saturn
 entity.CreeperBossUranus.name=Creeper Boss Uranus
 entity.CreeperBossNeptune.name=Creeper Boss Neptune
 
+entity.EvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
+entity.EntityEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+
 entity.EvolvedWitch.name=Evolved Witch
 entity.EvolvedMagmaCube.name=Evolved Magma Cube
 entity.EvolvedIceSlime.name=Evolved Ice Slime

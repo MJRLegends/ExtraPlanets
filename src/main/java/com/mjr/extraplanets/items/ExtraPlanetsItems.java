@@ -244,11 +244,11 @@ public class ExtraPlanetsItems {
 		}
 
 		if (Config.pluto) {
-			GameRegistry.registerItem(tier9Rocket, "itemTier9Rocket");
-			GameRegistry.registerItem(schematicTier9, "schematicTier9");
-			GameRegistry.registerItem(noseConeTier9, "noseConeTier9");
-			GameRegistry.registerItem(tier9Items, "tier9Items");
-			GameRegistry.registerItem(T9key, "T9key");
+			//GameRegistry.registerItem(tier9Rocket, "itemTier9Rocket");
+			//GameRegistry.registerItem(schematicTier9, "schematicTier9");
+			//GameRegistry.registerItem(noseConeTier9, "noseConeTier9");
+			//GameRegistry.registerItem(tier9Items, "tier9Items");
+			//GameRegistry.registerItem(T9key, "T9key");
 		}
 
 		GameRegistry.registerItem(cannedFood, "cannedFood");

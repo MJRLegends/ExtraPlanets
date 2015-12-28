@@ -208,11 +208,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8, Constants.ASSET_PREFIX, "tier8rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier8Rocket, new ItemRendererTier8Rocket(rocketModelTier8));
 		}
-		if (Config.pluto) {
+		/*if (Config.pluto) {
 			IModelCustom rocketModelTier9 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "tier9rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
-		}
+		}*/
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -269,7 +269,7 @@ public class ClientProxy extends CommonProxy {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT8.png")));
 		}
 		if (Config.pluto) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
+			//MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
 		}
 	}
 
