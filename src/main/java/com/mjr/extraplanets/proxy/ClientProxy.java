@@ -38,13 +38,11 @@ import com.mjr.extraplanets.client.render.entities.RenderTier5Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier8Rocket;
-import com.mjr.extraplanets.client.render.entities.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier7Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier8Rocket;
-import com.mjr.extraplanets.client.render.item.ItemRendererTier9Rocket;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer;
@@ -69,9 +67,15 @@ import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
-import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.moons.Callisto.CallistoHandlerClient;
+import com.mjr.extraplanets.moons.Deimos.DeimosHandlerClient;
+import com.mjr.extraplanets.moons.Europa.EuropaHandlerClient;
+import com.mjr.extraplanets.moons.Ganymede.GanymedeHandlerClient;
+import com.mjr.extraplanets.moons.Io.IoHandlerClient;
+import com.mjr.extraplanets.moons.Phobos.PhobosHandlerClient;
+import com.mjr.extraplanets.moons.triton.TritonHandlerClient;
 import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
 import com.mjr.extraplanets.planets.Eris.ErisHandlerClient;
 import com.mjr.extraplanets.planets.Jupiter.JupiterHandlerClient;
@@ -138,6 +142,21 @@ public class ClientProxy extends CommonProxy {
 		if (Config.eris)
 			FMLCommonHandler.instance().bus().register(new ErisHandlerClient());
 
+		if (Config.callisto)
+			FMLCommonHandler.instance().bus().register(new CallistoHandlerClient());
+		if (Config.deimos)
+			FMLCommonHandler.instance().bus().register(new DeimosHandlerClient());
+		if (Config.europa)
+			FMLCommonHandler.instance().bus().register(new EuropaHandlerClient());
+		if (Config.ganymede)
+			FMLCommonHandler.instance().bus().register(new GanymedeHandlerClient());
+		if (Config.io)
+			FMLCommonHandler.instance().bus().register(new IoHandlerClient());
+		if (Config.phobos)
+			FMLCommonHandler.instance().bus().register(new PhobosHandlerClient());
+		if (Config.triton)
+			FMLCommonHandler.instance().bus().register(new TritonHandlerClient());
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}
 
