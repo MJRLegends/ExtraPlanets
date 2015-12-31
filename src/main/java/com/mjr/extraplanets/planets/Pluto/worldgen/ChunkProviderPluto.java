@@ -16,11 +16,18 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomBossPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomChestsPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomEmptyPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomSpawnerPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomTreasurePluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.MapGenDungeon;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.MapGenVillagePluto;
 
 public class ChunkProviderPluto extends ChunkProviderSpace {
@@ -31,10 +38,31 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
 
-
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.plutoDungeonBrick, 14, 8, 16, 3);
+	
 	public ChunkProviderPluto(World par1World, long seed,
 			boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
+		this.dungeonGenerator.otherRooms.add(new RoomEmptyPluto(null, 0, 0, 0,
+				ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
+						RoomSpawnerPluto(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+				this.dungeonGenerator.otherRooms.add(new RoomSpawnerPluto(null, 0, 0,
+						0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
+								RoomSpawnerPluto(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+						this.dungeonGenerator.otherRooms.add(new RoomSpawnerPluto(null, 0, 0,
+								0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
+										RoomSpawnerPluto(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+								this.dungeonGenerator.otherRooms.add(new RoomSpawnerPluto(null, 0, 0,
+										0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
+												RoomSpawnerPluto(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+										this.dungeonGenerator.otherRooms.add(new RoomSpawnerPluto(null, 0, 0,
+												0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
+														RoomChestsPluto(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+												this.dungeonGenerator.otherRooms.add(new RoomChestsPluto(null, 0, 0,
+														0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.bossRooms.add(new
+																RoomBossPluto(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+														this.dungeonGenerator.treasureRooms.add(new RoomTreasurePluto(null, 0,
+																0, 0, ForgeDirection.UNKNOWN));
 
 	}
 
@@ -123,11 +151,14 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.dungeonGenerator.generateUsingArrays(this.worldObj,
+				this.worldObj.getSeed(), cX * 16, 25, cZ * 16, cX, cZ, blocks,metadata);
 	}
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+		this.dungeonGenerator.handleTileEntities(this.rand);
 	}
 
 	@Override
