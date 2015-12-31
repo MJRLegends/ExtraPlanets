@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen.biome;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class BiomeGenTest extends BiomeGenBaseNeptune

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
@@ -33,7 +32,6 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.MapGenVillageNeptune;
@@ -395,7 +393,7 @@ public class ChunkProviderNeptuneNew extends ChunkProviderGenerate {
 			}
 		}
 	}
-	
+
 	public void makeCrater(int craterX, int craterZ, int chunkX, int chunkZ, int size, Block[] chunkArray, byte[] metaArray) {
 		for (int x = 0; x < 16; x++) {
 			for (int z = 0; z < 16; z++) {
@@ -428,9 +426,9 @@ public class ChunkProviderNeptuneNew extends ChunkProviderGenerate {
 		n = n << 13 ^ n;
 		return 1.0 - (n * (n * n * 15731 + 789221) + 1376312589 & 0x7fffffff) / 1073741824.0;
 	}
-	
+
 	private int getIndex(int x, int y, int z)
-    {
-        return (x * 16 + z) * 256 + y;
-    }
+	{
+		return (x * 16 + z) * 256 + y;
+	}
 }

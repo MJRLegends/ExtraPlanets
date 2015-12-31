@@ -3,12 +3,6 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks;
 import java.util.List;
 import java.util.Random;
 
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -19,11 +13,17 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class BlockBasicRhea extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
 	private String name;
-	
+
 	public BlockBasicRhea(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
@@ -70,15 +70,15 @@ public class BlockBasicRhea extends Block {
 	}
 
 	@Override
-    public int damageDropped(int meta)
-    {
-        switch (meta)
-        {
-        default:
-            return meta;
-        }
-    }
-	
+	public int damageDropped(int meta)
+	{
+		switch (meta)
+		{
+		default:
+			return meta;
+		}
+	}
+
 	@Override
 	public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_) {
 		return p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);

@@ -1,9 +1,9 @@
 package micdoodle8.mods.galacticraft.api.event.oxygen;
 
-import cpw.mods.fml.common.eventhandler.Cancelable;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import cpw.mods.fml.common.eventhandler.Cancelable;
 
 /**
  * Entity Living suffocation events.
@@ -13,39 +13,39 @@ import net.minecraftforge.event.entity.living.LivingEvent;
  */
 public abstract class GCCoreOxygenSuffocationEvent extends LivingEvent
 {
-    public final WorldProvider provider;
+	public final WorldProvider provider;
 
-    public GCCoreOxygenSuffocationEvent(EntityLivingBase entity)
-    {
-        super(entity);
-        this.provider = entity.worldObj.provider;
-    }
+	public GCCoreOxygenSuffocationEvent(EntityLivingBase entity)
+	{
+		super(entity);
+		this.provider = entity.worldObj.provider;
+	}
 
-    /**
-     * This event is posted just before the living entity suffocates
-     * <p/>
-     * Set the event as canceled to stop the living entity from suffocating
-     */
-    @Cancelable
-    public static class Pre extends GCCoreOxygenSuffocationEvent
-    {
-        public Pre(EntityLivingBase entity)
-        {
-            super(entity);
-        }
-    }
+	/**
+	 * This event is posted just before the living entity suffocates
+	 * <p/>
+	 * Set the event as canceled to stop the living entity from suffocating
+	 */
+	@Cancelable
+	public static class Pre extends GCCoreOxygenSuffocationEvent
+	{
+		public Pre(EntityLivingBase entity)
+		{
+			super(entity);
+		}
+	}
 
-    /**
-     * This event is called after the living entity takes damage from oxygen
-     * suffocation
-     * <p/>
-     * The event is not called if the pre event was canceled
-     */
-    public static class Post extends GCCoreOxygenSuffocationEvent
-    {
-        public Post(EntityLivingBase entity)
-        {
-            super(entity);
-        }
-    }
+	/**
+	 * This event is called after the living entity takes damage from oxygen
+	 * suffocation
+	 * <p/>
+	 * The event is not called if the pre event was canceled
+	 */
+	public static class Post extends GCCoreOxygenSuffocationEvent
+	{
+		public Post(EntityLivingBase entity)
+		{
+			super(entity);
+		}
+	}
 }

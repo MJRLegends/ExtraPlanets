@@ -3,7 +3,6 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -72,15 +71,15 @@ public class BlockBasicMercury extends Block {
 	}
 
 	@Override
-    public int damageDropped(int meta)
-    {
-        switch (meta)
-        {
-        default:
-            return meta;
-        }
-    }
-	
+	public int damageDropped(int meta)
+	{
+		switch (meta)
+		{
+		default:
+			return meta;
+		}
+	}
+
 	@Override
 	public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_) {
 		return p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);

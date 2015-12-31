@@ -111,7 +111,6 @@ public class ExtraPlanetsItems {
 		}
 		if (Config.ceres) {
 			ingotUranium = new ItemBasicItem("ingotUranium");
-
 			salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanetsFluids.salt);
 		}
 		if (Config.jupiter) {

@@ -2,9 +2,10 @@ package com.mjr.extraplanets.handlers;
 
 import java.util.Random;
 
+import net.minecraft.entity.effect.EntityLightningBolt;
+
 import com.mjr.extraplanets.Config;
 
-import net.minecraft.entity.effect.EntityLightningBolt;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
@@ -25,9 +26,9 @@ public class MainHandler {
 				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(
 						event.player.worldObj, event.player.posX + addX,
 						event.player.posY, event.player.posZ + addZ));
-//			if (rainingSpawnChance == 1
-//					&& event.player.worldObj.isRaining() == false)
-//				event.player.worldObj.setRainStrength(10);
+			//			if (rainingSpawnChance == 1
+			//					&& event.player.worldObj.isRaining() == false)
+			//				event.player.worldObj.setRainStrength(10);
 		}
 	}
 }

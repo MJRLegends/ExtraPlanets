@@ -24,10 +24,10 @@ public class BiomeDecoratorNeptuneNew extends BiomeDecorator{
 	private int LakesPerChunk = 5;
 
 	private World currentWorld;
-    protected Random rand;
+	protected Random rand;
 
-    protected int chunkX;
-    protected int chunkZ;
+	protected int chunkX;
+	protected int chunkZ;
 
 	public BiomeDecoratorNeptuneNew()
 	{
@@ -41,16 +41,16 @@ public class BiomeDecoratorNeptuneNew extends BiomeDecorator{
 
 	}
 	protected void generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
-    {
-        World currentWorld;
+	{
+		World currentWorld;
 		for (int var5 = 0; var5 < amountPerChunk; ++var5)
-        {
-            final int var6 = this.chunkX + this.rand.nextInt(16);
-            final int var7 = this.rand.nextInt(maxY - minY) + minY;
-            final int var8 = this.chunkZ + this.rand.nextInt(16);
-            worldGenerator.generate(this.currentWorld, this.rand, var6, var7, var8);
-        }
-    }
+		{
+			final int var6 = this.chunkX + this.rand.nextInt(16);
+			final int var7 = this.rand.nextInt(maxY - minY) + minY;
+			final int var8 = this.chunkZ + this.rand.nextInt(16);
+			worldGenerator.generate(this.currentWorld, this.rand, var6, var7, var8);
+		}
+	}
 	@Override
 	public void decorateChunk(World world, Random rand, BiomeGenBase biome, int xChunk, int zChunk)
 	{

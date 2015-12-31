@@ -26,7 +26,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.EnumDifficulty;
@@ -235,7 +234,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	protected EntityEvolvedIceSlimeBoss createInstance() {
 		return new EntityEvolvedIceSlimeBoss(this.worldObj);
 	}
-	
+
 	@Override
 	public void onLivingUpdate()
 	{

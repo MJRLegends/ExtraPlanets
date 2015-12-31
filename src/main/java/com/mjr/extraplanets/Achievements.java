@@ -1,9 +1,6 @@
 package com.mjr.extraplanets;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.stats.Achievement;
-
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class Achievements {
 

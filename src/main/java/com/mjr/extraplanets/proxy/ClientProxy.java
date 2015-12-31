@@ -168,7 +168,7 @@ public class ClientProxy extends CommonProxy {
 			FMLCommonHandler.instance().bus().register(new RheaHandlerClient());
 		if (Config.titan)
 			FMLCommonHandler.instance().bus().register(new TitanHandlerClient());
-		
+
 		RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}
 

@@ -3,8 +3,6 @@ package com.mjr.extraplanets.tile;
 import java.util.Iterator;
 import java.util.List;
 
-import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
-
 import micdoodle8.mods.galacticraft.api.item.IKeyable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
@@ -22,6 +20,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
+
+import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+
 import cpw.mods.fml.relauncher.Side;
 
 public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IInventory, IKeyable, IPacketReceiver

@@ -3,7 +3,6 @@ package com.mjr.extraplanets.worldGen.features;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.WeightedRandomChestContent;
@@ -14,7 +13,7 @@ import net.minecraftforge.common.ChestGenHooks;
 public class WorldGenIgloo extends WorldGenerator {
 
 	public WorldGenIgloo() {
-		
+
 	}
 
 	@Override
@@ -801,7 +800,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlock(x + 8, y + 6, z + 10, Blocks.air, 0, 3);
 		world.setBlock(x + 9, y + 6, z + 10, Blocks.air, 0, 3);
 		world.setBlock(x + 10, y + 6, z + 10, Blocks.air, 0, 3);
-		
+
 		TileEntityChest chest = (TileEntityChest) world.getTileEntity(x + 8, y + 1, z + 5);
 
 		if (chest != null)

@@ -3,7 +3,6 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -19,7 +18,6 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -28,7 +26,7 @@ public class BlockBasicCeres extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
 	private String name;
-	
+
 	public BlockBasicCeres(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
@@ -76,15 +74,15 @@ public class BlockBasicCeres extends Block {
 	}
 
 	@Override
-    public int damageDropped(int meta)
-    {
-        switch (meta)
-        {
-        default:
-            return meta;
-        }
-    }
-	
+	public int damageDropped(int meta)
+	{
+		switch (meta)
+		{
+		default:
+			return meta;
+		}
+	}
+
 	@Override
 	public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_) {
 		return p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);
@@ -110,17 +108,17 @@ public class BlockBasicCeres extends Block {
 
 		return super.getPickBlock(target, world, x, y, z);
 	}
-	
+
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta)
-    {
+	{
 		if (meta == 6) {
-        	EntityPlayer entity = world.getClosestPlayer(x + 0.5D, y + 0.5D, z + 0.5D, 10.0);
-        	if (entity != null) {
+			EntityPlayer entity = world.getClosestPlayer(x + 0.5D, y + 0.5D, z + 0.5D, 10.0);
+			if (entity != null) {
 				entity.addPotionEffect(new PotionEffect(Potion.poison.getId(), 50, 1));
 			}
-	        
+
 		}
-    }
+	}
 
 }

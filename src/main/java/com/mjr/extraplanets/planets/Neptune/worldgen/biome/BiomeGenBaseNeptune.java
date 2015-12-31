@@ -64,7 +64,7 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 	}
 
 	protected BiomeDecorator getBiomeDecorator() {
-		return (BiomeDecoratorNeptuneNew) this.theBiomeDecorator;
+		return this.theBiomeDecorator;
 	}
 
 	@Override
@@ -158,7 +158,7 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 
 	@Override
 	public BiomeGenBase setColor(int var1) {
-		return (BiomeGenBase) super.setColor(var1);
+		return super.setColor(var1);
 	}
 
 	@Override

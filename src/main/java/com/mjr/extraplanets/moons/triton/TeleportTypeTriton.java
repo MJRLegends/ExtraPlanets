@@ -10,8 +10,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
-import com.mjr.extraplanets.Achievements;
-
 public class TeleportTypeTriton implements ITeleportType {
 	@Override
 	public boolean useParachute() {

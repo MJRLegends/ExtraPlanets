@@ -28,8 +28,8 @@ public class RadiationBarOverlay extends Gui {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		GL11.glDisable(GL11.GL_LIGHTING);
 		FontRenderer fontRender = this.mc.fontRenderer;
-		this.drawRect(xPos-1, yPos-1, xPos + 101, 16, 0xFFFFFFFF);
-		this.drawRect(xPos, yPos, xPos + 100, 15, 0xFF000000);
+		Gui.drawRect(xPos-1, yPos-1, xPos + 101, 16, 0xFFFFFFFF);
+		Gui.drawRect(xPos, yPos, xPos + 100, 15, 0xFF000000);
 		//this.drawRect(xPos, yPos, xPos + PlayerRadiationHandler.getRadiationAmount(), 15, 0xFF0099FF);
 		//this.drawString(fontRender, PlayerRadiationHandler.getRadiationAmount() + "/100", xPos+ 30, yPos+ 2, 0xFFFFFFFF);
 	}

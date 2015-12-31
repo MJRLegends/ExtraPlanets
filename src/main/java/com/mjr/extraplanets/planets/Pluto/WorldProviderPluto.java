@@ -9,7 +9,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.PlanetsMain;
 import com.mjr.extraplanets.planets.Pluto.worldgen.ChunkProviderPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.WorldChunkManagerPluto;

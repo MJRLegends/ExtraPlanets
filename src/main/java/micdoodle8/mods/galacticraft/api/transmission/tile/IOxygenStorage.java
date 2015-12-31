@@ -5,18 +5,18 @@ package micdoodle8.mods.galacticraft.api.transmission.tile;
  */
 public interface IOxygenStorage
 {
-    /**
-     * Sets the amount of oxygen this unit has stored.
-     */
-    public void setOxygenStored(float oxygen);
+	/**
+	 * Sets the amount of oxygen this unit has stored.
+	 */
+	public void setOxygenStored(float oxygen);
 
-    /**
-     * * @return Get the amount of oxygen currently stored in the block.
-     */
-    public float getOxygenStored();
+	/**
+	 * * @return Get the amount of oxygen currently stored in the block.
+	 */
+	public float getOxygenStored();
 
-    /**
-     * @return Get the max amount of oxygen that can be stored in the block.
-     */
-    public float getMaxOxygenStored();
+	/**
+	 * @return Get the max amount of oxygen that can be stored in the block.
+	 */
+	public float getMaxOxygenStored();
 }

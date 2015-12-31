@@ -96,7 +96,7 @@ public class Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.erisBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
-		
+
 		if (Config.callisto) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.callistoBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.callistoBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
@@ -160,7 +160,7 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 0),
 					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier4Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 1), 'Z',
-					new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4) });
+				new ItemStack(ExtraPlanetsItems.tier4Items, 1, 4) });
 			// Armour
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.carbonHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.carbonChest), new Object[] { "M M", "MMM", "MMM", 'M', new ItemStack(ExtraPlanetsItems.tier4Items, 1, 5) });
@@ -195,7 +195,7 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 0),
 					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 11), 'Z',
-					new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4) });
+				new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4) });
 
 			// Tools
 			if (Config.palladiumItems) {
@@ -229,7 +229,7 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 0),
 					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier6Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 5), 'Z',
-					new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
+				new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
 
 			// Tools
 			if (Config.magnesiumItems) {
@@ -259,7 +259,7 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 0),
 					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 2), 'Z',
-					new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
+				new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
 			// Tools
 			if (Config.crystalItems) {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanetsTools.crystalPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
@@ -288,7 +288,7 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 0),
 					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 2), 'Z',
-					new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5) });
+				new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5) });
 
 			// Battery
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.zincBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5), 'R', Items.redstone, 'C', Items.coal });
@@ -306,7 +306,7 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier9Items, 1, 0),
 					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier9Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier9Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier9Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 2), 'Z',
-					new ItemStack(ExtraPlanetsItems.tier9Items, 1, 4) });
+				new ItemStack(ExtraPlanetsItems.tier9Items, 1, 4) });
 			// Slab's & Stairs
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.plutoStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 1, 2) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.plutoStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 1, 2) });

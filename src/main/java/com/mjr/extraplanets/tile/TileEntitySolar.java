@@ -88,52 +88,52 @@ IInventory, ISidedInventory, IConnector {
 				this.solarStrength = 0;
 
 				if (this.worldObj.provider instanceof IGalacticraftWorldProvider || !this.worldObj.isRaining()
-								&& !this.worldObj.isThundering()) {
+						&& !this.worldObj.isThundering()) {
 					if(this.worldObj.isDaytime()){
 						double distance = 100.0D;
 						double sinA = -Math.sin((this.currentAngle - 77.5D) * Math.PI / 180.0D);
 						double cosA = Math.abs(Math.cos((this.currentAngle - 77.5D) * Math.PI / 180.0D));
-	
+
 						for (int x = -1; x <= 1; x++) {
 							for (int z = -1; z <= 1; z++) {
 								if (this.tierGC == 1) {
 									if (this.worldObj.canBlockSeeTheSky(this.xCoord + x, this.yCoord + 2, this.zCoord + z)) {
 										boolean valid = true;
-	
+
 										for (int y = this.yCoord + 3; y < 256; y++) {
 											Block block = this.worldObj.getBlock(this.xCoord + x, y, this.zCoord + z);
-	
+
 											if (block.isOpaqueCube()) {
 												valid = false;
 												break;
 											}
 										}
-	
+
 										if (valid) {
 											this.solarStrength++;
 										}
 									}
 								} else {
 									boolean valid = true;
-	
+
 									BlockVec3 blockVec = new BlockVec3(this).translate(x, 3, z);
 									for (double d = 0.0D; d < distance; d++) {
 										BlockVec3 blockAt = blockVec.clone().translate((int) (d * sinA), (int) (d * cosA), 0);
 										Block block = blockAt.getBlock(this.worldObj);
-	
+
 										if (block.isOpaqueCube()) {
 											valid = false;
 											break;
 										}
 									}
-	
+
 									if (valid) {
 										this.solarStrength++;
 									}
 								}
 							}
-						} 
-						
+						}
+
 					}
 					else {
 						int metadata = this.getBlockMetadata();

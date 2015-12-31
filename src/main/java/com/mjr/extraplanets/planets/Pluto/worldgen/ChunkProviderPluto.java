@@ -22,12 +22,12 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.MapGenDungeon;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomBossPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomChestsPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomEmptyPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomSpawnerPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomTreasurePluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.MapGenDungeon;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.MapGenVillagePluto;
 
 public class ChunkProviderPluto extends ChunkProviderSpace {
@@ -39,7 +39,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.plutoDungeonBrick, 14, 8, 16, 3);
-	
+
 	public ChunkProviderPluto(World par1World, long seed,
 			boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

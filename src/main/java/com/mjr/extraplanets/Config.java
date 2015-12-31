@@ -43,7 +43,7 @@ public class Config {
 	public static boolean ganymede;
 	public static boolean rhea;
 	public static boolean titan;
-	
+
 	public static int mercuryID;
 	public static int venusID;
 	public static int ceresID;
@@ -63,34 +63,34 @@ public class Config {
 	public static int ganymedeID;
 	public static int rheaID;
 	public static int titanID;
-	
+
 	public static int mercurySpaceStationID;
 	public static int mercurySpaceStationStaticID;
-	
+
 	public static int venusSpaceStationID;
 	public static int venusSpaceStationStaticID;
-	
+
 	public static int ceresSpaceStationID;
 	public static int ceresSpaceStationStaticID;
 
 	public static int marsSpaceStationID;
 	public static int marsSpaceStationStaticID;
-	
+
 	public static int jupiterSpaceStationID;
 	public static int jupiterSpaceStationStaticID;
-	
+
 	public static int saturnSpaceStationID;
 	public static int saturnSpaceStationStaticID;
-	
+
 	public static int uranusSpaceStationID;
 	public static int uranusSpaceStationStaticID;
-	
+
 	public static int neptuneSpaceStationID;
 	public static int neptuneSpaceStationStaticID;
-	
+
 	public static int plutoSpaceStationID;
 	public static int plutoSpaceStationStaticID;
-	
+
 	public static int erisSpaceStationID;
 	public static int erisSpaceStationStaticID;
 
@@ -113,7 +113,7 @@ public class Config {
 	public static int ganymedeBiomeID;
 	public static int rheaBiomeID;
 	public static int titanBiomeID;
-	
+
 	public static int mercuryRocketTier;
 	public static int ceresRocketTier;
 	public static int erisRocketTier;
@@ -176,7 +176,7 @@ public class Config {
 		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
 		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
 		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
-		
+
 		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block!").getBoolean(true);
 		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block!").getBoolean(true);
 		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block!").getBoolean(true);
@@ -220,37 +220,37 @@ public class Config {
 		rheaID = config.get(dimensionID, "Rhea Dimension ID", -39).getInt();
 		titanID = config.get(dimensionID, "Titan Dimension ID", -40).getInt();
 
-		
+
 		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
 		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -60).getInt();
-		
+
 		venusSpaceStationID = config.get(dimensionID, "Venus SpaceStation Dimension ID", -63).getInt();
 		venusSpaceStationStaticID = config.get(dimensionID, "Venus SpaceStation Static Dimension ID", -62).getInt();
-		
+
 		ceresSpaceStationID = config.get(dimensionID, "Ceres SpaceStation Dimension ID", -65).getInt();
 		ceresSpaceStationStaticID = config.get(dimensionID, "Ceres SpaceStation Static Dimension ID", -64).getInt();
-	
+
 		marsSpaceStationID = config.get(dimensionID, "Mars SpaceStation Dimension ID", -67).getInt();
 		marsSpaceStationStaticID = config.get(dimensionID, "Mars SpaceStation Static Dimension ID", -66).getInt();
-		
+
 		jupiterSpaceStationID = config.get(dimensionID, "Jupiter SpaceStation Dimension ID", -69).getInt();
 		jupiterSpaceStationStaticID = config.get(dimensionID, "Jupiter SpaceStation Static Dimension ID", -68).getInt();
-		
+
 		saturnSpaceStationID = config.get(dimensionID, "Saturn SpaceStation Dimension ID", -71).getInt();
 		saturnSpaceStationStaticID = config.get(dimensionID, "Saturn SpaceStation Static Dimension ID", -70).getInt();
-		
+
 		uranusSpaceStationID = config.get(dimensionID, "Uranus SpaceStation Dimension ID", -73).getInt();
 		uranusSpaceStationStaticID = config.get(dimensionID, "Uranus SpaceStation Static Dimension ID", -72).getInt();
-		
+
 		neptuneSpaceStationID = config.get(dimensionID, "Neptune SpaceStation Dimension ID", -75).getInt();
 		neptuneSpaceStationStaticID = config.get(dimensionID, "Neptune SpaceStation Static Dimension ID", -74).getInt();
-		
+
 		plutoSpaceStationID = config.get(dimensionID, "Pluto SpaceStation Dimension ID", -77).getInt();
 		plutoSpaceStationStaticID = config.get(dimensionID, "Pluto SpaceStation Static Dimension ID", -76).getInt();
-		
+
 		erisSpaceStationID = config.get(dimensionID, "Eris SpaceStation Dimension ID", -79).getInt();
 		erisSpaceStationStaticID = config.get(dimensionID, "Eris SpaceStation Static Dimension ID", -78).getInt();
-		
+
 		mercuryBiomeID = config.get(biomeID, "Mercury Biome ID", 148).getInt();
 		venusBiomeID = config.get(biomeID, "Venus Biome ID", 149).getInt();
 		ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();
@@ -269,7 +269,7 @@ public class Config {
 		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 163).getInt();
 		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 164).getInt();
 		titanBiomeID = config.get(biomeID, "Titan Biome ID", 165).getInt();
-		
+
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();

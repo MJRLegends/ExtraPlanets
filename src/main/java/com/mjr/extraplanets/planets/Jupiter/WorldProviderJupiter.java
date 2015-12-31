@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.planets.PlanetsMain;
