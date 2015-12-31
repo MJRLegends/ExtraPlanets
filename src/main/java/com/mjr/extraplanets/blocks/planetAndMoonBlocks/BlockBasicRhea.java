@@ -48,7 +48,7 @@ public class BlockBasicRhea extends Block {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public CreativeTabs getCreativeTabToDisplayOn() {
-		return GalacticraftCore.galacticraftBlocksTab;
+		return ExtraPlanets.BlocksTab;
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -30,9 +30,8 @@ public class BlockBasicCallisto extends Block {
 		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
 		this.name = assetName;
-		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
@@ -49,7 +48,7 @@ public class BlockBasicCallisto extends Block {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public CreativeTabs getCreativeTabToDisplayOn() {
-		return GalacticraftCore.galacticraftBlocksTab;
+		return ExtraPlanets.BlocksTab;
 	}
 
 	@SideOnly(Side.CLIENT)

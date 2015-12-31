@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.items.planetAndMoonBlocks;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
