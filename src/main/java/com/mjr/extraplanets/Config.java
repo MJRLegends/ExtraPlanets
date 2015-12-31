@@ -176,6 +176,8 @@ public class Config {
 		phobos = config.get(dimensionsCustom, "Phobos", true, "").getBoolean(true);
 		callisto = config.get(dimensionsCustom, "Callisto", true, "").getBoolean(true);
 		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
+		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
+		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
 		
 		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block!").getBoolean(true);
 		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block!").getBoolean(true);

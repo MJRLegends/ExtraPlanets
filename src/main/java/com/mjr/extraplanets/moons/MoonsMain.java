@@ -160,7 +160,7 @@ public class MoonsMain {
 			rhea.setRelativeSize(0.3867F);
 			rhea.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			rhea.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/rhea.png"));
-			rhea.setDimensionInfo(Config.ganymedeID, WorldProviderRhea.class);
+			rhea.setDimensionInfo(Config.rheaID, WorldProviderRhea.class);
 		}
 		if (Config.titan) {
 			titan = new Moon("titan").setParentPlanet(PlanetsMain.saturn);
@@ -171,7 +171,7 @@ public class MoonsMain {
 			titan.setRelativeSize(0.3867F);
 			titan.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			titan.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
-			titan.setDimensionInfo(Config.ganymedeID, WorldProviderTitan.class);
+			titan.setDimensionInfo(Config.titanID, WorldProviderTitan.class);
 		}
 	}
 

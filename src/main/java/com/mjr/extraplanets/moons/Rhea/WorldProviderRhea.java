@@ -35,7 +35,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= 4;
+		return tier >= 6;
 	}
 
 	@Override
