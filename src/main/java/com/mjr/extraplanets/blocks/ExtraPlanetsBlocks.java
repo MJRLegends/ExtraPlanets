@@ -55,6 +55,7 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.TileEntityDungeonSp
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.DungeonSpawnerNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.TileEntityDungeonSpawnerNeptune;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.DungeonSpawnerPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.DungeonSpawnerSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.DungeonSpawnerUranus;
@@ -66,6 +67,7 @@ import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -454,6 +456,10 @@ public class ExtraPlanetsBlocks {
 		if (Config.neptune) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
+		}
+		if (Config.pluto) {
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
 	}
 
