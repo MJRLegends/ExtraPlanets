@@ -68,7 +68,7 @@ public class Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 6), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 7), new ItemStack(ExtraPlanetsItems.ingotNickel), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.jupiterBlocks, 0, 7), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 7), 0.0F);
 		}
 		if (Config.saturn) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.saturnBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -83,7 +83,7 @@ public class Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 6), new ItemStack(ExtraPlanetsItems.ingotZinc), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 0, 6), new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5), 0.0F);
 		}
 		if (Config.pluto) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanetsBlocks.plutoBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -207,7 +207,7 @@ public class Recipes {
 			}
 
 			// Battery
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.nickelBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanetsItems.compressedNickel, 1, 0), 'R', Items.redstone, 'C', Items.coal });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.nickelBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 6), 'R', Items.redstone, 'C', Items.coal });
 
 			// Armour
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsArmor.palladiumHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5) });
@@ -288,10 +288,10 @@ public class Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 0),
 					new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 2), 'Z',
-					new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0) });
+					new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5) });
 
 			// Battery
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.zincBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0), 'R', Items.redstone, 'C', Items.coal });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.zincBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5), 'R', Items.redstone, 'C', Items.coal });
 
 			// Slab's & Stairs
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanetsSlabsStairsBlocks.neptuneStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanetsBlocks.neptuneBlocks, 1, 2) });
@@ -322,7 +322,7 @@ public class Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsItems.diamondApple, 1, 1), new Object[] { "DDD", "DAD", "DDD", 'D', new ItemStack(Blocks.diamond_block, 1, 0), 'A', Items.apple });
 
 		// Machines
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsMachines.advancedRefinery), new Object[] { "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsMachines.advancedRefinery), new Object[] { "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsMachines.solarPanel, 1, 0), new Object[] { "ZYZ", 'Y', new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z', new ItemStack(ExtraPlanetsItems.tier6Items, 1, 4) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanetsMachines.solarPanel, 1, 4), new Object[] { "ZYZ", 'Y', new ItemStack(ExtraPlanetsMachines.solarPanel, 1, 0), 'Z', new ItemStack(ExtraPlanetsItems.tier7Items, 1, 4) });
 
@@ -348,7 +348,7 @@ public class Recipes {
 		}
 		if (Config.jupiter) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 5));
-			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.compressedNickel, 1, 0), new ItemStack(ExtraPlanetsItems.ingotNickel, 1, 0), new ItemStack(ExtraPlanetsItems.ingotNickel, 1, 0));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 6), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 7), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 7));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier5Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier4Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier5Items, 1, 4));
 		}
 		if (Config.saturn) {
@@ -361,8 +361,8 @@ public class Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier6Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 6));
 		}
 		if (Config.neptune) {
-			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0), new ItemStack(ExtraPlanetsItems.ingotZinc, 1, 0), new ItemStack(ExtraPlanetsItems.ingotZinc, 1, 0));
-			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), new ItemStack(ExtraPlanetsItems.compressedZinc, 1, 0));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5), new ItemStack(ExtraPlanetsItems.tier8Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier8Items, 1, 4));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier8Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier7Items, 1, 3), new ItemStack(ExtraPlanetsItems.tier8Items, 1, 5));
 		}
 		if (Config.pluto) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanetsItems.tier9Items, 1, 4), new ItemStack(ExtraPlanetsItems.tier9Items, 1, 5), new ItemStack(ExtraPlanetsItems.tier9Items, 1, 5));

@@ -64,8 +64,6 @@ public class ExtraPlanetsItems {
 	public static Item tier8Items;
 	public static Item tier9Items;
 
-	public static Item ingotUranium;
-
 	public static Item T4key;
 	public static Item T5key;
 	public static Item T6key;
@@ -77,14 +75,6 @@ public class ExtraPlanetsItems {
 	public static Item zincBattery;
 	public static Item mercuryBattery;
 
-	public static Item compressedZinc;
-	public static Item compressedNickel;
-	public static Item compressedMercury;
-
-	public static Item ingotZinc;
-	public static Item ingotNickel;
-	public static Item ingotMercury;
-
 	public static Item glowstone_bucket;
 	public static Item magma_bucket;
 	public static Item nitrogen_bucket;
@@ -93,8 +83,11 @@ public class ExtraPlanetsItems {
 
 	public static Item cannedFood;
 	public static Item diamondApple;
-
 	public static Item bodyParts;
+
+	public static Item ingotUranium;
+	public static Item compressedMercury;
+	public static Item ingotMercury;
 
 	public static void init() {
 		initializeItems();
@@ -123,9 +116,6 @@ public class ExtraPlanetsItems {
 		}
 		if (Config.jupiter) {
 			nickelBattery = new ItemBasicBattery("nickelBattery", 45000f, 2);
-
-			ingotNickel = new ItemBasicItem("ingotNickel");
-			compressedNickel = new ItemNickelCompressed("compressedNickel");
 			magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanetsFluids.magma);
 
 			tier5Rocket = new Tier5Rocket("itemTier5Rocket");
@@ -154,8 +144,6 @@ public class ExtraPlanetsItems {
 		}
 		if (Config.neptune) {
 			zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
-			ingotZinc = new ItemBasicItem("ingotZinc");
-			compressedZinc = new ItemZincCompressed("compressedZinc");
 			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanetsFluids.nitrogen);
 
 			tier8Rocket = new Tier8Rocket("itemTier8Rocket");
@@ -169,7 +157,7 @@ public class ExtraPlanetsItems {
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
-		
+
 		if (Config.pluto) {
 			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
 			schematicTier9 = new SchematicTier9("schematicTier9");
@@ -206,9 +194,6 @@ public class ExtraPlanetsItems {
 			GameRegistry.registerItem(T5key, "T5key");
 
 			GameRegistry.registerItem(nickelBattery, "nickelBattery");
-			GameRegistry.registerItem(compressedNickel, "compressedNickel");
-			GameRegistry.registerItem(ingotNickel, "ingotNickel");
-
 			GameRegistry.registerItem(magma_bucket, "bucket_magma");
 		}
 		if (Config.saturn) {
@@ -237,9 +222,6 @@ public class ExtraPlanetsItems {
 			GameRegistry.registerItem(T8key, "T8key");
 
 			GameRegistry.registerItem(zincBattery, "zincBattery");
-			GameRegistry.registerItem(compressedZinc, "compressedZinc");
-			GameRegistry.registerItem(ingotZinc, "ingotZinc");
-
 			GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		}
 

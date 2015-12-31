@@ -30,50 +30,7 @@ moon.titan=Titan
 moon.oberon=Oberon
 moon.titania=Titania
 
-#Planet/Moon Blocks
-tile.callisto.surface.name=Callisto Surface Rock
-tile.callisto.subSurface.name=Callisto Sub-Surface Rock
-tile.callisto.stone.name=Callisto Stone
-tile.callisto.oreIron.name=Callisto Iron Ore
-tile.callisto.oreTin.name=Callisto Tin Ore
-tile.callisto.oreCopper.name=Callisto Copper Ore
-
-tile.ceres.surface.name=Ceres Surface Rock
-tile.ceres.subSurface.name=Ceres Sub-Surface Rock
-tile.ceres.stone.name=Ceres Stone
-tile.ceres.oreIron.name=Ceres Iron Ore
-tile.ceres.oreTin.name=Ceres Tin Ore
-tile.ceres.oreCopper.name=Ceres Copper Ore
-tile.ceres.oreUranium.name=Ceres Uranium Ore
-
-tile.deimos.surface.name=Deimos Surface Rock
-tile.deimos.subSurface.name=Deimos Sub-Surface Rock
-tile.deimos.stone.name=Deimos Stone
-tile.deimos.oreIron.name=Deimos Iron Ore
-tile.deimos.oreTin.name=Deimos Tin Ore
-tile.deimos.oreCopper.name=Deimos Copper Ore
-
-tile.eris.surface.name=Eris Surface Rock
-tile.eris.subSurface.name=Eris Sub-Surface Rock
-tile.eris.stone.name=Eris Stone
-tile.eris.oreIron.name=Eris Iron Ore
-tile.eris.oreTin.name=Eris Tin Ore
-tile.eris.oreCopper.name=Eris Copper Ore
-
-tile.europa.surface.name=Europa Surface Rock
-tile.europa.subSurface.name=Europa Sub-Surface Rock
-tile.europa.stone.name=Europa Stone
-tile.europa.oreIron.name=Europa Iron Ore
-tile.europa.oreTin.name=Europa Tin Ore
-tile.europa.oreCopper.name=Europa Copper Ore
-
-tile.io.surface.name=IO Surface Rock
-tile.io.subSurface.name=IO Sub-Surface Rock
-tile.io.stone.name=IO Stone
-tile.io.oreIron.name=IO Iron Ore
-tile.io.oreTin.name=IO Tin Ore
-tile.io.oreCopper.name=IO Copper Ore
-
+#Planet Blocks
 tile.mercury.surface.name=Mercury Surface Rock
 tile.mercury.subSurface.name=Mercury Sub-Surface Rock
 tile.mercury.stone.name=Mercury Stone
@@ -82,49 +39,6 @@ tile.mercury.oreTin.name=Mercury Tin Ore
 tile.mercury.oreCopper.name=Mercury Copper Ore
 tile.mercury.oreMercury.name=Mercury Ore
 
-tile.phobos.surface.name=Phobos Surface Rock
-tile.phobos.subSurface.name=Phobos Sub-Surface Rock
-tile.phobos.stone.name=Phobos Stone
-tile.phobos.oreIron.name=Phobos Iron Ore
-tile.phobos.oreTin.name=Phobos Tin Ore
-tile.phobos.oreCopper.name=Phobos Copper Ore
-
-tile.pluto.surface.name=Pluto Surface Rock
-tile.pluto.subSurface.name=Pluto Sub-Surface Rock
-tile.pluto.stone.name=Pluto Stone
-tile.pluto.oreIron.name=Pluto Iron Ore
-tile.pluto.oreTin.name=Pluto Tin Ore
-tile.pluto.oreCopper.name=Pluto Copper Ore
-tile.pluto.oreTungsten.name=Pluto Tungsten Ore
-
-tile.triton.surface.name=Triton Surface Rock
-tile.triton.subSurface.name=Triton Sub-Surface Rock
-tile.triton.stone.name=Triton Stone
-tile.triton.oreIron.name=Triton Iron Ore
-tile.triton.oreTin.name=Triton Tin Ore
-tile.triton.oreCopper.name=Triton Copper Ore
-
-tile.ganymede.surface.name=Ganymede Surface Rock
-tile.ganymede.subSurface.name=Ganymede Sub-Surface Rock
-tile.ganymede.stone.name=Ganymede Stone
-tile.ganymede.oreIron.name=Ganymede Iron Ore
-tile.ganymede.oreTin.name=Ganymede Tin Ore
-tile.ganymede.oreCopper.name=Ganymede Copper Ore
-
-tile.rhea.surface.name=Rhea Surface Rock
-tile.rhea.subSurface.name=Rhea Sub-Surface Rock
-tile.rhea.stone.name=Rhea Stone
-tile.rhea.oreIron.name=Rhea Iron Ore
-tile.rhea.oreTin.name=Rhea Tin Ore
-tile.rhea.oreCopper.name=Rhea Copper Ore
-
-tile.titan.surface.name=Titan Surface Rock
-tile.titan.subSurface.name=Titan Sub-Surface Rock
-tile.titan.stone.name=Titan Stone
-tile.titan.oreIron.name=Titan Iron Ore
-tile.titan.oreTin.name=Titan Tin Ore
-tile.titan.oreCopper.name=Titan Copper Ore
-
 tile.venus.surface.name=Venus Surface Rock
 tile.venus.subSurface.name=Venus Sub-Surface Rock
 tile.venus.stone.name=Venus Stone
@@ -132,6 +46,14 @@ tile.venus.oreIron.name=Venus Iron Ore
 tile.venus.oreTin.name=Venus Tin Ore
 tile.venus.oreCopper.name=Venus Copper Ore
 tile.venus.oreCarbon.name=Carbon Ore
+
+tile.ceres.surface.name=Ceres Surface Rock
+tile.ceres.subSurface.name=Ceres Sub-Surface Rock
+tile.ceres.stone.name=Ceres Stone
+tile.ceres.oreIron.name=Ceres Iron Ore
+tile.ceres.oreTin.name=Ceres Tin Ore
+tile.ceres.oreCopper.name=Ceres Copper Ore
+tile.ceres.oreUranium.name=Ceres Uranium Ore
 
 tile.jupiter.surface.name=Jupiter Surface Rock
 tile.jupiter.subSurface.name=Jupiter Sub-Surface Rock
@@ -162,6 +84,85 @@ tile.neptune.oreIron.name=Neptune Iron Ore
 tile.neptune.oreTin.name=Neptune Tin Ore
 tile.neptune.oreCopper.name=Neptune Copper Ore
 tile.neptune.oreZinc.name=Zinc Ore
+
+tile.pluto.surface.name=Pluto Surface Rock
+tile.pluto.subSurface.name=Pluto Sub-Surface Rock
+tile.pluto.stone.name=Pluto Stone
+tile.pluto.oreIron.name=Pluto Iron Ore
+tile.pluto.oreTin.name=Pluto Tin Ore
+tile.pluto.oreCopper.name=Pluto Copper Ore
+tile.pluto.oreTungsten.name=Pluto Tungsten Ore
+
+tile.eris.surface.name=Eris Surface Rock
+tile.eris.subSurface.name=Eris Sub-Surface Rock
+tile.eris.stone.name=Eris Stone
+tile.eris.oreIron.name=Eris Iron Ore
+tile.eris.oreTin.name=Eris Tin Ore
+tile.eris.oreCopper.name=Eris Copper Ore
+
+#Moon Blocks
+tile.callisto.surface.name=Callisto Surface Rock
+tile.callisto.subSurface.name=Callisto Sub-Surface Rock
+tile.callisto.stone.name=Callisto Stone
+tile.callisto.oreIron.name=Callisto Iron Ore
+tile.callisto.oreTin.name=Callisto Tin Ore
+tile.callisto.oreCopper.name=Callisto Copper Ore
+
+tile.deimos.surface.name=Deimos Surface Rock
+tile.deimos.subSurface.name=Deimos Sub-Surface Rock
+tile.deimos.stone.name=Deimos Stone
+tile.deimos.oreIron.name=Deimos Iron Ore
+tile.deimos.oreTin.name=Deimos Tin Ore
+tile.deimos.oreCopper.name=Deimos Copper Ore
+
+tile.europa.surface.name=Europa Surface Rock
+tile.europa.subSurface.name=Europa Sub-Surface Rock
+tile.europa.stone.name=Europa Stone
+tile.europa.oreIron.name=Europa Iron Ore
+tile.europa.oreTin.name=Europa Tin Ore
+tile.europa.oreCopper.name=Europa Copper Ore
+
+tile.io.surface.name=IO Surface Rock
+tile.io.subSurface.name=IO Sub-Surface Rock
+tile.io.stone.name=IO Stone
+tile.io.oreIron.name=IO Iron Ore
+tile.io.oreTin.name=IO Tin Ore
+tile.io.oreCopper.name=IO Copper Ore
+
+tile.phobos.surface.name=Phobos Surface Rock
+tile.phobos.subSurface.name=Phobos Sub-Surface Rock
+tile.phobos.stone.name=Phobos Stone
+tile.phobos.oreIron.name=Phobos Iron Ore
+tile.phobos.oreTin.name=Phobos Tin Ore
+tile.phobos.oreCopper.name=Phobos Copper Ore
+
+tile.triton.surface.name=Triton Surface Rock
+tile.triton.subSurface.name=Triton Sub-Surface Rock
+tile.triton.stone.name=Triton Stone
+tile.triton.oreIron.name=Triton Iron Ore
+tile.triton.oreTin.name=Triton Tin Ore
+tile.triton.oreCopper.name=Triton Copper Ore
+
+tile.ganymede.surface.name=Ganymede Surface Rock
+tile.ganymede.subSurface.name=Ganymede Sub-Surface Rock
+tile.ganymede.stone.name=Ganymede Stone
+tile.ganymede.oreIron.name=Ganymede Iron Ore
+tile.ganymede.oreTin.name=Ganymede Tin Ore
+tile.ganymede.oreCopper.name=Ganymede Copper Ore
+
+tile.rhea.surface.name=Rhea Surface Rock
+tile.rhea.subSurface.name=Rhea Sub-Surface Rock
+tile.rhea.stone.name=Rhea Stone
+tile.rhea.oreIron.name=Rhea Iron Ore
+tile.rhea.oreTin.name=Rhea Tin Ore
+tile.rhea.oreCopper.name=Rhea Copper Ore
+
+tile.titan.surface.name=Titan Surface Rock
+tile.titan.subSurface.name=Titan Sub-Surface Rock
+tile.titan.stone.name=Titan Stone
+tile.titan.oreIron.name=Titan Iron Ore
+tile.titan.oreTin.name=Titan Tin Ore
+tile.titan.oreCopper.name=Titan Copper Ore
 
 #Planet Gravel Blocks
 tile.mercuryGravel.name=Mercury Gravel
@@ -316,6 +317,7 @@ item.tier7.compressedCrystal.name=Compressed Crystal
 item.compressedZinc.name=Compressed Zinc
 item.compressedNickel.name=Compressed Nickel
 item.compressedMercury.name=Compressed Mercury
+item.tier9.compressedTungsten.name=Compressed Tungsten
 
 #Ingots
 item.tier4.ingotCarbon.name=Carbon Ingot
@@ -326,6 +328,7 @@ item.ingotZinc.name=Zinc Ingot
 item.ingotNickel.name=Nickel Ingot
 item.ingotMercury.name=Mercury Ingot
 item.ingotUranium.name=Uranium Ingot
+item.tier9.ingotTungsten.name=Tungsten Ingot
 
 #Buckets
 item.bucket_glowstone.name=Glowstone Bucket
@@ -472,3 +475,10 @@ achievement.uranusPlanet.desc=Take a Tier 6 rocket to Uranus
 achievement.neptunePlanet.desc=Take a Tier 7 rocket to Neptune
 achievement.plutoPlanet.desc=Take a Tier 8 rocket to Pluto
 achievement.erisPlanet.desc=Take a Tier 8 rocket to Eris
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=Liquid Glowstone
+tile.magma_fluid.name=Liquid Magma
+tile.nitrogen_fluid.name=Liquid Nitrogen
+tile.frozen_water_fluid.name=Frozen Water
+tile.Salt_fluid.name=Liquid Salt
