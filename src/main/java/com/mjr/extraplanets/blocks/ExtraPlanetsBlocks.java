@@ -29,6 +29,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
+import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCallisto;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCeres;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockDeimos;
@@ -113,6 +114,7 @@ public class ExtraPlanetsBlocks {
 	public static Block treasureChestTier6;
 	public static Block treasureChestTier7;
 	public static Block treasureChestTier8;
+	public static Block treasureChestTier9;
 
 	// Need changing to meta blocks -----------------------------------------
 	public static Block OrePalladium;
@@ -126,6 +128,7 @@ public class ExtraPlanetsBlocks {
 	public static Block saturnDungeonBrick;
 	public static Block uranusDungeonBrick;
 	public static Block neptuneDungeonBrick;
+	public static Block plutoDungeonBrick;
 
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
@@ -266,6 +269,10 @@ public class ExtraPlanetsBlocks {
 			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("neptuneDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
 			neptuneDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
+		if (Config.pluto) {
+			plutoDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("plutoDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			plutoDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
+		}
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -283,6 +290,9 @@ public class ExtraPlanetsBlocks {
 		}
 		if (Config.neptune) {
 			treasureChestTier8 = new T8TreasureChest("treasureChestT8");
+		}
+		if (Config.pluto) {
+			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
 	}
 
@@ -358,6 +368,8 @@ public class ExtraPlanetsBlocks {
 		}
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(plutoDungeonBrick, "plutoDungeonBrick");
+			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName());
 			GameRegistry.registerBlock(plutoGravel, "plutoGravel");
 		}
 		if (Config.eris) {

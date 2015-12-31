@@ -25,12 +25,12 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 	private int LakesPerChunk = 10;
 
 	public BiomeDecoratorVenus() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 5, false, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 4, false, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 8, 3, false, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 6, false, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusGravel, 12, 0, false, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.volcanicRock, 20, 0, false, ExtraPlanetsBlocks.venusBlocks, 0);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 5, true, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 4, true, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 8, 3, true, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 6, true, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusGravel, 12, 0, true, ExtraPlanetsBlocks.venusBlocks, 2);
+		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.volcanicRock, 20, 0, true, ExtraPlanetsBlocks.venusBlocks, 0);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);

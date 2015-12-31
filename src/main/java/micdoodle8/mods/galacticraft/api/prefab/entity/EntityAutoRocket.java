@@ -965,7 +965,7 @@ public abstract class EntityAutoRocket extends EntitySpaceshipBase implements IL
     @Override
     public int addFuel(FluidStack liquid, boolean doFill)
     {
-        if (liquid != null && FluidRegistry.getFluidName(liquid).equalsIgnoreCase("fuel"))
+        if (liquid != null && FluidRegistry.getFluidName(liquid).startsWith("fuel"))
         {
             return this.fuelTank.fill(liquid, doFill);
         }
