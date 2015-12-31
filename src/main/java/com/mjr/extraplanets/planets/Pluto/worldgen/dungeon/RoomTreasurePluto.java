@@ -61,7 +61,7 @@ public class RoomTreasurePluto extends DungeonRoom
 		final int hx = (this.posX + this.posX + this.sizeX) / 2;
 		final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
 
-		if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, ExtraPlanetsBlocks.treasureChestTier8, 0))
+		if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, ExtraPlanetsBlocks.treasureChestTier9, 0))
 		{
 			this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
 		}

@@ -41,6 +41,9 @@ public class Config {
 	public static boolean phobos;
 	public static boolean callisto;
 	public static boolean ganymede;
+	public static boolean rhea;
+	public static boolean titan;
+	
 	public static int mercuryID;
 	public static int venusID;
 	public static int ceresID;
@@ -58,6 +61,8 @@ public class Config {
 	public static int phobosID;
 	public static int callistoID;
 	public static int ganymedeID;
+	public static int rheaID;
+	public static int titanID;
 	
 	public static int mercurySpaceStationID;
 	public static int mercurySpaceStationStaticID;
@@ -106,6 +111,8 @@ public class Config {
 	public static int phobosBiomeID;
 	public static int callistoBiomeID;
 	public static int ganymedeBiomeID;
+	public static int rheaBiomeID;
+	public static int titanBiomeID;
 	
 	public static int mercuryRocketTier;
 	public static int ceresRocketTier;

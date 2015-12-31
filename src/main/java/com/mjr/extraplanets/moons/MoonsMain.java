@@ -26,6 +26,10 @@ import com.mjr.extraplanets.moons.Io.TeleportTypeIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
 import com.mjr.extraplanets.moons.Phobos.TeleportTypePhobos;
 import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
+import com.mjr.extraplanets.moons.Rhea.TeleportTypeRhea;
+import com.mjr.extraplanets.moons.Rhea.WorldProviderRhea;
+import com.mjr.extraplanets.moons.Titan.TeleportTypeTitan;
+import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
 import com.mjr.extraplanets.moons.triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.PlanetsMain;
@@ -56,12 +60,6 @@ public class MoonsMain {
 
 	public static void initializeUnReachableMoons() {
 		// Saturn Moons
-		rhea = makeUnreachableMoon("rhea", PlanetsMain.saturn);
-		if (rhea != null)
-			rhea.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
-		titan = makeUnreachableMoon("titan", PlanetsMain.saturn);
-		if (titan != null)
-			titan.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(100.0F);
 		iapetus = makeUnreachableMoon("iapetus", PlanetsMain.saturn);
 		if (iapetus != null)
 			iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(100.0F);
@@ -153,6 +151,28 @@ public class MoonsMain {
 			ganymede.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/ganymede.png"));
 			ganymede.setDimensionInfo(Config.ganymedeID, WorldProviderGanymede.class);
 		}
+		if (Config.rhea) {
+			rhea = new Moon("rhea").setParentPlanet(PlanetsMain.saturn);
+			rhea.setPhaseShift(1.45F);
+			rhea.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
+			rhea.setRelativeOrbitTime(100.0F);
+			rhea.setTierRequired(6);
+			rhea.setRelativeSize(0.3867F);
+			rhea.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			rhea.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/rhea.png"));
+			rhea.setDimensionInfo(Config.ganymedeID, WorldProviderRhea.class);
+		}
+		if (Config.titan) {
+			titan = new Moon("titan").setParentPlanet(PlanetsMain.saturn);
+			titan.setPhaseShift(1.45F);
+			titan.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
+			titan.setRelativeOrbitTime(100.0F);
+			titan.setTierRequired(6);
+			titan.setRelativeSize(0.3867F);
+			titan.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			titan.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
+			titan.setDimensionInfo(Config.ganymedeID, WorldProviderTitan.class);
+		}
 	}
 
 	private static void registerMoons() {
@@ -190,6 +210,16 @@ public class MoonsMain {
 			GalaxyRegistry.registerMoon(ganymede);
 			GalacticraftRegistry.registerTeleportType(WorldProviderGanymede.class, new TeleportTypeGanymede());
 			GalacticraftRegistry.registerRocketGui(WorldProviderGanymede.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/ganymedeRocketGui.png"));
+		}
+		if (Config.rhea) {
+			GalaxyRegistry.registerMoon(rhea);
+			GalacticraftRegistry.registerTeleportType(WorldProviderRhea.class, new TeleportTypeRhea());
+			GalacticraftRegistry.registerRocketGui(WorldProviderRhea.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rheaRocketGui.png"));
+		}
+		if (Config.titan) {
+			GalaxyRegistry.registerMoon(titan);
+			GalacticraftRegistry.registerTeleportType(WorldProviderTitan.class, new TeleportTypeTitan());
+			GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titanRocketGui.png"));
 		}
 	}
 

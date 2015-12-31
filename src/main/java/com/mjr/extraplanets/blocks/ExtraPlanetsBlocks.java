@@ -20,7 +20,9 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPhobos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicRhea;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
@@ -42,7 +44,9 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockMercury;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockNeptune;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockPhobos;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockPluto;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockRhea;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockSaturn;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
@@ -50,6 +54,7 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.DungeonSpawnerJupti
 import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.DungeonSpawnerNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.DungeonSpawnerPluto;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.DungeonSpawnerSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.DungeonSpawnerUranus;
@@ -83,7 +88,9 @@ public class ExtraPlanetsBlocks {
 	public static Block phobosBlocks;
 	public static Block tritonBlocks;
 	public static Block ganymedeBlocks;
-
+	public static Block rheaBlocks;
+	public static Block titanBlocks;
+	
 	// Gravels
 	public static Block mercuryGravel;
 	public static Block venusGravel;
@@ -135,6 +142,7 @@ public class ExtraPlanetsBlocks {
 	public static Block saturnSpawner;
 	public static Block uranusSpawner;
 	public static Block neptuneSpawner;
+	public static Block plutoSpawner;
 
 	// -----------------------------------------------------------------------
 
@@ -220,6 +228,12 @@ public class ExtraPlanetsBlocks {
 		if (Config.ganymede) {
 			ganymedeBlocks = new BlockBasicGanymede("ganymede");
 			ganymedeGravel = new BlockCustomGravel("ganymedeGravel");
+		}
+		if (Config.rhea) {
+			rheaBlocks = new BlockBasicRhea("rhea");
+		}
+		if (Config.titan) {
+			titanBlocks = new BlockBasicTitan("titan");
 		}
 
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
@@ -312,6 +326,9 @@ public class ExtraPlanetsBlocks {
 		if (Config.neptune) {
 			neptuneSpawner = new DungeonSpawnerNeptune();
 		}
+		if (Config.pluto) {
+			plutoSpawner = new DungeonSpawnerPluto();
+		}
 	}
 
 	private static void registerBlocks() {
@@ -368,6 +385,7 @@ public class ExtraPlanetsBlocks {
 		}
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(plutoSpawner, "plutoSpawner");
 			GameRegistry.registerBlock(plutoDungeonBrick, "plutoDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName());
 			GameRegistry.registerBlock(plutoGravel, "plutoGravel");
@@ -404,7 +422,12 @@ public class ExtraPlanetsBlocks {
 			GameRegistry.registerBlock(ganymedeBlocks, ItemBlockGanymede.class, ganymedeBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(ganymedeGravel, "ganymedeGravel");
 		}
-
+		if (Config.rhea) {
+			GameRegistry.registerBlock(rheaBlocks, ItemBlockRhea.class, rheaBlocks.getUnlocalizedName());
+		}
+		if (Config.titan) {
+			GameRegistry.registerBlock(titanBlocks, ItemBlockTitan.class, titanBlocks.getUnlocalizedName());
+		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");
 		if (Config.ceres)
