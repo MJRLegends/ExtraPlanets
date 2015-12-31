@@ -80,6 +80,8 @@ import com.mjr.extraplanets.moons.Europa.EuropaHandlerClient;
 import com.mjr.extraplanets.moons.Ganymede.GanymedeHandlerClient;
 import com.mjr.extraplanets.moons.Io.IoHandlerClient;
 import com.mjr.extraplanets.moons.Phobos.PhobosHandlerClient;
+import com.mjr.extraplanets.moons.Rhea.RheaHandlerClient;
+import com.mjr.extraplanets.moons.Titan.TitanHandlerClient;
 import com.mjr.extraplanets.moons.triton.TritonHandlerClient;
 import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
 import com.mjr.extraplanets.planets.Eris.ErisHandlerClient;
@@ -162,6 +164,10 @@ public class ClientProxy extends CommonProxy {
 			FMLCommonHandler.instance().bus().register(new PhobosHandlerClient());
 		if (Config.triton)
 			FMLCommonHandler.instance().bus().register(new TritonHandlerClient());
+		if (Config.rhea)
+			FMLCommonHandler.instance().bus().register(new RheaHandlerClient());
+		if (Config.titan)
+			FMLCommonHandler.instance().bus().register(new TitanHandlerClient());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}

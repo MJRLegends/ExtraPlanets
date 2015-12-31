@@ -45,6 +45,8 @@ import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
 import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
 import com.mjr.extraplanets.moons.Io.event.IoEvents;
 import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
+import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
+import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
 import com.mjr.extraplanets.moons.triton.event.TritonEvents;
 import com.mjr.extraplanets.planets.PlanetsMain;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
@@ -148,6 +150,11 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
 		if (Config.triton)
 			MinecraftForge.EVENT_BUS.register(new TritonEvents());
+		if (Config.rhea)
+			MinecraftForge.EVENT_BUS.register(new RheaEvents());
+		if (Config.titan)
+			MinecraftForge.EVENT_BUS.register(new TitanEvents());
+
 
 		MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());

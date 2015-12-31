@@ -209,6 +209,8 @@ public class Config {
 		neptuneID = config.get(dimensionID, "Neptune Dimension ID", -18).getInt();
 		plutoID = config.get(dimensionID, "Pluto Dimension ID", -19).getInt();
 		erisID = config.get(dimensionID, "Eris Dimension ID", -21).getInt();
+		rheaID = config.get(dimensionID, "Rhea Dimension ID", -22).getInt();
+		titanID = config.get(dimensionID, "Titan Dimension ID", -23).getInt();
 
 		ioID = config.get(dimensionID, "Io Dimension ID", -31).getInt();
 		europaID = config.get(dimensionID, "Europa Dimension ID", -34).getInt();
@@ -264,6 +266,8 @@ public class Config {
 		tritonBiomeID = config.get(biomeID, "Triton Biome ID", 161).getInt();
 		callistoBiomeID = config.get(biomeID, "Callisto Biome ID", 162).getInt();
 		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 163).getInt();
+		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 164).getInt();
+		titanBiomeID = config.get(biomeID, "Titan Biome ID", 165).getInt();
 		
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
