@@ -44,6 +44,7 @@ tile.ceres.stone.name=Ceres Stone
 tile.ceres.oreIron.name=Ceres Iron Ore
 tile.ceres.oreTin.name=Ceres Tin Ore
 tile.ceres.oreCopper.name=Ceres Copper Ore
+tile.ceres.oreUranium.name=Ceres Uranium Ore
 
 tile.deimos.surface.name=Deimos Surface Rock
 tile.deimos.subSurface.name=Deimos Sub-Surface Rock
@@ -94,6 +95,7 @@ tile.pluto.stone.name=Pluto Stone
 tile.pluto.oreIron.name=Pluto Iron Ore
 tile.pluto.oreTin.name=Pluto Tin Ore
 tile.pluto.oreCopper.name=Pluto Copper Ore
+tile.pluto.oreTungsten.name=Pluto Tungsten Ore
 
 tile.triton.surface.name=Triton Surface Rock
 tile.triton.subSurface.name=Triton Sub-Surface Rock
@@ -109,6 +111,20 @@ tile.ganymede.oreIron.name=Ganymede Iron Ore
 tile.ganymede.oreTin.name=Ganymede Tin Ore
 tile.ganymede.oreCopper.name=Ganymede Copper Ore
 
+tile.rhea.surface.name=Rhea Surface Rock
+tile.rhea.subSurface.name=Rhea Sub-Surface Rock
+tile.rhea.stone.name=Rhea Stone
+tile.rhea.oreIron.name=Rhea Iron Ore
+tile.rhea.oreTin.name=Rhea Tin Ore
+tile.rhea.oreCopper.name=Rhea Copper Ore
+
+tile.titan.surface.name=Titan Surface Rock
+tile.titan.subSurface.name=Titan Sub-Surface Rock
+tile.titan.stone.name=Titan Stone
+tile.titan.oreIron.name=Titan Iron Ore
+tile.titan.oreTin.name=Titan Tin Ore
+tile.titan.oreCopper.name=Titan Copper Ore
+
 tile.venus.surface.name=Venus Surface Rock
 tile.venus.subSurface.name=Venus Sub-Surface Rock
 tile.venus.stone.name=Venus Stone
@@ -123,6 +139,8 @@ tile.jupiter.stone.name=Jupiter Stone
 tile.jupiter.oreIron.name=Jupiter Iron Ore
 tile.jupiter.oreTin.name=Jupiter Tin Ore
 tile.jupiter.oreCopper.name=Jupiter Copper Ore
+tile.jupiter.orePalladium.name=Jupiter Palladium Ore
+tile.jupiter.oreNickel.name=Jupiter Nickel Ore
 
 tile.saturn.surface.name=Saturn Surface Rock
 tile.saturn.subSurface.name=Saturn Sub-Surface Rock
@@ -130,6 +148,7 @@ tile.saturn.stone.name=Saturn Stone
 tile.saturn.oreIron.name=Saturn Iron Ore
 tile.saturn.oreTin.name=Saturn Tin Ore
 tile.saturn.oreCopper.name=Saturn Copper Ore
+tile.saturn.oreMagnesium.name=Saturn Magnesium Ore
 
 tile.uranus.surface.name=Uranus Surface Rock
 tile.uranus.subSurface.name=Uranus Sub-Surface Rock
@@ -163,18 +182,13 @@ tile.saturnGravel.name=Saturn Gravel
 tile.uranusGravel.name=Uranus Gravel
 tile.neptuneGravel.name=Neptune Gravel
 
-#Other Ore Blocks
-tile.OrePalladium.name=Palladium Ore
-tile.OreMagnesium.name=Magnesium Ore
-tile.OreNickel.name=Nickel Ore
-tile.OreUranium.name=Uranium Ore
-
 #Dungeon Bricks
 tile.veunsDungeonBrick.name=Venus Dungeon Brick
 tile.jupiterDungeonBrick.name=Jupiter Dungeon Brick
 tile.saturnDungeonBrick.name=Saturn Dungeon Brick
 tile.uranusDungeonBrick.name=Uranus Dungeon Brick
 tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
+tile.plutoDungeonBrick.name=Pluto Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab
@@ -218,11 +232,13 @@ tile.treasureChestT5.name=Tier 5 Treasure Chest
 tile.treasureChestT6.name=Tier 6 Treasure Chest
 tile.treasureChestT7.name=Tier 7 Treasure Chest
 tile.treasureChestT8.name=Tier 8 Treasure Chest
+tile.treasureChestT9.name=Tier 9 Treasure Chest
 tile.treasureChestT4.description=Tier 4 Treasure Chests will generate in Venus Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT5.description=Tier 5 Treasure Chests will generate in Jupiter Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT6.description=Tier 6 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT7.description=Tier 7 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT8.description=Tier 8 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT9.description=Tier 9 Treasure Chests will generate in Pluto Dungeons. They are unlockable after defeating the final boss.
 
 #Machines
 tile.advancedRefinery.name=Advanced Refinery

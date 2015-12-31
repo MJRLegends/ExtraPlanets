@@ -28,7 +28,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 4, 5, true, ExtraPlanetsBlocks.ceresBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 4, 4, true, ExtraPlanetsBlocks.ceresBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 8, 3, true, ExtraPlanetsBlocks.ceresBlocks, 2);
-		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreUranium, 2, 0, true, ExtraPlanetsBlocks.ceresBlocks, 2);
+		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 2, 6, true, ExtraPlanetsBlocks.ceresBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresGravel, 12, 0, true, ExtraPlanetsBlocks.ceresBlocks, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.ceresBlocks, 2);
 

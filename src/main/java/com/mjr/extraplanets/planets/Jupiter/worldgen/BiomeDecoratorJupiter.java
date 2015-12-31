@@ -30,8 +30,8 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 4, 5, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 4, 4, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 8, 3, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
-		this.palladiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OrePalladium, 8, 0, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
-		this.nickelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.OreNickel, 8, 0, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
+		this.palladiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 8, 6, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
+		this.nickelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterBlocks, 8, 7, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.jupiterGravel, 12, 0, true, ExtraPlanetsBlocks.jupiterBlocks, 2);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);

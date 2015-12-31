@@ -126,12 +126,6 @@ public class ExtraPlanetsBlocks {
 	public static Block treasureChestTier9;
 
 	// Need changing to meta blocks -----------------------------------------
-	public static Block OrePalladium;
-	public static Block OreMagnesium;
-
-	public static Block OreNickel;
-	public static Block OreUranium;
-
 	public static Block veunsDungeonBrick;
 	public static Block jupiterDungeonBrick;
 	public static Block saturnDungeonBrick;
@@ -154,7 +148,6 @@ public class ExtraPlanetsBlocks {
 
 		// Need changing to meta blocks
 		// -----------------------------------------
-		initializeOreBlocks();
 		initializeDungeonBlocks();
 		initializeSpawnerBlocks();
 		// ----------------------------------------------------------------------
@@ -244,24 +237,6 @@ public class ExtraPlanetsBlocks {
 			nuclearBomb = new BlockNuclearBomb();
 	}
 
-	private static void initializeOreBlocks() {
-		if (Config.ceres) {
-			OreUranium = new BlockOre(Material.rock).setBlockName("OreUranium").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreUranium").setStepSound(Block.soundTypeMetal);
-			OreUranium.setHarvestLevel("pickaxe", 4);
-		}
-		if (Config.jupiter) {
-			OrePalladium = new BlockOre(Material.rock).setBlockName("OrePalladium").setBlockTextureName(Constants.TEXTURE_PREFIX + "OrePalladium").setStepSound(Block.soundTypeMetal);
-			OrePalladium.setHarvestLevel("pickaxe", 3);
-
-			OreNickel = new BlockOre(Material.rock).setBlockName("OreNickel").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreNickel").setStepSound(Block.soundTypeMetal);
-			OreNickel.setHarvestLevel("pickaxe", 4);
-		}
-		if (Config.saturn) {
-			OreMagnesium = new BlockOre(Material.rock).setBlockName("OreMagnesium").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreMagnesium").setStepSound(Block.soundTypeMetal);
-			OreMagnesium.setHarvestLevel("pickaxe", 4);
-		}
-	}
-
 	private static void initializeDungeonBlocks() {
 		if (Config.venus) {
 			veunsDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("veunsDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "veunsDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
@@ -346,13 +321,10 @@ public class ExtraPlanetsBlocks {
 			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
 		}
 		if (Config.ceres) {
-			GameRegistry.registerBlock(OreUranium, "OreUranium");
 			GameRegistry.registerBlock(ceresBlocks, ItemBlockCeres.class, ceresBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(ceresGravel, "ceresGravel");
 		}
 		if (Config.jupiter) {
-			GameRegistry.registerBlock(OreNickel, "OreNickel");
-			GameRegistry.registerBlock(OrePalladium, "OrePalladium");
 			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(jupiterGravel, "jupiterGravel");
 
@@ -361,7 +333,6 @@ public class ExtraPlanetsBlocks {
 			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName());
 		}
 		if (Config.saturn) {
-			GameRegistry.registerBlock(OreMagnesium, "OreMagnesium");
 			GameRegistry.registerBlock(saturnBlocks, ItemBlockSaturn.class, saturnBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(saturnGravel, "saturnGravel");
 
@@ -476,7 +447,7 @@ public class ExtraPlanetsBlocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(ceresBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(ceresBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(ceresBlocks, 1, 3));
-			OreDictionary.registerOre("oreUranium", new ItemStack(OreUranium));
+			OreDictionary.registerOre("oreUranium", new ItemStack(ceresBlocks, 1, 6));
 		}
 		if (Config.jupiter) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(jupiterBlocks, 1, 5));
