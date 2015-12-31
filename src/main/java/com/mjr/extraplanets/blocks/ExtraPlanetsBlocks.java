@@ -259,7 +259,6 @@ public class ExtraPlanetsBlocks {
 		if (Config.saturn) {
 			OreMagnesium = new BlockOre(Material.rock).setBlockName("OreMagnesium").setBlockTextureName(Constants.TEXTURE_PREFIX + "OreMagnesium").setStepSound(Block.soundTypeMetal);
 			OreMagnesium.setHarvestLevel("pickaxe", 4);
-
 		}
 	}
 

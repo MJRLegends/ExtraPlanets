@@ -19,7 +19,7 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 
 public class ItemTier9Items extends Item {
-	public static final String[] names = { "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate"};
+	public static final String[] names = { "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten"};
 
 	protected IIcon[] icons = new IIcon[ItemTier9Items.names.length];
 

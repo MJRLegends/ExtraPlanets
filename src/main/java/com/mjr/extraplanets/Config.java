@@ -209,8 +209,6 @@ public class Config {
 		neptuneID = config.get(dimensionID, "Neptune Dimension ID", -18).getInt();
 		plutoID = config.get(dimensionID, "Pluto Dimension ID", -19).getInt();
 		erisID = config.get(dimensionID, "Eris Dimension ID", -21).getInt();
-		rheaID = config.get(dimensionID, "Rhea Dimension ID", -22).getInt();
-		titanID = config.get(dimensionID, "Titan Dimension ID", -23).getInt();
 
 		ioID = config.get(dimensionID, "Io Dimension ID", -31).getInt();
 		europaID = config.get(dimensionID, "Europa Dimension ID", -34).getInt();
@@ -219,6 +217,9 @@ public class Config {
 		tritonID = config.get(dimensionID, "Triton Dimension ID", -36).getInt();
 		callistoID = config.get(dimensionID, "Callisto Dimension ID", -37).getInt();
 		ganymedeID = config.get(dimensionID, "Ganymede Dimension ID", -38).getInt();
+		rheaID = config.get(dimensionID, "Rhea Dimension ID", -39).getInt();
+		titanID = config.get(dimensionID, "Titan Dimension ID", -40).getInt();
+
 		
 		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
 		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -60).getInt();

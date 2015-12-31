@@ -13,7 +13,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class RheaEvents {
 	@SubscribeEvent
 	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event){
-		if (event.entityLiving.worldObj.provider.dimensionId == Config.europaID)
+		if (event.entityLiving.worldObj.provider.dimensionId == Config.rheaID)
 		{
 			if(event.entity instanceof EntityPlayer) {
 				event.setCanceled(false);
@@ -29,7 +29,7 @@ public class RheaEvents {
 
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event){
-		if (event.entityLiving.worldObj.provider.dimensionId == Config.europaID)
+		if (event.entityLiving.worldObj.provider.dimensionId == Config.rheaID)
 		{
 			event.entityPlayer.heal(5.0F);
 

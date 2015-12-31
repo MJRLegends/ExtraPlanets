@@ -155,7 +155,6 @@ public class ExtraPlanets {
 		if (Config.titan)
 			MinecraftForge.EVENT_BUS.register(new TitanEvents());
 
-
 		MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 		// MinecraftForge.EVENT_BUS.register(new
