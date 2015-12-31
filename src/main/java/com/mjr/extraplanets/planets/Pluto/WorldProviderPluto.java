@@ -117,7 +117,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= Config.plutoRocketTier;
+		return tier >= 8;
 	}
 
 	@Override

@@ -170,7 +170,7 @@ public class PlanetsMain {
 		}
 		if (Config.pluto) {
 			pluto = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			pluto.setTierRequired(Config.plutoRocketTier);
+			pluto.setTierRequired(8);
 			pluto.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			pluto.setPhaseShift(1.0F);
 			pluto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F, 2.75F));
