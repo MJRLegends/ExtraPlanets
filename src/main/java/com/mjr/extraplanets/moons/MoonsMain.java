@@ -212,15 +212,15 @@ public class MoonsMain {
 			GalacticraftRegistry.registerRocketGui(WorldProviderGanymede.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/ganymedeRocketGui.png"));
 		}
 		if (Config.rhea) {
-			/*GalaxyRegistry.registerMoon(rhea);
+			GalaxyRegistry.registerMoon(rhea);
 			GalacticraftRegistry.registerTeleportType(WorldProviderRhea.class, new TeleportTypeRhea());
 			GalacticraftRegistry.registerRocketGui(WorldProviderRhea.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rheaRocketGui.png"));
-		*/}
+		}
 		if (Config.titan) {
-			/*GalaxyRegistry.registerMoon(titan);
+			GalaxyRegistry.registerMoon(titan);
 			GalacticraftRegistry.registerTeleportType(WorldProviderTitan.class, new TeleportTypeTitan());
 			GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titanRocketGui.png"));
-		*/}
+		}
 	}
 
 	private static Moon makeUnreachableMoon(String name, Planet parent) {

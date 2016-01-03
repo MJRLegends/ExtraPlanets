@@ -281,7 +281,7 @@ public class ExtraPlanetsBlocks {
 			treasureChestTier8 = new T8TreasureChest("treasureChestT8");
 		}
 		if (Config.pluto) {
-			//treasureChestTier9 = new T9TreasureChest("treasureChestT9");
+			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
 	}
 
@@ -357,8 +357,8 @@ public class ExtraPlanetsBlocks {
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(plutoSpawner, "plutoSpawner");
-			//GameRegistry.registerBlock(plutoDungeonBrick, "plutoDungeonBrick");
-			//GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName());
+			GameRegistry.registerBlock(plutoDungeonBrick, "plutoDungeonBrick");
+			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName());
 			GameRegistry.registerBlock(plutoGravel, "plutoGravel");
 		}
 		if (Config.eris) {
@@ -394,10 +394,10 @@ public class ExtraPlanetsBlocks {
 			GameRegistry.registerBlock(ganymedeGravel, "ganymedeGravel");
 		}
 		if (Config.rhea) {
-			//GameRegistry.registerBlock(rheaBlocks, ItemBlockRhea.class, rheaBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(rheaBlocks, ItemBlockRhea.class, rheaBlocks.getUnlocalizedName());
 		}
 		if (Config.titan) {
-			//GameRegistry.registerBlock(titanBlocks, ItemBlockTitan.class, titanBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(titanBlocks, ItemBlockTitan.class, titanBlocks.getUnlocalizedName());
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");
@@ -505,7 +505,7 @@ public class ExtraPlanetsBlocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(phobosBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(phobosBlocks, 1, 3));
 		}
-		/*if (Config.rhea) {
+		if (Config.rhea) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(rheaBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(rheaBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(rheaBlocks, 1, 3));
@@ -514,7 +514,7 @@ public class ExtraPlanetsBlocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(titanBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(titanBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(titanBlocks, 1, 3));
-		}*/
+		}
 		if (Config.triton) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(tritonBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));

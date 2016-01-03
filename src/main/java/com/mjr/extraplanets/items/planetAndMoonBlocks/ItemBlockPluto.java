@@ -56,11 +56,11 @@ public class ItemBlockPluto extends ItemBlock
 			name = "oreCopper";
 			break;
 		}
-		/*case 6:
+		case 6:
 		{
 			name = "oreTungsten";
 			break;
-		}*/
+		}
 		default:
 			name = "null";
 		}
