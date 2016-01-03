@@ -166,7 +166,7 @@ public class Config {
 		eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
-		pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
+		//pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
 
 		triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
 		europa = config.get(dimensionsCustom, "Europa", true, "").getBoolean(true);
@@ -183,11 +183,11 @@ public class Config {
 		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block!").getBoolean(true);
 		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block!").getBoolean(true);
 		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block!").getBoolean(true);
-		//pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block!").getBoolean(true);
+		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block!").getBoolean(true);
 
 		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
 		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
-		erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 8).getInt();
+		erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
 
 		//	venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
 		//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
