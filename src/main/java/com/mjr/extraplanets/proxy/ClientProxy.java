@@ -164,10 +164,10 @@ public class ClientProxy extends CommonProxy {
 			FMLCommonHandler.instance().bus().register(new PhobosHandlerClient());
 		if (Config.triton)
 			FMLCommonHandler.instance().bus().register(new TritonHandlerClient());
-		if (Config.rhea)
+		/*if (Config.rhea)
 			FMLCommonHandler.instance().bus().register(new RheaHandlerClient());
 		if (Config.titan)
-			FMLCommonHandler.instance().bus().register(new TitanHandlerClient());
+			FMLCommonHandler.instance().bus().register(new TitanHandlerClient());*/
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}
@@ -240,10 +240,10 @@ public class ClientProxy extends CommonProxy {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier8Rocket, new ItemRendererTier8Rocket(rocketModelTier8));
 		}
 		if (Config.pluto) {
-			IModelCustom rocketModelTier9 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
+		/*	IModelCustom rocketModelTier9 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "tier9rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
-		}
+		*/}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -274,10 +274,10 @@ public class ClientProxy extends CommonProxy {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
 		}
 		if (Config.pluto) {
-			treasureT9ChestID = RenderingRegistry.getNextAvailableRenderId();
+			/*treasureT9ChestID = RenderingRegistry.getNextAvailableRenderId();
 			RenderingRegistry.registerBlockHandler(new BlockRendererTier9TreasureChest(treasureT9ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());
-		}
+		*/}
 		ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(new BlockRendererMachine(renderIdMachine));
 	}
@@ -300,7 +300,7 @@ public class ClientProxy extends CommonProxy {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT8.png")));
 		}
 		if (Config.pluto) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
+			//MinecraftForgeClient.registerItemRenderer(ExtraPlanetsItems.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
 		}
 	}
 

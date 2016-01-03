@@ -73,6 +73,7 @@ public class T9TreasureChest extends BlockContainer implements ITileEntityProvid
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public int getRenderType()
 	{
 		return ClientProxy.treasureT9ChestID;
