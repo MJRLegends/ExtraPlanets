@@ -9,7 +9,6 @@ import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
 
 public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
-	private WorldGenerator deshGen;
 	private WorldGenerator tinGen;
 	private WorldGenerator copperGen;
 	private WorldGenerator ironGen;

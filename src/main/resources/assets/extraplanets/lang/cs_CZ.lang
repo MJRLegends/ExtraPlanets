@@ -1,0 +1,484 @@
+#Creative Tabs
+itemGroup.SpaceItemsTab=Extra Planets Předměty
+itemGroup.SpaceBlocksTab=Extra Planets Bloky
+itemGroup.SpaceToolsTab=Extra Planets Nástroje
+itemGroup.SpaceArmorTab=Extra Planets Zbroj
+
+#Planets
+planet.Mercury=Merkur
+planet.Venus=Venuše
+planet.Ceres=Ceres
+planet.Jupiter=Jupiter
+planet.Saturn=Saturn
+planet.Uranus=Uran
+planet.Neptune=Neptun
+planet.Pluto=Pluto
+planet.Eris=Eris
+planet.kuiperBelt=Kuiperův pás
+
+#Moons
+moon.triton=Triton
+moon.callisto=Callisto
+moon.europa=Europa
+moon.ganymede=Ganymede
+moon.io=Io
+moon.deimos=Deimos
+moon.phobos=Phobos
+moon.iapetus=Iapetus
+moon.rhea=Rhea
+moon.titan=Titan
+moon.oberon=Oberon
+moon.titania=Titania
+
+#Planet Blocks
+tile.mercury.surface.name=Povrchový kámen z Merkuru
+tile.mercury.subSurface.name=Podpovrchový kámen z Merkuru
+tile.mercury.stone.name=Kámen z Merkuru
+tile.mercury.OreIron.name=Železná ruda z Merkuru
+tile.mercury.OreTin.name=Cínová ruda z Merkuru
+tile.mercury.OreCopper.name=Měděná ruda z Merkuru
+tile.mercury.OreMercury.name=Měděná ruda z Merkuru
+
+tile.venus.surface.name=Povrchový kámen z Venuše
+tile.venus.subSurface.name=Podpovrchový kámen z Venuše
+tile.venus.stone.name=Kámen z Venuše
+tile.venus.OreIron.name=Železná ruda z Venuše
+tile.venus.OreTin.name=Cínová ruda z Venuše
+tile.venus.OreCopper.name=Měděná ruda z Venuše
+tile.venus.OreCarbon.name=Karbonová Ruda
+
+tile.ceres.surface.name=Povrchový kámen z Ceresu
+tile.ceres.subSurface.name=Podpovrchový kámen z Ceresu
+tile.ceres.stone.name=Kámen z Ceresu
+tile.ceres.OreIron.name=Železná ruda z Ceresu
+tile.ceres.OreTin.name=Cínová ruda z Ceresu
+tile.ceres.OreCopper.name=Měděná ruda z Ceresu
+tile.ceres.OreUranium.name=Uraniová Ruda
+
+tile.jupiter.surface.name=Povrchový kámen z Jupiteru
+tile.jupiter.subSurface.name=Podpovrchový kámen z Jupiteru
+tile.jupiter.stone.name=Kámen z Jupiteru
+tile.jupiter.OreIron.name=Železná ruda z Jupiteru
+tile.jupiter.OreTin.name=Cínová ruda z Jupiteru
+tile.jupiter.OreCopper.name=Měděná ruda z Jupiteru
+tile.jupiter.OrePalladium.name=Palladiová Ruda
+tile.jupiter.OreNickel.name=Niklová Ruda
+
+tile.saturn.surface.name=Povrchový kámen ze Saturnu
+tile.saturn.subSurface.name=Podpovrchový kámen ze Saturnu
+tile.saturn.stone.name=Kámen ze Saturnu
+tile.saturn.OreIron.name=Železná ruda ze Saturnu
+tile.saturn.OreTin.name=Cínová ruda ze Saturnu
+tile.saturn.OreCopper.name=Měděná ruda ze Saturnu
+tile.saturn.OreMagnesium.name=Magnesiová Ruda
+
+tile.uranus.surface.name=Povrchový kámen z Uranu
+tile.uranus.subSurface.name=Podpovrchový kámen z Uranu
+tile.uranus.stone.name=Kámen z Uranu
+tile.uranus.OreCrystal.name=Krystalová Ruda
+
+tile.neptune.surface.name=Povrchový kámen z Neptunu
+tile.neptune.subSurface.name=Podpovrchový kámen z Neptunu
+tile.neptune.stone.name=Kámen z Neptunu
+tile.neptune.OreIron.name=Železná ruda z Neptunu
+tile.neptune.OreTin.name=Cínová ruda z Neptunu
+tile.neptune.OreCopper.name=Měděná ruda z Neptunu
+tile.neptune.OreZinc.name=Zinková Ruda
+
+tile.pluto.surface.name=Povrchový kámen z Pluta
+tile.pluto.subSurface.name=Podpovrchový kámen z Pluta
+tile.pluto.stone.name=Kámen z Pluta
+tile.pluto.OreIron.name=Železná ruda z Pluta
+tile.pluto.OreTin.name=Cínová ruda z Pluta
+tile.pluto.OreCopper.name=Měděná ruda z Pluta
+tile.pluto.OreTungsten.name=Tungstenová Ruda
+
+tile.eris.surface.name=Povrchový kámen z Erisu
+tile.eris.subSurface.name=Podpovrchový kámen z Erisu
+tile.eris.stone.name=Kámen z Erisu
+tile.eris.OreIron.name=Železná ruda z Erisu
+tile.eris.OreTin.name=Cínová ruda z Erisu
+tile.eris.OreCopper.name=Měděná ruda z Erisu
+
+#Moon Blocks
+tile.callisto.surface.name=Povrchový kámen z Callisto
+tile.callisto.subSurface.name=Podpovrchový kámen z Callisto
+tile.callisto.stone.name=Kámen z Callisto
+tile.callisto.OreIron.name=Železná ruda z Callisto
+tile.callisto.OreTin.name=Cínová ruda z Callisto
+tile.callisto.OreCopper.name=Měděná ruda z Callisto
+
+tile.deimos.surface.name=Povrchový kámen z Deimosu
+tile.deimos.subSurface.name=Podpovrchový kámen z Deimosu
+tile.deimos.stone.name=Kámen z Deimosu
+tile.deimos.OreIron.name=Železná ruda z Deimosu
+tile.deimos.OreTin.name=Cínová ruda z Deimosu
+tile.deimos.OreCopper.name=Měděná ruda z Deimosu
+
+tile.europa.surface.name=Povrchový kámen z Europy
+tile.europa.subSurface.name=Podpovrchový kámen z Europy
+tile.europa.stone.name=Kámen z Europy
+tile.europa.OreIron.name=Železná ruda z Europy
+tile.europa.OreTin.name=Cínová ruda z Europy
+tile.europa.OreCopper.name=Měděná ruda z Europy
+
+tile.io.surface.name=Povrchový kámen z Io
+tile.io.subSurface.name=Podpovrchový kámen z Io
+tile.io.stone.name=Kámen z Io
+tile.io.OreIron.name=Železná ruda z IO
+tile.io.OreTin.name=Cínová ruda z Io
+tile.io.OreCopper.name=Měděná ruda z Io
+
+tile.phobos.surface.name=Povrchový kámen z Phobosu
+tile.phobos.subSurface.name=Podpovrchový kámen z Phobosu
+tile.phobos.stone.name=Kámen z Phobosu
+tile.phobos.OreIron.name=Železná ruda z Phobosu
+tile.phobos.OreTin.name=Cínová ruda z Phobosu
+tile.phobos.OreCopper.name=Měděná ruda z Phobosu
+
+tile.triton.surface.name=Povrchový kámen z Tritonu
+tile.triton.subSurface.name=Podpovrchový kámen z Tritonu
+tile.triton.stone.name=Kámen z Tritonu
+tile.triton.OreIron.name=Železná ruda z Tritonu
+tile.triton.OreTin.name=Cínová ruda z Tritonu
+tile.triton.OreCopper.name=Měděná ruda z Tritonu
+
+tile.ganymede.surface.name=Povrchový kámen z Ganymede
+tile.ganymede.subSurface.name=Podpovrchový kámen z Ganymede
+tile.ganymede.stone.name=Kámen z Ganymede
+tile.ganymede.OreIron.name=Železná ruda z Ganymede
+tile.ganymede.OreTin.name=Cínová ruda z Ganymede
+tile.ganymede.OreCopper.name=Měděná ruda z Ganymede
+
+tile.rhea.surface.name=Povrchový kámen z Rhea
+tile.rhea.subSurface.name=Podpovrchový kámen z Rhea
+tile.rhea.stone.name=Kámen z Rhea
+tile.rhea.OreIron.name=Železná ruda z Rhea
+tile.rhea.OreTin.name=Cínová ruda z Rhea
+tile.rhea.OreCopper.name=Měděná ruda z Rhea
+
+tile.titan.surface.name=Povrchový kámen z Titanu
+tile.titan.subSurface.name=Podpovrchový kámen z Titanu
+tile.titan.stone.name=Kámen z Titanu
+tile.titan.OreIron.name=Železná ruda z Titanu
+tile.titan.OreTin.name=Cínová ruda z Titanu
+tile.titan.OreCopper.name=Měděná ruda z Titanu
+
+#Planet Gravel Blocks
+tile.mercuryGravel.name=Štěrk
+tile.ceresGravel.name=Štěrk
+tile.plutoGravel.name=Štěrk
+tile.erisGravel.name=Štěrk
+tile.ioGravel.name=Štěrk
+tile.europaGravel.name=Štěrk
+tile.deimosGravel.name=Štěrk
+tile.phobosGravel.name=Štěrk
+tile.tritonGravel.name=Štěrk
+tile.callistoGravel.name=Štěrk
+tile.ganymedeGravel.name=Štěrk
+
+tile.venusGravel.name=Štěrk
+tile.jupiterGravel.name=Štěrk
+tile.saturnGravel.name=Štěrk
+tile.uranusGravel.name=Štěrk
+tile.neptuneGravel.name=Štěrk
+
+#Dungeon Bricks
+tile.veunsDungeonBrick.name=Cihla z kobky
+tile.jupiterDungeonBrick.name=Cihla z kobky
+tile.saturnDungeonBrick.name=Cihla z kobky
+tile.uranusDungeonBrick.name=Cihla z kobky
+tile.neptuneDungeonBrick.name=Cihla z kobky
+tile.plutoDungeonBrick.name=Cihla z kobky
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Kamenný půlblok
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=Schody
+tile.venusStoneStairs.name=Schody
+tile.ceresStoneStairs.name=Schody
+tile.jupiterStoneStairs.name=Schody
+tile.saturnStoneStairs.name=Schody
+tile.uranusStoneStairs.name=Schody
+tile.neptuneStoneStairs.name=Schody
+tile.plutoStoneStairs.name=Schody
+tile.erisStoneStairs.name=Schody
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Venuši
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Jupiteru
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Saturnu
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Uranu
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Neptunu
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=Schody z kobky na Venuši
+tile.jupiterDungeonBrickStoneStairs.name=Schody z kobky na Jupiteru
+tile.saturnDungeonBrickStoneStairs.name=Schody z kobky na Saturnu
+tile.uranusDungeonBrickStoneStairs.name=Schody z kobky na Uranu
+tile.neptuneDungeonBrickStoneStairs.name=Schody z kobky na Neptunu
+
+#Treasure Chests
+tile.treasureChestT4.name=Truhla s pokladem typ 4
+tile.treasureChestT5.name=Truhla s pokladem typ 5
+tile.treasureChestT6.name=Truhla s pokladem typ 6
+tile.treasureChestT7.name=Truhla s pokladem typ 7
+tile.treasureChestT8.name=Truhla s pokladem typ 8
+tile.treasureChestT9.name=Truhla s pokladem typ 9
+tile.treasureChestT4.description=Truhly s pokladem typu 4 se generují na Venuši. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT5.description=Truhly s pokladem typu 5 se generují na Jupiteru. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT6.description=Truhly s pokladem typu 6 se generují na Saturnu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT7.description=Truhly s pokladem typu 7 se generují na Uranu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT8.description=Truhly s pokladem typu 8 se generují na Neptunu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT9.description=Truhly s pokladem typu 9 se generují na Plutu. Mohou být odemčeny po poražení závěrečného bosse.
+
+#Machines
+tile.advancedRefinery.name=Advanced Refinery
+tile.solar.hybrid.name=Hybridní solární panel
+tile.solar.ultimate.name=Ultimátlní solární panel
+tile.solarhybrid.description=Tento solární panel bude pracovat během dne i noci
+tile.solarultimate.description=Tento solární panel bude pracovat během dne i noci
+container.solarhybrid.name=Hybridní solární panel
+container.solarultimate.name=Ultimátlní solární panel
+
+#Other Blocks
+tile.nuclearBomb.name=Jaderná bomba
+tile.volcanicRock.name=Vulkanický kámen
+tile.frozenNitrogen.name=Zmrzný dusík
+tile.denseIce.name=Hustý led
+tile.fossil.name=Fosilní blok
+
+#Rocket Items
+item.itemTier4Rocket.t4Rocket.name=Raketa typ 4
+item.itemTier5Rocket.t5Rocket.name=Raketa typ 5
+item.itemTier6Rocket.t6Rocket.name=Raketa typ 6
+item.itemTier7Rocket.t7Rocket.name=Raketa typ 7
+item.itemTier8Rocket.t8Rocket.name=Raketa typ 8
+item.itemTier9Rocket.t9Rocket.name=Raketa typ 9
+
+#Rocket Tiered Items
+item.noseConeTier4.name=Špička rakety typ 4
+item.noseConeTier5.name=Špička rakety typ 5
+item.noseConeTier6.name=Špička rakety typ 6
+item.noseConeTier7.name=Špička rakety typ 7
+item.noseConeTier8.name=Špička rakety typ 8
+item.noseConeTier9.name=Špička rakety typ 9
+
+item.tier4.tier4Fin.name=Raketové křidélko typ 4
+item.tier5.tier5Fin.name=Raketové křidélko typ 5
+item.tier6.tier6Fin.name=Raketové křidélko typ 6
+item.tier7.tier7Fin.name=Raketové křidélko typ 7
+item.tier8.tier8Fin.name=Raketové křidélko typ 8
+item.tier9.tier9Fin.name=Raketové křidélko typ 9
+
+item.tier4.tier4engine.name=Raketový motor typ 4
+item.tier5.tier5engine.name=Raketový motor typ 5
+item.tier6.tier6engine.name=Raketový motor typ 6
+item.tier7.tier7engine.name=Raketový motor typ 7
+item.tier8.tier8engine.name=Raketový motor typ 8
+item.tier9.tier9engine.name=Raketový motor typ 9
+
+item.tier4.tier4booster.name=Posilovač typ 4
+item.tier5.tier5booster.name=Posilovač typ 5
+item.tier6.tier6booster.name=Posilovač typ 6
+item.tier7.tier7booster.name=Posilovač typ 7
+item.tier8.tier8booster.name=Posilovač typ 8
+item.tier9.tier9booster.name=Posilovač typ 9
+
+item.tier4.tier4HeavyDutyplate.name=Zesílený plech
+item.tier5.tier5HeavyDutyplate.name=Zesílený plech
+item.tier6.tier6HeavyDutyplate.name=Zesílený plech
+item.tier7.tier7HeavyDutyplate.name=Zesílený plech
+item.tier8.tier8HeavyDutyplate.name=Zesílený plech
+item.tier9.tier9HeavyDutyplate.name=Zesílený plech
+
+tier4.heavyDutyplate.name=typ 4
+tier5.heavyDutyplate.name=typ 5
+tier6.heavyDutyplate.name=typ 6
+tier7.heavyDutyplate.name=typ 7
+tier8.heavyDutyplate.name=typ 8
+tier9.heavyDutyplate.name=typ 9
+
+#Stlačený Items
+item.tier4.compressedCarbon.name=Stlačený Karbon
+item.tier5.compressedPalladium.name=Stlačené Palladium
+item.tier6.compressedMagnesium.name=Stlačené Magnesium
+item.tier7.compressedReinforcedCrystal.name=Stlačený Vystužený krystal
+item.tier7.compressedCrystal.name=Stlačený Krystal
+item.compressedZinc.name=Stlačený Zinek
+item.compressedNickel.name=Stlačený Nikl
+item.compressedMercury.name=Stlačená Měď
+item.tier9.compressedTungsten.name=Stlačený Tungsten
+
+#Ingots
+item.tier4.ingotCarbon.name=Karbonový Ingot
+item.tier5.ingotPalladium.name=Palladiový Ingot
+item.tier6.ingotMagnesium.name=Magnesiový Ingot
+item.tier7.ingotCrystal.name=Krystalový Ingot
+item.ingotZinc.name=Zinkový Ingot
+item.ingotNickel.name=Niklový Ingot
+item.ingotMercury.name=Měděný Ingot
+item.ingotUranium.name=Uranový Ingot
+item.tier9.ingotTungsten.name=Tungstenový Ingot
+
+#Buckets
+item.bucket_glowstone.name=Kbelík světlitu
+item.bucket_salt.name=Kbelík soli
+item.bucket_magma.name=Kbelík Magma
+item.bucket_frozen_water.name=Kbelík zmrzlé vody
+item.bucket_nitrogen.name=Kbelík dusíku
+
+#Keys
+item.key.T4.name=Klíč ke kobce typ 4
+item.key.T5.name=Klíč ke kobce typ 5
+item.key.T6.name=Klíč ke kobce typ 6
+item.key.T7.name=Klíč ke kobce typ 7
+item.key.T8.name=Klíč ke kobce typ 8
+item.key.T9.name=Klíč ke kobce typ 9
+
+#Tools
+item.carbonPickaxe.name=Karbonový krumpáč
+item.carbonAxe.name=Karbonová sekyra
+item.carbonSword.name=Karbonový meč
+item.carbonHoe.name=Karbonová motyčka
+item.carbonShovel.name=Karbonová lopata
+item.palladiumPickaxe.name=Palladiový krumpáč
+item.palladiumAxe.name=Palladiová sekyra
+item.palladiumSword.name=Palladiový meč
+item.palladiumHoe.name=Palladiová motyčka
+item.palladiumShovel.name=Palladiová lopata
+item.magnesiumPickaxe.name=Magnesiový krumpáč
+item.magnesiumAxe.name=Magnesiová sekyra
+item.magnesiumSword.name=Magnesiový meč
+item.magnesiumHoe.name=Magnesiová motyčka
+item.magnesiumShovel.name=Magnesiová lopata
+item.crystalPickaxe.name=Krystalový krumpáč
+item.crystalAxe.name=Krystalová sekyra
+item.crystalSword.name=Krystalový meč
+item.crystalHoe.name=Krystalová motyčka
+item.crystalShovel.name=Krystalová lopata
+
+#Schematics
+item.schematicTier4.name=NASA Workbench Schéma
+item.schematicTier5.name=NASA Workbench Schéma
+item.schematicTier6.name=NASA Workbench Schéma
+item.schematicTier7.name=NASA Workbench Schéma
+item.schematicTier8.name=NASA Workbench Schéma
+item.schematicTier9.name=NASA Workbench Schéma
+
+schematic.tier4.Rocket.name=Raketa typ 4
+schematic.tier5.Rocket.name=Raketa typ 5
+schematic.tier6.Rocket.name=Raketa typ 6
+schematic.tier7.Rocket.name=Raketa typ 7
+schematic.tier8.Rocket.name=Raketa typ 8
+schematic.tier9.Rocket.name=Raketa typ 9
+
+schematic.RocketT4.name=Raketa typ 4
+schematic.RocketT5.name=Raketa typ 5
+schematic.RocketT6.name=Raketa typ 6
+schematic.RocketT7.name=Raketa typ 7
+schematic.RocketT8.name=Raketa typ 8
+schematic.RocketT9.name=Raketa typ 9
+
+#Batteries
+item.mercuryBattery.name=Měděná baterie
+item.nickelBattery.name=Niklová baterie
+item.zincBattery.name=Zinková baterie
+
+#Armor
+item.carbonHelmet.name=Karbonová helma
+item.carbonChest.name=Karbonové brnění
+item.carbonLegings.name=Karbonové kalhoty
+item.carbonBoots.name=Karbonová Karbonové
+item.palladiumHelmet.name=Palladiová helma
+item.palladiumChest.name=Palladiové brnění
+item.palladiumLegings.name=Palladiové kalhoty
+item.palladiumBoots.name=Palladiové boty
+item.magnesiumHelmet.name=Magnesiová helma
+item.magnesiumChest.name=Magnesiové brnění
+item.magnesiumLegings.name=Magnesiové kalhoty
+item.magnesiumBoots.name=Magnesiové boty
+item.crystalHelmet.name=Krystalová helma
+item.crystalChest.name=Krystalové brnění
+item.crystalLegings.name=Krystalové kalhoty
+item.crystalBoots.name=Krystalové boty
+
+#Other Items
+item.appleDiamond.name=Diamantové jablko
+item.cannedfood.cannedFood.name=Plechovka jídla
+item.bodyparts.arm.name=Paže
+item.bodyparts.leg.name=Noha
+
+item.cannedfood.dehydratedPorkchop.name=Dehydrované vepřové
+item.cannedfood.dehydratedFish.name=Dehydrovaná ryba
+item.cannedfood.dehydratedSalmon.name=Dehydrovaný losos
+item.cannedfood.dehydratedChicken.name=Dehydrované kuře
+item.cannedfood.dehydratedBeef.name=Dehydrované hovězí
+
+#Entities
+entity.CreeperBossVenus.name=Creeper Boss z Venuše
+entity.CreeperBossJupiter.name=Creeper Boss z Jupiteru
+entity.CreeperBossSaturn.name=Creeper Boss z Saturnu
+entity.CreeperBossUranus.name=Creeper Boss z Uranu
+entity.CreeperBossNeptune.name=Creeper Boss z Neptunu
+
+entity.EvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
+entity.EntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+
+entity.EvolvedWitch.name=Vyvinutá Čarodejnice
+entity.EvolvedMagmaCube.name=Vyvinutá Magma Kostka
+entity.EvolvedIceSlime.name=Vyvinutý Ledový Sliz
+entity.EvolvedEnderman.name=Vyvinutý Enderman
+entity.EvolvedBlaze.name=Vyvinutý Ohnivák
+entity.EvolvedBlueCreeper.name=Vyvinutý Modrý Syčák
+entity.EvolvedRedCreeper.name=Vyvinutý Červený Syčák
+entity.EvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
+
+#Achievement
+achievement.mercuryPlanet=Přistaň na Merkuru!
+achievement.venusPlanet=Přistaň na Venuši!
+achievement.ceresPlanet=Přistaň na Ceresu!
+achievement.jupiterPlanet=Přistaň na Jupiteru!
+achievement.saturnPlanet=Přistaň na Saturnu!
+achievement.uranusPlanet=Přistaň na Uranu!
+achievement.neptunePlanet=Přistaň na Neptunu!
+achievement.plutoPlanet=Přistaň na Plutu!
+achievement.erisPlanet=Přistaň na Erisu!
+
+achievement.venusBoss=Zabij Bosse z kobky na Venuši
+achievement.jupiterBoss=Zabij Bosse z kobky na Jupiteru
+achievement.saturnBoss=Zabij Bosse z kobky na Saturnu
+achievement.uranusBoss=Zabij Bosse z kobky na Uranu
+achievement.neptuneBoss=Zabij Bosse z kobky na Neptunu
+
+achievement.venusBoss.desc=Zabij Bosse z kobky na Venuši a otevři truhlu s pokladem
+achievement.jupiterBoss.desc=Zabij Bosse z kobky na Jupiteru a otevři truhlu s pokladem
+achievement.saturnBoss.desc=Zabij Bosse z kobky na Saturnu a otevři truhlu s pokladem
+achievement.uranusBoss.desc=Zabij Bosse z kobky na Uranu a otevři truhlu s pokladem
+achievement.neptuneBoss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s pokladem
+
+achievement.mercuryPlanet.desc=Vezmi raketu typ 4 na Merkur
+achievement.venusPlanet.desc=Vezmi raketu typ 3 na Venuši
+achievement.ceresPlanet.desc=Vezmi raketu typ 4 na Ceres
+achievement.jupiterPlanet.desc=Vezmi raketu typ 4 na Jupiter
+achievement.saturnPlanet.desc=Vezmi raketu typ 5 na Saturn
+achievement.uranusPlanet.desc=Vezmi raketu typ 6 na Uran
+achievement.neptunePlanet.desc=Vezmi raketu typ 7 na Neptun
+achievement.plutoPlanet.desc=Vezmi raketu typ 8 na Pluto
+achievement.erisPlanet.desc=Vezmi raketu typ 8 na Eris
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=Tekutý světlit
+tile.magma_fluid.name=Tekutá magma
+tile.nitrogen_fluid.name=Tekutý dusík
+tile.frozen_water_fluid.name=Zmrzlá voda
+tile.Salt_fluid.name=Zmrzlá sůl

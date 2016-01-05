@@ -1,0 +1,484 @@
+#Creative Tabs
+itemGroup.SpaceItemsTab=额外行星 物品
+itemGroup.SpaceBlocksTab=额外行星 建筑块
+itemGroup.SpaceToolsTab=额外行星 工具
+itemGroup.SpaceArmorTab=额外行星 装甲
+
+#Planets
+planet.Mercury=水星
+planet.Venus=金星
+planet.Ceres=谷神星
+planet.Jupiter=木星
+planet.Saturn=土星
+planet.Uranus=天王星
+planet.Neptune=海王星
+planet.Pluto=冥王星
+planet.Eris=阋神星
+planet.kuiperBelt=柯伊伯带
+
+#Moons
+moon.triton=海卫
+moon.callisto=木卫四
+moon.europa=木卫二
+moon.ganymede=木卫三
+moon.io=木卫一
+moon.deimos=火卫二
+moon.phobos=火卫一
+moon.iapetus=土卫八
+moon.rhea=土卫五
+moon.titan=土卫一
+moon.oberon=天卫四
+moon.titania=天卫三
+
+#Planet Blocks
+tile.mercury.surface.name=水星 表面岩石
+tile.mercury.subSurface.name=水星 子表面岩石
+tile.mercury.stone.name=水星 石头
+tile.mercury.oreIron.name=水星 铁矿石
+tile.mercury.oreTin.name=水星 锡矿石
+tile.mercury.oreCopper.name=水星 铜矿石
+tile.mercury.oreMercury.name=水星 矿石
+
+tile.venus.surface.name=金星 表面岩石
+tile.venus.subSurface.name=金星 子表面岩石
+tile.venus.stone.name=金星 石头
+tile.venus.oreIron.name=金星 铁矿石
+tile.venus.oreTin.name=金星 锡矿石
+tile.venus.oreCopper.name=金星 铜矿石
+tile.venus.oreCarbon.name=碳矿石
+
+tile.ceres.surface.name=谷神星 表面岩石
+tile.ceres.subSurface.name=谷神星 子表面岩石
+tile.ceres.stone.name=谷神星 石头
+tile.ceres.oreIron.name=谷神星 铁矿石
+tile.ceres.oreTin.name=谷神星 锡矿石
+tile.ceres.oreCopper.name=谷神星 铜矿石
+tile.ceres.oreUranium.name=谷神星 铀矿石
+
+tile.jupiter.surface.name=木星 表面岩石
+tile.jupiter.subSurface.name=木星 子表面岩石
+tile.jupiter.stone.name=木星 石头
+tile.jupiter.oreIron.name=木星 铁矿石
+tile.jupiter.oreTin.name=木星 锡矿石
+tile.jupiter.oreCopper.name=木星 铜矿石
+tile.jupiter.orePalladium.name=木星 钯矿石
+tile.jupiter.oreNickel.name=木星 镍矿石
+
+tile.saturn.surface.name=土星 表面岩石
+tile.saturn.subSurface.name=土星 子表面岩石
+tile.saturn.stone.name=土星 石头
+tile.saturn.oreIron.name=土星 铁矿石
+tile.saturn.oreTin.name=土星 锡矿石
+tile.saturn.oreCopper.name=土星 铜矿石
+tile.saturn.oreMagnesium.name=土星 镁矿石
+
+tile.uranus.surface.name=天王星 表面岩石
+tile.uranus.subSurface.name=天王星 子表面岩石
+tile.uranus.stone.name=天王星 石头
+tile.uranus.oreCrystal.name=水晶石
+
+tile.neptune.surface.name=海王星 表面岩石
+tile.neptune.subSurface.name=海王星 子表面岩石
+tile.neptune.stone.name=海王星 石头
+tile.neptune.oreIron.name=海王星 铁矿石
+tile.neptune.oreTin.name=海王星 锡矿石
+tile.neptune.oreCopper.name=海王星 铜矿石
+tile.neptune.oreZinc.name=锌矿石
+
+tile.pluto.surface.name=冥王星 表面岩石
+tile.pluto.subSurface.name=冥王星 子表面岩石
+tile.pluto.stone.name=冥王星 石头
+tile.pluto.oreIron.name=冥王星 铁矿石
+tile.pluto.oreTin.name=冥王星 锡矿石
+tile.pluto.oreCopper.name=冥王星 铜矿石
+tile.pluto.oreTungsten.name=冥王星 钨矿石
+
+tile.eris.surface.name=阋神星 表面岩石
+tile.eris.subSurface.name=阋神星 子表面岩石
+tile.eris.stone.name=阋神星 石头
+tile.eris.oreIron.name=阋神星 铁矿石
+tile.eris.oreTin.name=阋神星 锡矿石
+tile.eris.oreCopper.name=阋神星 铜矿石
+
+#Moon Blocks
+tile.callisto.surface.name=木卫四 表面岩石
+tile.callisto.subSurface.name=木卫四 子表面岩石
+tile.callisto.stone.name=木卫四 石头
+tile.callisto.oreIron.name=木卫四 铁矿石
+tile.callisto.oreTin.name=木卫四 锡矿石
+tile.callisto.oreCopper.name=木卫四 铜矿石
+
+tile.deimos.surface.name=火卫二 表面岩石
+tile.deimos.subSurface.name=火卫二 子表面岩石
+tile.deimos.stone.name=火卫二 石头
+tile.deimos.oreIron.name=火卫二 铁矿石
+tile.deimos.oreTin.name=火卫二 锡矿石
+tile.deimos.oreCopper.name=火卫二 铜矿石
+
+tile.europa.surface.name=木卫二 表面岩石
+tile.europa.subSurface.name=木卫二 子表面岩石
+tile.europa.stone.name=木卫二 石头
+tile.europa.oreIron.name=木卫二 铁矿石
+tile.europa.oreTin.name=木卫二 锡矿石
+tile.europa.oreCopper.name=木卫二 铜矿石
+
+tile.io.surface.name=木卫一 表面岩石
+tile.io.subSurface.name=木卫一 子表面岩石
+tile.io.stone.name=木卫一 石头
+tile.io.oreIron.name=木卫一 铁矿石
+tile.io.oreTin.name=木卫一 锡矿石
+tile.io.oreCopper.name=木卫一 铜矿石
+
+tile.phobos.surface.name=火卫一 表面岩石
+tile.phobos.subSurface.name=火卫一 子表面岩石
+tile.phobos.stone.name=火卫一 石头
+tile.phobos.oreIron.name=火卫一 铁矿石
+tile.phobos.oreTin.name=火卫一 锡矿石
+tile.phobos.oreCopper.name=火卫一 铜矿石
+
+tile.triton.surface.name=海卫 表面岩石
+tile.triton.subSurface.name=海卫 子表面岩石
+tile.triton.stone.name=海卫 石头
+tile.triton.oreIron.name=海卫 铁矿石
+tile.triton.oreTin.name=海卫 锡矿石
+tile.triton.oreCopper.name=海卫 铜矿石
+
+tile.ganymede.surface.name=木卫三 表面岩石
+tile.ganymede.subSurface.name=木卫三 子表面岩石
+tile.ganymede.stone.name=木卫三 石头
+tile.ganymede.oreIron.name=木卫三 铁矿石
+tile.ganymede.oreTin.name=木卫三 锡矿石
+tile.ganymede.oreCopper.name=木卫三 铜矿石
+
+tile.rhea.surface.name=土卫五 表面岩石
+tile.rhea.subSurface.name=土卫五 子表面岩石
+tile.rhea.stone.name=土卫五 石头
+tile.rhea.oreIron.name=土卫五 铁矿石
+tile.rhea.oreTin.name=土卫五 锡矿石
+tile.rhea.oreCopper.name=土卫五 铜矿石
+
+tile.titan.surface.name=土卫一 表面岩石
+tile.titan.subSurface.name=土卫一 子表面岩石
+tile.titan.stone.name=土卫一 石头
+tile.titan.oreIron.name=土卫一 铁矿石
+tile.titan.oreTin.name=土卫一 锡矿石
+tile.titan.oreCopper.name=土卫一 铜矿石
+
+#Planet Gravel Blocks
+tile.mercuryGravel.name=水星 碎石
+tile.ceresGravel.name=谷神星 碎石
+tile.plutoGravel.name=冥王星 碎石
+tile.erisGravel.name=阋神星 碎石
+tile.ioGravel.name=木卫一 碎石
+tile.europaGravel.name=木卫二 碎石
+tile.deimosGravel.name=火卫二 碎石
+tile.phobosGravel.name=火卫一 碎石
+tile.tritonGravel.name=海卫 碎石
+tile.callistoGravel.name=木卫四 碎石
+tile.ganymedeGravel.name=木卫三 碎石
+
+tile.venusGravel.name=金星 碎石
+tile.jupiterGravel.name=木星 碎石
+tile.saturnGravel.name=土星 碎石
+tile.uranusGravel.name=天王星 碎石
+tile.neptuneGravel.name=海王星 碎石
+
+#Dungeon Bricks
+tile.veunsDungeonBrick.name=金星 地牢砖
+tile.jupiterDungeonBrick.name=木星 地牢砖
+tile.saturnDungeonBrick.name=土星 地牢砖
+tile.uranusDungeonBrick.name=天王星 地牢砖
+tile.neptuneDungeonBrick.name=海王星 地牢砖
+tile.plutoDungeonBrick.name=冥王星 地牢砖
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星石质台阶
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=金星石质台阶
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=谷神星石质台阶
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=木星石质台阶
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=土星石质台阶
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=天王星石质台阶
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=海王星石质台阶
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星石质台阶
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=阋神星石质台阶
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=水星石质楼梯
+tile.venusStoneStairs.name=金星石质楼梯
+tile.ceresStoneStairs.name=谷神星石质楼梯
+tile.jupiterStoneStairs.name=木星石质楼梯
+tile.saturnStoneStairs.name=土星石质楼梯
+tile.uranusStoneStairs.name=天王星石质楼梯
+tile.neptuneStoneStairs.name=海王星石质楼梯
+tile.plutoStoneStairs.name=冥王星石质楼梯
+tile.erisStoneStairs.name=阋神星石质楼梯
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星 地牢砖台阶
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=木星 地牢砖台阶
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=土星 地牢砖台阶
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=天王星 地牢砖台阶
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=海王星 地牢砖台阶
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=金星 地牢砖楼梯
+tile.jupiterDungeonBrickStoneStairs.name=木星 地牢砖楼梯
+tile.saturnDungeonBrickStoneStairs.name=土星 地牢砖楼梯
+tile.uranusDungeonBrickStoneStairs.name=天王星 地牢砖楼梯
+tile.neptuneDungeonBrickStoneStairs.name=海王星 地牢砖楼梯
+
+#Treasure Chests
+tile.treasureChestT4.name=等级 4 宝箱
+tile.treasureChestT5.name=等级 5 宝箱
+tile.treasureChestT6.name=等级 6 宝箱
+tile.treasureChestT7.name=等级 7 宝箱
+tile.treasureChestT8.name=等级 8 宝箱
+tile.treasureChestT9.name=等级 9 宝箱
+tile.treasureChestT4.description=等级 4 宝箱会在金星地牢形成。当你击败了金星最终首领后，就能解锁宝箱。
+tile.treasureChestT5.description=等级 5 宝箱会在木星地牢形成。当你击败了木星最终首领后，就能解锁宝箱。
+tile.treasureChestT6.description=等级 6 宝箱会在土星地牢形成。当你击败了土星最终首领后，就能解锁宝箱。
+tile.treasureChestT7.description=等级 7 宝箱会在天王星地牢形成。当你击败了天王星最终首领后，就能解锁宝箱。
+tile.treasureChestT8.description=等级 8 宝箱会在海王星地牢形成。当你击败了海王星最终首领后，就能解锁宝箱。
+tile.treasureChestT9.description=等级 9 宝箱会在冥王星地牢形成。当你击败了冥王星最终首领后，就能解锁宝箱。
+
+#Machines
+tile.advancedRefinery.name=先进的炼油厂
+tile.solar.hybrid.name=混合型太阳能电池板
+tile.solar.ultimate.name=最终太阳能电池板
+tile.solarhybrid.description=这个混合型太阳能电池板能在白天或黑夜工作。
+tile.solarultimate.description=这个最终太阳能电池板能在白天或黑夜工作。
+container.solarhybrid.name=混合型太阳能电池板
+container.solarultimate.name=最终太阳能电池板
+
+#Other Blocks
+tile.nuclearBomb.name=核弹
+tile.volcanicRock.name=火山岩
+tile.frozenNitrogen.name=冷冻氮
+tile.denseIce.name=密集冰
+tile.fossil.name=化石块
+
+#Rocket Items
+item.itemTier4Rocket.t4Rocket.name=等级 4 火箭
+item.itemTier5Rocket.t5Rocket.name=等级 5 火箭
+item.itemTier6Rocket.t6Rocket.name=等级 6 火箭
+item.itemTier7Rocket.t7Rocket.name=等级 7 火箭
+item.itemTier8Rocket.t8Rocket.name=等级 8 火箭
+item.itemTier9Rocket.t9Rocket.name=等级 9 火箭
+
+#Rocket Tiered Items
+item.noseConeTier4.name=等级 4 火箭锥
+item.noseConeTier5.name=等级 5 火箭锥
+item.noseConeTier6.name=等级 6 火箭锥
+item.noseConeTier7.name=等级 7 火箭锥
+item.noseConeTier8.name=等级 8 火箭锥
+item.noseConeTier9.name=等级 9 火箭锥
+
+item.tier4.tier4Fin.name=等级 4 火箭翼
+item.tier5.tier5Fin.name=等级 5 火箭翼
+item.tier6.tier6Fin.name=等级 6 火箭翼
+item.tier7.tier7Fin.name=等级 7 火箭翼
+item.tier8.tier8Fin.name=等级 8 火箭翼
+item.tier9.tier9Fin.name=等级 9 火箭翼
+
+item.tier4.tier4engine.name=等级 4 火箭发动机
+item.tier5.tier5engine.name=等级 5 火箭发动机
+item.tier6.tier6engine.name=等级 6 火箭发动机
+item.tier7.tier7engine.name=等级 7 火箭发动机
+item.tier8.tier8engine.name=等级 8 火箭发动机
+item.tier9.tier9engine.name=等级 9 火箭发动机
+
+item.tier4.tier4booster.name=等级 4 火箭助推器
+item.tier5.tier5booster.name=等级 5 火箭助推器
+item.tier6.tier6booster.name=等级 6 火箭助推器
+item.tier7.tier7booster.name=等级 7 火箭助推器
+item.tier8.tier8booster.name=等级 8 火箭助推器
+item.tier9.tier9booster.name=等级 9 火箭助推器
+
+item.tier4.tier4HeavyDutyPlate.name=重型板
+item.tier5.tier5HeavyDutyPlate.name=重型板
+item.tier6.tier6HeavyDutyPlate.name=重型板
+item.tier7.tier7HeavyDutyPlate.name=重型板
+item.tier8.tier8HeavyDutyPlate.name=重型板
+item.tier9.tier9HeavyDutyPlate.name=重型板
+
+tier4.heavyDutyPlate.name=等级 4
+tier5.heavyDutyPlate.name=等级 5
+tier6.heavyDutyPlate.name=等级 6
+tier7.heavyDutyPlate.name=等级 7
+tier8.heavyDutyPlate.name=等级 8
+tier9.heavyDutyPlate.name=等级 9
+
+#Compressed Items
+item.tier4.compressedCarbon.name=压缩活性炭
+item.tier5.compressedPalladium.name=压缩钯
+item.tier6.compressedMagnesium.name=压缩镁
+item.tier7.compressedReinforcedCrystal.name=压缩强化版水晶
+item.tier7.compressedCrystal.name=压缩水晶
+item.compressedZinc.name=压缩锌
+item.compressedNickel.name=压缩镍
+item.compressedMercury.name=压缩汞
+item.tier9.compressedTungsten.name=压缩钨
+
+#Ingots
+item.tier4.ingotCarbon.name=碳块
+item.tier5.ingotPalladium.name=钯块
+item.tier6.ingotMagnesium.name=镁块
+item.tier7.ingotCrystal.name=水晶块
+item.ingotZinc.name=锌块
+item.ingotNickel.name=镍块
+item.ingotMercury.name=汞块
+item.ingotUranium.name=铀块
+item.tier9.ingotTungsten.name=钨块
+
+#Buckets
+item.bucket_glowstone.name=液态萤石
+item.bucket_salt.name=液态盐
+item.bucket_magma.name=岩浆
+item.bucket_frozen_water.name=冰冻水
+item.bucket_nitrogen.name=液态氮
+
+#Keys
+item.key.T4.name=等级 4 地牢钥匙
+item.key.T5.name=等级 5 地牢钥匙
+item.key.T6.name=等级 6 地牢钥匙
+item.key.T7.name=等级 7 地牢钥匙
+item.key.T8.name=等级 8 地牢钥匙
+item.key.T9.name=等级 9 地牢钥匙
+
+#Tools
+item.carbonPickaxe.name=碳镐
+item.carbonAxe.name=碳斧头
+item.carbonSword.name=碳剑
+item.carbonHoe.name=碳锄头
+item.carbonShovel.name=碳锹
+item.palladiumPickaxe.name=钯镐
+item.palladiumAxe.name=钯斧头
+item.palladiumSword.name=钯剑
+item.palladiumHoe.name=钯锄头
+item.palladiumShovel.name=钯锹
+item.magnesiumPickaxe.name=镁镐
+item.magnesiumAxe.name=镁斧头
+item.magnesiumSword.name=镁剑
+item.magnesiumHoe.name=镁锄头
+item.magnesiumShovel.name=镁锹
+item.crystalPickaxe.name=水晶镐
+item.crystalAxe.name=水晶斧头
+item.crystalSword.name=水晶剑
+item.crystalHoe.name=水晶锄头
+item.crystalShovel.name=水晶锹
+
+#Schematics
+item.schematicTier4.name=NASA工作台示意图
+item.schematicTier5.name=NASA工作台示意图
+item.schematicTier6.name=NASA工作台示意图
+item.schematicTier7.name=NASA工作台示意图
+item.schematicTier8.name=NASA工作台示意图
+item.schematicTier9.name=NASA工作台示意图
+
+schematic.tier4.rocket.name=等级 4 火箭
+schematic.tier5.rocket.name=等级 5 火箭
+schematic.tier6.rocket.name=等级 6 火箭
+schematic.tier7.rocket.name=等级 7 火箭
+schematic.tier8.rocket.name=等级 8 火箭
+schematic.tier9.rocket.name=等级 9 火箭
+
+schematic.rocketT4.name=等级 4 火箭
+schematic.rocketT5.name=等级 5 火箭
+schematic.rocketT6.name=等级 6 火箭
+schematic.rocketT7.name=等级 7 火箭
+schematic.rocketT8.name=等级 8 火箭
+schematic.rocketT9.name=等级 9 火箭
+
+#Batteries
+item.mercuryBattery.name=汞电池
+item.nickelBattery.name=镍电池
+item.zincBattery.name=锌电池
+
+#Armor
+item.carbonHelmet.name=碳头盔
+item.carbonChest.name=碳胸甲
+item.carbonLegings.name=碳护腿
+item.carbonBoots.name=碳靴子
+item.palladiumHelmet.name=钯头盔
+item.palladiumChest.name=钯胸甲
+item.palladiumLegings.name=钯护腿
+item.palladiumBoots.name=钯靴子
+item.magnesiumHelmet.name=镁头盔
+item.magnesiumChest.name=镁胸甲
+item.magnesiumLegings.name=镁护腿
+item.magnesiumBoots.name=镁靴子
+item.crystalHelmet.name=水晶头盔
+item.crystalChest.name=水晶胸甲
+item.crystalLegings.name=水晶护腿
+item.crystalBoots.name=水晶靴子
+
+#Other Items
+item.appleDiamond.name=钻石苹果
+item.cannedfood.cannedFood.name=食品罐头
+item.bodyparts.arm.name=手
+item.bodyparts.leg.name=脚
+
+item.cannedfood.dehydratedPorkchop.name=脱水的猪排
+item.cannedfood.dehydratedFish.name=脱水的鱼
+item.cannedfood.dehydratedSalmon.name=脱水的鲑鱼
+item.cannedfood.dehydratedChicken.name=脱水的鸡肉
+item.cannedfood.dehydratedBeef.name=脱水的牛肉
+
+#Entities
+entity.CreeperBossVenus.name=金星爬行者首领
+entity.CreeperBossJupiter.name=木星爬行者首领
+entity.CreeperBossSaturn.name=土星爬行者首领
+entity.CreeperBossUranus.name=天王星爬行者首领
+entity.CreeperBossNeptune.name=海王星爬行者首领
+
+entity.EvolvedMagmaCubeBoss.name=进化版岩浆怪首领
+entity.EntityEvolvedIceSlimeBoss.name=进化版冰史莱姆首领
+
+entity.EvolvedWitch.name=进化版巫婆
+entity.EvolvedMagmaCube.name=进化版岩浆怪
+entity.EvolvedIceSlime.name=进化版冰史莱姆
+entity.EvolvedEnderman.name=进化版末影人
+entity.EvolvedBlaze.name=进化版火焰怪
+entity.EvolvedBlueCreeper.name=进化版蓝色爬行者
+entity.EvolvedRedCreeper.name=进化版红色爬行者
+entity.EvolvedPowerSkeleton.name=进化版能量骷髅
+
+#Achievement
+achievement.mercuryPlanet=着落在水星！
+achievement.venusPlanet=着落在金星！
+achievement.ceresPlanet=着落在谷神星！
+achievement.jupiterPlanet=着落在木星！
+achievement.saturnPlanet=着落在土星！
+achievement.uranusPlanet=着落在天王星！
+achievement.neptunePlanet=着落在海王星！
+achievement.plutoPlanet=着落在冥王星！
+achievement.erisPlanet=着落在阋神星！
+
+achievement.venusBoss=杀死金星地牢首领
+achievement.jupiterBoss=杀死木星地牢首领
+achievement.saturnBoss=杀死土星地牢首领
+achievement.uranusBoss=杀死天王星地牢首领
+achievement.neptuneBoss=杀死海王星地牢首领
+
+achievement.venusBoss.desc=杀死金星地牢首领并开启宝箱！
+achievement.jupiterBoss.desc=杀死木星地牢首领并开启宝箱！
+achievement.saturnBoss.desc=杀死土星地牢首领并开启宝箱！
+achievement.uranusBoss.desc=杀死天王星地牢首领并开启宝箱！
+achievement.neptuneBoss.desc=杀死海王星地牢首领并开启宝箱！
+
+achievement.mercuryPlanet.desc=乘坐等级4的火箭到水星
+achievement.venusPlanet.desc=乘坐等级3的火箭到金星
+achievement.ceresPlanet.desc=乘坐等级4的火箭到谷神星
+achievement.jupiterPlanet.desc=乘坐等级4的火箭到木星
+achievement.saturnPlanet.desc=乘坐等级5的火箭到土星
+achievement.uranusPlanet.desc=乘坐等级6的火箭到天王星
+achievement.neptunePlanet.desc=乘坐等级7的火箭到海王星
+achievement.plutoPlanet.desc=乘坐等级8的火箭到冥王星
+achievement.erisPlanet.desc=乘坐等级8的火箭到阋神星
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=液态萤石
+tile.magma_fluid.name=液态岩浆
+tile.nitrogen_fluid.name=液氮
+tile.frozen_water_fluid.name=冰冻水
+tile.Salt_fluid.name=液态盐
