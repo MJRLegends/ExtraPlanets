@@ -41,7 +41,6 @@ public class ExtraPlanets_Planets {
 	public static Planet eris;
 	public static Planet kuiperBelt;
 
-
 	public static void init() {
 		initializePlanets();
 		registerPlanets();

@@ -32,7 +32,7 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.MapGenVillageNeptune;
 
@@ -159,7 +159,7 @@ public class ChunkProviderNeptuneNew extends ChunkProviderGenerate {
 								if ((d15 += d16) > 0.0D) {
 									blockStorage[j3 += short1] = Blocks.stone;
 								} else if (k2 * 8 + l2 < seaLevel) {
-									blockStorage[j3 += short1] = ExtraPlanetsFluids.nitrogen;
+									blockStorage[j3 += short1] = ExtraPlanets_Fluids.nitrogen;
 								} else {
 									blockStorage[j3 += short1] = null;
 								}

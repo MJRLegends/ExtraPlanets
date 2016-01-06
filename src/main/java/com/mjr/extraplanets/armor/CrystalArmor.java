@@ -30,10 +30,10 @@ public class CrystalArmor extends ItemArmor{
 	}
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		if(stack.getItem() == ExtraPlanetsArmor.crystalHelmet || stack.getItem() == ExtraPlanetsArmor.crystalChest || stack.getItem() == ExtraPlanetsArmor.crystalBoots){
+		if(stack.getItem() == ExtraPlanets_Armor.crystalHelmet || stack.getItem() == ExtraPlanets_Armor.crystalChest || stack.getItem() == ExtraPlanets_Armor.crystalBoots){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
 		}
-		else if(stack.getItem() == ExtraPlanetsArmor.crystalLegings){
+		else if(stack.getItem() == ExtraPlanets_Armor.crystalLegings){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		}
 		else{

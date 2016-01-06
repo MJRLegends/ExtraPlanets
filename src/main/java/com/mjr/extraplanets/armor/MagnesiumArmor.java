@@ -30,10 +30,10 @@ public class MagnesiumArmor extends ItemArmor{
 	}
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		if(stack.getItem() == ExtraPlanetsArmor.magnesiumHelmet || stack.getItem() == ExtraPlanetsArmor.magnesiumChest || stack.getItem() == ExtraPlanetsArmor.magnesiumBoots){
+		if(stack.getItem() == ExtraPlanets_Armor.magnesiumHelmet || stack.getItem() == ExtraPlanets_Armor.magnesiumChest || stack.getItem() == ExtraPlanets_Armor.magnesiumBoots){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
 		}
-		else if(stack.getItem() == ExtraPlanetsArmor.magnesiumLegings){
+		else if(stack.getItem() == ExtraPlanets_Armor.magnesiumLegings){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		}
 		else{

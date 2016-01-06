@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class FluidSalt extends FluidBasic {
 	public FluidSalt(String name) {
-		super(ExtraPlanetsFluids.salt_fluid);
+		super(ExtraPlanets_Fluids.salt_fluid);
 		setRenderPass(1);
 		setBlockName(name);
 	}

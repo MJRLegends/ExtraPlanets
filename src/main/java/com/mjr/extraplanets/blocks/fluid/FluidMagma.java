@@ -13,7 +13,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class FluidMagma extends FluidBasic {
 	public FluidMagma(String name) {
-		super(ExtraPlanetsFluids.magma_fluid);
+		super(ExtraPlanets_Fluids.magma_fluid);
 		setRenderPass(1);
 		setBlockName(name);
 	}

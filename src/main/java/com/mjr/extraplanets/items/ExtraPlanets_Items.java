@@ -7,7 +7,7 @@ import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
 import com.mjr.extraplanets.items.keys.ItemKeyT6;
@@ -111,11 +111,11 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.ceres) {
 			ingotUranium = new ItemBasicItem("ingotUranium");
-			salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanetsFluids.salt);
+			salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
 		}
 		if (Config.jupiter) {
 			nickelBattery = new ItemBasicBattery("nickelBattery", 45000f, 2);
-			magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanetsFluids.magma);
+			magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
 
 			tier5Rocket = new Tier5Rocket("itemTier5Rocket");
 			schematicTier5 = new SchematicTier5("schematicTier5");
@@ -124,7 +124,7 @@ public class ExtraPlanets_Items {
 			T5key = new ItemKeyT5().setUnlocalizedName("key");
 		}
 		if (Config.saturn) {
-			glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanetsFluids.glowstone);
+			glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
 
 			tier6Rocket = new Tier6Rocket("itemTier6Rocket");
 			schematicTier6 = new SchematicTier6("schematicTier6");
@@ -133,7 +133,7 @@ public class ExtraPlanets_Items {
 			T6key = new ItemKeyT6().setUnlocalizedName("key");
 		}
 		if (Config.uranus) {
-			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanetsFluids.frozen_water);
+			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
 
 			tier7Rocket = new Tier7Rocket("itemTier7Rocket");
 			schematicTier7 = new SchematicTier7("schematicTier7");
@@ -143,7 +143,7 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.neptune) {
 			zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
-			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanetsFluids.nitrogen);
+			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
 
 			tier8Rocket = new Tier8Rocket("itemTier8Rocket");
 			schematicTier8 = new SchematicTier8("schematicTier8");
@@ -240,19 +240,19 @@ public class ExtraPlanets_Items {
 
 	private static void registerFluidContainer() {
 		if (Config.saturn) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.glowstone_fluid, new ItemStack(glowstone_bucket, 1, 0), new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.glowstone_fluid, new ItemStack(glowstone_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.jupiter) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.magma_fluid, new ItemStack(magma_bucket, 1, 0), new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.magma_fluid, new ItemStack(magma_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.neptune) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0), new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.uranus) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0), new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		if (Config.ceres) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanetsFluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 	}
 }

@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class FluidGlowstone extends FluidBasic {
 	public FluidGlowstone(String name) {
-		super(ExtraPlanetsFluids.glowstone_fluid);
+		super(ExtraPlanets_Fluids.glowstone_fluid);
 		setRenderPass(1);
 		setBlockName(name);
 	}

@@ -8,7 +8,7 @@ import com.mjr.extraplanets.Config;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ExtraPlanetsTools {
+public class ExtraPlanets_Tools {
 	private static ToolMaterial carbonMaterial = EnumHelper.addToolMaterial("Carbon Material", 3, 40, 4.0F, 6.0F, 30);
 	private static ToolMaterial palladiumMaterial = EnumHelper.addToolMaterial("Palladium Material", 4, 60, 6.0F, 8.0F, 30);
 	private static ToolMaterial magnesiumMaterial = EnumHelper.addToolMaterial("Magnesium Material", 5, 80, 8.0F, 10.0F, 30);

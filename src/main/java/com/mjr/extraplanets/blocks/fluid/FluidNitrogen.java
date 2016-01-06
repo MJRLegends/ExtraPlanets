@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class FluidNitrogen extends FluidBasic {
 	public FluidNitrogen(String name) {
-		super(ExtraPlanetsFluids.nitrogen_fluid);
+		super(ExtraPlanets_Fluids.nitrogen_fluid);
 		setRenderPass(1);
 		setBlockName(name);
 	}

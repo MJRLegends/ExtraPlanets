@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class FluidFrozenWater extends FluidBasic {
 	public FluidFrozenWater(String name) {
-		super(ExtraPlanetsFluids.frozen_water_fluid);
+		super(ExtraPlanets_Fluids.frozen_water_fluid);
 		setRenderPass(1);
 		setBlockName(name);
 	}

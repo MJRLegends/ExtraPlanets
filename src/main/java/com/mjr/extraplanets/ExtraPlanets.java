@@ -10,11 +10,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.DungeonHooks;
 import net.minecraftforge.common.MinecraftForge;
 
-import com.mjr.extraplanets.armor.ExtraPlanetsArmor;
+import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
 import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
@@ -38,7 +38,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.items.tools.ExtraPlanetsTools;
+import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
 import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
@@ -104,13 +104,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			return ExtraPlanetsTools.carbonPickaxe;
+			return ExtraPlanets_Tools.carbonPickaxe;
 		}
 	};
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			return ExtraPlanetsArmor.crystalChest;
+			return ExtraPlanets_Armor.crystalChest;
 		}
 	};
 
@@ -165,21 +165,21 @@ public class ExtraPlanets {
 		ExtraPlanets_Blocks.init();
 		ExtraPlanets_SlabsStairsBlocks.init();
 		ExtraPlanets_Machines.init();
-		ExtraPlanetsFluids.init();
-		ExtraPlanetsTools.init();
-		ExtraPlanetsArmor.init();
+		ExtraPlanets_Fluids.init();
+		ExtraPlanets_Tools.init();
+		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
 		if (Config.ceres)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.salt, ExtraPlanets_Items.salt_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.salt, ExtraPlanets_Items.salt_bucket);
 		if (Config.jupiter)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.magma, ExtraPlanets_Items.magma_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.magma, ExtraPlanets_Items.magma_bucket);
 		if (Config.saturn)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.glowstone, ExtraPlanets_Items.glowstone_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.glowstone, ExtraPlanets_Items.glowstone_bucket);
 		if (Config.uranus)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.frozen_water, ExtraPlanets_Items.frozen_water_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.frozen_water, ExtraPlanets_Items.frozen_water_bucket);
 		if (Config.neptune)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.nitrogen, ExtraPlanets_Items.nitrogen_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.nitrogen, ExtraPlanets_Items.nitrogen_bucket);
 
 		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
 		ExtraPlanets.proxy.preInit(event);
@@ -187,6 +187,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_SpaceStations.init();
 		ExtraPlanets_Moons.init();

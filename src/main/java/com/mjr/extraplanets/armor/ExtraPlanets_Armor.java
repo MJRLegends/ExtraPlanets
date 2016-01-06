@@ -8,7 +8,7 @@ import com.mjr.extraplanets.Config;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ExtraPlanetsArmor {
+public class ExtraPlanets_Armor {
 	private static ArmorMaterial carbon_ArmorMaterial = EnumHelper.addArmorMaterial("Carbon_Armor", 26, new int[] { 6, 11, 7, 6 }, 12);
 	private static ArmorMaterial palladium_ArmorMaterial = EnumHelper
 			.addArmorMaterial("Palladium_Armor", 26, new int[] { 7, 12, 7, 3 }, 12);

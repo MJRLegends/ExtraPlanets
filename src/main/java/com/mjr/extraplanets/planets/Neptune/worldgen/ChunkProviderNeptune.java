@@ -21,7 +21,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
@@ -116,7 +116,7 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 	@Override
 	protected BlockMetaPair getGrassBlock() {
 		if(Config.neptuneLiquid)
-			return new BlockMetaPair(ExtraPlanetsFluids.nitrogen,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Fluids.nitrogen,(byte) 0);
 		else
 			return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 0);
 	}
@@ -124,7 +124,7 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 	@Override
 	protected BlockMetaPair getDirtBlock() {
 		if(Config.neptuneLiquid)
-			return new BlockMetaPair(ExtraPlanetsFluids.nitrogen,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Fluids.nitrogen,(byte) 0);
 		else
 			return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 1);
 	}

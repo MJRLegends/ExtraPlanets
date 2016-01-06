@@ -20,7 +20,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
@@ -119,7 +119,7 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 	@Override
 	protected BlockMetaPair getGrassBlock() {
 		if(Config.jupiterLiquid)
-			return new BlockMetaPair(ExtraPlanetsFluids.magma,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Fluids.magma,(byte) 0);
 		else
 			return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks,(byte) 0);
 	}
@@ -127,7 +127,7 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 	@Override
 	protected BlockMetaPair getDirtBlock() {
 		if(Config.jupiterLiquid)
-			return new BlockMetaPair(ExtraPlanetsFluids.magma,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Fluids.magma,(byte) 0);
 		else
 			return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks,(byte) 1);
 	}

@@ -20,7 +20,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
@@ -117,7 +117,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 	@Override
 	protected BlockMetaPair getGrassBlock() {
 		if(Config.saturnLiquid)
-			return new BlockMetaPair(ExtraPlanetsFluids.glowstone,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Fluids.glowstone,(byte) 0);
 		else
 			return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks,(byte) 0);
 	}
@@ -125,7 +125,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 	@Override
 	protected BlockMetaPair getDirtBlock() {
 		if(Config.saturnLiquid)
-			return new BlockMetaPair(ExtraPlanetsFluids.glowstone,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Fluids.glowstone,(byte) 0);
 		else
 			return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks,(byte) 1);
 	}

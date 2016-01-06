@@ -5,7 +5,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ExtraPlanetsFluids {
+public class ExtraPlanets_Fluids {
 	public static Block glowstone;
 	public static Fluid glowstone_fluid;
 

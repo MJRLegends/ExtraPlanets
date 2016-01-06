@@ -30,10 +30,10 @@ public class PalladiumArmor extends ItemArmor{
 	}
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		if(stack.getItem() == ExtraPlanetsArmor.palladiumHelmet || stack.getItem() == ExtraPlanetsArmor.palladiumChest || stack.getItem() == ExtraPlanetsArmor.palladiumBoots){
+		if(stack.getItem() == ExtraPlanets_Armor.palladiumHelmet || stack.getItem() == ExtraPlanets_Armor.palladiumChest || stack.getItem() == ExtraPlanets_Armor.palladiumBoots){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
 		}
-		else if(stack.getItem() == ExtraPlanetsArmor.palladiumLegings){
+		else if(stack.getItem() == ExtraPlanets_Armor.palladiumLegings){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		}
 		else{
