@@ -1,6 +1,6 @@
 package com.mjr.extraplanets;
 
-public class ExtraPlanetsSolarSystems {
+public class ExtraPlanets_SolarSystems {
 
 	public static void init() {
 		initializeSolarSystems();
