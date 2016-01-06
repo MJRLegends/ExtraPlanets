@@ -18,7 +18,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
@@ -38,7 +38,7 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 
 	private final MapGenVillageVenus villageGenerator = new MapGenVillageVenus();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.veunsDungeonBrick, 14, 8, 16, 3);
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.veunsDungeonBrick, 14, 8, 16, 3);
 
 	public ChunkProviderVenus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -110,17 +110,17 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.venusBlocks,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.venusBlocks,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.venusBlocks,(byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks,(byte) 2);
 	}
 
 	@Override

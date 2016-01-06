@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 
 public class RenderNuclearBombPrimed extends Render {
@@ -41,7 +41,7 @@ public class RenderNuclearBombPrimed extends Render {
 
 		var10 = (1.0F - (tnt.fuse - par6 + 1.0F) / 100.0F) * 0.8F;
 		this.bindEntityTexture(tnt);
-		this.blockRenderer.renderBlockAsItem(ExtraPlanetsBlocks.nuclearBomb, 0, tnt.getBrightness(par6));
+		this.blockRenderer.renderBlockAsItem(ExtraPlanets_Blocks.nuclearBomb, 0, tnt.getBrightness(par6));
 
 		if (tnt.fuse / 5 % 2 == 0) {
 			GL11.glDisable(GL11.GL_TEXTURE_2D);
@@ -49,7 +49,7 @@ public class RenderNuclearBombPrimed extends Render {
 			GL11.glEnable(GL11.GL_BLEND);
 			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_DST_ALPHA);
 			GL11.glColor4f(1.0F, 1.0F, 1.0F, var10);
-			this.blockRenderer.renderBlockAsItem(ExtraPlanetsBlocks.nuclearBomb, 0, 1.0F);
+			this.blockRenderer.renderBlockAsItem(ExtraPlanets_Blocks.nuclearBomb, 0, 1.0F);
 			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 			GL11.glDisable(GL11.GL_BLEND);
 			GL11.glEnable(GL11.GL_LIGHTING);

@@ -19,7 +19,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.MapGenDungeon;
@@ -38,7 +38,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.plutoDungeonBrick, 14, 8, 16, 3);
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.plutoDungeonBrick, 14, 8, 16, 3);
 
 	public ChunkProviderPluto(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -103,17 +103,17 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.plutoBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.plutoBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.plutoBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.plutoBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.plutoBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.plutoBlocks, (byte) 2);
 	}
 
 	@Override

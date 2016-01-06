@@ -10,7 +10,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
@@ -31,11 +31,11 @@ public class BiomeDecoratorNeptuneNew extends BiomeDecorator{
 
 	public BiomeDecoratorNeptuneNew()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 4, 5, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 4, 4, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 8, 3, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
-		this.zincGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.neptuneBlocks, 8, 6, true, ExtraPlanetsBlocks.neptuneBlocks, 2);
-		this.frozenNitrogenGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.frozenNitrogen, 8, 0, true, ExtraPlanetsBlocks.neptuneBlocks, 0);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 5, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 4, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 3, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
+		this.zincGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 6, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
+		this.frozenNitrogenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.frozenNitrogen, 8, 0, true, ExtraPlanets_Blocks.neptuneBlocks, 0);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 
@@ -71,7 +71,7 @@ public class BiomeDecoratorNeptuneNew extends BiomeDecorator{
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(ExtraPlanetsFluids.nitrogen).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.neptuneBlocks);
+				new WorldGenCustomLake(ExtraPlanetsFluids.nitrogen).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.neptuneBlocks);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

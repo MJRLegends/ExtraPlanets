@@ -10,7 +10,7 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.PlanetsMain;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.WorldChunkManagerEris;
 
@@ -132,7 +132,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return PlanetsMain.eris;
+		return ExtraPlanets_Planets.eris;
 	}
 
 	@Override

@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 
@@ -19,11 +19,11 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorEris()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 4, 5, true, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 4, 4, true, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisBlocks, 8, 3, true, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.erisGravel, 12, 0, true, ExtraPlanetsBlocks.erisBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.erisBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisBlocks, 4, 5, true, ExtraPlanets_Blocks.erisBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisBlocks, 4, 4, true, ExtraPlanets_Blocks.erisBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisBlocks, 8, 3, true, ExtraPlanets_Blocks.erisBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisGravel, 12, 0, true, ExtraPlanets_Blocks.erisBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.erisBlocks, 2);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

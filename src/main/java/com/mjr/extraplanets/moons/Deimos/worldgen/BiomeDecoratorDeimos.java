@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeDecoratorDeimos extends BiomeDecoratorSpace {
 
@@ -18,11 +18,11 @@ public class BiomeDecoratorDeimos extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorDeimos() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.deimosBlocks, 4, 5, true, ExtraPlanetsBlocks.deimosBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.deimosBlocks, 4, 4, true, ExtraPlanetsBlocks.deimosBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.deimosBlocks, 8, 3, true, ExtraPlanetsBlocks.deimosBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.deimosGravel, 12, 0, true, ExtraPlanetsBlocks.deimosBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.deimosBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 4, 5, true, ExtraPlanets_Blocks.deimosBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 4, 4, true, ExtraPlanets_Blocks.deimosBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 8, 3, true, ExtraPlanets_Blocks.deimosBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosGravel, 12, 0, true, ExtraPlanets_Blocks.deimosBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.deimosBlocks, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);

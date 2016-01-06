@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.GuiSchematicTier4Rocket;
 import com.mjr.extraplanets.inventory.ContainerSchematicTier4Rocket;
-import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -31,7 +31,7 @@ public class SchematicTier4Rocket extends SchematicPage
 	@Override
 	public ItemStack getRequiredItem()
 	{
-		return new ItemStack(ExtraPlanetsItems.schematicTier4, 1, 0);
+		return new ItemStack(ExtraPlanets_Items.schematicTier4, 1, 0);
 	}
 
 	@SideOnly(Side.CLIENT)

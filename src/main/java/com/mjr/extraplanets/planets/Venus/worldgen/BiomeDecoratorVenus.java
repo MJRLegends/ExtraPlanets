@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
 public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
@@ -25,12 +25,12 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 	private int LakesPerChunk = 10;
 
 	public BiomeDecoratorVenus() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 5, true, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 4, true, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 8, 3, true, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.carbonGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusBlocks, 4, 6, true, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.venusGravel, 12, 0, true, ExtraPlanetsBlocks.venusBlocks, 2);
-		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.volcanicRock, 20, 0, true, ExtraPlanetsBlocks.venusBlocks, 0);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 4, 5, true, ExtraPlanets_Blocks.venusBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 4, 4, true, ExtraPlanets_Blocks.venusBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 8, 3, true, ExtraPlanets_Blocks.venusBlocks, 2);
+		this.carbonGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 4, 6, true, ExtraPlanets_Blocks.venusBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusGravel, 12, 0, true, ExtraPlanets_Blocks.venusBlocks, 2);
+		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.volcanicRock, 20, 0, true, ExtraPlanets_Blocks.venusBlocks, 0);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -61,7 +61,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.venusBlocks);
+				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.venusBlocks);
 			}
 		}
 

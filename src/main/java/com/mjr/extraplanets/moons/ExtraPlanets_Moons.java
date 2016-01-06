@@ -32,9 +32,9 @@ import com.mjr.extraplanets.moons.Titan.TeleportTypeTitan;
 import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
 import com.mjr.extraplanets.moons.triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.triton.WorldProviderTriton;
-import com.mjr.extraplanets.planets.PlanetsMain;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
-public class MoonsMain {
+public class ExtraPlanets_Moons {
 	public static Moon triton;
 
 	public static Moon callisto;
@@ -60,22 +60,22 @@ public class MoonsMain {
 
 	public static void initializeUnReachableMoons() {
 		// Saturn Moons
-		iapetus = makeUnreachableMoon("iapetus", PlanetsMain.saturn);
+		iapetus = makeUnreachableMoon("iapetus", ExtraPlanets_Planets.saturn);
 		if (iapetus != null)
 			iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(100.0F);
 
 		// Uranus Moons
-		titania = makeUnreachableMoon("titania", PlanetsMain.uranus);
+		titania = makeUnreachableMoon("titania", ExtraPlanets_Planets.uranus);
 		if (titania != null)
 			titania.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
-		oberon = makeUnreachableMoon("oberon", PlanetsMain.uranus);
+		oberon = makeUnreachableMoon("oberon", ExtraPlanets_Planets.uranus);
 		if (oberon != null)
 			oberon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(100.0F);
 	}
 
 	private static void initializeMoons() {
 		if (Config.triton) {
-			triton = new Moon("triton").setParentPlanet(PlanetsMain.neptune);
+			triton = new Moon("triton").setParentPlanet(ExtraPlanets_Planets.neptune);
 			triton.setPhaseShift(2.436F);
 			triton.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			triton.setRelativeOrbitTime(100.0F);
@@ -86,7 +86,7 @@ public class MoonsMain {
 			triton.setDimensionInfo(Config.tritonID, WorldProviderTriton.class);
 		}
 		if (Config.europa) {
-			europa = new Moon("europa").setParentPlanet(PlanetsMain.jupiter);
+			europa = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			europa.setPhaseShift(2.436F);
 			europa.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			europa.setRelativeOrbitTime(100.0F);
@@ -97,7 +97,7 @@ public class MoonsMain {
 			europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
 		}
 		if (Config.io) {
-			io = new Moon("io").setParentPlanet(PlanetsMain.jupiter);
+			io = new Moon("io").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			io.setPhaseShift(2.436F);
 			io.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			io.setRelativeOrbitTime(100.0F);
@@ -130,7 +130,7 @@ public class MoonsMain {
 			phobos.setDimensionInfo(Config.phobosID, WorldProviderPhobos.class);
 		}
 		if (Config.callisto) {
-			callisto = new Moon("callisto").setParentPlanet(PlanetsMain.jupiter);
+			callisto = new Moon("callisto").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			callisto.setPhaseShift(2.436F);
 			callisto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F));
 			callisto.setRelativeOrbitTime(100.0F);
@@ -141,7 +141,7 @@ public class MoonsMain {
 			callisto.setDimensionInfo(Config.callistoID, WorldProviderCallisto.class);
 		}
 		if (Config.ganymede) {
-			ganymede = new Moon("ganymede").setParentPlanet(PlanetsMain.jupiter);
+			ganymede = new Moon("ganymede").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			ganymede.setPhaseShift(2.436F);
 			ganymede.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			ganymede.setRelativeOrbitTime(100.0F);
@@ -152,7 +152,7 @@ public class MoonsMain {
 			ganymede.setDimensionInfo(Config.ganymedeID, WorldProviderGanymede.class);
 		}
 		if (Config.rhea) {
-			rhea = new Moon("rhea").setParentPlanet(PlanetsMain.saturn);
+			rhea = new Moon("rhea").setParentPlanet(ExtraPlanets_Planets.saturn);
 			rhea.setPhaseShift(1.45F);
 			rhea.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			rhea.setRelativeOrbitTime(100.0F);
@@ -163,7 +163,7 @@ public class MoonsMain {
 			rhea.setDimensionInfo(Config.rheaID, WorldProviderRhea.class);
 		}
 		if (Config.titan) {
-			titan = new Moon("titan").setParentPlanet(PlanetsMain.saturn);
+			titan = new Moon("titan").setParentPlanet(ExtraPlanets_Planets.saturn);
 			titan.setPhaseShift(1.45F);
 			titan.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			titan.setRelativeOrbitTime(100.0F);

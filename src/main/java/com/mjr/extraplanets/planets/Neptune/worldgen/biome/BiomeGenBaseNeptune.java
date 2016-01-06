@@ -19,7 +19,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeDecoratorNeptuneNew;
 
 public class BiomeGenBaseNeptune extends BiomeGenBase {
@@ -41,8 +41,8 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 		this.setColor(-16744448);
 		this.enableRain = true;
 		this.enableSnow = true;
-		this.topBlock = ExtraPlanetsBlocks.neptuneBlocks;
-		this.fillerBlock = ExtraPlanetsBlocks.neptuneBlocks;
+		this.topBlock = ExtraPlanets_Blocks.neptuneBlocks;
+		this.fillerBlock = ExtraPlanets_Blocks.neptuneBlocks;
 
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
@@ -107,7 +107,7 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 							if (maxFillerDepth <= 0) {
 								topBlock = null;
 								topMeta = 0;
-								fillerBlock = ExtraPlanetsBlocks.neptuneBlocks;
+								fillerBlock = ExtraPlanets_Blocks.neptuneBlocks;
 								fillerMeta = 2;
 							} else if (y >= seaLevel - 5 && y <= seaLevel) {
 								topBlock = this.topBlock;
@@ -132,7 +132,7 @@ public class BiomeGenBaseNeptune extends BiomeGenBase {
 								meta[index] = topMeta;
 							} else if (y < seaLevel - 8 - maxFillerDepth) {
 								topBlock = null;
-								fillerBlock = ExtraPlanetsBlocks.neptuneBlocks;
+								fillerBlock = ExtraPlanets_Blocks.neptuneBlocks;
 								fillerMeta = 2;
 								block[index] = Blocks.gravel;
 							} else {

@@ -7,7 +7,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
@@ -25,12 +25,12 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorCeres() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 4, 5, true, ExtraPlanetsBlocks.ceresBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 4, 4, true, ExtraPlanetsBlocks.ceresBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 8, 3, true, ExtraPlanetsBlocks.ceresBlocks, 2);
-		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresBlocks, 2, 6, true, ExtraPlanetsBlocks.ceresBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.ceresGravel, 12, 0, true, ExtraPlanetsBlocks.ceresBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.ceresBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 4, 5, true, ExtraPlanets_Blocks.ceresBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 4, 4, true, ExtraPlanets_Blocks.ceresBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 8, 3, true, ExtraPlanets_Blocks.ceresBlocks, 2);
+		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 2, 6, true, ExtraPlanets_Blocks.ceresBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresGravel, 12, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -63,7 +63,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenCustomLake(ExtraPlanetsFluids.salt).generate(this.currentWorld, this.rand, x, y, z,
-						ExtraPlanetsBlocks.ceresBlocks);
+						ExtraPlanets_Blocks.ceresBlocks);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

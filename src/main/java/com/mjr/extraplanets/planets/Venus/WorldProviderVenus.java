@@ -9,7 +9,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.planets.PlanetsMain;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Venus.worldgen.ChunkProviderVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.WorldChunkManagerVenus;
 
@@ -132,7 +132,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return PlanetsMain.venus;
+		return ExtraPlanets_Planets.venus;
 	}
 
 	@Override

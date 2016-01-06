@@ -10,7 +10,7 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.PlanetsMain;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Mercury.worldgen.ChunkProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.WorldChunkManagerMercury;
 
@@ -131,7 +131,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return PlanetsMain.mercury;
+		return ExtraPlanets_Planets.mercury;
 	}
 
 	@Override

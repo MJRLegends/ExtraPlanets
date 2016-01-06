@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class StructureComponentTritonVillageWell extends StructureComponentTritonVillage {
 	private int averageGroundLevel = -1;
@@ -67,7 +67,7 @@ public class StructureComponentTritonVillageWell extends StructureComponentTrito
 			this.boundingBox.offset(0, this.averageGroundLevel - this.boundingBox.maxY + 3, 0);
 		}
 
-		this.fillWithMetadataBlocks(par1World, par3StructureBoundingBox, 1, 0, 1, 4, 12, 4, ExtraPlanetsBlocks.tritonBlocks, 2, Blocks.flowing_water, 0, false);
+		this.fillWithMetadataBlocks(par1World, par3StructureBoundingBox, 1, 0, 1, 4, 12, 4, ExtraPlanets_Blocks.tritonBlocks, 2, Blocks.flowing_water, 0, false);
 		this.placeBlockAtCurrentPosition(par1World, Blocks.air, 0, 2, 12, 2, par3StructureBoundingBox);
 		this.placeBlockAtCurrentPosition(par1World, Blocks.air, 0, 3, 12, 2, par3StructureBoundingBox);
 		this.placeBlockAtCurrentPosition(par1World, Blocks.air, 0, 2, 12, 3, par3StructureBoundingBox);
@@ -80,7 +80,7 @@ public class StructureComponentTritonVillageWell extends StructureComponentTrito
 		this.placeBlockAtCurrentPosition(par1World, Blocks.fence, 0, 1, 14, 4, par3StructureBoundingBox);
 		this.placeBlockAtCurrentPosition(par1World, Blocks.fence, 0, 4, 13, 4, par3StructureBoundingBox);
 		this.placeBlockAtCurrentPosition(par1World, Blocks.fence, 0, 4, 14, 4, par3StructureBoundingBox);
-		this.fillWithMetadataBlocks(par1World, par3StructureBoundingBox, 1, 15, 1, 4, 15, 4, ExtraPlanetsBlocks.tritonBlocks, 2, ExtraPlanetsBlocks.tritonBlocks, 2, false);
+		this.fillWithMetadataBlocks(par1World, par3StructureBoundingBox, 1, 15, 1, 4, 15, 4, ExtraPlanets_Blocks.tritonBlocks, 2, ExtraPlanets_Blocks.tritonBlocks, 2, false);
 
 		for (int var4 = 0; var4 <= 5; ++var4) {
 			for (int var5 = 0; var5 <= 5; ++var5) {

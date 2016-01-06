@@ -25,7 +25,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.mjr.extraplanets.Achievements;
+import com.mjr.extraplanets.ExtraPlanets_Achievements;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.proxy.ClientProxy;
@@ -438,7 +438,7 @@ public class T6TreasureChest extends BlockContainer implements ITileEntityProvid
 			else
 			{
 				par5EntityPlayer.displayGUIChest((IInventory) var10);
-				par5EntityPlayer.addStat(Achievements.saturnBoss, 1);
+				par5EntityPlayer.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
 				return true;
 			}
 		}

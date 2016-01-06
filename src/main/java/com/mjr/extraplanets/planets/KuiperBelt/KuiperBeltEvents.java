@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.planets.PlanetsMain;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -41,7 +41,7 @@ public class KuiperBeltEvents {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onRingRender(CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre renderEvent) {
-		if (renderEvent.celestialBody.equals(PlanetsMain.kuiperBelt)) {
+		if (renderEvent.celestialBody.equals(ExtraPlanets_Planets.kuiperBelt)) {
 			if (FMLClientHandler.instance().getClient().currentScreen instanceof GuiCelestialSelection)
 				GL11.glColor4f(0.0F, 0.0F, 0.7F, 0.5F);
 			else

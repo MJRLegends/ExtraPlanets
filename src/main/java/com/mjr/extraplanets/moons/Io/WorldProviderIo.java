@@ -9,7 +9,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.moons.MoonsMain;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Io.worldgen.ChunkProviderIo;
 import com.mjr.extraplanets.moons.Io.worldgen.WorldChunkManagerIo;
 
@@ -70,7 +70,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return MoonsMain.io;
+		return ExtraPlanets_Moons.io;
 	}
 
 	@Override

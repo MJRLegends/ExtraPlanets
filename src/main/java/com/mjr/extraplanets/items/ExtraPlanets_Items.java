@@ -35,7 +35,7 @@ import com.mjr.extraplanets.items.schematics.SchematicTier9;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ExtraPlanetsItems {
+public class ExtraPlanets_Items {
 	public static Item tier4Rocket;
 	public static Item tier5Rocket;
 	public static Item tier6Rocket;

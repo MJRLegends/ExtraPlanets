@@ -10,7 +10,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
-import com.mjr.extraplanets.Achievements;
+import com.mjr.extraplanets.ExtraPlanets_Achievements;
 
 public class TeleportTypeMercury implements ITeleportType {
 
@@ -45,7 +45,7 @@ public class TeleportTypeMercury implements ITeleportType {
 
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket) {
-		player.addStat(Achievements.mercuryPlanet, 1);
+		player.addStat(ExtraPlanets_Achievements.mercuryPlanet, 1);
 	}
 
 }

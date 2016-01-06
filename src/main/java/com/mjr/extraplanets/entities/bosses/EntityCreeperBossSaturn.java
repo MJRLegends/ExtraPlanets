@@ -44,7 +44,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
 
-import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
 
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
@@ -260,7 +260,7 @@ public class EntityCreeperBossSaturn extends EntityMob implements IEntityBreatha
 				}
 			}
 
-			this.entityDropItem(new ItemStack(ExtraPlanetsItems.T6key, 1, 0), 0.5F);
+			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T6key, 1, 0), 0.5F);
 
 			super.setDead();
 

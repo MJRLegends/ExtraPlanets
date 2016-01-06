@@ -17,7 +17,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
@@ -83,17 +83,17 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryBlocks,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.mercuryBlocks,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryBlocks,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.mercuryBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.mercuryBlocks,(byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.mercuryBlocks,(byte) 2);
 	}
 
 	@Override

@@ -19,7 +19,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
@@ -43,7 +43,7 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 
 	private final MapGenVillageJupiter villageGenerator = new MapGenVillageJupiter();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.jupiterDungeonBrick, 14, 8, 16, 3);
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.jupiterDungeonBrick, 14, 8, 16, 3);
 
 	public ChunkProviderJupiter(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -121,7 +121,7 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 		if(Config.jupiterLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.magma,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.jupiterBlocks,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks,(byte) 0);
 	}
 
 	@Override
@@ -129,12 +129,12 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 		if(Config.jupiterLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.magma,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.jupiterBlocks,(byte) 1);
+			return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.jupiterBlocks,(byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks,(byte) 2);
 	}
 
 	@Override

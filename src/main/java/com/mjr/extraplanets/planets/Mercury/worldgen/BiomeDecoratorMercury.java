@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
@@ -20,12 +20,12 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorMercury()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 4, 5, true, ExtraPlanetsBlocks.mercuryBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 4, 4, true, ExtraPlanetsBlocks.mercuryBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 8, 3, true, ExtraPlanetsBlocks.mercuryBlocks, 2);
-		this.mercuryGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryBlocks, 8, 6, true, ExtraPlanetsBlocks.mercuryBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.mercuryGravel, 12, 0, true, ExtraPlanetsBlocks.mercuryBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.mercuryBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 5, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 4, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 8, 3, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
+		this.mercuryGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 8, 6, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryGravel, 12, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 1);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

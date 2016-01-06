@@ -2,7 +2,7 @@ package com.mjr.extraplanets;
 
 import net.minecraft.stats.Achievement;
 
-public class Achievements {
+public class ExtraPlanets_Achievements {
 
 	public static Achievement venusPlanet;
 	public static Achievement venusBoss;

@@ -28,7 +28,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsMachines;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
 
 import cpw.mods.fml.client.FMLClientHandler;
@@ -244,8 +244,8 @@ IInventory, ISidedInventory, IConnector {
 				for (int z = -1; z < 2; z++) {
 					if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 						FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(thisBlock.x + (y == 2 ? x : 0),
-								thisBlock.y + y, thisBlock.z + (y == 2 ? z : 0), ExtraPlanetsMachines.solarPanel,
-								Block.getIdFromBlock(ExtraPlanetsMachines.solarPanel) >> 12 & 255);
+								thisBlock.y + y, thisBlock.z + (y == 2 ? z : 0), ExtraPlanets_Machines.solarPanel,
+								Block.getIdFromBlock(ExtraPlanets_Machines.solarPanel) >> 12 & 255);
 					}
 
 					this.worldObj.setBlockToAir(thisBlock.x + (y == 2 ? x : 0), thisBlock.y + y, thisBlock.z + (y == 2 ? z : 0));

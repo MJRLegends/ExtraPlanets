@@ -8,7 +8,7 @@ import net.minecraft.world.IBlockAccess;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
@@ -53,7 +53,7 @@ public class BlockRendererTier9TreasureChest implements ISimpleBlockRenderingHan
 
 	public void renderChest(Block par1Block, int par2, float par3)
 	{
-		if (par1Block == ExtraPlanetsBlocks.treasureChestTier9)
+		if (par1Block == ExtraPlanets_Blocks.treasureChestTier9)
 		{
 			TileEntityRendererDispatcher.instance.renderTileEntityAt(this.chest, 0.0D, 0.0D, 0.0D, 0.0F);
 		}

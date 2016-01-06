@@ -42,7 +42,7 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.client.IRenderHandler;
 
-import com.mjr.extraplanets.planets.PlanetsMain;
+import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -101,7 +101,7 @@ public class WorldProviderPlutoOrbit extends WorldProviderSpace implements IOrbi
 	@Override
 	public CelestialBody getCelestialBody()
 	{
-		return PlanetsMain.plutoSpaceStation;
+		return ExtraPlanets_SpaceStations.plutoSpaceStation;
 	}
 
 	@Override

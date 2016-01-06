@@ -16,7 +16,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityTier9Rocket extends EntityTieredRocket
 {
@@ -154,7 +154,7 @@ public class EntityTier9Rocket extends EntityTieredRocket
 			}
 
 			stats.rocketType = this.rocketType.getIndex();
-			stats.rocketItem = ExtraPlanetsItems.tier9Rocket;
+			stats.rocketItem = ExtraPlanets_Items.tier9Rocket;
 			stats.fuelLevel = this.fuelTank.getFluidAmount();
 		}
 	}
@@ -287,7 +287,7 @@ public class EntityTier9Rocket extends EntityTieredRocket
 	public List<ItemStack> getItemsDropped(List<ItemStack> droppedItems)
 	{
 		super.getItemsDropped(droppedItems);
-		ItemStack rocket = new ItemStack(ExtraPlanetsItems.tier9Rocket, 1, this.rocketType.getIndex());
+		ItemStack rocket = new ItemStack(ExtraPlanets_Items.tier9Rocket, 1, this.rocketType.getIndex());
 		rocket.setTagCompound(new NBTTagCompound());
 		rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
 		droppedItems.add(rocket);

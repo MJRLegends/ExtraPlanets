@@ -11,9 +11,9 @@ import net.minecraftforge.common.DungeonHooks;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.mjr.extraplanets.armor.ExtraPlanetsArmor;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
-import com.mjr.extraplanets.blocks.ExtraPlanetsMachines;
-import com.mjr.extraplanets.blocks.ExtraPlanetsSlabsStairsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
+import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
@@ -37,9 +37,9 @@ import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.BucketHandler;
-import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.tools.ExtraPlanetsTools;
-import com.mjr.extraplanets.moons.MoonsMain;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
 import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
 import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
@@ -49,7 +49,8 @@ import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
 import com.mjr.extraplanets.moons.triton.event.TritonEvents;
-import com.mjr.extraplanets.planets.PlanetsMain;
+import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
@@ -61,7 +62,7 @@ import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.planets.Venus.event.VenusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
-import com.mjr.extraplanets.recipes.Recipes;
+import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.schematic.SchematicTier4Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier5Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
@@ -91,13 +92,13 @@ public class ExtraPlanets {
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
 		@Override
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(ExtraPlanetsMachines.advancedRefinery);
+			return Item.getItemFromBlock(ExtraPlanets_Machines.advancedRefinery);
 		}
 	};
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
 		public Item getTabIconItem() {
-			return ExtraPlanetsItems.tier7Rocket;
+			return ExtraPlanets_Items.tier7Rocket;
 		}
 	};
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
@@ -161,24 +162,24 @@ public class ExtraPlanets {
 		// MinecraftForge.EVENT_BUS.register(new
 		// RadiationBarOverlay(Minecraft.getMinecraft()));
 
-		ExtraPlanetsBlocks.init();
-		ExtraPlanetsSlabsStairsBlocks.init();
-		ExtraPlanetsMachines.init();
+		ExtraPlanets_Blocks.init();
+		ExtraPlanets_SlabsStairsBlocks.init();
+		ExtraPlanets_Machines.init();
 		ExtraPlanetsFluids.init();
 		ExtraPlanetsTools.init();
 		ExtraPlanetsArmor.init();
-		ExtraPlanetsItems.init();
+		ExtraPlanets_Items.init();
 
 		if (Config.ceres)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.salt, ExtraPlanetsItems.salt_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.salt, ExtraPlanets_Items.salt_bucket);
 		if (Config.jupiter)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.magma, ExtraPlanetsItems.magma_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.magma, ExtraPlanets_Items.magma_bucket);
 		if (Config.saturn)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.glowstone, ExtraPlanetsItems.glowstone_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.glowstone, ExtraPlanets_Items.glowstone_bucket);
 		if (Config.uranus)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.frozen_water, ExtraPlanetsItems.frozen_water_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.frozen_water, ExtraPlanets_Items.frozen_water_bucket);
 		if (Config.neptune)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.nitrogen, ExtraPlanetsItems.nitrogen_bucket);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanetsFluids.nitrogen, ExtraPlanets_Items.nitrogen_bucket);
 
 		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
 		ExtraPlanets.proxy.preInit(event);
@@ -186,8 +187,9 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		PlanetsMain.init();
-		MoonsMain.init();
+		ExtraPlanets_Planets.init();
+		ExtraPlanets_SpaceStations.init();
+		ExtraPlanets_Moons.init();
 		registerNonMobEntities();
 		registerCreatures();
 		ExtraPlanets.proxy.init(event);
@@ -197,8 +199,8 @@ public class ExtraPlanets {
 	public void postInit(FMLPostInitializationEvent event) {
 		registerSchematics();
 		addDungeonLoot();
-		Recipes.init();
-		Achievements.init();
+		ExtraPlanets_Recipes.init();
+		ExtraPlanets_Achievements.init();
 		ExtraPlanets.proxy.postInit(event);
 	}
 
@@ -265,17 +267,17 @@ public class ExtraPlanets {
 
 	private void addDungeonLoot(){
 		if (Config.venus)
-			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanetsItems.schematicTier4, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicTier4, 1, 0));
 		if (Config.jupiter)
-			GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanetsItems.schematicTier5, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanets_Items.schematicTier5, 1, 0));
 		if (Config.saturn)
-			GalacticraftRegistry.addDungeonLoot(6, new ItemStack(ExtraPlanetsItems.schematicTier6, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(6, new ItemStack(ExtraPlanets_Items.schematicTier6, 1, 0));
 		if (Config.uranus)
-			GalacticraftRegistry.addDungeonLoot(7, new ItemStack(ExtraPlanetsItems.schematicTier7, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(7, new ItemStack(ExtraPlanets_Items.schematicTier7, 1, 0));
 		if (Config.neptune)
-			GalacticraftRegistry.addDungeonLoot(8, new ItemStack(ExtraPlanetsItems.schematicTier8, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(8, new ItemStack(ExtraPlanets_Items.schematicTier8, 1, 0));
 		if (Config.pluto)
-			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanetsItems.schematicTier9, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.schematicTier9, 1, 0));
 	}
 
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {

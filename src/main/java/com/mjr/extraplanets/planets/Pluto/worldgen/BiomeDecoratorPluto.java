@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 
@@ -20,12 +20,12 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorPluto()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoBlocks, 4, 5, true, ExtraPlanetsBlocks.plutoBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoBlocks, 4, 4, true, ExtraPlanetsBlocks.plutoBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoBlocks, 8, 3, true, ExtraPlanetsBlocks.plutoBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoGravel, 12, 0, true, ExtraPlanetsBlocks.plutoBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.plutoBlocks, 1);
-		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.plutoBlocks, 1, 5, true, ExtraPlanetsBlocks.plutoBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 4, 5, true, ExtraPlanets_Blocks.plutoBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 4, 4, true, ExtraPlanets_Blocks.plutoBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 8, 3, true, ExtraPlanets_Blocks.plutoBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoGravel, 12, 0, true, ExtraPlanets_Blocks.plutoBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.plutoBlocks, 1);
+		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 1, 5, true, ExtraPlanets_Blocks.plutoBlocks, 1);
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 

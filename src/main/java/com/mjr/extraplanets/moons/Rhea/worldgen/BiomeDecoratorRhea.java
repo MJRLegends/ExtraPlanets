@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeDecoratorRhea extends BiomeDecoratorSpace {
 
@@ -18,11 +18,11 @@ public class BiomeDecoratorRhea extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorRhea() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.rheaBlocks, 4, 5, true, ExtraPlanetsBlocks.rheaBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.rheaBlocks, 4, 4, true, ExtraPlanetsBlocks.rheaBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.rheaBlocks, 8, 3, true, ExtraPlanetsBlocks.rheaBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.rheaBlocks, 4, 5, true, ExtraPlanets_Blocks.rheaBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.rheaBlocks, 4, 4, true, ExtraPlanets_Blocks.rheaBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.rheaBlocks, 8, 3, true, ExtraPlanets_Blocks.rheaBlocks, 2);
 		//this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.rheaGravel, 12, 0, true, ExtraPlanetsBlocks.rheaBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.fossil, 1, 0, true, ExtraPlanetsBlocks.rheaBlocks, 1);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.rheaBlocks, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);

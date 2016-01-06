@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
@@ -27,12 +27,12 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorSaturn()
 	{
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnBlocks, 4, 5, true, ExtraPlanetsBlocks.saturnBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnBlocks, 4, 4, true, ExtraPlanetsBlocks.saturnBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnBlocks, 8, 3, true, ExtraPlanetsBlocks.saturnBlocks, 2);
-		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanetsBlocks.saturnBlocks, 2);
-		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnBlocks, 8, 6, true, ExtraPlanetsBlocks.saturnBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.saturnGravel, 12, 0, true, ExtraPlanetsBlocks.saturnBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 4, 5, true, ExtraPlanets_Blocks.saturnBlocks, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 4, 4, true, ExtraPlanets_Blocks.saturnBlocks, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 8, 3, true, ExtraPlanets_Blocks.saturnBlocks, 2);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.saturnBlocks, 2);
+		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 8, 6, true, ExtraPlanets_Blocks.saturnBlocks, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnGravel, 12, 0, true, ExtraPlanets_Blocks.saturnBlocks, 2);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -63,7 +63,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(ExtraPlanetsFluids.glowstone).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.saturnBlocks);
+				new WorldGenCustomLake(ExtraPlanetsFluids.glowstone).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.saturnBlocks);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

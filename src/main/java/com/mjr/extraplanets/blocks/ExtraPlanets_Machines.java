@@ -12,7 +12,7 @@ import com.mjr.extraplanets.tile.TileEntitySolar;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ExtraPlanetsMachines {
+public class ExtraPlanets_Machines {
 	// Machines
 	public static Block advancedRefinery;
 	public static Block solarPanel;

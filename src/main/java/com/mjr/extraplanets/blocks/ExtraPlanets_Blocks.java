@@ -71,7 +71,7 @@ import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ExtraPlanetsBlocks {
+public class ExtraPlanets_Blocks {
 	public static Block mercuryBlocks;
 	public static Block ceresBlocks;
 	public static Block plutoBlocks;

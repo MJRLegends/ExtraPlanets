@@ -44,7 +44,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
 
-import com.mjr.extraplanets.items.ExtraPlanetsItems;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
@@ -238,7 +238,7 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 				}
 			}
 
-			this.entityDropItem(new ItemStack(ExtraPlanetsItems.T4key, 1, 0), 0.5F);
+			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T4key, 1, 0), 0.5F);
 			super.setDead();
 
 			if (this.spawner != null) {

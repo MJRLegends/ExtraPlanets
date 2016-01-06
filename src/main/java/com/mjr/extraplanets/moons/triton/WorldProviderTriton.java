@@ -10,7 +10,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.moons.MoonsMain;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.triton.worldgen.ChunkProviderTriton;
 import com.mjr.extraplanets.moons.triton.worldgen.WorldChunkManagerTriton;
 
@@ -132,7 +132,7 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return MoonsMain.triton;
+		return ExtraPlanets_Moons.triton;
 	}
 
 	@Override

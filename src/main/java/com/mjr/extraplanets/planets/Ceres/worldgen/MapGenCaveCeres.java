@@ -8,13 +8,13 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class MapGenCaveCeres extends MapGenBaseMeta
 {
-	private Block grassblock = ExtraPlanetsBlocks.ceresBlocks;
-	private Block dirtblock = ExtraPlanetsBlocks.ceresBlocks;
-	private Block stoneblock = ExtraPlanetsBlocks.ceresBlocks;
+	private Block grassblock = ExtraPlanets_Blocks.ceresBlocks;
+	private Block dirtblock = ExtraPlanets_Blocks.ceresBlocks;
+	private Block stoneblock = ExtraPlanets_Blocks.ceresBlocks;
 
 	public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
 	protected void generateLargeCaveNode(long par1, int par3, int par4, Block[] blockIdArray, byte[] metaArray, double par6, double par8, double par10)

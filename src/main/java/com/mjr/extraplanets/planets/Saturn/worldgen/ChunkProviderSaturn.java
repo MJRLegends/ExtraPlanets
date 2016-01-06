@@ -19,7 +19,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
@@ -42,7 +42,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 
 	private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.saturnDungeonBrick, 14, 8, 16, 3);
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.saturnDungeonBrick, 14, 8, 16, 3);
 
 	public ChunkProviderSaturn(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -119,7 +119,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 		if(Config.saturnLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.glowstone,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.saturnBlocks,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks,(byte) 0);
 	}
 
 	@Override
@@ -127,12 +127,12 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 		if(Config.saturnLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.glowstone,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.saturnBlocks,(byte) 1);
+			return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.saturnBlocks,(byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks,(byte) 2);
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 
 public class RoomTreasurePluto extends DungeonRoom
@@ -61,7 +61,7 @@ public class RoomTreasurePluto extends DungeonRoom
 		final int hx = (this.posX + this.posX + this.sizeX) / 2;
 		final int hz = (this.posZ + this.posZ + this.sizeZ) / 2;
 
-		if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, ExtraPlanetsBlocks.treasureChestTier9, 0))
+		if (this.placeBlock(chunk, meta, hx, this.posY, hz, cx, cz, ExtraPlanets_Blocks.treasureChestTier9, 0))
 		{
 			this.chests.add(new ChunkCoordinates(hx, this.posY, hz));
 		}
@@ -88,7 +88,7 @@ public class RoomTreasurePluto extends DungeonRoom
 
 			for (ChunkCoordinates coords : this.chests)
 			{
-				this.worldObj.setBlock(coords.posX, coords.posY, coords.posZ, ExtraPlanetsBlocks.treasureChestTier9, 0, 3);
+				this.worldObj.setBlock(coords.posX, coords.posY, coords.posZ, ExtraPlanets_Blocks.treasureChestTier9, 0, 3);
 				this.worldObj.setTileEntity(coords.posX, coords.posY, coords.posZ, new TileEntityT9TreasureChest(9));
 				removeList.add(coords);
 			}

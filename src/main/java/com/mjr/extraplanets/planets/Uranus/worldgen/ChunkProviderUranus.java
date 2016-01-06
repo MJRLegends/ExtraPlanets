@@ -19,7 +19,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanetsFluids;
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
@@ -41,7 +41,7 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 
 	private final MapGenVillageUranus villageGenerator = new MapGenVillageUranus();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanetsBlocks.uranusDungeonBrick, 14, 8, 16, 3);
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.uranusDungeonBrick, 14, 8, 16, 3);
 
 	public ChunkProviderUranus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -116,7 +116,7 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 		if(Config.uranusLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.frozen_water,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.uranusBlocks,(byte) 0);
+			return new BlockMetaPair(ExtraPlanets_Blocks.uranusBlocks,(byte) 0);
 	}
 
 	@Override
@@ -124,12 +124,12 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 		if(Config.uranusLiquid)
 			return new BlockMetaPair(ExtraPlanetsFluids.frozen_water,(byte) 0);
 		else
-			return new BlockMetaPair(ExtraPlanetsBlocks.uranusBlocks,(byte) 1);
+			return new BlockMetaPair(ExtraPlanets_Blocks.uranusBlocks,(byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.uranusBlocks,(byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.uranusBlocks,(byte) 2);
 	}
 
 	@Override

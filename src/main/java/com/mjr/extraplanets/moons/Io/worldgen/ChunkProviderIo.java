@@ -24,7 +24,7 @@ import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
-import com.mjr.extraplanets.blocks.ExtraPlanetsBlocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.Io.worldgen.village.MapGenVillageIo;
 
 public class ChunkProviderIo extends ChunkProviderSpace {
@@ -82,17 +82,17 @@ public class ChunkProviderIo extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.ioBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ioBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.ioBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ioBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanetsBlocks.ioBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ioBlocks, (byte) 2);
 	}
 
 	@Override
