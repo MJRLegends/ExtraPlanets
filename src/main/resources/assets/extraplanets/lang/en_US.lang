@@ -75,7 +75,7 @@ tile.saturn.oreMagnesium.name=Saturn Magnesium Ore
 tile.uranus.surface.name=Uranus Surface Rock
 tile.uranus.subSurface.name=Uranus Sub-Surface Rock
 tile.uranus.stone.name=Uranus Stone
-tile.uranus.oreCrystal.name=Crystal Stone
+tile.uranus.oreCrystal.name=Crystal Ore
 
 tile.neptune.surface.name=Neptune Surface Rock
 tile.neptune.subSurface.name=Neptune Sub-Surface Rock

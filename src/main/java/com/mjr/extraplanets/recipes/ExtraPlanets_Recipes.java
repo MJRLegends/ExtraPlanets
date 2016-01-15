@@ -77,7 +77,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 0, 6), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 0.0F);
 		}
 		if (Config.uranus) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 3), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 5), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 0, 3), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 5), 0.0F);
 		}
 		if (Config.neptune) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);

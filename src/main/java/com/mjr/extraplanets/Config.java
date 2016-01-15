@@ -13,6 +13,8 @@ public class Config {
 	private static String biomeID = "biomeID";
 	private static String schematics = "schematics";
 	private static String items = "items";
+	
+	private static String spacestationCustom = "space stations";
 
 	private static String schematicsGUI = "schematics GUI ID";
 	private static String schematicsPage = "schematics Page ID";
@@ -93,6 +95,17 @@ public class Config {
 
 	public static int erisSpaceStationID;
 	public static int erisSpaceStationStaticID;
+	
+	public static boolean mercurySpaceStation;
+	public static boolean venusSpaceStation;
+	public static boolean ceresSpaceStation;
+	public static boolean marsSpaceStation;
+	public static boolean jupiterSpaceStation;
+	public static boolean saturnSpaceStation;
+	public static boolean uranusSpaceStation;
+	public static boolean neptuneSpaceStation;
+	public static boolean plutoSpaceStation;
+	public static boolean erisSpaceStation;
 
 	public static int mercuryBiomeID;
 	public static int venusBiomeID;
@@ -155,7 +168,8 @@ public class Config {
 		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
 		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor");
 		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the village for that planet!");
-
+		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet");
+		
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
 		magnesiumItems = config.get(items, "Magnesium Tools & Armor", true).getBoolean(true);
@@ -177,6 +191,17 @@ public class Config {
 		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
 		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
 		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
+		
+		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
+		venusSpaceStation = config.get(spacestationCustom, "Venus SpaceStation", true, "").getBoolean(true);
+		ceresSpaceStation = config.get(spacestationCustom, "Ceres SpaceStation", true, "").getBoolean(true);
+		marsSpaceStation = config.get(spacestationCustom, "Mars SpaceStation", true, "").getBoolean(true);
+		jupiterSpaceStation = config.get(spacestationCustom, "Jupiter SpaceStation", true, "").getBoolean(true);
+		saturnSpaceStation = config.get(spacestationCustom, "Saturn SpaceStation", true, "").getBoolean(true);
+		uranusSpaceStation = config.get(spacestationCustom, "Uranus SpaceStation", true, "").getBoolean(true);
+		neptuneSpaceStation = config.get(spacestationCustom, "Neptune SpaceStation", true, "").getBoolean(true);
+		plutoSpaceStation = config.get(spacestationCustom, "Pluto SpaceStation", true, "").getBoolean(true);
+		erisSpaceStation = config.get(spacestationCustom, "Eris SpaceStation", true, "").getBoolean(true);
 
 		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block!").getBoolean(true);
 		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block!").getBoolean(true);
