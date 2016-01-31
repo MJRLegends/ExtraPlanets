@@ -45,6 +45,8 @@ public class Config {
 	public static boolean ganymede;
 	public static boolean rhea;
 	public static boolean titan;
+	
+	public static boolean keplerSolarSystems;
 
 	public static int mercuryID;
 	public static int venusID;
@@ -191,6 +193,8 @@ public class Config {
 		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
 		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
 		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
+		
+		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
 		
 		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
 		venusSpaceStation = config.get(spacestationCustom, "Venus SpaceStation", true, "").getBoolean(true);
