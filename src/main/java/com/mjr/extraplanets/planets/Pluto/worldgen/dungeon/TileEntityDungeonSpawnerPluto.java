@@ -11,14 +11,14 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 
 
 public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner
 {
 	public TileEntityDungeonSpawnerPluto()
 	{
-		super(EntityCreeperBossNeptune.class);
+		super(EntityCreeperBossPluto.class);
 	}
 
 	@Override

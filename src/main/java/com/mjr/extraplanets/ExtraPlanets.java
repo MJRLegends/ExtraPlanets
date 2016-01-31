@@ -27,6 +27,7 @@ import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
@@ -87,6 +88,7 @@ public class ExtraPlanets {
 	public static CommonProxy proxy;
 
 	@Instance(Constants.modID)
+	
 	public static ExtraPlanets instance;
 
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
@@ -206,19 +208,19 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, "NuclearBombPrimed", 150, 1, true);
+		registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		if (Config.venus)
-			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "EntityTier4Rocket", 150, 1, false);
+			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 		if (Config.jupiter)
-			registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "EntityTier5Rocket", 150, 1, false);
+			registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
 		if (Config.saturn)
-			registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "EntityTier6Rocket", 150, 1, false);
+			registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modName + "EntityTier6Rocket", 150, 1, false);
 		if (Config.uranus)
-			registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "EntityTier7Rocket", 150, 1, false);
+			registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modName + "EntityTier7Rocket", 150, 1, false);
 		if (Config.neptune)
-			registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "EntityTier8Rocket", 150, 1, false);
+			registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
 		if (Config.pluto)
-			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, "EntityTier9Rocket", 150, 1, false);
+			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
 	}
 
 	private void registerCreatures() {
@@ -226,29 +228,32 @@ public class ExtraPlanets {
 		if (Config.venus)
 			// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,
 			// "CreeperBossVenus", 894731, 0);
-			registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, "EvolvedMagmaCubeBoss", 3407872, 16579584);
+			registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
-			registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
+			registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
-			registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, "CreeperBossSaturn", 894731, 0);
+			registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
 		if (Config.uranus)
 			// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus",
 			// 894731, 0);
-			registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, "EntityEvolvedIceSlimeBoss", 16382457, 44975);
+			registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
-			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, "CreeperBossNeptune", 894731, 0);
+			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+		
+		if (Config.pluto)
+			registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
 
 		// Entities
-		registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, "EvolvedMagmaCube", 3407872, 16579584);
-		registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, "EvolvedIceSlime", 16382457, 44975);
+		registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
+		registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
 		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,
 		// "EvolvedIceBlaze", 3407872, 16579584);
-		registerExtraPlanetsCreature(EntityEvolvedWitch.class, "EvolvedWitch", 3407872, 5349438);
-		registerExtraPlanetsCreature(EntityEvolvedEnderman.class, "EvolvedEnderman", 1447446, 0);
-		registerExtraPlanetsCreature(EntityEvolvedBlaze.class, "EvolvedBlaze", 16167425, 16775294);
-		registerExtraPlanetsCreature(EntityBlueCreeper.class, "EvolvedBlueCreeper", 44975, 0);
-		registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, "EvolvedRedCreeper", 11013646, 0);
-		registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, "EvolvedPowerSkeleton", 12698049, 4802889);
+		registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.modName + "EvolvedWitch", 3407872, 5349438);
+		registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.modName + "EvolvedEnderman", 1447446, 0);
+		registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.modName + "EvolvedBlaze", 16167425, 16775294);
+		registerExtraPlanetsCreature(EntityBlueCreeper.class, Constants.modName + "EvolvedBlueCreeper", 44975, 0);
+		registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, Constants.modName + "EvolvedRedCreeper", 11013646, 0);
+		registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
 	}
 
 	private void registerSchematics() {
