@@ -15,6 +15,18 @@ planet.Neptune=海王星
 planet.Pluto=冥王星
 planet.Eris=阋神星
 planet.kuiperBelt=柯伊伯带
+planet.makemake=Makemake
+
+planet.kepler62b=Kepler 62b
+planet.kepler62c=Kepler 62c
+planet.kepler62d=Kepler 62d
+planet.kepler62e=Kepler 62e
+planet.kepler62f=Kepler 62f
+planet.kepler22b=Kepler 22b
+planet.kepler47b=Kepler 47b
+planet.kepler47c=Kepler 47c
+planet.kepler69b=Kepler 69b
+planet.kepler69c=Kepler 69c
 
 #Moons
 moon.triton=海卫

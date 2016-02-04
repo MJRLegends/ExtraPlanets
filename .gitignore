@@ -2,7 +2,6 @@ eclipse/
 bin/
 .gradle/
 gradle/
-build.gradle
 gradlew
 gradlew.bat
 TexturesFolder/
@@ -16,4 +15,4 @@ usernamecache.json
 options.txt
 .settings/
 sh.exe.stackdump
-Textures/
+Textures ff/

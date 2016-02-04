@@ -15,6 +15,18 @@ planet.Neptune=Neptun
 planet.Pluto=Pluto
 planet.Eris=Eris
 planet.kuiperBelt=Kuiperův pás
+planet.makemake=Makemake
+
+planet.kepler62b=Kepler 62b
+planet.kepler62c=Kepler 62c
+planet.kepler62d=Kepler 62d
+planet.kepler62e=Kepler 62e
+planet.kepler62f=Kepler 62f
+planet.kepler22b=Kepler 22b
+planet.kepler47b=Kepler 47b
+planet.kepler47c=Kepler 47c
+planet.kepler69b=Kepler 69b
+planet.kepler69c=Kepler 69c
 
 #Moons
 moon.triton=Triton
