@@ -48,4 +48,10 @@ public class TeleportTypePluto implements ITeleportType {
 		player.addStat(ExtraPlanets_Achievements.plutoPlanet, 1);
 	}
 
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

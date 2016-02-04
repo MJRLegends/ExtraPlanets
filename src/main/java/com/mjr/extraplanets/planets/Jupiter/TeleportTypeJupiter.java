@@ -48,4 +48,10 @@ public class TeleportTypeJupiter implements ITeleportType {
 		player.addStat(ExtraPlanets_Achievements.jupiterPlanet, 1);
 	}
 
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

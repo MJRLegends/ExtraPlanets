@@ -45,4 +45,8 @@ public class TeleportTypeDeimos implements ITeleportType {
 			boolean ridingAutoRocket) {
 		//player.addStat(Achievements.deimosMoon, 1);
 	}
+
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {		
+	}
 }

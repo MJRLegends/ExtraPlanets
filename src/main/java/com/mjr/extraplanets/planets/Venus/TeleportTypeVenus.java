@@ -48,4 +48,10 @@ public class TeleportTypeVenus implements ITeleportType {
 		player.addStat(ExtraPlanets_Achievements.venusPlanet, 1);
 	}
 
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -45,4 +45,10 @@ public class TeleportTypePhobos implements ITeleportType {
 			boolean ridingAutoRocket) {
 		//player.addStat(Achievements.phobosMoon, 1);
 	}
+
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {
+		// TODO Auto-generated method stub
+		
+	}
 }

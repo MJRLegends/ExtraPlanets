@@ -45,4 +45,10 @@ public class TeleportTypeRhea implements ITeleportType {
 			boolean ridingAutoRocket) {
 		//player.addStat(Achievements.rheaMoon, 1);
 	}
+
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -45,4 +45,10 @@ public class TeleportTypeGanymede implements ITeleportType {
 			boolean ridingAutoRocket) {
 		//player.addStat(Achievements.ganymedeMoon, 1);
 	}
+
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {
+		// TODO Auto-generated method stub
+		
+	}
 }

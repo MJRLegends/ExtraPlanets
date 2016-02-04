@@ -45,4 +45,10 @@ public class TeleportTypeIo implements ITeleportType {
 			boolean ridingAutoRocket) {
 		//player.addStat(Achievements.ioMoon, 1);
 	}
+
+	@Override
+	public void setupAdventureSpawn(EntityPlayerMP player) {
+		// TODO Auto-generated method stub
+		
+	}
 }
