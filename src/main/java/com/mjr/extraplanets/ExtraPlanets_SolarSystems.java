@@ -26,7 +26,7 @@ public class ExtraPlanets_SolarSystems {
 			starSol.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler22.setMainStar(starSol);
 
-			kepler47 = new SolarSystem("kepler47", "milkyWay").setMapPosition(new Vector3(-90.0F, -90.0F));
+			kepler47 = new SolarSystem("kepler47", "milkyWay").setMapPosition(new Vector3(-40.0F, -120.0F));
 			Star starSol2 = (Star) new Star("kepler47").setParentSolarSystem(kepler47).setTierRequired(-1);
 			starSol2.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler47.setMainStar(starSol2);

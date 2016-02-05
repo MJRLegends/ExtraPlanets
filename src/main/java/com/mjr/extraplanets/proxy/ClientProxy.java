@@ -4,6 +4,7 @@ import micdoodle8.mods.galacticraft.core.client.render.item.ItemRendererKey;
 import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemRendererThermalArmor;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.AdvancedModelLoader;
@@ -14,6 +15,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlime;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.client.render.RenderPlayerExtraPlanets;
 import com.mjr.extraplanets.client.render.block.BlockRendererMachine;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier4TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier5TreasureChest;
@@ -182,6 +184,7 @@ public class ClientProxy extends CommonProxy {
 		renderBlocks();
 		renderItems();
 		registerTileEntityRenderers();
+        RenderingRegistry.registerEntityRenderingHandler(EntityPlayer.class, new RenderPlayerExtraPlanets());
 	}
 
 	@SideOnly(Side.CLIENT)

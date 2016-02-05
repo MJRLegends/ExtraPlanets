@@ -2,6 +2,7 @@ package com.mjr.extraplanets;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
+import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -100,19 +101,47 @@ public class ExtraPlanets {
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
 		public Item getTabIconItem() {
-			return ExtraPlanets_Items.tier7Rocket;
+			if(Config.venus)
+				return ExtraPlanets_Items.tier4Rocket;
+			else if(Config.jupiter)
+				return ExtraPlanets_Items.tier5Rocket;
+			else if(Config.saturn)
+				return ExtraPlanets_Items.tier6Rocket;
+			else if(Config.uranus)
+				return ExtraPlanets_Items.tier7Rocket;
+			else if(Config.neptune)
+				return ExtraPlanets_Items.tier8Rocket;
+			else if(Config.pluto)
+				return ExtraPlanets_Items.tier9Rocket;
+			return GCItems.rocketTier1;
 		}
 	};
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			return ExtraPlanets_Tools.carbonPickaxe;
+			if(Config.venus)
+				return ExtraPlanets_Tools.carbonPickaxe;
+			else if(Config.jupiter)
+				return ExtraPlanets_Tools.palladiumPickaxe;
+			else if(Config.saturn)
+				return ExtraPlanets_Tools.magnesiumPickaxe;
+			else if(Config.uranus)
+				return ExtraPlanets_Tools.crystalPickaxe;
+			return GCItems.steelPickaxe;
 		}
 	};
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			return ExtraPlanets_Armor.crystalChest;
+			if(Config.venus)
+				return ExtraPlanets_Armor.carbonChest;
+			else if(Config.jupiter)
+				return ExtraPlanets_Armor.palladiumChest;
+			else if(Config.saturn)
+				return ExtraPlanets_Armor.magnesiumChest;
+			else if(Config.uranus)
+				return ExtraPlanets_Armor.crystalChest;
+			return GCItems.steelChestplate;
 		}
 	};
 
@@ -158,8 +187,9 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new RheaEvents());
 		if (Config.titan)
 			MinecraftForge.EVENT_BUS.register(new TitanEvents());
-
-		MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
+		if (Config.kuiperBelt)
+			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
+		
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 		// MinecraftForge.EVENT_BUS.register(new
 		// RadiationBarOverlay(Minecraft.getMinecraft()));
@@ -239,7 +269,6 @@ public class ExtraPlanets {
 			registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
 			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
-		
 		if (Config.pluto)
 			registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
 

@@ -112,7 +112,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public double getFuelUsageMultiplier() {
-		return 1.6D;
+		return 1.9D;
 	}
 
 	@Override

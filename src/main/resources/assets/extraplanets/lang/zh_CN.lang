@@ -4,6 +4,18 @@ itemGroup.SpaceBlocksTab=额外行星 建筑块
 itemGroup.SpaceToolsTab=额外行星 工具
 itemGroup.SpaceArmorTab=额外行星 装甲
 
+#Solar Systems
+solarsystem.kepler22=Kepler 22 System
+solarsystem.kepler47=Kepler 47 System
+solarsystem.kepler62=Kepler 62 System
+solarsystem.kepler69=Kepler 69 System
+
+#Stars
+star.kepler22=Kepler 22 Star
+star.kepler47=Kepler 47 Star
+star.kepler62=Kepler 62 Star
+star.kepler69=Kepler 69 Star
+
 #Planets
 planet.Mercury=水星
 planet.Venus=金星
@@ -461,6 +473,7 @@ entity.CreeperBossJupiter.name=木星爬行者首领
 entity.CreeperBossSaturn.name=土星爬行者首领
 entity.CreeperBossUranus.name=天王星爬行者首领
 entity.CreeperBossNeptune.name=海王星爬行者首领
+entity.CreeperBossPluto.name=Creeper Boss Pluto
 
 entity.EvolvedMagmaCubeBoss.name=进化版岩浆怪首领
 entity.EntityEvolvedIceSlimeBoss.name=进化版冰史莱姆首领

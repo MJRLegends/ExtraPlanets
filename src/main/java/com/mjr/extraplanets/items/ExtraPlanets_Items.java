@@ -157,12 +157,6 @@ public class ExtraPlanets_Items {
 			tier8Items = new ItemTier8Items("tier8");
 			T8key = new ItemKeyT8().setUnlocalizedName("key");
 		}
-
-		cannedFood = new ItemCannedFood("cannedfood");
-		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
-		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-			bodyParts = new ItemBodyParts();
-
 		if (Config.pluto) {
 			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
 			schematicTier9 = new SchematicTier9("schematicTier9");
@@ -171,6 +165,10 @@ public class ExtraPlanets_Items {
 			T9key = new ItemKeyT9().setUnlocalizedName("key");
 		}
 		
+		cannedFood = new ItemCannedFood("cannedfood");
+		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
+		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
+			bodyParts = new ItemBodyParts();
 		tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
 		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");

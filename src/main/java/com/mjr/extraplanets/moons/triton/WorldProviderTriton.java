@@ -112,7 +112,7 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 1.4D;
+		return 1.6D;
 	}
 
 	@Override

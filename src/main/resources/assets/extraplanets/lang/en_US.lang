@@ -4,6 +4,18 @@ itemGroup.SpaceBlocksTab=Extra Planets Blocks
 itemGroup.SpaceToolsTab=Extra Planets Tools
 itemGroup.SpaceArmorTab=Extra Planets Armor
 
+#Solar Systems
+solarsystem.kepler22=Kepler 22 System
+solarsystem.kepler47=Kepler 47 System
+solarsystem.kepler62=Kepler 62 System
+solarsystem.kepler69=Kepler 69 System
+
+#Stars
+star.kepler22=Kepler 22 Star
+star.kepler47=Kepler 47 Star
+star.kepler62=Kepler 62 Star
+star.kepler69=Kepler 69 Star
+
 #Planets
 planet.Mercury=Mercury
 planet.Venus=Venus
@@ -461,6 +473,7 @@ entity.CreeperBossJupiter.name=Creeper Boss Jupiter
 entity.CreeperBossSaturn.name=Creeper Boss Saturn
 entity.CreeperBossUranus.name=Creeper Boss Uranus
 entity.CreeperBossNeptune.name=Creeper Boss Neptune
+entity.CreeperBossPluto.name=Creeper Boss Pluto
 
 entity.EvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
 entity.EntityEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss

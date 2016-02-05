@@ -46,6 +46,8 @@ public class Config {
 	public static boolean rhea;
 	public static boolean titan;
 	
+	public static boolean makemake;
+	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
 
 	public static int mercuryID;
@@ -194,6 +196,8 @@ public class Config {
 		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
 		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
 		
+		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
+		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
 		
 		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
