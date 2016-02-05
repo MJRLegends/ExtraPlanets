@@ -21,7 +21,6 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
-import com.mjr.extraplanets.entities.EntityEvolvedWizard;
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.MapGenVillageCeres;
 
 public class ChunkProviderCeres extends ChunkProviderSpace {
@@ -31,7 +30,6 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
 
 	private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
-
 
 	public ChunkProviderCeres(World par1World, long seed,
 			boolean mapFeaturesEnabled) {
@@ -71,7 +69,6 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWizard.class, 8, 2, 3));
 		//monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

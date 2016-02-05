@@ -424,6 +424,25 @@ item.crystalChest.name=Crystal Chestplate
 item.crystalLegings.name=Crystal Leggings
 item.crystalBoots.name=Crystal Boots
 
+item.tier2ThermalHelm.name=Tier 2 Thermal Padding Helm
+item.tier2ThermalChestplate.name=Tier 2 Thermal Padding Chestpiece
+item.tier2ThermalLeggings.name=Tier 2 Thermal Padding Leggings
+item.tier2ThermalBoots.name=Tier 2 Thermal Padding Boots
+
+item.tier3ThermalHelm.name=Tier 3 Thermal Padding Helm
+item.tier3ThermalChestplate.name=Tier 3 Thermal Padding Chestpiece
+item.tier3ThermalLeggings.name=Tier 3 Thermal Padding Leggings
+item.tier3ThermalBoots.name=Tier 3 Thermal Padding Boots
+
+item.tier4ThermalHelm.name=Tier 4 Thermal Padding Helm
+item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
+item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
+item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
+
+tier2.information=Required for Venus and Mercury during day and the night
+tier3.information=Required for Juptier and Saturn including their moons during day and the night
+tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
+
 #Other Items
 item.appleDiamond.name=Diamond Apple
 item.cannedfood.cannedFood.name=Can of Food

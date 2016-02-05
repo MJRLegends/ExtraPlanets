@@ -141,7 +141,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		return -45.0F;
+		 return -1.5F;
 	}
 
 	@Override

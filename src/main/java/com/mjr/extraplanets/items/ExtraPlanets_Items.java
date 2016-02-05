@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.items;
 
+import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
+import micdoodle8.mods.galacticraft.planets.asteroids.items.ItemThermalPadding;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -88,6 +90,10 @@ public class ExtraPlanets_Items {
 	public static Item ingotUranium;
 	public static Item compressedMercury;
 	public static Item ingotMercury;
+	
+	public static Item tier2ThermalPadding;
+	public static Item tier3ThermalPadding;
+	public static Item tier4ThermalPadding;
 
 	public static void init() {
 		initializeItems();
@@ -164,6 +170,10 @@ public class ExtraPlanets_Items {
 			tier9Items = new ItemTier9Items("tier9");
 			T9key = new ItemKeyT9().setUnlocalizedName("key");
 		}
+		
+		tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
+		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
+		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
 	}
 
 	private static void registerItems() {
@@ -236,6 +246,11 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(diamondApple, "diamondApple");
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
+		
+		GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName());
+		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
+		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
+
 	}
 
 	private static void registerFluidContainer() {

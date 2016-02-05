@@ -142,7 +142,10 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		return -45.0F;
+		if (isDaytime()) {
+			return -140.0F;
+		}
+		return -150.0F;
 	}
 
 	@Override
