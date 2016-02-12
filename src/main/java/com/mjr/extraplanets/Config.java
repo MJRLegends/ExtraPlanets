@@ -13,7 +13,8 @@ public class Config {
 	private static String biomeID = "biomeID";
 	private static String schematics = "schematics";
 	private static String items = "items";
-	
+	private static String blocks = "blocks";
+
 	private static String spacestationCustom = "space stations";
 
 	private static String schematicsGUI = "schematics GUI ID";
@@ -25,7 +26,11 @@ public class Config {
 	public static boolean palladiumItems;
 	public static boolean magnesiumItems;
 	public static boolean crystalItems;
-
+	
+	public static boolean solarPanels;
+	public static boolean advancedRefinery;
+	public static boolean slabsAndStairs;
+	
 	public static boolean mercury;
 	public static boolean venus;
 	public static boolean ceres;
@@ -45,7 +50,7 @@ public class Config {
 	public static boolean ganymede;
 	public static boolean rhea;
 	public static boolean titan;
-	
+
 	public static boolean makemake;
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
@@ -99,7 +104,7 @@ public class Config {
 
 	public static int erisSpaceStationID;
 	public static int erisSpaceStationStaticID;
-	
+
 	public static boolean mercurySpaceStation;
 	public static boolean venusSpaceStation;
 	public static boolean ceresSpaceStation;
@@ -140,7 +145,8 @@ public class Config {
 	public static boolean saturnLiquid;
 	public static boolean uranusLiquid;
 	public static boolean neptuneLiquid;
-
+	public static boolean oreDictionary;
+	
 	//    public static int venusRocketTier;
 	//    public static int jupiterRocketTier;
 	//    public static int saturnRocketTier;
@@ -167,19 +173,26 @@ public class Config {
 
 		config.addCustomCategoryComment(dimensionID, "Change if a dimension ID is causing conflicts!");
 		config.addCustomCategoryComment(biomeID, "Change if a biome ID is causing conflicts!");
-		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet with all the related items/block!");
+		config.addCustomCategoryComment(dimensions, "Disabling this will remove the planet with all the related items/block!");
+		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet/moon with all the related items/block!");
 		config.addCustomCategoryComment(schematicsGUI, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
 		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor");
-		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the village for that planet!");
+		config.addCustomCategoryComment(blocks, "Changing to false will disable the blocks/machines");
+		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
 		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet");
-		
+
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
 		magnesiumItems = config.get(items, "Magnesium Tools & Armor", true).getBoolean(true);
 		crystalItems = config.get(items, "Crystal Tools & Armor", true).getBoolean(true);
 
+		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
+		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
+		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);
+
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will").getBoolean(true);
+		oreDictionary = config.get(dimensionSettings, "Add planet/moons ores to the ore dictionary", true, "").getBoolean(true);
 
 		eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
@@ -195,11 +208,11 @@ public class Config {
 		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
 		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
 		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
-		
+
 		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
-		
+
 		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
 		venusSpaceStation = config.get(spacestationCustom, "Venus SpaceStation", true, "").getBoolean(true);
 		ceresSpaceStation = config.get(spacestationCustom, "Ceres SpaceStation", true, "").getBoolean(true);

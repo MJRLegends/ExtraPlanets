@@ -8,7 +8,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.DungeonHooks;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
@@ -51,8 +50,8 @@ import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
 import com.mjr.extraplanets.moons.triton.event.TritonEvents;
-import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
@@ -89,7 +88,7 @@ public class ExtraPlanets {
 	public static CommonProxy proxy;
 
 	@Instance(Constants.modID)
-	
+
 	public static ExtraPlanets instance;
 
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
@@ -189,13 +188,12 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new TitanEvents());
 		if (Config.kuiperBelt)
 			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
-		
+
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
-		// MinecraftForge.EVENT_BUS.register(new
-		// RadiationBarOverlay(Minecraft.getMinecraft()));
 
 		ExtraPlanets_Blocks.init();
-		ExtraPlanets_SlabsStairsBlocks.init();
+		if(Config.slabsAndStairs)
+			ExtraPlanets_SlabsStairsBlocks.init();
 		ExtraPlanets_Machines.init();
 		ExtraPlanets_Fluids.init();
 		ExtraPlanets_Tools.init();
@@ -222,6 +220,7 @@ public class ExtraPlanets {
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
+		ExtraPlanets_SpaceStations.init();
 		registerNonMobEntities();
 		registerCreatures();
 		ExtraPlanets.proxy.init(event);
@@ -229,7 +228,6 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		ExtraPlanets_SpaceStations.init();
 		registerSchematics();
 		addDungeonLoot();
 		ExtraPlanets_Recipes.init();
@@ -256,16 +254,14 @@ public class ExtraPlanets {
 	private void registerCreatures() {
 		// Default Bosses
 		if (Config.venus)
-			// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,
-			// "CreeperBossVenus", 894731, 0);
+			// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,"CreeperBossVenus", 894731, 0);
 			registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
 			registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
 			registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
 		if (Config.uranus)
-			// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus",
-			// 894731, 0);
+			// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus", 894731, 0);
 			registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
 			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
@@ -275,8 +271,7 @@ public class ExtraPlanets {
 		// Entities
 		registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
 		registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
-		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,
-		// "EvolvedIceBlaze", 3407872, 16579584);
+		// registerExtraPlanetsCreature(EvolvedIceBlaze.class, "EvolvedIceBlaze", 3407872, 16579584);
 		registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.modName + "EvolvedWitch", 3407872, 5349438);
 		registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.modName + "EvolvedEnderman", 1447446, 0);
 		registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.modName + "EvolvedBlaze", 16167425, 16775294);

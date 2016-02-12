@@ -154,7 +154,8 @@ public class ExtraPlanets_Blocks {
 
 		registerBlocks();
 		registerTileEntitys();
-		OreDictionaryRegister();
+		if(Config.oreDictionary)
+			OreDictionaryRegister();
 	}
 
 	private static void initializeBlocks() {
