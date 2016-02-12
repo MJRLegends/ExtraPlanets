@@ -162,7 +162,7 @@ public class WorldProviderErisOrbit extends WorldProviderOrbit
 	@Override
 	public String getPlanetToOrbit()
 	{
-		return "planet.eris";
+		return "planet.Eris";
 	}
 
 	@Override

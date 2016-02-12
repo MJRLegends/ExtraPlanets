@@ -162,7 +162,7 @@ public class WorldProviderSaturnOrbit extends WorldProviderOrbit
 	@Override
 	public String getPlanetToOrbit()
 	{
-		return "planet.saturn";
+		return "planet.Saturn";
 	}
 
 	@Override

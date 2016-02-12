@@ -162,7 +162,7 @@ public class WorldProviderJupiterOrbit extends WorldProviderOrbit
 	@Override
 	public String getPlanetToOrbit()
 	{
-		return "planet.jupiter";
+		return "planet.Jupiter";
 	}
 
 	@Override

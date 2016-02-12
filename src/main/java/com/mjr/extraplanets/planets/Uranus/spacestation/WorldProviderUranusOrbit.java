@@ -162,7 +162,7 @@ public class WorldProviderUranusOrbit extends WorldProviderOrbit
 	@Override
 	public String getPlanetToOrbit()
 	{
-		return "planet.uranus";
+		return "planet.Uranus";
 	}
 
 	@Override
