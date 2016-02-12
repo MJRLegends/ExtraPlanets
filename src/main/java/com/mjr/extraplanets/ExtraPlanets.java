@@ -221,7 +221,6 @@ public class ExtraPlanets {
 	public void init(FMLInitializationEvent event) {
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
-		ExtraPlanets_SpaceStations.init();
 		ExtraPlanets_Moons.init();
 		registerNonMobEntities();
 		registerCreatures();
@@ -230,6 +229,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		ExtraPlanets_SpaceStations.init();
 		registerSchematics();
 		addDungeonLoot();
 		ExtraPlanets_Recipes.init();

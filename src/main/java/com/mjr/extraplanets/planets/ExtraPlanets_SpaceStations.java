@@ -150,62 +150,62 @@ public class ExtraPlanets_SpaceStations {
 		if (Config.mercurySpaceStation) {
 			GalaxyRegistry.registerSatellite(mercurySpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderMercuryOrbit.class, new TeleportTypeMercuryOrbit());
-			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationID, WorldProviderMercuryOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationID, WorldProviderMercuryOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class, true, 0);
 		}
 		if (Config.venusSpaceStation) {
 			GalaxyRegistry.registerSatellite(venusSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderVenusOrbit.class, new TeleportTypeVenusOrbit());
-			GalacticraftRegistry.registerProvider(Config.venusSpaceStationID, WorldProviderVenusOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.venusSpaceStationID, WorldProviderVenusOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class, true, 0);
 		}
 		if (Config.ceresSpaceStation) {
 			GalaxyRegistry.registerSatellite(ceresSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderCeresOrbit.class, new TeleportTypeCeresOrbit());
-			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationID, WorldProviderCeresOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationID, WorldProviderCeresOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class, true, 0);
 		}
 		if (Config.marsSpaceStation) {
 			GalaxyRegistry.registerSatellite(marsSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderMarsOrbit.class, new TeleportTypeMarsOrbit());
-			GalacticraftRegistry.registerProvider(Config.marsSpaceStationID, WorldProviderMarsOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.marsSpaceStationID, WorldProviderMarsOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class, true, 0);
 		}
 		if (Config.jupiterSpaceStation) {
 			GalaxyRegistry.registerSatellite(jupiterSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderJupiterOrbit.class, new TeleportTypeJupiterOrbit());
-			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationID, WorldProviderJupiterOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationID, WorldProviderJupiterOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class, true, 0);
 		}
 		if (Config.saturnSpaceStation) {
 			GalaxyRegistry.registerSatellite(saturnSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderSaturnOrbit.class, new TeleportTypeSaturnOrbit());
-			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationID, WorldProviderSaturnOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationID, WorldProviderSaturnOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class, true, 0);
 		}
 		if (Config.uranusSpaceStation) {
 			GalaxyRegistry.registerSatellite(uranusSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderUranusOrbit.class, new TeleportTypeUranusOrbit());
-			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationID, WorldProviderUranusOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationID, WorldProviderUranusOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class, true, 0);
 		}
 		if (Config.neptuneSpaceStation) {
 			GalaxyRegistry.registerSatellite(neptuneSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderNeptuneOrbit.class, new TeleportTypeNeptuneOrbit());
-			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationID, WorldProviderNeptuneOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationID, WorldProviderNeptuneOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class, true, 0);
 		}
 		if (Config.plutoSpaceStation) {
 			GalaxyRegistry.registerSatellite(plutoSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderPlutoOrbit.class, new TeleportTypePlutoOrbit());
-			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationID, WorldProviderPlutoOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationID, WorldProviderPlutoOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class, true, 0);
 		}
 		if (Config.erisSpaceStation) {
 			GalaxyRegistry.registerSatellite(erisSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderErisOrbit.class, new TeleportTypeErisOrbit());
-			GalacticraftRegistry.registerProvider(Config.erisSpaceStationID, WorldProviderErisOrbit.class, false);
-			GalacticraftRegistry.registerProvider(Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true);
+			GalacticraftRegistry.registerProvider(Config.erisSpaceStationID, WorldProviderErisOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true, 0);
 		}
 	}
 

@@ -94,6 +94,8 @@ public class ExtraPlanets_Items {
 	public static Item tier2ThermalPadding;
 	public static Item tier3ThermalPadding;
 	public static Item tier4ThermalPadding;
+	
+	public static Item wafers;
 
 	public static void init() {
 		initializeItems();
@@ -172,6 +174,7 @@ public class ExtraPlanets_Items {
 		tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
 		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
+		wafers = new ItemWafers("wafer");
 	}
 
 	private static void registerItems() {
@@ -249,6 +252,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
 		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
 
+		//GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {

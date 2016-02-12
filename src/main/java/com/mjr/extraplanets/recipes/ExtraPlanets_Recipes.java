@@ -1,8 +1,10 @@
 package com.mjr.extraplanets.recipes;
 
+import micdoodle8.mods.galacticraft.api.recipe.CircuitFabricatorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.RecipeUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.init.Blocks;
@@ -28,6 +30,7 @@ public class ExtraPlanets_Recipes {
 		registerFurnaceRecipes();
 		registerCraftingRecipes();
 		registerCompressorRecipes();
+		registerCircuitFabricatorRecipes();
 	}
 
 	private static void registerRocketCraftingRecipes() {
@@ -384,5 +387,17 @@ public class ExtraPlanets_Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4));
 		}
+	}
+	private static void registerCircuitFabricatorRecipes() {
+		int siliconCount = OreDictionary.getOres(ConfigManagerCore.otherModsSilicon).size();
+        for (int j = 0; j <= siliconCount; j++)
+        {
+        	ItemStack silicon;
+        	if (j == 0) silicon = new ItemStack(GCItems.basicItem, 1, 2);
+        	else silicon = OreDictionary.getOres("itemSilicon").get(j - 1); 
+	        //CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), new ItemStack[] { new ItemStack(Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_lamp) });
+	        //CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.powered_comparator) });
+	        //CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.tripwire_hook) });
+        }
 	}
 }
