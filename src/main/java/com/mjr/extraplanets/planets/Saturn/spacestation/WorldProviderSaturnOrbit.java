@@ -156,7 +156,7 @@ public class WorldProviderSaturnOrbit extends WorldProviderOrbit
 	@Override
 	public double getFuelUsageMultiplier()
 	{
-		return 0.5D;
+		return 1.2D;
 	}
 
 	@Override
