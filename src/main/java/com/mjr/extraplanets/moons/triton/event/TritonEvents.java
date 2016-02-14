@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton.event;
+package com.mjr.extraplanets.moons.Triton.event;
 
 import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
 import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;

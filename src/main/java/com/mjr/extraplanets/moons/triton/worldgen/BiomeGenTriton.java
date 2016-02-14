@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton.worldgen;
+package com.mjr.extraplanets.moons.Triton.worldgen;
 
 public class BiomeGenTriton extends TritonBiomes {
 

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton;
+package com.mjr.extraplanets.moons.Triton;
 
 import java.util.Random;
 
@@ -49,6 +49,6 @@ public class TeleportTypeTriton implements ITeleportType {
 	@Override
 	public void setupAdventureSpawn(EntityPlayerMP player) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

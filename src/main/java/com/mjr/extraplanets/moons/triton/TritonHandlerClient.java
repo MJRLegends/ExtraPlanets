@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton;
+package com.mjr.extraplanets.moons.Triton;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.CloudRenderer;

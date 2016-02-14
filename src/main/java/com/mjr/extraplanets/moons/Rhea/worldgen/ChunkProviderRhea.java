@@ -30,6 +30,8 @@ import com.mjr.extraplanets.moons.Rhea.worldgen.village.MapGenVillageRhea;
 public class ChunkProviderRhea extends ChunkProviderSpace {
 
 	private final BiomeDecoratorRhea greenPixelBiomeDecorator = new BiomeDecoratorRhea();
+	
+	private final MapGenCaveRhea caveGenerator = new MapGenCaveRhea();
 
 	private final MapGenVillageRhea villageGenerator = new MapGenVillageRhea();
 
@@ -55,6 +57,7 @@ public class ChunkProviderRhea extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

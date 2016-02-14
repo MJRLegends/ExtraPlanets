@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton;
+package com.mjr.extraplanets.moons.Triton;
 
 import java.util.Random;
 

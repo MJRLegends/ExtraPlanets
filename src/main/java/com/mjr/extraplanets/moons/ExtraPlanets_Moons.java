@@ -30,8 +30,8 @@ import com.mjr.extraplanets.moons.Rhea.TeleportTypeRhea;
 import com.mjr.extraplanets.moons.Rhea.WorldProviderRhea;
 import com.mjr.extraplanets.moons.Titan.TeleportTypeTitan;
 import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
-import com.mjr.extraplanets.moons.triton.TeleportTypeTriton;
-import com.mjr.extraplanets.moons.triton.WorldProviderTriton;
+import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
+import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 public class ExtraPlanets_Moons {

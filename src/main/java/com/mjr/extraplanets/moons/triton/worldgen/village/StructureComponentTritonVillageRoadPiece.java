@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton.worldgen.village;
+package com.mjr.extraplanets.moons.Triton.worldgen.village;
 
 
 public abstract class StructureComponentTritonVillageRoadPiece extends StructureComponentTritonVillage {

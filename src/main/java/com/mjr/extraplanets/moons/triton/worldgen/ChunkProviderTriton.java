@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton.worldgen;
+package com.mjr.extraplanets.moons.Triton.worldgen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +25,13 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.triton.worldgen.village.MapGenVillageTriton;
+import com.mjr.extraplanets.moons.Triton.worldgen.village.MapGenVillageTriton;
 
 public class ChunkProviderTriton extends ChunkProviderSpace {
 
 	private final BiomeDecoratorTriton greenPixelBiomeDecorator = new BiomeDecoratorTriton();
+	
+	private final MapGenCaveTriton caveGenerator = new MapGenCaveTriton();
 
 	private final MapGenVillageTriton villageGenerator = new MapGenVillageTriton();
 
@@ -55,6 +57,7 @@ public class ChunkProviderTriton extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

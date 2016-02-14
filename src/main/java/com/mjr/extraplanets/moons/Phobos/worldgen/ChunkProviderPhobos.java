@@ -30,6 +30,8 @@ import com.mjr.extraplanets.moons.Phobos.worldgen.village.MapGenVillagePhobos;
 public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	private final BiomeDecoratorPhobos greenPixelBiomeDecorator = new BiomeDecoratorPhobos();
+	
+	private final MapGenCavePhobos caveGenerator = new MapGenCavePhobos();
 
 	private final MapGenVillagePhobos villageGenerator = new MapGenVillagePhobos();
 
@@ -55,6 +57,7 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

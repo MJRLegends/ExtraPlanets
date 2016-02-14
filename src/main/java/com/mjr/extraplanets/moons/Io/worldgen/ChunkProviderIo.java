@@ -30,6 +30,8 @@ import com.mjr.extraplanets.moons.Io.worldgen.village.MapGenVillageIo;
 public class ChunkProviderIo extends ChunkProviderSpace {
 
 	private final BiomeDecoratorIo greenPixelBiomeDecorator = new BiomeDecoratorIo();
+	
+	private final MapGenCaveIo caveGenerator = new MapGenCaveIo();
 
 	private final MapGenVillageIo villageGenerator = new MapGenVillageIo();
 
@@ -55,6 +57,7 @@ public class ChunkProviderIo extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

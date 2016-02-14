@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton.worldgen.village;
+package com.mjr.extraplanets.moons.Triton.worldgen.village;
 
 public class StructureVillagePieceWeightTriton {
 	public Class<? extends StructureComponentTritonVillage> villagePieceClass;

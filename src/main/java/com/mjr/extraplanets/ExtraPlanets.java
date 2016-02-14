@@ -49,7 +49,7 @@ import com.mjr.extraplanets.moons.Io.event.IoEvents;
 import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
-import com.mjr.extraplanets.moons.triton.event.TritonEvents;
+import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;

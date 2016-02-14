@@ -2,7 +2,6 @@ package com.mjr.extraplanets.proxy;
 
 import micdoodle8.mods.galacticraft.core.client.render.item.ItemRendererKey;
 import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemRendererThermalArmor;
-import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
@@ -88,7 +87,7 @@ import com.mjr.extraplanets.moons.Io.IoHandlerClient;
 import com.mjr.extraplanets.moons.Phobos.PhobosHandlerClient;
 import com.mjr.extraplanets.moons.Rhea.RheaHandlerClient;
 import com.mjr.extraplanets.moons.Titan.TitanHandlerClient;
-import com.mjr.extraplanets.moons.triton.TritonHandlerClient;
+import com.mjr.extraplanets.moons.Triton.TritonHandlerClient;
 import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
 import com.mjr.extraplanets.planets.Eris.ErisHandlerClient;
 import com.mjr.extraplanets.planets.Jupiter.JupiterHandlerClient;

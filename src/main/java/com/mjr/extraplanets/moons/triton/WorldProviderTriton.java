@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton;
+package com.mjr.extraplanets.moons.Triton;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
@@ -11,8 +11,8 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.triton.worldgen.ChunkProviderTriton;
-import com.mjr.extraplanets.moons.triton.worldgen.WorldChunkManagerTriton;
+import com.mjr.extraplanets.moons.Triton.worldgen.ChunkProviderTriton;
+import com.mjr.extraplanets.moons.Triton.worldgen.WorldChunkManagerTriton;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

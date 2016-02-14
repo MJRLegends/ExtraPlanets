@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton.worldgen;
+package com.mjr.extraplanets.moons.Triton.worldgen;
 
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;

@@ -30,6 +30,8 @@ import com.mjr.extraplanets.moons.Callisto.worldgen.village.MapGenVillageCallist
 public class ChunkProviderCallisto extends ChunkProviderSpace {
 
 	private final BiomeDecoratorCallisto greenPixelBiomeDecorator = new BiomeDecoratorCallisto();
+	
+	private final MapGenCaveCallisto caveGenerator = new MapGenCaveCallisto();
 
 	private final MapGenVillageCallisto villageGenerator = new MapGenVillageCallisto();
 
@@ -55,6 +57,7 @@ public class ChunkProviderCallisto extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

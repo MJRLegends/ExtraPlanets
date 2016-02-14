@@ -30,6 +30,8 @@ import com.mjr.extraplanets.moons.Ganymede.worldgen.village.MapGenVillageGanymed
 public class ChunkProviderGanymede extends ChunkProviderSpace {
 
 	private final BiomeDecoratorGanymede greenPixelBiomeDecorator = new BiomeDecoratorGanymede();
+	
+	private final MapGenCaveGanymede caveGenerator = new MapGenCaveGanymede();
 
 	private final MapGenVillageGanymede villageGenerator = new MapGenVillageGanymede();
 
@@ -55,6 +57,7 @@ public class ChunkProviderGanymede extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

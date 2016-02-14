@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.triton.worldgen.village;
+package com.mjr.extraplanets.moons.Triton.worldgen.village;
 
 import java.util.ArrayList;
 import java.util.Random;
