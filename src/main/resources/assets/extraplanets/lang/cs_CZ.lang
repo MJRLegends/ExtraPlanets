@@ -468,24 +468,33 @@ item.cannedfood.dehydratedChicken.name=Dehydrované kuře
 item.cannedfood.dehydratedBeef.name=Dehydrované hovězí
 
 #Entities
-entity.CreeperBossVenus.name=Creeper Boss z Venuše
-entity.CreeperBossJupiter.name=Creeper Boss z Jupiteru
-entity.CreeperBossSaturn.name=Creeper Boss z Saturnu
-entity.CreeperBossUranus.name=Creeper Boss z Uranu
-entity.CreeperBossNeptune.name=Creeper Boss z Neptunu
-entity.CreeperBossPluto.name=Creeper Boss Pluto
+entity.ProjectileTNT.name=Projectile TNT
 
-entity.EvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
-entity.EntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Rocket
+entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Rocket
+entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Rocket
+entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Rocket
+entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
+entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
 
-entity.EvolvedWitch.name=Vyvinutá Čarodejnice
-entity.EvolvedMagmaCube.name=Vyvinutá Magma Kostka
-entity.EvolvedIceSlime.name=Vyvinutý Ledový Sliz
-entity.EvolvedEnderman.name=Vyvinutý Enderman
-entity.EvolvedBlaze.name=Vyvinutý Ohnivák
-entity.EvolvedBlueCreeper.name=Vyvinutý Modrý Syčák
-entity.EvolvedRedCreeper.name=Vyvinutý Červený Syčák
-entity.EvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
+entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss z Venuše
+entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss z Jupiteru
+entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss z Saturnu
+entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss z Uranu
+entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss z Neptunu
+entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
+
+entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
+entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+
+entity.ExtraPlanetsEvolvedWitch.name=Vyvinutá Čarodejnice
+entity.ExtraPlanetsEvolvedMagmaCube.name=Vyvinutá Magma Kostka
+entity.ExtraPlanetsEvolvedIceSlime.name=Vyvinutý Ledový Sliz
+entity.ExtraPlanetsEvolvedEnderman.name=Vyvinutý Enderman
+entity.ExtraPlanetsEvolvedBlaze.name=Vyvinutý Ohnivák
+entity.ExtraPlanetsEvolvedBlueCreeper.name=Vyvinutý Modrý Syčák
+entity.ExtraPlanetsEvolvedRedCreeper.name=Vyvinutý Červený Syčák
+entity.ExtraPlanetsEvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
 
 #Achievement
 achievement.mercuryPlanet=Přistaň na Merkuru!

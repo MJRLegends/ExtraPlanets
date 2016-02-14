@@ -468,24 +468,33 @@ item.cannedfood.dehydratedChicken.name=Dehydrated Chicken
 item.cannedfood.dehydratedBeef.name=Dehydrated Beef
 
 #Entities
-entity.CreeperBossVenus.name=Creeper Boss Venus
-entity.CreeperBossJupiter.name=Creeper Boss Jupiter
-entity.CreeperBossSaturn.name=Creeper Boss Saturn
-entity.CreeperBossUranus.name=Creeper Boss Uranus
-entity.CreeperBossNeptune.name=Creeper Boss Neptune
-entity.CreeperBossPluto.name=Creeper Boss Pluto
+entity.ProjectileTNT.name=Projectile TNT
 
-entity.EvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
-entity.EntityEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Rocket
+entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Rocket
+entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Rocket
+entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Rocket
+entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
+entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
 
-entity.EvolvedWitch.name=Evolved Witch
-entity.EvolvedMagmaCube.name=Evolved Magma Cube
-entity.EvolvedIceSlime.name=Evolved Ice Slime
-entity.EvolvedEnderman.name=Evolved Enderman
-entity.EvolvedBlaze.name=Evolved Blaze
-entity.EvolvedBlueCreeper.name=Evolved Blue Creeper
-entity.EvolvedRedCreeper.name=Evolved Red Creeper
-entity.EvolvedPowerSkeleton.name=Evolved Power Skeleton
+entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss Venus
+entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss Jupiter
+entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss Saturn
+entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss Uranus
+entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss Neptune
+entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
+
+entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
+entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+
+entity.ExtraPlanetsEvolvedWitch.name=Evolved Witch
+entity.ExtraPlanetsEvolvedMagmaCube.name=Evolved Magma Cube
+entity.ExtraPlanetsEvolvedIceSlime.name=Evolved Ice Slime
+entity.ExtraPlanetsEvolvedEnderman.name=Evolved Enderman
+entity.ExtraPlanetsEvolvedBlaze.name=Evolved Blaze
+entity.ExtraPlanetsEvolvedBlueCreeper.name=Evolved Blue Creeper
+entity.ExtraPlanetsEvolvedRedCreeper.name=Evolved Red Creeper
+entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evolved Power Skeleton
 
 #Achievement
 achievement.mercuryPlanet=Land on Mercury!
