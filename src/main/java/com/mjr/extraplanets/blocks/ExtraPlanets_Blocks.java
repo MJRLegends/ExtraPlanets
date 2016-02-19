@@ -72,9 +72,9 @@ import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Blocks {
+	//Planet Blocks
 	public static Block mercuryBlocks;
 	public static Block ceresBlocks;
-	public static Block plutoBlocks;
 	public static Block erisBlocks;
 
 	public static Block venusBlocks;
@@ -82,6 +82,7 @@ public class ExtraPlanets_Blocks {
 	public static Block saturnBlocks;
 	public static Block uranusBlocks;
 	public static Block neptuneBlocks;
+	public static Block plutoBlocks;
 
 	public static Block callistoBlocks;
 	public static Block deimosBlocks;
@@ -109,6 +110,8 @@ public class ExtraPlanets_Blocks {
 	public static Block tritonGravel;
 	public static Block ganymedeGravel;
 	public static Block callistoGravel;
+	public static Block rheaGravel;
+	public static Block titanGravel;
 
 	// Other Special Blocks
 	public static Block nuclearBomb;
@@ -126,6 +129,7 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier9;
 
 	// Need changing to meta blocks -----------------------------------------
+	//Dungeon Bricks
 	public static Block veunsDungeonBrick;
 	public static Block jupiterDungeonBrick;
 	public static Block saturnDungeonBrick;
@@ -133,6 +137,7 @@ public class ExtraPlanets_Blocks {
 	public static Block neptuneDungeonBrick;
 	public static Block plutoDungeonBrick;
 
+	//Dungeon Spawners
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
 	public static Block saturnSpawner;
@@ -146,7 +151,7 @@ public class ExtraPlanets_Blocks {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
 
-		// Need changing to meta blocks
+		// Need changing to meta blocks at some point
 		// -----------------------------------------
 		initializeDungeonBlocks();
 		initializeSpawnerBlocks();
@@ -227,9 +232,11 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.rhea) {
 			rheaBlocks = new BlockBasicRhea("rhea");
+			rheaGravel = new BlockCustomGravel("rheaGravel");
 		}
 		if (Config.titan) {
 			titanBlocks = new BlockBasicTitan("titan");
+			titanGravel = new BlockCustomGravel("titanGravel");
 		}
 
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
@@ -396,9 +403,11 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.rhea) {
 			GameRegistry.registerBlock(rheaBlocks, ItemBlockRhea.class, rheaBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(rheaGravel, "rheaGravel");
 		}
 		if (Config.titan) {
 			GameRegistry.registerBlock(titanBlocks, ItemBlockTitan.class, titanBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(titanGravel, "titanGravel");
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");

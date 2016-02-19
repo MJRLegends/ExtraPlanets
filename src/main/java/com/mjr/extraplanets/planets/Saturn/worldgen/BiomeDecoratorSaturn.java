@@ -53,7 +53,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 		this.generateOre(23, this.tinGen, 0, 60);
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(4, this.iceGen, 60, 120);
-		this.generateOre(20, this.magnesiumGen, 60, 120);
+		this.generateOre(20, this.magnesiumGen, 0, 60);
 		this.generateOre(15, this.gravelGen, 0, 80);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
