@@ -10,6 +10,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
+import com.mjr.extraplanets.worldGen.features.WorldGenVolcano;
 
 public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 
@@ -60,19 +61,19 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 				int x = this.chunkX + this.rand.nextInt(16) + 8;
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z);
+				int y = this.currentWorld.getHeightValue(x, z) - 2;
 				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.venusBlocks);
 			}
 		}
-
-		/*for (int j = 0; j < 2; j++) {
-	    if (this.rand.nextInt(10) == 0) {
-		int x = this.chunkX + this.rand.nextInt(16) + 8;
-		int z = this.chunkZ + this.rand.nextInt(16) + 8;
-		int y = this.currentWorld.getHeightValue(x, z);
-		new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y, z, ExtraPlanetsBlocks.venusSurface);
-	    }
-	}*/
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		if (this.rand.nextInt(20) == 1) {
+			int x = this.chunkX;
+			int z = this.chunkZ;
+			int y = this.currentWorld.getHeightValue(x, z) - 3;
+			new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y, z);
+		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	}
 }
