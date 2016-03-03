@@ -301,15 +301,15 @@ public abstract class ChunkProviderSpace extends ChunkProviderGenerate
                     int helper = 0;
                     for (int y = 127; y > 0; y--)
                     {
-                        if (Blocks.air != chunkArray[this.getIndex(x, y, z)] && helper <= yDev)
+                        if (helper > yDev)
+                        {
+                            break;
+                        }
+                        if (chunkArray[this.getIndex(x, y, z)] != null)
                         {
                             chunkArray[this.getIndex(x, y, z)] = Blocks.air;
                             metaArray[this.getIndex(x, y, z)] = 0;
                             helper++;
-                        }
-                        if (helper > yDev)
-                        {
-                            break;
                         }
                     }
                 }

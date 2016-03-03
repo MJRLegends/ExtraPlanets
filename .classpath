@@ -70,9 +70,9 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/MJRLe/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.1/aa9aae879af8eb378e22cfc64db56ec2ca9a44d1/lwjgl-platform-2.9.1-natives-linux.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/MJRLe/.gradle/caches/modules-2/files-2.1/org.lwjgl.lwjgl/lwjgl-platform/2.9.1/2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac/lwjgl-platform-2.9.1-natives-osx.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/MJRLe/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1558-1.7.10/start"/>
-	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/GalacticraftCore-Dev-1.7-3.0.12.436.jar"/>
-	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/Galacticraft-Planets-Dev-1.7-3.0.12.436.jar"/>
-	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/MicdoodleCore-Dev-1.7-3.0.12.436.jar"/>
-	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/Galacticraft-API-1.7-3.0.12.436.jar"/>
+	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/Galacticraft Development Files/GalacticraftCore-Dev-1.7-3.0.12.445.jar"/>
+	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/Galacticraft Development Files/Galacticraft-Planets-Dev-1.7-3.0.12.445.jar"/>
+	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/Galacticraft Development Files/MicdoodleCore-Dev-1.7-3.0.12.445.jar"/>
+	<classpathentry kind="lib" path="C:/Users/MJRLe/Dropbox/Source Codes/Minecraft Forge Mods/ExtraPlanets/Galacticraft Development Files/Galacticraft-API-1.7-3.0.12.445.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

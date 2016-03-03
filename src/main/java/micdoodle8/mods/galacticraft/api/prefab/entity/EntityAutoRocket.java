@@ -43,7 +43,6 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldProviderSurface;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidStack;
@@ -800,22 +799,33 @@ public abstract class EntityAutoRocket extends EntitySpaceshipBase implements IL
         return this.fuelTank.getFluidAmount() > 0;
     }
 
+    public void cancelLaunch()
+    {
+        this.setLaunchPhase(EnumLaunchPhase.UNIGNITED);
+        this.timeUntilLaunch = 0;
+        if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP)
+        {
+            ((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.nogyroscope")));
+        }
+    }
+    
     @Override
     public void onLaunch()
     {
-        if (!(this.worldObj.provider instanceof WorldProviderSurface || this.worldObj.provider instanceof IGalacticraftWorldProvider))
+        if (!(this.worldObj.provider.dimensionId == GalacticraftCore.planetOverworld.getDimensionID() || this.worldObj.provider instanceof IGalacticraftWorldProvider))
         {
-            for (int i = ConfigManagerCore.disableRocketLaunchDimensions.length - 1; i >= 0; i--)
+            if (ConfigManagerCore.disableRocketLaunchAllNonGC)
+            {
+            	this.cancelLaunch();
+            	return;
+            }
+        	
+            //No rocket flight in the Nether, the End etc
+        	for (int i = ConfigManagerCore.disableRocketLaunchDimensions.length - 1; i >= 0; i--)
             {
                 if (ConfigManagerCore.disableRocketLaunchDimensions[i] == this.worldObj.provider.dimensionId)
                 {
-                    //No rocket flight in the Nether, the End etc
-                    this.setLaunchPhase(EnumLaunchPhase.UNIGNITED);
-                    this.timeUntilLaunch = 0;
-                    if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP)
-                    {
-                        ((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.nogyroscope")));
-                    }
+                	this.cancelLaunch();
                     return;
                 }
             }

@@ -56,7 +56,9 @@ public abstract class CelestialBody implements Comparable<CelestialBody>
     public String getLocalizedName()
     {
         String s = this.getUnlocalizedName();
-        return s == null ? "" : StatCollector.translateToLocal(s);
+        s = s == null ? "" : StatCollector.translateToLocal(s);
+        int comment = s.indexOf('#');
+        return (comment > 0) ? s.substring(0, comment).trim() : s;
     }
 
     /**
