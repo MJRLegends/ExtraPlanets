@@ -33,6 +33,8 @@ public class ChunkProviderGanymede extends ChunkProviderSpace {
 	
 	private final MapGenCaveGanymede caveGenerator = new MapGenCaveGanymede();
 
+	private final MapGenRavineGanymede ravineGenerator = new MapGenRavineGanymede();
+	
 	private final MapGenVillageGanymede villageGenerator = new MapGenVillageGanymede();
 
 	public ChunkProviderGanymede(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -125,6 +127,7 @@ public class ChunkProviderGanymede extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

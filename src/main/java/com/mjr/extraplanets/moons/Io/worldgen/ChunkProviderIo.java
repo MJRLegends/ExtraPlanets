@@ -33,6 +33,8 @@ public class ChunkProviderIo extends ChunkProviderSpace {
 	
 	private final MapGenCaveIo caveGenerator = new MapGenCaveIo();
 
+	private final MapGenRavineIo ravineGenerator = new MapGenRavineIo();
+	
 	private final MapGenVillageIo villageGenerator = new MapGenVillageIo();
 
 	public ChunkProviderIo(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -125,6 +127,7 @@ public class ChunkProviderIo extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

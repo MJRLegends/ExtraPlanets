@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.MapGenRavine;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -33,6 +34,8 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 	
 	private final MapGenCavePhobos caveGenerator = new MapGenCavePhobos();
 
+	private final MapGenRavinePhobos ravineGenerator = new MapGenRavinePhobos();
+	
 	private final MapGenVillagePhobos villageGenerator = new MapGenVillagePhobos();
 
 	public ChunkProviderPhobos(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -125,6 +128,7 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

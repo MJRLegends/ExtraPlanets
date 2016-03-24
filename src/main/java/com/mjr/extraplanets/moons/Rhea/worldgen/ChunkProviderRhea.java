@@ -33,6 +33,8 @@ public class ChunkProviderRhea extends ChunkProviderSpace {
 	
 	private final MapGenCaveRhea caveGenerator = new MapGenCaveRhea();
 
+	private final MapGenRavineRhea ravineGenerator = new MapGenRavineRhea();
+	
 	private final MapGenVillageRhea villageGenerator = new MapGenVillageRhea();
 
 	public ChunkProviderRhea(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -125,6 +127,7 @@ public class ChunkProviderRhea extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override
