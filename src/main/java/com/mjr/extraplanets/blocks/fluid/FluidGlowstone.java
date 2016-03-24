@@ -18,6 +18,7 @@ public class FluidGlowstone extends FluidBasic {
 		super(ExtraPlanets_Fluids.glowstone_fluid);
 		setRenderPass(1);
 		setBlockName(name);
+		setLightLevel(1.0F);
 	}
 
 	public void func_149670_a(World world, int x, int y, int z, Entity entity) {
