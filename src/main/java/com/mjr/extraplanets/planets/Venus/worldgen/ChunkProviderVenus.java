@@ -36,6 +36,8 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 
 	private final MapGenCaveVenus caveGenerator = new MapGenCaveVenus();
 
+	private final MapGenRavineVenus ravineGenerator = new MapGenRavineVenus();
+	
 	private final MapGenVillageVenus villageGenerator = new MapGenVillageVenus();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.veunsDungeonBrick, 14, 8, 16, 3);
@@ -152,6 +154,7 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
 		this.dungeonGenerator.generateUsingArrays(this.worldObj,
 				this.worldObj.getSeed(), cX * 16, 25, cZ * 16, cX, cZ, blocks,metadata);
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

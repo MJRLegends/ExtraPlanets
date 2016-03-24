@@ -40,6 +40,8 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 
 	private final MapGenCaveSaturn caveGenerator = new MapGenCaveSaturn();
 
+	private final MapGenRavineSaturn ravineGenerator = new MapGenRavineSaturn();
+	
 	private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.saturnDungeonBrick, 14, 8, 16, 3);
@@ -164,6 +166,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
 		this.dungeonGenerator.generateUsingArrays(this.worldObj,
 				this.worldObj.getSeed(), cX * 16, 25, cZ * 16, cX, cZ, blocks,metadata);
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

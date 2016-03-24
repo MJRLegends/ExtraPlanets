@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
@@ -28,6 +29,8 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 	private final BiomeDecoratorMercury greenPixelBiomeDecorator = new BiomeDecoratorMercury();
 
 	private final MapGenCaveMercury caveGenerator = new MapGenCaveMercury();
+	
+	private final MapGenRavineMercury ravineGenerator = new MapGenRavineMercury();
 
 	private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();
 
@@ -123,6 +126,7 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

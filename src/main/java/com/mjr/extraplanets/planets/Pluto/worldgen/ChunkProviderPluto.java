@@ -36,6 +36,8 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
 
+	private final MapGenRavinePluto ravineGenerator = new MapGenRavinePluto();
+	
 	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.plutoDungeonBrick, 14, 8, 16, 3);
@@ -144,6 +146,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
 		this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), cX * 16, 25, cZ * 16, cX, cZ, blocks, metadata);
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

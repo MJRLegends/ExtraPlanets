@@ -30,6 +30,8 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 
 	private final MapGenCaveEris caveGenerator = new MapGenCaveEris();
 
+	private final MapGenRavineEris ravineGenerator = new MapGenRavineEris();
+	
 	private final MapGenVillageEris villageGenerator = new MapGenVillageEris();
 
 
@@ -125,6 +127,7 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

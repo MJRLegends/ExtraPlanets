@@ -28,6 +28,8 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	public Random randomGenerator;
 
 	private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
+	
+	private final MapGenRavineCeres ravineGenerator = new MapGenRavineCeres();
 
 	private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
 
@@ -121,6 +123,7 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

@@ -38,7 +38,7 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 	private final BiomeDecoratorUranus greenPixelBiomeDecorator = new BiomeDecoratorUranus();
 
 	private final MapGenCaveUranus caveGenerator = new MapGenCaveUranus();
-
+	
 	private final MapGenVillageUranus villageGenerator = new MapGenVillageUranus();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.uranusDungeonBrick, 14, 8, 16, 3);

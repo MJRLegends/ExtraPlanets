@@ -39,7 +39,7 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 	public Random randomGenerator;
 
 	private final MapGenCaveNeptune caveGenerator = new MapGenCaveNeptune();
-
+	
 	private final MapGenVillageNeptune villageGenerator = new MapGenVillageNeptune();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.neptuneDungeonBrick, 14, 8, 16, 3);
