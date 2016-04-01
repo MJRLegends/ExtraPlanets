@@ -200,6 +200,8 @@ tile.phobosGravel.name=Phobos Gravel
 tile.tritonGravel.name=Triton Gravel
 tile.callistoGravel.name=Callisto Gravel
 tile.ganymedeGravel.name=Ganymede Gravel
+tile.rheaGravel.name=Rhea Gravel
+tile.titanGravel.name=Titan Gravel
 
 tile.venusGravel.name=Venus Gravel
 tile.jupiterGravel.name=Jupiter Gravel
