@@ -26,7 +26,7 @@ public class ItemAppleDiamond extends ItemFood
 		this.setHasSubtypes(true);
 		this.setAlwaysEdible();
 		this.setUnlocalizedName("appleDiamond");
-		this.setTextureName(Constants.TEXTURE_PREFIX + "appleDiamond");
+		this.setTextureName(Constants.TEXTURE_PREFIX + "apple_Diamond");
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
