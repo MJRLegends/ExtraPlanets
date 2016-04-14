@@ -45,7 +45,7 @@ public class TeleportTypeNeptune implements ITeleportType {
 
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket) {
-		player.addStat(ExtraPlanets_Achievements.neptunePlanet, 1);
+		//player.addStat(ExtraPlanets_Achievements.neptunePlanet, 1);
 	}
 
 	@Override

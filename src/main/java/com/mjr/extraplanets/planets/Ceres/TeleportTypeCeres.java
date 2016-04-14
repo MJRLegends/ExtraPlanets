@@ -45,7 +45,7 @@ public class TeleportTypeCeres implements ITeleportType {
 
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket) {
-		player.addStat(ExtraPlanets_Achievements.ceresPlanet, 1);
+		//player.addStat(ExtraPlanets_Achievements.ceresPlanet, 1);
 	}
 
 	@Override

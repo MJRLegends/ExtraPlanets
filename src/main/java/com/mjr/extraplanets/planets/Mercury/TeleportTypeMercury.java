@@ -45,7 +45,7 @@ public class TeleportTypeMercury implements ITeleportType {
 
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket) {
-		player.addStat(ExtraPlanets_Achievements.mercuryPlanet, 1);
+		//player.addStat(ExtraPlanets_Achievements.mercuryPlanet, 1);
 	}
 
 	@Override

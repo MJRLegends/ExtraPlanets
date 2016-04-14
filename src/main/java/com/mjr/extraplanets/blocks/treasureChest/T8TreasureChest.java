@@ -438,7 +438,7 @@ public class T8TreasureChest extends BlockContainer implements ITileEntityProvid
 			else
 			{
 				par5EntityPlayer.displayGUIChest((IInventory) var10);
-				par5EntityPlayer.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
+				//par5EntityPlayer.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
 				return true;
 			}
 		}
