@@ -117,7 +117,7 @@ public class RocketT7RecipeHandler extends TemplateRecipeHandler {
 
 	@Override
 	public String getGuiTexture() {
-		return GalacticraftCore.TEXTURE_PREFIX + "textures/gui/rocketbench.png";
+		return MarsModule.TEXTURE_PREFIX + "textures/gui/schematic_rocket_T2.png";
 	}
 
 	@Override
