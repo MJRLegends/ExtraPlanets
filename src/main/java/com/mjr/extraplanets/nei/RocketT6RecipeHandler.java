@@ -37,7 +37,7 @@ public class RocketT6RecipeHandler extends TemplateRecipeHandler {
 	public void drawBackground(int i) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		GuiDraw.changeTexture(RocketT6RecipeHandler.rocketGuiTexture);
-		GuiDraw.drawTexturedModalRect(0, 0, 3, 4, 168, 130);
+		GuiDraw.drawTexturedModalRect(0, -8, 3, 4, 168, 140);
 	}
 
 	@Override
