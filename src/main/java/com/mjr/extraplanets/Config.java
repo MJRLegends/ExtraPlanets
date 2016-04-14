@@ -22,7 +22,7 @@ public class Config {
 	
 	private static String compatibility = "compatibility support";
 	private static String gerenalsettings = "general settings";
-
+	
 	public static boolean mobSuffocation;
 
 	public static boolean carbonItems;
@@ -181,6 +181,7 @@ public class Config {
 		config.addCustomCategoryComment(dimensionID, "Change if a dimension ID is causing conflicts!");
 		config.addCustomCategoryComment(biomeID, "Change if a biome ID is causing conflicts!");
 		config.addCustomCategoryComment(dimensions, "Disabling this will remove the planet with all the related items/block!");
+		config.addCustomCategoryComment(dimensionSettings, "Enable/Disable dimension settings");
 		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet/moon with all the related items/block!");
 		config.addCustomCategoryComment(schematicsGUI, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
@@ -188,7 +189,9 @@ public class Config {
 		config.addCustomCategoryComment(blocks, "Changing to false will disable the blocks/machines");
 		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
 		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet");
-
+		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
+		config.addCustomCategoryComment(gerenalsettings,"Enable/Disable gerenal settings");
+		
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
 		magnesiumItems = config.get(items, "Magnesium Tools & Armor", true).getBoolean(true);
