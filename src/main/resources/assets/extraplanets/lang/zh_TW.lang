@@ -510,18 +510,6 @@ achievement.neptunePlanet=登陸海王星！
 achievement.plutoPlanet=登陸冥王星！
 achievement.erisPlanet=登陸鬩神星！
 
-achievement.venusBoss=擊殺金星地牢BOSS
-achievement.jupiterBoss=擊殺木星地牢BOSS
-achievement.saturnBoss=擊殺土星地牢BOSS
-achievement.uranusBoss=擊殺天王星地牢BOSS
-achievement.neptuneBoss=擊殺海王星地牢BOSS
-
-achievement.venusBoss.desc=擊殺金星地牢BOSS並開啟寶箱！
-achievement.jupiterBoss.desc=擊殺木星地牢BOSS並開啟寶箱！
-achievement.saturnBoss.desc=擊殺土星地牢BOSS並開啟寶箱！
-achievement.uranusBoss.desc=擊殺天王星地牢BOSS並開啟寶箱！
-achievement.neptuneBoss.desc=擊殺海王星地牢BOSS並開啟寶箱！
-
 achievement.mercuryPlanet.desc=乘坐4階火箭到水星
 achievement.venusPlanet.desc=乘坐3階火箭到金星
 achievement.ceresPlanet.desc=乘坐4階火箭到穀神星
@@ -531,6 +519,34 @@ achievement.uranusPlanet.desc=乘坐6階火箭到天王星
 achievement.neptunePlanet.desc=乘坐7階火箭到海王星
 achievement.plutoPlanet.desc=乘坐8階火箭到冥王星
 achievement.erisPlanet.desc=乘坐8階火箭到鬩神星
+
+achievement.venusBoss=Defeated Tier 4 Boss!
+achievement.jupiterBoss=Defeated Tier 5 Boss!
+achievement.saturnBoss=Defeated Tier 6 Boss!
+achievement.uranusBoss=Defeated Tier 7 Boss!
+achievement.neptuneBoss=Defeated Tier 8 Boss!
+achievement.plutoBoss=Defeated Tier 9 Boss!
+
+achievement.venusBoss.desc=擊殺金星地牢BOSS並開啟寶箱！
+achievement.jupiterBoss.desc=擊殺木星地牢BOSS並開啟寶箱！
+achievement.saturnBoss.desc=擊殺土星地牢BOSS並開啟寶箱！
+achievement.uranusBoss.desc=擊殺天王星地牢BOSS並開啟寶箱！
+achievement.neptuneBoss.desc=擊殺海王星地牢BOSS並開啟寶箱！
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+
+achievement.craftRocket4=Tier 4 Rocket!
+achievement.craftRocket5=Tier 5 Rocket!
+achievement.craftRocket7=Tier 6 Rocket!
+achievement.craftRocket8=Tier 7 Rocket!
+achievement.craftRocket9=Tier 8 Rocket!
+achievement.craftRocket9=Tier 9 Rocket!
+
+achievement.craftRocket4.desc=Craft Tier 4 Rocket
+achievement.craftRocket5.desc=Craft Tier 5 Rocket
+achievement.craftRocket6.desc=Craft Tier 6 Rocket
+achievement.craftRocket7.desc=Craft Tier 7 Rocket
+achievement.craftRocket8.desc=Craft Tier 8 Rocket
+achievement.craftRocket9.desc=Craft Tier 9 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=螢石水

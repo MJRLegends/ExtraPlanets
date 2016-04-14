@@ -509,18 +509,6 @@ achievement.neptunePlanet=Land on Neptune!
 achievement.plutoPlanet=Land on Pluto!
 achievement.erisPlanet=Land on Eris!
 
-achievement.venusBoss=Kill the Venus Dungeon Boss
-achievement.jupiterBoss=Kill the Jupiter Dungeon Boss
-achievement.saturnBoss=Kill the Saturn Dungeon Boss
-achievement.uranusBoss=Kill the Uranus Dungeon Boss
-achievement.neptuneBoss=Kill the Neptune Dungeon Boss
-
-achievement.venusBoss.desc=Kill the Venus Dungeon Boss and Open the Treasure Chest
-achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss and Open the Treasure Chest
-achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss and Open the Treasure Chest
-achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss and Open the Treasure Chest
-achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss and Open the Treasure Chest
-
 achievement.mercuryPlanet.desc=Take a Tier 4 rocket to Mercury
 achievement.venusPlanet.desc=Take a Tier 3 rocket to Venus
 achievement.ceresPlanet.desc=Take a Tier 4 rocket to Ceres
@@ -530,6 +518,41 @@ achievement.uranusPlanet.desc=Take a Tier 6 rocket to Uranus
 achievement.neptunePlanet.desc=Take a Tier 7 rocket to Neptune
 achievement.plutoPlanet.desc=Take a Tier 8 rocket to Pluto
 achievement.erisPlanet.desc=Take a Tier 8 rocket to Eris
+
+achievement.venusBoss=Defeated Tier 4 Boss!
+achievement.jupiterBoss=Defeated Tier 5 Boss!
+achievement.saturnBoss=Defeated Tier 6 Boss!
+achievement.uranusBoss=Defeated Tier 7 Boss!
+achievement.neptuneBoss=Defeated Tier 8 Boss!
+achievement.plutoBoss=Defeated Tier 9 Boss!
+
+achievement.venusBoss.desc=Kill the Venus Dungeon Boss
+achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
+achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss
+achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss
+achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss
+achievement.plutoBoss.desc=Kill the Neptune Dungeon Boss
+
+achievement.venusBoss.desc=Kill the Venus Dungeon Boss and Open the Treasure Chest
+achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss and Open the Treasure Chest
+achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss and Open the Treasure Chest
+achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss and Open the Treasure Chest
+achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss and Open the Treasure Chest
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest
+
+achievement.craftRocket4=Tier 4 Rocket!
+achievement.craftRocket5=Tier 5 Rocket!
+achievement.craftRocket7=Tier 6 Rocket!
+achievement.craftRocket8=Tier 7 Rocket!
+achievement.craftRocket9=Tier 8 Rocket!
+achievement.craftRocket9=Tier 9 Rocket!
+
+achievement.craftRocket4.desc=Craft Tier 4 Rocket
+achievement.craftRocket5.desc=Craft Tier 5 Rocket
+achievement.craftRocket6.desc=Craft Tier 6 Rocket
+achievement.craftRocket7.desc=Craft Tier 7 Rocket
+achievement.craftRocket8.desc=Craft Tier 8 Rocket
+achievement.craftRocket9.desc=Craft Tier 9 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Liquid Glowstone

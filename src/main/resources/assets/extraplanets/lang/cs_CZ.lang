@@ -509,18 +509,6 @@ achievement.neptunePlanet=Přistaň na Neptunu!
 achievement.plutoPlanet=Přistaň na Plutu!
 achievement.erisPlanet=Přistaň na Erisu!
 
-achievement.venusBoss=Zabij Bosse z kobky na Venuši
-achievement.jupiterBoss=Zabij Bosse z kobky na Jupiteru
-achievement.saturnBoss=Zabij Bosse z kobky na Saturnu
-achievement.uranusBoss=Zabij Bosse z kobky na Uranu
-achievement.neptuneBoss=Zabij Bosse z kobky na Neptunu
-
-achievement.venusBoss.desc=Zabij Bosse z kobky na Venuši a otevři truhlu s pokladem
-achievement.jupiterBoss.desc=Zabij Bosse z kobky na Jupiteru a otevři truhlu s pokladem
-achievement.saturnBoss.desc=Zabij Bosse z kobky na Saturnu a otevři truhlu s pokladem
-achievement.uranusBoss.desc=Zabij Bosse z kobky na Uranu a otevři truhlu s pokladem
-achievement.neptuneBoss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s pokladem
-
 achievement.mercuryPlanet.desc=Vezmi raketu typ 4 na Merkur
 achievement.venusPlanet.desc=Vezmi raketu typ 3 na Venuši
 achievement.ceresPlanet.desc=Vezmi raketu typ 4 na Ceres
@@ -530,6 +518,34 @@ achievement.uranusPlanet.desc=Vezmi raketu typ 6 na Uran
 achievement.neptunePlanet.desc=Vezmi raketu typ 7 na Neptun
 achievement.plutoPlanet.desc=Vezmi raketu typ 8 na Pluto
 achievement.erisPlanet.desc=Vezmi raketu typ 8 na Eris
+
+achievement.venusBoss=Defeated Tier 4 Boss!
+achievement.jupiterBoss=Defeated Tier 5 Boss!
+achievement.saturnBoss=Defeated Tier 6 Boss!
+achievement.uranusBoss=Defeated Tier 7 Boss!
+achievement.neptuneBoss=Defeated Tier 8 Boss!
+achievement.plutoBoss=Defeated Tier 9 Boss!
+
+achievement.venusBoss.desc=Zabij Bosse z kobky na Venuši a otevři truhlu s pokladem
+achievement.jupiterBoss.desc=Zabij Bosse z kobky na Jupiteru a otevři truhlu s pokladem
+achievement.saturnBoss.desc=Zabij Bosse z kobky na Saturnu a otevři truhlu s pokladem
+achievement.uranusBoss.desc=Zabij Bosse z kobky na Uranu a otevři truhlu s pokladem
+achievement.neptuneBoss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s pokladem
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+
+achievement.craftRocket4=Tier 4 Rocket!
+achievement.craftRocket5=Tier 5 Rocket!
+achievement.craftRocket7=Tier 6 Rocket!
+achievement.craftRocket8=Tier 7 Rocket!
+achievement.craftRocket9=Tier 8 Rocket!
+achievement.craftRocket9=Tier 9 Rocket!
+
+achievement.craftRocket4.desc=Craft Tier 4 Rocket
+achievement.craftRocket5.desc=Craft Tier 5 Rocket
+achievement.craftRocket6.desc=Craft Tier 6 Rocket
+achievement.craftRocket7.desc=Craft Tier 7 Rocket
+achievement.craftRocket8.desc=Craft Tier 8 Rocket
+achievement.craftRocket9.desc=Craft Tier 9 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Tekutý světlit
