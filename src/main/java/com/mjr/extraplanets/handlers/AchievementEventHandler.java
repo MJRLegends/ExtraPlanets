@@ -7,6 +7,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 
 public class AchievementEventHandler {
 	@SubscribeEvent
@@ -29,6 +30,11 @@ public class AchievementEventHandler {
 		} else if (event.item.getEntityItem().getItem() == ExtraPlanets_Items.tier9Rocket) {
 			event.entityPlayer.addStat(ExtraPlanets_Achievements.craftRocket9, 1);
 		}
-
+	}
+	
+	@SubscribeEvent
+	public void onDimensionChange(PlayerChangedDimensionEvent event)
+	{
+		
 	}
 }
