@@ -93,7 +93,7 @@ public class ExtraPlanets_Achievements {
 		if (Config.neptune)
 			neptunePlanet = new Achievement("achievement.neptunePlanet", "neptunePlanet", 11, 4, ExtraPlanets_Blocks.neptuneBlocks, craftRocket8).registerStat();
 		if (Config.pluto)
-			plutoPlanet = new Achievement("achievement.plutoPlanet", "plutoPlanet", 13, 4, ExtraPlanets_Blocks.plutoBlocks, (Achievement) null).registerStat();
+			plutoPlanet = new Achievement("achievement.plutoPlanet", "plutoPlanet", 13, 4, ExtraPlanets_Blocks.plutoBlocks, craftRocket9).registerStat();
 		
 		//Extra Planets Achievements
 		if (Config.mercury)
@@ -140,12 +140,14 @@ public class ExtraPlanets_Achievements {
 			achievementslist.add(neptunePlanet);
 		if (neptuneBoss != null)
 			achievementslist.add(neptuneBoss);
+		if (plutoPlanet != null)
+			achievementslist.add(plutoPlanet);
+		if (plutoBoss != null)
+			achievementslist.add(plutoBoss);
 		if (mercuryPlanet != null)
 			achievementslist.add(mercuryPlanet);
 		if (ceresPlanet != null)
 			achievementslist.add(ceresPlanet);
-		if (plutoPlanet != null)
-			achievementslist.add(plutoPlanet);
 		if (erisPlanet != null)
 			achievementslist.add(erisPlanet);
 		if (craftRocket4 != null)
