@@ -1,10 +1,16 @@
 package com.mjr.extraplanets.recipes;
 
+import java.util.HashMap;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
+import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
+import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
+import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -29,6 +35,7 @@ public class ExtraPlanets_Recipes {
 		registerCraftingRecipes();
 		registerCompressorRecipes();
 		registerCircuitFabricatorRecipes();
+		registerSatellitesRecipes();
 	}
 
 	private static void registerRocketCraftingRecipes() {
@@ -420,4 +427,33 @@ public class ExtraPlanets_Recipes {
 	        //CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.tripwire_hook) });
         }
 	}
+	
+
+	private static void registerSatellitesRecipes() {
+		final HashMap<Object, Integer> inputMap = new HashMap<Object, Integer>();
+		inputMap.put("ingotTin", 32);
+		inputMap.put("waferAdvanced", 1);
+		inputMap.put(Items.iron_ingot, 24);
+		
+		if (Config.mercurySpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.mercurySpaceStationID, Config.mercuryID, new SpaceStationRecipe(inputMap)));
+		if (Config.venusSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.venusSpaceStationID, Config.venusID, new SpaceStationRecipe(inputMap)));
+		if (Config.ceresSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.ceresSpaceStationID, Config.ceresID, new SpaceStationRecipe(inputMap)));
+		if (Config.marsSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.marsSpaceStationID, MarsModule.planetMars.getDimensionID(), new SpaceStationRecipe(inputMap)));
+		if (Config.jupiterSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.jupiterSpaceStationID, Config.jupiterID, new SpaceStationRecipe(inputMap)));
+		if (Config.saturnSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.saturnSpaceStationID, Config.saturnID, new SpaceStationRecipe(inputMap)));
+		if (Config.uranusSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.uranusSpaceStationID, Config.uranusID, new SpaceStationRecipe(inputMap)));
+		if (Config.neptuneSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.neptuneSpaceStationID, Config.neptuneID, new SpaceStationRecipe(inputMap)));
+		if (Config.plutoSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.plutoSpaceStationID, Config.plutoID, new SpaceStationRecipe(inputMap)));
+		if (Config.erisSpaceStation)
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.erisSpaceStationID, Config.erisID, new SpaceStationRecipe(inputMap)));
+	};
 }

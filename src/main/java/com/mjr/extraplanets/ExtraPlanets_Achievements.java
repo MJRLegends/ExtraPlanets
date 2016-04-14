@@ -14,7 +14,7 @@ public class ExtraPlanets_Achievements {
 
 	private static ArrayList<Achievement> achievementslist = new ArrayList();
 
-	public static AchievementPage page1;
+	private static AchievementPage page1;
 
 	public static Achievement venusPlanet;
 	public static Achievement venusBoss;
@@ -179,9 +179,13 @@ public class ExtraPlanets_Achievements {
 			page1 = new AchievementPage("ExtraPlanets", (Achievement[]) achievementslist.toArray(new Achievement[achievementslist.size()]));
 		}
 	}
+	
 	private static void registerAchievementPage() {
-
 		AchievementPage.registerAchievementPage(page1);
 		achievementslist.clear();
+	}
+	
+	public static AchievementPage getAchievementPage() {
+		return page1;
 	}
 }

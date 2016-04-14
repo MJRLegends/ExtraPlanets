@@ -50,7 +50,6 @@ public class ExtraPlanets_SpaceStations {
 	public static void init() {
 		initializeSatellites();
 		registerSatellites();
-		registerSatellitesRecipes();
 	}
 
 	private static void initializeSatellites() {
@@ -208,32 +207,4 @@ public class ExtraPlanets_SpaceStations {
 			GalacticraftRegistry.registerProvider(Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true, 0);
 		}
 	}
-
-	private static void registerSatellitesRecipes() {
-		final HashMap<Object, Integer> inputMap = new HashMap<Object, Integer>();
-		inputMap.put("ingotTin", 32);
-		inputMap.put("waferAdvanced", 1);
-		inputMap.put(Items.iron_ingot, 24);
-		
-		if (Config.mercurySpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.mercurySpaceStationID, Config.mercuryID, new SpaceStationRecipe(inputMap)));
-		if (Config.venusSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.venusSpaceStationID, Config.venusID, new SpaceStationRecipe(inputMap)));
-		if (Config.ceresSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.ceresSpaceStationID, Config.ceresID, new SpaceStationRecipe(inputMap)));
-		if (Config.marsSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.marsSpaceStationID, MarsModule.planetMars.getDimensionID(), new SpaceStationRecipe(inputMap)));
-		if (Config.jupiterSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.jupiterSpaceStationID, Config.jupiterID, new SpaceStationRecipe(inputMap)));
-		if (Config.saturnSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.saturnSpaceStationID, Config.saturnID, new SpaceStationRecipe(inputMap)));
-		if (Config.uranusSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.uranusSpaceStationID, Config.uranusID, new SpaceStationRecipe(inputMap)));
-		if (Config.neptuneSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.neptuneSpaceStationID, Config.neptuneID, new SpaceStationRecipe(inputMap)));
-		if (Config.plutoSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.plutoSpaceStationID, Config.plutoID, new SpaceStationRecipe(inputMap)));
-		if (Config.erisSpaceStation)
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.erisSpaceStationID, Config.erisID, new SpaceStationRecipe(inputMap)));
-	};
 }
