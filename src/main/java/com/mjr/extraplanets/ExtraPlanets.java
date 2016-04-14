@@ -1,12 +1,9 @@
 package com.mjr.extraplanets;
 
-import java.lang.reflect.Method;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -85,7 +82,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
-@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = "required-after:GalacticraftCore;required-after:GalacticraftMars;")
+@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = "required-after:GalacticraftCore;required-after:GalacticraftMars;required-after:Forge@[10.13.4.1558,);")
 public class ExtraPlanets {
 
 	@SidedProxy(clientSide = "com.mjr.extraplanets.proxy.ClientProxy", serverSide = "com.mjr.extraplanets.proxy.CommonProxy")
