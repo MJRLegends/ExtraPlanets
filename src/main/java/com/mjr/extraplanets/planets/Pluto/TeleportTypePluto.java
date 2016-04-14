@@ -45,7 +45,6 @@ public class TeleportTypePluto implements ITeleportType {
 
 	@Override
 	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket) {
-		//player.addStat(ExtraPlanets_Achievements.plutoPlanet, 1);
 	}
 
 	@Override
