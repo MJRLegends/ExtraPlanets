@@ -19,6 +19,9 @@ public class Config {
 
 	private static String schematicsGUI = "schematics GUI ID";
 	private static String schematicsPage = "schematics Page ID";
+	
+	private static String compatibility = "compatibility support";
+	private static String gerenalsettings = "general settings";
 
 	public static boolean mobSuffocation;
 
@@ -166,6 +169,10 @@ public class Config {
 	public static int schematicTier7PageID;
 	public static int schematicTier8PageID;
 	public static int schematicTier9PageID;
+
+	public static boolean microBlock;
+	public static boolean neiSupport;
+	public static boolean achievements;
 
 	public static void load() {
 		Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
@@ -329,6 +336,11 @@ public class Config {
 		schematicTier7PageID = config.get(schematicsPage, "Schematic Tier 7 Page ID", 6669).getInt();
 		schematicTier8PageID = config.get(schematicsPage, "Schematic Tier 8 Page ID", 6670).getInt();
 		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
+
+		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
+		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
+
+		achievements = config.get(gerenalsettings, "Enable achievements", true, "").getBoolean(true);
 
 		config.save();
 	}

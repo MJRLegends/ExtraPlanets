@@ -92,7 +92,6 @@ public class ExtraPlanets {
 	public static CommonProxy proxy;
 
 	@Instance(Constants.modID)
-
 	public static ExtraPlanets instance;
 
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
@@ -104,17 +103,17 @@ public class ExtraPlanets {
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
 		public Item getTabIconItem() {
-			if(Config.venus)
+			if (Config.venus)
 				return ExtraPlanets_Items.tier4Rocket;
-			else if(Config.jupiter)
+			else if (Config.jupiter)
 				return ExtraPlanets_Items.tier5Rocket;
-			else if(Config.saturn)
+			else if (Config.saturn)
 				return ExtraPlanets_Items.tier6Rocket;
-			else if(Config.uranus)
+			else if (Config.uranus)
 				return ExtraPlanets_Items.tier7Rocket;
-			else if(Config.neptune)
+			else if (Config.neptune)
 				return ExtraPlanets_Items.tier8Rocket;
-			else if(Config.pluto)
+			else if (Config.pluto)
 				return ExtraPlanets_Items.tier9Rocket;
 			return GCItems.rocketTier1;
 		}
@@ -122,13 +121,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			if(Config.venus)
+			if (Config.venus)
 				return ExtraPlanets_Tools.carbonPickaxe;
-			else if(Config.jupiter)
+			else if (Config.jupiter)
 				return ExtraPlanets_Tools.palladiumPickaxe;
-			else if(Config.saturn)
+			else if (Config.saturn)
 				return ExtraPlanets_Tools.magnesiumPickaxe;
-			else if(Config.uranus)
+			else if (Config.uranus)
 				return ExtraPlanets_Tools.crystalPickaxe;
 			return GCItems.steelPickaxe;
 		}
@@ -136,13 +135,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			if(Config.venus)
+			if (Config.venus)
 				return ExtraPlanets_Armor.carbonChest;
-			else if(Config.jupiter)
+			else if (Config.jupiter)
 				return ExtraPlanets_Armor.palladiumChest;
-			else if(Config.saturn)
+			else if (Config.saturn)
 				return ExtraPlanets_Armor.magnesiumChest;
-			else if(Config.uranus)
+			else if (Config.uranus)
 				return ExtraPlanets_Armor.crystalChest;
 			return GCItems.steelChestplate;
 		}
@@ -196,7 +195,7 @@ public class ExtraPlanets {
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 
 		ExtraPlanets_Blocks.init();
-		if(Config.slabsAndStairs)
+		if (Config.slabsAndStairs)
 			ExtraPlanets_SlabsStairsBlocks.init();
 		ExtraPlanets_Machines.init();
 		ExtraPlanets_Fluids.init();
@@ -225,7 +224,8 @@ public class ExtraPlanets {
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
-		ExtraPlanets_MicroBlocks.init();
+		if (Config.microBlock)
+			ExtraPlanets_MicroBlocks.init();
 		registerNonMobEntities();
 		registerCreatures();
 		ExtraPlanets.proxy.init(event);
@@ -236,7 +236,8 @@ public class ExtraPlanets {
 		registerSchematics();
 		addDungeonLoot();
 		ExtraPlanets_Recipes.init();
-		ExtraPlanets_Achievements.init();
+		if (Config.achievements)
+			ExtraPlanets_Achievements.init();
 		ExtraPlanets.proxy.postInit(event);
 	}
 
@@ -259,14 +260,16 @@ public class ExtraPlanets {
 	private void registerCreatures() {
 		// Default Bosses
 		if (Config.venus)
-			// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,"CreeperBossVenus", 894731, 0);
+			// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,"CreeperBossVenus",
+			// 894731, 0);
 			registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
 			registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
 			registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
 		if (Config.uranus)
-			// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus", 894731, 0);
+			// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus",
+			// 894731, 0);
 			registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
 			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
@@ -276,7 +279,8 @@ public class ExtraPlanets {
 		// Entities
 		registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
 		registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
-		// registerExtraPlanetsCreature(EvolvedIceBlaze.class, "EvolvedIceBlaze", 3407872, 16579584);
+		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,
+		// "EvolvedIceBlaze", 3407872, 16579584);
 		registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.modName + "EvolvedWitch", 3407872, 5349438);
 		registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.modName + "EvolvedEnderman", 1447446, 0);
 		registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.modName + "EvolvedBlaze", 16167425, 16775294);
@@ -300,7 +304,7 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
 	}
 
-	private void addDungeonLoot(){
+	private void addDungeonLoot() {
 		if (Config.venus)
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicTier4, 1, 0));
 		if (Config.jupiter)
@@ -314,7 +318,7 @@ public class ExtraPlanets {
 		if (Config.pluto)
 			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.schematicTier9, 1, 0));
 	}
-	
+
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
 		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
 	}
@@ -325,5 +329,5 @@ public class ExtraPlanets {
 		EntityRegistry.registerGlobalEntityID(var0, var1, newID, back, fore);
 		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, 80, 3, true);
 	}
-	
+
 }
