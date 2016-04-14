@@ -5,11 +5,13 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.client.SkyProviderOrbit;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.client.IRenderHandler;
 
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -192,7 +194,7 @@ public class WorldProviderMarsOrbit extends WorldProviderOrbit
 	@Override
 	public boolean canSpaceshipTierPass(int tier)
 	{
-		return tier > 0;
+		return tier > MarsModule.planetMars.getTierRequirement();
 	}
 
 	@Override

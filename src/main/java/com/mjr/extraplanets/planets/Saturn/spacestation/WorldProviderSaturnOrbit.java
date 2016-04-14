@@ -10,6 +10,7 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.client.IRenderHandler;
 
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -192,7 +193,7 @@ public class WorldProviderSaturnOrbit extends WorldProviderOrbit
 	@Override
 	public boolean canSpaceshipTierPass(int tier)
 	{
-		return tier > 0;
+		return tier > ExtraPlanets_Planets.saturn.getTierRequirement();
 	}
 
 	@Override

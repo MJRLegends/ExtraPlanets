@@ -58,7 +58,7 @@ public class ExtraPlanets_SpaceStations {
 			mercurySpaceStation.setRelativeSize(0.2667F);
 			mercurySpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			mercurySpaceStation.setRelativeOrbitTime(20.0F);
-			mercurySpaceStation.setTierRequired(Config.mercuryRocketTier);
+			mercurySpaceStation.setTierRequired(ExtraPlanets_Planets.mercury.getTierRequirement());
 			mercurySpaceStation.setDimensionInfo(Config.mercurySpaceStationID, Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class);
 			mercurySpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -67,7 +67,7 @@ public class ExtraPlanets_SpaceStations {
 			venusSpaceStation.setRelativeSize(0.2667F);
 			venusSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			venusSpaceStation.setRelativeOrbitTime(20.0F);
-			venusSpaceStation.setTierRequired(3);
+			venusSpaceStation.setTierRequired(ExtraPlanets_Planets.venus.getTierRequirement());
 			venusSpaceStation.setDimensionInfo(Config.venusSpaceStationID, Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class);
 			venusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -76,7 +76,7 @@ public class ExtraPlanets_SpaceStations {
 			ceresSpaceStation.setRelativeSize(0.2667F);
 			ceresSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			ceresSpaceStation.setRelativeOrbitTime(20.0F);
-			ceresSpaceStation.setTierRequired(Config.ceresRocketTier);
+			ceresSpaceStation.setTierRequired(ExtraPlanets_Planets.ceres.getTierRequirement());
 			ceresSpaceStation.setDimensionInfo(Config.ceresSpaceStationID, Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class);
 			ceresSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -85,7 +85,7 @@ public class ExtraPlanets_SpaceStations {
 			marsSpaceStation.setRelativeSize(0.2667F);
 			marsSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			marsSpaceStation.setRelativeOrbitTime(20.0F);
-			marsSpaceStation.setTierRequired(4);
+			marsSpaceStation.setTierRequired(MarsModule.planetMars.getTierRequirement());
 			marsSpaceStation.setDimensionInfo(Config.marsSpaceStationID, Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class);
 			marsSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -94,7 +94,7 @@ public class ExtraPlanets_SpaceStations {
 			jupiterSpaceStation.setRelativeSize(0.2667F);
 			jupiterSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			jupiterSpaceStation.setRelativeOrbitTime(20.0F);
-			jupiterSpaceStation.setTierRequired(4);
+			jupiterSpaceStation.setTierRequired(ExtraPlanets_Planets.jupiter.getTierRequirement());
 			jupiterSpaceStation.setDimensionInfo(Config.jupiterSpaceStationID, Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class);
 			jupiterSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -103,7 +103,7 @@ public class ExtraPlanets_SpaceStations {
 			saturnSpaceStation.setRelativeSize(0.2667F);
 			saturnSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			saturnSpaceStation.setRelativeOrbitTime(20.0F);
-			saturnSpaceStation.setTierRequired(5);
+			saturnSpaceStation.setTierRequired(ExtraPlanets_Planets.saturn.getTierRequirement());
 			saturnSpaceStation.setDimensionInfo(Config.saturnSpaceStationID, Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class);
 			saturnSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -112,7 +112,7 @@ public class ExtraPlanets_SpaceStations {
 			uranusSpaceStation.setRelativeSize(0.2667F);
 			uranusSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			uranusSpaceStation.setRelativeOrbitTime(20.0F);
-			uranusSpaceStation.setTierRequired(6);
+			uranusSpaceStation.setTierRequired(ExtraPlanets_Planets.uranus.getTierRequirement());
 			uranusSpaceStation.setDimensionInfo(Config.uranusSpaceStationID, Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class);
 			uranusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -121,7 +121,7 @@ public class ExtraPlanets_SpaceStations {
 			neptuneSpaceStation.setRelativeSize(0.2667F);
 			neptuneSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			neptuneSpaceStation.setRelativeOrbitTime(20.0F);
-			neptuneSpaceStation.setTierRequired(7);
+			neptuneSpaceStation.setTierRequired(ExtraPlanets_Planets.venus.getTierRequirement());
 			neptuneSpaceStation.setDimensionInfo(Config.neptuneSpaceStationID, Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class);
 			neptuneSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -130,7 +130,7 @@ public class ExtraPlanets_SpaceStations {
 			plutoSpaceStation.setRelativeSize(0.2667F);
 			plutoSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			plutoSpaceStation.setRelativeOrbitTime(20.0F);
-			plutoSpaceStation.setTierRequired(8);
+			plutoSpaceStation.setTierRequired(ExtraPlanets_Planets.pluto.getTierRequirement());
 			plutoSpaceStation.setDimensionInfo(Config.plutoSpaceStationID, Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class);
 			plutoSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -139,7 +139,7 @@ public class ExtraPlanets_SpaceStations {
 			erisSpaceStation.setRelativeSize(0.2667F);
 			erisSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			erisSpaceStation.setRelativeOrbitTime(20.0F);
-			erisSpaceStation.setTierRequired(Config.erisRocketTier);
+			erisSpaceStation.setTierRequired(ExtraPlanets_Planets.eris.getTierRequirement());
 			erisSpaceStation.setDimensionInfo(Config.erisSpaceStationID, Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class);
 			erisSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
