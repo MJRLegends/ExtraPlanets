@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.handlers;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 
@@ -81,18 +82,21 @@ public class AchievementEventHandler {
 
 	@SubscribeEvent
 	public void onEntityDealth(LivingDeathEvent event) {
-		if (event.entity instanceof EntityEvolvedMagmaCubeBoss) {
-
-		} else if (event.entity instanceof EntityCreeperBossJupiter) {
-
-		} else if (event.entity instanceof EntityCreeperBossSaturn) {
-
-		} else if (event.entity instanceof EntityEvolvedIceSlimeBoss) {
-
-		} else if (event.entity instanceof EntityCreeperBossNeptune) {
-
-		} else if (event.entity instanceof EntityCreeperBossPluto) {
-
+		if (event.source.getSourceOfDamage() instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
+			if (event.entity instanceof EntityEvolvedMagmaCubeBoss) {
+				player.addStat(ExtraPlanets_Achievements.venusBoss, 1);
+			} else if (event.entity instanceof EntityCreeperBossJupiter) {
+				player.addStat(ExtraPlanets_Achievements.jupiterBoss, 1);
+			} else if (event.entity instanceof EntityCreeperBossSaturn) {
+				player.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
+			} else if (event.entity instanceof EntityEvolvedIceSlimeBoss) {
+				player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
+			} else if (event.entity instanceof EntityCreeperBossNeptune) {
+				player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
+			} else if (event.entity instanceof EntityCreeperBossPluto) {
+				player.addStat(ExtraPlanets_Achievements.plutoBoss, 1);
+			}
 		}
 	}
 
