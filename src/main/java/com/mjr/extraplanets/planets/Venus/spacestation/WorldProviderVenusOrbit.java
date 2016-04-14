@@ -70,11 +70,6 @@ public class WorldProviderVenusOrbit extends WorldProviderOrbit
 		return ChunkProviderVenusOrbit.class;
 	}
 
-	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass()
-	{
-		return null;
-	}
 
 	@Override
 	public boolean isDaytime()

@@ -71,12 +71,6 @@ public class WorldProviderPlutoOrbit extends WorldProviderOrbit
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass()
-	{
-		return null;
-	}
-
-	@Override
 	public boolean isDaytime()
 	{
 		final float a = this.worldObj.getCelestialAngle(0F);
