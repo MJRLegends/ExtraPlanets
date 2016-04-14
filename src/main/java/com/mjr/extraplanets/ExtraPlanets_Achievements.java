@@ -1,15 +1,18 @@
 package com.mjr.extraplanets;
 
-import java.awt.List;
 import java.util.ArrayList;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
+import net.minecraftforge.common.MinecraftForge;
+
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.handlers.AchievementEventHandler;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class ExtraPlanets_Achievements {
+
+	private static ArrayList<Achievement> achievementslist = new ArrayList();
 
 	public static AchievementPage page1;
 
@@ -44,6 +47,13 @@ public class ExtraPlanets_Achievements {
 	public static Achievement craftRocket9;
 
 	public static void init() {
+		initAchievements();
+		initAchievementPage();
+		registerAchievementPage();
+		MinecraftForge.EVENT_BUS.register(new AchievementEventHandler());
+	}
+
+	private static void initAchievements() {
 		// Planet Achievements
 		if (Config.venus)
 			venusPlanet = new Achievement("achievement.venusPlanet", "venusPlanet", 5, 4, ExtraPlanets_Blocks.venusBlocks, (Achievement) null)
@@ -121,11 +131,57 @@ public class ExtraPlanets_Achievements {
 		else
 			craftRocket9 = new Achievement("achievement.craftRocket9", "craftRocket9", 13, 5, ExtraPlanets_Items.tier9Rocket, (Achievement) null)
 					.registerStat();
+	}
 
-		//Setup/Register Achievement Page with Achievements
-		page1 = new AchievementPage("ExtraPlanets", new Achievement[] { venusPlanet, venusBoss, jupiterPlanet, jupiterBoss, saturnPlanet, saturnBoss,
-				uranusPlanet, uranusBoss, neptunePlanet, neptuneBoss, mercuryPlanet, ceresPlanet, plutoPlanet, erisPlanet, craftRocket4, craftRocket5,
-				craftRocket6, craftRocket7, craftRocket8, craftRocket9 });
+	private static void initAchievementPage() {
+		if (venusPlanet != null)
+			achievementslist.add(venusPlanet);
+		if (venusBoss != null)
+			achievementslist.add(venusBoss);
+		if (jupiterPlanet != null)
+			achievementslist.add(jupiterPlanet);
+		if (jupiterBoss != null)
+			achievementslist.add(jupiterBoss);
+		if (saturnPlanet != null)
+			achievementslist.add(saturnPlanet);
+		if (saturnBoss != null)
+			achievementslist.add(saturnBoss);
+		if (uranusPlanet != null)
+			achievementslist.add(uranusPlanet);
+		if (uranusBoss != null)
+			achievementslist.add(uranusBoss);
+		if (neptunePlanet != null)
+			achievementslist.add(neptunePlanet);
+		if (neptuneBoss != null)
+			achievementslist.add(neptuneBoss);
+		if (mercuryPlanet != null)
+			achievementslist.add(mercuryPlanet);
+		if (ceresPlanet != null)
+			achievementslist.add(ceresPlanet);
+		if (plutoPlanet != null)
+			achievementslist.add(plutoPlanet);
+		if (erisPlanet != null)
+			achievementslist.add(erisPlanet);
+		if (craftRocket4 != null)
+			achievementslist.add(craftRocket4);
+		if (craftRocket5 != null)
+			achievementslist.add(craftRocket5);
+		if (craftRocket6 != null)
+			achievementslist.add(craftRocket6);
+		if (craftRocket7 != null)
+			achievementslist.add(craftRocket7);
+		if (craftRocket8 != null)
+			achievementslist.add(craftRocket8);
+		if (craftRocket9 != null)
+			achievementslist.add(craftRocket9);
+		if (achievementslist.size() > 0) {
+			// Setup/Register Achievement Page with Achievements
+			page1 = new AchievementPage("ExtraPlanets", (Achievement[]) achievementslist.toArray(new Achievement[achievementslist.size()]));
+		}
+	}
+	private static void registerAchievementPage() {
+
 		AchievementPage.registerAchievementPage(page1);
+		achievementslist.clear();
 	}
 }
