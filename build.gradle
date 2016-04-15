@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0-Pre 3.4"
+version = "1.0-Pre 3.5"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -30,7 +30,9 @@ dependencies {
 	compile files (
 		"Galacticraft Development Files/GalacticraftCore-Dev-1.7-3.0.12.445.jar",
 		"Galacticraft Development Files/Galacticraft-Planets-Dev-1.7-3.0.12.445.jar",
-		"Galacticraft Development Files/MicdoodleCore-Dev-1.7-3.0.12.445.jar"
+		"Galacticraft Development Files/MicdoodleCore-Dev-1.7-3.0.12.445.jar",
+		"NotEnoughItems-1.7.10-1.0.5.120-dev.jar",
+		"CodeChickenLib-1.7.10-1.1.3.140-dev.jar"
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
