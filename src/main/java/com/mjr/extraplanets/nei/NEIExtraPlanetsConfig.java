@@ -39,6 +39,12 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.registerUsageHandler(new RocketT5RecipeHandler());
 			API.registerRecipeHandler(new RocketT6RecipeHandler());
 			API.registerUsageHandler(new RocketT6RecipeHandler());
+			API.registerRecipeHandler(new RocketT7RecipeHandler());
+			API.registerUsageHandler(new RocketT7RecipeHandler());
+			API.registerRecipeHandler(new RocketT8RecipeHandler());
+			API.registerUsageHandler(new RocketT8RecipeHandler());
+			API.registerRecipeHandler(new RocketT9RecipeHandler());
+			API.registerUsageHandler(new RocketT9RecipeHandler());
 		}
 	}
 
