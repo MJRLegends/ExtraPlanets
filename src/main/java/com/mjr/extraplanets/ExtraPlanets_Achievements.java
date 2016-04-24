@@ -164,7 +164,7 @@ public class ExtraPlanets_Achievements {
 			achievementslist.add(craftRocket9);
 		if (achievementslist.size() > 0) {
 			// Setup/Register Achievement Page with Achievements
-			page1 = new AchievementPage("ExtraPlanets", (Achievement[]) achievementslist.toArray(new Achievement[achievementslist.size()]));
+			page1 = new AchievementPage("ExtraPlanets", achievementslist.toArray(new Achievement[achievementslist.size()]));
 		}
 	}
 

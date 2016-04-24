@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Io.worldgen.village.MapGenVillageIo;
 
 public class ChunkProviderIo extends ChunkProviderSpace {
 
-	private final BiomeDecoratorIo greenPixelBiomeDecorator = new BiomeDecoratorIo();
+	private final BiomeDecoratorIo biomeDecorator = new BiomeDecoratorIo();
 	
 	private final MapGenCaveIo caveGenerator = new MapGenCaveIo();
 
@@ -43,7 +43,7 @@ public class ChunkProviderIo extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

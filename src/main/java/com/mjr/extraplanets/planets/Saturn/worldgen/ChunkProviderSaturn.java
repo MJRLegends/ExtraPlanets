@@ -36,7 +36,7 @@ import com.mjr.extraplanets.planets.Saturn.worldgen.village.MapGenVillageSaturn;
 
 public class ChunkProviderSaturn extends ChunkProviderSpace {
 
-	private final BiomeDecoratorSaturn greenPixelBiomeDecorator = new BiomeDecoratorSaturn();
+	private final BiomeDecoratorSaturn BiomeDecorator = new BiomeDecoratorSaturn();
 
 	private final MapGenCaveSaturn caveGenerator = new MapGenCaveSaturn();
 
@@ -72,7 +72,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.BiomeDecorator;
 	}
 
 	@Override

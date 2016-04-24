@@ -30,7 +30,7 @@ import com.mjr.extraplanets.moons.Phobos.worldgen.village.MapGenVillagePhobos;
 
 public class ChunkProviderPhobos extends ChunkProviderSpace {
 
-	private final BiomeDecoratorPhobos greenPixelBiomeDecorator = new BiomeDecoratorPhobos();
+	private final BiomeDecoratorPhobos biomeDecorator = new BiomeDecoratorPhobos();
 	
 	private final MapGenCavePhobos caveGenerator = new MapGenCavePhobos();
 
@@ -44,7 +44,7 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

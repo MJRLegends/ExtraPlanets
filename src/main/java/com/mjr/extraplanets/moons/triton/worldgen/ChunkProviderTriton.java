@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Triton.worldgen.village.MapGenVillageTriton;
 
 public class ChunkProviderTriton extends ChunkProviderSpace {
 
-	private final BiomeDecoratorTriton greenPixelBiomeDecorator = new BiomeDecoratorTriton();
+	private final BiomeDecoratorTriton biomeDecorator = new BiomeDecoratorTriton();
 	
 	private final MapGenCaveTriton caveGenerator = new MapGenCaveTriton();
 
@@ -43,7 +43,7 @@ public class ChunkProviderTriton extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

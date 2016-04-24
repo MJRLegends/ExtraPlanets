@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Titan.worldgen.village.MapGenVillageTitan;
 
 public class ChunkProviderTitan extends ChunkProviderSpace {
 
-	private final BiomeDecoratorTitan greenPixelBiomeDecorator = new BiomeDecoratorTitan();
+	private final BiomeDecoratorTitan biomeDecorator = new BiomeDecoratorTitan();
 	
 	private final MapGenCaveTitan caveGenerator = new MapGenCaveTitan();
 
@@ -43,7 +43,7 @@ public class ChunkProviderTitan extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

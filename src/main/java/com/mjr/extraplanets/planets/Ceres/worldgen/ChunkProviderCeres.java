@@ -24,7 +24,7 @@ import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.MapGenVillageCeres;
 
 public class ChunkProviderCeres extends ChunkProviderSpace {
-	private final BiomeDecoratorCeres BiomeDecorator = new BiomeDecoratorCeres();
+	private final BiomeDecoratorCeres biomeDecorator = new BiomeDecoratorCeres();
 	public Random randomGenerator;
 
 	private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
@@ -41,7 +41,7 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.BiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

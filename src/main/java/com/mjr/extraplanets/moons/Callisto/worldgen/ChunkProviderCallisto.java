@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Callisto.worldgen.village.MapGenVillageCallist
 
 public class ChunkProviderCallisto extends ChunkProviderSpace {
 
-	private final BiomeDecoratorCallisto greenPixelBiomeDecorator = new BiomeDecoratorCallisto();
+	private final BiomeDecoratorCallisto biomeDecorator = new BiomeDecoratorCallisto();
 	
 	private final MapGenCaveCallisto caveGenerator = new MapGenCaveCallisto();
 
@@ -43,7 +43,7 @@ public class ChunkProviderCallisto extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

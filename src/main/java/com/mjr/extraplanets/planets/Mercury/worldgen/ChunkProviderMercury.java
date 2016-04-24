@@ -26,7 +26,7 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.village.MapGenVillageMercur
 
 public class ChunkProviderMercury extends ChunkProviderSpace {
 
-	private final BiomeDecoratorMercury greenPixelBiomeDecorator = new BiomeDecoratorMercury();
+	private final BiomeDecoratorMercury biomeDecorator = new BiomeDecoratorMercury();
 
 	private final MapGenCaveMercury caveGenerator = new MapGenCaveMercury();
 	
@@ -42,7 +42,7 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

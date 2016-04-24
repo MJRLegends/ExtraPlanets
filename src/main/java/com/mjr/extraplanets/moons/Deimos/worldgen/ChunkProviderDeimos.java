@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Deimos.worldgen.village.MapGenVillageDeimos;
 
 public class ChunkProviderDeimos extends ChunkProviderSpace {
 
-	private final BiomeDecoratorDeimos greenPixelBiomeDecorator = new BiomeDecoratorDeimos();
+	private final BiomeDecoratorDeimos biomeDecorator = new BiomeDecoratorDeimos();
 	
 	private final MapGenCaveDeimos caveGenerator = new MapGenCaveDeimos();
 
@@ -43,7 +43,7 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

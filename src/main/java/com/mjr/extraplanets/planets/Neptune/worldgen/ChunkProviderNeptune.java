@@ -35,7 +35,7 @@ import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomTreasureNeptune
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.MapGenVillageNeptune;
 
 public class ChunkProviderNeptune extends ChunkProviderSpace {
-	private final BiomeDecoratorNeptune BiomeDecorator = new BiomeDecoratorNeptune();
+	private final BiomeDecoratorNeptune biomeDecorator = new BiomeDecoratorNeptune();
 	public Random randomGenerator;
 
 	private final MapGenCaveNeptune caveGenerator = new MapGenCaveNeptune();
@@ -71,7 +71,7 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.BiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

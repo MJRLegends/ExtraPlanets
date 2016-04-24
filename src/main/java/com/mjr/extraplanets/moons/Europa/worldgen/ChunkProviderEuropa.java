@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Europa.worldgen.village.MapGenVillageEuropa;
 
 public class ChunkProviderEuropa extends ChunkProviderSpace {
 
-	private final BiomeDecoratorEuropa greenPixelBiomeDecorator = new BiomeDecoratorEuropa();
+	private final BiomeDecoratorEuropa biomeDecorator = new BiomeDecoratorEuropa();
 	
 	private final MapGenCaveEuropa caveGenerator = new MapGenCaveEuropa();
 
@@ -43,7 +43,7 @@ public class ChunkProviderEuropa extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

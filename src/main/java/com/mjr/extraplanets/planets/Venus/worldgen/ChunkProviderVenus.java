@@ -32,7 +32,7 @@ import com.mjr.extraplanets.planets.Venus.worldgen.village.MapGenVillageVenus;
 
 public class ChunkProviderVenus extends ChunkProviderSpace {
 
-	private final BiomeDecoratorVenus greenPixelBiomeDecorator = new BiomeDecoratorVenus();
+	private final BiomeDecoratorVenus biomeDecorator = new BiomeDecoratorVenus();
 
 	private final MapGenCaveVenus caveGenerator = new MapGenCaveVenus();
 
@@ -68,7 +68,7 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

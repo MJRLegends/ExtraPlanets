@@ -31,7 +31,7 @@ import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomTreasurePluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.MapGenVillagePluto;
 
 public class ChunkProviderPluto extends ChunkProviderSpace {
-	private final BiomeDecoratorPluto BiomeDecorator = new BiomeDecoratorPluto();
+	private final BiomeDecoratorPluto biomeDecorator = new BiomeDecoratorPluto();
 	public Random randomGenerator;
 
 	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
@@ -62,7 +62,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.BiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

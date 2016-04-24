@@ -37,7 +37,7 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.village.MapGenVillageJupite
 
 public class ChunkProviderJupiter extends ChunkProviderSpace {
 
-	private final BiomeDecoratorJupiter greenPixelBiomeDecorator = new BiomeDecoratorJupiter();
+	private final BiomeDecoratorJupiter biomeDecorator = new BiomeDecoratorJupiter();
 
 	private final MapGenCaveJupiter caveGenerator = new MapGenCaveJupiter();
 
@@ -73,7 +73,7 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Ganymede.worldgen.village.MapGenVillageGanymed
 
 public class ChunkProviderGanymede extends ChunkProviderSpace {
 
-	private final BiomeDecoratorGanymede greenPixelBiomeDecorator = new BiomeDecoratorGanymede();
+	private final BiomeDecoratorGanymede biomeDecorator = new BiomeDecoratorGanymede();
 	
 	private final MapGenCaveGanymede caveGenerator = new MapGenCaveGanymede();
 
@@ -43,7 +43,7 @@ public class ChunkProviderGanymede extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

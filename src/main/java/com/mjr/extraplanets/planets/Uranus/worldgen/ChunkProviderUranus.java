@@ -35,7 +35,7 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.village.MapGenVillageUranus;
 
 public class ChunkProviderUranus extends ChunkProviderSpace {
 
-	private final BiomeDecoratorUranus greenPixelBiomeDecorator = new BiomeDecoratorUranus();
+	private final BiomeDecoratorUranus biomeDecorator = new BiomeDecoratorUranus();
 
 	private final MapGenCaveUranus caveGenerator = new MapGenCaveUranus();
 	
@@ -69,7 +69,7 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override

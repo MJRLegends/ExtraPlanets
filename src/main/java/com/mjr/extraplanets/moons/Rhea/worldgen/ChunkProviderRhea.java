@@ -29,7 +29,7 @@ import com.mjr.extraplanets.moons.Rhea.worldgen.village.MapGenVillageRhea;
 
 public class ChunkProviderRhea extends ChunkProviderSpace {
 
-	private final BiomeDecoratorRhea greenPixelBiomeDecorator = new BiomeDecoratorRhea();
+	private final BiomeDecoratorRhea biomeDecorator = new BiomeDecoratorRhea();
 	
 	private final MapGenCaveRhea caveGenerator = new MapGenCaveRhea();
 
@@ -43,7 +43,7 @@ public class ChunkProviderRhea extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.greenPixelBiomeDecorator;
+		return this.biomeDecorator;
 	}
 
 	@Override
