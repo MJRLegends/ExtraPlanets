@@ -61,6 +61,14 @@ public class ExtraPlanets_MicroBlocks {
 				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 0), "tile.eris.surface");
 				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 1), "tile.eris.subSurface");
 				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 2), "tile.eris.stone");
+				
+				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.veunsDungeonBrick, 0), "tile.veunsDungeonBrick");
+				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterDungeonBrick, 0), "tile.jupiterDungeonBrick");
+				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.saturnDungeonBrick, 0), "tile.saturnDungeonBrick");
+				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.uranusBlocks, 0), "tile.uranusBlocks");
+				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.neptuneDungeonBrick, 0), "tile.neptuneDungeonBrick");
+				registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.plutoDungeonBrick, 0), "tile.plutoDungeonBrick");
+
 			}
 		} catch (Exception e) {}
 	}
