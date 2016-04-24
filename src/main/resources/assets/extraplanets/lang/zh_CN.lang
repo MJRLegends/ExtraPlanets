@@ -201,8 +201,8 @@ tile.phobosGravel.name=火卫一沙砾
 tile.tritonGravel.name=海卫沙砾
 tile.callistoGravel.name=木卫四沙砾
 tile.ganymedeGravel.name=木卫三沙砾
-tile.rheaGravel.name=Rhea Gravel
-tile.titanGravel.name=Titan Gravel
+tile.rheaGravel.name=土卫五沙砾
+tile.titanGravel.name=土卫一沙砾
 
 tile.venusGravel.name=金星沙砾
 tile.jupiterGravel.name=木星沙砾
@@ -520,33 +520,33 @@ achievement.neptunePlanet.desc=乘坐7阶火箭到海王星
 achievement.plutoPlanet.desc=乘坐8阶火箭到冥王星
 achievement.erisPlanet.desc=乘坐8阶火箭到阋神星
 
-achievement.venusBoss=Defeated Tier 4 Boss!
-achievement.jupiterBoss=Defeated Tier 5 Boss!
-achievement.saturnBoss=Defeated Tier 6 Boss!
-achievement.uranusBoss=Defeated Tier 7 Boss!
-achievement.neptuneBoss=Defeated Tier 8 Boss!
-achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.venusBoss=击败金星地牢BOSS！
+achievement.jupiterBoss=击败木星地牢BOSS！
+achievement.saturnBoss=击败土星地牢BOSS！
+achievement.uranusBoss=击败天王星地牢BOSS！
+achievement.neptuneBoss=击败海王星地牢BOSS！
+achievement.plutoBoss=击败冥王星地牢BOSS！
 
 achievement.venusBoss.desc=击杀金星地牢BOSS并开启宝箱！
 achievement.jupiterBoss.desc=击杀木星地牢BOSS并开启宝箱！
 achievement.saturnBoss.desc=击杀土星地牢BOSS并开启宝箱！
 achievement.uranusBoss.desc=击杀天王星地牢BOSS并开启宝箱！
 achievement.neptuneBoss.desc=击杀海王星地牢BOSS并开启宝箱！
-achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+achievement.plutoBoss.desc=击杀冥王星地牢BOSS并开启宝箱！
 
-achievement.craftRocket4=Tier 4 Rocket!
-achievement.craftRocket5=Tier 5 Rocket!
-achievement.craftRocket7=Tier 6 Rocket!
-achievement.craftRocket8=Tier 7 Rocket!
-achievement.craftRocket9=Tier 8 Rocket!
-achievement.craftRocket9=Tier 9 Rocket!
+achievement.craftRocket4=4阶火箭！
+achievement.craftRocket5=5阶火箭！
+achievement.craftRocket7=6阶火箭！
+achievement.craftRocket8=7阶火箭！
+achievement.craftRocket9=8阶火箭！
+achievement.craftRocket9=9阶火箭！
 
-achievement.craftRocket4.desc=Craft Tier 4 Rocket
-achievement.craftRocket5.desc=Craft Tier 5 Rocket
-achievement.craftRocket6.desc=Craft Tier 6 Rocket
-achievement.craftRocket7.desc=Craft Tier 7 Rocket
-achievement.craftRocket8.desc=Craft Tier 8 Rocket
-achievement.craftRocket9.desc=Craft Tier 9 Rocket
+achievement.craftRocket4.desc=制作4阶火箭
+achievement.craftRocket5.desc=制作5阶火箭
+achievement.craftRocket6.desc=制作6阶火箭
+achievement.craftRocket7.desc=制作7阶火箭
+achievement.craftRocket8.desc=制作8阶火箭
+achievement.craftRocket9.desc=制作9阶火箭
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=萤石水
