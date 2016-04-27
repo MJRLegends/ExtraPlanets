@@ -61,6 +61,11 @@ public class ItemBlockNeptune extends ItemBlock
 			name = "oreZinc";
 			break;
 		}
+		case 7:
+		{
+			name = "zincBlock";
+			break;
+		}
 		default:
 			name = "null";
 		}

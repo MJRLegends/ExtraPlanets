@@ -61,6 +61,11 @@ public class ItemBlockVenus extends ItemBlock
 			name = "oreCarbon";
 			break;
 		}
+		case 7:
+		{
+			name = "carbonBlock";
+			break;
+		}
 		default:
 			name = "null";
 		}

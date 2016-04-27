@@ -46,6 +46,11 @@ public class ItemBlockUranus extends ItemBlock
 			name = "oreCrystal";
 			break;
 		}
+		case 4:
+		{
+			name = "crystalBlock";
+			break;
+		}
 		default:
 			name = "null";
 		}

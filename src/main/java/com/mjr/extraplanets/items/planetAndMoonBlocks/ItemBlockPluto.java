@@ -61,6 +61,11 @@ public class ItemBlockPluto extends ItemBlock
 			name = "oreTungsten";
 			break;
 		}
+		case 7:
+		{
+			name = "tungstenBlock";
+			break;
+		}
 		default:
 			name = "null";
 		}
