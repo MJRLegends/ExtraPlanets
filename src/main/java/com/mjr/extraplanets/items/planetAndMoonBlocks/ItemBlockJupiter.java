@@ -68,7 +68,7 @@ public class ItemBlockJupiter extends ItemBlock
 		}
 		case 8:
 		{
-			name = "nickelBlock";
+			name = "palladiumBlock";
 			break;
 		}
 		case 9:
