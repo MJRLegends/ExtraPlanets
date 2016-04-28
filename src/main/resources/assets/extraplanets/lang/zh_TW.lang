@@ -63,6 +63,7 @@ tile.mercury.oreIron.name=水星鐵礦石
 tile.mercury.oreTin.name=水星錫礦石
 tile.mercury.oreCopper.name=水星銅礦石
 tile.mercury.oreMercury.name=水星汞礦石
+tile.mercury.stoneBricks.name=Mercury Stone Bricks
 
 tile.venus.surface.name=金星地表岩石
 tile.venus.subSurface.name=金星地底岩石
@@ -71,6 +72,7 @@ tile.venus.oreIron.name=金星鐵礦石
 tile.venus.oreTin.name=金星錫礦石
 tile.venus.oreCopper.name=金星銅礦石
 tile.venus.oreCarbon.name=金星碳礦石
+tile.venus.stoneBricks.name=Venus Stone Bricks
 
 tile.ceres.surface.name=穀神星地表岩石
 tile.ceres.subSurface.name=穀神星地底岩石
@@ -79,6 +81,7 @@ tile.ceres.oreIron.name=谷神星鐵礦石
 tile.ceres.oreTin.name=谷神星錫礦石
 tile.ceres.oreCopper.name=谷神星銅礦石
 tile.ceres.oreUranium.name=穀神星鈾礦石
+tile.ceres.stoneBricks.name=Ceres Stone Bricks
 
 tile.jupiter.surface.name=木星地表方塊
 tile.jupiter.subSurface.name=木星地底方塊
@@ -88,6 +91,7 @@ tile.jupiter.oreTin.name=木星錫礦石
 tile.jupiter.oreCopper.name=木星銅礦石
 tile.jupiter.orePalladium.name=木星鈀礦石
 tile.jupiter.oreNickel.name=木星鎳礦石
+tile.jupiter.stoneBricks.name=Jupiter Stone Bricks
 
 tile.saturn.surface.name=土星地表方塊
 tile.saturn.subSurface.name=土星地底方塊
@@ -96,11 +100,13 @@ tile.saturn.oreIron.name=土星鐵礦石
 tile.saturn.oreTin.name=土星錫礦石
 tile.saturn.oreCopper.name=土星銅礦石
 tile.saturn.oreMagnesium.name=土星鎂礦石
+tile.saturn.stoneBricks.name=Saturn Stone Bricks
 
 tile.uranus.surface.name=天王星地表方塊
 tile.uranus.subSurface.name=天王星地底方塊
 tile.uranus.stone.name=天王星方塊
 tile.uranus.oreCrystal.name=天王星水晶石
+tile.uranus.stoneBricks.name=Uranus Stone Bricks
 
 tile.neptune.surface.name=海王星地表方塊
 tile.neptune.subSurface.name=海王星地底方塊
@@ -109,6 +115,7 @@ tile.neptune.oreIron.name=海王星鐵礦石
 tile.neptune.oreTin.name=海王星錫礦石
 tile.neptune.oreCopper.name=海王星銅礦石
 tile.neptune.oreZinc.name=海王星鋅礦石
+tile.neptune.stoneBricks.name=Neptune Stone Bricks
 
 tile.pluto.surface.name=冥王星地表岩石
 tile.pluto.subSurface.name=冥王星地底岩石
@@ -117,6 +124,7 @@ tile.pluto.oreIron.name=冥王星鐵礦石
 tile.pluto.oreTin.name=冥王星錫礦石
 tile.pluto.oreCopper.name=冥王星銅礦石
 tile.pluto.oreTungsten.name=冥王星鎢礦石
+tile.pluto.stoneBricks.name=Pluto Stone Bricks
 
 tile.eris.surface.name=鬩神星地表岩石
 tile.eris.subSurface.name=鬩神星地底岩石
@@ -124,6 +132,7 @@ tile.eris.stone.name=鬩神星石頭
 tile.eris.oreIron.name=鬩神星鐵礦石
 tile.eris.oreTin.name=鬩神星錫礦石
 tile.eris.oreCopper.name=鬩神星銅礦石
+tile.eris.stoneBricks.name=Eris Stone Bricks
 
 #Moon Blocks
 tile.callisto.surface.name=木衛四地表岩石
@@ -393,6 +402,21 @@ item.crystalAxe.name=水晶斧
 item.crystalSword.name=水晶劍
 item.crystalHoe.name=水晶鋤
 item.crystalShovel.name=水晶鏟
+item.redGemPickaxe.name=Red Gem Pickaxe
+item.redGemAxe.name=Red Gem Axe
+item.redGemSword.name=Red Gem Sword
+item.redGemHoe.name=Red Gem Hoe
+item.redGemShovel.name=Red Gem Shovel
+item.blueGemPickaxe.name=Blue Gem Pickaxe
+item.blueGemAxe.name=Blue Gem Axe
+item.blueGemSword.name=Blue Gem Sword
+item.blueGemHoe.name=Blue Gem Hoe
+item.blueGemShovel.name=Blue Gem Shovel
+item.whiteGemPickaxe.name=White Gem Pickaxe
+item.whiteGemAxe.name=White Gem Axe
+item.whiteGemSword.name=White Gem Sword
+item.whiteGemHoe.name=White Gem Hoe
+item.whiteGemShovel.name=White Gem Shovel
 
 #Schematics
 item.schematicTier4.name=NASA工作臺圖紙
@@ -438,6 +462,18 @@ item.crystalHelmet.name=水晶盔
 item.crystalChest.name=水晶鎧
 item.crystalLegings.name=水晶護腿
 item.crystalBoots.name=水晶靴
+item.redGemHelmet.name=Red Gem Helmet
+item.redGemChest.name=Red Gem Chestplate
+item.redGemLegings.name=Red Gem Leggings
+item.redGemBoots.name=Red Gem Boots
+item.blueGemHelmet.name=Blue Gem Helmet
+item.blueGemChest.name=Blue Gem Chestplate
+item.blueGemLegings.name=Blue Gem Leggings
+item.blueGemBoots.name=Blue Gem Boots
+item.whiteGemHelmet.name=White Gem Helmet
+item.whiteGemChest.name=White Gem Chestplate
+item.whiteGemLegings.name=White Gem Leggings
+item.whiteGemBoots.name=White Gem Boots
 
 item.tier2ThermalHelm.name=2階熱力充能頭盔
 item.tier2ThermalChestplate.name=2階熱力充能胸甲
