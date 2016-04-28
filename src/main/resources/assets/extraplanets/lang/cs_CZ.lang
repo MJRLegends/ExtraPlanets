@@ -378,12 +378,12 @@ item.tier8.blueGem.name=Blue Gem
 item.tier7.whiteGem.name=White Gem
 
 #Wafers
-item.wafer.diamond=Diamond Wafer
-item.wafer.carbon=Carbon Wafer
-item.wafer.titanium=Titanium Wafer
-item.wafer.redGem=Red Gem Wafer
-item.wafer.blueGem=Blue Gem Wafer
-item.wafer.whiteGem=White Gem Wafer
+item.wafer.diamond.name=Diamond Wafer
+item.wafer.carbon.name=Carbon Wafer
+item.wafer.titanium.name=Titanium Wafer
+item.wafer.redGem.name=Red Gem Wafer
+item.wafer.blueGem.name=Blue Gem Wafer
+item.wafer.whiteGem.name=White Gem Wafer
 
 #Buckets
 item.bucket_glowstone.name=Kbelík světlitu
