@@ -29,6 +29,10 @@ public class Config {
 	public static boolean palladiumItems;
 	public static boolean magnesiumItems;
 	public static boolean crystalItems;
+	public static boolean tungstenItems;
+	public static boolean redGemItems;
+	public static boolean blueGemItems;
+	public static boolean whiteGemItems;
 	
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
@@ -196,7 +200,11 @@ public class Config {
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
 		magnesiumItems = config.get(items, "Magnesium Tools & Armor", true).getBoolean(true);
 		crystalItems = config.get(items, "Crystal Tools & Armor", true).getBoolean(true);
-
+		tungstenItems = config.get(items, "Tungsten Tools & Armor", true).getBoolean(true);
+		redGemItems = config.get(items, "Red Gem Tools & Armor", true).getBoolean(true);
+		blueGemItems = config.get(items, "Blue Gem Tools & Armor", true).getBoolean(true);
+		whiteGemItems = config.get(items, "White Gem Tools & Armor", true).getBoolean(true);
+		
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
 		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);

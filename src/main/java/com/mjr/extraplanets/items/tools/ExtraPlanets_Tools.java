@@ -13,6 +13,10 @@ public class ExtraPlanets_Tools {
 	private static ToolMaterial palladiumMaterial = EnumHelper.addToolMaterial("Palladium Material", 4, 60, 6.0F, 8.0F, 30);
 	private static ToolMaterial magnesiumMaterial = EnumHelper.addToolMaterial("Magnesium Material", 5, 80, 8.0F, 10.0F, 30);
 	private static ToolMaterial crystalMaterial = EnumHelper.addToolMaterial("Crystal Material", 6, 100, 10.0F, 12.0F, 30);
+	private static ToolMaterial tungstenMaterial = EnumHelper.addToolMaterial("Tungsten Material", 7, 120, 10.0F, 12.0F, 30);
+	private static ToolMaterial redGemMaterial = EnumHelper.addToolMaterial("Red Gem Material", 4, 60, 6.0F, 8.0F, 30);
+	private static ToolMaterial blueGemMaterial = EnumHelper.addToolMaterial("Blue Gem Material", 5, 80, 8.0F, 10.0F, 30);
+	private static ToolMaterial whiteGemMaterial = EnumHelper.addToolMaterial("White Gem Material", 6, 100, 10.0F, 12.0F, 30);
 
 	public static Item carbonPickaxe;
 	public static Item carbonAxe;
@@ -37,7 +41,31 @@ public class ExtraPlanets_Tools {
 	public static Item crystalHoe;
 	public static Item crystalShovel;
 	public static Item crystalSword;
+	
+	public static Item tungstenPickaxe;
+	public static Item tungstenAxe;
+	public static Item tungstenHoe;
+	public static Item tungstenShovel;
+	public static Item tungstenSword;
+	
+	public static Item redGemPickaxe;
+	public static Item redGemAxe;
+	public static Item redGemHoe;
+	public static Item redGemShovel;
+	public static Item redGemSword;
 
+	public static Item blueGemPickaxe;
+	public static Item blueGemAxe;
+	public static Item blueGemHoe;
+	public static Item blueGemShovel;
+	public static Item blueGemSword;
+	
+	public static Item whiteGemPickaxe;
+	public static Item whiteGemAxe;
+	public static Item whiteGemHoe;
+	public static Item whiteGemShovel;
+	public static Item whiteGemSword;
+	
 	public static void init() {
 		initializeTools();
 		registerTools();
@@ -67,6 +95,30 @@ public class ExtraPlanets_Tools {
 		crystalHoe = new BasicHoe(crystalMaterial, "crystalHoe");
 		crystalShovel = new BasicShovel(crystalMaterial, "crystalShovel");
 		crystalSword = new BasicSword(crystalMaterial, "crystalSword");
+		
+		tungstenPickaxe = new BasicPickaxe(tungstenMaterial, "tungstenPickaxe");
+		tungstenAxe = new BasicAxe(tungstenMaterial, "tungstenAxe");
+		tungstenHoe = new BasicHoe(tungstenMaterial, "tungstenHoe");
+		tungstenShovel = new BasicShovel(tungstenMaterial, "tungstenShovel");
+		tungstenSword = new BasicSword(tungstenMaterial, "tungstenSword");
+		
+		redGemPickaxe = new BasicPickaxe(redGemMaterial, "redGemPickaxe");
+		redGemAxe = new BasicAxe(redGemMaterial, "redGemAxe");
+		redGemHoe = new BasicHoe(redGemMaterial, "redGemHoe");
+		redGemShovel = new BasicShovel(redGemMaterial, "redGemShovel");
+		redGemSword = new BasicSword(redGemMaterial, "redGemSword");
+		
+		blueGemPickaxe = new BasicPickaxe(blueGemMaterial, "blueGemPickaxe");
+		blueGemAxe = new BasicAxe(blueGemMaterial, "blueGemAxe");
+		blueGemHoe = new BasicHoe(blueGemMaterial, "blueGemHoe");
+		blueGemShovel = new BasicShovel(blueGemMaterial, "blueGemShovel");
+		blueGemSword = new BasicSword(blueGemMaterial, "blueGemSword");
+		
+		whiteGemPickaxe = new BasicPickaxe(whiteGemMaterial, "whiteGemPickaxe");
+		whiteGemAxe = new BasicAxe(whiteGemMaterial, "whiteGemAxe");
+		whiteGemHoe = new BasicHoe(whiteGemMaterial, "whiteGemHoe");
+		whiteGemShovel = new BasicShovel(whiteGemMaterial, "whiteGemShovel");
+		whiteGemSword = new BasicSword(whiteGemMaterial, "whiteGemSword");
 	}
 
 	private static void registerTools() {
@@ -97,6 +149,34 @@ public class ExtraPlanets_Tools {
 			GameRegistry.registerItem(crystalHoe, "crystalHoe");
 			GameRegistry.registerItem(crystalShovel, "crystalShovel");
 			GameRegistry.registerItem(crystalSword, "crystalSword");
+		}
+		if (Config.tungstenItems) {
+			GameRegistry.registerItem(tungstenPickaxe, "tungstenPickaxe");
+			GameRegistry.registerItem(tungstenAxe, "tungstenAxe");
+			GameRegistry.registerItem(tungstenHoe, "tungstenHoe");
+			GameRegistry.registerItem(tungstenShovel, "tungstenShovel");
+			GameRegistry.registerItem(tungstenSword, "tungstenSword");
+		}
+		if (Config.redGemItems) {
+			GameRegistry.registerItem(redGemPickaxe, "redGemPickaxe");
+			GameRegistry.registerItem(redGemAxe, "redGemAxe");
+			GameRegistry.registerItem(redGemHoe, "redGemHoe");
+			GameRegistry.registerItem(redGemShovel, "redGemShovel");
+			GameRegistry.registerItem(redGemSword, "redGemSword");
+		}
+		if (Config.blueGemItems) {
+			GameRegistry.registerItem(blueGemPickaxe, "blueGemPickaxe");
+			GameRegistry.registerItem(blueGemAxe, "blueGemAxe");
+			GameRegistry.registerItem(blueGemHoe, "blueGemHoe");
+			GameRegistry.registerItem(blueGemShovel, "blueGemShovel");
+			GameRegistry.registerItem(blueGemSword, "blueGemSword");
+		}
+		if (Config.whiteGemItems) {
+			GameRegistry.registerItem(whiteGemPickaxe, "whiteGemPickaxe");
+			GameRegistry.registerItem(whiteGemAxe, "whiteGemAxe");
+			GameRegistry.registerItem(whiteGemHoe, "whiteGemHoe");
+			GameRegistry.registerItem(whiteGemShovel, "whiteGemShovel");
+			GameRegistry.registerItem(whiteGemSword, "whiteGemSword");
 		}
 	}
 }
