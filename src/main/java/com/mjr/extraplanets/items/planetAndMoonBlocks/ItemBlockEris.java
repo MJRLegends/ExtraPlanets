@@ -56,6 +56,11 @@ public class ItemBlockEris extends ItemBlock
 			name = "oreCopper";
 			break;
 		}
+		case 6:
+		{
+			name = "stoneBricks";
+			break;
+		}
 		default:
 			name = "null";
 		}

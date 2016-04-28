@@ -3,6 +3,7 @@ package com.mjr.extraplanets.recipes;
 import java.util.HashMap;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.recipe.CircuitFabricatorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
 import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
@@ -435,9 +436,9 @@ public class ExtraPlanets_Recipes {
         	ItemStack silicon;
         	if (j == 0) silicon = new ItemStack(GCItems.basicItem, 1, 2);
         	else silicon = OreDictionary.getOres("itemSilicon").get(j - 1); 
-	        //CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), new ItemStack[] { new ItemStack(Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_lamp) });
-	        //CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.powered_comparator) });
-	        //CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.tripwire_hook) });
+	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), new ItemStack[] { new ItemStack(Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_lamp) });
+//	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.powered_comparator) });
+//	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.tripwire_hook) });
         }
 	}
 	

@@ -252,7 +252,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
 		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
 
-		//GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
+		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {
