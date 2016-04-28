@@ -63,6 +63,7 @@ tile.mercury.OreTin.name=Cínová ruda z Merkuru
 tile.mercury.OreCopper.name=Měděná ruda z Merkuru
 tile.mercury.OreMercury.name=Měděná ruda z Merkuru
 tile.mercury.stoneBricks.name=Mercury Stone Bricks
+tile.mercury.mercuryBlock.name=Block of Mercury
 
 tile.venus.surface.name=Povrchový kámen z Venuše
 tile.venus.subSurface.name=Podpovrchový kámen z Venuše
@@ -72,6 +73,7 @@ tile.venus.OreTin.name=Cínová ruda z Venuše
 tile.venus.OreCopper.name=Měděná ruda z Venuše
 tile.venus.OreCarbon.name=Karbonová Ruda
 tile.venus.stoneBricks.name=Venus Stone Bricks
+tile.venus.carbonBlock.name=Block of Carbon
 
 tile.ceres.surface.name=Povrchový kámen z Ceresu
 tile.ceres.subSurface.name=Podpovrchový kámen z Ceresu
@@ -91,6 +93,7 @@ tile.jupiter.OreCopper.name=Měděná ruda z Jupiteru
 tile.jupiter.OrePalladium.name=Palladiová Ruda
 tile.jupiter.OreNickel.name=Niklová Ruda
 tile.jupiter.stoneBricks.name=Juptier Stone Bricks
+tile.jupiter.palladiumBlock.name=Block of Palladium
 
 tile.saturn.surface.name=Povrchový kámen ze Saturnu
 tile.saturn.subSurface.name=Podpovrchový kámen ze Saturnu
@@ -100,12 +103,14 @@ tile.saturn.OreTin.name=Cínová ruda ze Saturnu
 tile.saturn.OreCopper.name=Měděná ruda ze Saturnu
 tile.saturn.OreMagnesium.name=Magnesiová Ruda
 tile.saturn.stoneBricks.name=Saturn Stone Bricks
+tile.saturn.magnesiumBlock.name=Block of Magnesium
 
 tile.uranus.surface.name=Povrchový kámen z Uranu
 tile.uranus.subSurface.name=Podpovrchový kámen z Uranu
 tile.uranus.stone.name=Kámen z Uranu
 tile.uranus.OreCrystal.name=Krystalová Ruda
 tile.uranus.stoneBricks.name=Uranus Stone Bricks
+tile.uranus.crystalBlock.name=Block of Crystal
 
 tile.neptune.surface.name=Povrchový kámen z Neptunu
 tile.neptune.subSurface.name=Podpovrchový kámen z Neptunu
@@ -115,6 +120,7 @@ tile.neptune.OreTin.name=Cínová ruda z Neptunu
 tile.neptune.OreCopper.name=Měděná ruda z Neptunu
 tile.neptune.OreZinc.name=Zinková Ruda
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
+tile.neptune.zincBlock.name=Block of Zinc
 
 tile.pluto.surface.name=Povrchový kámen z Pluta
 tile.pluto.subSurface.name=Podpovrchový kámen z Pluta
@@ -124,6 +130,7 @@ tile.pluto.OreTin.name=Cínová ruda z Pluta
 tile.pluto.OreCopper.name=Měděná ruda z Pluta
 tile.pluto.OreTungsten.name=Tungstenová Ruda
 tile.pluto.stoneBricks.name=Pluto Stone Bricks
+tile.pluto.tungstenBlock.name=Block of Tungsten
 
 tile.eris.surface.name=Povrchový kámen z Erisu
 tile.eris.subSurface.name=Podpovrchový kámen z Erisu
@@ -365,6 +372,19 @@ item.ingotMercury.name=Měděný Ingot
 item.ingotUranium.name=Uranový Ingot
 item.tier9.ingotTungsten.name=Tungstenový Ingot
 
+#Gems
+item.tier5.redGem.name=Red Gem
+item.tier8.blueGem.name=Blue Gem
+item.tier7.whiteGem.name=White Gem
+
+#Wafers
+item.wafer.diamond=Diamond Wafer
+item.wafer.carbon=Carbon Wafer
+item.wafer.titanium=Titanium Wafer
+item.wafer.redGem=Red Gem Wafer
+item.wafer.blueGem=Blue Gem Wafer
+item.wafer.whiteGem=White Gem Wafer
+
 #Buckets
 item.bucket_glowstone.name=Kbelík světlitu
 item.bucket_salt.name=Kbelík soli
@@ -401,6 +421,11 @@ item.crystalAxe.name=Krystalová sekyra
 item.crystalSword.name=Krystalový meč
 item.crystalHoe.name=Krystalová motyčka
 item.crystalShovel.name=Krystalová lopata
+item.tungstenPickaxe.name=Tungsten Pickaxe
+item.tungstenlAxe.name=Tungsten Axe
+item.tungstenSword.name=Tungsten Sword
+item.tungstenHoe.name=Tungsten Hoe
+item.tungstenShovel.name=Tungsten Shovel
 item.redGemPickaxe.name=Red Gem Pickaxe
 item.redGemAxe.name=Red Gem Axe
 item.redGemSword.name=Red Gem Sword

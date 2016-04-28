@@ -63,6 +63,7 @@ tile.mercury.oreTin.name=Mercury Tin Ore
 tile.mercury.oreCopper.name=Mercury Copper Ore
 tile.mercury.oreMercury.name=Mercury Ore
 tile.mercury.stoneBricks.name=Mercury Stone Bricks
+tile.mercury.mercuryBlock.name=Block of Mercury
 
 tile.venus.surface.name=Venus Surface Rock
 tile.venus.subSurface.name=Venus Sub-Surface Rock
@@ -72,6 +73,7 @@ tile.venus.oreTin.name=Venus Tin Ore
 tile.venus.oreCopper.name=Venus Copper Ore
 tile.venus.oreCarbon.name=Carbon Ore
 tile.venus.stoneBricks.name=Venus Stone Bricks
+tile.venus.carbonBlock.name=Block of Carbon
 
 tile.ceres.surface.name=Ceres Surface Rock
 tile.ceres.subSurface.name=Ceres Sub-Surface Rock
@@ -90,7 +92,9 @@ tile.jupiter.oreTin.name=Jupiter Tin Ore
 tile.jupiter.oreCopper.name=Jupiter Copper Ore
 tile.jupiter.orePalladium.name=Jupiter Palladium Ore
 tile.jupiter.oreNickel.name=Jupiter Nickel Ore
+tile.jupiter.oreRedGem.name=Jupiter Red Gem Ore
 tile.jupiter.stoneBricks.name=Jupiter Stone Bricks
+tile.jupiter.palladiumBlock.name=Block of Palladium
 
 tile.saturn.surface.name=Saturn Surface Rock
 tile.saturn.subSurface.name=Saturn Sub-Surface Rock
@@ -100,12 +104,15 @@ tile.saturn.oreTin.name=Saturn Tin Ore
 tile.saturn.oreCopper.name=Saturn Copper Ore
 tile.saturn.oreMagnesium.name=Saturn Magnesium Ore
 tile.saturn.stoneBricks.name=Saturn Stone Bricks
+tile.saturn.magnesiumBlock.name=Block of Magnesium
 
 tile.uranus.surface.name=Uranus Surface Rock
 tile.uranus.subSurface.name=Uranus Sub-Surface Rock
 tile.uranus.stone.name=Uranus Stone
 tile.uranus.oreCrystal.name=Crystal Stone
+tile.uranus.oreWhiteGem.name=Uranus White Gem Ore
 tile.uranus.stoneBricks.name=Uranus Stone Bricks
+tile.uranus.crystalBlock.name=Block of Crystal
 
 tile.neptune.surface.name=Neptune Surface Rock
 tile.neptune.subSurface.name=Neptune Sub-Surface Rock
@@ -114,7 +121,9 @@ tile.neptune.oreIron.name=Neptune Iron Ore
 tile.neptune.oreTin.name=Neptune Tin Ore
 tile.neptune.oreCopper.name=Neptune Copper Ore
 tile.neptune.oreZinc.name=Zinc Ore
+tile.neptune.oreWhiteGem.name=Neptune Blue Gem Ore
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
+tile.neptune.zincBlock.name=Block of Zinc
 
 tile.pluto.surface.name=Pluto Surface Rock
 tile.pluto.subSurface.name=Pluto Sub-Surface Rock
@@ -124,6 +133,7 @@ tile.pluto.oreTin.name=Pluto Tin Ore
 tile.pluto.oreCopper.name=Pluto Copper Ore
 tile.pluto.oreTungsten.name=Pluto Tungsten Ore
 tile.pluto.stoneBricks.name=Pluto Stone Bricks
+tile.pluto.tungstenBlock.name=Block of Tungsten
 
 tile.eris.surface.name=Eris Surface Rock
 tile.eris.subSurface.name=Eris Sub-Surface Rock
@@ -365,6 +375,19 @@ item.ingotMercury.name=Mercury Ingot
 item.ingotUranium.name=Uranium Ingot
 item.tier9.ingotTungsten.name=Tungsten Ingot
 
+#Gems
+item.tier5.redGem.name=Red Gem
+item.tier8.blueGem.name=Blue Gem
+item.tier7.whiteGem.name=White Gem
+
+#Wafers
+item.wafer.diamond=Diamond Wafer
+item.wafer.carbon=Carbon Wafer
+item.wafer.titanium=Titanium Wafer
+item.wafer.redGem=Red Gem Wafer
+item.wafer.blueGem=Blue Gem Wafer
+item.wafer.whiteGem=White Gem Wafer
+
 #Buckets
 item.bucket_glowstone.name=Glowstone Bucket
 item.bucket_salt.name=Salt Bucket
@@ -401,6 +424,11 @@ item.crystalAxe.name=Crystal Axe
 item.crystalSword.name=Crystal Sword
 item.crystalHoe.name=Crystal Hoe
 item.crystalShovel.name=Crystal Shovel
+item.tungstenPickaxe.name=Tungsten Pickaxe
+item.tungstenlAxe.name=Tungsten Axe
+item.tungstenSword.name=Tungsten Sword
+item.tungstenHoe.name=Tungsten Hoe
+item.tungstenShovel.name=Tungsten Shovel
 item.redGemPickaxe.name=Red Gem Pickaxe
 item.redGemAxe.name=Red Gem Axe
 item.redGemSword.name=Red Gem Sword
