@@ -73,7 +73,7 @@ public class ItemBlockNeptune extends ItemBlock
 		}
 		case 9:
 		{
-			name = "oreRedBlueGem";
+			name = "oreBlueGem";
 			break;
 		}
 		default:
