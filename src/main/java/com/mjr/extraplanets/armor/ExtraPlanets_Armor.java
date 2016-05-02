@@ -42,25 +42,25 @@ public class ExtraPlanets_Armor {
 	}
 
 	private static void initializeArmor() {
-		if (Config.carbonItems) {
+		if (Config.carbonItems && Config.venus) {
 			carbonHelmet = new CarbonArmor("carbon", carbon_ArmorMaterial, 0).setUnlocalizedName("carbonHelmet");
 			carbonChest = new CarbonArmor("carbon", carbon_ArmorMaterial, 1).setUnlocalizedName("carbonChest");
 			carbonLegings = new CarbonArmor("carbon", carbon_ArmorMaterial, 2).setUnlocalizedName("carbonLegings");
 			carbonBoots = new CarbonArmor("carbon", carbon_ArmorMaterial, 3).setUnlocalizedName("carbonBoots");
 		}
-		if (Config.palladiumItems) {
+		if (Config.palladiumItems && Config.jupiter) {
 			palladiumHelmet = new PalladiumArmor("palladium", palladium_ArmorMaterial, 0).setUnlocalizedName("palladiumHelmet");
 			palladiumChest = new PalladiumArmor("palladium", palladium_ArmorMaterial, 1).setUnlocalizedName("palladiumChest");
 			palladiumLegings = new PalladiumArmor("palladium", palladium_ArmorMaterial, 2).setUnlocalizedName("palladiumLegings");
 			palladiumBoots = new PalladiumArmor("palladium", palladium_ArmorMaterial, 3).setUnlocalizedName("palladiumBoots");
 		}
-		if (Config.magnesiumItems) {
+		if (Config.magnesiumItems && Config.saturn) {
 			magnesiumHelmet = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 0).setUnlocalizedName("magnesiumHelmet");
 			magnesiumChest = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 1).setUnlocalizedName("magnesiumChest");
 			magnesiumLegings = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 2).setUnlocalizedName("magnesiumLegings");
 			magnesiumBoots = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 3).setUnlocalizedName("magnesiumBoots");
 		}
-		if (Config.crystalItems) {
+		if (Config.crystalItems && Config.uranus) {
 			crystalHelmet = new CrystalArmor("crystal", crystal_ArmorMaterial, 0).setUnlocalizedName("crystalHelmet");
 			crystalChest = new CrystalArmor("crystal", crystal_ArmorMaterial, 1).setUnlocalizedName("crystalChest");
 			crystalLegings = new CrystalArmor("crystal", crystal_ArmorMaterial, 2).setUnlocalizedName("crystalLegings");
@@ -69,25 +69,25 @@ public class ExtraPlanets_Armor {
 	}
 
 	private static void registerArmor() {
-		if (Config.carbonItems) {
+		if (Config.carbonItems && Config.venus) {
 			GameRegistry.registerItem(carbonHelmet, "carbonHelmet");
 			GameRegistry.registerItem(carbonChest, "carbonChest");
 			GameRegistry.registerItem(carbonLegings, "carbonLegings");
 			GameRegistry.registerItem(carbonBoots, "carbonBoots");
 		}
-		if (Config.palladiumItems) {
+		if (Config.palladiumItems && Config.jupiter) {
 			GameRegistry.registerItem(palladiumHelmet, "palladiumHelmet");
 			GameRegistry.registerItem(palladiumChest, "palladiumChest");
 			GameRegistry.registerItem(palladiumLegings, "palladiumLegings");
 			GameRegistry.registerItem(palladiumBoots, "palladiumBoots");
 		}
-		if (Config.magnesiumItems) {
+		if (Config.magnesiumItems && Config.saturn) {
 			GameRegistry.registerItem(magnesiumHelmet, "magnesiumHelmet");
 			GameRegistry.registerItem(magnesiumChest, "magnesiumChest");
 			GameRegistry.registerItem(magnesiumLegings, "magnesiumLegings");
 			GameRegistry.registerItem(magnesiumBoots, "magnesiumBoots");
 		}
-		if (Config.crystalItems) {
+		if (Config.crystalItems && Config.uranus) {
 			GameRegistry.registerItem(crystalHelmet, "crystalHelmet");
 			GameRegistry.registerItem(crystalChest, "crystalChest");
 			GameRegistry.registerItem(crystalLegings, "crystalLegings");
