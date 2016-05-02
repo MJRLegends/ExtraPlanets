@@ -48,10 +48,10 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		this.generateOre(4, this.iceGen, 60, 120);
+		this.generateOre(8, this.iceGen, 60, 120);
 		this.generateOre(20, this.crystalGen, 0, 64);
 		this.generateOre(20, this.denseIceGen, 0, 256);
-		this.generateOre(10, this.whiteGemGen, 0, 20);
+		this.generateOre(5, this.whiteGemGen, 0, 20);
 		
 		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
