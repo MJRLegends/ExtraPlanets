@@ -18,6 +18,8 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 	private WorldGenerator ironGen;
 	private WorldGenerator zincGen;
 	private WorldGenerator frozenNitrogenGen;
+	private WorldGenerator blueGemGen;
+	
 	private int LakesPerChunk = 5;
 
 	private World currentWorld;
@@ -29,7 +31,7 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 3, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
 		this.zincGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 6, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
 		this.frozenNitrogenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.frozenNitrogen, 8, 0, true, ExtraPlanets_Blocks.neptuneBlocks, 0);
-
+		this.blueGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 9, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -50,6 +52,7 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(20, this.zincGen, 0, 64);
 		this.generateOre(5, this.frozenNitrogenGen, 0, 256);
+		this.generateOre(10, this.blueGemGen, 0, 20);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
