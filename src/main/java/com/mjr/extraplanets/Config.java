@@ -189,10 +189,10 @@ public class Config {
 		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet/moon with all the related items/block!");
 		config.addCustomCategoryComment(schematicsGUI, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
-		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor");
+		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
 		config.addCustomCategoryComment(blocks, "Changing to false will disable the blocks/machines");
 		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
-		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet");
+		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
 		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
 		config.addCustomCategoryComment(gerenalsettings,"Enable/Disable gerenal settings");
 		
