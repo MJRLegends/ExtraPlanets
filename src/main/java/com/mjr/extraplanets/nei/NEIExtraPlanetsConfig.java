@@ -4,15 +4,23 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.Map.Entry;
 
 import micdoodle8.mods.galacticraft.core.Constants;
+import micdoodle8.mods.galacticraft.core.items.GCItems;
+import micdoodle8.mods.galacticraft.core.nei.NEIGalacticraftConfig;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.api.API;
 import codechicken.nei.api.IConfigureNEI;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class NEIExtraPlanetsConfig implements IConfigureNEI {
@@ -22,6 +30,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t7rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t8rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t9rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
+    private static HashMap<HashMap<Integer, PositionedStack>, PositionedStack> circuitFabricatorRecipes = new HashMap<HashMap<Integer, PositionedStack>, PositionedStack>();
 
 	@Override
 	public void loadConfig() {
@@ -32,6 +41,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			this.registerTier7Recipe();
 			this.registerTier8Recipe();
 			this.registerTier9Recipe();
+			this.addCircuitFabricatorRecipes();
 
 			API.registerRecipeHandler(new RocketT4RecipeHandler());
 			API.registerUsageHandler(new RocketT4RecipeHandler());
@@ -45,6 +55,16 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.registerUsageHandler(new RocketT8RecipeHandler());
 			API.registerRecipeHandler(new RocketT9RecipeHandler());
 			API.registerUsageHandler(new RocketT9RecipeHandler());
+			
+	        API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
+	        API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
+	        
+	        API.hideItem(new ItemStack(ExtraPlanets_Blocks.venusSpawner));
+	        API.hideItem(new ItemStack(ExtraPlanets_Blocks.jupiterSpawner));
+	        API.hideItem(new ItemStack(ExtraPlanets_Blocks.saturnSpawner));
+	        API.hideItem(new ItemStack(ExtraPlanets_Blocks.uranusSpawner));
+	        API.hideItem(new ItemStack(ExtraPlanets_Blocks.neptuneSpawner));
+	        API.hideItem(new ItemStack(ExtraPlanets_Blocks.plutoSpawner));
 		}
 	}
 
@@ -105,6 +125,16 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Map.Entry<ArrayList<PositionedStack>, PositionedStack>> getTier9RocketBenchRecipes() {
 		return NEIExtraPlanetsConfig.t9rocketBenchRecipes.entrySet();
 	}
+	
+    public void registerCircuitFabricatorRecipe(HashMap<Integer, PositionedStack> input, PositionedStack output)
+    {
+    	NEIExtraPlanetsConfig.circuitFabricatorRecipes.put(input, output);
+    }
+    
+    public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getCircuitFabricatorRecipes()
+    {
+        return NEIExtraPlanetsConfig.circuitFabricatorRecipes.entrySet();
+    }
 
 	public void registerTier4Recipe() {
 		final int changeY = 15;
@@ -459,4 +489,55 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
 		this.registerTier9RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier9Rocket, 1, 3), 139, 87 + changeY));
 	}
+	
+	private void addCircuitFabricatorRecipes()
+    {
+        HashMap<Integer, PositionedStack> input1 = new HashMap<Integer, PositionedStack>();
+        int siliconCount = OreDictionary.getOres(ConfigManagerCore.otherModsSilicon).size();
+        ItemStack[] silicons = new ItemStack[siliconCount + 1];
+        silicons[0] = new ItemStack(GCItems.basicItem, 1, 2);
+        for (int j = 0; j < siliconCount; j++)
+        {
+        	silicons[j + 1] = OreDictionary.getOres(ConfigManagerCore.otherModsSilicon).get(j); 
+        }	
+        input1.put(1, new PositionedStack(silicons, 69, 51));
+        input1.put(2, new PositionedStack(silicons, 69, 69));      	
+        input1.put(3, new PositionedStack(new ItemStack(Items.redstone), 117, 51));
+        
+        //Diamond
+        input1.put(0, new PositionedStack(new ItemStack(Items.diamond), 10, 22));
+        input1.put(4, new PositionedStack(new ItemStack(Blocks.redstone_lamp), 140, 25));
+        this.registerCircuitFabricatorRecipe(input1, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), 147, 91));
+
+        //Carbon
+        HashMap<Integer, PositionedStack> input2 = new HashMap<Integer, PositionedStack>(input1);
+        input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 10, 22));
+        input2.put(4, new PositionedStack(new ItemStack(Items.comparator), 140, 25));
+        this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), 147, 91));
+        
+        //Titanium
+        input2 = new HashMap<Integer, PositionedStack>(input1);
+        input2.put(0, new PositionedStack(new ItemStack(AsteroidsItems.basicItem, 1, 5), 10, 22));
+        input2.put(4, new PositionedStack(new ItemStack(Blocks.redstone_torch), 140, 25));
+        this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), 147, 91));
+        
+        //Red Gem
+        input2 = new HashMap<Integer, PositionedStack>(input1);
+        input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 10, 22));
+        input2.put(4, new PositionedStack(new ItemStack(Items.repeater), 140, 25));
+        this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 3), 147, 91));
+        
+        //Blue Gem
+        input2 = new HashMap<Integer, PositionedStack>(input1);
+        input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 10, 22));
+        input2.put(4, new PositionedStack(new ItemStack(Items.repeater), 140, 25));
+        this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 4), 147, 91));
+        
+        //White Gem
+        input2 = new HashMap<Integer, PositionedStack>(input1);
+        input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), 10, 22));
+        input2.put(4, new PositionedStack(new ItemStack(Items.repeater), 140, 25));
+        this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 5), 147, 91));
+    }
+
 }
