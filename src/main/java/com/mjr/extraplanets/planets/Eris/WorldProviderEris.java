@@ -117,7 +117,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= Config.erisRocketTier;
+		return tier > ExtraPlanets_Planets.eris.getTierRequirement();
 	}
 
 	@Override
