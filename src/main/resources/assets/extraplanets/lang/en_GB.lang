@@ -121,7 +121,7 @@ tile.neptune.oreIron.name=Neptune Iron Ore
 tile.neptune.oreTin.name=Neptune Tin Ore
 tile.neptune.oreCopper.name=Neptune Copper Ore
 tile.neptune.oreZinc.name=Zinc Ore
-tile.neptune.oreWhiteGem.name=Neptune Blue Gem Ore
+tile.neptune.oreBlueGem.name=Neptune Blue Gem Ore
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
 tile.neptune.zincBlock.name=Block of Zinc
 
@@ -425,7 +425,7 @@ item.crystalSword.name=Crystal Sword
 item.crystalHoe.name=Crystal Hoe
 item.crystalShovel.name=Crystal Shovel
 item.tungstenPickaxe.name=Tungsten Pickaxe
-item.tungstenlAxe.name=Tungsten Axe
+item.tungstenAxe.name=Tungsten Axe
 item.tungstenSword.name=Tungsten Sword
 item.tungstenHoe.name=Tungsten Hoe
 item.tungstenShovel.name=Tungsten Shovel

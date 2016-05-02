@@ -93,6 +93,7 @@ tile.jupiter.oreTin.name=木星锡矿石
 tile.jupiter.oreCopper.name=木星铜矿石
 tile.jupiter.orePalladium.name=木星钯矿石
 tile.jupiter.oreNickel.name=木星镍矿石
+tile.jupiter.oreRedGem.name=Jupiter Red Gem Ore
 tile.jupiter.stoneBricks.name=Jupiter Stone Bricks
 tile.jupiter.palladiumBlock.name=Block of Palladium
 
@@ -110,6 +111,7 @@ tile.uranus.surface.name=天王星地表方块
 tile.uranus.subSurface.name=天王星地底方块
 tile.uranus.stone.name=天王星方块
 tile.uranus.oreCrystal.name=天王星水晶石
+tile.uranus.oreWhiteGem.name=Uranus White Gem Ore
 tile.uranus.stoneBricks.name=Uranus Stone Bricks
 tile.uranus.crystalBlock.name=Block of Crystal
 
@@ -120,6 +122,7 @@ tile.neptune.oreIron.name=海王星铁矿石
 tile.neptune.oreTin.name=海王星锡矿石
 tile.neptune.oreCopper.name=海王星铜矿石
 tile.neptune.oreZinc.name=海王星锌矿石
+tile.neptune.oreBlueGem.name=Neptune Blue Gem Ore
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
 tile.neptune.zincBlock.name=Block of Zinc
 
@@ -423,7 +426,7 @@ item.crystalSword.name=水晶剑
 item.crystalHoe.name=水晶锄
 item.crystalShovel.name=水晶铲
 item.tungstenPickaxe.name=Tungsten Pickaxe
-item.tungstenlAxe.name=Tungsten Axe
+item.tungstenAxe.name=Tungsten Axe
 item.tungstenSword.name=Tungsten Sword
 item.tungstenHoe.name=Tungsten Hoe
 item.tungstenShovel.name=Tungsten Shovel

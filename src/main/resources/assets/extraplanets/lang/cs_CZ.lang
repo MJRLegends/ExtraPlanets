@@ -92,6 +92,7 @@ tile.jupiter.OreTin.name=Cínová ruda z Jupiteru
 tile.jupiter.OreCopper.name=Měděná ruda z Jupiteru
 tile.jupiter.OrePalladium.name=Palladiová Ruda
 tile.jupiter.OreNickel.name=Niklová Ruda
+tile.jupiter.oreRedGem.name=Jupiter Red Gem Ore
 tile.jupiter.stoneBricks.name=Juptier Stone Bricks
 tile.jupiter.palladiumBlock.name=Block of Palladium
 
@@ -109,6 +110,7 @@ tile.uranus.surface.name=Povrchový kámen z Uranu
 tile.uranus.subSurface.name=Podpovrchový kámen z Uranu
 tile.uranus.stone.name=Kámen z Uranu
 tile.uranus.OreCrystal.name=Krystalová Ruda
+tile.uranus.oreWhiteGem.name=Uranus White Gem Ore
 tile.uranus.stoneBricks.name=Uranus Stone Bricks
 tile.uranus.crystalBlock.name=Block of Crystal
 
@@ -119,6 +121,7 @@ tile.neptune.OreIron.name=Železná ruda z Neptunu
 tile.neptune.OreTin.name=Cínová ruda z Neptunu
 tile.neptune.OreCopper.name=Měděná ruda z Neptunu
 tile.neptune.OreZinc.name=Zinková Ruda
+tile.neptune.oreBlueGem.name=Neptune Blue Gem Ore
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
 tile.neptune.zincBlock.name=Block of Zinc
 
@@ -422,7 +425,7 @@ item.crystalSword.name=Krystalový meč
 item.crystalHoe.name=Krystalová motyčka
 item.crystalShovel.name=Krystalová lopata
 item.tungstenPickaxe.name=Tungsten Pickaxe
-item.tungstenlAxe.name=Tungsten Axe
+item.tungstenAxe.name=Tungsten Axe
 item.tungstenSword.name=Tungsten Sword
 item.tungstenHoe.name=Tungsten Hoe
 item.tungstenShovel.name=Tungsten Shovel
