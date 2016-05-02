@@ -482,8 +482,12 @@ public class ExtraPlanets_Recipes {
         	if (j == 0) silicon = new ItemStack(GCItems.basicItem, 1, 2);
         	else silicon = OreDictionary.getOres("itemSilicon").get(j - 1); 
 	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), new ItemStack[] { new ItemStack(Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_lamp) });
-//	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.powered_comparator) });
-//	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(ExtraPlanets_Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.tripwire_hook) });
+	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.comparator) });
+	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_torch) });
+	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 3), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
+	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 4), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
+	        CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 5), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
+
         }
 	}
 	
