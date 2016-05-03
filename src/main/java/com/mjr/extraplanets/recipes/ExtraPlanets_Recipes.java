@@ -506,11 +506,15 @@ public class ExtraPlanets_Recipes {
 			else
 				silicon = OreDictionary.getOres("itemSilicon").get(j - 1);
 			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), new ItemStack[] { new ItemStack(Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_lamp) });
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.comparator) });
+			if (Config.venus)
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.comparator) });
 			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_torch) });
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 3), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 4), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 5), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
+			if (Config.jupiter)
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 3), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
+			if (Config.neptune)
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 4), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
+			if (Config.uranus)
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 5), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
 
 		}
 	}
@@ -518,35 +522,35 @@ public class ExtraPlanets_Recipes {
 	private static void registerSatellitesRecipes() {
 		HashMap<Object, Integer> inputMap;
 
-		if (Config.mercurySpaceStation) {
+		if (Config.mercurySpaceStation && Config.mercury) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.mercurySpaceStationID, Config.mercuryID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.venusSpaceStation) {
+		if (Config.venusSpaceStation && Config.venus) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.venusSpaceStationID, Config.venusID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.ceresSpaceStation) {
+		if (Config.ceresSpaceStation && Config.ceres) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.ceresSpaceStationID, Config.ceresID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.marsSpaceStation) {
+		if (Config.marsSpaceStation && MarsModule.planetMars != null) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.marsSpaceStationID, MarsModule.planetMars.getDimensionID(), new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.jupiterSpaceStation) {
+		if (Config.jupiterSpaceStation && Config.jupiter) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 24);
@@ -554,14 +558,14 @@ public class ExtraPlanets_Recipes {
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.jupiterSpaceStationID, Config.jupiterID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.saturnSpaceStation) {
+		if (Config.saturnSpaceStation && Config.saturn) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.saturnSpaceStationID, Config.saturnID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.uranusSpaceStation) {
+		if (Config.uranusSpaceStation && Config.uranus) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 5), 24);
@@ -569,7 +573,7 @@ public class ExtraPlanets_Recipes {
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.uranusSpaceStationID, Config.uranusID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.neptuneSpaceStation) {
+		if (Config.neptuneSpaceStation && Config.neptune) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 24);
@@ -577,14 +581,14 @@ public class ExtraPlanets_Recipes {
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.neptuneSpaceStationID, Config.neptuneID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.plutoSpaceStation) {
+		if (Config.plutoSpaceStation && Config.pluto) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.plutoSpaceStationID, Config.plutoID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.erisSpaceStation) {
+		if (Config.erisSpaceStation && Config.eris) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);

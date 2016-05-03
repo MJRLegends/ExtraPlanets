@@ -186,7 +186,7 @@ public class Config {
 		config.addCustomCategoryComment(biomeID, "Change if a biome ID is causing conflicts!");
 		config.addCustomCategoryComment(dimensions, "Disabling this will remove the planet with all the related items/block!");
 		config.addCustomCategoryComment(dimensionSettings, "Enable/Disable dimension settings");
-		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet/moon with all the related items/block!");
+		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet/moon with all the related items/block//space stations!");
 		config.addCustomCategoryComment(schematicsGUI, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
 		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
@@ -242,12 +242,12 @@ public class Config {
 		plutoSpaceStation = config.get(spacestationCustom, "Pluto SpaceStation", true, "").getBoolean(true);
 		erisSpaceStation = config.get(spacestationCustom, "Eris SpaceStation", true, "").getBoolean(true);
 
-		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block!").getBoolean(true);
-		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block!").getBoolean(true);
-		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block!").getBoolean(true);
-		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block!").getBoolean(true);
-		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block!").getBoolean(true);
-		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block!").getBoolean(true);
+		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations").getBoolean(true);
+		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
 		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
 		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
