@@ -115,7 +115,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier > ExtraPlanets_Planets.saturn.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.saturn.getTierRequirement();
 	}
 
 	@Override
