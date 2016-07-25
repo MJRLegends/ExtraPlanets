@@ -15,6 +15,9 @@ public class ExtraPlanets_Armor {
 	private static ArmorMaterial magnesium_ArmorMaterial = EnumHelper
 			.addArmorMaterial("Magnesium_Armor", 30, new int[] { 8, 13, 7, 3 }, 12);
 	private static ArmorMaterial crystal_ArmorMaterial = EnumHelper.addArmorMaterial("Crystal_Armor", 40, new int[] { 9, 14, 7, 9 }, 15);
+	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
+	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
+	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
 
 	public static Item carbonHelmet;
 	public static Item carbonChest;
@@ -35,18 +38,45 @@ public class ExtraPlanets_Armor {
 	public static Item crystalChest;
 	public static Item crystalLegings;
 	public static Item crystalBoots;
-
+	
+	public static Item zincHelmet;
+	public static Item zincChest;
+	public static Item zincLegings;
+	public static Item zincBoots;
+	
+	public static Item mercuryHelmet;
+	public static Item mercuryChest;
+	public static Item mercuryLegings;
+	public static Item mercuryBoots;
+	
+	public static Item uraniumHelmet;
+	public static Item uraniumChest;
+	public static Item uraniumLegings;
+	public static Item uraniumBoots;
+	
 	public static void init() {
 		initializeArmor();
 		registerArmor();
 	}
 
 	private static void initializeArmor() {
+		if (Config.mercuryItems && Config.mercury) {
+			mercuryHelmet = new MercuryArmor("mercury", mercury_ArmorMaterial, 0).setUnlocalizedName("mercuryHelmet");
+			mercuryChest = new MercuryArmor("mercury", mercury_ArmorMaterial, 1).setUnlocalizedName("mercuryChest");
+			mercuryLegings = new MercuryArmor("mercury", mercury_ArmorMaterial, 2).setUnlocalizedName("mercuryLegings");
+			mercuryBoots = new MercuryArmor("mercury", mercury_ArmorMaterial, 3).setUnlocalizedName("mercuryBoots");
+		}
 		if (Config.carbonItems && Config.venus) {
 			carbonHelmet = new CarbonArmor("carbon", carbon_ArmorMaterial, 0).setUnlocalizedName("carbonHelmet");
 			carbonChest = new CarbonArmor("carbon", carbon_ArmorMaterial, 1).setUnlocalizedName("carbonChest");
 			carbonLegings = new CarbonArmor("carbon", carbon_ArmorMaterial, 2).setUnlocalizedName("carbonLegings");
 			carbonBoots = new CarbonArmor("carbon", carbon_ArmorMaterial, 3).setUnlocalizedName("carbonBoots");
+		}
+		if (Config.uraniumItems && Config.ceres) {
+			uraniumHelmet = new UraniumArmor("uranium", uranium_ArmorMaterial, 0).setUnlocalizedName("uraniumHelmet");
+			uraniumChest = new UraniumArmor("uranium", uranium_ArmorMaterial, 1).setUnlocalizedName("uraniumChest");
+			uraniumLegings = new UraniumArmor("uranium", uranium_ArmorMaterial, 2).setUnlocalizedName("uraniumLegings");
+			uraniumBoots = new UraniumArmor("uranium", uranium_ArmorMaterial, 3).setUnlocalizedName("uraniumBoots");
 		}
 		if (Config.palladiumItems && Config.jupiter) {
 			palladiumHelmet = new PalladiumArmor("palladium", palladium_ArmorMaterial, 0).setUnlocalizedName("palladiumHelmet");
@@ -66,14 +96,32 @@ public class ExtraPlanets_Armor {
 			crystalLegings = new CrystalArmor("crystal", crystal_ArmorMaterial, 2).setUnlocalizedName("crystalLegings");
 			crystalBoots = new CrystalArmor("crystal", crystal_ArmorMaterial, 3).setUnlocalizedName("crystalBoots");
 		}
+		if (Config.zincItems && Config.neptune) {
+			zincHelmet = new ZincArmor("zinc", zinc_ArmorMaterial, 0).setUnlocalizedName("zincHelmet");
+			zincChest = new ZincArmor("zinc", zinc_ArmorMaterial, 1).setUnlocalizedName("zincChest");
+			zincLegings = new ZincArmor("zinc", zinc_ArmorMaterial, 2).setUnlocalizedName("zincLegings");
+			zincBoots = new ZincArmor("zinc", zinc_ArmorMaterial, 3).setUnlocalizedName("zincBoots");
+		}
 	}
 
 	private static void registerArmor() {
+		if (Config.mercuryItems && Config.mercury) {
+			GameRegistry.registerItem(mercuryHelmet, "mercuryHelmet");
+			GameRegistry.registerItem(mercuryChest, "mercuryChest");
+			GameRegistry.registerItem(mercuryLegings, "mercuryLegings");
+			GameRegistry.registerItem(mercuryBoots, "mercuryBoots");
+		}
 		if (Config.carbonItems && Config.venus) {
 			GameRegistry.registerItem(carbonHelmet, "carbonHelmet");
 			GameRegistry.registerItem(carbonChest, "carbonChest");
 			GameRegistry.registerItem(carbonLegings, "carbonLegings");
 			GameRegistry.registerItem(carbonBoots, "carbonBoots");
+		}
+		if (Config.uraniumItems && Config.ceres) {
+			GameRegistry.registerItem(uraniumHelmet, "uraniumHelmet");
+			GameRegistry.registerItem(uraniumChest, "uraniumChest");
+			GameRegistry.registerItem(uraniumLegings, "uraniumLegings");
+			GameRegistry.registerItem(uraniumBoots, "uraniumBoots");
 		}
 		if (Config.palladiumItems && Config.jupiter) {
 			GameRegistry.registerItem(palladiumHelmet, "palladiumHelmet");
@@ -92,6 +140,12 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(crystalChest, "crystalChest");
 			GameRegistry.registerItem(crystalLegings, "crystalLegings");
 			GameRegistry.registerItem(crystalBoots, "crystalBoots");
+		}
+		if (Config.zincItems && Config.neptune) {
+			GameRegistry.registerItem(zincHelmet, "zincHelmet");
+			GameRegistry.registerItem(zincChest, "zincChest");
+			GameRegistry.registerItem(zincLegings, "zincLegings");
+			GameRegistry.registerItem(zincBoots, "zincBoots");
 		}
 	}
 }

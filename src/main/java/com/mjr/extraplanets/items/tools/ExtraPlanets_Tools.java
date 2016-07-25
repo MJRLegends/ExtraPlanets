@@ -13,10 +13,15 @@ public class ExtraPlanets_Tools {
 	private static ToolMaterial palladiumMaterial = EnumHelper.addToolMaterial("Palladium Material", 4, 60, 6.0F, 8.0F, 30);
 	private static ToolMaterial magnesiumMaterial = EnumHelper.addToolMaterial("Magnesium Material", 5, 80, 8.0F, 10.0F, 30);
 	private static ToolMaterial crystalMaterial = EnumHelper.addToolMaterial("Crystal Material", 6, 120, 10.0F, 12.0F, 30);
+
 	private static ToolMaterial tungstenMaterial = EnumHelper.addToolMaterial("Tungsten Material", 7, 120, 10.0F, 12.0F, 30);
 	private static ToolMaterial redGemMaterial = EnumHelper.addToolMaterial("Red Gem Material", 4, 80, 6.0F, 8.0F, 30);
 	private static ToolMaterial blueGemMaterial = EnumHelper.addToolMaterial("Blue Gem Material", 5, 100, 8.0F, 10.0F, 30);
 	private static ToolMaterial whiteGemMaterial = EnumHelper.addToolMaterial("White Gem Material", 6, 160, 10.0F, 12.0F, 30);
+
+	private static ToolMaterial zincMaterial = EnumHelper.addToolMaterial("Zinc Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial mercuryMaterial = EnumHelper.addToolMaterial("Mercury Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial uraniumMaterial = EnumHelper.addToolMaterial("Uranium Material", 6, 160, 10.0F, 12.0F, 30);
 
 	public static Item carbonPickaxe;
 	public static Item carbonAxe;
@@ -66,18 +71,50 @@ public class ExtraPlanets_Tools {
 	public static Item whiteGemShovel;
 	public static Item whiteGemSword;
 
+	public static Item zincPickaxe;
+	public static Item zincAxe;
+	public static Item zincHoe;
+	public static Item zincShovel;
+	public static Item zincSword;
+
+	public static Item mercuryPickaxe;
+	public static Item mercuryAxe;
+	public static Item mercuryHoe;
+	public static Item mercuryShovel;
+	public static Item mercurySword;
+
+	public static Item uraniumPickaxe;
+	public static Item uraniumAxe;
+	public static Item uraniumHoe;
+	public static Item uraniumShovel;
+	public static Item uraniumSword;
+
 	public static void init() {
 		initializeTools();
 		registerTools();
 	}
 
 	private static void initializeTools() {
+		if (Config.mercury && Config.mercuryItems) {
+			mercuryPickaxe = new BasicPickaxe(mercuryMaterial, "mercuryPickaxe");
+			mercuryAxe = new BasicAxe(mercuryMaterial, "mercuryAxe");
+			mercuryHoe = new BasicHoe(mercuryMaterial, "mercuryHoe");
+			mercuryShovel = new BasicShovel(mercuryMaterial, "mercuryShovel");
+			mercurySword = new BasicSword(mercuryMaterial, "mercurySword");
+		}
 		if (Config.venus && Config.carbonItems) {
 			carbonPickaxe = new BasicPickaxe(carbonMaterial, "carbonPickaxe");
 			carbonAxe = new BasicAxe(carbonMaterial, "carbonAxe");
 			carbonHoe = new BasicHoe(carbonMaterial, "carbonHoe");
 			carbonShovel = new BasicShovel(carbonMaterial, "carbonShovel");
 			carbonSword = new BasicSword(carbonMaterial, "carbonSword");
+		}
+		if (Config.ceres && Config.uraniumItems) {
+			uraniumPickaxe = new BasicPickaxe(uraniumMaterial, "uraniumPickaxe");
+			uraniumAxe = new BasicAxe(uraniumMaterial, "uraniumAxe");
+			uraniumHoe = new BasicHoe(uraniumMaterial, "uraniumHoe");
+			uraniumShovel = new BasicShovel(uraniumMaterial, "uraniumShovel");
+			uraniumSword = new BasicSword(uraniumMaterial, "uraniumSword");
 		}
 		if (Config.jupiter) {
 			if (Config.palladiumItems) {
@@ -126,6 +163,13 @@ public class ExtraPlanets_Tools {
 				blueGemShovel = new BasicShovel(blueGemMaterial, "blueGemShovel");
 				blueGemSword = new BasicSword(blueGemMaterial, "blueGemSword");
 			}
+			if (Config.zincItems) {
+				zincPickaxe = new BasicPickaxe(zincMaterial, "zincPickaxe");
+				zincAxe = new BasicAxe(zincMaterial, "zincAxe");
+				zincHoe = new BasicHoe(zincMaterial, "zincHoe");
+				zincShovel = new BasicShovel(zincMaterial, "zincShovel");
+				zincSword = new BasicSword(zincMaterial, "zincSword");
+			}
 		}
 		if (Config.pluto && Config.tungstenItems) {
 			tungstenPickaxe = new BasicPickaxe(tungstenMaterial, "tungstenPickaxe");
@@ -134,16 +178,29 @@ public class ExtraPlanets_Tools {
 			tungstenShovel = new BasicShovel(tungstenMaterial, "tungstenShovel");
 			tungstenSword = new BasicSword(tungstenMaterial, "tungstenSword");
 		}
-
 	}
 
 	private static void registerTools() {
+		if (Config.mercury && Config.mercuryItems) {
+			GameRegistry.registerItem(mercuryPickaxe, "mercuryPickaxe");
+			GameRegistry.registerItem(mercuryAxe, "mercuryAxe");
+			GameRegistry.registerItem(mercuryHoe, "mercuryHoe");
+			GameRegistry.registerItem(mercuryShovel, "mercuryShovel");
+			GameRegistry.registerItem(mercurySword, "mercurySword");
+		}
 		if (Config.venus && Config.carbonItems) {
 			GameRegistry.registerItem(carbonPickaxe, "carbonPickaxe");
 			GameRegistry.registerItem(carbonAxe, "carbonAxe");
 			GameRegistry.registerItem(carbonHoe, "carbonHoe");
 			GameRegistry.registerItem(carbonShovel, "carbonShovel");
 			GameRegistry.registerItem(carbonSword, "carbonSword");
+		}
+		if (Config.ceres && Config.uraniumItems) {
+			GameRegistry.registerItem(uraniumPickaxe, "uraniumPickaxe");
+			GameRegistry.registerItem(uraniumAxe, "uraniumAxe");
+			GameRegistry.registerItem(uraniumHoe, "uraniumHoe");
+			GameRegistry.registerItem(uraniumShovel, "uraniumShovel");
+			GameRegistry.registerItem(uraniumSword, "uraniumSword");
 		}
 		if (Config.jupiter) {
 			if (Config.palladiumItems) {
@@ -191,6 +248,13 @@ public class ExtraPlanets_Tools {
 				GameRegistry.registerItem(blueGemHoe, "blueGemHoe");
 				GameRegistry.registerItem(blueGemShovel, "blueGemShovel");
 				GameRegistry.registerItem(blueGemSword, "blueGemSword");
+			}
+			if (Config.zincItems) {
+				GameRegistry.registerItem(zincPickaxe, "zincPickaxe");
+				GameRegistry.registerItem(zincAxe, "zincAxe");
+				GameRegistry.registerItem(zincHoe, "zincHoe");
+				GameRegistry.registerItem(zincShovel, "zincShovel");
+				GameRegistry.registerItem(zincSword, "zincSword");
 			}
 		}
 		if (Config.pluto && Config.tungstenItems) {
