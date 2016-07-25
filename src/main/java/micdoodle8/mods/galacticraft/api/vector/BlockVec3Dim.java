@@ -30,7 +30,6 @@ public class BlockVec3Dim implements Cloneable
     public int y;
     public int z;
     public int dim;
-    public boolean[] sideDone = { false, false, false, false, false, false };
     private static Chunk chunkCached;
     public static int chunkCacheDim = Integer.MAX_VALUE;
     private static int chunkCacheX = 1876000; // outside the world edge
@@ -212,7 +211,6 @@ public class BlockVec3Dim implements Cloneable
     public BlockVec3Dim newVecSide(int side)
     {
         BlockVec3Dim vec = new BlockVec3Dim(this.x, this.y, this.z, this.dim);
-        vec.sideDone[side ^ 1] = true;
         switch (side)
         {
         case 0:
@@ -245,7 +243,7 @@ public class BlockVec3Dim implements Cloneable
     @Override
     public int hashCode()
     {
-        return (((this.dim * 431 + this.y) * 379 + this.x) * 373 + this.z) * 7;
+        return (((this.z * 431 + this.x) * 379 + this.y) * 373 + this.dim) * 7;
     }
 
     @Override
@@ -332,11 +330,6 @@ public class BlockVec3Dim implements Cloneable
    		World world = getWorldForId(this.dim);
    		if (world == null) return false;
         return world.blockExists(this.x, this.y, this.z);
-    }
-
-    public void setSideDone(int side)
-    {
-        this.sideDone[side] = true;
     }
 
     /**

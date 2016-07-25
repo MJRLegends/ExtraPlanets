@@ -409,7 +409,7 @@ public class EntityCreeperBossPluto extends EntityMob implements IEntityBreathab
 
 	public ItemStack getGuaranteedLoot(Random rand)
 	{
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(8);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(9);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

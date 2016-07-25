@@ -16,22 +16,22 @@
 		<link>
 			<name>common</name>
 			<type>2</type>
-			<location>D:/Source Codes/Minecraft Forge Mods/ExtraPlanets/common</location>
+			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/common</location>
 		</link>
 		<link>
 			<name>jars</name>
 			<type>2</type>
-			<location>D:/Source Codes/Minecraft Forge Mods/ExtraPlanets/jars</location>
+			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/jars</location>
 		</link>
 		<link>
 			<name>lib</name>
 			<type>2</type>
-			<location>D:/Source Codes/Minecraft Forge Mods/ExtraPlanets/lib</location>
+			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/lib</location>
 		</link>
 		<link>
 			<name>src</name>
 			<type>2</type>
-			<location>D:/Source Codes/Minecraft Forge Mods/ExtraPlanets/src</location>
+			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>
