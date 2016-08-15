@@ -24,6 +24,8 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 
 	private World currentWorld;
 
+	private boolean isDecorating = false;
+
 	public BiomeDecoratorCeres() {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 4, 5, true, ExtraPlanets_Blocks.ceresBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 4, 4, true, ExtraPlanets_Blocks.ceresBlocks, 2);
@@ -48,6 +50,8 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
+		if (isDecorating) return;
+		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
 		this.generateOre(20, this.ironGen, 0, 64);
@@ -68,6 +72,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 
+		isDecorating = false;
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
 		// minY, int maxY);
 	}

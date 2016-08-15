@@ -25,6 +25,8 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 
 	private int LakesPerChunk = 10;
 
+	private boolean isDecorating = false;
+
 	public BiomeDecoratorVenus() {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 4, 5, true, ExtraPlanets_Blocks.venusBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 4, 4, true, ExtraPlanets_Blocks.venusBlocks, 2);
@@ -49,6 +51,8 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
+		if (isDecorating) return;
+		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
 		this.generateOre(20, this.ironGen, 0, 64);
@@ -75,5 +79,6 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 			new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y, z);
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		isDecorating = false;
 	}
 }
