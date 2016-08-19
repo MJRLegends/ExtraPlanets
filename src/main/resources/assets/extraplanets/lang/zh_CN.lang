@@ -529,6 +529,10 @@ item.zincHelmet.name=Zinc Helmet
 item.zincChest.name=Zinc Chestplate
 item.zincLegings.name=Zinc Leggings
 item.zincBoots.name=Zinc Boots
+item.tungstenHelmet.name=Tungsten Helmet
+item.tungstenChest.name=Tungsten Chestplate
+item.tungstenLegings.name=Tungsten Leggings
+item.tungstenBoots.name=Tungsten Boots
 
 item.tier2ThermalHelm.name=2阶热力充能头盔
 item.tier2ThermalChestplate.name=2阶热力充能胸甲
