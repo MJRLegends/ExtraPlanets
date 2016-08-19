@@ -18,6 +18,7 @@ public class ExtraPlanets_Armor {
 	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
 	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
 	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
+	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
 
 	public static Item carbonHelmet;
 	public static Item carbonChest;
@@ -53,6 +54,11 @@ public class ExtraPlanets_Armor {
 	public static Item uraniumChest;
 	public static Item uraniumLegings;
 	public static Item uraniumBoots;
+	
+	public static Item tungstenHelmet;
+	public static Item tungstenChest;
+	public static Item tungstenLegings;
+	public static Item tungstenBoots;
 	
 	public static void init() {
 		initializeArmor();
@@ -102,6 +108,12 @@ public class ExtraPlanets_Armor {
 			zincLegings = new ZincArmor("zinc", zinc_ArmorMaterial, 2).setUnlocalizedName("zincLegings");
 			zincBoots = new ZincArmor("zinc", zinc_ArmorMaterial, 3).setUnlocalizedName("zincBoots");
 		}
+		if (Config.tungstenItems && Config.pluto) {
+			tungstenHelmet = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 0).setUnlocalizedName("tungstenHelmet");
+			tungstenChest = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 1).setUnlocalizedName("tungstenChest");
+			tungstenLegings = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 2).setUnlocalizedName("tungstenLegings");
+			tungstenBoots = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 3).setUnlocalizedName("tungstenBoots");
+		}
 	}
 
 	private static void registerArmor() {
@@ -146,6 +158,12 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(zincChest, "zincChest");
 			GameRegistry.registerItem(zincLegings, "zincLegings");
 			GameRegistry.registerItem(zincBoots, "zincBoots");
+		}
+		if (Config.tungstenItems && Config.pluto) {
+			GameRegistry.registerItem(tungstenHelmet, "tungstenHelmet");
+			GameRegistry.registerItem(tungstenChest, "tungstenChest");
+			GameRegistry.registerItem(tungstenLegings, "tungstenLegings");
+			GameRegistry.registerItem(tungstenBoots, "tungstenBoots");
 		}
 	}
 }
