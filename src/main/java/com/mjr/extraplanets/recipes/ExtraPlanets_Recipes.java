@@ -180,6 +180,21 @@ public class ExtraPlanets_Recipes {
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 4, 7), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 2) });
 
+			if (Config.mercuryItems) {
+				// Tools
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercurySword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+
+				// Armour
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.mercuryHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.mercuryChest), new Object[] { "M M", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.mercuryLegings), new Object[] { "MMM", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.mercuryBoots), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0) });
+			}
+			
 			// Slab's & Stairs
 			if (Config.slabsAndStairs) {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_SlabsStairsBlocks.mercuryStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 2) });
@@ -228,6 +243,21 @@ public class ExtraPlanets_Recipes {
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 4, 7), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 2) });
 
+			if (Config.uraniumItems) {
+				// Tools
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+
+				// Armour
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.uraniumHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.uraniumChest), new Object[] { "M M", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.uraniumLegings), new Object[] { "MMM", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.uraniumBoots), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0) });
+			}
+			
 			// Slab's & Stairs
 			if (Config.slabsAndStairs) {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_SlabsStairsBlocks.ceresStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 2) });
@@ -389,6 +419,20 @@ public class ExtraPlanets_Recipes {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueGemSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 'S', Item.itemRegistry.getObject("stick") });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueGemShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 'S', Item.itemRegistry.getObject("stick") });
 			}
+			if (Config.zincItems) {
+				// Tools
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+
+				// Armour
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.zincHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.zincChest), new Object[] { "M M", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.zincLegings), new Object[] { "MMM", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.zincBoots), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5) });
+			}
 
 			// Battery
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.zincBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'R', Items.redstone, 'C', Items.coal });
@@ -422,6 +466,12 @@ public class ExtraPlanets_Recipes {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				
+				// Armour
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tungstenHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tungstenChest), new Object[] { "M M", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tungstenLegings), new Object[] { "MMM", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tungstenBoots), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5) });
 			}
 
 			// Slab's & Stairs
