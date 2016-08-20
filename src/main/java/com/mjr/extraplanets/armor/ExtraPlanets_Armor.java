@@ -9,16 +9,15 @@ import com.mjr.extraplanets.Config;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Armor {
-	private static ArmorMaterial carbon_ArmorMaterial = EnumHelper.addArmorMaterial("Carbon_Armor", 26, new int[] { 6, 11, 7, 6 }, 12);
-	private static ArmorMaterial palladium_ArmorMaterial = EnumHelper
-			.addArmorMaterial("Palladium_Armor", 26, new int[] { 7, 12, 7, 3 }, 12);
-	private static ArmorMaterial magnesium_ArmorMaterial = EnumHelper
-			.addArmorMaterial("Magnesium_Armor", 30, new int[] { 8, 13, 7, 3 }, 12);
-	private static ArmorMaterial crystal_ArmorMaterial = EnumHelper.addArmorMaterial("Crystal_Armor", 40, new int[] { 9, 14, 7, 9 }, 15);
-	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
-	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
-	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
-	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Tungsten_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
+	private static ArmorMaterial carbon_ArmorMaterial = EnumHelper.addArmorMaterial("Carbon_Armor", 26, new int[] {3, 8, 6, 3}, 15);
+	private static ArmorMaterial palladium_ArmorMaterial = EnumHelper.addArmorMaterial("Palladium_Armor", 26, new int[] {3, 8, 6, 3}, 13);
+	private static ArmorMaterial magnesium_ArmorMaterial = EnumHelper.addArmorMaterial("Magnesium_Armor", 30, new int[] {3, 8, 6, 3}, 11);
+	private static ArmorMaterial crystal_ArmorMaterial = EnumHelper.addArmorMaterial("Crystal_Armor", 40, new int[] {3, 8, 6, 3}, 10);
+	
+	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", 15, new int[] {3, 8, 6, 3}, 13);
+	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] {3, 8, 6, 3}, 13);
+	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", 45, new int[] {3, 8, 6, 3}, 9);
+	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Tungsten_Armor", 50, new int[] {3, 8, 6, 3}, 7);
 
 	public static Item carbonHelmet;
 	public static Item carbonChest;
