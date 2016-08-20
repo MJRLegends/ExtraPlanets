@@ -18,7 +18,7 @@ public class ExtraPlanets_Armor {
 	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
 	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
 	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
-	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
+	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Tungsten_Armor", 20, new int[] { 6, 11, 7, 6 }, 12);
 
 	public static Item carbonHelmet;
 	public static Item carbonChest;
