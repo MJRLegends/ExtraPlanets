@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.items;
 
-import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
-import micdoodle8.mods.galacticraft.planets.asteroids.items.ItemThermalPadding;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -182,6 +180,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(mercuryBattery, "mercuryBattery");
 			GameRegistry.registerItem(compressedMercury, "compressedMercury");
 			GameRegistry.registerItem(ingotMercury, "ingotMercury");
+			OreDictionary.registerOre("ingotMercury", new ItemStack(ingotMercury));
 		}
 		if (Config.venus) {
 			GameRegistry.registerItem(tier4Rocket, "itemTier4Rocket");
@@ -189,11 +188,11 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(noseConeTier4, "noseConeTier4");
 			GameRegistry.registerItem(tier4Items, "tier4Items");
 			GameRegistry.registerItem(T4key, "T4key");
+			OreDictionary.registerOre("ingotCarbon", new ItemStack(tier4Items, 1, 5));
 		}
 		if (Config.ceres) {
 			GameRegistry.registerItem(ingotUranium, "ingotUranium");
 			OreDictionary.registerOre("ingotUranium", new ItemStack(ingotUranium));
-
 			GameRegistry.registerItem(salt_bucket, "bucket_salt");
 		}
 		if (Config.jupiter) {
@@ -205,6 +204,9 @@ public class ExtraPlanets_Items {
 
 			GameRegistry.registerItem(nickelBattery, "nickelBattery");
 			GameRegistry.registerItem(magma_bucket, "bucket_magma");
+			OreDictionary.registerOre("ingotPalladium", new ItemStack(tier5Items, 1, 5));
+			OreDictionary.registerOre("ingotNickel", new ItemStack(tier5Items, 1, 7));
+			OreDictionary.registerOre("gemRedGem", new ItemStack(tier5Items, 1, 8));
 		}
 		if (Config.saturn) {
 			GameRegistry.registerItem(tier6Rocket, "itemTier6Rocket");
@@ -214,6 +216,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T6key, "T6key");
 
 			GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");
+			OreDictionary.registerOre("ingotMagnesium", new ItemStack(tier6Items, 1, 5));
 		}
 		if (Config.uranus) {
 			GameRegistry.registerItem(tier7Rocket, "itemTier7Rocket");
@@ -223,6 +226,8 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T7key, "T7key");
 
 			GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
+			OreDictionary.registerOre("ingotCrystal", new ItemStack(tier7Items, 1, 5));
+			OreDictionary.registerOre("gemWhiteGem", new ItemStack(tier7Items, 1, 7));
 		}
 		if (Config.neptune) {
 			GameRegistry.registerItem(tier8Rocket, "itemTier8Rocket");
@@ -233,6 +238,8 @@ public class ExtraPlanets_Items {
 
 			GameRegistry.registerItem(zincBattery, "zincBattery");
 			GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
+			OreDictionary.registerOre("ingotZinc", new ItemStack(tier8Items, 1, 5));
+			OreDictionary.registerOre("gemBlueGem", new ItemStack(tier8Items, 1, 6));
 		}
 
 		if (Config.pluto) {
@@ -241,6 +248,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(noseConeTier9, "noseConeTier9");
 			GameRegistry.registerItem(tier9Items, "tier9Items");
 			GameRegistry.registerItem(T9key, "T9key");
+			OreDictionary.registerOre("ingotTungsten", new ItemStack(tier9Items, 1, 5));
 		}
 
 		GameRegistry.registerItem(cannedFood, "cannedFood");
