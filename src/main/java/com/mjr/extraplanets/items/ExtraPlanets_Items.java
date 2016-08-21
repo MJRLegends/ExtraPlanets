@@ -254,7 +254,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
 		
 		GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName());
-		GameRegistry.registerItem(ulimateBattery, ulimateBattery.getUnlocalizedName());
+		GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {
