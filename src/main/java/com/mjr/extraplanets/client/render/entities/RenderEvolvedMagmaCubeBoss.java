@@ -21,7 +21,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class RenderEvolvedMagmaCubeBoss extends RenderLiving
 {
 	private static final ResourceLocation magmaCubeTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/slime/magmacube.png");
-	private static final String __OBFID = "CL_00001009";
 
 	public RenderEvolvedMagmaCubeBoss()
 	{

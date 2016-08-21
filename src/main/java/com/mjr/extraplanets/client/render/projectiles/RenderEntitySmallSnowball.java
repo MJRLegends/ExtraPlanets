@@ -22,8 +22,6 @@ public class RenderEntitySmallSnowball extends Render
 {
 	private Item field_94151_a;
 	private int field_94150_f;
-	private static final String __OBFID = "CL_00001008";
-
 	public RenderEntitySmallSnowball(Item p_i1259_1_, int p_i1259_2_)
 	{
 		this.field_94151_a = p_i1259_1_;

@@ -35,7 +35,8 @@ public class RenderTier6Rocket extends Render
 	{
 		return this.rocketTexture;
 	}
-
+	
+	@SuppressWarnings("unused")
 	public void renderSpaceship(EntitySpaceshipBase entity, double par2, double par4, double par6, float par8, float par9)
 	{
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);

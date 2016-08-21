@@ -38,7 +38,6 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	private int stareTimer;
 	private Entity lastEntityToAttack;
 	private boolean isAggressive;
-	private static final String __OBFID = "CL_00001685";
 
 	public EntityEvolvedEnderman(World p_i1734_1_)
 	{
@@ -533,7 +532,7 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	private static IdentityHashMap<Block, Boolean> carriable;
 	public static void setCarriable(Block block, boolean canCarry)
 	{
-		if (carriable == null) carriable = new IdentityHashMap(4096);
+		if (carriable == null) carriable = new IdentityHashMap<Block, Boolean>(4096);
 		carriable.put(block, canCarry);
 	}
 	public static boolean getCarriable(Block block)

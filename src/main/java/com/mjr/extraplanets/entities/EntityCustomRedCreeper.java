@@ -32,7 +32,6 @@ public class EntityCustomRedCreeper extends EntityMob {
 	private int fuseTime = 30;
 	/** Explosion radius for this creeper. */
 	private int explosionRadius = 3;
-	private static final String __OBFID = "CL_00001684";
 
 	public EntityCustomRedCreeper(World p_i1733_1_) {
 		super(p_i1733_1_);
@@ -268,7 +267,7 @@ public class EntityCustomRedCreeper extends EntityMob {
 
 			if (this.worldObj.getClosestPlayer(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D,
 					10.0) != null) {
-				List list = null;
+				List<?> list = null;
 				list = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox((float) posX - 5, (float) posY,
 						(float) posZ - 5, (float) (posX + 5), (float) (posY), (float) (posZ + 5)));
 				if (list != null) {

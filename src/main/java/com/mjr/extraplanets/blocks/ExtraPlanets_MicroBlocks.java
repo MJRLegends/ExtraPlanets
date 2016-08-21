@@ -14,7 +14,7 @@ public class ExtraPlanets_MicroBlocks {
 
 	private static void registerMicroBlocks() {
 		try {
-			Class clazz = Class.forName("codechicken.microblock.MicroMaterialRegistry");
+			Class<?> clazz = Class.forName("codechicken.microblock.MicroMaterialRegistry");
 			if (clazz != null) {
 				Method registerMethod = null;
 				Method[] methodz = clazz.getMethods();
@@ -24,7 +24,7 @@ public class ExtraPlanets_MicroBlocks {
 						break;
 					}
 				}
-				Class clazzbm = Class.forName("codechicken.microblock.BlockMicroMaterial");
+				Class<?> clazzbm = Class.forName("codechicken.microblock.BlockMicroMaterial");
 				if (Config.mercury) {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.mercuryBlocks, 0), "tile.mercury.surface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.mercuryBlocks, 1), "tile.mercury.subSurface");

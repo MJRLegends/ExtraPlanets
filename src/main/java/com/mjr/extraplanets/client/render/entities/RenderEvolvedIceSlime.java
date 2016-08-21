@@ -19,7 +19,6 @@ public class RenderEvolvedIceSlime extends RenderLiving
 {
 	private static final ResourceLocation slimeTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/slime/iceslime.png");
 	private ModelBase scaleAmount;
-	private static final String __OBFID = "CL_00001024";
 
 	public RenderEvolvedIceSlime(ModelBase p_i1267_1_, ModelBase p_i1267_2_, float p_i1267_3_)
 	{

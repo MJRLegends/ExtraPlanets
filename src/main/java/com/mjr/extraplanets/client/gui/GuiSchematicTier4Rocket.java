@@ -30,8 +30,7 @@ public class GuiSchematicTier4Rocket extends GuiContainerGC implements ISchemati
 	public void initGui()
 	{
 		super.initGui();
-		GuiButton backButton;
-		this.buttonList.add(backButton = new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27 - 12, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
+		this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27 - 12, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
 		this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 30 + 27 + 12, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
 	}
 

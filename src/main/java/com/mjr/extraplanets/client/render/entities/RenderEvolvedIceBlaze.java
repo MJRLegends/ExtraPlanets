@@ -18,7 +18,6 @@ public class RenderEvolvedIceBlaze extends RenderLiving
 {
 	private static final ResourceLocation blazeTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/iceBlaze.png");
 	private int field_77068_a;
-	private static final String __OBFID = "CL_00000980";
 
 	public RenderEvolvedIceBlaze()
 	{

@@ -34,7 +34,6 @@ public class EntityCustomBlueCreeper extends EntityMob {
 	private int fuseTime = 30;
 	/** Explosion radius for this creeper. */
 	private int explosionRadius = 3;
-	private static final String __OBFID = "CL_00001684";
 
 	public EntityCustomBlueCreeper(World p_i1733_1_) {
 		super(p_i1733_1_);
@@ -270,7 +269,7 @@ public class EntityCustomBlueCreeper extends EntityMob {
 
 			if (this.worldObj.getClosestPlayer(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D,
 					10.0) != null) {
-				List list = worldObj.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox((float) posX - 5, (float) posY-5,
+				List<?> list = worldObj.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox((float) posX - 5, (float) posY-5,
 						(float) posZ - 5, (float) (posX + 10), (float) (posY+10), (float) (posZ + 10)));
 				if (list != null) {
 					System.out.println(list.size());

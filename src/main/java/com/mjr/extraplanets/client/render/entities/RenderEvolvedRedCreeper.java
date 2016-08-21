@@ -23,7 +23,6 @@ public class RenderEvolvedRedCreeper extends RenderLiving
 	private static final ResourceLocation creeperTextures = new ResourceLocation(Constants.ASSET_PREFIX, "textures/entity/creeper/red_creeper.png");
 	/** The creeper model. */
 	private ModelBase creeperModel = new ModelRedCreeper(2.0F);
-	private static final String __OBFID = "CL_00000985";
 
 	public RenderEvolvedRedCreeper()
 	{

@@ -503,7 +503,6 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(erisBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(erisBlocks, 1, 3));
 		}
-
 		if (Config.callisto) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(callistoBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(callistoBlocks, 1, 4));

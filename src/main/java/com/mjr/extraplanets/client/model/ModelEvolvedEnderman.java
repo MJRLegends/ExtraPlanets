@@ -13,7 +13,6 @@ public class ModelEvolvedEnderman extends ModelBiped
 	public boolean isCarrying;
 	/** Is the enderman attacking an entity? */
 	public boolean isAttacking;
-	private static final String __OBFID = "CL_00000838";
 
 	public ModelEvolvedEnderman()
 	{

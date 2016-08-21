@@ -25,7 +25,6 @@ public class RenderEvolvedWitch extends RenderLiving
 {
 	private static final ResourceLocation witchTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/evolvedWitch.png");
 	private final ModelEvolvedWitch witchModel;
-	private static final String __OBFID = "CL_00001033";
 
 	public RenderEvolvedWitch()
 	{

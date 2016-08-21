@@ -18,7 +18,6 @@ public class EntityCustomSlime extends EntityLiving implements IMob
 	public float prevSquishFactor;
 	/** ticks until this slime jumps again */
 	private int slimeJumpDelay;
-	private static final String __OBFID = "CL_00001698";
 
 	public EntityCustomSlime(World p_i1742_1_)
 	{

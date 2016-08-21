@@ -17,7 +17,6 @@ public class ModelEvolvedIceSlime extends ModelBase
 	ModelRenderer slimeLeftEye;
 	/** The slime's mouth */
 	ModelRenderer slimeMouth;
-	private static final String __OBFID = "CL_00000858";
 
 	public ModelEvolvedIceSlime(int p_i1157_1_)
 	{

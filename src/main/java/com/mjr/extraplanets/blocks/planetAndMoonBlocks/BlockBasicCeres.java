@@ -101,13 +101,13 @@ public class BlockBasicCeres extends Block {
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z) {
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z, EntityPlayer player) {
 		int metadata = world.getBlockMetadata(x, y, z);
-		if (metadata == 4) {
+		if (metadata == 8) {
 			return new ItemStack(Item.getItemFromBlock(this), 1, metadata);
 		}
 
-		return super.getPickBlock(target, world, x, y, z);
+		return super.getPickBlock(target, world, x, y, z, player);
 	}
 
 	@Override
@@ -121,5 +121,4 @@ public class BlockBasicCeres extends Block {
 
 		}
 	}
-
 }

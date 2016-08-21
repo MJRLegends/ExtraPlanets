@@ -13,7 +13,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 public class BlockFalling extends Block
 {
 	public static boolean fallInstantly;
-	private static final String __OBFID = "CL_00000240";
 
 	public BlockFalling()
 	{

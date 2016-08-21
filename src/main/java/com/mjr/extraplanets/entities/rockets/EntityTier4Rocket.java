@@ -76,7 +76,6 @@ public class EntityTier4Rocket extends EntityTieredRocket
         return new ItemStack(ExtraPlanets_Items.tier4Rocket, 1, this.rocketType.getIndex());
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void onUpdate()
     {

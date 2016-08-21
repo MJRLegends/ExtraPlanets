@@ -11,7 +11,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreathable {
-	private static final String __OBFID = "CL_00001691";
 
 	public EntityEvolvedMagmaCube(World p_i1737_1_) {
 		super(p_i1737_1_);

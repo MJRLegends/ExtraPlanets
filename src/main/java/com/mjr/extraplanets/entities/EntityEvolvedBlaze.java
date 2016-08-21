@@ -21,7 +21,6 @@ public class EntityEvolvedBlaze extends EntityMob implements IEntityBreathable
 	/** ticks until heightOffset is randomized */
 	private int heightOffsetUpdateTime;
 	private int field_70846_g;
-	private static final String __OBFID = "CL_00001682";
 
 	public EntityEvolvedBlaze(World p_i1731_1_)
 	{
