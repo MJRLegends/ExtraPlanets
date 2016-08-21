@@ -61,6 +61,11 @@ public class ItemBlockUranus extends ItemBlock
 			name = "oreWhiteGem";
 			break;
 		}
+		case 7:
+		{
+			name = "whiteGemBlock";
+			break;
+		}
 		default:
 			name = "null";
 		}

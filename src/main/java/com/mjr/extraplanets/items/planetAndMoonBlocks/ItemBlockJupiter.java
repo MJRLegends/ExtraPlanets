@@ -81,6 +81,11 @@ public class ItemBlockJupiter extends ItemBlock
 			name = "oreRedGem";
 			break;
 		}
+		case 11:
+		{
+			name = "redGemBlock";
+			break;
+		}
 		default:
 			name = "null";
 		}

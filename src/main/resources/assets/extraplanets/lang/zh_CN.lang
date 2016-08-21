@@ -84,6 +84,7 @@ tile.ceres.oreTin.name=谷神星锡矿石
 tile.ceres.oreCopper.name=谷神星铜矿石
 tile.ceres.oreUranium.name=谷神星铀矿石
 tile.ceres.stoneBricks.name=谷神星石砖
+tile.ceres.uraniumBlock.name=Block of Uranium
 
 tile.jupiter.surface.name=木星地表方块
 tile.jupiter.subSurface.name=木星地底方块
@@ -96,6 +97,7 @@ tile.jupiter.oreNickel.name=木星镍矿石
 tile.jupiter.oreRedGem.name=木星红宝石矿石
 tile.jupiter.stoneBricks.name=木星方块砖
 tile.jupiter.palladiumBlock.name=钯块
+tile.jupiter.redGemBlock.name=Block of Red Gem
 
 tile.saturn.surface.name=土星地表方块
 tile.saturn.subSurface.name=土星地底方块
@@ -114,6 +116,7 @@ tile.uranus.oreCrystal.name=天王星水晶石
 tile.uranus.oreWhiteGem.name=天王星白宝石矿石
 tile.uranus.stoneBricks.name=天王星方块砖
 tile.uranus.crystalBlock.name=水晶石块
+tile.uranus.whiteGemBlock.name=Block of White Gem
 
 tile.neptune.surface.name=海王星地表方块
 tile.neptune.subSurface.name=海王星地底方块
@@ -125,6 +128,7 @@ tile.neptune.oreZinc.name=海王星锌矿石
 tile.neptune.oreBlueGem.name=海王星蓝宝石矿石
 tile.neptune.stoneBricks.name=海王星方块砖
 tile.neptune.zincBlock.name=锌块
+tile.neptune.blueGemBlock.name=Block of Blue Gem
 
 tile.pluto.surface.name=冥王星地表岩石
 tile.pluto.subSurface.name=冥王星地底岩石

@@ -83,6 +83,7 @@ tile.ceres.OreTin.name=Cínová ruda z Ceresu
 tile.ceres.OreCopper.name=Měděná ruda z Ceresu
 tile.ceres.OreUranium.name=Uraniová Ruda
 tile.ceres.stoneBricks.name=Ceres Stone Bricks
+tile.ceres.uraniumBlock.name=Block of Uranium
 
 tile.jupiter.surface.name=Povrchový kámen z Jupiteru
 tile.jupiter.subSurface.name=Podpovrchový kámen z Jupiteru
@@ -95,6 +96,7 @@ tile.jupiter.OreNickel.name=Niklová Ruda
 tile.jupiter.oreRedGem.name=Jupiter Red Gem Ore
 tile.jupiter.stoneBricks.name=Juptier Stone Bricks
 tile.jupiter.palladiumBlock.name=Block of Palladium
+tile.jupiter.redGemBlock.name=Block of Red Gem
 
 tile.saturn.surface.name=Povrchový kámen ze Saturnu
 tile.saturn.subSurface.name=Podpovrchový kámen ze Saturnu
@@ -113,6 +115,7 @@ tile.uranus.OreCrystal.name=Krystalová Ruda
 tile.uranus.oreWhiteGem.name=Uranus White Gem Ore
 tile.uranus.stoneBricks.name=Uranus Stone Bricks
 tile.uranus.crystalBlock.name=Block of Crystal
+tile.uranus.whiteGemBlock.name=Block of White Gem
 
 tile.neptune.surface.name=Povrchový kámen z Neptunu
 tile.neptune.subSurface.name=Podpovrchový kámen z Neptunu
@@ -124,6 +127,7 @@ tile.neptune.OreZinc.name=Zinková Ruda
 tile.neptune.oreBlueGem.name=Neptune Blue Gem Ore
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
 tile.neptune.zincBlock.name=Block of Zinc
+tile.neptune.blueGemBlock.name=Block of Blue Gem
 
 tile.pluto.surface.name=Povrchový kámen z Pluta
 tile.pluto.subSurface.name=Podpovrchový kámen z Pluta
