@@ -74,6 +74,8 @@ public class ExtraPlanets_Items {
 	public static Item nickelBattery;
 	public static Item zincBattery;
 	public static Item mercuryBattery;
+	public static Item advancedBattery;
+	public static Item ulimateBattery;
 
 	public static Item glowstone_bucket;
 	public static Item magma_bucket;
@@ -174,6 +176,8 @@ public class ExtraPlanets_Items {
 		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
 		wafers = new ItemWafers("wafer");
+		advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
+		ulimateBattery = new ItemBasicBattery("ulimateBattery", 200000f, 2);
 	}
 
 	private static void registerItems() {
@@ -248,6 +252,9 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
+		
+		GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName());
+		GameRegistry.registerItem(ulimateBattery, ulimateBattery.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {
