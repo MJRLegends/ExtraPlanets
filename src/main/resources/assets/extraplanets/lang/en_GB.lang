@@ -490,6 +490,8 @@ schematic.rocketT9.name=Tier 9 Rocket
 item.mercuryBattery.name=Mercury Battery
 item.nickelBattery.name=Nickel Battery
 item.zincBattery.name=Zinc Battery
+item.advancedBattery.name=Advanced Battery
+item.ultimateBattery.name=Ultimate Battery
 
 #Armor
 item.carbonHelmet.name=Carbon Helmet

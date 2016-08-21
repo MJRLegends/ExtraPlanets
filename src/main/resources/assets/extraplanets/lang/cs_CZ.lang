@@ -490,6 +490,8 @@ schematic.RocketT9.name=Raketa typ 9
 item.mercuryBattery.name=Měděná baterie
 item.nickelBattery.name=Niklová baterie
 item.zincBattery.name=Zinková baterie
+item.advancedBattery.name=Advanced Battery
+item.ultimateBattery.name=Ultimate Battery
 
 #Armor
 item.carbonHelmet.name=Karbonová helma

@@ -491,6 +491,8 @@ schematic.rocketT9.name=9階火箭
 item.mercuryBattery.name=汞電池
 item.nickelBattery.name=鎳電池
 item.zincBattery.name=鋅電池
+item.advancedBattery.name=Advanced Battery
+item.ultimateBattery.name=Ultimate Battery
 
 #Armor
 item.carbonHelmet.name=碳盔
