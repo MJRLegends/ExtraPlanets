@@ -447,11 +447,13 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(mercuryBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(mercuryBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(mercuryBlocks, 1, 3));
+			OreDictionary.registerOre("oreMercury", new ItemStack(mercuryBlocks, 1, 6));
 		}
 		if (Config.venus) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(venusBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(venusBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(venusBlocks, 1, 3));
+			OreDictionary.registerOre("OreCarbon", new ItemStack(venusBlocks, 1, 6));
 		}
 		if (Config.ceres) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(ceresBlocks, 1, 5));
@@ -463,21 +465,32 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(jupiterBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(jupiterBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(jupiterBlocks, 1, 3));
+			OreDictionary.registerOre("OrePalladium", new ItemStack(venusBlocks, 1, 6));
+			OreDictionary.registerOre("OreNickel", new ItemStack(venusBlocks, 1, 7));
+			OreDictionary.registerOre("OreRedGem", new ItemStack(venusBlocks, 1, 10));
 		}
 		if (Config.saturn) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(saturnBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(saturnBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(saturnBlocks, 1, 3));
+			OreDictionary.registerOre("OreMagnesium", new ItemStack(venusBlocks, 1, 6));
+		}
+		if (Config.uranus) {
+			OreDictionary.registerOre("OreCrystal", new ItemStack(saturnBlocks, 1, 3));
+			OreDictionary.registerOre("OreWhiteGem", new ItemStack(saturnBlocks, 1, 6));
 		}
 		if (Config.neptune) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(neptuneBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(neptuneBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(neptuneBlocks, 1, 3));
+			OreDictionary.registerOre("OreZinc", new ItemStack(neptuneBlocks, 1, 6));	
+			OreDictionary.registerOre("OreBlueGem", new ItemStack(neptuneBlocks, 1, 9));	
 		}
 		if (Config.pluto) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(plutoBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(plutoBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(plutoBlocks, 1, 3));
+			OreDictionary.registerOre("OreTungsten", new ItemStack(plutoBlocks, 1, 6));			
 		}
 		if (Config.eris) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(erisBlocks, 1, 5));
