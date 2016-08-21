@@ -110,10 +110,10 @@ public class ExtraPlanets_Armor {
 				palladiumBoots = new PalladiumArmor("palladium", palladium_ArmorMaterial, 3).setUnlocalizedName("palladiumBoots");
 			}
 			if (Config.redGemItems) {
-				redGemHelmet = new PalladiumArmor("redGem", redGem_ArmorMaterial, 0).setUnlocalizedName("redGemHelmet");
-				redGemChest = new PalladiumArmor("redGem", redGem_ArmorMaterial, 1).setUnlocalizedName("redGemChest");
-				redGemLegings = new PalladiumArmor("redGem", redGem_ArmorMaterial, 2).setUnlocalizedName("redGemLegings");
-				redGemBoots = new PalladiumArmor("redGem", redGem_ArmorMaterial, 3).setUnlocalizedName("redGemBoots");
+				redGemHelmet = new RedGemArmor("redGem", redGem_ArmorMaterial, 0).setUnlocalizedName("redGemHelmet");
+				redGemChest = new RedGemArmor("redGem", redGem_ArmorMaterial, 1).setUnlocalizedName("redGemChest");
+				redGemLegings = new RedGemArmor("redGem", redGem_ArmorMaterial, 2).setUnlocalizedName("redGemLegings");
+				redGemBoots = new RedGemArmor("redGem", redGem_ArmorMaterial, 3).setUnlocalizedName("redGemBoots");
 			}
 		}
 		if (Config.magnesiumItems && Config.saturn) {
@@ -128,10 +128,10 @@ public class ExtraPlanets_Armor {
 			crystalLegings = new CrystalArmor("crystal", crystal_ArmorMaterial, 2).setUnlocalizedName("crystalLegings");
 			crystalBoots = new CrystalArmor("crystal", crystal_ArmorMaterial, 3).setUnlocalizedName("crystalBoots");
 			if (Config.whiteGemItems) {
-				whiteGemHelmet = new PalladiumArmor("whiteGem", whiteGem_ArmorMaterial, 0).setUnlocalizedName("whiteGemHelmet");
-				whiteGemChest = new PalladiumArmor("whiteGem", whiteGem_ArmorMaterial, 1).setUnlocalizedName("whiteGemChest");
-				whiteGemLegings = new PalladiumArmor("whiteGem", whiteGem_ArmorMaterial, 2).setUnlocalizedName("whiteGemLegings");
-				whiteGemBoots = new PalladiumArmor("whiteGem", whiteGem_ArmorMaterial, 3).setUnlocalizedName("whiteGemBoots");
+				whiteGemHelmet = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 0).setUnlocalizedName("whiteGemHelmet");
+				whiteGemChest = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 1).setUnlocalizedName("whiteGemChest");
+				whiteGemLegings = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 2).setUnlocalizedName("whiteGemLegings");
+				whiteGemBoots = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 3).setUnlocalizedName("whiteGemBoots");
 			}
 		}
 		if (Config.zincItems && Config.neptune) {
@@ -140,10 +140,10 @@ public class ExtraPlanets_Armor {
 			zincLegings = new ZincArmor("zinc", zinc_ArmorMaterial, 2).setUnlocalizedName("zincLegings");
 			zincBoots = new ZincArmor("zinc", zinc_ArmorMaterial, 3).setUnlocalizedName("zincBoots");
 			if (Config.blueGemItems) {
-				blueGemHelmet = new PalladiumArmor("blueGem", blueGem_ArmorMaterial, 0).setUnlocalizedName("blueGemHelmet");
-				blueGemChest = new PalladiumArmor("blueGem", blueGem_ArmorMaterial, 1).setUnlocalizedName("blueGemChest");
-				blueGemLegings = new PalladiumArmor("blueGem", blueGem_ArmorMaterial, 2).setUnlocalizedName("blueGemLegings");
-				blueGemBoots = new PalladiumArmor("blueGem", blueGem_ArmorMaterial, 3).setUnlocalizedName("blueGemBoots");
+				blueGemHelmet = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 0).setUnlocalizedName("blueGemHelmet");
+				blueGemChest = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 1).setUnlocalizedName("blueGemChest");
+				blueGemLegings = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 2).setUnlocalizedName("blueGemLegings");
+				blueGemBoots = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 3).setUnlocalizedName("blueGemBoots");
 			}
 		}
 		if (Config.tungstenItems && Config.pluto) {
