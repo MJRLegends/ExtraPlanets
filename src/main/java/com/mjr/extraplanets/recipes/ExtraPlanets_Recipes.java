@@ -12,6 +12,7 @@ import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -541,6 +542,10 @@ public class ExtraPlanets_Recipes {
 		// Others
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 6, 15), new Object[] { new ItemStack(ExtraPlanets_Items.bodyParts, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 6, 15), new Object[] { new ItemStack(ExtraPlanets_Items.bodyParts, 1, 1) });
+		
+		//Advanced & Ultimate Battery
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.advancedBattery, 1, 0),new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(AsteroidsItems.basicItem, 0, 6), 'R', GCItems.battery, 'C', new ItemStack(MarsBlocks.marsBlock, 1, 8)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ultimateBattery, 1, 0),new Object[] { "WRB", "CPM", "TAZ", 'W', new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 7), 'R', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11), 'B', new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 10), 'C', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7), 'P', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7), 'T', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'A', new ItemStack(ExtraPlanets_Items.advancedBattery, 1, 0), 'Z', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5)});
 	}
 
 	private static void registerCompressorRecipes() {
