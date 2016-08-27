@@ -26,6 +26,8 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	private int iceSpikesPerChunk = 5;
 	private int LakesPerChunk = 5;
 
+	private boolean isDecorating = false;
+
 	public BiomeDecoratorUranus()
 	{
 		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.uranusBlocks, 2);
@@ -48,6 +50,8 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
+		if (isDecorating) return;
+		isDecorating = true;
 		this.generateOre(8, this.iceGen, 60, 120);
 		this.generateOre(20, this.crystalGen, 0, 64);
 		this.generateOre(20, this.denseIceGen, 0, 256);
@@ -86,5 +90,6 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 			new WorldGenIgloo().generate(this.currentWorld, this.rand, x, y, z);
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		isDecorating = false;
 	}
 }

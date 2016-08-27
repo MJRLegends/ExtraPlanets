@@ -18,6 +18,8 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
 	private World currentWorld;
 
+	private boolean isDecorating = false;
+
 	public BiomeDecoratorMercury()
 	{
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 5, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
@@ -42,6 +44,8 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
+		if (isDecorating) return;
+		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
 		this.generateOre(20, this.ironGen, 0, 64);
@@ -49,6 +53,7 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(1, this.fossilsGen, 0, 256);
 
+		isDecorating = false;
 		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 
