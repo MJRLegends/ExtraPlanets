@@ -173,8 +173,8 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(uraniumLegings, "uraniumLegings");
 			GameRegistry.registerItem(uraniumBoots, "uraniumBoots");
 		}
-		if (Config.palladiumItems) {
-			if (Config.jupiter) {
+		if (Config.jupiter) {
+			if (Config.palladiumItems) {
 				GameRegistry.registerItem(palladiumHelmet, "palladiumHelmet");
 				GameRegistry.registerItem(palladiumChest, "palladiumChest");
 				GameRegistry.registerItem(palladiumLegings, "palladiumLegings");
