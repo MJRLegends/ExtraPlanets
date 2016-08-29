@@ -308,7 +308,7 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier8Rocket());
 		if (Config.pluto)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
-		if (Config.keplerSolarSystems)
+		if (Config.eris)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
 	}
 
