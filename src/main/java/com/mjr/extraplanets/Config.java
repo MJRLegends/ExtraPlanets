@@ -169,6 +169,7 @@ public class Config {
 	public static int schematicTier7GUIID;
 	public static int schematicTier8GUIID;
 	public static int schematicTier9GUIID;
+	public static int schematicTier10GUIID;
 
 	public static int schematicTier4PageID;
 	public static int schematicTier5PageID;
@@ -176,6 +177,7 @@ public class Config {
 	public static int schematicTier7PageID;
 	public static int schematicTier8PageID;
 	public static int schematicTier9PageID;
+	public static int schematicTier10PageID;
 
 	public static boolean microBlock;
 	public static boolean neiSupport;
@@ -346,6 +348,7 @@ public class Config {
 		schematicTier7GUIID = config.get(schematicsGUI, "Schematic Tier 7 GUI ID", 5558).getInt();
 		schematicTier8GUIID = config.get(schematicsGUI, "Schematic Tier 8 GUI ID", 5559).getInt();
 		schematicTier9GUIID = config.get(schematicsGUI, "Schematic Tier 9 GUI ID", 5560).getInt();
+		schematicTier10GUIID = config.get(schematicsGUI, "Schematic Tier 10 GUI ID", 5561).getInt();
 
 		schematicTier4PageID = config.get(schematicsPage, "Schematic Tier 4 Page ID", 6666).getInt();
 		schematicTier5PageID = config.get(schematicsPage, "Schematic Tier 5 Page ID", 6667).getInt();
@@ -353,6 +356,7 @@ public class Config {
 		schematicTier7PageID = config.get(schematicsPage, "Schematic Tier 7 Page ID", 6669).getInt();
 		schematicTier8PageID = config.get(schematicsPage, "Schematic Tier 8 Page ID", 6670).getInt();
 		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
+		schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
 
 		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);

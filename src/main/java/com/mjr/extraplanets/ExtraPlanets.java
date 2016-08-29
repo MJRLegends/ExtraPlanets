@@ -65,6 +65,7 @@ import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.planets.Venus.event.VenusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
+import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier4Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier5Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
@@ -302,6 +303,8 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier8Rocket());
 		if (Config.pluto)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
+		if (Config.keplerSolarSystems)
+			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
 	}
 
 	private void addDungeonLoot() {

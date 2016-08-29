@@ -26,6 +26,7 @@ import com.mjr.extraplanets.items.rockets.Tier6Rocket;
 import com.mjr.extraplanets.items.rockets.Tier7Rocket;
 import com.mjr.extraplanets.items.rockets.Tier8Rocket;
 import com.mjr.extraplanets.items.rockets.Tier9Rocket;
+import com.mjr.extraplanets.items.schematics.SchematicTier10;
 import com.mjr.extraplanets.items.schematics.SchematicTier4;
 import com.mjr.extraplanets.items.schematics.SchematicTier5;
 import com.mjr.extraplanets.items.schematics.SchematicTier6;
@@ -49,6 +50,7 @@ public class ExtraPlanets_Items {
 	public static Item schematicTier7;
 	public static Item schematicTier8;
 	public static Item schematicTier9;
+	public static Item schematicTier10;
 
 	public static Item noseConeTier4;
 	public static Item noseConeTier5;
@@ -167,7 +169,9 @@ public class ExtraPlanets_Items {
 			tier9Items = new ItemTier9Items("tier9");
 			T9key = new ItemKeyT9().setUnlocalizedName("key");
 		}
-
+		if(Config.keplerSolarSystems){
+			schematicTier10 = new SchematicTier10("schematicTier10");
+		}
 		cannedFood = new ItemCannedFood("cannedfood");
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
@@ -240,6 +244,9 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(noseConeTier9, "noseConeTier9");
 			GameRegistry.registerItem(tier9Items, "tier9Items");
 			GameRegistry.registerItem(T9key, "T9key");
+		}
+		if (Config.keplerSolarSystems) {
+			GameRegistry.registerItem(schematicTier10, "schematicTier10");
 		}
 
 		GameRegistry.registerItem(cannedFood, "cannedFood");
