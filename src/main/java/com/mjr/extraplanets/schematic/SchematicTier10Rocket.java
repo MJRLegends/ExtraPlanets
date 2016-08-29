@@ -7,8 +7,8 @@ import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.client.gui.GuiSchematicTier9Rocket;
-import com.mjr.extraplanets.inventory.ContainerSchematicTier9Rocket;
+import com.mjr.extraplanets.client.gui.GuiSchematicTier10Rocket;
+import com.mjr.extraplanets.inventory.ContainerSchematicTier10Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.relauncher.Side;
@@ -33,11 +33,11 @@ public class SchematicTier10Rocket extends SchematicPage {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z) {
-		return new GuiSchematicTier9Rocket(player.inventory, x, y, z);
+		return new GuiSchematicTier10Rocket(player.inventory, x, y, z);
 	}
 
 	@Override
 	public Container getResultContainer(EntityPlayer player, int x, int y, int z) {
-		return new ContainerSchematicTier9Rocket(player.inventory, x, y, z);
+		return new ContainerSchematicTier10Rocket(player.inventory, x, y, z);
 	}
 }

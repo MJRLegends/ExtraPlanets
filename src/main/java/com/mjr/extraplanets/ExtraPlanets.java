@@ -32,6 +32,7 @@ import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
@@ -116,6 +117,8 @@ public class ExtraPlanets {
 				return ExtraPlanets_Items.tier8Rocket;
 			else if (Config.pluto)
 				return ExtraPlanets_Items.tier9Rocket;
+			else if (Config.eris)
+				return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
 	};
@@ -256,6 +259,8 @@ public class ExtraPlanets {
 			registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
 		if (Config.pluto)
 			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
+		if (Config.eris)
+			registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
 	}
 
 	private void registerCreatures() {
@@ -319,6 +324,8 @@ public class ExtraPlanets {
 		if (Config.neptune)
 			GalacticraftRegistry.addDungeonLoot(8, new ItemStack(ExtraPlanets_Items.schematicTier8, 1, 0));
 		if (Config.pluto)
+			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.schematicTier9, 1, 0));
+		if (Config.eris)
 			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.schematicTier9, 1, 0));
 	}
 

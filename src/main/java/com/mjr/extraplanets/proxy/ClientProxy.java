@@ -38,12 +38,14 @@ import com.mjr.extraplanets.client.render.entities.RenderEvolvedPowerSkeleton;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedRedCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedWitch;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
+import com.mjr.extraplanets.client.render.entities.RenderTier10Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier4Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier5Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier9Rocket;
+import com.mjr.extraplanets.client.render.item.ItemRendererTier10Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
@@ -71,6 +73,7 @@ import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
@@ -253,6 +256,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "tier9rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
 		}
+		if (Config.eris) {
+			IModelCustom rocketModelTier10 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "tier10rocket"));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier10Rocket, new ItemRendererTier10Rocket(rocketModelTier10));
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -310,6 +318,9 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.pluto) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
+		}
+		if (Config.eris) {
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT10.png")));
 		}
         MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
         MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());

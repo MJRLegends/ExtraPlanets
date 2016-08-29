@@ -8,18 +8,21 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
 import com.mjr.extraplanets.items.keys.ItemKeyT6;
 import com.mjr.extraplanets.items.keys.ItemKeyT7;
 import com.mjr.extraplanets.items.keys.ItemKeyT8;
 import com.mjr.extraplanets.items.keys.ItemKeyT9;
+import com.mjr.extraplanets.items.noseCones.Tier10NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier4NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier5NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier6NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier7NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier8NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier9NoseCone;
+import com.mjr.extraplanets.items.rockets.Tier10Rocket;
 import com.mjr.extraplanets.items.rockets.Tier4Rocket;
 import com.mjr.extraplanets.items.rockets.Tier5Rocket;
 import com.mjr.extraplanets.items.rockets.Tier6Rocket;
@@ -43,6 +46,7 @@ public class ExtraPlanets_Items {
 	public static Item tier7Rocket;
 	public static Item tier8Rocket;
 	public static Item tier9Rocket;
+	public static Item tier10Rocket;
 
 	public static Item schematicTier4;
 	public static Item schematicTier5;
@@ -58,6 +62,7 @@ public class ExtraPlanets_Items {
 	public static Item noseConeTier7;
 	public static Item noseConeTier8;
 	public static Item noseConeTier9;
+	public static Item noseConeTier10;
 
 	public static Item tier4Items;
 	public static Item tier5Items;
@@ -65,6 +70,7 @@ public class ExtraPlanets_Items {
 	public static Item tier7Items;
 	public static Item tier8Items;
 	public static Item tier9Items;
+	public static Item tier10Items;
 
 	public static Item T4key;
 	public static Item T5key;
@@ -72,6 +78,7 @@ public class ExtraPlanets_Items {
 	public static Item T7key;
 	public static Item T8key;
 	public static Item T9key;
+	public static Item T10key;
 
 	public static Item nickelBattery;
 	public static Item zincBattery;
@@ -169,9 +176,14 @@ public class ExtraPlanets_Items {
 			tier9Items = new ItemTier9Items("tier9");
 			T9key = new ItemKeyT9().setUnlocalizedName("key");
 		}
-		if(Config.keplerSolarSystems){
+		if(Config.eris){
+			tier10Rocket = new Tier10Rocket("itemTier10Rocket");
 			schematicTier10 = new SchematicTier10("schematicTier10");
+			noseConeTier10 = new Tier10NoseCone("noseConeTier10");
+			tier10Items = new ItemTier10Items("tier10");
+			T10key = new ItemKeyT10().setUnlocalizedName("key");
 		}
+		
 		cannedFood = new ItemCannedFood("cannedfood");
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
@@ -237,7 +249,6 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(zincBattery, "zincBattery");
 			GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		}
-
 		if (Config.pluto) {
 			GameRegistry.registerItem(tier9Rocket, "itemTier9Rocket");
 			GameRegistry.registerItem(schematicTier9, "schematicTier9");
@@ -245,8 +256,12 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier9Items, "tier9Items");
 			GameRegistry.registerItem(T9key, "T9key");
 		}
-		if (Config.keplerSolarSystems) {
+		if (Config.eris) {
+			GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
 			GameRegistry.registerItem(schematicTier10, "schematicTier10");
+			GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
+			GameRegistry.registerItem(tier10Items, "tier10Items");
+			GameRegistry.registerItem(T10key, "T10key");
 		}
 
 		GameRegistry.registerItem(cannedFood, "cannedFood");
