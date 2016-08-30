@@ -30,7 +30,7 @@ public class SkyProviderNeptune extends IRenderHandler {
 			"textures/gui/celestialbodies/uranus.png");
 	private static final ResourceLocation overworldTexture3 = new ResourceLocation(Constants.ASSET_PREFIX,
 			"textures/gui/celestialbodies/triton.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation("textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;

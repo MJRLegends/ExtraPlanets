@@ -31,7 +31,7 @@ public class SkyProviderJupiter extends IRenderHandler
 	private static final ResourceLocation overworldTexture3 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png");
 	private static final ResourceLocation overworldTexture4 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png");
 
-	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX,"textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;

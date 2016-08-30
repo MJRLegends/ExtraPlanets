@@ -26,7 +26,7 @@ public class SkyProviderVenus extends IRenderHandler
 {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/earth.png");
 	private static final ResourceLocation overworldTexture2 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/mercury.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX,"textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;

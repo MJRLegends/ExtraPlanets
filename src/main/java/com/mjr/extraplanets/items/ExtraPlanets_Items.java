@@ -257,11 +257,11 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T9key, "T9key");
 		}
 		if (Config.eris) {
-			GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
-			GameRegistry.registerItem(schematicTier10, "schematicTier10");
-			GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
-			GameRegistry.registerItem(tier10Items, "tier10Items");
-			GameRegistry.registerItem(T10key, "T10key");
+			//GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
+			//GameRegistry.registerItem(schematicTier10, "schematicTier10");
+			//GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
+			//GameRegistry.registerItem(tier10Items, "tier10Items");
+			//GameRegistry.registerItem(T10key, "T10key");
 		}
 
 		GameRegistry.registerItem(cannedFood, "cannedFood");

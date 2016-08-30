@@ -12,6 +12,7 @@ import net.minecraftforge.client.model.IModelCustom;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
+import com.mjr.extraplanets.client.SkyProviderHandler;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlime;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.RenderPlayerExtraPlanets;
@@ -38,14 +39,12 @@ import com.mjr.extraplanets.client.render.entities.RenderEvolvedPowerSkeleton;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedRedCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedWitch;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
-import com.mjr.extraplanets.client.render.entities.RenderTier10Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier4Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier5Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier9Rocket;
-import com.mjr.extraplanets.client.render.item.ItemRendererTier10Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
@@ -73,34 +72,14 @@ import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
-import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
-import com.mjr.extraplanets.handlers.AchievementEventHandler;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.moons.Callisto.CallistoHandlerClient;
-import com.mjr.extraplanets.moons.Deimos.DeimosHandlerClient;
-import com.mjr.extraplanets.moons.Europa.EuropaHandlerClient;
-import com.mjr.extraplanets.moons.Ganymede.GanymedeHandlerClient;
-import com.mjr.extraplanets.moons.Io.IoHandlerClient;
-import com.mjr.extraplanets.moons.Phobos.PhobosHandlerClient;
-import com.mjr.extraplanets.moons.Rhea.RheaHandlerClient;
-import com.mjr.extraplanets.moons.Titan.TitanHandlerClient;
-import com.mjr.extraplanets.moons.Triton.TritonHandlerClient;
-import com.mjr.extraplanets.planets.Ceres.CeresHandlerClient;
-import com.mjr.extraplanets.planets.Eris.ErisHandlerClient;
-import com.mjr.extraplanets.planets.Jupiter.JupiterHandlerClient;
-import com.mjr.extraplanets.planets.Mercury.MercuryHandlerClient;
-import com.mjr.extraplanets.planets.Neptune.NeptuneHandlerClient;
-import com.mjr.extraplanets.planets.Pluto.PlutoHandlerClient;
-import com.mjr.extraplanets.planets.Saturn.SaturnHandlerClient;
-import com.mjr.extraplanets.planets.Uranus.UranusHandlerClient;
-import com.mjr.extraplanets.planets.Venus.VenusHandlerClient;
 import com.mjr.extraplanets.tile.TileEntitySolar;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
@@ -139,44 +118,7 @@ public class ClientProxy extends CommonProxy {
 		renderMobEntities();
 		renderNonMobEntities();
 		FMLCommonHandler.instance().bus().register(new MainHandler());
-
-		if (Config.mercury)
-			FMLCommonHandler.instance().bus().register(new MercuryHandlerClient());
-		if (Config.venus)
-			FMLCommonHandler.instance().bus().register(new VenusHandlerClient());
-		if (Config.ceres)
-			FMLCommonHandler.instance().bus().register(new CeresHandlerClient());
-		if (Config.jupiter)
-			FMLCommonHandler.instance().bus().register(new JupiterHandlerClient());
-		if (Config.saturn)
-			FMLCommonHandler.instance().bus().register(new SaturnHandlerClient());
-		if (Config.uranus)
-			FMLCommonHandler.instance().bus().register(new UranusHandlerClient());
-		if (Config.neptune)
-			FMLCommonHandler.instance().bus().register(new NeptuneHandlerClient());
-		if (Config.pluto)
-			FMLCommonHandler.instance().bus().register(new PlutoHandlerClient());
-		if (Config.eris)
-			FMLCommonHandler.instance().bus().register(new ErisHandlerClient());
-
-		if (Config.callisto)
-			FMLCommonHandler.instance().bus().register(new CallistoHandlerClient());
-		if (Config.deimos)
-			FMLCommonHandler.instance().bus().register(new DeimosHandlerClient());
-		if (Config.europa)
-			FMLCommonHandler.instance().bus().register(new EuropaHandlerClient());
-		if (Config.ganymede)
-			FMLCommonHandler.instance().bus().register(new GanymedeHandlerClient());
-		if (Config.io)
-			FMLCommonHandler.instance().bus().register(new IoHandlerClient());
-		if (Config.phobos)
-			FMLCommonHandler.instance().bus().register(new PhobosHandlerClient());
-		if (Config.triton)
-			FMLCommonHandler.instance().bus().register(new TritonHandlerClient());
-		if (Config.rhea)
-			FMLCommonHandler.instance().bus().register(new RheaHandlerClient());
-		if (Config.titan)
-			FMLCommonHandler.instance().bus().register(new TitanHandlerClient());
+		FMLCommonHandler.instance().bus().register(new SkyProviderHandler());
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}
@@ -187,7 +129,7 @@ public class ClientProxy extends CommonProxy {
 		renderBlocks();
 		renderItems();
 		registerTileEntityRenderers();
-        RenderingRegistry.registerEntityRenderingHandler(EntityPlayer.class, new RenderPlayerExtraPlanets());
+		RenderingRegistry.registerEntityRenderingHandler(EntityPlayer.class, new RenderPlayerExtraPlanets());
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -208,7 +150,7 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
 		if (Config.pluto)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, new RenderCreeperBossPluto());
-		
+
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCube.class, new RenderEvolvedMagmaCube());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlime.class, new RenderEvolvedIceSlime(new ModelEvolvedIceSlime(16), new ModelEvolvedIceSlime(0), 0.25F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedWitch.class, new RenderEvolvedWitch());
@@ -256,11 +198,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "tier9rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
 		}
-		if (Config.eris) {
+		/*if (Config.eris) {
 			IModelCustom rocketModelTier10 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "tier10rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier10Rocket, new ItemRendererTier10Rocket(rocketModelTier10));
-		}
+		}*/
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -319,12 +261,12 @@ public class ClientProxy extends CommonProxy {
 		if (Config.pluto) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
 		}
-		if (Config.eris) {
+		/*if (Config.eris) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT10.png")));
-		}
-        MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
-        MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
-        MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
+		}*/
+		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
+		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
+		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
 	}
 
 	@SideOnly(Side.CLIENT)

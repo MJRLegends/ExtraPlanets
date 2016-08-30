@@ -28,7 +28,7 @@ public class SkyProviderPluto extends IRenderHandler
 {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/eris.png");
 	private static final ResourceLocation overworldTexture2 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX,"textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;

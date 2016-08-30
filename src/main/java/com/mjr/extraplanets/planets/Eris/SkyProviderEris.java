@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Eris;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -26,7 +27,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 public class SkyProviderEris extends IRenderHandler
 {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/pluto.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX,"textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;
