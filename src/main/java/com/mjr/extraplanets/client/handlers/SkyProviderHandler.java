@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client;
+package com.mjr.extraplanets.client.handlers;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
