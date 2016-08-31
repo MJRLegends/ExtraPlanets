@@ -62,15 +62,15 @@ public class ExtraPlanets_Moons {
 		// Saturn Moons
 		iapetus = makeUnreachableMoon("iapetus", ExtraPlanets_Planets.saturn);
 		if (iapetus != null)
-			iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(100.0F);
+			iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(107.1425462429542F);
 
 		// Uranus Moons
 		titania = makeUnreachableMoon("titania", ExtraPlanets_Planets.uranus);
 		if (titania != null)
-			titania.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(100.0F);
+			titania.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(38.155821478514518F);
 		oberon = makeUnreachableMoon("oberon", ExtraPlanets_Planets.uranus);
 		if (oberon != null)
-			oberon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(100.0F);
+			oberon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(68.5411941552618F);
 	}
 
 	private static void initializeMoons() {
@@ -78,84 +78,85 @@ public class ExtraPlanets_Moons {
 			triton = new Moon("triton").setParentPlanet(ExtraPlanets_Planets.neptune);
 			triton.setPhaseShift(2.436F);
 			triton.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-			triton.setRelativeOrbitTime(100.0F);
+			triton.setRelativeOrbitTime(75.0F);
 			triton.setTierRequired(7);
 			triton.setRelativeSize(0.3867F);
 			triton.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			triton.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/triton.png"));
 			triton.setDimensionInfo(Config.tritonID, WorldProviderTriton.class);
 		}
-		if (Config.europa) {
-			europa = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.jupiter);
-			europa.setPhaseShift(2.436F);
-			europa.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
-			europa.setRelativeOrbitTime(100.0F);
-			europa.setTierRequired(4);
-			europa.setRelativeSize(0.3867F);
-			europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			europa.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
-			europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
-		}
-		if (Config.io) {
-			io = new Moon("io").setParentPlanet(ExtraPlanets_Planets.jupiter);
-			io.setPhaseShift(2.436F);
-			io.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-			io.setRelativeOrbitTime(100.0F);
-			io.setTierRequired(4);
-			io.setRelativeSize(0.3867F);
-			io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			io.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
-			io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
-		}
-		if (Config.deimos) {
-			deimos = new Moon("deimos").setParentPlanet(MarsModule.planetMars);
-			deimos.setPhaseShift(2.436F);
-			deimos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
-			deimos.setRelativeOrbitTime(100.0F);
-			deimos.setTierRequired(2);
-			deimos.setRelativeSize(0.3867F);
-			deimos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			deimos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/deimos.png"));
-			deimos.setDimensionInfo(Config.deimosID, WorldProviderDeimos.class);
-		}
 		if (Config.phobos) {
 			phobos = new Moon("phobos").setParentPlanet(MarsModule.planetMars);
 			phobos.setPhaseShift(2.436F);
 			phobos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-			phobos.setRelativeOrbitTime(100.0F);
+			phobos.setRelativeOrbitTime(25.5785754286855436F);
 			phobos.setTierRequired(2);
 			phobos.setRelativeSize(0.3867F);
 			phobos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			phobos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/phobos.png"));
 			phobos.setDimensionInfo(Config.phobosID, WorldProviderPhobos.class);
 		}
-		if (Config.callisto) {
-			callisto = new Moon("callisto").setParentPlanet(ExtraPlanets_Planets.jupiter);
-			callisto.setPhaseShift(2.436F);
-			callisto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F));
-			callisto.setRelativeOrbitTime(100.0F);
-			callisto.setTierRequired(4);
-			callisto.setRelativeSize(0.3867F);
-			callisto.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			callisto.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/callisto.png"));
-			callisto.setDimensionInfo(Config.callistoID, WorldProviderCallisto.class);
+		if (Config.deimos) {
+			deimos = new Moon("deimos").setParentPlanet(MarsModule.planetMars);
+			deimos.setPhaseShift(2.436F);
+			deimos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
+			deimos.setRelativeOrbitTime(57.415456589452485548F);
+			deimos.setTierRequired(2);
+			deimos.setRelativeSize(0.3867F);
+			deimos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			deimos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/deimos.png"));
+			deimos.setDimensionInfo(Config.deimosID, WorldProviderDeimos.class);
 		}
+		if (Config.io) {
+			io = new Moon("io").setParentPlanet(ExtraPlanets_Planets.jupiter);
+			io.setPhaseShift(2.436F);
+			io.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
+			io.setRelativeOrbitTime(43.59976842345364536F);
+			io.setTierRequired(4);
+			io.setRelativeSize(0.3867F);
+			io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			io.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
+			io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
+		}		
+		if (Config.europa) {
+			europa = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.jupiter);
+			europa.setPhaseShift(2.436F);
+			europa.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
+			europa.setRelativeOrbitTime(87.55354354345685345F);
+			europa.setTierRequired(4);
+			europa.setRelativeSize(0.3867F);
+			europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			europa.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
+			europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
+		}		
+
 		if (Config.ganymede) {
 			ganymede = new Moon("ganymede").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			ganymede.setPhaseShift(2.436F);
 			ganymede.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
-			ganymede.setRelativeOrbitTime(100.0F);
+			ganymede.setRelativeOrbitTime(123.252594612756974F);
 			ganymede.setTierRequired(4);
 			ganymede.setRelativeSize(0.3867F);
 			ganymede.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			ganymede.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/ganymede.png"));
 			ganymede.setDimensionInfo(Config.ganymedeID, WorldProviderGanymede.class);
 		}
+		if (Config.callisto) {
+			callisto = new Moon("callisto").setParentPlanet(ExtraPlanets_Planets.jupiter);
+			callisto.setPhaseShift(2.436F);
+			callisto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F));
+			callisto.setRelativeOrbitTime(157.84524858485412315F);
+			callisto.setTierRequired(4);
+			callisto.setRelativeSize(0.3867F);
+			callisto.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			callisto.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/callisto.png"));
+			callisto.setDimensionInfo(Config.callistoID, WorldProviderCallisto.class);
+		}
 		if (Config.rhea) {
 			rhea = new Moon("rhea").setParentPlanet(ExtraPlanets_Planets.saturn);
 			rhea.setPhaseShift(1.45F);
 			rhea.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
-			rhea.setRelativeOrbitTime(100.0F);
+			rhea.setRelativeOrbitTime(42.74914745741246F);
 			rhea.setTierRequired(6);
 			rhea.setRelativeSize(0.3867F);
 			rhea.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
@@ -166,7 +167,7 @@ public class ExtraPlanets_Moons {
 			titan = new Moon("titan").setParentPlanet(ExtraPlanets_Planets.saturn);
 			titan.setPhaseShift(1.45F);
 			titan.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
-			titan.setRelativeOrbitTime(100.0F);
+			titan.setRelativeOrbitTime(71.452415154621642F);
 			titan.setTierRequired(6);
 			titan.setRelativeSize(0.3867F);
 			titan.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);

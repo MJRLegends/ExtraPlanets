@@ -91,7 +91,7 @@ public class ExtraPlanets_Planets {
 			ceres.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			ceres.setPhaseShift((float) Math.PI);
 			ceres.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F));
-			ceres.setRelativeOrbitTime(11.861993428258488499452354874042F);
+			ceres.setRelativeOrbitTime((float) 11.861993428258488499452354874042 / 2);
 			ceres.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);
 			ceres.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"));
 			ceres.setDimensionInfo(Config.ceresID, WorldProviderCeres.class);
@@ -146,7 +146,7 @@ public class ExtraPlanets_Planets {
 			pluto.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			pluto.setPhaseShift(1.0F);
 			pluto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F, 2.75F));
-			pluto.setRelativeOrbitTime(164.84118291347207009857612267251F);
+			pluto.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 2));
 			pluto.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
 			pluto.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
 			pluto.setDimensionInfo(Config.plutoID, WorldProviderPluto.class);
@@ -157,7 +157,7 @@ public class ExtraPlanets_Planets {
 			eris.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			eris.setPhaseShift(1.0F);
 			eris.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F, 3.50F));
-			eris.setRelativeOrbitTime(164.84118291347207009857612267251F);
+			eris.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 3));
 			eris.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
 			eris.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			eris.setDimensionInfo(Config.erisID, WorldProviderEris.class);
