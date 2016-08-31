@@ -19,6 +19,8 @@ import net.minecraftforge.client.IRenderHandler;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
+import com.mjr.extraplanets.Constants;
+
 import cpw.mods.fml.client.FMLClientHandler;
 
 
@@ -26,6 +28,8 @@ public class SkyProviderUranus extends IRenderHandler
 {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png");
 	private static final ResourceLocation overworldTexture2 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");
+	private static final ResourceLocation overworldTexture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png");
+	private static final ResourceLocation overworldTexture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX,"textures/gui/planets/orbitalsun.png");
 
 	public int starList;
@@ -231,7 +235,35 @@ public class SkyProviderUranus extends IRenderHandler
 		tessellator1.addVertexWithUV(f10, 100.0D, f10, 1.0D, 1.0D);
 		tessellator1.addVertexWithUV(-f10, 100.0D, f10, 0.0D, 1.0D);
 		tessellator1.draw();
-
+		
+		// Render earth
+		f10 = 5.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture4);
+		tessellator1.startDrawingQuads();
+		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
+		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
+		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
+		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
+		tessellator1.draw();
+		
+		// Render earth
+		f10 = 5.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture3);
+		tessellator1.startDrawingQuads();
+		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
+		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
+		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
+		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
+		tessellator1.draw();
+		
 		// Render earth
 		f10 = 5.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
