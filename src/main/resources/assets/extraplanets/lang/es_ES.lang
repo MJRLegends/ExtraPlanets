@@ -1,0 +1,662 @@
+#Creative Tabs
+itemGroup.SpaceItemsTab=Objetos de Extra Planets
+itemGroup.SpaceBlocksTab=Bloques de Extra Planets
+itemGroup.SpaceToolsTab=Herramientas de Extra Planets
+itemGroup.SpaceArmorTab=Armaduras de Extra Planets
+
+#Solar Systems
+solarsystem.kepler22=Sistema Kepler 22
+solarsystem.kepler47=Sistema Kepler 47
+solarsystem.kepler62=Sistema Kepler 62
+solarsystem.kepler69=Sistema Kepler 69
+
+#Stars
+star.kepler22=Estrella Kepler 22
+star.kepler47=Estrella Kepler 47
+star.kepler62=Estrella Kepler 62
+star.kepler69=Estrella Kepler 69
+
+#Planets
+planet.Mercury=Mercurio
+planet.Venus=Venus
+planet.Ceres=Ceres
+planet.Jupiter=Júpiter
+planet.Saturn=Saturno
+planet.Uranus=Urano
+planet.Neptune=Neptuno
+planet.Pluto=Pluto
+planet.Eris=Eris
+planet.kuiperBelt=Cinturón de Kuiper
+planet.makemake=Makemake
+
+planet.kepler62b=Kepler 62b
+planet.kepler62c=Kepler 62c
+planet.kepler62d=Kepler 62d
+planet.kepler62e=Kepler 62e
+planet.kepler62f=Kepler 62f
+planet.kepler22b=Kepler 22b
+planet.kepler47b=Kepler 47b
+planet.kepler47c=Kepler 47c
+planet.kepler69b=Kepler 69b
+planet.kepler69c=Kepler 69c
+
+#Moons
+moon.triton=Tritón
+moon.callisto=Calisto
+moon.europa=Europa
+moon.ganymede=Ganimedes
+moon.io=Ío
+moon.deimos=Deimos
+moon.phobos=Fobos
+moon.iapetus=Jápeto
+moon.rhea=Rea
+moon.titan=Titán
+moon.oberon=Oberón
+moon.titania=Titania
+
+#Planet Blocks
+tile.mercury.surface.name=Roca Mercuriana Superficial
+tile.mercury.subSurface.name=Roca Mercuriana Subterránea
+tile.mercury.stone.name=Roca Mercuriana
+tile.mercury.oreIron.name=Mena de Hierro Mercuriana
+tile.mercury.oreTin.name=Mena de Estaño Mercuriana
+tile.mercury.oreCopper.name=Mena de Cobre Mercuriana
+tile.mercury.oreMercury.name=Mena de Mercurio
+tile.mercury.stoneBricks.name=Ladrillos de Roca Mercuriana
+tile.mercury.mercuryBlock.name=Bloque de Mercurio
+
+tile.venus.surface.name=Roca Superficial de Venus
+tile.venus.subSurface.name=Roca Subterránea de Venus
+tile.venus.stone.name=Roca de Venus
+tile.venus.oreIron.name=Mena de Hierro de Venus
+tile.venus.oreTin.name=Mena de Estaño de Venus
+tile.venus.oreCopper.name=Mena de Cobre de Venus
+tile.venus.oreCarbon.name=Mena de Carbono
+tile.venus.stoneBricks.name=Ladrillos de Roca de Venus
+tile.venus.carbonBlock.name=Bloque de Carbono
+
+tile.ceres.surface.name=Roca Superficial de Ceres
+tile.ceres.subSurface.name=Roca Subterránea de Ceres
+tile.ceres.stone.name=Roca de Ceres
+tile.ceres.oreIron.name=Mena de Hierro de Ceres
+tile.ceres.oreTin.name=Mena de Estaño de Ceres
+tile.ceres.oreCopper.name=Mena de Cobre de Ceres
+tile.ceres.oreUranium.name=Mena de Uranio de Ceres
+tile.ceres.stoneBricks.name=Ladrillos de Roca de Ceres
+tile.ceres.uraniumBlock.name=Bloque de Uranio
+
+tile.jupiter.surface.name=Roca Superficial de Júpiter
+tile.jupiter.subSurface.name=Roca Subterránea de Júpiter
+tile.jupiter.stone.name=Roca de Júpiter
+tile.jupiter.oreIron.name=Mena de Hierro de Júpiter
+tile.jupiter.oreTin.name=Mena de Estaño de Júpiter
+tile.jupiter.oreCopper.name=Mena de Cobre de Júpiter
+tile.jupiter.orePalladium.name=Mena de Paladio de Júpiter
+tile.jupiter.oreNickel.name=Mena de Níquel de Júpiter
+tile.jupiter.oreRedGem.name=Mena de Gema Roja de Júpiter
+tile.jupiter.stoneBricks.name=Ladrillos de Roca de Júpiter
+tile.jupiter.palladiumBlock.name=Bloque de Paladio
+tile.jupiter.redGemBlock.name=Bloque de Gema Roja
+
+tile.saturn.surface.name=Roca Superficial de Saturno
+tile.saturn.subSurface.name=Roca Subterránea de Saturno
+tile.saturn.stone.name=Roca de Saturno
+tile.saturn.oreIron.name=Mena de Hierro de Saturno
+tile.saturn.oreTin.name=Mena de Estaño de Saturno
+tile.saturn.oreCopper.name=Mena de Cobre de Saturno
+tile.saturn.oreMagnesium.name=Mena de Magnesio de Saturno
+tile.saturn.stoneBricks.name=Ladrillos de Roca de Saturno
+tile.saturn.magnesiumBlock.name=Bloque de Magnesio
+
+tile.uranus.surface.name=Roca Superficial de Urano
+tile.uranus.subSurface.name=Roca Subterránea de Urano
+tile.uranus.stone.name=Roca de Urano
+tile.uranus.oreCrystal.name=Roca Cristal
+tile.uranus.oreWhiteGem.name=Mena de Gema Blanca de Urano
+tile.uranus.stoneBricks.name=Ladrillos de Roca de Urano
+tile.uranus.crystalBlock.name=Bloque de Cristal
+tile.uranus.whiteGemBlock.name=Bloque de Gema Blanca
+
+tile.neptune.surface.name=Roca Superficial de Neptuno
+tile.neptune.subSurface.name=Roca Subterránea de Neptuno
+tile.neptune.stone.name=Roca de Neptuno
+tile.neptune.oreIron.name=Mena de Hierro de Neptuno
+tile.neptune.oreTin.name=Mena de Estaño de Neptuno
+tile.neptune.oreCopper.name=Mena de Cobre de Neptuno
+tile.neptune.oreZinc.name=Mena de Zinc
+tile.neptune.oreBlueGem.name=Mena de Gema Azúl de Neptuno
+tile.neptune.stoneBricks.name=Ladrillos de Piedra de Neptuno
+tile.neptune.zincBlock.name=Bloque de Zinc
+tile.neptune.blueGemBlock.name=Bloque de Gema Azúl
+
+tile.pluto.surface.name=Roca Superficial de Pluto
+tile.pluto.subSurface.name=Roca Subterránea de Pluto
+tile.pluto.stone.name=Roca de Pluto
+tile.pluto.oreIron.name=Mena de Hierro de Pluto
+tile.pluto.oreTin.name=Mena de Estaño de Pluto
+tile.pluto.oreCopper.name=Mena de Cobre de Pluto
+tile.pluto.oreTungsten.name=Mena de Tungsteno de Pluto
+tile.pluto.stoneBricks.name=Ladrillos de Roca de Pluto
+tile.pluto.tungstenBlock.name=Bloque de Tungsteno
+
+tile.eris.surface.name=Roca Superficial de Eris
+tile.eris.subSurface.name=Roca Subterránea de Eris
+tile.eris.stone.name=Roca de Eris
+tile.eris.oreIron.name=Mena de Hierro de Eris
+tile.eris.oreTin.name=Mena de Estaño de Eris
+tile.eris.oreCopper.name=Mena de Cobre de Eris
+tile.eris.stoneBricks.name=Ladrillos de Roca de Eris
+
+#Moon Blocks
+tile.callisto.surface.name=Roca Superficial de Calisto
+tile.callisto.subSurface.name=Roca Subterránea de Calisto
+tile.callisto.stone.name=Roca de Calisto
+tile.callisto.oreIron.name=Mena de Hierro de Calisto
+tile.callisto.oreTin.name=Mena de Estaño de Calisto
+tile.callisto.oreCopper.name=Mena de Cobre de Calisto
+
+tile.deimos.surface.name=Roca Superficial de Deimos
+tile.deimos.subSurface.name=Roca Subterránea de Deimos
+tile.deimos.oreIron.name=Mena de Hierro de Deimos
+tile.deimos.oreTin.name=Mena de Estaño de Deimos
+tile.deimos.oreCopper.name=Mena de Cobre de Deimos
+
+tile.europa.surface.name=Roca Superficial de Europa
+tile.europa.subSurface.name=Roca Subterránea de Europa
+tile.europa.stone.name=Roca de Europa
+tile.europa.oreIron.name=Mena de Hierro de Europa
+tile.europa.oreTin.name=Mena de Estaño de Europa
+tile.europa.oreCopper.name=Mena de Cobre de Europa
+
+tile.io.surface.name=Roca Superficial de Ío
+tile.io.subSurface.name=Roca Subterránea de Ío
+tile.io.stone.name=Roca de Ío
+tile.io.oreIron.name=Mena de Hierro de Ío
+tile.io.oreTin.name=Mena de Estaño de Ío
+tile.io.oreCopper.name=Mena de Cobre de Ío
+
+tile.phobos.surface.name=Roca Superficial de Fobos
+tile.phobos.subSurface.name=Roca Subterránea de Fobos
+tile.phobos.stone.name=Roca de Fobos
+tile.phobos.oreIron.name=Mena de Hierro de Fobos
+tile.phobos.oreTin.name=Mena de Estaño de Fobos
+tile.phobos.oreCopper.name=Mena de Cobre de Fobos
+
+tile.triton.surface.name=Roca Superficial de Tritón
+tile.triton.subSurface.name=Roca Subterránea de Tritón
+tile.triton.stone.name=Roca de Tritón
+tile.triton.oreIron.name=Mena de Hierro de Tritón
+tile.triton.oreTin.name=Mena de Estaño de Tritón
+tile.triton.oreCopper.name=Mena de Cobre de Tritón
+
+tile.ganymede.surface.name=Roca Superficial de Ganimedes
+tile.ganymede.subSurface.name=Roca Subterránea de Ganimedes
+tile.ganymede.stone.name=Roca de Ganimedes
+tile.ganymede.oreIron.name=Mena de Hierro de Ganimedes
+tile.ganymede.oreTin.name=Mena de Estaño de Ganimedes
+tile.ganymede.oreCopper.name=Mena de Cobre de Ganimedes
+
+tile.rhea.surface.name=Roca Superficial de Rea
+tile.rhea.subSurface.name=Roca Subterránea de Rea
+tile.rhea.stone.name=Roca de Rea
+tile.rhea.oreIron.name=Mena de Hierro de Rea
+tile.rhea.oreTin.name=Mena de Estaño de Rea
+tile.rhea.oreCopper.name=Mena de Cobre de Rea
+
+tile.titan.surface.name=Roca Superficial de Titán
+tile.titan.subSurface.name=Roca Subterránea de Titán
+tile.titan.stone.name=Roca de Titán
+tile.titan.oreIron.name=Mena de Hierro de Titán
+tile.titan.oreTin.name=Mena de Estaño de Titán
+tile.titan.oreCopper.name=Mena de Cobre de Titán
+
+#Planet Gravel Blocks
+tile.mercuryGravel.name=Grava de Mercurio
+tile.ceresGravel.name=Grava de Ceres
+tile.plutoGravel.name=Grava de Pluto
+tile.erisGravel.name=Grava de Eris
+tile.ioGravel.name=Grava de Ío
+tile.europaGravel.name=Grava de Europa
+tile.deimosGravel.name=Grava de Deimos
+tile.phobosGravel.name=Grava de Fobos
+tile.tritonGravel.name=Grava de Tritón
+tile.callistoGravel.name=Grava de Calisto
+tile.ganymedeGravel.name=Grava de Ganimedes
+tile.rheaGravel.name=Grava de Rea
+tile.titanGravel.name=Grava de Titán
+
+tile.venusGravel.name=Grava de Venus
+tile.jupiterGravel.name=Grava de Júpiter
+tile.saturnGravel.name=Grava de Saturno
+tile.uranusGravel.name=Grava de Urano
+tile.neptuneGravel.name=Grava de Neptuno
+
+#Dungeon Bricks
+tile.veunsDungeonBrick.name=Venus Dungeon Brick
+tile.jupiterDungeonBrick.name=Jupiter Dungeon Brick
+tile.saturnDungeonBrick.name=Saturn Dungeon Brick
+tile.uranusDungeonBrick.name=Uranus Dungeon Brick
+tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
+tile.plutoDungeonBrick.name=Pluto Dungeon Brick
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Losa de Roca Mercuriana
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Losa de Roca de Venus
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Losa de Roca de Ceres
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Losa de Roca de Júpiter
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Losa de Roca de Saturno
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Losa de Roca de Urano
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Losa de Roca de Neptuno
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Losa de Roca de Pluto
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Losa de Roca de Eris
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=Escaleras de Mercurio
+tile.venusStoneStairs.name=Escaleras de Venus
+tile.ceresStoneStairs.name=Escaleras de Ceres
+tile.jupiterStoneStairs.name=Escaleras de Júpiter
+tile.saturnStoneStairs.name=Escaleras de Saturno
+tile.uranusStoneStairs.name=Escaleras de Urano
+tile.neptuneStoneStairs.name=Escaleras de Neptuno
+tile.plutoStoneStairs.name=Escaleras de Pluto
+tile.erisStoneStairs.name=Escaleras de Eris
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Venus
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Júpiter
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Saturno
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Urano
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Neptuno
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Venus
+tile.jupiterDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Júpiter
+tile.saturnDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Saturno
+tile.uranusDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Urano
+tile.neptuneDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Neptuno
+
+#Treasure Chests
+tile.treasureChestT4.name=Cofre del tesoro nivel 4
+tile.treasureChestT5.name=Cofre del tesoro nivel 5
+tile.treasureChestT6.name=Cofre del tesoro nivel 6
+tile.treasureChestT7.name=Cofre del tesoro nivel 7
+tile.treasureChestT8.name=Cofre del tesoro nivel 8
+tile.treasureChestT9.name=Cofre del tesoro nivel 9
+tile.treasureChestT4.description=Los cofres del tesoro nivel 4 se generarán en las mazmorras de Venus. Se desbloquean despues de matar al jefe final.
+tile.treasureChestT5.description=Los cofres del tesoro nivel 5 se generarán en las mazmorras de Júpiter. Se desbloquean despues de matar al jefe final.
+tile.treasureChestT6.description=Los cofres del tesoro nivel 6 se generarán en las mazmorras de Saturno. Se desbloquean despues de matar al jefe final.
+tile.treasureChestT7.description=Los cofres del tesoro nivel 7 se generarán en las mazmorras de Urano. Se desbloquean despues de matar al jefe final.
+tile.treasureChestT8.description=Los cofres del tesoro nivel 8 se generarán en las mazmorras de Neptuno. Se desbloquean despues de matar al jefe final.
+tile.treasureChestT9.description=Los cofres del tesoro nivel 9 se generarán en las mazmorras de Pluto. Se desbloquean despues de matar al jefe final.
+
+#Machines
+tile.advancedRefinery.name=Refinería Avanzada
+tile.solar.hybrid.name=Panel Solar Híbrido
+tile.solar.ultimate.name=Panel Solar Definitivo
+tile.solarhybrid.description=Este Panel Solar trabajará durante el día y la noche
+tile.solarultimate.description=Este Panel Solar trabajará durante el día y la noche
+container.solarhybrid.name=Panel Solar Híbrido
+container.solarultimate.name=Panel Solar Definitivo
+
+#Other Blocks
+tile.nuclearBomb.name=Bomba nuclear
+tile.volcanicRock.name=Roca volcánica
+tile.frozenNitrogen.name=Nitrógeno congelado
+tile.denseIce.name=Hielo denso
+tile.fossil.name=Bloque fósil
+
+#Rocket Items
+item.itemTier4Rocket.t4Rocket.name=Cohete nivel 4
+item.itemTier5Rocket.t5Rocket.name=Cohete nivel 5
+item.itemTier6Rocket.t6Rocket.name=Cohete nivel 6
+item.itemTier7Rocket.t7Rocket.name=Cohete nivel 7
+item.itemTier8Rocket.t8Rocket.name=Cohete nivel 8
+item.itemTier9Rocket.t9Rocket.name=Cohete nivel 9
+
+#Rocket Tiered Items
+item.noseConeTier4.name=Ojiva nivel 4
+item.noseConeTier5.name=Ojiva nivel 5
+item.noseConeTier6.name=Ojiva nivel 6
+item.noseConeTier7.name=Ojiva nivel 7
+item.noseConeTier8.name=Ojiva nivel 8
+item.noseConeTier9.name=Ojiva nivel 9
+
+item.tier4.tier4Fin.name=Aletas de cohete nivel 4
+item.tier5.tier5Fin.name=Aletas de cohete nivel 5
+item.tier6.tier6Fin.name=Aletas de cohete nivel 6
+item.tier7.tier7Fin.name=Aletas de cohete nivel 7
+item.tier8.tier8Fin.name=Aletas de cohete nivel 8
+item.tier9.tier9Fin.name=Aletas de cohete nivel 9
+
+item.tier4.tier4engine.name=Motor de coehte nivel 4
+item.tier5.tier5engine.name=Motor de coehte nivel 5
+item.tier6.tier6engine.name=Motor de coehte nivel 6
+item.tier7.tier7engine.name=Motor de coehte nivel 7
+item.tier8.tier8engine.name=Motor de coehte nivel 8
+item.tier9.tier9engine.name=Motor de coehte nivel 9
+
+item.tier4.tier4booster.name=Acelerador nivel 4
+item.tier5.tier5booster.name=Acelerador nivel 5
+item.tier6.tier6booster.name=Acelerador nivel 6
+item.tier7.tier7booster.name=Acelerador nivel 7
+item.tier8.tier8booster.name=Acelerador nivel 8
+item.tier9.tier9booster.name=Acelerador nivel 9
+
+item.tier4.tier4HeavyDutyPlate.name=Placa de alta resistencia
+item.tier5.tier5HeavyDutyPlate.name=Placa de alta resistencia
+item.tier6.tier6HeavyDutyPlate.name=Placa de alta resistencia
+item.tier7.tier7HeavyDutyPlate.name=Placa de alta resistencia
+item.tier8.tier8HeavyDutyPlate.name=Placa de alta resistencia
+item.tier9.tier9HeavyDutyPlate.name=Placa de alta resistencia
+
+tier4.heavyDutyPlate.name=nivel 4
+tier5.heavyDutyPlate.name=nivel 5
+tier6.heavyDutyPlate.name=nivel 6
+tier7.heavyDutyPlate.name=nivel 7
+tier8.heavyDutyPlate.name=nivel 8
+tier9.heavyDutyPlate.name=nivel 9
+
+#Compressed Items
+item.tier4.compressedCarbon.name=Carbono comprimido
+item.tier5.compressedPalladium.name=Paladio comprimido
+item.tier6.compressedMagnesium.name=Magnesio comprimido
+item.tier7.compressedReinforcedCrystal.name=Cristal reforzado comprimido
+item.tier7.compressedCrystal.name=Cristal comprimido
+item.tier8.compressedZinc.name=Zinc comprimido
+item.tier5.compressedNickel.name=Estaño comprimido
+item.compressedMercury.name=Mercurio comprimido
+item.tier9.compressedTungsten.name=Tungsteno comprimido
+
+#Ingots
+item.tier4.ingotCarbon.name=Lingote de carbono
+item.tier5.ingotPalladium.name=Lingote de paladio
+item.tier6.ingotMagnesium.name=Lingote de magnesio
+item.tier7.ingotCrystal.name=Lingore de cristal
+item.tier8.ingotZinc.name=Lingote de zinc
+item.tier5.ingotNickel.name=Lingote de estaño
+item.ingotMercury.name=Lingote mercuriano
+item.ingotUranium.name=Lingore de uranio
+item.tier9.ingotTungsten.name=Lingote de tungsteno
+
+#Gems
+item.tier5.redGem.name=Gema roja
+item.tier8.blueGem.name=Gema azúl
+item.tier7.whiteGem.name=Gema blanca
+
+#Wafers
+item.wafer.diamond.name=Oblea de diamante
+item.wafer.carbon.name=Oblea de carbono
+item.wafer.titanium.name=Oblea de titanio
+item.wafer.redGem.name=Oblea de gema roja
+item.wafer.blueGem.name=Oblea de gema azúl
+item.wafer.whiteGem.name=Oblea de gema blanca
+
+#Buckets
+item.bucket_glowstone.name=Cubeta de piedra luminosa
+item.bucket_salt.name=Cubeta de sal
+item.bucket_magma.name=Cubeta de magma
+item.bucket_frozen_water.name=Cubeta de agua congelada
+item.bucket_nitrogen.name=Cubeta de nitrógeno
+
+#Keys
+item.key.T4.name=Llave de mazmorra nivel 4
+item.key.T5.name=Llave de mazmorra nivel 5
+item.key.T6.name=Llave de mazmorra nivel 6
+item.key.T7.name=Llave de mazmorra nivel 7
+item.key.T8.name=Llave de mazmorra nivel 8
+item.key.T9.name=Llave de mazmorra nivel 9
+
+#Tools
+item.carbonPickaxe.name=Pico de carbono
+item.carbonAxe.name=Hacha de carbono
+item.carbonSword.name=Espada de carbono
+item.carbonHoe.name=Azada de carbono
+item.carbonShovel.name=Pala de carbono
+item.palladiumPickaxe.name=Pico de paladio
+item.palladiumAxe.name=Hacha de paladio
+item.palladiumSword.name=Espada de paladio
+item.palladiumHoe.name=Azada de paladio
+item.palladiumShovel.name=Pala de paladio
+item.magnesiumPickaxe.name=Pico de magnesio
+item.magnesiumAxe.name=Hacha de magnesio
+item.magnesiumSword.name=Espada de magnesio
+item.magnesiumHoe.name=Azada de magnesio
+item.magnesiumShovel.name=Pala de magnesio
+item.crystalPickaxe.name=Pico de cristal
+item.crystalAxe.name=Hacha de cristal
+item.crystalSword.name=Espada de cristal
+item.crystalHoe.name=Azada de cristal
+item.crystalShovel.name=Pala de cristal
+item.tungstenPickaxe.name=Pico de tungsteno
+item.tungstenAxe.name=Hacha de tungsteno
+item.tungstenSword.name=Espada de tungsteno
+item.tungstenHoe.name=Azada de tungsteno
+item.tungstenShovel.name=Pala de tungsteno
+item.redGemPickaxe.name=Pico de gema roja
+item.redGemAxe.name=Hacha de gema roja
+item.redGemSword.name=Espada de gema roja
+item.redGemHoe.name=Azada de gema roja
+item.redGemShovel.name=Pala de gema roja
+item.blueGemPickaxe.name=Pico de gema azúl
+item.blueGemAxe.name=Hacha de gema azúl
+item.blueGemSword.name=Espada de gema azúl
+item.blueGemHoe.name=Azada de gema azúl
+item.blueGemShovel.name=Pala de gema azúl
+item.whiteGemPickaxe.name=Pico de gema blanca
+item.whiteGemAxe.name=Hacha de gema blanca
+item.whiteGemSword.name=Espada de gema blanca
+item.whiteGemHoe.name=Azada de gema blanca
+item.whiteGemShovel.name=Pala de gema blanca
+item.mercuryPickaxe.name=Pico de mercurio
+item.mercuryAxe.name=Hacha de mercurio
+item.mercurySword.name=Espada de mercurio
+item.mercuryHoe.name=Azada de mercurio
+item.mercuryShovel.name=Pala de mercurio
+item.zincPickaxe.name=Pico de zinc
+item.zincAxe.name=Hacha de zinc
+item.zincSword.name=Espada de zinc
+item.zincHoe.name=Azada de zinc
+item.zincShovel.name=Pala de zinc
+item.uraniumPickaxe.name=Pico de uranio
+item.uraniumAxe.name=Hacha de uranio
+item.uraniumSword.name=Espada de uranio
+item.uraniumHoe.name=Azada de uranio
+item.uraniumShovel.name=Pala de uranio
+
+#Schematics
+item.schematicTier4.name=Planos
+item.schematicTier5.name=Planos
+item.schematicTier6.name=Planos
+item.schematicTier7.name=Planos
+item.schematicTier8.name=Planos
+item.schematicTier9.name=Planos
+
+schematic.tier4.rocket.name=Cohete nivel 4
+schematic.tier5.rocket.name=Cohete nivel 5
+schematic.tier6.rocket.name=Cohete nivel 6
+schematic.tier7.rocket.name=Cohete nivel 7
+schematic.tier8.rocket.name=Cohete nivel 8
+schematic.tier9.rocket.name=Cohete nivel 9
+
+schematic.rocketT4.name=Cohete nivel 4
+schematic.rocketT5.name=Cohete nivel 5
+schematic.rocketT6.name=Cohete nivel 6
+schematic.rocketT7.name=Cohete nivel 7
+schematic.rocketT8.name=Cohete nivel 8
+schematic.rocketT9.name=Cohete nivel 9
+
+#Batteries
+item.mercuryBattery.name=Batería de mercurio
+item.nickelBattery.name=Batería de estaño
+item.zincBattery.name=Batería de zinc
+item.advancedBattery.name=Batería avanzada
+item.ultimateBattery.name=Batería definitiva
+
+#Armor
+item.carbonHelmet.name=Casco de carbono
+item.carbonChest.name=Peto de carbono
+item.carbonLegings.name=Grebas de carbono
+item.carbonBoots.name=Botas de carbono
+item.palladiumHelmet.name=Casco de paladio
+item.palladiumChest.name=Peto de paladio
+item.palladiumLegings.name=Grebas de paladio
+item.palladiumBoots.name=Botas de paladio
+item.magnesiumHelmet.name=Casco de magnesio
+item.magnesiumChest.name=Peto de magnesio
+item.magnesiumLegings.name=Grebas de magnesio
+item.magnesiumBoots.name=Botas de magnesio
+item.crystalHelmet.name=Casco de cristal
+item.crystalChest.name=Peto de cristal
+item.crystalLegings.name=Grebas de cristal
+item.crystalBoots.name=Botas de cristal
+item.redGemHelmet.name=Casco de gema roja
+item.redGemChest.name=Peto de gema roja
+item.redGemLegings.name=Grebas de gema roja
+item.redGemBoots.name=Botas de gema roja
+item.blueGemHelmet.name=Casco de gema azúl
+item.blueGemChest.name=Peto de gema azúl
+item.blueGemLegings.name=Grebas de gema azúl
+item.blueGemBoots.name=Botas de gema azúl
+item.whiteGemHelmet.name=Casco de gema blanca
+item.whiteGemChest.name=Peto de gema blanca
+item.whiteGemLegings.name=Grebas de gema blanca
+item.whiteGemBoots.name=Botas de gema blanca
+item.mercuryHelmet.name=Casco de mercurio
+item.mercuryChest.name=Peto de mercurio
+item.mercuryLegings.name=Grebas de mercurio
+item.mercuryBoots.name=Botas de mercurio
+item.uraniumHelmet.name=Casco de uranio
+item.uraniumChest.name=Peto de uranio
+item.uraniumLegings.name=Grebas de uranio
+item.uraniumBoots.name=Botas de uranio
+item.zincHelmet.name=Casco de zinc
+item.zincChest.name=Peto de zinc
+item.zincLegings.name=Grebas de zinc
+item.zincBoots.name=Botas de zinc
+item.tungstenHelmet.name=Casco de tungsteno
+item.tungstenChest.name=Peto de tungsteno
+item.tungstenLegings.name=Grebas de tungsteno
+item.tungstenBoots.name=Botas de tungsteno
+
+item.tier2ThermalHelm.name=Gorro térmico nivel 2
+item.tier2ThermalChestplate.name=Suéter térmico nivel 2
+item.tier2ThermalLeggings.name=Leggings térmicos nivel 2
+item.tier2ThermalBoots.name=Calcetines térmicos nivel 2
+
+item.tier3ThermalHelm.name=Gorro térmico nivel 3
+item.tier3ThermalChestplate.name=Suéter térmico nivel 2
+item.tier3ThermalLeggings.name=Leggings térmicos nivel 2
+item.tier3ThermalBoots.name=Calcetines térmicos nivel 2
+
+item.tier4ThermalHelm.name=Gorro térmico nivel 4
+item.tier4ThermalChestplate.name=Suéter térmico nivel 2
+item.tier4ThermalLeggings.name=Leggings térmicos nivel 2
+item.tier4ThermalBoots.name=Calcetines térmicos nivel 2
+
+tier2.information=Requerido para Venus y Mercurio durante el día y la noche
+tier3.information=Requerido para Júptier y Saturno incluyendo sus lunas durante el día y la noche
+tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas durante el día y la noche
+
+#Other Items
+item.appleDiamond.name=Manzana de diamante
+item.cannedfood.cannedFood.name=Lata de comida
+item.bodyparts.arm.name=Brazo
+item.bodyparts.leg.name=Pierna
+
+item.cannedfood.dehydratedPorkchop.name=Chuletas de cerdo deshidratadas
+item.cannedfood.dehydratedFish.name=Pescados deshidratados
+item.cannedfood.dehydratedSalmon.name=Salmones deshidratados
+item.cannedfood.dehydratedChicken.name=Pollos deshidratados
+item.cannedfood.dehydratedBeef.name=Filetes deshidratados
+
+#Entities
+entity.ProjectileTNT.name=Projectíl de TNT
+
+entity.ExtraPlanets.EntityTier4Rocket.name=Cohete nivel 4
+entity.ExtraPlanets.EntityTier5Rocket.name=Cohete nivel 5
+entity.ExtraPlanets.EntityTier6Rocket.name=Cohete nivel 6
+entity.ExtraPlanets.EntityTier7Rocket.name=Cohete nivel 7
+entity.ExtraPlanets.EntityTier8Rocket.name=Cohete nivel 8
+entity.ExtraPlanets.EntityTier9Rocket.name=Cohete nivel 9
+
+entity.ExtraPlanetsCreeperBossVenus.name=Jefe creeper evolucionado de Venus
+entity.ExtraPlanetsCreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter
+entity.ExtraPlanetsCreeperBossSaturn.name=Jefe creeper evolucionado de Saturno
+entity.ExtraPlanetsCreeperBossUranus.name=Jefe creeper evolucionado de Urano
+entity.ExtraPlanetsCreeperBossNeptune.name=Jefe creeper evolucionado de Neptuno
+entity.ExtraPlanetsCreeperBossPluto.name=Jefe creeper evolucionado de Pluto
+
+entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
+entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
+
+entity.ExtraPlanetsEvolvedWitch.name=Bruja evolucionada
+entity.ExtraPlanetsEvolvedMagmaCube.name=Slime magmático evolucionado
+entity.ExtraPlanetsEvolvedIceSlime.name=Slime de hielo evolucionado
+entity.ExtraPlanetsEvolvedEnderman.name=Enderman evolucionado
+entity.ExtraPlanetsEvolvedBlaze.name=Blaze evolucionado
+entity.ExtraPlanetsEvolvedBlueCreeper.name=Creeper azúl evolucionado
+entity.ExtraPlanetsEvolvedRedCreeper.name=Creeper rojo evolucionado
+entity.ExtraPlanetsEvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
+
+#Achievements
+achievement.mercuryPlanet=¡Aterriza en Mercurio!
+achievement.venusPlanet=¡Aterriza en Venus!
+achievement.ceresPlanet=¡Aterriza en Ceres!
+achievement.jupiterPlanet=¡Aterriza en Júpiter!
+achievement.saturnPlanet=¡Aterriza en Saturn!
+achievement.uranusPlanet=¡Aterriza en Urano!
+achievement.neptunePlanet=¡Aterriza en Neptuno!
+achievement.plutoPlanet=¡Aterriza en Pluto!
+achievement.erisPlanet=¡Aterriza en Eris!
+
+achievement.mercuryPlanet.desc=Toma un a cohete nivel 4 a Mercurio
+achievement.venusPlanet.desc=Toma un a cohete nivel 3 a Venus
+achievement.ceresPlanet.desc=Toma un a cohete nivel 4 a Ceres
+achievement.jupiterPlanet.desc=Toma un a cohete nivel 4 a Júpiter
+achievement.saturnPlanet.desc=Toma un a cohete nivel 5 a Saturno
+achievement.uranusPlanet.desc=Toma un a cohete nivel 6 a Urano
+achievement.neptunePlanet.desc=Toma un a cohete nivel 7 a Neptuno
+achievement.plutoPlanet.desc=Toma un a cohete nivel 8 a Pluto
+achievement.erisPlanet.desc=Toma un a cohete nivel 8 a Eris
+
+achievement.venusBoss=¡Jefe nivel 4 derrotado!
+achievement.jupiterBoss=¡Jefe nivel 5 derrotado!
+achievement.saturnBoss=¡Jefe nivel 6 derrotado!
+achievement.uranusBoss=¡Jefe nivel 7 derrotado!
+achievement.neptuneBoss=¡Jefe nivel 8 derrotado!
+achievement.plutoBoss=¡Jefe nivel 9 derrotado!
+
+achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus
+achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter
+achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno
+achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano
+achievement.neptuneBoss.desc=Mata al jefe de la mazmorra de Neptuno
+achievement.plutoBoss.desc=Mata al jefe de la mazmorra de Pluto
+
+achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus y abre el cofre del tesoro
+achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter y abre el cofre del tesoro
+achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno y abre el cofre del tesoro
+achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano y abre el cofre del tesoro
+achievement.neptuneBoss.desc=Mata al jefe de la mazmorra de Neptuno y abre el cofre del tesoro
+achievement.plutoBoss.desc=Mata al jefe de la mazmorra de Pluto y abre el cofre del tesoro
+
+achievement.craftRocket4=¡Cohete nivel 4!
+achievement.craftRocket5=¡Cohete nivel 5!
+achievement.craftRocket6=¡Cohete nivel 6!
+achievement.craftRocket7=¡Cohete nivel 7!
+achievement.craftRocket8=¡Cohete nivel 8!
+achievement.craftRocket9=¡Cohete nivel 9!
+
+achievement.craftRocket4.desc=Crea un cohete nivel 4
+achievement.craftRocket5.desc=Crea un cohete nivel 5
+achievement.craftRocket6.desc=Crea un cohete nivel 6
+achievement.craftRocket7.desc=Crea un cohete nivel 7
+achievement.craftRocket8.desc=Crea un cohete nivel 8
+achievement.craftRocket9.desc=Crea un cohete nivel 9
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=Piedra luminosa líquida
+tile.magma_fluid.name=Magma líquido
+tile.nitrogen_fluid.name=Nitrógeno líquido 
+tile.frozen_water_fluid.name=Agua Congelada
+tile.salt_fluid.name=Sal líquida
