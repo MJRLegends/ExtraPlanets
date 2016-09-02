@@ -169,12 +169,12 @@ tile.europa.oreIron.name=Europa Iron Ore
 tile.europa.oreTin.name=Europa Tin Ore
 tile.europa.oreCopper.name=Europa Copper Ore
 
-tile.io.surface.name=IO Surface Rock
-tile.io.subSurface.name=IO Sub-Surface Rock
-tile.io.stone.name=IO Stone
-tile.io.oreIron.name=IO Iron Ore
-tile.io.oreTin.name=IO Tin Ore
-tile.io.oreCopper.name=IO Copper Ore
+tile.io.surface.name=Io Surface Rock
+tile.io.subSurface.name=Io Sub-Surface Rock
+tile.io.stone.name=Io Stone
+tile.io.oreIron.name=Io Iron Ore
+tile.io.oreTin.name=Io Tin Ore
+tile.io.oreCopper.name=Io Copper Ore
 
 tile.phobos.surface.name=Phobos Surface Rock
 tile.phobos.subSurface.name=Phobos Sub-Surface Rock
@@ -216,7 +216,7 @@ tile.mercuryGravel.name=Mercury Gravel
 tile.ceresGravel.name=Ceres Gravel
 tile.plutoGravel.name=Pluto Gravel
 tile.erisGravel.name=Eris Gravel
-tile.ioGravel.name=IO Gravel
+tile.ioGravel.name=Io Gravel
 tile.europaGravel.name=Europa Gravel
 tile.deimosGravel.name=Deimos Gravel
 tile.phobosGravel.name=Phobos Gravel
@@ -643,9 +643,9 @@ achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Che
 
 achievement.craftRocket4=Tier 4 Rocket!
 achievement.craftRocket5=Tier 5 Rocket!
-achievement.craftRocket7=Tier 6 Rocket!
-achievement.craftRocket8=Tier 7 Rocket!
-achievement.craftRocket9=Tier 8 Rocket!
+achievement.craftRocket6=Tier 6 Rocket!
+achievement.craftRocket7=Tier 7 Rocket!
+achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket
