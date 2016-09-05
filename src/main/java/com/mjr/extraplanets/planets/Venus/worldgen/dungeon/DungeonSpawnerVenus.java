@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Venus.worldgen.dungeon;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -52,7 +54,10 @@ public class DungeonSpawnerVenus extends Block{
 	@Override
 	public TileEntity createTileEntity(World world, int metadata)
 	{
-		return new TileEntityDungeonSpawnerVenus();
+		if(Config.useDefaultBosses)
+			return new TileEntityDungeonSpawnerVenusDefault();
+		else
+			return new TileEntityDungeonSpawnerVenus();
 	}
 
 	@Override

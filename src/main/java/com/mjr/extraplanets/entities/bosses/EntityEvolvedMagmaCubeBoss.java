@@ -30,8 +30,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -39,7 +37,7 @@ import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 
-public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBreathable, IBossDisplayData, IBoss{
+public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBreathable, IBossDisplayData, IBoss {
 	public int deathTicks = 0;
 
 	public float squishAmount;
@@ -234,48 +232,40 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 		return new EntityEvolvedMagmaCubeBoss(this.worldObj);
 	}
 
-
 	@Override
-	public void onLivingUpdate()
-	{
+	public void onLivingUpdate() {
 		final EntityPlayer player = this.worldObj.getClosestPlayer(this.posX, this.posY, this.posZ, 20.0);
 
-		if (player != null && !player.equals(this.targetEntity))
-		{
-			if (this.getDistanceSqToEntity(player) < 400.0D)
-			{
+		if (player != null && !player.equals(this.targetEntity)) {
+			if (this.getDistanceSqToEntity(player) < 400.0D) {
 				this.getNavigator().getPathToEntityLiving(player);
 				this.targetEntity = player;
 			}
-		}
-		else
-		{
+		} else {
 			this.targetEntity = null;
 		}
 
 		new Vector3(this);
 
-		if (this.roomCoords != null && this.roomSize != null)
-		{
+		if (this.roomCoords != null && this.roomSize != null) {
 			@SuppressWarnings("unchecked")
-			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ() + this.roomSize.intZ()));
+			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class,
+					AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ() + this.roomSize.intZ()));
 
 			this.entitiesWithin = entitiesWithin.size();
 
-			if (this.entitiesWithin == 0 && this.entitiesWithinLast != 0)
-			{
+			if (this.entitiesWithin == 0 && this.entitiesWithinLast != 0) {
 				@SuppressWarnings("unchecked")
-				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX() + this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
+				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class,
+						AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX() + this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
 
-				for (EntityPlayer p : entitiesWithin2)
-				{
+				for (EntityPlayer p : entitiesWithin2) {
 					p.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.skeletonBoss.message")));
 				}
 
 				this.setDead();
 
-				if (this.spawner != null)
-				{
+				if (this.spawner != null) {
 					this.spawner.playerCheated = true;
 				}
 
@@ -455,6 +445,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 	protected Item getDropItem() {
 		return this.getSlimeSize() == 1 ? Items.slime_ball : Item.getItemById(0);
 	}
+
 	/**
 	 * Returns the volume for the sounds this mob makes.
 	 */
@@ -494,15 +485,13 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 	}
 
 	@Override
-	public void setRoom(Vector3 roomCoords, Vector3 roomSize)
-	{
+	public void setRoom(Vector3 roomCoords, Vector3 roomSize) {
 		this.roomCoords = roomCoords;
 		this.roomSize = roomSize;
 	}
 
 	@Override
-	public void onBossSpawned(TileEntityDungeonSpawner spawner)
-	{
+	public void onBossSpawned(TileEntityDungeonSpawner spawner) {
 		this.spawner = spawner;
 	}
 }

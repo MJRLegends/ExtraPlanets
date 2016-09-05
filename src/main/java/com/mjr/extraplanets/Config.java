@@ -5,13 +5,14 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
+	
+	//Sections/Groups
 	private static String dimensions = "main dimensions";
 	private static String dimensionsCustom = "other dimensions";
 	private static String dimensionID = "dimensionID";
 	private static String dimensionSettings = "dimension settings";
 	private static String dimensionBlockSettings = "dimension block settings";
 	private static String biomeID = "biomeID";
-	private static String schematics = "schematics";
 	private static String items = "items";
 	private static String blocks = "blocks";
 
@@ -23,7 +24,9 @@ public class Config {
 	private static String compatibility = "compatibility support";
 	private static String gerenalsettings = "general settings";
 	
+	//Config options	
 	public static boolean mobSuffocation;
+	public static boolean useDefaultBosses;
 
 	public static boolean carbonItems;
 	public static boolean palladiumItems;
@@ -219,7 +222,8 @@ public class Config {
 
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will").getBoolean(true);
 		oreDictionary = config.get(dimensionSettings, "Add planet/moons ores to the ore dictionary", true, "").getBoolean(true);
-
+		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "").getBoolean(false);
+		
 		eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
