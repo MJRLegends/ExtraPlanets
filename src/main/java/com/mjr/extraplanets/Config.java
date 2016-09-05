@@ -5,7 +5,6 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
-	
 	//Sections/Groups
 	private static String dimensions = "main dimensions";
 	private static String dimensionsCustom = "other dimensions";
@@ -22,7 +21,7 @@ public class Config {
 	private static String schematicsPage = "schematics Page ID";
 	
 	private static String compatibility = "compatibility support";
-	private static String gerenalsettings = "general settings";
+	private static String generalsettings = "general settings";
 	
 	//Config options	
 	public static boolean mobSuffocation;
@@ -202,7 +201,7 @@ public class Config {
 		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
 		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
 		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
-		config.addCustomCategoryComment(gerenalsettings,"Enable/Disable gerenal settings");
+		config.addCustomCategoryComment(generalsettings,"Enable/Disable general settings");
 		
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
