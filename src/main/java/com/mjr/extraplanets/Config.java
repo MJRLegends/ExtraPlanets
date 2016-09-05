@@ -364,7 +364,7 @@ public class Config {
 		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
 
-		achievements = config.get(gerenalsettings, "Enable achievements", true, "").getBoolean(true);
+		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
 
 		config.save();
 	}
