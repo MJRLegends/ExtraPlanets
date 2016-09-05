@@ -66,6 +66,8 @@ public class Config {
 	public static boolean makemake;
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
+	
+	public static boolean kepler22b;
 
 	public static int mercuryID;
 	public static int venusID;
@@ -87,6 +89,8 @@ public class Config {
 	public static int rheaID;
 	public static int titanID;
 
+	public static int kepler22bID;
+	
 	public static int mercurySpaceStationID;
 	public static int mercurySpaceStationStaticID;
 
@@ -241,6 +245,8 @@ public class Config {
 		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
+		
+		kepler22b = config.get(dimensionsCustom, "Kepler 22b", true, "").getBoolean(true);
 
 		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
 		venusSpaceStation = config.get(spacestationCustom, "Venus SpaceStation", true, "").getBoolean(true);
@@ -296,6 +302,8 @@ public class Config {
 		rheaID = config.get(dimensionID, "Rhea Dimension ID", -39).getInt();
 		titanID = config.get(dimensionID, "Titan Dimension ID", -40).getInt();
 
+		kepler22bID = config.get(dimensionID, "Kepler 22b Dimension ID", -22).getInt();
+		
 		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
 		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -60).getInt();
 
