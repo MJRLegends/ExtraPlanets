@@ -26,11 +26,6 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class SkyProviderKepler22b extends IRenderHandler
 {
-	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");
-	private static final ResourceLocation overworldTexture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/ceres.png");
-	private static final ResourceLocation overworldTexture3 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png");
-	private static final ResourceLocation overworldTexture4 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png");
-
 	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX,"textures/gui/planets/orbitalsun.png");
 
 	public int starList;
@@ -235,62 +230,6 @@ public class SkyProviderKepler22b extends IRenderHandler
 		tessellator1.addVertexWithUV(f10, 100.0D, -f10, 1.0D, 0.0D);
 		tessellator1.addVertexWithUV(f10, 100.0D, f10, 1.0D, 1.0D);
 		tessellator1.addVertexWithUV(-f10, 100.0D, f10, 0.0D, 1.0D);
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 5.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderKepler22b.overworldTexture4);
-		tessellator1.startDrawingQuads();
-		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
-		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 5.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderKepler22b.overworldTexture3);
-		tessellator1.startDrawingQuads();
-		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
-		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 5.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderKepler22b.overworldTexture2);
-		tessellator1.startDrawingQuads();
-		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
-		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 5.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderKepler22b.overworldTexture);
-		tessellator1.startDrawingQuads();
-		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
-		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
-		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
 		tessellator1.draw();
 
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
