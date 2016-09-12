@@ -35,6 +35,8 @@ import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.SkyProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
+import com.mjr.extraplanets.planets.Kepler22b.SkyProviderKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.WorldProviderKepler22b;
 import com.mjr.extraplanets.planets.Mercury.SkyProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;
@@ -151,7 +153,15 @@ public class SkyProviderHandler {
 					world.provider.setCloudRenderer(new CloudRenderer());
 				}
 			}
+			if (world.provider instanceof WorldProviderKepler22b) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderKepler22b((IGalacticraftWorldProvider) world.provider));
+				}
 
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
 			// Moons
 			if (world.provider instanceof WorldProviderCallisto) {
 				if (world.provider.getSkyRenderer() == null) {
