@@ -24,14 +24,8 @@ public class MainHandler {
 			if (rand.nextInt(2) == 1)
 				addZ = -addZ;
 			int lightingSpawnChance = rand.nextInt(50);
-			//int rainingSpawnChance = rand.nextInt(100);
 			if (lightingSpawnChance == 10)
-				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(
-						event.player.worldObj, event.player.posX + addX,
-						event.player.posY, event.player.posZ + addZ));
-			//			if (rainingSpawnChance == 1
-			//					&& event.player.worldObj.isRaining() == false)
-			//				event.player.worldObj.setRainStrength(10);
+				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX,event.player.posY, event.player.posZ + addZ));
 		}
 	}
 	

@@ -3,7 +3,7 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.layer;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-public class GenLayerKepler22bBiomeStabilize  extends GenLayer
+public class GenLayerKepler22bBiomeStabilize extends GenLayer
 {
 	public GenLayerKepler22bBiomeStabilize(long seed, GenLayer genlayer)
 	{

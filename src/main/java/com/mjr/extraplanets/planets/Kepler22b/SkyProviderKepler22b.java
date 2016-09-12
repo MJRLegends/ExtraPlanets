@@ -19,8 +19,6 @@ import net.minecraftforge.client.IRenderHandler;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.mjr.extraplanets.Constants;
-
 import cpw.mods.fml.client.FMLClientHandler;
 
 
