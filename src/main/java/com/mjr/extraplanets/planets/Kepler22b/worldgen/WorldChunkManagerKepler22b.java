@@ -25,6 +25,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawn = new ArrayList();
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
+		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bSea);
 	}
 
 	public WorldChunkManagerKepler22b(long seed) {
