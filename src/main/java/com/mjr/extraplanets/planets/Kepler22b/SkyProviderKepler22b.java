@@ -33,7 +33,7 @@ public class SkyProviderKepler22b extends IRenderHandler
 
 	public SkyProviderKepler22b(IGalacticraftWorldProvider jupiterProvider)
 	{
-		this.sunSize = 17.5F * jupiterProvider.getSolarSize();
+		this.sunSize = 25.5F * jupiterProvider.getSolarSize();
 
 		int displayLists = GLAllocation.generateDisplayLists(3);
 		this.starList = displayLists;
