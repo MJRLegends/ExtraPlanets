@@ -101,7 +101,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getGravity() {
-		return 0.065F;
+		return 0.030F;
 	}
 
 	@Override
@@ -126,12 +126,12 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getFallDamageModifier() {
-		return 0.38F;
+		return 0.95F;
 	}
 
 	@Override
 	public float getSoundVolReductionAmount() {
-		return 10.0F;
+		return 5.0F;
 	}
 
 	@Override
