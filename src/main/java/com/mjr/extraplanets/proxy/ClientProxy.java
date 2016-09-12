@@ -31,10 +31,12 @@ import com.mjr.extraplanets.client.render.entities.RenderCreeperBossSaturn;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlaze;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlueCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedEnderman;
+import com.mjr.extraplanets.client.render.entities.RenderEvolvedGiantSpider;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlime;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCube;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.client.render.entities.RenderEvolvedMiniEnderman;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedPowerSkeleton;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedRedCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedWitch;
@@ -60,8 +62,10 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
 import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
 import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
+import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
@@ -135,16 +139,14 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	private void renderMobEntities() {
 		if (Config.venus)
-			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class,
-			// new RenderCreeperBossVenus());
+			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class,new RenderCreeperBossVenus());
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, new RenderEvolvedMagmaCubeBoss());
 		if (Config.jupiter)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, new RenderCreeperBossJupiter());
 		if (Config.saturn)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
 		if (Config.uranus)
-			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class,
-			// new RenderCreeperBossUranus());
+			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, new RenderCreeperBossUranus());
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, new RenderEvolvedIceSlimeBoss(new ModelEvolvedIceSlimeBoss(16), new ModelEvolvedIceSlimeBoss(0), 0.25F));
 		if (Config.neptune)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
@@ -159,11 +161,10 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityBlueCreeper.class, new RenderEvolvedBlueCreeper());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedRedCreeper.class, new RenderEvolvedRedCreeper());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedPowerSkeleton.class, new RenderEvolvedPowerSkeleton());
-		// RenderingRegistry.registerEntityRenderingHandler(
-		// EvolvedIceBlaze.class, new RenderEvolvedIceBlaze());
-		// RenderingRegistry.registerEntityRenderingHandler(
-		// EntitySmallSnowball.class, new
-		// RenderEntitySmallSnowball(Items.snowball));
+		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGiantSpider.class, new RenderEvolvedGiantSpider());
+		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMiniEnderman.class, new RenderEvolvedMiniEnderman());
+		// RenderingRegistry.registerEntityRenderingHandler(EvolvedIceBlaze.class, new RenderEvolvedIceBlaze());
+		// RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, new RenderEntitySmallSnowball(Items.snowball));
 	}
 
 	@SideOnly(Side.CLIENT)

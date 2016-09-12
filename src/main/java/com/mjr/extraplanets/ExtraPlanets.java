@@ -20,8 +20,10 @@ import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
 import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
 import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
+import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
@@ -320,6 +322,8 @@ public class ExtraPlanets {
 		registerExtraPlanetsCreature(EntityBlueCreeper.class, Constants.modName + "EvolvedBlueCreeper", 44975, 0);
 		registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, Constants.modName + "EvolvedRedCreeper", 11013646, 0);
 		registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
+		registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class, Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
+		registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class, Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
 	}
 
 	private void registerSchematicsRecipes() {
