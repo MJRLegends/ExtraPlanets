@@ -1,0 +1,663 @@
+#Creative Tabs
+itemGroup.SpaceItemsTab=Ekstra Gezegen Eşyaları
+itemGroup.SpaceBlocksTab=Ekstra Gezegen Blokları
+itemGroup.SpaceToolsTab=Ekstra Gezegen Aletleri
+itemGroup.SpaceArmorTab=Ekstra Gezegen Zırhları
+
+#Solar Systems
+solarsystem.kepler22=Kepler 22 Sistemi
+solarsystem.kepler47=Kepler 47 Sistemi
+solarsystem.kepler62=Kepler 62 Sistemi
+solarsystem.kepler69=Kepler 69 Sistemi
+
+#Stars
+star.kepler22=Kepler 22 Yıldızı
+star.kepler47=Kepler 47 Yıldızı
+star.kepler62=Kepler 62 Yıldızı
+star.kepler69=Kepler 69 Yıldızı
+
+#Planets
+planet.Mercury=Merkür
+planet.Venus=Venüs
+planet.Ceres=Ceres
+planet.Jupiter=Jüpiter
+planet.Saturn=Satürn
+planet.Uranus=Uranüs
+planet.Neptune=Neptün
+planet.Pluto=Pluto
+planet.Eris=Eris
+planet.kuiperBelt=Kuiper Belt
+planet.makemake=Makemake
+
+planet.kepler62b=Kepler 62b
+planet.kepler62c=Kepler 62c
+planet.kepler62d=Kepler 62d
+planet.kepler62e=Kepler 62e
+planet.kepler62f=Kepler 62f
+planet.kepler22b=Kepler 22b
+planet.kepler47b=Kepler 47b
+planet.kepler47c=Kepler 47c
+planet.kepler69b=Kepler 69b
+planet.kepler69c=Kepler 69c
+
+#Moons
+moon.triton=Triton
+moon.callisto=Callisto
+moon.europa=Europa
+moon.ganymede=Ganymede
+moon.io=Io
+moon.deimos=Deimos
+moon.phobos=Rezzan
+moon.iapetus=Iapetus
+moon.rhea=Rhea
+moon.titan=Titan
+moon.oberon=Oberon
+moon.titania=Titania
+
+#Planet Blocks
+tile.mercury.surface.name=Merkür Yüzey Kayası
+tile.mercury.subSurface.name=Merkür Yeraltı Kayası
+tile.mercury.stone.name=Merkür Taşı
+tile.mercury.oreIron.name=Merkür Demir Cevheri
+tile.mercury.oreTin.name=Merkür Kalay Cevheri
+tile.mercury.oreCopper.name=Merkür Bakır Cevheri
+tile.mercury.oreMercury.name=Civa Cevheri
+tile.mercury.stoneBricks.name=Merkür Taş Tuğla
+tile.mercury.mercuryBlock.name=Merkürümsü Blok
+
+tile.venus.surface.name=Venüs Yüzey Kayası
+tile.venus.subSurface.name=Venüs Yeraltı Kayası
+tile.venus.stone.name=Venüs Taşı
+tile.venus.oreIron.name=Venüs Demir Cevheri
+tile.venus.oreTin.name=Venüs Kalay Cevheri
+tile.venus.oreCopper.name=Venüs Bakır Cevheri
+tile.venus.oreCarbon.name=Karbon Cevheri
+tile.venus.stoneBricks.name=Venüs Taş Tuğla
+tile.venus.carbonBlock.name=Karbon Bloğu
+
+tile.ceres.surface.name=Ceres Yüzey Kayası
+tile.ceres.subSurface.name=Ceres Yeraltı Kayası
+tile.ceres.stone.name=Ceres Taşı
+tile.ceres.oreIron.name=Ceres Demir Cevheri
+tile.ceres.oreTin.name=Ceres Kalay Cevheri
+tile.ceres.oreCopper.name=Ceres Bakır Cevheri
+tile.ceres.oreUranium.name=Ceres Uranyum Cevheri
+tile.ceres.stoneBricks.name=Ceres Taş Tuğla
+tile.ceres.uraniumBlock.name=Uranyum Bloğu
+
+tile.jupiter.surface.name=Jüpiter Yüzey Kayası
+tile.jupiter.subSurface.name=Jüpiter Jüpiter Yeraltı Kayası
+tile.jupiter.stone.name=Jüpiter Taşı
+tile.jupiter.oreIron.name=Jüpiter Demir Cevheri
+tile.jupiter.oreTin.name=Jüpiter Kalay Cevheri
+tile.jupiter.oreCopper.name=Jüpiter Bakır Cevheri
+tile.jupiter.orePalladium.name=Jüpiter Paladyum Cevheri
+tile.jupiter.oreNickel.name=Jupiter Nikel Cevheri
+tile.jupiter.oreRedGem.name=Jupiter Kırmızıtaş Cevheri
+tile.jupiter.stoneBricks.name=Jupiter Taş Tuğla
+tile.jupiter.palladiumBlock.name=Paladyum Bloğu
+tile.jupiter.redGemBlock.name=Kırmızı Taş Bloğu
+
+tile.saturn.surface.name=Saturn Yüzey Kayası
+tile.saturn.subSurface.name=Saturn Yeraltı Kayası
+tile.saturn.stone.name=Saturn Taşı
+tile.saturn.oreIron.name=Saturn Demir Cevheri
+tile.saturn.oreTin.name=Saturn Kalay Cevheri
+tile.saturn.oreCopper.name=Saturn Bakır Cevheri
+tile.saturn.oreMagnesium.name=Saturn Magnezyum Cevheri
+tile.saturn.stoneBricks.name=Saturn Taş Tuğla
+tile.saturn.magnesiumBlock.name=Magnezyum Bloğu
+
+tile.uranus.surface.name=Uranüs Yüzey Kayası
+tile.uranus.subSurface.name=Uranüs Yeraltı Kayası
+tile.uranus.stone.name=Uranüs Taşı
+tile.uranus.oreCrystal.name=Kristal Taş
+tile.uranus.oreWhiteGem.name=Uranüs Beyaztaş Cevheri
+tile.uranus.stoneBricks.name=Uranüs Taş Tuğla
+tile.uranus.crystalBlock.name=Kristal Blok
+tile.uranus.whiteGemBlock.name=Beyaztaş Bloğu
+
+tile.neptune.surface.name=Neptün Yüzey Kayası
+tile.neptune.subSurface.name=Neptün Yeraltı Kayası
+tile.neptune.stone.name=Neptün Taşı
+tile.neptune.oreIron.name=Neptün Demir Cevheri
+tile.neptune.oreTin.name=Neptün Kalay Cevheri
+tile.neptune.oreCopper.name=Neptün Bakır Cevheri
+tile.neptune.oreZinc.name=Çinko Cevheri
+tile.neptune.oreBlueGem.name=Neptün Mavitaş Cevheri
+tile.neptune.stoneBricks.name=Neptün Taş Tuğla
+tile.neptune.zincBlock.name=Çinko Bloğu
+tile.neptune.blueGemBlock.name=Mavitaş Bloğu
+
+tile.pluto.surface.name=Pluto Yüzey Kayası
+tile.pluto.subSurface.name=Pluto Yeraltı Kayası
+tile.pluto.stone.name=Pluto Taşı
+tile.pluto.oreIron.name=Pluto Demir Cevheri
+tile.pluto.oreTin.name=Pluto Kalay Cevheri
+tile.pluto.oreCopper.name=Pluto Bakır Cevheri
+tile.pluto.oreTungsten.name=Pluto Tungsten Cevheri
+tile.pluto.stoneBricks.name=Pluto Taş Tuğla
+tile.pluto.tungstenBlock.name=Tungsen Bloğu
+
+tile.eris.surface.name=Eris Yüzey Kayası
+tile.eris.subSurface.name=Eris Yeraltı Kayası
+tile.eris.stone.name=Eris Taşı
+tile.eris.oreIron.name=Eris Demir Cevheri
+tile.eris.oreTin.name=Eris Kalay Cevheri
+tile.eris.oreCopper.name=Eris Bakır Cevheri
+tile.eris.stoneBricks.name=Eris Taş Tuğla
+
+#Moon Blocks
+tile.callisto.surface.name=Callisto Yüzey Kayası
+tile.callisto.subSurface.name=Callisto Yeraltı Kayası
+tile.callisto.stone.name=Callisto Taşı
+tile.callisto.oreIron.name=Callisto Demir Cevheri
+tile.callisto.oreTin.name=Callisto Kalay Cevheri
+tile.callisto.oreCopper.name=Callisto Bakır Cevheri
+
+tile.deimos.surface.name=Deimos Yüzey Kayası
+tile.deimos.subSurface.name=Deimos Yeraltı Kayası
+tile.deimos.stone.name=Deimos Taşı
+tile.deimos.oreIron.name=Deimos Demir Cevheri
+tile.deimos.oreTin.name=Deimos Kalay Cevheri
+tile.deimos.oreCopper.name=Deimos Bakır Cevheri
+
+tile.europa.surface.name=Europa Yüzey Kayası
+tile.europa.subSurface.name=Europa Yeraltı Kayası
+tile.europa.stone.name=Europa Taşı
+tile.europa.oreIron.name=Europa Demir Cevheri
+tile.europa.oreTin.name=Europa Kalay Cevheri
+tile.europa.oreCopper.name=Europa Bakır Cevheri
+
+tile.io.surface.name=IO Yüzey Kayası
+tile.io.subSurface.name=IO Yeraltı Kayası
+tile.io.stone.name=IO Taşı
+tile.io.oreIron.name=IO Demir Cevheri
+tile.io.oreTin.name=IO Kalay Cevheri
+tile.io.oreCopper.name=IO Bakır Cevheri
+
+tile.phobos.surface.name=Rezzan Yüzey Kayası
+tile.phobos.subSurface.name=Rezzan Yeraltı Kayası
+tile.phobos.stone.name=Rezzan Taşı
+tile.phobos.oreIron.name=Rezzan Demir Cevheri
+tile.phobos.oreTin.name=Rezzan Kalay Cevheri
+tile.phobos.oreCopper.name=Rezzan Bakır Cevheri
+
+tile.triton.surface.name=Triton Yüzey Kayası
+tile.triton.subSurface.name=Triton Yeraltı Kayası
+tile.triton.stone.name=Triton Taşı
+tile.triton.oreIron.name=Triton Demir Cevheri
+tile.triton.oreTin.name=Triton Kalay Cevheri
+tile.triton.oreCopper.name=Triton Bakır Cevheri
+
+tile.ganymede.surface.name=Ganymede Yüzey Kayası
+tile.ganymede.subSurface.name=Ganymede Yeraltı Kayası
+tile.ganymede.stone.name=Ganymede Taşı
+tile.ganymede.oreIron.name=Ganymede Demir Cevheri
+tile.ganymede.oreTin.name=Ganymede Kalay Cevheri
+tile.ganymede.oreCopper.name=Ganymede Bakır Cevheri
+
+tile.rhea.surface.name=Rhea Yüzey Kayası
+tile.rhea.subSurface.name=Rhea Yeraltı Kayası
+tile.rhea.stone.name=Rhea Taşı
+tile.rhea.oreIron.name=Rhea Demir Cevheri
+tile.rhea.oreTin.name=Rhea Kalay Cevheri
+tile.rhea.oreCopper.name=Rhea Bakır Cevheri
+
+tile.titan.surface.name=Titan Yüzey Kayası
+tile.titan.subSurface.name=Titan Yeraltı Kayası
+tile.titan.stone.name=Titan Taşı
+tile.titan.oreIron.name=Titan Demir Cevheri
+tile.titan.oreTin.name=Titan Kalay Cevheri
+tile.titan.oreCopper.name=Titan Bakır Cevheri
+
+#Planet Gravel Blocks
+tile.mercuryGravel.name=Merkür Çakıl
+tile.ceresGravel.name=Ceres Çakıl
+tile.plutoGravel.name=Pluto Çakıl
+tile.erisGravel.name=Eris Çakıl
+tile.ioGravel.name=IO Çakıl
+tile.europaGravel.name=Europa Çakıl
+tile.deimosGravel.name=Deimos Çakıl
+tile.phobosGravel.name=Rezzan Çakıl
+tile.tritonGravel.name=Triton Çakıl
+tile.callistoGravel.name=Callisto Çakıl
+tile.ganymedeGravel.name=Ganymede Çakıl
+tile.rheaGravel.name=Rhea Çakıl
+tile.titanGravel.name=Titan Çakıl
+
+tile.venusGravel.name=Venüs Çakıl
+tile.jupiterGravel.name=Jüpiter Çakıl
+tile.saturnGravel.name=Satürn Çakıl
+tile.uranusGravel.name=Uranüs Çakıl
+tile.neptuneGravel.name=Neptün Çakıl
+
+#Dungeon Bricks
+tile.veunsDungeonBrick.name=Venüs Zindan Tuğlası
+tile.jupiterDungeonBrick.name=Jüpiter Zindan Tuğlası
+tile.saturnDungeonBrick.name=Satürn Zindan Tuğlası
+tile.uranusDungeonBrick.name=Uranüs Zindan Tuğlası
+tile.neptuneDungeonBrick.name=Neptün Zindan Tuğlası
+tile.plutoDungeonBrick.name=Pluto Zindan Tuğlası
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Merkür Taş Basamağı
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Venüs Taş Basamağı
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Ceres Taş Basamağı
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Jüpiter Taş Basamağı
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Satürn Taş Basamağı
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Uranüs Taş Basamağı
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Neptün Taş Basamağı
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Taş Basamağı
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Taş Basamağı
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=Merkür Merdiveni
+tile.venusStoneStairs.name=Venüs Merdiveni
+tile.ceresStoneStairs.name=Ceres Merdiveni
+tile.jupiterStoneStairs.name=Jüpiter Merdiveni
+tile.saturnStoneStairs.name=Satürn Merdiveni
+tile.uranusStoneStairs.name=Uranüs Merdiveni
+tile.neptuneStoneStairs.name=Neptün Merdiveni
+tile.plutoStoneStairs.name=Pluto Merdiveni
+tile.erisStoneStairs.name=Eris Merdiveni
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Zindan Tuğlası Basamağı
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Zindan Tuğlası Basamağı
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Zindan Tuğlası Basamağı
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Zindan Tuğlası Basamağı
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Zindan Tuğlası Basamağı
+
+#Dungeon Bricks Merdiveni
+tile.venusDungeonBrickStoneStairs.name=Venus Zindan Tuğlası Merdiveni
+tile.jupiterDungeonBrickStoneStairs.name=Jupiter Zindan Tuğlası Merdiveni
+tile.saturnDungeonBrickStoneStairs.name=Saturn Zindan Tuğlası Merdiveni
+tile.uranusDungeonBrickStoneStairs.name=Uranus Zindan Tuğlası Merdiveni
+tile.neptuneDungeonBrickStoneStairs.name=Neptune Zindan Tuğlası Merdiveni
+
+#Treasure Chests
+tile.treasureChestT4.name=Tier 4 Hazine Sandığı
+tile.treasureChestT5.name=Tier 5 Hazine Sandığı
+tile.treasureChestT6.name=Tier 6 Hazine Sandığı
+tile.treasureChestT7.name=Tier 7 Hazine Sandığı
+tile.treasureChestT8.name=Tier 8 Hazine Sandığı
+tile.treasureChestT9.name=Tier 9 Hazine Sandığı
+tile.treasureChestT4.description=Tier 4 Hazine Sandığı Venüs zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
+tile.treasureChestT5.description=Tier 5 Hazine Sandığı Jüpiter zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
+tile.treasureChestT6.description=Tier 6 Hazine Sandığı Satürn zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
+tile.treasureChestT7.description=Tier 7 Hazine Sandığı Uranüs zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
+tile.treasureChestT8.description=Tier 8 Hazine Sandığı Neptün zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
+tile.treasureChestT9.description=Tier 9 Hazine Sandığı Pluto zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
+
+#Machines
+tile.advancedRefinery.name=Gelişmiş Rafineri
+tile.solar.hybrid.name=Karışık Güneş Paneli
+tile.solar.ultimate.name=En Yüksek Güneş Paneli
+tile.solarhybrid.description=Karışık Güneş Paneli, hem gece hemde gündüz enerji toplar.
+tile.solarultimate.description=En Yüksek Güneş Paneli, hem gece hemde gündüz enerji toplar. Normal güneş panelinden daha fazla enerji üretir.
+container.solarhybrid.name=Karışık Güneş Paneli
+container.solarultimate.name=En Yüksek Güneş Paneli
+
+#Other Blocks
+tile.nuclearBomb.name=Nükleer bomba
+tile.volcanicRock.name=Volkanik Kaya
+tile.frozenNitrogen.name=Donmuş Nitrojen
+tile.denseIce.name=Yoğun Buz
+tile.fossil.name=Fosil Bloğu
+
+#Rocket Items
+item.itemTier4Rocket.t4Rocket.name=Tier 4 Roketi
+item.itemTier5Rocket.t5Rocket.name=Tier 5 Roketi
+item.itemTier6Rocket.t6Rocket.name=Tier 6 Roketi
+item.itemTier7Rocket.t7Rocket.name=Tier 7 Roketi
+item.itemTier8Rocket.t8Rocket.name=Tier 8 Roketi
+item.itemTier9Rocket.t9Rocket.name=Tier 9 Roketi
+
+#Rocket Tiered Items
+item.noseConeTier4.name=Tier 4 Roket Burnu
+item.noseConeTier5.name=Tier 5 Roket Burnu
+item.noseConeTier6.name=Tier 6 Roket Burnu
+item.noseConeTier7.name=Tier 7 Roket Burnu
+item.noseConeTier8.name=Tier 8 Roket Burnu
+item.noseConeTier9.name=Tier 9 Roket Burnu
+
+item.tier4.tier4Fin.name=Tier 4 Kanatları
+item.tier5.tier5Fin.name=Tier 5 Kanatları
+item.tier6.tier6Fin.name=Tier 6 Kanatları
+item.tier7.tier7Fin.name=Tier 7 Kanatları
+item.tier8.tier8Fin.name=Tier 8 Kanatları
+item.tier9.tier9Fin.name=Tier 9 Kanatları
+
+item.tier4.tier4engine.name=Tier 4 Roket Motoru
+item.tier5.tier5engine.name=Tier 5 Roket Motoru
+item.tier6.tier6engine.name=Tier 6 Roket Motoru
+item.tier7.tier7engine.name=Tier 7 Roket Motoru
+item.tier8.tier8engine.name=Tier 8 Roket Motoru
+item.tier9.tier9engine.name=Tier 9 Roket Motoru
+
+item.tier4.tier4booster.name=Tier 4 Hızlandırıcı
+item.tier5.tier5booster.name=Tier 5 Hızlandırıcı
+item.tier6.tier6booster.name=Tier 6 Hızlandırıcı
+item.tier7.tier7booster.name=Tier 7 Hızlandırıcı
+item.tier8.tier8booster.name=Tier 8 Hızlandırıcı
+item.tier9.tier9booster.name=Tier 9 Hızlandırıcı
+
+item.tier4.tier4HeavyDutyPlate.name=Ağır-sert Plaka
+item.tier5.tier5HeavyDutyPlate.name=Ağır-sert Plaka
+item.tier6.tier6HeavyDutyPlate.name=Ağır-sert Plaka
+item.tier7.tier7HeavyDutyPlate.name=Ağır-sert Plaka
+item.tier8.tier8HeavyDutyPlate.name=Ağır-sert Plaka
+item.tier9.tier9HeavyDutyPlate.name=Ağır-sert Plaka
+
+tier4.heavyDutyPlate.name=Tier 4
+tier5.heavyDutyPlate.name=Tier 5
+tier6.heavyDutyPlate.name=Tier 6
+tier7.heavyDutyPlate.name=Tier 7
+tier8.heavyDutyPlate.name=Tier 8
+tier9.heavyDutyPlate.name=Tier 9
+
+#Compressed Items
+item.tier4.compressedCarbon.name=Sıkıştırılmış Karbon
+item.tier5.compressedPalladium.name=Sıkıştırılmış Paladyum
+item.tier6.compressedMagnesium.name=Sıkıştırılmış Magnezyum
+item.tier7.compressedReinforcedCrystal.name=Sıkıştırılmış Takviyeli Kristal
+item.tier7.compressedCrystal.name=Sıkıştırılmış Kristal
+item.tier8.compressedZinc.name=Sıkıştırılmış Çinko
+item.tier5.compressedNickel.name=Sıkıştırılmış Nikel
+item.compressedMercury.name=Sıkıştırılmış Civa
+item.tier9.compressedTungsten.name=Sıkıştırılmış Tungsten
+
+#Ingots
+item.tier4.ingotCarbon.name=Karbon Külçesi
+item.tier5.ingotPalladium.name=Paladyum Külçesi
+item.tier6.ingotMagnesium.name=Magnezyum Külçesi
+item.tier7.ingotCrystal.name=Kristal Külçesi
+item.tier8.ingotZinc.name=Çinko Külçesi
+item.tier5.ingotNickel.name=Nikel Külçesi
+item.ingotMercury.name=Civa Külçesi
+item.ingotUranium.name=Uranyum Külçesi
+item.tier9.ingotTungsten.name=Tungsten Külçesi
+
+#Gems
+item.tier5.redGem.name=Kırmızıtaş
+item.tier8.blueGem.name=Mavitaş
+item.tier7.whiteGem.name=Beyaztaş
+
+#Wafers
+item.wafer.diamond.name=Elmas Wafer
+item.wafer.Karbon.name=Karbon Wafer
+item.wafer.titanium.name=Titanyum Wafer
+item.wafer.redGem.name=Kırmızıtaş Wafer
+item.wafer.blueGem.name=Mavitaş Wafer
+item.wafer.whiteGem.name=Beyaztaş Wafer
+
+#Buckets
+item.bucket_glowstone.name=Işıktaşı Kovası
+item.bucket_salt.name=Tuz Kovası
+item.bucket_magma.name=Mağma Kovası
+item.bucket_frozen_water.name=Soğumuş Su Kovası
+item.bucket_nitrogen.name=Nitrojen Kovası
+
+#Keys
+item.key.T4.name=Tier 4 Zindan Anahtarı
+item.key.T5.name=Tier 5 Zindan Anahtarı
+item.key.T6.name=Tier 6 Zindan Anahtarı
+item.key.T7.name=Tier 7 Zindan Anahtarı
+item.key.T8.name=Tier 8 Zindan Anahtarı
+item.key.T9.name=Tier 9 Zindan Anahtarı
+
+#Tools
+item.carbonPickaxe.name=Karbon Kazma
+item.carbonAxe.name=Karbon Balta
+item.carbonSword.name=Karbon Kılıç
+item.carbonHoe.name=Karbon Çapa
+item.carbonShovel.name=Karbon Kürek
+item.palladiumPickaxe.name=Paladyum Kazma
+item.palladiumAxe.name=Paladyum Balta
+item.palladiumSword.name=Paladyum Kılıç
+item.palladiumHoe.name=Paladyum Çapa
+item.palladiumShovel.name=Paladyum Kürek
+item.magnesiumPickaxe.name=Magnezyum Kazma
+item.magnesiumAxe.name=Magnezyum Balta
+item.magnesiumSword.name=Magnezyum Kılıç
+item.magnesiumHoe.name=Magnezyum Çapa
+item.magnesiumShovel.name=Magnezyum Kürek
+item.crystalPickaxe.name=Kristal Kazma
+item.crystalAxe.name=Kristal Balta
+item.crystalSword.name=Kristal Kılıç
+item.crystalHoe.name=Kristal Çapa
+item.crystalShovel.name=Kristal Kürek
+item.tungstenPickaxe.name=Tungsten Kazma
+item.tungstenAxe.name=Tungsten Balta
+item.tungstenSword.name=Tungsten Kılıç
+item.tungstenHoe.name=Tungsten Çapa
+item.tungstenShovel.name=Tungsten Kürek
+item.redGemPickaxe.name=Kırmızıtaş Kazma
+item.redGemAxe.name=Kırmızıtaş Balta
+item.redGemSword.name=Kırmızıtaş Kılıç
+item.redGemHoe.name=Kırmızıtaş Çapa
+item.redGemShovel.name=Kırmızıtaş Kürek
+item.blueGemPickaxe.name=Mavitaş Kazma
+item.blueGemAxe.name=Mavitaş Balta
+item.blueGemSword.name=Mavitaş Kılıç
+item.blueGemHoe.name=Mavitaş Çapa
+item.blueGemShovel.name=Mavitaş Kürek
+item.whiteGemPickaxe.name=Beyaztaş Kazma
+item.whiteGemAxe.name=Beyaztaş Balta
+item.whiteGemSword.name=Beyaztaş Kılıç
+item.whiteGemHoe.name=Beyaztaş Çapa
+item.whiteGemShovel.name=Beyaztaş Kürek
+item.mercuryPickaxe.name=Civa Kazma
+item.mercuryAxe.name=Civa Balta
+item.mercurySword.name=Civa Kılıç
+item.mercuryHoe.name=Civa Çapa
+item.mercuryShovel.name=Civa Kürek
+item.zincPickaxe.name=Çinko Kazma
+item.zincAxe.name=Çinko Balta
+item.zincSword.name=Çinko Kılıç
+item.zincHoe.name=Çinko Çapa
+item.zincShovel.name=Çinko Kürek
+item.uraniumPickaxe.name=Uranyum Kazma
+item.uraniumAxe.name=Uranyum Balta
+item.uraniumSword.name=Uranyum Kılıç
+item.uraniumHoe.name=Uranyum Çapa
+item.uraniumShovel.name=Uranyum Kürek
+
+#Schematics
+item.schematicTier4.name=NASA Çalışma Masası Şematiği
+item.schematicTier5.name=NASA Çalışma Masası Şematiği
+item.schematicTier6.name=NASA Çalışma Masası Şematiği
+item.schematicTier7.name=NASA Çalışma Masası Şematiği
+item.schematicTier8.name=NASA Çalışma Masası Şematiği
+item.schematicTier9.name=NASA Çalışma Masası Şematiği
+
+schematic.tier4.rocket.name=Tier 4 Roketi
+schematic.tier5.rocket.name=Tier 5 Roketi
+schematic.tier6.rocket.name=Tier 6 Roketi
+schematic.tier7.rocket.name=Tier 7 Roketi
+schematic.tier8.rocket.name=Tier 8 Roketi
+schematic.tier9.rocket.name=Tier 9 Roketi
+
+schematic.rocketT4.name=Tier 4 Roketi
+schematic.rocketT5.name=Tier 5 Roketi
+schematic.rocketT6.name=Tier 6 Roketi
+schematic.rocketT7.name=Tier 7 Roketi
+schematic.rocketT8.name=Tier 8 Roketi
+schematic.rocketT9.name=Tier 9 Roketi
+
+#Batteries
+item.mercuryBattery.name=Merkür Pil
+item.nickelBattery.name=Nikel Pil
+item.zincBattery.name=Çinko Pil
+item.advancedBattery.name=Gelişmiş Pil
+item.ultimateBattery.name=En Gelişmiş Pil
+
+#Armor
+item.carbonHelmet.name=Karbon Kask
+item.carbonChest.name=Karbon Zırh
+item.carbonLegings.name=Karbon Pantolon
+item.carbonBoots.name=Karbon Bot
+item.palladiumHelmet.name=Paladyum Kask
+item.palladiumChest.name=Paladyum Zırh
+item.palladiumLegings.name=Paladyum Pantolon
+item.palladiumBoots.name=Paladyum Bot
+item.magnesiumHelmet.name=Magnezyum Kask
+item.magnesiumChest.name=Magnezyum Zırh
+item.magnesiumLegings.name=Magnezyum Pantolon
+item.magnesiumBoots.name=Magnezyum Bot
+item.crystalHelmet.name=Kristal Kask
+item.crystalChest.name=Kristal Zırh
+item.crystalLegings.name=Kristal Pantolon
+item.crystalBoots.name=Kristal Bot
+item.redGemHelmet.name=Kırmızıtaş Kask
+item.redGemChest.name=Kırmızıtaş Zırh
+item.redGemLegings.name=Kırmızıtaş Pantolon
+item.redGemBoots.name=Kırmızıtaş Bot
+item.blueGemHelmet.name=Mavitaş Kask
+item.blueGemChest.name=Mavitaş Zırh
+item.blueGemLegings.name=Mavitaş Pantolon
+item.blueGemBoots.name=Mavitaş Bot
+item.whiteGemHelmet.name=Beyaztaş Kask
+item.whiteGemChest.name=Beyaztaş Zırh
+item.whiteGemLegings.name=Beyaztaş Pantolon
+item.whiteGemBoots.name=Beyaztaş Bot
+item.mercuryHelmet.name=Civa Kask
+item.mercuryChest.name=Civa Zırh
+item.mercuryLegings.name=Civa Pantolon
+item.mercuryBoots.name=Civa Bot
+item.uraniumHelmet.name=Uranyum Kask
+item.uraniumChest.name=Uranyum Zırh
+item.uraniumLegings.name=Uranyum Pantolon
+item.uraniumBoots.name=Uranyum Bot
+item.zincHelmet.name=Çinko Kask
+item.zincChest.name=Çinko Zırh
+item.zincLegings.name=Çinko Pantolon
+item.zincBoots.name=Çinko Bot
+item.tungstenHelmet.name=Tungsten Kask
+item.tungstenChest.name=Tungsten Zırh
+item.tungstenLegings.name=Tungsten Pantolon
+item.tungstenBoots.name=Tungsten Bot
+
+item.tier2ThermalHelm.name=Tier 2 Termal Dolgulu Kask
+item.tier2ThermalChestplate.name=Tier 2 Termal Dolgulu Zırh
+item.tier2ThermalLeggings.name=Tier 2 Termal Dolgulu Pantolon
+item.tier2ThermalBoots.name=Tier 2 Termal Dolgulu Bot
+
+item.tier3ThermalHelm.name=Tier 3 Termal Dolgulu Kask
+item.tier3ThermalChestplate.name=Tier 3 Termal Dolgulu Zırh
+item.tier3ThermalLeggings.name=Tier 3 Termal Dolgulu Pantolon
+item.tier3ThermalBoots.name=Tier 3 Termal Dolgulu Bot
+
+item.tier4ThermalHelm.name=Tier 4 Termal Dolgulu Kask
+item.tier4ThermalChestplate.name=Tier 4 Termal Dolgulu Zırh
+item.tier4ThermalLeggings.name=Tier 4 Termal Dolgulu Pantolon
+item.tier4ThermalBoots.name=Tier 4 Termal Dolgulu Bot
+
+tier2.information=Venüs ve Merkür İçin Gerekli
+tier3.information=Jüpiter Ve Satürn İçin Gerekli
+tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
+
+#Other Items
+item.appleDiamond.name=Elmas Elma
+item.cannedfood.cannedFood.name=Uzay Yiyecekleri
+item.bodyparts.arm.name=Kol
+item.bodyparts.leg.name=Bacak
+
+item.cannedfood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
+item.cannedfood.dehydratedFish.name=Susuz Balık
+item.cannedfood.dehydratedSalmon.name=Susuz Somon Balığı
+item.cannedfood.dehydratedChicken.name=Susuz Tavuk
+item.cannedfood.dehydratedBeef.name=Susuz Biftek
+
+#Entities
+entity.ProjectileTNT.name=Korumacı TNT
+
+entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Roket
+entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Roket
+entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Roket
+entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Roket
+entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Roket
+entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Roket
+
+entity.ExtraPlanetsCreeperBossVenus.name=Evrimleşmiş Creeper Patronu
+entity.ExtraPlanetsCreeperBossJupiter.name=Evrimleşmiş Creeper Patronu
+entity.ExtraPlanetsCreeperBossSaturn.name=Evrimleşmiş Creeper Patronu
+entity.ExtraPlanetsCreeperBossUranus.name=Evrimleşmiş Creeper Patronu
+entity.ExtraPlanetsCreeperBossNeptune.name=Evrimleşmiş Creeper Patronu
+entity.ExtraPlanetsCreeperBossPluto.name=Evrimleşmiş Creeper Patronu
+
+entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
+entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+
+entity.ExtraPlanetsEvolvedWitch.name=Evrimleşmiş Cadı
+entity.ExtraPlanetsEvolvedMagmaCube.name=Evrimleşmiş Magma Küpü
+entity.ExtraPlanetsEvolvedIceSlime.name=Evrimleşmiş Buz Balçığı
+entity.ExtraPlanetsEvolvedEnderman.name=Evrimleşmiş Enderman
+entity.ExtraPlanetsEvolvedBlaze.name=Evrimleşmiş Blaze
+entity.ExtraPlanetsEvolvedBlueCreeper.name=Evrimleşmiş Mavi Creeper
+entity.ExtraPlanetsEvolvedRedCreeper.name=Evrimleşmiş Kırmızı Creeper
+entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
+
+#Achievements
+achievement.mercuryPlanet=Merkür İçin Küçük Benim İçin Büyük!
+achievement.venusPlanet=Venus İçin Küçük Benim İçin Büyük!
+achievement.ceresPlanet=Ceres İçin Küçük Benim İçin Büyük!
+achievement.jupiterPlanet=Jupiter İçin Küçük Benim İçin Büyük!
+achievement.saturnPlanet=Saturn İçin Küçük Benim İçin Büyük!
+achievement.uranusPlanet=Uranus İçin Küçük Benim İçin Büyük!
+achievement.neptunePlanet=Neptune İçin Küçük Benim İçin Büyük!
+achievement.plutoPlanet=Pluto İçin Küçük Benim İçin Büyük!
+achievement.erisPlanet=Eris İçin Küçük Benim İçin Büyük!
+
+achievement.mercuryPlanet.desc=Tier 4 Roket İle Merkür'ya Git
+achievement.venusPlanet.desc=Tier 4 Roket İle Venüs'e Git
+achievement.ceresPlanet.desc=Tier 4 Roket İle Ceres'e Git
+achievement.jupiterPlanet.desc=Tier 4 Roket İle Jüpiter'e Git
+achievement.saturnPlanet.desc=Tier 5 Roket İle Satürn'e Git
+achievement.uranusPlanet.desc=Tier 6 Roket İle Uranüs'e Git
+achievement.neptunePlanet.desc=Tier 7 Roket İle Neptün'e Git
+achievement.plutoPlanet.desc=Tier 8 Roket Pluto'ya Git
+achievement.erisPlanet.desc=Tier 8 Roket İle Eris'e Git
+
+achievement.venusBoss=Defeated Tier 4 Boss!
+achievement.jupiterBoss=Defeated Tier 5 Boss!
+achievement.saturnBoss=Defeated Tier 6 Boss!
+achievement.uranusBoss=Defeated Tier 7 Boss!
+achievement.neptuneBoss=Defeated Tier 8 Boss!
+achievement.plutoBoss=Defeated Tier 9 Boss!
+
+achievement.venusBoss.desc=Kill the Venus Dungeon Boss
+achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
+achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss
+achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss
+achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+
+achievement.venusBoss.desc=Venüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+achievement.jupiterBoss.desc=Jüpiter Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+achievement.saturnBoss.desc=Satürn Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+achievement.uranusBoss.desc=Uranüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+achievement.neptuneBoss.desc=Neptün Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+achievement.plutoBoss.desc=Pluto Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+
+achievement.craftRocket4=Tier 4 Roket!
+achievement.craftRocket5=Tier 5 Roket!
+achievement.craftRocket6=Tier 6 Roket!
+achievement.craftRocket7=Tier 7 Roket!
+achievement.craftRocket8=Tier 8 Roket!
+achievement.craftRocket9=Tier 9 Roket!
+
+achievement.craftRocket4.desc=Tier 4 Roket İnşa Et
+achievement.craftRocket5.desc=Tier 5 Roket İnşa Et
+achievement.craftRocket6.desc=Tier 6 Roket İnşa Et
+achievement.craftRocket7.desc=Tier 7 Roket İnşa Et
+achievement.craftRocket8.desc=Tier 8 Roket İnşa Et
+achievement.craftRocket9.desc=Tier 9 Roket İnşa Et
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=Işıktaşı Yakıtı
+tile.magma_fluid.name=Mağma Yakıtı
+tile.nitrogen_fluid.name=Nitrojen Yakıtı
+tile.frozen_water_fluid.name=Soğumuş Su
+tile.salt_fluid.name=Tuz Yakıtı
