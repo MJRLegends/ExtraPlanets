@@ -22,13 +22,13 @@ IGalacticraftWorldProvider, ISolarLevel {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(250 / 255F * f, 192 / 255F * f, 115 / 255F * f);
+		return new Vector3(135 / 255F * f, 206 / 255F * f, 235 / 255F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(240 / 255.0F * f, 160 / 255.0F * f, 55 / 255.0F * f);
+		return new Vector3(0 / 255.0F * f, 191 / 255.0F * f, 255 / 255.0F * f);
 	}
 
 	@Override
