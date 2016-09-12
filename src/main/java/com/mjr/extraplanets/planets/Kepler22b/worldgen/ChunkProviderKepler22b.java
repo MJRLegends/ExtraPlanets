@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
@@ -245,17 +247,21 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		}
 	}
 
+	/**
+	 * Replaces the stone that was placed in with blocks that match the biome
+	 */
 	public void replaceBlocksForBiome(int chunkX, int chunkZ, Block[] blockStorage, byte[] metaStorage, BiomeGenBase[] biomes) {
 		double d0 = 0.03125D;
 		this.stoneNoise = this.field_147430_m.func_151599_a(this.stoneNoise, chunkX * 16, chunkZ * 16, 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);
+
 		for (int z = 0; z < 16; z++) {
 			for (int x = 0; x < 16; x++) {
-				BiomeGenBase biomegenbase = biomes[(x + z * 16)];
-				biomegenbase.genTerrainBlocks(this.worldObj, this.rand, blockStorage, metaStorage, chunkX * 16 + z, chunkZ * 16 + x, this.stoneNoise[(x + z * 16)]);
+				BiomeGenBase biomegenbase = biomes[x + z * 16];
+				biomegenbase.genTerrainBlocks(this.worldObj, this.rand, blockStorage, metaStorage, chunkX * 16 + z, chunkZ * 16 + x, this.stoneNoise[x + z * 16]);
 			}
 		}
 	}
-
+	
 	public Chunk loadChunk(int x, int z) {
 		return provideChunk(x, z);
 	}

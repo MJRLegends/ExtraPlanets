@@ -10,24 +10,22 @@ import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.init.Blocks;
 
-public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b
-{
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
+public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
 	@SuppressWarnings("unchecked")
-	public BiomeGenKepler22bPlains()
-	{
+	public BiomeGenKepler22bPlains() {
 		super(224);
 		this.enableRain = true;
 		this.enableSnow = true;
 		this.setTemperatureRainfall(0.8F, 0.9F);
-		this.topBlock = Blocks.grass;
+		this.topBlock = ExtraPlanets_Blocks.kepler22bBlocks;
 		this.topMeta = 0;
-		this.fillerBlock = Blocks.dirt;
+		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks;
 		this.fillerMeta = 1;
-		this.stoneBlock = Blocks.stone;
+		this.stoneBlock = ExtraPlanets_Blocks.kepler22bBlocks;
 		this.stoneMeta = 2;
-
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));
