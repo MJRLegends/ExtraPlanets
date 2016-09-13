@@ -74,6 +74,7 @@ import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Blocks {
+	
 	//Planet Blocks
 	public static Block mercuryBlocks;
 	public static Block ceresBlocks;
@@ -87,7 +88,12 @@ public class ExtraPlanets_Blocks {
 	public static Block plutoBlocks;
 
 	public static Block kepler22bBlocks;
-
+	public static Block kepler22bGrass;
+	public static Block kepler22bBlueGrass;
+	public static Block kepler22bPurpleGrass;
+	public static Block kepler22bRedGrass;
+	public static Block kepler22bYellowGrass;
+	
 	public static Block callistoBlocks;
 	public static Block deimosBlocks;
 	public static Block europaBlocks;
@@ -247,8 +253,14 @@ public class ExtraPlanets_Blocks {
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres)
 			nuclearBomb = new BlockNuclearBomb();
-		if(Config.kepler22b)
+		if(Config.kepler22b){
 			kepler22bBlocks = new BlockBasicKepler22b("keplar22b");
+			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
+			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_Blue", "kepler22b");
+			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_Purple", "kepler22b");
+			kepler22bRedGrass = new BlockBasicGrass("kepler22b_Red", "kepler22b");
+			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_Yellow", "kepler22b");
+		}
 	}
 
 	private static void initializeDungeonBlocks() {
@@ -379,8 +391,14 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
-		if(Config.kepler22b)
+		if(Config.kepler22b){
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
+			GameRegistry.registerBlock(kepler22bBlueGrass, "kepler22bBlueGrass");
+			GameRegistry.registerBlock(kepler22bPurpleGrass, "kepler22bPurpleGrass");
+			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
+			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
+		}
 
 		if (Config.europa) {
 			GameRegistry.registerBlock(europaBlocks, ItemBlockEuropa.class, europaBlocks.getUnlocalizedName());
