@@ -20,12 +20,12 @@ public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
 		this.enableRain = true;
 		this.enableSnow = true;
 		this.setTemperatureRainfall(0.8F, 0.9F);
-		this.topBlock = ExtraPlanets_Blocks.kepler22bBlocks;
+		this.topBlock = ExtraPlanets_Blocks.kepler22bGrass;
 		this.topMeta = 0;
 		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks;
-		this.fillerMeta = 1;
+		this.fillerMeta = 0;
 		this.stoneBlock = ExtraPlanets_Blocks.kepler22bBlocks;
-		this.stoneMeta = 2;
+		this.stoneMeta = 1;
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));

@@ -30,12 +30,12 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 		this.setColor(-16744448);
 		this.enableRain = true;
 		this.enableSnow = true;
-		this.topBlock = ExtraPlanets_Blocks.kepler22bBlocks;
+		this.topBlock = ExtraPlanets_Blocks.kepler22bGrass;
 		this.topMeta = 0;
 		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks;
-		this.fillerMeta = 1;
+		this.fillerMeta = 0;
 		this.stoneBlock = ExtraPlanets_Blocks.kepler22bBlocks;
-		this.stoneMeta = 2;
+		this.stoneMeta = 1;
 	}
 
 	@Override
