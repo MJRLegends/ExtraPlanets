@@ -147,13 +147,13 @@ tile.eris.oreTin.name=Eris Tin Ore
 tile.eris.oreCopper.name=Eris Copper Ore
 tile.eris.stoneBricks.name=Eris Stone Bricks
 
-tite.kepler22b.Dirt.name=Kepler 22b Dirt
-tite.kepler22b.Stone.name=Kepler 22b Stone
-tite.kepler22bGrass.name=Kepler 22b Grass
-tite.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
-tite.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
-tite.kepler22b_RedGrass.name=Kepler 22b Red Grass
-tite.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+tile.kepler22b.Dirt.name=Kepler 22b Dirt
+tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22bGrass.name=Kepler 22b Grass
+tile.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tile.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tile.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tile.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Surface Rock
