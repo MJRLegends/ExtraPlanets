@@ -262,7 +262,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.ceres)
 			nuclearBomb = new BlockNuclearBomb();
 		if(Config.kepler22b){
-			kepler22bBlocks = new BlockBasicKepler22b("keplar22b");
+			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
 			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_Blue", "kepler22b");
 			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_Purple", "kepler22b");
