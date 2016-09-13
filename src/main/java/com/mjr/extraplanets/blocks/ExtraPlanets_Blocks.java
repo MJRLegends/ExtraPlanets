@@ -322,7 +322,7 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
 		if (Config.eris) {
-			treasureChestTier9 = new T10TreasureChest("treasureChestT10");
+			treasureChestTier10 = new T10TreasureChest("treasureChestT10");
 		}
 	}
 
