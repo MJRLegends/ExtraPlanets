@@ -147,6 +147,14 @@ tile.eris.oreTin.name=Eris Kalay Cevheri
 tile.eris.oreCopper.name=Eris Bakır Cevheri
 tile.eris.stoneBricks.name=Eris Taş Tuğla
 
+tite.kepler22b.Dirt.name=Kepler 22b Dirt
+tite.kepler22b.Stone.name=Kepler 22b Stone
+tite.kepler22bGrass.name=Kepler 22b Grass
+tite.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tite.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tite.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tite.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+
 #Moon Blocks
 tile.callisto.surface.name=Callisto Yüzey Kayası
 tile.callisto.subSurface.name=Callisto Yeraltı Kayası
@@ -239,6 +247,7 @@ tile.saturnDungeonBrick.name=Satürn Zindan Tuğlası
 tile.uranusDungeonBrick.name=Uranüs Zindan Tuğlası
 tile.neptuneDungeonBrick.name=Neptün Zindan Tuğlası
 tile.plutoDungeonBrick.name=Pluto Zindan Tuğlası
+tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Merkür Taş Basamağı
@@ -283,12 +292,14 @@ tile.treasureChestT6.name=Tier 6 Hazine Sandığı
 tile.treasureChestT7.name=Tier 7 Hazine Sandığı
 tile.treasureChestT8.name=Tier 8 Hazine Sandığı
 tile.treasureChestT9.name=Tier 9 Hazine Sandığı
+tile.treasureChestT10.name=Tier 10 Hazine Sandığı
 tile.treasureChestT4.description=Tier 4 Hazine Sandığı Venüs zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 tile.treasureChestT5.description=Tier 5 Hazine Sandığı Jüpiter zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 tile.treasureChestT6.description=Tier 6 Hazine Sandığı Satürn zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 tile.treasureChestT7.description=Tier 7 Hazine Sandığı Uranüs zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 tile.treasureChestT8.description=Tier 8 Hazine Sandığı Neptün zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 tile.treasureChestT9.description=Tier 9 Hazine Sandığı Pluto zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
+tile.treasureChestT10.description=Tier 10 Hazine Sandığı Eris zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 
 #Machines
 tile.advancedRefinery.name=Gelişmiş Rafineri
@@ -313,6 +324,7 @@ item.itemTier6Rocket.t6Rocket.name=Tier 6 Roketi
 item.itemTier7Rocket.t7Rocket.name=Tier 7 Roketi
 item.itemTier8Rocket.t8Rocket.name=Tier 8 Roketi
 item.itemTier9Rocket.t9Rocket.name=Tier 9 Roketi
+item.itemTier10Rocket.t10Rocket.name=Tier 10 Roketi
 
 #Rocket Tiered Items
 item.noseConeTier4.name=Tier 4 Roket Burnu
@@ -321,6 +333,7 @@ item.noseConeTier6.name=Tier 6 Roket Burnu
 item.noseConeTier7.name=Tier 7 Roket Burnu
 item.noseConeTier8.name=Tier 8 Roket Burnu
 item.noseConeTier9.name=Tier 9 Roket Burnu
+item.noseConeTier10.name=Tier 10 Roket Burnu
 
 item.tier4.tier4Fin.name=Tier 4 Kanatları
 item.tier5.tier5Fin.name=Tier 5 Kanatları
@@ -328,6 +341,7 @@ item.tier6.tier6Fin.name=Tier 6 Kanatları
 item.tier7.tier7Fin.name=Tier 7 Kanatları
 item.tier8.tier8Fin.name=Tier 8 Kanatları
 item.tier9.tier9Fin.name=Tier 9 Kanatları
+item.tier10.tier10Fin.name=Tier 10 Kanatları
 
 item.tier4.tier4engine.name=Tier 4 Roket Motoru
 item.tier5.tier5engine.name=Tier 5 Roket Motoru
@@ -335,6 +349,7 @@ item.tier6.tier6engine.name=Tier 6 Roket Motoru
 item.tier7.tier7engine.name=Tier 7 Roket Motoru
 item.tier8.tier8engine.name=Tier 8 Roket Motoru
 item.tier9.tier9engine.name=Tier 9 Roket Motoru
+item.tier10.tier10engine.name=Tier 10 Roket Motoru
 
 item.tier4.tier4booster.name=Tier 4 Hızlandırıcı
 item.tier5.tier5booster.name=Tier 5 Hızlandırıcı
@@ -342,6 +357,7 @@ item.tier6.tier6booster.name=Tier 6 Hızlandırıcı
 item.tier7.tier7booster.name=Tier 7 Hızlandırıcı
 item.tier8.tier8booster.name=Tier 8 Hızlandırıcı
 item.tier9.tier9booster.name=Tier 9 Hızlandırıcı
+item.tier10.tier10booster.name=Tier 10 Hızlandırıcı
 
 item.tier4.tier4HeavyDutyPlate.name=Ağır-sert Plaka
 item.tier5.tier5HeavyDutyPlate.name=Ağır-sert Plaka
@@ -349,6 +365,7 @@ item.tier6.tier6HeavyDutyPlate.name=Ağır-sert Plaka
 item.tier7.tier7HeavyDutyPlate.name=Ağır-sert Plaka
 item.tier8.tier8HeavyDutyPlate.name=Ağır-sert Plaka
 item.tier9.tier9HeavyDutyPlate.name=Ağır-sert Plaka
+item.tier10.tier10HeavyDutyPlate.name=Ağır-sert Plaka
 
 tier4.heavyDutyPlate.name=Tier 4
 tier5.heavyDutyPlate.name=Tier 5
@@ -356,6 +373,7 @@ tier6.heavyDutyPlate.name=Tier 6
 tier7.heavyDutyPlate.name=Tier 7
 tier8.heavyDutyPlate.name=Tier 8
 tier9.heavyDutyPlate.name=Tier 9
+tier10.heavyDutyPlate.name=Tier 10
 
 #Compressed Items
 item.tier4.compressedCarbon.name=Sıkıştırılmış Karbon
@@ -406,6 +424,7 @@ item.key.T6.name=Tier 6 Zindan Anahtarı
 item.key.T7.name=Tier 7 Zindan Anahtarı
 item.key.T8.name=Tier 8 Zindan Anahtarı
 item.key.T9.name=Tier 9 Zindan Anahtarı
+item.key.T10.name=Tier 10 Zindan Anahtarı
 
 #Tools
 item.carbonPickaxe.name=Karbon Kazma
@@ -471,6 +490,7 @@ item.schematicTier6.name=NASA Çalışma Masası Şematiği
 item.schematicTier7.name=NASA Çalışma Masası Şematiği
 item.schematicTier8.name=NASA Çalışma Masası Şematiği
 item.schematicTier9.name=NASA Çalışma Masası Şematiği
+item.schematicTier10.name=NASA Çalışma Masası Şematiği
 
 schematic.tier4.rocket.name=Tier 4 Roketi
 schematic.tier5.rocket.name=Tier 5 Roketi
@@ -478,6 +498,7 @@ schematic.tier6.rocket.name=Tier 6 Roketi
 schematic.tier7.rocket.name=Tier 7 Roketi
 schematic.tier8.rocket.name=Tier 8 Roketi
 schematic.tier9.rocket.name=Tier 9 Roketi
+schematic.tier10.rocket.name=Tier 10 Roketi
 
 schematic.rocketT4.name=Tier 4 Roketi
 schematic.rocketT5.name=Tier 5 Roketi
@@ -485,6 +506,7 @@ schematic.rocketT6.name=Tier 6 Roketi
 schematic.rocketT7.name=Tier 7 Roketi
 schematic.rocketT8.name=Tier 8 Roketi
 schematic.rocketT9.name=Tier 9 Roketi
+schematic.rocketT10.name=Tier 10 Roketi
 
 #Batteries
 item.mercuryBattery.name=Merkür Pil

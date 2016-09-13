@@ -147,6 +147,14 @@ tile.eris.oreTin.name=Mena de Estaño de Eris
 tile.eris.oreCopper.name=Mena de Cobre de Eris
 tile.eris.stoneBricks.name=Ladrillos de Roca de Eris
 
+tite.kepler22b.Dirt.name=Kepler 22b Dirt
+tite.kepler22b.Stone.name=Kepler 22b Stone
+tite.kepler22bGrass.name=Kepler 22b Grass
+tite.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tite.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tite.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tite.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+
 #Moon Blocks
 tile.callisto.surface.name=Roca Superficial de Calisto
 tile.callisto.subSurface.name=Roca Subterránea de Calisto
@@ -238,6 +246,7 @@ tile.saturnDungeonBrick.name=Saturn Dungeon Brick
 tile.uranusDungeonBrick.name=Uranus Dungeon Brick
 tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
 tile.plutoDungeonBrick.name=Pluto Dungeon Brick
+tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Losa de Roca Mercuriana
@@ -282,12 +291,14 @@ tile.treasureChestT6.name=Cofre del tesoro nivel 6
 tile.treasureChestT7.name=Cofre del tesoro nivel 7
 tile.treasureChestT8.name=Cofre del tesoro nivel 8
 tile.treasureChestT9.name=Cofre del tesoro nivel 9
+tile.treasureChestT10.name=Cofre del tesoro nivel 10
 tile.treasureChestT4.description=Los cofres del tesoro nivel 4 se generarán en las mazmorras de Venus. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT5.description=Los cofres del tesoro nivel 5 se generarán en las mazmorras de Júpiter. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT6.description=Los cofres del tesoro nivel 6 se generarán en las mazmorras de Saturno. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT7.description=Los cofres del tesoro nivel 7 se generarán en las mazmorras de Urano. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT8.description=Los cofres del tesoro nivel 8 se generarán en las mazmorras de Neptuno. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT9.description=Los cofres del tesoro nivel 9 se generarán en las mazmorras de Pluto. Se desbloquean despues de matar al jefe final.
+tile.treasureChestT10.description=Los cofres del tesoro nivel 10 se generarán en las mazmorras de Eris. Se desbloquean despues de matar al jefe final.
 
 #Machines
 tile.advancedRefinery.name=Refinería Avanzada
@@ -312,6 +323,7 @@ item.itemTier6Rocket.t6Rocket.name=Cohete nivel 6
 item.itemTier7Rocket.t7Rocket.name=Cohete nivel 7
 item.itemTier8Rocket.t8Rocket.name=Cohete nivel 8
 item.itemTier9Rocket.t9Rocket.name=Cohete nivel 9
+item.itemTier10Rocket.t10Rocket.name=Cohete nivel 10
 
 #Rocket Tiered Items
 item.noseConeTier4.name=Ojiva nivel 4
@@ -320,6 +332,7 @@ item.noseConeTier6.name=Ojiva nivel 6
 item.noseConeTier7.name=Ojiva nivel 7
 item.noseConeTier8.name=Ojiva nivel 8
 item.noseConeTier9.name=Ojiva nivel 9
+item.noseConeTier10.name=Ojiva nivel 10
 
 item.tier4.tier4Fin.name=Aletas de cohete nivel 4
 item.tier5.tier5Fin.name=Aletas de cohete nivel 5
@@ -327,6 +340,7 @@ item.tier6.tier6Fin.name=Aletas de cohete nivel 6
 item.tier7.tier7Fin.name=Aletas de cohete nivel 7
 item.tier8.tier8Fin.name=Aletas de cohete nivel 8
 item.tier9.tier9Fin.name=Aletas de cohete nivel 9
+item.tier10.tier10Fin.name=Aletas de cohete nivel 10
 
 item.tier4.tier4engine.name=Motor de coehte nivel 4
 item.tier5.tier5engine.name=Motor de coehte nivel 5
@@ -334,6 +348,7 @@ item.tier6.tier6engine.name=Motor de coehte nivel 6
 item.tier7.tier7engine.name=Motor de coehte nivel 7
 item.tier8.tier8engine.name=Motor de coehte nivel 8
 item.tier9.tier9engine.name=Motor de coehte nivel 9
+item.tier10.tier10engine.name=Motor de coehte nivel 10
 
 item.tier4.tier4booster.name=Acelerador nivel 4
 item.tier5.tier5booster.name=Acelerador nivel 5
@@ -341,6 +356,7 @@ item.tier6.tier6booster.name=Acelerador nivel 6
 item.tier7.tier7booster.name=Acelerador nivel 7
 item.tier8.tier8booster.name=Acelerador nivel 8
 item.tier9.tier9booster.name=Acelerador nivel 9
+item.tier10.tier10booster.name=Acelerador nivel 10
 
 item.tier4.tier4HeavyDutyPlate.name=Placa de alta resistencia
 item.tier5.tier5HeavyDutyPlate.name=Placa de alta resistencia
@@ -348,6 +364,7 @@ item.tier6.tier6HeavyDutyPlate.name=Placa de alta resistencia
 item.tier7.tier7HeavyDutyPlate.name=Placa de alta resistencia
 item.tier8.tier8HeavyDutyPlate.name=Placa de alta resistencia
 item.tier9.tier9HeavyDutyPlate.name=Placa de alta resistencia
+item.tier10.tier10HeavyDutyPlate.name=Placa de alta resistencia
 
 tier4.heavyDutyPlate.name=nivel 4
 tier5.heavyDutyPlate.name=nivel 5
@@ -355,6 +372,7 @@ tier6.heavyDutyPlate.name=nivel 6
 tier7.heavyDutyPlate.name=nivel 7
 tier8.heavyDutyPlate.name=nivel 8
 tier9.heavyDutyPlate.name=nivel 9
+tier10.heavyDutyPlate.name=nivel 10
 
 #Compressed Items
 item.tier4.compressedCarbon.name=Carbono comprimido
@@ -405,6 +423,7 @@ item.key.T6.name=Llave de mazmorra nivel 6
 item.key.T7.name=Llave de mazmorra nivel 7
 item.key.T8.name=Llave de mazmorra nivel 8
 item.key.T9.name=Llave de mazmorra nivel 9
+item.key.T10.name=Llave de mazmorra nivel 10
 
 #Tools
 item.carbonPickaxe.name=Pico de carbono
@@ -470,6 +489,7 @@ item.schematicTier6.name=Planos
 item.schematicTier7.name=Planos
 item.schematicTier8.name=Planos
 item.schematicTier9.name=Planos
+item.schematicTier10.name=Planos
 
 schematic.tier4.rocket.name=Cohete nivel 4
 schematic.tier5.rocket.name=Cohete nivel 5
@@ -477,6 +497,7 @@ schematic.tier6.rocket.name=Cohete nivel 6
 schematic.tier7.rocket.name=Cohete nivel 7
 schematic.tier8.rocket.name=Cohete nivel 8
 schematic.tier9.rocket.name=Cohete nivel 9
+schematic.tier10.rocket.name=Cohete nivel 10
 
 schematic.rocketT4.name=Cohete nivel 4
 schematic.rocketT5.name=Cohete nivel 5
@@ -484,6 +505,7 @@ schematic.rocketT6.name=Cohete nivel 6
 schematic.rocketT7.name=Cohete nivel 7
 schematic.rocketT8.name=Cohete nivel 8
 schematic.rocketT9.name=Cohete nivel 9
+schematic.rocketT10.name=Cohete nivel 10
 
 #Batteries
 item.mercuryBattery.name=Batería de mercurio

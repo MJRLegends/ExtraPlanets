@@ -148,6 +148,14 @@ tile.eris.oreTin.name=阋神星锡矿石
 tile.eris.oreCopper.name=阋神星铜矿石
 tile.eris.stoneBricks.name=阋神星石砖
 
+tite.kepler22b.Dirt.name=Kepler 22b Dirt
+tite.kepler22b.Stone.name=Kepler 22b Stone
+tite.kepler22bGrass.name=Kepler 22b Grass
+tite.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tite.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tite.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tite.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+
 #Moon Blocks
 tile.callisto.surface.name=木卫四地表岩石
 tile.callisto.subSurface.name=木卫四地底岩石
@@ -240,6 +248,7 @@ tile.saturnDungeonBrick.name=土星地牢砖
 tile.uranusDungeonBrick.name=天王星地牢砖
 tile.neptuneDungeonBrick.name=海王星地牢砖
 tile.plutoDungeonBrick.name=冥王星地牢砖
+tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星石台阶
@@ -284,12 +293,14 @@ tile.treasureChestT6.name=6阶宝箱
 tile.treasureChestT7.name=7阶宝箱
 tile.treasureChestT8.name=8阶宝箱
 tile.treasureChestT9.name=9阶宝箱
+tile.treasureChestT10.name=10阶宝箱
 tile.treasureChestT4.description=4阶宝箱会在金星地牢形成。当你击败了金星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasureChestT5.description=5阶宝箱会在木星地牢形成。当你击败了木星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasureChestT6.description=6阶宝箱会在土星地牢形成。当你击败了土星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasureChestT7.description=7阶宝箱会在天王星地牢形成。当你击败了天王星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasureChestT8.description=8阶宝箱会在海王星地牢形成。当你击败了海王星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasureChestT9.description=9阶宝箱会在冥王星地牢形成。当你击败了冥王星地牢BOSS后，就能拿到钥匙来打开宝箱。
+tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
 
 #Machines
 tile.advancedRefinery.name=高级精炼机
@@ -314,6 +325,7 @@ item.itemTier6Rocket.t6Rocket.name=6阶火箭
 item.itemTier7Rocket.t7Rocket.name=7阶火箭
 item.itemTier8Rocket.t8Rocket.name=8阶火箭
 item.itemTier9Rocket.t9Rocket.name=9阶火箭
+item.itemTier10Rocket.t10Rocket.name=10阶火箭
 
 #Rocket Tiered Items
 item.noseConeTier4.name=4阶鼻锥
@@ -322,6 +334,7 @@ item.noseConeTier6.name=6阶鼻锥
 item.noseConeTier7.name=7阶鼻锥
 item.noseConeTier8.name=8阶鼻锥
 item.noseConeTier9.name=9阶鼻锥
+item.noseConeTier10.name=10阶鼻锥
 
 item.tier4.tier4Fin.name=4阶火箭尾鳍
 item.tier5.tier5Fin.name=5阶火箭尾鳍
@@ -329,6 +342,7 @@ item.tier6.tier6Fin.name=6阶火箭尾鳍
 item.tier7.tier7Fin.name=7阶火箭尾鳍
 item.tier8.tier8Fin.name=8阶火箭尾鳍
 item.tier9.tier9Fin.name=9阶火箭尾鳍
+item.tier10.tier10Fin.name=10阶火箭尾鳍
 
 item.tier4.tier4engine.name=4阶火箭引擎
 item.tier5.tier5engine.name=5阶火箭引擎
@@ -336,6 +350,7 @@ item.tier6.tier6engine.name=6阶火箭引擎
 item.tier7.tier7engine.name=7阶火箭引擎
 item.tier8.tier8engine.name=8阶火箭引擎
 item.tier9.tier9engine.name=9阶火箭引擎
+item.tier10.tier10engine.name=10阶火箭引擎
 
 item.tier4.tier4booster.name=4阶助推器
 item.tier5.tier5booster.name=5阶助推器
@@ -343,6 +358,7 @@ item.tier6.tier6booster.name=6阶助推器
 item.tier7.tier7booster.name=7阶助推器
 item.tier8.tier8booster.name=8阶助推器
 item.tier9.tier9booster.name=9阶助推器
+item.tier10.tier10booster.name=10阶助推器
 
 item.tier4.tier4HeavyDutyPlate.name=重型板
 item.tier5.tier5HeavyDutyPlate.name=重型板
@@ -350,6 +366,7 @@ item.tier6.tier6HeavyDutyPlate.name=重型板
 item.tier7.tier7HeavyDutyPlate.name=重型板
 item.tier8.tier8HeavyDutyPlate.name=重型板
 item.tier9.tier9HeavyDutyPlate.name=重型板
+item.tier10.tier10HeavyDutyPlate.name=重型板
 
 tier4.heavyDutyPlate.name=4阶
 tier5.heavyDutyPlate.name=5阶
@@ -357,6 +374,7 @@ tier6.heavyDutyPlate.name=6阶
 tier7.heavyDutyPlate.name=7阶
 tier8.heavyDutyPlate.name=8阶
 tier9.heavyDutyPlate.name=9阶
+tier10.heavyDutyPlate.name=10阶
 
 #Compressed Items
 item.tier4.compressedCarbon.name=致密碳板
@@ -407,6 +425,7 @@ item.key.T6.name=6阶宝箱钥匙
 item.key.T7.name=7阶宝箱钥匙
 item.key.T8.name=8阶宝箱钥匙
 item.key.T9.name=9阶宝箱钥匙
+item.key.T10.name=10阶宝箱钥匙
 
 #Tools
 item.carbonPickaxe.name=碳镐
@@ -472,6 +491,7 @@ item.schematicTier6.name=NASA工作台图纸
 item.schematicTier7.name=NASA工作台图纸
 item.schematicTier8.name=NASA工作台图纸
 item.schematicTier9.name=NASA工作台图纸
+item.schematicTier10.name=NASA工作台图纸
 
 schematic.tier4.rocket.name=4阶火箭
 schematic.tier5.rocket.name=5阶火箭
@@ -479,6 +499,7 @@ schematic.tier6.rocket.name=6阶火箭
 schematic.tier7.rocket.name=7阶火箭
 schematic.tier8.rocket.name=8阶火箭
 schematic.tier9.rocket.name=9阶火箭
+schematic.tier10.rocket.name=10阶火箭
 
 schematic.rocketT4.name=4阶火箭
 schematic.rocketT5.name=5阶火箭
@@ -486,6 +507,7 @@ schematic.rocketT6.name=6阶火箭
 schematic.rocketT7.name=7阶火箭
 schematic.rocketT8.name=8阶火箭
 schematic.rocketT9.name=9阶火箭
+schematic.rocketT10.name=10阶火箭
 
 #Batteries
 item.mercuryBattery.name=汞电池

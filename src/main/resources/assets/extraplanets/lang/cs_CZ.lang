@@ -147,6 +147,14 @@ tile.eris.OreTin.name=Cínová ruda z Erisu
 tile.eris.OreCopper.name=Měděná ruda z Erisu
 tile.eris.stoneBricks.name=Eris Stone Bricks
 
+tite.kepler22b.Dirt.name=Kepler 22b Dirt
+tite.kepler22b.Stone.name=Kepler 22b Stone
+tite.kepler22bGrass.name=Kepler 22b Grass
+tite.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tite.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tite.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tite.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+
 #Moon Blocks
 tile.callisto.surface.name=Povrchový kámen z Callisto
 tile.callisto.subSurface.name=Podpovrchový kámen z Callisto
@@ -239,6 +247,7 @@ tile.saturnDungeonBrick.name=Cihla z kobky
 tile.uranusDungeonBrick.name=Cihla z kobky
 tile.neptuneDungeonBrick.name=Cihla z kobky
 tile.plutoDungeonBrick.name=Cihla z kobky
+tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Kamenný půlblok
@@ -283,12 +292,14 @@ tile.treasureChestT6.name=Truhla s pokladem typ 6
 tile.treasureChestT7.name=Truhla s pokladem typ 7
 tile.treasureChestT8.name=Truhla s pokladem typ 8
 tile.treasureChestT9.name=Truhla s pokladem typ 9
+tile.treasureChestT10.name=Tier 10 Treasure Chest
 tile.treasureChestT4.description=Truhly s pokladem typu 4 se generují na Venuši. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT5.description=Truhly s pokladem typu 5 se generují na Jupiteru. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT6.description=Truhly s pokladem typu 6 se generují na Saturnu. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT7.description=Truhly s pokladem typu 7 se generují na Uranu. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT8.description=Truhly s pokladem typu 8 se generují na Neptunu. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT9.description=Truhly s pokladem typu 9 se generují na Plutu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
 
 #Machines
 tile.advancedRefinery.name=Advanced Refinery
@@ -313,6 +324,7 @@ item.itemTier6Rocket.t6Rocket.name=Raketa typ 6
 item.itemTier7Rocket.t7Rocket.name=Raketa typ 7
 item.itemTier8Rocket.t8Rocket.name=Raketa typ 8
 item.itemTier9Rocket.t9Rocket.name=Raketa typ 9
+item.itemTier10Rocket.t10Rocket.name=Tier 10 Rocket
 
 #Rocket Tiered Items
 item.noseConeTier4.name=Špička rakety typ 4
@@ -321,6 +333,7 @@ item.noseConeTier6.name=Špička rakety typ 6
 item.noseConeTier7.name=Špička rakety typ 7
 item.noseConeTier8.name=Špička rakety typ 8
 item.noseConeTier9.name=Špička rakety typ 9
+item.noseConeTier10.name=Tier 10 Nose Cone
 
 item.tier4.tier4Fin.name=Raketové křidélko typ 4
 item.tier5.tier5Fin.name=Raketové křidélko typ 5
@@ -328,6 +341,7 @@ item.tier6.tier6Fin.name=Raketové křidélko typ 6
 item.tier7.tier7Fin.name=Raketové křidélko typ 7
 item.tier8.tier8Fin.name=Raketové křidélko typ 8
 item.tier9.tier9Fin.name=Raketové křidélko typ 9
+item.tier10.tier10Fin.name=Tier 10 Rocket Fins
 
 item.tier4.tier4engine.name=Raketový motor typ 4
 item.tier5.tier5engine.name=Raketový motor typ 5
@@ -335,6 +349,7 @@ item.tier6.tier6engine.name=Raketový motor typ 6
 item.tier7.tier7engine.name=Raketový motor typ 7
 item.tier8.tier8engine.name=Raketový motor typ 8
 item.tier9.tier9engine.name=Raketový motor typ 9
+item.tier10.tier10engine.name=Tier 10 Rocket Engine
 
 item.tier4.tier4booster.name=Posilovač typ 4
 item.tier5.tier5booster.name=Posilovač typ 5
@@ -342,6 +357,7 @@ item.tier6.tier6booster.name=Posilovač typ 6
 item.tier7.tier7booster.name=Posilovač typ 7
 item.tier8.tier8booster.name=Posilovač typ 8
 item.tier9.tier9booster.name=Posilovač typ 9
+item.tier10.tier10booster.name=Tier 10 Booster
 
 item.tier4.tier4HeavyDutyplate.name=Zesílený plech
 item.tier5.tier5HeavyDutyplate.name=Zesílený plech
@@ -349,6 +365,7 @@ item.tier6.tier6HeavyDutyplate.name=Zesílený plech
 item.tier7.tier7HeavyDutyplate.name=Zesílený plech
 item.tier8.tier8HeavyDutyplate.name=Zesílený plech
 item.tier9.tier9HeavyDutyplate.name=Zesílený plech
+item.tier10.tier10HeavyDutyPlate.name=Heavy-Duty Plate
 
 tier4.heavyDutyplate.name=typ 4
 tier5.heavyDutyplate.name=typ 5
@@ -356,6 +373,7 @@ tier6.heavyDutyplate.name=typ 6
 tier7.heavyDutyplate.name=typ 7
 tier8.heavyDutyplate.name=typ 8
 tier9.heavyDutyplate.name=typ 9
+tier10.heavyDutyPlate.name=Tier 10
 
 #Stlačený Items
 item.tier4.compressedCarbon.name=Stlačený Karbon
@@ -406,6 +424,7 @@ item.key.T6.name=Klíč ke kobce typ 6
 item.key.T7.name=Klíč ke kobce typ 7
 item.key.T8.name=Klíč ke kobce typ 8
 item.key.T9.name=Klíč ke kobce typ 9
+item.key.T10.name=Klíč ke kobce typ 10
 
 #Tools
 item.carbonPickaxe.name=Karbonový krumpáč
@@ -471,6 +490,7 @@ item.schematicTier6.name=NASA Workbench Schéma
 item.schematicTier7.name=NASA Workbench Schéma
 item.schematicTier8.name=NASA Workbench Schéma
 item.schematicTier9.name=NASA Workbench Schéma
+item.schematicTier10.name=NASA Workbench Schéma
 
 schematic.tier4.Rocket.name=Raketa typ 4
 schematic.tier5.Rocket.name=Raketa typ 5
@@ -478,6 +498,7 @@ schematic.tier6.Rocket.name=Raketa typ 6
 schematic.tier7.Rocket.name=Raketa typ 7
 schematic.tier8.Rocket.name=Raketa typ 8
 schematic.tier9.Rocket.name=Raketa typ 9
+schematic.tier10.Rocket.name=Raketa typ 10
 
 schematic.RocketT4.name=Raketa typ 4
 schematic.RocketT5.name=Raketa typ 5
@@ -485,6 +506,7 @@ schematic.RocketT6.name=Raketa typ 6
 schematic.RocketT7.name=Raketa typ 7
 schematic.RocketT8.name=Raketa typ 8
 schematic.RocketT9.name=Raketa typ 9
+schematic.RocketT10.name=Raketa typ 10
 
 #Batteries
 item.mercuryBattery.name=Měděná baterie
