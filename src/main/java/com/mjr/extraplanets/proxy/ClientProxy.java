@@ -25,6 +25,7 @@ import com.mjr.extraplanets.client.render.block.BlockRendererTier7TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier8TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier9TreasureChest;
 import com.mjr.extraplanets.client.render.block.TileEntitySolarPanelRenderer;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossEris;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossJupiter;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossNeptune;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossPluto;
@@ -76,6 +77,7 @@ import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
@@ -165,7 +167,9 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
 		if (Config.pluto)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, new RenderCreeperBossPluto());
-
+		if (Config.eris)
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, new RenderCreeperBossEris());
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCube.class, new RenderEvolvedMagmaCube());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlime.class, new RenderEvolvedIceSlime(new ModelEvolvedIceSlime(16), new ModelEvolvedIceSlime(0), 0.25F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedWitch.class, new RenderEvolvedWitch());
