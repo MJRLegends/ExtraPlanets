@@ -234,7 +234,7 @@ public class Config {
 		oreDictionary = config.get(dimensionSettings, "Add planet/moons ores to the ore dictionary", true, "").getBoolean(true);
 		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "").getBoolean(false);
 		
-		eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
+		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
 		//pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
@@ -272,10 +272,11 @@ public class Config {
 		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true,"Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
 		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
 		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
-		erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
+		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
 
 		//	venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
 		//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();

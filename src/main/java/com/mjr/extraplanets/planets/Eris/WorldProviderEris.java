@@ -9,7 +9,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.WorldChunkManagerEris;
@@ -17,8 +16,7 @@ import com.mjr.extraplanets.planets.Eris.worldgen.WorldChunkManagerEris;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WorldProviderEris extends WorldProviderSpace implements
-IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderEris extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -31,7 +29,6 @@ IGalacticraftWorldProvider, ISolarLevel {
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(234f / 255.0F * f, 223f / 255.0F * f, 242f / 255.0F * f);
 	}
-
 
 	@Override
 	public boolean canRainOrSnow() {
@@ -117,7 +114,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.eris.getTierRequirement();
+		return tier >= 9;
 	}
 
 	@Override

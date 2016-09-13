@@ -155,7 +155,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.eris) {
 			eris = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			eris.setTierRequired(Config.erisRocketTier);
+			eris.setTierRequired(9);
 			eris.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			eris.setPhaseShift(1.0F);
 			eris.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F, 3.50F));
