@@ -36,6 +36,7 @@ import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
@@ -69,6 +70,7 @@ import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.planets.Venus.event.VenusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
+import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier4Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier5Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
@@ -287,8 +289,8 @@ public class ExtraPlanets {
 			registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
 		if (Config.pluto)
 			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
-		// if (Config.eris)
-		// registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class,Constants.modName + "EntityTier10Rocket", 150, 1, false);
+		 if (Config.eris)
+			 registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class,Constants.modName + "EntityTier10Rocket", 150, 1, false);
 	}
 
 	private void registerCreatures() {
@@ -339,9 +341,8 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier8Rocket());
 		if (Config.pluto)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
-		// if (Config.eris)
-		// SchematicRegistry.registerSchematicRecipe(new
-		// SchematicTier10Rocket());
+		if (Config.eris)
+			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
 	}
 
 	private void addDungeonLoot() {
@@ -357,8 +358,8 @@ public class ExtraPlanets {
 			GalacticraftRegistry.addDungeonLoot(8, new ItemStack(ExtraPlanets_Items.schematicTier8, 1, 0));
 		if (Config.pluto)
 			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.schematicTier9, 1, 0));
-		// if (Config.eris)
-		// GalacticraftRegistry.addDungeonLoot(10, newItemStack(ExtraPlanets_Items.schematicTier10, 1, 0));
+		if (Config.eris)
+			GalacticraftRegistry.addDungeonLoot(10, new ItemStack(ExtraPlanets_Items.schematicTier10, 1, 0));
 	}
 
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
