@@ -110,7 +110,7 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 
 	@Override
 	public double getMeteorFrequency() {
-		return 10.0D;
+		return 0.0D;
 	}
 
 	@Override
