@@ -12,12 +12,12 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenBaseKepler22b extends BiomeGenBase {
-	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setBiomeName("Kepler22b Plains").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bSea = (new BiomeGenKepler22bSea()).setColor(112).setBiomeName("Kepler22b Sea").setHeight(height_Oceans);
-	public static final BiomeGenBase kepler22bBlueForest = (new BiomeGenKepler22bBlueMapleForest()).setColor(112).setBiomeName("Kepler22b Blue Forest").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bPurpleForest = (new BiomeGenKepler22bPurpleMapleForest()).setColor(112).setBiomeName("Kepler22b Purple Forest").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bRedForest = (new BiomeGenKepler22bRedMapleForest()).setColor(112).setBiomeName("Kepler22b Red Forest").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bYellowForest = (new BiomeGenKepler22bYellowMapleForest()).setColor(112).setBiomeName("Kepler22b Yellow Forest").setHeight(height_LowPlains);
+	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains").setHeight(height_LowPlains);
+	public static final BiomeGenBase kepler22bSea = new BiomeGenKepler22bSea().setColor(112).setBiomeName("Kepler22b Sea").setHeight(height_Oceans);
+	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest().setColor(112).setBiomeName("Kepler22b Blue Maple Forest").setHeight(height_LowPlains);
+	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest").setHeight(height_LowPlains);
+	public static final BiomeGenBase kepler22bRedForest = new BiomeGenKepler22bRedMapleForest().setColor(112).setBiomeName("Kepler22b Red Maple Forest").setHeight(height_LowPlains);
+	public static final BiomeGenBase kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest().setColor(112).setBiomeName("Kepler22b Yellow Maple Forest").setHeight(height_LowPlains);
 
 	protected Block stoneBlock;
 	protected byte topMeta;
