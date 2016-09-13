@@ -17,6 +17,7 @@ import com.mjr.extraplanets.client.model.ModelEvolvedIceSlime;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.RenderPlayerExtraPlanets;
 import com.mjr.extraplanets.client.render.block.BlockRendererMachine;
+import com.mjr.extraplanets.client.render.block.BlockRendererTier10TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier4TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier5TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier6TreasureChest;
@@ -57,6 +58,7 @@ import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier7Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier8Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier9Rocket;
+import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer;
@@ -92,6 +94,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntitySolar;
+import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
@@ -117,6 +120,7 @@ public class ClientProxy extends CommonProxy {
 	public static int treasureT7ChestID;
 	public static int treasureT8ChestID;
 	public static int treasureT9ChestID;
+	public static int treasureT10ChestID;
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -246,6 +250,11 @@ public class ClientProxy extends CommonProxy {
 			treasureT9ChestID = RenderingRegistry.getNextAvailableRenderId();
 			RenderingRegistry.registerBlockHandler(new BlockRendererTier9TreasureChest(treasureT9ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());
+		}
+		if (Config.eris) {
+			treasureT10ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier10TreasureChest(treasureT10ChestID));
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
 		}
 		ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(new BlockRendererMachine(renderIdMachine));

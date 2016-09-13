@@ -27,6 +27,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
+import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
@@ -52,6 +53,8 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.DungeonSpawnerEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.DungeonSpawnerJuptier;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.DungeonSpawnerNeptune;
@@ -64,6 +67,7 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.DungeonSpawnerUranus
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.DungeonSpawnerVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
@@ -137,8 +141,10 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier7;
 	public static Block treasureChestTier8;
 	public static Block treasureChestTier9;
+	public static Block treasureChestTier10;
 
 	// Need changing to meta blocks -----------------------------------------
+	
 	//Dungeon Bricks
 	public static Block veunsDungeonBrick;
 	public static Block jupiterDungeonBrick;
@@ -146,6 +152,7 @@ public class ExtraPlanets_Blocks {
 	public static Block uranusDungeonBrick;
 	public static Block neptuneDungeonBrick;
 	public static Block plutoDungeonBrick;
+	public static Block erisDungeonBrick;
 
 	//Dungeon Spawners
 	public static Block venusSpawner;
@@ -154,6 +161,7 @@ public class ExtraPlanets_Blocks {
 	public static Block uranusSpawner;
 	public static Block neptuneSpawner;
 	public static Block plutoSpawner;
+	public static Block erisSpawner;
 
 	// -----------------------------------------------------------------------
 
@@ -288,6 +296,10 @@ public class ExtraPlanets_Blocks {
 			plutoDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("plutoDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
 			plutoDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
+		if (Config.eris) {
+			erisDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("erisDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "erisDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			erisDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
+		}
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -309,6 +321,9 @@ public class ExtraPlanets_Blocks {
 		if (Config.pluto) {
 			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
+		if (Config.eris) {
+			treasureChestTier9 = new T10TreasureChest("treasureChestT10");
+		}
 	}
 
 	private static void initializeSpawnerBlocks() {
@@ -329,6 +344,9 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.pluto) {
 			plutoSpawner = new DungeonSpawnerPluto();
+		}
+		if (Config.eris) {
+			erisSpawner = new DungeonSpawnerEris();
 		}
 	}
 
@@ -389,6 +407,9 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.eris) {
 			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName());
+			GameRegistry.registerBlock(erisSpawner, "erisSpawner");
+			GameRegistry.registerBlock(erisDungeonBrick, "erisDungeonBrick");
+			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName());
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
 		if(Config.kepler22b){
@@ -466,6 +487,10 @@ public class ExtraPlanets_Blocks {
 		if (Config.pluto) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
+		}
+		if (Config.eris) {
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
 	}
 
