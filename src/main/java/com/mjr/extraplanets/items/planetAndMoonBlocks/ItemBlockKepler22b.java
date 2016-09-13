@@ -28,15 +28,10 @@ public class ItemBlockKepler22b extends ItemBlock
 		{
 		case 0:
 		{
-			name = "Grass";
-			break;
-		}
-		case 1:
-		{
 			name = "Dirt";
 			break;
 		}
-		case 2:
+		case 1:
 		{
 			name = "Stone";
 			break;
