@@ -54,19 +54,17 @@ public class BlockBasicGrass extends Block {
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
-	public void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_) {
-		if (!p_149674_1_.isRemote) {
-			if (p_149674_1_.getBlockLightValue(p_149674_2_, p_149674_3_ + 1, p_149674_4_) < 4 && p_149674_1_.getBlockLightOpacity(p_149674_2_, p_149674_3_ + 1, p_149674_4_) > 2) {
-				p_149674_1_.setBlock(p_149674_2_, p_149674_3_, p_149674_4_, ExtraPlanets_Blocks.kepler22bBlocks);
-			} else if (p_149674_1_.getBlockLightValue(p_149674_2_, p_149674_3_ + 1, p_149674_4_) >= 9) {
+	public void updateTick(World world, int x, int y, int z, Random rand) {
+		if (!world.isRemote) {
+			if (world.getBlockLightValue(x, y + 1, z) < 4 && world.getBlockLightOpacity(x, y + 1, z) > 2) {
+				world.setBlock(x, y, z, ExtraPlanets_Blocks.kepler22bBlocks);
+			} else if (world.getBlockLightValue(x, y + 1, z) >= 9) {
 				for (int l = 0; l < 4; ++l) {
-					int i1 = p_149674_2_ + p_149674_5_.nextInt(3) - 1;
-					int j1 = p_149674_3_ + p_149674_5_.nextInt(5) - 3;
-					int k1 = p_149674_4_ + p_149674_5_.nextInt(3) - 1;
-					Block block = p_149674_1_.getBlock(i1, j1 + 1, k1);
-
-					if (p_149674_1_.getBlock(i1, j1, k1) == ExtraPlanets_Blocks.kepler22bBlocks && p_149674_1_.getBlockMetadata(i1, j1, k1) == 0 && p_149674_1_.getBlockLightValue(i1, j1 + 1, k1) >= 4 && p_149674_1_.getBlockLightOpacity(i1, j1 + 1, k1) <= 2) {
-						p_149674_1_.setBlock(i1, j1, k1, this);
+					int i1 = x + rand.nextInt(3) - 1;
+					int j1 = y + rand.nextInt(5) - 3;
+					int k1 = z + rand.nextInt(3) - 1;
+					if (world.getBlock(i1, j1, k1) == ExtraPlanets_Blocks.kepler22bBlocks && world.getBlockMetadata(i1, j1, k1) == 0 && world.getBlockLightValue(i1, j1 + 1, k1) >= 4 && world.getBlockLightOpacity(i1, j1 + 1, k1) <= 2) {
+						world.setBlock(i1, j1, k1, this);
 					}
 				}
 			}
