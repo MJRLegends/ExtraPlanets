@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
@@ -36,12 +34,8 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	public NoiseGeneratorOctaves field_73213_c;
 	private World worldObj;
 	private double[] stoneNoise;
-	// private MapGenCaveFronos caveGenerator;
-	// private MapGenCavernFronos cavernGenerator;
-	// public BiomeDecoratorFronosOre biomedecoratorplanet = new
-	// BiomeDecoratorFronosOre();
-	// private MapGenFronosVillage villageGenerator = new MapGenFronosVillage();
-	// private MapGenFronosRavine ravineGenerator = new MapGenFronosRavine();
+	private MapGenCaveKepler22b caveGenerator;
+	private MapGenRavineKepler22b ravineGenerator = new MapGenRavineKepler22b();
 	private BiomeGenBase[] biomesForGeneration;
 	double[] noise3;
 	double[] noise1;
@@ -66,7 +60,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
 		this.stoneNoise = new double[256];
-		// this.caveGenerator = new MapGenCaveKepler22b(); TODO
+		this.caveGenerator = new MapGenCaveKepler22b();
 		this.worldObj = world;
 		this.rand = new Random(seed);
 		this.noiseGen4 = new NoiseGeneratorOctaves(this.rand, 4);
@@ -96,15 +90,10 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		generateTerrain(x, z, blockStorage);
 		this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, x * 16, z * 16, 16, 16);
 		replaceBlocksForBiome(x, z, blockStorage, metaStorage, this.biomesForGeneration);
-		// this.caveGenerator.generate(this, this.worldObj, x, z, blockStorage,
-		// metaStorage);
-		// this.cavernGenerator.generate(this, this.worldObj, x, z,
-		// blockStorage, metaStorage);
-		// this.ravineGenerator.func_151539_a(this, this.worldObj, x, z,
-		// blockStorage);
-		// this.dungeonGenerator.generateUsingArrays(this.worldObj,
-		// this.worldObj.getSeed(), x * 16, 30, z * 16, x, z, blockStorage,
-		// metaStorage);
+		 this.caveGenerator.generate(this, this.worldObj, x, z, blockStorage,
+		 metaStorage);
+		 this.ravineGenerator.func_151539_a(this, this.worldObj, x, z,
+		 blockStorage);
 		Chunk chunk = new Chunk(this.worldObj, blockStorage, metaStorage, x, z);
 		byte[] chunkBiomes = chunk.getBiomeArray();
 		for (int i = 0; i < chunkBiomes.length; i++) {
@@ -280,25 +269,13 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		long var7 = this.rand.nextLong() / 2L * 2L + 1L;
 		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(x * var7 + z * var9 ^ this.worldObj.getSeed());
-		// this.dungeonGenerator.handleTileEntities(this.rand);
 		biomeGen.decorate(this.worldObj, this.rand, var4, var5);
 		decoratePlanet(this.worldObj, this.rand, var4, var5);
 		SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomeGen, var4 + 8, var5 + 8, 16, 16, this.rand);
-		// this.villageGenerator.func_75051_a(this.worldObj, this.rand, x, z);
-		// for (int i = 0; i < 8; i++)
-		// {
-		// int x1 = var4 + this.rand.nextInt(16) + 8;
-		// int y1 = this.rand.nextInt(256);
-		// int z1 = var5 + this.rand.nextInt(16) + 8;
-		// new WorldGenSpaceDungeons(FronosBlocks.fronos_ancient_chest,
-		// FronosBlocks.fronos_block, FronosBlocks.mossy_fronos_cobblestone, 1,
-		// 0).func_76484_a(this.worldObj, this.rand, x1, y1, z1);
-		// }
 		net.minecraft.block.BlockFalling.fallInstantly = false;
 	}
 
 	public void decoratePlanet(World world, Random rand, int x, int z) {
-		// this.biomedecoratorplanet.decorate(world, rand, x, z);
 	}
 
 	public boolean func_73151_a(boolean flag, IProgressUpdate progress) {
@@ -340,8 +317,6 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	}
 
 	public void recreateStructures(int x, int z) {
-		// this.villageGenerator.func_151539_a(this, this.worldObj, x, z,
-		// (Block[])null);
 	}
 
 	public boolean unloadQueuedChunks() {
