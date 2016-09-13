@@ -3,12 +3,11 @@ package com.mjr.extraplanets.nei;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
-import micdoodle8.mods.galacticraft.core.nei.NEIGalacticraftConfig;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.init.Blocks;
@@ -30,6 +29,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t7rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t8rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t9rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
+	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t10rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<HashMap<Integer, PositionedStack>, PositionedStack> circuitFabricatorRecipes = new HashMap<HashMap<Integer, PositionedStack>, PositionedStack>();
 
 	@Override
@@ -78,6 +78,11 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 				API.registerRecipeHandler(new RocketT9RecipeHandler());
 				API.registerUsageHandler(new RocketT9RecipeHandler());
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.plutoSpawner));
+			}
+			if (Config.eris) {
+				API.registerRecipeHandler(new RocketT10RecipeHandler());
+				API.registerUsageHandler(new RocketT10RecipeHandler());
+				API.hideItem(new ItemStack(ExtraPlanets_Blocks.erisSpawner));
 			}
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
@@ -140,6 +145,14 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 
 	public static Set<Map.Entry<ArrayList<PositionedStack>, PositionedStack>> getTier9RocketBenchRecipes() {
 		return NEIExtraPlanetsConfig.t9rocketBenchRecipes.entrySet();
+	}
+
+	public void registerTier10RocketBenchRecipe(ArrayList<PositionedStack> input, PositionedStack output) {
+		NEIExtraPlanetsConfig.t10rocketBenchRecipes.put(input, output);
+	}
+
+	public static Set<Map.Entry<ArrayList<PositionedStack>, PositionedStack>> getTier10RocketBenchRecipes() {
+		return NEIExtraPlanetsConfig.t10rocketBenchRecipes.entrySet();
 	}
 
 	public void registerCircuitFabricatorRecipe(HashMap<Integer, PositionedStack> input, PositionedStack output) {
@@ -502,6 +515,65 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
 		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
 		this.registerTier9RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier9Rocket, 1, 3), 139, 87 + changeY));
+	}
+
+	public void registerTier10Recipe() {
+		final int changeY = 15;
+
+		ArrayList<PositionedStack> input1 = new ArrayList<PositionedStack>();
+
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.noseConeTier10), 45, -8 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 36, -6 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 36, -6 + 18 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 36, -6 + 36 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 36, -6 + 54 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 36, -6 + 72 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 54, -6 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 54, -6 + 18 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 54, -6 + 36 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 54, -6 + 54 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 54, -6 + 72 + 16 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 0), 45, 100 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 1), 18, 64 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 1), 72, 64 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 2), 18, 82 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 2), 18, 100 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 2), 72, 82 + changeY));
+		input1.add(new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 2), 72, 100 + changeY));
+		this.registerTier10RocketBenchRecipe(input1, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 0), 139, 87 + changeY));
+
+		ArrayList<PositionedStack> input2 = new ArrayList<PositionedStack>(input1);
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
+		this.registerTier10RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 1), 139, 87 + changeY));
+
+		input2 = new ArrayList<PositionedStack>(input1);
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
+		this.registerTier10RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 1), 139, 87 + changeY));
+
+		input2 = new ArrayList<PositionedStack>(input1);
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
+		this.registerTier10RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 1), 139, 87 + changeY));
+
+		input2 = new ArrayList<PositionedStack>(input1);
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
+		this.registerTier10RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 2), 139, 87 + changeY));
+
+		input2 = new ArrayList<PositionedStack>(input1);
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
+		this.registerTier10RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 2), 139, 87 + changeY));
+
+		input2 = new ArrayList<PositionedStack>(input1);
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
+		this.registerTier10RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 2), 139, 87 + changeY));
+
+		input2 = new ArrayList<PositionedStack>(input1);
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90, -15 + changeY));
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 26, -15 + changeY));
+		input2.add(new PositionedStack(new ItemStack(Blocks.chest), 90 + 52, -15 + changeY));
+		this.registerTier10RocketBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, 3), 139, 87 + changeY));
 	}
 
 	private void addCircuitFabricatorRecipes() {
