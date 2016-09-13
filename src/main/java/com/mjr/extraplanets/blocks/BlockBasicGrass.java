@@ -27,6 +27,8 @@ public class BlockBasicGrass extends Block {
 		this.setBlockName(name + "Grass");
         this.setTickRandomly(true);
         this.setCreativeTab(ExtraPlanets.BlocksTab);
+        this.blockHardness = 0.6F;
+        this.setStepSound(soundTypeGrass);
 	}
 
 	@Override

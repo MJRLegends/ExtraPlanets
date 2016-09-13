@@ -27,7 +27,6 @@ public class BlockBasicKepler22b extends Block {
 
 	public BlockBasicKepler22b(String assetName) {
 		super(Material.rock);
-		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
 		this.name = assetName;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
@@ -67,10 +66,8 @@ public class BlockBasicKepler22b extends Block {
 	}
 
 	@Override
-	public int damageDropped(int meta)
-	{
-		switch (meta)
-		{
+	public int damageDropped(int meta) {
+		switch (meta) {
 		default:
 			return meta;
 		}
@@ -91,7 +88,7 @@ public class BlockBasicKepler22b extends Block {
 			par3List.add(new ItemStack(par1, 1, var4));
 		}
 	}
-	
+
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z, EntityPlayer player) {
 		int metadata = world.getBlockMetadata(x, y, z);
@@ -100,5 +97,20 @@ public class BlockBasicKepler22b extends Block {
 		}
 
 		return super.getPickBlock(target, world, x, y, z, player);
+	}
+
+	/**
+	 * Returns the block hardness at a location. Args: world, x, y, z
+	 */
+	public float getBlockHardness(World world, int x, int y, int z) {
+		final int meta = world.getBlockMetadata(x, y, z);
+		switch (meta) {
+		case 0:
+			return 0.5F;
+		case 1:
+			return 1.5F;
+		default:
+			return 0.0F;
+		}
 	}
 }
