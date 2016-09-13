@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -9,7 +11,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 public class BiomeGenKepler22bSea extends BiomeGenBaseKepler22b{
 	
     public BiomeGenKepler22bSea() {
-		super(225);
+		super(Config.kepler22bSeaBiomeID);
 		this.enableRain = true;
 		this.setTemperatureRainfall(0.8F, 0.9F);
 	}

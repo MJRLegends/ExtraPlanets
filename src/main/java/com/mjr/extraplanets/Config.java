@@ -151,6 +151,13 @@ public class Config {
 	public static int ganymedeBiomeID;
 	public static int rheaBiomeID;
 	public static int titanBiomeID;
+	
+	public static int kepler22bPlainsBiomeID;
+	public static int kepler22bSeaBiomeID;
+	public static int kepler22bBlueForestBiomeID;
+	public static int kepler22bPurpleForestBiomeID;
+	public static int kepler22bRedForestBiomeID;
+	public static int kepler22bYellowForestBiomeID;
 
 	public static int mercuryRocketTier;
 	public static int ceresRocketTier;
@@ -352,7 +359,13 @@ public class Config {
 		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 163).getInt();
 		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 164).getInt();
 		titanBiomeID = config.get(biomeID, "Titan Biome ID", 165).getInt();
-
+		kepler22bPlainsBiomeID = config.get(biomeID, "Kepler22b Plains Biome ID", 166).getInt();
+		kepler22bSeaBiomeID = config.get(biomeID, "Kepler22b Sea Biome ID", 167).getInt();
+		kepler22bBlueForestBiomeID = config.get(biomeID, "Kepler22b Blue Maple Forest Biome ID", 168).getInt();
+		kepler22bPurpleForestBiomeID = config.get(biomeID, "Kepler22b Purple Maple Forest Biome ID", 169).getInt();
+		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
+		kepler22bYellowForestBiomeID = config.get(biomeID, "Kepler22b Yellow Maple Forest Biome ID", 171).getInt();
+		
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();

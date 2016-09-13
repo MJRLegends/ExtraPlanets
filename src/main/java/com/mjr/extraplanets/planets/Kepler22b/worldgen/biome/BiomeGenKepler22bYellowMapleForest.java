@@ -11,12 +11,13 @@ import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bYellowMapleForest extends BiomeGenBaseKepler22b {
 	@SuppressWarnings("unchecked")
 	public BiomeGenKepler22bYellowMapleForest() {
-		super(229);
+		super(Config.kepler22bYellowForestBiomeID);
 		this.enableRain = true;
 		this.enableSnow = true;
 		this.setTemperatureRainfall(0.8F, 0.9F);
