@@ -44,7 +44,8 @@ public class BlockBasicTreeLeaf extends BlockLeavesBase implements IShearable {
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setBlockName(name);
 		this.sapling = sapling;
-		leafTypes = new String[][] { { Constants.TEXTURE_PREFIX + name + "_leaf" }, { Constants.TEXTURE_PREFIX + name + "_leaf_opaque" } };
+		String textureName = name.substring(0, name.length() - 4);
+		leafTypes = new String[][] { { Constants.TEXTURE_PREFIX + textureName + "_leaf" }, { Constants.TEXTURE_PREFIX + textureName + "_leaf_opaque" } };
 	}
 
 	@Override

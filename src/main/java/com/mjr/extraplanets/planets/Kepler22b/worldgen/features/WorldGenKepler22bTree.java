@@ -11,7 +11,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.blocks.BlockBasicTreeSapling;
 
-public class WorldGenTree extends WorldGenAbstractTree {
+public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 	private final int minTreeHeight;
 	private final boolean vinesGrow;
 	private final int metaWood;
@@ -22,7 +22,7 @@ public class WorldGenTree extends WorldGenAbstractTree {
 	private Block log;
 	private Block leaf;
 
-	public WorldGenTree(boolean par1, int par2, int par3, int par4, boolean par5, Block sapling, Block log, Block leaf) {
+	public WorldGenKepler22bTree(boolean par1, int par2, int par3, int par4, boolean par5, Block sapling, Block log, Block leaf) {
 		super(false);
 		this.minTreeHeight = par2;
 		this.metaWood = par3;

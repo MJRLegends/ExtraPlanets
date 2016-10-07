@@ -28,14 +28,16 @@ public class BlockBasicTreeLog extends BlockRotatedPillar {
 	@SideOnly(Side.CLIENT)
 	private IIcon front;
 	private String name;
+	private String textureName;
 
-	public BlockBasicTreeLog(String name, String texturename) {
+	public BlockBasicTreeLog(String name, String textureName) {
 		super(Material.wood);
 		this.setHardness(1.5F);
 		this.setHarvestLevel("axe", 0);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setBlockName(name);
 		this.name = name;
+		this.textureName = textureName;
 	}
 
 	@Override
@@ -73,12 +75,13 @@ public class BlockBasicTreeLog extends BlockRotatedPillar {
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister p_149651_1_) {
-		this.blockIcon = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + name + "_log");
-		this.top = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + name + "_log_top");
-		this.front = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + name + "_log");
+		this.blockIcon = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + textureName + "_log");
+		this.top = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + textureName + "_log_top");
+		this.front = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + textureName + "_log");
 	}
 	
-    @SideOnly(Side.CLIENT)
+    @SuppressWarnings("unchecked")
+	@SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List blockList)
     {
         blockList.add(new ItemStack(item, 1, 0));

@@ -34,6 +34,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+import com.mjr.extraplanets.items.ItemBlockKepler22bTallGrass;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCallisto;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCeres;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockDeimos;
@@ -180,6 +181,10 @@ public class ExtraPlanets_Blocks {
 	public static Block redMapleLeaf;
 	public static Block purpleMapleLeaf;
 	public static Block yellowMapleLeaf;
+	
+	
+	//Flowers
+	public static Block kepler22bGrassFlowers;
 
 	// -----------------------------------------------------------------------
 
@@ -290,6 +295,7 @@ public class ExtraPlanets_Blocks {
 			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_Purple", "kepler22b");
 			kepler22bRedGrass = new BlockBasicGrass("kepler22b_Red", "kepler22b");
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_Yellow", "kepler22b");
+			kepler22bGrassFlowers = new BlockBasicTallGrass("kepler22bFlowers");
 		}
 	}
 
@@ -373,10 +379,10 @@ public class ExtraPlanets_Blocks {
 	}
 	
 	private static void initializeTreeBlocks() {
-		blueMapleLog = new BlockBasicTreeLog("blueMapleLog", "blueMapleLog");
-		redMapleLog = new BlockBasicTreeLog("redMapleLog", "redMapleLog");
-		purpleMapleLog = new BlockBasicTreeLog("purpleMapleLog", "purpleMapleLog");
-		yellowMapleLog = new BlockBasicTreeLog("yellowMapleLog", "yellowMapleLog");
+		blueMapleLog = new BlockBasicTreeLog("blueMapleLog", "blueMaple");
+		redMapleLog = new BlockBasicTreeLog("redMapleLog", "redMaple");
+		purpleMapleLog = new BlockBasicTreeLog("purpleMapleLog", "purpleMaple");
+		yellowMapleLog = new BlockBasicTreeLog("yellowMapleLog", "yellowMaple");
 
 		blueMapleSapling = new BlockBasicTreeSapling("blueMapleSapling", "blueMapleSapling");
 		redMapleSapling = new BlockBasicTreeSapling("redMapleSapling", "redMapleSapling");
@@ -459,6 +465,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(kepler22bPurpleGrass, "kepler22bPurpleGrass");
 			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
 			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
+			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName());
 		}
 
 		if (Config.europa) {
