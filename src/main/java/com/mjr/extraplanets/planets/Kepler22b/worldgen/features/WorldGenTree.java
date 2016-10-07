@@ -10,25 +10,27 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.blocks.BlockBasicTreeSapling;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-public class WorldGenBlueTree extends WorldGenAbstractTree {
+public class WorldGenTree extends WorldGenAbstractTree {
 	private final int minTreeHeight;
 	private final boolean vinesGrow;
 	private final int metaWood;
 	private final int metaLeaves;
 	private static Random rand = new Random();
 
-	public WorldGenBlueTree(boolean par1) {
-		this(par1, (2 + rand.nextInt(4)) * 2, 0, 0, false);
-	}
+	private Block sapling;
+	private Block log;
+	private Block leaf;
 
-	public WorldGenBlueTree(boolean par1, int par2, int par3, int par4, boolean par5) {
-		super(par1);
+	public WorldGenTree(boolean par1, int par2, int par3, int par4, boolean par5, Block sapling, Block log, Block leaf) {
+		super(false);
 		this.minTreeHeight = par2;
 		this.metaWood = par3;
 		this.metaLeaves = par4;
-		this.vinesGrow = par5;
+		this.vinesGrow = false;
+		this.sapling = sapling;
+		this.log = log;
+		this.leaf = leaf;
 	}
 
 	public boolean generate(World par1World, Random par2Random, int par3, int par4, int par5) {
@@ -71,7 +73,7 @@ public class WorldGenBlueTree extends WorldGenAbstractTree {
 			} else {
 				Block block2 = par1World.getBlock(par3, par4 - 1, par5);
 
-				boolean isSoil = block2.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockBasicTreeSapling) ExtraPlanets_Blocks.blueSapling);
+				boolean isSoil = block2.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (BlockBasicTreeSapling) this.sapling);
 				if (isSoil && par4 < 256 - l - 1) {
 					block2.onPlantGrow(par1World, par3, par4 - 1, par5, par3, par4, par5);
 					b0 = 3;
@@ -95,7 +97,7 @@ public class WorldGenBlueTree extends WorldGenAbstractTree {
 									Block block1 = par1World.getBlock(i2, k1, k2);
 
 									if (block1.isAir(par1World, i2, k1, k2) || block1.isLeaves(par1World, i2, k1, k2)) {
-										this.setBlockAndNotifyAdequately(par1World, i2, k1, k2, ExtraPlanets_Blocks.blueLeaf, this.metaLeaves);
+										this.setBlockAndNotifyAdequately(par1World, i2, k1, k2, this.leaf, this.metaLeaves);
 									}
 								}
 							}
@@ -106,7 +108,7 @@ public class WorldGenBlueTree extends WorldGenAbstractTree {
 						block = par1World.getBlock(par3, par4 + k1, par5);
 
 						if (block.isAir(par1World, par3, par4 + k1, par5) || block.isLeaves(par1World, par3, par4 + k1, par5)) {
-							this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, ExtraPlanets_Blocks.blueLog, this.metaWood);
+							this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, this.log, this.metaWood);
 
 							if (this.vinesGrow && k1 > 0) {
 								if (par2Random.nextInt(3) > 0 && par1World.isAirBlock(par3 - 1, par4 + k1, par5)) {

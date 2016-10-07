@@ -165,12 +165,21 @@ public class ExtraPlanets_Blocks {
 	
 	//Logs
 	public static Block blueLog;
-	
+	public static Block redLog;
+	public static Block purpleLog;
+	public static Block yellowLog;
+
 	//Saplings
 	public static Block blueSapling;
-
+	public static Block redSapling;
+	public static Block purpleSapling;
+	public static Block yellowSapling;
+	
 	//Leafs
 	public static Block blueLeaf;
+	public static Block redLeaf;
+	public static Block purpleLeaf;
+	public static Block yellowLeaf;
 
 	// -----------------------------------------------------------------------
 
@@ -365,8 +374,20 @@ public class ExtraPlanets_Blocks {
 	
 	private static void initializeTreeBlocks() {
 		blueLog = new BlockBasicTreeLog("blueLog", "blueLog");
+		redLog = new BlockBasicTreeLog("redLog", "redLog");
+		purpleLog = new BlockBasicTreeLog("purpleLog", "purpleLog");
+		yellowLog = new BlockBasicTreeLog("yellowLog", "yellowLog");
+
 		blueSapling = new BlockBasicTreeSapling("blueSapling", "blueSapling");
+		redSapling = new BlockBasicTreeSapling("redSapling", "redSapling");
+		purpleSapling = new BlockBasicTreeSapling("purpleSapling", "purpleSapling");
+		yellowSapling = new BlockBasicTreeSapling("yellowSapling", "yellowSapling");
+
 		blueLeaf = new BlockBasicTreeLeaf("blueLeaf", blueLeaf);
+		redLeaf = new BlockBasicTreeLeaf("redLeaf", redLeaf);
+		purpleLeaf = new BlockBasicTreeLeaf("purpleLeaf", purpleLeaf);
+		yellowLeaf = new BlockBasicTreeLeaf("yellowLeaf", yellowLeaf);
+
 	}
 
 	private static void registerBlocks() {
@@ -626,7 +647,18 @@ public class ExtraPlanets_Blocks {
 	
 	private static void registerTreeBlocks() {
 		GameRegistry.registerBlock(blueLog, "blueLog");
+		GameRegistry.registerBlock(redLog, "redLog");
+		GameRegistry.registerBlock(purpleLog, "purpleLog");
+		GameRegistry.registerBlock(yellowLog, "yellowLog");
+
 		GameRegistry.registerBlock(blueSapling, "blueSapling");
+		GameRegistry.registerBlock(redSapling, "redSapling");
+		GameRegistry.registerBlock(purpleSapling, "purpleSapling");
+		GameRegistry.registerBlock(yellowSapling, "yellowSapling");
+
 		GameRegistry.registerBlock(blueLeaf, "blueLeaf");
+		GameRegistry.registerBlock(redLeaf, "redLeaf");
+		GameRegistry.registerBlock(purpleLeaf, "purpleLeaf");
+		GameRegistry.registerBlock(yellowLeaf, "yellowLeaf");
 	}
 }
