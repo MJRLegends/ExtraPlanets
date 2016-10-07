@@ -295,7 +295,7 @@ public class ExtraPlanets_Blocks {
 			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_Purple", "kepler22b");
 			kepler22bRedGrass = new BlockBasicGrass("kepler22b_Red", "kepler22b");
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_Yellow", "kepler22b");
-			kepler22bGrassFlowers = new BlockBasicTallGrass("kepler22bFlowers");
+			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22bFlowers");
 		}
 	}
 

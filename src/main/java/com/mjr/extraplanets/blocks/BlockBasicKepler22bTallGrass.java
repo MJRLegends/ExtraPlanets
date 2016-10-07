@@ -22,13 +22,13 @@ import com.mjr.extraplanets.Constants;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockBasicTallGrass extends BlockBush implements IShearable {
+public class BlockBasicKepler22bTallGrass extends BlockBush implements IShearable {
 	private static final String[] flowers = { "blueMapleShortGrass", "blueMapleMedGrass", "blueMapleTallGrass", "redMapleShortGrass", "redMapleMedGrass", "redMapleTallGrass", "purpleMapleShortGrass", "purpleMapleMedGrass", "purpleMapleTallGrass", "yellowMapleShortGrass", "yellowMapleMedGrass", "yellowMapleTallGrass" };
 	@SideOnly(Side.CLIENT)
 	private IIcon[] flowerTextures;
 	private String name;
 
-	protected BlockBasicTallGrass(String name) {
+	protected BlockBasicKepler22bTallGrass(String name) {
 		super(Material.vine);
 		this.blockHardness = 0;
 		this.setBlockName(name);
