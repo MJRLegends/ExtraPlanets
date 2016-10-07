@@ -40,5 +40,8 @@ public class BiomeGenKepler22bPurpleMapleForest extends BiomeGenBaseKepler22b {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 		
 		this.getBiomeDecorator().purpleTreesPerChunk = 4;
+		this.getBiomeDecorator().purpleShortGrassPerChunk = 90;
+		this.getBiomeDecorator().purpleMedGrassPerChunk = 90;
+		this.getBiomeDecorator().purpleTallGrassPerChunk = 90;
 	}
 }
