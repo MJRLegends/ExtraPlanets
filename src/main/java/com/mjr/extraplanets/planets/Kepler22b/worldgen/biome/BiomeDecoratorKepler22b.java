@@ -13,7 +13,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.worldGen.features.WorldGenBlueTree;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenBlueTree;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
@@ -23,7 +23,11 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	private WorldGenerator ironGen;
 	private WorldGenerator zincGen;
 	private WorldGenerator frozenNitrogenGen;
-	private int LakesPerChunk = 40;
+	public int LakesPerChunk = 40;
+	public int blueTreesPerChunk = 0;
+	public int redTreesPerChunk = 0;
+	public int purpleTreesPerChunk = 0;
+	public int yellowTreesPerChunk = 0;
 
 	private World currentWorld;
 	protected Random rand;
@@ -78,7 +82,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			}
 		}
 		
-	    int chance = 4;
+	    int chance = blueTreesPerChunk;
 	    if (this.rand.nextInt(10) == 0) {
 	      chance++;
 	    }
