@@ -14,7 +14,6 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

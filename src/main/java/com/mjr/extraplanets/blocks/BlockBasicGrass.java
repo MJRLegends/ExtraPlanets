@@ -7,7 +7,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -25,10 +28,10 @@ public class BlockBasicGrass extends Block {
 		this.name = name;
 		this.planetName = planetName;
 		this.setBlockName(name + "Grass");
-        this.setTickRandomly(true);
-        this.setCreativeTab(ExtraPlanets.BlocksTab);
-        this.blockHardness = 0.6F;
-        this.setStepSound(soundTypeGrass);
+		this.setTickRandomly(true);
+		this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.blockHardness = 0.6F;
+		this.setStepSound(soundTypeGrass);
 	}
 
 	@Override
@@ -77,5 +80,10 @@ public class BlockBasicGrass extends Block {
 
 	public int damageDropped(int par1, Random par2Random, int par3) {
 		return 0;
+	}
+
+	public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction, IPlantable plantable) {
+		Block plant = plantable.getPlant(world, x, y + 1, z);
+		return (plant == ExtraPlanets_Blocks.blueSapling);
 	}
 }

@@ -162,6 +162,15 @@ public class ExtraPlanets_Blocks {
 	public static Block neptuneSpawner;
 	public static Block plutoSpawner;
 	public static Block erisSpawner;
+	
+	//Logs
+	public static Block blueLog;
+	
+	//Saplings
+	public static Block blueSapling;
+
+	//Leafs
+	public static Block blueLeaf;
 
 	// -----------------------------------------------------------------------
 
@@ -179,6 +188,10 @@ public class ExtraPlanets_Blocks {
 		registerTileEntitys();
 		if(Config.oreDictionary)
 			OreDictionaryRegister();
+		if(Config.kepler22b){
+			initializeTreeBlocks();
+			registerTreeBlocks();
+		}
 	}
 
 	private static void initializeBlocks() {
@@ -348,6 +361,12 @@ public class ExtraPlanets_Blocks {
 		if (Config.eris) {
 			erisSpawner = new DungeonSpawnerEris();
 		}
+	}
+	
+	private static void initializeTreeBlocks() {
+		blueLog = new BlockBasicTreeLog("blueLog", "blueLog");
+		blueSapling = new BlockBasicTreeSapling("blueSapling", "blueSapling");
+		blueLeaf = new BlockBasicTreeLeaf("blueLeaf", blueLeaf);
 	}
 
 	private static void registerBlocks() {
@@ -603,5 +622,11 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
+	}
+	
+	private static void registerTreeBlocks() {
+		GameRegistry.registerBlock(blueLog, "blueLog");
+		GameRegistry.registerBlock(blueSapling, "blueSapling");
+		GameRegistry.registerBlock(blueLeaf, "blueLeaf");
 	}
 }
