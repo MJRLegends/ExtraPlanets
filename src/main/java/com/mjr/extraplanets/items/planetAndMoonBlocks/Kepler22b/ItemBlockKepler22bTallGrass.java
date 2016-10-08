@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.items;
+package com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;

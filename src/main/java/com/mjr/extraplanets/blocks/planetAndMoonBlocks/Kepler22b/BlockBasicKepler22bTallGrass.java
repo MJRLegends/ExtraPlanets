@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.blocks;
+package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IShearabl
 	private IIcon[] flowerTextures;
 	private String name;
 
-	protected BlockBasicKepler22bTallGrass(String name) {
+	public BlockBasicKepler22bTallGrass(String name) {
 		super(Material.vine);
 		this.blockHardness = 0;
 		this.setBlockName(name);
