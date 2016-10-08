@@ -28,6 +28,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
@@ -54,11 +55,8 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockBlueMapleSapling;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bTallGrass;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockPurpleMapleSapling;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockRedMapleSapling;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockYellowMapleSapling;
 import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.DungeonSpawnerEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.DungeonSpawnerJuptier;
@@ -169,19 +167,16 @@ public class ExtraPlanets_Blocks {
 	public static Block plutoSpawner;
 	public static Block erisSpawner;
 	
-	//MapleLogs
+	//Logs
 	public static Block blueMapleLog;
 	public static Block redMapleLog;
 	public static Block purpleMapleLog;
 	public static Block yellowMapleLog;
 
-	//MapleSaplings
-	public static Block blueMapleSapling;
-	public static Block redMapleSapling;
-	public static Block purpleMapleSapling;
-	public static Block yellowMapleSapling;
+	//Saplings
+	public static Block kepler22bMapleSapling;
 	
-	//MapleLeafs
+	//Leafs
 	public static Block blueMapleLeaf;
 	public static Block redMapleLeaf;
 	public static Block purpleMapleLeaf;
@@ -389,10 +384,7 @@ public class ExtraPlanets_Blocks {
 		purpleMapleLog = new BlockBasicTreeLog("purpleMapleLog", "purpleMaple");
 		yellowMapleLog = new BlockBasicTreeLog("yellowMapleLog", "yellowMaple");
 
-		blueMapleSapling = new BlockBasicTreeSapling("blueMapleSapling", "blueMapleSapling");
-		redMapleSapling = new BlockBasicTreeSapling("redMapleSapling", "redMapleSapling");
-		purpleMapleSapling = new BlockBasicTreeSapling("purpleMapleSapling", "purpleMapleSapling");
-		yellowMapleSapling = new BlockBasicTreeSapling("yellowMapleSapling", "yellowMapleSapling");
+		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22Maple");
 
 		blueMapleLeaf = new BlockBasicTreeLeaf("blueMapleLeaf", blueMapleLeaf);
 		redMapleLeaf = new BlockBasicTreeLeaf("redMapleLeaf", redMapleLeaf);
@@ -663,11 +655,8 @@ public class ExtraPlanets_Blocks {
 		GameRegistry.registerBlock(purpleMapleLog, "purpleMapleLog");
 		GameRegistry.registerBlock(yellowMapleLog, "yellowMapleLog");
 
-		GameRegistry.registerBlock(blueMapleSapling, ItemBlockBlueMapleSapling.class, blueMapleSapling.getUnlocalizedName());
-		GameRegistry.registerBlock(redMapleSapling, ItemBlockRedMapleSapling.class, redMapleSapling.getUnlocalizedName());
-		GameRegistry.registerBlock(purpleMapleSapling, ItemBlockPurpleMapleSapling.class, purpleMapleSapling.getUnlocalizedName());
-		GameRegistry.registerBlock(yellowMapleSapling, ItemBlockYellowMapleSapling.class, yellowMapleSapling.getUnlocalizedName());
-
+		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName());
+		
 		GameRegistry.registerBlock(blueMapleLeaf, "blueMapleLeaf");
 		GameRegistry.registerBlock(redMapleLeaf, "redMapleLeaf");
 		GameRegistry.registerBlock(purpleMapleLeaf, "purpleMapleLeaf");

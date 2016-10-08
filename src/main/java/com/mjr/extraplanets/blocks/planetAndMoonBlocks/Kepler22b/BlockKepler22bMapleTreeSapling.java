@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.blocks;
+package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
 import java.util.List;
 import java.util.Random;
@@ -9,6 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -18,31 +19,46 @@ import com.mjr.extraplanets.Constants;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockBasicTreeSapling extends BlockFlower {
+public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 
-	private String texturename;
+	private static String[] saplings = { "blue_maple", "red_maple", "purple_maple", "yellow_maple" };
+	private IIcon[] saplingsTextures;
+	private String name;
 
-	public BlockBasicTreeSapling(String name, String texturename) {
+	public BlockKepler22bMapleTreeSapling(String name) {
 		super(0);
 		this.setHardness(0.0F);
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
 		this.setBlockName(name);
-		this.texturename = texturename;
+		this.name = name;
 	}
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + texturename);
+		this.saplingsTextures = new IIcon[saplings.length];
+		for (int i = 0; i < saplings.length; i++) {
+			this.saplingsTextures[i] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name + "_sapling_" + saplings[i]);
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int side, int meta) {
+		if ((meta < 0) || (meta >= saplings.length)) {
+			meta = 0;
+		}
+		return this.saplingsTextures[meta];
 	}
 
 	public boolean isSameSapling(World par1World, int par2, int par3, int par4, int par5) {
 		return par1World.getBlock(par2, par3, par4) == this && (par1World.getBlockMetadata(par2, par3, par4) & 3) == par5;
 	}
-	
+
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List listSaplings) {
-		listSaplings.add(new ItemStack(item, 1, 0));
+		for (int i = 0; i < saplings.length; i++) {
+			listSaplings.add(new ItemStack(item, 1, i));
+		}
 	}
 
 	public void markOrGrowMarked(World world, int x, int y, int z, Random par1Random) {

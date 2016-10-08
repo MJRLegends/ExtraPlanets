@@ -84,6 +84,6 @@ public class BlockBasicGrass extends Block {
 
 	public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction, IPlantable plantable) {
 		Block plant = plantable.getPlant(world, x, y + 1, z);
-		return (plant == ExtraPlanets_Blocks.blueMapleSapling || plant == ExtraPlanets_Blocks.redMapleSapling || plant == ExtraPlanets_Blocks.purpleMapleSapling || plant == ExtraPlanets_Blocks.yellowMapleSapling || plant == ExtraPlanets_Blocks.kepler22bGrassFlowers);
+		return (plant == ExtraPlanets_Blocks.kepler22bMapleSapling || plant == ExtraPlanets_Blocks.kepler22bGrassFlowers);
 	}
 }
