@@ -28,6 +28,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
@@ -55,6 +56,7 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bTallGrass;
 import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.DungeonSpawnerEris;
@@ -168,10 +170,7 @@ public class ExtraPlanets_Blocks {
 	public static Block erisSpawner;
 	
 	//Logs
-	public static Block blueMapleLog;
-	public static Block redMapleLog;
-	public static Block purpleMapleLog;
-	public static Block yellowMapleLog;
+	public static Block kepler22bMapleLog;
 
 	//Saplings
 	public static Block kepler22bMapleSapling;
@@ -379,12 +378,8 @@ public class ExtraPlanets_Blocks {
 	}
 	
 	private static void initializeTreeBlocks() {
-		blueMapleLog = new BlockBasicTreeLog("blueMapleLog", "blueMaple");
-		redMapleLog = new BlockBasicTreeLog("redMapleLog", "redMaple");
-		purpleMapleLog = new BlockBasicTreeLog("purpleMapleLog", "purpleMaple");
-		yellowMapleLog = new BlockBasicTreeLog("yellowMapleLog", "yellowMaple");
-
-		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22Maple");
+		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22MapleLogs");
+		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22MapleSapling");
 
 		blueMapleLeaf = new BlockBasicTreeLeaf("blueMapleLeaf", blueMapleLeaf);
 		redMapleLeaf = new BlockBasicTreeLeaf("redMapleLeaf", redMapleLeaf);
@@ -650,11 +645,7 @@ public class ExtraPlanets_Blocks {
 	}
 	
 	private static void registerTreeBlocks() {
-		GameRegistry.registerBlock(blueMapleLog, "blueMapleLog");
-		GameRegistry.registerBlock(redMapleLog, "redMapleLog");
-		GameRegistry.registerBlock(purpleMapleLog, "purpleMapleLog");
-		GameRegistry.registerBlock(yellowMapleLog, "yellowMapleLog");
-
+		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName());
 		
 		GameRegistry.registerBlock(blueMapleLeaf, "blueMapleLeaf");

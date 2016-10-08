@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.blocks;
+package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
 import java.util.List;
 import java.util.Random;
@@ -21,23 +21,43 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockBasicTreeLog extends BlockRotatedPillar {
+public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
 
+	private static String[] logs = { "blue_maple", "red_maple", "purple_maple", "yellow_maple" };
 	@SideOnly(Side.CLIENT)
-	private IIcon top;
+	private IIcon[] logsTextures;
 	@SideOnly(Side.CLIENT)
-	private IIcon front;
+	private IIcon[] logsTexturesTop;
+
 	private String name;
-	private String textureName;
 
-	public BlockBasicTreeLog(String name, String textureName) {
+	public BlockKepler22bMapleTreeLog(String name) {
 		super(Material.wood);
 		this.setHardness(1.5F);
 		this.setHarvestLevel("axe", 0);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setBlockName(name);
 		this.name = name;
-		this.textureName = textureName;
+	}
+
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconRegister) {
+		this.logsTextures = new IIcon[logs.length];
+		this.logsTexturesTop = new IIcon[logs.length];
+		for (int i = 0; i < logs.length; i++) {
+			this.logsTextures[i] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name + "_log_" + logs[i] + "_side");
+			this.logsTexturesTop[i] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name + "_log_" + logs[i] + "_top");
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	protected IIcon getSideIcon(int meta) {
+		return this.logsTextures[meta % this.logsTextures.length];
+	}
+
+	@SideOnly(Side.CLIENT)
+	protected IIcon getTopIcon(int meta) {
+		return this.logsTexturesTop[meta % this.logsTexturesTop.length];
 	}
 
 	@Override
@@ -54,11 +74,6 @@ public class BlockBasicTreeLog extends BlockRotatedPillar {
 	}
 
 	@Override
-	public int damageDropped(int damage) {
-		return 20;
-	}
-
-	@Override
 	public int quantityDropped(Random par1Random) {
 		return 1;
 	}
@@ -68,24 +83,13 @@ public class BlockBasicTreeLog extends BlockRotatedPillar {
 		return Item.getItemFromBlock(this);
 	}
 
+	@SuppressWarnings("unchecked")
 	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int side, int p_149691_2_) {
-		return side == 1 || side == 0 ? this.top : (side == 2 ? this.front : this.blockIcon);
+	public void getSubBlocks(Item item, CreativeTabs tab, List blockList) {
+		for (int i = 0; i < logs.length; i++) {
+			blockList.add(new ItemStack(this, 1, i));
+		}
 	}
-
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister p_149651_1_) {
-		this.blockIcon = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + textureName + "_log");
-		this.top = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + textureName + "_log_top");
-		this.front = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + textureName + "_log");
-	}
-	
-    @SuppressWarnings("unchecked")
-	@SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item item, CreativeTabs tab, List blockList)
-    {
-        blockList.add(new ItemStack(item, 1, 0));
-    }
 
 	@Override
 	public boolean canSustainLeaves(IBlockAccess block, int x, int y, int z) {
@@ -114,10 +118,5 @@ public class BlockBasicTreeLog extends BlockRotatedPillar {
 				}
 			}
 		}
-	}
-
-	@Override
-	protected IIcon getSideIcon(int arg0) {
-		return null;
 	}
 }

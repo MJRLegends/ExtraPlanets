@@ -12,10 +12,10 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 
 public class WorldGenKepler22bTree extends WorldGenAbstractTree {
-	private final int minTreeHeight;
-	private final boolean vinesGrow;
-	private final int metaWood;
-	private final int metaLeaves;
+	private int minTreeHeight;
+	private boolean vinesGrow;
+	private int metaWood;
+	private int metaLeaves;
 	private static Random rand = new Random();
 
 	private Block sapling;

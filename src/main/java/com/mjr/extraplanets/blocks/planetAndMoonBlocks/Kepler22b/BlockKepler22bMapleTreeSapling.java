@@ -22,6 +22,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 
 	private static String[] saplings = { "blue_maple", "red_maple", "purple_maple", "yellow_maple" };
+	@SideOnly(Side.CLIENT)
 	private IIcon[] saplingsTextures;
 	private String name;
 
