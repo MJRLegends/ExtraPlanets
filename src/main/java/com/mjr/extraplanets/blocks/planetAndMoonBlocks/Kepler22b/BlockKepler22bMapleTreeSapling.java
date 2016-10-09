@@ -15,6 +15,8 @@ import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -62,30 +64,34 @@ public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 		}
 	}
 
-	public void markOrGrowMarked(World world, int x, int y, int z, Random par1Random) {
-		int l = world.getBlockMetadata(x, y, z);
-
-		if ((l & 8) == 0) {
-			world.setBlockMetadataWithNotify(x, y, z, l | 8, 4);
-		} else {
-			this.growTree(world, x, y, z, par1Random);
-		}
-	}
-
-	public void growTree(World world, int x, int y, int z, Random par1Random) {
-		if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(world, par1Random, x, y, z))
-			return;
-		int l = world.getBlockMetadata(x, y, z) & 7;
+	public void markOrGrowMarked(World world, int x, int y, int z, Random random) {
+		int meta = world.getBlockMetadata(x, y, z);
 		Object object = null;
-		int i1 = 0;
-		int j1 = 0;
-		object = new WorldGenTrees(true, (2 + par1Random.nextInt(4)) * 2, 0, 0, false);
-		world.setBlock(x, y, z, Blocks.air, 0, 4);
-		if (!((WorldGenerator) object).generate(world, par1Random, x + i1, y, z + j1)) {
-			world.setBlock(x, y, z, this, l, 4);
+		if (object == null) {
+			switch (meta) {
+			case 0:
+				object = new WorldGenKepler22bTree(false, 8, 0, 0, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				break;
+			case 1:
+				object = new WorldGenKepler22bTree(false, 8, 1, 1, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				break;
+			case 2:
+				object = new WorldGenKepler22bTree(false, 8, 2, 2, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				break;
+			case 3:
+				object = new WorldGenKepler22bTree(false, 8, 3, 3, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				break;
+			}
+		}
+		if (object != null) {
+			world.setBlockToAir(x, y, z);
+
+			if (!((WorldGenerator) object).generate(world, random, x, y, z)) {
+				world.setBlock(x, y, z, this, meta, 2);
+			}
 		}
 	}
-
+	
 	@Override
 	public void updateTick(World world, int x, int y, int z, Random par1Random) {
 		if (!world.isRemote) {

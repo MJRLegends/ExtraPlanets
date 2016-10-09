@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.blocks;
+package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,32 +20,43 @@ import net.minecraftforge.common.IShearable;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockBasicTreeLeaf extends BlockLeavesBase implements IShearable {
+public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IShearable {
 
-	public static String[][] leafTypes;
-	int[] field_150128_a;
+	private static String[] leaves = { "blue_maple", "red_maple", "purple_maple", "yellow_maple" };
 	@SideOnly(Side.CLIENT)
+	private IIcon[][] leafTextures;
+	int[] field_150128_a;
 	protected int field_150127_b;
-	protected IIcon[][] textures = new IIcon[2][];
 	int[] adjacentTreeBlocks;
 
-	private Block sapling;
-
-	public BlockBasicTreeLeaf(String name, Block sapling) {
+	public BlockKepler22bMapleTreeLeaves(String name) {
 		super(Material.leaves, false);
 		this.setHardness(0.1F);
 		this.setTickRandomly(true);
 		this.setLightOpacity(1);
-		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setBlockName(name);
-		this.sapling = sapling;
-		String textureName = name.substring(0, name.length() - 4);
-		leafTypes = new String[][] { { Constants.TEXTURE_PREFIX + textureName + "_leaf" }, { Constants.TEXTURE_PREFIX + textureName + "_leaf_opaque" } };
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void registerBlockIcons(IIconRegister iconReg) {
+		this.leafTextures = new IIcon[3][leaves.length];
+		for (int i = 0; i < leaves.length; ++i) {
+			this.leafTextures[0][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + "_leaves_" + leaves[i]);
+			this.leafTextures[1][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + "_leaves_" + leaves[i] + "_opaque");
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int side, int meta) {
+		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
+		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.leafTextures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.leafTextures[this.field_150127_b][2] : this.leafTextures[this.field_150127_b][0]));
+
 	}
 
 	@Override
@@ -107,7 +118,7 @@ public class BlockBasicTreeLeaf extends BlockLeavesBase implements IShearable {
 	}
 
 	public Item getItemDropped(int x, Random yRandom, int z) {
-		return Item.getItemFromBlock(sapling);
+		return Item.getItemFromBlock(ExtraPlanets_Blocks.kepler22bMapleSapling);
 	}
 
 	protected void func_150124_c(World world, int x, int y, int z, int meta, int par1) {
@@ -128,27 +139,10 @@ public class BlockBasicTreeLeaf extends BlockLeavesBase implements IShearable {
 	}
 
 	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int side, int meta) {
-		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
-		return (meta & 3) == 1 ? this.textures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.textures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.textures[this.field_150127_b][2] : this.textures[this.field_150127_b][0]));
-
-	}
-
-	@SideOnly(Side.CLIENT)
-	@Override
-	public void registerBlockIcons(IIconRegister iconReg) {
-		for (int i = 0; i < leafTypes.length; ++i) {
-			this.textures[i] = new IIcon[leafTypes[i].length];
-
-			for (int j = 0; j < leafTypes[i].length; ++j) {
-				this.textures[i][j] = iconReg.registerIcon(leafTypes[i][j]);
-			}
-		}
-	}
-
-	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List listLeaves) {
-		listLeaves.add(new ItemStack(item, 1, 0));
+		for (int i = 0; i < leaves.length; i++) {
+			listLeaves.add(new ItemStack(this, 1, i));
+		}
 	}
 
 	@Override
