@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ExtraPlanets</name>
+	<name>ExtraPlanets Development</name>
 	<comment/>
 	<projects/>
 	<natures>
@@ -12,26 +12,5 @@
 			<arguments/>
 		</buildCommand>
 	</buildSpec>
-	<linkedResources>
-		<link>
-			<name>common</name>
-			<type>2</type>
-			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/common</location>
-		</link>
-		<link>
-			<name>jars</name>
-			<type>2</type>
-			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/jars</location>
-		</link>
-		<link>
-			<name>lib</name>
-			<type>2</type>
-			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/lib</location>
-		</link>
-		<link>
-			<name>src</name>
-			<type>2</type>
-			<location>E:/Source Codes/Minecraft Forge Mods/ExtraPlanets/src</location>
-		</link>
-	</linkedResources>
+	<linkedResources/>
 </projectDescription>
