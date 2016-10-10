@@ -27,7 +27,7 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 8, 3, true, ExtraPlanets_Blocks.plutoBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoGravel, 12, 0, true, ExtraPlanets_Blocks.plutoBlocks, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.plutoBlocks, 1);
-		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 1, 5, true, ExtraPlanets_Blocks.plutoBlocks, 2);
+		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 1, 6, true, ExtraPlanets_Blocks.plutoBlocks, 2);
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
