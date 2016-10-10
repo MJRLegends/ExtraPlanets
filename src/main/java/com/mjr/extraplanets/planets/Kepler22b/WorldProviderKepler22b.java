@@ -21,7 +21,7 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(135 / 255F * f, 206 / 255F * f, 235 / 255F * f);
+		return new Vector3(135 / 255.0F * f, 206 / 255.0F * f, 135 / 255.0F * f);
 	}
 
 	@Override
@@ -39,13 +39,12 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 	public boolean hasSunset() {
 		return true;
 	}
-	
+
 	@Override
-	public boolean canBlockFreeze(int x, int y, int z, boolean byWater)
-	{
+	public boolean canBlockFreeze(int x, int y, int z, boolean byWater) {
 		return false;
 	}
-	  
+
 	@Override
 	public long getDayLength() {
 		return 24000L;
@@ -79,7 +78,6 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 		if (f2 > 1.0F) {
 			f2 = 1.0F;
 		}
-
 		return f2 * f2 * 0.7F;
 	}
 
