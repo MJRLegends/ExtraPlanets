@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.recipes;
 
 import java.util.HashMap;
+import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CircuitFabricatorRecipes;
@@ -576,13 +577,14 @@ public class ExtraPlanets_Recipes {
 	}
 
 	private static void registerCircuitFabricatorRecipes() {
-		int siliconCount = OreDictionary.getOres(ConfigManagerCore.otherModsSilicon).size();
+    	List<ItemStack> silicons = OreDictionary.getOres(ConfigManagerCore.otherModsSilicon);
+		int siliconCount = silicons.size();
 		for (int j = 0; j <= siliconCount; j++) {
 			ItemStack silicon;
 			if (j == 0)
 				silicon = new ItemStack(GCItems.basicItem, 1, 2);
 			else
-				silicon = OreDictionary.getOres("itemSilicon").get(j - 1);
+				silicon = silicons.get(j - 1);
 			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), new ItemStack[] { new ItemStack(Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_lamp) });
 			if (Config.venus)
 				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.comparator) });
