@@ -12,7 +12,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -35,7 +37,7 @@ public class BlockBasicKepler22b extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcons = new IIcon[11];
+		this.blockIcons = new IIcon[16];
 		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Dirt");
 		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Stone");
 		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreIron");
@@ -47,6 +49,11 @@ public class BlockBasicKepler22b extends Block {
 		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OrePurpleDiamonds");
 		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreYellowDiamonds");
 		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreGreenDiamonds");
+		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleBlue");
+		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleRed");
+		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMaplePurple");
+		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleYellow");
+		this.blockIcons[15] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "StoneBricks");
 		this.blockIcon = this.blockIcons[0];
 	}
 
@@ -120,6 +127,32 @@ public class BlockBasicKepler22b extends Block {
 			return 1.5F;
 		default:
 			return 0.0F;
+		}
+	}
+	
+	public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+		final int meta = world.getBlockMetadata(x, y, z);
+		switch (meta) {
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+			return 20;
+		default:
+			return 0;
+		}
+	}
+
+	public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+		final int meta = world.getBlockMetadata(x, y, z);
+		switch (meta) {
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+			return 5;
+		default:
+			return 0;
 		}
 	}
 }

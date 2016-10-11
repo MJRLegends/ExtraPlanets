@@ -81,6 +81,31 @@ public class ItemBlockKepler22b extends ItemBlock
 			name = "OreGreenDiamonds";
 			break;
 		}
+		case 11:
+		{
+			name = "PlankMapleBlue";
+			break;
+		}
+		case 12:
+		{
+			name = "PlankMapleRed";
+			break;
+		}
+		case 13:
+		{
+			name = "PlankMaplePurple";
+			break;
+		}
+		case 14:
+		{
+			name = "PlankMapleYellow";
+			break;
+		}
+		case 15:
+		{
+			name = "StoneBricks";
+			break;
+		}
 		default:
 			name = "null";
 		}

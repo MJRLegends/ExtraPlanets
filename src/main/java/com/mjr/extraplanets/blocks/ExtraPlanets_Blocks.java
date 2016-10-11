@@ -641,6 +641,16 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(kepler22bBlocks, 1, 6));
 			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(kepler22bBlocks, 1, 7));
 			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(kepler22bBlocks, 1, 8));
+			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 11));
+			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 12));
+			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 13));
+			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 14));
+			OreDictionary.registerOre("dirt", new ItemStack(kepler22bBlocks, 1, 0));
+			OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
+			OreDictionary.registerOre("oreCopper", new ItemStack(tritonBlocks, 1, 3));
+			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 2));
+			OreDictionary.registerOre("oreDenseCoal", new ItemStack(tritonBlocks, 1, 5));
 		}
 	}
 	
