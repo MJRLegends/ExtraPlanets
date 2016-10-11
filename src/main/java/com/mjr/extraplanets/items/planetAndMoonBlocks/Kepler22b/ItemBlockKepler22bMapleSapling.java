@@ -27,7 +27,7 @@ public class ItemBlockKepler22bMapleSapling extends ItemBlock {
 			break;
 		}
 		case 1: {
-			name = "redapleSapling";
+			name = "redMapleSapling";
 			break;
 		}
 		case 2: {
