@@ -27,7 +27,7 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 8, 3, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
 		this.mercuryGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 6, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryGravel, 12, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 2, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 1);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 1);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -51,7 +51,7 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(20, this.mercuryGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
-		this.generateOre(1, this.fossilsGen, 0, 256);
+		this.generateOre(10, this.fossilsGen, 0, 256);
 
 		isDecorating = false;
 		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);

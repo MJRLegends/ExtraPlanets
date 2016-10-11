@@ -32,7 +32,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 8, 3, true, ExtraPlanets_Blocks.ceresBlocks, 2);
 		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 2, 6, true, ExtraPlanets_Blocks.ceresBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresGravel, 12, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 2, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.ceresBlocks, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -57,7 +57,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(5, this.uraniumGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
-		this.generateOre(1, this.fossilsGen, 0, 256);
+		this.generateOre(10, this.fossilsGen, 0, 256);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
