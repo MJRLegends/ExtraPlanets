@@ -21,13 +21,13 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(135 / 255.0F * f, 206 / 255.0F * f, 135 / 255.0F * f);
+		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 255 / 205.0F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
-		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(0 / 255.0F * f, 191 / 255.0F * f, 255 / 255.0F * f);
+		float f = 1.0F - this.getCustomStarBrightness(1.0F);
+		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 255 / 205.0F * f);
 	}
 
 	@Override
@@ -79,6 +79,23 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 			f2 = 1.0F;
 		}
 		return f2 * f2 * 0.7F;
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public float getCustomStarBrightness(float par1) {
+		float f1 = this.worldObj.getCelestialAngle(par1);
+		float f2 = 1.0F - (MathHelper.cos(f1 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
+
+		if (f2 < 0.0F) {
+			f2 = 1.0F;
+		}
+
+		if (f2 > 1.0F) {
+			f2 = 1.0F;
+		}
+		//System.out.println(this.getSunBrightness(1.0F));
+		System.out.println(f2 * f2 * (this.getSunBrightness(1.0F) * -1) * f2);
+		return (f2 * f2 * (this.getSunBrightness(1.0F) * -1) * f1);
 	}
 
 	@Override
