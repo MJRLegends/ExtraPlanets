@@ -68,5 +68,6 @@
 	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/MicdoodleCore-Dev-1.7-3.0.12.462.jar"/>
 	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Master/CodeChickenLib-1.7.10-1.1.3.140-dev.jar"/>
 	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Master/NotEnoughItems-1.7.10-1.0.5.120-dev.jar"/>
+	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/CodeChickenCore-1.7.10-1.0.7.47-dev.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
