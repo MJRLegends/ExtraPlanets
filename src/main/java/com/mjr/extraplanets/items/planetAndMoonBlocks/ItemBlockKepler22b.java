@@ -36,7 +36,51 @@ public class ItemBlockKepler22b extends ItemBlock
 			name = "Stone";
 			break;
 		}
-
+		case 2:
+		{
+			name = "OreIron";
+			break;
+		}
+		case 3:
+		{
+			name = "OreCopper";
+			break;
+		}
+		case 4:
+		{
+			name = "OreTin";
+			break;
+		}
+		case 5:
+		{
+			name = "OreDenseCoal";
+			break;
+		}
+		case 6:
+		{
+			name = "OreBlueDiamonds";
+			break;
+		}
+		case 7:
+		{
+			name = "OreRedDiamonds";
+			break;
+		}
+		case 8:
+		{
+			name = "OrePurpleDiamonds";
+			break;
+		}
+		case 9:
+		{
+			name = "OreYellowDiamonds";
+			break;
+		}
+		case 10:
+		{
+			name = "OreGreenDiamonds";
+			break;
+		}
 		default:
 			name = "null";
 		}

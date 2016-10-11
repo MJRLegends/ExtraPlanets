@@ -638,6 +638,13 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
+		if (Config.kepler22b) {
+			OreDictionary.registerOre("oreBlueDiamond", new ItemStack(kepler22bBlocks, 1, 4));
+			OreDictionary.registerOre("oreRedDiamond", new ItemStack(kepler22bBlocks, 1, 5));
+			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(kepler22bBlocks, 1, 6));
+			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(kepler22bBlocks, 1, 7));
+			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(kepler22bBlocks, 1, 8));
+		}
 	}
 	
 	private static void registerTreeBlocks() {
