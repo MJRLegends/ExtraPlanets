@@ -93,8 +93,6 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 		if (f2 > 1.0F) {
 			f2 = 1.0F;
 		}
-		//System.out.println(this.getSunBrightness(1.0F));
-		System.out.println(f2 * f2 * (this.getSunBrightness(1.0F) * -1) * f2);
 		return (f2 * f2 * (this.getSunBrightness(1.0F) * -1) * f1);
 	}
 

@@ -37,6 +37,7 @@ public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
 		this.setHarvestLevel("axe", 0);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setBlockName(name);
+		this.setLightOpacity(1);
 		this.name = name;
 	}
 
