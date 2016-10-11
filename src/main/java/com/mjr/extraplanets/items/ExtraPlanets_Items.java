@@ -94,6 +94,7 @@ public class ExtraPlanets_Items {
 
 	public static Item cannedFood;
 	public static Item diamondApple;
+	public static Item ironApple;
 	public static Item bodyParts;
 
 	public static Item ingotUranium;
@@ -186,6 +187,7 @@ public class ExtraPlanets_Items {
 		
 		cannedFood = new ItemCannedFood("cannedfood");
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
+		ironApple = new ItemAppleIron(4, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
 		tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
@@ -266,6 +268,8 @@ public class ExtraPlanets_Items {
 
 		GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(diamondApple, "diamondApple");
+		GameRegistry.registerItem(ironApple, "ironApple");
+
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 
@@ -321,5 +325,12 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.pluto)
 			OreDictionary.registerOre("ingotTungsten", new ItemStack(tier9Items, 1, 5));
+		if (Config.kepler22b){
+			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(tier10Items, 1, 4));
+			OreDictionary.registerOre("gemRedDiamond", new ItemStack(tier10Items, 1, 5));
+			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier10Items, 1, 6));
+			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(tier10Items, 1, 7));
+			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(tier10Items, 1, 8));
+		}
 	}
 }

@@ -125,8 +125,8 @@ public class ExtraPlanets {
 				return ExtraPlanets_Items.tier8Rocket;
 			else if (Config.pluto)
 				return ExtraPlanets_Items.tier9Rocket;
-			// else if (Config.eris)
-			// return ExtraPlanets_Items.tier10Rocket;
+			else if (Config.eris)
+				return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
 	};
