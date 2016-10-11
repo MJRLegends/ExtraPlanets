@@ -25,7 +25,7 @@ public class MainHandler {
 				addZ = -addZ;
 			int lightingSpawnChance = rand.nextInt(50);
 			if (lightingSpawnChance == 10)
-				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX,event.player.posY, event.player.posZ + addZ));
+				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX,event.player.worldObj.getHeightValue((int)event.player.posX, (int)event.player.posZ), event.player.posZ + addZ));
 		}
 	}
 	
