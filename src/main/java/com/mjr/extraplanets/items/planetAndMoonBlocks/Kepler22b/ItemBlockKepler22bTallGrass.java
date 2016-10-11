@@ -3,6 +3,9 @@ package com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemBlockKepler22bTallGrass extends ItemBlock {
 	public ItemBlockKepler22bTallGrass(Block block) {
@@ -14,6 +17,11 @@ public class ItemBlockKepler22bTallGrass extends ItemBlock {
 	@Override
 	public int getMetadata(int meta) {
 		return meta;
+	}
+
+	@SideOnly(Side.CLIENT)
+	public IIcon getIconFromDamage(int meta) {
+		return this.field_150939_a.getIcon(0, meta);
 	}
 
 	@Override
