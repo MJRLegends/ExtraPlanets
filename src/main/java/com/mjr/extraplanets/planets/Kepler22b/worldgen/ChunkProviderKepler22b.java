@@ -26,6 +26,8 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
+
 public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	private Random rand;
 	private NoiseGeneratorOctaves noiseGen4;
@@ -36,6 +38,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	private double[] stoneNoise;
 	private MapGenCaveKepler22b caveGenerator;
 	private MapGenRavineKepler22b ravineGenerator = new MapGenRavineKepler22b();
+	private final MapGenVillageKepler22b villageGenerator = new MapGenVillageKepler22b();
 	private BiomeGenBase[] biomesForGeneration;
 	double[] noise3;
 	double[] noise1;
@@ -273,6 +276,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		decoratePlanet(this.worldObj, this.rand, var4, var5);
 		SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomeGen, var4 + 8, var5 + 8, 16, 16, this.rand);
 		net.minecraft.block.BlockFalling.fallInstantly = false;
+		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, x, z);
 	}
 
 	public void decoratePlanet(World world, Random rand, int x, int z) {
@@ -316,9 +320,11 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		return 0;
 	}
 
-	public void recreateStructures(int x, int z) {
+	@Override
+	public void recreateStructures(int par1, int par2) {
+		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
-
+	
 	public boolean unloadQueuedChunks() {
 		return false;
 	}
