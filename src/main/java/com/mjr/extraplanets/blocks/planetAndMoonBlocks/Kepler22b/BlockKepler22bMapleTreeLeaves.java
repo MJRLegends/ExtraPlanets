@@ -33,6 +33,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 	int[] field_150128_a;
 	protected int field_150127_b;
 	int[] adjacentTreeBlocks;
+	private String name;
 
 	public BlockKepler22bMapleTreeLeaves(String name) {
 		super(Material.leaves, false);
@@ -40,6 +41,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		this.setTickRandomly(true);
 		this.setLightOpacity(1);
 		this.setBlockName(name);
+		this.name = name;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -47,8 +49,8 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 	public void registerBlockIcons(IIconRegister iconReg) {
 		this.leafTextures = new IIcon[3][leaves.length];
 		for (int i = 0; i < leaves.length; ++i) {
-			this.leafTextures[0][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + "_leaves_" + leaves[i]);
-			this.leafTextures[1][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + "_leaves_" + leaves[i] + "_opaque");
+			this.leafTextures[0][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + name + "_leaves_" + leaves[i]);
+			this.leafTextures[1][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + name + "_leaves_" + leaves[i] + "_opaque");
 		}
 	}
 

@@ -378,7 +378,6 @@ public class ExtraPlanets_Blocks {
 	private static void initializeTreeBlocks() {
 		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22MapleLogs");
 		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22MapleSapling");
-
 		kepler22bMapleLeaf = new BlockKepler22bMapleTreeLeaves("kepler22Leaf");
 
 
