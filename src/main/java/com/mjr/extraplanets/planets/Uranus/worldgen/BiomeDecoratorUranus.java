@@ -31,9 +31,9 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	public BiomeDecoratorUranus()
 	{
 		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.uranusBlocks, 2);
-		this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 8, 3, true, ExtraPlanets_Blocks.uranusBlocks, 2);
+		this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 4, 3, true, ExtraPlanets_Blocks.uranusBlocks, 2);
 		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.denseIce, 8, 0, true, ExtraPlanets_Blocks.uranusBlocks, 0);
-		this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 8, 6, true, ExtraPlanets_Blocks.uranusBlocks, 2);
+		this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 4, 6, true, ExtraPlanets_Blocks.uranusBlocks, 2);
 
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -52,10 +52,10 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	protected void decorate() {
 		if (isDecorating) return;
 		isDecorating = true;
-		this.generateOre(8, this.iceGen, 60, 120);
-		this.generateOre(20, this.crystalGen, 0, 64);
+		this.generateOre(8, this.iceGen, 50, 120);
+		this.generateOre(20, this.crystalGen, 0, 32);
 		this.generateOre(20, this.denseIceGen, 0, 256);
-		this.generateOre(5, this.whiteGemGen, 0, 20);
+		this.generateOre(5, this.whiteGemGen, 0, 10);
 		
 		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

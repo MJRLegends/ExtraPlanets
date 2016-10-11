@@ -26,8 +26,8 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 4, 4, true, ExtraPlanets_Blocks.plutoBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 8, 3, true, ExtraPlanets_Blocks.plutoBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoGravel, 12, 0, true, ExtraPlanets_Blocks.plutoBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.plutoBlocks, 1);
-		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 1, 6, true, ExtraPlanets_Blocks.plutoBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 2, 0, true, ExtraPlanets_Blocks.plutoBlocks, 1);
+		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 4, 6, true, ExtraPlanets_Blocks.plutoBlocks, 2);
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -50,7 +50,7 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(1, this.fossilsGen, 0, 256);
-		this.generateOre(20, this.tungstenGen, 0, 64);
+		this.generateOre(20, this.tungstenGen, 0, 32);
 
 		isDecorating = false;
 		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
