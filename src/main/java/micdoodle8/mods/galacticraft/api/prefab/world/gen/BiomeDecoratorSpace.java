@@ -50,6 +50,7 @@ public abstract class BiomeDecoratorSpace
             final int var7 = this.rand.nextInt(maxY - minY) + minY;
             final int var8 = this.chunkZ + this.rand.nextInt(16);
             worldGenerator.generate(currentWorld, this.rand, var6, var7, var8);
+            System.out.println("" + var6 + ", "+ var7+ ", "+ var8);
         }
     }
 

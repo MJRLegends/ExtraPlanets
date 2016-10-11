@@ -32,7 +32,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 8, 3, true, ExtraPlanets_Blocks.ceresBlocks, 2);
 		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 2, 6, true, ExtraPlanets_Blocks.ceresBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresGravel, 12, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 2, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
