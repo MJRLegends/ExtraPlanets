@@ -33,7 +33,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IShearabl
 		this.blockHardness = 0;
 		this.setBlockName(name);
 		this.name = name;
-		this.setLightLevel(0.15F);
+		this.setLightLevel(0F);
 	}
 
 	@SideOnly(Side.CLIENT)
