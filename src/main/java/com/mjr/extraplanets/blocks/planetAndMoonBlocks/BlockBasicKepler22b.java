@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.blocks.planetAndMoonBlocks;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -18,6 +19,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -85,11 +87,26 @@ public class BlockBasicKepler22b extends Block {
 	@Override
 	public int damageDropped(int meta) {
 		switch (meta) {
+        case 1:
+            return 0;
 		default:
 			return meta;
 		}
 	}
 
+	@Override
+    public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune)
+    {
+        switch (metadata)
+        {
+        case 1:
+            ArrayList<ItemStack> items = new ArrayList<ItemStack>();
+            items.add(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 16));
+            return items;
+        default:
+            return super.getDrops(world, x, y, z, metadata, fortune);
+        }
+    }
 	@Override
 	public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_) {
 		return p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);
