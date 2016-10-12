@@ -13,6 +13,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
@@ -22,9 +23,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	private WorldGenerator copperGen;
 	private WorldGenerator tinGen;
 	private WorldGenerator ironGen;
-	private WorldGenerator zincGen;
-	private WorldGenerator frozenNitrogenGen;
-	public int LakesPerChunk = 40;
+	private WorldGenerator denseCoal;
+	public int LakesPerChunk;
 
 	public int blueTreesPerChunk;
 	public int redTreesPerChunk;
@@ -54,11 +54,10 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	protected int chunkZ;
 
 	public BiomeDecoratorKepler22b() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 5, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 4, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 3, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.zincGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 6, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.frozenNitrogenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.frozenNitrogen, 8, 0, true, ExtraPlanets_Blocks.neptuneBlocks, 0);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 4, 3, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 4, 4, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 2, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
+		this.denseCoal = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 5, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -85,11 +84,12 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
 		this.generateOre(20, this.ironGen, 0, 64);
-		this.generateOre(20, this.zincGen, 0, 64);
-		this.generateOre(5, this.frozenNitrogenGen, 0, 256);
-
+		this.generateOre(5, this.denseCoal, 0, 64);
+		
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-		for (int i = 0; i < this.LakesPerChunk; i++) {
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.blueTreesPerChunk); i++) {
 			if (this.rand.nextInt(10) == 0) {
 				int x = this.chunkX + this.rand.nextInt(80) + 8;
 				// int y = this.rand.nextInt(16) + 16;
@@ -232,9 +232,13 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 11).generate(world, rand, x, y, z);
 
 		}
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
+			int x = chunk_X + this.rand.nextInt(16) + 8;
+			int y = this.rand.nextInt(256);
+			int z = chunk_Z + this.rand.nextInt(16) + 8;
+			(new WorldGenKepler22bDungeons()).generate(this.currentWorld, rand, x, y, z);
+		}
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 	}
 }
