@@ -800,7 +800,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlock(x + 8, y + 6, z + 10, Blocks.air, 0, 3);
 		world.setBlock(x + 9, y + 6, z + 10, Blocks.air, 0, 3);
 		world.setBlock(x + 10, y + 6, z + 10, Blocks.air, 0, 3);
-
+		
 		TileEntityChest chest = (TileEntityChest) world.getTileEntity(x + 8, y + 1, z + 5);
 
 		if (chest != null)

@@ -26,7 +26,6 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
 
 public class ChunkProviderKepler22b extends ChunkProviderGenerate {
