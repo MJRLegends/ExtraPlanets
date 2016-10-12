@@ -291,7 +291,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	}
 
 	public String func_73148_d() {
-		return "LevelSource";
+		return "Kepler22bLevelSource";
 	}
 
 	public List func_73155_a(EnumCreatureType type, int x, int y, int z) {

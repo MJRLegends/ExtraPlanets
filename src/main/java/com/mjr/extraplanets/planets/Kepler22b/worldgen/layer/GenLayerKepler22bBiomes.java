@@ -16,7 +16,7 @@ public class GenLayerKepler22bBiomes extends GenLayer
 			BiomeGenBaseKepler22b.kepler22bYellowForest
 	};
 	
-	protected BiomeGenBase[] rareBiomes = {BiomeGenBaseKepler22b.kepler22bSea};
+	protected BiomeGenBase[] rareBiomes = {BiomeGenBaseKepler22b.kepler22bBlueForest};
 
 	public GenLayerKepler22bBiomes(long seed, GenLayer genlayer)
 	{

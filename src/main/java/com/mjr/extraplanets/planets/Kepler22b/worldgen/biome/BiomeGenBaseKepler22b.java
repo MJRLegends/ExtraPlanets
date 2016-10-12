@@ -10,10 +10,10 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 
 public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bSea = new BiomeGenKepler22bSea().setColor(112).setBiomeName("Kepler22b Sea").setHeight(height_Oceans);
 	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest().setColor(112).setBiomeName("Kepler22b Blue Maple Forest").setHeight(height_LowPlains);
 	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest").setHeight(height_LowPlains);
 	public static final BiomeGenBase kepler22bRedForest = new BiomeGenKepler22bRedMapleForest().setColor(112).setBiomeName("Kepler22b Red Maple Forest").setHeight(height_LowPlains);
@@ -56,8 +56,9 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 		return this.func_150559_j() ? false : this.enableRain;
 	}
 
+	@Override
 	public void genTerrainBlocks(World world, Random rand, Block[] block, byte[] meta, int x, int z, double stoneNoise) {
-		generateBiomeTerrain(world, rand, block, meta, x, z, stoneNoise);
+		this.generateBiomeTerrain(world, rand, block, meta, x, z, stoneNoise);
 	}
 
 	public void generateBiomeTerrain(World world, Random rand, Block[] block, byte[] meta, int x, int z, double stoneNoise) {
@@ -90,8 +91,8 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 							if (maxFillerDepth <= 0) {
 								topBlock = null;
 								topMeta = 0;
-								fillerBlock = ExtraPlanets_Blocks.jupiterBlocks;
-								fillerMeta = 0;
+								fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks;
+								fillerMeta = 1;
 							} else if (y >= seaLevel - 5 && y <= seaLevel) {
 								topBlock = this.topBlock;
 								topMeta = this.topMeta;
@@ -115,8 +116,8 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 								meta[index] = topMeta;
 							} else if (y < seaLevel - 8 - maxFillerDepth) {
 								topBlock = null;
-								fillerBlock = ExtraPlanets_Blocks.jupiterBlocks;
-								fillerMeta = 0;
+								fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks;
+								fillerMeta = 1;
 								block[index] = Blocks.gravel;
 							} else {
 								block[index] = fillerBlock;
