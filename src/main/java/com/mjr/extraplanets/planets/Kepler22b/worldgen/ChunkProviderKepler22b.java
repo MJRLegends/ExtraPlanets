@@ -26,6 +26,7 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
 
 public class ChunkProviderKepler22b extends ChunkProviderGenerate {
@@ -93,10 +94,8 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		generateTerrain(x, z, blockStorage);
 		this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, x * 16, z * 16, 16, 16);
 		replaceBlocksForBiome(x, z, blockStorage, metaStorage, this.biomesForGeneration);
-		 this.caveGenerator.generate(this, this.worldObj, x, z, blockStorage,
-		 metaStorage);
-		 this.ravineGenerator.func_151539_a(this, this.worldObj, x, z,
-		 blockStorage);
+		this.caveGenerator.generate(this, this.worldObj, x, z, blockStorage, metaStorage);
+		this.ravineGenerator.func_151539_a(this, this.worldObj, x, z, blockStorage);
 		Chunk chunk = new Chunk(this.worldObj, blockStorage, metaStorage, x, z);
 		byte[] chunkBiomes = chunk.getBiomeArray();
 		for (int i = 0; i < chunkBiomes.length; i++) {
@@ -107,7 +106,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	}
 
 	public void generateTerrain(int chunkX, int chunkZ, Block[] blockStorage) {
-		byte seaLevel = 63;
+		byte seaLevel = 60;
 		this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, chunkX * 4 - 2, chunkZ * 4 - 2, 10, 10);
 		makeLandPerBiome2(chunkX * 4, 0, chunkZ * 4);
 		for (int k = 0; k < 4; k++) {
@@ -253,7 +252,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 			}
 		}
 	}
-	
+
 	public Chunk loadChunk(int x, int z) {
 		return provideChunk(x, z);
 	}
@@ -324,7 +323,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	public void recreateStructures(int par1, int par2) {
 		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
-	
+
 	public boolean unloadQueuedChunks() {
 		return false;
 	}
