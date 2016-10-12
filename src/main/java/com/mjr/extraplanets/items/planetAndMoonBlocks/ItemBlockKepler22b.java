@@ -106,6 +106,11 @@ public class ItemBlockKepler22b extends ItemBlock
 			name = "StoneBricks";
 			break;
 		}
+		case 16:
+		{
+			name = "Cobblestone";
+			break;
+		}
 		default:
 			name = "null";
 		}
