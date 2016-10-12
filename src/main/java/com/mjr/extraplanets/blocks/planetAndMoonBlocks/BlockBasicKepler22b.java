@@ -140,7 +140,7 @@ public class BlockBasicKepler22b extends Block {
 		final int meta = world.getBlockMetadata(x, y, z);
 		switch (meta) {
 		case 0:
-			return 0.5F;
+			return 0.6F;
 		case 1:
 			return 1.5F;
 		default:
