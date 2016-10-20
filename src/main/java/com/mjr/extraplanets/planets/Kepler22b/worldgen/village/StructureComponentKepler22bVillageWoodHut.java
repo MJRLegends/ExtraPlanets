@@ -91,7 +91,7 @@ public class StructureComponentKepler22bVillageWoodHut extends StructureComponen
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 1, yLevel, 5, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 1, yLevel, 6, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 1, yLevel, 7, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.ceresBlocks : Blocks.air, 1, 1, yLevel, 8, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 1, yLevel, 8, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 1, yLevel, 9, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 1, yLevel, 10, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 1, yLevel, 11, par3StructureBoundingBox);
@@ -104,7 +104,7 @@ public class StructureComponentKepler22bVillageWoodHut extends StructureComponen
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 5, yLevel, 15, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 6, yLevel, 15, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 7, yLevel, 15, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.ceresBlocks : Blocks.air, 1, 8, yLevel, 15, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 8, yLevel, 15, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 9, yLevel, 15, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 10, yLevel, 15, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 11, yLevel, 15, par3StructureBoundingBox);
@@ -117,7 +117,7 @@ public class StructureComponentKepler22bVillageWoodHut extends StructureComponen
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 15, yLevel, 11, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 15, yLevel, 10, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 15, yLevel, 9, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.ceresBlocks : Blocks.air, 1, 15, yLevel, 8, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 15, yLevel, 8, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 15, yLevel, 7, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 15, yLevel, 6, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 15, yLevel, 5, par3StructureBoundingBox);
@@ -130,7 +130,7 @@ public class StructureComponentKepler22bVillageWoodHut extends StructureComponen
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 11, yLevel, 1, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 10, yLevel, 1, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 9, yLevel, 1, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.ceresBlocks : Blocks.air, 1, 8, yLevel, 1, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 8, yLevel, 1, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 7, yLevel, 1, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 6, yLevel, 1, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 1, 5, yLevel, 1, par3StructureBoundingBox);
