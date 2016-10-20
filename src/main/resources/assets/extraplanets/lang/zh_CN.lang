@@ -150,6 +150,7 @@ tile.eris.stoneBricks.name=阋神星石砖
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
 tile.kepler22bGrass.name=Kepler 22b Grass
 tile.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
 tile.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
@@ -185,6 +186,18 @@ tile.kepler22bMapleLeaves.redMapleLeaf.name=Kepler 22b Red Maple Leaves
 tile.kepler22bMapleLeaves.purpleMapleLeaf.name=Kepler 22b Purple Maple Leaves
 tile.kepler22bMapleLeaves.yellowMapleLeaf.name=Kepler 22b Yellow Maple Leaves
 tile.kepler22bMapleLeaves.greenMapleLeaf.name=Kepler 22b Green Maple Leaves
+tile.kepler22bFlowers.blueMapleShortGrass.name=Kepler 22b Blue Short Grass
+tile.kepler22bFlowers.blueMapleMedGrass.name=Kepler 22b Blue Medium Grass
+tile.kepler22bFlowers.blueMapleTallGrass.name=Kepler 22b Blue Tall Grass
+tile.kepler22bFlowers.redMapleShortGrass.name=Kepler 22b Red Short Grass
+tile.kepler22bFlowers.redMapleMedGrass.name=Kepler 22b Red Medium Grass
+tile.kepler22bFlowers.redMapleTallGrass.name=Kepler 22b Red Tall Grass
+tile.kepler22bFlowers.yellowMapleShortGrass.name=Kepler 22b Yellow Short Grass
+tile.kepler22bFlowers.yellowMapleMedGrass.name=Kepler 22b Yellow Medium Grass
+tile.kepler22bFlowers.yellowMapleTallGrass.name=Kepler 22b Yellow Tall Grass
+tile.kepler22bFlowers.prupleMapleShortGrass.name=Kepler 22b Purple Short Grass
+tile.kepler22bFlowers.prupleMapleMedGrass.name=Kepler 22b Purple Medium Grass
+tile.kepler22bFlowers.prupleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 
 #Moon Blocks
 tile.callisto.surface.name=木卫四地表岩石
@@ -432,6 +445,11 @@ item.tier9.ingotTungsten.name=钨锭
 item.tier5.redGem.name=红宝石
 item.tier8.blueGem.name=蓝宝石
 item.tier7.whiteGem.name=白宝石
+item.tier10.blueDiamond.name=Blue Diamond
+item.tier10.redDiamond.name=Red Diamond
+item.tier10.yellowDiamond.name=Yellow Diamond
+item.tier10.purpleDiamond.name=Purple Diamond
+item.tier10.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamond.name=钻石晶圆
@@ -613,6 +631,7 @@ tier4.information=在天王星，海王星，冥王星和阋神星以及它们�
 
 #Other Items
 item.appleDiamond.name=钻石苹果
+item.ironDiamond.name=Iron Apple
 item.cannedfood.cannedFood.name=罐头食品
 item.bodyparts.arm.name=手
 item.bodyparts.leg.name=脚

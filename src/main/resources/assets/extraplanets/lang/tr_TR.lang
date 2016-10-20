@@ -149,6 +149,7 @@ tile.eris.stoneBricks.name=Eris Taş Tuğla
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
 tile.kepler22bGrass.name=Kepler 22b Grass
 tile.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
 tile.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
@@ -184,6 +185,18 @@ tile.kepler22bMapleLeaves.redMapleLeaf.name=Kepler 22b Red Maple Leaves
 tile.kepler22bMapleLeaves.purpleMapleLeaf.name=Kepler 22b Purple Maple Leaves
 tile.kepler22bMapleLeaves.yellowMapleLeaf.name=Kepler 22b Yellow Maple Leaves
 tile.kepler22bMapleLeaves.greenMapleLeaf.name=Kepler 22b Green Maple Leaves
+tile.kepler22bFlowers.blueMapleShortGrass.name=Kepler 22b Blue Short Grass
+tile.kepler22bFlowers.blueMapleMedGrass.name=Kepler 22b Blue Medium Grass
+tile.kepler22bFlowers.blueMapleTallGrass.name=Kepler 22b Blue Tall Grass
+tile.kepler22bFlowers.redMapleShortGrass.name=Kepler 22b Red Short Grass
+tile.kepler22bFlowers.redMapleMedGrass.name=Kepler 22b Red Medium Grass
+tile.kepler22bFlowers.redMapleTallGrass.name=Kepler 22b Red Tall Grass
+tile.kepler22bFlowers.yellowMapleShortGrass.name=Kepler 22b Yellow Short Grass
+tile.kepler22bFlowers.yellowMapleMedGrass.name=Kepler 22b Yellow Medium Grass
+tile.kepler22bFlowers.yellowMapleTallGrass.name=Kepler 22b Yellow Tall Grass
+tile.kepler22bFlowers.prupleMapleShortGrass.name=Kepler 22b Purple Short Grass
+tile.kepler22bFlowers.prupleMapleMedGrass.name=Kepler 22b Purple Medium Grass
+tile.kepler22bFlowers.prupleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Yüzey Kayası
@@ -431,6 +444,11 @@ item.tier9.ingotTungsten.name=Tungsten Külçesi
 item.tier5.redGem.name=Kırmızıtaş
 item.tier8.blueGem.name=Mavitaş
 item.tier7.whiteGem.name=Beyaztaş
+item.tier10.blueDiamond.name=Blue Diamond
+item.tier10.redDiamond.name=Red Diamond
+item.tier10.yellowDiamond.name=Yellow Diamond
+item.tier10.purpleDiamond.name=Purple Diamond
+item.tier10.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamond.name=Elmas Wafer
@@ -612,6 +630,7 @@ tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
 
 #Other Items
 item.appleDiamond.name=Elmas Elma
+item.ironDiamond.name=Iron Apple
 item.cannedfood.cannedFood.name=Uzay Yiyecekleri
 item.bodyparts.arm.name=Kol
 item.bodyparts.leg.name=Bacak
