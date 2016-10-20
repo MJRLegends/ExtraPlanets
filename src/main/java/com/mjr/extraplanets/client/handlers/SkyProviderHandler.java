@@ -349,7 +349,7 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderKepler22bOrbit) {
 				if (world.provider.getSkyRenderer() == null) {
-					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22.png"), false, true));
+					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinRate();
 					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
