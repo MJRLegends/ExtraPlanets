@@ -109,6 +109,7 @@ public class ExtraPlanets {
 				return Item.getItemFromBlock(ExtraPlanets_Blocks.denseIce);
 		}
 	};
+	
 	// Items Creative Tab
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
