@@ -47,6 +47,8 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 				this.registerTier8Recipe();
 			if (Config.pluto)
 				this.registerTier9Recipe();
+			if (Config.eris)
+				this.registerTier10Recipe();
 			this.addCircuitFabricatorRecipes();
 
 			if (Config.venus) {
