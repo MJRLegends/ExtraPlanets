@@ -194,9 +194,9 @@ tile.kepler22bFlowers.redMapleTallGrass.name=Kepler 22b Red Tall Grass
 tile.kepler22bFlowers.yellowMapleShortGrass.name=Kepler 22b Yellow Short Grass
 tile.kepler22bFlowers.yellowMapleMedGrass.name=Kepler 22b Yellow Medium Grass
 tile.kepler22bFlowers.yellowMapleTallGrass.name=Kepler 22b Yellow Tall Grass
-tile.kepler22bFlowers.prupleMapleShortGrass.name=Kepler 22b Purple Short Grass
-tile.kepler22bFlowers.prupleMapleMedGrass.name=Kepler 22b Purple Medium Grass
-tile.kepler22bFlowers.prupleMapleTallGrass.name=Kepler 22b Purple Tall Grass
+tile.kepler22bFlowers.purpleMapleShortGrass.name=Kepler 22b Purple Short Grass
+tile.kepler22bFlowers.purpleMapleMedGrass.name=Kepler 22b Purple Medium Grass
+tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Yüzey Kayası
