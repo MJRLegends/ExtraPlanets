@@ -428,6 +428,7 @@ item.compressedZinc.name=Stlačený Zinek
 item.compressedNickel.name=Stlačený Nikl
 item.compressedMercury.name=Stlačená Měď
 item.tier9.compressedTungsten.name=Stlačený Tungsten
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Karbonový Ingot

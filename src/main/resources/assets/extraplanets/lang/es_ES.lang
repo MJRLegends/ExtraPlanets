@@ -427,6 +427,7 @@ item.tier8.compressedZinc.name=Zinc comprimido
 item.tier5.compressedNickel.name=Estaño comprimido
 item.compressedMercury.name=Mercurio comprimido
 item.tier9.compressedTungsten.name=Tungsteno comprimido
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Lingote de carbono

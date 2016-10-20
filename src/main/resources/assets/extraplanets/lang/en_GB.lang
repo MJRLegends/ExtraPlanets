@@ -428,6 +428,7 @@ item.compressedZinc.name=Compressed Zinc
 item.compressedNickel.name=Compressed Nickel
 item.compressedMercury.name=Compressed Mercury
 item.tier9.compressedTungsten.name=Compressed Tungsten
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Carbon Ingot

@@ -428,6 +428,7 @@ item.tier8.compressedZinc.name=Compressed Zinc
 item.tier5.compressedNickel.name=Compressed Nickel
 item.compressedMercury.name=Compressed Mercury
 item.tier9.compressedTungsten.name=Compressed Tungsten
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Carbon Ingot
@@ -439,6 +440,7 @@ item.tier5.ingotNickel.name=Nickel Ingot
 item.ingotMercury.name=Mercury Ingot
 item.ingotUranium.name=Uranium Ingot
 item.tier9.ingotTungsten.name=Tungsten Ingot
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=Red Gem

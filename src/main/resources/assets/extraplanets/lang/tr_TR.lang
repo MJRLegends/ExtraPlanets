@@ -428,6 +428,7 @@ item.tier8.compressedZinc.name=Sıkıştırılmış Çinko
 item.tier5.compressedNickel.name=Sıkıştırılmış Nikel
 item.compressedMercury.name=Sıkıştırılmış Civa
 item.tier9.compressedTungsten.name=Sıkıştırılmış Tungsten
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Karbon Külçesi

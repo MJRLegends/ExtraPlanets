@@ -429,6 +429,7 @@ item.tier8.compressedZinc.name=緻密鋅板
 item.tier5.compressedNickel.name=緻密鎳板
 item.compressedMercury.name=緻密汞板
 item.tier9.compressedTungsten.name=緻密鎢板
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=碳錠
