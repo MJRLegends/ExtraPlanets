@@ -440,6 +440,7 @@ item.tier5.ingotNickel.name=鎳錠
 item.ingotMercury.name=汞錠
 item.ingotUranium.name=鈾錠
 item.tier9.ingotTungsten.name=鎢錠
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=紅寶石

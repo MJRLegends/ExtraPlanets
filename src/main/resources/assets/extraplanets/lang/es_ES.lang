@@ -438,6 +438,7 @@ item.tier5.ingotNickel.name=Lingote de estaño
 item.ingotMercury.name=Lingote mercuriano
 item.ingotUranium.name=Lingore de uranio
 item.tier9.ingotTungsten.name=Lingote de tungsteno
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=Gema roja

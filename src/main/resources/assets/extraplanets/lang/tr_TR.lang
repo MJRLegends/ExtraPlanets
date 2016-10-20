@@ -439,6 +439,7 @@ item.tier5.ingotNickel.name=Nikel Külçesi
 item.ingotMercury.name=Civa Külçesi
 item.ingotUranium.name=Uranyum Külçesi
 item.tier9.ingotTungsten.name=Tungsten Külçesi
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=Kırmızıtaş

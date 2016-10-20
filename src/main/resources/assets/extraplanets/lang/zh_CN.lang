@@ -440,6 +440,7 @@ item.tier5.ingotNickel.name=镍锭
 item.ingotMercury.name=汞锭
 item.ingotUranium.name=铀锭
 item.tier9.ingotTungsten.name=钨锭
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=红宝石

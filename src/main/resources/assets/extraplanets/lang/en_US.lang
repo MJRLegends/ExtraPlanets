@@ -449,6 +449,7 @@ item.tier11.redDiamond.name=Red Diamond
 item.tier11.yellowDiamond.name=Yellow Diamond
 item.tier11.purpleDiamond.name=Purple Diamond
 item.tier11.greenDiamond.name=Green Diamond
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Wafers
 item.wafer.diamond.name=Diamond Wafer

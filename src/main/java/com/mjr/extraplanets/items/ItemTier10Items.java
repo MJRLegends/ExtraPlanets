@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier10Items extends Item {
-	public static final String[] names = { "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond"};
+	public static final String[] names = { "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compresseDarkIron", "ingotDarkIron"};
 
 	protected IIcon[] icons = new IIcon[ItemTier10Items.names.length];
 
