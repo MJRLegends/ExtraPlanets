@@ -631,7 +631,7 @@ tier4.information=在天王星，海王星，冥王星和阋神星以及它们�
 
 #Other Items
 item.appleDiamond.name=钻石苹果
-item.ironDiamond.name=Iron Apple
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=罐头食品
 item.bodyparts.arm.name=手
 item.bodyparts.leg.name=脚

@@ -629,7 +629,7 @@ tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lun
 
 #Other Items
 item.appleDiamond.name=Manzana de diamante
-item.ironDiamond.name=Iron Apple
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Lata de comida
 item.bodyparts.arm.name=Brazo
 item.bodyparts.leg.name=Pierna

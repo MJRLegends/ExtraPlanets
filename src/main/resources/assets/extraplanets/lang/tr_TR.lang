@@ -630,7 +630,7 @@ tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
 
 #Other Items
 item.appleDiamond.name=Elmas Elma
-item.ironDiamond.name=Iron Apple
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Uzay Yiyecekleri
 item.bodyparts.arm.name=Kol
 item.bodyparts.leg.name=Bacak

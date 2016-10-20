@@ -630,7 +630,7 @@ tier4.information=Required for Uranus, Neptune, Pluto and Eris including their m
 
 #Other Items
 item.appleDiamond.name=Diamond Apple
-item.ironDiamond.name=Iron Apple
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Can of Food
 item.bodyparts.arm.name=Arm
 item.bodyparts.leg.name=Leg
