@@ -164,11 +164,11 @@ public class ExtraPlanets_Recipes {
 			
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 5), new ItemStack(Blocks.coal_block, 1, 4), 0.0F);
 
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 6), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 7), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 8), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 6), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 9), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 7), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 10), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 8), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 6), new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 7), new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 8), new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 9), new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 10), new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 0.0F);
 		}
 	}
 
@@ -603,6 +603,10 @@ public class ExtraPlanets_Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4));
 		}
+		if (Config.kepler22b) {
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4));
+		}
 	}
 
 	private static void registerCircuitFabricatorRecipes() {
@@ -704,11 +708,11 @@ public class ExtraPlanets_Recipes {
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b) {
 			inputMap = new HashMap<Object, Integer>();
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4), 24);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 24);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 6), 24);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 7), 24);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 8), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.kepler22bSpaceStationID, Config.kepler22bID, new SpaceStationRecipe(inputMap)));
 		}
 	};

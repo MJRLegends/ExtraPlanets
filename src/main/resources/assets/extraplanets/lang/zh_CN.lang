@@ -445,11 +445,11 @@ item.tier9.ingotTungsten.name=钨锭
 item.tier5.redGem.name=红宝石
 item.tier8.blueGem.name=蓝宝石
 item.tier7.whiteGem.name=白宝石
-item.tier10.blueDiamond.name=Blue Diamond
-item.tier10.redDiamond.name=Red Diamond
-item.tier10.yellowDiamond.name=Yellow Diamond
-item.tier10.purpleDiamond.name=Purple Diamond
-item.tier10.greenDiamond.name=Green Diamond
+item.tier11.blueDiamond.name=Blue Diamond
+item.tier11.redDiamond.name=Red Diamond
+item.tier11.yellowDiamond.name=Yellow Diamond
+item.tier11.purpleDiamond.name=Purple Diamond
+item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamond.name=钻石晶圆

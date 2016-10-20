@@ -444,11 +444,11 @@ item.tier9.ingotTungsten.name=Tungstenový Ingot
 item.tier5.redGem.name=Red Gem
 item.tier8.blueGem.name=Blue Gem
 item.tier7.whiteGem.name=White Gem
-item.tier10.blueDiamond.name=Blue Diamond
-item.tier10.redDiamond.name=Red Diamond
-item.tier10.yellowDiamond.name=Yellow Diamond
-item.tier10.purpleDiamond.name=Purple Diamond
-item.tier10.greenDiamond.name=Green Diamond
+item.tier11.blueDiamond.name=Blue Diamond
+item.tier11.redDiamond.name=Red Diamond
+item.tier11.yellowDiamond.name=Yellow Diamond
+item.tier11.purpleDiamond.name=Purple Diamond
+item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamond.name=Diamond Wafer

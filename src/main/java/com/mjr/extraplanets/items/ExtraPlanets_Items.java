@@ -71,7 +71,8 @@ public class ExtraPlanets_Items {
 	public static Item tier8Items;
 	public static Item tier9Items;
 	public static Item tier10Items;
-
+	public static Item tier11Items;
+	
 	public static Item T4key;
 	public static Item T5key;
 	public static Item T6key;
@@ -184,7 +185,9 @@ public class ExtraPlanets_Items {
 			tier10Items = new ItemTier10Items("tier10");
 			T10key = new ItemKeyT10().setUnlocalizedName("key");
 		}
-		
+		if(Config.eris){
+			tier11Items = new ItemTier11Items("tier11");
+		}
 		cannedFood = new ItemCannedFood("cannedfood");
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		ironApple = new ItemAppleIron(4, 2.2F, false);
@@ -265,6 +268,9 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier10Items, "tier10Items");
 			GameRegistry.registerItem(T10key, "T10key");
 		}
+		if (Config.kepler22b) {
+			GameRegistry.registerItem(tier11Items, "tier11Items");
+		}
 
 		GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(diamondApple, "diamondApple");
@@ -326,11 +332,11 @@ public class ExtraPlanets_Items {
 		if (Config.pluto)
 			OreDictionary.registerOre("ingotTungsten", new ItemStack(tier9Items, 1, 5));
 		if (Config.kepler22b){
-			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(tier10Items, 1, 4));
-			OreDictionary.registerOre("gemRedDiamond", new ItemStack(tier10Items, 1, 5));
-			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier10Items, 1, 6));
-			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(tier10Items, 1, 7));
-			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(tier10Items, 1, 8));
+			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(tier11Items, 1, 0));
+			OreDictionary.registerOre("gemRedDiamond", new ItemStack(tier11Items, 1, 1));
+			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier11Items, 1, 2));
+			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(tier11Items, 1, 3));
+			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(tier11Items, 1, 4));
 		}
 	}
 }
