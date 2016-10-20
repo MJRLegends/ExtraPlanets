@@ -20,10 +20,6 @@ import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
-	private WorldGenerator copperGen;
-	private WorldGenerator tinGen;
-	private WorldGenerator ironGen;
-	private WorldGenerator denseCoal;
 	public int LakesPerChunk;
 
 	public int blueTreesPerChunk;
@@ -52,41 +48,23 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 	protected int chunkX;
 	protected int chunkZ;
+	private boolean isDecorating = false;
 
+	
 	public BiomeDecoratorKepler22b() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 4, 3, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 4, 4, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 2, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.denseCoal = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 5, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
-
+		
 	}
 
-	@SuppressWarnings("unused")
-	protected void generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY) {
-		World currentWorld;
-		for (int var5 = 0; var5 < amountPerChunk; ++var5) {
-			final int var6 = this.chunkX + this.rand.nextInt(16);
-			final int var7 = this.rand.nextInt(maxY - minY) + minY;
-			final int var8 = this.chunkZ + this.rand.nextInt(16);
-			worldGenerator.generate(this.currentWorld, this.rand, var6, var7, var8);
-		}
-	}
 
 	@Override
 	public void decorateChunk(World world, Random rand, BiomeGenBase biome, int xChunk, int zChunk) {
+		if (isDecorating)
+			return;
+		isDecorating = true;
 		this.currentWorld = world;
 		this.rand = rand;
 		this.chunk_X = xChunk;
 		this.chunk_Z = zChunk;
-		this.generateOre(26, this.copperGen, 0, 60);
-		this.generateOre(23, this.tinGen, 0, 60);
-		this.generateOre(20, this.ironGen, 0, 64);
-		this.generateOre(5, this.denseCoal, 0, 64);
-		
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.blueTreesPerChunk); i++) {
@@ -240,5 +218,6 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			(new WorldGenKepler22bDungeons()).generate(this.currentWorld, rand, x, y, z);
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		isDecorating = false;
 	}
 }

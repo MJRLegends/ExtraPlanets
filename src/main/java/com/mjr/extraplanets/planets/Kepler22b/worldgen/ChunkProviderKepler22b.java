@@ -26,6 +26,7 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
 
 public class ChunkProviderKepler22b extends ChunkProviderGenerate {
@@ -39,6 +40,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	private MapGenCaveKepler22b caveGenerator;
 	private MapGenRavineKepler22b ravineGenerator = new MapGenRavineKepler22b();
 	private final MapGenVillageKepler22b villageGenerator = new MapGenVillageKepler22b();
+	private final BiomeDecoratorKepler22bOres BiomeDecorator = new BiomeDecoratorKepler22bOres();
 	private BiomeGenBase[] biomesForGeneration;
 	double[] noise3;
 	double[] noise1;
@@ -278,6 +280,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	}
 
 	public void decoratePlanet(World world, Random rand, int x, int z) {
+		this.BiomeDecorator.decorate(world, rand, x, z);
 	}
 
 	public boolean func_73151_a(boolean flag, IProgressUpdate progress) {
