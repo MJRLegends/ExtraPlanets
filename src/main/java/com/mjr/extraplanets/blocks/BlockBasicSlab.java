@@ -16,7 +16,7 @@ public class BlockBasicSlab extends BlockSlab {
 	String texturename;
 
 	public BlockBasicSlab(boolean isFullBlock, CreativeTabs tab, String blockName, String texturename) {
-		super(isFullBlock, Material.wood);
+		super(isFullBlock, Material.rock);
 
 		if (tab != null) {
 			setCreativeTab(tab);
