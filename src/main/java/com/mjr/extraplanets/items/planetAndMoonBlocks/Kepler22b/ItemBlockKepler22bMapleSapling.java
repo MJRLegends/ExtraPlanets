@@ -1,9 +1,12 @@
 package com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b;
 
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
 public class ItemBlockKepler22bMapleSapling extends ItemBlock {
 	public ItemBlockKepler22bMapleSapling(Block block) {
@@ -16,7 +19,12 @@ public class ItemBlockKepler22bMapleSapling extends ItemBlock {
 	public int getMetadata(int meta) {
 		return meta;
 	}
-
+	
+	@SideOnly(Side.CLIENT)
+	public IIcon getIconFromDamage(int meta) {
+		return this.field_150939_a.getIcon(0, meta);
+	}
+	
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack) {
 		String name = "";
