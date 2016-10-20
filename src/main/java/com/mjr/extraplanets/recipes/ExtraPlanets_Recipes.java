@@ -702,5 +702,14 @@ public class ExtraPlanets_Recipes {
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.erisSpaceStationID, Config.erisID, new SpaceStationRecipe(inputMap)));
 		}
+		if (Config.kepler22bSpaceStation && Config.kepler22b) {
+			inputMap = new HashMap<Object, Integer>();
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 6), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 7), 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 8), 24);
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.kepler22bSpaceStationID, Config.kepler22bID, new SpaceStationRecipe(inputMap)));
+		}
 	};
 }

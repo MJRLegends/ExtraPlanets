@@ -120,7 +120,10 @@ public class Config {
 
 	public static int erisSpaceStationID;
 	public static int erisSpaceStationStaticID;
-
+	
+	public static int kepler22bSpaceStationID;
+	public static int kepler22bSpaceStationStaticID;
+	
 	public static boolean mercurySpaceStation;
 	public static boolean venusSpaceStation;
 	public static boolean ceresSpaceStation;
@@ -131,6 +134,7 @@ public class Config {
 	public static boolean neptuneSpaceStation;
 	public static boolean plutoSpaceStation;
 	public static boolean erisSpaceStation;
+	public static boolean kepler22bSpaceStation;
 
 	public static int mercuryBiomeID;
 	public static int venusBiomeID;
@@ -265,6 +269,7 @@ public class Config {
 		neptuneSpaceStation = config.get(spacestationCustom, "Neptune SpaceStation", true, "").getBoolean(true);
 		plutoSpaceStation = config.get(spacestationCustom, "Pluto SpaceStation", true, "").getBoolean(true);
 		erisSpaceStation = config.get(spacestationCustom, "Eris SpaceStation", true, "").getBoolean(true);
+		kepler22bSpaceStation = config.get(spacestationCustom, "Kepler22b SpaceStation", true, "").getBoolean(true);
 
 		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
