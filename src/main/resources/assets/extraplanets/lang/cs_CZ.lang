@@ -146,6 +146,58 @@ tile.eris.OreIron.name=Železná ruda z Erisu
 tile.eris.OreTin.name=Cínová ruda z Erisu
 tile.eris.OreCopper.name=Měděná ruda z Erisu
 tile.eris.stoneBricks.name=Eris Stone Bricks
+tile.eris.oreDarkIron.name=Eris Dark Iron Ore
+
+tile.kepler22b.Dirt.name=Kepler 22b Dirt
+tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
+tile.kepler22bGrass.name=Kepler 22b Grass
+tile.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tile.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tile.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tile.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+tile.kepler22b.OreIron.name=Kepler 22b Iron Ore
+tile.kepler22b.OreTin.name=Kepler 22b Tin Ore
+tile.kepler22b.OreCopper.name=Kepler 22b Copper Ore
+tile.kepler22b.OreDenseCoal.name=Kepler 22b Dense Coal Ore
+tile.kepler22b.OreBlueDiamonds.name=Kepler 22b Blue Diamond Ore
+tile.kepler22b.OreRedDiamonds.name=Kepler 22b Red Diamond Ore
+tile.kepler22b.OrePurpleDiamonds.name=Kepler 22b Purple Diamond Ore
+tile.kepler22b.OreYellowDiamonds.name=Kepler 22b Yellow Diamond Ore
+tile.kepler22b.OreGreenDiamonds.name=Kepler 22b Green Diamond Ore
+tile.kepler22b.PlankMapleBlue.name=Kepler 22b Blue Wooden Planks
+tile.kepler22b.PlankMapleRed.name=Kepler 22b Red Wooden Planks
+tile.kepler22b.PlankMaplePurple.name=Kepler 22b Purple Wooden Planks
+tile.kepler22b.PlankMapleYellow.name=Kepler 22b Yellow Wooden Planks
+tile.kepler22b.PlankMapleGreen.name=Kepler 22b Green Wooden Planks
+tile.kepler22b.StoneBricks.name=Kepler 22b Stone Bricks
+tile.kepler22bMapleLogs.blueMapleLog.name=Kepler 22b Blue Maple Log
+tile.kepler22bMapleLogs.redMapleLog.name=Kepler 22b Red Maple Log
+tile.kepler22bMapleLogs.purpleMapleLog.name=Kepler 22b Purple Maple Log
+tile.kepler22bMapleLogs.yellowMapleLog.name=Kepler 22b Yellow Maple Log
+tile.kepler22bMapleLogs.greenMapleLog.name=Kepler 22b Green Maple Log
+tile.kepler22bMapleSaplings.blueMapleSapling.name=Kepler 22b Blue Maple Sapling
+tile.kepler22bMapleSaplings.redMapleSapling.name=Kepler 22b Red Maple Sapling
+tile.kepler22bMapleSaplings.purpleMapleSapling.name=Kepler 22b Purple Maple Sapling
+tile.kepler22bMapleSaplings.yellowMapleSapling.name=Kepler 22b Yellow Maple Sapling
+tile.kepler22bMapleSaplings.greenMapleSapling.name=Kepler 22b Green Maple Sapling
+tile.kepler22bMapleLeaves.blueMapleLeaf.name=Kepler 22b Blue Maple Leaves
+tile.kepler22bMapleLeaves.redMapleLeaf.name=Kepler 22b Red Maple Leaves
+tile.kepler22bMapleLeaves.purpleMapleLeaf.name=Kepler 22b Purple Maple Leaves
+tile.kepler22bMapleLeaves.yellowMapleLeaf.name=Kepler 22b Yellow Maple Leaves
+tile.kepler22bMapleLeaves.greenMapleLeaf.name=Kepler 22b Green Maple Leaves
+tile.kepler22bFlowers.blueMapleShortGrass.name=Kepler 22b Blue Short Grass
+tile.kepler22bFlowers.blueMapleMedGrass.name=Kepler 22b Blue Medium Grass
+tile.kepler22bFlowers.blueMapleTallGrass.name=Kepler 22b Blue Tall Grass
+tile.kepler22bFlowers.redMapleShortGrass.name=Kepler 22b Red Short Grass
+tile.kepler22bFlowers.redMapleMedGrass.name=Kepler 22b Red Medium Grass
+tile.kepler22bFlowers.redMapleTallGrass.name=Kepler 22b Red Tall Grass
+tile.kepler22bFlowers.yellowMapleShortGrass.name=Kepler 22b Yellow Short Grass
+tile.kepler22bFlowers.yellowMapleMedGrass.name=Kepler 22b Yellow Medium Grass
+tile.kepler22bFlowers.yellowMapleTallGrass.name=Kepler 22b Yellow Tall Grass
+tile.kepler22bFlowers.purpleMapleShortGrass.name=Kepler 22b Purple Short Grass
+tile.kepler22bFlowers.purpleMapleMedGrass.name=Kepler 22b Purple Medium Grass
+tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 
 #Moon Blocks
 tile.callisto.surface.name=Povrchový kámen z Callisto
@@ -239,6 +291,7 @@ tile.saturnDungeonBrick.name=Cihla z kobky
 tile.uranusDungeonBrick.name=Cihla z kobky
 tile.neptuneDungeonBrick.name=Cihla z kobky
 tile.plutoDungeonBrick.name=Cihla z kobky
+tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Kamenný půlblok
@@ -283,12 +336,14 @@ tile.treasureChestT6.name=Truhla s pokladem typ 6
 tile.treasureChestT7.name=Truhla s pokladem typ 7
 tile.treasureChestT8.name=Truhla s pokladem typ 8
 tile.treasureChestT9.name=Truhla s pokladem typ 9
+tile.treasureChestT10.name=Tier 10 Treasure Chest
 tile.treasureChestT4.description=Truhly s pokladem typu 4 se generují na Venuši. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT5.description=Truhly s pokladem typu 5 se generují na Jupiteru. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT6.description=Truhly s pokladem typu 6 se generují na Saturnu. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT7.description=Truhly s pokladem typu 7 se generují na Uranu. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT8.description=Truhly s pokladem typu 8 se generují na Neptunu. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT9.description=Truhly s pokladem typu 9 se generují na Plutu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
 
 #Machines
 tile.advancedRefinery.name=Advanced Refinery
@@ -313,6 +368,7 @@ item.itemTier6Rocket.t6Rocket.name=Raketa typ 6
 item.itemTier7Rocket.t7Rocket.name=Raketa typ 7
 item.itemTier8Rocket.t8Rocket.name=Raketa typ 8
 item.itemTier9Rocket.t9Rocket.name=Raketa typ 9
+item.itemTier10Rocket.t10Rocket.name=Tier 10 Rocket
 
 #Rocket Tiered Items
 item.noseConeTier4.name=Špička rakety typ 4
@@ -321,6 +377,7 @@ item.noseConeTier6.name=Špička rakety typ 6
 item.noseConeTier7.name=Špička rakety typ 7
 item.noseConeTier8.name=Špička rakety typ 8
 item.noseConeTier9.name=Špička rakety typ 9
+item.noseConeTier10.name=Tier 10 Nose Cone
 
 item.tier4.tier4Fin.name=Raketové křidélko typ 4
 item.tier5.tier5Fin.name=Raketové křidélko typ 5
@@ -328,6 +385,7 @@ item.tier6.tier6Fin.name=Raketové křidélko typ 6
 item.tier7.tier7Fin.name=Raketové křidélko typ 7
 item.tier8.tier8Fin.name=Raketové křidélko typ 8
 item.tier9.tier9Fin.name=Raketové křidélko typ 9
+item.tier10.tier10Fin.name=Tier 10 Rocket Fins
 
 item.tier4.tier4engine.name=Raketový motor typ 4
 item.tier5.tier5engine.name=Raketový motor typ 5
@@ -335,6 +393,7 @@ item.tier6.tier6engine.name=Raketový motor typ 6
 item.tier7.tier7engine.name=Raketový motor typ 7
 item.tier8.tier8engine.name=Raketový motor typ 8
 item.tier9.tier9engine.name=Raketový motor typ 9
+item.tier10.tier10engine.name=Tier 10 Rocket Engine
 
 item.tier4.tier4booster.name=Posilovač typ 4
 item.tier5.tier5booster.name=Posilovač typ 5
@@ -342,6 +401,7 @@ item.tier6.tier6booster.name=Posilovač typ 6
 item.tier7.tier7booster.name=Posilovač typ 7
 item.tier8.tier8booster.name=Posilovač typ 8
 item.tier9.tier9booster.name=Posilovač typ 9
+item.tier10.tier10booster.name=Tier 10 Booster
 
 item.tier4.tier4HeavyDutyplate.name=Zesílený plech
 item.tier5.tier5HeavyDutyplate.name=Zesílený plech
@@ -349,6 +409,7 @@ item.tier6.tier6HeavyDutyplate.name=Zesílený plech
 item.tier7.tier7HeavyDutyplate.name=Zesílený plech
 item.tier8.tier8HeavyDutyplate.name=Zesílený plech
 item.tier9.tier9HeavyDutyplate.name=Zesílený plech
+item.tier10.tier10HeavyDutyPlate.name=Heavy-Duty Plate
 
 tier4.heavyDutyplate.name=typ 4
 tier5.heavyDutyplate.name=typ 5
@@ -356,6 +417,7 @@ tier6.heavyDutyplate.name=typ 6
 tier7.heavyDutyplate.name=typ 7
 tier8.heavyDutyplate.name=typ 8
 tier9.heavyDutyplate.name=typ 9
+tier10.heavyDutyPlate.name=Tier 10
 
 #Stlačený Items
 item.tier4.compressedCarbon.name=Stlačený Karbon
@@ -367,6 +429,7 @@ item.compressedZinc.name=Stlačený Zinek
 item.compressedNickel.name=Stlačený Nikl
 item.compressedMercury.name=Stlačená Měď
 item.tier9.compressedTungsten.name=Stlačený Tungsten
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Karbonový Ingot
@@ -378,11 +441,17 @@ item.ingotNickel.name=Niklový Ingot
 item.ingotMercury.name=Měděný Ingot
 item.ingotUranium.name=Uranový Ingot
 item.tier9.ingotTungsten.name=Tungstenový Ingot
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=Red Gem
 item.tier8.blueGem.name=Blue Gem
 item.tier7.whiteGem.name=White Gem
+item.tier11.blueDiamond.name=Blue Diamond
+item.tier11.redDiamond.name=Red Diamond
+item.tier11.yellowDiamond.name=Yellow Diamond
+item.tier11.purpleDiamond.name=Purple Diamond
+item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamond.name=Diamond Wafer
@@ -406,6 +475,7 @@ item.key.T6.name=Klíč ke kobce typ 6
 item.key.T7.name=Klíč ke kobce typ 7
 item.key.T8.name=Klíč ke kobce typ 8
 item.key.T9.name=Klíč ke kobce typ 9
+item.key.T10.name=Klíč ke kobce typ 10
 
 #Tools
 item.carbonPickaxe.name=Karbonový krumpáč
@@ -471,6 +541,7 @@ item.schematicTier6.name=NASA Workbench Schéma
 item.schematicTier7.name=NASA Workbench Schéma
 item.schematicTier8.name=NASA Workbench Schéma
 item.schematicTier9.name=NASA Workbench Schéma
+item.schematicTier10.name=NASA Workbench Schéma
 
 schematic.tier4.Rocket.name=Raketa typ 4
 schematic.tier5.Rocket.name=Raketa typ 5
@@ -478,6 +549,7 @@ schematic.tier6.Rocket.name=Raketa typ 6
 schematic.tier7.Rocket.name=Raketa typ 7
 schematic.tier8.Rocket.name=Raketa typ 8
 schematic.tier9.Rocket.name=Raketa typ 9
+schematic.tier10.Rocket.name=Raketa typ 10
 
 schematic.RocketT4.name=Raketa typ 4
 schematic.RocketT5.name=Raketa typ 5
@@ -485,6 +557,7 @@ schematic.RocketT6.name=Raketa typ 6
 schematic.RocketT7.name=Raketa typ 7
 schematic.RocketT8.name=Raketa typ 8
 schematic.RocketT9.name=Raketa typ 9
+schematic.RocketT10.name=Raketa typ 10
 
 #Batteries
 item.mercuryBattery.name=Měděná baterie
@@ -560,6 +633,7 @@ tier4.information=Required for Uranus, Neptune, Pluto and Eris including their m
 
 #Other Items
 item.appleDiamond.name=Diamantové jablko
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Plechovka jídla
 item.bodyparts.arm.name=Paže
 item.bodyparts.leg.name=Noha
@@ -586,6 +660,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss z Saturnu
 entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss z Uranu
 entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss z Neptunu
 entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
@@ -636,9 +711,9 @@ achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
 
 achievement.craftRocket4=Tier 4 Rocket!
 achievement.craftRocket5=Tier 5 Rocket!
-achievement.craftRocket7=Tier 6 Rocket!
-achievement.craftRocket8=Tier 7 Rocket!
-achievement.craftRocket9=Tier 8 Rocket!
+achievement.craftRocket6=Tier 6 Rocket!
+achievement.craftRocket7=Tier 7 Rocket!
+achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket

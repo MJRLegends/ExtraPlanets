@@ -16,12 +16,19 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.MapGenDungeon;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomBossEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomChestsEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomEmptyEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomSpawnerEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomTreasureEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.village.MapGenVillageEris;
 
 public class ChunkProviderEris extends ChunkProviderSpace {
@@ -31,14 +38,26 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 	private final MapGenCaveEris caveGenerator = new MapGenCaveEris();
 
 	private final MapGenRavineEris ravineGenerator = new MapGenRavineEris();
-	
+
 	private final MapGenVillageEris villageGenerator = new MapGenVillageEris();
 
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.erisDungeonBrick, 14, 8, 16, 3);
 
-	public ChunkProviderEris(World par1World, long seed,
-			boolean mapFeaturesEnabled) {
+	public ChunkProviderEris(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-
+		this.dungeonGenerator.otherRooms.add(new RoomEmptyEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomChestsEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomChestsEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.bossRooms.add(new RoomBossEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.treasureRooms.add(new RoomTreasureEris(null, 0, 0, 0, ForgeDirection.UNKNOWN));
 	}
 
 	@Override
@@ -64,8 +83,7 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected BiomeGenBase.SpawnListEntry[] getMonsters()
-	{
+	protected BiomeGenBase.SpawnListEntry[] getMonsters() {
 		List<BiomeGenBase.SpawnListEntry> monsters = new ArrayList<BiomeGenBase.SpawnListEntry>();
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -73,15 +91,14 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		//monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWizard.class, 8, 2, 3));
-		//monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class, 8, 2, 3));
+		// monsters.add(newBiomeGenBase.SpawnListEntry(EntityEvolvedWizard.class, 8, 2, 3));
+		// monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class,8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedPowerSkeleton.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
 
 	@Override
-	protected BiomeGenBase.SpawnListEntry[] getCreatures()
-	{
+	protected BiomeGenBase.SpawnListEntry[] getCreatures() {
 		return new BiomeGenBase.SpawnListEntry[0];
 	}
 
@@ -127,12 +144,14 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), cX * 16, 25, cZ * 16, cX, cZ, blocks, metadata);
 		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+		this.dungeonGenerator.handleTileEntities(this.rand);
 	}
 
 	@Override

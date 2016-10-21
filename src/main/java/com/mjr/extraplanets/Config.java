@@ -5,13 +5,13 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
+	//Sections/Groups
 	private static String dimensions = "main dimensions";
 	private static String dimensionsCustom = "other dimensions";
 	private static String dimensionID = "dimensionID";
 	private static String dimensionSettings = "dimension settings";
 	private static String dimensionBlockSettings = "dimension block settings";
 	private static String biomeID = "biomeID";
-	private static String schematics = "schematics";
 	private static String items = "items";
 	private static String blocks = "blocks";
 
@@ -21,9 +21,11 @@ public class Config {
 	private static String schematicsPage = "schematics Page ID";
 	
 	private static String compatibility = "compatibility support";
-	private static String gerenalsettings = "general settings";
+	private static String generalsettings = "general settings";
 	
+	//Config options	
 	public static boolean mobSuffocation;
+	public static boolean useDefaultBosses;
 
 	public static boolean carbonItems;
 	public static boolean palladiumItems;
@@ -64,6 +66,8 @@ public class Config {
 	public static boolean makemake;
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
+	
+	public static boolean kepler22b;
 
 	public static int mercuryID;
 	public static int venusID;
@@ -85,6 +89,8 @@ public class Config {
 	public static int rheaID;
 	public static int titanID;
 
+	public static int kepler22bID;
+	
 	public static int mercurySpaceStationID;
 	public static int mercurySpaceStationStaticID;
 
@@ -114,7 +120,10 @@ public class Config {
 
 	public static int erisSpaceStationID;
 	public static int erisSpaceStationStaticID;
-
+	
+	public static int kepler22bSpaceStationID;
+	public static int kepler22bSpaceStationStaticID;
+	
 	public static boolean mercurySpaceStation;
 	public static boolean venusSpaceStation;
 	public static boolean ceresSpaceStation;
@@ -125,6 +134,7 @@ public class Config {
 	public static boolean neptuneSpaceStation;
 	public static boolean plutoSpaceStation;
 	public static boolean erisSpaceStation;
+	public static boolean kepler22bSpaceStation;
 
 	public static int mercuryBiomeID;
 	public static int venusBiomeID;
@@ -145,6 +155,13 @@ public class Config {
 	public static int ganymedeBiomeID;
 	public static int rheaBiomeID;
 	public static int titanBiomeID;
+	
+	public static int kepler22bPlainsBiomeID;
+	public static int kepler22bSeaBiomeID;
+	public static int kepler22bBlueForestBiomeID;
+	public static int kepler22bPurpleForestBiomeID;
+	public static int kepler22bRedForestBiomeID;
+	public static int kepler22bYellowForestBiomeID;
 
 	public static int mercuryRocketTier;
 	public static int ceresRocketTier;
@@ -199,7 +216,7 @@ public class Config {
 		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
 		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
 		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
-		config.addCustomCategoryComment(gerenalsettings,"Enable/Disable gerenal settings");
+		config.addCustomCategoryComment(generalsettings,"Enable/Disable general settings");
 		
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
@@ -219,8 +236,9 @@ public class Config {
 
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will").getBoolean(true);
 		oreDictionary = config.get(dimensionSettings, "Add planet/moons ores to the ore dictionary", true, "").getBoolean(true);
-
-		eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
+		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "").getBoolean(false);
+		
+		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
 		//pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
@@ -238,6 +256,8 @@ public class Config {
 		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
+		
+		kepler22b = config.get(dimensionsCustom, "Kepler 22b", true, "").getBoolean(true);
 
 		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
 		venusSpaceStation = config.get(spacestationCustom, "Venus SpaceStation", true, "").getBoolean(true);
@@ -249,6 +269,7 @@ public class Config {
 		neptuneSpaceStation = config.get(spacestationCustom, "Neptune SpaceStation", true, "").getBoolean(true);
 		plutoSpaceStation = config.get(spacestationCustom, "Pluto SpaceStation", true, "").getBoolean(true);
 		erisSpaceStation = config.get(spacestationCustom, "Eris SpaceStation", true, "").getBoolean(true);
+		kepler22bSpaceStation = config.get(spacestationCustom, "Kepler22b SpaceStation", true, "").getBoolean(true);
 
 		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
@@ -256,10 +277,11 @@ public class Config {
 		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true,"Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
 		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
 		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
-		erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
+		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
 
 		//	venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
 		//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
@@ -293,6 +315,8 @@ public class Config {
 		rheaID = config.get(dimensionID, "Rhea Dimension ID", -39).getInt();
 		titanID = config.get(dimensionID, "Titan Dimension ID", -40).getInt();
 
+		kepler22bID = config.get(dimensionID, "Kepler 22b Dimension ID", -22).getInt();
+		
 		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
 		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -60).getInt();
 
@@ -323,6 +347,9 @@ public class Config {
 		erisSpaceStationID = config.get(dimensionID, "Eris SpaceStation Dimension ID", -79).getInt();
 		erisSpaceStationStaticID = config.get(dimensionID, "Eris SpaceStation Static Dimension ID", -78).getInt();
 
+		kepler22bSpaceStationID = config.get(dimensionID, "Kepler 22b SpaceStation Dimension ID", -81).getInt();
+		kepler22bSpaceStationStaticID = config.get(dimensionID, "Kepler 22b SpaceStation Static Dimension ID", -80).getInt();
+		
 		mercuryBiomeID = config.get(biomeID, "Mercury Biome ID", 148).getInt();
 		venusBiomeID = config.get(biomeID, "Venus Biome ID", 149).getInt();
 		ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();
@@ -341,14 +368,20 @@ public class Config {
 		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 163).getInt();
 		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 164).getInt();
 		titanBiomeID = config.get(biomeID, "Titan Biome ID", 165).getInt();
-
+		kepler22bPlainsBiomeID = config.get(biomeID, "Kepler22b Plains Biome ID", 166).getInt();
+		kepler22bSeaBiomeID = config.get(biomeID, "Kepler22b Sea Biome ID", 167).getInt();
+		kepler22bBlueForestBiomeID = config.get(biomeID, "Kepler22b Blue Maple Forest Biome ID", 168).getInt();
+		kepler22bPurpleForestBiomeID = config.get(biomeID, "Kepler22b Purple Maple Forest Biome ID", 169).getInt();
+		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
+		kepler22bYellowForestBiomeID = config.get(biomeID, "Kepler22b Yellow Maple Forest Biome ID", 171).getInt();
+		
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();
 		schematicTier7GUIID = config.get(schematicsGUI, "Schematic Tier 7 GUI ID", 5558).getInt();
 		schematicTier8GUIID = config.get(schematicsGUI, "Schematic Tier 8 GUI ID", 5559).getInt();
 		schematicTier9GUIID = config.get(schematicsGUI, "Schematic Tier 9 GUI ID", 5560).getInt();
-		//schematicTier10GUIID = config.get(schematicsGUI, "Schematic Tier 10 GUI ID", 5561).getInt();
+		schematicTier10GUIID = config.get(schematicsGUI, "Schematic Tier 10 GUI ID", 5561).getInt();
 
 		schematicTier4PageID = config.get(schematicsPage, "Schematic Tier 4 Page ID", 6666).getInt();
 		schematicTier5PageID = config.get(schematicsPage, "Schematic Tier 5 Page ID", 6667).getInt();
@@ -356,12 +389,12 @@ public class Config {
 		schematicTier7PageID = config.get(schematicsPage, "Schematic Tier 7 Page ID", 6669).getInt();
 		schematicTier8PageID = config.get(schematicsPage, "Schematic Tier 8 Page ID", 6670).getInt();
 		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
-		//schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
+		schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
 
 		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
 
-		achievements = config.get(gerenalsettings, "Enable achievements", true, "").getBoolean(true);
+		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
 
 		config.save();
 	}

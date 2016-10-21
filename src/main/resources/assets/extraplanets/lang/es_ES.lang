@@ -146,6 +146,58 @@ tile.eris.oreIron.name=Mena de Hierro de Eris
 tile.eris.oreTin.name=Mena de Estaño de Eris
 tile.eris.oreCopper.name=Mena de Cobre de Eris
 tile.eris.stoneBricks.name=Ladrillos de Roca de Eris
+tile.eris.oreDarkIron.name=Eris Dark Iron Ore
+
+tile.kepler22b.Dirt.name=Kepler 22b Dirt
+tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
+tile.kepler22bGrass.name=Kepler 22b Grass
+tile.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tile.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tile.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tile.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+tile.kepler22b.OreIron.name=Kepler 22b Iron Ore
+tile.kepler22b.OreTin.name=Kepler 22b Tin Ore
+tile.kepler22b.OreCopper.name=Kepler 22b Copper Ore
+tile.kepler22b.OreDenseCoal.name=Kepler 22b Dense Coal Ore
+tile.kepler22b.OreBlueDiamonds.name=Kepler 22b Blue Diamond Ore
+tile.kepler22b.OreRedDiamonds.name=Kepler 22b Red Diamond Ore
+tile.kepler22b.OrePurpleDiamonds.name=Kepler 22b Purple Diamond Ore
+tile.kepler22b.OreYellowDiamonds.name=Kepler 22b Yellow Diamond Ore
+tile.kepler22b.OreGreenDiamonds.name=Kepler 22b Green Diamond Ore
+tile.kepler22b.PlankMapleBlue.name=Kepler 22b Blue Wooden Planks
+tile.kepler22b.PlankMapleRed.name=Kepler 22b Red Wooden Planks
+tile.kepler22b.PlankMaplePurple.name=Kepler 22b Purple Wooden Planks
+tile.kepler22b.PlankMapleYellow.name=Kepler 22b Yellow Wooden Planks
+tile.kepler22b.PlankMapleGreen.name=Kepler 22b Green Wooden Planks
+tile.kepler22b.StoneBricks.name=Kepler 22b Stone Bricks
+tile.kepler22bMapleLogs.blueMapleLog.name=Kepler 22b Blue Maple Log
+tile.kepler22bMapleLogs.redMapleLog.name=Kepler 22b Red Maple Log
+tile.kepler22bMapleLogs.purpleMapleLog.name=Kepler 22b Purple Maple Log
+tile.kepler22bMapleLogs.yellowMapleLog.name=Kepler 22b Yellow Maple Log
+tile.kepler22bMapleLogs.greenMapleLog.name=Kepler 22b Green Maple Log
+tile.kepler22bMapleSaplings.blueMapleSapling.name=Kepler 22b Blue Maple Sapling
+tile.kepler22bMapleSaplings.redMapleSapling.name=Kepler 22b Red Maple Sapling
+tile.kepler22bMapleSaplings.purpleMapleSapling.name=Kepler 22b Purple Maple Sapling
+tile.kepler22bMapleSaplings.yellowMapleSapling.name=Kepler 22b Yellow Maple Sapling
+tile.kepler22bMapleSaplings.greenMapleSapling.name=Kepler 22b Green Maple Sapling
+tile.kepler22bMapleLeaves.blueMapleLeaf.name=Kepler 22b Blue Maple Leaves
+tile.kepler22bMapleLeaves.redMapleLeaf.name=Kepler 22b Red Maple Leaves
+tile.kepler22bMapleLeaves.purpleMapleLeaf.name=Kepler 22b Purple Maple Leaves
+tile.kepler22bMapleLeaves.yellowMapleLeaf.name=Kepler 22b Yellow Maple Leaves
+tile.kepler22bMapleLeaves.greenMapleLeaf.name=Kepler 22b Green Maple Leaves
+tile.kepler22bFlowers.blueMapleShortGrass.name=Kepler 22b Blue Short Grass
+tile.kepler22bFlowers.blueMapleMedGrass.name=Kepler 22b Blue Medium Grass
+tile.kepler22bFlowers.blueMapleTallGrass.name=Kepler 22b Blue Tall Grass
+tile.kepler22bFlowers.redMapleShortGrass.name=Kepler 22b Red Short Grass
+tile.kepler22bFlowers.redMapleMedGrass.name=Kepler 22b Red Medium Grass
+tile.kepler22bFlowers.redMapleTallGrass.name=Kepler 22b Red Tall Grass
+tile.kepler22bFlowers.yellowMapleShortGrass.name=Kepler 22b Yellow Short Grass
+tile.kepler22bFlowers.yellowMapleMedGrass.name=Kepler 22b Yellow Medium Grass
+tile.kepler22bFlowers.yellowMapleTallGrass.name=Kepler 22b Yellow Tall Grass
+tile.kepler22bFlowers.purpleMapleShortGrass.name=Kepler 22b Purple Short Grass
+tile.kepler22bFlowers.purpleMapleMedGrass.name=Kepler 22b Purple Medium Grass
+tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 
 #Moon Blocks
 tile.callisto.surface.name=Roca Superficial de Calisto
@@ -238,6 +290,7 @@ tile.saturnDungeonBrick.name=Saturn Dungeon Brick
 tile.uranusDungeonBrick.name=Uranus Dungeon Brick
 tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
 tile.plutoDungeonBrick.name=Pluto Dungeon Brick
+tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Losa de Roca Mercuriana
@@ -282,12 +335,14 @@ tile.treasureChestT6.name=Cofre del tesoro nivel 6
 tile.treasureChestT7.name=Cofre del tesoro nivel 7
 tile.treasureChestT8.name=Cofre del tesoro nivel 8
 tile.treasureChestT9.name=Cofre del tesoro nivel 9
+tile.treasureChestT10.name=Cofre del tesoro nivel 10
 tile.treasureChestT4.description=Los cofres del tesoro nivel 4 se generarán en las mazmorras de Venus. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT5.description=Los cofres del tesoro nivel 5 se generarán en las mazmorras de Júpiter. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT6.description=Los cofres del tesoro nivel 6 se generarán en las mazmorras de Saturno. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT7.description=Los cofres del tesoro nivel 7 se generarán en las mazmorras de Urano. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT8.description=Los cofres del tesoro nivel 8 se generarán en las mazmorras de Neptuno. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT9.description=Los cofres del tesoro nivel 9 se generarán en las mazmorras de Pluto. Se desbloquean despues de matar al jefe final.
+tile.treasureChestT10.description=Los cofres del tesoro nivel 10 se generarán en las mazmorras de Eris. Se desbloquean despues de matar al jefe final.
 
 #Machines
 tile.advancedRefinery.name=Refinería Avanzada
@@ -312,6 +367,7 @@ item.itemTier6Rocket.t6Rocket.name=Cohete nivel 6
 item.itemTier7Rocket.t7Rocket.name=Cohete nivel 7
 item.itemTier8Rocket.t8Rocket.name=Cohete nivel 8
 item.itemTier9Rocket.t9Rocket.name=Cohete nivel 9
+item.itemTier10Rocket.t10Rocket.name=Cohete nivel 10
 
 #Rocket Tiered Items
 item.noseConeTier4.name=Ojiva nivel 4
@@ -320,6 +376,7 @@ item.noseConeTier6.name=Ojiva nivel 6
 item.noseConeTier7.name=Ojiva nivel 7
 item.noseConeTier8.name=Ojiva nivel 8
 item.noseConeTier9.name=Ojiva nivel 9
+item.noseConeTier10.name=Ojiva nivel 10
 
 item.tier4.tier4Fin.name=Aletas de cohete nivel 4
 item.tier5.tier5Fin.name=Aletas de cohete nivel 5
@@ -327,6 +384,7 @@ item.tier6.tier6Fin.name=Aletas de cohete nivel 6
 item.tier7.tier7Fin.name=Aletas de cohete nivel 7
 item.tier8.tier8Fin.name=Aletas de cohete nivel 8
 item.tier9.tier9Fin.name=Aletas de cohete nivel 9
+item.tier10.tier10Fin.name=Aletas de cohete nivel 10
 
 item.tier4.tier4engine.name=Motor de coehte nivel 4
 item.tier5.tier5engine.name=Motor de coehte nivel 5
@@ -334,6 +392,7 @@ item.tier6.tier6engine.name=Motor de coehte nivel 6
 item.tier7.tier7engine.name=Motor de coehte nivel 7
 item.tier8.tier8engine.name=Motor de coehte nivel 8
 item.tier9.tier9engine.name=Motor de coehte nivel 9
+item.tier10.tier10engine.name=Motor de coehte nivel 10
 
 item.tier4.tier4booster.name=Acelerador nivel 4
 item.tier5.tier5booster.name=Acelerador nivel 5
@@ -341,6 +400,7 @@ item.tier6.tier6booster.name=Acelerador nivel 6
 item.tier7.tier7booster.name=Acelerador nivel 7
 item.tier8.tier8booster.name=Acelerador nivel 8
 item.tier9.tier9booster.name=Acelerador nivel 9
+item.tier10.tier10booster.name=Acelerador nivel 10
 
 item.tier4.tier4HeavyDutyPlate.name=Placa de alta resistencia
 item.tier5.tier5HeavyDutyPlate.name=Placa de alta resistencia
@@ -348,6 +408,7 @@ item.tier6.tier6HeavyDutyPlate.name=Placa de alta resistencia
 item.tier7.tier7HeavyDutyPlate.name=Placa de alta resistencia
 item.tier8.tier8HeavyDutyPlate.name=Placa de alta resistencia
 item.tier9.tier9HeavyDutyPlate.name=Placa de alta resistencia
+item.tier10.tier10HeavyDutyPlate.name=Placa de alta resistencia
 
 tier4.heavyDutyPlate.name=nivel 4
 tier5.heavyDutyPlate.name=nivel 5
@@ -355,6 +416,7 @@ tier6.heavyDutyPlate.name=nivel 6
 tier7.heavyDutyPlate.name=nivel 7
 tier8.heavyDutyPlate.name=nivel 8
 tier9.heavyDutyPlate.name=nivel 9
+tier10.heavyDutyPlate.name=nivel 10
 
 #Compressed Items
 item.tier4.compressedCarbon.name=Carbono comprimido
@@ -366,6 +428,7 @@ item.tier8.compressedZinc.name=Zinc comprimido
 item.tier5.compressedNickel.name=Estaño comprimido
 item.compressedMercury.name=Mercurio comprimido
 item.tier9.compressedTungsten.name=Tungsteno comprimido
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Lingote de carbono
@@ -377,11 +440,17 @@ item.tier5.ingotNickel.name=Lingote de estaño
 item.ingotMercury.name=Lingote mercuriano
 item.ingotUranium.name=Lingore de uranio
 item.tier9.ingotTungsten.name=Lingote de tungsteno
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=Gema roja
 item.tier8.blueGem.name=Gema azúl
 item.tier7.whiteGem.name=Gema blanca
+item.tier11.blueDiamond.name=Blue Diamond
+item.tier11.redDiamond.name=Red Diamond
+item.tier11.yellowDiamond.name=Yellow Diamond
+item.tier11.purpleDiamond.name=Purple Diamond
+item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamond.name=Oblea de diamante
@@ -405,6 +474,7 @@ item.key.T6.name=Llave de mazmorra nivel 6
 item.key.T7.name=Llave de mazmorra nivel 7
 item.key.T8.name=Llave de mazmorra nivel 8
 item.key.T9.name=Llave de mazmorra nivel 9
+item.key.T10.name=Llave de mazmorra nivel 10
 
 #Tools
 item.carbonPickaxe.name=Pico de carbono
@@ -470,6 +540,7 @@ item.schematicTier6.name=Planos
 item.schematicTier7.name=Planos
 item.schematicTier8.name=Planos
 item.schematicTier9.name=Planos
+item.schematicTier10.name=Planos
 
 schematic.tier4.rocket.name=Cohete nivel 4
 schematic.tier5.rocket.name=Cohete nivel 5
@@ -477,6 +548,7 @@ schematic.tier6.rocket.name=Cohete nivel 6
 schematic.tier7.rocket.name=Cohete nivel 7
 schematic.tier8.rocket.name=Cohete nivel 8
 schematic.tier9.rocket.name=Cohete nivel 9
+schematic.tier10.rocket.name=Cohete nivel 10
 
 schematic.rocketT4.name=Cohete nivel 4
 schematic.rocketT5.name=Cohete nivel 5
@@ -484,6 +556,7 @@ schematic.rocketT6.name=Cohete nivel 6
 schematic.rocketT7.name=Cohete nivel 7
 schematic.rocketT8.name=Cohete nivel 8
 schematic.rocketT9.name=Cohete nivel 9
+schematic.rocketT10.name=Cohete nivel 10
 
 #Batteries
 item.mercuryBattery.name=Batería de mercurio
@@ -559,6 +632,7 @@ tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lun
 
 #Other Items
 item.appleDiamond.name=Manzana de diamante
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Lata de comida
 item.bodyparts.arm.name=Brazo
 item.bodyparts.leg.name=Pierna
@@ -585,6 +659,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Jefe creeper evolucionado de Saturno
 entity.ExtraPlanetsCreeperBossUranus.name=Jefe creeper evolucionado de Urano
 entity.ExtraPlanetsCreeperBossNeptune.name=Jefe creeper evolucionado de Neptuno
 entity.ExtraPlanetsCreeperBossPluto.name=Jefe creeper evolucionado de Pluto
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado

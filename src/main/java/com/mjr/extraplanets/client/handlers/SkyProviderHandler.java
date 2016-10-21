@@ -15,6 +15,7 @@ import com.mjr.extraplanets.moons.Callisto.SkyProviderCallisto;
 import com.mjr.extraplanets.moons.Callisto.WorldProviderCallisto;
 import com.mjr.extraplanets.moons.Deimos.SkyProviderDeimos;
 import com.mjr.extraplanets.moons.Deimos.WorldProviderDeimos;
+import com.mjr.extraplanets.moons.Europa.WorldProviderEuropa;
 import com.mjr.extraplanets.moons.Ganymede.SkyProviderGanymede;
 import com.mjr.extraplanets.moons.Ganymede.WorldProviderGanymede;
 import com.mjr.extraplanets.moons.Io.SkyProviderIo;
@@ -35,6 +36,9 @@ import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.SkyProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
+import com.mjr.extraplanets.planets.Kepler22b.SkyProviderKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.WorldProviderKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.spacestation.WorldProviderKepler22bOrbit;
 import com.mjr.extraplanets.planets.Mercury.SkyProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;
@@ -151,7 +155,15 @@ public class SkyProviderHandler {
 					world.provider.setCloudRenderer(new CloudRenderer());
 				}
 			}
+			if (world.provider instanceof WorldProviderKepler22b) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderKepler22b((IGalacticraftWorldProvider) world.provider));
+				}
 
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
 			// Moons
 			if (world.provider instanceof WorldProviderCallisto) {
 				if (world.provider.getSkyRenderer() == null) {
@@ -165,6 +177,15 @@ public class SkyProviderHandler {
 			if (world.provider instanceof WorldProviderDeimos) {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderDeimos((IGalacticraftWorldProvider) world.provider));
+				}
+
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
+			if (world.provider instanceof WorldProviderEuropa) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderGanymede((IGalacticraftWorldProvider) world.provider));
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -219,15 +240,6 @@ public class SkyProviderHandler {
 			if (world.provider instanceof WorldProviderTriton) {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderTriton((IGalacticraftWorldProvider) world.provider));
-				}
-
-				if (world.provider.getCloudRenderer() == null) {
-					world.provider.setCloudRenderer(new CloudRenderer());
-				}
-			}
-			if (world.provider instanceof WorldProviderEris) {
-				if (world.provider.getSkyRenderer() == null) {
-					world.provider.setSkyRenderer(new SkyProviderEris((IGalacticraftWorldProvider) world.provider));
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -327,6 +339,17 @@ public class SkyProviderHandler {
 			if (world.provider instanceof WorldProviderErisOrbit) {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"), false, true));
+					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinRate();
+					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+				}
+
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
+			if (world.provider instanceof WorldProviderKepler22bOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinRate();
 					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}

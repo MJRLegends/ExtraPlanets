@@ -22,3 +22,4 @@ ExtraPlanets Server Test/
 *.schematic
 *.rar
 asm/
+run/

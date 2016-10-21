@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Venus.worldgen.dungeon;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
@@ -92,16 +94,29 @@ public class RoomBossVenus extends DungeonRoom
 		this.worldObj.setBlock(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, GCBlocks.blockMoon, 15, 3);
 
 		final TileEntity tile = this.worldObj.getTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ);
-
-		if (tile == null || !(tile instanceof TileEntityDungeonSpawnerVenus))
-		{
-			TileEntityDungeonSpawnerVenus spawner = new TileEntityDungeonSpawnerVenus();
-			spawner.setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
-			this.worldObj.setTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, spawner);
+		if(Config.useDefaultBosses){
+			if (tile == null || !(tile instanceof TileEntityDungeonSpawnerVenusDefault))
+			{
+				TileEntityDungeonSpawnerVenusDefault spawner = new TileEntityDungeonSpawnerVenusDefault();
+				spawner.setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
+				this.worldObj.setTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, spawner);
+			}
+			else if (tile instanceof TileEntityDungeonSpawner)
+			{
+				((TileEntityDungeonSpawner) tile).setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
+			}
 		}
-		else if (tile instanceof TileEntityDungeonSpawner)
-		{
-			((TileEntityDungeonSpawner) tile).setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
+		else{
+			if (tile == null || !(tile instanceof TileEntityDungeonSpawnerVenus))
+			{
+				TileEntityDungeonSpawnerVenus spawner = new TileEntityDungeonSpawnerVenus();
+				spawner.setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
+				this.worldObj.setTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, spawner);
+			}
+			else if (tile instanceof TileEntityDungeonSpawner)
+			{
+				((TileEntityDungeonSpawner) tile).setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
+			}
 		}
 	}
 

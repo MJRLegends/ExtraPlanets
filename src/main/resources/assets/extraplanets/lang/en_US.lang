@@ -146,6 +146,58 @@ tile.eris.oreIron.name=Eris Iron Ore
 tile.eris.oreTin.name=Eris Tin Ore
 tile.eris.oreCopper.name=Eris Copper Ore
 tile.eris.stoneBricks.name=Eris Stone Bricks
+tile.eris.oreDarkIron.name=Eris Dark Iron Ore
+
+tile.kepler22b.Dirt.name=Kepler 22b Dirt
+tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
+tile.kepler22bGrass.name=Kepler 22b Grass
+tile.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
+tile.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
+tile.kepler22b_RedGrass.name=Kepler 22b Red Grass
+tile.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+tile.kepler22b.OreIron.name=Kepler 22b Iron Ore
+tile.kepler22b.OreTin.name=Kepler 22b Tin Ore
+tile.kepler22b.OreCopper.name=Kepler 22b Copper Ore
+tile.kepler22b.OreDenseCoal.name=Kepler 22b Dense Coal Ore
+tile.kepler22b.OreBlueDiamonds.name=Kepler 22b Blue Diamond Ore
+tile.kepler22b.OreRedDiamonds.name=Kepler 22b Red Diamond Ore
+tile.kepler22b.OrePurpleDiamonds.name=Kepler 22b Purple Diamond Ore
+tile.kepler22b.OreYellowDiamonds.name=Kepler 22b Yellow Diamond Ore
+tile.kepler22b.OreGreenDiamonds.name=Kepler 22b Green Diamond Ore
+tile.kepler22b.PlankMapleBlue.name=Kepler 22b Blue Wooden Planks
+tile.kepler22b.PlankMapleRed.name=Kepler 22b Red Wooden Planks
+tile.kepler22b.PlankMaplePurple.name=Kepler 22b Purple Wooden Planks
+tile.kepler22b.PlankMapleYellow.name=Kepler 22b Yellow Wooden Planks
+tile.kepler22b.PlankMapleGreen.name=Kepler 22b Green Wooden Planks
+tile.kepler22b.StoneBricks.name=Kepler 22b Stone Bricks
+tile.kepler22bMapleLogs.blueMapleLog.name=Kepler 22b Blue Maple Log
+tile.kepler22bMapleLogs.redMapleLog.name=Kepler 22b Red Maple Log
+tile.kepler22bMapleLogs.purpleMapleLog.name=Kepler 22b Purple Maple Log
+tile.kepler22bMapleLogs.yellowMapleLog.name=Kepler 22b Yellow Maple Log
+tile.kepler22bMapleLogs.greenMapleLog.name=Kepler 22b Green Maple Log
+tile.kepler22bMapleSaplings.blueMapleSapling.name=Kepler 22b Blue Maple Sapling
+tile.kepler22bMapleSaplings.redMapleSapling.name=Kepler 22b Red Maple Sapling
+tile.kepler22bMapleSaplings.purpleMapleSapling.name=Kepler 22b Purple Maple Sapling
+tile.kepler22bMapleSaplings.yellowMapleSapling.name=Kepler 22b Yellow Maple Sapling
+tile.kepler22bMapleSaplings.greenMapleSapling.name=Kepler 22b Green Maple Sapling
+tile.kepler22bMapleLeaves.blueMapleLeaf.name=Kepler 22b Blue Maple Leaves
+tile.kepler22bMapleLeaves.redMapleLeaf.name=Kepler 22b Red Maple Leaves
+tile.kepler22bMapleLeaves.purpleMapleLeaf.name=Kepler 22b Purple Maple Leaves
+tile.kepler22bMapleLeaves.yellowMapleLeaf.name=Kepler 22b Yellow Maple Leaves
+tile.kepler22bMapleLeaves.greenMapleLeaf.name=Kepler 22b Green Maple Leaves
+tile.kepler22bFlowers.blueMapleShortGrass.name=Kepler 22b Blue Short Grass
+tile.kepler22bFlowers.blueMapleMedGrass.name=Kepler 22b Blue Medium Grass
+tile.kepler22bFlowers.blueMapleTallGrass.name=Kepler 22b Blue Tall Grass
+tile.kepler22bFlowers.redMapleShortGrass.name=Kepler 22b Red Short Grass
+tile.kepler22bFlowers.redMapleMedGrass.name=Kepler 22b Red Medium Grass
+tile.kepler22bFlowers.redMapleTallGrass.name=Kepler 22b Red Tall Grass
+tile.kepler22bFlowers.yellowMapleShortGrass.name=Kepler 22b Yellow Short Grass
+tile.kepler22bFlowers.yellowMapleMedGrass.name=Kepler 22b Yellow Medium Grass
+tile.kepler22bFlowers.yellowMapleTallGrass.name=Kepler 22b Yellow Tall Grass
+tile.kepler22bFlowers.purpleMapleShortGrass.name=Kepler 22b Purple Short Grass
+tile.kepler22bFlowers.purpleMapleMedGrass.name=Kepler 22b Purple Medium Grass
+tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Surface Rock
@@ -169,12 +221,12 @@ tile.europa.oreIron.name=Europa Iron Ore
 tile.europa.oreTin.name=Europa Tin Ore
 tile.europa.oreCopper.name=Europa Copper Ore
 
-tile.io.surface.name=IO Surface Rock
-tile.io.subSurface.name=IO Sub-Surface Rock
-tile.io.stone.name=IO Stone
-tile.io.oreIron.name=IO Iron Ore
-tile.io.oreTin.name=IO Tin Ore
-tile.io.oreCopper.name=IO Copper Ore
+tile.io.surface.name=Io Surface Rock
+tile.io.subSurface.name=Io Sub-Surface Rock
+tile.io.stone.name=Io Stone
+tile.io.oreIron.name=Io Iron Ore
+tile.io.oreTin.name=Io Tin Ore
+tile.io.oreCopper.name=Io Copper Ore
 
 tile.phobos.surface.name=Phobos Surface Rock
 tile.phobos.subSurface.name=Phobos Sub-Surface Rock
@@ -216,7 +268,7 @@ tile.mercuryGravel.name=Mercury Gravel
 tile.ceresGravel.name=Ceres Gravel
 tile.plutoGravel.name=Pluto Gravel
 tile.erisGravel.name=Eris Gravel
-tile.ioGravel.name=IO Gravel
+tile.ioGravel.name=Io Gravel
 tile.europaGravel.name=Europa Gravel
 tile.deimosGravel.name=Deimos Gravel
 tile.phobosGravel.name=Phobos Gravel
@@ -239,6 +291,7 @@ tile.saturnDungeonBrick.name=Saturn Dungeon Brick
 tile.uranusDungeonBrick.name=Uranus Dungeon Brick
 tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
 tile.plutoDungeonBrick.name=Pluto Dungeon Brick
+tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab
@@ -283,12 +336,14 @@ tile.treasureChestT6.name=Tier 6 Treasure Chest
 tile.treasureChestT7.name=Tier 7 Treasure Chest
 tile.treasureChestT8.name=Tier 8 Treasure Chest
 tile.treasureChestT9.name=Tier 9 Treasure Chest
+tile.treasureChestT10.name=Tier 10 Treasure Chest
 tile.treasureChestT4.description=Tier 4 Treasure Chests will generate in Venus Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT5.description=Tier 5 Treasure Chests will generate in Jupiter Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT6.description=Tier 6 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT7.description=Tier 7 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT8.description=Tier 8 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT9.description=Tier 9 Treasure Chests will generate in Pluto Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
 
 #Machines
 tile.advancedRefinery.name=Advanced Refinery
@@ -313,6 +368,7 @@ item.itemTier6Rocket.t6Rocket.name=Tier 6 Rocket
 item.itemTier7Rocket.t7Rocket.name=Tier 7 Rocket
 item.itemTier8Rocket.t8Rocket.name=Tier 8 Rocket
 item.itemTier9Rocket.t9Rocket.name=Tier 9 Rocket
+item.itemTier10Rocket.t10Rocket.name=Tier 10 Rocket
 
 #Rocket Tiered Items
 item.noseConeTier4.name=Tier 4 Nose Cone
@@ -321,6 +377,7 @@ item.noseConeTier6.name=Tier 6 Nose Cone
 item.noseConeTier7.name=Tier 7 Nose Cone
 item.noseConeTier8.name=Tier 8 Nose Cone
 item.noseConeTier9.name=Tier 9 Nose Cone
+item.noseConeTier10.name=Tier 10 Nose Cone
 
 item.tier4.tier4Fin.name=Tier 4 Rocket Fins
 item.tier5.tier5Fin.name=Tier 5 Rocket Fins
@@ -328,6 +385,7 @@ item.tier6.tier6Fin.name=Tier 6 Rocket Fins
 item.tier7.tier7Fin.name=Tier 7 Rocket Fins
 item.tier8.tier8Fin.name=Tier 8 Rocket Fins
 item.tier9.tier9Fin.name=Tier 9 Rocket Fins
+item.tier10.tier10Fin.name=Tier 10 Rocket Fins
 
 item.tier4.tier4engine.name=Tier 4 Rocket Engine
 item.tier5.tier5engine.name=Tier 5 Rocket Engine
@@ -335,6 +393,7 @@ item.tier6.tier6engine.name=Tier 6 Rocket Engine
 item.tier7.tier7engine.name=Tier 7 Rocket Engine
 item.tier8.tier8engine.name=Tier 8 Rocket Engine
 item.tier9.tier9engine.name=Tier 9 Rocket Engine
+item.tier10.tier10engine.name=Tier 10 Rocket Engine
 
 item.tier4.tier4booster.name=Tier 4 Booster
 item.tier5.tier5booster.name=Tier 5 Booster
@@ -342,6 +401,7 @@ item.tier6.tier6booster.name=Tier 6 Booster
 item.tier7.tier7booster.name=Tier 7 Booster
 item.tier8.tier8booster.name=Tier 8 Booster
 item.tier9.tier9booster.name=Tier 9 Booster
+item.tier10.tier10booster.name=Tier 10 Booster
 
 item.tier4.tier4HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier5.tier5HeavyDutyPlate.name=Heavy-Duty Plate
@@ -349,6 +409,7 @@ item.tier6.tier6HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier7.tier7HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier8.tier8HeavyDutyPlate.name=Heavy-Duty Plate
 item.tier9.tier9HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier10.tier10HeavyDutyPlate.name=Heavy-Duty Plate
 
 tier4.heavyDutyPlate.name=Tier 4
 tier5.heavyDutyPlate.name=Tier 5
@@ -356,6 +417,7 @@ tier6.heavyDutyPlate.name=Tier 6
 tier7.heavyDutyPlate.name=Tier 7
 tier8.heavyDutyPlate.name=Tier 8
 tier9.heavyDutyPlate.name=Tier 9
+tier10.heavyDutyPlate.name=Tier 10
 
 #Compressed Items
 item.tier4.compressedCarbon.name=Compressed Carbon
@@ -367,6 +429,7 @@ item.tier8.compressedZinc.name=Compressed Zinc
 item.tier5.compressedNickel.name=Compressed Nickel
 item.compressedMercury.name=Compressed Mercury
 item.tier9.compressedTungsten.name=Compressed Tungsten
+item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Carbon Ingot
@@ -378,11 +441,18 @@ item.tier5.ingotNickel.name=Nickel Ingot
 item.ingotMercury.name=Mercury Ingot
 item.ingotUranium.name=Uranium Ingot
 item.tier9.ingotTungsten.name=Tungsten Ingot
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5.redGem.name=Red Gem
 item.tier8.blueGem.name=Blue Gem
 item.tier7.whiteGem.name=White Gem
+item.tier11.blueDiamond.name=Blue Diamond
+item.tier11.redDiamond.name=Red Diamond
+item.tier11.yellowDiamond.name=Yellow Diamond
+item.tier11.purpleDiamond.name=Purple Diamond
+item.tier11.greenDiamond.name=Green Diamond
+item.tier10.ingotDarkIron.name=Dark Iron Ingot
 
 #Wafers
 item.wafer.diamond.name=Diamond Wafer
@@ -406,6 +476,7 @@ item.key.T6.name=Tier 6 Dungeon Key
 item.key.T7.name=Tier 7 Dungeon Key
 item.key.T8.name=Tier 8 Dungeon Key
 item.key.T9.name=Tier 9 Dungeon Key
+item.key.T10.name=Tier 10 Dungeon Key
 
 #Tools
 item.carbonPickaxe.name=Carbon Pickaxe
@@ -471,6 +542,7 @@ item.schematicTier6.name=NASA Workbench Schematic
 item.schematicTier7.name=NASA Workbench Schematic
 item.schematicTier8.name=NASA Workbench Schematic
 item.schematicTier9.name=NASA Workbench Schematic
+item.schematicTier10.name=NASA Workbench Schematic
 
 schematic.tier4.rocket.name=Tier 4 Rocket
 schematic.tier5.rocket.name=Tier 5 Rocket
@@ -478,6 +550,7 @@ schematic.tier6.rocket.name=Tier 6 Rocket
 schematic.tier7.rocket.name=Tier 7 Rocket
 schematic.tier8.rocket.name=Tier 8 Rocket
 schematic.tier9.rocket.name=Tier 9 Rocket
+schematic.tier10.rocket.name=Tier 10 Rocket
 
 schematic.rocketT4.name=Tier 4 Rocket
 schematic.rocketT5.name=Tier 5 Rocket
@@ -485,6 +558,7 @@ schematic.rocketT6.name=Tier 6 Rocket
 schematic.rocketT7.name=Tier 7 Rocket
 schematic.rocketT8.name=Tier 8 Rocket
 schematic.rocketT9.name=Tier 9 Rocket
+schematic.rocketT10.name=Tier 10 Rocket
 
 #Batteries
 item.mercuryBattery.name=Mercury Battery
@@ -560,6 +634,7 @@ tier4.information=Required for Uranus, Neptune, Pluto and Eris including their m
 
 #Other Items
 item.appleDiamond.name=Diamond Apple
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Can of Food
 item.bodyparts.arm.name=Arm
 item.bodyparts.leg.name=Leg
@@ -586,6 +661,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss Saturn
 entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss Uranus
 entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss Neptune
 entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
@@ -643,9 +719,9 @@ achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Che
 
 achievement.craftRocket4=Tier 4 Rocket!
 achievement.craftRocket5=Tier 5 Rocket!
-achievement.craftRocket7=Tier 6 Rocket!
-achievement.craftRocket8=Tier 7 Rocket!
-achievement.craftRocket9=Tier 8 Rocket!
+achievement.craftRocket6=Tier 6 Rocket!
+achievement.craftRocket7=Tier 7 Rocket!
+achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket

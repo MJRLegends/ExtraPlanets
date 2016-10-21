@@ -40,6 +40,7 @@ public class BiomeDecoratorNeptuneNew extends BiomeDecorator{
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 
 	}
+	
 	protected void generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY)
 	{
 		World currentWorld;
@@ -63,7 +64,7 @@ public class BiomeDecoratorNeptuneNew extends BiomeDecorator{
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(20, this.zincGen, 0, 64);
 		this.generateOre(5, this.frozenNitrogenGen, 0, 256);
-
+		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {

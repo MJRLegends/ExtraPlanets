@@ -47,7 +47,6 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	public float prevSquishFactor;
 	/** ticks until this slime jumps again */
 	private int slimeJumpDelay;
-	private static final String __OBFID = "CL_00001698";
 
 	private TileEntityDungeonSpawner spawner;
 
@@ -455,34 +454,6 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	@Override
 	protected Item getDropItem() {
 		return this.getSlimeSize() == 1 ? Items.slime_ball : Item.getItemById(0);
-	}
-
-	/**
-	 * Checks if the entity's current position is a valid location to spawn this
-	 * entity.
-	 */
-	@Override
-	public boolean getCanSpawnHere() {
-		Chunk chunk = this.worldObj.getChunkFromBlockCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
-
-		if (this.worldObj.getWorldInfo().getTerrainType().handleSlimeSpawnReduction(rand, worldObj)) {
-			return false;
-		} else {
-			if (this.getSlimeSize() == 1 || this.worldObj.difficultySetting != EnumDifficulty.PEACEFUL) {
-				BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
-
-				if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor()
-						&& this.worldObj.getBlockLightValue(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) <= this.rand.nextInt(8)) {
-					return super.getCanSpawnHere();
-				}
-
-				if (this.rand.nextInt(10) == 0 && chunk.getRandomWithSeed(987234911L).nextInt(10) == 0 && this.posY < 40.0D) {
-					return super.getCanSpawnHere();
-				}
-			}
-
-			return false;
-		}
 	}
 
 	/**

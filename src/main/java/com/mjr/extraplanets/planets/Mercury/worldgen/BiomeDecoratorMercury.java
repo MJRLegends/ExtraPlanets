@@ -17,7 +17,7 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 	private WorldGenerator fossilsGen;
 
 	private World currentWorld;
-
+	
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorMercury()

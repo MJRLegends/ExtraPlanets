@@ -17,6 +17,8 @@ import com.mjr.extraplanets.planets.Eris.TeleportTypeEris;
 import com.mjr.extraplanets.planets.Eris.WorldProviderEris;
 import com.mjr.extraplanets.planets.Jupiter.TeleportTypeJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
+import com.mjr.extraplanets.planets.Kepler22b.TeleportTypeKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.WorldProviderKepler22b;
 import com.mjr.extraplanets.planets.Mercury.TeleportTypeMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
 import com.mjr.extraplanets.planets.Neptune.TeleportTypeNeptune;
@@ -153,7 +155,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.eris) {
 			eris = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			eris.setTierRequired(Config.erisRocketTier);
+			eris.setTierRequired(9);
 			eris.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			eris.setPhaseShift(1.0F);
 			eris.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F, 3.50F));
@@ -162,7 +164,17 @@ public class ExtraPlanets_Planets {
 			eris.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			eris.setDimensionInfo(Config.erisID, WorldProviderEris.class);
 		}
-
+		if(Config.kepler22b){
+			kepler22b = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
+			kepler22b.setTierRequired(10);
+			kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F);
+			kepler22b.setPhaseShift(1.45F);
+			kepler22b.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
+			kepler22b.setRelativeOrbitTime(164.84118291347207009857612267251F);
+			kepler22b.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER).atmosphereComponent(IAtmosphericGas.OXYGEN);
+			kepler22b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
+			kepler22b.setDimensionInfo(Config.kepler22bID, WorldProviderKepler22b.class);
+		}
 		if(Config.kuiperBelt){
 			kuiperBelt = GalacticraftCore.instance.makeUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (kuiperBelt != null)
@@ -177,10 +189,10 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.keplerSolarSystems) {
 			// Kepler Solar System
-			kepler22b = GalacticraftCore.instance.makeUnreachablePlanet("kepler22b", ExtraPlanets_SolarSystems.kepler22);
-			if (kepler22b != null)
-				kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
-			kepler22b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
+//			kepler22b = GalacticraftCore.instance.makeUnreachablePlanet("kepler22b", ExtraPlanets_SolarSystems.kepler22);
+//			if (kepler22b != null)
+//				kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+//			kepler22b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
 
 			// Kepler 47 Solar System
 			kepler47b = GalacticraftCore.instance.makeUnreachablePlanet("kepler47b", ExtraPlanets_SolarSystems.kepler47);
@@ -277,6 +289,11 @@ public class ExtraPlanets_Planets {
 			GalaxyRegistry.registerPlanet(eris);
 			GalacticraftRegistry.registerTeleportType(WorldProviderEris.class, new TeleportTypeEris());
 			GalacticraftRegistry.registerRocketGui(WorldProviderEris.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/erisRocketGui.png"));
+		}
+		if(Config.kepler22b){
+			GalaxyRegistry.registerPlanet(kepler22b);
+			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22b.class, new TeleportTypeKepler22b());
+			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/kepler22bRocketGui.png"));
 		}
 	}
 }

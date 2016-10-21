@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -18,7 +17,7 @@ import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
 public class RocketT6RecipeHandler extends TemplateRecipeHandler {
-    private static final ResourceLocation rocketGuiTexture = new ResourceLocation(MarsModule.ASSET_PREFIX, "textures/gui/schematic_rocket_T2.png");
+	private static final ResourceLocation rocketGuiTexture = new ResourceLocation(MarsModule.ASSET_PREFIX, "textures/gui/schematic_rocket_T2.png");
 
 	public String getRecipeId() {
 		return "extraplanets.rocketT6";
@@ -29,10 +28,10 @@ public class RocketT6RecipeHandler extends TemplateRecipeHandler {
 		return 1;
 	}
 
-    public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes()
-    {
-        return NEIExtraPlanetsConfig.getTier6RocketBenchRecipes();
-    }
+	public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes() {
+		return NEIExtraPlanetsConfig.getTier6RocketBenchRecipes();
+	}
+
 	@Override
 	public void drawBackground(int i) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);

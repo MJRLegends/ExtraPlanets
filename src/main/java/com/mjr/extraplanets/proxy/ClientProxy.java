@@ -17,6 +17,7 @@ import com.mjr.extraplanets.client.model.ModelEvolvedIceSlime;
 import com.mjr.extraplanets.client.model.ModelEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.RenderPlayerExtraPlanets;
 import com.mjr.extraplanets.client.render.block.BlockRendererMachine;
+import com.mjr.extraplanets.client.render.block.BlockRendererTier10TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier4TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier5TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier6TreasureChest;
@@ -24,33 +25,41 @@ import com.mjr.extraplanets.client.render.block.BlockRendererTier7TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier8TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier9TreasureChest;
 import com.mjr.extraplanets.client.render.block.TileEntitySolarPanelRenderer;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossEris;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossJupiter;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossNeptune;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossPluto;
 import com.mjr.extraplanets.client.render.entities.RenderCreeperBossSaturn;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossUranus;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossVenus;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlaze;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlueCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedEnderman;
+import com.mjr.extraplanets.client.render.entities.RenderEvolvedGiantSpider;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlime;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCube;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.client.render.entities.RenderEvolvedMiniEnderman;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedPowerSkeleton;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedRedCreeper;
 import com.mjr.extraplanets.client.render.entities.RenderEvolvedWitch;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
+import com.mjr.extraplanets.client.render.entities.RenderTier10Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier4Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier5Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.RenderTier9Rocket;
+import com.mjr.extraplanets.client.render.item.ItemRendererTier10Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier7Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier8Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier9Rocket;
+import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer;
@@ -60,18 +69,24 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer
 import com.mjr.extraplanets.entities.EntityBlueCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
 import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
 import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
+import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
@@ -81,6 +96,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntitySolar;
+import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
@@ -106,6 +122,7 @@ public class ClientProxy extends CommonProxy {
 	public static int treasureT7ChestID;
 	public static int treasureT8ChestID;
 	public static int treasureT9ChestID;
+	public static int treasureT10ChestID;
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -134,23 +151,25 @@ public class ClientProxy extends CommonProxy {
 
 	@SideOnly(Side.CLIENT)
 	private void renderMobEntities() {
-		if (Config.venus)
-			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class,
-			// new RenderCreeperBossVenus());
+		if (Config.venus){
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class,new RenderCreeperBossVenus());
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, new RenderEvolvedMagmaCubeBoss());
+		}
 		if (Config.jupiter)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, new RenderCreeperBossJupiter());
 		if (Config.saturn)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
-		if (Config.uranus)
-			// RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class,
-			// new RenderCreeperBossUranus());
+		if (Config.uranus){
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, new RenderCreeperBossUranus());
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, new RenderEvolvedIceSlimeBoss(new ModelEvolvedIceSlimeBoss(16), new ModelEvolvedIceSlimeBoss(0), 0.25F));
+		}
 		if (Config.neptune)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
 		if (Config.pluto)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, new RenderCreeperBossPluto());
-
+		if (Config.eris)
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, new RenderCreeperBossEris());
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCube.class, new RenderEvolvedMagmaCube());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlime.class, new RenderEvolvedIceSlime(new ModelEvolvedIceSlime(16), new ModelEvolvedIceSlime(0), 0.25F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedWitch.class, new RenderEvolvedWitch());
@@ -159,11 +178,10 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityBlueCreeper.class, new RenderEvolvedBlueCreeper());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedRedCreeper.class, new RenderEvolvedRedCreeper());
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedPowerSkeleton.class, new RenderEvolvedPowerSkeleton());
-		// RenderingRegistry.registerEntityRenderingHandler(
-		// EvolvedIceBlaze.class, new RenderEvolvedIceBlaze());
-		// RenderingRegistry.registerEntityRenderingHandler(
-		// EntitySmallSnowball.class, new
-		// RenderEntitySmallSnowball(Items.snowball));
+		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGiantSpider.class, new RenderEvolvedGiantSpider());
+		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMiniEnderman.class, new RenderEvolvedMiniEnderman());
+		// RenderingRegistry.registerEntityRenderingHandler(EvolvedIceBlaze.class, new RenderEvolvedIceBlaze());
+		// RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, new RenderEntitySmallSnowball(Items.snowball));
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -198,11 +216,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "tier9rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
 		}
-		/*if (Config.eris) {
+		if (Config.eris) {
 			IModelCustom rocketModelTier10 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "tier10rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier10Rocket, new ItemRendererTier10Rocket(rocketModelTier10));
-		}*/
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -237,6 +255,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerBlockHandler(new BlockRendererTier9TreasureChest(treasureT9ChestID));
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());
 		}
+		if (Config.eris) {
+			treasureT10ChestID = RenderingRegistry.getNextAvailableRenderId();
+			RenderingRegistry.registerBlockHandler(new BlockRendererTier10TreasureChest(treasureT10ChestID));
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
+		}
 		ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(new BlockRendererMachine(renderIdMachine));
 	}
@@ -261,9 +284,9 @@ public class ClientProxy extends CommonProxy {
 		if (Config.pluto) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
 		}
-		/*if (Config.eris) {
+		if (Config.eris) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT10.png")));
-		}*/
+		}
 		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
 		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
 		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
