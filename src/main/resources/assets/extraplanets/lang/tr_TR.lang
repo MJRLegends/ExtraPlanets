@@ -660,6 +660,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossUranus.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossNeptune.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossPluto.name=Evrimleşmiş Creeper Patronu
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
