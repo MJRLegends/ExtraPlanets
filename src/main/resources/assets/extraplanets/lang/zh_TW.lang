@@ -654,6 +654,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=6階火箭
 entity.ExtraPlanets.EntityTier7Rocket.name=7階火箭
 entity.ExtraPlanets.EntityTier8Rocket.name=8階火箭
 entity.ExtraPlanets.EntityTier9Rocket.name=9階火箭
+entity.ExtraPlanets.EntityTier10Rocket.name=10階火箭
 
 entity.ExtraPlanetsCreeperBossVenus.name=金星爬行者之王(進化體)
 entity.ExtraPlanetsCreeperBossJupiter.name=木星爬行者之王(進化體)

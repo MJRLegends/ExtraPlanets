@@ -654,6 +654,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Rocket
 entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Rocket
 entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
 entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
+entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Rocket
 
 entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss Venus
 entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss Jupiter

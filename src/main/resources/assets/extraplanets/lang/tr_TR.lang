@@ -653,6 +653,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Roket
 entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Roket
 entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Roket
 entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Roket
+entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Roket
 
 entity.ExtraPlanetsCreeperBossVenus.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossJupiter.name=Evrimleşmiş Creeper Patronu

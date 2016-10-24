@@ -652,6 +652,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=Cohete nivel 6
 entity.ExtraPlanets.EntityTier7Rocket.name=Cohete nivel 7
 entity.ExtraPlanets.EntityTier8Rocket.name=Cohete nivel 8
 entity.ExtraPlanets.EntityTier9Rocket.name=Cohete nivel 9
+entity.ExtraPlanets.EntityTier10Rocket.name=Cohete nivel 10
 
 entity.ExtraPlanetsCreeperBossVenus.name=Jefe creeper evolucionado de Venus
 entity.ExtraPlanetsCreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter
@@ -659,7 +660,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Jefe creeper evolucionado de Saturno
 entity.ExtraPlanetsCreeperBossUranus.name=Jefe creeper evolucionado de Urano
 entity.ExtraPlanetsCreeperBossNeptune.name=Jefe creeper evolucionado de Neptuno
 entity.ExtraPlanetsCreeperBossPluto.name=Jefe creeper evolucionado de Pluto
-entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
+entity.ExtraPlanetsCreeperBossEris.name=Jefe creeper evolucionado de Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
