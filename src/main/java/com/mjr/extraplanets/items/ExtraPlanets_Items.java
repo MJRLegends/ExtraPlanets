@@ -331,6 +331,8 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.pluto)
 			OreDictionary.registerOre("ingotTungsten", new ItemStack(tier9Items, 1, 5));
+		if (Config.eris)
+			OreDictionary.registerOre("ingotDarkIron", new ItemStack(tier10Items, 1, 5));
 		if (Config.kepler22b){
 			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(tier11Items, 1, 0));
 			OreDictionary.registerOre("gemRedDiamond", new ItemStack(tier11Items, 1, 1));

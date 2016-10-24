@@ -101,7 +101,7 @@ public class BlockBasicKepler22b extends Block {
         {
         case 1:
             ArrayList<ItemStack> items = new ArrayList<ItemStack>();
-            items.add(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 16));
+            items.add(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 12));
             return items;
         default:
             return super.getDrops(world, x, y, z, metadata, fortune);

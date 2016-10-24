@@ -27,6 +27,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bPlanks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
@@ -60,6 +61,7 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLeaf;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleSapling;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bTallGrass;
 import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.DungeonSpawnerEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.TileEntityDungeonSpawnerEris;
@@ -182,6 +184,9 @@ public class ExtraPlanets_Blocks {
 	
 	//Flowers
 	public static Block kepler22bGrassFlowers;
+	
+	//Planks
+	public static Block kepler22bPlanks;
 
 	// -----------------------------------------------------------------------
 
@@ -379,6 +384,7 @@ public class ExtraPlanets_Blocks {
 		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22bMapleLogs");
 		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22bMapleSaplings");
 		kepler22bMapleLeaf = new BlockKepler22bMapleTreeLeaves("kepler22bMapleLeaves");
+		kepler22bPlanks = new BlockBasicKepler22bPlanks("kepler22bPlanks");
 	}
 
 	private static void registerBlocks() {
@@ -646,10 +652,6 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(kepler22bBlocks, 1, 8));
 			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(kepler22bBlocks, 1, 9));
 			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(kepler22bBlocks, 1, 10));
-			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 11));
-			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 12));
-			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 13));
-			OreDictionary.registerOre("plankWood", new ItemStack(kepler22bBlocks, 1, 14));
 			OreDictionary.registerOre("cobblestone", new ItemStack(kepler22bBlocks, 1, 16));
 		}
 	}
@@ -658,6 +660,6 @@ public class ExtraPlanets_Blocks {
 		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, kepler22bMapleLeaf.getUnlocalizedName());
-
+		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, kepler22bPlanks.getUnlocalizedName());
 	}
 }

@@ -161,7 +161,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 3), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 2), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 16), new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 1), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 12), new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 1), 0.0F);
 			
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 5), new ItemStack(Blocks.coal_block, 1, 4), 0.0F);
 
@@ -533,13 +533,13 @@ public class ExtraPlanets_Recipes {
 		
 		if (Config.kepler22b) {
 			// Stone Bricks
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 4, 15), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 1) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 4, 11), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 1) });
 			
 			//Maple Wooden Planks
-			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 4, 11), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 0) });
-			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 4, 12), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 4, 13), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 4, 14), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 4, 0), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 4, 1), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 4, 2), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 4, 3), new Object[] {new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3) });
 		}
 
 		// Diamond Apples
