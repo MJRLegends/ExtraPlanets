@@ -293,10 +293,10 @@ public class ExtraPlanets_Blocks {
 		if(Config.kepler22b){
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
-			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_Blue", "kepler22b");
-			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_Purple", "kepler22b");
-			kepler22bRedGrass = new BlockBasicGrass("kepler22b_Red", "kepler22b");
-			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_Yellow", "kepler22b");
+			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue", "kepler22b");
+			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_purple", "kepler22b");
+			kepler22bRedGrass = new BlockBasicGrass("kepler22b_red", "kepler22b");
+			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow", "kepler22b");
 			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22bFlowers");
 		}
 	}
