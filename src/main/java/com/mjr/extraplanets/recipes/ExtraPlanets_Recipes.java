@@ -638,12 +638,14 @@ public class ExtraPlanets_Recipes {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.mercurySpaceStationID, Config.mercuryID, new SpaceStationRecipe(inputMap)));
 		}
 		if (Config.venusSpaceStation && Config.venus) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
+			inputMap.put("waferAdvanced", 1);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.venusSpaceStationID, Config.venusID, new SpaceStationRecipe(inputMap)));
@@ -652,6 +654,7 @@ public class ExtraPlanets_Recipes {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.ceresSpaceStationID, Config.ceresID, new SpaceStationRecipe(inputMap)));
 		}
@@ -673,6 +676,7 @@ public class ExtraPlanets_Recipes {
 		if (Config.saturnSpaceStation && Config.saturn) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
+			inputMap.put("waferAdvanced", 1);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.saturnSpaceStationID, Config.saturnID, new SpaceStationRecipe(inputMap)));
@@ -696,6 +700,7 @@ public class ExtraPlanets_Recipes {
 		if (Config.plutoSpaceStation && Config.pluto) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
+			inputMap.put("waferAdvanced", 1);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.plutoSpaceStationID, Config.plutoID, new SpaceStationRecipe(inputMap)));
@@ -705,6 +710,7 @@ public class ExtraPlanets_Recipes {
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
 			inputMap.put(Items.iron_ingot, 24);
+			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.erisSpaceStationID, Config.erisID, new SpaceStationRecipe(inputMap)));
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b) {
