@@ -293,7 +293,7 @@ public class ExtraPlanets_Planets {
 		if(Config.kepler22b){
 			GalaxyRegistry.registerPlanet(kepler22b);
 			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22b.class, new TeleportTypeKepler22b());
-			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/kepler22bRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/kepler22bRocketGui.png"));
 		}
 	}
 }
