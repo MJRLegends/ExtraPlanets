@@ -646,13 +646,13 @@ item.cannedfood.dehydratedBeef.name=Filetes deshidratados
 #Entities
 entity.ProjectileTNT.name=Projectíl de TNT
 
-entity.ExtraPlanets.EntityTier4Rocket.name=Cohete nivel 4
-entity.ExtraPlanets.EntityTier5Rocket.name=Cohete nivel 5
-entity.ExtraPlanets.EntityTier6Rocket.name=Cohete nivel 6
-entity.ExtraPlanets.EntityTier7Rocket.name=Cohete nivel 7
-entity.ExtraPlanets.EntityTier8Rocket.name=Cohete nivel 8
-entity.ExtraPlanets.EntityTier9Rocket.name=Cohete nivel 9
-entity.ExtraPlanets.EntityTier10Rocket.name=Cohete nivel 10
+entity.ExtraPlanets.ExtraPlanetsEntityTier4Rocket.name=Cohete nivel 4
+entity.ExtraPlanets.ExtraPlanetsEntityTier5Rocket.name=Cohete nivel 5
+entity.ExtraPlanets.ExtraPlanetsEntityTier6Rocket.name=Cohete nivel 6
+entity.ExtraPlanets.ExtraPlanetsEntityTier7Rocket.name=Cohete nivel 7
+entity.ExtraPlanets.ExtraPlanetsEntityTier8Rocket.name=Cohete nivel 8
+entity.ExtraPlanets.ExtraPlanetsEntityTier9Rocket.name=Cohete nivel 9
+entity.ExtraPlanets.ExtraPlanetsEntityTier10Rocket.name=Cohete nivel 10
 
 entity.ExtraPlanetsCreeperBossVenus.name=Jefe creeper evolucionado de Venus
 entity.ExtraPlanetsCreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter

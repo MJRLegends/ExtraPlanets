@@ -648,13 +648,13 @@ item.cannedfood.dehydratedBeef.name=脱水牛肉
 #Entities
 entity.ProjectileTNT.name=飞行的TNT
 
-entity.ExtraPlanets.EntityTier4Rocket.name=4阶火箭
-entity.ExtraPlanets.EntityTier5Rocket.name=5阶火箭
-entity.ExtraPlanets.EntityTier6Rocket.name=6阶火箭
-entity.ExtraPlanets.EntityTier7Rocket.name=7阶火箭
-entity.ExtraPlanets.EntityTier8Rocket.name=8阶火箭
-entity.ExtraPlanets.EntityTier9Rocket.name=9阶火箭
-entity.ExtraPlanets.EntityTier10Rocket.name=10阶火箭
+entity.ExtraPlanets.ExtraPlanetsEntityTier4Rocket.name=4阶火箭
+entity.ExtraPlanets.ExtraPlanetsEntityTier5Rocket.name=5阶火箭
+entity.ExtraPlanets.ExtraPlanetsEntityTier6Rocket.name=6阶火箭
+entity.ExtraPlanets.ExtraPlanetsEntityTier7Rocket.name=7阶火箭
+entity.ExtraPlanets.ExtraPlanetsEntityTier8Rocket.name=8阶火箭
+entity.ExtraPlanets.ExtraPlanetsEntityTier9Rocket.name=9阶火箭
+entity.ExtraPlanets.ExtraPlanetsEntityTier10Rocket.name=10阶火箭
 
 entity.ExtraPlanetsCreeperBossVenus.name=金星爬行者之王(进化体)
 entity.ExtraPlanetsCreeperBossJupiter.name=木星爬行者之王(进化体)

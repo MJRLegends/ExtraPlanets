@@ -647,13 +647,13 @@ item.cannedfood.dehydratedBeef.name=Dehydrované hovězí
 #Entities
 entity.ProjectileTNT.name=Projectile TNT
 
-entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Rocket
-entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Rocket
-entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Rocket
-entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Rocket
-entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
-entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
-entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Rocket
+entity.ExtraPlanets.ExtraPlanetsEntityTier4Rocket.name=Tier 4 Rocket
+entity.ExtraPlanets.ExtraPlanetsEntityTier5Rocket.name=Tier 5 Rocket
+entity.ExtraPlanets.ExtraPlanetsEntityTier6Rocket.name=Tier 6 Rocket
+entity.ExtraPlanets.ExtraPlanetsEntityTier7Rocket.name=Tier 7 Rocket
+entity.ExtraPlanets.ExtraPlanetsEntityTier8Rocket.name=Tier 8 Rocket
+entity.ExtraPlanets.ExtraPlanetsEntityTier9Rocket.name=Tier 9 Rocket
+entity.ExtraPlanets.ExtraPlanetsEntityTier10Rocket.name=Tier 10 Rocket
 
 entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss z Venuše
 entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss z Jupiteru

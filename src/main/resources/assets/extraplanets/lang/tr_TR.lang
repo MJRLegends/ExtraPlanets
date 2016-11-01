@@ -647,13 +647,13 @@ item.cannedfood.dehydratedBeef.name=Susuz Biftek
 #Entities
 entity.ProjectileTNT.name=Korumacı TNT
 
-entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Roket
-entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Roket
-entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Roket
-entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Roket
-entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Roket
-entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Roket
-entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Roket
+entity.ExtraPlanets.ExtraPlanetsEntityTier4Rocket.name=Tier 4 Roket
+entity.ExtraPlanets.ExtraPlanetsEntityTier5Rocket.name=Tier 5 Roket
+entity.ExtraPlanets.ExtraPlanetsEntityTier6Rocket.name=Tier 6 Roket
+entity.ExtraPlanets.ExtraPlanetsEntityTier7Rocket.name=Tier 7 Roket
+entity.ExtraPlanets.ExtraPlanetsEntityTier8Rocket.name=Tier 8 Roket
+entity.ExtraPlanets.ExtraPlanetsEntityTier9Rocket.name=Tier 9 Roket
+entity.ExtraPlanets.ExtraPlanetsEntityTier10Rocket.name=Tier 10 Roket
 
 entity.ExtraPlanetsCreeperBossVenus.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossJupiter.name=Evrimleşmiş Creeper Patronu
