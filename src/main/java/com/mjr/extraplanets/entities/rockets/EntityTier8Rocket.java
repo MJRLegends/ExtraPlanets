@@ -223,7 +223,7 @@ public class EntityTier8Rocket extends EntityTieredRocket {
 
 	@Override
 	public int getFuelTankCapacity() {
-		return 3000;
+		return 3500;
 	}
 
 	@Override

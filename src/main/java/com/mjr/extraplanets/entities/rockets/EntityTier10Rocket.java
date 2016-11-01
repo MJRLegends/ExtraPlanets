@@ -234,7 +234,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 	@Override
 	public List<ItemStack> getItemsDropped(List<ItemStack> droppedItems) {
 		super.getItemsDropped(droppedItems);
-		ItemStack rocket = new ItemStack(ExtraPlanets_Items.tier9Rocket, 1, this.rocketType.getIndex());
+		ItemStack rocket = new ItemStack(ExtraPlanets_Items.tier10Rocket, 1, this.rocketType.getIndex());
 		rocket.setTagCompound(new NBTTagCompound());
 		rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
 		droppedItems.add(rocket);
