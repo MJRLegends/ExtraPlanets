@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.Triton;
+package com.mjr.extraplanets.moons.Renaming;
 
 import java.util.Random;
 
