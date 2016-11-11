@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.moons.Renaming;
+package com.mjr.extraplanets.moons.Triton;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;

@@ -26,12 +26,12 @@ import com.mjr.extraplanets.moons.Io.TeleportTypeIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
 import com.mjr.extraplanets.moons.Phobos.TeleportTypePhobos;
 import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
-import com.mjr.extraplanets.moons.Renaming.TeleportTypeTriton;
-import com.mjr.extraplanets.moons.Renaming.WorldProviderTriton;
 import com.mjr.extraplanets.moons.Rhea.TeleportTypeRhea;
 import com.mjr.extraplanets.moons.Rhea.WorldProviderRhea;
 import com.mjr.extraplanets.moons.Titan.TeleportTypeTitan;
 import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
+import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
+import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 public class ExtraPlanets_Moons {
