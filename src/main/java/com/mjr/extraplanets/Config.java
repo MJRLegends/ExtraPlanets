@@ -38,6 +38,7 @@ public class Config {
 	public static boolean zincItems;
 	public static boolean mercuryItems;
 	public static boolean uraniumItems;
+	public static boolean kepler22bItems;
 	
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
@@ -229,7 +230,8 @@ public class Config {
 		zincItems = config.get(items, "Zinc Tools & Armor", true).getBoolean(true);
 		mercuryItems = config.get(items, "Mercury Tools & Armor", true).getBoolean(true);
 		uraniumItems = config.get(items, "Uranium Tools & Armor", true).getBoolean(true);
-
+		kepler22bItems = config.get(items, "Kepler22b Tools & Armor", true).getBoolean(true);
+		
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
 		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);
