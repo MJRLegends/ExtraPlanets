@@ -37,6 +37,14 @@ public class ItemBlockKepler22bMapleLog extends ItemBlock {
 			name = "yellowMapleLog";
 			break;
 		}
+		case 4: {
+			name = "greenMapleLog";
+			break;
+		}
+		case 5: {
+			name = "brownMapleLog";
+			break;
+		}
 		default:
 			name = "null";
 		}
