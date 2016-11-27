@@ -12,6 +12,7 @@ import micdoodle8.mods.galacticraft.api.entity.IWorldTransferCallback;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityAutoRocket;
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
@@ -39,7 +40,7 @@ import cpw.mods.fml.common.FMLCommonHandler;
  * Do not include this prefab class in your released mod download.
  * Edited by MJRLegends to fix https://github.com/MJRLegends/ExtraPlanets/issues/44
  */
-public abstract class EntityTieredRocketCustom extends EntityAutoRocket implements IRocketType, IDockable, IInventory, IWorldTransferCallback, ICameraZoomEntity {
+public abstract class EntityTieredRocketCustom extends EntityTieredRocket {
 	public EnumRocketType rocketType;
 	public float rumble;
 	public int launchCooldown;

@@ -54,6 +54,8 @@ public class ExtraPlanets_Recipes {
 			Tier8RocketRecipes.registerRocketCraftingRecipe();
 		if (Config.pluto)
 			Tier9RocketRecipes.registerRocketCraftingRecipe();
+		if (Config.eris)
+			Tier10RocketRecipes.registerRocketCraftingRecipe();
 	}
 
 	private static void registerFurnaceRecipes() {
