@@ -83,30 +83,10 @@ public class ItemBlockKepler22b extends ItemBlock
 		}
 		case 11:
 		{
-			name = "PlankMapleBlue";
-			break;
-		}
-		case 12:
-		{
-			name = "PlankMapleRed";
-			break;
-		}
-		case 13:
-		{
-			name = "PlankMaplePurple";
-			break;
-		}
-		case 14:
-		{
-			name = "PlankMapleYellow";
-			break;
-		}
-		case 15:
-		{
 			name = "StoneBricks";
 			break;
 		}
-		case 16:
+		case 12:
 		{
 			name = "Cobblestone";
 			break;

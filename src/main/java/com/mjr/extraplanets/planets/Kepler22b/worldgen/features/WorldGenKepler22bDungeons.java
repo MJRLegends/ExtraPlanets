@@ -57,7 +57,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator
 
         if (j1 >= 1 && j1 <= 5)
         {
-            System.out.println("Generating Kepler22b Dungeon at:" + p_76484_3_+ ", " + p_76484_4_+ ", " + p_76484_5_);
+            //System.out.println("Generating Kepler22b Dungeon at:" + p_76484_3_+ ", " + p_76484_4_+ ", " + p_76484_5_);
             for (k1 = p_76484_3_ - l - 1; k1 <= p_76484_3_ + l + 1; ++k1)
             {
                 for (l1 = p_76484_4_ + b0; l1 >= p_76484_4_ - 1; --l1)

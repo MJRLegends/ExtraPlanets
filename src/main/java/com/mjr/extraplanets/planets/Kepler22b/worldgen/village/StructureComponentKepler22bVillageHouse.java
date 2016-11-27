@@ -84,108 +84,108 @@ public class StructureComponentKepler22bVillageHouse extends StructureComponentK
 		int yLevel = 0;
 
 		for (yLevel = -8; yLevel < 4; yLevel++) {
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 2, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 2, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 3, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 4, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 2, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 2, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 3, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 4, par3StructureBoundingBox);
 
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 5, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 6, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 7, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 5, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 6, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 7, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 1, yLevel, 8, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 9, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 10, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 11, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 9, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 10, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 11, par3StructureBoundingBox);
 
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 12, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 13, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 14, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 14, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 12, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 13, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 14, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 14, par3StructureBoundingBox);
 
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 15, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 15, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 15, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 15, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 15, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 15, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 8, yLevel, 15, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 15, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 15, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 15, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 15, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 15, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 15, par3StructureBoundingBox);
 
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 14, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 14, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 13, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 12, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 14, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 14, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 13, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 12, par3StructureBoundingBox);
 
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 11, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 10, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 9, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 11, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 10, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 9, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 15, yLevel, 8, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 7, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 6, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 5, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 7, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 6, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 5, par3StructureBoundingBox);
 
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 4, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 3, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 2, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 2, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 4, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 3, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 2, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 2, par3StructureBoundingBox);
 
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 1, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 1, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 1, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 1, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 1, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 1, par3StructureBoundingBox);
 			this.placeBlockAtCurrentPosition(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.kepler22bBlocks : Blocks.air, 1, 8, yLevel, 1, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 1, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 1, par3StructureBoundingBox);
-			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 1, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 1, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 1, par3StructureBoundingBox);
+			this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 1, par3StructureBoundingBox);
 		}
 
 		yLevel = 4;
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 4, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 6, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 10, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 11, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 14, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 15, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 12, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 10, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 6, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 5, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 2, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 1, par3StructureBoundingBox);
 
 		this.placeBlockAtCurrentPosition(par1World, GCBlocks.glowstoneTorch, 0, 8, yLevel, 2, par3StructureBoundingBox);
 		this.placeBlockAtCurrentPosition(par1World, GCBlocks.glowstoneTorch, 0, 14, yLevel, 8, par3StructureBoundingBox);
@@ -195,232 +195,232 @@ public class StructureComponentKepler22bVillageHouse extends StructureComponentK
 		yLevel = 5;
 
 		// corner 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 5, par3StructureBoundingBox);
 
 		// side 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 6, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 1, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 1, yLevel, 10, par3StructureBoundingBox);
 
 		// corner 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 14, par3StructureBoundingBox);
 
 		// side 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 15, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 15, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 15, par3StructureBoundingBox);
 
 		// corner 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 11, par3StructureBoundingBox);
 
 		// side 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 10, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 15, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 15, yLevel, 6, par3StructureBoundingBox);
 
 		// corner 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 2, par3StructureBoundingBox);
 
 		// side 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 1, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 1, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 1, par3StructureBoundingBox);
 
 		yLevel = 6;
 
 		// corner 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 4, par3StructureBoundingBox);
 
 		// side 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 6, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 10, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 11, par3StructureBoundingBox);
 
 		// corner 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 13, par3StructureBoundingBox);
 
 		// side 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 14, par3StructureBoundingBox);
 
 		// corner 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 12, par3StructureBoundingBox);
 
 		// side 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 10, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 6, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 5, par3StructureBoundingBox);
 
 		// corner 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 3, par3StructureBoundingBox);
 
 		// side 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 2, par3StructureBoundingBox);
 
 		yLevel = 7;
 
 		// corner 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 6, par3StructureBoundingBox);
 
 		// side 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 2, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 2, yLevel, 9, par3StructureBoundingBox);
 
 		// corner 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 10, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 13, par3StructureBoundingBox);
 
 		// side 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 14, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 14, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 14, par3StructureBoundingBox);
 
 		// corner 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 10, par3StructureBoundingBox);
 
 		// side 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 14, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 14, yLevel, 7, par3StructureBoundingBox);
 
 		// corner 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 6, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 3, par3StructureBoundingBox);
 
 		// side 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 2, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 2, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 2, par3StructureBoundingBox);
 
 		yLevel = 8;
 
 		// corner 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 6, par3StructureBoundingBox);
 
 		// side 1
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 3, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 3, yLevel, 9, par3StructureBoundingBox);
 
 		// corner 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 10, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 6, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 6, yLevel, 12, par3StructureBoundingBox);
 
 		// side 2
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 13, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 13, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 13, par3StructureBoundingBox);
 
 		// corner 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 10, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 10, par3StructureBoundingBox);
 
 		// side 3
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 9, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 13, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 13, yLevel, 7, par3StructureBoundingBox);
 
 		// corner 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 6, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 10, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 6, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 10, yLevel, 4, par3StructureBoundingBox);
 
 		// side 4
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 3, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 3, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 3, par3StructureBoundingBox);
 
 		// extras
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 5, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 5, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 11, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 11, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 5, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 5, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 11, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 11, yLevel, 5, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 4, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 4, yLevel, 9, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 12, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 12, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 12, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 9, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 8, yLevel, 4, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 7, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 9, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 8, yLevel, 4, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 7, yLevel, 4, par3StructureBoundingBox);
 
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 7, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 8, par3StructureBoundingBox);
-		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, 12, yLevel, 9, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 7, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 8, par3StructureBoundingBox);
+		this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, 12, yLevel, 9, par3StructureBoundingBox);
 
 		yLevel = 9;
 
@@ -430,7 +430,7 @@ public class StructureComponentKepler22bVillageHouse extends StructureComponentK
 					if (i >= 7 && i <= 9 && j >= 7 && j <= 9) {
 						this.placeBlockAtCurrentPosition(par1World, Blocks.glass, 0, i, yLevel, j, par3StructureBoundingBox);
 					} else {
-						this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 15, i, yLevel, j, par3StructureBoundingBox);
+						this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.kepler22bBlocks, 11, i, yLevel, j, par3StructureBoundingBox);
 					}
 				}
 			}

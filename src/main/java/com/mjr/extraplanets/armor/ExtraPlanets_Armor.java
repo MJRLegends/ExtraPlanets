@@ -23,6 +23,12 @@ public class ExtraPlanets_Armor {
 	private static ArmorMaterial whiteGem_ArmorMaterial = EnumHelper.addArmorMaterial("White_Gem_Armor", 40, new int[] { 3, 8, 6, 3 }, 7);
 	private static ArmorMaterial blueGem_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Gem_Armor", 45, new int[] { 3, 8, 6, 3 }, 7);
 
+	private static ArmorMaterial blueDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial redDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial purpleDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Purple_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial yellowDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial greenDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Green_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
+
 	public static Item carbonHelmet;
 	public static Item carbonChest;
 	public static Item carbonLegings;
@@ -77,6 +83,31 @@ public class ExtraPlanets_Armor {
 	public static Item blueGemChest;
 	public static Item blueGemLegings;
 	public static Item blueGemBoots;
+
+	public static Item blueDiamondHelmet;
+	public static Item blueDiamondChest;
+	public static Item blueDiamondLegings;
+	public static Item blueDiamondBoots;
+
+	public static Item redDiamondHelmet;
+	public static Item redDiamondChest;
+	public static Item redDiamondLegings;
+	public static Item redDiamondBoots;
+
+	public static Item purpleDiamondHelmet;
+	public static Item purpleDiamondChest;
+	public static Item purpleDiamondLegings;
+	public static Item purpleDiamondBoots;
+
+	public static Item yellowDiamondHelmet;
+	public static Item yellowDiamondChest;
+	public static Item yellowDiamondLegings;
+	public static Item yellowDiamondBoots;
+
+	public static Item greenDiamondHelmet;
+	public static Item greenDiamondChest;
+	public static Item greenDiamondLegings;
+	public static Item greenDiamondBoots;
 
 	public static void init() {
 		initializeArmor();
@@ -152,6 +183,32 @@ public class ExtraPlanets_Armor {
 			tungstenLegings = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 2).setUnlocalizedName("tungstenLegings");
 			tungstenBoots = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 3).setUnlocalizedName("tungstenBoots");
 		}
+		if (Config.kepler22b && Config.kepler22bItems) {
+			blueDiamondHelmet = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 0).setUnlocalizedName("blueDiamondHelmet");
+			blueDiamondChest = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 1).setUnlocalizedName("blueDiamondChest");
+			blueDiamondLegings = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 2).setUnlocalizedName("blueDiamondLegings");
+			blueDiamondBoots = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 3).setUnlocalizedName("blueDiamondBoots");
+
+			redDiamondHelmet = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 0).setUnlocalizedName("redDiamondHelmet");
+			redDiamondChest = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 1).setUnlocalizedName("redDiamondChest");
+			redDiamondLegings = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 2).setUnlocalizedName("redDiamondLegings");
+			redDiamondBoots = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 3).setUnlocalizedName("redDiamondBoots");
+
+			purpleDiamondHelmet = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 0).setUnlocalizedName("purpleDiamondHelmet");
+			purpleDiamondChest = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 1).setUnlocalizedName("purpleDiamondChest");
+			purpleDiamondLegings = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 2).setUnlocalizedName("purpleDiamondLegings");
+			purpleDiamondBoots = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 3).setUnlocalizedName("purpleDiamondBoots");
+
+			yellowDiamondHelmet = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 0).setUnlocalizedName("yellowDiamondHelmet");
+			yellowDiamondChest = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 1).setUnlocalizedName("yellowDiamondChest");
+			yellowDiamondLegings = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 2).setUnlocalizedName("yellowDiamondLegings");
+			yellowDiamondBoots = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 3).setUnlocalizedName("yellowDiamondBoots");
+
+			greenDiamondHelmet = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 0).setUnlocalizedName("greenDiamondHelmet");
+			greenDiamondChest = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 1).setUnlocalizedName("greenDiamondChest");
+			greenDiamondLegings = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 2).setUnlocalizedName("greenDiamondLegings");
+			greenDiamondBoots = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 3).setUnlocalizedName("greenDiamondBoots");
+		}
 	}
 
 	private static void registerArmor() {
@@ -226,6 +283,32 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(tungstenChest, "tungstenChest");
 			GameRegistry.registerItem(tungstenLegings, "tungstenLegings");
 			GameRegistry.registerItem(tungstenBoots, "tungstenBoots");
+		}
+		if (Config.kepler22b && Config.kepler22bItems) {
+			GameRegistry.registerItem(blueDiamondHelmet, "blueDiamondHelmet");
+			GameRegistry.registerItem(blueDiamondChest, "blueDiamondChest");
+			GameRegistry.registerItem(blueDiamondLegings, "blueDiamondLegings");
+			GameRegistry.registerItem(blueDiamondBoots, "blueDiamondBoots");
+
+			GameRegistry.registerItem(redDiamondHelmet, "redDiamondHelmet");
+			GameRegistry.registerItem(redDiamondChest, "redDiamondChest");
+			GameRegistry.registerItem(redDiamondLegings, "redDiamondLegings");
+			GameRegistry.registerItem(redDiamondBoots, "redDiamondBoots");
+
+			GameRegistry.registerItem(purpleDiamondHelmet, "purpleDiamondHelmet");
+			GameRegistry.registerItem(purpleDiamondChest, "purpleDiamondChest");
+			GameRegistry.registerItem(purpleDiamondLegings, "purpleDiamondLegings");
+			GameRegistry.registerItem(purpleDiamondBoots, "purpleDiamondBoots");
+
+			GameRegistry.registerItem(yellowDiamondHelmet, "yellowDiamondHelmet");
+			GameRegistry.registerItem(yellowDiamondChest, "yellowDiamondChest");
+			GameRegistry.registerItem(yellowDiamondLegings, "yellowDiamondLegings");
+			GameRegistry.registerItem(yellowDiamondBoots, "yellowDiamondBoots");
+
+			GameRegistry.registerItem(greenDiamondHelmet, "greenDiamondHelmet");
+			GameRegistry.registerItem(greenDiamondChest, "greenDiamondChest");
+			GameRegistry.registerItem(greenDiamondLegings, "greenDiamondLegings");
+			GameRegistry.registerItem(greenDiamondBoots, "greenDiamondBoots");
 		}
 	}
 }

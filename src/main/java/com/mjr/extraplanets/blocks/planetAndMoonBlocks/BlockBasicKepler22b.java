@@ -39,7 +39,7 @@ public class BlockBasicKepler22b extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcons = new IIcon[17];
+		this.blockIcons = new IIcon[13];
 		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Dirt");
 		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Stone");
 		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreIron");
@@ -51,12 +51,8 @@ public class BlockBasicKepler22b extends Block {
 		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OrePurpleDiamonds");
 		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreYellowDiamonds");
 		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreGreenDiamonds");
-		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleBlue");
-		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleRed");
-		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMaplePurple");
-		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleYellow");
-		this.blockIcons[15] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "StoneBricks");
-		this.blockIcons[16] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Cobblestone");
+		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "StoneBricks");
+		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Cobblestone");
 		this.blockIcon = this.blockIcons[0];
 	}
 
@@ -101,7 +97,7 @@ public class BlockBasicKepler22b extends Block {
         {
         case 1:
             ArrayList<ItemStack> items = new ArrayList<ItemStack>();
-            items.add(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 16));
+            items.add(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 12));
             return items;
         default:
             return super.getDrops(world, x, y, z, metadata, fortune);

@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class EntityTier9Rocket extends EntityTieredRocket {
+public class EntityTier9Rocket extends EntityTieredRocketCustom {
 	public EntityTier9Rocket(World par1World) {
 		super(par1World);
 		this.setSize(1.2F, 4.0F);
@@ -223,7 +223,7 @@ public class EntityTier9Rocket extends EntityTieredRocket {
 
 	@Override
 	public int getFuelTankCapacity() {
-		return 4500;
+		return 4000;
 	}
 
 	@Override

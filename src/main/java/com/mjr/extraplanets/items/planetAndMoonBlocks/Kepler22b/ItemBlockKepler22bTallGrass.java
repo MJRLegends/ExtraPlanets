@@ -77,6 +77,18 @@ public class ItemBlockKepler22bTallGrass extends ItemBlock {
 			name = "yellowMapleTallGrass";
 			break;
 		}
+		case 12: {
+			name = "greenMapleShortGrass";
+			break;
+		}
+		case 13: {
+			name = "greenMapleMedGrass";
+			break;
+		}
+		case 14: {
+			name = "greenMapleTallGrass";
+			break;
+		}
 		default:
 			name = "null";
 		}
