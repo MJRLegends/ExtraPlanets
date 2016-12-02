@@ -59,36 +59,32 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 		
 		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		
 		for (int i = 0; i < this.iceSpikesPerChunk; i++) {
 			if (this.rand.nextInt(20) == 0)
 			{
-				int x = this.chunkX + this.rand.nextInt(16) + 8;
-				int z = this.chunkZ + this.rand.nextInt(16) + 8;
+				int x = this.chunkX + 6;
+				int z = this.chunkZ + 6;
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenCustomIceSpike().generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.uranusBlocks);
 			}
 		}
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
-			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + this.rand.nextInt(16) + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.chunkZ + this.rand.nextInt(16) + 8;
+			if (this.rand.nextInt(30) == 0) {
+				int x = this.chunkX + 8;
+				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenCustomLake(ExtraPlanets_Fluids.frozen_water).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.uranusBlocks);
 			}
 		}
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-		if (this.rand.nextInt(250) == 1) {
-			int x = this.chunkX + this.rand.nextInt(16) + 8;
-			int z = this.chunkZ + this.rand.nextInt(16) + 8;
+		
+		if (this.rand.nextInt(100) == 1) {
+			int x = this.chunkX + 8;
+			int z = this.chunkZ + 8;
 			int y = this.currentWorld.getHeightValue(x, z);
 			new WorldGenIgloo().generate(this.currentWorld, this.rand, x, y, z);
 		}
+		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		isDecorating = false;
 	}
