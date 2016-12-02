@@ -27,7 +27,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IShearable {
 
-	private static String[] leaves = { "blue_maple", "red_maple", "purple_maple", "yellow_maple" };
+	private static String[] leaves = { "blue_maple", "red_maple", "purple_maple", "yellow_maple", "green_maple", "brown_maple" };
 	@SideOnly(Side.CLIENT)
 	private IIcon[][] leafTextures;
 	int[] field_150128_a;

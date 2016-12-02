@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockBasicKepler22bTallGrass extends BlockBush implements IShearable {
-	private static final String[] flowers = { "blueMapleShortGrass", "blueMapleMedGrass", "blueMapleTallGrass", "redMapleShortGrass", "redMapleMedGrass", "redMapleTallGrass", "purpleMapleShortGrass", "purpleMapleMedGrass", "purpleMapleTallGrass", "yellowMapleShortGrass", "yellowMapleMedGrass", "yellowMapleTallGrass"};
+	private static final String[] flowers = { "blueMapleShortGrass", "blueMapleMedGrass", "blueMapleTallGrass", "redMapleShortGrass", "redMapleMedGrass", "redMapleTallGrass", "purpleMapleShortGrass", "purpleMapleMedGrass", "purpleMapleTallGrass", "yellowMapleShortGrass", "yellowMapleMedGrass", "yellowMapleTallGrass", "greenMapleShortGrass", "greenMapleMedGrass", "greenMapleTallGrass"};
 	@SideOnly(Side.CLIENT)
 	private IIcon[] flowerTextures;
 	private String name;

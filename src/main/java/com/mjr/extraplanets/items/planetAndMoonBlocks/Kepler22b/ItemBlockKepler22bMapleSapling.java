@@ -46,6 +46,14 @@ public class ItemBlockKepler22bMapleSapling extends ItemBlock {
 			name = "yellowMapleSapling";
 			break;
 		}
+		case 4: {
+			name = "greenMapleSapling";
+			break;
+		}
+		case 5: {
+			name = "brownMapleSapling";
+			break;
+		}
 		default:
 			name = "null";
 		}
