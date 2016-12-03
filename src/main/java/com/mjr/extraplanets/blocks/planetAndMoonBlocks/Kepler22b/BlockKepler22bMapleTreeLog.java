@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
 
-	private static String[] logs = { "blue_maple", "red_maple", "purple_maple", "yellow_maple", "green_maple", "brown_maple" };
+	private final static String[] logs = { "blue_maple", "red_maple", "purple_maple", "yellow_maple", "green_maple", "brown_maple" };
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] logsTextures;
@@ -85,7 +85,7 @@ public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
 		return Item.getItemFromBlock(this);
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List blockList) {
 		for (int i = 0; i < logs.length; i++) {
