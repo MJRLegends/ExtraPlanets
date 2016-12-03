@@ -57,6 +57,8 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
+		if(meta > 5)
+			meta = meta - 8;
 		return this.leafTextures[this.field_150127_b][meta % 5];
 
 	}
