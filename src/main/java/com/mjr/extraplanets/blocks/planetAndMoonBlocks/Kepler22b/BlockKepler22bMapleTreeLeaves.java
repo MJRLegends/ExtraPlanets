@@ -57,7 +57,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
-		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.leafTextures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.leafTextures[this.field_150127_b][2] : this.leafTextures[this.field_150127_b][0]));
+		return this.leafTextures[this.field_150127_b][meta % 5];
 
 	}
 
@@ -76,7 +76,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 
 	@Override
 	public int damageDropped(int meta) {
-		return meta & 3;
+		return meta & 5;
 	}
 
 	@Override
@@ -143,7 +143,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List listLeaves) {
 		for (int i = 0; i < leaves.length; i++) {
-			listLeaves.add(new ItemStack(this, 1, i));
+			listLeaves.add(new ItemStack(item, 1, i));
 		}
 	}
 

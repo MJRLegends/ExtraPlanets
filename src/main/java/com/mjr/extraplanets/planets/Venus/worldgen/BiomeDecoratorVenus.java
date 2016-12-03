@@ -59,7 +59,9 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 		this.generateOre(20, this.carbonGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(30, this.volcanicRockGen, 0, 256);
+		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
 				int x = this.chunkX + this.rand.nextInt(16) + 8;
@@ -69,15 +71,14 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.venusBlocks);
 			}
 		}
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-		
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+
 		if (this.rand.nextInt(20) == 1) {
 			int x = this.chunkX;
 			int z = this.chunkZ;
 			int y = this.currentWorld.getHeightValue(x, z) - 3;
 			new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y, z);
 		}
+		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		isDecorating = false;
 	}
