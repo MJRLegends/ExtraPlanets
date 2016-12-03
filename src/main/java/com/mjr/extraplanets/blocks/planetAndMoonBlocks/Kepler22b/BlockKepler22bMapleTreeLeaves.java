@@ -60,7 +60,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
 		if (meta > 5)
 			meta = meta - 8;
-		return this.leafTextures[this.field_150127_b][meta % 5];
+		return this.leafTextures[this.field_150127_b][meta % 6];
 
 	}
 
@@ -79,7 +79,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 
 	@Override
 	public int damageDropped(int meta) {
-		return meta & 5;
+		return meta & 6;
 	}
 
 	@Override
