@@ -4,8 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockKepler22bMapleLog extends ItemBlock {
-	public ItemBlockKepler22bMapleLog(Block block) {
+public class ItemBlockKepler22bMapleLog2 extends ItemBlock {
+	public ItemBlockKepler22bMapleLog2(Block block) {
 		super(block);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -24,22 +24,12 @@ public class ItemBlockKepler22bMapleLog extends ItemBlock {
 		case 0:
 		case 4:
 		case 8:
-			name = "blueMapleLog";
+			name = "greenMapleLog";
 			break;
 		case 1:
 		case 5:
 		case 9:
-			name = "redMapleLog";
-			break;
-		case 2:
-		case 6:
-		case 10:
-			name = "purpleMapleLog";
-			break;
-		case 3:
-		case 7:
-		case 11:
-			name = "yellowMapleLog";
+			name = "brownMapleLog";
 			break;
 		default:
 			name = "null";

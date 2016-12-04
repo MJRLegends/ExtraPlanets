@@ -21,9 +21,9 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
+public class BlockKepler22bMapleTreeLog2 extends BlockRotatedPillar {
 
-	private final static String[] logs = { "blue_maple", "red_maple", "purple_maple", "yellow_maple"};
+	private final static String[] logs = { "green_maple", "brown_maple" };
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] logsTextures;
@@ -32,7 +32,7 @@ public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
 
 	private String name;
 
-	public BlockKepler22bMapleTreeLog(String name) {
+	public BlockKepler22bMapleTreeLog2(String name) {
 		super(Material.wood);
 		this.setHardness(1.5F);
 		this.setHarvestLevel("axe", 0);
@@ -121,4 +121,5 @@ public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
 			}
 		}
 	}
+	
 }
