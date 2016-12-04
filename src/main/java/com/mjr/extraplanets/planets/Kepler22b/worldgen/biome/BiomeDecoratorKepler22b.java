@@ -26,7 +26,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	public int yellowTreesPerChunk;
 	public int greenTreesPerChunk;
 	public int brownTreesPerChunk;
-	
+
 	public int blueShortGrassPerChunk;
 	public int blueMedGrassPerChunk;
 	public int blueTallGrassPerChunk;
@@ -116,23 +116,27 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.greenTreesPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			if (rand.nextInt(5) + 1 == 1) {
+				int x = this.chunk_X + this.rand.nextInt(16) + 8;
+				int z = this.chunk_Z + this.rand.nextInt(16) + 8;
 
-			WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 0, 4, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf);
-			tree3.setScale(1.0D, 1.0D, 1.0D);
-			tree3.generate(currentWorld, rand, x, this.currentWorld.getHeightValue(x, z), z);
+				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 0, 4, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				tree3.setScale(1.0D, 1.0D, 1.0D);
+				tree3.generate(currentWorld, rand, x, this.currentWorld.getHeightValue(x, z), z);
+			}
 		}
-		
+
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.brownTreesPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			if (rand.nextInt(5) + 1 == 1) {
+				int x = this.chunk_X + this.rand.nextInt(16) + 8;
+				int z = this.chunk_Z + this.rand.nextInt(16) + 8;
 
-			WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 1, 5, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf);
-			tree3.setScale(1.0D, 1.0D, 1.0D);
-			tree3.generate(currentWorld, rand, x, this.currentWorld.getHeightValue(x, z), z);
+				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 1, 5, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				tree3.setScale(1.0D, 1.0D, 1.0D);
+				tree3.generate(currentWorld, rand, x, this.currentWorld.getHeightValue(x, z), z);
+			}
 		}
-		
+
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.blueShortGrassPerChunk); i++) {
 			int x = this.chunk_X + this.rand.nextInt(16) + 8;
 			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
