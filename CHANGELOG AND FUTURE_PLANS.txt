@@ -28,13 +28,16 @@ v1.0 Pre-4(Not Released yet) - More yet to be added!
 *Added Multi Biome System to Ceres TODO
 *Added Salt Sea Biome to Uranus TODO
 
-v1.0 Pre-3.8(Not Released yet) - More yet to be added!
+v1.0 Pre-3.9(Not Released yet) - More yet to be added!
 *Added Evolved Fire Skeleton Boss (Entity) TODO
 *Added Evolved Fire Skeleton Boss to Jupiter Dungeon TODO
 *Changed Tier 2 Thermal Padding to protect you from uranium ore TODO
 *Added Space Crops(Wheat, Carrots, Potato's) They will have different saturation and that levels from the vanilla ones TODO 
 *Added Space Crops Seeds TODO
 *Added Can of Golden Apple (Notch and normal), Can of Diamond Apple (Notch and normal), Can of Iron Apple (Notch and normal) TODO
+
+v1.0 Pre-3.9(Not Released yet) - More yet to be added!
+*Added Basic, Advanced, Ultimate Hideouts containing loot depending on tier level (with mob spawners?) TODO
 *Added Loot Treasure Rooms with spawner's some loot chests to each planet, with the Stone brick version for that planet TODO
 
 ===========================================Released Updates===========================================

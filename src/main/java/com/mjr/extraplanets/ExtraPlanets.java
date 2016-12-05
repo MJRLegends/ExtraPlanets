@@ -245,8 +245,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For
-		// SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
