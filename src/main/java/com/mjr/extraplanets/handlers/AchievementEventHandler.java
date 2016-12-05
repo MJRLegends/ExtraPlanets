@@ -6,6 +6,7 @@ import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets_Achievements;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
@@ -96,6 +97,8 @@ public class AchievementEventHandler {
 				player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
 			} else if (event.entity instanceof EntityCreeperBossPluto) {
 				player.addStat(ExtraPlanets_Achievements.plutoBoss, 1);
+			} else if (event.entity instanceof EntityCreeperBossEris) {
+				player.addStat(ExtraPlanets_Achievements.erisBoss, 1);
 			}
 		}
 	}
@@ -114,6 +117,8 @@ public class AchievementEventHandler {
 			event.entityPlayer.addStat(ExtraPlanets_Achievements.craftRocket8, 1);
 		else if (event.item.getEntityItem().getItem() == ExtraPlanets_Items.tier9Rocket)
 			event.entityPlayer.addStat(ExtraPlanets_Achievements.craftRocket9, 1);
+		else if (event.item.getEntityItem().getItem() == ExtraPlanets_Items.tier10Rocket)
+			event.entityPlayer.addStat(ExtraPlanets_Achievements.craftRocket10, 1);
 	}
 
 	@SubscribeEvent
