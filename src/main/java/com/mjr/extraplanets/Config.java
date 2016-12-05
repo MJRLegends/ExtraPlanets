@@ -158,7 +158,6 @@ public class Config {
 	public static int titanBiomeID;
 	
 	public static int kepler22bPlainsBiomeID;
-	public static int kepler22bSeaBiomeID;
 	public static int kepler22bBlueForestBiomeID;
 	public static int kepler22bPurpleForestBiomeID;
 	public static int kepler22bRedForestBiomeID;
@@ -371,7 +370,6 @@ public class Config {
 		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 164).getInt();
 		titanBiomeID = config.get(biomeID, "Titan Biome ID", 165).getInt();
 		kepler22bPlainsBiomeID = config.get(biomeID, "Kepler22b Plains Biome ID", 166).getInt();
-		kepler22bSeaBiomeID = config.get(biomeID, "Kepler22b Sea Biome ID", 167).getInt();
 		kepler22bBlueForestBiomeID = config.get(biomeID, "Kepler22b Blue Maple Forest Biome ID", 168).getInt();
 		kepler22bPurpleForestBiomeID = config.get(biomeID, "Kepler22b Purple Maple Forest Biome ID", 169).getInt();
 		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
