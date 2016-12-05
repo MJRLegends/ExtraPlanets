@@ -39,6 +39,9 @@ v1.0 Pre-3.9(Not Released yet) - More yet to be added!
 v1.0 Pre-3.9(Not Released yet) - More yet to be added!
 *Added Basic, Advanced, Ultimate Hideouts containing loot depending on tier level (with mob spawners?) TODO
 *Added Loot Treasure Rooms with spawner's some loot chests to each planet, with the Stone brick version for that planet TODO
+*Added more blocks to the MicroBlocks support
+*Added the ability to use Kepler22b Planks for Sticks and Wooden Buttons, Pressure Plates, Doors, Signs recipes
+*Added some more Achievements
 
 ===========================================Released Updates===========================================
 v1.0 Pre-3.7.6
