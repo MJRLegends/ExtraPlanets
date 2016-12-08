@@ -23,13 +23,9 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class ChunkProviderPluto extends ChunkProviderSpace {
 	private final BiomeDecoratorPluto plutoBiomeDecorator = new BiomeDecoratorPluto();
 
-	// private final MapGenCavernMars caveGenerator = new MapGenCavernMars();
-	// private final MapGenCaveMars cavernGenerator = new MapGenCaveMars();
-	//
-	// private final MapGenDungeon dungeonGenerator = new MapGenDungeonMars(new
-	// DungeonConfiguration(MarsBlocks.plutoBlock.getDefaultState().withProperty(BlockBasicMars.BASIC_TYPE,
-	// BlockBasicMars.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,
-	// RoomBossMars.class, RoomTreasureMars.class));
+	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
+	
+	// private final MapGenDungeon dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(PlutoBlocks.plutoBlock.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE,BlockBasicPluto.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,RoomBossPluto.class, RoomTreasurePluto.class));
 
 	public ChunkProviderPluto(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -53,8 +49,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		// generators.add(this.caveGenerator);
-		// generators.add(this.cavernGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

@@ -23,13 +23,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class ChunkProviderCeres extends ChunkProviderSpace {
 	private final BiomeDecoratorCeres ceresBiomeDecorator = new BiomeDecoratorCeres();
 
-	// private final MapGenCavernMars caveGenerator = new MapGenCavernMars();
-	// private final MapGenCaveMars cavernGenerator = new MapGenCaveMars();
-	//
-	// private final MapGenDungeon dungeonGenerator = new MapGenDungeonMars(new
-	// DungeonConfiguration(MarsBlocks.ceresBlock.getDefaultState().withProperty(BlockBasicMars.BASIC_TYPE,
-	// BlockBasicMars.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,
-	// RoomBossMars.class, RoomTreasureMars.class));
+	 private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
 
 	public ChunkProviderCeres(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -53,8 +47,7 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		// generators.add(this.caveGenerator);
-		// generators.add(this.cavernGenerator);
+		 generators.add(this.caveGenerator);
 		return generators;
 	}
 
@@ -115,17 +108,13 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		// this.dungeonGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-		// this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new
-		// ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-		// this.dungeonGenerator.generate(this, this.worldObj, x, z, null);
 	}
 }
