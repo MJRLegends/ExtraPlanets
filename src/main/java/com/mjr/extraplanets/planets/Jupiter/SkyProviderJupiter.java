@@ -22,13 +22,6 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-/**
- * SkyProviderMars.java
- * <p>
- * This file is part of the Galacticraft project
- *
- * @author micdoodle8
- */
 public class SkyProviderJupiter extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/earth.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
