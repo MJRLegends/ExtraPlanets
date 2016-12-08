@@ -35,6 +35,6 @@ public class ItemBlockKepler22bMapleLog2 extends ItemBlock {
 			name = "null";
 		}
 
-		return this.field_150939_a.getUnlocalizedName() + "." + name;
+		return this.block.getUnlocalizedName() + "." + name;
 	}
 }

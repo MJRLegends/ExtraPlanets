@@ -8,16 +8,14 @@ import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Venus.worldgen.ChunkProviderVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.WorldChunkManagerVenus;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
-public class WorldProviderVenus extends WorldProviderSpace implements
-IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderVenus extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -67,13 +65,11 @@ IGalacticraftWorldProvider, ISolarLevel {
 		float f1 = this.worldObj.getCelestialAngle(par1);
 		float f2 = 1.0F - (MathHelper.cos(f1 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
 
-		if (f2 < 0.0F)
-		{
+		if (f2 < 0.0F) {
 			f2 = 0.0F;
 		}
 
-		if (f2 > 1.0F)
-		{
+		if (f2 > 1.0F) {
 			f2 = 1.0F;
 		}
 
@@ -156,5 +152,15 @@ IGalacticraftWorldProvider, ISolarLevel {
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 10.0D;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "_venus";
+	}
+
+	@Override
+	public String getDimensionName() {
+		return "Venus";
 	}
 }

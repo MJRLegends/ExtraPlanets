@@ -7,13 +7,12 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeGenJupiter;
 
-public class ErisBiomes extends BiomeGenBase  {
+public class ErisBiomes extends BiomeGenBase {
 
 	public static final BiomeGenBase eris = new BiomeGenJupiter(Config.erisBiomeID).setBiomeName("eris");
 
 	@SuppressWarnings("unchecked")
-	ErisBiomes(int var1)
-	{
+	ErisBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -24,14 +23,12 @@ public class ErisBiomes extends BiomeGenBase  {
 	}
 
 	@Override
-	public ErisBiomes setColor(int var1)
-	{
+	public ErisBiomes setColor(int var1) {
 		return (ErisBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

@@ -73,6 +73,6 @@ public class ItemBlockKepler22bMapleLeaf extends ItemBlock {
 			name = "null";
 		}
 
-		return this.field_150939_a.getUnlocalizedName() + "." + name;
+		return this.block.getUnlocalizedName() + "." + name;
 	}
 }

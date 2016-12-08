@@ -11,8 +11,7 @@ public class JupiterBiomes extends BiomeGenBase {
 	public static final BiomeGenBase jupiter = new BiomeGenJupiter(Config.jupiterBiomeID).setBiomeName("jupiter");
 
 	@SuppressWarnings("unchecked")
-	JupiterBiomes(int var1)
-	{
+	JupiterBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class JupiterBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public JupiterBiomes setColor(int var1)
-	{
+	public JupiterBiomes setColor(int var1) {
 		return (JupiterBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

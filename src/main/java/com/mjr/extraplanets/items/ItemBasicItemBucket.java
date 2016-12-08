@@ -7,12 +7,10 @@ import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemBasicItemBucket extends ItemBucket {
 	public ItemBasicItemBucket(String name, Block block) {
@@ -20,7 +18,6 @@ public class ItemBasicItemBucket extends ItemBucket {
 		setMaxStackSize(1);
 		setUnlocalizedName(name);
 		setContainerItem(Items.bucket);
-		setTextureName(Constants.TEXTURE_PREFIX + name);
 	}
 
 	@SideOnly(Side.CLIENT)

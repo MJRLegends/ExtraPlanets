@@ -13,19 +13,6 @@ public class MagnesiumArmor extends ItemArmor{
 	public MagnesiumArmor(String name, ArmorMaterial material, int placement) {
 		super(material, 0, placement);
 		setCreativeTab(ExtraPlanets.ArmorTab);
-
-		if(placement == 0){
-			this.setTextureName(Constants.TEXTURE_PREFIX + name + "_helmet");
-		}
-		else if(placement == 1){
-			this.setTextureName(Constants.TEXTURE_PREFIX + name + "_chestplate");
-		}
-		else if(placement == 2){
-			this.setTextureName(Constants.TEXTURE_PREFIX + name + "_leggings");
-		}
-		else if(placement == 3){
-			this.setTextureName(Constants.TEXTURE_PREFIX + name + "_boots");
-		}
 		this.name = name;
 	}
 	@Override

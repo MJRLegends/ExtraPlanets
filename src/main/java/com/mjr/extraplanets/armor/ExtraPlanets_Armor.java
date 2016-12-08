@@ -3,31 +3,30 @@ package com.mjr.extraplanets.armor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-
 public class ExtraPlanets_Armor {
-	private static ArmorMaterial carbon_ArmorMaterial = EnumHelper.addArmorMaterial("Carbon_Armor", 26, new int[] { 3, 8, 6, 3 }, 15);
-	private static ArmorMaterial palladium_ArmorMaterial = EnumHelper.addArmorMaterial("Palladium_Armor", 26, new int[] { 3, 8, 6, 3 }, 13);
-	private static ArmorMaterial magnesium_ArmorMaterial = EnumHelper.addArmorMaterial("Magnesium_Armor", 30, new int[] { 3, 8, 6, 3 }, 11);
-	private static ArmorMaterial crystal_ArmorMaterial = EnumHelper.addArmorMaterial("Crystal_Armor", 40, new int[] { 3, 8, 6, 3 }, 10);
+	private static ArmorMaterial carbon_ArmorMaterial = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15);
+	private static ArmorMaterial palladium_ArmorMaterial = EnumHelper.addArmorMaterial("Palladium_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 13);
+	private static ArmorMaterial magnesium_ArmorMaterial = EnumHelper.addArmorMaterial("Magnesium_Armor", "Test", 30, new int[] { 3, 8, 6, 3 }, 11);
+	private static ArmorMaterial crystal_ArmorMaterial = EnumHelper.addArmorMaterial("Crystal_Armor", "Test", 40, new int[] { 3, 8, 6, 3 }, 10);
 
-	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", 15, new int[] { 3, 8, 6, 3 }, 13);
-	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", 20, new int[] { 3, 8, 6, 3 }, 13);
-	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", 45, new int[] { 3, 8, 6, 3 }, 9);
-	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Tungsten_Armor", 50, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", "Test", 15, new int[] { 3, 8, 6, 3 }, 13);
+	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", "Test", 20, new int[] { 3, 8, 6, 3 }, 13);
+	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", "Test", 45, new int[] { 3, 8, 6, 3 }, 9);
+	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Tungsten_Armor", "Test", 50, new int[] { 3, 8, 6, 3 }, 7);
 
-	private static ArmorMaterial redGem_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Gem_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial whiteGem_ArmorMaterial = EnumHelper.addArmorMaterial("White_Gem_Armor", 40, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial blueGem_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Gem_Armor", 45, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial redGem_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Gem_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial whiteGem_ArmorMaterial = EnumHelper.addArmorMaterial("White_Gem_Armor", "Test", 40, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial blueGem_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Gem_Armor", "Test", 45, new int[] { 3, 8, 6, 3 }, 7);
 
-	private static ArmorMaterial blueDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial redDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial purpleDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Purple_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial yellowDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial greenDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Green_Diamond_Armor", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial blueDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial redDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial purpleDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Purple_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial yellowDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial greenDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Green_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
 
 	public static Item carbonHelmet;
 	public static Item carbonChest;

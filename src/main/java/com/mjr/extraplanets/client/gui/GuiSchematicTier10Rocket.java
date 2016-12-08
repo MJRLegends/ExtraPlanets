@@ -5,7 +5,9 @@ import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -13,13 +15,13 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.ContainerSchematicTier10Rocket;
 
-public class GuiSchematicTier10Rocket extends GuiContainerGC implements ISchematicResultPage {
+public class GuiSchematicTier10Rocket extends GuiContainer implements ISchematicResultPage {
 	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbenchTier10.png");
 
 	private int pageIndex;
 
-	public GuiSchematicTier10Rocket(InventoryPlayer par1InventoryPlayer, int x, int y, int z) {
-		super(new ContainerSchematicTier10Rocket(par1InventoryPlayer, x, y, z));
+    public GuiSchematicTier10Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos){
+		super(new ContainerSchematicTier10Rocket(par1InventoryPlayer, pos));
 		this.ySize = 238;
 	}
 

@@ -11,8 +11,7 @@ public class MercuryBiomes extends BiomeGenBase {
 	public static final BiomeGenBase mercury = new BiomeGenMercury(Config.mercuryBiomeID).setBiomeName("mercury");
 
 	@SuppressWarnings("unchecked")
-	MercuryBiomes(int var1)
-	{
+	MercuryBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class MercuryBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public MercuryBiomes setColor(int var1)
-	{
+	public MercuryBiomes setColor(int var1) {
 		return (MercuryBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

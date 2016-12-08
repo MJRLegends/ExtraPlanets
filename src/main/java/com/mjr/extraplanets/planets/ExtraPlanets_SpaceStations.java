@@ -1,15 +1,10 @@
 package com.mjr.extraplanets.planets;
 
-import java.util.HashMap;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
-import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
-import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Config;
@@ -19,8 +14,6 @@ import com.mjr.extraplanets.planets.Eris.spacestation.TeleportTypeErisOrbit;
 import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.TeleportTypeJupiterOrbit;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
-import com.mjr.extraplanets.planets.Kepler22b.spacestation.TeleportTypeKepler22bOrbit;
-import com.mjr.extraplanets.planets.Kepler22b.spacestation.WorldProviderKepler22bOrbit;
 import com.mjr.extraplanets.planets.Mercury.spacestation.TeleportTypeMercuryOrbit;
 import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;
 import com.mjr.extraplanets.planets.Neptune.spacestation.TeleportTypeNeptuneOrbit;
@@ -147,13 +140,13 @@ public class ExtraPlanets_SpaceStations {
 			erisSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b) {
-			kepler22bSpaceStation = new Satellite("spaceStation.kepler22b").setParentBody(ExtraPlanets_Planets.kepler22b);
-			kepler22bSpaceStation.setRelativeSize(0.2667F);
-			kepler22bSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			kepler22bSpaceStation.setRelativeOrbitTime(20.0F);
-			kepler22bSpaceStation.setTierRequired(ExtraPlanets_Planets.kepler22b.getTierRequirement());
-			kepler22bSpaceStation.setDimensionInfo(Config.kepler22bSpaceStationID, Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class);
-			kepler22bSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+//			kepler22bSpaceStation = new Satellite("spaceStation.kepler22b").setParentBody(ExtraPlanets_Planets.kepler22b);
+//			kepler22bSpaceStation.setRelativeSize(0.2667F);
+//			kepler22bSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+//			kepler22bSpaceStation.setRelativeOrbitTime(20.0F);
+//			kepler22bSpaceStation.setTierRequired(ExtraPlanets_Planets.kepler22b.getTierRequirement());
+//			kepler22bSpaceStation.setDimensionInfo(Config.kepler22bSpaceStationID, Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class);
+//			kepler22bSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
 	}
 
@@ -219,10 +212,10 @@ public class ExtraPlanets_SpaceStations {
 			GalacticraftRegistry.registerProvider(Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true, 0);
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b) {
-			GalaxyRegistry.registerSatellite(kepler22bSpaceStation);
-			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22bOrbit.class, new TeleportTypeKepler22bOrbit());
-			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationID, WorldProviderKepler22bOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class, true, 0);
+//			GalaxyRegistry.registerSatellite(kepler22bSpaceStation);
+//			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22bOrbit.class, new TeleportTypeKepler22bOrbit());
+//			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationID, WorldProviderKepler22bOrbit.class, false, 0);
+//			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class, true, 0);
 		}
 	}
 }

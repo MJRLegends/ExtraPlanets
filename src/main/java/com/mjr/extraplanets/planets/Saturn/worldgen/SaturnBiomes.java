@@ -11,8 +11,7 @@ public class SaturnBiomes extends BiomeGenBase {
 	public static final BiomeGenBase saturn = new BiomeGenSaturn(Config.saturnBiomeID).setBiomeName("saturn");
 
 	@SuppressWarnings("unchecked")
-	SaturnBiomes(int var1)
-	{
+	SaturnBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class SaturnBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public SaturnBiomes setColor(int var1)
-	{
+	public SaturnBiomes setColor(int var1) {
 		return (SaturnBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

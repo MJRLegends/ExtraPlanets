@@ -7,13 +7,12 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeGenJupiter;
 
-public class PlutoBiomes extends BiomeGenBase  {
+public class PlutoBiomes extends BiomeGenBase {
 
 	public static final BiomeGenBase pluto = new BiomeGenJupiter(Config.plutoBiomeID).setBiomeName("pluto");
 
 	@SuppressWarnings("unchecked")
-	PlutoBiomes(int var1)
-	{
+	PlutoBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -24,14 +23,12 @@ public class PlutoBiomes extends BiomeGenBase  {
 	}
 
 	@Override
-	public PlutoBiomes setColor(int var1)
-	{
+	public PlutoBiomes setColor(int var1) {
 		return (PlutoBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

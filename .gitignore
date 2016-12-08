@@ -22,4 +22,8 @@ ExtraPlanets Server Test/
 *.schematic
 *.rar
 asm/
+Galacticraft Source/
 run/
+*.launch
+build/
+*.zip

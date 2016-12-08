@@ -17,11 +17,10 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 	private WorldGenerator fossilsGen;
 
 	private World currentWorld;
-	
+
 	private boolean isDecorating = false;
 
-	public BiomeDecoratorMercury()
-	{
+	public BiomeDecoratorMercury() {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 5, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 4, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 8, 3, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
@@ -29,7 +28,8 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryGravel, 12, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 1);
 
-		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
+		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -44,7 +44,8 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		if (isDecorating) return;
+		if (isDecorating)
+			return;
 		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
@@ -54,7 +55,8 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
 		isDecorating = false;
-		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
+		// minY, int maxY);
 	}
 
 }

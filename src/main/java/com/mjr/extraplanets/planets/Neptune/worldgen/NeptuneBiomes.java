@@ -7,13 +7,12 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeGenJupiter;
 
-public class NeptuneBiomes extends BiomeGenBase  {
+public class NeptuneBiomes extends BiomeGenBase {
 
 	public static final BiomeGenBase neptune = new BiomeGenJupiter(Config.neptuneBiomeID).setBiomeName("neptune");
 
 	@SuppressWarnings("unchecked")
-	NeptuneBiomes(int var1)
-	{
+	NeptuneBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -24,14 +23,12 @@ public class NeptuneBiomes extends BiomeGenBase  {
 	}
 
 	@Override
-	public NeptuneBiomes setColor(int var1)
-	{
+	public NeptuneBiomes setColor(int var1) {
 		return (NeptuneBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

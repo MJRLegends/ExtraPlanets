@@ -11,12 +11,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemAppleIron extends ItemFood
 {
@@ -26,7 +24,6 @@ public class ItemAppleIron extends ItemFood
 		this.setHasSubtypes(true);
 		this.setAlwaysEdible();
 		this.setUnlocalizedName("appleIron");
-		this.setTextureName(Constants.TEXTURE_PREFIX + "apple_Iron");
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -43,7 +40,7 @@ public class ItemAppleIron extends ItemFood
 	@Override
 	public EnumRarity getRarity(ItemStack p_77613_1_)
 	{
-		return p_77613_1_.getItemDamage() == 0 ? EnumRarity.rare : EnumRarity.epic;
+		return p_77613_1_.getItemDamage() == 0 ? EnumRarity.RARE : EnumRarity.EPIC;
 	}
 
 	@Override

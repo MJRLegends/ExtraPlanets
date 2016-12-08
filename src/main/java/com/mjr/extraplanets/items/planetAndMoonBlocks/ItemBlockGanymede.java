@@ -49,11 +49,11 @@ public class ItemBlockGanymede extends ItemBlock {
 			name = "null";
 		}
 
-		return this.field_150939_a.getUnlocalizedName() + "." + name;
+		return this.block.getUnlocalizedName() + "." + name;
 	}
 
 	@Override
 	public String getUnlocalizedName() {
-		return this.field_150939_a.getUnlocalizedName() + ".0";
+		return this.block.getUnlocalizedName() + ".0";
 	}
 }

@@ -1,174 +1,172 @@
 package com.mjr.extraplanets.blocks;
 
-import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyBool;
+import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
-import net.minecraft.util.IIcon;
+import net.minecraft.item.Item;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+public class BlockNuclearBomb extends Block
+{
+    public static final PropertyBool EXPLODE = PropertyBool.create("explode");
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+    public BlockNuclearBomb()
+    {
+        super(Material.tnt);
+        this.setDefaultState(this.blockState.getBaseState().withProperty(EXPLODE, Boolean.valueOf(false)));
+        this.setCreativeTab(CreativeTabs.tabRedstone);
+    }
 
-public class BlockNuclearBomb extends Block{
-	@SideOnly(Side.CLIENT)
-	private IIcon field_150116_a;
-	@SideOnly(Side.CLIENT)
-	private IIcon field_150115_b;
+    @Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+    {
+        super.onBlockAdded(worldIn, pos, state);
 
-	public BlockNuclearBomb()
-	{
-		super(Material.tnt);
-		this.setCreativeTab(ExtraPlanets.BlocksTab);
-		this.setBlockName("nuclearBomb");
-	}
+        if (worldIn.isBlockPowered(pos))
+        {
+            this.onBlockDestroyedByPlayer(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)));
+            worldIn.setBlockToAir(pos);
+        }
+    }
 
-	/**
-	 * Gets the block's texture. Args: side, meta
-	 */
-	@Override
-	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int p_149691_1_, int p_149691_2_)
-	{
-		return p_149691_1_ == 0 ? this.field_150115_b : (p_149691_1_ == 1 ? this.field_150116_a : this.blockIcon);
-	}
+    /**
+     * Called when a neighboring block changes.
+     */
+    @Override
+	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
+    {
+        if (worldIn.isBlockPowered(pos))
+        {
+            this.onBlockDestroyedByPlayer(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)));
+            worldIn.setBlockToAir(pos);
+        }
+    }
 
-	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
-	 */
-	@Override
-	public void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
-	{
-		super.onBlockAdded(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_);
+    /**
+     * Called when this Block is destroyed by an Explosion
+     */
+    @Override
+	public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn)
+    {
+        if (!worldIn.isRemote)
+        {
+            EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(worldIn, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, explosionIn.getExplosivePlacedBy());
+            entitytntprimed.fuse = worldIn.rand.nextInt(entitytntprimed.fuse / 4) + entitytntprimed.fuse / 8;
+            worldIn.spawnEntityInWorld(entitytntprimed);
+        }
+    }
 
-		if (p_149726_1_.isBlockIndirectlyGettingPowered(p_149726_2_, p_149726_3_, p_149726_4_))
-		{
-			this.onBlockDestroyedByPlayer(p_149726_1_, p_149726_2_, p_149726_3_, p_149726_4_, 1);
-			p_149726_1_.setBlockToAir(p_149726_2_, p_149726_3_, p_149726_4_);
-		}
-	}
+    /**
+     * Called when a player destroys this Block
+     */
+    @Override
+	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state)
+    {
+        this.explode(worldIn, pos, state, (EntityLivingBase)null);
+    }
 
-	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
-	 * their own) Args: x, y, z, neighbor Block
-	 */
-	@Override
-	public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
-	{
-		if (p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_, p_149695_4_))
-		{
-			this.onBlockDestroyedByPlayer(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_, 1);
-			p_149695_1_.setBlockToAir(p_149695_2_, p_149695_3_, p_149695_4_);
-		}
-	}
+    public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter)
+    {
+        if (!worldIn.isRemote)
+        {
+            if (state.getValue(EXPLODE).booleanValue())
+            {
+                EntityTNTPrimed entitytntprimed = new EntityTNTPrimed(worldIn, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, igniter);
+                worldIn.spawnEntityInWorld(entitytntprimed);
+                worldIn.playSoundAtEntity(entitytntprimed, "game.tnt.primed", 1.0F, 1.0F);
+            }
+        }
+    }
 
-	/**
-	 * Returns the quantity of items to drop on block destruction.
-	 */
-	@Override
-	public int quantityDropped(Random p_149745_1_)
-	{
-		return 1;
-	}
+    @Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+    {
+        if (playerIn.getCurrentEquippedItem() != null)
+        {
+            Item item = playerIn.getCurrentEquippedItem().getItem();
 
-	/**
-	 * Called upon the block being destroyed by an explosion
-	 */
-	@Override
-	public void onBlockDestroyedByExplosion(World p_149723_1_, int p_149723_2_, int p_149723_3_, int p_149723_4_, Explosion p_149723_5_)
-	{
-		if (!p_149723_1_.isRemote)
-		{
-			EntityNuclearBombPrimed entitynuclearBombprimed = new EntityNuclearBombPrimed(p_149723_1_, p_149723_2_ + 0.5F, p_149723_3_ + 0.5F, p_149723_4_ + 0.5F, p_149723_5_.getExplosivePlacedBy());
-			entitynuclearBombprimed.fuse = p_149723_1_.rand.nextInt(entitynuclearBombprimed.fuse / 4) + entitynuclearBombprimed.fuse / 8;
-			p_149723_1_.spawnEntityInWorld(entitynuclearBombprimed);
-		}
-	}
+            if (item == Items.flint_and_steel || item == Items.fire_charge)
+            {
+                this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
+                worldIn.setBlockToAir(pos);
 
-	/**
-	 * Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
-	 */
-	@Override
-	public void onBlockDestroyedByPlayer(World p_149664_1_, int p_149664_2_, int p_149664_3_, int p_149664_4_, int p_149664_5_)
-	{
-		this.primeTnt(p_149664_1_, p_149664_2_, p_149664_3_, p_149664_4_, p_149664_5_, (EntityLivingBase)null);
-	}
+                if (item == Items.flint_and_steel)
+                {
+                    playerIn.getCurrentEquippedItem().damageItem(1, playerIn);
+                }
+                else if (!playerIn.capabilities.isCreativeMode)
+                {
+                    --playerIn.getCurrentEquippedItem().stackSize;
+                }
 
-	public void primeTnt(World p_150114_1_, int p_150114_2_, int p_150114_3_, int p_150114_4_, int p_150114_5_, EntityLivingBase p_150114_6_)
-	{
-		if (!p_150114_1_.isRemote)
-		{
-			if ((p_150114_5_ & 1) == 1)
-			{
-				EntityNuclearBombPrimed entitynuclearBombprimed = new EntityNuclearBombPrimed(p_150114_1_, p_150114_2_ + 0.5F, p_150114_3_ + 0.5F, p_150114_4_ + 0.5F, p_150114_6_);
-				p_150114_1_.spawnEntityInWorld(entitynuclearBombprimed);
-				p_150114_1_.playSoundAtEntity(entitynuclearBombprimed, "game.tnt.primed", 1.0F, 1.0F);
-			}
-		}
-	}
+                return true;
+            }
+        }
 
-	/**
-	 * Called upon block activation (right click on the block.)
-	 */
-	@Override
-	public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
-	{
-		if (p_149727_5_.getCurrentEquippedItem() != null && p_149727_5_.getCurrentEquippedItem().getItem() == Items.flint_and_steel)
-		{
-			this.primeTnt(p_149727_1_, p_149727_2_, p_149727_3_, p_149727_4_, 1, p_149727_5_);
-			p_149727_1_.setBlockToAir(p_149727_2_, p_149727_3_, p_149727_4_);
-			p_149727_5_.getCurrentEquippedItem().damageItem(1, p_149727_5_);
-			return true;
-		}
-		else
-		{
-			return super.onBlockActivated(p_149727_1_, p_149727_2_, p_149727_3_, p_149727_4_, p_149727_5_, p_149727_6_, p_149727_7_, p_149727_8_, p_149727_9_);
-		}
-	}
+        return super.onBlockActivated(worldIn, pos, state, playerIn, side, hitX, hitY, hitZ);
+    }
 
-	/**
-	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
-	 */
-	@Override
-	public void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
-	{
-		if (p_149670_5_ instanceof EntityArrow && !p_149670_1_.isRemote)
-		{
-			EntityArrow entityarrow = (EntityArrow)p_149670_5_;
+    /**
+     * Called When an Entity Collided with the Block
+     */
+    @Override
+	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
+    {
+        if (!worldIn.isRemote && entityIn instanceof EntityArrow)
+        {
+            EntityArrow entityarrow = (EntityArrow)entityIn;
 
-			if (entityarrow.isBurning())
-			{
-				this.primeTnt(p_149670_1_, p_149670_2_, p_149670_3_, p_149670_4_, 1, entityarrow.shootingEntity instanceof EntityLivingBase ? (EntityLivingBase)entityarrow.shootingEntity : null);
-				p_149670_1_.setBlockToAir(p_149670_2_, p_149670_3_, p_149670_4_);
-			}
-		}
-	}
+            if (entityarrow.isBurning())
+            {
+                this.explode(worldIn, pos, worldIn.getBlockState(pos).withProperty(EXPLODE, Boolean.valueOf(true)), entityarrow.shootingEntity instanceof EntityLivingBase ? (EntityLivingBase)entityarrow.shootingEntity : null);
+                worldIn.setBlockToAir(pos);
+            }
+        }
+    }
 
-	/**
-	 * Return whether this block can drop from an explosion.
-	 */
-	@Override
-	public boolean canDropFromExplosion(Explosion p_149659_1_)
-	{
-		return false;
-	}
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister p_149651_1_)
-	{
-		this.blockIcon = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + "nuclearBomb" + "_side");
-		this.field_150116_a = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + "nuclearBomb" + "_top");
-		this.field_150115_b = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + "nuclearBomb" + "_bottom");
-	}
+    /**
+     * Return whether this block can drop from an explosion.
+     */
+    @Override
+	public boolean canDropFromExplosion(Explosion explosionIn)
+    {
+        return false;
+    }
+
+    /**
+     * Convert the given metadata into a BlockState for this Block
+     */
+    @Override
+	public IBlockState getStateFromMeta(int meta)
+    {
+        return this.getDefaultState().withProperty(EXPLODE, Boolean.valueOf((meta & 1) > 0));
+    }
+
+    /**
+     * Convert the BlockState into the correct metadata value
+     */
+    @Override
+	public int getMetaFromState(IBlockState state)
+    {
+        return state.getValue(EXPLODE).booleanValue() ? 1 : 0;
+    }
+
+    @Override
+	protected BlockState createBlockState()
+    {
+        return new BlockState(this, new IProperty[] {EXPLODE});
+    }
 }

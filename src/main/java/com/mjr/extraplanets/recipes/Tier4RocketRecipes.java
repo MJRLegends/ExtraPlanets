@@ -3,15 +3,11 @@ package com.mjr.extraplanets.recipes;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
-import java.util.Map.Entry;
 
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
-import micdoodle8.mods.galacticraft.core.nei.NEIGalacticraftConfig;
 import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import codechicken.nei.PositionedStack;
 
 import com.mjr.extraplanets.inventory.InventorySchematicTier4Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
