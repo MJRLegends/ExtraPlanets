@@ -58,7 +58,6 @@ public class ExtraPlanets_Planets {
 	public static Planet kepler69c;
 
 	public static void init() {
-		System.out.println("YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
 		initializePlanets();
 		registerPlanets();
 	}
