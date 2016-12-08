@@ -31,6 +31,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog2;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
@@ -60,6 +61,7 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLeaf;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog2;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bTallGrass;
@@ -175,6 +177,7 @@ public class ExtraPlanets_Blocks {
 	
 	//Logs
 	public static Block kepler22bMapleLog;
+	public static Block kepler22bMapleLog2;
 
 	//Saplings
 	public static Block kepler22bMapleSapling;
@@ -382,6 +385,7 @@ public class ExtraPlanets_Blocks {
 	
 	private static void initializeTreeBlocks() {
 		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22bMapleLogs");
+		kepler22bMapleLog2 = new BlockKepler22bMapleTreeLog2("kepler22bMapleLogs2");
 		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22bMapleSaplings");
 		kepler22bMapleLeaf = new BlockKepler22bMapleTreeLeaves("kepler22bMapleLeaves");
 		kepler22bPlanks = new BlockBasicKepler22bPlanks("kepler22bPlanks");
@@ -658,6 +662,7 @@ public class ExtraPlanets_Blocks {
 	
 	private static void registerTreeBlocks() {
 		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName());
+		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, kepler22bMapleLeaf.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, kepler22bPlanks.getUnlocalizedName());

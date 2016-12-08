@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class EntityTier7Rocket extends EntityTieredRocketCustom {
+public class EntityTier7Rocket extends EntityTieredRocket {
 	public EntityTier7Rocket(World par1World) {
 		super(par1World);
 		this.setSize(1.2F, 4.0F);
@@ -70,7 +70,6 @@ public class EntityTier7Rocket extends EntityTieredRocketCustom {
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-
 		int i;
 
 		if (this.timeUntilLaunch >= 100) {

@@ -2,9 +2,9 @@ package com.mjr.extraplanets.blocks;
 
 import java.lang.reflect.Method;
 
-import com.mjr.extraplanets.Config;
-
 import net.minecraft.block.Block;
+
+import com.mjr.extraplanets.Config;
 
 public class ExtraPlanets_MicroBlocks {
 
@@ -84,9 +84,36 @@ public class ExtraPlanets_MicroBlocks {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 0), "tile.eris.surface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 1), "tile.eris.subSurface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 2), "tile.eris.stone");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisDungeonBrick, 0), "tile.erisDungeonBrick");
+				}
+				if (Config.kepler22b) {
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 0), "tile.eris.surface");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 1), "tile.eris.subSurface");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 2), "tile.eris.stone");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bBlocks, 0), "tile.kepler22b.Dirt");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bBlocks, 1), "tile.kepler22b.Stone");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bBlocks, 12), "tile.kepler22b.Cobblestone");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bGrass, 0), "tile.kepler22bGrass");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bBlueGrass, 0), "tile.kepler22b_blueGrass");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bPurpleGrass, 0), "tile.kepler22b_purpleGrass");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bRedGrass, 0), "tile.kepler22b_redGrass");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bYellowGrass, 0), "tile.kepler22b_yellowGrass");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bPlanks, 0), "tile.kepler22bPlanks.PlankMapleBlue");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bPlanks, 1), "tile.kepler22bPlanks.PlankMapleRed");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bPlanks, 2), "tile.kepler22bPlanks.PlankMaplePurple");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bPlanks, 3), "tile.kepler22bPlanks.PlankMapleYellow");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bPlanks, 4), "tile.kepler22bPlanks.PlankMapleGreen");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bPlanks, 5), "tile.kepler22bPlanks.PlankMapleBrown");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bMapleLog, 0), "tile.kepler22bMapleLogs.blueMapleLog");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bMapleLog, 1), "tile.kepler22bMapleLogs.redleLog");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bMapleLog, 2), "tile.kepler22bMapleLogs.purpleMapleLog");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bMapleLog, 3), "tile.kepler22bMapleLogs.yellowMapleLog");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bMapleLog2, 0), "tile.kepler22bMapleLogs2.greenMapleLog");
+					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.kepler22bMapleLog2, 1), "tile.kepler22bMapleLogs2.brownMapleLog");
 				}
 			}
 		} catch (Exception e) {
+			
 		}
 	}
 }

@@ -21,7 +21,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 
-	private static String[] saplings = { "blue_maple", "red_maple", "purple_maple", "yellow_maple", "green_maple", "brown_maple" };
+	private final static String[] saplings = { "blue_maple", "red_maple", "purple_maple", "yellow_maple", "green_maple", "brown_maple" };
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] saplingsTextures;
 	private String name;
@@ -55,6 +56,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 		return par1World.getBlock(par2, par3, par4) == this && (par1World.getBlockMetadata(par2, par3, par4) & 3) == par5;
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List listSaplings) {
 		for (int i = 0; i < saplings.length; i++) {
@@ -89,7 +91,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 			}
 		}
 	}
-	
+
 	@Override
 	public void updateTick(World world, int x, int y, int z, Random par1Random) {
 		if (!world.isRemote) {

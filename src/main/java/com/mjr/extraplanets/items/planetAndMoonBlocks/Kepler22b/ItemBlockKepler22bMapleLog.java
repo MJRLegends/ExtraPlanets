@@ -21,30 +21,26 @@ public class ItemBlockKepler22bMapleLog extends ItemBlock {
 		String name = "";
 
 		switch (itemstack.getItemDamage()) {
-		case 0: {
+		case 0:
+		case 4:
+		case 8:
 			name = "blueMapleLog";
 			break;
-		}
-		case 1: {
+		case 1:
+		case 5:
+		case 9:
 			name = "redMapleLog";
 			break;
-		}
-		case 2: {
+		case 2:
+		case 6:
+		case 10:
 			name = "purpleMapleLog";
 			break;
-		}
-		case 3: {
+		case 3:
+		case 7:
+		case 11:
 			name = "yellowMapleLog";
 			break;
-		}
-		case 4: {
-			name = "greenMapleLog";
-			break;
-		}
-		case 5: {
-			name = "brownMapleLog";
-			break;
-		}
 		default:
 			name = "null";
 		}

@@ -27,7 +27,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IShearable {
 
-	private static String[] leaves = { "blue_maple", "red_maple", "purple_maple", "yellow_maple", "green_maple", "brown_maple" };
+	private final static String[] leaves = { "blue_maple", "red_maple", "purple_maple", "yellow_maple", "green_maple", "brown_maple" };
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[][] leafTextures;
 	int[] field_150128_a;
@@ -57,7 +58,9 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
-		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.leafTextures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.leafTextures[this.field_150127_b][2] : this.leafTextures[this.field_150127_b][0]));
+		if (meta > 5)
+			meta = meta - 8;
+		return this.leafTextures[this.field_150127_b][meta % 6];
 
 	}
 
@@ -76,7 +79,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 
 	@Override
 	public int damageDropped(int meta) {
-		return meta & 3;
+		return meta & 6;
 	}
 
 	@Override
@@ -140,10 +143,11 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		return j;
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List listLeaves) {
 		for (int i = 0; i < leaves.length; i++) {
-			listLeaves.add(new ItemStack(this, 1, i));
+			listLeaves.add(new ItemStack(item, 1, i));
 		}
 	}
 
