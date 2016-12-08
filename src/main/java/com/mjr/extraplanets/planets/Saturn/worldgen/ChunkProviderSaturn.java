@@ -11,7 +11,6 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
-import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
@@ -19,15 +18,16 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class ChunkProviderSaturn extends ChunkProviderSpace {
-	private final BiomeDecoratorSaturn marsBiomeDecorator = new BiomeDecoratorSaturn();
+	private final BiomeDecoratorSaturn saturnBiomeDecorator = new BiomeDecoratorSaturn();
 
 	// private final MapGenCavernMars caveGenerator = new MapGenCavernMars();
 	// private final MapGenCaveMars cavernGenerator = new MapGenCaveMars();
 	//
 	// private final MapGenDungeon dungeonGenerator = new MapGenDungeonMars(new
-	// DungeonConfiguration(MarsBlocks.marsBlock.getDefaultState().withProperty(BlockBasicMars.BASIC_TYPE,
+	// DungeonConfiguration(MarsBlocks.saturnBlock.getDefaultState().withProperty(BlockBasicMars.BASIC_TYPE,
 	// BlockBasicMars.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,
 	// RoomBossMars.class, RoomTreasureMars.class));
 
@@ -37,7 +37,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 
 	@Override
 	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.marsBiomeDecorator;
+		return this.saturnBiomeDecorator;
 	}
 
 	@Override
@@ -75,17 +75,17 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(MarsBlocks.marsBlock, (byte) 5);
+		return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(MarsBlocks.marsBlock, (byte) 6);
+		return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(MarsBlocks.marsBlock, (byte) 9);
+		return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks, (byte) 2);
 	}
 
 	@Override
