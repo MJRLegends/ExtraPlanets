@@ -36,6 +36,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicSaturn extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeSaturn", EnumBlockBasic.class);
@@ -77,6 +78,7 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 	public BlockBasicSaturn(String assetName) {
 		super(Material.rock);
 		this.setUnlocalizedName(assetName);
+        this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@Override

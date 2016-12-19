@@ -20,17 +20,17 @@ public class ExtraPlanets_SolarSystems {
 
 	private static void initializeSolarSystems() {
 		if (Config.keplerSolarSystems) {
-			kepler22 = new SolarSystem("kepler22", "milkyWay").setMapPosition(new Vector3(90.0F, 30.0F, 0.0F));
+			kepler22 = new SolarSystem("kepler22", "milkyWay").setMapPosition(new Vector3(90.0F, 0.0F, 30.0F));
 			Star starSol = (Star) new Star("kepler22").setParentSolarSystem(kepler22).setTierRequired(-1);
 			starSol.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler22.setMainStar(starSol);
 
-			kepler47 = new SolarSystem("kepler47", "milkyWay").setMapPosition(new Vector3(-40.0F, -120.0F, 0.0F));
+			kepler47 = new SolarSystem("kepler47", "milkyWay").setMapPosition(new Vector3(-40.0F, 0.0F, -120.0F));
 			Star starSol2 = (Star) new Star("kepler47").setParentSolarSystem(kepler47).setTierRequired(-1);
 			starSol2.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler47.setMainStar(starSol2);
 
-			kepler62 = new SolarSystem("kepler62", "milkyWay").setMapPosition(new Vector3(90.0F, -90.0F, 0.0F));
+			kepler62 = new SolarSystem("kepler62", "milkyWay").setMapPosition(new Vector3(90.0F, 0.0F, -90.0F));
 			Star starSol3 = (Star) new Star("kepler62").setParentSolarSystem(kepler62).setTierRequired(-1);
 			starSol3.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler62.setMainStar(starSol3);

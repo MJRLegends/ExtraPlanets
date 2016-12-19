@@ -6,11 +6,8 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -35,11 +32,12 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicCallisto extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock
 {
     public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeCallisto", EnumBlockBasic.class);
-
+    
     public enum EnumBlockBasic implements IStringSerializable
     {
         SURFACE(0, "callisto_surface"),
@@ -79,6 +77,7 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
     {
         super(Material.rock);
         this.setUnlocalizedName(assetName);
+        this.setCreativeTab(ExtraPlanets.BlocksTab);
     }
 
     @Override

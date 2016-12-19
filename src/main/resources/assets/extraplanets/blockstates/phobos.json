@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictypephobos=phobos_surface": { "model": "extraplanets:phobos_surface_model" },
+        "basictypephobos=phobos_sub_surface": { "model": "extraplanets:phobos_sub_surface_model" },
+        "basictypephobos=phobos_stone": { "model": "extraplanets:phobos_stone_model" },
+        "basictypephobos=phobos_ore_iron": { "model": "extraplanets:phobos_ore_iron_model" },
+        "basictypephobos=phobos_ore_tin": { "model": "extraplanets:phobos_ore_tin_model" },
+        "basictypephobos=phobos_ore_copper": { "model": "extraplanets:phobos_ore_copper_model" }
+    }
+}

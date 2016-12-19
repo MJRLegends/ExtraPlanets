@@ -36,6 +36,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicJupiter extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeJupiter", EnumBlockBasic.class);
@@ -79,6 +80,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	public BlockBasicJupiter(String assetName) {
 		super(Material.rock);
 		this.setUnlocalizedName(assetName);
+        this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@Override

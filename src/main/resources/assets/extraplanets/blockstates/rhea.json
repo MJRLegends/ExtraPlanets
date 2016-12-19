@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictyperhea=rhea_surface": { "model": "extraplanets:rhea_surface_model" },
+        "basictyperhea=rhea_sub_surface": { "model": "extraplanets:rhea_sub_surface_model" },
+        "basictyperhea=rhea_stone": { "model": "extraplanets:rhea_stone_model" },
+        "basictyperhea=rhea_ore_iron": { "model": "extraplanets:rhea_ore_iron_model" },
+        "basictyperhea=rhea_ore_tin": { "model": "extraplanets:rhea_ore_tin_model" },
+        "basictyperhea=rhea_ore_copper": { "model": "extraplanets:rhea_ore_copper_model" }
+    }
+}

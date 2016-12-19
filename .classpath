@@ -71,5 +71,6 @@
 	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/GalacticraftCore-1.8.9-4.0.0.38-BETA.jar" sourcepath="Galacticraft-master new.zip"/>
 	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/Galacticraft-Planets-1.8.9-4.0.0.38-BETA.jar"/>
 	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/MicdoodleCore-1.8.9-4.0.0.38-BETA.jar"/>
+	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/Waila-1.6.0-B3_1.8.8-dev.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -35,6 +35,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicRhea extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock
 {
@@ -79,6 +80,7 @@ public class BlockBasicRhea extends Block implements IDetectableResource, IPlant
     {
         super(Material.rock);
         this.setUnlocalizedName(assetName);
+        this.setCreativeTab(ExtraPlanets.BlocksTab);
     }
 
     @Override

@@ -5,6 +5,9 @@ import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -17,9 +20,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -115,18 +120,20 @@ public class ExtraPlanets {
 		Config.load();
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
-		// ExtraPlanets_Tools.init();
+		//ExtraPlanets_Tools.init();
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
 		// Proxy PreInit Method
 		ExtraPlanets.proxy.preInit(event);
+		
 	}
+	
+	
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For
-		// SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
@@ -134,8 +141,24 @@ public class ExtraPlanets {
 
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
-	}
 
+		if(event.getSide() == Side.CLIENT)
+			registerBlockRenderers();
+		
+	}
+	
+	public static void registerBlockJson(String texturePrefix, Block block, int meta, String name)
+    {
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(texturePrefix + name, "inventory"));
+    }
+	
+	private void registerBlockRenderers() {
+		for (BlockBasicCallisto.EnumBlockBasic blockBasic : BlockBasicCallisto.EnumBlockBasic.values())
+        {
+            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.callistoBlocks, blockBasic.getMeta(), blockBasic.getName());
+        }
+	}
+	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
@@ -175,61 +198,41 @@ public class ExtraPlanets {
 	}
 
 	private void registerCreatures() {
-		// // Dungeon Bosses
-		// if (Config.venus)
-		// if (Config.useDefaultBosses)
-		// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,
-		// "CreeperBossVenus", 894731, 0);
-		// else
-		// registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class,
-		// Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
-		// if (Config.jupiter)
-		// registerExtraPlanetsCreature(EntityCreeperBossJupiter.class,
-		// Constants.modName + "CreeperBossJupiter", 894731, 0);
-		// if (Config.saturn)
-		// registerExtraPlanetsCreature(EntityCreeperBossSaturn.class,
-		// Constants.modName + "CreeperBossSaturn", 894731, 0);
-		// if (Config.uranus)
-		// if (Config.useDefaultBosses)
-		// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,
-		// "CreeperBossUranus", 894731, 0);
-		// else
-		// registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class,
-		// Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
-		// if (Config.neptune)
-		// registerExtraPlanetsCreature(EntityCreeperBossNeptune.class,
-		// Constants.modName + "CreeperBossNeptune", 894731, 0);
-		// if (Config.pluto)
-		// registerExtraPlanetsCreature(EntityCreeperBossPluto.class,
-		// Constants.modName + "CreeperBossPluto", 894731, 0);
-		// if (Config.eris)
-		// registerExtraPlanetsCreature(EntityCreeperBossEris.class,
-		// Constants.modName + "CreeperBossEris", 894731, 0);
-		//
-		// // Entities
-		// registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class,
-		// Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
-		// registerExtraPlanetsCreature(EntityEvolvedIceSlime.class,
-		// Constants.modName + "EvolvedIceSlime", 16382457, 44975);
-		// //
-		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,"EvolvedIceBlaze",3407872,
-		// // 16579584);
-		// registerExtraPlanetsCreature(EntityEvolvedWitch.class,
-		// Constants.modName + "EvolvedWitch", 3407872, 5349438);
-		// registerExtraPlanetsCreature(EntityEvolvedEnderman.class,
-		// Constants.modName + "EvolvedEnderman", 1447446, 0);
-		// registerExtraPlanetsCreature(EntityEvolvedBlaze.class,
-		// Constants.modName + "EvolvedBlaze", 16167425, 16775294);
-		// registerExtraPlanetsCreature(EntityBlueCreeper.class,
-		// Constants.modName + "EvolvedBlueCreeper", 44975, 0);
-		// registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class,
-		// Constants.modName + "EvolvedRedCreeper", 11013646, 0);
-		// registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class,
-		// Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
-		// registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class,
-		// Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
-		// registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class,
-		// Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
+//		 // Dungeon Bosses
+//		 if (Config.venus)
+//		 	if (Config.useDefaultBosses)
+//				registerExtraPlanetsCreature(EntityCreeperBossVenus.class,"CreeperBossVenus", 894731, 0);
+//		 	else
+//				registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class,Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+//		 if (Config.jupiter)
+//			 registerExtraPlanetsCreature(EntityCreeperBossJupiter.class,Constants.modName + "CreeperBossJupiter", 894731, 0);
+//		 if (Config.saturn)
+//			 registerExtraPlanetsCreature(EntityCreeperBossSaturn.class,Constants.modName + "CreeperBossSaturn", 894731, 0);
+//		 if (Config.uranus)
+//			if (Config.useDefaultBosses)
+//		 		registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus", 894731, 0);
+//		 	else
+//		 		registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class,Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
+//		 if (Config.neptune)
+//		 	registerExtraPlanetsCreature(EntityCreeperBossNeptune.class,Constants.modName + "CreeperBossNeptune", 894731, 0);
+//		 if (Config.pluto)
+//		 	registerExtraPlanetsCreature(EntityCreeperBossPluto.class,Constants.modName + "CreeperBossPluto", 894731, 0);
+//		 if (Config.eris)
+//		 	registerExtraPlanetsCreature(EntityCreeperBossEris.class,Constants.modName + "CreeperBossEris", 894731, 0);
+
+//		 // Entities
+//		 registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class,Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
+//		 registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
+
+//		 registerExtraPlanetsCreature(EvolvedIceBlaze.class,"EvolvedIceBlaze",3407872, 16579584);
+//		 registerExtraPlanetsCreature(EntityEvolvedWitch.class,Constants.modName + "EvolvedWitch", 3407872, 5349438);
+//		 registerExtraPlanetsCreature(EntityEvolvedEnderman.class,Constants.modName + "EvolvedEnderman", 1447446, 0);
+//		 registerExtraPlanetsCreature(EntityEvolvedBlaze.class,Constants.modName + "EvolvedBlaze", 16167425, 16775294);
+//		 registerExtraPlanetsCreature(EntityBlueCreeper.class,Constants.modName + "EvolvedBlueCreeper", 44975, 0);
+//		 registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class,Constants.modName + "EvolvedRedCreeper", 11013646, 0);
+//		 registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class,Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
+//		 registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class,Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
+//		 registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class,Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
 	}
 
 	private void registerSchematicsRecipes() {
