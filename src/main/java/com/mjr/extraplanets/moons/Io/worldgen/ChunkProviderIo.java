@@ -53,17 +53,17 @@ public class ChunkProviderIo extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.ceresBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ioBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.ceresBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ioBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.ceresBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ioBlocks, (byte) 2);
 	}
 
 	@Override
