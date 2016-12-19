@@ -2,7 +2,8 @@ package com.mjr.extraplanets;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.items.GCItems;
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -27,7 +28,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.proxy.CommonProxy;
@@ -52,7 +53,8 @@ public class ExtraPlanets {
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
 		@Override
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(ExtraPlanets_Blocks.denseIce);
+			// return Item.getItemFromBlock(ExtraPlanets_Blocks.denseIce);
+			return Item.getItemFromBlock(GCBlocks.basicBlock);
 		}
 	};
 
@@ -60,20 +62,20 @@ public class ExtraPlanets {
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
 		public Item getTabIconItem() {
-//			if (Config.venus)
-//				return ExtraPlanets_Items.tier4Rocket;
-//			else if (Config.jupiter)
-//				return ExtraPlanets_Items.tier5Rocket;
-//			else if (Config.saturn)
-//				return ExtraPlanets_Items.tier6Rocket;
-//			else if (Config.uranus)
-//				return ExtraPlanets_Items.tier7Rocket;
-//			else if (Config.neptune)
-//				return ExtraPlanets_Items.tier8Rocket;
-//			else if (Config.pluto)
-//				return ExtraPlanets_Items.tier9Rocket;
-//			else if (Config.eris)
-//				return ExtraPlanets_Items.tier10Rocket;
+			// if (Config.venus)
+			// return ExtraPlanets_Items.tier4Rocket;
+			// else if (Config.jupiter)
+			// return ExtraPlanets_Items.tier5Rocket;
+			// else if (Config.saturn)
+			// return ExtraPlanets_Items.tier6Rocket;
+			// else if (Config.uranus)
+			// return ExtraPlanets_Items.tier7Rocket;
+			// else if (Config.neptune)
+			// return ExtraPlanets_Items.tier8Rocket;
+			// else if (Config.pluto)
+			// return ExtraPlanets_Items.tier9Rocket;
+			// else if (Config.eris)
+			// return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
 	};
@@ -81,14 +83,14 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.venus)
-				return ExtraPlanets_Tools.carbonPickaxe;
-			else if (Config.jupiter)
-				return ExtraPlanets_Tools.palladiumPickaxe;
-			else if (Config.saturn)
-				return ExtraPlanets_Tools.magnesiumPickaxe;
-			else if (Config.uranus)
-				return ExtraPlanets_Tools.crystalPickaxe;
+			// if (Config.venus)
+			// return ExtraPlanets_Tools.carbonPickaxe;
+			// else if (Config.jupiter)
+			// return ExtraPlanets_Tools.palladiumPickaxe;
+			// else if (Config.saturn)
+			// return ExtraPlanets_Tools.magnesiumPickaxe;
+			// else if (Config.uranus)
+			// return ExtraPlanets_Tools.crystalPickaxe;
 			return GCItems.steelPickaxe;
 		}
 	};
@@ -96,14 +98,14 @@ public class ExtraPlanets {
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.venus)
-				return ExtraPlanets_Armor.carbonChest;
-			else if (Config.jupiter)
-				return ExtraPlanets_Armor.palladiumChest;
-			else if (Config.saturn)
-				return ExtraPlanets_Armor.magnesiumChest;
-			else if (Config.uranus)
-				return ExtraPlanets_Armor.crystalChest;
+			// if (Config.venus)
+			// return ExtraPlanets_Armor.carbonChest;
+			// else if (Config.jupiter)
+			// return ExtraPlanets_Armor.palladiumChest;
+			// else if (Config.saturn)
+			// return ExtraPlanets_Armor.magnesiumChest;
+			// else if (Config.uranus)
+			// return ExtraPlanets_Armor.crystalChest;
 			return GCItems.steelChestplate;
 		}
 	};
@@ -123,10 +125,11 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For
+		// SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
-		// ExtraPlanets_Moons.init();
+		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
 
 		// Proxy Init Method
@@ -153,7 +156,8 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		//registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		// registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class,
+		// Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		if (Config.venus)
 			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 		if (Config.jupiter)
@@ -171,41 +175,61 @@ public class ExtraPlanets {
 	}
 
 	private void registerCreatures() {
-//		// Dungeon Bosses
-//		if (Config.venus)
-//			if (Config.useDefaultBosses)
-//				registerExtraPlanetsCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
-//			else
-//				registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
-//		if (Config.jupiter)
-//			registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
-//		if (Config.saturn)
-//			registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
-//		if (Config.uranus)
-//			if (Config.useDefaultBosses)
-//				registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
-//			else
-//				registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
-//		if (Config.neptune)
-//			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
-//		if (Config.pluto)
-//			registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
-//		if (Config.eris)
-//			registerExtraPlanetsCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
-//
-//		// Entities
-//		registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
-//		registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
-//		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,"EvolvedIceBlaze",3407872,
-//		// 16579584);
-//		registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.modName + "EvolvedWitch", 3407872, 5349438);
-//		registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.modName + "EvolvedEnderman", 1447446, 0);
-//		registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.modName + "EvolvedBlaze", 16167425, 16775294);
-//		registerExtraPlanetsCreature(EntityBlueCreeper.class, Constants.modName + "EvolvedBlueCreeper", 44975, 0);
-//		registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, Constants.modName + "EvolvedRedCreeper", 11013646, 0);
-//		registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
-//		registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class, Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
-//		registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class, Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
+		// // Dungeon Bosses
+		// if (Config.venus)
+		// if (Config.useDefaultBosses)
+		// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,
+		// "CreeperBossVenus", 894731, 0);
+		// else
+		// registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class,
+		// Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+		// if (Config.jupiter)
+		// registerExtraPlanetsCreature(EntityCreeperBossJupiter.class,
+		// Constants.modName + "CreeperBossJupiter", 894731, 0);
+		// if (Config.saturn)
+		// registerExtraPlanetsCreature(EntityCreeperBossSaturn.class,
+		// Constants.modName + "CreeperBossSaturn", 894731, 0);
+		// if (Config.uranus)
+		// if (Config.useDefaultBosses)
+		// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,
+		// "CreeperBossUranus", 894731, 0);
+		// else
+		// registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class,
+		// Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
+		// if (Config.neptune)
+		// registerExtraPlanetsCreature(EntityCreeperBossNeptune.class,
+		// Constants.modName + "CreeperBossNeptune", 894731, 0);
+		// if (Config.pluto)
+		// registerExtraPlanetsCreature(EntityCreeperBossPluto.class,
+		// Constants.modName + "CreeperBossPluto", 894731, 0);
+		// if (Config.eris)
+		// registerExtraPlanetsCreature(EntityCreeperBossEris.class,
+		// Constants.modName + "CreeperBossEris", 894731, 0);
+		//
+		// // Entities
+		// registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class,
+		// Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
+		// registerExtraPlanetsCreature(EntityEvolvedIceSlime.class,
+		// Constants.modName + "EvolvedIceSlime", 16382457, 44975);
+		// //
+		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,"EvolvedIceBlaze",3407872,
+		// // 16579584);
+		// registerExtraPlanetsCreature(EntityEvolvedWitch.class,
+		// Constants.modName + "EvolvedWitch", 3407872, 5349438);
+		// registerExtraPlanetsCreature(EntityEvolvedEnderman.class,
+		// Constants.modName + "EvolvedEnderman", 1447446, 0);
+		// registerExtraPlanetsCreature(EntityEvolvedBlaze.class,
+		// Constants.modName + "EvolvedBlaze", 16167425, 16775294);
+		// registerExtraPlanetsCreature(EntityBlueCreeper.class,
+		// Constants.modName + "EvolvedBlueCreeper", 44975, 0);
+		// registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class,
+		// Constants.modName + "EvolvedRedCreeper", 11013646, 0);
+		// registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class,
+		// Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
+		// registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class,
+		// Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
+		// registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class,
+		// Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
 	}
 
 	private void registerSchematicsRecipes() {
@@ -249,4 +273,5 @@ public class ExtraPlanets {
 	public void registerExtraPlanetsCreature(Class<? extends Entity> var0, String var1, int back, int fore) {
 		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, 80, 3, true);
 	}
+
 }

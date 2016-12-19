@@ -4,8 +4,9 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
+import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
+import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
@@ -92,7 +93,7 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 				worldIn.spawnEntityInWorld(spaceship);
 
 				if (stack.hasTagCompound() && stack.getTagCompound().hasKey("RocketFuel")) {
-					spaceship.fuelTank.fill(new FluidStack(GalacticraftCore.fluidFuel, stack.getTagCompound().getInteger("RocketFuel")), true);
+					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, stack.getTagCompound().getInteger("RocketFuel")), true);
 				}
 
 				if (!playerIn.capabilities.isCreativeMode) {
@@ -104,7 +105,7 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 				}
 
 				if (spaceship.rocketType.getPreFueled()) {
-					spaceship.fuelTank.fill(new FluidStack(GalacticraftCore.fluidFuel, 2000), true);
+					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, 2000), true);
 				}
 			} else {
 				return false;

@@ -2,7 +2,7 @@ package com.mjr.extraplanets.planets.mars.spacestation;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
+import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.world.gen.BiomeGenBaseOrbit;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenSpaceStation;

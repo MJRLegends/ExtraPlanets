@@ -50,22 +50,7 @@ public class ChunkProviderTitan extends ChunkProviderSpace {
 		 generators.add(this.caveGenerator);
 		return generators;
 	}
-
-	@Override
-	protected BiomeGenBase.SpawnListEntry[] getMonsters() {
-		List<BiomeGenBase.SpawnListEntry> monsters = new ArrayList<BiomeGenBase.SpawnListEntry>();
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
-	}
-
-	@Override
-	protected BiomeGenBase.SpawnListEntry[] getCreatures() {
-		return new BiomeGenBase.SpawnListEntry[0];
-	}
-
+	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
 		return new BlockMetaPair(ExtraPlanets_Blocks.ceresBlocks, (byte) 0);

@@ -99,13 +99,6 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public CreativeTabs getCreativeTabToDisplayOn()
-    {
-        return GalacticraftCore.galacticraftBlocksTab;
-    }
-
     @Override
     public float getBlockHardness(World worldIn, BlockPos pos)
     {
@@ -171,7 +164,7 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
     }
 
     @Override
-    public boolean isPlantable(int metadata)
+    public boolean isPlantable(IBlockState arg0) 
     {
         return false;
     }

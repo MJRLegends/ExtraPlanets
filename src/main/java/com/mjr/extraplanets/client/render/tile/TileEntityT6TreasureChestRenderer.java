@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.client.render.tile;
 
+import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChest;
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChestLarge;
@@ -18,7 +19,7 @@ import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 @SideOnly(Side.CLIENT)
 public class TileEntityT6TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT6TreasureChest>
 {
-    private static final ResourceLocation treasureChestTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/model/treasureT6.png");
+    private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT6.png");
 
     private final ModelTreasureChest chestModel = new ModelTreasureChest();
 

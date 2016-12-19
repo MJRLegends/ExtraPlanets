@@ -68,8 +68,8 @@
 	<classpathentry kind="lib" path="C:/Users/Mathew Rickards/.gradle/caches/minecraft/deobfedDeps/compileDummy.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mathew Rickards/.gradle/caches/minecraft/deobfedDeps/providedDummy.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mathew Rickards/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1902-1.8.9/start"/>
-	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/GalacticraftCore-1.8.9-4.0.0.36-BETA.jar" sourcepath="Galacticraft Source"/>
-	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/Galacticraft-Planets-1.8.9-4.0.0.36-BETA.jar"/>
-	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/MicdoodleCore-1.8.9-4.0.0.36-BETA.jar"/>
+	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/GalacticraftCore-1.8.9-4.0.0.38-BETA.jar" sourcepath="Galacticraft-master new.zip"/>
+	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/Galacticraft-Planets-1.8.9-4.0.0.38-BETA.jar"/>
+	<classpathentry kind="lib" path="E:/Source Codes/Minecraft Forge Mods/ExtraPlanets Development (MC 1.8.9)/MicdoodleCore-1.8.9-4.0.0.38-BETA.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

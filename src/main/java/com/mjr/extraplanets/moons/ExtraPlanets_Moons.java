@@ -115,7 +115,7 @@ public class ExtraPlanets_Moons {
 			io.setTierRequired(4);
 			io.setRelativeSize(0.3867F);
 			io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			io.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
+			io.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
 			io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
 		}		
 		if (Config.europa) {
@@ -126,7 +126,7 @@ public class ExtraPlanets_Moons {
 			europa.setTierRequired(4);
 			europa.setRelativeSize(0.3867F);
 			europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			europa.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
+			europa.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
 			europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
 		}		
 
@@ -138,7 +138,7 @@ public class ExtraPlanets_Moons {
 			ganymede.setTierRequired(4);
 			ganymede.setRelativeSize(0.3867F);
 			ganymede.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			ganymede.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/ganymede.png"));
+			ganymede.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/ganymede.png"));
 			ganymede.setDimensionInfo(Config.ganymedeID, WorldProviderGanymede.class);
 		}
 		if (Config.callisto) {
@@ -149,7 +149,7 @@ public class ExtraPlanets_Moons {
 			callisto.setTierRequired(4);
 			callisto.setRelativeSize(0.3867F);
 			callisto.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
-			callisto.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/callisto.png"));
+			callisto.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/callisto.png"));
 			callisto.setDimensionInfo(Config.callistoID, WorldProviderCallisto.class);
 		}
 		if (Config.rhea) {
@@ -234,7 +234,7 @@ public class ExtraPlanets_Moons {
 		}
 		Moon moon = new Moon(name).setParentPlanet(parent);
 		if (name.equalsIgnoreCase("callisto") || name.equalsIgnoreCase("europa") || name.equalsIgnoreCase("io") || name.equalsIgnoreCase("ganymede"))
-			moon.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/" + name + ".png"));
+			moon.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/" + name + ".png"));
 		else
 			moon.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/" + name + ".png"));
 		GalaxyRegistry.registerMoon(moon);

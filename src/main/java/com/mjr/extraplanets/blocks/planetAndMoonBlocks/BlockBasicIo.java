@@ -99,13 +99,6 @@ public class BlockBasicIo extends Block implements IDetectableResource, IPlantab
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public CreativeTabs getCreativeTabToDisplayOn()
-    {
-        return GalacticraftCore.galacticraftBlocksTab;
-    }
-
     @Override
     public float getBlockHardness(World worldIn, BlockPos pos)
     {
@@ -171,7 +164,7 @@ public class BlockBasicIo extends Block implements IDetectableResource, IPlantab
     }
 
     @Override
-    public boolean isPlantable(int metadata)
+    public boolean isPlantable(IBlockState arg0) 
     {
         return false;
     }
