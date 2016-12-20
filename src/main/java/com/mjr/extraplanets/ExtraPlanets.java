@@ -156,6 +156,8 @@ public class ExtraPlanets {
 		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
 
+		registerNonMobEntities();
+		
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 
