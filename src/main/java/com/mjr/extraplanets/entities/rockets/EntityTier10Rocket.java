@@ -2,7 +2,6 @@ package com.mjr.extraplanets.entities.rockets;
 
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
@@ -21,19 +20,19 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityTier10Rocket extends EntityTieredRocket {
-	public EntityTier10Rocket(World world) {
-		super(world);
-		setSize(1.8F, 6.0F);
+	public EntityTier10Rocket(World par1World) {
+		super(par1World);
+		this.setSize(1.8F, 6F);
 	}
 
-	public EntityTier10Rocket(World world, double x, double y, double z, IRocketType.EnumRocketType type) {
-		super(world, x, y, z);
-		this.rocketType = type;
-		this.cargoItems = new ItemStack[func_70302_i_()];
+	public EntityTier10Rocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
+		super(par1World, x, y, z);
+		this.rocketType = rocketType;
+		this.cargoItems = new ItemStack[this.getSizeInventory()];
 	}
 
-	public EntityTier10Rocket(World world, double x, double y, double z, IRocketType.EnumRocketType type, ItemStack[] inv) {
-		this(world, x, y, z, type);
+	public EntityTier10Rocket(World par1World, double x, double y, double z, boolean reversed, EnumRocketType rocketType, ItemStack[] inv) {
+		this(par1World, x, y, z, rocketType);
 		this.cargoItems = inv;
 	}
 
@@ -203,6 +202,14 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 	}
 
 	@Override
+	protected void writeEntityToNBT(NBTTagCompound par1NBTTagCompound) {
+	}
+
+	@Override
+	protected void readEntityFromNBT(NBTTagCompound par1NBTTagCompound) {
+	}
+
+	@Override
 	public void onPadDestroyed() {
 		if (!this.isDead && this.launchPhase != EnumLaunchPhase.LAUNCHED.ordinal()) {
 			this.dropShipAsItem();
@@ -212,7 +219,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 
 	@Override
 	public int getRocketTier() {
-		return 3;
+		return 10;
 	}
 
 	@Override
@@ -252,7 +259,6 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 
 	@Override
 	public void setField(int id, int value) {
-
 	}
 
 	@Override
@@ -272,59 +278,67 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 
 	@Override
 	public int getSizeInventory() {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public ItemStack getStackInSlot(int index) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public ItemStack removeStackFromSlot(int index) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void setInventorySlotContents(int index, ItemStack stack) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public int getInventoryStackLimit() {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void markDirty() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void openInventory(EntityPlayer player) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void closeInventory(EntityPlayer player) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack) {
+		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	protected void entityInit() {
-	}
-
-	@Override
-	protected void readEntityFromNBT(NBTTagCompound tagCompund) {
-	}
-
-	@Override
-	protected void writeEntityToNBT(NBTTagCompound tagCompound) {
+		// TODO Auto-generated method stub
+		
 	}
 }
