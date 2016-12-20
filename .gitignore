@@ -23,3 +23,5 @@ ExtraPlanets Server Test/
 *.rar
 asm/
 run/
+.classpath
+.project
