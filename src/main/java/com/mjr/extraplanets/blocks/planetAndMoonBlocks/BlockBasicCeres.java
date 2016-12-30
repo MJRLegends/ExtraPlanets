@@ -3,11 +3,13 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks;
 import java.util.List;
 import java.util.Random;
 
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -18,6 +20,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -76,10 +79,8 @@ public class BlockBasicCeres extends Block {
 	}
 
 	@Override
-	public int damageDropped(int meta)
-	{
-		switch (meta)
-		{
+	public int damageDropped(int meta) {
+		switch (meta) {
 		default:
 			return meta;
 		}
@@ -112,12 +113,28 @@ public class BlockBasicCeres extends Block {
 	}
 
 	@Override
-	public void breakBlock(World world, int x, int y, int z, Block block, int meta)
-	{
+	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
 		if (meta == 6) {
 			EntityPlayer entity = world.getClosestPlayer(x + 0.5D, y + 0.5D, z + 0.5D, 10.0);
 			if (entity != null) {
-				entity.addPotionEffect(new PotionEffect(Potion.poison.getId(), 50, 1));
+				EntityPlayerMP player = (EntityPlayerMP) entity;
+				GCPlayerStats playerStats = GCPlayerStats.get(player);
+
+				final ItemStack thermalPaddingHelm = playerStats.extendedInventory.getStackInSlot(6);
+				final ItemStack thermalPaddingChestplate = playerStats.extendedInventory.getStackInSlot(7);
+				final ItemStack thermalPaddingLeggings = playerStats.extendedInventory.getStackInSlot(8);
+				final ItemStack thermalPaddingBoots = playerStats.extendedInventory.getStackInSlot(9);
+				
+				boolean giveEffect = false;
+				
+				if (thermalPaddingHelm == null && thermalPaddingChestplate == null && thermalPaddingLeggings == null && thermalPaddingBoots == null)
+					giveEffect = true;
+				else if (thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier2ThermalPadding
+						&& thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier3ThermalPadding)
+					giveEffect = true;
+
+				if (giveEffect)
+					entity.addPotionEffect(new PotionEffect(Potion.poison.getId(), 50, 1));
 			}
 
 		}

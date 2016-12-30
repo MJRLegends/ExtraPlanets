@@ -38,7 +38,7 @@ TODO = Not yet done
 
 ===========================================Future Updates=============================================
 v1.0 Pre-3.8
-*Changed Tier 2 Thermal Padding to protect you from uranium ore
+*Changed Tier 2 Thermal Padding (And above) to protect you from uranium ore
 *Added more blocks to the MicroBlocks support
 *Added the ability to use Kepler22b Planks for Sticks and Wooden Buttons, Pressure Plates, Doors, Signs recipes
 *Added some more Achievements
