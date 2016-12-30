@@ -15,9 +15,11 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedWitch;
@@ -62,22 +64,21 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected BiomeGenBase.SpawnListEntry[] getMonsters()
-	{
+	protected SpawnListEntry[] getMonsters() {
 		List<BiomeGenBase.SpawnListEntry> monsters = new ArrayList<BiomeGenBase.SpawnListEntry>();
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		//monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class, 8, 2, 3));
+		if(Config.evolvedWitch)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
+		if(Config.evolvedEnderman)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
 
 	@Override
-	protected BiomeGenBase.SpawnListEntry[] getCreatures()
-	{
+	protected SpawnListEntry[] getCreatures() {
 		return new BiomeGenBase.SpawnListEntry[0];
 	}
 

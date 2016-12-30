@@ -7,6 +7,10 @@ import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityEnderman;
@@ -24,7 +28,10 @@ import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.moons.Ganymede.worldgen.village.MapGenVillageGanymede;
 
 public class ChunkProviderGanymede extends ChunkProviderSpace {
@@ -66,23 +73,20 @@ public class ChunkProviderGanymede extends ChunkProviderSpace {
 	@Override
 	protected SpawnListEntry[] getMonsters() {
 		List<BiomeGenBase.SpawnListEntry> monsters = new ArrayList<BiomeGenBase.SpawnListEntry>();
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityZombie.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntitySpider.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntitySkeleton.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityCreeper.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEnderman.class, 8, 1, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		if(Config.evolvedWitch)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
+		if(Config.evolvedEnderman)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
 
 	@Override
 	protected SpawnListEntry[] getCreatures() {
-		List<BiomeGenBase.SpawnListEntry> creatures = new ArrayList<BiomeGenBase.SpawnListEntry>();
-		creatures.add(new BiomeGenBase.SpawnListEntry(EntityChicken.class, 8, 2, 4));
-		creatures.add(new BiomeGenBase.SpawnListEntry(EntityCow.class, 8, 2, 6));
-		creatures.add(new BiomeGenBase.SpawnListEntry(EntityHorse.class, 8, 2, 4));
-		creatures.add(new BiomeGenBase.SpawnListEntry(EntityPig.class, 8, 2, 6));
-		creatures.add(new BiomeGenBase.SpawnListEntry(EntitySheep.class, 8, 2, 6));
-		return creatures.toArray(new BiomeGenBase.SpawnListEntry[creatures.size()]);
+		return new BiomeGenBase.SpawnListEntry[0];
 	}
 
 	@Override

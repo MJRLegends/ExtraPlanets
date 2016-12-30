@@ -19,6 +19,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
@@ -89,11 +90,12 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		// monsters.add(newBiomeGenBase.SpawnListEntry(EntityEvolvedWizard.class, 8, 2, 3));
-		// monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class,8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedPowerSkeleton.class, 8, 2, 3));
+		if(Config.evolvedWitch)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
+		if(Config.evolvedEnderman)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
+		if(Config.evolvedPowerSkeleton)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedPowerSkeleton.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
 

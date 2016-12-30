@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
@@ -26,6 +25,9 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
+import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
+import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
+import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
 
@@ -293,28 +295,6 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 
 	public String func_73148_d() {
 		return "Kepler22bLevelSource";
-	}
-
-	public List func_73155_a(EnumCreatureType type, int x, int y, int z) {
-		if (type == EnumCreatureType.monster) {
-			List monsters = new ArrayList();
-			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 100, 4, 4));
-			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 100, 4, 4));
-			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 100, 4, 4));
-			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 100, 4, 4));
-			return monsters;
-		}
-		if (type == EnumCreatureType.waterCreature) {
-			List waterCreatures = new ArrayList();
-			waterCreatures.add(new BiomeGenBase.SpawnListEntry(EntitySquid.class, 10, 4, 4));
-			return waterCreatures;
-		}
-		if (type == EnumCreatureType.ambient) {
-			List caveCreatures = new ArrayList();
-			caveCreatures.add(new BiomeGenBase.SpawnListEntry(EntityBat.class, 10, 8, 8));
-			return caveCreatures;
-		}
-		return null;
 	}
 
 	public int getLoadedChunkCount() {

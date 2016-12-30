@@ -18,10 +18,12 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
+import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.MapGenDungeon;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomBossVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomChestsVenus;
@@ -96,11 +98,12 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedMagmaCube.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		//monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWizard.class, 8, 2, 3));
-		//monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedFireAllen.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedBlaze.class, 8, 2, 3));
+		if(Config.evolvedMagmaCube)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedMagmaCube.class, 8, 2, 3));
+		if(Config.evolvedEnderman)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
+		if(Config.evolvedBlaze)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedBlaze.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
 
