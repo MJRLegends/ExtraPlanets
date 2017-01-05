@@ -74,6 +74,7 @@ tile.venus.oreCopper.name=Mena de Cobre de Venus
 tile.venus.oreCarbon.name=Mena de Carbono
 tile.venus.stoneBricks.name=Ladrillos de Roca de Venus
 tile.venus.carbonBlock.name=Bloque de Carbono
+tile.venus.dungeonBrick.name=Venus Dungeon Brick
 
 tile.ceres.surface.name=Roca Superficial de Ceres
 tile.ceres.subSurface.name=Roca Subterránea de Ceres
@@ -97,6 +98,7 @@ tile.jupiter.oreRedGem.name=Mena de Gema Roja de Júpiter
 tile.jupiter.stoneBricks.name=Ladrillos de Roca de Júpiter
 tile.jupiter.palladiumBlock.name=Bloque de Paladio
 tile.jupiter.redGemBlock.name=Bloque de Gema Roja
+tile.jupiter.dungeonBrick.name=Jupiter Dungeon Brick
 
 tile.saturn.surface.name=Roca Superficial de Saturno
 tile.saturn.subSurface.name=Roca Subterránea de Saturno
@@ -107,6 +109,7 @@ tile.saturn.oreCopper.name=Mena de Cobre de Saturno
 tile.saturn.oreMagnesium.name=Mena de Magnesio de Saturno
 tile.saturn.stoneBricks.name=Ladrillos de Roca de Saturno
 tile.saturn.magnesiumBlock.name=Bloque de Magnesio
+tile.saturn.dungeonBrick.name=Saturn Dungeon Brick
 
 tile.uranus.surface.name=Roca Superficial de Urano
 tile.uranus.subSurface.name=Roca Subterránea de Urano
@@ -116,6 +119,7 @@ tile.uranus.oreWhiteGem.name=Mena de Gema Blanca de Urano
 tile.uranus.stoneBricks.name=Ladrillos de Roca de Urano
 tile.uranus.crystalBlock.name=Bloque de Cristal
 tile.uranus.whiteGemBlock.name=Bloque de Gema Blanca
+tile.uranus.dungeonBrick.name=Uranus Dungeon Brick
 
 tile.neptune.surface.name=Roca Superficial de Neptuno
 tile.neptune.subSurface.name=Roca Subterránea de Neptuno
@@ -128,6 +132,7 @@ tile.neptune.oreBlueGem.name=Mena de Gema Azúl de Neptuno
 tile.neptune.stoneBricks.name=Ladrillos de Piedra de Neptuno
 tile.neptune.zincBlock.name=Bloque de Zinc
 tile.neptune.blueGemBlock.name=Bloque de Gema Azúl
+tile.neptune.dungeonBrick.name=Neptune Dungeon Brick
 
 tile.pluto.surface.name=Roca Superficial de Pluto
 tile.pluto.subSurface.name=Roca Subterránea de Pluto
@@ -138,6 +143,7 @@ tile.pluto.oreCopper.name=Mena de Cobre de Pluto
 tile.pluto.oreTungsten.name=Mena de Tungsteno de Pluto
 tile.pluto.stoneBricks.name=Ladrillos de Roca de Pluto
 tile.pluto.tungstenBlock.name=Bloque de Tungsteno
+tile.pluto.dungeonBrick.name=Pluto Dungeon Brick
 
 tile.eris.surface.name=Roca Superficial de Eris
 tile.eris.subSurface.name=Roca Subterránea de Eris
@@ -146,6 +152,7 @@ tile.eris.oreIron.name=Mena de Hierro de Eris
 tile.eris.oreTin.name=Mena de Estaño de Eris
 tile.eris.oreCopper.name=Mena de Cobre de Eris
 tile.eris.stoneBricks.name=Ladrillos de Roca de Eris
+tile.eris.dungeonBrick.name=Eris Dungeon Brick
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
@@ -268,15 +275,6 @@ tile.jupiterGravel.name=Grava de Júpiter
 tile.saturnGravel.name=Grava de Saturno
 tile.uranusGravel.name=Grava de Urano
 tile.neptuneGravel.name=Grava de Neptuno
-
-#Dungeon Bricks
-tile.veunsDungeonBrick.name=Venus Dungeon Brick
-tile.jupiterDungeonBrick.name=Jupiter Dungeon Brick
-tile.saturnDungeonBrick.name=Saturn Dungeon Brick
-tile.uranusDungeonBrick.name=Uranus Dungeon Brick
-tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
-tile.plutoDungeonBrick.name=Pluto Dungeon Brick
-tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Losa de Roca Mercuriana

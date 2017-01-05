@@ -74,6 +74,7 @@ tile.venus.oreCopper.name=Venus Copper Ore
 tile.venus.oreCarbon.name=Carbon Ore
 tile.venus.stoneBricks.name=Venus Stone Bricks
 tile.venus.carbonBlock.name=Block of Carbon
+tile.venus.dungeonBrick.name=Venus Dungeon Brick
 
 tile.ceres.surface.name=Ceres Surface Rock
 tile.ceres.subSurface.name=Ceres Sub-Surface Rock
@@ -97,6 +98,7 @@ tile.jupiter.oreRedGem.name=Jupiter Red Gem Ore
 tile.jupiter.stoneBricks.name=Jupiter Stone Bricks
 tile.jupiter.palladiumBlock.name=Block of Palladium
 tile.jupiter.redGemBlock.name=Block of Red Gem
+tile.jupiter.dungeonBrick.name=Jupiter Dungeon Brick
 
 tile.saturn.surface.name=Saturn Surface Rock
 tile.saturn.subSurface.name=Saturn Sub-Surface Rock
@@ -107,6 +109,7 @@ tile.saturn.oreCopper.name=Saturn Copper Ore
 tile.saturn.oreMagnesium.name=Saturn Magnesium Ore
 tile.saturn.stoneBricks.name=Saturn Stone Bricks
 tile.saturn.magnesiumBlock.name=Block of Magnesium
+tile.saturn.dungeonBrick.name=Saturn Dungeon Brick
 
 tile.uranus.surface.name=Uranus Surface Rock
 tile.uranus.subSurface.name=Uranus Sub-Surface Rock
@@ -116,6 +119,7 @@ tile.uranus.oreWhiteGem.name=Uranus White Gem Ore
 tile.uranus.stoneBricks.name=Uranus Stone Bricks
 tile.uranus.crystalBlock.name=Block of Crystal
 tile.uranus.whiteGemBlock.name=Block of White Gem
+tile.uranus.dungeonBrick.name=Uranus Dungeon Brick
 
 tile.neptune.surface.name=Neptune Surface Rock
 tile.neptune.subSurface.name=Neptune Sub-Surface Rock
@@ -128,6 +132,7 @@ tile.neptune.oreBlueGem.name=Neptune Blue Gem Ore
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
 tile.neptune.zincBlock.name=Block of Zinc
 tile.neptune.blueGemBlock.name=Block of Blue Gem
+tile.neptune.dungeonBrick.name=Neptune Dungeon Brick
 
 tile.pluto.surface.name=Pluto Surface Rock
 tile.pluto.subSurface.name=Pluto Sub-Surface Rock
@@ -138,6 +143,7 @@ tile.pluto.oreCopper.name=Pluto Copper Ore
 tile.pluto.oreTungsten.name=Pluto Tungsten Ore
 tile.pluto.stoneBricks.name=Pluto Stone Bricks
 tile.pluto.tungstenBlock.name=Block of Tungsten
+tile.pluto.dungeonBrick.name=Pluto Dungeon Brick
 
 tile.eris.surface.name=Eris Surface Rock
 tile.eris.subSurface.name=Eris Sub-Surface Rock
@@ -146,6 +152,7 @@ tile.eris.oreIron.name=Eris Iron Ore
 tile.eris.oreTin.name=Eris Tin Ore
 tile.eris.oreCopper.name=Eris Copper Ore
 tile.eris.stoneBricks.name=Eris Stone Bricks
+tile.eris.dungeonBrick.name=Eris Dungeon Brick
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
@@ -269,15 +276,6 @@ tile.jupiterGravel.name=Jupiter Gravel
 tile.saturnGravel.name=Saturn Gravel
 tile.uranusGravel.name=Uranus Gravel
 tile.neptuneGravel.name=Neptune Gravel
-
-#Dungeon Bricks
-tile.veunsDungeonBrick.name=Venus Dungeon Brick
-tile.jupiterDungeonBrick.name=Jupiter Dungeon Brick
-tile.saturnDungeonBrick.name=Saturn Dungeon Brick
-tile.uranusDungeonBrick.name=Uranus Dungeon Brick
-tile.neptuneDungeonBrick.name=Neptune Dungeon Brick
-tile.plutoDungeonBrick.name=Pluto Dungeon Brick
-tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab
@@ -607,7 +605,7 @@ item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
 item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
 
 tier2.information=Required for Venus and Mercury during day and the night
-tier3.information=Required for Juptier and Saturn including their moons during day and the night
+tier3.information=Required for Jupiter and Saturn including their moons during day and the night
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
 
 #Other Items

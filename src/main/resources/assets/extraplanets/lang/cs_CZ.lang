@@ -74,6 +74,7 @@ tile.venus.OreCopper.name=Měděná ruda z Venuše
 tile.venus.OreCarbon.name=Karbonová Ruda
 tile.venus.stoneBricks.name=Venus Stone Bricks
 tile.venus.carbonBlock.name=Block of Carbon
+tile.venus.dungeonBrick.name=Venus Dungeon Brick
 
 tile.ceres.surface.name=Povrchový kámen z Ceresu
 tile.ceres.subSurface.name=Podpovrchový kámen z Ceresu
@@ -94,9 +95,10 @@ tile.jupiter.OreCopper.name=Měděná ruda z Jupiteru
 tile.jupiter.OrePalladium.name=Palladiová Ruda
 tile.jupiter.OreNickel.name=Niklová Ruda
 tile.jupiter.oreRedGem.name=Jupiter Red Gem Ore
-tile.jupiter.stoneBricks.name=Juptier Stone Bricks
+tile.jupiter.stoneBricks.name=Jupiter Stone Bricks
 tile.jupiter.palladiumBlock.name=Block of Palladium
 tile.jupiter.redGemBlock.name=Block of Red Gem
+tile.jupiter.dungeonBrick.name=Jupiter Dungeon Brick
 
 tile.saturn.surface.name=Povrchový kámen ze Saturnu
 tile.saturn.subSurface.name=Podpovrchový kámen ze Saturnu
@@ -107,6 +109,7 @@ tile.saturn.OreCopper.name=Měděná ruda ze Saturnu
 tile.saturn.OreMagnesium.name=Magnesiová Ruda
 tile.saturn.stoneBricks.name=Saturn Stone Bricks
 tile.saturn.magnesiumBlock.name=Block of Magnesium
+tile.saturn.dungeonBrick.name=Saturn Dungeon Brick
 
 tile.uranus.surface.name=Povrchový kámen z Uranu
 tile.uranus.subSurface.name=Podpovrchový kámen z Uranu
@@ -116,6 +119,7 @@ tile.uranus.oreWhiteGem.name=Uranus White Gem Ore
 tile.uranus.stoneBricks.name=Uranus Stone Bricks
 tile.uranus.crystalBlock.name=Block of Crystal
 tile.uranus.whiteGemBlock.name=Block of White Gem
+tile.uranus.dungeonBrick.name=Uranus Dungeon Brick
 
 tile.neptune.surface.name=Povrchový kámen z Neptunu
 tile.neptune.subSurface.name=Podpovrchový kámen z Neptunu
@@ -128,6 +132,7 @@ tile.neptune.oreBlueGem.name=Neptune Blue Gem Ore
 tile.neptune.stoneBricks.name=Neptune Stone Bricks
 tile.neptune.zincBlock.name=Block of Zinc
 tile.neptune.blueGemBlock.name=Block of Blue Gem
+tile.neptune.dungeonBrick.name=Neptune Dungeon Brick
 
 tile.pluto.surface.name=Povrchový kámen z Pluta
 tile.pluto.subSurface.name=Podpovrchový kámen z Pluta
@@ -138,6 +143,7 @@ tile.pluto.OreCopper.name=Měděná ruda z Pluta
 tile.pluto.OreTungsten.name=Tungstenová Ruda
 tile.pluto.stoneBricks.name=Pluto Stone Bricks
 tile.pluto.tungstenBlock.name=Block of Tungsten
+tile.pluto.dungeonBrick.name=Pluto Dungeon Brick
 
 tile.eris.surface.name=Povrchový kámen z Erisu
 tile.eris.subSurface.name=Podpovrchový kámen z Erisu
@@ -146,6 +152,7 @@ tile.eris.OreIron.name=Železná ruda z Erisu
 tile.eris.OreTin.name=Cínová ruda z Erisu
 tile.eris.OreCopper.name=Měděná ruda z Erisu
 tile.eris.stoneBricks.name=Eris Stone Bricks
+tile.eris.dungeonBrick.name=Eris Dungeon Brick
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
@@ -269,15 +276,6 @@ tile.jupiterGravel.name=Štěrk
 tile.saturnGravel.name=Štěrk
 tile.uranusGravel.name=Štěrk
 tile.neptuneGravel.name=Štěrk
-
-#Dungeon Bricks
-tile.veunsDungeonBrick.name=Cihla z kobky
-tile.jupiterDungeonBrick.name=Cihla z kobky
-tile.saturnDungeonBrick.name=Cihla z kobky
-tile.uranusDungeonBrick.name=Cihla z kobky
-tile.neptuneDungeonBrick.name=Cihla z kobky
-tile.plutoDungeonBrick.name=Cihla z kobky
-tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Kamenný půlblok
@@ -607,7 +605,7 @@ item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
 item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
 
 tier2.information=Required for Venus and Mercury during day and the night
-tier3.information=Required for Juptier and Saturn including their moons during day and the night
+tier3.information=Required for Jupiter and Saturn including their moons during day and the night
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
 
 #Other Items

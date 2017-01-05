@@ -75,6 +75,7 @@ tile.venus.oreCopper.name=金星銅礦石
 tile.venus.oreCarbon.name=金星碳礦石
 tile.venus.stoneBricks.name=金星石磚
 tile.venus.carbonBlock.name=碳塊
+tile.venus.dungeonBrick.name=Venus Dungeon Brick
 
 tile.ceres.surface.name=穀神星地表岩石
 tile.ceres.subSurface.name=穀神星地底岩石
@@ -98,6 +99,7 @@ tile.jupiter.oreRedGem.name=木星紅寶石礦石
 tile.jupiter.stoneBricks.name=木星方塊磚
 tile.jupiter.palladiumBlock.name=鈀塊
 tile.jupiter.redGemBlock.name=Block of Red Gem
+tile.jupiter.dungeonBrick.name=Jupiter Dungeon Brick
 
 tile.saturn.surface.name=土星地表方塊
 tile.saturn.subSurface.name=土星地底方塊
@@ -108,6 +110,7 @@ tile.saturn.oreCopper.name=土星銅礦石
 tile.saturn.oreMagnesium.name=土星鎂礦石
 tile.saturn.stoneBricks.name=土星方塊磚
 tile.saturn.magnesiumBlock.name=鎂塊
+tile.saturn.dungeonBrick.name=Saturn Dungeon Brick
 
 tile.uranus.surface.name=天王星地表方塊
 tile.uranus.subSurface.name=天王星地底方塊
@@ -117,6 +120,7 @@ tile.uranus.oreWhiteGem.name=天王星白寶石礦石
 tile.uranus.stoneBricks.name=天王星方塊磚
 tile.uranus.crystalBlock.name=水晶石塊
 tile.uranus.whiteGemBlock.name=Block of White Gem
+tile.uranus.dungeonBrick.name=Uranus Dungeon Brick
 
 tile.neptune.surface.name=海王星地表方塊
 tile.neptune.subSurface.name=海王星地底方塊
@@ -129,6 +133,7 @@ tile.neptune.oreBlueGem.name=海王星藍寶石礦石
 tile.neptune.stoneBricks.name=海王星方塊磚
 tile.neptune.zincBlock.name=鋅塊
 tile.neptune.blueGemBlock.name=Block of Blue Gem
+tile.neptune.dungeonBrick.name=Neptune Dungeon Brick
 
 tile.pluto.surface.name=冥王星地表岩石
 tile.pluto.subSurface.name=冥王星地底岩石
@@ -139,6 +144,7 @@ tile.pluto.oreCopper.name=冥王星銅礦石
 tile.pluto.oreTungsten.name=冥王星鎢礦石
 tile.pluto.stoneBricks.name=冥王星石磚
 tile.pluto.tungstenBlock.name=鎢塊
+tile.pluto.dungeonBrick.name=Pluto Dungeon Brick
 
 tile.eris.surface.name=鬩神星地表岩石
 tile.eris.subSurface.name=鬩神星地底岩石
@@ -147,6 +153,7 @@ tile.eris.oreIron.name=鬩神星鐵礦石
 tile.eris.oreTin.name=鬩神星錫礦石
 tile.eris.oreCopper.name=鬩神星銅礦石
 tile.eris.stoneBricks.name=鬩神星石磚
+tile.eris.dungeonBrick.name=Eris Dungeon Brick
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
@@ -270,15 +277,6 @@ tile.jupiterGravel.name=木星沙礫
 tile.saturnGravel.name=土星沙礫
 tile.uranusGravel.name=天王星沙礫
 tile.neptuneGravel.name=海王星沙礫
-
-#Dungeon Bricks
-tile.veunsDungeonBrick.name=金星地牢磚
-tile.jupiterDungeonBrick.name=木星地牢磚
-tile.saturnDungeonBrick.name=土星地牢磚
-tile.uranusDungeonBrick.name=天王星地牢磚
-tile.neptuneDungeonBrick.name=海王星地牢磚
-tile.plutoDungeonBrick.name=冥王星地牢磚
-tile.erisDungeonBrick.name=Eris Dungeon Brick
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星石臺階
