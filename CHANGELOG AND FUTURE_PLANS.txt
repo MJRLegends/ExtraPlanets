@@ -39,7 +39,8 @@ TODO = Not yet done
 
 ===========================================Future Updates=============================================
 v1.0 Pre-3.9
-Information coming soon...
+*Fixed some Localization typos (Thanks to MrNinja93)
+More Information coming soon...
 
 ======================================================================================================
 
