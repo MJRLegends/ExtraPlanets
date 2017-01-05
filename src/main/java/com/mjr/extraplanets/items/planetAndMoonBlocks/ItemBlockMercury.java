@@ -63,6 +63,11 @@ public class ItemBlockMercury extends ItemBlock
 		}
 		case 7:
 		{
+			name = "mercuryBlock";
+			break;
+		}
+		case 8:
+		{
 			name = "stoneBricks";
 			break;
 		}
