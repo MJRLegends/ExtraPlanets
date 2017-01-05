@@ -135,15 +135,6 @@ public class ExtraPlanets_Blocks {
 
 	// Need changing to meta blocks -----------------------------------------
 
-	// Dungeon Bricks
-	public static Block veunsDungeonBrick;
-	public static Block jupiterDungeonBrick;
-	public static Block saturnDungeonBrick;
-	public static Block uranusDungeonBrick;
-	public static Block neptuneDungeonBrick;
-	public static Block plutoDungeonBrick;
-	public static Block erisDungeonBrick;
-
 	// Dungeon Spawners
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
@@ -177,7 +168,6 @@ public class ExtraPlanets_Blocks {
 
 		// Need changing to meta blocks at some point
 		// -----------------------------------------
-		initializeDungeonBlocks();
 		initializeSpawnerBlocks();
 		// ----------------------------------------------------------------------
 
@@ -286,38 +276,6 @@ public class ExtraPlanets_Blocks {
 			// BlockBasicKepler22bTallGrass("kepler22bFlowers");
 		}
 	}
-
-	private static void initializeDungeonBlocks() {
-		if (Config.venus) {
-			veunsDungeonBrick = new BlockDungeonBrick(Material.rock).setUnlocalizedName("veunsDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
-			veunsDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
-		}
-		if (Config.jupiter) {
-			jupiterDungeonBrick = new BlockDungeonBrick(Material.rock).setUnlocalizedName("jupiterDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
-			jupiterDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
-		}
-		if (Config.saturn) {
-			saturnDungeonBrick = new BlockDungeonBrick(Material.rock).setUnlocalizedName("saturnDungeonBrick").setHardness(4.0f).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
-			saturnDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
-		}
-		if (Config.uranus) {
-			uranusDungeonBrick = new BlockDungeonBrick(Material.rock).setUnlocalizedName("uranusDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
-			uranusDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
-		}
-		if (Config.neptune) {
-			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setUnlocalizedName("neptuneDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
-			neptuneDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
-		}
-		if (Config.pluto) {
-			plutoDungeonBrick = new BlockDungeonBrick(Material.rock).setUnlocalizedName("plutoDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
-			plutoDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
-		}
-		if (Config.eris) {
-			erisDungeonBrick = new BlockDungeonBrick(Material.rock).setUnlocalizedName("erisDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
-			erisDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
-		}
-	}
-
 	private static void initializeTreasureChestBlocks() {
 		if (Config.venus) {
 			treasureChestTier4 = new T4TreasureChest("treasureChestT4");
@@ -388,7 +346,6 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(venusGravel, "venusGravel");
 
 			//GameRegistry.registerBlock(venusSpawner, "venusSpawner");
-			GameRegistry.registerBlock(veunsDungeonBrick, "veunsDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
 		}
@@ -401,7 +358,6 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(jupiterGravel, "jupiterGravel");
 
 			//GameRegistry.registerBlock(jupiterSpawner, "jupiterSpawner");
-			GameRegistry.registerBlock(jupiterDungeonBrick, "jupiterDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName().substring(5));
 		}
 		if (Config.saturn) {
@@ -409,34 +365,29 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(saturnGravel, "saturnGravel");
 
 			//GameRegistry.registerBlock(saturnSpawner, "saturnSpawner");
-			GameRegistry.registerBlock(saturnDungeonBrick, "saturnDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier6, ItemBlockDesc.class, treasureChestTier6.getUnlocalizedName().substring(5));
 		}
 		if (Config.uranus) {
 			GameRegistry.registerBlock(uranusBlocks, ItemBlockUranus.class, uranusBlocks.getUnlocalizedName().substring(5));
 			//GameRegistry.registerBlock(uranusSpawner, "uranusSpawner");
-			GameRegistry.registerBlock(uranusDungeonBrick, "uranusDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier7, ItemBlockDesc.class, treasureChestTier7.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(denseIce, "denseIce");
 		}
 		if (Config.neptune) {
 			GameRegistry.registerBlock(neptuneBlocks, ItemBlockNeptune.class, neptuneBlocks.getUnlocalizedName().substring(5));
 			//GameRegistry.registerBlock(neptuneSpawner, "neptuneSpawner");
-			GameRegistry.registerBlock(neptuneDungeonBrick, "neptuneDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier8, ItemBlockDesc.class, treasureChestTier8.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(frozenNitrogen, "frozenNitrogen");
 		}
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName().substring(5));
 			//GameRegistry.registerBlock(plutoSpawner, "plutoSpawner");
-			GameRegistry.registerBlock(plutoDungeonBrick, "plutoDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(plutoGravel, "plutoGravel");
 		}
 		if (Config.eris) {
 			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName().substring(5));
 			//GameRegistry.registerBlock(erisSpawner, "erisSpawner");
-			GameRegistry.registerBlock(erisDungeonBrick, "erisDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}

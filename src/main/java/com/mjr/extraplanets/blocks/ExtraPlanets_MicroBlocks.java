@@ -40,14 +40,14 @@ public class ExtraPlanets_MicroBlocks {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.venusBlocks, 1), "tile.venus.subSurface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.venusBlocks, 2), "tile.venus.stone");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.venusBlocks, 7), "tile.venus.carbonBlock");
-					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.veunsDungeonBrick, 0), "tile.veunsDungeonBrick");
+					//registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.veunsDungeonBrick, 0), "tile.veunsDungeonBrick");
 				}
 				if (Config.jupiter) {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterBlocks, 0), "tile.jupiter.surface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterBlocks, 1), "tile.jupiter.subSurface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterBlocks, 2), "tile.jupiter.stone");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterBlocks, 8), "tile.jupiter.palladiumBlock");
-					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterDungeonBrick, 0), "tile.jupiterDungeonBrick");
+					//registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterDungeonBrick, 0), "tile.jupiterDungeonBrick");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.jupiterBlocks, 11), "tile.jupiter.redGemBlock");
 				}
 				if (Config.saturn) {
@@ -55,7 +55,7 @@ public class ExtraPlanets_MicroBlocks {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.saturnBlocks, 1), "tile.saturn.subSurface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.saturnBlocks, 2), "tile.saturn.stone");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.saturnBlocks, 7), "tile.saturn.magnesiumBlock");
-					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.saturnDungeonBrick, 0), "tile.saturnDungeonBrick");
+					//registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.saturnDungeonBrick, 0), "tile.saturnDungeonBrick");
 				}
 				if (Config.uranus) {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.uranusBlocks, 0), "tile.uranus.surface");
@@ -70,7 +70,7 @@ public class ExtraPlanets_MicroBlocks {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.neptuneBlocks, 1), "tile.neptune.subSurface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.neptuneBlocks, 2), "tile.neptune.stone");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.neptuneBlocks, 7), "tile.neptune.zincBlock");
-					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.neptuneDungeonBrick, 0), "tile.neptuneDungeonBrick");
+					//registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.neptuneDungeonBrick, 0), "tile.neptuneDungeonBrick");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.neptuneBlocks, 10), "tile.neptune.neptuneGemBlock");
 				}
 				if (Config.pluto) {
@@ -78,13 +78,13 @@ public class ExtraPlanets_MicroBlocks {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.plutoBlocks, 1), "tile.pluto.subSurface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.plutoBlocks, 2), "tile.pluto.stone");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.plutoBlocks, 7), "tile.pluto.tungstenBlock");
-					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.plutoDungeonBrick, 0), "tile.plutoDungeonBrick");
+					//registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.plutoDungeonBrick, 0), "tile.plutoDungeonBrick");
 				}
 				if (Config.eris) {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 0), "tile.eris.surface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 1), "tile.eris.subSurface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 2), "tile.eris.stone");
-					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisDungeonBrick, 0), "tile.erisDungeonBrick");
+					//registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisDungeonBrick, 0), "tile.erisDungeonBrick");
 				}
 				if (Config.kepler22b) {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.erisBlocks, 0), "tile.eris.surface");

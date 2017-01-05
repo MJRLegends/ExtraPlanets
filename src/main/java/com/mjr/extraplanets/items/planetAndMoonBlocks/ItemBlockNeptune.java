@@ -73,10 +73,15 @@ public class ItemBlockNeptune extends ItemBlock
 		}
 		case 9:
 		{
-			name = "oreBlueGem";
+			name = "dungeonBrick";
 			break;
 		}
 		case 10:
+		{
+			name = "oreBlueGem";
+			break;
+		}
+		case 11:
 		{
 			name = "blueGemBlock";
 			break;

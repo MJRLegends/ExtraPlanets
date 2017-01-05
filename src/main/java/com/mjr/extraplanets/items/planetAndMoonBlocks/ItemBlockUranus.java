@@ -55,13 +55,18 @@ public class ItemBlockUranus extends ItemBlock
 		{
 			name = "stoneBricks";
 			break;
-		}
+		}		
 		case 6:
+		{
+			name = "dungeonBrick";
+			break;
+		}
+		case 7:
 		{
 			name = "oreWhiteGem";
 			break;
 		}
-		case 7:
+		case 8:
 		{
 			name = "whiteGemBlock";
 			break;

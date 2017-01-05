@@ -58,12 +58,22 @@ public class ItemBlockEris extends ItemBlock
 		}
 		case 6:
 		{
-			name = "stoneBricks";
+			name = "oreDarkIron";
 			break;
 		}
 		case 7:
 		{
-			name = "oreDarkIron";
+			name = "darkIronBlock";
+			break;
+		}
+		case 8:
+		{
+			name = "stoneBricks";
+			break;
+		}
+		case 9:
+		{
+			name = "dungeonBrick";
 			break;
 		}
 		default:

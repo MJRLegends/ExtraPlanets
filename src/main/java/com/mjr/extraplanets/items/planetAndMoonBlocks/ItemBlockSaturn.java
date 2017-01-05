@@ -71,6 +71,11 @@ public class ItemBlockSaturn extends ItemBlock
 			name = "stoneBricks";
 			break;
 		}
+		case 9:
+		{
+			name = "dungeonBrick";
+			break;
+		}
 		default:
 			name = "null";
 		}

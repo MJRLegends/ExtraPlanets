@@ -105,21 +105,21 @@ public class ExtraPlanets_Achievements {
 		if (Config.ceres)
 			ceresPlanet = new Achievement("achievement.ceresPlanet", "ceresPlanet", 7, 1, ExtraPlanets_Blocks.ceresBlocks, (Achievement) null).registerStat();
 
-		// Boss Killing Achievements
-		if (Config.venus)
-			venusBoss = new Achievement("achievement.venusBoss", "venusBoss", 3, 5, ExtraPlanets_Blocks.veunsDungeonBrick, venusPlanet).registerStat();
-		if (Config.jupiter)
-			jupiterBoss = new Achievement("achievement.jupiterBoss", "jupiterBoss", 5, 5, ExtraPlanets_Blocks.jupiterDungeonBrick, jupiterPlanet).registerStat();
-		if (Config.saturn)
-			saturnBoss = new Achievement("achievement.saturnBoss", "saturnBoss", 7, 5, ExtraPlanets_Blocks.saturnDungeonBrick, saturnPlanet).registerStat();
-		if (Config.uranus)
-			uranusBoss = new Achievement("achievement.uranusBoss", "uranusBoss", 9, 5, ExtraPlanets_Blocks.uranusDungeonBrick, uranusPlanet).registerStat();
-		if (Config.neptune)
-			neptuneBoss = new Achievement("achievement.neptuneBoss", "neptuneBoss", 11, 5, ExtraPlanets_Blocks.neptuneDungeonBrick, neptunePlanet).registerStat();
-		if (Config.pluto)
-			plutoBoss = new Achievement("achievement.plutoBoss", "plutoBoss", 13, 5, ExtraPlanets_Blocks.plutoDungeonBrick, plutoPlanet).registerStat();
-		if (Config.eris)
-			plutoBoss = new Achievement("achievement.erisBoss", "erisBoss", 15, 4, ExtraPlanets_Blocks.erisDungeonBrick, erisPlanet).registerStat();
+//		// Boss Killing Achievements
+//		if (Config.venus)
+//			venusBoss = new Achievement("achievement.venusBoss", "venusBoss", 3, 5, ExtraPlanets_Blocks.veunsDungeonBrick, venusPlanet).registerStat();
+//		if (Config.jupiter)
+//			jupiterBoss = new Achievement("achievement.jupiterBoss", "jupiterBoss", 5, 5, ExtraPlanets_Blocks.jupiterDungeonBrick, jupiterPlanet).registerStat();
+//		if (Config.saturn)
+//			saturnBoss = new Achievement("achievement.saturnBoss", "saturnBoss", 7, 5, ExtraPlanets_Blocks.saturnDungeonBrick, saturnPlanet).registerStat();
+//		if (Config.uranus)
+//			uranusBoss = new Achievement("achievement.uranusBoss", "uranusBoss", 9, 5, ExtraPlanets_Blocks.uranusDungeonBrick, uranusPlanet).registerStat();
+//		if (Config.neptune)
+//			neptuneBoss = new Achievement("achievement.neptuneBoss", "neptuneBoss", 11, 5, ExtraPlanets_Blocks.neptuneDungeonBrick, neptunePlanet).registerStat();
+//		if (Config.pluto)
+//			plutoBoss = new Achievement("achievement.plutoBoss", "plutoBoss", 13, 5, ExtraPlanets_Blocks.plutoDungeonBrick, plutoPlanet).registerStat();
+//		if (Config.eris)
+//			plutoBoss = new Achievement("achievement.erisBoss", "erisBoss", 15, 4, ExtraPlanets_Blocks.erisDungeonBrick, erisPlanet).registerStat();
 	}
 
 	private static void initAchievementPage() {
