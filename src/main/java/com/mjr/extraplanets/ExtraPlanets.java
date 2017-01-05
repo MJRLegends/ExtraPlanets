@@ -54,6 +54,7 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.proxy.CommonProxy;
+import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier4Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier5Rocket;
@@ -138,7 +139,7 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
 		//ExtraPlanets_Tools.init();
-		ExtraPlanets_Armor.init();
+		//ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
 		// Proxy PreInit Method
@@ -175,7 +176,7 @@ public class ExtraPlanets {
 		addDungeonLoot();
 
 		// Register Recipes
-		// ExtraPlanets_Recipes.init();
+		ExtraPlanets_Recipes.init();
 
 		// Initialize/Register Achievements
 		if (Config.achievements)
