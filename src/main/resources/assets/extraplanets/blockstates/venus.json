@@ -1,0 +1,14 @@
+{
+    "variants": {
+		"basictypevenus=venus_surface": { "model": "extraplanets:venus_surface_model" },
+        "basictypevenus=venus_sub_surface": { "model": "extraplanets:venus_sub_surface_model" },
+        "basictypevenus=venus_stone": { "model": "extraplanets:venus_stone_model" },
+        "basictypevenus=venus_ore_iron": { "model": "extraplanets:venus_ore_iron_model" },
+        "basictypevenus=venus_ore_tin": { "model": "extraplanets:venus_ore_tin_model" },
+        "basictypevenus=venus_ore_copper": { "model": "extraplanets:venus_ore_copper_model" },
+		"basictypevenus=venus_ore_carbon": { "model": "extraplanets:venus_ore_carbon_model" },
+        "basictypevenus=venus_carbon_block": { "model": "extraplanets:venus_carbon_block_model" },
+        "basictypevenus=venus_stonebricks": { "model": "extraplanets:venus_stonebricks_model" },
+		"basictypevenus=venus_dungeon_brick": { "model": "extraplanets:venus_dungeon_brick_model" }
+    }
+}

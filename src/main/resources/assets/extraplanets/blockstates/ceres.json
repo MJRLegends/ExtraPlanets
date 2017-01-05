@@ -1,0 +1,13 @@
+{
+    "variants": {
+		"basictypeceres=ceres_surface": { "model": "extraplanets:ceres_surface_model" },
+        "basictypeceres=ceres_sub_surface": { "model": "extraplanets:ceres_sub_surface_model" },
+        "basictypeceres=ceres_stone": { "model": "extraplanets:ceres_stone_model" },
+        "basictypeceres=ceres_ore_iron": { "model": "extraplanets:ceres_ore_iron_model" },
+        "basictypeceres=ceres_ore_tin": { "model": "extraplanets:ceres_ore_tin_model" },
+        "basictypeceres=ceres_ore_copper": { "model": "extraplanets:ceres_ore_copper_model" },
+		"basictypeceres=ceres_ore_uranium": { "model": "extraplanets:ceres_ore_uranium_model" },
+        "basictypeceres=ceres_uranium_block": { "model": "extraplanets:ceres_uranium_block_model" },
+        "basictypeceres=ceres_stonebricks": { "model": "extraplanets:ceres_stonebricks_model" }
+    }
+}
