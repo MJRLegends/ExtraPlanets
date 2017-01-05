@@ -45,15 +45,12 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 		SURFACE(0, "uranus_surface"), 
 		SUB_SURFACE(1, "uranus_sub_surface"), 
 		STONE(2, "uranus_stone"), 
-		ORE_IRON(3, "uranus_ore_iron"), 
-		ORE_TIN(4, "uranus_ore_tin"), 
-		ORE_COPPER(5, "uranus_ore_copper"), 
-		ORE_CRYISTAL(6, "uranus_ore_crystal"), 
-		CRYISTAL_BLOCK(7, "uranus_crystal_block"), 
-		STONEBRICKS(8, "uranus_stonebricks"), 
-		DUNGEON_BRICK(9, "uranus_dungeon_brick"), 
-		ORE_BLUE_GEM(10, "uranus_ore_white_gem"),
-		BLUE_GEM_BLOCK(10, "uranus_white_gem_block");
+		ORE_CRYISTAL(3, "uranus_ore_crystal"), 
+		CRYISTAL_BLOCK(4, "uranus_crystal_block"), 
+		STONEBRICKS(5, "uranus_stonebricks"), 
+		DUNGEON_BRICK(6, "uranus_dungeon_brick"), 
+		ORE_BLUE_GEM(7, "uranus_ore_white_gem"),
+		BLUE_GEM_BLOCK(8, "uranus_white_gem_block");
 
 		private final int meta;
 		private final String name;
