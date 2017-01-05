@@ -36,7 +36,16 @@ TODO = Not yet done
 ======================================================================================================
 
 
+
 ===========================================Future Updates=============================================
+v1.0 Pre-3.9
+Information coming soon...
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v1.0 Pre-3.8
 *Changed Tier 2 Thermal Padding (And above) to protect you from uranium ore
 *Added more blocks to the MicroBlocks support
@@ -44,11 +53,6 @@ v1.0 Pre-3.8
 *Added some more Achievements
 *Added config options for enabling and disabling entities such as monsters
 
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
 v1.0 Pre-3.7.6
 *Added Blue & Red & Purple & Yellow & Green Diamond Tools
 *Added Blue & Red & Purple & Yellow & Green Diamond Armour
