@@ -468,13 +468,13 @@ item.bucket_frozen_water.name=Soğumuş Su Kovası
 item.bucket_nitrogen.name=Nitrojen Kovası
 
 #Keys
-item.key.T4.name=Tier 4 Zindan Anahtarı
-item.key.T5.name=Tier 5 Zindan Anahtarı
-item.key.T6.name=Tier 6 Zindan Anahtarı
-item.key.T7.name=Tier 7 Zindan Anahtarı
-item.key.T8.name=Tier 8 Zindan Anahtarı
-item.key.T9.name=Tier 9 Zindan Anahtarı
-item.key.T10.name=Tier 10 Zindan Anahtarı
+item.T4key.name=Tier 4 Zindan Anahtarı
+item.T5key.name=Tier 5 Zindan Anahtarı
+item.T6key.name=Tier 6 Zindan Anahtarı
+item.T7key.name=Tier 7 Zindan Anahtarı
+item.T8key.name=Tier 8 Zindan Anahtarı
+item.T9key.name=Tier 9 Zindan Anahtarı
+item.T10key.name=Tier 10 Zindan Anahtarı
 
 #Tools
 item.carbonPickaxe.name=Karbon Kazma
@@ -677,6 +677,7 @@ tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
 
 #Other Items
 item.appleDiamond.name=Elmas Elma
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Uzay Yiyecekleri
 item.bodyparts.arm.name=Kol
 item.bodyparts.leg.name=Bacak

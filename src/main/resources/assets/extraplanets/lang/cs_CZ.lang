@@ -468,13 +468,13 @@ item.bucket_frozen_water.name=Kbelík zmrzlé vody
 item.bucket_nitrogen.name=Kbelík dusíku
 
 #Keys
-item.key.T4.name=Klíč ke kobce typ 4
-item.key.T5.name=Klíč ke kobce typ 5
-item.key.T6.name=Klíč ke kobce typ 6
-item.key.T7.name=Klíč ke kobce typ 7
-item.key.T8.name=Klíč ke kobce typ 8
-item.key.T9.name=Klíč ke kobce typ 9
-item.key.T10.name=Klíč ke kobce typ 10
+item.T4key.name=Klíč ke kobce typ 4
+item.T5key.name=Klíč ke kobce typ 5
+item.T6key.name=Klíč ke kobce typ 6
+item.T7key.name=Klíč ke kobce typ 7
+item.T8key.name=Klíč ke kobce typ 8
+item.T9key.name=Klíč ke kobce typ 9
+item.T10key.name=Klíč ke kobce typ 10
 
 #Tools
 item.carbonPickaxe.name=Karbonový krumpáč
@@ -677,6 +677,7 @@ tier4.information=Required for Uranus, Neptune, Pluto and Eris including their m
 
 #Other Items
 item.appleDiamond.name=Diamantové jablko
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Plechovka jídla
 item.bodyparts.arm.name=Paže
 item.bodyparts.leg.name=Noha

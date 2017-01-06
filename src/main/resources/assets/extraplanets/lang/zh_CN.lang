@@ -469,13 +469,13 @@ item.bucket_frozen_water.name=冰冻水
 item.bucket_nitrogen.name=液氮
 
 #Keys
-item.key.T4.name=4阶宝箱钥匙
-item.key.T5.name=5阶宝箱钥匙
-item.key.T6.name=6阶宝箱钥匙
-item.key.T7.name=7阶宝箱钥匙
-item.key.T8.name=8阶宝箱钥匙
-item.key.T9.name=9阶宝箱钥匙
-item.key.T10.name=10阶宝箱钥匙
+item.T4key.name=4阶宝箱钥匙
+item.T5key.name=5阶宝箱钥匙
+item.T6key.name=6阶宝箱钥匙
+item.T7key.name=7阶宝箱钥匙
+item.T8key.name=8阶宝箱钥匙
+item.T9key.name=9阶宝箱钥匙
+item.T10key.name=10阶宝箱钥匙
 
 #Tools
 item.carbonPickaxe.name=碳镐
@@ -678,6 +678,7 @@ tier4.information=在天王星，海王星，冥王星和阋神星以及它们�
 
 #Other Items
 item.appleDiamond.name=钻石苹果
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=罐头食品
 item.bodyparts.arm.name=手
 item.bodyparts.leg.name=脚

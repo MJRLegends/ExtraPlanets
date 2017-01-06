@@ -468,13 +468,13 @@ item.bucket_frozen_water.name=Frozen Water Bucket
 item.bucket_nitrogen.name=Nitrogen Bucket
 
 #Keys
-item.key.T4.name=Tier 4 Dungeon Key
-item.key.T5.name=Tier 5 Dungeon Key
-item.key.T6.name=Tier 6 Dungeon Key
-item.key.T7.name=Tier 7 Dungeon Key
-item.key.T8.name=Tier 8 Dungeon Key
-item.key.T9.name=Tier 9 Dungeon Key
-item.key.T10.name=Tier 10 Dungeon Key
+item.T4key.name=Tier 4 Dungeon Key
+item.T5key.name=Tier 5 Dungeon Key
+item.T6key.name=Tier 6 Dungeon Key
+item.T7key.name=Tier 7 Dungeon Key
+item.T8key.name=Tier 8 Dungeon Key
+item.T9key.name=Tier 9 Dungeon Key
+item.T10key.name=Tier 10 Dungeon Key
 
 #Tools
 item.carbonPickaxe.name=Carbon Pickaxe
@@ -677,6 +677,7 @@ tier4.information=Required for Uranus, Neptune, Pluto and Eris including their m
 
 #Other Items
 item.appleDiamond.name=Diamond Apple
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Can of Food
 item.bodyparts.arm.name=Arm
 item.bodyparts.leg.name=Leg

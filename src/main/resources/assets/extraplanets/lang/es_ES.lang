@@ -467,13 +467,13 @@ item.bucket_frozen_water.name=Cubeta de agua congelada
 item.bucket_nitrogen.name=Cubeta de nitrógeno
 
 #Keys
-item.key.T4.name=Llave de mazmorra nivel 4
-item.key.T5.name=Llave de mazmorra nivel 5
-item.key.T6.name=Llave de mazmorra nivel 6
-item.key.T7.name=Llave de mazmorra nivel 7
-item.key.T8.name=Llave de mazmorra nivel 8
-item.key.T9.name=Llave de mazmorra nivel 9
-item.key.T10.name=Llave de mazmorra nivel 10
+item.T4key.name=Llave de mazmorra nivel 4
+item.T5key.name=Llave de mazmorra nivel 5
+item.T6key.name=Llave de mazmorra nivel 6
+item.T7key.name=Llave de mazmorra nivel 7
+item.T8key.name=Llave de mazmorra nivel 8
+item.T9key.name=Llave de mazmorra nivel 9
+item.T10key.name=Llave de mazmorra nivel 10
 
 #Tools
 item.carbonPickaxe.name=Pico de carbono
@@ -676,6 +676,7 @@ tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lun
 
 #Other Items
 item.appleDiamond.name=Manzana de diamante
+item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Lata de comida
 item.bodyparts.arm.name=Brazo
 item.bodyparts.leg.name=Pierna
