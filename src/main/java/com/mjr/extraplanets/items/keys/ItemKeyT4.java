@@ -35,7 +35,7 @@ public class ItemKeyT4 extends Item implements IKeyItem, ISortableItem
     @Override
     public String getUnlocalizedName(ItemStack itemStack)
     {
-        return this.getUnlocalizedName() + ".t4";
+        return this.getUnlocalizedName();
     }
 
     @Override

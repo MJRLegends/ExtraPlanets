@@ -148,8 +148,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For
-		// SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
@@ -160,8 +159,10 @@ public class ExtraPlanets {
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 
-		if (event.getSide() == Side.CLIENT)
+		if (event.getSide() == Side.CLIENT){
 			registerBlockRenderers();
+			registerItemRenderers();
+		}
 	}
 
 	@EventHandler
@@ -190,6 +191,16 @@ public class ExtraPlanets {
 	public static void registerBlockJson(String texturePrefix, Block block) {
 		registerBlockJson(texturePrefix, block, 0, block.getUnlocalizedName().substring(5));
 	}
+	
+    public static void registerItemJson(String texturePrefix, Item item)
+    {
+        registerItemJson(texturePrefix, item, 0, item.getUnlocalizedName().substring(5));
+    }
+
+    public static void registerItemJson(String texturePrefix, Item item, int meta, String name)
+    {
+    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(texturePrefix + name, "inventory"));
+    }
 
 	private void registerBlockRenderers() {
 		// Planets
@@ -259,10 +270,19 @@ public class ExtraPlanets {
 		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier10);
 
 	}
+	
+	private void registerItemRenderers() {
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T4key);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T5key);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T6key);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T7key);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T8key);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T9key);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T10key);
+	}
 
 	private void registerNonMobEntities() {
-		// registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class,
-		// Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		// registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		if (Config.venus)
 			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 		if (Config.jupiter)
