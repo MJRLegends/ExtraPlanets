@@ -283,30 +283,6 @@ public class EntityEvolvedMagmaCubeBoss extends EntityLiving implements IEntityB
 			this.spawner.boss = null;
 			this.spawner.spawned = false;
 		}
-		int i = this.getSlimeSize();
-
-		if (!this.worldObj.isRemote && i > 1 && this.getHealth() <= 0.0F) {
-			int j = 2 + this.rand.nextInt(3);
-
-			for (int k = 0; k < j; ++k) {
-				float f = ((float) (k % 2) - 0.5F) * (float) i / 4.0F;
-				float f1 = ((float) (k / 2) - 0.5F) * (float) i / 4.0F;
-				EntityEvolvedMagmaCubeBoss entityslime = this.createInstance();
-
-				if (this.hasCustomName()) {
-					entityslime.setCustomNameTag(this.getCustomNameTag());
-				}
-
-				if (this.isNoDespawnRequired()) {
-					entityslime.enablePersistence();
-				}
-
-				entityslime.setSlimeSize((i / 2) * 10);
-				entityslime.setLocationAndAngles(this.posX + (double) f, this.posY + 0.5D, this.posZ + (double) f1, this.rand.nextFloat() * 360.0F, 0.0F);
-				this.worldObj.spawnEntityInWorld(entityslime);
-			}
-		}
-
 		super.setDead();
 	}
 
@@ -446,14 +422,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityLiving implements IEntityB
 	 * from nbt. Mainly used for initializing attributes and inventory
 	 */
 	public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata) {
-		int i = this.rand.nextInt(3);
-
-		if (i < 2 && this.rand.nextFloat() < 0.5F * difficulty.getClampedAdditionalDifficulty()) {
-			++i;
-		}
-
-		int j = 1 << i;
-		this.setSlimeSize(j);
+		this.setSlimeSize(6);
 		return super.onInitialSpawn(difficulty, livingdata);
 	}
 

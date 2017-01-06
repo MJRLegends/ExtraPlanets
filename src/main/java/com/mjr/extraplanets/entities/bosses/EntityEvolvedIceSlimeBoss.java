@@ -41,7 +41,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 
 public class EntityEvolvedIceSlimeBoss extends EntityLiving implements IEntityBreathable, IBossDisplayData, IBoss {
 	public float squishAmount;
@@ -239,7 +239,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityLiving implements IEntityBr
 				this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
 			}
 
-			TileEntityT4TreasureChest chest = TileEntityT4TreasureChest.findClosest(this);
+			TileEntityT7TreasureChest chest = TileEntityT7TreasureChest.findClosest(this);
 
 			if (chest != null) {
 				double dist = this.getDistanceSq(chest.getPos().getX() + 0.5, chest.getPos().getY() + 0.5, chest.getPos().getZ() + 0.5);
@@ -283,30 +283,6 @@ public class EntityEvolvedIceSlimeBoss extends EntityLiving implements IEntityBr
 			this.spawner.boss = null;
 			this.spawner.spawned = false;
 		}
-		int i = this.getSlimeSize();
-
-		if (!this.worldObj.isRemote && i > 1 && this.getHealth() <= 0.0F) {
-			int j = 2 + this.rand.nextInt(3);
-
-			for (int k = 0; k < j; ++k) {
-				float f = ((float) (k % 2) - 0.5F) * (float) i / 4.0F;
-				float f1 = ((float) (k / 2) - 0.5F) * (float) i / 4.0F;
-				EntityEvolvedIceSlimeBoss entityslime = this.createInstance();
-
-				if (this.hasCustomName()) {
-					entityslime.setCustomNameTag(this.getCustomNameTag());
-				}
-
-				if (this.isNoDespawnRequired()) {
-					entityslime.enablePersistence();
-				}
-
-				entityslime.setSlimeSize((i / 2) * 10);
-				entityslime.setLocationAndAngles(this.posX + (double) f, this.posY + 0.5D, this.posZ + (double) f1, this.rand.nextFloat() * 360.0F, 0.0F);
-				this.worldObj.spawnEntityInWorld(entityslime);
-			}
-		}
-
 		super.setDead();
 	}
 
@@ -446,14 +422,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityLiving implements IEntityBr
 	 * from nbt. Mainly used for initializing attributes and inventory
 	 */
 	public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata) {
-		int i = this.rand.nextInt(3);
-
-		if (i < 2 && this.rand.nextFloat() < 0.5F * difficulty.getClampedAdditionalDifficulty()) {
-			++i;
-		}
-
-		int j = 1 << i;
-		this.setSlimeSize(j);
+		this.setSlimeSize(6);
 		return super.onInitialSpawn(difficulty, livingdata);
 	}
 
@@ -671,7 +640,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityLiving implements IEntityBr
 	}
 
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(4);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(7);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 }
