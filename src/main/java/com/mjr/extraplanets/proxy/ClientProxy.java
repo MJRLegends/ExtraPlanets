@@ -2,6 +2,7 @@ package com.mjr.extraplanets.proxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -9,6 +10,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -38,6 +40,15 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossEris;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossJupiter;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossNeptune;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossPluto;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossSaturn;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossUranus;
+import com.mjr.extraplanets.client.render.entities.RenderCreeperBossVenus;
+import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
@@ -45,6 +56,15 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemTier10Items;
 import com.mjr.extraplanets.items.ItemTier11Items;
@@ -84,7 +104,7 @@ public class ClientProxy extends CommonProxy {
 		addExtraPlanetsVariants("rhea", "rhea_surface", "rhea_sub_surface", "rhea_stone", "rhea_ore_iron", "rhea_ore_tin", "rhea_ore_copper");
 		addExtraPlanetsVariants("titan", "titan_surface", "titan_sub_surface", "titan_stone", "titan_ore_iron", "titan_ore_tin", "titan_ore_copper");
 		addExtraPlanetsVariants("triton", "triton_surface", "triton_sub_surface", "triton_stone", "triton_ore_iron", "triton_ore_tin", "triton_ore_copper");
-		
+
 		addExtraPlanetsVariants("tier4Items", "tier4engine", "tier4booster", "tier4Fin", "tier4HeavyDutyPlate", "compressedCarbon", "ingotCarbon");
 		addExtraPlanetsVariants("tier5Items", "tier5engine", "tier5booster", "tier5Fin", "tier5HeavyDutyPlate", "compressedPalladium", "ingotPalladium", "compressedNickel", "ingotNickel", "redGem");
 		addExtraPlanetsVariants("tier6Items", "tier6engine", "tier6booster", "tier6Fin", "tier6HeavyDutyPlate", "compressedMagnesium", "ingotMagnesium");
@@ -94,8 +114,18 @@ public class ClientProxy extends CommonProxy {
 		addExtraPlanetsVariants("tier10Items", "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compressedDarkIron", "ingotDarkIron");
 		addExtraPlanetsVariants("tier11Items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
 
+		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, (RenderManager manager) -> new RenderCreeperBossVenus(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, (RenderManager manager) -> new RenderCreeperBossSaturn(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, (RenderManager manager) -> new RenderCreeperBossUranus(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, (RenderManager manager) -> new RenderCreeperBossNeptune(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, (RenderManager manager) -> new RenderCreeperBossPluto(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, (RenderManager manager) -> new RenderEvolvedIceSlimeBoss(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
+
 		MinecraftForge.EVENT_BUS.register(this);
-		
+
 		registerVariants();
 		super.preInit(event);
 	}
@@ -166,7 +196,7 @@ public class ClientProxy extends CommonProxy {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
 
 	}
-	
+
 	public static void registerBlockJson(String texturePrefix, Block block, int meta, String name) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(texturePrefix + name, "inventory"));
 	}
