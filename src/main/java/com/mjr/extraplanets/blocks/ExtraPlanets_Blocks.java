@@ -42,7 +42,6 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEuropa;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockGanymede;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockIo;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockJupiter;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockKepler22b;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockMercury;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockNeptune;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockPhobos;
@@ -53,12 +52,6 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLeaf;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog2;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleSapling;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bPlanks;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bTallGrass;
 import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
@@ -132,9 +125,7 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier8;
 	public static Block treasureChestTier9;
 	public static Block treasureChestTier10;
-
-	// Need changing to meta blocks -----------------------------------------
-
+	
 	// Dungeon Spawners
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
@@ -159,8 +150,6 @@ public class ExtraPlanets_Blocks {
 
 	// Planks
 	public static Block kepler22bPlanks;
-
-	// -----------------------------------------------------------------------
 
 	public static void init() {
 		initializeBlocks();

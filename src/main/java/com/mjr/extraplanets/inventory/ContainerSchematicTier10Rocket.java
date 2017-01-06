@@ -101,7 +101,7 @@ public class ContainerSchematicTier10Rocket extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
 		ItemStack var2 = null;
-		final Slot var3 = (Slot) this.inventorySlots.get(par1);
+		final Slot var3 = this.inventorySlots.get(par1);
 
 		if (var3 != null && var3.getHasStack()) {
 			final ItemStack var4 = var3.getStack();
@@ -116,7 +116,7 @@ public class ContainerSchematicTier10Rocket extends Container {
 				var3.onSlotChange(var4, var2);
 			} else {
 				for (int i = 1; i < 19; i++) {
-					Slot testSlot = (Slot) this.inventorySlots.get(i);
+					Slot testSlot = this.inventorySlots.get(i);
 					if (!testSlot.getHasStack() && testSlot.isItemValid(var2)) {
 						if (!this.mergeItemStack(var4, i, i + 1, false)) {
 							return null;
@@ -127,15 +127,15 @@ public class ContainerSchematicTier10Rocket extends Container {
 				}
 
 				if (!done) {
-					if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !((Slot) this.inventorySlots.get(19)).getHasStack()) {
+					if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !this.inventorySlots.get(19).getHasStack()) {
 						if (!this.mergeItemStack(var4, 19, 20, false)) {
 							return null;
 						}
-					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !((Slot) this.inventorySlots.get(20)).getHasStack()) {
+					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !this.inventorySlots.get(20).getHasStack()) {
 						if (!this.mergeItemStack(var4, 20, 21, false)) {
 							return null;
 						}
-					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !((Slot) this.inventorySlots.get(21)).getHasStack()) {
+					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !this.inventorySlots.get(21).getHasStack()) {
 						if (!this.mergeItemStack(var4, 21, 22, false)) {
 							return null;
 						}

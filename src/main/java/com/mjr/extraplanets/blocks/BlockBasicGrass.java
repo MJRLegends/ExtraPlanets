@@ -9,10 +9,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.IPlantable;
-
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicGrass extends Block {
@@ -33,6 +30,7 @@ public class BlockBasicGrass extends Block {
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
+	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!worldIn.isRemote) {
 			if (worldIn.getLightFromNeighbors(pos.up()) < 4 && worldIn.getBlockState(pos.up()).getBlock().getLightOpacity(worldIn, pos.up()) > 2) {
@@ -53,6 +51,7 @@ public class BlockBasicGrass extends Block {
 		}
 	}
 
+	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Blocks.dirt.getItemDropped(Blocks.dirt.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT), rand, fortune);
 	}
