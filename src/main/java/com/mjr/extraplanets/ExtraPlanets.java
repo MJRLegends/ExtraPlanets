@@ -5,9 +5,6 @@ import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -23,24 +20,6 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicGanymede;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPhobos;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicRhea;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -148,7 +127,8 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For
+		// SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
@@ -158,11 +138,6 @@ public class ExtraPlanets {
 
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
-
-		if (event.getSide() == Side.CLIENT){
-			registerBlockRenderers();
-			registerItemRenderers();
-		}
 	}
 
 	@EventHandler
@@ -184,105 +159,9 @@ public class ExtraPlanets {
 		ExtraPlanets.proxy.postInit(event);
 	}
 
-	public static void registerBlockJson(String texturePrefix, Block block, int meta, String name) {
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(texturePrefix + name, "inventory"));
-	}
-
-	public static void registerBlockJson(String texturePrefix, Block block) {
-		registerBlockJson(texturePrefix, block, 0, block.getUnlocalizedName().substring(5));
-	}
-	
-    public static void registerItemJson(String texturePrefix, Item item)
-    {
-        registerItemJson(texturePrefix, item, 0, item.getUnlocalizedName().substring(5));
-    }
-
-    public static void registerItemJson(String texturePrefix, Item item, int meta, String name)
-    {
-    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(texturePrefix + name, "inventory"));
-    }
-
-	private void registerBlockRenderers() {
-		// Planets
-		for (BlockBasicMercury.EnumBlockBasic blockBasic : BlockBasicMercury.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicVenus.EnumBlockBasic blockBasic : BlockBasicVenus.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicCeres.EnumBlockBasic blockBasic : BlockBasicCeres.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicJupiter.EnumBlockBasic blockBasic : BlockBasicJupiter.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.jupiterBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicSaturn.EnumBlockBasic blockBasic : BlockBasicSaturn.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.saturnBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicUranus.EnumBlockBasic blockBasic : BlockBasicUranus.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.uranusBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicNeptune.EnumBlockBasic blockBasic : BlockBasicNeptune.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.neptuneBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicPluto.EnumBlockBasic blockBasic : BlockBasicPluto.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.plutoBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicEris.EnumBlockBasic blockBasic : BlockBasicEris.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.erisBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-
-		// Moons
-		for (BlockBasicCallisto.EnumBlockBasic blockBasic : BlockBasicCallisto.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.callistoBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicDeimos.EnumBlockBasic blockBasic : BlockBasicDeimos.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.deimosBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicEuropa.EnumBlockBasic blockBasic : BlockBasicEuropa.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.europaBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicGanymede.EnumBlockBasic blockBasic : BlockBasicGanymede.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ganymedeBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicIo.EnumBlockBasic blockBasic : BlockBasicIo.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ioBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicPhobos.EnumBlockBasic blockBasic : BlockBasicPhobos.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.phobosBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicRhea.EnumBlockBasic blockBasic : BlockBasicRhea.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.rheaBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicTitan.EnumBlockBasic blockBasic : BlockBasicTitan.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titanBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-		for (BlockBasicTriton.EnumBlockBasic blockBasic : BlockBasicTriton.EnumBlockBasic.values()) {
-			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.tritonBlocks, blockBasic.getMeta(), blockBasic.getName());
-		}
-
-		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier4);
-		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier5);
-		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier6);
-		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier7);
-		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier8);
-		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier9);
-		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier10);
-
-	}
-	
-	private void registerItemRenderers() {
-		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T4key);
-		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T5key);
-		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T6key);
-		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T7key);
-		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T8key);
-		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T9key);
-		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T10key);
-	}
-
 	private void registerNonMobEntities() {
-		// registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		// registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class,
+		// Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		if (Config.venus)
 			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 		if (Config.jupiter)

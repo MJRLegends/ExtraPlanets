@@ -123,7 +123,7 @@ public class ExtraPlanets_Items {
 			tier4Rocket = new Tier4Rocket("itemTier4Rocket");
 			schematicTier4 = new SchematicTier4("schematicTier4");
 			noseConeTier4 = new Tier4NoseCone("noseConeTier4");
-			tier4Items = new ItemTier4Items("tier4");
+			tier4Items = new ItemTier4Items("tier4Items");
 			T4key = new ItemKeyT4("T4key");
 		}
 		if (Config.ceres) {
@@ -137,7 +137,7 @@ public class ExtraPlanets_Items {
 			tier5Rocket = new Tier5Rocket("itemTier5Rocket");
 			schematicTier5 = new SchematicTier5("schematicTier5");
 			noseConeTier5 = new Tier5NoseCone("noseConeTier5");
-			tier5Items = new ItemTier5Items("tier5");
+			tier5Items = new ItemTier5Items("tier5Items");
 			T5key = new ItemKeyT5("T5key");
 		}
 		if (Config.saturn) {
@@ -146,7 +146,7 @@ public class ExtraPlanets_Items {
 			tier6Rocket = new Tier6Rocket("itemTier6Rocket");
 			schematicTier6 = new SchematicTier6("schematicTier6");
 			noseConeTier6 = new Tier6NoseCone("noseConeTier6");
-			tier6Items = new ItemTier6Items("tier6");
+			tier6Items = new ItemTier6Items("tier6Items");
 			T6key = new ItemKeyT6("T6key");
 		}
 		if (Config.uranus) {
@@ -155,7 +155,7 @@ public class ExtraPlanets_Items {
 			tier7Rocket = new Tier7Rocket("itemTier7Rocket");
 			schematicTier7 = new SchematicTier7("schematicTier7");
 			noseConeTier7 = new Tier7NoseCone("noseConeTier7");
-			tier7Items = new ItemTier7Items("tier7");
+			tier7Items = new ItemTier7Items("tier7Items");
 			T7key = new ItemKeyT7("T7key");
 		}
 		if (Config.neptune) {
@@ -165,21 +165,21 @@ public class ExtraPlanets_Items {
 			tier8Rocket = new Tier8Rocket("itemTier8Rocket");
 			schematicTier8 = new SchematicTier8("schematicTier8");
 			noseConeTier8 = new Tier8NoseCone("noseConeTier8");
-			tier8Items = new ItemTier8Items("tier8");
+			tier8Items = new ItemTier8Items("tier8Items");
 			T8key = new ItemKeyT8("T8key");
 		}
 		if (Config.pluto) {
 			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
 			schematicTier9 = new SchematicTier9("schematicTier9");
 			noseConeTier9 = new Tier9NoseCone("noseConeTier9");
-			tier9Items = new ItemTier9Items("tier9");
+			tier9Items = new ItemTier9Items("tier9Items");
 			T9key = new ItemKeyT9("T9key");
 		}
 		if (Config.eris) {
 			tier10Rocket = new Tier10Rocket("itemTier10Rocket");
 			schematicTier10 = new SchematicTier10("schematicTier10");
 			noseConeTier10 = new Tier10NoseCone("noseConeTier10");
-			tier10Items = new ItemTier10Items("tier10");
+			tier10Items = new ItemTier10Items("tier10Items");
 			T10key = new ItemKeyT10("T10key");
 		}
 		if (Config.eris) {
