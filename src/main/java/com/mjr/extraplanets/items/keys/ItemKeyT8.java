@@ -2,6 +2,8 @@ package com.mjr.extraplanets.items.keys;
 
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import micdoodle8.mods.galacticraft.api.item.IKeyItem;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
@@ -29,7 +31,7 @@ public class ItemKeyT8 extends Item implements IKeyItem, ISortableItem
     @Override
     public CreativeTabs getCreativeTab()
     {
-        return GalacticraftCore.galacticraftItemsTab;
+    	return ExtraPlanets.ItemsTab;
     }
 
     @Override
