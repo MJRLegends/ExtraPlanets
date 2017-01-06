@@ -8,7 +8,7 @@ public class TileEntityT4TreasureChest extends TileEntityTreasureChest
 {
     public TileEntityT4TreasureChest()
     {
-        super(2);
+        super(4);
     }
 
     public TileEntityT4TreasureChest(int tier)

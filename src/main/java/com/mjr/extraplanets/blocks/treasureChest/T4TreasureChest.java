@@ -4,13 +4,11 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockT1TreasureChest;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 
 public class T4TreasureChest extends BlockT1TreasureChest {
 	public T4TreasureChest(String assetName) {
 		super(assetName);
-		this.setUnlocalizedName(assetName);
 	}
 
 	@Override

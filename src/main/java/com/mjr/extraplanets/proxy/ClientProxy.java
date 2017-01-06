@@ -6,17 +6,34 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
+import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
+import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
+import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
+import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer;
+import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
+import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
+import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 
 public class ClientProxy extends CommonProxy {
-
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		addExtraPlanetsVariants("mercury", "mercury_surface", "mercury_sub_surface", "mercury_stone", "mercury_ore_iron", "mercury_ore_tin", "mercury_ore_copper", "mercury_ore_mercury", "mercury_mercury_block", "mercury_stonebricks");
@@ -28,7 +45,7 @@ public class ClientProxy extends CommonProxy {
 		addExtraPlanetsVariants("saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper", "saturn_ore_magnesium", "saturn_magnesium_block", "saturn_stonebricks", "saturn_dungeon_brick");
 		addExtraPlanetsVariants("pluto", "pluto_surface", "pluto_sub_surface", "pluto_stone", "pluto_ore_iron", "pluto_ore_tin", "pluto_ore_copper", "pluto_ore_tungsten", "pluto_tungsten_block", "pluto_stonebricks", "pluto_dungeon_brick");
 		addExtraPlanetsVariants("eris", "eris_surface", "eris_sub_surface", "eris_stone", "eris_ore_iron", "eris_ore_tin", "eris_ore_copper", "eris_ore_dark_iron", "eris_dark_iron_block", "eris_stonebricks", "eris_dungeon_brick");
-		
+
 		addExtraPlanetsVariants("callisto", "callisto_surface", "callisto_sub_surface", "callisto_stone", "callisto_ore_iron", "callisto_ore_tin", "callisto_ore_copper");
 		addExtraPlanetsVariants("deimos", "deimos_surface", "deimos_sub_surface", "deimos_stone", "deimos_ore_iron", "deimos_ore_tin", "deimos_ore_copper");
 		addExtraPlanetsVariants("europa", "europa_surface", "europa_sub_surface", "europa_stone", "europa_ore_iron", "europa_ore_tin", "europa_ore_copper");
@@ -38,8 +55,10 @@ public class ClientProxy extends CommonProxy {
 		addExtraPlanetsVariants("rhea", "rhea_surface", "rhea_sub_surface", "rhea_stone", "rhea_ore_iron", "rhea_ore_tin", "rhea_ore_copper");
 		addExtraPlanetsVariants("titan", "titan_surface", "titan_sub_surface", "titan_stone", "titan_ore_iron", "titan_ore_tin", "titan_ore_copper");
 		addExtraPlanetsVariants("triton", "triton_surface", "triton_sub_surface", "triton_stone", "triton_ore_iron", "triton_ore_tin", "triton_ore_copper");
-        MinecraftForge.EVENT_BUS.register(this);
-        registerVariants();
+		
+		MinecraftForge.EVENT_BUS.register(this);
+		
+		registerVariants();
 		super.preInit(event);
 	}
 
@@ -51,19 +70,22 @@ public class ClientProxy extends CommonProxy {
 		}
 		ModelBakery.registerItemVariants(itemBlockVariants, variants0);
 	}
-	
+
 	@Override
 	public void init(FMLInitializationEvent event) {
 		SkyProviderHandler clientEventHandler = new SkyProviderHandler();
 		MinecraftForge.EVENT_BUS.register(clientEventHandler);
+		renderBlocks();
+		MinecraftForge.EVENT_BUS.register(this);
 		super.init(event);
 	}
 
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
+		MinecraftForge.EVENT_BUS.register(this);
 		super.postInit(event);
 	}
-	
+
 	public void registerVariants() {
 		ModelResourceLocation modelResourceLocation = new ModelResourceLocation("galacticraftplanets:rocket_t3", "inventory");
 		for (int i = 0; i < 5; ++i) {
@@ -84,5 +106,24 @@ public class ClientProxy extends CommonProxy {
 		for (int i = 0; i < 5; ++i) {
 			ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.tier9Rocket, i, modelResourceLocation);
 		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	private static void renderBlocks() {
+		if (Config.venus)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
+		if (Config.jupiter)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT5TreasureChest.class, new TileEntityT5TreasureChestRenderer());
+		if (Config.saturn)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT6TreasureChest.class, new TileEntityT6TreasureChestRenderer());
+		if (Config.uranus)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT7TreasureChest.class, new TileEntityT7TreasureChestRenderer());
+		if (Config.neptune)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
+		if (Config.pluto)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());
+		if (Config.eris)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
+
 	}
 }

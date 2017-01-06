@@ -22,7 +22,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
-import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
@@ -85,20 +84,20 @@ public class ExtraPlanets {
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
 		public Item getTabIconItem() {
-			 if (Config.venus)
-				 return ExtraPlanets_Items.tier4Rocket;
-			 else if (Config.jupiter)
-				 return ExtraPlanets_Items.tier5Rocket;
-			 else if (Config.saturn)
-				 return ExtraPlanets_Items.tier6Rocket;
-			 else if (Config.uranus)
-				 return ExtraPlanets_Items.tier7Rocket;
-			 else if (Config.neptune)
-				 return ExtraPlanets_Items.tier8Rocket;
-			 else if (Config.pluto)
-				 return ExtraPlanets_Items.tier9Rocket;
-			 else if (Config.eris)
-				 return ExtraPlanets_Items.tier10Rocket;
+			if (Config.venus)
+				return ExtraPlanets_Items.tier4Rocket;
+			else if (Config.jupiter)
+				return ExtraPlanets_Items.tier5Rocket;
+			else if (Config.saturn)
+				return ExtraPlanets_Items.tier6Rocket;
+			else if (Config.uranus)
+				return ExtraPlanets_Items.tier7Rocket;
+			else if (Config.neptune)
+				return ExtraPlanets_Items.tier8Rocket;
+			else if (Config.pluto)
+				return ExtraPlanets_Items.tier9Rocket;
+			else if (Config.eris)
+				return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
 	};
@@ -138,35 +137,33 @@ public class ExtraPlanets {
 		Config.load();
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
-		//ExtraPlanets_Tools.init();
-		//ExtraPlanets_Armor.init();
+		// ExtraPlanets_Tools.init();
+		// ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
 		// Proxy PreInit Method
 		ExtraPlanets.proxy.preInit(event);
-		
+
 	}
-	
-	
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For
+		// SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
 
 		registerNonMobEntities();
-		
+
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 
-		if(event.getSide() == Side.CLIENT)
+		if (event.getSide() == Side.CLIENT)
 			registerBlockRenderers();
-		
 	}
-	
+
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
@@ -185,88 +182,82 @@ public class ExtraPlanets {
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
 	}
-	
-	public static void registerBlockJson(String texturePrefix, Block block, int meta, String name)
-    {
+
+	public static void registerBlockJson(String texturePrefix, Block block, int meta, String name) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(texturePrefix + name, "inventory"));
-    }
-	
+	}
+
+	public static void registerBlockJson(String texturePrefix, Block block) {
+		registerBlockJson(texturePrefix, block, 0, block.getUnlocalizedName().substring(5));
+	}
+
 	private void registerBlockRenderers() {
 		// Planets
-		for (BlockBasicMercury.EnumBlockBasic blockBasic : BlockBasicMercury.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicVenus.EnumBlockBasic blockBasic : BlockBasicVenus.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicCeres.EnumBlockBasic blockBasic : BlockBasicCeres.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicJupiter.EnumBlockBasic blockBasic : BlockBasicJupiter.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.jupiterBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicSaturn.EnumBlockBasic blockBasic : BlockBasicSaturn.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.saturnBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicUranus.EnumBlockBasic blockBasic : BlockBasicUranus.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.uranusBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicNeptune.EnumBlockBasic blockBasic : BlockBasicNeptune.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.neptuneBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicPluto.EnumBlockBasic blockBasic : BlockBasicPluto.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.plutoBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicEris.EnumBlockBasic blockBasic : BlockBasicEris.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.erisBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		
+		for (BlockBasicMercury.EnumBlockBasic blockBasic : BlockBasicMercury.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicVenus.EnumBlockBasic blockBasic : BlockBasicVenus.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicCeres.EnumBlockBasic blockBasic : BlockBasicCeres.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicJupiter.EnumBlockBasic blockBasic : BlockBasicJupiter.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.jupiterBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicSaturn.EnumBlockBasic blockBasic : BlockBasicSaturn.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.saturnBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicUranus.EnumBlockBasic blockBasic : BlockBasicUranus.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.uranusBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicNeptune.EnumBlockBasic blockBasic : BlockBasicNeptune.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.neptuneBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicPluto.EnumBlockBasic blockBasic : BlockBasicPluto.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.plutoBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicEris.EnumBlockBasic blockBasic : BlockBasicEris.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.erisBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+
 		// Moons
-		for (BlockBasicCallisto.EnumBlockBasic blockBasic : BlockBasicCallisto.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.callistoBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicDeimos.EnumBlockBasic blockBasic : BlockBasicDeimos.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.deimosBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicEuropa.EnumBlockBasic blockBasic : BlockBasicEuropa.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.europaBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicGanymede.EnumBlockBasic blockBasic : BlockBasicGanymede.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ganymedeBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicIo.EnumBlockBasic blockBasic : BlockBasicIo.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ioBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicPhobos.EnumBlockBasic blockBasic : BlockBasicPhobos.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.phobosBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicRhea.EnumBlockBasic blockBasic : BlockBasicRhea.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.rheaBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicTitan.EnumBlockBasic blockBasic : BlockBasicTitan.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titanBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
-		for (BlockBasicTriton.EnumBlockBasic blockBasic : BlockBasicTriton.EnumBlockBasic.values())
-        {
-            registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.tritonBlocks, blockBasic.getMeta(), blockBasic.getName());
-        }
+		for (BlockBasicCallisto.EnumBlockBasic blockBasic : BlockBasicCallisto.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.callistoBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicDeimos.EnumBlockBasic blockBasic : BlockBasicDeimos.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.deimosBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicEuropa.EnumBlockBasic blockBasic : BlockBasicEuropa.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.europaBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicGanymede.EnumBlockBasic blockBasic : BlockBasicGanymede.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ganymedeBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicIo.EnumBlockBasic blockBasic : BlockBasicIo.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ioBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicPhobos.EnumBlockBasic blockBasic : BlockBasicPhobos.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.phobosBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicRhea.EnumBlockBasic blockBasic : BlockBasicRhea.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.rheaBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicTitan.EnumBlockBasic blockBasic : BlockBasicTitan.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titanBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockBasicTriton.EnumBlockBasic blockBasic : BlockBasicTriton.EnumBlockBasic.values()) {
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.tritonBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
+
+		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier4);
+		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier5);
+		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier6);
+		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier7);
+		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier8);
+		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier9);
+		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier10);
+
 	}
 
 	private void registerNonMobEntities() {
@@ -289,41 +280,61 @@ public class ExtraPlanets {
 	}
 
 	private void registerCreatures() {
-//		 // Dungeon Bosses
-//		 if (Config.venus)
-//		 	if (Config.useDefaultBosses)
-//				registerExtraPlanetsCreature(EntityCreeperBossVenus.class,"CreeperBossVenus", 894731, 0);
-//		 	else
-//				registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class,Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
-//		 if (Config.jupiter)
-//			 registerExtraPlanetsCreature(EntityCreeperBossJupiter.class,Constants.modName + "CreeperBossJupiter", 894731, 0);
-//		 if (Config.saturn)
-//			 registerExtraPlanetsCreature(EntityCreeperBossSaturn.class,Constants.modName + "CreeperBossSaturn", 894731, 0);
-//		 if (Config.uranus)
-//			if (Config.useDefaultBosses)
-//		 		registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus", 894731, 0);
-//		 	else
-//		 		registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class,Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
-//		 if (Config.neptune)
-//		 	registerExtraPlanetsCreature(EntityCreeperBossNeptune.class,Constants.modName + "CreeperBossNeptune", 894731, 0);
-//		 if (Config.pluto)
-//		 	registerExtraPlanetsCreature(EntityCreeperBossPluto.class,Constants.modName + "CreeperBossPluto", 894731, 0);
-//		 if (Config.eris)
-//		 	registerExtraPlanetsCreature(EntityCreeperBossEris.class,Constants.modName + "CreeperBossEris", 894731, 0);
+		// // Dungeon Bosses
+		// if (Config.venus)
+		// if (Config.useDefaultBosses)
+		// registerExtraPlanetsCreature(EntityCreeperBossVenus.class,"CreeperBossVenus",
+		// 894731, 0);
+		// else
+		// registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class,Constants.modName
+		// + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+		// if (Config.jupiter)
+		// registerExtraPlanetsCreature(EntityCreeperBossJupiter.class,Constants.modName
+		// + "CreeperBossJupiter", 894731, 0);
+		// if (Config.saturn)
+		// registerExtraPlanetsCreature(EntityCreeperBossSaturn.class,Constants.modName
+		// + "CreeperBossSaturn", 894731, 0);
+		// if (Config.uranus)
+		// if (Config.useDefaultBosses)
+		// registerExtraPlanetsCreature(EntityCreeperBossUranus.class,"CreeperBossUranus",
+		// 894731, 0);
+		// else
+		// registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class,Constants.modName
+		// + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
+		// if (Config.neptune)
+		// registerExtraPlanetsCreature(EntityCreeperBossNeptune.class,Constants.modName
+		// + "CreeperBossNeptune", 894731, 0);
+		// if (Config.pluto)
+		// registerExtraPlanetsCreature(EntityCreeperBossPluto.class,Constants.modName
+		// + "CreeperBossPluto", 894731, 0);
+		// if (Config.eris)
+		// registerExtraPlanetsCreature(EntityCreeperBossEris.class,Constants.modName
+		// + "CreeperBossEris", 894731, 0);
 
-//		 // Entities
-//		 registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class,Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
-//		 registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
+		// // Entities
+		// registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class,Constants.modName
+		// + "EvolvedMagmaCube", 3407872, 16579584);
+		// registerExtraPlanetsCreature(EntityEvolvedIceSlime.class,
+		// Constants.modName + "EvolvedIceSlime", 16382457, 44975);
 
-//		 registerExtraPlanetsCreature(EvolvedIceBlaze.class,"EvolvedIceBlaze",3407872, 16579584);
-//		 registerExtraPlanetsCreature(EntityEvolvedWitch.class,Constants.modName + "EvolvedWitch", 3407872, 5349438);
-//		 registerExtraPlanetsCreature(EntityEvolvedEnderman.class,Constants.modName + "EvolvedEnderman", 1447446, 0);
-//		 registerExtraPlanetsCreature(EntityEvolvedBlaze.class,Constants.modName + "EvolvedBlaze", 16167425, 16775294);
-//		 registerExtraPlanetsCreature(EntityBlueCreeper.class,Constants.modName + "EvolvedBlueCreeper", 44975, 0);
-//		 registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class,Constants.modName + "EvolvedRedCreeper", 11013646, 0);
-//		 registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class,Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
-//		 registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class,Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
-//		 registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class,Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
+		// registerExtraPlanetsCreature(EvolvedIceBlaze.class,"EvolvedIceBlaze",3407872,
+		// 16579584);
+		// registerExtraPlanetsCreature(EntityEvolvedWitch.class,Constants.modName
+		// + "EvolvedWitch", 3407872, 5349438);
+		// registerExtraPlanetsCreature(EntityEvolvedEnderman.class,Constants.modName
+		// + "EvolvedEnderman", 1447446, 0);
+		// registerExtraPlanetsCreature(EntityEvolvedBlaze.class,Constants.modName
+		// + "EvolvedBlaze", 16167425, 16775294);
+		// registerExtraPlanetsCreature(EntityBlueCreeper.class,Constants.modName
+		// + "EvolvedBlueCreeper", 44975, 0);
+		// registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class,Constants.modName
+		// + "EvolvedRedCreeper", 11013646, 0);
+		// registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class,Constants.modName
+		// + "EvolvedPowerSkeleton", 12698049, 4802889);
+		// registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class,Constants.modName
+		// + "EvolvedGiantSpider", 12698049, 4802889);
+		// registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class,Constants.modName
+		// + "EvolvedMiniEnderman", 1447446, 0);
 	}
 
 	private void registerSchematicsRecipes() {

@@ -9,7 +9,6 @@ import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
 public class T8TreasureChest extends BlockT1TreasureChest {
 	public T8TreasureChest(String assetName) {
 		super(assetName);
-		this.setUnlocalizedName(assetName);
 	}
 
 	@Override

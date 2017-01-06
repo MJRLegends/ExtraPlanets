@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.client.render.tile;
 
-import micdoodle8.mods.galacticraft.core.Constants;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChest;
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChestLarge;
 import net.minecraft.block.Block;
@@ -14,7 +12,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.Constants;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityT4TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT4TreasureChest>
