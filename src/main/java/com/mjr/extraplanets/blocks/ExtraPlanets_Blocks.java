@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.blocks;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
+import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
@@ -9,6 +10,13 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockErisDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockJupiterDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockNeptuneDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockPlutoDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockSaturnDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockUranusDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockVenusDungeonSpawner;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
@@ -59,6 +67,13 @@ import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
 
 public class ExtraPlanets_Blocks {
 
@@ -125,7 +140,7 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier8;
 	public static Block treasureChestTier9;
 	public static Block treasureChestTier10;
-	
+
 	// Dungeon Spawners
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
@@ -265,6 +280,7 @@ public class ExtraPlanets_Blocks {
 			// BlockBasicKepler22bTallGrass("kepler22bFlowers");
 		}
 	}
+
 	private static void initializeTreasureChestBlocks() {
 		if (Config.venus) {
 			treasureChestTier4 = new T4TreasureChest("treasureChestT4");
@@ -290,27 +306,27 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void initializeSpawnerBlocks() {
-		// if (Config.venus) {
-		// venusSpawner = new DungeonSpawnerVenus();
-		// }
-		// if (Config.jupiter) {
-		// jupiterSpawner = new DungeonSpawnerJuptier();
-		// }
-		// if (Config.saturn) {
-		// saturnSpawner = new DungeonSpawnerSaturn();
-		// }
-		// if (Config.uranus) {
-		// uranusSpawner = new DungeonSpawnerUranus();
-		// }
-		// if (Config.neptune) {
-		// neptuneSpawner = new DungeonSpawnerNeptune();
-		// }
-		// if (Config.pluto) {
-		// plutoSpawner = new DungeonSpawnerPluto();
-		// }
-		// if (Config.eris) {
-		// erisSpawner = new DungeonSpawnerEris();
-		// }
+		if (Config.venus) {
+			venusSpawner = new BlockVenusDungeonSpawner("bossSpawnerVenus");
+		}
+		if (Config.jupiter) {
+			jupiterSpawner = new BlockJupiterDungeonSpawner("bossSpawnerVenus");
+		}
+		if (Config.saturn) {
+			saturnSpawner = new BlockSaturnDungeonSpawner("bossSpawnerSaturn");
+		}
+		if (Config.uranus) {
+			uranusSpawner = new BlockUranusDungeonSpawner("bossSpawnerUranus");
+		}
+		if (Config.neptune) {
+			neptuneSpawner = new BlockNeptuneDungeonSpawner("bossSpawnerNeptune");
+		}
+		if (Config.pluto) {
+			plutoSpawner = new BlockPlutoDungeonSpawner("bossSpawnerPluto");
+		}
+		if (Config.eris) {
+			erisSpawner = new BlockErisDungeonSpawner("bossSpawnerEris");
+		}
 	}
 
 	private static void initializeTreeBlocks() {
@@ -334,7 +350,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(venusBlocks, ItemBlockVenus.class, venusBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(venusGravel, "venusGravel");
 
-			//GameRegistry.registerBlock(venusSpawner, "venusSpawner");
+			GameRegistry.registerBlock(venusSpawner, ItemBlockGC.class, "venusSpawner");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
 		}
@@ -346,48 +362,56 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(jupiterGravel, "jupiterGravel");
 
-			//GameRegistry.registerBlock(jupiterSpawner, "jupiterSpawner");
+			GameRegistry.registerBlock(jupiterSpawner, ItemBlockGC.class, "jupiterSpawner");
 			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName().substring(5));
 		}
 		if (Config.saturn) {
 			GameRegistry.registerBlock(saturnBlocks, ItemBlockSaturn.class, saturnBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(saturnGravel, "saturnGravel");
 
-			//GameRegistry.registerBlock(saturnSpawner, "saturnSpawner");
+			GameRegistry.registerBlock(saturnSpawner, ItemBlockGC.class, "saturnSpawner");
 			GameRegistry.registerBlock(treasureChestTier6, ItemBlockDesc.class, treasureChestTier6.getUnlocalizedName().substring(5));
 		}
 		if (Config.uranus) {
 			GameRegistry.registerBlock(uranusBlocks, ItemBlockUranus.class, uranusBlocks.getUnlocalizedName().substring(5));
-			//GameRegistry.registerBlock(uranusSpawner, "uranusSpawner");
+			GameRegistry.registerBlock(uranusSpawner, ItemBlockGC.class, "uranusSpawner");
 			GameRegistry.registerBlock(treasureChestTier7, ItemBlockDesc.class, treasureChestTier7.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(denseIce, "denseIce");
 		}
 		if (Config.neptune) {
 			GameRegistry.registerBlock(neptuneBlocks, ItemBlockNeptune.class, neptuneBlocks.getUnlocalizedName().substring(5));
-			//GameRegistry.registerBlock(neptuneSpawner, "neptuneSpawner");
+			GameRegistry.registerBlock(neptuneSpawner, ItemBlockGC.class, "neptuneSpawner");
 			GameRegistry.registerBlock(treasureChestTier8, ItemBlockDesc.class, treasureChestTier8.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(frozenNitrogen, "frozenNitrogen");
 		}
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName().substring(5));
-			//GameRegistry.registerBlock(plutoSpawner, "plutoSpawner");
+			GameRegistry.registerBlock(plutoSpawner, ItemBlockGC.class, "plutoSpawner");
 			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(plutoGravel, "plutoGravel");
 		}
 		if (Config.eris) {
 			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName().substring(5));
-			//GameRegistry.registerBlock(erisSpawner, "erisSpawner");
+			GameRegistry.registerBlock(erisSpawner, ItemBlockGC.class, "erisSpawner");
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
 		if (Config.kepler22b) {
-//			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName().substring(5));
-//			GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
-//			GameRegistry.registerBlock(kepler22bBlueGrass, "kepler22bBlueGrass");
-//			GameRegistry.registerBlock(kepler22bPurpleGrass, "kepler22bPurpleGrass");
-//			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
-//			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
-//			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName().substring(5));
+			// GameRegistry.registerBlock(kepler22bBlocks,
+			// ItemBlockKepler22b.class,
+			// kepler22bBlocks.getUnlocalizedName().substring(5));
+			// GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
+			// GameRegistry.registerBlock(kepler22bBlueGrass,
+			// "kepler22bBlueGrass");
+			// GameRegistry.registerBlock(kepler22bPurpleGrass,
+			// "kepler22bPurpleGrass");
+			// GameRegistry.registerBlock(kepler22bRedGrass,
+			// "kepler22bRedGrass");
+			// GameRegistry.registerBlock(kepler22bYellowGrass,
+			// "kepler22bYellowGrass");
+			// GameRegistry.registerBlock(kepler22bGrassFlowers,
+			// ItemBlockKepler22bTallGrass.class,
+			// kepler22bGrassFlowers.getUnlocalizedName().substring(5));
 		}
 
 		if (Config.europa) {
@@ -434,38 +458,31 @@ public class ExtraPlanets_Blocks {
 
 	private static void registerTileEntitys() {
 		if (Config.venus) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerVenus.class,
-			// Constants.modName + "Veuns Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerVenus.class, Constants.modName + "Veuns Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
 		if (Config.jupiter) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class,
-			// Constants.modName + "Juptier Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT5TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
 		}
 		if (Config.saturn) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class,
-			// Constants.modName + "Saturn Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
 		if (Config.uranus) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class,
-			// Constants.modName + "Uranus Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
 		if (Config.neptune) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class,
-			// Constants.modName + "Neptune Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.pluto) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class,
-			// Constants.modName + "Pluto Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
 		if (Config.eris) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class,
-			// Constants.modName + "Eris Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
 	}
@@ -580,25 +597,46 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
 		if (Config.kepler22b) {
-//			OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
-//			OreDictionary.registerOre("oreIron", new ItemStack(kepler22bBlocks, 1, 2));
-//			OreDictionary.registerOre("oreCopper", new ItemStack(kepler22bBlocks, 1, 3));
-//			OreDictionary.registerOre("oreTin", new ItemStack(kepler22bBlocks, 1, 4));
-//			OreDictionary.registerOre("oreDenseCoal", new ItemStack(kepler22bBlocks, 1, 5));
-//			OreDictionary.registerOre("oreBlueDiamond", new ItemStack(kepler22bBlocks, 1, 6));
-//			OreDictionary.registerOre("oreRedDiamond", new ItemStack(kepler22bBlocks, 1, 7));
-//			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(kepler22bBlocks, 1, 8));
-//			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(kepler22bBlocks, 1, 9));
-//			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(kepler22bBlocks, 1, 10));
-//			OreDictionary.registerOre("cobblestone", new ItemStack(kepler22bBlocks, 1, 16));
+			// OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks,
+			// 1, 1));
+			// OreDictionary.registerOre("oreIron", new
+			// ItemStack(kepler22bBlocks, 1, 2));
+			// OreDictionary.registerOre("oreCopper", new
+			// ItemStack(kepler22bBlocks, 1, 3));
+			// OreDictionary.registerOre("oreTin", new
+			// ItemStack(kepler22bBlocks, 1, 4));
+			// OreDictionary.registerOre("oreDenseCoal", new
+			// ItemStack(kepler22bBlocks, 1, 5));
+			// OreDictionary.registerOre("oreBlueDiamond", new
+			// ItemStack(kepler22bBlocks, 1, 6));
+			// OreDictionary.registerOre("oreRedDiamond", new
+			// ItemStack(kepler22bBlocks, 1, 7));
+			// OreDictionary.registerOre("orePurpleDiamond", new
+			// ItemStack(kepler22bBlocks, 1, 8));
+			// OreDictionary.registerOre("oreYellowDiamond", new
+			// ItemStack(kepler22bBlocks, 1, 9));
+			// OreDictionary.registerOre("oreGreenDiamond", new
+			// ItemStack(kepler22bBlocks, 1, 10));
+			// OreDictionary.registerOre("cobblestone", new
+			// ItemStack(kepler22bBlocks, 1, 16));
 		}
 	}
 
 	private static void registerTreeBlocks() {
-//		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName().substring(5));
-//		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName().substring(5));
-//		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName().substring(5));
-//		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, kepler22bMapleLeaf.getUnlocalizedName().substring(5));
-//		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, kepler22bPlanks.getUnlocalizedName().substring(5));
+		// GameRegistry.registerBlock(kepler22bMapleLog,
+		// ItemBlockKepler22bMapleLog.class,
+		// kepler22bMapleLog.getUnlocalizedName().substring(5));
+		// GameRegistry.registerBlock(kepler22bMapleLog2,
+		// ItemBlockKepler22bMapleLog2.class,
+		// kepler22bMapleLog2.getUnlocalizedName().substring(5));
+		// GameRegistry.registerBlock(kepler22bMapleSapling,
+		// ItemBlockKepler22bMapleSapling.class,
+		// kepler22bMapleSapling.getUnlocalizedName().substring(5));
+		// GameRegistry.registerBlock(kepler22bMapleLeaf,
+		// ItemBlockKepler22bMapleLeaf.class,
+		// kepler22bMapleLeaf.getUnlocalizedName().substring(5));
+		// GameRegistry.registerBlock(kepler22bPlanks,
+		// ItemBlockKepler22bPlanks.class,
+		// kepler22bPlanks.getUnlocalizedName().substring(5));
 	}
 }

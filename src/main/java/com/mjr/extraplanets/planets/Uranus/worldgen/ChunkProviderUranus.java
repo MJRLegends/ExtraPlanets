@@ -6,6 +6,9 @@ import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
+import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
@@ -14,12 +17,14 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 
 public class ChunkProviderUranus extends ChunkProviderSpace {
 	private final BiomeDecoratorUranus uranusBiomeDecorator = new BiomeDecoratorUranus();
 
 	private final MapGenCaveUranus caveGenerator = new MapGenCaveUranus();
-	// private final MapGenDungeon dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(UranusBlocks.uranusBlock.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE,BlockBasicUranus.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,RoomBossUranus.class, RoomTreasureUranus.class));
+
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(ExtraPlanets_Blocks.uranusBlocks.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossUranus.class, RoomTreasureUranus.class));
 
 	public ChunkProviderUranus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -46,7 +51,7 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 		generators.add(this.caveGenerator);
 		return generators;
 	}
-	
+
 	@Override
 	protected BlockMetaPair getGrassBlock() {
 		return new BlockMetaPair(ExtraPlanets_Blocks.uranusBlocks, (byte) 0);
@@ -89,17 +94,16 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		// this.dungeonGenerator.generate(this, this.worldObj, cX, cZ, primer);
+		this.dungeonGenerator.generate(this, this.field_73230_p, cX, cZ, primer);
 	}
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-		// this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new
-		// ChunkCoordIntPair(cX, cZ));
+		this.dungeonGenerator.generateStructure(this.field_73230_p, this.field_73220_k, new ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-		// this.dungeonGenerator.generate(this, this.worldObj, x, z, null);
+		this.dungeonGenerator.generate(this, this.field_73230_p, x, z, null);
 	}
 }
