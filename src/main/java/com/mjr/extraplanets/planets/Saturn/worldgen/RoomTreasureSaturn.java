@@ -11,8 +11,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
 
 public class RoomTreasureSaturn extends RoomTreasure {
 	public RoomTreasureSaturn() {
@@ -62,10 +62,10 @@ public class RoomTreasureSaturn extends RoomTreasure {
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
 						this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
-						this.setBlockState(worldIn, ExtraPlanets_Blocks.treasureChestTier10.getDefaultState().withProperty(T4TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
+						this.setBlockState(worldIn, ExtraPlanets_Blocks.treasureChestTier6.getDefaultState().withProperty(T6TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
 						BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
 						if (worldIn.getTileEntity(blockpos) == null) {
-							worldIn.setTileEntity(blockpos, new TileEntityT4TreasureChest(4));
+							worldIn.setTileEntity(blockpos, new TileEntityT6TreasureChest(6));
 						}
 					} else {
 						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
