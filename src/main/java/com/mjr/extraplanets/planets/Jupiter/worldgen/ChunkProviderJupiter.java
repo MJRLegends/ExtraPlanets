@@ -94,16 +94,16 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		this.dungeonGenerator.generate(this, this.field_73230_p, cX, cZ, primer);
+		this.dungeonGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-		this.dungeonGenerator.generateStructure(this.field_73230_p, this.field_73220_k, new ChunkCoordIntPair(cX, cZ));
+		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-		this.dungeonGenerator.generate(this, this.field_73230_p, x, z, null);
+		this.dungeonGenerator.generate(this, this.worldObj, x, z, null);
 	}
 }
