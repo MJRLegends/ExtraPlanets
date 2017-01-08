@@ -1,5 +1,11 @@
 package com.mjr.extraplanets.proxy;
 
+import java.util.List;
+
+import micdoodle8.mods.galacticraft.core.util.ClientUtil;
+import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
+import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
+import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelRocketT3;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -7,17 +13,22 @@ import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelBakeEvent;
+import net.minecraftforge.client.model.IModelState;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.model.TRSRTransformation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.google.common.collect.ImmutableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -40,15 +51,22 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossEris;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossJupiter;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossNeptune;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossPluto;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossSaturn;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossUranus;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossVenus;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlimeBoss;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossEris;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossJupiter;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossNeptune;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossPluto;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossSaturn;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossUranus;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossVenus;
+import com.mjr.extraplanets.client.render.entity.RenderEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.client.render.entity.RenderEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.client.render.entity.rockets.RenderTier10Rocket;
+import com.mjr.extraplanets.client.render.entity.rockets.RenderTier4Rocket;
+import com.mjr.extraplanets.client.render.entity.rockets.RenderTier5Rocket;
+import com.mjr.extraplanets.client.render.entity.rockets.RenderTier6Rocket;
+import com.mjr.extraplanets.client.render.entity.rockets.RenderTier7Rocket;
+import com.mjr.extraplanets.client.render.entity.rockets.RenderTier8Rocket;
+import com.mjr.extraplanets.client.render.entity.rockets.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
@@ -65,6 +83,13 @@ import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemTier10Items;
 import com.mjr.extraplanets.items.ItemTier11Items;
@@ -123,6 +148,14 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, (RenderManager manager) -> new RenderEvolvedIceSlimeBoss(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, (RenderManager manager) -> new RenderTier8Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
 
 		MinecraftForge.EVENT_BUS.register(this);
 
@@ -317,4 +350,19 @@ public class ClientProxy extends CommonProxy {
 		}
 	}
 
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public void onModelBakeEvent(ModelBakeEvent event) {
+		replaceModelDefault(event, "rocket_t4", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t5", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t6", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t7", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t8", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t9", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
+		replaceModelDefault(event, "rocket_t10", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
+	}
+
+	private void replaceModelDefault(ModelBakeEvent event, String resLoc, String objLoc, List<String> visibleGroups, Class<? extends ModelTransformWrapper> clazz, IModelState parentState) {
+		ClientUtil.replaceModel(GalacticraftPlanets.ASSET_PREFIX, event, resLoc, objLoc, visibleGroups, clazz, parentState);
+	}
 }

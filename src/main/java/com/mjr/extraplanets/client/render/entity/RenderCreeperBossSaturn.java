@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.render.entities;
+package com.mjr.extraplanets.client.render.entity;
 
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
