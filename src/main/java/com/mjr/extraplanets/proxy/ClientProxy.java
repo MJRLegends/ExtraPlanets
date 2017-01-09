@@ -245,7 +245,7 @@ public class ClientProxy extends CommonProxy {
 	public static void registerItemJson(String texturePrefix, Item item) {
 		registerItemJson(texturePrefix, item, 0, item.getUnlocalizedName().substring(5));
 	}
-
+	
 	public static void registerItemJson(String texturePrefix, Item item, int meta, String name) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(texturePrefix + name, "inventory"));
 	}
@@ -327,6 +327,14 @@ public class ClientProxy extends CommonProxy {
 		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T8key);
 		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T9key);
 		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T10key);
+		
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier4);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier5);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier6);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier7);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier8);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier9);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier10);
 
 		for (int i = 0; i < ItemTier4Items.names.length; i++) {
 			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier4Items, i, ItemTier4Items.names[i]);
