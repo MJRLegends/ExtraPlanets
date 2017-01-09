@@ -8,6 +8,12 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 0.2 Alpha Build
 *Fixed Rockets not being craftable (Issue 58)
 *Added more json files for items
@@ -15,11 +21,7 @@ TODO = Not yet done
 *Added Tier 2 - 4 Thermal Armour back
 *Fixes for disabling planets via the config
 *Added event handlers (BoneMealHandler, BucketHandler, MainHandler, AchievementEventHandler)
+*Fixes and cleanup
 
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
 0.1 Alpha Build
 *Alpha Release
