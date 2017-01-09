@@ -381,37 +381,37 @@ item.noseConeTier8.name=8階鼻錐
 item.noseConeTier9.name=9階鼻錐
 item.noseConeTier10.name=Tier 10 Nose Cone
 
-item.tier4.tier4Fin.name=4階火箭尾鰭
-item.tier5.tier5Fin.name=5階火箭尾鰭
-item.tier6.tier6Fin.name=6階火箭尾鰭
-item.tier7.tier7Fin.name=7階火箭尾鰭
-item.tier8.tier8Fin.name=8階火箭尾鰭
-item.tier9.tier9Fin.name=9階火箭尾鰭
-item.tier10.tier10Fin.name=Tier 10 Rocket Fins
+item.tier4Items.tier4Fin.name=4階火箭尾鰭
+item.tier5Items.tier5Fin.name=5階火箭尾鰭
+item.tier6Items.tier6Fin.name=6階火箭尾鰭
+item.tier7Items.tier7Fin.name=7階火箭尾鰭
+item.tier8Items.tier8Fin.name=8階火箭尾鰭
+item.tier9Items.tier9Fin.name=9階火箭尾鰭
+item.tier10Items.tier10Fin.name=Tier 10 Rocket Fins
 
-item.tier4.tier4engine.name=4階火箭引擎
-item.tier5.tier5engine.name=5階火箭引擎
-item.tier6.tier6engine.name=6階火箭引擎
-item.tier7.tier7engine.name=7階火箭引擎
-item.tier8.tier8engine.name=8階火箭引擎
-item.tier9.tier9engine.name=9階火箭引擎
-item.tier10.tier10engine.name=Tier 10 Rocket Engine
+item.tier4Items.tier4engine.name=4階火箭引擎
+item.tier5Items.tier5engine.name=5階火箭引擎
+item.tier6Items.tier6engine.name=6階火箭引擎
+item.tier7Items.tier7engine.name=7階火箭引擎
+item.tier8Items.tier8engine.name=8階火箭引擎
+item.tier9Items.tier9engine.name=9階火箭引擎
+item.tier10Items.tier10engine.name=Tier 10 Rocket Engine
 
-item.tier4.tier4booster.name=4階助推器
-item.tier5.tier5booster.name=5階助推器
-item.tier6.tier6booster.name=6階助推器
-item.tier7.tier7booster.name=7階助推器
-item.tier8.tier8booster.name=8階助推器
-item.tier9.tier9booster.name=9階助推器
-item.tier10.tier10booster.name=Tier 10 Booster
+item.tier4Items.tier4booster.name=4階助推器
+item.tier5Items.tier5booster.name=5階助推器
+item.tier6Items.tier6booster.name=6階助推器
+item.tier7Items.tier7booster.name=7階助推器
+item.tier8Items.tier8booster.name=8階助推器
+item.tier9Items.tier9booster.name=9階助推器
+item.tier10Items.tier10booster.name=Tier 10 Booster
 
-item.tier4.tier4HeavyDutyPlate.name=重型板
-item.tier5.tier5HeavyDutyPlate.name=重型板
-item.tier6.tier6HeavyDutyPlate.name=重型板
-item.tier7.tier7HeavyDutyPlate.name=重型板
-item.tier8.tier8HeavyDutyPlate.name=重型板
-item.tier9.tier9HeavyDutyPlate.name=重型板
-item.tier10.tier10HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier4Items.tier4HeavyDutyPlate.name=重型板
+item.tier5Items.tier5HeavyDutyPlate.name=重型板
+item.tier6Items.tier6HeavyDutyPlate.name=重型板
+item.tier7Items.tier7HeavyDutyPlate.name=重型板
+item.tier8Items.tier8HeavyDutyPlate.name=重型板
+item.tier9Items.tier9HeavyDutyPlate.name=重型板
+item.tier10Items.tier10HeavyDutyPlate.name=Heavy-Duty Plate
 
 tier4.heavyDutyPlate.name=4階
 tier5.heavyDutyPlate.name=5階
@@ -422,31 +422,31 @@ tier9.heavyDutyPlate.name=9階
 tier10.heavyDutyPlate.name=Tier 10
 
 #Compressed Items
-item.tier4.compressedCarbon.name=緻密碳板
-item.tier5.compressedPalladium.name=緻密鈀板
-item.tier6.compressedMagnesium.name=緻密鎂板
-item.tier7.compressedReinforcedCrystal.name=強化緻密水晶板
-item.tier7.compressedCrystal.name=緻密水晶板
-item.tier8.compressedZinc.name=緻密鋅板
-item.tier5.compressedNickel.name=緻密鎳板
+item.tier4Items.compressedCarbon.name=緻密碳板
+item.tier5Items.compressedPalladium.name=緻密鈀板
+item.tier6Items.compressedMagnesium.name=緻密鎂板
+item.tier7Items.compressedReinforcedCrystal.name=強化緻密水晶板
+item.tier7Items.compressedCrystal.name=緻密水晶板
+item.tier8Items.compressedZinc.name=緻密鋅板
+item.tier5Items.compressedNickel.name=緻密鎳板
 item.compressedMercury.name=緻密汞板
-item.tier9.compressedTungsten.name=緻密鎢板
+item.tier9Items.compressedTungsten.name=緻密鎢板
 
 #Ingots
-item.tier4.ingotCarbon.name=碳錠
-item.tier5.ingotPalladium.name=鈀錠
-item.tier6.ingotMagnesium.name=鎂錠
-item.tier7.ingotCrystal.name=水晶塊
-item.tier8.ingotZinc.name=鋅錠
-item.tier5.ingotNickel.name=鎳錠
+item.tier4Items.ingotCarbon.name=碳錠
+item.tier5Items.ingotPalladium.name=鈀錠
+item.tier6Items.ingotMagnesium.name=鎂錠
+item.tier7Items.ingotCrystal.name=水晶塊
+item.tier8Items.ingotZinc.name=鋅錠
+item.tier5Items.ingotNickel.name=鎳錠
 item.ingotMercury.name=汞錠
 item.ingotUranium.name=鈾錠
-item.tier9.ingotTungsten.name=鎢錠
+item.tier9Items.ingotTungsten.name=鎢錠
 
 #Gems
-item.tier5.redGem.name=紅寶石
-item.tier8.blueGem.name=藍寶石
-item.tier7.whiteGem.name=白寶石
+item.tier5Items.redGem.name=紅寶石
+item.tier8Items.blueGem.name=藍寶石
+item.tier7Items.whiteGem.name=白寶石
 item.tier11.blueDiamond.name=Blue Diamond
 item.tier11.redDiamond.name=Red Diamond
 item.tier11.yellowDiamond.name=Yellow Diamond

@@ -381,37 +381,37 @@ item.noseConeTier8.name=8阶鼻锥
 item.noseConeTier9.name=9阶鼻锥
 item.noseConeTier10.name=10阶鼻锥
 
-item.tier4.tier4Fin.name=4阶火箭尾鳍
-item.tier5.tier5Fin.name=5阶火箭尾鳍
-item.tier6.tier6Fin.name=6阶火箭尾鳍
-item.tier7.tier7Fin.name=7阶火箭尾鳍
-item.tier8.tier8Fin.name=8阶火箭尾鳍
-item.tier9.tier9Fin.name=9阶火箭尾鳍
-item.tier10.tier10Fin.name=10阶火箭尾鳍
+item.tier4Items.tier4Fin.name=4阶火箭尾鳍
+item.tier5Items.tier5Fin.name=5阶火箭尾鳍
+item.tier6Items.tier6Fin.name=6阶火箭尾鳍
+item.tier7Items.tier7Fin.name=7阶火箭尾鳍
+item.tier8Items.tier8Fin.name=8阶火箭尾鳍
+item.tier9Items.tier9Fin.name=9阶火箭尾鳍
+item.tier10Items.tier10Fin.name=10阶火箭尾鳍
 
-item.tier4.tier4engine.name=4阶火箭引擎
-item.tier5.tier5engine.name=5阶火箭引擎
-item.tier6.tier6engine.name=6阶火箭引擎
-item.tier7.tier7engine.name=7阶火箭引擎
-item.tier8.tier8engine.name=8阶火箭引擎
-item.tier9.tier9engine.name=9阶火箭引擎
-item.tier10.tier10engine.name=10阶火箭引擎
+item.tier4Items.tier4engine.name=4阶火箭引擎
+item.tier5Items.tier5engine.name=5阶火箭引擎
+item.tier6Items.tier6engine.name=6阶火箭引擎
+item.tier7Items.tier7engine.name=7阶火箭引擎
+item.tier8Items.tier8engine.name=8阶火箭引擎
+item.tier9Items.tier9engine.name=9阶火箭引擎
+item.tier10Items.tier10engine.name=10阶火箭引擎
 
-item.tier4.tier4booster.name=4阶助推器
-item.tier5.tier5booster.name=5阶助推器
-item.tier6.tier6booster.name=6阶助推器
-item.tier7.tier7booster.name=7阶助推器
-item.tier8.tier8booster.name=8阶助推器
-item.tier9.tier9booster.name=9阶助推器
-item.tier10.tier10booster.name=10阶助推器
+item.tier4Items.tier4booster.name=4阶助推器
+item.tier5Items.tier5booster.name=5阶助推器
+item.tier6Items.tier6booster.name=6阶助推器
+item.tier7Items.tier7booster.name=7阶助推器
+item.tier8Items.tier8booster.name=8阶助推器
+item.tier9Items.tier9booster.name=9阶助推器
+item.tier10Items.tier10booster.name=10阶助推器
 
-item.tier4.tier4HeavyDutyPlate.name=重型板
-item.tier5.tier5HeavyDutyPlate.name=重型板
-item.tier6.tier6HeavyDutyPlate.name=重型板
-item.tier7.tier7HeavyDutyPlate.name=重型板
-item.tier8.tier8HeavyDutyPlate.name=重型板
-item.tier9.tier9HeavyDutyPlate.name=重型板
-item.tier10.tier10HeavyDutyPlate.name=重型板
+item.tier4Items.tier4HeavyDutyPlate.name=重型板
+item.tier5Items.tier5HeavyDutyPlate.name=重型板
+item.tier6Items.tier6HeavyDutyPlate.name=重型板
+item.tier7Items.tier7HeavyDutyPlate.name=重型板
+item.tier8Items.tier8HeavyDutyPlate.name=重型板
+item.tier9Items.tier9HeavyDutyPlate.name=重型板
+item.tier10Items.tier10HeavyDutyPlate.name=重型板
 
 tier4.heavyDutyPlate.name=4阶
 tier5.heavyDutyPlate.name=5阶
@@ -422,31 +422,31 @@ tier9.heavyDutyPlate.name=9阶
 tier10.heavyDutyPlate.name=10阶
 
 #Compressed Items
-item.tier4.compressedCarbon.name=致密碳板
-item.tier5.compressedPalladium.name=致密钯板
-item.tier6.compressedMagnesium.name=致密镁板
-item.tier7.compressedReinforcedCrystal.name=强化致密水晶板
-item.tier7.compressedCrystal.name=致密水晶板
-item.tier8.compressedZinc.name=致密锌板
-item.tier5.compressedNickel.name=致密镍板
+item.tier4Items.compressedCarbon.name=致密碳板
+item.tier5Items.compressedPalladium.name=致密钯板
+item.tier6Items.compressedMagnesium.name=致密镁板
+item.tier7Items.compressedReinforcedCrystal.name=强化致密水晶板
+item.tier7Items.compressedCrystal.name=致密水晶板
+item.tier8Items.compressedZinc.name=致密锌板
+item.tier5Items.compressedNickel.name=致密镍板
 item.compressedMercury.name=致密汞板
-item.tier9.compressedTungsten.name=致密钨板
+item.tier9Items.compressedTungsten.name=致密钨板
 
 #Ingots
-item.tier4.ingotCarbon.name=碳锭
-item.tier5.ingotPalladium.name=钯锭
-item.tier6.ingotMagnesium.name=镁锭
-item.tier7.ingotCrystal.name=水晶块
-item.tier8.ingotZinc.name=锌锭
-item.tier5.ingotNickel.name=镍锭
+item.tier4Items.ingotCarbon.name=碳锭
+item.tier5Items.ingotPalladium.name=钯锭
+item.tier6Items.ingotMagnesium.name=镁锭
+item.tier7Items.ingotCrystal.name=水晶块
+item.tier8Items.ingotZinc.name=锌锭
+item.tier5Items.ingotNickel.name=镍锭
 item.ingotMercury.name=汞锭
 item.ingotUranium.name=铀锭
-item.tier9.ingotTungsten.name=钨锭
+item.tier9Items.ingotTungsten.name=钨锭
 
 #Gems
-item.tier5.redGem.name=红宝石
-item.tier8.blueGem.name=蓝宝石
-item.tier7.whiteGem.name=白宝石
+item.tier5Items.redGem.name=红宝石
+item.tier8Items.blueGem.name=蓝宝石
+item.tier7Items.whiteGem.name=白宝石
 item.tier11.blueDiamond.name=Blue Diamond
 item.tier11.redDiamond.name=Red Diamond
 item.tier11.yellowDiamond.name=Yellow Diamond

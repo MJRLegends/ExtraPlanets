@@ -380,37 +380,37 @@ item.noseConeTier8.name=Špička rakety typ 8
 item.noseConeTier9.name=Špička rakety typ 9
 item.noseConeTier10.name=Tier 10 Nose Cone
 
-item.tier4.tier4Fin.name=Raketové křidélko typ 4
-item.tier5.tier5Fin.name=Raketové křidélko typ 5
-item.tier6.tier6Fin.name=Raketové křidélko typ 6
-item.tier7.tier7Fin.name=Raketové křidélko typ 7
-item.tier8.tier8Fin.name=Raketové křidélko typ 8
-item.tier9.tier9Fin.name=Raketové křidélko typ 9
-item.tier10.tier10Fin.name=Tier 10 Rocket Fins
+item.tier4Items.tier4Fin.name=Raketové křidélko typ 4
+item.tier5Items.tier5Fin.name=Raketové křidélko typ 5
+item.tier6Items.tier6Fin.name=Raketové křidélko typ 6
+item.tier7Items.tier7Fin.name=Raketové křidélko typ 7
+item.tier8Items.tier8Fin.name=Raketové křidélko typ 8
+item.tier9Items.tier9Fin.name=Raketové křidélko typ 9
+item.tier10Items.tier10Fin.name=Tier 10 Rocket Fins
 
-item.tier4.tier4engine.name=Raketový motor typ 4
-item.tier5.tier5engine.name=Raketový motor typ 5
-item.tier6.tier6engine.name=Raketový motor typ 6
-item.tier7.tier7engine.name=Raketový motor typ 7
-item.tier8.tier8engine.name=Raketový motor typ 8
-item.tier9.tier9engine.name=Raketový motor typ 9
-item.tier10.tier10engine.name=Tier 10 Rocket Engine
+item.tier4Items.tier4engine.name=Raketový motor typ 4
+item.tier5Items.tier5engine.name=Raketový motor typ 5
+item.tier6Items.tier6engine.name=Raketový motor typ 6
+item.tier7Items.tier7engine.name=Raketový motor typ 7
+item.tier8Items.tier8engine.name=Raketový motor typ 8
+item.tier9Items.tier9engine.name=Raketový motor typ 9
+item.tier10Items.tier10engine.name=Tier 10 Rocket Engine
 
-item.tier4.tier4booster.name=Posilovač typ 4
-item.tier5.tier5booster.name=Posilovač typ 5
-item.tier6.tier6booster.name=Posilovač typ 6
-item.tier7.tier7booster.name=Posilovač typ 7
-item.tier8.tier8booster.name=Posilovač typ 8
-item.tier9.tier9booster.name=Posilovač typ 9
-item.tier10.tier10booster.name=Tier 10 Booster
+item.tier4Items.tier4booster.name=Posilovač typ 4
+item.tier5Items.tier5booster.name=Posilovač typ 5
+item.tier6Items.tier6booster.name=Posilovač typ 6
+item.tier7Items.tier7booster.name=Posilovač typ 7
+item.tier8Items.tier8booster.name=Posilovač typ 8
+item.tier9Items.tier9booster.name=Posilovač typ 9
+item.tier10Items.tier10booster.name=Tier 10 Booster
 
-item.tier4.tier4HeavyDutyplate.name=Zesílený plech
-item.tier5.tier5HeavyDutyplate.name=Zesílený plech
-item.tier6.tier6HeavyDutyplate.name=Zesílený plech
-item.tier7.tier7HeavyDutyplate.name=Zesílený plech
-item.tier8.tier8HeavyDutyplate.name=Zesílený plech
-item.tier9.tier9HeavyDutyplate.name=Zesílený plech
-item.tier10.tier10HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier4Items.tier4HeavyDutyplate.name=Zesílený plech
+item.tier5Items.tier5HeavyDutyplate.name=Zesílený plech
+item.tier6Items.tier6HeavyDutyplate.name=Zesílený plech
+item.tier7Items.tier7HeavyDutyplate.name=Zesílený plech
+item.tier8Items.tier8HeavyDutyplate.name=Zesílený plech
+item.tier9Items.tier9HeavyDutyplate.name=Zesílený plech
+item.tier10Items.tier10HeavyDutyPlate.name=Heavy-Duty Plate
 
 tier4.heavyDutyplate.name=typ 4
 tier5.heavyDutyplate.name=typ 5
@@ -421,31 +421,31 @@ tier9.heavyDutyplate.name=typ 9
 tier10.heavyDutyPlate.name=Tier 10
 
 #Stlačený Items
-item.tier4.compressedCarbon.name=Stlačený Karbon
-item.tier5.compressedPalladium.name=Stlačené Palladium
-item.tier6.compressedMagnesium.name=Stlačené Magnesium
-item.tier7.compressedReinforcedCrystal.name=Stlačený Vystužený krystal
-item.tier7.compressedCrystal.name=Stlačený Krystal
+item.tier4Items.compressedCarbon.name=Stlačený Karbon
+item.tier5Items.compressedPalladium.name=Stlačené Palladium
+item.tier6Items.compressedMagnesium.name=Stlačené Magnesium
+item.tier7Items.compressedReinforcedCrystal.name=Stlačený Vystužený krystal
+item.tier7Items.compressedCrystal.name=Stlačený Krystal
 item.compressedZinc.name=Stlačený Zinek
 item.compressedNickel.name=Stlačený Nikl
 item.compressedMercury.name=Stlačená Měď
-item.tier9.compressedTungsten.name=Stlačený Tungsten
+item.tier9Items.compressedTungsten.name=Stlačený Tungsten
 
 #Ingots
-item.tier4.ingotCarbon.name=Karbonový Ingot
-item.tier5.ingotPalladium.name=Palladiový Ingot
-item.tier6.ingotMagnesium.name=Magnesiový Ingot
-item.tier7.ingotCrystal.name=Krystalový Ingot
+item.tier4Items.ingotCarbon.name=Karbonový Ingot
+item.tier5Items.ingotPalladium.name=Palladiový Ingot
+item.tier6Items.ingotMagnesium.name=Magnesiový Ingot
+item.tier7Items.ingotCrystal.name=Krystalový Ingot
 item.ingotZinc.name=Zinkový Ingot
 item.ingotNickel.name=Niklový Ingot
 item.ingotMercury.name=Měděný Ingot
 item.ingotUranium.name=Uranový Ingot
-item.tier9.ingotTungsten.name=Tungstenový Ingot
+item.tier9Items.ingotTungsten.name=Tungstenový Ingot
 
 #Gems
-item.tier5.redGem.name=Red Gem
-item.tier8.blueGem.name=Blue Gem
-item.tier7.whiteGem.name=White Gem
+item.tier5Items.redGem.name=Red Gem
+item.tier8Items.blueGem.name=Blue Gem
+item.tier7Items.whiteGem.name=White Gem
 item.tier11.blueDiamond.name=Blue Diamond
 item.tier11.redDiamond.name=Red Diamond
 item.tier11.yellowDiamond.name=Yellow Diamond
