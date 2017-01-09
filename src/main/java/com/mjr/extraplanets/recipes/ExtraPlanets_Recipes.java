@@ -27,7 +27,7 @@ import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 
 public class ExtraPlanets_Recipes {
 	public static void init() {
-		//registerRocketCraftingRecipes();
+		registerRocketCraftingRecipes();
 		registerFurnaceRecipes();
 		registerCraftingRecipes();
 		registerCompressorRecipes();
