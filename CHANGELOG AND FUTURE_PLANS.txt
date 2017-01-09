@@ -13,6 +13,8 @@ TODO = Not yet done
 *Added more json files for items
 *Updated lang files
 *Added Tier 2 - 4 Thermal Armour back
+*Fixes for disabling planets via the config
+*Added event handlers (BoneMealHandler, BucketHandler, MainHandler, AchievementEventHandler)
 
 ======================================================================================================
 
