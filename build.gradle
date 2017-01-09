@@ -41,6 +41,11 @@ minecraft {
 }
 
 dependencies {
+	compile files (
+		"/GalacticraftCore-1.8.9-4.0.0.38-BETA-dev.jar",
+		"/Galacticraft-Planets-1.8.9-4.0.0.38-BETA-dev.jar",
+		"/MicdoodleCore-1.8.9-4.0.0.38-BETA-dev.jar",
+	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"

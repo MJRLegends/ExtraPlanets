@@ -209,6 +209,10 @@ public class ClientProxy extends CommonProxy {
 		for (int i = 0; i < 5; ++i) {
 			ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.tier9Rocket, i, modelResourceLocation);
 		}
+		for (int i = 0; i < 5; ++i) {
+			ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.tier10Rocket, i, modelResourceLocation);
+		}
+		
 	}
 
 	@SideOnly(Side.CLIENT)
