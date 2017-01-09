@@ -453,12 +453,12 @@ item.tier11.purpleDiamond.name=Purple Diamond
 item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
-item.wafer.diamond.name=Elmas Wafer
+item.wafer.diamondWafer.name=Elmas Wafer
 item.wafer.Karbon.name=Karbon Wafer
-item.wafer.titanium.name=Titanyum Wafer
-item.wafer.redGem.name=Kırmızıtaş Wafer
-item.wafer.blueGem.name=Mavitaş Wafer
-item.wafer.whiteGem.name=Beyaztaş Wafer
+item.wafer.titaniumWafer.name=Titanyum Wafer
+item.wafer.redGemWafer.name=Kırmızıtaş Wafer
+item.wafer.blueGemWafer.name=Mavitaş Wafer
+item.wafer.whiteGemWafer.name=Beyaztaş Wafer
 
 #Buckets
 item.bucket_glowstone.name=Işıktaşı Kovası

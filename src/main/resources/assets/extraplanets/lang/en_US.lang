@@ -453,12 +453,12 @@ item.tier11.purpleDiamond.name=Purple Diamond
 item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
-item.wafer.diamond.name=Diamond Wafer
-item.wafer.carbon.name=Carbon Wafer
-item.wafer.titanium.name=Titanium Wafer
-item.wafer.redGem.name=Red Gem Wafer
-item.wafer.blueGem.name=Blue Gem Wafer
-item.wafer.whiteGem.name=White Gem Wafer
+item.wafer.diamondWafer.name=Diamond Wafer
+item.wafer.carbonWafer.name=Carbon Wafer
+item.wafer.titaniumWafer.name=Titanium Wafer
+item.wafer.redGemWafer.name=Red Gem Wafer
+item.wafer.blueGemWafer.name=Blue Gem Wafer
+item.wafer.whiteGemWafer.name=White Gem Wafer
 
 #Buckets
 item.bucket_glowstone.name=Glowstone Bucket

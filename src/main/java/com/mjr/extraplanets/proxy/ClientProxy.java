@@ -295,7 +295,6 @@ public class ClientProxy extends CommonProxy {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());
 		if (Config.eris)
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
-
 	}
 
 	public static void registerBlockJson(String texturePrefix, Block block, int meta, String name) {
@@ -308,6 +307,10 @@ public class ClientProxy extends CommonProxy {
 
 	public static void registerItemJson(String texturePrefix, Item item) {
 		registerItemJson(texturePrefix, item, 0, item.getUnlocalizedName().substring(5));
+	}
+	
+	public static void registerItemJson(String texturePrefix, Item item, int meta) {
+		registerItemJson(texturePrefix, item, meta, item.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerItemJson(String texturePrefix, Item item, int meta, String name) {
@@ -472,6 +475,11 @@ public class ClientProxy extends CommonProxy {
 		if(Config.eris)
 			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier10);
 			
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.diamondApple);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ironApple);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.diamondApple, 1);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ironApple, 1);
+		
 		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.advancedBattery);
 		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ultimateBattery);
 		if (Config.jupiter)

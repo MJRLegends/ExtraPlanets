@@ -454,12 +454,12 @@ item.tier11.purpleDiamond.name=Purple Diamond
 item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
-item.wafer.diamond.name=鑽石晶圓
-item.wafer.carbon.name=碳晶圓
-item.wafer.titanium.name=鈦晶圓
-item.wafer.redGem.name=紅寶石晶圓
-item.wafer.blueGem.name=藍寶石晶圓
-item.wafer.whiteGem.name=白寶石晶圓
+item.wafer.diamondWafer.name=鑽石晶圓
+item.wafer.carbonWafer.name=碳晶圓
+item.wafer.titaniumWafer.name=鈦晶圓
+item.wafer.redGemWafer.name=紅寶石晶圓
+item.wafer.blueGemWafer.name=藍寶石晶圓
+item.wafer.whiteGemWafer.name=白寶石晶圓
 
 #Buckets
 item.bucket_glowstone.name=螢石水

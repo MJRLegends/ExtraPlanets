@@ -452,12 +452,12 @@ item.tier11.purpleDiamond.name=Purple Diamond
 item.tier11.greenDiamond.name=Green Diamond
 
 #Wafers
-item.wafer.diamond.name=Oblea de diamante
-item.wafer.carbon.name=Oblea de carbono
-item.wafer.titanium.name=Oblea de titanio
-item.wafer.redGem.name=Oblea de gema roja
-item.wafer.blueGem.name=Oblea de gema azúl
-item.wafer.whiteGem.name=Oblea de gema blanca
+item.wafer.diamondWafer.name=Oblea de diamante
+item.wafer.carbonWafer.name=Oblea de carbono
+item.wafer.titaniumWafer.name=Oblea de titanio
+item.wafer.redGemWafer.name=Oblea de gema roja
+item.wafer.blueGemWafer.name=Oblea de gema azúl
+item.wafer.whiteGemWafer.name=Oblea de gema blanca
 
 #Buckets
 item.bucket_glowstone.name=Cubeta de piedra luminosa

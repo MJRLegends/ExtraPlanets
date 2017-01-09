@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/ironApple"
+        "layer0": "extraplanets:items/apple_Iron"
     },
     "display": {
         "thirdperson": {
