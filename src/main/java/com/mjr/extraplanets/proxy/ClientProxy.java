@@ -99,6 +99,10 @@ import com.mjr.extraplanets.items.ItemTier6Items;
 import com.mjr.extraplanets.items.ItemTier7Items;
 import com.mjr.extraplanets.items.ItemTier8Items;
 import com.mjr.extraplanets.items.ItemTier9Items;
+import com.mjr.extraplanets.items.ItemWafers;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
@@ -137,7 +141,12 @@ public class ClientProxy extends CommonProxy {
 		addExtraPlanetsVariants("tier8Items", "tier8engine", "tier8booster", "tier8Fin", "tier8HeavyDutyPlate", "compressedZinc", "ingotZinc", "blueGem");
 		addExtraPlanetsVariants("tier9Items", "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten");
 		addExtraPlanetsVariants("tier10Items", "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compressedDarkIron", "ingotDarkIron");
-		addExtraPlanetsVariants("tier11Items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
+		//addExtraPlanetsVariants("tier11Items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
+
+		addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
+		addExtraPlanetsVariants("tier2ThermalPadding", "tier2ThermalHelm", "tier2ThermalChestplate", "tier2ThermalLeggings", "tier2ThermalBoots");
+		addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
+		addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, (RenderManager manager) -> new RenderCreeperBossVenus(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
@@ -316,7 +325,6 @@ public class ClientProxy extends CommonProxy {
 		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier8);
 		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier9);
 		registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier10);
-
 	}
 
 	private void registerItemRenderers() {
@@ -336,6 +344,23 @@ public class ClientProxy extends CommonProxy {
 		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier9);
 		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier10);
 
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.advancedBattery);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ultimateBattery);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.mercuryBattery);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.nickelBattery);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.zincBattery);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.compressedMercury);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ingotMercury);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ingotUranium);
+		
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier4);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier5);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier6);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier7);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier8);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier9);
+		registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier10);
+		
 		for (int i = 0; i < ItemTier4Items.names.length; i++) {
 			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier4Items, i, ItemTier4Items.names[i]);
 		}
@@ -359,6 +384,20 @@ public class ClientProxy extends CommonProxy {
 		}
 		for (int i = 0; i < ItemTier11Items.names.length; i++) {
 			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier11Items, i, ItemTier11Items.names[i]);
+		}
+		
+		for (int i = 0; i < ItemWafers.names.length; i++) {
+			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.wafers, i, ItemWafers.names[i]);
+		}
+		
+		for (int i = 0; i < ItemTier2ThermalPadding.names.length /2; i++) {
+			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier2ThermalPadding, i, ItemTier2ThermalPadding.names[i]);
+		}
+		for (int i = 0; i < ItemTier3ThermalPadding.names.length /2; i++) {
+			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier3ThermalPadding, i, ItemTier3ThermalPadding.names[i]);
+		}
+		for (int i = 0; i < ItemTier4ThermalPadding.names.length /2; i++) {
+			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier4ThermalPadding, i, ItemTier4ThermalPadding.names[i]);
 		}
 	}
 

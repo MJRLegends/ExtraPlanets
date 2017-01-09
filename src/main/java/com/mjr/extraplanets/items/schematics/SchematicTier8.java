@@ -2,6 +2,8 @@ package com.mjr.extraplanets.items.schematics;
 
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -22,6 +24,7 @@ public class SchematicTier8 extends Item implements ISchematicItem, ISortableIte
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName(assetName);
+		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
 	@Override

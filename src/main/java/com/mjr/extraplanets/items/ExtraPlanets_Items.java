@@ -2,7 +2,6 @@ package com.mjr.extraplanets.items;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -35,6 +34,9 @@ import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
 import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 
 public class ExtraPlanets_Items {
 	public static Item tier4Rocket;
@@ -182,20 +184,19 @@ public class ExtraPlanets_Items {
 			tier10Items = new ItemTier10Items("tier10Items");
 			T10key = new ItemKeyT10("T10key");
 		}
-		if (Config.eris) {
-			tier11Items = new ItemTier11Items("tier11");
+		if (Config.kepler22b) {
+			tier11Items = new ItemTier11Items("tier11Items");
 		}
 		// cannedFood = new ItemCannedFood("cannedfood");
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		ironApple = new ItemAppleIron(4, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
-		// tier2ThermalPadding = new
-		// ItemTier2ThermalPadding("tier2ThermalPadding");
-		// tier3ThermalPadding = new
-		// ItemTier3ThermalPadding("tier3ThermalPadding");
-		// tier4ThermalPadding = new
-		// ItemTier4ThermalPadding("tier4ThermalPadding");
+		
+		 tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
+		 tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
+		 tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
+		 
 		wafers = new ItemWafers("wafer");
 		advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 		ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
@@ -246,47 +247,47 @@ public class ExtraPlanets_Items {
 			//GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
 		}
 		if (Config.neptune) {
-			GameRegistry.registerItem(tier8Rocket, "itemTier8Rocket");
-			GameRegistry.registerItem(schematicTier8, "schematicTier8");
-			GameRegistry.registerItem(noseConeTier8, "noseConeTier8");
-			GameRegistry.registerItem(tier8Items, "tier8Items");
-			GameRegistry.registerItem(T8key, "T8key");
-			GameRegistry.registerItem(zincBattery, "zincBattery");
+			GameRegistry.registerItem(tier8Rocket, tier8Rocket.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(schematicTier8, schematicTier8.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(noseConeTier8, noseConeTier8.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier8Items, tier8Items.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(T8key, T8key.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(zincBattery, zincBattery.getUnlocalizedName().substring(5));
 			//GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		}
 		if (Config.pluto) {
-			GameRegistry.registerItem(tier9Rocket, "itemTier9Rocket");
-			GameRegistry.registerItem(schematicTier9, "schematicTier9");
-			GameRegistry.registerItem(noseConeTier9, "noseConeTier9");
-			GameRegistry.registerItem(tier9Items, "tier9Items");
-			GameRegistry.registerItem(T9key, "T9key");
+			GameRegistry.registerItem(tier9Rocket, tier9Rocket.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(schematicTier9, schematicTier9.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(noseConeTier9, noseConeTier9.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier9Items, tier9Items.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(T9key, T9key.getUnlocalizedName().substring(5));
 		}
 		if (Config.eris) {
-			GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
-			GameRegistry.registerItem(schematicTier10, "schematicTier10");
-			GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
-			GameRegistry.registerItem(tier10Items, "tier10Items");
-			GameRegistry.registerItem(T10key, "T10key");
+			GameRegistry.registerItem(tier10Rocket, tier10Rocket.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(schematicTier10, schematicTier10.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(noseConeTier10, noseConeTier10.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier10Items, tier10Items.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(T10key, T10key.getUnlocalizedName().substring(5));
 		}
 		if (Config.kepler22b) {
-			GameRegistry.registerItem(tier11Items, "tier11Items");
+			GameRegistry.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
 		}
 
 		//GameRegistry.registerItem(cannedFood, "cannedFood");
-		GameRegistry.registerItem(diamondApple, "diamondApple");
-		GameRegistry.registerItem(ironApple, "ironApple");
+		GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
 
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 
-//		GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName());
-//		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
-//		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
+		GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
 
-		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
+		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
 
-		GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName());
-		GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName());
+		GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerFluidContainer() {

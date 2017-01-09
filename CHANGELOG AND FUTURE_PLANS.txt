@@ -12,6 +12,7 @@ TODO = Not yet done
 *Fixed Rockets not being craftable (Issue 58)
 *Added more json files for items
 *Updated lang files
+*Added Tier 2 - 4 Thermal Armour back
 
 ======================================================================================================
 

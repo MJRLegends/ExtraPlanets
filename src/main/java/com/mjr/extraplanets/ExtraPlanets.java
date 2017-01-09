@@ -36,6 +36,9 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
+import com.mjr.extraplanets.handlers.BoneMealHandler;
+import com.mjr.extraplanets.handlers.BucketHandler;
+import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
@@ -142,6 +145,10 @@ public class ExtraPlanets {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		Config.load();
+		
+		//Main Events
+		MinecraftForge.EVENT_BUS.register(new MainHandler());
+		
 		// Planets Events
 		if (Config.mercury)
 			MinecraftForge.EVENT_BUS.register(new MercuryEvents());
@@ -190,6 +197,24 @@ public class ExtraPlanets {
 		// ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
+		// Registering fluids with Bucket Handler
+//		if (Config.ceres)
+//			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.salt, ExtraPlanets_Items.salt_bucket);
+//		if (Config.jupiter)
+//			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.magma, ExtraPlanets_Items.magma_bucket);
+//		if (Config.saturn)
+//			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.glowstone, ExtraPlanets_Items.glowstone_bucket);
+//		if (Config.uranus)
+//			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.frozen_water, ExtraPlanets_Items.frozen_water_bucket);
+//		if (Config.neptune)
+//			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.nitrogen, ExtraPlanets_Items.nitrogen_bucket);
+
+		// Bucket Handler
+		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
+
+		// Bone Meal Handler
+		MinecraftForge.EVENT_BUS.register(new BoneMealHandler());
+		
 		// Proxy PreInit Method
 		ExtraPlanets.proxy.preInit(event);
 
