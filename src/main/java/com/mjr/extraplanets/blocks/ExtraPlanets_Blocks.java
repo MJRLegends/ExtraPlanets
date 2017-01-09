@@ -266,18 +266,17 @@ public class ExtraPlanets_Blocks {
 		if (Config.ceres)
 			nuclearBomb = new BlockNuclearBomb();
 		if (Config.kepler22b) {
-			// kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
-			// kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
-			// kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue",
-			// "kepler22b");
-			// kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_purple",
-			// "kepler22b");
-			// kepler22bRedGrass = new BlockBasicGrass("kepler22b_red",
-			// "kepler22b");
-			// kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow",
-			// "kepler22b");
-			// kepler22bGrassFlowers = new
-			// BlockBasicKepler22bTallGrass("kepler22bFlowers");
+//			 kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
+//			 kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
+//			 kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue",
+//			 "kepler22b");
+//			 kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_purple",
+//			 "kepler22b");
+//			 kepler22bRedGrass = new BlockBasicGrass("kepler22b_red",
+//			 "kepler22b");
+//			 kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow",
+//			 "kepler22b");
+//			 kepler22bGrassFlowers = newBlockBasicKepler22bTallGrass("kepler22bFlowers");
 		}
 	}
 

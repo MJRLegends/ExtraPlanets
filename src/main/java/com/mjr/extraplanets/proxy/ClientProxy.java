@@ -92,6 +92,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemTier10Items;
+import com.mjr.extraplanets.items.ItemTier11Items;
 import com.mjr.extraplanets.items.ItemTier4Items;
 import com.mjr.extraplanets.items.ItemTier5Items;
 import com.mjr.extraplanets.items.ItemTier6Items;
@@ -164,8 +165,8 @@ public class ClientProxy extends CommonProxy {
 			addExtraPlanetsVariants("tier9Items", "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten");
 		if(Config.eris)
 			addExtraPlanetsVariants("tier10Items", "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compressedDarkIron", "ingotDarkIron");
-		
-		//addExtraPlanetsVariants("tier11Items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
+		if(Config.kepler22b)
+			addExtraPlanetsVariants("tier11Items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
 
 		addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
 		addExtraPlanetsVariants("tier2ThermalPadding", "tier2ThermalHelm", "tier2ThermalChestplate", "tier2ThermalLeggings", "tier2ThermalBoots");
@@ -520,11 +521,11 @@ public class ClientProxy extends CommonProxy {
 				registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier10Items, i, ItemTier10Items.names[i]);
 			}
 		}
-//		if(Config.kepler22b){
-//			for (int i = 0; i < ItemTier11Items.names.length; i++) {
-//				registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier11Items, i, ItemTier11Items.names[i]);
-//			}
-//		}
+		if(Config.kepler22b){
+			for (int i = 0; i < ItemTier11Items.names.length; i++) {
+				registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier11Items, i, ItemTier11Items.names[i]);
+			}
+		}
 		
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.wafers, i, ItemWafers.names[i]);
