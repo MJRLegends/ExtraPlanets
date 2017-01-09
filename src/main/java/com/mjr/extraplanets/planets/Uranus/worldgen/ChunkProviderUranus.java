@@ -97,11 +97,14 @@ public class ChunkProviderUranus extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedIceSlime.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityBlueCreeper.class, 8, 2, 3));
-		//monsters.add(new BiomeGenBase.SpawnListEntry(EvolvedIceAllen.class, 8, 2, 3));
-		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedPowerSkeleton.class, 8, 2, 3));
+		if(Config.evolvedIceSlime)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedIceSlime.class, 8, 2, 3));
+		if(Config.evolvedEnderman)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
+		if(Config.evolvedBlueCreeper)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityBlueCreeper.class, 8, 2, 3));
+		if(Config.evolvedPowerSkeleton)
+			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedPowerSkeleton.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
 

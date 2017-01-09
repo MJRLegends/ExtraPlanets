@@ -1,49 +1,59 @@
 TODO = Not yet done
 ? = Maybe
 
-===========================================Future Updates===========================================
-v1.0 Pre-4(Not Released yet) - More yet to be added!
-*Added Evolved Ice Blaze(Entity) TODO
-*Added Evolved Ice Blaze to Uranus and Neptune TODO
-*Added Evolved Wizard(Entity) TODO
-*Added Evolved Wizard to Merucry, Venus, Ceres, Jupiter, Saturn, Pluto and Eris TODO
-*Added Evolved Fire Allen(Entity) TODO
-*Added Evolved Fire Allen to Mercury, Venus, Ceres, Jupiter, Saturn, Pluto and Eris TODO
-*Added Evolved Ice Allen(Entity) TODO
-*Added Evolved Ice Allen to Uranus, Neptune TODO
-*Added Powered Pickaxe? TODO
-*Added Powered Armour? TODO
-*Added Charger Block TODO
-*Added Multi Biome System to Venus TODO
-*Added Volcanic Biome to Venus TODO
-*Added Magma Sea Biome to Venus TODO
-*Added Multi Biome System to Jupiter TODO
-*Added Magma Sea Biome to Jupiter TODO
-*Added Multi Biome System to Saturn TODO
-*Added Glowstone Sea Biome to Saturn TODO
-*Added Multi Biome System to Neptune TODO
-*Added Frozen Nitrogen Sea Biome to Neptune TODO
-*Added Multi Biome System to Uranus TODO
-*Added Frozen Water Sea Biome to Uranus TODO
-*Added Multi Biome System to Ceres TODO
-*Added Salt Sea Biome to Uranus TODO
+=====================================Future Ideas/Suggestions=======================================
+*Add Evolved Ice Blaze(Entity)
+*Add Evolved Ice Blaze to Uranus and Neptune
+*Add Evolved Wizard(Entity)
+*Add Evolved Wizard to Merucry, Venus, Ceres, Jupiter, Saturn, Pluto and Eris
+*Add Evolved Fire Allen(Entity)
+*Add Evolved Fire Allen to Mercury, Venus, Ceres, Jupiter, Saturn, Pluto and Eris
+*Add Evolved Ice Allen(Entity)
+*Add Evolved Ice Allen to Uranus, Neptune
+*Add Powered Pickaxe?
+*Add Powered Armour?
+*Add Charger Block
+*Add Multi Biome System to Venus
+*Add Volcanic Biome to Venus
+*Add Magma Sea Biome to Venus
+*Add Multi Biome System to Jupiter
+*Add Magma Sea Biome to Jupiter
+*Add Multi Biome System to Saturn
+*Add Glowstone Sea Biome to Saturn
+*Add Multi Biome System to Neptune
+*Add Frozen Nitrogen Sea Biome to Neptune
+*Add Multi Biome System to Uranus
+*Add Frozen Water Sea Biome to Uranus
+*Add Multi Biome System to Ceres
+*Add Salt Sea Biome to Uranus
+*Add Evolved Fire Skeleton Boss (Entity)
+*Add Evolved Fire Skeleton Boss to Jupiter Dungeon
+*Add Space Crops(Wheat, Carrots, Potato's) They will have different saturation and that levels from the vanilla ones 
+*Add Space Crops Seeds
+*Add Can of Golden Apple (Notch and normal), Can of Diamond Apple (Notch and normal), Can of Iron Apple (Notch and normal)
+*Add Basic, Advanced, Ultimate Hideouts containing loot depending on tier level (with mob spawners?)
+*Add Loot Treasure Rooms with spawner's some loot chests to each planet, with the Stone brick version for that planet
+======================================================================================================
 
-v1.0 Pre-3.9(Not Released yet) - More yet to be added!
-*Added Evolved Fire Skeleton Boss (Entity) TODO
-*Added Evolved Fire Skeleton Boss to Jupiter Dungeon TODO
-*Changed Tier 2 Thermal Padding to protect you from uranium ore TODO
-*Added Space Crops(Wheat, Carrots, Potato's) They will have different saturation and that levels from the vanilla ones TODO 
-*Added Space Crops Seeds TODO
-*Added Can of Golden Apple (Notch and normal), Can of Diamond Apple (Notch and normal), Can of Iron Apple (Notch and normal) TODO
 
-v1.0 Pre-3.9(Not Released yet) - More yet to be added!
-*Added Basic, Advanced, Ultimate Hideouts containing loot depending on tier level (with mob spawners?) TODO
-*Added Loot Treasure Rooms with spawner's some loot chests to each planet, with the Stone brick version for that planet TODO
+
+===========================================Future Updates=============================================
+v1.0 Pre-3.9
+*Fixed some Localization typos (Thanks to MrNinja93)
+More Information coming soon...
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
+v1.0 Pre-3.8
+*Changed Tier 2 Thermal Padding (And above) to protect you from uranium ore
 *Added more blocks to the MicroBlocks support
 *Added the ability to use Kepler22b Planks for Sticks and Wooden Buttons, Pressure Plates, Doors, Signs recipes
 *Added some more Achievements
+*Added config options for enabling and disabling entities such as monsters
 
-===========================================Released Updates===========================================
 v1.0 Pre-3.7.6
 *Added Blue & Red & Purple & Yellow & Green Diamond Tools
 *Added Blue & Red & Purple & Yellow & Green Diamond Armour
@@ -366,7 +376,7 @@ v1.0 Pre-2
 *Fixed Tier 6 Schematic being generated in Tier 4 Venus Dungeon
 *Fixed Boss Bars for Venus and Uranus Dungeon Bosses
 *Fixed Caves for Mercury, Venus, Ceres, Jupiter, Saturn, Pluto, Uranus, Neptune, Eris
-*Changed All Blocks for Venus, Jupiter, Saturn, Uranus, Neptune to use metadata. TODO - Half Done!
+*Changed All Blocks for Venus, Jupiter, Saturn, Uranus, Neptune to use metadata.
 
 v1.0 Pre-1
 *Added Evolved Ice Cube Boss (Entity)

@@ -2,6 +2,17 @@ package com.mjr.extraplanets;
 
 import java.io.File;
 
+import com.mjr.extraplanets.entities.EntityBlueCreeper;
+import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
+import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
+import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
+import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
+import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
+import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
+import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
+import com.mjr.extraplanets.entities.EntityEvolvedWitch;
+
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
@@ -14,7 +25,8 @@ public class Config {
 	private static String biomeID = "biomeID";
 	private static String items = "items";
 	private static String blocks = "blocks";
-
+	private static String entities = "entities";
+	
 	private static String spacestationCustom = "space stations";
 
 	private static String schematicsGUI = "schematics GUI ID";
@@ -199,6 +211,17 @@ public class Config {
 	public static boolean microBlock;
 	public static boolean neiSupport;
 	public static boolean achievements;
+	
+	public static boolean evolvedMagmaCube;
+	public static boolean evolvedIceSlime;
+	public static boolean evolvedWitch;
+	public static boolean evolvedEnderman;
+	public static boolean evolvedBlaze;
+	public static boolean evolvedBlueCreeper;
+	public static boolean evolvedRedCreeper;
+	public static boolean evolvedPowerSkeleton;
+	public static boolean evolvedGiantSpider;
+	public static boolean evolvedMiniEnderman;
 
 	public static void load() {
 		Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
@@ -217,7 +240,8 @@ public class Config {
 		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
 		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
 		config.addCustomCategoryComment(generalsettings,"Enable/Disable general settings");
-		
+		config.addCustomCategoryComment(entities ,"Enable/Disable entities");
+
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
 		magnesiumItems = config.get(items, "Magnesium Tools & Armor", true).getBoolean(true);
@@ -395,7 +419,18 @@ public class Config {
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
 
 		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
-
+		
+		evolvedMagmaCube = config.get(entities, "Enable spawning of Evolved Magma Cube", true, "").getBoolean(true);
+		evolvedIceSlime = config.get(entities, "Enable spawning of Evolved Ice Slime", true, "").getBoolean(true);
+		evolvedWitch = config.get(entities, "Enable spawning of Evolved Witch", true, "").getBoolean(true);
+		evolvedEnderman = config.get(entities, "Enable spawning of Evolved Enderman", true, "").getBoolean(true);
+		evolvedBlaze = config.get(entities, "Enable spawning of Evolved Blaze", true, "").getBoolean(true);
+		evolvedBlueCreeper = config.get(entities, "Enable spawning of Evolved Blue Creeper", true, "").getBoolean(true);
+		evolvedRedCreeper = config.get(entities, "Enable spawning of Evolved Red Creeper", true, "").getBoolean(true);
+		evolvedPowerSkeleton = config.get(entities, "Enable spawning of Evolved Power Skeleton", true, "").getBoolean(true);
+		evolvedGiantSpider = config.get(entities, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
+		evolvedMiniEnderman = config.get(entities, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
+		
 		config.save();
 	}
 
