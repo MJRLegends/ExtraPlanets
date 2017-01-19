@@ -65,9 +65,11 @@ public class MainHandlerServer {
 	
 	@SubscribeEvent
 	public void onEntityDealth(LivingDeathEvent event) {
-		final EntityLivingBase entityLiving = event.entityLiving;
-		final EPPlayerStats EPPlayer = EPPlayerStats.get((EntityPlayerMP) entityLiving);
-		EPPlayer.radiationLevel = 0;
+		if (event.entity instanceof EntityPlayerMP) {
+			final EntityLivingBase entityLiving = event.entityLiving;
+			final EPPlayerStats EPPlayer = EPPlayerStats.get((EntityPlayerMP) entityLiving);
+			EPPlayer.radiationLevel = 0;
+		}
 	}
 
 	@SubscribeEvent

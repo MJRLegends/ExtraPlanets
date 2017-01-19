@@ -24,7 +24,6 @@ public class EPPlayerStats implements IExtendedEntityProperties {
 
 	@Override
 	public void saveNBTData(NBTTagCompound nbt) {
-		System.out.println("Save radiationLevel: " + this.radiationLevel);
 		nbt.setDouble("radiationLevel", this.radiationLevel);
 	}
 
