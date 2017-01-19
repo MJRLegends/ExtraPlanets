@@ -5,6 +5,7 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
+import micdoodle8.mods.galacticraft.core.util.DamageSourceGC;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -35,6 +36,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
+import com.mjr.extraplanets.util.DamageSourceEP;
 import com.mjr.extraplanets.world.EPWorldProviderSpace;
 
 public class MainHandlerServer {
@@ -159,13 +161,13 @@ public class MainHandlerServer {
 					ItemStack stack = playerMP.getCurrentArmor(i);
 					if ((stack == null) || (!(stack.getItem() instanceof IItemPressure))) {
 						if (pressureLevel > 8 && pressureLevel < 25)
-							playerMP.addPotionEffect(new PotionEffect(Potion.weakness.getId(), 2));
+							playerMP.attackEntityFrom(DamageSourceEP.pressure, 0.5F);
 						else if (pressureLevel > 25 && pressureLevel < 50)
-							playerMP.addPotionEffect(new PotionEffect(Potion.confusion.getId(), 4));
+							playerMP.attackEntityFrom(DamageSourceEP.pressure, 1.5F);
 						else if (pressureLevel > 50 && pressureLevel < 75)
-							playerMP.addPotionEffect(new PotionEffect(Potion.harm.getId(), 2));
+							playerMP.attackEntityFrom(DamageSourceEP.pressure, 2.5F);
 						else if (pressureLevel > 75)
-							playerMP.addPotionEffect(new PotionEffect(Potion.harm.getId(), 4));
+							playerMP.attackEntityFrom(DamageSourceEP.pressure, 3.5F);
 					}
 				}
 
@@ -175,8 +177,8 @@ public class MainHandlerServer {
 					if ((stack == null) || (!(stack.getItem() instanceof IItemPressure))) {
 						final EPPlayerStats EPPlayer = EPPlayerStats.get(playerMP);
 						System.out.println(EPPlayer.radiationLevel);
-						if (EPPlayer.radiationLevel == 100)
-							playerMP.addPotionEffect(new PotionEffect(Potion.harm.getId(), 100));
+						if (EPPlayer.radiationLevel >= 100)
+							playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
 						else if (EPPlayer.radiationLevel >= 0)
 							EPPlayer.radiationLevel = EPPlayer.radiationLevel + (0.005 * (radiationLevel / 10));
 						else
