@@ -160,13 +160,13 @@ public class MainHandlerServer {
 				for (int i = 0; i < 4; i++) {
 					ItemStack stack = playerMP.getCurrentArmor(i);
 					if ((stack == null) || (!(stack.getItem() instanceof IItemPressure))) {
-						if (pressureLevel > 8 && pressureLevel < 25)
+						if (pressureLevel >= 8 && pressureLevel < 25)
 							playerMP.attackEntityFrom(DamageSourceEP.pressure, 0.5F);
 						else if (pressureLevel > 25 && pressureLevel < 50)
 							playerMP.attackEntityFrom(DamageSourceEP.pressure, 1.5F);
-						else if (pressureLevel > 50 && pressureLevel < 75)
+						else if (pressureLevel >= 50 && pressureLevel < 75)
 							playerMP.attackEntityFrom(DamageSourceEP.pressure, 2.5F);
-						else if (pressureLevel > 75)
+						else if (pressureLevel >= 75)
 							playerMP.attackEntityFrom(DamageSourceEP.pressure, 3.5F);
 					}
 				}

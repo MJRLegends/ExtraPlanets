@@ -772,3 +772,7 @@ tile.magma_fluid.name=Tekutá magma
 tile.nitrogen_fluid.name=Tekutý dusík
 tile.frozen_water_fluid.name=Zmrzlá voda
 tile.Salt_fluid.name=Zmrzlá sůl
+
+
+gui.warning.high.pressure=Warning High Pressure
+gui.warning.high.radiation=Warning High Radiation

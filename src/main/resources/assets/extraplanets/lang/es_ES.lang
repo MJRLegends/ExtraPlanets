@@ -778,3 +778,6 @@ tile.magma_fluid.name=Magma líquido
 tile.nitrogen_fluid.name=Nitrógeno líquido 
 tile.frozen_water_fluid.name=Agua Congelada
 tile.salt_fluid.name=Sal líquida
+
+gui.warning.high.pressure=Warning High Pressure
+gui.warning.high.radiation=Warning High Radiation

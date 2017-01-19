@@ -779,3 +779,6 @@ tile.magma_fluid.name=Mağma Yakıtı
 tile.nitrogen_fluid.name=Nitrojen Yakıtı
 tile.frozen_water_fluid.name=Soğumuş Su
 tile.salt_fluid.name=Tuz Yakıtı
+
+gui.warning.high.pressure=Warning High Pressure
+gui.warning.high.radiation=Warning High Radiation

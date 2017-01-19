@@ -773,3 +773,6 @@ tile.magma_fluid.name=岩浆水
 tile.nitrogen_fluid.name=液氮
 tile.frozen_water_fluid.name=冰冻水
 tile.salt_fluid.name=液态盐水
+
+gui.warning.high.pressure=Warning High Pressure
+gui.warning.high.radiation=Warning High Radiation
