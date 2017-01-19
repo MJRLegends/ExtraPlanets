@@ -19,6 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
+import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
@@ -38,7 +39,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.BoneMealHandler;
 import com.mjr.extraplanets.handlers.BucketHandler;
-import com.mjr.extraplanets.handlers.MainHandler;
+import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
@@ -50,6 +51,7 @@ import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
+import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
@@ -80,7 +82,9 @@ public class ExtraPlanets {
 
 	@Instance(Constants.modID)
 	public static ExtraPlanets instance;
-
+	
+	public static ExtraPlanetsChannelHandler packetPipeline;
+	
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
 		@Override
@@ -147,7 +151,7 @@ public class ExtraPlanets {
 		Config.load();
 		
 		//Main Events
-		MinecraftForge.EVENT_BUS.register(new MainHandler());
+		MinecraftForge.EVENT_BUS.register(new MainHandlerServer());
 		
 		// Planets Events
 		if (Config.mercury)
@@ -194,7 +198,7 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
 		// ExtraPlanets_Tools.init();
-		// ExtraPlanets_Armor.init();
+		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
 		// Registering fluids with Bucket Handler
@@ -232,6 +236,9 @@ public class ExtraPlanets {
 		registerNonMobEntities();
 		registerCreatures();
 
+		
+		packetPipeline = ExtraPlanetsChannelHandler.init();
+		
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 	}

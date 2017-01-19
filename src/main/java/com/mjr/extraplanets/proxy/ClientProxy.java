@@ -50,6 +50,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
+import com.mjr.extraplanets.client.handlers.MainClientHandler;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossEris;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossJupiter;
@@ -236,6 +237,8 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(this);
+		MinecraftForge.EVENT_BUS.register(new MainClientHandler());
+
 		super.postInit(event);
 	}
 

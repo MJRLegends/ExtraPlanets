@@ -8,11 +8,13 @@ import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Uranus.worldgen.ChunkProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.WorldChunkManagerUranus;
+import com.mjr.extraplanets.world.EPWorldProviderSpace;
 
-public class WorldProviderUranus extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderUranus extends EPWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -142,5 +144,15 @@ public class WorldProviderUranus extends WorldProviderSpace implements IGalactic
 	@Override
 	public String getInternalNameSuffix() {
 		return "_uranus";
+	}
+
+	@Override
+	public int getPressureLevel() {
+		return 100;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 25;
 	}
 }

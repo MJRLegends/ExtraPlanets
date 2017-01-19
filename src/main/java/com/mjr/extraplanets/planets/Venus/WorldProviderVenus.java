@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.planets.Venus;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
@@ -11,11 +10,13 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Venus.worldgen.ChunkProviderVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.WorldChunkManagerVenus;
+import com.mjr.extraplanets.world.EPWorldProviderSpace;
 
-public class WorldProviderVenus extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderVenus extends EPWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -162,5 +163,15 @@ public class WorldProviderVenus extends WorldProviderSpace implements IGalacticr
 	@Override
 	public String getDimensionName() {
 		return "Venus";
+	}
+
+	@Override
+	public int getPressureLevel() {
+		return 75;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 80;
 	}
 }

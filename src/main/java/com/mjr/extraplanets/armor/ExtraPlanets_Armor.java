@@ -27,6 +27,8 @@ public class ExtraPlanets_Armor {
 	private static ArmorMaterial purpleDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Purple_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
 	private static ArmorMaterial yellowDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
 	private static ArmorMaterial greenDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Green_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	
+	private static ArmorMaterial tier1SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier1_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
 
 	public static Item carbonHelmet;
 	public static Item carbonChest;
@@ -107,6 +109,11 @@ public class ExtraPlanets_Armor {
 	public static Item greenDiamondChest;
 	public static Item greenDiamondLegings;
 	public static Item greenDiamondBoots;
+
+	public static Item tier1SpaceSuitHelmet;
+	public static Item tier1SpaceSuitChest;
+	public static Item tier1SpaceSuitLegings;
+	public static Item tier1SpaceSuitBoots;
 
 	public static void init() {
 		initializeArmor();
@@ -208,6 +215,11 @@ public class ExtraPlanets_Armor {
 			greenDiamondLegings = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 2).setUnlocalizedName("greenDiamondLegings");
 			greenDiamondBoots = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 3).setUnlocalizedName("greenDiamondBoots");
 		}
+		
+		tier1SpaceSuitHelmet = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier1SpaceSuitHelmet");
+		tier1SpaceSuitChest = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier1SpaceSuitChest");
+		tier1SpaceSuitLegings = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier1SpaceSuitLegings");
+		tier1SpaceSuitBoots = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier1SpaceSuitBoots");
 	}
 
 	private static void registerArmor() {
@@ -309,5 +321,10 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(greenDiamondLegings, "greenDiamondLegings");
 			GameRegistry.registerItem(greenDiamondBoots, "greenDiamondBoots");
 		}
+		
+		GameRegistry.registerItem(tier1SpaceSuitHelmet, "tier1SpaceSuitHelmet");
+		GameRegistry.registerItem(tier1SpaceSuitChest, "tier1SpaceSuitChest");
+		GameRegistry.registerItem(tier1SpaceSuitLegings, "tier1SpaceSuitLegings");
+		GameRegistry.registerItem(tier1SpaceSuitBoots, "tier1SpaceSuitBoots");
 	}
 }

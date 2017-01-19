@@ -8,11 +8,13 @@ import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.ChunkProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.WorldChunkManagerJupiter;
+import com.mjr.extraplanets.world.EPWorldProviderSpace;
 
-public class WorldProviderJupiter extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderJupiter extends EPWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -142,5 +144,15 @@ public class WorldProviderJupiter extends WorldProviderSpace implements IGalacti
 	@Override
 	public String getInternalNameSuffix() {
 		return "_jupiter";
+	}
+
+	@Override
+	public int getPressureLevel() {
+		return 2;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 35;
 	}
 }

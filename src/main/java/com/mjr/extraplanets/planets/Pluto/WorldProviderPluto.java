@@ -1,18 +1,19 @@
 package com.mjr.extraplanets.planets.Pluto;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Pluto.worldgen.ChunkProviderPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.WorldChunkManagerPluto;
+import com.mjr.extraplanets.world.EPWorldProviderSpace;
 
-public class WorldProviderPluto extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderPluto extends EPWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -142,5 +143,15 @@ public class WorldProviderPluto extends WorldProviderSpace implements IGalacticr
 	@Override
 	public String getInternalNameSuffix() {
 		return "_pluto";
+	}
+
+	@Override
+	public int getPressureLevel() {
+		return 8;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 12;
 	}
 }
