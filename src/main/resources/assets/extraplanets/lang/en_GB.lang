@@ -782,3 +782,5 @@ tile.Salt_fluid.name=Liquid Salt
 
 gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
+death.attack.radiation=%1$s forgot radiation protection
+death.attack.pressure=%1$s forgot pressure protection
