@@ -2,9 +2,15 @@ package com.mjr.extraplanets.planets.Ceres.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
+
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 
@@ -55,17 +61,17 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
-//		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-//		for (int i = 0; i < this.LakesPerChunk; i++) {
-//			if (this.rand.nextInt(10) == 0) {
-//				int x = this.chunkX + this.rand.nextInt(16) + 8;
-//				// int y = this.rand.nextInt(16) + 16;
-//				int z = this.chunkZ + this.rand.nextInt(16) + 8;
-//				int y = this.currentWorld.getHeightValue(x, z);
-//				new WorldGenCustomLake(ExtraPlanets_Fluids.salt).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.ceresBlocks);
-//			}
-//		}
-//		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		for (int i = 0; i < this.LakesPerChunk; i++) {
+			if (this.rand.nextInt(10) == 0) {
+				int x = this.chunkX + 8;
+				// int y = this.rand.nextInt(16) + 16;
+				int z = this.chunkZ + 8;
+				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				new WorldGenCustomLake(ExtraPlanets_Fluids.salt).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.ceresBlocks);
+			}
+		}
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 
 		isDecorating = false;
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
