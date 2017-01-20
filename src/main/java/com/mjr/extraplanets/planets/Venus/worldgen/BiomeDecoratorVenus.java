@@ -2,10 +2,16 @@ package com.mjr.extraplanets.planets.Venus.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.world.features.WorldGenVolcano;
 
 public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 
@@ -55,33 +61,27 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 		this.generateOre(20, this.carbonGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(30, this.volcanicRockGen, 0, 256);
-		//
-		// MinecraftForge.EVENT_BUS.post(new
-		// DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX,
-		// this.chunkZ));
-		//
-		// for (int i = 0; i < this.LakesPerChunk; i++) {
-		// if (this.rand.nextInt(10) == 0) {
-		// int x = this.chunkX + this.rand.nextInt(16) + 8;
-		// // int y = this.rand.nextInt(16) + 16;
-		// int z = this.chunkZ + this.rand.nextInt(16) + 8;
-		// int y = this.currentWorld.getHeightValue(x, z) - 2;
-		// new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld,
-		// this.rand, x, y, z, ExtraPlanets_Blocks.venusBlocks);
-		// }
-		// }
-		//
-		// if (this.rand.nextInt(20) == 1) {
-		// int x = this.chunkX;
-		// int z = this.chunkZ;
-		// int y = this.currentWorld.getHeightValue(x, z) - 3;
-		// new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y,
-		// z);
-		// }
-		//
-		// MinecraftForge.EVENT_BUS.post(new
-		// DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX,
-		// this.chunkZ));
+
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+
+		for (int i = 0; i < this.LakesPerChunk; i++) {
+			if (this.rand.nextInt(10) == 0) {
+				int x = this.chunkX + 8;
+				// int y = this.rand.nextInt(16) + 16;
+				int z = this.chunkZ + 8;
+				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.venusBlocks);
+			}
+		}
+
+		if (this.rand.nextInt(20) == 1) {
+			int x = this.chunkX + 8;
+			int z = this.chunkZ + 8;
+			int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 3;
+			new WorldGenVolcano().generate(this.currentWorld, this.rand, new BlockPos(x, y, z));
+		}
+
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 		isDecorating = false;
 	}
 }
