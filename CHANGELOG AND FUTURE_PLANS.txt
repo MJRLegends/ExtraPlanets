@@ -8,6 +8,10 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+v1 Beta Build ----More to be added!!----
+*Fixed up all missing textures/json files
+
+
 0.3 Alpha Build
 *Fixed all the block textures
 *Added Beta Pressure & Radiation system
