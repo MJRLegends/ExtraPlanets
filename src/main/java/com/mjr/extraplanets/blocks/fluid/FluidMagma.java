@@ -9,10 +9,11 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidClassic;
+import net.minecraftforge.fluids.IFluidBlock;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class FluidMagma extends BlockFluidClassic
+public class FluidMagma extends BlockFluidClassic implements IFluidBlock
 {
     public FluidMagma(String assetName)
     {

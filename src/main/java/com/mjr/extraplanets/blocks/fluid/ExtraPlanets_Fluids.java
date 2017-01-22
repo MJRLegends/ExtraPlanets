@@ -28,7 +28,7 @@ public class ExtraPlanets_Fluids {
 	public static Fluid salt_fluid;
 
 	public static Material glowstone_material = new MaterialLiquid(MapColor.yellowColor);
-	public static Material magma_material = new MaterialLiquid(MapColor.redColor);
+	public static Material magma_material = new MaterialLiquid(MapColor.tntColor);
 	public static Material nitrogen_material = new MaterialLiquid(MapColor.lightBlueColor);
 	public static Material frozen_water_material = new MaterialLiquid(MapColor.waterColor);
 	public static Material salt_material = new MaterialLiquid(MapColor.grayColor);
@@ -39,23 +39,23 @@ public class ExtraPlanets_Fluids {
 	}
 
 	private static void initFluid() {
-		glowstone_fluid = new Fluid("glowstone_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "glowstone_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "glowstone_flow")).setBlock(glowstone);
+		glowstone_fluid = new Fluid("glowstone_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_flow")).setBlock(glowstone).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(glowstone_fluid);
 		glowstone = new FluidGlowstone("glowstone_fluid");
 
-		magma_fluid = new Fluid("magma_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "magma_fluid"), new ResourceLocation(Constants.TEXTURE_PREFIX + "magma_fluid")).setBlock(magma);
+		magma_fluid = new Fluid("magma_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_flow")).setBlock(magma).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(magma_fluid);
 		magma = new FluidMagma("magma_fluid");
 
-		nitrogen_fluid = new Fluid("nitrogen_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_fluid"), new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_fluid")).setBlock(nitrogen);
+		nitrogen_fluid = new Fluid("nitrogen_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_flow")).setBlock(nitrogen).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(nitrogen_fluid);
 		nitrogen = new FluidNitrogen("nitrogen_fluid");
 
-		frozen_water_fluid = new Fluid("frozen_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water_fluid"), new ResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water_fluid")).setBlock(frozen_water);
+		frozen_water_fluid = new Fluid("frozen_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_flow")).setBlock(frozen_water).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(frozen_water_fluid);
 		frozen_water = new FluidFrozenWater("frozen_water_fluid");
 
-		salt_fluid = new Fluid("salt_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "salt_fluid"), new ResourceLocation(Constants.TEXTURE_PREFIX + "salt_fluid")).setBlock(salt);
+		salt_fluid = new Fluid("salt_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_flow")).setBlock(salt).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(salt_fluid);
 		salt = new FluidSalt("salt_fluid");
 	}

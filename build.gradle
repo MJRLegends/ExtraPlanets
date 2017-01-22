@@ -28,7 +28,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 minecraft {
-    version = "1.8.9-11.15.1.1902-1.8.9"
+    version = "1.8.9-11.15.1.1764"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
