@@ -141,7 +141,7 @@ public class ClientProxy extends CommonProxy {
 					"uranus_dungeon_brick", "uranus_ore_red_gem", "uranus_red_gem_block");
 		if (Config.neptune)
 			addExtraPlanetsVariants("neptune", "neptune_surface", "neptune_sub_surface", "neptune_stone", "neptune_ore_iron", "neptune_ore_tin", "neptune_ore_copper",
-					"neptune_ore_blue_gem", "neptune_blue_gem_block", "neptune_stonebricks", "neptune_dungeon_brick", "neptune_ore_red_gem", "neptune_red_gem_block");
+					"neptune_ore_zine", "neptune_zinc_block", "neptune_stonebricks", "neptune_dungeon_brick", "neptune_ore_blue_gem", "neptune_blue_gem_block");
 		if (Config.saturn)
 			addExtraPlanetsVariants("saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper",
 					"saturn_ore_magnesium", "saturn_magnesium_block", "saturn_stonebricks", "saturn_dungeon_brick");
@@ -467,6 +467,39 @@ public class ClientProxy extends CommonProxy {
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier9);
 		if (Config.eris)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier10);
+		
+		if(Config.mercury)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryGravel);
+		if(Config.venus)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusGravel);
+		if(Config.ceres)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresGravel);
+		if(Config.jupiter)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.jupiterGravel);
+		if(Config.saturn)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.saturnGravel);
+		if(Config.pluto)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.plutoGravel);
+		if(Config.eris)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.erisGravel);
+		if(Config.callisto)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.callistoGravel);
+		if(Config.deimos)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.deimosGravel);
+		if(Config.europa)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.europaGravel);
+		if(Config.ganymede)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ganymedeGravel);
+		if(Config.phobos)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.phobosGravel);
+		if(Config.rhea)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.rheaGravel);
+		if(Config.triton)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.tritonGravel);
+		if(Config.io)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ioGravel);
+		if(Config.titan)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titanGravel);
 	}
 
 	private void registerItemRenderers() {

@@ -52,7 +52,7 @@ public class BlockBasicNeptune extends Block implements IDetectableResource, IPl
 		STONEBRICKS(8, "neptune_stonebricks"), 
 		DUNGEON_BRICK(9, "neptune_dungeon_brick"), 
 		ORE_BLUE_GEM(10, "neptune_ore_blue_gem"),
-		BLUE_GEM_BLOCK(10, "neptune_blue_gem_block");
+		BLUE_GEM_BLOCK(11, "neptune_blue_gem_block");
 
 		private final int meta;
 		private final String name;
