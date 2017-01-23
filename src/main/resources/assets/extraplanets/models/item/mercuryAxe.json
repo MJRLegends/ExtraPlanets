@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier11.blueDiamond"
+        "layer0": "extraplanets:items/mercuryAxe"
     },
 	"display": {
         "thirdperson": {

@@ -2,7 +2,6 @@ package com.mjr.extraplanets;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
@@ -42,6 +41,7 @@ import com.mjr.extraplanets.handlers.BoneMealHandler;
 import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
 import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
@@ -83,15 +83,14 @@ public class ExtraPlanets {
 
 	@Instance(Constants.modID)
 	public static ExtraPlanets instance;
-	
+
 	public static ExtraPlanetsChannelHandler packetPipeline;
-	
+
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
 		@Override
 		public Item getTabIconItem() {
-			// return Item.getItemFromBlock(ExtraPlanets_Blocks.denseIce);
-			return Item.getItemFromBlock(GCBlocks.basicBlock);
+			return Item.getItemFromBlock(ExtraPlanets_Blocks.callistoBlocks);
 		}
 	};
 
@@ -120,14 +119,14 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			// if (Config.venus)
-			// return ExtraPlanets_Tools.carbonPickaxe;
-			// else if (Config.jupiter)
-			// return ExtraPlanets_Tools.palladiumPickaxe;
-			// else if (Config.saturn)
-			// return ExtraPlanets_Tools.magnesiumPickaxe;
-			// else if (Config.uranus)
-			// return ExtraPlanets_Tools.crystalPickaxe;
+			if (Config.venus)
+				return ExtraPlanets_Tools.carbonPickaxe;
+			else if (Config.jupiter)
+				return ExtraPlanets_Tools.palladiumPickaxe;
+			else if (Config.saturn)
+				return ExtraPlanets_Tools.magnesiumPickaxe;
+			else if (Config.uranus)
+				return ExtraPlanets_Tools.crystalPickaxe;
 			return GCItems.steelPickaxe;
 		}
 	};
@@ -135,14 +134,14 @@ public class ExtraPlanets {
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			// if (Config.venus)
-			// return ExtraPlanets_Armor.carbonChest;
-			// else if (Config.jupiter)
-			// return ExtraPlanets_Armor.palladiumChest;
-			// else if (Config.saturn)
-			// return ExtraPlanets_Armor.magnesiumChest;
-			// else if (Config.uranus)
-			// return ExtraPlanets_Armor.crystalChest;
+			if (Config.venus)
+				return ExtraPlanets_Armor.carbonChest;
+			else if (Config.jupiter)
+				return ExtraPlanets_Armor.palladiumChest;
+			else if (Config.saturn)
+				return ExtraPlanets_Armor.magnesiumChest;
+			else if (Config.uranus)
+				return ExtraPlanets_Armor.crystalChest;
 			return GCItems.steelChestplate;
 		}
 	};
@@ -150,10 +149,10 @@ public class ExtraPlanets {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		Config.load();
-		
-		//Main Events
+
+		// Main Events
 		MinecraftForge.EVENT_BUS.register(new MainHandlerServer());
-		
+
 		// Planets Events
 		if (Config.mercury)
 			MinecraftForge.EVENT_BUS.register(new MercuryEvents());
@@ -199,7 +198,7 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
 		ExtraPlanets_Fluids.init();
-		// ExtraPlanets_Tools.init();
+		ExtraPlanets_Tools.init();
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
@@ -220,7 +219,7 @@ public class ExtraPlanets {
 
 		// Bone Meal Handler
 		MinecraftForge.EVENT_BUS.register(new BoneMealHandler());
-		
+
 		// Proxy PreInit Method
 		ExtraPlanets.proxy.preInit(event);
 
@@ -238,9 +237,8 @@ public class ExtraPlanets {
 		registerNonMobEntities();
 		registerCreatures();
 
-		
 		packetPipeline = ExtraPlanetsChannelHandler.init();
-		
+
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 	}
@@ -304,38 +302,6 @@ public class ExtraPlanets {
 			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
 		if (Config.eris)
 			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
-
-		// Entities
-		// if (Config.evolvedMagmaCube)
-		// registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class,
-		// Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
-		// if (Config.evolvedIceSlime)
-		// registerExtraPlanetsCreature(EntityEvolvedIceSlime.class,
-		// Constants.modName + "EvolvedIceSlime", 16382457, 44975);
-		// if (Config.evolvedWitch)
-		// registerExtraPlanetsCreature(EntityEvolvedWitch.class,
-		// Constants.modName + "EvolvedWitch", 3407872, 5349438);
-		// if (Config.evolvedEnderman)
-		// registerExtraPlanetsCreature(EntityEvolvedEnderman.class,
-		// Constants.modName + "EvolvedEnderman", 1447446, 0);
-		// if (Config.evolvedBlaze)
-		// registerExtraPlanetsCreature(EntityEvolvedBlaze.class,
-		// Constants.modName + "EvolvedBlaze", 16167425, 16775294);
-		// if (Config.evolvedBlueCreeper)
-		// registerExtraPlanetsCreature(EntityBlueCreeper.class,
-		// Constants.modName + "EvolvedBlueCreeper", 44975, 0);
-		// if (Config.evolvedRedCreeper)
-		// registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class,
-		// Constants.modName + "EvolvedRedCreeper", 11013646, 0);
-		// if (Config.evolvedPowerSkeleton)
-		// registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class,
-		// Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
-		// if (Config.evolvedGiantSpider)
-		// registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class,
-		// Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
-		// if (Config.evolvedMiniEnderman)
-		// registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class,
-		// Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
 	}
 
 	private void registerSchematicsRecipes() {
