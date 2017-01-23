@@ -28,7 +28,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IRadiationSuit;
-import com.mjr.extraplanets.api.IItemPressure;
+import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.client.handlers.EPPlayerStatsClient;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
@@ -157,7 +157,7 @@ public class MainHandlerServer {
 				int pressureLevel = provider.getPressureLevel();
 				for (int i = 0; i < 4; i++) {
 					ItemStack stack = playerMP.getCurrentArmor(i);
-					if ((stack == null) || (!(stack.getItem() instanceof IItemPressure))) {
+					if ((stack == null) || (!(stack.getItem() instanceof IPressureSuit))) {
 						if (pressureLevel >= 8 && pressureLevel < 25)
 							playerMP.attackEntityFrom(DamageSourceEP.pressure, 1.5F);
 						else if (pressureLevel > 25 && pressureLevel < 50)

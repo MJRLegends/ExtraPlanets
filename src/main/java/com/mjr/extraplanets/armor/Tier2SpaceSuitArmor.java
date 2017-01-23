@@ -7,9 +7,9 @@ import net.minecraft.item.ItemStack;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IRadiationSuit;
-import com.mjr.extraplanets.api.IItemPressure;
+import com.mjr.extraplanets.api.IPressureSuit;
 
-public class Tier2SpaceSuitArmor extends ItemArmor implements IItemPressure, IRadiationSuit{
+public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit{
 	public String name;
 
 	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
