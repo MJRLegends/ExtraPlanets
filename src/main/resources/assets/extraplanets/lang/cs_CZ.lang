@@ -754,13 +754,15 @@ achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=Zabij Bosse z kobky na Venuši a otevři truhlu s pokladem
 achievement.jupiterBoss.desc=Zabij Bosse z kobky na Jupiteru a otevři truhlu s pokladem
 achievement.saturnBoss.desc=Zabij Bosse z kobky na Saturnu a otevři truhlu s pokladem
 achievement.uranusBoss.desc=Zabij Bosse z kobky na Uranu a otevři truhlu s pokladem
 achievement.neptuneBoss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s pokladem
-achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=Tier 4 Rocket!
 achievement.craftRocket5=Tier 5 Rocket!
@@ -768,6 +770,7 @@ achievement.craftRocket6=Tier 6 Rocket!
 achievement.craftRocket7=Tier 7 Rocket!
 achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
+achievement.craftRocket10=Tier 10 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket
 achievement.craftRocket5.desc=Craft Tier 5 Rocket
@@ -775,6 +778,7 @@ achievement.craftRocket6.desc=Craft Tier 6 Rocket
 achievement.craftRocket7.desc=Craft Tier 7 Rocket
 achievement.craftRocket8.desc=Craft Tier 8 Rocket
 achievement.craftRocket9.desc=Craft Tier 9 Rocket
+achievement.craftRocket10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Tekutý světlit

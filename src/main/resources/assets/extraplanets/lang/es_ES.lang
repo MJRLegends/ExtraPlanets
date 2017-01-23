@@ -745,7 +745,7 @@ achievement.saturnPlanet.desc=Toma un a cohete nivel 5 a Saturno
 achievement.uranusPlanet.desc=Toma un a cohete nivel 6 a Urano
 achievement.neptunePlanet.desc=Toma un a cohete nivel 7 a Neptuno
 achievement.plutoPlanet.desc=Toma un a cohete nivel 8 a Pluto
-achievement.erisPlanet.desc=Toma un a cohete nivel 8 a Eris
+achievement.erisPlanet.desc=Toma un a cohete nivel 9 a Eris
 
 achievement.venusBoss=¡Jefe nivel 4 derrotado!
 achievement.jupiterBoss=¡Jefe nivel 5 derrotado!
@@ -753,6 +753,7 @@ achievement.saturnBoss=¡Jefe nivel 6 derrotado!
 achievement.uranusBoss=¡Jefe nivel 7 derrotado!
 achievement.neptuneBoss=¡Jefe nivel 8 derrotado!
 achievement.plutoBoss=¡Jefe nivel 9 derrotado!
+achievement.erisBoss=¡Jefe nivel 10 derrotado!
 
 achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus
 achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter
@@ -760,6 +761,7 @@ achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno
 achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano
 achievement.neptuneBoss.desc=Mata al jefe de la mazmorra de Neptuno
 achievement.plutoBoss.desc=Mata al jefe de la mazmorra de Pluto
+achievement.erisBoss.desc=Mata al jefe de la mazmorra de Eris
 
 achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus y abre el cofre del tesoro
 achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter y abre el cofre del tesoro
@@ -774,6 +776,7 @@ achievement.craftRocket6=¡Cohete nivel 6!
 achievement.craftRocket7=¡Cohete nivel 7!
 achievement.craftRocket8=¡Cohete nivel 8!
 achievement.craftRocket9=¡Cohete nivel 9!
+achievement.craftRocket10=¡Cohete nivel 10!
 
 achievement.craftRocket4.desc=Crea un cohete nivel 4
 achievement.craftRocket5.desc=Crea un cohete nivel 5
@@ -781,6 +784,7 @@ achievement.craftRocket6.desc=Crea un cohete nivel 6
 achievement.craftRocket7.desc=Crea un cohete nivel 7
 achievement.craftRocket8.desc=Crea un cohete nivel 8
 achievement.craftRocket9.desc=Crea un cohete nivel 9
+achievement.craftRocket10.desc=Crea un cohete nivel 10
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Piedra luminosa líquida

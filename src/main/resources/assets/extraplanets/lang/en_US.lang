@@ -755,6 +755,7 @@ achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=Kill the Venus Dungeon Boss
 achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
@@ -776,6 +777,7 @@ achievement.craftRocket6=Tier 6 Rocket!
 achievement.craftRocket7=Tier 7 Rocket!
 achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
+achievement.craftRocket10=Tier 10 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket
 achievement.craftRocket5.desc=Craft Tier 5 Rocket
@@ -783,6 +785,7 @@ achievement.craftRocket6.desc=Craft Tier 6 Rocket
 achievement.craftRocket7.desc=Craft Tier 7 Rocket
 achievement.craftRocket8.desc=Craft Tier 8 Rocket
 achievement.craftRocket9.desc=Craft Tier 9 Rocket
+achievement.craftRocket10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Liquid Glowstone

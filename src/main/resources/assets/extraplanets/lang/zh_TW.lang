@@ -755,6 +755,7 @@ achievement.saturnBoss=擊敗土星地牢BOSS！
 achievement.uranusBoss=擊敗天王星地牢BOSS！
 achievement.neptuneBoss=擊敗海王星地牢BOSS！
 achievement.plutoBoss=擊敗冥王星地牢BOSS！
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=擊殺金星地牢BOSS並開啟寶箱！
 achievement.jupiterBoss.desc=擊殺木星地牢BOSS並開啟寶箱！
@@ -762,6 +763,7 @@ achievement.saturnBoss.desc=擊殺土星地牢BOSS並開啟寶箱！
 achievement.uranusBoss.desc=擊殺天王星地牢BOSS並開啟寶箱！
 achievement.neptuneBoss.desc=擊殺海王星地牢BOSS並開啟寶箱！
 achievement.plutoBoss.desc=擊殺冥王星地牢BOSS並開啟寶箱！
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=4階火箭！
 achievement.craftRocket5=5階火箭！
@@ -769,6 +771,7 @@ achievement.craftRocket6=6階火箭！
 achievement.craftRocket7=7階火箭！
 achievement.craftRocket8=8階火箭！
 achievement.craftRocket9=9階火箭！
+achievement.craftRocket10=10階火箭！
 
 achievement.craftRocket4.desc=製作4階火箭
 achievement.craftRocket5.desc=製作5階火箭
@@ -776,6 +779,7 @@ achievement.craftRocket6.desc=製作6階火箭
 achievement.craftRocket7.desc=製作7階火箭
 achievement.craftRocket8.desc=製作8階火箭
 achievement.craftRocket9.desc=製作9階火箭
+achievement.craftRocket10.desc=製作10階火箭
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=螢石水

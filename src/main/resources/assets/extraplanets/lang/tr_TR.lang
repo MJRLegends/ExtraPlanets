@@ -754,6 +754,7 @@ achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=Kill the Venus Dungeon Boss
 achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
@@ -761,6 +762,7 @@ achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss
 achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss
 achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss
 achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss
 
 achievement.venusBoss.desc=Venüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.jupiterBoss.desc=Jüpiter Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
@@ -775,6 +777,7 @@ achievement.craftRocket6=Tier 6 Roket!
 achievement.craftRocket7=Tier 7 Roket!
 achievement.craftRocket8=Tier 8 Roket!
 achievement.craftRocket9=Tier 9 Roket!
+achievement.craftRocket10=Tier 10 Roket!
 
 achievement.craftRocket4.desc=Tier 4 Roket İnşa Et
 achievement.craftRocket5.desc=Tier 5 Roket İnşa Et
@@ -782,6 +785,7 @@ achievement.craftRocket6.desc=Tier 6 Roket İnşa Et
 achievement.craftRocket7.desc=Tier 7 Roket İnşa Et
 achievement.craftRocket8.desc=Tier 8 Roket İnşa Et
 achievement.craftRocket9.desc=Tier 9 Roket İnşa Et
+achievement.craftRocket10.desc=Tier 10 Roket İnşa Et
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Işıktaşı Yakıtı
