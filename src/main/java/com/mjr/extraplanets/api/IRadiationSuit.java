@@ -1,6 +1,6 @@
 package com.mjr.extraplanets.api;
 
-public interface IArmorSuit {
+public interface IRadiationSuit {
 
 	public int getArmorTier();
 }

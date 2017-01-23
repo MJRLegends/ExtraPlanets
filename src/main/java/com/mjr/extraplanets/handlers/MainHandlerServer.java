@@ -27,7 +27,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.IArmorSuit;
+import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.api.IItemPressure;
 import com.mjr.extraplanets.client.handlers.EPPlayerStatsClient;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -143,13 +143,13 @@ public class MainHandlerServer {
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.entityLiving;
 		if (entityLiving instanceof EntityPlayerMP) {
-			checkPressure(event);
+			checkPressure(event, entityLiving);
+			checkRadiation(event, entityLiving);
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 		}
 	}
 
-	private void checkPressure(LivingEvent.LivingUpdateEvent event) {
-		final EntityLivingBase entityLiving = event.entityLiving;
+	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
 		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider && !playerMP.capabilities.isCreativeMode) {
 			if ((playerMP.worldObj.provider instanceof EPWorldProviderSpace)) {
@@ -168,7 +168,15 @@ public class MainHandlerServer {
 							playerMP.attackEntityFrom(DamageSourceEP.pressure, 3.5F);
 					}
 				}
+			}
+		}
+	}
 
+	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
+		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
+		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider && !playerMP.capabilities.isCreativeMode) {
+			if ((playerMP.worldObj.provider instanceof EPWorldProviderSpace)) {
+				EPWorldProviderSpace provider = (EPWorldProviderSpace) playerMP.worldObj.provider;
 				// Normal/Nothing 0.005
 				// Tier 1 0.0045
 				// Tier 2 0.004
@@ -181,19 +189,19 @@ public class MainHandlerServer {
 				if (playerMP.getCurrentArmor(0) == null || playerMP.getCurrentArmor(1) == null || playerMP.getCurrentArmor(2) == null || playerMP.getCurrentArmor(3) == null) {
 					damageModifer = 0.005;
 					doDamage = true;
-				} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IArmorSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IArmorSuit)
-						&& !(playerMP.getCurrentArmor(2).getItem() instanceof IArmorSuit) && !(playerMP.getCurrentArmor(3).getItem() instanceof IArmorSuit)) {
+				} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IRadiationSuit)
+						&& !(playerMP.getCurrentArmor(2).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(3).getItem() instanceof IRadiationSuit)) {
 					damageModifer = 0.005;
 					doDamage = true;
-				} else if (playerMP.getCurrentArmor(0).getItem() instanceof IArmorSuit) {
+				} else if (playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) {
 					doArmorCheck = true;
 					doDamage = false;
 				}
 				if (doArmorCheck) {
-					int helmetTier = ((IArmorSuit) playerMP.getCurrentArmor(0).getItem()).getArmorTier();
-					int chestTier = ((IArmorSuit) playerMP.getCurrentArmor(1).getItem()).getArmorTier();
-					int legginsTier = ((IArmorSuit) playerMP.getCurrentArmor(2).getItem()).getArmorTier();
-					int bootsTier = ((IArmorSuit) playerMP.getCurrentArmor(3).getItem()).getArmorTier();
+					int helmetTier = ((IRadiationSuit) playerMP.getCurrentArmor(0).getItem()).getArmorTier();
+					int chestTier = ((IRadiationSuit) playerMP.getCurrentArmor(1).getItem()).getArmorTier();
+					int legginsTier = ((IRadiationSuit) playerMP.getCurrentArmor(2).getItem()).getArmorTier();
+					int bootsTier = ((IRadiationSuit) playerMP.getCurrentArmor(3).getItem()).getArmorTier();
 
 					int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
 					double damageToTake = 0.005 * tierValue;
