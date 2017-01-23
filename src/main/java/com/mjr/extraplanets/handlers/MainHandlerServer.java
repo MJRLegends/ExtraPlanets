@@ -143,8 +143,10 @@ public class MainHandlerServer {
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.entityLiving;
 		if (entityLiving instanceof EntityPlayerMP) {
-			checkPressure(event, entityLiving);
-			checkRadiation(event, entityLiving);
+			if(Config.pressure)
+				checkPressure(event, entityLiving);
+			if(Config.radiation)
+				checkRadiation(event, entityLiving);
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 		}
 	}
@@ -230,7 +232,7 @@ public class MainHandlerServer {
 		final EPPlayerStats GCPlayer = EPPlayerStats.get(player);
 		final boolean isInGCDimension = player.worldObj.provider instanceof IGalacticraftWorldProvider;
 
-		if (isInGCDimension) {
+		if (isInGCDimension && Config.radiation) {
 			if (tick % 30 == 0) {
 				this.sendSolarRadiationPacket(player, GCPlayer);
 			}

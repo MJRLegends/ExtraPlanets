@@ -200,6 +200,9 @@ public class Config {
 	public static boolean neiSupport;
 	public static boolean achievements;
 
+	public static boolean pressure;
+	public static boolean radiation;
+
 	public static void load() {
 		Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
 		config.load();
@@ -396,6 +399,9 @@ public class Config {
 
 		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
 
+		pressure = config.get(generalsettings, "Enable pressure", true, "").getBoolean(true);
+		radiation = config.get(generalsettings, "Enable radiation", true, "").getBoolean(true);
+		
 		config.save();
 	}
 

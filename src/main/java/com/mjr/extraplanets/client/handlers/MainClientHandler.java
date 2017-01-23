@@ -17,67 +17,63 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.OverlayPressure;
 import com.mjr.extraplanets.client.gui.OverlaySolarRadiation;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.world.EPWorldProviderSpace;
 
 public class MainClientHandler {
-	
-    private static List<ExtraPlanetsPacketHandler> packetHandlers = Lists.newCopyOnWriteArrayList();
 
-    public static void addPacketHandler(ExtraPlanetsPacketHandler handler)
-    {
-    	MainClientHandler.packetHandlers.add(handler);
-    }
+	private static List<ExtraPlanetsPacketHandler> packetHandlers = Lists.newCopyOnWriteArrayList();
 
-    @SubscribeEvent
-    public void worldUnloadEvent(WorldEvent.Unload event)
-    {
-        for (ExtraPlanetsPacketHandler packetHandler : packetHandlers)
-        {
-            packetHandler.unload(event.world);
-        }
-    }
+	public static void addPacketHandler(ExtraPlanetsPacketHandler handler) {
+		MainClientHandler.packetHandlers.add(handler);
+	}
 
-    
-    @SubscribeEvent
-    public void onClientTick(ClientTickEvent event)
-    {
-        final Minecraft minecraft = FMLClientHandler.instance().getClient();
-        final WorldClient world = minecraft.theWorld;
+	@SubscribeEvent
+	public void worldUnloadEvent(WorldEvent.Unload event) {
+		for (ExtraPlanetsPacketHandler packetHandler : packetHandlers) {
+			packetHandler.unload(event.world);
+		}
+	}
 
-        if (event.phase == Phase.END)
-        {
-            if (world != null)
-            {
-                for (ExtraPlanetsPacketHandler handler : packetHandlers)
-                {
-                    handler.tick(world);
-                }
-            }
-        }
-    }
-    
+	@SubscribeEvent
+	public void onClientTick(ClientTickEvent event) {
+		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final WorldClient world = minecraft.theWorld;
+
+		if (event.phase == Phase.END) {
+			if (world != null) {
+				for (ExtraPlanetsPacketHandler handler : packetHandlers) {
+					handler.tick(world);
+				}
+			}
+		}
+	}
+
 	@SubscribeEvent
 	public void onRenderTick(RenderTickEvent event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
 		final EntityPlayerSP player = minecraft.thePlayer;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
-		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.worldObj.provider)
-				&& !playerBaseClient.isSpectator()) {
+		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen)
+				&& OxygenUtil.noAtmosphericCombustion(player.worldObj.provider) && !playerBaseClient.isSpectator()) {
 			EPWorldProviderSpace provider = (EPWorldProviderSpace) player.worldObj.provider;
-			int pressureLevel = provider.getPressureLevel();
-			OverlayPressure.renderPressureIndicator(pressureLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 
-			EPPlayerStatsClient stats = null;
-
-			if (player != null) {
-				stats = EPPlayerStatsClient.get(playerBaseClient);
+			if (Config.pressure) {
+				int pressureLevel = provider.getPressureLevel();
+				OverlayPressure.renderPressureIndicator(pressureLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 			}
-			if(stats.radiationLevel != null){
-			int radiationLevel = (int) Math.floor(stats.radiationLevel);
-			OverlaySolarRadiation.renderSolarRadiationIndicator(radiationLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
+			if (Config.radiation) {
+				EPPlayerStatsClient stats = null;
+				if (player != null) {
+					stats = EPPlayerStatsClient.get(playerBaseClient);
+				}
+				if (stats.radiationLevel != null) {
+					int radiationLevel = (int) Math.floor(stats.radiationLevel);
+					OverlaySolarRadiation.renderSolarRadiationIndicator(radiationLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
+				}
 			}
 		}
 	}
