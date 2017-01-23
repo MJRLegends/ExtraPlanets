@@ -123,7 +123,7 @@ public class ExtraPlanets_Achievements {
 		if (Config.pluto)
 			plutoBoss = new Achievement("achievement.plutoBoss", "plutoBoss", 13, 5, ExtraPlanets_Blocks.plutoDungeonBrick, plutoPlanet).registerStat();
 		if (Config.eris)
-			plutoBoss = new Achievement("achievement.erisBoss", "erisBoss", 15, 4, ExtraPlanets_Blocks.erisDungeonBrick, erisPlanet).registerStat();
+			erisBoss = new Achievement("achievement.erisBoss", "erisBoss", 15, 4, ExtraPlanets_Blocks.erisDungeonBrick, erisPlanet).registerStat();
 	}
 
 	private static void initAchievementPage() {
