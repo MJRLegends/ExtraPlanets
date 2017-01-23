@@ -261,7 +261,6 @@ public class ExtraPlanets_Armor {
 		tier4SpaceSuitLegings = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier4SpaceSuitLegings");
 		tier4SpaceSuitBoots = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier4SpaceSuitBoots");
 		tier4SpaceSuitGravityBoots = new Tier4SpaceSuitArmor("tier4SpaceSuit", tier4SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier4SpaceSuitGravityBoots");
-
 	}
 
 	private static void registerArmor() {

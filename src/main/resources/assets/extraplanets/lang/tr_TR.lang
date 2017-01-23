@@ -29,7 +29,7 @@ planet.Eris=Eris
 planet.kuiperBelt=Kuiper Belt
 planet.makemake=Makemake
 
-planet.kepler62b=Kepler 62b
+planet.kepler62b=Kepler62b
 planet.kepler62c=Kepler 62c
 planet.kepler62d=Kepler 62d
 planet.kepler62e=Kepler 62e
@@ -656,16 +656,35 @@ item.greenDiamondChest.name=Green Diamond Chestplate
 item.greenDiamondLegings.name=Green Diamond Leggings
 item.greenDiamondBoots.name=Green Diamond Boots
 
+item.tier1SpaceSuitHelmet.name=Tier 1 Space Suit Helmet
+item.tier1SpaceSuitChest.name=Tier 1 Space Suit Chestplate
+item.tier1SpaceSuitLegings.name=Tier 1 Space Suit Leggings
+item.tier1SpaceSuitBoots.name=Tier 1 Space Suit Boots
+item.tier1SpaceSuitGravityBoots.name=Tier 1 Space Suit Gravity Boots
+item.tier2SpaceSuitHelmet.name=Tier 2 Space Suit Helmet
+item.tier2SpaceSuitChest.name=Tier 2 Space Suit Chestplate
+item.tier2SpaceSuitLegings.name=Tier 2 Space Suit Leggings
+item.tier2SpaceSuitBoots.name=Tier 2 Space Suit Boots
+item.tier2SpaceSuitGravityBoots.name=Tier 2 Space Suit Gravity Boots
+item.tier3SpaceSuitHelmet.name=Tier 3 Space Suit Helmet
+item.tier3SpaceSuitChest.name=Tier 3 Space Suit Chestplate
+item.tier3SpaceSuitLegings.name=Tier 3 Space Suit Leggings
+item.tier3SpaceSuitBoots.name=Tier 3 Space Suit Boots
+item.tier3SpaceSuitGravityBoots.name=Tier 3 Space Suit Gravity Boots
+item.tier4SpaceSuitHelmet.name=Tier 4 Space Suit Helmet
+item.tier4SpaceSuitChest.name=Tier 4 Space Suit Chestplate
+item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
+item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
+item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
+
 item.tier2ThermalHelm.name=Tier 2 Termal Dolgulu Kask
 item.tier2ThermalChestplate.name=Tier 2 Termal Dolgulu Zırh
 item.tier2ThermalLeggings.name=Tier 2 Termal Dolgulu Pantolon
 item.tier2ThermalBoots.name=Tier 2 Termal Dolgulu Bot
-
 item.tier3ThermalHelm.name=Tier 3 Termal Dolgulu Kask
 item.tier3ThermalChestplate.name=Tier 3 Termal Dolgulu Zırh
 item.tier3ThermalLeggings.name=Tier 3 Termal Dolgulu Pantolon
 item.tier3ThermalBoots.name=Tier 3 Termal Dolgulu Bot
-
 item.tier4ThermalHelm.name=Tier 4 Termal Dolgulu Kask
 item.tier4ThermalChestplate.name=Tier 4 Termal Dolgulu Zırh
 item.tier4ThermalLeggings.name=Tier 4 Termal Dolgulu Pantolon
@@ -697,6 +716,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Roket
 entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Roket
 entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Roket
 entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Roket
+entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Roket
 
 entity.ExtraPlanetsCreeperBossVenus.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossJupiter.name=Evrimleşmiş Creeper Patronu
@@ -727,6 +747,8 @@ achievement.uranusPlanet=Uranus İçin Küçük Benim İçin Büyük!
 achievement.neptunePlanet=Neptune İçin Küçük Benim İçin Büyük!
 achievement.plutoPlanet=Pluto İçin Küçük Benim İçin Büyük!
 achievement.erisPlanet=Eris İçin Küçük Benim İçin Büyük!
+achievement.kepler62bPlanet=Land on Kepler66b!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=Tier 4 Roket İle Merkür'ya Git
 achievement.venusPlanet.desc=Tier 4 Roket İle Venüs'e Git
@@ -736,7 +758,9 @@ achievement.saturnPlanet.desc=Tier 5 Roket İle Satürn'e Git
 achievement.uranusPlanet.desc=Tier 6 Roket İle Uranüs'e Git
 achievement.neptunePlanet.desc=Tier 7 Roket İle Neptün'e Git
 achievement.plutoPlanet.desc=Tier 8 Roket Pluto'ya Git
-achievement.erisPlanet.desc=Tier 8 Roket İle Eris'e Git
+achievement.erisPlanet.desc=Tier 9 Roket İle Eris'e Git
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
+achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
 achievement.venusBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!
@@ -744,13 +768,7 @@ achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
-
-achievement.venusBoss.desc=Kill the Venus Dungeon Boss
-achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
-achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss
-achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss
-achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss
-achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=Venüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.jupiterBoss.desc=Jüpiter Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
@@ -758,6 +776,7 @@ achievement.saturnBoss.desc=Satürn Mutasyonik Patronu Öldür Ve Hazine Sandı�
 achievement.uranusBoss.desc=Uranüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.neptuneBoss.desc=Neptün Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.plutoBoss.desc=Pluto Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=Tier 4 Roket!
 achievement.craftRocket5=Tier 5 Roket!
@@ -765,6 +784,7 @@ achievement.craftRocket6=Tier 6 Roket!
 achievement.craftRocket7=Tier 7 Roket!
 achievement.craftRocket8=Tier 8 Roket!
 achievement.craftRocket9=Tier 9 Roket!
+achievement.craftRocket9=Tier 10 Roket!
 
 achievement.craftRocket4.desc=Tier 4 Roket İnşa Et
 achievement.craftRocket5.desc=Tier 5 Roket İnşa Et
@@ -772,6 +792,7 @@ achievement.craftRocket6.desc=Tier 6 Roket İnşa Et
 achievement.craftRocket7.desc=Tier 7 Roket İnşa Et
 achievement.craftRocket8.desc=Tier 8 Roket İnşa Et
 achievement.craftRocket9.desc=Tier 9 Roket İnşa Et
+achievement.craftRocket9.desc=Tier 10 Roket İnşa Et
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Işıktaşı Yakıtı
@@ -780,6 +801,7 @@ tile.nitrogen_fluid.name=Nitrojen Yakıtı
 tile.frozen_water_fluid.name=Soğumuş Su
 tile.salt_fluid.name=Tuz Yakıtı
 
+#Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
 death.attack.radiation=%1$s forgot radiation protection

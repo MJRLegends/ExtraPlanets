@@ -29,7 +29,7 @@ planet.Eris=Eris
 planet.kuiperBelt=Kuiperův pás
 planet.makemake=Makemake
 
-planet.kepler62b=Kepler 62b
+planet.kepler62b=Kepler62b
 planet.kepler62c=Kepler 62c
 planet.kepler62d=Kepler 62d
 planet.kepler62e=Kepler 62e
@@ -656,16 +656,35 @@ item.greenDiamondChest.name=Green Diamond Chestplate
 item.greenDiamondLegings.name=Green Diamond Leggings
 item.greenDiamondBoots.name=Green Diamond Boots
 
+item.tier1SpaceSuitHelmet.name=Tier 1 Space Suit Helmet
+item.tier1SpaceSuitChest.name=Tier 1 Space Suit Chestplate
+item.tier1SpaceSuitLegings.name=Tier 1 Space Suit Leggings
+item.tier1SpaceSuitBoots.name=Tier 1 Space Suit Boots
+item.tier1SpaceSuitGravityBoots.name=Tier 1 Space Suit Gravity Boots
+item.tier2SpaceSuitHelmet.name=Tier 2 Space Suit Helmet
+item.tier2SpaceSuitChest.name=Tier 2 Space Suit Chestplate
+item.tier2SpaceSuitLegings.name=Tier 2 Space Suit Leggings
+item.tier2SpaceSuitBoots.name=Tier 2 Space Suit Boots
+item.tier2SpaceSuitGravityBoots.name=Tier 2 Space Suit Gravity Boots
+item.tier3SpaceSuitHelmet.name=Tier 3 Space Suit Helmet
+item.tier3SpaceSuitChest.name=Tier 3 Space Suit Chestplate
+item.tier3SpaceSuitLegings.name=Tier 3 Space Suit Leggings
+item.tier3SpaceSuitBoots.name=Tier 3 Space Suit Boots
+item.tier3SpaceSuitGravityBoots.name=Tier 3 Space Suit Gravity Boots
+item.tier4SpaceSuitHelmet.name=Tier 4 Space Suit Helmet
+item.tier4SpaceSuitChest.name=Tier 4 Space Suit Chestplate
+item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
+item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
+item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
+
 item.tier2ThermalHelm.name=Tier 2 Thermal Padding Helm
 item.tier2ThermalChestplate.name=Tier 2 Thermal Padding Chestpiece
 item.tier2ThermalLeggings.name=Tier 2 Thermal Padding Leggings
 item.tier2ThermalBoots.name=Tier 2 Thermal Padding Boots
-
 item.tier3ThermalHelm.name=Tier 3 Thermal Padding Helm
 item.tier3ThermalChestplate.name=Tier 3 Thermal Padding Chestpiece
 item.tier3ThermalLeggings.name=Tier 3 Thermal Padding Leggings
 item.tier3ThermalBoots.name=Tier 3 Thermal Padding Boots
-
 item.tier4ThermalHelm.name=Tier 4 Thermal Padding Helm
 item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
 item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
@@ -697,6 +716,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Rocket
 entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Rocket
 entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
 entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
+entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Rocket
 
 entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss z Venuše
 entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss z Jupiteru
@@ -727,6 +747,8 @@ achievement.uranusPlanet=Přistaň na Uranu!
 achievement.neptunePlanet=Přistaň na Neptunu!
 achievement.plutoPlanet=Přistaň na Plutu!
 achievement.erisPlanet=Přistaň na Erisu!
+achievement.kepler62bPlanet=Land on Kepler66b!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=Vezmi raketu typ 4 na Merkur
 achievement.venusPlanet.desc=Vezmi raketu typ 3 na Venuši
@@ -736,7 +758,9 @@ achievement.saturnPlanet.desc=Vezmi raketu typ 5 na Saturn
 achievement.uranusPlanet.desc=Vezmi raketu typ 6 na Uran
 achievement.neptunePlanet.desc=Vezmi raketu typ 7 na Neptun
 achievement.plutoPlanet.desc=Vezmi raketu typ 8 na Pluto
-achievement.erisPlanet.desc=Vezmi raketu typ 8 na Eris
+achievement.erisPlanet.desc=Vezmi raketu typ 9 na Eris
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
+achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
 achievement.venusBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!
@@ -744,13 +768,15 @@ achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=Zabij Bosse z kobky na Venuši a otevři truhlu s pokladem
 achievement.jupiterBoss.desc=Zabij Bosse z kobky na Jupiteru a otevři truhlu s pokladem
 achievement.saturnBoss.desc=Zabij Bosse z kobky na Saturnu a otevři truhlu s pokladem
 achievement.uranusBoss.desc=Zabij Bosse z kobky na Uranu a otevři truhlu s pokladem
 achievement.neptuneBoss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s pokladem
-achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=Tier 4 Rocket!
 achievement.craftRocket5=Tier 5 Rocket!
@@ -758,6 +784,7 @@ achievement.craftRocket6=Tier 6 Rocket!
 achievement.craftRocket7=Tier 7 Rocket!
 achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
+achievement.craftRocket10=Tier 10 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket
 achievement.craftRocket5.desc=Craft Tier 5 Rocket
@@ -765,6 +792,7 @@ achievement.craftRocket6.desc=Craft Tier 6 Rocket
 achievement.craftRocket7.desc=Craft Tier 7 Rocket
 achievement.craftRocket8.desc=Craft Tier 8 Rocket
 achievement.craftRocket9.desc=Craft Tier 9 Rocket
+achievement.craftRocket10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Tekutý světlit
@@ -773,7 +801,7 @@ tile.nitrogen_fluid.name=Tekutý dusík
 tile.frozen_water_fluid.name=Zmrzlá voda
 tile.Salt_fluid.name=Zmrzlá sůl
 
-
+#Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
 death.attack.radiation=%1$s forgot radiation protection

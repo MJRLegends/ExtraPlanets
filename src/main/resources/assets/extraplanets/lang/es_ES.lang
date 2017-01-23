@@ -29,7 +29,7 @@ planet.Eris=Eris
 planet.kuiperBelt=Cinturón de Kuiper
 planet.makemake=Makemake
 
-planet.kepler62b=Kepler 62b
+planet.kepler62b=Kepler62b
 planet.kepler62c=Kepler 62c
 planet.kepler62d=Kepler 62d
 planet.kepler62e=Kepler 62e
@@ -655,16 +655,35 @@ item.greenDiamondChest.name=Green Diamond Chestplate
 item.greenDiamondLegings.name=Green Diamond Leggings
 item.greenDiamondBoots.name=Green Diamond Boots
 
+item.tier1SpaceSuitHelmet.name=Tier 1 Space Suit Helmet
+item.tier1SpaceSuitChest.name=Tier 1 Space Suit Chestplate
+item.tier1SpaceSuitLegings.name=Tier 1 Space Suit Leggings
+item.tier1SpaceSuitBoots.name=Tier 1 Space Suit Boots
+item.tier1SpaceSuitGravityBoots.name=Tier 1 Space Suit Gravity Boots
+item.tier2SpaceSuitHelmet.name=Tier 2 Space Suit Helmet
+item.tier2SpaceSuitChest.name=Tier 2 Space Suit Chestplate
+item.tier2SpaceSuitLegings.name=Tier 2 Space Suit Leggings
+item.tier2SpaceSuitBoots.name=Tier 2 Space Suit Boots
+item.tier2SpaceSuitGravityBoots.name=Tier 2 Space Suit Gravity Boots
+item.tier3SpaceSuitHelmet.name=Tier 3 Space Suit Helmet
+item.tier3SpaceSuitChest.name=Tier 3 Space Suit Chestplate
+item.tier3SpaceSuitLegings.name=Tier 3 Space Suit Leggings
+item.tier3SpaceSuitBoots.name=Tier 3 Space Suit Boots
+item.tier3SpaceSuitGravityBoots.name=Tier 3 Space Suit Gravity Boots
+item.tier4SpaceSuitHelmet.name=Tier 4 Space Suit Helmet
+item.tier4SpaceSuitChest.name=Tier 4 Space Suit Chestplate
+item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
+item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
+item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
+
 item.tier2ThermalHelm.name=Gorro térmico nivel 2
 item.tier2ThermalChestplate.name=Suéter térmico nivel 2
 item.tier2ThermalLeggings.name=Leggings térmicos nivel 2
 item.tier2ThermalBoots.name=Calcetines térmicos nivel 2
-
 item.tier3ThermalHelm.name=Gorro térmico nivel 3
 item.tier3ThermalChestplate.name=Suéter térmico nivel 2
 item.tier3ThermalLeggings.name=Leggings térmicos nivel 2
 item.tier3ThermalBoots.name=Calcetines térmicos nivel 2
-
 item.tier4ThermalHelm.name=Gorro térmico nivel 4
 item.tier4ThermalChestplate.name=Suéter térmico nivel 2
 item.tier4ThermalLeggings.name=Leggings térmicos nivel 2
@@ -696,6 +715,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=Cohete nivel 6
 entity.ExtraPlanets.EntityTier7Rocket.name=Cohete nivel 7
 entity.ExtraPlanets.EntityTier8Rocket.name=Cohete nivel 8
 entity.ExtraPlanets.EntityTier9Rocket.name=Cohete nivel 9
+entity.ExtraPlanets.EntityTier10Rocket.name=Cohete nivel 10
 
 entity.ExtraPlanetsCreeperBossVenus.name=Jefe creeper evolucionado de Venus
 entity.ExtraPlanetsCreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter
@@ -726,6 +746,8 @@ achievement.uranusPlanet=¡Aterriza en Urano!
 achievement.neptunePlanet=¡Aterriza en Neptuno!
 achievement.plutoPlanet=¡Aterriza en Pluto!
 achievement.erisPlanet=¡Aterriza en Eris!
+achievement.kepler62bPlanet=Land on Kepler66b!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=Toma un a cohete nivel 4 a Mercurio
 achievement.venusPlanet.desc=Toma un a cohete nivel 3 a Venus
@@ -735,7 +757,9 @@ achievement.saturnPlanet.desc=Toma un a cohete nivel 5 a Saturno
 achievement.uranusPlanet.desc=Toma un a cohete nivel 6 a Urano
 achievement.neptunePlanet.desc=Toma un a cohete nivel 7 a Neptuno
 achievement.plutoPlanet.desc=Toma un a cohete nivel 8 a Pluto
-achievement.erisPlanet.desc=Toma un a cohete nivel 8 a Eris
+achievement.erisPlanet.desc=Toma un a cohete nivel 9 a Eris
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
+achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
 achievement.venusBoss=¡Jefe nivel 4 derrotado!
 achievement.jupiterBoss=¡Jefe nivel 5 derrotado!
@@ -743,13 +767,7 @@ achievement.saturnBoss=¡Jefe nivel 6 derrotado!
 achievement.uranusBoss=¡Jefe nivel 7 derrotado!
 achievement.neptuneBoss=¡Jefe nivel 8 derrotado!
 achievement.plutoBoss=¡Jefe nivel 9 derrotado!
-
-achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus
-achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter
-achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno
-achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano
-achievement.neptuneBoss.desc=Mata al jefe de la mazmorra de Neptuno
-achievement.plutoBoss.desc=Mata al jefe de la mazmorra de Pluto
+achievement.erisBoss=¡Jefe nivel 10 derrotado!
 
 achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus y abre el cofre del tesoro
 achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter y abre el cofre del tesoro
@@ -757,6 +775,7 @@ achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno y abre el cof
 achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano y abre el cofre del tesoro
 achievement.neptuneBoss.desc=Mata al jefe de la mazmorra de Neptuno y abre el cofre del tesoro
 achievement.plutoBoss.desc=Mata al jefe de la mazmorra de Pluto y abre el cofre del tesoro
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=¡Cohete nivel 4!
 achievement.craftRocket5=¡Cohete nivel 5!
@@ -764,6 +783,7 @@ achievement.craftRocket6=¡Cohete nivel 6!
 achievement.craftRocket7=¡Cohete nivel 7!
 achievement.craftRocket8=¡Cohete nivel 8!
 achievement.craftRocket9=¡Cohete nivel 9!
+achievement.craftRocket9=¡Cohete nivel 10!
 
 achievement.craftRocket4.desc=Crea un cohete nivel 4
 achievement.craftRocket5.desc=Crea un cohete nivel 5
@@ -771,6 +791,7 @@ achievement.craftRocket6.desc=Crea un cohete nivel 6
 achievement.craftRocket7.desc=Crea un cohete nivel 7
 achievement.craftRocket8.desc=Crea un cohete nivel 8
 achievement.craftRocket9.desc=Crea un cohete nivel 9
+achievement.craftRocket10.desc=Crea un cohete nivel 10
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Piedra luminosa líquida
@@ -779,6 +800,7 @@ tile.nitrogen_fluid.name=Nitrógeno líquido
 tile.frozen_water_fluid.name=Agua Congelada
 tile.salt_fluid.name=Sal líquida
 
+#Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
 death.attack.radiation=%1$s forgot radiation protection

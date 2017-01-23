@@ -657,16 +657,35 @@ item.greenDiamondChest.name=Green Diamond Chestplate
 item.greenDiamondLegings.name=Green Diamond Leggings
 item.greenDiamondBoots.name=Green Diamond Boots
 
+item.tier1SpaceSuitHelmet.name=Tier 1 Space Suit Helmet
+item.tier1SpaceSuitChest.name=Tier 1 Space Suit Chestplate
+item.tier1SpaceSuitLegings.name=Tier 1 Space Suit Leggings
+item.tier1SpaceSuitBoots.name=Tier 1 Space Suit Boots
+item.tier1SpaceSuitGravityBoots.name=Tier 1 Space Suit Gravity Boots
+item.tier2SpaceSuitHelmet.name=Tier 2 Space Suit Helmet
+item.tier2SpaceSuitChest.name=Tier 2 Space Suit Chestplate
+item.tier2SpaceSuitLegings.name=Tier 2 Space Suit Leggings
+item.tier2SpaceSuitBoots.name=Tier 2 Space Suit Boots
+item.tier2SpaceSuitGravityBoots.name=Tier 2 Space Suit Gravity Boots
+item.tier3SpaceSuitHelmet.name=Tier 3 Space Suit Helmet
+item.tier3SpaceSuitChest.name=Tier 3 Space Suit Chestplate
+item.tier3SpaceSuitLegings.name=Tier 3 Space Suit Leggings
+item.tier3SpaceSuitBoots.name=Tier 3 Space Suit Boots
+item.tier3SpaceSuitGravityBoots.name=Tier 3 Space Suit Gravity Boots
+item.tier4SpaceSuitHelmet.name=Tier 4 Space Suit Helmet
+item.tier4SpaceSuitChest.name=Tier 4 Space Suit Chestplate
+item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
+item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
+item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
+
 item.tier2ThermalHelm.name=2階熱力充能頭盔
 item.tier2ThermalChestplate.name=2階熱力充能胸甲
 item.tier2ThermalLeggings.name=2階熱力充能護腿
 item.tier2ThermalBoots.name=2階熱力充能靴
-
 item.tier3ThermalHelm.name=3階熱力充能頭盔
 item.tier3ThermalChestplate.name=3階熱力充能胸甲
 item.tier3ThermalLeggings.name=3階熱力充能護腿
 item.tier3ThermalBoots.name=3階熱力充能靴
-
 item.tier4ThermalHelm.name=4階熱力充能頭盔
 item.tier4ThermalChestplate.name=4階熱力充能胸甲
 item.tier4ThermalLeggings.name=4階熱力充能護腿
@@ -698,6 +717,7 @@ entity.ExtraPlanets.EntityTier6Rocket.name=6階火箭
 entity.ExtraPlanets.EntityTier7Rocket.name=7階火箭
 entity.ExtraPlanets.EntityTier8Rocket.name=8階火箭
 entity.ExtraPlanets.EntityTier9Rocket.name=9階火箭
+entity.ExtraPlanets.EntityTier10Rocket.name=10階火箭
 
 entity.ExtraPlanetsCreeperBossVenus.name=金星爬行者之王(進化體)
 entity.ExtraPlanetsCreeperBossJupiter.name=木星爬行者之王(進化體)
@@ -728,6 +748,8 @@ achievement.uranusPlanet=登陸天王星！
 achievement.neptunePlanet=登陸海王星！
 achievement.plutoPlanet=登陸冥王星！
 achievement.erisPlanet=登陸鬩神星！
+achievement.kepler62bPlanet=Land on Kepler66b!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=乘坐4階火箭到水星
 achievement.venusPlanet.desc=乘坐3階火箭到金星
@@ -737,7 +759,9 @@ achievement.saturnPlanet.desc=乘坐5階火箭到土星
 achievement.uranusPlanet.desc=乘坐6階火箭到天王星
 achievement.neptunePlanet.desc=乘坐7階火箭到海王星
 achievement.plutoPlanet.desc=乘坐8階火箭到冥王星
-achievement.erisPlanet.desc=乘坐8階火箭到鬩神星
+achievement.erisPlanet.desc=乘坐9階火箭到鬩神星
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
+achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
 achievement.venusBoss=擊敗金星地牢BOSS！
 achievement.jupiterBoss=擊敗木星地牢BOSS！
@@ -745,6 +769,7 @@ achievement.saturnBoss=擊敗土星地牢BOSS！
 achievement.uranusBoss=擊敗天王星地牢BOSS！
 achievement.neptuneBoss=擊敗海王星地牢BOSS！
 achievement.plutoBoss=擊敗冥王星地牢BOSS！
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=擊殺金星地牢BOSS並開啟寶箱！
 achievement.jupiterBoss.desc=擊殺木星地牢BOSS並開啟寶箱！
@@ -752,6 +777,7 @@ achievement.saturnBoss.desc=擊殺土星地牢BOSS並開啟寶箱！
 achievement.uranusBoss.desc=擊殺天王星地牢BOSS並開啟寶箱！
 achievement.neptuneBoss.desc=擊殺海王星地牢BOSS並開啟寶箱！
 achievement.plutoBoss.desc=擊殺冥王星地牢BOSS並開啟寶箱！
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=4階火箭！
 achievement.craftRocket5=5階火箭！
@@ -759,6 +785,7 @@ achievement.craftRocket6=6階火箭！
 achievement.craftRocket7=7階火箭！
 achievement.craftRocket8=8階火箭！
 achievement.craftRocket9=9階火箭！
+achievement.craftRocket10=10階火箭！
 
 achievement.craftRocket4.desc=製作4階火箭
 achievement.craftRocket5.desc=製作5階火箭
@@ -766,6 +793,7 @@ achievement.craftRocket6.desc=製作6階火箭
 achievement.craftRocket7.desc=製作7階火箭
 achievement.craftRocket8.desc=製作8階火箭
 achievement.craftRocket9.desc=製作9階火箭
+achievement.craftRocket10.desc=製作10階火箭
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=螢石水
@@ -774,6 +802,7 @@ tile.nitrogen_fluid.name=液氮
 tile.frozen_water_fluid.name=冰凍水
 tile.salt_fluid.name=液態鹽水
 
+#Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
 death.attack.radiation=%1$s forgot radiation protection
