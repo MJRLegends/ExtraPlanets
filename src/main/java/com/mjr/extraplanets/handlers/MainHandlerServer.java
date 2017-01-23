@@ -203,11 +203,8 @@ public class MainHandlerServer {
 				}
 				if (doDamage) {
 					final EPPlayerStats EPPlayer = EPPlayerStats.get(playerMP);
-					// System.out.println("Damage " + damageModifer);
-					// System.out.println("Level " + EPPlayer.radiationLevel);
 					if (EPPlayer.radiationLevel >= 100)
-						EPPlayer.radiationLevel = 0;
-					// playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
+						playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
 					else if (EPPlayer.radiationLevel >= 0)
 						EPPlayer.radiationLevel = EPPlayer.radiationLevel + (damageModifer * (radiationLevel / 10));
 					else
