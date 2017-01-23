@@ -16,7 +16,8 @@ v1 Beta Build ----More to be added!!----
 *Fixed all the block textures
 *Fixed most of the Armour textures
 *Added Beta Pressure & Radiation system
-*Added Tier 1 - 4 Basic Space suits
+*Added Tier 1 - 4 Basic Space Suits
+*Added Tier 1 - 4 Basic Space Suits Gravity Boots
 *Added Volcanos and Lakes back to Venus
 *Added Fluids back
 *Updated lang files
