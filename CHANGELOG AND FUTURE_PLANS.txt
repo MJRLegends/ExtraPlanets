@@ -41,7 +41,7 @@ TODO = Not yet done
 v1.0 Pre-3.9
 *Fixed some Localization typos (Thanks to MrNinja93)
 *Few fixes for hopefully issue #60
-More Information coming soon...
+*Updated lang files
 
 ======================================================================================================
 
