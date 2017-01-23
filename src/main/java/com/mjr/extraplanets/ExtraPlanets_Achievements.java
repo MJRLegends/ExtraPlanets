@@ -38,7 +38,7 @@ public class ExtraPlanets_Achievements {
 	public static Achievement erisBoss;
 
 	public static Achievement mercuryPlanet;
-
+	public static Achievement kepler22bPlanet;
 	public static Achievement ceresPlanet;
 
 	public static Achievement craftRocket4;
@@ -59,7 +59,7 @@ public class ExtraPlanets_Achievements {
 	private static void initAchievements() {
 		// Rocket Achievements
 		if (Config.venus)
-			craftRocket4 = new Achievement("achievement.craftRocket1", "craftRocket1", 3, 2, ExtraPlanets_Items.tier4Rocket, (Achievement) null).registerStat();
+			craftRocket4 = new Achievement("achievement.craftRocket4", "craftRocket4", 3, 2, ExtraPlanets_Items.tier4Rocket, (Achievement) null).registerStat();
 		if (Config.venus && Config.jupiter)
 			craftRocket5 = new Achievement("achievement.craftRocket5", "craftRocket5", 5, 2, ExtraPlanets_Items.tier5Rocket, craftRocket4).registerStat();
 		else
@@ -100,6 +100,8 @@ public class ExtraPlanets_Achievements {
 			plutoPlanet = new Achievement("achievement.plutoPlanet", "plutoPlanet", 13, 4, ExtraPlanets_Blocks.plutoBlocks, craftRocket9).registerStat();
 		if (Config.eris)
 			erisPlanet = new Achievement("achievement.erisPlanet", "erisPlanet", 15, 4, ExtraPlanets_Blocks.erisBlocks, craftRocket10).registerStat();
+		if (Config.kepler22b)
+			kepler22bPlanet = new Achievement("achievement.kepler22bPlanet", "kepler22bPlanet", 17, 4, ExtraPlanets_Blocks.kepler22bBlocks, craftRocket10).registerStat();
 
 		// Extra Planets Achievements
 		if (Config.mercury)
@@ -157,6 +159,8 @@ public class ExtraPlanets_Achievements {
 			achievementslist.add(mercuryPlanet);
 		if (ceresPlanet != null)
 			achievementslist.add(ceresPlanet);
+		if (kepler22bPlanet != null)
+			achievementslist.add(kepler22bPlanet);
 		if (craftRocket4 != null)
 			achievementslist.add(craftRocket4);
 		if (craftRocket5 != null)
