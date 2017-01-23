@@ -738,6 +738,7 @@ achievement.uranusPlanet=登陆天王星！
 achievement.neptunePlanet=登陆海王星！
 achievement.plutoPlanet=登陆冥王星！
 achievement.erisPlanet=登陆阋神星！
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=乘坐4阶火箭到水星
 achievement.venusPlanet.desc=乘坐3阶火箭到金星
@@ -748,6 +749,7 @@ achievement.uranusPlanet.desc=乘坐6阶火箭到天王星
 achievement.neptunePlanet.desc=乘坐7阶火箭到海王星
 achievement.plutoPlanet.desc=乘坐8阶火箭到冥王星
 achievement.erisPlanet.desc=乘坐9阶火箭到阋神星
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 
 achievement.venusBoss=击败金星地牢BOSS！
 achievement.jupiterBoss=击败木星地牢BOSS！

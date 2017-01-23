@@ -737,6 +737,7 @@ achievement.uranusPlanet=Přistaň na Uranu!
 achievement.neptunePlanet=Přistaň na Neptunu!
 achievement.plutoPlanet=Přistaň na Plutu!
 achievement.erisPlanet=Přistaň na Erisu!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=Vezmi raketu typ 4 na Merkur
 achievement.venusPlanet.desc=Vezmi raketu typ 3 na Venuši
@@ -747,6 +748,7 @@ achievement.uranusPlanet.desc=Vezmi raketu typ 6 na Uran
 achievement.neptunePlanet.desc=Vezmi raketu typ 7 na Neptun
 achievement.plutoPlanet.desc=Vezmi raketu typ 8 na Pluto
 achievement.erisPlanet.desc=Vezmi raketu typ 9 na Eris
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 
 achievement.venusBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!

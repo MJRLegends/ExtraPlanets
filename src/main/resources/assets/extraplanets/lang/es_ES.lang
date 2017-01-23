@@ -736,6 +736,7 @@ achievement.uranusPlanet=¡Aterriza en Urano!
 achievement.neptunePlanet=¡Aterriza en Neptuno!
 achievement.plutoPlanet=¡Aterriza en Pluto!
 achievement.erisPlanet=¡Aterriza en Eris!
+achievement.kepler22bPlanet=¡Aterriza en Kepler22b!
 
 achievement.mercuryPlanet.desc=Toma un a cohete nivel 4 a Mercurio
 achievement.venusPlanet.desc=Toma un a cohete nivel 3 a Venus
@@ -746,6 +747,7 @@ achievement.uranusPlanet.desc=Toma un a cohete nivel 6 a Urano
 achievement.neptunePlanet.desc=Toma un a cohete nivel 7 a Neptuno
 achievement.plutoPlanet.desc=Toma un a cohete nivel 8 a Pluto
 achievement.erisPlanet.desc=Toma un a cohete nivel 9 a Eris
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 
 achievement.venusBoss=¡Jefe nivel 4 derrotado!
 achievement.jupiterBoss=¡Jefe nivel 5 derrotado!

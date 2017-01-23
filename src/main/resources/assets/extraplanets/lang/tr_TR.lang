@@ -737,6 +737,7 @@ achievement.uranusPlanet=Uranus İçin Küçük Benim İçin Büyük!
 achievement.neptunePlanet=Neptune İçin Küçük Benim İçin Büyük!
 achievement.plutoPlanet=Pluto İçin Küçük Benim İçin Büyük!
 achievement.erisPlanet=Eris İçin Küçük Benim İçin Büyük!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=Tier 4 Roket İle Merkür'ya Git
 achievement.venusPlanet.desc=Tier 4 Roket İle Venüs'e Git
@@ -747,6 +748,7 @@ achievement.uranusPlanet.desc=Tier 6 Roket İle Uranüs'e Git
 achievement.neptunePlanet.desc=Tier 7 Roket İle Neptün'e Git
 achievement.plutoPlanet.desc=Tier 8 Roket Pluto'ya Git
 achievement.erisPlanet.desc=Tier 9 Roket İle Eris'e Git
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 
 achievement.venusBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!
