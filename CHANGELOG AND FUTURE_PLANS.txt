@@ -42,7 +42,8 @@ v1.0 Pre-3.9
 *Fixed some Localization typos (Thanks to MrNinja93)
 *Few fixes for hopefully issue #60
 *Updated lang files
-
+*Added Kepler22b Planet Achievement and fixed a typo in the Achievement Tier 4 Rocket one
+*Few fixes for Achievements
 ======================================================================================================
 
 
