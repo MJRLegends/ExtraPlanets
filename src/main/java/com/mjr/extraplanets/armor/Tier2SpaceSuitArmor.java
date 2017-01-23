@@ -9,20 +9,20 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IArmorSuit;
 import com.mjr.extraplanets.api.IItemPressure;
 
-public class Tier1SpaceSuitArmor extends ItemArmor implements IItemPressure, IArmorSuit{
+public class Tier2SpaceSuitArmor extends ItemArmor implements IItemPressure, IArmorSuit{
 	public String name;
 
-	public Tier1SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
+	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
 		super(material, 0, placement);
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		if(stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitChest || stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitBoots){
+		if(stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitChest || stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitBoots){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
 		}
-		else if(stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitLegings){
+		else if(stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitLegings){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		}
 		else{
@@ -31,6 +31,6 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IItemPressure, IAr
 	}
 	@Override
 	public int getArmorTier() {
-		return 1;
+		return 2;
 	}
 }
