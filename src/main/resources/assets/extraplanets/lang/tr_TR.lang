@@ -430,6 +430,7 @@ item.tier8Items.compressedZinc.name=Sıkıştırılmış Çinko
 item.tier5Items.compressedNickel.name=Sıkıştırılmış Nikel
 item.compressedMercury.name=Sıkıştırılmış Civa
 item.tier9Items.compressedTungsten.name=Sıkıştırılmış Tungsten
+item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4Items.ingotCarbon.name=Karbon Külçesi
@@ -441,6 +442,7 @@ item.tier5Items.ingotNickel.name=Nikel Külçesi
 item.ingotMercury.name=Civa Külçesi
 item.ingotUranium.name=Uranyum Külçesi
 item.tier9Items.ingotTungsten.name=Tungsten Külçesi
+item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5Items.redGem.name=Kırmızıtaş
@@ -724,6 +726,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossUranus.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossNeptune.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossPluto.name=Evrimleşmiş Creeper Patronu
+entity.ExtraPlanetsCreeperBossEris.name=Evrimleşmiş Creeper Patronu
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu

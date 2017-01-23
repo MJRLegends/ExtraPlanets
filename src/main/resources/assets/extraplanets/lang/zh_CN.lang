@@ -431,6 +431,7 @@ item.tier8Items.compressedZinc.name=致密锌板
 item.tier5Items.compressedNickel.name=致密镍板
 item.compressedMercury.name=致密汞板
 item.tier9Items.compressedTungsten.name=致密钨板
+item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4Items.ingotCarbon.name=碳锭
@@ -442,6 +443,7 @@ item.tier5Items.ingotNickel.name=镍锭
 item.ingotMercury.name=汞锭
 item.ingotUranium.name=铀锭
 item.tier9Items.ingotTungsten.name=钨锭
+item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5Items.redGem.name=红宝石
@@ -725,6 +727,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=土星爬行者之王(进化体)
 entity.ExtraPlanetsCreeperBossUranus.name=天王星爬行者之王(进化体)
 entity.ExtraPlanetsCreeperBossNeptune.name=海王星爬行者之王(进化体)
 entity.ExtraPlanetsCreeperBossPluto.name=冥王星爬行者之王(进化体)
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=岩浆怪之王(进化体)
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=冰史莱姆之王(进化体)

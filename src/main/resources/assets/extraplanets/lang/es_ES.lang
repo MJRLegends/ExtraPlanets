@@ -429,6 +429,7 @@ item.tier8Items.compressedZinc.name=Zinc comprimido
 item.tier5Items.compressedNickel.name=Estaño comprimido
 item.compressedMercury.name=Mercurio comprimido
 item.tier9Items.compressedTungsten.name=Tungsteno comprimido
+item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4Items.ingotCarbon.name=Lingote de carbono
@@ -440,6 +441,7 @@ item.tier5Items.ingotNickel.name=Lingote de estaño
 item.ingotMercury.name=Lingote mercuriano
 item.ingotUranium.name=Lingore de uranio
 item.tier9Items.ingotTungsten.name=Lingote de tungsteno
+item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5Items.redGem.name=Gema roja
@@ -723,6 +725,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Jefe creeper evolucionado de Saturno
 entity.ExtraPlanetsCreeperBossUranus.name=Jefe creeper evolucionado de Urano
 entity.ExtraPlanetsCreeperBossNeptune.name=Jefe creeper evolucionado de Neptuno
 entity.ExtraPlanetsCreeperBossPluto.name=Jefe creeper evolucionado de Pluto
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado

@@ -430,6 +430,7 @@ item.compressedZinc.name=Stlačený Zinek
 item.compressedNickel.name=Stlačený Nikl
 item.compressedMercury.name=Stlačená Měď
 item.tier9Items.compressedTungsten.name=Stlačený Tungsten
+item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4Items.ingotCarbon.name=Karbonový Ingot
@@ -441,6 +442,7 @@ item.ingotNickel.name=Niklový Ingot
 item.ingotMercury.name=Měděný Ingot
 item.ingotUranium.name=Uranový Ingot
 item.tier9Items.ingotTungsten.name=Tungstenový Ingot
+item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
 
 #Gems
 item.tier5Items.redGem.name=Red Gem
@@ -724,6 +726,7 @@ entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss z Saturnu
 entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss z Uranu
 entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss z Neptunu
 entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
 entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
