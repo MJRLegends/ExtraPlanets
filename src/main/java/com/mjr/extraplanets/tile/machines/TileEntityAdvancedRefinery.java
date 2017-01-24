@@ -33,7 +33,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	@NetworkedField(targetSide = Side.CLIENT)
 	public FluidTank fuelTank = new FluidTank(this.tankCapacity);
 
-	public static final int PROCESS_TIME_REQUIRED = 0;
+	public static final int PROCESS_TIME_REQUIRED = 1;
 	public static final int OUTPUT_PER_SECOND = 2;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
@@ -183,7 +183,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.refinery.name");
+		return GCCoreUtil.translate("container.advanced.refinery.name");
 	}
 
 	@Override
