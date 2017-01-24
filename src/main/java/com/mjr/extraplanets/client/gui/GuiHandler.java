@@ -13,8 +13,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
+import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 
 public class GuiHandler implements IGuiHandler {
@@ -35,6 +37,8 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile, player);
 			} else if (tile instanceof TileEntityUltimateRefinery) {
 				return new ContainerUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) tile, player);
+			} else if (tile instanceof TileEntitySolar) {
+				return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
 			}
 		}
 		return null;
@@ -59,6 +63,10 @@ public class GuiHandler implements IGuiHandler {
 			} else if (tile instanceof TileEntityUltimateRefinery) {
 				return new GuiUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) world.getTileEntity(position));
 			}
+			else if (tile instanceof TileEntitySolar)
+            {
+                return new GuiSolar(player.inventory, (TileEntitySolar) tile);
+            }
 		}
 		return null;
 	}

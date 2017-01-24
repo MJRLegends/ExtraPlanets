@@ -1,11 +1,14 @@
 package com.mjr.extraplanets.blocks.machines;
 
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.items.itemBlocks.ItemBlockSolar;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 
 public class ExtraPlanets_Machines {
@@ -26,8 +29,8 @@ public class ExtraPlanets_Machines {
 			advancedRefinery = new AdvancedRefinery("advancedRefinery");
 		if (Config.ultimateRefinery)
 			ultimateRefinery = new UltimateRefinery("ultimateRefinery");
-		// if(Config.solarPanels)
-		// solarPanel = new BlockSolar("solar");
+		if (Config.solarPanels)
+			solarPanel = new BlockSolar("solarEP");
 	}
 
 	private static void registerMachines() {
@@ -35,11 +38,11 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
 		if (Config.ultimateRefinery)
 			GameRegistry.registerBlock(ultimateRefinery, "ultimateRefinery");
-		// if(Config.solarPanels){
-		// GCCoreUtil.registerGalacticraftBlock("solarPanelHybrid", solarPanel, 0);
-		// GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);
-		// GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName());
-		// }
+		if (Config.solarPanels) {
+			GCCoreUtil.registerGalacticraftBlock("solarPanelHybrid", solarPanel, 0);
+			GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);
+			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName().substring(5));
+		}
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -47,7 +50,7 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
 		if (Config.ultimateRefinery)
 			GameRegistry.registerTileEntity(TileEntityUltimateRefinery.class, Constants.modName + "UltimateRefinery");
-		// if(Config.solarPanels)
-		// GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
+		if (Config.solarPanels)
+			GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
 	}
 }
