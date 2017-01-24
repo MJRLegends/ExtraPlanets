@@ -42,7 +42,8 @@ public class Config {
 	
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
-	public static boolean slabsAndStairs;
+	public static boolean ultimateRefinery;
+	public static boolean slabsAndStairs = false;
 	
 	public static boolean mercury;
 	public static boolean venus;
@@ -196,8 +197,8 @@ public class Config {
 	public static int schematicTier9PageID;
 	public static int schematicTier10PageID;
 
-	public static boolean microBlock;
-	public static boolean neiSupport;
+	public static boolean microBlock = false;
+	public static boolean neiSupport = false;
 	public static boolean achievements;
 
 	public static boolean pressure;
@@ -238,7 +239,7 @@ public class Config {
 		
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
-		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);
+		ultimateRefinery = config.get(blocks, "Ultimate Refinery", true).getBoolean(true);
 
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will").getBoolean(true);
 		oreDictionary = config.get(dimensionSettings, "Add planet/moons ores to the ore dictionary", true, "").getBoolean(true);
@@ -395,9 +396,6 @@ public class Config {
 		schematicTier8PageID = config.get(schematicsPage, "Schematic Tier 8 Page ID", 6670).getInt();
 		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
 		schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
-
-		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
-		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
 
 		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
 

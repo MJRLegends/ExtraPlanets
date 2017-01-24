@@ -13,7 +13,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 
 public class GuiHandler implements IGuiHandler {
 	@Override
@@ -31,6 +33,8 @@ public class GuiHandler implements IGuiHandler {
 		if (tile != null) {
 			if (tile instanceof TileEntityAdvancedRefinery) {
 				return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile, player);
+			} else if (tile instanceof TileEntityUltimateRefinery) {
+				return new ContainerUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) tile, player);
 			}
 		}
 		return null;
@@ -52,6 +56,8 @@ public class GuiHandler implements IGuiHandler {
 		if (tile != null) {
 			if (tile instanceof TileEntityAdvancedRefinery) {
 				return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position));
+			} else if (tile instanceof TileEntityUltimateRefinery) {
+				return new GuiUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) world.getTileEntity(position));
 			}
 		}
 		return null;
