@@ -12,7 +12,7 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
 
 public class RoomTreasureEris extends RoomTreasure {
 	public RoomTreasureEris() {

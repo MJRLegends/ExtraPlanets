@@ -41,7 +41,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT7TreasureChest;
 
 public class EntityEvolvedIceSlimeBoss extends EntityLiving implements IEntityBreathable, IBossDisplayData, IBoss {
 	public float squishAmount;

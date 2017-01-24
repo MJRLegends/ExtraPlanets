@@ -48,7 +48,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
 
 public class EntityCreeperBossEris extends EntityMob implements IEntityBreathable, IBossDisplayData, IRangedAttackMob, IBoss {
 	protected long ticks = 0;

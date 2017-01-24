@@ -12,7 +12,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityT10TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT10TreasureChest> {

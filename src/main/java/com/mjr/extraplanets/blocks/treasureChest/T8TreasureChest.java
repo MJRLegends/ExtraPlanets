@@ -6,7 +6,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT8TreasureChest;
 
 public class T8TreasureChest extends BlockT1TreasureChest {
 	public T8TreasureChest(String assetName) {

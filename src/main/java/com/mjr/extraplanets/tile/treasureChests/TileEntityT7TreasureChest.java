@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.treasureChests;
 
 import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
 import net.minecraft.entity.Entity;

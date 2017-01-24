@@ -60,13 +60,6 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
@@ -74,6 +67,13 @@ import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT5TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT6TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT8TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT9TreasureChest;
 import com.mjr.extraplanets.world.WorldGenerationOverworld;
 
 public class ExtraPlanets_Blocks {
