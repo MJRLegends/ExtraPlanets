@@ -135,13 +135,13 @@ public class ClientProxy extends CommonProxy {
 					"ceres_uranium_block", "ceres_stonebricks");
 		if (Config.jupiter)
 			addExtraPlanetsVariants("jupiter", "jupiter_surface", "jupiter_sub_surface", "jupiter_stone", "jupiter_ore_iron", "jupiter_ore_tin", "jupiter_ore_copper",
-					"jupiter_ore_red_gem", "jupiter_red_gem_block", "jupiter_stonebricks", "jupiter_dungeon_brick", "jupiter_ore_red_gem", "jupiter_red_gem_block");
+					"jupiter_ore_palladium", "jupiter_palladium_block", "jupiter_stonebricks", "jupiter_dungeon_brick", "jupiter_ore_red_gem", "jupiter_red_gem_block");
 		if (Config.uranus)
-			addExtraPlanetsVariants("uranus", "uranus_surface", "uranus_sub_surface", "uranus_stone", "uranus_ore_white_gem", "uranus_white_gem_block", "uranus_stonebricks",
-					"uranus_dungeon_brick", "uranus_ore_red_gem", "uranus_red_gem_block");
+			addExtraPlanetsVariants("uranus", "uranus_surface", "uranus_sub_surface", "uranus_stone", "uranus_ore_crystal", "uranus_crystal_block", "uranus_stonebricks",
+					"uranus_dungeon_brick", "uranus_ore_white_gem", "uranus_white_gem_block");
 		if (Config.neptune)
 			addExtraPlanetsVariants("neptune", "neptune_surface", "neptune_sub_surface", "neptune_stone", "neptune_ore_iron", "neptune_ore_tin", "neptune_ore_copper",
-					"neptune_ore_zine", "neptune_zinc_block", "neptune_stonebricks", "neptune_dungeon_brick", "neptune_ore_blue_gem", "neptune_blue_gem_block");
+					"neptune_ore_zinc", "neptune_zinc_block", "neptune_stonebricks", "neptune_dungeon_brick", "neptune_ore_blue_gem", "neptune_blue_gem_block");
 		if (Config.saturn)
 			addExtraPlanetsVariants("saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper",
 					"saturn_ore_magnesium", "saturn_magnesium_block", "saturn_stonebricks", "saturn_dungeon_brick");
@@ -500,6 +500,15 @@ public class ClientProxy extends CommonProxy {
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ioGravel);
 		if(Config.titan)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titanGravel);
+		
+		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.fossil);
+		if(Config.neptune)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.frozenNitrogen);
+		if(Config.venus)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.volcanicRock);
+		if(Config.uranus)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.denseIce);
 	}
 
 	private void registerItemRenderers() {

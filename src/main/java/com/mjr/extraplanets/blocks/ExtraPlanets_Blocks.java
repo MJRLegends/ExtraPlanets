@@ -351,7 +351,7 @@ public class ExtraPlanets_Blocks {
 
 			GameRegistry.registerBlock(venusSpawner, ItemBlockGC.class, "venusSpawner");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
+			GameRegistry.registerBlock(volcanicRock, volcanicRock.getUnlocalizedName().substring(5));
 		}
 		if (Config.ceres) {
 			GameRegistry.registerBlock(ceresBlocks, ItemBlockCeres.class, ceresBlocks.getUnlocalizedName().substring(5));
@@ -375,13 +375,13 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(uranusBlocks, ItemBlockUranus.class, uranusBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(uranusSpawner, ItemBlockGC.class, "uranusSpawner");
 			GameRegistry.registerBlock(treasureChestTier7, ItemBlockDesc.class, treasureChestTier7.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(denseIce, "denseIce");
+			GameRegistry.registerBlock(denseIce, denseIce.getUnlocalizedName().substring(5));
 		}
 		if (Config.neptune) {
 			GameRegistry.registerBlock(neptuneBlocks, ItemBlockNeptune.class, neptuneBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(neptuneSpawner, ItemBlockGC.class, "neptuneSpawner");
 			GameRegistry.registerBlock(treasureChestTier8, ItemBlockDesc.class, treasureChestTier8.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(frozenNitrogen, "frozenNitrogen");
+			GameRegistry.registerBlock(frozenNitrogen, frozenNitrogen.getUnlocalizedName().substring(5));
 		}
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName().substring(5));
@@ -450,7 +450,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(titanGravel, "titanGravel");
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-			GameRegistry.registerBlock(fossil, "fossil");
+			GameRegistry.registerBlock(fossil, fossil.getUnlocalizedName().substring(5));
 		if (Config.ceres)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
 	}
