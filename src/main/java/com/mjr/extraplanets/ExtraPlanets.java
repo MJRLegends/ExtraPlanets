@@ -257,7 +257,7 @@ public class ExtraPlanets {
 		// Initialize/Register Achievements
 		if (Config.achievements)
 			ExtraPlanets_Achievements.init();
-
+			
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
 	}

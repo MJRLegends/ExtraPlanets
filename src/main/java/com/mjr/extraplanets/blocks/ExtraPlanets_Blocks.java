@@ -74,6 +74,7 @@ import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.world.WorldGenerationOverworld;
 
 public class ExtraPlanets_Blocks {
 
@@ -131,6 +132,7 @@ public class ExtraPlanets_Blocks {
 	public static Block denseIce;
 	public static Block volcanicRock;
 	public static Block frozenNitrogen;
+	public static Block oreLead;
 
 	// Treasure Chests
 	public static Block treasureChestTier4;
@@ -260,23 +262,24 @@ public class ExtraPlanets_Blocks {
 			titanBlocks = new BlockBasicTitan("titan");
 			titanGravel = new BlockCustomGravel("titanGravel");
 		}
-
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres)
 			nuclearBomb = new BlockNuclearBomb();
+		if (Config.leadOreGeneration)
+			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone);
 		if (Config.kepler22b) {
-//			 kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
-//			 kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
-//			 kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue",
-//			 "kepler22b");
-//			 kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_purple",
-//			 "kepler22b");
-//			 kepler22bRedGrass = new BlockBasicGrass("kepler22b_red",
-//			 "kepler22b");
-//			 kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow",
-//			 "kepler22b");
-//			 kepler22bGrassFlowers = newBlockBasicKepler22bTallGrass("kepler22bFlowers");
+			// kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
+			// kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
+			// kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue",
+			// "kepler22b");
+			// kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_purple",
+			// "kepler22b");
+			// kepler22bRedGrass = new BlockBasicGrass("kepler22b_red",
+			// "kepler22b");
+			// kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow",
+			// "kepler22b");
+			// kepler22bGrassFlowers = newBlockBasicKepler22bTallGrass("kepler22bFlowers");
 		}
 	}
 
@@ -343,11 +346,11 @@ public class ExtraPlanets_Blocks {
 	private static void registerBlocks() {
 		if (Config.mercury) {
 			GameRegistry.registerBlock(mercuryBlocks, ItemBlockMercury.class, mercuryBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(mercuryGravel, "mercuryGravel");
+			GameRegistry.registerBlock(mercuryGravel, mercuryGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.venus) {
 			GameRegistry.registerBlock(venusBlocks, ItemBlockVenus.class, venusBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(venusGravel, "venusGravel");
+			GameRegistry.registerBlock(venusGravel, venusGravel.getUnlocalizedName().substring(5));
 
 			GameRegistry.registerBlock(venusSpawner, ItemBlockGC.class, "venusSpawner");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName().substring(5));
@@ -355,18 +358,18 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.ceres) {
 			GameRegistry.registerBlock(ceresBlocks, ItemBlockCeres.class, ceresBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(ceresGravel, "ceresGravel");
+			GameRegistry.registerBlock(ceresGravel, ceresGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.jupiter) {
 			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(jupiterGravel, "jupiterGravel");
+			GameRegistry.registerBlock(jupiterGravel, jupiterGravel.getUnlocalizedName().substring(5));
 
 			GameRegistry.registerBlock(jupiterSpawner, ItemBlockGC.class, "jupiterSpawner");
 			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName().substring(5));
 		}
 		if (Config.saturn) {
 			GameRegistry.registerBlock(saturnBlocks, ItemBlockSaturn.class, saturnBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(saturnGravel, "saturnGravel");
+			GameRegistry.registerBlock(saturnGravel, saturnGravel.getUnlocalizedName().substring(5));
 
 			GameRegistry.registerBlock(saturnSpawner, ItemBlockGC.class, "saturnSpawner");
 			GameRegistry.registerBlock(treasureChestTier6, ItemBlockDesc.class, treasureChestTier6.getUnlocalizedName().substring(5));
@@ -387,13 +390,13 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(plutoSpawner, ItemBlockGC.class, "plutoSpawner");
 			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(plutoGravel, "plutoGravel");
+			GameRegistry.registerBlock(plutoGravel, plutoGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.eris) {
 			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(erisSpawner, ItemBlockGC.class, "erisSpawner");
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(erisGravel, "erisGravel");
+			GameRegistry.registerBlock(erisGravel, erisGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.kepler22b) {
 			// GameRegistry.registerBlock(kepler22bBlocks,
@@ -415,44 +418,46 @@ public class ExtraPlanets_Blocks {
 
 		if (Config.europa) {
 			GameRegistry.registerBlock(europaBlocks, ItemBlockEuropa.class, europaBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(europaGravel, "europaGravel");
+			GameRegistry.registerBlock(europaGravel, europaGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.io) {
 			GameRegistry.registerBlock(ioBlocks, ItemBlockIo.class, ioBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(ioGravel, "ioGravel");
+			GameRegistry.registerBlock(ioGravel, ioGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.deimos) {
 			GameRegistry.registerBlock(deimosBlocks, ItemBlockDeimos.class, deimosBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(deimosGravel, "deimosGravel");
+			GameRegistry.registerBlock(deimosGravel, deimosGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.phobos) {
 			GameRegistry.registerBlock(phobosBlocks, ItemBlockPhobos.class, phobosBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(phobosGravel, "phobosGravel");
+			GameRegistry.registerBlock(phobosGravel, phobosGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.triton) {
 			GameRegistry.registerBlock(tritonBlocks, ItemBlockTriton.class, tritonBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(tritonGravel, "tritonGravel");
+			GameRegistry.registerBlock(tritonGravel, tritonGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.callisto) {
 			GameRegistry.registerBlock(callistoBlocks, ItemBlockCallisto.class, callistoBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(callistoGravel, "callistoGravel");
+			GameRegistry.registerBlock(callistoGravel, callistoGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.ganymede) {
 			GameRegistry.registerBlock(ganymedeBlocks, ItemBlockGanymede.class, ganymedeBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(ganymedeGravel, "ganymedeGravel");
+			GameRegistry.registerBlock(ganymedeGravel, ganymedeGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.rhea) {
 			GameRegistry.registerBlock(rheaBlocks, ItemBlockRhea.class, rheaBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(rheaGravel, "rheaGravel");
+			GameRegistry.registerBlock(rheaGravel, rheaGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.titan) {
 			GameRegistry.registerBlock(titanBlocks, ItemBlockTitan.class, titanBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(titanGravel, "titanGravel");
+			GameRegistry.registerBlock(titanGravel, titanGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, fossil.getUnlocalizedName().substring(5));
 		if (Config.ceres)
-			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
+			GameRegistry.registerBlock(nuclearBomb, nuclearBomb.getUnlocalizedName().substring(5));
+		if (Config.leadOreGeneration)
+			GameRegistry.registerBlock(oreLead, oreLead.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerTileEntitys() {
@@ -618,6 +623,10 @@ public class ExtraPlanets_Blocks {
 			// ItemStack(kepler22bBlocks, 1, 10));
 			// OreDictionary.registerOre("cobblestone", new
 			// ItemStack(kepler22bBlocks, 1, 16));
+		}
+		if (Config.leadOreGeneration){
+			OreDictionary.registerOre("oreLead", new ItemStack(oreLead, 1, 0));
+			GameRegistry.registerWorldGenerator(new WorldGenerationOverworld(), 1);
 		}
 	}
 
