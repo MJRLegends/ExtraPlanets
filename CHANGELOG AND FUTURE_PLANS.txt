@@ -14,11 +14,18 @@ v1 Beta Build ----More to be added!!----
 0.4 Alpha Build ----More to be added!!----
 *Fixed up all missing textures/json files
 *Changed Overlay bars for Radiation/Pressure Systems, making them more visible to which bar is related to what!
+*Added Lead Ore for the Overworld
+*Added Lead Ingots
+*Added Config option for Lead Ore/Ingots to turn them off
+*Added Recipes for Space Suits Tier 1 - 4
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+0.3.5 Alpha Build
+*Fixed #62
+
 0.3 Alpha Build
 *Fixed most of the Block textures
 *Fixed most of the Armour textures
