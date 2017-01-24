@@ -18,8 +18,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.client.gui.OverlayPressure;
-import com.mjr.extraplanets.client.gui.OverlaySolarRadiation;
+import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
+import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.world.EPWorldProviderSpace;
 

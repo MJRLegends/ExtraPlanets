@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.inventory;
+package com.mjr.extraplanets.inventory.rockets;
 
 import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,15 +13,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.recipes.Tier6RocketRecipes;
+import com.mjr.extraplanets.recipes.Tier5RocketRecipes;
 
-public class ContainerSchematicTier6Rocket extends Container
+public class ContainerSchematicTier5Rocket extends Container
 {
-	public InventorySchematicTier6Rocket craftMatrix = new InventorySchematicTier6Rocket(this);
+	public InventorySchematicTier5Rocket craftMatrix = new InventorySchematicTier5Rocket(this);
 	public IInventory craftResult = new InventoryCraftResult();
 	private final World worldObj;
 
-	public ContainerSchematicTier6Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos)
+	public ContainerSchematicTier5Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos)
 	{
 		final int change = 27;
 		this.worldObj = par1InventoryPlayer.player.worldObj;
@@ -30,37 +30,37 @@ public class ContainerSchematicTier6Rocket extends Container
 		int var7;
 
 		// Cone
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 1, 48, -8 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 1, 48, -8 + change, pos, par1InventoryPlayer.player));
 
 		// Body
 		for (var6 = 0; var6 < 5; ++var6)
 		{
-			this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
+			this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
 		}
 
 		// Body Right
 		for (var6 = 0; var6 < 5; ++var6)
 		{
-			this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
+			this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
 		}
 
 		// Left fins
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 12, 21, 64 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 13, 21, 82 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 14, 21, 100 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 12, 21, 64 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 13, 21, 82 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 14, 21, 100 + change, pos, par1InventoryPlayer.player));
 
 		// Engine
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 15, 48, 100 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 15, 48, 100 + change, pos, par1InventoryPlayer.player));
 
 		// Right fins
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 16, 75, 64 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 17, 75, 82 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 18, 75, 100 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 16, 75, 64 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 17, 75, 82 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 18, 75, 100 + change, pos, par1InventoryPlayer.player));
 
 		// Addons
 		for (int var8 = 0; var8 < 3; var8++)
 		{
-			this.addSlotToContainer(new SlotSchematicTier6Rocket(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, pos, par1InventoryPlayer.player));
+			this.addSlotToContainer(new SlotSchematicTier5Rocket(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, pos, par1InventoryPlayer.player));
 		}
 
 		// Player inv:
@@ -103,7 +103,7 @@ public class ContainerSchematicTier6Rocket extends Container
 	@Override
 	public void onCraftMatrixChanged(IInventory par1IInventory)
 	{
-		this.craftResult.setInventorySlotContents(0, Tier6RocketRecipes.findMatchingTier6RocketRecipe(this.craftMatrix));
+		this.craftResult.setInventorySlotContents(0, Tier5RocketRecipes.findMatchingTier5RocketRecipe(this.craftMatrix));
 	}
 
 	@Override

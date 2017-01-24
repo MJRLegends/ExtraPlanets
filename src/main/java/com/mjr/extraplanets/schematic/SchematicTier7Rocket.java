@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.GuiSchematicTier7Rocket;
-import com.mjr.extraplanets.inventory.ContainerSchematicTier7Rocket;
+import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier7Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class SchematicTier7Rocket extends ItemSchematic implements ISchematicPage {

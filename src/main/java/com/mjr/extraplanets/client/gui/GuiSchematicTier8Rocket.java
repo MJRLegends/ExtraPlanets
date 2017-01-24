@@ -12,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.ContainerSchematicTier8Rocket;
+import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier8Rocket;
 
 public class GuiSchematicTier8Rocket extends GuiContainer implements ISchematicResultPage {
 	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbenchTier8.png");

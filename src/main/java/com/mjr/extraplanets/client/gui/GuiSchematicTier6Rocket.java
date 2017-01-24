@@ -12,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.ContainerSchematicTier6Rocket;
+import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier6Rocket;
 
 public class GuiSchematicTier6Rocket extends GuiContainer implements ISchematicResultPage
 {

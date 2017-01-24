@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.gui;
+package com.mjr.extraplanets.client.gui.overlay;
 
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;

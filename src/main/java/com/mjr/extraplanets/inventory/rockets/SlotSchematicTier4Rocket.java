@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.inventory;
+package com.mjr.extraplanets.inventory.rockets;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.inventory;
+package com.mjr.extraplanets.inventory.rockets;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
@@ -12,13 +12,13 @@ import net.minecraft.util.BlockPos;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class SlotSchematicTier10Rocket extends Slot
+public class SlotSchematicTier7Rocket extends Slot
 {
 	private final int index;
 	private final BlockPos pos;
 	private final EntityPlayer player;
 
-	public SlotSchematicTier10Rocket(IInventory par2IInventory, int par3, int par4, int par5, BlockPos pos, EntityPlayer player)
+	public SlotSchematicTier7Rocket(IInventory par2IInventory, int par3, int par4, int par5, BlockPos pos, EntityPlayer player)
 	{
 		super(par2IInventory, par3, par4, par5);
 		this.index = par3;
@@ -56,41 +56,41 @@ public class SlotSchematicTier10Rocket extends Slot
 		switch (this.index)
 		{
 		case 1:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.noseConeTier10;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.noseConeTier7;
 		case 2:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 3:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 4:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 5:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 6:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 7:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 8:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 9:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 10:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 11:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 3;
 		case 12:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 1;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 1;
 		case 13:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 2;
 		case 14:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 2;
 		case 15:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 0;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 0;
 		case 16:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 1;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 1;
 		case 17:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 2;
 		case 18:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.tier10Items && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.tier7Items && par1ItemStack.getItemDamage() == 2;
 		case 19:
 			return true;
 		case 20:

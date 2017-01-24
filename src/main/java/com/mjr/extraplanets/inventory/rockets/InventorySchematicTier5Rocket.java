@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.inventory;
+package com.mjr.extraplanets.inventory.rockets;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -6,13 +6,13 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IChatComponent;
 
-public class InventorySchematicTier7Rocket implements IInventory
+public class InventorySchematicTier5Rocket implements IInventory
 {
     private final ItemStack[] stackList;
     private final int inventoryWidth;
     private final Container eventHandler;
 
-    public InventorySchematicTier7Rocket(Container par1Container)
+    public InventorySchematicTier5Rocket(Container par1Container)
     {
         this.stackList = new ItemStack[22];
         this.eventHandler = par1Container;
