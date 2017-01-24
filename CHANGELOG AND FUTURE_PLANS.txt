@@ -13,7 +13,7 @@ v1 Beta Build ----More to be added!!----
 
 0.4 Alpha Build ----More to be added!!----
 *Fixed up all missing textures/json files
-
+*Changed Overlay bars for Radiation/Pressure Systems, making them more visible to which bar is related to what!
 ======================================================================================================
 
 
