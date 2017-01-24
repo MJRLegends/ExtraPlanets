@@ -357,7 +357,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate(this.tierGC == 1 ? "container.solarbasic.name" : "container.solaradvanced.name");
+		return GCCoreUtil.translate(this.tierGC == 1 ? "container.solarhybrid.name" : "container.solarultimate.name");
 	}
 
 	@Override
