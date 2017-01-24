@@ -9,9 +9,16 @@ TODO = Not yet done
 
 ===========================================Future Updates=============================================
 v1 Beta Build ----More to be added!!----
+
+
+0.4 Alpha Build ----More to be added!!----
 *Fixed up all missing textures/json files
 
+======================================================================================================
 
+
+
+===========================================Released Updates===========================================
 0.3 Alpha Build
 *Fixed most of the Block textures
 *Fixed most of the Armour textures
@@ -26,11 +33,7 @@ v1 Beta Build ----More to be added!!----
 *Added Tools back with all textures
 *Added Config option for Pressure and Radiation
 *Few fixes for Achievements
-======================================================================================================
 
-
-
-===========================================Released Updates===========================================
 0.2 Alpha Build
 *Fixed Rockets not being craftable (Issue 58)
 *Added more json files for items
