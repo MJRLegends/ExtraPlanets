@@ -13,7 +13,7 @@ v1 Beta Build ----More to be added!!----
 
 
 0.3 Alpha Build
-*Fixed all the block textures
+*Fixed most of the Block textures
 *Fixed most of the Armour textures
 *Added Beta Pressure & Radiation system
 *Added Tier 1 - 4 Basic Space Suits
@@ -22,6 +22,10 @@ v1 Beta Build ----More to be added!!----
 *Added Fluids back
 *Updated lang files
 *Fixed up/Added back world gen for Planets
+*Clean up
+*Added Tools back with all textures
+*Added Config option for Pressure and Radiation
+*Few fixes for Achievements
 ======================================================================================================
 
 
