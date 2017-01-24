@@ -63,12 +63,12 @@ public class ItemBlockCeres extends ItemBlock
 		}
 		case 7:
 		{
-			name = "stoneBricks";
+			name = "uraniumBlock";
 			break;
 		}
 		case 8:
 		{
-			name = "uraniumBlock";
+			name = "stoneBricks";
 			break;
 		}
 		default:

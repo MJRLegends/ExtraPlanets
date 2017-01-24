@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/volcanicRock",
+    "parent":"extraplanets:block/volcanicRock_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

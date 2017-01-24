@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/fossil",
+    "parent":"extraplanets:block/fossil_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
