@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/frozenNitrogen",
+    "parent":"extraplanets:block/frozenNitrogen_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

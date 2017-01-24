@@ -7,21 +7,20 @@ import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelRocketT3;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.statemap.StateMap.Builder;
+import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.model.IModelState;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.TRSRTransformation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.BlockFluidBase;
-import net.minecraftforge.fluids.IFluidBlock;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -194,6 +193,8 @@ public class ClientProxy extends CommonProxy {
 		addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
 		addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
 
+		MinecraftForge.EVENT_BUS.register(this);
+
 		if (Config.venus)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, (RenderManager manager) -> new RenderCreeperBossVenus(manager));
 		if (Config.jupiter)
@@ -228,12 +229,7 @@ public class ClientProxy extends CommonProxy {
 		if (Config.eris)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
 		registerVariants();
-		// registerFluidVariants();
-		registerFluidModel(ExtraPlanets_Fluids.glowstone);
-		registerFluidModel(ExtraPlanets_Fluids.frozen_water);
-		registerFluidModel(ExtraPlanets_Fluids.magma);
-		registerFluidModel(ExtraPlanets_Fluids.salt);
-		registerFluidModel(ExtraPlanets_Fluids.nitrogen);
+		registerFluidVariants();
 		super.preInit(event);
 	}
 
@@ -251,18 +247,6 @@ public class ClientProxy extends CommonProxy {
 	public void postInit(FMLPostInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new MainClientHandler());
 		super.postInit(event);
-	}
-
-	// Helper Methods
-	private void registerFluidModel(Block block) {
-		Item item = Item.getItemFromBlock((Block) block);
-
-		ModelBakery.registerItemVariants(item, new ResourceLocation(Constants.TEXTURE_PREFIX + item.getUnlocalizedName().substring(5)));
-		ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "fluid", ((IFluidBlock) block).getFluid().getName());
-
-		ModelLoader.setCustomMeshDefinition(item, stack -> modelResourceLocation);
-
-		ModelLoader.setCustomStateMapper((Block) block, new Builder().ignore(new IProperty[] { BlockFluidBase.LEVEL }).build());
 	}
 
 	private void addExtraPlanetsVariants(String name, String... variants) {
@@ -467,47 +451,47 @@ public class ClientProxy extends CommonProxy {
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier9);
 		if (Config.eris)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier10);
-		
-		if(Config.mercury)
+
+		if (Config.mercury)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryGravel);
-		if(Config.venus)
+		if (Config.venus)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusGravel);
-		if(Config.ceres)
+		if (Config.ceres)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresGravel);
-		if(Config.jupiter)
+		if (Config.jupiter)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.jupiterGravel);
-		if(Config.saturn)
+		if (Config.saturn)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.saturnGravel);
-		if(Config.pluto)
+		if (Config.pluto)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.plutoGravel);
-		if(Config.eris)
+		if (Config.eris)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.erisGravel);
-		if(Config.callisto)
+		if (Config.callisto)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.callistoGravel);
-		if(Config.deimos)
+		if (Config.deimos)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.deimosGravel);
-		if(Config.europa)
+		if (Config.europa)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.europaGravel);
-		if(Config.ganymede)
+		if (Config.ganymede)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ganymedeGravel);
-		if(Config.phobos)
+		if (Config.phobos)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.phobosGravel);
-		if(Config.rhea)
+		if (Config.rhea)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.rheaGravel);
-		if(Config.triton)
+		if (Config.triton)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.tritonGravel);
-		if(Config.io)
+		if (Config.io)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ioGravel);
-		if(Config.titan)
+		if (Config.titan)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titanGravel);
-		
+
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.fossil);
-		if(Config.neptune)
+		if (Config.neptune)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.frozenNitrogen);
-		if(Config.venus)
+		if (Config.venus)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.volcanicRock);
-		if(Config.uranus)
+		if (Config.uranus)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.denseIce);
 	}
 
@@ -819,5 +803,62 @@ public class ClientProxy extends CommonProxy {
 		if (Config.eris)
 			replaceModelDefault(event, "rocket_t10", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class,
 					TRSRTransformation.identity());
+	}
+
+	private void registerFluidVariants() {
+		ModelResourceLocation nitrogenLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen", "fluid");
+		Item nitrogen = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen);
+		ModelBakery.registerItemVariants(nitrogen, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen"));
+		ModelLoader.setCustomMeshDefinition(nitrogen, (ItemStack stack) -> nitrogenLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return nitrogenLocation;
+			}
+		});
+
+		ModelResourceLocation glowstoneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "glowstone", "fluid");
+		Item glowstone = Item.getItemFromBlock(ExtraPlanets_Fluids.glowstone);
+		ModelBakery.registerItemVariants(glowstone, new ResourceLocation(Constants.TEXTURE_PREFIX + "glowstone"));
+		ModelLoader.setCustomMeshDefinition(glowstone, (ItemStack stack) -> glowstoneLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.glowstone, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return glowstoneLocation;
+			}
+		});
+
+		ModelResourceLocation magmaLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "magma", "fluid");
+		Item magma = Item.getItemFromBlock(ExtraPlanets_Fluids.magma);
+		ModelBakery.registerItemVariants(magma, new ResourceLocation(Constants.TEXTURE_PREFIX + "magma"));
+		ModelLoader.setCustomMeshDefinition(magma, (ItemStack stack) -> magmaLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.magma, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return magmaLocation;
+			}
+		});
+
+		ModelResourceLocation frozen_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water", "fluid");
+		Item frozen_water = Item.getItemFromBlock(ExtraPlanets_Fluids.frozen_water);
+		ModelBakery.registerItemVariants(frozen_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water"));
+		ModelLoader.setCustomMeshDefinition(frozen_water, (ItemStack stack) -> frozen_waterLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.frozen_water, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return frozen_waterLocation;
+			}
+		});
+
+		ModelResourceLocation saltLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "salt", "fluid");
+		Item salt = Item.getItemFromBlock(ExtraPlanets_Fluids.salt);
+		ModelBakery.registerItemVariants(salt, new ResourceLocation(Constants.TEXTURE_PREFIX + "salt"));
+		ModelLoader.setCustomMeshDefinition(salt, (ItemStack stack) -> saltLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.salt, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return saltLocation;
+			}
+		});
 	}
 }

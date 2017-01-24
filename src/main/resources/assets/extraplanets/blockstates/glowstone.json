@@ -3,7 +3,7 @@
     "variants": {
         "fluid": {
             "model": "forge:fluid",
-            "custom": { "glowstone_fluid": "glowstone_fluid" }
+            "custom": { "fluid": "glowstone_fluid" }
         }
     }
 }

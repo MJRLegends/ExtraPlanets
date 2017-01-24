@@ -19,7 +19,7 @@ public class FluidGlowstone extends BlockFluidClassic implements IFluidBlock
     {
         super(ExtraPlanets_Fluids.glowstone_fluid, ExtraPlanets_Fluids.glowstone_material);
         this.setQuantaPerBlock(9);
-        this.setLightLevel(0.1F);
+        this.setLightLevel(1.0F);
         this.needsRandomTick = true;
         this.setUnlocalizedName(assetName);
     }

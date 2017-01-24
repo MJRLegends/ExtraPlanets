@@ -3,7 +3,7 @@
     "variants": {
         "fluid": {
             "model": "forge:fluid",
-            "custom": { "fluid": "salt" }
+            "custom": { "fluid": "salt_fluid" }
         }
     }
 }

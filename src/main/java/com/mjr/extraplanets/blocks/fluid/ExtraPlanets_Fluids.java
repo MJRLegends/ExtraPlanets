@@ -41,23 +41,23 @@ public class ExtraPlanets_Fluids {
 	private static void initFluid() {
 		glowstone_fluid = new Fluid("glowstone_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_flow")).setBlock(glowstone).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(glowstone_fluid);
-		glowstone = new FluidGlowstone("glowstone_fluid");
+		glowstone = new FluidGlowstone("glowstone");
 
 		magma_fluid = new Fluid("magma_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_flow")).setBlock(magma).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(magma_fluid);
-		magma = new FluidMagma("magma_fluid");
+		magma = new FluidMagma("magma");
 
 		nitrogen_fluid = new Fluid("nitrogen_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_flow")).setBlock(nitrogen).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(nitrogen_fluid);
-		nitrogen = new FluidNitrogen("nitrogen_fluid");
+		nitrogen = new FluidNitrogen("nitrogen");
 
 		frozen_water_fluid = new Fluid("frozen_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_flow")).setBlock(frozen_water).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(frozen_water_fluid);
-		frozen_water = new FluidFrozenWater("frozen_water_fluid");
+		frozen_water = new FluidFrozenWater("frozen_water");
 
 		salt_fluid = new Fluid("salt_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_flow")).setBlock(salt).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(salt_fluid);
-		salt = new FluidSalt("salt_fluid");
+		salt = new FluidSalt("salt");
 	}
 
 	private static void registerBlocks() {

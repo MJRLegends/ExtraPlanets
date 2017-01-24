@@ -3,7 +3,7 @@
     "variants": {
         "fluid": {
             "model": "forge:fluid",
-            "custom": { "fluid": "frozen_water" }
+            "custom": { "fluid": "frozen_water_fluid" }
         }
     }
 }
