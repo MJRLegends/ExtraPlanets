@@ -347,10 +347,11 @@ tile.treasureChestT10.description=Los cofres del tesoro nivel 10 se generarán e
 
 #Machines
 tile.advancedRefinery.name=Refinería Avanzada
-tile.solar.hybrid.name=Panel Solar Híbrido
-tile.solar.ultimate.name=Panel Solar Definitivo
-tile.solarhybrid.description=Este Panel Solar trabajará durante el día y la noche
-tile.solarultimate.description=Este Panel Solar trabajará durante el día y la noche
+tile.ultimateRefinery.name=Ultimate Refinery
+tile.solar.hybrid_solar.name=Panel Solar Híbrido
+tile.solar.ultimate_solar.name=Panel Solar Definitivo
+tile.solar_hybrid.description=Este Panel Solar trabajará durante el día y la noche
+tile.solar_ultimate.description=Este Panel Solar trabajará durante el día y la noche
 container.solarhybrid.name=Panel Solar Híbrido
 container.solarultimate.name=Panel Solar Definitivo
 

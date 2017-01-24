@@ -348,10 +348,11 @@ tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris 
 
 #Machines
 tile.advancedRefinery.name=Advanced Refinery
-tile.solar.hybrid.name=Hybrid Solar Panel
-tile.solar.ultimate.name=Ultimate Solar Panel
-tile.solarhybrid.description=This Solar Panel will work during the day and night
-tile.solarultimate.description=This Solar Panel will work during the day and night
+tile.ultimateRefinery.name=Ultimate Refinery
+tile.solar.hybrid_solar.name=Hybrid Solar Panel
+tile.solar.ultimate_solar.name=Ultimate Solar Panel
+tile.solar_hybrid.description=This Solar Panel will work during the day and night
+tile.solar_ultimate.description=This Solar Panel will work during the day and night
 container.solarhybrid.name=Hybrid Solar Panel
 container.solarultimate.name=Ultimate Solar Panel
 

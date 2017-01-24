@@ -349,10 +349,11 @@ tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris 
 
 #Machines
 tile.advancedRefinery.name=高级精炼机
-tile.solar.hybrid.name=混合型高级太阳能电池板
-tile.solar.ultimate.name=最终混合型高级太阳能电池板
-tile.solarhybrid.description=混合型高级太阳能电池板能全天候工作。
-tile.solarultimate.description=最终混合型高级太阳能电池板能全天候工作。
+tile.ultimateRefinery.name=Ultimate Refinery
+tile.solar.hybrid_solar.name=混合型高级太阳能电池板
+tile.solar.ultimate_solar.name=最终混合型高级太阳能电池板
+tile.solar_hybrid.description=混合型高级太阳能电池板能全天候工作。
+tile.solar_ultimate.description=最终混合型高级太阳能电池板能全天候工作。
 container.solarhybrid.name=混合型高级太阳能电池板
 container.solarultimate.name=最终混合型高级太阳能电池板
 

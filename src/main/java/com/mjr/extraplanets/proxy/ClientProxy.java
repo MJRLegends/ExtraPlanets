@@ -119,7 +119,6 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		registerVariants();
-		MinecraftForge.EVENT_BUS.register(this);
 		registerEntityRenders();
 		registerCustomModel();
 		registerFluidVariants();
@@ -128,8 +127,7 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		SkyProviderHandler clientEventHandler = new SkyProviderHandler();
-		MinecraftForge.EVENT_BUS.register(clientEventHandler);
+		MinecraftForge.EVENT_BUS.register(new SkyProviderHandler());
 		renderBlocks();
 		registerBlockJsons();
 		registerItemJsons();
@@ -207,7 +205,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
 		ClientUtilities.addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
 		if (Config.solarPanels)
-			ClientUtilities.addExtraPlanetsVariants("solarEP", "ultimate_solar", "hybrid_solar");
+			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
 	}
 
 	private void registerEntityRenders() {

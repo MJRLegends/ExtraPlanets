@@ -348,10 +348,11 @@ tile.treasureChestT10.description=Tier 10 Hazine Sandığı Eris zindanında bul
 
 #Machines
 tile.advancedRefinery.name=Gelişmiş Rafineri
-tile.solar.hybrid.name=Karışık Güneş Paneli
-tile.solar.ultimate.name=En Yüksek Güneş Paneli
-tile.solarhybrid.description=Karışık Güneş Paneli, hem gece hemde gündüz enerji toplar.
-tile.solarultimate.description=En Yüksek Güneş Paneli, hem gece hemde gündüz enerji toplar. Normal güneş panelinden daha fazla enerji üretir.
+tile.ultimateRefinery.name=Ultimate Refinery
+tile.solar.hybrid_solar.name=Karışık Güneş Paneli
+tile.solar.ultimate_solar.name=En Yüksek Güneş Paneli
+tile.solar_hybrid.description=Karışık Güneş Paneli, hem gece hemde gündüz enerji toplar.
+tile.solar_ultimate.description=En Yüksek Güneş Paneli, hem gece hemde gündüz enerji toplar. Normal güneş panelinden daha fazla enerji üretir.
 container.solarhybrid.name=Karışık Güneş Paneli
 container.solarultimate.name=En Yüksek Güneş Paneli
 

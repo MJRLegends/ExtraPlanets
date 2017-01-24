@@ -30,7 +30,7 @@ public class ExtraPlanets_Machines {
 		if (Config.ultimateRefinery)
 			ultimateRefinery = new UltimateRefinery("ultimateRefinery");
 		if (Config.solarPanels)
-			solarPanel = new BlockSolar("solarEP");
+			solarPanel = new BlockSolar("solar");
 	}
 
 	private static void registerMachines() {
