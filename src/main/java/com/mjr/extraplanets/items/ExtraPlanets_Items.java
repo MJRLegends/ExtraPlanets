@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.items;
 
+import micdoodle8.mods.galacticraft.core.GCItems;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -104,7 +105,9 @@ public class ExtraPlanets_Items {
 	public static Item compressedMercury;
 	public static Item ingotMercury;
 	public static Item ingotLead;
-
+	
+	public static Item cloth;
+	
 	public static Item tier1PressureLayer;
 	public static Item tier2PressureLayer;
 	public static Item tier3PressureLayer;
@@ -123,7 +126,27 @@ public class ExtraPlanets_Items {
 	public static Item tier2ThermalPadding;
 	public static Item tier3ThermalPadding;
 	public static Item tier4ThermalPadding;
-
+	
+	public static Item tier1UnPreparedSpaceSuitHelmet;
+	public static Item tier1UnPreparedSpaceSuitChest;
+	public static Item tier1UnPreparedSpaceSuitLegings;
+	public static Item tier1UnPreparedSpaceSuitBoots;
+	
+	public static Item tier2UnPreparedSpaceSuitHelmet;
+	public static Item tier2UnPreparedSpaceSuitChest;
+	public static Item tier2UnPreparedSpaceSuitLegings;
+	public static Item tier2UnPreparedSpaceSuitBoots;
+	
+	public static Item tier3UnPreparedSpaceSuitHelmet;
+	public static Item tier3UnPreparedSpaceSuitChest;
+	public static Item tier3UnPreparedSpaceSuitLegings;
+	public static Item tier3UnPreparedSpaceSuitBoots;
+	
+	public static Item tier4UnPreparedSpaceSuitHelmet;
+	public static Item tier4UnPreparedSpaceSuitChest;
+	public static Item tier4UnPreparedSpaceSuitLegings;
+	public static Item tier4UnPreparedSpaceSuitBoots;
+	
 	public static Item wafers;
 
 	public static void init() {
@@ -222,20 +245,43 @@ public class ExtraPlanets_Items {
 		
 		ingotLead = new ItemBasicItem("ingotLead");
 		
-		tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
-		tier2PressureLayer = new ItemBasicItem("tier2PressureLayer");
-		tier3PressureLayer = new ItemBasicItem("tier3PressureLayer");
-		tier4PressureLayer = new ItemBasicItem("tier4PressureLayer");
-
-		tier1RadiationLayer = new ItemBasicItem("tier1RadiationLayer");
-		tier2RadiationLayer = new ItemBasicItem("tier2RadiationLayer");
-		tier3RadiationLayer = new ItemBasicItem("tier3RadiationLayer");
-		tier4RadiationLayer = new ItemBasicItem("tier4RadiationLayer");
-
-		tier1ArmorLayer = new ItemBasicItem("tier1ArmorLayer");
-		tier2ArmorLayer = new ItemBasicItem("tier2ArmorLayer");
-		tier3ArmorLayer = new ItemBasicItem("tier3ArmorLayer");
-		tier4ArmorLayer = new ItemBasicItem("tier4ArmorLayer");
+		cloth = new ItemBasicItem("cloth");
+		if(Config.pressure || Config.radiation){
+			tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
+			tier2PressureLayer = new ItemBasicItem("tier2PressureLayer");
+			tier3PressureLayer = new ItemBasicItem("tier3PressureLayer");
+			tier4PressureLayer = new ItemBasicItem("tier4PressureLayer");
+	
+			tier1RadiationLayer = new ItemBasicItem("tier1RadiationLayer");
+			tier2RadiationLayer = new ItemBasicItem("tier2RadiationLayer");
+			tier3RadiationLayer = new ItemBasicItem("tier3RadiationLayer");
+			tier4RadiationLayer = new ItemBasicItem("tier4RadiationLayer");
+	
+			tier1ArmorLayer = new ItemBasicItem("tier1ArmorLayer");
+			tier2ArmorLayer = new ItemBasicItem("tier2ArmorLayer");
+			tier3ArmorLayer = new ItemBasicItem("tier3ArmorLayer");
+			tier4ArmorLayer = new ItemBasicItem("tier4ArmorLayer");
+			
+			tier1UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier1UnPreparedSpaceSuitHelmet");
+			tier1UnPreparedSpaceSuitChest = new ItemBasicItem("tier1UnPreparedSpaceSuitChest");
+			tier1UnPreparedSpaceSuitLegings = new ItemBasicItem("tier1UnPreparedSpaceSuitLegings");
+			tier1UnPreparedSpaceSuitBoots = new ItemBasicItem("tier1UnPreparedSpaceSuitBoots");
+			
+			tier2UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier2UnPreparedSpaceSuitHelmet");
+			tier2UnPreparedSpaceSuitChest = new ItemBasicItem("tier2UnPreparedSpaceSuitChest");
+			tier2UnPreparedSpaceSuitLegings = new ItemBasicItem("tier2UnPreparedSpaceSuitLegings");
+			tier2UnPreparedSpaceSuitBoots = new ItemBasicItem("tier2UnPreparedSpaceSuitBoots");
+			
+			tier3UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier3UnPreparedSpaceSuitHelmet");
+			tier3UnPreparedSpaceSuitChest = new ItemBasicItem("tier3UnPreparedSpaceSuitChest");
+			tier3UnPreparedSpaceSuitLegings = new ItemBasicItem("tier3UnPreparedSpaceSuitLegings");
+			tier3UnPreparedSpaceSuitBoots = new ItemBasicItem("tier3UnPreparedSpaceSuitBoots");
+			
+			tier4UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier4UnPreparedSpaceSuitHelmet");
+			tier4UnPreparedSpaceSuitChest = new ItemBasicItem("tier4UnPreparedSpaceSuitChest");
+			tier4UnPreparedSpaceSuitLegings = new ItemBasicItem("tier4UnPreparedSpaceSuitLegings");
+			tier4UnPreparedSpaceSuitBoots = new ItemBasicItem("tier4UnPreparedSpaceSuitBoots");
+		}
 	}
 
 	private static void registerItems() {
@@ -327,20 +373,44 @@ public class ExtraPlanets_Items {
 		
 		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
 		
-		GameRegistry.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier3PressureLayer, tier3PressureLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier4PressureLayer, tier4PressureLayer.getUnlocalizedName().substring(5));
-
-		GameRegistry.registerItem(tier1RadiationLayer, tier1RadiationLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier2RadiationLayer, tier2RadiationLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier3RadiationLayer, tier3RadiationLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier4RadiationLayer, tier4RadiationLayer.getUnlocalizedName().substring(5));
-
-		GameRegistry.registerItem(tier1ArmorLayer, tier1ArmorLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier2ArmorLayer, tier2ArmorLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier3ArmorLayer, tier3ArmorLayer.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier4ArmorLayer, tier4ArmorLayer.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
+		
+		if(Config.pressure || Config.radiation){
+			GameRegistry.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier3PressureLayer, tier3PressureLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier4PressureLayer, tier4PressureLayer.getUnlocalizedName().substring(5));
+	
+			GameRegistry.registerItem(tier1RadiationLayer, tier1RadiationLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier2RadiationLayer, tier2RadiationLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier3RadiationLayer, tier3RadiationLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier4RadiationLayer, tier4RadiationLayer.getUnlocalizedName().substring(5));
+	
+			GameRegistry.registerItem(tier1ArmorLayer, tier1ArmorLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier2ArmorLayer, tier2ArmorLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier3ArmorLayer, tier3ArmorLayer.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier4ArmorLayer, tier4ArmorLayer.getUnlocalizedName().substring(5));
+			
+			GameRegistry.registerItem(tier1UnPreparedSpaceSuitHelmet, tier1UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier1UnPreparedSpaceSuitChest, tier1UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier1UnPreparedSpaceSuitLegings, tier1UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier1UnPreparedSpaceSuitBoots, tier1UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			
+			GameRegistry.registerItem(tier2UnPreparedSpaceSuitHelmet, tier2UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier2UnPreparedSpaceSuitChest, tier2UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier2UnPreparedSpaceSuitLegings, tier2UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier2UnPreparedSpaceSuitBoots, tier2UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			
+			GameRegistry.registerItem(tier3UnPreparedSpaceSuitHelmet, tier3UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier3UnPreparedSpaceSuitChest, tier3UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier3UnPreparedSpaceSuitLegings, tier3UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier3UnPreparedSpaceSuitBoots, tier3UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			
+			GameRegistry.registerItem(tier4UnPreparedSpaceSuitHelmet, tier4UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier4UnPreparedSpaceSuitChest, tier4UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+		}
 	}
 
 	private static void registerFluidContainer() {
