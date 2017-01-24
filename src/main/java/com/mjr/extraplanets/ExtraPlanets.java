@@ -16,11 +16,14 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
+import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
@@ -197,6 +200,7 @@ public class ExtraPlanets {
 
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
+		ExtraPlanets_Machines.init();
 		ExtraPlanets_Fluids.init();
 		ExtraPlanets_Tools.init();
 		ExtraPlanets_Armor.init();
@@ -257,7 +261,10 @@ public class ExtraPlanets {
 		// Initialize/Register Achievements
 		if (Config.achievements)
 			ExtraPlanets_Achievements.init();
-			
+
+		// Register GUI Handler
+		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
+
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
 	}

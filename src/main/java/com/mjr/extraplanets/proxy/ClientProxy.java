@@ -37,6 +37,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
@@ -55,7 +56,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
-import com.mjr.extraplanets.client.handlers.MainClientHandler;
+import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossEris;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossJupiter;
@@ -245,7 +246,7 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
-		MinecraftForge.EVENT_BUS.register(new MainClientHandler());
+		MinecraftForge.EVENT_BUS.register(new MainHandlerClient());
 		super.postInit(event);
 	}
 
@@ -493,6 +494,9 @@ public class ClientProxy extends CommonProxy {
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.volcanicRock);
 		if (Config.uranus)
 			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.denseIce);
+
+		if (Config.advancedRefinery)
+			registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.advancedRefinery);
 	}
 
 	private void registerItemRenderers() {
