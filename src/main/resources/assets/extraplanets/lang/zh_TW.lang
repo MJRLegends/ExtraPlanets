@@ -465,6 +465,13 @@ item.wafer.redGemWafer.name=紅寶石晶圓
 item.wafer.blueGemWafer.name=藍寶石晶圓
 item.wafer.whiteGemWafer.name=白寶石晶圓
 
+wafers.diamondWafer.desc=CircuitFabricator Recipe: Diamonds & Redstone Lamp
+wafers.carbonWafer.desc=CircuitFabricator Recipe: Carbon Ingot & Redstone Comparator
+wafers.titaniumWafer.desc=CircuitFabricator Recipe: Titanium Ingot & Redstone Torch
+wafers.redGemWafer.desc=CircuitFabricator Recipe: Red Gem & Redstone Repeater
+wafers.blueGemWafer.desc=CircuitFabricator Recipe: Blue Gem Ingot & Redstone Repeater
+wafers.whiteGemWafer.desc=CircuitFabricator Recipe: White Gem Ingot & Redstone Repeater
+
 #Buckets
 item.bucket_glowstone.name=螢石水
 item.bucket_salt.name=液態鹽水
@@ -714,6 +721,11 @@ item.tier1ArmorLayer.name=Tier 1 Armour Layer
 item.tier2ArmorLayer.name=Tier 2 Armour Layer
 item.tier3ArmorLayer.name=Tier 3 Armour Layer
 item.tier4ArmorLayer.name=Tier 4 Armour Layer
+
+tier1ArmorLayer.desc=Compressor Recipe: 4 Aluminum Ingots
+tier2ArmorLayer.desc=Compressor Recipe: 4 Titanium Ingots
+tier3ArmorLayer.desc=Compressor Recipe: 4 Palladium Ingots
+tier4ArmorLayer.desc=Compressor Recipe: 4 Zinc Ingots
 
 #UnPrepared Space Suits
 item.tier1UnPreparedSpaceSuitHelmet.name=Tier 1 Un-Prepared Space Suit Helmet
