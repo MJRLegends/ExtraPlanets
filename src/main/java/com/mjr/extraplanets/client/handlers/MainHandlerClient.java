@@ -23,12 +23,12 @@ import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.world.EPWorldProviderSpace;
 
-public class MainClientHandler {
+public class MainHandlerClient {
 
 	private static List<ExtraPlanetsPacketHandler> packetHandlers = Lists.newCopyOnWriteArrayList();
 
 	public static void addPacketHandler(ExtraPlanetsPacketHandler handler) {
-		MainClientHandler.packetHandlers.add(handler);
+		MainHandlerClient.packetHandlers.add(handler);
 	}
 
 	@SubscribeEvent

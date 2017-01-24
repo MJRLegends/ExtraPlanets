@@ -20,7 +20,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Queues;
-import com.mjr.extraplanets.client.handlers.MainClientHandler;
+import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
 
 @Sharable
@@ -37,7 +37,7 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 
 		packetMap = ImmutableMap.copyOf(map);
 		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
-			MainClientHandler.addPacketHandler(this);
+			MainHandlerClient.addPacketHandler(this);
 		}
 		MainHandlerServer.addPacketHandler(this);
 	}
