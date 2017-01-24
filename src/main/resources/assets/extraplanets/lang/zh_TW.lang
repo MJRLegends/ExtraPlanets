@@ -362,6 +362,7 @@ tile.volcanicRock.name=火山岩
 tile.frozenNitrogen.name=冷凍氮
 tile.denseIce.name=堅冰
 tile.fossil.name=化石塊
+tile.oreLead.name=Lead Ore
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=4階火箭
@@ -444,6 +445,7 @@ item.ingotMercury.name=汞錠
 item.ingotUranium.name=鈾錠
 item.tier9Items.ingotTungsten.name=鎢錠
 item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
+item.ingotLead.name=Lead Ingot
 
 #Gems
 item.tier5Items.redGem.name=紅寶石
@@ -697,12 +699,50 @@ tier2.information=在金星和水星度過一天的必需品
 tier3.information=在木星和土星以及它們的衛星度過一天的必需品
 tier4.information=在天王星，海王星，冥王星和鬩神星以及它們的衛星度過一天的必需品
 
+#Space Suit Layers
+item.tier1PressureLayer.name=Tier 1 Pressure Layer
+item.tier2PressureLayer.name=Tier 2 Pressure Layer
+item.tier3PressureLayer.name=Tier 3 Pressure Layer
+item.tier4PressureLayer.name=Tier 4 Pressure Layer
+
+item.tier1RadiationLayer.name=Tier 1 Radiation Layer
+item.tier2RadiationLayer.name=Tier 2 Radiation Layer
+item.tier3RadiationLayer.name=Tier 3 Radiation Layer
+item.tier4RadiationLayer.name=Tier 4 Radiation Layer
+
+item.tier1ArmorLayer.name=Tier 1 Armour Layer
+item.tier2ArmorLayer.name=Tier 2 Armour Layer
+item.tier3ArmorLayer.name=Tier 3 Armour Layer
+item.tier4ArmorLayer.name=Tier 4 Armour Layer
+
+#UnPrepared Space Suits
+item.tier1UnPreparedSpaceSuitHelmet.name=Tier 1 Un-Prepared Space Suit Helmet
+item.tier1UnPreparedSpaceSuitChest.name=Tier 1 Un-Prepared Space Suit Chestplate
+item.tier1UnPreparedSpaceSuitLegings.name=Tier 1 Un-Prepared Space Suit Leggings
+item.tier1UnPreparedSpaceSuitBoots.name=Tier 1 Un-Prepared Space Suit Boots
+
+item.tier2UnPreparedSpaceSuitHelmet.name=Tier 2 Un-Prepared Space Suit Helmet
+item.tier2UnPreparedSpaceSuitChest.name=Tier 2 Un-Prepared Space Suit Chestplate
+item.tier2UnPreparedSpaceSuitLegings.name=Tier 2 Un-Prepared Space Suit Leggings
+item.tier2UnPreparedSpaceSuitBoots.name=Tier 2 Un-Prepared Space Suit Boots
+
+item.tier3UnPreparedSpaceSuitHelmet.name=Tier 3 Un-Prepared Space Suit Helmet
+item.tier3UnPreparedSpaceSuitChest.name=Tier 3 Un-Prepared Space Suit Chestplate
+item.tier3UnPreparedSpaceSuitLegings.name=Tier 3 Un-Prepared Space Suit Leggings
+item.tier3UnPreparedSpaceSuitBoots.name=Tier 3 Un-Prepared Space Suit Boots
+
+item.tier4UnPreparedSpaceSuitHelmet.name=Tier 4 Un-Prepared Space Suit Helmet
+item.tier4UnPreparedSpaceSuitChest.name=Tier 4 Un-Prepared Space Suit Chestplate
+item.tier4UnPreparedSpaceSuitLegings.name=Tier 4 Un-Prepared Space Suit Leggings
+item.tier4UnPreparedSpaceSuitBoots.name=Tier 4 Un-Prepared Space Suit Boots
+
 #Other Items
 item.appleDiamond.name=鑽石蘋果
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=罐頭食品
 item.bodyparts.arm.name=手
 item.bodyparts.leg.name=腳
+item.cloth.name=Wool Cloth
 
 item.cannedfood.dehydratedPorkchop.name=脫水豬排
 item.cannedfood.dehydratedFish.name=脫水魚

@@ -360,6 +360,7 @@ tile.volcanicRock.name=Roca volcánica
 tile.frozenNitrogen.name=Nitrógeno congelado
 tile.denseIce.name=Hielo denso
 tile.fossil.name=Bloque fósil
+tile.oreLead.name=Lead Ore
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Cohete nivel 4
@@ -442,6 +443,7 @@ item.ingotMercury.name=Lingote mercuriano
 item.ingotUranium.name=Lingore de uranio
 item.tier9Items.ingotTungsten.name=Lingote de tungsteno
 item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
+item.ingotLead.name=Lead Ingot
 
 #Gems
 item.tier5Items.redGem.name=Gema roja
@@ -695,12 +697,50 @@ tier2.information=Requerido para Venus y Mercurio durante el día y la noche
 tier3.information=Requerido para Júptier y Saturno incluyendo sus lunas durante el día y la noche
 tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas durante el día y la noche
 
+#Space Suit Layers
+item.tier1PressureLayer.name=Tier 1 Pressure Layer
+item.tier2PressureLayer.name=Tier 2 Pressure Layer
+item.tier3PressureLayer.name=Tier 3 Pressure Layer
+item.tier4PressureLayer.name=Tier 4 Pressure Layer
+
+item.tier1RadiationLayer.name=Tier 1 Radiation Layer
+item.tier2RadiationLayer.name=Tier 2 Radiation Layer
+item.tier3RadiationLayer.name=Tier 3 Radiation Layer
+item.tier4RadiationLayer.name=Tier 4 Radiation Layer
+
+item.tier1ArmorLayer.name=Tier 1 Armour Layer
+item.tier2ArmorLayer.name=Tier 2 Armour Layer
+item.tier3ArmorLayer.name=Tier 3 Armour Layer
+item.tier4ArmorLayer.name=Tier 4 Armour Layer
+
+#UnPrepared Space Suits
+item.tier1UnPreparedSpaceSuitHelmet.name=Tier 1 Un-Prepared Space Suit Helmet
+item.tier1UnPreparedSpaceSuitChest.name=Tier 1 Un-Prepared Space Suit Chestplate
+item.tier1UnPreparedSpaceSuitLegings.name=Tier 1 Un-Prepared Space Suit Leggings
+item.tier1UnPreparedSpaceSuitBoots.name=Tier 1 Un-Prepared Space Suit Boots
+
+item.tier2UnPreparedSpaceSuitHelmet.name=Tier 2 Un-Prepared Space Suit Helmet
+item.tier2UnPreparedSpaceSuitChest.name=Tier 2 Un-Prepared Space Suit Chestplate
+item.tier2UnPreparedSpaceSuitLegings.name=Tier 2 Un-Prepared Space Suit Leggings
+item.tier2UnPreparedSpaceSuitBoots.name=Tier 2 Un-Prepared Space Suit Boots
+
+item.tier3UnPreparedSpaceSuitHelmet.name=Tier 3 Un-Prepared Space Suit Helmet
+item.tier3UnPreparedSpaceSuitChest.name=Tier 3 Un-Prepared Space Suit Chestplate
+item.tier3UnPreparedSpaceSuitLegings.name=Tier 3 Un-Prepared Space Suit Leggings
+item.tier3UnPreparedSpaceSuitBoots.name=Tier 3 Un-Prepared Space Suit Boots
+
+item.tier4UnPreparedSpaceSuitHelmet.name=Tier 4 Un-Prepared Space Suit Helmet
+item.tier4UnPreparedSpaceSuitChest.name=Tier 4 Un-Prepared Space Suit Chestplate
+item.tier4UnPreparedSpaceSuitLegings.name=Tier 4 Un-Prepared Space Suit Leggings
+item.tier4UnPreparedSpaceSuitBoots.name=Tier 4 Un-Prepared Space Suit Boots
+
 #Other Items
 item.appleDiamond.name=Manzana de diamante
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Lata de comida
 item.bodyparts.arm.name=Brazo
 item.bodyparts.leg.name=Pierna
+item.cloth.name=Wool Cloth
 
 item.cannedfood.dehydratedPorkchop.name=Chuletas de cerdo deshidratadas
 item.cannedfood.dehydratedFish.name=Pescados deshidratados

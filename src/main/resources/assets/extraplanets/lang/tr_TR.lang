@@ -361,6 +361,7 @@ tile.volcanicRock.name=Volkanik Kaya
 tile.frozenNitrogen.name=Donmuş Nitrojen
 tile.denseIce.name=Yoğun Buz
 tile.fossil.name=Fosil Bloğu
+tile.oreLead.name=Lead Ore
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Tier 4 Roketi
@@ -443,6 +444,7 @@ item.ingotMercury.name=Civa Külçesi
 item.ingotUranium.name=Uranyum Külçesi
 item.tier9Items.ingotTungsten.name=Tungsten Külçesi
 item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
+item.ingotLead.name=Lead Ingot
 
 #Gems
 item.tier5Items.redGem.name=Kırmızıtaş
@@ -696,12 +698,50 @@ tier2.information=Venüs ve Merkür İçin Gerekli
 tier3.information=Jüpiter Ve Satürn İçin Gerekli
 tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
 
+#Space Suit Layers
+item.tier1PressureLayer.name=Tier 1 Pressure Layer
+item.tier2PressureLayer.name=Tier 2 Pressure Layer
+item.tier3PressureLayer.name=Tier 3 Pressure Layer
+item.tier4PressureLayer.name=Tier 4 Pressure Layer
+
+item.tier1RadiationLayer.name=Tier 1 Radiation Layer
+item.tier2RadiationLayer.name=Tier 2 Radiation Layer
+item.tier3RadiationLayer.name=Tier 3 Radiation Layer
+item.tier4RadiationLayer.name=Tier 4 Radiation Layer
+
+item.tier1ArmorLayer.name=Tier 1 Armour Layer
+item.tier2ArmorLayer.name=Tier 2 Armour Layer
+item.tier3ArmorLayer.name=Tier 3 Armour Layer
+item.tier4ArmorLayer.name=Tier 4 Armour Layer
+
+#UnPrepared Space Suits
+item.tier1UnPreparedSpaceSuitHelmet.name=Tier 1 Un-Prepared Space Suit Helmet
+item.tier1UnPreparedSpaceSuitChest.name=Tier 1 Un-Prepared Space Suit Chestplate
+item.tier1UnPreparedSpaceSuitLegings.name=Tier 1 Un-Prepared Space Suit Leggings
+item.tier1UnPreparedSpaceSuitBoots.name=Tier 1 Un-Prepared Space Suit Boots
+
+item.tier2UnPreparedSpaceSuitHelmet.name=Tier 2 Un-Prepared Space Suit Helmet
+item.tier2UnPreparedSpaceSuitChest.name=Tier 2 Un-Prepared Space Suit Chestplate
+item.tier2UnPreparedSpaceSuitLegings.name=Tier 2 Un-Prepared Space Suit Leggings
+item.tier2UnPreparedSpaceSuitBoots.name=Tier 2 Un-Prepared Space Suit Boots
+
+item.tier3UnPreparedSpaceSuitHelmet.name=Tier 3 Un-Prepared Space Suit Helmet
+item.tier3UnPreparedSpaceSuitChest.name=Tier 3 Un-Prepared Space Suit Chestplate
+item.tier3UnPreparedSpaceSuitLegings.name=Tier 3 Un-Prepared Space Suit Leggings
+item.tier3UnPreparedSpaceSuitBoots.name=Tier 3 Un-Prepared Space Suit Boots
+
+item.tier4UnPreparedSpaceSuitHelmet.name=Tier 4 Un-Prepared Space Suit Helmet
+item.tier4UnPreparedSpaceSuitChest.name=Tier 4 Un-Prepared Space Suit Chestplate
+item.tier4UnPreparedSpaceSuitLegings.name=Tier 4 Un-Prepared Space Suit Leggings
+item.tier4UnPreparedSpaceSuitBoots.name=Tier 4 Un-Prepared Space Suit Boots
+
 #Other Items
 item.appleDiamond.name=Elmas Elma
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Uzay Yiyecekleri
 item.bodyparts.arm.name=Kol
 item.bodyparts.leg.name=Bacak
+item.cloth.name=Wool Cloth
 
 item.cannedfood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
 item.cannedfood.dehydratedFish.name=Susuz Balık
