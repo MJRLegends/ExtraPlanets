@@ -59,20 +59,22 @@ public class MainClientHandler {
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
 		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen)
 				&& OxygenUtil.noAtmosphericCombustion(player.worldObj.provider) && !playerBaseClient.isSpectator()) {
-			EPWorldProviderSpace provider = (EPWorldProviderSpace) player.worldObj.provider;
+			if ((player.worldObj.provider instanceof EPWorldProviderSpace)) {
+				EPWorldProviderSpace provider = (EPWorldProviderSpace) player.worldObj.provider;
 
-			if (Config.pressure) {
-				int pressureLevel = provider.getPressureLevel();
-				OverlayPressure.renderPressureIndicator(pressureLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
-			}
-			if (Config.radiation) {
-				EPPlayerStatsClient stats = null;
-				if (player != null) {
-					stats = EPPlayerStatsClient.get(playerBaseClient);
+				if (Config.pressure) {
+					int pressureLevel = provider.getPressureLevel();
+					OverlayPressure.renderPressureIndicator(pressureLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 				}
-				if (stats.radiationLevel != null) {
-					int radiationLevel = (int) Math.floor(stats.radiationLevel);
-					OverlaySolarRadiation.renderSolarRadiationIndicator(radiationLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
+				if (Config.radiation) {
+					EPPlayerStatsClient stats = null;
+					if (player != null) {
+						stats = EPPlayerStatsClient.get(playerBaseClient);
+					}
+					if (stats.radiationLevel != null) {
+						int radiationLevel = (int) Math.floor(stats.radiationLevel);
+						OverlaySolarRadiation.renderSolarRadiationIndicator(radiationLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
+					}
 				}
 			}
 		}
