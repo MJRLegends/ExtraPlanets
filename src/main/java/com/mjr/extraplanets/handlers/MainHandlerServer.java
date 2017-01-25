@@ -9,8 +9,10 @@ import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -83,12 +85,9 @@ public class MainHandlerServer {
 			if (rand.nextInt(2) == 1)
 				addZ = -addZ;
 			int lightingSpawnChance = rand.nextInt(50);
-			if (lightingSpawnChance == 10) { // TODO
-				// event.player.worldObj.addWeatherEffect(new
-				// EntityLightningBolt(event.player.worldObj, event.player.posX
-				// + addX,event.player.worldObj.getHeight(new
-				// BlockPos(event.player.posX + addX, (int)event.player.posZ +
-				// addZ)).getY(), event.player.posZ + addZ));
+			if (lightingSpawnChance == 10) {
+				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX, event.player.worldObj.getHeight(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(),
+						event.player.posZ + addZ));
 			}
 		}
 	}
@@ -143,9 +142,9 @@ public class MainHandlerServer {
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.entityLiving;
 		if (entityLiving instanceof EntityPlayerMP) {
-			if(Config.pressure)
+			if (Config.pressure)
 				checkPressure(event, entityLiving);
-			if(Config.radiation)
+			if (Config.radiation)
 				checkRadiation(event, entityLiving);
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 		}
@@ -191,8 +190,8 @@ public class MainHandlerServer {
 				if (playerMP.getCurrentArmor(0) == null || playerMP.getCurrentArmor(1) == null || playerMP.getCurrentArmor(2) == null || playerMP.getCurrentArmor(3) == null) {
 					damageModifer = 0.005;
 					doDamage = true;
-				} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IRadiationSuit)
-						&& !(playerMP.getCurrentArmor(2).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(3).getItem() instanceof IRadiationSuit)) {
+				} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(2).getItem() instanceof IRadiationSuit)
+						&& !(playerMP.getCurrentArmor(3).getItem() instanceof IRadiationSuit)) {
 					damageModifer = 0.005;
 					doDamage = true;
 				} else if (playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) {
@@ -241,8 +240,7 @@ public class MainHandlerServer {
 	}
 
 	protected void sendSolarRadiationPacket(EntityPlayerMP player, EPPlayerStats playerStats) {
-		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.worldObj.provider.getDimensionId(),
-				new Object[] { playerStats.radiationLevel }), player);
+		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.worldObj.provider.getDimensionId(), new Object[] { playerStats.radiationLevel }), player);
 	}
 
 }
