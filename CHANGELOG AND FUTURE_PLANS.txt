@@ -15,9 +15,19 @@ v1 Beta Build ----More to be added!!----
 *Fixed up all missing textures/json files
 *Changed Overlay bars for Radiation/Pressure Systems, making them more visible to which bar is related to what!
 *Added Lead Ore for the Overworld
+*Added World gen for it in the Overworld
 *Added Lead Ingots
 *Added Config option for Lead Ore/Ingots to turn them off
 *Added Recipes for Space Suits Tier 1 - 4
+*Added Un-Prepared versions of the Tier 1 - 4 Space Suits
+*Added Ultimate Refinery Machine
+*Added Advanced Refinery back
+*Added Hybird and Ultimate Solar Panels back
+*Added Tier 1 - 4 Armour/Pressure/Radiation Layers
+*Added Tooltips for Non JEI showing recipes, Tooltips will tell you what you need to craft them
+*Updated lang files
+*Refactoring/Moving classes
+*Fixed lighting bolts on jupiter
 ======================================================================================================
 
 
