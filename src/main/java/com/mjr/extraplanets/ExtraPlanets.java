@@ -93,7 +93,10 @@ public class ExtraPlanets {
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
 		@Override
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(ExtraPlanets_Blocks.callistoBlocks);
+			if (Config.advancedRefinery)
+				return Item.getItemFromBlock(ExtraPlanets_Machines.advancedRefinery);
+			else
+				return Item.getItemFromBlock(ExtraPlanets_Blocks.denseIce);
 		}
 	};
 
