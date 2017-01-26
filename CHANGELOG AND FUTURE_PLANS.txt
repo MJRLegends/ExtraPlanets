@@ -28,6 +28,7 @@ v1 Beta Build ----More to be added!!----
 *Updated lang files
 *Refactoring/Moving classes
 *Fixed lighting bolts on jupiter
+*Fixed Sky Providers for Planets and Moons
 ======================================================================================================
 
 
