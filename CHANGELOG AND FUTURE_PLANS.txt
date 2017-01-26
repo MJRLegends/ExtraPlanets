@@ -30,6 +30,7 @@ v1 Beta Build ----More to be added!!----
 *Fixed lighting bolts on jupiter
 *Fixed Sky Providers for Planets and Moons
 *Fixed Venus not using the correct biome
+*Fixes for Pressure and Radiation bars when on the left or bottom of the screen via config
 ======================================================================================================
 
 
