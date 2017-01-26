@@ -55,26 +55,26 @@ public class OverlaySolarRadiation extends Overlay
 
         if (right)
         {
-            minLeftX = i - 90;
+            minLeftX = i - 46;
             maxLeftX = i - 30;
             minRightX = i - 29;
             maxRightX = i - 10;
         }
         else
         {
-            minLeftX = 10;
-            maxLeftX = 29;
+            minLeftX = 22;
+            maxLeftX = 20;
             minRightX = 30;
             maxRightX = 49;
         }
 
         if (top)
         {
-            topY = 10.5;
+            topY = 10.5 + 50;
         }
         else
         {
-            topY = j - 57;
+            topY = j - 107;
         }
 
         bottomY = topY + 46.5;
@@ -82,8 +82,8 @@ public class OverlaySolarRadiation extends Overlay
         float texMod = 0.00390625F;
         worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
         worldRenderer.pos(minLeftX, bottomY, zLevel).tex(66 * texMod, 47 * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 9, bottomY, zLevel).tex((66 + 9) * texMod, 47 * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 9, topY, zLevel).tex((66 + 9) * texMod, 47 * 2 * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 9+ 5, bottomY, zLevel).tex((66 + 9) * texMod, 47 * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 9+ 5, topY, zLevel).tex((66 + 9) * texMod, 47 * 2 * texMod).endVertex();
         worldRenderer.pos(minLeftX, topY, zLevel).tex(66 * texMod, 47 * 2 * texMod).endVertex();
         tessellator.draw();
 
@@ -93,16 +93,33 @@ public class OverlaySolarRadiation extends Overlay
 
         worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
         worldRenderer.pos(minLeftX + 1, bottomY - radiationLevelScaledMin, zLevel).tex(76 * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 8, bottomY - radiationLevelScaledMin, zLevel).tex((76 + 7) * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 8, bottomY - radiationLevelScaledMax, zLevel).tex((76 + 7) * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 13, bottomY - radiationLevelScaledMin, zLevel).tex((76 + 7) * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 13, bottomY - radiationLevelScaledMax, zLevel).tex((76 + 7) * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
         worldRenderer.pos(minLeftX + 1, bottomY - radiationLevelScaledMax, zLevel).tex(76 * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
         tessellator.draw();
         
-        if (invalid)
-        {
+//        if (invalid)
+//        {
             String value = GCCoreUtil.translate("gui.warning.high.radiation");
-            OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX - 8 - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - radiationLevelScaled - OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + 35, ColorUtil.to32BitColor(255, 255, 10, 10));
-        }
+            int addX = 0;
+            int addY = 0;
+            if(top)
+            {
+            	if(right){
+	            	addX = 35;
+	            	addY = 20;
+            	}
+            	else{
+            		addX = 151;
+	            	addY = -30;
+            	}
+            }
+            else{
+            	addX = -10;
+            	addY = -15;
+            }
+            OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - radiationLevelScaled - OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 255, 10, 10));
+        //}
         GlStateManager.disableBlend();
     }
 }

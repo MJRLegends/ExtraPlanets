@@ -55,14 +55,14 @@ public class OverlayPressure extends Overlay
 
         if (right)
         {
-            minLeftX = i - 75;
+            minLeftX = i - 27;
             maxLeftX = i - 30;
             minRightX = i - 29;
             maxRightX = i - 10;
         }
         else
         {
-            minLeftX = 10;
+            minLeftX = 42;
             maxLeftX = 29;
             minRightX = 30;
             maxRightX = 49;
@@ -70,11 +70,11 @@ public class OverlayPressure extends Overlay
 
         if (top)
         {
-            topY = 10.5;
+            topY = 10.5 + 50;
         }
         else
         {
-            topY = j - 57;
+            topY = j - 107;
         }
 
         bottomY = topY + 46.5;
@@ -82,8 +82,8 @@ public class OverlayPressure extends Overlay
         float texMod = 0.00390625F;
         worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
         worldRenderer.pos(minLeftX, bottomY, zLevel).tex(66 * texMod, 47 * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 9, bottomY, zLevel).tex((66 + 9) * texMod, 47 * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 9, topY, zLevel).tex((66 + 9) * texMod, 47 * 2 * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 9+5, bottomY, zLevel).tex((66 + 9) * texMod, 47 * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 9+5, topY, zLevel).tex((66 + 9) * texMod, 47 * 2 * texMod).endVertex();
         worldRenderer.pos(minLeftX, topY, zLevel).tex(66 * texMod, 47 * 2 * texMod).endVertex();
         tessellator.draw();
 
@@ -93,15 +93,32 @@ public class OverlayPressure extends Overlay
 
         worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
         worldRenderer.pos(minLeftX + 1, bottomY - pressureLevelScaledMin, zLevel).tex(85 * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 8, bottomY - pressureLevelScaledMin, zLevel).tex((85 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 8, bottomY - pressureLevelScaledMax, zLevel).tex((85 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 13, bottomY - pressureLevelScaledMin, zLevel).tex((85 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 13, bottomY - pressureLevelScaledMax, zLevel).tex((85 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
         worldRenderer.pos(minLeftX + 1, bottomY - pressureLevelScaledMax, zLevel).tex(85 * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
         tessellator.draw();
         
         if (invalid)
         {
             String value = GCCoreUtil.translate("gui.warning.high.pressure");
-            OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX - 20 - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT / 2 + 5, ColorUtil.to32BitColor(255, 102, 178, 255));
+            int addX = 0;
+            int addY = 0;
+            if(top)
+            {
+            	if(right){
+	            	addX = 20;
+	            	addY = 45;
+            	}
+            	else{
+            		addX = 135;
+	            	addY = 20;
+            	}
+            }
+            else{
+            	addX = -25;
+            	addY = 5;
+            }
+            OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 102, 178, 255));
         }
         GlStateManager.disableBlend();
     }
