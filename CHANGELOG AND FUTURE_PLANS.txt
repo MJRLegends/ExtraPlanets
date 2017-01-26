@@ -11,8 +11,15 @@ TODO = Not yet done
 v1 Beta Build ----More to be added!!----
 
 
-0.4 Alpha Build ----More to be added!!----
-*Fixed up all missing textures/json files
+0.5 Alpha Build ----More to be added!!----
+
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
+0.4 Alpha Build
 *Changed Overlay bars for Radiation/Pressure Systems, making them more visible to which bar is related to what!
 *Added Lead Ore for the Overworld
 *Added World gen for it in the Overworld
@@ -31,11 +38,7 @@ v1 Beta Build ----More to be added!!----
 *Fixed Sky Providers for Planets and Moons
 *Fixed Venus not using the correct biome
 *Fixes for Pressure and Radiation bars when on the left or bottom of the screen via config
-======================================================================================================
 
-
-
-===========================================Released Updates===========================================
 0.3.5 Alpha Build
 *Fixed #62
 
