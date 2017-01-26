@@ -29,6 +29,7 @@ v1 Beta Build ----More to be added!!----
 *Refactoring/Moving classes
 *Fixed lighting bolts on jupiter
 *Fixed Sky Providers for Planets and Moons
+*Fixed Venus not using the correct biome
 ======================================================================================================
 
 
