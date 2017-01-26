@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.gui.overlay;
 
-import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
@@ -17,6 +16,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
 
 @SideOnly(Side.CLIENT)
 public class OverlayPressure extends Overlay
@@ -91,16 +92,16 @@ public class OverlayPressure extends Overlay
         int pressureLevelScaledMin = Math.max(pressureLevelScaledMax - 2, 0);
 
         worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-        worldRenderer.pos(minLeftX + 1, bottomY - pressureLevelScaledMin, zLevel).tex(76 * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 8, bottomY - pressureLevelScaledMin, zLevel).tex((76 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 8, bottomY - pressureLevelScaledMax, zLevel).tex((76 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
-        worldRenderer.pos(minLeftX + 1, bottomY - pressureLevelScaledMax, zLevel).tex(76 * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 1, bottomY - pressureLevelScaledMin, zLevel).tex(85 * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 8, bottomY - pressureLevelScaledMin, zLevel).tex((85 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 8, bottomY - pressureLevelScaledMax, zLevel).tex((85 + 7) * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
+        worldRenderer.pos(minLeftX + 1, bottomY - pressureLevelScaledMax, zLevel).tex(85 * texMod, (48 + 45 - pressureLevelScaled) * texMod).endVertex();
         tessellator.draw();
         
         if (invalid)
         {
             String value = GCCoreUtil.translate("gui.warning.high.pressure");
-            OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX - 20 - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT / 2 + 5, ColorUtil.to32BitColor(255, 255, 10, 10));
+            OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX - 20 - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT / 2 + 5, ColorUtil.to32BitColor(255, 102, 178, 255));
         }
         GlStateManager.disableBlend();
     }
