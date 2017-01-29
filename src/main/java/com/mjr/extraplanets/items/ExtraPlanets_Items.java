@@ -107,7 +107,8 @@ public class ExtraPlanets_Items {
 	public static Item ingotLead;
 	
 	public static Item cloth;
-	
+	public static Item gravityController;
+
 	public static Item tier1PressureLayer;
 	public static Item tier2PressureLayer;
 	public static Item tier3PressureLayer;
@@ -246,6 +247,8 @@ public class ExtraPlanets_Items {
 		ingotLead = new ItemBasicItem("ingotLead");
 		
 		cloth = new ItemBasicItem("cloth");
+		gravityController = new ItemBasicItem("gravityController");
+		
 		if(Config.pressure || Config.radiation){
 			tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
 			tier2PressureLayer = new ItemBasicItem("tier2PressureLayer");
@@ -374,6 +377,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
 		
 		if(Config.pressure || Config.radiation){
 			GameRegistry.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));

@@ -689,6 +689,9 @@ public class ExtraPlanets_Recipes {
 		//Cloth
 		GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.cloth, 8, 0), new Object[] { new ItemStack(Blocks.wool), new ItemStack(Blocks.wool), new ItemStack(Blocks.wool), new ItemStack(Blocks.wool) });
 		
+		//Gravity Controller
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.gravityController, 1, 0), new Object[] { " T ", "TRT", " T ", 'T', new ItemStack(GCItems.basicItem, 0, 14), 'R', GCItems.battery, 'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
+		
 		if(Config.pressure || Config.radiation){
 			// Tier 1 - 4 Radiation Layers
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1RadiationLayer, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.cloth });
@@ -743,6 +746,13 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier4SpaceSuitChest, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.tier4RadiationLayer, 'P', ExtraPlanets_Items.tier4UnPreparedSpaceSuitChest, 'C', ExtraPlanets_Items.tier4PressureLayer });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier4SpaceSuitLegings, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.tier4RadiationLayer, 'P', ExtraPlanets_Items.tier4UnPreparedSpaceSuitLegings, 'C', ExtraPlanets_Items.tier4PressureLayer });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier4SpaceSuitBoots, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.tier4RadiationLayer, 'P', ExtraPlanets_Items.tier4UnPreparedSpaceSuitBoots, 'C', ExtraPlanets_Items.tier4PressureLayer });
+			
+			//Tier 1 - 4 Gravity Boots
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier1SpaceSuitGravityBoots, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.tier1SpaceSuitBoots, 'G', new ItemStack(ExtraPlanets_Items.gravityController, 1)});
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier2SpaceSuitGravityBoots, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.tier2SpaceSuitBoots, 'G', new ItemStack(ExtraPlanets_Items.gravityController, 1)});
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier3SpaceSuitGravityBoots, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.tier3SpaceSuitBoots, 'G', new ItemStack(ExtraPlanets_Items.gravityController, 1)});
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier4SpaceSuitGravityBoots, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.tier4SpaceSuitBoots, 'G', new ItemStack(ExtraPlanets_Items.gravityController, 1)});
+
 		}
 	}
 
