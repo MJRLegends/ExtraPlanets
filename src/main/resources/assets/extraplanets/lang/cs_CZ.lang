@@ -353,8 +353,20 @@ tile.solar.hybrid_solar.name=Hybridní solární panel
 tile.solar.ultimate_solar.name=Ultimátlní solární panel
 tile.solar_hybrid.description=Tento solární panel bude pracovat během dne i noci
 tile.solar_ultimate.description=Tento solární panel bude pracovat během dne i noci
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+
+#Machine Containers
 container.solarhybrid.name=Hybridní solární panel
 container.solarultimate.name=Ultimátlní solární panel
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advancedoxygencompressor.name=Advanced Oxygen Compressor
+container.advancedoxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimateoxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimateoxygendecompressor.name=Ultimate Oxygen Decompressor
 
 #Other Blocks
 tile.nuclearBomb.name=Jaderná bomba
@@ -755,6 +767,7 @@ item.cannedfood.cannedFood.name=Plechovka jídla
 item.bodyparts.arm.name=Paže
 item.bodyparts.leg.name=Noha
 item.cloth.name=Wool Cloth
+item.gravityController.name=Gravity Controller
 
 item.cannedfood.dehydratedPorkchop.name=Dehydrované vepřové
 item.cannedfood.dehydratedFish.name=Dehydrovaná ryba

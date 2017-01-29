@@ -354,8 +354,20 @@ tile.solar.hybrid_solar.name=混合型高級太陽能電池板
 tile.solar.ultimate_solar.name=最終混合型高級太陽能電池板
 tile.solar_hybrid.description=混合型高級太陽能電池板能全天候工作。
 tile.solar_ultimate.description=最終混合型高級太陽能電池板能全天候工作。
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+
+#Machine Containers
 container.solarhybrid.name=混合型高級太陽能電池板
 container.solarultimate.name=最終混合型高級太陽能電池板
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advancedoxygencompressor.name=Advanced Oxygen Compressor
+container.advancedoxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimateoxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimateoxygendecompressor.name=Ultimate Oxygen Decompressor
 
 #Other Blocks
 tile.nuclearBomb.name=核彈
@@ -756,6 +768,7 @@ item.cannedfood.cannedFood.name=罐頭食品
 item.bodyparts.arm.name=手
 item.bodyparts.leg.name=腳
 item.cloth.name=Wool Cloth
+item.gravityController.name=Gravity Controller
 
 item.cannedfood.dehydratedPorkchop.name=脫水豬排
 item.cannedfood.dehydratedFish.name=脫水魚

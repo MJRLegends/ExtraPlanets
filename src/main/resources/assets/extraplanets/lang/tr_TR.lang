@@ -353,8 +353,20 @@ tile.solar.hybrid_solar.name=Karışık Güneş Paneli
 tile.solar.ultimate_solar.name=En Yüksek Güneş Paneli
 tile.solar_hybrid.description=Karışık Güneş Paneli, hem gece hemde gündüz enerji toplar.
 tile.solar_ultimate.description=En Yüksek Güneş Paneli, hem gece hemde gündüz enerji toplar. Normal güneş panelinden daha fazla enerji üretir.
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+
+#Machine Containers
 container.solarhybrid.name=Karışık Güneş Paneli
 container.solarultimate.name=En Yüksek Güneş Paneli
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advancedoxygencompressor.name=Advanced Oxygen Compressor
+container.advancedoxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimateoxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimateoxygendecompressor.name=Ultimate Oxygen Decompressor
 
 #Other Blocks
 tile.nuclearBomb.name=Nükleer bomba
@@ -755,6 +767,7 @@ item.cannedfood.cannedFood.name=Uzay Yiyecekleri
 item.bodyparts.arm.name=Kol
 item.bodyparts.leg.name=Bacak
 item.cloth.name=Wool Cloth
+item.gravityController.name=Gravity Controller
 
 item.cannedfood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
 item.cannedfood.dehydratedFish.name=Susuz Balık

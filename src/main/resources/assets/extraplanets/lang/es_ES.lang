@@ -352,8 +352,20 @@ tile.solar.hybrid_solar.name=Panel Solar Híbrido
 tile.solar.ultimate_solar.name=Panel Solar Definitivo
 tile.solar_hybrid.description=Este Panel Solar trabajará durante el día y la noche
 tile.solar_ultimate.description=Este Panel Solar trabajará durante el día y la noche
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+
+#Machine Containers
 container.solarhybrid.name=Panel Solar Híbrido
 container.solarultimate.name=Panel Solar Definitivo
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advancedoxygencompressor.name=Advanced Oxygen Compressor
+container.advancedoxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimateoxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimateoxygendecompressor.name=Ultimate Oxygen Decompressor
 
 #Other Blocks
 tile.nuclearBomb.name=Bomba nuclear
@@ -754,6 +766,7 @@ item.cannedfood.cannedFood.name=Lata de comida
 item.bodyparts.arm.name=Brazo
 item.bodyparts.leg.name=Pierna
 item.cloth.name=Wool Cloth
+item.gravityController.name=Gravity Controller
 
 item.cannedfood.dehydratedPorkchop.name=Chuletas de cerdo deshidratadas
 item.cannedfood.dehydratedFish.name=Pescados deshidratados
