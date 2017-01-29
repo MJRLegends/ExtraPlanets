@@ -12,11 +12,19 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
+import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 
 public class GuiHandler implements IGuiHandler {
@@ -39,6 +47,14 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) tile, player);
 			} else if (tile instanceof TileEntitySolar) {
 				return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
+			} else if (tile instanceof TileEntityAdvancedOxygenCompressor) {
+				return new ContainerAdvancedOxygenCompressor(player.inventory, (TileEntityAdvancedOxygenCompressor) tile, player);
+			} else if (tile instanceof TileEntityAdvancedOxygenDecompressor) {
+				return new ContainerAdvancedOxygenDecompressor(player.inventory, (TileEntityAdvancedOxygenDecompressor) tile, player);
+			} else if (tile instanceof TileEntityUltimateOxygenCompressor) {
+				return new ContainerUltimateOxygenCompressor(player.inventory, (TileEntityUltimateOxygenCompressor) tile, player);
+			} else if (tile instanceof TileEntityUltimateOxygenDecompressor) {
+				return new ContainerUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile, player);
 			}
 		}
 		return null;
@@ -62,11 +78,17 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position));
 			} else if (tile instanceof TileEntityUltimateRefinery) {
 				return new GuiUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) world.getTileEntity(position));
+			} else if (tile instanceof TileEntitySolar) {
+				return new GuiSolar(player.inventory, (TileEntitySolar) tile);
+			} else if (tile instanceof TileEntityAdvancedOxygenCompressor) {
+				return new GuiAdvancedOxygenCompressor(player.inventory, (TileEntityAdvancedOxygenCompressor) tile);
+			} else if (tile instanceof TileEntityAdvancedOxygenDecompressor) {
+				return new GuiAdvancedOxygenDecompressor(player.inventory, (TileEntityAdvancedOxygenDecompressor) tile);
+			} else if (tile instanceof TileEntityUltimateOxygenCompressor) {
+				return new GuiUltimateOxygenCompressor(player.inventory, (TileEntityUltimateOxygenCompressor) tile);
+			} else if (tile instanceof TileEntityUltimateOxygenDecompressor) {
+				return new GuiUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile);
 			}
-			else if (tile instanceof TileEntitySolar)
-            {
-                return new GuiSolar(player.inventory, (TileEntitySolar) tile);
-            }
 		}
 		return null;
 	}
