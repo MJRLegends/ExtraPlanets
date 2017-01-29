@@ -43,6 +43,8 @@ public class Config {
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
 	public static boolean ultimateRefinery;
+	public static boolean advancedCompressor;
+	public static boolean ultimateCompressor;
 	public static boolean slabsAndStairs = false;
 	
 	public static boolean mercury;
@@ -240,7 +242,9 @@ public class Config {
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
 		ultimateRefinery = config.get(blocks, "Ultimate Refinery", true).getBoolean(true);
-
+		advancedCompressor = config.get(blocks, "Advanced Compressor/Decompressor", true).getBoolean(true);
+		ultimateCompressor = config.get(blocks, "Ultimate Compressor/Decompressor", true).getBoolean(true);
+		
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will").getBoolean(true);
 		oreDictionary = config.get(dimensionSettings, "Add planet/moons ores to the ore dictionary", true, "").getBoolean(true);
 		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "").getBoolean(false);

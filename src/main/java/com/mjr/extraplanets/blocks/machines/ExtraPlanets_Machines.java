@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.blocks.machines;
 
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -40,9 +39,10 @@ public class ExtraPlanets_Machines {
 			ultimateRefinery = new UltimateRefinery("ultimateRefinery");
 		if (Config.solarPanels)
 			solarPanel = new BlockSolar("solar");
-
-		advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
-		ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
+		if (Config.advancedCompressor)
+			advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
+		if (Config.ultimateCompressor)
+			ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
 	}
 
 	private static void registerMachines() {
@@ -50,13 +50,12 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
 		if (Config.ultimateRefinery)
 			GameRegistry.registerBlock(ultimateRefinery, "ultimateRefinery");
-		if (Config.solarPanels) {
-			GCCoreUtil.registerGalacticraftBlock("solarPanelHybrid", solarPanel, 0);
-			GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);
+		if (Config.solarPanels)
 			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName().substring(5));
-		}
-		GameRegistry.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
+		if (Config.advancedCompressor)
+			GameRegistry.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
+		if (Config.ultimateCompressor)
+			GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -66,9 +65,13 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityUltimateRefinery.class, Constants.modName + "UltimateRefinery");
 		if (Config.solarPanels)
 			GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
-		GameRegistry.registerTileEntity(TileEntityAdvancedOxygenCompressor.class, Constants.modName + "Advanced Oxygen Compressor");
-		GameRegistry.registerTileEntity(TileEntityAdvancedOxygenDecompressor.class, Constants.modName + "Advanced Oxygen Decompressor");
-		GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
-		GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
+		if (Config.advancedCompressor) {
+			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenCompressor.class, Constants.modName + "Advanced Oxygen Compressor");
+			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenDecompressor.class, Constants.modName + "Advanced Oxygen Decompressor");
+		}
+		if (Config.ultimateCompressor) {
+			GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
+			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
+		}
 	}
 }
