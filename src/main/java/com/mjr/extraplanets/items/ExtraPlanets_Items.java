@@ -1,6 +1,6 @@
 package com.mjr.extraplanets.items;
 
-import micdoodle8.mods.galacticraft.core.GCItems;
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -90,6 +90,9 @@ public class ExtraPlanets_Items {
 	public static Item advancedBattery;
 	public static Item ultimateBattery;
 
+	public static Item oxygenTankVeryHeavy;
+	public static Item oxygenTankExtremelyHeavy;
+
 	public static Item glowstone_bucket;
 	public static Item magma_bucket;
 	public static Item nitrogen_bucket;
@@ -155,6 +158,7 @@ public class ExtraPlanets_Items {
 		registerItems();
 		registerFluidContainer();
 		OreDictionaryRegister();
+		registerGearItems();
 	}
 
 	private static void initializeItems() {
@@ -243,7 +247,9 @@ public class ExtraPlanets_Items {
 		wafers = new ItemWafers("wafer");
 		advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 		ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
-		
+        oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
+        oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
+
 		ingotLead = new ItemBasicItem("ingotLead");
 		
 		cloth = new ItemBasicItem("cloth");
@@ -374,11 +380,14 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
 		
+		//GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5)); TODO Will be added when Galacticraft Releases a new Beta build
+		//GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5)); TODO Will be added when Galacticraft Releases a new Beta build
+		
 		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
-		
+
 		if(Config.pressure || Config.radiation){
 			GameRegistry.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
@@ -469,5 +478,13 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(tier11Items, 1, 4));
 		}
 		OreDictionary.registerOre("ingotLead", new ItemStack(ingotLead));
+	}
+	
+	public static void registerGearItems(){ // TODO Will be added when Galacticraft Releases a new Beta build
+//		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankVeryHeavy);
+//		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankVeryHeavy);
+//
+//      GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
+//      GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
 	}
 }
