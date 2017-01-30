@@ -52,7 +52,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 		STONEBRICKS(8, "jupiter_stonebricks"), 
 		DUNGEON_BRICK(9, "jupiter_dungeon_brick"), 
 		ORE_RED_GEM(10, "jupiter_ore_red_gem"),
-		RED_GEM_BLOCK(10, "jupiter_red_gem_block");
+		RED_GEM_BLOCK(11, "jupiter_red_gem_block");
 
 		private final int meta;
 		private final String name;
