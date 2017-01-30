@@ -1,10 +1,10 @@
 {
     "variants": {
-		"basictypeoi=oi_surface": { "model": "extraplanets:oi_surface_model" },
-        "basictypeoi=oi_sub_surface": { "model": "extraplanets:oi_sub_surface_model" },
-        "basictypeoi=oi_stone": { "model": "extraplanets:oi_stone_model" },
-        "basictypeoi=oi_ore_iron": { "model": "extraplanets:oi_ore_iron_model" },
-        "basictypeoi=oi_ore_tin": { "model": "extraplanets:oi_ore_tin_model" },
-        "basictypeoi=oi_ore_copper": { "model": "extraplanets:oi_ore_copper_model" }
+		"basictypeio=io_surface": { "model": "extraplanets:io_surface_model" },
+        "basictypeio=io_sub_surface": { "model": "extraplanets:io_sub_surface_model" },
+        "basictypeio=io_stone": { "model": "extraplanets:io_stone_model" },
+        "basictypeio=io_ore_iron": { "model": "extraplanets:io_ore_iron_model" },
+        "basictypeio=io_ore_tin": { "model": "extraplanets:io_ore_tin_model" },
+        "basictypeio=io_ore_copper": { "model": "extraplanets:io_ore_copper_model" }
     }
 }

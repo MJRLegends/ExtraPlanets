@@ -36,7 +36,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicIo extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock
 {
-    public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeIo", EnumBlockBasic.class);
+    public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeio", EnumBlockBasic.class);
 
     public enum EnumBlockBasic implements IStringSerializable
     {

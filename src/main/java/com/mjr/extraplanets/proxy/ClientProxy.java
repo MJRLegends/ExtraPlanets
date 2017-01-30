@@ -441,6 +441,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.ultimateOxygenCompressor, 0, "oxygen_compressor");
 			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.ultimateOxygenCompressor, 4, "oxygen_decompressor");
 		}
+		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.oreLead);
 	}
 
 	private void registerItemJsons() {
