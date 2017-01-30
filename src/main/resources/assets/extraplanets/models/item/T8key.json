@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "galacticraftplanets:items/key_T2"
+        "layer0": "extraplanets:items/key.T8"
     },
     "display": {
         "thirdperson": {
