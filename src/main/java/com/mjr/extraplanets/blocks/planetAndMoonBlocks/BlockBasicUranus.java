@@ -49,7 +49,7 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 		STONEBRICKS(5, "uranus_stonebricks"), 
 		DUNGEON_BRICK(6, "uranus_dungeon_brick"), 
 		ORE_BLUE_GEM(7, "uranus_ore_white_gem"),
-		BLUE_GEM_BLOCK(8, "uranus_white_gem_block");
+		WHITE_GEM_BLOCK(8, "uranus_white_gem_block");
 
 		private final int meta;
 		private final String name;
