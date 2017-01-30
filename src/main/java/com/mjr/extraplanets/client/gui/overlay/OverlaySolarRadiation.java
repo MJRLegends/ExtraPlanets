@@ -98,8 +98,8 @@ public class OverlaySolarRadiation extends Overlay
         worldRenderer.pos(minLeftX + 1, bottomY - radiationLevelScaledMax, zLevel).tex(76 * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
         tessellator.draw();
         
-//        if (invalid)
-//        {
+        if (invalid)
+        {
             String value = GCCoreUtil.translate("gui.warning.high.radiation");
             int addX = 0;
             int addY = 0;
@@ -119,7 +119,7 @@ public class OverlaySolarRadiation extends Overlay
             	addY = -15;
             }
             OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - radiationLevelScaled - OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 255, 10, 10));
-        //}
+        }
         GlStateManager.disableBlend();
     }
 }
