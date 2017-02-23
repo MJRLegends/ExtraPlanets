@@ -20,12 +20,14 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class WorldProviderTriton extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
 	public Vector3 getFogColor() {
-		return new Vector3(0, 0, 0);
+		float f = 1.0F - this.getStarBrightness(1.0F);
+		return new Vector3(59F / 255F * f, 141F / 255F * f, 210F / 255F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
-		return new Vector3(0, 0, 0);
+		float f = 1.0F - this.getStarBrightness(1.0F);
+		return new Vector3(125 / 255.0F * f, 195 / 255.0F * f, 255 / 255.0F * f);
 	}
 
 	@Override
@@ -107,12 +109,12 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public double getFuelUsageMultiplier() {
-		return 0.7D;
+		return 1.6D;
 	}
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 1.6D;
+		return 2.0D;
 	}
 
 	@Override
