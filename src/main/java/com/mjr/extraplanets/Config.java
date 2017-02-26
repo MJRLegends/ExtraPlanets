@@ -316,7 +316,7 @@ public class Config {
 		plutoID = config.get(dimensionID, "Pluto Dimension ID", -19).getInt();
 		erisID = config.get(dimensionID, "Eris Dimension ID", -21).getInt();
 
-		ioID = config.get(dimensionID, "Io Dimension ID", -31).getInt();
+		ioID = config.get(dimensionID, "Io Dimension ID", -32).getInt();
 		europaID = config.get(dimensionID, "Europa Dimension ID", -34).getInt();
 		phobosID = config.get(dimensionID, "Phobos Dimension ID", -33).getInt();
 		deimosID = config.get(dimensionID, "Deimos Dimension ID", -35).getInt();
