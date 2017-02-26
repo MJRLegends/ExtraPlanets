@@ -38,6 +38,12 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v1.0 Pre-4.0
 *Fixed Mars Space Station Sky Provider
 *Updated lang files (Thanks to JrantKing)
@@ -45,11 +51,8 @@ v1.0 Pre-4.0
 *Updated Galacticraft API to latest
 *Few sky colour changes for moons
 *Added Block of Mercury & Dark Iron
-======================================================================================================
+*Improvements of some textures (Items & Blocks) mainly Tiered Rocket parts
 
-
-
-===========================================Released Updates===========================================
 v1.0 Pre-3.9
 *Fixed some Localization typos (Thanks to MrNinja93)
 *Few fixes for hopefully issue #60
