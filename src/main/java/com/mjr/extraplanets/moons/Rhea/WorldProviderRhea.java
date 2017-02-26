@@ -21,13 +21,13 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(59F / 255F * f, 141F / 255F * f, 210F / 255F * f);
+		return new Vector3(192F / 255F * f, 192F / 255F * f, 192F / 255F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(125 / 255.0F * f, 195 / 255.0F * f, 255 / 255.0F * f);
+		return new Vector3(190 / 255.0F * f, 195 / 255.0F * f, 255 / 255.0F * f);
 	}
 
 	@Override

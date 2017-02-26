@@ -21,7 +21,7 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(59F / 255F * f, 141F / 255F * f, 210F / 255F * f);
+		return new Vector3(222F / 255F * f, 184F / 255F * f, 135F / 255F * f);
 	}
 
 	@Override
