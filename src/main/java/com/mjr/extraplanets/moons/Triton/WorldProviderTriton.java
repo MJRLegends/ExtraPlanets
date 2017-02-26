@@ -6,8 +6,11 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Triton.worldgen.ChunkProviderTriton;
@@ -16,12 +19,14 @@ import com.mjr.extraplanets.moons.Triton.worldgen.WorldChunkManagerTriton;
 public class WorldProviderTriton extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
 	public Vector3 getFogColor() {
-		return new Vector3(0, 0, 0);
+		float f = 1.0F - this.getStarBrightness(1.0F);
+		return new Vector3(243F / 255F * f, 227F / 255F * f, 227F / 255F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
-		return new Vector3(0, 0, 0);
+		float f = 1.0F - this.getStarBrightness(1.0F);
+		return new Vector3(125 / 255.0F * f, 195 / 255.0F * f, 255 / 255.0F * f);
 	}
 
 	@Override
@@ -52,6 +57,23 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 	@Override
 	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
 		return WorldChunkManagerTriton.class;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public float getStarBrightness(float par1) {
+		final float var2 = this.worldObj.getCelestialAngle(par1);
+		float var3 = 1.0F - (MathHelper.cos(var2 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
+
+		if (var3 < 0.0F) {
+			var3 = 0.0F;
+		}
+
+		if (var3 > 1.0F) {
+			var3 = 1.0F;
+		}
+
+		return var3 * var3 * 0.5F + 0.3F;
 	}
 
 	@Override
@@ -86,12 +108,12 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public double getFuelUsageMultiplier() {
-		return 0.7D;
+		return 1.6D;
 	}
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 1.6D;
+		return 2.0D;
 	}
 
 	@Override
@@ -133,16 +155,6 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Triton";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_triton";
-	}
-	
-	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
 	}
@@ -150,5 +162,10 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "rhea";
 	}
 }
