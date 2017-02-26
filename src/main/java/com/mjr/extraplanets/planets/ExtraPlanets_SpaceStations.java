@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Config;
@@ -24,10 +25,10 @@ import com.mjr.extraplanets.planets.Saturn.spacestation.TeleportTypeSaturnOrbit;
 import com.mjr.extraplanets.planets.Saturn.spacestation.WorldProviderSaturnOrbit;
 import com.mjr.extraplanets.planets.Uranus.spacestation.TeleportTypeUranusOrbit;
 import com.mjr.extraplanets.planets.Uranus.spacestation.WorldProviderUranusOrbit;
-import com.mjr.extraplanets.planets.Venus.spacestation.TeleportTypeVenusOrbit;
-import com.mjr.extraplanets.planets.Venus.spacestation.WorldProviderVenusOrbit;
 import com.mjr.extraplanets.planets.mars.spacestation.TeleportTypeMarsOrbit;
 import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
+import com.mjr.extraplanets.planets.venus.spacestation.TeleportTypeVenusOrbit;
+import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
 
 public class ExtraPlanets_SpaceStations {
 
@@ -58,12 +59,12 @@ public class ExtraPlanets_SpaceStations {
 			mercurySpaceStation.setDimensionInfo(Config.mercurySpaceStationID, Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class);
 			mercurySpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
-		if (Config.venusSpaceStation && Config.venus) {
-			venusSpaceStation = new Satellite("spaceStation.venus").setParentBody(ExtraPlanets_Planets.venus);
+		if (Config.venusSpaceStation) {
+			venusSpaceStation = new Satellite("spaceStation.venus").setParentBody(VenusModule.planetVenus);
 			venusSpaceStation.setRelativeSize(0.2667F);
 			venusSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
 			venusSpaceStation.setRelativeOrbitTime(20.0F);
-			venusSpaceStation.setTierRequired(ExtraPlanets_Planets.venus.getTierRequirement());
+			venusSpaceStation.setTierRequired(VenusModule.planetVenus.getTierRequirement());
 			venusSpaceStation.setDimensionInfo(Config.venusSpaceStationID, Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class);
 			venusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
@@ -157,7 +158,7 @@ public class ExtraPlanets_SpaceStations {
 			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationID, WorldProviderMercuryOrbit.class, false, 0);
 			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class, true, 0);
 		}
-		if (Config.venusSpaceStation && Config.venus) {
+		if (Config.venusSpaceStation) {
 			GalaxyRegistry.registerSatellite(venusSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderVenusOrbit.class, new TeleportTypeVenusOrbit());
 			GalacticraftRegistry.registerProvider(Config.venusSpaceStationID, WorldProviderVenusOrbit.class, false, 0);

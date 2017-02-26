@@ -18,7 +18,6 @@ star.kepler69=Estrella Kepler 69
 
 #Planets
 planet.Mercury=Mercurio
-planet.Venus=Venus
 planet.Ceres=Ceres
 planet.Jupiter=Júpiter
 planet.Saturn=Saturno
@@ -64,17 +63,9 @@ tile.mercury.oreCopper.name=Mena de Cobre Mercuriana
 tile.mercury.oreMercury.name=Mena de Mercurio
 tile.mercury.stoneBricks.name=Ladrillos de Roca Mercuriana
 tile.mercury.mercuryBlock.name=Bloque de Mercurio
-
-tile.venus.surface.name=Roca Superficial de Venus
-tile.venus.subSurface.name=Roca Subterránea de Venus
-tile.venus.stone.name=Roca de Venus
-tile.venus.oreIron.name=Mena de Hierro de Venus
-tile.venus.oreTin.name=Mena de Estaño de Venus
-tile.venus.oreCopper.name=Mena de Cobre de Venus
-tile.venus.oreCarbon.name=Mena de Carbono
-tile.venus.stoneBricks.name=Ladrillos de Roca de Venus
-tile.venus.carbonBlock.name=Bloque de Carbono
-tile.venus.dungeonBrick.name=Venus Dungeon Brick
+tile.mercury.oreCarbon.name=Mena de Carbono
+tile.mercury.carbonBlock.name=Bloque de Carbono
+tile.mercury.dungeonBrick.name=Mercury Dungeon Brick
 
 tile.ceres.surface.name=Roca Superficial de Ceres
 tile.ceres.subSurface.name=Roca Subterránea de Ceres
@@ -316,14 +307,14 @@ tile.plutoStoneStairs.name=Escaleras de Pluto
 tile.erisStoneStairs.name=Escaleras de Eris
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Venus
+tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Venus
 tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Júpiter
 tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Saturno
 tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Urano
 tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Neptuno
 
 #Dungeon Bricks Stairs
-tile.venusDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Venus
+tile.mercuryDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Venus
 tile.jupiterDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Júpiter
 tile.saturnDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Saturno
 tile.uranusDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Urano
@@ -807,7 +798,6 @@ entity.ExtraPlanetsEvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
 
 #Achievements
 achievement.mercuryPlanet=¡Aterriza en Mercurio!
-achievement.venusPlanet=¡Aterriza en Venus!
 achievement.ceresPlanet=¡Aterriza en Ceres!
 achievement.jupiterPlanet=¡Aterriza en Júpiter!
 achievement.saturnPlanet=¡Aterriza en Saturn!
@@ -818,8 +808,7 @@ achievement.erisPlanet=¡Aterriza en Eris!
 achievement.kepler62bPlanet=Land on Kepler62b!
 achievement.kepler22bPlanet=Land on Kepler22b!
 
-achievement.mercuryPlanet.desc=Toma un a cohete nivel 4 a Mercurio
-achievement.venusPlanet.desc=Toma un a cohete nivel 3 a Venus
+achievement.mercuryPlanet.desc=Toma un a cohete nivel 3 a Mercurio
 achievement.ceresPlanet.desc=Toma un a cohete nivel 4 a Ceres
 achievement.jupiterPlanet.desc=Toma un a cohete nivel 4 a Júpiter
 achievement.saturnPlanet.desc=Toma un a cohete nivel 5 a Saturno
@@ -830,7 +819,7 @@ achievement.erisPlanet.desc=Toma un a cohete nivel 9 a Eris
 achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
-achievement.venusBoss=¡Jefe nivel 4 derrotado!
+achievement.mercuryBoss=¡Jefe nivel 4 derrotado!
 achievement.jupiterBoss=¡Jefe nivel 5 derrotado!
 achievement.saturnBoss=¡Jefe nivel 6 derrotado!
 achievement.uranusBoss=¡Jefe nivel 7 derrotado!
@@ -838,7 +827,7 @@ achievement.neptuneBoss=¡Jefe nivel 8 derrotado!
 achievement.plutoBoss=¡Jefe nivel 9 derrotado!
 achievement.erisBoss=¡Jefe nivel 10 derrotado!
 
-achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus y abre el cofre del tesoro
+achievement.mercuryBoss.desc=Mata al jefe de la mazmorra de Mercurio y abre el cofre del tesoro
 achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter y abre el cofre del tesoro
 achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno y abre el cofre del tesoro
 achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano y abre el cofre del tesoro

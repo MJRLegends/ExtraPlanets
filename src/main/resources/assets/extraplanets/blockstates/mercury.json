@@ -8,6 +8,9 @@
         "basictypemercury=mercury_ore_copper": { "model": "extraplanets:mercury_ore_copper_model" },
 		"basictypemercury=mercury_ore_mercury": { "model": "extraplanets:mercury_ore_mercury_model" },
         "basictypemercury=mercury_mercury_block": { "model": "extraplanets:mercury_mercury_block_model" },
-        "basictypemercury=mercury_stonebricks": { "model": "extraplanets:mercury_stonebricks_model" }
+        "basictypemercury=mercury_stonebricks": { "model": "extraplanets:mercury_stonebricks_model" },
+		"basictypemercury=mercury_dungeon_brick": { "model": "extraplanets:mercury_dungeon_brick_model" },
+		"basictypemercury=mercury_ore_carbon": { "model": "extraplanets:mercury_ore_carbon_model" },
+		"basictypemercury=mercury_carbon_block": { "model": "extraplanets:mercury_carbon_block_model" }
     }
 }

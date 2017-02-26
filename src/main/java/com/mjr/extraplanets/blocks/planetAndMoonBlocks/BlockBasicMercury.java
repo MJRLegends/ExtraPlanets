@@ -48,8 +48,11 @@ public class BlockBasicMercury extends Block implements IDetectableResource, IPl
         ORE_COPPER(5, "mercury_ore_copper"),
         ORE_MERCURY(6, "mercury_ore_mercury"),
         MERCURY_BLOCK(7, "mercury_mercury_block"),
-        STONEBRICKS(8, "mercury_stonebricks");
-
+        STONEBRICKS(8, "mercury_stonebricks"),
+        DUNGEON_BRICK(9, "mercury_dungeon_brick"),
+        ORE_CARBON(10, "mercury_ore_carbon"),
+        CARBON_BLOCK(11, "mercury_carbon_block");
+        
         private final int meta;
         private final String name;
 

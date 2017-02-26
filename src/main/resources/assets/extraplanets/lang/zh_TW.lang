@@ -19,7 +19,6 @@ star.kepler69=開普勒69
 
 #Planets
 planet.Mercury=水星
-planet.Venus=金星
 planet.Ceres=穀神星
 planet.Jupiter=木星
 planet.Saturn=土星
@@ -65,17 +64,9 @@ tile.mercury.oreCopper.name=水星銅礦石
 tile.mercury.oreMercury.name=水星汞礦石
 tile.mercury.stoneBricks.name=水星石磚
 tile.mercury.mercuryBlock.name=水星方塊
-
-tile.venus.surface.name=金星地表岩石
-tile.venus.subSurface.name=金星地底岩石
-tile.venus.stone.name=金星石頭
-tile.venus.oreIron.name=金星鐵礦石
-tile.venus.oreTin.name=金星錫礦石
-tile.venus.oreCopper.name=金星銅礦石
-tile.venus.oreCarbon.name=金星碳礦石
-tile.venus.stoneBricks.name=金星石磚
-tile.venus.carbonBlock.name=碳塊
-tile.venus.dungeonBrick.name=Venus Dungeon Brick
+tile.mercury.oreCarbon.name=Carbon Ore
+tile.mercury.carbonBlock.name=Block of Carbon
+tile.mercury.dungeonBrick.name=Mercury Dungeon Brick
 
 tile.ceres.surface.name=穀神星地表岩石
 tile.ceres.subSurface.name=穀神星地底岩石
@@ -289,7 +280,6 @@ tile.ganymedeGravel.name=木衛三沙礫
 tile.rheaGravel.name=土衛五沙礫
 tile.titanGravel.name=土衛一沙礫
 
-tile.venusGravel.name=金星沙礫
 tile.jupiterGravel.name=木星沙礫
 tile.saturnGravel.name=土星沙礫
 tile.uranusGravel.name=天王星沙礫
@@ -297,7 +287,6 @@ tile.neptuneGravel.name=海王星沙礫
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星石臺階
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=金星石臺階
 tile.ExtraPlanets_ceresStoneBlockhalfslab.name=谷神星石臺階
 tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=木星石臺階
 tile.ExtraPlanets_saturnStoneBlockhalfslab.name=土星石臺階
@@ -308,7 +297,6 @@ tile.ExtraPlanets_erisStoneBlockhalfslab.name=鬩神星石臺階
 
 #Planet Blocks Stairs
 tile.mercuryStoneStairs.name=水星石樓梯
-tile.venusStoneStairs.name=金星石樓梯
 tile.ceresStoneStairs.name=谷神星石樓梯
 tile.jupiterStoneStairs.name=木星石樓梯
 tile.saturnStoneStairs.name=土星石樓梯
@@ -318,14 +306,14 @@ tile.plutoStoneStairs.name=冥王星石樓梯
 tile.erisStoneStairs.name=鬩神星石樓梯
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星地牢磚臺階
+tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=金星地牢磚臺階
 tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=木星地牢磚臺階
 tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=土星地牢磚臺階
 tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=天王星地牢磚臺階
 tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=海王星地牢磚臺階
 
 #Dungeon Bricks Stairs
-tile.venusDungeonBrickStoneStairs.name=金星地牢磚樓梯
+tile.mercuryDungeonBrickStoneStairs.name=金星地牢磚樓梯
 tile.jupiterDungeonBrickStoneStairs.name=木星地牢磚樓梯
 tile.saturnDungeonBrickStoneStairs.name=土星地牢磚樓梯
 tile.uranusDungeonBrickStoneStairs.name=天王星地牢磚樓梯
@@ -809,7 +797,6 @@ entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髏(進化體)
 
 #Achievement
 achievement.mercuryPlanet=登陸水星！
-achievement.venusPlanet=登陸金星！
 achievement.ceresPlanet=登陸穀神星！
 achievement.jupiterPlanet=登在木星！
 achievement.saturnPlanet=登陸土星！
@@ -820,8 +807,7 @@ achievement.erisPlanet=登陸鬩神星！
 achievement.kepler62bPlanet=Land on Kepler62b!
 achievement.kepler22bPlanet=Land on Kepler22b!
 
-achievement.mercuryPlanet.desc=乘坐4階火箭到水星
-achievement.venusPlanet.desc=乘坐3階火箭到金星
+achievement.mercuryPlanet.desc=乘坐3階火箭到水星
 achievement.ceresPlanet.desc=乘坐4階火箭到穀神星
 achievement.jupiterPlanet.desc=乘坐4階火箭到木星
 achievement.saturnPlanet.desc=乘坐5階火箭到土星
@@ -832,7 +818,7 @@ achievement.erisPlanet.desc=乘坐9階火箭到鬩神星
 achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
-achievement.venusBoss=擊敗金星地牢BOSS！
+achievement.mercuryBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=擊敗木星地牢BOSS！
 achievement.saturnBoss=擊敗土星地牢BOSS！
 achievement.uranusBoss=擊敗天王星地牢BOSS！
@@ -840,7 +826,7 @@ achievement.neptuneBoss=擊敗海王星地牢BOSS！
 achievement.plutoBoss=擊敗冥王星地牢BOSS！
 achievement.erisBoss=Defeated Tier 10 Boss!
 
-achievement.venusBoss.desc=擊殺金星地牢BOSS並開啟寶箱！
+achievement.mercuryBoss.desc=Kill the Mercury Dungeon Boss and Open the Treasure Chest
 achievement.jupiterBoss.desc=擊殺木星地牢BOSS並開啟寶箱！
 achievement.saturnBoss.desc=擊殺土星地牢BOSS並開啟寶箱！
 achievement.uranusBoss.desc=擊殺天王星地牢BOSS並開啟寶箱！

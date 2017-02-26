@@ -11,11 +11,11 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossMercury;
 
-public class TileEntityDungeonSpawnerVenusDefault extends TileEntityDungeonSpawner<EntityCreeperBossVenus> {
+public class TileEntityDungeonSpawnerVenusDefault extends TileEntityDungeonSpawner<EntityCreeperBossMercury> {
 	public TileEntityDungeonSpawnerVenusDefault() {
-		super(EntityCreeperBossVenus.class);
+		super(EntityCreeperBossMercury.class);
 	}
 
 	@Override

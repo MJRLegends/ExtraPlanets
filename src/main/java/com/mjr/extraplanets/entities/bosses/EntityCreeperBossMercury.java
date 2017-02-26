@@ -50,7 +50,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
 
-public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathable, IBossDisplayData, IRangedAttackMob, IBoss {
+public class EntityCreeperBossMercury extends EntityMob implements IEntityBreathable, IBossDisplayData, IRangedAttackMob, IBoss {
 	protected long ticks = 0;
 	private TileEntityDungeonSpawner spawner;
 
@@ -64,7 +64,7 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 	private Vector3 roomCoords;
 	private Vector3 roomSize;
 
-	public EntityCreeperBossVenus(World par1World) {
+	public EntityCreeperBossMercury(World par1World) {
 		super(par1World);
 		this.setSize(2.0F, 7.0F);
 		this.isImmuneToFire = true;
@@ -109,7 +109,7 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.05F);
 	}
 
-	public EntityCreeperBossVenus(World world, Vector3 vec) {
+	public EntityCreeperBossMercury(World world, Vector3 vec) {
 		this(world);
 		this.setPosition(vec.x, vec.y, vec.z);
 	}

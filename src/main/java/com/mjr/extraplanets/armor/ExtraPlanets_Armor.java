@@ -149,7 +149,7 @@ public class ExtraPlanets_Armor {
 			mercuryLegings = new MercuryArmor("mercury", mercury_ArmorMaterial, 2).setUnlocalizedName("mercuryLegings");
 			mercuryBoots = new MercuryArmor("mercury", mercury_ArmorMaterial, 3).setUnlocalizedName("mercuryBoots");
 		}
-		if (Config.carbonItems && Config.venus) {
+		if (Config.carbonItems && Config.mercury) {
 			carbonHelmet = new CarbonArmor("carbon", carbon_ArmorMaterial, 0).setUnlocalizedName("carbonHelmet");
 			carbonChest = new CarbonArmor("carbon", carbon_ArmorMaterial, 1).setUnlocalizedName("carbonChest");
 			carbonLegings = new CarbonArmor("carbon", carbon_ArmorMaterial, 2).setUnlocalizedName("carbonLegings");
@@ -271,7 +271,7 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(mercuryLegings, "mercuryLegings");
 			GameRegistry.registerItem(mercuryBoots, "mercuryBoots");
 		}
-		if (Config.carbonItems && Config.venus) {
+		if (Config.carbonItems && Config.mercury) {
 			GameRegistry.registerItem(carbonHelmet, "carbonHelmet");
 			GameRegistry.registerItem(carbonChest, "carbonChest");
 			GameRegistry.registerItem(carbonLegings, "carbonLegings");

@@ -85,7 +85,7 @@ public class AchievementEventHandler {
 		if (event.source.getSourceOfDamage() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
 			if (event.entity instanceof EntityEvolvedMagmaCubeBoss) {
-				player.addStat(ExtraPlanets_Achievements.venusBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.mercuryBoss, 1);
 			} else if (event.entity instanceof EntityCreeperBossJupiter) {
 				player.addStat(ExtraPlanets_Achievements.jupiterBoss, 1);
 			} else if (event.entity instanceof EntityCreeperBossSaturn) {
@@ -124,8 +124,6 @@ public class AchievementEventHandler {
 	public void onDimensionChange(PlayerChangedDimensionEvent event) {
 		if (event.toDim == Config.mercuryID)
 			event.player.addStat(ExtraPlanets_Achievements.mercuryPlanet, 1);
-		else if (event.toDim == Config.venusID)
-			event.player.addStat(ExtraPlanets_Achievements.venusPlanet, 1);
 		else if (event.toDim == Config.ceresID)
 			event.player.addStat(ExtraPlanets_Achievements.ceresPlanet, 1);
 		else if (event.toDim == Config.jupiterID)

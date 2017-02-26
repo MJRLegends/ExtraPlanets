@@ -30,12 +30,9 @@ import com.mjr.extraplanets.planets.Saturn.TeleportTypeSaturn;
 import com.mjr.extraplanets.planets.Saturn.WorldProviderSaturn;
 import com.mjr.extraplanets.planets.Uranus.TeleportTypeUranus;
 import com.mjr.extraplanets.planets.Uranus.WorldProviderUranus;
-import com.mjr.extraplanets.planets.Venus.TeleportTypeVenus;
-import com.mjr.extraplanets.planets.Venus.WorldProviderVenus;
 
 public class ExtraPlanets_Planets {
 	public static Planet mercury;
-	public static Planet venus;
 	public static Planet ceres;
 	public static Planet jupiter;
 	public static Planet saturn;
@@ -68,7 +65,7 @@ public class ExtraPlanets_Planets {
 	private static void initializePlanets() {
 		if (Config.mercury) {
 			mercury = new Planet("Mercury").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			mercury.setTierRequired(Config.mercuryRocketTier);
+			mercury.setTierRequired(3);
 			mercury.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			mercury.setPhaseShift(1.45F);
 			mercury.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
@@ -77,17 +74,17 @@ public class ExtraPlanets_Planets {
 			mercury.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
 			mercury.setDimensionInfo(Config.mercuryID, WorldProviderMercury.class);
 		}
-		if (Config.venus) {
-			venus = new Planet("Venus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			venus.setTierRequired(3);
-			venus.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			venus.setPhaseShift(2.0F);
-			venus.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.75F, 0.75F));
-			venus.setRelativeOrbitTime(0.61527929901423877327491785323111F);
-			venus.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.CO2);
-			venus.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"));
-			venus.setDimensionInfo(Config.venusID, WorldProviderVenus.class);
-		}
+//		if (Config.venus) {
+//			venus = new Planet("Venus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+//			venus.setTierRequired(3);
+//			venus.setRingColorRGB(0.1F, 0.9F, 0.6F);
+//			venus.setPhaseShift(2.0F);
+//			venus.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.75F, 0.75F));
+//			venus.setRelativeOrbitTime(0.61527929901423877327491785323111F);
+//			venus.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.CO2);
+//			venus.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"));
+//			venus.setDimensionInfo(Config.venusID, WorldProviderVenus.class);
+//		}
 		if (Config.ceres) {
 			ceres = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			ceres.setTierRequired(Config.ceresRocketTier);
@@ -258,11 +255,11 @@ public class ExtraPlanets_Planets {
 			GalacticraftRegistry.registerTeleportType(WorldProviderMercury.class, new TeleportTypeMercury());
 			GalacticraftRegistry.registerRocketGui(WorldProviderMercury.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mercuryRocketGui.png"));
 		}
-		if (Config.venus) {
-			GalaxyRegistry.registerPlanet(venus);
-			GalacticraftRegistry.registerTeleportType(WorldProviderVenus.class, new TeleportTypeVenus());
-			GalacticraftRegistry.registerRocketGui(WorldProviderVenus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venusRocketGui.png"));
-		}
+//		if (Config.venus) {
+//			GalaxyRegistry.registerPlanet(venus);
+//			GalacticraftRegistry.registerTeleportType(WorldProviderVenus.class, new TeleportTypeVenus());
+//			GalacticraftRegistry.registerRocketGui(WorldProviderVenus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venusRocketGui.png"));
+//		}
 		if (Config.ceres) {
 			GalaxyRegistry.registerPlanet(ceres);
 			GalacticraftRegistry.registerTeleportType(WorldProviderCeres.class, new TeleportTypeCeres());

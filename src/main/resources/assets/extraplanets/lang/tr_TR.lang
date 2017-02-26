@@ -18,7 +18,6 @@ star.kepler69=Kepler 69 Yıldızı
 
 #Planets
 planet.Mercury=Merkür
-planet.Venus=Venüs
 planet.Ceres=Ceres
 planet.Jupiter=Jüpiter
 planet.Saturn=Satürn
@@ -64,17 +63,9 @@ tile.mercury.oreCopper.name=Merkür Bakır Cevheri
 tile.mercury.oreMercury.name=Civa Cevheri
 tile.mercury.stoneBricks.name=Merkür Taş Tuğla
 tile.mercury.mercuryBlock.name=Merkürümsü Blok
-
-tile.venus.surface.name=Venüs Yüzey Kayası
-tile.venus.subSurface.name=Venüs Yeraltı Kayası
-tile.venus.stone.name=Venüs Taşı
-tile.venus.oreIron.name=Venüs Demir Cevheri
-tile.venus.oreTin.name=Venüs Kalay Cevheri
-tile.venus.oreCopper.name=Venüs Bakır Cevheri
-tile.venus.oreCarbon.name=Karbon Cevheri
-tile.venus.stoneBricks.name=Venüs Taş Tuğla
-tile.venus.carbonBlock.name=Karbon Bloğu
-tile.venus.dungeonBrick.name=Venus Dungeon Brick
+tile.mercury.oreCarbon.name=Karbon Cevheri
+tile.mercury.carbonBlock.name=Karbon Bloğu
+tile.mercury.dungeonBrick.name=Mercury Dungeon Brick
 
 tile.ceres.surface.name=Ceres Yüzey Kayası
 tile.ceres.subSurface.name=Ceres Yeraltı Kayası
@@ -317,14 +308,14 @@ tile.plutoStoneStairs.name=Pluto Merdiveni
 tile.erisStoneStairs.name=Eris Merdiveni
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Zindan Tuğlası Basamağı
+tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=Venus Zindan Tuğlası Basamağı
 tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Zindan Tuğlası Basamağı
 tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Zindan Tuğlası Basamağı
 tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Zindan Tuğlası Basamağı
 tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Zindan Tuğlası Basamağı
 
 #Dungeon Bricks Merdiveni
-tile.venusDungeonBrickStoneStairs.name=Venus Zindan Tuğlası Merdiveni
+tile.mercuryDungeonBrickStoneStairs.name=Venus Zindan Tuğlası Merdiveni
 tile.jupiterDungeonBrickStoneStairs.name=Jupiter Zindan Tuğlası Merdiveni
 tile.saturnDungeonBrickStoneStairs.name=Saturn Zindan Tuğlası Merdiveni
 tile.uranusDungeonBrickStoneStairs.name=Uranus Zindan Tuğlası Merdiveni
@@ -808,7 +799,6 @@ entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
 
 #Achievements
 achievement.mercuryPlanet=Merkür İçin Küçük Benim İçin Büyük!
-achievement.venusPlanet=Venus İçin Küçük Benim İçin Büyük!
 achievement.ceresPlanet=Ceres İçin Küçük Benim İçin Büyük!
 achievement.jupiterPlanet=Jupiter İçin Küçük Benim İçin Büyük!
 achievement.saturnPlanet=Saturn İçin Küçük Benim İçin Büyük!
@@ -819,8 +809,7 @@ achievement.erisPlanet=Eris İçin Küçük Benim İçin Büyük!
 achievement.kepler62bPlanet=Land on Kepler62b!
 achievement.kepler22bPlanet=Land on Kepler22b!
 
-achievement.mercuryPlanet.desc=Tier 4 Roket İle Merkür'ya Git
-achievement.venusPlanet.desc=Tier 4 Roket İle Venüs'e Git
+achievement.mercuryPlanet.desc=Tier 3 Roket İle Merkür'ya Git
 achievement.ceresPlanet.desc=Tier 4 Roket İle Ceres'e Git
 achievement.jupiterPlanet.desc=Tier 4 Roket İle Jüpiter'e Git
 achievement.saturnPlanet.desc=Tier 5 Roket İle Satürn'e Git
@@ -831,7 +820,7 @@ achievement.erisPlanet.desc=Tier 9 Roket İle Eris'e Git
 achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
-achievement.venusBoss=Defeated Tier 4 Boss!
+achievement.mercuryBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!
 achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
@@ -839,7 +828,7 @@ achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
 achievement.erisBoss=Defeated Tier 10 Boss!
 
-achievement.venusBoss.desc=Venüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
+achievement.mercuryBoss.desc=Merkür Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.jupiterBoss.desc=Jüpiter Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.saturnBoss.desc=Satürn Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.uranusBoss.desc=Uranüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç

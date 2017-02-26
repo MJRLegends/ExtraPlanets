@@ -168,8 +168,7 @@ public class ExtraPlanets_Items {
 
 			ingotMercury = new ItemBasicItem("ingotMercury");
 			compressedMercury = new ItemMercuryCompressed("compressedMercury");
-		}
-		if (Config.venus) {
+			
 			tier4Rocket = new Tier4Rocket("itemTier4Rocket");
 			schematicTier4 = new SchematicTier4("schematicTier4");
 			noseConeTier4 = new Tier4NoseCone("noseConeTier4");
@@ -299,8 +298,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(mercuryBattery, mercuryBattery.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(compressedMercury, compressedMercury.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(ingotMercury, ingotMercury.getUnlocalizedName().substring(5));
-		}
-		if (Config.venus) {
+			
 			GameRegistry.registerItem(tier4Rocket, tier4Rocket.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(schematicTier4, schematicTier4.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(noseConeTier4, noseConeTier4.getUnlocalizedName().substring(5));
@@ -446,10 +444,10 @@ public class ExtraPlanets_Items {
 	}
 
 	public static void OreDictionaryRegister() {
-		if (Config.mercury)
+		if (Config.mercury){
 			OreDictionary.registerOre("ingotMercury", new ItemStack(ingotMercury));
-		if (Config.venus)
 			OreDictionary.registerOre("ingotCarbon", new ItemStack(tier4Items, 1, 5));
+		}
 		if (Config.ceres)
 			OreDictionary.registerOre("ingotUranium", new ItemStack(ingotUranium));
 		if (Config.jupiter) {

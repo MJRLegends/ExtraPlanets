@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Venus.spacestation;
+package com.mjr.extraplanets.planets.venus.spacestation;
 
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;

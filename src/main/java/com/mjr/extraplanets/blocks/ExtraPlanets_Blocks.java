@@ -34,7 +34,6 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
 import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
@@ -59,7 +58,6 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockSaturn;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
@@ -83,7 +81,6 @@ public class ExtraPlanets_Blocks {
 	public static Block ceresBlocks;
 	public static Block erisBlocks;
 
-	public static Block venusBlocks;
 	public static Block jupiterBlocks;
 	public static Block saturnBlocks;
 	public static Block uranusBlocks;
@@ -109,7 +106,6 @@ public class ExtraPlanets_Blocks {
 
 	// Gravels
 	public static Block mercuryGravel;
-	public static Block venusGravel;
 	public static Block ceresGravel;
 	public static Block jupiterGravel;
 	public static Block saturnGravel;
@@ -144,7 +140,7 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier10;
 
 	// Dungeon Spawners
-	public static Block venusSpawner;
+	public static Block mercurySpawner;
 	public static Block jupiterSpawner;
 	public static Block saturnSpawner;
 	public static Block uranusSpawner;
@@ -192,12 +188,12 @@ public class ExtraPlanets_Blocks {
 			mercuryBlocks = new BlockBasicMercury("mercury");
 			mercuryGravel = new BlockCustomGravel("mercuryGravel");
 		}
-		if (Config.venus) {
-			venusBlocks = new BlockBasicVenus("venus");
-			venusGravel = new BlockCustomGravel("venusGravel");
-
-			volcanicRock = new BlockBasic(Material.rock).setUnlocalizedName("volcanicRock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
-		}
+//		if (Config.venus) {
+//			venusBlocks = new BlockBasicVenus("venus");
+//			venusGravel = new BlockCustomGravel("venusGravel");
+//
+//			volcanicRock = new BlockBasic(Material.rock).setUnlocalizedName("volcanicRock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
+//		}
 		if (Config.ceres) {
 			ceresBlocks = new BlockBasicCeres("ceres");
 			ceresGravel = new BlockCustomGravel("ceresGravel");
@@ -284,7 +280,7 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void initializeTreasureChestBlocks() {
-		if (Config.venus) {
+		if (Config.mercury) {
 			treasureChestTier4 = new T4TreasureChest("treasureChestT4");
 		}
 		if (Config.jupiter) {
@@ -308,8 +304,8 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void initializeSpawnerBlocks() {
-		if (Config.venus) {
-			venusSpawner = new BlockVenusDungeonSpawner("bossSpawnerVenus");
+		if (Config.mercury) {
+			mercurySpawner = new BlockVenusDungeonSpawner("bossSpawnerVenus");
 		}
 		if (Config.jupiter) {
 			jupiterSpawner = new BlockJupiterDungeonSpawner("bossSpawnerVenus");
@@ -347,15 +343,14 @@ public class ExtraPlanets_Blocks {
 		if (Config.mercury) {
 			GameRegistry.registerBlock(mercuryBlocks, ItemBlockMercury.class, mercuryBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(mercuryGravel, mercuryGravel.getUnlocalizedName().substring(5));
-		}
-		if (Config.venus) {
-			GameRegistry.registerBlock(venusBlocks, ItemBlockVenus.class, venusBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(venusGravel, venusGravel.getUnlocalizedName().substring(5));
-
-			GameRegistry.registerBlock(venusSpawner, ItemBlockGC.class, "venusSpawner");
+			GameRegistry.registerBlock(mercurySpawner, ItemBlockGC.class, "mercurySpawner");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(volcanicRock, volcanicRock.getUnlocalizedName().substring(5));
 		}
+//		if (Config.venus) {
+//			GameRegistry.registerBlock(venusBlocks, ItemBlockVenus.class, venusBlocks.getUnlocalizedName().substring(5));
+//			GameRegistry.registerBlock(venusGravel, venusGravel.getUnlocalizedName().substring(5));
+//			GameRegistry.registerBlock(volcanicRock, volcanicRock.getUnlocalizedName().substring(5));
+//		}
 		if (Config.ceres) {
 			GameRegistry.registerBlock(ceresBlocks, ItemBlockCeres.class, ceresBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(ceresGravel, ceresGravel.getUnlocalizedName().substring(5));
@@ -461,8 +456,8 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void registerTileEntitys() {
-		if (Config.venus) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerVenus.class, Constants.modName + "Veuns Dungeon Spawner");
+		if (Config.mercury) {
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerVenus.class, Constants.modName + "Mercury Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
 		if (Config.jupiter) {
@@ -497,14 +492,14 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(mercuryBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(mercuryBlocks, 1, 3));
 			OreDictionary.registerOre("oreMercury", new ItemStack(mercuryBlocks, 1, 6));
+			OreDictionary.registerOre("oreCarbon", new ItemStack(mercuryBlocks, 1, 10));
+			OreDictionary.registerOre("blockCarbon", new ItemStack(mercuryBlocks, 1, 11));
 		}
-		if (Config.venus) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(venusBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(venusBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(venusBlocks, 1, 3));
-			OreDictionary.registerOre("oreCarbon", new ItemStack(venusBlocks, 1, 6));
-			OreDictionary.registerOre("blockCarbon", new ItemStack(venusBlocks, 1, 7));
-		}
+//		if (Config.venus) {
+//			OreDictionary.registerOre("oreCopper", new ItemStack(venusBlocks, 1, 5));
+//			OreDictionary.registerOre("oreTin", new ItemStack(venusBlocks, 1, 4));
+//			OreDictionary.registerOre("oreIron", new ItemStack(venusBlocks, 1, 3));
+//		}
 		if (Config.ceres) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(ceresBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(ceresBlocks, 1, 4));

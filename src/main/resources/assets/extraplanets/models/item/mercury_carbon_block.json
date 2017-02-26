@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/venus_stone_model",
+    "parent":"extraplanets:block/mercury_carbon_block_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

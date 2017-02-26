@@ -18,7 +18,6 @@ star.kepler69=Kepler 69 Star
 
 #Planets
 planet.Mercury=Mercury
-planet.Venus=Venus
 planet.Ceres=Ceres
 planet.Jupiter=Jupiter
 planet.Saturn=Saturn
@@ -64,17 +63,9 @@ tile.mercury.oreCopper.name=Mercury Copper Ore
 tile.mercury.oreMercury.name=Mercury Ore
 tile.mercury.stoneBricks.name=Mercury Stone Bricks
 tile.mercury.mercuryBlock.name=Block of Mercury
-
-tile.venus.surface.name=Venus Surface Rock
-tile.venus.subSurface.name=Venus Sub-Surface Rock
-tile.venus.stone.name=Venus Stone
-tile.venus.oreIron.name=Venus Iron Ore
-tile.venus.oreTin.name=Venus Tin Ore
-tile.venus.oreCopper.name=Venus Copper Ore
-tile.venus.oreCarbon.name=Carbon Ore
-tile.venus.stoneBricks.name=Venus Stone Bricks
-tile.venus.carbonBlock.name=Block of Carbon
-tile.venus.dungeonBrick.name=Venus Dungeon Brick
+tile.mercury.oreCarbon.name=Carbon Ore
+tile.mercury.carbonBlock.name=Block of Carbon
+tile.mercury.dungeonBrick.name=Mercury Dungeon Brick
 
 tile.ceres.surface.name=Ceres Surface Rock
 tile.ceres.subSurface.name=Ceres Sub-Surface Rock
@@ -317,14 +308,14 @@ tile.plutoStoneStairs.name=Pluto Stairs
 tile.erisStoneStairs.name=Eris Stairs
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab
+tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab
 tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeon Brick Slab
 tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeon Brick Slab
 tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeon Brick Slab
 tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeon Brick Slab
 
 #Dungeon Bricks Stairs
-tile.venusDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs
+tile.mercuryDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs
 tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeon Brick Stairs
 tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs
 tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs
@@ -808,7 +799,6 @@ entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evolved Power Skeleton
 
 #Achievements
 achievement.mercuryPlanet=Land on Mercury!
-achievement.venusPlanet=Land on Venus!
 achievement.ceresPlanet=Land on Ceres!
 achievement.jupiterPlanet=Land on Jupiter!
 achievement.saturnPlanet=Land on Saturn!
@@ -819,8 +809,7 @@ achievement.erisPlanet=Land on Eris!
 achievement.kepler62bPlanet=Land on Kepler62b!
 achievement.kepler22bPlanet=Land on Kepler22b!
 
-achievement.mercuryPlanet.desc=Take a Tier 4 rocket to Mercury
-achievement.venusPlanet.desc=Take a Tier 3 rocket to Venus
+achievement.mercuryPlanet.desc=Take a Tier 3 rocket to Mercury
 achievement.ceresPlanet.desc=Take a Tier 4 rocket to Ceres
 achievement.jupiterPlanet.desc=Take a Tier 4 rocket to Jupiter
 achievement.saturnPlanet.desc=Take a Tier 5 rocket to Saturn
@@ -831,7 +820,7 @@ achievement.erisPlanet.desc=Take a Tier 9 rocket to Eris
 achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
 
-achievement.venusBoss=Defeated Tier 4 Boss!
+achievement.mercuryBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!
 achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
@@ -839,7 +828,7 @@ achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
 achievement.erisBoss=Defeated Tier 10 Boss!
 
-achievement.venusBoss.desc=Kill the Venus Dungeon Boss and Open the Treasure Chest
+achievement.mercuryBoss.desc=Kill the Mercury Dungeon Boss and Open the Treasure Chest
 achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss and Open the Treasure Chest
 achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss and Open the Treasure Chest
 achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss and Open the Treasure Chest

@@ -1,9 +1,10 @@
-package com.mjr.extraplanets.planets.Venus.spacestation;
+package com.mjr.extraplanets.planets.venus.spacestation;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
@@ -180,7 +181,7 @@ public class WorldProviderVenusOrbit extends WorldProviderOrbit
 	@Override
 	public boolean canSpaceshipTierPass(int tier)
 	{
-		return tier > ExtraPlanets_Planets.venus.getTierRequirement();
+		return tier > VenusModule.planetVenus.getTierRequirement();
 	}
 
 	@Override

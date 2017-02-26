@@ -96,7 +96,7 @@ public class WorldProviderMercury extends EPWorldProviderSpace implements IGalac
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= Config.mercuryRocketTier;
+		return tier >= 3;
 	}
 
 	@Override

@@ -56,10 +56,8 @@ import com.mjr.extraplanets.planets.Saturn.spacestation.WorldProviderSaturnOrbit
 import com.mjr.extraplanets.planets.Uranus.SkyProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.WorldProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.spacestation.WorldProviderUranusOrbit;
-import com.mjr.extraplanets.planets.Venus.SkyProviderVenus;
-import com.mjr.extraplanets.planets.Venus.WorldProviderVenus;
-import com.mjr.extraplanets.planets.Venus.spacestation.WorldProviderVenusOrbit;
 import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
+import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
 
 public class SkyProviderHandler {
 	@SideOnly(Side.CLIENT)
@@ -74,15 +72,6 @@ public class SkyProviderHandler {
 			if (world.provider instanceof WorldProviderMercury) {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderMercury((IGalacticraftWorldProvider) world.provider));
-				}
-
-				if (world.provider.getCloudRenderer() == null) {
-					world.provider.setCloudRenderer(new CloudRenderer());
-				}
-			}
-			if (world.provider instanceof WorldProviderVenus) {
-				if (world.provider.getSkyRenderer() == null) {
-					world.provider.setSkyRenderer(new SkyProviderVenus((IGalacticraftWorldProvider) world.provider));
 				}
 
 				if (world.provider.getCloudRenderer() == null) {

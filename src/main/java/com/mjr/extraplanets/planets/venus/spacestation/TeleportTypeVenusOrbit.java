@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Venus.spacestation;
+package com.mjr.extraplanets.planets.venus.spacestation;
 
 import java.util.Random;
 

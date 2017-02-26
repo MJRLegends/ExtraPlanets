@@ -17,8 +17,7 @@ public class ExtraPlanets_Achievements {
 
 	private static AchievementPage page1;
 
-	public static Achievement venusPlanet;
-	public static Achievement venusBoss;
+	public static Achievement mercuryBoss;
 
 	public static Achievement jupiterPlanet;
 	public static Achievement jupiterBoss;
@@ -59,9 +58,9 @@ public class ExtraPlanets_Achievements {
 
 	private static void initAchievements() {
 		// Rocket Achievements
-		if (Config.venus)
+		if (Config.mercury)
 			craftRocket4 = new Achievement("achievement.craftRocket4", "craftRocket4", 3, 2, ExtraPlanets_Items.tier4Rocket, (Achievement) null).registerStat();
-		if (Config.venus && Config.jupiter)
+		if (Config.mercury && Config.jupiter)
 			craftRocket5 = new Achievement("achievement.craftRocket5", "craftRocket5", 5, 2, ExtraPlanets_Items.tier5Rocket, craftRocket4).registerStat();
 		else
 			craftRocket5 = new Achievement("achievement.craftRocket5", "craftRocket5", 5, 2, ExtraPlanets_Items.tier5Rocket, (Achievement) null).registerStat();
@@ -87,8 +86,8 @@ public class ExtraPlanets_Achievements {
 			craftRocket10 = new Achievement("achievement.craftRocket10", "craftRocket10", 15, 2, ExtraPlanets_Items.tier10Rocket, (Achievement) null).registerStat();
 
 		// Main Planets Achievements
-		if (Config.venus)
-			venusPlanet = new Achievement("achievement.venusPlanet", "venusPlanet", 3, 4, ExtraPlanets_Blocks.venusBlocks, craftRocket4).registerStat();
+		if (Config.mercury)
+			mercuryPlanet = new Achievement("achievement.mercuryPlanet", "mercuryPlanet", 3, 4, ExtraPlanets_Blocks.mercuryBlocks, craftRocket4).registerStat();
 		if (Config.jupiter)
 			jupiterPlanet = new Achievement("achievement.jupiterPlanet", "jupiterPlanet", 5, 4, ExtraPlanets_Blocks.jupiterBlocks, craftRocket5).registerStat();
 		if (Config.saturn)
@@ -105,14 +104,12 @@ public class ExtraPlanets_Achievements {
 			kepler22bPlanet = new Achievement("achievement.kepler22bPlanet", "kepler22bPlanet", 17, 4, ExtraPlanets_Blocks.kepler22bBlocks, craftRocket10).registerStat();
 
 		// Extra Planets Achievements
-		if (Config.mercury)
-			mercuryPlanet = new Achievement("achievement.mercuryPlanet", "mercuryPlanet", 5, 1, ExtraPlanets_Blocks.mercuryBlocks, (Achievement) null).registerStat();
 		if (Config.ceres)
 			ceresPlanet = new Achievement("achievement.ceresPlanet", "ceresPlanet", 7, 1, ExtraPlanets_Blocks.ceresBlocks, (Achievement) null).registerStat();
 
 		// Boss Killing Achievements
-		if (Config.venus)
-			venusBoss = new Achievement("achievement.venusBoss", "venusBoss", 3, 5, new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 9), venusPlanet).registerStat();
+		if (Config.mercury)
+			mercuryBoss = new Achievement("achievement.mercuryBoss", "mercuryBoss", 3, 5, new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 9), mercuryPlanet).registerStat();
 		if (Config.jupiter)
 			jupiterBoss = new Achievement("achievement.jupiterBoss", "jupiterBoss", 5, 5, new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 9), jupiterPlanet).registerStat();
 		if (Config.saturn)
@@ -128,10 +125,8 @@ public class ExtraPlanets_Achievements {
 	}
 
 	private static void initAchievementPage() {
-		if (venusPlanet != null)
-			achievementslist.add(venusPlanet);
-		if (venusBoss != null)
-			achievementslist.add(venusBoss);
+		if (mercuryBoss != null)
+			achievementslist.add(mercuryBoss);
 		if (jupiterPlanet != null)
 			achievementslist.add(jupiterPlanet);
 		if (jupiterBoss != null)

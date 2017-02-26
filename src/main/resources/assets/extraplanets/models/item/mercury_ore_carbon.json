@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/venus_carbon_block_model",
+    "parent":"extraplanets:block/mercury_ore_carbon_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

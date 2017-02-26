@@ -46,16 +46,15 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossEris;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossJupiter;
+import com.mjr.extraplanets.client.render.entity.RenderCreeperBossMercury;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossNeptune;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossPluto;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossSaturn;
 import com.mjr.extraplanets.client.render.entity.RenderCreeperBossUranus;
-import com.mjr.extraplanets.client.render.entity.RenderCreeperBossVenus;
 import com.mjr.extraplanets.client.render.entity.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entity.RenderEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.client.render.entity.rockets.RenderTier10Rocket;
@@ -75,11 +74,11 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossMercury;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
@@ -143,10 +142,10 @@ public class ClientProxy extends CommonProxy {
 	private void registerVariants() {
 		if (Config.mercury)
 			ClientUtilities.addExtraPlanetsVariants("mercury", "mercury_surface", "mercury_sub_surface", "mercury_stone", "mercury_ore_iron", "mercury_ore_tin", "mercury_ore_copper", "mercury_ore_mercury", "mercury_mercury_block",
-					"mercury_stonebricks");
-		if (Config.venus)
-			ClientUtilities.addExtraPlanetsVariants("venus", "venus_surface", "venus_sub_surface", "venus_stone", "venus_ore_iron", "venus_ore_tin", "venus_ore_copper", "venus_ore_carbon", "venus_carbon_block", "venus_stonebricks",
-					"venus_dungeon_brick");
+					"mercury_stonebricks", "mercury_dungeon_brick", "mercury_ore_carbon", "mercury_carbon_block");
+//		if (Config.venus)
+//			ClientUtilities.addExtraPlanetsVariants("venus", "venus_surface", "venus_sub_surface", "venus_stone", "venus_ore_iron", "venus_ore_tin", "venus_ore_copper", "venus_ore_carbon", "venus_carbon_block", "venus_stonebricks",
+//					"venus_dungeon_brick");
 		if (Config.ceres)
 			ClientUtilities.addExtraPlanetsVariants("ceres", "ceres_surface", "ceres_sub_surface", "ceres_stone", "ceres_ore_iron", "ceres_ore_tin", "ceres_ore_copper", "ceres_ore_uranium", "ceres_uranium_block", "ceres_stonebricks");
 		if (Config.jupiter)
@@ -184,7 +183,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("titan", "titan_surface", "titan_sub_surface", "titan_stone", "titan_ore_iron", "titan_ore_tin", "titan_ore_copper");
 		if (Config.triton)
 			ClientUtilities.addExtraPlanetsVariants("triton", "triton_surface", "triton_sub_surface", "triton_stone", "triton_ore_iron", "triton_ore_tin", "triton_ore_copper");
-		if (Config.venus)
+		if (Config.mercury)
 			ClientUtilities.addExtraPlanetsVariants("tier4Items", "tier4engine", "tier4booster", "tier4Fin", "tier4HeavyDutyPlate", "compressedCarbon", "ingotCarbon");
 		if (Config.jupiter)
 			ClientUtilities.addExtraPlanetsVariants("tier5Items", "tier5engine", "tier5booster", "tier5Fin", "tier5HeavyDutyPlate", "compressedPalladium", "ingotPalladium", "compressedNickel", "ingotNickel", "redGem");
@@ -209,8 +208,8 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	private void registerEntityRenders() {
-		if (Config.venus)
-			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, (RenderManager manager) -> new RenderCreeperBossVenus(manager));
+		if (Config.mercury)
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossMercury.class, (RenderManager manager) -> new RenderCreeperBossMercury(manager));
 		if (Config.jupiter)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
 		if (Config.saturn)
@@ -225,10 +224,10 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
 		if (Config.uranus)
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, (RenderManager manager) -> new RenderEvolvedIceSlimeBoss(manager));
-		if (Config.venus)
+		if (Config.mercury)
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
 
-		if (Config.venus)
+		if (Config.mercury)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
 		if (Config.jupiter)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
@@ -246,7 +245,7 @@ public class ClientProxy extends CommonProxy {
 
 	public void registerCustomModel() {
 		ModelResourceLocation modelResourceLocation = new ModelResourceLocation("galacticraftplanets:rocket_t3", "inventory");
-		if (Config.venus) {
+		if (Config.mercury) {
 			for (int i = 0; i < 5; ++i) {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.tier4Rocket, i, modelResourceLocation);
 			}
@@ -285,7 +284,7 @@ public class ClientProxy extends CommonProxy {
 
 	@SideOnly(Side.CLIENT)
 	private static void renderBlocks() {
-		if (Config.venus)
+		if (Config.mercury)
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
 		if (Config.jupiter)
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT5TreasureChest.class, new TileEntityT5TreasureChestRenderer());
@@ -310,15 +309,15 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryBlocks, blockBasic.getMeta(), blockBasic.getName());
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryGravel);
-		}
-		if (Config.venus) {
-			for (BlockBasicVenus.EnumBlockBasic blockBasic : BlockBasicVenus.EnumBlockBasic.values()) {
-				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusBlocks, blockBasic.getMeta(), blockBasic.getName());
-			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier4);
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusGravel);
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.volcanicRock);
 		}
+//		if (Config.venus) {
+//			for (BlockBasicVenus.EnumBlockBasic blockBasic : BlockBasicVenus.EnumBlockBasic.values()) {
+//				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusBlocks, blockBasic.getMeta(), blockBasic.getName());
+//			}
+//			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusGravel);
+//			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.volcanicRock);
+//		}
 		if (Config.ceres) {
 			for (BlockBasicCeres.EnumBlockBasic blockBasic : BlockBasicCeres.EnumBlockBasic.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresBlocks, blockBasic.getMeta(), blockBasic.getName());
@@ -461,8 +460,7 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.mercuryShovel);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.mercurySword);
 			}
-		}
-		if (Config.venus) {
+			
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T4key);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier4);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier4);
@@ -481,8 +479,9 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.carbonShovel);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.carbonSword);
 			}
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.magma_bucket);
 		}
+//		if (Config.venus)
+//			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.magma_bucket);
 		if (Config.ceres) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ingotUranium);
 			if (Config.uraniumItems) {
@@ -701,7 +700,7 @@ public class ClientProxy extends CommonProxy {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onModelBakeEvent(ModelBakeEvent event) {
-		if (Config.venus)
+		if (Config.mercury)
 			ClientUtilities.replaceModelDefault(event, "rocket_t4", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());
 		if (Config.jupiter)
 			ClientUtilities.replaceModelDefault(event, "rocket_t5", "tier3rocket.obj", ImmutableList.of("Boosters", "Cube", "NoseCone", "Rocket"), ItemModelRocketT3.class, TRSRTransformation.identity());

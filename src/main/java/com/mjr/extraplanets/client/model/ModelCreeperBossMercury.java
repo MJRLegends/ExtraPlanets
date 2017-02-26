@@ -5,9 +5,9 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossMercury;
 
-public class ModelCreeperBossVenus extends ModelBase
+public class ModelCreeperBossMercury extends ModelBase
 {
 	ModelRenderer headMain;
 	ModelRenderer bodyMain;
@@ -21,12 +21,12 @@ public class ModelCreeperBossVenus extends ModelBase
 	ModelRenderer neckRight;
 	ModelRenderer neckLeft;
 
-	public ModelCreeperBossVenus()
+	public ModelCreeperBossMercury()
 	{
 		this(0.0F);
 	}
 
-	public ModelCreeperBossVenus(float scale)
+	public ModelCreeperBossMercury(float scale)
 	{
 		this.textureWidth = 128;
 		this.textureHeight = 64;
@@ -107,7 +107,7 @@ public class ModelCreeperBossVenus extends ModelBase
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 
-		final EntityCreeperBossVenus creeper = (EntityCreeperBossVenus) entity;
+		final EntityCreeperBossMercury creeper = (EntityCreeperBossMercury) entity;
 
 		if (creeper.headsRemaining > 2)
 		{

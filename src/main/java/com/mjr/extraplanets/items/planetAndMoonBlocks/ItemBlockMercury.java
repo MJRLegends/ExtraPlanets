@@ -71,6 +71,21 @@ public class ItemBlockMercury extends ItemBlock
 			name = "stoneBricks";
 			break;
 		}
+		case 9:
+		{
+			name = "dungeonBrick";
+			break;
+		}
+		case 10:
+		{
+			name = "oreCarbon";
+			break;
+		}
+		case 11:
+		{
+			name = "carbonBlock";
+			break;
+		}
 		default:
 			name = "null";
 		}

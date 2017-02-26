@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
+import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -38,7 +39,7 @@ public class ExtraPlanets_Recipes {
 	}
 
 	private static void registerRocketCraftingRecipes() {
-		if (Config.venus)
+		if (Config.mercury)
 			Tier4RocketRecipes.registerRocketCraftingRecipe();
 		if (Config.jupiter)
 			Tier5RocketRecipes.registerRocketCraftingRecipe();
@@ -60,12 +61,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 6), new ItemStack(ExtraPlanets_Items.ingotMercury), 0.0F);
-		}
-		if (Config.venus) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 6), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 10), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 0.0F);
 		}
 		if (Config.ceres) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -218,8 +214,7 @@ public class ExtraPlanets_Recipes {
 //				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_SlabsStairsBlocks.mercuryStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 2) });
 //				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_SlabsStairsBlocks.mercuryStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 2) });
 //			}
-		}
-		if (Config.venus) {
+
 			// Rocket
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.noseConeTier4, 1), new Object[] { " Y ", " X ", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', Blocks.redstone_torch });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 0) });
@@ -227,11 +222,8 @@ public class ExtraPlanets_Recipes {
 			GameRegistry
 					.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 1), 'Z', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 4) });
 
-			// Stone Bricks
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 2) });
-
 			// Block of Carbon
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 11), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5) });
 
 			if (Config.carbonItems) {
 				// Tools
@@ -698,7 +690,7 @@ public class ExtraPlanets_Recipes {
 		// Advanced & Ultimate Battery
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.advancedBattery, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(AsteroidsItems.basicItem, 0, 6), 'R', GCItems.battery, 'C', new ItemStack(MarsBlocks.marsBlock, 1, 8) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ultimateBattery, 1, 0), new Object[] { "WRB", "CPM", "TAZ", 'W', new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 7), 'R', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11), 'B', new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 10), 'C',
-				new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7), 'P', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7), 'T', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'A', new ItemStack(ExtraPlanets_Items.advancedBattery, 1, 0), 'Z',
+				new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 11), 'P', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7), 'T', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'A', new ItemStack(ExtraPlanets_Items.advancedBattery, 1, 0), 'Z',
 				new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5) });
 		
 		//Cloth
@@ -774,8 +766,6 @@ public class ExtraPlanets_Recipes {
 	private static void registerCompressorRecipes() {
 		if (Config.mercury) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.compressedMercury, 1, 0), new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0));
-		}
-		if (Config.venus) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), new ItemStack(AsteroidsItems.basicItem, 1, 0), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 4));
 		}
@@ -825,7 +815,7 @@ public class ExtraPlanets_Recipes {
 			else
 				silicon = silicons.get(j - 1);
 			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 0), new ItemStack[] { new ItemStack(Items.diamond), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_lamp) });
-			if (Config.venus)
+			if (Config.mercury)
 				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.comparator) });
 			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_torch) });
 			if (Config.jupiter)
@@ -847,13 +837,13 @@ public class ExtraPlanets_Recipes {
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.mercurySpaceStationID, Config.mercuryID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.venusSpaceStation && Config.venus) {
+		if (Config.venusSpaceStation) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
-			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.venusSpaceStationID, Config.venusID, new SpaceStationRecipe(inputMap)));
+			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.venusSpaceStationID, VenusModule.planetVenus.getDimensionID(), new SpaceStationRecipe(inputMap)));
 		}
 		if (Config.ceresSpaceStation && Config.ceres) {
 			inputMap = new HashMap<Object, Integer>();

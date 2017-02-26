@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/venus_sub_surface_model",
+    "parent":"extraplanets:block/mercury_dungeon_brick_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

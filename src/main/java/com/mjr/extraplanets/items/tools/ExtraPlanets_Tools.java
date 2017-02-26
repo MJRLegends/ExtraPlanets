@@ -137,7 +137,7 @@ public class ExtraPlanets_Tools {
 			mercuryShovel = new BasicShovel(mercuryMaterial, "mercuryShovel");
 			mercurySword = new BasicSword(mercuryMaterial, "mercurySword");
 		}
-		if (Config.venus && Config.carbonItems) {
+		if (Config.mercury && Config.carbonItems) {
 			carbonPickaxe = new BasicPickaxe(carbonMaterial, "carbonPickaxe");
 			carbonAxe = new BasicAxe(carbonMaterial, "carbonAxe");
 			carbonHoe = new BasicHoe(carbonMaterial, "carbonHoe");
@@ -254,7 +254,7 @@ public class ExtraPlanets_Tools {
 			GameRegistry.registerItem(mercuryShovel, "mercuryShovel");
 			GameRegistry.registerItem(mercurySword, "mercurySword");
 		}
-		if (Config.venus && Config.carbonItems) {
+		if (Config.mercury && Config.carbonItems) {
 			GameRegistry.registerItem(carbonPickaxe, "carbonPickaxe");
 			GameRegistry.registerItem(carbonAxe, "carbonAxe");
 			GameRegistry.registerItem(carbonHoe, "carbonHoe");

@@ -30,7 +30,7 @@ import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossMercury;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
@@ -67,7 +67,6 @@ import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
 import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
 import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
-import com.mjr.extraplanets.planets.Venus.event.VenusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
@@ -104,7 +103,7 @@ public class ExtraPlanets {
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.venus)
+			if (Config.mercury)
 				return ExtraPlanets_Items.tier4Rocket;
 			else if (Config.jupiter)
 				return ExtraPlanets_Items.tier5Rocket;
@@ -125,7 +124,7 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.venus)
+			if (Config.mercury)
 				return ExtraPlanets_Tools.carbonPickaxe;
 			else if (Config.jupiter)
 				return ExtraPlanets_Tools.palladiumPickaxe;
@@ -140,7 +139,7 @@ public class ExtraPlanets {
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.venus)
+			if (Config.mercury)
 				return ExtraPlanets_Armor.carbonChest;
 			else if (Config.jupiter)
 				return ExtraPlanets_Armor.palladiumChest;
@@ -162,8 +161,6 @@ public class ExtraPlanets {
 		// Planets Events
 		if (Config.mercury)
 			MinecraftForge.EVENT_BUS.register(new MercuryEvents());
-		if (Config.venus)
-			MinecraftForge.EVENT_BUS.register(new VenusEvents());
 		if (Config.ceres)
 			MinecraftForge.EVENT_BUS.register(new CeresEvents());
 		if (Config.jupiter)
@@ -274,7 +271,7 @@ public class ExtraPlanets {
 
 	private void registerNonMobEntities() {
 		// registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
-		if (Config.venus)
+		if (Config.mercury)
 			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 		if (Config.jupiter)
 			registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
@@ -292,9 +289,9 @@ public class ExtraPlanets {
 
 	private void registerCreatures() {
 		// Dungeon Bosses
-		if (Config.venus)
+		if (Config.mercury)
 			if (Config.useDefaultBosses)
-				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
+				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossMercury.class, "CreeperBossMercury", 894731, 0);
 			else
 				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
@@ -315,7 +312,7 @@ public class ExtraPlanets {
 	}
 
 	private void registerSchematicsRecipes() {
-		if (Config.venus)
+		if (Config.mercury)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier4Rocket());
 		if (Config.jupiter)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier5Rocket());
@@ -332,7 +329,7 @@ public class ExtraPlanets {
 	}
 
 	private void addDungeonLoot() {
-		if (Config.venus)
+		if (Config.mercury)
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicTier4, 1, 0));
 		if (Config.jupiter)
 			GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanets_Items.schematicTier5, 1, 0));

@@ -48,7 +48,6 @@ public class Config {
 	public static boolean slabsAndStairs = false;
 	
 	public static boolean mercury;
-	public static boolean venus;
 	public static boolean ceres;
 	public static boolean jupiter;
 	public static boolean saturn;
@@ -74,7 +73,6 @@ public class Config {
 	public static boolean kepler22b = false;
 
 	public static int mercuryID;
-	public static int venusID;
 	public static int ceresID;
 	public static int jupiterID;
 	public static int saturnID;
@@ -166,7 +164,6 @@ public class Config {
 	public static int kepler22bRedForestBiomeID;
 	public static int kepler22bYellowForestBiomeID;
 
-	public static int mercuryRocketTier;
 	public static int ceresRocketTier;
 	public static int erisRocketTier;
 
@@ -251,7 +248,7 @@ public class Config {
 		
 		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
-		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
+		//mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
 		//pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
 
 		triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
@@ -282,7 +279,7 @@ public class Config {
 		erisSpaceStation = config.get(spacestationCustom, "Eris SpaceStation", true, "").getBoolean(true);
 		kepler22bSpaceStation = config.get(spacestationCustom, "Kepler22b SpaceStation", true, "").getBoolean(true);
 
-		venus = config.get(dimensions, "Venus & Tier 4 Rocket", true,"Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		mercury = config.get(dimensions, "Mercury & Tier 4 Rocket", true,"Disabling this will remove the Mercury & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations").getBoolean(true);
 		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
@@ -290,7 +287,7 @@ public class Config {
 		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true,"Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
-		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
+		//mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
 		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
 		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
 
@@ -307,7 +304,6 @@ public class Config {
 		neptuneLiquid = config.get(dimensionBlockSettings, "Neptune's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
 
 		mercuryID = config.get(dimensionID, "Mercury Dimension ID", -13).getInt();
-		venusID = config.get(dimensionID, "Venus Dimension ID", -14).getInt();
 		ceresID = config.get(dimensionID, "Ceres Dimension ID", -20).getInt();
 		jupiterID = config.get(dimensionID, "Jupiter Dimension ID", -15).getInt();
 		saturnID = config.get(dimensionID, "Saturn Dimension ID", -16).getInt();
@@ -362,7 +358,6 @@ public class Config {
 		kepler22bSpaceStationStaticID = config.get(dimensionID, "Kepler 22b SpaceStation Static Dimension ID", -80).getInt();
 		
 		mercuryBiomeID = config.get(biomeID, "Mercury Biome ID", 148).getInt();
-		venusBiomeID = config.get(biomeID, "Venus Biome ID", 149).getInt();
 		ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();
 		jupiterBiomeID = config.get(biomeID, "Jupiter Biome ID", 150).getInt();
 		saturnBiomeID = config.get(biomeID, "Saturn Biome ID", 151).getInt();
