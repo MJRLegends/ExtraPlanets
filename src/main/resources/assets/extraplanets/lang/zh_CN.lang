@@ -148,6 +148,7 @@ tile.eris.oreTin.name=阋神星锡矿石
 tile.eris.oreCopper.name=阋神星铜矿石
 tile.eris.stoneBricks.name=阋神星石砖
 tile.eris.oreDarkIron.name=阋神星黑铁矿石
+tile.eris.darkIronBlock.name=Block of Dark Iron
 
 tile.kepler22b.Dirt.name=开普勒22b土方块
 tile.kepler22b.Stone.name=开普勒22b石头

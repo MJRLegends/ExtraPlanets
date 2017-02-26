@@ -147,6 +147,7 @@ tile.eris.oreTin.name=Mena de estaño de Eris
 tile.eris.oreCopper.name=Mena de cobre de Eris
 tile.eris.stoneBricks.name=Ladrillos de roca de Eris
 tile.eris.oreDarkIron.name=Mena de hierro oscuro de Eris
+tile.eris.darkIronBlock.name=Block of Dark Iron
 
 tile.kepler22b.Dirt.name=Tierra de Kepler 22b
 tile.kepler22b.Stone.name=Piedra de Kepler 22b
