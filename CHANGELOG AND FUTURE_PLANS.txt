@@ -38,17 +38,25 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+v1.0 Pre-4.0
+*Fixed Mars Space Station Sky Provider
+*Updated lang files (Thanks to JrantKing)
+*Fixed/changed moons thermal, gravity, fuel modifier levels
+*Updated Galacticraft API to latest
+*Few sky colour changes for moons
+*Added Block of Mercury & Dark Iron
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v1.0 Pre-3.9
 *Fixed some Localization typos (Thanks to MrNinja93)
 *Few fixes for hopefully issue #60
 *Updated lang files
 *Added Kepler22b Planet Achievement and fixed a typo in the Achievement Tier 4 Rocket one
 *Few fixes for Achievements
-======================================================================================================
 
-
-
-===========================================Released Updates===========================================
 v1.0 Pre-3.8
 *Changed Tier 2 Thermal Padding (And above) to protect you from uranium ore
 *Added more blocks to the MicroBlocks support
