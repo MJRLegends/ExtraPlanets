@@ -167,6 +167,6 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 
 	@Override
 	public String getInternalNameSuffix() {
-		return "callisto";
+		return "_callisto";
 	}
 }

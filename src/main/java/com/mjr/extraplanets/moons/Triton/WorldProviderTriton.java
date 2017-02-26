@@ -166,6 +166,6 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public String getInternalNameSuffix() {
-		return "rhea";
+		return "_rhea";
 	}
 }

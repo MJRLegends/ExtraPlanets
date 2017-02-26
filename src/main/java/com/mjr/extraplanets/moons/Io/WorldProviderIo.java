@@ -166,6 +166,6 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
 
 	@Override
 	public String getInternalNameSuffix() {
-		return "io";
+		return "_io";
 	}
 }

@@ -165,6 +165,6 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public String getInternalNameSuffix() {
-		return "titan";
+		return "_titan";
 	}
 }

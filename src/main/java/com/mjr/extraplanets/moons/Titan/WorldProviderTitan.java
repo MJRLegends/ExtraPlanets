@@ -166,6 +166,6 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public String getInternalNameSuffix() {
-		return "titan";
+		return "_titan";
 	}
 }
