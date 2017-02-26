@@ -128,4 +128,13 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
 		return "_io";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

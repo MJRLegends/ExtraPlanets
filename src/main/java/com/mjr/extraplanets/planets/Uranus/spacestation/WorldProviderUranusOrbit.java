@@ -161,7 +161,7 @@ public class WorldProviderUranusOrbit extends WorldProviderOrbit
 	@Override
 	public String getSaveFolder()
 	{
-		return "DIM_SPACESTATION_Uranus_" + this.spaceStationDimensionID;
+		return "DIM_SPACESTATION_Uranus_" + this.dimensionId;
 	}
 
 	@Override

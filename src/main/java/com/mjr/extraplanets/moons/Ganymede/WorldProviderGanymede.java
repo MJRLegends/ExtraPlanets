@@ -128,4 +128,13 @@ public class WorldProviderGanymede extends WorldProviderSpace implements IGalact
 		return "_ganymede";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

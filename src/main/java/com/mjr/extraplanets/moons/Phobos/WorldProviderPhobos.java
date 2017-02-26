@@ -125,4 +125,13 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 		return "_phobos";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

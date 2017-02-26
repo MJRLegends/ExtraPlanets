@@ -152,4 +152,13 @@ IGalacticraftWorldProvider, ISolarLevel {
 		return "_callisto";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

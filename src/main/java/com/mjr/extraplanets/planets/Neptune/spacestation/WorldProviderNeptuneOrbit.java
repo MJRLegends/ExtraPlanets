@@ -161,7 +161,7 @@ public class WorldProviderNeptuneOrbit extends WorldProviderOrbit
 	@Override
 	public String getSaveFolder()
 	{
-		return "DIM_SPACESTATION_Neptune_" + this.spaceStationDimensionID;
+		return "DIM_SPACESTATION_Neptune_" + this.dimensionId;
 	}
 
 	@Override

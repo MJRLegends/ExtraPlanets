@@ -154,4 +154,14 @@ public class WorldProviderPluto extends EPWorldProviderSpace implements IGalacti
 	public int getSolarRadiationLevel() {
 		return 12;
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

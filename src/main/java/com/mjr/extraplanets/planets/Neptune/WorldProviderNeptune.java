@@ -155,4 +155,14 @@ public class WorldProviderNeptune extends EPWorldProviderSpace implements IGalac
 	public int getSolarRadiationLevel() {
 		return 10;
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

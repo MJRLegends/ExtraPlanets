@@ -161,7 +161,7 @@ public class WorldProviderSaturnOrbit extends WorldProviderOrbit
 	@Override
 	public String getSaveFolder()
 	{
-		return "DIM_SPACESTATION_Saturn_" + this.spaceStationDimensionID;
+		return "DIM_SPACESTATION_Saturn_" + this.dimensionId;
 	}
 
 	@Override

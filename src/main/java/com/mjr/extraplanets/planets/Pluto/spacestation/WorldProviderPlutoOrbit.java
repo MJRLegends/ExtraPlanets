@@ -161,7 +161,7 @@ public class WorldProviderPlutoOrbit extends WorldProviderOrbit
 	@Override
 	public String getSaveFolder()
 	{
-		return "DIM_SPACESTATION_Pluto_" + this.spaceStationDimensionID;
+		return "DIM_SPACESTATION_Pluto_" + this.dimensionId;
 	}
 
 	@Override

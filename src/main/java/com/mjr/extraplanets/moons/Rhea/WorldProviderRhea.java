@@ -128,4 +128,13 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 		return "_rhea";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

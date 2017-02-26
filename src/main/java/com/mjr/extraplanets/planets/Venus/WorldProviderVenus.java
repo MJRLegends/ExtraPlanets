@@ -174,4 +174,14 @@ public class WorldProviderVenus extends EPWorldProviderSpace implements IGalacti
 	public int getSolarRadiationLevel() {
 		return 80;
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

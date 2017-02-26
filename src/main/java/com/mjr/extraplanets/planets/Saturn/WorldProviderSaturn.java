@@ -154,4 +154,14 @@ public class WorldProviderSaturn extends EPWorldProviderSpace implements IGalact
 	public int getSolarRadiationLevel() {
 		return 30;
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

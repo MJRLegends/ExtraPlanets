@@ -128,4 +128,13 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 		return "Titan";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

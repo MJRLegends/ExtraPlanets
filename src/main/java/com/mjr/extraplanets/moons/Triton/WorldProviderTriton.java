@@ -141,4 +141,14 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 	public String getInternalNameSuffix() {
 		return "_triton";
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

@@ -162,7 +162,7 @@ public class WorldProviderVenusOrbit extends WorldProviderOrbit
 	@Override
 	public String getSaveFolder()
 	{
-		return "DIM_SPACESTATION_Venus_" + this.spaceStationDimensionID;
+		return "DIM_SPACESTATION_Venus_" + this.dimensionId;
 	}
 
 	@Override

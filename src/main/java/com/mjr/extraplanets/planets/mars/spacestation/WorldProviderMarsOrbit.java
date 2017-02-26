@@ -161,7 +161,7 @@ public class WorldProviderMarsOrbit extends WorldProviderOrbit
 	@Override
 	public String getSaveFolder()
 	{
-		return "DIM_SPACESTATION_Mars_" + this.spaceStationDimensionID;
+		return "DIM_SPACESTATION_Mars_" + this.dimensionId;
 	}
 
 	@Override

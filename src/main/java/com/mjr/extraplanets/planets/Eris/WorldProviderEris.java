@@ -143,4 +143,14 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 	public String getInternalNameSuffix() {
 		return "_eris";
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

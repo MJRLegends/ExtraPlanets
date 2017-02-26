@@ -126,4 +126,13 @@ IGalacticraftWorldProvider, ISolarLevel {
 		return "_deimos";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

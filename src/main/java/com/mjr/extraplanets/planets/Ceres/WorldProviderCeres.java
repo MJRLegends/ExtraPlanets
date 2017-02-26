@@ -140,4 +140,14 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 	public String getInternalNameSuffix() {
 		return "_ceres";
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

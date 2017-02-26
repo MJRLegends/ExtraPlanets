@@ -155,4 +155,14 @@ public class WorldProviderJupiter extends EPWorldProviderSpace implements IGalac
 	public int getSolarRadiationLevel() {
 		return 35;
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

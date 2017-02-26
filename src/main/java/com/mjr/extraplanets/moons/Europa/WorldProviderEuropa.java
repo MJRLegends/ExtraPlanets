@@ -129,4 +129,13 @@ IGalacticraftWorldProvider, ISolarLevel {
 		return "_europa";
 	}
 
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

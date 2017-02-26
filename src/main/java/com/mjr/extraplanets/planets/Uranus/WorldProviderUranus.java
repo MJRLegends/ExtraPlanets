@@ -155,4 +155,14 @@ public class WorldProviderUranus extends EPWorldProviderSpace implements IGalact
 	public int getSolarRadiationLevel() {
 		return 25;
 	}
+	
+	@Override
+	public boolean shouldDisablePrecipitation() {
+		return true;
+	}
+
+	@Override
+	public boolean shouldCorrodeArmor() {
+		return false;
+	}
 }

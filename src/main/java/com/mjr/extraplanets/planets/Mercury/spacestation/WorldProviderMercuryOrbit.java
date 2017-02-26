@@ -161,7 +161,7 @@ public class WorldProviderMercuryOrbit extends WorldProviderOrbit
 	@Override
 	public String getSaveFolder()
 	{
-		return "DIM_SPACESTATION_Mercury_" + this.spaceStationDimensionID;
+		return "DIM_SPACESTATION_Mercury_" + this.dimensionId;
 	}
 
 	@Override

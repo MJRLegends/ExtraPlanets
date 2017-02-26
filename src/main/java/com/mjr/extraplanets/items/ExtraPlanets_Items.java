@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.items;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.item.EnumExtendedInventorySlot;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -108,7 +109,7 @@ public class ExtraPlanets_Items {
 	public static Item compressedMercury;
 	public static Item ingotMercury;
 	public static Item ingotLead;
-	
+
 	public static Item cloth;
 	public static Item gravityController;
 
@@ -130,27 +131,27 @@ public class ExtraPlanets_Items {
 	public static Item tier2ThermalPadding;
 	public static Item tier3ThermalPadding;
 	public static Item tier4ThermalPadding;
-	
+
 	public static Item tier1UnPreparedSpaceSuitHelmet;
 	public static Item tier1UnPreparedSpaceSuitChest;
 	public static Item tier1UnPreparedSpaceSuitLegings;
 	public static Item tier1UnPreparedSpaceSuitBoots;
-	
+
 	public static Item tier2UnPreparedSpaceSuitHelmet;
 	public static Item tier2UnPreparedSpaceSuitChest;
 	public static Item tier2UnPreparedSpaceSuitLegings;
 	public static Item tier2UnPreparedSpaceSuitBoots;
-	
+
 	public static Item tier3UnPreparedSpaceSuitHelmet;
 	public static Item tier3UnPreparedSpaceSuitChest;
 	public static Item tier3UnPreparedSpaceSuitLegings;
 	public static Item tier3UnPreparedSpaceSuitBoots;
-	
+
 	public static Item tier4UnPreparedSpaceSuitHelmet;
 	public static Item tier4UnPreparedSpaceSuitChest;
 	public static Item tier4UnPreparedSpaceSuitLegings;
 	public static Item tier4UnPreparedSpaceSuitBoots;
-	
+
 	public static Item wafers;
 
 	public static void init() {
@@ -239,53 +240,53 @@ public class ExtraPlanets_Items {
 		ironApple = new ItemAppleIron(4, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
-		
-		 tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
-		 tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
-		 tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
-		 
+
+		tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
+		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
+		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
+
 		wafers = new ItemWafers("wafer");
 		advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 		ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
-        oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
-        oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
+		oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
+		oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
 
 		ingotLead = new ItemBasicItem("ingotLead");
-		
+
 		cloth = new ItemBasicItem("cloth");
 		gravityController = new ItemBasicItem("gravityController");
-		
-		if(Config.pressure || Config.radiation){
+
+		if (Config.pressure || Config.radiation) {
 			tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
 			tier2PressureLayer = new ItemBasicItem("tier2PressureLayer");
 			tier3PressureLayer = new ItemBasicItem("tier3PressureLayer");
 			tier4PressureLayer = new ItemBasicItem("tier4PressureLayer");
-	
+
 			tier1RadiationLayer = new ItemBasicItem("tier1RadiationLayer");
 			tier2RadiationLayer = new ItemBasicItem("tier2RadiationLayer");
 			tier3RadiationLayer = new ItemBasicItem("tier3RadiationLayer");
 			tier4RadiationLayer = new ItemBasicItem("tier4RadiationLayer");
-	
+
 			tier1ArmorLayer = new ItemBasicItem("tier1ArmorLayer");
 			tier2ArmorLayer = new ItemBasicItem("tier2ArmorLayer");
 			tier3ArmorLayer = new ItemBasicItem("tier3ArmorLayer");
 			tier4ArmorLayer = new ItemBasicItem("tier4ArmorLayer");
-			
+
 			tier1UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier1UnPreparedSpaceSuitHelmet");
 			tier1UnPreparedSpaceSuitChest = new ItemBasicItem("tier1UnPreparedSpaceSuitChest");
 			tier1UnPreparedSpaceSuitLegings = new ItemBasicItem("tier1UnPreparedSpaceSuitLegings");
 			tier1UnPreparedSpaceSuitBoots = new ItemBasicItem("tier1UnPreparedSpaceSuitBoots");
-			
+
 			tier2UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier2UnPreparedSpaceSuitHelmet");
 			tier2UnPreparedSpaceSuitChest = new ItemBasicItem("tier2UnPreparedSpaceSuitChest");
 			tier2UnPreparedSpaceSuitLegings = new ItemBasicItem("tier2UnPreparedSpaceSuitLegings");
 			tier2UnPreparedSpaceSuitBoots = new ItemBasicItem("tier2UnPreparedSpaceSuitBoots");
-			
+
 			tier3UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier3UnPreparedSpaceSuitHelmet");
 			tier3UnPreparedSpaceSuitChest = new ItemBasicItem("tier3UnPreparedSpaceSuitChest");
 			tier3UnPreparedSpaceSuitLegings = new ItemBasicItem("tier3UnPreparedSpaceSuitLegings");
 			tier3UnPreparedSpaceSuitBoots = new ItemBasicItem("tier3UnPreparedSpaceSuitBoots");
-			
+
 			tier4UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier4UnPreparedSpaceSuitHelmet");
 			tier4UnPreparedSpaceSuitChest = new ItemBasicItem("tier4UnPreparedSpaceSuitChest");
 			tier4UnPreparedSpaceSuitLegings = new ItemBasicItem("tier4UnPreparedSpaceSuitLegings");
@@ -364,7 +365,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
 		}
 
-		//GameRegistry.registerItem(cannedFood, "cannedFood");
+		// GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
 
@@ -379,46 +380,46 @@ public class ExtraPlanets_Items {
 
 		GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
-		
-		//GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5)); TODO Will be added when Galacticraft Releases a new Beta build
-		//GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5)); TODO Will be added when Galacticraft Releases a new Beta build
-		
+
+		GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
+
 		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
-		
+
 		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
 
-		if(Config.pressure || Config.radiation){
+		if (Config.pressure || Config.radiation) {
 			GameRegistry.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3PressureLayer, tier3PressureLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4PressureLayer, tier4PressureLayer.getUnlocalizedName().substring(5));
-	
+
 			GameRegistry.registerItem(tier1RadiationLayer, tier1RadiationLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2RadiationLayer, tier2RadiationLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3RadiationLayer, tier3RadiationLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4RadiationLayer, tier4RadiationLayer.getUnlocalizedName().substring(5));
-	
+
 			GameRegistry.registerItem(tier1ArmorLayer, tier1ArmorLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2ArmorLayer, tier2ArmorLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3ArmorLayer, tier3ArmorLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4ArmorLayer, tier4ArmorLayer.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(tier1UnPreparedSpaceSuitHelmet, tier1UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier1UnPreparedSpaceSuitChest, tier1UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier1UnPreparedSpaceSuitLegings, tier1UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier1UnPreparedSpaceSuitBoots, tier1UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(tier2UnPreparedSpaceSuitHelmet, tier2UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2UnPreparedSpaceSuitChest, tier2UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2UnPreparedSpaceSuitLegings, tier2UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2UnPreparedSpaceSuitBoots, tier2UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(tier3UnPreparedSpaceSuitHelmet, tier3UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3UnPreparedSpaceSuitChest, tier3UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3UnPreparedSpaceSuitLegings, tier3UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3UnPreparedSpaceSuitBoots, tier3UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitHelmet, tier4UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitChest, tier4UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
@@ -479,12 +480,12 @@ public class ExtraPlanets_Items {
 		}
 		OreDictionary.registerOre("ingotLead", new ItemStack(ingotLead));
 	}
-	
-	public static void registerGearItems(){ // TODO Will be added when Galacticraft Releases a new Beta build
-//		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankVeryHeavy);
-//		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankVeryHeavy);
-//
-//      GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
-//      GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
+
+	public static void registerGearItems() {
+		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankVeryHeavy);
+		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankVeryHeavy);
+
+		GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
+		GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
 	}
 }
