@@ -64,7 +64,7 @@ import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT5TreasureChest;
@@ -457,7 +457,7 @@ public class ExtraPlanets_Blocks {
 
 	private static void registerTileEntitys() {
 		if (Config.mercury) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerVenus.class, Constants.modName + "Mercury Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerMercury.class, Constants.modName + "Mercury Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
 		if (Config.jupiter) {

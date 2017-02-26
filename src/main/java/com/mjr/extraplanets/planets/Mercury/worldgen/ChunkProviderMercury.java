@@ -6,6 +6,9 @@ import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
+import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
@@ -14,11 +17,17 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
+import com.mjr.extraplanets.planets.Mercury.worldgen.MapGenDungeonMercury;
+import com.mjr.extraplanets.planets.Mercury.worldgen.RoomBossMercury;
+import com.mjr.extraplanets.planets.Mercury.worldgen.RoomTreasureMercury;
 
 public class ChunkProviderMercury extends ChunkProviderSpace {
 	private final BiomeDecoratorMercury mercuryBiomeDecorator = new BiomeDecoratorMercury();
 
 	private final MapGenCaveMercury caveGenerator = new MapGenCaveMercury();
+	
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonMercury(new DungeonConfiguration(ExtraPlanets_Blocks.mercuryBlocks.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossMercury.class, RoomTreasureMercury.class));
 
 	public ChunkProviderMercury(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -88,13 +97,16 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.dungeonGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
+		this.dungeonGenerator.generate(this, this.worldObj, x, z, null);
 	}
 }

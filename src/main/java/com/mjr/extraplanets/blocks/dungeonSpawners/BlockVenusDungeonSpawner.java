@@ -4,7 +4,7 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockBossSpawner;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 
 public class BlockVenusDungeonSpawner extends BlockBossSpawner {
 	public BlockVenusDungeonSpawner(String assetName) {
@@ -13,6 +13,6 @@ public class BlockVenusDungeonSpawner extends BlockBossSpawner {
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new TileEntityDungeonSpawnerVenus();
+		return new TileEntityDungeonSpawnerMercury();
 	}
 }
