@@ -134,7 +134,7 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.triton;
+		return ExtraPlanets_Moons.europa;
 	}
 
 	@Override

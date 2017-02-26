@@ -134,7 +134,7 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.triton;
+		return ExtraPlanets_Moons.titan;
 	}
 
 	@Override

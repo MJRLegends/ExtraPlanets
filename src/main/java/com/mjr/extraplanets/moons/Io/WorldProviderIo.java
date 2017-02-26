@@ -134,7 +134,7 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.triton;
+		return ExtraPlanets_Moons.io;
 	}
 
 	@Override

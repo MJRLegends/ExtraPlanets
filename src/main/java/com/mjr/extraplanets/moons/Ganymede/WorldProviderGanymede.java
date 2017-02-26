@@ -134,7 +134,7 @@ public class WorldProviderGanymede extends WorldProviderSpace implements IGalact
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.triton;
+		return ExtraPlanets_Moons.ganymede;
 	}
 
 	@Override

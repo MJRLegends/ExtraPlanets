@@ -134,7 +134,7 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.triton;
+		return ExtraPlanets_Moons.rhea;
 	}
 
 	@Override
