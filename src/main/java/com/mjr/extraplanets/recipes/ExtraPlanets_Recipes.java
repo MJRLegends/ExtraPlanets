@@ -169,20 +169,20 @@ public class ExtraPlanets_Recipes {
 	}
 
 	private static void registerCraftingRecipes() {
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 1), new Object[] { "XYX", "XXX", "XXX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 2), new Object[] { "XXX", "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 3), new Object[] { "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 1), new Object[] { "XYX", "XXX", "XXX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 2), new Object[] { "XXX", "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 3), new Object[] { "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 9) });
 
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 1), new Object[] { "XYX", "XXX", "XXX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 2), new Object[] { "XXX", "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 3), new Object[] { "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 1), new Object[] { "XYX", "XXX", "XXX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 2), new Object[] { "XXX", "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 3), new Object[] { "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
 
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 1), new Object[] { "XYX", "XXX", "XXX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 2), new Object[] { "XXX", "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 3), new Object[] { "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5ThermalPadding, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5ThermalPadding, 1, 1), new Object[] { "XYX", "XXX", "XXX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5ThermalPadding, 1, 2), new Object[] { "XXX", "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5ThermalPadding, 1, 3), new Object[] { "XYX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(GCItems.basicItem, 1, 8) });
 
 		if (Config.mercury) {
 			// Battery

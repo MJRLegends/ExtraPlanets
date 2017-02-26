@@ -690,22 +690,22 @@ item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
 item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
 item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
 
-item.tier2ThermalHelm.name=2階熱力充能頭盔
-item.tier2ThermalChestplate.name=2階熱力充能胸甲
-item.tier2ThermalLeggings.name=2階熱力充能護腿
-item.tier2ThermalBoots.name=2階熱力充能靴
-item.tier3ThermalHelm.name=3階熱力充能頭盔
-item.tier3ThermalChestplate.name=3階熱力充能胸甲
-item.tier3ThermalLeggings.name=3階熱力充能護腿
-item.tier3ThermalBoots.name=3階熱力充能靴
-item.tier4ThermalHelm.name=4階熱力充能頭盔
-item.tier4ThermalChestplate.name=4階熱力充能胸甲
-item.tier4ThermalLeggings.name=4階熱力充能護腿
-item.tier4ThermalBoots.name=4階熱力充能靴
+item.tier3ThermalHelm.name=Tier 3 Thermal Padding Helm
+item.tier3ThermalChestplate.name=Tier 3 Thermal Padding Chestpiece
+item.tier3ThermalLeggings.name=Tier 3 Thermal Padding Leggings
+item.tier3ThermalBoots.name=Tier 3 Thermal Padding Boots
+item.tier4ThermalHelm.name=Tier 4 Thermal Padding Helm
+item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
+item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
+item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
+item.tier5ThermalHelm.name=Tier 5 Thermal Padding Helm
+item.tier5ThermalChestplate.name=Tier 5 Thermal Padding Chestpiece
+item.tier5ThermalLeggings.name=Tier 5 Thermal Padding Leggings
+item.tier5ThermalBoots.name=Tier 5 Thermal Padding Boots
 
-tier2.information=在金星和水星度過一天的必需品
-tier3.information=在木星和土星以及它們的衛星度過一天的必需品
-tier4.information=在天王星，海王星，冥王星和鬩神星以及它們的衛星度過一天的必需品
+tier3.information=Required for Mercury during day and the night
+tier4.information=Required for Jupiter and Saturn including their moons during day and the night
+tier5.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
 
 #Space Suit Layers
 item.tier1PressureLayer.name=Tier 1 Pressure Layer

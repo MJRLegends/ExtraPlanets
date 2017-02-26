@@ -39,9 +39,9 @@ import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
 import com.mjr.extraplanets.items.schematics.SchematicTier9;
-import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
 
 public class ExtraPlanets_Items {
 	public static Item tier4Rocket;
@@ -128,9 +128,9 @@ public class ExtraPlanets_Items {
 	public static Item tier3ArmorLayer;
 	public static Item tier4ArmorLayer;
 
-	public static Item tier2ThermalPadding;
 	public static Item tier3ThermalPadding;
 	public static Item tier4ThermalPadding;
+	public static Item tier5ThermalPadding;
 
 	public static Item tier1UnPreparedSpaceSuitHelmet;
 	public static Item tier1UnPreparedSpaceSuitChest;
@@ -240,9 +240,9 @@ public class ExtraPlanets_Items {
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
 
-		tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
 		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
+		tier5ThermalPadding = new ItemTier5ThermalPadding("tier5ThermalPadding");
 
 		wafers = new ItemWafers("wafer");
 		advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
@@ -370,9 +370,9 @@ public class ExtraPlanets_Items {
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 
-		GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
 

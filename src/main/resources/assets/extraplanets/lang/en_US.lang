@@ -692,10 +692,6 @@ item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
 item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
 item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
 
-item.tier2ThermalHelm.name=Tier 2 Thermal Padding Helm
-item.tier2ThermalChestplate.name=Tier 2 Thermal Padding Chestpiece
-item.tier2ThermalLeggings.name=Tier 2 Thermal Padding Leggings
-item.tier2ThermalBoots.name=Tier 2 Thermal Padding Boots
 item.tier3ThermalHelm.name=Tier 3 Thermal Padding Helm
 item.tier3ThermalChestplate.name=Tier 3 Thermal Padding Chestpiece
 item.tier3ThermalLeggings.name=Tier 3 Thermal Padding Leggings
@@ -704,10 +700,14 @@ item.tier4ThermalHelm.name=Tier 4 Thermal Padding Helm
 item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
 item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
 item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
+item.tier5ThermalHelm.name=Tier 5 Thermal Padding Helm
+item.tier5ThermalChestplate.name=Tier 5 Thermal Padding Chestpiece
+item.tier5ThermalLeggings.name=Tier 5 Thermal Padding Leggings
+item.tier5ThermalBoots.name=Tier 5 Thermal Padding Boots
 
-tier2.information=Required for Venus and Mercury during day and the night
-tier3.information=Required for Jupiter and Saturn including their moons during day and the night
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
+tier3.information=Required for Mercury during day and the night
+tier4.information=Required for Jupiter and Saturn including their moons during day and the night
+tier5.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
 
 #Space Suit Layers
 item.tier1PressureLayer.name=Tier 1 Pressure Layer

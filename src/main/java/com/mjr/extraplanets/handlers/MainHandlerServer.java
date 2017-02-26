@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.api.world.OxygenHooks;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
@@ -14,7 +13,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.entity.EntityEvent;
@@ -32,8 +30,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.api.IPressureSuit;
+import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.client.handlers.EPPlayerStatsClient;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
@@ -105,15 +103,15 @@ public class MainHandlerServer {
 			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
 			return;
 		}
-		if (event.armorStack.getItem() == ExtraPlanets_Items.tier2ThermalPadding && event.armorStack.getItemDamage() == event.armorIndex) {
-			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
-			return;
-		}
 		if (event.armorStack.getItem() == ExtraPlanets_Items.tier3ThermalPadding && event.armorStack.getItemDamage() == event.armorIndex) {
 			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
 			return;
 		}
 		if (event.armorStack.getItem() == ExtraPlanets_Items.tier4ThermalPadding && event.armorStack.getItemDamage() == event.armorIndex) {
+			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
+			return;
+		}
+		if (event.armorStack.getItem() == ExtraPlanets_Items.tier5ThermalPadding && event.armorStack.getItemDamage() == event.armorIndex) {
 			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
 			return;
 		}

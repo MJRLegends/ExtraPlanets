@@ -692,10 +692,6 @@ item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
 item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
 item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
 
-item.tier2ThermalHelm.name=Tier 2 Termal Dolgulu Kask
-item.tier2ThermalChestplate.name=Tier 2 Termal Dolgulu Zırh
-item.tier2ThermalLeggings.name=Tier 2 Termal Dolgulu Pantolon
-item.tier2ThermalBoots.name=Tier 2 Termal Dolgulu Bot
 item.tier3ThermalHelm.name=Tier 3 Termal Dolgulu Kask
 item.tier3ThermalChestplate.name=Tier 3 Termal Dolgulu Zırh
 item.tier3ThermalLeggings.name=Tier 3 Termal Dolgulu Pantolon
@@ -704,8 +700,12 @@ item.tier4ThermalHelm.name=Tier 4 Termal Dolgulu Kask
 item.tier4ThermalChestplate.name=Tier 4 Termal Dolgulu Zırh
 item.tier4ThermalLeggings.name=Tier 4 Termal Dolgulu Pantolon
 item.tier4ThermalBoots.name=Tier 4 Termal Dolgulu Bot
+item.tier5ThermalHelm.name=Tier 5 Termal Dolgulu Kask
+item.tier5ThermalChestplate.name=Tier 5 Termal Dolgulu Zırh
+item.tier5ThermalLeggings.name=Tier 5 Termal Dolgulu Pantolon
+item.tier5ThermalBoots.name=Tier 5 Termal Dolgulu Bot
 
-tier2.information=Venüs ve Merkür İçin Gerekli
+tier2.information=Merkür İçin Gerekli
 tier3.information=Jüpiter Ve Satürn İçin Gerekli
 tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
 

@@ -17,11 +17,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemTier2ThermalPadding  extends Item implements IItemThermal
+public class ItemTier5ThermalPadding  extends Item implements IItemThermal
 {
-    public static String[] names = { "tier2ThermalHelm", "tier2ThermalChestplate", "tier2ThermalLeggings", "tier2ThermalBoots", "tier2ThermalHelm0", "tier2ThermalChestplate0", "tier2ThermalLeggings0", "tier2ThermalBoots0" };
+    public static String[] names = { "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots", "tier5ThermalHelm0", "tier5ThermalChestplate0", "tier5ThermalLeggings0", "tier5ThermalBoots0" };
 
-    public ItemTier2ThermalPadding(String assetName)
+    public ItemTier5ThermalPadding(String assetName)
     {
         super();
         this.setMaxDamage(0);
@@ -48,7 +48,7 @@ public class ItemTier2ThermalPadding  extends Item implements IItemThermal
     @Override
     public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
     {
-        for (int i = 0; i < ItemTier2ThermalPadding.names.length / 2; i++)
+        for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++)
         {
             par3List.add(new ItemStack(par1, 1, i));
         }
@@ -59,7 +59,7 @@ public class ItemTier2ThermalPadding  extends Item implements IItemThermal
     {
         if (names.length > par1ItemStack.getItemDamage())
         {
-            return "item." + ItemTier2ThermalPadding.names[par1ItemStack.getItemDamage()];
+            return "item." + ItemTier5ThermalPadding.names[par1ItemStack.getItemDamage()];
         }
 
         return "unnamed";
@@ -74,7 +74,7 @@ public class ItemTier2ThermalPadding  extends Item implements IItemThermal
     @Override
     public int getThermalStrength()
     {
-        return 50;
+        return 150;
     }
 
     @Override

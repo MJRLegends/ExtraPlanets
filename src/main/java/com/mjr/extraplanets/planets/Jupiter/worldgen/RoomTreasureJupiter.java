@@ -12,7 +12,7 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT5TreasureChest;
 
 public class RoomTreasureJupiter extends RoomTreasure {
 	public RoomTreasureJupiter() {
@@ -65,7 +65,7 @@ public class RoomTreasureJupiter extends RoomTreasure {
 						this.setBlockState(worldIn, ExtraPlanets_Blocks.treasureChestTier5.getDefaultState().withProperty(T5TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
 						BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
 						if (worldIn.getTileEntity(blockpos) == null) {
-							worldIn.setTileEntity(blockpos, new TileEntityT4TreasureChest(5));
+							worldIn.setTileEntity(blockpos, new TileEntityT5TreasureChest(5));
 						}
 					} else {
 						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);

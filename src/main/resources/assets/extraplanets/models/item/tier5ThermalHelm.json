@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier2ThermalBoots"
+        "layer0": "extraplanets:items/tier5ThermalHelm"
     },
     "display": {
         "thirdperson": {

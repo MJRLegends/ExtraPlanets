@@ -74,7 +74,7 @@ public class ItemTier4ThermalPadding  extends Item implements IItemThermal
     @Override
     public int getThermalStrength()
     {
-        return 150;
+        return 100;
     }
 
     @Override
