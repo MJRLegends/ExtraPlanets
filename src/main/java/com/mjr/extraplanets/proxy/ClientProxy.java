@@ -699,6 +699,9 @@ public class ClientProxy extends CommonProxy {
 		
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.magma_bucket);
 		
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.cloth);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.gravityController);
+
 		if (Config.pressure || Config.radiation) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier1ArmorLayer);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier1PressureLayer);
