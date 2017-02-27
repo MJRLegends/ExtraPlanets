@@ -181,8 +181,8 @@ public class MainHandlerServer {
 			doDamage = true;
 		
 		if (doDamage) {
-			float tempLevel = ((CustomWorldProviderSpace) playerMP.worldObj.provider).getPressureLevel() / 100;
-			tempLevel = tempLevel * 8;
+			float tempLevel = ((CustomWorldProviderSpace) playerMP.worldObj.provider).getPressureLevel();
+			tempLevel = (tempLevel / 100) * 8;
 			playerMP.attackEntityFrom(DamageSourceEP.pressure, tempLevel);
 		}
 	}
