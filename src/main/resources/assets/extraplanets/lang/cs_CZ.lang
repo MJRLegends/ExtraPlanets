@@ -751,6 +751,10 @@ item.tier4UnPreparedSpaceSuitChest.name=Tier 4 Un-Prepared Space Suit Chestplate
 item.tier4UnPreparedSpaceSuitLegings.name=Tier 4 Un-Prepared Space Suit Leggings
 item.tier4UnPreparedSpaceSuitBoots.name=Tier 4 Un-Prepared Space Suit Boots
 
+#Oxygen Tanks
+item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank
+item.oxygen_tank_extremely_heavy_full.name=Extremely Heavy Oxygen Tank
+
 #Other Items
 item.appleDiamond.name=Diamantové jablko
 item.appleIron.name=Iron Apple
