@@ -38,7 +38,7 @@ import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.util.DamageSourceEP;
-import com.mjr.extraplanets.world.EPWorldProviderSpace;
+import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class MainHandlerServer {
 
@@ -159,23 +159,26 @@ public class MainHandlerServer {
 
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
-		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider && !playerMP.capabilities.isCreativeMode) {
-			if ((playerMP.worldObj.provider instanceof EPWorldProviderSpace)) {
-				EPWorldProviderSpace provider = (EPWorldProviderSpace) playerMP.worldObj.provider;
-				int pressureLevel = provider.getPressureLevel();
-				for (int i = 0; i < 4; i++) {
-					ItemStack stack = playerMP.getCurrentArmor(i);
-					if ((stack == null) || (!(stack.getItem() instanceof IPressureSuit))) {
-						if (pressureLevel >= 8 && pressureLevel < 25)
-							playerMP.attackEntityFrom(DamageSourceEP.pressure, 1.5F);
-						else if (pressureLevel > 25 && pressureLevel < 50)
-							playerMP.attackEntityFrom(DamageSourceEP.pressure, 2F);
-						else if (pressureLevel >= 50 && pressureLevel < 75)
-							playerMP.attackEntityFrom(DamageSourceEP.pressure, 2.5F);
-						else if (pressureLevel >= 75)
-							playerMP.attackEntityFrom(DamageSourceEP.pressure, 3.5F);
-					}
-				}
+		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider && playerMP.worldObj.provider instanceof CustomWorldProviderSpace && !playerMP.capabilities.isCreativeMode) {
+			int pressureLevel = ((CustomWorldProviderSpace) playerMP.worldObj.provider).getPressureLevel();
+
+			boolean doDamage = false;
+			for (int i = 0; i < 4; i++) {
+				ItemStack stack = playerMP.getCurrentArmor(i);
+				if (stack == null)
+					doDamage = true;
+				else if (!(stack.getItem() instanceof IPressureSuit))
+					doDamage = true;
+			}
+			if (doDamage) {
+				if (pressureLevel >= 8 && pressureLevel < 25)
+					playerMP.attackEntityFrom(DamageSourceEP.pressure, 1.5F);
+				else if (pressureLevel > 25 && pressureLevel < 50)
+					playerMP.attackEntityFrom(DamageSourceEP.pressure, 2F);
+				else if (pressureLevel >= 50 && pressureLevel < 75)
+					playerMP.attackEntityFrom(DamageSourceEP.pressure, 2.5F);
+				else if (pressureLevel >= 75)
+					playerMP.attackEntityFrom(DamageSourceEP.pressure, 3.5F);
 			}
 		}
 	}
@@ -183,8 +186,8 @@ public class MainHandlerServer {
 	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
 		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider && !playerMP.capabilities.isCreativeMode) {
-			if ((playerMP.worldObj.provider instanceof EPWorldProviderSpace)) {
-				EPWorldProviderSpace provider = (EPWorldProviderSpace) playerMP.worldObj.provider;
+			if ((playerMP.worldObj.provider instanceof CustomWorldProviderSpace)) {
+				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) playerMP.worldObj.provider;
 				// Normal/Nothing 0.005
 				// Tier 1 0.0045
 				// Tier 2 0.004

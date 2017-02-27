@@ -21,7 +21,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
-import com.mjr.extraplanets.world.EPWorldProviderSpace;
+import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class MainHandlerClient {
 
@@ -59,8 +59,8 @@ public class MainHandlerClient {
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
 		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen)
 				&& OxygenUtil.noAtmosphericCombustion(player.worldObj.provider) && !playerBaseClient.isSpectator()) {
-			if ((player.worldObj.provider instanceof EPWorldProviderSpace)) {
-				EPWorldProviderSpace provider = (EPWorldProviderSpace) player.worldObj.provider;
+			if ((player.worldObj.provider instanceof CustomWorldProviderSpace)) {
+				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.worldObj.provider;
 
 				if (Config.pressure) {
 					int pressureLevel = provider.getPressureLevel();
