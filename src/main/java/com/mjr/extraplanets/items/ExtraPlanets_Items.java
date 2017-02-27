@@ -234,6 +234,9 @@ public class ExtraPlanets_Items {
 		if (Config.kepler22b) {
 			tier11Items = new ItemTier11Items("tier11Items");
 		}
+		
+		magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
+		
 		// cannedFood = new ItemCannedFood("cannedfood");
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		ironApple = new ItemAppleIron(4, 2.2F, false);
@@ -362,6 +365,8 @@ public class ExtraPlanets_Items {
 		if (Config.kepler22b) {
 			GameRegistry.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
 		}
+
+		GameRegistry.registerItem(magma_bucket, "bucket_magma");
 
 		// GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
