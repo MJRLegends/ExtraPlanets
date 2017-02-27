@@ -151,6 +151,10 @@ public class MainHandlerServer {
 	}
 
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
+		if (!((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
+			return;
+		if (!(entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && !(((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace))
+			return;
 		if (Config.pressure)
 			checkPressure(event, entityLiving);
 		if (Config.radiation)
@@ -159,78 +163,74 @@ public class MainHandlerServer {
 
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
-		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider && playerMP.worldObj.provider instanceof CustomWorldProviderSpace && !playerMP.capabilities.isCreativeMode) {
-			int pressureLevel = ((CustomWorldProviderSpace) playerMP.worldObj.provider).getPressureLevel();
 
-			boolean doDamage = false;
-			for (int i = 0; i < 4; i++) {
-				ItemStack stack = playerMP.getCurrentArmor(i);
-				if (stack == null)
-					doDamage = true;
-				else if (!(stack.getItem() instanceof IPressureSuit))
-					doDamage = true;
-			}
-			if (doDamage) {
-				if (pressureLevel >= 8 && pressureLevel < 25)
-					playerMP.attackEntityFrom(DamageSourceEP.pressure, 1.5F);
-				else if (pressureLevel > 25 && pressureLevel < 50)
-					playerMP.attackEntityFrom(DamageSourceEP.pressure, 2F);
-				else if (pressureLevel >= 50 && pressureLevel < 75)
-					playerMP.attackEntityFrom(DamageSourceEP.pressure, 2.5F);
-				else if (pressureLevel >= 75)
-					playerMP.attackEntityFrom(DamageSourceEP.pressure, 3.5F);
-			}
+		ItemStack helmet = playerMP.getCurrentArmor(0);
+		ItemStack chest = playerMP.getCurrentArmor(1);
+		ItemStack leggins = playerMP.getCurrentArmor(2);
+		ItemStack boots = playerMP.getCurrentArmor(3);
+		
+		boolean doDamage = false;
+
+		if(helmet == null || !(helmet.getItem() instanceof IPressureSuit))
+			doDamage = true;
+		else if(chest == null || !(chest.getItem() instanceof IPressureSuit))
+			doDamage = true;
+		else if(leggins == null || !(leggins.getItem() instanceof IPressureSuit))
+			doDamage = true;
+		else if(boots == null || !(boots.getItem() instanceof IPressureSuit))
+			doDamage = true;
+		
+		if (doDamage) {
+			float tempLevel = ((CustomWorldProviderSpace) playerMP.worldObj.provider).getPressureLevel() / 100;
+			tempLevel = tempLevel * 8;
+			playerMP.attackEntityFrom(DamageSourceEP.pressure, tempLevel);
 		}
 	}
 
 	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
-		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider && !playerMP.capabilities.isCreativeMode) {
-			if ((playerMP.worldObj.provider instanceof CustomWorldProviderSpace)) {
-				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) playerMP.worldObj.provider;
-				// Normal/Nothing 0.005
-				// Tier 1 0.0045
-				// Tier 2 0.004
-				// Tier 3 0.0035
-				// Tier 4 0.00325
-				boolean doDamage = false;
-				boolean doArmorCheck = false;
-				double damageModifer = 0;
-				int radiationLevel = provider.getSolarRadiationLevel();
-				if (playerMP.getCurrentArmor(0) == null || playerMP.getCurrentArmor(1) == null || playerMP.getCurrentArmor(2) == null || playerMP.getCurrentArmor(3) == null) {
-					damageModifer = 0.005;
-					doDamage = true;
-				} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(2).getItem() instanceof IRadiationSuit)
-						&& !(playerMP.getCurrentArmor(3).getItem() instanceof IRadiationSuit)) {
-					damageModifer = 0.005;
-					doDamage = true;
-				} else if (playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) {
-					doArmorCheck = true;
-					doDamage = false;
-				}
-				if (doArmorCheck) {
-					int helmetTier = ((IRadiationSuit) playerMP.getCurrentArmor(0).getItem()).getArmorTier();
-					int chestTier = ((IRadiationSuit) playerMP.getCurrentArmor(1).getItem()).getArmorTier();
-					int legginsTier = ((IRadiationSuit) playerMP.getCurrentArmor(2).getItem()).getArmorTier();
-					int bootsTier = ((IRadiationSuit) playerMP.getCurrentArmor(3).getItem()).getArmorTier();
 
-					int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
-					double damageToTake = 0.005 * tierValue;
-					damageModifer = 0.005 - (damageToTake / 2) / 10;
+		CustomWorldProviderSpace provider = (CustomWorldProviderSpace) playerMP.worldObj.provider;
+		// Normal/Nothing 0.005
+		// Tier 1 0.0045
+		// Tier 2 0.004
+		// Tier 3 0.0035
+		// Tier 4 0.00325
+		boolean doDamage = false;
+		boolean doArmorCheck = false;
+		double damageModifer = 0;
+		int radiationLevel = provider.getSolarRadiationLevel();
+		if (playerMP.getCurrentArmor(0) == null || playerMP.getCurrentArmor(1) == null || playerMP.getCurrentArmor(2) == null || playerMP.getCurrentArmor(3) == null) {
+			damageModifer = 0.005;
+			doDamage = true;
+		} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(2).getItem() instanceof IRadiationSuit)
+				&& !(playerMP.getCurrentArmor(3).getItem() instanceof IRadiationSuit)) {
+			damageModifer = 0.005;
+			doDamage = true;
+		} else if (playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) {
+			doArmorCheck = true;
+			doDamage = false;
+		}
+		if (doArmorCheck) {
+			int helmetTier = ((IRadiationSuit) playerMP.getCurrentArmor(0).getItem()).getArmorTier();
+			int chestTier = ((IRadiationSuit) playerMP.getCurrentArmor(1).getItem()).getArmorTier();
+			int legginsTier = ((IRadiationSuit) playerMP.getCurrentArmor(2).getItem()).getArmorTier();
+			int bootsTier = ((IRadiationSuit) playerMP.getCurrentArmor(3).getItem()).getArmorTier();
 
-					doDamage = true;
-				}
-				if (doDamage) {
-					final EPPlayerStats EPPlayer = EPPlayerStats.get(playerMP);
-					if (EPPlayer.radiationLevel >= 100)
-						playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
-					else if (EPPlayer.radiationLevel >= 0)
-						EPPlayer.radiationLevel = EPPlayer.radiationLevel + (damageModifer * (radiationLevel / 10));
-					else
-						EPPlayer.radiationLevel = 0;
+			int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
+			double damageToTake = 0.005 * tierValue;
+			damageModifer = 0.005 - (damageToTake / 2) / 10;
 
-				}
-			}
+			doDamage = true;
+		}
+		if (doDamage) {
+			final EPPlayerStats EPPlayer = EPPlayerStats.get(playerMP);
+			if (EPPlayer.radiationLevel >= 100)
+				playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
+			else if (EPPlayer.radiationLevel >= 0)
+				EPPlayer.radiationLevel = EPPlayer.radiationLevel + (damageModifer * (radiationLevel / 10));
+			else
+				EPPlayer.radiationLevel = 0;
 		}
 	}
 
