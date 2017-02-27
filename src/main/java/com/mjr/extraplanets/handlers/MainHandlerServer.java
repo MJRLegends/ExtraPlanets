@@ -151,7 +151,7 @@ public class MainHandlerServer {
 	}
 
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
-		if (!((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
+		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
 			return;
 		if (!(entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && !(((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace))
 			return;
