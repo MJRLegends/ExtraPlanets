@@ -11,14 +11,19 @@ TODO = Not yet done
 v1 Beta Build ----More to be added!!----
 *Added Tier 1 - 4 Space Suit Model/Textures
 
-0.6 Alpha Build ----More to be added!!----
-*Added some of the missing item textures
 
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+0.6 Alpha Build
+*Added Tier 1 - 4 Pressure & Armor & Radiation Layers textures/json files
+*Added Tier 1 - 4 UnPrepared SpaceSuit Helmet, Chest, Legings, Boots textures/json files (Textures might change later on)
+*Completely changed how the pressure system works
+*Fixes for Tier 3 - 5 Thermal Padding not working	
+*Added Tier 1 - 4 Space Suits json files
+
 0.5 Alpha Build
 *Fixed Mars Space Station Sky Provider
 *Added recipes for Space Suit Gravity Boots
