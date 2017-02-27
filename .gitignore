@@ -25,3 +25,4 @@ asm/
 run/
 .classpath
 .project
+*.launch

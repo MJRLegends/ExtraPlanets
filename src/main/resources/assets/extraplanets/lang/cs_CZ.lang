@@ -147,6 +147,7 @@ tile.eris.OreTin.name=Cínová ruda z Erisu
 tile.eris.OreCopper.name=Měděná ruda z Erisu
 tile.eris.stoneBricks.name=Eris Stone Bricks
 tile.eris.oreDarkIron.name=Eris Dark Iron Ore
+tile.eris.darkIronBlock.name=Block of Dark Iron
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
@@ -737,6 +738,7 @@ achievement.uranusPlanet=Přistaň na Uranu!
 achievement.neptunePlanet=Přistaň na Neptunu!
 achievement.plutoPlanet=Přistaň na Plutu!
 achievement.erisPlanet=Přistaň na Erisu!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=Vezmi raketu typ 4 na Merkur
 achievement.venusPlanet.desc=Vezmi raketu typ 3 na Venuši
@@ -746,7 +748,8 @@ achievement.saturnPlanet.desc=Vezmi raketu typ 5 na Saturn
 achievement.uranusPlanet.desc=Vezmi raketu typ 6 na Uran
 achievement.neptunePlanet.desc=Vezmi raketu typ 7 na Neptun
 achievement.plutoPlanet.desc=Vezmi raketu typ 8 na Pluto
-achievement.erisPlanet.desc=Vezmi raketu typ 8 na Eris
+achievement.erisPlanet.desc=Vezmi raketu typ 9 na Eris
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 
 achievement.venusBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!
@@ -754,13 +757,15 @@ achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=Zabij Bosse z kobky na Venuši a otevři truhlu s pokladem
 achievement.jupiterBoss.desc=Zabij Bosse z kobky na Jupiteru a otevři truhlu s pokladem
 achievement.saturnBoss.desc=Zabij Bosse z kobky na Saturnu a otevři truhlu s pokladem
 achievement.uranusBoss.desc=Zabij Bosse z kobky na Uranu a otevři truhlu s pokladem
 achievement.neptuneBoss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s pokladem
-achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=Tier 4 Rocket!
 achievement.craftRocket5=Tier 5 Rocket!
@@ -768,6 +773,7 @@ achievement.craftRocket6=Tier 6 Rocket!
 achievement.craftRocket7=Tier 7 Rocket!
 achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
+achievement.craftRocket10=Tier 10 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket
 achievement.craftRocket5.desc=Craft Tier 5 Rocket
@@ -775,6 +781,7 @@ achievement.craftRocket6.desc=Craft Tier 6 Rocket
 achievement.craftRocket7.desc=Craft Tier 7 Rocket
 achievement.craftRocket8.desc=Craft Tier 8 Rocket
 achievement.craftRocket9.desc=Craft Tier 9 Rocket
+achievement.craftRocket10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Tekutý světlit

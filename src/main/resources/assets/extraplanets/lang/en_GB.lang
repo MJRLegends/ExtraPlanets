@@ -147,6 +147,7 @@ tile.eris.oreTin.name=Eris Tin Ore
 tile.eris.oreCopper.name=Eris Copper Ore
 tile.eris.stoneBricks.name=Eris Stone Bricks
 tile.eris.oreDarkIron.name=Eris Dark Iron Ore
+tile.eris.darkIronBlock.name=Block of Dark Iron
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
@@ -737,6 +738,7 @@ achievement.uranusPlanet=Land on Uranus!
 achievement.neptunePlanet=Land on Neptune!
 achievement.plutoPlanet=Land on Pluto!
 achievement.erisPlanet=Land on Eris!
+achievement.kepler22bPlanet=Land on Kepler22b!
 
 achievement.mercuryPlanet.desc=Take a Tier 4 rocket to Mercury
 achievement.venusPlanet.desc=Take a Tier 3 rocket to Venus
@@ -746,7 +748,8 @@ achievement.saturnPlanet.desc=Take a Tier 5 rocket to Saturn
 achievement.uranusPlanet.desc=Take a Tier 6 rocket to Uranus
 achievement.neptunePlanet.desc=Take a Tier 7 rocket to Neptune
 achievement.plutoPlanet.desc=Take a Tier 8 rocket to Pluto
-achievement.erisPlanet.desc=Take a Tier 8 rocket to Eris
+achievement.erisPlanet.desc=Take a Tier 9 rocket to Eris
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
 
 achievement.venusBoss=Defeated Tier 4 Boss!
 achievement.jupiterBoss=Defeated Tier 5 Boss!
@@ -754,13 +757,14 @@ achievement.saturnBoss=Defeated Tier 6 Boss!
 achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
 
 achievement.venusBoss.desc=Kill the Venus Dungeon Boss
 achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
 achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss
 achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss
 achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss
-achievement.plutoBoss.desc=Kill the Neptune Dungeon Boss
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
 
 achievement.venusBoss.desc=Kill the Venus Dungeon Boss and Open the Treasure Chest
 achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss and Open the Treasure Chest
@@ -775,6 +779,7 @@ achievement.craftRocket6=Tier 6 Rocket!
 achievement.craftRocket7=Tier 7 Rocket!
 achievement.craftRocket8=Tier 8 Rocket!
 achievement.craftRocket9=Tier 9 Rocket!
+achievement.craftRocket10=Tier 10 Rocket!
 
 achievement.craftRocket4.desc=Craft Tier 4 Rocket
 achievement.craftRocket5.desc=Craft Tier 5 Rocket
@@ -782,6 +787,7 @@ achievement.craftRocket6.desc=Craft Tier 6 Rocket
 achievement.craftRocket7.desc=Craft Tier 7 Rocket
 achievement.craftRocket8.desc=Craft Tier 8 Rocket
 achievement.craftRocket9.desc=Craft Tier 9 Rocket
+achievement.craftRocket10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
 tile.glowstone_fluid.name=Liquid Glowstone

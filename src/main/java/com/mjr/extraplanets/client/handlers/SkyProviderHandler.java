@@ -57,6 +57,7 @@ import com.mjr.extraplanets.planets.Uranus.spacestation.WorldProviderUranusOrbit
 import com.mjr.extraplanets.planets.Venus.SkyProviderVenus;
 import com.mjr.extraplanets.planets.Venus.WorldProviderVenus;
 import com.mjr.extraplanets.planets.Venus.spacestation.WorldProviderVenusOrbit;
+import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -273,6 +274,17 @@ public class SkyProviderHandler {
 			if (world.provider instanceof WorldProviderCeresOrbit) {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"), false, true));
+					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinRate();
+					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+				}
+
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
+			if (world.provider instanceof WorldProviderMarsOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mars.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinRate();
 					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}

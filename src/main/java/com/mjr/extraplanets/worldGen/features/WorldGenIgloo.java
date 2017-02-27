@@ -31,7 +31,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		}
 		y = y - 1;
 		int random = rand.nextInt(50) + 1;
-		System.out.println(x+ " " + y + " " + z);
+		//System.out.println(x+ " " + y + " " + z);
 		if(random != 50){
 			return generateBasic(world, rand, x, y, z);
 		}
