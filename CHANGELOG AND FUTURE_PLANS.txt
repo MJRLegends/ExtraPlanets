@@ -9,7 +9,10 @@ TODO = Not yet done
 
 ===========================================Future Updates=============================================
 v1 Beta Build ----More to be added!!----
+*Added Tier 1 - 4 Space Suit Model/Textures
 
+0.6 Alpha Build ----More to be added!!----
+*Added some of the missing item textures
 
 ======================================================================================================
 
@@ -30,6 +33,7 @@ v1 Beta Build ----More to be added!!----
 *Fixed/changed moons thermal, gravity, fuel modifier levels
 *Updated Mercury Carbon Ore texture to match Mercury
 *Moved Tiered Thermal Amour up one number due to GC adding Tier 2 Thermal Padding
+*Added Very Heavy & Extremely Oxygen Tank
 *Added Very Heavy & Extremely Oxygen Tank textures & lang
 *Added Mercury Dungeon and Renamed a few classes
 *Removed Venus and Added Tier 4 Rocket and all items and tools from Venus to Mercury
