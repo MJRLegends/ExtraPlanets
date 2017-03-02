@@ -70,7 +70,7 @@ public class Config {
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
 	
-	public static boolean kepler22b = false;
+	public static boolean kepler22b = true;
 
 	public static int mercuryID;
 	public static int ceresID;

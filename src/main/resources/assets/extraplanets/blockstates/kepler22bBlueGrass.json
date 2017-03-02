@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "snowy=false": [
+            { "model": "extraplanets:kepler22bBlueGrass" },
+            { "model": "extraplanets:kepler22bBlueGrass", "y": 90 },
+            { "model": "extraplanets:kepler22bBlueGrass", "y": 180 },
+            { "model": "extraplanets:kepler22bBlueGrass", "y": 270 }
+        ],
+        "snowy=true":  { "model": "extraplanets:kepler22bBlueGrass" }
+    }
+}
