@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "variant=maple_blue_plank": { "model": "extraplanets:maple_blue_plank_model" },
+		"variant=maple_red_plank": { "model": "extraplanets:maple_red_plank_model" },
+		"variant=maple_purple_plank": { "model": "extraplanets:maple_purple_plank_model" },
+		"variant=maple_yellow_plank": { "model": "extraplanets:maple_yellow_plank_model" },
+		"variant=maple_green_plank": { "model": "extraplanets:maple_green_plank_model" },
+		"variant=maple_brown_plank": { "model": "extraplanets:maple_brown_plank_model" }
+	}
+}
