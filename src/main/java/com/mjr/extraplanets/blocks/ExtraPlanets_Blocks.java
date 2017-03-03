@@ -267,11 +267,11 @@ public class ExtraPlanets_Blocks {
 			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone);
 		if (Config.kepler22b) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
-			kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b");
-			kepler22bBlueGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_blue");
-			kepler22bPurpleGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple");
-			kepler22bRedGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_red");
-			kepler22bYellowGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow");
+			kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
+			kepler22bBlueGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_blue_grass");
+			kepler22bPurpleGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple_grass");
+			kepler22bRedGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
+			kepler22bYellowGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
 			//kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22bFlowers");
 		}
 	}
@@ -387,11 +387,11 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.kepler22b) {
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
-			GameRegistry.registerBlock(kepler22bBlueGrass, "kepler22bBlueGrass");
-			GameRegistry.registerBlock(kepler22bPurpleGrass, "kepler22bPurpleGrass");
-			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
-			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
+			GameRegistry.registerBlock(kepler22bGrass, kepler22bGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bBlueGrass, kepler22bBlueGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bPurpleGrass, kepler22bPurpleGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bRedGrass, kepler22bRedGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bYellowGrass, kepler22bYellowGrass.getUnlocalizedName().substring(5));
 			//GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName().substring(5));
 		}
 

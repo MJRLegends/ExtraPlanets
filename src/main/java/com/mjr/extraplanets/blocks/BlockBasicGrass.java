@@ -6,18 +6,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumWorldBlockLayer;
-import net.minecraft.world.ColorizerGrass;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -25,24 +19,11 @@ import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicGrass extends Block implements IGrowable
 {
-    public static final PropertyBool SNOWY = PropertyBool.create("snowy");
-
     protected BlockBasicGrass()
     {
         super(Material.grass);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(SNOWY, Boolean.valueOf(false)));
         this.setTickRandomly(true);
         this.setCreativeTab(ExtraPlanets.BlocksTab);
-    }
-
-    /**
-     * Get the actual Block state of this Block at the given position. This applies properties not visible in the
-     * metadata, such as fence connections.
-     */
-    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
-    {
-        Block block = worldIn.getBlockState(pos.up()).getBlock();
-        return state.withProperty(SNOWY, Boolean.valueOf(block == Blocks.snow || block == Blocks.snow_layer));
     }
 
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
@@ -150,18 +131,5 @@ public class BlockBasicGrass extends Block implements IGrowable
     public EnumWorldBlockLayer getBlockLayer()
     {
         return EnumWorldBlockLayer.CUTOUT_MIPPED;
-    }
-
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
-    public int getMetaFromState(IBlockState state)
-    {
-        return 0;
-    }
-
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, new IProperty[] {SNOWY});
     }
 }

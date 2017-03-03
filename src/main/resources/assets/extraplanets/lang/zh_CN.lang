@@ -150,11 +150,11 @@ tile.eris.darkIronBlock.name=Block of Dark Iron
 
 tile.kepler22b.Dirt.name=Kepler 22b Dirt
 tile.kepler22b.Stone.name=Kepler 22b Stone
-tile.kepler22bGrass.name=Kepler 22b Grass
-tile.kepler22b_BlueGrass.name=Kepler 22b Blue Grass
-tile.kepler22b_PurpleGrass.name=Kepler 22b Purple Grass
-tile.kepler22b_RedGrass.name=Kepler 22b Red Grass
-tile.kepler22b_YellowGrass.name=Kepler 22b Yellow Grass
+tile.kepler22b_grass.name=Kepler 22b Grass
+tile.kepler22b_blue_grass.name=Kepler 22b Blue Grass
+tile.kepler22b_purple_grass.name=Kepler 22b Purple Grass
+tile.kepler22b_red_grass.name=Kepler 22b Red Grass
+tile.kepler22b_yellow_grass.name=Kepler 22b Yellow Grass
 tile.kepler22b.OreIron.name=Kepler 22b Iron Ore
 tile.kepler22b.OreTin.name=Kepler 22b Tin Ore
 tile.kepler22b.OreCopper.name=Kepler 22b Copper Ore
