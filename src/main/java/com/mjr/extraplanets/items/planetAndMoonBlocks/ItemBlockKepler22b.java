@@ -43,12 +43,12 @@ public class ItemBlockKepler22b extends ItemBlock
 		}
 		case 3:
 		{
-			name = "OreCopper";
+			name = "OreTin";
 			break;
 		}
 		case 4:
 		{
-			name = "OreTin";
+			name = "OreCopper";
 			break;
 		}
 		case 5:

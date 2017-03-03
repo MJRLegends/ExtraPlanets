@@ -70,7 +70,7 @@ public class Config {
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
 	
-	public static boolean kepler22b = true;
+	public static boolean kepler22b;
 
 	public static int mercuryID;
 	public static int ceresID;
@@ -265,7 +265,7 @@ public class Config {
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
 		
-		//kepler22b = config.get(dimensionsCustom, "Kepler 22b", true, "").getBoolean(true);
+		kepler22b = config.get(dimensionsCustom, "Kepler 22b", true, "").getBoolean(true);
 
 		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
 		venusSpaceStation = config.get(spacestationCustom, "Venus SpaceStation", true, "").getBoolean(true);

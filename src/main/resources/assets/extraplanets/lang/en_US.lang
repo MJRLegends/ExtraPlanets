@@ -199,6 +199,7 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 tile.kepler22bFlowers.greenMapleShortGrass.name=Kepler 22b Green Short Grass
 tile.kepler22bFlowers.greenMapleMedGrass.name=Kepler 22b Green Medium Grass
 tile.kepler22bFlowers.greenMapleTallGrass.name=Kepler 22b Green Tall Grass
+tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Surface Rock
