@@ -8,6 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 import com.mjr.extraplanets.worldGen.features.WorldGenVolcano;
@@ -71,12 +72,13 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.venusBlocks);
 			}
 		}
-
-		if (this.rand.nextInt(20) == 1) {
-			int x = this.chunkX;
-			int z = this.chunkZ;
-			int y = this.currentWorld.getHeightValue(x, z) - 3;
-			new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y, z);
+		if(Config.genVenusVolcanos){
+			if (this.rand.nextInt(20) == 1) {
+				int x = this.chunkX;
+				int z = this.chunkZ;
+				int y = this.currentWorld.getHeightValue(x, z) - 3;
+				new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y, z);
+			}
 		}
 		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

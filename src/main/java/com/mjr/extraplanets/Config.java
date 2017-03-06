@@ -29,6 +29,20 @@ public class Config {
 	public static boolean mobSuffocation;
 	public static boolean useDefaultBosses;
 
+	public static int mercuryRocketTier;
+	public static int ceresRocketTier;
+	public static int erisRocketTier;
+	
+	//public static int venusRocketTier;
+	//public static int jupiterRocketTier;
+	//public static int saturnRocketTier;
+	//public static int uranusRocketTier;
+	//public static int neptuneRocketTier;
+	
+	public static boolean genVenusVolcanos;
+	public static boolean genUranusIgloos;
+	public static boolean genUranusIceSpikes;
+	
 	public static boolean carbonItems;
 	public static boolean palladiumItems;
 	public static boolean magnesiumItems;
@@ -170,22 +184,12 @@ public class Config {
 	public static int kepler22bRedForestBiomeID;
 	public static int kepler22bYellowForestBiomeID;
 
-	public static int mercuryRocketTier;
-	public static int ceresRocketTier;
-	public static int erisRocketTier;
-
 	public static boolean venusLiquid;
 	public static boolean jupiterLiquid;
 	public static boolean saturnLiquid;
 	public static boolean uranusLiquid;
 	public static boolean neptuneLiquid;
 	public static boolean oreDictionary;
-	
-	//    public static int venusRocketTier;
-	//    public static int jupiterRocketTier;
-	//    public static int saturnRocketTier;
-	//    public static int uranusRocketTier;
-	//    public static int neptuneRocketTier;
 
 	public static int schematicTier4GUIID;
 	public static int schematicTier5GUIID;
@@ -265,9 +269,23 @@ public class Config {
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
 		
-		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
+		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
+		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
+		
+		genVenusVolcanos = config.get(dimensionSettings, "Generate Volcanos on Venus", true, "Will disable Volcanos from generating on Venus").getBoolean(true);
+		genUranusIgloos = config.get(dimensionSettings, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
+		genUranusIceSpikes = config.get(dimensionSettings, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
+
+		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
+		//venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
+		//jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
+		//saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
+		//uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
+		//neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
+		
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
+		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		//pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
 
 		triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
@@ -305,16 +323,6 @@ public class Config {
 		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true,"Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-
-		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
-		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
-		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
-
-		//	venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
-		//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
-		//	saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
-		//	uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
-		//	neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
 
 		venusLiquid = config.get(dimensionBlockSettings, "Venus's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
 		jupiterLiquid = config.get(dimensionBlockSettings, "Jupiter's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
