@@ -155,8 +155,6 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier9;
 	public static Block treasureChestTier10;
 
-	// Need changing to meta blocks -----------------------------------------
-	
 	//Dungeon Bricks
 	public static Block veunsDungeonBrick;
 	public static Block jupiterDungeonBrick;
@@ -191,18 +189,11 @@ public class ExtraPlanets_Blocks {
 	//Planks
 	public static Block kepler22bPlanks;
 
-	// -----------------------------------------------------------------------
-
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
-
-		// Need changing to meta blocks at some point
-		// -----------------------------------------
 		initializeDungeonBlocks();
 		initializeSpawnerBlocks();
-		// ----------------------------------------------------------------------
-
 		registerBlocks();
 		registerTileEntitys();
 		if(Config.oreDictionary)
