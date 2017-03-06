@@ -19,6 +19,10 @@ import com.mjr.extraplanets.items.keys.ItemKeyT6;
 import com.mjr.extraplanets.items.keys.ItemKeyT7;
 import com.mjr.extraplanets.items.keys.ItemKeyT8;
 import com.mjr.extraplanets.items.keys.ItemKeyT9;
+import com.mjr.extraplanets.items.keys.MPVersions.ItemKeyT4Saturn;
+import com.mjr.extraplanets.items.keys.MPVersions.ItemKeyT4Uranus;
+import com.mjr.extraplanets.items.keys.MPVersions.ItemKeyT5Neptune;
+import com.mjr.extraplanets.items.keys.MPVersions.ItemKeyT6Eris;
 import com.mjr.extraplanets.items.noseCones.Tier10NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier4NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier5NoseCone;
@@ -158,10 +162,11 @@ public class ExtraPlanets_Items {
 				schematicTier6 = new SchematicTier6("schematicTier6");
 				noseConeTier6 = new Tier6NoseCone("noseConeTier6");
 				tier6Items = new ItemTier6Items("tier6");
+				T6key = new ItemKeyT6().setUnlocalizedName("key");
 			}
 			else
 				tier6Items = new ItemTier6ItemsMP("tier6");
-			T6key = new ItemKeyT6().setUnlocalizedName("key");
+			T6key = new ItemKeyT4Saturn().setUnlocalizedName("key");
 		}
 		if (Config.uranus) {
 			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
@@ -171,10 +176,11 @@ public class ExtraPlanets_Items {
 				schematicTier7 = new SchematicTier7("schematicTier7");
 				noseConeTier7 = new Tier7NoseCone("noseConeTier7");
 				tier7Items = new ItemTier7Items("tier7");
+				T7key = new ItemKeyT7().setUnlocalizedName("key");
 			}
 			else
 				tier7Items = new ItemTier7ItemsMP("tier7");
-			T7key = new ItemKeyT7().setUnlocalizedName("key");
+			T7key = new ItemKeyT4Uranus().setUnlocalizedName("key");
 		}
 		if (Config.neptune) {
 			if(Config.batteries)
@@ -186,10 +192,11 @@ public class ExtraPlanets_Items {
 				schematicTier8 = new SchematicTier8("schematicTier8");
 				noseConeTier8 = new Tier8NoseCone("noseConeTier8");
 				tier8Items = new ItemTier8Items("tier8");
+				T8key = new ItemKeyT8().setUnlocalizedName("key");
 			}
 			else
 				tier8Items = new ItemTier8ItemsMP("tier8");
-			T8key = new ItemKeyT8().setUnlocalizedName("key");
+			T8key = new ItemKeyT5Neptune().setUnlocalizedName("key");
 		}
 		if (Config.pluto && Config.morePlanetsCompatibility == false) {
 			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
@@ -204,10 +211,11 @@ public class ExtraPlanets_Items {
 				schematicTier10 = new SchematicTier10("schematicTier10");
 				noseConeTier10 = new Tier10NoseCone("noseConeTier10");
 				tier10Items = new ItemTier10Items("tier10");
+				T10key = new ItemKeyT10().setUnlocalizedName("key");
 			}
 			else
 				tier10Items = new ItemTier10ItemsMP("tier10");
-			T10key = new ItemKeyT10().setUnlocalizedName("key");
+			T10key = new ItemKeyT6Eris().setUnlocalizedName("key");
 		}
 		if(Config.eris){
 			tier11Items = new ItemTier11Items("tier11");
