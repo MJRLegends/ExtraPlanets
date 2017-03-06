@@ -34,6 +34,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.ChestGenHooks;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 
@@ -75,7 +76,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 		this.dataWatcher.updateObject(16, new Byte((byte) p_70799_1_));
 		this.setSize(0.6F * p_70799_1_, 0.6F * p_70799_1_);
 		this.setPosition(this.posX, this.posY, this.posZ);
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((p_70799_1_ * p_70799_1_) * 2);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((p_70799_1_ * p_70799_1_) * 4);
 		this.setHealth(this.getMaxHealth());
 		this.experienceValue = p_70799_1_;
 	}
@@ -386,7 +387,11 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(7);
+		List<ItemStack> stackList;
+		if(Config.morePlanetsCompatibility)
+			stackList = GalacticraftRegistry.getDungeonLoot(3);
+		else
+			stackList = GalacticraftRegistry.getDungeonLoot(7);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 
