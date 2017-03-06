@@ -364,7 +364,10 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
 		if (Config.eris) {
-			treasureChestTier10 = new T10TreasureChest("treasureChestT10");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier10 = new T10TreasureChest("treasureChestT6");
+			else
+				treasureChestTier10 = new T10TreasureChest("treasureChestT10");
 		}
 	}
 
@@ -462,7 +465,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName());
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
-		if(Config.kepler22b){
+		if(Config.kepler22b && Config.keplerSolarSystems){
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
 			GameRegistry.registerBlock(kepler22bBlueGrass, "kepler22bBlueGrass");
@@ -553,7 +556,10 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.eris) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
 	}
 

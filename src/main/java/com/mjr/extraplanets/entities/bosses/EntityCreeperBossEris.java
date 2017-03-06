@@ -3,6 +3,7 @@ package com.mjr.extraplanets.entities.bosses;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 
@@ -409,7 +410,11 @@ public class EntityCreeperBossEris extends EntityMob implements IEntityBreathabl
 
 	public ItemStack getGuaranteedLoot(Random rand)
 	{
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(10);
+		List<ItemStack> stackList;
+		if(Config.morePlanetsCompatibility)
+			stackList = GalacticraftRegistry.getDungeonLoot(6);
+		else
+			stackList = GalacticraftRegistry.getDungeonLoot(10);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

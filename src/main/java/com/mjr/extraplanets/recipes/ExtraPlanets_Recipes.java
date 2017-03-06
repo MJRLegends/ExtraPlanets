@@ -32,7 +32,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Recipes {
 	public static void init() {
-		registerRocketCraftingRecipes();
+		if(Config.morePlanetsCompatibility == false)
+			registerRocketCraftingRecipes();
 		registerFurnaceRecipes();
 		registerCraftingRecipes();
 		registerCompressorRecipes();
@@ -158,7 +159,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titanBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titanBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 3), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 2), OreDictionary.getOres("ingotIron").get(0), 0.0F);
@@ -545,7 +546,7 @@ public class ExtraPlanets_Recipes {
 			}
 		}
 
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 4, 11), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 1) });
 
@@ -721,7 +722,7 @@ public class ExtraPlanets_Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4));
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4));
 		}
@@ -794,14 +795,20 @@ public class ExtraPlanets_Recipes {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 24);
+			if(Config.morePlanetsCompatibility)
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 1), 24);
+			else
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 24);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.saturnSpaceStationID, Config.saturnID, new SpaceStationRecipe(inputMap)));
 		}
 		if (Config.uranusSpaceStation && Config.uranus) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 5), 24);
+			if(Config.morePlanetsCompatibility)
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 1), 24);
+			else
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 5), 24);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.wafers, 1, 5), 3);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.uranusSpaceStationID, Config.uranusID, new SpaceStationRecipe(inputMap)));
@@ -809,7 +816,10 @@ public class ExtraPlanets_Recipes {
 		if (Config.neptuneSpaceStation && Config.neptune) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 24);
+			if(Config.morePlanetsCompatibility)
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 1), 24);
+			else
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 24);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.wafers, 1, 4), 3);
 			inputMap.put(Items.iron_ingot, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.neptuneSpaceStationID, Config.neptuneID, new SpaceStationRecipe(inputMap)));
@@ -827,10 +837,13 @@ public class ExtraPlanets_Recipes {
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
 			inputMap.put(Items.iron_ingot, 24);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 24);
+			if(Config.morePlanetsCompatibility)
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 1), 24);
+			else
+				inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.erisSpaceStationID, Config.erisID, new SpaceStationRecipe(inputMap)));
 		}
-		if (Config.kepler22bSpaceStation && Config.kepler22b) {
+		if (Config.kepler22bSpaceStation && Config.kepler22b && Config.keplerSolarSystems) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 24);
 			inputMap.put(new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 24);
