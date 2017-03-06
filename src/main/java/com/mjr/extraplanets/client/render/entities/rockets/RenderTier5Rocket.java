@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.render.rockets;
+package com.mjr.extraplanets.client.render.entities.rockets;
 
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;

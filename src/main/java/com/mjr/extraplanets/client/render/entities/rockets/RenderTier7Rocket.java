@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.render.rockets;
+package com.mjr.extraplanets.client.render.entities.rockets;
 
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -13,14 +13,17 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class RenderTier10Rocket extends Render
+@SideOnly(Side.CLIENT)
+public class RenderTier7Rocket extends Render
 {
 	private ResourceLocation rocketTexture;
 
 	protected IModelCustom rocketModelObj;
 
-	public RenderTier10Rocket(IModelCustom spaceshipModel, String textureDomain, String texture)
+	public RenderTier7Rocket(IModelCustom spaceshipModel, String textureDomain, String texture)
 	{
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
