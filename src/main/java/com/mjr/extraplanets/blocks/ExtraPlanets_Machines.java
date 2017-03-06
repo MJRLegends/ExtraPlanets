@@ -32,7 +32,8 @@ public class ExtraPlanets_Machines {
 	}
 
 	private static void registerMachines() {
-		GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
+		if(Config.advancedRefinery)
+			GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
 		if(Config.solarPanels){
 			GCCoreUtil.registerGalacticraftBlock("solarPanelHybrid", solarPanel, 0);
 			GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);

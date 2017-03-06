@@ -299,9 +299,11 @@ public class ClientProxy extends CommonProxy {
 		if (Config.eris) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT10.png")));
 		}
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
+		if(Config.thermalPaddings){
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -314,6 +316,7 @@ public class ClientProxy extends CommonProxy {
 
 	@SideOnly(Side.CLIENT)
 	public static void registerTileEntityRenderers() {
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
+		if(Config.solarPanels)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
 	}
 }
