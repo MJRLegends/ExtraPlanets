@@ -3,7 +3,7 @@ package com.mjr.extraplanets.entities.ai;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
 
-import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedRedCreeper;
 
 public class EntityAIRedCreeperSwell extends EntityAIBase
 {

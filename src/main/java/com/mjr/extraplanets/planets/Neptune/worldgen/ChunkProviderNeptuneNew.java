@@ -33,7 +33,7 @@ import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.MapGenVillageNeptune;
 
 public class ChunkProviderNeptuneNew extends ChunkProviderGenerate {

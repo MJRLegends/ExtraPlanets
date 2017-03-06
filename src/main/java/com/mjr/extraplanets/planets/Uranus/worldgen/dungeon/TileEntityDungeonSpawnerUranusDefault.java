@@ -11,7 +11,7 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
 
 public class TileEntityDungeonSpawnerUranusDefault extends TileEntityDungeonSpawner {
 	public TileEntityDungeonSpawnerUranusDefault() {

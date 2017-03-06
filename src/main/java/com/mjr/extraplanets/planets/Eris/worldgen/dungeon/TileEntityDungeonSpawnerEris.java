@@ -3,7 +3,7 @@ package com.mjr.extraplanets.planets.Eris.worldgen.dungeon;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
