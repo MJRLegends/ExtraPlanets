@@ -204,10 +204,10 @@ public class ExtraPlanets_Items {
 				schematicTier10 = new SchematicTier10("schematicTier10");
 				noseConeTier10 = new Tier10NoseCone("noseConeTier10");
 				tier10Items = new ItemTier10Items("tier10");
-				T10key = new ItemKeyT10().setUnlocalizedName("key");
 			}
 			else
 				tier10Items = new ItemTier10ItemsMP("tier10");
+			T10key = new ItemKeyT10().setUnlocalizedName("key");
 		}
 		if(Config.eris){
 			tier11Items = new ItemTier11Items("tier11");
@@ -308,8 +308,8 @@ public class ExtraPlanets_Items {
 				GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
 				GameRegistry.registerItem(schematicTier10, "schematicTier10");
 				GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
-				GameRegistry.registerItem(T10key, "T10key");
 			}
+			GameRegistry.registerItem(T10key, "T10key");
 			GameRegistry.registerItem(tier10Items, "tier10Items");
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
