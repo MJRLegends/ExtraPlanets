@@ -133,11 +133,13 @@ public class ClientProxy extends CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		renderMobEntities();
-		renderNonMobEntities();
+		if(Config.morePlanetsCompatibility == false)
+			renderNonMobEntities();
 		FMLCommonHandler.instance().bus().register(new MainHandler());
 		FMLCommonHandler.instance().bus().register(new SkyProviderHandler());
 
-		RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
+		if(Config.nuclearBomb)
+			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}
 
 	@Override

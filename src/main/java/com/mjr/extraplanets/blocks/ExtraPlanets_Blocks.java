@@ -282,7 +282,7 @@ public class ExtraPlanets_Blocks {
 
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
-		if (Config.ceres)
+		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
 		if(Config.kepler22b && Config.keplerSolarSystems){
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
@@ -504,7 +504,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");
-		if (Config.ceres)
+		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
 	}
 

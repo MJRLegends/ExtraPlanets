@@ -120,15 +120,15 @@ public class ExtraPlanets {
 				return ExtraPlanets_Items.tier4Rocket;
 			else if (Config.jupiter)
 				return ExtraPlanets_Items.tier5Rocket;
-			else if (Config.saturn)
+			else if (Config.saturn && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier6Rocket;
-			else if (Config.uranus)
+			else if (Config.uranus && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier7Rocket;
-			else if (Config.neptune)
+			else if (Config.neptune && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier8Rocket;
 			else if (Config.pluto)
 				return ExtraPlanets_Items.tier9Rocket;
-			else if (Config.eris)
+			else if (Config.eris && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
@@ -289,21 +289,24 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
-		if (Config.venus)
-			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
-		if (Config.jupiter)
-			registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
-		if (Config.saturn)
-			registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modName + "EntityTier6Rocket", 150, 1, false);
-		if (Config.uranus)
-			registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modName + "EntityTier7Rocket", 150, 1, false);
-		if (Config.neptune)
-			registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
-		if (Config.pluto)
-			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
-		if (Config.eris)
-			registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
+		if(Config.nuclearBomb)
+			registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		if(Config.morePlanetsCompatibility == false){
+			if (Config.venus)
+				registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
+			if (Config.jupiter)
+				registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
+			if (Config.saturn)
+				registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modName + "EntityTier6Rocket", 150, 1, false);
+			if (Config.uranus)
+				registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modName + "EntityTier7Rocket", 150, 1, false);
+			if (Config.neptune)
+				registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
+			if (Config.pluto)
+				registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
+			if (Config.eris)
+				registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
+		}
 	}
 
 	private void registerCreatures() {

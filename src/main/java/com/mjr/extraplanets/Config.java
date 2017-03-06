@@ -64,6 +64,7 @@ public class Config {
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
 	public static boolean slabsAndStairs;
+	public static boolean nuclearBomb;
 	
 	public static boolean mercury;
 	public static boolean venus;
@@ -265,7 +266,8 @@ public class Config {
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
 		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);
-
+		nuclearBomb = config.get(blocks, "Nuclear Bomb", true).getBoolean(true);
+		
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
 		

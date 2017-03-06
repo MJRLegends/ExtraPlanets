@@ -19,6 +19,7 @@ public class ExtraPlanets_SolarSystems {
 		registerSolarSystems();
 	}
 
+	@SuppressWarnings("deprecation")
 	private static void initializeSolarSystems() {
 		if (Config.keplerSolarSystems) {
 			kepler22 = new SolarSystem("kepler22", "milkyWay").setMapPosition(new Vector3(90.0F, 30.0F));
