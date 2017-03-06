@@ -634,14 +634,20 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		if (Config.neptune) {
 			// Blue Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 10, 22));
+			if(Config.morePlanetsCompatibility)
+				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 2), 10, 22));
+			else
+				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 10, 22));
 			input2.put(4, new PositionedStack(new ItemStack(Items.repeater), 140, 25));
 			this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 4), 147, 91));
 		}
 		if (Config.uranus) {
 			// White Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), 10, 22));
+			if(Config.morePlanetsCompatibility)
+				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), 10, 22));
+			else
+				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), 10, 22));
 			input2.put(4, new PositionedStack(new ItemStack(Items.repeater), 140, 25));
 			this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 5), 147, 91));
 		}
