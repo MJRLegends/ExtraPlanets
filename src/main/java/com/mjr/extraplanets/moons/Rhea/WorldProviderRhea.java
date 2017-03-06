@@ -10,6 +10,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Rhea.worldgen.ChunkProviderRhea;
 import com.mjr.extraplanets.moons.Rhea.worldgen.WorldChunkManagerRhea;
@@ -144,10 +145,14 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return 70.0F;
+		if(Config.thermalPaddings){
+			if (isDaytime()) {
+				return 70.0F;
+			}
+			return -60.0F;
 		}
-		return 60.0F;
+		else
+			return -1.5F;
 	}
 
 	@Override

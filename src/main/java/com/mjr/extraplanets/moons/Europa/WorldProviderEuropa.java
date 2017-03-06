@@ -10,6 +10,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Europa.worldgen.ChunkProviderEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.WorldChunkManagerEuropa;
@@ -144,10 +145,14 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return 100.0F;
+		if(Config.thermalPaddings){
+			if (isDaytime()) {
+				return 100.0F;
+			}
+			return -90.0F;
 		}
-		return 90.0F;
+		else
+			return -1.5F;
 	}
 
 	@Override
