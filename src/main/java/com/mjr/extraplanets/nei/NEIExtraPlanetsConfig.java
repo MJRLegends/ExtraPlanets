@@ -104,6 +104,11 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			}
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
+			
+			if(Config.morePlanetsCompatibility){
+				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 1));
+				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 3));
+			}
 		}
 	}
 
