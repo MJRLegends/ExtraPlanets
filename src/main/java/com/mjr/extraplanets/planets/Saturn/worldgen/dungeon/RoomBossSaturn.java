@@ -25,9 +25,9 @@ public class RoomBossSaturn extends DungeonRoom
 		if (this.worldObj != null)
 		{
 			this.rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
-			this.sizeX = this.rand.nextInt(6) + 14;
-			this.sizeY = this.rand.nextInt(2) + 8;
-			this.sizeZ = this.rand.nextInt(6) + 14;
+			this.sizeX = 24;
+			this.sizeY = 11;
+			this.sizeZ = 24;
 		}
 	}
 
