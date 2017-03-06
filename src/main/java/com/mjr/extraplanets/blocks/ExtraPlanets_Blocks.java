@@ -207,7 +207,7 @@ public class ExtraPlanets_Blocks {
 		registerTileEntitys();
 		if(Config.oreDictionary)
 			OreDictionaryRegister();
-		if(Config.kepler22b){
+		if(Config.kepler22b && Config.keplerSolarSystems){
 			initializeTreeBlocks();
 			registerTreeBlocks();
 		}
@@ -293,7 +293,7 @@ public class ExtraPlanets_Blocks {
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres)
 			nuclearBomb = new BlockNuclearBomb();
-		if(Config.kepler22b){
+		if(Config.kepler22b && Config.keplerSolarSystems){
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
 			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue", "kepler22b");
@@ -343,13 +343,22 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier5 = new T5TreasureChest("treasureChestT5");
 		}
 		if (Config.saturn) {
-			treasureChestTier6 = new T6TreasureChest("treasureChestT6");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier6 = new T6TreasureChest("treasureChestT4Saturn");
+			else
+				treasureChestTier6 = new T6TreasureChest("treasureChestT6");
 		}
 		if (Config.uranus) {
-			treasureChestTier7 = new T7TreasureChest("treasureChestT7");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier7 = new T7TreasureChest("treasureChestT4Uranus");
+			else
+				treasureChestTier7 = new T7TreasureChest("treasureChestT7");
 		}
 		if (Config.neptune) {
-			treasureChestTier8 = new T8TreasureChest("treasureChestT8");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier8 = new T8TreasureChest("treasureChestT5");
+			else
+				treasureChestTier8 = new T8TreasureChest("treasureChestT8");
 		}
 		if (Config.pluto) {
 			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
@@ -516,15 +525,27 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.saturn) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
+			
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 4 Saturn Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
 		if (Config.uranus) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
+			
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 4 Uranus Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
 		if (Config.neptune) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
+			
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.pluto) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
@@ -645,7 +666,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
 			OreDictionary.registerOre("oreIron", new ItemStack(kepler22bBlocks, 1, 2));
 			OreDictionary.registerOre("oreCopper", new ItemStack(kepler22bBlocks, 1, 3));

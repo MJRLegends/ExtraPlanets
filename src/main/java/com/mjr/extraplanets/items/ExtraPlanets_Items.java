@@ -8,6 +8,10 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.items.MPVersions.ItemTier10ItemsMP;
+import com.mjr.extraplanets.items.MPVersions.ItemTier6ItemsMP;
+import com.mjr.extraplanets.items.MPVersions.ItemTier7ItemsMP;
+import com.mjr.extraplanets.items.MPVersions.ItemTier8ItemsMP;
 import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
@@ -145,33 +149,42 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.saturn) {
 			glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
-
-			tier6Rocket = new Tier6Rocket("itemTier6Rocket");
-			schematicTier6 = new SchematicTier6("schematicTier6");
-			noseConeTier6 = new Tier6NoseCone("noseConeTier6");
-			tier6Items = new ItemTier6Items("tier6");
+			
+			if(Config.morePlanetsCompatibility == false){
+				tier6Rocket = new Tier6Rocket("itemTier6Rocket");
+				schematicTier6 = new SchematicTier6("schematicTier6");
+				noseConeTier6 = new Tier6NoseCone("noseConeTier6");
+				tier6Items = new ItemTier6Items("tier6");
+			}
+			tier6Items = new ItemTier6ItemsMP("tier6");
 			T6key = new ItemKeyT6().setUnlocalizedName("key");
 		}
 		if (Config.uranus) {
 			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
 
-			tier7Rocket = new Tier7Rocket("itemTier7Rocket");
-			schematicTier7 = new SchematicTier7("schematicTier7");
-			noseConeTier7 = new Tier7NoseCone("noseConeTier7");
-			tier7Items = new ItemTier7Items("tier7");
+			if(Config.morePlanetsCompatibility == false){
+				tier7Rocket = new Tier7Rocket("itemTier7Rocket");
+				schematicTier7 = new SchematicTier7("schematicTier7");
+				noseConeTier7 = new Tier7NoseCone("noseConeTier7");
+				tier7Items = new ItemTier7Items("tier7");
+			}
+			tier7Items = new ItemTier7ItemsMP("tier7");
 			T7key = new ItemKeyT7().setUnlocalizedName("key");
 		}
 		if (Config.neptune) {
 			zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
 			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
 
-			tier8Rocket = new Tier8Rocket("itemTier8Rocket");
-			schematicTier8 = new SchematicTier8("schematicTier8");
-			noseConeTier8 = new Tier8NoseCone("noseConeTier8");
-			tier8Items = new ItemTier8Items("tier8");
+			if(Config.morePlanetsCompatibility == false){
+				tier8Rocket = new Tier8Rocket("itemTier8Rocket");
+				schematicTier8 = new SchematicTier8("schematicTier8");
+				noseConeTier8 = new Tier8NoseCone("noseConeTier8");
+				tier8Items = new ItemTier8Items("tier8");
+			}
+			tier8Items = new ItemTier8ItemsMP("tier8");
 			T8key = new ItemKeyT8().setUnlocalizedName("key");
 		}
-		if (Config.pluto) {
+		if (Config.pluto && Config.morePlanetsCompatibility == false) {
 			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
 			schematicTier9 = new SchematicTier9("schematicTier9");
 			noseConeTier9 = new Tier9NoseCone("noseConeTier9");
@@ -179,11 +192,14 @@ public class ExtraPlanets_Items {
 			T9key = new ItemKeyT9().setUnlocalizedName("key");
 		}
 		if(Config.eris){
-			tier10Rocket = new Tier10Rocket("itemTier10Rocket");
-			schematicTier10 = new SchematicTier10("schematicTier10");
-			noseConeTier10 = new Tier10NoseCone("noseConeTier10");
-			tier10Items = new ItemTier10Items("tier10");
-			T10key = new ItemKeyT10().setUnlocalizedName("key");
+			if(Config.morePlanetsCompatibility == false){
+				tier10Rocket = new Tier10Rocket("itemTier10Rocket");
+				schematicTier10 = new SchematicTier10("schematicTier10");
+				noseConeTier10 = new Tier10NoseCone("noseConeTier10");
+				tier10Items = new ItemTier10Items("tier10");
+				T10key = new ItemKeyT10().setUnlocalizedName("key");
+			}
+			tier10Items = new ItemTier10ItemsMP("tier10");
 		}
 		if(Config.eris){
 			tier11Items = new ItemTier11Items("tier11");
@@ -229,26 +245,31 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(magma_bucket, "bucket_magma");
 		}
 		if (Config.saturn) {
-			GameRegistry.registerItem(tier6Rocket, "itemTier6Rocket");
-			GameRegistry.registerItem(schematicTier6, "schematicTier6");
-			GameRegistry.registerItem(noseConeTier6, "noseConeTier6");
+			if(Config.morePlanetsCompatibility == false){
+				GameRegistry.registerItem(tier6Rocket, "itemTier6Rocket");
+				GameRegistry.registerItem(schematicTier6, "schematicTier6");
+				GameRegistry.registerItem(noseConeTier6, "noseConeTier6");
+			}
 			GameRegistry.registerItem(tier6Items, "tier6Items");
 			GameRegistry.registerItem(T6key, "T6key");
-
 			GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");
 		}
 		if (Config.uranus) {
-			GameRegistry.registerItem(tier7Rocket, "itemTier7Rocket");
-			GameRegistry.registerItem(schematicTier7, "schematicTier7");
-			GameRegistry.registerItem(noseConeTier7, "noseConeTier7");
+			if(Config.morePlanetsCompatibility == false){
+				GameRegistry.registerItem(tier7Rocket, "itemTier7Rocket");
+				GameRegistry.registerItem(schematicTier7, "schematicTier7");
+				GameRegistry.registerItem(noseConeTier7, "noseConeTier7");
+			}
 			GameRegistry.registerItem(tier7Items, "tier7Items");
 			GameRegistry.registerItem(T7key, "T7key");
 			GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
 		}
 		if (Config.neptune) {
-			GameRegistry.registerItem(tier8Rocket, "itemTier8Rocket");
-			GameRegistry.registerItem(schematicTier8, "schematicTier8");
-			GameRegistry.registerItem(noseConeTier8, "noseConeTier8");
+			if(Config.morePlanetsCompatibility == false){
+				GameRegistry.registerItem(tier8Rocket, "itemTier8Rocket");
+				GameRegistry.registerItem(schematicTier8, "schematicTier8");
+				GameRegistry.registerItem(noseConeTier8, "noseConeTier8");
+			}
 			GameRegistry.registerItem(tier8Items, "tier8Items");
 			GameRegistry.registerItem(T8key, "T8key");
 			GameRegistry.registerItem(zincBattery, "zincBattery");
@@ -262,13 +283,15 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T9key, "T9key");
 		}
 		if (Config.eris) {
-			GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
-			GameRegistry.registerItem(schematicTier10, "schematicTier10");
-			GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
+			if(Config.morePlanetsCompatibility == false){
+				GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
+				GameRegistry.registerItem(schematicTier10, "schematicTier10");
+				GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
+				GameRegistry.registerItem(T10key, "T10key");
+			}
 			GameRegistry.registerItem(tier10Items, "tier10Items");
-			GameRegistry.registerItem(T10key, "T10key");
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.registerItem(tier11Items, "tier11Items");
 		}
 
@@ -333,7 +356,7 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("ingotTungsten", new ItemStack(tier9Items, 1, 5));
 		if (Config.eris)
 			OreDictionary.registerOre("ingotDarkIron", new ItemStack(tier10Items, 1, 5));
-		if (Config.kepler22b){
+		if (Config.kepler22b && Config.keplerSolarSystems){
 			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(tier11Items, 1, 0));
 			OreDictionary.registerOre("gemRedDiamond", new ItemStack(tier11Items, 1, 1));
 			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier11Items, 1, 2));

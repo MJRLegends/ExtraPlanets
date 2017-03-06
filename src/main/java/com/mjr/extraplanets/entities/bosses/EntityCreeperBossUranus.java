@@ -44,6 +44,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 
@@ -410,7 +411,11 @@ public class EntityCreeperBossUranus extends EntityMob implements IEntityBreatha
 
 	public ItemStack getGuaranteedLoot(Random rand)
 	{
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(7);
+		List<ItemStack> stackList;
+		if(Config.morePlanetsCompatibility)
+			stackList = GalacticraftRegistry.getDungeonLoot(4);
+		else
+			stackList = GalacticraftRegistry.getDungeonLoot(7);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

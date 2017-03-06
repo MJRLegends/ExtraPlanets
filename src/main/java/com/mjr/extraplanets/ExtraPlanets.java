@@ -64,6 +64,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
+import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
@@ -186,6 +187,8 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new PlutoEvents());
 		if (Config.eris)
 			MinecraftForge.EVENT_BUS.register(new ErisEvents());
+		if (Config.kepler22b && Config.keplerSolarSystems)
+			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
 
 		// Moons Events
 		if (Config.callisto)
@@ -267,10 +270,12 @@ public class ExtraPlanets {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
-		registerSchematicsRecipes();
+		if(Config.morePlanetsCompatibility == false)
+			registerSchematicsRecipes();
 
 		// Register/Add Dungeon Loot
-		addDungeonLoot();
+		if(Config.morePlanetsCompatibility == false)
+			addDungeonLoot();
 
 		// Register Recipes
 		ExtraPlanets_Recipes.init();
