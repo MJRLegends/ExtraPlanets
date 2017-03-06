@@ -159,7 +159,8 @@ public class ExtraPlanets_Items {
 				noseConeTier6 = new Tier6NoseCone("noseConeTier6");
 				tier6Items = new ItemTier6Items("tier6");
 			}
-			tier6Items = new ItemTier6ItemsMP("tier6");
+			else
+				tier6Items = new ItemTier6ItemsMP("tier6");
 			T6key = new ItemKeyT6().setUnlocalizedName("key");
 		}
 		if (Config.uranus) {
@@ -171,7 +172,8 @@ public class ExtraPlanets_Items {
 				noseConeTier7 = new Tier7NoseCone("noseConeTier7");
 				tier7Items = new ItemTier7Items("tier7");
 			}
-			tier7Items = new ItemTier7ItemsMP("tier7");
+			else
+				tier7Items = new ItemTier7ItemsMP("tier7");
 			T7key = new ItemKeyT7().setUnlocalizedName("key");
 		}
 		if (Config.neptune) {
@@ -185,7 +187,8 @@ public class ExtraPlanets_Items {
 				noseConeTier8 = new Tier8NoseCone("noseConeTier8");
 				tier8Items = new ItemTier8Items("tier8");
 			}
-			tier8Items = new ItemTier8ItemsMP("tier8");
+			else
+				tier8Items = new ItemTier8ItemsMP("tier8");
 			T8key = new ItemKeyT8().setUnlocalizedName("key");
 		}
 		if (Config.pluto && Config.morePlanetsCompatibility == false) {
@@ -203,7 +206,8 @@ public class ExtraPlanets_Items {
 				tier10Items = new ItemTier10Items("tier10");
 				T10key = new ItemKeyT10().setUnlocalizedName("key");
 			}
-			tier10Items = new ItemTier10ItemsMP("tier10");
+			else
+				tier10Items = new ItemTier10ItemsMP("tier10");
 		}
 		if(Config.eris){
 			tier11Items = new ItemTier11Items("tier11");
