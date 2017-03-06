@@ -164,9 +164,10 @@ public class ExtraPlanets_Items {
 				tier6Items = new ItemTier6Items("tier6");
 				T6key = new ItemKeyT6().setUnlocalizedName("key");
 			}
-			else
+			else{
 				tier6Items = new ItemTier6ItemsMP("tier6");
-			T6key = new ItemKeyT4Saturn().setUnlocalizedName("key");
+				T6key = new ItemKeyT4Saturn().setUnlocalizedName("key");
+			}
 		}
 		if (Config.uranus) {
 			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
@@ -178,9 +179,10 @@ public class ExtraPlanets_Items {
 				tier7Items = new ItemTier7Items("tier7");
 				T7key = new ItemKeyT7().setUnlocalizedName("key");
 			}
-			else
+			else{
 				tier7Items = new ItemTier7ItemsMP("tier7");
-			T7key = new ItemKeyT4Uranus().setUnlocalizedName("key");
+				T7key = new ItemKeyT4Uranus().setUnlocalizedName("key");
+			}
 		}
 		if (Config.neptune) {
 			if(Config.batteries)
@@ -194,9 +196,10 @@ public class ExtraPlanets_Items {
 				tier8Items = new ItemTier8Items("tier8");
 				T8key = new ItemKeyT8().setUnlocalizedName("key");
 			}
-			else
+			else{
 				tier8Items = new ItemTier8ItemsMP("tier8");
-			T8key = new ItemKeyT5Neptune().setUnlocalizedName("key");
+				T8key = new ItemKeyT5Neptune().setUnlocalizedName("key");
+			}
 		}
 		if (Config.pluto && Config.morePlanetsCompatibility == false) {
 			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
@@ -213,11 +216,12 @@ public class ExtraPlanets_Items {
 				tier10Items = new ItemTier10Items("tier10");
 				T10key = new ItemKeyT10().setUnlocalizedName("key");
 			}
-			else
+			else{
 				tier10Items = new ItemTier10ItemsMP("tier10");
-			T10key = new ItemKeyT6Eris().setUnlocalizedName("key");
+				T10key = new ItemKeyT6Eris().setUnlocalizedName("key");
+			}
 		}
-		if(Config.eris){
+		if(Config.kepler22b && Config.keplerSolarSystems){
 			tier11Items = new ItemTier11Items("tier11");
 		}
 		if(Config.cannedFood)

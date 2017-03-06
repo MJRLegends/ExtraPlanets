@@ -462,7 +462,6 @@ public class MapGenDungeon
 
 	public void generateEntranceCrater(Block[] blocks, byte[] meta, int x, int y, int z, int cx, int cz)
 	{
-		System.out.println(x + " " + y + " " + z);
 		final int range = 18;
 		int maxLevel = 0;
 
