@@ -15,7 +15,7 @@ public class Config {
 	private static String items = "items";
 	private static String blocks = "blocks";
 	private static String entities = "entities";
-	private static String modCompatibility = "other mod compatibility";
+	private static String modCompatibility = "mod compatibility";
 
 	private static String spacestationCustom = "space stations";
 
@@ -41,6 +41,7 @@ public class Config {
 	public static boolean mercuryItems;
 	public static boolean uraniumItems;
 	public static boolean kepler22bItems;
+	public static boolean thermalPaddings;
 	
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
@@ -226,10 +227,10 @@ public class Config {
 		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet/moon with all the related items/block//space stations!");
 		config.addCustomCategoryComment(schematicsGUI, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
-		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
+		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor or the item (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
 		config.addCustomCategoryComment(blocks, "Changing to false will disable the blocks/machines");
 		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
-		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planet)");
+		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
 		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
 		config.addCustomCategoryComment(generalsettings,"Enable/Disable general settings");
 		config.addCustomCategoryComment(entities ,"Enable/Disable entities");
@@ -248,13 +249,14 @@ public class Config {
 		uraniumItems = config.get(items, "Uranium Tools & Armor", true).getBoolean(true);
 		kepler22bItems = config.get(items, "Kepler22b Tools & Armor", true).getBoolean(true);
 		
+		thermalPaddings = config.get(items, "Tier 2 - 4 Thermal Padding", true, "This option will change planet thermal levels to support this feature!").getBoolean(true);
+		
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
 		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);
 
-		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will").getBoolean(true);
-		oreDictionary = config.get(dimensionSettings, "Add planet/moons ores to the ore dictionary", true, "").getBoolean(true);
-		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "").getBoolean(false);
+		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
+		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
 		
 		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
@@ -297,8 +299,8 @@ public class Config {
 		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true,"Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
-		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
-		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
+		mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
+		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
 		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
 
 		//	venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
@@ -410,6 +412,7 @@ public class Config {
 
 		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
+		oreDictionary = config.get(compatibility, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
 
 		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
 		
@@ -440,6 +443,7 @@ public class Config {
 			marsSpaceStation = false;
 			jupiterSpaceStation = false;
 			plutoSpaceStation = false;
+			thermalPaddings = false;
 		}
 	}
 

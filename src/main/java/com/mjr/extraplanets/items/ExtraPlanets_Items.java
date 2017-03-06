@@ -116,7 +116,8 @@ public class ExtraPlanets_Items {
 		initializeItems();
 		registerItems();
 		registerFluidContainer();
-		OreDictionaryRegister();
+		if(Config.oreDictionary)
+			OreDictionaryRegister();
 	}
 
 	private static void initializeItems() {
@@ -209,9 +210,13 @@ public class ExtraPlanets_Items {
 		ironApple = new ItemAppleIron(4, 2.2F, false);
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
-		tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
-		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
-		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
+		
+		if(Config.morePlanetsCompatibility == false && Config.thermalPaddings){
+			tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
+			tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
+			tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
+		}
+		
 		wafers = new ItemWafers("wafer");
 		advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 		ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
@@ -302,9 +307,11 @@ public class ExtraPlanets_Items {
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 
-		GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName());
-		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
-		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
+		if(Config.morePlanetsCompatibility == false && Config.thermalPaddings){
+			GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName());
+			GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
+			GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
+		}
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
 		

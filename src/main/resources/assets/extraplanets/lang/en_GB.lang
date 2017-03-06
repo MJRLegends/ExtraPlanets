@@ -353,6 +353,17 @@ tile.treasureChestT8.description=Tier 8 Treasure Chests will generate in Neptune
 tile.treasureChestT9.description=Tier 9 Treasure Chests will generate in Pluto Dungeons. They are unlockable after defeating the final boss.
 tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
 
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Tier 4 Treasure Chest
+tile.treasureChestT4Uranus.name=Tier 4 Treasure Chest
+tile.treasureChestT5Neptune.name=Tier 5 Treasure Chest
+tile.treasureChestT6Eris.name=Tier 6 Treasure Chest
+
+tile.treasureChestT4Saturn.description=Tier 4 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT4Uranus.description=Tier 4 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT5Neptune.description=Tier 4 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
 #Machines
 tile.advancedRefinery.name=Advanced Refinery
 tile.solar.hybrid.name=Hybrid Solar Panel
@@ -727,6 +738,8 @@ entity.ExtraPlanetsEvolvedBlaze.name=Evolved Blaze
 entity.ExtraPlanetsEvolvedBlueCreeper.name=Evolved Blue Creeper
 entity.ExtraPlanetsEvolvedRedCreeper.name=Evolved Red Creeper
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evolved Power Skeleton
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
 
 #Achievement
 achievement.mercuryPlanet=Land on Mercury!

@@ -356,6 +356,17 @@ tile.treasureChestT8.description=8階寶箱會在海王星地牢形成。當你�
 tile.treasureChestT9.description=9階寶箱會在冥王星地牢形成。當你擊敗了冥王星地牢BOSS後，就能拿到鑰匙來打開寶箱。
 tile.treasureChestT10.description=10階寶箱會在鬩神星地牢形成。當你擊敗了鬩神星地牢BOSS後，就能拿到鑰匙來打開寶箱。
 
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Tier 4 Treasure Chest
+tile.treasureChestT4Uranus.name=Tier 4 Treasure Chest
+tile.treasureChestT5Neptune.name=Tier 5 Treasure Chest
+tile.treasureChestT6Eris.name=Tier 6 Treasure Chest
+
+tile.treasureChestT4Saturn.description=Tier 4 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT4Uranus.description=Tier 4 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT5Neptune.description=Tier 4 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
 #Machines
 tile.advancedRefinery.name=高級精煉機
 tile.solar.hybrid.name=混合型高級太陽能電池板
@@ -731,6 +742,8 @@ entity.ExtraPlanetsEvolvedBlaze.name=烈焰人(進化體)
 entity.ExtraPlanetsEvolvedBlueCreeper.name=藍色爬行者(進化體)
 entity.ExtraPlanetsEvolvedRedCreeper.name=紅色爬行者(進化體)
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髏(進化體)
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
 
 #Achievement
 achievement.mercuryPlanet=登陸水星！

@@ -352,6 +352,17 @@ tile.treasureChestT8.description=Los cofres del tesoro nivel 8 se generarán en 
 tile.treasureChestT9.description=Los cofres del tesoro nivel 9 se generarán en las mazmorras de Pluto. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT10.description=Los cofres del tesoro nivel 10 se generarán en las mazmorras de Eris. Se desbloquean despues de matar al jefe final.
 
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Tier 4 Treasure Chest
+tile.treasureChestT4Uranus.name=Tier 4 Treasure Chest
+tile.treasureChestT5Neptune.name=Tier 5 Treasure Chest
+tile.treasureChestT6Eris.name=Tier 6 Treasure Chest
+
+tile.treasureChestT4Saturn.description=Tier 4 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT4Uranus.description=Tier 4 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT5Neptune.description=Tier 4 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
 #Machines
 tile.advancedRefinery.name=Refinería Avanzada
 tile.solar.hybrid.name=Panel Solar Híbrido
@@ -726,6 +737,8 @@ entity.ExtraPlanetsEvolvedBlaze.name=Blaze evolucionado
 entity.ExtraPlanetsEvolvedBlueCreeper.name=Creeper azúl evolucionado
 entity.ExtraPlanetsEvolvedRedCreeper.name=Creeper rojo evolucionado
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
 
 #Achievements
 achievement.mercuryPlanet=¡Aterriza en Mercurio!

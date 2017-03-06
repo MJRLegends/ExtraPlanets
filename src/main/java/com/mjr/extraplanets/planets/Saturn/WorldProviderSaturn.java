@@ -9,6 +9,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Saturn.worldgen.ChunkProviderSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.WorldChunkManagerSaturn;
@@ -140,10 +141,14 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return 70.0F;
+		if(Config.thermalPaddings){
+			if (isDaytime()) {
+				return 70.0F;
+			}
+			return -60.0F;
 		}
-		return 60.0F;
+		else
+			return -1.5F;
 	}
 
 	@Override
