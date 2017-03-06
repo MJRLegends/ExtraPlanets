@@ -1,15 +1,10 @@
 package com.mjr.extraplanets.planets;
 
-import java.util.HashMap;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
-import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
-import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Config;

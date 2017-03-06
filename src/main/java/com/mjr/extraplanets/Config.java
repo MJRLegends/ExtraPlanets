@@ -41,7 +41,11 @@ public class Config {
 	public static boolean mercuryItems;
 	public static boolean uraniumItems;
 	public static boolean kepler22bItems;
+	
 	public static boolean thermalPaddings;
+	public static boolean batteries;
+	public static boolean cannedFood;
+	public static boolean customApples;
 	
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
@@ -250,6 +254,9 @@ public class Config {
 		kepler22bItems = config.get(items, "Kepler22b Tools & Armor", true).getBoolean(true);
 		
 		thermalPaddings = config.get(items, "Tier 2 - 4 Thermal Padding", true, "This option will change planet thermal levels to support this feature!").getBoolean(true);
+		batteries = config.get(items, "Custom Batteries", true, "This option will disable all Custom Batteries!").getBoolean(true);
+		cannedFood = config.get(items, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
+		customApples = config.get(items, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable all Custom Normal/Notch Apples!").getBoolean(true);
 		
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
