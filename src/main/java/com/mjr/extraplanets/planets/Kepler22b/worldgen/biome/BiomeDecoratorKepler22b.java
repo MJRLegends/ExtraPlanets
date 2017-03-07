@@ -274,7 +274,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 		
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
-			if (this.rand.nextInt(100) == 1) {
+			if (this.rand.nextInt(200) == 1) {
 				int x = chunk_X + this.rand.nextInt(16) + 8;
 				int z = chunk_Z + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
