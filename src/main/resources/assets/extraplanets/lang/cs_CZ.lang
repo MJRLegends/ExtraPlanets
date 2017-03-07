@@ -728,7 +728,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Vyvinutá Čarodejnice
 entity.ExtraPlanetsEvolvedMagmaCube.name=Vyvinutá Magma Kostka

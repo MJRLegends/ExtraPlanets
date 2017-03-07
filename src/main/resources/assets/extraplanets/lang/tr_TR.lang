@@ -728,7 +728,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Evrimleşmiş Cadı
 entity.ExtraPlanetsEvolvedMagmaCube.name=Evrimleşmiş Magma Küpü

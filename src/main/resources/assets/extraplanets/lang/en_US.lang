@@ -729,7 +729,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Evolved Witch
 entity.ExtraPlanetsEvolvedMagmaCube.name=Evolved Magma Cube

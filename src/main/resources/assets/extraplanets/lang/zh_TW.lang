@@ -732,7 +732,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=冥王星爬行者之王(進化體)
 entity.ExtraPlanetsCreeperBossEris.name=鬩神星爬行者之王(進化體)
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=岩漿怪之王(進化體)
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=冰史萊姆之王(進化體)
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=冰史萊姆之王(進化體)
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=女巫(進化體)
 entity.ExtraPlanetsEvolvedMagmaCube.name=岩漿怪(進化體)
