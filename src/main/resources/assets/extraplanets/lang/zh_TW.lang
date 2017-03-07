@@ -500,6 +500,12 @@ item.key.T8.name=8階寶箱鑰匙
 item.key.T9.name=9階寶箱鑰匙
 item.key.T10.name=10階寶箱鑰匙
 
+#Keys For More Planets Compatibility
+item.key.T4Saturn.name=Tier 4 Saturn Dungeon Key
+item.key.T4Uranus.name=Tier 4 Uranus Dungeon Key
+item.key.T5Neptune.name=Tier 5 Neptune Dungeon Key
+item.key.T6Eris.name=Tier 6 Eris Dungeon Key
+
 #Tools
 item.carbonPickaxe.name=碳鎬
 item.carbonAxe.name=碳斧

@@ -496,6 +496,12 @@ item.key.T8.name=Klíč ke kobce typ 8
 item.key.T9.name=Klíč ke kobce typ 9
 item.key.T10.name=Klíč ke kobce typ 10
 
+#Keys For More Planets Compatibility
+item.key.T4Saturn.name=Tier 4 Saturn Dungeon Key
+item.key.T4Uranus.name=Tier 4 Uranus Dungeon Key
+item.key.T5Neptune.name=Tier 5 Neptune Dungeon Key
+item.key.T6Eris.name=Tier 6 Eris Dungeon Key
+
 #Tools
 item.carbonPickaxe.name=Karbonový krumpáč
 item.carbonAxe.name=Karbonová sekyra
