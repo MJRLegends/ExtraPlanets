@@ -86,6 +86,25 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 			this.setDead();
 		}
 	}
+	
+    @Override
+    protected String getLivingSound()
+    {
+        return null;
+    }
+
+    @Override
+    protected String getHurtSound()
+    {
+        this.playSound(GalacticraftCore.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
+        return null;
+    }
+
+    @Override
+    protected String getDeathSound()
+    {
+        return null;
+    }
 
 	/**
 	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
