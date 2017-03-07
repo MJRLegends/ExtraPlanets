@@ -47,7 +47,7 @@ public class BiomeDecoratorKepler22bOres extends BiomeDecoratorSpace {
 	}
 
 	@Override
-	protected void decorate() {
+	public void decorate() {
 		if (isDecorating)
 			return;
 		isDecorating = true;

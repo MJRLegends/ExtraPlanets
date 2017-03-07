@@ -6,11 +6,22 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.entity.monster.EntitySpider;
+import net.minecraft.entity.monster.EntityWitch;
+import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.passive.EntityChicken;
+import net.minecraft.entity.passive.EntityCow;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -39,6 +50,17 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 		this.enableSnow = true;
 		this.topBlock = ExtraPlanets_Blocks.kepler22bGrass.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState();
+		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
+		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
+		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));
+		this.spawnableMonsterList.add(new SpawnListEntry(EntityCreeper.class, 100, 4, 4));
+		this.spawnableMonsterList.add(new SpawnListEntry(EntityEnderman.class, 100, 1, 4));
+		this.spawnableMonsterList.add(new SpawnListEntry(EntityWitch.class, 5, 1, 1));
+
+		this.spawnableCreatureList.add(new SpawnListEntry(EntitySheep.class, 12, 4, 4));
+		this.spawnableCreatureList.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
+		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
+		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 	}
 
 	@Override
@@ -113,15 +135,5 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 				}
 			}
 		}
-	}
-
-	@Override
-	public BiomeGenBase setColor(int var1) {
-		return super.setColor(var1);
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.1F;
 	}
 }

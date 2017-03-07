@@ -240,8 +240,8 @@ public class ExtraPlanets_Items {
 		// cannedFood = new ItemCannedFood("cannedfood");
 		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 		ironApple = new ItemAppleIron(4, 2.2F, false);
-		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-			bodyParts = new ItemBodyParts();
+//		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
+//			bodyParts = new ItemBodyParts();
 
 		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
@@ -365,8 +365,6 @@ public class ExtraPlanets_Items {
 		if (Config.kepler22b) {
 			GameRegistry.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
 		}
-
-		GameRegistry.registerItem(magma_bucket, "bucket_magma");
 
 		// GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));

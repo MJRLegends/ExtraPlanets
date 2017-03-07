@@ -1,9 +1,11 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
+import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
 import net.minecraft.block.Block;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.IProgressUpdate;
@@ -246,10 +248,6 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		return provideChunk(x, z);
 	}
 
-	public boolean chunkExists(int x, int z) {
-		return true;
-	}
-
 	public void populate(IChunkProvider chunk, int x, int z) {
 		net.minecraft.block.BlockFalling.fallInstantly = true;
 		int var4 = x * 16;
@@ -260,34 +258,64 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
         long i1 = this.rand.nextLong() / 2L * 2L + 1L;
         long j1 = this.rand.nextLong() / 2L * 2L + 1L;
         this.rand.setSeed(var4 * i1 + var5 * j1 ^ this.worldObj.getSeed());
+        biomegenbase.decorate(this.worldObj, this.rand, pos);
 		SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomegenbase, var4 + 8, var5 + 8, 16, 16, this.rand);
 		net.minecraft.block.BlockFalling.fallInstantly = false;
 	}
 
-	public void decoratePlanet(World world, Random rand, int x, int z) {
-		this.BiomeDecorator.decorate(world, rand, x, z);
-	}
+    @Override
+    public String makeString()
+    {
+        return "Kepler22bLevelSource";
+    }
+    
+    @Override
+    public boolean chunkExists(int x, int z)
+    {
+        return true;
+    }
 
-	public boolean func_73151_a(boolean flag, IProgressUpdate progress) {
-		return true;
-	}
+    @Override
+    public Chunk provideChunk(BlockPos pos)
+    {
+        return this.provideChunk(pos.getX() >> 4, pos.getZ() >> 4);
+    }
 
-	public boolean func_73157_c() {
-		return true;
-	}
+    @Override
+    public boolean saveChunks(boolean p_73151_1_, IProgressUpdate progressCallback)
+    {
+        return true;
+    }
 
-	public String func_73148_d() {
-		return "Kepler22bLevelSource";
-	}
+    @Override
+    public boolean unloadQueuedChunks()
+    {
+        return false;
+    }
 
-	public int getLoadedChunkCount() {
-		return 0;
-	}
+    @Override
+    public boolean canSave()
+    {
+        return true;
+    }
 
-	public boolean unloadQueuedChunks() {
-		return false;
-	}
+    @Override
+    public int getLoadedChunkCount()
+    {
+        return 0;
+    }
 
-	public void saveExtraData() {
-	}
+    @Override
+    public void saveExtraData() {}
+
+    @Override
+    public boolean func_177460_a(IChunkProvider p_177460_1_, Chunk p_177460_2_, int p_177460_3_, int p_177460_4_)
+    {
+        return false;
+    }
+    
+    public List<BiomeGenBase.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos)
+    {
+    	return this.worldObj.getBiomeGenForCoords(pos).getSpawnableList(creatureType);
+    }
 }
