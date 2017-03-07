@@ -1,13 +1,13 @@
-package com.mjr.extraplanets.client.model;
+package com.mjr.extraplanets.client.model.bosses.defaultBosses;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
 
-public class ModelCreeperBossNeptune extends ModelBase
+public class ModelCreeperBossUranus extends ModelBase
 {
 	ModelRenderer headMain;
 	ModelRenderer bodyMain;
@@ -21,12 +21,12 @@ public class ModelCreeperBossNeptune extends ModelBase
 	ModelRenderer neckRight;
 	ModelRenderer neckLeft;
 
-	public ModelCreeperBossNeptune()
+	public ModelCreeperBossUranus()
 	{
 		this(0.0F);
 	}
 
-	public ModelCreeperBossNeptune(float scale)
+	public ModelCreeperBossUranus(float scale)
 	{
 		this.textureWidth = 128;
 		this.textureHeight = 64;
@@ -107,7 +107,7 @@ public class ModelCreeperBossNeptune extends ModelBase
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 
-		final EntityCreeperBossNeptune creeper = (EntityCreeperBossNeptune) entity;
+		final EntityCreeperBossUranus creeper = (EntityCreeperBossUranus) entity;
 
 		if (creeper.headsRemaining > 2)
 		{

@@ -1,13 +1,13 @@
-package com.mjr.extraplanets.client.model;
-
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
+package com.mjr.extraplanets.client.model.bosses.defaultBosses;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 
-public class ModelCreeperBossEris extends ModelBase
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+
+public class ModelCreeperBossJupiter extends ModelBase
 {
 	ModelRenderer headMain;
 	ModelRenderer bodyMain;
@@ -21,12 +21,12 @@ public class ModelCreeperBossEris extends ModelBase
 	ModelRenderer neckRight;
 	ModelRenderer neckLeft;
 
-	public ModelCreeperBossEris()
+	public ModelCreeperBossJupiter()
 	{
 		this(0.0F);
 	}
 
-	public ModelCreeperBossEris(float scale)
+	public ModelCreeperBossJupiter(float scale)
 	{
 		this.textureWidth = 128;
 		this.textureHeight = 64;
@@ -107,7 +107,7 @@ public class ModelCreeperBossEris extends ModelBase
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 
-		final EntityCreeperBossEris creeper = (EntityCreeperBossEris) entity;
+		final EntityCreeperBossJupiter creeper = (EntityCreeperBossJupiter) entity;
 
 		if (creeper.headsRemaining > 2)
 		{

@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.client.model.ModelCreeperBossSaturn;
+import com.mjr.extraplanets.client.model.bosses.defaultBosses.ModelCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 
 public class RenderCreeperBossSaturn extends RenderLiving<EntityCreeperBossSaturn> {

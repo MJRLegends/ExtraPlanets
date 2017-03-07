@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.model;
+package com.mjr.extraplanets.client.model.bosses.defaultBosses;
 
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 

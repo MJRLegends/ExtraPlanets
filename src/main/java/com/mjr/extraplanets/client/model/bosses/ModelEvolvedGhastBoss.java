@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.model;
+package com.mjr.extraplanets.client.model.bosses;
 
 import java.util.Random;
 

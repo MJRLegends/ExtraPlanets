@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.client.model.ModelCreeperBossJupiter;
+import com.mjr.extraplanets.client.model.bosses.defaultBosses.ModelCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
 
 public class RenderCreeperBossJupiter extends RenderLiving<EntityCreeperBossJupiter> {
