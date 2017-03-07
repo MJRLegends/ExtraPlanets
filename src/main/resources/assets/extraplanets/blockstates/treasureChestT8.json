@@ -1,0 +1,20 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "facing=north": { 
+			"model": "extraplanets:treasureChestT8"
+		},
+        "facing=east":  { 
+			"model": "extraplanets:treasureChestT8",
+			"y": 90
+		},
+        "facing=south": { 
+			"model": "extraplanets:treasureChestT8", 
+			"y": 180
+		},
+        "facing=west":  { 
+			"model": "extraplanets:treasureChestT8", 
+			"y": 270
+		}
+    }
+}
