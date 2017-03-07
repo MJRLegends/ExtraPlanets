@@ -73,7 +73,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.jupiterBlocks);
 			}
 		}
-		if (this.rand.nextInt(200) == 1) {
+		if (this.rand.nextInt(50) == 1) {
 			int x = this.chunkX + 8;
 			int z = this.chunkZ + 8;
 			int y = this.currentWorld.getHeightValue(x, z);
