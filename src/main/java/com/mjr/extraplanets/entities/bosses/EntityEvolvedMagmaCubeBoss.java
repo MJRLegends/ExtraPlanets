@@ -5,22 +5,14 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.entities.IBoss;
-import micdoodle8.mods.galacticraft.core.network.PacketSimple;
-import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
+import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
 import net.minecraft.entity.ai.EntityMoveHelper;
-import net.minecraft.entity.boss.IBossDisplayData;
-import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -31,28 +23,19 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MathHelper;
-import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
-import net.minecraftforge.common.ChestGenHooks;
-import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT7TreasureChest;
 
-public class EntityEvolvedMagmaCubeBoss extends EntityLiving implements IEntityBreathable, IBossDisplayData, IBoss {
+public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntityBreathable{
 	public float squishAmount;
 	public float squishFactor;
 	public float prevSquishFactor;
 	private boolean wasOnGround;
-
-	private TileEntityDungeonSpawner spawner;
-	private Vector3 roomCoords;
-	private Vector3 roomSize;
-	public int deathTicks = 0;
 
 	public EntityEvolvedMagmaCubeBoss(World worldIn) {
 		super(worldIn);
@@ -73,7 +56,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityLiving implements IEntityB
 		this.dataWatcher.updateObject(16, Byte.valueOf((byte) size));
 		this.setSize(0.51000005F * (float) size, 0.51000005F * (float) size);
 		this.setPosition(this.posX, this.posY, this.posZ);
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((double) (size * size));
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue((double) (0.2F + 0.1F * (float) size));
 		this.setHealth(this.getMaxHealth());
 		this.experienceValue = size;
@@ -192,98 +175,6 @@ public class EntityEvolvedMagmaCubeBoss extends EntityLiving implements IEntityB
 		}
 
 		super.onDataWatcherUpdate(dataID);
-	}
-
-	@Override
-	protected void onDeathUpdate() {
-		++this.deathTicks;
-
-		if (this.deathTicks >= 180 && this.deathTicks <= 200) {
-			final float f = (this.rand.nextFloat() - 0.5F) * 1.5F;
-			final float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F;
-			final float f2 = (this.rand.nextFloat() - 0.5F) * 1.5F;
-			this.worldObj.spawnParticle(EnumParticleTypes.EXPLOSION_HUGE, this.posX + f, this.posY + 2.0D + f1, this.posZ + f2, 0.0D, 0.0D, 0.0D);
-		}
-
-		int i;
-		int j;
-
-		if (!this.worldObj.isRemote) {
-			if (this.deathTicks >= 180 && this.deathTicks % 5 == 0) {
-				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_EXPLODE, this.worldObj.provider.getDimensionId(), new Object[] {}), new TargetPoint(this.worldObj.provider.getDimensionId(), this.posX, this.posY, this.posZ, 40.0D));
-			}
-
-			if (this.deathTicks > 150 && this.deathTicks % 5 == 0) {
-				i = 30;
-
-				while (i > 0) {
-					j = EntityXPOrb.getXPSplit(i);
-					i -= j;
-					this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
-				}
-			}
-
-			if (this.deathTicks == 1) {
-				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, this.worldObj.provider.getDimensionId(), new Object[] { getSoundPitch() - 0.1F }), new TargetPoint(this.worldObj.provider.getDimensionId(), this.posX, this.posY, this.posZ, 40.0D));
-			}
-		}
-
-		this.moveEntity(0.0D, 0.10000000149011612D, 0.0D);
-
-		if (this.deathTicks == 200 && !this.worldObj.isRemote) {
-			i = 20;
-
-			while (i > 0) {
-				j = EntityXPOrb.getXPSplit(i);
-				i -= j;
-				this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
-			}
-
-			TileEntityT7TreasureChest chest = TileEntityT7TreasureChest.findClosest(this);
-
-			if (chest != null) {
-				double dist = this.getDistanceSq(chest.getPos().getX() + 0.5, chest.getPos().getY() + 0.5, chest.getPos().getZ() + 0.5);
-				if (dist < 100 * 100) {
-					if (!chest.locked) {
-						chest.locked = true;
-					}
-
-					for (int k = 0; k < chest.getSizeInventory(); k++) {
-						chest.setInventorySlotContents(k, null);
-					}
-
-					ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
-
-					// Generate three times, since it's an extra extra special
-					// chest
-					WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
-					WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
-					WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
-
-					chest.setInventorySlotContents(this.rand.nextInt(chest.getSizeInventory()), this.getGuaranteedLoot(this.rand));
-				}
-			}
-
-			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T7key, 1, 0), 0.5F);
-
-			super.setDead();
-
-			if (this.spawner != null) {
-				this.spawner.isBossDefeated = true;
-				this.spawner.boss = null;
-				this.spawner.spawned = false;
-			}
-		}
-	}
-
-	@Override
-	public void setDead() {
-		if (this.spawner != null) {
-			this.spawner.isBossDefeated = false;
-			this.spawner.boss = null;
-			this.spawner.spawned = false;
-		}
-		super.setDead();
 	}
 
 	/**
@@ -624,23 +515,23 @@ public class EntityEvolvedMagmaCubeBoss extends EntityLiving implements IEntityB
 	}
 
 	@Override
-	public void setRoom(Vector3 roomCoords, Vector3 roomSize) {
-		this.roomCoords = roomCoords;
-		this.roomSize = roomSize;
-	}
-
-	@Override
-	public void onBossSpawned(TileEntityDungeonSpawner spawner) {
-		this.spawner = spawner;
-	}
-
-	@Override
 	public boolean canBreath() {
 		return true;
 	}
 
+	@Override
+	public int getChestTier() {
+		return 4;
+	}
+
+	@Override
+	public void dropKey() {
+        this.entityDropItem(new ItemStack(ExtraPlanets_Items.T4key, 1, 0), 0.5F);
+	}
+
+	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(4);
-		return stackList.get(rand.nextInt(stackList.size())).copy();
+        return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 }

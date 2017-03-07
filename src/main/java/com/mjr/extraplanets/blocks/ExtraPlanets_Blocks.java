@@ -269,7 +269,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres)
-			nuclearBomb = new BlockNuclearBomb();
+			nuclearBomb = new BlockNuclearBomb().setUnlocalizedName("nuclearBomb");
 		if (Config.leadOreGeneration)
 			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone);
 		if (Config.kepler22b) {

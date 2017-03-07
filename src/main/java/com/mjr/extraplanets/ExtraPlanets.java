@@ -24,15 +24,18 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
+import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.EntityCreeperBossMercury;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossMercury;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -270,7 +273,7 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		// registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		if (Config.mercury)
 			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 		if (Config.jupiter)
@@ -297,18 +300,26 @@ public class ExtraPlanets {
 		if (Config.jupiter)
 			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
-			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
+			
+			if (Config.useDefaultBosses)
+				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
+			else
+				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedGhastBoss.class, Constants.modName + "EvolvedGhastBoss", 894731, 0);
 		if (Config.uranus)
 			if (Config.useDefaultBosses)
 				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
 			else
-				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
+				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
-			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+			if (Config.useDefaultBosses)
+				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+			else
+				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedSnowmanBoss.class, Constants.modName + "EvolvedSnowmanBoss", 894731, 0);
 		if (Config.pluto)
 			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
 		if (Config.eris)
 			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
+
 	}
 
 	private void registerSchematicsRecipes() {
