@@ -246,7 +246,8 @@ public class ExtraPlanets_Items {
 		
 		if(Config.batteries){
 			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
-			ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
+			if(Config.morePlanetsCompatibility == false)
+				ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
 		}
 	}
 
@@ -351,7 +352,8 @@ public class ExtraPlanets_Items {
 		
 		if(Config.batteries){
 			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName());
-			GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName());
+			if(Config.morePlanetsCompatibility == false)
+				GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName());
 		}
 	}
 
