@@ -695,6 +695,10 @@ tier2.information=Venüs ve Merkür İçin Gerekli
 tier3.information=Jüpiter Ve Satürn İçin Gerekli
 tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
 
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
 #Other Items
 item.appleDiamond.name=Elmas Elma
 item.appleIron.name=Iron Apple

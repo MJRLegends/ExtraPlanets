@@ -694,6 +694,10 @@ tier2.information=Requerido para Venus y Mercurio durante el día y la noche
 tier3.information=Requerido para Júptier y Saturno incluyendo sus lunas durante el día y la noche
 tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas durante el día y la noche
 
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
 #Other Items
 item.appleDiamond.name=Manzana de diamante
 item.appleIron.name=Manzana de hierro

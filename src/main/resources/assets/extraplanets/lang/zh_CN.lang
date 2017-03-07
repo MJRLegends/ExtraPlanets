@@ -699,6 +699,10 @@ tier2.information=在金星和水星度过一天的必需品
 tier3.information=在木星和土星以及它们的卫星度过一天的必需品
 tier4.information=在天王星，海王星，冥王星和阋神星以及它们的卫星度过一天的必需品
 
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
 #Other Items
 item.appleDiamond.name=钻石苹果
 item.appleIron.name=Iron Apple

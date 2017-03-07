@@ -110,6 +110,8 @@ public class ExtraPlanets_Items {
 	public static Item compressedMercury;
 	public static Item ingotMercury;
 
+	public static Item thermalCloth;
+
 	public static Item tier2ThermalPadding;
 	public static Item tier3ThermalPadding;
 	public static Item tier4ThermalPadding;
@@ -234,6 +236,7 @@ public class ExtraPlanets_Items {
 			bodyParts = new ItemBodyParts();
 		
 		if(Config.morePlanetsCompatibility == false && Config.thermalPaddings){
+			thermalCloth = new ItemThermalCloth("thermalCloth");
 			tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
 			tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 			tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
@@ -338,6 +341,7 @@ public class ExtraPlanets_Items {
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 
 		if(Config.morePlanetsCompatibility == false && Config.thermalPaddings){
+			GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName());
 			GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName());
 			GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
 			GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
