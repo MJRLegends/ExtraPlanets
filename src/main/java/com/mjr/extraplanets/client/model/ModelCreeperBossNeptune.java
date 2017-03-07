@@ -5,7 +5,7 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
 
 public class ModelCreeperBossNeptune extends ModelBase
 {

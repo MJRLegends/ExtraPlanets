@@ -1,6 +1,6 @@
 package com.mjr.extraplanets.client.model;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

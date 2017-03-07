@@ -1,7 +1,7 @@
-package com.mjr.extraplanets.client.render.entity.rockets;
+package com.mjr.extraplanets.client.render.entities.rockets;
 
 import com.google.common.base.Function;
-import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
@@ -31,11 +31,11 @@ import org.lwjgl.opengl.GL12;
 import java.util.List;
 
 @SideOnly(Side.CLIENT)
-public class RenderTier6Rocket extends Render<EntityTier6Rocket>
+public class RenderTier4Rocket extends Render<EntityTier4Rocket>
 {
     private ItemModelRocketT3 rocketModel;
 
-    public RenderTier6Rocket(RenderManager manager)
+    public RenderTier4Rocket(RenderManager manager)
     {
         super(manager);
         this.shadowSize = 2F;
@@ -60,13 +60,13 @@ public class RenderTier6Rocket extends Render<EntityTier6Rocket>
     }
 
     @Override
-    protected ResourceLocation getEntityTexture(EntityTier6Rocket par1Entity)
+    protected ResourceLocation getEntityTexture(EntityTier4Rocket par1Entity)
     {
         return new ResourceLocation("missing");
     }
 
     @Override
-    public void doRender(EntityTier6Rocket entity, double par2, double par4, double par6, float par8, float par9)
+    public void doRender(EntityTier4Rocket entity, double par2, double par4, double par6, float par8, float par9)
     {
         GL11.glDisable(GL12.GL_RESCALE_NORMAL);
         GL11.glPushMatrix();

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.render.entity;
+package com.mjr.extraplanets.client.render.entities.bosses;
 
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;

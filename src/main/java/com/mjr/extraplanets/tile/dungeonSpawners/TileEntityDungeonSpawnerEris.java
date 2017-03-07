@@ -11,7 +11,7 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 
 public class TileEntityDungeonSpawnerEris extends TileEntityDungeonSpawner<EntityCreeperBossEris>
 {

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.render.entity.rockets;
+package com.mjr.extraplanets.client.render.entities.rockets;
 
 import com.google.common.base.Function;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;

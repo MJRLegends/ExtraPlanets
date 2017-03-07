@@ -6,8 +6,8 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 
-public class BlockVenusDungeonSpawner extends BlockBossSpawner {
-	public BlockVenusDungeonSpawner(String assetName) {
+public class BlockMercuryDungeonSpawner extends BlockBossSpawner {
+	public BlockMercuryDungeonSpawner(String assetName) {
 		super(assetName);
 	}
 

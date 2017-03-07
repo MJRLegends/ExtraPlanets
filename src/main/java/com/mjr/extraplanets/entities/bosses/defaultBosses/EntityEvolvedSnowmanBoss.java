@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.entities.bosses;
+package com.mjr.extraplanets.entities.bosses.defaultBosses;
 
 import java.util.List;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.entities.bosses;
+package com.mjr.extraplanets.entities.bosses.defaultBosses;
 
 import java.util.List;
 import java.util.Random;
@@ -48,9 +48,9 @@ import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT6TreasureChest;
 
-public class EntityCreeperBossEris extends EntityMob implements IEntityBreathable, IBossDisplayData, IRangedAttackMob, IBoss {
+public class EntityCreeperBossSaturn extends EntityMob implements IEntityBreathable, IBossDisplayData, IRangedAttackMob, IBoss {
 	protected long ticks = 0;
 	private TileEntityDungeonSpawner spawner;
 
@@ -64,7 +64,7 @@ public class EntityCreeperBossEris extends EntityMob implements IEntityBreathabl
 	private Vector3 roomCoords;
 	private Vector3 roomSize;
 
-	public EntityCreeperBossEris(World par1World) {
+	public EntityCreeperBossSaturn(World par1World) {
 		super(par1World);
 		this.setSize(2.0F, 7.0F);
 		this.isImmuneToFire = true;
@@ -109,7 +109,7 @@ public class EntityCreeperBossEris extends EntityMob implements IEntityBreathabl
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.05F);
 	}
 
-	public EntityCreeperBossEris(World world, Vector3 vec) {
+	public EntityCreeperBossSaturn(World world, Vector3 vec) {
 		this(world);
 		this.setPosition(vec.x, vec.y, vec.z);
 	}
@@ -187,7 +187,7 @@ public class EntityCreeperBossEris extends EntityMob implements IEntityBreathabl
 				this.worldObj.spawnEntityInWorld(new EntityXPOrb(this.worldObj, this.posX, this.posY, this.posZ, j));
 			}
 
-			TileEntityT10TreasureChest chest = TileEntityT10TreasureChest.findClosest(this);
+			TileEntityT6TreasureChest chest = TileEntityT6TreasureChest.findClosest(this);
 
 			if (chest != null) {
 				double dist = this.getDistanceSq(chest.getPos().getX() + 0.5, chest.getPos().getY() + 0.5, chest.getPos().getZ() + 0.5);
@@ -212,7 +212,7 @@ public class EntityCreeperBossEris extends EntityMob implements IEntityBreathabl
 				}
 			}
 
-			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T10key, 1, 0), 0.5F);
+			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T6key, 1, 0), 0.5F);
 
 			super.setDead();
 
@@ -332,7 +332,7 @@ public class EntityCreeperBossEris extends EntityMob implements IEntityBreathabl
 	}
 
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(10);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(6);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

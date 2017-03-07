@@ -9,13 +9,13 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensio
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets_Achievements;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.tools.BasicAxe;
 import com.mjr.extraplanets.items.tools.BasicHoe;

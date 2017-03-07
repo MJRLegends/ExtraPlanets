@@ -21,7 +21,7 @@ import com.mjr.extraplanets.blocks.dungeonSpawners.BlockNeptuneDungeonSpawner;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockPlutoDungeonSpawner;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockSaturnDungeonSpawner;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockUranusDungeonSpawner;
-import com.mjr.extraplanets.blocks.dungeonSpawners.BlockVenusDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockMercuryDungeonSpawner;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
@@ -309,7 +309,7 @@ public class ExtraPlanets_Blocks {
 
 	private static void initializeSpawnerBlocks() {
 		if (Config.mercury) {
-			mercurySpawner = new BlockVenusDungeonSpawner("bossSpawnerVenus");
+			mercurySpawner = new BlockMercuryDungeonSpawner("bossSpawnerVenus");
 		}
 		if (Config.jupiter) {
 			jupiterSpawner = new BlockJupiterDungeonSpawner("bossSpawnerVenus");

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.render.entity;
+package com.mjr.extraplanets.client.render.entities.bosses;
 
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -8,7 +8,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.client.model.ModelEvolvedSnowmanBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityEvolvedSnowmanBoss;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanBoss> {
