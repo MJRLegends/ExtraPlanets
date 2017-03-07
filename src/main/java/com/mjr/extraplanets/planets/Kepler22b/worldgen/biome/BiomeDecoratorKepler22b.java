@@ -14,7 +14,13 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
+import com.mjr.extraplanets.worldGen.features.WorldGenBlueHut;
+import com.mjr.extraplanets.worldGen.features.WorldGenBrownHut;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
+import com.mjr.extraplanets.worldGen.features.WorldGenGreenHut;
+import com.mjr.extraplanets.worldGen.features.WorldGenPurpleHut;
+import com.mjr.extraplanets.worldGen.features.WorldGenRedHut;
+import com.mjr.extraplanets.worldGen.features.WorldGenYellowHut;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
@@ -265,6 +271,35 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			int y = this.rand.nextInt(256);
 			int z = chunk_Z + this.rand.nextInt(16) + 8;
 			(new WorldGenKepler22bDungeons()).generate(this.currentWorld, rand, x, y, z);
+		}
+		
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
+			if (this.rand.nextInt(100) == 1) {
+				int x = chunk_X + this.rand.nextInt(16) + 8;
+				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z);
+				int randomNum = this.rand.nextInt(7) + 0;
+				switch(randomNum){
+					case 1:
+						(new WorldGenBlueHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 2:
+						(new WorldGenRedHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 3:
+						(new WorldGenPurpleHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 4:
+						(new WorldGenYellowHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 5:
+						(new WorldGenGreenHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 6:
+						(new WorldGenBrownHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+				}
+			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		isDecorating = false;

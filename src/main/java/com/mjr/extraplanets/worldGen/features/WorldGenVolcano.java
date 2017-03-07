@@ -1538,28 +1538,32 @@ public class WorldGenVolcano extends WorldGenerator {
 	}
 
 	public boolean fillChests(World world, Random rand, int x, int y, int z) {
-		TileEntityChest chest = (TileEntityChest) world.getTileEntity(x + 18, y + 0, z + 13);
+		// Determined if loot should be generated using a 1/2 chance
+		int random = rand.nextInt(10) + 1;
+		if (random < 5) {
+			TileEntityChest chest = (TileEntityChest) world.getTileEntity(x + 18, y + 0, z + 13);
 
-		if (chest != null) {
-			for (int i = 0; i < chest.getSizeInventory(); i++) {
-				chest.setInventorySlotContents(i, null);
+			if (chest != null) {
+				for (int i = 0; i < chest.getSizeInventory(); i++) {
+					chest.setInventorySlotContents(i, null);
+				}
+
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 
-			ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+			chest = (TileEntityChest) world.getTileEntity(x + 6, y + 0, z + 13);
 
-			WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
-		}
+			if (chest != null) {
+				for (int i = 0; i < chest.getSizeInventory(); i++) {
+					chest.setInventorySlotContents(i, null);
+				}
 
-		chest = (TileEntityChest) world.getTileEntity(x + 6, y + 0, z + 13);
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-		if (chest != null) {
-			for (int i = 0; i < chest.getSizeInventory(); i++) {
-				chest.setInventorySlotContents(i, null);
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
-
-			ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
-
-			WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 		}
 		return false;
 	}
