@@ -21,7 +21,6 @@ public class EntityNuclearBombPrimed extends Entity {
 
 	public EntityNuclearBombPrimed(World p_i1730_1_, double p_i1730_2_, double p_i1730_4_, double p_i1730_6_, EntityLivingBase p_i1730_8_) {
 		this(p_i1730_1_);
-		System.out.println("here1");
 		this.setPosition(p_i1730_2_, p_i1730_4_, p_i1730_6_);
 		float f = (float) (Math.random() * Math.PI * 2.0D);
 		this.motionX = -((float) Math.sin(f)) * 0.02F;
