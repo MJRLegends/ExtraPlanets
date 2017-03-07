@@ -21,6 +21,7 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
@@ -38,6 +39,7 @@ import com.mjr.extraplanets.entities.monsters.EntityEvolvedMiniEnderman;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedRedCreeper;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
+import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -307,6 +309,7 @@ public class ExtraPlanets {
 				registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
 			if (Config.eris)
 				registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
+			registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.modName + "SmallSnowBall", 150, 1, true);
 		}
 	}
 
@@ -329,9 +332,12 @@ public class ExtraPlanets {
 			if (Config.useDefaultBosses)
 				registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
 			else
-				registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
+				registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
-			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+			if (Config.useDefaultBosses)
+				registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+			else
+				registerExtraPlanetsCreature(EntityEvolvedSnowmanBoss.class, Constants.modName + "EvolvedSnowmanBoss", 894731, 0);
 		if (Config.pluto)
 			registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
 		if (Config.eris)

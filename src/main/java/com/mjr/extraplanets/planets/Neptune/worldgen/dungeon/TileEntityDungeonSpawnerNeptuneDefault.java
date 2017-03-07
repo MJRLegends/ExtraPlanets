@@ -11,18 +11,15 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
 
-public class TileEntityDungeonSpawnerNeptune extends TileEntityDungeonSpawner
-{
-	public TileEntityDungeonSpawnerNeptune()
-	{
-		super(EntityEvolvedSnowmanBoss.class);
+public class TileEntityDungeonSpawnerNeptuneDefault extends TileEntityDungeonSpawner {
+	public TileEntityDungeonSpawnerNeptuneDefault() {
+		super(EntityCreeperBossNeptune.class);
 	}
 
 	@Override
-	public List<Class<? extends EntityLiving>> getDisabledCreatures()
-	{
+	public List<Class<? extends EntityLiving>> getDisabledCreatures() {
 		List<Class<? extends EntityLiving>> list = new ArrayList<Class<? extends EntityLiving>>();
 		list.add(EntityEvolvedSkeleton.class);
 		list.add(EntityEvolvedZombie.class);
@@ -31,8 +28,7 @@ public class TileEntityDungeonSpawnerNeptune extends TileEntityDungeonSpawner
 	}
 
 	@Override
-	public void playSpawnSound(Entity entity)
-	{
+	public void playSpawnSound(Entity entity) {
 		this.worldObj.playSoundAtEntity(entity, GalacticraftCore.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
 	}
 }
