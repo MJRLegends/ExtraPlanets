@@ -217,6 +217,9 @@ public class ExtraPlanets_Recipes {
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 4, 7), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 2) });
 
+			// Block of Mercury
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 8), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0) });
+
 			if (Config.mercuryItems) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
@@ -243,8 +246,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.noseConeTier4, 1), new Object[] { " Y ", " X ", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', Blocks.redstone_torch });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', new ItemStack(AsteroidsItems.basicItem, 1, 0) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 0), new Object[] { " YV", "XWX", "XZX", 'V', Blocks.stone_button, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', Items.flint_and_steel, 'Z', GCItems.oxygenVent });
-			GameRegistry
-					.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 1), 'Z', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 4) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 1), 'Z', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 4) });
 
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 2) });
@@ -585,6 +587,9 @@ public class ExtraPlanets_Recipes {
 			}
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 4, 6), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 2) });
+
+			// Block of Dark Iron
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 8), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5) });
 
 			// Slab's & Stairs
 			if (Config.slabsAndStairs) {
