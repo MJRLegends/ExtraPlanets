@@ -263,9 +263,10 @@ public class ExtraPlanets_Items {
 			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 			ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
 		}
-		oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
-		oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
-
+		if(Config.oxygenTanks){
+			oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
+			oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
+		}
 		ingotLead = new ItemBasicItem("ingotLead");
 
 		cloth = new ItemBasicItem("cloth");
@@ -404,9 +405,10 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
 		}
-		GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
-
+		if(Config.oxygenTanks){
+			GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
+		}
 		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
 
 		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
@@ -505,12 +507,13 @@ public class ExtraPlanets_Items {
 	}
 
 	public static void registerGearItems() {
-		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankVeryHeavy);
-		GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankVeryHeavy);
-
-		GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
-		GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
-		
+		if(Config.oxygenTanks){
+			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankVeryHeavy);
+			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankVeryHeavy);
+	
+			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
+			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
+		}
 		GalacticraftRegistry.registerGear(6000, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier3ThermalPadding, 1, 0));
         GalacticraftRegistry.registerGear(6001, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier3ThermalPadding, 1, 1));
         GalacticraftRegistry.registerGear(6002, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier3ThermalPadding, 1, 2));

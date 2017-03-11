@@ -2,6 +2,9 @@ package com.mjr.extraplanets;
 
 import java.io.File;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.util.ClientUtilities;
+
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
@@ -56,7 +59,8 @@ public class Config {
 	public static boolean batteries;
 	//public static boolean cannedFood;
 	public static boolean customApples;
-
+	public static boolean oxygenTanks;
+	
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
 	public static boolean ultimateRefinery;
@@ -248,6 +252,7 @@ public class Config {
 		batteries = config.get(items, "Custom Batteries", true, "This option will disable all Custom Batteries!").getBoolean(true);
 		//cannedFood = config.get(items, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
 		customApples = config.get(items, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable all Custom Normal/Notch Apples!").getBoolean(true);
+		oxygenTanks = config.get(items, "Custom Oxygen Tanks", true, "This option will disable Extremely Heavy & Very Heavy Oxygen Tanks").getBoolean(true);
 		
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
