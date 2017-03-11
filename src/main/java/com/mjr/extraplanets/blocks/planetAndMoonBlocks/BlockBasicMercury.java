@@ -106,6 +106,8 @@ public class BlockBasicMercury extends Block implements IDetectableResource, IPl
         	return 40.0F;
         else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
         	return 6.0F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_CARBON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_MERCURY)
+			return 3.0F;
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
     

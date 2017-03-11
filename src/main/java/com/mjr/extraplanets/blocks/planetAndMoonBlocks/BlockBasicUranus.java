@@ -99,6 +99,8 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
         	return 40.0F;
         else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
         	return 6.0F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_CRYISTAL || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_GEM)
+			return 3.0F;
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
 

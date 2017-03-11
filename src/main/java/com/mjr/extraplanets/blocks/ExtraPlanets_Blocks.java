@@ -271,7 +271,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.ceres)
 			nuclearBomb = new BlockNuclearBomb().setUnlocalizedName("nuclearBomb");
 		if (Config.leadOreGeneration)
-			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone);
+			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
 		if (Config.kepler22b) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");

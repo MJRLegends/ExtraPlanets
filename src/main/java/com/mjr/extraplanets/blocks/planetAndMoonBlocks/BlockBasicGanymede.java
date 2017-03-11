@@ -98,6 +98,8 @@ public class BlockBasicGanymede extends Block implements IDetectableResource, IP
     	IBlockState state = world.getBlockState(pos);
 		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE)
         	return 6.0F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN)
+			return 3.0F;
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
 
