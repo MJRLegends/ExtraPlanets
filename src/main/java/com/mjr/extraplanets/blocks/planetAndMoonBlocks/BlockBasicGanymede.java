@@ -33,6 +33,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto.EnumBlockBasic;
 
 public class BlockBasicGanymede extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock
 {
@@ -91,10 +92,12 @@ public class BlockBasicGanymede extends Block implements IDetectableResource, IP
         return MapColor.redColor;
     }
 
-    @Override
+	@Override
     public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
     {
-        IBlockState state = world.getBlockState(pos);
+    	IBlockState state = world.getBlockState(pos);
+		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE)
+        	return 6.0F;
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
 
@@ -102,7 +105,12 @@ public class BlockBasicGanymede extends Block implements IDetectableResource, IP
     public float getBlockHardness(World worldIn, BlockPos pos)
     {
         IBlockState state = worldIn.getBlockState(pos);
-        return this.blockHardness;
+		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
+			return 0.5F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN)
+			return 5.0F;
+		else
+			return 1.5F;
     }
 
     @Override

@@ -33,6 +33,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus.EnumBlockBasic;
 
 public class BlockBasicKepler22b extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeKepler22b", EnumBlockBasic.class);
@@ -90,9 +91,13 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
-		return super.getExplosionResistance(world, pos, exploder, explosion);
-	}
+    public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
+    {
+    	IBlockState state = world.getBlockState(pos);
+		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
+        	return 6.0F;
+        return super.getExplosionResistance(world, pos, exploder, explosion);
+    }
 
 	@Override
 	public float getBlockHardness(World worldIn, BlockPos pos) {

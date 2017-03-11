@@ -36,6 +36,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury.EnumBlockBasic;
 
 public class BlockBasicPluto extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock
 {
@@ -102,30 +103,29 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
         return MapColor.redColor;
     }
 
-    @Override
+	@Override
     public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
     {
-        IBlockState state = world.getBlockState(pos);
-
-        if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
-        {
-            return 40.0F;
-        }
-
+    	IBlockState state = world.getBlockState(pos);
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
+        	return 40.0F;
+        else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
+        	return 6.0F;
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
 
-    @Override
+	@Override
     public float getBlockHardness(World worldIn, BlockPos pos)
     {
         IBlockState state = worldIn.getBlockState(pos);
-
-        if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
-        {
-            return 4.0F;
-        }
-
-        return this.blockHardness;
+		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
+			return 0.5F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TUNGSTEN)
+			return 5.0F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
+			return 4.0F;
+		else
+			return 1.5F;
     }
 
     @Override
