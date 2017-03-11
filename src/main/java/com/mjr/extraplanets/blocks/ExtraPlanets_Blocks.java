@@ -85,6 +85,7 @@ import com.mjr.extraplanets.tile.treasureChests.TileEntityT6TreasureChest;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.util.RegisterHelper;
 import com.mjr.extraplanets.world.WorldGenerationOverworld;
 
 public class ExtraPlanets_Blocks {
@@ -479,167 +480,162 @@ public class ExtraPlanets_Blocks {
 		}
 	}
 	
-	private static void setHarvestLevel(Block block, String toolClass, int level, int meta)
-    {
-        block.setHarvestLevel(toolClass, level, block.getStateFromMeta(meta));
-    }
-	
 	private static void setHarvestLevels() {
 		if (Config.mercury) {
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 2, 5); //Copper Ore
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 2, 6); //Mercury Ore
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 1, 7); //Mercury Block
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 1, 8); //Stone Bricks
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 2, 10); //Carbon Ore
-	        setHarvestLevel(mercuryBlocks, "pickaxe", 1, 11); //Carbon Block
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 6); //Mercury Ore
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 7); //Mercury Block
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 8); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 10); //Carbon Ore
+	        RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 11); //Carbon Block
 		}
 		if (Config.jupiter) {
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 2, 5); //Copper Ore
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 2, 6); //Palladium Ore
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 1, 7); //Palladium Block
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 1, 8); //Stone Bricks
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 2, 10); //Red Gem Ore
-	        setHarvestLevel(jupiterBlocks, "pickaxe", 1, 11); //Red Gem Block
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 6); //Palladium Ore
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 7); //Palladium Block
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 8); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 10); //Red Gem Ore
+	        RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 11); //Red Gem Block
 		}
 		if (Config.saturn) {
-	        setHarvestLevel(saturnBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(saturnBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(saturnBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(saturnBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(saturnBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(saturnBlocks, "pickaxe", 2, 5); //Copper Ore
-	        setHarvestLevel(saturnBlocks, "pickaxe", 2, 6); //Magnesium Ore
-	        setHarvestLevel(saturnBlocks, "pickaxe", 1, 7); //Magnesium Block
-	        setHarvestLevel(saturnBlocks, "pickaxe", 1, 8); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 6); //Magnesium Ore
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 7); //Magnesium Block
+	        RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 8); //Stone Bricks
 		}
 		if (Config.uranus) {
-	        setHarvestLevel(uranusBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(uranusBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(uranusBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(uranusBlocks, "pickaxe", 2, 3); //Crystal Ore
-	        setHarvestLevel(uranusBlocks, "pickaxe", 1, 4); //Crystal Block
-	        setHarvestLevel(uranusBlocks, "pickaxe", 1, 5); //Stone Bricks
-	        setHarvestLevel(uranusBlocks, "pickaxe", 2, 7); //White Gem Ore
-	        setHarvestLevel(uranusBlocks, "pickaxe", 1, 8); //White Gem Block
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 2, 3); //Crystal Ore
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 4); //Crystal Block
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 5); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 2, 7); //White Gem Ore
+	        RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 8); //White Gem Block
 		}
 		if (Config.neptune) {
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 2, 5); //Copper Ore
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 2, 6); //Zinc Ore
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 1, 7); //Zinc Block
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 1, 8); //Stone Bricks
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 2, 10); //Blue Gem Ore
-	        setHarvestLevel(neptuneBlocks, "pickaxe", 1, 11); //Blue Gem Block
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 6); //Zinc Ore
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 7); //Zinc Block
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 8); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 10); //Blue Gem Ore
+	        RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 11); //Blue Gem Block
 		}
 		if (Config.pluto) {
-	        setHarvestLevel(plutoBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(plutoBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(plutoBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(plutoBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(plutoBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(plutoBlocks, "pickaxe", 2, 5); //Copper Ore
-	        setHarvestLevel(plutoBlocks, "pickaxe", 2, 6); //Tungsten Ore
-	        setHarvestLevel(plutoBlocks, "pickaxe", 1, 7); //Tungsten Block
-	        setHarvestLevel(plutoBlocks, "pickaxe", 1, 8); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 6); //Tungsten Ore
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 7); //Tungsten Block
+	        RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 8); //Stone Bricks
 		}
 		if (Config.eris) {
-	        setHarvestLevel(erisBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(erisBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(erisBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(erisBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(erisBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(erisBlocks, "pickaxe", 2, 5); //Copper Ore
-	        setHarvestLevel(erisBlocks, "pickaxe", 2, 6); //Dark Iron Ore
-	        setHarvestLevel(erisBlocks, "pickaxe", 1, 7); //Dark Iron Block
-	        setHarvestLevel(erisBlocks, "pickaxe", 1, 8); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 6); //Dark Iron Ore
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 7); //Dark Iron Block
+	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 8); //Stone Bricks
 		}
 		if (Config.callisto) {
-	        setHarvestLevel(callistoBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(callistoBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(callistoBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(callistoBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(callistoBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(callistoBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.deimos) {
-	        setHarvestLevel(deimosBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(deimosBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(deimosBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(deimosBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(deimosBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(deimosBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.europa) {
-	        setHarvestLevel(europaBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(europaBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(europaBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(europaBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(europaBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(europaBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.ganymede) {
-	        setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(ganymedeBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.io) {
-	        setHarvestLevel(ioBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(ioBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(ioBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(ioBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(ioBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(ioBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.phobos) {
-	        setHarvestLevel(phobosBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(phobosBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(phobosBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(phobosBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(phobosBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(phobosBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.rhea) {
-	        setHarvestLevel(rheaBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(rheaBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(rheaBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(rheaBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(rheaBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(rheaBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.titan) {
-	        setHarvestLevel(titanBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(titanBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(titanBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(titanBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(titanBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(titanBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
 		if (Config.triton) {
-	        setHarvestLevel(tritonBlocks, "pickaxe", 0, 0); //Surface
-	        setHarvestLevel(tritonBlocks, "pickaxe", 0, 1); //Sub Surface
-	        setHarvestLevel(tritonBlocks, "pickaxe", 1, 2); //Stone
-	        setHarvestLevel(tritonBlocks, "pickaxe", 2, 3); //Iron Ore
-	        setHarvestLevel(tritonBlocks, "pickaxe", 2, 4); //Tin Ore
-	        setHarvestLevel(tritonBlocks, "pickaxe", 2, 5); //Copper Ore
+	        RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 0, 0); //Surface
+	        RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 0, 1); //Sub Surface
+	        RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 1, 2); //Stone
+	        RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 3); //Iron Ore
+	        RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 4); //Tin Ore
+	        RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 5); //Copper Ore
 		}
-        setHarvestLevel(oreLead, "pickaxe", 2, 0); //Lead Ore
+        RegisterHelper.setHarvestLevel(oreLead, "pickaxe", 2, 0); //Lead Ore
 	}
 
 	public static void OreDictionaryRegister() {
