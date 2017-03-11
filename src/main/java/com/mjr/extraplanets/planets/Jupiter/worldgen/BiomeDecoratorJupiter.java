@@ -8,9 +8,12 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
 import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.world.features.WorldGenIgloo;
 
 public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
@@ -73,6 +76,13 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.jupiterBlocks);
 			}
+		}
+		
+		if (this.rand.nextInt(50) == 1) {
+			int x = this.chunkX + 8;
+			int z = this.chunkZ + 8;
+			int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY();
+			new WorldGenBasicHideout().generate(this.currentWorld, this.rand, new BlockPos(x, y, z));
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 
