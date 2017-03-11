@@ -39,6 +39,7 @@ import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
 import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
@@ -128,6 +129,8 @@ public class ExtraPlanets_Items {
 	public static Item tier3ArmorLayer;
 	public static Item tier4ArmorLayer;
 
+	public static Item thermalCloth;
+	
 	public static Item tier3ThermalPadding;
 	public static Item tier4ThermalPadding;
 	public static Item tier5ThermalPadding;
@@ -243,6 +246,7 @@ public class ExtraPlanets_Items {
 //		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 //			bodyParts = new ItemBodyParts();
 
+		thermalCloth = new ItemThermalCloth("thermalCloth");
 		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
 		tier5ThermalPadding = new ItemTier5ThermalPadding("tier5ThermalPadding");
@@ -373,6 +377,7 @@ public class ExtraPlanets_Items {
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 
+		GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName());
 		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
