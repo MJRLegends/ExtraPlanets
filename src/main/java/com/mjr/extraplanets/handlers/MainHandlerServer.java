@@ -144,8 +144,7 @@ public class MainHandlerServer {
 		final EntityLivingBase entityLiving = event.entityLiving;
 		if (entityLiving instanceof EntityPlayerMP) {
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
-			// if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false) { TODO: Will be used when Galacticraft fix the Oxygen Sealer Ambient Thermal Controller
-			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox()) == false)
+			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false)
 				runChecks(event, entityLiving);
 		}
 	}
