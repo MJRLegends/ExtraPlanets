@@ -28,6 +28,7 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossMercury;
@@ -35,7 +36,6 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptu
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;

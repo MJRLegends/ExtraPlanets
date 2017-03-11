@@ -8,7 +8,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.client.model.bosses.ModelEvolvedSnowmanBoss;
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanBoss> {

@@ -29,7 +29,7 @@ public class RoomBossNeptune extends RoomBoss
 
     public RoomBossNeptune(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, EnumFacing entranceDir)
     {
-        super(configuration, rand, blockPosX, blockPosZ, 24, 11, 24, entranceDir);
+        super(configuration, rand, blockPosX, blockPosZ, 24, 18, 24, entranceDir);
     }
 
     @Override
