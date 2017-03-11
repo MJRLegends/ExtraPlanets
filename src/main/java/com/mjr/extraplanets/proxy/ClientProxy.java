@@ -177,7 +177,7 @@ public class ClientProxy extends CommonProxy {
 					"pluto_dungeon_brick");
 		if (Config.eris)
 			ClientUtilities.addExtraPlanetsVariants("eris", "eris_surface", "eris_sub_surface", "eris_stone", "eris_ore_iron", "eris_ore_tin", "eris_ore_copper", "eris_ore_dark_iron", "eris_dark_iron_block", "eris_stonebricks", "eris_dungeon_brick");
-		if (Config.kepler22b)
+		if (Config.kepler22b && Config.keplerSolarSystems)
 			ClientUtilities.addExtraPlanetsVariants("kepler22b", "kepler22b_dirt", "kepler22b_stone", "kepler22b_ore_iron", "kepler22b_ore_tin", "kepler22b_ore_copper", "kepler22b_ore_dense_coal", "kepler22b_ore_blue_diamond",
 					"kepler22b_ore_red_diamond", "kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone");
 		if (Config.callisto)
@@ -212,7 +212,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("tier9Items", "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten");
 		if (Config.eris)
 			ClientUtilities.addExtraPlanetsVariants("tier10Items", "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compressedDarkIron", "ingotDarkIron");
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			ClientUtilities.addExtraPlanetsVariants("tier11Items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bPlanks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
@@ -220,9 +220,12 @@ public class ClientProxy extends CommonProxy {
 		}
 
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
-		ClientUtilities.addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
-		ClientUtilities.addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
-		ClientUtilities.addExtraPlanetsVariants("tier5ThermalPadding", "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots");
+		
+		if(Config.thermalPaddings){
+			ClientUtilities.addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
+			ClientUtilities.addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
+			ClientUtilities.addExtraPlanetsVariants("tier5ThermalPadding", "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots");
+		}
 		if (Config.solarPanels)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
 
@@ -354,7 +357,8 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresBlocks, blockBasic.getMeta(), blockBasic.getName());
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresGravel);
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.nuclearBomb);
+			if (Config.nuclearBomb)
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.nuclearBomb);
 		}
 		if (Config.jupiter) {
 			for (BlockBasicJupiter.EnumBlockBasic blockBasic : BlockBasicJupiter.EnumBlockBasic.values()) {
@@ -398,7 +402,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier10);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.erisGravel);
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			for (BlockBasicKepler22b.EnumBlockBasic blockBasic : BlockBasicKepler22b.EnumBlockBasic.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bBlocks, blockBasic.getMeta(), blockBasic.getName());
 			}
@@ -479,7 +483,7 @@ public class ClientProxy extends CommonProxy {
 		}
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.oreLead);
 
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bBlueGrass);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bRedGrass);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bPurpleGrass);
@@ -702,7 +706,7 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier10Items, i, ItemTier10Items.names[i]);
 			}
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			for (int i = 0; i < ItemTier11Items.names.length; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier11Items, i, ItemTier11Items.names[i]);
 			}
@@ -771,16 +775,17 @@ public class ClientProxy extends CommonProxy {
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.wafers, i, ItemWafers.names[i]);
 		}
-		for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier3ThermalPadding, i, ItemTier3ThermalPadding.names[i]);
+		if(Config.thermalPaddings){
+			for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier3ThermalPadding, i, ItemTier3ThermalPadding.names[i]);
+			}
+			for (int i = 0; i < ItemTier4ThermalPadding.names.length / 2; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier4ThermalPadding, i, ItemTier4ThermalPadding.names[i]);
+			}
+			for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier5ThermalPadding, i, ItemTier5ThermalPadding.names[i]);
+			}
 		}
-		for (int i = 0; i < ItemTier4ThermalPadding.names.length / 2; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier4ThermalPadding, i, ItemTier4ThermalPadding.names[i]);
-		}
-		for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier5ThermalPadding, i, ItemTier5ThermalPadding.names[i]);
-		}
-
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.oxygenTankExtremelyHeavy);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.oxygenTankVeryHeavy);
 

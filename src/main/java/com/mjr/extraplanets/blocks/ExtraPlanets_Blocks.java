@@ -186,7 +186,7 @@ public class ExtraPlanets_Blocks {
 		setHarvestLevels();
 		if (Config.oreDictionary)
 			OreDictionaryRegister();
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			initializeTreeBlocks();
 			registerTreeBlocks();
 		}
@@ -269,11 +269,11 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
-		if (Config.ceres)
+		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb().setUnlocalizedName("nuclearBomb");
 		if (Config.leadOreGeneration)
 			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
 			kepler22bBlueGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_blue_grass");
@@ -394,7 +394,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(erisGravel, erisGravel.getUnlocalizedName().substring(5));
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(kepler22bGrass, kepler22bGrass.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(kepler22bBlueGrass, kepler22bBlueGrass.getUnlocalizedName().substring(5));
@@ -442,7 +442,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, fossil.getUnlocalizedName().substring(5));
-		if (Config.ceres)
+		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, nuclearBomb.getUnlocalizedName().substring(5));
 		if (Config.leadOreGeneration)
 			GameRegistry.registerBlock(oreLead, oreLead.getUnlocalizedName().substring(5));
@@ -751,7 +751,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			 OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
 			 OreDictionary.registerOre("oreIron", new ItemStack(kepler22bBlocks, 1, 2));
 			 OreDictionary.registerOre("oreCopper", new ItemStack(kepler22bBlocks, 1, 3));

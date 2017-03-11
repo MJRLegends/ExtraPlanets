@@ -213,7 +213,7 @@ public class ExtraPlanets_Tools {
 			tungstenShovel = new BasicShovel(tungstenMaterial, "tungstenShovel");
 			tungstenSword = new BasicSword(tungstenMaterial, "tungstenSword");
 		}
-		if (Config.kepler22b && Config.kepler22bItems) {
+		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
 			blueDiamondPickaxe = new BasicPickaxe(blueDiamondMaterial, "blueDiamondPickaxe");
 			blueDiamondAxe = new BasicAxe(blueDiamondMaterial, "blueDiamondAxe");
 			blueDiamondHoe = new BasicHoe(blueDiamondMaterial, "blueDiamondHoe");
@@ -330,7 +330,7 @@ public class ExtraPlanets_Tools {
 			GameRegistry.registerItem(tungstenShovel, "tungstenShovel");
 			GameRegistry.registerItem(tungstenSword, "tungstenSword");
 		}
-		if (Config.kepler22b && Config.kepler22bItems) {
+		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
 			GameRegistry.registerItem(blueDiamondPickaxe, "blueDiamondPickaxe");
 			GameRegistry.registerItem(blueDiamondAxe, "blueDiamondAxe");
 			GameRegistry.registerItem(blueDiamondHoe, "blueDiamondHoe");

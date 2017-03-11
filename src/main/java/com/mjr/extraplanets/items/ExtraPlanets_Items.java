@@ -167,7 +167,8 @@ public class ExtraPlanets_Items {
 
 	private static void initializeItems() {
 		if (Config.mercury) {
-			mercuryBattery = new ItemBasicBattery("mercuryBattery", 85000f, 2);
+			if(Config.batteries)
+				mercuryBattery = new ItemBasicBattery("mercuryBattery", 85000f, 2);
 
 			ingotMercury = new ItemBasicItem("ingotMercury");
 			compressedMercury = new ItemMercuryCompressed("compressedMercury");
@@ -183,7 +184,8 @@ public class ExtraPlanets_Items {
 			salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
 		}
 		if (Config.jupiter) {
-			nickelBattery = new ItemBasicBattery("nickelBattery", 45000f, 2);
+			if(Config.batteries)
+				nickelBattery = new ItemBasicBattery("nickelBattery", 45000f, 2);
 			magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
 
 			tier5Rocket = new Tier5Rocket("itemTier5Rocket");
@@ -211,7 +213,8 @@ public class ExtraPlanets_Items {
 			T7key = new ItemKeyT7("T7key");
 		}
 		if (Config.neptune) {
-			zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
+			if(Config.batteries)
+				zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
 			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
 
 			tier8Rocket = new Tier8Rocket("itemTier8Rocket");
@@ -234,26 +237,32 @@ public class ExtraPlanets_Items {
 			tier10Items = new ItemTier10Items("tier10Items");
 			T10key = new ItemKeyT10("T10key");
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			tier11Items = new ItemTier11Items("tier11Items");
 		}
 		
 		magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
 		
 		// cannedFood = new ItemCannedFood("cannedfood");
-		diamondApple = new ItemAppleDiamond(8, 2.2F, false);
-		ironApple = new ItemAppleIron(4, 2.2F, false);
+		if(Config.customApples){
+			diamondApple = new ItemAppleDiamond(8, 2.2F, false);
+			ironApple = new ItemAppleIron(4, 2.2F, false);
+		}
 //		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 //			bodyParts = new ItemBodyParts();
 
-		thermalCloth = new ItemThermalCloth("thermalCloth");
-		tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
-		tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
-		tier5ThermalPadding = new ItemTier5ThermalPadding("tier5ThermalPadding");
+		if(Config.thermalPaddings){
+			thermalCloth = new ItemThermalCloth("thermalCloth");
+			tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
+			tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
+			tier5ThermalPadding = new ItemTier5ThermalPadding("tier5ThermalPadding");
+		}
 
 		wafers = new ItemWafers("wafer");
-		advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
-		ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
+		if(Config.batteries){
+			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
+			ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
+		}
 		oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
 		oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
 
@@ -302,7 +311,8 @@ public class ExtraPlanets_Items {
 
 	private static void registerItems() {
 		if (Config.mercury) {
-			GameRegistry.registerItem(mercuryBattery, mercuryBattery.getUnlocalizedName().substring(5));
+			if(Config.batteries)
+				GameRegistry.registerItem(mercuryBattery, mercuryBattery.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(compressedMercury, compressedMercury.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(ingotMercury, ingotMercury.getUnlocalizedName().substring(5));
 			
@@ -323,7 +333,8 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier5Items, tier5Items.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(T5key, T5key.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(nickelBattery, nickelBattery.getUnlocalizedName().substring(5));
+			if(Config.batteries)
+				GameRegistry.registerItem(nickelBattery, nickelBattery.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(magma_bucket, "bucket_magma");
 		}
 		if (Config.saturn) {
@@ -349,7 +360,8 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(noseConeTier8, noseConeTier8.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier8Items, tier8Items.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(T8key, T8key.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(zincBattery, zincBattery.getUnlocalizedName().substring(5));
+			if(Config.batteries)
+				GameRegistry.registerItem(zincBattery, zincBattery.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		}
 		if (Config.pluto) {
@@ -366,27 +378,32 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier10Items, tier10Items.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(T10key, T10key.getUnlocalizedName().substring(5));
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
 		}
 
 		// GameRegistry.registerItem(cannedFood, "cannedFood");
-		GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
+		if(Config.customApples){
+			GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
+		}
 
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
-
-		GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName());
-		GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
+		
+		if(Config.thermalPaddings){
+			GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName());
+			GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
+		}
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
 
-		GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
-
+		if(Config.batteries){
+			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
+		}
 		GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
 
@@ -477,7 +494,7 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("ingotTungsten", new ItemStack(tier9Items, 1, 5));
 		if (Config.eris)
 			OreDictionary.registerOre("ingotDarkIron", new ItemStack(tier10Items, 1, 5));
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(tier11Items, 1, 0));
 			OreDictionary.registerOre("gemRedDiamond", new ItemStack(tier11Items, 1, 1));
 			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier11Items, 1, 2));

@@ -164,7 +164,7 @@ public class ExtraPlanets_Planets {
 			eris.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			eris.setDimensionInfo(Config.erisID, WorldProviderEris.class);
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			 kepler22b = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
 			 kepler22b.setTierRequired(10);
 			 kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F);
@@ -290,7 +290,7 @@ public class ExtraPlanets_Planets {
 			GalacticraftRegistry.registerTeleportType(WorldProviderEris.class, new TeleportTypeEris());
 			GalacticraftRegistry.registerRocketGui(WorldProviderEris.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/erisRocketGui.png"));
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GalaxyRegistry.registerPlanet(kepler22b);
 			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22b.class, new TeleportTypeKepler22b());
 			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/kepler22bRocketGui.png"));

@@ -64,6 +64,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
+import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
@@ -178,7 +179,9 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new PlutoEvents());
 		if (Config.eris)
 			MinecraftForge.EVENT_BUS.register(new ErisEvents());
-
+		if (Config.kepler22b && Config.keplerSolarSystems)
+			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
+		
 		// Moons Events
 		if (Config.callisto)
 			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
@@ -273,7 +276,8 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		if(Config.nuclearBomb)
+			registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		if (Config.mercury)
 			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 		if (Config.jupiter)
