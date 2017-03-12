@@ -114,6 +114,7 @@ import com.mjr.extraplanets.items.ItemTier7Items;
 import com.mjr.extraplanets.items.ItemTier8Items;
 import com.mjr.extraplanets.items.ItemTier9Items;
 import com.mjr.extraplanets.items.ItemWafers;
+import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
@@ -233,6 +234,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
 		
 		if(Config.thermalPaddings){
+			ClientUtilities.addExtraPlanetsVariants("thermalCloth", "tier3ThermalCloth", "tier4ThermalCloth", "tier5ThermalCloth");
 			ClientUtilities.addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
 			ClientUtilities.addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
 			ClientUtilities.addExtraPlanetsVariants("tier5ThermalPadding", "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots");
@@ -822,6 +824,9 @@ public class ClientProxy extends CommonProxy {
 			}
 			for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier5ThermalPadding, i, ItemTier5ThermalPadding.names[i]);
+			}
+			for (int i = 0; i < ItemThermalCloth.names.length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.thermalCloth, i, ItemThermalCloth.names[i]);
 			}
 		}
 		

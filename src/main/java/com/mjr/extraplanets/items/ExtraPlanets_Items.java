@@ -393,7 +393,7 @@ public class ExtraPlanets_Items {
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 		
 		if(Config.thermalPaddings){
-			GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName());
+			GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
