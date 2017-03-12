@@ -457,11 +457,11 @@ item.ingotLead.name=Lead Ingot
 item.tier5Items.redGem.name=Kırmızıtaş
 item.tier8Items.blueGem.name=Mavitaş
 item.tier7Items.whiteGem.name=Beyaztaş
-item.tier11.blueDiamond.name=Blue Diamond
-item.tier11.redDiamond.name=Red Diamond
-item.tier11.yellowDiamond.name=Yellow Diamond
-item.tier11.purpleDiamond.name=Purple Diamond
-item.tier11.greenDiamond.name=Green Diamond
+item.tier11Items.blueDiamond.name=Blue Diamond
+item.tier11Items.redDiamond.name=Red Diamond
+item.tier11Items.yellowDiamond.name=Yellow Diamond
+item.tier11Items.purpleDiamond.name=Purple Diamond
+item.tier11Items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=Elmas Wafer
@@ -793,7 +793,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossEris.name=Evrimleşmiş Creeper Patronu
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Evrimleşmiş Cadı
 entity.ExtraPlanetsEvolvedMagmaCube.name=Evrimleşmiş Magma Küpü
@@ -860,11 +862,11 @@ achievement.craftRocket9.desc=Tier 9 Roket İnşa Et
 achievement.craftRocket9.desc=Tier 10 Roket İnşa Et
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Işıktaşı Yakıtı
-tile.magma_fluid.name=Mağma Yakıtı
-tile.nitrogen_fluid.name=Nitrojen Yakıtı
-tile.frozen_water_fluid.name=Soğumuş Su
-tile.salt_fluid.name=Tuz Yakıtı
+tile.glowstone.name=Işıktaşı Yakıtı
+tile.magma.name=Mağma Yakıtı
+tile.nitrogen.name=Nitrojen Yakıtı
+tile.frozen_water.name=Soğumuş Su
+tile.salt.name=Tuz Yakıtı
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure

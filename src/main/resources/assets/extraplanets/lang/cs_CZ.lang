@@ -457,11 +457,11 @@ item.ingotLead.name=Lead Ingot
 item.tier5Items.redGem.name=Red Gem
 item.tier8Items.blueGem.name=Blue Gem
 item.tier7Items.whiteGem.name=White Gem
-item.tier11.blueDiamond.name=Blue Diamond
-item.tier11.redDiamond.name=Red Diamond
-item.tier11.yellowDiamond.name=Yellow Diamond
-item.tier11.purpleDiamond.name=Purple Diamond
-item.tier11.greenDiamond.name=Green Diamond
+item.tier11Items.blueDiamond.name=Blue Diamond
+item.tier11Items.redDiamond.name=Red Diamond
+item.tier11Items.yellowDiamond.name=Yellow Diamond
+item.tier11Items.purpleDiamond.name=Purple Diamond
+item.tier11Items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=Diamond Wafer
@@ -793,7 +793,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Vyvinutá Čarodejnice
 entity.ExtraPlanetsEvolvedMagmaCube.name=Vyvinutá Magma Kostka
@@ -860,11 +862,11 @@ achievement.craftRocket9.desc=Craft Tier 9 Rocket
 achievement.craftRocket10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Tekutý světlit
-tile.magma_fluid.name=Tekutá magma
-tile.nitrogen_fluid.name=Tekutý dusík
-tile.frozen_water_fluid.name=Zmrzlá voda
-tile.Salt_fluid.name=Zmrzlá sůl
+tile.glowstone.name=Tekutý světlit
+tile.magma.name=Tekutá magma
+tile.nitrogen.name=Tekutý dusík
+tile.frozen_water.name=Zmrzlá voda
+tile.Salt.name=Zmrzlá sůl
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure

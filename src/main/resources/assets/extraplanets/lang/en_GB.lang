@@ -457,11 +457,11 @@ item.ingotLead.name=Lead Ingot
 item.tier5Items.redGem.name=Red Gem
 item.tier8Items.blueGem.name=Blue Gem
 item.tier7Items.whiteGem.name=White Gem
-item.tier11.blueDiamond.name=Blue Diamond
-item.tier11.redDiamond.name=Red Diamond
-item.tier11.yellowDiamond.name=Yellow Diamond
-item.tier11.purpleDiamond.name=Purple Diamond
-item.tier11.greenDiamond.name=Green Diamond
+item.tier11Items.blueDiamond.name=Blue Diamond
+item.tier11Items.redDiamond.name=Red Diamond
+item.tier11Items.yellowDiamond.name=Yellow Diamond
+item.tier11Items.purpleDiamond.name=Purple Diamond
+item.tier11Items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=Diamond Wafer
@@ -793,7 +793,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Evolved Witch
 entity.ExtraPlanetsEvolvedMagmaCube.name=Evolved Magma Cube
@@ -859,11 +861,11 @@ achievement.craftRocket8.desc=Craft Tier 8 Rocket
 achievement.craftRocket10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone
-tile.magma_fluid.name=Liquid Magma
-tile.nitrogen_fluid.name=Liquid Nitrogen
-tile.frozen_water_fluid.name=Frozen Water
-tile.Salt_fluid.name=Liquid Salt
+tile.glowstone.name=Liquid Glowstone
+tile.magma.name=Liquid Magma
+tile.nitrogen.name=Liquid Nitrogen
+tile.frozen_water.name=Frozen Water
+tile.Salt.name=Liquid Salt
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure

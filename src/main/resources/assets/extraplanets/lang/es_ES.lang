@@ -456,11 +456,11 @@ item.ingotLead.name=Lead Ingot
 item.tier5Items.redGem.name=Gema roja
 item.tier8Items.blueGem.name=Gema azúl
 item.tier7Items.whiteGem.name=Gema blanca
-item.tier11.blueDiamond.name=Blue Diamond
-item.tier11.redDiamond.name=Red Diamond
-item.tier11.yellowDiamond.name=Yellow Diamond
-item.tier11.purpleDiamond.name=Purple Diamond
-item.tier11.greenDiamond.name=Green Diamond
+item.tier11Items.blueDiamond.name=Blue Diamond
+item.tier11Items.redDiamond.name=Red Diamond
+item.tier11Items.yellowDiamond.name=Yellow Diamond
+item.tier11Items.purpleDiamond.name=Purple Diamond
+item.tier11Items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=Oblea de diamante
@@ -792,7 +792,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Jefe creeper evolucionado de Pluto
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Bruja evolucionada
 entity.ExtraPlanetsEvolvedMagmaCube.name=Slime magmático evolucionado
@@ -859,11 +861,11 @@ achievement.craftRocket9.desc=Crea un cohete nivel 9
 achievement.craftRocket10.desc=Crea un cohete nivel 10
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Piedra luminosa líquida
-tile.magma_fluid.name=Magma líquido
-tile.nitrogen_fluid.name=Nitrógeno líquido 
-tile.frozen_water_fluid.name=Agua Congelada
-tile.salt_fluid.name=Sal líquida
+tile.glowstone.name=Piedra luminosa líquida
+tile.magma.name=Magma líquido
+tile.nitrogen.name=Nitrógeno líquido 
+tile.frozen_water.name=Agua Congelada
+tile.salt.name=Sal líquida
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure

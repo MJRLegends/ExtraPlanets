@@ -455,11 +455,11 @@ item.ingotLead.name=Lead Ingot
 item.tier5Items.redGem.name=紅寶石
 item.tier8Items.blueGem.name=藍寶石
 item.tier7Items.whiteGem.name=白寶石
-item.tier11.blueDiamond.name=Blue Diamond
-item.tier11.redDiamond.name=Red Diamond
-item.tier11.yellowDiamond.name=Yellow Diamond
-item.tier11.purpleDiamond.name=Purple Diamond
-item.tier11.greenDiamond.name=Green Diamond
+item.tier11Items.blueDiamond.name=Blue Diamond
+item.tier11Items.redDiamond.name=Red Diamond
+item.tier11Items.yellowDiamond.name=Yellow Diamond
+item.tier11Items.purpleDiamond.name=Purple Diamond
+item.tier11Items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=鑽石晶圓
@@ -791,7 +791,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=冥王星爬行者之王(進化體)
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=岩漿怪之王(進化體)
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=冰史萊姆之王(進化體)
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=冰史萊姆之王(進化體)
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=女巫(進化體)
 entity.ExtraPlanetsEvolvedMagmaCube.name=岩漿怪(進化體)
@@ -858,11 +860,11 @@ achievement.craftRocket9.desc=製作9階火箭
 achievement.craftRocket10.desc=製作10階火箭
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=螢石水
-tile.magma_fluid.name=岩漿水
-tile.nitrogen_fluid.name=液氮
-tile.frozen_water_fluid.name=冰凍水
-tile.salt_fluid.name=液態鹽水
+tile.glowstone.name=螢石水
+tile.magma.name=岩漿水
+tile.nitrogen.name=液氮
+tile.frozen_water.name=冰凍水
+tile.salt.name=液態鹽水
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
