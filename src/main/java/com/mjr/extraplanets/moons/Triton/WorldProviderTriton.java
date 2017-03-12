@@ -120,7 +120,7 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= 7;
+		return tier >= ExtraPlanets_Moons.triton.getTierRequirement();
 	}
 
 	@Override

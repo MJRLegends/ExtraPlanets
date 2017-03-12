@@ -158,7 +158,7 @@ public class ExtraPlanets_Moons {
 			rhea.setPhaseShift(1.45F);
 			rhea.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			rhea.setRelativeOrbitTime(42.74914745741246F);
-			rhea.setTierRequired(6);
+			rhea.setTierRequired(5);
 			rhea.setRelativeSize(0.3867F);
 			rhea.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			rhea.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/rhea.png"));
@@ -169,7 +169,7 @@ public class ExtraPlanets_Moons {
 			titan.setPhaseShift(1.45F);
 			titan.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			titan.setRelativeOrbitTime(71.452415154621642F);
-			titan.setTierRequired(6);
+			titan.setTierRequired(5);
 			titan.setRelativeSize(0.3867F);
 			titan.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			titan.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
