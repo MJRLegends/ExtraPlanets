@@ -87,6 +87,7 @@ public class Config {
 	public static boolean ganymede;
 	public static boolean rhea;
 	public static boolean titan;
+	public static boolean oberon;
 
 	public static boolean makemake;
 	public static boolean kuiperBelt;
@@ -112,7 +113,8 @@ public class Config {
 	public static int ganymedeID;
 	public static int rheaID;
 	public static int titanID;
-
+	public static int oberonID;
+	
 	public static int kepler22bID;
 	
 	public static int mercurySpaceStationID;
@@ -179,6 +181,7 @@ public class Config {
 	public static int ganymedeBiomeID;
 	public static int rheaBiomeID;
 	public static int titanBiomeID;
+	public static int oberonBiomeID;
 	
 	public static int kepler22bPlainsBiomeID;
 	public static int kepler22bBlueForestBiomeID;
@@ -290,7 +293,8 @@ public class Config {
 		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
 		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
 		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
-
+		oberon = config.get(dimensionsCustom, "Oberon", true, "").getBoolean(true);
+		
 		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
@@ -340,7 +344,8 @@ public class Config {
 		ganymedeID = config.get(dimensionID, "Ganymede Dimension ID", -38).getInt();
 		rheaID = config.get(dimensionID, "Rhea Dimension ID", -39).getInt();
 		titanID = config.get(dimensionID, "Titan Dimension ID", -40).getInt();
-
+		oberonID = config.get(dimensionID, "Oberon Dimension ID", -41).getInt();
+		
 		kepler22bID = config.get(dimensionID, "Kepler 22b Dimension ID", -22).getInt();
 		
 		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
@@ -398,6 +403,7 @@ public class Config {
 		kepler22bPurpleForestBiomeID = config.get(biomeID, "Kepler22b Purple Maple Forest Biome ID", 169).getInt();
 		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
 		kepler22bYellowForestBiomeID = config.get(biomeID, "Kepler22b Yellow Maple Forest Biome ID", 171).getInt();
+		oberonBiomeID = config.get(biomeID, "Oberon Biome ID", 172).getInt();
 		
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();

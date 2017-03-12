@@ -23,6 +23,8 @@ import com.mjr.extraplanets.moons.Ganymede.TeleportTypeGanymede;
 import com.mjr.extraplanets.moons.Ganymede.WorldProviderGanymede;
 import com.mjr.extraplanets.moons.Io.TeleportTypeIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
+import com.mjr.extraplanets.moons.Oberon.TeleportTypeOberon;
+import com.mjr.extraplanets.moons.Oberon.WorldProviderOberon;
 import com.mjr.extraplanets.moons.Phobos.TeleportTypePhobos;
 import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
 import com.mjr.extraplanets.moons.Rhea.TeleportTypeRhea;
@@ -68,9 +70,6 @@ public class ExtraPlanets_Moons {
 		titania = RegisterHelper.registerUnreachableMoon("titania", ExtraPlanets_Planets.uranus);
 		if (titania != null)
 			titania.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(38.155821478514518F);
-		oberon = RegisterHelper.registerUnreachableMoon("oberon", ExtraPlanets_Planets.uranus);
-		if (oberon != null)
-			oberon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(68.5411941552618F);
 	}
 
 	private static void initializeMoons() {
@@ -174,6 +173,17 @@ public class ExtraPlanets_Moons {
 			titan.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
 			titan.setDimensionInfo(Config.titanID, WorldProviderTitan.class);
 		}
+		if (Config.oberon) {
+			oberon = new Moon("oberon").setParentPlanet(ExtraPlanets_Planets.uranus);
+			oberon.setPhaseShift(1.45F);
+			oberon.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
+			oberon.setRelativeOrbitTime(68.5411941552618F);
+			oberon.setTierRequired(6);
+			oberon.setRelativeSize(0.3867F);
+			oberon.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			oberon.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png"));
+			oberon.setDimensionInfo(Config.oberonID, WorldProviderOberon.class);
+		}
 	}
 
 	private static void registerMoons() {
@@ -221,6 +231,11 @@ public class ExtraPlanets_Moons {
 			GalaxyRegistry.registerMoon(titan);
 			GalacticraftRegistry.registerTeleportType(WorldProviderTitan.class, new TeleportTypeTitan());
 			GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titanRocketGui.png"));
+		}
+		if (Config.oberon) {
+			GalaxyRegistry.registerMoon(oberon);
+			GalacticraftRegistry.registerTeleportType(WorldProviderOberon.class, new TeleportTypeOberon());
+			GalacticraftRegistry.registerRocketGui(WorldProviderOberon.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/oberonRocketGui.png"));
 		}
 	}
 }
