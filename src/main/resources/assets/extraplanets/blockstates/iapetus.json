@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictypeiapetus=iapetus_surface": { "model": "extraplanets:iapetus_surface_model" },
+        "basictypeiapetus=iapetus_sub_surface": { "model": "extraplanets:iapetus_sub_surface_model" },
+        "basictypeiapetus=iapetus_stone": { "model": "extraplanets:iapetus_stone_model" },
+        "basictypeiapetus=iapetus_ore_iron": { "model": "extraplanets:iapetus_ore_iron_model" },
+        "basictypeiapetus=iapetus_ore_tin": { "model": "extraplanets:iapetus_ore_tin_model" },
+        "basictypeiapetus=iapetus_ore_copper": { "model": "extraplanets:iapetus_ore_copper_model" }
+    }
+}

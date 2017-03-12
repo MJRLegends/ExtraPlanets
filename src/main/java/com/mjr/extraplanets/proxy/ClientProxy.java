@@ -38,16 +38,19 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicGanymede;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIapetus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPhobos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicRhea;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitania;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bPlanks;
@@ -198,6 +201,12 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("titan", "titan_surface", "titan_sub_surface", "titan_stone", "titan_ore_iron", "titan_ore_tin", "titan_ore_copper");
 		if (Config.triton)
 			ClientUtilities.addExtraPlanetsVariants("triton", "triton_surface", "triton_sub_surface", "triton_stone", "triton_ore_iron", "triton_ore_tin", "triton_ore_copper");
+		if (Config.oberon)
+			ClientUtilities.addExtraPlanetsVariants("oberon", "oberon_surface", "oberon_sub_surface", "oberon_stone", "oberon_ore_iron", "oberon_ore_tin", "oberon_ore_copper");
+		if (Config.titania)
+			ClientUtilities.addExtraPlanetsVariants("titania", "titania_surface", "titania_sub_surface", "titania_stone", "titania_ore_iron", "titania_ore_tin", "titania_ore_copper");
+		if (Config.iapetus)
+			ClientUtilities.addExtraPlanetsVariants("iapetus", "iapetus_surface", "iapetus_sub_surface", "iapetus_stone", "iapetus_ore_iron", "iapetus_ore_tin", "iapetus_ore_copper");
 		if (Config.mercury)
 			ClientUtilities.addExtraPlanetsVariants("tier4Items", "tier4engine", "tier4booster", "tier4Fin", "tier4HeavyDutyPlate", "compressedCarbon", "ingotCarbon");
 		if (Config.jupiter)
@@ -228,7 +237,6 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.solarPanels)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
-
 	}
 
 	private void registerEntityRenders() {
@@ -462,6 +470,24 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.tritonBlocks, blockBasic.getMeta(), blockBasic.getName());
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.tritonGravel);
+		}
+		if (Config.oberon) {
+			for (BlockBasicOberon.EnumBlockBasic blockBasic : BlockBasicOberon.EnumBlockBasic.values()) {
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.oberonBlocks, blockBasic.getMeta(), blockBasic.getName());
+			}
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.oberonGravel);
+		}
+		if (Config.titania) {
+			for (BlockBasicTitania.EnumBlockBasic blockBasic : BlockBasicTitania.EnumBlockBasic.values()) {
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titaniaBlocks, blockBasic.getMeta(), blockBasic.getName());
+			}
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.titaniaGravel);
+		}
+		if (Config.iapetus) {
+			for (BlockBasicIapetus.EnumBlockBasic blockBasic : BlockBasicIapetus.EnumBlockBasic.values()) {
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.iapetusBlocks, blockBasic.getMeta(), blockBasic.getName());
+			}
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.iapetusGravel);
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.fossil);
