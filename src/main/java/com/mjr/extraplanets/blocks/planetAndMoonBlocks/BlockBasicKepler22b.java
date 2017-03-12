@@ -33,6 +33,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus.EnumBlockBasic;
 
 public class BlockBasicKepler22b extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
@@ -148,10 +149,12 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		}
 	}
 
-	@Override
-	public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing direction, IPlantable plantable) {
-		return false;
-	}
+    @Override
+    public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing side, IPlantable plant)
+    {
+        Block block = plant.getPlant(world, pos).getBlock();
+        return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
+    }
 
 	@Override
 	public int requiredLiquidBlocksNearby() {
