@@ -18,6 +18,8 @@ import com.mjr.extraplanets.moons.Europa.TeleportTypeEuropa;
 import com.mjr.extraplanets.moons.Europa.WorldProviderEuropa;
 import com.mjr.extraplanets.moons.Ganymede.TeleportTypeGanymede;
 import com.mjr.extraplanets.moons.Ganymede.WorldProviderGanymede;
+import com.mjr.extraplanets.moons.Iapetus.TeleportTypeIapetus;
+import com.mjr.extraplanets.moons.Iapetus.WorldProviderIapetus;
 import com.mjr.extraplanets.moons.Io.TeleportTypeIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
 import com.mjr.extraplanets.moons.Oberon.TeleportTypeOberon;
@@ -33,7 +35,6 @@ import com.mjr.extraplanets.moons.Titania.WorldProviderTitania;
 import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Moons {
 	public static Moon triton;
@@ -56,14 +57,6 @@ public class ExtraPlanets_Moons {
 	public static void init() {
 		initializeMoons();
 		registerMoons();
-		initializeUnReachableMoons();
-	}
-
-	public static void initializeUnReachableMoons() {
-		// Saturn Moons
-		iapetus = RegisterHelper.registerUnreachableMoon("iapetus", ExtraPlanets_Planets.saturn);
-		if (iapetus != null)
-			iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(107.1425462429542F);
 	}
 
 	private static void initializeMoons() {
@@ -189,6 +182,17 @@ public class ExtraPlanets_Moons {
 			titania.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png"));
 			titania.setDimensionInfo(Config.titaniaID, WorldProviderTitania.class);
 		}
+		if (Config.iapetus) {
+			iapetus = new Moon("iapetus").setParentPlanet(ExtraPlanets_Planets.saturn);
+			iapetus.setPhaseShift(1.45F);
+			iapetus.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
+			iapetus.setRelativeOrbitTime(68.5411941552618F);
+			iapetus.setTierRequired(6);
+			iapetus.setRelativeSize(0.3867F);
+			iapetus.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			iapetus.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/iapetus.png"));
+			iapetus.setDimensionInfo(Config.iapetusID, WorldProviderIapetus.class);
+		}
 	}
 
 	private static void registerMoons() {
@@ -246,6 +250,11 @@ public class ExtraPlanets_Moons {
 			GalaxyRegistry.registerMoon(titania);
 			GalacticraftRegistry.registerTeleportType(WorldProviderTitania.class, new TeleportTypeTitania());
 			GalacticraftRegistry.registerRocketGui(WorldProviderTitania.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titaniaRocketGui.png"));
+		}
+		if (Config.iapetus) {
+			GalaxyRegistry.registerMoon(iapetus);
+			GalacticraftRegistry.registerTeleportType(WorldProviderIapetus.class, new TeleportTypeIapetus());
+			GalacticraftRegistry.registerRocketGui(WorldProviderIapetus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/iapetusRocketGui.png"));
 		}
 	}
 }

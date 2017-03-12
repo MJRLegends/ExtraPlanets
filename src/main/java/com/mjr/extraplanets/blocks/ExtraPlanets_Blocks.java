@@ -24,6 +24,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicGanymede;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIapetus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
@@ -56,6 +57,7 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockDeimos;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEris;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEuropa;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockGanymede;
+import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockIapetus;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockIo;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockJupiter;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockKepler22b;
@@ -123,6 +125,7 @@ public class ExtraPlanets_Blocks {
 	public static Block titanBlocks;
 	public static Block oberonBlocks;
 	public static Block titaniaBlocks;
+	public static Block iapetusBlocks;
 	
 	// Gravels
 	public static Block mercuryGravel;
@@ -143,6 +146,7 @@ public class ExtraPlanets_Blocks {
 	public static Block titanGravel;
 	public static Block oberonGravel;
 	public static Block titaniaGravel;
+	public static Block iapetusGravel;
 	
 	// Other Special Blocks
 	public static Block nuclearBomb;
@@ -283,6 +287,10 @@ public class ExtraPlanets_Blocks {
 		if (Config.titania) {
 			titaniaBlocks = new BlockBasicTitania("titania");
 			titaniaGravel = new BlockCustomGravel("titaniaGravel");
+		}
+		if (Config.iapetus) {
+			iapetusBlocks = new BlockBasicIapetus("iapetus");
+			iapetusGravel = new BlockCustomGravel("iapetusGravel");
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
@@ -464,6 +472,10 @@ public class ExtraPlanets_Blocks {
 		if (Config.titania) {
 			GameRegistry.registerBlock(titaniaBlocks, ItemBlockTitania.class, titaniaBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(titaniaGravel, titaniaGravel.getUnlocalizedName().substring(5));
+		}
+		if (Config.iapetus) {
+			GameRegistry.registerBlock(iapetusBlocks, ItemBlockIapetus.class, iapetusBlocks.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(iapetusGravel, iapetusGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, fossil.getUnlocalizedName().substring(5));
