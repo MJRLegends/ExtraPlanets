@@ -216,7 +216,7 @@ public class Config {
 	public static int schematicTier10PageID;
 
 	public static boolean microBlock = false;
-	public static boolean neiSupport = false;
+	public static boolean neiSupport;
 	public static boolean achievements;
 
 	public static boolean pressure;
@@ -432,6 +432,7 @@ public class Config {
 		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
 		schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
 
+		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
 		oreDictionary = config.get(compatibility, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
 		
 		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);

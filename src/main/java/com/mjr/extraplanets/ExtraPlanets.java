@@ -5,7 +5,6 @@ import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,7 +16,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -185,7 +183,7 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new ErisEvents());
 		if (Config.kepler22b && Config.keplerSolarSystems)
 			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
-		
+
 		// Moons Events
 		if (Config.callisto)
 			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
@@ -286,7 +284,7 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		if(Config.nuclearBomb)
+		if (Config.nuclearBomb)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		if (Config.mercury)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
@@ -314,7 +312,7 @@ public class ExtraPlanets {
 		if (Config.jupiter)
 			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
-			
+
 			if (Config.useDefaultBosses)
 				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
 			else
