@@ -11,10 +11,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.items.ItemTier4Items;
 
 public class ItemThermalCloth extends Item {
-	public static String[] names = { "tier2ThermalCloth", "tier3ThermalCloth", "tier4ThermalCloth" };
+	public static String[] names = { "tier3ThermalCloth", "tier4ThermalCloth", "tier5ThermalCloth" };
 
 	public ItemThermalCloth(String assetName) {
 		super();
@@ -33,7 +32,7 @@ public class ItemThermalCloth extends Item {
 
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
-		return this.getUnlocalizedName() + "." + ItemTier4Items.names[itemStack.getItemDamage()];
+		return this.getUnlocalizedName() + "." + ItemThermalCloth.names[itemStack.getItemDamage()];
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

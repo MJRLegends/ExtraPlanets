@@ -766,6 +766,9 @@ item.bodyparts.arm.name=Arm
 item.bodyparts.leg.name=Leg
 item.cloth.name=Wool Cloth
 item.gravityController.name=Gravity Controller
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+item.thermalCloth.tier5ThermalCloth.name=Tier 5 Thermal Cloth
 
 item.cannedfood.dehydratedPorkchop.name=Dehydrated Porkchop
 item.cannedfood.dehydratedFish.name=Dehydrated Fish

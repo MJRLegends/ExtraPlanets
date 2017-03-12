@@ -766,6 +766,9 @@ item.bodyparts.arm.name=Kol
 item.bodyparts.leg.name=Bacak
 item.cloth.name=Wool Cloth
 item.gravityController.name=Gravity Controller
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+item.thermalCloth.tier5ThermalCloth.name=Tier 5 Thermal Cloth
 
 item.cannedfood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
 item.cannedfood.dehydratedFish.name=Susuz Balık
