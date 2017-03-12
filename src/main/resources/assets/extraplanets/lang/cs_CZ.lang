@@ -27,6 +27,7 @@ planet.Pluto=Pluto
 planet.Eris=Eris
 planet.kuiperBelt=Kuiperův pás
 planet.makemake=Makemake
+planet.haumea=Haumea
 
 planet.kepler62b=Kepler 62b
 planet.kepler62c=Kepler 62c
@@ -52,6 +53,10 @@ moon.rhea=Rhea
 moon.titan=Titan
 moon.oberon=Oberon
 moon.titania=Titania
+moon.charon=Charon
+moon.nix=Nix
+moon.hydra=Hydra
+moon.dysnomia=Dysnomia
 
 #Planet Blocks
 tile.mercury.surface.name=Povrchový kámen z Merkuru
@@ -267,6 +272,27 @@ tile.titan.OreIron.name=Železná ruda z Titanu
 tile.titan.OreTin.name=Cínová ruda z Titanu
 tile.titan.OreCopper.name=Měděná ruda z Titanu
 
+tile.oberon.surface.name=Oberon Surface Rock
+tile.oberon.subSurface.name=Oberon Sub-Surface Rock
+tile.oberon.stone.name=Oberon Stone
+tile.oberon.oreIron.name=Oberon Iron Ore
+tile.oberon.oreTin.name=Oberon Tin Ore
+tile.oberon.oreCopper.name=Oberon Copper Ore
+
+tile.titania.surface.name=Titania Surface Rock
+tile.titania.subSurface.name=Titania Sub-Surface Rock
+tile.titania.stone.name=Titania Stone
+tile.titania.oreIron.name=Titania Iron Ore
+tile.titania.oreTin.name=Titania Tin Ore
+tile.titania.oreCopper.name=Titania Copper Ore
+
+tile.iapetus.surface.name=Iapetus Surface Rock
+tile.iapetus.subSurface.name=Iapetus Sub-Surface Rock
+tile.iapetus.stone.name=Iapetus Stone
+tile.iapetus.oreIron.name=Iapetus Iron Ore
+tile.iapetus.oreTin.name=Iapetus Tin Ore
+tile.iapetus.oreCopper.name=Iapetus Copper Ore
+
 #Planet Gravel Blocks
 tile.mercuryGravel.name=Štěrk
 tile.ceresGravel.name=Štěrk
@@ -281,6 +307,9 @@ tile.callistoGravel.name=Štěrk
 tile.ganymedeGravel.name=Štěrk
 tile.rheaGravel.name=Rhea Gravel
 tile.titanGravel.name=Titan Gravel
+tile.oberonGravel.name=Oberon Gravel
+tile.titaniaGravel.name=Titania Gravel
+tile.iapetusGravel.name=Iapetus Gravel
 
 tile.venusGravel.name=Štěrk
 tile.jupiterGravel.name=Štěrk

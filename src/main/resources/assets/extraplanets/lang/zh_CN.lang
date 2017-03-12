@@ -28,6 +28,7 @@ planet.Pluto=冥王星
 planet.Eris=阋神星
 planet.kuiperBelt=柯伊伯带
 planet.makemake=鸟神星
+planet.haumea=Haumea
 
 planet.kepler62b=开普勒62b
 planet.kepler62c=开普勒62c
@@ -53,6 +54,10 @@ moon.rhea=土卫五
 moon.iapetus=土卫八
 moon.titania=天卫三
 moon.oberon=天卫四
+moon.charon=Charon
+moon.nix=Nix
+moon.hydra=Hydra
+moon.dysnomia=Dysnomia
 
 #Planet Blocks
 tile.mercury.surface.name=水星地表岩石
@@ -268,6 +273,27 @@ tile.titan.oreIron.name=土卫一铁矿石
 tile.titan.oreTin.name=土卫一锡矿石
 tile.titan.oreCopper.name=土卫一铜矿石
 
+tile.oberon.surface.name=Oberon Surface Rock
+tile.oberon.subSurface.name=Oberon Sub-Surface Rock
+tile.oberon.stone.name=Oberon Stone
+tile.oberon.oreIron.name=Oberon Iron Ore
+tile.oberon.oreTin.name=Oberon Tin Ore
+tile.oberon.oreCopper.name=Oberon Copper Ore
+
+tile.titania.surface.name=Titania Surface Rock
+tile.titania.subSurface.name=Titania Sub-Surface Rock
+tile.titania.stone.name=Titania Stone
+tile.titania.oreIron.name=Titania Iron Ore
+tile.titania.oreTin.name=Titania Tin Ore
+tile.titania.oreCopper.name=Titania Copper Ore
+
+tile.iapetus.surface.name=Iapetus Surface Rock
+tile.iapetus.subSurface.name=Iapetus Sub-Surface Rock
+tile.iapetus.stone.name=Iapetus Stone
+tile.iapetus.oreIron.name=Iapetus Iron Ore
+tile.iapetus.oreTin.name=Iapetus Tin Ore
+tile.iapetus.oreCopper.name=Iapetus Copper Ore
+
 #Planet Gravel Blocks
 tile.mercuryGravel.name=水星沙砾
 tile.ceresGravel.name=谷神星沙砾
@@ -282,6 +308,9 @@ tile.callistoGravel.name=木卫四沙砾
 tile.ganymedeGravel.name=木卫三沙砾
 tile.rheaGravel.name=土卫五沙砾
 tile.titanGravel.name=土卫一沙砾
+tile.oberonGravel.name=Oberon Gravel
+tile.titaniaGravel.name=Titania Gravel
+tile.iapetusGravel.name=Iapetus Gravel
 
 tile.venusGravel.name=金星沙砾
 tile.jupiterGravel.name=木星沙砾
