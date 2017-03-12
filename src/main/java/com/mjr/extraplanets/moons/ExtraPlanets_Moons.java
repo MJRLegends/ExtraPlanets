@@ -65,7 +65,7 @@ public class ExtraPlanets_Moons {
 		// Pluto Moons
 		charon = RegisterHelper.registerUnreachableMoon("charon", ExtraPlanets_Planets.pluto);
 		if (charon != null)
-			charon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(75.0F);
+			charon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 		
 		nix = RegisterHelper.registerUnreachableMoon("nix", ExtraPlanets_Planets.pluto);
 		if (nix != null)
@@ -78,7 +78,7 @@ public class ExtraPlanets_Moons {
 		// Eris Moons
 		dysnomia = RegisterHelper.registerUnreachableMoon("dysnomia", ExtraPlanets_Planets.eris);
 		if (dysnomia != null)
-			dysnomia.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(75.0F);
+			dysnomia.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 	}
 	
 	private static void initializeMoons() {
