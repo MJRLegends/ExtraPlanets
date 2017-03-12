@@ -35,30 +35,52 @@ import com.mjr.extraplanets.moons.Titania.WorldProviderTitania;
 import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Moons {
 	public static Moon triton;
-
 	public static Moon callisto;
 	public static Moon europa;
 	public static Moon ganymede;
 	public static Moon io;
-
 	public static Moon deimos;
 	public static Moon phobos;
-
 	public static Moon iapetus;
 	public static Moon rhea;
 	public static Moon titan;
-
 	public static Moon oberon;
 	public static Moon titania;
-
+	public static Moon charon;
+	public static Moon nix;
+	public static Moon hydra;
+	public static Moon dysnomia;
+	
 	public static void init() {
 		initializeMoons();
 		registerMoons();
+		initializeUnReachableMoons();
 	}
+	
+	public static void initializeUnReachableMoons() {
+		// Pluto Moons
+		charon = RegisterHelper.registerUnreachableMoon("charon", ExtraPlanets_Planets.pluto);
+		if (charon != null)
+			charon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(75.0F);
+		
+		nix = RegisterHelper.registerUnreachableMoon("nix", ExtraPlanets_Planets.pluto);
+		if (nix != null)
+			nix.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(57.415456589452485548F);
+		
+		hydra = RegisterHelper.registerUnreachableMoon("hydra", ExtraPlanets_Planets.pluto);
+		if (hydra != null)
+			hydra.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(123.252594612756974F);		
 
+		// Eris Moons
+		dysnomia = RegisterHelper.registerUnreachableMoon("dysnomia", ExtraPlanets_Planets.eris);
+		if (dysnomia != null)
+			dysnomia.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(75.0F);
+	}
+	
 	private static void initializeMoons() {
 		if (Config.triton) {
 			triton = new Moon("triton").setParentPlanet(ExtraPlanets_Planets.neptune);
