@@ -88,6 +88,7 @@ public class Config {
 	public static boolean rhea;
 	public static boolean titan;
 	public static boolean oberon;
+	public static boolean titania;
 
 	public static boolean makemake;
 	public static boolean kuiperBelt;
@@ -114,6 +115,7 @@ public class Config {
 	public static int rheaID;
 	public static int titanID;
 	public static int oberonID;
+	public static int titaniaID;
 	
 	public static int kepler22bID;
 	
@@ -182,7 +184,8 @@ public class Config {
 	public static int rheaBiomeID;
 	public static int titanBiomeID;
 	public static int oberonBiomeID;
-	
+	public static int titaniaBiomeID;
+
 	public static int kepler22bPlainsBiomeID;
 	public static int kepler22bBlueForestBiomeID;
 	public static int kepler22bPurpleForestBiomeID;
@@ -294,7 +297,8 @@ public class Config {
 		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
 		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
 		oberon = config.get(dimensionsCustom, "Oberon", true, "").getBoolean(true);
-		
+		titania = config.get(dimensionsCustom, "Titania", true, "").getBoolean(true);
+
 		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
@@ -345,6 +349,7 @@ public class Config {
 		rheaID = config.get(dimensionID, "Rhea Dimension ID", -39).getInt();
 		titanID = config.get(dimensionID, "Titan Dimension ID", -40).getInt();
 		oberonID = config.get(dimensionID, "Oberon Dimension ID", -41).getInt();
+		titaniaID = config.get(dimensionID, "Titania Dimension ID", -42).getInt();
 		
 		kepler22bID = config.get(dimensionID, "Kepler 22b Dimension ID", -22).getInt();
 		
@@ -404,7 +409,8 @@ public class Config {
 		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
 		kepler22bYellowForestBiomeID = config.get(biomeID, "Kepler22b Yellow Maple Forest Biome ID", 171).getInt();
 		oberonBiomeID = config.get(biomeID, "Oberon Biome ID", 172).getInt();
-		
+		titaniaBiomeID = config.get(biomeID, "Titania Biome ID", 173).getInt();
+
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();
