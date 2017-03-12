@@ -118,7 +118,7 @@ public class WorldProviderOberon extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= 6;
+		return tier >= ExtraPlanets_Moons.oberon.getTierRequirement();
 	}
 
 	@Override

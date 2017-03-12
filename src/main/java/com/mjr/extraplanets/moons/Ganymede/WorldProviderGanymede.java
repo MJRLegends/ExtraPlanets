@@ -118,7 +118,7 @@ public class WorldProviderGanymede extends WorldProviderSpace implements IGalact
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= 4;
+		return tier >= ExtraPlanets_Moons.ganymede.getTierRequirement();
 	}
 
 	@Override

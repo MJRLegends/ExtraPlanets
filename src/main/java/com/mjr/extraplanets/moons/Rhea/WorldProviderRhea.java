@@ -118,7 +118,7 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= 4;
+		return tier >= ExtraPlanets_Moons.rhea.getTierRequirement();
 	}
 
 	@Override
