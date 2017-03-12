@@ -53,10 +53,13 @@ import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
 import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
 import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
 import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
+import com.mjr.extraplanets.moons.Iapetus.event.IapetusEvents;
 import com.mjr.extraplanets.moons.Io.event.IoEvents;
+import com.mjr.extraplanets.moons.Oberon.event.OberonEvents;
 import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
+import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
 import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
@@ -202,6 +205,12 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new RheaEvents());
 		if (Config.titan)
 			MinecraftForge.EVENT_BUS.register(new TitanEvents());
+		if (Config.oberon)
+			MinecraftForge.EVENT_BUS.register(new OberonEvents());
+		if (Config.iapetus)
+			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
+		if (Config.titania)
+			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
 		if (Config.kuiperBelt)
 			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 

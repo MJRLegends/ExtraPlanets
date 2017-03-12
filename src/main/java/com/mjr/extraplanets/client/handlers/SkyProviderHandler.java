@@ -23,13 +23,19 @@ import com.mjr.extraplanets.moons.Deimos.WorldProviderDeimos;
 import com.mjr.extraplanets.moons.Europa.WorldProviderEuropa;
 import com.mjr.extraplanets.moons.Ganymede.SkyProviderGanymede;
 import com.mjr.extraplanets.moons.Ganymede.WorldProviderGanymede;
+import com.mjr.extraplanets.moons.Iapetus.SkyProviderIapetus;
+import com.mjr.extraplanets.moons.Iapetus.WorldProviderIapetus;
 import com.mjr.extraplanets.moons.Io.SkyProviderIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
+import com.mjr.extraplanets.moons.Oberon.SkyProviderOberon;
+import com.mjr.extraplanets.moons.Oberon.WorldProviderOberon;
 import com.mjr.extraplanets.moons.Phobos.SkyProviderPhobos;
 import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
 import com.mjr.extraplanets.moons.Rhea.SkyProviderRhea;
 import com.mjr.extraplanets.moons.Rhea.WorldProviderRhea;
 import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
+import com.mjr.extraplanets.moons.Titania.SkyProviderTitania;
+import com.mjr.extraplanets.moons.Titania.WorldProviderTitania;
 import com.mjr.extraplanets.moons.Triton.SkyProviderTriton;
 import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.Ceres.SkyProviderCeres;
@@ -232,7 +238,34 @@ public class SkyProviderHandler {
 					world.provider.setCloudRenderer(new CloudRenderer());
 				}
 			}
+			if (world.provider instanceof WorldProviderIapetus) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderIapetus((IGalacticraftWorldProvider) world.provider));
+				}
 
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
+			if (world.provider instanceof WorldProviderOberon) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderOberon((IGalacticraftWorldProvider) world.provider));
+				}
+
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
+			if (world.provider instanceof WorldProviderTitania) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderTitania((IGalacticraftWorldProvider) world.provider));
+				}
+
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
+			
 			// Space Stations
 			if (world.provider instanceof WorldProviderMercuryOrbit) {
 				if (world.provider.getSkyRenderer() == null) {
