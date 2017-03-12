@@ -1,12 +1,9 @@
 package com.mjr.extraplanets.planets;
 
-import java.util.ArrayList;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
-import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.util.ResourceLocation;
@@ -42,6 +39,7 @@ public class ExtraPlanets_Planets {
 	public static Planet uranus;
 	public static Planet neptune;
 	public static Planet pluto;
+	public static Planet haumea;
 	public static Planet eris;
 	public static Planet kuiperBelt;
 	public static Planet makemake;
@@ -159,7 +157,7 @@ public class ExtraPlanets_Planets {
 			eris.setTierRequired(9);
 			eris.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			eris.setPhaseShift(1.0F);
-			eris.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F, 3.50F));
+			eris.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.75F, 3.75F));
 			eris.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 3));
 			eris.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
 			eris.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
@@ -187,6 +185,12 @@ public class ExtraPlanets_Planets {
 			if (makemake != null)
 				makemake.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.50F, 4.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			makemake.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/makemake.png"));
+		}
+		if (Config.haumea) {
+			haumea = RegisterHelper.registerUnreachablePlanet("haumea", GalacticraftCore.solarSystemSol);
+			if (haumea != null)
+				haumea.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.00F, 3.00F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+			haumea.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/haumea.png"));
 		}
 		if (Config.keplerSolarSystems) {
 			// Kepler Solar System

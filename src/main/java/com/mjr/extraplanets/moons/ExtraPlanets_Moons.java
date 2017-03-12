@@ -38,6 +38,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Moons {
+
 	public static Moon triton;
 	public static Moon callisto;
 	public static Moon europa;
@@ -54,7 +55,7 @@ public class ExtraPlanets_Moons {
 	public static Moon nix;
 	public static Moon hydra;
 	public static Moon dysnomia;
-	
+
 	public static void init() {
 		initializeMoons();
 		registerMoons();
