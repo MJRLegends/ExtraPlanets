@@ -52,8 +52,8 @@ public class KuiperBeltEvents {
 			final float cos = (float) Math.cos(theta);
 			final float sin = (float) Math.sin(theta);
 
-			float min = 72.0F;
-			float max = 78.0F;
+			float min = 63.0F;
+			float max = 90.0F;
 
 			float x = max * renderEvent.celestialBody.getRelativeDistanceFromCenter().unScaledDistance;
 			float y = 0;
