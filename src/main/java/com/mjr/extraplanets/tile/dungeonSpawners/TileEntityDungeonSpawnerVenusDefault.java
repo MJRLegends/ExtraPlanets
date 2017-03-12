@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Neptune.worldgen.dungeon;
+package com.mjr.extraplanets.tile.dungeonSpawners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +11,11 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossVenus;
 
-public class TileEntityDungeonSpawnerNeptuneDefault extends TileEntityDungeonSpawner {
-	public TileEntityDungeonSpawnerNeptuneDefault() {
-		super(EntityCreeperBossNeptune.class);
+public class TileEntityDungeonSpawnerVenusDefault extends TileEntityDungeonSpawner {
+	public TileEntityDungeonSpawnerVenusDefault() {
+		super(EntityCreeperBossVenus.class);
 	}
 
 	@Override

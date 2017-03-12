@@ -12,6 +12,8 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptuneDefault;
 
 public class RoomBossNeptune extends DungeonRoom {
 	public int sizeX;

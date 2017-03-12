@@ -3,6 +3,8 @@ package com.mjr.extraplanets.planets.Venus.worldgen.dungeon;
 import java.util.Random;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenusDefault;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;

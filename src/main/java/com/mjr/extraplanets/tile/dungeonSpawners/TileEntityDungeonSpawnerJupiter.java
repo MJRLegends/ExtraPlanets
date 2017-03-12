@@ -1,9 +1,7 @@
-package com.mjr.extraplanets.planets.Eris.worldgen.dungeon;
+package com.mjr.extraplanets.tile.dungeonSpawners;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
@@ -13,11 +11,13 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-public class TileEntityDungeonSpawnerEris extends TileEntityDungeonSpawner
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+
+public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner
 {
-	public TileEntityDungeonSpawnerEris()
+	public TileEntityDungeonSpawnerJupiter()
 	{
-		super(EntityCreeperBossEris.class);
+		super(EntityCreeperBossJupiter.class);
 	}
 
 	@Override

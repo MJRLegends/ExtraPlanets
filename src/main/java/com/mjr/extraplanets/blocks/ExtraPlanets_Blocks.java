@@ -66,19 +66,12 @@ import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler2
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bTallGrass;
 import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.DungeonSpawnerEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.DungeonSpawnerJuptier;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.DungeonSpawnerNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.TileEntityDungeonSpawnerNeptune;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.DungeonSpawnerPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.DungeonSpawnerSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.DungeonSpawnerUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.DungeonSpawnerVenus;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.TileEntityDungeonSpawnerVenus;
 import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
@@ -86,6 +79,13 @@ import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

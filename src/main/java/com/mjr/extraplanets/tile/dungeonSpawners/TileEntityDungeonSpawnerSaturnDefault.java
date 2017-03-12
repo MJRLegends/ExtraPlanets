@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
+package com.mjr.extraplanets.tile.dungeonSpawners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,18 +11,15 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 
-public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner
-{
-	public TileEntityDungeonSpawnerJupiter()
-	{
-		super(EntityCreeperBossJupiter.class);
+public class TileEntityDungeonSpawnerSaturnDefault extends TileEntityDungeonSpawner {
+	public TileEntityDungeonSpawnerSaturnDefault() {
+		super(EntityCreeperBossSaturn.class);
 	}
 
 	@Override
-	public List<Class<? extends EntityLiving>> getDisabledCreatures()
-	{
+	public List<Class<? extends EntityLiving>> getDisabledCreatures() {
 		List<Class<? extends EntityLiving>> list = new ArrayList<Class<? extends EntityLiving>>();
 		list.add(EntityEvolvedSkeleton.class);
 		list.add(EntityEvolvedZombie.class);
@@ -31,8 +28,7 @@ public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner
 	}
 
 	@Override
-	public void playSpawnSound(Entity entity)
-	{
+	public void playSpawnSound(Entity entity) {
 		this.worldObj.playSoundAtEntity(entity, GalacticraftCore.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
 	}
 }

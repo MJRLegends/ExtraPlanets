@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Saturn.worldgen.dungeon;
+package com.mjr.extraplanets.tile.dungeonSpawners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,13 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 
-public class TileEntityDungeonSpawnerSaturn extends TileEntityDungeonSpawner
+public class TileEntityDungeonSpawnerUranus extends TileEntityDungeonSpawner
 {
-	public TileEntityDungeonSpawnerSaturn()
+	public TileEntityDungeonSpawnerUranus()
 	{
-		super(EntityEvolvedGhastBoss.class);
+		super(EntityEvolvedIceSlimeBoss.class);
 	}
 
 	@Override

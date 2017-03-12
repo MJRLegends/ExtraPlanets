@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Pluto.worldgen.dungeon;
+package com.mjr.extraplanets.tile.dungeonSpawners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,14 +11,13 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 
-
-public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner
+public class TileEntityDungeonSpawnerNeptune extends TileEntityDungeonSpawner
 {
-	public TileEntityDungeonSpawnerPluto()
+	public TileEntityDungeonSpawnerNeptune()
 	{
-		super(EntityCreeperBossPluto.class);
+		super(EntityEvolvedSnowmanBoss.class);
 	}
 
 	@Override
