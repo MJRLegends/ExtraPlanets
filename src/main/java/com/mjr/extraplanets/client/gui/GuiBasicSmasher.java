@@ -40,12 +40,7 @@ public class GuiBasicSmasher extends GuiContainerGC {
 		List<String> batterySlotDesc = new ArrayList<String>();
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
-		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 49, (this.height - this.ySize) / 2 + 50, 18, 18, batterySlotDesc, this.width, this.height, this));
-		List<String> fuelSlotDesc = new ArrayList<String>();
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.fuel_output.desc.0"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.fuel_output.desc.1"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.fuel_output.desc.2"));
-		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
+		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));

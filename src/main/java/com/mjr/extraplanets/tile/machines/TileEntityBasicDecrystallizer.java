@@ -74,8 +74,8 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		}
 		if (this.containingItems[1] == null)
 			return false;
-		else if (this.containingItems[1].getItem() == ExtraPlanets_Items.iodideSalt)
-			return true;
+		else if (this.containingItems[1].getItem() != ExtraPlanets_Items.iodideSalt)
+			return false;
 		return !this.getDisabled(0);
 
 	}

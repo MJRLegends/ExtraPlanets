@@ -41,7 +41,7 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 		List<String> batterySlotDesc = new ArrayList<String>();
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
-		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 49, (this.height - this.ySize) / 2 + 50, 18, 18, batterySlotDesc, this.width, this.height, this));
+		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> outputTankDesc = new ArrayList<String>();
 		outputTankDesc.add(GCCoreUtil.translate("gui.fuel_tank.desc.4"));
 		int fuelLevel = this.tileEntity.outputTank != null && this.tileEntity.outputTank.getFluid() != null ? this.tileEntity.outputTank.getFluid().amount : 0;
@@ -54,9 +54,9 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 		this.outputTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.outputTankRegion);
 		List<String> fuelSlotDesc = new ArrayList<String>();
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.fuel_output.desc.0"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.fuel_output.desc.1"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.fuel_output.desc.2"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.0"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.1"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.2"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
