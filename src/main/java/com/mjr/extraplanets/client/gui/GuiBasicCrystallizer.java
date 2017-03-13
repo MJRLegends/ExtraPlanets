@@ -22,7 +22,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicCrystallizer extends GuiContainerGC {
-	private static final ResourceLocation decrystallizerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/decrystallizer.png");
+	private static final ResourceLocation crystallizerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/crystallizer.png");
 
 	private final TileEntityBasicCrystallizer tileEntity;
 
@@ -87,7 +87,7 @@ public class GuiBasicCrystallizer extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-		this.mc.renderEngine.bindTexture(GuiBasicCrystallizer.decrystallizerTexture);
+		this.mc.renderEngine.bindTexture(GuiBasicCrystallizer.crystallizerTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
 		int containerWidth = (this.width - this.xSize) / 2;

@@ -22,7 +22,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicSmasher extends GuiContainerGC {
-	private static final ResourceLocation decrystallizerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/decrystallizer.png");
+	private static final ResourceLocation smasherTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/smasher.png");
 
 	private final TileEntityBasicSmasher tileEntity;
 
@@ -70,7 +70,7 @@ public class GuiBasicSmasher extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-		this.mc.renderEngine.bindTexture(GuiBasicSmasher.decrystallizerTexture);
+		this.mc.renderEngine.bindTexture(GuiBasicSmasher.smasherTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
 		int containerWidth = (this.width - this.xSize) / 2;

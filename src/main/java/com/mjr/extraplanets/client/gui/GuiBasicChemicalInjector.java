@@ -22,7 +22,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityChemicalInjector;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicChemicalInjector extends GuiContainerGC {
-	private static final ResourceLocation decrystallizerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/decrystallizer.png");
+	private static final ResourceLocation chemicalInjectorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/chemicalInjector.png");
 
 	private final TileEntityChemicalInjector tileEntity;
 
@@ -59,7 +59,7 @@ public class GuiBasicChemicalInjector extends GuiContainerGC {
 		int yOffset = -10;
 
 		if (this.tileEntity.canProcess()) {
-			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.smasher.name");
+			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.injecting.name");
 		} else {
 			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.idle.name");
 		}
@@ -70,7 +70,7 @@ public class GuiBasicChemicalInjector extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-		this.mc.renderEngine.bindTexture(GuiBasicChemicalInjector.decrystallizerTexture);
+		this.mc.renderEngine.bindTexture(GuiBasicChemicalInjector.chemicalInjectorTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
 		int containerWidth = (this.width - this.xSize) / 2;
