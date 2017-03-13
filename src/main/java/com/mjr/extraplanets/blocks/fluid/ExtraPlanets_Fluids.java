@@ -26,7 +26,13 @@ public class ExtraPlanets_Fluids {
 
 	public static Block salt;
 	public static Fluid salt_fluid;
+	
+	public static Block radioactiveWater;
+	public static Fluid radioactiveWater_fluid;
 
+	public static Block cleanWater;
+	public static Fluid cleanWater_fluid;
+	
 	public static Material glowstone_material = new MaterialLiquid(MapColor.yellowColor);
 	public static Material magma_material = new MaterialLiquid(MapColor.tntColor);
 	public static Material nitrogen_material = new MaterialLiquid(MapColor.lightBlueColor);
@@ -58,6 +64,14 @@ public class ExtraPlanets_Fluids {
 		salt_fluid = new Fluid("salt_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_flow")).setBlock(salt).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(salt_fluid);
 		salt = new FluidSalt("salt");
+		
+		radioactiveWater_fluid = new Fluid("radioactiveWater_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_flow")).setBlock(radioactiveWater).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(radioactiveWater_fluid);
+		radioactiveWater = new FluidRadioactiveWater("radioactive_water");
+		
+		cleanWater_fluid = new Fluid("cleanWater_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_flow")).setBlock(radioactiveWater).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(cleanWater_fluid);
+		cleanWater = new FluidCleanWater("clean_water");
 	}
 
 	private static void registerBlocks() {
@@ -66,5 +80,7 @@ public class ExtraPlanets_Fluids {
 		GameRegistry.registerBlock(nitrogen, "nitrogen");
 		GameRegistry.registerBlock(frozen_water, "frozen_water");
 		GameRegistry.registerBlock(salt, "salt");
+		GameRegistry.registerBlock(radioactiveWater, "radioactiveWater");
+		GameRegistry.registerBlock(cleanWater, "cleanWater");
 	}
 }
