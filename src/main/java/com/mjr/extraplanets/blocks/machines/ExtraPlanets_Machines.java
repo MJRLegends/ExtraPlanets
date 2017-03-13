@@ -11,6 +11,8 @@ import com.mjr.extraplanets.items.machines.ItemBlockUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
@@ -25,7 +27,10 @@ public class ExtraPlanets_Machines {
 	public static Block ultimateOxygenCompressor;
 
 	public static Block solarPanel;
-
+	
+	public static Block basicDecrystallizer;
+	public static Block basicCrystallizer;
+	
 	public static void init() {
 		initializeMachinesBlocks();
 		registerMachines();
@@ -43,6 +48,8 @@ public class ExtraPlanets_Machines {
 			advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
 		if (Config.ultimateCompressor)
 			ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
+		basicDecrystallizer = new BasicDecrystallizer("basicDecrystallizer");
+		basicCrystallizer = new BasicCrystallizer("basicCrystallizer");
 	}
 
 	private static void registerMachines() {
@@ -56,6 +63,8 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
 		if (Config.ultimateCompressor)
 			GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -73,5 +82,7 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
 		}
+		GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
+		GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
 	}
 }
