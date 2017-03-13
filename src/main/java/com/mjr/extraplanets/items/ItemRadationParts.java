@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemRadationParts extends Item {
-	public static final String[] names = { "iodideSalt", "potassiumIodide", "potassium", "sodium", "potash" };
+	public static final String[] names = { "iodideSalt", "potassiumIodide", "potassium", "potash" };
 
 	public ItemRadationParts(String assetName) {
 		super();

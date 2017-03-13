@@ -40,7 +40,6 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 
 	public TileEntityBasicCrystallizer() {
 		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, 0));
-		this.inputTank.fill(FluidRegistry.getFluidStack("salt_fluid", 10000), true);
 	}
 	
 	@Override
