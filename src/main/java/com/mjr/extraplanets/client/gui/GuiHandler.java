@@ -17,6 +17,7 @@ import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompress
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicCrystallizer;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicSmasher;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenDecompressor;
@@ -26,6 +27,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
@@ -61,8 +63,10 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile, player);
 			} else if (tile instanceof TileEntityBasicDecrystallizer) {
 				return new ContainerBasicDecrystallizer(player.inventory, (TileEntityBasicDecrystallizer) tile, player);
-			}else if (tile instanceof TileEntityBasicCrystallizer) {
+			} else if (tile instanceof TileEntityBasicCrystallizer) {
 				return new ContainerBasicCrystallizer(player.inventory, (TileEntityBasicCrystallizer) tile, player);
+			} else if (tile instanceof TileEntityBasicSmasher) {
+				return new ContainerBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile, player);
 			}
 		}
 		return null;
@@ -98,8 +102,10 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile);
 			} else if (tile instanceof TileEntityBasicDecrystallizer) {
 				return new GuiBasicDecrystallizer(player.inventory, (TileEntityBasicDecrystallizer) tile);
-			}else if (tile instanceof TileEntityBasicCrystallizer) {
+			} else if (tile instanceof TileEntityBasicCrystallizer) {
 				return new GuiBasicCrystallizer(player.inventory, (TileEntityBasicCrystallizer) tile);
+			} else if (tile instanceof TileEntityBasicSmasher) {
+				return new GuiBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile);
 			}
 		}
 		return null;

@@ -13,6 +13,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
@@ -30,6 +31,7 @@ public class ExtraPlanets_Machines {
 	
 	public static Block basicDecrystallizer;
 	public static Block basicCrystallizer;
+	public static Block basicSmasher;
 	
 	public static void init() {
 		initializeMachinesBlocks();
@@ -50,6 +52,7 @@ public class ExtraPlanets_Machines {
 			ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
 		basicDecrystallizer = new BasicDecrystallizer("basicDecrystallizer");
 		basicCrystallizer = new BasicCrystallizer("basicCrystallizer");
+		basicSmasher = new BasicSmasher("basicSmasher");
 	}
 
 	private static void registerMachines() {
@@ -65,6 +68,7 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -84,5 +88,6 @@ public class ExtraPlanets_Machines {
 		}
 		GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
 		GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
+		GameRegistry.registerTileEntity(TileEntityBasicSmasher.class, Constants.modName + "Basic Smasher");
 	}
 }
