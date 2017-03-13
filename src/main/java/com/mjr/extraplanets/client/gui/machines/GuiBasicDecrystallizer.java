@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.gui;
+package com.mjr.extraplanets.client.gui.machines;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,20 +17,20 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.inventory.machines.ContainerBasicCrystallizer;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
 
 @SideOnly(Side.CLIENT)
-public class GuiBasicCrystallizer extends GuiContainerGC {
-	private static final ResourceLocation crystallizerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/crystallizer.png");
+public class GuiBasicDecrystallizer extends GuiContainerGC {
+	private static final ResourceLocation decrystallizerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/decrystallizer.png");
 
-	private final TileEntityBasicCrystallizer tileEntity;
+	private final TileEntityBasicDecrystallizer tileEntity;
 
-	private GuiElementInfoRegion inputTankRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 153, (this.height - this.ySize) / 2 + 28, 16, 38, new ArrayList<String>(), this.width, this.height, this);
+	private GuiElementInfoRegion outputTankRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 153, (this.height - this.ySize) / 2 + 28, 16, 38, new ArrayList<String>(), this.width, this.height, this);
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicCrystallizer(InventoryPlayer par1InventoryPlayer, TileEntityBasicCrystallizer tileEntity) {
-		super(new ContainerBasicCrystallizer(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
+	public GuiBasicDecrystallizer(InventoryPlayer par1InventoryPlayer, TileEntityBasicDecrystallizer tileEntity) {
+		super(new ContainerBasicDecrystallizer(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}
@@ -41,23 +41,23 @@ public class GuiBasicCrystallizer extends GuiContainerGC {
 		List<String> batterySlotDesc = new ArrayList<String>();
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
-		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
-		List<String> inputTankDesc = new ArrayList<String>();
-		inputTankDesc.add(GCCoreUtil.translate("gui.fuel_tank.desc.4"));
-		int fuelLevel = this.tileEntity.inputTank != null && this.tileEntity.inputTank.getFluid() != null ? this.tileEntity.inputTank.getFluid().amount : 0;
-		int fuelCapacity = this.tileEntity.inputTank != null ? this.tileEntity.inputTank.getCapacity() : 0;
-		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.fuel.name") + ": " + fuelLevel + " / " + fuelCapacity);
-		this.inputTankRegion.tooltipStrings = inputTankDesc;
-		this.inputTankRegion.xPosition = (this.width - this.xSize) / 2 + 7;
-		this.inputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
-		this.inputTankRegion.parentWidth = this.width;
-		this.inputTankRegion.parentHeight = this.height;
-		this.infoRegions.add(this.inputTankRegion);
+		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
+		List<String> outputTankDesc = new ArrayList<String>();
+		outputTankDesc.add(GCCoreUtil.translate("gui.fuel_tank.desc.4"));
+		int fuelLevel = this.tileEntity.outputTank != null && this.tileEntity.outputTank.getFluid() != null ? this.tileEntity.outputTank.getFluid().amount : 0;
+		int fuelCapacity = this.tileEntity.outputTank != null ? this.tileEntity.outputTank.getCapacity() : 0;
+		outputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.fuel.name") + ": " + fuelLevel + " / " + fuelCapacity);
+		this.outputTankRegion.tooltipStrings = outputTankDesc;
+		this.outputTankRegion.xPosition = (this.width - this.xSize) / 2 + 153;
+		this.outputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.outputTankRegion.parentWidth = this.width;
+		this.outputTankRegion.parentHeight = this.height;
+		this.infoRegions.add(this.outputTankRegion);
 		List<String> fuelSlotDesc = new ArrayList<String>();
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_input.desc.0"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_input.desc.1"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_input.desc.2"));
-		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.0"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.1"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.2"));
+		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
@@ -68,7 +68,7 @@ public class GuiBasicCrystallizer extends GuiContainerGC {
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);
 	}
-
+	
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
@@ -76,7 +76,7 @@ public class GuiBasicCrystallizer extends GuiContainerGC {
 		int yOffset = -10;
 
 		if (this.tileEntity.canProcess()) {
-			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.crystallizing.name");
+			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.decrystallizing.name");
 		} else {
 			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.idle.name");
 		}
@@ -87,7 +87,7 @@ public class GuiBasicCrystallizer extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-		this.mc.renderEngine.bindTexture(GuiBasicCrystallizer.crystallizerTexture);
+		this.mc.renderEngine.bindTexture(GuiBasicDecrystallizer.decrystallizerTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
 		int containerWidth = (this.width - this.xSize) / 2;
@@ -97,12 +97,12 @@ public class GuiBasicCrystallizer extends GuiContainerGC {
 		int displayInt = this.tileEntity.getScaledFuelLevel(38);
 		this.drawTexturedModalRect((this.width - this.xSize) / 2 + 153, (this.height - this.ySize) / 2 + 17 + 49 - displayInt, 176 + 16, 38 - displayInt, 16, displayInt);
 
-		List<String> inputTankDesc = new ArrayList<String>();
-		inputTankDesc.add(GCCoreUtil.translate("gui.salt_water_tank.desc.4"));
-		int fuelLevel = this.tileEntity.inputTank != null && this.tileEntity.inputTank.getFluid() != null ? this.tileEntity.inputTank.getFluid().amount : 0;
-		int fuelCapacity = this.tileEntity.inputTank != null ? this.tileEntity.inputTank.getCapacity() : 0;
-		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.salt_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
-		this.inputTankRegion.tooltipStrings = inputTankDesc;
+		List<String> outputTankDesc = new ArrayList<String>();
+		outputTankDesc.add(GCCoreUtil.translate("gui.salt_water_tank.desc.4"));
+		int fuelLevel = this.tileEntity.outputTank != null && this.tileEntity.outputTank.getFluid() != null ? this.tileEntity.outputTank.getFluid().amount : 0;
+		int fuelCapacity = this.tileEntity.outputTank != null ? this.tileEntity.outputTank.getCapacity() : 0;
+		outputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.salt_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
+		this.outputTankRegion.tooltipStrings = outputTankDesc;
 
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));

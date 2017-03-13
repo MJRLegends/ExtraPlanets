@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.gui;
+package com.mjr.extraplanets.client.gui.rockets;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;

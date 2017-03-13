@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.gui;
+package com.mjr.extraplanets.client.gui.machines;
 
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
@@ -13,24 +13,24 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GuiUltimateOxygenCompressor extends GuiContainerGC
+public class GuiAdvancedOxygenCompressor extends GuiContainerGC
 {
     private static final ResourceLocation compressorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/compressor.png");
 
-    private final TileEntityUltimateOxygenCompressor compressor;
+    private final TileEntityAdvancedOxygenCompressor compressor;
 
     private GuiElementInfoRegion oxygenInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 24, 56, 9, new ArrayList<String>(), this.width, this.height, this);
     private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 37, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-    public GuiUltimateOxygenCompressor(InventoryPlayer par1InventoryPlayer, TileEntityUltimateOxygenCompressor par2TileEntityAirDistributor)
+    public GuiAdvancedOxygenCompressor(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedOxygenCompressor par2TileEntityAirDistributor)
     {
-        super(new ContainerUltimateOxygenCompressor(par1InventoryPlayer, par2TileEntityAirDistributor, FMLClientHandler.instance().getClient().thePlayer));
+        super(new ContainerAdvancedOxygenCompressor(par1InventoryPlayer, par2TileEntityAirDistributor, FMLClientHandler.instance().getClient().thePlayer));
         this.compressor = par2TileEntityAirDistributor;
         this.ySize = 180;
     }
@@ -79,7 +79,7 @@ public class GuiUltimateOxygenCompressor extends GuiContainerGC
         GCCoreUtil.drawStringRightAligned(GCCoreUtil.translate("gui.message.in.name") + ":", 99, 38, 4210752, this.fontRendererObj);
         String status = GCCoreUtil.translate("gui.message.status.name") + ": " + this.getStatus();
         this.fontRendererObj.drawString(status, this.xSize / 2 - this.fontRendererObj.getStringWidth(status) / 2, 50, 4210752);
-        status = GCCoreUtil.translate("gui.oxygen_use.desc") + ": " + TileEntityUltimateOxygenCompressor.TANK_TRANSFER_SPEED * 20 + GCCoreUtil.translate("gui.per_second");
+        status = GCCoreUtil.translate("gui.oxygen_use.desc") + ": " + TileEntityAdvancedOxygenCompressor.TANK_TRANSFER_SPEED * 20 + GCCoreUtil.translate("gui.per_second");
         this.fontRendererObj.drawString(status, this.xSize / 2 - this.fontRendererObj.getStringWidth(status) / 2, 60, 4210752);
         //		status = ElectricityDisplay.getDisplay(this.compressor.ueWattsPerTick * 20, ElectricUnit.WATT);
         //		this.fontRendererObj.drawString(status, this.xSize / 2 - this.fontRendererObj.getStringWidth(status) / 2, 70, 4210752);
@@ -112,7 +112,7 @@ public class GuiUltimateOxygenCompressor extends GuiContainerGC
     protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3)
     {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(GuiUltimateOxygenCompressor.compressorTexture);
+        this.mc.getTextureManager().bindTexture(GuiAdvancedOxygenCompressor.compressorTexture);
         final int var5 = (this.width - this.xSize) / 2;
         final int var6 = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(var5, var6 + 5, 0, 0, this.xSize, 181);

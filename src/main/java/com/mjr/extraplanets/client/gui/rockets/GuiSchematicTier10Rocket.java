@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.gui;
+package com.mjr.extraplanets.client.gui.rockets;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -12,15 +12,15 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier5Rocket;
+import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier10Rocket;
 
-public class GuiSchematicTier5Rocket extends GuiContainer implements ISchematicResultPage {
-	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbenchTier5.png");
+public class GuiSchematicTier10Rocket extends GuiContainer implements ISchematicResultPage {
+	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbenchTier10.png");
 
 	private int pageIndex;
 
-	public GuiSchematicTier5Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
-		super(new ContainerSchematicTier5Rocket(par1InventoryPlayer, pos));
+    public GuiSchematicTier10Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos){
+		super(new ContainerSchematicTier10Rocket(par1InventoryPlayer, pos));
 		this.ySize = 238;
 	}
 
@@ -47,14 +47,14 @@ public class GuiSchematicTier5Rocket extends GuiContainer implements ISchematicR
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(GCCoreUtil.translate("schematic.rocketT5.name"), 7, -20 + 27, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("schematic.rocketT10.name"), 7, -20 + 27, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, 220 - 104 + 2 + 27, 4210752);
 	}
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.mc.renderEngine.bindTexture(GuiSchematicTier5Rocket.rocketBenchTexture);
+		this.mc.renderEngine.bindTexture(GuiSchematicTier10Rocket.rocketBenchTexture);
 		final int var5 = (this.width - this.xSize) / 2;
 		final int var6 = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(var5, var6, 0, 0, this.xSize, this.ySize);

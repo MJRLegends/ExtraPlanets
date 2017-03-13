@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.gui;
+package com.mjr.extraplanets.client.gui.machines;
 
 import java.util.ArrayList;
 import java.util.List;

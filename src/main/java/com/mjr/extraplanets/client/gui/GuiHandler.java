@@ -12,6 +12,17 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenCompressor;
+import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenDecompressor;
+import com.mjr.extraplanets.client.gui.machines.GuiAdvancedRefinery;
+import com.mjr.extraplanets.client.gui.machines.GuiBasicChemicalInjector;
+import com.mjr.extraplanets.client.gui.machines.GuiBasicCrystallizer;
+import com.mjr.extraplanets.client.gui.machines.GuiBasicDecrystallizer;
+import com.mjr.extraplanets.client.gui.machines.GuiBasicSmasher;
+import com.mjr.extraplanets.client.gui.machines.GuiSolar;
+import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenCompressor;
+import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenDecompressor;
+import com.mjr.extraplanets.client.gui.machines.GuiUltimateRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
