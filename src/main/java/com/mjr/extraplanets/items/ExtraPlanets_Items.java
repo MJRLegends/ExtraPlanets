@@ -156,6 +156,7 @@ public class ExtraPlanets_Items {
 	public static Item tier4UnPreparedSpaceSuitBoots;
 
 	public static Item wafers;
+	public static Item antiRadationParts;
 
 	public static void init() {
 		initializeItems();
@@ -268,10 +269,11 @@ public class ExtraPlanets_Items {
 			oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
 		}
 		ingotLead = new ItemBasicItem("ingotLead");
-
+		
 		cloth = new ItemBasicItem("cloth");
 		gravityController = new ItemBasicItem("gravityController");
-
+		antiRadationParts = new ItemRadationParts("antiRadationParts");
+		
 		if (Config.pressure || Config.radiation) {
 			tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
 			tier2PressureLayer = new ItemBasicItem("tier2PressureLayer");
@@ -450,6 +452,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 		}
+		GameRegistry.registerItem(antiRadationParts, antiRadationParts.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerFluidContainer() {
