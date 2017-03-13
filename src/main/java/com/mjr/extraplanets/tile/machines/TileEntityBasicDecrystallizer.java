@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.tile.machines;
 
-import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,7 +23,7 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler{
+public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 20000;
 	private int amountAdded = 0;
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -85,8 +85,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			final int amountToAdd = 25;
 			amountAdded = amountAdded + amountToAdd;
 			this.outputTank.fill(FluidRegistry.getFluidStack("salt_fluid", amountToAdd), true);
-			if (amountAdded == 1000)
-			{
+			if (amountAdded == 1000) {
 				amountAdded = 0;
 				this.decrStackSize(1, 1);
 			}
@@ -147,9 +146,9 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return FluidUtil.isOilContainerAny(itemstack);
+				return itemstack == new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0);
 			case 2:
-				return FluidUtil.isEmptyContainer(itemstack, GCItems.fuelCanister);
+				return itemstack.getItem() == Items.bucket;
 			default:
 				return false;
 			}
@@ -163,10 +162,8 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			switch (slotID) {
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
-			case 1:
-				return FluidUtil.isEmptyContainer(itemstack);
 			case 2:
-				return FluidUtil.isFullContainer(itemstack);
+				return itemstack.getItem() == ExtraPlanets_Items.salt_bucket;
 			default:
 				return false;
 			}

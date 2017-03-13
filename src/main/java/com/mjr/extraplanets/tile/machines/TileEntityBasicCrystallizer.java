@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.tile.machines;
 
-import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
@@ -25,7 +24,7 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler{
+public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 20000;
 	private int amountDrain = 0;
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -36,12 +35,12 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
 
-    private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0);
 
 	public TileEntityBasicCrystallizer() {
 		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, 0));
 	}
-	
+
 	@Override
 	public void update() {
 		super.update();
@@ -65,12 +64,11 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
-		if (this.containingItems[slot] != null){
-			if(this.containingItems[slot].getItem() == ExtraPlanets_Items.salt_bucket){
+		if (this.containingItems[slot] != null) {
+			if (this.containingItems[slot].getItem() == ExtraPlanets_Items.salt_bucket) {
 				tank.fill(FluidRegistry.getFluidStack("salt_fluid", 1000), true);
 				this.containingItems[slot].setItem(Items.bucket);
-			}
-			else
+			} else
 				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
 		}
 	}
@@ -86,58 +84,48 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		return !this.getDisabled(0);
 
 	}
-	
-	public boolean canCrystallize(){
+
+	public boolean canCrystallize() {
 		ItemStack itemstack = this.producingStack;
-        if (itemstack == null)
-        {
-            return false;
-        }
-        if (this.containingItems[1] == null)
-        {
-            return true;
-        }
-        if (!this.containingItems[1].isItemEqual(itemstack))
-        {
-            return false;
-        }
-        int result = this.containingItems[1].stackSize + itemstack.stackSize;
-        return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
+		if (itemstack == null) {
+			return false;
+		}
+		if (this.containingItems[1] == null) {
+			return true;
+		}
+		if (!this.containingItems[1].isItemEqual(itemstack)) {
+			return false;
+		}
+		int result = this.containingItems[1].stackSize + itemstack.stackSize;
+		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
 	public void smeltItem() {
-        ItemStack resultItemStack = this.producingStack;
+		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canCrystallize()) {
 			final int amountToDrain = 25;
 			amountDrain = amountDrain + amountToDrain;
 			this.inputTank.drain(amountToDrain, true);
-			if (amountDrain >= 1000){
+			if (amountDrain >= 1000) {
 				amountDrain = 0;
-				if (this.containingItems[1] == null)
-	            {
-	                this.containingItems[1] = resultItemStack.copy();
-	            }
-	            else if (this.containingItems[1].isItemEqual(resultItemStack))
-	            {
-	                if (this.containingItems[1].stackSize + resultItemStack.stackSize > 64)
-	                {
-	                    for (int i = 0; i < this.containingItems[1].stackSize + resultItemStack.stackSize - 64; i++)
-	                    {
-	                        float var = 0.7F;
-	                        double dx = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-	                        double dy = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-	                        double dz = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-	                        EntityItem entityitem = new EntityItem(this.worldObj, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
-	                        entityitem.setPickupDelay(10);
-	                        this.worldObj.spawnEntityInWorld(entityitem);
-	                    }
-	                    this.containingItems[1].stackSize = 64;
-	                }
-	                else
-	                {
-	                    this.containingItems[1].stackSize += resultItemStack.stackSize;
-	                }
-	            }
+				if (this.containingItems[1] == null) {
+					this.containingItems[1] = resultItemStack.copy();
+				} else if (this.containingItems[1].isItemEqual(resultItemStack)) {
+					if (this.containingItems[1].stackSize + resultItemStack.stackSize > 64) {
+						for (int i = 0; i < this.containingItems[1].stackSize + resultItemStack.stackSize - 64; i++) {
+							float var = 0.7F;
+							double dx = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+							double dy = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+							double dz = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+							EntityItem entityitem = new EntityItem(this.worldObj, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
+							entityitem.setPickupDelay(10);
+							this.worldObj.spawnEntityInWorld(entityitem);
+						}
+						this.containingItems[1].stackSize = 64;
+					} else {
+						this.containingItems[1].stackSize += resultItemStack.stackSize;
+					}
+				}
 			}
 		}
 	}
@@ -195,10 +183,8 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 			switch (slotID) {
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
-			case 1:
-				return FluidUtil.isOilContainerAny(itemstack);
 			case 2:
-				return FluidUtil.isEmptyContainer(itemstack, GCItems.fuelCanister);
+				return itemstack == new ItemStack(ExtraPlanets_Items.salt_bucket);
 			default:
 				return false;
 			}
@@ -213,9 +199,9 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 1:
-				return FluidUtil.isEmptyContainer(itemstack);
+				return itemstack == new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0);
 			case 2:
-				return FluidUtil.isFullContainer(itemstack);
+				return itemstack == new ItemStack(Items.bucket);
 			default:
 				return false;
 			}
@@ -287,38 +273,30 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
-    public boolean canFill(EnumFacing from, Fluid fluid)
-    {
-        if (from.equals(getFront()))
-        {
-            return this.inputTank.getFluid() == null || this.inputTank.getFluidAmount() < this.inputTank.getCapacity();
-        }
+	public boolean canFill(EnumFacing from, Fluid fluid) {
+		if (from.equals(getFront())) {
+			return this.inputTank.getFluid() == null || this.inputTank.getFluidAmount() < this.inputTank.getCapacity();
+		}
 
-        return false;
-    }
+		return false;
+	}
 
-    @Override
-    public int fill(EnumFacing from, FluidStack resource, boolean doFill)
-    {
-        int used = 0;
+	@Override
+	public int fill(EnumFacing from, FluidStack resource, boolean doFill) {
+		int used = 0;
 
-        if (from.equals(getFront()))
-        {
-            final String liquidName = FluidRegistry.getFluidName(resource);
+		if (from.equals(getFront())) {
+			final String liquidName = FluidRegistry.getFluidName(resource);
 
-            if (liquidName != null && liquidName.startsWith("salt"))
-            {
-                if (liquidName.equals(ExtraPlanets_Fluids.salt_fluid.getName()))
-                {
-                    used = this.inputTank.fill(resource, doFill);
-                }
-                else
-                {
-                    used = this.inputTank.fill(new FluidStack(ExtraPlanets_Fluids.salt_fluid, resource.amount), doFill);
-                }
-            }
-        }
+			if (liquidName != null && liquidName.startsWith("salt")) {
+				if (liquidName.equals(ExtraPlanets_Fluids.salt_fluid.getName())) {
+					used = this.inputTank.fill(resource, doFill);
+				} else {
+					used = this.inputTank.fill(new FluidStack(ExtraPlanets_Fluids.salt_fluid, resource.amount), doFill);
+				}
+			}
+		}
 
-        return used;
-    }
+		return used;
+	}
 }

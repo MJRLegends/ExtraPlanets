@@ -155,7 +155,8 @@ public class ExtraPlanets_Blocks {
 	public static Block volcanicRock;
 	public static Block frozenNitrogen;
 	public static Block oreLead;
-
+	public static Block potash;
+	
 	// Treasure Chests
 	public static Block treasureChestTier4;
 	public static Block treasureChestTier5;
@@ -307,6 +308,7 @@ public class ExtraPlanets_Blocks {
 			kepler22bYellowGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
 			//kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22bFlowers");
 		}
+		potash = new BlockBasic(Material.rock).setUnlocalizedName("potash").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -483,6 +485,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(nuclearBomb, nuclearBomb.getUnlocalizedName().substring(5));
 		if (Config.leadOreGeneration)
 			GameRegistry.registerBlock(oreLead, oreLead.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(potash, potash.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerTileEntitys() {

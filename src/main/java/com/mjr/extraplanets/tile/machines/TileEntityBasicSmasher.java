@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.tile.machines;
 
-import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
@@ -53,7 +52,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public boolean canProcess() {
 		if (containingItems[1] == null)
 			return false;
-		if (containingItems[1].getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.oreLead))
+		if (containingItems[1].getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.potash))
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -141,9 +140,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return FluidUtil.isOilContainerAny(itemstack);
-			case 2:
-				return FluidUtil.isEmptyContainer(itemstack, GCItems.fuelCanister);
+				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.potash);
 			default:
 				return false;
 			}
@@ -157,10 +154,8 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			switch (slotID) {
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
-			case 1:
-				return FluidUtil.isEmptyContainer(itemstack);
 			case 2:
-				return FluidUtil.isFullContainer(itemstack);
+				return itemstack == new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 1);
 			default:
 				return false;
 			}

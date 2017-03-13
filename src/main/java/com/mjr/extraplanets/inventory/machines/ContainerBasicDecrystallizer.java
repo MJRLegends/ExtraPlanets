@@ -26,7 +26,7 @@ public class ContainerBasicDecrystallizer extends Container
         // Input Slot
         this.addSlotToContainer(new Slot(tileEntity, 1, 81, 35));
 
-        // Input Tank Slot
+        // Output Tank Slot
         this.addSlotToContainer(new Slot(tileEntity, 2, 153, 7));
         int var3;
 
