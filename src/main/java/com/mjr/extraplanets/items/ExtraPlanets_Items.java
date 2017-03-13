@@ -30,6 +30,14 @@ import com.mjr.extraplanets.items.noseCones.Tier6NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier7NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier8NoseCone;
 import com.mjr.extraplanets.items.noseCones.Tier9NoseCone;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier10Items;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier11Items;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier4Items;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier5Items;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier6Items;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier7Items;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier8Items;
+import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier9Items;
 import com.mjr.extraplanets.items.rockets.Tier10Rocket;
 import com.mjr.extraplanets.items.rockets.Tier4Rocket;
 import com.mjr.extraplanets.items.rockets.Tier5Rocket;
@@ -44,6 +52,10 @@ import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
 import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
+import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
