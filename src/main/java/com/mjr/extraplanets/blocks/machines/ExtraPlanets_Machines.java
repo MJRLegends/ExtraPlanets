@@ -5,9 +5,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.items.itemBlocks.ItemBlockSolar;
-import com.mjr.extraplanets.items.machines.ItemBlockAdvancedOxygenCompressor;
-import com.mjr.extraplanets.items.machines.ItemBlockUltimateOxygenCompressor;
+import com.mjr.extraplanets.itemBlocks.machines.ItemBlockAdvancedOxygenCompressor;
+import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
+import com.mjr.extraplanets.itemBlocks.machines.ItemBlockUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
