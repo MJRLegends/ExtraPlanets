@@ -1,15 +1,14 @@
 package com.mjr.extraplanets.inventory.machines;
 
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
-import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
 
 public class ContainerBasicDecrystallizer extends Container
@@ -95,16 +94,15 @@ public class ContainerBasicDecrystallizer extends Container
                         return null;
                     }
                 }
-                else
+                else if (var4.getItem() == new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0).getItem() && var4.getItemDamage() == new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0).getItemDamage())
                 {
-                    if (FluidUtil.isEmptyContainer(var4, GCItems.fuelCanister))
+                    if (!this.mergeItemStack(var4, 1, 2, false))
                     {
-                        if (!this.mergeItemStack(var4, 2, 3, false))
-                        {
-                            return null;
-                        }
+                        return null;
                     }
-                    else if (par1 < 30)
+                }
+                else{
+                	if (par1 < 30)
                     {
                         if (!this.mergeItemStack(var4, 30, 39, false))
                         {

@@ -8,8 +8,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
 
 public class ContainerBasicSmasher extends Container
@@ -95,16 +98,16 @@ public class ContainerBasicSmasher extends Container
                         return null;
                     }
                 }
+                else if (var4.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.potash))
+                {
+                    if (!this.mergeItemStack(var4, 1, 2, false))
+                    {
+                        return null;
+                    }
+                }
                 else
                 {
-                    if (FluidUtil.isEmptyContainer(var4, GCItems.fuelCanister))
-                    {
-                        if (!this.mergeItemStack(var4, 2, 3, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (par1 < 30)
+                	if (par1 < 30)
                     {
                         if (!this.mergeItemStack(var4, 30, 39, false))
                         {

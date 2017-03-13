@@ -10,6 +10,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 
 public class ContainerBasicCrystallizer extends Container
@@ -95,16 +96,16 @@ public class ContainerBasicCrystallizer extends Container
                         return null;
                     }
                 }
+                else if (var4.getItem() == ExtraPlanets_Items.salt_bucket)
+                {
+                    if (!this.mergeItemStack(var4, 2, 3, false))
+                    {
+                        return null;
+                    }
+                }
                 else
                 {
-                    if (FluidUtil.isEmptyContainer(var4, GCItems.fuelCanister))
-                    {
-                        if (!this.mergeItemStack(var4, 2, 3, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (par1 < 30)
+                    if (par1 < 30)
                     {
                         if (!this.mergeItemStack(var4, 30, 39, false))
                         {
