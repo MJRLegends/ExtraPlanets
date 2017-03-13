@@ -10,8 +10,11 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -131,5 +134,12 @@ public class BlockBasicGrass extends Block implements IGrowable
     public EnumWorldBlockLayer getBlockLayer()
     {
         return EnumWorldBlockLayer.CUTOUT_MIPPED;
+    }
+    
+    @Override
+    public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing side, IPlantable plant)
+    {
+        Block block = plant.getPlant(world, pos).getBlock();
+        return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
     }
 }
