@@ -8,8 +8,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.inventory.ContainerAdvancedRefinery;
-import com.mjr.extraplanets.inventory.ContainerSolar;
+import com.mjr.extraplanets.client.gui.machines.GuiAdvancedRefinery;
+import com.mjr.extraplanets.client.gui.machines.GuiSolar;
+import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
+import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.TileEntitySolar;
 

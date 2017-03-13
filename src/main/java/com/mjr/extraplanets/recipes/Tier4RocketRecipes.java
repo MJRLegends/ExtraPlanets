@@ -13,7 +13,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import codechicken.nei.PositionedStack;
 
-import com.mjr.extraplanets.inventory.InventorySchematicTier4Rocket;
+import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier4Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class Tier4RocketRecipes {
