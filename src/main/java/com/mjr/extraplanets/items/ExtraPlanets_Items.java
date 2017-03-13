@@ -156,7 +156,10 @@ public class ExtraPlanets_Items {
 	public static Item tier4UnPreparedSpaceSuitBoots;
 
 	public static Item wafers;
-	public static Item antiRadationParts;
+	public static Item iodideSalt;
+	public static Item potassiumIodide;
+	public static Item potassium;
+	public static Item potash;
 
 	public static void init() {
 		initializeItems();
@@ -272,7 +275,11 @@ public class ExtraPlanets_Items {
 		
 		cloth = new ItemBasicItem("cloth");
 		gravityController = new ItemBasicItem("gravityController");
-		antiRadationParts = new ItemRadationParts("antiRadationParts");
+		
+		iodideSalt = new ItemBasicItem("iodideSalt");
+		potassiumIodide	 = new ItemBasicItem("potassiumIodide");
+		potassium = new ItemBasicItem("potassium");
+		potash = new ItemBasicItem("potashShards");
 		
 		if (Config.pressure || Config.radiation) {
 			tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
@@ -452,7 +459,11 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 		}
-		GameRegistry.registerItem(antiRadationParts, antiRadationParts.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(iodideSalt, iodideSalt.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
+
 	}
 
 	private static void registerFluidContainer() {

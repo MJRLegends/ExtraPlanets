@@ -9,24 +9,27 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
+import com.mjr.extraplanets.tile.machines.TileEntityChemicalInjector;
 
-public class ContainerBasicDecrystallizer extends Container
+public class ContainerChemicalInjector extends Container
 {
-    private final TileEntityBasicDecrystallizer tileEntity;
+    private final TileEntityChemicalInjector tileEntity;
 
-    public ContainerBasicDecrystallizer(InventoryPlayer par1InventoryPlayer, TileEntityBasicDecrystallizer tileEntity, EntityPlayer player)
+    public ContainerChemicalInjector(InventoryPlayer par1InventoryPlayer, TileEntityChemicalInjector tileEntity, EntityPlayer player)
     {
         this.tileEntity = tileEntity;
 
         // Electric Input Slot
-        this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 7, 7, IItemElectric.class));
+        this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 153, 7, IItemElectric.class));
 
         // Input Slot
-        this.addSlotToContainer(new Slot(tileEntity, 1, 81, 35));
+        this.addSlotToContainer(new Slot(tileEntity, 1, 30, 35));
+        
+        // Input Slot
+        this.addSlotToContainer(new Slot(tileEntity, 2, 70, 35));
 
-        // Output Tank Slot
-        this.addSlotToContainer(new Slot(tileEntity, 2, 153, 7));
+        // Output Slot
+        this.addSlotToContainer(new Slot(tileEntity, 3, 120, 35));
         int var3;
 
         for (var3 = 0; var3 < 3; ++var3)
@@ -101,7 +104,15 @@ public class ContainerBasicDecrystallizer extends Container
                         return null;
                     }
                 }
-                else{
+                else if (var4.getItem() == ExtraPlanets_Items.potassium)
+                {
+                    if (!this.mergeItemStack(var4, 2, 3, false))
+                    {
+                        return null;
+                    }
+                }
+                else
+                {
                 	if (par1 < 30)
                     {
                         if (!this.mergeItemStack(var4, 30, 39, false))

@@ -74,7 +74,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		}
 		if (this.containingItems[1] == null)
 			return false;
-		else if (this.containingItems[1].getItem() == new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0).getItem())
+		else if (this.containingItems[1].getItem() == ExtraPlanets_Items.iodideSalt)
 			return true;
 		return !this.getDisabled(0);
 
@@ -146,7 +146,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack == new ItemStack(ExtraPlanets_Items.antiRadationParts, 1, 0);
+				return itemstack.getItem() == ExtraPlanets_Items.iodideSalt;
 			case 2:
 				return itemstack.getItem() == Items.bucket;
 			default:

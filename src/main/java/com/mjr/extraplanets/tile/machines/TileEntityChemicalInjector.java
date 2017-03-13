@@ -7,26 +7,24 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory implements ISidedInventory {
-	public static final int PROCESS_TIME_REQUIRED = 50;
+public class TileEntityChemicalInjector extends TileBaseElectricBlockWithInventory implements ISidedInventory {
+	public static final int PROCESS_TIME_REQUIRED = 150;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private ItemStack[] containingItems = new ItemStack[3];
+	private ItemStack[] containingItems = new ItemStack[4];
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potash, 1, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potassiumIodide, 1, 0);
 
-	public TileEntityBasicSmasher() {
+	public TileEntityChemicalInjector() {
 	}
 
 	@Override
@@ -36,11 +34,11 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		if (!this.worldObj.isRemote) {
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
 				if (this.processTicks == 0) {
-					this.processTicks = TileEntityBasicSmasher.PROCESS_TIME_REQUIRED;
+					this.processTicks = TileEntityChemicalInjector.PROCESS_TIME_REQUIRED;
 				} else {
 					if (--this.processTicks <= 0) {
 						this.smeltItem();
-						this.processTicks = this.canProcess() ? TileEntityBasicSmasher.PROCESS_TIME_REQUIRED : 0;
+						this.processTicks = this.canProcess() ? TileEntityChemicalInjector.PROCESS_TIME_REQUIRED : 0;
 					}
 				}
 			} else {
@@ -52,7 +50,11 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public boolean canProcess() {
 		if (this.containingItems[1] == null)
 			return false;
-		if (this.containingItems[1].getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.potash))
+		if (this.containingItems[2] == null)
+			return false;
+		if (this.containingItems[1].getItem() != ExtraPlanets_Items.iodideSalt)
+			return false;
+		if (this.containingItems[2].getItem() != ExtraPlanets_Items.potassium)
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -62,24 +64,24 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		if (itemstack == null) {
 			return false;
 		}
-		if (this.containingItems[2] == null) {
+		if (this.containingItems[3] == null) {
 			return true;
 		}
-		if (!this.containingItems[2].isItemEqual(itemstack)) {
+		if (!this.containingItems[3].isItemEqual(itemstack)) {
 			return false;
 		}
-		int result = this.containingItems[2].stackSize + itemstack.stackSize;
+		int result = this.containingItems[3].stackSize + itemstack.stackSize;
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canOutput()) {
-			if (this.containingItems[2] == null) {
-				this.containingItems[2] = resultItemStack.copy();
-			} else if (this.containingItems[2].isItemEqual(resultItemStack)) {
-				if (this.containingItems[2].stackSize + resultItemStack.stackSize > 64) {
-					for (int i = 0; i < this.containingItems[2].stackSize + resultItemStack.stackSize - 64; i++) {
+			if (this.containingItems[3] == null) {
+				this.containingItems[3] = resultItemStack.copy();
+			} else if (this.containingItems[3].isItemEqual(resultItemStack)) {
+				if (this.containingItems[3].stackSize + resultItemStack.stackSize > 64) {
+					for (int i = 0; i < this.containingItems[3].stackSize + resultItemStack.stackSize - 64; i++) {
 						float var = 0.7F;
 						double dx = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						double dy = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
@@ -88,13 +90,14 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 						entityitem.setPickupDelay(10);
 						this.worldObj.spawnEntityInWorld(entityitem);
 					}
-					this.containingItems[2].stackSize = 64;
+					this.containingItems[3].stackSize = 64;
 				} else {
-					this.containingItems[2].stackSize += resultItemStack.stackSize;
+					this.containingItems[3].stackSize += resultItemStack.stackSize;
 				}
 			}
 		}
-		this.decrStackSize(1, 1);
+		this.decrStackSize(1, 3);
+		this.decrStackSize(2, 6);
 	}
 
 	@Override
@@ -118,7 +121,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.basic.smasher.name");
+		return GCCoreUtil.translate("container.basic.chemical_injector.name");
 	}
 
 	@Override
@@ -140,7 +143,9 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.potash);
+				return itemstack.getItem() == ExtraPlanets_Items.iodideSalt;
+			case 2:
+				return itemstack.getItem() == ExtraPlanets_Items.potassium;
 			default:
 				return false;
 			}
@@ -154,8 +159,8 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			switch (slotID) {
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
-			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.potash;
+			case 4:
+				return itemstack.getItem() == ExtraPlanets_Items.potassiumIodide;
 			default:
 				return false;
 			}

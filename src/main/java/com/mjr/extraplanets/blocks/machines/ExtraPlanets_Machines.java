@@ -28,11 +28,12 @@ public class ExtraPlanets_Machines {
 	public static Block ultimateOxygenCompressor;
 
 	public static Block solarPanel;
-	
+
 	public static Block basicDecrystallizer;
 	public static Block basicCrystallizer;
 	public static Block basicSmasher;
-	
+	public static Block basicChemicalInjector;
+
 	public static void init() {
 		initializeMachinesBlocks();
 		registerMachines();
@@ -53,6 +54,7 @@ public class ExtraPlanets_Machines {
 		basicDecrystallizer = new BasicDecrystallizer("basicDecrystallizer");
 		basicCrystallizer = new BasicCrystallizer("basicCrystallizer");
 		basicSmasher = new BasicSmasher("basicSmasher");
+		basicChemicalInjector = new BasicChemicalInjector("basicChemicalInjector");
 	}
 
 	private static void registerMachines() {
@@ -69,6 +71,7 @@ public class ExtraPlanets_Machines {
 		GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(basicChemicalInjector, basicChemicalInjector.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
