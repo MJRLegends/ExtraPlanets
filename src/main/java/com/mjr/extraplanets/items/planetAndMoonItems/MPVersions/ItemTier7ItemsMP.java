@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.items.MPVersions;
+package com.mjr.extraplanets.items.planetAndMoonItems.MPVersions;
 
 import java.util.List;
 
@@ -16,12 +16,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemTier6ItemsMP extends Item {
-	public static final String[] names = { "compressedMagnesium", "ingotMagnesium" };
+public class ItemTier7ItemsMP extends Item {
+	public static final String[] names = { "compressedCrystal", "ingotCrystal", "compressedReinforcedCrystal", "whiteGem"  };
 
-	protected IIcon[] icons = new IIcon[ItemTier6ItemsMP.names.length];
+	protected IIcon[] icons = new IIcon[ItemTier7ItemsMP.names.length];
 
-	public ItemTier6ItemsMP(String assetName) {
+	public ItemTier7ItemsMP(String assetName) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -41,14 +41,14 @@ public class ItemTier6ItemsMP extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemTier6ItemsMP.names) {
+		for (final String name : ItemTier7ItemsMP.names) {
 			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
 		}
 	}
 
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
-		return this.getUnlocalizedName() + "." + ItemTier6ItemsMP.names[itemStack.getItemDamage()];
+		return this.getUnlocalizedName() + "." + ItemTier7ItemsMP.names[itemStack.getItemDamage()];
 	}
 
 	@Override
@@ -63,7 +63,7 @@ public class ItemTier6ItemsMP extends Item {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
-		for (int i = 0; i < ItemTier6ItemsMP.names.length; i++) {
+		for (int i = 0; i < ItemTier7ItemsMP.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}

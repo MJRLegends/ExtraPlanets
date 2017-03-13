@@ -1,16 +1,13 @@
-package com.mjr.extraplanets.items.MPVersions;
+package com.mjr.extraplanets.items.planetAndMoonItems.MPVersions;
 
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 
 import com.mjr.extraplanets.Constants;
@@ -19,12 +16,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemTier10ItemsMP extends Item {
-	public static final String[] names = { "compressedDarkIron", "ingotDarkIron"};
+public class ItemTier6ItemsMP extends Item {
+	public static final String[] names = { "compressedMagnesium", "ingotMagnesium" };
 
-	protected IIcon[] icons = new IIcon[ItemTier10ItemsMP.names.length];
+	protected IIcon[] icons = new IIcon[ItemTier6ItemsMP.names.length];
 
-	public ItemTier10ItemsMP(String assetName) {
+	public ItemTier6ItemsMP(String assetName) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -44,14 +41,14 @@ public class ItemTier10ItemsMP extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemTier10ItemsMP.names) {
+		for (final String name : ItemTier6ItemsMP.names) {
 			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
 		}
 	}
 
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
-		return this.getUnlocalizedName() + "." + ItemTier10ItemsMP.names[itemStack.getItemDamage()];
+		return this.getUnlocalizedName() + "." + ItemTier6ItemsMP.names[itemStack.getItemDamage()];
 	}
 
 	@Override
@@ -66,7 +63,7 @@ public class ItemTier10ItemsMP extends Item {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
-		for (int i = 0; i < ItemTier10ItemsMP.names.length; i++) {
+		for (int i = 0; i < ItemTier6ItemsMP.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
