@@ -108,7 +108,9 @@ public class ExtraPlanets_Items {
 	public static Item nitrogen_bucket;
 	public static Item frozen_water_bucket;
 	public static Item salt_bucket;
-
+	public static Item clean_water_bucket;
+	public static Item radioactive_bucket;
+	
 	public static Item cannedFood;
 	public static Item diamondApple;
 	public static Item ironApple;
@@ -253,8 +255,9 @@ public class ExtraPlanets_Items {
 			tier11Items = new ItemTier11Items("tier11Items");
 		}
 		
-		magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
-		
+		clean_water_bucket = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.cleanWater);
+		radioactive_bucket = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.radioactiveWater);
+
 		// cannedFood = new ItemCannedFood("cannedfood");
 		if(Config.customApples){
 			diamondApple = new ItemAppleDiamond(8, 2.2F, false);
@@ -471,7 +474,9 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
-
+		
+		GameRegistry.registerItem(clean_water_bucket, "bucket_clean_water");
+		GameRegistry.registerItem(radioactive_bucket, "bucket_radioactive_water");
 	}
 
 	private static void registerFluidContainer() {
@@ -490,6 +495,8 @@ public class ExtraPlanets_Items {
 		if (Config.ceres) {
 			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.cleanWater_fluid, new ItemStack(clean_water_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.radioactiveWater_fluid, new ItemStack(radioactive_bucket, 1, 0), new ItemStack(Items.bucket));
 	}
 
 	public static void OreDictionaryRegister() {

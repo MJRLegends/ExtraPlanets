@@ -65,11 +65,11 @@ public class ExtraPlanets_Fluids {
 		FluidRegistry.registerFluid(salt_fluid);
 		salt = new FluidSalt("salt");
 		
-		radioactiveWater_fluid = new Fluid("radioactiveWater_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_flow")).setBlock(radioactiveWater).setDensity(800).setViscosity(1500);
+		radioactiveWater_fluid = new Fluid("radioactive_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_flow")).setBlock(radioactiveWater).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(radioactiveWater_fluid);
 		radioactiveWater = new FluidRadioactiveWater("radioactive_water");
 		
-		cleanWater_fluid = new Fluid("cleanWater_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_flow")).setBlock(radioactiveWater).setDensity(800).setViscosity(1500);
+		cleanWater_fluid = new Fluid("clean_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_flow")).setBlock(cleanWater).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(cleanWater_fluid);
 		cleanWater = new FluidCleanWater("clean_water");
 	}
@@ -80,7 +80,7 @@ public class ExtraPlanets_Fluids {
 		GameRegistry.registerBlock(nitrogen, "nitrogen");
 		GameRegistry.registerBlock(frozen_water, "frozen_water");
 		GameRegistry.registerBlock(salt, "salt");
-		GameRegistry.registerBlock(radioactiveWater, "radioactiveWater");
-		GameRegistry.registerBlock(cleanWater, "cleanWater");
+		GameRegistry.registerBlock(radioactiveWater, "radioactive_water");
+		GameRegistry.registerBlock(cleanWater, "clean_water");
 	}
 }
