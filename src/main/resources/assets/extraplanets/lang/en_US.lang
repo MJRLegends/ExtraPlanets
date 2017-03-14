@@ -186,11 +186,13 @@ tile.kepler22bMapleSaplings.redMapleSapling.name=Kepler 22b Red Maple Sapling
 tile.kepler22bMapleSaplings.purpleMapleSapling.name=Kepler 22b Purple Maple Sapling
 tile.kepler22bMapleSaplings.yellowMapleSapling.name=Kepler 22b Yellow Maple Sapling
 tile.kepler22bMapleSaplings.greenMapleSapling.name=Kepler 22b Green Maple Sapling
+tile.kepler22bMapleSaplings.brownMapleSapling.name=Kepler 22b Brown Maple Sapling
 tile.kepler22bMapleLeaves.blueMapleLeaf.name=Kepler 22b Blue Maple Leaves
 tile.kepler22bMapleLeaves.redMapleLeaf.name=Kepler 22b Red Maple Leaves
 tile.kepler22bMapleLeaves.purpleMapleLeaf.name=Kepler 22b Purple Maple Leaves
 tile.kepler22bMapleLeaves.yellowMapleLeaf.name=Kepler 22b Yellow Maple Leaves
 tile.kepler22bMapleLeaves.greenMapleLeaf.name=Kepler 22b Green Maple Leaves
+tile.kepler22bMapleLeaves.brownMapleLeaf.name=Kepler 22b Brown Maple Leaves
 tile.kepler22bFlowers.blueMapleShortGrass.name=Kepler 22b Blue Short Grass
 tile.kepler22bFlowers.blueMapleMedGrass.name=Kepler 22b Blue Medium Grass
 tile.kepler22bFlowers.blueMapleTallGrass.name=Kepler 22b Blue Tall Grass
@@ -380,6 +382,10 @@ tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
 tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
 tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
 tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+tile.basicDecrystallizer.name=Basic Decrystallizer
+tile.basicCrystallizer.name=Basic Crystallizer
+tile.basicSmasher.name=Basic Block Smasher
+tile.basicChemicalInjector.name=Basic Chemical Injector
 
 #Machine Containers
 container.solarhybrid.name=Hybrid Solar Panel
@@ -390,6 +396,20 @@ container.advancedoxygencompressor.name=Advanced Oxygen Compressor
 container.advancedoxygendecompressor.name=Advanced Oxygen Decompressor
 container.ultimateoxygencompressor.name=Ultimate Oxygen Compressor
 container.ultimateoxygendecompressor.name=Ultimate Oxygen Decompressor
+container.basic.decrystallizer.name=Basic Decrystallizer
+container.basic.crystallizer.name=Basic Crystallizer
+container.basic.smasher.name=Basic Smasher
+container.basic.chemical_injector.name=Basic Chemical Injector
+
+#Machine GUI Components
+gui.salt_water_tank.desc.4=Salt Water Tank
+gui.message.salt_water.name=Salt Water
+gui.salt_water_input.desc.0=Place Salt Water bucket into
+gui.salt_water_input.desc.1=this slot to fill the fuel tank.
+gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
+gui.salt_water_output.desc.0=Place empty vanilla bucket into
+gui.salt_water_output.desc.1=this slot to fill them from the
+gui.salt_water_output.desc.2=fuel tank
 
 #Other Blocks
 tile.nuclearBomb.name=Nuclear Bomb
@@ -398,6 +418,7 @@ tile.frozenNitrogen.name=Frozen Nitrogen
 tile.denseIce.name=Dense Ice
 tile.fossil.name=Fossil Block
 tile.oreLead.name=Lead Ore
+tile.potash.name=Potash
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Tier 4 Rocket
@@ -787,6 +808,12 @@ item.tier4UnPreparedSpaceSuitBoots.name=Tier 4 Un-Prepared Space Suit Boots
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank
 item.oxygen_tank_extremely_heavy_full.name=Extremely Heavy Oxygen Tank
 
+#Radiation Items
+item.iodideSalt.name=Iodide Salt
+item.potassiumIodide.name=Potassium Iodide
+item.potassium.name=Potassium
+item.potashShards.name=Potash Shards
+
 #Other Items
 item.appleDiamond.name=Diamond Apple
 item.appleIron.name=Iron Apple
@@ -899,6 +926,8 @@ tile.magma.name=Liquid Magma
 tile.nitrogen.name=Liquid Nitrogen
 tile.frozen_water.name=Frozen Water
 tile.salt.name=Liquid Salt
+tile.radioactive_water.name=Radioactive Water
+tile.clean_water.name=Clean Water
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
