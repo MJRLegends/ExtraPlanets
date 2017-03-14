@@ -211,12 +211,6 @@ public class ExtraPlanets_Blocks {
 			mercuryBlocks = new BlockBasicMercury("mercury");
 			mercuryGravel = new BlockCustomGravel("mercuryGravel");
 		}
-		// if (Config.venus) {
-		// venusBlocks = new BlockBasicVenus("venus");
-		// venusGravel = new BlockCustomGravel("venusGravel");
-		//
-		// volcanicRock = new BlockBasic(Material.rock).setUnlocalizedName("volcanicRock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
-		// }
 		if (Config.ceres) {
 			ceresBlocks = new BlockBasicCeres("ceres");
 			ceresGravel = new BlockCustomGravel("ceresGravel");
@@ -374,11 +368,6 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(mercurySpawner, ItemBlockGC.class, "mercurySpawner");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName().substring(5));
 		}
-		// if (Config.venus) {
-		// GameRegistry.registerBlock(venusBlocks, ItemBlockVenus.class, venusBlocks.getUnlocalizedName().substring(5));
-		// GameRegistry.registerBlock(venusGravel, venusGravel.getUnlocalizedName().substring(5));
-		// GameRegistry.registerBlock(volcanicRock, volcanicRock.getUnlocalizedName().substring(5));
-		// }
 		if (Config.ceres) {
 			GameRegistry.registerBlock(ceresBlocks, ItemBlockCeres.class, ceresBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(ceresGravel, ceresGravel.getUnlocalizedName().substring(5));

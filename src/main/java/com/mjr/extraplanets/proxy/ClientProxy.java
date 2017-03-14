@@ -57,6 +57,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog2;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
@@ -160,9 +161,6 @@ public class ClientProxy extends CommonProxy {
 		if (Config.mercury)
 			ClientUtilities.addExtraPlanetsVariants("mercury", "mercury_surface", "mercury_sub_surface", "mercury_stone", "mercury_ore_iron", "mercury_ore_tin", "mercury_ore_copper", "mercury_ore_mercury", "mercury_mercury_block",
 					"mercury_stonebricks", "mercury_dungeon_brick", "mercury_ore_carbon", "mercury_carbon_block");
-		// if (Config.venus)
-		// ClientUtilities.addExtraPlanetsVariants("venus", "venus_surface", "venus_sub_surface", "venus_stone", "venus_ore_iron", "venus_ore_tin", "venus_ore_copper", "venus_ore_carbon", "venus_carbon_block", "venus_stonebricks",
-		// "venus_dungeon_brick");
 		if (Config.ceres)
 			ClientUtilities.addExtraPlanetsVariants("ceres", "ceres_surface", "ceres_sub_surface", "ceres_stone", "ceres_ore_iron", "ceres_ore_tin", "ceres_ore_copper", "ceres_ore_uranium", "ceres_uranium_block", "ceres_stonebricks");
 		if (Config.jupiter)
@@ -229,11 +227,12 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs2", "maple_green_log", "maple_brown_log");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLeaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf", "maple_green_leaf", "maple_brown_leaf");
+			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleSaplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
 		}
 
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
-		
-		if(Config.thermalPaddings){
+
+		if (Config.thermalPaddings) {
 			ClientUtilities.addExtraPlanetsVariants("thermalCloth", "tier3ThermalCloth", "tier4ThermalCloth", "tier5ThermalCloth");
 			ClientUtilities.addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
 			ClientUtilities.addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
@@ -286,7 +285,7 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 		if (Config.eris)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
-		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSnowball(manager,Items.snowball,Minecraft.getMinecraft().getRenderItem()));
+		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSnowball(manager, Items.snowball, Minecraft.getMinecraft().getRenderItem()));
 	}
 
 	public void registerCustomModel() {
@@ -357,13 +356,6 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.mercuryGravel);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.treasureChestTier4);
 		}
-		// if (Config.venus) {
-		// for (BlockBasicVenus.EnumBlockBasic blockBasic : BlockBasicVenus.EnumBlockBasic.values()) {
-		// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusBlocks, blockBasic.getMeta(), blockBasic.getName());
-		// }
-		// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.venusGravel);
-		// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.volcanicRock);
-		// }
 		if (Config.ceres) {
 			for (BlockBasicCeres.EnumBlockBasic blockBasic : BlockBasicCeres.EnumBlockBasic.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ceresBlocks, blockBasic.getMeta(), blockBasic.getName());
@@ -540,12 +532,15 @@ public class ClientProxy extends CommonProxy {
 			for (BlockKepler22bMapleTreeLeaves.EnumType blockBasic : BlockKepler22bMapleTreeLeaves.EnumType.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleLeaf, blockBasic.getMetadata(), blockBasic.getName());
 			}
+			for (BlockKepler22bMapleTreeSapling.EnumType blockBasic : BlockKepler22bMapleTreeSapling.EnumType.values()) {
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleSapling, blockBasic.getMetadata(), blockBasic.getName());
+			}
 		}
 	}
 
 	private void registerItemJsons() {
 		if (Config.mercury) {
-			if(Config.batteries)
+			if (Config.batteries)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.mercuryBattery);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.compressedMercury);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ingotMercury);
@@ -601,7 +596,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T5key);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier5);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier5);
-			if(Config.batteries)
+			if (Config.batteries)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.nickelBattery);
 			for (int i = 0; i < ItemTier5Items.names.length; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier5Items, i, ItemTier5Items.names[i]);
@@ -689,7 +684,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.T8key);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.noseConeTier8);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.schematicTier8);
-			if(Config.batteries)
+			if (Config.batteries)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.zincBattery);
 			for (int i = 0; i < ItemTier8Items.names.length; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier8Items, i, ItemTier8Items.names[i]);
@@ -807,13 +802,13 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.greenDiamondShovel);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.greenDiamondSword);
 		}
-		if(Config.customApples){
+		if (Config.customApples) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.diamondApple);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ironApple);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.diamondApple, 1);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ironApple, 1);
 		}
-		if(Config.batteries){
+		if (Config.batteries) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.advancedBattery);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ultimateBattery);
 		}
@@ -821,7 +816,7 @@ public class ClientProxy extends CommonProxy {
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.wafers, i, ItemWafers.names[i]);
 		}
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.tier3ThermalPadding, i, ItemTier3ThermalPadding.names[i]);
 			}
@@ -835,8 +830,8 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.thermalCloth, i, ItemThermalCloth.names[i]);
 			}
 		}
-		
-		if(Config.oxygenTanks){
+
+		if (Config.oxygenTanks) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.oxygenTankExtremelyHeavy);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.oxygenTankVeryHeavy);
 		}
@@ -910,7 +905,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.potash);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.potassium);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.potassiumIodide);
-		
+
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.clean_water_bucket);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.radioactive_bucket);
 	}
@@ -989,7 +984,7 @@ public class ClientProxy extends CommonProxy {
 				return saltLocation;
 			}
 		});
-		
+
 		ModelResourceLocation radioactive_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water", "fluid");
 		Item radioactive_water = Item.getItemFromBlock(ExtraPlanets_Fluids.radioactiveWater);
 		ModelBakery.registerItemVariants(radioactive_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water"));
@@ -1000,7 +995,7 @@ public class ClientProxy extends CommonProxy {
 				return radioactive_waterLocation;
 			}
 		});
-		
+
 		ModelResourceLocation clean_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "clean_water", "fluid");
 		Item clean_water = Item.getItemFromBlock(ExtraPlanets_Fluids.cleanWater);
 		ModelBakery.registerItemVariants(clean_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "clean_water"));

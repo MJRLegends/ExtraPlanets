@@ -29,6 +29,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.base.Predicate;
 
 public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
+	public static final PropertyEnum<BlockKepler22bMapleTreeLeaves.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLeaves.EnumType> create("variant", BlockKepler22bMapleTreeLeaves.EnumType.class);
 
 	public static enum EnumType implements IStringSerializable {
 		MAPLE_BLUE(0, "maple_blue_leaf", MapColor.blueColor), MAPLE_RED(1, "maple_red_leaf", MapColor.redColor), MAPLE_PURPLE(2, "maple_purple_leaf", MapColor.purpleColor), MAPLE_YELLOW(3, "maple_yellow_leaf", MapColor.yellowColor), MAPLE_GREEN(4,
@@ -85,16 +86,6 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 			}
 		}
 	}
-
-	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockKepler22bMapleTreeLeaves.EnumType.class, new Predicate() {				
-				public boolean apply(BlockKepler22bMapleTreeLeaves.EnumType type) {
-					return type.getMetadata() < 4;
-				}
-
-				public boolean apply(Object type) {
-					return this.apply((BlockKepler22bMapleTreeLeaves.EnumType) type);
-				}
-			});
 
 	public BlockKepler22bMapleTreeLeaves() {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_BLUE).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
@@ -157,31 +148,26 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 		return ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata();
 	}
 
-    @Override
-    public boolean isOpaqueCube()
-    {
-        return Blocks.leaves.isOpaqueCube();
-    }
+	@Override
+	public boolean isOpaqueCube() {
+		return Blocks.leaves.isOpaqueCube();
+	}
 
-    @Override
-    public EnumWorldBlockLayer getBlockLayer()
-    {
-        return Blocks.leaves.getBlockLayer();
-    }
+	@Override
+	public EnumWorldBlockLayer getBlockLayer() {
+		return Blocks.leaves.getBlockLayer();
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public boolean shouldSideBeRendered(IBlockAccess world, BlockPos pos, EnumFacing side)
-    {
-        return Blocks.leaves.shouldSideBeRendered(world, pos, side);
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public boolean shouldSideBeRendered(IBlockAccess world, BlockPos pos, EnumFacing side) {
+		return Blocks.leaves.shouldSideBeRendered(world, pos, side);
+	}
 
-    @Override
-    public boolean isVisuallyOpaque()
-    {
-        return false;
-    }
-
+	@Override
+	public boolean isVisuallyOpaque() {
+		return false;
+	}
 
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
 		if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears) {
