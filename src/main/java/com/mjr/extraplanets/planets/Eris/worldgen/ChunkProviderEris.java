@@ -20,6 +20,8 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
 
 public class ChunkProviderEris extends ChunkProviderSpace {
+    private final MapGenVillageEris villageGenerator = new MapGenVillageEris();
+
 	private final BiomeDecoratorEris erisBiomeDecorator = new BiomeDecoratorEris();
 
 	private final MapGenCaveEris caveGenerator = new MapGenCaveEris();
@@ -100,10 +102,12 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this, this.worldObj, x, z, null);
+        this.villageGenerator.generate(this, this.worldObj, x, z, null);
 	}
 }

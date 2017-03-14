@@ -10,6 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.IProgressUpdate;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.SpawnerAnimals;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -22,11 +23,13 @@ import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenVillageKepler22b;
 
 public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	private Random rand;
 	private World worldObj;
 	private double[] stoneNoise;
+    private final MapGenVillageKepler22b villageGenerator = new MapGenVillageKepler22b();
 	private final BiomeDecoratorKepler22bOres BiomeDecorator = new BiomeDecoratorKepler22bOres();
 	private BiomeGenBase[] biomesForGeneration;
 	private NoiseGeneratorOctaves noiseGen4;
@@ -74,6 +77,8 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		this.setBlocksInChunk(chunkX, chunkZ, chunkprimer);
 		this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, chunkX * 16, chunkZ * 16, 16, 16);
 		this.replaceBlocksForBiome(chunkX, chunkZ, chunkprimer, this.biomesForGeneration);
+        this.villageGenerator.generate(this, this.worldObj, chunkX, chunkZ, chunkprimer);
+
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
 		byte[] abyte = chunk.getBiomeArray();
 		for (int i = 0; i < abyte.length; ++i) {
@@ -270,6 +275,7 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		long var7 = this.rand.nextLong() / 2L * 2L + 1L;
 		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(chunkX * var7 + chunkZ * var9 ^ this.worldObj.getSeed());
+        this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(x, z));
 		biomeGen.decorate(this.worldObj, this.rand, pos);
 		decoratePlanet(this.worldObj, this.rand, x, z);
 		SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomeGen, x + 8, z + 8, 16, 16, this.rand);
@@ -327,4 +333,10 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 	public List<BiomeGenBase.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
 		return this.worldObj.getBiomeGenForCoords(pos).getSpawnableList(creatureType);
 	}
+	
+    @Override
+    public void recreateStructures(Chunk chunk, int x, int z)
+    {
+    	this.villageGenerator.generate(this, this.worldObj, x, z, null);
+    }
 }

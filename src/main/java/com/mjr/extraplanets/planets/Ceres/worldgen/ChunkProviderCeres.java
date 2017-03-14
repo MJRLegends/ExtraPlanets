@@ -6,6 +6,7 @@ import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
@@ -16,6 +17,8 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class ChunkProviderCeres extends ChunkProviderSpace {
+    private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
+
 	private final BiomeDecoratorCeres ceresBiomeDecorator = new BiomeDecoratorCeres();
 
 	 private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
@@ -92,9 +95,11 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
+        this.villageGenerator.generate(this, this.worldObj, x, z, null);
 	}
 }

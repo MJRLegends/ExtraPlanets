@@ -18,11 +18,10 @@ import net.minecraft.world.chunk.IChunkProvider;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
-import com.mjr.extraplanets.planets.Mercury.worldgen.MapGenDungeonMercury;
-import com.mjr.extraplanets.planets.Mercury.worldgen.RoomBossMercury;
-import com.mjr.extraplanets.planets.Mercury.worldgen.RoomTreasureMercury;
 
 public class ChunkProviderMercury extends ChunkProviderSpace {
+    private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();
+
 	private final BiomeDecoratorMercury mercuryBiomeDecorator = new BiomeDecoratorMercury();
 
 	private final MapGenCaveMercury caveGenerator = new MapGenCaveMercury();
@@ -103,10 +102,12 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this, this.worldObj, x, z, null);
+        this.villageGenerator.generate(this, this.worldObj, x, z, null);
 	}
 }
