@@ -534,6 +534,8 @@ item.bucket_salt.name=Tuz Kovası
 item.bucket_magma.name=Mağma Kovası
 item.bucket_frozen_water.name=Soğumuş Su Kovası
 item.bucket_nitrogen.name=Nitrojen Kovası
+item.bucket_clean_water.name=Clean Water Bucket
+item.bucket_radioactive_water.name=Radioactive Water Bucket
 
 #Keys
 item.T4key.name=Tier 4 Zindan Anahtarı

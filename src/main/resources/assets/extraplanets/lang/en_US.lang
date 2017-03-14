@@ -534,6 +534,8 @@ item.bucket_salt.name=Salt Bucket
 item.bucket_magma.name=Magma Bucket
 item.bucket_frozen_water.name=Frozen Water Bucket
 item.bucket_nitrogen.name=Nitrogen Bucket
+item.bucket_clean_water.name=Clean Water Bucket
+item.bucket_radioactive_water.name=Radioactive Water Bucket
 
 #Keys
 item.T4key.name=Tier 4 Dungeon Key

@@ -535,6 +535,8 @@ item.bucket_salt.name=液态盐水
 item.bucket_magma.name=岩浆水
 item.bucket_frozen_water.name=冰冻水
 item.bucket_nitrogen.name=液氮
+item.bucket_clean_water.name=Clean Water Bucket
+item.bucket_radioactive_water.name=Radioactive Water Bucket
 
 #Keys
 item.T4key.name=4阶宝箱钥匙

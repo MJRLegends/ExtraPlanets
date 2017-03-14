@@ -534,6 +534,8 @@ item.bucket_salt.name=Kbelík soli
 item.bucket_magma.name=Kbelík Magma
 item.bucket_frozen_water.name=Kbelík zmrzlé vody
 item.bucket_nitrogen.name=Kbelík dusíku
+item.bucket_clean_water.name=Clean Water Bucket
+item.bucket_radioactive_water.name=Radioactive Water Bucket
 
 #Keys
 item.T4key.name=Klíč ke kobce typ 4

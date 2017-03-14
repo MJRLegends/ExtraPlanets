@@ -533,6 +533,8 @@ item.bucket_salt.name=Cubeta de sal
 item.bucket_magma.name=Cubeta de magma
 item.bucket_frozen_water.name=Cubeta de agua congelada
 item.bucket_nitrogen.name=Cubeta de nitrógeno
+item.bucket_clean_water.name=Clean Water Bucket
+item.bucket_radioactive_water.name=Radioactive Water Bucket
 
 #Keys
 item.T4key.name=Llave de mazmorra nivel 4
