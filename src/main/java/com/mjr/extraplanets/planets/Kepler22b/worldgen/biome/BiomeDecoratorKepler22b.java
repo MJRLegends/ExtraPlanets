@@ -57,34 +57,46 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			}
 		}
 		for (int i = 0; i < blueTreesPerChunk; i++) {
-			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos((this.field_180294_c.getX() * 16)+ 8, 0, (this.field_180294_c.getZ()*16 )+ 8));
-			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(0), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			if (biomeGenBaseIn instanceof BiomeGenKepler22bBlueMapleForest) {
+				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+				blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
+				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(0), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			}
 		}
 		for (int i = 0; i < redTreesPerChunk; i++) {
-			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos((this.field_180294_c.getX() * 16)+ 8, 0, (this.field_180294_c.getZ()*16 )+ 8));
-			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(1), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			if (biomeGenBaseIn instanceof BiomeGenKepler22bRedMapleForest) {
+				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+				blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
+				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(1), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			}
 		}
 		for (int i = 0; i < purpleTreesPerChunk; i++) {
-			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos((this.field_180294_c.getX() * 16)+ 8, 0, (this.field_180294_c.getZ()*16 )+ 8));
-			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(2), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(2), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			if (biomeGenBaseIn instanceof BiomeGenKepler22bPurpleMapleForest) {
+				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+				blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
+				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(2), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(2), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			}
 		}
 		for (int i = 0; i < yellowTreesPerChunk; i++) {
-			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos((this.field_180294_c.getX() * 16)+ 8, 0, (this.field_180294_c.getZ()*16 )+ 8));
-			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(3), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(3), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			if (biomeGenBaseIn instanceof BiomeGenKepler22bYellowMapleForest) {
+				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+				blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
+				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(3), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(3), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			}
 		}
 		for (int i = 0; i < greenTreesPerChunk; i++) {
-			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos((this.field_180294_c.getX() * 16)+ 8, 0, (this.field_180294_c.getZ()*16 )+ 8));
-			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(4), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			if (biomeGenBaseIn instanceof BiomeGenKepler22bPlains) {
+				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+				blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
+				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(4), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			}
 		}
 		for (int i = 0; i < brownTreesPerChunk; i++) {
-			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos((this.field_180294_c.getX() * 16)+ 8, 0, (this.field_180294_c.getZ()*16 )+ 8));
-			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(5), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			if (biomeGenBaseIn instanceof BiomeGenKepler22bPlains) {
+				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+				blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
+				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(5), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			}
 		}
 		isDecorating = false;
 	}

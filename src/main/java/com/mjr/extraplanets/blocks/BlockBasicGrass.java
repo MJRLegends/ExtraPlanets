@@ -27,6 +27,8 @@ public class BlockBasicGrass extends Block implements IGrowable
         super(Material.grass);
         this.setTickRandomly(true);
         this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.blockHardness = 0.6F;
+		this.setStepSound(soundTypeGrass);
     }
 
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)

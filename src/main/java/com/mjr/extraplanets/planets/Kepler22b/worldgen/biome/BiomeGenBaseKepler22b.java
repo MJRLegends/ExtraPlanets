@@ -2,8 +2,6 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.monster.EntityCreeper;
@@ -21,22 +19,19 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenBaseKepler22b extends BiomeGenBase {
-	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest().setColor(112).setBiomeName("Kepler22b Blue Maple Forest").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bRedForest = new BiomeGenKepler22bRedMapleForest().setColor(112).setBiomeName("Kepler22b Red Maple Forest").setHeight(height_LowPlains);
-	public static final BiomeGenBase kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest().setColor(112).setBiomeName("Kepler22b Yellow Maple Forest").setHeight(height_LowPlains);
+	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains");
+	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest().setColor(112).setBiomeName("Kepler22b Blue Maple Forest");
+	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest");
+	public static final BiomeGenBase kepler22bRedForest = new BiomeGenKepler22bRedMapleForest().setColor(112).setBiomeName("Kepler22b Red Maple Forest");
+	public static final BiomeGenBase kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest().setColor(112).setBiomeName("Kepler22b Yellow Maple Forest");
 
-	protected Block stoneBlock;
 	protected byte topMeta;
 	protected byte fillerMeta;
-	protected byte stoneMeta;
 
 	public BiomeGenBaseKepler22b(int id) {
 		super(id);
@@ -74,10 +69,10 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 
 	@Override
 	public void genTerrainBlocks(World world, Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
-		this.generateBiomeTerrain(world, rand, chunk, x, z, stoneNoise);
+		generateKelper22bBiomeTerrain(rand, chunk, x, z, stoneNoise);
 	}
 
-	public final void generateBiomeTerrain(Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
+	public final void generateKelper22bBiomeTerrain(Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
 		IBlockState iblockstate = this.topBlock;
 		IBlockState iblockstate1 = this.fillerBlock;
 		int j = -1;
@@ -94,11 +89,11 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 
 				if (iblockstate2.getBlock().getMaterial() == Material.air) {
 					j = -1;
-				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(2)) {
+				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1).getBlock()) {
 					if (j == -1) {
 						if (k <= 0) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1);
 						} else if (j1 >= 63 - 4 && j1 <= 63 + 1) {
 							iblockstate = this.topBlock;
 							iblockstate1 = this.fillerBlock;
@@ -118,7 +113,7 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 							chunk.setBlockState(i1, j1, l, iblockstate);
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1);
 							chunk.setBlockState(i1, j1, l, Blocks.gravel.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);
@@ -126,11 +121,6 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 					} else if (j > 0) {
 						--j;
 						chunk.setBlockState(i1, j1, l, iblockstate1);
-
-						if (j == 0 && iblockstate1.getBlock() == Blocks.sand) {
-							j = rand.nextInt(4) + Math.max(0, j1 - 63);
-							iblockstate1 = iblockstate1.getValue(BlockSand.VARIANT) == BlockSand.EnumType.RED_SAND ? Blocks.red_sandstone.getDefaultState() : Blocks.sandstone.getDefaultState();
-						}
 					}
 				}
 			}
