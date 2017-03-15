@@ -151,7 +151,7 @@ public class WorldProviderVenusOrbit extends WorldProviderOrbit
 	@Override
 	public String getPlanetToOrbit()
 	{
-		return "planet.Venus";
+		return "planet.venus";
 	}
 
 	@Override

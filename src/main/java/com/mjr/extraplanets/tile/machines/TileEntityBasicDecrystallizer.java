@@ -11,19 +11,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
-import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
-import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
+public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	private final int tankCapacity = 20000;
 	private int amountAdded = 0;
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -206,55 +203,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	}
 
 	@Override
-	public boolean canDrain(EnumFacing from, Fluid fluid) {
-		if (from.equals(getFront())) {
-			return this.outputTank.getFluid() != null && this.outputTank.getFluidAmount() > 0;
-		}
-
-		return false;
-	}
-
-	@Override
-	public FluidStack drain(EnumFacing from, FluidStack resource, boolean doDrain) {
-		if (from.equals(getFront())) {
-			return this.outputTank.drain(resource.amount, doDrain);
-		}
-
-		return null;
-	}
-
-	@Override
-	public FluidStack drain(EnumFacing from, int maxDrain, boolean doDrain) {
-		if (from.equals(getFront())) {
-			return this.drain(from, new FluidStack(ExtraPlanets_Fluids.salt_fluid, maxDrain), doDrain);
-		}
-
-		return null;
-	}
-
-	@Override
-	public FluidTankInfo[] getTankInfo(EnumFacing from) {
-		FluidTankInfo[] tankInfo = new FluidTankInfo[] {};
-
-		if (from.equals(getFront())) {
-			tankInfo = new FluidTankInfo[] { new FluidTankInfo(this.outputTank) };
-		}
-
-		return tankInfo;
-	}
-
-	@Override
 	public IChatComponent getDisplayName() {
 		return null;
-	}
-
-	@Override
-	public int fill(EnumFacing from, FluidStack resource, boolean doFill) {
-		return 0;
-	}
-
-	@Override
-	public boolean canFill(EnumFacing from, Fluid fluid) {
-		return false;
 	}
 }

@@ -12,19 +12,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
-import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
-import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
+public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	private final int tankCapacity = 20000;
 	private int amountDrain = 0;
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -238,65 +235,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
-	public boolean canDrain(EnumFacing from, Fluid fluid) {
-		if (from.equals(getFront())) {
-			return this.inputTank.getFluid() != null && this.inputTank.getFluidAmount() > 0;
-		}
-
-		return false;
-	}
-
-	@Override
-	public FluidStack drain(EnumFacing from, FluidStack resource, boolean doDrain) {
-		return null;
-	}
-
-	@Override
-	public FluidStack drain(EnumFacing from, int maxDrain, boolean doDrain) {
-		return null;
-	}
-
-	@Override
-	public FluidTankInfo[] getTankInfo(EnumFacing from) {
-		FluidTankInfo[] tankInfo = new FluidTankInfo[] {};
-
-		if (from.equals(getFront())) {
-			tankInfo = new FluidTankInfo[] { new FluidTankInfo(this.inputTank) };
-		}
-
-		return tankInfo;
-	}
-
-	@Override
 	public IChatComponent getDisplayName() {
 		return null;
-	}
-
-	@Override
-	public boolean canFill(EnumFacing from, Fluid fluid) {
-		if (from.equals(getFront())) {
-			return this.inputTank.getFluid() == null || this.inputTank.getFluidAmount() < this.inputTank.getCapacity();
-		}
-
-		return false;
-	}
-
-	@Override
-	public int fill(EnumFacing from, FluidStack resource, boolean doFill) {
-		int used = 0;
-
-		if (from.equals(getFront())) {
-			final String liquidName = FluidRegistry.getFluidName(resource);
-
-			if (liquidName != null && liquidName.startsWith("salt")) {
-				if (liquidName.equals(ExtraPlanets_Fluids.salt_fluid.getName())) {
-					used = this.inputTank.fill(resource, doFill);
-				} else {
-					used = this.inputTank.fill(new FluidStack(ExtraPlanets_Fluids.salt_fluid, resource.amount), doFill);
-				}
-			}
-		}
-
-		return used;
 	}
 }

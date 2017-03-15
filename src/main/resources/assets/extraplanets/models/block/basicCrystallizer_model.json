@@ -7,6 +7,6 @@
         "north": "extraplanets:blocks/cystallizer_front",
         "east": "galacticraftcore:blocks/machine",
         "south": "galacticraftcore:blocks/machine",
-        "west": "galacticraftcore:blocks/machine_fuel_input"
+        "west": "galacticraftcore:blocks/machine"
     }
 }
