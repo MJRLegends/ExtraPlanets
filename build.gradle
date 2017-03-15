@@ -45,6 +45,9 @@ dependencies {
 		"/GalacticraftCore-Dev-1.8.9-4.0.0.0-BETA.jar",
 		"/Galacticraft-Planets-Dev-1.8.9-4.0.0.0-BETA.jar",
 		"/MicdoodleCore-Dev-1.8.9-4.0.0.0-BETA.jar",
+		"/CodeChickenCore-1.8-1.0.5.34-dev.jar",
+		"/NotEnoughItems-1.8-1.0.5.82-dev.jar",
+		"/CodeChickenLib-1.8-1.1.2.139-dev.jar",
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
