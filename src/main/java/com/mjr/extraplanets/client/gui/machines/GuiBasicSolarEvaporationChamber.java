@@ -17,19 +17,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.machines.ContainerBasicChemicalInjector;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicSolarEvaporationChamber;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber;
 
 @SideOnly(Side.CLIENT)
-public class GuiBasicChemicalInjector extends GuiContainerGC {
-	private static final ResourceLocation chemicalInjectorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/chemicalInjector.png");
+public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
+	private static final ResourceLocation solarEvaporationChamberTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/solarEvaporationChamber.png");
 
-	private final TileEntityBasicChemicalInjector tileEntity;
+	private final TileEntityBasicSolarEvaporationChamber tileEntity;
 
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicChemicalInjector(InventoryPlayer par1InventoryPlayer, TileEntityBasicChemicalInjector tileEntity) {
-		super(new ContainerBasicChemicalInjector(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
+	public GuiBasicSolarEvaporationChamber(InventoryPlayer par1InventoryPlayer, TileEntityBasicSolarEvaporationChamber tileEntity) {
+		super(new ContainerBasicSolarEvaporationChamber(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}
@@ -57,9 +57,8 @@ public class GuiBasicChemicalInjector extends GuiContainerGC {
 		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
 		String displayText = "";
 		int yOffset = -10;
-
 		if (this.tileEntity.canProcess()) {
-			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.injecting.name");
+			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.solarEvaporationChamber.name");
 		} else {
 			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.idle.name");
 		}
@@ -70,7 +69,7 @@ public class GuiBasicChemicalInjector extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-		this.mc.renderEngine.bindTexture(GuiBasicChemicalInjector.chemicalInjectorTexture);
+		this.mc.renderEngine.bindTexture(GuiBasicSolarEvaporationChamber.solarEvaporationChamberTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
 		int containerWidth = (this.width - this.xSize) / 2;

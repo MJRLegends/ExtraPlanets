@@ -19,6 +19,7 @@ import com.mjr.extraplanets.client.gui.machines.GuiBasicChemicalInjector;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicCrystallizer;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicDecrystallizer;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicSmasher;
+import com.mjr.extraplanets.client.gui.machines.GuiBasicSolarEvaporationChamber;
 import com.mjr.extraplanets.client.gui.machines.GuiSolar;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenCompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenDecompressor;
@@ -29,7 +30,8 @@ import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicCrystallizer;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicSmasher;
-import com.mjr.extraplanets.inventory.machines.ContainerChemicalInjector;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicChemicalInjector;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicSolarEvaporationChamber;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenDecompressor;
@@ -41,6 +43,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
@@ -81,7 +84,9 @@ public class GuiHandler implements IGuiHandler {
 			} else if (tile instanceof TileEntityBasicSmasher) {
 				return new ContainerBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile, player);
 			} else if (tile instanceof TileEntityBasicChemicalInjector) {
-				return new ContainerChemicalInjector(player.inventory, (TileEntityBasicChemicalInjector) tile, player);
+				return new ContainerBasicChemicalInjector(player.inventory, (TileEntityBasicChemicalInjector) tile, player);
+			} else if (tile instanceof TileEntityBasicSolarEvaporationChamber) {
+				return new ContainerBasicSolarEvaporationChamber(player.inventory, (TileEntityBasicSolarEvaporationChamber) tile, player);
 			}
 		}
 		return null;
@@ -123,6 +128,8 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile);
 			} else if (tile instanceof TileEntityBasicChemicalInjector) {
 				return new GuiBasicChemicalInjector(player.inventory, (TileEntityBasicChemicalInjector) tile);
+			} else if (tile instanceof TileEntityBasicSolarEvaporationChamber) {
+				return new GuiBasicSolarEvaporationChamber(player.inventory, (TileEntityBasicSolarEvaporationChamber) tile);
 			}
 		}
 		return null;

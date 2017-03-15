@@ -15,6 +15,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
@@ -34,6 +35,7 @@ public class ExtraPlanets_Machines {
 	public static Block basicCrystallizer;
 	public static Block basicSmasher;
 	public static Block basicChemicalInjector;
+	public static Block basicSolarEvaporationChamber;
 
 	public static void init() {
 		initializeMachinesBlocks();
@@ -56,6 +58,7 @@ public class ExtraPlanets_Machines {
 		basicCrystallizer = new BasicCrystallizer("basicCrystallizer");
 		basicSmasher = new BasicSmasher("basicSmasher");
 		basicChemicalInjector = new BasicChemicalInjector("basicChemicalInjector");
+		basicSolarEvaporationChamber = new BasicSolarEvaporationChamber("basicSolarEvaporationChamber");
 	}
 
 	private static void registerMachines() {
@@ -73,6 +76,7 @@ public class ExtraPlanets_Machines {
 		GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(basicChemicalInjector, basicChemicalInjector.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(basicSolarEvaporationChamber, basicSolarEvaporationChamber.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -94,5 +98,6 @@ public class ExtraPlanets_Machines {
 		GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
 		GameRegistry.registerTileEntity(TileEntityBasicSmasher.class, Constants.modName + "Basic Smasher");
 		GameRegistry.registerTileEntity(TileEntityBasicChemicalInjector.class, Constants.modName + "Basic Chemical Injector");
+		GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
 	}
 }
