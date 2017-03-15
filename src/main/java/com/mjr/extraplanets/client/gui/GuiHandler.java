@@ -37,10 +37,10 @@ import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
-import com.mjr.extraplanets.tile.machines.TileEntityChemicalInjector;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
@@ -80,8 +80,8 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerBasicCrystallizer(player.inventory, (TileEntityBasicCrystallizer) tile, player);
 			} else if (tile instanceof TileEntityBasicSmasher) {
 				return new ContainerBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile, player);
-			} else if (tile instanceof TileEntityChemicalInjector) {
-				return new ContainerChemicalInjector(player.inventory, (TileEntityChemicalInjector) tile, player);
+			} else if (tile instanceof TileEntityBasicChemicalInjector) {
+				return new ContainerChemicalInjector(player.inventory, (TileEntityBasicChemicalInjector) tile, player);
 			}
 		}
 		return null;
@@ -121,8 +121,8 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiBasicCrystallizer(player.inventory, (TileEntityBasicCrystallizer) tile);
 			} else if (tile instanceof TileEntityBasicSmasher) {
 				return new GuiBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile);
-			} else if (tile instanceof TileEntityChemicalInjector) {
-				return new GuiBasicChemicalInjector(player.inventory, (TileEntityChemicalInjector) tile);
+			} else if (tile instanceof TileEntityBasicChemicalInjector) {
+				return new GuiBasicChemicalInjector(player.inventory, (TileEntityBasicChemicalInjector) tile);
 			}
 		}
 		return null;

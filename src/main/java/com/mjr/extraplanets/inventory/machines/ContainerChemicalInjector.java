@@ -9,13 +9,13 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.machines.TileEntityChemicalInjector;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 
 public class ContainerChemicalInjector extends Container
 {
-    private final TileEntityChemicalInjector tileEntity;
+    private final TileEntityBasicChemicalInjector tileEntity;
 
-    public ContainerChemicalInjector(InventoryPlayer par1InventoryPlayer, TileEntityChemicalInjector tileEntity, EntityPlayer player)
+    public ContainerChemicalInjector(InventoryPlayer par1InventoryPlayer, TileEntityBasicChemicalInjector tileEntity, EntityPlayer player)
     {
         this.tileEntity = tileEntity;
 

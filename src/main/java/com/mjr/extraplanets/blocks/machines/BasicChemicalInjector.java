@@ -29,7 +29,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.machines.TileEntityChemicalInjector;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 
 public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	private final Random crystallizerRand = new Random();
@@ -53,8 +53,8 @@ public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDe
 	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		final TileEntity te = worldIn.getTileEntity(pos);
 
-		if (te instanceof TileEntityChemicalInjector) {
-			final TileEntityChemicalInjector crystallizer = (TileEntityChemicalInjector) te;
+		if (te instanceof TileEntityBasicChemicalInjector) {
+			final TileEntityBasicChemicalInjector crystallizer = (TileEntityBasicChemicalInjector) te;
 
 			if (crystallizer.processTicks > 0) {
 				final float var7 = pos.getX() + 0.5F;
@@ -96,12 +96,12 @@ public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDe
 
 	@Override
 	public TileEntity createTileEntity(World world, IBlockState state) {
-		return new TileEntityChemicalInjector();
+		return new TileEntityBasicChemicalInjector();
 	}
 
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		final TileEntityChemicalInjector var7 = (TileEntityChemicalInjector) worldIn.getTileEntity(pos);
+		final TileEntityBasicChemicalInjector var7 = (TileEntityBasicChemicalInjector) worldIn.getTileEntity(pos);
 
 		if (var7 != null) {
 			for (int var8 = 0; var8 < var7.getSizeInventory(); ++var8) {

@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityChemicalInjector extends TileBaseElectricBlockWithInventory implements ISidedInventory {
+public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	public static final int PROCESS_TIME_REQUIRED = 150;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
@@ -24,7 +24,7 @@ public class TileEntityChemicalInjector extends TileBaseElectricBlockWithInvento
 
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potassiumIodide, 1, 0);
 
-	public TileEntityChemicalInjector() {
+	public TileEntityBasicChemicalInjector() {
 	}
 
 	@Override
@@ -34,11 +34,11 @@ public class TileEntityChemicalInjector extends TileBaseElectricBlockWithInvento
 		if (!this.worldObj.isRemote) {
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
 				if (this.processTicks == 0) {
-					this.processTicks = TileEntityChemicalInjector.PROCESS_TIME_REQUIRED;
+					this.processTicks = TileEntityBasicChemicalInjector.PROCESS_TIME_REQUIRED;
 				} else {
 					if (--this.processTicks <= 0) {
 						this.smeltItem();
-						this.processTicks = this.canProcess() ? TileEntityChemicalInjector.PROCESS_TIME_REQUIRED : 0;
+						this.processTicks = this.canProcess() ? TileEntityBasicChemicalInjector.PROCESS_TIME_REQUIRED : 0;
 					}
 				}
 			} else {

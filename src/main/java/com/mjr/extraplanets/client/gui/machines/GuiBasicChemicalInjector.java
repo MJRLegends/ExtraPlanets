@@ -18,17 +18,17 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerChemicalInjector;
-import com.mjr.extraplanets.tile.machines.TileEntityChemicalInjector;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicChemicalInjector extends GuiContainerGC {
 	private static final ResourceLocation chemicalInjectorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/chemicalInjector.png");
 
-	private final TileEntityChemicalInjector tileEntity;
+	private final TileEntityBasicChemicalInjector tileEntity;
 
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicChemicalInjector(InventoryPlayer par1InventoryPlayer, TileEntityChemicalInjector tileEntity) {
+	public GuiBasicChemicalInjector(InventoryPlayer par1InventoryPlayer, TileEntityBasicChemicalInjector tileEntity) {
 		super(new ContainerChemicalInjector(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
