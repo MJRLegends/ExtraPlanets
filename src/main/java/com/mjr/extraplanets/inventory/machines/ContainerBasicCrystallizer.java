@@ -23,7 +23,7 @@ public class ContainerBasicCrystallizer extends Container
         this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 153, 7, IItemElectric.class));
 
         // Output Slot
-        this.addSlotToContainer(new Slot(tileEntity, 1, 110, 35));
+        this.addSlotToContainer(new Slot(tileEntity, 1, 112, 35));
 
         // Input Tank Slot
         this.addSlotToContainer(new Slot(tileEntity, 2, 7, 7));

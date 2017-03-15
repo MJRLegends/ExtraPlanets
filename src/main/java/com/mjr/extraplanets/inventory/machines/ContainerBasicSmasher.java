@@ -27,7 +27,7 @@ public class ContainerBasicSmasher extends Container
         this.addSlotToContainer(new Slot(tileEntity, 1, 50, 35));
 
         // Output Slot
-        this.addSlotToContainer(new Slot(tileEntity, 2, 100, 35));
+        this.addSlotToContainer(new Slot(tileEntity, 2, 112, 35));
         int var3;
 
         for (var3 = 0; var3 < 3; ++var3)
