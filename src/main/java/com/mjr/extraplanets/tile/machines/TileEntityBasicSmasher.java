@@ -24,7 +24,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potash, 1, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potash, 3, 0);
 
 	public TileEntityBasicSmasher() {
 	}

@@ -31,6 +31,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t9rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t10rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<HashMap<Integer, PositionedStack>, PositionedStack> circuitFabricatorRecipes = new HashMap<HashMap<Integer, PositionedStack>, PositionedStack>();
+	private static HashMap<PositionedStack, PositionedStack> blockSmasherRecipes = new HashMap<PositionedStack, PositionedStack>();
 
 	@Override
 	public void loadConfig() {
@@ -51,7 +52,8 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 				this.registerTier10Recipe();
 
 			this.addCircuitFabricatorRecipes();
-
+			this.registerBlockSmasherRecipes();
+			
 			if (Config.mercury) {
 				API.registerRecipeHandler(new RocketT4RecipeHandler());
 				API.registerUsageHandler(new RocketT4RecipeHandler());
@@ -89,7 +91,14 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			}
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
+			
+			API.registerRecipeHandler(new BlockSmasherRecipeHandler());
+			API.registerUsageHandler(new BlockSmasherRecipeHandler());
 		}
+	}
+
+	private void registerBlockSmasherRecipes() {
+        this.registerBlockSmasherRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Blocks.potash, 1, 0), 45, 31), new PositionedStack(new ItemStack(ExtraPlanets_Items.potash, 3, 0), 107, 31));
 	}
 
 	@Override
@@ -164,6 +173,14 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 
 	public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getCircuitFabricatorRecipes() {
 		return NEIExtraPlanetsConfig.circuitFabricatorRecipes.entrySet();
+	}
+	
+	public void registerBlockSmasherRecipe(PositionedStack input, PositionedStack output) {
+		NEIExtraPlanetsConfig.blockSmasherRecipes.put(input, output);
+	}
+
+	public static Set<Entry<PositionedStack, PositionedStack>> getBlockSmasherRecipes() {
+		return NEIExtraPlanetsConfig.blockSmasherRecipes.entrySet();
 	}
 
 	public void registerTier4Recipe() {
