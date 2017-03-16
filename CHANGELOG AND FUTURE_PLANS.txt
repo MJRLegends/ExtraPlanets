@@ -11,7 +11,58 @@ TODO = Not yet done
 v1 Beta Build ----More to be added!!----
 *Added Tier 1 - 4 Space Suit Model/Textures
 
-
+0.7 Alpha Build
+*Fixed Tier 10 Schematic GUI not showing in the Nasa Workbench
+*Added Kepler22b Grass Blocks back
+*Added Kepler22b Main Planet blocks back
+*Added/Fixed Kepler22b Logs
+*Re-Enabled Kepler22b recipes
+*Fixed Kepler22b Tools & Armours not rendering
+*Added some of the missing jsons/textures
+*Added Evolved Ghast Boss & Evolved Snowman Boss
+*Tweaks to Ice Slime Boss & Magma Cube Boss. 
+*Tweaks for Nuclear Bomb. 
+*Added Small Snowball for Evolved Snowman Boss
+*Clean up/organised entities classes
+*Fixes for Nuclear Bomb
+*Added Kepler22b back (Still missing features though)
+*Fixes for Dungeons/Dungeon Bosses
+*Updated ExplosionResistance and BlockHardness for all planet/moons blocks
+*Setup harvest levels for all of the main blocks (Might change)
+*Added Tier 3 - 5 Thermal Cloth and Update Tier 3 - 5 Thermal Padding recipes
+*Added Block of Dark iron recipe
+*Added Thermal Padding, Nuclear Bomb, Custom Batteries, Custom Apples, Custom Canned Food, Generating Uranus Ice Spikes & Igloos Config options
+*Changed a Config category comment
+*Fixes for config options
+*Added config option for Extremely Heavy & Very Heavy Oxygen Tanks
+*Changed pressure/radiation oxygen hooks to proper one now its fixed
+*Add Basic Hideout's to Jupiter
+*Added Oberon Moon
+*Added Titania Moon
+*Added Iapetus Moon
+*Added Unreachable moons for Pluto/Eris
+*Added Unreachable planet Haumea
+*Fixed moons being the wrong tier
+*Made the Kuiper Belt ring bigger so that the dwarf planets that are related to it fit in the ring
+*Added NEI Support back (JEI Support maybe soon?)
+*Added Kepler22b Maple trees to world gen for Kepler22b
+*Added Radioactive/Clean Water fluids
+*Added Radiation Parts for Anti radiation
+*Added Basic Crystallizer & Decrystallizer machines (WIP)
+*Added Block Smasher machine (WIP)
+*Removed debug information, Removed unused items
+*Added Chemical Injector machine (WIP)
+*Moved Item/ItemBlock classes to new packages to break them up and organise them
+*Moved GUI classes to new packages to break them up and organise them
+*Added Clean/Radioactive Water fluid buckets
+*Added Blue, Red, Purple, Green, and Brown Wooden Huts to Kepler22b
+*Added Villages to every Planet
+*Added Solar Evaporation Chamber (WIP)
+*Added Potash block generation to Mercury
+*Added Methane, Infected Water, Ice Nitrogen fluids
+*Added NEI support for Block Smasher machine
+*Added lakes of liquid methane to Titan & Added nitrogen ice lakes to Triton
+*Added Iapetus Ice & Added Iapetus Ice to Iapetus's world gen
 ======================================================================================================
 
 
