@@ -1006,5 +1006,38 @@ public class ClientProxy extends CommonProxy {
 				return clean_waterLocation;
 			}
 		});
+		
+		ModelResourceLocation infected_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "infected_water", "fluid");
+		Item infected_water = Item.getItemFromBlock(ExtraPlanets_Fluids.infectedWater);
+		ModelBakery.registerItemVariants(infected_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "infected_water"));
+		ModelLoader.setCustomMeshDefinition(infected_water, (ItemStack stack) -> infected_waterLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.infectedWater, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return infected_waterLocation;
+			}
+		});
+		
+		ModelResourceLocation methaneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "methane", "fluid");
+		Item methane = Item.getItemFromBlock(ExtraPlanets_Fluids.methane);
+		ModelBakery.registerItemVariants(methane, new ResourceLocation(Constants.TEXTURE_PREFIX + "methane"));
+		ModelLoader.setCustomMeshDefinition(methane, (ItemStack stack) -> methaneLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.methane, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return methaneLocation;
+			}
+		});
+		
+		ModelResourceLocation nitrogenIceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogenIce", "fluid");
+		Item nitrogenIce = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogenIce);
+		ModelBakery.registerItemVariants(nitrogenIce, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogenIce"));
+		ModelLoader.setCustomMeshDefinition(nitrogenIce, (ItemStack stack) -> nitrogenIceLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogenIce, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return nitrogenIceLocation;
+			}
+		});
 	}
 }

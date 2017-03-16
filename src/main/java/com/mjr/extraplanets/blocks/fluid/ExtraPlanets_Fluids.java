@@ -33,11 +33,21 @@ public class ExtraPlanets_Fluids {
 	public static Block cleanWater;
 	public static Fluid cleanWater_fluid;
 	
+	public static Block infectedWater;
+	public static Fluid infectedWater_fluid;
+	
+	public static Block methane;
+	public static Fluid methane_fluid;
+	
+	public static Block nitrogenIce;
+	public static Fluid nitrogenIce_fluid;
+	
 	public static Material glowstone_material = new MaterialLiquid(MapColor.yellowColor);
 	public static Material magma_material = new MaterialLiquid(MapColor.tntColor);
 	public static Material nitrogen_material = new MaterialLiquid(MapColor.lightBlueColor);
 	public static Material frozen_water_material = new MaterialLiquid(MapColor.waterColor);
 	public static Material salt_material = new MaterialLiquid(MapColor.grayColor);
+	public static Material methane_material = new MaterialLiquid(MapColor.grayColor);
 
 	public static void init() {
 		initFluid();
@@ -72,6 +82,18 @@ public class ExtraPlanets_Fluids {
 		cleanWater_fluid = new Fluid("clean_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_flow")).setBlock(cleanWater).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(cleanWater_fluid);
 		cleanWater = new FluidCleanWater("clean_water");
+		
+		infectedWater_fluid = new Fluid("infected_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_flow")).setBlock(infectedWater).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(infectedWater_fluid);
+		infectedWater = new FluidCleanWater("infected_water");
+		
+		methane_fluid = new Fluid("methane_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_flow")).setBlock(methane).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(methane_fluid);
+		methane = new FluidMethane("methane");
+		
+		nitrogenIce_fluid = new Fluid("nitrogenIce_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogenIce_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogenIce_flow")).setBlock(nitrogenIce).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(nitrogenIce_fluid);
+		nitrogenIce = new FluidNitrogenIce("nitrogenIce");
 	}
 
 	private static void registerBlocks() {
@@ -82,5 +104,8 @@ public class ExtraPlanets_Fluids {
 		GameRegistry.registerBlock(salt, "salt");
 		GameRegistry.registerBlock(radioactiveWater, "radioactive_water");
 		GameRegistry.registerBlock(cleanWater, "clean_water");
+		GameRegistry.registerBlock(infectedWater, "infected_water");
+		GameRegistry.registerBlock(methane, "methane");
+		GameRegistry.registerBlock(nitrogenIce, "nitrogenIce");
 	}
 }

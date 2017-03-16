@@ -386,6 +386,7 @@ tile.basicDecrystallizer.name=Basic Decrystallizer
 tile.basicCrystallizer.name=Basic Crystallizer
 tile.basicSmasher.name=Basic Block Smasher
 tile.basicChemicalInjector.name=Basic Chemical Injector
+tile.basicSolarEvaporationChamber.name=Basic Solar Evaporation Chamber
 
 #Machine Containers
 container.solarhybrid.name=Karışık Güneş Paneli
@@ -410,6 +411,11 @@ gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
 gui.salt_water_output.desc.0=Place empty vanilla bucket into
 gui.salt_water_output.desc.1=this slot to fill them from the
 gui.salt_water_output.desc.2=fuel tank
+gui.status.injecting.name=Injecting
+gui.status.smasher.name=Smashing
+gui.status.crystallizing.name=Crystallizing
+gui.status.decrystallizing.name=Decrystallizing
+gui.status.solarEvaporationChamber.name=Evaporating
 
 #Other Blocks
 tile.nuclearBomb.name=Nükleer bomba
@@ -930,6 +936,9 @@ tile.frozen_water.name=Soğumuş Su
 tile.salt.name=Tuz Yakıtı
 tile.radioactive_water.name=Radioactive Water
 tile.clean_water.name=Clean Water
+tile.infected_water.name=Infected Water
+tile.methane.name=Liquid Methane
+tile.nitrogenIce.name=Liquid Ice Nitrogen
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
