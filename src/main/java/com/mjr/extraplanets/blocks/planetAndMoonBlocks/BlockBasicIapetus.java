@@ -45,7 +45,8 @@ public class BlockBasicIapetus extends Block implements IDetectableResource, IPl
         STONE(2, "iapetus_stone"),
         ORE_IRON(3, "iapetus_ore_iron"),
         ORE_TIN(4, "iapetus_ore_tin"),
-        ORE_COPPER(5, "iapetus_ore_copper");
+        ORE_COPPER(5, "iapetus_ore_copper"),
+        ICE(6, "iapetus_ice");
 
         private final int meta;
         private final String name;

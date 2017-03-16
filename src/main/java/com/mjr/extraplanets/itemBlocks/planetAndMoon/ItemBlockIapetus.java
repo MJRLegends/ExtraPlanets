@@ -45,6 +45,10 @@ public class ItemBlockIapetus extends ItemBlock {
 			name = "oreCopper";
 			break;
 		}
+		case 6: {
+			name = "ice";
+			break;
+		}
 		default:
 			name = "null";
 		}

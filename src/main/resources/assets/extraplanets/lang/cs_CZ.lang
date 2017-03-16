@@ -294,6 +294,7 @@ tile.iapetus.stone.name=Iapetus Stone
 tile.iapetus.oreIron.name=Iapetus Iron Ore
 tile.iapetus.oreTin.name=Iapetus Tin Ore
 tile.iapetus.oreCopper.name=Iapetus Copper Ore
+tile.iapetus.ice.name=Iapetus Ice
 
 #Planet Gravel Blocks
 tile.mercuryGravel.name=Štěrk
