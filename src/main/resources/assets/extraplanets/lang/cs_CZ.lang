@@ -938,7 +938,7 @@ tile.radioactive_water.name=Radioactive Water
 tile.clean_water.name=Clean Water
 tile.infected_water.name=Infected Water
 tile.methane.name=Liquid Methane
-tile.nitrogenIce.name=Liquid Ice Nitrogen
+tile.nitrogen_ice.name=Liquid Ice Nitrogen
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure

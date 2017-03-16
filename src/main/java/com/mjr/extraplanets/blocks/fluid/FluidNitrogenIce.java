@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class FluidNitrogenIce extends BlockFluidClassic implements IFluidBlock {
 	public FluidNitrogenIce(String assetName) {
-		super(ExtraPlanets_Fluids.nitrogenIce_fluid, ExtraPlanets_Fluids.nitrogen_material);
+		super(ExtraPlanets_Fluids.nitrogen_ice_fluid, ExtraPlanets_Fluids.nitrogen_material);
 		this.setQuantaPerBlock(9);
 		this.setLightLevel(0.1F);
 		this.needsRandomTick = true;

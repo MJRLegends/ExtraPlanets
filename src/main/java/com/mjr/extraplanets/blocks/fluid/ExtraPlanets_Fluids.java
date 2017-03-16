@@ -39,15 +39,15 @@ public class ExtraPlanets_Fluids {
 	public static Block methane;
 	public static Fluid methane_fluid;
 	
-	public static Block nitrogenIce;
-	public static Fluid nitrogenIce_fluid;
+	public static Block nitrogen_ice;
+	public static Fluid nitrogen_ice_fluid;
 	
 	public static Material glowstone_material = new MaterialLiquid(MapColor.yellowColor);
 	public static Material magma_material = new MaterialLiquid(MapColor.tntColor);
 	public static Material nitrogen_material = new MaterialLiquid(MapColor.lightBlueColor);
 	public static Material frozen_water_material = new MaterialLiquid(MapColor.waterColor);
 	public static Material salt_material = new MaterialLiquid(MapColor.grayColor);
-	public static Material methane_material = new MaterialLiquid(MapColor.grayColor);
+	public static Material methane_material = new MaterialLiquid(MapColor.greenColor);
 
 	public static void init() {
 		initFluid();
@@ -91,9 +91,9 @@ public class ExtraPlanets_Fluids {
 		FluidRegistry.registerFluid(methane_fluid);
 		methane = new FluidMethane("methane");
 		
-		nitrogenIce_fluid = new Fluid("nitrogenIce_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogenIce_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogenIce_flow")).setBlock(nitrogenIce).setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(nitrogenIce_fluid);
-		nitrogenIce = new FluidNitrogenIce("nitrogenIce");
+		nitrogen_ice_fluid = new Fluid("nitrogen_ice_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_ice_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_ice_flow")).setBlock(nitrogen_ice).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(nitrogen_ice_fluid);
+		nitrogen_ice = new FluidNitrogenIce("nitrogen_ice");
 	}
 
 	private static void registerBlocks() {
@@ -106,6 +106,6 @@ public class ExtraPlanets_Fluids {
 		GameRegistry.registerBlock(cleanWater, "clean_water");
 		GameRegistry.registerBlock(infectedWater, "infected_water");
 		GameRegistry.registerBlock(methane, "methane");
-		GameRegistry.registerBlock(nitrogenIce, "nitrogenIce");
+		GameRegistry.registerBlock(nitrogen_ice, "nitrogen_ice");
 	}
 }

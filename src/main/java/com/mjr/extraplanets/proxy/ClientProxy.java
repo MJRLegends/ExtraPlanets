@@ -1029,14 +1029,14 @@ public class ClientProxy extends CommonProxy {
 			}
 		});
 		
-		ModelResourceLocation nitrogenIceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogenIce", "fluid");
-		Item nitrogenIce = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogenIce);
-		ModelBakery.registerItemVariants(nitrogenIce, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogenIce"));
-		ModelLoader.setCustomMeshDefinition(nitrogenIce, (ItemStack stack) -> nitrogenIceLocation);
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogenIce, new StateMapperBase() {
+		ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
+		Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen_ice);
+		ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
+		ModelLoader.setCustomMeshDefinition(nitrogen_ice, (ItemStack stack) -> nitrogen_iceLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen_ice, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return nitrogenIceLocation;
+				return nitrogen_iceLocation;
 			}
 		});
 	}
