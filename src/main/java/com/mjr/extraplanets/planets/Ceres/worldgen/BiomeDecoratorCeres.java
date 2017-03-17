@@ -65,10 +65,17 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
 				int x = this.chunkX + 8;
-				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.salt).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.ceresBlocks);
+			}
+		}
+		for (int i = 0; i < 1; i++) {
+			if (this.rand.nextInt(100) == 0) {
+				int x = this.chunkX + 8;
+				int z = this.chunkZ + 8;
+				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				new WorldGenCustomLake(ExtraPlanets_Fluids.radioactiveWater).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.ceresBlocks);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
