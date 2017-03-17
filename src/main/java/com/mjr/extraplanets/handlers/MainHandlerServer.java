@@ -200,11 +200,11 @@ public class MainHandlerServer {
 		double damageModifer = 0;
 		int radiationLevel = provider.getSolarRadiationLevel();
 		if (playerMP.getCurrentArmor(0) == null || playerMP.getCurrentArmor(1) == null || playerMP.getCurrentArmor(2) == null || playerMP.getCurrentArmor(3) == null) {
-			damageModifer = 0.005;
+			damageModifer = 0.2;
 			doDamage = true;
 		} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(2).getItem() instanceof IRadiationSuit)
 				&& !(playerMP.getCurrentArmor(3).getItem() instanceof IRadiationSuit)) {
-			damageModifer = 0.005;
+			damageModifer = 0.2;
 			doDamage = true;
 		} else if (playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) {
 			doArmorCheck = true;
@@ -219,7 +219,6 @@ public class MainHandlerServer {
 			int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
 			double damageToTake = 0.005 * tierValue;
 			damageModifer = 0.005 - (damageToTake / 2) / 10;
-
 			doDamage = true;
 		}
 		if (doDamage) {
@@ -227,7 +226,7 @@ public class MainHandlerServer {
 			if (EPPlayer.radiationLevel >= 100)
 				playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
 			else if (EPPlayer.radiationLevel >= 0)
-				EPPlayer.radiationLevel = EPPlayer.radiationLevel + (damageModifer * (radiationLevel / 10));
+				EPPlayer.radiationLevel = EPPlayer.radiationLevel + (damageModifer * (radiationLevel / 10) / 6);
 			else
 				EPPlayer.radiationLevel = 0;
 		}
