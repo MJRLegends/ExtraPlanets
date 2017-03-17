@@ -77,7 +77,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		if (this.isEntityInvulnerable(source)) {
 			return false;
 		} else if ("fireball".equals(source.getDamageType()) && source.getEntity() instanceof EntityPlayer) {
-			super.attackEntityFrom(source, 1000.0F);
+			super.attackEntityFrom(source, 10.0F);
 			((EntityPlayer) source.getEntity()).triggerAchievement(AchievementList.ghast);
 			return true;
 		} else {

@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
-import micdoodle8.mods.galacticraft.core.entities.IBoss;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -17,7 +16,6 @@ import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -27,18 +25,18 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedAttackMob, IEntityBreathable, IBossDisplayData, IBoss {
+public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedAttackMob, IEntityBreathable {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public EntityEvolvedSnowmanBoss(World p_i1692_1_) {
 		super(p_i1692_1_);
 		this.setSize(0.4F * 8, 1.8F * 6.5F);
-        this.tasks.addTask(1, new EntityAIArrowAttack(this, 0.75D, 20, 5F));
-        this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
-        this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));
-        this.tasks.addTask(4, new EntityAILookIdle(this));
+		this.tasks.addTask(1, new EntityAIArrowAttack(this, 0.75D, 20, 5F));
+		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
+		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));
+		this.tasks.addTask(4, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
 	}
 
 	/**
@@ -53,25 +51,22 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(500.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
 	}
-	
-    @Override
-    protected String getLivingSound()
-    {
-        return null;
-    }
 
-    @Override
-    protected String getHurtSound()
-    {
-        this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
-        return null;
-    }
+	@Override
+	protected String getLivingSound() {
+		return null;
+	}
 
-    @Override
-    protected String getDeathSound()
-    {
-        return null;
-    }
+	@Override
+	protected String getHurtSound() {
+		this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
+		return null;
+	}
+
+	@Override
+	protected String getDeathSound() {
+		return null;
+	}
 
 	protected Item getDropItem() {
 		return Items.snowball;
@@ -100,7 +95,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
 		this.worldObj.spawnEntityInWorld(entitysnowball);
 	}
-	
+
 	@Override
 	public boolean canBreath() {
 		return true;
@@ -113,7 +108,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 
 	@Override
 	public void dropKey() {
-		this.entityDropItem(new ItemStack(ExtraPlanets_Items.T6key, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.T8key, 1, 0), 0.5F);
 	}
 
 	@Override

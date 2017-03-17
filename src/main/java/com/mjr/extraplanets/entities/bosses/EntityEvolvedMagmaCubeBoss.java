@@ -220,7 +220,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	 * slime.
 	 */
 	protected int getAttackStrength() {
-		return this.getSlimeSize();
+		return this.getSlimeSize() * 4;
 	}
 
 	/**
