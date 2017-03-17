@@ -544,6 +544,8 @@ item.bucket_frozen_water.name=冰冻水
 item.bucket_nitrogen.name=液氮
 item.bucket_clean_water.name=Clean Water Bucket
 item.bucket_radioactive_water.name=Radioactive Water Bucket
+item.bucket_methane.name=Liquid Methane Bucket
+item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
 
 #Keys
 item.T4key.name=4阶宝箱钥匙
@@ -940,7 +942,7 @@ tile.radioactive_water.name=Radioactive Water
 tile.clean_water.name=Clean Water
 tile.infected_water.name=Infected Water
 tile.methane.name=Liquid Methane
-tile.nitrogen_ice.name=Liquid Ice Nitrogen
+tile.nitrogen_ice.name=Liquid Nitrogen Ice
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure

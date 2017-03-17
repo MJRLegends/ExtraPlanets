@@ -914,6 +914,8 @@ public class ClientProxy extends CommonProxy {
 
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.clean_water_bucket);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.radioactive_bucket);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.methane_bucket);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.nitrogen_ice_bucket);
 	}
 
 	@SubscribeEvent
@@ -1012,7 +1014,7 @@ public class ClientProxy extends CommonProxy {
 				return clean_waterLocation;
 			}
 		});
-		
+
 		ModelResourceLocation infected_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "infected_water", "fluid");
 		Item infected_water = Item.getItemFromBlock(ExtraPlanets_Fluids.infectedWater);
 		ModelBakery.registerItemVariants(infected_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "infected_water"));
@@ -1023,7 +1025,7 @@ public class ClientProxy extends CommonProxy {
 				return infected_waterLocation;
 			}
 		});
-		
+
 		ModelResourceLocation methaneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "methane", "fluid");
 		Item methane = Item.getItemFromBlock(ExtraPlanets_Fluids.methane);
 		ModelBakery.registerItemVariants(methane, new ResourceLocation(Constants.TEXTURE_PREFIX + "methane"));
@@ -1034,7 +1036,7 @@ public class ClientProxy extends CommonProxy {
 				return methaneLocation;
 			}
 		});
-		
+
 		ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
 		Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen_ice);
 		ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
