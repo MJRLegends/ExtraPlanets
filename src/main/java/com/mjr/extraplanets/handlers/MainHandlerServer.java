@@ -152,12 +152,14 @@ public class MainHandlerServer {
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
 			return;
-		if (!(entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && !(((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace))
+		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)){
+			if (Config.pressure)
+				checkPressure(event, entityLiving);
+			if (Config.radiation)
+				checkRadiation(event, entityLiving);
+		}
+		else
 			return;
-		if (Config.pressure)
-			checkPressure(event, entityLiving);
-		if (Config.radiation)
-			checkRadiation(event, entityLiving);
 	}
 
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
