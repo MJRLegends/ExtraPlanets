@@ -112,17 +112,22 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
 			
-			API.registerRecipeHandler(new BlockSmasherRecipeHandler());
-			API.registerUsageHandler(new BlockSmasherRecipeHandler());
-			
-			API.registerRecipeHandler(new CrystallizerRecipeHandler());
-			API.registerUsageHandler(new CrystallizerRecipeHandler());
-			
-			API.registerRecipeHandler(new DecrystallizerRecipeHandler());
-			API.registerUsageHandler(new DecrystallizerRecipeHandler());
-			
-			API.registerRecipeHandler(new SolarEvaporationChamberHandler());
-			API.registerUsageHandler(new SolarEvaporationChamberHandler());
+			if(Config.basicSmasher){
+				API.registerRecipeHandler(new BlockSmasherRecipeHandler());
+				API.registerUsageHandler(new BlockSmasherRecipeHandler());
+			}
+			if(Config.basicCrystallizer){
+				API.registerRecipeHandler(new CrystallizerRecipeHandler());
+				API.registerUsageHandler(new CrystallizerRecipeHandler());
+			}
+			if(Config.basicDecrystallizer){
+				API.registerRecipeHandler(new DecrystallizerRecipeHandler());
+				API.registerUsageHandler(new DecrystallizerRecipeHandler());
+			}
+			if(Config.basicChemicalInjector){
+				API.registerRecipeHandler(new SolarEvaporationChamberHandler());
+				API.registerUsageHandler(new SolarEvaporationChamberHandler());
+			}
 		}
 	}
 

@@ -66,6 +66,12 @@ public class Config {
 	public static boolean slabsAndStairs = false;
 	public static boolean nuclearBomb;
 	
+	public static boolean basicDecrystallizer;
+	public static boolean basicCrystallizer;
+	public static boolean basicSmasher;
+	public static boolean basicChemicalInjector;
+	public static boolean basicSolarEvaporationChamber;
+	
 	public static boolean mercury;
 	public static boolean ceres;
 	public static boolean jupiter;
@@ -268,6 +274,12 @@ public class Config {
 		ultimateCompressor = config.get(blocks, "Ultimate Compressor/Decompressor", true).getBoolean(true);
 		nuclearBomb = config.get(blocks, "Nuclear Bomb", true).getBoolean(true);
 
+		basicDecrystallizer = config.get(blocks, "Basic Decrystallizer", true).getBoolean(true);
+		basicCrystallizer = config.get(blocks, "Basic Crystallizer", true).getBoolean(true);
+		basicSmasher = config.get(blocks, "Basic Block Smasher", true).getBoolean(true);
+		basicChemicalInjector = config.get(blocks, "Basic Chemical Injector", true).getBoolean(true);
+		basicSolarEvaporationChamber = config.get(blocks, "Basic Solar Evaporation Chamber", true).getBoolean(true);
+		
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
 		
