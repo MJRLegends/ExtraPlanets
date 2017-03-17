@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.nei;
+package com.mjr.extraplanets.nei.rockets;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -10,6 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.nei.NEIExtraPlanetsConfig;
 
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.NEIServerUtils;

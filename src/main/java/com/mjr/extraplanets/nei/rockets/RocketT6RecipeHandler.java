@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.nei;
+package com.mjr.extraplanets.nei.rockets;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -11,16 +11,18 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import com.mjr.extraplanets.nei.NEIExtraPlanetsConfig;
+
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
-public class RocketT9RecipeHandler extends TemplateRecipeHandler {
+public class RocketT6RecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GalacticraftPlanets.ASSET_PREFIX, "textures/gui/schematic_rocket_T2.png");
 
 	public String getRecipeId() {
-		return "extraplanets.rocketT9";
+		return "extraplanets.rocketT6";
 	}
 
 	@Override
@@ -29,13 +31,13 @@ public class RocketT9RecipeHandler extends TemplateRecipeHandler {
 	}
 
 	public Set<Entry<ArrayList<PositionedStack>, PositionedStack>> getRecipes() {
-		return NEIExtraPlanetsConfig.getTier9RocketBenchRecipes();
+		return NEIExtraPlanetsConfig.getTier6RocketBenchRecipes();
 	}
 
 	@Override
 	public void drawBackground(int i) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		GuiDraw.changeTexture(RocketT9RecipeHandler.rocketGuiTexture);
+		GuiDraw.changeTexture(RocketT6RecipeHandler.rocketGuiTexture);
 		GuiDraw.drawTexturedModalRect(0, -8, 3, 4, 168, 140);
 	}
 

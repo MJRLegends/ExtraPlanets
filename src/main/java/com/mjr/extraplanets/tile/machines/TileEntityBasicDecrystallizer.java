@@ -90,7 +90,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			this.outputTank.fill(FluidRegistry.getFluidStack("salt_fluid", amountToAdd), true);
 			if (amountAdded == 1000) {
 				amountAdded = 0;
-				this.decrStackSize(1, 1);
+				this.decrStackSize(6, 1);
 			}
 		}
 	}

@@ -32,7 +32,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.iodideSalt, 1, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.iodideSalt, 6, 0);
 
 	public TileEntityBasicCrystallizer() {
 		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, 0));

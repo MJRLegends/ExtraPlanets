@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.nei;
+package com.mjr.extraplanets.nei.machines;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -17,13 +17,14 @@ import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.nei.NEIExtraPlanetsConfig;
 
 public class BlockSmasherRecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation blockSmasherGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/smasher.png");
 	int ticksPassed;
 
 	public String getRecipeId() {
-		return "galacticraft.blockSmasher";
+		return "extraplanets.blockSmasher";
 	}
 
 	@Override
@@ -41,11 +42,6 @@ public class BlockSmasherRecipeHandler extends TemplateRecipeHandler {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		GuiDraw.changeTexture(BlockSmasherRecipeHandler.blockSmasherGuiTexture);
 		GuiDraw.drawTexturedModalRect(-2, 0, 3, 4, 168, 64);
-		if (progress < 104 && progress > 40) {
-			GuiDraw.drawTexturedModalRect(2, 42, 176, 6, 16, 20);
-		} else if (progress < 124) {
-			GuiDraw.drawTexturedModalRect(148, 42, 176 + 16, 6, 16, 20);
-		}
 		GuiDraw.drawTexturedModalRect(21, 21, 0, 186, progress, 20);
 	}
 
