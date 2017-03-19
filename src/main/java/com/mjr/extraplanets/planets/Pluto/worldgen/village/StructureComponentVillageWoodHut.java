@@ -110,7 +110,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 1, yLevel, 5, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 1, yLevel, 6, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 1, yLevel, 7, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.air.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 1, yLevel, 9, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 1, yLevel, 10, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 1, yLevel, 11, par3StructureBoundingBox);
@@ -123,7 +123,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 5, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 6, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 7, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.air.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 9, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 10, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 11, yLevel, 15, par3StructureBoundingBox);
@@ -136,7 +136,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 15, yLevel, 11, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 15, yLevel, 10, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 15, yLevel, 9, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.air.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 15, yLevel, 7, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 15, yLevel, 6, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 15, yLevel, 5, par3StructureBoundingBox);
@@ -149,7 +149,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 11, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 10, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 9, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.air.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 7, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 6, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.plutoBlocks.getStateFromMeta(0), 5, yLevel, 1, par3StructureBoundingBox);

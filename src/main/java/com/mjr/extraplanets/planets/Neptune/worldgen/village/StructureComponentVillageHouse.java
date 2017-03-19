@@ -111,7 +111,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 1, yLevel, 5, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 1, yLevel, 6, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 1, yLevel, 7, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.air.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 1, yLevel, 9, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 1, yLevel, 10, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 1, yLevel, 11, par3StructureBoundingBox);
@@ -124,7 +124,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 5, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 6, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 7, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.air.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 9, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 10, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 11, yLevel, 15, par3StructureBoundingBox);
@@ -137,7 +137,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 15, yLevel, 11, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 15, yLevel, 10, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 15, yLevel, 9, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.air.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 15, yLevel, 7, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 15, yLevel, 6, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 15, yLevel, 5, par3StructureBoundingBox);
@@ -150,7 +150,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 11, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 10, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 9, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.air.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 7, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 6, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.neptuneBlocks.getStateFromMeta(2), 5, yLevel, 1, par3StructureBoundingBox);

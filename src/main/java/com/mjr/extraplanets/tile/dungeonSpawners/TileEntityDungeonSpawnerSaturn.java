@@ -29,6 +29,6 @@ public class TileEntityDungeonSpawnerSaturn extends TileEntityDungeonSpawner<Ent
 
 	@Override
 	public void playSpawnSound(Entity entity) {
-		this.worldObj.playSoundAtEntity(entity, Constants.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
+		//this.worldObj.playSoundAtEntity(entity, Constants.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
 	}
 }

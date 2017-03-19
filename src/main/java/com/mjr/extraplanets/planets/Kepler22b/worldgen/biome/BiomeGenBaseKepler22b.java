@@ -18,22 +18,22 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-public class BiomeGenBaseKepler22b extends BiomeGenBase {
-	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains");
-	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest().setColor(112).setBiomeName("Kepler22b Blue Maple Forest");
-	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest");
-	public static final BiomeGenBase kepler22bRedForest = new BiomeGenKepler22bRedMapleForest().setColor(112).setBiomeName("Kepler22b Red Maple Forest");
-	public static final BiomeGenBase kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest().setColor(112).setBiomeName("Kepler22b Yellow Maple Forest");
+public class BiomeKepler22b extends Biome {
+	public static final Biome kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains");
+	public static final Biome kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest().setColor(112).setBiomeName("Kepler22b Blue Maple Forest");
+	public static final Biome kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest");
+	public static final Biome kepler22bRedForest = new BiomeGenKepler22bRedMapleForest().setColor(112).setBiomeName("Kepler22b Red Maple Forest");
+	public static final Biome kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest().setColor(112).setBiomeName("Kepler22b Yellow Maple Forest");
 
 	protected byte topMeta;
 	protected byte fillerMeta;
 
-	public BiomeGenBaseKepler22b(int id) {
+	public BiomeKepler22b(int id) {
 		super(id);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -83,11 +83,11 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 
 		for (int j1 = 255; j1 >= 0; --j1) {
 			if (j1 <= rand.nextInt(5)) {
-				chunk.setBlockState(i1, j1, l, Blocks.bedrock.getDefaultState());
+				chunk.setBlockState(i1, j1, l, Blocks.BEDROCK.getDefaultState());
 			} else {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
 
-				if (iblockstate2.getBlock().getMaterial() == Material.air) {
+				if (iblockstate2.getBlock().getMaterial() == Material.AIR) {
 					j = -1;
 				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1).getBlock()) {
 					if (j == -1) {
@@ -99,7 +99,7 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 							iblockstate1 = this.fillerBlock;
 						}
 
-						if (j1 < 63 && (iblockstate == null || iblockstate.getBlock().getMaterial() == Material.air)) {
+						if (j1 < 63 && (iblockstate == null || iblockstate.getBlock().getMaterial() == Material.AIR)) {
 							if (this.getFloatTemperature(blockpos$mutableblockpos.set(x, j1, z)) < 0.15F) {
 								iblockstate = Blocks.ice.getDefaultState();
 							} else {

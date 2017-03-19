@@ -6,15 +6,14 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.worldgen.ChunkProviderCallisto;
-import com.mjr.extraplanets.moons.Callisto.worldgen.WorldChunkManagerCallisto;
 
 public class WorldProviderCallisto extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
@@ -50,14 +49,16 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
-		return ChunkProviderCallisto.class;
-	}
+    public Class<? extends IChunkGenerator> getChunkProviderClass()
+    {
+        return ChunkProviderCallisto.class;
+    }
 
-	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerCallisto.class;
-	}
+    @Override
+    public Class<? extends BiomeProvider> getBiomeProviderClass()
+    {
+        return BiomeProviderCallisto.class;
+    }
 
 	@Override
 	@SideOnly(Side.CLIENT)

@@ -34,7 +34,7 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	public void worldUnloadEvent(WorldEvent.Unload event) {
 		for (ExtraPlanetsPacketHandler packetHandler : packetHandlers) {
-			packetHandler.unload(event.world);
+			packetHandler.unload(event.getWorld());
 		}
 	}
 

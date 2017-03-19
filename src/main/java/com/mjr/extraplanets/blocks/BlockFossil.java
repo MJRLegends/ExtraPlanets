@@ -16,6 +16,6 @@ public class BlockFossil extends BlockBasic {
 
 	@Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune){
-		return Items.bone;
+		return Items.BONE;
 	}
 }

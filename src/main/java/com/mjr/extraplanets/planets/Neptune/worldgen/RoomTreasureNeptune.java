@@ -57,7 +57,7 @@ public class RoomTreasureNeptune extends RoomTreasure {
 						if (placeBlock) {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
+							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
 						}
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
 						this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
@@ -68,7 +68,7 @@ public class RoomTreasureNeptune extends RoomTreasure {
 							worldIn.setTileEntity(blockpos, new TileEntityT8TreasureChest(8));
 						}
 					} else {
-						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
 					}
 				}
 			}

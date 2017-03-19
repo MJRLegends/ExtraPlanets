@@ -7,28 +7,29 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldChunkManagerSpace;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeCache;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
 
 public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 	private GenLayer unzoomedBiomes;
 	private GenLayer zoomedBiomes;
 	private BiomeCache biomeCache;
-	private List<BiomeGenBase> biomesToSpawn;
+	private List<Biome> biomesToSpawn;
 
 	protected WorldChunkManagerKepler22b() {
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawn = new ArrayList();
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
+		this.biomesToSpawn.add(BiomeKepler22b.kepler22bPlains);
+		this.biomesToSpawn.add(BiomeKepler22b.kepler22bBlueForest);
+		this.biomesToSpawn.add(BiomeKepler22b.kepler22bPurpleForest);
+		this.biomesToSpawn.add(BiomeKepler22b.kepler22bRedForest);
+		this.biomesToSpawn.add(BiomeKepler22b.kepler22bYellowForest);
 	}
 
 	public WorldChunkManagerKepler22b(long seed) {
@@ -44,8 +45,8 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 	}
 
 	@Override
-	public BiomeGenBase getBiome() {
-		return BiomeGenBaseKepler22b.kepler22bPlains;
+	public Biome getBiome() {
+		return BiomeKepler22b.kepler22bPlains;
 	}
 
 	@Override
@@ -54,11 +55,11 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 	}
 
 	@Override
-	public BiomeGenBase func_180300_a(BlockPos pos, BiomeGenBase biomeGen) {
-		BiomeGenBase biome = this.biomeCache.func_180284_a(pos.getX(), pos.getZ(), biomeGen);
+	public Biome func_180300_a(BlockPos pos, Biome biomeGen) {
+		Biome biome = this.biomeCache.func_180284_a(pos.getX(), pos.getZ(), biomeGen);
 
 		if (biome == null) {
-			return BiomeGenBaseKepler22b.kepler22bPlains;
+			return BiomeKepler22b.kepler22bPlains;
 		}
 		return biome;
 	}
@@ -72,7 +73,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 			par1 = new float[width * depth];
 		}
 		for (int i1 = 0; i1 < width * depth; ++i1) {
-			float f = BiomeGenBase.getBiome(aint[i1]).getIntRainfall() / 65536.0F;
+			float f = Biome.getBiome(aint[i1]).getIntRainfall() / 65536.0F;
 
 			if (f > 1.0F) {
 				f = 1.0F;
@@ -88,47 +89,47 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 	}
 
 	@Override
-	public BiomeGenBase[] getBiomesForGeneration(BiomeGenBase[] par1ArrayOfBiomeGenBase, int x, int z, int length, int width) {
+	public Biome[] getBiomesForGeneration(Biome[] par1ArrayOfBiome, int x, int z, int length, int width) {
 		int[] arrayOfInts = this.unzoomedBiomes.getInts(x, z, length, width);
 
-		if (par1ArrayOfBiomeGenBase == null || par1ArrayOfBiomeGenBase.length < length * width) {
-			par1ArrayOfBiomeGenBase = new BiomeGenBase[length * width];
+		if (par1ArrayOfBiome == null || par1ArrayOfBiome.length < length * width) {
+			par1ArrayOfBiome = new Biome[length * width];
 		}
 		for (int i = 0; i < length * width; i++) {
 			if (arrayOfInts[i] >= 0) {
-				par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiome(arrayOfInts[i]);
+				par1ArrayOfBiome[i] = Biome.getBiome(arrayOfInts[i]);
 			} else {
-				par1ArrayOfBiomeGenBase[i] = BiomeGenBaseKepler22b.kepler22bPlains;
+				par1ArrayOfBiome[i] = BiomeKepler22b.kepler22bPlains;
 			}
 		}
-		return par1ArrayOfBiomeGenBase;
+		return par1ArrayOfBiome;
 	}
 
 	@Override
-	public BiomeGenBase[] loadBlockGeneratorData(BiomeGenBase[] par1ArrayOfBiomeGenBase, int par2, int par3, int par4, int par5) {
-		return this.getBiomeGenAt(par1ArrayOfBiomeGenBase, par2, par3, par4, par5, true);
+	public Biome[] loadBlockGeneratorData(Biome[] par1ArrayOfBiome, int par2, int par3, int par4, int par5) {
+		return this.getBiomeGenAt(par1ArrayOfBiome, par2, par3, par4, par5, true);
 	}
 
 	@Override
-	public BiomeGenBase[] getBiomeGenAt(BiomeGenBase[] par1ArrayOfBiomeGenBase, int x, int y, int width, int length, boolean cacheFlag) {
+	public Biome[] getBiomeGenAt(Biome[] par1ArrayOfBiome, int x, int y, int width, int length, boolean cacheFlag) {
 		int[] ai = this.zoomedBiomes.getInts(x, y, width, length);
 
-		if (par1ArrayOfBiomeGenBase == null || par1ArrayOfBiomeGenBase.length < width * length) {
-			par1ArrayOfBiomeGenBase = new BiomeGenBase[width * length];
+		if (par1ArrayOfBiome == null || par1ArrayOfBiome.length < width * length) {
+			par1ArrayOfBiome = new Biome[width * length];
 		}
 		if (cacheFlag && width == 16 && length == 16 && (x & 0xF) == 0 && (y & 0xF) == 0) {
-			BiomeGenBase[] abiomegenbase = this.biomeCache.getCachedBiomes(x, y);
-			System.arraycopy(abiomegenbase, 0, par1ArrayOfBiomeGenBase, 0, width * length);
-			return par1ArrayOfBiomeGenBase;
+			Biome[] abiomegenbase = this.biomeCache.getCachedBiomes(x, y);
+			System.arraycopy(abiomegenbase, 0, par1ArrayOfBiome, 0, width * length);
+			return par1ArrayOfBiome;
 		}
 		for (int i = 0; i < width * length; i++) {
 			if (ai[i] >= 0) {
-				par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiome(ai[i]);
+				par1ArrayOfBiome[i] = Biome.getBiome(ai[i]);
 			} else {
-				par1ArrayOfBiomeGenBase[i] = BiomeGenBaseKepler22b.kepler22bPlains;
+				par1ArrayOfBiome[i] = BiomeKepler22b.kepler22bPlains;
 			}
 		}
-		return par1ArrayOfBiomeGenBase;
+		return par1ArrayOfBiome;
 	}
 
 	@Override
@@ -142,7 +143,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 		int[] ai = this.unzoomedBiomes.getInts(i, j, i1, j1);
 
 		for (int k1 = 0; k1 < i1 * j1; k1++) {
-			BiomeGenBase biomegenbase = BiomeGenBase.getBiome(ai[k1]);
+			Biome biomegenbase = Biome.getBiome(ai[k1]);
 
 			if (!par4List.contains(biomegenbase)) {
 				return false;
@@ -166,7 +167,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 		for (int l1 = 0; l1 < ai.length; l1++) {
 			int i2 = i + l1 % i1 << 2;
 			int j2 = j + l1 / i1 << 2;
-			BiomeGenBase biomegenbase = BiomeGenBase.getBiome(ai[l1]);
+			Biome biomegenbase = Biome.getBiome(ai[l1]);
 
 			if (par4List.contains(biomegenbase) && (chunkposition == null || par5Random.nextInt(k1 + 1) == 0)) {
 				chunkposition = new BlockPos(i2, 0, j2);

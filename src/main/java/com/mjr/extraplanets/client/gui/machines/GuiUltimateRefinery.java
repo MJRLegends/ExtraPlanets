@@ -99,7 +99,7 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 	protected void actionPerformed(GuiButton par1GuiButton) {
 		switch (par1GuiButton.id) {
 		case 0:
-			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, this.mc.theWorld.provider.getDimensionId(), new Object[] {
+			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] {
 					this.tileEntity.getPos(), 0 }));
 			break;
 		}

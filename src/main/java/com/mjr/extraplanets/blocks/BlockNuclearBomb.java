@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -13,8 +12,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
@@ -26,9 +25,9 @@ public class BlockNuclearBomb extends Block
 
     public BlockNuclearBomb()
     {
-        super(Material.tnt);
+        super(Material.TNT);
         this.setDefaultState(this.blockState.getBaseState().withProperty(EXPLODE, Boolean.valueOf(false)));
-        this.setCreativeTab(CreativeTabs.tabRedstone);
+        this.setCreativeTab(CreativeTabs.REDSTONE);
     }
 
     @Override
@@ -95,22 +94,22 @@ public class BlockNuclearBomb extends Block
     @Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
     {
-        if (playerIn.getCurrentEquippedItem() != null)
+        if (playerIn.inventory.getCurrentItem() != null)
         {
-            Item item = playerIn.getCurrentEquippedItem().getItem();
+            Item item = playerIn.inventory.getCurrentItem().getItem();
 
-            if (item == Items.flint_and_steel || item == Items.fire_charge)
+            if (item == Items.FLINT_AND_STEEL || item == Items.FIRE_CHARGE)
             {
                 this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
                 worldIn.setBlockToAir(pos);
 
-                if (item == Items.flint_and_steel)
+                if (item == Items.FLINT_AND_STEEL)
                 {
-                    playerIn.getCurrentEquippedItem().damageItem(1, playerIn);
+                    playerIn.inventory.getCurrentItem().damageItem(1, playerIn);
                 }
                 else if (!playerIn.capabilities.isCreativeMode)
                 {
-                    --playerIn.getCurrentEquippedItem().stackSize;
+                    --playerIn.inventory.getCurrentItem().stackSize;
                 }
 
                 return true;

@@ -13,7 +13,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -51,7 +51,7 @@ public class MainHandlerServer {
 	@SubscribeEvent
 	public void worldUnloadEvent(WorldEvent.Unload event) {
 		for (ExtraPlanetsPacketHandler packetHandler : packetHandlers) {
-			packetHandler.unload(event.world);
+			packetHandler.unload(event.getWorld());
 		}
 	}
 
@@ -68,8 +68,8 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onEntityDealth(LivingDeathEvent event) {
-		if (event.entity instanceof EntityPlayerMP) {
-			final EntityLivingBase entityLiving = event.entityLiving;
+		if (event.getEntity() instanceof EntityPlayerMP) {
+			final EntityLivingBase entityLiving = event.getEntityLiving();
 			final EPPlayerStats EPPlayer = EPPlayerStats.get((EntityPlayerMP) entityLiving);
 			EPPlayer.radiationLevel = 0;
 		}
@@ -77,7 +77,7 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onPlayer(PlayerTickEvent event) {
-		if (event.player.worldObj.provider.getDimensionId() == Config.jupiterID) {
+		if (event.player.worldObj.provider.getDimensionType().getId() == Config.jupiterID) {
 			Random rand = new Random();
 			int addX = rand.nextInt(25);
 			int addZ = rand.nextInt(25);
@@ -120,8 +120,8 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onEntityConstructing(EntityEvent.EntityConstructing event) {
-		if (event.entity instanceof EntityPlayerMP && EPPlayerStats.get((EntityPlayerMP) event.entity) == null) {
-			EPPlayerStats.register((EntityPlayerMP) event.entity);
+		if (event.entity instanceof EntityPlayerMP && EPPlayerStats.get((EntityPlayerMP) event.getEntity()) == null) {
+			EPPlayerStats.register((EntityPlayerMP) event.getEntity());
 		}
 		if (FMLCommonHandler.instance().getEffectiveSide().isClient()) {
 			this.onEntityConstructingClient(event);
@@ -130,9 +130,9 @@ public class MainHandlerServer {
 
 	@SideOnly(Side.CLIENT)
 	public void onEntityConstructingClient(EntityEvent.EntityConstructing event) {
-		if (event.entity instanceof EntityPlayerSP) {
-			if (EPPlayerStatsClient.get((EntityPlayerSP) event.entity) == null) {
-				EPPlayerStatsClient.register((EntityPlayerSP) event.entity);
+		if (event.getEntity() instanceof EntityPlayerSP) {
+			if (EPPlayerStatsClient.get((EntityPlayerSP) event.getEntity()) == null) {
+				EPPlayerStatsClient.register((EntityPlayerSP) event.getEntity());
 			}
 
 			Minecraft.getMinecraft().gameSettings.sendSettingsToServer();
@@ -141,7 +141,7 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
-		final EntityLivingBase entityLiving = event.entityLiving;
+		final EntityLivingBase entityLiving = event.getEntityLiving();
 		if (entityLiving instanceof EntityPlayerMP) {
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false)
@@ -152,13 +152,12 @@ public class MainHandlerServer {
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
 			return;
-		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)){
+		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)) {
 			if (Config.pressure)
 				checkPressure(event, entityLiving);
 			if (Config.radiation)
 				checkRadiation(event, entityLiving);
-		}
-		else
+		} else
 			return;
 	}
 
@@ -169,18 +168,18 @@ public class MainHandlerServer {
 		ItemStack chest = playerMP.getCurrentArmor(1);
 		ItemStack leggins = playerMP.getCurrentArmor(2);
 		ItemStack boots = playerMP.getCurrentArmor(3);
-		
+
 		boolean doDamage = false;
 
-		if(helmet == null || !(helmet.getItem() instanceof IPressureSuit))
+		if (helmet == null || !(helmet.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		else if(chest == null || !(chest.getItem() instanceof IPressureSuit))
+		else if (chest == null || !(chest.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		else if(leggins == null || !(leggins.getItem() instanceof IPressureSuit))
+		else if (leggins == null || !(leggins.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		else if(boots == null || !(boots.getItem() instanceof IPressureSuit))
+		else if (boots == null || !(boots.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		
+
 		if (doDamage) {
 			float tempLevel = ((CustomWorldProviderSpace) playerMP.worldObj.provider).getPressureLevel();
 			tempLevel = (tempLevel / 100) * 8;
@@ -250,7 +249,7 @@ public class MainHandlerServer {
 	}
 
 	protected void sendSolarRadiationPacket(EntityPlayerMP player, EPPlayerStats playerStats) {
-		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.worldObj.provider.getDimensionId(), new Object[] { playerStats.radiationLevel }), player);
+		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.worldObj.provider.getDimensionType().getId(), new Object[] { playerStats.radiationLevel }), player);
 	}
 
 }

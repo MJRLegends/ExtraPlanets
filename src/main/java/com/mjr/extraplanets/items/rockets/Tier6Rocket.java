@@ -4,8 +4,8 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
-import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
@@ -13,13 +13,14 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -40,13 +41,13 @@ public class Tier6Rocket extends Item implements IHoldableItem {
 	}
 
 	@Override
-	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		boolean padFound = false;
 		TileEntity tile = null;
 
 		if (worldIn.isRemote && playerIn instanceof EntityPlayerSP) {
 			ClientProxyCore.playerClientHandler.onBuild(8, (EntityPlayerSP) playerIn);
-			return false;
+			return EnumActionResult.FAIL;
 		} else {
 			float centerX = -1;
 			float centerY = -1;
@@ -80,10 +81,10 @@ public class Tier6Rocket extends Item implements IHoldableItem {
 				// Check whether there is already a rocket on the pad
 				if (tile instanceof TileEntityLandingPad) {
 					if (((TileEntityLandingPad) tile).getDockedEntity() != null) {
-						return false;
+						return EnumActionResult.FAIL;
 					}
 				} else {
-					return false;
+					return EnumActionResult.FAIL;
 				}
 
 				final EntityTier6Rocket spaceship = new EntityTier6Rocket(worldIn, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
@@ -104,21 +105,13 @@ public class Tier6Rocket extends Item implements IHoldableItem {
 				}
 
 				if (spaceship.rocketType.getPreFueled()) {
-					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, 2000), true);
+					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, spaceship.getMaxFuel()), true);
 				}
 			} else {
-				return false;
+				return EnumActionResult.FAIL;
 			}
 		}
-		return true;
-	}
-
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
-		for (int i = 0; i < EnumRocketType.values().length; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
-		}
+		return EnumActionResult.PASS;
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

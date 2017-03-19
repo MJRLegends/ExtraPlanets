@@ -8,8 +8,8 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class BoneMealHandler {
 	@SubscribeEvent
 	public void usedBonemeal(BonemealEvent event) {
-		if (event.block == ExtraPlanets_Blocks.kepler22bMapleSapling) {
-			if (!event.world.isRemote) {
+		if (event.getBlock() == ExtraPlanets_Blocks.kepler22bMapleSapling) {
+			if (!event.getWorld().isRemote) {
 //				((BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.kepler22bMapleSapling).markOrGrowMarked(event.world, event.x, event.y, event.z, event.world.rand);
 //				event.setResult(Result.ALLOW);
 			}

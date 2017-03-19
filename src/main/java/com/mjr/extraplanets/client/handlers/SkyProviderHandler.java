@@ -4,7 +4,6 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.SkyProviderOrbit;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOrbit;
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -271,7 +270,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -282,7 +280,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -293,7 +290,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -304,7 +300,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mars.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -315,7 +310,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -326,7 +320,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -337,7 +330,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -348,7 +340,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -359,7 +350,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -370,7 +360,6 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
 				}
 
 				if (world.provider.getCloudRenderer() == null) {

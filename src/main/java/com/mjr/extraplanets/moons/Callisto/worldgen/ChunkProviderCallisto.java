@@ -7,17 +7,15 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class ChunkProviderCallisto extends ChunkProviderSpace {
 	private final BiomeDecoratorCallisto ceresBiomeDecorator = new BiomeDecoratorCallisto();
-
 	 private final MapGenCaveCallisto caveGenerator = new MapGenCaveCallisto();
 
 	public ChunkProviderCallisto(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -30,8 +28,8 @@ public class ChunkProviderCallisto extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected BiomeGenBase[] getBiomesForGeneration() {
-		return new BiomeGenBase[] { CallistoBiomes.callisto };
+	protected Biome[] getBiomesForGeneration() {
+		return new Biome[] { CallistoBiomes.callisto };
 	}
 
 	@Override
@@ -91,7 +89,7 @@ public class ChunkProviderCallisto extends ChunkProviderSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	public void onPopulate(int cX, int cZ) {
 	}
 
 	@Override

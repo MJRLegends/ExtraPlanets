@@ -3,13 +3,13 @@ package com.mjr.extraplanets.items.planetAndMoonItems;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -55,7 +55,7 @@ public class ItemTier6Items extends Item {
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
 			if (player.worldObj.isRemote) {
-				list.add(EnumChatFormatting.GRAY + GCCoreUtil.translate("tier6.heavyDutyPlate.name"));
+				list.add(EnumColor.GREY + GCCoreUtil.translate("tier6.heavyDutyPlate.name"));
 			}
 		}
 	}

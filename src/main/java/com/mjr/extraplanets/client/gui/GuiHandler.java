@@ -4,8 +4,8 @@ import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.IGuiHandler;
@@ -27,10 +27,10 @@ import com.mjr.extraplanets.client.gui.machines.GuiUltimateRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicChemicalInjector;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicCrystallizer;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicSmasher;
-import com.mjr.extraplanets.inventory.machines.ContainerBasicChemicalInjector;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicSolarEvaporationChamber;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
@@ -55,7 +55,7 @@ public class GuiHandler implements IGuiHandler {
 		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
 		if (playerBase == null) {
-			player.addChatMessage(new ChatComponentText("ExtraPlanets player instance null server-side. This is a bug."));
+			player.addChatMessage(new TextComponentString("ExtraPlanets player instance null server-side. This is a bug."));
 			return null;
 		}
 

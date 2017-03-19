@@ -3,7 +3,7 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.biome.BiomeDecorator;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
@@ -49,7 +49,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	private boolean isDecorating = false;
 
 	@Override
-	protected void genDecorations(BiomeGenBase biomeGenBaseIn) {
+	protected void genDecorations(Biome biomeGenBaseIn) {
 		if (isDecorating)
 			return;
 		isDecorating = true;

@@ -77,8 +77,6 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleLog2;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bPlanks;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
@@ -225,11 +223,11 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.uranus) {
 			uranusBlocks = new BlockBasicUranus("uranus");
-			denseIce = new BlockBasic(Material.ice).setUnlocalizedName("denseIce").setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeSnow);
+			denseIce = new BlockBasic(Material.ICE).setUnlocalizedName("denseIce").setHardness(2.2F).setResistance(3.0F);
 		}
 		if (Config.neptune) {
 			neptuneBlocks = new BlockBasicNeptune("neptune");
-			frozenNitrogen = new BlockBasic(Material.ice).setUnlocalizedName("frozenNitrogen").setStepSound(Block.soundTypeSnow);
+			frozenNitrogen = new BlockBasic(Material.ICE).setUnlocalizedName("frozenNitrogen");
 		}
 		if (Config.pluto) {
 			plutoBlocks = new BlockBasicPluto("pluto");
@@ -288,11 +286,11 @@ public class ExtraPlanets_Blocks {
 			iapetusGravel = new BlockCustomGravel("iapetusGravel");
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-			fossil = new BlockFossil(Material.rock).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
+			fossil = new BlockFossil(Material.ROCK).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb().setUnlocalizedName("nuclearBomb");
 		if (Config.leadOreGeneration)
-			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
+			oreLead = new BlockBasic(Material.ROCK).setUnlocalizedName("oreLead").setHardness(5.0F).setResistance(3.0F);
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
@@ -302,7 +300,7 @@ public class ExtraPlanets_Blocks {
 			kepler22bYellowGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
 			//kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22bFlowers");
 		}
-		potash = new BlockBasic(Material.rock).setUnlocalizedName("potash").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
+		potash = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -483,7 +481,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
 		if (Config.jupiter) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
+			//GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT5TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
 		}
 		if (Config.saturn) {
@@ -499,11 +497,11 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.pluto) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
+			//GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
 		if (Config.eris) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
+			//GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
 	}

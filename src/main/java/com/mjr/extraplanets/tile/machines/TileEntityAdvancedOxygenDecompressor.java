@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.tile.machines;
 
+import java.util.EnumSet;
+
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
@@ -11,9 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
-
-import java.util.EnumSet;
+import net.minecraft.util.text.ITextComponent;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedOxygenCompressor;
 
@@ -339,7 +339,7 @@ public class TileEntityAdvancedOxygenDecompressor extends TileEntityOxygen imple
     }
 
     @Override
-    public IChatComponent getDisplayName()
+    public ITextComponent getDisplayName()
     {
         return null;
     }

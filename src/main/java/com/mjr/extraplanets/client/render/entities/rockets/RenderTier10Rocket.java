@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.render.entities.rockets;
 
-import com.google.common.base.Function;
-import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
+import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
@@ -11,15 +10,15 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.WorldRenderer;
+import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.block.model.BakedQuad;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.client.model.pipeline.LightUtil;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
@@ -28,7 +27,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import java.util.List;
+import com.google.common.base.Function;
+import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 
 @SideOnly(Side.CLIENT)
 public class RenderTier10Rocket extends Render<EntityTier10Rocket>
@@ -88,7 +88,7 @@ public class RenderTier10Rocket extends Render<EntityTier10Rocket>
         updateModel();
 
         RenderHelper.disableStandardItemLighting();
-        this.bindTexture(TextureMap.locationBlocksTexture);
+        this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 
         if (Minecraft.isAmbientOcclusionEnabled())
         {
@@ -103,7 +103,7 @@ public class RenderTier10Rocket extends Render<EntityTier10Rocket>
         GL11.glScalef(0.8F, 0.8F, 0.8F);
 
         Tessellator tessellator = Tessellator.getInstance();
-        WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+        VertexBuffer worldRenderer = tessellator.getBuffer();
 
         worldrenderer.begin(GL11.GL_QUADS, rocketModel.getFormat());
 
@@ -139,7 +139,7 @@ public class RenderTier10Rocket extends Render<EntityTier10Rocket>
         RenderHelper.enableStandardItemLighting();
     }
 
-    private void renderQuads(WorldRenderer renderer, List<BakedQuad> quads, int color)
+    private void renderQuads(VertexBuffer renderer, List<BakedQuad> quads, int color)
     {
         for (BakedQuad bakedquad : quads)
         {

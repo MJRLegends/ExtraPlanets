@@ -5,6 +5,8 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
@@ -149,5 +151,15 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+
+	@Override
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return null;
+	}
+
+	@Override
+	public DimensionType getDimensionType() {
+		return null;
 	}
 }

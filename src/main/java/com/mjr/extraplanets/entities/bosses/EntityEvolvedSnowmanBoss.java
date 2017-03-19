@@ -5,12 +5,11 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
-import micdoodle8.mods.galacticraft.core.Constants;
+import micdoodle8.mods.galacticraft.core.entities.EntityAIArrowAttack;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIArrowAttack;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
@@ -20,6 +19,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.BossInfo.Color;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
@@ -48,28 +48,28 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(500.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(500.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.20000000298023224D);
 	}
 
-	@Override
-	protected String getLivingSound() {
-		return null;
-	}
-
-	@Override
-	protected String getHurtSound() {
-		this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
-		return null;
-	}
-
-	@Override
-	protected String getDeathSound() {
-		return null;
-	}
+//	@Override
+//	protected String getLivingSound() {
+//		return null;
+//	}
+//
+//	@Override
+//	protected String getHurtSound() {
+//		this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
+//		return null;
+//	}
+//
+//	@Override
+//	protected String getDeathSound() {
+//		return null;
+//	}
 
 	protected Item getDropItem() {
-		return Items.snowball;
+		return Items.SNOWBALL;
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		int j = this.rand.nextInt(16);
 
 		for (int k = 0; k < j; ++k) {
-			this.dropItem(Items.snowball, 1);
+			this.dropItem(Items.SNOWBALL, 1);
 		}
 	}
 
@@ -92,7 +92,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		double d1 = p_82196_1_.posY + (double) p_82196_1_.getEyeHeight() - 1.100000023841858D - entitysnowball.posY;
 		double d2 = p_82196_1_.posZ - this.posZ;
 		entitysnowball.setThrowableHeading(d0, d1, d2, 1.6F, 1.0F);
-		this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
+		//this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
 		this.worldObj.spawnEntityInWorld(entitysnowball);
 	}
 
@@ -115,5 +115,10 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(8);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
+	}
+
+	@Override
+	public Color getHealthBarColor() {
+		return Color.BLUE;
 	}
 }

@@ -80,10 +80,10 @@ public class StructureComponentVillageWell extends StructureComponentVillage
         }
 
         this.fillWithBlocks(par1World, par3StructureBoundingBox, 1, 0, 1, 4, 12, 4, ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(0), Blocks.flowing_water.getDefaultState(), false);
-        this.setBlockState(par1World, Blocks.air.getDefaultState(), 2, 12, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, Blocks.air.getDefaultState(), 3, 12, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, Blocks.air.getDefaultState(), 2, 12, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, Blocks.air.getDefaultState(), 3, 12, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, Blocks.AIR.getDefaultState(), 2, 12, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, Blocks.AIR.getDefaultState(), 3, 12, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, Blocks.AIR.getDefaultState(), 2, 12, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, Blocks.AIR.getDefaultState(), 3, 12, 3, par3StructureBoundingBox);
         this.setBlockState(par1World, Blocks.dark_oak_fence.getDefaultState(), 1, 13, 1, par3StructureBoundingBox);
         this.setBlockState(par1World, Blocks.dark_oak_fence.getDefaultState(), 1, 14, 1, par3StructureBoundingBox);
         this.setBlockState(par1World, Blocks.dark_oak_fence.getDefaultState(), 4, 13, 1, par3StructureBoundingBox);

@@ -4,11 +4,9 @@ import java.util.Random;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
@@ -26,7 +24,7 @@ public class WorldGenVolcano extends WorldGenerator {
 		for (int i = 0; i < 25; i++) {
 			for (int j = 0; j < 25; j++) {
 				try {
-					if (world.getBlockState(new BlockPos(x + i, y - 3, z + j)).getBlock() == Blocks.air)
+					if (world.getBlockState(new BlockPos(x + i, y - 3, z + j)).getBlock() == Blocks.AIR)
 						return false;
 				}
 				catch(Exception ex){
@@ -260,7 +258,7 @@ public class WorldGenVolcano extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 4, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
 		if (rand.nextInt(30) == 1)
-			world.setBlockState(new BlockPos(x + 6, y + 0, z + 13), Blocks.chest.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x + 6, y + 0, z + 13), Blocks.CHEST.getDefaultState(), 3);
 
 		world.setBlockState(new BlockPos(x + 7, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
@@ -274,7 +272,7 @@ public class WorldGenVolcano extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 16, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 17, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
 		if (rand.nextInt(30) == 1)
-			world.setBlockState(new BlockPos(x + 18, y + 0, z + 13), Blocks.chest.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x + 18, y + 0, z + 13), Blocks.CHEST.getDefaultState(), 3);
 
 		world.setBlockState(new BlockPos(x + 19, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 20, y + 0, z + 13), Blocks.lava.getDefaultState(), 3);
@@ -1543,28 +1541,28 @@ public class WorldGenVolcano extends WorldGenerator {
 	}
 
 	public boolean fillChests(World world, Random rand, int x, int y, int z) {
-		TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(new BlockPos(x + 18, y + 0, z + 13)));
+		TileEntityChest CHEST = (TileEntityChest) world.getTileEntity(new BlockPos(new BlockPos(x + 18, y + 0, z + 13)));
 
-		if (chest != null) {
-			for (int i = 0; i < chest.getSizeInventory(); i++) {
-				chest.setInventorySlotContents(i, null);
+		if (CHEST != null) {
+			for (int i = 0; i < CHEST.getSizeInventory(); i++) {
+				CHEST.setInventorySlotContents(i, null);
 			}
 
 			ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-			WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
+			WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), CHEST, info.getCount(rand));
 		}
 
-		chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 0, z + 13));
+		CHEST = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 0, z + 13));
 
-		if (chest != null) {
-			for (int i = 0; i < chest.getSizeInventory(); i++) {
-				chest.setInventorySlotContents(i, null);
+		if (CHEST != null) {
+			for (int i = 0; i < CHEST.getSizeInventory(); i++) {
+				CHEST.setInventorySlotContents(i, null);
 			}
 
 			ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
 
-			WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
+			WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), CHEST, info.getCount(rand));
 		}
 		return false;
 	}

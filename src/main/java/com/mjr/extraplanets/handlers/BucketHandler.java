@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
@@ -24,8 +23,8 @@ public class BucketHandler {
 	@SubscribeEvent
 	public void onBucketFill(FillBucketEvent event) {
 
-		MovingObjectPosition pos = event.target;
-		ItemStack ret = fillCustomBucket(event.world, pos);
+		MovingObjectPosition pos = event.getTarget();
+		ItemStack ret = fillCustomBucket(event.getWorld(), pos);
 
 		if (ret == null) {
 			return;

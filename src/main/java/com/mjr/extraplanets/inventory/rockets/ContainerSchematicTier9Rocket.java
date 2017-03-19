@@ -10,7 +10,7 @@ import net.minecraft.inventory.InventoryCraftResult;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.recipes.Tier9RocketRecipes;
@@ -127,15 +127,15 @@ public class ContainerSchematicTier9Rocket extends Container {
 				}
 
 				if (!done) {
-					if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !this.inventorySlots.get(19).getHasStack()) {
+					if (var2.getItem() == Item.getItemFromBlock(Blocks.CHEST) && !this.inventorySlots.get(19).getHasStack()) {
 						if (!this.mergeItemStack(var4, 19, 20, false)) {
 							return null;
 						}
-					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !this.inventorySlots.get(20).getHasStack()) {
+					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.CHEST) && !this.inventorySlots.get(20).getHasStack()) {
 						if (!this.mergeItemStack(var4, 20, 21, false)) {
 							return null;
 						}
-					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.chest) && !this.inventorySlots.get(21).getHasStack()) {
+					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.CHEST) && !this.inventorySlots.get(21).getHasStack()) {
 						if (!this.mergeItemStack(var4, 21, 22, false)) {
 							return null;
 						}
