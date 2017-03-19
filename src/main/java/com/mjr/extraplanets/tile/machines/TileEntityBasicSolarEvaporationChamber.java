@@ -109,10 +109,11 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	@Override
-	public void writeToNBT(NBTTagCompound nbt) {
+	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt);
+		return nbt;
 	}
 
 	@Override

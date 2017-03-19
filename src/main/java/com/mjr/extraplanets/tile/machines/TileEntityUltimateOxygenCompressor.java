@@ -93,7 +93,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
     }
 
     @Override
-    public void writeToNBT(NBTTagCompound par1NBTTagCompound)
+    public NBTTagCompound writeToNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.writeToNBT(par1NBTTagCompound);
 
@@ -111,7 +111,8 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
         }
 
         par1NBTTagCompound.setTag("Items", list);
-    }
+		return par1NBTTagCompound;
+	}
 
     @Override
     public int getSizeInventory()

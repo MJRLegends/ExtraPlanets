@@ -64,7 +64,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		if (this.containingItems[slot] != null) {
 			if (this.containingItems[slot].getItem() == ExtraPlanets_Items.salt_bucket) {
 				tank.fill(FluidRegistry.getFluidStack("salt_fluid", 1000), true);
-				this.containingItems[slot].setItem(Items.bucket);
+				this.containingItems[slot].setItem(Items.BUCKET);
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
 		}
@@ -142,7 +142,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
-	public void writeToNBT(NBTTagCompound nbt) {
+	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt);
@@ -150,6 +150,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		if (this.inputTank.getFluid() != null) {
 			nbt.setTag("inputTank", this.inputTank.writeToNBT(new NBTTagCompound()));
 		}
+		return nbt;
 	}
 
 	@Override
@@ -198,7 +199,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 			case 1:
 				return itemstack.getItem() == ExtraPlanets_Items.iodideSalt;
 			case 2:
-				return itemstack == new ItemStack(Items.bucket);
+				return itemstack == new ItemStack(Items.BUCKET);
 			default:
 				return false;
 			}

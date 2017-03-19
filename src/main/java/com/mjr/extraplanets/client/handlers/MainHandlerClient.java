@@ -57,8 +57,8 @@ public class MainHandlerClient {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
 		final EntityPlayerSP player = minecraft.thePlayer;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
-		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen)
-				&& OxygenUtil.noAtmosphericCombustion(player.worldObj.provider) && !playerBaseClient.isSpectator()) {
+		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.worldObj.provider)
+				&& !playerBaseClient.isSpectator()) {
 			if ((player.worldObj.provider instanceof CustomWorldProviderSpace)) {
 				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.worldObj.provider;
 
@@ -67,14 +67,13 @@ public class MainHandlerClient {
 					OverlayPressure.renderPressureIndicator(pressureLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 				}
 				if (Config.radiation) {
-					EPPlayerStatsClient stats = null;
+					IStatsClientCapability stats = null;
+
 					if (player != null) {
-						stats = EPPlayerStatsClient.get(playerBaseClient);
+						stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
 					}
-					if (stats.radiationLevel != null) {
-						int radiationLevel = (int) Math.floor(stats.radiationLevel);
-						OverlaySolarRadiation.renderSolarRadiationIndicator(radiationLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
-					}
+					int radiationLevel = (int) Math.floor(stats.getRadiationLevel());
+					OverlaySolarRadiation.renderSolarRadiationIndicator(radiationLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 				}
 			}
 		}

@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -48,22 +49,22 @@ public class ItemAppleDiamond extends ItemFood
 	{
 		if (!p_77849_2_.isRemote)
 		{
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.regeneration.id, 600, 2));
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.resistance.id, 6000, 1));
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 6000, 0));
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.nightVision.id, 1200, 0));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 600, 2));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 1));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 0));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 1200, 0));
 		}
 
 		if (p_77849_1_.getItemDamage() > 0)
 		{
 			if (!p_77849_2_.isRemote)
 			{
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.regeneration.id, 1200, 3));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.resistance.id, 6000, 3));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 6000, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.nightVision.id, 6000, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.invisibility.id, 6000, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 2400, 1));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 1200, 3));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 3));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 0));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 6000, 0));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, 6000, 0));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.SPEED, 2400, 1));
 			}
 		}
 		else

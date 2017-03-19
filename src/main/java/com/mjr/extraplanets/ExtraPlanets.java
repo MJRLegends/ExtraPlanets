@@ -243,7 +243,7 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
-		ExtraPlanets_Moons.init();
+		//ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
 
 		// Initialization/Registering Methods For Entities

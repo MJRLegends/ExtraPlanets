@@ -17,7 +17,7 @@ public class ItemBasicItemBucket extends ItemBucket {
 		super(block);
 		setMaxStackSize(1);
 		setUnlocalizedName(name);
-		setContainerItem(Items.bucket);
+		setContainerItem(Items.BUCKET);
 	}
 
 	@SideOnly(Side.CLIENT)

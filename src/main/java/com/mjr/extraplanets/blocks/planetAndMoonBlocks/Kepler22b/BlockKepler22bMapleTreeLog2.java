@@ -6,7 +6,7 @@ import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -19,8 +19,8 @@ import com.google.common.base.Predicate;
 
 public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	public static enum EnumType implements IStringSerializable {
-		MAPLE_GREEN(0, "maple_green_log", MapColor.blueColor), 
-		MAPLE_BROWN(1, "maple_brown_log", MapColor.redColor);
+		MAPLE_GREEN(0, "maple_green_log", MapColor.GREEN), 
+		MAPLE_BROWN(1, "maple_brown_log", MapColor.RED);
 
 		private static final BlockKepler22bMapleTreeLog2.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeLog2.EnumType[values().length];
 		private final int meta;
@@ -164,8 +164,8 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 		return i;
 	}
 
-	protected BlockState createBlockState() {
-		return new BlockState(this, new IProperty[] { VARIANT, LOG_AXIS });
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[] { VARIANT, LOG_AXIS });
 	}
 
 	protected ItemStack createStackedBlock(IBlockState state) {

@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import com.mjr.extraplanets.client.handlers.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.client.handlers.IStatsClientCapability;
+
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
@@ -20,9 +23,6 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.client.handlers.EPPlayerStatsClient;
-import com.mjr.extraplanets.handlers.EPPlayerStats;
 
 @SuppressWarnings("rawtypes")
 public class PacketSimpleEP extends PacketBase implements Packet {
@@ -105,16 +105,17 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	@Override
 	public void handleClientSide(EntityPlayer player) {
 		EntityPlayerSP playerBaseClient = null;
-		EPPlayerStatsClient stats = null;
+        IStatsClientCapability stats = null;
 
-		if (player instanceof EntityPlayerSP) {
-			playerBaseClient = (EntityPlayerSP) player;
-			stats = EPPlayerStatsClient.get(playerBaseClient);
-		}
+        if (player instanceof EntityPlayerSP)
+        {
+            playerBaseClient = (EntityPlayerSP) player;
+            stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
+        }
 
 		switch (this.type) {
 		case C_UPDATE_SOLAR_RADIATION_LEVEL:
-			stats.radiationLevel = (Double) this.data.get(0);
+			stats.setRadiationLevel((Integer) this.data.get(0));
 			break;
 		default:
 			break;
@@ -123,19 +124,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 	@Override
 	public void handleServerSide(EntityPlayer player) {
-		final EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
-
-		if (playerBase == null) {
-			return;
-		}
-
-		@SuppressWarnings("unused")
-		final EPPlayerStats stats = EPPlayerStats.get(playerBase);
-
-		switch (this.type) {
-		default:
-			break;
-		}
+		
 	}
 
 	@Override

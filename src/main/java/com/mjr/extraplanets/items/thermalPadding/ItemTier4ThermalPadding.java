@@ -2,10 +2,9 @@ package com.mjr.extraplanets.items.thermalPadding;
 
 import java.util.List;
 
-import com.mjr.extraplanets.ExtraPlanets;
-
 import micdoodle8.mods.galacticraft.api.item.IItemThermal;
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsHandler;
+import micdoodle8.mods.galacticraft.core.entities.player.IStatsCapability;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,9 +12,14 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier4ThermalPadding  extends Item implements IItemThermal
 {
@@ -84,21 +88,21 @@ public class ItemTier4ThermalPadding  extends Item implements IItemThermal
     }
     
     @Override
-    public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player)
+    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand)
     {
         if (player instanceof EntityPlayerMP)
         {
-            GCPlayerStats stats = GCPlayerStats.get((EntityPlayerMP) player);
-            ItemStack gear = stats.extendedInventory.getStackInSlot(6);
-            ItemStack gear1 = stats.extendedInventory.getStackInSlot(7);
-            ItemStack gear2 = stats.extendedInventory.getStackInSlot(8);
-            ItemStack gear3 = stats.extendedInventory.getStackInSlot(9);
+            IStatsCapability stats = player.getCapability(CapabilityStatsHandler.GC_STATS_CAPABILITY, null);
+            ItemStack gear = stats.getExtendedInventory().getStackInSlot(6);
+            ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(7);
+            ItemStack gear2 = stats.getExtendedInventory().getStackInSlot(8);
+            ItemStack gear3 = stats.getExtendedInventory().getStackInSlot(9);
 
             if (itemStack.getItemDamage() == 0)
             {
                 if (gear == null)
                 {
-                    stats.extendedInventory.setInventorySlotContents(6, itemStack.copy());
+                    stats.getExtendedInventory().setInventorySlotContents(6, itemStack.copy());
                     itemStack.stackSize = 0;
                 }
             }
@@ -106,7 +110,7 @@ public class ItemTier4ThermalPadding  extends Item implements IItemThermal
             {
                 if (gear1 == null)
                 {
-                    stats.extendedInventory.setInventorySlotContents(7, itemStack.copy());
+                    stats.getExtendedInventory().setInventorySlotContents(7, itemStack.copy());
                     itemStack.stackSize = 0;
                 }
             }
@@ -114,7 +118,7 @@ public class ItemTier4ThermalPadding  extends Item implements IItemThermal
             {
                 if (gear2 == null)
                 {
-                    stats.extendedInventory.setInventorySlotContents(8, itemStack.copy());
+                    stats.getExtendedInventory().setInventorySlotContents(8, itemStack.copy());
                     itemStack.stackSize = 0;
                 }
             }
@@ -122,11 +126,11 @@ public class ItemTier4ThermalPadding  extends Item implements IItemThermal
             {
                 if (gear3 == null)
                 {
-                    stats.extendedInventory.setInventorySlotContents(9, itemStack.copy());
+                    stats.getExtendedInventory().setInventorySlotContents(9, itemStack.copy());
                     itemStack.stackSize = 0;
                 }
             }
         }
-        return itemStack;
+        return new ActionResult<>(EnumActionResult.SUCCESS, itemStack);
     }
 }

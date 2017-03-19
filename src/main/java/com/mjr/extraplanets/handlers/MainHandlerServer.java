@@ -5,15 +5,14 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
+import micdoodle8.mods.galacticraft.core.entities.player.IStatsCapability;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -32,7 +31,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
-import com.mjr.extraplanets.client.handlers.EPPlayerStatsClient;
+import com.mjr.extraplanets.client.handlers.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.client.handlers.IStatsClientCapability;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
@@ -70,8 +70,12 @@ public class MainHandlerServer {
 	public void onEntityDealth(LivingDeathEvent event) {
 		if (event.getEntity() instanceof EntityPlayerMP) {
 			final EntityLivingBase entityLiving = event.getEntityLiving();
-			final EPPlayerStats EPPlayer = EPPlayerStats.get((EntityPlayerMP) entityLiving);
-			EPPlayer.radiationLevel = 0;
+			IStatsClientCapability stats = null;
+
+			if (entityLiving != null) {
+				stats = entityLiving.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
+			}
+			stats.setRadiationLevel(0);
 		}
 	}
 
@@ -87,8 +91,8 @@ public class MainHandlerServer {
 				addZ = -addZ;
 			int lightingSpawnChance = rand.nextInt(50);
 			if (lightingSpawnChance == 10) {
-				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX, event.player.worldObj.getHeight(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(),
-						event.player.posZ + addZ));
+//				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX, event.player.worldObj.getHeight(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(),
+//						event.player.posZ + addZ));
 			}
 		}
 	}
@@ -119,27 +123,6 @@ public class MainHandlerServer {
 	}
 
 	@SubscribeEvent
-	public void onEntityConstructing(EntityEvent.EntityConstructing event) {
-		if (event.entity instanceof EntityPlayerMP && EPPlayerStats.get((EntityPlayerMP) event.getEntity()) == null) {
-			EPPlayerStats.register((EntityPlayerMP) event.getEntity());
-		}
-		if (FMLCommonHandler.instance().getEffectiveSide().isClient()) {
-			this.onEntityConstructingClient(event);
-		}
-	}
-
-	@SideOnly(Side.CLIENT)
-	public void onEntityConstructingClient(EntityEvent.EntityConstructing event) {
-		if (event.getEntity() instanceof EntityPlayerSP) {
-			if (EPPlayerStatsClient.get((EntityPlayerSP) event.getEntity()) == null) {
-				EPPlayerStatsClient.register((EntityPlayerSP) event.getEntity());
-			}
-
-			Minecraft.getMinecraft().gameSettings.sendSettingsToServer();
-		}
-	}
-
-	@SubscribeEvent
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.getEntityLiving();
 		if (entityLiving instanceof EntityPlayerMP) {
@@ -164,10 +147,10 @@ public class MainHandlerServer {
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
 
-		ItemStack helmet = playerMP.getCurrentArmor(0);
-		ItemStack chest = playerMP.getCurrentArmor(1);
-		ItemStack leggins = playerMP.getCurrentArmor(2);
-		ItemStack boots = playerMP.getCurrentArmor(3);
+		ItemStack helmet = playerMP.inventory.armorInventory[0];
+		ItemStack chest = playerMP.inventory.armorInventory[1];
+		ItemStack leggins = playerMP.inventory.armorInventory[2];
+		ItemStack boots = playerMP.inventory.armorInventory[3];
 
 		boolean doDamage = false;
 
@@ -200,22 +183,22 @@ public class MainHandlerServer {
 		boolean doArmorCheck = false;
 		double damageModifer = 0;
 		int radiationLevel = provider.getSolarRadiationLevel();
-		if (playerMP.getCurrentArmor(0) == null || playerMP.getCurrentArmor(1) == null || playerMP.getCurrentArmor(2) == null || playerMP.getCurrentArmor(3) == null) {
+		if (playerMP.inventory.armorInventory[0] == null || playerMP.inventory.armorInventory[1] == null || playerMP.inventory.armorInventory[2] == null || playerMP.inventory.armorInventory[3] == null) {
 			damageModifer = 0.2;
 			doDamage = true;
-		} else if (!(playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(1).getItem() instanceof IRadiationSuit) && !(playerMP.getCurrentArmor(2).getItem() instanceof IRadiationSuit)
-				&& !(playerMP.getCurrentArmor(3).getItem() instanceof IRadiationSuit)) {
+		} else if (!(playerMP.inventory.armorInventory[0].getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory[1].getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory[2].getItem() instanceof IRadiationSuit)
+				&& !(playerMP.inventory.armorInventory[3].getItem() instanceof IRadiationSuit)) {
 			damageModifer = 0.2;
 			doDamage = true;
-		} else if (playerMP.getCurrentArmor(0).getItem() instanceof IRadiationSuit) {
+		} else if (playerMP.inventory.armorInventory[0].getItem() instanceof IRadiationSuit) {
 			doArmorCheck = true;
 			doDamage = false;
 		}
 		if (doArmorCheck) {
-			int helmetTier = ((IRadiationSuit) playerMP.getCurrentArmor(0).getItem()).getArmorTier();
-			int chestTier = ((IRadiationSuit) playerMP.getCurrentArmor(1).getItem()).getArmorTier();
-			int legginsTier = ((IRadiationSuit) playerMP.getCurrentArmor(2).getItem()).getArmorTier();
-			int bootsTier = ((IRadiationSuit) playerMP.getCurrentArmor(3).getItem()).getArmorTier();
+			int helmetTier = ((IRadiationSuit) playerMP.inventory.armorInventory[0].getItem()).getArmorTier();
+			int chestTier = ((IRadiationSuit) playerMP.inventory.armorInventory[1].getItem()).getArmorTier();
+			int legginsTier = ((IRadiationSuit) playerMP.inventory.armorInventory[2].getItem()).getArmorTier();
+			int bootsTier = ((IRadiationSuit) playerMP.inventory.armorInventory[3].getItem()).getArmorTier();
 
 			int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
 			double damageToTake = 0.005 * tierValue;
@@ -223,13 +206,16 @@ public class MainHandlerServer {
 			doDamage = true;
 		}
 		if (doDamage) {
-			final EPPlayerStats EPPlayer = EPPlayerStats.get(playerMP);
-			if (EPPlayer.radiationLevel >= 100)
+			IStatsClientCapability stats = null;
+			if (playerMP != null) {
+				stats = playerMP.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
+			}
+			if (stats.getRadiationLevel() >= 100)
 				playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
-			else if (EPPlayer.radiationLevel >= 0)
-				EPPlayer.radiationLevel = EPPlayer.radiationLevel + (damageModifer * (radiationLevel / 10) / 6);
+			else if (stats.getRadiationLevel() >= 0)
+				stats.setRadiationLevel(stats.getRadiationLevel() + (damageModifer * (radiationLevel / 10) / 6));
 			else
-				EPPlayer.radiationLevel = 0;
+				stats.setRadiationLevel(0);
 		}
 	}
 
@@ -237,19 +223,21 @@ public class MainHandlerServer {
 		int tick = player.ticksExisted - 1;
 
 		// This will speed things up a little
-		final EPPlayerStats GCPlayer = EPPlayerStats.get(player);
 		final boolean isInGCDimension = player.worldObj.provider instanceof IGalacticraftWorldProvider;
-
+		IStatsClientCapability stats = null;
+		if (player != null) {
+			stats = player.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
+		}
 		if (isInGCDimension && Config.radiation) {
 			if (tick % 30 == 0) {
-				this.sendSolarRadiationPacket(player, GCPlayer);
+				this.sendSolarRadiationPacket(player, stats);
 			}
 
 		}
 	}
 
-	protected void sendSolarRadiationPacket(EntityPlayerMP player, EPPlayerStats playerStats) {
-		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.worldObj.provider.getDimensionType().getId(), new Object[] { playerStats.radiationLevel }), player);
+	protected void sendSolarRadiationPacket(EntityPlayerMP player, IStatsClientCapability stats) {
+		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.worldObj.provider.getDimensionType().getId(), new Object[] { stats.getRadiationLevel()}), player);
 	}
 
 }

@@ -72,7 +72,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 									if (amount > 1) {
 										this.oilTank.fill(new FluidStack(GCFluids.fluidOil, (amount - 1) * FluidContainerRegistry.BUCKET_VOLUME), true);
 									}
-									this.containingItems[1] = new ItemStack(Items.bucket, amount);
+									this.containingItems[1] = new ItemStack(Items.BUCKET, amount);
 								} else {
 									this.containingItems[1].stackSize--;
 
@@ -162,7 +162,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public void writeToNBT(NBTTagCompound nbt) {
+	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt);
@@ -174,6 +174,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 		if (this.fuelTank.getFluid() != null) {
 			nbt.setTag("fuelTank", this.fuelTank.writeToNBT(new NBTTagCompound()));
 		}
+		return nbt;
 	}
 
 	@Override

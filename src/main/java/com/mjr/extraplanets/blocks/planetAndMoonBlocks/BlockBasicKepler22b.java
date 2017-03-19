@@ -12,7 +12,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -20,10 +20,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -34,25 +34,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus.EnumBlockBasic;
 
 public class BlockBasicKepler22b extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeKepler22b", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		DIRT(0, "kepler22b_dirt"), 
-		STONE(1, "kepler22b_stone"), 
-		ORE_IRON(2, "kepler22b_ore_iron"), 
-		ORE_TIN(3, "kepler22b_ore_tin"), 
-		ORE_COPPER(4, "kepler22b_ore_copper"), 
-		ORE_DENSE_COAL(5, "kepler22b_ore_dense_coal"), 
-		ORE_BLUE_DIAMOND(6, "kepler22b_ore_blue_diamond"), 
-		ORE_RED_DIAMOND(7, "kepler22b_ore_red_diamond"), 
-		ORE_PURPLE_DIAMOND(8, "kepler22b_ore_purple_diamond"), 
-		ORE_YELLOW_DIAMOND(9, "kepler22b_ore_yellow_diamond"), 
-		ORE_GREEN_DIAMOND(10, "kepler22b_ore_green_diamond"), 
-		STONEBRICKS(11, "kepler22b_stonebricks"), 
-		COBBLESTONE(12, "kepler22b_cobblestone");
+		DIRT(0, "kepler22b_dirt"), STONE(1, "kepler22b_stone"), ORE_IRON(2, "kepler22b_ore_iron"), ORE_TIN(3, "kepler22b_ore_tin"), ORE_COPPER(4, "kepler22b_ore_copper"), ORE_DENSE_COAL(5, "kepler22b_ore_dense_coal"), ORE_BLUE_DIAMOND(6,
+				"kepler22b_ore_blue_diamond"), ORE_RED_DIAMOND(7, "kepler22b_ore_red_diamond"), ORE_PURPLE_DIAMOND(8, "kepler22b_ore_purple_diamond"), ORE_YELLOW_DIAMOND(9, "kepler22b_ore_yellow_diamond"), ORE_GREEN_DIAMOND(10,
+				"kepler22b_ore_green_diamond"), STONEBRICKS(11, "kepler22b_stonebricks"), COBBLESTONE(12, "kepler22b_cobblestone");
 
 		private final int meta;
 		private final String name;
@@ -77,31 +66,30 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	public BlockBasicKepler22b(String assetName) {
-		super(Material.rock);
+		super(Material.ROCK);
 		this.setUnlocalizedName(assetName);
-        this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@Override
 	public MapColor getMapColor(IBlockState state) {
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT) {
-			return MapColor.dirtColor;
+			return MapColor.DIRT;
 		}
 
-		return MapColor.redColor;
+		return MapColor.RED;
 	}
 
 	@Override
-    public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
-    {
-    	IBlockState state = world.getBlockState(pos);
-		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
-        	return 6.0F;
-        return super.getExplosionResistance(world, pos, exploder, explosion);
-    }
+	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
+		IBlockState state = world.getBlockState(pos);
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
+			return 6.0F;
+		return super.getExplosionResistance(world, pos, exploder, explosion);
+	}
 
 	@Override
-	public float getBlockHardness(World worldIn, BlockPos pos) {
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
 		IBlockState state = worldIn.getBlockState(pos);
 		return this.blockHardness;
 	}
@@ -149,12 +137,11 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		}
 	}
 
-    @Override
-    public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing side, IPlantable plant)
-    {
-        Block block = plant.getPlant(world, pos).getBlock();
-        return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
-    }
+	@Override
+	public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction, IPlantable plantable) {
+		Block block = plantable.getPlant(world, pos).getBlock();
+		return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
+	}
 
 	@Override
 	public int requiredLiquidBlocksNearby() {
@@ -162,29 +149,26 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	public boolean isPlantable(IBlockState arg0)  {
+	public boolean isPlantable(IBlockState arg0) {
 		return false;
 	}
 
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
-		IBlockState state = world.getBlockState(pos);
-		return state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT && !world.getBlockState(pos.up()).getBlock().isFullCube();
+		return false;
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		IBlockState state = world.getBlockState(pos);
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
 		int metadata = state.getBlock().getMetaFromState(state);
-		return super.getPickBlock(target, world, pos, player);
+		return super.getPickBlock(state, target, world, pos, player);
 	}
 
 	@Override
-	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
-		if (target != Blocks.stone) {
+	    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+		if (target != Blocks.STONE) {
 			return false;
 		}
-		IBlockState state = world.getBlockState(pos);
 		return (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE);
 	}
 
@@ -204,8 +188,8 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	protected BlockState createBlockState() {
-		return new BlockState(this, BASIC_TYPE);
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, BASIC_TYPE);
 	}
 
 	@Override

@@ -111,9 +111,9 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 										boolean valid = true;
 
 										for (int y = this.getPos().getY() + 3; y < 256; y++) {
-											Block block = this.worldObj.getBlockState(new BlockPos(this.getPos().getX() + x, y, this.getPos().getZ() + z)).getBlock();
+											IBlockState block = this.worldObj.getBlockState(new BlockPos(this.getPos().getX() + x, y, this.getPos().getZ() + z));
 
-											if (block.isOpaqueCube()) {
+											if (block.getBlock().isOpaqueCube(block)) {
 												valid = false;
 												break;
 											}
@@ -129,9 +129,9 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 									BlockVec3 blockVec = new BlockVec3(this).translate(x, 3, z);
 									for (double d = 0.0D; d < distance; d++) {
 										BlockVec3 blockAt = blockVec.clone().translate((int) (d * sinA), (int) (d * cosA), 0);
-										Block block = blockAt.getBlock(this.worldObj);
+										IBlockState state = blockAt.getBlockState(this.worldObj);
 
-										if (block.isOpaqueCube()) {
+										if (state.getBlock().isOpaqueCube(state)) {
 											valid = false;
 											break;
 										}
@@ -215,8 +215,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public boolean onActivated(EntityPlayer entityPlayer) {
-		return this.getBlockType().onBlockActivated(this.worldObj, this.getPos(), this.worldObj.getBlockState(getPos()), entityPlayer, EnumFacing.DOWN, this.getPos().getX(),
-				this.getPos().getY(), this.getPos().getZ());
+		return false;
 	}
 
 	// @Override
@@ -258,8 +257,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 					if (stateAt.getBlock() == GCBlocks.fakeBlock) {
 						BlockMulti.EnumBlockMultiType type = (BlockMulti.EnumBlockMultiType) stateAt.getValue(BlockMulti.MULTI_TYPE);
-						if ((type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_0 || type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_1)
-								&& ((x == 0 && z == 0) || (stateBelow.getBlock().isAir(this.worldObj, pos.down())))) {
+						if ((type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_0 || type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_1) && ((x == 0 && z == 0) || (stateBelow.getBlock().isAir(this.worldObj.getBlockState(pos.down()), this.worldObj, pos.down())))) {
 							if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 								FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, ExtraPlanets_Machines.solarPanel.getDefaultState());
 							}
@@ -299,7 +297,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	}
 
 	@Override
-	public void writeToNBT(NBTTagCompound nbt) {
+	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setFloat("maxEnergy", this.getMaxEnergyStoredGC());
 		nbt.setFloat("currentAngle", this.currentAngle);
@@ -319,7 +317,8 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		}
 
 		nbt.setTag("Items", list);
-	}
+        return nbt;
+    }
 
 	/*
 	 * @Override public float getRequest(EnumFacing direction) { return 0; }
@@ -344,11 +343,12 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		return getFront();
 	}
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public AxisAlignedBB getRenderBoundingBox() {
-		return AxisAlignedBB.fromBounds(getPos().getX() - 1, getPos().getY(), getPos().getZ() - 1, getPos().getX() + 2, getPos().getY() + 4, getPos().getZ() + 2);
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public AxisAlignedBB getRenderBoundingBox()
+    {
+        return new AxisAlignedBB(getPos().getX() - 1, getPos().getY(), getPos().getZ() - 1, getPos().getX() + 2, getPos().getY() + 4, getPos().getZ() + 2);
+    }
 
 	@Override
 	public boolean hasCustomName() {
@@ -437,8 +437,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
-		return this.worldObj.getTileEntity(this.getPos()) == this
-				&& par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
+		return this.worldObj.getTileEntity(this.getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
 	}
 
 	@Override

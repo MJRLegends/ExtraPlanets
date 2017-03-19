@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -48,11 +49,11 @@ public class ItemAppleIron extends ItemFood
 	{
 		if (!p_77849_2_.isRemote)
 		{
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.regeneration.id, 250, 0));
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.resistance.id, 400, 0));
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 600, 0));
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.jump.id, 120, 1));
-			p_77849_3_.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 120, 1));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 250, 0));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 400, 0));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 600, 0));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 120, 1));
+			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.HASTE, 120, 1));
 
 		}
 
@@ -60,12 +61,12 @@ public class ItemAppleIron extends ItemFood
 		{
 			if (!p_77849_2_.isRemote)
 			{
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.regeneration.id, 350, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.resistance.id, 600, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 700, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 850, 1));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.jump.id, 240, 2));
-				p_77849_3_.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 300, 1));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 350, 0));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 600, 0));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 700, 0));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.SPEED, 850, 1));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 240, 2));
+				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.HASTE, 300, 1));
 			}
 		}
 		else

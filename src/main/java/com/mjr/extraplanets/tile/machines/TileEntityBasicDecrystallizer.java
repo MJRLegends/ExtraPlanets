@@ -10,6 +10,7 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
@@ -58,7 +59,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.containingItems[slot] != null) {
-			if (this.containingItems[slot].getItem() == Items.bucket && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
+			if (this.containingItems[slot].getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
 				tank.drain(1000, true);
 				this.containingItems[slot].setItem(ExtraPlanets_Items.salt_bucket);
 			} else
@@ -109,7 +110,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	}
 
 	@Override
-	public void writeToNBT(NBTTagCompound nbt) {
+	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt);
@@ -117,8 +118,9 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.outputTank.getFluid() != null) {
 			nbt.setTag("outputTank", this.outputTank.writeToNBT(new NBTTagCompound()));
 		}
+		return nbt;
 	}
-
+	
 	@Override
 	protected ItemStack[] getContainingItems() {
 		return this.containingItems;
@@ -150,7 +152,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			case 1:
 				return itemstack.getItem() == ExtraPlanets_Items.iodideSalt;
 			case 2:
-				return itemstack.getItem() == Items.bucket;
+				return itemstack.getItem() == Items.BUCKET;
 			default:
 				return false;
 			}
@@ -202,7 +204,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	}
 
 	@Override
-	public IChatComponent getDisplayName() {
+	public ITextComponent getDisplayName() {
 		return null;
 	}
 }

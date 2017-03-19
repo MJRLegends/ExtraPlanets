@@ -7,7 +7,7 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -24,7 +24,7 @@ public class BlockBasicKepler22bPlanks extends Block
 
     public BlockBasicKepler22bPlanks()
     {
-        super(Material.wood);
+        super(Material.WOOD);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockBasicKepler22bPlanks.EnumType.MAPLE_BLUE));
         this.setCreativeTab(ExtraPlanets.BlocksTab);
     }
@@ -74,19 +74,19 @@ public class BlockBasicKepler22bPlanks extends Block
         return ((BlockBasicKepler22bPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
     }
 
-    protected BlockState createBlockState()
+    protected BlockStateContainer createBlockState()
     {
-        return new BlockState(this, new IProperty[] {VARIANT});
+        return new BlockStateContainer(this, new IProperty[] {VARIANT});
     }
 
     public static enum EnumType implements IStringSerializable
     {
-    	MAPLE_BLUE(0, "maple_blue_plank", MapColor.blueColor),
-        MAPLE_RED(1, "maple_red_plank", MapColor.redColor),
-        MAPLE_PURPLE(2, "maple_purple_plank", MapColor.purpleColor),
-        MAPLE_YELLOW(3, "maple_yellow_plank", MapColor.yellowColor),
-        MAPLE_GREEN(4, "maple_green_plank", MapColor.greenColor),
-        MAPLE_BROWN(5, "maple_brown_plank", MapColor.brownColor);
+    	MAPLE_BLUE(0, "maple_blue_plank", MapColor.BLUE),
+        MAPLE_RED(1, "maple_red_plank", MapColor.RED),
+        MAPLE_PURPLE(2, "maple_purple_plank", MapColor.PURPLE),
+        MAPLE_YELLOW(3, "maple_yellow_plank", MapColor.YELLOW),
+        MAPLE_GREEN(4, "maple_green_plank", MapColor.GREEN),
+        MAPLE_BROWN(5, "maple_brown_plank", MapColor.BROWN);
 
         private static final BlockBasicKepler22bPlanks.EnumType[] META_LOOKUP = new BlockBasicKepler22bPlanks.EnumType[values().length];
         private final int meta;

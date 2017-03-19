@@ -7,7 +7,7 @@ import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,23 +17,21 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.google.common.base.Predicate;
-
 public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	public static final PropertyEnum<BlockKepler22bMapleTreeLeaves.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLeaves.EnumType> create("variant", BlockKepler22bMapleTreeLeaves.EnumType.class);
 
 	public static enum EnumType implements IStringSerializable {
-		MAPLE_BLUE(0, "maple_blue_leaf", MapColor.blueColor), MAPLE_RED(1, "maple_red_leaf", MapColor.redColor), MAPLE_PURPLE(2, "maple_purple_leaf", MapColor.purpleColor), MAPLE_YELLOW(3, "maple_yellow_leaf", MapColor.yellowColor), MAPLE_GREEN(4,
-				"maple_green_leaf", MapColor.greenColor), MAPLE_BROWN(5, "maple_brown_leaf", MapColor.brownColor);
+		MAPLE_BLUE(0, "maple_blue_leaf", MapColor.BLUE), MAPLE_RED(1, "maple_red_leaf", MapColor.RED), MAPLE_PURPLE(2, "maple_purple_leaf", MapColor.PURPLE), MAPLE_YELLOW(3, "maple_yellow_leaf", MapColor.YELLOW), MAPLE_GREEN(4,
+				"maple_green_leaf", MapColor.GREEN), MAPLE_BROWN(5, "maple_brown_leaf", MapColor.BROWN);
 
 		private static final BlockKepler22bMapleTreeLeaves.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeLeaves.EnumType[values().length];
 		private final int meta;
@@ -137,8 +135,8 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 		return i;
 	}
 
-	protected BlockState createBlockState() {
-		return new BlockState(this, new IProperty[] { VARIANT, CHECK_DECAY, DECAYABLE });
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[] { VARIANT, CHECK_DECAY, DECAYABLE });
 	}
 
 	/**
@@ -149,32 +147,24 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	}
 
 	@Override
-	public boolean isOpaqueCube() {
-		return Blocks.leaves.isOpaqueCube();
+    public boolean isOpaqueCube(IBlockState state){
+		return Blocks.LEAVES.isOpaqueCube(state);
 	}
 
 	@Override
-	public EnumWorldBlockLayer getBlockLayer() {
-		return Blocks.leaves.getBlockLayer();
+	public BlockRenderLayer getBlockLayer() {
+		return Blocks.LEAVES.getBlockLayer();
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public boolean shouldSideBeRendered(IBlockAccess world, BlockPos pos, EnumFacing side) {
-		return Blocks.leaves.shouldSideBeRendered(world, pos, side);
+    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side){
+    	return !this.leavesFancy && blockAccess.getBlockState(pos.offset(side)).getBlock() == this ? false : super.shouldSideBeRendered(blockState, blockAccess, pos, side);
 	}
 
 	@Override
 	public boolean isVisuallyOpaque() {
 		return false;
-	}
-
-	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
-		if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears) {
-			player.triggerAchievement(StatList.mineBlockStatArray[Block.getIdFromBlock(this)]);
-		} else {
-			super.harvestBlock(worldIn, player, pos, state, te);
-		}
 	}
 
 	@Override
