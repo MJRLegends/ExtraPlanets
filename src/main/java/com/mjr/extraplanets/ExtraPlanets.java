@@ -48,6 +48,7 @@ import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
 import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
@@ -237,7 +238,7 @@ public class ExtraPlanets {
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		// ExtraPlanets_Moons.init();
-		// ExtraPlanets_SpaceStations.init();
+		ExtraPlanets_SpaceStations.init();
 
 		// Initialization/Registering Methods For Entities
 		registerNonMobEntities();
