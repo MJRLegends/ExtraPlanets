@@ -3,6 +3,7 @@ package com.mjr.extraplanets.armor;
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
@@ -14,14 +15,14 @@ import com.mjr.extraplanets.api.IRadiationSuit;
 public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity {
 	public String name;
 
-	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
+	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
 		super(material, 0, placement);
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
 
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+    public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type){
 		if (stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitChest
 				|| stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
@@ -42,8 +43,8 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	public int gravityOverrideIfLow(EntityPlayer p) {
 		for(int i = 0; i < 4; i++)
-			if(p.getCurrentArmor(i) != null)
-				if (p.getCurrentArmor(i).getItem() == ExtraPlanets_Armor.tier2SpaceSuitGravityBoots)
+			if(p.inventory.armorInventory[i] != null)
+				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.tier2SpaceSuitGravityBoots)
 					return 55;
 		return 0;
 	}
@@ -51,8 +52,8 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	public int gravityOverrideIfHigh(EntityPlayer p) {
 		for(int i = 0; i < 4; i++)
-			if(p.getCurrentArmor(i) != null)
-				if (p.getCurrentArmor(i).getItem() == ExtraPlanets_Armor.tier2SpaceSuitGravityBoots)
+			if(p.inventory.armorInventory[i] != null)
+				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.tier2SpaceSuitGravityBoots)
 			return 75;
 		return 0;
 	}

@@ -8,11 +8,10 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -20,11 +19,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
@@ -64,9 +63,8 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	public AdvancedOxygenCompressor(boolean isActive, String assetName) {
-		super(Material.rock);
+		super(Material.ROCK);
 		this.setHardness(1.0F);
-		this.setStepSound(Block.soundTypeMetal);
 		this.setUnlocalizedName(assetName);
 	}
 
@@ -76,7 +74,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ){
 		int metadata = getMetaFromState(world.getBlockState(pos));
 		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
 
@@ -91,7 +89,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ){
 		entityPlayer.openGui(ExtraPlanets.instance, -1, world, pos.getX(), pos.getY(), pos.getZ());
 		return true;
 	}
@@ -141,12 +139,6 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = this.getDamageValue(world, pos);
-		return new ItemStack(this, 1, metadata);
-	}
-
-	@Override
 	public String getShiftDescription(int meta) {
 		switch (meta) {
 		case OXYGEN_COMPRESSOR_METADATA:
@@ -171,12 +163,12 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex() + ((EnumCompressorType) state.getValue(TYPE)).getMeta() * 4;
+		return state.getValue(FACING).getHorizontalIndex() + ((EnumCompressorType) state.getValue(TYPE)).getMeta() * 4;
 	}
 
 	@Override
-	protected BlockState createBlockState() {
-		return new BlockState(this, FACING, TYPE);
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, FACING, TYPE);
 	}
 
 	@Override

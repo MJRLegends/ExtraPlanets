@@ -16,7 +16,6 @@ import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
-import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -330,7 +329,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	}
 
 	public EnumFacing getFront() {
-		return ((EnumFacing) this.worldObj.getBlockState(getPos()).getValue(BlockSolar.FACING));
+		return (this.worldObj.getBlockState(getPos()).getValue(BlockSolar.FACING));
 	}
 
 	@Override

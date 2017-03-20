@@ -4,8 +4,6 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
-import net.minecraft.world.biome.BiomeGenBase;
-
 import com.mjr.extraplanets.Config;
 
 public class GanymedeBiomes extends BiomeGenBase {

@@ -47,6 +47,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 			return this.field_181071_k;
 		}
 
+		@Override
 		public String toString() {
 			return this.name;
 		}
@@ -59,6 +60,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 			return META_LOOKUP[meta];
 		}
 
+		@Override
 		public String getName() {
 			return this.name;
 		}
@@ -79,6 +81,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 			return type.getMetadata() < 4;
 		}
 
+		@Override
 		public boolean apply(Object p_apply_1_) {
 			return this.apply((BlockKepler22bMapleTreeLog2.EnumType) p_apply_1_);
 		}
@@ -91,10 +94,11 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	/**
 	 * Get the MapColor for this Block and the given BlockState
 	 */
+	@Override
 	public MapColor getMapColor(IBlockState state) {
-		BlockKepler22bMapleTreeLog2.EnumType blockplanks$enumtype = (BlockKepler22bMapleTreeLog2.EnumType) state.getValue(VARIANT);
+		BlockKepler22bMapleTreeLog2.EnumType blockplanks$enumtype = state.getValue(VARIANT);
 
-		switch ((BlockLog.EnumAxis) state.getValue(LOG_AXIS)) {
+		switch (state.getValue(LOG_AXIS)) {
 		case X:
 		case Z:
 		case NONE:
@@ -113,6 +117,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	/**
 	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
 	 */
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN.getMetadata()));
@@ -122,6 +127,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	/**
 	 * Convert the given metadata into a BlockState for this Block
 	 */
+	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, BlockKepler22bMapleTreeLog2.EnumType.byMetadata((meta & 3) % 4));
 
@@ -145,12 +151,13 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	/**
 	 * Convert the BlockState into the correct metadata value
 	 */
+	@Override
 	@SuppressWarnings("incomplete-switch")
 	public int getMetaFromState(IBlockState state) {
 		int i = 0;
-		i = i | ((BlockKepler22bMapleTreeLog2.EnumType) state.getValue(VARIANT)).getMetadata();
+		i = i | state.getValue(VARIANT).getMetadata();
 
-		switch ((BlockLog.EnumAxis) state.getValue(LOG_AXIS)) {
+		switch (state.getValue(LOG_AXIS)) {
 		case X:
 			i |= 4;
 			break;
@@ -164,18 +171,21 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 		return i;
 	}
 
+	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { VARIANT, LOG_AXIS });
 	}
 
+	@Override
 	protected ItemStack createStackedBlock(IBlockState state) {
-		return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockKepler22bMapleTreeLog2.EnumType) state.getValue(VARIANT)).getMetadata());
+		return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(VARIANT).getMetadata());
 	}
 
 	/**
 	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
 	 */
+	@Override
 	public int damageDropped(IBlockState state) {
-		return ((BlockKepler22bMapleTreeLog2.EnumType) state.getValue(VARIANT)).getMetadata();
+		return state.getValue(VARIANT).getMetadata();
 	}
 }

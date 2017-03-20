@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicGanymede extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeGanymede", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeganymede", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "ganymede_surface"), SUB_SURFACE(1, "ganymede_sub_surface"), STONE(2, "ganymede_stone"), ORE_IRON(3, "ganymede_ore_iron"), ORE_TIN(4, "ganymede_ore_tin"), ORE_COPPER(5, "ganymede_ore_copper");

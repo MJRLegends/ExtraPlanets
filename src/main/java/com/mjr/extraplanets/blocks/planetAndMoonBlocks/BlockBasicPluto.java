@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
@@ -38,10 +37,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris.EnumBlockBasic;
 
 public class BlockBasicPluto extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypePluto", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypepluto", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "pluto_surface"), SUB_SURFACE(1, "pluto_sub_surface"), STONE(2, "pluto_stone"), ORE_IRON(3, "pluto_ore_iron"), ORE_TIN(4, "pluto_ore_tin"), ORE_COPPER(5, "pluto_ore_copper"), ORE_TUNGSTEN(6, "pluto_ore_tungsten"), TUNGSTEN_BLOCK(

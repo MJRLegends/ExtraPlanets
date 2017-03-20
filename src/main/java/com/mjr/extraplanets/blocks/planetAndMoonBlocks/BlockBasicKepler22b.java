@@ -36,7 +36,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BlockBasicKepler22b extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeKepler22b", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypekepler22b", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		DIRT(0, "kepler22b_dirt"), STONE(1, "kepler22b_stone"), ORE_IRON(2, "kepler22b_ore_iron"), ORE_TIN(3, "kepler22b_ore_tin"), ORE_COPPER(4, "kepler22b_ore_copper"), ORE_DENSE_COAL(5, "kepler22b_ore_dense_coal"), ORE_BLUE_DIAMOND(6,

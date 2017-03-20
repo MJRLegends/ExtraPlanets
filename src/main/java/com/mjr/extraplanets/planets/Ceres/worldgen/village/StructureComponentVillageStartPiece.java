@@ -1,8 +1,6 @@
 package com.mjr.extraplanets.planets.Ceres.worldgen.village;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.biome.WorldChunkManager;
-
 import java.util.ArrayList;
 import java.util.Random;
 

@@ -8,10 +8,9 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -20,10 +19,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.MathHelper;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,9 +37,8 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	public UltimateRefinery(String assetName) {
-		super(Material.rock);
+		super(Material.ROCK);
 		this.setHardness(1.0F);
-		this.setStepSound(Block.soundTypeMetal);
 		this.setUnlocalizedName(assetName);
 	}
 
@@ -50,7 +49,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand){
 		final TileEntity te = worldIn.getTileEntity(pos);
 
 		if (te instanceof TileEntityUltimateRefinery) {
@@ -74,13 +73,13 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 	}
 
 	@Override
-	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		entityPlayer.openGui(ExtraPlanets.instance, -1, world, pos.getX(), pos.getY(), pos.getZ());
 		return true;
 	}
 
 	@Override
-	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumFacing side, float hitX, float hitY, float hitZ) {
+    public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ){
 		int metadata = getMetaFromState(world.getBlockState(pos));
 		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
 
@@ -124,7 +123,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 								var9.getItemDamage()));
 
 						if (var9.hasTagCompound()) {
-							var14.getEntityItem().setTagCompound((NBTTagCompound) var9.getTagCompound().copy());
+							var14.getEntityItem().setTagCompound(var9.getTagCompound().copy());
 						}
 
 						final float var15 = 0.05F;
@@ -164,12 +163,12 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex();
+		return state.getValue(FACING).getHorizontalIndex();
 	}
 
 	@Override
-	protected BlockState createBlockState() {
-		return new BlockState(this, FACING);
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, FACING);
 	}
 
 	@Override

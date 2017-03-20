@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicOberon extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeOberon", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeoberon", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "oberon_surface"), SUB_SURFACE(1, "oberon_sub_surface"), STONE(2, "oberon_stone"), ORE_IRON(3, "oberon_ore_iron"), ORE_TIN(4, "oberon_ore_tin"), ORE_COPPER(5, "oberon_ore_copper");

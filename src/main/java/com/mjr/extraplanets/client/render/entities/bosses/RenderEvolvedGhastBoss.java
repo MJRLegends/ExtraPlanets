@@ -21,7 +21,8 @@ public class RenderEvolvedGhastBoss extends RenderLiving<EntityEvolvedGhastBoss>
         super(renderManager, new ModelEvolvedGhastBoss(), 0.5F);
     }
 
-    protected ResourceLocation getEntityTexture(EntityEvolvedGhastBoss entity)
+    @Override
+	protected ResourceLocation getEntityTexture(EntityEvolvedGhastBoss entity)
     {
         return entity.isAttacking() ? ghastShootingTextures : ghastTextures;
     }
@@ -30,7 +31,8 @@ public class RenderEvolvedGhastBoss extends RenderLiving<EntityEvolvedGhastBoss>
      * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
      * entityLiving, partialTickTime
      */
-    protected void preRenderCallback(EntityEvolvedGhastBoss entitylivingbaseIn, float partialTickTime)
+    @Override
+	protected void preRenderCallback(EntityEvolvedGhastBoss entitylivingbaseIn, float partialTickTime)
     {
         float f = 2.0F;
         float f1 = (8.0F + f) / 2.0F;

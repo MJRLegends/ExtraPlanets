@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.armor;
 
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -8,30 +10,30 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.mjr.extraplanets.Config;
 
 public class ExtraPlanets_Armor {
-	private static ArmorMaterial carbon_ArmorMaterial = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15);
-	private static ArmorMaterial palladium_ArmorMaterial = EnumHelper.addArmorMaterial("Palladium_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 13);
-	private static ArmorMaterial magnesium_ArmorMaterial = EnumHelper.addArmorMaterial("Magnesium_Armor", "Test", 30, new int[] { 3, 8, 6, 3 }, 11);
-	private static ArmorMaterial crystal_ArmorMaterial = EnumHelper.addArmorMaterial("Crystal_Armor", "Test", 40, new int[] { 3, 8, 6, 3 }, 10);
+	private static ArmorMaterial carbon_ArmorMaterial = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial palladium_ArmorMaterial = EnumHelper.addArmorMaterial("Palladium_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 13, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial magnesium_ArmorMaterial = EnumHelper.addArmorMaterial("Magnesium_Armor", "Test", 30, new int[] { 3, 8, 6, 3 }, 11, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial crystal_ArmorMaterial = EnumHelper.addArmorMaterial("Crystal_Armor", "Test", 40, new int[] { 3, 8, 6, 3 }, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
-	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", "Test", 15, new int[] { 3, 8, 6, 3 }, 13);
-	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", "Test", 20, new int[] { 3, 8, 6, 3 }, 13);
-	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", "Test", 45, new int[] { 3, 8, 6, 3 }, 9);
-	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Tungsten_Armor", "Test", 50, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial mercury_ArmorMaterial = EnumHelper.addArmorMaterial("Mercury_Armor", "Test", 15, new int[] { 3, 8, 6, 3 }, 13, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial uranium_ArmorMaterial = EnumHelper.addArmorMaterial("Uranium_Armor", "Test", 20, new int[] { 3, 8, 6, 3 }, 13, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial zinc_ArmorMaterial = EnumHelper.addArmorMaterial("Zinc_Armor", "Test", 45, new int[] { 3, 8, 6, 3 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial tungsten_ArmorMaterial = EnumHelper.addArmorMaterial("Tungsten_Armor", "Test", 50, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
-	private static ArmorMaterial redGem_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Gem_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial whiteGem_ArmorMaterial = EnumHelper.addArmorMaterial("White_Gem_Armor", "Test", 40, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial blueGem_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Gem_Armor", "Test", 45, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial redGem_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Gem_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial whiteGem_ArmorMaterial = EnumHelper.addArmorMaterial("White_Gem_Armor", "Test", 40, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial blueGem_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Gem_Armor", "Test", 45, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
-	private static ArmorMaterial blueDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial redDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial purpleDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Purple_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial yellowDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial greenDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Green_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial blueDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Blue_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial redDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Red_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial purpleDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Purple_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial yellowDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial greenDiamond_ArmorMaterial = EnumHelper.addArmorMaterial("Green_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
-	private static ArmorMaterial tier1SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier1_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial tier2SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier2_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial tier3SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier3_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial tier4SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier4_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial tier1SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier1_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial tier2SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier2_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial tier3SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier3_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+	private static ArmorMaterial tier4SpaceSuit_ArmorMaterial = EnumHelper.addArmorMaterial("Tier4_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static Item carbonHelmet;
 	public static Item carbonChest;
@@ -144,123 +146,123 @@ public class ExtraPlanets_Armor {
 
 	private static void initializeArmor() {
 		if (Config.mercuryItems && Config.mercury) {
-			mercuryHelmet = new MercuryArmor("mercury", mercury_ArmorMaterial, 0).setUnlocalizedName("mercuryHelmet");
-			mercuryChest = new MercuryArmor("mercury", mercury_ArmorMaterial, 1).setUnlocalizedName("mercuryChest");
-			mercuryLegings = new MercuryArmor("mercury", mercury_ArmorMaterial, 2).setUnlocalizedName("mercuryLegings");
-			mercuryBoots = new MercuryArmor("mercury", mercury_ArmorMaterial, 3).setUnlocalizedName("mercuryBoots");
+			mercuryHelmet = new MercuryArmor("mercury", mercury_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("mercuryHelmet");
+			mercuryChest = new MercuryArmor("mercury", mercury_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("mercuryChest");
+			mercuryLegings = new MercuryArmor("mercury", mercury_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("mercuryLegings");
+			mercuryBoots = new MercuryArmor("mercury", mercury_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("mercuryBoots");
 		}
 		if (Config.carbonItems && Config.mercury) {
-			carbonHelmet = new CarbonArmor("carbon", carbon_ArmorMaterial, 0).setUnlocalizedName("carbonHelmet");
-			carbonChest = new CarbonArmor("carbon", carbon_ArmorMaterial, 1).setUnlocalizedName("carbonChest");
-			carbonLegings = new CarbonArmor("carbon", carbon_ArmorMaterial, 2).setUnlocalizedName("carbonLegings");
-			carbonBoots = new CarbonArmor("carbon", carbon_ArmorMaterial, 3).setUnlocalizedName("carbonBoots");
+			carbonHelmet = new CarbonArmor("carbon", carbon_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("carbonHelmet");
+			carbonChest = new CarbonArmor("carbon", carbon_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("carbonChest");
+			carbonLegings = new CarbonArmor("carbon", carbon_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("carbonLegings");
+			carbonBoots = new CarbonArmor("carbon", carbon_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("carbonBoots");
 		}
 		if (Config.uraniumItems && Config.ceres) {
-			uraniumHelmet = new UraniumArmor("uranium", uranium_ArmorMaterial, 0).setUnlocalizedName("uraniumHelmet");
-			uraniumChest = new UraniumArmor("uranium", uranium_ArmorMaterial, 1).setUnlocalizedName("uraniumChest");
-			uraniumLegings = new UraniumArmor("uranium", uranium_ArmorMaterial, 2).setUnlocalizedName("uraniumLegings");
-			uraniumBoots = new UraniumArmor("uranium", uranium_ArmorMaterial, 3).setUnlocalizedName("uraniumBoots");
+			uraniumHelmet = new UraniumArmor("uranium", uranium_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("uraniumHelmet");
+			uraniumChest = new UraniumArmor("uranium", uranium_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("uraniumChest");
+			uraniumLegings = new UraniumArmor("uranium", uranium_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("uraniumLegings");
+			uraniumBoots = new UraniumArmor("uranium", uranium_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("uraniumBoots");
 		}
 		if (Config.jupiter) {
 			if (Config.palladiumItems) {
-				palladiumHelmet = new PalladiumArmor("palladium", palladium_ArmorMaterial, 0).setUnlocalizedName("palladiumHelmet");
-				palladiumChest = new PalladiumArmor("palladium", palladium_ArmorMaterial, 1).setUnlocalizedName("palladiumChest");
-				palladiumLegings = new PalladiumArmor("palladium", palladium_ArmorMaterial, 2).setUnlocalizedName("palladiumLegings");
-				palladiumBoots = new PalladiumArmor("palladium", palladium_ArmorMaterial, 3).setUnlocalizedName("palladiumBoots");
+				palladiumHelmet = new PalladiumArmor("palladium", palladium_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("palladiumHelmet");
+				palladiumChest = new PalladiumArmor("palladium", palladium_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("palladiumChest");
+				palladiumLegings = new PalladiumArmor("palladium", palladium_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("palladiumLegings");
+				palladiumBoots = new PalladiumArmor("palladium", palladium_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("palladiumBoots");
 			}
 			if (Config.redGemItems) {
-				redGemHelmet = new RedGemArmor("redGem", redGem_ArmorMaterial, 0).setUnlocalizedName("redGemHelmet");
-				redGemChest = new RedGemArmor("redGem", redGem_ArmorMaterial, 1).setUnlocalizedName("redGemChest");
-				redGemLegings = new RedGemArmor("redGem", redGem_ArmorMaterial, 2).setUnlocalizedName("redGemLegings");
-				redGemBoots = new RedGemArmor("redGem", redGem_ArmorMaterial, 3).setUnlocalizedName("redGemBoots");
+				redGemHelmet = new RedGemArmor("redGem", redGem_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("redGemHelmet");
+				redGemChest = new RedGemArmor("redGem", redGem_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("redGemChest");
+				redGemLegings = new RedGemArmor("redGem", redGem_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("redGemLegings");
+				redGemBoots = new RedGemArmor("redGem", redGem_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("redGemBoots");
 			}
 		}
 		if (Config.magnesiumItems && Config.saturn) {
-			magnesiumHelmet = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 0).setUnlocalizedName("magnesiumHelmet");
-			magnesiumChest = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 1).setUnlocalizedName("magnesiumChest");
-			magnesiumLegings = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 2).setUnlocalizedName("magnesiumLegings");
-			magnesiumBoots = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, 3).setUnlocalizedName("magnesiumBoots");
+			magnesiumHelmet = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("magnesiumHelmet");
+			magnesiumChest = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("magnesiumChest");
+			magnesiumLegings = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("magnesiumLegings");
+			magnesiumBoots = new MagnesiumArmor("magnesium", magnesium_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("magnesiumBoots");
 		}
 		if (Config.crystalItems && Config.uranus) {
-			crystalHelmet = new CrystalArmor("crystal", crystal_ArmorMaterial, 0).setUnlocalizedName("crystalHelmet");
-			crystalChest = new CrystalArmor("crystal", crystal_ArmorMaterial, 1).setUnlocalizedName("crystalChest");
-			crystalLegings = new CrystalArmor("crystal", crystal_ArmorMaterial, 2).setUnlocalizedName("crystalLegings");
-			crystalBoots = new CrystalArmor("crystal", crystal_ArmorMaterial, 3).setUnlocalizedName("crystalBoots");
+			crystalHelmet = new CrystalArmor("crystal", crystal_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("crystalHelmet");
+			crystalChest = new CrystalArmor("crystal", crystal_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("crystalChest");
+			crystalLegings = new CrystalArmor("crystal", crystal_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("crystalLegings");
+			crystalBoots = new CrystalArmor("crystal", crystal_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("crystalBoots");
 			if (Config.whiteGemItems) {
-				whiteGemHelmet = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 0).setUnlocalizedName("whiteGemHelmet");
-				whiteGemChest = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 1).setUnlocalizedName("whiteGemChest");
-				whiteGemLegings = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 2).setUnlocalizedName("whiteGemLegings");
-				whiteGemBoots = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, 3).setUnlocalizedName("whiteGemBoots");
+				whiteGemHelmet = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("whiteGemHelmet");
+				whiteGemChest = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("whiteGemChest");
+				whiteGemLegings = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("whiteGemLegings");
+				whiteGemBoots = new WhiteGemArmor("whiteGem", whiteGem_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("whiteGemBoots");
 			}
 		}
 		if (Config.zincItems && Config.neptune) {
-			zincHelmet = new ZincArmor("zinc", zinc_ArmorMaterial, 0).setUnlocalizedName("zincHelmet");
-			zincChest = new ZincArmor("zinc", zinc_ArmorMaterial, 1).setUnlocalizedName("zincChest");
-			zincLegings = new ZincArmor("zinc", zinc_ArmorMaterial, 2).setUnlocalizedName("zincLegings");
-			zincBoots = new ZincArmor("zinc", zinc_ArmorMaterial, 3).setUnlocalizedName("zincBoots");
+			zincHelmet = new ZincArmor("zinc", zinc_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("zincHelmet");
+			zincChest = new ZincArmor("zinc", zinc_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("zincChest");
+			zincLegings = new ZincArmor("zinc", zinc_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("zincLegings");
+			zincBoots = new ZincArmor("zinc", zinc_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("zincBoots");
 			if (Config.blueGemItems) {
-				blueGemHelmet = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 0).setUnlocalizedName("blueGemHelmet");
-				blueGemChest = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 1).setUnlocalizedName("blueGemChest");
-				blueGemLegings = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 2).setUnlocalizedName("blueGemLegings");
-				blueGemBoots = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, 3).setUnlocalizedName("blueGemBoots");
+				blueGemHelmet = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("blueGemHelmet");
+				blueGemChest = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("blueGemChest");
+				blueGemLegings = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("blueGemLegings");
+				blueGemBoots = new BlueGemArmor("blueGem", blueGem_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("blueGemBoots");
 			}
 		}
 		if (Config.tungstenItems && Config.pluto) {
-			tungstenHelmet = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 0).setUnlocalizedName("tungstenHelmet");
-			tungstenChest = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 1).setUnlocalizedName("tungstenChest");
-			tungstenLegings = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 2).setUnlocalizedName("tungstenLegings");
-			tungstenBoots = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 3).setUnlocalizedName("tungstenBoots");
+			tungstenHelmet = new TungstenArmor("tungsten", tungsten_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("tungstenHelmet");
+			tungstenChest = new TungstenArmor("tungsten", tungsten_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("tungstenChest");
+			tungstenLegings = new TungstenArmor("tungsten", tungsten_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("tungstenLegings");
+			tungstenBoots = new TungstenArmor("tungsten", tungsten_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tungstenBoots");
 		}
 		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
-			blueDiamondHelmet = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 0).setUnlocalizedName("blueDiamondHelmet");
-			blueDiamondChest = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 1).setUnlocalizedName("blueDiamondChest");
-			blueDiamondLegings = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 2).setUnlocalizedName("blueDiamondLegings");
-			blueDiamondBoots = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 3).setUnlocalizedName("blueDiamondBoots");
+			blueDiamondHelmet = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("blueDiamondHelmet");
+			blueDiamondChest = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("blueDiamondChest");
+			blueDiamondLegings = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("blueDiamondLegings");
+			blueDiamondBoots = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("blueDiamondBoots");
 
-			redDiamondHelmet = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 0).setUnlocalizedName("redDiamondHelmet");
-			redDiamondChest = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 1).setUnlocalizedName("redDiamondChest");
-			redDiamondLegings = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 2).setUnlocalizedName("redDiamondLegings");
-			redDiamondBoots = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, 3).setUnlocalizedName("redDiamondBoots");
+			redDiamondHelmet = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("redDiamondHelmet");
+			redDiamondChest = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("redDiamondChest");
+			redDiamondLegings = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("redDiamondLegings");
+			redDiamondBoots = new RedDiamondArmor("redDiamond", redDiamond_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("redDiamondBoots");
 
-			purpleDiamondHelmet = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 0).setUnlocalizedName("purpleDiamondHelmet");
-			purpleDiamondChest = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 1).setUnlocalizedName("purpleDiamondChest");
-			purpleDiamondLegings = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 2).setUnlocalizedName("purpleDiamondLegings");
-			purpleDiamondBoots = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, 3).setUnlocalizedName("purpleDiamondBoots");
+			purpleDiamondHelmet = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("purpleDiamondHelmet");
+			purpleDiamondChest = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("purpleDiamondChest");
+			purpleDiamondLegings = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("purpleDiamondLegings");
+			purpleDiamondBoots = new PurpleDiamondArmor("purpleDiamond", purpleDiamond_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("purpleDiamondBoots");
 
-			yellowDiamondHelmet = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 0).setUnlocalizedName("yellowDiamondHelmet");
-			yellowDiamondChest = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 1).setUnlocalizedName("yellowDiamondChest");
-			yellowDiamondLegings = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 2).setUnlocalizedName("yellowDiamondLegings");
-			yellowDiamondBoots = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, 3).setUnlocalizedName("yellowDiamondBoots");
+			yellowDiamondHelmet = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("yellowDiamondHelmet");
+			yellowDiamondChest = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("yellowDiamondChest");
+			yellowDiamondLegings = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("yellowDiamondLegings");
+			yellowDiamondBoots = new YellowDiamondArmor("yellowDiamond", yellowDiamond_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("yellowDiamondBoots");
 
-			greenDiamondHelmet = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 0).setUnlocalizedName("greenDiamondHelmet");
-			greenDiamondChest = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 1).setUnlocalizedName("greenDiamondChest");
-			greenDiamondLegings = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 2).setUnlocalizedName("greenDiamondLegings");
-			greenDiamondBoots = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 3).setUnlocalizedName("greenDiamondBoots");
+			greenDiamondHelmet = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("greenDiamondHelmet");
+			greenDiamondChest = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("greenDiamondChest");
+			greenDiamondLegings = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("greenDiamondLegings");
+			greenDiamondBoots = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("greenDiamondBoots");
 		}
 		if(Config.pressure || Config.radiation){
-			tier1SpaceSuitHelmet = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier1SpaceSuitHelmet");
-			tier1SpaceSuitChest = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier1SpaceSuitChest");
-			tier1SpaceSuitLegings = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier1SpaceSuitLegings");
-			tier1SpaceSuitBoots = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier1SpaceSuitBoots");
-			tier1SpaceSuitGravityBoots = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier1SpaceSuitGravityBoots");
+			tier1SpaceSuitHelmet = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier1SpaceSuitHelmet");
+			tier1SpaceSuitChest = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier1SpaceSuitChest");
+			tier1SpaceSuitLegings = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier1SpaceSuitLegings");
+			tier1SpaceSuitBoots = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier1SpaceSuitBoots");
+			tier1SpaceSuitGravityBoots = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier1SpaceSuitGravityBoots");
 	
-			tier2SpaceSuitHelmet = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier2SpaceSuitHelmet");
-			tier2SpaceSuitChest = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier2SpaceSuitChest");
-			tier2SpaceSuitLegings = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier2SpaceSuitLegings");
-			tier2SpaceSuitBoots = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier2SpaceSuitBoots");
-			tier2SpaceSuitGravityBoots = new Tier2SpaceSuitArmor("tier2SpaceSuit", tier2SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier2SpaceSuitGravityBoots");
+			tier2SpaceSuitHelmet = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier2SpaceSuitHelmet");
+			tier2SpaceSuitChest = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier2SpaceSuitChest");
+			tier2SpaceSuitLegings = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier2SpaceSuitLegings");
+			tier2SpaceSuitBoots = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier2SpaceSuitBoots");
+			tier2SpaceSuitGravityBoots = new Tier2SpaceSuitArmor("tier2SpaceSuit", tier2SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier2SpaceSuitGravityBoots");
 	
-			tier3SpaceSuitHelmet = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier3SpaceSuitHelmet");
-			tier3SpaceSuitChest = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier3SpaceSuitChest");
-			tier3SpaceSuitLegings = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier3SpaceSuitLegings");
-			tier3SpaceSuitBoots = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier3SpaceSuitBoots");
-			tier3SpaceSuitGravityBoots = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier3SpaceSuitGravityBoots");
+			tier3SpaceSuitHelmet = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier3SpaceSuitHelmet");
+			tier3SpaceSuitChest = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier3SpaceSuitChest");
+			tier3SpaceSuitLegings = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier3SpaceSuitLegings");
+			tier3SpaceSuitBoots = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier3SpaceSuitBoots");
+			tier3SpaceSuitGravityBoots = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier3SpaceSuitGravityBoots");
 	
-			tier4SpaceSuitHelmet = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier4SpaceSuitHelmet");
-			tier4SpaceSuitChest = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier4SpaceSuitChest");
-			tier4SpaceSuitLegings = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier4SpaceSuitLegings");
-			tier4SpaceSuitBoots = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier4SpaceSuitBoots");
-			tier4SpaceSuitGravityBoots = new Tier4SpaceSuitArmor("tier4SpaceSuit", tier4SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier4SpaceSuitGravityBoots");
+			tier4SpaceSuitHelmet = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier4SpaceSuitHelmet");
+			tier4SpaceSuitChest = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier4SpaceSuitChest");
+			tier4SpaceSuitLegings = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier4SpaceSuitLegings");
+			tier4SpaceSuitBoots = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier4SpaceSuitBoots");
+			tier4SpaceSuitGravityBoots = new Tier4SpaceSuitArmor("tier4SpaceSuit", tier4SpaceSuit_ArmorMaterial, EntityEquipmentSlot.FEET).setUnlocalizedName("tier4SpaceSuitGravityBoots");
 		}
 	}
 

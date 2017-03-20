@@ -72,7 +72,6 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockUranus;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleLeaf;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleLog;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleLog2;
-import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
@@ -370,7 +369,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(jupiterGravel, jupiterGravel.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerBlock(jupiterSpawner, ItemBlockGC.class, "jupiterSpawner");
+			//GameRegistry.registerBlock(jupiterSpawner, ItemBlockGC.class, "jupiterSpawner");
 			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName().substring(5));
 		}
 		if (Config.saturn) {
@@ -394,13 +393,13 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(plutoSpawner, ItemBlockGC.class, "plutoSpawner");
+			//GameRegistry.registerBlock(plutoSpawner, ItemBlockGC.class, "plutoSpawner");
 			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(plutoGravel, plutoGravel.getUnlocalizedName().substring(5));
 		}
 		if (Config.eris) {
 			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(erisSpawner, ItemBlockGC.class, "erisSpawner");
+			//GameRegistry.registerBlock(erisSpawner, ItemBlockGC.class, "erisSpawner");
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(erisGravel, erisGravel.getUnlocalizedName().substring(5));
 		}
@@ -791,7 +790,7 @@ public class ExtraPlanets_Blocks {
 	private static void registerTreeBlocks() {
 		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, kepler22bMapleLeaf.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, kepler22bPlanks.getUnlocalizedName().substring(5));
 	}

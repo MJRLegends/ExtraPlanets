@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicPhobos extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypePhobos", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypephobos", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "phobos_surface"), SUB_SURFACE(1, "phobos_sub_surface"), STONE(2, "phobos_stone"), ORE_IRON(3, "phobos_ore_iron"), ORE_TIN(4, "phobos_ore_tin"), ORE_COPPER(5, "phobos_ore_copper");

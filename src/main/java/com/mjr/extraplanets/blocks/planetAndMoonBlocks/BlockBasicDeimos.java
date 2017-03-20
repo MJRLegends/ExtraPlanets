@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicDeimos extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeDeimos", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypedeimos", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "deimos_surface"), SUB_SURFACE(1, "deimos_sub_surface"), STONE(2, "deimos_stone"), ORE_IRON(3, "deimos_ore_iron"), ORE_TIN(4, "deimos_ore_tin"), ORE_COPPER(5, "deimos_ore_copper");

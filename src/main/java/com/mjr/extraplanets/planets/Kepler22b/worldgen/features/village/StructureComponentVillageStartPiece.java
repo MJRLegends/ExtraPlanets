@@ -1,8 +1,6 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.features.village;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.biome.WorldChunkManager;
-
 import java.util.ArrayList;
 import java.util.Random;
 

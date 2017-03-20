@@ -56,7 +56,7 @@ public class ItemWafers extends Item {
 		if (player.worldObj.isRemote) {
 			for(int i = 0; i < names.length; i++)
 				if(itemStack.getMetadata() == i)
-					list.add(EnumColor.YELLOW + GCCoreUtil.translate("wafers."+ this.names[i] + ".desc"));
+					list.add(EnumColor.YELLOW + GCCoreUtil.translate("wafers."+ ItemWafers.names[i] + ".desc"));
 		}
 	}
 }

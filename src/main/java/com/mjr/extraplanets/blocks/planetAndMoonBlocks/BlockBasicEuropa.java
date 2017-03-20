@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicEuropa extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeEuropa", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeeuropa", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "europa_surface"), SUB_SURFACE(1, "europa_sub_surface"), STONE(2, "europa_stone"), ORE_IRON(3, "europa_ore_iron"), ORE_TIN(4, "europa_ore_tin"), ORE_COPPER(5, "europa_ore_copper");

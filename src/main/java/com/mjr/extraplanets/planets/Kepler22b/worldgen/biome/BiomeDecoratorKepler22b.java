@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.Biome;
 

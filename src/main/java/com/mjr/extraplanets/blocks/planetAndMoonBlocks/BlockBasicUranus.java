@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
@@ -38,10 +37,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris.EnumBlockBasic;
 
 public class BlockBasicUranus extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeUranus", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeuranus", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "uranus_surface"), SUB_SURFACE(1, "uranus_sub_surface"), STONE(2, "uranus_stone"), ORE_CRYISTAL(3, "uranus_ore_crystal"), CRYISTAL_BLOCK(4, "uranus_crystal_block"), STONEBRICKS(5, "uranus_stonebricks"), DUNGEON_BRICK(6,

@@ -21,9 +21,9 @@ public class EntityNuclearBombPrimed extends Entity {
 		this(worldIn);
 		this.setPosition(p_i1730_2_, p_i1730_4_, p_i1730_6_);
 		float f = (float) (Math.random() * Math.PI * 2.0D);
-		this.motionX = (double) (-((float) Math.sin((double) f)) * 0.02F);
+		this.motionX = -((float) Math.sin(f)) * 0.02F;
 		this.motionY = 0.20000000298023224D;
-		this.motionZ = (double) (-((float) Math.cos((double) f)) * 0.02F);
+		this.motionZ = -((float) Math.cos(f)) * 0.02F;
 		this.fuse = 80;
 		this.prevPosX = p_i1730_2_;
 		this.prevPosY = p_i1730_4_;
@@ -31,12 +31,14 @@ public class EntityNuclearBombPrimed extends Entity {
 		this.tntPlacedBy = p_i1730_8_;
 	}
 
+	@Override
 	protected void entityInit() {
 	}
 
 	/**
 	 * returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
 	 */
+	@Override
 	protected boolean canTriggerWalking() {
 		return false;
 	}
@@ -44,6 +46,7 @@ public class EntityNuclearBombPrimed extends Entity {
 	/**
 	 * Returns true if other Entities should be prevented from moving through this Entity.
 	 */
+	@Override
 	public boolean canBeCollidedWith() {
 		return !this.isDead;
 	}
@@ -51,6 +54,7 @@ public class EntityNuclearBombPrimed extends Entity {
 	/**
 	 * Called to update the entity's position/logic.
 	 */
+	@Override
 	public void onUpdate() {
 		this.prevPosX = this.posX;
 		this.prevPosY = this.posY;
@@ -81,12 +85,13 @@ public class EntityNuclearBombPrimed extends Entity {
 
 	private void explode() {
 		float f = 25.0F;
-		this.worldObj.createExplosion(this, this.posX, this.posY + (double) (this.height / 16.0F), this.posZ, f, true);
+		this.worldObj.createExplosion(this, this.posX, this.posY + this.height / 16.0F, this.posZ, f, true);
 	}
 
 	/**
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
+	@Override
 	protected void writeEntityToNBT(NBTTagCompound tagCompound) {
 		tagCompound.setByte("Fuse", (byte) this.fuse);
 	}
@@ -94,6 +99,7 @@ public class EntityNuclearBombPrimed extends Entity {
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
+	@Override
 	protected void readEntityFromNBT(NBTTagCompound tagCompund) {
 		this.fuse = tagCompund.getByte("Fuse");
 	}
@@ -105,6 +111,7 @@ public class EntityNuclearBombPrimed extends Entity {
 		return this.tntPlacedBy;
 	}
 
+	@Override
 	public float getEyeHeight() {
 		return 0.0F;
 	}

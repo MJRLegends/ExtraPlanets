@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.armor;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
@@ -10,13 +11,13 @@ import com.mjr.extraplanets.ExtraPlanets;
 public class GreenDiamondArmor extends ItemArmor{
 	public String name;
 
-	public GreenDiamondArmor(String name, ArmorMaterial material, int placement) {
+	public GreenDiamondArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
 		super(material, 0, placement);
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
+	    public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type){
 		if(stack.getItem() == ExtraPlanets_Armor.greenDiamondHelmet || stack.getItem() == ExtraPlanets_Armor.greenDiamondChest || stack.getItem() == ExtraPlanets_Armor.greenDiamondBoots){
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
 		}

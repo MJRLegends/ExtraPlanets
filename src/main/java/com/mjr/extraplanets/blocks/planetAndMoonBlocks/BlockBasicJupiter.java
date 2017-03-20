@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
@@ -38,10 +37,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris.EnumBlockBasic;
 
 public class BlockBasicJupiter extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeJupiter", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypejupiter", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "jupiter_surface"), SUB_SURFACE(1, "jupiter_sub_surface"), STONE(2, "jupiter_stone"), ORE_IRON(3, "jupiter_ore_iron"), ORE_TIN(4, "jupiter_ore_tin"), ORE_COPPER(5, "jupiter_ore_copper"), ORE_PALLADIUM(6, "jupiter_ore_palladium"), PALLADIUM_BLOCK(

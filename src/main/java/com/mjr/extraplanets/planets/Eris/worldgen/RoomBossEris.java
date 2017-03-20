@@ -6,7 +6,6 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonStart;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.Piece;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -14,7 +13,6 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 import java.util.Random;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 
 public class RoomBossEris extends RoomBoss
 {
