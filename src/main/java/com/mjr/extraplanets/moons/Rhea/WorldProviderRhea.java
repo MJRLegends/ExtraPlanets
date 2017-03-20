@@ -6,13 +6,17 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Rhea.worldgen.BiomeProviderRhea;
 import com.mjr.extraplanets.moons.Rhea.worldgen.ChunkProviderRhea;
-import com.mjr.extraplanets.moons.Rhea.worldgen.WorldChunkManagerRhea;
 
 public class WorldProviderRhea extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
@@ -48,13 +52,13 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderRhea.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerRhea.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderRhea.class;
 	}
 
 	@Override
@@ -163,7 +167,7 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 	}
 
 	@Override
-	public String getInternalNameSuffix() {
-		return "_rhea";
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.RHEA;
 	}
 }

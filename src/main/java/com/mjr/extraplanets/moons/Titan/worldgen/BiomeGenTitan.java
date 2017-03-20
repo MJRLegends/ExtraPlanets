@@ -1,13 +1,12 @@
 package com.mjr.extraplanets.moons.Titan.worldgen;
 
+import net.minecraft.world.biome.Biome.BiomeProperties;
+import net.minecraftforge.common.BiomeDictionary;
+
 public class BiomeGenTitan extends TitanBiomes {
 
-	public BiomeGenTitan(int par1)
-	{
-		super(par1);
-		this.setBiomeName("titan");
-		this.setColor(16711680);
-		this.setHeight(new Height(2.5F, 0.4F));
+	public BiomeGenTitan(BiomeProperties properties) {
+		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
-
 }

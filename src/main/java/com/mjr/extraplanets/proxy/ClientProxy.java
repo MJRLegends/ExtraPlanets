@@ -55,6 +55,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog2;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
@@ -62,6 +63,13 @@ import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeB
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedSnowmanBoss;
 import com.mjr.extraplanets.client.render.entities.projectiles.RenderSmallSnowBall;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier10Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier4Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier5Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier6Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier7Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier8Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.tile.TileEntitySolarPanelRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
@@ -75,6 +83,13 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
+import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
+import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemWafers;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier10Items;
@@ -197,7 +212,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs2", "maple_green_log", "maple_brown_log");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLeaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf", "maple_green_leaf", "maple_brown_leaf");
-			// ClientUtilities.addExtraPlanetsVariants("kepler22bMapleSaplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
+			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleSaplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
 		}
 
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
@@ -222,20 +237,20 @@ public class ClientProxy extends CommonProxy {
 		if (Config.neptune)
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSnowmanBoss.class, (RenderManager manager) -> new RenderEvolvedSnowmanBoss(manager));
 
-		// if (Config.mercury) TODO
-		// RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
-		// if (Config.jupiter)
-		// RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
-		// if (Config.saturn)
-		// RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
-		// if (Config.uranus)
-		// RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
-		// if (Config.neptune)
-		// RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, (RenderManager manager) -> new RenderTier8Rocket(manager));
-		// if (Config.pluto)
-		// RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
-		// if (Config.eris)
-		// RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
+		if (Config.mercury)
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
+		if (Config.jupiter)
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
+		if (Config.saturn)
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
+		if (Config.uranus)
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
+		if (Config.neptune)
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, (RenderManager manager) -> new RenderTier8Rocket(manager));
+		if (Config.pluto)
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
+		if (Config.eris)
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.SNOWBALL)));
 	}
 
@@ -358,11 +373,11 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.erisGravel);
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
-			// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bBlueGrass);
-			// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bRedGrass);
-			// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bPurpleGrass);
-			// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bYellowGrass);
-			// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bGrass);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bBlueGrass);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bRedGrass);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bPurpleGrass);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bYellowGrass);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bGrass);
 
 			for (BlockBasicKepler22b.EnumBlockBasic blockBasic : BlockBasicKepler22b.EnumBlockBasic.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bBlocks, blockBasic.getMeta(), blockBasic.getName());
@@ -381,9 +396,9 @@ public class ClientProxy extends CommonProxy {
 			for (BlockKepler22bMapleTreeLeaves.EnumType blockBasic : BlockKepler22bMapleTreeLeaves.EnumType.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleLeaf, blockBasic.getMetadata(), blockBasic.getName());
 			}
-			// for (BlockKepler22bMapleTreeSapling.EnumType blockBasic : BlockKepler22bMapleTreeSapling.EnumType.values()) {
-			// ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleSapling, blockBasic.getMetadata(), blockBasic.getName());
-			// } TODO
+			for (BlockKepler22bMapleTreeSapling.EnumType blockBasic : BlockKepler22bMapleTreeSapling.EnumType.values()) {
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleSapling, blockBasic.getMetadata(), blockBasic.getName());
+			}
 		}
 
 		// Moons
@@ -992,15 +1007,15 @@ public class ClientProxy extends CommonProxy {
 			}
 		});
 
-		 ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
-		 Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen_ice);
-		 ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
-		 ModelLoader.setCustomMeshDefinition(nitrogen_ice, (ItemStack stack) -> nitrogen_iceLocation);
-		 ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen_ice, new StateMapperBase() {
-		 @Override
-		 protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		 return nitrogen_iceLocation;
-		 }
-		 });
+		ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
+		Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen_ice);
+		ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
+		ModelLoader.setCustomMeshDefinition(nitrogen_ice, (ItemStack stack) -> nitrogen_iceLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen_ice, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return nitrogen_iceLocation;
+			}
+		});
 	}
 }

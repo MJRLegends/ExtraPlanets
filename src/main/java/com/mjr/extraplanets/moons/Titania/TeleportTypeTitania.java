@@ -4,6 +4,8 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
+import micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsHandler;
+import micdoodle8.mods.galacticraft.core.entities.player.IStatsCapability;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
@@ -16,38 +18,34 @@ public class TeleportTypeTitania implements ITeleportType {
 	}
 
 	@Override
-	public Vector3 getPlayerSpawnLocation(WorldServer world,
-			EntityPlayerMP player) {
+	public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player) {
 		if (player != null) {
-			GCPlayerStats stats = GCPlayerStats.get(player);
-			return new Vector3(stats.coordsTeleportedFromX, 250.0D,
-					stats.coordsTeleportedFromZ);
+			IStatsCapability stats = player.getCapability(CapabilityStatsHandler.GC_STATS_CAPABILITY, null);
+			return new Vector3(stats.getCoordsTeleportedFromX(), 900.0, stats.getCoordsTeleportedFromZ());
 		}
+
 		return null;
 	}
 
 	@Override
 	public Vector3 getEntitySpawnLocation(WorldServer world, Entity entity) {
-		return new Vector3(entity.posX, 250.0D, entity.posZ);
+		return new Vector3(entity.posX, 250.0, entity.posZ);
 	}
 
 	@Override
-	public Vector3 getParaChestSpawnLocation(WorldServer world,
-			EntityPlayerMP player, Random rand) {
-		double x = (rand.nextDouble() * 2.0D - 1.0D) * 5.0D;
-		double z = (rand.nextDouble() * 2.0D - 1.0D) * 5.0D;
-		return new Vector3(player.posX + x, 230.0D, player.posZ + z);
+	public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand) {
+		final double x = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
+		final double z = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
+		return new Vector3(x, 220.0D, z);
 	}
 
 	@Override
-	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
-			boolean ridingAutoRocket) {
-		//player.addStat(Achievements.titaniaMoon, 1);
+	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket) {
 	}
 
 	@Override
 	public void setupAdventureSpawn(EntityPlayerMP player) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

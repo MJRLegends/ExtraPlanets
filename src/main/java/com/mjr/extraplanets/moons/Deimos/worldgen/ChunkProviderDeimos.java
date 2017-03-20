@@ -91,7 +91,7 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	public void onPopulate(int cX, int cZ) {
 	}
 
 	@Override

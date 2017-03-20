@@ -6,13 +6,17 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Titan.worldgen.BiomeProviderTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
-import com.mjr.extraplanets.moons.Titan.worldgen.WorldChunkManagerTitan;
 
 public class WorldProviderTitan extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
@@ -48,13 +52,13 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderTitan.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerTitan.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderTitan.class;
 	}
 
 	@Override
@@ -163,7 +167,7 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 	}
 
 	@Override
-	public String getInternalNameSuffix() {
-		return "_titan";
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.TITAN;
 	}
 }

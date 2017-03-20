@@ -4,30 +4,22 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
-import com.mjr.extraplanets.Config;
+import net.minecraft.world.biome.Biome;
 
-public class EuropaBiomes extends BiomeGenBase {
+public class EuropaBiomes extends Biome {
 
-	public static final BiomeGenBase europa = new BiomeGenEuropa(Config.europaBiomeID).setBiomeName("europa");
+	public static final Biome europa = new BiomeGenEuropa(new BiomeProperties("europa").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
-	@SuppressWarnings("unchecked")
-	EuropaBiomes(int var1)
+	EuropaBiomes(BiomeProperties properties)
 	{
-		super(var1);
+		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		this.rainfall = 0F;
-	}
-
-	@Override
-	public EuropaBiomes setColor(int var1)
-	{
-		return (EuropaBiomes) super.setColor(var1);
+        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 	}
 
 	@Override

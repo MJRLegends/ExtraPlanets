@@ -672,11 +672,6 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCarbon", new ItemStack(mercuryBlocks, 1, 10));
 			OreDictionary.registerOre("blockCarbon", new ItemStack(mercuryBlocks, 1, 11));
 		}
-		// if (Config.venus) {
-		// OreDictionary.registerOre("oreCopper", new ItemStack(venusBlocks, 1, 5));
-		// OreDictionary.registerOre("oreTin", new ItemStack(venusBlocks, 1, 4));
-		// OreDictionary.registerOre("oreIron", new ItemStack(venusBlocks, 1, 3));
-		// }
 		if (Config.ceres) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(ceresBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(ceresBlocks, 1, 4));

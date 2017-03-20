@@ -6,13 +6,17 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Europa.worldgen.BiomeProviderEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.ChunkProviderEuropa;
-import com.mjr.extraplanets.moons.Europa.worldgen.WorldChunkManagerEuropa;
 
 public class WorldProviderEuropa extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
@@ -48,13 +52,13 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEuropa.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerEuropa.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderEuropa.class;
 	}
 
 	@Override
@@ -163,7 +167,7 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public String getInternalNameSuffix() {
-		return "_europa";
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.EUROPA;
 	}
 }

@@ -177,13 +177,11 @@ public class MapGenCaveCallisto extends MapGenBaseMeta
                                             {
                                                 if (metadata == 6 || metadata == 9)
                                                 {
-                                                    primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-//                                                    blockIdArray[coords] = Blocks.AIR;
-                                                }
-                                                else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0)
-                                                {
-                                                    primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-//                                                    blockIdArray[coords] = Blocks.AIR;
+													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
+													// blockIdArray[coords] = Blocks.AIR;
+												} else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0) {
+													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
+													// blockIdArray[coords] = Blocks.AIR;
                                                 }
                                             }
                                         }

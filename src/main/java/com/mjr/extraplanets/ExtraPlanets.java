@@ -36,6 +36,19 @@ import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
+import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
+import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
+import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
+import com.mjr.extraplanets.moons.Iapetus.event.IapetusEvents;
+import com.mjr.extraplanets.moons.Io.event.IoEvents;
+import com.mjr.extraplanets.moons.Oberon.event.OberonEvents;
+import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
+import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
+import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
+import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
+import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
 import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
@@ -43,6 +56,7 @@ import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
 import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
+import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
 import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
@@ -161,32 +175,32 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
 
 		// Moons Events
-//		if (Config.callisto)
-//			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
-//		if (Config.deimos)
-//			MinecraftForge.EVENT_BUS.register(new DeimosEvents());
-//		if (Config.europa)
-//			MinecraftForge.EVENT_BUS.register(new EuropaEvents());
-//		if (Config.ganymede)
-//			MinecraftForge.EVENT_BUS.register(new GanymedeEvents());
-//		if (Config.io)
-//			MinecraftForge.EVENT_BUS.register(new IoEvents());
-//		if (Config.phobos)
-//			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
-//		if (Config.triton)
-//			MinecraftForge.EVENT_BUS.register(new TritonEvents());
-//		if (Config.rhea)
-//			MinecraftForge.EVENT_BUS.register(new RheaEvents());
-//		if (Config.titan)
-//			MinecraftForge.EVENT_BUS.register(new TitanEvents());
-//		if (Config.oberon)
-//			MinecraftForge.EVENT_BUS.register(new OberonEvents());
-//		if (Config.iapetus)
-//			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
-//		if (Config.titania)
-//			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
-//		if (Config.kuiperBelt)
-//			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
+		if (Config.callisto)
+			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
+		if (Config.deimos)
+			MinecraftForge.EVENT_BUS.register(new DeimosEvents());
+		if (Config.europa)
+			MinecraftForge.EVENT_BUS.register(new EuropaEvents());
+		if (Config.ganymede)
+			MinecraftForge.EVENT_BUS.register(new GanymedeEvents());
+		if (Config.io)
+			MinecraftForge.EVENT_BUS.register(new IoEvents());
+		if (Config.phobos)
+			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
+		if (Config.triton)
+			MinecraftForge.EVENT_BUS.register(new TritonEvents());
+		if (Config.rhea)
+			MinecraftForge.EVENT_BUS.register(new RheaEvents());
+		if (Config.titan)
+			MinecraftForge.EVENT_BUS.register(new TitanEvents());
+		if (Config.oberon)
+			MinecraftForge.EVENT_BUS.register(new OberonEvents());
+		if (Config.iapetus)
+			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
+		if (Config.titania)
+			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
+		if (Config.kuiperBelt)
+			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
@@ -212,7 +226,7 @@ public class ExtraPlanets {
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.radioactiveWater, ExtraPlanets_Items.radioactive_bucket);
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.methane, ExtraPlanets_Items.methane_bucket);
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.nitrogen_ice, ExtraPlanets_Items.nitrogen_ice_bucket);
-		
+
 		// Bucket Handler
 		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
 
@@ -229,7 +243,7 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
-		// ExtraPlanets_Moons.init();
+		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
 
 		// Initialization/Registering Methods For Entities
@@ -244,9 +258,10 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		// Register Capability Handlers
 		CapabilityStatsHandler.register();
-        CapabilityStatsClientHandler.register();
-        
+		CapabilityStatsClientHandler.register();
+
 		// Register Schematics Recipes
 		registerSchematicsRecipes();
 

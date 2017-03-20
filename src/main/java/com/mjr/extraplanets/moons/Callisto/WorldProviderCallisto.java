@@ -7,12 +7,15 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Callisto.worldgen.BiomeProviderCallisto;
 import com.mjr.extraplanets.moons.Callisto.worldgen.ChunkProviderCallisto;
 
 public class WorldProviderCallisto extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
@@ -165,9 +168,9 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-
+	
 	@Override
-	public String getInternalNameSuffix() {
-		return "_callisto";
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.CALLISTO;
 	}
 }
