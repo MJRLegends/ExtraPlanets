@@ -487,7 +487,11 @@ public class ExtraPlanets_Items {
 			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
 		}
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.cleanWater_fluid, new ItemStack(clean_water_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.infectedWater_fluid, new ItemStack(infected_water_bucket, 1, 0), new ItemStack(Items.bucket));
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.radioactiveWater_fluid, new ItemStack(radioactive_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.methane_fluid, new ItemStack(methane_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_ice_fluid, new ItemStack(nitrogen_ice_bucket, 1, 0), new ItemStack(Items.bucket));
+
 	}
 
 	public static void OreDictionaryRegister() {
