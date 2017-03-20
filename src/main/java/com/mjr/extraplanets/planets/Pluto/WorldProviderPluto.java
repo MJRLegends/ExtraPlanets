@@ -144,9 +144,9 @@ IGalacticraftWorldProvider, ISolarLevel {
 	public float getThermalLevelModifier() {
 		if(Config.thermalPaddings){
 			if (isDaytime()) {
-				return 130.0F;
+				return -140.0F;
 			}
-			return -135.0F;
+			return -140.0F;
 		}
 		else
 			return -1.5F;

@@ -145,7 +145,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 			if (isDaytime()) {
 				return 50.0F;
 			}
-			return -50.0F;
+			return 50.0F;
 		}
 		else
 			return -1.5F;
