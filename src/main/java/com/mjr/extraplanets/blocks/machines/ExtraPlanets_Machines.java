@@ -54,17 +54,18 @@ public class ExtraPlanets_Machines {
 			advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
 		if (Config.ultimateCompressor)
 			ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
-		
-		if (Config.basicDecrystallizer)
-			basicDecrystallizer = new BasicDecrystallizer("basicDecrystallizer");
-		if (Config.basicCrystallizer)
-			basicCrystallizer = new BasicCrystallizer("basicCrystallizer");
-		if (Config.basicSmasher)
-			basicSmasher = new BasicSmasher("basicSmasher");
-		if (Config.basicChemicalInjector)
-			basicChemicalInjector = new BasicChemicalInjector("basicChemicalInjector");
-		if (Config.basicSolarEvaporationChamber)
-			basicSolarEvaporationChamber = new BasicSolarEvaporationChamber("basicSolarEvaporationChamber");
+		if (Config.radiation) {
+			if (Config.basicDecrystallizer)
+				basicDecrystallizer = new BasicDecrystallizer("basicDecrystallizer");
+			if (Config.basicCrystallizer)
+				basicCrystallizer = new BasicCrystallizer("basicCrystallizer");
+			if (Config.basicSmasher)
+				basicSmasher = new BasicSmasher("basicSmasher");
+			if (Config.basicChemicalInjector)
+				basicChemicalInjector = new BasicChemicalInjector("basicChemicalInjector");
+			if (Config.basicSolarEvaporationChamber)
+				basicSolarEvaporationChamber = new BasicSolarEvaporationChamber("basicSolarEvaporationChamber");
+		}
 	}
 
 	private static void registerMachines() {
@@ -78,17 +79,18 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
 		if (Config.ultimateCompressor)
 			GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
-		
-		if (Config.basicCrystallizer)if (Config.basicCrystallizer)
-			GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
-		if (Config.basicCrystallizer)
-			GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
-		if (Config.basicSmasher)
-			GameRegistry.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
-		if (Config.basicChemicalInjector)
-			GameRegistry.registerBlock(basicChemicalInjector, basicChemicalInjector.getUnlocalizedName().substring(5));
-		if (Config.basicSolarEvaporationChamber)
-			GameRegistry.registerBlock(basicSolarEvaporationChamber, basicSolarEvaporationChamber.getUnlocalizedName().substring(5));
+		if (Config.radiation) {
+			if (Config.basicCrystallizer)
+				GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
+			if (Config.basicCrystallizer)
+				GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
+			if (Config.basicSmasher)
+				GameRegistry.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
+			if (Config.basicChemicalInjector)
+				GameRegistry.registerBlock(basicChemicalInjector, basicChemicalInjector.getUnlocalizedName().substring(5));
+			if (Config.basicSolarEvaporationChamber)
+				GameRegistry.registerBlock(basicSolarEvaporationChamber, basicSolarEvaporationChamber.getUnlocalizedName().substring(5));
+		}
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -106,16 +108,17 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
 		}
-		
-		if (Config.basicCrystallizer)
-			GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
-		if (Config.basicCrystallizer)
-			GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
-		if (Config.basicSmasher)
-			GameRegistry.registerTileEntity(TileEntityBasicSmasher.class, Constants.modName + "Basic Smasher");
-		if (Config.basicChemicalInjector)
-			GameRegistry.registerTileEntity(TileEntityBasicChemicalInjector.class, Constants.modName + "Basic Chemical Injector");
-		if (Config.basicSolarEvaporationChamber)
-			GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
+		if (Config.radiation) {
+			if (Config.basicCrystallizer)
+				GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
+			if (Config.basicCrystallizer)
+				GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
+			if (Config.basicSmasher)
+				GameRegistry.registerTileEntity(TileEntityBasicSmasher.class, Constants.modName + "Basic Smasher");
+			if (Config.basicChemicalInjector)
+				GameRegistry.registerTileEntity(TileEntityBasicChemicalInjector.class, Constants.modName + "Basic Chemical Injector");
+			if (Config.basicSolarEvaporationChamber)
+				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
+		}
 	}
 }
