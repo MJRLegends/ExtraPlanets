@@ -1,10 +1,15 @@
 package com.mjr.extraplanets.proxy;
 
 import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelRocketT3;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -23,6 +28,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
@@ -887,114 +893,114 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	private void registerFluidVariants() {
-		// ModelResourceLocation nitrogenLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen", "fluid");
-		// Item nitrogen = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen);
-		// ModelBakery.registerItemVariants(nitrogen, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen"));
-		// ModelLoader.setCustomMeshDefinition(nitrogen, (ItemStack stack) -> nitrogenLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return nitrogenLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation glowstoneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "glowstone", "fluid");
-		// Item glowstone = Item.getItemFromBlock(ExtraPlanets_Fluids.glowstone);
-		// ModelBakery.registerItemVariants(glowstone, new ResourceLocation(Constants.TEXTURE_PREFIX + "glowstone"));
-		// ModelLoader.setCustomMeshDefinition(glowstone, (ItemStack stack) -> glowstoneLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.glowstone, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return glowstoneLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation magmaLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "magma", "fluid");
-		// Item magma = Item.getItemFromBlock(ExtraPlanets_Fluids.magma);
-		// ModelBakery.registerItemVariants(magma, new ResourceLocation(Constants.TEXTURE_PREFIX + "magma"));
-		// ModelLoader.setCustomMeshDefinition(magma, (ItemStack stack) -> magmaLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.magma, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return magmaLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation frozen_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water", "fluid");
-		// Item frozen_water = Item.getItemFromBlock(ExtraPlanets_Fluids.frozen_water);
-		// ModelBakery.registerItemVariants(frozen_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water"));
-		// ModelLoader.setCustomMeshDefinition(frozen_water, (ItemStack stack) -> frozen_waterLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.frozen_water, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return frozen_waterLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation saltLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "salt", "fluid");
-		// Item salt = Item.getItemFromBlock(ExtraPlanets_Fluids.salt);
-		// ModelBakery.registerItemVariants(salt, new ResourceLocation(Constants.TEXTURE_PREFIX + "salt"));
-		// ModelLoader.setCustomMeshDefinition(salt, (ItemStack stack) -> saltLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.salt, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return saltLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation radioactive_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water", "fluid");
-		// Item radioactive_water = Item.getItemFromBlock(ExtraPlanets_Fluids.radioactiveWater);
-		// ModelBakery.registerItemVariants(radioactive_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water"));
-		// ModelLoader.setCustomMeshDefinition(radioactive_water, (ItemStack stack) -> radioactive_waterLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.radioactiveWater, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return radioactive_waterLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation clean_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "clean_water", "fluid");
-		// Item clean_water = Item.getItemFromBlock(ExtraPlanets_Fluids.cleanWater);
-		// ModelBakery.registerItemVariants(clean_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "clean_water"));
-		// ModelLoader.setCustomMeshDefinition(clean_water, (ItemStack stack) -> clean_waterLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.cleanWater, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return clean_waterLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation infected_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "infected_water", "fluid");
-		// Item infected_water = Item.getItemFromBlock(ExtraPlanets_Fluids.infectedWater);
-		// ModelBakery.registerItemVariants(infected_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "infected_water"));
-		// ModelLoader.setCustomMeshDefinition(infected_water, (ItemStack stack) -> infected_waterLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.infectedWater, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return infected_waterLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation methaneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "methane", "fluid");
-		// Item methane = Item.getItemFromBlock(ExtraPlanets_Fluids.methane);
-		// ModelBakery.registerItemVariants(methane, new ResourceLocation(Constants.TEXTURE_PREFIX + "methane"));
-		// ModelLoader.setCustomMeshDefinition(methane, (ItemStack stack) -> methaneLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.methane, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return methaneLocation;
-		// }
-		// });
-		//
-		// ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
-		// Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen_ice);
-		// ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
-		// ModelLoader.setCustomMeshDefinition(nitrogen_ice, (ItemStack stack) -> nitrogen_iceLocation);
-		// ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen_ice, new StateMapperBase() {
-		// @Override
-		// protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-		// return nitrogen_iceLocation;
-		// }
-		// });
+		ModelResourceLocation nitrogenLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen", "fluid");
+		Item nitrogen = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen);
+		ModelBakery.registerItemVariants(nitrogen, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen"));
+		ModelLoader.setCustomMeshDefinition(nitrogen, (ItemStack stack) -> nitrogenLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return nitrogenLocation;
+			}
+		});
+
+		ModelResourceLocation glowstoneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "glowstone", "fluid");
+		Item glowstone = Item.getItemFromBlock(ExtraPlanets_Fluids.glowstone);
+		ModelBakery.registerItemVariants(glowstone, new ResourceLocation(Constants.TEXTURE_PREFIX + "glowstone"));
+		ModelLoader.setCustomMeshDefinition(glowstone, (ItemStack stack) -> glowstoneLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.glowstone, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return glowstoneLocation;
+			}
+		});
+
+		ModelResourceLocation magmaLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "magma", "fluid");
+		Item magma = Item.getItemFromBlock(ExtraPlanets_Fluids.magma);
+		ModelBakery.registerItemVariants(magma, new ResourceLocation(Constants.TEXTURE_PREFIX + "magma"));
+		ModelLoader.setCustomMeshDefinition(magma, (ItemStack stack) -> magmaLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.magma, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return magmaLocation;
+			}
+		});
+
+		ModelResourceLocation frozen_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water", "fluid");
+		Item frozen_water = Item.getItemFromBlock(ExtraPlanets_Fluids.frozen_water);
+		ModelBakery.registerItemVariants(frozen_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water"));
+		ModelLoader.setCustomMeshDefinition(frozen_water, (ItemStack stack) -> frozen_waterLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.frozen_water, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return frozen_waterLocation;
+			}
+		});
+
+		ModelResourceLocation saltLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "salt", "fluid");
+		Item salt = Item.getItemFromBlock(ExtraPlanets_Fluids.salt);
+		ModelBakery.registerItemVariants(salt, new ResourceLocation(Constants.TEXTURE_PREFIX + "salt"));
+		ModelLoader.setCustomMeshDefinition(salt, (ItemStack stack) -> saltLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.salt, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return saltLocation;
+			}
+		});
+
+		ModelResourceLocation radioactive_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water", "fluid");
+		Item radioactive_water = Item.getItemFromBlock(ExtraPlanets_Fluids.radioactiveWater);
+		ModelBakery.registerItemVariants(radioactive_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water"));
+		ModelLoader.setCustomMeshDefinition(radioactive_water, (ItemStack stack) -> radioactive_waterLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.radioactiveWater, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return radioactive_waterLocation;
+			}
+		});
+
+		ModelResourceLocation clean_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "clean_water", "fluid");
+		Item clean_water = Item.getItemFromBlock(ExtraPlanets_Fluids.cleanWater);
+		ModelBakery.registerItemVariants(clean_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "clean_water"));
+		ModelLoader.setCustomMeshDefinition(clean_water, (ItemStack stack) -> clean_waterLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.cleanWater, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return clean_waterLocation;
+			}
+		});
+
+		ModelResourceLocation infected_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "infected_water", "fluid");
+		Item infected_water = Item.getItemFromBlock(ExtraPlanets_Fluids.infectedWater);
+		ModelBakery.registerItemVariants(infected_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "infected_water"));
+		ModelLoader.setCustomMeshDefinition(infected_water, (ItemStack stack) -> infected_waterLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.infectedWater, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return infected_waterLocation;
+			}
+		});
+
+		ModelResourceLocation methaneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "methane", "fluid");
+		Item methane = Item.getItemFromBlock(ExtraPlanets_Fluids.methane);
+		ModelBakery.registerItemVariants(methane, new ResourceLocation(Constants.TEXTURE_PREFIX + "methane"));
+		ModelLoader.setCustomMeshDefinition(methane, (ItemStack stack) -> methaneLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.methane, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return methaneLocation;
+			}
+		});
+
+		 ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
+		 Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.nitrogen_ice);
+		 ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
+		 ModelLoader.setCustomMeshDefinition(nitrogen_ice, (ItemStack stack) -> nitrogen_iceLocation);
+		 ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.nitrogen_ice, new StateMapperBase() {
+		 @Override
+		 protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+		 return nitrogen_iceLocation;
+		 }
+		 });
 	}
 }
