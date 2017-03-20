@@ -8,10 +8,14 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-v1 Beta Build ----More to be added!!----
-*Added Tier 1 - 4 Space Suit Model/Textures
 
-0.7 Alpha Build
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
+0.7 Beta Build
 *Fixed Tier 10 Schematic GUI not showing in the Nasa Workbench
 *Added Kepler22b Grass Blocks back
 *Added Kepler22b Main Planet blocks back
@@ -63,11 +67,17 @@ v1 Beta Build ----More to be added!!----
 *Added NEI support for Block Smasher machine
 *Added lakes of liquid methane to Titan & Added nitrogen ice lakes to Triton
 *Added Iapetus Ice & Added Iapetus Ice to Iapetus's world gen
-======================================================================================================
+*Added NEI support for most machines (Chemical Injector missing NEI Support)
+*Added Config options for all custom machines
+*Added Radioactive water fluid/lakes to Ceres
+*Added Infected water fluid/lakes to Mercury
+*Reduced how fast you get radiation with space suit on
+*Dungeon Bosses fixes
+*Changes to planet thermal levels
+*Changes to moon thermal levels
+*Added some missing recipes
+*Fixes for Achievements
 
-
-
-===========================================Released Updates===========================================
 0.6 Alpha Build
 *Added Tier 1 - 4 Pressure & Armor & Radiation Layers textures/json files
 *Added Tier 1 - 4 UnPrepared SpaceSuit Helmet, Chest, Legings, Boots textures/json files (Textures might change later on)
