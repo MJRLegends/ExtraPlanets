@@ -842,6 +842,12 @@ public class ExtraPlanets_Recipes {
 			if (Config.basicChemicalInjector)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.basicChemicalInjector, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.piston, 'U', ExtraPlanets_Items.ingotUranium });
 		}
+		if (Config.oxygenTanks) {
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.oxygenTankVeryHeavy, 1, ExtraPlanets_Items.oxygenTankVeryHeavy.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', GCItems.oxTankHeavy, 'Y',
+					new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'Z', new ItemStack(Blocks.wool, 1, 11) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.oxygenTankExtremelyHeavy, 1, ExtraPlanets_Items.oxygenTankExtremelyHeavy.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', ExtraPlanets_Items.oxygenTankVeryHeavy, 'Y',
+					new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'Z', new ItemStack(Blocks.wool, 1, 4) });
+		}
 	}
 
 	private static void registerCompressorRecipes() {
