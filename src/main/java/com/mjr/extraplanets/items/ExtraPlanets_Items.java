@@ -109,6 +109,7 @@ public class ExtraPlanets_Items {
 	public static Item frozen_water_bucket;
 	public static Item salt_bucket;
 	public static Item clean_water_bucket;
+	public static Item infected_water_bucket;
 	public static Item radioactive_bucket;
 	public static Item methane_bucket;
 	public static Item nitrogen_ice_bucket;
@@ -172,6 +173,7 @@ public class ExtraPlanets_Items {
 	public static Item potassiumIodide;
 	public static Item potassium;
 	public static Item potash;
+	public static Item anti_radiation;
 
 	public static void init() {
 		initializeItems();
@@ -185,10 +187,8 @@ public class ExtraPlanets_Items {
 		if (Config.mercury) {
 			if (Config.batteries)
 				mercuryBattery = new ItemBasicBattery("mercuryBattery", 85000f, 2);
-
 			ingotMercury = new ItemBasicItem("ingotMercury");
 			compressedMercury = new ItemMercuryCompressed("compressedMercury");
-
 			tier4Rocket = new Tier4Rocket("itemTier4Rocket");
 			schematicTier4 = new SchematicTier4("schematicTier4");
 			noseConeTier4 = new Tier4NoseCone("noseConeTier4");
@@ -203,7 +203,6 @@ public class ExtraPlanets_Items {
 			if (Config.batteries)
 				nickelBattery = new ItemBasicBattery("nickelBattery", 45000f, 2);
 			magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
-
 			tier5Rocket = new Tier5Rocket("itemTier5Rocket");
 			schematicTier5 = new SchematicTier5("schematicTier5");
 			noseConeTier5 = new Tier5NoseCone("noseConeTier5");
@@ -212,7 +211,6 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.saturn) {
 			glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
-
 			tier6Rocket = new Tier6Rocket("itemTier6Rocket");
 			schematicTier6 = new SchematicTier6("schematicTier6");
 			noseConeTier6 = new Tier6NoseCone("noseConeTier6");
@@ -221,7 +219,6 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.uranus) {
 			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
-
 			tier7Rocket = new Tier7Rocket("itemTier7Rocket");
 			schematicTier7 = new SchematicTier7("schematicTier7");
 			noseConeTier7 = new Tier7NoseCone("noseConeTier7");
@@ -232,7 +229,6 @@ public class ExtraPlanets_Items {
 			if (Config.batteries)
 				zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
 			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
-
 			tier8Rocket = new Tier8Rocket("itemTier8Rocket");
 			schematicTier8 = new SchematicTier8("schematicTier8");
 			noseConeTier8 = new Tier8NoseCone("noseConeTier8");
@@ -256,28 +252,16 @@ public class ExtraPlanets_Items {
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			tier11Items = new ItemTier11Items("tier11Items");
 		}
-
-		clean_water_bucket = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.cleanWater);
-		radioactive_bucket = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.radioactiveWater);
-		methane_bucket = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
-		nitrogen_ice_bucket = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
-
-		// cannedFood = new ItemCannedFood("cannedfood");
 		if (Config.customApples) {
 			diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 			ironApple = new ItemAppleIron(4, 2.2F, false);
 		}
-		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-		// bodyParts = new ItemBodyParts();
-
 		if (Config.thermalPaddings) {
 			thermalCloth = new ItemThermalCloth("thermalCloth");
 			tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 			tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
 			tier5ThermalPadding = new ItemTier5ThermalPadding("tier5ThermalPadding");
 		}
-
-		wafers = new ItemWafers("wafer");
 		if (Config.batteries) {
 			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 			ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
@@ -286,16 +270,6 @@ public class ExtraPlanets_Items {
 			oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
 			oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
 		}
-		ingotLead = new ItemBasicItem("ingotLead");
-
-		cloth = new ItemBasicItem("cloth");
-		gravityController = new ItemBasicItem("gravityController");
-
-		iodideSalt = new ItemBasicItem("iodideSalt");
-		potassiumIodide = new ItemBasicItem("potassiumIodide");
-		potassium = new ItemBasicItem("potassium");
-		potash = new ItemBasicItem("potashShards");
-
 		if (Config.pressure || Config.radiation) {
 			tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
 			tier2PressureLayer = new ItemBasicItem("tier2PressureLayer");
@@ -332,6 +306,23 @@ public class ExtraPlanets_Items {
 			tier4UnPreparedSpaceSuitLegings = new ItemBasicItem("tier4UnPreparedSpaceSuitLegings");
 			tier4UnPreparedSpaceSuitBoots = new ItemBasicItem("tier4UnPreparedSpaceSuitBoots");
 		}
+		if (Config.radiation) {
+			iodideSalt = new ItemBasicItem("iodideSalt");
+			potassiumIodide = new ItemBasicItem("potassiumIodide");
+			potassium = new ItemBasicItem("potassium");
+			potash = new ItemBasicItem("potashShards");
+		}
+		clean_water_bucket = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.cleanWater);
+		radioactive_bucket = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.radioactiveWater);
+		methane_bucket = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
+		nitrogen_ice_bucket = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
+
+		// cannedFood = new ItemCannedFood("cannedfood");
+		wafers = new ItemWafers("wafer");
+		ingotLead = new ItemBasicItem("ingotLead");
+		cloth = new ItemBasicItem("cloth");
+		gravityController = new ItemBasicItem("gravityController");
+
 	}
 
 	private static void registerItems() {
@@ -406,25 +397,16 @@ public class ExtraPlanets_Items {
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
 		}
-
-		// GameRegistry.registerItem(cannedFood, "cannedFood");
 		if (Config.customApples) {
 			GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
 		}
-
-		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-		// GameRegistry.registerItem(bodyParts, "bodyParts");
-
 		if (Config.thermalPaddings) {
 			GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
 		}
-
-		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
-
 		if (Config.batteries) {
 			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
@@ -433,11 +415,6 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
 		}
-		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
-
-		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
-
 		if (Config.pressure || Config.radiation) {
 			GameRegistry.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
@@ -474,11 +451,17 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 		}
-		GameRegistry.registerItem(iodideSalt, iodideSalt.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
-
+		if (Config.radiation) {
+			GameRegistry.registerItem(iodideSalt, iodideSalt.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
+		}
+		// GameRegistry.registerItem(cannedFood, "cannedFood");
+		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(clean_water_bucket, "bucket_clean_water");
 		GameRegistry.registerItem(radioactive_bucket, "bucket_radioactive_water");
 		GameRegistry.registerItem(methane_bucket, "bucket_methane");
@@ -549,20 +532,21 @@ public class ExtraPlanets_Items {
 			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
 			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
 		}
-		GalacticraftRegistry.registerGear(6000, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier3ThermalPadding, 1, 0));
-		GalacticraftRegistry.registerGear(6001, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier3ThermalPadding, 1, 1));
-		GalacticraftRegistry.registerGear(6002, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier3ThermalPadding, 1, 2));
-		GalacticraftRegistry.registerGear(6003, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier3ThermalPadding, 1, 3));
+		if (Config.thermalPaddings) {
+			GalacticraftRegistry.registerGear(6000, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier3ThermalPadding, 1, 0));
+			GalacticraftRegistry.registerGear(6001, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier3ThermalPadding, 1, 1));
+			GalacticraftRegistry.registerGear(6002, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier3ThermalPadding, 1, 2));
+			GalacticraftRegistry.registerGear(6003, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier3ThermalPadding, 1, 3));
 
-		GalacticraftRegistry.registerGear(6004, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier4ThermalPadding, 1, 0));
-		GalacticraftRegistry.registerGear(6005, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier4ThermalPadding, 1, 1));
-		GalacticraftRegistry.registerGear(6006, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier4ThermalPadding, 1, 2));
-		GalacticraftRegistry.registerGear(6007, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier4ThermalPadding, 1, 3));
+			GalacticraftRegistry.registerGear(6004, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier4ThermalPadding, 1, 0));
+			GalacticraftRegistry.registerGear(6005, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier4ThermalPadding, 1, 1));
+			GalacticraftRegistry.registerGear(6006, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier4ThermalPadding, 1, 2));
+			GalacticraftRegistry.registerGear(6007, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier4ThermalPadding, 1, 3));
 
-		GalacticraftRegistry.registerGear(6008, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier5ThermalPadding, 1, 0));
-		GalacticraftRegistry.registerGear(6009, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier5ThermalPadding, 1, 1));
-		GalacticraftRegistry.registerGear(6010, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier5ThermalPadding, 1, 2));
-		GalacticraftRegistry.registerGear(6011, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier5ThermalPadding, 1, 3));
-
+			GalacticraftRegistry.registerGear(6008, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier5ThermalPadding, 1, 0));
+			GalacticraftRegistry.registerGear(6009, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier5ThermalPadding, 1, 1));
+			GalacticraftRegistry.registerGear(6010, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier5ThermalPadding, 1, 2));
+			GalacticraftRegistry.registerGear(6011, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier5ThermalPadding, 1, 3));
+		}
 	}
 }
