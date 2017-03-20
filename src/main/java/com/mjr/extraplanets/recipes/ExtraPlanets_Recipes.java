@@ -821,7 +821,11 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier2SpaceSuitGravityBoots, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.tier2SpaceSuitBoots, 'G', new ItemStack(ExtraPlanets_Items.gravityController, 1) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier3SpaceSuitGravityBoots, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.tier3SpaceSuitBoots, 'G', new ItemStack(ExtraPlanets_Items.gravityController, 1) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tier4SpaceSuitGravityBoots, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.tier4SpaceSuitBoots, 'G', new ItemStack(ExtraPlanets_Items.gravityController, 1) });
-
+		}
+		if(Config.radiation){
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.anti_radiation, 1, 0), new Object[] { "PPP", "WGW", "PPP", 'P', ExtraPlanets_Items.potassiumIodide, 'W', ExtraPlanets_Items.clean_water_bucket, 'G', Items.glass_bottle});
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.clean_water_bucket, 1, 0), new Object[] { "SSS", "SBS", "SSS", 'S', ExtraPlanets_Items.iodideSalt, 'B', ExtraPlanets_Items.infected_water_bucket});
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.infected_water_bucket, 1, 0), new Object[] { "SSS", "SBS", "SSS", 'S', ExtraPlanets_Items.iodideSalt, 'B', ExtraPlanets_Items.radioactive_bucket});
 		}
 	}
 
