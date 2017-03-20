@@ -38,6 +38,12 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v1.0 Pre-5.5
 *Fixed some of the moons being the wrong tier/accepting the wrong tier
 *Fixes for Achievements
@@ -45,13 +51,7 @@ v1.0 Pre-5.5
 *Changes to moon thermal levels
 *Added Oberon, Titania, Iapetus moons, Updated lang files, a few fixes
 *A few fixes and added Haumea as a unreachable planet
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
-
-
+*Updated Galacticraft API to latest
 
 v1.0 Pre-5.0
 *Added Basic Hideout's to Jupiter
