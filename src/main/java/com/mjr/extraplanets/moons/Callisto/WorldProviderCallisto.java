@@ -149,7 +149,7 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 			if (isDaytime()) {
 				return 100.0F;
 			}
-			return -90.0F;
+			return 90.0F;
 		}
 		else
 			return -1.5F;

@@ -34,7 +34,7 @@ public class RegisterHelper {
         block.setHarvestLevel(toolClass, level, meta);
     }
 	
-	public static Moon makeUnreachableMoon(String name, Planet parent) {
+	public static Moon registerUnreachableMoon(String name, Planet parent) {
 		ArrayList<CelestialBody> cBodyList = new ArrayList<CelestialBody>();
 		cBodyList.addAll(GalaxyRegistry.getRegisteredMoons().values());
 		for (CelestialBody body : cBodyList) {

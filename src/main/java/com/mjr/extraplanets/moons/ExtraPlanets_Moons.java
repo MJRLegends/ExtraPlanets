@@ -19,14 +19,20 @@ import com.mjr.extraplanets.moons.Europa.TeleportTypeEuropa;
 import com.mjr.extraplanets.moons.Europa.WorldProviderEuropa;
 import com.mjr.extraplanets.moons.Ganymede.TeleportTypeGanymede;
 import com.mjr.extraplanets.moons.Ganymede.WorldProviderGanymede;
+import com.mjr.extraplanets.moons.Iapetus.TeleportTypeIapetus;
+import com.mjr.extraplanets.moons.Iapetus.WorldProviderIapetus;
 import com.mjr.extraplanets.moons.Io.TeleportTypeIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
+import com.mjr.extraplanets.moons.Oberon.TeleportTypeOberon;
+import com.mjr.extraplanets.moons.Oberon.WorldProviderOberon;
 import com.mjr.extraplanets.moons.Phobos.TeleportTypePhobos;
 import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
 import com.mjr.extraplanets.moons.Rhea.TeleportTypeRhea;
 import com.mjr.extraplanets.moons.Rhea.WorldProviderRhea;
 import com.mjr.extraplanets.moons.Titan.TeleportTypeTitan;
 import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
+import com.mjr.extraplanets.moons.Titania.TeleportTypeTitania;
+import com.mjr.extraplanets.moons.Titania.WorldProviderTitania;
 import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
@@ -34,21 +40,21 @@ import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Moons {
 	public static Moon triton;
-
 	public static Moon callisto;
 	public static Moon europa;
 	public static Moon ganymede;
 	public static Moon io;
-
 	public static Moon deimos;
 	public static Moon phobos;
-
 	public static Moon iapetus;
 	public static Moon rhea;
 	public static Moon titan;
-
 	public static Moon oberon;
 	public static Moon titania;
+	public static Moon charon;
+	public static Moon nix;
+	public static Moon hydra;
+	public static Moon dysnomia;
 
 	public static void init() {
 		initializeMoons();
@@ -57,18 +63,23 @@ public class ExtraPlanets_Moons {
 	}
 
 	public static void initializeUnReachableMoons() {
-		// Saturn Moons
-		iapetus = RegisterHelper.makeUnreachableMoon("iapetus", ExtraPlanets_Planets.saturn);
-		if (iapetus != null)
-			iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(107.1425462429542F);
+		// Pluto Moons
+		charon = RegisterHelper.registerUnreachableMoon("charon", ExtraPlanets_Planets.pluto);
+		if (charon != null)
+			charon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 
-		// Uranus Moons
-		titania = RegisterHelper.makeUnreachableMoon("titania", ExtraPlanets_Planets.uranus);
-		if (titania != null)
-			titania.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(38.155821478514518F);
-		oberon = RegisterHelper.makeUnreachableMoon("oberon", ExtraPlanets_Planets.uranus);
-		if (oberon != null)
-			oberon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(68.5411941552618F);
+		nix = RegisterHelper.registerUnreachableMoon("nix", ExtraPlanets_Planets.pluto);
+		if (nix != null)
+			nix.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(57.415456589452485548F);
+
+		hydra = RegisterHelper.registerUnreachableMoon("hydra", ExtraPlanets_Planets.pluto);
+		if (hydra != null)
+			hydra.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(123.252594612756974F);
+
+		// Eris Moons
+		dysnomia = RegisterHelper.registerUnreachableMoon("dysnomia", ExtraPlanets_Planets.eris);
+		if (dysnomia != null)
+			dysnomia.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 	}
 
 	private static void initializeMoons() {
@@ -115,7 +126,7 @@ public class ExtraPlanets_Moons {
 			io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			io.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
 			io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
-		}		
+		}
 		if (Config.europa) {
 			europa = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			europa.setPhaseShift(2.436F);
@@ -126,7 +137,7 @@ public class ExtraPlanets_Moons {
 			europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			europa.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
 			europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
-		}		
+		}
 
 		if (Config.ganymede) {
 			ganymede = new Moon("ganymede").setParentPlanet(ExtraPlanets_Planets.jupiter);
@@ -171,6 +182,39 @@ public class ExtraPlanets_Moons {
 			titan.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			titan.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
 			titan.setDimensionInfo(Config.titanID, WorldProviderTitan.class);
+		}
+		if (Config.oberon) {
+			oberon = new Moon("oberon").setParentPlanet(ExtraPlanets_Planets.uranus);
+			oberon.setPhaseShift(1.45F);
+			oberon.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
+			oberon.setRelativeOrbitTime(68.5411941552618F);
+			oberon.setTierRequired(6);
+			oberon.setRelativeSize(0.3867F);
+			oberon.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			oberon.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png"));
+			oberon.setDimensionInfo(Config.oberonID, WorldProviderOberon.class);
+		}
+		if (Config.titania) {
+			titania = new Moon("titania").setParentPlanet(ExtraPlanets_Planets.uranus);
+			titania.setPhaseShift(1.45F);
+			titania.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
+			titania.setRelativeOrbitTime(68.5411941552618F);
+			titania.setTierRequired(6);
+			titania.setRelativeSize(0.3867F);
+			titania.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			titania.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png"));
+			titania.setDimensionInfo(Config.titaniaID, WorldProviderTitania.class);
+		}
+		if (Config.iapetus) {
+			iapetus = new Moon("iapetus").setParentPlanet(ExtraPlanets_Planets.saturn);
+			iapetus.setPhaseShift(1.45F);
+			iapetus.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
+			iapetus.setRelativeOrbitTime(68.5411941552618F);
+			iapetus.setTierRequired(6);
+			iapetus.setRelativeSize(0.3867F);
+			iapetus.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			iapetus.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/iapetus.png"));
+			iapetus.setDimensionInfo(Config.iapetusID, WorldProviderIapetus.class);
 		}
 	}
 
@@ -219,6 +263,21 @@ public class ExtraPlanets_Moons {
 			GalaxyRegistry.registerMoon(titan);
 			GalacticraftRegistry.registerTeleportType(WorldProviderTitan.class, new TeleportTypeTitan());
 			GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titanRocketGui.png"));
+		}
+		if (Config.oberon) {
+			GalaxyRegistry.registerMoon(oberon);
+			GalacticraftRegistry.registerTeleportType(WorldProviderOberon.class, new TeleportTypeOberon());
+			GalacticraftRegistry.registerRocketGui(WorldProviderOberon.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/oberonRocketGui.png"));
+		}
+		if (Config.titania) {
+			GalaxyRegistry.registerMoon(titania);
+			GalacticraftRegistry.registerTeleportType(WorldProviderTitania.class, new TeleportTypeTitania());
+			GalacticraftRegistry.registerRocketGui(WorldProviderTitania.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titaniaRocketGui.png"));
+		}
+		if (Config.iapetus) {
+			GalaxyRegistry.registerMoon(iapetus);
+			GalacticraftRegistry.registerTeleportType(WorldProviderIapetus.class, new TeleportTypeIapetus());
+			GalacticraftRegistry.registerRocketGui(WorldProviderIapetus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/iapetusRocketGui.png"));
 		}
 	}
 }
