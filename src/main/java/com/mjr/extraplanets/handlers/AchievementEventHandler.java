@@ -6,13 +6,16 @@ import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets_Achievements;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossVenus;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.tools.BasicAxe;
 import com.mjr.extraplanets.items.tools.BasicHoe;
@@ -85,15 +88,23 @@ public class AchievementEventHandler {
 	public void onEntityDealth(LivingDeathEvent event) {
 		if (event.source.getSourceOfDamage() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
-			if (event.entity instanceof EntityEvolvedMagmaCubeBoss) {
+			if (event.entity instanceof EntityCreeperBossVenus) {
+				player.addStat(ExtraPlanets_Achievements.venusBoss, 1);
+			} else if (event.entity instanceof EntityEvolvedMagmaCubeBoss) {
 				player.addStat(ExtraPlanets_Achievements.venusBoss, 1);
 			} else if (event.entity instanceof EntityCreeperBossJupiter) {
 				player.addStat(ExtraPlanets_Achievements.jupiterBoss, 1);
 			} else if (event.entity instanceof EntityCreeperBossSaturn) {
 				player.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
+			} else if (event.entity instanceof EntityEvolvedGhastBoss) {
+				player.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
+			} else if (event.entity instanceof EntityCreeperBossJupiter) {
+				player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
 			} else if (event.entity instanceof EntityEvolvedIceSlimeBoss) {
 				player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
 			} else if (event.entity instanceof EntityCreeperBossNeptune) {
+				player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
+			} else if (event.entity instanceof EntityEvolvedSnowmanBoss) {
 				player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
 			} else if (event.entity instanceof EntityCreeperBossPluto) {
 				player.addStat(ExtraPlanets_Achievements.plutoBoss, 1);
