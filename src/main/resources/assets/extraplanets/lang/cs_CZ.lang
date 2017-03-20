@@ -542,6 +542,7 @@ item.bucket_magma.name=Kbelík Magma
 item.bucket_frozen_water.name=Kbelík zmrzlé vody
 item.bucket_nitrogen.name=Kbelík dusíku
 item.bucket_clean_water.name=Clean Water Bucket
+item.bucket_infected_water.name=Infected Water Bucket
 item.bucket_radioactive_water.name=Radioactive Water Bucket
 item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
@@ -824,6 +825,7 @@ item.iodideSalt.name=Iodided Salt
 item.potassiumIodide.name=Potassium Iodide
 item.potassium.name=Potassium
 item.potashShards.name=Potash Shards
+antiRadiation.desc=Reduces Radiation Level by 2
 
 #Other Items
 item.appleDiamond.name=Diamantové jablko
