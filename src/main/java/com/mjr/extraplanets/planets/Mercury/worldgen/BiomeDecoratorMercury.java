@@ -2,6 +2,7 @@ package com.mjr.extraplanets.planets.Mercury.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -63,7 +64,7 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 		this.generateOre(10, this.potashGen, 0, 20);
-		
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 		for (int i = 0; i < 1; i++) {
 			if (this.rand.nextInt(100) == 0) {

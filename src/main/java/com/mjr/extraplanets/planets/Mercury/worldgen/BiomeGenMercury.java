@@ -1,13 +1,11 @@
 package com.mjr.extraplanets.planets.Mercury.worldgen;
 
+import net.minecraftforge.common.BiomeDictionary;
+
 public class BiomeGenMercury extends MercuryBiomes {
 
-	public BiomeGenMercury(int par1)
-	{
-		super(par1);
-		this.setBiomeName("mercury");
-		this.setColor(16711680);
-		this.setHeight(new Height(2.5F, 0.4F));
+	public BiomeGenMercury(BiomeProperties properties) {
+		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
-
 }

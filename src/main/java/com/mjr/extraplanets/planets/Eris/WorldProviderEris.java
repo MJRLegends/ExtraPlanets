@@ -5,11 +5,14 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Eris.worldgen.BiomeProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.WorldChunkManagerEris;
 
 public class WorldProviderEris extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
@@ -46,13 +49,12 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEris.class;
 	}
 
-	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerEris.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderEris.class;
 	}
 
 	@Override
@@ -134,16 +136,6 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Eris";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_eris";
-	}
-	
-	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
 	}
@@ -151,5 +143,10 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.ERIS;
 	}
 }

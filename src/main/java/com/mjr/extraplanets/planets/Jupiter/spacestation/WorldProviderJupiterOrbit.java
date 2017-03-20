@@ -4,7 +4,9 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import net.minecraft.world.chunk.IChunkProvider;
+import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -48,8 +50,8 @@ public class WorldProviderJupiterOrbit extends WorldProviderOrbit {
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
-		return ChunkProviderJupiterOrbit.class;
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+		return ChunkProviderOrbit.class;
 	}
 
 	@Override
@@ -133,7 +135,7 @@ public class WorldProviderJupiterOrbit extends WorldProviderOrbit {
 
 	@Override
 	public String getSaveFolder() {
-		return "DIM_SPACESTATION_Jupiter_" + this.dimensionId;
+		return "DIM_SPACESTATION_Jupiter_" + this.getDimension();
 	}
 
 	@Override

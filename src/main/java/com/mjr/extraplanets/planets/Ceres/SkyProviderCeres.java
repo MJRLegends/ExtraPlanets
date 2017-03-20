@@ -10,8 +10,10 @@ import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.client.IRenderHandler;
 import net.minecraftforge.fml.client.FMLClientHandler;
 
@@ -44,7 +46,7 @@ public class SkyProviderCeres extends IRenderHandler {
 		GL11.glPopMatrix();
 
 		final Tessellator tessellator = Tessellator.getInstance();
-		WorldRenderer worldRenderer = tessellator.getWorldRenderer();
+        VertexBuffer worldRenderer = tessellator.getBuffer();
 		GL11.glNewList(this.glSkyList, GL11.GL_COMPILE);
 		final byte byte2 = 64;
 		final int i = 256 / byte2 + 2;
@@ -83,7 +85,7 @@ public class SkyProviderCeres extends IRenderHandler {
 	public void render(float partialTicks, WorldClient world, Minecraft mc) {
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-		Vec3 vec3 = world.getSkyColor(mc.getRenderViewEntity(), partialTicks);
+		Vec3d vec3 = world.getSkyColor(mc.getRenderViewEntity(), partialTicks);
 		float f1 = (float) vec3.xCoord;
 		float f2 = (float) vec3.yCoord;
 		float f3 = (float) vec3.zCoord;

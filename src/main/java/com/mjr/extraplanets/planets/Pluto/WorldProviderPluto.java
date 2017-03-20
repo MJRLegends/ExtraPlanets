@@ -4,12 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Pluto.worldgen.BiomeProviderPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.ChunkProviderPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.WorldChunkManagerPluto;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderPluto extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -47,13 +50,13 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderPluto.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerPluto.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderPluto.class;
 	}
 
 	@Override
@@ -135,16 +138,6 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Pluto";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_pluto";
-	}
-
-	@Override
 	public int getPressureLevel() {
 		return 8;
 	}
@@ -162,5 +155,10 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+	
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.PLUTO;
 	}
 }

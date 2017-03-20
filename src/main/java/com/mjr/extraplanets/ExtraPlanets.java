@@ -3,7 +3,6 @@ package com.mjr.extraplanets;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -23,10 +22,6 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -52,7 +47,7 @@ import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
 import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
 import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
-import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
@@ -240,9 +235,9 @@ public class ExtraPlanets {
 	public void init(FMLInitializationEvent event) {
 		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
-		// ExtraPlanets_Planets.init();
+		ExtraPlanets_Planets.init();
 		// ExtraPlanets_Moons.init();
-		//ExtraPlanets_SpaceStations.init();
+		// ExtraPlanets_SpaceStations.init();
 
 		// Initialization/Registering Methods For Entities
 		registerNonMobEntities();
@@ -297,20 +292,20 @@ public class ExtraPlanets {
 
 	private void registerCreatures() {
 		// Dungeon Bosses
-		//if (Config.mercury)
-			//RegisterHelper.registerGalacticraftCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+		// if (Config.mercury)
+		// RegisterHelper.registerGalacticraftCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		// if (Config.jupiter)
 		// GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
-		//if (Config.saturn)
-			//RegisterHelper.registerGalacticraftCreature(EntityEvolvedGhastBoss.class, Constants.modName + "EvolvedGhastBoss", 894731, 0);
-		//if (Config.uranus)
-			//RegisterHelper.registerGalacticraftCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
-		//if (Config.neptune)
-			//RegisterHelper.registerGalacticraftCreature(EntityEvolvedSnowmanBoss.class, Constants.modName + "EvolvedSnowmanBoss", 894731, 0);
-		//if (Config.pluto)
-			//GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
-		//if (Config.eris)
-			//GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
+		// if (Config.saturn)
+		// RegisterHelper.registerGalacticraftCreature(EntityEvolvedGhastBoss.class, Constants.modName + "EvolvedGhastBoss", 894731, 0);
+		// if (Config.uranus)
+		// RegisterHelper.registerGalacticraftCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
+		// if (Config.neptune)
+		// RegisterHelper.registerGalacticraftCreature(EntityEvolvedSnowmanBoss.class, Constants.modName + "EvolvedSnowmanBoss", 894731, 0);
+		// if (Config.pluto)
+		// GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
+		// if (Config.eris)
+		// GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
 
 	}
 

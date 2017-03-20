@@ -6,29 +6,19 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeGenJupiter;
-
 public class CeresBiomes extends Biome {
 
-	public static final Biome ceres = new BiomeGenJupiter(Config.ceresBiomeID).setBiomeName("ceres");
+	public static final Biome ceres = new BiomeGenCeres(new BiomeProperties("ceres").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
-	@SuppressWarnings("unchecked")
-	CeresBiomes(int var1) {
-		super(var1);
+	CeresBiomes(BiomeProperties properties) {
+		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		this.rainfall = 0F;
-	}
-
-	@Override
-	public CeresBiomes setColor(int var1) {
-		return (CeresBiomes) super.setColor(var1);
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 	}
 
 	@Override

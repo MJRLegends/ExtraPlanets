@@ -1,16 +1,18 @@
 package com.mjr.extraplanets.planets.Jupiter;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.ChunkProviderJupiter;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.WorldChunkManagerJupiter;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderJupiter extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -48,13 +50,13 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderJupiter.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerJupiter.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderJupiter.class;
 	}
 
 	@Override
@@ -136,16 +138,6 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Jupiter";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_jupiter";
-	}
-
-	@Override
 	public int getPressureLevel() {
 		return 2;
 	}
@@ -163,5 +155,10 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+	
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.JUPITER;
 	}
 }

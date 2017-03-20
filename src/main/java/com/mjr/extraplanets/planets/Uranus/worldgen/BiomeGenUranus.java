@@ -1,13 +1,11 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen;
 
+import net.minecraftforge.common.BiomeDictionary;
+
 public class BiomeGenUranus extends UranusBiomes {
 
-	public BiomeGenUranus(int par1)
-	{
-		super(par1);
-		this.setBiomeName("uranus");
-		this.setColor(16711680);
-		this.setHeight(new Height(2.5F, 0.4F));
+	public BiomeGenUranus(BiomeProperties properties) {
+		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
-
 }

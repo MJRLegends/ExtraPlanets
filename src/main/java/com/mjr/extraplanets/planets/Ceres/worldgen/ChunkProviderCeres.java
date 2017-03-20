@@ -7,6 +7,7 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -15,7 +16,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class ChunkProviderCeres extends ChunkProviderSpace {
-    private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
+    //private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
 
 	private final BiomeDecoratorCeres ceresBiomeDecorator = new BiomeDecoratorCeres();
 
@@ -31,8 +32,8 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected BiomeGenBase[] getBiomesForGeneration() {
-		return new BiomeGenBase[] { CeresBiomes.ceres };
+	protected Biome[] getBiomesForGeneration() {
+		return new Biome[] { CeresBiomes.ceres };
 	}
 
 	@Override
@@ -92,12 +93,12 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+	public void onPopulate(int cX, int cZ) {
+		//this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-        this.villageGenerator.generate(this, this.worldObj, x, z, null);
+        //this.villageGenerator.generate(this, this.worldObj, x, z, null);
 	}
 }

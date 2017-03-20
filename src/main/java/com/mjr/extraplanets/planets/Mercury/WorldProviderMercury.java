@@ -4,14 +4,16 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 
-import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.api.ISolarRadiationWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Mercury.worldgen.BiomeProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.ChunkProviderMercury;
-import com.mjr.extraplanets.planets.Mercury.worldgen.WorldChunkManagerMercury;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderMercury extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld, ISolarRadiationWorld {
@@ -49,13 +51,13 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderMercury.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerMercury.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderMercury.class;
 	}
 
 	@Override
@@ -137,16 +139,6 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Mercury";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_mercury";
-	}
-
-	@Override
 	public int getPressureLevel() {
 		return 20;
 	}
@@ -155,7 +147,7 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	public int getSolarRadiationLevel() {
 		return 100;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
@@ -164,5 +156,10 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+	
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.MERCURY;
 	}
 }

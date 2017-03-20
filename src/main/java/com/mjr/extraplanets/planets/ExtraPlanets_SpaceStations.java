@@ -155,68 +155,68 @@ public class ExtraPlanets_SpaceStations {
 		if (Config.mercurySpaceStation && Config.mercury) {
 			GalaxyRegistry.registerSatellite(mercurySpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderMercuryOrbit.class, new TeleportTypeMercuryOrbit());
-			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationID, WorldProviderMercuryOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Mercury Space Station", "_mercury_orbit", Config.mercurySpaceStationID, WorldProviderMercuryOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Mercury Space Station", "_mercury_orbit", Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class, true);
 		}
 		if (Config.venusSpaceStation) {
 			GalaxyRegistry.registerSatellite(venusSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderVenusOrbit.class, new TeleportTypeVenusOrbit());
-			GalacticraftRegistry.registerProvider(Config.venusSpaceStationID, WorldProviderVenusOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Venus Space Station", "_venus_orbit", Config.venusSpaceStationID, WorldProviderVenusOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Venus Space Station", "_venus_orbit", Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class, true);
 		}
 		if (Config.ceresSpaceStation && Config.ceres) {
 			GalaxyRegistry.registerSatellite(ceresSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderCeresOrbit.class, new TeleportTypeCeresOrbit());
-			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationID, WorldProviderCeresOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Ceres Space Station", "_ceres_orbit", Config.ceresSpaceStationID, WorldProviderCeresOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Ceres Space Station", "_ceres_orbit", Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class, true);
 		}
 		if (Config.marsSpaceStation && MarsModule.planetMars != null) {
 			GalaxyRegistry.registerSatellite(marsSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderMarsOrbit.class, new TeleportTypeMarsOrbit());
-			GalacticraftRegistry.registerProvider(Config.marsSpaceStationID, WorldProviderMarsOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Mars Space Station", "_mars_orbit", Config.marsSpaceStationID, WorldProviderMarsOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Mars Space Station", "_mars_orbit", Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class, true);
 		}
 		if (Config.jupiterSpaceStation && Config.jupiter) {
 			GalaxyRegistry.registerSatellite(jupiterSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderJupiterOrbit.class, new TeleportTypeJupiterOrbit());
-			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationID, WorldProviderJupiterOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Jupiter Space Station", "_jupiter_orbit", Config.jupiterSpaceStationID, WorldProviderJupiterOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Jupiter Space Station", "_jupiter_orbit", Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class, true);
 		}
 		if (Config.saturnSpaceStation && Config.saturn) {
 			GalaxyRegistry.registerSatellite(saturnSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderSaturnOrbit.class, new TeleportTypeSaturnOrbit());
-			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationID, WorldProviderSaturnOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Saturn Space Station", "_saturn_orbit", Config.saturnSpaceStationID, WorldProviderSaturnOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Saturn Space Station", "_saturn_orbit", Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class, true);
 		}
 		if (Config.uranusSpaceStation && Config.uranus) {
 			GalaxyRegistry.registerSatellite(uranusSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderUranusOrbit.class, new TeleportTypeUranusOrbit());
-			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationID, WorldProviderUranusOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Uranus Space Station", "_uranus_orbit", Config.uranusSpaceStationID, WorldProviderUranusOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Uranus Space Station", "_uranus_orbit", Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class, true);
 		}
 		if (Config.neptuneSpaceStation && Config.neptune) {
 			GalaxyRegistry.registerSatellite(neptuneSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderNeptuneOrbit.class, new TeleportTypeNeptuneOrbit());
-			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationID, WorldProviderNeptuneOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Neptune Space Station", "_neptune_orbit", Config.neptuneSpaceStationID, WorldProviderNeptuneOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Neptune Space Station", "_neptune_orbit", Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class, true);
 		}
 		if (Config.plutoSpaceStation && Config.pluto) {
 			GalaxyRegistry.registerSatellite(plutoSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderPlutoOrbit.class, new TeleportTypePlutoOrbit());
-			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationID, WorldProviderPlutoOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Pluto Space Station", "_pluto_orbit", Config.plutoSpaceStationID, WorldProviderPlutoOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Pluto Space Station", "_pluto_orbit", Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class, true);
 		}
 		if (Config.erisSpaceStation && Config.eris) {
 			GalaxyRegistry.registerSatellite(erisSpaceStation);
 			GalacticraftRegistry.registerTeleportType(WorldProviderErisOrbit.class, new TeleportTypeErisOrbit());
-			GalacticraftRegistry.registerProvider(Config.erisSpaceStationID, WorldProviderErisOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Eris Space Station", "_eris_orbit", Config.erisSpaceStationID, WorldProviderErisOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Eris Space Station", "_eris_orbit", Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true);
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b && Config.keplerSolarSystems) {
 //			GalaxyRegistry.registerSatellite(kepler22bSpaceStation);
 //			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22bOrbit.class, new TeleportTypeKepler22bOrbit());
-//			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationID, WorldProviderKepler22bOrbit.class, false, 0);
-//			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class, true, 0);
+//			GalacticraftRegistry.registerDimension(Config.kepler22bSpaceStationID, WorldProviderKepler22bOrbit.class, false);
+//			GalacticraftRegistry.registerDimension(Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class, true);
 		}
 	}
 }

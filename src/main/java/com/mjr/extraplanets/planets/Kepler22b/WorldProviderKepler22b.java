@@ -4,13 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.api.ISolarRadiationWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.ChunkProviderKepler22b;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.WorldChunkManagerKepler22b;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderKepler22b extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld, ISolarRadiationWorld {
@@ -48,13 +50,13 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderKepler22b.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerKepler22b.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass(){
+		return BiomeProviderKepler22b.class;
 	}
 
 	@Override
@@ -133,16 +135,6 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Kepler22b";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_kepler22b";
-	}
-
-	@Override
 	public int getPressureLevel() {
 		return 0;
 	}
@@ -160,5 +152,10 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+	
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.KEPLER22B;
 	}
 }

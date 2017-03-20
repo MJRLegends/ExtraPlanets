@@ -12,8 +12,8 @@ import com.mjr.extraplanets.Config;
 public class JupiterEvents {
 	@SubscribeEvent
 	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-		if (event.entityLiving.worldObj.provider.getDimensionId() == Config.jupiterID) {
-			if (event.entity instanceof EntityPlayer) {
+		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.jupiterID) {
+			if (event.getEntity() instanceof EntityPlayer) {
 				event.setCanceled(false);
 			} else {
 				if (Config.mobSuffocation)
@@ -26,12 +26,8 @@ public class JupiterEvents {
 
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event) {
-		if (event.entityLiving.worldObj.provider.getDimensionId() == Config.jupiterID) {
-			event.entityPlayer.heal(5.0F);
-
-			for (WorldServer worldServer : MinecraftServer.getServer().worldServers) {
-				worldServer.setWorldTime(0);
-			}
+		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.jupiterID) {
+			event.getEntityPlayer().heal(5.0F);
 		}
 	}
 }

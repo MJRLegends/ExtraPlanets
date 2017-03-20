@@ -4,12 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.DimensionType;
+import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Saturn.worldgen.BiomeProviderSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.ChunkProviderSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.WorldChunkManagerSaturn;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -47,13 +50,13 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderSaturn.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerSaturn.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderSaturn.class;
 	}
 
 	@Override
@@ -135,16 +138,6 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Saturn";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_saturn";
-	}
-
-	@Override
 	public int getPressureLevel() {
 		return 100;
 	}
@@ -153,7 +146,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	public int getSolarRadiationLevel() {
 		return 30;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
@@ -162,5 +155,10 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.SATURN;
 	}
 }

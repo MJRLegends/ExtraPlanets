@@ -1,14 +1,11 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen;
 
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenNeptune extends NeptuneBiomes {
 
-	public BiomeGenNeptune(int par1)
-	{
-		super(par1);
-		this.setBiomeName("neptune");
-		this.setColor(16711680);
-		this.setHeight(new Height(2.5F, 0.4F));
+	public BiomeGenNeptune(BiomeProperties properties) {
+		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
-
 }

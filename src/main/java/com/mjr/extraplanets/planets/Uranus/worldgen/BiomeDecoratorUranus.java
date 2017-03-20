@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Uranus.worldgen;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,7 +31,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorUranus() {
-		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.uranusBlocks, 2);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.uranusBlocks, 2);
 		this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 4, 3, true, ExtraPlanets_Blocks.uranusBlocks, 2);
 		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.denseIce, 8, 0, true, ExtraPlanets_Blocks.uranusBlocks, 0);
 		this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 4, 6, true, ExtraPlanets_Blocks.uranusBlocks, 2);
@@ -61,10 +62,10 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
 		// minY, int maxY);
-		
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 
-		if(Config.genUranusIceSpikes){
+		if (Config.genUranusIceSpikes) {
 			for (int i = 0; i < this.iceSpikesPerChunk; i++) {
 				if (this.rand.nextInt(20) == 0) {
 					int x = this.chunkX + 6;
@@ -83,7 +84,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 				new WorldGenCustomLake(ExtraPlanets_Fluids.glowstone).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.uranusBlocks);
 			}
 		}
-		if(Config.genUranusIgloos){
+		if (Config.genUranusIgloos) {
 			if (this.rand.nextInt(100) == 1) {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
@@ -91,7 +92,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 				new WorldGenIgloo().generate(this.currentWorld, this.rand, new BlockPos(x, y, z));
 			}
 		}
-		
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 		isDecorating = false;
 	}

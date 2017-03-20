@@ -7,11 +7,12 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.chunk.IChunkGenerator;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Ceres.worldgen.BiomeProviderCeres;
 import com.mjr.extraplanets.planets.Ceres.worldgen.ChunkProviderCeres;
-import com.mjr.extraplanets.planets.Ceres.worldgen.WorldChunkManagerCeres;
 
 public class WorldProviderCeres extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
@@ -48,13 +49,13 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderCeres.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerCeres.class;
+    public Class<? extends BiomeProvider> getBiomeProviderClass(){
+		return BiomeProviderCeres.class;
 	}
 
 	@Override
@@ -131,16 +132,6 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 	public double getSolarEnergyMultiplier() {
 		return 2.0D;
 	}
-
-	@Override
-	public String getDimensionName() {
-		return "Ceres";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_ceres";
-	}
 	
 	@Override
 	public boolean shouldDisablePrecipitation() {
@@ -153,12 +144,7 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 	}
 
 	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		return null;
-	}
-
-	@Override
 	public DimensionType getDimensionType() {
-		return null;
+		return ExtraPlanetsDimensions.CERES;
 	}
 }

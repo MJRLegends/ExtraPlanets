@@ -2,17 +2,16 @@ package com.mjr.extraplanets.planets.Jupiter.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
 import com.mjr.extraplanets.world.features.WorldGenCustomLake;
-import com.mjr.extraplanets.world.features.WorldGenIgloo;
 
 public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
@@ -76,7 +75,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.jupiterBlocks);
 			}
 		}
-		
+
 		if (this.rand.nextInt(50) == 1) {
 			int x = this.chunkX + 8;
 			int z = this.chunkZ + 8;
