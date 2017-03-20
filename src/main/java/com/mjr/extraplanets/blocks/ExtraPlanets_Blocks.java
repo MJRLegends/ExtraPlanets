@@ -41,6 +41,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog2;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T5TreasureChest;
@@ -72,6 +73,7 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockUranus;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleLeaf;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleLog;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleLog2;
+import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
@@ -288,11 +290,11 @@ public class ExtraPlanets_Blocks {
 			oreLead = new BlockBasic(Material.ROCK).setUnlocalizedName("oreLead").setHardness(5.0F).setResistance(3.0F);
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
-			// kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
-			// kepler22bBlueGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_blue_grass");
-			// kepler22bPurpleGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple_grass");
-			// kepler22bRedGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
-			// kepler22bYellowGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
+			kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
+			kepler22bBlueGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_blue_grass");
+			kepler22bPurpleGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple_grass");
+			kepler22bRedGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
+			kepler22bYellowGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
 			// kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22bFlowers");
 		}
 		if (Config.radiation)
@@ -350,7 +352,7 @@ public class ExtraPlanets_Blocks {
 	private static void initializeTreeBlocks() {
 		kepler22bMapleLog = new BlockKepler22bMapleTreeLog().setUnlocalizedName("kepler22bMapleLogs").setCreativeTab(ExtraPlanets.BlocksTab);
 		kepler22bMapleLog2 = new BlockKepler22bMapleTreeLog2().setUnlocalizedName("kepler22bMapleLogs2").setCreativeTab(ExtraPlanets.BlocksTab);
-		// kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling().setUnlocalizedName("kepler22bMapleSaplings");
+		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling().setUnlocalizedName("kepler22bMapleSaplings");
 		kepler22bMapleLeaf = new BlockKepler22bMapleTreeLeaves().setUnlocalizedName("kepler22bMapleLeaves");
 		kepler22bPlanks = new BlockBasicKepler22bPlanks().setUnlocalizedName("kepler22bPlanks");
 	}
@@ -406,11 +408,11 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName().substring(5));
-			// GameRegistry.registerBlock(kepler22bGrass, kepler22bGrass.getUnlocalizedName().substring(5));
-			// GameRegistry.registerBlock(kepler22bBlueGrass, kepler22bBlueGrass.getUnlocalizedName().substring(5));
-			// GameRegistry.registerBlock(kepler22bPurpleGrass, kepler22bPurpleGrass.getUnlocalizedName().substring(5));
-			// GameRegistry.registerBlock(kepler22bRedGrass, kepler22bRedGrass.getUnlocalizedName().substring(5));
-			// GameRegistry.registerBlock(kepler22bYellowGrass, kepler22bYellowGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bGrass, kepler22bGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bBlueGrass, kepler22bBlueGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bPurpleGrass, kepler22bPurpleGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bRedGrass, kepler22bRedGrass.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(kepler22bYellowGrass, kepler22bYellowGrass.getUnlocalizedName().substring(5));
 			// GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName().substring(5));
 		}
 
@@ -792,7 +794,7 @@ public class ExtraPlanets_Blocks {
 	private static void registerTreeBlocks() {
 		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName().substring(5));
-		// GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, kepler22bMapleLeaf.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, kepler22bPlanks.getUnlocalizedName().substring(5));
 	}

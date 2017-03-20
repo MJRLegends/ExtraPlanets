@@ -172,32 +172,32 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
 
 		// Moons Events
-		if (Config.callisto)
-			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
-		if (Config.deimos)
-			MinecraftForge.EVENT_BUS.register(new DeimosEvents());
-		if (Config.europa)
-			MinecraftForge.EVENT_BUS.register(new EuropaEvents());
-		if (Config.ganymede)
-			MinecraftForge.EVENT_BUS.register(new GanymedeEvents());
-		if (Config.io)
-			MinecraftForge.EVENT_BUS.register(new IoEvents());
-		if (Config.phobos)
-			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
-		if (Config.triton)
-			MinecraftForge.EVENT_BUS.register(new TritonEvents());
-		if (Config.rhea)
-			MinecraftForge.EVENT_BUS.register(new RheaEvents());
-		if (Config.titan)
-			MinecraftForge.EVENT_BUS.register(new TitanEvents());
-		if (Config.oberon)
-			MinecraftForge.EVENT_BUS.register(new OberonEvents());
-		if (Config.iapetus)
-			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
-		if (Config.titania)
-			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
-		if (Config.kuiperBelt)
-			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
+//		if (Config.callisto)
+//			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
+//		if (Config.deimos)
+//			MinecraftForge.EVENT_BUS.register(new DeimosEvents());
+//		if (Config.europa)
+//			MinecraftForge.EVENT_BUS.register(new EuropaEvents());
+//		if (Config.ganymede)
+//			MinecraftForge.EVENT_BUS.register(new GanymedeEvents());
+//		if (Config.io)
+//			MinecraftForge.EVENT_BUS.register(new IoEvents());
+//		if (Config.phobos)
+//			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
+//		if (Config.triton)
+//			MinecraftForge.EVENT_BUS.register(new TritonEvents());
+//		if (Config.rhea)
+//			MinecraftForge.EVENT_BUS.register(new RheaEvents());
+//		if (Config.titan)
+//			MinecraftForge.EVENT_BUS.register(new TitanEvents());
+//		if (Config.oberon)
+//			MinecraftForge.EVENT_BUS.register(new OberonEvents());
+//		if (Config.iapetus)
+//			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
+//		if (Config.titania)
+//			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
+//		if (Config.kuiperBelt)
+//			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();

@@ -11,15 +11,11 @@ import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
-	public BiomeGenKepler22bPlains() {
-		super(Config.kepler22bPlainsBiomeID);
-		this.enableRain = true;
-		this.enableSnow = true;
-		this.setTemperatureRainfall(0.8F, 0.9F);
+	public BiomeGenKepler22bPlains(BiomeProperties properties) {
+		super(properties);
 		this.topBlock = ExtraPlanets_Blocks.kepler22bGrass.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
@@ -33,7 +29,7 @@ public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
-		
+
 		this.getBiomeDecorator().brownTreesPerChunk = 1;
 		this.getBiomeDecorator().greenTreesPerChunk = 1;
 		this.getBiomeDecorator().greenShortGrassPerChunk = 90;

@@ -2,22 +2,21 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCocoa;
 import net.minecraft.block.BlockHorizontal;
-import net.minecraft.block.BlockLeaves;
-import net.minecraft.block.BlockOldLeaf;
-import net.minecraft.block.BlockOldLog;
-import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 
 public class WorldGenKepler22bTree extends WorldGenAbstractTree
 {
@@ -69,7 +68,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
                     {
                         if (j >= 0 && j < 256)
                         {
-                            if (!this.isReplaceable(worldIn,blockpos$mutableblockpos.set(l, j, i1)))
+                            if (!this.isReplaceable(worldIn,blockpos$mutableblockpos.setPos(l, j, i1)))
                             {
                                 flag = false;
                             }
@@ -88,13 +87,11 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
             }
             else
             {
-                BlockPos down = position.down();
-                Block block1 = worldIn.getBlockState(down).getBlock();
-                boolean isSoil = block1.canSustainPlant(worldIn, down, net.minecraft.util.EnumFacing.UP, (BlockKepler22bMapleTreeSapling)ExtraPlanets_Blocks.kepler22bMapleSapling);
-                position = new BlockPos(position.getX(), position.getY() - 1, position.getZ());
-                if (isSoil && position.getY() < 256 - i - 1)
-                {            	
-                    block1.onPlantGrow(worldIn, down, position);
+                IBlockState state = worldIn.getBlockState(position.down());
+
+                if (state.getBlock().canSustainPlant(state, worldIn, position.down(), net.minecraft.util.EnumFacing.UP, (BlockKepler22bMapleTreeSapling)ExtraPlanets_Blocks.kepler22bMapleSapling) && position.getY() < worldIn.getHeight() - i - 1)
+                {
+                    this.setDirtAt(worldIn, position.down());
                     int k2 = 3;
                     int l2 = 0;
 
@@ -114,9 +111,9 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
                                 if (Math.abs(l1) != j1 || Math.abs(j2) != j1 || rand.nextInt(2) != 0 && i4 != 0)
                                 {
                                     BlockPos blockpos = new BlockPos(k1, i3, i2);
-                                    Block block = worldIn.getBlockState(blockpos).getBlock();
+                                    state = worldIn.getBlockState(blockpos);
 
-                                    if (block.isAir(worldIn, blockpos) || block.isLeaves(worldIn, blockpos) || block.getMaterial() == Material.vine)
+                                    if (state.getBlock().isAir(state, worldIn, blockpos) || state.getBlock().isLeaves(state, worldIn, blockpos) || state.getMaterial() == Material.VINE)
                                     {
                                         this.setBlockAndNotifyAdequately(worldIn, blockpos, this.metaLeaves);
                                     }
@@ -127,10 +124,10 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
 
                     for (int j3 = 0; j3 < i; ++j3)
                     {
-                        BlockPos upN = position.up(j3);
-                        Block block2 = worldIn.getBlockState(upN).getBlock();
+                    	BlockPos upN = position.up(j3);
+                        state = worldIn.getBlockState(upN);
 
-                        if (block2.isAir(worldIn, upN) || block2.isLeaves(worldIn, upN) || block2.getMaterial() == Material.vine)
+                        if (state.getBlock().isAir(state, worldIn, upN) || state.getBlock().isLeaves(state, worldIn, upN) || state.getMaterial() == Material.VINE)
                         {
                             this.setBlockAndNotifyAdequately(worldIn, position.up(j3), this.metaWood);
 
@@ -138,22 +135,22 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
                             {
                                 if (rand.nextInt(3) > 0 && worldIn.isAirBlock(position.add(-1, j3, 0)))
                                 {
-                                    this.func_181651_a(worldIn, position.add(-1, j3, 0), BlockVine.EAST);
+                                    this.addVine(worldIn, position.add(-1, j3, 0), BlockVine.EAST);
                                 }
 
                                 if (rand.nextInt(3) > 0 && worldIn.isAirBlock(position.add(1, j3, 0)))
                                 {
-                                    this.func_181651_a(worldIn, position.add(1, j3, 0), BlockVine.WEST);
+                                    this.addVine(worldIn, position.add(1, j3, 0), BlockVine.WEST);
                                 }
 
                                 if (rand.nextInt(3) > 0 && worldIn.isAirBlock(position.add(0, j3, -1)))
                                 {
-                                    this.func_181651_a(worldIn, position.add(0, j3, -1), BlockVine.SOUTH);
+                                    this.addVine(worldIn, position.add(0, j3, -1), BlockVine.SOUTH);
                                 }
 
                                 if (rand.nextInt(3) > 0 && worldIn.isAirBlock(position.add(0, j3, 1)))
                                 {
-                                    this.func_181651_a(worldIn, position.add(0, j3, 1), BlockVine.NORTH);
+                                    this.addVine(worldIn, position.add(0, j3, 1), BlockVine.NORTH);
                                 }
                             }
                         }
@@ -171,33 +168,33 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
                             {
                                 for (int i5 = position.getZ() - k4; i5 <= position.getZ() + k4; ++i5)
                                 {
-                                    blockpos$mutableblockpos1.set(l4, k3, i5);
+                                    blockpos$mutableblockpos1.setPos(l4, k3, i5);
 
-                                    if (worldIn.getBlockState(blockpos$mutableblockpos1).getBlock().isLeaves(worldIn,blockpos$mutableblockpos1))
+                                    if (state.getBlock().isLeaves(state, worldIn, blockpos$mutableblockpos1))
                                     {
                                         BlockPos blockpos2 = blockpos$mutableblockpos1.west();
                                         BlockPos blockpos3 = blockpos$mutableblockpos1.east();
                                         BlockPos blockpos4 = blockpos$mutableblockpos1.north();
                                         BlockPos blockpos1 = blockpos$mutableblockpos1.south();
 
-                                        if (rand.nextInt(4) == 0 && worldIn.getBlockState(blockpos2).getBlock().isAir(worldIn,blockpos2))
+                                        if (rand.nextInt(4) == 0 && worldIn.isAirBlock(blockpos2))
                                         {
-                                            this.func_181650_b(worldIn, blockpos2, BlockVine.EAST);
+                                            this.addHangingVine(worldIn, blockpos2, BlockVine.EAST);
                                         }
 
-                                        if (rand.nextInt(4) == 0 && worldIn.getBlockState(blockpos3).getBlock().isAir(worldIn,blockpos3))
+                                        if (rand.nextInt(4) == 0 && worldIn.isAirBlock(blockpos3))
                                         {
-                                            this.func_181650_b(worldIn, blockpos3, BlockVine.WEST);
+                                            this.addHangingVine(worldIn, blockpos3, BlockVine.WEST);
                                         }
 
-                                        if (rand.nextInt(4) == 0 && worldIn.getBlockState(blockpos4).getBlock().isAir(worldIn,blockpos4))
+                                        if (rand.nextInt(4) == 0 && worldIn.isAirBlock(blockpos4))
                                         {
-                                            this.func_181650_b(worldIn, blockpos4, BlockVine.SOUTH);
+                                            this.addHangingVine(worldIn, blockpos4, BlockVine.SOUTH);
                                         }
 
-                                        if (rand.nextInt(4) == 0 && worldIn.getBlockState(blockpos1).getBlock().isAir(worldIn,blockpos1))
+                                        if (rand.nextInt(4) == 0 && worldIn.isAirBlock(blockpos1))
                                         {
-                                            this.func_181650_b(worldIn, blockpos1, BlockVine.NORTH);
+                                            this.addHangingVine(worldIn, blockpos1, BlockVine.NORTH);
                                         }
                                     }
                                 }
@@ -213,7 +210,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
                                     if (rand.nextInt(4 - l3) == 0)
                                     {
                                         EnumFacing enumfacing1 = enumfacing.getOpposite();
-                                        this.func_181652_a(worldIn, rand.nextInt(3), position.add(enumfacing1.getFrontOffsetX(), i - 5 + l3, enumfacing1.getFrontOffsetZ()), enumfacing);
+                                        this.placeCocoa(worldIn, rand.nextInt(3), position.add(enumfacing1.getFrontOffsetX(), i - 5 + l3, enumfacing1.getFrontOffsetZ()), enumfacing);
                                     }
                                 }
                             }
@@ -234,25 +231,25 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree
         }
     }
 
-    private void func_181652_a(World p_181652_1_, int p_181652_2_, BlockPos p_181652_3_, EnumFacing p_181652_4_)
+    private void placeCocoa(World worldIn, int p_181652_2_, BlockPos pos, EnumFacing side)
     {
-        this.setBlockAndNotifyAdequately(p_181652_1_, p_181652_3_, Blocks.cocoa.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockHorizontal.FACING, p_181652_4_));
+        this.setBlockAndNotifyAdequately(worldIn, pos, Blocks.COCOA.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockCocoa.FACING, side));
     }
 
-    private void func_181651_a(World p_181651_1_, BlockPos p_181651_2_, PropertyBool p_181651_3_)
+    private void addVine(World worldIn, BlockPos pos, PropertyBool prop)
     {
-        this.setBlockAndNotifyAdequately(p_181651_1_, p_181651_2_, Blocks.vine.getDefaultState().withProperty(p_181651_3_, Boolean.valueOf(true)));
+        this.setBlockAndNotifyAdequately(worldIn, pos, Blocks.VINE.getDefaultState().withProperty(prop, Boolean.valueOf(true)));
     }
 
-    private void func_181650_b(World p_181650_1_, BlockPos p_181650_2_, PropertyBool p_181650_3_)
+    private void addHangingVine(World worldIn, BlockPos pos, PropertyBool prop)
     {
-        this.func_181651_a(p_181650_1_, p_181650_2_, p_181650_3_);
+        this.addVine(worldIn, pos, prop);
         int i = 4;
 
-        for (p_181650_2_ = p_181650_2_.down(); p_181650_1_.getBlockState(p_181650_2_).getBlock().isAir(p_181650_1_,p_181650_2_) && i > 0; --i)
+        for (pos = pos.down(); worldIn.isAirBlock(pos) && i > 0; --i)
         {
-            this.func_181651_a(p_181650_1_, p_181650_2_, p_181650_3_);
-            p_181650_2_ = p_181650_2_.down();
+            this.addVine(worldIn, pos, prop);
+            pos = pos.down();
         }
     }
 }

@@ -11,15 +11,11 @@ import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bPurpleMapleForest extends BiomeGenBaseKepler22b {
-	public BiomeGenKepler22bPurpleMapleForest() {
-		super(Config.kepler22bPurpleForestBiomeID);
-		this.enableRain = true;
-		this.enableSnow = true;
-		this.setTemperatureRainfall(0.8F, 0.9F);
+	public BiomeGenKepler22bPurpleMapleForest(BiomeProperties properties) {
+		super(properties);
 		this.topBlock = ExtraPlanets_Blocks.kepler22bPurpleGrass.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
@@ -33,7 +29,7 @@ public class BiomeGenKepler22bPurpleMapleForest extends BiomeGenBaseKepler22b {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
-		
+
 		this.getBiomeDecorator().purpleTreesPerChunk = 6;
 		this.getBiomeDecorator().purpleShortGrassPerChunk = 90;
 		this.getBiomeDecorator().purpleMedGrassPerChunk = 90;

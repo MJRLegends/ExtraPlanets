@@ -10,9 +10,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeCache;
 import net.minecraft.world.gen.layer.GenLayer;
-import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
 
 public class BiomeProviderKepler22b extends BiomeProviderSpace {
@@ -24,14 +23,14 @@ public class BiomeProviderKepler22b extends BiomeProviderSpace {
 	protected BiomeProviderKepler22b() {
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawn = new ArrayList();
-		this.biomesToSpawn.add(BiomeKepler22b.kepler22bPlains);
-		this.biomesToSpawn.add(BiomeKepler22b.kepler22bBlueForest);
-		this.biomesToSpawn.add(BiomeKepler22b.kepler22bPurpleForest);
-		this.biomesToSpawn.add(BiomeKepler22b.kepler22bRedForest);
-		this.biomesToSpawn.add(BiomeKepler22b.kepler22bYellowForest);
+		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
+		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
+		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
+		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedForest);
+		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
 	}
 
-	public WorldChunkManagerKepler22b(long seed) {
+	public BiomeProviderKepler22b(long seed) {
 		this();
 		GenLayer[] agenlayer;
 		agenlayer = GenLayerKepler22b.makeTheWorld(seed);
@@ -39,13 +38,13 @@ public class BiomeProviderKepler22b extends BiomeProviderSpace {
 		this.zoomedBiomes = agenlayer[1];
 	}
 
-	public WorldChunkManagerKepler22b(World world) {
+	public BiomeProviderKepler22b(World world) {
 		this(world.getSeed());
 	}
 
 	@Override
 	public Biome getBiome() {
-		return BiomeKepler22b.kepler22bPlains;
+		return BiomeGenBaseKepler22b.kepler22bPlains;
 	}
 
 	@Override
@@ -54,32 +53,13 @@ public class BiomeProviderKepler22b extends BiomeProviderSpace {
 	}
 
 	@Override
-	public Biome func_180300_a(BlockPos pos, Biome biomeGen) {
-		Biome biome = this.biomeCache.func_180284_a(pos.getX(), pos.getZ(), biomeGen);
+	public Biome getBiome(BlockPos pos, Biome biomeGen) {
+		Biome biome = this.biomeCache.getBiome(pos.getX(), pos.getZ(), biomeGen);
 
 		if (biome == null) {
-			return BiomeKepler22b.kepler22bPlains;
+			return BiomeGenBaseKepler22b.kepler22bPlains;
 		}
 		return biome;
-	}
-
-	@Override
-	public float[] getRainfall(float[] par1, int x, int z, int width, int depth) {
-		IntCache.resetIntCache();
-		int[] aint = this.zoomedBiomes.getInts(x, z, width, depth);
-
-		if (par1 == null || par1.length < width * depth) {
-			par1 = new float[width * depth];
-		}
-		for (int i1 = 0; i1 < width * depth; ++i1) {
-			float f = Biome.getBiome(aint[i1]).getIntRainfall() / 65536.0F;
-
-			if (f > 1.0F) {
-				f = 1.0F;
-			}
-			par1[i1] = f;
-		}
-		return par1;
 	}
 
 	@Override
@@ -98,34 +78,7 @@ public class BiomeProviderKepler22b extends BiomeProviderSpace {
 			if (arrayOfInts[i] >= 0) {
 				par1ArrayOfBiome[i] = Biome.getBiome(arrayOfInts[i]);
 			} else {
-				par1ArrayOfBiome[i] = BiomeKepler22b.kepler22bPlains;
-			}
-		}
-		return par1ArrayOfBiome;
-	}
-
-	@Override
-	public Biome[] loadBlockGeneratorData(Biome[] par1ArrayOfBiome, int par2, int par3, int par4, int par5) {
-		return this.getBiomeGenAt(par1ArrayOfBiome, par2, par3, par4, par5, true);
-	}
-
-	@Override
-	public Biome[] getBiomeGenAt(Biome[] par1ArrayOfBiome, int x, int y, int width, int length, boolean cacheFlag) {
-		int[] ai = this.zoomedBiomes.getInts(x, y, width, length);
-
-		if (par1ArrayOfBiome == null || par1ArrayOfBiome.length < width * length) {
-			par1ArrayOfBiome = new Biome[width * length];
-		}
-		if (cacheFlag && width == 16 && length == 16 && (x & 0xF) == 0 && (y & 0xF) == 0) {
-			Biome[] abiomegenbase = this.biomeCache.getCachedBiomes(x, y);
-			System.arraycopy(abiomegenbase, 0, par1ArrayOfBiome, 0, width * length);
-			return par1ArrayOfBiome;
-		}
-		for (int i = 0; i < width * length; i++) {
-			if (ai[i] >= 0) {
-				par1ArrayOfBiome[i] = Biome.getBiome(ai[i]);
-			} else {
-				par1ArrayOfBiome[i] = BiomeKepler22b.kepler22bPlains;
+				par1ArrayOfBiome[i] = BiomeGenBaseKepler22b.kepler22bPlains;
 			}
 		}
 		return par1ArrayOfBiome;

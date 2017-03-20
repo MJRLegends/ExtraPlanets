@@ -12,6 +12,7 @@ import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.api.ISolarRadiationWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.BiomeProviderKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.ChunkProviderKepler22b;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
@@ -55,7 +56,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass(){
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
 		return BiomeProviderKepler22b.class;
 	}
 
@@ -143,7 +144,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	public int getSolarRadiationLevel() {
 		return 0;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
@@ -153,7 +154,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-	
+
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.KEPLER22B;
