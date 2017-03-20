@@ -90,6 +90,7 @@ public class Config {
 	public static boolean iapetus;
 	
 	public static boolean makemake;
+	public static boolean haumea;
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
 	
@@ -312,6 +313,7 @@ public class Config {
 		titania = config.get(dimensionsCustom, "Titania", true, "").getBoolean(true);
 		iapetus = config.get(dimensionsCustom, "Iapetus", true, "").getBoolean(true);
 		
+		haumea = config.get(dimensionsCustom, "Haumea", true, "").getBoolean(true);
 		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);

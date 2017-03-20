@@ -31,6 +31,7 @@ import com.mjr.extraplanets.planets.Uranus.TeleportTypeUranus;
 import com.mjr.extraplanets.planets.Uranus.WorldProviderUranus;
 import com.mjr.extraplanets.planets.Venus.TeleportTypeVenus;
 import com.mjr.extraplanets.planets.Venus.WorldProviderVenus;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Planets {
 	public static Planet mercury;
@@ -41,6 +42,7 @@ public class ExtraPlanets_Planets {
 	public static Planet uranus;
 	public static Planet neptune;
 	public static Planet pluto;
+	public static Planet haumea;
 	public static Planet eris;
 	public static Planet kuiperBelt;
 	public static Planet makemake;
@@ -188,68 +190,70 @@ public class ExtraPlanets_Planets {
 			kepler22b.setDimensionInfo(Config.kepler22bID, WorldProviderKepler22b.class);
 		}
 		if(Config.kuiperBelt){
-			kuiperBelt = GalacticraftCore.instance.makeUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
+			kuiperBelt = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (kuiperBelt != null)
 				kuiperBelt.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F, 4.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kuiperBelt.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kuiperBelt.png"));
 		}
 		if(Config.makemake){
-			makemake = GalacticraftCore.instance.makeUnreachablePlanet("makemake", GalacticraftCore.solarSystemSol);
+			makemake = RegisterHelper.registerUnreachablePlanet("makemake", GalacticraftCore.solarSystemSol);
 			if (makemake != null)
 				makemake.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.50F, 4.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			makemake.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/makemake.png"));
 		}
+		if (Config.haumea) {
+			haumea = RegisterHelper.registerUnreachablePlanet("haumea", GalacticraftCore.solarSystemSol);
+			if (haumea != null)
+				haumea.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F, 3.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+			haumea.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/haumea.png"));
+		}
 		if (Config.keplerSolarSystems) {
 			// Kepler Solar System
-//			kepler22b = GalacticraftCore.instance.makeUnreachablePlanet("kepler22b", ExtraPlanets_SolarSystems.kepler22);
-//			if (kepler22b != null)
-//				kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
-//			kepler22b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
-
+			
 			// Kepler 47 Solar System
-			kepler47b = GalacticraftCore.instance.makeUnreachablePlanet("kepler47b", ExtraPlanets_SolarSystems.kepler47);
+			kepler47b = RegisterHelper.registerUnreachablePlanet("kepler47b", ExtraPlanets_SolarSystems.kepler47);
 			if (kepler47b != null)
 				kepler47b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler47b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler47b.png"));
 
-			kepler47c = GalacticraftCore.instance.makeUnreachablePlanet("kepler47c", ExtraPlanets_SolarSystems.kepler47);
+			kepler47c = RegisterHelper.registerUnreachablePlanet("kepler47c", ExtraPlanets_SolarSystems.kepler47);
 			if (kepler47c != null)
 				kepler47c.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler47c.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler47c.png"));
 
 			// Kepler 62 Solar System
-			kepler62b = GalacticraftCore.instance.makeUnreachablePlanet("kepler62b", ExtraPlanets_SolarSystems.kepler62);
+			kepler62b = RegisterHelper.registerUnreachablePlanet("kepler62b", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62b != null)
 				kepler62b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler62b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62b.png"));
 
-			kepler62c = GalacticraftCore.instance.makeUnreachablePlanet("kepler62c", ExtraPlanets_SolarSystems.kepler62);
+			kepler62c = RegisterHelper.registerUnreachablePlanet("kepler62c", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62c != null)
 				kepler62c.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler62c.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62c.png"));
 
-			kepler62d = GalacticraftCore.instance.makeUnreachablePlanet("kepler62d", ExtraPlanets_SolarSystems.kepler62);
+			kepler62d = RegisterHelper.registerUnreachablePlanet("kepler62d", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62d != null)
 				kepler62d.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler62d.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62d.png"));
 
-			kepler62e = GalacticraftCore.instance.makeUnreachablePlanet("kepler62e", ExtraPlanets_SolarSystems.kepler62);
+			kepler62e = RegisterHelper.registerUnreachablePlanet("kepler62e", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62e != null)
 				kepler62e.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F, 1.75F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler62e.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62e.png"));
 
-			kepler62f = GalacticraftCore.instance.makeUnreachablePlanet("kepler62f", ExtraPlanets_SolarSystems.kepler62);
+			kepler62f = RegisterHelper.registerUnreachablePlanet("kepler62f", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62f != null)
 				kepler62f.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler62f.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62f.png"));
 
 			// Kepler 69 Solar System
-			kepler69b = GalacticraftCore.instance.makeUnreachablePlanet("kepler69b", ExtraPlanets_SolarSystems.kepler69);
+			kepler69b = RegisterHelper.registerUnreachablePlanet("kepler69b", ExtraPlanets_SolarSystems.kepler69);
 			if (kepler69b != null)
 				kepler69b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler69b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler69b.png"));
 
-			kepler69c = GalacticraftCore.instance.makeUnreachablePlanet("kepler69c", ExtraPlanets_SolarSystems.kepler69);
+			kepler69c = RegisterHelper.registerUnreachablePlanet("kepler69c", ExtraPlanets_SolarSystems.kepler69);
 			if (kepler69c != null)
 				kepler69c.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler69c.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler69c.png"));
