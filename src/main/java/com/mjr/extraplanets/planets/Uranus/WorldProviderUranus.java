@@ -122,7 +122,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	@Override
 	public float getThermalLevelModifier() {
 		if (isDaytime()) {
-			return -110.0F;
+			return -120.0F;
 		}
 		return -115.0F;
 	}

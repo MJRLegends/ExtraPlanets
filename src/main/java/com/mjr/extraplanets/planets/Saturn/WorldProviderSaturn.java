@@ -122,9 +122,9 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	@Override
 	public float getThermalLevelModifier() {
 		if (isDaytime()) {
-			return 70.0F;
+			return 80.0F;
 		}
-		return 60.0F;
+		return 70.0F;
 	}
 
 	@Override

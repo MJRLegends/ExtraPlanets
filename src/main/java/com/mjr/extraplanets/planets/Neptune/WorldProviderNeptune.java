@@ -122,9 +122,9 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	@Override
 	public float getThermalLevelModifier() {
 		if (isDaytime()) {
-			return -120.0F;
+			return -140.0F;
 		}
-		return -125.0F;
+		return -130.0F;
 	}
 
 	@Override

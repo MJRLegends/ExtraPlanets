@@ -125,7 +125,7 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 		if (isDaytime()) {
 			return 50.0F;
 		}
-		return -50.0F;
+		return 50.0F;
 	}
 
 	@Override

@@ -120,7 +120,7 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 	@Override
 	public float getThermalLevelModifier() {
 		if (isDaytime()) {
-			return -140.0F;
+			return -150.0F;
 		}
 		return -150.0F;
 	}

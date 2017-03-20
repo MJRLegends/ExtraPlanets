@@ -122,9 +122,9 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	@Override
 	public float getThermalLevelModifier() {
 		if (isDaytime()) {
-			return -130.0F;
+			return -140.0F;
 		}
-		return -135.0F;
+		return -140.0F;
 	}
 
 	@Override
