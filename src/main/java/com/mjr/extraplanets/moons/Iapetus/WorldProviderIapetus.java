@@ -144,9 +144,9 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 	@Override
 	public float getThermalLevelModifier() {
 		if (isDaytime()) {
-			return -110.0F;
+			return 40.0F;
 		}
-		return -115.0F;
+		return 20.0F;
 	}
 
 	@Override
