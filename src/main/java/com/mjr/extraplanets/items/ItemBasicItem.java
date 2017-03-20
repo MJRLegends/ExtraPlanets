@@ -18,8 +18,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.client.handlers.CapabilityStatsClientHandler;
-import com.mjr.extraplanets.client.handlers.IStatsClientCapability;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
+import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 
 public class ItemBasicItem extends Item {
 	public ItemBasicItem(String assetName) {
@@ -77,10 +77,10 @@ public class ItemBasicItem extends Item {
 			}
 
 			if (!worldIn.isRemote) {
-				IStatsClientCapability stats = null;
+				IStatsCapability stats = null;
 
 				if (entityLiving != null) {
-					stats = entityLiving.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
+					stats = entityLiving.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
 				stats.setRadiationLevel(stats.getRadiationLevel() / 2);
 			}

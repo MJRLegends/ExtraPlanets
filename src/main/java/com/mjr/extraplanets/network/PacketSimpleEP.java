@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import com.mjr.extraplanets.client.handlers.CapabilityStatsClientHandler;
-import com.mjr.extraplanets.client.handlers.IStatsClientCapability;
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
+import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
@@ -113,7 +115,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 		switch (this.type) {
 		case C_UPDATE_SOLAR_RADIATION_LEVEL:
-			stats.setRadiationLevel((Integer) this.data.get(0));
+			stats.setRadiationLevel((double) this.data.get(0));
 			break;
 		default:
 			break;

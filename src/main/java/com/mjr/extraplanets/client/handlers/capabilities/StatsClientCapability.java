@@ -1,6 +1,6 @@
-package com.mjr.extraplanets.client.handlers;
+package com.mjr.extraplanets.client.handlers.capabilities;
 
-public class StatsClientCapability implements IStatsClientCapability {
+public class StatsClientCapability implements IStatsClientCapability{
 	public double radiationLevel;
 
 	@Override
@@ -10,6 +10,6 @@ public class StatsClientCapability implements IStatsClientCapability {
 
 	@Override
 	public void setRadiationLevel(double radiationLevel) {
-		this.radiationLevel = radiationLevel;
+		this.radiationLevel = radiationLevel;		
 	}
 }

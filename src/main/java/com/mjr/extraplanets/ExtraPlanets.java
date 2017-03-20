@@ -21,6 +21,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
@@ -32,20 +33,9 @@ import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.BoneMealHandler;
 import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
-import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
-import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
-import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
-import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
-import com.mjr.extraplanets.moons.Iapetus.event.IapetusEvents;
-import com.mjr.extraplanets.moons.Io.event.IoEvents;
-import com.mjr.extraplanets.moons.Oberon.event.OberonEvents;
-import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
-import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
-import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
-import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
-import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
 import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
@@ -53,7 +43,6 @@ import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
 import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
-import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
 import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
@@ -255,6 +244,9 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		CapabilityStatsHandler.register();
+        CapabilityStatsClientHandler.register();
+        
 		// Register Schematics Recipes
 		registerSchematicsRecipes();
 
