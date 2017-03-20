@@ -466,7 +466,8 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(clean_water_bucket, "bucket_clean_water");
-		GameRegistry.registerItem(infected_water_bucket, "bucket_infected_water");;
+		GameRegistry.registerItem(infected_water_bucket, "bucket_infected_water");
+		;
 		GameRegistry.registerItem(radioactive_bucket, "bucket_radioactive_water");
 		GameRegistry.registerItem(methane_bucket, "bucket_methane");
 		GameRegistry.registerItem(nitrogen_ice_bucket, "bucket_nitrogen_ice");
@@ -489,7 +490,10 @@ public class ExtraPlanets_Items {
 			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.BUCKET));
 		}
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.cleanWater_fluid, new ItemStack(clean_water_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.infectedWater_fluid, new ItemStack(infected_water_bucket, 1, 0), new ItemStack(Items.BUCKET));
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.radioactiveWater_fluid, new ItemStack(radioactive_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.methane_fluid, new ItemStack(methane_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_ice_fluid, new ItemStack(nitrogen_ice_bucket, 1, 0), new ItemStack(Items.BUCKET));
 	}
 
 	public static void OreDictionaryRegister() {
