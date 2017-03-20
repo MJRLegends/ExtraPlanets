@@ -43,18 +43,21 @@ public class ItemBasicItem extends Item {
 		}
 	}
 
+	@Override
 	public EnumAction getItemUseAction(ItemStack stack) {
 		if (stack.getItem() == ExtraPlanets_Items.anti_radiation)
 			return EnumAction.DRINK;
 		return null;
 	}
 
+	@Override
 	public int getMaxItemUseDuration(ItemStack stack) {
 		if (stack.getItem() == ExtraPlanets_Items.anti_radiation)
 			return 32;
 		return 0;
 	}
 
+	@Override
 	public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
 		if (itemStackIn.getItem() == ExtraPlanets_Items.anti_radiation)
 			if (!playerIn.capabilities.isCreativeMode)
@@ -62,9 +65,7 @@ public class ItemBasicItem extends Item {
 		return itemStackIn;
 	}
 
-	/**
-	 * Called when the player finishes using this Item (E.g. finishes eating.). Not called when the player stops using the Item before the action is complete.
-	 */
+	@Override
 	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn) {
 		if (stack.getItem() == ExtraPlanets_Items.anti_radiation) {
 			if (!playerIn.capabilities.isCreativeMode) {
@@ -87,6 +88,7 @@ public class ItemBasicItem extends Item {
 		return stack;
 	}
 
+	@Override
 	public int getItemStackLimit(ItemStack stack) {
 		if (stack.getItem() == ExtraPlanets_Items.anti_radiation)
 			return 1;

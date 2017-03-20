@@ -525,17 +525,18 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.ultimateOxygenCompressor, 0, "oxygen_compressor");
 			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.ultimateOxygenCompressor, 4, "oxygen_decompressor");
 		}
-		if (Config.basicChemicalInjector)
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicChemicalInjector);
-		if (Config.basicCrystallizer)
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicCrystallizer);
-		if (Config.basicDecrystallizer)
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicDecrystallizer);
-		if (Config.basicSmasher)
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicSmasher);
-		if (Config.basicSolarEvaporationChamber)
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicSolarEvaporationChamber);
-
+		if (Config.radiation) {
+			if (Config.basicChemicalInjector)
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicChemicalInjector);
+			if (Config.basicCrystallizer)
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicCrystallizer);
+			if (Config.basicDecrystallizer)
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicDecrystallizer);
+			if (Config.basicSmasher)
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicSmasher);
+			if (Config.basicSolarEvaporationChamber)
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.basicSolarEvaporationChamber);
+		}
 		// Other Blocks
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.fossil);
