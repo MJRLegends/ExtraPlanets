@@ -44,6 +44,29 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.0 Pre-5.0
+*Added Basic Hideout's to Jupiter
+*Added Blue, Red, Purple, Yellow, Green, Brown Wooden Huts to Kepler22b
+*Added Evolved Snowman Boss to Neptune to replace the Creeper Boss, and Added Small Snowballs Projectiles
+*Added Evolved Ghast Boss to Saturn to replace the Creeper Boss
+*Clean up
+*Fixed Magma Cube boss not jumping correctly
+*Fixed issue with the Dungeons to where the bosses get stuck in the roof
+*Hide Carbon, Red Gem wafers from NEI when MorePlanets Compatibility is enabled
+*Added Config option to disable Custom Batteries, Custom Apples, Custom Canned Food
+*Few fixes for Kepler Systems being turned off via config
+*Fixes for Thermal Padding Config option
+*Added Config options for Generating Venus Volcanos, Uranus Ice Spikes & Igloos
+*Added basic compatibility config option for MorePlanets addon
+*Added Nuclear Bomb Config option
+*Fixed Compressed Zinc Recipe & Fixed Tier 8 Rocket Booster & Tier 8 Heavy-Duty Plate recipe
+*Fixes for Machine, Tools, Armour, Compressor, Smelting, Wafer recipes when MorePlanets Compatibility to enabled
+*Clean up/organised entities classes
+*Updated lang files
+*Changed Tier 2 - 4 Thermal Padding recipes & Added Tier 2 - 4 Thermal Cloth
+*Fixed Block of Mercury & Dark Iron not having a recipe
+*Updated Galacticraft API to latest
+
 v1.0 Pre-4.0
 *Fixed Mars Space Station Sky Provider
 *Updated lang files (Thanks to JrantKing)

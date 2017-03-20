@@ -7,8 +7,8 @@ import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.client.gui.GuiSchematicTier7Rocket;
-import com.mjr.extraplanets.inventory.ContainerSchematicTier7Rocket;
+import com.mjr.extraplanets.client.gui.rockets.GuiSchematicTier7Rocket;
+import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier7Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.relauncher.Side;

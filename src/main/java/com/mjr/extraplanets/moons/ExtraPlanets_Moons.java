@@ -1,12 +1,9 @@
 package com.mjr.extraplanets.moons;
 
-import java.util.ArrayList;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
-import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
@@ -33,6 +30,7 @@ import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
 import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Moons {
 	public static Moon triton;
@@ -60,15 +58,15 @@ public class ExtraPlanets_Moons {
 
 	public static void initializeUnReachableMoons() {
 		// Saturn Moons
-		iapetus = makeUnreachableMoon("iapetus", ExtraPlanets_Planets.saturn);
+		iapetus = RegisterHelper.makeUnreachableMoon("iapetus", ExtraPlanets_Planets.saturn);
 		if (iapetus != null)
 			iapetus.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(107.1425462429542F);
 
 		// Uranus Moons
-		titania = makeUnreachableMoon("titania", ExtraPlanets_Planets.uranus);
+		titania = RegisterHelper.makeUnreachableMoon("titania", ExtraPlanets_Planets.uranus);
 		if (titania != null)
 			titania.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(38.155821478514518F);
-		oberon = makeUnreachableMoon("oberon", ExtraPlanets_Planets.uranus);
+		oberon = RegisterHelper.makeUnreachableMoon("oberon", ExtraPlanets_Planets.uranus);
 		if (oberon != null)
 			oberon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(68.5411941552618F);
 	}
@@ -157,7 +155,7 @@ public class ExtraPlanets_Moons {
 			rhea.setPhaseShift(1.45F);
 			rhea.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			rhea.setRelativeOrbitTime(42.74914745741246F);
-			rhea.setTierRequired(6);
+			rhea.setTierRequired(5);
 			rhea.setRelativeSize(0.3867F);
 			rhea.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			rhea.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/rhea.png"));
@@ -168,7 +166,7 @@ public class ExtraPlanets_Moons {
 			titan.setPhaseShift(1.45F);
 			titan.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			titan.setRelativeOrbitTime(71.452415154621642F);
-			titan.setTierRequired(6);
+			titan.setTierRequired(5);
 			titan.setRelativeSize(0.3867F);
 			titan.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			titan.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
@@ -222,22 +220,5 @@ public class ExtraPlanets_Moons {
 			GalacticraftRegistry.registerTeleportType(WorldProviderTitan.class, new TeleportTypeTitan());
 			GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titanRocketGui.png"));
 		}
-	}
-
-	private static Moon makeUnreachableMoon(String name, Planet parent) {
-		ArrayList<CelestialBody> cBodyList = new ArrayList<CelestialBody>();
-		cBodyList.addAll(GalaxyRegistry.getRegisteredMoons().values());
-		for (CelestialBody body : cBodyList) {
-			if (body instanceof Moon && name.equals(body.getName()))
-				if (((Moon) body).getParentPlanet() == parent)
-					return null;
-		}
-		Moon moon = new Moon(name).setParentPlanet(parent);
-		if (name.equalsIgnoreCase("callisto") || name.equalsIgnoreCase("europa") || name.equalsIgnoreCase("io") || name.equalsIgnoreCase("ganymede"))
-			moon.setBodyIcon(new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/" + name + ".png"));
-		else
-			moon.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/" + name + ".png"));
-		GalaxyRegistry.registerMoon(moon);
-		return moon;
 	}
 }

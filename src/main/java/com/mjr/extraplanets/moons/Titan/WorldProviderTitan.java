@@ -10,6 +10,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.WorldChunkManagerTitan;
@@ -119,7 +120,7 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= 7;
+		return tier >= ExtraPlanets_Moons.titan.getTierRequirement();
 	}
 
 	@Override
@@ -144,10 +145,14 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return 70.0F;
+		if(Config.thermalPaddings){
+			if (isDaytime()) {
+				return 70.0F;
+			}
+			return -60.0F;
 		}
-		return 60.0F;
+		else
+			return -1.5F;
 	}
 
 	@Override

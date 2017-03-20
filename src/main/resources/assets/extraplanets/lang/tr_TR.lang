@@ -353,6 +353,17 @@ tile.treasureChestT8.description=Tier 8 Hazine Sandığı Neptün zindanında bu
 tile.treasureChestT9.description=Tier 9 Hazine Sandığı Pluto zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 tile.treasureChestT10.description=Tier 10 Hazine Sandığı Eris zindanında bulunur. Açılması için sondaki Patron canavarı öldürün.
 
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Tier 4 Treasure Chest
+tile.treasureChestT4Uranus.name=Tier 4 Treasure Chest
+tile.treasureChestT5Neptune.name=Tier 5 Treasure Chest
+tile.treasureChestT6Eris.name=Tier 6 Treasure Chest
+
+tile.treasureChestT4Saturn.description=Tier 4 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT4Uranus.description=Tier 4 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT5Neptune.description=Tier 4 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
 #Machines
 tile.advancedRefinery.name=Gelişmiş Rafineri
 tile.solar.hybrid.name=Karışık Güneş Paneli
@@ -484,6 +495,12 @@ item.key.T7.name=Tier 7 Zindan Anahtarı
 item.key.T8.name=Tier 8 Zindan Anahtarı
 item.key.T9.name=Tier 9 Zindan Anahtarı
 item.key.T10.name=Tier 10 Zindan Anahtarı
+
+#Keys For More Planets Compatibility
+item.key.T4Saturn.name=Tier 4 Saturn Dungeon Key
+item.key.T4Uranus.name=Tier 4 Uranus Dungeon Key
+item.key.T5Neptune.name=Tier 5 Neptune Dungeon Key
+item.key.T6Eris.name=Tier 6 Eris Dungeon Key
 
 #Tools
 item.carbonPickaxe.name=Karbon Kazma
@@ -684,6 +701,10 @@ tier2.information=Venüs ve Merkür İçin Gerekli
 tier3.information=Jüpiter Ve Satürn İçin Gerekli
 tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
 
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
 #Other Items
 item.appleDiamond.name=Elmas Elma
 item.appleIron.name=Iron Apple
@@ -717,7 +738,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Evrimleşmiş Creeper Patronu
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Evrimleşmiş Cadı
 entity.ExtraPlanetsEvolvedMagmaCube.name=Evrimleşmiş Magma Küpü
@@ -727,6 +750,8 @@ entity.ExtraPlanetsEvolvedBlaze.name=Evrimleşmiş Blaze
 entity.ExtraPlanetsEvolvedBlueCreeper.name=Evrimleşmiş Mavi Creeper
 entity.ExtraPlanetsEvolvedRedCreeper.name=Evrimleşmiş Kırmızı Creeper
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
 
 #Achievements
 achievement.mercuryPlanet=Merkür İçin Küçük Benim İçin Büyük!

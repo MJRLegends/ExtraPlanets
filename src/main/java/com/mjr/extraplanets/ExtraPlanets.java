@@ -3,9 +3,7 @@ package com.mjr.extraplanets;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -17,26 +15,29 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_MicroBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.client.gui.GuiHandler;
-import com.mjr.extraplanets.entities.EntityBlueCreeper;
-import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
-import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
-import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
-import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
-import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
-import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
-import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
-import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
-import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.monsters.EntityBlueCreeper;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedBlaze;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedGiantSpider;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedIceSlime;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedMagmaCube;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedMiniEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedRedCreeper;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
+import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -64,6 +65,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
+import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
@@ -80,6 +82,7 @@ import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier7Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier9Rocket;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -89,7 +92,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.EntityRegistry;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = "required-after:GalacticraftCore;required-after:GalacticraftMars;;required-after:Forge@[10.13.4.1558,);")
 public class ExtraPlanets {
@@ -119,15 +121,15 @@ public class ExtraPlanets {
 				return ExtraPlanets_Items.tier4Rocket;
 			else if (Config.jupiter)
 				return ExtraPlanets_Items.tier5Rocket;
-			else if (Config.saturn)
+			else if (Config.saturn && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier6Rocket;
-			else if (Config.uranus)
+			else if (Config.uranus && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier7Rocket;
-			else if (Config.neptune)
+			else if (Config.neptune && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier8Rocket;
 			else if (Config.pluto)
 				return ExtraPlanets_Items.tier9Rocket;
-			else if (Config.eris)
+			else if (Config.eris && Config.morePlanetsCompatibility == false)
 				return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
@@ -186,6 +188,8 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new PlutoEvents());
 		if (Config.eris)
 			MinecraftForge.EVENT_BUS.register(new ErisEvents());
+		if (Config.kepler22b && Config.keplerSolarSystems)
+			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
 
 		// Moons Events
 		if (Config.callisto)
@@ -267,10 +271,12 @@ public class ExtraPlanets {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
-		registerSchematicsRecipes();
+		if(Config.morePlanetsCompatibility == false)
+			registerSchematicsRecipes();
 
 		// Register/Add Dungeon Loot
-		addDungeonLoot();
+		if(Config.morePlanetsCompatibility == false)
+			addDungeonLoot();
 
 		// Register Recipes
 		ExtraPlanets_Recipes.init();
@@ -284,67 +290,78 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
-		if (Config.venus)
-			registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
-		if (Config.jupiter)
-			registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
-		if (Config.saturn)
-			registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modName + "EntityTier6Rocket", 150, 1, false);
-		if (Config.uranus)
-			registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modName + "EntityTier7Rocket", 150, 1, false);
-		if (Config.neptune)
-			registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
-		if (Config.pluto)
-			registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
-		if (Config.eris)
-			registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
+		if(Config.nuclearBomb)
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		if(Config.morePlanetsCompatibility == false){
+			if (Config.venus)
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
+			if (Config.jupiter)
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
+			if (Config.saturn)
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modName + "EntityTier6Rocket", 150, 1, false);
+			if (Config.uranus)
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modName + "EntityTier7Rocket", 150, 1, false);
+			if (Config.neptune)
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
+			if (Config.pluto)
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
+			if (Config.eris)
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.modName + "SmallSnowBall", 150, 1, true);
+		}
 	}
 
 	private void registerCreatures() {
 		// Dungeon Bosses
 		if (Config.venus)
 			if (Config.useDefaultBosses)
-				registerExtraPlanetsCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
 			else
-				registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
-			registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
-			registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
+			
+			if (Config.useDefaultBosses)
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
+			else
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedGhastBoss.class, Constants.modName + "EvolvedGhastBoss", 894731, 0);
 		if (Config.uranus)
 			if (Config.useDefaultBosses)
-				registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
 			else
-				registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EntityEvolvedIceSlimeBoss", 16382457, 44975);
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
-			registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+			if (Config.useDefaultBosses)
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+			else
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedSnowmanBoss.class, Constants.modName + "EvolvedSnowmanBoss", 894731, 0);
 		if (Config.pluto)
-			registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
 		if (Config.eris)
-			registerExtraPlanetsCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
 
 		// Entities
 		if (Config.evolvedMagmaCube)
-			registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
 		if (Config.evolvedIceSlime)
-			registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
 		if (Config.evolvedWitch)
-			registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.modName + "EvolvedWitch", 3407872, 5349438);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.modName + "EvolvedWitch", 3407872, 5349438);
 		if (Config.evolvedEnderman)
-			registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.modName + "EvolvedEnderman", 1447446, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.modName + "EvolvedEnderman", 1447446, 0);
 		if (Config.evolvedBlaze)
-			registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.modName + "EvolvedBlaze", 16167425, 16775294);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.modName + "EvolvedBlaze", 16167425, 16775294);
 		if (Config.evolvedBlueCreeper)
-			registerExtraPlanetsCreature(EntityBlueCreeper.class, Constants.modName + "EvolvedBlueCreeper", 44975, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityBlueCreeper.class, Constants.modName + "EvolvedBlueCreeper", 44975, 0);
 		if (Config.evolvedRedCreeper)
-			registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, Constants.modName + "EvolvedRedCreeper", 11013646, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, Constants.modName + "EvolvedRedCreeper", 11013646, 0);
 		if (Config.evolvedPowerSkeleton)
-			registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
 		if (Config.evolvedGiantSpider)
-			registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class, Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class, Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
 		if (Config.evolvedMiniEnderman)
-			registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class, Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class, Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
 	}
 
 	private void registerSchematicsRecipes() {
@@ -380,16 +397,4 @@ public class ExtraPlanets {
 		if (Config.eris)
 			GalacticraftRegistry.addDungeonLoot(10, new ItemStack(ExtraPlanets_Items.schematicTier10, 1, 0));
 	}
-
-	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
-		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
-	}
-
-	public void registerExtraPlanetsCreature(Class<? extends Entity> var0, String var1, int back, int fore) {
-		EntityRegistry.instance();
-		int newID = EntityRegistry.findGlobalUniqueEntityId();
-		EntityRegistry.registerGlobalEntityID(var0, var1, newID, back, fore);
-		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, 80, 3, true);
-	}
-
 }

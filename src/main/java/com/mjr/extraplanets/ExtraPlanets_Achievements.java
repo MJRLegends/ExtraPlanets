@@ -100,7 +100,7 @@ public class ExtraPlanets_Achievements {
 			plutoPlanet = new Achievement("achievement.plutoPlanet", "plutoPlanet", 13, 4, ExtraPlanets_Blocks.plutoBlocks, craftRocket9).registerStat();
 		if (Config.eris)
 			erisPlanet = new Achievement("achievement.erisPlanet", "erisPlanet", 15, 4, ExtraPlanets_Blocks.erisBlocks, craftRocket10).registerStat();
-		if (Config.kepler22b)
+		if (Config.kepler22b && Config.keplerSolarSystems)
 			kepler22bPlanet = new Achievement("achievement.kepler22bPlanet", "kepler22bPlanet", 17, 4, ExtraPlanets_Blocks.kepler22bBlocks, craftRocket10).registerStat();
 
 		// Extra Planets Achievements

@@ -356,6 +356,17 @@ tile.treasureChestT8.description=8阶宝箱会在海王星地牢形成。当你�
 tile.treasureChestT9.description=9阶宝箱会在冥王星地牢形成。当你击败了冥王星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasureChestT10.description=10阶宝箱会在阋神星地牢形成。当你击败了阋神星地牢BOSS后，就能拿到钥匙来打开宝箱。
 
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Tier 4 Treasure Chest
+tile.treasureChestT4Uranus.name=Tier 4 Treasure Chest
+tile.treasureChestT5Neptune.name=Tier 5 Treasure Chest
+tile.treasureChestT6Eris.name=Tier 6 Treasure Chest
+
+tile.treasureChestT4Saturn.description=Tier 4 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT4Uranus.description=Tier 4 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT5Neptune.description=Tier 4 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
 #Machines
 tile.advancedRefinery.name=高级精炼机
 tile.solar.hybrid.name=混合型高级太阳能电池板
@@ -488,6 +499,12 @@ item.key.T7.name=7阶宝箱钥匙
 item.key.T8.name=8阶宝箱钥匙
 item.key.T9.name=9阶宝箱钥匙
 item.key.T10.name=10阶宝箱钥匙
+
+#Keys For More Planets Compatibility
+item.key.T4Saturn.name=Tier 4 Saturn Dungeon Key
+item.key.T4Uranus.name=Tier 4 Uranus Dungeon Key
+item.key.T5Neptune.name=Tier 5 Neptune Dungeon Key
+item.key.T6Eris.name=Tier 6 Eris Dungeon Key
 
 #Tools
 item.carbonPickaxe.name=碳镐
@@ -688,6 +705,10 @@ tier2.information=在金星和水星度过一天的必需品
 tier3.information=在木星和土星以及它们的卫星度过一天的必需品
 tier4.information=在天王星，海王星，冥王星和阋神星以及它们的卫星度过一天的必需品
 
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
 #Other Items
 item.appleDiamond.name=钻石苹果
 item.appleIron.name=Iron Apple
@@ -721,7 +742,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=冥王星爬行者之王(进化体)
 entity.ExtraPlanetsCreeperBossEris.name=阋神星爬行者之王(进化体)
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=岩浆怪之王(进化体)
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=冰史莱姆之王(进化体)
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=冰史莱姆之王(进化体)
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=女巫(进化体)
 entity.ExtraPlanetsEvolvedMagmaCube.name=岩浆怪(进化体)
@@ -731,6 +754,8 @@ entity.ExtraPlanetsEvolvedBlaze.name=烈焰人(进化体)
 entity.ExtraPlanetsEvolvedBlueCreeper.name=蓝色爬行者(进化体)
 entity.ExtraPlanetsEvolvedRedCreeper.name=红色爬行者(进化体)
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髅(进化体)
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
 
 #Achievement
 achievement.mercuryPlanet=登陆水星！

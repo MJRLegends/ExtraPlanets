@@ -352,6 +352,17 @@ tile.treasureChestT8.description=Los cofres del tesoro nivel 8 se generarán en 
 tile.treasureChestT9.description=Los cofres del tesoro nivel 9 se generarán en las mazmorras de Pluto. Se desbloquean despues de matar al jefe final.
 tile.treasureChestT10.description=Los cofres del tesoro nivel 10 se generarán en las mazmorras de Eris. Se desbloquean despues de matar al jefe final.
 
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Tier 4 Treasure Chest
+tile.treasureChestT4Uranus.name=Tier 4 Treasure Chest
+tile.treasureChestT5Neptune.name=Tier 5 Treasure Chest
+tile.treasureChestT6Eris.name=Tier 6 Treasure Chest
+
+tile.treasureChestT4Saturn.description=Tier 4 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT4Uranus.description=Tier 4 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT5Neptune.description=Tier 4 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
 #Machines
 tile.advancedRefinery.name=Refinería Avanzada
 tile.solar.hybrid.name=Panel Solar Híbrido
@@ -483,6 +494,12 @@ item.key.T7.name=Llave de mazmorra nivel 7
 item.key.T8.name=Llave de mazmorra nivel 8
 item.key.T9.name=Llave de mazmorra nivel 9
 item.key.T10.name=Llave de mazmorra nivel 10
+
+#Keys For More Planets Compatibility
+item.key.T4Saturn.name=Tier 4 Saturn Dungeon Key
+item.key.T4Uranus.name=Tier 4 Uranus Dungeon Key
+item.key.T5Neptune.name=Tier 5 Neptune Dungeon Key
+item.key.T6Eris.name=Tier 6 Eris Dungeon Key
 
 #Tools
 item.carbonPickaxe.name=Pico de carbono
@@ -683,6 +700,10 @@ tier2.information=Requerido para Venus y Mercurio durante el día y la noche
 tier3.information=Requerido para Júptier y Saturno incluyendo sus lunas durante el día y la noche
 tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas durante el día y la noche
 
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
 #Other Items
 item.appleDiamond.name=Manzana de diamante
 item.appleIron.name=Manzana de hierro
@@ -716,7 +737,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Jefe creeper evolucionado de Pluto
 entity.ExtraPlanetsCreeperBossEris.name=Jefe creeper evolucionado de Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Bruja evolucionada
 entity.ExtraPlanetsEvolvedMagmaCube.name=Slime magmático evolucionado
@@ -726,6 +749,8 @@ entity.ExtraPlanetsEvolvedBlaze.name=Blaze evolucionado
 entity.ExtraPlanetsEvolvedBlueCreeper.name=Creeper azúl evolucionado
 entity.ExtraPlanetsEvolvedRedCreeper.name=Creeper rojo evolucionado
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
 
 #Achievements
 achievement.mercuryPlanet=¡Aterriza en Mercurio!

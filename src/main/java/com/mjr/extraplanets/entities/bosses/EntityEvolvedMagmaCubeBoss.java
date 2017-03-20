@@ -56,12 +56,11 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 
 	public EntityEvolvedMagmaCubeBoss(World p_i1742_1_) {
 		super(p_i1742_1_);
-		float i = 10;
+		int i = 10;
 		// int i = 5;
 		this.yOffset = 0.0F;
 		this.slimeJumpDelay = this.rand.nextInt(20) + 10;
 		this.setSlimeSize((int) i);
-		this.setSize(i, i);
 	}
 
 	@Override
@@ -74,7 +73,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 		this.dataWatcher.updateObject(16, new Byte((byte) p_70799_1_));
 		this.setSize(0.6F * p_70799_1_, 0.6F * p_70799_1_);
 		this.setPosition(this.posX, this.posY, this.posZ);
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((p_70799_1_ * p_70799_1_) * 2);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((p_70799_1_ * p_70799_1_) * 4);
 		this.setHealth(this.getMaxHealth());
 		this.experienceValue = p_70799_1_;
 	}

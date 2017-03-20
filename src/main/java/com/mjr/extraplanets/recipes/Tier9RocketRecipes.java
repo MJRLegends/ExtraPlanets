@@ -9,7 +9,7 @@ import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.inventory.InventorySchematicTier9Rocket;
+import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier9Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class Tier9RocketRecipes {

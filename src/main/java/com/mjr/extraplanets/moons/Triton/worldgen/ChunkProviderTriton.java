@@ -30,8 +30,8 @@ import net.minecraft.world.chunk.IChunkProvider;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
-import com.mjr.extraplanets.entities.EntityEvolvedWitch;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
 import com.mjr.extraplanets.moons.Triton.worldgen.village.MapGenVillageTriton;
 
 public class ChunkProviderTriton extends ChunkProviderSpace {

@@ -7,7 +7,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
-import com.mjr.extraplanets.items.ItemBlockSolar;
+import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
 import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.TileEntitySolar;
 
@@ -32,7 +32,8 @@ public class ExtraPlanets_Machines {
 	}
 
 	private static void registerMachines() {
-		GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
+		if(Config.advancedRefinery)
+			GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
 		if(Config.solarPanels){
 			GCCoreUtil.registerGalacticraftBlock("solarPanelHybrid", solarPanel, 0);
 			GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);

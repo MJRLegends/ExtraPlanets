@@ -353,6 +353,17 @@ tile.treasureChestT8.description=Truhly s pokladem typu 8 se generují na Neptun
 tile.treasureChestT9.description=Truhly s pokladem typu 9 se generují na Plutu. Mohou být odemčeny po poražení závěrečného bosse.
 tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
 
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Tier 4 Treasure Chest
+tile.treasureChestT4Uranus.name=Tier 4 Treasure Chest
+tile.treasureChestT5Neptune.name=Tier 5 Treasure Chest
+tile.treasureChestT6Eris.name=Tier 6 Treasure Chest
+
+tile.treasureChestT4Saturn.description=Tier 4 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT4Uranus.description=Tier 4 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT5Neptune.description=Tier 4 Treasure Chests will generate in Neptune Dungeons. They are unlockable after defeating the final boss.
+tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
 #Machines
 tile.advancedRefinery.name=Advanced Refinery
 tile.solar.hybrid.name=Hybridní solární panel
@@ -484,6 +495,12 @@ item.key.T7.name=Klíč ke kobce typ 7
 item.key.T8.name=Klíč ke kobce typ 8
 item.key.T9.name=Klíč ke kobce typ 9
 item.key.T10.name=Klíč ke kobce typ 10
+
+#Keys For More Planets Compatibility
+item.key.T4Saturn.name=Tier 4 Saturn Dungeon Key
+item.key.T4Uranus.name=Tier 4 Uranus Dungeon Key
+item.key.T5Neptune.name=Tier 5 Neptune Dungeon Key
+item.key.T6Eris.name=Tier 6 Eris Dungeon Key
 
 #Tools
 item.carbonPickaxe.name=Karbonový krumpáč
@@ -684,6 +701,10 @@ tier2.information=Required for Venus and Mercury during day and the night
 tier3.information=Required for Jupiter and Saturn including their moons during day and the night
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
 
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
 #Other Items
 item.appleDiamond.name=Diamantové jablko
 item.appleIron.name=Iron Apple
@@ -717,7 +738,9 @@ entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
 entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
 
 entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
-entity.ExtraPlanetsEntityEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
 
 entity.ExtraPlanetsEvolvedWitch.name=Vyvinutá Čarodejnice
 entity.ExtraPlanetsEvolvedMagmaCube.name=Vyvinutá Magma Kostka
@@ -727,6 +750,8 @@ entity.ExtraPlanetsEvolvedBlaze.name=Vyvinutý Ohnivák
 entity.ExtraPlanetsEvolvedBlueCreeper.name=Vyvinutý Modrý Syčák
 entity.ExtraPlanetsEvolvedRedCreeper.name=Vyvinutý Červený Syčák
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
 
 #Achievement
 achievement.mercuryPlanet=Přistaň na Merkuru!

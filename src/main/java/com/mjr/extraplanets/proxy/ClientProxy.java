@@ -3,7 +3,9 @@ package com.mjr.extraplanets.proxy;
 import micdoodle8.mods.galacticraft.core.client.render.item.ItemRendererKey;
 import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemRendererThermalArmor;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.AdvancedModelLoader;
@@ -13,8 +15,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
-import com.mjr.extraplanets.client.model.ModelEvolvedIceSlime;
-import com.mjr.extraplanets.client.model.ModelEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.client.model.bosses.ModelEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.client.model.monsters.ModelEvolvedIceSlime;
 import com.mjr.extraplanets.client.render.RenderPlayerExtraPlanets;
 import com.mjr.extraplanets.client.render.block.BlockRendererMachine;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier10TreasureChest;
@@ -25,33 +27,35 @@ import com.mjr.extraplanets.client.render.block.BlockRendererTier7TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier8TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier9TreasureChest;
 import com.mjr.extraplanets.client.render.block.TileEntitySolarPanelRenderer;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossEris;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossJupiter;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossNeptune;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossPluto;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossSaturn;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossUranus;
-import com.mjr.extraplanets.client.render.entities.RenderCreeperBossVenus;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlaze;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedBlueCreeper;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedEnderman;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedGiantSpider;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlime;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedIceSlimeBoss;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCube;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedMagmaCubeBoss;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedMiniEnderman;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedPowerSkeleton;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedRedCreeper;
-import com.mjr.extraplanets.client.render.entities.RenderEvolvedWitch;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
-import com.mjr.extraplanets.client.render.entities.RenderTier10Rocket;
-import com.mjr.extraplanets.client.render.entities.RenderTier4Rocket;
-import com.mjr.extraplanets.client.render.entities.RenderTier5Rocket;
-import com.mjr.extraplanets.client.render.entities.RenderTier6Rocket;
-import com.mjr.extraplanets.client.render.entities.RenderTier7Rocket;
-import com.mjr.extraplanets.client.render.entities.RenderTier8Rocket;
-import com.mjr.extraplanets.client.render.entities.RenderTier9Rocket;
+import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
+import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedSnowmanBoss;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossEris;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossJupiter;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossNeptune;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossPluto;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossSaturn;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossUranus;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossVenus;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedBlaze;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedBlueCreeper;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedEnderman;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedGiantSpider;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedIceSlime;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedMagmaCube;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedMiniEnderman;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedPowerSkeleton;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedRedCreeper;
+import com.mjr.extraplanets.client.render.entities.monsters.RenderEvolvedWitch;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier10Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier4Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier5Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier6Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier7Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier8Rocket;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier10Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
@@ -66,26 +70,29 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
-import com.mjr.extraplanets.entities.EntityBlueCreeper;
-import com.mjr.extraplanets.entities.EntityEvolvedBlaze;
-import com.mjr.extraplanets.entities.EntityEvolvedEnderman;
-import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
-import com.mjr.extraplanets.entities.EntityEvolvedIceSlime;
-import com.mjr.extraplanets.entities.EntityEvolvedMagmaCube;
-import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
-import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
-import com.mjr.extraplanets.entities.EntityEvolvedRedCreeper;
-import com.mjr.extraplanets.entities.EntityEvolvedWitch;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossEris;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossJupiter;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossNeptune;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossPluto;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossSaturn;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossVenus;
+import com.mjr.extraplanets.entities.monsters.EntityBlueCreeper;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedBlaze;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedGiantSpider;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedIceSlime;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedMagmaCube;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedMiniEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedRedCreeper;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
+import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -133,11 +140,13 @@ public class ClientProxy extends CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		renderMobEntities();
-		renderNonMobEntities();
+		if(Config.morePlanetsCompatibility == false)
+			renderNonMobEntities();
 		FMLCommonHandler.instance().bus().register(new MainHandler());
 		FMLCommonHandler.instance().bus().register(new SkyProviderHandler());
 
-		RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
+		if(Config.nuclearBomb)
+			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}
 
 	@Override
@@ -160,7 +169,10 @@ public class ClientProxy extends CommonProxy {
 		if (Config.jupiter)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, new RenderCreeperBossJupiter());
 		if (Config.saturn)
-			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
+			if(Config.useDefaultBosses)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGhastBoss.class, new RenderEvolvedGhastBoss());
 		if (Config.uranus) {
 			if(Config.useDefaultBosses)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, new RenderCreeperBossUranus());
@@ -168,7 +180,10 @@ public class ClientProxy extends CommonProxy {
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, new RenderEvolvedIceSlimeBoss(new ModelEvolvedIceSlimeBoss(16), new ModelEvolvedIceSlimeBoss(0), 0.25F));
 		}
 		if (Config.neptune)
-			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
+			if(Config.useDefaultBosses)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSnowmanBoss.class, new RenderEvolvedSnowmanBoss());
 		if (Config.pluto)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, new RenderCreeperBossPluto());
 		if (Config.eris)
@@ -194,6 +209,8 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGiantSpider.class, new RenderEvolvedGiantSpider());
 		if (Config.evolvedMiniEnderman)
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMiniEnderman.class, new RenderEvolvedMiniEnderman());
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, new RenderSnowball(Items.snowball));
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -299,9 +316,11 @@ public class ClientProxy extends CommonProxy {
 		if (Config.eris) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT10.png")));
 		}
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
+		if(Config.thermalPaddings){
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -314,6 +333,7 @@ public class ClientProxy extends CommonProxy {
 
 	@SideOnly(Side.CLIENT)
 	public static void registerTileEntityRenderers() {
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
+		if(Config.solarPanels)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
 	}
 }

@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
+
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

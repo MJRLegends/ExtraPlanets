@@ -1,58 +1,59 @@
 package com.mjr.extraplanets.entities.projectiles;
 
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntitySmallSnowball extends EntityThrowable {
+public class EntitySmallSnowball extends EntityThrowable
+{
+    public EntitySmallSnowball(World p_i1773_1_)
+    {
+        super(p_i1773_1_);
+    }
 
-	public static double accelMultiplier = 0.2D;
+    public EntitySmallSnowball(World p_i1774_1_, EntityLivingBase p_i1774_2_)
+    {
+        super(p_i1774_1_, p_i1774_2_);
+        this.setSize(3F, 3F);
+    }
 
-	public EntitySmallSnowball(World paramWorld) {
-		super(paramWorld);
-	}
+    public EntitySmallSnowball(World p_i1775_1_, double p_i1775_2_, double p_i1775_4_, double p_i1775_6_)
+    {
+        super(p_i1775_1_, p_i1775_2_, p_i1775_4_, p_i1775_6_);
+    }
 
-	public EntitySmallSnowball(World paramWorld,
-			EntityLivingBase paramEntityLivingBase) {
-		super(paramWorld, paramEntityLivingBase);
-	}
+    /**
+     * Called when this EntityThrowable hits a block or entity.
+     */
+    protected void onImpact(MovingObjectPosition p_70184_1_)
+    {
+        if (p_70184_1_.entityHit != null)
+        {
+            byte b0 = 0;
 
-	public EntitySmallSnowball(World paramWorld, double paramDouble1,
-			double paramDouble2, double paramDouble3) {
-		super(paramWorld, paramDouble1, paramDouble2, paramDouble3);
-	}
+            if (p_70184_1_.entityHit instanceof EntityBlaze)
+            {
+                b0 = 3;
+            }
+            else if (p_70184_1_.entityHit instanceof EntityPlayer)
+            {
+                b0 = 8;
+            }
+            p_70184_1_.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
+        }
 
-	@Override
-	protected void onImpact(MovingObjectPosition par1MovingObjectPosition) {
-		if (!this.worldObj.isRemote)
-		{
-			if (par1MovingObjectPosition.entityHit != null)
-			{
-				byte b0 = 0;
-				if (par1MovingObjectPosition.entityHit instanceof EntityPlayer)
-				{
-					b0 = 3;
-				}
-				par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), b0);
-			}
-			for (int i = 0; i < 8; ++i)
-			{
-				this.worldObj.spawnParticle("snowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
-			}
-			if (!this.worldObj.isRemote)
-			{
-				this.setDead();
-			}
-		}
-	}
+        for (int i = 0; i < 8; ++i)
+        {
+            this.worldObj.spawnParticle("snowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+        }
 
-	@SideOnly(Side.CLIENT)
-	public int func_70070_b(float paramFloat) {
-		return 15728880;
-	}
+        if (!this.worldObj.isRemote)
+        {
+            this.setDead();
+        }
+    }
 }

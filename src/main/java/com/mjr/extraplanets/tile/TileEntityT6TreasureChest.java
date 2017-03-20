@@ -21,6 +21,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 
 import cpw.mods.fml.relauncher.Side;
@@ -543,7 +544,10 @@ public class TileEntityT6TreasureChest extends TileEntityAdvanced implements IIn
 	@Override
 	public int getTierOfKeyRequired()
 	{
-		return this.tier;
+		if(Config.morePlanetsCompatibility)
+			return 4;
+		else
+			return this.tier;
 	}
 
 	@Override

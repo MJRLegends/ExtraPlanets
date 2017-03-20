@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Eris.worldgen.dungeon;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
@@ -25,9 +27,9 @@ public class RoomBossEris extends DungeonRoom
 		if (this.worldObj != null)
 		{
 			this.rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
-			this.sizeX = this.rand.nextInt(6) + 14;
-			this.sizeY = this.rand.nextInt(2) + 8;
-			this.sizeZ = this.rand.nextInt(6) + 14;
+			this.sizeX = 24;
+			this.sizeY = 11;
+			this.sizeZ = 24;
 		}
 	}
 

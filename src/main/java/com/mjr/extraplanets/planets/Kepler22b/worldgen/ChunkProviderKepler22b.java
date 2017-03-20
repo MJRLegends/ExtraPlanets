@@ -25,9 +25,9 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-import com.mjr.extraplanets.entities.EntityEvolvedGiantSpider;
-import com.mjr.extraplanets.entities.EntityEvolvedMiniEnderman;
-import com.mjr.extraplanets.entities.EntityEvolvedPowerSkeleton;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedGiantSpider;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedMiniEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
 

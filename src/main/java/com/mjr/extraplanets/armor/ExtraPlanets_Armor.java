@@ -183,7 +183,7 @@ public class ExtraPlanets_Armor {
 			tungstenLegings = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 2).setUnlocalizedName("tungstenLegings");
 			tungstenBoots = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 3).setUnlocalizedName("tungstenBoots");
 		}
-		if (Config.kepler22b && Config.kepler22bItems) {
+		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
 			blueDiamondHelmet = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 0).setUnlocalizedName("blueDiamondHelmet");
 			blueDiamondChest = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 1).setUnlocalizedName("blueDiamondChest");
 			blueDiamondLegings = new BlueDiamondArmor("blueDiamond", blueDiamond_ArmorMaterial, 2).setUnlocalizedName("blueDiamondLegings");
@@ -284,7 +284,7 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(tungstenLegings, "tungstenLegings");
 			GameRegistry.registerItem(tungstenBoots, "tungstenBoots");
 		}
-		if (Config.kepler22b && Config.kepler22bItems) {
+		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
 			GameRegistry.registerItem(blueDiamondHelmet, "blueDiamondHelmet");
 			GameRegistry.registerItem(blueDiamondChest, "blueDiamondChest");
 			GameRegistry.registerItem(blueDiamondLegings, "blueDiamondLegings");

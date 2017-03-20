@@ -40,45 +40,38 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCallisto;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockCeres;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockDeimos;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEris;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockEuropa;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockGanymede;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockIo;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockJupiter;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockKepler22b;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockMercury;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockNeptune;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockPhobos;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockPluto;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockRhea;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockSaturn;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTitan;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockTriton;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockUranus;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.ItemBlockVenus;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLeaf;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleLog2;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bMapleSapling;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bPlanks;
-import com.mjr.extraplanets.items.planetAndMoonBlocks.Kepler22b.ItemBlockKepler22bTallGrass;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCallisto;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCeres;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockDeimos;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockEris;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockEuropa;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockGanymede;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockIo;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockJupiter;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockKepler22b;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockMercury;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockNeptune;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockPhobos;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockPluto;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockRhea;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockSaturn;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockTitan;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockTriton;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockUranus;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockVenus;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b.ItemBlockKepler22bMapleLeaf;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b.ItemBlockKepler22bMapleLog;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b.ItemBlockKepler22bMapleLog2;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b.ItemBlockKepler22bMapleSapling;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b.ItemBlockKepler22bPlanks;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b.ItemBlockKepler22bTallGrass;
 import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.DungeonSpawnerEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.DungeonSpawnerJuptier;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.DungeonSpawnerNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.TileEntityDungeonSpawnerNeptune;
 import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.DungeonSpawnerPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.DungeonSpawnerSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.DungeonSpawnerUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.DungeonSpawnerVenus;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.TileEntityDungeonSpawnerVenus;
 import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
@@ -86,6 +79,13 @@ import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -155,8 +155,6 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier9;
 	public static Block treasureChestTier10;
 
-	// Need changing to meta blocks -----------------------------------------
-	
 	//Dungeon Bricks
 	public static Block veunsDungeonBrick;
 	public static Block jupiterDungeonBrick;
@@ -191,23 +189,16 @@ public class ExtraPlanets_Blocks {
 	//Planks
 	public static Block kepler22bPlanks;
 
-	// -----------------------------------------------------------------------
-
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
-
-		// Need changing to meta blocks at some point
-		// -----------------------------------------
 		initializeDungeonBlocks();
 		initializeSpawnerBlocks();
-		// ----------------------------------------------------------------------
-
 		registerBlocks();
 		registerTileEntitys();
 		if(Config.oreDictionary)
 			OreDictionaryRegister();
-		if(Config.kepler22b){
+		if(Config.kepler22b && Config.keplerSolarSystems){
 			initializeTreeBlocks();
 			registerTreeBlocks();
 		}
@@ -291,9 +282,9 @@ public class ExtraPlanets_Blocks {
 
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
-		if (Config.ceres)
+		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
-		if(Config.kepler22b){
+		if(Config.kepler22b && Config.keplerSolarSystems){
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
 			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue", "kepler22b");
@@ -343,19 +334,31 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier5 = new T5TreasureChest("treasureChestT5");
 		}
 		if (Config.saturn) {
-			treasureChestTier6 = new T6TreasureChest("treasureChestT6");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier6 = new T6TreasureChest("treasureChestT4Saturn");
+			else
+				treasureChestTier6 = new T6TreasureChest("treasureChestT6");
 		}
 		if (Config.uranus) {
-			treasureChestTier7 = new T7TreasureChest("treasureChestT7");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier7 = new T7TreasureChest("treasureChestT4Uranus");
+			else
+				treasureChestTier7 = new T7TreasureChest("treasureChestT7");
 		}
 		if (Config.neptune) {
-			treasureChestTier8 = new T8TreasureChest("treasureChestT8");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier8 = new T8TreasureChest("treasureChestT5Neptune");
+			else
+				treasureChestTier8 = new T8TreasureChest("treasureChestT8");
 		}
 		if (Config.pluto) {
 			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
 		if (Config.eris) {
-			treasureChestTier10 = new T10TreasureChest("treasureChestT10");
+			if(Config.morePlanetsCompatibility)
+				treasureChestTier10 = new T10TreasureChest("treasureChestT6Eris");
+			else
+				treasureChestTier10 = new T10TreasureChest("treasureChestT10");
 		}
 	}
 
@@ -453,7 +456,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName());
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
-		if(Config.kepler22b){
+		if(Config.kepler22b && Config.keplerSolarSystems){
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
 			GameRegistry.registerBlock(kepler22bBlueGrass, "kepler22bBlueGrass");
@@ -501,7 +504,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");
-		if (Config.ceres)
+		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
 	}
 
@@ -516,15 +519,27 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.saturn) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
+			
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 4 Saturn Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
 		if (Config.uranus) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
+			
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 4 Uranus Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
 		if (Config.neptune) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
+			
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 5 Neptune Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.pluto) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
@@ -532,7 +547,10 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.eris) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
+			if(Config.morePlanetsCompatibility)
+				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 6 Eris Treasure Chest");
+			else
+				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
 	}
 
@@ -645,7 +663,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
-		if (Config.kepler22b) {
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
 			OreDictionary.registerOre("oreIron", new ItemStack(kepler22bBlocks, 1, 2));
 			OreDictionary.registerOre("oreCopper", new ItemStack(kepler22bBlocks, 1, 3));

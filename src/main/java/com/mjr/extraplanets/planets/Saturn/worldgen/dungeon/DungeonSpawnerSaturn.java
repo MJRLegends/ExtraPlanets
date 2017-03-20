@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Saturn.worldgen.dungeon;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
+
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
