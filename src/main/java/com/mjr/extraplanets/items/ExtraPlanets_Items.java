@@ -311,8 +311,10 @@ public class ExtraPlanets_Items {
 			potassiumIodide = new ItemBasicItem("potassiumIodide");
 			potassium = new ItemBasicItem("potassium");
 			potash = new ItemBasicItem("potashShards");
+			anti_radiation = new ItemBasicItem("anti_radiation");
 		}
 		clean_water_bucket = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.cleanWater);
+		infected_water_bucket = new ItemBasicItemBucket("bucket_infected_water", ExtraPlanets_Fluids.infectedWater);
 		radioactive_bucket = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.radioactiveWater);
 		methane_bucket = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
 		nitrogen_ice_bucket = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
@@ -456,6 +458,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(anti_radiation, anti_radiation.getUnlocalizedName().substring(5));
 		}
 		// GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
@@ -463,6 +466,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(clean_water_bucket, "bucket_clean_water");
+		GameRegistry.registerItem(infected_water_bucket, "bucket_infected_water");;
 		GameRegistry.registerItem(radioactive_bucket, "bucket_radioactive_water");
 		GameRegistry.registerItem(methane_bucket, "bucket_methane");
 		GameRegistry.registerItem(nitrogen_ice_bucket, "bucket_nitrogen_ice");
