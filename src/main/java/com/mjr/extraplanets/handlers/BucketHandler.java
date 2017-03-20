@@ -31,7 +31,7 @@ public class BucketHandler {
 			return;
 		}
 
-		event. = ret;
+		event.setFilledBucket(ret);
 		event.setResult(Result.ALLOW);
 	}
 
