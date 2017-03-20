@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Uranus;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -10,21 +11,19 @@ import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.client.IRenderHandler;
 import net.minecraftforge.fml.client.FMLClientHandler;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.mjr.extraplanets.Constants;
-
 public class SkyProviderUranus extends IRenderHandler {
-	private static final ResourceLocation overworldTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png");
-	private static final ResourceLocation overworldTexture2 = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");
-	private static final ResourceLocation overworldTexture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png");
-	private static final ResourceLocation overworldTexture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png");
+	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
 
 	public int starList;
@@ -32,8 +31,8 @@ public class SkyProviderUranus extends IRenderHandler {
 	public int glSkyList2;
 	private float sunSize;
 
-	public SkyProviderUranus(IGalacticraftWorldProvider marsProvider) {
-		this.sunSize = 17.5F * marsProvider.getSolarSize();
+	public SkyProviderUranus(IGalacticraftWorldProvider uranusProvider) {
+		this.sunSize = 17.5F * uranusProvider.getSolarSize();
 
 		int displayLists = GLAllocation.generateDisplayLists(3);
 		this.starList = displayLists;
@@ -48,7 +47,7 @@ public class SkyProviderUranus extends IRenderHandler {
 		GL11.glPopMatrix();
 
 		final Tessellator tessellator = Tessellator.getInstance();
-		WorldRenderer worldRenderer = tessellator.getWorldRenderer();
+		VertexBuffer worldRenderer = tessellator.getBuffer();
 		GL11.glNewList(this.glSkyList, GL11.GL_COMPILE);
 		final byte byte2 = 64;
 		final int i = 256 / byte2 + 2;
@@ -87,7 +86,7 @@ public class SkyProviderUranus extends IRenderHandler {
 	public void render(float partialTicks, WorldClient world, Minecraft mc) {
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-		Vec3 vec3 = world.getSkyColor(mc.getRenderViewEntity(), partialTicks);
+		Vec3d vec3 = world.getSkyColor(mc.getRenderViewEntity(), partialTicks);
 		float f1 = (float) vec3.xCoord;
 		float f2 = (float) vec3.yCoord;
 		float f3 = (float) vec3.zCoord;
@@ -104,7 +103,7 @@ public class SkyProviderUranus extends IRenderHandler {
 
 		GL11.glColor3f(f1, f2, f3);
 		Tessellator tessellator1 = Tessellator.getInstance();
-		WorldRenderer worldRenderer1 = tessellator1.getWorldRenderer();
+		VertexBuffer worldRenderer1 = tessellator1.getBuffer();
 		GL11.glDepthMask(false);
 		GL11.glEnable(GL11.GL_FOG);
 		GL11.glColor3f(f1, f2, f3);
@@ -122,8 +121,13 @@ public class SkyProviderUranus extends IRenderHandler {
 		float f18 = world.getStarBrightness(partialTicks);
 
 		if (f18 > 0.0F) {
+			GL11.glPushMatrix();
+			GL11.glRotatef(-90.0F, 0.0F, 1.0F, 0.0F);
+			GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
+			GL11.glRotatef(-19.0F, 0, 1.0F, 0);
 			GL11.glColor4f(f18, f18, f18, f18);
 			GL11.glCallList(this.starList);
+			GL11.glPopMatrix();
 		}
 
 		float[] afloat = new float[4];
@@ -241,48 +245,6 @@ public class SkyProviderUranus extends IRenderHandler {
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture4);
-		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
-		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 0.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture3);
-		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
-		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 0.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture2);
-		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
-		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 0.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
@@ -357,7 +319,7 @@ public class SkyProviderUranus extends IRenderHandler {
 	private void renderStars() {
 		final Random rand = new Random(10842L);
 		final Tessellator var2 = Tessellator.getInstance();
-		WorldRenderer worldRenderer = var2.getWorldRenderer();
+		VertexBuffer worldRenderer = var2.getBuffer();
 		worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION);
 
 		for (int starIndex = 0; starIndex < (ConfigManagerCore.moreStars ? 35000 : 6000); ++starIndex) {
@@ -403,8 +365,8 @@ public class SkyProviderUranus extends IRenderHandler {
 		var2.draw();
 	}
 
-	private Vec3 getCustomSkyColor() {
-		return new Vec3(0.26796875D, 0.1796875D, 0.0D);
+	private Vec3d getCustomSkyColor() {
+		return new Vec3d(0.26796875D, 0.1796875D, 0.0D);
 	}
 
 	public float getSkyBrightness(float par1) {

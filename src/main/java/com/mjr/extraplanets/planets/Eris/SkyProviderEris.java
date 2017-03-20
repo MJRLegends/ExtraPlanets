@@ -10,8 +10,11 @@ import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.client.IRenderHandler;
 import net.minecraftforge.fml.client.FMLClientHandler;
 
@@ -29,8 +32,8 @@ public class SkyProviderEris extends IRenderHandler {
 	public int glSkyList2;
 	private float sunSize;
 
-	public SkyProviderEris(IGalacticraftWorldProvider marsProvider) {
-		this.sunSize = 17.5F * marsProvider.getSolarSize();
+	public SkyProviderEris(IGalacticraftWorldProvider erisProvider) {
+		this.sunSize = 17.5F * erisProvider.getSolarSize();
 
 		int displayLists = GLAllocation.generateDisplayLists(3);
 		this.starList = displayLists;
@@ -45,7 +48,7 @@ public class SkyProviderEris extends IRenderHandler {
 		GL11.glPopMatrix();
 
 		final Tessellator tessellator = Tessellator.getInstance();
-		WorldRenderer worldRenderer = tessellator.getWorldRenderer();
+		VertexBuffer worldRenderer = tessellator.getBuffer();
 		GL11.glNewList(this.glSkyList, GL11.GL_COMPILE);
 		final byte byte2 = 64;
 		final int i = 256 / byte2 + 2;
@@ -84,7 +87,7 @@ public class SkyProviderEris extends IRenderHandler {
 	public void render(float partialTicks, WorldClient world, Minecraft mc) {
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-		Vec3 vec3 = world.getSkyColor(mc.getRenderViewEntity(), partialTicks);
+		Vec3d vec3 = world.getSkyColor(mc.getRenderViewEntity(), partialTicks);
 		float f1 = (float) vec3.xCoord;
 		float f2 = (float) vec3.yCoord;
 		float f3 = (float) vec3.zCoord;
@@ -101,7 +104,7 @@ public class SkyProviderEris extends IRenderHandler {
 
 		GL11.glColor3f(f1, f2, f3);
 		Tessellator tessellator1 = Tessellator.getInstance();
-		WorldRenderer worldRenderer1 = tessellator1.getWorldRenderer();
+		VertexBuffer worldRenderer1 = tessellator1.getBuffer();
 		GL11.glDepthMask(false);
 		GL11.glEnable(GL11.GL_FOG);
 		GL11.glColor3f(f1, f2, f3);
@@ -119,8 +122,13 @@ public class SkyProviderEris extends IRenderHandler {
 		float f18 = world.getStarBrightness(partialTicks);
 
 		if (f18 > 0.0F) {
+			GL11.glPushMatrix();
+			GL11.glRotatef(-90.0F, 0.0F, 1.0F, 0.0F);
+			GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
+			GL11.glRotatef(-19.0F, 0, 1.0F, 0);
 			GL11.glColor4f(f18, f18, f18, f18);
 			GL11.glCallList(this.starList);
+			GL11.glPopMatrix();
 		}
 
 		float[] afloat = new float[4];
@@ -312,7 +320,7 @@ public class SkyProviderEris extends IRenderHandler {
 	private void renderStars() {
 		final Random rand = new Random(10842L);
 		final Tessellator var2 = Tessellator.getInstance();
-		WorldRenderer worldRenderer = var2.getWorldRenderer();
+		VertexBuffer worldRenderer = var2.getBuffer();
 		worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION);
 
 		for (int starIndex = 0; starIndex < (ConfigManagerCore.moreStars ? 35000 : 6000); ++starIndex) {
@@ -358,8 +366,8 @@ public class SkyProviderEris extends IRenderHandler {
 		var2.draw();
 	}
 
-	private Vec3 getCustomSkyColor() {
-		return new Vec3(0.26796875D, 0.1796875D, 0.0D);
+	private Vec3d getCustomSkyColor() {
+		return new Vec3d(0.26796875D, 0.1796875D, 0.0D);
 	}
 
 	public float getSkyBrightness(float par1) {
