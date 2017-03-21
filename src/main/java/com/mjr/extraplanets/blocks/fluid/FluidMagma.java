@@ -2,9 +2,10 @@ package com.mjr.extraplanets.blocks.fluid;
 
 import java.util.Random;
 
+import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.IBlockAccess;
@@ -18,7 +19,7 @@ public class FluidMagma extends BlockFluidClassic implements IFluidBlock
 {
     public FluidMagma(String assetName)
     {
-        super(ExtraPlanets_Fluids.magma_fluid, ExtraPlanets_Fluids.magma_material);
+		super(ExtraPlanets_Fluids.magma_fluid, Material.lava);
         this.setQuantaPerBlock(9);
         this.setLightLevel(0.1F);
         this.needsRandomTick = true;
@@ -27,9 +28,11 @@ public class FluidMagma extends BlockFluidClassic implements IFluidBlock
 
     @Override
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, Entity entityIn){
-		if ((entityIn instanceof EntityPlayer)) {
-        	entityIn.attackEntityFrom(DamageSource.lava, 4.0F);
-        	entityIn.setFire(15);
+		if ((entityIn instanceof EntityLivingBase)) {
+			if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
+				((EntityLivingBase) entityIn).attackEntityFrom(DamageSource.lava, 4.0F);
+				((EntityLivingBase) entityIn).setFire(15);
+			}
 		}
 	}
 
