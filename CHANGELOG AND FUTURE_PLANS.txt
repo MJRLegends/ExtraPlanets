@@ -8,8 +8,10 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-
-
+0.7.5 Beta Build
+*Cleaned up the version number to a more organized version system
+*Fixed OreDictionary for Oberon/Iaptus/Titania
+*Fixed Diamond Types of Armours not rendering on player
 ======================================================================================================
 
 
