@@ -1,18 +1,19 @@
 package com.mjr.extraplanets.planets.Ceres;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Ceres.worldgen.ChunkProviderCeres;
 import com.mjr.extraplanets.planets.Ceres.worldgen.WorldChunkManagerCeres;
+import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
-public class WorldProviderCeres extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderCeres extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -140,7 +141,17 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 	public String getInternalNameSuffix() {
 		return "_ceres";
 	}
-	
+
+	@Override
+	public int getPressureLevel() {
+		return 2;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 50;
+	}
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
