@@ -10,10 +10,10 @@ import net.minecraftforge.common.MinecraftForge;
 
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
 import com.mjr.extraplanets.blocks.ExtraPlanets_MicroBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;

@@ -24,8 +24,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
 import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 

@@ -13,7 +13,7 @@ import net.minecraftforge.client.model.IModelCustom;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.model.bosses.ModelEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.model.monsters.ModelEvolvedIceSlime;

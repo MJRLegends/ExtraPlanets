@@ -1,12 +1,10 @@
-package com.mjr.extraplanets.blocks;
+package com.mjr.extraplanets.blocks.machines;
 
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
-import com.mjr.extraplanets.blocks.machines.BlockSolar;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
 import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.TileEntitySolar;
