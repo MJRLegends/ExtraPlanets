@@ -2,10 +2,11 @@ package com.mjr.extraplanets.blocks.fluid;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidClassic;
@@ -23,6 +24,14 @@ public class FluidMagma extends BlockFluidClassic implements IFluidBlock
         this.needsRandomTick = true;
         this.setUnlocalizedName(assetName);
     }
+
+    @Override
+    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, Entity entityIn){
+		if ((entityIn instanceof EntityPlayer)) {
+        	entityIn.attackEntityFrom(DamageSource.lava, 4.0F);
+        	entityIn.setFire(15);
+		}
+	}
 
     @Override
     public boolean canDisplace(IBlockAccess world, BlockPos pos)
