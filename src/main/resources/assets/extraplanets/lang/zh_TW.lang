@@ -810,6 +810,14 @@ achievement.plutoPlanet.desc=乘坐8階火箭到冥王星
 achievement.erisPlanet.desc=乘坐9階火箭到鬩神星
 achievement.kepler62bPlanet.desc=乘坐9階火箭到開普勒62b
 
+achievement.venusBoss=Defeated Tier 4 Boss!
+achievement.jupiterBoss=Defeated Tier 5 Boss!
+achievement.saturnBoss=Defeated Tier 6 Boss!
+achievement.uranusBoss=Defeated Tier 7 Boss!
+achievement.neptuneBoss=Defeated Tier 8 Boss!
+achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
+
 achievement.venusBoss.desc=擊殺金星地牢BOSS並開啟寶箱！
 achievement.jupiterBoss.desc=擊殺木星地牢BOSS並開啟寶箱！
 achievement.saturnBoss.desc=擊殺土星地牢BOSS並開啟寶箱！
