@@ -38,7 +38,9 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-
+v1.5.6
+*Cleaned up the version number to a more organized version system
+*Fixes/Updated lang files
 ======================================================================================================
 
 
