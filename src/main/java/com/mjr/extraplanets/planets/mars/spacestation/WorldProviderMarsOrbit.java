@@ -2,7 +2,7 @@ package com.mjr.extraplanets.planets.mars.spacestation;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOrbit;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.util.MathHelper;
@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
-public class WorldProviderMarsOrbit extends WorldProviderOrbit
+public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit
 {
 	@Override
 	public CelestialBody getCelestialBody()

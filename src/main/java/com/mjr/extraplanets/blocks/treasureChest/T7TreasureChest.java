@@ -1,6 +1,6 @@
 package com.mjr.extraplanets.blocks.treasureChest;
 
-import micdoodle8.mods.galacticraft.core.blocks.BlockT1TreasureChest;
+import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT7TreasureChest;
 
-public class T7TreasureChest extends BlockT1TreasureChest {
+public class T7TreasureChest extends BlockTier1TreasureChest {
 	public T7TreasureChest(String assetName) {
 		super(assetName);
 	}
