@@ -78,7 +78,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 			}
 		}
 		
-		if (this.rand.nextInt(50) == 1) {
+		if (this.rand.nextInt(200) == 1) {
 			int x = this.chunkX + 8;
 			int z = this.chunkZ + 8;
 			int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY();
