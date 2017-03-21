@@ -54,8 +54,6 @@ moon.rhea=Rhea
 moon.titan=Titan
 moon.oberon=Oberon
 moon.titania=Titania
-moon.oberon=Oberón
-moon.titania=Titania
 moon.charon=Charon
 moon.nix=Nix
 moon.hydra=Hydra
@@ -815,14 +813,6 @@ achievement.uranusBoss=Defeated Tier 7 Boss!
 achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
 achievement.erisBoss=Defeated Tier 10 Boss!
-
-achievement.venusBoss.desc=Kill the Venus Dungeon Boss
-achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
-achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss
-achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss
-achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss
-achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
-achievement.erisBoss.desc=Kill the Eris Dungeon Boss
 
 achievement.venusBoss.desc=Venüs Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.jupiterBoss.desc=Jüpiter Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç

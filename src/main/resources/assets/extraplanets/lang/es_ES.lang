@@ -813,14 +813,6 @@ achievement.neptuneBoss=¡Jefe nivel 8 derrotado!
 achievement.plutoBoss=¡Jefe nivel 9 derrotado!
 achievement.erisBoss=¡Jefe nivel 10 derrotado!
 
-achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus
-achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter
-achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno
-achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano
-achievement.neptuneBoss.desc=Mata al jefe de la mazmorra de Neptuno
-achievement.plutoBoss.desc=Mata al jefe de la mazmorra de Pluto
-achievement.erisBoss.desc=Mata al jefe de la mazmorra de Eris
-
 achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus y abre el cofre del tesoro
 achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter y abre el cofre del tesoro
 achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno y abre el cofre del tesoro

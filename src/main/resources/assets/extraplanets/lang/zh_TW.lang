@@ -55,8 +55,6 @@ moon.rhea=土衛五
 moon.iapetus=土衛八
 moon.titania=天衛三
 moon.oberon=天衛四
-moon.oberon=Oberón
-moon.titania=Titania
 moon.charon=Charon
 moon.nix=Nix
 moon.hydra=Hydra
@@ -811,14 +809,6 @@ achievement.neptunePlanet.desc=乘坐7階火箭到海王星
 achievement.plutoPlanet.desc=乘坐8階火箭到冥王星
 achievement.erisPlanet.desc=乘坐9階火箭到鬩神星
 achievement.kepler62bPlanet.desc=乘坐9階火箭到開普勒62b
-
-achievement.venusBoss=擊敗金星地牢BOSS！
-achievement.jupiterBoss=擊敗木星地牢BOSS！
-achievement.saturnBoss=擊敗土星地牢BOSS！
-achievement.uranusBoss=擊敗天王星地牢BOSS！
-achievement.neptuneBoss=擊敗海王星地牢BOSS！
-achievement.plutoBoss=擊敗冥王星地牢BOSS！
-achievement.erisBoss=擊敗鬩神星地牢BOSS！
 
 achievement.venusBoss.desc=擊殺金星地牢BOSS並開啟寶箱！
 achievement.jupiterBoss.desc=擊殺木星地牢BOSS並開啟寶箱！
