@@ -767,6 +767,21 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
+		if (Config.oberon) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(oberonBlocks, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(oberonBlocks, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(oberonBlocks, 1, 3));
+		}
+		if (Config.iapetus) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(iapetusBlocks, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(iapetusBlocks, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(iapetusBlocks, 1, 3));
+		}
+		if (Config.titania) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(titaniaBlocks, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(titaniaBlocks, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(titaniaBlocks, 1, 3));
+		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
 			OreDictionary.registerOre("oreIron", new ItemStack(kepler22bBlocks, 1, 2));
