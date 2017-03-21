@@ -22,7 +22,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		for (int i = 0; i < 11; i++) {
 			for (int j = 0; j < 11; j++) {
 				try {
-					if (world.getBlock(x + i, y - 1, z + j) == Blocks.air)
+					if (world.getBlock(x + i, y - 3, z + j) == Blocks.air)
 						return false;
 				} catch (Exception ex) {
 					System.out.println("ExtraPlanets: " + ex.getMessage());
@@ -41,7 +41,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		if (!world.checkChunksExist(x - 10, y, z - 10, x + 10, y, z + 10))
 			return false;
 		else {
-			//System.out.println("Spawning Basic Hideout at (x, y, z)" + x + " " + y + " " + z);
+			System.out.println("Spawning Basic Hideout at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y, z);
 			fillChests(world, rand, x, y, z);
 		}
