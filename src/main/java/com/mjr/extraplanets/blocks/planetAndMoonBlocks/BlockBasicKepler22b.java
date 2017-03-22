@@ -34,25 +34,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus.EnumBlockBasic;
 
 public class BlockBasicKepler22b extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeKepler22b", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		DIRT(0, "kepler22b_dirt"), 
-		STONE(1, "kepler22b_stone"), 
-		ORE_IRON(2, "kepler22b_ore_iron"), 
-		ORE_TIN(3, "kepler22b_ore_tin"), 
-		ORE_COPPER(4, "kepler22b_ore_copper"), 
-		ORE_DENSE_COAL(5, "kepler22b_ore_dense_coal"), 
-		ORE_BLUE_DIAMOND(6, "kepler22b_ore_blue_diamond"), 
-		ORE_RED_DIAMOND(7, "kepler22b_ore_red_diamond"), 
-		ORE_PURPLE_DIAMOND(8, "kepler22b_ore_purple_diamond"), 
-		ORE_YELLOW_DIAMOND(9, "kepler22b_ore_yellow_diamond"), 
-		ORE_GREEN_DIAMOND(10, "kepler22b_ore_green_diamond"), 
-		STONEBRICKS(11, "kepler22b_stonebricks"), 
-		COBBLESTONE(12, "kepler22b_cobblestone");
+		DIRT(0, "kepler22b_dirt"), STONE(1, "kepler22b_stone"), ORE_IRON(2, "kepler22b_ore_iron"), ORE_TIN(3, "kepler22b_ore_tin"), ORE_COPPER(4, "kepler22b_ore_copper"), ORE_DENSE_COAL(5, "kepler22b_ore_dense_coal"), ORE_BLUE_DIAMOND(6,
+				"kepler22b_ore_blue_diamond"), ORE_RED_DIAMOND(7, "kepler22b_ore_red_diamond"), ORE_PURPLE_DIAMOND(8, "kepler22b_ore_purple_diamond"), ORE_YELLOW_DIAMOND(9, "kepler22b_ore_yellow_diamond"), ORE_GREEN_DIAMOND(10,
+				"kepler22b_ore_green_diamond"), STONEBRICKS(11, "kepler22b_stonebricks"), COBBLESTONE(12, "kepler22b_cobblestone");
 
 		private final int meta;
 		private final String name;
@@ -79,7 +68,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	public BlockBasicKepler22b(String assetName) {
 		super(Material.rock);
 		this.setUnlocalizedName(assetName);
-        this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@Override
@@ -92,27 +81,29 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-    public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
-    {
-    	IBlockState state = world.getBlockState(pos);
-    	if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
-        	return 6.0F;
-		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
+	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
+		IBlockState state = world.getBlockState(pos);
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
+			return 6.0F;
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
 			return 3.0F;
-        return super.getExplosionResistance(world, pos, exploder, explosion);
-    }
+		return super.getExplosionResistance(world, pos, exploder, explosion);
+	}
 
 	@Override
-    public float getBlockHardness(World worldIn, BlockPos pos)
-    {
-        IBlockState state = worldIn.getBlockState(pos);
-		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT)
+	public float getBlockHardness(World worldIn, BlockPos pos) {
+		IBlockState state = worldIn.getBlockState(pos);
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT)
 			return 0.5F;
-		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
 			return 5.0F;
 		else
 			return 1.5F;
-    }
+	}
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
@@ -157,12 +148,11 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		}
 	}
 
-    @Override
-    public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing side, IPlantable plant)
-    {
-        Block block = plant.getPlant(world, pos).getBlock();
-        return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
-    }
+	@Override
+	public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing side, IPlantable plant) {
+		Block block = plant.getPlant(world, pos).getBlock();
+		return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
+	}
 
 	@Override
 	public int requiredLiquidBlocksNearby() {
@@ -170,7 +160,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	public boolean isPlantable(IBlockState arg0)  {
+	public boolean isPlantable(IBlockState arg0) {
 		return false;
 	}
 

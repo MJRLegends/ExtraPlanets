@@ -595,6 +595,21 @@ public class ExtraPlanets_Blocks {
 	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 7); //Dark Iron Block
 	        RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 8); //Stone Bricks
 		}
+		if (Config.kepler22b) {
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 0, 0); //Dirt
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 1); //Stone
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 2); //Iron Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 3); //Tin Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 4); //Copper Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 5); //Dense Coal Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 6); //Blue Diamond Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 7); //Red Diamond Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 8); //Purple Diamond Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 9); //Yellow Diamond Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 10); //Green Diamond Ore
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 11); //Stone Bricks
+	        RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 12); //Cobblestone
+		}
 		if (Config.callisto) {
 	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 0); //Surface
 	        RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 1); //Sub Surface
