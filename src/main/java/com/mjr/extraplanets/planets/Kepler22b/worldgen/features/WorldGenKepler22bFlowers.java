@@ -20,7 +20,7 @@ public class WorldGenKepler22bFlowers extends WorldGenerator {
 
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 		for (int l = 0; l < 64; ++l) {
-			BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8), 0, rand.nextInt(8) - rand.nextInt(8));
+			BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 			IBlockState state = this.flowerBlock.getStateFromMeta(this.flowerBlockMeta);
 
 			if (worldIn.isAirBlock(blockpos) && (!worldIn.provider.getHasNoSky() || blockpos.getY() < 255) && this.flowerBlock.canBlockStay(worldIn, blockpos, state)) {
