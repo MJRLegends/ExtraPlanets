@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "type=maple_blue_short": { "model": "extraplanets:maple_blue_short_model" },
+		"type=maple_red_short": { "model": "extraplanets:maple_red_short_model" },
+		"type=maple_purple_short": { "model": "extraplanets:maple_purple_short_model" },
+		"type=maple_yellow_short": { "model": "extraplanets:maple_yellow_short_model" },
+		"type=maple_green_short": { "model": "extraplanets:maple_green_short_model" },
+		"type=maple_brown_short": { "model": "extraplanets:maple_brown_short_model" }
+	}
+}

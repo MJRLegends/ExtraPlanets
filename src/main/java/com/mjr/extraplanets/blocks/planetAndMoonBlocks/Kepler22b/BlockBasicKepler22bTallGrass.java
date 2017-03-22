@@ -3,8 +3,6 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 import java.util.List;
 import java.util.Random;
 
-import com.mjr.extraplanets.ExtraPlanets;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockDoublePlant;
@@ -22,11 +20,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable {
 	public static final PropertyEnum<BlockBasicKepler22bTallGrass.EnumType> TYPE = PropertyEnum.<BlockBasicKepler22bTallGrass.EnumType> create("type", BlockBasicKepler22bTallGrass.EnumType.class);
@@ -37,11 +36,6 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.8F, 0.5F + f);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
-	}
-
-	@SideOnly(Side.CLIENT)
-	public int getBlockColor() {
-		return ColorizerGrass.getGrassColor(0.5D, 1.0D);
 	}
 
 	public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state) {
@@ -75,16 +69,6 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		}
 	}
 
-	@SideOnly(Side.CLIENT)
-	public int getRenderColor(IBlockState state) {
-		return super.getRenderColor(state);
-	}
-
-	@SideOnly(Side.CLIENT)
-	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass) {
-		return worldIn.getBiomeGenForCoords(pos).getGrassColorAtPos(pos);
-	}
-
 	public int getDamageValue(World worldIn, BlockPos pos) {
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		return iblockstate.getBlock().getMetaFromState(iblockstate);
@@ -95,7 +79,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	 */
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
-		for (int i = 1; i < 3; ++i) {
+		for (int i = 0; i < 15; ++i) {
 			list.add(new ItemStack(itemIn, 1, i));
 		}
 	}

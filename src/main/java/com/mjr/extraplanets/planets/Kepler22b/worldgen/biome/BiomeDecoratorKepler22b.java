@@ -6,6 +6,8 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 import com.mjr.extraplanets.world.features.WorldGenBlueHut;
 import com.mjr.extraplanets.world.features.WorldGenBrownHut;
@@ -94,31 +96,37 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 		for (int i = 0; i < 1; i++) {
 			if (this.randomGenerator.nextInt(200) == 1) {
-				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + (this.randomGenerator.nextInt(16)+ 8), 0, this.field_180294_c.getZ() + (this.randomGenerator.nextInt(16)+ 8)));
+				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + (this.randomGenerator.nextInt(16) + 8), 0, this.field_180294_c.getZ() + (this.randomGenerator.nextInt(16) + 8)));
 				blockpos.down(2);
 				int randomNum = this.randomGenerator.nextInt(7) + 0;
-				switch(randomNum){
-					case 1:
-						(new WorldGenBlueHut()).generate(this.currentWorld, randomGenerator, blockpos);
-						break;
-					case 2:
-						(new WorldGenRedHut()).generate(this.currentWorld, randomGenerator, blockpos);
-						break;
-					case 3:
-						(new WorldGenPurpleHut()).generate(this.currentWorld, randomGenerator, blockpos);
-						break;
-					case 4:
-						(new WorldGenYellowHut()).generate(this.currentWorld, randomGenerator, blockpos);
-						break;
-					case 5:
-						(new WorldGenGreenHut()).generate(this.currentWorld, randomGenerator, blockpos);
-						break;
-					case 6:
-						(new WorldGenBrownHut()).generate(this.currentWorld, randomGenerator, blockpos);
-						break;
+				switch (randomNum) {
+				case 1:
+					(new WorldGenBlueHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					break;
+				case 2:
+					(new WorldGenRedHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					break;
+				case 3:
+					(new WorldGenPurpleHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					break;
+				case 4:
+					(new WorldGenYellowHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					break;
+				case 5:
+					(new WorldGenGreenHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					break;
+				case 6:
+					(new WorldGenBrownHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					break;
 				}
 			}
 		}
+		for (int i = 0; i < this.blueShortGrassPerChunk; i++) {
+			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 0).generate(this.currentWorld, randomGenerator, blockpos);
+		}
+
 		isDecorating = false;
 	}
 }

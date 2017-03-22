@@ -142,6 +142,6 @@ public class BlockBasicGrass extends Block implements IGrowable
     public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing side, IPlantable plant)
     {
         Block block = plant.getPlant(world, pos).getBlock();
-        return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
+        return block == ExtraPlanets_Blocks.kepler22bMapleSapling || block == ExtraPlanets_Blocks.kepler22bGrassFlowers;
     }
 }
