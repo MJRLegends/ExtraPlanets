@@ -26,8 +26,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.google.common.base.Predicate;
-
 public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	public static final PropertyEnum<BlockKepler22bMapleTreeLeaves.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLeaves.EnumType> create("variant", BlockKepler22bMapleTreeLeaves.EnumType.class);
 
@@ -89,6 +87,24 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 
 	public BlockKepler22bMapleTreeLeaves() {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_BLUE).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getBlockColor() {
+		return -1;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getRenderColor(IBlockState state) {
+		return -1;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass) {
+		return -1;
 	}
 
 	protected int getSaplingDropChance(IBlockState state) {
