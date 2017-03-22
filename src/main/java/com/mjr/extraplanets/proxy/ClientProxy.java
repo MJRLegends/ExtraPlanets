@@ -59,6 +59,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bM
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
+import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedMagmaCubeBoss;
@@ -86,6 +87,7 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
+import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
@@ -287,6 +289,8 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 		if (Config.eris)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
+		if (Config.nuclearBomb)
+			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, (RenderManager manager) -> new RenderNuclearBombPrimed(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.snowball)));
 	}
 
