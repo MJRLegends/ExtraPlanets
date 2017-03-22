@@ -3,7 +3,6 @@ package com.mjr.extraplanets.blocks;
 import java.util.Random;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDirt;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -39,8 +38,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 						Block block = worldIn.getBlockState(blockpos.up()).getBlock();
 						IBlockState iblockstate = worldIn.getBlockState(blockpos);
 
-						if (iblockstate.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks && iblockstate.getValue(BlockDirt.VARIANT) == BlockDirt.DirtType.DIRT && worldIn.getLightFromNeighbors(blockpos.up()) >= 4
-								&& block.getLightOpacity(worldIn, blockpos.up()) <= 2) {
+						if (iblockstate.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && block.getLightOpacity(worldIn, blockpos.up()) <= 2) {
 							worldIn.setBlockState(blockpos, this.getDefaultState());
 						}
 					}
