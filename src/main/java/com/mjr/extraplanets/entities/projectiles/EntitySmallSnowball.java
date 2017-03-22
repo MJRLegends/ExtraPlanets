@@ -3,13 +3,13 @@ package com.mjr.extraplanets.entities.projectiles;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-public class EntitySmallSnowball extends EntityThrowable
+public class EntitySmallSnowball extends EntitySnowball
 {
     public EntitySmallSnowball(World worldIn)
     {
