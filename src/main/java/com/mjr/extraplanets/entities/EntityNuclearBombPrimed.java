@@ -60,7 +60,6 @@ public class EntityNuclearBombPrimed extends Entity {
 	 */
 	@Override
 	public void onUpdate() {
-		System.out.println("here2");
 		this.prevPosX = this.posX;
 		this.prevPosY = this.posY;
 		this.prevPosZ = this.posZ;
