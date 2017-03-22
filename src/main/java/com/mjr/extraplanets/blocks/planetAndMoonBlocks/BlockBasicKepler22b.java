@@ -95,16 +95,24 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
     public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
     {
     	IBlockState state = world.getBlockState(pos);
-		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
+    	if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
         	return 6.0F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
+			return 3.0F;
         return super.getExplosionResistance(world, pos, exploder, explosion);
     }
 
 	@Override
-	public float getBlockHardness(World worldIn, BlockPos pos) {
-		IBlockState state = worldIn.getBlockState(pos);
-		return this.blockHardness;
-	}
+    public float getBlockHardness(World worldIn, BlockPos pos)
+    {
+        IBlockState state = worldIn.getBlockState(pos);
+		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT)
+			return 0.5F;
+		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
+			return 5.0F;
+		else
+			return 1.5F;
+    }
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
