@@ -2,7 +2,7 @@ package com.mjr.extraplanets.planets.Ceres.spacestation;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOrbit;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
 import net.minecraft.util.math.MathHelper;
@@ -15,7 +15,7 @@ import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
-public class WorldProviderCeresOrbit extends WorldProviderOrbit {
+public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_SpaceStations.ceresSpaceStation;

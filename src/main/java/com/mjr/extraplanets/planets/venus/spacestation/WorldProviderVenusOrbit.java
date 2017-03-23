@@ -2,7 +2,7 @@ package com.mjr.extraplanets.planets.venus.spacestation;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOrbit;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
 import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
@@ -15,7 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
-public class WorldProviderVenusOrbit extends WorldProviderOrbit {
+public class WorldProviderVenusOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_SpaceStations.venusSpaceStation;

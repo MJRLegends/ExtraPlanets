@@ -42,10 +42,10 @@ public class GuiSchematicTier6Rocket extends GuiContainer implements ISchematicR
 			switch (par1GuiButton.id)
 			{
 			case 0:
-				SchematicRegistry.flipToLastPage(this.pageIndex);
+				SchematicRegistry.flipToLastPage(this, this.pageIndex);
 				break;
 			case 1:
-				SchematicRegistry.flipToNextPage(this.pageIndex);
+				SchematicRegistry.flipToNextPage(this, this.pageIndex);
 				break;
 			}
 		}
