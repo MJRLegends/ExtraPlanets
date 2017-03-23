@@ -23,16 +23,16 @@ public class ExtraPlanets_Machines {
 	}
 
 	private static void initializeMachinesBlocks() {
-		if(Config.advancedRefinery)
+		if (Config.advancedRefinery)
 			advancedRefinery = new AdvancedRefinery("advancedRefinery");
-		if(Config.solarPanels)
+		if (Config.solarPanels)
 			solarPanel = new BlockSolar("solar");
 	}
 
 	private static void registerMachines() {
-		if(Config.advancedRefinery)
+		if (Config.advancedRefinery)
 			GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
-		if(Config.solarPanels){
+		if (Config.solarPanels) {
 			GCCoreUtil.registerGalacticraftBlock("solarPanelHybrid", solarPanel, 0);
 			GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);
 			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName());
@@ -40,9 +40,9 @@ public class ExtraPlanets_Machines {
 	}
 
 	private static void registerMachineTileEntitys() {
-		if(Config.solarPanels)
+		if (Config.solarPanels)
 			GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
-		if(Config.advancedRefinery)
+		if (Config.advancedRefinery)
 			GameRegistry.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
 	}
 }

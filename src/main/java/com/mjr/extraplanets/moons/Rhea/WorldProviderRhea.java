@@ -145,13 +145,12 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public float getThermalLevelModifier() {
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			if (isDaytime()) {
 				return 80.0F;
 			}
 			return -70.0F;
-		}
-		else
+		} else
 			return -1.5F;
 	}
 

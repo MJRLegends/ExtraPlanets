@@ -17,8 +17,7 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.WorldChunkManagerMercury;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WorldProviderMercury extends WorldProviderSpace implements
-IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderMercury extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -141,13 +140,12 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			if (isDaytime()) {
 				return 50.0F;
 			}
 			return 50.0F;
-		}
-		else
+		} else
 			return -1.5F;
 	}
 

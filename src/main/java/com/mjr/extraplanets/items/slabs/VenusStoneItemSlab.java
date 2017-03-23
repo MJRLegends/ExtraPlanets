@@ -10,8 +10,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 public class VenusStoneItemSlab extends ItemSlab {
 
 	public VenusStoneItemSlab(Block block) {
-		super(block, ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.venusStoneBlockHalfSlab)),
-				((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.venusStoneBlockDoubleSlab)), false);
+		super(block, ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.venusStoneBlockHalfSlab)), ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.venusStoneBlockDoubleSlab)), false);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		setUnlocalizedName(Constants.TEXTURE_PREFIX + "venusStone");

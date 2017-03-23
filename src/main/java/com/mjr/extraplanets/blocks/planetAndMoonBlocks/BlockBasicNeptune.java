@@ -76,10 +76,8 @@ public class BlockBasicNeptune extends Block {
 	}
 
 	@Override
-	public int damageDropped(int meta)
-	{
-		switch (meta)
-		{
+	public int damageDropped(int meta) {
+		switch (meta) {
 		default:
 			return meta;
 		}
@@ -100,7 +98,7 @@ public class BlockBasicNeptune extends Block {
 			par3List.add(new ItemStack(par1, 1, var4));
 		}
 	}
-	
+
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z, EntityPlayer player) {
 		int metadata = world.getBlockMetadata(x, y, z);

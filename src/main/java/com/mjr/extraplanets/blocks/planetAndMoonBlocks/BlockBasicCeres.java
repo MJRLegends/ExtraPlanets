@@ -124,13 +124,15 @@ public class BlockBasicCeres extends Block {
 				final ItemStack thermalPaddingChestplate = playerStats.extendedInventory.getStackInSlot(7);
 				final ItemStack thermalPaddingLeggings = playerStats.extendedInventory.getStackInSlot(8);
 				final ItemStack thermalPaddingBoots = playerStats.extendedInventory.getStackInSlot(9);
-				
+
 				boolean giveEffect = false;
-				
+
 				if (thermalPaddingHelm == null && thermalPaddingChestplate == null && thermalPaddingLeggings == null && thermalPaddingBoots == null)
 					giveEffect = true;
-				else if (thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier2ThermalPadding
-						&& thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier3ThermalPadding)
+				else if (thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier2ThermalPadding
+						&& thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier2ThermalPadding
+						&& thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier3ThermalPadding
+						&& thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier3ThermalPadding)
 					giveEffect = true;
 
 				if (giveEffect)

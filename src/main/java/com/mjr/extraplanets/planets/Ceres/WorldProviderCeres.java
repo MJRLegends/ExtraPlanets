@@ -16,8 +16,7 @@ import com.mjr.extraplanets.planets.Ceres.worldgen.WorldChunkManagerCeres;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WorldProviderCeres extends WorldProviderSpace implements
-IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderCeres extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -140,7 +139,7 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		 return -1.5F;
+		return -1.5F;
 	}
 
 	@Override

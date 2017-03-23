@@ -71,10 +71,8 @@ public class BlockBasicEuropa extends Block {
 	}
 
 	@Override
-	public int damageDropped(int meta)
-	{
-		switch (meta)
-		{
+	public int damageDropped(int meta) {
+		switch (meta) {
 		default:
 			return meta;
 		}

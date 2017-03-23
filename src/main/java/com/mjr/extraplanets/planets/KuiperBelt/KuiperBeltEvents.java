@@ -13,30 +13,30 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class KuiperBeltEvents {
-	//    @SubscribeEvent
-	//    public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-	//	if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
-	//	    if (event.entity instanceof EntityPlayer) {
-	//		event.setCanceled(false);
-	//	    } else {
-	//		if (Config.mobSuffocation)
-	//		    event.setCanceled(false);
-	//		else
-	//		    event.setCanceled(true);
-	//	    }
-	//	}
-	//    }
+	// @SubscribeEvent
+	// public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
+	// if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
+	// if (event.entity instanceof EntityPlayer) {
+	// event.setCanceled(false);
+	// } else {
+	// if (Config.mobSuffocation)
+	// event.setCanceled(false);
+	// else
+	// event.setCanceled(true);
+	// }
+	// }
+	// }
 	//
-	//    @SubscribeEvent
-	//    public void GCCoreEventWakePlayer(EventWakePlayer event) {
-	//	if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
-	//	    event.entityPlayer.heal(5.0F);
+	// @SubscribeEvent
+	// public void GCCoreEventWakePlayer(EventWakePlayer event) {
+	// if (event.entityLiving.worldObj.provider.dimensionId == Config.ceresID) {
+	// event.entityPlayer.heal(5.0F);
 	//
-	//	    for (WorldServer worldServer : MinecraftServer.getServer().worldServers) {
-	//		worldServer.setWorldTime(0);
-	//	    }
-	//	}
-	//    }
+	// for (WorldServer worldServer : MinecraftServer.getServer().worldServers) {
+	// worldServer.setWorldTime(0);
+	// }
+	// }
+	// }
 
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent

@@ -10,8 +10,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 public class SaturnStoneItemSlab extends ItemSlab {
 
 	public SaturnStoneItemSlab(Block block) {
-		super(block, ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.saturnStoneBlockHalfSlab)),
-				((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.saturnStoneBlockDoubleSlab)), false);
+		super(block, ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.saturnStoneBlockHalfSlab)), ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.saturnStoneBlockDoubleSlab)), false);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		setUnlocalizedName(Constants.TEXTURE_PREFIX + "saturnStone");

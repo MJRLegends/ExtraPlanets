@@ -10,8 +10,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 public class ErisStoneItemSlab extends ItemSlab {
 
 	public ErisStoneItemSlab(Block block) {
-		super(block, ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.erisStoneBlockHalfSlab)),
-				((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.erisStoneBlockDoubleSlab)), false);
+		super(block, ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.erisStoneBlockHalfSlab)), ((BlockSlab) (ExtraPlanets_SlabsStairsBlocks.erisStoneBlockDoubleSlab)), false);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		setUnlocalizedName(Constants.TEXTURE_PREFIX + "erisStone");

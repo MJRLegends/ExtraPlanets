@@ -26,17 +26,14 @@ public class SchematicTier7 extends Item implements ISchematicItem {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
-		this.itemIcon = iconRegister
-				.registerIcon(Constants.TEXTURE_PREFIX + "tier7_schematic_rocket");
+		this.itemIcon = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier7_schematic_rocket");
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player,
-			List list, boolean par4) {
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumChatFormatting.GRAY
-					+ GCCoreUtil.translate("schematic.tier7.rocket.name"));
+			list.add(EnumChatFormatting.GRAY + GCCoreUtil.translate("schematic.tier7.rocket.name"));
 		}
 	}
 }

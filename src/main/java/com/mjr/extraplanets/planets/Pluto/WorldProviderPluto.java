@@ -17,8 +17,7 @@ import com.mjr.extraplanets.planets.Pluto.worldgen.WorldChunkManagerPluto;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WorldProviderPluto extends WorldProviderSpace implements
-IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderPluto extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -31,7 +30,6 @@ IGalacticraftWorldProvider, ISolarLevel {
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
 	}
-
 
 	@Override
 	public boolean canRainOrSnow() {
@@ -142,13 +140,12 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			if (isDaytime()) {
 				return -140.0F;
 			}
 			return -140.0F;
-		}
-		else
+		} else
 			return -1.5F;
 	}
 
