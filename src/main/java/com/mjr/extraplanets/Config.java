@@ -5,7 +5,7 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
-	//Sections/Groups
+	// Sections/Groups
 	private static String dimensions = "main dimensions";
 	private static String dimensionsCustom = "other dimensions";
 	private static String dimensionID = "dimensionID";
@@ -19,26 +19,26 @@ public class Config {
 
 	private static String schematicsGUI = "schematics GUI ID";
 	private static String schematicsPage = "schematics Page ID";
-	
+
 	private static String compatibility = "compatibility support";
 	private static String generalsettings = "general settings";
-	
-	//Config options	
+
+	// Config options
 	public static boolean mobSuffocation;
 	public static boolean useDefaultBosses;
 
 	public static int ceresRocketTier;
 	public static int erisRocketTier;
-	
-	//public static int venusRocketTier;
-	//public static int jupiterRocketTier;
-	//public static int saturnRocketTier;
-	//public static int uranusRocketTier;
-	//public static int neptuneRocketTier;
-	
+
+	// public static int venusRocketTier;
+	// public static int jupiterRocketTier;
+	// public static int saturnRocketTier;
+	// public static int uranusRocketTier;
+	// public static int neptuneRocketTier;
+
 	public static boolean genUranusIgloos;
 	public static boolean genUranusIceSpikes;
-	
+
 	public static boolean carbonItems;
 	public static boolean palladiumItems;
 	public static boolean magnesiumItems;
@@ -51,13 +51,13 @@ public class Config {
 	public static boolean mercuryItems;
 	public static boolean uraniumItems;
 	public static boolean kepler22bItems;
-	
+
 	public static boolean thermalPaddings;
 	public static boolean batteries;
-	//public static boolean cannedFood;
+	// public static boolean cannedFood;
 	public static boolean customApples;
 	public static boolean oxygenTanks;
-	
+
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
 	public static boolean ultimateRefinery;
@@ -65,13 +65,13 @@ public class Config {
 	public static boolean ultimateCompressor;
 	public static boolean slabsAndStairs = false;
 	public static boolean nuclearBomb;
-	
+
 	public static boolean basicDecrystallizer;
 	public static boolean basicCrystallizer;
 	public static boolean basicSmasher;
 	public static boolean basicChemicalInjector;
 	public static boolean basicSolarEvaporationChamber;
-	
+
 	public static boolean mercury;
 	public static boolean ceres;
 	public static boolean jupiter;
@@ -93,12 +93,12 @@ public class Config {
 	public static boolean oberon;
 	public static boolean titania;
 	public static boolean iapetus;
-	
+
 	public static boolean makemake;
 	public static boolean haumea;
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
-	
+
 	public static boolean kepler22b;
 
 	public static int mercuryID;
@@ -122,12 +122,12 @@ public class Config {
 	public static int oberonID;
 	public static int titaniaID;
 	public static int iapetusID;
-	
+
 	public static int kepler22bID;
-	
+
 	public static int mercurySpaceStationID;
 	public static int mercurySpaceStationStaticID;
-	
+
 	public static int venusSpaceStationID;
 	public static int venusSpaceStationStaticID;
 
@@ -154,10 +154,10 @@ public class Config {
 
 	public static int erisSpaceStationID;
 	public static int erisSpaceStationStaticID;
-	
+
 	public static int kepler22bSpaceStationID;
 	public static int kepler22bSpaceStationStaticID;
-	
+
 	public static boolean mercurySpaceStation;
 	public static boolean venusSpaceStation;
 	public static boolean ceresSpaceStation;
@@ -192,7 +192,7 @@ public class Config {
 	public static int oberonBiomeID;
 	public static int titaniaBiomeID;
 	public static int iapetusBiomeID;
-	
+
 	public static int kepler22bPlainsBiomeID;
 	public static int kepler22bBlueForestBiomeID;
 	public static int kepler22bPurpleForestBiomeID;
@@ -229,7 +229,7 @@ public class Config {
 	public static boolean radiation;
 
 	public static boolean leadOreGeneration;
-	
+
 	public static void load() {
 		Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
 		config.load();
@@ -243,11 +243,11 @@ public class Config {
 		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
 		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
 		config.addCustomCategoryComment(blocks, "Changing to false will disable the blocks/machines");
-		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
+		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid" + "\"" + " option can cause lag! And It will disable the villages for that planet!");
 		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
-		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
-		config.addCustomCategoryComment(generalsettings,"Enable/Disable general settings");
-		
+		config.addCustomCategoryComment(compatibility, "Enable/Disable compatibility settings");
+		config.addCustomCategoryComment(generalsettings, "Enable/Disable general settings");
+
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
 		magnesiumItems = config.get(items, "Magnesium Tools & Armor", true).getBoolean(true);
@@ -260,13 +260,13 @@ public class Config {
 		mercuryItems = config.get(items, "Mercury Tools & Armor", true).getBoolean(true);
 		uraniumItems = config.get(items, "Uranium Tools & Armor", true).getBoolean(true);
 		kepler22bItems = config.get(items, "Kepler22b Tools & Armor", true).getBoolean(true);
-		
+
 		thermalPaddings = config.get(items, "Tier 3 - 4 Thermal Padding", true, "This option will change planet thermal levels to support this feature!").getBoolean(true);
 		batteries = config.get(items, "Custom Batteries", true, "This option will disable all Custom Batteries!").getBoolean(true);
-		//cannedFood = config.get(items, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
+		// cannedFood = config.get(items, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
 		customApples = config.get(items, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable all Custom Normal/Notch Apples!").getBoolean(true);
 		oxygenTanks = config.get(items, "Custom Oxygen Tanks", true, "This option will disable Extremely Heavy & Very Heavy Oxygen Tanks").getBoolean(true);
-		
+
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
 		ultimateRefinery = config.get(blocks, "Ultimate Refinery", true).getBoolean(true);
@@ -279,26 +279,26 @@ public class Config {
 		basicSmasher = config.get(blocks, "Basic Block Smasher", true).getBoolean(true);
 		basicChemicalInjector = config.get(blocks, "Basic Chemical Injector", true).getBoolean(true);
 		basicSolarEvaporationChamber = config.get(blocks, "Basic Solar Evaporation Chamber", true).getBoolean(true);
-		
-		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
+
+		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
-		
-		//mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
+
+		// mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
 		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
-		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
+		// erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
 
 		genUranusIgloos = config.get(dimensionSettings, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(dimensionSettings, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
 
-		//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
-		//	saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
-		//	uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
-		//	neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
-		
-		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
+		// jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
+		// saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
+		// uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
+		// neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
+
+		// eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
-		//mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
-		//pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
+		// mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
+		// pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
 
 		triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
 		europa = config.get(dimensionsCustom, "Europa", true, "").getBoolean(true);
@@ -317,7 +317,7 @@ public class Config {
 		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
 		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
 		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
-		
+
 		kepler22b = config.get(dimensionsCustom, "Kepler 22b", true, "").getBoolean(true);
 
 		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
@@ -332,13 +332,13 @@ public class Config {
 		erisSpaceStation = config.get(spacestationCustom, "Eris SpaceStation", true, "").getBoolean(true);
 		kepler22bSpaceStation = config.get(spacestationCustom, "Kepler22b SpaceStation", true, "").getBoolean(true);
 
-		mercury = config.get(dimensions, "Mercury & Tier 4 Rocket", true,"Disabling this will remove the Mercury & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations").getBoolean(true);
-		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true,"Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		mercury = config.get(dimensions, "Mercury & Tier 4 Rocket", true, "Disabling this will remove the Mercury & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true, "Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true, "Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations").getBoolean(true);
+		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true, "Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true, "Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true, "Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true, "Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
 		jupiterLiquid = config.get(dimensionBlockSettings, "Jupiter's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
 		saturnLiquid = config.get(dimensionBlockSettings, "Saturn's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
@@ -366,9 +366,9 @@ public class Config {
 		oberonID = config.get(dimensionID, "Oberon Dimension ID", -41).getInt();
 		titaniaID = config.get(dimensionID, "Titania Dimension ID", -42).getInt();
 		iapetusID = config.get(dimensionID, "Iapetus Dimension ID", -43).getInt();
-		
+
 		kepler22bID = config.get(dimensionID, "Kepler 22b Dimension ID", -22).getInt();
-		
+
 		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
 		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -60).getInt();
 
@@ -401,7 +401,7 @@ public class Config {
 
 		kepler22bSpaceStationID = config.get(dimensionID, "Kepler 22b SpaceStation Dimension ID", -81).getInt();
 		kepler22bSpaceStationStaticID = config.get(dimensionID, "Kepler 22b SpaceStation Static Dimension ID", -80).getInt();
-		
+
 		mercuryBiomeID = config.get(biomeID, "Mercury Biome ID", 148).getInt();
 		ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();
 		jupiterBiomeID = config.get(biomeID, "Jupiter Biome ID", 150).getInt();
@@ -446,14 +446,14 @@ public class Config {
 
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
 		oreDictionary = config.get(compatibility, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
-		
+
 		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
 
 		pressure = config.get(generalsettings, "Enable pressure", true, "").getBoolean(true);
 		radiation = config.get(generalsettings, "Enable radiation", true, "").getBoolean(true);
-		
+
 		leadOreGeneration = config.get(generalsettings, "Enable generation of Lead Ore in the Overworld", true, "").getBoolean(true);
-		
+
 		config.save();
 	}
 
