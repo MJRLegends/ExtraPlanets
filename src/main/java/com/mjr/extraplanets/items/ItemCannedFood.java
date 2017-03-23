@@ -26,8 +26,7 @@ public class ItemCannedFood extends Item {
 
 	protected IIcon[] icons = new IIcon[ItemCannedFood.names.length];
 
-	public ItemCannedFood(String assetName)
-	{
+	public ItemCannedFood(String assetName) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -36,28 +35,23 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	public CreativeTabs getCreativeTab()
-	{
+	public CreativeTabs getCreativeTab() {
 		return ExtraPlanets.ItemsTab;
 	}
 
-
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister iconRegister)
-	{
+	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemCannedFood.names)
-		{
+		for (final String name : ItemCannedFood.names) {
 			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
 		}
 	}
+
 	@Override
-	public String getUnlocalizedName(ItemStack itemStack)
-	{
-		if (itemStack.getItemDamage() < 5)
-		{
+	public String getUnlocalizedName(ItemStack itemStack) {
+		if (itemStack.getItemDamage() < 5) {
 			return this.getUnlocalizedName() + ".cannedFood";
 		}
 
@@ -65,10 +59,8 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	public IIcon getIconFromDamage(int damage)
-	{
-		if (this.icons.length > damage)
-		{
+	public IIcon getIconFromDamage(int damage) {
+		if (this.icons.length > damage) {
 			return this.icons[damage];
 		}
 
@@ -77,36 +69,28 @@ public class ItemCannedFood extends Item {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
-	{
-		for (int i = 0; i < ItemCannedFood.names.length; i++)
-		{
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+		for (int i = 0; i < ItemCannedFood.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
 
 	@Override
-	public int getMetadata(int par1)
-	{
+	public int getMetadata(int par1) {
 		return par1;
 	}
 
 	@Override
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-	{
-		if (par1ItemStack.getItemDamage() < 19)
-		{
+	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
+		if (par1ItemStack.getItemDamage() < 19) {
 			par3List.add(EnumColor.BRIGHT_GREEN + GCCoreUtil.translate(this.getUnlocalizedName() + "." + ItemCannedFood.names[par1ItemStack.getItemDamage()] + ".name"));
 		}
 	}
 
-
-	public int getHealAmount(ItemStack par1ItemStack)
-	{
-		switch (par1ItemStack.getItemDamage())
-		{
+	public int getHealAmount(ItemStack par1ItemStack) {
+		switch (par1ItemStack.getItemDamage()) {
 		case 0:
 			return 16;
 		case 1:
@@ -122,10 +106,8 @@ public class ItemCannedFood extends Item {
 		}
 	}
 
-	public float getSaturationModifier(ItemStack par1ItemStack)
-	{
-		switch (par1ItemStack.getItemDamage())
-		{
+	public float getSaturationModifier(ItemStack par1ItemStack) {
+		switch (par1ItemStack.getItemDamage()) {
 		case 0:
 			return 0.8F;
 		case 1:
@@ -142,15 +124,12 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
-	{
-		if (par1ItemStack.getItemDamage() < 5)
-		{
+	public ItemStack onEaten(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+		if (par1ItemStack.getItemDamage() < 5) {
 			--par1ItemStack.stackSize;
 			par3EntityPlayer.getFoodStats().addStats(this.getHealAmount(par1ItemStack), this.getSaturationModifier(par1ItemStack));
 			par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
-			if (!par2World.isRemote)
-			{
+			if (!par2World.isRemote) {
 				par3EntityPlayer.entityDropItem(new ItemStack(GCItems.canister, 1, 0), 0.0F);
 			}
 			return par1ItemStack;
@@ -160,10 +139,8 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack par1ItemStack)
-	{
-		if (par1ItemStack.getItemDamage() < 5)
-		{
+	public int getMaxItemUseDuration(ItemStack par1ItemStack) {
+		if (par1ItemStack.getItemDamage() < 5) {
 			return 32;
 		}
 
@@ -171,10 +148,8 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack par1ItemStack)
-	{
-		if (par1ItemStack.getItemDamage() < 5)
-		{
+	public EnumAction getItemUseAction(ItemStack par1ItemStack) {
+		if (par1ItemStack.getItemDamage() < 5) {
 			return EnumAction.eat;
 		}
 
@@ -182,10 +157,8 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
-	{
-		if (par1ItemStack.getItemDamage() < 5 && par3EntityPlayer.canEat(false))
-		{
+	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+		if (par1ItemStack.getItemDamage() < 5 && par3EntityPlayer.canEat(false)) {
 			par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
 		}
 

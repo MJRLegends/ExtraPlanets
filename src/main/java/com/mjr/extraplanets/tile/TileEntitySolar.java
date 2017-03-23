@@ -35,8 +35,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IPacketReceiver, IDisableableMachine,
-IInventory, ISidedInventory, IConnector {
+public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IPacketReceiver, IDisableableMachine, IInventory, ISidedInventory, IConnector {
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int solarStrength = 0;
 	public float targetAngle;
@@ -87,9 +86,8 @@ IInventory, ISidedInventory, IConnector {
 			if (!this.getDisabled(0) && this.ticks % 20 == 0) {
 				this.solarStrength = 0;
 
-				if (this.worldObj.provider instanceof IGalacticraftWorldProvider || !this.worldObj.isRaining()
-						&& !this.worldObj.isThundering()) {
-					if(this.worldObj.isDaytime()){
+				if (this.worldObj.provider instanceof IGalacticraftWorldProvider || !this.worldObj.isRaining() && !this.worldObj.isThundering()) {
+					if (this.worldObj.isDaytime()) {
 						double distance = 100.0D;
 						double sinA = -Math.sin((this.currentAngle - 77.5D) * Math.PI / 180.0D);
 						double cosA = Math.abs(Math.cos((this.currentAngle - 77.5D) * Math.PI / 180.0D));
@@ -134,8 +132,7 @@ IInventory, ISidedInventory, IConnector {
 							}
 						}
 
-					}
-					else {
+					} else {
 						int metadata = this.getBlockMetadata();
 						if (metadata < BlockSolar.ULTIMATE_METADATA) {
 							solarStrength = 4;
@@ -195,24 +192,21 @@ IInventory, ISidedInventory, IConnector {
 		celestialAngle %= 360;
 
 		float difference = 0;
-		if(this.worldObj.isDaytime())
-			difference= (180.0F - Math.abs(this.currentAngle % 180 - celestialAngle)) / 180.0F;
+		if (this.worldObj.isDaytime())
+			difference = (180.0F - Math.abs(this.currentAngle % 180 - celestialAngle)) / 180.0F;
 		else
 			difference = (float) 0.7;
 
-		return MathHelper.floor_float(0.01F * difference * difference * (this.solarStrength * (Math.abs(difference) * 500.0F))
-				* this.getSolarBoost());
+		return MathHelper.floor_float(0.01F * difference * difference * (this.solarStrength * (Math.abs(difference) * 500.0F)) * this.getSolarBoost());
 	}
 
 	public float getSolarBoost() {
-		return (float) (this.worldObj.provider instanceof ISolarLevel ? ((ISolarLevel) this.worldObj.provider).getSolarEnergyMultiplier()
-				: 1.0F);
+		return (float) (this.worldObj.provider instanceof ISolarLevel ? ((ISolarLevel) this.worldObj.provider).getSolarEnergyMultiplier() : 1.0F);
 	}
 
 	@Override
 	public boolean onActivated(EntityPlayer entityPlayer) {
-		return this.getBlockType().onBlockActivated(this.worldObj, this.xCoord, this.yCoord, this.zCoord, entityPlayer, 0, this.xCoord,
-				this.yCoord, this.zCoord);
+		return this.getBlockType().onBlockActivated(this.worldObj, this.xCoord, this.yCoord, this.zCoord, entityPlayer, 0, this.xCoord, this.yCoord, this.zCoord);
 	}
 
 	@Override
@@ -243,8 +237,7 @@ IInventory, ISidedInventory, IConnector {
 			for (int x = -1; x < 2; x++) {
 				for (int z = -1; z < 2; z++) {
 					if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
-						FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(thisBlock.x + (y == 2 ? x : 0),
-								thisBlock.y + y, thisBlock.z + (y == 2 ? z : 0), ExtraPlanets_Machines.solarPanel,
+						FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(thisBlock.x + (y == 2 ? x : 0), thisBlock.y + y, thisBlock.z + (y == 2 ? z : 0), ExtraPlanets_Machines.solarPanel,
 								Block.getIdFromBlock(ExtraPlanets_Machines.solarPanel) >> 12 & 255);
 					}
 
@@ -419,8 +412,7 @@ IInventory, ISidedInventory, IConnector {
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
-		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) == this
-				&& par1EntityPlayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) == this && par1EntityPlayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
 	}
 
 	@Override

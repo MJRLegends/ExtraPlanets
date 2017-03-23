@@ -140,12 +140,12 @@ public class ClientProxy extends CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		renderMobEntities();
-		if(Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibility == false)
 			renderNonMobEntities();
 		FMLCommonHandler.instance().bus().register(new MainHandler());
 		FMLCommonHandler.instance().bus().register(new SkyProviderHandler());
 
-		if(Config.nuclearBomb)
+		if (Config.nuclearBomb)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 	}
 
@@ -161,7 +161,7 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	private void renderMobEntities() {
 		if (Config.venus) {
-			if(Config.useDefaultBosses)
+			if (Config.useDefaultBosses)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossVenus.class, new RenderCreeperBossVenus());
 			else
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, new RenderEvolvedMagmaCubeBoss());
@@ -169,18 +169,18 @@ public class ClientProxy extends CommonProxy {
 		if (Config.jupiter)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, new RenderCreeperBossJupiter());
 		if (Config.saturn)
-			if(Config.useDefaultBosses)
+			if (Config.useDefaultBosses)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, new RenderCreeperBossSaturn());
 			else
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGhastBoss.class, new RenderEvolvedGhastBoss());
 		if (Config.uranus) {
-			if(Config.useDefaultBosses)
+			if (Config.useDefaultBosses)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, new RenderCreeperBossUranus());
 			else
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, new RenderEvolvedIceSlimeBoss(new ModelEvolvedIceSlimeBoss(16), new ModelEvolvedIceSlimeBoss(0), 0.25F));
 		}
 		if (Config.neptune)
-			if(Config.useDefaultBosses)
+			if (Config.useDefaultBosses)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, new RenderCreeperBossNeptune());
 			else
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSnowmanBoss.class, new RenderEvolvedSnowmanBoss());
@@ -209,7 +209,7 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGiantSpider.class, new RenderEvolvedGiantSpider());
 		if (Config.evolvedMiniEnderman)
 			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMiniEnderman.class, new RenderEvolvedMiniEnderman());
-		
+
 		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, new RenderSnowball(Items.snowball));
 	}
 
@@ -316,7 +316,7 @@ public class ClientProxy extends CommonProxy {
 		if (Config.eris) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT10.png")));
 		}
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier3ThermalPadding, new ItemRendererThermalArmor());
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4ThermalPadding, new ItemRendererThermalArmor());
@@ -333,7 +333,7 @@ public class ClientProxy extends CommonProxy {
 
 	@SideOnly(Side.CLIENT)
 	public static void registerTileEntityRenderers() {
-		if(Config.solarPanels)
+		if (Config.solarPanels)
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
 	}
 }

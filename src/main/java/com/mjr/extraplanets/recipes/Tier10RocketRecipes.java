@@ -15,8 +15,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class Tier10RocketRecipes {
 	private static List<INasaWorkbenchRecipe> tier10RocketRecipes = new ArrayList();
 
-	public static ItemStack findMatchingTier10RocketRecipe(InventorySchematicTier10Rocket inventoryRocketBench)
-	{
+	public static ItemStack findMatchingTier10RocketRecipe(InventorySchematicTier10Rocket inventoryRocketBench) {
 		for (INasaWorkbenchRecipe recipe : tier10RocketRecipes) {
 			if (recipe.matches(inventoryRocketBench)) {
 				return recipe.getRecipeOutput();
@@ -25,8 +24,7 @@ public class Tier10RocketRecipes {
 		return null;
 	}
 
-	public static void addTier10RocketRecipe(ItemStack result,
-			HashMap<Integer, ItemStack> input) {
+	public static void addTier10RocketRecipe(ItemStack result, HashMap<Integer, ItemStack> input) {
 		addTier10RocketRecipe(new NasaWorkbenchRecipe(result, input));
 	}
 
@@ -38,10 +36,10 @@ public class Tier10RocketRecipes {
 		return tier10RocketRecipes;
 	}
 
-	public static void registerRocketCraftingRecipe(){
+	public static void registerRocketCraftingRecipe() {
 		HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 		input.put(1, new ItemStack(ExtraPlanets_Items.noseConeTier10)); // Cone
-		//Body
+		// Body
 		input.put(2, new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3));
 		input.put(3, new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3));
 		input.put(4, new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3));

@@ -8,10 +8,8 @@ import net.minecraft.item.Item;
 
 import com.mjr.extraplanets.Constants;
 
-
-public class BlockCustomGravel extends BlockFalling
-{
-	public BlockCustomGravel(String name){
+public class BlockCustomGravel extends BlockFalling {
+	public BlockCustomGravel(String name) {
 		super();
 		setHardness(0.6F);
 		setStepSound(Block.soundTypeGravel);
@@ -20,8 +18,7 @@ public class BlockCustomGravel extends BlockFalling
 	}
 
 	@Override
-	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
-	{
+	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
 		return Items.flint;
 	}
 }

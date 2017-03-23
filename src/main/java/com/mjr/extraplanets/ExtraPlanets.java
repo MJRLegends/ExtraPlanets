@@ -280,11 +280,11 @@ public class ExtraPlanets {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
-		if(Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibility == false)
 			registerSchematicsRecipes();
 
 		// Register/Add Dungeon Loot
-		if(Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibility == false)
 			addDungeonLoot();
 
 		// Register Recipes
@@ -299,9 +299,9 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		if(Config.nuclearBomb)
+		if (Config.nuclearBomb)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
-		if(Config.morePlanetsCompatibility == false){
+		if (Config.morePlanetsCompatibility == false) {
 			if (Config.venus)
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 			if (Config.jupiter)
@@ -330,7 +330,7 @@ public class ExtraPlanets {
 		if (Config.jupiter)
 			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
-			
+
 			if (Config.useDefaultBosses)
 				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
 			else

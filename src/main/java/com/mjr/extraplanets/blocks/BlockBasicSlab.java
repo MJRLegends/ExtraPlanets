@@ -40,13 +40,12 @@ public class BlockBasicSlab extends BlockSlab {
 	}
 
 	@Override
-	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
-	{
+	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
 		return Item.getItemFromBlock(this);
 	}
+
 	@Override
-	public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
-	{
+	public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_) {
 		return Item.getItemFromBlock(this);
 	}
 }

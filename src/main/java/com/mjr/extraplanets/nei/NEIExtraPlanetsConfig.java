@@ -104,8 +104,8 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			}
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
-			
-			if(Config.morePlanetsCompatibility){
+
+			if (Config.morePlanetsCompatibility) {
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 1));
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 3));
 			}
@@ -639,7 +639,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		if (Config.neptune) {
 			// Blue Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 2), 10, 22));
 			else
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 10, 22));
@@ -649,7 +649,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		if (Config.uranus) {
 			// White Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), 10, 22));
 			else
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), 10, 22));

@@ -113,7 +113,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.saturn) {
 			saturn = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				saturn.setTierRequired(4);
 			else
 				saturn.setTierRequired(5);
@@ -127,7 +127,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.uranus) {
 			uranus = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				uranus.setTierRequired(4);
 			else
 				uranus.setTierRequired(6);
@@ -141,7 +141,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.neptune) {
 			neptune = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				neptune.setTierRequired(5);
 			else
 				neptune.setTierRequired(7);
@@ -166,7 +166,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.eris) {
 			eris = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				eris.setTierRequired(6);
 			else
 				eris.setTierRequired(9);
@@ -178,7 +178,7 @@ public class ExtraPlanets_Planets {
 			eris.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			eris.setDimensionInfo(Config.erisID, WorldProviderEris.class);
 		}
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22b = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
 			kepler22b.setTierRequired(10);
 			kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F);
@@ -189,13 +189,13 @@ public class ExtraPlanets_Planets {
 			kepler22b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
 			kepler22b.setDimensionInfo(Config.kepler22bID, WorldProviderKepler22b.class);
 		}
-		if(Config.kuiperBelt){
+		if (Config.kuiperBelt) {
 			kuiperBelt = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (kuiperBelt != null)
 				kuiperBelt.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F, 4.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kuiperBelt.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kuiperBelt.png"));
 		}
-		if(Config.makemake){
+		if (Config.makemake) {
 			makemake = RegisterHelper.registerUnreachablePlanet("makemake", GalacticraftCore.solarSystemSol);
 			if (makemake != null)
 				makemake.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.50F, 4.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
@@ -209,7 +209,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.keplerSolarSystems) {
 			// Kepler Solar System
-			
+
 			// Kepler 47 Solar System
 			kepler47b = RegisterHelper.registerUnreachablePlanet("kepler47b", ExtraPlanets_SolarSystems.kepler47);
 			if (kepler47b != null)
@@ -306,7 +306,7 @@ public class ExtraPlanets_Planets {
 			GalacticraftRegistry.registerTeleportType(WorldProviderEris.class, new TeleportTypeEris());
 			GalacticraftRegistry.registerRocketGui(WorldProviderEris.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/erisRocketGui.png"));
 		}
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GalaxyRegistry.registerPlanet(kepler22b);
 			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22b.class, new TeleportTypeKepler22b());
 			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/kepler22bRocketGui.png"));

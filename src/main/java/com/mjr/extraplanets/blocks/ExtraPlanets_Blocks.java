@@ -96,8 +96,8 @@ import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Blocks {
-	
-	//Planet Blocks
+
+	// Planet Blocks
 	public static Block mercuryBlocks;
 	public static Block ceresBlocks;
 	public static Block erisBlocks;
@@ -115,7 +115,7 @@ public class ExtraPlanets_Blocks {
 	public static Block kepler22bPurpleGrass;
 	public static Block kepler22bRedGrass;
 	public static Block kepler22bYellowGrass;
-	
+
 	public static Block callistoBlocks;
 	public static Block deimosBlocks;
 	public static Block europaBlocks;
@@ -128,7 +128,7 @@ public class ExtraPlanets_Blocks {
 	public static Block oberonBlocks;
 	public static Block titaniaBlocks;
 	public static Block iapetusBlocks;
-	
+
 	// Gravels
 	public static Block mercuryGravel;
 	public static Block venusGravel;
@@ -167,7 +167,7 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier9;
 	public static Block treasureChestTier10;
 
-	//Dungeon Bricks
+	// Dungeon Bricks
 	public static Block veunsDungeonBrick;
 	public static Block jupiterDungeonBrick;
 	public static Block saturnDungeonBrick;
@@ -176,7 +176,7 @@ public class ExtraPlanets_Blocks {
 	public static Block plutoDungeonBrick;
 	public static Block erisDungeonBrick;
 
-	//Dungeon Spawners
+	// Dungeon Spawners
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
 	public static Block saturnSpawner;
@@ -184,21 +184,21 @@ public class ExtraPlanets_Blocks {
 	public static Block neptuneSpawner;
 	public static Block plutoSpawner;
 	public static Block erisSpawner;
-	
-	//Logs
+
+	// Logs
 	public static Block kepler22bMapleLog;
 	public static Block kepler22bMapleLog2;
 
-	//Saplings
+	// Saplings
 	public static Block kepler22bMapleSapling;
-	
-	//Leaves
-	public static Block kepler22bMapleLeaf;	
-	
-	//Flowers
+
+	// Leaves
+	public static Block kepler22bMapleLeaf;
+
+	// Flowers
 	public static Block kepler22bGrassFlowers;
-	
-	//Planks
+
+	// Planks
 	public static Block kepler22bPlanks;
 
 	public static void init() {
@@ -208,9 +208,9 @@ public class ExtraPlanets_Blocks {
 		initializeSpawnerBlocks();
 		registerBlocks();
 		registerTileEntitys();
-		if(Config.oreDictionary)
+		if (Config.oreDictionary)
 			OreDictionaryRegister();
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			initializeTreeBlocks();
 			registerTreeBlocks();
 		}
@@ -307,7 +307,7 @@ public class ExtraPlanets_Blocks {
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
 			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue", "kepler22b");
@@ -324,7 +324,8 @@ public class ExtraPlanets_Blocks {
 			veunsDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 		}
 		if (Config.jupiter) {
-			jupiterDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("jupiterDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			jupiterDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("jupiterDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterDungeonBrick").setHardness(4.0F).setResistance(40.0F)
+					.setStepSound(Block.soundTypeMetal);
 			jupiterDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.saturn) {
@@ -336,7 +337,8 @@ public class ExtraPlanets_Blocks {
 			uranusDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.neptune) {
-			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("neptuneDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("neptuneDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneDungeonBrick").setHardness(4.0F).setResistance(40.0F)
+					.setStepSound(Block.soundTypeMetal);
 			neptuneDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.pluto) {
@@ -357,19 +359,19 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier5 = new T5TreasureChest("treasureChestT5");
 		}
 		if (Config.saturn) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier6 = new T6TreasureChest("treasureChestT4Saturn");
 			else
 				treasureChestTier6 = new T6TreasureChest("treasureChestT6");
 		}
 		if (Config.uranus) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier7 = new T7TreasureChest("treasureChestT4Uranus");
 			else
 				treasureChestTier7 = new T7TreasureChest("treasureChestT7");
 		}
 		if (Config.neptune) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier8 = new T8TreasureChest("treasureChestT5Neptune");
 			else
 				treasureChestTier8 = new T8TreasureChest("treasureChestT8");
@@ -378,7 +380,7 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
 		if (Config.eris) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier10 = new T10TreasureChest("treasureChestT6Eris");
 			else
 				treasureChestTier10 = new T10TreasureChest("treasureChestT10");
@@ -408,7 +410,7 @@ public class ExtraPlanets_Blocks {
 			erisSpawner = new DungeonSpawnerEris();
 		}
 	}
-	
+
 	private static void initializeTreeBlocks() {
 		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22bMapleLogs");
 		kepler22bMapleLog2 = new BlockKepler22bMapleTreeLog2("kepler22bMapleLogs2");
@@ -479,7 +481,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName());
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
 			GameRegistry.registerBlock(kepler22bBlueGrass, "kepler22bBlueGrass");
@@ -554,24 +556,24 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.saturn) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
-			
-			if(Config.morePlanetsCompatibility)
+
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 4 Saturn Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
 		if (Config.uranus) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
-			
-			if(Config.morePlanetsCompatibility)
+
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 4 Uranus Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
 		if (Config.neptune) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
-			
-			if(Config.morePlanetsCompatibility)
+
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 5 Neptune Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
@@ -582,7 +584,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.eris) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 6 Eris Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
@@ -636,7 +638,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(neptuneBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(neptuneBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(neptuneBlocks, 1, 3));
-			OreDictionary.registerOre("oreZinc", new ItemStack(neptuneBlocks, 1, 6));	
+			OreDictionary.registerOre("oreZinc", new ItemStack(neptuneBlocks, 1, 6));
 			OreDictionary.registerOre("oreBlueGem", new ItemStack(neptuneBlocks, 1, 9));
 			OreDictionary.registerOre("blockZinc", new ItemStack(neptuneBlocks, 1, 7));
 			OreDictionary.registerOre("blockBlueGem", new ItemStack(neptuneBlocks, 1, 10));
@@ -727,7 +729,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("cobblestone", new ItemStack(kepler22bBlocks, 1, 16));
 		}
 	}
-	
+
 	private static void registerTreeBlocks() {
 		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName());
