@@ -154,7 +154,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	public int getSolarRadiationLevel() {
 		return 12;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;

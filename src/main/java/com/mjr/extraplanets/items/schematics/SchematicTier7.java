@@ -2,8 +2,6 @@ package com.mjr.extraplanets.items.schematics;
 
 import java.util.List;
 
-import com.mjr.extraplanets.ExtraPlanets;
-
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -16,6 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class SchematicTier7 extends Item implements ISchematicItem, ISortableItem {
 	public SchematicTier7(String assetName) {

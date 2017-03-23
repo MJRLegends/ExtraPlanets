@@ -36,24 +36,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury.EnumBlockBasic;
 
 public class BlockBasicJupiter extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeJupiter", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "jupiter_surface"), 
-		SUB_SURFACE(1, "jupiter_sub_surface"), 
-		STONE(2, "jupiter_stone"), 
-		ORE_IRON(3, "jupiter_ore_iron"), 
-		ORE_TIN(4, "jupiter_ore_tin"), 
-		ORE_COPPER(5, "jupiter_ore_copper"), 
-		ORE_PALLADIUM(6, "jupiter_ore_palladium"), 
-		PALLADIUM_BLOCK(7, "jupiter_palladium_block"), 
-		STONEBRICKS(8, "jupiter_stonebricks"), 
-		DUNGEON_BRICK(9, "jupiter_dungeon_brick"), 
-		ORE_RED_GEM(10, "jupiter_ore_red_gem"),
-		RED_GEM_BLOCK(11, "jupiter_red_gem_block");
+		SURFACE(0, "jupiter_surface"), SUB_SURFACE(1, "jupiter_sub_surface"), STONE(2, "jupiter_stone"), ORE_IRON(3, "jupiter_ore_iron"), ORE_TIN(4, "jupiter_ore_tin"), ORE_COPPER(5, "jupiter_ore_copper"), ORE_PALLADIUM(6, "jupiter_ore_palladium"), PALLADIUM_BLOCK(
+				7, "jupiter_palladium_block"), STONEBRICKS(8, "jupiter_stonebricks"), DUNGEON_BRICK(9, "jupiter_dungeon_brick"), ORE_RED_GEM(10, "jupiter_ore_red_gem"), RED_GEM_BLOCK(11, "jupiter_red_gem_block");
 
 		private final int meta;
 		private final String name;
@@ -80,7 +69,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	public BlockBasicJupiter(String assetName) {
 		super(Material.rock);
 		this.setUnlocalizedName(assetName);
-        this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@Override
@@ -95,31 +84,31 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	}
 
 	@Override
-    public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
-    {
-    	IBlockState state = world.getBlockState(pos);
+	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
+		IBlockState state = world.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
-        	return 40.0F;
-        else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
-        	return 6.0F;
-		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_GEM)
+			return 40.0F;
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
+			return 6.0F;
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_GEM)
 			return 3.0F;
-        return super.getExplosionResistance(world, pos, exploder, explosion);
-    }
+		return super.getExplosionResistance(world, pos, exploder, explosion);
+	}
 
 	@Override
-    public float getBlockHardness(World worldIn, BlockPos pos)
-    {
-        IBlockState state = worldIn.getBlockState(pos);
-		if(state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
+	public float getBlockHardness(World worldIn, BlockPos pos) {
+		IBlockState state = worldIn.getBlockState(pos);
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
 			return 0.5F;
-		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_GEM)
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_GEM)
 			return 5.0F;
-		else if(state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
 			return 4.0F;
 		else
 			return 1.5F;
-    }
+	}
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
@@ -170,7 +159,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	}
 
 	@Override
-	public boolean isPlantable(IBlockState arg0)  {
+	public boolean isPlantable(IBlockState arg0) {
 		return false;
 	}
 

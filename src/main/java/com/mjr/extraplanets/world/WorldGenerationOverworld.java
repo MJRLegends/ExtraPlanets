@@ -12,6 +12,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class WorldGenerationOverworld implements IWorldGenerator {
 
+	@Override
 	public void generate(Random rand, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		switch (world.provider.getDimensionId()) {
 		case 0:

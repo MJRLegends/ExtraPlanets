@@ -49,14 +49,14 @@ public class ItemWafers extends Item {
 	public int getMetadata(int par1) {
 		return par1;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			for(int i = 0; i < names.length; i++)
-				if(itemStack.getMetadata() == i)
-					list.add(EnumChatFormatting.GOLD + GCCoreUtil.translate("wafers."+ this.names[i] + ".desc"));
+			for (int i = 0; i < names.length; i++)
+				if (itemStack.getMetadata() == i)
+					list.add(EnumChatFormatting.GOLD + GCCoreUtil.translate("wafers." + ItemWafers.names[i] + ".desc"));
 		}
 	}
 }

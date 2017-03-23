@@ -15,8 +15,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class Tier5RocketRecipes {
 	private static List<INasaWorkbenchRecipe> tier5RocketRecipes = new ArrayList();
 
-	public static ItemStack findMatchingTier5RocketRecipe(InventorySchematicTier5Rocket inventoryRocketBench)
-	{
+	public static ItemStack findMatchingTier5RocketRecipe(InventorySchematicTier5Rocket inventoryRocketBench) {
 		for (INasaWorkbenchRecipe recipe : tier5RocketRecipes) {
 			if (recipe.matches(inventoryRocketBench)) {
 				return recipe.getRecipeOutput();
@@ -25,8 +24,7 @@ public class Tier5RocketRecipes {
 		return null;
 	}
 
-	public static void addTier5RocketRecipe(ItemStack result,
-			HashMap<Integer, ItemStack> input) {
+	public static void addTier5RocketRecipe(ItemStack result, HashMap<Integer, ItemStack> input) {
 		addTier5RocketRecipe(new NasaWorkbenchRecipe(result, input));
 	}
 
@@ -37,10 +35,11 @@ public class Tier5RocketRecipes {
 	public static List<INasaWorkbenchRecipe> getTier5RocketRecipes() {
 		return tier5RocketRecipes;
 	}
-	public static void registerRocketCraftingRecipe(){
+
+	public static void registerRocketCraftingRecipe() {
 		HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 		input.put(1, new ItemStack(ExtraPlanets_Items.noseConeTier5)); // Cone
-		//Body
+		// Body
 		input.put(2, new ItemStack(ExtraPlanets_Items.tier5Items, 1, 3));
 		input.put(3, new ItemStack(ExtraPlanets_Items.tier5Items, 1, 3));
 		input.put(4, new ItemStack(ExtraPlanets_Items.tier5Items, 1, 3));

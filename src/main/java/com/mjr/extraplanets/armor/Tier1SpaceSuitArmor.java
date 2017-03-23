@@ -22,12 +22,11 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-		if (stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitChest
-				|| stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitBoots) {
+		if (stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitChest || stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitLegings) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
-		}else if (stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitGravityBoots) {
+		} else if (stack.getItem() == ExtraPlanets_Armor.tier1SpaceSuitGravityBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_3.png";
 		} else {
 			return null;
@@ -41,8 +40,8 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	public int gravityOverrideIfLow(EntityPlayer p) {
-		for(int i = 0; i < 4; i++)
-			if(p.getCurrentArmor(i) != null)
+		for (int i = 0; i < 4; i++)
+			if (p.getCurrentArmor(i) != null)
 				if (p.getCurrentArmor(i).getItem() == ExtraPlanets_Armor.tier1SpaceSuitGravityBoots)
 					return 55;
 		return 0;
@@ -50,10 +49,10 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	public int gravityOverrideIfHigh(EntityPlayer p) {
-		for(int i = 0; i < 4; i++)
-			if(p.getCurrentArmor(i) != null)
+		for (int i = 0; i < 4; i++)
+			if (p.getCurrentArmor(i) != null)
 				if (p.getCurrentArmor(i).getItem() == ExtraPlanets_Armor.tier1SpaceSuitGravityBoots)
-			return 75;
+					return 75;
 		return 0;
 	}
 }

@@ -120,8 +120,7 @@ public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDe
 						}
 
 						var9.stackSize -= var13;
-						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13,
-								var9.getItemDamage()));
+						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13, var9.getItemDamage()));
 
 						if (var9.hasTagCompound()) {
 							var14.getEntityItem().setTagCompound((NBTTagCompound) var9.getTagCompound().copy());
@@ -164,7 +163,7 @@ public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDe
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex();
+		return state.getValue(FACING).getHorizontalIndex();
 	}
 
 	@Override

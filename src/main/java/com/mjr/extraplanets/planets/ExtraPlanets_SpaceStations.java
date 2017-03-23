@@ -141,13 +141,13 @@ public class ExtraPlanets_SpaceStations {
 			erisSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b && Config.keplerSolarSystems) {
-//			kepler22bSpaceStation = new Satellite("spaceStation.kepler22b").setParentBody(ExtraPlanets_Planets.kepler22b);
-//			kepler22bSpaceStation.setRelativeSize(0.2667F);
-//			kepler22bSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-//			kepler22bSpaceStation.setRelativeOrbitTime(20.0F);
-//			kepler22bSpaceStation.setTierRequired(ExtraPlanets_Planets.kepler22b.getTierRequirement());
-//			kepler22bSpaceStation.setDimensionInfo(Config.kepler22bSpaceStationID, Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class);
-//			kepler22bSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			// kepler22bSpaceStation = new Satellite("spaceStation.kepler22b").setParentBody(ExtraPlanets_Planets.kepler22b);
+			// kepler22bSpaceStation.setRelativeSize(0.2667F);
+			// kepler22bSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			// kepler22bSpaceStation.setRelativeOrbitTime(20.0F);
+			// kepler22bSpaceStation.setTierRequired(ExtraPlanets_Planets.kepler22b.getTierRequirement());
+			// kepler22bSpaceStation.setDimensionInfo(Config.kepler22bSpaceStationID, Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class);
+			// kepler22bSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
 		}
 	}
 
@@ -213,10 +213,10 @@ public class ExtraPlanets_SpaceStations {
 			GalacticraftRegistry.registerProvider(Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true, 0);
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b && Config.keplerSolarSystems) {
-//			GalaxyRegistry.registerSatellite(kepler22bSpaceStation);
-//			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22bOrbit.class, new TeleportTypeKepler22bOrbit());
-//			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationID, WorldProviderKepler22bOrbit.class, false, 0);
-//			GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class, true, 0);
+			// GalaxyRegistry.registerSatellite(kepler22bSpaceStation);
+			// GalacticraftRegistry.registerTeleportType(WorldProviderKepler22bOrbit.class, new TeleportTypeKepler22bOrbit());
+			// GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationID, WorldProviderKepler22bOrbit.class, false, 0);
+			// GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class, true, 0);
 		}
 	}
 }

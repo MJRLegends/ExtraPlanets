@@ -152,7 +152,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	public int getSolarRadiationLevel() {
 		return 0;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;

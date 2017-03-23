@@ -237,25 +237,25 @@ public class ExtraPlanets_Armor {
 			greenDiamondLegings = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 2).setUnlocalizedName("greenDiamondLegings");
 			greenDiamondBoots = new GreenDiamondArmor("greenDiamond", greenDiamond_ArmorMaterial, 3).setUnlocalizedName("greenDiamondBoots");
 		}
-		if(Config.pressure || Config.radiation){
+		if (Config.pressure || Config.radiation) {
 			tier1SpaceSuitHelmet = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier1SpaceSuitHelmet");
 			tier1SpaceSuitChest = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier1SpaceSuitChest");
 			tier1SpaceSuitLegings = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier1SpaceSuitLegings");
 			tier1SpaceSuitBoots = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier1SpaceSuitBoots");
 			tier1SpaceSuitGravityBoots = new Tier1SpaceSuitArmor("tier1SpaceSuit", tier1SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier1SpaceSuitGravityBoots");
-	
+
 			tier2SpaceSuitHelmet = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier2SpaceSuitHelmet");
 			tier2SpaceSuitChest = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier2SpaceSuitChest");
 			tier2SpaceSuitLegings = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier2SpaceSuitLegings");
 			tier2SpaceSuitBoots = new Tier2SpaceSuitArmor("tier1SpaceSuit", tier2SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier2SpaceSuitBoots");
 			tier2SpaceSuitGravityBoots = new Tier2SpaceSuitArmor("tier2SpaceSuit", tier2SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier2SpaceSuitGravityBoots");
-	
+
 			tier3SpaceSuitHelmet = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier3SpaceSuitHelmet");
 			tier3SpaceSuitChest = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier3SpaceSuitChest");
 			tier3SpaceSuitLegings = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier3SpaceSuitLegings");
 			tier3SpaceSuitBoots = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier3SpaceSuitBoots");
 			tier3SpaceSuitGravityBoots = new Tier3SpaceSuitArmor("tier1SpaceSuit", tier3SpaceSuit_ArmorMaterial, 3).setUnlocalizedName("tier3SpaceSuitGravityBoots");
-	
+
 			tier4SpaceSuitHelmet = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 0).setUnlocalizedName("tier4SpaceSuitHelmet");
 			tier4SpaceSuitChest = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 1).setUnlocalizedName("tier4SpaceSuitChest");
 			tier4SpaceSuitLegings = new Tier4SpaceSuitArmor("tier1SpaceSuit", tier4SpaceSuit_ArmorMaterial, 2).setUnlocalizedName("tier4SpaceSuitLegings");
@@ -363,25 +363,25 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(greenDiamondLegings, "greenDiamondLegings");
 			GameRegistry.registerItem(greenDiamondBoots, "greenDiamondBoots");
 		}
-		if(Config.pressure || Config.radiation){
+		if (Config.pressure || Config.radiation) {
 			GameRegistry.registerItem(tier1SpaceSuitHelmet, "tier1SpaceSuitHelmet");
 			GameRegistry.registerItem(tier1SpaceSuitChest, "tier1SpaceSuitChest");
 			GameRegistry.registerItem(tier1SpaceSuitLegings, "tier1SpaceSuitLegings");
 			GameRegistry.registerItem(tier1SpaceSuitBoots, "tier1SpaceSuitBoots");
 			GameRegistry.registerItem(tier1SpaceSuitGravityBoots, "tier1SpaceSuitGravityBoots");
-	
+
 			GameRegistry.registerItem(tier2SpaceSuitHelmet, "tier2SpaceSuitHelmet");
 			GameRegistry.registerItem(tier2SpaceSuitChest, "tier2SpaceSuitChest");
 			GameRegistry.registerItem(tier2SpaceSuitLegings, "tier2SpaceSuitLegings");
 			GameRegistry.registerItem(tier2SpaceSuitBoots, "tier2SpaceSuitBoots");
 			GameRegistry.registerItem(tier2SpaceSuitGravityBoots, "tier2SpaceSuitGravityBoots");
-	
+
 			GameRegistry.registerItem(tier3SpaceSuitHelmet, "tier3SpaceSuitHelmet");
 			GameRegistry.registerItem(tier3SpaceSuitChest, "tier3SpaceSuitChest");
 			GameRegistry.registerItem(tier3SpaceSuitLegings, "tier3SpaceSuitLegings");
 			GameRegistry.registerItem(tier3SpaceSuitBoots, "tier3SpaceSuitBoots");
 			GameRegistry.registerItem(tier3SpaceSuitGravityBoots, "tier3SpaceSuitGravityBoots");
-	
+
 			GameRegistry.registerItem(tier4SpaceSuitHelmet, "tier4SpaceSuitHelmet");
 			GameRegistry.registerItem(tier4SpaceSuitChest, "tier4SpaceSuitChest");
 			GameRegistry.registerItem(tier4SpaceSuitLegings, "tier4SpaceSuitLegings");

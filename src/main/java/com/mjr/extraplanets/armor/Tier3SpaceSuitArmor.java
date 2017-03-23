@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.api.IPressureSuit;
+import com.mjr.extraplanets.api.IRadiationSuit;
 
 public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity {
 	public String name;
@@ -22,12 +22,11 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-		if (stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitChest
-				|| stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitBoots) {
+		if (stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitChest || stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitLegings) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
-		}else if (stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitGravityBoots) {
+		} else if (stack.getItem() == ExtraPlanets_Armor.tier3SpaceSuitGravityBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_3.png";
 		} else {
 			return null;
@@ -41,8 +40,8 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	public int gravityOverrideIfLow(EntityPlayer p) {
-		for(int i = 0; i < 4; i++)
-			if(p.getCurrentArmor(i) != null)
+		for (int i = 0; i < 4; i++)
+			if (p.getCurrentArmor(i) != null)
 				if (p.getCurrentArmor(i).getItem() == ExtraPlanets_Armor.tier3SpaceSuitGravityBoots)
 					return 55;
 		return 0;
@@ -50,10 +49,10 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	public int gravityOverrideIfHigh(EntityPlayer p) {
-		for(int i = 0; i < 4; i++)
-			if(p.getCurrentArmor(i) != null)
+		for (int i = 0; i < 4; i++)
+			if (p.getCurrentArmor(i) != null)
 				if (p.getCurrentArmor(i).getItem() == ExtraPlanets_Armor.tier3SpaceSuitGravityBoots)
-			return 75;
+					return 75;
 		return 0;
 	}
 }

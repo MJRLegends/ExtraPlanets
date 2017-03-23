@@ -154,7 +154,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	public int getSolarRadiationLevel() {
 		return 30;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;

@@ -21,12 +21,11 @@ public class RegisterHelper {
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
 		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
 	}
-	
-	public static void setHarvestLevel(Block block, String toolClass, int level, int meta)
-    {
-        block.setHarvestLevel(toolClass, level, block.getStateFromMeta(meta));
-    }
-	
+
+	public static void setHarvestLevel(Block block, String toolClass, int level, int meta) {
+		block.setHarvestLevel(toolClass, level, block.getStateFromMeta(meta));
+	}
+
 	public static Planet registerUnreachablePlanet(String name, SolarSystem system) {
 		ArrayList<CelestialBody> cBodyList = new ArrayList<CelestialBody>();
 		cBodyList.addAll(GalaxyRegistry.getRegisteredPlanets().values());
@@ -41,7 +40,7 @@ public class RegisterHelper {
 		GalaxyRegistry.registerPlanet(planet);
 		return planet;
 	}
-	
+
 	public static Moon registerUnreachableMoon(String name, Planet parent) {
 		ArrayList<CelestialBody> cBodyList = new ArrayList<CelestialBody>();
 		cBodyList.addAll(GalaxyRegistry.getRegisteredMoons().values());

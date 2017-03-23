@@ -307,7 +307,7 @@ public class ExtraPlanets_Items {
 			tier4UnPreparedSpaceSuitLegings = new ItemBasicItem("tier4UnPreparedSpaceSuitLegings");
 			tier4UnPreparedSpaceSuitBoots = new ItemBasicItem("tier4UnPreparedSpaceSuitBoots");
 		}
-		if(Config.radiation){
+		if (Config.radiation) {
 			iodideSalt = new ItemBasicItem("iodideSalt");
 			potassiumIodide = new ItemBasicItem("potassiumIodide");
 			potassium = new ItemBasicItem("potassium");
@@ -319,7 +319,7 @@ public class ExtraPlanets_Items {
 		radioactive_bucket = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.radioactiveWater);
 		methane_bucket = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
 		nitrogen_ice_bucket = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
-		
+
 		// cannedFood = new ItemCannedFood("cannedfood");
 		wafers = new ItemWafers("wafer");
 		ingotLead = new ItemBasicItem("ingotLead");
@@ -419,12 +419,12 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3PressureLayer, tier3PressureLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4PressureLayer, tier4PressureLayer.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(tier1RadiationLayer, tier1RadiationLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2RadiationLayer, tier2RadiationLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3RadiationLayer, tier3RadiationLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4RadiationLayer, tier4RadiationLayer.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(tier1ArmorLayer, tier1ArmorLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier2ArmorLayer, tier2ArmorLayer.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier3ArmorLayer, tier3ArmorLayer.getUnlocalizedName().substring(5));
@@ -450,14 +450,14 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 		}
-		if(Config.radiation){
+		if (Config.radiation) {
 			GameRegistry.registerItem(iodideSalt, iodideSalt.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(anti_radiation, anti_radiation.getUnlocalizedName().substring(5));
 		}
-		
+
 		// GameRegistry.registerItem(cannedFood, "cannedFood");
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
@@ -537,17 +537,17 @@ public class ExtraPlanets_Items {
 			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
 			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
 		}
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			GalacticraftRegistry.registerGear(6000, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier3ThermalPadding, 1, 0));
 			GalacticraftRegistry.registerGear(6001, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier3ThermalPadding, 1, 1));
 			GalacticraftRegistry.registerGear(6002, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier3ThermalPadding, 1, 2));
 			GalacticraftRegistry.registerGear(6003, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier3ThermalPadding, 1, 3));
-	
+
 			GalacticraftRegistry.registerGear(6004, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier4ThermalPadding, 1, 0));
 			GalacticraftRegistry.registerGear(6005, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier4ThermalPadding, 1, 1));
 			GalacticraftRegistry.registerGear(6006, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier4ThermalPadding, 1, 2));
 			GalacticraftRegistry.registerGear(6007, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier4ThermalPadding, 1, 3));
-	
+
 			GalacticraftRegistry.registerGear(6008, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier5ThermalPadding, 1, 0));
 			GalacticraftRegistry.registerGear(6009, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier5ThermalPadding, 1, 1));
 			GalacticraftRegistry.registerGear(6010, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier5ThermalPadding, 1, 2));

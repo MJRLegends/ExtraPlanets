@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class CrystalArmor extends ItemArmor{
+public class CrystalArmor extends ItemArmor {
 	public String name;
 
 	public CrystalArmor(String name, ArmorMaterial material, int placement) {
@@ -15,15 +15,14 @@ public class CrystalArmor extends ItemArmor{
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
+
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		if(stack.getItem() == ExtraPlanets_Armor.crystalHelmet || stack.getItem() == ExtraPlanets_Armor.crystalChest || stack.getItem() == ExtraPlanets_Armor.crystalBoots){
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+		if (stack.getItem() == ExtraPlanets_Armor.crystalHelmet || stack.getItem() == ExtraPlanets_Armor.crystalChest || stack.getItem() == ExtraPlanets_Armor.crystalBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-		}
-		else if(stack.getItem() == ExtraPlanets_Armor.crystalLegings){
+		} else if (stack.getItem() == ExtraPlanets_Armor.crystalLegings) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
-		}
-		else{
+		} else {
 			return null;
 		}
 	}

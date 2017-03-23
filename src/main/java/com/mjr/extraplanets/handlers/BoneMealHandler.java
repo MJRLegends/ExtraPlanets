@@ -10,8 +10,8 @@ public class BoneMealHandler {
 	public void usedBonemeal(BonemealEvent event) {
 		if (event.block == ExtraPlanets_Blocks.kepler22bMapleSapling) {
 			if (!event.world.isRemote) {
-//				((BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.kepler22bMapleSapling).markOrGrowMarked(event.world, event.x, event.y, event.z, event.world.rand);
-//				event.setResult(Result.ALLOW);
+				// ((BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.kepler22bMapleSapling).markOrGrowMarked(event.world, event.x, event.y, event.z, event.world.rand);
+				// event.setResult(Result.ALLOW);
 			}
 		}
 	}

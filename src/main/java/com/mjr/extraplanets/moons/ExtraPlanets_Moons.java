@@ -61,27 +61,27 @@ public class ExtraPlanets_Moons {
 		registerMoons();
 		initializeUnReachableMoons();
 	}
-	
+
 	public static void initializeUnReachableMoons() {
 		// Pluto Moons
 		charon = RegisterHelper.registerUnreachableMoon("charon", ExtraPlanets_Planets.pluto);
 		if (charon != null)
 			charon.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
-		
+
 		nix = RegisterHelper.registerUnreachableMoon("nix", ExtraPlanets_Planets.pluto);
 		if (nix != null)
 			nix.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(57.415456589452485548F);
-		
+
 		hydra = RegisterHelper.registerUnreachableMoon("hydra", ExtraPlanets_Planets.pluto);
 		if (hydra != null)
-			hydra.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(123.252594612756974F);		
+			hydra.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(123.252594612756974F);
 
 		// Eris Moons
 		dysnomia = RegisterHelper.registerUnreachableMoon("dysnomia", ExtraPlanets_Planets.eris);
 		if (dysnomia != null)
 			dysnomia.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 	}
-	
+
 	private static void initializeMoons() {
 		if (Config.triton) {
 			triton = new Moon("triton").setParentPlanet(ExtraPlanets_Planets.neptune);
@@ -126,7 +126,7 @@ public class ExtraPlanets_Moons {
 			io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			io.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
 			io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
-		}		
+		}
 		if (Config.europa) {
 			europa = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			europa.setPhaseShift(2.436F);
@@ -137,7 +137,7 @@ public class ExtraPlanets_Moons {
 			europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			europa.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
 			europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
-		}		
+		}
 
 		if (Config.ganymede) {
 			ganymede = new Moon("ganymede").setParentPlanet(ExtraPlanets_Planets.jupiter);

@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class MercuryArmor extends ItemArmor{
+public class MercuryArmor extends ItemArmor {
 	public String name;
 
 	public MercuryArmor(String name, ArmorMaterial material, int placement) {
@@ -15,15 +15,14 @@ public class MercuryArmor extends ItemArmor{
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
+
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		if(stack.getItem() == ExtraPlanets_Armor.mercuryHelmet || stack.getItem() == ExtraPlanets_Armor.mercuryChest || stack.getItem() == ExtraPlanets_Armor.mercuryBoots){
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+		if (stack.getItem() == ExtraPlanets_Armor.mercuryHelmet || stack.getItem() == ExtraPlanets_Armor.mercuryChest || stack.getItem() == ExtraPlanets_Armor.mercuryBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-		}
-		else if(stack.getItem() == ExtraPlanets_Armor.mercuryLegings){
+		} else if (stack.getItem() == ExtraPlanets_Armor.mercuryLegings) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
-		}
-		else{
+		} else {
 			return null;
 		}
 	}

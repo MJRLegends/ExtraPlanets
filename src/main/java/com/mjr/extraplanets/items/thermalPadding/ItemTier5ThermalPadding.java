@@ -2,8 +2,6 @@ package com.mjr.extraplanets.items.thermalPadding;
 
 import java.util.List;
 
-import com.mjr.extraplanets.ExtraPlanets;
-
 import micdoodle8.mods.galacticraft.api.item.IItemThermal;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -17,116 +15,94 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemTier5ThermalPadding  extends Item implements IItemThermal
-{
-    public static String[] names = { "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots", "tier5ThermalHelm0", "tier5ThermalChestplate0", "tier5ThermalLeggings0", "tier5ThermalBoots0" };
+import com.mjr.extraplanets.ExtraPlanets;
 
-    public ItemTier5ThermalPadding(String assetName)
-    {
-        super();
-        this.setMaxDamage(0);
-        this.setHasSubtypes(true);
-        this.setMaxStackSize(1);
-        this.setUnlocalizedName(assetName);
-    }
+public class ItemTier5ThermalPadding extends Item implements IItemThermal {
+	public static String[] names = { "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots", "tier5ThermalHelm0", "tier5ThermalChestplate0", "tier5ThermalLeggings0", "tier5ThermalBoots0" };
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-        return ClientProxyCore.galacticraftItem;
-    }
+	public ItemTier5ThermalPadding(String assetName) {
+		super();
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+		this.setMaxStackSize(1);
+		this.setUnlocalizedName(assetName);
+	}
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public CreativeTabs getCreativeTab()
-    {
-        return ExtraPlanets.ArmorTab;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
+		return ClientProxyCore.galacticraftItem;
+	}
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
-    {
-        for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++)
-        {
-            par3List.add(new ItemStack(par1, 1, i));
-        }
-    }
+	@SideOnly(Side.CLIENT)
+	@Override
+	public CreativeTabs getCreativeTab() {
+		return ExtraPlanets.ArmorTab;
+	}
 
-    @Override
-    public String getUnlocalizedName(ItemStack par1ItemStack)
-    {
-        if (names.length > par1ItemStack.getItemDamage())
-        {
-            return "item." + ItemTier5ThermalPadding.names[par1ItemStack.getItemDamage()];
-        }
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+		for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
+			par3List.add(new ItemStack(par1, 1, i));
+		}
+	}
 
-        return "unnamed";
-    }
+	@Override
+	public String getUnlocalizedName(ItemStack par1ItemStack) {
+		if (names.length > par1ItemStack.getItemDamage()) {
+			return "item." + ItemTier5ThermalPadding.names[par1ItemStack.getItemDamage()];
+		}
 
-    @Override
-    public int getMetadata(int par1)
-    {
-        return par1;
-    }
+		return "unnamed";
+	}
 
-    @Override
-    public int getThermalStrength()
-    {
-        return 150;
-    }
+	@Override
+	public int getMetadata(int par1) {
+		return par1;
+	}
 
-    @Override
-    public boolean isValidForSlot(ItemStack stack, int armorSlot)
-    {
-        return stack.getItemDamage() == armorSlot;
-    }
-    
-    @Override
-    public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player)
-    {
-        if (player instanceof EntityPlayerMP)
-        {
-            GCPlayerStats stats = GCPlayerStats.get((EntityPlayerMP) player);
-            ItemStack gear = stats.extendedInventory.getStackInSlot(6);
-            ItemStack gear1 = stats.extendedInventory.getStackInSlot(7);
-            ItemStack gear2 = stats.extendedInventory.getStackInSlot(8);
-            ItemStack gear3 = stats.extendedInventory.getStackInSlot(9);
+	@Override
+	public int getThermalStrength() {
+		return 150;
+	}
 
-            if (itemStack.getItemDamage() == 0)
-            {
-                if (gear == null)
-                {
-                    stats.extendedInventory.setInventorySlotContents(6, itemStack.copy());
-                    itemStack.stackSize = 0;
-                }
-            }
-            else if (itemStack.getItemDamage() == 1)
-            {
-                if (gear1 == null)
-                {
-                    stats.extendedInventory.setInventorySlotContents(7, itemStack.copy());
-                    itemStack.stackSize = 0;
-                }
-            }
-            else if (itemStack.getItemDamage() == 2)
-            {
-                if (gear2 == null)
-                {
-                    stats.extendedInventory.setInventorySlotContents(8, itemStack.copy());
-                    itemStack.stackSize = 0;
-                }
-            }
-            else if (itemStack.getItemDamage() == 3)
-            {
-                if (gear3 == null)
-                {
-                    stats.extendedInventory.setInventorySlotContents(9, itemStack.copy());
-                    itemStack.stackSize = 0;
-                }
-            }
-        }
-        return itemStack;
-    }
+	@Override
+	public boolean isValidForSlot(ItemStack stack, int armorSlot) {
+		return stack.getItemDamage() == armorSlot;
+	}
+
+	@Override
+	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
+		if (player instanceof EntityPlayerMP) {
+			GCPlayerStats stats = GCPlayerStats.get((EntityPlayerMP) player);
+			ItemStack gear = stats.extendedInventory.getStackInSlot(6);
+			ItemStack gear1 = stats.extendedInventory.getStackInSlot(7);
+			ItemStack gear2 = stats.extendedInventory.getStackInSlot(8);
+			ItemStack gear3 = stats.extendedInventory.getStackInSlot(9);
+
+			if (itemStack.getItemDamage() == 0) {
+				if (gear == null) {
+					stats.extendedInventory.setInventorySlotContents(6, itemStack.copy());
+					itemStack.stackSize = 0;
+				}
+			} else if (itemStack.getItemDamage() == 1) {
+				if (gear1 == null) {
+					stats.extendedInventory.setInventorySlotContents(7, itemStack.copy());
+					itemStack.stackSize = 0;
+				}
+			} else if (itemStack.getItemDamage() == 2) {
+				if (gear2 == null) {
+					stats.extendedInventory.setInventorySlotContents(8, itemStack.copy());
+					itemStack.stackSize = 0;
+				}
+			} else if (itemStack.getItemDamage() == 3) {
+				if (gear3 == null) {
+					stats.extendedInventory.setInventorySlotContents(9, itemStack.copy());
+					itemStack.stackSize = 0;
+				}
+			}
+		}
+		return itemStack;
+	}
 }

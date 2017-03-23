@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.api.ISolarRadiationWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
@@ -156,7 +155,7 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	public int getSolarRadiationLevel() {
 		return 100;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;

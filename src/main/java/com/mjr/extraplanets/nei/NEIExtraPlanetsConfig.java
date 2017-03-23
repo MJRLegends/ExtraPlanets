@@ -43,11 +43,11 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t8rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t9rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t10rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
-	
-	//GC Machines
+
+	// GC Machines
 	private static HashMap<HashMap<Integer, PositionedStack>, PositionedStack> circuitFabricatorRecipes = new HashMap<HashMap<Integer, PositionedStack>, PositionedStack>();
-	
-	//Custom Machines
+
+	// Custom Machines
 	private static HashMap<PositionedStack, PositionedStack> blockSmasherRecipes = new HashMap<PositionedStack, PositionedStack>();
 	private static HashMap<PositionedStack, PositionedStack> crystallizerRecipes = new HashMap<PositionedStack, PositionedStack>();
 	private static HashMap<PositionedStack, PositionedStack> decrystallizerRecipes = new HashMap<PositionedStack, PositionedStack>();
@@ -111,20 +111,20 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			}
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
-			
-			if(Config.basicSmasher){
+
+			if (Config.basicSmasher) {
 				API.registerRecipeHandler(new BlockSmasherRecipeHandler());
 				API.registerUsageHandler(new BlockSmasherRecipeHandler());
 			}
-			if(Config.basicCrystallizer){
+			if (Config.basicCrystallizer) {
 				API.registerRecipeHandler(new CrystallizerRecipeHandler());
 				API.registerUsageHandler(new CrystallizerRecipeHandler());
 			}
-			if(Config.basicDecrystallizer){
+			if (Config.basicDecrystallizer) {
 				API.registerRecipeHandler(new DecrystallizerRecipeHandler());
 				API.registerUsageHandler(new DecrystallizerRecipeHandler());
 			}
-			if(Config.basicChemicalInjector){
+			if (Config.basicChemicalInjector) {
 				API.registerRecipeHandler(new SolarEvaporationChamberHandler());
 				API.registerUsageHandler(new SolarEvaporationChamberHandler());
 			}
@@ -204,7 +204,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getCircuitFabricatorRecipes() {
 		return NEIExtraPlanetsConfig.circuitFabricatorRecipes.entrySet();
 	}
-	
+
 	public void registerBlockSmasherRecipe(PositionedStack input, PositionedStack output) {
 		NEIExtraPlanetsConfig.blockSmasherRecipes.put(input, output);
 	}
@@ -212,7 +212,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<PositionedStack, PositionedStack>> getBlockSmasherRecipes() {
 		return NEIExtraPlanetsConfig.blockSmasherRecipes.entrySet();
 	}
-	
+
 	public void registerCrystallizerRecipe(PositionedStack input, PositionedStack output) {
 		NEIExtraPlanetsConfig.crystallizerRecipes.put(input, output);
 	}
@@ -220,7 +220,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<PositionedStack, PositionedStack>> getCrystallizerRecipes() {
 		return NEIExtraPlanetsConfig.crystallizerRecipes.entrySet();
 	}
-	
+
 	public void registerDecrystallizerRecipe(PositionedStack input, PositionedStack output) {
 		NEIExtraPlanetsConfig.decrystallizerRecipes.put(input, output);
 	}
@@ -228,7 +228,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<PositionedStack, PositionedStack>> getDecrystallizerRecipes() {
 		return NEIExtraPlanetsConfig.decrystallizerRecipes.entrySet();
 	}
-	
+
 	public void registerChemicalInjectorRecipe(PositionedStack input, PositionedStack output) {
 		NEIExtraPlanetsConfig.chemicalInjectorRecipes.put(input, output);
 	}
@@ -236,7 +236,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<PositionedStack, PositionedStack>> getChemicalInjectorRecipes() {
 		return NEIExtraPlanetsConfig.decrystallizerRecipes.entrySet();
 	}
-	
+
 	public void registerSolarEvaporationChamberRecipe(PositionedStack input, PositionedStack output) {
 		NEIExtraPlanetsConfig.solarEvaporationChamberRecipes.put(input, output);
 	}
@@ -246,10 +246,10 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	}
 
 	private void registerCustomMachinesRecipes() {
-        this.registerBlockSmasherRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Blocks.potash, 1, 0), 45, 31), new PositionedStack(new ItemStack(ExtraPlanets_Items.potash, 3, 0), 107, 31));
-        this.registerCrystallizerRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Items.salt_bucket, 1, 0), 2, 3), new PositionedStack(new ItemStack(ExtraPlanets_Items.iodideSalt, 6, 0), 107, 31));
-        this.registerDecrystallizerRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Items.iodideSalt, 6, 0), 77, 31), new PositionedStack(new ItemStack(ExtraPlanets_Items.salt_bucket, 1, 0), 148, 3));
-        this.registerSolarEvaporationChamberRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Items.potash, 12, 0), 45, 31), new PositionedStack(new ItemStack(ExtraPlanets_Items.potassium), 107, 31));
+		this.registerBlockSmasherRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Blocks.potash, 1, 0), 45, 31), new PositionedStack(new ItemStack(ExtraPlanets_Items.potash, 3, 0), 107, 31));
+		this.registerCrystallizerRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Items.salt_bucket, 1, 0), 2, 3), new PositionedStack(new ItemStack(ExtraPlanets_Items.iodideSalt, 6, 0), 107, 31));
+		this.registerDecrystallizerRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Items.iodideSalt, 6, 0), 77, 31), new PositionedStack(new ItemStack(ExtraPlanets_Items.salt_bucket, 1, 0), 148, 3));
+		this.registerSolarEvaporationChamberRecipe(new PositionedStack(new ItemStack(ExtraPlanets_Items.potash, 12, 0), 45, 31), new PositionedStack(new ItemStack(ExtraPlanets_Items.potassium), 107, 31));
 	}
 
 	public void registerTier4Recipe() {

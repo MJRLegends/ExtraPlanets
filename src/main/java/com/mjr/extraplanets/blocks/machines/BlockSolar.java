@@ -231,7 +231,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex() + ((EnumSolarType) state.getValue(TYPE)).getMeta() * 4;
+		return state.getValue(FACING).getHorizontalIndex() + ((EnumSolarType) state.getValue(TYPE)).getMeta() * 4;
 	}
 
 	@Override

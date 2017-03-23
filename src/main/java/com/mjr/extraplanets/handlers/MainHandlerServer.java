@@ -152,13 +152,12 @@ public class MainHandlerServer {
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
 			return;
-		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)){
+		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)) {
 			if (Config.pressure)
 				checkPressure(event, entityLiving);
 			if (Config.radiation)
 				checkRadiation(event, entityLiving);
-		}
-		else
+		} else
 			return;
 	}
 
@@ -169,18 +168,18 @@ public class MainHandlerServer {
 		ItemStack chest = playerMP.getCurrentArmor(1);
 		ItemStack leggins = playerMP.getCurrentArmor(2);
 		ItemStack boots = playerMP.getCurrentArmor(3);
-		
+
 		boolean doDamage = false;
 
-		if(helmet == null || !(helmet.getItem() instanceof IPressureSuit))
+		if (helmet == null || !(helmet.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		else if(chest == null || !(chest.getItem() instanceof IPressureSuit))
+		else if (chest == null || !(chest.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		else if(leggins == null || !(leggins.getItem() instanceof IPressureSuit))
+		else if (leggins == null || !(leggins.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		else if(boots == null || !(boots.getItem() instanceof IPressureSuit))
+		else if (boots == null || !(boots.getItem() instanceof IPressureSuit))
 			doDamage = true;
-		
+
 		if (doDamage) {
 			float tempLevel = ((CustomWorldProviderSpace) playerMP.worldObj.provider).getPressureLevel();
 			tempLevel = (tempLevel / 100) * 8;

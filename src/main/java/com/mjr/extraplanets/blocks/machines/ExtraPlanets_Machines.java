@@ -54,8 +54,8 @@ public class ExtraPlanets_Machines {
 			advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
 		if (Config.ultimateCompressor)
 			ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
-		
-		if(Config.radiation){
+
+		if (Config.radiation) {
 			if (Config.basicDecrystallizer)
 				basicDecrystallizer = new BasicDecrystallizer("basicDecrystallizer");
 			if (Config.basicCrystallizer)
@@ -80,9 +80,10 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
 		if (Config.ultimateCompressor)
 			GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
-		if(Config.radiation){
-			if (Config.basicCrystallizer)if (Config.basicCrystallizer)
-				GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
+		if (Config.radiation) {
+			if (Config.basicCrystallizer)
+				if (Config.basicCrystallizer)
+					GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
 			if (Config.basicCrystallizer)
 				GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
 			if (Config.basicSmasher)
@@ -109,7 +110,7 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
 		}
-		if(Config.radiation){
+		if (Config.radiation) {
 			if (Config.basicCrystallizer)
 				GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
 			if (Config.basicCrystallizer)

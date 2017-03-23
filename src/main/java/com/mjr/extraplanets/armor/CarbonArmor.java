@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class CarbonArmor extends ItemArmor{
+public class CarbonArmor extends ItemArmor {
 	public String name;
 
 	public CarbonArmor(String name, ArmorMaterial material, int placement) {
@@ -15,15 +15,14 @@ public class CarbonArmor extends ItemArmor{
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
+
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		if(stack.getItem() == ExtraPlanets_Armor.carbonHelmet || stack.getItem() == ExtraPlanets_Armor.carbonChest || stack.getItem() == ExtraPlanets_Armor.carbonBoots){
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+		if (stack.getItem() == ExtraPlanets_Armor.carbonHelmet || stack.getItem() == ExtraPlanets_Armor.carbonChest || stack.getItem() == ExtraPlanets_Armor.carbonBoots) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-		}
-		else if(stack.getItem() == ExtraPlanets_Armor.carbonLegings){
+		} else if (stack.getItem() == ExtraPlanets_Armor.carbonLegings) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
-		}
-		else{
+		} else {
 			return null;
 		}
 	}

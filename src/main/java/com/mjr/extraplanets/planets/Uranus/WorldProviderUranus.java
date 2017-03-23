@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.planets.Uranus;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
@@ -155,7 +154,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	public int getSolarRadiationLevel() {
 		return 25;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;

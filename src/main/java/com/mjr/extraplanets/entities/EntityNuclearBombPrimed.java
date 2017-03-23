@@ -21,9 +21,9 @@ public class EntityNuclearBombPrimed extends EntityTNTPrimed {
 		this(worldIn);
 		this.setPosition(p_i1730_2_, p_i1730_4_, p_i1730_6_);
 		float f = (float) (Math.random() * Math.PI * 2.0D);
-		this.motionX = (double) (-((float) Math.sin((double) f)) * 0.02F);
+		this.motionX = -((float) Math.sin(f)) * 0.02F;
 		this.motionY = 0.20000000298023224D;
-		this.motionZ = (double) (-((float) Math.cos((double) f)) * 0.02F);
+		this.motionZ = -((float) Math.cos(f)) * 0.02F;
 		this.fuse = 80;
 		this.prevPosX = p_i1730_2_;
 		this.prevPosY = p_i1730_4_;
@@ -31,6 +31,7 @@ public class EntityNuclearBombPrimed extends EntityTNTPrimed {
 		this.tntPlacedBy = p_i1730_8_;
 	}
 
+	@Override
 	public void onUpdate() {
 		this.prevPosX = this.posX;
 		this.prevPosY = this.posY;
@@ -61,9 +62,10 @@ public class EntityNuclearBombPrimed extends EntityTNTPrimed {
 
 	private void explode() {
 		float f = 25.0F;
-		this.worldObj.createExplosion(this, this.posX, this.posY + (double) (this.height / 16.0F), this.posZ, f, true);
+		this.worldObj.createExplosion(this, this.posX, this.posY + this.height / 16.0F, this.posZ, f, true);
 	}
 
+	@Override
 	public EntityLivingBase getTntPlacedBy() {
 		return this.tntPlacedBy;
 	}

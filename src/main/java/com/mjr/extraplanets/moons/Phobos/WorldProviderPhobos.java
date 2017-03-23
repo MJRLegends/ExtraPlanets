@@ -142,16 +142,14 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-    public float getThermalLevelModifier()
-    {
-        return -1;
-    }
+	public float getThermalLevelModifier() {
+		return -1;
+	}
 
 	@Override
 	public float getWindLevel() {
 		return 0;
 	}
-	
 
 	@Override
 	public boolean shouldDisablePrecipitation() {

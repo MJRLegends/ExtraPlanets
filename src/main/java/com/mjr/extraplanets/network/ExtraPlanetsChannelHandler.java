@@ -5,8 +5,6 @@ import io.netty.channel.ChannelHandlerContext;
 
 import java.util.EnumMap;
 
-import com.mjr.extraplanets.Constants;
-
 import micdoodle8.mods.galacticraft.core.network.IPacket;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -16,6 +14,8 @@ import net.minecraftforge.fml.common.network.FMLIndexedMessageToMessageCodec;
 import net.minecraftforge.fml.common.network.FMLOutboundHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+
+import com.mjr.extraplanets.Constants;
 
 public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<IPacket> {
 	private EnumMap<Side, FMLEmbeddedChannel> channels;
@@ -43,8 +43,7 @@ public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<
 	/**
 	 * Send this message to everyone.
 	 * <p/>
-	 * Adapted from CPW's code in
-	 * cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
+	 * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
 	 *
 	 * @param message
 	 *            The message to send
@@ -57,8 +56,7 @@ public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<
 	/**
 	 * Send this message to the specified player.
 	 * <p/>
-	 * Adapted from CPW's code in
-	 * cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
+	 * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
 	 *
 	 * @param message
 	 *            The message to send
@@ -74,15 +72,12 @@ public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<
 	/**
 	 * Send this message to everyone within a certain range of a point.
 	 * <p/>
-	 * Adapted from CPW's code in
-	 * cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
+	 * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
 	 *
 	 * @param message
 	 *            The message to send
 	 * @param point
-	 *            The
-	 *            {@link net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint}
-	 *            around which to send
+	 *            The {@link net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint} around which to send
 	 */
 	public void sendToAllAround(IPacket message, NetworkRegistry.TargetPoint point) {
 		try {
@@ -98,8 +93,7 @@ public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<
 	/**
 	 * Send this message to everyone within the supplied dimension.
 	 * <p/>
-	 * Adapted from CPW's code in
-	 * cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
+	 * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
 	 *
 	 * @param message
 	 *            The message to send
@@ -120,8 +114,7 @@ public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<
 	/**
 	 * Send this message to the server.
 	 * <p/>
-	 * Adapted from CPW's code in
-	 * cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
+	 * Adapted from CPW's code in cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper
 	 *
 	 * @param message
 	 *            The message to send

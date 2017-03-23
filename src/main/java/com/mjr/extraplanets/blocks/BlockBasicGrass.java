@@ -27,6 +27,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 		this.setStepSound(soundTypeGrass);
 	}
 
+	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!worldIn.isRemote) {
 			if (worldIn.getLightFromNeighbors(pos.up()) < 4 && worldIn.getBlockState(pos.up()).getBlock().getLightOpacity(worldIn, pos.up()) > 2) {
@@ -50,6 +51,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 	/**
 	 * Get the Item that this Block should drop when harvested.
 	 */
+	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return ExtraPlanets_Blocks.kepler22bBlocks.getItemDropped(ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState(), rand, fortune);
 	}
@@ -57,14 +59,17 @@ public class BlockBasicGrass extends Block implements IGrowable {
 	/**
 	 * Whether this IGrowable can grow
 	 */
+	@Override
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
 	}
 
+	@Override
 	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
 		return true;
 	}
 
+	@Override
 	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
 		BlockPos blockpos = pos.up();
 
@@ -111,6 +116,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer() {
 		return EnumWorldBlockLayer.CUTOUT_MIPPED;

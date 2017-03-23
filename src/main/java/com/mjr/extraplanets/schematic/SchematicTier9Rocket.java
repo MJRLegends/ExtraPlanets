@@ -17,10 +17,9 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class SchematicTier9Rocket extends ItemSchematic implements ISchematicPage {
 
-	public SchematicTier9Rocket()
-    {
-        super("schematic");
-    }
+	public SchematicTier9Rocket() {
+		super("schematic");
+	}
 
 	@Override
 	public int getPageID() {

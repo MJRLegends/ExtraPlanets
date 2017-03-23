@@ -153,7 +153,6 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	public float getWindLevel() {
 		return 0;
 	}
-	
 
 	@Override
 	public boolean shouldDisablePrecipitation() {

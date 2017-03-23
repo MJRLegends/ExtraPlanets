@@ -15,7 +15,7 @@ public class BlockUranusDungeonSpawner extends BlockBossSpawner {
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		if(Config.useDefaultBosses)
+		if (Config.useDefaultBosses)
 			return new TileEntityDungeonSpawnerUranusDefault();
 		else
 			return new TileEntityDungeonSpawnerUranus();

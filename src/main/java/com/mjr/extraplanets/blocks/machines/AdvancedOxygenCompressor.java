@@ -171,7 +171,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex() + ((EnumCompressorType) state.getValue(TYPE)).getMeta() * 4;
+		return state.getValue(FACING).getHorizontalIndex() + ((EnumCompressorType) state.getValue(TYPE)).getMeta() * 4;
 	}
 
 	@Override
