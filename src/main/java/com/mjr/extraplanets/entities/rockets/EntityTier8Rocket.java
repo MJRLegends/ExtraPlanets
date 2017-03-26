@@ -122,17 +122,20 @@ public class EntityTier8Rocket extends EntityTieredRocket {
 		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
 		if (playerBase != null) {
-			GCPlayerStats stats = GCPlayerStats.get(playerBase);
+            GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
-			if (this.cargoItems == null || this.cargoItems.length == 0) {
-				stats.rocketStacks = new ItemStack[2];
-			} else {
-				stats.rocketStacks = this.cargoItems;
-			}
+            if (this.cargoItems == null || this.cargoItems.length == 0)
+            {
+                stats.setRocketStacks(new ItemStack[2]);
+            }
+            else
+            {
+                stats.setRocketStacks(this.cargoItems);
+            }
 
-			stats.rocketType = this.rocketType.getIndex();
-			stats.rocketItem = ExtraPlanets_Items.tier8Rocket;
-			stats.fuelLevel = this.fuelTank.getFluidAmount();
+            stats.setRocketType(this.rocketType.getIndex());
+            stats.setRocketItem(ExtraPlanets_Items.tier8Rocket);
+            stats.setFuelLevel(this.fuelTank.getFluidAmount());
 		}
 	}
 

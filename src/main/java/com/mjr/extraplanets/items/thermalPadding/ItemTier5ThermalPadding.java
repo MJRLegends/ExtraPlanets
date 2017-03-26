@@ -76,29 +76,29 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get((EntityPlayerMP) player);
-			ItemStack gear = stats.extendedInventory.getStackInSlot(6);
-			ItemStack gear1 = stats.extendedInventory.getStackInSlot(7);
-			ItemStack gear2 = stats.extendedInventory.getStackInSlot(8);
-			ItemStack gear3 = stats.extendedInventory.getStackInSlot(9);
+			ItemStack gear = stats.getExtendedInventory().getStackInSlot(6);
+			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(7);
+			ItemStack gear2 = stats.getExtendedInventory().getStackInSlot(8);
+			ItemStack gear3 = stats.getExtendedInventory().getStackInSlot(9);
 
 			if (itemStack.getItemDamage() == 0) {
 				if (gear == null) {
-					stats.extendedInventory.setInventorySlotContents(6, itemStack.copy());
+					stats.getExtendedInventory().setInventorySlotContents(6, itemStack.copy());
 					itemStack.stackSize = 0;
 				}
 			} else if (itemStack.getItemDamage() == 1) {
 				if (gear1 == null) {
-					stats.extendedInventory.setInventorySlotContents(7, itemStack.copy());
+					stats.getExtendedInventory().setInventorySlotContents(7, itemStack.copy());
 					itemStack.stackSize = 0;
 				}
 			} else if (itemStack.getItemDamage() == 2) {
 				if (gear2 == null) {
-					stats.extendedInventory.setInventorySlotContents(8, itemStack.copy());
+					stats.getExtendedInventory().setInventorySlotContents(8, itemStack.copy());
 					itemStack.stackSize = 0;
 				}
 			} else if (itemStack.getItemDamage() == 3) {
 				if (gear3 == null) {
-					stats.extendedInventory.setInventorySlotContents(9, itemStack.copy());
+					stats.getExtendedInventory().setInventorySlotContents(9, itemStack.copy());
 					itemStack.stackSize = 0;
 				}
 			}

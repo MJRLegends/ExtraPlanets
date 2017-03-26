@@ -20,7 +20,7 @@ public class TeleportTypeEuropa implements ITeleportType {
 	public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player) {
 		if (player != null) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
-			return new Vector3(stats.coordsTeleportedFromX, 250.0D, stats.coordsTeleportedFromZ);
+			return new Vector3(stats.getCoordsTeleportedFromX(), 250.0, stats.getCoordsTeleportedFromZ());
 		}
 		return null;
 	}

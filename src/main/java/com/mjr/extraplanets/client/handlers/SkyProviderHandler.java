@@ -271,7 +271,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -282,7 +282,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -293,7 +293,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -304,7 +304,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mars.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -315,7 +315,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -326,7 +326,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -337,7 +337,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -348,7 +348,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -359,7 +359,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
@@ -370,7 +370,7 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
+					GCPlayerStatsClient.get(player).setInFreefallFirstCheck(false);
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
