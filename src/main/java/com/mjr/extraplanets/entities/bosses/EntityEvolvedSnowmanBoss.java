@@ -41,7 +41,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
 
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 
@@ -60,10 +60,10 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 		super(p_i1692_1_);
 		this.setSize(0.4F * 8, 1.8F * 6.5F);
 		this.getNavigator().setAvoidsWater(true);
-        this.tasks.addTask(1, new EntityAIArrowAttack(this, 0.75D, 20, 5F));
-        this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
-        this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));
-        this.tasks.addTask(4, new EntityAILookIdle(this));
+		this.tasks.addTask(1, new EntityAIArrowAttack(this, 0.75D, 20, 5F));
+		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
+		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));
+		this.tasks.addTask(4, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 	}
@@ -80,38 +80,35 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(400.0F);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
 	}
-	
+
 	protected void updateEntityActionState() {
 		if (!this.worldObj.isRemote && this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL) {
 			this.setDead();
 		}
 	}
-	
-    @Override
-    protected String getLivingSound()
-    {
-        return null;
-    }
 
-    @Override
-    protected String getHurtSound()
-    {
-        this.playSound(GalacticraftCore.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
-        return null;
-    }
+	@Override
+	protected String getLivingSound() {
+		return null;
+	}
 
-    @Override
-    protected String getDeathSound()
-    {
-        return null;
-    }
+	@Override
+	protected String getHurtSound() {
+		this.playSound(GalacticraftCore.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
+		return null;
+	}
+
+	@Override
+	protected String getDeathSound() {
+		return null;
+	}
 
 	/**
 	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
 	public void onLivingUpdate() {
 		super.onLivingUpdate();
-		
+
 		new Vector3(this);
 
 		if (this.roomCoords != null && this.roomSize != null) {
@@ -270,12 +267,12 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 			}
 
 			for (final TileEntity tile : (List<TileEntity>) this.worldObj.loadedTileEntityList) {
-				if (tile instanceof TileEntityT6TreasureChest) {
+				if (tile instanceof TileEntityT8TreasureChest) {
 					final double d3 = tile.xCoord + 0.5D - this.posX;
 					final double d4 = tile.yCoord + 0.5D - this.posY;
 					final double d5 = tile.zCoord + 0.5D - this.posZ;
 					final double dSq = d3 * d3 + d4 * d4 + d5 * d5;
-					TileEntityT6TreasureChest chest = (TileEntityT6TreasureChest) tile;
+					TileEntityT8TreasureChest chest = (TileEntityT8TreasureChest) tile;
 
 					if (dSq < 10000) {
 						if (!chest.locked) {
@@ -300,7 +297,7 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 				}
 			}
 
-			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T6key, 1, 0), 0.5F);
+			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T8key, 1, 0), 0.5F);
 
 			super.setDead();
 
