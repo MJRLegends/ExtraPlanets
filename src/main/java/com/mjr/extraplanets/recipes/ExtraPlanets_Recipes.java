@@ -263,6 +263,9 @@ public class ExtraPlanets_Recipes {
 			// }
 		}
 		if (Config.ceres) {
+			// Nuclear Bomb
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.nuclearBomb), new Object[] { "GSG", "SUS", "GSG", 'G', Items.gunpowder, 'S', Blocks.sand, 'U', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, OreDictionary.WILDCARD_VALUE) });
+
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 2) });
 
@@ -291,7 +294,6 @@ public class ExtraPlanets_Recipes {
 			// if (Config.slabsAndStairs) {
 			// GameRegistry.addRecipe(new ItemStack(ExtraPlanets_SlabsStairsBlocks.ceresStoneBlockHalfSlab), new Object[] { "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 2) });
 			// GameRegistry.addRecipe(new ItemStack(ExtraPlanets_SlabsStairsBlocks.ceresStoneStairs), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 2) });
-			// GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.nuclearBomb), new Object[] { "GSG", "SUS", "GSG", 'G', Items.gunpowder, 'S', Blocks.sand, 'U', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, OreDictionary.WILDCARD_VALUE) });
 			// }
 		}
 		if (Config.jupiter) {
@@ -377,7 +379,7 @@ public class ExtraPlanets_Recipes {
 
 			// Block to Magnesium
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7) });
-			
+
 			if (Config.magnesiumItems) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 'S', Items.stick });
@@ -418,6 +420,12 @@ public class ExtraPlanets_Recipes {
 
 			// Block of White Gem
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 8), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7) });
+
+			// Block to White Gem
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 8) });
+
+			// Block to Crystal
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 4) });
 
 			if (Config.crystalItems) {
 				// Tools
@@ -474,6 +482,12 @@ public class ExtraPlanets_Recipes {
 
 			// Block of Blue Gem
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 11), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6) });
+
+			// Block to Blue Gem
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 9, 6), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 11) });
+
+			// Block to Zinc
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 7) });
 
 			if (Config.blueGemItems) {
 				// Tools
@@ -532,6 +546,9 @@ public class ExtraPlanets_Recipes {
 			// Block of Tungsten
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5) });
 
+			// Block to Tungsten
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 1, 7) });
+
 			if (Config.tungstenItems) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Items.stick });
@@ -567,6 +584,9 @@ public class ExtraPlanets_Recipes {
 
 			// Block of Dark Iron
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5) });
+
+			// Block to Dark Iron
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 7) });
 
 			// Slab's & Stairs
 			// if (Config.slabsAndStairs) {
