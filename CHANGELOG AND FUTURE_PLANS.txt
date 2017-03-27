@@ -41,6 +41,16 @@ TODO = Not yet done
 v1.5.6
 *Cleaned up the version number to a more organized version system
 *Fixes/Updated lang files
+*Fixed the Magma Fluid not burning you when in it
+*Fixed Jupiter Basic Hideout generation
+*Changed the chance of Jupiter Basic Hideout generation
+*Removed debug information that was left in
+*Setup harvest levels for all of the main blocks (Might change)
+*Added Block versions of ingots/gem back to ingots/gems recipes
+*Added Kepler22b planks to crafting table recipe
+*A few config fixes
+*Clean up
+*Fixed Neptune boss dropping the wrong key
 ======================================================================================================
 
 
