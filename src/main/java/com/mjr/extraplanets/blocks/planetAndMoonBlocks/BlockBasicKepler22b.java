@@ -85,13 +85,24 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		IBlockState state = world.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
 			return 6.0F;
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
+			return 3.0F;
 		return super.getExplosionResistance(world, pos, exploder, explosion);
 	}
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
 		IBlockState state = worldIn.getBlockState(pos);
-		return this.blockHardness;
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT)
+			return 0.5F;
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_DIAMOND.ORE_YELLOW_DIAMOND)
+			return 5.0F;
+		else
+			return 1.5F;
 	}
 
 	@Override
@@ -165,7 +176,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.STONE) {
 			return false;
 		}
