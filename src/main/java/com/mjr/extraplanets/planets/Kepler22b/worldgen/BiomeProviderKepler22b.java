@@ -5,11 +5,17 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeProviderSpace;
+import net.minecraft.crash.CrashReport;
+import net.minecraft.crash.CrashReportCategory;
+import net.minecraft.init.Biomes;
+import net.minecraft.util.ReportedException;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeCache;
 import net.minecraft.world.gen.layer.GenLayer;
+import net.minecraft.world.gen.layer.IntCache;
 
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
@@ -39,7 +45,7 @@ public class BiomeProviderKepler22b extends BiomeProviderSpace {
 	}
 
 	public BiomeProviderKepler22b(World world) {
-		this(world.getSeed());
+        this(world.getSeed());
 	}
 
 	@Override

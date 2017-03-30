@@ -13,18 +13,22 @@ import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.gen.ChunkProviderOverworld;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
 
-public class ChunkProviderKepler22b extends ChunkProviderOverworld {
+public class ChunkProviderKepler22b implements IChunkGenerator {
 	private Random rand;
 	private World worldObj;
 	private double[] depthBuffer;
     //private final MapGenVillageKepler22b villageGenerator = new MapGenVillageKepler22b();
+	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();
+	private final MapGenRavineKepler22b ravineGenerator = new MapGenRavineKepler22b();
 	private final BiomeDecoratorKepler22bOres BiomeDecorator = new BiomeDecoratorKepler22bOres();
 	private Biome[] biomesForGeneration;
     private NoiseGeneratorOctaves minLimitPerlinNoise;
@@ -42,7 +46,6 @@ public class ChunkProviderKepler22b extends ChunkProviderOverworld {
 	double[] depthRegion;
 
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
-		super(world, seed, flag, "");
 		this.depthBuffer = new double[256];
 		this.worldObj = world;
 		this.rand = new Random(seed);
@@ -72,7 +75,9 @@ public class ChunkProviderKepler22b extends ChunkProviderOverworld {
 		this.biomesForGeneration = this.worldObj.getBiomeProvider().getBiomes(this.biomesForGeneration, chunkX * 16, chunkZ * 16, 16, 16);
 		this.replaceBlocksForBiome(chunkX, chunkZ, chunkprimer, this.biomesForGeneration);
         //this.villageGenerator.generate(this.worldObj, chunkX, chunkZ, chunkprimer);
-
+		this.caveGenerator.generate(this.worldObj, chunkX, chunkZ, chunkprimer);
+		this.ravineGenerator.generate(this.worldObj, chunkX, chunkZ, chunkprimer);
+		
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
 		byte[] abyte = chunk.getBiomeArray();
 		for (int i = 0; i < abyte.length; ++i) {
@@ -82,7 +87,6 @@ public class ChunkProviderKepler22b extends ChunkProviderOverworld {
 		return chunk;
 	}
 
-	@Override
 	public void setBlocksInChunk(int p_180518_1_, int p_180518_2_, ChunkPrimer p_180518_3_) {
 		this.biomesForGeneration = this.worldObj.getBiomeProvider().getBiomesForGeneration(this.biomesForGeneration, p_180518_1_ * 4 - 2, p_180518_2_ * 4 - 2, 10, 10);
 		this.generateHeightMap(p_180518_1_ * 4, 0, p_180518_2_ * 4);
@@ -289,4 +293,14 @@ public class ChunkProviderKepler22b extends ChunkProviderOverworld {
     {
     	//this.villageGenerator.generate(this.worldObj, x, z, null);
     }
+
+	@Override
+	public boolean generateStructures(Chunk chunkIn, int x, int z) {
+		return false;
+	}
+
+	@Override
+	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position) {
+		return null;
+	}
 }

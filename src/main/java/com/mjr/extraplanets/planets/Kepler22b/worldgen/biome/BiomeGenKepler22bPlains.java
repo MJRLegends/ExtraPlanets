@@ -10,12 +10,14 @@ import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
+import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
 	public BiomeGenKepler22bPlains(BiomeProperties properties) {
 		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 		this.topBlock = ExtraPlanets_Blocks.kepler22bGrass.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));

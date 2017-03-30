@@ -9,6 +9,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 import com.mjr.extraplanets.world.features.WorldGenBlueHut;
 import com.mjr.extraplanets.world.features.WorldGenBrownHut;
@@ -94,6 +95,12 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
 			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(5), false).generate(worldIn, random, blockpos);
+		}
+		for (int i = 0; i < 1; i++) {
+			int x = this.chunkPos.getX() + random.nextInt(16) + 8;
+			int y = random.nextInt(256);
+			int z = this.chunkPos.getZ() + random.nextInt(16) + 8;
+			(new WorldGenKepler22bDungeons()).generate(worldIn, random, new BlockPos(x, y, z));
 		}
 		for (int i = 0; i < 1; i++) {
 			if (random.nextInt(200) == 1) {
