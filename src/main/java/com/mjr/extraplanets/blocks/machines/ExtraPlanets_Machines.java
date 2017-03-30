@@ -81,9 +81,8 @@ public class ExtraPlanets_Machines {
 		if (Config.ultimateCompressor)
 			GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
 		if (Config.radiation) {
-			if (Config.basicCrystallizer)
-				if (Config.basicCrystallizer)
-					GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
+			if (Config.basicDecrystallizer)
+				GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
 			if (Config.basicCrystallizer)
 				GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
 			if (Config.basicSmasher)
@@ -111,7 +110,7 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
 		}
 		if (Config.radiation) {
-			if (Config.basicCrystallizer)
+			if (Config.basicDecrystallizer)
 				GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
 			if (Config.basicCrystallizer)
 				GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
