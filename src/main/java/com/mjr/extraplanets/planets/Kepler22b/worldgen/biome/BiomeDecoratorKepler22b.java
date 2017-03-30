@@ -7,6 +7,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 import com.mjr.extraplanets.world.features.WorldGenBlueHut;
@@ -95,28 +96,34 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(5), false).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < 1; i++) {
+			int x = this.field_180294_c.getX() + this.randomGenerator.nextInt(16) + 8;
+			int y = this.randomGenerator.nextInt(256);
+			int z = this.field_180294_c.getZ() + this.randomGenerator.nextInt(16) + 8;
+			(new WorldGenKepler22bDungeons()).generate(this.currentWorld, this.randomGenerator, new BlockPos(x, y, z));
+		}
+		for (int i = 0; i < 1; i++) {
 			if (this.randomGenerator.nextInt(200) == 1) {
 				BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + (this.randomGenerator.nextInt(16) + 8), 0, this.field_180294_c.getZ() + (this.randomGenerator.nextInt(16) + 8)));
 				blockpos.down(2);
 				int randomNum = this.randomGenerator.nextInt(7) + 0;
 				switch (randomNum) {
 				case 1:
-					(new WorldGenBlueHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					(new WorldGenBlueHut()).generate(this.currentWorld, this.randomGenerator, blockpos);
 					break;
 				case 2:
-					(new WorldGenRedHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					(new WorldGenRedHut()).generate(this.currentWorld, this.randomGenerator, blockpos);
 					break;
 				case 3:
-					(new WorldGenPurpleHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					(new WorldGenPurpleHut()).generate(this.currentWorld, this.randomGenerator, blockpos);
 					break;
 				case 4:
-					(new WorldGenYellowHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					(new WorldGenYellowHut()).generate(this.currentWorld, this.randomGenerator, blockpos);
 					break;
 				case 5:
-					(new WorldGenGreenHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					(new WorldGenGreenHut()).generate(this.currentWorld, this.randomGenerator, blockpos);
 					break;
 				case 6:
-					(new WorldGenBrownHut()).generate(this.currentWorld, randomGenerator, blockpos);
+					(new WorldGenBrownHut()).generate(this.currentWorld, this.randomGenerator, blockpos);
 					break;
 				}
 			}
@@ -124,77 +131,77 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		for (int i = 0; i < this.blueShortGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 0).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 0).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.blueMedGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 1).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 1).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.blueTallGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 2).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 2).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.redShortGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 3).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 3).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.redMedGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 4).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 4).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.redTallGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 5).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 5).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.purpleShortGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 6).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 6).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.purpleMedGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 7).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 7).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.purpleTallGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 8).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 8).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.yellowShortGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 9).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 9).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.yellowMedGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 10).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 10).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.yellowTallGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 11).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 11).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.greenShortGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 12).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 12).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.greenMedGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 13).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 13).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < this.greenTallGrassPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 14).generate(this.currentWorld, randomGenerator, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 14).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		isDecorating = false;
 	}
