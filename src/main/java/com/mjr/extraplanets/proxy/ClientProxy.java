@@ -108,6 +108,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.ItemCannedFood;
 import com.mjr.extraplanets.items.ItemWafers;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier10Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier11Items;
@@ -235,6 +236,7 @@ public class ClientProxy extends CommonProxy {
 		}
 
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
+		ClientUtilities.addExtraPlanetsVariants("cannedFood", "dehydratedPorkchop", "dehydratedFish", "dehydratedSalmon", "dehydratedChicken", "dehydratedBeef");
 
 		if (Config.thermalPaddings) {
 			ClientUtilities.addExtraPlanetsVariants("thermalCloth", "tier3ThermalCloth", "tier4ThermalCloth", "tier5ThermalCloth");
@@ -918,7 +920,9 @@ public class ClientProxy extends CommonProxy {
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.wafers, i, ItemWafers.names[i]);
 		}
-
+		for (int i = 0; i < ItemCannedFood.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.cannedFood, i, ItemCannedFood.names[i]);
+		}
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ingotLead);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.cloth);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.gravityController);

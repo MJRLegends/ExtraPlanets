@@ -829,7 +829,7 @@ antiRadiation.desc=Reduces Radiation Level by 2
 #Other Items
 item.appleDiamond.name=鑽石蘋果
 item.appleIron.name=Iron Apple
-item.cannedfood.cannedFood.name=罐頭食品
+item.cannedFood.cannedFood.name=罐頭食品
 item.bodyparts.arm.name=手
 item.bodyparts.leg.name=腳
 item.cloth.name=Wool Cloth
@@ -838,11 +838,11 @@ item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 item.thermalCloth.tier5ThermalCloth.name=Tier 5 Thermal Cloth
 
-item.cannedfood.dehydratedPorkchop.name=脫水豬排
-item.cannedfood.dehydratedFish.name=脫水魚
-item.cannedfood.dehydratedSalmon.name=脫水鮭魚
-item.cannedfood.dehydratedChicken.name=脫水雞肉
-item.cannedfood.dehydratedBeef.name=脫水牛肉
+item.cannedFood.dehydratedPorkchop.name=脫水豬排
+item.cannedFood.dehydratedFish.name=脫水魚
+item.cannedFood.dehydratedSalmon.name=脫水鮭魚
+item.cannedFood.dehydratedChicken.name=脫水雞肉
+item.cannedFood.dehydratedBeef.name=脫水牛肉
 
 #Entities
 entity.ProjectileTNT.name=飛行的TNT

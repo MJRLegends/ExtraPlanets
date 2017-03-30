@@ -831,7 +831,7 @@ antiRadiation.desc=Reduces Radiation Level by 2
 #Other Items
 item.appleDiamond.name=Diamond Apple
 item.appleIron.name=Iron Apple
-item.cannedfood.cannedFood.name=Can of Food
+item.cannedFood.cannedFood.name=Can of Food
 item.bodyparts.arm.name=Arm
 item.bodyparts.leg.name=Leg
 item.cloth.name=Wool Cloth
@@ -840,11 +840,11 @@ item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 item.thermalCloth.tier5ThermalCloth.name=Tier 5 Thermal Cloth
 
-item.cannedfood.dehydratedPorkchop.name=Dehydrated Porkchop
-item.cannedfood.dehydratedFish.name=Dehydrated Fish
-item.cannedfood.dehydratedSalmon.name=Dehydrated Salmon
-item.cannedfood.dehydratedChicken.name=Dehydrated Chicken
-item.cannedfood.dehydratedBeef.name=Dehydrated Beef
+item.cannedFood.dehydratedPorkchop.name=Dehydrated Porkchop
+item.cannedFood.dehydratedFish.name=Dehydrated Fish
+item.cannedFood.dehydratedSalmon.name=Dehydrated Salmon
+item.cannedFood.dehydratedChicken.name=Dehydrated Chicken
+item.cannedFood.dehydratedBeef.name=Dehydrated Beef
 
 #Entities
 entity.ProjectileTNT.name=Projectile TNT
