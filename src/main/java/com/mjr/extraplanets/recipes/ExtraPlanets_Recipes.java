@@ -76,7 +76,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 6), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 7), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 7), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 10), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 0.0F);
 		}
 		if (Config.saturn) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -924,14 +924,14 @@ public class ExtraPlanets_Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 6));
 		}
 		if (Config.neptune) {
-			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 4));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5));
 		}
 		if (Config.pluto) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4));
 		}
-		if (Config.kepler22b && Config.keplerSolarSystems) {
+		if (Config.eris) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4));
 		}
