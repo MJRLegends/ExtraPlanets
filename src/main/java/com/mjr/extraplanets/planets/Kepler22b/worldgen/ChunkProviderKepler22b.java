@@ -84,7 +84,6 @@ public class ChunkProviderKepler22b extends ChunkProviderGenerate {
 		this.villageGenerator.generate(this, this.worldObj, chunkX, chunkZ, chunkprimer);
 		this.caveGenerator.generate(this, this.worldObj, chunkX, chunkZ, chunkprimer);
 		this.ravineGenerator.generate(this, this.worldObj, chunkX, chunkZ, chunkprimer);
-		;
 
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
 		byte[] abyte = chunk.getBiomeArray();
