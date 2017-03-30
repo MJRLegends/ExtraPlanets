@@ -63,25 +63,30 @@ public class ItemBlockJupiter extends ItemBlock
 		}
 		case 7:
 		{
-			name = "palladiumBlock";
+			name = "oreNickel";
 			break;
 		}
 		case 8:
 		{
-			name = "stoneBricks";
+			name = "palladiumBlock";
 			break;
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "stoneBricks";
 			break;
 		}
 		case 10:
 		{
-			name = "oreRedGem";
+			name = "dungeonBrick";
 			break;
 		}
 		case 11:
+		{
+			name = "oreRedGem";
+			break;
+		}
+		case 12:
 		{
 			name = "redGemBlock";
 			break;

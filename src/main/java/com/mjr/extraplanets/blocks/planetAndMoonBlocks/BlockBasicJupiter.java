@@ -41,8 +41,8 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeJupiter", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "jupiter_surface"), SUB_SURFACE(1, "jupiter_sub_surface"), STONE(2, "jupiter_stone"), ORE_IRON(3, "jupiter_ore_iron"), ORE_TIN(4, "jupiter_ore_tin"), ORE_COPPER(5, "jupiter_ore_copper"), ORE_PALLADIUM(6, "jupiter_ore_palladium"), PALLADIUM_BLOCK(
-				7, "jupiter_palladium_block"), STONEBRICKS(8, "jupiter_stonebricks"), DUNGEON_BRICK(9, "jupiter_dungeon_brick"), ORE_RED_GEM(10, "jupiter_ore_red_gem"), RED_GEM_BLOCK(11, "jupiter_red_gem_block");
+		SURFACE(0, "jupiter_surface"), SUB_SURFACE(1, "jupiter_sub_surface"), STONE(2, "jupiter_stone"), ORE_IRON(3, "jupiter_ore_iron"), ORE_TIN(4, "jupiter_ore_tin"), ORE_COPPER(5, "jupiter_ore_copper"), ORE_PALLADIUM(6, "jupiter_ore_palladium"), ORE_NICKEL(7, "jupiter_ore_nickel"), PALLADIUM_BLOCK(
+				8, "jupiter_palladium_block"), STONEBRICKS(9, "jupiter_stonebricks"), DUNGEON_BRICK(10, "jupiter_dungeon_brick"), ORE_RED_GEM(11, "jupiter_ore_red_gem"), RED_GEM_BLOCK(12, "jupiter_red_gem_block");
 
 		private final int meta;
 		private final String name;
@@ -90,7 +90,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 			return 40.0F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
 			return 6.0F;
-		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_NICKEL
 				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_GEM)
 			return 3.0F;
 		return super.getExplosionResistance(world, pos, exploder, explosion);
@@ -101,7 +101,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 		IBlockState state = worldIn.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
 			return 0.5F;
-		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM
+		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_NICKEL
 				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_RED_GEM)
 			return 5.0F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
@@ -226,12 +226,12 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 		case 4:
 		case 5:
 		case 6:
-		case 10:
-			return EnumSortCategoryBlock.ORE;
 		case 7:
-		case 11:
-			return EnumSortCategoryBlock.INGOT_BLOCK;
+			return EnumSortCategoryBlock.ORE;
 		case 8:
+		case 12:
+			return EnumSortCategoryBlock.INGOT_BLOCK;
+		case 10:
 		case 9:
 			return EnumSortCategoryBlock.BRICKS;
 		}
