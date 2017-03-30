@@ -9,6 +9,8 @@ import net.minecraft.world.World;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
 import com.mjr.extraplanets.worldGen.prefabs.ChunkProviderSpaceNormal;
 

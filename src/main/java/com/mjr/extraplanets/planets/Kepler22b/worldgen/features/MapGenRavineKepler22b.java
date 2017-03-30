@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen;
+package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
