@@ -22,8 +22,6 @@ import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
-import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
-import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
@@ -74,7 +72,7 @@ public class MainHandlerClient {
 					IStatsClientCapability stats = null;
 
 					if (player != null) {
-			            stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
+						stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
 					}
 					int radiationLevel = (int) Math.floor(stats.getRadiationLevel());
 					OverlaySolarRadiation.renderSolarRadiationIndicator(radiationLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);

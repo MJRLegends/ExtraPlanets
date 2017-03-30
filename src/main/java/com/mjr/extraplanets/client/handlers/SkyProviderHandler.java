@@ -46,6 +46,7 @@ import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.SkyProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
+import com.mjr.extraplanets.planets.Kepler22b.spacestation.WorldProviderKepler22bOrbit;
 import com.mjr.extraplanets.planets.Mercury.SkyProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;
@@ -267,7 +268,7 @@ public class SkyProviderHandler {
 
 			// Space Stations
 			if (world.provider instanceof WorldProviderMercuryOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -279,7 +280,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderVenusOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -291,7 +292,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderCeresOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -303,7 +304,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderMarsOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mars.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -315,7 +316,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderJupiterOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -327,7 +328,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderSaturnOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -339,7 +340,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderUranusOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -351,7 +352,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderNeptuneOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -363,7 +364,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderPlutoOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -375,7 +376,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderErisOrbit) {
-				if (world.provider.getSkyRenderer() == null) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
 					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"), false, true));
 					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
 					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
@@ -386,17 +387,18 @@ public class SkyProviderHandler {
 					world.provider.setCloudRenderer(new CloudRenderer());
 				}
 			}
-			// if (world.provider instanceof WorldProviderKepler22bOrbit) {
-			// if (world.provider.getSkyRenderer() == null) {
-			// world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"), false, true));
-			// ((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-			// GCPlayerStatsClient.get(player).inFreefallFirstCheck = false;
-			// }
-			//
-			// if (world.provider.getCloudRenderer() == null) {
-			// world.provider.setCloudRenderer(new CloudRenderer());
-			// }
-			// }
+			if (world.provider instanceof WorldProviderKepler22bOrbit) {
+				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"), false, true));
+					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
+					micdoodle8.mods.galacticraft.core.entities.player.IStatsClientCapability stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsClientHandler.GC_STATS_CLIENT_CAPABILITY, null);
+					stats.setInFreefallFirstCheck(false);
+				}
+
+				if (world.provider.getCloudRenderer() == null) {
+					world.provider.setCloudRenderer(new CloudRenderer());
+				}
+			}
 		}
 	}
 }
