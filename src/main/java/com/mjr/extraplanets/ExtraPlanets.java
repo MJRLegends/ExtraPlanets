@@ -7,6 +7,7 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -42,30 +43,51 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
+import com.mjr.extraplanets.moons.Callisto.worldgen.BiomeGenCallisto;
 import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
+import com.mjr.extraplanets.moons.Deimos.worldgen.BiomeGenDeimos;
 import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
+import com.mjr.extraplanets.moons.Europa.worldgen.BiomeGenEuropa;
 import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
+import com.mjr.extraplanets.moons.Ganymede.worldgen.BiomeGenGanymede;
 import com.mjr.extraplanets.moons.Iapetus.event.IapetusEvents;
+import com.mjr.extraplanets.moons.Iapetus.worldgen.BiomeGenIapetus;
 import com.mjr.extraplanets.moons.Io.event.IoEvents;
+import com.mjr.extraplanets.moons.Io.worldgen.BiomeGenIo;
 import com.mjr.extraplanets.moons.Oberon.event.OberonEvents;
+import com.mjr.extraplanets.moons.Oberon.worldgen.BiomeGenOberon;
 import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
+import com.mjr.extraplanets.moons.Phobos.worldgen.BiomeGenPhobos;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
+import com.mjr.extraplanets.moons.Rhea.worldgen.BiomeGenRhea;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
+import com.mjr.extraplanets.moons.Titan.worldgen.BiomeGenTitan;
 import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
+import com.mjr.extraplanets.moons.Titania.worldgen.BiomeGenTitania;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
+import com.mjr.extraplanets.moons.Triton.worldgen.BiomeGenTriton;
 import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
+import com.mjr.extraplanets.planets.Ceres.worldgen.BiomeGenCeres;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
+import com.mjr.extraplanets.planets.Eris.worldgen.BiomeGenEris;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeGenJupiter;
 import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
+import com.mjr.extraplanets.planets.Mercury.worldgen.BiomeGenMercury;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
+import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeGenNeptune;
 import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
+import com.mjr.extraplanets.planets.Pluto.worldgen.BiomeGenPluto;
 import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
+import com.mjr.extraplanets.planets.Saturn.worldgen.BiomeGenSaturn;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
+import com.mjr.extraplanets.planets.Uranus.worldgen.BiomeGenUranus;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
@@ -255,7 +277,7 @@ public class ExtraPlanets {
 		registerCreatures();
 
 		// Register Biomes
-		ExtraPlanetsDimensions.registerBiomes();
+		registerBiomes();
 
 		packetPipeline = ExtraPlanetsChannelHandler.init();
 
@@ -325,6 +347,38 @@ public class ExtraPlanets {
 		// if (Config.eris)
 		// GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
 
+	}
+
+	public static void registerBiomes() {
+		// Planets
+		Biome.registerBiome(Config.mercuryBiomeID, BiomeGenMercury.mercury.getBiomeName(), BiomeGenMercury.mercury);
+		Biome.registerBiome(Config.ceresBiomeID, BiomeGenCeres.ceres.getBiomeName(), BiomeGenCeres.ceres);
+		Biome.registerBiome(Config.jupiterBiomeID, BiomeGenJupiter.jupiter.getBiomeName(), BiomeGenJupiter.jupiter);
+		Biome.registerBiome(Config.saturnBiomeID, BiomeGenSaturn.saturn.getBiomeName(), BiomeGenSaturn.saturn);
+		Biome.registerBiome(Config.uranusBiomeID, BiomeGenUranus.uranus.getBiomeName(), BiomeGenUranus.uranus);
+		Biome.registerBiome(Config.neptuneBiomeID, BiomeGenNeptune.neptune.getBiomeName(), BiomeGenNeptune.neptune);
+		Biome.registerBiome(Config.plutoBiomeID, BiomeGenPluto.pluto.getBiomeName(), BiomeGenPluto.pluto);
+		Biome.registerBiome(Config.erisBiomeID, BiomeGenEris.eris.getBiomeName(), BiomeGenEris.eris);
+		Biome.registerBiome(Config.tritonBiomeID, BiomeGenTriton.triton.getBiomeName(), BiomeGenTriton.triton);
+
+		Biome.registerBiome(Config.kepler22bPlainsBiomeID, BiomeGenBaseKepler22b.kepler22bPlains.getBiomeName(), BiomeGenBaseKepler22b.kepler22bPlains);
+		Biome.registerBiome(Config.kepler22bBlueForestBiomeID, BiomeGenBaseKepler22b.kepler22bBlueForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bBlueForest);
+		Biome.registerBiome(Config.kepler22bRedForestBiomeID, BiomeGenBaseKepler22b.kepler22bRedForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bRedForest);
+		Biome.registerBiome(Config.kepler22bPurpleForestBiomeID, BiomeGenBaseKepler22b.kepler22bPurpleForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bPurpleForest);
+		Biome.registerBiome(Config.kepler22bYellowForestBiomeID, BiomeGenBaseKepler22b.kepler22bYellowForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bYellowForest);
+
+		// Moons
+		Biome.registerBiome(Config.callistoBiomeID, BiomeGenCallisto.callisto.getBiomeName(), BiomeGenCallisto.callisto);
+		Biome.registerBiome(Config.deimosBiomeID, BiomeGenDeimos.deimos.getBiomeName(), BiomeGenDeimos.deimos);
+		Biome.registerBiome(Config.europaBiomeID, BiomeGenEuropa.europa.getBiomeName(), BiomeGenEuropa.europa);
+		Biome.registerBiome(Config.ganymedeBiomeID, BiomeGenGanymede.ganymede.getBiomeName(), BiomeGenGanymede.ganymede);
+		Biome.registerBiome(Config.iapetusBiomeID, BiomeGenIapetus.iapetus.getBiomeName(), BiomeGenIapetus.iapetus);
+		Biome.registerBiome(Config.ioBiomeID, BiomeGenIo.io.getBiomeName(), BiomeGenIo.io);
+		Biome.registerBiome(Config.oberonBiomeID, BiomeGenOberon.oberon.getBiomeName(), BiomeGenOberon.oberon);
+		Biome.registerBiome(Config.phobosBiomeID, BiomeGenPhobos.phobos.getBiomeName(), BiomeGenPhobos.phobos);
+		Biome.registerBiome(Config.rheaBiomeID, BiomeGenRhea.rhea.getBiomeName(), BiomeGenRhea.rhea);
+		Biome.registerBiome(Config.titanBiomeID, BiomeGenTitan.titan.getBiomeName(), BiomeGenTitan.titan);
+		Biome.registerBiome(Config.titaniaBiomeID, BiomeGenTitania.titania.getBiomeName(), BiomeGenTitania.titania);
 	}
 
 	private void registerSchematicsRecipes() {
