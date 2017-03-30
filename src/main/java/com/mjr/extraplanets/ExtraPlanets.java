@@ -254,6 +254,9 @@ public class ExtraPlanets {
 		registerNonMobEntities();
 		registerCreatures();
 
+		// Register Biomes
+		ExtraPlanetsDimensions.registerBiomes();
+
 		packetPipeline = ExtraPlanetsChannelHandler.init();
 
 		// Proxy Init Method
