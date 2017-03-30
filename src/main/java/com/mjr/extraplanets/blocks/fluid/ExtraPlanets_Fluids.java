@@ -43,7 +43,7 @@ public class ExtraPlanets_Fluids {
 	public static Fluid nitrogen_ice_fluid;
 
 	public static Material glowstone_material = new MaterialLiquid(MapColor.YELLOW);
-	public static Material magma_material = new MaterialLiquid(MapColor.TNT);
+	public static Material magma_material = new MaterialLiquid(MapColor.NETHERRACK);
 	public static Material nitrogen_material = new MaterialLiquid(MapColor.LIGHT_BLUE);
 	public static Material frozen_water_material = new MaterialLiquid(MapColor.DIAMOND);
 	public static Material salt_material = new MaterialLiquid(MapColor.GRAY);
@@ -63,7 +63,7 @@ public class ExtraPlanets_Fluids {
 		magma_fluid = new Fluid("magma_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_flow")).setBlock(magma).setDensity(800)
 				.setViscosity(1500);
 		FluidRegistry.registerFluid(magma_fluid);
-		magma = new FluidBlockEP(magma_fluid, "magma", magma_material);
+		magma = new FluidBlockEP(magma_fluid, "magma", Material.LAVA);
 
 		nitrogen_fluid = new Fluid("nitrogen_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_flow")).setBlock(nitrogen).setDensity(800)
 				.setViscosity(1500);

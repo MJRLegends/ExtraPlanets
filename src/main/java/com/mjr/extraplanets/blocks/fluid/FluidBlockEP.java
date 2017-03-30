@@ -6,7 +6,10 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
@@ -24,12 +27,24 @@ public class FluidBlockEP extends BlockFluidClassic {
 
 	public FluidBlockEP(Fluid fluid, String assetName, Material material) {
 		super(ExtraPlanets_Fluids.glowstone_fluid, material);
-        this.fluidName = assetName;
-        this.fluid = fluid;
+		this.fluidName = assetName;
+		this.fluid = fluid;
 		this.setQuantaPerBlock(9);
 		this.setLightLevel(1.0F);
 		this.needsRandomTick = true;
 		this.setUnlocalizedName(assetName);
+	}
+
+	@Override
+	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+		if (state == ExtraPlanets_Fluids.magma) {
+			if ((entityIn instanceof EntityLivingBase)) {
+				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
+					((EntityLivingBase) entityIn).attackEntityFrom(DamageSource.lava, 4.0F);
+					((EntityLivingBase) entityIn).setFire(15);
+				}
+			}
+		}
 	}
 
 	@Override
