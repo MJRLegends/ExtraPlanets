@@ -153,19 +153,19 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titanBlocks, 1, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
 		if (Config.oberon) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.oberonBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.oberonBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.oberonBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.oberonBlocks, 1, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.oberonBlocks, 1, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.oberonBlocks, 1, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
 		if (Config.titania) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titaniaBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titaniaBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titaniaBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titaniaBlocks, 1, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titaniaBlocks, 1, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.titaniaBlocks, 1, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
 		if (Config.iapetus) {
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.iapetusBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.iapetusBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.iapetusBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.iapetusBlocks, 1, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.iapetusBlocks, 1, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.iapetusBlocks, 1, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 4), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -595,7 +595,7 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 'Y', new ItemStack(Blocks.wool, 1, 9), 'Z', new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4) });
 
 			// Stone Bricks
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 4, 6), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 2) });
 
 			// Block of Dark Iron
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5) });
