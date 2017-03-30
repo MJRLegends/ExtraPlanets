@@ -44,7 +44,7 @@ public class WorldGenBasicHideout  extends WorldGenerator {
 		if (!world.isAreaLoaded(new BlockPos(x + 10, y, z + 10), 10))
 			return false;
 		else {
-			System.out.println("Spawning Basic Hideout at (x, y, z)" + x + " " + y + " " + z);
+			//System.out.println("Spawning Basic Hideout at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y, z);
 			fillChests(world, rand, x, y, z);
 		}
