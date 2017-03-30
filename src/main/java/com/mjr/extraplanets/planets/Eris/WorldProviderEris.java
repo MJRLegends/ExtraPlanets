@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.planets.Eris;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
@@ -10,11 +9,13 @@ import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
 
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Eris.worldgen.BiomeProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
+import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
-public class WorldProviderEris extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderEris extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -148,5 +149,15 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.ERIS;
+	}
+
+	@Override
+	public int getPressureLevel() {
+		return 2;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 50;
 	}
 }
