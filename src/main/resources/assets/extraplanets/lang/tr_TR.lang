@@ -831,7 +831,7 @@ antiRadiation.desc=Reduces Radiation Level by 2
 #Other Items
 item.appleDiamond.name=Elmas Elma
 item.appleIron.name=Iron Apple
-item.cannedfood.cannedFood.name=Uzay Yiyecekleri
+item.cannedFood.cannedFood.name=Uzay Yiyecekleri
 item.bodyparts.arm.name=Kol
 item.bodyparts.leg.name=Bacak
 item.cloth.name=Wool Cloth
@@ -840,11 +840,11 @@ item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 item.thermalCloth.tier5ThermalCloth.name=Tier 5 Thermal Cloth
 
-item.cannedfood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
-item.cannedfood.dehydratedFish.name=Susuz Balık
-item.cannedfood.dehydratedSalmon.name=Susuz Somon Balığı
-item.cannedfood.dehydratedChicken.name=Susuz Tavuk
-item.cannedfood.dehydratedBeef.name=Susuz Biftek
+item.cannedFood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
+item.cannedFood.dehydratedFish.name=Susuz Balık
+item.cannedFood.dehydratedSalmon.name=Susuz Somon Balığı
+item.cannedFood.dehydratedChicken.name=Susuz Tavuk
+item.cannedFood.dehydratedBeef.name=Susuz Biftek
 
 #Entities
 entity.ProjectileTNT.name=Korumacı TNT

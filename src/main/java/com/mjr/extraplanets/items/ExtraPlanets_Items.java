@@ -319,7 +319,7 @@ public class ExtraPlanets_Items {
 		methane_bucket = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
 		nitrogen_ice_bucket = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
 
-		// cannedFood = new ItemCannedFood("cannedfood");
+		cannedFood = new ItemCannedFood("cannedFood");
 		wafers = new ItemWafers("wafer");
 		ingotLead = new ItemBasicItem("ingotLead");
 		cloth = new ItemBasicItem("cloth");
@@ -460,7 +460,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(anti_radiation, anti_radiation.getUnlocalizedName().substring(5));
 		}
-		// GameRegistry.registerItem(cannedFood, "cannedFood");
+		GameRegistry.registerItem(cannedFood, cannedFood.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));

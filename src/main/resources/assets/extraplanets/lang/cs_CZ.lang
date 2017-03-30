@@ -830,7 +830,7 @@ antiRadiation.desc=Reduces Radiation Level by 2
 #Other Items
 item.appleDiamond.name=Diamantové jablko
 item.appleIron.name=Iron Apple
-item.cannedfood.cannedFood.name=Plechovka jídla
+item.cannedFood.cannedFood.name=Plechovka jídla
 item.bodyparts.arm.name=Paže
 item.bodyparts.leg.name=Noha
 item.cloth.name=Wool Cloth
@@ -839,11 +839,11 @@ item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 item.thermalCloth.tier5ThermalCloth.name=Tier 5 Thermal Cloth
 
-item.cannedfood.dehydratedPorkchop.name=Dehydrované vepřové
-item.cannedfood.dehydratedFish.name=Dehydrovaná ryba
-item.cannedfood.dehydratedSalmon.name=Dehydrovaný losos
-item.cannedfood.dehydratedChicken.name=Dehydrované kuře
-item.cannedfood.dehydratedBeef.name=Dehydrované hovězí
+item.cannedFood.dehydratedPorkchop.name=Dehydrované vepřové
+item.cannedFood.dehydratedFish.name=Dehydrovaná ryba
+item.cannedFood.dehydratedSalmon.name=Dehydrovaný losos
+item.cannedFood.dehydratedChicken.name=Dehydrované kuře
+item.cannedFood.dehydratedBeef.name=Dehydrované hovězí
 
 #Entities
 entity.ProjectileTNT.name=Projectile TNT
