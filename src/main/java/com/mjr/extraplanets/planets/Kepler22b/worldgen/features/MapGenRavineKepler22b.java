@@ -17,8 +17,8 @@ public class MapGenRavineKepler22b extends MapGenBase {
 	protected void func_180707_a(long p_180707_1_, int p_180707_3_, int p_180707_4_, ChunkPrimer p_180707_5_, double p_180707_6_, double p_180707_8_, double p_180707_10_, float p_180707_12_, float p_180707_13_, float p_180707_14_, int p_180707_15_,
 			int p_180707_16_, double p_180707_17_) {
 		Random random = new Random(p_180707_1_);
-		double d0 = (double) (p_180707_3_ * 16 + 8);
-		double d1 = (double) (p_180707_4_ * 16 + 8);
+		double d0 = p_180707_3_ * 16 + 8;
+		double d1 = p_180707_4_ * 16 + 8;
 		float f = 0.0F;
 		float f1 = 0.0F;
 
@@ -45,15 +45,15 @@ public class MapGenRavineKepler22b extends MapGenBase {
 		}
 
 		for (; p_180707_15_ < p_180707_16_; ++p_180707_15_) {
-			double d9 = 1.5D + (double) (MathHelper.sin((float) p_180707_15_ * (float) Math.PI / (float) p_180707_16_) * p_180707_12_ * 1.0F);
+			double d9 = 1.5D + MathHelper.sin(p_180707_15_ * (float) Math.PI / p_180707_16_) * p_180707_12_ * 1.0F;
 			double d2 = d9 * p_180707_17_;
-			d9 = d9 * ((double) random.nextFloat() * 0.25D + 0.75D);
-			d2 = d2 * ((double) random.nextFloat() * 0.25D + 0.75D);
+			d9 = d9 * (random.nextFloat() * 0.25D + 0.75D);
+			d2 = d2 * (random.nextFloat() * 0.25D + 0.75D);
 			float f3 = MathHelper.cos(p_180707_14_);
 			float f4 = MathHelper.sin(p_180707_14_);
-			p_180707_6_ += (double) (MathHelper.cos(p_180707_13_) * f3);
-			p_180707_8_ += (double) f4;
-			p_180707_10_ += (double) (MathHelper.sin(p_180707_13_) * f3);
+			p_180707_6_ += MathHelper.cos(p_180707_13_) * f3;
+			p_180707_8_ += f4;
+			p_180707_10_ += MathHelper.sin(p_180707_13_) * f3;
 			p_180707_14_ = p_180707_14_ * 0.7F;
 			p_180707_14_ = p_180707_14_ + f1 * 0.05F;
 			p_180707_13_ += f * 0.05F;
@@ -65,8 +65,8 @@ public class MapGenRavineKepler22b extends MapGenBase {
 			if (flag1 || random.nextInt(4) != 0) {
 				double d3 = p_180707_6_ - d0;
 				double d4 = p_180707_10_ - d1;
-				double d5 = (double) (p_180707_16_ - p_180707_15_);
-				double d6 = (double) (p_180707_12_ + 2.0F + 16.0F);
+				double d5 = p_180707_16_ - p_180707_15_;
+				double d6 = p_180707_12_ + 2.0F + 16.0F;
 
 				if (d3 * d3 + d4 * d4 - d5 * d5 > d6 * d6) {
 					return;
@@ -128,17 +128,17 @@ public class MapGenRavineKepler22b extends MapGenBase {
 						BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
 						for (int j3 = k2; j3 < k; ++j3) {
-							double d10 = ((double) (j3 + p_180707_3_ * 16) + 0.5D - p_180707_6_) / d9;
+							double d10 = (j3 + p_180707_3_ * 16 + 0.5D - p_180707_6_) / d9;
 
 							for (int i2 = i3; i2 < i1; ++i2) {
-								double d7 = ((double) (i2 + p_180707_4_ * 16) + 0.5D - p_180707_10_) / d9;
+								double d7 = (i2 + p_180707_4_ * 16 + 0.5D - p_180707_10_) / d9;
 								boolean flag = false;
 
 								if (d10 * d10 + d7 * d7 < 1.0D) {
 									for (int j2 = l; j2 > l2; --j2) {
-										double d8 = ((double) (j2 - 1) + 0.5D - p_180707_8_) / d2;
+										double d8 = (j2 - 1 + 0.5D - p_180707_8_) / d2;
 
-										if ((d10 * d10 + d7 * d7) * (double) this.field_75046_d[j2 - 1] + d8 * d8 / 6.0D < 1.0D) {
+										if ((d10 * d10 + d7 * d7) * this.field_75046_d[j2 - 1] + d8 * d8 / 6.0D < 1.0D) {
 											IBlockState iblockstate1 = p_180707_5_.getBlockState(j3, j2, i2);
 
 											if (isTopBlock(p_180707_5_, j3, j2, i2, p_180707_3_, p_180707_4_)) {
@@ -161,11 +161,12 @@ public class MapGenRavineKepler22b extends MapGenBase {
 		}
 	}
 
+	@Override
 	protected void recursiveGenerate(World worldIn, int chunkX, int chunkZ, int p_180701_4_, int p_180701_5_, ChunkPrimer chunkPrimerIn) {
 		if (this.rand.nextInt(50) == 0) {
-			double d0 = (double) (chunkX * 16 + this.rand.nextInt(16));
-			double d1 = (double) (this.rand.nextInt(this.rand.nextInt(40) + 8) + 20);
-			double d2 = (double) (chunkZ * 16 + this.rand.nextInt(16));
+			double d0 = chunkX * 16 + this.rand.nextInt(16);
+			double d1 = this.rand.nextInt(this.rand.nextInt(40) + 8) + 20;
+			double d2 = chunkZ * 16 + this.rand.nextInt(16);
 			int i = 1;
 
 			for (int j = 0; j < i; ++j) {
@@ -190,7 +191,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 	// Determine if the block at the specified location is the top block for the biome, we take into account
 	// Vanilla bugs to make sure that we generate the map the same way vanilla does.
 	private boolean isTopBlock(ChunkPrimer data, int x, int y, int z, int chunkX, int chunkZ) {
-        net.minecraft.world.biome.Biome biome = worldObj.getBiome(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
+		net.minecraft.world.biome.Biome biome = worldObj.getBiome(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
 		IBlockState state = data.getBlockState(x, y, z);
 		return (isExceptionBiome(biome) ? state.getBlock() == Blocks.GRASS : state.getBlock() == biome.topBlock);
 	}
@@ -217,7 +218,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 	 *            True if we've encountered the biome's top block. Ideally if we've broken the surface.
 	 */
 	protected void digBlock(ChunkPrimer data, int x, int y, int z, int chunkX, int chunkZ, boolean foundTop) {
-        net.minecraft.world.biome.Biome biome = worldObj.getBiome(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
+		net.minecraft.world.biome.Biome biome = worldObj.getBiome(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
 		IBlockState state = data.getBlockState(x, y, z);
 		IBlockState top = biome.topBlock;
 		IBlockState filler = biome.fillerBlock;

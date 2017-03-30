@@ -3,12 +3,9 @@ package com.mjr.extraplanets.blocks;
 import java.util.Random;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDirt;
-import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -33,7 +30,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!worldIn.isRemote) {
 			if (worldIn.getLightFromNeighbors(pos.up()) < 4 && worldIn.getBlockState(pos.up()).getLightOpacity(worldIn, pos.up()) > 2) {
-				worldIn.setBlockState(pos, Blocks.DIRT.getDefaultState());
+				worldIn.setBlockState(pos, ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState());
 			} else {
 				if (worldIn.getLightFromNeighbors(pos.up()) >= 9) {
 					for (int i = 0; i < 4; ++i) {
@@ -41,7 +38,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 						Block block = worldIn.getBlockState(blockpos.up()).getBlock();
 						IBlockState iblockstate = worldIn.getBlockState(blockpos);
 
-						if (iblockstate.getBlock() == Blocks.DIRT && iblockstate.getValue(BlockDirt.VARIANT) == BlockDirt.DirtType.DIRT && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && iblockstate.getLightOpacity(worldIn, pos.up()) <= 2) {
+						if (iblockstate.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && iblockstate.getLightOpacity(worldIn, pos.up()) <= 2) {
 							worldIn.setBlockState(blockpos, this.getDefaultState());
 						}
 					}
@@ -52,7 +49,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return Blocks.DIRT.getItemDropped(Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT), rand, fortune);
+		return ExtraPlanets_Blocks.kepler22bBlocks.getItemDropped(ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState(), rand, fortune);
 	}
 
 	@Override
@@ -76,15 +73,15 @@ public class BlockBasicGrass extends Block implements IGrowable {
 			while (true) {
 				if (j >= i / 16) {
 					if (worldIn.isAirBlock(blockpos1)) {
-						if (rand.nextInt(8) == 0) {
-							worldIn.getBiome(blockpos1).plantFlower(worldIn, rand, blockpos1);
-						} else {
-							IBlockState iblockstate1 = Blocks.TALLGRASS.getDefaultState().withProperty(BlockTallGrass.TYPE, BlockTallGrass.EnumType.GRASS);
-
-							if (Blocks.TALLGRASS.canBlockStay(worldIn, blockpos1, iblockstate1)) {
-								worldIn.setBlockState(blockpos1, iblockstate1, 3);
-							}
-						}
+						// if (rand.nextInt(8) == 0) {
+						// worldIn.getBiome(blockpos1).plantFlower(worldIn, rand, blockpos1);
+						// } else {
+						// IBlockState iblockstate1 = Blocks.TALLGRASS.getDefaultState().withProperty(BlockTallGrass.TYPE, BlockTallGrass.EnumType.GRASS);
+						//
+						// if (Blocks.TALLGRASS.canBlockStay(worldIn, blockpos1, iblockstate1)) {
+						// worldIn.setBlockState(blockpos1, iblockstate1, 3);
+						// }
+						// }
 					}
 
 					break;
@@ -105,5 +102,11 @@ public class BlockBasicGrass extends Block implements IGrowable {
 	@SideOnly(Side.CLIENT)
 	public BlockRenderLayer getBlockLayer() {
 		return BlockRenderLayer.CUTOUT_MIPPED;
+	}
+
+	@Override
+	public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction, IPlantable plantable) {
+		Block block = plantable.getPlant(world, pos).getBlock();
+		return block == ExtraPlanets_Blocks.kepler22bMapleSapling || block == ExtraPlanets_Blocks.kepler22bGrassFlowers;
 	}
 }

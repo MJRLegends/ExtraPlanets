@@ -22,6 +22,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 	private static final Logger LOGGER = LogManager.getLogger();
 	private static final String[] SPAWNERTYPES = new String[] { "Skeleton", "Zombie", "Zombie", "Spider" };
 
+	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 		int i = 3;
 		int j = rand.nextInt(2) + 2;
@@ -57,7 +58,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 		}
 
 		if (j2 >= 1 && j2 <= 5) {
-            System.out.println("Generating Kepler22b Dungeon at:" + position.getX() + " " + position.getY() + " " + position.getZ());
+			System.out.println("Generating Kepler22b Dungeon at:" + position.getX() + " " + position.getY() + " " + position.getZ());
 			for (int k3 = k; k3 <= l; ++k3) {
 				for (int i4 = 3; i4 >= -1; --i4) {
 					for (int k4 = l1; k4 <= i2; ++k4) {
