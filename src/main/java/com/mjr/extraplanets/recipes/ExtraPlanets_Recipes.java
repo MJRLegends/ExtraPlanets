@@ -173,7 +173,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 2), OreDictionary.getOres("ingotIron").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 12), new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 0, 1), 0.0F);
 
-			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 5), new ItemStack(Blocks.COAL_BLOCK, 1, 4), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 5), new ItemStack(Blocks.COAL_BLOCK, 1, 1), 0.0F);
 
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 6), new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 7), new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 0.0F);
@@ -553,7 +553,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 0), new Object[] { " YV", "XWX", "XZX", 'V', Blocks.STONE_BUTTON, 'W', new ItemStack(GCItems.canister, 1, 0), 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3),
 					'Y', Items.FLINT_AND_STEEL, 'Z', GCItems.oxygenVent });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 1), new Object[] { "ZYZ", "ZWZ", "XVX", 'V', GCItems.oxygenVent, 'W', new ItemStack(GCItems.fuelCanister, 1, 1), 'X',
-					new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), 'Y', new ItemStack(Blocks.WOOL, 1, 12), 'Z', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4) });
+					new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), 'Y', new ItemStack(Blocks.WOOL, 1, 3), 'Z', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4) });
 
 			// Stone Bricks
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 1, 2) });
