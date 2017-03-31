@@ -36,6 +36,9 @@ minecraft {
 
 dependencies {
 	compile files (
+		"../Galacticraft 1.10.2/build/libs/GalacticraftCore-Dev-1.10.2-4.0.0.0-BETA.jar",
+		"../Galacticraft 1.10.2/build/libs/Galacticraft-Planets-Dev-1.10.2-4.0.0.0-BETA.jar",
+		"../Galacticraft 1.10.2/build/libs/MicdoodleCore-Dev-1.10.2-4.0.0.0-BETA.jar",
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..

@@ -39,7 +39,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicEris extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictyperris", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeeris", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "eris_surface"), SUB_SURFACE(1, "eris_sub_surface"), STONE(2, "eris_stone"), ORE_IRON(3, "eris_ore_iron"), ORE_TIN(4, "eris_ore_tin"), ORE_COPPER(5, "eris_ore_copper"), ORE_DARK_IRON(6, "eris_ore_dark_iron"), DARK_IRON_BLOCK(7,
