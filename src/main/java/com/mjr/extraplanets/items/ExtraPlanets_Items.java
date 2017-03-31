@@ -6,7 +6,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -51,6 +50,7 @@ import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Items {
 	public static Item tier4Rocket;
@@ -330,147 +330,147 @@ public class ExtraPlanets_Items {
 	private static void registerItems() {
 		if (Config.mercury) {
 			if (Config.batteries)
-				GameRegistry.registerItem(mercuryBattery, mercuryBattery.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(compressedMercury, compressedMercury.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(ingotMercury, ingotMercury.getUnlocalizedName().substring(5));
+				RegisterHelper.registerItem(mercuryBattery, mercuryBattery.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(compressedMercury, compressedMercury.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(ingotMercury, ingotMercury.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(tier4Rocket, tier4Rocket.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(schematicTier4, schematicTier4.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(noseConeTier4, noseConeTier4.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4Items, tier4Items.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(T4key, T4key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4Rocket, tier4Rocket.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(schematicTier4, schematicTier4.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(noseConeTier4, noseConeTier4.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4Items, tier4Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(T4key, T4key.getUnlocalizedName().substring(5));
 		}
 		if (Config.ceres) {
-			GameRegistry.registerItem(ingotUranium, ingotUranium.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(salt_bucket, "bucket_salt");
+			RegisterHelper.registerItem(ingotUranium, ingotUranium.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(salt_bucket, "bucket_salt");
 		}
 		if (Config.jupiter) {
-			GameRegistry.registerItem(tier5Rocket, tier5Rocket.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(schematicTier5, schematicTier5.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(noseConeTier5, noseConeTier5.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier5Items, tier5Items.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(T5key, T5key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier5Rocket, tier5Rocket.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(schematicTier5, schematicTier5.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(noseConeTier5, noseConeTier5.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier5Items, tier5Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(T5key, T5key.getUnlocalizedName().substring(5));
 
 			if (Config.batteries)
-				GameRegistry.registerItem(nickelBattery, nickelBattery.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(magma_bucket, "bucket_magma");
+				RegisterHelper.registerItem(nickelBattery, nickelBattery.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(magma_bucket, "bucket_magma");
 		}
 		if (Config.saturn) {
-			GameRegistry.registerItem(tier6Rocket, tier6Rocket.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(schematicTier6, schematicTier6.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(noseConeTier6, noseConeTier6.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier6Items, tier6Items.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(T6key, T6key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier6Rocket, tier6Rocket.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(schematicTier6, schematicTier6.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(noseConeTier6, noseConeTier6.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier6Items, tier6Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(T6key, T6key.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");
+			RegisterHelper.registerItem(glowstone_bucket, "bucket_glowstone");
 		}
 		if (Config.uranus) {
-			GameRegistry.registerItem(tier7Rocket, tier7Rocket.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(schematicTier7, schematicTier7.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(noseConeTier7, noseConeTier7.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier7Items, tier7Items.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(T7key, T7key.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
+			RegisterHelper.registerItem(tier7Rocket, tier7Rocket.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(schematicTier7, schematicTier7.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(noseConeTier7, noseConeTier7.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier7Items, tier7Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(T7key, T7key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(frozen_water_bucket, "bucket_frozen_water");
 		}
 		if (Config.neptune) {
-			GameRegistry.registerItem(tier8Rocket, tier8Rocket.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(schematicTier8, schematicTier8.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(noseConeTier8, noseConeTier8.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier8Items, tier8Items.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(T8key, T8key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier8Rocket, tier8Rocket.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(schematicTier8, schematicTier8.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(noseConeTier8, noseConeTier8.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier8Items, tier8Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(T8key, T8key.getUnlocalizedName().substring(5));
 			if (Config.batteries)
-				GameRegistry.registerItem(zincBattery, zincBattery.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
+				RegisterHelper.registerItem(zincBattery, zincBattery.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		}
 		if (Config.pluto) {
-			GameRegistry.registerItem(tier9Rocket, tier9Rocket.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(schematicTier9, schematicTier9.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(noseConeTier9, noseConeTier9.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier9Items, tier9Items.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(T9key, T9key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier9Rocket, tier9Rocket.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(schematicTier9, schematicTier9.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(noseConeTier9, noseConeTier9.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier9Items, tier9Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(T9key, T9key.getUnlocalizedName().substring(5));
 		}
 		if (Config.eris) {
-			GameRegistry.registerItem(tier10Rocket, tier10Rocket.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(schematicTier10, schematicTier10.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(noseConeTier10, noseConeTier10.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier10Items, tier10Items.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(T10key, T10key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier10Rocket, tier10Rocket.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(schematicTier10, schematicTier10.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(noseConeTier10, noseConeTier10.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier10Items, tier10Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(T10key, T10key.getUnlocalizedName().substring(5));
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
-			GameRegistry.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
 		}
 		if (Config.customApples) {
-			GameRegistry.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
 		}
 		if (Config.thermalPaddings) {
-			GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(thermalCloth, thermalCloth.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
 		}
 		if (Config.batteries) {
-			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
 		}
 		if (Config.oxygenTanks) {
-			GameRegistry.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
 		}
 		if (Config.pressure || Config.radiation) {
-			GameRegistry.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier3PressureLayer, tier3PressureLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4PressureLayer, tier4PressureLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3PressureLayer, tier3PressureLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4PressureLayer, tier4PressureLayer.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(tier1RadiationLayer, tier1RadiationLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier2RadiationLayer, tier2RadiationLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier3RadiationLayer, tier3RadiationLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4RadiationLayer, tier4RadiationLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier1RadiationLayer, tier1RadiationLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier2RadiationLayer, tier2RadiationLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3RadiationLayer, tier3RadiationLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4RadiationLayer, tier4RadiationLayer.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(tier1ArmorLayer, tier1ArmorLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier2ArmorLayer, tier2ArmorLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier3ArmorLayer, tier3ArmorLayer.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4ArmorLayer, tier4ArmorLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier1ArmorLayer, tier1ArmorLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier2ArmorLayer, tier2ArmorLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3ArmorLayer, tier3ArmorLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4ArmorLayer, tier4ArmorLayer.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(tier1UnPreparedSpaceSuitHelmet, tier1UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier1UnPreparedSpaceSuitChest, tier1UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier1UnPreparedSpaceSuitLegings, tier1UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier1UnPreparedSpaceSuitBoots, tier1UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitHelmet, tier1UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitChest, tier1UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitLegings, tier1UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitBoots, tier1UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(tier2UnPreparedSpaceSuitHelmet, tier2UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier2UnPreparedSpaceSuitChest, tier2UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier2UnPreparedSpaceSuitLegings, tier2UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier2UnPreparedSpaceSuitBoots, tier2UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitHelmet, tier2UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitChest, tier2UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitLegings, tier2UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitBoots, tier2UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(tier3UnPreparedSpaceSuitHelmet, tier3UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier3UnPreparedSpaceSuitChest, tier3UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier3UnPreparedSpaceSuitLegings, tier3UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier3UnPreparedSpaceSuitBoots, tier3UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitHelmet, tier3UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitChest, tier3UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitLegings, tier3UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitBoots, tier3UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(tier4UnPreparedSpaceSuitHelmet, tier4UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4UnPreparedSpaceSuitChest, tier4UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitHelmet, tier4UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitChest, tier4UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
 		}
 		if (Config.radiation) {
-			GameRegistry.registerItem(iodideSalt, iodideSalt.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(potash, potash.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(anti_radiation, anti_radiation.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(iodideSalt, iodideSalt.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(potash, potash.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(anti_radiation, anti_radiation.getUnlocalizedName().substring(5));
 		}
-		GameRegistry.registerItem(cannedFood, cannedFood.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(clean_water_bucket, "bucket_clean_water");
-		GameRegistry.registerItem(infected_water_bucket, "bucket_infected_water");
+		RegisterHelper.registerItem(cannedFood, cannedFood.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(clean_water_bucket, "bucket_clean_water");
+		RegisterHelper.registerItem(infected_water_bucket, "bucket_infected_water");
 		;
-		GameRegistry.registerItem(radioactive_bucket, "bucket_radioactive_water");
-		GameRegistry.registerItem(methane_bucket, "bucket_methane");
-		GameRegistry.registerItem(nitrogen_ice_bucket, "bucket_nitrogen_ice");
+		RegisterHelper.registerItem(radioactive_bucket, "bucket_radioactive_water");
+		RegisterHelper.registerItem(methane_bucket, "bucket_methane");
+		RegisterHelper.registerItem(nitrogen_ice_bucket, "bucket_nitrogen_ice");
 	}
 
 	private static void registerFluidContainer() {

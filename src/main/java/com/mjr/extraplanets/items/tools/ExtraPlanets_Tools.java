@@ -3,9 +3,9 @@ package com.mjr.extraplanets.items.tools;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Tools {
 	private static ToolMaterial carbonMaterial = EnumHelper.addToolMaterial("Carbon Material", 3, 40, 4.0F, 6.0F, 30);
@@ -248,118 +248,118 @@ public class ExtraPlanets_Tools {
 
 	private static void registerTools() {
 		if (Config.mercury && Config.mercuryItems) {
-			GameRegistry.registerItem(mercuryPickaxe, "mercuryPickaxe");
-			GameRegistry.registerItem(mercuryAxe, "mercuryAxe");
-			GameRegistry.registerItem(mercuryHoe, "mercuryHoe");
-			GameRegistry.registerItem(mercuryShovel, "mercuryShovel");
-			GameRegistry.registerItem(mercurySword, "mercurySword");
+			RegisterHelper.registerItem(mercuryPickaxe, "mercuryPickaxe");
+			RegisterHelper.registerItem(mercuryAxe, "mercuryAxe");
+			RegisterHelper.registerItem(mercuryHoe, "mercuryHoe");
+			RegisterHelper.registerItem(mercuryShovel, "mercuryShovel");
+			RegisterHelper.registerItem(mercurySword, "mercurySword");
 		}
 		if (Config.mercury && Config.carbonItems) {
-			GameRegistry.registerItem(carbonPickaxe, "carbonPickaxe");
-			GameRegistry.registerItem(carbonAxe, "carbonAxe");
-			GameRegistry.registerItem(carbonHoe, "carbonHoe");
-			GameRegistry.registerItem(carbonShovel, "carbonShovel");
-			GameRegistry.registerItem(carbonSword, "carbonSword");
+			RegisterHelper.registerItem(carbonPickaxe, "carbonPickaxe");
+			RegisterHelper.registerItem(carbonAxe, "carbonAxe");
+			RegisterHelper.registerItem(carbonHoe, "carbonHoe");
+			RegisterHelper.registerItem(carbonShovel, "carbonShovel");
+			RegisterHelper.registerItem(carbonSword, "carbonSword");
 		}
 		if (Config.ceres && Config.uraniumItems) {
-			GameRegistry.registerItem(uraniumPickaxe, "uraniumPickaxe");
-			GameRegistry.registerItem(uraniumAxe, "uraniumAxe");
-			GameRegistry.registerItem(uraniumHoe, "uraniumHoe");
-			GameRegistry.registerItem(uraniumShovel, "uraniumShovel");
-			GameRegistry.registerItem(uraniumSword, "uraniumSword");
+			RegisterHelper.registerItem(uraniumPickaxe, "uraniumPickaxe");
+			RegisterHelper.registerItem(uraniumAxe, "uraniumAxe");
+			RegisterHelper.registerItem(uraniumHoe, "uraniumHoe");
+			RegisterHelper.registerItem(uraniumShovel, "uraniumShovel");
+			RegisterHelper.registerItem(uraniumSword, "uraniumSword");
 		}
 		if (Config.jupiter) {
 			if (Config.palladiumItems) {
-				GameRegistry.registerItem(palladiumPickaxe, "palladiumPickaxe");
-				GameRegistry.registerItem(palladiumAxe, "palladiumAxe");
-				GameRegistry.registerItem(palladiumHoe, "palladiumHoe");
-				GameRegistry.registerItem(palladiumShovel, "palladiumShovel");
-				GameRegistry.registerItem(palladiumSword, "palladiumSword");
+				RegisterHelper.registerItem(palladiumPickaxe, "palladiumPickaxe");
+				RegisterHelper.registerItem(palladiumAxe, "palladiumAxe");
+				RegisterHelper.registerItem(palladiumHoe, "palladiumHoe");
+				RegisterHelper.registerItem(palladiumShovel, "palladiumShovel");
+				RegisterHelper.registerItem(palladiumSword, "palladiumSword");
 			}
 			if (Config.redGemItems) {
-				GameRegistry.registerItem(redGemPickaxe, "redGemPickaxe");
-				GameRegistry.registerItem(redGemAxe, "redGemAxe");
-				GameRegistry.registerItem(redGemHoe, "redGemHoe");
-				GameRegistry.registerItem(redGemShovel, "redGemShovel");
-				GameRegistry.registerItem(redGemSword, "redGemSword");
+				RegisterHelper.registerItem(redGemPickaxe, "redGemPickaxe");
+				RegisterHelper.registerItem(redGemAxe, "redGemAxe");
+				RegisterHelper.registerItem(redGemHoe, "redGemHoe");
+				RegisterHelper.registerItem(redGemShovel, "redGemShovel");
+				RegisterHelper.registerItem(redGemSword, "redGemSword");
 			}
 		}
 		if (Config.saturn && Config.magnesiumItems) {
-			GameRegistry.registerItem(magnesiumPickaxe, "magnesiumPickaxe");
-			GameRegistry.registerItem(magnesiumAxe, "magnesiumAxe");
-			GameRegistry.registerItem(magnesiumHoe, "magnesiumHoe");
-			GameRegistry.registerItem(magnesiumShovel, "magnesiumShovel");
-			GameRegistry.registerItem(magnesiumSword, "magnesiumSword");
+			RegisterHelper.registerItem(magnesiumPickaxe, "magnesiumPickaxe");
+			RegisterHelper.registerItem(magnesiumAxe, "magnesiumAxe");
+			RegisterHelper.registerItem(magnesiumHoe, "magnesiumHoe");
+			RegisterHelper.registerItem(magnesiumShovel, "magnesiumShovel");
+			RegisterHelper.registerItem(magnesiumSword, "magnesiumSword");
 		}
 		if (Config.uranus) {
 			if (Config.crystalItems) {
-				GameRegistry.registerItem(crystalPickaxe, "crystalPickaxe");
-				GameRegistry.registerItem(crystalAxe, "crystalAxe");
-				GameRegistry.registerItem(crystalHoe, "crystalHoe");
-				GameRegistry.registerItem(crystalShovel, "crystalShovel");
-				GameRegistry.registerItem(crystalSword, "crystalSword");
+				RegisterHelper.registerItem(crystalPickaxe, "crystalPickaxe");
+				RegisterHelper.registerItem(crystalAxe, "crystalAxe");
+				RegisterHelper.registerItem(crystalHoe, "crystalHoe");
+				RegisterHelper.registerItem(crystalShovel, "crystalShovel");
+				RegisterHelper.registerItem(crystalSword, "crystalSword");
 			}
 			if (Config.whiteGemItems) {
-				GameRegistry.registerItem(whiteGemPickaxe, "whiteGemPickaxe");
-				GameRegistry.registerItem(whiteGemAxe, "whiteGemAxe");
-				GameRegistry.registerItem(whiteGemHoe, "whiteGemHoe");
-				GameRegistry.registerItem(whiteGemShovel, "whiteGemShovel");
-				GameRegistry.registerItem(whiteGemSword, "whiteGemSword");
+				RegisterHelper.registerItem(whiteGemPickaxe, "whiteGemPickaxe");
+				RegisterHelper.registerItem(whiteGemAxe, "whiteGemAxe");
+				RegisterHelper.registerItem(whiteGemHoe, "whiteGemHoe");
+				RegisterHelper.registerItem(whiteGemShovel, "whiteGemShovel");
+				RegisterHelper.registerItem(whiteGemSword, "whiteGemSword");
 			}
 		}
 		if (Config.neptune) {
 			if (Config.blueGemItems) {
-				GameRegistry.registerItem(blueGemPickaxe, "blueGemPickaxe");
-				GameRegistry.registerItem(blueGemAxe, "blueGemAxe");
-				GameRegistry.registerItem(blueGemHoe, "blueGemHoe");
-				GameRegistry.registerItem(blueGemShovel, "blueGemShovel");
-				GameRegistry.registerItem(blueGemSword, "blueGemSword");
+				RegisterHelper.registerItem(blueGemPickaxe, "blueGemPickaxe");
+				RegisterHelper.registerItem(blueGemAxe, "blueGemAxe");
+				RegisterHelper.registerItem(blueGemHoe, "blueGemHoe");
+				RegisterHelper.registerItem(blueGemShovel, "blueGemShovel");
+				RegisterHelper.registerItem(blueGemSword, "blueGemSword");
 			}
 			if (Config.zincItems) {
-				GameRegistry.registerItem(zincPickaxe, "zincPickaxe");
-				GameRegistry.registerItem(zincAxe, "zincAxe");
-				GameRegistry.registerItem(zincHoe, "zincHoe");
-				GameRegistry.registerItem(zincShovel, "zincShovel");
-				GameRegistry.registerItem(zincSword, "zincSword");
+				RegisterHelper.registerItem(zincPickaxe, "zincPickaxe");
+				RegisterHelper.registerItem(zincAxe, "zincAxe");
+				RegisterHelper.registerItem(zincHoe, "zincHoe");
+				RegisterHelper.registerItem(zincShovel, "zincShovel");
+				RegisterHelper.registerItem(zincSword, "zincSword");
 			}
 		}
 		if (Config.pluto && Config.tungstenItems) {
-			GameRegistry.registerItem(tungstenPickaxe, "tungstenPickaxe");
-			GameRegistry.registerItem(tungstenAxe, "tungstenAxe");
-			GameRegistry.registerItem(tungstenHoe, "tungstenHoe");
-			GameRegistry.registerItem(tungstenShovel, "tungstenShovel");
-			GameRegistry.registerItem(tungstenSword, "tungstenSword");
+			RegisterHelper.registerItem(tungstenPickaxe, "tungstenPickaxe");
+			RegisterHelper.registerItem(tungstenAxe, "tungstenAxe");
+			RegisterHelper.registerItem(tungstenHoe, "tungstenHoe");
+			RegisterHelper.registerItem(tungstenShovel, "tungstenShovel");
+			RegisterHelper.registerItem(tungstenSword, "tungstenSword");
 		}
 		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
-			GameRegistry.registerItem(blueDiamondPickaxe, "blueDiamondPickaxe");
-			GameRegistry.registerItem(blueDiamondAxe, "blueDiamondAxe");
-			GameRegistry.registerItem(blueDiamondHoe, "blueDiamondHoe");
-			GameRegistry.registerItem(blueDiamondShovel, "blueDiamondShovel");
-			GameRegistry.registerItem(blueDiamondSword, "blueDiamondSword");
+			RegisterHelper.registerItem(blueDiamondPickaxe, "blueDiamondPickaxe");
+			RegisterHelper.registerItem(blueDiamondAxe, "blueDiamondAxe");
+			RegisterHelper.registerItem(blueDiamondHoe, "blueDiamondHoe");
+			RegisterHelper.registerItem(blueDiamondShovel, "blueDiamondShovel");
+			RegisterHelper.registerItem(blueDiamondSword, "blueDiamondSword");
 
-			GameRegistry.registerItem(redDiamondPickaxe, "redDiamondPickaxe");
-			GameRegistry.registerItem(redDiamondAxe, "redDiamondAxe");
-			GameRegistry.registerItem(redDiamondHoe, "redDiamondHoe");
-			GameRegistry.registerItem(redDiamondShovel, "redDiamondShovel");
-			GameRegistry.registerItem(redDiamondSword, "redDiamondSword");
+			RegisterHelper.registerItem(redDiamondPickaxe, "redDiamondPickaxe");
+			RegisterHelper.registerItem(redDiamondAxe, "redDiamondAxe");
+			RegisterHelper.registerItem(redDiamondHoe, "redDiamondHoe");
+			RegisterHelper.registerItem(redDiamondShovel, "redDiamondShovel");
+			RegisterHelper.registerItem(redDiamondSword, "redDiamondSword");
 
-			GameRegistry.registerItem(purpleDiamondPickaxe, "purpleDiamondPickaxe");
-			GameRegistry.registerItem(purpleDiamondAxe, "purpleDiamondAxe");
-			GameRegistry.registerItem(purpleDiamondHoe, "purpleDiamondHoe");
-			GameRegistry.registerItem(purpleDiamondShovel, "purpleDiamondShovel");
-			GameRegistry.registerItem(purpleDiamondSword, "purpleDiamondSword");
+			RegisterHelper.registerItem(purpleDiamondPickaxe, "purpleDiamondPickaxe");
+			RegisterHelper.registerItem(purpleDiamondAxe, "purpleDiamondAxe");
+			RegisterHelper.registerItem(purpleDiamondHoe, "purpleDiamondHoe");
+			RegisterHelper.registerItem(purpleDiamondShovel, "purpleDiamondShovel");
+			RegisterHelper.registerItem(purpleDiamondSword, "purpleDiamondSword");
 
-			GameRegistry.registerItem(yellowDiamondPickaxe, "yellowDiamondPickaxe");
-			GameRegistry.registerItem(yellowDiamondAxe, "yellowDiamondAxe");
-			GameRegistry.registerItem(yellowDiamondHoe, "yellowDiamondHoe");
-			GameRegistry.registerItem(yellowDiamondShovel, "yellowDiamondShovel");
-			GameRegistry.registerItem(yellowDiamondSword, "yellowDiamondSword");
+			RegisterHelper.registerItem(yellowDiamondPickaxe, "yellowDiamondPickaxe");
+			RegisterHelper.registerItem(yellowDiamondAxe, "yellowDiamondAxe");
+			RegisterHelper.registerItem(yellowDiamondHoe, "yellowDiamondHoe");
+			RegisterHelper.registerItem(yellowDiamondShovel, "yellowDiamondShovel");
+			RegisterHelper.registerItem(yellowDiamondSword, "yellowDiamondSword");
 
-			GameRegistry.registerItem(greenDiamondPickaxe, "greenDiamondPickaxe");
-			GameRegistry.registerItem(greenDiamondAxe, "greenDiamondAxe");
-			GameRegistry.registerItem(greenDiamondHoe, "greenDiamondHoe");
-			GameRegistry.registerItem(greenDiamondShovel, "greenDiamondShovel");
-			GameRegistry.registerItem(greenDiamondSword, "greenDiamondSword");
+			RegisterHelper.registerItem(greenDiamondPickaxe, "greenDiamondPickaxe");
+			RegisterHelper.registerItem(greenDiamondAxe, "greenDiamondAxe");
+			RegisterHelper.registerItem(greenDiamondHoe, "greenDiamondHoe");
+			RegisterHelper.registerItem(greenDiamondShovel, "greenDiamondShovel");
+			RegisterHelper.registerItem(greenDiamondSword, "greenDiamondSword");
 		}
 	}
 }

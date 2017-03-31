@@ -20,6 +20,7 @@ import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Machines {
 	// Machines
@@ -39,7 +40,11 @@ public class ExtraPlanets_Machines {
 
 	public static void init() {
 		initializeMachinesBlocks();
-		registerMachines();
+		try {
+			registerMachines();
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		}
 		registerMachineTileEntitys();
 	}
 
@@ -68,28 +73,28 @@ public class ExtraPlanets_Machines {
 		}
 	}
 
-	private static void registerMachines() {
+	private static void registerMachines() throws NoSuchMethodException {
 		if (Config.advancedRefinery)
-			GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
+			RegisterHelper.registerBlock(advancedRefinery, "advancedRefinery");
 		if (Config.ultimateRefinery)
-			GameRegistry.registerBlock(ultimateRefinery, "ultimateRefinery");
+			RegisterHelper.registerBlock(ultimateRefinery, "ultimateRefinery");
 		if (Config.solarPanels)
-			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName().substring(5));
 		if (Config.advancedCompressor)
-			GameRegistry.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
 		if (Config.ultimateCompressor)
-			GameRegistry.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
 		if (Config.radiation) {
 			if (Config.basicDecrystallizer)
-				GameRegistry.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
+				RegisterHelper.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
 			if (Config.basicCrystallizer)
-				GameRegistry.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
+				RegisterHelper.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
 			if (Config.basicSmasher)
-				GameRegistry.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
+				RegisterHelper.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
 			if (Config.basicChemicalInjector)
-				GameRegistry.registerBlock(basicChemicalInjector, basicChemicalInjector.getUnlocalizedName().substring(5));
+				RegisterHelper.registerBlock(basicChemicalInjector, basicChemicalInjector.getUnlocalizedName().substring(5));
 			if (Config.basicSolarEvaporationChamber)
-				GameRegistry.registerBlock(basicSolarEvaporationChamber, basicSolarEvaporationChamber.getUnlocalizedName().substring(5));
+				RegisterHelper.registerBlock(basicSolarEvaporationChamber, basicSolarEvaporationChamber.getUnlocalizedName().substring(5));
 		}
 	}
 

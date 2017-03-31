@@ -7,9 +7,9 @@ import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Fluids {
 	public static Block glowstone;
@@ -106,15 +106,15 @@ public class ExtraPlanets_Fluids {
 	}
 
 	private static void registerBlocks() {
-		GameRegistry.registerBlock(glowstone, "glowstone");
-		GameRegistry.registerBlock(magma, "magma");
-		GameRegistry.registerBlock(nitrogen, "nitrogen");
-		GameRegistry.registerBlock(frozen_water, "frozen_water");
-		GameRegistry.registerBlock(salt, "salt");
-		GameRegistry.registerBlock(radioactiveWater, "radioactive_water");
-		GameRegistry.registerBlock(cleanWater, "clean_water");
-		GameRegistry.registerBlock(infectedWater, "infected_water");
-		GameRegistry.registerBlock(methane, "methane");
-		GameRegistry.registerBlock(nitrogen_ice, "nitrogen_ice");
+		RegisterHelper.registerBlock(glowstone, "glowstone");
+		RegisterHelper.registerBlock(magma, "magma");
+		RegisterHelper.registerBlock(nitrogen, "nitrogen");
+		RegisterHelper.registerBlock(frozen_water, "frozen_water");
+		RegisterHelper.registerBlock(salt, "salt");
+		RegisterHelper.registerBlock(radioactiveWater, "radioactive_water");
+		RegisterHelper.registerBlock(cleanWater, "clean_water");
+		RegisterHelper.registerBlock(infectedWater, "infected_water");
+		RegisterHelper.registerBlock(methane, "methane");
+		RegisterHelper.registerBlock(nitrogen_ice, "nitrogen_ice");
 	}
 }
