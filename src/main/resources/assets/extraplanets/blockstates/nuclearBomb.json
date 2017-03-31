@@ -1,10 +1,6 @@
 {
     "variants": {
-        "normal": [
-            { "model": "extraplanets:nuclearBomb_model" },
-            { "model": "extraplanets:nuclearBomb_model", "y": 90 },
-            { "model": "extraplanets:nuclearBomb_model", "y": 180 },
-            { "model": "extraplanets:nuclearBomb_model", "y": 270 }
-        ]
+        "explode=false": { "model": "extraplanets:nuclearBomb_model" },
+		"explode=true": { "model": "extraplanets:nuclearBomb_model" }
     }
 }
