@@ -1,4 +1,4 @@
-package RenderNuclearBombPrimed;
+package com.mjr.extraplanets.client.render.entities;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;
