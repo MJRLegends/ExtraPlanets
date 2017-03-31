@@ -9,9 +9,8 @@ import net.minecraft.item.Item;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class BlockCustomGravel extends BlockFalling
-{
-	public BlockCustomGravel(String name){
+public class BlockCustomGravel extends BlockFalling {
+	public BlockCustomGravel(String name) {
 		super();
 		setHardness(0.6F);
 		setCreativeTab(ExtraPlanets.BlocksTab);
@@ -19,7 +18,7 @@ public class BlockCustomGravel extends BlockFalling
 	}
 
 	@Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune){
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Items.FLINT;
 	}
 }

@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_SpaceStations.marsSpaceStation;
+		return ExtraPlanets_SpaceStations.MARS_SPACE_STATION;
 	}
 
 	@Override

@@ -25,7 +25,7 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 
 	private final MapGenCaveJupiter caveGenerator = new MapGenCaveJupiter();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonJupiter(new DungeonConfiguration(ExtraPlanets_Blocks.jupiterBlocks.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.DUNGEON_BRICK), 30,
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonJupiter(new DungeonConfiguration(ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.DUNGEON_BRICK), 30,
 			8, 16, 7, 7, RoomBossJupiter.class, RoomTreasureJupiter.class));
 
 	public ChunkProviderJupiter(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -56,17 +56,17 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.JUPITER_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.JUPITER_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.JUPITER_BLOCKS, (byte) 2);
 	}
 
 	@Override

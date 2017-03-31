@@ -10,12 +10,13 @@ import net.minecraft.item.Item;
 public class BlockFossil extends BlockBasic {
 
 	int randomItem = 0;
+
 	protected BlockFossil(Material material) {
 		super(material);
 	}
 
 	@Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune){
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Items.BONE;
 	}
 }

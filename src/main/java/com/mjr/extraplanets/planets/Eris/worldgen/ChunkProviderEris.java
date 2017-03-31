@@ -25,7 +25,7 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 
 	private final MapGenCaveEris caveGenerator = new MapGenCaveEris();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonEris(new DungeonConfiguration(ExtraPlanets_Blocks.erisBlocks.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonEris(new DungeonConfiguration(ExtraPlanets_Blocks.ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,
 			RoomBossEris.class, RoomTreasureEris.class));
 
 	public ChunkProviderEris(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -56,17 +56,17 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.erisBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ERIS_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.erisBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ERIS_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.erisBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.ERIS_BLOCKS, (byte) 2);
 	}
 
 	@Override

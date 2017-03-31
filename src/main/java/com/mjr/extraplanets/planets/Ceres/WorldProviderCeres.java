@@ -96,7 +96,7 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.ceres.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.CERES.getTierRequirement();
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.ceres;
+		return ExtraPlanets_Planets.CERES;
 	}
 
 	@Override

@@ -549,7 +549,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 
 	@Override
 	public void dropKey() {
-        this.entityDropItem(new ItemStack(ExtraPlanets_Items.T7key, 1, 0), 0.5F);
+        this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_7_KEY, 1, 0), 0.5F);
 	}
 
 	@Override

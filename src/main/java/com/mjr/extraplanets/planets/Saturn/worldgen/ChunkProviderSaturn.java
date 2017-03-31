@@ -26,7 +26,7 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 
 	private final MapGenCaveSaturn caveGenerator = new MapGenCaveSaturn();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.saturnBlocks.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
 
 	public ChunkProviderSaturn(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -56,17 +56,17 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.saturnBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS, (byte) 2);
 	}
 
 	@Override

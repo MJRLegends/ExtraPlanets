@@ -130,36 +130,36 @@ public class ExtraPlanets_Tools {
 	}
 
 	private static void initializeTools() {
-		if (Config.mercury && Config.mercuryItems) {
+		if (Config.MERCURY && Config.ITEMS_MERCURY) {
 			mercuryPickaxe = new BasicPickaxe(mercuryMaterial, "mercuryPickaxe");
 			mercuryAxe = new BasicAxe(mercuryMaterial, "mercuryAxe");
 			mercuryHoe = new BasicHoe(mercuryMaterial, "mercuryHoe");
 			mercuryShovel = new BasicShovel(mercuryMaterial, "mercuryShovel");
 			mercurySword = new BasicSword(mercuryMaterial, "mercurySword");
 		}
-		if (Config.mercury && Config.carbonItems) {
+		if (Config.MERCURY && Config.ITEMS_CARBON) {
 			carbonPickaxe = new BasicPickaxe(carbonMaterial, "carbonPickaxe");
 			carbonAxe = new BasicAxe(carbonMaterial, "carbonAxe");
 			carbonHoe = new BasicHoe(carbonMaterial, "carbonHoe");
 			carbonShovel = new BasicShovel(carbonMaterial, "carbonShovel");
 			carbonSword = new BasicSword(carbonMaterial, "carbonSword");
 		}
-		if (Config.ceres && Config.uraniumItems) {
+		if (Config.CERES && Config.ITEMS_URANIUM) {
 			uraniumPickaxe = new BasicPickaxe(uraniumMaterial, "uraniumPickaxe");
 			uraniumAxe = new BasicAxe(uraniumMaterial, "uraniumAxe");
 			uraniumHoe = new BasicHoe(uraniumMaterial, "uraniumHoe");
 			uraniumShovel = new BasicShovel(uraniumMaterial, "uraniumShovel");
 			uraniumSword = new BasicSword(uraniumMaterial, "uraniumSword");
 		}
-		if (Config.jupiter) {
-			if (Config.palladiumItems) {
+		if (Config.JUPITER) {
+			if (Config.ITEMS_PALLADIUM) {
 				palladiumPickaxe = new BasicPickaxe(palladiumMaterial, "palladiumPickaxe");
 				palladiumAxe = new BasicAxe(palladiumMaterial, "palladiumAxe");
 				palladiumHoe = new BasicHoe(palladiumMaterial, "palladiumHoe");
 				palladiumShovel = new BasicShovel(palladiumMaterial, "palladiumShovel");
 				palladiumSword = new BasicSword(palladiumMaterial, "palladiumSword");
 			}
-			if (Config.redGemItems) {
+			if (Config.ITEMS_GEM_RED) {
 				redGemPickaxe = new BasicPickaxe(redGemMaterial, "redGemPickaxe");
 				redGemAxe = new BasicAxe(redGemMaterial, "redGemAxe");
 				redGemHoe = new BasicHoe(redGemMaterial, "redGemHoe");
@@ -167,22 +167,22 @@ public class ExtraPlanets_Tools {
 				redGemSword = new BasicSword(redGemMaterial, "redGemSword");
 			}
 		}
-		if (Config.saturn && Config.magnesiumItems) {
+		if (Config.SATURN && Config.ITEMS_MAGNESIUM) {
 			magnesiumPickaxe = new BasicPickaxe(magnesiumMaterial, "magnesiumPickaxe");
 			magnesiumAxe = new BasicAxe(magnesiumMaterial, "magnesiumAxe");
 			magnesiumHoe = new BasicHoe(magnesiumMaterial, "magnesiumHoe");
 			magnesiumShovel = new BasicShovel(magnesiumMaterial, "magnesiumShovel");
 			magnesiumSword = new BasicSword(magnesiumMaterial, "magnesiumSword");
 		}
-		if (Config.uranus) {
-			if (Config.palladiumItems) {
+		if (Config.URANUS) {
+			if (Config.ITEMS_PALLADIUM) {
 				crystalPickaxe = new BasicPickaxe(crystalMaterial, "crystalPickaxe");
 				crystalAxe = new BasicAxe(crystalMaterial, "crystalAxe");
 				crystalHoe = new BasicHoe(crystalMaterial, "crystalHoe");
 				crystalShovel = new BasicShovel(crystalMaterial, "crystalShovel");
 				crystalSword = new BasicSword(crystalMaterial, "crystalSword");
 			}
-			if (Config.whiteGemItems) {
+			if (Config.ITEMS_GEM_WHITE) {
 				whiteGemPickaxe = new BasicPickaxe(whiteGemMaterial, "whiteGemPickaxe");
 				whiteGemAxe = new BasicAxe(whiteGemMaterial, "whiteGemAxe");
 				whiteGemHoe = new BasicHoe(whiteGemMaterial, "whiteGemHoe");
@@ -190,15 +190,15 @@ public class ExtraPlanets_Tools {
 				whiteGemSword = new BasicSword(whiteGemMaterial, "whiteGemSword");
 			}
 		}
-		if (Config.neptune) {
-			if (Config.blueGemItems) {
+		if (Config.NEPTUNE) {
+			if (Config.ITEMS_GEM_BLUE) {
 				blueGemPickaxe = new BasicPickaxe(blueGemMaterial, "blueGemPickaxe");
 				blueGemAxe = new BasicAxe(blueGemMaterial, "blueGemAxe");
 				blueGemHoe = new BasicHoe(blueGemMaterial, "blueGemHoe");
 				blueGemShovel = new BasicShovel(blueGemMaterial, "blueGemShovel");
 				blueGemSword = new BasicSword(blueGemMaterial, "blueGemSword");
 			}
-			if (Config.zincItems) {
+			if (Config.ITEMS_ZINC) {
 				zincPickaxe = new BasicPickaxe(zincMaterial, "zincPickaxe");
 				zincAxe = new BasicAxe(zincMaterial, "zincAxe");
 				zincHoe = new BasicHoe(zincMaterial, "zincHoe");
@@ -206,14 +206,14 @@ public class ExtraPlanets_Tools {
 				zincSword = new BasicSword(zincMaterial, "zincSword");
 			}
 		}
-		if (Config.pluto && Config.tungstenItems) {
+		if (Config.PLUTO && Config.ITEMS_TUNGSTEN) {
 			tungstenPickaxe = new BasicPickaxe(tungstenMaterial, "tungstenPickaxe");
 			tungstenAxe = new BasicAxe(tungstenMaterial, "tungstenAxe");
 			tungstenHoe = new BasicHoe(tungstenMaterial, "tungstenHoe");
 			tungstenShovel = new BasicShovel(tungstenMaterial, "tungstenShovel");
 			tungstenSword = new BasicSword(tungstenMaterial, "tungstenSword");
 		}
-		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
+		if (Config.KEPLER22B && Config.ITEMS_KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			blueDiamondPickaxe = new BasicPickaxe(blueDiamondMaterial, "blueDiamondPickaxe");
 			blueDiamondAxe = new BasicAxe(blueDiamondMaterial, "blueDiamondAxe");
 			blueDiamondHoe = new BasicHoe(blueDiamondMaterial, "blueDiamondHoe");
@@ -247,36 +247,36 @@ public class ExtraPlanets_Tools {
 	}
 
 	private static void registerTools() {
-		if (Config.mercury && Config.mercuryItems) {
+		if (Config.MERCURY && Config.ITEMS_MERCURY) {
 			RegisterHelper.registerItem(mercuryPickaxe, "mercuryPickaxe");
 			RegisterHelper.registerItem(mercuryAxe, "mercuryAxe");
 			RegisterHelper.registerItem(mercuryHoe, "mercuryHoe");
 			RegisterHelper.registerItem(mercuryShovel, "mercuryShovel");
 			RegisterHelper.registerItem(mercurySword, "mercurySword");
 		}
-		if (Config.mercury && Config.carbonItems) {
+		if (Config.MERCURY && Config.ITEMS_CARBON) {
 			RegisterHelper.registerItem(carbonPickaxe, "carbonPickaxe");
 			RegisterHelper.registerItem(carbonAxe, "carbonAxe");
 			RegisterHelper.registerItem(carbonHoe, "carbonHoe");
 			RegisterHelper.registerItem(carbonShovel, "carbonShovel");
 			RegisterHelper.registerItem(carbonSword, "carbonSword");
 		}
-		if (Config.ceres && Config.uraniumItems) {
+		if (Config.CERES && Config.ITEMS_URANIUM) {
 			RegisterHelper.registerItem(uraniumPickaxe, "uraniumPickaxe");
 			RegisterHelper.registerItem(uraniumAxe, "uraniumAxe");
 			RegisterHelper.registerItem(uraniumHoe, "uraniumHoe");
 			RegisterHelper.registerItem(uraniumShovel, "uraniumShovel");
 			RegisterHelper.registerItem(uraniumSword, "uraniumSword");
 		}
-		if (Config.jupiter) {
-			if (Config.palladiumItems) {
+		if (Config.JUPITER) {
+			if (Config.ITEMS_PALLADIUM) {
 				RegisterHelper.registerItem(palladiumPickaxe, "palladiumPickaxe");
 				RegisterHelper.registerItem(palladiumAxe, "palladiumAxe");
 				RegisterHelper.registerItem(palladiumHoe, "palladiumHoe");
 				RegisterHelper.registerItem(palladiumShovel, "palladiumShovel");
 				RegisterHelper.registerItem(palladiumSword, "palladiumSword");
 			}
-			if (Config.redGemItems) {
+			if (Config.ITEMS_GEM_RED) {
 				RegisterHelper.registerItem(redGemPickaxe, "redGemPickaxe");
 				RegisterHelper.registerItem(redGemAxe, "redGemAxe");
 				RegisterHelper.registerItem(redGemHoe, "redGemHoe");
@@ -284,22 +284,22 @@ public class ExtraPlanets_Tools {
 				RegisterHelper.registerItem(redGemSword, "redGemSword");
 			}
 		}
-		if (Config.saturn && Config.magnesiumItems) {
+		if (Config.SATURN && Config.ITEMS_MAGNESIUM) {
 			RegisterHelper.registerItem(magnesiumPickaxe, "magnesiumPickaxe");
 			RegisterHelper.registerItem(magnesiumAxe, "magnesiumAxe");
 			RegisterHelper.registerItem(magnesiumHoe, "magnesiumHoe");
 			RegisterHelper.registerItem(magnesiumShovel, "magnesiumShovel");
 			RegisterHelper.registerItem(magnesiumSword, "magnesiumSword");
 		}
-		if (Config.uranus) {
-			if (Config.crystalItems) {
+		if (Config.URANUS) {
+			if (Config.ITEMS_CRYSTAL) {
 				RegisterHelper.registerItem(crystalPickaxe, "crystalPickaxe");
 				RegisterHelper.registerItem(crystalAxe, "crystalAxe");
 				RegisterHelper.registerItem(crystalHoe, "crystalHoe");
 				RegisterHelper.registerItem(crystalShovel, "crystalShovel");
 				RegisterHelper.registerItem(crystalSword, "crystalSword");
 			}
-			if (Config.whiteGemItems) {
+			if (Config.ITEMS_GEM_WHITE) {
 				RegisterHelper.registerItem(whiteGemPickaxe, "whiteGemPickaxe");
 				RegisterHelper.registerItem(whiteGemAxe, "whiteGemAxe");
 				RegisterHelper.registerItem(whiteGemHoe, "whiteGemHoe");
@@ -307,15 +307,15 @@ public class ExtraPlanets_Tools {
 				RegisterHelper.registerItem(whiteGemSword, "whiteGemSword");
 			}
 		}
-		if (Config.neptune) {
-			if (Config.blueGemItems) {
+		if (Config.NEPTUNE) {
+			if (Config.ITEMS_GEM_BLUE) {
 				RegisterHelper.registerItem(blueGemPickaxe, "blueGemPickaxe");
 				RegisterHelper.registerItem(blueGemAxe, "blueGemAxe");
 				RegisterHelper.registerItem(blueGemHoe, "blueGemHoe");
 				RegisterHelper.registerItem(blueGemShovel, "blueGemShovel");
 				RegisterHelper.registerItem(blueGemSword, "blueGemSword");
 			}
-			if (Config.zincItems) {
+			if (Config.ITEMS_ZINC) {
 				RegisterHelper.registerItem(zincPickaxe, "zincPickaxe");
 				RegisterHelper.registerItem(zincAxe, "zincAxe");
 				RegisterHelper.registerItem(zincHoe, "zincHoe");
@@ -323,14 +323,14 @@ public class ExtraPlanets_Tools {
 				RegisterHelper.registerItem(zincSword, "zincSword");
 			}
 		}
-		if (Config.pluto && Config.tungstenItems) {
+		if (Config.PLUTO && Config.ITEMS_TUNGSTEN) {
 			RegisterHelper.registerItem(tungstenPickaxe, "tungstenPickaxe");
 			RegisterHelper.registerItem(tungstenAxe, "tungstenAxe");
 			RegisterHelper.registerItem(tungstenHoe, "tungstenHoe");
 			RegisterHelper.registerItem(tungstenShovel, "tungstenShovel");
 			RegisterHelper.registerItem(tungstenSword, "tungstenSword");
 		}
-		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
+		if (Config.KEPLER22B && Config.ITEMS_KEPLER22B& Config.KEPLER_SOLAR_SYSTEMS) {
 			RegisterHelper.registerItem(blueDiamondPickaxe, "blueDiamondPickaxe");
 			RegisterHelper.registerItem(blueDiamondAxe, "blueDiamondAxe");
 			RegisterHelper.registerItem(blueDiamondHoe, "blueDiamondHoe");

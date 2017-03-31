@@ -22,12 +22,12 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorNeptune() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 5, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 4, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 8, 3, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.zincGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 6, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
-		this.frozenNitrogenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.frozenNitrogen, 8, 0, true, ExtraPlanets_Blocks.neptuneBlocks, 0);
-		this.blueGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.neptuneBlocks, 4, 9, true, ExtraPlanets_Blocks.neptuneBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 2);
+		this.zincGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 2);
+		this.frozenNitrogenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FROZEN_NITROGEN, 8, 0, true, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 0);
+		this.blueGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 4, 9, true, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 2);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

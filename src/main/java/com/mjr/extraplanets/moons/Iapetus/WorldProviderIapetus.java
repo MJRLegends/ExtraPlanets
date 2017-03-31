@@ -120,7 +120,7 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.iapetus.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.IAPETUS.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.iapetus;
+		return ExtraPlanets_Moons.IAPETUS;
 	}
 
 	@Override

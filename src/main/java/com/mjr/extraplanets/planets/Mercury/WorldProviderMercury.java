@@ -112,7 +112,7 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.mercury;
+		return ExtraPlanets_Planets.MERCURY;
 	}
 
 	@Override

@@ -96,7 +96,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.uranus.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.URANUS.getTierRequirement();
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.uranus;
+		return ExtraPlanets_Planets.URANUS;
 	}
 
 	@Override

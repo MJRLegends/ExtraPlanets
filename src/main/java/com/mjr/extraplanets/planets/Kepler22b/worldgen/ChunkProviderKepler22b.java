@@ -128,7 +128,7 @@ public class ChunkProviderKepler22b extends ChunkProviderOverworld {
 
 							for (int l2 = 0; l2 < 4; ++l2) {
 								if ((lvt_45_1_ += d16) > 0.0D) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1));
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1));
 								} else if (i2 * 8 + j2 < 63) {
 									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, Blocks.WATER.getDefaultState());
 								}

@@ -77,7 +77,7 @@ public class RoomBossPluto extends RoomBoss {
 		int spawnerX = this.sizeX / 2;
 		int spawnerY = 1;
 		int spawnerZ = this.sizeZ / 2;
-		this.setBlockState(worldIn, ExtraPlanets_Blocks.plutoSpawner.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
+		this.setBlockState(worldIn, ExtraPlanets_Blocks.PLUTO_SPAWNER.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
 		BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
 		TileEntityDungeonSpawnerPluto spawner = (TileEntityDungeonSpawnerPluto) worldIn.getTileEntity(blockpos);
 

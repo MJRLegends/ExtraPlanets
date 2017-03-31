@@ -16,10 +16,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class ItemAppleIron extends ItemFood
-{
-	public ItemAppleIron(int p_i45341_1_, float p_i45341_2_, boolean p_i45341_3_)
-	{
+public class ItemAppleIron extends ItemFood {
+	public ItemAppleIron(int p_i45341_1_, float p_i45341_2_, boolean p_i45341_3_) {
 		super(p_i45341_1_, p_i45341_2_, p_i45341_3_);
 		this.setHasSubtypes(true);
 		this.setAlwaysEdible();
@@ -29,8 +27,7 @@ public class ItemAppleIron extends ItemFood
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public boolean hasEffect(ItemStack p_77636_1_)
-	{
+	public boolean hasEffect(ItemStack p_77636_1_) {
 		return p_77636_1_.getItemDamage() > 0;
 	}
 
@@ -38,16 +35,13 @@ public class ItemAppleIron extends ItemFood
 	 * Return an item rarity from EnumRarity
 	 */
 	@Override
-	public EnumRarity getRarity(ItemStack p_77613_1_)
-	{
+	public EnumRarity getRarity(ItemStack p_77613_1_) {
 		return p_77613_1_.getItemDamage() == 0 ? EnumRarity.RARE : EnumRarity.EPIC;
 	}
 
 	@Override
-	protected void onFoodEaten(ItemStack p_77849_1_, World p_77849_2_, EntityPlayer p_77849_3_)
-	{
-		if (!p_77849_2_.isRemote)
-		{
+	protected void onFoodEaten(ItemStack p_77849_1_, World p_77849_2_, EntityPlayer p_77849_3_) {
+		if (!p_77849_2_.isRemote) {
 			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 250, 0));
 			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 400, 0));
 			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 600, 0));
@@ -56,10 +50,8 @@ public class ItemAppleIron extends ItemFood
 
 		}
 
-		if (p_77849_1_.getItemDamage() > 0)
-		{
-			if (!p_77849_2_.isRemote)
-			{
+		if (p_77849_1_.getItemDamage() > 0) {
+			if (!p_77849_2_.isRemote) {
 				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 350, 0));
 				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 600, 0));
 				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 700, 0));
@@ -67,9 +59,7 @@ public class ItemAppleIron extends ItemFood
 				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 240, 2));
 				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.HASTE, 300, 1));
 			}
-		}
-		else
-		{
+		} else {
 			super.onFoodEaten(p_77849_1_, p_77849_2_, p_77849_3_);
 		}
 	}
@@ -79,8 +69,7 @@ public class ItemAppleIron extends ItemFood
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubItems(Item p_150895_1_, CreativeTabs p_150895_2_, List p_150895_3_)
-	{
+	public void getSubItems(Item p_150895_1_, CreativeTabs p_150895_2_, List p_150895_3_) {
 		p_150895_3_.add(new ItemStack(p_150895_1_, 1, 0));
 		p_150895_3_.add(new ItemStack(p_150895_1_, 1, 1));
 	}

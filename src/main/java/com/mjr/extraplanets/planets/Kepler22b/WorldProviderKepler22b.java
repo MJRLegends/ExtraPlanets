@@ -97,7 +97,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.kepler22b.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.KEPLER22B.getTierRequirement();
 	}
 
 	@Override
@@ -112,7 +112,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.kepler22b;
+		return ExtraPlanets_Planets.KEPLER22B;
 	}
 
 	@Override

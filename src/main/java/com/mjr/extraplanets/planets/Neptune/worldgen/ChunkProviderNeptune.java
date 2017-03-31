@@ -25,7 +25,7 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 
 	private final MapGenCaveNeptune caveGenerator = new MapGenCaveNeptune();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(new DungeonConfiguration(ExtraPlanets_Blocks.neptuneBlocks.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.DUNGEON_BRICK), 30,
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(new DungeonConfiguration(ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.DUNGEON_BRICK), 30,
 			8, 16, 7, 7, RoomBossNeptune.class, RoomTreasureNeptune.class));
 
 	public ChunkProviderNeptune(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -56,17 +56,17 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, (byte) 2);
 	}
 
 	@Override

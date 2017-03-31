@@ -19,7 +19,7 @@ public class ExtraPlanets_SolarSystems {
 	}
 
 	private static void initializeSolarSystems() {
-		if (Config.keplerSolarSystems) {
+		if (Config.KEPLER_SOLAR_SYSTEMS) {
 			kepler22 = new SolarSystem("kepler22", "milkyWay").setMapPosition(new Vector3(0.60F, 0.0F, 0.30F));
 			Star starSol = (Star) new Star("kepler22").setParentSolarSystem(kepler22).setTierRequired(-1);
 			starSol.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
@@ -43,7 +43,7 @@ public class ExtraPlanets_SolarSystems {
 	}
 
 	private static void registerSolarSystems() {
-		if (Config.keplerSolarSystems) {
+		if (Config.KEPLER_SOLAR_SYSTEMS) {
 			GalaxyRegistry.registerSolarSystem(kepler22);
 			GalaxyRegistry.registerSolarSystem(kepler47);
 			GalaxyRegistry.registerSolarSystem(kepler62);

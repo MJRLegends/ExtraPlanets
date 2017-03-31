@@ -18,11 +18,11 @@ public class BiomeDecoratorDeimos extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorDeimos() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 4, 5, true, ExtraPlanets_Blocks.deimosBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 4, 4, true, ExtraPlanets_Blocks.deimosBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 8, 3, true, ExtraPlanets_Blocks.deimosBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosGravel, 12, 0, true, ExtraPlanets_Blocks.deimosBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.deimosBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DEIMOS_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.DEIMOS_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DEIMOS_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.DEIMOS_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DEIMOS_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.DEIMOS_BLOCKS, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DEIMOS_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.DEIMOS_BLOCKS, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 1, 0, true, ExtraPlanets_Blocks.DEIMOS_BLOCKS, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);

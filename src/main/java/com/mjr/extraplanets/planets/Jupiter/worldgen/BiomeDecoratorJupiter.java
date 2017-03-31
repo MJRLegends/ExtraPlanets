@@ -31,13 +31,13 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorJupiter() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 5, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 4, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 8, 3, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
-		this.palladiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 6, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
-		this.nickelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 7, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterGravel, 12, 0, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
-		this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 10, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		this.palladiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		this.nickelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 7, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 10, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -72,7 +72,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.jupiterBlocks);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.JUPITER_BLOCKS);
 			}
 		}
 

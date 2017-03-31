@@ -21,12 +21,12 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorPluto() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 4, 5, true, ExtraPlanets_Blocks.plutoBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 4, 4, true, ExtraPlanets_Blocks.plutoBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 8, 3, true, ExtraPlanets_Blocks.plutoBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoGravel, 12, 0, true, ExtraPlanets_Blocks.plutoBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.plutoBlocks, 1);
-		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.plutoBlocks, 4, 6, true, ExtraPlanets_Blocks.plutoBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.PLUTO_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.PLUTO_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.PLUTO_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.PLUTO_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 1);
+		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.PLUTO_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 2);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

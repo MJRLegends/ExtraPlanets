@@ -96,7 +96,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.pluto.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.PLUTO.getTierRequirement();
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.pluto;
+		return ExtraPlanets_Planets.PLUTO;
 	}
 
 	@Override

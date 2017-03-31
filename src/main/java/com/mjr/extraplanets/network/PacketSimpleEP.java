@@ -6,11 +6,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
-import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
-import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
-import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
-
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
@@ -23,6 +18,9 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 
 @SuppressWarnings("rawtypes")
 public class PacketSimpleEP extends PacketBase implements Packet {
@@ -105,13 +103,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	@Override
 	public void handleClientSide(EntityPlayer player) {
 		EntityPlayerSP playerBaseClient = null;
-        IStatsClientCapability stats = null;
+		IStatsClientCapability stats = null;
 
-        if (player instanceof EntityPlayerSP)
-        {
-            playerBaseClient = (EntityPlayerSP) player;
-            stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
-        }
+		if (player instanceof EntityPlayerSP) {
+			playerBaseClient = (EntityPlayerSP) player;
+			stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
+		}
 
 		switch (this.type) {
 		case C_UPDATE_SOLAR_RADIATION_LEVEL:
@@ -124,7 +121,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 	@Override
 	public void handleServerSide(EntityPlayer player) {
-		
+
 	}
 
 	@Override

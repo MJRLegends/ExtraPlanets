@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.armor;
+package com.mjr.extraplanets.items.armor;
 
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import net.minecraft.entity.Entity;
@@ -22,13 +22,12 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	}
 
 	@Override
-    public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type){
-		if (stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitHelmet || stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitChest
-				|| stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitBoots) {
+	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
+		if (stack.getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_HELMET || stack.getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_CHEST || stack.getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-		} else if (stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitLegings) {
+		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
-		}else if (stack.getItem() == ExtraPlanets_Armor.tier2SpaceSuitGravityBoots) {
+		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_3.png";
 		} else {
 			return null;
@@ -42,19 +41,19 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	public int gravityOverrideIfLow(EntityPlayer p) {
-		for(int i = 0; i < 4; i++)
-			if(p.inventory.armorInventory[i] != null)
-				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.tier2SpaceSuitGravityBoots)
+		for (int i = 0; i < 4; i++)
+			if (p.inventory.armorInventory[i] != null)
+				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS)
 					return 55;
 		return 0;
 	}
 
 	@Override
 	public int gravityOverrideIfHigh(EntityPlayer p) {
-		for(int i = 0; i < 4; i++)
-			if(p.inventory.armorInventory[i] != null)
-				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.tier2SpaceSuitGravityBoots)
-			return 75;
+		for (int i = 0; i < 4; i++)
+			if (p.inventory.armorInventory[i] != null)
+				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS)
+					return 75;
 		return 0;
 	}
 }

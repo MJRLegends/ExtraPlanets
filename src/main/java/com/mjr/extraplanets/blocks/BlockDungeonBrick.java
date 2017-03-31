@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class BlockDungeonBrick extends Block{
+public class BlockDungeonBrick extends Block {
 
 	protected BlockDungeonBrick(Material material) {
 		super(material);
@@ -18,14 +18,12 @@ public class BlockDungeonBrick extends Block{
 	}
 
 	@Override
-	 public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion)
-	{
+	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
 		return 40.0F;
 	}
 
 	@Override
-    public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos)
-	{
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
 		return 4.0F;
 	}
 }

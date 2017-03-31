@@ -96,7 +96,7 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.neptune.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.NEPTUNE.getTierRequirement();
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.neptune;
+		return ExtraPlanets_Planets.NEPTUNE;
 	}
 
 	@Override

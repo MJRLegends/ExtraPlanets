@@ -20,7 +20,7 @@ public class WorldProviderSaturnOrbit extends WorldProviderOverworldOrbit
 	@Override
 	public CelestialBody getCelestialBody()
 	{
-		return ExtraPlanets_SpaceStations.saturnSpaceStation;
+		return ExtraPlanets_SpaceStations.SATURN_SPACE_STATION;
 	}
 
 	@Override
@@ -181,7 +181,7 @@ public class WorldProviderSaturnOrbit extends WorldProviderOverworldOrbit
 	@Override
 	public boolean canSpaceshipTierPass(int tier)
 	{
-		return tier > ExtraPlanets_Planets.saturn.getTierRequirement();
+		return tier > ExtraPlanets_Planets.SATURN.getTierRequirement();
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.armor;
+package com.mjr.extraplanets.items.armor;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -8,23 +8,22 @@ import net.minecraft.item.ItemStack;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class MagnesiumArmor extends ItemArmor{
+public class BlueDiamondArmor extends ItemArmor {
 	public String name;
 
-	public MagnesiumArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
+	public BlueDiamondArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
 		super(material, 0, placement);
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
+
 	@Override
-	    public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type){
-		if(stack.getItem() == ExtraPlanets_Armor.magnesiumHelmet || stack.getItem() == ExtraPlanets_Armor.magnesiumChest || stack.getItem() == ExtraPlanets_Armor.magnesiumBoots){
+	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
+		if (stack.getItem() == ExtraPlanets_Armor.BLUE_DIAMOND_HELMET || stack.getItem() == ExtraPlanets_Armor.BLUE_DIAMOND_CHEST || stack.getItem() == ExtraPlanets_Armor.BLUE_DIAMOND_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-		}
-		else if(stack.getItem() == ExtraPlanets_Armor.magnesiumLegings){
+		} else if (stack.getItem() == ExtraPlanets_Armor.BLUE_DIAMOND_LEGINGS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
-		}
-		else{
+		} else {
 			return null;
 		}
 	}

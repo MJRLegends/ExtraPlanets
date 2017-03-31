@@ -53,127 +53,126 @@ import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
 import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Items {
-	public static Item tier4Rocket;
-	public static Item tier5Rocket;
-	public static Item tier6Rocket;
-	public static Item tier7Rocket;
-	public static Item tier8Rocket;
-	public static Item tier9Rocket;
-	public static Item tier10Rocket;
+	public static Item TIER_4_ROCKET;
+	public static Item TIER_5_ROCKET;
+	public static Item TIER_6_ROCKET;
+	public static Item TIER_7_ROCKET;
+	public static Item TIER_8_ROCKET;
+	public static Item TIER_9_ROCKET;
+	public static Item TIER_10_ROCKET;
 
-	public static Item schematicTier4;
-	public static Item schematicTier5;
-	public static Item schematicTier6;
-	public static Item schematicTier7;
-	public static Item schematicTier8;
-	public static Item schematicTier9;
-	public static Item schematicTier10;
+	public static Item TIER_4_SCHEMATIC;
+	public static Item TIER_5_SCHEMATIC;
+	public static Item TIER_6_SCHEMATIC;
+	public static Item TIER_7_SCHEMATIC;
+	public static Item TIER_8_SCHEMATIC;
+	public static Item TIER_9_SCHEMATIC;
+	public static Item TIER_10_SCHEMATIC;
 
-	public static Item noseConeTier4;
-	public static Item noseConeTier5;
-	public static Item noseConeTier6;
-	public static Item noseConeTier7;
-	public static Item noseConeTier8;
-	public static Item noseConeTier9;
-	public static Item noseConeTier10;
+	public static Item TIER_4_NOSE_CONE;
+	public static Item TIER_5_NOSE_CONE;
+	public static Item TIER_6_NOSE_CONE;
+	public static Item TIER_7_NOSE_CONE;
+	public static Item TIER_8_NOSE_CONE;
+	public static Item TIER_9_NOSE_CONE;
+	public static Item TIER_10_NOSE_CONE;
 
-	public static Item tier4Items;
-	public static Item tier5Items;
-	public static Item tier6Items;
-	public static Item tier7Items;
-	public static Item tier8Items;
-	public static Item tier9Items;
-	public static Item tier10Items;
-	public static Item tier11Items;
+	public static Item TIER_4_ITEMS;
+	public static Item TIER_5_ITEMS;
+	public static Item TIER_6_ITEMS;
+	public static Item TIER_7_ITEMS;
+	public static Item TIER_8_ITEMS;
+	public static Item TIER_9_ITEMS;
+	public static Item TIER_10_ITEMS;
+	public static Item TIER_11_ITEMS;
 
-	public static Item T4key;
-	public static Item T5key;
-	public static Item T6key;
-	public static Item T7key;
-	public static Item T8key;
-	public static Item T9key;
-	public static Item T10key;
+	public static Item TIER_4_KEY;
+	public static Item TIER_5_KEY;
+	public static Item TIER_6_KEY;
+	public static Item TIER_7_KEY;
+	public static Item TIER_8_KEY;
+	public static Item TIER_9_KEY;
+	public static Item TIER_10_KEY;
 
-	public static Item nickelBattery;
-	public static Item zincBattery;
-	public static Item mercuryBattery;
-	public static Item advancedBattery;
-	public static Item ultimateBattery;
+	public static Item BATTERY_NICKEL;
+	public static Item BATTERY_ZINC;
+	public static Item BATTERY_MERCURY;
+	public static Item BATTERY_ADVANCED;
+	public static Item BATTERY_ULTIMATE;
 
-	public static Item oxygenTankVeryHeavy;
-	public static Item oxygenTankExtremelyHeavy;
+	public static Item OXYGEN_TANK_VERY_HEAVY;
+	public static Item OXYGEN_TANK_EXTREMELY_HEAVY;
 
-	public static Item glowstone_bucket;
-	public static Item magma_bucket;
-	public static Item nitrogen_bucket;
-	public static Item frozen_water_bucket;
-	public static Item salt_bucket;
-	public static Item clean_water_bucket;
-	public static Item infected_water_bucket;
-	public static Item radioactive_bucket;
-	public static Item methane_bucket;
-	public static Item nitrogen_ice_bucket;
+	public static Item BUCKET_GLOWSTONE;
+	public static Item BUCKET_MAGMA;
+	public static Item BUCKET_NITROGEN;
+	public static Item BUCKET_FROZEN_WATER;
+	public static Item BUCKET_SALT;
+	public static Item BUCKET_CLEAN_WATER;
+	public static Item BUCKET_INFECTED_WATER;
+	public static Item BUCKET_RADIOACTIVE_WATER;
+	public static Item BUCKET_METHANE;
+	public static Item BUCKET_NITROGEN_ICE;
 
-	public static Item cannedFood;
-	public static Item diamondApple;
-	public static Item ironApple;
-	public static Item bodyParts;
+	public static Item CANNED_FOOD;
+	public static Item DIAMOND_APPLE;
+	public static Item IRON_APPLE;
 
-	public static Item ingotUranium;
-	public static Item compressedMercury;
-	public static Item ingotMercury;
-	public static Item ingotLead;
+	public static Item COMPRESSED_MERCURY;
+	public static Item INGOT_URANIUM;
+	public static Item INGOT_MERCURY;
+	public static Item INGOT_LEAD;
 
-	public static Item cloth;
-	public static Item gravityController;
+	public static Item CLOTH;
+	public static Item GRAVITY_CONTROLLER;
 
-	public static Item tier1PressureLayer;
-	public static Item tier2PressureLayer;
-	public static Item tier3PressureLayer;
-	public static Item tier4PressureLayer;
+	public static Item TIER_1_PRESSURE_LAYER;
+	public static Item TIER_2_PRESSURE_LAYER;
+	public static Item TIER_3_PRESSURE_LAYER;
+	public static Item TIER_4_PRESSURE_LAYER;
 
-	public static Item tier1RadiationLayer;
-	public static Item tier2RadiationLayer;
-	public static Item tier3RadiationLayer;
-	public static Item tier4RadiationLayer;
+	public static Item TIER_1_RADIATION_LAYER;
+	public static Item TIER_2_RADIATION_LAYER;
+	public static Item TIER_3_RADIATION_LAYER;
+	public static Item TIER_4_RADIATION_LAYER;
 
-	public static Item tier1ArmorLayer;
-	public static Item tier2ArmorLayer;
-	public static Item tier3ArmorLayer;
-	public static Item tier4ArmorLayer;
+	public static Item TIER_1_ARMOR_LAYER;
+	public static Item TIER_2_ARMOR_LAYER;
+	public static Item TIER_3_ARMOR_LAYER;
+	public static Item TIER_4_ARMOR_LAYER;
 
-	public static Item thermalCloth;
+	public static Item THERMAL_CLOTH;
 
-	public static Item tier3ThermalPadding;
-	public static Item tier4ThermalPadding;
-	public static Item tier5ThermalPadding;
+	public static Item TIER_3_THERMAL_PADDING;
+	public static Item TIER_4_THERMAL_PADDING;
+	public static Item TIER_5_THERMAL_PADDING;
 
-	public static Item tier1UnPreparedSpaceSuitHelmet;
-	public static Item tier1UnPreparedSpaceSuitChest;
-	public static Item tier1UnPreparedSpaceSuitLegings;
-	public static Item tier1UnPreparedSpaceSuitBoots;
+	public static Item TIER_1_UNPREPARED_SPACE_SUIT_HELMET;
+	public static Item TIER_1_UNPREPARED_SPACE_SUIT_CHEST;
+	public static Item TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS;
+	public static Item TIER_1_UNPREPARED_SPACE_SUIT_BOOTS;
 
-	public static Item tier2UnPreparedSpaceSuitHelmet;
-	public static Item tier2UnPreparedSpaceSuitChest;
-	public static Item tier2UnPreparedSpaceSuitLegings;
-	public static Item tier2UnPreparedSpaceSuitBoots;
+	public static Item TIER_2_UNPREPARED_SPACE_SUIT_HELMET;
+	public static Item TIER_2_UNPREPARED_SPACE_SUIT_CHEST;
+	public static Item TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS;
+	public static Item TIER_2_UNPREPARED_SPACE_SUIT_BOOTS;
 
-	public static Item tier3UnPreparedSpaceSuitHelmet;
-	public static Item tier3UnPreparedSpaceSuitChest;
-	public static Item tier3UnPreparedSpaceSuitLegings;
-	public static Item tier3UnPreparedSpaceSuitBoots;
+	public static Item TIER_3_UNPREPARED_SPACE_SUIT_HELMET;
+	public static Item TIER_3_UNPREPARED_SPACE_SUIT_CHEST;
+	public static Item TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS;
+	public static Item TIER_3_UNPREPARED_SPACE_SUIT_BOOTS;
 
-	public static Item tier4UnPreparedSpaceSuitHelmet;
-	public static Item tier4UnPreparedSpaceSuitChest;
-	public static Item tier4UnPreparedSpaceSuitLegings;
-	public static Item tier4UnPreparedSpaceSuitBoots;
+	public static Item TIER_4_UNPREPARED_SPACE_SUIT_HELMET;
+	public static Item TIER_4_UNPREPARED_SPACE_SUIT_CHEST;
+	public static Item TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS;
+	public static Item TIER_4_UNPREPARED_SPACE_SUIT_BOOTS;
 
-	public static Item wafers;
-	public static Item iodideSalt;
-	public static Item potassiumIodide;
-	public static Item potassium;
-	public static Item potash;
-	public static Item anti_radiation;
+	public static Item WAFERS;
+	public static Item IODIDE_SALT;
+	public static Item POTASSIUM_IODIDE;
+	public static Item POTASSIUM;
+	public static Item POTASH_SHARDS;
+	public static Item ANTI_RADIATION;
 
 	public static void init() {
 		initializeItems();
@@ -184,377 +183,376 @@ public class ExtraPlanets_Items {
 	}
 
 	private static void initializeItems() {
-		if (Config.mercury) {
-			if (Config.batteries)
-				mercuryBattery = new ItemBasicBattery("mercuryBattery", 85000f, 2);
-			ingotMercury = new ItemBasicItem("ingotMercury");
-			compressedMercury = new ItemMercuryCompressed("compressedMercury");
-			tier4Rocket = new Tier4Rocket("itemTier4Rocket");
-			schematicTier4 = new SchematicTier4("schematicTier4");
-			noseConeTier4 = new Tier4NoseCone("noseConeTier4");
-			tier4Items = new ItemTier4Items("tier4Items");
-			T4key = new ItemKeyT4("T4key");
+		if (Config.MERCURY) {
+			if (Config.BATTERIES)
+				BATTERY_MERCURY = new ItemBasicBattery("mercuryBattery", 85000f, 2);
+			INGOT_MERCURY = new ItemBasicItem("ingotMercury");
+			COMPRESSED_MERCURY = new ItemMercuryCompressed("compressedMercury");
+			TIER_4_ROCKET = new Tier4Rocket("itemTier4Rocket");
+			TIER_4_SCHEMATIC = new SchematicTier4("schematicTier4");
+			TIER_4_NOSE_CONE = new Tier4NoseCone("noseConeTier4");
+			TIER_4_ITEMS = new ItemTier4Items("tier4Items");
+			TIER_4_KEY = new ItemKeyT4("T4key");
 		}
-		if (Config.ceres) {
-			ingotUranium = new ItemBasicItem("ingotUranium");
-			salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
+		if (Config.CERES) {
+			INGOT_URANIUM = new ItemBasicItem("ingotUranium");
+			BUCKET_SALT = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
 		}
-		if (Config.jupiter) {
-			if (Config.batteries)
-				nickelBattery = new ItemBasicBattery("nickelBattery", 45000f, 2);
-			magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
-			tier5Rocket = new Tier5Rocket("itemTier5Rocket");
-			schematicTier5 = new SchematicTier5("schematicTier5");
-			noseConeTier5 = new Tier5NoseCone("noseConeTier5");
-			tier5Items = new ItemTier5Items("tier5Items");
-			T5key = new ItemKeyT5("T5key");
+		if (Config.JUPITER) {
+			if (Config.BATTERIES)
+				BATTERY_NICKEL = new ItemBasicBattery("nickelBattery", 45000f, 2);
+			BUCKET_MAGMA = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
+			TIER_5_ROCKET = new Tier5Rocket("itemTier5Rocket");
+			TIER_5_SCHEMATIC = new SchematicTier5("schematicTier5");
+			TIER_5_NOSE_CONE = new Tier5NoseCone("noseConeTier5");
+			TIER_5_ITEMS = new ItemTier5Items("tier5Items");
+			TIER_5_KEY = new ItemKeyT5("T5key");
 		}
-		if (Config.saturn) {
-			glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
-			tier6Rocket = new Tier6Rocket("itemTier6Rocket");
-			schematicTier6 = new SchematicTier6("schematicTier6");
-			noseConeTier6 = new Tier6NoseCone("noseConeTier6");
-			tier6Items = new ItemTier6Items("tier6Items");
-			T6key = new ItemKeyT6("T6key");
+		if (Config.SATURN) {
+			BUCKET_GLOWSTONE = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
+			TIER_6_ROCKET = new Tier6Rocket("itemTier6Rocket");
+			TIER_6_SCHEMATIC = new SchematicTier6("schematicTier6");
+			TIER_6_NOSE_CONE = new Tier6NoseCone("noseConeTier6");
+			TIER_6_ITEMS = new ItemTier6Items("tier6Items");
+			TIER_6_KEY = new ItemKeyT6("T6key");
 		}
-		if (Config.uranus) {
-			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
-			tier7Rocket = new Tier7Rocket("itemTier7Rocket");
-			schematicTier7 = new SchematicTier7("schematicTier7");
-			noseConeTier7 = new Tier7NoseCone("noseConeTier7");
-			tier7Items = new ItemTier7Items("tier7Items");
-			T7key = new ItemKeyT7("T7key");
+		if (Config.URANUS) {
+			BUCKET_FROZEN_WATER = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
+			TIER_7_ROCKET = new Tier7Rocket("itemTier7Rocket");
+			TIER_7_SCHEMATIC = new SchematicTier7("schematicTier7");
+			TIER_7_NOSE_CONE = new Tier7NoseCone("noseConeTier7");
+			TIER_7_ITEMS = new ItemTier7Items("tier7Items");
+			TIER_7_KEY = new ItemKeyT7("T7key");
 		}
-		if (Config.neptune) {
-			if (Config.batteries)
-				zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
-			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
-			tier8Rocket = new Tier8Rocket("itemTier8Rocket");
-			schematicTier8 = new SchematicTier8("schematicTier8");
-			noseConeTier8 = new Tier8NoseCone("noseConeTier8");
-			tier8Items = new ItemTier8Items("tier8Items");
-			T8key = new ItemKeyT8("T8key");
+		if (Config.NEPTUNE) {
+			if (Config.BATTERIES)
+				BATTERY_ZINC = new ItemBasicBattery("zincBattery", 125000f, 2);
+			BUCKET_NITROGEN = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
+			TIER_8_ROCKET = new Tier8Rocket("itemTier8Rocket");
+			TIER_8_SCHEMATIC = new SchematicTier8("schematicTier8");
+			TIER_8_NOSE_CONE = new Tier8NoseCone("noseConeTier8");
+			TIER_8_ITEMS = new ItemTier8Items("tier8Items");
+			TIER_8_KEY = new ItemKeyT8("T8key");
 		}
-		if (Config.pluto) {
-			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
-			schematicTier9 = new SchematicTier9("schematicTier9");
-			noseConeTier9 = new Tier9NoseCone("noseConeTier9");
-			tier9Items = new ItemTier9Items("tier9Items");
-			T9key = new ItemKeyT9("T9key");
+		if (Config.PLUTO) {
+			TIER_9_ROCKET = new Tier9Rocket("itemTier9Rocket");
+			TIER_9_SCHEMATIC = new SchematicTier9("schematicTier9");
+			TIER_9_NOSE_CONE = new Tier9NoseCone("noseConeTier9");
+			TIER_9_ITEMS = new ItemTier9Items("tier9Items");
+			TIER_9_KEY = new ItemKeyT9("T9key");
 		}
-		if (Config.eris) {
-			tier10Rocket = new Tier10Rocket("itemTier10Rocket");
-			schematicTier10 = new SchematicTier10("schematicTier10");
-			noseConeTier10 = new Tier10NoseCone("noseConeTier10");
-			tier10Items = new ItemTier10Items("tier10Items");
-			T10key = new ItemKeyT10("T10key");
+		if (Config.ERIS) {
+			TIER_10_ROCKET = new Tier10Rocket("itemTier10Rocket");
+			TIER_10_SCHEMATIC = new SchematicTier10("schematicTier10");
+			TIER_10_NOSE_CONE = new Tier10NoseCone("noseConeTier10");
+			TIER_10_ITEMS = new ItemTier10Items("tier10Items");
+			TIER_10_KEY = new ItemKeyT10("T10key");
 		}
-		if (Config.kepler22b && Config.keplerSolarSystems) {
-			tier11Items = new ItemTier11Items("tier11Items");
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			TIER_11_ITEMS = new ItemTier11Items("tier11Items");
 		}
-		if (Config.customApples) {
-			diamondApple = new ItemAppleDiamond(8, 2.2F, false);
-			ironApple = new ItemAppleIron(4, 2.2F, false);
+		if (Config.CUSTOM_APPLES) {
+			DIAMOND_APPLE = new ItemAppleDiamond(8, 2.2F, false);
+			IRON_APPLE = new ItemAppleIron(4, 2.2F, false);
 		}
-		if (Config.thermalPaddings) {
-			thermalCloth = new ItemThermalCloth("thermalCloth");
-			tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
-			tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
-			tier5ThermalPadding = new ItemTier5ThermalPadding("tier5ThermalPadding");
+		if (Config.THERMAL_PADDINGS) {
+			THERMAL_CLOTH = new ItemThermalCloth("thermalCloth");
+			TIER_3_THERMAL_PADDING = new ItemTier3ThermalPadding("tier3ThermalPadding");
+			TIER_4_THERMAL_PADDING = new ItemTier4ThermalPadding("tier4ThermalPadding");
+			TIER_5_THERMAL_PADDING = new ItemTier5ThermalPadding("tier5ThermalPadding");
 		}
-		if (Config.batteries) {
-			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
-			ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
+		if (Config.BATTERIES) {
+			BATTERY_ADVANCED = new ItemBasicBattery("advancedBattery", 50000f, 2);
+			BATTERY_ULTIMATE = new ItemBasicBattery("ultimateBattery", 200000f, 2);
 		}
-		if (Config.oxygenTanks) {
-			oxygenTankVeryHeavy = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
-			oxygenTankExtremelyHeavy = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
+		if (Config.OXYGEN_TANKS) {
+			OXYGEN_TANK_VERY_HEAVY = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
+			OXYGEN_TANK_EXTREMELY_HEAVY = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
 		}
-		if (Config.pressure || Config.radiation) {
-			tier1PressureLayer = new ItemBasicItem("tier1PressureLayer");
-			tier2PressureLayer = new ItemBasicItem("tier2PressureLayer");
-			tier3PressureLayer = new ItemBasicItem("tier3PressureLayer");
-			tier4PressureLayer = new ItemBasicItem("tier4PressureLayer");
+		if (Config.PRESSURE || Config.RADIATION) {
+			TIER_1_PRESSURE_LAYER = new ItemBasicItem("tier1PressureLayer");
+			TIER_2_PRESSURE_LAYER = new ItemBasicItem("tier2PressureLayer");
+			TIER_3_PRESSURE_LAYER = new ItemBasicItem("tier3PressureLayer");
+			TIER_4_PRESSURE_LAYER = new ItemBasicItem("tier4PressureLayer");
 
-			tier1RadiationLayer = new ItemBasicItem("tier1RadiationLayer");
-			tier2RadiationLayer = new ItemBasicItem("tier2RadiationLayer");
-			tier3RadiationLayer = new ItemBasicItem("tier3RadiationLayer");
-			tier4RadiationLayer = new ItemBasicItem("tier4RadiationLayer");
+			TIER_1_RADIATION_LAYER = new ItemBasicItem("tier1RadiationLayer");
+			TIER_2_RADIATION_LAYER = new ItemBasicItem("tier2RadiationLayer");
+			TIER_3_RADIATION_LAYER = new ItemBasicItem("tier3RadiationLayer");
+			TIER_4_RADIATION_LAYER = new ItemBasicItem("tier4RadiationLayer");
 
-			tier1ArmorLayer = new ItemBasicItem("tier1ArmorLayer");
-			tier2ArmorLayer = new ItemBasicItem("tier2ArmorLayer");
-			tier3ArmorLayer = new ItemBasicItem("tier3ArmorLayer");
-			tier4ArmorLayer = new ItemBasicItem("tier4ArmorLayer");
+			TIER_1_ARMOR_LAYER = new ItemBasicItem("tier1ArmorLayer");
+			TIER_2_ARMOR_LAYER = new ItemBasicItem("tier2ArmorLayer");
+			TIER_3_ARMOR_LAYER = new ItemBasicItem("tier3ArmorLayer");
+			TIER_4_ARMOR_LAYER = new ItemBasicItem("tier4ArmorLayer");
 
-			tier1UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier1UnPreparedSpaceSuitHelmet");
-			tier1UnPreparedSpaceSuitChest = new ItemBasicItem("tier1UnPreparedSpaceSuitChest");
-			tier1UnPreparedSpaceSuitLegings = new ItemBasicItem("tier1UnPreparedSpaceSuitLegings");
-			tier1UnPreparedSpaceSuitBoots = new ItemBasicItem("tier1UnPreparedSpaceSuitBoots");
+			TIER_1_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier1UnPreparedSpaceSuitHelmet");
+			TIER_1_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier1UnPreparedSpaceSuitChest");
+			TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier1UnPreparedSpaceSuitLegings");
+			TIER_1_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier1UnPreparedSpaceSuitBoots");
 
-			tier2UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier2UnPreparedSpaceSuitHelmet");
-			tier2UnPreparedSpaceSuitChest = new ItemBasicItem("tier2UnPreparedSpaceSuitChest");
-			tier2UnPreparedSpaceSuitLegings = new ItemBasicItem("tier2UnPreparedSpaceSuitLegings");
-			tier2UnPreparedSpaceSuitBoots = new ItemBasicItem("tier2UnPreparedSpaceSuitBoots");
+			TIER_2_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier2UnPreparedSpaceSuitHelmet");
+			TIER_2_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier2UnPreparedSpaceSuitChest");
+			TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier2UnPreparedSpaceSuitLegings");
+			TIER_2_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier2UnPreparedSpaceSuitBoots");
 
-			tier3UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier3UnPreparedSpaceSuitHelmet");
-			tier3UnPreparedSpaceSuitChest = new ItemBasicItem("tier3UnPreparedSpaceSuitChest");
-			tier3UnPreparedSpaceSuitLegings = new ItemBasicItem("tier3UnPreparedSpaceSuitLegings");
-			tier3UnPreparedSpaceSuitBoots = new ItemBasicItem("tier3UnPreparedSpaceSuitBoots");
+			TIER_3_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier3UnPreparedSpaceSuitHelmet");
+			TIER_3_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier3UnPreparedSpaceSuitChest");
+			TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier3UnPreparedSpaceSuitLegings");
+			TIER_3_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier3UnPreparedSpaceSuitBoots");
 
-			tier4UnPreparedSpaceSuitHelmet = new ItemBasicItem("tier4UnPreparedSpaceSuitHelmet");
-			tier4UnPreparedSpaceSuitChest = new ItemBasicItem("tier4UnPreparedSpaceSuitChest");
-			tier4UnPreparedSpaceSuitLegings = new ItemBasicItem("tier4UnPreparedSpaceSuitLegings");
-			tier4UnPreparedSpaceSuitBoots = new ItemBasicItem("tier4UnPreparedSpaceSuitBoots");
+			TIER_4_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier4UnPreparedSpaceSuitHelmet");
+			TIER_4_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier4UnPreparedSpaceSuitChest");
+			TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier4UnPreparedSpaceSuitLegings");
+			TIER_4_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier4UnPreparedSpaceSuitBoots");
 		}
-		if (Config.radiation) {
-			iodideSalt = new ItemBasicItem("iodideSalt");
-			potassiumIodide = new ItemBasicItem("potassiumIodide");
-			potassium = new ItemBasicItem("potassium");
-			potash = new ItemBasicItem("potashShards");
-			anti_radiation = new ItemBasicItem("anti_radiation");
+		if (Config.RADIATION) {
+			IODIDE_SALT = new ItemBasicItem("iodideSalt");
+			POTASSIUM_IODIDE = new ItemBasicItem("potassiumIodide");
+			POTASSIUM = new ItemBasicItem("potassium");
+			POTASH_SHARDS = new ItemBasicItem("potashShards");
+			ANTI_RADIATION = new ItemBasicItem("anti_radiation");
 		}
-		clean_water_bucket = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.cleanWater);
-		infected_water_bucket = new ItemBasicItemBucket("bucket_infected_water", ExtraPlanets_Fluids.infectedWater);
-		radioactive_bucket = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.radioactiveWater);
-		methane_bucket = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
-		nitrogen_ice_bucket = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
+		BUCKET_CLEAN_WATER = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.cleanWater);
+		BUCKET_INFECTED_WATER = new ItemBasicItemBucket("bucket_infected_water", ExtraPlanets_Fluids.infectedWater);
+		BUCKET_RADIOACTIVE_WATER = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.radioactiveWater);
+		BUCKET_METHANE = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
+		BUCKET_NITROGEN_ICE = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
 
-		cannedFood = new ItemCannedFood("cannedFood");
-		wafers = new ItemWafers("wafer");
-		ingotLead = new ItemBasicItem("ingotLead");
-		cloth = new ItemBasicItem("cloth");
-		gravityController = new ItemBasicItem("gravityController");
-
+		CANNED_FOOD = new ItemCannedFood("cannedFood");
+		WAFERS = new ItemWafers("wafer");
+		INGOT_LEAD = new ItemBasicItem("ingotLead");
+		CLOTH = new ItemBasicItem("cloth");
+		GRAVITY_CONTROLLER = new ItemBasicItem("gravityController");
 	}
 
 	private static void registerItems() {
-		if (Config.mercury) {
-			if (Config.batteries)
-				RegisterHelper.registerItem(mercuryBattery, mercuryBattery.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(compressedMercury, compressedMercury.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(ingotMercury, ingotMercury.getUnlocalizedName().substring(5));
+		if (Config.MERCURY) {
+			if (Config.BATTERIES)
+				RegisterHelper.registerItem(BATTERY_MERCURY, BATTERY_MERCURY.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(COMPRESSED_MERCURY, COMPRESSED_MERCURY.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(INGOT_MERCURY, INGOT_MERCURY.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(tier4Rocket, tier4Rocket.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(schematicTier4, schematicTier4.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(noseConeTier4, noseConeTier4.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4Items, tier4Items.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(T4key, T4key.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_ROCKET, TIER_4_ROCKET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_SCHEMATIC, TIER_4_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_NOSE_CONE, TIER_4_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_ITEMS, TIER_4_ITEMS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_KEY, TIER_4_KEY.getUnlocalizedName().substring(5));
 		}
-		if (Config.ceres) {
-			RegisterHelper.registerItem(ingotUranium, ingotUranium.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(salt_bucket, "bucket_salt");
+		if (Config.CERES) {
+			RegisterHelper.registerItem(INGOT_URANIUM, INGOT_URANIUM.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(BUCKET_SALT, "bucket_salt");
 		}
-		if (Config.jupiter) {
-			RegisterHelper.registerItem(tier5Rocket, tier5Rocket.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(schematicTier5, schematicTier5.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(noseConeTier5, noseConeTier5.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier5Items, tier5Items.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(T5key, T5key.getUnlocalizedName().substring(5));
+		if (Config.JUPITER) {
+			RegisterHelper.registerItem(TIER_5_ROCKET, TIER_5_ROCKET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_5_SCHEMATIC, TIER_5_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_5_NOSE_CONE, TIER_5_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_5_ITEMS, TIER_5_ITEMS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_5_KEY, TIER_5_KEY.getUnlocalizedName().substring(5));
 
-			if (Config.batteries)
-				RegisterHelper.registerItem(nickelBattery, nickelBattery.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(magma_bucket, "bucket_magma");
+			if (Config.BATTERIES)
+				RegisterHelper.registerItem(BATTERY_NICKEL, BATTERY_NICKEL.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(BUCKET_MAGMA, "bucket_magma");
 		}
-		if (Config.saturn) {
-			RegisterHelper.registerItem(tier6Rocket, tier6Rocket.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(schematicTier6, schematicTier6.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(noseConeTier6, noseConeTier6.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier6Items, tier6Items.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(T6key, T6key.getUnlocalizedName().substring(5));
+		if (Config.SATURN) {
+			RegisterHelper.registerItem(TIER_6_ROCKET, TIER_6_ROCKET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_6_SCHEMATIC, TIER_6_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_6_NOSE_CONE, TIER_6_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_6_ITEMS, TIER_6_ITEMS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_6_KEY, TIER_6_KEY.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(glowstone_bucket, "bucket_glowstone");
+			RegisterHelper.registerItem(BUCKET_GLOWSTONE, "bucket_glowstone");
 		}
-		if (Config.uranus) {
-			RegisterHelper.registerItem(tier7Rocket, tier7Rocket.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(schematicTier7, schematicTier7.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(noseConeTier7, noseConeTier7.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier7Items, tier7Items.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(T7key, T7key.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(frozen_water_bucket, "bucket_frozen_water");
+		if (Config.URANUS) {
+			RegisterHelper.registerItem(TIER_7_ROCKET, TIER_7_ROCKET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_7_SCHEMATIC, TIER_7_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_7_NOSE_CONE, TIER_7_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_7_ITEMS, TIER_7_ITEMS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_7_KEY, TIER_7_KEY.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(BUCKET_FROZEN_WATER, "bucket_frozen_water");
 		}
-		if (Config.neptune) {
-			RegisterHelper.registerItem(tier8Rocket, tier8Rocket.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(schematicTier8, schematicTier8.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(noseConeTier8, noseConeTier8.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier8Items, tier8Items.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(T8key, T8key.getUnlocalizedName().substring(5));
-			if (Config.batteries)
-				RegisterHelper.registerItem(zincBattery, zincBattery.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(nitrogen_bucket, "bucket_nitrogen");
+		if (Config.NEPTUNE) {
+			RegisterHelper.registerItem(TIER_8_ROCKET, TIER_8_ROCKET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_8_SCHEMATIC, TIER_8_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_8_NOSE_CONE, TIER_8_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_8_ITEMS, TIER_8_ITEMS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_8_KEY, TIER_8_KEY.getUnlocalizedName().substring(5));
+			if (Config.BATTERIES)
+				RegisterHelper.registerItem(BATTERY_ZINC, BATTERY_ZINC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(BUCKET_NITROGEN, "bucket_nitrogen");
 		}
-		if (Config.pluto) {
-			RegisterHelper.registerItem(tier9Rocket, tier9Rocket.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(schematicTier9, schematicTier9.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(noseConeTier9, noseConeTier9.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier9Items, tier9Items.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(T9key, T9key.getUnlocalizedName().substring(5));
+		if (Config.PLUTO) {
+			RegisterHelper.registerItem(TIER_9_ROCKET, TIER_9_ROCKET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_9_SCHEMATIC, TIER_9_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_9_NOSE_CONE, TIER_9_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_9_ITEMS, TIER_9_ITEMS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_9_KEY, TIER_9_KEY.getUnlocalizedName().substring(5));
 		}
-		if (Config.eris) {
-			RegisterHelper.registerItem(tier10Rocket, tier10Rocket.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(schematicTier10, schematicTier10.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(noseConeTier10, noseConeTier10.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier10Items, tier10Items.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(T10key, T10key.getUnlocalizedName().substring(5));
+		if (Config.ERIS) {
+			RegisterHelper.registerItem(TIER_10_ROCKET, TIER_10_ROCKET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_10_SCHEMATIC, TIER_10_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_10_NOSE_CONE, TIER_10_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_10_ITEMS, TIER_10_ITEMS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_10_KEY, TIER_10_KEY.getUnlocalizedName().substring(5));
 		}
-		if (Config.kepler22b && Config.keplerSolarSystems) {
-			RegisterHelper.registerItem(tier11Items, tier11Items.getUnlocalizedName().substring(5));
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			RegisterHelper.registerItem(TIER_11_ITEMS, TIER_11_ITEMS.getUnlocalizedName().substring(5));
 		}
-		if (Config.customApples) {
-			RegisterHelper.registerItem(diamondApple, diamondApple.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(ironApple, ironApple.getUnlocalizedName().substring(5));
+		if (Config.CUSTOM_APPLES) {
+			RegisterHelper.registerItem(DIAMOND_APPLE, DIAMOND_APPLE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(IRON_APPLE, IRON_APPLE.getUnlocalizedName().substring(5));
 		}
-		if (Config.thermalPaddings) {
-			RegisterHelper.registerItem(thermalCloth, thermalCloth.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier5ThermalPadding, tier5ThermalPadding.getUnlocalizedName().substring(5));
+		if (Config.THERMAL_PADDINGS) {
+			RegisterHelper.registerItem(THERMAL_CLOTH, THERMAL_CLOTH.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_THERMAL_PADDING, TIER_3_THERMAL_PADDING.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_THERMAL_PADDING, TIER_4_THERMAL_PADDING.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_5_THERMAL_PADDING, TIER_5_THERMAL_PADDING.getUnlocalizedName().substring(5));
 		}
-		if (Config.batteries) {
-			RegisterHelper.registerItem(advancedBattery, advancedBattery.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName().substring(5));
+		if (Config.BATTERIES) {
+			RegisterHelper.registerItem(BATTERY_ADVANCED, BATTERY_ADVANCED.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(BATTERY_ULTIMATE, BATTERY_ULTIMATE.getUnlocalizedName().substring(5));
 		}
-		if (Config.oxygenTanks) {
-			RegisterHelper.registerItem(oxygenTankVeryHeavy, oxygenTankVeryHeavy.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(oxygenTankExtremelyHeavy, oxygenTankExtremelyHeavy.getUnlocalizedName().substring(5));
+		if (Config.OXYGEN_TANKS) {
+			RegisterHelper.registerItem(OXYGEN_TANK_VERY_HEAVY, OXYGEN_TANK_VERY_HEAVY.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(OXYGEN_TANK_EXTREMELY_HEAVY, OXYGEN_TANK_EXTREMELY_HEAVY.getUnlocalizedName().substring(5));
 		}
-		if (Config.pressure || Config.radiation) {
-			RegisterHelper.registerItem(tier1PressureLayer, tier1PressureLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier2PressureLayer, tier2PressureLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier3PressureLayer, tier3PressureLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4PressureLayer, tier4PressureLayer.getUnlocalizedName().substring(5));
+		if (Config.PRESSURE || Config.RADIATION) {
+			RegisterHelper.registerItem(TIER_1_PRESSURE_LAYER, TIER_1_PRESSURE_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_2_PRESSURE_LAYER, TIER_2_PRESSURE_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_PRESSURE_LAYER, TIER_3_PRESSURE_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_PRESSURE_LAYER, TIER_4_PRESSURE_LAYER.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(tier1RadiationLayer, tier1RadiationLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier2RadiationLayer, tier2RadiationLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier3RadiationLayer, tier3RadiationLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4RadiationLayer, tier4RadiationLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_1_RADIATION_LAYER, TIER_1_RADIATION_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_2_RADIATION_LAYER, TIER_2_RADIATION_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_RADIATION_LAYER, TIER_3_RADIATION_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_RADIATION_LAYER, TIER_4_RADIATION_LAYER.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(tier1ArmorLayer, tier1ArmorLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier2ArmorLayer, tier2ArmorLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier3ArmorLayer, tier3ArmorLayer.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4ArmorLayer, tier4ArmorLayer.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_1_ARMOR_LAYER, TIER_1_ARMOR_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_2_ARMOR_LAYER, TIER_2_ARMOR_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_ARMOR_LAYER, TIER_3_ARMOR_LAYER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_ARMOR_LAYER, TIER_4_ARMOR_LAYER.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitHelmet, tier1UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitChest, tier1UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitLegings, tier1UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier1UnPreparedSpaceSuitBoots, tier1UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_HELMET, TIER_1_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_CHEST, TIER_1_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, TIER_1_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitHelmet, tier2UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitChest, tier2UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitLegings, tier2UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier2UnPreparedSpaceSuitBoots, tier2UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_HELMET, TIER_2_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_CHEST, TIER_2_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_BOOTS, TIER_2_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitHelmet, tier3UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitChest, tier3UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitLegings, tier3UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier3UnPreparedSpaceSuitBoots, tier3UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_HELMET, TIER_3_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_CHEST, TIER_3_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_BOOTS, TIER_3_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitHelmet, tier4UnPreparedSpaceSuitHelmet.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitChest, tier4UnPreparedSpaceSuitChest.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitLegings, tier4UnPreparedSpaceSuitLegings.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(tier4UnPreparedSpaceSuitBoots, tier4UnPreparedSpaceSuitBoots.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_HELMET, TIER_4_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_CHEST, TIER_4_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, TIER_4_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 		}
-		if (Config.radiation) {
-			RegisterHelper.registerItem(iodideSalt, iodideSalt.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(potassiumIodide, potassiumIodide.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(potassium, potassium.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(potash, potash.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(anti_radiation, anti_radiation.getUnlocalizedName().substring(5));
+		if (Config.RADIATION) {
+			RegisterHelper.registerItem(IODIDE_SALT, IODIDE_SALT.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(POTASSIUM_IODIDE, POTASSIUM_IODIDE.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(POTASSIUM, POTASSIUM.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(POTASH_SHARDS, POTASH_SHARDS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(ANTI_RADIATION, ANTI_RADIATION.getUnlocalizedName().substring(5));
 		}
-		RegisterHelper.registerItem(cannedFood, cannedFood.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(wafers, wafers.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(ingotLead, ingotLead.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(cloth, cloth.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(gravityController, gravityController.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(clean_water_bucket, "bucket_clean_water");
-		RegisterHelper.registerItem(infected_water_bucket, "bucket_infected_water");
+		RegisterHelper.registerItem(CANNED_FOOD, CANNED_FOOD.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(WAFERS, WAFERS.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(INGOT_LEAD, INGOT_LEAD.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(BUCKET_CLEAN_WATER, "bucket_clean_water");
+		RegisterHelper.registerItem(BUCKET_INFECTED_WATER, "bucket_infected_water");
 		;
-		RegisterHelper.registerItem(radioactive_bucket, "bucket_radioactive_water");
-		RegisterHelper.registerItem(methane_bucket, "bucket_methane");
-		RegisterHelper.registerItem(nitrogen_ice_bucket, "bucket_nitrogen_ice");
+		RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
+		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
+		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
 	}
 
 	private static void registerFluidContainer() {
-		if (Config.saturn) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.glowstone_fluid, new ItemStack(glowstone_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		if (Config.SATURN) {
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.glowstone_fluid, new ItemStack(BUCKET_GLOWSTONE, 1, 0), new ItemStack(Items.BUCKET));
 		}
-		if (Config.jupiter) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.magma_fluid, new ItemStack(magma_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		if (Config.JUPITER) {
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.magma_fluid, new ItemStack(BUCKET_MAGMA, 1, 0), new ItemStack(Items.BUCKET));
 		}
-		if (Config.neptune) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		if (Config.NEPTUNE) {
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_fluid, new ItemStack(BUCKET_NITROGEN, 1, 0), new ItemStack(Items.BUCKET));
 		}
-		if (Config.uranus) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		if (Config.URANUS) {
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.frozen_water_fluid, new ItemStack(BUCKET_FROZEN_WATER, 1, 0), new ItemStack(Items.BUCKET));
 		}
-		if (Config.ceres) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		if (Config.CERES) {
+			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(BUCKET_SALT, 1, 0), new ItemStack(Items.BUCKET));
 		}
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.cleanWater_fluid, new ItemStack(clean_water_bucket, 1, 0), new ItemStack(Items.BUCKET));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.infectedWater_fluid, new ItemStack(infected_water_bucket, 1, 0), new ItemStack(Items.BUCKET));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.radioactiveWater_fluid, new ItemStack(radioactive_bucket, 1, 0), new ItemStack(Items.BUCKET));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.methane_fluid, new ItemStack(methane_bucket, 1, 0), new ItemStack(Items.BUCKET));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_ice_fluid, new ItemStack(nitrogen_ice_bucket, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.cleanWater_fluid, new ItemStack(BUCKET_CLEAN_WATER, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.infectedWater_fluid, new ItemStack(BUCKET_INFECTED_WATER, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.radioactiveWater_fluid, new ItemStack(BUCKET_RADIOACTIVE_WATER, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.methane_fluid, new ItemStack(BUCKET_METHANE, 1, 0), new ItemStack(Items.BUCKET));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_ice_fluid, new ItemStack(BUCKET_NITROGEN_ICE, 1, 0), new ItemStack(Items.BUCKET));
 	}
 
 	public static void OreDictionaryRegister() {
-		if (Config.mercury) {
-			OreDictionary.registerOre("ingotMercury", new ItemStack(ingotMercury));
-			OreDictionary.registerOre("ingotCarbon", new ItemStack(tier4Items, 1, 5));
+		if (Config.MERCURY) {
+			OreDictionary.registerOre("ingotMercury", new ItemStack(INGOT_MERCURY));
+			OreDictionary.registerOre("ingotCarbon", new ItemStack(TIER_4_ITEMS, 1, 5));
 		}
-		if (Config.ceres)
-			OreDictionary.registerOre("ingotUranium", new ItemStack(ingotUranium));
-		if (Config.jupiter) {
-			OreDictionary.registerOre("ingotPalladium", new ItemStack(tier5Items, 1, 5));
-			OreDictionary.registerOre("ingotNickel", new ItemStack(tier5Items, 1, 7));
-			OreDictionary.registerOre("gemRedGem", new ItemStack(tier5Items, 1, 8));
+		if (Config.CERES)
+			OreDictionary.registerOre("ingotUranium", new ItemStack(INGOT_URANIUM));
+		if (Config.JUPITER) {
+			OreDictionary.registerOre("ingotPalladium", new ItemStack(TIER_5_ITEMS, 1, 5));
+			OreDictionary.registerOre("ingotNickel", new ItemStack(TIER_5_ITEMS, 1, 7));
+			OreDictionary.registerOre("gemRedGem", new ItemStack(TIER_5_ITEMS, 1, 8));
 		}
-		if (Config.saturn)
-			OreDictionary.registerOre("ingotMagnesium", new ItemStack(tier6Items, 1, 5));
-		if (Config.uranus) {
-			OreDictionary.registerOre("ingotCrystal", new ItemStack(tier7Items, 1, 5));
-			OreDictionary.registerOre("gemWhiteGem", new ItemStack(tier7Items, 1, 7));
+		if (Config.SATURN)
+			OreDictionary.registerOre("ingotMagnesium", new ItemStack(TIER_6_ITEMS, 1, 5));
+		if (Config.URANUS) {
+			OreDictionary.registerOre("ingotCrystal", new ItemStack(TIER_7_ITEMS, 1, 5));
+			OreDictionary.registerOre("gemWhiteGem", new ItemStack(TIER_7_ITEMS, 1, 7));
 		}
-		if (Config.neptune) {
-			OreDictionary.registerOre("ingotZinc", new ItemStack(tier8Items, 1, 5));
-			OreDictionary.registerOre("gemBlueGem", new ItemStack(tier8Items, 1, 6));
+		if (Config.NEPTUNE) {
+			OreDictionary.registerOre("ingotZinc", new ItemStack(TIER_8_ITEMS, 1, 5));
+			OreDictionary.registerOre("gemBlueGem", new ItemStack(TIER_8_ITEMS, 1, 6));
 		}
-		if (Config.pluto)
-			OreDictionary.registerOre("ingotTungsten", new ItemStack(tier9Items, 1, 5));
-		if (Config.eris)
-			OreDictionary.registerOre("ingotDarkIron", new ItemStack(tier10Items, 1, 5));
-		if (Config.kepler22b && Config.keplerSolarSystems) {
-			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(tier11Items, 1, 0));
-			OreDictionary.registerOre("gemRedDiamond", new ItemStack(tier11Items, 1, 1));
-			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier11Items, 1, 2));
-			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(tier11Items, 1, 3));
-			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(tier11Items, 1, 4));
+		if (Config.PLUTO)
+			OreDictionary.registerOre("ingotTungsten", new ItemStack(TIER_9_ITEMS, 1, 5));
+		if (Config.ERIS)
+			OreDictionary.registerOre("ingotDarkIron", new ItemStack(TIER_10_ITEMS, 1, 5));
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(TIER_11_ITEMS, 1, 0));
+			OreDictionary.registerOre("gemRedDiamond", new ItemStack(TIER_11_ITEMS, 1, 1));
+			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(TIER_11_ITEMS, 1, 2));
+			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(TIER_11_ITEMS, 1, 3));
+			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(TIER_11_ITEMS, 1, 4));
 		}
-		OreDictionary.registerOre("ingotLead", new ItemStack(ingotLead));
+		OreDictionary.registerOre("ingotLead", new ItemStack(INGOT_LEAD));
 	}
 
 	public static void registerGearItems() {
-		if (Config.oxygenTanks) {
-			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankVeryHeavy);
-			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankVeryHeavy);
+		if (Config.OXYGEN_TANKS) {
+			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_VERY_HEAVY);
+			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_VERY_HEAVY);
 
-			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, oxygenTankExtremelyHeavy);
-			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, oxygenTankExtremelyHeavy);
+			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
+			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 		}
-		if (Config.thermalPaddings) {
-			GalacticraftRegistry.registerGear(6000, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier3ThermalPadding, 1, 0));
-			GalacticraftRegistry.registerGear(6001, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier3ThermalPadding, 1, 1));
-			GalacticraftRegistry.registerGear(6002, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier3ThermalPadding, 1, 2));
-			GalacticraftRegistry.registerGear(6003, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier3ThermalPadding, 1, 3));
+		if (Config.THERMAL_PADDINGS) {
+			GalacticraftRegistry.registerGear(6000, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_3_THERMAL_PADDING, 1, 0));
+			GalacticraftRegistry.registerGear(6001, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_3_THERMAL_PADDING, 1, 1));
+			GalacticraftRegistry.registerGear(6002, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_3_THERMAL_PADDING, 1, 2));
+			GalacticraftRegistry.registerGear(6003, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_3_THERMAL_PADDING, 1, 3));
 
-			GalacticraftRegistry.registerGear(6004, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier4ThermalPadding, 1, 0));
-			GalacticraftRegistry.registerGear(6005, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier4ThermalPadding, 1, 1));
-			GalacticraftRegistry.registerGear(6006, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier4ThermalPadding, 1, 2));
-			GalacticraftRegistry.registerGear(6007, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier4ThermalPadding, 1, 3));
+			GalacticraftRegistry.registerGear(6004, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_4_THERMAL_PADDING, 1, 0));
+			GalacticraftRegistry.registerGear(6005, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_4_THERMAL_PADDING, 1, 1));
+			GalacticraftRegistry.registerGear(6006, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_4_THERMAL_PADDING, 1, 2));
+			GalacticraftRegistry.registerGear(6007, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_4_THERMAL_PADDING, 1, 3));
 
-			GalacticraftRegistry.registerGear(6008, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(tier5ThermalPadding, 1, 0));
-			GalacticraftRegistry.registerGear(6009, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(tier5ThermalPadding, 1, 1));
-			GalacticraftRegistry.registerGear(6010, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(tier5ThermalPadding, 1, 2));
-			GalacticraftRegistry.registerGear(6011, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(tier5ThermalPadding, 1, 3));
+			GalacticraftRegistry.registerGear(6008, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_5_THERMAL_PADDING, 1, 0));
+			GalacticraftRegistry.registerGear(6009, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_5_THERMAL_PADDING, 1, 1));
+			GalacticraftRegistry.registerGear(6010, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_5_THERMAL_PADDING, 1, 2));
+			GalacticraftRegistry.registerGear(6011, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_5_THERMAL_PADDING, 1, 3));
 		}
 	}
 }

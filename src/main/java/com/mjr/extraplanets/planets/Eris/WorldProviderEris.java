@@ -110,7 +110,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.eris;
+		return ExtraPlanets_Planets.ERIS;
 	}
 
 	@Override

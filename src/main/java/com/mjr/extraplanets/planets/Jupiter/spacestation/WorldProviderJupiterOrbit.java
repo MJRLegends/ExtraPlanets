@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 public class WorldProviderJupiterOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_SpaceStations.jupiterSpaceStation;
+		return ExtraPlanets_SpaceStations.JUPITER_SPACE_STATION;
 	}
 
 	@Override
@@ -152,7 +152,7 @@ public class WorldProviderJupiterOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier > ExtraPlanets_Planets.jupiter.getTierRequirement();
+		return tier > ExtraPlanets_Planets.JUPITER.getTierRequirement();
 	}
 
 	@Override

@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 public class WorldProviderErisOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_SpaceStations.erisSpaceStation;
+		return ExtraPlanets_SpaceStations.ERIS_SPACE_STATION;
 	}
 
 	@Override
@@ -152,7 +152,7 @@ public class WorldProviderErisOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier > ExtraPlanets_Planets.eris.getTierRequirement();
+		return tier > ExtraPlanets_Planets.ERIS.getTierRequirement();
 	}
 
 	@Override

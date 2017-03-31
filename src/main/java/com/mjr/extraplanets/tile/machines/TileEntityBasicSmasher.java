@@ -24,7 +24,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potash, 3, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASH_SHARDS, 3, 0);
 
 	public TileEntityBasicSmasher() {
 	}
@@ -52,7 +52,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public boolean canProcess() {
 		if (this.containingItems[1] == null)
 			return false;
-		if (this.containingItems[1].getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.potash))
+		if (this.containingItems[1].getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -141,7 +141,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.potash);
+				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
 			default:
 				return false;
 			}
@@ -156,7 +156,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.potash;
+				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 			default:
 				return false;
 			}

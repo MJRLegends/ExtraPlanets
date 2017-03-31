@@ -258,7 +258,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 						BlockMulti.EnumBlockMultiType type = (BlockMulti.EnumBlockMultiType) stateAt.getValue(BlockMulti.MULTI_TYPE);
 						if ((type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_0 || type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_1) && ((x == 0 && z == 0) || (stateBelow.getBlock().isAir(this.worldObj.getBlockState(pos.down()), this.worldObj, pos.down())))) {
 							if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
-								FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, ExtraPlanets_Machines.solarPanel.getDefaultState());
+								FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, ExtraPlanets_Machines.SOLAR_PANEL.getDefaultState());
 							}
 
 							this.worldObj.setBlockToAir(pos);

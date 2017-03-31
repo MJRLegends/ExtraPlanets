@@ -10,11 +10,11 @@ import com.mjr.extraplanets.Config;
 public class TitanEvents {
 	@SubscribeEvent
 	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.titanID) {
+		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.TITAN_ID) {
 			if (event.getEntity() instanceof EntityPlayer) {
 				event.setCanceled(false);
 			} else {
-				if (Config.mobSuffocation)
+				if (Config.MOB_SUFFOCATION)
 					event.setCanceled(false);
 				else
 					event.setCanceled(true);
@@ -24,7 +24,7 @@ public class TitanEvents {
 
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.titanID) {
+		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.TITAN_ID) {
 			event.getEntityPlayer().heal(5.0F);
 		}
 	}

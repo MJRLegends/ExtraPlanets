@@ -23,15 +23,15 @@ public class BiomeDecoratorKepler22bOres extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorKepler22bOres() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 4, 3, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 4, 4, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 2, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.denseCoal = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 5, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.blueDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 6, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.redDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 7, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.yellowDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 8, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.purpleDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 9, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
-		this.greenDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.kepler22bBlocks, 8, 10, true, ExtraPlanets_Blocks.kepler22bBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 4, 3, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 2, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.denseCoal = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 5, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.blueDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 6, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.redDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 7, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.yellowDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 8, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.purpleDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 9, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
+		this.greenDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 10, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}

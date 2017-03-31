@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_SpaceStations.kepler22bSpaceStation;
+		return ExtraPlanets_SpaceStations.KEPLER22B_SPACE_STATION;
 	}
 
 	@Override
@@ -152,7 +152,7 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier > ExtraPlanets_Planets.kepler22b.getTierRequirement();
+		return tier > ExtraPlanets_Planets.KEPLER22B.getTierRequirement();
 	}
 
 	@Override

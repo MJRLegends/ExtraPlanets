@@ -145,13 +145,13 @@ public class MapGenCaveKepler22b extends MapGenBaseMeta {
 											IBlockState state = primer.getBlockState(localX, localY, localZ);
 											Block block = state.getBlock();
 											int metadata = state.getBlock().getMetaFromState(state);
-											if (block == ExtraPlanets_Blocks.kepler22bBlueGrass || block == ExtraPlanets_Blocks.kepler22bPurpleGrass || block == ExtraPlanets_Blocks.kepler22bRedGrass
-													|| block == ExtraPlanets_Blocks.kepler22bYellowGrass) {
+											if (block == ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE || block == ExtraPlanets_Blocks.KEPLER22B_GRASS_PURPLE || block == ExtraPlanets_Blocks.KEPLER22B_GRASS_RED
+													|| block == ExtraPlanets_Blocks.KEPLER22B_GRASS_YELLOW) {
 												if (random.nextInt(MapGenCaveKepler22b.BREAK_THROUGH_CHANCE) == 0) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
 												}
 											}
-											if (block == ExtraPlanets_Blocks.kepler22bBlocks) {
+											if (block == ExtraPlanets_Blocks.KEPLER22B_BLOCKS) {
 												if (metadata == 0 || metadata == 1) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
 												}

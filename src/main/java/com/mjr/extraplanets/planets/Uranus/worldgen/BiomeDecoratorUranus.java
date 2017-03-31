@@ -31,10 +31,10 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorUranus() {
-		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.uranusBlocks, 2);
-		this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 4, 3, true, ExtraPlanets_Blocks.uranusBlocks, 2);
-		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.denseIce, 8, 0, true, ExtraPlanets_Blocks.uranusBlocks, 0);
-		this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.uranusBlocks, 4, 6, true, ExtraPlanets_Blocks.uranusBlocks, 2);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
+		this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 3, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
+		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DENSE_ICE, 8, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 0);
+		this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -65,13 +65,13 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 
-		if (Config.genUranusIceSpikes) {
+		if (Config.GENERATE_URANUS_ICE_SPIKES) {
 			for (int i = 0; i < this.iceSpikesPerChunk; i++) {
 				if (this.rand.nextInt(20) == 0) {
 					int x = this.chunkX + 6;
 					int z = this.chunkZ + 6;
 					int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY();
-					new WorldGenCustomIceSpike().generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.uranusBlocks);
+					new WorldGenCustomIceSpike().generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.URANUS_BLOCKS);
 				}
 			}
 		}
@@ -81,10 +81,10 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.glowstone).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.uranusBlocks);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.glowstone).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.URANUS_BLOCKS);
 			}
 		}
-		if (Config.genUranusIgloos) {
+		if (Config.GENERATE_URANUS_IGLOOS) {
 			if (this.rand.nextInt(100) == 1) {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;

@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 public class WorldProviderUranusOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_SpaceStations.uranusSpaceStation;
+		return ExtraPlanets_SpaceStations.URANUS_SPACE_STATION;
 	}
 
 	@Override
@@ -152,7 +152,7 @@ public class WorldProviderUranusOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier > ExtraPlanets_Planets.uranus.getTierRequirement();
+		return tier > ExtraPlanets_Planets.URANUS.getTierRequirement();
 	}
 
 	@Override

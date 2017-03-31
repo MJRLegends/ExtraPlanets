@@ -145,7 +145,7 @@ public class MapGenCaveNeptune extends MapGenBaseMeta {
 											IBlockState state = primer.getBlockState(localX, localY, localZ);
 											Block block = state.getBlock();
 											int metadata = state.getBlock().getMetaFromState(state);
-											if (block == ExtraPlanets_Blocks.neptuneBlocks) {
+											if (block == ExtraPlanets_Blocks.NEPTUNE_BLOCKS) {
 												if (metadata == 1 || metadata == 2) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
 													// blockIdArray[coords] = Blocks.AIR;

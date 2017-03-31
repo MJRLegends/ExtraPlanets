@@ -34,29 +34,29 @@ public class ItemBasicItem extends Item {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			if (itemStack.getItem() == ExtraPlanets_Items.tier1ArmorLayer)
+			if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
 				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier1ArmorLayer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.tier2ArmorLayer)
+			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
 				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier2ArmorLayer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.tier3ArmorLayer)
+			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_3_ARMOR_LAYER)
 				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier3ArmorLayer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.tier4ArmorLayer)
+			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
 				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier4ArmorLayer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.anti_radiation)
+			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
 				list.add(EnumColor.YELLOW + GCCoreUtil.translate("antiRadiation.desc"));
 		}
 	}
 
 	@Override
 	public EnumAction getItemUseAction(ItemStack stack) {
-		if (stack.getItem() == ExtraPlanets_Items.anti_radiation)
+		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
 			return EnumAction.DRINK;
 		return null;
 	}
 
 	@Override
 	public int getMaxItemUseDuration(ItemStack stack) {
-		if (stack.getItem() == ExtraPlanets_Items.anti_radiation)
+		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
 			return 32;
 		return 0;
 	}
@@ -69,7 +69,7 @@ public class ItemBasicItem extends Item {
 
 	@Override
 	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {
-		if (stack.getItem() == ExtraPlanets_Items.anti_radiation) {
+		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
 			EntityPlayer entityplayer = entityLiving instanceof EntityPlayer ? (EntityPlayer) entityLiving : null;
 
 			if (entityplayer == null || !entityplayer.capabilities.isCreativeMode) {
@@ -100,7 +100,7 @@ public class ItemBasicItem extends Item {
 
 	@Override
 	public int getItemStackLimit(ItemStack stack) {
-		if (stack.getItem() == ExtraPlanets_Items.anti_radiation)
+		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
 			return 1;
 		return this.maxStackSize;
 	}

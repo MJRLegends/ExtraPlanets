@@ -71,32 +71,32 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		for (int i = 0; i < blueTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(0), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(0), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(0), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < redTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(1), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(1), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < purpleTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(2), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(2), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(2), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(2), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < yellowTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(3), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(3), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(3), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(3), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < greenTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(4), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(4), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < brownTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(5), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(5), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < 1; i++) {
 			int x = this.chunkPos.getX() + random.nextInt(16) + 8;
@@ -134,77 +134,77 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		for (int i = 0; i < this.blueShortGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 0).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 0).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.blueMedGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 1).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 1).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.blueTallGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 2).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 2).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.redShortGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 3).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 3).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.redMedGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 4).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 4).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.redTallGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 5).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 5).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.purpleShortGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 6).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 6).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.purpleMedGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 7).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 7).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.purpleTallGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 8).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 8).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.yellowShortGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 9).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 9).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.yellowMedGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 10).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 10).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.yellowTallGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 11).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 11).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.greenShortGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 12).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 12).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.greenMedGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 13).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 13).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.greenTallGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getHeight(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
 			blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.kepler22bGrassFlowers, 14).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bFlowers((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, 14).generate(worldIn, random, blockpos);
 		}
 		isDecorating = false;
 	}

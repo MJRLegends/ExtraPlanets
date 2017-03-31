@@ -30,7 +30,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!worldIn.isRemote) {
 			if (worldIn.getLightFromNeighbors(pos.up()) < 4 && worldIn.getBlockState(pos.up()).getLightOpacity(worldIn, pos.up()) > 2) {
-				worldIn.setBlockState(pos, ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState());
+				worldIn.setBlockState(pos, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState());
 			} else {
 				if (worldIn.getLightFromNeighbors(pos.up()) >= 9) {
 					for (int i = 0; i < 4; ++i) {
@@ -38,7 +38,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 						Block block = worldIn.getBlockState(blockpos.up()).getBlock();
 						IBlockState iblockstate = worldIn.getBlockState(blockpos);
 
-						if (iblockstate.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && iblockstate.getLightOpacity(worldIn, pos.up()) <= 2) {
+						if (iblockstate.getBlock() == ExtraPlanets_Blocks.KEPLER22B_BLOCKS && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && iblockstate.getLightOpacity(worldIn, pos.up()) <= 2) {
 							worldIn.setBlockState(blockpos, this.getDefaultState());
 						}
 					}
@@ -49,7 +49,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return ExtraPlanets_Blocks.kepler22bBlocks.getItemDropped(ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState(), rand, fortune);
+		return ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getItemDropped(ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), rand, fortune);
 	}
 
 	@Override
@@ -107,6 +107,6 @@ public class BlockBasicGrass extends Block implements IGrowable {
 	@Override
 	public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction, IPlantable plantable) {
 		Block block = plantable.getPlant(world, pos).getBlock();
-		return block == ExtraPlanets_Blocks.kepler22bMapleSapling || block == ExtraPlanets_Blocks.kepler22bGrassFlowers;
+		return block == ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING || block == ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS;
 	}
 }

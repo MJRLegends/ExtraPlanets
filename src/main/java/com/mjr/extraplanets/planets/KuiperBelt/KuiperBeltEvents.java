@@ -40,7 +40,7 @@ public class KuiperBeltEvents {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onRingRender(CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre renderEvent) {
-		if (renderEvent.celestialBody.equals(ExtraPlanets_Planets.kuiperBelt)) {
+		if (renderEvent.celestialBody.equals(ExtraPlanets_Planets.KUIPER_BELT)) {
 			if (FMLClientHandler.instance().getClient().currentScreen instanceof GuiCelestialSelection)
 				GL11.glColor4f(0.0F, 0.0F, 0.7F, 0.5F);
 			else

@@ -26,7 +26,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(ExtraPlanets_Blocks.plutoBlocks.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossPluto.class, RoomTreasurePluto.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(ExtraPlanets_Blocks.PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossPluto.class, RoomTreasurePluto.class));
 
 	public ChunkProviderPluto(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -56,17 +56,17 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.plutoBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.PLUTO_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.plutoBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.PLUTO_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.plutoBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.PLUTO_BLOCKS, (byte) 2);
 	}
 
 	@Override

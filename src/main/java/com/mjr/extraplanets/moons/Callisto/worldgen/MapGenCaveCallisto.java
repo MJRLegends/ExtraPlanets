@@ -173,7 +173,7 @@ public class MapGenCaveCallisto extends MapGenBaseMeta
                                             IBlockState state = primer.getBlockState(localX, localY, localZ);
                                             Block block = state.getBlock();
                                             int metadata = state.getBlock().getMetaFromState(state);
-                                            if (block == ExtraPlanets_Blocks.callistoBlocks)
+                                            if (block == ExtraPlanets_Blocks.CALLISTO_BLOCKS)
                                             {
                                                 if (metadata == 6 || metadata == 9)
                                                 {

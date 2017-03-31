@@ -18,11 +18,11 @@ public class BiomeDecoratorGanymede extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorGanymede() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ganymedeBlocks, 4, 5, true, ExtraPlanets_Blocks.ganymedeBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ganymedeBlocks, 4, 4, true, ExtraPlanets_Blocks.ganymedeBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ganymedeBlocks, 8, 3, true, ExtraPlanets_Blocks.ganymedeBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ganymedeGravel, 12, 0, true, ExtraPlanets_Blocks.ganymedeBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.ganymedeBlocks, 1);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 1, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);

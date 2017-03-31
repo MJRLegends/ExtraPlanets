@@ -80,7 +80,7 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onPlayer(PlayerTickEvent event) {
-		if (event.player.worldObj.provider.getDimensionType().getId() == Config.jupiterID) {
+		if (event.player.worldObj.provider.getDimensionType().getId() == Config.JUPITER_ID) {
 			Random rand = new Random();
 			int addX = rand.nextInt(25);
 			int addZ = rand.nextInt(25);
@@ -106,15 +106,15 @@ public class MainHandlerServer {
 			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
 			return;
 		}
-		if (event.armorStack.getItem() == ExtraPlanets_Items.tier3ThermalPadding && event.armorStack.getItemDamage() == event.armorIndex) {
+		if (event.armorStack.getItem() == ExtraPlanets_Items.TIER_3_THERMAL_PADDING && event.armorStack.getItemDamage() == event.armorIndex) {
 			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
 			return;
 		}
-		if (event.armorStack.getItem() == ExtraPlanets_Items.tier4ThermalPadding && event.armorStack.getItemDamage() == event.armorIndex) {
+		if (event.armorStack.getItem() == ExtraPlanets_Items.TIER_4_THERMAL_PADDING && event.armorStack.getItemDamage() == event.armorIndex) {
 			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
 			return;
 		}
-		if (event.armorStack.getItem() == ExtraPlanets_Items.tier5ThermalPadding && event.armorStack.getItemDamage() == event.armorIndex) {
+		if (event.armorStack.getItem() == ExtraPlanets_Items.TIER_5_THERMAL_PADDING && event.armorStack.getItemDamage() == event.armorIndex) {
 			event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.ADD);
 			return;
 		}
@@ -144,9 +144,9 @@ public class MainHandlerServer {
 		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
 			return;
 		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)) {
-			if (Config.pressure)
+			if (Config.PRESSURE)
 				checkPressure(event, entityLiving);
-			if (Config.radiation)
+			if (Config.RADIATION)
 				checkRadiation(event, entityLiving);
 		} else
 			return;
@@ -232,7 +232,7 @@ public class MainHandlerServer {
 		final boolean isInGCDimension = player.worldObj.provider instanceof IGalacticraftWorldProvider;
 		IStatsCapability stats = player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 
-		if (isInGCDimension && Config.radiation) {
+		if (isInGCDimension && Config.RADIATION) {
 			if (tick % 30 == 0) {
 				this.sendSolarRadiationPacket(player, stats);
 			}

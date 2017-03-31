@@ -120,7 +120,7 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.titania.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.TITANIA.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.titania;
+		return ExtraPlanets_Moons.TITANIA;
 	}
 
 	@Override

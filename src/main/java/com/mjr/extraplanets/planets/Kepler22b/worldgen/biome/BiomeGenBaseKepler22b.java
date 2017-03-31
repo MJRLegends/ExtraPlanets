@@ -39,8 +39,8 @@ public class BiomeGenBaseKepler22b extends Biome {
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
 		this.spawnableCaveCreatureList.clear();
-		this.topBlock = ExtraPlanets_Blocks.kepler22bGrass.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState();
+		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));
@@ -84,11 +84,11 @@ public class BiomeGenBaseKepler22b extends Biome {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
 				if (iblockstate2.getMaterial() == Material.AIR) {
 					j = -1;
-				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1).getBlock()) {
+				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1).getBlock()) {
 					if (j == -1) {
 						if (k <= 0) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1);
+							iblockstate1 = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
 						} else if (j1 >= 63 - 4 && j1 <= 63 + 1) {
 							iblockstate = this.topBlock;
 							iblockstate1 = this.fillerBlock;
@@ -108,7 +108,7 @@ public class BiomeGenBaseKepler22b extends Biome {
 							chunk.setBlockState(i1, j1, l, iblockstate);
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.kepler22bBlocks.getStateFromMeta(1);
+							iblockstate1 = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
 							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);

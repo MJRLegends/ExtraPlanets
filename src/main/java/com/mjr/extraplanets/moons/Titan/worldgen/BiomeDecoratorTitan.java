@@ -25,11 +25,11 @@ public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorTitan() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.titanBlocks, 4, 5, true, ExtraPlanets_Blocks.titanBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.titanBlocks, 4, 4, true, ExtraPlanets_Blocks.titanBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.titanBlocks, 8, 3, true, ExtraPlanets_Blocks.titanBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
 		//this.gravelGen = new WorldGenMinableMeta(ExtraPlanetsBlocks.titanGravel, 12, 0, true, ExtraPlanetsBlocks.titanBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.titanBlocks, 1);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 1, 0, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -60,7 +60,7 @@ public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.methane).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.frozenNitrogen);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.methane).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.FROZEN_NITROGEN);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));

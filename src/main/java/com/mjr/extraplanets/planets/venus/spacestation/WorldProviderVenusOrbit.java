@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 public class WorldProviderVenusOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_SpaceStations.venusSpaceStation;
+		return ExtraPlanets_SpaceStations.VENUS_SPACE_STATION;
 	}
 
 	@Override

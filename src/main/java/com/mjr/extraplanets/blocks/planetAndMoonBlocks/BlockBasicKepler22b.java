@@ -151,7 +151,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	@Override
 	public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction, IPlantable plantable) {
 		Block block = plantable.getPlant(world, pos).getBlock();
-		return block == ExtraPlanets_Blocks.kepler22bMapleSapling;
+		return block == ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING;
 	}
 
 	@Override

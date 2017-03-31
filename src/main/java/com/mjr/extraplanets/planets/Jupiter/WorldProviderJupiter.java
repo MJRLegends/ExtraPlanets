@@ -96,7 +96,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.jupiter.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.JUPITER.getTierRequirement();
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.jupiter;
+		return ExtraPlanets_Planets.JUPITER;
 	}
 
 	@Override

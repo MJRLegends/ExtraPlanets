@@ -120,7 +120,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.deimos.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.DEIMOS.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.deimos;
+		return ExtraPlanets_Moons.DEIMOS;
 	}
 
 	@Override

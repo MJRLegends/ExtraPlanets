@@ -120,7 +120,7 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.europa.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.EUROPA.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.europa;
+		return ExtraPlanets_Moons.EUROPA;
 	}
 
 	@Override

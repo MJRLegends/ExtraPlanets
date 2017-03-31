@@ -120,7 +120,7 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.phobos.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.PHOBOS.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.phobos;
+		return ExtraPlanets_Moons.PHOBOS;
 	}
 
 	@Override

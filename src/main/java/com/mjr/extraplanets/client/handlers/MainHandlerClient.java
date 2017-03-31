@@ -64,11 +64,11 @@ public class MainHandlerClient {
 			if ((player.worldObj.provider instanceof CustomWorldProviderSpace)) {
 				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.worldObj.provider;
 
-				if (Config.pressure) {
+				if (Config.PRESSURE) {
 					int pressureLevel = provider.getPressureLevel();
 					OverlayPressure.renderPressureIndicator(pressureLevel, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 				}
-				if (Config.radiation) {
+				if (Config.RADIATION) {
 					IStatsClientCapability stats = null;
 
 					if (player != null) {

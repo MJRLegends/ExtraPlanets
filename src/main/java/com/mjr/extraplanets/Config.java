@@ -5,455 +5,434 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
-	//Sections/Groups
-	private static String dimensions = "main dimensions";
-	private static String dimensionsCustom = "other dimensions";
-	private static String dimensionID = "dimensionID";
-	private static String dimensionSettings = "dimension settings";
-	private static String dimensionBlockSettings = "dimension block settings";
-	private static String biomeID = "biomeID";
-	private static String items = "items";
-	private static String blocks = "blocks";
+	// Sections/Groups
+	private static String MAIN_DIMENSIONS = "main dimensions";
+	private static String OTHER_DIMENSIONS = "other dimensions";
+	private static String DIMENSION_IDS = "dimensionID";
+	private static String DIMENSION_SETTINGS = "dimension settings";
+	private static String DIMENSION_BLOCK_SETTINGS = "dimension block settings";
+	private static String BIOME_IDS = "biomeID";
+	private static String ITEMS = "items";
+	private static String BLOCKS = "blocks";
+	private static String SPACE_STATIONS = "space stations";
+	private static String SCHEMATIC_GUI_IDS = "schematics GUI ID";
+	private static String SCHEMATIC_PAGE_IDS = "schematics Page ID";
+	private static String COMPATIBILITY = "compatibility support";
+	private static String GENERAL_SETTINGS = "general settings";
 
-	private static String spacestationCustom = "space stations";
+	// Config options
+	public static boolean MOB_SUFFOCATION;
+	public static boolean USE_DEFAULT_BOSSES;
 
-	private static String schematicsGUI = "schematics GUI ID";
-	private static String schematicsPage = "schematics Page ID";
-	
-	private static String compatibility = "compatibility support";
-	private static String generalsettings = "general settings";
-	
-	//Config options	
-	public static boolean mobSuffocation;
-	public static boolean useDefaultBosses;
+	public static int ROCKET_TIER_CERES;
 
-	public static int ceresRocketTier;
-	public static int erisRocketTier;
-	
-	//public static int venusRocketTier;
-	//public static int jupiterRocketTier;
-	//public static int saturnRocketTier;
-	//public static int uranusRocketTier;
-	//public static int neptuneRocketTier;
-	
-	public static boolean genUranusIgloos;
-	public static boolean genUranusIceSpikes;
-	
-	public static boolean carbonItems;
-	public static boolean palladiumItems;
-	public static boolean magnesiumItems;
-	public static boolean crystalItems;
-	public static boolean tungstenItems;
-	public static boolean redGemItems;
-	public static boolean blueGemItems;
-	public static boolean whiteGemItems;
-	public static boolean zincItems;
-	public static boolean mercuryItems;
-	public static boolean uraniumItems;
-	public static boolean kepler22bItems;
-	
-	public static boolean thermalPaddings;
-	public static boolean batteries;
-	//public static boolean cannedFood;
-	public static boolean customApples;
-	public static boolean oxygenTanks;
-	
-	public static boolean solarPanels;
-	public static boolean advancedRefinery;
-	public static boolean ultimateRefinery;
-	public static boolean advancedCompressor;
-	public static boolean ultimateCompressor;
-	public static boolean slabsAndStairs = false;
-	public static boolean nuclearBomb;
-	
-	public static boolean basicDecrystallizer;
-	public static boolean basicCrystallizer;
-	public static boolean basicSmasher;
-	public static boolean basicChemicalInjector;
-	public static boolean basicSolarEvaporationChamber;
-	
-	public static boolean mercury;
-	public static boolean ceres;
-	public static boolean jupiter;
-	public static boolean saturn;
-	public static boolean uranus;
-	public static boolean neptune;
-	public static boolean pluto;
-	public static boolean eris;
+	public static boolean GENERATE_URANUS_IGLOOS;
+	public static boolean GENERATE_URANUS_ICE_SPIKES;
 
-	public static boolean triton;
-	public static boolean europa;
-	public static boolean io;
-	public static boolean deimos;
-	public static boolean phobos;
-	public static boolean callisto;
-	public static boolean ganymede;
-	public static boolean rhea;
-	public static boolean titan;
-	public static boolean oberon;
-	public static boolean titania;
-	public static boolean iapetus;
-	
-	public static boolean makemake;
-	public static boolean haumea;
-	public static boolean kuiperBelt;
-	public static boolean keplerSolarSystems;
-	
-	public static boolean kepler22b;
+	public static boolean ITEMS_CARBON;
+	public static boolean ITEMS_PALLADIUM;
+	public static boolean ITEMS_MAGNESIUM;
+	public static boolean ITEMS_CRYSTAL;
+	public static boolean ITEMS_TUNGSTEN;
+	public static boolean ITEMS_GEM_RED;
+	public static boolean ITEMS_GEM_BLUE;
+	public static boolean ITEMS_GEM_WHITE;
+	public static boolean ITEMS_ZINC;
+	public static boolean ITEMS_MERCURY;
+	public static boolean ITEMS_URANIUM;
+	public static boolean ITEMS_KEPLER22B;
 
-	public static int mercuryID;
-	public static int ceresID;
-	public static int jupiterID;
-	public static int saturnID;
-	public static int uranusID;
-	public static int neptuneID;
-	public static int plutoID;
-	public static int erisID;
+	public static boolean THERMAL_PADDINGS;
+	public static boolean BATTERIES;
+	public static boolean CANNED_FOOD;
+	public static boolean CUSTOM_APPLES;
+	public static boolean OXYGEN_TANKS;
 
-	public static int tritonID;
-	public static int europaID;
-	public static int ioID;
-	public static int deimosID;
-	public static int phobosID;
-	public static int callistoID;
-	public static int ganymedeID;
-	public static int rheaID;
-	public static int titanID;
-	public static int oberonID;
-	public static int titaniaID;
-	public static int iapetusID;
-	
-	public static int kepler22bID;
-	
-	public static int mercurySpaceStationID;
-	public static int mercurySpaceStationStaticID;
-	
-	public static int venusSpaceStationID;
-	public static int venusSpaceStationStaticID;
+	public static boolean SOLAR_PANELS;
+	public static boolean REFINERY_ADVANCED;
+	public static boolean REFINERY_ULTIMATE;
+	public static boolean OXYGEN_COMPRESSOR_ADVANCED;
+	public static boolean OXYGEN_COMPRESSOR_ULTIMATE;
+	public static boolean SLABS_AND_STAIRS = false;
+	public static boolean NUCLEAR_BOMB;
 
-	public static int ceresSpaceStationID;
-	public static int ceresSpaceStationStaticID;
+	public static boolean BASIC_DECRYSTALLIZER;
+	public static boolean BASIC_CRYSTALLIZER;
+	public static boolean BASIC_SMASHER;
+	public static boolean BASIC_CHEMICAL_INJECTOR;
+	public static boolean BASIC_SOLAR_EVAPORTATION_CHAMBER;
 
-	public static int marsSpaceStationID;
-	public static int marsSpaceStationStaticID;
+	public static boolean MERCURY;
+	public static boolean CERES;
+	public static boolean JUPITER;
+	public static boolean SATURN;
+	public static boolean URANUS;
+	public static boolean NEPTUNE;
+	public static boolean PLUTO;
+	public static boolean ERIS;
 
-	public static int jupiterSpaceStationID;
-	public static int jupiterSpaceStationStaticID;
+	public static boolean TRITON;
+	public static boolean EUROPA;
+	public static boolean IO;
+	public static boolean DEIMOS;
+	public static boolean PHOBOS;
+	public static boolean CALLISTO;
+	public static boolean GANYMEDE;
+	public static boolean RHEA;
+	public static boolean TITAN;
+	public static boolean OBERON;
+	public static boolean TITANIA;
+	public static boolean IAPETUS;
 
-	public static int saturnSpaceStationID;
-	public static int saturnSpaceStationStaticID;
+	public static boolean MAKEMAKE;
+	public static boolean HAUMEA;
+	public static boolean KUIPER_BELT;
+	public static boolean KEPLER_SOLAR_SYSTEMS;
 
-	public static int uranusSpaceStationID;
-	public static int uranusSpaceStationStaticID;
+	public static boolean KEPLER22B;
 
-	public static int neptuneSpaceStationID;
-	public static int neptuneSpaceStationStaticID;
+	public static int MERCURY_ID;
+	public static int CERES_ID;
+	public static int JUPITER_ID;
+	public static int SATURN_ID;
+	public static int URANUS_ID;
+	public static int NEPTUNE_ID;
+	public static int PLUTO_ID;
+	public static int ERIS_ID;
 
-	public static int plutoSpaceStationID;
-	public static int plutoSpaceStationStaticID;
+	public static int TRITON_ID;
+	public static int EUROPA_ID;
+	public static int IO_ID;
+	public static int DEIMOS_ID;
+	public static int PHOBOS_ID;
+	public static int CALLISTO_ID;
+	public static int GANYMEDE_ID;
+	public static int RHEA_ID;
+	public static int TITAN_ID;
+	public static int OBERON_ID;
+	public static int TITANIA_ID;
+	public static int IAPETUS_ID;
 
-	public static int erisSpaceStationID;
-	public static int erisSpaceStationStaticID;
-	
-	public static int kepler22bSpaceStationID;
-	public static int kepler22bSpaceStationStaticID;
-	
-	public static boolean mercurySpaceStation;
-	public static boolean venusSpaceStation;
-	public static boolean ceresSpaceStation;
-	public static boolean marsSpaceStation;
-	public static boolean jupiterSpaceStation;
-	public static boolean saturnSpaceStation;
-	public static boolean uranusSpaceStation;
-	public static boolean neptuneSpaceStation;
-	public static boolean plutoSpaceStation;
-	public static boolean erisSpaceStation;
-	public static boolean kepler22bSpaceStation;
+	public static int KEPLER22B_ID;
 
-	public static int mercuryBiomeID;
-	public static int venusBiomeID;
-	public static int ceresBiomeID;
-	public static int jupiterBiomeID;
-	public static int saturnBiomeID;
-	public static int uranusBiomeID;
-	public static int neptuneBiomeID;
-	public static int plutoBiomeID;
-	public static int erisBiomeID;
+	public static int MERCURY_SPACE_STATION_ID;
+	public static int MERCURY_SPACE_STATION_STATIC_ID;
 
-	public static int tritonBiomeID;
-	public static int europaBiomeID;
-	public static int ioBiomeID;
-	public static int deimosBiomeID;
-	public static int phobosBiomeID;
-	public static int callistoBiomeID;
-	public static int ganymedeBiomeID;
-	public static int rheaBiomeID;
-	public static int titanBiomeID;
-	public static int oberonBiomeID;
-	public static int titaniaBiomeID;
-	public static int iapetusBiomeID;
-	
-	public static int kepler22bPlainsBiomeID;
-	public static int kepler22bBlueForestBiomeID;
-	public static int kepler22bPurpleForestBiomeID;
-	public static int kepler22bRedForestBiomeID;
-	public static int kepler22bYellowForestBiomeID;
+	public static int VENUS_SPACE_STATION_ID;
+	public static int VENUS_SPACE_STATION_STATIC_ID;
 
-	public static boolean jupiterLiquid;
-	public static boolean saturnLiquid;
-	public static boolean uranusLiquid;
-	public static boolean neptuneLiquid;
-	public static boolean oreDictionary;
+	public static int CERES_SPACE_STATION_ID;
+	public static int CERES_SPACE_STATION_STATIC_ID;
 
-	public static int schematicTier4GUIID;
-	public static int schematicTier5GUIID;
-	public static int schematicTier6GUIID;
-	public static int schematicTier7GUIID;
-	public static int schematicTier8GUIID;
-	public static int schematicTier9GUIID;
-	public static int schematicTier10GUIID;
+	public static int MARS_SPACE_STATION_ID;
+	public static int MARS_SPACE_STATION_STATIC_ID;
 
-	public static int schematicTier4PageID;
-	public static int schematicTier5PageID;
-	public static int schematicTier6PageID;
-	public static int schematicTier7PageID;
-	public static int schematicTier8PageID;
-	public static int schematicTier9PageID;
-	public static int schematicTier10PageID;
+	public static int JUPITER_SPACE_STATION_ID;
+	public static int JUPITER_SPACE_STATION_STATIC_ID;
 
-	public static boolean microBlock = false;
-	public static boolean neiSupport;
-	public static boolean achievements;
+	public static int SATURN_SPACE_STATION_ID;
+	public static int SATURN_SPACE_STATION_STATIC_ID;
 
-	public static boolean pressure;
-	public static boolean radiation;
+	public static int URANUS_SPACE_STATION_ID;
+	public static int URANUS_SPACE_STATION_STATIC_ID;
 
-	public static boolean leadOreGeneration;
-	
+	public static int NEPTUNE_SPACE_STATION_ID;
+	public static int NEPTUNE_SPACE_STATION_STATIC_ID;
+
+	public static int PLUTO_SPACE_STATION_ID;
+	public static int PLUTO_SPACE_STATION_STATIC_ID;
+
+	public static int ERIS_SPACE_STATION_ID;
+	public static int ERIS_SPACE_STATION_STATIC_ID;
+
+	public static int KEPLER22B_SPACE_STATION_ID;
+	public static int KEPLER22B_SPACE_STATION_STATIC_ID;
+
+	public static boolean MERCURY_SPACE_STATION;
+	public static boolean VENUS_SPACE_STATION;
+	public static boolean CERES_SPACE_STATION;
+	public static boolean MARS_SPACE_STATION;
+	public static boolean JUPITER_SPACE_STATION;
+	public static boolean SATURN_SPACE_STATION;
+	public static boolean URANUS_SPACE_STATION;
+	public static boolean NEPTUNE_SPACE_STATION;
+	public static boolean PLUTO_SPACE_STATION;
+	public static boolean ERIS_SPACE_STATION;
+	public static boolean KEPLER22B_SPACE_STATION;
+
+	public static int MERCURY_BIOME_ID;
+	public static int VENUS_BIOME_ID;
+	public static int CERES_BIOME_ID;
+	public static int JUPITER_BIOME_ID;
+	public static int SATURN_BIOME_ID;
+	public static int URANUS_BIOME_ID;
+	public static int NEPTUNE_BIOME_ID;
+	public static int PLUTO_BIOME_ID;
+	public static int ERIS_BIOME_ID;
+
+	public static int TRITON_BIOME_ID;
+	public static int EUROPA_BIOME_ID;
+	public static int IO_BIOME_ID;
+	public static int DEIMOS_BIOME_ID;
+	public static int PHOBOS_BIOME_ID;
+	public static int CALLISTO_BIOME_ID;
+	public static int GANTMEDE_BIOME_ID;
+	public static int RHEA_BIOME_ID;
+	public static int TITAN_BIOME_ID;
+	public static int OBERON_BIOME_ID;
+	public static int TITANIA_BIOME_ID;
+	public static int IAPETUS_BIOME_ID;
+
+	public static int KEPLER22B_PLAINS_BIOME_ID;
+	public static int KEPLER22B_BLUE_FOREST_BIOME_ID;
+	public static int KEPLER22B_PURPLE_FOREST_BIOME_ID;
+	public static int KEPLER22B_RED_FOREST_BIOME_ID;
+	public static int KEPLER22B_YELLOW_FOREST_BIOME_ID;
+
+	public static boolean JUPITER_LIQUID;
+	public static boolean SATURN_LIQUID;
+	public static boolean URANUS_LIQUID;
+	public static boolean NEPTUNE_LIQUID;
+	public static boolean ORE_DICTIONARY;
+
+	public static int SCHEMATIC_TIER_4_GUI_ID;
+	public static int SCHEMATIC_TIER_5_GUI_ID;
+	public static int SCHEMATIC_TIER_6_GUI_ID;
+	public static int SCHEMATIC_TIER_7_GUI_ID;
+	public static int SCHEMATIC_TIER_8_GUI_ID;
+	public static int SCHEMATIC_TIER_9_GUI_ID;
+	public static int SCHEMATIC_TIER_10_GUI_ID;
+
+	public static int SCHEMATIC_TIER_4_PAGE_ID;
+	public static int SCHEMATIC_TIER_5_PAGE_ID;
+	public static int SCHEMATIC_TIER_6_PAGE_ID;
+	public static int SCHEMATIC_TIER_7_PAGE_ID;
+	public static int SCHEMATIC_TIER_8_PAGE_ID;
+	public static int SCHEMATIC_TIER_9_PAGE_ID;
+	public static int SCHEMATIC_TIER_10_PAGE_ID;
+
+	public static boolean NEI_SUPPORT;
+	public static boolean ACHIEVEMENTS;
+
+	public static boolean PRESSURE;
+	public static boolean RADIATION;
+
+	public static boolean ORE_LEAD_GENERATION;
+
 	public static void load() {
 		Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
 		config.load();
 
-		config.addCustomCategoryComment(dimensionID, "Change if a dimension ID is causing conflicts!");
-		config.addCustomCategoryComment(biomeID, "Change if a biome ID is causing conflicts!");
-		config.addCustomCategoryComment(dimensions, "Disabling this will remove the planet with all the related items/block!");
-		config.addCustomCategoryComment(dimensionSettings, "Enable/Disable dimension settings");
-		config.addCustomCategoryComment(dimensionsCustom, "Disabling this will remove the planet/moon with all the related items/block//space stations!");
-		config.addCustomCategoryComment(schematicsGUI, "Change if a Schematic GUI ID is causing conflicts!");
-		config.addCustomCategoryComment(schematicsPage, "Change if a Schematic Page ID is causing conflicts!");
-		config.addCustomCategoryComment(items, "Changing to false will disable the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
-		config.addCustomCategoryComment(blocks, "Changing to false will disable the blocks/machines");
-		config.addCustomCategoryComment(dimensionBlockSettings, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid"+ "\"" + " option can cause lag! And It will disable the villages for that planet!");
-		config.addCustomCategoryComment(spacestationCustom, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
-		config.addCustomCategoryComment(compatibility,"Enable/Disable compatibility settings");
-		config.addCustomCategoryComment(generalsettings,"Enable/Disable general settings");
-		
-		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
-		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
-		magnesiumItems = config.get(items, "Magnesium Tools & Armor", true).getBoolean(true);
-		crystalItems = config.get(items, "Crystal Tools & Armor", true).getBoolean(true);
-		tungstenItems = config.get(items, "Tungsten Tools & Armor", true).getBoolean(true);
-		redGemItems = config.get(items, "Red Gem Tools & Armor", true).getBoolean(true);
-		blueGemItems = config.get(items, "Blue Gem Tools & Armor", true).getBoolean(true);
-		whiteGemItems = config.get(items, "White Gem Tools & Armor", true).getBoolean(true);
-		zincItems = config.get(items, "Zinc Tools & Armor", true).getBoolean(true);
-		mercuryItems = config.get(items, "Mercury Tools & Armor", true).getBoolean(true);
-		uraniumItems = config.get(items, "Uranium Tools & Armor", true).getBoolean(true);
-		kepler22bItems = config.get(items, "Kepler22b Tools & Armor", true).getBoolean(true);
-		
-		thermalPaddings = config.get(items, "Tier 3 - 4 Thermal Padding", true, "This option will change planet thermal levels to support this feature!").getBoolean(true);
-		batteries = config.get(items, "Custom Batteries", true, "This option will disable all Custom Batteries!").getBoolean(true);
-		//cannedFood = config.get(items, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
-		customApples = config.get(items, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable all Custom Normal/Notch Apples!").getBoolean(true);
-		oxygenTanks = config.get(items, "Custom Oxygen Tanks", true, "This option will disable Extremely Heavy & Very Heavy Oxygen Tanks").getBoolean(true);
-		
-		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
-		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
-		ultimateRefinery = config.get(blocks, "Ultimate Refinery", true).getBoolean(true);
-		advancedCompressor = config.get(blocks, "Advanced Compressor/Decompressor", true).getBoolean(true);
-		ultimateCompressor = config.get(blocks, "Ultimate Compressor/Decompressor", true).getBoolean(true);
-		nuclearBomb = config.get(blocks, "Nuclear Bomb", true).getBoolean(true);
+		config.addCustomCategoryComment(DIMENSION_IDS, "Change if a dimension ID is causing conflicts!");
+		config.addCustomCategoryComment(BIOME_IDS, "Change if a biome ID is causing conflicts!");
+		config.addCustomCategoryComment(MAIN_DIMENSIONS, "Disabling this will remove the planet with all the related items/block!");
+		config.addCustomCategoryComment(DIMENSION_SETTINGS, "Enable/Disable dimension settings");
+		config.addCustomCategoryComment(OTHER_DIMENSIONS, "Disabling this will remove the planet/moon with all the related items/block//space stations!");
+		config.addCustomCategoryComment(SCHEMATIC_GUI_IDS, "Change if a Schematic GUI ID is causing conflicts!");
+		config.addCustomCategoryComment(SCHEMATIC_PAGE_IDS, "Change if a Schematic Page ID is causing conflicts!");
+		config.addCustomCategoryComment(ITEMS, "Changing to false will disable the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
+		config.addCustomCategoryComment(BLOCKS, "Changing to false will disable the blocks/machines");
+		config.addCustomCategoryComment(DIMENSION_BLOCK_SETTINGS, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid" + "\"" + " option can cause lag! And It will disable the villages for that planet!");
+		config.addCustomCategoryComment(SPACE_STATIONS, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
+		config.addCustomCategoryComment(COMPATIBILITY, "Enable/Disable compatibility settings");
+		config.addCustomCategoryComment(GENERAL_SETTINGS, "Enable/Disable general settings");
 
-		basicDecrystallizer = config.get(blocks, "Basic Decrystallizer", true).getBoolean(true);
-		basicCrystallizer = config.get(blocks, "Basic Crystallizer", true).getBoolean(true);
-		basicSmasher = config.get(blocks, "Basic Block Smasher", true).getBoolean(true);
-		basicChemicalInjector = config.get(blocks, "Basic Chemical Injector", true).getBoolean(true);
-		basicSolarEvaporationChamber = config.get(blocks, "Basic Solar Evaporation Chamber", true).getBoolean(true);
-		
-		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true,"Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
-		useDefaultBosses = config.get(dimensionSettings, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
-		
-		//mercuryRocketTier = config.get(dimensionSettings, "Mercury Rocket required", 4).getInt();
-		ceresRocketTier = config.get(dimensionSettings, "Ceres Rocket required", 4).getInt();
-		//erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
+		ITEMS_CARBON = config.get(ITEMS, "Carbon Tools & Armor", true).getBoolean(true);
+		ITEMS_PALLADIUM = config.get(ITEMS, "Palladium Tools & Armor", true).getBoolean(true);
+		ITEMS_MAGNESIUM = config.get(ITEMS, "Magnesium Tools & Armor", true).getBoolean(true);
+		ITEMS_CRYSTAL = config.get(ITEMS, "Crystal Tools & Armor", true).getBoolean(true);
+		ITEMS_TUNGSTEN = config.get(ITEMS, "Tungsten Tools & Armor", true).getBoolean(true);
+		ITEMS_GEM_RED = config.get(ITEMS, "Red Gem Tools & Armor", true).getBoolean(true);
+		ITEMS_GEM_BLUE = config.get(ITEMS, "Blue Gem Tools & Armor", true).getBoolean(true);
+		ITEMS_GEM_WHITE = config.get(ITEMS, "White Gem Tools & Armor", true).getBoolean(true);
+		ITEMS_ZINC = config.get(ITEMS, "Zinc Tools & Armor", true).getBoolean(true);
+		ITEMS_MERCURY = config.get(ITEMS, "Mercury Tools & Armor", true).getBoolean(true);
+		ITEMS_URANIUM = config.get(ITEMS, "Uranium Tools & Armor", true).getBoolean(true);
+		ITEMS_KEPLER22B = config.get(ITEMS, "Kepler22b Tools & Armor", true).getBoolean(true);
 
-		genUranusIgloos = config.get(dimensionSettings, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
-		genUranusIceSpikes = config.get(dimensionSettings, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
+		THERMAL_PADDINGS = config.get(ITEMS, "Tier 3 - 4 Thermal Padding", true, "This option will change planet thermal levels to support this feature!").getBoolean(true);
+		BATTERIES = config.get(ITEMS, "Custom Batteries", true, "This option will disable all Custom Batteries!").getBoolean(true);
+		CANNED_FOOD = config.get(ITEMS, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
+		CUSTOM_APPLES = config.get(ITEMS, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable all Custom Normal/Notch Apples!").getBoolean(true);
+		OXYGEN_TANKS = config.get(ITEMS, "Custom Oxygen Tanks", true, "This option will disable Extremely Heavy & Very Heavy Oxygen Tanks").getBoolean(true);
 
-		//	jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
-		//	saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
-		//	uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
-		//	neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
-		
-		//eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
-		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
-		//mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
-		//pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
+		SOLAR_PANELS = config.get(BLOCKS, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
+		REFINERY_ADVANCED = config.get(BLOCKS, "Advanced Refinery", true).getBoolean(true);
+		REFINERY_ULTIMATE = config.get(BLOCKS, "Ultimate Refinery", true).getBoolean(true);
+		OXYGEN_COMPRESSOR_ADVANCED = config.get(BLOCKS, "Advanced Compressor/Decompressor", true).getBoolean(true);
+		OXYGEN_COMPRESSOR_ULTIMATE = config.get(BLOCKS, "Ultimate Compressor/Decompressor", true).getBoolean(true);
+		NUCLEAR_BOMB = config.get(BLOCKS, "Nuclear Bomb", true).getBoolean(true);
 
-		triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
-		europa = config.get(dimensionsCustom, "Europa", true, "").getBoolean(true);
-		io = config.get(dimensionsCustom, "IO", true, "").getBoolean(true);
-		deimos = config.get(dimensionsCustom, "Deimos", true, "").getBoolean(true);
-		phobos = config.get(dimensionsCustom, "Phobos", true, "").getBoolean(true);
-		callisto = config.get(dimensionsCustom, "Callisto", true, "").getBoolean(true);
-		ganymede = config.get(dimensionsCustom, "Ganymede", true, "").getBoolean(true);
-		rhea = config.get(dimensionsCustom, "Rhea", true, "").getBoolean(true);
-		titan = config.get(dimensionsCustom, "Titan", true, "").getBoolean(true);
-		oberon = config.get(dimensionsCustom, "Oberon", true, "").getBoolean(true);
-		titania = config.get(dimensionsCustom, "Titania", true, "").getBoolean(true);
-		iapetus = config.get(dimensionsCustom, "Iapetus", true, "").getBoolean(true);
+		BASIC_DECRYSTALLIZER = config.get(BLOCKS, "Basic Decrystallizer", true).getBoolean(true);
+		BASIC_CRYSTALLIZER = config.get(BLOCKS, "Basic Crystallizer", true).getBoolean(true);
+		BASIC_SMASHER = config.get(BLOCKS, "Basic Block Smasher", true).getBoolean(true);
+		BASIC_CHEMICAL_INJECTOR = config.get(BLOCKS, "Basic Chemical Injector", true).getBoolean(true);
+		BASIC_SOLAR_EVAPORTATION_CHAMBER = config.get(BLOCKS, "Basic Solar Evaporation Chamber", true).getBoolean(true);
 
-		haumea = config.get(dimensionsCustom, "Haumea", true, "").getBoolean(true);
-		makemake = config.get(dimensionsCustom, "Makemake", true, "").getBoolean(true);
-		kuiperBelt = config.get(dimensionsCustom, "Kuiper Belt", true, "").getBoolean(true);
-		keplerSolarSystems = config.get(dimensionsCustom, "Kepler SolarSystems", true, "").getBoolean(true);
-		
-		kepler22b = config.get(dimensionsCustom, "Kepler 22b", true, "").getBoolean(true);
+		MOB_SUFFOCATION = config.get(DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
+		USE_DEFAULT_BOSSES = config.get(DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
 
-		mercurySpaceStation = config.get(spacestationCustom, "Mercury SpaceStation", true, "").getBoolean(true);
-		venusSpaceStation = config.get(spacestationCustom, "Venus SpaceStation", true, "").getBoolean(true);
-		ceresSpaceStation = config.get(spacestationCustom, "Ceres SpaceStation", true, "").getBoolean(true);
-		marsSpaceStation = config.get(spacestationCustom, "Mars SpaceStation", true, "").getBoolean(true);
-		jupiterSpaceStation = config.get(spacestationCustom, "Jupiter SpaceStation", true, "").getBoolean(true);
-		saturnSpaceStation = config.get(spacestationCustom, "Saturn SpaceStation", true, "").getBoolean(true);
-		uranusSpaceStation = config.get(spacestationCustom, "Uranus SpaceStation", true, "").getBoolean(true);
-		neptuneSpaceStation = config.get(spacestationCustom, "Neptune SpaceStation", true, "").getBoolean(true);
-		plutoSpaceStation = config.get(spacestationCustom, "Pluto SpaceStation", true, "").getBoolean(true);
-		erisSpaceStation = config.get(spacestationCustom, "Eris SpaceStation", true, "").getBoolean(true);
-		kepler22bSpaceStation = config.get(spacestationCustom, "Kepler22b SpaceStation", true, "").getBoolean(true);
+		ROCKET_TIER_CERES = config.get(DIMENSION_SETTINGS, "Ceres Rocket required", 4).getInt();
 
-		mercury = config.get(dimensions, "Mercury & Tier 4 Rocket", true,"Disabling this will remove the Mercury & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		jupiter = config.get(dimensions, "Jupiter & Tier 5 Rocket", true,"Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		saturn = config.get(dimensions, "Saturn & Tier 6 Rocket", true,"Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations").getBoolean(true);
-		uranus = config.get(dimensions, "Uranus & Tier 7 Rocket", true,"Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		neptune = config.get(dimensions, "Neptune & Tier 8 Rocket", true,"Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		pluto = config.get(dimensions, "Pluto & Tier 9 Rocket", true,"Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-		eris = config.get(dimensions, "Eris & Tier 10 Rocket", true,"Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		GENERATE_URANUS_IGLOOS = config.get(DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
+		GENERATE_URANUS_ICE_SPIKES = config.get(DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
 
-		jupiterLiquid = config.get(dimensionBlockSettings, "Jupiter's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		saturnLiquid = config.get(dimensionBlockSettings, "Saturn's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		uranusLiquid = config.get(dimensionBlockSettings, "Uranus's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		neptuneLiquid = config.get(dimensionBlockSettings, "Neptune's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
+		CERES = config.get(OTHER_DIMENSIONS, "Ceres", true).getBoolean(true);
 
-		mercuryID = config.get(dimensionID, "Mercury Dimension ID", -13).getInt();
-		ceresID = config.get(dimensionID, "Ceres Dimension ID", -20).getInt();
-		jupiterID = config.get(dimensionID, "Jupiter Dimension ID", -15).getInt();
-		saturnID = config.get(dimensionID, "Saturn Dimension ID", -16).getInt();
-		uranusID = config.get(dimensionID, "Uranus Dimension ID", -17).getInt();
-		neptuneID = config.get(dimensionID, "Neptune Dimension ID", -18).getInt();
-		plutoID = config.get(dimensionID, "Pluto Dimension ID", -19).getInt();
-		erisID = config.get(dimensionID, "Eris Dimension ID", -21).getInt();
+		TRITON = config.get(OTHER_DIMENSIONS, "Triton", true, "").getBoolean(true);
+		EUROPA = config.get(OTHER_DIMENSIONS, "Europa", true, "").getBoolean(true);
+		IO = config.get(OTHER_DIMENSIONS, "IO", true, "").getBoolean(true);
+		DEIMOS = config.get(OTHER_DIMENSIONS, "Deimos", true, "").getBoolean(true);
+		PHOBOS = config.get(OTHER_DIMENSIONS, "Phobos", true, "").getBoolean(true);
+		CALLISTO = config.get(OTHER_DIMENSIONS, "Callisto", true, "").getBoolean(true);
+		GANYMEDE = config.get(OTHER_DIMENSIONS, "Ganymede", true, "").getBoolean(true);
+		RHEA = config.get(OTHER_DIMENSIONS, "Rhea", true, "").getBoolean(true);
+		TITAN = config.get(OTHER_DIMENSIONS, "Titan", true, "").getBoolean(true);
+		OBERON = config.get(OTHER_DIMENSIONS, "Oberon", true, "").getBoolean(true);
+		TITANIA = config.get(OTHER_DIMENSIONS, "Titania", true, "").getBoolean(true);
+		IAPETUS = config.get(OTHER_DIMENSIONS, "Iapetus", true, "").getBoolean(true);
 
-		ioID = config.get(dimensionID, "Io Dimension ID", -32).getInt();
-		europaID = config.get(dimensionID, "Europa Dimension ID", -34).getInt();
-		phobosID = config.get(dimensionID, "Phobos Dimension ID", -33).getInt();
-		deimosID = config.get(dimensionID, "Deimos Dimension ID", -35).getInt();
-		tritonID = config.get(dimensionID, "Triton Dimension ID", -36).getInt();
-		callistoID = config.get(dimensionID, "Callisto Dimension ID", -37).getInt();
-		ganymedeID = config.get(dimensionID, "Ganymede Dimension ID", -38).getInt();
-		rheaID = config.get(dimensionID, "Rhea Dimension ID", -39).getInt();
-		titanID = config.get(dimensionID, "Titan Dimension ID", -40).getInt();
-		oberonID = config.get(dimensionID, "Oberon Dimension ID", -41).getInt();
-		titaniaID = config.get(dimensionID, "Titania Dimension ID", -42).getInt();
-		iapetusID = config.get(dimensionID, "Iapetus Dimension ID", -43).getInt();
-		
-		kepler22bID = config.get(dimensionID, "Kepler 22b Dimension ID", -22).getInt();
-		
-		mercurySpaceStationID = config.get(dimensionID, "Mercury SpaceStation Dimension ID", -61).getInt();
-		mercurySpaceStationStaticID = config.get(dimensionID, "Mercury SpaceStation Static Dimension ID", -60).getInt();
+		HAUMEA = config.get(OTHER_DIMENSIONS, "Haumea", true, "").getBoolean(true);
+		MAKEMAKE = config.get(OTHER_DIMENSIONS, "Makemake", true, "").getBoolean(true);
+		KUIPER_BELT = config.get(OTHER_DIMENSIONS, "Kuiper Belt", true, "").getBoolean(true);
+		KEPLER_SOLAR_SYSTEMS = config.get(OTHER_DIMENSIONS, "Kepler SolarSystems", true, "").getBoolean(true);
 
-		venusSpaceStationID = config.get(dimensionID, "Venus SpaceStation Dimension ID", -63).getInt();
-		venusSpaceStationStaticID = config.get(dimensionID, "Venus SpaceStation Static Dimension ID", -62).getInt();
+		KEPLER22B = config.get(OTHER_DIMENSIONS, "Kepler 22b", true, "").getBoolean(true);
 
-		ceresSpaceStationID = config.get(dimensionID, "Ceres SpaceStation Dimension ID", -65).getInt();
-		ceresSpaceStationStaticID = config.get(dimensionID, "Ceres SpaceStation Static Dimension ID", -64).getInt();
+		MERCURY_SPACE_STATION = config.get(SPACE_STATIONS, "Mercury SpaceStation", true, "").getBoolean(true);
+		VENUS_SPACE_STATION = config.get(SPACE_STATIONS, "Venus SpaceStation", true, "").getBoolean(true);
+		CERES_SPACE_STATION = config.get(SPACE_STATIONS, "Ceres SpaceStation", true, "").getBoolean(true);
+		MARS_SPACE_STATION = config.get(SPACE_STATIONS, "Mars SpaceStation", true, "").getBoolean(true);
+		JUPITER_SPACE_STATION = config.get(SPACE_STATIONS, "Jupiter SpaceStation", true, "").getBoolean(true);
+		SATURN_SPACE_STATION = config.get(SPACE_STATIONS, "Saturn SpaceStation", true, "").getBoolean(true);
+		URANUS_SPACE_STATION = config.get(SPACE_STATIONS, "Uranus SpaceStation", true, "").getBoolean(true);
+		NEPTUNE_SPACE_STATION = config.get(SPACE_STATIONS, "Neptune SpaceStation", true, "").getBoolean(true);
+		PLUTO_SPACE_STATION = config.get(SPACE_STATIONS, "Pluto SpaceStation", true, "").getBoolean(true);
+		ERIS_SPACE_STATION = config.get(SPACE_STATIONS, "Eris SpaceStation", true, "").getBoolean(true);
+		KEPLER22B_SPACE_STATION = config.get(SPACE_STATIONS, "Kepler22b SpaceStation", true, "").getBoolean(true);
 
-		marsSpaceStationID = config.get(dimensionID, "Mars SpaceStation Dimension ID", -67).getInt();
-		marsSpaceStationStaticID = config.get(dimensionID, "Mars SpaceStation Static Dimension ID", -66).getInt();
+		MERCURY = config.get(MAIN_DIMENSIONS, "Mercury & Tier 4 Rocket", true, "Disabling this will remove the Mercury & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		JUPITER = config.get(MAIN_DIMENSIONS, "Jupiter & Tier 5 Rocket", true, "Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		SATURN = config.get(MAIN_DIMENSIONS, "Saturn & Tier 6 Rocket", true, "Disabling this will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations").getBoolean(true);
+		URANUS = config.get(MAIN_DIMENSIONS, "Uranus & Tier 7 Rocket", true, "Disabling this will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		NEPTUNE = config.get(MAIN_DIMENSIONS, "Neptune & Tier 8 Rocket", true, "Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		PLUTO = config.get(MAIN_DIMENSIONS, "Pluto & Tier 9 Rocket", true, "Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
+		ERIS = config.get(MAIN_DIMENSIONS, "Eris & Tier 10 Rocket", true, "Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
-		jupiterSpaceStationID = config.get(dimensionID, "Jupiter SpaceStation Dimension ID", -69).getInt();
-		jupiterSpaceStationStaticID = config.get(dimensionID, "Jupiter SpaceStation Static Dimension ID", -68).getInt();
+		JUPITER_LIQUID = config.get(DIMENSION_BLOCK_SETTINGS, "Jupiter's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
+		SATURN_LIQUID = config.get(DIMENSION_BLOCK_SETTINGS, "Saturn's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
+		URANUS_LIQUID = config.get(DIMENSION_BLOCK_SETTINGS, "Uranus's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
+		NEPTUNE_LIQUID = config.get(DIMENSION_BLOCK_SETTINGS, "Neptune's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
 
-		saturnSpaceStationID = config.get(dimensionID, "Saturn SpaceStation Dimension ID", -71).getInt();
-		saturnSpaceStationStaticID = config.get(dimensionID, "Saturn SpaceStation Static Dimension ID", -70).getInt();
+		MERCURY_ID = config.get(DIMENSION_IDS, "Mercury Dimension ID", -13).getInt();
+		CERES_ID = config.get(DIMENSION_IDS, "Ceres Dimension ID", -20).getInt();
+		JUPITER_ID = config.get(DIMENSION_IDS, "Jupiter Dimension ID", -15).getInt();
+		SATURN_ID = config.get(DIMENSION_IDS, "Saturn Dimension ID", -16).getInt();
+		URANUS_ID = config.get(DIMENSION_IDS, "Uranus Dimension ID", -17).getInt();
+		NEPTUNE_ID = config.get(DIMENSION_IDS, "Neptune Dimension ID", -18).getInt();
+		PLUTO_ID = config.get(DIMENSION_IDS, "Pluto Dimension ID", -19).getInt();
+		ERIS_ID = config.get(DIMENSION_IDS, "Eris Dimension ID", -21).getInt();
 
-		uranusSpaceStationID = config.get(dimensionID, "Uranus SpaceStation Dimension ID", -73).getInt();
-		uranusSpaceStationStaticID = config.get(dimensionID, "Uranus SpaceStation Static Dimension ID", -72).getInt();
+		IO_ID = config.get(DIMENSION_IDS, "Io Dimension ID", -32).getInt();
+		EUROPA_ID = config.get(DIMENSION_IDS, "Europa Dimension ID", -34).getInt();
+		PHOBOS_ID = config.get(DIMENSION_IDS, "Phobos Dimension ID", -33).getInt();
+		DEIMOS_ID = config.get(DIMENSION_IDS, "Deimos Dimension ID", -35).getInt();
+		TRITON_ID = config.get(DIMENSION_IDS, "Triton Dimension ID", -36).getInt();
+		CALLISTO_ID = config.get(DIMENSION_IDS, "Callisto Dimension ID", -37).getInt();
+		GANYMEDE_ID = config.get(DIMENSION_IDS, "Ganymede Dimension ID", -38).getInt();
+		RHEA_ID = config.get(DIMENSION_IDS, "Rhea Dimension ID", -39).getInt();
+		TITAN_ID = config.get(DIMENSION_IDS, "Titan Dimension ID", -40).getInt();
+		OBERON_ID = config.get(DIMENSION_IDS, "Oberon Dimension ID", -41).getInt();
+		TITANIA_ID = config.get(DIMENSION_IDS, "Titania Dimension ID", -42).getInt();
+		IAPETUS_ID = config.get(DIMENSION_IDS, "Iapetus Dimension ID", -43).getInt();
 
-		neptuneSpaceStationID = config.get(dimensionID, "Neptune SpaceStation Dimension ID", -75).getInt();
-		neptuneSpaceStationStaticID = config.get(dimensionID, "Neptune SpaceStation Static Dimension ID", -74).getInt();
+		KEPLER22B_ID = config.get(DIMENSION_IDS, "Kepler 22b Dimension ID", -22).getInt();
 
-		plutoSpaceStationID = config.get(dimensionID, "Pluto SpaceStation Dimension ID", -77).getInt();
-		plutoSpaceStationStaticID = config.get(dimensionID, "Pluto SpaceStation Static Dimension ID", -76).getInt();
+		MERCURY_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Mercury SpaceStation Dimension ID", -61).getInt();
+		MERCURY_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Mercury SpaceStation Static Dimension ID", -60).getInt();
 
-		erisSpaceStationID = config.get(dimensionID, "Eris SpaceStation Dimension ID", -79).getInt();
-		erisSpaceStationStaticID = config.get(dimensionID, "Eris SpaceStation Static Dimension ID", -78).getInt();
+		VENUS_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Venus SpaceStation Dimension ID", -63).getInt();
+		VENUS_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Venus SpaceStation Static Dimension ID", -62).getInt();
 
-		kepler22bSpaceStationID = config.get(dimensionID, "Kepler 22b SpaceStation Dimension ID", -81).getInt();
-		kepler22bSpaceStationStaticID = config.get(dimensionID, "Kepler 22b SpaceStation Static Dimension ID", -80).getInt();
-		
-		mercuryBiomeID = config.get(biomeID, "Mercury Biome ID", 148).getInt();
-		ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();
-		jupiterBiomeID = config.get(biomeID, "Jupiter Biome ID", 150).getInt();
-		saturnBiomeID = config.get(biomeID, "Saturn Biome ID", 151).getInt();
-		uranusBiomeID = config.get(biomeID, "Uranus Biome ID", 152).getInt();
-		neptuneBiomeID = config.get(biomeID, "Neptune Biome ID", 153).getInt();
-		plutoBiomeID = config.get(biomeID, "Pluto Biome ID", 154).getInt();
-		erisBiomeID = config.get(biomeID, "Eris Biome ID", 156).getInt();
-		europaBiomeID = config.get(biomeID, "Europa Biome ID", 157).getInt();
-		ioBiomeID = config.get(biomeID, "Io Biome ID", 158).getInt();
-		deimosBiomeID = config.get(biomeID, "Deimos Biome ID", 159).getInt();
-		phobosBiomeID = config.get(biomeID, "Phobos Biome ID", 160).getInt();
-		tritonBiomeID = config.get(biomeID, "Triton Biome ID", 161).getInt();
-		callistoBiomeID = config.get(biomeID, "Callisto Biome ID", 162).getInt();
-		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 163).getInt();
-		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 164).getInt();
-		titanBiomeID = config.get(biomeID, "Titan Biome ID", 165).getInt();
-		kepler22bPlainsBiomeID = config.get(biomeID, "Kepler22b Plains Biome ID", 166).getInt();
-		kepler22bBlueForestBiomeID = config.get(biomeID, "Kepler22b Blue Maple Forest Biome ID", 168).getInt();
-		kepler22bPurpleForestBiomeID = config.get(biomeID, "Kepler22b Purple Maple Forest Biome ID", 169).getInt();
-		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
-		kepler22bYellowForestBiomeID = config.get(biomeID, "Kepler22b Yellow Maple Forest Biome ID", 171).getInt();
-		oberonBiomeID = config.get(biomeID, "Oberon Biome ID", 172).getInt();
-		titaniaBiomeID = config.get(biomeID, "Titania Biome ID", 173).getInt();
-		iapetusBiomeID = config.get(biomeID, "Iapetus Biome ID", 174).getInt();
+		CERES_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Ceres SpaceStation Dimension ID", -65).getInt();
+		CERES_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Ceres SpaceStation Static Dimension ID", -64).getInt();
 
-		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
-		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
-		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();
-		schematicTier7GUIID = config.get(schematicsGUI, "Schematic Tier 7 GUI ID", 5558).getInt();
-		schematicTier8GUIID = config.get(schematicsGUI, "Schematic Tier 8 GUI ID", 5559).getInt();
-		schematicTier9GUIID = config.get(schematicsGUI, "Schematic Tier 9 GUI ID", 5560).getInt();
-		schematicTier10GUIID = config.get(schematicsGUI, "Schematic Tier 10 GUI ID", 5561).getInt();
+		MARS_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Mars SpaceStation Dimension ID", -67).getInt();
+		MARS_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Mars SpaceStation Static Dimension ID", -66).getInt();
 
-		schematicTier4PageID = config.get(schematicsPage, "Schematic Tier 4 Page ID", 6666).getInt();
-		schematicTier5PageID = config.get(schematicsPage, "Schematic Tier 5 Page ID", 6667).getInt();
-		schematicTier6PageID = config.get(schematicsPage, "Schematic Tier 6 Page ID", 6668).getInt();
-		schematicTier7PageID = config.get(schematicsPage, "Schematic Tier 7 Page ID", 6669).getInt();
-		schematicTier8PageID = config.get(schematicsPage, "Schematic Tier 8 Page ID", 6670).getInt();
-		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
-		schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
+		JUPITER_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Jupiter SpaceStation Dimension ID", -69).getInt();
+		JUPITER_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Jupiter SpaceStation Static Dimension ID", -68).getInt();
 
-		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
-		oreDictionary = config.get(compatibility, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
-		
-		achievements = config.get(generalsettings, "Enable achievements", true, "").getBoolean(true);
+		SATURN_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Saturn SpaceStation Dimension ID", -71).getInt();
+		SATURN_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Saturn SpaceStation Static Dimension ID", -70).getInt();
 
-		pressure = config.get(generalsettings, "Enable pressure", true, "").getBoolean(true);
-		radiation = config.get(generalsettings, "Enable radiation", true, "").getBoolean(true);
-		
-		leadOreGeneration = config.get(generalsettings, "Enable generation of Lead Ore in the Overworld", true, "").getBoolean(true);
-		
+		URANUS_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Uranus SpaceStation Dimension ID", -73).getInt();
+		URANUS_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Uranus SpaceStation Static Dimension ID", -72).getInt();
+
+		NEPTUNE_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Neptune SpaceStation Dimension ID", -75).getInt();
+		NEPTUNE_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Neptune SpaceStation Static Dimension ID", -74).getInt();
+
+		PLUTO_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Pluto SpaceStation Dimension ID", -77).getInt();
+		PLUTO_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Pluto SpaceStation Static Dimension ID", -76).getInt();
+
+		ERIS_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Eris SpaceStation Dimension ID", -79).getInt();
+		ERIS_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Eris SpaceStation Static Dimension ID", -78).getInt();
+
+		KEPLER22B_SPACE_STATION_ID = config.get(DIMENSION_IDS, "Kepler 22b SpaceStation Dimension ID", -81).getInt();
+		KEPLER22B_SPACE_STATION_STATIC_ID = config.get(DIMENSION_IDS, "Kepler 22b SpaceStation Static Dimension ID", -80).getInt();
+
+		MERCURY_BIOME_ID = config.get(BIOME_IDS, "Mercury Biome ID", 148).getInt();
+		CERES_BIOME_ID = config.get(BIOME_IDS, "Ceres Biome ID", 155).getInt();
+		JUPITER_BIOME_ID = config.get(BIOME_IDS, "Jupiter Biome ID", 150).getInt();
+		SATURN_BIOME_ID = config.get(BIOME_IDS, "Saturn Biome ID", 151).getInt();
+		URANUS_BIOME_ID = config.get(BIOME_IDS, "Uranus Biome ID", 152).getInt();
+		NEPTUNE_BIOME_ID = config.get(BIOME_IDS, "Neptune Biome ID", 153).getInt();
+		PLUTO_BIOME_ID = config.get(BIOME_IDS, "Pluto Biome ID", 154).getInt();
+		ERIS_BIOME_ID = config.get(BIOME_IDS, "Eris Biome ID", 156).getInt();
+		EUROPA_BIOME_ID = config.get(BIOME_IDS, "Europa Biome ID", 157).getInt();
+		IO_BIOME_ID = config.get(BIOME_IDS, "Io Biome ID", 158).getInt();
+		DEIMOS_BIOME_ID = config.get(BIOME_IDS, "Deimos Biome ID", 159).getInt();
+		PHOBOS_BIOME_ID = config.get(BIOME_IDS, "Phobos Biome ID", 160).getInt();
+		TRITON_BIOME_ID = config.get(BIOME_IDS, "Triton Biome ID", 161).getInt();
+		CALLISTO_BIOME_ID = config.get(BIOME_IDS, "Callisto Biome ID", 162).getInt();
+		GANTMEDE_BIOME_ID = config.get(BIOME_IDS, "Ganymede Biome ID", 163).getInt();
+		RHEA_BIOME_ID = config.get(BIOME_IDS, "Rhea Biome ID", 164).getInt();
+		TITAN_BIOME_ID = config.get(BIOME_IDS, "Titan Biome ID", 165).getInt();
+		KEPLER22B_PLAINS_BIOME_ID = config.get(BIOME_IDS, "Kepler22b Plains Biome ID", 166).getInt();
+		KEPLER22B_BLUE_FOREST_BIOME_ID = config.get(BIOME_IDS, "Kepler22b Blue Maple Forest Biome ID", 168).getInt();
+		KEPLER22B_PURPLE_FOREST_BIOME_ID = config.get(BIOME_IDS, "Kepler22b Purple Maple Forest Biome ID", 169).getInt();
+		KEPLER22B_RED_FOREST_BIOME_ID = config.get(BIOME_IDS, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
+		KEPLER22B_YELLOW_FOREST_BIOME_ID = config.get(BIOME_IDS, "Kepler22b Yellow Maple Forest Biome ID", 171).getInt();
+		OBERON_BIOME_ID = config.get(BIOME_IDS, "Oberon Biome ID", 172).getInt();
+		TITANIA_BIOME_ID = config.get(BIOME_IDS, "Titania Biome ID", 173).getInt();
+		IAPETUS_BIOME_ID = config.get(BIOME_IDS, "Iapetus Biome ID", 174).getInt();
+
+		SCHEMATIC_TIER_4_GUI_ID = config.get(SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
+		SCHEMATIC_TIER_5_GUI_ID = config.get(SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();
+		SCHEMATIC_TIER_6_GUI_ID = config.get(SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557).getInt();
+		SCHEMATIC_TIER_7_GUI_ID = config.get(SCHEMATIC_GUI_IDS, "Schematic Tier 7 GUI ID", 5558).getInt();
+		SCHEMATIC_TIER_8_GUI_ID = config.get(SCHEMATIC_GUI_IDS, "Schematic Tier 8 GUI ID", 5559).getInt();
+		SCHEMATIC_TIER_9_GUI_ID = config.get(SCHEMATIC_GUI_IDS, "Schematic Tier 9 GUI ID", 5560).getInt();
+		SCHEMATIC_TIER_10_GUI_ID = config.get(SCHEMATIC_GUI_IDS, "Schematic Tier 10 GUI ID", 5561).getInt();
+
+		SCHEMATIC_TIER_4_PAGE_ID = config.get(SCHEMATIC_PAGE_IDS, "Schematic Tier 4 Page ID", 6666).getInt();
+		SCHEMATIC_TIER_5_PAGE_ID = config.get(SCHEMATIC_PAGE_IDS, "Schematic Tier 5 Page ID", 6667).getInt();
+		SCHEMATIC_TIER_6_PAGE_ID = config.get(SCHEMATIC_PAGE_IDS, "Schematic Tier 6 Page ID", 6668).getInt();
+		SCHEMATIC_TIER_7_PAGE_ID = config.get(SCHEMATIC_PAGE_IDS, "Schematic Tier 7 Page ID", 6669).getInt();
+		SCHEMATIC_TIER_8_PAGE_ID = config.get(SCHEMATIC_PAGE_IDS, "Schematic Tier 8 Page ID", 6670).getInt();
+		SCHEMATIC_TIER_9_PAGE_ID = config.get(SCHEMATIC_PAGE_IDS, "Schematic Tier 9 Page ID", 6671).getInt();
+		SCHEMATIC_TIER_10_PAGE_ID = config.get(SCHEMATIC_PAGE_IDS, "Schematic Tier 10 Page ID", 6672).getInt();
+
+		NEI_SUPPORT = config.get(COMPATIBILITY, "Enable NEI Recipe support", true, "").getBoolean(true);
+		ORE_DICTIONARY = config.get(COMPATIBILITY, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
+
+		ACHIEVEMENTS = config.get(GENERAL_SETTINGS, "Enable achievements", true, "").getBoolean(true);
+
+		PRESSURE = config.get(GENERAL_SETTINGS, "Enable pressure", true, "").getBoolean(true);
+		RADIATION = config.get(GENERAL_SETTINGS, "Enable radiation", true, "").getBoolean(true);
+
+		ORE_LEAD_GENERATION = config.get(GENERAL_SETTINGS, "Enable generation of Lead Ore in the Overworld", true, "").getBoolean(true);
+
 		config.save();
 	}
 

@@ -10,11 +10,11 @@ import com.mjr.extraplanets.Config;
 public class MercuryEvents {
 	@SubscribeEvent
 	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.mercuryID) {
+		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.MERCURY_ID) {
 			if (event.getEntity() instanceof EntityPlayer) {
 				event.setCanceled(false);
 			} else {
-				if (Config.mobSuffocation)
+				if (Config.MOB_SUFFOCATION)
 					event.setCanceled(false);
 				else
 					event.setCanceled(true);
@@ -24,7 +24,7 @@ public class MercuryEvents {
 
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.mercuryID) {
+		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.MERCURY_ID) {
 			event.getEntityPlayer().heal(5.0F);
 		}
 	}

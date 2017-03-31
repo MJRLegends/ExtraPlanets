@@ -120,39 +120,39 @@ public class AchievementEventHandler {
 
 	@SubscribeEvent
 	public void onCraftingRockets(EntityItemPickupEvent event) {
-		if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.tier4Rocket)
+		if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_4_ROCKET)
 			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket4, 1);
-		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.tier5Rocket)
+		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_5_ROCKET)
 			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket5, 1);
-		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.tier6Rocket)
+		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_6_ROCKET)
 			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket6, 1);
-		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.tier7Rocket)
+		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_7_ROCKET)
 			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket7, 1);
-		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.tier8Rocket)
+		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_8_ROCKET)
 			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket8, 1);
-		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.tier9Rocket)
+		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_9_ROCKET)
 			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket9, 1);
-		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.tier10Rocket)
+		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_10_ROCKET)
 			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket10, 1);
 	}
 
 	@SubscribeEvent
 	public void onDimensionChange(PlayerChangedDimensionEvent event) {
-		if (event.toDim == Config.mercuryID)
+		if (event.toDim == Config.MERCURY_ID)
 			event.player.addStat(ExtraPlanets_Achievements.mercuryPlanet, 1);
-		else if (event.toDim == Config.ceresID)
+		else if (event.toDim == Config.CERES_ID)
 			event.player.addStat(ExtraPlanets_Achievements.ceresPlanet, 1);
-		else if (event.toDim == Config.jupiterID)
+		else if (event.toDim == Config.JUPITER_ID)
 			event.player.addStat(ExtraPlanets_Achievements.jupiterPlanet, 1);
-		else if (event.toDim == Config.saturnID)
+		else if (event.toDim == Config.SATURN_ID)
 			event.player.addStat(ExtraPlanets_Achievements.saturnPlanet, 1);
-		else if (event.toDim == Config.uranusID)
+		else if (event.toDim == Config.URANUS_ID)
 			event.player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
-		else if (event.toDim == Config.neptuneID)
+		else if (event.toDim == Config.NEPTUNE_ID)
 			event.player.addStat(ExtraPlanets_Achievements.neptunePlanet, 1);
-		else if (event.toDim == Config.plutoID)
+		else if (event.toDim == Config.PLUTO_ID)
 			event.player.addStat(ExtraPlanets_Achievements.plutoPlanet, 1);
-		else if (event.toDim == Config.erisID)
+		else if (event.toDim == Config.ERIS_ID)
 			event.player.addStat(ExtraPlanets_Achievements.erisPlanet, 1);
 	}
 }

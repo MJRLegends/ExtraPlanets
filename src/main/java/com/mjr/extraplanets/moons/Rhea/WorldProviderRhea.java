@@ -120,7 +120,7 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.rhea.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.RHEA.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.rhea;
+		return ExtraPlanets_Moons.RHEA;
 	}
 
 	@Override

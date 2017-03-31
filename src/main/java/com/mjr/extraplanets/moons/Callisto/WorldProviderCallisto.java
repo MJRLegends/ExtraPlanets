@@ -122,7 +122,7 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.callisto.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.CALLISTO.getTierRequirement();
 	}
 
 	@Override
@@ -137,7 +137,7 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.callisto;
+		return ExtraPlanets_Moons.CALLISTO;
 	}
 
 	@Override

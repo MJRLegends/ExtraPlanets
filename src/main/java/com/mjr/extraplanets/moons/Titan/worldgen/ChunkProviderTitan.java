@@ -47,17 +47,17 @@ public class ChunkProviderTitan extends ChunkProviderSpace {
 	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.titanBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.TITAN_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.titanBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.TITAN_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.titanBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.TITAN_BLOCKS, (byte) 2);
 	}
 
 	@Override

@@ -28,7 +28,7 @@ public class WorldGenerationOverworld implements IWorldGenerator {
 			int randPosY = rand.nextInt(64);
 			int randPosZ = chunkZ + rand.nextInt(16);
 
-			(new WorldGenMinable(ExtraPlanets_Blocks.oreLead.getDefaultState(), 10)).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
+			(new WorldGenMinable(ExtraPlanets_Blocks.ORE_LEAD.getDefaultState(), 10)).generate(world, rand, new BlockPos(randPosX, randPosY, randPosZ));
 		}
 	}
 }

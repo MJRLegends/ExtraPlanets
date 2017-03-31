@@ -120,7 +120,7 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.titan.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.TITAN.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.titan;
+		return ExtraPlanets_Moons.TITAN;
 	}
 
 	@Override

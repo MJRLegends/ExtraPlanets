@@ -20,7 +20,7 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit
 	@Override
 	public CelestialBody getCelestialBody()
 	{
-		return ExtraPlanets_SpaceStations.plutoSpaceStation;
+		return ExtraPlanets_SpaceStations.PLUTO_SPACE_STATION;
 	}
 
 	@Override
@@ -181,7 +181,7 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit
 	@Override
 	public boolean canSpaceshipTierPass(int tier)
 	{
-		return tier > ExtraPlanets_Planets.pluto.getTierRequirement();
+		return tier > ExtraPlanets_Planets.PLUTO.getTierRequirement();
 	}
 
 	@Override

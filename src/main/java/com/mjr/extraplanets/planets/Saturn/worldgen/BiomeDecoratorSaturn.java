@@ -29,12 +29,12 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorSaturn() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 4, 5, true, ExtraPlanets_Blocks.saturnBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 4, 4, true, ExtraPlanets_Blocks.saturnBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 8, 3, true, ExtraPlanets_Blocks.saturnBlocks, 2);
-		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.saturnBlocks, 2);
-		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnBlocks, 4, 6, true, ExtraPlanets_Blocks.saturnBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.saturnGravel, 12, 0, true, ExtraPlanets_Blocks.saturnBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -69,7 +69,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.glowstone).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.saturnBlocks);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.glowstone).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.SATURN_BLOCKS);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));

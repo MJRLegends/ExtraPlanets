@@ -46,17 +46,17 @@ public class ChunkProviderCallisto extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.callistoBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.CALLISTO_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.callistoBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.CALLISTO_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.callistoBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.CALLISTO_BLOCKS, (byte) 2);
 	}
 
 	@Override

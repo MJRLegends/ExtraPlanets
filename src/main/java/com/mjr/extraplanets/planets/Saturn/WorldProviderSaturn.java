@@ -96,7 +96,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.saturn.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.SATURN.getTierRequirement();
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.saturn;
+		return ExtraPlanets_Planets.SATURN;
 	}
 
 	@Override

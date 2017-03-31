@@ -45,16 +45,14 @@ public class BlockNuclearBomb extends Block {
 		}
 	}
 
-    @Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)
-    {
-        if (worldIn.isBlockPowered(pos))
-        {
-            this.onBlockDestroyedByPlayer(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)));
-            worldIn.setBlockToAir(pos);
-        }
-    }
-    
+	@Override
+	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
+		if (worldIn.isBlockPowered(pos)) {
+			this.onBlockDestroyedByPlayer(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)));
+			worldIn.setBlockToAir(pos);
+		}
+	}
+
 	/**
 	 * Called when this Block is destroyed by an Explosion
 	 */
@@ -80,7 +78,7 @@ public class BlockNuclearBomb extends Block {
 			if (state.getValue(EXPLODE).booleanValue()) {
 				EntityNuclearBombPrimed EntityNuclearBombPrimed = new EntityNuclearBombPrimed(worldIn, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, igniter);
 				worldIn.spawnEntityInWorld(EntityNuclearBombPrimed);
-                worldIn.playSound((EntityPlayer)null, EntityNuclearBombPrimed.posX, EntityNuclearBombPrimed.posY, EntityNuclearBombPrimed.posZ, SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.BLOCKS, 1.0F, 1.0F);
+				worldIn.playSound((EntityPlayer) null, EntityNuclearBombPrimed.posX, EntityNuclearBombPrimed.posY, EntityNuclearBombPrimed.posZ, SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.BLOCKS, 1.0F, 1.0F);
 			}
 		}
 	}

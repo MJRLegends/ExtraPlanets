@@ -17,24 +17,23 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class SchematicTier6Rocket extends ItemSchematic implements ISchematicPage {
 
-	public SchematicTier6Rocket()
-    {
-        super("schematic");
-    }
+	public SchematicTier6Rocket() {
+		super("schematic");
+	}
 
 	@Override
 	public int getPageID() {
-		return Config.schematicTier6PageID;
+		return Config.SCHEMATIC_TIER_6_PAGE_ID;
 	}
 
 	@Override
 	public int getGuiID() {
-		return Config.schematicTier6GUIID;
+		return Config.SCHEMATIC_TIER_6_GUI_ID;
 	}
 
 	@Override
 	public ItemStack getRequiredItem() {
-		return new ItemStack(ExtraPlanets_Items.schematicTier6, 1, 0);
+		return new ItemStack(ExtraPlanets_Items.TIER_6_SCHEMATIC, 1, 0);
 	}
 
 	@SideOnly(Side.CLIENT)

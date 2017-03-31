@@ -120,7 +120,7 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.io.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.IO.getTierRequirement();
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.io;
+		return ExtraPlanets_Moons.IO;
 	}
 
 	@Override

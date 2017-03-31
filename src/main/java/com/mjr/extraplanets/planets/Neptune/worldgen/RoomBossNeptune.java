@@ -77,7 +77,7 @@ public class RoomBossNeptune extends RoomBoss {
 		int spawnerX = this.sizeX / 2;
 		int spawnerY = 1;
 		int spawnerZ = this.sizeZ / 2;
-		this.setBlockState(worldIn, ExtraPlanets_Blocks.neptuneSpawner.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
+		this.setBlockState(worldIn, ExtraPlanets_Blocks.NEPTUNE_SPAWNER.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
 		BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
 		TileEntityDungeonSpawnerNeptune spawner = (TileEntityDungeonSpawnerNeptune) worldIn.getTileEntity(blockpos);
 

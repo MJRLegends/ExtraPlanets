@@ -24,19 +24,19 @@ import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Machines {
 	// Machines
-	public static Block advancedRefinery;
-	public static Block ultimateRefinery;
+	public static Block REFINERY_ADVANCED;
+	public static Block REFINERY_ULTIMATE;
 
-	public static Block advancedOxygenCompressor;
-	public static Block ultimateOxygenCompressor;
+	public static Block OXYGEN_COMPRESSOR_ADVANCED;
+	public static Block OXYGEN_COMPRESSOR_ULTIMATE;
 
-	public static Block solarPanel;
+	public static Block SOLAR_PANEL;
 
-	public static Block basicDecrystallizer;
-	public static Block basicCrystallizer;
-	public static Block basicSmasher;
-	public static Block basicChemicalInjector;
-	public static Block basicSolarEvaporationChamber;
+	public static Block BASIC_DECRYSALLIZER;
+	public static Block BASIC_CRYSALLIZER;
+	public static Block BASIC_SMASHER;
+	public static Block BASIC_CHEMICAL_INJECTOR;
+	public static Block BASIC_SOLAR_EVAPORTATION_CHAMBER;
 
 	public static void init() {
 		initializeMachinesBlocks();
@@ -49,80 +49,80 @@ public class ExtraPlanets_Machines {
 	}
 
 	private static void initializeMachinesBlocks() {
-		if (Config.advancedRefinery)
-			advancedRefinery = new AdvancedRefinery("advancedRefinery");
-		if (Config.ultimateRefinery)
-			ultimateRefinery = new UltimateRefinery("ultimateRefinery");
-		if (Config.solarPanels)
-			solarPanel = new BlockSolar("solar");
-		if (Config.advancedCompressor)
-			advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
-		if (Config.ultimateCompressor)
-			ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
-		if (Config.radiation) {
-			if (Config.basicDecrystallizer)
-				basicDecrystallizer = new BasicDecrystallizer("basicDecrystallizer");
-			if (Config.basicCrystallizer)
-				basicCrystallizer = new BasicCrystallizer("basicCrystallizer");
-			if (Config.basicSmasher)
-				basicSmasher = new BasicSmasher("basicSmasher");
-			if (Config.basicChemicalInjector)
-				basicChemicalInjector = new BasicChemicalInjector("basicChemicalInjector");
-			if (Config.basicSolarEvaporationChamber)
-				basicSolarEvaporationChamber = new BasicSolarEvaporationChamber("basicSolarEvaporationChamber");
+		if (Config.REFINERY_ADVANCED)
+			REFINERY_ADVANCED = new AdvancedRefinery("advancedRefinery");
+		if (Config.REFINERY_ULTIMATE)
+			REFINERY_ULTIMATE = new UltimateRefinery("ultimateRefinery");
+		if (Config.SOLAR_PANELS)
+			SOLAR_PANEL = new BlockSolar("solar");
+		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
+			OXYGEN_COMPRESSOR_ADVANCED = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
+		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
+			OXYGEN_COMPRESSOR_ULTIMATE = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
+		if (Config.RADIATION) {
+			if (Config.BASIC_DECRYSTALLIZER)
+				BASIC_DECRYSALLIZER = new BasicDecrystallizer("basicDecrystallizer");
+			if (Config.BASIC_CRYSTALLIZER)
+				BASIC_CRYSALLIZER = new BasicCrystallizer("basicCrystallizer");
+			if (Config.BASIC_SMASHER)
+				BASIC_SMASHER = new BasicSmasher("basicSmasher");
+			if (Config.BASIC_CHEMICAL_INJECTOR)
+				BASIC_CHEMICAL_INJECTOR = new BasicChemicalInjector("basicChemicalInjector");
+			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
+				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basicSolarEvaporationChamber");
 		}
 	}
 
 	private static void registerMachines() throws NoSuchMethodException {
-		if (Config.advancedRefinery)
-			RegisterHelper.registerBlock(advancedRefinery, "advancedRefinery");
-		if (Config.ultimateRefinery)
-			RegisterHelper.registerBlock(ultimateRefinery, "ultimateRefinery");
-		if (Config.solarPanels)
-			RegisterHelper.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName().substring(5));
-		if (Config.advancedCompressor)
-			RegisterHelper.registerBlock(advancedOxygenCompressor, ItemBlockAdvancedOxygenCompressor.class, advancedOxygenCompressor.getUnlocalizedName().substring(5));
-		if (Config.ultimateCompressor)
-			RegisterHelper.registerBlock(ultimateOxygenCompressor, ItemBlockUltimateOxygenCompressor.class, ultimateOxygenCompressor.getUnlocalizedName().substring(5));
-		if (Config.radiation) {
-			if (Config.basicDecrystallizer)
-				RegisterHelper.registerBlock(basicDecrystallizer, basicDecrystallizer.getUnlocalizedName().substring(5));
-			if (Config.basicCrystallizer)
-				RegisterHelper.registerBlock(basicCrystallizer, basicCrystallizer.getUnlocalizedName().substring(5));
-			if (Config.basicSmasher)
-				RegisterHelper.registerBlock(basicSmasher, basicSmasher.getUnlocalizedName().substring(5));
-			if (Config.basicChemicalInjector)
-				RegisterHelper.registerBlock(basicChemicalInjector, basicChemicalInjector.getUnlocalizedName().substring(5));
-			if (Config.basicSolarEvaporationChamber)
-				RegisterHelper.registerBlock(basicSolarEvaporationChamber, basicSolarEvaporationChamber.getUnlocalizedName().substring(5));
+		if (Config.REFINERY_ADVANCED)
+			RegisterHelper.registerBlock(REFINERY_ADVANCED, "advancedRefinery");
+		if (Config.REFINERY_ULTIMATE)
+			RegisterHelper.registerBlock(REFINERY_ULTIMATE, "ultimateRefinery");
+		if (Config.SOLAR_PANELS)
+			RegisterHelper.registerBlock(SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
+		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
+			RegisterHelper.registerBlock(OXYGEN_COMPRESSOR_ADVANCED, ItemBlockAdvancedOxygenCompressor.class, OXYGEN_COMPRESSOR_ADVANCED.getUnlocalizedName().substring(5));
+		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
+			RegisterHelper.registerBlock(OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
+		if (Config.RADIATION) {
+			if (Config.BASIC_DECRYSTALLIZER)
+				RegisterHelper.registerBlock(BASIC_DECRYSALLIZER, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
+			if (Config.BASIC_CRYSTALLIZER)
+				RegisterHelper.registerBlock(BASIC_CRYSALLIZER, BASIC_CRYSALLIZER.getUnlocalizedName().substring(5));
+			if (Config.BASIC_SMASHER)
+				RegisterHelper.registerBlock(BASIC_SMASHER, BASIC_SMASHER.getUnlocalizedName().substring(5));
+			if (Config.BASIC_CHEMICAL_INJECTOR)
+				RegisterHelper.registerBlock(BASIC_CHEMICAL_INJECTOR, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
+			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
+				RegisterHelper.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 		}
 	}
 
 	private static void registerMachineTileEntitys() {
-		if (Config.advancedRefinery)
+		if (Config.REFINERY_ADVANCED)
 			GameRegistry.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
-		if (Config.ultimateRefinery)
+		if (Config.REFINERY_ULTIMATE)
 			GameRegistry.registerTileEntity(TileEntityUltimateRefinery.class, Constants.modName + "UltimateRefinery");
-		if (Config.solarPanels)
+		if (Config.SOLAR_PANELS)
 			GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
-		if (Config.advancedCompressor) {
+		if (Config.OXYGEN_COMPRESSOR_ADVANCED) {
 			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenCompressor.class, Constants.modName + "Advanced Oxygen Compressor");
 			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenDecompressor.class, Constants.modName + "Advanced Oxygen Decompressor");
 		}
-		if (Config.ultimateCompressor) {
+		if (Config.OXYGEN_COMPRESSOR_ULTIMATE) {
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
 		}
-		if (Config.radiation) {
-			if (Config.basicDecrystallizer)
+		if (Config.RADIATION) {
+			if (Config.BASIC_DECRYSTALLIZER)
 				GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
-			if (Config.basicCrystallizer)
+			if (Config.BASIC_CRYSTALLIZER)
 				GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
-			if (Config.basicSmasher)
+			if (Config.BASIC_SMASHER)
 				GameRegistry.registerTileEntity(TileEntityBasicSmasher.class, Constants.modName + "Basic Smasher");
-			if (Config.basicChemicalInjector)
+			if (Config.BASIC_CHEMICAL_INJECTOR)
 				GameRegistry.registerTileEntity(TileEntityBasicChemicalInjector.class, Constants.modName + "Basic Chemical Injector");
-			if (Config.basicSolarEvaporationChamber)
+			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
 		}
 	}

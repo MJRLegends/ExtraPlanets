@@ -18,8 +18,8 @@ public class BiomeGenKepler22bBlueMapleForest extends BiomeGenBaseKepler22b {
 	public BiomeGenKepler22bBlueMapleForest(BiomeProperties properties) {
 		super(properties);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
-		this.topBlock = ExtraPlanets_Blocks.kepler22bBlueGrass.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState();
+		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));

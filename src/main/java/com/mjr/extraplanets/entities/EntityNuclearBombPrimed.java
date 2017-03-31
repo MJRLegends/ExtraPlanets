@@ -68,6 +68,7 @@ public class EntityNuclearBombPrimed extends EntityTNTPrimed {
 	/**
 	 * returns null or the entityliving it was placed or ignited by
 	 */
+	@Override
 	public EntityLivingBase getTntPlacedBy() {
 		return this.tntPlacedBy;
 	}

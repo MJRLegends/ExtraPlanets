@@ -107,7 +107,7 @@ public class RoomBossUranus extends RoomBoss
         int spawnerX = this.sizeX / 2;
         int spawnerY = 1;
         int spawnerZ = this.sizeZ / 2;
-        this.setBlockState(worldIn, ExtraPlanets_Blocks.uranusSpawner.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
+        this.setBlockState(worldIn, ExtraPlanets_Blocks.URANUS_SPAWNER.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
         BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
         TileEntityDungeonSpawnerUranus spawner = (TileEntityDungeonSpawnerUranus) worldIn.getTileEntity(blockpos);
 

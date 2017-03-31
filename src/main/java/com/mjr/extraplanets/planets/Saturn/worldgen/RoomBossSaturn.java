@@ -107,7 +107,7 @@ public class RoomBossSaturn extends RoomBoss
         int spawnerX = this.sizeX / 2;
         int spawnerY = 1;
         int spawnerZ = this.sizeZ / 2;
-        this.setBlockState(worldIn, ExtraPlanets_Blocks.saturnSpawner.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
+        this.setBlockState(worldIn, ExtraPlanets_Blocks.SATURN_SPAWNER.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
         BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
         TileEntityDungeonSpawnerSaturn spawner = (TileEntityDungeonSpawnerSaturn) worldIn.getTileEntity(blockpos);
 
