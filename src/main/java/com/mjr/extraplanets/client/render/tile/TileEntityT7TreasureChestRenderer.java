@@ -82,11 +82,6 @@ public class TileEntityT7TreasureChestRenderer extends TileEntitySpecialRenderer
 			var14.renderAll(!chest.locked);
 		}
 
-		if (var14b != null) {
-			var14b.chestLid.rotateAngleX = -(var12 * (float) Math.PI / 4.0F);
-			var14b.renderAll(!chest.locked);
-		}
-
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
 		GL11.glPopMatrix();
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
