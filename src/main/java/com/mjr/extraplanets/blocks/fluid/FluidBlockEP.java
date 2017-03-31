@@ -22,15 +22,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class FluidBlockEP extends BlockFluidClassic {
 
-	private final String fluidName;
-	private final Fluid fluid;
-
 	public FluidBlockEP(Fluid fluid, String assetName, Material material) {
-		super(ExtraPlanets_Fluids.glowstone_fluid, material);
-		this.fluidName = assetName;
-		this.fluid = fluid;
+		super(fluid, material);
 		this.setQuantaPerBlock(9);
-		this.setLightLevel(1.0F);
 		this.needsRandomTick = true;
 		this.setUnlocalizedName(assetName);
 	}

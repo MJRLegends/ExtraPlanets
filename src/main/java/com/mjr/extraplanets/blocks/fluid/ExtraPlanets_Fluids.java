@@ -58,7 +58,7 @@ public class ExtraPlanets_Fluids {
 		glowstone_fluid = new Fluid("glowstone_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_flow")).setBlock(glowstone)
 				.setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(glowstone_fluid);
-		glowstone = new FluidBlockEP(glowstone_fluid, "glowstone", glowstone_material);
+		glowstone = new FluidBlockEP(glowstone_fluid, "glowstone", glowstone_material).setLightLevel(1.0F);
 
 		magma_fluid = new Fluid("magma_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_flow")).setBlock(magma).setDensity(800)
 				.setViscosity(1500);
