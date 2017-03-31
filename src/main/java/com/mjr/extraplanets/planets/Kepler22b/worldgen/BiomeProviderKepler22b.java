@@ -4,17 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeProviderSpace;
+import javax.annotation.Nullable;
+
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeCache;
+import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.layer.GenLayer;
+import net.minecraft.world.gen.layer.IntCache;
 
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
 
-public class BiomeProviderKepler22b extends BiomeProviderSpace {
+public class BiomeProviderKepler22b extends BiomeProvider {
 	private GenLayer unzoomedBiomes;
 	private GenLayer zoomedBiomes;
 	private BiomeCache biomeCache;
@@ -42,7 +45,6 @@ public class BiomeProviderKepler22b extends BiomeProviderSpace {
 		this(world.getSeed());
 	}
 
-	@Override
 	public Biome getBiome() {
 		return BiomeGenBaseKepler22b.kepler22bPlains;
 	}
@@ -83,6 +85,46 @@ public class BiomeProviderKepler22b extends BiomeProviderSpace {
 		}
 		return par1ArrayOfBiome;
 	}
+
+    @Override
+    public Biome[] getBiomes(@Nullable Biome[] oldBiomeList, int x, int z, int width, int depth)
+    {
+        return getBiomes(oldBiomeList, x, z, width, depth, true);
+    }
+
+    @Override
+    public Biome[] getBiomes(@Nullable Biome[] listToReuse, int x, int z, int width, int length, boolean cacheFlag)
+    {
+        IntCache.resetIntCache();
+
+        if (listToReuse == null || listToReuse.length < length * width)
+        {
+            listToReuse = new Biome[width * length];
+        }
+
+        if (cacheFlag && width == 16 && length == 16 && (x & 15) == 0 && (z & 15) == 0)
+        {
+            Biome[] cached = this.biomeCache.getCachedBiomes(x, z);
+            System.arraycopy(cached, 0, listToReuse, 0, width * length);
+            return listToReuse;
+        }
+
+        int[] zoomed = zoomedBiomes.getInts(x, z, width, length);
+
+        for (int i = 0; i < width * length; ++i)
+        {
+            if (zoomed[i] >= 0)
+            {
+                listToReuse[i] = Biome.getBiome(zoomed[i]);
+            }
+            else
+            {
+                listToReuse[i] = this.getBiome();
+            }
+        }
+
+        return listToReuse;
+    }
 
 	@Override
 	public boolean areBiomesViable(int par1, int par2, int par3, List par4List) {

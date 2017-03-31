@@ -13,7 +13,7 @@ import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.ChunkProviderOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
@@ -22,7 +22,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKeple
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
 
-public class ChunkProviderKepler22b implements IChunkGenerator {
+public class ChunkProviderKepler22b extends ChunkProviderOverworld {
 	private Random rand;
 	private World worldObj;
 	private double[] depthBuffer;
@@ -46,6 +46,7 @@ public class ChunkProviderKepler22b implements IChunkGenerator {
 	double[] depthRegion;
 
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
+		super(world, seed, flag, "");
 		this.depthBuffer = new double[256];
 		this.worldObj = world;
 		this.rand = new Random(seed);
@@ -87,6 +88,7 @@ public class ChunkProviderKepler22b implements IChunkGenerator {
 		return chunk;
 	}
 
+	@Override
 	public void setBlocksInChunk(int p_180518_1_, int p_180518_2_, ChunkPrimer p_180518_3_) {
 		this.biomesForGeneration = this.worldObj.getBiomeProvider().getBiomesForGeneration(this.biomesForGeneration, p_180518_1_ * 4 - 2, p_180518_2_ * 4 - 2, 10, 10);
 		this.generateHeightMap(p_180518_1_ * 4, 0, p_180518_2_ * 4);

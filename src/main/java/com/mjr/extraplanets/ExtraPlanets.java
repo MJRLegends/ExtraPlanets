@@ -266,6 +266,9 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		// Register Biomes
+		registerBiomes();
+		
 		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
@@ -275,9 +278,6 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For Entities
 		registerNonMobEntities();
 		registerCreatures();
-
-		// Register Biomes
-		registerBiomes();
 
 		packetPipeline = ExtraPlanetsChannelHandler.init();
 
