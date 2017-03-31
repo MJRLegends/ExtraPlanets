@@ -38,6 +38,18 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
+v1.5.7
+*Fixed Oberon, Titania, Iapetus ores furnace recipes
+*Clean up
+*Fixes for recipes
+*Added missing rocket gui's for Oberon, Titania, Iapetus
+
 v1.5.6
 *Cleaned up the version number to a more organized version system
 *Fixes/Updated lang files
@@ -51,11 +63,7 @@ v1.5.6
 *A few config fixes
 *Clean up
 *Fixed Neptune boss dropping the wrong key
-======================================================================================================
 
-
-
-===========================================Released Updates===========================================
 v1.0 Pre-5.5
 *Fixed some of the moons being the wrong tier/accepting the wrong tier
 *Fixes for Achievements
