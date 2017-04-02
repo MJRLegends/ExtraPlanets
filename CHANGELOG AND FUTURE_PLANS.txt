@@ -49,6 +49,7 @@ v1.5.7
 *Clean up
 *Fixes for recipes
 *Added missing rocket gui's for Oberon, Titania, Iapetus
+*Fixed Thermal Cloth recipes
 
 v1.5.6
 *Cleaned up the version number to a more organized version system
