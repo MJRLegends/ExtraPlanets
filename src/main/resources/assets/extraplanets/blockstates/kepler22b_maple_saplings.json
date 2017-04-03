@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "stage=0,variant=maple_blue_sapling": { "model": "extraplanets:maple_blue_sapling_model" },
+		"stage=0,variant=maple_red_sapling": { "model": "extraplanets:maple_red_sapling_model" },
+		"stage=0,variant=maple_purple_sapling": { "model": "extraplanets:maple_purple_sapling_model" },
+		"stage=0,variant=maple_yellow_sapling": { "model": "extraplanets:maple_yellow_sapling_model" },
+		"stage=0,variant=maple_green_sapling": { "model": "extraplanets:maple_green_sapling_model" },
+		"stage=0,variant=maple_brown_sapling": { "model": "extraplanets:maple_brown_sapling_model" },
+		"stage=1,variant=maple_blue_sapling": { "model": "extraplanets:maple_blue_sapling_model" },
+		"stage=1,variant=maple_red_sapling": { "model": "extraplanets:maple_red_sapling_model" },
+		"stage=1,variant=maple_purple_sapling": { "model": "extraplanets:maple_purple_sapling_model" },
+		"stage=1,variant=maple_yellow_sapling": { "model": "extraplanets:maple_yellow_sapling_model" },
+		"stage=1,variant=maple_green_sapling": { "model": "extraplanets:maple_green_sapling_model" },
+		"stage=1,variant=maple_brown_sapling": { "model": "extraplanets:maple_brown_sapling_model" }
+	}
+}

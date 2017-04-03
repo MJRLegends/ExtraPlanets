@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictypeio=io_surface": { "model": "extraplanets:io_surface_model" },
+        "basictypeio=io_sub_surface": { "model": "extraplanets:io_sub_surface_model" },
+        "basictypeio=io_stone": { "model": "extraplanets:io_stone_model" },
+        "basictypeio=io_ore_iron": { "model": "extraplanets:io_ore_iron_model" },
+        "basictypeio=io_ore_tin": { "model": "extraplanets:io_ore_tin_model" },
+        "basictypeio=io_ore_copper": { "model": "extraplanets:io_ore_copper_model" }
+    }
+}

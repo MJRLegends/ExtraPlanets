@@ -1,0 +1,28 @@
+{
+    "variants": {
+        "check_decay=false,decayable=true,variant=maple_blue_leaf": { "model": "extraplanets:maple_blue_leaf_model" },
+		"check_decay=false,decayable=true,variant=maple_red_leaf": { "model": "extraplanets:maple_red_leaf_model" },
+		"check_decay=false,decayable=true,variant=maple_purple_leaf": { "model": "extraplanets:maple_purple_leaf_model" },
+		"check_decay=false,decayable=true,variant=maple_yellow_leaf": { "model": "extraplanets:maple_yellow_leaf_model" },
+		"check_decay=false,decayable=true,variant=maple_green_leaf": { "model": "extraplanets:maple_green_leaf_model" },
+		"check_decay=false,decayable=true,variant=maple_brown_leaf": { "model": "extraplanets:maple_brown_leaf_model" },
+		"check_decay=false,decayable=false,variant=maple_blue_leaf": { "model": "extraplanets:maple_blue_leaf_model" },
+		"check_decay=false,decayable=false,variant=maple_red_leaf": { "model": "extraplanets:maple_red_leaf_model" },
+		"check_decay=false,decayable=false,variant=maple_purple_leaf": { "model": "extraplanets:maple_purple_leaf_model" },
+		"check_decay=false,decayable=false,variant=maple_yellow_leaf": { "model": "extraplanets:maple_yellow_leaf_model" },
+		"check_decay=false,decayable=false,variant=maple_green_leaf": { "model": "extraplanets:maple_green_leaf_model" },
+		"check_decay=false,decayable=false,variant=maple_brown_leaf": { "model": "extraplanets:maple_brown_leaf_model" },
+		"check_decay=true,decayable=true,variant=maple_blue_leaf": { "model": "extraplanets:maple_blue_leaf_model" },
+		"check_decay=true,decayable=true,variant=maple_red_leaf": { "model": "extraplanets:maple_red_leaf_model" },
+		"check_decay=true,decayable=true,variant=maple_purple_leaf": { "model": "extraplanets:maple_purple_leaf_model" },
+		"check_decay=true,decayable=true,variant=maple_yellow_leaf": { "model": "extraplanets:maple_yellow_leaf_model" },
+		"check_decay=true,decayable=true,variant=maple_green_leaf": { "model": "extraplanets:maple_green_leaf_model" },
+		"check_decay=true,decayable=true,variant=maple_brown_leaf": { "model": "extraplanets:maple_brown_leaf_model" },
+		"check_decay=true,decayable=false,variant=maple_blue_leaf": { "model": "extraplanets:maple_blue_leaf_model" },
+		"check_decay=true,decayable=false,variant=maple_red_leaf": { "model": "extraplanets:maple_red_leaf_model" },
+		"check_decay=true,decayable=false,variant=maple_purple_leaf": { "model": "extraplanets:maple_purple_leaf_model" },
+		"check_decay=true,decayable=false,variant=maple_yellow_leaf": { "model": "extraplanets:maple_yellow_leaf_model" },
+		"check_decay=true,decayable=false,variant=maple_green_leaf": { "model": "extraplanets:maple_green_leaf_model" },
+		"check_decay=true,decayable=false,variant=maple_brown_leaf": { "model": "extraplanets:maple_brown_leaf_model" }
+	}
+}

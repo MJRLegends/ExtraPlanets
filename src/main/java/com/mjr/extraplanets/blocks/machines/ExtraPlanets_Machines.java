@@ -50,26 +50,26 @@ public class ExtraPlanets_Machines {
 
 	private static void initializeMachinesBlocks() {
 		if (Config.REFINERY_ADVANCED)
-			REFINERY_ADVANCED = new AdvancedRefinery("advancedRefinery");
+			REFINERY_ADVANCED = new AdvancedRefinery("advanced_refinery");
 		if (Config.REFINERY_ULTIMATE)
-			REFINERY_ULTIMATE = new UltimateRefinery("ultimateRefinery");
+			REFINERY_ULTIMATE = new UltimateRefinery("ultimate_refinery");
 		if (Config.SOLAR_PANELS)
 			SOLAR_PANEL = new BlockSolar("solar");
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
-			OXYGEN_COMPRESSOR_ADVANCED = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
+			OXYGEN_COMPRESSOR_ADVANCED = new AdvancedOxygenCompressor(false, "advanced_oxygen_compressor");
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
-			OXYGEN_COMPRESSOR_ULTIMATE = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
+			OXYGEN_COMPRESSOR_ULTIMATE = new UltimateOxygenCompressor(false, "ultimate_oxygen_compressor");
 		if (Config.RADIATION) {
 			if (Config.BASIC_DECRYSTALLIZER)
-				BASIC_DECRYSALLIZER = new BasicDecrystallizer("basicDecrystallizer");
+				BASIC_DECRYSALLIZER = new BasicDecrystallizer("basic_decrystallizer");
 			if (Config.BASIC_CRYSTALLIZER)
-				BASIC_CRYSALLIZER = new BasicCrystallizer("basicCrystallizer");
+				BASIC_CRYSALLIZER = new BasicCrystallizer("basic_crystallizer");
 			if (Config.BASIC_SMASHER)
-				BASIC_SMASHER = new BasicSmasher("basicSmasher");
+				BASIC_SMASHER = new BasicSmasher("basic_smasher");
 			if (Config.BASIC_CHEMICAL_INJECTOR)
-				BASIC_CHEMICAL_INJECTOR = new BasicChemicalInjector("basicChemicalInjector");
+				BASIC_CHEMICAL_INJECTOR = new BasicChemicalInjector("basic_chemical_injector");
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
-				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basicSolarEvaporationChamber");
+				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basic_solar_evaporation_chamber");
 		}
 	}
 

@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictypecallisto=callisto_surface": { "model": "extraplanets:callisto_surface_model" },
+        "basictypecallisto=callisto_sub_surface": { "model": "extraplanets:callisto_sub_surface_model" },
+        "basictypecallisto=callisto_stone": { "model": "extraplanets:callisto_stone_model" },
+        "basictypecallisto=callisto_ore_iron": { "model": "extraplanets:callisto_ore_iron_model" },
+        "basictypecallisto=callisto_ore_tin": { "model": "extraplanets:callisto_ore_tin_model" },
+        "basictypecallisto=callisto_ore_copper": { "model": "extraplanets:callisto_ore_copper_model" }
+    }
+}

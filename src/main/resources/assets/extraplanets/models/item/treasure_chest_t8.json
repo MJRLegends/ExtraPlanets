@@ -1,0 +1,8 @@
+{
+    "parent":"extraplanets:block/treasureChestT8",
+    "display": {
+		"gui": {
+            "rotation": [ 0, 180, 0 ]
+		}
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictypedeimos=deimos_surface": { "model": "extraplanets:deimos_surface_model" },
+        "basictypedeimos=deimos_sub_surface": { "model": "extraplanets:deimos_sub_surface_model" },
+        "basictypedeimos=deimos_stone": { "model": "extraplanets:deimos_stone_model" },
+        "basictypedeimos=deimos_ore_iron": { "model": "extraplanets:deimos_ore_iron_model" },
+        "basictypedeimos=deimos_ore_tin": { "model": "extraplanets:deimos_ore_tin_model" },
+        "basictypedeimos=deimos_ore_copper": { "model": "extraplanets:deimos_ore_copper_model" }
+    }
+}

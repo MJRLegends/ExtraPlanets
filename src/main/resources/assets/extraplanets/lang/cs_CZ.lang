@@ -1,0 +1,952 @@
+#Creative Tabs
+itemGroup.SpaceItemsTab=Extra Planets Předměty
+itemGroup.SpaceBlocksTab=Extra Planets Bloky
+itemGroup.SpaceToolsTab=Extra Planets Nástroje
+itemGroup.SpaceArmorTab=Extra Planets Zbroj
+
+#Solar Systems
+solarsystem.kepler22=Kepler 22 System
+solarsystem.kepler47=Kepler 47 System
+solarsystem.kepler62=Kepler 62 System
+solarsystem.kepler69=Kepler 69 System
+
+#Stars
+star.kepler22=Kepler 22 Star
+star.kepler47=Kepler 47 Star
+star.kepler62=Kepler 62 Star
+star.kepler69=Kepler 69 Star
+
+#Planets
+planet.Mercury=Merkur
+planet.Ceres=Ceres
+planet.Jupiter=Jupiter
+planet.Saturn=Saturn
+planet.Uranus=Uran
+planet.Neptune=Neptun
+planet.Pluto=Pluto
+planet.Eris=Eris
+planet.kuiperBelt=Kuiperův pás
+planet.makemake=Makemake
+planet.haumea=Haumea
+
+planet.kepler62b=Kepler 62b
+planet.kepler62c=Kepler 62c
+planet.kepler62d=Kepler 62d
+planet.kepler62e=Kepler 62e
+planet.kepler62f=Kepler 62f
+planet.kepler22b=Kepler 22b
+planet.kepler47b=Kepler 47b
+planet.kepler47c=Kepler 47c
+planet.kepler69b=Kepler 69b
+planet.kepler69c=Kepler 69c
+
+#Moons
+moon.triton=Triton
+moon.callisto=Callisto
+moon.europa=Europa
+moon.ganymede=Ganymede
+moon.io=Io
+moon.deimos=Deimos
+moon.phobos=Phobos
+moon.iapetus=Iapetus
+moon.rhea=Rhea
+moon.titan=Titan
+moon.oberon=Oberon
+moon.titania=Titania
+moon.charon=Charon
+moon.nix=Nix
+moon.hydra=Hydra
+moon.dysnomia=Dysnomia
+
+#Planet Blocks
+tile.mercury.surface.name=Povrchový kámen z Merkuru
+tile.mercury.subSurface.name=Podpovrchový kámen z Merkuru
+tile.mercury.stone.name=Kámen z Merkuru
+tile.mercury.OreIron.name=Železná ruda z Merkuru
+tile.mercury.OreTin.name=Cínová ruda z Merkuru
+tile.mercury.OreCopper.name=Měděná ruda z Merkuru
+tile.mercury.OreMercury.name=Měděná ruda z Merkuru
+tile.mercury.stoneBricks.name=Mercury Stone Bricks
+tile.mercury.mercuryBlock.name=Block of Mercury
+tile.mercury.OreCarbon.name=Karbonová Ruda
+tile.mercury.carbonBlock.name=Block of Carbon
+tile.mercury.dungeonBrick.name=Mercury Dungeon Brick
+
+tile.ceres.surface.name=Povrchový kámen z Ceresu
+tile.ceres.subSurface.name=Podpovrchový kámen z Ceresu
+tile.ceres.stone.name=Kámen z Ceresu
+tile.ceres.OreIron.name=Železná ruda z Ceresu
+tile.ceres.OreTin.name=Cínová ruda z Ceresu
+tile.ceres.OreCopper.name=Měděná ruda z Ceresu
+tile.ceres.OreUranium.name=Uraniová Ruda
+tile.ceres.stoneBricks.name=Ceres Stone Bricks
+tile.ceres.uraniumBlock.name=Block of Uranium
+
+tile.jupiter.surface.name=Povrchový kámen z Jupiteru
+tile.jupiter.subSurface.name=Podpovrchový kámen z Jupiteru
+tile.jupiter.stone.name=Kámen z Jupiteru
+tile.jupiter.OreIron.name=Železná ruda z Jupiteru
+tile.jupiter.OreTin.name=Cínová ruda z Jupiteru
+tile.jupiter.OreCopper.name=Měděná ruda z Jupiteru
+tile.jupiter.OrePalladium.name=Palladiová Ruda
+tile.jupiter.OreNickel.name=Niklová Ruda
+tile.jupiter.oreRedGem.name=Jupiter Red Gem Ore
+tile.jupiter.stoneBricks.name=Jupiter Stone Bricks
+tile.jupiter.palladiumBlock.name=Block of Palladium
+tile.jupiter.redGemBlock.name=Block of Red Gem
+tile.jupiter.dungeonBrick.name=Jupiter Dungeon Brick
+
+tile.saturn.surface.name=Povrchový kámen ze Saturnu
+tile.saturn.subSurface.name=Podpovrchový kámen ze Saturnu
+tile.saturn.stone.name=Kámen ze Saturnu
+tile.saturn.OreIron.name=Železná ruda ze Saturnu
+tile.saturn.OreTin.name=Cínová ruda ze Saturnu
+tile.saturn.OreCopper.name=Měděná ruda ze Saturnu
+tile.saturn.OreMagnesium.name=Magnesiová Ruda
+tile.saturn.stoneBricks.name=Saturn Stone Bricks
+tile.saturn.magnesiumBlock.name=Block of Magnesium
+tile.saturn.dungeonBrick.name=Saturn Dungeon Brick
+
+tile.uranus.surface.name=Povrchový kámen z Uranu
+tile.uranus.subSurface.name=Podpovrchový kámen z Uranu
+tile.uranus.stone.name=Kámen z Uranu
+tile.uranus.OreCrystal.name=Krystalová Ruda
+tile.uranus.oreWhiteGem.name=Uranus White Gem Ore
+tile.uranus.stoneBricks.name=Uranus Stone Bricks
+tile.uranus.crystalBlock.name=Block of Crystal
+tile.uranus.whiteGemBlock.name=Block of White Gem
+tile.uranus.dungeonBrick.name=Uranus Dungeon Brick
+
+tile.neptune.surface.name=Povrchový kámen z Neptunu
+tile.neptune.subSurface.name=Podpovrchový kámen z Neptunu
+tile.neptune.stone.name=Kámen z Neptunu
+tile.neptune.OreIron.name=Železná ruda z Neptunu
+tile.neptune.OreTin.name=Cínová ruda z Neptunu
+tile.neptune.OreCopper.name=Měděná ruda z Neptunu
+tile.neptune.OreZinc.name=Zinková Ruda
+tile.neptune.oreBlueGem.name=Neptune Blue Gem Ore
+tile.neptune.stoneBricks.name=Neptune Stone Bricks
+tile.neptune.zincBlock.name=Block of Zinc
+tile.neptune.blueGemBlock.name=Block of Blue Gem
+tile.neptune.dungeonBrick.name=Neptune Dungeon Brick
+
+tile.pluto.surface.name=Povrchový kámen z Pluta
+tile.pluto.subSurface.name=Podpovrchový kámen z Pluta
+tile.pluto.stone.name=Kámen z Pluta
+tile.pluto.OreIron.name=Železná ruda z Pluta
+tile.pluto.OreTin.name=Cínová ruda z Pluta
+tile.pluto.OreCopper.name=Měděná ruda z Pluta
+tile.pluto.OreTungsten.name=Tungstenová Ruda
+tile.pluto.stoneBricks.name=Pluto Stone Bricks
+tile.pluto.tungstenBlock.name=Block of Tungsten
+tile.pluto.dungeonBrick.name=Pluto Dungeon Brick
+
+tile.eris.surface.name=Povrchový kámen z Erisu
+tile.eris.subSurface.name=Podpovrchový kámen z Erisu
+tile.eris.stone.name=Kámen z Erisu
+tile.eris.OreIron.name=Železná ruda z Erisu
+tile.eris.OreTin.name=Cínová ruda z Erisu
+tile.eris.OreCopper.name=Měděná ruda z Erisu
+tile.eris.stoneBricks.name=Eris Stone Bricks
+tile.eris.dungeonBrick.name=Eris Dungeon Brick
+tile.eris.oreDarkIron.name=Eris Dark Iron Ore
+tile.eris.darkIronBlock.name=Block of Dark Iron
+
+tile.kepler22b.Dirt.name=Kepler 22b Dirt
+tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22b_grass.name=Kepler 22b Grass
+tile.kepler22b_blue_grass.name=Kepler 22b Blue Grass
+tile.kepler22b_purple_grass.name=Kepler 22b Purple Grass
+tile.kepler22b_red_grass.name=Kepler 22b Red Grass
+tile.kepler22b_yellow_grass.name=Kepler 22b Yellow Grass
+tile.kepler22b.OreIron.name=Kepler 22b Iron Ore
+tile.kepler22b.OreTin.name=Kepler 22b Tin Ore
+tile.kepler22b.OreCopper.name=Kepler 22b Copper Ore
+tile.kepler22b.OreDenseCoal.name=Kepler 22b Dense Coal Ore
+tile.kepler22b.OreBlueDiamonds.name=Kepler 22b Blue Diamond Ore
+tile.kepler22b.OreRedDiamonds.name=Kepler 22b Red Diamond Ore
+tile.kepler22b.OrePurpleDiamonds.name=Kepler 22b Purple Diamond Ore
+tile.kepler22b.OreYellowDiamonds.name=Kepler 22b Yellow Diamond Ore
+tile.kepler22b.OreGreenDiamonds.name=Kepler 22b Green Diamond Ore
+tile.kepler22bPlanks.PlankMapleBlue.name=Kepler 22b Blue Wooden Planks
+tile.kepler22bPlanks.PlankMapleRed.name=Kepler 22b Red Wooden Planks
+tile.kepler22bPlanks.PlankMaplePurple.name=Kepler 22b Purple Wooden Planks
+tile.kepler22bPlanks.PlankMapleYellow.name=Kepler 22b Yellow Wooden Planks
+tile.kepler22bPlanks.PlankMapleGreen.name=Kepler 22b Green Wooden Planks
+tile.kepler22bPlanks.PlankMapleBrown.name=Kepler 22b Brown Wooden Planks
+tile.kepler22b.StoneBricks.name=Kepler 22b Stone Bricks
+tile.kepler22bMapleLogs.maple_blue_log.name=Kepler 22b Blue Maple Log
+tile.kepler22bMapleLogs.maple_red_log.name=Kepler 22b Red Maple Log
+tile.kepler22bMapleLogs.maple_purple_log.name=Kepler 22b Purple Maple Log
+tile.kepler22bMapleLogs.maple_yellow_log.name=Kepler 22b Yellow Maple Log
+tile.kepler22bMapleLogs2.maple_green_log.name=Kepler 22b Green Maple Log
+tile.kepler22bMapleLogs2.maple_brown_log.name=Kepler 22b Brown Maple Log
+tile.kepler22bMapleSaplings.blueMapleSapling.name=Kepler 22b Blue Maple Sapling
+tile.kepler22bMapleSaplings.redMapleSapling.name=Kepler 22b Red Maple Sapling
+tile.kepler22bMapleSaplings.purpleMapleSapling.name=Kepler 22b Purple Maple Sapling
+tile.kepler22bMapleSaplings.yellowMapleSapling.name=Kepler 22b Yellow Maple Sapling
+tile.kepler22bMapleSaplings.greenMapleSapling.name=Kepler 22b Green Maple Sapling
+tile.kepler22bMapleSaplings.brownMapleSapling.name=Kepler 22b Brown Maple Sapling
+tile.kepler22bMapleLeaves.blueMapleLeaf.name=Kepler 22b Blue Maple Leaves
+tile.kepler22bMapleLeaves.redMapleLeaf.name=Kepler 22b Red Maple Leaves
+tile.kepler22bMapleLeaves.purpleMapleLeaf.name=Kepler 22b Purple Maple Leaves
+tile.kepler22bMapleLeaves.yellowMapleLeaf.name=Kepler 22b Yellow Maple Leaves
+tile.kepler22bMapleLeaves.greenMapleLeaf.name=Kepler 22b Green Maple Leaves
+tile.kepler22bMapleLeaves.brownMapleLeaf.name=Kepler 22b Brown Maple Leaves
+tile.kepler22bFlowers.blueMapleShortGrass.name=Kepler 22b Blue Short Grass
+tile.kepler22bFlowers.blueMapleMedGrass.name=Kepler 22b Blue Medium Grass
+tile.kepler22bFlowers.blueMapleTallGrass.name=Kepler 22b Blue Tall Grass
+tile.kepler22bFlowers.redMapleShortGrass.name=Kepler 22b Red Short Grass
+tile.kepler22bFlowers.redMapleMedGrass.name=Kepler 22b Red Medium Grass
+tile.kepler22bFlowers.redMapleTallGrass.name=Kepler 22b Red Tall Grass
+tile.kepler22bFlowers.yellowMapleShortGrass.name=Kepler 22b Yellow Short Grass
+tile.kepler22bFlowers.yellowMapleMedGrass.name=Kepler 22b Yellow Medium Grass
+tile.kepler22bFlowers.yellowMapleTallGrass.name=Kepler 22b Yellow Tall Grass
+tile.kepler22bFlowers.purpleMapleShortGrass.name=Kepler 22b Purple Short Grass
+tile.kepler22bFlowers.purpleMapleMedGrass.name=Kepler 22b Purple Medium Grass
+tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
+tile.kepler22bFlowers.greenMapleShortGrass.name=Kepler 22b Green Short Grass
+tile.kepler22bFlowers.greenMapleMedGrass.name=Kepler 22b Green Medium Grass
+tile.kepler22bFlowers.greenMapleTallGrass.name=Kepler 22b Green Tall Grass
+tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
+
+#Moon Blocks
+tile.callisto.surface.name=Povrchový kámen z Callisto
+tile.callisto.subSurface.name=Podpovrchový kámen z Callisto
+tile.callisto.stone.name=Kámen z Callisto
+tile.callisto.OreIron.name=Železná ruda z Callisto
+tile.callisto.OreTin.name=Cínová ruda z Callisto
+tile.callisto.OreCopper.name=Měděná ruda z Callisto
+
+tile.deimos.surface.name=Povrchový kámen z Deimosu
+tile.deimos.subSurface.name=Podpovrchový kámen z Deimosu
+tile.deimos.stone.name=Kámen z Deimosu
+tile.deimos.OreIron.name=Železná ruda z Deimosu
+tile.deimos.OreTin.name=Cínová ruda z Deimosu
+tile.deimos.OreCopper.name=Měděná ruda z Deimosu
+
+tile.europa.surface.name=Povrchový kámen z Europy
+tile.europa.subSurface.name=Podpovrchový kámen z Europy
+tile.europa.stone.name=Kámen z Europy
+tile.europa.OreIron.name=Železná ruda z Europy
+tile.europa.OreTin.name=Cínová ruda z Europy
+tile.europa.OreCopper.name=Měděná ruda z Europy
+
+tile.io.surface.name=Povrchový kámen z Io
+tile.io.subSurface.name=Podpovrchový kámen z Io
+tile.io.stone.name=Kámen z Io
+tile.io.OreIron.name=Železná ruda z IO
+tile.io.OreTin.name=Cínová ruda z Io
+tile.io.OreCopper.name=Měděná ruda z Io
+
+tile.phobos.surface.name=Povrchový kámen z Phobosu
+tile.phobos.subSurface.name=Podpovrchový kámen z Phobosu
+tile.phobos.stone.name=Kámen z Phobosu
+tile.phobos.OreIron.name=Železná ruda z Phobosu
+tile.phobos.OreTin.name=Cínová ruda z Phobosu
+tile.phobos.OreCopper.name=Měděná ruda z Phobosu
+
+tile.triton.surface.name=Povrchový kámen z Tritonu
+tile.triton.subSurface.name=Podpovrchový kámen z Tritonu
+tile.triton.stone.name=Kámen z Tritonu
+tile.triton.OreIron.name=Železná ruda z Tritonu
+tile.triton.OreTin.name=Cínová ruda z Tritonu
+tile.triton.OreCopper.name=Měděná ruda z Tritonu
+
+tile.ganymede.surface.name=Povrchový kámen z Ganymede
+tile.ganymede.subSurface.name=Podpovrchový kámen z Ganymede
+tile.ganymede.stone.name=Kámen z Ganymede
+tile.ganymede.OreIron.name=Železná ruda z Ganymede
+tile.ganymede.OreTin.name=Cínová ruda z Ganymede
+tile.ganymede.OreCopper.name=Měděná ruda z Ganymede
+
+tile.rhea.surface.name=Povrchový kámen z Rhea
+tile.rhea.subSurface.name=Podpovrchový kámen z Rhea
+tile.rhea.stone.name=Kámen z Rhea
+tile.rhea.OreIron.name=Železná ruda z Rhea
+tile.rhea.OreTin.name=Cínová ruda z Rhea
+tile.rhea.OreCopper.name=Měděná ruda z Rhea
+
+tile.titan.surface.name=Povrchový kámen z Titanu
+tile.titan.subSurface.name=Podpovrchový kámen z Titanu
+tile.titan.stone.name=Kámen z Titanu
+tile.titan.OreIron.name=Železná ruda z Titanu
+tile.titan.OreTin.name=Cínová ruda z Titanu
+tile.titan.OreCopper.name=Měděná ruda z Titanu
+
+tile.oberon.surface.name=Oberon Surface Rock
+tile.oberon.subSurface.name=Oberon Sub-Surface Rock
+tile.oberon.stone.name=Oberon Stone
+tile.oberon.oreIron.name=Oberon Iron Ore
+tile.oberon.oreTin.name=Oberon Tin Ore
+tile.oberon.oreCopper.name=Oberon Copper Ore
+
+tile.titania.surface.name=Titania Surface Rock
+tile.titania.subSurface.name=Titania Sub-Surface Rock
+tile.titania.stone.name=Titania Stone
+tile.titania.oreIron.name=Titania Iron Ore
+tile.titania.oreTin.name=Titania Tin Ore
+tile.titania.oreCopper.name=Titania Copper Ore
+
+tile.iapetus.surface.name=Iapetus Surface Rock
+tile.iapetus.subSurface.name=Iapetus Sub-Surface Rock
+tile.iapetus.stone.name=Iapetus Stone
+tile.iapetus.oreIron.name=Iapetus Iron Ore
+tile.iapetus.oreTin.name=Iapetus Tin Ore
+tile.iapetus.oreCopper.name=Iapetus Copper Ore
+tile.iapetus.ice.name=Iapetus Ice
+
+#Planet Gravel Blocks
+tile.mercuryGravel.name=Štěrk
+tile.ceresGravel.name=Štěrk
+tile.plutoGravel.name=Štěrk
+tile.erisGravel.name=Štěrk
+tile.ioGravel.name=Štěrk
+tile.europaGravel.name=Štěrk
+tile.deimosGravel.name=Štěrk
+tile.phobosGravel.name=Štěrk
+tile.tritonGravel.name=Štěrk
+tile.callistoGravel.name=Štěrk
+tile.ganymedeGravel.name=Štěrk
+tile.rheaGravel.name=Rhea Gravel
+tile.titanGravel.name=Titan Gravel
+tile.oberonGravel.name=Oberon Gravel
+tile.titaniaGravel.name=Titania Gravel
+tile.iapetusGravel.name=Iapetus Gravel
+
+tile.venusGravel.name=Štěrk
+tile.jupiterGravel.name=Štěrk
+tile.saturnGravel.name=Štěrk
+tile.uranusGravel.name=Štěrk
+tile.neptuneGravel.name=Štěrk
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Kamenný půlblok
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Kamenný půlblok
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=Schody
+tile.venusStoneStairs.name=Schody
+tile.ceresStoneStairs.name=Schody
+tile.jupiterStoneStairs.name=Schody
+tile.saturnStoneStairs.name=Schody
+tile.uranusStoneStairs.name=Schody
+tile.neptuneStoneStairs.name=Schody
+tile.plutoStoneStairs.name=Schody
+tile.erisStoneStairs.name=Schody
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Venuši
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Jupiteru
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Saturnu
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Uranu
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Neptunu
+
+#Dungeon Bricks Stairs
+tile.mercuryDungeonBrickStoneStairs.name=Schody z kobky na Venuši
+tile.jupiterDungeonBrickStoneStairs.name=Schody z kobky na Jupiteru
+tile.saturnDungeonBrickStoneStairs.name=Schody z kobky na Saturnu
+tile.uranusDungeonBrickStoneStairs.name=Schody z kobky na Uranu
+tile.neptuneDungeonBrickStoneStairs.name=Schody z kobky na Neptunu
+
+#Treasure Chests
+tile.treasureChestT4.name=Truhla s pokladem typ 4
+tile.treasureChestT5.name=Truhla s pokladem typ 5
+tile.treasureChestT6.name=Truhla s pokladem typ 6
+tile.treasureChestT7.name=Truhla s pokladem typ 7
+tile.treasureChestT8.name=Truhla s pokladem typ 8
+tile.treasureChestT9.name=Truhla s pokladem typ 9
+tile.treasureChestT10.name=Tier 10 Treasure Chest
+tile.treasureChestT4.description=Truhly s pokladem typu 4 se generují na Venuši. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT5.description=Truhly s pokladem typu 5 se generují na Jupiteru. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT6.description=Truhly s pokladem typu 6 se generují na Saturnu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT7.description=Truhly s pokladem typu 7 se generují na Uranu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT8.description=Truhly s pokladem typu 8 se generují na Neptunu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT9.description=Truhly s pokladem typu 9 se generují na Plutu. Mohou být odemčeny po poražení závěrečného bosse.
+tile.treasureChestT10.description=Tier 10 Treasure Chests will generate in Eris Dungeons. They are unlockable after defeating the final boss.
+
+#Machines
+tile.advancedRefinery.name=Advanced Refinery
+tile.ultimateRefinery.name=Ultimate Refinery
+tile.solar.hybrid_solar.name=Hybridní solární panel
+tile.solar.ultimate_solar.name=Ultimátlní solární panel
+tile.solar_hybrid.description=Tento solární panel bude pracovat během dne i noci
+tile.solar_ultimate.description=Tento solární panel bude pracovat během dne i noci
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+tile.basicDecrystallizer.name=Basic Decrystallizer
+tile.basicCrystallizer.name=Basic Crystallizer
+tile.basicSmasher.name=Basic Block Smasher
+tile.basicChemicalInjector.name=Basic Chemical Injector
+tile.basicSolarEvaporationChamber.name=Basic Solar Evaporation Chamber
+
+#Machine Containers
+container.solarhybrid.name=Hybridní solární panel
+container.solarultimate.name=Ultimátlní solární panel
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advancedoxygencompressor.name=Advanced Oxygen Compressor
+container.advancedoxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimateoxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimateoxygendecompressor.name=Ultimate Oxygen Decompressor
+container.basic.decrystallizer.name=Basic Decrystallizer
+container.basic.crystallizer.name=Basic Crystallizer
+container.basic.smasher.name=Basic Smasher
+container.basic.chemical_injector.name=Basic Chemical Injector
+
+#Machine GUI Components
+gui.salt_water_tank.desc.4=Salt Water Tank
+gui.message.salt_water.name=Salt Water
+gui.salt_water_input.desc.0=Place Salt Water bucket into
+gui.salt_water_input.desc.1=this slot to fill the fuel tank.
+gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
+gui.salt_water_output.desc.0=Place empty vanilla bucket into
+gui.salt_water_output.desc.1=this slot to fill them from the
+gui.salt_water_output.desc.2=fuel tank
+gui.status.injecting.name=Injecting
+gui.status.smasher.name=Smashing
+gui.status.crystallizing.name=Crystallizing
+gui.status.decrystallizing.name=Decrystallizing
+gui.status.solarEvaporationChamber.name=Evaporating
+
+#Other Blocks
+tile.nuclearBomb.name=Jaderná bomba
+tile.volcanicRock.name=Vulkanický kámen
+tile.frozenNitrogen.name=Zmrzný dusík
+tile.denseIce.name=Hustý led
+tile.fossil.name=Fosilní blok
+tile.oreLead.name=Lead Ore
+tile.potash.name=Potash
+
+#Rocket Items
+item.itemTier4Rocket.t4Rocket.name=Raketa typ 4
+item.itemTier5Rocket.t5Rocket.name=Raketa typ 5
+item.itemTier6Rocket.t6Rocket.name=Raketa typ 6
+item.itemTier7Rocket.t7Rocket.name=Raketa typ 7
+item.itemTier8Rocket.t8Rocket.name=Raketa typ 8
+item.itemTier9Rocket.t9Rocket.name=Raketa typ 9
+item.itemTier10Rocket.t10Rocket.name=Tier 10 Rocket
+
+#Rocket Tiered Items
+item.noseConeTier4.name=Špička rakety typ 4
+item.noseConeTier5.name=Špička rakety typ 5
+item.noseConeTier6.name=Špička rakety typ 6
+item.noseConeTier7.name=Špička rakety typ 7
+item.noseConeTier8.name=Špička rakety typ 8
+item.noseConeTier9.name=Špička rakety typ 9
+item.noseConeTier10.name=Tier 10 Nose Cone
+
+item.tier4Items.tier4Fin.name=Raketové křidélko typ 4
+item.tier5Items.tier5Fin.name=Raketové křidélko typ 5
+item.tier6Items.tier6Fin.name=Raketové křidélko typ 6
+item.tier7Items.tier7Fin.name=Raketové křidélko typ 7
+item.tier8Items.tier8Fin.name=Raketové křidélko typ 8
+item.tier9Items.tier9Fin.name=Raketové křidélko typ 9
+item.tier10Items.tier10Fin.name=Tier 10 Rocket Fins
+
+item.tier4Items.tier4engine.name=Raketový motor typ 4
+item.tier5Items.tier5engine.name=Raketový motor typ 5
+item.tier6Items.tier6engine.name=Raketový motor typ 6
+item.tier7Items.tier7engine.name=Raketový motor typ 7
+item.tier8Items.tier8engine.name=Raketový motor typ 8
+item.tier9Items.tier9engine.name=Raketový motor typ 9
+item.tier10Items.tier10engine.name=Tier 10 Rocket Engine
+
+item.tier4Items.tier4booster.name=Posilovač typ 4
+item.tier5Items.tier5booster.name=Posilovač typ 5
+item.tier6Items.tier6booster.name=Posilovač typ 6
+item.tier7Items.tier7booster.name=Posilovač typ 7
+item.tier8Items.tier8booster.name=Posilovač typ 8
+item.tier9Items.tier9booster.name=Posilovač typ 9
+item.tier10Items.tier10booster.name=Tier 10 Booster
+
+item.tier4Items.tier4HeavyDutyplate.name=Zesílený plech
+item.tier5Items.tier5HeavyDutyplate.name=Zesílený plech
+item.tier6Items.tier6HeavyDutyplate.name=Zesílený plech
+item.tier7Items.tier7HeavyDutyplate.name=Zesílený plech
+item.tier8Items.tier8HeavyDutyplate.name=Zesílený plech
+item.tier9Items.tier9HeavyDutyplate.name=Zesílený plech
+item.tier10Items.tier10HeavyDutyPlate.name=Heavy-Duty Plate
+
+tier4.heavyDutyplate.name=typ 4
+tier5.heavyDutyplate.name=typ 5
+tier6.heavyDutyplate.name=typ 6
+tier7.heavyDutyplate.name=typ 7
+tier8.heavyDutyplate.name=typ 8
+tier9.heavyDutyplate.name=typ 9
+tier10.heavyDutyPlate.name=Tier 10
+
+#Stlačený Items
+item.tier4Items.compressedCarbon.name=Stlačený Karbon
+item.tier5Items.compressedPalladium.name=Stlačené Palladium
+item.tier6Items.compressedMagnesium.name=Stlačené Magnesium
+item.tier7Items.compressedReinforcedCrystal.name=Stlačený Vystužený krystal
+item.tier7Items.compressedCrystal.name=Stlačený Krystal
+item.compressedZinc.name=Stlačený Zinek
+item.compressedNickel.name=Stlačený Nikl
+item.compressedMercury.name=Stlačená Měď
+item.tier9Items.compressedTungsten.name=Stlačený Tungsten
+item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
+
+#Ingots
+item.tier4Items.ingotCarbon.name=Karbonový Ingot
+item.tier5Items.ingotPalladium.name=Palladiový Ingot
+item.tier6Items.ingotMagnesium.name=Magnesiový Ingot
+item.tier7Items.ingotCrystal.name=Krystalový Ingot
+item.ingotZinc.name=Zinkový Ingot
+item.ingotNickel.name=Niklový Ingot
+item.ingotMercury.name=Měděný Ingot
+item.ingotUranium.name=Uranový Ingot
+item.tier9Items.ingotTungsten.name=Tungstenový Ingot
+item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
+item.ingotLead.name=Lead Ingot
+
+#Gems
+item.tier5Items.redGem.name=Red Gem
+item.tier8Items.blueGem.name=Blue Gem
+item.tier7Items.whiteGem.name=White Gem
+item.tier11Items.blueDiamond.name=Blue Diamond
+item.tier11Items.redDiamond.name=Red Diamond
+item.tier11Items.yellowDiamond.name=Yellow Diamond
+item.tier11Items.purpleDiamond.name=Purple Diamond
+item.tier11Items.greenDiamond.name=Green Diamond
+
+#Wafers
+item.wafer.diamondWafer.name=Diamond Wafer
+item.wafer.carbonWafer.name=Carbon Wafer
+item.wafer.titaniumWafer.name=Titanium Wafer
+item.wafer.redGemWafer.name=Red Gem Wafer
+item.wafer.blueGemWafer.name=Blue Gem Wafer
+item.wafer.whiteGemWafer.name=White Gem Wafer
+
+wafers.diamondWafer.desc=CircuitFabricator Recipe: Diamonds & Redstone Lamp
+wafers.carbonWafer.desc=CircuitFabricator Recipe: Carbon Ingot & Redstone Comparator
+wafers.titaniumWafer.desc=CircuitFabricator Recipe: Titanium Ingot & Redstone Torch
+wafers.redGemWafer.desc=CircuitFabricator Recipe: Red Gem & Redstone Repeater
+wafers.blueGemWafer.desc=CircuitFabricator Recipe: Blue Gem Ingot & Redstone Repeater
+wafers.whiteGemWafer.desc=CircuitFabricator Recipe: White Gem Ingot & Redstone Repeater
+
+#Buckets
+item.bucket_glowstone.name=Kbelík světlitu
+item.bucket_salt.name=Kbelík soli
+item.bucket_magma.name=Kbelík Magma
+item.bucket_frozen_water.name=Kbelík zmrzlé vody
+item.bucket_nitrogen.name=Kbelík dusíku
+item.bucket_clean_water.name=Clean Water Bucket
+item.bucket_infected_water.name=Infected Water Bucket
+item.bucket_radioactive_water.name=Radioactive Water Bucket
+item.bucket_methane.name=Liquid Methane Bucket
+item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
+
+#Keys
+item.T4key.name=Klíč ke kobce typ 4
+item.T5key.name=Klíč ke kobce typ 5
+item.T6key.name=Klíč ke kobce typ 6
+item.T7key.name=Klíč ke kobce typ 7
+item.T8key.name=Klíč ke kobce typ 8
+item.T9key.name=Klíč ke kobce typ 9
+item.T10key.name=Klíč ke kobce typ 10
+
+#Tools
+item.carbon_pickaxe.name=Karbonový krumpáč
+item.carbon_axe.name=Karbonová sekyra
+item.carbon_sword.name=Karbonový meč
+item.carbon_hoe.name=Karbonová motyčka
+item.carbon_shovel.name=Karbonová lopata
+item.palladium_pickaxe.name=Palladiový krumpáč
+item.palladium_axe.name=Palladiová sekyra
+item.palladium_sword.name=Palladiový meč
+item.palladium_hoe.name=Palladiová motyčka
+item.palladium_shovel.name=Palladiová lopata
+item.magnesium_pickaxe.name=Magnesiový krumpáč
+item.magnesium_axe.name=Magnesiová sekyra
+item.magnesium_sword.name=Magnesiový meč
+item.magnesium_hoe.name=Magnesiová motyčka
+item.magnesium_shovel.name=Magnesiová lopata
+item.crystal_pickaxe.name=Krystalový krumpáč
+item.crystal_axe.name=Krystalová sekyra
+item.crystal_sword.name=Krystalový meč
+item.crystal_hoe.name=Krystalová motyčka
+item.crystal_shovel.name=Krystalová lopata
+item.tungsten_pickaxe.name=Tungsten Pickaxe
+item.tungsten_axe.name=Tungsten Axe
+item.tungsten_sword.name=Tungsten Sword
+item.tungsten_hoe.name=Tungsten Hoe
+item.tungsten_shovel.name=Tungsten Shovel
+item.red_gem_pickaxe.name=Red Gem Pickaxe
+item.red_gem_axe.name=Red Gem Axe
+item.red_gem_sword.name=Red Gem Sword
+item.red_gem_hoe.name=Red Gem Hoe
+item.red_gem_shovel.name=Red Gem Shovel
+item.blue_gem_pickaxe.name=Blue Gem Pickaxe
+item.blue_gem_axe.name=Blue Gem Axe
+item.blue_gem_sword.name=Blue Gem Sword
+item.blue_gem_hoe.name=Blue Gem Hoe
+item.blue_gem_shovel.name=Blue Gem Shovel
+item.white_gem_pickaxe.name=White Gem Pickaxe
+item.white_gem_axe.name=White Gem Axe
+item.white_gem_sword.name=White Gem Sword
+item.white_gem_hoe.name=White Gem Hoe
+item.white_gem_shovel.name=White Gem Shovel
+item.mercury_pickaxe.name=Mercury Pickaxe
+item.mercury_axe.name=Mercury Axe
+item.mercury_sword.name=Mercury Sword
+item.mercury_hoe.name=Mercury Hoe
+item.mercury_shovel.name=Mercury Shovel
+item.zinc_pickaxe.name=Zinc Pickaxe
+item.zinc_axe.name=Zinc Axe
+item.zinc_sword.name=Zinc Sword
+item.zinc_hoe.name=Zinc Hoe
+item.zinc_shovel.name=Zinc Shovel
+item.uranium_pickaxe.name=Uranium Pickaxe
+item.uranium_axe.name=Uranium Axe
+item.uranium_sword.name=Uranium Sword
+item.uranium_hoe.name=Uranium Hoe
+item.uranium_shovel.name=Uranium Shovel
+item.blue_diamond_pickaxe.name=Blue Diamond Pickaxe
+item.blue_diamond_axe.name=Blue Diamond Axe
+item.blue_diamond_sword.name=Blue Diamond Sword
+item.blue_diamond_hoe.name=Blue Diamond Hoe
+item.blue_diamond_shovel.name=Blue Diamond Shovel
+item.red_diamond_pickaxe.name=Red Diamond Pickaxe
+item.red_diamond_axe.name=Red Diamond Axe
+item.red_diamond_sword.name=Red Diamond Sword
+item.red_diamond_hoe.name=Red Diamond Hoe
+item.red_diamond_shovel.name=Red Diamond Shovel
+item.purple_diamond_pickaxe.name=Purple Diamond Pickaxe
+item.purple_diamond_axe.name=Purple Diamond Axe
+item.purple_diamond_sword.name=Purple Diamond Sword
+item.purple_diamond_hoe.name=Purple Diamond Hoe
+item.purple_diamond_shovel.name=Purple Diamond Shovel
+item.yellow_diamond_pickaxe.name=Yellow Diamond Pickaxe
+item.yellow_diamond_axe.name=Yellow Diamond Axe
+item.yellow_diamond_sword.name=Yellow Diamond Sword
+item.yellow_diamond_hoe.name=Yellow Diamond Hoe
+item.yellow_diamond_shovel.name=Yellow Diamond Shovel
+item.green_diamond_pickaxe.name=Green Diamond Pickaxe
+item.green_diamond_axe.name=Green Diamond Axe
+item.green_diamond_sword.name=Green Diamond Sword
+item.green_diamond_hoe.name=Green Diamond Hoe
+item.green_diamond_shovel.name=Green Diamond Shovel
+
+#Schematics
+item.schematicTier4.name=NASA Workbench Schéma
+item.schematicTier5.name=NASA Workbench Schéma
+item.schematicTier6.name=NASA Workbench Schéma
+item.schematicTier7.name=NASA Workbench Schéma
+item.schematicTier8.name=NASA Workbench Schéma
+item.schematicTier9.name=NASA Workbench Schéma
+item.schematicTier10.name=NASA Workbench Schéma
+
+schematic.tier4.Rocket.name=Raketa typ 4
+schematic.tier5.Rocket.name=Raketa typ 5
+schematic.tier6.Rocket.name=Raketa typ 6
+schematic.tier7.Rocket.name=Raketa typ 7
+schematic.tier8.Rocket.name=Raketa typ 8
+schematic.tier9.Rocket.name=Raketa typ 9
+schematic.tier10.Rocket.name=Raketa typ 10
+
+schematic.RocketT4.name=Raketa typ 4
+schematic.RocketT5.name=Raketa typ 5
+schematic.RocketT6.name=Raketa typ 6
+schematic.RocketT7.name=Raketa typ 7
+schematic.RocketT8.name=Raketa typ 8
+schematic.RocketT9.name=Raketa typ 9
+schematic.RocketT10.name=Raketa typ 10
+
+#Batteries
+item.mercuryBattery.name=Měděná baterie
+item.nickelBattery.name=Niklová baterie
+item.zincBattery.name=Zinková baterie
+item.advancedBattery.name=Advanced Battery
+item.ultimateBattery.name=Ultimate Battery
+
+#Armor
+item.carbonHelmet.name=Karbonová helma
+item.carbonChest.name=Karbonové brnění
+item.carbonLegings.name=Karbonové kalhoty
+item.carbonBoots.name=Karbonová Karbonové
+item.palladiumHelmet.name=Palladiová helma
+item.palladiumChest.name=Palladiové brnění
+item.palladiumLegings.name=Palladiové kalhoty
+item.palladiumBoots.name=Palladiové boty
+item.magnesiumHelmet.name=Magnesiová helma
+item.magnesiumChest.name=Magnesiové brnění
+item.magnesiumLegings.name=Magnesiové kalhoty
+item.magnesiumBoots.name=Magnesiové boty
+item.crystalHelmet.name=Krystalová helma
+item.crystalChest.name=Krystalové brnění
+item.crystalLegings.name=Krystalové kalhoty
+item.crystalBoots.name=Krystalové boty
+item.redGemHelmet.name=Red Gem Helmet
+item.redGemChest.name=Red Gem Chestplate
+item.redGemLegings.name=Red Gem Leggings
+item.redGemBoots.name=Red Gem Boots
+item.blueGemHelmet.name=Blue Gem Helmet
+item.blueGemChest.name=Blue Gem Chestplate
+item.blueGemLegings.name=Blue Gem Leggings
+item.blueGemBoots.name=Blue Gem Boots
+item.whiteGemHelmet.name=White Gem Helmet
+item.whiteGemChest.name=White Gem Chestplate
+item.whiteGemLegings.name=White Gem Leggings
+item.whiteGemBoots.name=White Gem Boots
+item.mercuryHelmet.name=Mercury Helmet
+item.mercuryChest.name=Mercury Chestplate
+item.mercuryLegings.name=Mercury Leggings
+item.mercuryBoots.name=Mercury Boots
+item.uraniumHelmet.name=Uranium Helmet
+item.uraniumChest.name=Uranium Chestplate
+item.uraniumLegings.name=Uranium Leggings
+item.uraniumBoots.name=Uranium Boots
+item.zincHelmet.name=Zinc Helmet
+item.zincChest.name=Zinc Chestplate
+item.zincLegings.name=Zinc Leggings
+item.zincBoots.name=Zinc Boots
+item.tungstenHelmet.name=Tungsten Helmet
+item.tungstenChest.name=Tungsten Chestplate
+item.tungstenLegings.name=Tungsten Leggings
+item.tungstenBoots.name=Tungsten Boots
+item.blueDiamondHelmet.name=Blue Diamond Helmet
+item.blueDiamondChest.name=Blue Diamond Chestplate
+item.blueDiamondLegings.name=Blue Diamond Leggings
+item.blueDiamondBoots.name=Blue Diamond Boots
+item.redDiamondHelmet.name=Red Diamond Helmet
+item.redDiamondChest.name=Red Diamond Chestplate
+item.redDiamondLegings.name=Red Diamond Leggings
+item.redDiamondBoots.name=Red Diamond Boots
+item.purpleDiamondHelmet.name=Purple Diamond Helmet
+item.purpleDiamondChest.name=Purple Diamond Chestplate
+item.purpleDiamondLegings.name=Purple Diamond Leggings
+item.purpleDiamondBoots.name=Purple Diamond Boots
+item.yellowDiamondHelmet.name=Yellow Diamond Helmet
+item.yellowDiamondChest.name=Yellow Diamond Chestplate
+item.yellowDiamondLegings.name=Yellow Diamond Leggings
+item.yellowDiamondBoots.name=Yellow Diamond Boots
+item.greenDiamondHelmet.name=Green Diamond Helmet
+item.greenDiamondChest.name=Green Diamond Chestplate
+item.greenDiamondLegings.name=Green Diamond Leggings
+item.greenDiamondBoots.name=Green Diamond Boots
+
+item.tier1SpaceSuitHelmet.name=Tier 1 Space Suit Helmet
+item.tier1SpaceSuitChest.name=Tier 1 Space Suit Chestplate
+item.tier1SpaceSuitLegings.name=Tier 1 Space Suit Leggings
+item.tier1SpaceSuitBoots.name=Tier 1 Space Suit Boots
+item.tier1SpaceSuitGravityBoots.name=Tier 1 Space Suit Gravity Boots
+item.tier2SpaceSuitHelmet.name=Tier 2 Space Suit Helmet
+item.tier2SpaceSuitChest.name=Tier 2 Space Suit Chestplate
+item.tier2SpaceSuitLegings.name=Tier 2 Space Suit Leggings
+item.tier2SpaceSuitBoots.name=Tier 2 Space Suit Boots
+item.tier2SpaceSuitGravityBoots.name=Tier 2 Space Suit Gravity Boots
+item.tier3SpaceSuitHelmet.name=Tier 3 Space Suit Helmet
+item.tier3SpaceSuitChest.name=Tier 3 Space Suit Chestplate
+item.tier3SpaceSuitLegings.name=Tier 3 Space Suit Leggings
+item.tier3SpaceSuitBoots.name=Tier 3 Space Suit Boots
+item.tier3SpaceSuitGravityBoots.name=Tier 3 Space Suit Gravity Boots
+item.tier4SpaceSuitHelmet.name=Tier 4 Space Suit Helmet
+item.tier4SpaceSuitChest.name=Tier 4 Space Suit Chestplate
+item.tier4SpaceSuitLegings.name=Tier 4 Space Suit Leggings
+item.tier4SpaceSuitBoots.name=Tier 4 Space Suit Boots
+item.tier4SpaceSuitGravityBoots.name=Tier 4 Space Suit Gravity Boots
+
+item.tier3ThermalHelm.name=Tier 3 Thermal Padding Helm
+item.tier3ThermalChestplate.name=Tier 3 Thermal Padding Chestpiece
+item.tier3ThermalLeggings.name=Tier 3 Thermal Padding Leggings
+item.tier3ThermalBoots.name=Tier 3 Thermal Padding Boots
+item.tier4ThermalHelm.name=Tier 4 Thermal Padding Helm
+item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
+item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
+item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
+item.tier5ThermalHelm.name=Tier 5 Thermal Padding Helm
+item.tier5ThermalChestplate.name=Tier 5 Thermal Padding Chestpiece
+item.tier5ThermalLeggings.name=Tier 5 Thermal Padding Leggings
+item.tier5ThermalBoots.name=Tier 5 Thermal Padding Boots
+
+tier3.information=Required for Mercury during day and the night
+tier4.information=Required for Jupiter and Saturn including their moons during day and the night
+tier5.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
+
+#Space Suit Layers
+item.tier1PressureLayer.name=Tier 1 Pressure Layer
+item.tier2PressureLayer.name=Tier 2 Pressure Layer
+item.tier3PressureLayer.name=Tier 3 Pressure Layer
+item.tier4PressureLayer.name=Tier 4 Pressure Layer
+
+item.tier1RadiationLayer.name=Tier 1 Radiation Layer
+item.tier2RadiationLayer.name=Tier 2 Radiation Layer
+item.tier3RadiationLayer.name=Tier 3 Radiation Layer
+item.tier4RadiationLayer.name=Tier 4 Radiation Layer
+
+item.tier1ArmorLayer.name=Tier 1 Armour Layer
+item.tier2ArmorLayer.name=Tier 2 Armour Layer
+item.tier3ArmorLayer.name=Tier 3 Armour Layer
+item.tier4ArmorLayer.name=Tier 4 Armour Layer
+
+tier1ArmorLayer.desc=Compressor Recipe: 4 Aluminum Ingots
+tier2ArmorLayer.desc=Compressor Recipe: 4 Titanium Ingots
+tier3ArmorLayer.desc=Compressor Recipe: 4 Palladium Ingots
+tier4ArmorLayer.desc=Compressor Recipe: 4 Zinc Ingots
+
+#UnPrepared Space Suits
+item.tier1UnPreparedSpaceSuitHelmet.name=Tier 1 Un-Prepared Space Suit Helmet
+item.tier1UnPreparedSpaceSuitChest.name=Tier 1 Un-Prepared Space Suit Chestplate
+item.tier1UnPreparedSpaceSuitLegings.name=Tier 1 Un-Prepared Space Suit Leggings
+item.tier1UnPreparedSpaceSuitBoots.name=Tier 1 Un-Prepared Space Suit Boots
+
+item.tier2UnPreparedSpaceSuitHelmet.name=Tier 2 Un-Prepared Space Suit Helmet
+item.tier2UnPreparedSpaceSuitChest.name=Tier 2 Un-Prepared Space Suit Chestplate
+item.tier2UnPreparedSpaceSuitLegings.name=Tier 2 Un-Prepared Space Suit Leggings
+item.tier2UnPreparedSpaceSuitBoots.name=Tier 2 Un-Prepared Space Suit Boots
+
+item.tier3UnPreparedSpaceSuitHelmet.name=Tier 3 Un-Prepared Space Suit Helmet
+item.tier3UnPreparedSpaceSuitChest.name=Tier 3 Un-Prepared Space Suit Chestplate
+item.tier3UnPreparedSpaceSuitLegings.name=Tier 3 Un-Prepared Space Suit Leggings
+item.tier3UnPreparedSpaceSuitBoots.name=Tier 3 Un-Prepared Space Suit Boots
+
+item.tier4UnPreparedSpaceSuitHelmet.name=Tier 4 Un-Prepared Space Suit Helmet
+item.tier4UnPreparedSpaceSuitChest.name=Tier 4 Un-Prepared Space Suit Chestplate
+item.tier4UnPreparedSpaceSuitLegings.name=Tier 4 Un-Prepared Space Suit Leggings
+item.tier4UnPreparedSpaceSuitBoots.name=Tier 4 Un-Prepared Space Suit Boots
+
+#Oxygen Tanks
+item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank
+item.oxygen_tank_extremely_heavy_full.name=Extremely Heavy Oxygen Tank
+
+#Radiation Items
+item.iodideSalt.name=Iodided Salt
+item.potassiumIodide.name=Potassium Iodide
+item.potassium.name=Potassium
+item.potashShards.name=Potash Shards
+antiRadiation.desc=Reduces Radiation Level by 2
+
+#Other Items
+item.appleDiamond.name=Diamantové jablko
+item.appleIron.name=Iron Apple
+item.cannedFood.cannedFood.name=Plechovka jídla
+item.bodyparts.arm.name=Paže
+item.bodyparts.leg.name=Noha
+item.cloth.name=Wool Cloth
+item.gravityController.name=Gravity Controller
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+item.thermalCloth.tier5ThermalCloth.name=Tier 5 Thermal Cloth
+
+item.cannedFood.dehydratedPorkchop.name=Dehydrované vepřové
+item.cannedFood.dehydratedFish.name=Dehydrovaná ryba
+item.cannedFood.dehydratedSalmon.name=Dehydrovaný losos
+item.cannedFood.dehydratedChicken.name=Dehydrované kuře
+item.cannedFood.dehydratedBeef.name=Dehydrované hovězí
+
+#Entities
+entity.ProjectileTNT.name=Projectile TNT
+
+entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Rocket
+entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Rocket
+entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Rocket
+entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Rocket
+entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
+entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
+entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Rocket
+
+entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss z Venuše
+entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss z Jupiteru
+entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss z Saturnu
+entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss z Uranu
+entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss z Neptunu
+entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
+entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
+
+entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
+
+entity.ExtraPlanetsEvolvedWitch.name=Vyvinutá Čarodejnice
+entity.ExtraPlanetsEvolvedMagmaCube.name=Vyvinutá Magma Kostka
+entity.ExtraPlanetsEvolvedIceSlime.name=Vyvinutý Ledový Sliz
+entity.ExtraPlanetsEvolvedEnderman.name=Vyvinutý Enderman
+entity.ExtraPlanetsEvolvedBlaze.name=Vyvinutý Ohnivák
+entity.ExtraPlanetsEvolvedBlueCreeper.name=Vyvinutý Modrý Syčák
+entity.ExtraPlanetsEvolvedRedCreeper.name=Vyvinutý Červený Syčák
+entity.ExtraPlanetsEvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
+
+#Achievement
+achievement.mercuryPlanet=Přistaň na Merkuru!
+achievement.ceresPlanet=Přistaň na Ceresu!
+achievement.jupiterPlanet=Přistaň na Jupiteru!
+achievement.saturnPlanet=Přistaň na Saturnu!
+achievement.uranusPlanet=Přistaň na Uranu!
+achievement.neptunePlanet=Přistaň na Neptunu!
+achievement.plutoPlanet=Přistaň na Plutu!
+achievement.erisPlanet=Přistaň na Erisu!
+achievement.kepler62bPlanet=Land on Kepler62b!
+achievement.kepler22bPlanet=Land on Kepler22b!
+
+achievement.mercuryPlanet.desc=Vezmi raketu typ 3 na Merkur
+achievement.ceresPlanet.desc=Vezmi raketu typ 4 na Ceres
+achievement.jupiterPlanet.desc=Vezmi raketu typ 4 na Jupiter
+achievement.saturnPlanet.desc=Vezmi raketu typ 5 na Saturn
+achievement.uranusPlanet.desc=Vezmi raketu typ 6 na Uran
+achievement.neptunePlanet.desc=Vezmi raketu typ 7 na Neptun
+achievement.plutoPlanet.desc=Vezmi raketu typ 8 na Pluto
+achievement.erisPlanet.desc=Vezmi raketu typ 9 na Eris
+achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
+achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
+
+achievement.mercuryBoss=Defeated Tier 4 Boss!
+achievement.jupiterBoss=Defeated Tier 5 Boss!
+achievement.saturnBoss=Defeated Tier 6 Boss!
+achievement.uranusBoss=Defeated Tier 7 Boss!
+achievement.neptuneBoss=Defeated Tier 8 Boss!
+achievement.plutoBoss=Defeated Tier 9 Boss!
+achievement.erisBoss=Defeated Tier 10 Boss!
+
+achievement.mercuryBoss.desc=Kill the Mercury Dungeon Boss and Open the Treasure Chest
+achievement.jupiterBoss.desc=Zabij Bosse z kobky na Jupiteru a otevři truhlu s pokladem
+achievement.saturnBoss.desc=Zabij Bosse z kobky na Saturnu a otevři truhlu s pokladem
+achievement.uranusBoss.desc=Zabij Bosse z kobky na Uranu a otevři truhlu s pokladem
+achievement.neptuneBoss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s pokladem
+achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest
+achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
+
+achievement.craftRocket4=Tier 4 Rocket!
+achievement.craftRocket5=Tier 5 Rocket!
+achievement.craftRocket6=Tier 6 Rocket!
+achievement.craftRocket7=Tier 7 Rocket!
+achievement.craftRocket8=Tier 8 Rocket!
+achievement.craftRocket9=Tier 9 Rocket!
+achievement.craftRocket10=Tier 10 Rocket!
+
+achievement.craftRocket4.desc=Craft Tier 4 Rocket
+achievement.craftRocket5.desc=Craft Tier 5 Rocket
+achievement.craftRocket6.desc=Craft Tier 6 Rocket
+achievement.craftRocket7.desc=Craft Tier 7 Rocket
+achievement.craftRocket8.desc=Craft Tier 8 Rocket
+achievement.craftRocket9.desc=Craft Tier 9 Rocket
+achievement.craftRocket10.desc=Craft Tier 10 Rocket
+
+#Liquids/Fluid
+tile.glowstone.name=Tekutý světlit
+tile.magma.name=Tekutá magma
+tile.nitrogen.name=Tekutý dusík
+tile.frozen_water.name=Zmrzlá voda
+tile.salt.name=Zmrzlá sůl
+tile.radioactive_water.name=Radioactive Water
+tile.clean_water.name=Clean Water
+tile.infected_water.name=Infected Water
+tile.methane.name=Liquid Methane
+tile.nitrogen_ice.name=Liquid Nitrogen Ice
+
+#Gui/Damage Sources
+gui.warning.high.pressure=Warning High Pressure
+gui.warning.high.radiation=Warning High Radiation
+death.attack.radiation=%1$s forgot radiation protection
+death.attack.pressure=%1$s forgot pressure protection

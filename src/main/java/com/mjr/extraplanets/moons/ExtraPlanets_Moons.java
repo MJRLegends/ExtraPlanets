@@ -222,62 +222,62 @@ public class ExtraPlanets_Moons {
 		if (Config.TRITON) {
 			GalaxyRegistry.registerMoon(TRITON);
 			GalacticraftRegistry.registerTeleportType(WorldProviderTriton.class, new TeleportTypeTriton());
-			GalacticraftRegistry.registerRocketGui(WorldProviderTriton.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/tritonRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderTriton.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/triton_rocket_gui.png"));
 		}
 		if (Config.EUROPA) {
 			GalaxyRegistry.registerMoon(EUROPA);
 			GalacticraftRegistry.registerTeleportType(WorldProviderEuropa.class, new TeleportTypeEuropa());
-			GalacticraftRegistry.registerRocketGui(WorldProviderEuropa.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/europaRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderEuropa.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/europa_rocket_gui.png"));
 		}
 		if (Config.IO) {
 			GalaxyRegistry.registerMoon(IO);
 			GalacticraftRegistry.registerTeleportType(WorldProviderIo.class, new TeleportTypeIo());
-			GalacticraftRegistry.registerRocketGui(WorldProviderIo.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/ioRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderIo.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/io_rocket_gui.png"));
 		}
 		if (Config.DEIMOS) {
 			GalaxyRegistry.registerMoon(DEIMOS);
 			GalacticraftRegistry.registerTeleportType(WorldProviderDeimos.class, new TeleportTypeDeimos());
-			GalacticraftRegistry.registerRocketGui(WorldProviderDeimos.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/deimosRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderDeimos.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/deimos_rocket_gui.png"));
 		}
 		if (Config.PHOBOS) {
 			GalaxyRegistry.registerMoon(PHOBOS);
 			GalacticraftRegistry.registerTeleportType(WorldProviderPhobos.class, new TeleportTypePhobos());
-			GalacticraftRegistry.registerRocketGui(WorldProviderPhobos.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/phobosRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderPhobos.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/phobos_rocket_gui.png"));
 		}
 		if (Config.CALLISTO) {
 			GalaxyRegistry.registerMoon(CALLISTO);
 			GalacticraftRegistry.registerTeleportType(WorldProviderCallisto.class, new TeleportTypeCallisto());
-			GalacticraftRegistry.registerRocketGui(WorldProviderCallisto.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/callistoRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderCallisto.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/callisto_rocket_gui.png"));
 		}
 		if (Config.GANYMEDE) {
 			GalaxyRegistry.registerMoon(GANYMEDE);
 			GalacticraftRegistry.registerTeleportType(WorldProviderGanymede.class, new TeleportTypeGanymede());
-			GalacticraftRegistry.registerRocketGui(WorldProviderGanymede.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/ganymedeRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderGanymede.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/ganymede_rocket_gui.png"));
 		}
 		if (Config.RHEA) {
 			GalaxyRegistry.registerMoon(RHEA);
 			GalacticraftRegistry.registerTeleportType(WorldProviderRhea.class, new TeleportTypeRhea());
-			GalacticraftRegistry.registerRocketGui(WorldProviderRhea.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rheaRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderRhea.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rhea_rocket_gui.png"));
 		}
 		if (Config.TITAN) {
 			GalaxyRegistry.registerMoon(TITAN);
 			GalacticraftRegistry.registerTeleportType(WorldProviderTitan.class, new TeleportTypeTitan());
-			GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titanRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderTitan.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titan_rocket_gui.png"));
 		}
 		if (Config.OBERON) {
 			GalaxyRegistry.registerMoon(OBERON);
 			GalacticraftRegistry.registerTeleportType(WorldProviderOberon.class, new TeleportTypeOberon());
-			GalacticraftRegistry.registerRocketGui(WorldProviderOberon.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/oberonRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderOberon.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/oberon_rocket_gui.png"));
 		}
 		if (Config.TITANIA) {
 			GalaxyRegistry.registerMoon(TITANIA);
 			GalacticraftRegistry.registerTeleportType(WorldProviderTitania.class, new TeleportTypeTitania());
-			GalacticraftRegistry.registerRocketGui(WorldProviderTitania.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titaniaRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderTitania.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/titania_rocket_gui.png"));
 		}
 		if (Config.IAPETUS) {
 			GalaxyRegistry.registerMoon(IAPETUS);
 			GalacticraftRegistry.registerTeleportType(WorldProviderIapetus.class, new TeleportTypeIapetus());
-			GalacticraftRegistry.registerRocketGui(WorldProviderIapetus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/iapetusRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderIapetus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/iapetus_rocket_gui.png"));
 		}
 	}
 }

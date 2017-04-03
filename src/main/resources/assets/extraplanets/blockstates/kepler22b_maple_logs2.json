@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"axis=y,variant=maple_green_log": { "model": "extraplanets:maple_green_log_model" },
+		"axis=z,variant=maple_green_log": { "model": "extraplanets:maple_green_log_side_model" },
+		"axis=x,variant=maple_green_log": { "model": "extraplanets:maple_green_log_side_model", "y": 90 },
+		"axis=none,variant=maple_green_log": { "model": "extraplanets:maple_green_log_model" },
+		"axis=y,variant=maple_brown_log": { "model": "extraplanets:maple_brown_log_model" },
+		"axis=z,variant=maple_brown_log": { "model": "extraplanets:maple_brown_log_side_model" },
+		"axis=x,variant=maple_brown_log": { "model": "extraplanets:maple_brown_log_side_model", "y": 90 },
+		"axis=none,variant=maple_brown_log": { "model": "extraplanets:maple_brown_log_model" }
+	}
+}

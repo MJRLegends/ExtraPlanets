@@ -1,0 +1,14 @@
+{
+    "variants": {
+		"basictypesaturn=saturn_surface": { "model": "extraplanets:saturn_surface_model" },
+        "basictypesaturn=saturn_sub_surface": { "model": "extraplanets:saturn_sub_surface_model" },
+        "basictypesaturn=saturn_stone": { "model": "extraplanets:saturn_stone_model" },
+        "basictypesaturn=saturn_ore_iron": { "model": "extraplanets:saturn_ore_iron_model" },
+        "basictypesaturn=saturn_ore_tin": { "model": "extraplanets:saturn_ore_tin_model" },
+        "basictypesaturn=saturn_ore_copper": { "model": "extraplanets:saturn_ore_copper_model" },
+		"basictypesaturn=saturn_ore_magnesium": { "model": "extraplanets:saturn_ore_magnesium_model" },
+        "basictypesaturn=saturn_magnesium_block": { "model": "extraplanets:saturn_magnesium_block_model" },
+        "basictypesaturn=saturn_stonebricks": { "model": "extraplanets:saturn_stonebricks_model" },
+		"basictypesaturn=saturn_dungeon_brick": { "model": "extraplanets:saturn_dungeon_brick_model" }
+    }
+}

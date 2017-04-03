@@ -211,90 +211,90 @@ public class ExtraPlanets_Blocks {
 	private static void initializeBlocks() {
 		if (Config.MERCURY) {
 			MERCURY_BLOCKS = new BlockBasicMercury("mercury");
-			MERCURY_GRAVEL = new BlockCustomGravel("mercuryGravel");
+			MERCURY_GRAVEL = new BlockCustomGravel("mercury_gravel");
 		}
 		if (Config.CERES) {
 			CERES_BLOCKS = new BlockBasicCeres("ceres");
-			CERES_GRAVEL = new BlockCustomGravel("ceresGravel");
+			CERES_GRAVEL = new BlockCustomGravel("ceres_gravel");
 		}
 		if (Config.JUPITER) {
 			JUPITER_BLOCKS = new BlockBasicJupiter("jupiter");
-			JUPITER_GRAVEL = new BlockCustomGravel("jupiterGravel");
+			JUPITER_GRAVEL = new BlockCustomGravel("jupiter_gravel");
 		}
 		if (Config.SATURN) {
 			SATURN_BLOCKS = new BlockBasicSaturn("saturn");
-			SATURN_GRAVEL = new BlockCustomGravel("saturnGravel");
+			SATURN_GRAVEL = new BlockCustomGravel("saturn_gravel");
 		}
 		if (Config.URANUS) {
 			URANUS_BLOCKS = new BlockBasicUranus("uranus");
-			DENSE_ICE = new BlockBasic(Material.ICE).setUnlocalizedName("denseIce").setHardness(2.2F).setResistance(3.0F);
+			DENSE_ICE = new BlockBasic(Material.ICE).setUnlocalizedName("dense_ice").setHardness(2.2F).setResistance(3.0F);
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE_BLOCKS = new BlockBasicNeptune("neptune");
-			FROZEN_NITROGEN = new BlockBasic(Material.ICE).setUnlocalizedName("frozenNitrogen");
+			FROZEN_NITROGEN = new BlockBasic(Material.ICE).setUnlocalizedName("frozen_nitrogen");
 		}
 		if (Config.PLUTO) {
 			PLUTO_BLOCKS = new BlockBasicPluto("pluto");
-			PLUTO_GRAVEL = new BlockCustomGravel("plutoGravel");
+			PLUTO_GRAVEL = new BlockCustomGravel("pluto_gravel");
 		}
 		if (Config.ERIS) {
 			ERIS_BLOCKS = new BlockBasicEris("eris");
-			ERIS_GRAVEL = new BlockCustomGravel("erisGravel");
+			ERIS_GRAVEL = new BlockCustomGravel("eris_gravel");
 		}
 		if (Config.EUROPA) {
 			EUROPA_BLOCKS = new BlockBasicEuropa("europa");
-			EUROPA_GRAVEL = new BlockCustomGravel("europaGravel");
+			EUROPA_GRAVEL = new BlockCustomGravel("europa_gravel");
 		}
 		if (Config.IO) {
 			IO_BLOCKS = new BlockBasicIo("io");
-			IO_GRAVEL = new BlockCustomGravel("ioGravel");
+			IO_GRAVEL = new BlockCustomGravel("io_gravel");
 		}
 		if (Config.DEIMOS) {
 			DEIMOS_BLOCKS = new BlockBasicDeimos("deimos");
-			DEIMOS_GRAVEL = new BlockCustomGravel("deimosGravel");
+			DEIMOS_GRAVEL = new BlockCustomGravel("deimos_gravel");
 		}
 		if (Config.PHOBOS) {
 			PHOBOS_BLOCKS = new BlockBasicPhobos("phobos");
-			PHOBOS_GRAVEL = new BlockCustomGravel("phobosGravel");
+			PHOBOS_GRAVEL = new BlockCustomGravel("phobos_gravel");
 		}
 		if (Config.TRITON) {
 			TRITON_BLOCKS = new BlockBasicTriton("triton");
-			TRITON_GRAVEL = new BlockCustomGravel("tritonGravel");
+			TRITON_GRAVEL = new BlockCustomGravel("triton_gravel");
 		}
 		if (Config.CALLISTO) {
 			CALLISTO_BLOCKS = new BlockBasicCallisto("callisto");
-			CALLISTO_GRAVEL = new BlockCustomGravel("callistoGravel");
+			CALLISTO_GRAVEL = new BlockCustomGravel("callisto_gravel");
 		}
 		if (Config.GANYMEDE) {
 			GANYMEDE_BLOCKS = new BlockBasicGanymede("ganymede");
-			GANYMEDE_GRAVEL = new BlockCustomGravel("ganymedeGravel");
+			GANYMEDE_GRAVEL = new BlockCustomGravel("ganymede_gravel");
 		}
 		if (Config.RHEA) {
 			RHEA_BLOCKS = new BlockBasicRhea("rhea");
-			RHEA_GRAVEL = new BlockCustomGravel("rheaGravel");
+			RHEA_GRAVEL = new BlockCustomGravel("rhea_gravel");
 		}
 		if (Config.TITAN) {
 			TITAN_BLOCKS = new BlockBasicTitan("titan");
-			TITAN_GRAVEL = new BlockCustomGravel("titanGravel");
+			TITAN_GRAVEL = new BlockCustomGravel("titan_gravel");
 		}
 		if (Config.OBERON) {
 			OBERON_BLOCKS = new BlockBasicOberon("oberon");
-			OBERON_GRAVEL = new BlockCustomGravel("oberonGravel");
+			OBERON_GRAVEL = new BlockCustomGravel("oberon_gravel");
 		}
 		if (Config.TITANIA) {
 			TITANIA_BLOCKS = new BlockBasicTitania("titania");
-			TITANIA_GRAVEL = new BlockCustomGravel("titaniaGravel");
+			TITANIA_GRAVEL = new BlockCustomGravel("titania_gravel");
 		}
 		if (Config.IAPETUS) {
 			IAPETUS_BLOCKS = new BlockBasicIapetus("iapetus");
-			IAPETUS_GRAVEL = new BlockCustomGravel("iapetusGravel");
+			IAPETUS_GRAVEL = new BlockCustomGravel("iapetus_gravel");
 		}
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
 			FOSSIL = new BlockFossil(Material.ROCK).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.CERES && Config.NUCLEAR_BOMB)
-			NUCLEAR_BOMB = new BlockNuclearBomb().setUnlocalizedName("nuclearBomb");
+			NUCLEAR_BOMB = new BlockNuclearBomb().setUnlocalizedName("nuclear_bomb");
 		if (Config.ORE_LEAD_GENERATION)
-			ORE_LEAD = new BlockBasic(Material.ROCK).setUnlocalizedName("oreLead").setHardness(5.0F).setResistance(3.0F);
+			ORE_LEAD = new BlockBasic(Material.ROCK).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F);
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B_BLOCKS = new BlockBasicKepler22b("kepler22b");
 			KEPLER22B_GRASS_GREEN = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
@@ -302,7 +302,7 @@ public class ExtraPlanets_Blocks {
 			KEPLER22B_GRASS_PURPLE = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple_grass");
 			KEPLER22B_GRASS_RED = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
 			KEPLER22B_GRASS_YELLOW = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
-			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22bFlowers");
+			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22b_flowers");
 		}
 		if (Config.RADIATION)
 			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
@@ -310,25 +310,25 @@ public class ExtraPlanets_Blocks {
 
 	private static void initializeTreasureChestBlocks() {
 		if (Config.MERCURY) {
-			TREASURE_CHEST_TIER_4 = new T4TreasureChest("treasureChestT4");
+			TREASURE_CHEST_TIER_4 = new T4TreasureChest("treasure_chest_t4");
 		}
 		if (Config.JUPITER) {
-			TREASURE_CHEST_TIER_5 = new T5TreasureChest("treasureChestT5");
+			TREASURE_CHEST_TIER_5 = new T5TreasureChest("treasure_chest_t5");
 		}
 		if (Config.SATURN) {
-			TREASURE_CHEST_TIER_6 = new T6TreasureChest("treasureChestT6");
+			TREASURE_CHEST_TIER_6 = new T6TreasureChest("treasure_chest_t6");
 		}
 		if (Config.URANUS) {
-			TREASURE_CHEST_TIER_7 = new T7TreasureChest("treasureChestT7");
+			TREASURE_CHEST_TIER_7 = new T7TreasureChest("treasure_chest_t7");
 		}
 		if (Config.NEPTUNE) {
-			TREASURE_CHEST_TIER_8 = new T8TreasureChest("treasureChestT8");
+			TREASURE_CHEST_TIER_8 = new T8TreasureChest("treasure_chest_t8");
 		}
 		if (Config.PLUTO) {
-			TREASURE_CHEST_TIER_9 = new T9TreasureChest("treasureChestT9");
+			TREASURE_CHEST_TIER_9 = new T9TreasureChest("treasure_chest_t9");
 		}
 		if (Config.ERIS) {
-			TREASURE_CHEST_TIER_10 = new T10TreasureChest("treasureChestT10");
+			TREASURE_CHEST_TIER_10 = new T10TreasureChest("treasure_chest_t10");
 		}
 	}
 
@@ -357,11 +357,11 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void initializeTreeBlocks() {
-		KEPLER22B_MAPLE_LOG = new BlockKepler22bMapleTreeLog().setUnlocalizedName("kepler22bMapleLogs").setCreativeTab(ExtraPlanets.BlocksTab);
-		KEPLER22B_MAPLE_LOG_2 = new BlockKepler22bMapleTreeLog2().setUnlocalizedName("kepler22bMapleLogs2").setCreativeTab(ExtraPlanets.BlocksTab);
-		KEPLER22B_MAPLE_SAPLING = new BlockKepler22bMapleTreeSapling().setUnlocalizedName("kepler22bMapleSaplings");
-		KEPLER22B_MAPLE_LEAF = new BlockKepler22bMapleTreeLeaves().setUnlocalizedName("kepler22bMapleLeaves");
-		KEPLER22B_MAPLE_PLANKS = new BlockBasicKepler22bPlanks().setUnlocalizedName("kepler22bPlanks");
+		KEPLER22B_MAPLE_LOG = new BlockKepler22bMapleTreeLog().setUnlocalizedName("kepler22b_maple_logs").setCreativeTab(ExtraPlanets.BlocksTab);
+		KEPLER22B_MAPLE_LOG_2 = new BlockKepler22bMapleTreeLog2().setUnlocalizedName("kepler22b_maple_logs2").setCreativeTab(ExtraPlanets.BlocksTab);
+		KEPLER22B_MAPLE_SAPLING = new BlockKepler22bMapleTreeSapling().setUnlocalizedName("kepler22b_maple_saplings");
+		KEPLER22B_MAPLE_LEAF = new BlockKepler22bMapleTreeLeaves().setUnlocalizedName("kepler22b_maple_leaves");
+		KEPLER22B_MAPLE_PLANKS = new BlockBasicKepler22bPlanks().setUnlocalizedName("kepler22b_planks");
 	}
 
 	private static void registerBlocks() throws NoSuchMethodException {

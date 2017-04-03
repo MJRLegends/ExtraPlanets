@@ -185,105 +185,105 @@ public class ExtraPlanets_Items {
 	private static void initializeItems() {
 		if (Config.MERCURY) {
 			if (Config.BATTERIES)
-				BATTERY_MERCURY = new ItemBasicBattery("mercuryBattery", 85000f, 2);
+				BATTERY_MERCURY = new ItemBasicBattery("mercury_battery", 85000f, 2);
 			INGOT_MERCURY = new ItemBasicItem("ingotMercury");
-			COMPRESSED_MERCURY = new ItemMercuryCompressed("compressedMercury");
-			TIER_4_ROCKET = new Tier4Rocket("itemTier4Rocket");
-			TIER_4_SCHEMATIC = new SchematicTier4("schematicTier4");
-			TIER_4_NOSE_CONE = new Tier4NoseCone("noseConeTier4");
-			TIER_4_ITEMS = new ItemTier4Items("tier4Items");
+			COMPRESSED_MERCURY = new ItemMercuryCompressed("compressed_mercury");
+			TIER_4_ROCKET = new Tier4Rocket("item_tier4_rocket");
+			TIER_4_SCHEMATIC = new SchematicTier4("schematic_tier4");
+			TIER_4_NOSE_CONE = new Tier4NoseCone("noseCone_tier4");
+			TIER_4_ITEMS = new ItemTier4Items("tier4_items");
 			TIER_4_KEY = new ItemKeyT4("T4key");
 		}
 		if (Config.CERES) {
-			INGOT_URANIUM = new ItemBasicItem("ingotUranium");
+			INGOT_URANIUM = new ItemBasicItem("ingot_uranium");
 			BUCKET_SALT = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
 		}
 		if (Config.JUPITER) {
 			if (Config.BATTERIES)
-				BATTERY_NICKEL = new ItemBasicBattery("nickelBattery", 45000f, 2);
+				BATTERY_NICKEL = new ItemBasicBattery("nickel_battery", 45000f, 2);
 			BUCKET_MAGMA = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
-			TIER_5_ROCKET = new Tier5Rocket("itemTier5Rocket");
-			TIER_5_SCHEMATIC = new SchematicTier5("schematicTier5");
-			TIER_5_NOSE_CONE = new Tier5NoseCone("noseConeTier5");
-			TIER_5_ITEMS = new ItemTier5Items("tier5Items");
+			TIER_5_ROCKET = new Tier5Rocket("item_tier5_rocket");
+			TIER_5_SCHEMATIC = new SchematicTier5("schematic_tier5");
+			TIER_5_NOSE_CONE = new Tier5NoseCone("noseCone_tier5");
+			TIER_5_ITEMS = new ItemTier5Items("tier5_items");
 			TIER_5_KEY = new ItemKeyT5("T5key");
 		}
 		if (Config.SATURN) {
 			BUCKET_GLOWSTONE = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
-			TIER_6_ROCKET = new Tier6Rocket("itemTier6Rocket");
-			TIER_6_SCHEMATIC = new SchematicTier6("schematicTier6");
-			TIER_6_NOSE_CONE = new Tier6NoseCone("noseConeTier6");
-			TIER_6_ITEMS = new ItemTier6Items("tier6Items");
+			TIER_6_ROCKET = new Tier6Rocket("item_tier6_rocket");
+			TIER_6_SCHEMATIC = new SchematicTier6("schematic_tier6");
+			TIER_6_NOSE_CONE = new Tier6NoseCone("noseCone_tier6");
+			TIER_6_ITEMS = new ItemTier6Items("tier6_items");
 			TIER_6_KEY = new ItemKeyT6("T6key");
 		}
 		if (Config.URANUS) {
 			BUCKET_FROZEN_WATER = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
-			TIER_7_ROCKET = new Tier7Rocket("itemTier7Rocket");
-			TIER_7_SCHEMATIC = new SchematicTier7("schematicTier7");
-			TIER_7_NOSE_CONE = new Tier7NoseCone("noseConeTier7");
-			TIER_7_ITEMS = new ItemTier7Items("tier7Items");
+			TIER_7_ROCKET = new Tier7Rocket("item_tier7_rocket");
+			TIER_7_SCHEMATIC = new SchematicTier7("schematic_tier7");
+			TIER_7_NOSE_CONE = new Tier7NoseCone("noseCone_tier7");
+			TIER_7_ITEMS = new ItemTier7Items("tier7_items");
 			TIER_7_KEY = new ItemKeyT7("T7key");
 		}
 		if (Config.NEPTUNE) {
 			if (Config.BATTERIES)
-				BATTERY_ZINC = new ItemBasicBattery("zincBattery", 125000f, 2);
+				BATTERY_ZINC = new ItemBasicBattery("zinc_battery", 125000f, 2);
 			BUCKET_NITROGEN = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
-			TIER_8_ROCKET = new Tier8Rocket("itemTier8Rocket");
-			TIER_8_SCHEMATIC = new SchematicTier8("schematicTier8");
-			TIER_8_NOSE_CONE = new Tier8NoseCone("noseConeTier8");
-			TIER_8_ITEMS = new ItemTier8Items("tier8Items");
+			TIER_8_ROCKET = new Tier8Rocket("item_tier8_rocket");
+			TIER_8_SCHEMATIC = new SchematicTier8("schematic_tier8");
+			TIER_8_NOSE_CONE = new Tier8NoseCone("noseCone_tier8");
+			TIER_8_ITEMS = new ItemTier8Items("tier8_items");
 			TIER_8_KEY = new ItemKeyT8("T8key");
 		}
 		if (Config.PLUTO) {
-			TIER_9_ROCKET = new Tier9Rocket("itemTier9Rocket");
-			TIER_9_SCHEMATIC = new SchematicTier9("schematicTier9");
-			TIER_9_NOSE_CONE = new Tier9NoseCone("noseConeTier9");
-			TIER_9_ITEMS = new ItemTier9Items("tier9Items");
+			TIER_9_ROCKET = new Tier9Rocket("item_tier9_rocket");
+			TIER_9_SCHEMATIC = new SchematicTier9("schematic_tier9");
+			TIER_9_NOSE_CONE = new Tier9NoseCone("noseCone_tier9");
+			TIER_9_ITEMS = new ItemTier9Items("tier9_items");
 			TIER_9_KEY = new ItemKeyT9("T9key");
 		}
 		if (Config.ERIS) {
-			TIER_10_ROCKET = new Tier10Rocket("itemTier10Rocket");
-			TIER_10_SCHEMATIC = new SchematicTier10("schematicTier10");
-			TIER_10_NOSE_CONE = new Tier10NoseCone("noseConeTier10");
-			TIER_10_ITEMS = new ItemTier10Items("tier10Items");
+			TIER_10_ROCKET = new Tier10Rocket("item_tier10_rocket");
+			TIER_10_SCHEMATIC = new SchematicTier10("schematic_tier10");
+			TIER_10_NOSE_CONE = new Tier10NoseCone("noseCone_tier10");
+			TIER_10_ITEMS = new ItemTier10Items("tier10_items");
 			TIER_10_KEY = new ItemKeyT10("T10key");
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			TIER_11_ITEMS = new ItemTier11Items("tier11Items");
+			TIER_11_ITEMS = new ItemTier11Items("tier11_items");
 		}
 		if (Config.CUSTOM_APPLES) {
 			DIAMOND_APPLE = new ItemAppleDiamond(8, 2.2F, false);
 			IRON_APPLE = new ItemAppleIron(4, 2.2F, false);
 		}
 		if (Config.THERMAL_PADDINGS) {
-			THERMAL_CLOTH = new ItemThermalCloth("thermalCloth");
-			TIER_3_THERMAL_PADDING = new ItemTier3ThermalPadding("tier3ThermalPadding");
-			TIER_4_THERMAL_PADDING = new ItemTier4ThermalPadding("tier4ThermalPadding");
-			TIER_5_THERMAL_PADDING = new ItemTier5ThermalPadding("tier5ThermalPadding");
+			THERMAL_CLOTH = new ItemThermalCloth("thermal_cloth");
+			TIER_3_THERMAL_PADDING = new ItemTier3ThermalPadding("tier3_thermal_padding");
+			TIER_4_THERMAL_PADDING = new ItemTier4ThermalPadding("tier4_thermal_padding");
+			TIER_5_THERMAL_PADDING = new ItemTier5ThermalPadding("tier5_thermal_padding");
 		}
 		if (Config.BATTERIES) {
-			BATTERY_ADVANCED = new ItemBasicBattery("advancedBattery", 50000f, 2);
-			BATTERY_ULTIMATE = new ItemBasicBattery("ultimateBattery", 200000f, 2);
+			BATTERY_ADVANCED = new ItemBasicBattery("advanced_battery", 50000f, 2);
+			BATTERY_ULTIMATE = new ItemBasicBattery("ultimate_battery", 200000f, 2);
 		}
 		if (Config.OXYGEN_TANKS) {
 			OXYGEN_TANK_VERY_HEAVY = new ItemOxygenTank(4, "oxygen_tank_very_heavy_full");
 			OXYGEN_TANK_EXTREMELY_HEAVY = new ItemOxygenTank(5, "oxygen_tank_extremely_heavy_full");
 		}
 		if (Config.PRESSURE || Config.RADIATION) {
-			TIER_1_PRESSURE_LAYER = new ItemBasicItem("tier1PressureLayer");
-			TIER_2_PRESSURE_LAYER = new ItemBasicItem("tier2PressureLayer");
-			TIER_3_PRESSURE_LAYER = new ItemBasicItem("tier3PressureLayer");
-			TIER_4_PRESSURE_LAYER = new ItemBasicItem("tier4PressureLayer");
+			TIER_1_PRESSURE_LAYER = new ItemBasicItem("tier1_pressure_layer");
+			TIER_2_PRESSURE_LAYER = new ItemBasicItem("tier2_pressure_layer");
+			TIER_3_PRESSURE_LAYER = new ItemBasicItem("tier3_pressure_layer");
+			TIER_4_PRESSURE_LAYER = new ItemBasicItem("tier4_pressure_layer");
 
-			TIER_1_RADIATION_LAYER = new ItemBasicItem("tier1RadiationLayer");
-			TIER_2_RADIATION_LAYER = new ItemBasicItem("tier2RadiationLayer");
-			TIER_3_RADIATION_LAYER = new ItemBasicItem("tier3RadiationLayer");
-			TIER_4_RADIATION_LAYER = new ItemBasicItem("tier4RadiationLayer");
+			TIER_1_RADIATION_LAYER = new ItemBasicItem("tier1_radiation_layer");
+			TIER_2_RADIATION_LAYER = new ItemBasicItem("tier2_radiation_layer");
+			TIER_3_RADIATION_LAYER = new ItemBasicItem("tier3_radiation_layer");
+			TIER_4_RADIATION_LAYER = new ItemBasicItem("tier4_radiation_layer");
 
-			TIER_1_ARMOR_LAYER = new ItemBasicItem("tier1ArmorLayer");
-			TIER_2_ARMOR_LAYER = new ItemBasicItem("tier2ArmorLayer");
-			TIER_3_ARMOR_LAYER = new ItemBasicItem("tier3ArmorLayer");
-			TIER_4_ARMOR_LAYER = new ItemBasicItem("tier4ArmorLayer");
+			TIER_1_ARMOR_LAYER = new ItemBasicItem("tier1_armor_layer");
+			TIER_2_ARMOR_LAYER = new ItemBasicItem("tier2_armor_layer");
+			TIER_3_ARMOR_LAYER = new ItemBasicItem("tier3_armor_layer");
+			TIER_4_ARMOR_LAYER = new ItemBasicItem("tier4_armor_layer");
 
 			TIER_1_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier1UnPreparedSpaceSuitHelmet");
 			TIER_1_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier1UnPreparedSpaceSuitChest");
@@ -306,10 +306,10 @@ public class ExtraPlanets_Items {
 			TIER_4_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier4UnPreparedSpaceSuitBoots");
 		}
 		if (Config.RADIATION) {
-			IODIDE_SALT = new ItemBasicItem("iodideSalt");
-			POTASSIUM_IODIDE = new ItemBasicItem("potassiumIodide");
+			IODIDE_SALT = new ItemBasicItem("iodide_salt");
+			POTASSIUM_IODIDE = new ItemBasicItem("potassium_iodide");
 			POTASSIUM = new ItemBasicItem("potassium");
-			POTASH_SHARDS = new ItemBasicItem("potashShards");
+			POTASH_SHARDS = new ItemBasicItem("potash_shards");
 			ANTI_RADIATION = new ItemBasicItem("anti_radiation");
 		}
 		BUCKET_CLEAN_WATER = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.cleanWater);
@@ -318,11 +318,11 @@ public class ExtraPlanets_Items {
 		BUCKET_METHANE = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
 		BUCKET_NITROGEN_ICE = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
 
-		CANNED_FOOD = new ItemCannedFood("cannedFood");
+		CANNED_FOOD = new ItemCannedFood("canned_food");
 		WAFERS = new ItemWafers("wafer");
-		INGOT_LEAD = new ItemBasicItem("ingotLead");
+		INGOT_LEAD = new ItemBasicItem("ingot_lead");
 		CLOTH = new ItemBasicItem("cloth");
-		GRAVITY_CONTROLLER = new ItemBasicItem("gravityController");
+		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
 	}
 
 	private static void registerItems() {

@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "extraplanets:venus_gravel_model" }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "extraplanets:eris_gravel_model" }
+    }
+}

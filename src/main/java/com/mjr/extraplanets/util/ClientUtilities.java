@@ -19,6 +19,7 @@ import com.mjr.extraplanets.Constants;
 
 public class ClientUtilities {
 	public static void addExtraPlanetsVariants(String name, String... variants) {
+		@SuppressWarnings("deprecation")
 		Item itemBlockVariants = GameRegistry.findItem(Constants.modID, name);
 		ResourceLocation[] variants0 = new ResourceLocation[variants.length];
 		for (int i = 0; i < variants.length; ++i) {

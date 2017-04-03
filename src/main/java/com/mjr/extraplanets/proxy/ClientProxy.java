@@ -197,38 +197,38 @@ public class ClientProxy extends CommonProxy {
 		if (Config.IAPETUS)
 			ClientUtilities.addExtraPlanetsVariants("iapetus", "iapetus_surface", "iapetus_sub_surface", "iapetus_stone", "iapetus_ore_iron", "iapetus_ore_tin", "iapetus_ore_copper", "iapetus_ice");
 		if (Config.MERCURY)
-			ClientUtilities.addExtraPlanetsVariants("tier4Items", "tier4engine", "tier4booster", "tier4Fin", "tier4HeavyDutyPlate", "compressedCarbon", "ingotCarbon");
+			ClientUtilities.addExtraPlanetsVariants("tier4_items", "tier4engine", "tier4booster", "tier4Fin", "tier4HeavyDutyPlate", "compressedCarbon", "ingotCarbon");
 		if (Config.JUPITER)
-			ClientUtilities.addExtraPlanetsVariants("tier5Items", "tier5engine", "tier5booster", "tier5Fin", "tier5HeavyDutyPlate", "compressedPalladium", "ingotPalladium", "compressedNickel", "ingotNickel", "redGem");
+			ClientUtilities.addExtraPlanetsVariants("tier5_items", "tier5engine", "tier5booster", "tier5Fin", "tier5HeavyDutyPlate", "compressedPalladium", "ingotPalladium", "compressedNickel", "ingotNickel", "redGem");
 		if (Config.SATURN)
-			ClientUtilities.addExtraPlanetsVariants("tier6Items", "tier6engine", "tier6booster", "tier6Fin", "tier6HeavyDutyPlate", "compressedMagnesium", "ingotMagnesium");
+			ClientUtilities.addExtraPlanetsVariants("tier6_items", "tier6engine", "tier6booster", "tier6Fin", "tier6HeavyDutyPlate", "compressedMagnesium", "ingotMagnesium");
 		if (Config.URANUS)
-			ClientUtilities.addExtraPlanetsVariants("tier7Items", "tier7engine", "tier7booster", "tier7Fin", "tier7HeavyDutyPlate", "compressedCrystal", "ingotCrystal", "compressedReinforcedCrystal", "whiteGem");
+			ClientUtilities.addExtraPlanetsVariants("tier7_items", "tier7engine", "tier7booster", "tier7Fin", "tier7HeavyDutyPlate", "compressedCrystal", "ingotCrystal", "compressedReinforcedCrystal", "whiteGem");
 		if (Config.NEPTUNE)
-			ClientUtilities.addExtraPlanetsVariants("tier8Items", "tier8engine", "tier8booster", "tier8Fin", "tier8HeavyDutyPlate", "compressedZinc", "ingotZinc", "blueGem");
+			ClientUtilities.addExtraPlanetsVariants("tier8_items", "tier8engine", "tier8booster", "tier8Fin", "tier8HeavyDutyPlate", "compressedZinc", "ingotZinc", "blueGem");
 		if (Config.PLUTO)
-			ClientUtilities.addExtraPlanetsVariants("tier9Items", "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten");
+			ClientUtilities.addExtraPlanetsVariants("tier9_items", "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten");
 		if (Config.ERIS)
-			ClientUtilities.addExtraPlanetsVariants("tier10Items", "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compressedDarkIron", "ingotDarkIron");
+			ClientUtilities.addExtraPlanetsVariants("tier10_items", "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compressedDarkIron", "ingotDarkIron");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			ClientUtilities.addExtraPlanetsVariants("tier11Items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
-			ClientUtilities.addExtraPlanetsVariants("kepler22bPlanks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
-			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
-			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs2", "maple_green_log", "maple_brown_log");
-			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLeaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf", "maple_green_leaf", "maple_brown_leaf");
-			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleSaplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
-			ClientUtilities.addExtraPlanetsVariants("kepler22bFlowers", "maple_blue_short", "maple_blue_med", "maple_blue_tall", "maple_red_short", "maple_red_med", "maple_red_tall", "maple_purple_short", "maple_purple_med", "maple_purple_tall",
+			ClientUtilities.addExtraPlanetsVariants("tier11_items", "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond");
+			ClientUtilities.addExtraPlanetsVariants("kepler22b_planks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
+			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_logs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
+			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_logs2", "maple_green_log", "maple_brown_log");
+			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_leaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf", "maple_green_leaf", "maple_brown_leaf");
+			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_saplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
+			ClientUtilities.addExtraPlanetsVariants("kepler22b_flowers", "maple_blue_short", "maple_blue_med", "maple_blue_tall", "maple_red_short", "maple_red_med", "maple_red_tall", "maple_purple_short", "maple_purple_med", "maple_purple_tall",
 					"maple_yellow_short", "maple_yellow_med", "maple_yellow_tall", "maple_green_short", "maple_green_med", "maple_green_tall");
 		}
 
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer");
-		ClientUtilities.addExtraPlanetsVariants("cannedFood", "dehydratedPorkchop", "dehydratedFish", "dehydratedSalmon", "dehydratedChicken", "dehydratedBeef");
+		ClientUtilities.addExtraPlanetsVariants("canned_food", "dehydratedPorkchop", "dehydratedFish", "dehydratedSalmon", "dehydratedChicken", "dehydratedBeef");
 
 		if (Config.THERMAL_PADDINGS) {
-			ClientUtilities.addExtraPlanetsVariants("thermalCloth", "tier3ThermalCloth", "tier4ThermalCloth", "tier5ThermalCloth");
-			ClientUtilities.addExtraPlanetsVariants("tier3ThermalPadding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
-			ClientUtilities.addExtraPlanetsVariants("tier4ThermalPadding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
-			ClientUtilities.addExtraPlanetsVariants("tier5ThermalPadding", "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots");
+			ClientUtilities.addExtraPlanetsVariants("thermal_cloth", "tier3ThermalCloth", "tier4ThermalCloth", "tier5ThermalCloth");
+			ClientUtilities.addExtraPlanetsVariants("tier3_thermal_padding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
+			ClientUtilities.addExtraPlanetsVariants("tier4_thermal_padding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
+			ClientUtilities.addExtraPlanetsVariants("tier5_thermal_padding", "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots");
 		}
 		if (Config.SOLAR_PANELS)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");

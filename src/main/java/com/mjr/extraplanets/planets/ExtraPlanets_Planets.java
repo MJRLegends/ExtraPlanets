@@ -167,7 +167,7 @@ public class ExtraPlanets_Planets {
 			KUIPER_BELT = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (KUIPER_BELT != null)
 				KUIPER_BELT.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F, 4.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
-			KUIPER_BELT.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kuiperBelt.png"));
+			KUIPER_BELT.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kuiper_belt.png"));
 		}
 		if (Config.MAKEMAKE) {
 			MAKEMAKE = RegisterHelper.registerUnreachablePlanet("makemake", GalacticraftCore.solarSystemSol);
@@ -238,47 +238,47 @@ public class ExtraPlanets_Planets {
 		if (Config.MERCURY) {
 			GalaxyRegistry.registerPlanet(MERCURY);
 			GalacticraftRegistry.registerTeleportType(WorldProviderMercury.class, new TeleportTypeMercury());
-			GalacticraftRegistry.registerRocketGui(WorldProviderMercury.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mercuryRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderMercury.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mercury_rocket_gui.png"));
 		}
 		if (Config.CERES) {
 			GalaxyRegistry.registerPlanet(CERES);
 			GalacticraftRegistry.registerTeleportType(WorldProviderCeres.class, new TeleportTypeCeres());
-			GalacticraftRegistry.registerRocketGui(WorldProviderCeres.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/ceresRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderCeres.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/ceres_rocket_gui.png"));
 		}
 		if (Config.JUPITER) {
 			GalaxyRegistry.registerPlanet(JUPITER);
 			GalacticraftRegistry.registerTeleportType(WorldProviderJupiter.class, new TeleportTypeJupiter());
-			GalacticraftRegistry.registerRocketGui(WorldProviderJupiter.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/jupiterRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderJupiter.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/jupiter_rocket_gui.png"));
 		}
 		if (Config.SATURN) {
 			GalaxyRegistry.registerPlanet(SATURN);
 			GalacticraftRegistry.registerTeleportType(WorldProviderSaturn.class, new TeleportTypeSaturn());
-			GalacticraftRegistry.registerRocketGui(WorldProviderSaturn.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/saturnRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderSaturn.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/saturn_rocket_gui.png"));
 		}
 		if (Config.URANUS) {
 			GalaxyRegistry.registerPlanet(URANUS);
 			GalacticraftRegistry.registerTeleportType(WorldProviderUranus.class, new TeleportTypeUranus());
-			GalacticraftRegistry.registerRocketGui(WorldProviderUranus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/uranusRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderUranus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/uranus_rocket_gui.png"));
 		}
 		if (Config.NEPTUNE) {
 			GalaxyRegistry.registerPlanet(NEPTUNE);
 			GalacticraftRegistry.registerTeleportType(WorldProviderNeptune.class, new TeleportTypeNeptune());
-			GalacticraftRegistry.registerRocketGui(WorldProviderNeptune.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/neptuneRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderNeptune.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/neptune_rocket_gui.png"));
 		}
 		if (Config.PLUTO) {
 			GalaxyRegistry.registerPlanet(PLUTO);
 			GalacticraftRegistry.registerTeleportType(WorldProviderPluto.class, new TeleportTypePluto());
-			GalacticraftRegistry.registerRocketGui(WorldProviderPluto.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/plutoRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderPluto.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/pluto_rocket_gui.png"));
 		}
 		if (Config.ERIS) {
 			GalaxyRegistry.registerPlanet(ERIS);
 			GalacticraftRegistry.registerTeleportType(WorldProviderEris.class, new TeleportTypeEris());
-			GalacticraftRegistry.registerRocketGui(WorldProviderEris.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/erisRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderEris.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/eris_rocket_gui.png"));
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			GalaxyRegistry.registerPlanet(KEPLER22B);
 			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22b.class, new TeleportTypeKepler22b());
-			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/kepler22bRocketGui.png"));
+			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/kepler22b_rocket_gui.png"));
 		}
 	}
 }

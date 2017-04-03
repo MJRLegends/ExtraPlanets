@@ -1,0 +1,16 @@
+{
+    "variants": {
+		"basictypeneptune=neptune_surface": { "model": "extraplanets:neptune_surface_model" },
+        "basictypeneptune=neptune_sub_surface": { "model": "extraplanets:neptune_sub_surface_model" },
+        "basictypeneptune=neptune_stone": { "model": "extraplanets:neptune_stone_model" },
+        "basictypeneptune=neptune_ore_iron": { "model": "extraplanets:neptune_ore_iron_model" },
+        "basictypeneptune=neptune_ore_tin": { "model": "extraplanets:neptune_ore_tin_model" },
+        "basictypeneptune=neptune_ore_copper": { "model": "extraplanets:neptune_ore_copper_model" },
+		"basictypeneptune=neptune_ore_zinc": { "model": "extraplanets:neptune_ore_zinc_model" },
+        "basictypeneptune=neptune_zinc_block": { "model": "extraplanets:neptune_zinc_block_model" },
+        "basictypeneptune=neptune_stonebricks": { "model": "extraplanets:neptune_stonebricks_model" },
+		"basictypeneptune=neptune_dungeon_brick": { "model": "extraplanets:neptune_dungeon_brick_model" },
+		"basictypeneptune=neptune_ore_blue_gem": { "model": "extraplanets:neptune_ore_blue_gem_model" },
+		"basictypeneptune=neptune_blue_gem_block": { "model": "extraplanets:neptune_blue_gem_block_model" }
+    }
+}

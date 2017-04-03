@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictypetitania=titania_surface": { "model": "extraplanets:titania_surface_model" },
+        "basictypetitania=titania_sub_surface": { "model": "extraplanets:titania_sub_surface_model" },
+        "basictypetitania=titania_stone": { "model": "extraplanets:titania_stone_model" },
+        "basictypetitania=titania_ore_iron": { "model": "extraplanets:titania_ore_iron_model" },
+        "basictypetitania=titania_ore_tin": { "model": "extraplanets:titania_ore_tin_model" },
+        "basictypetitania=titania_ore_copper": { "model": "extraplanets:titania_ore_copper_model" }
+    }
+}

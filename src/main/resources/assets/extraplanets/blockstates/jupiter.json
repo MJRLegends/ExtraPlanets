@@ -1,0 +1,17 @@
+{
+    "variants": {
+		"basictypejupiter=jupiter_surface": { "model": "extraplanets:jupiter_surface_model" },
+        "basictypejupiter=jupiter_sub_surface": { "model": "extraplanets:jupiter_sub_surface_model" },
+        "basictypejupiter=jupiter_stone": { "model": "extraplanets:jupiter_stone_model" },
+        "basictypejupiter=jupiter_ore_iron": { "model": "extraplanets:jupiter_ore_iron_model" },
+        "basictypejupiter=jupiter_ore_tin": { "model": "extraplanets:jupiter_ore_tin_model" },
+        "basictypejupiter=jupiter_ore_copper": { "model": "extraplanets:jupiter_ore_copper_model" },
+		"basictypejupiter=jupiter_ore_palladium": { "model": "extraplanets:jupiter_ore_palladium_model" },
+        "basictypejupiter=jupiter_ore_nickel": { "model": "extraplanets:jupiter_ore_nickel_model" },
+		"basictypejupiter=jupiter_palladium_block": { "model": "extraplanets:jupiter_palladium_block_model" },
+        "basictypejupiter=jupiter_stonebricks": { "model": "extraplanets:jupiter_stonebricks_model" },
+		"basictypejupiter=jupiter_dungeon_brick": { "model": "extraplanets:jupiter_dungeon_brick_model" },
+		"basictypejupiter=jupiter_ore_red_gem": { "model": "extraplanets:jupiter_ore_red_gem_model" },
+		"basictypejupiter=jupiter_red_gem_block": { "model": "extraplanets:jupiter_red_gem_block_model" }
+    }
+}
