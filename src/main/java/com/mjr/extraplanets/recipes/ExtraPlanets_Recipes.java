@@ -835,47 +835,50 @@ public class ExtraPlanets_Recipes {
 					ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_BOOTS });
 
 			// Tier 1 - 4 Prepared Space Suits
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET, 'C',
-					ExtraPlanets_Items.TIER_1_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET,
+					'C', ExtraPlanets_Items.TIER_1_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_CHEST, 'C',
 					ExtraPlanets_Items.TIER_1_PRESSURE_LAYER });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, 'C',
-					ExtraPlanets_Items.TIER_1_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_1_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, 'C',
 					ExtraPlanets_Items.TIER_1_PRESSURE_LAYER });
 
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_HELMET, 'C',
-					ExtraPlanets_Items.TIER_2_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_HELMET,
+					'C', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_CHEST, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_CHEST, 'C',
 					ExtraPlanets_Items.TIER_2_PRESSURE_LAYER });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS, 'C',
-					ExtraPlanets_Items.TIER_2_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_BOOTS, 'C',
 					ExtraPlanets_Items.TIER_2_PRESSURE_LAYER });
 
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_HELMET, 'C',
-					ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_HELMET,
+					'C', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_CHEST, 'C',
 					ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS, 'C',
-					ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_BOOTS, 'C',
 					ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
 
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_HELMET, 'C',
-					ExtraPlanets_Items.TIER_4_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_HELMET, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_HELMET,
+					'C', ExtraPlanets_Items.TIER_4_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_CHEST, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_CHEST, 'C',
 					ExtraPlanets_Items.TIER_4_PRESSURE_LAYER });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, 'C',
-					ExtraPlanets_Items.TIER_4_PRESSURE_LAYER });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_4_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "R C", "RPC", "R C", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, 'C',
 					ExtraPlanets_Items.TIER_4_PRESSURE_LAYER });
 
 			// Tier 1 - 4 Gravity Boots
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS, 'G',
+					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS, 'G',
+					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 'G',
+					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 		}
 		if (Config.RADIATION) {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0), new Object[] { "PPP", "WGW", "PPP", 'P', ExtraPlanets_Items.POTASSIUM_IODIDE, 'W', ExtraPlanets_Items.BUCKET_CLEAN_WATER, 'G', Items.GLASS_BOTTLE });
