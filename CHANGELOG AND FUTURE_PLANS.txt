@@ -8,15 +8,43 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-0.7.5 Beta Build
-*Cleaned up the version number to a more organized version system
-*Fixed OreDictionary for Oberon/Iaptus/Titania
-*Fixed Diamond Types of Armours not rendering on player
+
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+0.7.5 Beta Build
+*Cleaned up the version number to a more organized version system
+*Fixed OreDictionary for Oberon/Iaptus/Titania
+*Fixed Diamond Types of Armours not rendering on player
+*Updated Galacticraft API to latest
+*Fixed Space stations showing the wrong planet below the station
+*Fixed Jupiter Basic Hideout generation issues
+*Fixed the Magma Fluid not burning you when in it (Needs fully fixing though)
+*Added pressure and radiation system to Eris & Ceres
+*Removed debug information
+*Changed the chance of Jupiter Basic Hideout generation
+*Fixed Kepler22b leaves textures
+*Fixed Kepler22b saplings textures
+*Added Short, Medium, Tall grass to Kelper22b
+*Fixed Nuclear Bomb texture, and Nuclear Bomb Primed Entity rendering
+*Fixed the rendering for the Custom Small Snowballs that the Snowman boss uses
+*Fixed Kepler22b blocks Explosion Resistance & Block hardness
+*Few fixes for Kepler22b Grass & Tree generation, Fixed Kepler22b blocks harvest levels
+*Tweaks for Kepler22b generation
+*Added missing harvest levels for all of the main blocks (Might change)
+*Clean up
+*Fixed getting wrong schematic from certain bosses
+*Fixed some recipes issues
+*Fixed Oberon, Titania, Iapetus ores furnace recipes
+*Added missing Nickel ore to Jupiter, Fixes recipes issues
+*Added Caves, Ravines and Dungeons to Kepler22b
+*Added Canned Food back
+*Updated lang files
+*Fixed Tier 3 Pressure Layer texture
+*Added missing rocket gui's
+
 0.7 Beta Build
 *Fixed Tier 10 Schematic GUI not showing in the Nasa Workbench
 *Added Kepler22b Grass Blocks back
