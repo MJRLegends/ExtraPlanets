@@ -13,9 +13,9 @@ import net.minecraftforge.fluids.IFluidBlock;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class FluidFrozenWater extends BlockFluidClassic implements IFluidBlock {
-	public FluidFrozenWater(String assetName) {
-		super(ExtraPlanets_Fluids.frozen_water_fluid, ExtraPlanets_Fluids.frozen_water_material);
+public class FluidInfectedWater extends BlockFluidClassic implements IFluidBlock {
+	public FluidInfectedWater(String assetName) {
+		super(ExtraPlanets_Fluids.infectedWater_fluid, ExtraPlanets_Fluids.frozen_water_material);
 		this.setQuantaPerBlock(9);
 		this.setLightLevel(0.1F);
 		this.needsRandomTick = true;

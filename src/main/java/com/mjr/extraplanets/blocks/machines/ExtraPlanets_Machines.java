@@ -71,9 +71,9 @@ public class ExtraPlanets_Machines {
 
 	private static void registerMachines() {
 		if (Config.advancedRefinery)
-			GameRegistry.registerBlock(advancedRefinery, "advancedRefinery");
+			GameRegistry.registerBlock(advancedRefinery, advancedRefinery.getUnlocalizedName().substring(5));
 		if (Config.ultimateRefinery)
-			GameRegistry.registerBlock(ultimateRefinery, "ultimateRefinery");
+			GameRegistry.registerBlock(ultimateRefinery, ultimateRefinery.getUnlocalizedName().substring(5));
 		if (Config.solarPanels)
 			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName().substring(5));
 		if (Config.advancedCompressor)

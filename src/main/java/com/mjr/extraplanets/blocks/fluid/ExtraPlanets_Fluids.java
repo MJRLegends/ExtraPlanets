@@ -92,7 +92,7 @@ public class ExtraPlanets_Fluids {
 		infectedWater_fluid = new Fluid("infected_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_flow"))
 				.setBlock(infectedWater).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(infectedWater_fluid);
-		infectedWater = new FluidCleanWater("infected_water");
+		infectedWater = new FluidInfectedWater("infected_water");
 
 		methane_fluid = new Fluid("methane_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_flow")).setBlock(methane).setDensity(800)
 				.setViscosity(1500);
@@ -106,15 +106,15 @@ public class ExtraPlanets_Fluids {
 	}
 
 	private static void registerBlocks() {
-		GameRegistry.registerBlock(glowstone, "glowstone");
-		GameRegistry.registerBlock(magma, "magma");
-		GameRegistry.registerBlock(nitrogen, "nitrogen");
-		GameRegistry.registerBlock(frozen_water, "frozen_water");
-		GameRegistry.registerBlock(salt, "salt");
-		GameRegistry.registerBlock(radioactiveWater, "radioactive_water");
-		GameRegistry.registerBlock(cleanWater, "clean_water");
-		GameRegistry.registerBlock(infectedWater, "infected_water");
-		GameRegistry.registerBlock(methane, "methane");
-		GameRegistry.registerBlock(nitrogen_ice, "nitrogen_ice");
+		GameRegistry.registerBlock(glowstone, glowstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(magma, magma.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(nitrogen, nitrogen.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(frozen_water, frozen_water.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(salt, salt.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(radioactiveWater, radioactiveWater.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(cleanWater, cleanWater.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(infectedWater, infectedWater.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(methane, methane.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(nitrogen_ice, nitrogen_ice.getUnlocalizedName().substring(5));
 	}
 }
