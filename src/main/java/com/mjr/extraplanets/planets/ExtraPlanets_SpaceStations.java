@@ -57,7 +57,7 @@ public class ExtraPlanets_SpaceStations {
 			mercurySpaceStation.setRelativeOrbitTime(20.0F);
 			mercurySpaceStation.setTierRequired(ExtraPlanets_Planets.mercury.getTierRequirement());
 			mercurySpaceStation.setDimensionInfo(Config.mercurySpaceStationID, Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class);
-			mercurySpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			mercurySpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.venusSpaceStation) {
 			venusSpaceStation = new Satellite("spaceStation.venus").setParentBody(VenusModule.planetVenus);
@@ -66,7 +66,7 @@ public class ExtraPlanets_SpaceStations {
 			venusSpaceStation.setRelativeOrbitTime(20.0F);
 			venusSpaceStation.setTierRequired(VenusModule.planetVenus.getTierRequirement());
 			venusSpaceStation.setDimensionInfo(Config.venusSpaceStationID, Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class);
-			venusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			venusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.ceresSpaceStation && Config.ceres) {
 			ceresSpaceStation = new Satellite("spaceStation.ceres").setParentBody(ExtraPlanets_Planets.ceres);
@@ -75,7 +75,7 @@ public class ExtraPlanets_SpaceStations {
 			ceresSpaceStation.setRelativeOrbitTime(20.0F);
 			ceresSpaceStation.setTierRequired(ExtraPlanets_Planets.ceres.getTierRequirement());
 			ceresSpaceStation.setDimensionInfo(Config.ceresSpaceStationID, Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class);
-			ceresSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			ceresSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.marsSpaceStation && MarsModule.planetMars != null) {
 			marsSpaceStation = new Satellite("spaceStation.mars").setParentBody(MarsModule.planetMars);
@@ -84,7 +84,7 @@ public class ExtraPlanets_SpaceStations {
 			marsSpaceStation.setRelativeOrbitTime(20.0F);
 			marsSpaceStation.setTierRequired(MarsModule.planetMars.getTierRequirement());
 			marsSpaceStation.setDimensionInfo(Config.marsSpaceStationID, Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class);
-			marsSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			marsSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.jupiterSpaceStation && Config.jupiter) {
 			jupiterSpaceStation = new Satellite("spaceStation.jupiter").setParentBody(ExtraPlanets_Planets.jupiter);
@@ -93,7 +93,7 @@ public class ExtraPlanets_SpaceStations {
 			jupiterSpaceStation.setRelativeOrbitTime(20.0F);
 			jupiterSpaceStation.setTierRequired(ExtraPlanets_Planets.jupiter.getTierRequirement());
 			jupiterSpaceStation.setDimensionInfo(Config.jupiterSpaceStationID, Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class);
-			jupiterSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			jupiterSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.saturnSpaceStation && Config.saturn) {
 			saturnSpaceStation = new Satellite("spaceStation.saturn").setParentBody(ExtraPlanets_Planets.saturn);
@@ -102,7 +102,7 @@ public class ExtraPlanets_SpaceStations {
 			saturnSpaceStation.setRelativeOrbitTime(20.0F);
 			saturnSpaceStation.setTierRequired(ExtraPlanets_Planets.saturn.getTierRequirement());
 			saturnSpaceStation.setDimensionInfo(Config.saturnSpaceStationID, Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class);
-			saturnSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			saturnSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.uranusSpaceStation && Config.uranus) {
 			uranusSpaceStation = new Satellite("spaceStation.uranus").setParentBody(ExtraPlanets_Planets.uranus);
@@ -111,7 +111,7 @@ public class ExtraPlanets_SpaceStations {
 			uranusSpaceStation.setRelativeOrbitTime(20.0F);
 			uranusSpaceStation.setTierRequired(ExtraPlanets_Planets.uranus.getTierRequirement());
 			uranusSpaceStation.setDimensionInfo(Config.uranusSpaceStationID, Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class);
-			uranusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			uranusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.neptuneSpaceStation && Config.neptune) {
 			neptuneSpaceStation = new Satellite("spaceStation.neptune").setParentBody(ExtraPlanets_Planets.neptune);
@@ -120,7 +120,7 @@ public class ExtraPlanets_SpaceStations {
 			neptuneSpaceStation.setRelativeOrbitTime(20.0F);
 			neptuneSpaceStation.setTierRequired(ExtraPlanets_Planets.neptune.getTierRequirement());
 			neptuneSpaceStation.setDimensionInfo(Config.neptuneSpaceStationID, Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class);
-			neptuneSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			neptuneSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.plutoSpaceStation && Config.pluto) {
 			plutoSpaceStation = new Satellite("spaceStation.pluto").setParentBody(ExtraPlanets_Planets.pluto);
@@ -129,7 +129,7 @@ public class ExtraPlanets_SpaceStations {
 			plutoSpaceStation.setRelativeOrbitTime(20.0F);
 			plutoSpaceStation.setTierRequired(ExtraPlanets_Planets.pluto.getTierRequirement());
 			plutoSpaceStation.setDimensionInfo(Config.plutoSpaceStationID, Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class);
-			plutoSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			plutoSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.erisSpaceStation && Config.eris) {
 			erisSpaceStation = new Satellite("spaceStation.eris").setParentBody(ExtraPlanets_Planets.eris);
@@ -138,7 +138,7 @@ public class ExtraPlanets_SpaceStations {
 			erisSpaceStation.setRelativeOrbitTime(20.0F);
 			erisSpaceStation.setTierRequired(ExtraPlanets_Planets.eris.getTierRequirement());
 			erisSpaceStation.setDimensionInfo(Config.erisSpaceStationID, Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class);
-			erisSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			erisSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 		if (Config.kepler22bSpaceStation && Config.kepler22b && Config.keplerSolarSystems) {
 			// kepler22bSpaceStation = new Satellite("spaceStation.kepler22b").setParentBody(ExtraPlanets_Planets.kepler22b);
@@ -147,7 +147,7 @@ public class ExtraPlanets_SpaceStations {
 			// kepler22bSpaceStation.setRelativeOrbitTime(20.0F);
 			// kepler22bSpaceStation.setTierRequired(ExtraPlanets_Planets.kepler22b.getTierRequirement());
 			// kepler22bSpaceStation.setDimensionInfo(Config.kepler22bSpaceStationID, Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class);
-			// kepler22bSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/spaceStation.png"));
+			// kepler22bSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
 		}
 	}
 
