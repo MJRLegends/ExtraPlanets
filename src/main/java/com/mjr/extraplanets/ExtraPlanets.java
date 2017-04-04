@@ -310,31 +310,31 @@ public class ExtraPlanets {
 		// Dungeon Bosses
 		if (Config.mercury)
 			if (Config.useDefaultBosses)
-				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossMercury.class, "CreeperBossMercury", 894731, 0);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossMercury.class, "CreeperBossMercury", 894731, 0);
 			else
-				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedMagmaCubeBoss.class, "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
-			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
+			RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
 
 			if (Config.useDefaultBosses)
-				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossSaturn.class, "CreeperBossSaturn", 894731, 0);
 			else
-				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedGhastBoss.class, Constants.modName + "EvolvedGhastBoss", 894731, 0);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedGhastBoss.class, "EvolvedGhastBoss", 894731, 0);
 		if (Config.uranus)
 			if (Config.useDefaultBosses)
-				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
 			else
-				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedIceSlimeBoss.class, "EvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
 			if (Config.useDefaultBosses)
-				GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossNeptune.class, "CreeperBossNeptune", 894731, 0);
 			else
-				GCCoreUtil.registerGalacticraftCreature(EntityEvolvedSnowmanBoss.class, Constants.modName + "EvolvedSnowmanBoss", 894731, 0);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedSnowmanBoss.class, "EvolvedSnowmanBoss", 894731, 0);
 		if (Config.pluto)
-			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
+			RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossPluto.class, "CreeperBossPluto", 894731, 0);
 		if (Config.eris)
-			GCCoreUtil.registerGalacticraftCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
+			RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);
 
 	}
 

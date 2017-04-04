@@ -22,6 +22,11 @@ public class RegisterHelper {
 		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
 	}
 
+	public static void registerExtraPlanetsMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
+		registerExtraPlanetsNonMobEntity(entityClass, name, 80, 3, true);
+		EntityRegistry.registerEgg(entityClass, back, fore);
+	}
+
 	public static void setHarvestLevel(Block block, String toolClass, int level, int meta) {
 		block.setHarvestLevel(toolClass, level, block.getStateFromMeta(meta));
 	}

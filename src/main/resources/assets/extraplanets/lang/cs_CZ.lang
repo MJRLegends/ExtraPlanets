@@ -856,27 +856,27 @@ entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
 entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
 entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Rocket
 
-entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss z Venuše
-entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss z Jupiteru
-entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss z Saturnu
-entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss z Uranu
-entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss z Neptunu
-entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
-entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
+entity.ExtraPlanets.CreeperBossVenus.name=Creeper Boss z Venuše
+entity.ExtraPlanets.CreeperBossJupiter.name=Creeper Boss z Jupiteru
+entity.ExtraPlanets.CreeperBossSaturn.name=Creeper Boss z Saturnu
+entity.ExtraPlanets.CreeperBossUranus.name=Creeper Boss z Uranu
+entity.ExtraPlanets.CreeperBossNeptune.name=Creeper Boss z Neptunu
+entity.ExtraPlanets.CreeperBossPluto.name=Creeper Boss Pluto
+entity.ExtraPlanets.CreeperBossEris.name=Creeper Boss Eris
 
-entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
-entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
-entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
-entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
+entity.ExtraPlanets.EvolvedMagmaCubeBoss.name=Vyvinutý Magma Kostka Boss
+entity.ExtraPlanets.EvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
+entity.ExtraPlanets.EvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 
-entity.ExtraPlanetsEvolvedWitch.name=Vyvinutá Čarodejnice
-entity.ExtraPlanetsEvolvedMagmaCube.name=Vyvinutá Magma Kostka
-entity.ExtraPlanetsEvolvedIceSlime.name=Vyvinutý Ledový Sliz
-entity.ExtraPlanetsEvolvedEnderman.name=Vyvinutý Enderman
-entity.ExtraPlanetsEvolvedBlaze.name=Vyvinutý Ohnivák
-entity.ExtraPlanetsEvolvedBlueCreeper.name=Vyvinutý Modrý Syčák
-entity.ExtraPlanetsEvolvedRedCreeper.name=Vyvinutý Červený Syčák
-entity.ExtraPlanetsEvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
+entity.ExtraPlanets.EvolvedWitch.name=Vyvinutá Čarodejnice
+entity.ExtraPlanets.EvolvedMagmaCube.name=Vyvinutá Magma Kostka
+entity.ExtraPlanets.EvolvedIceSlime.name=Vyvinutý Ledový Sliz
+entity.ExtraPlanets.EvolvedEnderman.name=Vyvinutý Enderman
+entity.ExtraPlanets.EvolvedBlaze.name=Vyvinutý Ohnivák
+entity.ExtraPlanets.EvolvedBlueCreeper.name=Vyvinutý Modrý Syčák
+entity.ExtraPlanets.EvolvedRedCreeper.name=Vyvinutý Červený Syčák
+entity.ExtraPlanets.EvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
 
 #Achievement
 achievement.mercuryPlanet=Přistaň na Merkuru!

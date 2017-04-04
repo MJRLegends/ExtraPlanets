@@ -856,27 +856,27 @@ entity.ExtraPlanets.EntityTier8Rocket.name=Cohete nivel 8
 entity.ExtraPlanets.EntityTier9Rocket.name=Cohete nivel 9
 entity.ExtraPlanets.EntityTier10Rocket.name=Cohete nivel 10
 
-entity.ExtraPlanetsCreeperBossVenus.name=Jefe creeper evolucionado de Venus
-entity.ExtraPlanetsCreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter
-entity.ExtraPlanetsCreeperBossSaturn.name=Jefe creeper evolucionado de Saturno
-entity.ExtraPlanetsCreeperBossUranus.name=Jefe creeper evolucionado de Urano
-entity.ExtraPlanetsCreeperBossNeptune.name=Jefe creeper evolucionado de Neptuno
-entity.ExtraPlanetsCreeperBossPluto.name=Jefe creeper evolucionado de Pluto
-entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
+entity.ExtraPlanets.CreeperBossVenus.name=Jefe creeper evolucionado de Venus
+entity.ExtraPlanets.CreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter
+entity.ExtraPlanets.CreeperBossSaturn.name=Jefe creeper evolucionado de Saturno
+entity.ExtraPlanets.CreeperBossUranus.name=Jefe creeper evolucionado de Urano
+entity.ExtraPlanets.CreeperBossNeptune.name=Jefe creeper evolucionado de Neptuno
+entity.ExtraPlanets.CreeperBossPluto.name=Jefe creeper evolucionado de Pluto
+entity.ExtraPlanets.CreeperBossEris.name=Creeper Boss Eris
 
-entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
-entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
-entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
-entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
+entity.ExtraPlanets.EvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
+entity.ExtraPlanets.EvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
+entity.ExtraPlanets.EvolvedGhastBoss.name=Evolved Ghast Boss
+entity.ExtraPlanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 
-entity.ExtraPlanetsEvolvedWitch.name=Bruja evolucionada
-entity.ExtraPlanetsEvolvedMagmaCube.name=Slime magmático evolucionado
-entity.ExtraPlanetsEvolvedIceSlime.name=Slime de hielo evolucionado
-entity.ExtraPlanetsEvolvedEnderman.name=Enderman evolucionado
-entity.ExtraPlanetsEvolvedBlaze.name=Blaze evolucionado
-entity.ExtraPlanetsEvolvedBlueCreeper.name=Creeper azúl evolucionado
-entity.ExtraPlanetsEvolvedRedCreeper.name=Creeper rojo evolucionado
-entity.ExtraPlanetsEvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
+entity.ExtraPlanets.EvolvedWitch.name=Bruja evolucionada
+entity.ExtraPlanets.EvolvedMagmaCube.name=Slime magmático evolucionado
+entity.ExtraPlanets.EvolvedIceSlime.name=Slime de hielo evolucionado
+entity.ExtraPlanets.EvolvedEnderman.name=Enderman evolucionado
+entity.ExtraPlanets.EvolvedBlaze.name=Blaze evolucionado
+entity.ExtraPlanets.EvolvedBlueCreeper.name=Creeper azúl evolucionado
+entity.ExtraPlanets.EvolvedRedCreeper.name=Creeper rojo evolucionado
+entity.ExtraPlanets.EvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
 
 #Achievements
 achievement.mercuryPlanet=¡Aterriza en Mercurio!
