@@ -30,3 +30,4 @@ build/
 .classpath
 .project
 *.txt
+gradle-app.setting
