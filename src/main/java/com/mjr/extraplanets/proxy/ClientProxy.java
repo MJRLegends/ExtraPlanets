@@ -226,9 +226,9 @@ public class ClientProxy extends CommonProxy {
 
 		if (Config.THERMAL_PADDINGS) {
 			ClientUtilities.addExtraPlanetsVariants("thermal_cloth", "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth");
-			ClientUtilities.addExtraPlanetsVariants("tier3_thermal_padding", "tier3ThermalHelm", "tier3ThermalChestplate", "tier3ThermalLeggings", "tier3ThermalBoots");
-			ClientUtilities.addExtraPlanetsVariants("tier4_thermal_padding", "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots");
-			ClientUtilities.addExtraPlanetsVariants("tier5_thermal_padding", "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots");
+			ClientUtilities.addExtraPlanetsVariants("tier3_thermal_padding", "tier3_thermal_helm", "tier3_thermal_chestplate", "tier3_thermal_leggings", "tier3_thermal_boots");
+			ClientUtilities.addExtraPlanetsVariants("tier4_thermal_padding", "tier4_thermal_helm", "tier4_thermal_chestplate", "tier4_thermal_leggings", "tier4_thermal_boots");
+			ClientUtilities.addExtraPlanetsVariants("tier5_thermal_padding", "tier5_thermal_helm", "tier5_thermal_chestplate", "tier5_thermal_leggings", "tier5_thermal_boots");
 		}
 		if (Config.SOLAR_PANELS)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
