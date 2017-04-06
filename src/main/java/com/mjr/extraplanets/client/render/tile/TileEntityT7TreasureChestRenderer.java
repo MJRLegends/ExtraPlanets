@@ -16,7 +16,7 @@ import com.mjr.extraplanets.tile.treasureChests.TileEntityT7TreasureChest;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityT7TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT7TreasureChest> {
-	private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT7.png");
+	private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t7.png");
 
 	private final ModelTreasureChest chestModel = new ModelTreasureChest();
 

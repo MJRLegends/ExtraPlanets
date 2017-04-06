@@ -1,6 +1,6 @@
 {
     "parent": "block/leaves",
     "textures": {
-        "all": "extraplanets:blocks/kepler22bMapleLeaves_leaves_purple_maple"
+        "all": "extraplanets:blocks/kepler22b_maple_leaves_leaves_purple_maple"
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "extraplanets:leadOre_model" }
+        "normal": { "model": "extraplanets:lead_ore_model" }
     }
 }

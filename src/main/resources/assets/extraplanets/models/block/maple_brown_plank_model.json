@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/kepler22bPlankMapleBrown"
+        "all": "extraplanets:blocks/kepler22b_plank_maple_brown"
     }
 }

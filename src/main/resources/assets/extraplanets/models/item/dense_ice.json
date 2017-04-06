@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/denseIce_model",
+    "parent":"extraplanets:block/dense_ice_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

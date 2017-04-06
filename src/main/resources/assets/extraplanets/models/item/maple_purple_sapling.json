@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:blocks/kepler22bMapleSaplings_sapling_purple_maple"
+        "layer0": "extraplanets:blocks/kepler22b_maple_saplings_sapling_purple_maple"
     },
     "display": {
         "thirdperson": {

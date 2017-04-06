@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/leadOre_model",
+    "parent":"extraplanets:block/lead_ore_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

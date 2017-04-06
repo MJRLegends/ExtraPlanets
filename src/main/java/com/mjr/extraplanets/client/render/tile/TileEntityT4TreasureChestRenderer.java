@@ -17,7 +17,7 @@ import com.mjr.extraplanets.Constants;
 @SideOnly(Side.CLIENT)
 public class TileEntityT4TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT4TreasureChest>
 {
-    private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT4.png");
+    private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t4.png");
 
     private final ModelTreasureChest chestModel = new ModelTreasureChest();
 

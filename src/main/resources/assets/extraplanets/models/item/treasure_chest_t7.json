@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/treasureChestT7",
+    "parent":"extraplanets:block/treasure_chest_t7",
     "display": {
 		"gui": {
             "rotation": [ 0, 180, 0 ]

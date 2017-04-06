@@ -1,7 +1,7 @@
 {
 "textures": {
     "particle": "extraplanets:blocks/parachest",
-    "texture": "extraplanets:model/treasureT6"
+    "texture": "extraplanets:model/treasure_t6"
 },
 "elements": [ 
 {
