@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemWafers extends Item {
-	public static final String[] names = { "diamondWafer", "carbonWafer", "titaniumWafer", "redGemWafer", "blueGemWafer", "whiteGemWafer" };
+	public static final String[] names = { "diamond_wafer", "carbon_wafer", "titanium_wafer", "red_gem_wafer", "blue_gem_wafer", "white_gem_wafer" };
 
 	public ItemWafers(String assetName) {
 		super();

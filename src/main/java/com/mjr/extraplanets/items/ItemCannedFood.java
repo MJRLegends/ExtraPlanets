@@ -24,7 +24,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemCannedFood extends Item {
 
-	public static final String[] names = { "dehydratedPorkchop", "dehydratedFish", "dehydratedSalmon", "dehydratedChicken", "dehydratedBeef" };
+	public static final String[] names = { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef" };
 
 	public ItemCannedFood(String assetName) {
 		super();
@@ -41,7 +41,7 @@ public class ItemCannedFood extends Item {
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
 		if (itemStack.getItemDamage() < 5) {
-			return this.getUnlocalizedName() + ".cannedFood";
+			return this.getUnlocalizedName() + ".canned_food";
 		}
 
 		return this.getUnlocalizedName() + "." + ItemCannedFood.names[itemStack.getItemDamage()];

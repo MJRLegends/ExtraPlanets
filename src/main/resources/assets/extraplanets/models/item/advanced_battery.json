@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/advancedBattery"
+        "layer0": "extraplanets:items/advanced_battery"
     },
     "display": {
         "thirdperson": {

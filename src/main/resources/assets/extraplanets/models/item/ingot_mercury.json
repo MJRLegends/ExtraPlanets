@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/ingotMercury"
+        "layer0": "extraplanets:items/ingot_mercury"
     },
     "display": {
         "thirdperson": {

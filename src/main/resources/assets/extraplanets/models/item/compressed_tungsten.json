@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier9.compressedTungsten"
+        "layer0": "extraplanets:items/tier9.compressed_tungsten"
     },
     "display": {
         "thirdperson": {

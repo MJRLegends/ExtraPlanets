@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/cannedFood.dehydratedBeef"
+        "layer0": "extraplanets:items/canned_food.dehydrated_beef"
     },
     "display": {
         "thirdperson": {

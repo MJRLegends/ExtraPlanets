@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemThermalCloth extends Item {
-	public static String[] names = { "tier3ThermalCloth", "tier4ThermalCloth", "tier5ThermalCloth" };
+	public static String[] names = { "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth" };
 
 	public ItemThermalCloth(String assetName) {
 		super();

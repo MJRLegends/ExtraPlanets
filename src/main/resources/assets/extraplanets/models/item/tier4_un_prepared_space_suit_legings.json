@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier4UnPreparedSpaceSuitLegings"
+        "layer0": "extraplanets:items/tier4_un_prepared_space_suit_legings"
     },
     "display": {
         "thirdperson": {

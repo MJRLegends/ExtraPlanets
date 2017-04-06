@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/iodideSalt"
+        "layer0": "extraplanets:items/iodide_salt"
     },
     "display": {
         "thirdperson": {

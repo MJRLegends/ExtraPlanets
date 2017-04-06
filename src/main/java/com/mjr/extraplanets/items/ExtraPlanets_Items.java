@@ -252,8 +252,8 @@ public class ExtraPlanets_Items {
 			TIER_11_ITEMS = new ItemTier11Items("tier11_items");
 		}
 		if (Config.CUSTOM_APPLES) {
-			DIAMOND_APPLE = new ItemAppleDiamond(8, 2.2F, false);
-			IRON_APPLE = new ItemAppleIron(4, 2.2F, false);
+			DIAMOND_APPLE = new ItemAppleDiamond(8, 2.2F, false).setUnlocalizedName("apple_diamond");
+			IRON_APPLE = new ItemAppleIron(4, 2.2F, false).setUnlocalizedName("apple_iron");
 		}
 		if (Config.THERMAL_PADDINGS) {
 			THERMAL_CLOTH = new ItemThermalCloth("thermal_cloth");
@@ -285,25 +285,25 @@ public class ExtraPlanets_Items {
 			TIER_3_ARMOR_LAYER = new ItemBasicItem("tier3_armor_layer");
 			TIER_4_ARMOR_LAYER = new ItemBasicItem("tier4_armor_layer");
 
-			TIER_1_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier1UnPreparedSpaceSuitHelmet");
-			TIER_1_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier1UnPreparedSpaceSuitChest");
-			TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier1UnPreparedSpaceSuitLegings");
-			TIER_1_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier1UnPreparedSpaceSuitBoots");
-
-			TIER_2_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier2UnPreparedSpaceSuitHelmet");
-			TIER_2_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier2UnPreparedSpaceSuitChest");
-			TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier2UnPreparedSpaceSuitLegings");
-			TIER_2_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier2UnPreparedSpaceSuitBoots");
-
-			TIER_3_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier3UnPreparedSpaceSuitHelmet");
-			TIER_3_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier3UnPreparedSpaceSuitChest");
-			TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier3UnPreparedSpaceSuitLegings");
-			TIER_3_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier3UnPreparedSpaceSuitBoots");
-
-			TIER_4_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier4UnPreparedSpaceSuitHelmet");
-			TIER_4_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier4UnPreparedSpaceSuitChest");
-			TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier4UnPreparedSpaceSuitLegings");
-			TIER_4_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier4UnPreparedSpaceSuitBoots");
+			TIER_1_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier1_un_prepared_space_suit_helmet");
+			TIER_1_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier1_un_prepared_space_suit_chest");
+			TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier1_un_prepared_space_suit_legings");
+			TIER_1_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier1_un_prepared_space_suit_boots");
+			
+			TIER_2_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier2_un_prepared_space_suit_helmet");
+			TIER_2_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier2_un_prepared_space_suit_chest");
+			TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier2_un_prepared_space_suit_legings");
+			TIER_2_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier2_un_prepared_space_suit_boots");
+			
+			TIER_3_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier3_un_prepared_space_suit_helmet");
+			TIER_3_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier3_un_prepared_space_suit_chest");
+			TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier3_un_prepared_space_suit_legings");
+			TIER_3_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier3_un_prepared_space_suit_boots");
+			
+			TIER_4_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier4_un_prepared_space_suit_helmet");
+			TIER_4_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier4_un_prepared_space_suit_chest");
+			TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier4_un_prepared_space_suit_legings");
+			TIER_4_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier4_un_prepared_space_suit_boots");
 		}
 		if (Config.RADIATION) {
 			IODIDE_SALT = new ItemBasicItem("iodide_salt");

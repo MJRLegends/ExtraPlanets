@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier6.ingotMagnesium"
+        "layer0": "extraplanets:items/tier6.ingot_magnesium"
     },
     "display": {
         "thirdperson": {

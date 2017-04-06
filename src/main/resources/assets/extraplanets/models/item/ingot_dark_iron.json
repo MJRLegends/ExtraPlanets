@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier10.ingotDarkIron"
+        "layer0": "extraplanets:items/tier10.ingot_dark_iron"
     },
     "display": {
         "thirdperson": {

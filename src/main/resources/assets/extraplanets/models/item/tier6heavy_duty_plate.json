@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier9.tier9Fin"
+        "layer0": "extraplanets:items/tier6.tier6_heavy_duty_plate"
     },
     "display": {
         "thirdperson": {

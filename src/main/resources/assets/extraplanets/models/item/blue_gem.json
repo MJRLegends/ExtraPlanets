@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier8.blueGem"
+        "layer0": "extraplanets:items/tier8.blue_gem"
     },
     "display": {
         "thirdperson": {

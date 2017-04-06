@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier11.yellow_diamond_"
+        "layer0": "extraplanets:items/tier11.yellow_diamond"
     },
     "display": {
         "thirdperson": {

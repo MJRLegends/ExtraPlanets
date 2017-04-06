@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/key.T4"
+        "layer0": "extraplanets:items/key.t4"
     },
     "display": {
         "thirdperson": {

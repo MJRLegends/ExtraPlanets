@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier5.ingotNickel"
+        "layer0": "extraplanets:items/tier5.ingot_nickel"
     },
     "display": {
         "thirdperson": {

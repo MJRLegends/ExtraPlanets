@@ -1,7 +1,7 @@
 { 
 	"parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/oxygenTankExtremelyHeavyFull"
+        "layer0": "extraplanets:items/oxygen_tank_extremely_heavy_full"
     },
     "display": {
         "thirdperson": {

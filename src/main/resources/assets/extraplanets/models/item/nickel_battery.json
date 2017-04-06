@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/nickelBattery"
+        "layer0": "extraplanets:items/nickel_battery"
     },
     "display": {
         "thirdperson": {

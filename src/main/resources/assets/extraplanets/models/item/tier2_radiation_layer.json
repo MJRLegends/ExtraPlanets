@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier2RadiationLayer"
+        "layer0": "extraplanets:items/tier2_radiation_layer"
     },
     "display": {
         "thirdperson": {

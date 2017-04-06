@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/potashShards"
+        "layer0": "extraplanets:items/potash_shards"
     },
     "display": {
         "thirdperson": {

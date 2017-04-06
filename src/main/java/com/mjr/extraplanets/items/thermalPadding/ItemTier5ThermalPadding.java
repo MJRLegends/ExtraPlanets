@@ -23,7 +23,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier5ThermalPadding  extends Item implements IItemThermal
 {
-    public static String[] names = { "tier5ThermalHelm", "tier5ThermalChestplate", "tier5ThermalLeggings", "tier5ThermalBoots", "tier5ThermalHelm0", "tier5ThermalChestplate0", "tier5ThermalLeggings0", "tier5ThermalBoots0" };
+    public static String[] names = { "tier5_thermal_helm", "tier5_thermal_chestplate", "tier5_thermal_leggings", "tier5_thermal_boots", "tier5_thermal_helm0", "tier5_thermal_chestplate0", "tier5_thermal_leggings0", "tier5_thermal_boots0" };
 
     public ItemTier5ThermalPadding(String assetName)
     {

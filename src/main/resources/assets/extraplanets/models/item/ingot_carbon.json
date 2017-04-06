@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier4.ingotCarbon"
+        "layer0": "extraplanets:items/tier4.ingot_carbon"
     },
     "display": {
         "thirdperson": {

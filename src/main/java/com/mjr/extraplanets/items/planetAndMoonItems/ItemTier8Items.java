@@ -55,7 +55,7 @@ public class ItemTier8Items extends Item {
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
 			if (player.worldObj.isRemote) {
-				list.add(EnumColor.GREY + GCCoreUtil.translate("tier8.heavyDutyPlate.name"));
+				list.add(EnumColor.GREY + GCCoreUtil.translate("tier8.heavy_duty_plate.name"));
 			}
 		}
 	}

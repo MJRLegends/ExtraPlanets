@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier5.redGem"
+        "layer0": "extraplanets:items/tier5.red_gem"
     },
     "display": {
         "thirdperson": {

@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier8.compressedZinc"
+        "layer0": "extraplanets:items/tier8.compressed_zinc"
     },
     "display": {
         "thirdperson": {

@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier4PressureLayer"
+        "layer0": "extraplanets:items/tier4_pressure_layer"
     },
     "display": {
         "thirdperson": {

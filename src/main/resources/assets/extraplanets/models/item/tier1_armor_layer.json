@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier1ArmorLayer"
+        "layer0": "extraplanets:items/tier1_armor_layer"
     },
     "display": {
         "thirdperson": {
