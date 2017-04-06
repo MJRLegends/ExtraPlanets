@@ -320,42 +320,6 @@ tile.saturn_gravel.name=Štěrk
 tile.uranus_gravel.name=Štěrk
 tile.neptune_gravel.name=Štěrk
 
-#Planet Blocks Slabs
-tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Kamenný půlblok
-tile.ExtraPlanets_erisStoneBlockhalfslab.name=Kamenný půlblok
-
-#Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Schody
-tile.venusStoneStairs.name=Schody
-tile.ceresStoneStairs.name=Schody
-tile.jupiterStoneStairs.name=Schody
-tile.saturnStoneStairs.name=Schody
-tile.uranusStoneStairs.name=Schody
-tile.neptuneStoneStairs.name=Schody
-tile.plutoStoneStairs.name=Schody
-tile.erisStoneStairs.name=Schody
-
-#Dungeon Bricks Slabs
-tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Venuši
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Jupiteru
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Saturnu
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Uranu
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Neptunu
-
-#Dungeon Bricks Stairs
-tile.mercuryDungeonBrickStoneStairs.name=Schody z kobky na Venuši
-tile.jupiterDungeonBrickStoneStairs.name=Schody z kobky na Jupiteru
-tile.saturnDungeonBrickStoneStairs.name=Schody z kobky na Saturnu
-tile.uranusDungeonBrickStoneStairs.name=Schody z kobky na Uranu
-tile.neptuneDungeonBrickStoneStairs.name=Schody z kobky na Neptunu
-
 #Treasure Chests
 tile.treasure_chest_t4.name=Truhla s pokladem typ 4
 tile.treasure_chest_t5.name=Truhla s pokladem typ 5
@@ -428,97 +392,97 @@ tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
 
 #Rocket Items
-item.itemTier4Rocket.t4Rocket.name=Raketa typ 4
-item.itemTier5Rocket.t5Rocket.name=Raketa typ 5
-item.itemTier6Rocket.t6Rocket.name=Raketa typ 6
-item.itemTier7Rocket.t7Rocket.name=Raketa typ 7
-item.itemTier8Rocket.t8Rocket.name=Raketa typ 8
-item.itemTier9Rocket.t9Rocket.name=Raketa typ 9
-item.itemTier10Rocket.t10Rocket.name=Tier 10 Rocket
+item.item_tier4_rocket.t4Rocket.name=Raketa typ 4
+item.item_tier5_rocket.t5Rocket.name=Raketa typ 5
+item.item_tier6_rocket.t6Rocket.name=Raketa typ 6
+item.item_tier7_rocket.t7Rocket.name=Raketa typ 7
+item.item_tier8_rocket.t8Rocket.name=Raketa typ 8
+item.item_tier9_rocket.t9Rocket.name=Raketa typ 9
+item.item_tier10_rocket.t10Rocket.name=Tier 10 Rocket
 
 #Rocket Tiered Items
-item.noseConeTier4.name=Špička rakety typ 4
-item.noseConeTier5.name=Špička rakety typ 5
-item.noseConeTier6.name=Špička rakety typ 6
-item.noseConeTier7.name=Špička rakety typ 7
-item.noseConeTier8.name=Špička rakety typ 8
-item.noseConeTier9.name=Špička rakety typ 9
-item.noseConeTier10.name=Tier 10 Nose Cone
+item.nose_cone_tier4.name=Špička rakety typ 4
+item.nose_cone_tier5.name=Špička rakety typ 5
+item.nose_cone_tier6.name=Špička rakety typ 6
+item.nose_cone_tier7.name=Špička rakety typ 7
+item.nose_cone_tier8.name=Špička rakety typ 8
+item.nose_cone_tier9.name=Špička rakety typ 9
+item.nose_cone_tier10.name=Tier 10 Nose Cone
 
-item.tier4Items.tier4Fin.name=Raketové křidélko typ 4
-item.tier5Items.tier5Fin.name=Raketové křidélko typ 5
-item.tier6Items.tier6Fin.name=Raketové křidélko typ 6
-item.tier7Items.tier7Fin.name=Raketové křidélko typ 7
-item.tier8Items.tier8Fin.name=Raketové křidélko typ 8
-item.tier9Items.tier9Fin.name=Raketové křidélko typ 9
-item.tier10Items.tier10Fin.name=Tier 10 Rocket Fins
+item.tier4_items.tier4fin.name=Raketové křidélko typ 4
+item.tier5_items.tier5fin.name=Raketové křidélko typ 5
+item.tier6_items.tier6fin.name=Raketové křidélko typ 6
+item.tier7_items.tier7fin.name=Raketové křidélko typ 7
+item.tier8_items.tier8fin.name=Raketové křidélko typ 8
+item.tier9_items.tier9fin.name=Raketové křidélko typ 9
+item.tier10_items.tier10fin.name=Tier 10 Rocket Fins
 
-item.tier4Items.tier4engine.name=Raketový motor typ 4
-item.tier5Items.tier5engine.name=Raketový motor typ 5
-item.tier6Items.tier6engine.name=Raketový motor typ 6
-item.tier7Items.tier7engine.name=Raketový motor typ 7
-item.tier8Items.tier8engine.name=Raketový motor typ 8
-item.tier9Items.tier9engine.name=Raketový motor typ 9
-item.tier10Items.tier10engine.name=Tier 10 Rocket Engine
+item.tier4_items.tier4engine.name=Raketový motor typ 4
+item.tier5_items.tier5engine.name=Raketový motor typ 5
+item.tier6_items.tier6engine.name=Raketový motor typ 6
+item.tier7_items.tier7engine.name=Raketový motor typ 7
+item.tier8_items.tier8engine.name=Raketový motor typ 8
+item.tier9_items.tier9engine.name=Raketový motor typ 9
+item.tier10_items.tier10engine.name=Tier 10 Rocket Engine
 
-item.tier4Items.tier4booster.name=Posilovač typ 4
-item.tier5Items.tier5booster.name=Posilovač typ 5
-item.tier6Items.tier6booster.name=Posilovač typ 6
-item.tier7Items.tier7booster.name=Posilovač typ 7
-item.tier8Items.tier8booster.name=Posilovač typ 8
-item.tier9Items.tier9booster.name=Posilovač typ 9
-item.tier10Items.tier10booster.name=Tier 10 Booster
+item.tier4_items.tier4booster.name=Posilovač typ 4
+item.tier5_items.tier5booster.name=Posilovač typ 5
+item.tier6_items.tier6booster.name=Posilovač typ 6
+item.tier7_items.tier7booster.name=Posilovač typ 7
+item.tier8_items.tier8booster.name=Posilovač typ 8
+item.tier9_items.tier9booster.name=Posilovač typ 9
+item.tier10_items.tier10booster.name=Tier 10 Booster
 
-item.tier4Items.tier4HeavyDutyplate.name=Zesílený plech
-item.tier5Items.tier5HeavyDutyplate.name=Zesílený plech
-item.tier6Items.tier6HeavyDutyplate.name=Zesílený plech
-item.tier7Items.tier7HeavyDutyplate.name=Zesílený plech
-item.tier8Items.tier8HeavyDutyplate.name=Zesílený plech
-item.tier9Items.tier9HeavyDutyplate.name=Zesílený plech
-item.tier10Items.tier10HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier4_items.tier4heavy_duty_plate.name=Zesílený plech
+item.tier5_items.tier5heavy_duty_plate.name=Zesílený plech
+item.tier6_items.tier6heavy_duty_plate.name=Zesílený plech
+item.tier7_items.tier7heavy_duty_plate.name=Zesílený plech
+item.tier8_items.tier8heavy_duty_plate.name=Zesílený plech
+item.tier9_items.tier9heavy_duty_plate.name=Zesílený plech
+item.tier10_items.tier10heavy_duty_plate.name=Heavy-Duty Plate
 
-tier4.heavyDutyplate.name=typ 4
-tier5.heavyDutyplate.name=typ 5
-tier6.heavyDutyplate.name=typ 6
-tier7.heavyDutyplate.name=typ 7
-tier8.heavyDutyplate.name=typ 8
-tier9.heavyDutyplate.name=typ 9
-tier10.heavyDutyPlate.name=Tier 10
+tier4.heavy_duty_plate.name=typ 4
+tier5.heavy_duty_plate.name=typ 5
+tier6.heavy_duty_plate.name=typ 6
+tier7.heavy_duty_plate.name=typ 7
+tier8.heavy_duty_plate.name=typ 8
+tier9.heavy_duty_plate.name=typ 9
+tier10.heavy_duty_plate.name=Tier 10
 
 #Stlačený Items
-item.tier4Items.compressedCarbon.name=Stlačený Karbon
-item.tier5Items.compressedPalladium.name=Stlačené Palladium
-item.tier6Items.compressedMagnesium.name=Stlačené Magnesium
-item.tier7Items.compressedReinforcedCrystal.name=Stlačený Vystužený krystal
-item.tier7Items.compressedCrystal.name=Stlačený Krystal
-item.compressedZinc.name=Stlačený Zinek
-item.compressedNickel.name=Stlačený Nikl
-item.compressedMercury.name=Stlačená Měď
-item.tier9Items.compressedTungsten.name=Stlačený Tungsten
-item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
+item.tier4_items.compressedCarbon.name=Stlačený Karbon
+item.tier5_items.compressedPalladium.name=Stlačené Palladium
+item.tier6_items.compressedMagnesium.name=Stlačené Magnesium
+item.tier7_items.compressedReinforcedCrystal.name=Stlačený Vystužený krystal
+item.tier7_items.compressedCrystal.name=Stlačený Krystal
+item.compressed_zinc.name=Stlačený Zinek
+item.compressed_nickel.name=Stlačený Nikl
+item.compressed_mercury.name=Stlačená Měď
+item.tier9_items.compressedTungsten.name=Stlačený Tungsten
+item.tier10_items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
-item.tier4Items.ingotCarbon.name=Karbonový Ingot
-item.tier5Items.ingotPalladium.name=Palladiový Ingot
-item.tier6Items.ingotMagnesium.name=Magnesiový Ingot
-item.tier7Items.ingotCrystal.name=Krystalový Ingot
+item.tier4_items.ingotCarbon.name=Karbonový Ingot
+item.tier5_items.ingotPalladium.name=Palladiový Ingot
+item.tier6_items.ingotMagnesium.name=Magnesiový Ingot
+item.tier7_items.ingotCrystal.name=Krystalový Ingot
 item.ingotZinc.name=Zinkový Ingot
 item.ingotNickel.name=Niklový Ingot
-item.ingotMercury.name=Měděný Ingot
-item.ingotUranium.name=Uranový Ingot
-item.tier9Items.ingotTungsten.name=Tungstenový Ingot
-item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
-item.ingotLead.name=Lead Ingot
+item.ingot_mercury.name=Měděný Ingot
+item.ingot_uranium.name=Uranový Ingot
+item.tier9_items.ingotTungsten.name=Tungstenový Ingot
+item.tier10_items.ingotDarkIron.name=Dark Iron Ingot
+item.ingot_lead.name=Lead Ingot
 
 #Gems
-item.tier5Items.redGem.name=Red Gem
-item.tier8Items.blueGem.name=Blue Gem
-item.tier7Items.whiteGem.name=White Gem
-item.tier11Items.blueDiamond.name=Blue Diamond
-item.tier11Items.redDiamond.name=Red Diamond
-item.tier11Items.yellowDiamond.name=Yellow Diamond
-item.tier11Items.purpleDiamond.name=Purple Diamond
-item.tier11Items.greenDiamond.name=Green Diamond
+item.tier5_items.redGem.name=Red Gem
+item.tier8_items.blueGem.name=Blue Gem
+item.tier7_items.whiteGem.name=White Gem
+item.tier11_items.blueDiamond.name=Blue Diamond
+item.tier11_items.redDiamond.name=Red Diamond
+item.tier11_items.yellowDiamond.name=Yellow Diamond
+item.tier11_items.purpleDiamond.name=Purple Diamond
+item.tier11_items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=Diamond Wafer
@@ -639,13 +603,13 @@ item.green_diamond_hoe.name=Green Diamond Hoe
 item.green_diamond_shovel.name=Green Diamond Shovel
 
 #Schematics
-item.schematicTier4.name=NASA Workbench Schéma
-item.schematicTier5.name=NASA Workbench Schéma
-item.schematicTier6.name=NASA Workbench Schéma
-item.schematicTier7.name=NASA Workbench Schéma
-item.schematicTier8.name=NASA Workbench Schéma
-item.schematicTier9.name=NASA Workbench Schéma
-item.schematicTier10.name=NASA Workbench Schéma
+item.schematic_tier4.name=NASA Workbench Schéma
+item.schematic_tier5.name=NASA Workbench Schéma
+item.schematic_tier6.name=NASA Workbench Schéma
+item.schematic_tier7.name=NASA Workbench Schéma
+item.schematic_tier8.name=NASA Workbench Schéma
+item.schematic_tier9.name=NASA Workbench Schéma
+item.schematic_tier10.name=NASA Workbench Schéma
 
 schematic.tier4.Rocket.name=Raketa typ 4
 schematic.tier5.Rocket.name=Raketa typ 5
@@ -664,11 +628,11 @@ schematic.RocketT9.name=Raketa typ 9
 schematic.RocketT10.name=Raketa typ 10
 
 #Batteries
-item.mercuryBattery.name=Měděná baterie
-item.nickelBattery.name=Niklová baterie
-item.zincBattery.name=Zinková baterie
-item.advancedBattery.name=Advanced Battery
-item.ultimateBattery.name=Ultimate Battery
+item.mercury_battery.name=Měděná baterie
+item.nickel_battery.name=Niklová baterie
+item.zinc_battery.name=Zinková baterie
+item.advanced_battery.name=Advanced Battery
+item.ultimate_battery.name=Ultimate Battery
 
 #Armor
 item.carbonHelmet.name=Karbonová helma

@@ -392,97 +392,97 @@ tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
 
 #Rocket Items
-item.itemTier4Rocket.t4Rocket.name=Tier 4 Rocket
-item.itemTier5Rocket.t5Rocket.name=Tier 5 Rocket
-item.itemTier6Rocket.t6Rocket.name=Tier 6 Rocket
-item.itemTier7Rocket.t7Rocket.name=Tier 7 Rocket
-item.itemTier8Rocket.t8Rocket.name=Tier 8 Rocket
-item.itemTier9Rocket.t9Rocket.name=Tier 9 Rocket
-item.itemTier10Rocket.t10Rocket.name=Tier 10 Rocket
+item.item_tier4_rocket.t4Rocket.name=Tier 4 Rocket
+item.item_tier5_rocket.t5Rocket.name=Tier 5 Rocket
+item.item_tier6_rocket.t6Rocket.name=Tier 6 Rocket
+item.item_tier7_rocket.t7Rocket.name=Tier 7 Rocket
+item.item_tier8_rocket.t8Rocket.name=Tier 8 Rocket
+item.item_tier9_rocket.t9Rocket.name=Tier 9 Rocket
+item.item_tier10_rocket.t10Rocket.name=Tier 10 Rocket
 
 #Rocket Tiered Items
-item.noseConeTier4.name=Tier 4 Nose Cone
-item.noseConeTier5.name=Tier 5 Nose Cone
-item.noseConeTier6.name=Tier 6 Nose Cone
-item.noseConeTier7.name=Tier 7 Nose Cone
-item.noseConeTier8.name=Tier 8 Nose Cone
-item.noseConeTier9.name=Tier 9 Nose Cone
-item.noseConeTier10.name=Tier 10 Nose Cone
+item.nose_cone_tier4.name=Tier 4 Nose Cone
+item.nose_cone_tier5.name=Tier 5 Nose Cone
+item.nose_cone_tier6.name=Tier 6 Nose Cone
+item.nose_cone_tier7.name=Tier 7 Nose Cone
+item.nose_cone_tier8.name=Tier 8 Nose Cone
+item.nose_cone_tier9.name=Tier 9 Nose Cone
+item.nose_cone_tier10.name=Tier 10 Nose Cone
 
-item.tier4Items.tier4Fin.name=Tier 4 Rocket Fins
-item.tier5Items.tier5Fin.name=Tier 5 Rocket Fins
-item.tier6Items.tier6Fin.name=Tier 6 Rocket Fins
-item.tier7Items.tier7Fin.name=Tier 7 Rocket Fins
-item.tier8Items.tier8Fin.name=Tier 8 Rocket Fins
-item.tier9Items.tier9Fin.name=Tier 9 Rocket Fins
-item.tier10Items.tier10Fin.name=Tier 10 Rocket Fins
+item.tier4_items.tier4fin.name=Tier 4 Rocket Fins
+item.tier5_items.tier5fin.name=Tier 5 Rocket Fins
+item.tier6_items.tier6fin.name=Tier 6 Rocket Fins
+item.tier7_items.tier7fin.name=Tier 7 Rocket Fins
+item.tier8_items.tier8fin.name=Tier 8 Rocket Fins
+item.tier9_items.tier9fin.name=Tier 9 Rocket Fins
+item.tier10_items.tier10fin.name=Tier 10 Rocket Fins
 
-item.tier4Items.tier4engine.name=Tier 4 Rocket Engine
-item.tier5Items.tier5engine.name=Tier 5 Rocket Engine
-item.tier6Items.tier6engine.name=Tier 6 Rocket Engine
-item.tier7Items.tier7engine.name=Tier 7 Rocket Engine
-item.tier8Items.tier8engine.name=Tier 8 Rocket Engine
-item.tier9Items.tier9engine.name=Tier 9 Rocket Engine
-item.tier10Items.tier10engine.name=Tier 10 Rocket Engine
+item.tier4_items.tier4engine.name=Tier 4 Rocket Engine
+item.tier5_items.tier5engine.name=Tier 5 Rocket Engine
+item.tier6_items.tier6engine.name=Tier 6 Rocket Engine
+item.tier7_items.tier7engine.name=Tier 7 Rocket Engine
+item.tier8_items.tier8engine.name=Tier 8 Rocket Engine
+item.tier9_items.tier9engine.name=Tier 9 Rocket Engine
+item.tier10_items.tier10engine.name=Tier 10 Rocket Engine
 
-item.tier4Items.tier4booster.name=Tier 4 Booster
-item.tier5Items.tier5booster.name=Tier 5 Booster
-item.tier6Items.tier6booster.name=Tier 6 Booster
-item.tier7Items.tier7booster.name=Tier 7 Booster
-item.tier8Items.tier8booster.name=Tier 8 Booster
-item.tier9Items.tier9booster.name=Tier 9 Booster
-item.tier10Items.tier10booster.name=Tier 10 Booster
+item.tier4_items.tier4booster.name=Tier 4 Booster
+item.tier5_items.tier5booster.name=Tier 5 Booster
+item.tier6_items.tier6booster.name=Tier 6 Booster
+item.tier7_items.tier7booster.name=Tier 7 Booster
+item.tier8_items.tier8booster.name=Tier 8 Booster
+item.tier9_items.tier9booster.name=Tier 9 Booster
+item.tier10_items.tier10booster.name=Tier 10 Booster
 
-item.tier4Items.tier4HeavyDutyPlate.name=Heavy-Duty Plate
-item.tier5Items.tier5HeavyDutyPlate.name=Heavy-Duty Plate
-item.tier6Items.tier6HeavyDutyPlate.name=Heavy-Duty Plate
-item.tier7Items.tier7HeavyDutyPlate.name=Heavy-Duty Plate
-item.tier8Items.tier8HeavyDutyPlate.name=Heavy-Duty Plate
-item.tier9Items.tier9HeavyDutyPlate.name=Heavy-Duty Plate
-item.tier10Items.tier10HeavyDutyPlate.name=Heavy-Duty Plate
+item.tier4_items.tier4heavy_duty_plate.name=Heavy-Duty Plate
+item.tier5_items.tier5heavy_duty_plate.name=Heavy-Duty Plate
+item.tier6_items.tier6heavy_duty_plate.name=Heavy-Duty Plate
+item.tier7_items.tier7heavy_duty_plate.name=Heavy-Duty Plate
+item.tier8_items.tier8heavy_duty_plate.name=Heavy-Duty Plate
+item.tier9_items.tier9heavy_duty_plate.name=Heavy-Duty Plate
+item.tier10_items.tier10heavy_duty_plate.name=Heavy-Duty Plate
 
-tier4.heavyDutyPlate.name=Tier 4
-tier5.heavyDutyPlate.name=Tier 5
-tier6.heavyDutyPlate.name=Tier 6
-tier7.heavyDutyPlate.name=Tier 7
-tier8.heavyDutyPlate.name=Tier 8
-tier9.heavyDutyPlate.name=Tier 9
-tier10.heavyDutyPlate.name=Tier 10
+tier4.heavy_duty_plate.name=Tier 4
+tier5.heavy_duty_plate.name=Tier 5
+tier6.heavy_duty_plate.name=Tier 6
+tier7.heavy_duty_plate.name=Tier 7
+tier8.heavy_duty_plate.name=Tier 8
+tier9.heavy_duty_plate.name=Tier 9
+tier10.heavy_duty_plate.name=Tier 10
 
 #Compressed Items
-item.tier4Items.compressedCarbon.name=Compressed Carbon
-item.tier5Items.compressedPalladium.name=Compressed Palladium
-item.tier6Items.compressedMagnesium.name=Compressed Magnesium
-item.tier7Items.compressedReinforcedCrystal.name=Compressed Reinforced Crystal
-item.tier7Items.compressedCrystal.name=Compressed Crystal
+item.tier4_items.compressedCarbon.name=Compressed Carbon
+item.tier5_items.compressedPalladium.name=Compressed Palladium
+item.tier6_items.compressedMagnesium.name=Compressed Magnesium
+item.tier7_items.compressedReinforcedCrystal.name=Compressed Reinforced Crystal
+item.tier7_items.compressedCrystal.name=Compressed Crystal
 item.compressedZinc.name=Compressed Zinc
-item.compressedNickel.name=Compressed Nickel
-item.compressedMercury.name=Compressed Mercury
-item.tier9Items.compressedTungsten.name=Compressed Tungsten
-item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
+item.compressed_nickel.name=Compressed Nickel
+item.compressed_mercury.name=Compressed Mercury
+item.tier9_items.compressedTungsten.name=Compressed Tungsten
+item.tier10_items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
-item.tier4Items.ingotCarbon.name=Carbon Ingot
-item.tier5Items.ingotPalladium.name=Palladium Ingot
-item.tier6Items.ingotMagnesium.name=Magnesium Ingot
-item.tier7Items.ingotCrystal.name=Crystal Ingot
+item.tier4_items.ingotCarbon.name=Carbon Ingot
+item.tier5_items.ingotPalladium.name=Palladium Ingot
+item.tier6_items.ingotMagnesium.name=Magnesium Ingot
+item.tier7_items.ingotCrystal.name=Crystal Ingot
 item.ingotZinc.name=Zinc Ingot
 item.ingotNickel.name=Nickel Ingot
-item.ingotMercury.name=Mercury Ingot
-item.ingotUranium.name=Uranium Ingot
-item.tier9Items.ingotTungsten.name=Tungsten Ingot
-item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
-item.ingotLead.name=Lead Ingot
+item.ingot_mercury.name=Mercury Ingot
+item.ingot_uranium.name=Uranium Ingot
+item.tier9_items.ingotTungsten.name=Tungsten Ingot
+item.tier10_items.ingotDarkIron.name=Dark Iron Ingot
+item.ingot_lead.name=Lead Ingot
 
 #Gems
-item.tier5Items.redGem.name=Red Gem
-item.tier8Items.blueGem.name=Blue Gem
-item.tier7Items.whiteGem.name=White Gem
-item.tier11Items.blueDiamond.name=Blue Diamond
-item.tier11Items.redDiamond.name=Red Diamond
-item.tier11Items.yellowDiamond.name=Yellow Diamond
-item.tier11Items.purpleDiamond.name=Purple Diamond
-item.tier11Items.greenDiamond.name=Green Diamond
+item.tier5_items.redGem.name=Red Gem
+item.tier8_items.blueGem.name=Blue Gem
+item.tier7_items.whiteGem.name=White Gem
+item.tier11_items.blueDiamond.name=Blue Diamond
+item.tier11_items.redDiamond.name=Red Diamond
+item.tier11_items.yellowDiamond.name=Yellow Diamond
+item.tier11_items.purpleDiamond.name=Purple Diamond
+item.tier11_items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=Diamond Wafer
@@ -603,13 +603,13 @@ item.green_diamond_hoe.name=Green Diamond Hoe
 item.green_diamond_shovel.name=Green Diamond Shovel
 
 #Schematics
-item.schematicTier4.name=NASA Workbench Schematic
-item.schematicTier5.name=NASA Workbench Schematic
-item.schematicTier6.name=NASA Workbench Schematic
-item.schematicTier7.name=NASA Workbench Schematic
-item.schematicTier8.name=NASA Workbench Schematic
-item.schematicTier9.name=NASA Workbench Schematic
-item.schematicTier10.name=NASA Workbench Schematic
+item.schematic_tier4.name=NASA Workbench Schematic
+item.schematic_tier5.name=NASA Workbench Schematic
+item.schematic_tier6.name=NASA Workbench Schematic
+item.schematic_tier7.name=NASA Workbench Schematic
+item.schematic_tier8.name=NASA Workbench Schematic
+item.schematic_tier9.name=NASA Workbench Schematic
+item.schematic_tier10.name=NASA Workbench Schematic
 
 schematic.tier4.rocket.name=Tier 4 Rocket
 schematic.tier5.rocket.name=Tier 5 Rocket
@@ -628,11 +628,11 @@ schematic.rocketT9.name=Tier 9 Rocket
 schematic.rocketT10.name=Tier 10 Rocket
 
 #Batteries
-item.mercuryBattery.name=Mercury Battery
-item.nickelBattery.name=Nickel Battery
-item.zincBattery.name=Zinc Battery
-item.advancedBattery.name=Advanced Battery
-item.ultimateBattery.name=Ultimate Battery
+item.mercury_battery.name=Mercury Battery
+item.nickel_battery.name=Nickel Battery
+item.zinc_battery.name=Zinc Battery
+item.advanced_battery.name=Advanced Battery
+item.ultimate_battery.name=Ultimate Battery
 
 #Armor
 item.carbonHelmet.name=Carbon Helmet

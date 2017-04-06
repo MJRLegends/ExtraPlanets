@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier11Items extends Item {
-	public static final String[] names = { "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond" };
+	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond" };
 
 	public ItemTier11Items(String assetName) {
 		super();

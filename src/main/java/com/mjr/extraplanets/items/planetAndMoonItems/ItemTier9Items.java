@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier9Items extends Item {
-	public static final String[] names = { "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten" };
+	public static final String[] names = { "tier9engine", "tier9booster", "tier9fin", "tier9heavy_duty_plate", "compressed_tungsten", "ingot_tungsten" };
 
 	public ItemTier9Items(String assetName) {
 		super();

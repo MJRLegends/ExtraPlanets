@@ -321,42 +321,6 @@ tile.saturn_gravel.name=土星沙砾
 tile.uranus_gravel.name=天王星沙砾
 tile.neptune_gravel.name=海王星沙砾
 
-#Planet Blocks Slabs
-tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星石台阶
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=金星石台阶
-tile.ExtraPlanets_ceresStoneBlockhalfslab.name=谷神星石台阶
-tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=木星石台阶
-tile.ExtraPlanets_saturnStoneBlockhalfslab.name=土星石台阶
-tile.ExtraPlanets_uranusStoneBlockhalfslab.name=天王星石台阶
-tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=海王星石台阶
-tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星石台阶
-tile.ExtraPlanets_erisStoneBlockhalfslab.name=阋神星石台阶
-
-#Planet Blocks Stairs
-tile.mercuryStoneStairs.name=水星石楼梯
-tile.venusStoneStairs.name=金星石楼梯
-tile.ceresStoneStairs.name=谷神星石楼梯
-tile.jupiterStoneStairs.name=木星石楼梯
-tile.saturnStoneStairs.name=土星石楼梯
-tile.uranusStoneStairs.name=天王星石楼梯
-tile.neptuneStoneStairs.name=海王星石楼梯
-tile.plutoStoneStairs.name=冥王星石楼梯
-tile.erisStoneStairs.name=阋神星石楼梯
-
-#Dungeon Bricks Slabs
-tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=金星地牢砖台阶
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=木星地牢砖台阶
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=土星地牢砖台阶
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=天王星地牢砖台阶
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=海王星地牢砖台阶
-
-#Dungeon Bricks Stairs
-tile.mercuryDungeonBrickStoneStairs.name=金星地牢砖楼梯
-tile.jupiterDungeonBrickStoneStairs.name=木星地牢砖楼梯
-tile.saturnDungeonBrickStoneStairs.name=土星地牢砖楼梯
-tile.uranusDungeonBrickStoneStairs.name=天王星地牢砖楼梯
-tile.neptuneDungeonBrickStoneStairs.name=海王星地牢砖楼梯
-
 #Treasure Chests
 tile.treasure_chest_t4.name=4阶宝箱
 tile.treasure_chest_t5.name=5阶宝箱
@@ -429,97 +393,97 @@ tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
 
 #Rocket Items
-item.itemTier4Rocket.t4Rocket.name=4阶火箭
-item.itemTier5Rocket.t5Rocket.name=5阶火箭
-item.itemTier6Rocket.t6Rocket.name=6阶火箭
-item.itemTier7Rocket.t7Rocket.name=7阶火箭
-item.itemTier8Rocket.t8Rocket.name=8阶火箭
-item.itemTier9Rocket.t9Rocket.name=9阶火箭
-item.itemTier10Rocket.t10Rocket.name=10阶火箭
+item.item_tier4_rocket.t4Rocket.name=4阶火箭
+item.item_tier5_rocket.t5Rocket.name=5阶火箭
+item.item_tier6_rocket.t6Rocket.name=6阶火箭
+item.item_tier7_rocket.t7Rocket.name=7阶火箭
+item.item_tier8_rocket.t8Rocket.name=8阶火箭
+item.item_tier9_rocket.t9Rocket.name=9阶火箭
+item.item_tier10_rocket.t10Rocket.name=10阶火箭
 
 #Rocket Tiered Items
-item.noseConeTier4.name=4阶鼻锥
-item.noseConeTier5.name=5阶鼻锥
-item.noseConeTier6.name=6阶鼻锥
-item.noseConeTier7.name=7阶鼻锥
-item.noseConeTier8.name=8阶鼻锥
-item.noseConeTier9.name=9阶鼻锥
-item.noseConeTier10.name=10阶鼻锥
+item.nose_cone_tier4.name=4阶鼻锥
+item.nose_cone_tier5.name=5阶鼻锥
+item.nose_cone_tier6.name=6阶鼻锥
+item.nose_cone_tier7.name=7阶鼻锥
+item.nose_cone_tier8.name=8阶鼻锥
+item.nose_cone_tier9.name=9阶鼻锥
+item.nose_cone_tier10.name=10阶鼻锥
 
-item.tier4Items.tier4Fin.name=4阶火箭尾鳍
-item.tier5Items.tier5Fin.name=5阶火箭尾鳍
-item.tier6Items.tier6Fin.name=6阶火箭尾鳍
-item.tier7Items.tier7Fin.name=7阶火箭尾鳍
-item.tier8Items.tier8Fin.name=8阶火箭尾鳍
-item.tier9Items.tier9Fin.name=9阶火箭尾鳍
-item.tier10Items.tier10Fin.name=10阶火箭尾鳍
+item.tier4_items.tier4fin.name=4阶火箭尾鳍
+item.tier5_items.tier5fin.name=5阶火箭尾鳍
+item.tier6_items.tier6fin.name=6阶火箭尾鳍
+item.tier7_items.tier7fin.name=7阶火箭尾鳍
+item.tier8_items.tier8fin.name=8阶火箭尾鳍
+item.tier9_items.tier9fin.name=9阶火箭尾鳍
+item.tier10_items.tier10fin.name=10阶火箭尾鳍
 
-item.tier4Items.tier4engine.name=4阶火箭引擎
-item.tier5Items.tier5engine.name=5阶火箭引擎
-item.tier6Items.tier6engine.name=6阶火箭引擎
-item.tier7Items.tier7engine.name=7阶火箭引擎
-item.tier8Items.tier8engine.name=8阶火箭引擎
-item.tier9Items.tier9engine.name=9阶火箭引擎
-item.tier10Items.tier10engine.name=10阶火箭引擎
+item.tier4_items.tier4engine.name=4阶火箭引擎
+item.tier5_items.tier5engine.name=5阶火箭引擎
+item.tier6_items.tier6engine.name=6阶火箭引擎
+item.tier7_items.tier7engine.name=7阶火箭引擎
+item.tier8_items.tier8engine.name=8阶火箭引擎
+item.tier9_items.tier9engine.name=9阶火箭引擎
+item.tier10_items.tier10engine.name=10阶火箭引擎
 
-item.tier4Items.tier4booster.name=4阶助推器
-item.tier5Items.tier5booster.name=5阶助推器
-item.tier6Items.tier6booster.name=6阶助推器
-item.tier7Items.tier7booster.name=7阶助推器
-item.tier8Items.tier8booster.name=8阶助推器
-item.tier9Items.tier9booster.name=9阶助推器
-item.tier10Items.tier10booster.name=10阶助推器
+item.tier4_items.tier4booster.name=4阶助推器
+item.tier5_items.tier5booster.name=5阶助推器
+item.tier6_items.tier6booster.name=6阶助推器
+item.tier7_items.tier7booster.name=7阶助推器
+item.tier8_items.tier8booster.name=8阶助推器
+item.tier9_items.tier9booster.name=9阶助推器
+item.tier10_items.tier10booster.name=10阶助推器
 
-item.tier4Items.tier4HeavyDutyPlate.name=重型板
-item.tier5Items.tier5HeavyDutyPlate.name=重型板
-item.tier6Items.tier6HeavyDutyPlate.name=重型板
-item.tier7Items.tier7HeavyDutyPlate.name=重型板
-item.tier8Items.tier8HeavyDutyPlate.name=重型板
-item.tier9Items.tier9HeavyDutyPlate.name=重型板
-item.tier10Items.tier10HeavyDutyPlate.name=重型板
+item.tier4_items.tier4heavy_duty_plate.name=重型板
+item.tier5_items.tier5heavy_duty_plate.name=重型板
+item.tier6_items.tier6heavy_duty_plate.name=重型板
+item.tier7_items.tier7heavy_duty_plate.name=重型板
+item.tier8_items.tier8heavy_duty_plate.name=重型板
+item.tier9_items.tier9heavy_duty_plate.name=重型板
+item.tier10_items.tier10heavy_duty_plate.name=重型板
 
-tier4.heavyDutyPlate.name=4阶
-tier5.heavyDutyPlate.name=5阶
-tier6.heavyDutyPlate.name=6阶
-tier7.heavyDutyPlate.name=7阶
-tier8.heavyDutyPlate.name=8阶
-tier9.heavyDutyPlate.name=9阶
-tier10.heavyDutyPlate.name=10阶
+tier4.heavy_duty_plate.name=4阶
+tier5.heavy_duty_plate.name=5阶
+tier6.heavy_duty_plate.name=6阶
+tier7.heavy_duty_plate.name=7阶
+tier8.heavy_duty_plate.name=8阶
+tier9.heavy_duty_plate.name=9阶
+tier10.heavy_duty_plate.name=10阶
 
 #Compressed Items
-item.tier4Items.compressedCarbon.name=致密碳板
-item.tier5Items.compressedPalladium.name=致密钯板
-item.tier6Items.compressedMagnesium.name=致密镁板
-item.tier7Items.compressedReinforcedCrystal.name=强化致密水晶板
-item.tier7Items.compressedCrystal.name=致密水晶板
-item.tier8Items.compressedZinc.name=致密锌板
-item.tier5Items.compressedNickel.name=致密镍板
-item.compressedMercury.name=致密汞板
-item.tier9Items.compressedTungsten.name=致密钨板
-item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
+item.tier4_items.compressedCarbon.name=致密碳板
+item.tier5_items.compressedPalladium.name=致密钯板
+item.tier6_items.compressedMagnesium.name=致密镁板
+item.tier7_items.compressedReinforcedCrystal.name=强化致密水晶板
+item.tier7_items.compressedCrystal.name=致密水晶板
+item.tier8_items.compressed_zinc.name=致密锌板
+item.tier5_items.compressed_nickel.name=致密镍板
+item.compressed_mercury.name=致密汞板
+item.tier9_items.compressedTungsten.name=致密钨板
+item.tier10_items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
-item.tier4Items.ingotCarbon.name=碳锭
-item.tier5Items.ingotPalladium.name=钯锭
-item.tier6Items.ingotMagnesium.name=镁锭
-item.tier7Items.ingotCrystal.name=水晶块
-item.tier8Items.ingotZinc.name=锌锭
-item.tier5Items.ingotNickel.name=镍锭
-item.ingotMercury.name=汞锭
-item.ingotUranium.name=铀锭
-item.tier9Items.ingotTungsten.name=钨锭
-item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
-item.ingotLead.name=Lead Ingot
+item.tier4_items.ingotCarbon.name=碳锭
+item.tier5_items.ingotPalladium.name=钯锭
+item.tier6_items.ingotMagnesium.name=镁锭
+item.tier7_items.ingotCrystal.name=水晶块
+item.tier8_items.ingotZinc.name=锌锭
+item.tier5_items.ingotNickel.name=镍锭
+item.ingot_mercury.name=汞锭
+item.ingot_uranium.name=铀锭
+item.tier9_items.ingotTungsten.name=钨锭
+item.tier10_items.ingotDarkIron.name=Dark Iron Ingot
+item.ingot_lead.name=Lead Ingot
 
 #Gems
-item.tier5Items.redGem.name=红宝石
-item.tier8Items.blueGem.name=蓝宝石
-item.tier7Items.whiteGem.name=白宝石
-item.tier11Items.blueDiamond.name=Blue Diamond
-item.tier11Items.redDiamond.name=Red Diamond
-item.tier11Items.yellowDiamond.name=Yellow Diamond
-item.tier11Items.purpleDiamond.name=Purple Diamond
-item.tier11Items.greenDiamond.name=Green Diamond
+item.tier5_items.redGem.name=红宝石
+item.tier8_items.blueGem.name=蓝宝石
+item.tier7_items.whiteGem.name=白宝石
+item.tier11_items.blueDiamond.name=Blue Diamond
+item.tier11_items.redDiamond.name=Red Diamond
+item.tier11_items.yellowDiamond.name=Yellow Diamond
+item.tier11_items.purpleDiamond.name=Purple Diamond
+item.tier11_items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=钻石晶圆
@@ -640,13 +604,13 @@ item.green_diamond_hoe.name=Green Diamond Hoe
 item.green_diamond_shovel.name=Green Diamond Shovel
 
 #Schematics
-item.schematicTier4.name=NASA工作台图纸
-item.schematicTier5.name=NASA工作台图纸
-item.schematicTier6.name=NASA工作台图纸
-item.schematicTier7.name=NASA工作台图纸
-item.schematicTier8.name=NASA工作台图纸
-item.schematicTier9.name=NASA工作台图纸
-item.schematicTier10.name=NASA工作台图纸
+item.schematic_tier4.name=NASA工作台图纸
+item.schematic_tier5.name=NASA工作台图纸
+item.schematic_tier6.name=NASA工作台图纸
+item.schematic_tier7.name=NASA工作台图纸
+item.schematic_tier8.name=NASA工作台图纸
+item.schematic_tier9.name=NASA工作台图纸
+item.schematic_tier10.name=NASA工作台图纸
 
 schematic.tier4.rocket.name=4阶火箭
 schematic.tier5.rocket.name=5阶火箭
@@ -665,11 +629,11 @@ schematic.rocketT9.name=9阶火箭
 schematic.rocketT10.name=10阶火箭
 
 #Batteries
-item.mercuryBattery.name=汞电池
-item.nickelBattery.name=镍电池
-item.zincBattery.name=锌电池
-item.advancedBattery.name=Advanced Battery
-item.ultimateBattery.name=Ultimate Battery
+item.mercury_battery.name=汞电池
+item.nickel_battery.name=镍电池
+item.zinc_battery.name=锌电池
+item.advanced_battery.name=Advanced Battery
+item.ultimate_battery.name=Ultimate Battery
 
 #Armor
 item.carbonHelmet.name=碳盔

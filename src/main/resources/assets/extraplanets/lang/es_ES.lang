@@ -319,42 +319,6 @@ tile.saturn_gravel.name=Grava de Saturno
 tile.uranus_gravel.name=Grava de Urano
 tile.neptune_gravel.name=Grava de Neptuno
 
-#Planet Blocks Slabs
-tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Losa de Roca Mercuriana
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=Losa de Roca de Venus
-tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Losa de Roca de Ceres
-tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Losa de Roca de Júpiter
-tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Losa de Roca de Saturno
-tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Losa de Roca de Urano
-tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Losa de Roca de Neptuno
-tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Losa de Roca de Pluto
-tile.ExtraPlanets_erisStoneBlockhalfslab.name=Losa de Roca de Eris
-
-#Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Escaleras de Mercurio
-tile.venusStoneStairs.name=Escaleras de Venus
-tile.ceresStoneStairs.name=Escaleras de Ceres
-tile.jupiterStoneStairs.name=Escaleras de Júpiter
-tile.saturnStoneStairs.name=Escaleras de Saturno
-tile.uranusStoneStairs.name=Escaleras de Urano
-tile.neptuneStoneStairs.name=Escaleras de Neptuno
-tile.plutoStoneStairs.name=Escaleras de Pluto
-tile.erisStoneStairs.name=Escaleras de Eris
-
-#Dungeon Bricks Slabs
-tile.ExtraPlanets_mercuryDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Venus
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Júpiter
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Saturno
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Urano
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Losa de Ladrillos de Mazmorra de Neptuno
-
-#Dungeon Bricks Stairs
-tile.mercuryDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Venus
-tile.jupiterDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Júpiter
-tile.saturnDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Saturno
-tile.uranusDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Urano
-tile.neptuneDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de Neptuno
-
 #Treasure Chests
 tile.treasure_chest_t4.name=Cofre del tesoro nivel 4
 tile.treasure_chest_t5.name=Cofre del tesoro nivel 5
@@ -427,97 +391,97 @@ tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
 
 #Rocket Items
-item.itemTier4Rocket.t4Rocket.name=Cohete nivel 4
-item.itemTier5Rocket.t5Rocket.name=Cohete nivel 5
-item.itemTier6Rocket.t6Rocket.name=Cohete nivel 6
-item.itemTier7Rocket.t7Rocket.name=Cohete nivel 7
-item.itemTier8Rocket.t8Rocket.name=Cohete nivel 8
-item.itemTier9Rocket.t9Rocket.name=Cohete nivel 9
-item.itemTier10Rocket.t10Rocket.name=Cohete nivel 10
+item.item_tier4_rocket.t4Rocket.name=Cohete nivel 4
+item.item_tier5_rocket.t5Rocket.name=Cohete nivel 5
+item.item_tier6_rocket.t6Rocket.name=Cohete nivel 6
+item.item_tier7_rocket.t7Rocket.name=Cohete nivel 7
+item.item_tier8_rocket.t8Rocket.name=Cohete nivel 8
+item.item_tier9_rocket.t9Rocket.name=Cohete nivel 9
+item.item_tier10_rocket.t10Rocket.name=Cohete nivel 10
 
 #Rocket Tiered Items
-item.noseConeTier4.name=Ojiva nivel 4
-item.noseConeTier5.name=Ojiva nivel 5
-item.noseConeTier6.name=Ojiva nivel 6
-item.noseConeTier7.name=Ojiva nivel 7
-item.noseConeTier8.name=Ojiva nivel 8
-item.noseConeTier9.name=Ojiva nivel 9
-item.noseConeTier10.name=Ojiva nivel 10
+item.nose_cone_tier4.name=Ojiva nivel 4
+item.nose_cone_tier5.name=Ojiva nivel 5
+item.nose_cone_tier6.name=Ojiva nivel 6
+item.nose_cone_tier7.name=Ojiva nivel 7
+item.nose_cone_tier8.name=Ojiva nivel 8
+item.nose_cone_tier9.name=Ojiva nivel 9
+item.nose_cone_tier10.name=Ojiva nivel 10
 
-item.tier4Items.tier4Fin.name=Aletas de cohete nivel 4
-item.tier5Items.tier5Fin.name=Aletas de cohete nivel 5
-item.tier6Items.tier6Fin.name=Aletas de cohete nivel 6
-item.tier7Items.tier7Fin.name=Aletas de cohete nivel 7
-item.tier8Items.tier8Fin.name=Aletas de cohete nivel 8
-item.tier9Items.tier9Fin.name=Aletas de cohete nivel 9
-item.tier10Items.tier10Fin.name=Aletas de cohete nivel 10
+item.tier4_items.tier4fin.name=Aletas de cohete nivel 4
+item.tier5_items.tier5fin.name=Aletas de cohete nivel 5
+item.tier6_items.tier6fin.name=Aletas de cohete nivel 6
+item.tier7_items.tier7fin.name=Aletas de cohete nivel 7
+item.tier8_items.tier8fin.name=Aletas de cohete nivel 8
+item.tier9_items.tier9fin.name=Aletas de cohete nivel 9
+item.tier10_items.tier10fin.name=Aletas de cohete nivel 10
 
-item.tier4Items.tier4engine.name=Motor de coehte nivel 4
-item.tier5Items.tier5engine.name=Motor de coehte nivel 5
-item.tier6Items.tier6engine.name=Motor de coehte nivel 6
-item.tier7Items.tier7engine.name=Motor de coehte nivel 7
-item.tier8Items.tier8engine.name=Motor de coehte nivel 8
-item.tier9Items.tier9engine.name=Motor de coehte nivel 9
-item.tier10Items.tier10engine.name=Motor de coehte nivel 10
+item.tier4_items.tier4engine.name=Motor de coehte nivel 4
+item.tier5_items.tier5engine.name=Motor de coehte nivel 5
+item.tier6_items.tier6engine.name=Motor de coehte nivel 6
+item.tier7_items.tier7engine.name=Motor de coehte nivel 7
+item.tier8_items.tier8engine.name=Motor de coehte nivel 8
+item.tier9_items.tier9engine.name=Motor de coehte nivel 9
+item.tier10_items.tier10engine.name=Motor de coehte nivel 10
 
-item.tier4Items.tier4booster.name=Acelerador nivel 4
-item.tier5Items.tier5booster.name=Acelerador nivel 5
-item.tier6Items.tier6booster.name=Acelerador nivel 6
-item.tier7Items.tier7booster.name=Acelerador nivel 7
-item.tier8Items.tier8booster.name=Acelerador nivel 8
-item.tier9Items.tier9booster.name=Acelerador nivel 9
-item.tier10Items.tier10booster.name=Acelerador nivel 10
+item.tier4_items.tier4booster.name=Acelerador nivel 4
+item.tier5_items.tier5booster.name=Acelerador nivel 5
+item.tier6_items.tier6booster.name=Acelerador nivel 6
+item.tier7_items.tier7booster.name=Acelerador nivel 7
+item.tier8_items.tier8booster.name=Acelerador nivel 8
+item.tier9_items.tier9booster.name=Acelerador nivel 9
+item.tier10_items.tier10booster.name=Acelerador nivel 10
 
-item.tier4Items.tier4HeavyDutyPlate.name=Placa de alta resistencia
-item.tier5Items.tier5HeavyDutyPlate.name=Placa de alta resistencia
-item.tier6Items.tier6HeavyDutyPlate.name=Placa de alta resistencia
-item.tier7Items.tier7HeavyDutyPlate.name=Placa de alta resistencia
-item.tier8Items.tier8HeavyDutyPlate.name=Placa de alta resistencia
-item.tier9Items.tier9HeavyDutyPlate.name=Placa de alta resistencia
-item.tier10Items.tier10HeavyDutyPlate.name=Placa de alta resistencia
+item.tier4_items.tier4heavy_duty_plate.name=Placa de alta resistencia
+item.tier5_items.tier5heavy_duty_plate.name=Placa de alta resistencia
+item.tier6_items.tier6heavy_duty_plate.name=Placa de alta resistencia
+item.tier7_items.tier7heavy_duty_plate.name=Placa de alta resistencia
+item.tier8_items.tier8heavy_duty_plate.name=Placa de alta resistencia
+item.tier9_items.tier9heavy_duty_plate.name=Placa de alta resistencia
+item.tier10_items.tier10heavy_duty_plate.name=Placa de alta resistencia
 
-tier4.heavyDutyPlate.name=nivel 4
-tier5.heavyDutyPlate.name=nivel 5
-tier6.heavyDutyPlate.name=nivel 6
-tier7.heavyDutyPlate.name=nivel 7
-tier8.heavyDutyPlate.name=nivel 8
-tier9.heavyDutyPlate.name=nivel 9
-tier10.heavyDutyPlate.name=nivel 10
+tier4.heavy_duty_plate.name=nivel 4
+tier5.heavy_duty_plate.name=nivel 5
+tier6.heavy_duty_plate.name=nivel 6
+tier7.heavy_duty_plate.name=nivel 7
+tier8.heavy_duty_plate.name=nivel 8
+tier9.heavy_duty_plate.name=nivel 9
+tier10.heavy_duty_plate.name=nivel 10
 
 #Compressed Items
-item.tier4Items.compressedCarbon.name=Carbono comprimido
-item.tier5Items.compressedPalladium.name=Paladio comprimido
-item.tier6Items.compressedMagnesium.name=Magnesio comprimido
-item.tier7Items.compressedReinforcedCrystal.name=Cristal reforzado comprimido
-item.tier7Items.compressedCrystal.name=Cristal comprimido
-item.tier8Items.compressedZinc.name=Zinc comprimido
-item.tier5Items.compressedNickel.name=Estaño comprimido
-item.compressedMercury.name=Mercurio comprimido
-item.tier9Items.compressedTungsten.name=Tungsteno comprimido
-item.tier10Items.compressedDarkIron.name=Compressed Dark Iron
+item.tier4_items.compressedCarbon.name=Carbono comprimido
+item.tier5_items.compressedPalladium.name=Paladio comprimido
+item.tier6_items.compressedMagnesium.name=Magnesio comprimido
+item.tier7_items.compressedReinforcedCrystal.name=Cristal reforzado comprimido
+item.tier7_items.compressedCrystal.name=Cristal comprimido
+item.tier8_items.compressed_zinc.name=Zinc comprimido
+item.tier5_items.compressed_nickel.name=Estaño comprimido
+item.compressed_mercury.name=Mercurio comprimido
+item.tier9_items.compressedTungsten.name=Tungsteno comprimido
+item.tier10_items.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
-item.tier4Items.ingotCarbon.name=Lingote de carbono
-item.tier5Items.ingotPalladium.name=Lingote de paladio
-item.tier6Items.ingotMagnesium.name=Lingote de magnesio
-item.tier7Items.ingotCrystal.name=Lingore de cristal
-item.tier8Items.ingotZinc.name=Lingote de zinc
-item.tier5Items.ingotNickel.name=Lingote de estaño
-item.ingotMercury.name=Lingote mercuriano
-item.ingotUranium.name=Lingore de uranio
-item.tier9Items.ingotTungsten.name=Lingote de tungsteno
-item.tier10Items.ingotDarkIron.name=Dark Iron Ingot
-item.ingotLead.name=Lead Ingot
+item.tier4_items.ingotCarbon.name=Lingote de carbono
+item.tier5_items.ingotPalladium.name=Lingote de paladio
+item.tier6_items.ingotMagnesium.name=Lingote de magnesio
+item.tier7_items.ingotCrystal.name=Lingore de cristal
+item.tier8_items.ingotZinc.name=Lingote de zinc
+item.tier5_items.ingotNickel.name=Lingote de estaño
+item.ingot_mercury.name=Lingote mercuriano
+item.ingot_uranium.name=Lingore de uranio
+item.tier9_items.ingotTungsten.name=Lingote de tungsteno
+item.tier10_items.ingotDarkIron.name=Dark Iron Ingot
+item.ingot_lead.name=Lead Ingot
 
 #Gems
-item.tier5Items.redGem.name=Gema roja
-item.tier8Items.blueGem.name=Gema azúl
-item.tier7Items.whiteGem.name=Gema blanca
-item.tier11Items.blueDiamond.name=Blue Diamond
-item.tier11Items.redDiamond.name=Red Diamond
-item.tier11Items.yellowDiamond.name=Yellow Diamond
-item.tier11Items.purpleDiamond.name=Purple Diamond
-item.tier11Items.greenDiamond.name=Green Diamond
+item.tier5_items.redGem.name=Gema roja
+item.tier8_items.blueGem.name=Gema azúl
+item.tier7_items.whiteGem.name=Gema blanca
+item.tier11_items.blueDiamond.name=Blue Diamond
+item.tier11_items.redDiamond.name=Red Diamond
+item.tier11_items.yellowDiamond.name=Yellow Diamond
+item.tier11_items.purpleDiamond.name=Purple Diamond
+item.tier11_items.greenDiamond.name=Green Diamond
 
 #Wafers
 item.wafer.diamondWafer.name=Oblea de diamante
@@ -638,13 +602,13 @@ item.green_diamond_hoe.name=Green Diamond Hoe
 item.green_diamond_shovel.name=Green Diamond Shovel
 
 #Schematics
-item.schematicTier4.name=Planos
-item.schematicTier5.name=Planos
-item.schematicTier6.name=Planos
-item.schematicTier7.name=Planos
-item.schematicTier8.name=Planos
-item.schematicTier9.name=Planos
-item.schematicTier10.name=Planos
+item.schematic_tier4.name=Planos
+item.schematic_tier5.name=Planos
+item.schematic_tier6.name=Planos
+item.schematic_tier7.name=Planos
+item.schematic_tier8.name=Planos
+item.schematic_tier9.name=Planos
+item.schematic_tier10.name=Planos
 
 schematic.tier4.rocket.name=Cohete nivel 4
 schematic.tier5.rocket.name=Cohete nivel 5
@@ -663,11 +627,11 @@ schematic.rocketT9.name=Cohete nivel 9
 schematic.rocketT10.name=Cohete nivel 10
 
 #Batteries
-item.mercuryBattery.name=Batería de mercurio
-item.nickelBattery.name=Batería de estaño
-item.zincBattery.name=Batería de zinc
-item.advancedBattery.name=Batería avanzada
-item.ultimateBattery.name=Batería definitiva
+item.mercury_battery.name=Batería de mercurio
+item.nickel_battery.name=Batería de estaño
+item.zinc_battery.name=Batería de zinc
+item.advanced_battery.name=Batería avanzada
+item.ultimate_battery.name=Batería definitiva
 
 #Armor
 item.carbonHelmet.name=Casco de carbono
