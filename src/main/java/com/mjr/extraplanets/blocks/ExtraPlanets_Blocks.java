@@ -12,8 +12,10 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockErisDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockJupiterDungeonSpawner;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockMercuryDungeonSpawner;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockNeptuneDungeonSpawner;
+import com.mjr.extraplanets.blocks.dungeonSpawners.BlockPlutoDungeonSpawner;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockSaturnDungeonSpawner;
 import com.mjr.extraplanets.blocks.dungeonSpawners.BlockUranusDungeonSpawner;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
@@ -77,8 +79,11 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bTallGrass;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
@@ -337,7 +342,7 @@ public class ExtraPlanets_Blocks {
 			MERCURY_SPAWNER = new BlockMercuryDungeonSpawner("bossSpawnerVenus");
 		}
 		if (Config.JUPITER) {
-			// jupiterSpawner = new BlockJupiterDungeonSpawner("bossSpawnerVenus");
+			JUIPTER_SPAWNER = new BlockJupiterDungeonSpawner("bossSpawnerVenus");
 		}
 		if (Config.SATURN) {
 			SATURN_SPAWNER = new BlockSaturnDungeonSpawner("bossSpawnerSaturn");
@@ -349,7 +354,7 @@ public class ExtraPlanets_Blocks {
 			NEPTUNE_SPAWNER = new BlockNeptuneDungeonSpawner("bossSpawnerNeptune");
 		}
 		if (Config.PLUTO) {
-			// plutoSpawner = new BlockPlutoDungeonSpawner("bossSpawnerPluto");
+			PLUTO_SPAWNER = new BlockPlutoDungeonSpawner("bossSpawnerPluto");
 		}
 		if (Config.ERIS) {
 			ERIS_SPAWNER = new BlockErisDungeonSpawner("bossSpawnerEris");
@@ -379,7 +384,7 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.registerBlock(JUPITER_BLOCKS, ItemBlockJupiter.class, JUPITER_BLOCKS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(JUPITER_GRAVEL, JUPITER_GRAVEL.getUnlocalizedName().substring(5));
 
-			// RegisterHelper.registerBlock(jupiterSpawner, ItemBlockGC.class, "jupiterSpawner");
+			RegisterHelper.registerBlock(JUIPTER_SPAWNER, ItemBlockGC.class, "jupiterSpawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
@@ -403,13 +408,13 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.PLUTO) {
 			RegisterHelper.registerBlock(PLUTO_BLOCKS, ItemBlockPluto.class, PLUTO_BLOCKS.getUnlocalizedName().substring(5));
-			// RegisterHelper.registerBlock(plutoSpawner, ItemBlockGC.class, "plutoSpawner");
+			RegisterHelper.registerBlock(PLUTO_SPAWNER, ItemBlockGC.class, "plutoSpawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_9, ItemBlockDesc.class, TREASURE_CHEST_TIER_9.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(PLUTO_GRAVEL, PLUTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.ERIS) {
 			RegisterHelper.registerBlock(ERIS_BLOCKS, ItemBlockEris.class, ERIS_BLOCKS.getUnlocalizedName().substring(5));
-			// RegisterHelper.registerBlock(erisSpawner, ItemBlockGC.class, "erisSpawner");
+			RegisterHelper.registerBlock(ERIS_SPAWNER, ItemBlockGC.class, "erisSpawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_10, ItemBlockDesc.class, TREASURE_CHEST_TIER_10.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(ERIS_GRAVEL, ERIS_GRAVEL.getUnlocalizedName().substring(5));
 		}
@@ -487,7 +492,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
 		if (Config.JUPITER) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT5TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
 		}
 		if (Config.SATURN) {
@@ -503,11 +508,11 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.PLUTO) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "PLUTO Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "PLUTO Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
 		if (Config.ERIS) {
-			// GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
 	}
