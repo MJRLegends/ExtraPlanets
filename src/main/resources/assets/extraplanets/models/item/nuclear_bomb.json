@@ -1,5 +1,5 @@
 {
-    "parent": "extraplanets:block/nuclearBomb_model",
+    "parent": "extraplanets:block/nuclear_bomb_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
