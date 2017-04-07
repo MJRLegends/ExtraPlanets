@@ -14,6 +14,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+0.8.1 Beta Build
+*Fixed config issue when disabling Lead Ore Generation option (Fixes #75)
+
 0.8.0 Beta Build
 *Update zh_CN.lang
 *Fixed Advanced & Ultimate rendering due to GC resources name changes
