@@ -814,35 +814,35 @@ item.canned_food.dehydrated_beef.name=脱水牛肉
 #Entities
 entity.ProjectileTNT.name=飞行的TNT
 
-entity.ExtraPlanets.EntityTier4Rocket.name=4阶火箭
-entity.ExtraPlanets.EntityTier5Rocket.name=5阶火箭
-entity.ExtraPlanets.EntityTier6Rocket.name=6阶火箭
-entity.ExtraPlanets.EntityTier7Rocket.name=7阶火箭
-entity.ExtraPlanets.EntityTier8Rocket.name=8阶火箭
-entity.ExtraPlanets.EntityTier9Rocket.name=9阶火箭
-entity.ExtraPlanets.EntityTier10Rocket.name=10阶火箭
+entity.extraplanets.EntityTier4Rocket.name=4阶火箭
+entity.extraplanets.EntityTier5Rocket.name=5阶火箭
+entity.extraplanets.EntityTier6Rocket.name=6阶火箭
+entity.extraplanets.EntityTier7Rocket.name=7阶火箭
+entity.extraplanets.EntityTier8Rocket.name=8阶火箭
+entity.extraplanets.EntityTier9Rocket.name=9阶火箭
+entity.extraplanets.EntityTier10Rocket.name=10阶火箭
 
-entity.ExtraPlanetsCreeperBossVenus.name=金星爬行者之王(进化体)
-entity.ExtraPlanetsCreeperBossJupiter.name=木星爬行者之王(进化体)
-entity.ExtraPlanetsCreeperBossSaturn.name=土星爬行者之王(进化体)
-entity.ExtraPlanetsCreeperBossUranus.name=天王星爬行者之王(进化体)
-entity.ExtraPlanetsCreeperBossNeptune.name=海王星爬行者之王(进化体)
-entity.ExtraPlanetsCreeperBossPluto.name=冥王星爬行者之王(进化体)
-entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
+entity.extraplanets.CreeperBossVenus.name=金星爬行者之王(进化体)
+entity.extraplanets.CreeperBossJupiter.name=木星爬行者之王(进化体)
+entity.extraplanets.CreeperBossSaturn.name=土星爬行者之王(进化体)
+entity.extraplanets.CreeperBossUranus.name=天王星爬行者之王(进化体)
+entity.extraplanets.CreeperBossNeptune.name=海王星爬行者之王(进化体)
+entity.extraplanets.CreeperBossPluto.name=冥王星爬行者之王(进化体)
+entity.extraplanets.CreeperBossEris.name=Creeper Boss Eris
 
-entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=岩浆怪之王(进化体)
-entity.ExtraPlanetsEvolvedIceSlimeBoss.name=冰史莱姆之王(进化体)
-entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
-entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
+entity.extraplanets.EvolvedMagmaCubeBoss.name=岩浆怪之王(进化体)
+entity.extraplanets.EvolvedIceSlimeBoss.name=冰史莱姆之王(进化体)
+entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
+entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 
-entity.ExtraPlanetsEvolvedWitch.name=女巫(进化体)
-entity.ExtraPlanetsEvolvedMagmaCube.name=岩浆怪(进化体)
-entity.ExtraPlanetsEvolvedIceSlime.name=冰史莱姆(进化体)
-entity.ExtraPlanetsEvolvedEnderman.name=末影人(进化体)
-entity.ExtraPlanetsEvolvedBlaze.name=烈焰人(进化体)
-entity.ExtraPlanetsEvolvedBlueCreeper.name=蓝色爬行者(进化体)
-entity.ExtraPlanetsEvolvedRedCreeper.name=红色爬行者(进化体)
-entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髅(进化体)
+entity.extraplanets.EvolvedWitch.name=女巫(进化体)
+entity.extraplanets.EvolvedMagmaCube.name=岩浆怪(进化体)
+entity.extraplanets.EvolvedIceSlime.name=冰史莱姆(进化体)
+entity.extraplanets.EvolvedEnderman.name=末影人(进化体)
+entity.extraplanets.EvolvedBlaze.name=烈焰人(进化体)
+entity.extraplanets.EvolvedBlueCreeper.name=蓝色爬行者(进化体)
+entity.extraplanets.EvolvedRedCreeper.name=红色爬行者(进化体)
+entity.extraplanets.EvolvedPowerSkeleton.name=骷髅(进化体)
 
 #Achievement
 achievement.mercuryPlanet=登陆水星！

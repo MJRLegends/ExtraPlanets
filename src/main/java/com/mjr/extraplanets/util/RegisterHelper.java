@@ -23,6 +23,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class RegisterHelper {
+	private static int id = 0;
 
 	public static void registerBlock(Block block, String name) {
 		GameRegistry.register(block.setRegistryName(Constants.modID, name));
@@ -58,9 +59,14 @@ public class RegisterHelper {
 	}
 
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
-		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.getNextValidID(), ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
+		EntityRegistry.registerModEntity(var0, var1, id++, ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
 	}
-
+	
+	public static void registerExtraPlanetsMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
+		registerExtraPlanetsNonMobEntity(entityClass, name, 80, 3, true);
+		EntityRegistry.registerEgg(entityClass, back, fore);
+	}
+	
 	@SuppressWarnings("deprecation")
 	public static void setHarvestLevel(Block block, String toolClass, int level, int meta) {
 		block.setHarvestLevel(toolClass, level, block.getStateFromMeta(meta));

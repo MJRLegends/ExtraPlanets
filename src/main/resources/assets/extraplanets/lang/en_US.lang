@@ -813,35 +813,35 @@ item.canned_food.dehydrated_beef.name=Dehydrated Beef
 #Entities
 entity.ProjectileTNT.name=Projectile TNT
 
-entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Rocket
-entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Rocket
-entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Rocket
-entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Rocket
-entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Rocket
-entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Rocket
-entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Rocket
+entity.extraplanets.EntityTier4Rocket.name=Tier 4 Rocket
+entity.extraplanets.EntityTier5Rocket.name=Tier 5 Rocket
+entity.extraplanets.EntityTier6Rocket.name=Tier 6 Rocket
+entity.extraplanets.EntityTier7Rocket.name=Tier 7 Rocket
+entity.extraplanets.EntityTier8Rocket.name=Tier 8 Rocket
+entity.extraplanets.EntityTier9Rocket.name=Tier 9 Rocket
+entity.extraplanets.EntityTier10Rocket.name=Tier 10 Rocket
 
-entity.ExtraPlanetsCreeperBossVenus.name=Creeper Boss Venus
-entity.ExtraPlanetsCreeperBossJupiter.name=Creeper Boss Jupiter
-entity.ExtraPlanetsCreeperBossSaturn.name=Creeper Boss Saturn
-entity.ExtraPlanetsCreeperBossUranus.name=Creeper Boss Uranus
-entity.ExtraPlanetsCreeperBossNeptune.name=Creeper Boss Neptune
-entity.ExtraPlanetsCreeperBossPluto.name=Creeper Boss Pluto
-entity.ExtraPlanetsCreeperBossEris.name=Creeper Boss Eris
+entity.extraplanets.CreeperBossVenus.name=Creeper Boss Venus
+entity.extraplanets.CreeperBossJupiter.name=Creeper Boss Jupiter
+entity.extraplanets.CreeperBossSaturn.name=Creeper Boss Saturn
+entity.extraplanets.CreeperBossUranus.name=Creeper Boss Uranus
+entity.extraplanets.CreeperBossNeptune.name=Creeper Boss Neptune
+entity.extraplanets.CreeperBossPluto.name=Creeper Boss Pluto
+entity.extraplanets.CreeperBossEris.name=Creeper Boss Eris
 
-entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
-entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
-entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
-entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
+entity.extraplanets.EvolvedMagmaCubeBoss.name=Evolved Magma Cube Boss
+entity.extraplanets.EvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
+entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
+entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 
-entity.ExtraPlanetsEvolvedWitch.name=Evolved Witch
-entity.ExtraPlanetsEvolvedMagmaCube.name=Evolved Magma Cube
-entity.ExtraPlanetsEvolvedIceSlime.name=Evolved Ice Slime
-entity.ExtraPlanetsEvolvedEnderman.name=Evolved Enderman
-entity.ExtraPlanetsEvolvedBlaze.name=Evolved Blaze
-entity.ExtraPlanetsEvolvedBlueCreeper.name=Evolved Blue Creeper
-entity.ExtraPlanetsEvolvedRedCreeper.name=Evolved Red Creeper
-entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evolved Power Skeleton
+entity.extraplanets.EvolvedWitch.name=Evolved Witch
+entity.extraplanets.EvolvedMagmaCube.name=Evolved Magma Cube
+entity.extraplanets.EvolvedIceSlime.name=Evolved Ice Slime
+entity.extraplanets.EvolvedEnderman.name=Evolved Enderman
+entity.extraplanets.EvolvedBlaze.name=Evolved Blaze
+entity.extraplanets.EvolvedBlueCreeper.name=Evolved Blue Creeper
+entity.extraplanets.EvolvedRedCreeper.name=Evolved Red Creeper
+entity.extraplanets.EvolvedPowerSkeleton.name=Evolved Power Skeleton
 
 #Achievements
 achievement.mercuryPlanet=Land on Mercury!

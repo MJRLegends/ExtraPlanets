@@ -63,6 +63,13 @@ import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedSnowmanBoss;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossEris;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossJupiter;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossMercury;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossNeptune;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossPluto;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossSaturn;
+import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossUranus;
 import com.mjr.extraplanets.client.render.entities.projectiles.RenderSmallSnowBall;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier10Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier4Rocket;
@@ -84,6 +91,13 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossMercury;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptune;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
@@ -236,13 +250,32 @@ public class ClientProxy extends CommonProxy {
 
 	private void registerEntityRenders() {
 		if (Config.MERCURY)
-			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
+			if (Config.USE_DEFAULT_BOSSES)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossMercury.class, (RenderManager manager) -> new RenderCreeperBossMercury(manager));
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
+		if (Config.JUPITER)
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
 		if (Config.SATURN)
-			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGhastBoss.class, (RenderManager manager) -> new RenderEvolvedGhastBoss(manager));
+			if (Config.USE_DEFAULT_BOSSES)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, (RenderManager manager) -> new RenderCreeperBossSaturn(manager));
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGhastBoss.class, (RenderManager manager) -> new RenderEvolvedGhastBoss(manager));
 		if (Config.URANUS)
-			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, (RenderManager manager) -> new RenderEvolvedIceSlimeBoss(manager));
+			if (Config.USE_DEFAULT_BOSSES)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, (RenderManager manager) -> new RenderCreeperBossUranus(manager));
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, (RenderManager manager) -> new RenderEvolvedIceSlimeBoss(manager));
 		if (Config.NEPTUNE)
-			RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSnowmanBoss.class, (RenderManager manager) -> new RenderEvolvedSnowmanBoss(manager));
+			if (Config.USE_DEFAULT_BOSSES)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, (RenderManager manager) -> new RenderCreeperBossNeptune(manager));
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSnowmanBoss.class, (RenderManager manager) -> new RenderEvolvedSnowmanBoss(manager));
+
+		if (Config.PLUTO)
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, (RenderManager manager) -> new RenderCreeperBossPluto(manager));
+		if (Config.ERIS)
+			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
 
 		if (Config.MERCURY)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));

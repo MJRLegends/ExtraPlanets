@@ -10,11 +10,11 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 
-public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<EntityEvolvedMagmaCubeBoss> {
+public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<EntityCreeperBossPluto> {
 	public TileEntityDungeonSpawnerPluto() {
-		super(EntityEvolvedMagmaCubeBoss.class);
+		super(EntityCreeperBossPluto.class);
 	}
 
 	@Override
@@ -28,6 +28,6 @@ public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<Enti
 
 	@Override
 	public void playSpawnSound(Entity entity) {
-		//this.worldObj.playSoundAtEntity(entity, Constants.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
+		// this.worldObj.playSoundAtEntity(entity, Constants.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
 	}
 }

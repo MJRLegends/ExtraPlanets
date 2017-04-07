@@ -813,35 +813,35 @@ item.canned_food.dehydrated_beef.name=Susuz Biftek
 #Entities
 entity.ProjectileTNT.name=Korumacı TNT
 
-entity.ExtraPlanets.EntityTier4Rocket.name=Tier 4 Roket
-entity.ExtraPlanets.EntityTier5Rocket.name=Tier 5 Roket
-entity.ExtraPlanets.EntityTier6Rocket.name=Tier 6 Roket
-entity.ExtraPlanets.EntityTier7Rocket.name=Tier 7 Roket
-entity.ExtraPlanets.EntityTier8Rocket.name=Tier 8 Roket
-entity.ExtraPlanets.EntityTier9Rocket.name=Tier 9 Roket
-entity.ExtraPlanets.EntityTier10Rocket.name=Tier 10 Roket
+entity.extraplanets.EntityTier4Rocket.name=Tier 4 Roket
+entity.extraplanets.EntityTier5Rocket.name=Tier 5 Roket
+entity.extraplanets.EntityTier6Rocket.name=Tier 6 Roket
+entity.extraplanets.EntityTier7Rocket.name=Tier 7 Roket
+entity.extraplanets.EntityTier8Rocket.name=Tier 8 Roket
+entity.extraplanets.EntityTier9Rocket.name=Tier 9 Roket
+entity.extraplanets.EntityTier10Rocket.name=Tier 10 Roket
 
-entity.ExtraPlanetsCreeperBossVenus.name=Evrimleşmiş Creeper Patronu
-entity.ExtraPlanetsCreeperBossJupiter.name=Evrimleşmiş Creeper Patronu
-entity.ExtraPlanetsCreeperBossSaturn.name=Evrimleşmiş Creeper Patronu
-entity.ExtraPlanetsCreeperBossUranus.name=Evrimleşmiş Creeper Patronu
-entity.ExtraPlanetsCreeperBossNeptune.name=Evrimleşmiş Creeper Patronu
-entity.ExtraPlanetsCreeperBossPluto.name=Evrimleşmiş Creeper Patronu
-entity.ExtraPlanetsCreeperBossEris.name=Evrimleşmiş Creeper Patronu
+entity.extraplanets.CreeperBossVenus.name=Evrimleşmiş Creeper Patronu
+entity.extraplanets.CreeperBossJupiter.name=Evrimleşmiş Creeper Patronu
+entity.extraplanets.CreeperBossSaturn.name=Evrimleşmiş Creeper Patronu
+entity.extraplanets.CreeperBossUranus.name=Evrimleşmiş Creeper Patronu
+entity.extraplanets.CreeperBossNeptune.name=Evrimleşmiş Creeper Patronu
+entity.extraplanets.CreeperBossPluto.name=Evrimleşmiş Creeper Patronu
+entity.extraplanets.CreeperBossEris.name=Evrimleşmiş Creeper Patronu
 
-entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
-entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
-entity.ExtraPlanetsEvolvedGhastBoss.name=Evolved Ghast Boss
-entity.ExtraPlanetsEvolvedSnowmanBoss.name=Evolved Snowman Boss
+entity.extraplanets.EvolvedMagmaCubeBoss.name=Evrimleşmiş Magma Küpü Patronu
+entity.extraplanets.EvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patronu
+entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
+entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 
-entity.ExtraPlanetsEvolvedWitch.name=Evrimleşmiş Cadı
-entity.ExtraPlanetsEvolvedMagmaCube.name=Evrimleşmiş Magma Küpü
-entity.ExtraPlanetsEvolvedIceSlime.name=Evrimleşmiş Buz Balçığı
-entity.ExtraPlanetsEvolvedEnderman.name=Evrimleşmiş Enderman
-entity.ExtraPlanetsEvolvedBlaze.name=Evrimleşmiş Blaze
-entity.ExtraPlanetsEvolvedBlueCreeper.name=Evrimleşmiş Mavi Creeper
-entity.ExtraPlanetsEvolvedRedCreeper.name=Evrimleşmiş Kırmızı Creeper
-entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
+entity.extraplanets.EvolvedWitch.name=Evrimleşmiş Cadı
+entity.extraplanets.EvolvedMagmaCube.name=Evrimleşmiş Magma Küpü
+entity.extraplanets.EvolvedIceSlime.name=Evrimleşmiş Buz Balçığı
+entity.extraplanets.EvolvedEnderman.name=Evrimleşmiş Enderman
+entity.extraplanets.EvolvedBlaze.name=Evrimleşmiş Blaze
+entity.extraplanets.EvolvedBlueCreeper.name=Evrimleşmiş Mavi Creeper
+entity.extraplanets.EvolvedRedCreeper.name=Evrimleşmiş Kırmızı Creeper
+entity.extraplanets.EvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
 
 #Achievements
 achievement.mercuryPlanet=Merkür İçin Küçük Benim İçin Büyük!
