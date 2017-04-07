@@ -114,7 +114,7 @@ public class ExtraPlanets_Moons {
 			DEIMOS.setRelativeSize(0.3867F);
 			DEIMOS.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			DEIMOS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/deimos.png"));
-			DEIMOS.setDimensionInfo(Config.CALLISTO_ID, WorldProviderDeimos.class);
+			DEIMOS.setDimensionInfo(Config.DEIMOS_ID, WorldProviderDeimos.class);
 		}
 		if (Config.IO) {
 			IO = new Moon("io").setParentPlanet(ExtraPlanets_Planets.JUPITER);
