@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Triton.worldgen;
 
-import net.minecraft.world.biome.Biome.BiomeProperties;
 import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenTriton extends TritonBiomes {

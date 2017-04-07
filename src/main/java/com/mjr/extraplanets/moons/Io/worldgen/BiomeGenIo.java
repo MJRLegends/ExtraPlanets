@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Io.worldgen;
 
-import net.minecraft.world.biome.Biome.BiomeProperties;
 import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenIo extends IoBiomes {

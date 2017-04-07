@@ -2,8 +2,8 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsHandler;
-import micdoodle8.mods.galacticraft.core.entities.player.IStatsCapability;
+import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
@@ -65,7 +65,7 @@ public class ItemOxygenTank extends Item implements ISortableItem {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand) {
 		if (player instanceof EntityPlayerMP) {
-			IStatsCapability stats = player.getCapability(CapabilityStatsHandler.GC_STATS_CAPABILITY, null);
+			GCPlayerStats stats = player.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);
 			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(3);
 

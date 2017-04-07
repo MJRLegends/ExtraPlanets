@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Ganymede.worldgen;
 
-import net.minecraft.world.biome.Biome.BiomeProperties;
 import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenGanymede extends GanymedeBiomes {

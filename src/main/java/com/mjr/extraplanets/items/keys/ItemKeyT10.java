@@ -2,8 +2,6 @@ package com.mjr.extraplanets.items.keys;
 
 import java.util.List;
 
-import com.mjr.extraplanets.ExtraPlanets;
-
 import micdoodle8.mods.galacticraft.api.item.IKeyItem;
 import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -14,6 +12,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemKeyT10 extends Item implements IKeyItem, ISortableItem
 {

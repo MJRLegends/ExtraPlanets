@@ -3,8 +3,8 @@ package com.mjr.extraplanets.items.thermalPadding;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.item.IItemThermal;
-import micdoodle8.mods.galacticraft.core.entities.player.CapabilityStatsHandler;
-import micdoodle8.mods.galacticraft.core.entities.player.IStatsCapability;
+import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -92,7 +92,7 @@ public class ItemTier4ThermalPadding  extends Item implements IItemThermal
     {
         if (player instanceof EntityPlayerMP)
         {
-            IStatsCapability stats = player.getCapability(CapabilityStatsHandler.GC_STATS_CAPABILITY, null);
+            GCPlayerStats stats = player.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
             ItemStack gear = stats.getExtendedInventory().getStackInSlot(6);
             ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(7);
             ItemStack gear2 = stats.getExtendedInventory().getStackInSlot(8);

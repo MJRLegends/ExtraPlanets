@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Europa.worldgen;
 
-import net.minecraft.world.biome.Biome.BiomeProperties;
 import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenEuropa extends EuropaBiomes {

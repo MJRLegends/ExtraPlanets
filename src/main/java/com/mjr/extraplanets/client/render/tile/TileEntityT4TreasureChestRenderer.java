@@ -11,8 +11,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityT4TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT4TreasureChest>

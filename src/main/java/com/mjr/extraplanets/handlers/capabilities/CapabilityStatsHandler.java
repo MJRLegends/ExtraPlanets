@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.handlers.capabilities;
 
-import com.mjr.extraplanets.Constants;
-
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
+
+import com.mjr.extraplanets.Constants;
 
 public class CapabilityStatsHandler
 {
