@@ -8,8 +8,8 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-0.1 Alpha Build
-*Alpha Port from MC 1.8.9 version Release
+0.1 Beta Build
+*Beta Port from MC 1.8.9 version Release
 ======================================================================================================
 
 
