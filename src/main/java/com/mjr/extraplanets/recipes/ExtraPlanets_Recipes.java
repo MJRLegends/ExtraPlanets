@@ -181,7 +181,8 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 9), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 3), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 10), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 4), 0.0F);
 		}
-		GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.ORE_LEAD, 1, 0), OreDictionary.getOres("ingotLead").get(0), 0.0F);
+		if(Config.ORE_LEAD_GENERATION)
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.ORE_LEAD, 1, 0), OreDictionary.getOres("ingotLead").get(0), 0.0F);
 	}
 
 	private static void registerCraftingRecipes() {

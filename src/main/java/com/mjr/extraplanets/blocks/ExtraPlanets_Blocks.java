@@ -667,7 +667,8 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 4); // Tin Ore
 			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		RegisterHelper.setHarvestLevel(ORE_LEAD, "pickaxe", 2, 0); // Lead Ore
+		if (Config.ORE_LEAD_GENERATION)
+			RegisterHelper.setHarvestLevel(ORE_LEAD, "pickaxe", 2, 0); // Lead Ore
 	}
 
 	public static void OreDictionaryRegister() {
