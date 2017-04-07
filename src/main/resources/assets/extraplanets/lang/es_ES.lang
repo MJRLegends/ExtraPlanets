@@ -28,6 +28,7 @@ planet.Pluto=Pluto
 planet.Eris=Eris
 planet.kuiperBelt=Cinturón de Kuiper
 planet.makemake=Makemake
+planet.haumea=Haumea
 
 planet.kepler62b=Kepler 62b
 planet.kepler62c=Kepler 62c
@@ -53,6 +54,10 @@ moon.rhea=Rea
 moon.titan=Titán
 moon.oberon=Oberón
 moon.titania=Titania
+moon.charon=Charon
+moon.nix=Nix
+moon.hydra=Hydra
+moon.dysnomia=Dysnomia
 
 #Planet Blocks
 tile.mercury.surface.name=Roca mercuriana superficial
@@ -270,6 +275,28 @@ tile.titan.oreIron.name=Mena de hierro de Titán
 tile.titan.oreTin.name=Mena de estaño de Titán
 tile.titan.oreCopper.name=Mena de cobre de Titán
 
+tile.oberon.surface.name=Oberon Surface Rock
+tile.oberon.subSurface.name=Oberon Sub-Surface Rock
+tile.oberon.stone.name=Oberon Stone
+tile.oberon.oreIron.name=Oberon Iron Ore
+tile.oberon.oreTin.name=Oberon Tin Ore
+tile.oberon.oreCopper.name=Oberon Copper Ore
+
+tile.titania.surface.name=Titania Surface Rock
+tile.titania.subSurface.name=Titania Sub-Surface Rock
+tile.titania.stone.name=Titania Stone
+tile.titania.oreIron.name=Titania Iron Ore
+tile.titania.oreTin.name=Titania Tin Ore
+tile.titania.oreCopper.name=Titania Copper Ore
+
+tile.iapetus.surface.name=Iapetus Surface Rock
+tile.iapetus.subSurface.name=Iapetus Sub-Surface Rock
+tile.iapetus.stone.name=Iapetus Stone
+tile.iapetus.oreIron.name=Iapetus Iron Ore
+tile.iapetus.oreTin.name=Iapetus Tin Ore
+tile.iapetus.oreCopper.name=Iapetus Copper Ore
+tile.iapetus.ice.name=Iapetus Ice
+
 #Planet Gravel Blocks
 tile.mercuryGravel.name=Grava de Mercurio
 tile.ceresGravel.name=Grava de Ceres
@@ -284,6 +311,9 @@ tile.callistoGravel.name=Grava de Calisto
 tile.ganymedeGravel.name=Grava de Ganimedes
 tile.rheaGravel.name=Grava de Rea
 tile.titanGravel.name=Grava de Titán
+tile.oberonGravel.name=Oberon Gravel
+tile.titaniaGravel.name=Titania Gravel
+tile.iapetusGravel.name=Iapetus Gravel
 
 tile.venusGravel.name=Grava de Venus
 tile.jupiterGravel.name=Grava de Júpiter
@@ -782,14 +812,6 @@ achievement.uranusBoss=¡Jefe nivel 7 derrotado!
 achievement.neptuneBoss=¡Jefe nivel 8 derrotado!
 achievement.plutoBoss=¡Jefe nivel 9 derrotado!
 achievement.erisBoss=¡Jefe nivel 10 derrotado!
-
-achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus
-achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter
-achievement.saturnBoss.desc=Mata al jefe de la mazmorra de Saturno
-achievement.uranusBoss.desc=Mata al jefe de la mazmorra de Urano
-achievement.neptuneBoss.desc=Mata al jefe de la mazmorra de Neptuno
-achievement.plutoBoss.desc=Mata al jefe de la mazmorra de Pluto
-achievement.erisBoss.desc=Mata al jefe de la mazmorra de Eris
 
 achievement.venusBoss.desc=Mata al jefe de la mazmorra de Venus y abre el cofre del tesoro
 achievement.jupiterBoss.desc=Mata al jefe de la mazmorra de Júpiter y abre el cofre del tesoro

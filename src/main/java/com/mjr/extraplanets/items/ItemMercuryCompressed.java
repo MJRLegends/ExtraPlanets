@@ -11,10 +11,8 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemMercuryCompressed extends Item
-{
-	public ItemMercuryCompressed(String assetName)
-	{
+public class ItemMercuryCompressed extends Item {
+	public ItemMercuryCompressed(String assetName) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -25,8 +23,7 @@ public class ItemMercuryCompressed extends Item
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack)
-	{
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 }

@@ -17,8 +17,7 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.WorldChunkManagerUranus;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WorldProviderUranus extends WorldProviderSpace implements
-IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderUranus extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -141,13 +140,12 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			if (isDaytime()) {
-				return 110.0F;
+				return -120.0F;
 			}
 			return -115.0F;
-		}
-		else
+		} else
 			return -1.5F;
 	}
 

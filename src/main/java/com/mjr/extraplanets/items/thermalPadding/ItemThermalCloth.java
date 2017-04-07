@@ -16,8 +16,8 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemThermalCloth extends Item {	
-	public static final String[] names = { "tier2ThermalCloth" , "tier3ThermalCloth", "tier4ThermalCloth"};
+public class ItemThermalCloth extends Item {
+	public static final String[] names = { "tier2ThermalCloth", "tier3ThermalCloth", "tier4ThermalCloth" };
 
 	protected IIcon[] icons = new IIcon[ItemThermalCloth.names.length];
 

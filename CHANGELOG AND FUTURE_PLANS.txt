@@ -44,6 +44,36 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.5.7
+*Fixed Oberon, Titania, Iapetus ores furnace recipes
+*Clean up
+*Fixes for recipes
+*Added missing rocket gui's for Oberon, Titania, Iapetus
+*Fixed Thermal Cloth recipes
+
+v1.5.6
+*Cleaned up the version number to a more organized version system
+*Fixes/Updated lang files
+*Fixed the Magma Fluid not burning you when in it
+*Fixed Jupiter Basic Hideout generation
+*Changed the chance of Jupiter Basic Hideout generation
+*Removed debug information that was left in
+*Setup harvest levels for all of the main blocks (Might change)
+*Added Block versions of ingots/gem back to ingots/gems recipes
+*Added Kepler22b planks to crafting table recipe
+*A few config fixes
+*Clean up
+*Fixed Neptune boss dropping the wrong key
+
+v1.0 Pre-5.5
+*Fixed some of the moons being the wrong tier/accepting the wrong tier
+*Fixes for Achievements
+*Changes to planet thermal levels, Fixes #67
+*Changes to moon thermal levels
+*Added Oberon, Titania, Iapetus moons, Updated lang files, a few fixes
+*A few fixes and added Haumea as a unreachable planet
+*Updated Galacticraft API to latest
+
 v1.0 Pre-5.0
 *Added Basic Hideout's to Jupiter
 *Added Blue, Red, Purple, Yellow, Green, Brown Wooden Huts to Kepler22b

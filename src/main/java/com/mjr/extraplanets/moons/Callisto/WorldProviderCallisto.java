@@ -145,13 +145,12 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 
 	@Override
 	public float getThermalLevelModifier() {
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			if (isDaytime()) {
 				return 100.0F;
 			}
-			return -90.0F;
-		}
-		else
+			return 90.0F;
+		} else
 			return -1.5F;
 	}
 

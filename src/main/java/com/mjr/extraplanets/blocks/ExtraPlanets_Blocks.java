@@ -14,16 +14,19 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicGanymede;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIapetus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPhobos;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicRhea;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitania;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicVenus;
@@ -46,16 +49,19 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockDeimos;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockEris;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockEuropa;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockGanymede;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockIapetus;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockIo;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockJupiter;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockKepler22b;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockMercury;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockNeptune;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockOberon;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockPhobos;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockPluto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockRhea;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockSaturn;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockTitan;
+import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockTitania;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockTriton;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockUranus;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockVenus;
@@ -86,12 +92,13 @@ import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.util.RegisterHelper;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Blocks {
-	
-	//Planet Blocks
+
+	// Planet Blocks
 	public static Block mercuryBlocks;
 	public static Block ceresBlocks;
 	public static Block erisBlocks;
@@ -109,7 +116,7 @@ public class ExtraPlanets_Blocks {
 	public static Block kepler22bPurpleGrass;
 	public static Block kepler22bRedGrass;
 	public static Block kepler22bYellowGrass;
-	
+
 	public static Block callistoBlocks;
 	public static Block deimosBlocks;
 	public static Block europaBlocks;
@@ -119,6 +126,9 @@ public class ExtraPlanets_Blocks {
 	public static Block ganymedeBlocks;
 	public static Block rheaBlocks;
 	public static Block titanBlocks;
+	public static Block oberonBlocks;
+	public static Block titaniaBlocks;
+	public static Block iapetusBlocks;
 
 	// Gravels
 	public static Block mercuryGravel;
@@ -138,6 +148,9 @@ public class ExtraPlanets_Blocks {
 	public static Block callistoGravel;
 	public static Block rheaGravel;
 	public static Block titanGravel;
+	public static Block oberonGravel;
+	public static Block titaniaGravel;
+	public static Block iapetusGravel;
 
 	// Other Special Blocks
 	public static Block nuclearBomb;
@@ -155,7 +168,7 @@ public class ExtraPlanets_Blocks {
 	public static Block treasureChestTier9;
 	public static Block treasureChestTier10;
 
-	//Dungeon Bricks
+	// Dungeon Bricks
 	public static Block veunsDungeonBrick;
 	public static Block jupiterDungeonBrick;
 	public static Block saturnDungeonBrick;
@@ -164,7 +177,7 @@ public class ExtraPlanets_Blocks {
 	public static Block plutoDungeonBrick;
 	public static Block erisDungeonBrick;
 
-	//Dungeon Spawners
+	// Dungeon Spawners
 	public static Block venusSpawner;
 	public static Block jupiterSpawner;
 	public static Block saturnSpawner;
@@ -172,21 +185,21 @@ public class ExtraPlanets_Blocks {
 	public static Block neptuneSpawner;
 	public static Block plutoSpawner;
 	public static Block erisSpawner;
-	
-	//Logs
+
+	// Logs
 	public static Block kepler22bMapleLog;
 	public static Block kepler22bMapleLog2;
 
-	//Saplings
+	// Saplings
 	public static Block kepler22bMapleSapling;
-	
-	//Leaves
-	public static Block kepler22bMapleLeaf;	
-	
-	//Flowers
+
+	// Leaves
+	public static Block kepler22bMapleLeaf;
+
+	// Flowers
 	public static Block kepler22bGrassFlowers;
-	
-	//Planks
+
+	// Planks
 	public static Block kepler22bPlanks;
 
 	public static void init() {
@@ -196,9 +209,10 @@ public class ExtraPlanets_Blocks {
 		initializeSpawnerBlocks();
 		registerBlocks();
 		registerTileEntitys();
-		if(Config.oreDictionary)
+		setHarvestLevels();
+		if (Config.oreDictionary)
 			OreDictionaryRegister();
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			initializeTreeBlocks();
 			registerTreeBlocks();
 		}
@@ -279,12 +293,23 @@ public class ExtraPlanets_Blocks {
 			titanBlocks = new BlockBasicTitan("titan");
 			titanGravel = new BlockCustomGravel("titanGravel");
 		}
-
+		if (Config.oberon) {
+			oberonBlocks = new BlockBasicOberon("oberon");
+			oberonGravel = new BlockCustomGravel("oberonGravel");
+		}
+		if (Config.titania) {
+			titaniaBlocks = new BlockBasicTitania("titania");
+			titaniaGravel = new BlockCustomGravel("titaniaGravel");
+		}
+		if (Config.iapetus) {
+			iapetusBlocks = new BlockBasicIapetus("iapetus");
+			iapetusGravel = new BlockCustomGravel("iapetusGravel");
+		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
 			kepler22bBlueGrass = new BlockBasicGrass("kepler22b_blue", "kepler22b");
@@ -301,7 +326,8 @@ public class ExtraPlanets_Blocks {
 			veunsDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 		}
 		if (Config.jupiter) {
-			jupiterDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("jupiterDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			jupiterDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("jupiterDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterDungeonBrick").setHardness(4.0F).setResistance(40.0F)
+					.setStepSound(Block.soundTypeMetal);
 			jupiterDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.saturn) {
@@ -313,7 +339,8 @@ public class ExtraPlanets_Blocks {
 			uranusDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.neptune) {
-			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("neptuneDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("neptuneDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneDungeonBrick").setHardness(4.0F).setResistance(40.0F)
+					.setStepSound(Block.soundTypeMetal);
 			neptuneDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.pluto) {
@@ -334,19 +361,19 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier5 = new T5TreasureChest("treasureChestT5");
 		}
 		if (Config.saturn) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier6 = new T6TreasureChest("treasureChestT4Saturn");
 			else
 				treasureChestTier6 = new T6TreasureChest("treasureChestT6");
 		}
 		if (Config.uranus) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier7 = new T7TreasureChest("treasureChestT4Uranus");
 			else
 				treasureChestTier7 = new T7TreasureChest("treasureChestT7");
 		}
 		if (Config.neptune) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier8 = new T8TreasureChest("treasureChestT5Neptune");
 			else
 				treasureChestTier8 = new T8TreasureChest("treasureChestT8");
@@ -355,7 +382,7 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
 		}
 		if (Config.eris) {
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				treasureChestTier10 = new T10TreasureChest("treasureChestT6Eris");
 			else
 				treasureChestTier10 = new T10TreasureChest("treasureChestT10");
@@ -385,7 +412,7 @@ public class ExtraPlanets_Blocks {
 			erisSpawner = new DungeonSpawnerEris();
 		}
 	}
-	
+
 	private static void initializeTreeBlocks() {
 		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22bMapleLogs");
 		kepler22bMapleLog2 = new BlockKepler22bMapleTreeLog2("kepler22bMapleLogs2");
@@ -456,7 +483,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName());
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
-		if(Config.kepler22b && Config.keplerSolarSystems){
+		if (Config.kepler22b && Config.keplerSolarSystems) {
 			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(kepler22bGrass, "kepler22bGrass");
 			GameRegistry.registerBlock(kepler22bBlueGrass, "kepler22bBlueGrass");
@@ -502,6 +529,18 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(titanBlocks, ItemBlockTitan.class, titanBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(titanGravel, "titanGravel");
 		}
+		if (Config.oberon) {
+			GameRegistry.registerBlock(oberonBlocks, ItemBlockOberon.class, oberonBlocks.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(oberonGravel, oberonGravel.getUnlocalizedName().substring(5));
+		}
+		if (Config.titania) {
+			GameRegistry.registerBlock(titaniaBlocks, ItemBlockTitania.class, titaniaBlocks.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(titaniaGravel, titaniaGravel.getUnlocalizedName().substring(5));
+		}
+		if (Config.iapetus) {
+			GameRegistry.registerBlock(iapetusBlocks, ItemBlockIapetus.class, iapetusBlocks.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(iapetusGravel, iapetusGravel.getUnlocalizedName().substring(5));
+		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");
 		if (Config.ceres && Config.nuclearBomb)
@@ -519,24 +558,24 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.saturn) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
-			
-			if(Config.morePlanetsCompatibility)
+
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 4 Saturn Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
 		if (Config.uranus) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
-			
-			if(Config.morePlanetsCompatibility)
+
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 4 Uranus Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
 		if (Config.neptune) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
-			
-			if(Config.morePlanetsCompatibility)
+
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 5 Neptune Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
@@ -547,10 +586,218 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.eris) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
-			if(Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibility)
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 6 Eris Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
+		}
+	}
+
+	private static void setHarvestLevels() {
+		if (Config.mercury) {
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 6); // Mercury Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 7); // Mercury Block
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 8); // Stone Bricks
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 10); // Carbon Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 11); // Carbon Block
+		}
+		if (Config.venus) {
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 6); // Carbon Ore
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 7); // Carbon Block
+			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 8); // Stone Bricks
+
+		}
+		if (Config.jupiter) {
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 6); // Palladium Ore
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 7); // Palladium Block
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 8); // Stone Bricks
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 10); // Red Gem Ore
+			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 11); // Red Gem Block
+		}
+		if (Config.saturn) {
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 6); // Magnesium Ore
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 7); // Magnesium Block
+			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 8); // Stone Bricks
+		}
+		if (Config.uranus) {
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 2, 3); // Crystal Ore
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 4); // Crystal Block
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 5); // Stone Bricks
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 2, 7); // White Gem Ore
+			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 8); // White Gem Block
+		}
+		if (Config.neptune) {
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 6); // Zinc Ore
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 7); // Zinc Block
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 8); // Stone Bricks
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 10); // Blue Gem Ore
+			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 11); // Blue Gem Block
+		}
+		if (Config.pluto) {
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 6); // Tungsten Ore
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 7); // Tungsten Block
+			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 8); // Stone Bricks
+		}
+		if (Config.eris) {
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 6); // Dark Iron Ore
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 7); // Dark Iron Block
+			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 8); // Stone Bricks
+		}
+		if (Config.kepler22b) {
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 0, 0); // Dirt
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 1); // Stone
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 2); // Iron Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 3); // Tin Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 4); // Copper Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 5); // Dense Coal Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 6); // Blue Diamond Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 7); // Red Diamond Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 8); // Purple Diamond Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 9); // Yellow Diamond Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 10); // Green Diamond Ore
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 11); // Stone Bricks
+			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 12); // Cobblestone
+		}
+		if (Config.callisto) {
+			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.deimos) {
+			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.europa) {
+			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.ganymede) {
+			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.io) {
+			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.phobos) {
+			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.rhea) {
+			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.titan) {
+			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.triton) {
+			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.iapetus) {
+			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.oberon) {
+			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 2, 5); // Copper Ore
+		}
+		if (Config.titania) {
+			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 2, 5); // Copper Ore
 		}
 	}
 
@@ -601,7 +848,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(neptuneBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(neptuneBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(neptuneBlocks, 1, 3));
-			OreDictionary.registerOre("oreZinc", new ItemStack(neptuneBlocks, 1, 6));	
+			OreDictionary.registerOre("oreZinc", new ItemStack(neptuneBlocks, 1, 6));
 			OreDictionary.registerOre("oreBlueGem", new ItemStack(neptuneBlocks, 1, 9));
 			OreDictionary.registerOre("blockZinc", new ItemStack(neptuneBlocks, 1, 7));
 			OreDictionary.registerOre("blockBlueGem", new ItemStack(neptuneBlocks, 1, 10));
@@ -663,6 +910,21 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
 		}
+		if (Config.oberon) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(oberonBlocks, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(oberonBlocks, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(oberonBlocks, 1, 3));
+		}
+		if (Config.iapetus) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(iapetusBlocks, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(iapetusBlocks, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(iapetusBlocks, 1, 3));
+		}
+		if (Config.titania) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(titaniaBlocks, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(titaniaBlocks, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(titaniaBlocks, 1, 3));
+		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
 			OreDictionary.registerOre("oreIron", new ItemStack(kepler22bBlocks, 1, 2));
@@ -677,7 +939,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("cobblestone", new ItemStack(kepler22bBlocks, 1, 16));
 		}
 	}
-	
+
 	private static void registerTreeBlocks() {
 		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName());
 		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName());

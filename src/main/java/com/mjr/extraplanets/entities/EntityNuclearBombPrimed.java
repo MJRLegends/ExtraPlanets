@@ -38,8 +38,7 @@ public class EntityNuclearBombPrimed extends Entity {
 	}
 
 	/**
-	 * returns if this entity triggers Block.onEntityWalking on the blocks they
-	 * walk on. used for spiders and wolves to prevent them from trampling crops
+	 * returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
 	 */
 	@Override
 	protected boolean canTriggerWalking() {
@@ -47,8 +46,7 @@ public class EntityNuclearBombPrimed extends Entity {
 	}
 
 	/**
-	 * Returns true if other Entities should be prevented from moving through
-	 * this Entity.
+	 * Returns true if other Entities should be prevented from moving through this Entity.
 	 */
 	@Override
 	public boolean canBeCollidedWith() {
@@ -60,7 +58,6 @@ public class EntityNuclearBombPrimed extends Entity {
 	 */
 	@Override
 	public void onUpdate() {
-		System.out.println("here2");
 		this.prevPosX = this.posX;
 		this.prevPosY = this.posY;
 		this.prevPosZ = this.posZ;

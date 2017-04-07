@@ -80,7 +80,7 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 		}
 		return f2 * f2 * 0.7F;
 	}
-	
+
 	@SideOnly(Side.CLIENT)
 	public float getCustomStarBrightness(float par1) {
 		float f1 = this.worldObj.getCelestialAngle(par1);

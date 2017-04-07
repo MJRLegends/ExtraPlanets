@@ -10,8 +10,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
-import com.mjr.extraplanets.ExtraPlanets_Achievements;
-
 public class TeleportTypeUranus implements ITeleportType {
 
 	@Override
@@ -21,8 +19,7 @@ public class TeleportTypeUranus implements ITeleportType {
 
 	@Override
 	public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player) {
-		if (player != null)
-		{
+		if (player != null) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
 			return new Vector3(stats.coordsTeleportedFromX, 250.0, stats.coordsTeleportedFromZ);
 		}
@@ -50,7 +47,7 @@ public class TeleportTypeUranus implements ITeleportType {
 	@Override
 	public void setupAdventureSpawn(EntityPlayerMP player) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

@@ -13,12 +13,10 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class Tier7NoseCone extends Item
-{
+public class Tier7NoseCone extends Item {
 	public IIcon[] icons;
 
-	public Tier7NoseCone(String assetName)
-	{
+	public Tier7NoseCone(String assetName) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -29,39 +27,33 @@ public class Tier7NoseCone extends Item
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public boolean requiresMultipleRenderPasses()
-	{
+	public boolean requiresMultipleRenderPasses() {
 		return true;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIconFromDamageForRenderPass(int par1, int par2)
-	{
+	public IIcon getIconFromDamageForRenderPass(int par1, int par2) {
 		return par2 == 0 ? this.icons[0] : this.icons[1];
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack)
-	{
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister iconRegister)
-	{
+	public void registerIcons(IIconRegister iconRegister) {
 		this.icons = new IIcon[2];
 		this.icons[0] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier7NoseCone");
 		this.icons[1] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier7NoseCone.0");
 	}
 
 	@Override
-	public IIcon getIconFromDamage(int damage)
-	{
-		if (this.icons.length > damage)
-		{
+	public IIcon getIconFromDamage(int damage) {
+		if (this.icons.length > damage) {
 			return this.icons[damage];
 		}
 
@@ -69,8 +61,7 @@ public class Tier7NoseCone extends Item
 	}
 
 	@Override
-	public int getMetadata(int par1)
-	{
+	public int getMetadata(int par1) {
 		return par1;
 	}
 }

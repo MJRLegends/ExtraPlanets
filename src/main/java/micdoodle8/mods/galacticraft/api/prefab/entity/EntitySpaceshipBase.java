@@ -17,6 +17,7 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityTelemetry;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.DamageSourceGC;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.command.IEntitySelector;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
@@ -212,7 +213,7 @@ public abstract class EntitySpaceshipBase extends Entity implements IPacketRecei
         	this.addToTelemetry = false;
 			for (BlockVec3Dim vec : new ArrayList<BlockVec3Dim>(this.telemetryList))
 			{
-				TileEntity t1 = vec.getTileEntity();
+				TileEntity t1 = vec.getTileEntityNoLoad();
 				if (t1 instanceof TileEntityTelemetry && !t1.isInvalid())
 				{
 					if (((TileEntityTelemetry)t1).linkedEntity == this)
@@ -262,6 +263,11 @@ public abstract class EntitySpaceshipBase extends Entity implements IPacketRecei
 	        	}
 	        	else
 	        		this.kill();
+	        }
+
+	        if (this.timeSinceLaunch > 50 && this.onGround)
+	        {
+	            this.failRocket();
 	        }
         }
         
@@ -321,11 +327,6 @@ public abstract class EntitySpaceshipBase extends Entity implements IPacketRecei
 
         this.motionX = -(50 * Math.cos(this.rotationYaw * Math.PI / 180.0D) * Math.sin(this.rotationPitch * 0.01 * Math.PI / 180.0D));
         this.motionZ = -(50 * Math.sin(this.rotationYaw * Math.PI / 180.0D) * Math.sin(this.rotationPitch * 0.01 * Math.PI / 180.0D));
-
-        if (this.timeSinceLaunch > 50 && this.onGround)
-        {
-            this.failRocket();
-        }
 
         if (this.launchPhase != EnumLaunchPhase.LAUNCHED.ordinal())
         {
@@ -631,4 +632,11 @@ public abstract class EntitySpaceshipBase extends Entity implements IPacketRecei
 		GL11.glTranslatef(0, this.height / 4, 0);
     }
 
+    public static IEntitySelector rocketSelector = new IEntitySelector()
+    {
+        public boolean isEntityApplicable(Entity e)
+        {
+            return e instanceof EntitySpaceshipBase;
+        }
+    };
 }

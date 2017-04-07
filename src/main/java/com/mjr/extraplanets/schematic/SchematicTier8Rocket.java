@@ -14,36 +14,30 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class SchematicTier8Rocket extends SchematicPage
-{
+public class SchematicTier8Rocket extends SchematicPage {
 	@Override
-	public int getPageID()
-	{
+	public int getPageID() {
 		return Config.schematicTier8PageID;
 	}
 
 	@Override
-	public int getGuiID()
-	{
+	public int getGuiID() {
 		return Config.schematicTier8GUIID;
 	}
 
 	@Override
-	public ItemStack getRequiredItem()
-	{
+	public ItemStack getRequiredItem() {
 		return new ItemStack(ExtraPlanets_Items.schematicTier8, 1, 0);
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z)
-	{
+	public GuiScreen getResultScreen(EntityPlayer player, int x, int y, int z) {
 		return new GuiSchematicTier8Rocket(player.inventory, x, y, z);
 	}
 
 	@Override
-	public Container getResultContainer(EntityPlayer player, int x, int y, int z)
-	{
+	public Container getResultContainer(EntityPlayer player, int x, int y, int z) {
 		return new ContainerSchematicTier8Rocket(player.inventory, x, y, z);
 	}
 }

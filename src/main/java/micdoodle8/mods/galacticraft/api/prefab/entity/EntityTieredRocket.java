@@ -8,14 +8,12 @@ import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IWorldTransferCallback;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
-import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityFuelLoader;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
@@ -25,7 +23,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.WorldServer;
@@ -247,23 +244,6 @@ public abstract class EntityTieredRocket extends EntityAutoRocket implements IRo
             }
         }
 
-        if (!this.worldObj.isRemote && this.getLandingPad() != null && this.getLandingPad().getConnectedTiles() != null)
-        {
-            for (ILandingPadAttachable tile : this.getLandingPad().getConnectedTiles())
-            {
-                if (this.worldObj.getTileEntity(((TileEntity) tile).xCoord, ((TileEntity) tile).yCoord, ((TileEntity) tile).zCoord) != null && this.worldObj.getTileEntity(((TileEntity) tile).xCoord, ((TileEntity) tile).yCoord, ((TileEntity) tile).zCoord) instanceof TileEntityFuelLoader)
-                {
-                    if (tile instanceof TileEntityFuelLoader && ((TileEntityFuelLoader) tile).getEnergyStoredGC() > 0)
-                    {
-                        if (this.launchPhase == EnumLaunchPhase.LAUNCHED.ordinal())
-                        {
-                            this.setPad(null);
-                        }
-                    }
-                }
-            }
-        }
-
         if (this.rumble > 0)
         {
             this.rumble--;
@@ -275,8 +255,9 @@ public abstract class EntityTieredRocket extends EntityAutoRocket implements IRo
 
         if (this.riddenByEntity != null)
         {
-            this.riddenByEntity.posX += this.rumble / (37F - 5F * this.getRocketTier());
-            this.riddenByEntity.posZ += this.rumble / (37F - 5F * this.getRocketTier());
+            final double rumbleAmount = this.rumble / (double) (37 - 5 * Math.max(this.getRocketTier(), 5));
+            this.riddenByEntity.posX += rumbleAmount;
+            this.riddenByEntity.posZ += rumbleAmount;
         }
 
         if (this.launchPhase == EnumLaunchPhase.IGNITED.ordinal() || this.launchPhase == EnumLaunchPhase.LAUNCHED.ordinal())
@@ -346,7 +327,7 @@ public abstract class EntityTieredRocket extends EntityAutoRocket implements IRo
                     WorldProvider targetDim = WorldUtil.getProviderForDimensionServer(this.targetDimension);               
                     if (targetDim != null && targetDim.worldObj instanceof WorldServer)
                     {
-                    	boolean dimensionAllowed = this.targetDimension == 0;
+                    	boolean dimensionAllowed = this.targetDimension == ConfigManagerCore.idDimensionOverworld;
 
                     	if (targetDim instanceof IGalacticraftWorldProvider)
                     	{
@@ -371,24 +352,22 @@ public abstract class EntityTieredRocket extends EntityAutoRocket implements IRo
                     		if (this.riddenByEntity != null)
                     		{
                     			WorldUtil.transferEntityToDimension(this.riddenByEntity, this.targetDimension, (WorldServer) targetDim.worldObj, false, this);
-                                        //Now destroy the rocket entity, the rider is switching dimensions
-                                        this.setDead();
                     		}
-                                else {
-                                    Entity e = WorldUtil.transferEntityToDimension(this, this.targetDimension, (WorldServer)targetDim.worldObj, false, null);
-                                    if(e instanceof EntityAutoRocket) {
-                                        e.setPosition(this.targetVec.x + 0.5F, this.targetVec.y + 800, this.targetVec.z + 0.5f);
-                                        ((EntityAutoRocket)e).landing = true;
-                                        ((EntityAutoRocket)e).setWaitForPlayer(false);
-                                        if(e != this)
-                                            this.setDead();
-                                    }
-                                    else {
-                                        GCLog.info("Error: failed to recreate the unmanned rocket in landing mode on target planet.");
-                                        e.setDead();
-                                        this.setDead();
-                                    }
-                                }
+                    		else
+                    		{
+                    		    Entity e = WorldUtil.transferEntityToDimension(this, this.targetDimension, (WorldServer)targetDim.worldObj, false, null);
+                    		    if(e instanceof EntityAutoRocket)
+                    		    {
+                    		        e.setPosition(this.targetVec.x + 0.5F, this.targetVec.y + 800, this.targetVec.z + 0.5f);
+                    		        ((EntityAutoRocket)e).landing = true;
+                    		        ((EntityAutoRocket)e).setWaitForPlayer(false);
+                    		    }
+                    		    else {
+                    		        GCLog.info("Error: failed to recreate the unmanned rocket in landing mode on target planet.");
+                    		        e.setDead();
+                    		        this.setDead();
+                    		    }
+                    		}
                     		return;
                     	}
                     }
@@ -473,7 +452,7 @@ public abstract class EntityTieredRocket extends EntityAutoRocket implements IRo
 
         if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP)
         {
-            if (!this.worldObj.isRemote)
+            if (!this.worldObj.isRemote && this.riddenByEntity == par1EntityPlayer)
             {
                 GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_RESET_THIRD_PERSON, new Object[] { }), (EntityPlayerMP) par1EntityPlayer);
                 GCPlayerStats stats = GCPlayerStats.get((EntityPlayerMP) par1EntityPlayer);

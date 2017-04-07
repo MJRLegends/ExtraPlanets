@@ -17,8 +17,7 @@ import com.mjr.extraplanets.planets.Venus.worldgen.WorldChunkManagerVenus;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WorldProviderVenus extends WorldProviderSpace implements
-IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderVenus extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -68,13 +67,11 @@ IGalacticraftWorldProvider, ISolarLevel {
 		float f1 = this.worldObj.getCelestialAngle(par1);
 		float f2 = 1.0F - (MathHelper.cos(f1 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
 
-		if (f2 < 0.0F)
-		{
+		if (f2 < 0.0F) {
 			f2 = 0.0F;
 		}
 
-		if (f2 > 1.0F)
-		{
+		if (f2 > 1.0F) {
 			f2 = 1.0F;
 		}
 
@@ -143,13 +140,12 @@ IGalacticraftWorldProvider, ISolarLevel {
 
 	@Override
 	public float getThermalLevelModifier() {
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			if (isDaytime()) {
-				return 40.0F;
+				return 50.0F;
 			}
-			return -35.0F;
-		}
-		else
+			return 45.0F;
+		} else
 			return -1.5F;
 	}
 

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen;
+package com.mjr.extraplanets.moons.Titania.worldgen;
 
 import java.util.Random;
 
@@ -10,16 +10,11 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-public class MapGenCaveKepler22b extends MapGenBaseMeta
+public class MapGenCaveTitania extends MapGenBaseMeta
 {
-	private Block grassblock1 = ExtraPlanets_Blocks.kepler22bGrass;
-	private Block grassblock2 = ExtraPlanets_Blocks.kepler22bBlueGrass;
-	private Block grassblock3 = ExtraPlanets_Blocks.kepler22bPurpleGrass;
-	private Block grassblock4 = ExtraPlanets_Blocks.kepler22bRedGrass;
-	private Block grassblock5 = ExtraPlanets_Blocks.kepler22bYellowGrass;
-
-	private Block dirtblock = ExtraPlanets_Blocks.kepler22bBlocks;
-	private Block stoneblock = ExtraPlanets_Blocks.kepler22bBlocks;
+	private Block grassblock = ExtraPlanets_Blocks.titaniaBlocks;
+	private Block dirtblock = ExtraPlanets_Blocks.titaniaBlocks;
+	private Block stoneblock = ExtraPlanets_Blocks.titaniaBlocks;
 
 	public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
 	protected void generateLargeCaveNode(long par1, int par3, int par4, Block[] blockIdArray, byte[] metaArray, double par6, double par8, double par10)
@@ -178,10 +173,10 @@ public class MapGenCaveKepler22b extends MapGenBaseMeta
 
 										if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
 										{
-											if (((blockIdArray[coords] == dirtblock) && (metaArray[coords] == 0)) || ((blockIdArray[coords] == stoneblock) && (metaArray[coords] == 1))) {
+											if (((blockIdArray[coords] == dirtblock) && (metaArray[coords] == 1)) || ((blockIdArray[coords] == stoneblock) && (metaArray[coords] == 2))) {
 												blockIdArray[coords] = Blocks.air;
 											}
-											else if ((blockIdArray[coords] == grassblock1) || (blockIdArray[coords] == grassblock2) || (blockIdArray[coords] == grassblock3) || (blockIdArray[coords] == grassblock4) || (blockIdArray[coords] == grassblock5) && (metaArray[coords] == 0) && (random.nextInt(BREAK_THROUGH_CHANCE) == 0)) {
+											else if ((blockIdArray[coords] == grassblock) && (metaArray[coords] == 0) && (random.nextInt(BREAK_THROUGH_CHANCE) == 0)) {
 												blockIdArray[coords] = Blocks.air;
 											}
 										}

@@ -23,9 +23,8 @@ import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
 import cpw.mods.fml.relauncher.Side;
 
-public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler
-{
-	private final int tankCapacity = 24000*2;
+public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
+	private final int tankCapacity = 24000 * 2;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public FluidTank oilTank = new FluidTank(this.tankCapacity);
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -37,57 +36,45 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
 
-	public TileEntityAdvancedRefinery()
-	{
+	public TileEntityAdvancedRefinery() {
 		this.storage.setMaxExtract(ConfigManagerCore.hardMode ? 90 : 60);
 	}
 
 	@Override
-	public void updateEntity()
-	{
+	public void updateEntity() {
 		super.updateEntity();
 
-		if (!this.worldObj.isRemote)
-		{
-			if (this.containingItems[1] != null)
-			{
-				if (this.containingItems[1].getItem() instanceof ItemCanisterGeneric)
-				{
-					if (this.containingItems[1].getItem() == GCItems.oilCanister)
-					{
+		if (!this.worldObj.isRemote) {
+			if (this.containingItems[1] != null) {
+				if (this.containingItems[1].getItem() instanceof ItemCanisterGeneric) {
+					if (this.containingItems[1].getItem() == GCItems.oilCanister) {
 						int originalDamage = this.containingItems[1].getItemDamage();
 						int used = this.oilTank.fill(new FluidStack(GalacticraftCore.fluidOil, ItemCanisterGeneric.EMPTY - originalDamage), true);
 						this.containingItems[1] = new ItemStack(GCItems.oilCanister, 1, originalDamage + used);
 					}
-				}
-				else
-				{
+				} else {
 					FluidStack liquid = FluidContainerRegistry.getFluidForFilledItem(this.containingItems[1]);
 
-					if (liquid != null)
-					{
+					if (liquid != null) {
 						boolean isOil = false;
-						if (FluidRegistry.getFluidName(liquid).equalsIgnoreCase("oil")) isOil = true;
-						if (FluidRegistry.getFluidName(liquid).equalsIgnoreCase("oilgc")) isOil = true;
+						if (FluidRegistry.getFluidName(liquid).equalsIgnoreCase("oil"))
+							isOil = true;
+						if (FluidRegistry.getFluidName(liquid).equalsIgnoreCase("oilgc"))
+							isOil = true;
 
-						if (isOil)
-						{
-							if (this.oilTank.getFluid() == null || this.oilTank.getFluid().amount + liquid.amount <= this.oilTank.getCapacity())
-							{
+						if (isOil) {
+							if (this.oilTank.getFluid() == null || this.oilTank.getFluid().amount + liquid.amount <= this.oilTank.getCapacity()) {
 								this.oilTank.fill(new FluidStack(GalacticraftCore.fluidOil, liquid.amount), true);
 
-								if (FluidContainerRegistry.isBucket(this.containingItems[1]) && FluidContainerRegistry.isFilledContainer(this.containingItems[1]))
-								{
+								if (FluidContainerRegistry.isBucket(this.containingItems[1]) && FluidContainerRegistry.isFilledContainer(this.containingItems[1])) {
 									final int amount = this.containingItems[1].stackSize;
-									if (amount > 1) this.oilTank.fill(new FluidStack(GalacticraftCore.fluidOil, (amount - 1) * FluidContainerRegistry.BUCKET_VOLUME), true);
+									if (amount > 1)
+										this.oilTank.fill(new FluidStack(GalacticraftCore.fluidOil, (amount - 1) * FluidContainerRegistry.BUCKET_VOLUME), true);
 									this.containingItems[1] = new ItemStack(Items.bucket, amount);
-								}
-								else
-								{
+								} else {
 									this.containingItems[1].stackSize--;
 
-									if (this.containingItems[1].stackSize == 0)
-									{
+									if (this.containingItems[1].stackSize == 0) {
 										this.containingItems[1] = null;
 									}
 								}
@@ -99,59 +86,44 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 			checkFluidTankTransfer(2, this.fuelTank);
 
-			if (this.canProcess() && this.hasEnoughEnergyToRun)
-			{
-				if (this.processTicks == 0)
-				{
+			if (this.canProcess() && this.hasEnoughEnergyToRun) {
+				if (this.processTicks == 0) {
 					this.processTicks = TileEntityAdvancedRefinery.PROCESS_TIME_REQUIRED;
-				}
-				else
-				{
-					if (--this.processTicks <= 0)
-					{
+				} else {
+					if (--this.processTicks <= 0) {
 						this.smeltItem();
 						this.processTicks = this.canProcess() ? TileEntityAdvancedRefinery.PROCESS_TIME_REQUIRED : 0;
 					}
 				}
-			}
-			else
-			{
+			} else {
 				this.processTicks = 0;
 			}
 		}
 	}
 
-	private void checkFluidTankTransfer(int slot, FluidTank tank)
-	{
-		if (FluidUtil.isValidContainer(this.containingItems[slot]))
-		{
+	private void checkFluidTankTransfer(int slot, FluidTank tank) {
+		if (FluidUtil.isValidContainer(this.containingItems[slot])) {
 			final FluidStack liquid = tank.getFluid();
 
-			if (liquid != null && liquid.amount > 0)
-			{
+			if (liquid != null && liquid.amount > 0) {
 				String liquidname = liquid.getFluid().getName();
-				if (liquidname.equals("fuel"))
-				{
+				if (liquidname.equals("fuel")) {
 					FluidUtil.tryFillContainer(tank, liquid, this.containingItems, slot, GCItems.fuelCanister);
 				}
 			}
 		}
 	}
 
-	public int getScaledOilLevel(int i)
-	{
+	public int getScaledOilLevel(int i) {
 		return this.oilTank.getFluid() != null ? this.oilTank.getFluid().amount * i / this.oilTank.getCapacity() : 0;
 	}
 
-	public int getScaledFuelLevel(int i)
-	{
+	public int getScaledFuelLevel(int i) {
 		return this.fuelTank.getFluid() != null ? this.fuelTank.getFluid().amount * i / this.fuelTank.getCapacity() : 0;
 	}
 
-	public boolean canProcess()
-	{
-		if (this.oilTank.getFluid() == null || this.oilTank.getFluid().amount <= 0)
-		{
+	public boolean canProcess() {
+		if (this.oilTank.getFluid() == null || this.oilTank.getFluid().amount <= 0) {
 			return false;
 		}
 
@@ -159,90 +131,74 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 	}
 
-	public void smeltItem()
-	{
-		if (this.canProcess())
-		{
+	public void smeltItem() {
+		if (this.canProcess()) {
 			final int oilAmount = this.oilTank.getFluid().amount;
 			final int fuelSpace = this.fuelTank.getCapacity() - (this.fuelTank.getFluid() == null ? 0 : this.fuelTank.getFluid().amount);
 
 			final int amountToDrain = Math.min(Math.min(oilAmount, fuelSpace), TileEntityAdvancedRefinery.OUTPUT_PER_SECOND);
 
 			this.oilTank.drain(amountToDrain, true);
-			this.fuelTank.fill(FluidRegistry.getFluidStack("fuel", amountToDrain+1), true);
+			this.fuelTank.fill(FluidRegistry.getFluidStack("fuel", amountToDrain + 1), true);
 		}
 	}
 
 	@Override
-	public void readFromNBT(NBTTagCompound nbt)
-	{
+	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
 		this.containingItems = this.readStandardItemsFromNBT(nbt);
 
-		if (nbt.hasKey("oilTank"))
-		{
+		if (nbt.hasKey("oilTank")) {
 			this.oilTank.readFromNBT(nbt.getCompoundTag("oilTank"));
 		}
 
-		if (nbt.hasKey("fuelTank"))
-		{
+		if (nbt.hasKey("fuelTank")) {
 			this.fuelTank.readFromNBT(nbt.getCompoundTag("fuelTank"));
 		}
 	}
 
 	@Override
-	public void writeToNBT(NBTTagCompound nbt)
-	{
+	public void writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt);
 
-		if (this.oilTank.getFluid() != null)
-		{
+		if (this.oilTank.getFluid() != null) {
 			nbt.setTag("oilTank", this.oilTank.writeToNBT(new NBTTagCompound()));
 		}
 
-		if (this.fuelTank.getFluid() != null)
-		{
+		if (this.fuelTank.getFluid() != null) {
 			nbt.setTag("fuelTank", this.fuelTank.writeToNBT(new NBTTagCompound()));
 		}
 	}
 
-
 	@Override
-	protected ItemStack[] getContainingItems()
-	{
+	protected ItemStack[] getContainingItems() {
 		return this.containingItems;
 	}
 
 	@Override
-	public String getInventoryName()
-	{
+	public String getInventoryName() {
 		return GCCoreUtil.translate("container.refinery.name");
 	}
 
 	@Override
-	public boolean hasCustomInventoryName()
-	{
+	public boolean hasCustomInventoryName() {
 		return true;
 	}
 
 	// ISidedInventory Implementation:
 
 	@Override
-	public int[] getAccessibleSlotsFromSide(int side)
-	{
+	public int[] getAccessibleSlotsFromSide(int side) {
 		return new int[] { 0, 1, 2 };
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, int side)
-	{
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack))
-		{
-			switch (slotID)
-			{
+	public boolean canInsertItem(int slotID, ItemStack itemstack, int side) {
+		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+			switch (slotID) {
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
@@ -257,12 +213,9 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, int side)
-	{
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack))
-		{
-			switch (slotID)
-			{
+	public boolean canExtractItem(int slotID, ItemStack itemstack, int side) {
+		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+			switch (slotID) {
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 1:
@@ -277,10 +230,8 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack)
-	{
-		switch (slotID)
-		{
+	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+		switch (slotID) {
 		case 0:
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
@@ -292,22 +243,18 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public boolean shouldUseEnergy()
-	{
+	public boolean shouldUseEnergy() {
 		return this.canProcess();
 	}
 
 	@Override
-	public ForgeDirection getElectricInputDirection()
-	{
+	public ForgeDirection getElectricInputDirection() {
 		return ForgeDirection.UP;
 	}
 
 	@Override
-	public boolean canDrain(ForgeDirection from, Fluid fluid)
-	{
-		if (from.equals(ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1)))
-		{
+	public boolean canDrain(ForgeDirection from, Fluid fluid) {
+		if (from.equals(ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1))) {
 			return this.fuelTank.getFluid() != null && this.fuelTank.getFluidAmount() > 0;
 		}
 
@@ -315,10 +262,8 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain)
-	{
-		if (from.equals(ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1)))
-		{
+	public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain) {
+		if (from.equals(ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1))) {
 			return this.fuelTank.drain(resource.amount, doDrain);
 		}
 
@@ -326,10 +271,8 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain)
-	{
-		if (from.equals(ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1)))
-		{
+	public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain) {
+		if (from.equals(ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1))) {
 			return this.drain(from, new FluidStack(GalacticraftCore.fluidFuel, maxDrain), doDrain);
 		}
 
@@ -337,10 +280,8 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public boolean canFill(ForgeDirection from, Fluid fluid)
-	{
-		if (from.equals(ForgeDirection.getOrientation(this.getBlockMetadata() + 2)))
-		{
+	public boolean canFill(ForgeDirection from, Fluid fluid) {
+		if (from.equals(ForgeDirection.getOrientation(this.getBlockMetadata() + 2))) {
 			return this.oilTank.getFluid() == null || this.oilTank.getFluidAmount() < this.oilTank.getCapacity();
 		}
 
@@ -348,38 +289,29 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public int fill(ForgeDirection from, FluidStack resource, boolean doFill)
-	{
+	public int fill(ForgeDirection from, FluidStack resource, boolean doFill) {
 		int used = 0;
 
-		if (from.equals(ForgeDirection.getOrientation(this.getBlockMetadata() + 2)))
-		{
+		if (from.equals(ForgeDirection.getOrientation(this.getBlockMetadata() + 2))) {
 			final String liquidName = FluidRegistry.getFluidName(resource);
 
-			if (liquidName != null && liquidName.equalsIgnoreCase("oil"))
-			{
+			if (liquidName != null && liquidName.equalsIgnoreCase("oil")) {
 				used = this.oilTank.fill(resource, doFill);
-			} else
-				if (liquidName != null && liquidName.equalsIgnoreCase("oilgc"))
-				{
-					used = this.oilTank.fill(new FluidStack(GalacticraftCore.fluidOil, resource.amount), doFill);
-				}
+			} else if (liquidName != null && liquidName.equalsIgnoreCase("oilgc")) {
+				used = this.oilTank.fill(new FluidStack(GalacticraftCore.fluidOil, resource.amount), doFill);
+			}
 		}
 
 		return used;
 	}
 
 	@Override
-	public FluidTankInfo[] getTankInfo(ForgeDirection from)
-	{
-		FluidTankInfo[] tankInfo = new FluidTankInfo[] { };
+	public FluidTankInfo[] getTankInfo(ForgeDirection from) {
+		FluidTankInfo[] tankInfo = new FluidTankInfo[] {};
 
-		if (from == ForgeDirection.getOrientation(this.getBlockMetadata() + 2))
-		{
+		if (from == ForgeDirection.getOrientation(this.getBlockMetadata() + 2)) {
 			tankInfo = new FluidTankInfo[] { new FluidTankInfo(this.oilTank) };
-		}
-		else if (from == ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1))
-		{
+		} else if (from == ForgeDirection.getOrientation((this.getBlockMetadata() + 2) ^ 1)) {
 			tankInfo = new FluidTankInfo[] { new FluidTankInfo(this.fuelTank) };
 		}
 

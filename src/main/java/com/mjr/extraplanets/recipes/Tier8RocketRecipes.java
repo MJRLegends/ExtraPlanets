@@ -15,8 +15,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class Tier8RocketRecipes {
 	private static List<INasaWorkbenchRecipe> tier8RocketRecipes = new ArrayList();
 
-	public static ItemStack findMatchingTier8RocketRecipe(InventorySchematicTier8Rocket inventoryRocketBench)
-	{
+	public static ItemStack findMatchingTier8RocketRecipe(InventorySchematicTier8Rocket inventoryRocketBench) {
 		for (INasaWorkbenchRecipe recipe : tier8RocketRecipes) {
 			if (recipe.matches(inventoryRocketBench)) {
 				return recipe.getRecipeOutput();
@@ -25,8 +24,7 @@ public class Tier8RocketRecipes {
 		return null;
 	}
 
-	public static void addTier8RocketRecipe(ItemStack result,
-			HashMap<Integer, ItemStack> input) {
+	public static void addTier8RocketRecipe(ItemStack result, HashMap<Integer, ItemStack> input) {
 		addTier8RocketRecipe(new NasaWorkbenchRecipe(result, input));
 	}
 
@@ -38,10 +36,10 @@ public class Tier8RocketRecipes {
 		return tier8RocketRecipes;
 	}
 
-	public static void registerRocketCraftingRecipe(){
+	public static void registerRocketCraftingRecipe() {
 		HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 		input.put(1, new ItemStack(ExtraPlanets_Items.noseConeTier8)); // Cone
-		//Body
+		// Body
 		input.put(2, new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3));
 		input.put(3, new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3));
 		input.put(4, new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3));

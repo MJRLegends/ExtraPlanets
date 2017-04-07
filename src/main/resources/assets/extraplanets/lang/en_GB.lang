@@ -28,6 +28,7 @@ planet.Pluto=Pluto
 planet.Eris=Eris
 planet.kuiperBelt=Kuiper Belt
 planet.makemake=Makemake
+planet.haumea=Haumea
 
 planet.kepler62b=Kepler 62b
 planet.kepler62c=Kepler 62c
@@ -53,6 +54,10 @@ moon.rhea=Rhea
 moon.titan=Titan
 moon.oberon=Oberon
 moon.titania=Titania
+moon.charon=Charon
+moon.nix=Nix
+moon.hydra=Hydra
+moon.dysnomia=Dysnomia
 
 #Planet Blocks
 tile.mercury.surface.name=Mercury Surface Rock
@@ -271,6 +276,28 @@ tile.titan.oreIron.name=Titan Iron Ore
 tile.titan.oreTin.name=Titan Tin Ore
 tile.titan.oreCopper.name=Titan Copper Ore
 
+tile.oberon.surface.name=Oberon Surface Rock
+tile.oberon.subSurface.name=Oberon Sub-Surface Rock
+tile.oberon.stone.name=Oberon Stone
+tile.oberon.oreIron.name=Oberon Iron Ore
+tile.oberon.oreTin.name=Oberon Tin Ore
+tile.oberon.oreCopper.name=Oberon Copper Ore
+
+tile.titania.surface.name=Titania Surface Rock
+tile.titania.subSurface.name=Titania Sub-Surface Rock
+tile.titania.stone.name=Titania Stone
+tile.titania.oreIron.name=Titania Iron Ore
+tile.titania.oreTin.name=Titania Tin Ore
+tile.titania.oreCopper.name=Titania Copper Ore
+
+tile.iapetus.surface.name=Iapetus Surface Rock
+tile.iapetus.subSurface.name=Iapetus Sub-Surface Rock
+tile.iapetus.stone.name=Iapetus Stone
+tile.iapetus.oreIron.name=Iapetus Iron Ore
+tile.iapetus.oreTin.name=Iapetus Tin Ore
+tile.iapetus.oreCopper.name=Iapetus Copper Ore
+tile.iapetus.ice.name=Iapetus Ice
+
 #Planet Gravel Blocks
 tile.mercuryGravel.name=Mercury Gravel
 tile.ceresGravel.name=Ceres Gravel
@@ -285,6 +312,9 @@ tile.callistoGravel.name=Callisto Gravel
 tile.ganymedeGravel.name=Ganymede Gravel
 tile.rheaGravel.name=Rhea Gravel
 tile.titanGravel.name=Titan Gravel
+tile.oberonGravel.name=Oberon Gravel
+tile.titaniaGravel.name=Titania Gravel
+tile.iapetusGravel.name=Iapetus Gravel
 
 tile.venusGravel.name=Venus Gravel
 tile.jupiterGravel.name=Jupiter Gravel
@@ -784,19 +814,13 @@ achievement.neptuneBoss=Defeated Tier 8 Boss!
 achievement.plutoBoss=Defeated Tier 9 Boss!
 achievement.erisBoss=Defeated Tier 10 Boss!
 
-achievement.venusBoss.desc=Kill the Venus Dungeon Boss
-achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss
-achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss
-achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss
-achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss
-achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss
-
 achievement.venusBoss.desc=Kill the Venus Dungeon Boss and Open the Treasure Chest
 achievement.jupiterBoss.desc=Kill the Jupiter Dungeon Boss and Open the Treasure Chest
 achievement.saturnBoss.desc=Kill the Saturn Dungeon Boss and Open the Treasure Chest
 achievement.uranusBoss.desc=Kill the Uranus Dungeon Boss and Open the Treasure Chest
 achievement.neptuneBoss.desc=Kill the Neptune Dungeon Boss and Open the Treasure Chest
 achievement.plutoBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest
+achievement.erisBoss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest
 
 achievement.craftRocket4=Tier 4 Rocket!
 achievement.craftRocket5=Tier 5 Rocket!
@@ -819,4 +843,4 @@ tile.glowstone_fluid.name=Liquid Glowstone
 tile.magma_fluid.name=Liquid Magma
 tile.nitrogen_fluid.name=Liquid Nitrogen
 tile.frozen_water_fluid.name=Frozen Water
-tile.Salt_fluid.name=Liquid Salt
+tile.salt_fluid.name=Liquid Salt

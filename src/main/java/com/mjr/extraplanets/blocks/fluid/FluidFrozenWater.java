@@ -33,8 +33,7 @@ public class FluidFrozenWater extends FluidBasic {
 		int meta = world.getBlockMetadata(x, y, z);
 		if (rand.nextInt(64) == 0) {
 			if ((meta > 0) && (meta < 8)) {
-				world.playSound(x + 0.5F, y + 0.5F, z + 0.5F, "liquid.water", rand.nextFloat() * 0.25F + 0.75F,
-						rand.nextFloat() * 1.0F + 0.5F, false);
+				world.playSound(x + 0.5F, y + 0.5F, z + 0.5F, "liquid.water", rand.nextFloat() * 0.25F + 0.75F, rand.nextFloat() * 1.0F + 0.5F, false);
 			}
 		}
 		if (rand.nextInt(10) == 0) {
@@ -42,8 +41,7 @@ public class FluidFrozenWater extends FluidBasic {
 				world.spawnParticle("suspended", x + rand.nextFloat(), y + rand.nextFloat(), z + rand.nextFloat(), 0.0D, 0.0D, 0.0D);
 			}
 		}
-		if ((rand.nextInt(10) == 0) && (World.doesBlockHaveSolidTopSurface(world, x, y - 1, z))
-				&& (!world.getBlock(x, y - 2, z).getMaterial().blocksMovement())) {
+		if ((rand.nextInt(10) == 0) && (World.doesBlockHaveSolidTopSurface(world, x, y - 1, z)) && (!world.getBlock(x, y - 2, z).getMaterial().blocksMovement())) {
 			double d5 = x + rand.nextFloat();
 			double d6 = y - 1.05D;
 			double d7 = z + rand.nextFloat();

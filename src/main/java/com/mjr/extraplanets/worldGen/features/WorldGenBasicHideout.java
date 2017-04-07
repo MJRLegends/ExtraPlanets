@@ -22,7 +22,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		for (int i = 0; i < 11; i++) {
 			for (int j = 0; j < 11; j++) {
 				try {
-					if (world.getBlock(x + i, y - 1, z + j) == Blocks.air)
+					if (world.getBlock(x + i, y - 3, z + j) == Blocks.air)
 						return false;
 				} catch (Exception ex) {
 					System.out.println("ExtraPlanets: " + ex.getMessage());
@@ -713,7 +713,6 @@ public class WorldGenBasicHideout extends WorldGenerator {
 	public boolean fillChests(World world, Random rand, int x, int y, int z) {
 		int random = rand.nextInt(15) + 1;
 		if (random < 5) {
-			System.out.println("Yes Spawn Loot");
 			int lastNumber = 0;
 			for (int i = 0; i < rand.nextInt(4); i++) {
 				int randomChests;
@@ -721,7 +720,6 @@ public class WorldGenBasicHideout extends WorldGenerator {
 					randomChests = rand.nextInt(9);
 				} while (lastNumber == randomChests);
 				lastNumber = randomChests;
-				System.out.println("Chest " + randomChests);
 				TileEntityChest chest;
 				switch (randomChests) {
 				case 1:

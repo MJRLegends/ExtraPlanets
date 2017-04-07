@@ -145,13 +145,12 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public float getThermalLevelModifier() {
-		if(Config.thermalPaddings){
+		if (Config.thermalPaddings) {
 			if (isDaytime()) {
-				return 120.0F;
+				return -140.0F;
 			}
-			return -125.0F;
-		}
-		else
+			return -130.0F;
+		} else
 			return -1.5F;
 	}
 

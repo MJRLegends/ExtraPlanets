@@ -57,6 +57,7 @@ public class BlockBasicGrass extends Block {
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
+	@Override
 	public void updateTick(World world, int x, int y, int z, Random rand) {
 		if (!world.isRemote) {
 			if (world.getBlockLightValue(x, y + 1, z) < 4 && world.getBlockLightOpacity(x, y + 1, z) > 2) {
@@ -74,6 +75,7 @@ public class BlockBasicGrass extends Block {
 		}
 	}
 
+	@Override
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
 		return ExtraPlanets_Blocks.kepler22bBlocks.getItemDropped(0, p_149650_2_, p_149650_3_);
 	}
@@ -82,6 +84,7 @@ public class BlockBasicGrass extends Block {
 		return 0;
 	}
 
+	@Override
 	public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction, IPlantable plantable) {
 		Block plant = plantable.getPlant(world, x, y + 1, z);
 		return (plant == ExtraPlanets_Blocks.kepler22bMapleSapling || plant == ExtraPlanets_Blocks.kepler22bGrassFlowers);

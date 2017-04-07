@@ -6,6 +6,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
+import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
@@ -29,12 +30,27 @@ public class RegisterHelper {
 		EntityRegistry.registerGlobalEntityID(var0, var1, newID, back, fore);
 		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, 80, 3, true);
 	}
-	public static void setHarvestLevel(Block block, String toolClass, int level, int meta)
-    {
-        block.setHarvestLevel(toolClass, level, meta);
-    }
-	
-	public static Moon makeUnreachableMoon(String name, Planet parent) {
+
+	public static void setHarvestLevel(Block block, String toolClass, int level, int meta) {
+		block.setHarvestLevel(toolClass, level, meta);
+	}
+
+	public static Planet registerUnreachablePlanet(String name, SolarSystem system) {
+		ArrayList<CelestialBody> cBodyList = new ArrayList<CelestialBody>();
+		cBodyList.addAll(GalaxyRegistry.getRegisteredPlanets().values());
+		for (CelestialBody body : cBodyList) {
+			if (body instanceof Planet && name.equals(body.getName()))
+				if (((Planet) body).getParentSolarSystem() == system)
+					return null;
+		}
+
+		Planet planet = new Planet(name).setParentSolarSystem(system);
+		planet.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/" + name + ".png"));
+		GalaxyRegistry.registerPlanet(planet);
+		return planet;
+	}
+
+	public static Moon registerUnreachableMoon(String name, Planet parent) {
 		ArrayList<CelestialBody> cBodyList = new ArrayList<CelestialBody>();
 		cBodyList.addAll(GalaxyRegistry.getRegisteredMoons().values());
 		for (CelestialBody body : cBodyList) {

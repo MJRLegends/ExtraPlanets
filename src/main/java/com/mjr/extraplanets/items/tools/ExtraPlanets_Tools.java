@@ -14,11 +14,11 @@ public class ExtraPlanets_Tools {
 	private static ToolMaterial magnesiumMaterial = EnumHelper.addToolMaterial("Magnesium Material", 5, 80, 8.0F, 10.0F, 30);
 	private static ToolMaterial crystalMaterial = EnumHelper.addToolMaterial("Crystal Material", 6, 120, 10.0F, 12.0F, 30);
 	private static ToolMaterial tungstenMaterial = EnumHelper.addToolMaterial("Tungsten Material", 7, 120, 10.0F, 12.0F, 30);
-	
+
 	private static ToolMaterial zincMaterial = EnumHelper.addToolMaterial("Zinc Material", 6, 160, 10.0F, 12.0F, 30);
 	private static ToolMaterial mercuryMaterial = EnumHelper.addToolMaterial("Mercury Material", 6, 160, 10.0F, 12.0F, 30);
-	private static ToolMaterial uraniumMaterial = EnumHelper.addToolMaterial("Uranium Material", 6, 160, 10.0F, 12.0F, 30);	
-	
+	private static ToolMaterial uraniumMaterial = EnumHelper.addToolMaterial("Uranium Material", 6, 160, 10.0F, 12.0F, 30);
+
 	private static ToolMaterial redGemMaterial = EnumHelper.addToolMaterial("Red Gem Material", 4, 80, 6.0F, 8.0F, 30);
 	private static ToolMaterial blueGemMaterial = EnumHelper.addToolMaterial("Blue Gem Material", 5, 100, 8.0F, 10.0F, 30);
 	private static ToolMaterial whiteGemMaterial = EnumHelper.addToolMaterial("White Gem Material", 6, 160, 10.0F, 12.0F, 30);
@@ -94,31 +94,31 @@ public class ExtraPlanets_Tools {
 	public static Item uraniumHoe;
 	public static Item uraniumShovel;
 	public static Item uraniumSword;
-	
+
 	public static Item blueDiamondPickaxe;
 	public static Item blueDiamondAxe;
 	public static Item blueDiamondHoe;
 	public static Item blueDiamondShovel;
 	public static Item blueDiamondSword;
-	
+
 	public static Item redDiamondPickaxe;
 	public static Item redDiamondAxe;
 	public static Item redDiamondHoe;
 	public static Item redDiamondShovel;
 	public static Item redDiamondSword;
-	
+
 	public static Item purpleDiamondPickaxe;
 	public static Item purpleDiamondAxe;
 	public static Item purpleDiamondHoe;
 	public static Item purpleDiamondShovel;
 	public static Item purpleDiamondSword;
-	
+
 	public static Item yellowDiamondPickaxe;
 	public static Item yellowDiamondAxe;
 	public static Item yellowDiamondHoe;
 	public static Item yellowDiamondShovel;
 	public static Item yellowDiamondSword;
-	
+
 	public static Item greenDiamondPickaxe;
 	public static Item greenDiamondAxe;
 	public static Item greenDiamondHoe;
@@ -214,31 +214,31 @@ public class ExtraPlanets_Tools {
 			tungstenShovel = new BasicShovel(tungstenMaterial, "tungstenShovel");
 			tungstenSword = new BasicSword(tungstenMaterial, "tungstenSword");
 		}
-		if(Config.kepler22b && Config.kepler22bItems){
+		if (Config.kepler22b && Config.kepler22bItems) {
 			blueDiamondPickaxe = new BasicPickaxe(blueDiamondMaterial, "blueDiamondPickaxe");
 			blueDiamondAxe = new BasicAxe(blueDiamondMaterial, "blueDiamondAxe");
 			blueDiamondHoe = new BasicHoe(blueDiamondMaterial, "blueDiamondHoe");
 			blueDiamondShovel = new BasicShovel(blueDiamondMaterial, "blueDiamondShovel");
 			blueDiamondSword = new BasicSword(blueDiamondMaterial, "blueDiamondSword");
-			
+
 			redDiamondPickaxe = new BasicPickaxe(redDiamondMaterial, "redDiamondPickaxe");
 			redDiamondAxe = new BasicAxe(redDiamondMaterial, "redDiamondAxe");
 			redDiamondHoe = new BasicHoe(redDiamondMaterial, "redDiamondHoe");
 			redDiamondShovel = new BasicShovel(redDiamondMaterial, "redDiamondShovel");
 			redDiamondSword = new BasicSword(redDiamondMaterial, "redDiamondSword");
-			
+
 			purpleDiamondPickaxe = new BasicPickaxe(purpleDiamondMaterial, "purpleDiamondPickaxe");
 			purpleDiamondAxe = new BasicAxe(purpleDiamondMaterial, "purpleDiamondAxe");
 			purpleDiamondHoe = new BasicHoe(purpleDiamondMaterial, "purpleDiamondHoe");
 			purpleDiamondShovel = new BasicShovel(purpleDiamondMaterial, "purpleDiamondShovel");
 			purpleDiamondSword = new BasicSword(purpleDiamondMaterial, "purpleDiamondSword");
-			
+
 			yellowDiamondPickaxe = new BasicPickaxe(yellowDiamondMaterial, "yellowDiamondPickaxe");
 			yellowDiamondAxe = new BasicAxe(yellowDiamondMaterial, "yellowDiamondAxe");
 			yellowDiamondHoe = new BasicHoe(yellowDiamondMaterial, "yellowDiamondHoe");
 			yellowDiamondShovel = new BasicShovel(yellowDiamondMaterial, "yellowDiamondShovel");
 			yellowDiamondSword = new BasicSword(yellowDiamondMaterial, "yellowDiamondSword");
-			
+
 			greenDiamondPickaxe = new BasicPickaxe(greenDiamondMaterial, "greenDiamondPickaxe");
 			greenDiamondAxe = new BasicAxe(greenDiamondMaterial, "greenDiamondAxe");
 			greenDiamondHoe = new BasicHoe(greenDiamondMaterial, "greenDiamondHoe");
@@ -331,31 +331,31 @@ public class ExtraPlanets_Tools {
 			GameRegistry.registerItem(tungstenShovel, "tungstenShovel");
 			GameRegistry.registerItem(tungstenSword, "tungstenSword");
 		}
-		if(Config.kepler22b && Config.kepler22bItems){
+		if (Config.kepler22b && Config.kepler22bItems) {
 			GameRegistry.registerItem(blueDiamondPickaxe, "blueDiamondPickaxe");
 			GameRegistry.registerItem(blueDiamondAxe, "blueDiamondAxe");
 			GameRegistry.registerItem(blueDiamondHoe, "blueDiamondHoe");
 			GameRegistry.registerItem(blueDiamondShovel, "blueDiamondShovel");
 			GameRegistry.registerItem(blueDiamondSword, "blueDiamondSword");
-			
+
 			GameRegistry.registerItem(redDiamondPickaxe, "redDiamondPickaxe");
 			GameRegistry.registerItem(redDiamondAxe, "redDiamondAxe");
 			GameRegistry.registerItem(redDiamondHoe, "redDiamondHoe");
 			GameRegistry.registerItem(redDiamondShovel, "redDiamondShovel");
 			GameRegistry.registerItem(redDiamondSword, "redDiamondSword");
-			
+
 			GameRegistry.registerItem(purpleDiamondPickaxe, "purpleDiamondPickaxe");
 			GameRegistry.registerItem(purpleDiamondAxe, "purpleDiamondAxe");
 			GameRegistry.registerItem(purpleDiamondHoe, "purpleDiamondHoe");
 			GameRegistry.registerItem(purpleDiamondShovel, "purpleDiamondShovel");
 			GameRegistry.registerItem(purpleDiamondSword, "purpleDiamondSword");
-			
+
 			GameRegistry.registerItem(yellowDiamondPickaxe, "yellowDiamondPickaxe");
 			GameRegistry.registerItem(yellowDiamondAxe, "yellowDiamondAxe");
 			GameRegistry.registerItem(yellowDiamondHoe, "yellowDiamondHoe");
 			GameRegistry.registerItem(yellowDiamondShovel, "yellowDiamondShovel");
 			GameRegistry.registerItem(yellowDiamondSword, "yellowDiamondSword");
-			
+
 			GameRegistry.registerItem(greenDiamondPickaxe, "greenDiamondPickaxe");
 			GameRegistry.registerItem(greenDiamondAxe, "greenDiamondAxe");
 			GameRegistry.registerItem(greenDiamondHoe, "greenDiamondHoe");

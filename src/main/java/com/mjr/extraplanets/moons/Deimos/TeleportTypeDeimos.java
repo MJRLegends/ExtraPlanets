@@ -17,12 +17,10 @@ public class TeleportTypeDeimos implements ITeleportType {
 	}
 
 	@Override
-	public Vector3 getPlayerSpawnLocation(WorldServer world,
-			EntityPlayerMP player) {
+	public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player) {
 		if (player != null) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
-			return new Vector3(stats.coordsTeleportedFromX, 250.0D,
-					stats.coordsTeleportedFromZ);
+			return new Vector3(stats.coordsTeleportedFromX, 250.0D, stats.coordsTeleportedFromZ);
 		}
 		return null;
 	}
@@ -33,20 +31,18 @@ public class TeleportTypeDeimos implements ITeleportType {
 	}
 
 	@Override
-	public Vector3 getParaChestSpawnLocation(WorldServer world,
-			EntityPlayerMP player, Random rand) {
+	public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand) {
 		double x = (rand.nextDouble() * 2.0D - 1.0D) * 5.0D;
 		double z = (rand.nextDouble() * 2.0D - 1.0D) * 5.0D;
 		return new Vector3(player.posX + x, 230.0D, player.posZ + z);
 	}
 
 	@Override
-	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player,
-			boolean ridingAutoRocket) {
-		//player.addStat(Achievements.deimosMoon, 1);
+	public void onSpaceDimensionChanged(World newWorld, EntityPlayerMP player, boolean ridingAutoRocket) {
+		// player.addStat(Achievements.deimosMoon, 1);
 	}
 
 	@Override
-	public void setupAdventureSpawn(EntityPlayerMP player) {		
+	public void setupAdventureSpawn(EntityPlayerMP player) {
 	}
 }

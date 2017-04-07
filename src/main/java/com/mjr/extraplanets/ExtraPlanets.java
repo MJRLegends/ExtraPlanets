@@ -10,10 +10,10 @@ import net.minecraftforge.common.MinecraftForge;
 
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Machines;
 import com.mjr.extraplanets.blocks.ExtraPlanets_MicroBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
@@ -55,10 +55,13 @@ import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
 import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
 import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
 import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
+import com.mjr.extraplanets.moons.Iapetus.event.IapetusEvents;
 import com.mjr.extraplanets.moons.Io.event.IoEvents;
+import com.mjr.extraplanets.moons.Oberon.event.OberonEvents;
 import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
+import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
@@ -210,6 +213,12 @@ public class ExtraPlanets {
 			MinecraftForge.EVENT_BUS.register(new RheaEvents());
 		if (Config.titan)
 			MinecraftForge.EVENT_BUS.register(new TitanEvents());
+		if (Config.oberon)
+			MinecraftForge.EVENT_BUS.register(new OberonEvents());
+		if (Config.iapetus)
+			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
+		if (Config.titania)
+			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
 		if (Config.kuiperBelt)
 			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
 
@@ -271,11 +280,11 @@ public class ExtraPlanets {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
-		if(Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibility == false)
 			registerSchematicsRecipes();
 
 		// Register/Add Dungeon Loot
-		if(Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibility == false)
 			addDungeonLoot();
 
 		// Register Recipes
@@ -290,9 +299,9 @@ public class ExtraPlanets {
 	}
 
 	private void registerNonMobEntities() {
-		if(Config.nuclearBomb)
+		if (Config.nuclearBomb)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
-		if(Config.morePlanetsCompatibility == false){
+		if (Config.morePlanetsCompatibility == false) {
 			if (Config.venus)
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 			if (Config.jupiter)
@@ -321,7 +330,7 @@ public class ExtraPlanets {
 		if (Config.jupiter)
 			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
 		if (Config.saturn)
-			
+
 			if (Config.useDefaultBosses)
 				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
 			else

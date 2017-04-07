@@ -83,26 +83,25 @@ public class BlockBasicKepler22b extends Block {
 	@Override
 	public int damageDropped(int meta) {
 		switch (meta) {
-        case 1:
-            return 0;
+		case 1:
+			return 0;
 		default:
 			return meta;
 		}
 	}
 
 	@Override
-    public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune)
-    {
-        switch (metadata)
-        {
-        case 1:
-            ArrayList<ItemStack> items = new ArrayList<ItemStack>();
-            items.add(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 12));
-            return items;
-        default:
-            return super.getDrops(world, x, y, z, metadata, fortune);
-        }
-    }
+	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
+		switch (metadata) {
+		case 1:
+			ArrayList<ItemStack> items = new ArrayList<ItemStack>();
+			items.add(new ItemStack(ExtraPlanets_Blocks.kepler22bBlocks, 1, 12));
+			return items;
+		default:
+			return super.getDrops(world, x, y, z, metadata, fortune);
+		}
+	}
+
 	@Override
 	public int getDamageValue(World p_149643_1_, int p_149643_2_, int p_149643_3_, int p_149643_4_) {
 		return p_149643_1_.getBlockMetadata(p_149643_2_, p_149643_3_, p_149643_4_);
@@ -132,6 +131,7 @@ public class BlockBasicKepler22b extends Block {
 	/**
 	 * Returns the block hardness at a location. Args: world, x, y, z
 	 */
+	@Override
 	public float getBlockHardness(World world, int x, int y, int z) {
 		final int meta = world.getBlockMetadata(x, y, z);
 		switch (meta) {
@@ -143,7 +143,8 @@ public class BlockBasicKepler22b extends Block {
 			return 0.0F;
 		}
 	}
-	
+
+	@Override
 	public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		final int meta = world.getBlockMetadata(x, y, z);
 		switch (meta) {
@@ -157,6 +158,7 @@ public class BlockBasicKepler22b extends Block {
 		}
 	}
 
+	@Override
 	public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		final int meta = world.getBlockMetadata(x, y, z);
 		switch (meta) {
