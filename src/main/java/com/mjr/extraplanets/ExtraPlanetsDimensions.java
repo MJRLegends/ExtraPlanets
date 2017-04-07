@@ -49,7 +49,7 @@ public class ExtraPlanetsDimensions {
 
 	// Moons
 	public static DimensionType CALLISTO = DimensionType.register("Callisto", "callisto", Config.CALLISTO_ID, WorldProviderCallisto.class, false);
-	public static DimensionType DEIMOS = DimensionType.register("Deimos", "deimos", Config.CALLISTO_ID, WorldProviderDeimos.class, false);
+	public static DimensionType DEIMOS = DimensionType.register("Deimos", "deimos", Config.DEIMOS_ID, WorldProviderDeimos.class, false);
 	public static DimensionType EUROPA = DimensionType.register("Europa", "europa", Config.EUROPA_ID, WorldProviderEuropa.class, false);
 	public static DimensionType GANYMEDE = DimensionType.register("Ganymede", "ganymede", Config.GANYMEDE_ID, WorldProviderGanymede.class, false);
 	public static DimensionType IAPETUS = DimensionType.register("Iapetus", "iapetus", Config.IAPETUS_ID, WorldProviderIapetus.class, false);
