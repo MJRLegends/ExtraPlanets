@@ -14,6 +14,15 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+0.8.0 Beta Build
+*Update zh_CN.lang
+*Fixed Advanced & Ultimate rendering due to GC resources name changes
+*Fixed Space Stations icon not rendering due to GC resources name changes
+*Clean up: Remove unneeded code
+*Fixes and Updated lang files to fix missing localization for spawn eggs/entities
+*Small fixes/Clean up
+*Updated Galacticraft API to latest
+
 0.7.5 Beta Build
 *Cleaned up the version number to a more organized version system
 *Fixed OreDictionary for Oberon/Iaptus/Titania
