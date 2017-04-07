@@ -14,6 +14,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+0.2.0 Beta Build
+*Fixed conflicting dimension id problem within mod
+*Fixed more config issues
+
 0.1.5 Beta Build
 *Fixed Nuclear Bomb texture/entity
 *Fixed Tier 3 Radiation layer texture
