@@ -158,6 +158,7 @@ public class ExtraPlanets_Blocks {
 	public static Block denseIce;
 	public static Block volcanicRock;
 	public static Block frozenNitrogen;
+	public static Block ashBlock;
 
 	// Treasure Chests
 	public static Block treasureChestTier4;
@@ -226,7 +227,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.venus) {
 			venusBlocks = new BlockBasicVenus("venus");
 			venusGravel = new BlockCustomGravel("venusGravel");
-
+			ashBlock= new BlockAshBlock("ashBlock");
 			volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanicRock").setBlockTextureName(Constants.TEXTURE_PREFIX + "volcanicRock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
 		}
 		if (Config.ceres) {
@@ -433,6 +434,8 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(venusSpawner, "venusSpawner");
 			GameRegistry.registerBlock(veunsDungeonBrick, "veunsDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName());
+			
+			GameRegistry.registerBlock(ashBlock, "ashBlock");
 			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
 		}
 		if (Config.ceres) {
