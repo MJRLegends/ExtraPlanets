@@ -23,7 +23,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 	private WorldGenerator gravelGen;
 	private WorldGenerator redGemGen;
 
-	private int LakesPerChunk = 5;
+	private int LakesPerChunk = 50;
 
 	private World currentWorld;
 
@@ -65,11 +65,10 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
-			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeightValue(x, z);
+			if (this.rand.nextInt(5) == 0) {
+                int x = this.chunkX + this.rand.nextInt(16) + 8;
+                int y = this.rand.nextInt(this.rand.nextInt(248) + 8);
+                int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.jupiterBlocks);
 			}
 		}
