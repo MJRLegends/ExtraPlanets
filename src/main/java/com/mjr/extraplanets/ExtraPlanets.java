@@ -15,6 +15,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
+import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
@@ -258,8 +259,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For
-		// SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
@@ -301,6 +301,8 @@ public class ExtraPlanets {
 	private void registerNonMobEntities() {
 		if (Config.nuclearBomb)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, Constants.modName + "FireBombPrimed", 150, 1, true);
+		
 		if (Config.morePlanetsCompatibility == false) {
 			if (Config.venus)
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);

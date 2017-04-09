@@ -154,6 +154,7 @@ public class ExtraPlanets_Blocks {
 
 	// Other Special Blocks
 	public static Block nuclearBomb;
+	public static Block fireBomb;
 	public static Block fossil;
 	public static Block denseIce;
 	public static Block volcanicRock;
@@ -310,6 +311,7 @@ public class ExtraPlanets_Blocks {
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
+		fireBomb = new BlockFireBomb();
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
@@ -548,6 +550,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(fossil, "fossil");
 		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
+		GameRegistry.registerBlock(fireBomb, "fireBomb");
 	}
 
 	private static void registerTileEntitys() {
