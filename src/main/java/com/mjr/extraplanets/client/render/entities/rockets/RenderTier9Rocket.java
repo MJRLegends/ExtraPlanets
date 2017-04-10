@@ -41,7 +41,7 @@ public class RenderTier9Rocket extends Render
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9 + 180;
 		final float var25 = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * par9 + 45;
 
-		GL11.glTranslatef((float) par2, (float) par4 - 0.4F, (float) par6);
+		GL11.glTranslatef((float) par2, (float) par4 - 1.6F, (float) par6 + 0.5F);
 		GL11.glRotatef(180.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		final float var28 = entity.rollAmplitude / 3 - par9;
@@ -61,9 +61,55 @@ public class RenderTier9Rocket extends Render
 
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
-		GL11.glScalef(0.9F, 0.9F, 0.9F);
+		GL11.glScalef(1.1F, 1.1F, 1.1F);
 
-		this.rocketModelObj.renderOnly("Boosters", "Rocket");
+		this.rocketModelObj.renderPart("Nozzle");
+		this.rocketModelObj.renderPart("Nozzle001");
+		this.rocketModelObj.renderPart("Nozzle002");
+		this.rocketModelObj.renderPart("NozzleKeeper");
+		this.rocketModelObj.renderPart("NozzleKeeper001");
+		this.rocketModelObj.renderPart("BodyRocket");
+		this.rocketModelObj.renderPart("BodyRocket001");
+		this.rocketModelObj.renderPart("Rocket_stabilizer1");
+		this.rocketModelObj.renderPart("Rocket_stabilizer2");
+		this.rocketModelObj.renderPart("Rocket_stabilizer3");
+		this.rocketModelObj.renderPart("Rocket_stabilizer4");
+		this.rocketModelObj.renderPart("Rocket_stabilizer007");
+		this.rocketModelObj.renderPart("Rocket_stabilizer008");
+		this.rocketModelObj.renderPart("Rocket_stabilizer009");
+		this.rocketModelObj.renderPart("Rocket_stabilizer010");
+		this.rocketModelObj.renderPart("Rocket_stabilizer011");
+		this.rocketModelObj.renderPart("Rocket_stabilizer012");
+		this.rocketModelObj.renderPart("SplinePathDeform");
+		this.rocketModelObj.renderPart("RocketEnginePlut");
+		this.rocketModelObj.renderPart("RocketEnginePlut002");
+		this.rocketModelObj.renderPart("RocketEnginePlut004");
+		this.rocketModelObj.renderPart("RocketEnginePlut005");
+		this.rocketModelObj.renderPart("RocketEnginePlut007");
+		this.rocketModelObj.renderPart("RocketEnginePlut008");
+		this.rocketModelObj.renderPart("RocketEngine");
+		this.rocketModelObj.renderPart("RocketEngine002");
+		this.rocketModelObj.renderPart("RocketEngine004");
+		this.rocketModelObj.renderPart("RocketEngine005");
+		this.rocketModelObj.renderPart("RocketEngine007");
+		this.rocketModelObj.renderPart("RocketEngine008");
+		this.rocketModelObj.renderPart("RocketEngineBottom");
+		this.rocketModelObj.renderPart("RocketEngineBottom003");
+		this.rocketModelObj.renderPart("RocketEngineBottom004");
+		this.rocketModelObj.renderPart("RocketEngineBottom005");
+		this.rocketModelObj.renderPart("RocketEngineBottom006");
+		this.rocketModelObj.renderPart("RocketEngineBottom007");
+		this.rocketModelObj.renderPart("RocketEngineBottom008");
+		this.rocketModelObj.renderPart("FloorCockPit");
+		this.rocketModelObj.renderPart("Cockoit");
+		this.rocketModelObj.renderPart("NoseRocket");
+		this.rocketModelObj.renderPart("NozzleKeeper");
+		this.rocketModelObj.renderPart("rotary_engine");
+		this.rocketModelObj.renderPart("rotary_engine2");
+		this.rocketModelObj.renderPart("rotary_engine3");
+		this.rocketModelObj.renderPart("rotary_engine4");
+		this.rocketModelObj.renderPart("rotary_engine005");
+		this.rocketModelObj.renderPart("rotary_engine006");
 		Vector3 teamColor = ClientUtil.updateTeamColor(FMLClientHandler.instance().getClient().thePlayer.getCommandSenderName(), true);
 		if (teamColor != null)
 		{

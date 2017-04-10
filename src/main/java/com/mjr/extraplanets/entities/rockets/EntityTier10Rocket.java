@@ -24,7 +24,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class EntityTier10Rocket extends EntityTieredRocket {
 	public EntityTier10Rocket(World par1World) {
 		super(par1World);
-		this.setSize(1.2F, 4.0F);
+		this.setSize(5.2F, 13.0F);
 		this.yOffset = 1.5F;
 	}
 
@@ -32,7 +32,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 		super(par1World, par2, par4, par6);
 		this.rocketType = rocketType;
 		this.cargoItems = new ItemStack[this.getSizeInventory()];
-		this.setSize(1.2F, 4.0F);
+		this.setSize(5.2F, 13.0F);
 		this.yOffset = 1.5F;
 	}
 
@@ -44,7 +44,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 
 	@Override
 	public double getMountedYOffset() {
-		return -0.15D;
+		return 4.0D;
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 
 	protected static RenderItem drawItems = new RenderItem();
 
-	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/tier8rocket.png");
+	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 
 	public ItemRendererTier8Rocket(IModelCustom model)
 	{
