@@ -280,6 +280,22 @@ public class ExtraPlanets_Recipes {
 			// Block to Carbon
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7) });
 
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 6), new Object[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7),
+					new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 2, 7), new Object[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 8), new ItemStack(ExtraPlanets_Blocks.ashBlock, 1, 0) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 8), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), 'Y', new ItemStack(GCItems.meteoricIronIngot), 'S',
+					Item.itemRegistry.getObject("stick") });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 9), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7), 'H', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 8), 'Z',
+					new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 2, 10), new Object[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 9), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11),
+					new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11) });
+
+			// Fire Bomb
+			if(Config.saturn)
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.fireBomb), new Object[] { "GZG", "SUS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 6), 'S', Blocks.sand, 'U', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), 'Z', new ItemStack(ExtraPlanets_Items.tier6Items, 1, 6), 'L', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 10) });
+			else
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.fireBomb), new Object[] { "GZG", "SUS", "GZG", 'G', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 6), 'S', Blocks.sand, 'U', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), 'Z', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 10) });
+
 			if (Config.carbonItems) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.carbonPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
@@ -426,6 +442,14 @@ public class ExtraPlanets_Recipes {
 
 			// Block to Palladium
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 9, ingot), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7) });
+
+			// Magnesium Shards
+			if (Config.venus)
+				GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier6Items, 2, 6), new Object[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 9), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5),
+						new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5) });
+			else
+				GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier6Items, 2, 6), new Object[] { new ItemStack(ExtraPlanets_Tools.magnesiumAxe), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5),
+						new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5) });
 
 			if (Config.magnesiumItems) {
 				// Tools
@@ -828,10 +852,6 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.cannedFood, 1, 3), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.cooked_chicken, Items.cooked_chicken });
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.cannedFood, 1, 4), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.cooked_beef, Items.cooked_beef });
 		}
-
-		// Others
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 6, 15), new Object[] { new ItemStack(ExtraPlanets_Items.bodyParts, 1, 0) });
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye, 6, 15), new Object[] { new ItemStack(ExtraPlanets_Items.bodyParts, 1, 1) });
 
 		// Advanced & Ultimate Battery
 		if (Config.batteries) {
