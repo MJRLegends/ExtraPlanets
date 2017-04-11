@@ -345,15 +345,25 @@ tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星石臺階
 tile.ExtraPlanets_erisStoneBlockhalfslab.name=鬩神星石臺階
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=水星石樓梯
-tile.venusStoneStairs.name=金星石樓梯
-tile.ceresStoneStairs.name=谷神星石樓梯
-tile.jupiterStoneStairs.name=木星石樓梯
-tile.saturnStoneStairs.name=土星石樓梯
-tile.uranusStoneStairs.name=天王星石樓梯
-tile.neptuneStoneStairs.name=海王星石樓梯
-tile.plutoStoneStairs.name=冥王星石樓梯
-tile.erisStoneStairs.name=鬩神星石樓梯
+tile.mercuryStoneStairs.name=Mercury Stone Stairs
+tile.venusStoneStairs.name=Venus Stone Stairs
+tile.ceresStoneStairs.name=Ceres Stone Stairs
+tile.jupiterStoneStairs.name=Jupiter Stone Stairs
+tile.saturnStoneStairs.name=Saturn Stone Stairs
+tile.uranusStoneStairs.name=Uranus Stone Stairs
+tile.neptuneStoneStairs.name=Neptune Stone Stairs
+tile.plutoStoneStairs.name=Pluto Stone Stairs
+tile.erisStoneStairs.name=Eris Stone Stairs
+
+tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs
+tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs
+tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs
+tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs
+tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs
+tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs
+tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs
+tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs
+tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs
 
 #Dungeon Bricks Slabs
 tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星地牢磚臺階
