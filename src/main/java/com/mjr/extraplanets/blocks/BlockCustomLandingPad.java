@@ -134,7 +134,10 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 
 	@Override
 	public String getShiftDescription(int meta) {
-		return GCCoreUtil.translate(this.getUnlocalizedName() + ".description");
+		if(meta == 0)
+			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier2.desc");
+		else
+			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier3.desc");
 	}
 
 	@Override
