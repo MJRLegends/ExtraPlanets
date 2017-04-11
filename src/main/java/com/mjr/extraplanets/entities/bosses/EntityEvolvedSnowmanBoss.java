@@ -117,7 +117,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(9);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(8);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

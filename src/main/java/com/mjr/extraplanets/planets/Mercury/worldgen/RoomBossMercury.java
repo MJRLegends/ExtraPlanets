@@ -4,8 +4,6 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonStart;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.Piece;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
@@ -29,7 +27,7 @@ public class RoomBossMercury extends RoomBoss {
 	}
 
 	@Override
-	public boolean addComponentParts(World worldIn, Random random, StructureBoundingBox boundingBox) {
+	public boolean addComponentParts(World worldIn, Random random, StructureBoundingBox chunkBox) {
 		for (int i = 0; i <= this.sizeX; i++) {
 			for (int j = 0; j <= this.sizeY; j++) {
 				for (int k = 0; k <= this.sizeZ; k++) {
@@ -57,18 +55,22 @@ public class RoomBossMercury extends RoomBoss {
 							}
 						}
 						if (placeBlock) {
-							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
+							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
 						}
 					} else if (j == this.sizeY) {
 						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(4) == 0) {
-							this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, boundingBox);
+							this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
+							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						}
-					} else {
-						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+					}
+					// else if (j == 1 && (i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(6) == 0) {
+					// this.setBlockState(worldIn, MarsBlocks.creeperEgg.getDefaultState(), i, j, k, chunkBox);
+					// }
+					else {
+						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
 					}
 				}
 			}
@@ -77,22 +79,16 @@ public class RoomBossMercury extends RoomBoss {
 		int spawnerX = this.sizeX / 2;
 		int spawnerY = 1;
 		int spawnerZ = this.sizeZ / 2;
-		this.setBlockState(worldIn, ExtraPlanets_Blocks.MERCURY_SPAWNER.getDefaultState(), spawnerX, spawnerY, spawnerZ, boundingBox);
 		BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
-		TileEntityDungeonSpawnerMercury spawner = (TileEntityDungeonSpawnerMercury) worldIn.getTileEntity(blockpos);
-
-		if (spawner == null) {
-			spawner = new TileEntityDungeonSpawnerMercury();
-			worldIn.setTileEntity(blockpos, spawner);
+		// Is this position inside the chunk currently being generated?
+		if (chunkBox.isVecInside(blockpos)) {
+			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.MERCURY_SPAWNER.getDefaultState(), 2);
+			TileEntityDungeonSpawnerMercury spawner = (TileEntityDungeonSpawnerMercury) worldIn.getTileEntity(blockpos);
+			if (spawner != null) {
+				spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
+			}
 		}
 
-		spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
-
 		return true;
-	}
-
-	@Override
-	public Piece getNextPiece(DungeonStart startPiece, Random rand) {
-		return getCorridor(rand, startPiece, 10, true);
 	}
 }
