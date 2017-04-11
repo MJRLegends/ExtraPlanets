@@ -3,12 +3,9 @@ package com.mjr.extraplanets.blocks.machines;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -20,12 +17,13 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.proxy.ClientProxy;
 import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class AdvancedFuelLoader extends BlockAdvancedTile implements ItemBlockDesc.IBlockShiftDesc {
+public class AdvancedFuelLoader extends BlockAdvancedTile {
 	private IIcon iconMachineSide;
 	private IIcon iconInput;
 	private IIcon iconFront;
@@ -37,16 +35,12 @@ public class AdvancedFuelLoader extends BlockAdvancedTile implements ItemBlockDe
 		this.setStepSound(Block.soundTypeMetal);
 		this.setBlockTextureName(GalacticraftCore.TEXTURE_PREFIX + assetName);
 		this.setBlockName(assetName);
-	}
-
-	@Override
-	public CreativeTabs getCreativeTabToDisplayOn() {
-		return GalacticraftCore.galacticraftBlocksTab;
+		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@Override
 	public int getRenderType() {
-		return GalacticraftCore.proxy.getBlockRender(this);
+		return ClientProxy.getBlockRender(this);
 	}
 
 	@Override
@@ -158,15 +152,5 @@ public class AdvancedFuelLoader extends BlockAdvancedTile implements ItemBlockDe
 				}
 			}
 		}
-	}
-
-	@Override
-	public String getShiftDescription(int meta) {
-		return GCCoreUtil.translate(this.getUnlocalizedName() + ".description");
-	}
-
-	@Override
-	public boolean showDescription(int meta) {
-		return true;
 	}
 }

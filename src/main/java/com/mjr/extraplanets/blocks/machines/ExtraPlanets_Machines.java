@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.blocks.machines;
 
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 
@@ -41,8 +40,7 @@ public class ExtraPlanets_Machines {
 			GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);
 			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName());
 		}
-		GameRegistry.registerBlock(advancedFuelLoader, ItemBlockDesc.class, advancedFuelLoader.getUnlocalizedName());
-
+		GameRegistry.registerBlock(advancedFuelLoader, "advancedFuelLoader");
 	}
 
 	private static void registerMachineTileEntitys() {
