@@ -761,6 +761,13 @@ item.thermalCloth.tier2ThermalCloth.name=2阶热力布匹
 item.thermalCloth.tier3ThermalCloth.name=3阶热力布匹
 item.thermalCloth.tier4ThermalCloth.name=4阶热力布匹
 
+#Sticks
+item.tier11.blueSticks.name=Blue Sticks
+item.tier11.redSticks.name=Red Sticks
+item.tier11.yellowSticks.name=Yellow Sticks
+item.tier11.purpleSticks.name=Purple Sticks
+item.tier11.greenSticks.name=Green Sticks
+
 #Other Items
 item.appleDiamond.name=钻石苹果
 item.appleIron.name=Iron Apple

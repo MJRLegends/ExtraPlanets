@@ -20,6 +20,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
@@ -245,11 +246,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.mercuryItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercurySword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.mercuryShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.mercuryPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.mercuryAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.mercuryHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.mercurySword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.mercuryShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.mercuryHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0) });
@@ -293,7 +294,7 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7) });
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 2, 7), new Object[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 8), new ItemStack(ExtraPlanets_Blocks.ashBlock, 1, 0) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 8), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), 'Y', new ItemStack(GCItems.meteoricIronIngot), 'S',
-					Item.itemRegistry.getObject("stick") });
+				Item.itemRegistry.getObject("stick") });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 9), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7), 'H', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 8), 'Z',
 					new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11) });
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 2, 10), new Object[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 9), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11),
@@ -309,11 +310,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.carbonItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.carbonPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.carbonAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.carbonHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.carbonSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.carbonShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.carbonPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.carbonAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.carbonHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.carbonSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.carbonShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.carbonHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5) });
@@ -346,11 +347,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.uraniumItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.uraniumShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.uraniumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.uraniumAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.uraniumHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.uraniumSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.uraniumShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.uraniumHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0) });
@@ -392,11 +393,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.palladiumItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.palladiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.palladiumAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.palladiumHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.palladiumSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.palladiumShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.palladiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.palladiumAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.palladiumHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.palladiumSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.palladiumShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.palladiumHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5) });
@@ -407,11 +408,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.redGemItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redGemPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redGemAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redGemHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redGemSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redGemShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redGemPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redGemAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redGemHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redGemSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redGemShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.redGemHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8) });
@@ -467,11 +468,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.magnesiumItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.magnesiumHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot) });
@@ -525,11 +526,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.crystalItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.crystalPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.crystalAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.crystalHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.crystalSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.crystalShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.crystalPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.crystalAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.crystalHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.crystalSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.crystalShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.crystalHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal) });
@@ -540,11 +541,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.whiteGemItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.whiteGemShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.whiteGemHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem) });
@@ -598,11 +599,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.blueGemItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueGemPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueGemAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueGemHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueGemSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueGemShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueGemPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueGemAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueGemHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueGemSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueGemShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.blueGemHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem) });
@@ -613,11 +614,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.zincItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.zincShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.zincPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.zincAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.zincHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.zincSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.zincShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.zincHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier8Items, 1, ingot) });
@@ -658,11 +659,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.tungstenItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.tungstenShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.tungstenPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.tungstenAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.tungstenHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.tungstenSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.tungstenShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.tungstenHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5) });
@@ -724,12 +725,12 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 4, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bMapleLog2, 1, 1) });
 
 			// Planks to Sticks(4 Sticks per 2 Planks)
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
-			GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier11Items, 4, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier11Items, 4, 6), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier11Items, 4, 7), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier11Items, 4, 8), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier11Items, 4, 9), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier11Items, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
 
 			// Planks to Pressure Plates (4 Planks per 8 Pressure Plates)
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_pressure_plate, 8, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0),
@@ -776,38 +777,38 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), 'S', new ItemStack(Items.stick) });
 			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), 'S', new ItemStack(Items.stick) });
 			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), 'S', new ItemStack(Items.stick) });
-
+			
 			if (Config.kepler22bItems) {
 				// Tools
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.blueDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0), 'S', "stickWood" }));
 
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.redDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 1), 'S', "stickWood" }));
 
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.purpleDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 2), 'S', "stickWood" }));
 
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.yellowDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 3), 'S', "stickWood" }));
 
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', Item.itemRegistry.getObject("stick") });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', Item.itemRegistry.getObject("stick") });
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondAxe), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondHoe), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondSword), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', "stickWood" }));
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.greenDiamondShovel), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 4), 'S', "stickWood" }));
 
 				// Armour
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.blueDiamondHelmet), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier11Items, 1, 0) });

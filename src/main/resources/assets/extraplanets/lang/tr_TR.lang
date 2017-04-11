@@ -759,6 +759,13 @@ item.thermalCloth.tier2ThermalCloth.name=Tier 2 Termal İçlik
 item.thermalCloth.tier3ThermalCloth.name=Tier 3 Termal İçlik
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Termal İçlik
 
+#Sticks
+item.tier11.blueSticks.name=Blue Sticks
+item.tier11.redSticks.name=Red Sticks
+item.tier11.yellowSticks.name=Yellow Sticks
+item.tier11.purpleSticks.name=Purple Sticks
+item.tier11.greenSticks.name=Green Sticks
+
 #Other Items
 item.appleDiamond.name=Elmas Elma
 item.appleIron.name=Demir Elma

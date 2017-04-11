@@ -415,6 +415,11 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier11Items, 1, 2));
 			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(tier11Items, 1, 3));
 			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(tier11Items, 1, 4));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 5));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 6));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 7));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 8));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 9));
 		}
 	}
 }
