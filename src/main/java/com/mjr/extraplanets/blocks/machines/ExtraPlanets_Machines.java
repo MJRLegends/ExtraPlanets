@@ -1,11 +1,13 @@
 package com.mjr.extraplanets.blocks.machines;
 
+import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
+import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.TileEntitySolar;
 
@@ -15,6 +17,7 @@ public class ExtraPlanets_Machines {
 	// Machines
 	public static Block advancedRefinery;
 	public static Block solarPanel;
+	public static Block advancedFuelLoader;
 
 	public static void init() {
 		initializeMachinesBlocks();
@@ -27,6 +30,7 @@ public class ExtraPlanets_Machines {
 			advancedRefinery = new AdvancedRefinery("advancedRefinery");
 		if (Config.solarPanels)
 			solarPanel = new BlockSolar("solar");
+		advancedFuelLoader = new AdvancedFuelLoader("advancedFuelLoader");
 	}
 
 	private static void registerMachines() {
@@ -37,6 +41,8 @@ public class ExtraPlanets_Machines {
 			GCCoreUtil.registerGalacticraftBlock("solarPanelUltimate", solarPanel, 4);
 			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName());
 		}
+		GameRegistry.registerBlock(advancedFuelLoader, ItemBlockDesc.class, advancedFuelLoader.getUnlocalizedName());
+
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -44,5 +50,7 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
 		if (Config.advancedRefinery)
 			GameRegistry.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
+		GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
+
 	}
 }

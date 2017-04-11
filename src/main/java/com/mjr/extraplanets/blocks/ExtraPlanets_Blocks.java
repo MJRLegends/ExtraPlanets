@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.blocks;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
+import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
@@ -43,6 +44,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+import com.mjr.extraplanets.itemBlocks.ItemBlockCustomLandingPad;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCeres;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockDeimos;
@@ -85,6 +87,10 @@ import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tile.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tile.TileEntityTier2LandingPadSingle;
+import com.mjr.extraplanets.tile.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tile.TileEntityTier3LandingPadSingle;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
@@ -204,6 +210,9 @@ public class ExtraPlanets_Blocks {
 	// Planks
 	public static Block kepler22bPlanks;
 
+	public static Block advancedLaunchPad;
+	public static Block advancedLaunchPadFull;
+
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
@@ -228,7 +237,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.venus) {
 			venusBlocks = new BlockBasicVenus("venus");
 			venusGravel = new BlockCustomGravel("venusGravel");
-			ashBlock= new BlockAshBlock("ashBlock");
+			ashBlock = new BlockAshBlock("ashBlock");
 			volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanicRock").setBlockTextureName(Constants.TEXTURE_PREFIX + "volcanicRock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
 		}
 		if (Config.ceres) {
@@ -321,6 +330,8 @@ public class ExtraPlanets_Blocks {
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow", "kepler22b");
 			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22bFlowers");
 		}
+		advancedLaunchPad = new BlockCustomLandingPad("advancedLaunchPad");
+		advancedLaunchPadFull = new BlockCustomLandingPadFull("advancedLaunchPadFull");
 	}
 
 	private static void initializeDungeonBlocks() {
@@ -436,7 +447,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(venusSpawner, "venusSpawner");
 			GameRegistry.registerBlock(veunsDungeonBrick, "veunsDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName());
-			
+
 			GameRegistry.registerBlock(ashBlock, "ashBlock");
 			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
 		}
@@ -551,6 +562,9 @@ public class ExtraPlanets_Blocks {
 		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
 		GameRegistry.registerBlock(fireBomb, "fireBomb");
+
+		GameRegistry.registerBlock(advancedLaunchPad, ItemBlockCustomLandingPad.class, advancedLaunchPad.getUnlocalizedName());
+		GameRegistry.registerBlock(advancedLaunchPadFull, ItemBlockGC.class, advancedLaunchPadFull.getUnlocalizedName());
 	}
 
 	private static void registerTileEntitys() {
@@ -597,6 +611,11 @@ public class ExtraPlanets_Blocks {
 			else
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPadSingle.class, "Tier 2 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPad.class, "Tier 2 Landing Pad Full");
+
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPadSingle.class, "Tier 3 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPad.class, "Tier 3 Landing Pad Full");
 	}
 
 	private static void setHarvestLevels() {

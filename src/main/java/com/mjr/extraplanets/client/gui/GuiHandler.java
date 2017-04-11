@@ -8,10 +8,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.client.gui.machines.GuiAdvancedFuelLoader;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiSolar;
+import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
+import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.TileEntitySolar;
 
@@ -37,6 +40,8 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile);
 			} else if (tile instanceof TileEntitySolar) {
 				return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
+			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
+				return new ContainerAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
 			}
 		}
 		return null;
@@ -60,6 +65,8 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position.intX(), position.intY(), position.intZ()));
 			} else if (tile instanceof TileEntitySolar) {
 				return new GuiSolar(player.inventory, (TileEntitySolar) tile);
+			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
+				return new GuiAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
 			}
 		}
 		return null;
