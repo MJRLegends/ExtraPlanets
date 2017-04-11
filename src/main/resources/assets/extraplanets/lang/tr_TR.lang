@@ -401,9 +401,14 @@ tile.solarhybrid.description=Karışık Güneş Paneli, hem gece hemde gündüz 
 tile.solarultimate.description=En Yüksek Güneş Paneli, hem gece hemde gündüz enerji toplar. Normal güneş panelinden daha fazla enerji üretir.
 container.solarhybrid.name=Karışık Güneş Paneli
 container.solarultimate.name=En Yüksek Güneş Paneli
+tile.advancedFuelLoader.name=Advanced Fuel Loader
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 
 #Other Blocks
 tile.nuclearBomb.name=Nükleer bomba
+tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=Volkanik Kaya
 tile.frozenNitrogen.name=Donmuş Nitrojen
 tile.denseIce.name=Yoğun Buz

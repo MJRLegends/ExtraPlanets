@@ -402,9 +402,14 @@ tile.solarhybrid.description=Tento solární panel bude pracovat během dne i no
 tile.solarultimate.description=Tento solární panel bude pracovat během dne i noci
 container.solarhybrid.name=Hybridní solární panel
 container.solarultimate.name=Ultimátlní solární panel
+tile.advancedFuelLoader.name=Advanced Fuel Loader
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 
 #Other Blocks
 tile.nuclearBomb.name=Jaderná bomba
+tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=Vulkanický kámen
 tile.frozenNitrogen.name=Zmrzný dusík
 tile.denseIce.name=Hustý led

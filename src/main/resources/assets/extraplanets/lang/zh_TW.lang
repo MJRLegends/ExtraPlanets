@@ -405,9 +405,14 @@ tile.solarhybrid.description=混合型高級太陽能電池板能全天候工作
 tile.solarultimate.description=最終混合型高級太陽能電池板能全天候工作。
 container.solarhybrid.name=混合型高級太陽能電池板
 container.solarultimate.name=最終混合型高級太陽能電池板
+tile.advancedFuelLoader.name=Advanced Fuel Loader
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 
 #Other Blocks
 tile.nuclearBomb.name=核彈
+tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=火山岩
 tile.frozenNitrogen.name=冷凍氮
 tile.denseIce.name=堅冰

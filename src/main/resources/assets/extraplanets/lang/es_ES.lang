@@ -401,9 +401,14 @@ tile.solarhybrid.description=Este Panel Solar trabajará durante el día y la no
 tile.solarultimate.description=Este Panel Solar trabajará durante el día y la noche
 container.solarhybrid.name=Panel Solar Híbrido
 container.solarultimate.name=Panel Solar Definitivo
+tile.advancedFuelLoader.name=Advanced Fuel Loader
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 
 #Other Blocks
 tile.nuclearBomb.name=Bomba nuclear
+tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=Roca volcánica
 tile.frozenNitrogen.name=Nitrógeno congelado
 tile.denseIce.name=Hielo denso
