@@ -79,6 +79,7 @@ tile.venus.OreCopper.name=Měděná ruda z Venuše
 tile.venus.OreCarbon.name=Karbonová Ruda
 tile.venus.stoneBricks.name=Venus Stone Bricks
 tile.venus.carbonBlock.name=Block of Carbon
+tile.venus.titaniumBlock.name=Block of Titanium
 
 tile.ceres.surface.name=Povrchový kámen z Ceresu
 tile.ceres.subSurface.name=Podpovrchový kámen z Ceresu
@@ -406,11 +407,14 @@ tile.advancedFuelLoader.name=Advanced Fuel Loader
 tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
+tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
+tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
 #Other Blocks
 tile.nuclearBomb.name=Jaderná bomba
 tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=Vulkanický kámen
+tile.ashBlock.name=Block of Ash
 tile.frozenNitrogen.name=Zmrzný dusík
 tile.denseIce.name=Hustý led
 tile.fossil.name=Fosilní blok
@@ -487,6 +491,7 @@ item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Karbonový Ingot
+item.tier4.ingotVolcanic.name=Volcanic Ingot
 item.tier5.ingotPalladium.name=Palladiový Ingot
 item.tier6.ingotMagnesium.name=Magnesiový Ingot
 item.tier7.ingotCrystal.name=Krystalový Ingot
@@ -496,6 +501,11 @@ item.ingotMercury.name=Měděný Ingot
 item.ingotUranium.name=Uranový Ingot
 item.tier9.ingotTungsten.name=Tungstenový Ingot
 item.tier10.ingotDarkIron.name=Dark Iron Ingot
+
+#Shards
+item.tier4.ashShard.name=Ash Shard
+item.tier4.volcanicShard.name=Volcanic Shard
+item.tier6.magnesiumShard.name=Magnesium Shard
 
 #Gems
 item.tier5.redGem.name=Red Gem
@@ -744,8 +754,9 @@ item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 item.appleDiamond.name=Diamantové jablko
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Plechovka jídla
-item.bodyparts.arm.name=Paže
-item.bodyparts.leg.name=Noha
+item.tier4.ash.name=Ash
+item.tier4.sledgeHammer.name=Sledge Hammer
+item.tier4.grindingWheel.name=Grinding Wheel
 
 item.cannedfood.dehydratedPorkchop.name=Dehydrované vepřové
 item.cannedfood.dehydratedFish.name=Dehydrovaná ryba

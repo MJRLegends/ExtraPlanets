@@ -80,6 +80,7 @@ tile.venus.oreCopper.name=金星銅礦石
 tile.venus.oreCarbon.name=金星碳礦石
 tile.venus.stoneBricks.name=金星石磚
 tile.venus.carbonBlock.name=碳塊
+tile.venus.titaniumBlock.name=Block of Titanium
 
 tile.ceres.surface.name=穀神星地表岩石
 tile.ceres.subSurface.name=穀神星地底岩石
@@ -409,11 +410,14 @@ tile.advancedFuelLoader.name=Advanced Fuel Loader
 tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
+tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
+tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
 #Other Blocks
 tile.nuclearBomb.name=核彈
 tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=火山岩
+tile.ashBlock.name=Block of Ash
 tile.frozenNitrogen.name=冷凍氮
 tile.denseIce.name=堅冰
 tile.fossil.name=化石塊
@@ -490,6 +494,7 @@ item.tier10.compressedDarkIron.name=緻密黑鐵板
 
 #Ingots
 item.tier4.ingotCarbon.name=碳錠
+item.tier4.ingotVolcanic.name=Volcanic Ingot
 item.tier5.ingotPalladium.name=鈀錠
 item.tier6.ingotMagnesium.name=鎂錠
 item.tier7.ingotCrystal.name=水晶塊
@@ -499,6 +504,11 @@ item.ingotMercury.name=汞錠
 item.ingotUranium.name=鈾錠
 item.tier9.ingotTungsten.name=鎢錠
 item.tier10.ingotDarkIron.name=黑鐵錠
+
+#Shards
+item.tier4.ashShard.name=Ash Shard
+item.tier4.volcanicShard.name=Volcanic Shard
+item.tier6.magnesiumShard.name=Magnesium Shard
 
 #Gems
 item.tier5.redGem.name=紅寶石
@@ -748,8 +758,9 @@ item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 item.appleDiamond.name=鑽石蘋果
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=罐頭食品
-item.bodyparts.arm.name=手
-item.bodyparts.leg.name=腳
+item.tier4.ash.name=Ash
+item.tier4.sledgeHammer.name=Sledge Hammer
+item.tier4.grindingWheel.name=Grinding Wheel
 
 item.cannedfood.dehydratedPorkchop.name=脫水豬排
 item.cannedfood.dehydratedFish.name=脫水魚

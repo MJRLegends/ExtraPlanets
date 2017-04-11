@@ -79,6 +79,7 @@ tile.venus.oreCopper.name=Venus Copper Ore
 tile.venus.oreCarbon.name=Carbon Ore
 tile.venus.stoneBricks.name=Venus Stone Bricks
 tile.venus.carbonBlock.name=Block of Carbon
+tile.venus.titaniumBlock.name=Block of Titanium
 
 tile.ceres.surface.name=Ceres Surface Rock
 tile.ceres.subSurface.name=Ceres Sub-Surface Rock
@@ -406,11 +407,14 @@ tile.advancedFuelLoader.name=Advanced Fuel Loader
 tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
+tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
+tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
 #Other Blocks
 tile.nuclearBomb.name=Nuclear Bomb
 tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=Volcanic Rock
+tile.ashBlock.name=Block of Ash
 tile.frozenNitrogen.name=Frozen Nitrogen
 tile.denseIce.name=Dense Ice
 tile.fossil.name=Fossil Block
@@ -487,6 +491,7 @@ item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Carbon Ingot
+item.tier4.ingotVolcanic.name=Volcanic Ingot
 item.tier5.ingotPalladium.name=Palladium Ingot
 item.tier6.ingotMagnesium.name=Magnesium Ingot
 item.tier7.ingotCrystal.name=Crystal Ingot
@@ -496,6 +501,11 @@ item.ingotMercury.name=Mercury Ingot
 item.ingotUranium.name=Uranium Ingot
 item.tier9.ingotTungsten.name=Tungsten Ingot
 item.tier10.ingotDarkIron.name=Dark Iron Ingot
+
+#Shards
+item.tier4.ashShard.name=Ash Shard
+item.tier4.volcanicShard.name=Volcanic Shard
+item.tier6.magnesiumShard.name=Magnesium Shard
 
 #Gems
 item.tier5.redGem.name=Red Gem
@@ -745,8 +755,9 @@ item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 item.appleDiamond.name=Diamond Apple
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Can of Food
-item.bodyparts.arm.name=Arm
-item.bodyparts.leg.name=Leg
+item.tier4.ash.name=Ash
+item.tier4.sledgeHammer.name=Sledge Hammer
+item.tier4.grindingWheel.name=Grinding Wheel
 
 item.cannedfood.dehydratedPorkchop.name=Dehydrated Porkchop
 item.cannedfood.dehydratedFish.name=Dehydrated Fish

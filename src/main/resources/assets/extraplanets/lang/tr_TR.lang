@@ -79,6 +79,7 @@ tile.venus.oreCopper.name=Venüs Bakır Cevheri
 tile.venus.oreCarbon.name=Karbon Cevheri
 tile.venus.stoneBricks.name=Venüs Taş Tuğla
 tile.venus.carbonBlock.name=Karbon Bloğu
+tile.venus.titaniumBlock.name=Block of Titanium
 
 tile.ceres.surface.name=Ceres Yüzey Kayası
 tile.ceres.subSurface.name=Ceres Yeraltı Kayası
@@ -405,11 +406,14 @@ tile.advancedFuelLoader.name=Advanced Fuel Loader
 tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
+tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
+tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
 #Other Blocks
 tile.nuclearBomb.name=Nükleer bomba
 tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=Volkanik Kaya
+tile.ashBlock.name=Block of Ash
 tile.frozenNitrogen.name=Donmuş Nitrojen
 tile.denseIce.name=Yoğun Buz
 tile.fossil.name=Fosil Bloğu
@@ -486,6 +490,7 @@ item.tier10.compressedDarkIron.name=Sıkıştırılmış Koyulaştırılmış De
 
 #Ingots
 item.tier4.ingotCarbon.name=Karbon Külçesi
+item.tier4.ingotVolcanic.name=Volcanic Ingot
 item.tier5.ingotPalladium.name=Paladyum Külçesi
 item.tier6.ingotMagnesium.name=Magnezyum Külçesi
 item.tier7.ingotCrystal.name=Kristal Külçesi
@@ -495,6 +500,11 @@ item.ingotMercury.name=Civa Külçesi
 item.ingotUranium.name=Uranyum Külçesi
 item.tier9.ingotTungsten.name=Tungsten Külçesi
 item.tier10.ingotDarkIron.name=Koyu Demir Külçesi
+
+#Shards
+item.tier4.ashShard.name=Ash Shard
+item.tier4.volcanicShard.name=Volcanic Shard
+item.tier6.magnesiumShard.name=Magnesium Shard
 
 #Gems
 item.tier5.redGem.name=Kırmızıtaş
@@ -743,8 +753,9 @@ item.thermalCloth.tier4ThermalCloth.name=Tier 4 Termal İçlik
 item.appleDiamond.name=Elmas Elma
 item.appleIron.name=Demir Elma
 item.cannedfood.cannedFood.name=Uzay Yiyecekleri
-item.bodyparts.arm.name=Kol
-item.bodyparts.leg.name=Bacak
+item.tier4.ash.name=Ash
+item.tier4.sledgeHammer.name=Sledge Hammer
+item.tier4.grindingWheel.name=Grinding Wheel
 
 item.cannedfood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
 item.cannedfood.dehydratedFish.name=Susuz Balık
