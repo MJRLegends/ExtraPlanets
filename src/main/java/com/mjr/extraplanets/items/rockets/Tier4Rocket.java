@@ -54,8 +54,6 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 					int meta = par3World.getBlockMetadata(par4 + i, par5, par6 + j);
 
 					if (id == ExtraPlanets_Blocks.advancedLaunchPadFull && meta == 0) {
-						// if (id == GCBlocks.landingPadFull && meta == 0) {
-
 						padFound = true;
 						tile = par3World.getTileEntity(par4 + i, par5, par6 + j);
 

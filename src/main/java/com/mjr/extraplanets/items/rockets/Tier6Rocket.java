@@ -5,8 +5,6 @@ import java.util.List;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
@@ -19,7 +17,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
+import com.mjr.extraplanets.tile.TileEntityTier2LandingPad;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -48,18 +48,18 @@ public class Tier6Rocket extends Item implements IHoldableItem {
 			float centerY = -1;
 			float centerZ = -1;
 
-			for (int i = -1; i < 2; i++) {
-				for (int j = -1; j < 2; j++) {
+			for (int i = -1; i < 4; i++) {
+				for (int j = -1; j < 4; j++) {
 					final Block id = par3World.getBlock(par4 + i, par5, par6 + j);
 					int meta = par3World.getBlockMetadata(par4 + i, par5, par6 + j);
 
-					if (id == GCBlocks.landingPadFull && meta == 0) {
+					if (id == ExtraPlanets_Blocks.advancedLaunchPadFull && meta == 0) {
 						padFound = true;
 						tile = par3World.getTileEntity(par4 + i, par5, par6 + j);
 
-						centerX = par4 + i + 0.5F;
+						centerX = par4 + i + 1.5F;
 						centerY = par5 + 0.4F;
-						centerZ = par6 + j + 0.5F;
+						centerZ = par6 + j + 1.5F;
 
 						break;
 					}
@@ -71,8 +71,8 @@ public class Tier6Rocket extends Item implements IHoldableItem {
 
 			if (padFound) {
 				// Check whether there is already a rocket on the pad
-				if (tile instanceof TileEntityLandingPad) {
-					if (((TileEntityLandingPad) tile).getDockedEntity() != null)
+				if (tile instanceof TileEntityTier2LandingPad) {
+					if (((TileEntityTier2LandingPad) tile).getDockedEntity() != null)
 						return false;
 				} else {
 					return false;

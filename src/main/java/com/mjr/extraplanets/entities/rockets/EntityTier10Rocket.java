@@ -2,24 +2,26 @@ package com.mjr.extraplanets.entities.rockets;
 
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tile.TileEntityTier3LandingPad;
 
 public class EntityTier10Rocket extends EntityTieredRocket {
 	public EntityTier10Rocket(World par1World) {
@@ -35,10 +37,38 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 		this.setSize(5.2F, 13.0F);
 		this.yOffset = 1.5F;
 	}
+	
+	@Override
+	public void landEntity(int x, int y, int z)
+    {
+        TileEntity tile = this.worldObj.getTileEntity(x, y, z);
 
+        if (tile instanceof IFuelDock)
+        {
+            IFuelDock dock = (IFuelDock) tile;
+
+            if (this.isDockValid(dock))
+            {
+                if (!this.worldObj.isRemote)
+                {
+                    //Drop any existing rocket on the landing pad
+                	if (dock.getDockedEntity() instanceof EntitySpaceshipBase && dock.getDockedEntity() != this)
+                    {
+                    	((EntitySpaceshipBase)dock.getDockedEntity()).dropShipAsItem();
+                    	((EntitySpaceshipBase)dock.getDockedEntity()).setDead();
+                    }
+                	
+                    this.setPad(dock);
+                }
+
+                this.onRocketLand(x + 1, y, z + 1);
+            }
+        }
+    }
+	
 	@Override
 	protected void onRocketLand(int x, int y, int z) {
-		this.setPositionAndRotation(x + 0.5, y + 2.0D, z + 0.5, this.rotationYaw, 0.0F);
+		this.setPositionAndRotation(x + 0.5, y + 2.0D, z + 1.2, this.rotationYaw, 0.0F);
 		this.stopRocketSound();
 	}
 
@@ -213,7 +243,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 
 	@Override
 	public boolean isDockValid(IFuelDock dock) {
-		return dock instanceof TileEntityLandingPad;
+		return dock instanceof TileEntityTier3LandingPad;
 	}
 
 	@Override
