@@ -117,8 +117,8 @@ public class ItemRendererTier9Rocket implements IItemRenderer
 			{
 				GL11.glRotatef(85F, 1F, 0F, 1F);
 				GL11.glRotatef(20F, 1F, 0F, 0F);
-				GL11.glScalef(0.4F, 0.3F, 0.4F);
-				GL11.glTranslatef(1.1F, 1.8F, -0.4F);
+				GL11.glScalef(0.4F, 0.4F, 0.4F);
+				GL11.glTranslatef(1.4F, 3.8F, -0.4F);
 			}
 			else
 			{

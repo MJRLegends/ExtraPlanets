@@ -85,7 +85,7 @@ public class ItemRendererTier10Rocket implements IItemRenderer
 			GL11.glRotatef(70, 1.0F, 0, 0);
 			GL11.glRotatef(-10, 0.0F, 1, 0);
 			GL11.glRotatef(50, 0.0F, 1, 1);
-			GL11.glTranslatef(-0.8F, -3.2F, 0F);
+			GL11.glTranslatef(-12.9F, -13.2F, 0F);
 			GL11.glScalef(5.2F, 5.2F, 5.2F);
 
 			if (player != null && player.ridingEntity != null && player.ridingEntity instanceof EntityTier1Rocket)
@@ -96,7 +96,7 @@ public class ItemRendererTier10Rocket implements IItemRenderer
 
 		if (type == ItemRenderType.EQUIPPED_FIRST_PERSON)
 		{
-			GL11.glTranslatef(12.5F, 15.9F, -10F);
+			GL11.glTranslatef(20.5F, 21.9F, 4F);
 			GL11.glRotatef(28, 0.0F, 0, 1);
 			GL11.glRotatef(50 + 180, 0.0F, 1, 0);
 			GL11.glRotatef(73, 1.0F, 0, 0);
@@ -117,8 +117,8 @@ public class ItemRendererTier10Rocket implements IItemRenderer
 			{
 				GL11.glRotatef(85F, 1F, 0F, 1F);
 				GL11.glRotatef(20F, 1F, 0F, 0F);
-				GL11.glScalef(0.3F, 0.2F, 0.3F);
-				GL11.glTranslatef(-1.5F, 1.6F, -0.4F);
+				GL11.glScalef(0.22F, 0.22F, 0.22F);
+				GL11.glTranslatef(1.3F, 6.5F, -0.4F);
 			}
 			else
 			{
