@@ -19,6 +19,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.proxy.ClientProxy;
 import com.mjr.extraplanets.tile.TileEntityTier2LandingPad;
 import com.mjr.extraplanets.tile.TileEntityTier3LandingPad;
@@ -97,9 +98,9 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 
 	@Override
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.icons[0] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "launch_pad");
-		this.icons[1] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "launch_pad");
-		this.blockIcon = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "launch_pad");
+		this.icons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
+		this.icons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier3_launch_pad");
+		this.blockIcon = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
 	}
 
 	@Override
