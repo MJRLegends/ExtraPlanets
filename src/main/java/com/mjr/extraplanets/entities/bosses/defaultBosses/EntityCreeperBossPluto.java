@@ -225,7 +225,7 @@ public class EntityCreeperBossPluto extends EntityBossBase implements IEntityBre
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(10);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(9);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

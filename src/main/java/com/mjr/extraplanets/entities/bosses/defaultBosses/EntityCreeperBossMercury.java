@@ -225,7 +225,7 @@ public class EntityCreeperBossMercury extends EntityBossBase implements IEntityB
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(5);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(4);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

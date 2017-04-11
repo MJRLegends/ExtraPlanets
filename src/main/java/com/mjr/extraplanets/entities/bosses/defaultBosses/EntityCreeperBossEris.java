@@ -225,7 +225,7 @@ public class EntityCreeperBossEris extends EntityBossBase implements IEntityBrea
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(11);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(10);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

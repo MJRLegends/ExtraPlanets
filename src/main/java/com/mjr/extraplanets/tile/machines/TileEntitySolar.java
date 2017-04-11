@@ -1,6 +1,9 @@
 package com.mjr.extraplanets.tile.machines;
 
+import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.LinkedList;
+import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.tile.IDisableableMachine;
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
@@ -10,10 +13,12 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
+import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectricalSource;
 import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
+import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
@@ -35,7 +40,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
-import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 
 public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IPacketReceiver, IDisableableMachine, IInventory, ISidedInventory, IConnector {
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -52,6 +56,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	public int generateWatts = 0;
 
 	private boolean initialised = false;
+	private boolean initialisedMulti = false;
 
 	public TileEntitySolar() {
 		this(1);
@@ -81,6 +86,10 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 				this.setTierGC(2);
 			}
 			this.initialised = true;
+		}
+
+		if (!this.initialisedMulti) {
+			this.initialisedMulti = this.initialiseMultiTiles(this.getPos(), this.worldObj);
 		}
 
 		this.receiveEnergyGC(null, this.generateWatts, false);
@@ -193,6 +202,25 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		this.produce();
 	}
 
+	protected boolean initialiseMultiTiles(BlockPos pos, World world) {
+		// Client can create its own fake blocks and tiles - no need for networking in 1.8+
+		if (world.isRemote)
+			this.onCreate(world, pos);
+
+		List<BlockPos> positions = new ArrayList();
+		this.getPositions(pos, positions);
+		boolean result = true;
+		for (BlockPos vecToAdd : positions) {
+			TileEntity tile = world.getTileEntity(vecToAdd);
+			if (tile instanceof TileEntityMulti) {
+				((TileEntityMulti) tile).mainBlockPosition = pos;
+			} else {
+				result = false;
+			}
+		}
+		return result;
+	}
+
 	public int getGenerate() {
 		if (this.getDisabled(0)) {
 			return 0;
@@ -217,59 +245,72 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		return false;
 	}
 
-	// @Override
-	// public boolean canUpdate()
-	// {
-	// return true;
-	// }
+	 @Override
+	    public void onCreate(World world, BlockPos placedPosition)
+	    {
+	        List<BlockPos> positions = new LinkedList();
+	        this.getPositions(placedPosition, positions);
+	        if (positions.size() > 0)
+	        {
+	            ((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, positions.get(0), placedPosition, EnumBlockMultiType.SOLAR_PANEL_0.getMeta());
+	            positions.remove(0);
+	        }
+	        ((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, positions, placedPosition, (this.getTierGC() == 1) ? EnumBlockMultiType.SOLAR_PANEL_1 : EnumBlockMultiType.SOLAR_PANEL_0);
+	    }
+	    
+	    @Override
+	    public void getPositions(BlockPos placedPosition, List<BlockPos> positions)
+	    {
+	        int buildHeight = this.worldObj.getHeight() - 1;
+	        int y = placedPosition.getY() + 1; 
+	        if (y > buildHeight)
+	        {
+	            return;
+	        }
+	        positions.add(new BlockPos(placedPosition.getX(), y, placedPosition.getZ()));
 
-	@Override
-	public void onCreate(World world, BlockPos placedPosition) {
-		int buildHeight = this.worldObj.getHeight() - 1;
+	        y++;
+	        if (y > buildHeight)
+	        {
+	            return;
+	        }
+	        for (int x = -1; x < 2; x++)
+	        {
+	            for (int z = -1; z < 2; z++)
+	            {
+	                positions.add(new BlockPos(placedPosition.getX() + x, y, placedPosition.getZ() + z));
+	            }
+	        }
+	    }
 
-		if (placedPosition.getY() + 1 > buildHeight) {
-			return;
-		}
-		final BlockPos vecStrut = new BlockPos(placedPosition.getX(), placedPosition.getY() + 1, placedPosition.getZ());
-		((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, vecStrut, placedPosition, 0);
+	    @Override
+	    public void onDestroy(TileEntity callingBlock)
+	    {
+	        final BlockPos thisBlock = getPos();
+	        List<BlockPos> positions = new ArrayList();
+	        this.getPositions(thisBlock, positions);
 
-		if (placedPosition.getY() + 2 > buildHeight) {
-			return;
-		}
-		for (int x = 0; x < 1; ++x) {
-			for (int z = 0; z < 1; ++z) {
-				final BlockPos vecToAdd = new BlockPos(placedPosition.getX() + x, placedPosition.getY() + 2, placedPosition.getZ() + z);
+	        for (BlockPos pos : positions)
+	        {
+	            IBlockState stateAt = this.worldObj.getBlockState(pos);
 
-				((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, vecToAdd, placedPosition, (this.getTierGC() == 1) ? 4 : 0);
-			}
-		}
-	}
+	            if (stateAt.getBlock() == GCBlocks.fakeBlock)
+	            {
+	                EnumBlockMultiType type = (EnumBlockMultiType) stateAt.getValue(BlockMulti.MULTI_TYPE);
+	                if ((type == EnumBlockMultiType.SOLAR_PANEL_0 || type == EnumBlockMultiType.SOLAR_PANEL_1))
+	                {
+	                    if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D)
+	                    {
+	                        FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, GCBlocks.solarPanel.getDefaultState());
+	                    }
 
-	@Override
-	public void onDestroy(TileEntity callingBlock) {
-		for (int y = 1; y <= 2; y++) {
-			for (int x = -1; x < 2; x++) {
-				for (int z = -1; z < 2; z++) {
-					BlockPos pos = getPos().add((y == 2 ? x : 0), y, (y == 2 ? z : 0));
-					IBlockState stateAt = this.worldObj.getBlockState(pos);
-					IBlockState stateBelow = this.worldObj.getBlockState(pos.down());
+	                    this.worldObj.setBlockToAir(pos);
+	                }
+	            }
+	        }
 
-					if (stateAt.getBlock() == GCBlocks.fakeBlock) {
-						BlockMulti.EnumBlockMultiType type = (BlockMulti.EnumBlockMultiType) stateAt.getValue(BlockMulti.MULTI_TYPE);
-						if ((type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_0 || type == BlockMulti.EnumBlockMultiType.SOLAR_PANEL_1) && ((x == 0 && z == 0) || (stateBelow.getBlock().isAir(this.worldObj.getBlockState(pos.down()), this.worldObj, pos.down())))) {
-							if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
-								FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, ExtraPlanets_Machines.SOLAR_PANEL.getDefaultState());
-							}
-
-							this.worldObj.setBlockToAir(pos);
-						}
-					}
-				}
-			}
-		}
-
-		this.worldObj.destroyBlock(getPos(), true);
-	}
+	        this.worldObj.destroyBlock(getPos(), true);
+	    }
 
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
@@ -316,12 +357,8 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		}
 
 		nbt.setTag("Items", list);
-        return nbt;
-    }
-
-	/*
-	 * @Override public float getRequest(EnumFacing direction) { return 0; }
-	 */
+		return nbt;
+	}
 
 	@Override
 	public EnumSet<EnumFacing> getElectricalInputDirections() {
@@ -342,12 +379,11 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		return getFront();
 	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public AxisAlignedBB getRenderBoundingBox()
-    {
-        return new AxisAlignedBB(getPos().getX() - 1, getPos().getY(), getPos().getZ() - 1, getPos().getX() + 2, getPos().getY() + 4, getPos().getZ() + 2);
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public AxisAlignedBB getRenderBoundingBox() {
+		return new AxisAlignedBB(getPos().getX() - 1, getPos().getY(), getPos().getZ() - 1, getPos().getX() + 2, getPos().getY() + 4, getPos().getZ() + 2);
+	}
 
 	@Override
 	public boolean hasCustomName() {
