@@ -29,6 +29,7 @@ import com.mjr.extraplanets.client.render.block.BlockRendererTier7TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier8TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier9TreasureChest;
 import com.mjr.extraplanets.client.render.block.TileEntitySolarPanelRenderer;
+import com.mjr.extraplanets.client.render.entities.RenderFireBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
@@ -72,6 +73,7 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
+import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
@@ -149,6 +151,7 @@ public class ClientProxy extends CommonProxy {
 
 		if (Config.nuclearBomb)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
+		RenderingRegistry.registerEntityRenderingHandler(EntityFireBombPrimed.class, new RenderFireBombPrimed());
 	}
 
 	@Override
