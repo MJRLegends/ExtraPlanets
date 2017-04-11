@@ -109,6 +109,8 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 1));
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 3));
 			}
+			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 0));
+			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 1));
 		}
 	}
 
