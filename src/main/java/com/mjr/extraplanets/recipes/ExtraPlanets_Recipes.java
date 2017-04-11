@@ -872,7 +872,11 @@ public class ExtraPlanets_Recipes {
 							new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7), 'P', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7), 'T',
 							new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5), 'A', new ItemStack(ExtraPlanets_Items.advancedBattery, 1, 0), 'Z', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5) });
 		}
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPad, 5, 0), new Object[] { "III", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'B', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 9) });
+		if(Config.venus)
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPad, 5, 0), new Object[] { "III", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'B', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 9) });
+		else
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPad, 5, 0), new Object[] { "III", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'B', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
+
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPad, 5, 1), new Object[] { "III", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 'B', new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 1, 7) });
 	}
 
