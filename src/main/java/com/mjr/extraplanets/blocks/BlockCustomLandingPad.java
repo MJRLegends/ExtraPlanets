@@ -18,6 +18,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tile.TileEntityTier2LandingPadSingle;
 import com.mjr.extraplanets.tile.TileEntityTier3LandingPadSingle;
 
@@ -35,11 +36,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 		this.setStepSound(Block.soundTypeMetal);
 		this.setBlockTextureName(GalacticraftCore.TEXTURE_PREFIX + assetName);
 		this.setBlockName(assetName);
-	}
-
-	@Override
-	public CreativeTabs getCreativeTabToDisplayOn() {
-		return GalacticraftCore.galacticraftBlocksTab;
+		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
