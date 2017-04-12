@@ -4,6 +4,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.api.item.IItemOxygenSupply;
+import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
@@ -69,7 +70,7 @@ public class ContainerUltimateOxygenCompressor extends Container
             }
             else
             {
-                if (stack.getItem() instanceof IItemElectric)
+                if (EnergyUtil.isElectricItem(stack.getItem()))
                 {
                     if (!this.mergeItemStack(stack, 1, 2, false))
                     {

@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.inventory.machines;
 
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
+import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
@@ -55,7 +56,7 @@ public class ContainerAdvancedOxygenDecompressor extends Container {
 					return null;
 				}
 			} else {
-				if (stack.getItem() instanceof IItemElectric) {
+				if (EnergyUtil.isElectricItem(stack.getItem())) {
 					if (!this.mergeItemStack(stack, 1, 2, false)) {
 						return null;
 					}
