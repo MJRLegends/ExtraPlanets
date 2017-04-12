@@ -26,8 +26,6 @@ TODO = Not yet done
 *Add Frozen Water Sea Biome to Uranus
 *Add Multi Biome System to Ceres
 *Add Salt Sea Biome to Uranus
-*Add Evolved Fire Skeleton Boss (Entity)
-*Add Evolved Fire Skeleton Boss to Jupiter Dungeon
 *Add Space Crops(Wheat, Carrots, Potato's) They will have different saturation and that levels from the vanilla ones 
 *Add Space Crops Seeds
 *Add Can of Golden Apple (Notch and normal), Can of Diamond Apple (Notch and normal), Can of Iron Apple (Notch and normal)
@@ -38,7 +36,22 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-
+v1.6.0
+*Incressed generation of Lava on Venus and Magma on Jupiter
+*Added Ash block, Ash shards, Sledge Hammer item, Grinding Wheel item, Volcanic Shard, and Volcanic Ingot
+*Added Fire Bomb block & entity
+*Added Magnesium Shard item
+*Added Custom Tier 4 - 10 Rocket models (Thanks to LegendGamer for the models)
+*Added Tier 2 & 3 Launch Pads (WIP) & Advanced Fuel Loader (WIP)
+*Tier 4 - 10 Rocket fixes for new Launch pads
+*Updated lang files
+*Made Ash blocks spawn in Volcanos
+*Added recipe for Ash block, Ash shards, Sledge Hammer item, Grinding Wheel item, Volcanic Shard, and Volcanic Ingot
+*Added Block of Titanium
+*Added Block of Titanium Recipes and Tier 2 & 3 Launch pad recipes
+*Added Stone Brick Stairs for all the planets (Except Kepler22b)
+*Tier 4 - 10 Rocket rendering fixes/tweaks
+*Added Blue, Red, Purple, Yellow, Green Sticks
 ======================================================================================================
 
 
