@@ -73,7 +73,7 @@ public class ContainerUltimateRefinery extends Container {
 					slot.onSlotChange(var4, var2);
 				}
 			} else {
-				if (var4.getItem() instanceof IItemElectric) {
+				if (EnergyUtil.isElectricItem(var5.getItem())) {
 					if (!this.mergeItemStack(var4, 0, 1, false)) {
 						return null;
 					}

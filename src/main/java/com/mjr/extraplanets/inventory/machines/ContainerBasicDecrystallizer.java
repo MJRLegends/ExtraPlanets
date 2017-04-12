@@ -87,7 +87,7 @@ public class ContainerBasicDecrystallizer extends Container
             }
             else
             {
-                if (var4.getItem() instanceof IItemElectric)
+                if (EnergyUtil.isElectricItem(var5.getItem()))
                 {
                     if (!this.mergeItemStack(var4, 0, 1, false))
                     {
