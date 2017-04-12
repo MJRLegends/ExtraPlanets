@@ -1,5 +1,5 @@
 {
-    "parent": "builtin/generated",
+    "parent": "item/generated",
     "textures": {
         "layer0": "extraplanets:items/tier1_un_prepared_space_suit_legings"
     },

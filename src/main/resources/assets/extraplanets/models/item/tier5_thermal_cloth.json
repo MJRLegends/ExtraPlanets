@@ -1,5 +1,5 @@
 {
-    "parent": "builtin/generated",
+    "parent": "item/generated",
     "textures": {
         "layer0": "extraplanets:items/thermal_cloth.tier5_thermal_cloth"
     },
