@@ -531,7 +531,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(8);
+		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(7);
         return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 }

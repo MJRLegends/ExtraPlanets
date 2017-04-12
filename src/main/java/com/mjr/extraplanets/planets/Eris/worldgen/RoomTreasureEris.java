@@ -5,14 +5,12 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
 
 public class RoomTreasureEris extends RoomTreasure {
 	public RoomTreasureEris() {
@@ -63,10 +61,6 @@ public class RoomTreasureEris extends RoomTreasure {
 						this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
 						this.setBlockState(worldIn, ExtraPlanets_Blocks.treasureChestTier10.getDefaultState().withProperty(T10TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
-						BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
-						if (worldIn.getTileEntity(blockpos) == null) {
-							worldIn.setTileEntity(blockpos, new TileEntityT10TreasureChest(10));
-						}
 					} else {
 						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
 					}
