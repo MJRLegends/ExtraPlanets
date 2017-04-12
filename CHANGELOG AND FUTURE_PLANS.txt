@@ -14,6 +14,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+0.8.5 Beta Build
+*Updated Galacticraft API to latest & Fixes for Dungeon Bosses
+*Compatibility: full IC2 compatibility
+*Fixes for Dungeons & Dungeon Bosses
+*Fixes for Treasure Chests & Dungeon Spawners
+
 0.8.1 Beta Build
 *Fixed config issue when disabling Lead Ore Generation option (Fixes #75)
 
