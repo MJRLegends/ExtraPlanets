@@ -8,7 +8,12 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-
+0.3.0 Beta Build
+*Fixed bucket handler crash (Issue #77)
+*Updated Galacticraft API to latest & Fixes for Dungeon Bosses
+*Fixes for Dungeons & Treasure Chests & Dungeon Bosses & Dungeon Spawners
+*Compatibility: full IC2 compatibility
+*Fixed All item json files using the wrong parent
 ======================================================================================================
 
 
