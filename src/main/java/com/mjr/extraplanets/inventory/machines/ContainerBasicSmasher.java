@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.inventory.machines;
 
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
+import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -88,7 +89,7 @@ public class ContainerBasicSmasher extends Container
             }
             else
             {
-                if (EnergyUtil.isElectricItem(var5.getItem()))
+                if (EnergyUtil.isElectricItem(var4.getItem()))
                 {
                     if (!this.mergeItemStack(var4, 0, 1, false))
                     {
