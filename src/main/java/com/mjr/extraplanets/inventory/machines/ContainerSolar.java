@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.inventory.machines;
 
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
+import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -53,7 +54,7 @@ public class ContainerSolar extends Container {
 					return null;
 				}
 			} else {
-				if (stack.getItem() instanceof IItemElectric) {
+				if (EnergyUtil.isElectricItem(stack.getItem())) {
 					if (!this.mergeItemStack(stack, 0, 1, false)) {
 						return null;
 					}
