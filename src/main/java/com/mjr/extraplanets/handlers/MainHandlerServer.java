@@ -79,13 +79,17 @@ public class MainHandlerServer {
 	public void onPlayer(PlayerTickEvent event) {
 		if (event.player.worldObj.provider.getDimensionId() == Config.jupiterID) {
 			Random rand = new Random();
-			int addX = rand.nextInt(25);
-			int addZ = rand.nextInt(25);
+			int addX = rand.nextInt(35);
+			int addZ = rand.nextInt(35);
 			if (rand.nextInt(2) == 1)
 				addX = -addX;
 			if (rand.nextInt(2) == 1)
 				addZ = -addZ;
-			int lightingSpawnChance = rand.nextInt(50);
+			if(addX <= 3)
+				addX = 5;
+			if(addZ <= 3)
+				addZ = 5;
+			int lightingSpawnChance = rand.nextInt(100);
 			if (lightingSpawnChance == 10) {
 				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX, event.player.worldObj.getHeight(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(),
 						event.player.posZ + addZ));
