@@ -27,8 +27,11 @@ public class ItemRendererTier10Rocket implements IItemRenderer
 
 	protected static RenderItem drawItems = new RenderItem();
 
-	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
-
+	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
+	protected ResourceLocation texture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
+	protected ResourceLocation texture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGrey.png");
+	protected ResourceLocation texture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
+	
 	public ItemRendererTier10Rocket(IModelCustom model)
 	{
 		this.modelSpaceship = model;
@@ -41,7 +44,30 @@ public class ItemRendererTier10Rocket implements IItemRenderer
 		this.transform(item, type);
 
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(this.texture);
-		this.modelSpaceship.renderAll();
+		this.modelSpaceship.renderPart("RocketCockpit");
+		this.modelSpaceship.renderPart("RoofCockpit");
+		this.modelSpaceship.renderPart("Fuel_valve1");
+		this.modelSpaceship.renderPart("Fuel_valve002");
+		this.modelSpaceship.renderPart("Fuel_valve003");
+		this.modelSpaceship.renderPart("Fuel_valve004");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture2);
+		this.modelSpaceship.renderPart("NoseRocket");
+		this.modelSpaceship.renderPart("Nozzle001");
+		this.modelSpaceship.renderPart("NozzleKeeper001");
+		this.modelSpaceship.renderPart("NozzleKeeper002");
+		this.modelSpaceship.renderPart("RocketEngine004");
+		this.modelSpaceship.renderPart("RocketEngine005");
+		this.modelSpaceship.renderPart("RocketEngine006");
+		this.modelSpaceship.renderPart("RocketEngine007");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("RocketEngineBottom004");
+		this.modelSpaceship.renderPart("RocketEngineBottom005");
+		this.modelSpaceship.renderPart("RocketEngineBottom006");
+		this.modelSpaceship.renderPart("RocketEngineBottom007");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("FloorCockPit");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+
 		GL11.glPopMatrix();
 
 		if (type == ItemRenderType.INVENTORY)

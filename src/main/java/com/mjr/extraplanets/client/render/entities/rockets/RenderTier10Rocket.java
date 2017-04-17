@@ -17,13 +17,18 @@ import cpw.mods.fml.client.FMLClientHandler;
 public class RenderTier10Rocket extends Render
 {
 	private ResourceLocation rocketTexture;
+	private ResourceLocation rocketTexture2;
+	private ResourceLocation rocketTexture3;
+	private ResourceLocation rocketTexture4;
 
 	protected IModelCustom rocketModelObj;
 
-	public RenderTier10Rocket(IModelCustom spaceshipModel, String textureDomain, String texture)
-	{
+	public RenderTier10Rocket(IModelCustom spaceshipModel, String textureDomain, String texture) {
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
+		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blankRocket.png");
+		this.rocketTexture3 = new ResourceLocation(textureDomain, "textures/model/blankRocketGrey.png");
+		this.rocketTexture4 = new ResourceLocation(textureDomain, "textures/model/blankRocketDarkGrey.png");
 		this.shadowSize = 2F;
 	}
 
@@ -69,6 +74,7 @@ public class RenderTier10Rocket extends Render
 		this.rocketModelObj.renderPart("Fuel_valve002");
 		this.rocketModelObj.renderPart("Fuel_valve003");
 		this.rocketModelObj.renderPart("Fuel_valve004");
+		this.bindTexture(rocketTexture2);
 		this.rocketModelObj.renderPart("NoseRocket");
 		this.rocketModelObj.renderPart("Nozzle001");
 		this.rocketModelObj.renderPart("NozzleKeeper001");
@@ -77,22 +83,23 @@ public class RenderTier10Rocket extends Render
 		this.rocketModelObj.renderPart("RocketEngine005");
 		this.rocketModelObj.renderPart("RocketEngine006");
 		this.rocketModelObj.renderPart("RocketEngine007");
-		this.rocketModelObj.renderPart("RocketEnginePlut004");
-		this.rocketModelObj.renderPart("RocketEnginePlut005");
-		this.rocketModelObj.renderPart("RocketEnginePlut006");
-		this.rocketModelObj.renderPart("RocketEnginePlut007");
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("RocketEngineBottom004");
 		this.rocketModelObj.renderPart("RocketEngineBottom005");
 		this.rocketModelObj.renderPart("RocketEngineBottom006");
 		this.rocketModelObj.renderPart("RocketEngineBottom007");
+		this.bindTexture(rocketTexture);
 		this.rocketModelObj.renderPart("FloorCockPit");
-
+		this.bindTexture(rocketTexture4);
 		Vector3 teamColor = ClientUtil.updateTeamColor(FMLClientHandler.instance().getClient().thePlayer.getCommandSenderName(), true);
 		if (teamColor != null)
 		{
 			GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
 		}
-		this.rocketModelObj.renderPart("NoseCone");
+		this.rocketModelObj.renderPart("RocketEnginePlut004");
+		this.rocketModelObj.renderPart("RocketEnginePlut005");
+		this.rocketModelObj.renderPart("RocketEnginePlut006");
+		this.rocketModelObj.renderPart("RocketEnginePlut007");
 
 		if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1)
 		{

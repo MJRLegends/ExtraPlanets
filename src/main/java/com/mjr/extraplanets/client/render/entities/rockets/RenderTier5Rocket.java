@@ -17,28 +17,31 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderTier5Rocket extends Render
-{
+public class RenderTier5Rocket extends Render {
 	private ResourceLocation rocketTexture;
+	private ResourceLocation rocketTexture2;
+	private ResourceLocation rocketTexture3;
+	private ResourceLocation rocketTexture4;
 
 	protected IModelCustom rocketModelObj;
 
-	public RenderTier5Rocket(IModelCustom spaceshipModel, String textureDomain, String texture)
-	{
+	public RenderTier5Rocket(IModelCustom spaceshipModel, String textureDomain, String texture) {
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
+		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blankRocket.png");
+		this.rocketTexture3 = new ResourceLocation(textureDomain, "textures/model/blankRocketGrey.png");
+		this.rocketTexture4 = new ResourceLocation(textureDomain, "textures/model/blankRocketDarkGrey.png");
+
 		this.shadowSize = 2F;
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(Entity par1Entity)
-	{
+	protected ResourceLocation getEntityTexture(Entity par1Entity) {
 		return this.rocketTexture;
 	}
 
 	@SuppressWarnings("unused")
-	public void renderSpaceship(EntitySpaceshipBase entity, double par2, double par4, double par6, float par8, float par9)
-	{
+	public void renderSpaceship(EntitySpaceshipBase entity, double par2, double par4, double par6, float par8, float par9) {
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
 		GL11.glPushMatrix();
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9 + 180;
@@ -50,13 +53,11 @@ public class RenderTier5Rocket extends Render
 		final float var28 = entity.rollAmplitude / 3 - par9;
 		float var30 = entity.shipDamage - par9;
 
-		if (var30 < 0.0F)
-		{
+		if (var30 < 0.0F) {
 			var30 = 0.0F;
 		}
 
-		if (var28 > 0.0F)
-		{
+		if (var28 > 0.0F) {
 			final float i = entity.getLaunched() ? (5 - MathHelper.floor_double(entity.timeUntilLaunch / 85)) / 10F : 0.3F;
 			GL11.glRotatef(MathHelper.sin(var28) * var28 * i * par9, 1.0F, 0.0F, 0.0F);
 			GL11.glRotatef(MathHelper.sin(var28) * var28 * i * par9, 1.0F, 0.0F, 1.0F);
@@ -65,28 +66,30 @@ public class RenderTier5Rocket extends Render
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		GL11.glScalef(0.9F, 0.9F, 0.9F);
-
+		this.bindTexture(rocketTexture3);
 		this.rocketModelObj.renderPart("Nozzle");
+		this.bindTexture(rocketTexture);
 		this.rocketModelObj.renderPart("Body_Rocket");
-		this.rocketModelObj.renderPart("CorrectedWind1");
-		this.rocketModelObj.renderPart("CorrectedWind2");
-		this.rocketModelObj.renderPart("CorrectedWind3");
-		this.rocketModelObj.renderPart("CorrectedWind4");
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("Rocket_stabilizer1");
 		this.rocketModelObj.renderPart("Rocket_stabilizer2");
 		this.rocketModelObj.renderPart("Rocket_stabilizer3");
 		this.rocketModelObj.renderPart("Rocket_stabilizer4");
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("Tip");
+		this.bindTexture(rocketTexture);
 		this.rocketModelObj.renderPart("Ring");
 		this.rocketModelObj.renderPart("FrameWindow1");
 		this.rocketModelObj.renderPart("FrameWindow2");
 		this.rocketModelObj.renderPart("FrameWindow3");
 		this.rocketModelObj.renderPart("FrameWindow4");
 		this.rocketModelObj.renderPart("GlassWindow");
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("CorrectedWind005");
 		this.rocketModelObj.renderPart("CorrectedWind006");
 		this.rocketModelObj.renderPart("CorrectedWind007");
 		this.rocketModelObj.renderPart("CorrectedWind008");
+		this.bindTexture(rocketTexture3);
 		this.rocketModelObj.renderPart("Cylinder001");
 		this.rocketModelObj.renderPart("Cylinder002");
 		this.rocketModelObj.renderPart("Cylinder003");
@@ -96,18 +99,17 @@ public class RenderTier5Rocket extends Render
 		this.rocketModelObj.renderPart("Helix001");
 
 		Vector3 teamColor = ClientUtil.updateTeamColor(FMLClientHandler.instance().getClient().thePlayer.getCommandSenderName(), true);
-		if (teamColor != null)
-		{
+		if (teamColor != null) {
 			GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
 		}
-		this.rocketModelObj.renderPart("NoseCone");
+		this.rocketModelObj.renderPart("CorrectedWind1");
+		this.rocketModelObj.renderPart("CorrectedWind2");
+		this.rocketModelObj.renderPart("CorrectedWind3");
+		this.rocketModelObj.renderPart("CorrectedWind4");
 
-		if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1)
-		{
+		if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1) {
 			GL11.glColor3f(1, 0, 0);
-		}
-		else
-		{
+		} else {
 			GL11.glColor3f(0, 1, 0);
 		}
 
@@ -123,8 +125,7 @@ public class RenderTier5Rocket extends Render
 	}
 
 	@Override
-	public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
-	{
+	public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9) {
 		this.renderSpaceship((EntitySpaceshipBase) par1Entity, par2, par4, par6, par8, par9);
 	}
 }

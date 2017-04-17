@@ -20,13 +20,19 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class RenderTier6Rocket extends Render
 {
 	private ResourceLocation rocketTexture;
+	private ResourceLocation rocketTexture2;
+	private ResourceLocation rocketTexture3;
+	private ResourceLocation rocketTexture4;
 
 	protected IModelCustom rocketModelObj;
 
-	public RenderTier6Rocket(IModelCustom spaceshipModel, String textureDomain, String texture)
-	{
+	public RenderTier6Rocket(IModelCustom spaceshipModel, String textureDomain, String texture) {
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
+		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blankRocketWhite.png");
+		this.rocketTexture3 = new ResourceLocation(textureDomain, "textures/model/blankRocketGrey.png");
+		this.rocketTexture4 = new ResourceLocation(textureDomain, "textures/model/blankRocketDarkGrey.png");
+
 		this.shadowSize = 2F;
 	}
 
@@ -66,18 +72,24 @@ public class RenderTier6Rocket extends Render
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		GL11.glScalef(0.9F, 0.9F, 0.9F);
 
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("Nozzle");
+		this.bindTexture(rocketTexture);
 		this.rocketModelObj.renderPart("Body_Rocket");
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("CorrectedWind1");
 		this.rocketModelObj.renderPart("CorrectedWind2");
 		this.rocketModelObj.renderPart("CorrectedWind3");
 		this.rocketModelObj.renderPart("CorrectedWind4");
+		this.bindTexture(rocketTexture3);
 		this.rocketModelObj.renderPart("Rocket_stabilizer1");
 		this.rocketModelObj.renderPart("Rocket_stabilizer2");
 		this.rocketModelObj.renderPart("Rocket_stabilizer3");
 		this.rocketModelObj.renderPart("Rocket_stabilizer4");
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("Tip");
 		this.rocketModelObj.renderPart("Ring");
+		this.bindTexture(rocketTexture);
 		this.rocketModelObj.renderPart("FrameWindow1");
 		this.rocketModelObj.renderPart("FrameWindow2");
 		this.rocketModelObj.renderPart("FrameWindow3");
@@ -87,24 +99,23 @@ public class RenderTier6Rocket extends Render
 		this.rocketModelObj.renderPart("CorrectedWind006");
 		this.rocketModelObj.renderPart("CorrectedWind007");
 		this.rocketModelObj.renderPart("CorrectedWind008");
+		this.bindTexture(rocketTexture3);
 		this.rocketModelObj.renderPart("Cylinder001");
 		this.rocketModelObj.renderPart("Cylinder002");
 		this.rocketModelObj.renderPart("Cylinder003");
 		this.rocketModelObj.renderPart("Cylinder004");
 		this.rocketModelObj.renderPart("Cylinder005");
 		this.rocketModelObj.renderPart("Cylinder006");
-		this.rocketModelObj.renderPart("Cylinder007");
-		this.rocketModelObj.renderPart("Cylinder008");
+//		this.rocketModelObj.renderPart("Cylinder007");
+//		this.rocketModelObj.renderPart("Cylinder008");
+		this.bindTexture(rocketTexture2);
 		this.rocketModelObj.renderPart("Helix001");
 		this.rocketModelObj.renderPart("SplinePathDeform");
 		this.rocketModelObj.renderPart("Pipe004");
 		this.rocketModelObj.renderPart("Pipe005");
 		this.rocketModelObj.renderPart("Pipe006");
 		this.rocketModelObj.renderPart("Pipe007");
-		this.rocketModelObj.renderPart("RocketEnginePlut");
-		this.rocketModelObj.renderPart("RocketEnginePlut001");
-		this.rocketModelObj.renderPart("RocketEnginePlut002");
-		this.rocketModelObj.renderPart("RocketEnginePlut003");
+		this.bindTexture(rocketTexture4);
 		this.rocketModelObj.renderPart("RocketEngine");
 		this.rocketModelObj.renderPart("RocketEngine001");
 		this.rocketModelObj.renderPart("RocketEngine002");
@@ -114,7 +125,10 @@ public class RenderTier6Rocket extends Render
 		{
 			GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
 		}
-		this.rocketModelObj.renderPart("NoseCone");
+		this.rocketModelObj.renderPart("RocketEnginePlut");
+		this.rocketModelObj.renderPart("RocketEnginePlut001");
+		this.rocketModelObj.renderPart("RocketEnginePlut002");
+		this.rocketModelObj.renderPart("RocketEnginePlut003");
 
 		if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1)
 		{

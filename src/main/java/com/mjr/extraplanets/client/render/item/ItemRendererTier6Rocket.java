@@ -27,7 +27,10 @@ public class ItemRendererTier6Rocket implements IItemRenderer
 	protected static RenderItem drawItems = new RenderItem();
 
 	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
-
+	protected ResourceLocation texture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
+	protected ResourceLocation texture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGrey.png");
+	protected ResourceLocation texture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
+	
 	public ItemRendererTier6Rocket(IModelCustom model)
 	{
 		this.modelSpaceship = model;
@@ -40,7 +43,54 @@ public class ItemRendererTier6Rocket implements IItemRenderer
 		this.transform(item, type);
 
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(this.texture);
-		this.modelSpaceship.renderAll();
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("Nozzle");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("Body_Rocket");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("CorrectedWind1");
+		this.modelSpaceship.renderPart("CorrectedWind2");
+		this.modelSpaceship.renderPart("CorrectedWind3");
+		this.modelSpaceship.renderPart("CorrectedWind4");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture3);
+		this.modelSpaceship.renderPart("Rocket_stabilizer1");
+		this.modelSpaceship.renderPart("Rocket_stabilizer2");
+		this.modelSpaceship.renderPart("Rocket_stabilizer3");
+		this.modelSpaceship.renderPart("Rocket_stabilizer4");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("Tip");
+		this.modelSpaceship.renderPart("Ring");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("FrameWindow1");
+		this.modelSpaceship.renderPart("FrameWindow2");
+		this.modelSpaceship.renderPart("FrameWindow3");
+		this.modelSpaceship.renderPart("FrameWindow4");
+		this.modelSpaceship.renderPart("GlassWindow");
+		this.modelSpaceship.renderPart("CorrectedWind005");
+		this.modelSpaceship.renderPart("CorrectedWind006");
+		this.modelSpaceship.renderPart("CorrectedWind007");
+		this.modelSpaceship.renderPart("CorrectedWind008");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture3);
+		this.modelSpaceship.renderPart("Cylinder001");
+		this.modelSpaceship.renderPart("Cylinder002");
+		this.modelSpaceship.renderPart("Cylinder003");
+		this.modelSpaceship.renderPart("Cylinder004");
+		this.modelSpaceship.renderPart("Cylinder005");
+		this.modelSpaceship.renderPart("Cylinder006");
+//		this.modelSpaceship.renderPart("Cylinder007");
+//		this.modelSpaceship.renderPart("Cylinder008");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture2);
+		this.modelSpaceship.renderPart("Helix001");
+		this.modelSpaceship.renderPart("SplinePathDeform");
+		this.modelSpaceship.renderPart("Pipe004");
+		this.modelSpaceship.renderPart("Pipe005");
+		this.modelSpaceship.renderPart("Pipe006");
+		this.modelSpaceship.renderPart("Pipe007");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("RocketEngine");
+		this.modelSpaceship.renderPart("RocketEngine001");
+		this.modelSpaceship.renderPart("RocketEngine002");
+		this.modelSpaceship.renderPart("RocketEngine003");
 		GL11.glPopMatrix();
 
 		if (type == ItemRenderType.INVENTORY)

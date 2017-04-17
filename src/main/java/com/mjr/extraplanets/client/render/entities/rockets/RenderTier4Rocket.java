@@ -20,6 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class RenderTier4Rocket extends Render
 {
 	private ResourceLocation rocketTexture;
+	private ResourceLocation rocketTexture2;
 
 	protected IModelCustom rocketModelObj;
 
@@ -27,6 +28,7 @@ public class RenderTier4Rocket extends Render
 	{
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
+		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blankRocketDarkGrey.png");
 		this.shadowSize = 2F;
 	}
 
@@ -65,19 +67,19 @@ public class RenderTier4Rocket extends Render
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		GL11.glScalef(0.9F, 0.9F, 0.9F);
-
+		this.bindTexture(rocketTexture2);
 		this.rocketModelObj.renderPart("Nozzle");
+		this.bindTexture(rocketTexture);
 		this.rocketModelObj.renderPart("Body_Rocket");
+		this.bindTexture(rocketTexture2);
 		this.rocketModelObj.renderPart("CorrectedWind1");
 		this.rocketModelObj.renderPart("CorrectedWind2");
 		this.rocketModelObj.renderPart("CorrectedWind3");
 		this.rocketModelObj.renderPart("CorrectedWind4");
-		this.rocketModelObj.renderPart("Rocket_stabilizer1");
-		this.rocketModelObj.renderPart("Rocket_stabilizer2");
-		this.rocketModelObj.renderPart("Rocket_stabilizer3");
-		this.rocketModelObj.renderPart("Rocket_stabilizer4");
+		this.bindTexture(rocketTexture2);
 		this.rocketModelObj.renderPart("Tip");
 		this.rocketModelObj.renderPart("Ring");
+		this.bindTexture(rocketTexture);
 		this.rocketModelObj.renderPart("FrameWindow1");
 		this.rocketModelObj.renderPart("FrameWindow2");
 		this.rocketModelObj.renderPart("FrameWindow3");
@@ -89,7 +91,10 @@ public class RenderTier4Rocket extends Render
 		{
 			GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
 		}
-		this.rocketModelObj.renderPart("NoseCone");
+		this.rocketModelObj.renderPart("Rocket_stabilizer1");
+		this.rocketModelObj.renderPart("Rocket_stabilizer2");
+		this.rocketModelObj.renderPart("Rocket_stabilizer3");
+		this.rocketModelObj.renderPart("Rocket_stabilizer4");
 
 		if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1)
 		{
