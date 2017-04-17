@@ -52,6 +52,8 @@ v1.6.0
 *Added Stone Brick Stairs for all the planets (Except Kepler22b)
 *Tier 4 - 10 Rocket rendering fixes/tweaks
 *Added Blue, Red, Purple, Yellow, Green Sticks
+*Fixed config issue #78
+*Improvements to the lighting effect on Jupiter
 ======================================================================================================
 
 
