@@ -7,10 +7,13 @@ import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.event.EventLandingPadRemoval;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -19,7 +22,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 
+import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntityTier2LandingPad;
 
@@ -279,4 +285,84 @@ public class EntityTier7Rocket extends EntityTieredRocket {
 	public boolean defaultThirdPerson() {
 		return true;
 	}
+	
+	@Override
+    public void onLaunch()
+    {
+        if (!(this.worldObj.provider.dimensionId == GalacticraftCore.planetOverworld.getDimensionID() || this.worldObj.provider instanceof IGalacticraftWorldProvider))
+        {
+            if (ConfigManagerCore.disableRocketLaunchAllNonGC)
+            {
+            	this.cancelLaunch();
+            	return;
+            }
+        	
+            //No rocket flight in the Nether, the End etc
+        	for (int i = ConfigManagerCore.disableRocketLaunchDimensions.length - 1; i >= 0; i--)
+            {
+                if (ConfigManagerCore.disableRocketLaunchDimensions[i] == this.worldObj.provider.dimensionId)
+                {
+                	this.cancelLaunch();
+                    return;
+                }
+            }
+
+        }
+
+        super.onLaunch();
+
+        if (!this.worldObj.isRemote)
+        {
+        	GCPlayerStats stats = null;
+        	
+        	if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP)
+            {
+                stats = GCPlayerStats.get((EntityPlayerMP) this.riddenByEntity);
+
+                if (!(this.worldObj.provider instanceof IOrbitDimension))
+                {
+	                stats.coordsTeleportedFromX = this.riddenByEntity.posX;
+	                stats.coordsTeleportedFromZ = this.riddenByEntity.posZ;
+                }
+            }
+
+            int amountRemoved = 0;
+
+            PADSEARCH:
+            for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++)
+            {
+                for (int y = MathHelper.floor_double(this.posY) - 3; y <= MathHelper.floor_double(this.posY) + 1; y++)
+                {
+                    for (int z = MathHelper.floor_double(this.posZ) - 1; z <= MathHelper.floor_double(this.posZ) + 1; z++)
+                    {
+                        final Block block = this.worldObj.getBlock(x, y, z);
+
+                        if (block != null && block instanceof BlockCustomLandingPadFull)
+                        {
+                            if (amountRemoved < 25)
+                            {
+                                EventLandingPadRemoval event = new EventLandingPadRemoval(this.worldObj, x, y, z);
+                                MinecraftForge.EVENT_BUS.post(event);
+
+                                if (event.allow)
+                                {
+                                    this.worldObj.setBlockToAir(x, y, z);
+                                    amountRemoved = 25;
+                                }
+                                break PADSEARCH;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //Set the player's launchpad item for return on landing - or null if launchpads not removed
+            if (stats != null)
+            {
+                stats.launchpadStack = amountRemoved == 9 ? new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 25, 0) : null;
+            }
+
+            this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+        }
+    }
 }
