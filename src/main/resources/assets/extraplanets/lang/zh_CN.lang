@@ -79,7 +79,7 @@ tile.venus.oreCopper.name=金星铜矿石
 tile.venus.oreCarbon.name=金星碳矿石
 tile.venus.stoneBricks.name=金星石砖
 tile.venus.carbonBlock.name=碳块
-tile.venus.titaniumBlock.name=Block of Titanium
+tile.venus.titaniumBlock.name=钛金块
 
 tile.ceres.surface.name=谷神星地表岩石
 tile.ceres.subSurface.name=谷神星地底岩石
@@ -100,7 +100,7 @@ tile.jupiter.oreCopper.name=木星铜矿石
 tile.jupiter.orePalladium.name=木星钯矿石
 tile.jupiter.oreNickel.name=木星镍矿石
 tile.jupiter.oreRedGem.name=木星红宝石矿石
-tile.jupiter.stoneBricks.name=木星方块砖
+tile.jupiter.stoneBricks.name=木星石砖
 tile.jupiter.palladiumBlock.name=钯块
 tile.jupiter.redGemBlock.name=红宝石块
 
@@ -111,7 +111,7 @@ tile.saturn.oreIron.name=土星铁矿石
 tile.saturn.oreTin.name=土星锡矿石
 tile.saturn.oreCopper.name=土星铜矿石
 tile.saturn.oreMagnesium.name=土星镁矿石
-tile.saturn.stoneBricks.name=土星方块砖
+tile.saturn.stoneBricks.name=土星石砖
 tile.saturn.magnesiumBlock.name=镁块
 
 tile.uranus.surface.name=天王星地表方块
@@ -119,7 +119,7 @@ tile.uranus.subSurface.name=天王星地底方块
 tile.uranus.stone.name=天王星方块
 tile.uranus.oreCrystal.name=天王星水晶石
 tile.uranus.oreWhiteGem.name=天王星白宝石矿石
-tile.uranus.stoneBricks.name=天王星方块砖
+tile.uranus.stoneBricks.name=天王星石砖
 tile.uranus.crystalBlock.name=水晶石块
 tile.uranus.whiteGemBlock.name=白宝石块
 
@@ -131,7 +131,7 @@ tile.neptune.oreTin.name=海王星锡矿石
 tile.neptune.oreCopper.name=海王星铜矿石
 tile.neptune.oreZinc.name=海王星锌矿石
 tile.neptune.oreBlueGem.name=海王星蓝宝石矿石
-tile.neptune.stoneBricks.name=海王星方块砖
+tile.neptune.stoneBricks.name=海王星石砖
 tile.neptune.zincBlock.name=锌块
 tile.neptune.blueGemBlock.name=蓝宝石块
 
@@ -344,25 +344,25 @@ tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星石台阶
 tile.ExtraPlanets_erisStoneBlockhalfslab.name=阋神星石台阶
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Mercury Stone Stairs
-tile.venusStoneStairs.name=Venus Stone Stairs
-tile.ceresStoneStairs.name=Ceres Stone Stairs
-tile.jupiterStoneStairs.name=Jupiter Stone Stairs
-tile.saturnStoneStairs.name=Saturn Stone Stairs
-tile.uranusStoneStairs.name=Uranus Stone Stairs
-tile.neptuneStoneStairs.name=Neptune Stone Stairs
-tile.plutoStoneStairs.name=Pluto Stone Stairs
-tile.erisStoneStairs.name=Eris Stone Stairs
+tile.mercuryStoneStairs.name=水星石楼梯
+tile.venusStoneStairs.name=金星石楼梯
+tile.ceresStoneStairs.name=谷神星石楼梯
+tile.jupiterStoneStairs.name=木星石楼梯
+tile.saturnStoneStairs.name=土星石楼梯
+tile.uranusStoneStairs.name=天王星石楼梯
+tile.neptuneStoneStairs.name=海王星石楼梯
+tile.plutoStoneStairs.name=冥王星石楼梯
+tile.erisStoneStairs.name=阋神星石楼梯
 
-tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs
-tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs
-tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs
-tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs
-tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs
-tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs
-tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs
-tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs
-tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs
+tile.mercuryStoneBrickStairs.name=水星石砖楼梯
+tile.venusStoneBrickStairs.name=金星石砖楼梯
+tile.ceresStoneBrickStairs.name=谷神星石砖楼梯
+tile.jupiterStoneBrickStairs.name=木星石砖楼梯
+tile.saturnStoneBrickStairs.name=土星石砖楼梯
+tile.uranusStoneBrickStairs.name=天王星石砖楼梯
+tile.neptuneStoneBrickStairs.name=海王星石砖楼梯
+tile.plutoStoneBrickStairs.name=冥王星石砖楼梯
+tile.erisStoneBrickStairs.name=阋神星石砖楼梯
 
 #Dungeon Bricks Slabs
 tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星地牢砖台阶
@@ -412,19 +412,18 @@ tile.solar.ultimate.name=最终混合型高级太阳能电池板
 tile.solarhybrid.description=混合型高级太阳能电池板能全天候工作。
 tile.solarultimate.description=最终混合型高级太阳能电池板能全天候工作。
 container.solarhybrid.name=混合型高级太阳能电池板
-container.solarultimate.name=最终混合型高级太阳能电池板
-tile.advancedFuelLoader.name=Advanced Fuel Loader
-tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
-tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
-tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
-tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
-tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
+container.solarultimate.name=高级燃料注入器
+tile.advancedLaunchPad.tier2LandingPad.name=二阶火箭发射平台
+tile.advancedLaunchPad.tier3LandingPad.name=三阶火箭发射平台
+tile.advancedLaunchPadFull.name=二/三阶火箭发射平台
+tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭
+tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭
 
 #Other Blocks
 tile.nuclearBomb.name=核弹
-tile.fireBomb.name=Fire Bomb
+tile.fireBomb.name=火焰炸弹
 tile.volcanicRock.name=火山岩
-tile.ashBlock.name=Block of Ash
+tile.ashBlock.name=灰烬块
 tile.frozenNitrogen.name=冷冻氮
 tile.denseIce.name=坚冰
 tile.fossil.name=化石块
@@ -501,7 +500,7 @@ item.tier10.compressedDarkIron.name=致密黑铁板
 
 #Ingots
 item.tier4.ingotCarbon.name=碳锭
-item.tier4.ingotVolcanic.name=Volcanic Ingot
+item.tier4.ingotVolcanic.name火岩锭
 item.tier5.ingotPalladium.name=钯锭
 item.tier6.ingotMagnesium.name=镁锭
 item.tier7.ingotCrystal.name=水晶块
@@ -513,9 +512,9 @@ item.tier9.ingotTungsten.name=钨锭
 item.tier10.ingotDarkIron.name=黑铁锭
 
 #Shards
-item.tier4.ashShard.name=Ash Shard
-item.tier4.volcanicShard.name=Volcanic Shard
-item.tier6.magnesiumShard.name=Magnesium Shard
+item.tier4.ashShard.name=灰烬碎片
+item.tier4.volcanicShard.name=火岩碎片
+item.tier6.magnesiumShard.name=镁碎片
 
 #Gems
 item.tier5.redGem.name=红宝石
@@ -627,7 +626,7 @@ item.redDiamondShovel.name=红钻铲
 item.purpleDiamondPickaxe.name=紫钻镐
 item.purpleDiamondAxe.name=紫钻斧
 item.purpleDiamondSword.name=紫钻剑
-item.purpleDiamondHoe.name=紫钻 锄
+item.purpleDiamondHoe.name=紫钻锄
 item.purpleDiamondShovel.name=紫钻铲
 item.yellowDiamondPickaxe.name=黄钻镐
 item.yellowDiamondAxe.name=黄钻斧
@@ -762,19 +761,19 @@ item.thermalCloth.tier3ThermalCloth.name=3阶热力布匹
 item.thermalCloth.tier4ThermalCloth.name=4阶热力布匹
 
 #Sticks
-item.tier11.blueSticks.name=Blue Sticks
-item.tier11.redSticks.name=Red Sticks
-item.tier11.yellowSticks.name=Yellow Sticks
-item.tier11.purpleSticks.name=Purple Sticks
-item.tier11.greenSticks.name=Green Sticks
+item.tier11.blueSticks.name=蓝枫木棍
+item.tier11.redSticks.name=红枫木棍
+item.tier11.yellowSticks.name=黄枫木棍
+item.tier11.purpleSticks.name=紫枫木棍
+item.tier11.greenSticks.name=绿枫木棍
 
 #Other Items
 item.appleDiamond.name=钻石苹果
-item.appleIron.name=Iron Apple
+item.appleIron.name=铁苹果
 item.cannedfood.cannedFood.name=罐头食品
-item.tier4.ash.name=Ash
-item.tier4.sledgeHammer.name=Sledge Hammer
-item.tier4.grindingWheel.name=Grinding Wheel
+item.tier4.ash.name=灰烬
+item.tier4.sledgeHammer.name=重锤
+item.tier4.grindingWheel.name=磨轮
 
 item.cannedfood.dehydratedPorkchop.name=脱水猪排
 item.cannedfood.dehydratedFish.name=脱水鱼
