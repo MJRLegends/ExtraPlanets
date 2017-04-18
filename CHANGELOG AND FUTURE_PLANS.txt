@@ -36,6 +36,15 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
+v1.6.1
+*Fixed Rockets not destroying the launch pads on launch
+
 v1.6.0
 *Incressed generation of Lava on Venus and Magma on Jupiter
 *Added Ash block, Ash shards, Sledge Hammer item, Grinding Wheel item, Volcanic Shard, and Volcanic Ingot
@@ -54,11 +63,7 @@ v1.6.0
 *Added Blue, Red, Purple, Yellow, Green Sticks
 *Fixed config issue #78
 *Improvements to the lighting effect on Jupiter
-======================================================================================================
 
-
-
-===========================================Released Updates===========================================
 v1.5.7
 *Fixed Oberon, Titania, Iapetus ores furnace recipes
 *Clean up
