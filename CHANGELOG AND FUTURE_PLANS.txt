@@ -42,6 +42,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.6.2
+*Fixed more issues with rockets and Tier 2/3 launch pads on launch
+
 v1.6.1
 *Fixed Rockets not destroying the launch pads on launch
 
