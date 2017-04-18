@@ -360,7 +360,7 @@ public class EntityTier9Rocket extends EntityTieredRocket {
             //Set the player's launchpad item for return on landing - or null if launchpads not removed
             if (stats != null)
             {
-                stats.launchpadStack = amountRemoved == 9 ? new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 25, 1) : null;
+            	stats.launchpadStack = new ItemStack(ExtraPlanets_Blocks.advancedLaunchPad, 25, 1);
             }
 
             this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
