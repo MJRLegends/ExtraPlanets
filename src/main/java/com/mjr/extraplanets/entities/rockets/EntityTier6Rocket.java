@@ -335,10 +335,12 @@ public class EntityTier6Rocket extends EntityTieredRocket {
 			}
 
 			int amountRemoved = 0;
+			this.posX++;
+			this.posZ++;
 
-			PADSEARCH: for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++) {
+			PADSEARCH: for (int x = MathHelper.floor_double(this.posX) - 3; x <= MathHelper.floor_double(this.posX) + 3; x++) {
 				for (int y = MathHelper.floor_double(this.posY) - 3; y <= MathHelper.floor_double(this.posY) + 1; y++) {
-					for (int z = MathHelper.floor_double(this.posZ) - 1; z <= MathHelper.floor_double(this.posZ) + 1; z++) {
+					for (int z = MathHelper.floor_double(this.posZ) - 3; z <= MathHelper.floor_double(this.posZ) + 3; z++) {
 						final Block block = this.worldObj.getBlock(x, y, z);
 
 						if (block != null && block instanceof BlockCustomLandingPadFull) {
