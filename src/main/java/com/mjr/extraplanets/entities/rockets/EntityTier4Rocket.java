@@ -9,8 +9,6 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.BlockLandingPadFull;
-import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.event.EventLandingPadRemoval;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -45,34 +43,29 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 		this.setSize(2.0F, 4.5F);
 		this.yOffset = 1.5F;
 	}
-	
+
 	@Override
-	public void landEntity(int x, int y, int z)
-    {
-        TileEntity tile = this.worldObj.getTileEntity(x, y, z);
+	public void landEntity(int x, int y, int z) {
+		TileEntity tile = this.worldObj.getTileEntity(x, y, z);
 
-        if (tile instanceof IFuelDock)
-        {
-            IFuelDock dock = (IFuelDock) tile;
+		if (tile instanceof IFuelDock) {
+			IFuelDock dock = (IFuelDock) tile;
 
-            if (this.isDockValid(dock))
-            {
-                if (!this.worldObj.isRemote)
-                {
-                    //Drop any existing rocket on the landing pad
-                	if (dock.getDockedEntity() instanceof EntitySpaceshipBase && dock.getDockedEntity() != this)
-                    {
-                    	((EntitySpaceshipBase)dock.getDockedEntity()).dropShipAsItem();
-                    	((EntitySpaceshipBase)dock.getDockedEntity()).setDead();
-                    }
-                	
-                    this.setPad(dock);
-                }
+			if (this.isDockValid(dock)) {
+				if (!this.worldObj.isRemote) {
+					// Drop any existing rocket on the landing pad
+					if (dock.getDockedEntity() instanceof EntitySpaceshipBase && dock.getDockedEntity() != this) {
+						((EntitySpaceshipBase) dock.getDockedEntity()).dropShipAsItem();
+						((EntitySpaceshipBase) dock.getDockedEntity()).setDead();
+					}
 
-                this.onRocketLand(x + 1, y, z + 1);
-            }
-        }
-    }
+					this.setPad(dock);
+				}
+
+				this.onRocketLand(x + 1, y, z + 1);
+			}
+		}
+	}
 
 	@Override
 	protected void onRocketLand(int x, int y, int z) {
@@ -308,84 +301,68 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 	public boolean defaultThirdPerson() {
 		return true;
 	}
-	
+
 	@Override
-    public void onLaunch()
-    {
-        if (!(this.worldObj.provider.dimensionId == GalacticraftCore.planetOverworld.getDimensionID() || this.worldObj.provider instanceof IGalacticraftWorldProvider))
-        {
-            if (ConfigManagerCore.disableRocketLaunchAllNonGC)
-            {
-            	this.cancelLaunch();
-            	return;
-            }
-        	
-            //No rocket flight in the Nether, the End etc
-        	for (int i = ConfigManagerCore.disableRocketLaunchDimensions.length - 1; i >= 0; i--)
-            {
-                if (ConfigManagerCore.disableRocketLaunchDimensions[i] == this.worldObj.provider.dimensionId)
-                {
-                	this.cancelLaunch();
-                    return;
-                }
-            }
+	public void onLaunch() {
+		if (!(this.worldObj.provider.dimensionId == GalacticraftCore.planetOverworld.getDimensionID() || this.worldObj.provider instanceof IGalacticraftWorldProvider)) {
+			if (ConfigManagerCore.disableRocketLaunchAllNonGC) {
+				this.cancelLaunch();
+				return;
+			}
 
-        }
+			// No rocket flight in the Nether, the End etc
+			for (int i = ConfigManagerCore.disableRocketLaunchDimensions.length - 1; i >= 0; i--) {
+				if (ConfigManagerCore.disableRocketLaunchDimensions[i] == this.worldObj.provider.dimensionId) {
+					this.cancelLaunch();
+					return;
+				}
+			}
 
-        super.onLaunch();
+		}
 
-        if (!this.worldObj.isRemote)
-        {
-        	GCPlayerStats stats = null;
-        	
-        	if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP)
-            {
-                stats = GCPlayerStats.get((EntityPlayerMP) this.riddenByEntity);
+		super.onLaunch();
 
-                if (!(this.worldObj.provider instanceof IOrbitDimension))
-                {
-	                stats.coordsTeleportedFromX = this.riddenByEntity.posX;
-	                stats.coordsTeleportedFromZ = this.riddenByEntity.posZ;
-                }
-            }
+		if (!this.worldObj.isRemote) {
+			GCPlayerStats stats = null;
 
-            int amountRemoved = 0;
+			if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP) {
+				stats = GCPlayerStats.get((EntityPlayerMP) this.riddenByEntity);
 
-            PADSEARCH:
-            for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++)
-            {
-                for (int y = MathHelper.floor_double(this.posY) - 3; y <= MathHelper.floor_double(this.posY) + 1; y++)
-                {
-                    for (int z = MathHelper.floor_double(this.posZ) - 1; z <= MathHelper.floor_double(this.posZ) + 1; z++)
-                    {
-                        final Block block = this.worldObj.getBlock(x, y, z);
+				if (!(this.worldObj.provider instanceof IOrbitDimension)) {
+					stats.coordsTeleportedFromX = this.riddenByEntity.posX;
+					stats.coordsTeleportedFromZ = this.riddenByEntity.posZ;
+				}
+			}
 
-                        if (block != null && block instanceof BlockCustomLandingPadFull)
-                        {
-                            if (amountRemoved < 25)
-                            {
-                                EventLandingPadRemoval event = new EventLandingPadRemoval(this.worldObj, x, y, z);
-                                MinecraftForge.EVENT_BUS.post(event);
+			int amountRemoved = 0;
 
-                                if (event.allow)
-                                {
-                                    this.worldObj.setBlockToAir(x, y, z);
-                                    amountRemoved = 25;
-                                }
-                                break PADSEARCH;
-                            }
-                        }
-                    }
-                }
-            }
+			PADSEARCH: for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++) {
+				for (int y = MathHelper.floor_double(this.posY) - 3; y <= MathHelper.floor_double(this.posY) + 1; y++) {
+					for (int z = MathHelper.floor_double(this.posZ) - 1; z <= MathHelper.floor_double(this.posZ) + 1; z++) {
+						final Block block = this.worldObj.getBlock(x, y, z);
 
-            //Set the player's launchpad item for return on landing - or null if launchpads not removed
-            if (stats != null)
-            {
-                stats.launchpadStack = new ItemStack(ExtraPlanets_Blocks.advancedLaunchPad, 25, 0);
-            }
+						if (block != null && block instanceof BlockCustomLandingPadFull) {
+							if (amountRemoved < 25) {
+								EventLandingPadRemoval event = new EventLandingPadRemoval(this.worldObj, x, y, z);
+								MinecraftForge.EVENT_BUS.post(event);
 
-            this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
-        }
-    }
+								if (event.allow) {
+									this.worldObj.setBlockToAir(x, y, z);
+									amountRemoved = 25;
+								}
+								break PADSEARCH;
+							}
+						}
+					}
+				}
+			}
+
+			// Set the player's launchpad item for return on landing - or null if launchpads not removed
+			if (stats != null) {
+				stats.launchpadStack = new ItemStack(ExtraPlanets_Blocks.advancedLaunchPad, 25, 0);
+			}
+
+			this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+		}
+	}
 }
