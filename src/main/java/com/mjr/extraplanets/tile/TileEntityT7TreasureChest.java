@@ -5,7 +5,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.item.IKeyable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityAdvanced;
@@ -26,7 +25,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 
 import cpw.mods.fml.relauncher.Side;
 
-public class TileEntityT7TreasureChest extends TileEntityAdvanced implements IInventory, IKeyable, IPacketReceiver {
+public class TileEntityT7TreasureChest extends TileEntityAdvanced implements IInventory, IKeyable {
 	private ItemStack[] chestContents = new ItemStack[36];
 
 	/**
