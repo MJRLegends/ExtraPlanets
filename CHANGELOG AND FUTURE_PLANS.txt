@@ -14,23 +14,30 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
-0.3.0 Beta Build
+v0.3.1 Beta Build
+*Fixed issue #79
+*Improvements to the lighting effect on Jupiter
+*Compatibility: missing IC2 compatibility
+*Updated mcmod.info
+*Fix NASA workbench schematics particles crashing dedicated server.
+
+v0.3.0 Beta Build
 *Fixed bucket handler crash (Issue #77)
 *Updated Galacticraft API to latest & Fixes for Dungeon Bosses
 *Fixes for Dungeons & Treasure Chests & Dungeon Bosses & Dungeon Spawners
 *Compatibility: full IC2 compatibility
 *Fixed All item json files using the wrong parent
 
-0.2.0 Beta Build
+v0.2.0 Beta Build
 *Fixed conflicting dimension id problem within mod
 *Fixed more config issues
 
-0.1.5 Beta Build
+v0.1.5 Beta Build
 *Fixed Nuclear Bomb texture/entity
 *Fixed Tier 3 Radiation layer texture
 *Fixed config issue when disabling Lead Ore Generation option (Fixes #75)
 *Fixes for some Dungeon Bosses
 
-0.1 Beta Build
+v0.1 Beta Build
 *Beta Port from MC 1.8.9 version Release
 ======================================================================================================
