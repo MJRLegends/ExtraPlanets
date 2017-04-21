@@ -2,10 +2,7 @@ package com.mjr.extraplanets.client.render.entities.rockets;
 
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemModelRocketT3;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -14,7 +11,6 @@ import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
@@ -26,12 +22,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.google.common.base.Function;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT8;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 
 @SideOnly(Side.CLIENT)
 public class RenderTier8Rocket extends Render<EntityTier8Rocket> {
-	private ItemModelRocketT3 rocketModel;
+	private ItemModelRocketT8 rocketModel;
 
 	public RenderTier8Rocket(RenderManager manager) {
 		super(manager);
@@ -40,15 +37,8 @@ public class RenderTier8Rocket extends Render<EntityTier8Rocket> {
 
 	private void updateModel() {
 		if (rocketModel == null) {
-			Function<ResourceLocation, TextureAtlasSprite> textureGetter = new Function<ResourceLocation, TextureAtlasSprite>() {
-				@Override
-				public TextureAtlasSprite apply(ResourceLocation input) {
-					return Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(input.toString());
-				}
-			};
-
-			ModelResourceLocation modelResourceLocation = new ModelResourceLocation(GalacticraftPlanets.TEXTURE_PREFIX + "rocket_t3", "inventory");
-			rocketModel = (ItemModelRocketT3) FMLClientHandler.instance().getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
+			ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t8", "inventory");
+			rocketModel = (ItemModelRocketT8) FMLClientHandler.instance().getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
 		}
 	}
 
@@ -88,28 +78,28 @@ public class RenderTier8Rocket extends Render<EntityTier8Rocket> {
 		}
 
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
-		GL11.glScalef(0.8F, 0.8F, 0.8F);
+		GL11.glScalef(0.9F, 0.9F, 0.9F);
 
 		ClientUtil.drawBakedModel(rocketModel);
 
-		Vector3 teamColor = ClientUtil.updateTeamColor(FMLClientHandler.instance().getClient().thePlayer.getName(), true);
-		if (teamColor != null) {
-			GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
-		}
+		// Vector3 teamColor = ClientUtil.updateTeamColor(FMLClientHandler.instance().getClient().thePlayer.getName(), true);
+		// if (teamColor != null) {
+		// GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
+		// }
+		//
+		// if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1) {
+		// GL11.glColor3f(1, 0, 0);
+		// } else {
+		// GL11.glColor3f(0, 1, 0);
+		// }
 
-		if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1) {
-			GL11.glColor3f(1, 0, 0);
-		} else {
-			GL11.glColor3f(0, 1, 0);
-		}
+//		GL11.glDisable(GL11.GL_TEXTURE_2D);
+//		GL11.glDisable(GL11.GL_LIGHTING);
+//
+//		GL11.glEnable(GL11.GL_TEXTURE_2D);
+//		GL11.glEnable(GL11.GL_LIGHTING);
 
-		GL11.glDisable(GL11.GL_TEXTURE_2D);
-		GL11.glDisable(GL11.GL_LIGHTING);
-
-		GL11.glEnable(GL11.GL_TEXTURE_2D);
-		GL11.glEnable(GL11.GL_LIGHTING);
-
-		GL11.glColor3f(1, 1, 1);
+		GL11.glColor3f(1, 0, 1);
 
 		GL11.glPopMatrix();
 

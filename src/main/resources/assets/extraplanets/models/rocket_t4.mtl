@@ -1,0 +1,23 @@
+newmtl blankRocketDarkGrey
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+d 1
+map_Kd extraplanets:model/blankRocketDarkGrey
+
+newmtl blankRocket
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+d 1
+map_Kd extraplanets:model/blankRocket
+
+newmtl blankRocketWhite
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+d 1
+map_Kd extraplanets:model/blankRocketWhite
+
+newmtl blankRocketGrey
+Ka 0.000000 0.000000 0.000000
+Kd 0.8 0.8 0.8
+d 1
+map_Kd extraplanets:model/blankRocketGrey
