@@ -42,6 +42,11 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.6.4
+*Updated Galacticraft API to latest
+*Reduce network traffic & Clean up
+*Improvements to rockets
+
 v1.6.3
 *Added missing recipe Advanced Fuel loader
 *Fixed recipe issue
