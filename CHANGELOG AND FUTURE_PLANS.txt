@@ -42,6 +42,11 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.6.3
+*Added missing recipe Advanced Fuel loader
+*Fixed recipe issue
+*Updated zH_CH.lang (Thanks to Joccob)
+
 v1.6.2
 *Fixed more issues with rockets and Tier 2/3 launch pads on launch
 
