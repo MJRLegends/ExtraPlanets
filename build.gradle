@@ -28,9 +28,10 @@ minecraft {
 
 dependencies {
 	compile files (
-		"../GalacticraftCore-Dev-1.7-3.0.12.482.jar",
-		"../Galacticraft-Planets-Dev-1.7-3.0.12.482.jar",
-		"../MicdoodleCore-Dev-1.7-3.0.12.482.jar",
+		"../GalacticraftCore-Dev-1.7-3.0.12.488.jar",
+		"../Galacticraft-Planets-Dev-1.7-3.0.12.488.jar",
+		"../Galacticraft-API-1.7-3.0.12.488.jar",
+		"../MicdoodleCore-Dev-1.7-3.0.12.488.jar",
 		"../NotEnoughItems-1.7.10-1.0.5.120-dev.jar",
 		"../CodeChickenLib-1.7.10-1.1.3.140-dev.jar"
 	)
