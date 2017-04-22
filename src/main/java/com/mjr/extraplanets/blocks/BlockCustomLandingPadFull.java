@@ -92,6 +92,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public int getRenderType() {
 		return ClientProxy.getBlockRender(this);
 	}
