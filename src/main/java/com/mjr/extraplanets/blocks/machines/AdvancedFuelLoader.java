@@ -39,6 +39,7 @@ public class AdvancedFuelLoader extends BlockAdvancedTile {
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public int getRenderType() {
 		return ClientProxy.getBlockRender(this);
 	}
