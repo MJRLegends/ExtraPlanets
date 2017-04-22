@@ -42,6 +42,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.6.5
+*Fixed issue #81
+
 v1.6.4
 *Updated Galacticraft API to latest
 *Reduce network traffic & Clean up
