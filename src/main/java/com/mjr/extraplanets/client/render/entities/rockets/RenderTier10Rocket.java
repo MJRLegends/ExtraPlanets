@@ -68,7 +68,7 @@ public class RenderTier10Rocket extends Render<EntityTier10Rocket> {
 
 		updateModel();
 
-		RenderHelper.disableStandardItemLighting();
+		//RenderHelper.disableStandardItemLighting();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 
 		if (Minecraft.isAmbientOcclusionEnabled()) {

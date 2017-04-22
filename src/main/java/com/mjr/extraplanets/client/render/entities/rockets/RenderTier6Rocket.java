@@ -67,7 +67,7 @@ public class RenderTier6Rocket extends Render<EntityTier6Rocket> {
 		}
 		updateModel();
 		
-		RenderHelper.disableStandardItemLighting();
+		//RenderHelper.disableStandardItemLighting();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 		
 		if (Minecraft.isAmbientOcclusionEnabled()) {
