@@ -26,6 +26,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.collect.ImmutableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.BlockCustomLandingPad;
+import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -255,6 +257,7 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.SOLAR_PANELS)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
+		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket");
 	}
 
 	private void registerEntityRenders() {
@@ -571,6 +574,14 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ORE_POTASH);
 		if (Config.ORE_LEAD_GENERATION)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ORE_LEAD);
+
+		for (BlockCustomLandingPad.EnumLandingPadType blockBasic : BlockCustomLandingPad.EnumLandingPadType.values()) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, blockBasic.getMeta(), blockBasic.getName());
+		}
+
+		for (BlockCustomLandingPadFull.EnumLandingPadFullType blockBasic : BlockCustomLandingPadFull.EnumLandingPadFullType.values()) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL, blockBasic.getMeta(), blockBasic.getName());
+		}
 	}
 
 	private void registerItemJsons() {
@@ -984,9 +995,8 @@ public class ClientProxy extends CommonProxy {
 					"RocketEngineBottom007", "RocketEngineBottom008", "FloorCockPit", "Cockoit", "NoseRocket", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4", "rotary_engine005", "rotary_engine006"), ItemModelRocketT9.class,
 					TRSRTransformation.identity());
 		if (Config.ERIS)
-			ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001",
-					"NozzleKeeper002", "RocketEngine004", "RocketEngine005", "RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit"),
-					ItemModelRocketT10.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004", "RocketEngine005",
+					"RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit"), ItemModelRocketT10.class, TRSRTransformation.identity());
 	}
 
 	private void registerFluidVariants() {

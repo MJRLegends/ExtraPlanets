@@ -52,6 +52,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+import com.mjr.extraplanets.inventory.blocks.ItemBlockCustomLandingPad;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCeres;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockDeimos;
@@ -79,6 +80,10 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bTallGrass;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPadSingle;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPadSingle;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
@@ -192,6 +197,9 @@ public class ExtraPlanets_Blocks {
 
 	// Planks
 	public static Block KEPLER22B_MAPLE_PLANKS;
+
+	public static Block ADVANCED_LAUCHPAD;
+	public static Block ADVANCED_LAUCHPAD_FULL;
 
 	public static void init() {
 		initializeBlocks();
@@ -311,6 +319,9 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.RADIATION)
 			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
+		
+		ADVANCED_LAUCHPAD = new BlockCustomLandingPad("advanced_launch_pad");
+		ADVANCED_LAUCHPAD_FULL = new BlockCustomLandingPadFull("advanced_launch_pad_full");
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -484,6 +495,9 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.registerBlock(ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
 		if (Config.RADIATION)
 			RegisterHelper.registerBlock(ORE_POTASH, "potash");
+		
+		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
+		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerTileEntitys() {
@@ -515,6 +529,11 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPadSingle.class, "Tier 2 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPad.class, "Tier 2 Landing Pad Full");
+
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPadSingle.class, "Tier 3 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPad.class, "Tier 3 Landing Pad Full");
 	}
 
 	private static void setHarvestLevels() {

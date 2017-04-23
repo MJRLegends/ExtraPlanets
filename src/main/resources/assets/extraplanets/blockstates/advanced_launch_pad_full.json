@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": { "model": "galacticraftcore:landing_pad_full_model" },
+        "type=tier_2_rocket": { "model": "galacticraftcore:landing_pad_full_model" },
+        "type=tier_3_rocket": { "model": "galacticraftcore:buggy_pad_full_model" }
+    }
+}
