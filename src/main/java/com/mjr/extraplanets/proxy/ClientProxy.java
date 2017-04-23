@@ -984,7 +984,7 @@ public class ClientProxy extends CommonProxy {
 					"RocketEngineBottom007", "RocketEngineBottom008", "FloorCockPit", "Cockoit", "NoseRocket", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4", "rotary_engine005", "rotary_engine006"), ItemModelRocketT9.class,
 					TRSRTransformation.identity());
 		if (Config.ERIS)
-			ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "Fuel_valve1", "Fuel_valve002", "Fuel_valve003", "Fuel_valve004", "NoseRocket", "Nozzle001", "NozzleKeeper001",
+			ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001",
 					"NozzleKeeper002", "RocketEngine004", "RocketEngine005", "RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit"),
 					ItemModelRocketT10.class, TRSRTransformation.identity());
 	}
