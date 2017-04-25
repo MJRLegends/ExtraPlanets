@@ -28,7 +28,6 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPad;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
-import com.mjr.extraplanets.blocks.BlockCustomMulti;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
