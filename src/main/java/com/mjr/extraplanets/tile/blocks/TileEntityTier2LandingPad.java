@@ -10,10 +10,7 @@ import micdoodle8.mods.galacticraft.api.entity.IFuelable;
 import micdoodle8.mods.galacticraft.api.entity.ILandable;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
-import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.planets.mars.tile.TileEntityLaunchController;
@@ -30,6 +27,10 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.extraplanets.blocks.BlockCustomMulti;
+import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class TileEntityTier2LandingPad extends TileEntityMulti implements IMultiBlock, IFuelable, IFuelDock, ICargoEntity {
 	public TileEntityTier2LandingPad() {
@@ -96,7 +97,7 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 
 		List<BlockPos> positions = new ArrayList();
 		this.getPositions(placedPosition, positions);
-		((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.ROCKET_PAD);
+		((BlockCustomMulti) ExtraPlanets_Blocks.FAKE_BLOCK).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.TIER_2_ROCKET_PAD);
 	}
 
 	@Override
@@ -120,7 +121,7 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 		for (BlockPos pos : positions) {
 			IBlockState stateAt = this.worldObj.getBlockState(pos);
 
-			if (stateAt.getBlock() == GCBlocks.fakeBlock && (EnumBlockMultiType) stateAt.getValue(BlockMulti.MULTI_TYPE) == EnumBlockMultiType.ROCKET_PAD) {
+			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && (EnumBlockMultiType) stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.TIER_2_ROCKET_PAD) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.worldObj.getBlockState(pos));
 				}

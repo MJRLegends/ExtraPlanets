@@ -28,6 +28,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPad;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
+import com.mjr.extraplanets.blocks.BlockCustomMulti;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -258,6 +259,9 @@ public class ClientProxy extends CommonProxy {
 		if (Config.SOLAR_PANELS)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
 		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket");
+		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket");
+		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad");
+
 	}
 
 	private void registerEntityRenders() {
@@ -582,6 +586,8 @@ public class ClientProxy extends CommonProxy {
 		for (BlockCustomLandingPadFull.EnumLandingPadFullType blockBasic : BlockCustomLandingPadFull.EnumLandingPadFullType.values()) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL, blockBasic.getMeta(), blockBasic.getName());
 		}
+
+		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FAKE_BLOCK);
 	}
 
 	private void registerItemJsons() {
