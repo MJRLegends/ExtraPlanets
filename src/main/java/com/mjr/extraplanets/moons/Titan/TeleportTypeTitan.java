@@ -36,7 +36,7 @@ public class TeleportTypeTitan implements ITeleportType {
 	public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand) {
 		final double x = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
 		final double z = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
-		return new Vector3(x, 220.0D, z);
+		return new Vector3(player.posX + x, 220.0D, player.posZ + z);
 	}
 
 	@Override
