@@ -1,13 +1,9 @@
 {
     "forge_marker": 1,
-    "defaults": {
+    "variants": {
         "fluid": {
             "model": "forge:fluid",
             "custom": { "fluid": "nitrogen_ice_fluid" }
         }
-    },
-    "variants": {
-        "fluid": [{ }],
-        "inventory": [{ }]
     }
 }
