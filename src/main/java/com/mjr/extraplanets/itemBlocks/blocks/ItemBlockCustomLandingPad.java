@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.inventory.blocks;
+package com.mjr.extraplanets.itemBlocks.blocks;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;

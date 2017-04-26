@@ -52,7 +52,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
-import com.mjr.extraplanets.inventory.blocks.ItemBlockCustomLandingPad;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockCustomLandingPad;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDummy;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCeres;
