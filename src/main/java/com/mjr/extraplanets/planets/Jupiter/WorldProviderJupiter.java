@@ -146,7 +146,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	public int getSolarRadiationLevel() {
 		return 35;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
@@ -156,7 +156,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-	
+
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.JUPITER;

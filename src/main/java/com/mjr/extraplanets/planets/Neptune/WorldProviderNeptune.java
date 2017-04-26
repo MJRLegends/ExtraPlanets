@@ -156,7 +156,7 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-	
+
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.NEPTUNE;

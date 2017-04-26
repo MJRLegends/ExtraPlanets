@@ -52,16 +52,14 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	}
 
 	@Override
-    public Class<? extends IChunkGenerator> getChunkProviderClass()
-    {
-        return ChunkProviderCallisto.class;
-    }
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+		return ChunkProviderCallisto.class;
+	}
 
-    @Override
-    public Class<? extends BiomeProvider> getBiomeProviderClass()
-    {
-        return BiomeProviderCallisto.class;
-    }
+	@Override
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderCallisto.class;
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -157,7 +155,6 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	public float getWindLevel() {
 		return 0;
 	}
-	
 
 	@Override
 	public boolean shouldDisablePrecipitation() {
@@ -168,7 +165,7 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-	
+
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.CALLISTO;

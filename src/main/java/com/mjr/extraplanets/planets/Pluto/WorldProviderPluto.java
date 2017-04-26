@@ -146,7 +146,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	public int getSolarRadiationLevel() {
 		return 12;
 	}
-	
+
 	@Override
 	public boolean shouldDisablePrecipitation() {
 		return true;
@@ -156,7 +156,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-	
+
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.PLUTO;
