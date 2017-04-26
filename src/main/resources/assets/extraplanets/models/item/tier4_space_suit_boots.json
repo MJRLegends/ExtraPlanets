@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier4SpaceSuitBoots"
+        "layer0": "extraplanets:items/tier4_space_suit_boots"
     },
     "display": {
         "thirdperson": {
