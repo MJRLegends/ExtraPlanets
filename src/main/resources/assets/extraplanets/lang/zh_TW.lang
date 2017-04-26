@@ -352,6 +352,11 @@ tile.basic_crystallizer.name=Basic Crystallizer
 tile.basic_smasher.name=Basic Block Smasher
 tile.basic_chemical_injector.name=Basic Chemical Injector
 tile.basic_solar_evaporation_chamber.name=Basic Solar Evaporation Chamber
+tile.advanced_launch_pad.tier2LandingPad.name=Tier 2 Launch Pad
+tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad
+tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets
+tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
 #Machine Containers
 container.solarhybrid.name=混合型高級太陽能電池板
