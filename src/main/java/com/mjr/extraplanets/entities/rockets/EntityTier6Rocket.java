@@ -6,20 +6,28 @@ import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.event.EventLandingPadRemoval;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 
+import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityTier6Rocket extends EntityTieredRocket {
@@ -62,6 +70,72 @@ public class EntityTier6Rocket extends EntityTieredRocket {
 	@Override
 	public double getOnPadYOffset() {
 		return 1.0D;
+	}
+
+	@Override
+	public void onLaunch() {
+		if (!(this.worldObj.provider.getDimension() == GalacticraftCore.planetOverworld.getDimensionID() || this.worldObj.provider instanceof IGalacticraftWorldProvider)) {
+			if (ConfigManagerCore.disableRocketLaunchAllNonGC) {
+				this.cancelLaunch();
+				return;
+			}
+
+			// No rocket flight in the Nether, the End etc
+			for (int i = ConfigManagerCore.disableRocketLaunchDimensions.length - 1; i >= 0; i--) {
+				if (ConfigManagerCore.disableRocketLaunchDimensions[i] == this.worldObj.provider.getDimension()) {
+					this.cancelLaunch();
+					return;
+				}
+			}
+
+		}
+
+		super.onLaunch();
+
+		if (!this.worldObj.isRemote) {
+			GCPlayerStats stats = null;
+
+			if (!this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
+				EntityPlayerMP player = (EntityPlayerMP) this.getPassengers().get(0);
+				stats = GCPlayerStats.get(player);
+
+				if (!(this.worldObj.provider instanceof IOrbitDimension)) {
+					stats.setCoordsTeleportedFromX(player.posX);
+					stats.setCoordsTeleportedFromZ(player.posZ);
+				}
+			}
+
+			int amountRemoved = 0;
+
+			PADSEARCH: for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++) {
+				for (int y = MathHelper.floor_double(this.posY) - 3; y <= MathHelper.floor_double(this.posY) + 1; y++) {
+					for (int z = MathHelper.floor_double(this.posZ) - 1; z <= MathHelper.floor_double(this.posZ) + 1; z++) {
+						BlockPos pos = new BlockPos(x, y, z);
+						final Block block = this.worldObj.getBlockState(pos).getBlock();
+
+						if (block != null && block instanceof BlockCustomLandingPadFull) {
+							if (amountRemoved < 9) {
+								EventLandingPadRemoval event = new EventLandingPadRemoval(this.worldObj, pos);
+								MinecraftForge.EVENT_BUS.post(event);
+
+								if (event.allow) {
+									this.worldObj.setBlockToAir(pos);
+									amountRemoved = 9;
+								}
+								break PADSEARCH;
+							}
+						}
+					}
+				}
+			}
+
+			// Set the player's launchpad item for return on landing - or null if launchpads not removed
+			if (stats != null) {
+				stats.setLaunchpadStack(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 25, 0));
+			}
+
+			this.playSound(SoundEvents.ENTITY_ITEM_PICKUP, 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+		}
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
