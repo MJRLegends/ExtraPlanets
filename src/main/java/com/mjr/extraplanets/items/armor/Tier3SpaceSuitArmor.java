@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.items.armor;
 
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
+import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -12,7 +13,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 
-public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity {
+public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor  {
 	public String name;
 
 	public Tier3SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
@@ -55,5 +56,15 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS)
 					return 75;
 		return 0;
+	}
+
+	@Override
+	public boolean handleGearType(EnumGearType gearType) {
+		return true;
+	}
+
+	@Override
+	public boolean canBreathe(ItemStack helmetInSlot, EntityPlayer playerWearing, EnumGearType type) {
+		return true;
 	}
 }
