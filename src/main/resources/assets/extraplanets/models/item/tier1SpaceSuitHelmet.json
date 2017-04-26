@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier1SpaceSuitHelmet"
+        "layer0": "extraplanets:items/tier1_space_suit_helmet"
     },
     "display": {
         "thirdperson": {
