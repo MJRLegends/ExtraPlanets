@@ -3,6 +3,7 @@ package com.mjr.extraplanets.entities.rockets;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
+import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
@@ -28,6 +29,7 @@ import net.minecraftforge.common.MinecraftForge;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
 
 public class EntityTier10Rocket extends EntityTieredRocket {
 	public EntityTier10Rocket(World par1World) {
@@ -280,14 +282,6 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 	}
 
 	@Override
-	protected void writeEntityToNBT(NBTTagCompound par1NBTTagCompound) {
-	}
-
-	@Override
-	protected void readEntityFromNBT(NBTTagCompound par1NBTTagCompound) {
-	}
-
-	@Override
 	public void onPadDestroyed() {
 		if (!this.isDead && this.launchPhase != EnumLaunchPhase.LAUNCHED.ordinal()) {
 			this.dropShipAsItem();
@@ -354,4 +348,8 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 		return 1.1F;
 	}
 
+	@Override
+	public boolean isDockValid(IFuelDock dock) {
+		return dock instanceof TileEntityTier3LandingPad;
+	}
 }

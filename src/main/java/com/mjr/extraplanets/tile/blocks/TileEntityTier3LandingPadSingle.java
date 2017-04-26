@@ -8,6 +8,7 @@ import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class TileEntityTier3LandingPadSingle extends TileEntity implements ITickable {
@@ -34,7 +35,7 @@ public class TileEntityTier3LandingPadSingle extends TileEntity implements ITick
 				this.getPos().south(1);
 				this.getPos().east(1);
 
-				this.worldObj.setBlockState(this.getPos(), ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL.getStateFromMeta(1), 2);
+				this.worldObj.setBlockState(this.getPos(), ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL.getStateFromMeta(BlockCustomLandingPadFull.EnumLandingPadFullType.TIER_3_ROCKET_PAD.getMeta()), 2);
 			}
 		}
 	}

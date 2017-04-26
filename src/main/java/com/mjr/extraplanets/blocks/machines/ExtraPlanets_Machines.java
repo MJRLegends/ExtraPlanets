@@ -8,6 +8,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockAdvancedOxygenCompressor;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockUltimateOxygenCompressor;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
@@ -17,6 +18,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
@@ -31,6 +33,9 @@ public class ExtraPlanets_Machines {
 	public static Block OXYGEN_COMPRESSOR_ULTIMATE;
 
 	public static Block SOLAR_PANEL;
+	
+	public static Block FUEL_LOADER_ADVANCED;
+	public static Block FUEL_LOADER_ULTIMATE;
 
 	public static Block BASIC_DECRYSALLIZER;
 	public static Block BASIC_CRYSALLIZER;
@@ -71,6 +76,8 @@ public class ExtraPlanets_Machines {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basic_solar_evaporation_chamber");
 		}
+		FUEL_LOADER_ADVANCED = new AdvancedFuelLoader("advanced_fuel_loader");
+		FUEL_LOADER_ULTIMATE = new UltimateFuelLoader("ultimate_fuel_loader");
 	}
 
 	private static void registerMachines() throws NoSuchMethodException {
@@ -96,6 +103,8 @@ public class ExtraPlanets_Machines {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				RegisterHelper.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 		}
+		RegisterHelper.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
+		RegisterHelper.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -125,5 +134,8 @@ public class ExtraPlanets_Machines {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
 		}
+		GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
+		GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
+
 	}
 }

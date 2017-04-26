@@ -4,6 +4,7 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
+import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
@@ -29,6 +30,7 @@ import net.minecraftforge.common.MinecraftForge;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
 
 public class EntityTier5Rocket extends EntityTieredRocket {
 	public EntityTier5Rocket(World world) {
@@ -346,5 +348,10 @@ public class EntityTier5Rocket extends EntityTieredRocket {
 	@Override
 	public float getRenderOffsetY() {
 		return 1.1F;
+	}
+
+	@Override
+	public boolean isDockValid(IFuelDock dock) {
+		return (dock instanceof TileEntityTier2LandingPad);
 	}
 }
