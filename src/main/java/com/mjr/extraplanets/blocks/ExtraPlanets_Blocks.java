@@ -354,25 +354,25 @@ public class ExtraPlanets_Blocks {
 
 	private static void initializeSpawnerBlocks() {
 		if (Config.MERCURY) {
-			MERCURY_SPAWNER = new BlockMercuryDungeonSpawner("bossSpawnerVenus");
+			MERCURY_SPAWNER = new BlockMercuryDungeonSpawner("boss_spawner_venus");
 		}
 		if (Config.JUPITER) {
-			JUIPTER_SPAWNER = new BlockJupiterDungeonSpawner("bossSpawnerVenus");
+			JUIPTER_SPAWNER = new BlockJupiterDungeonSpawner("boss_spawner_jupiter");
 		}
 		if (Config.SATURN) {
-			SATURN_SPAWNER = new BlockSaturnDungeonSpawner("bossSpawnerSaturn");
+			SATURN_SPAWNER = new BlockSaturnDungeonSpawner("boss_spawner_saturn");
 		}
 		if (Config.URANUS) {
-			URANUS_SPAWNER = new BlockUranusDungeonSpawner("bossSpawnerUranus");
+			URANUS_SPAWNER = new BlockUranusDungeonSpawner("boss_spawner_uranus");
 		}
 		if (Config.NEPTUNE) {
-			NEPTUNE_SPAWNER = new BlockNeptuneDungeonSpawner("bossSpawnerNeptune");
+			NEPTUNE_SPAWNER = new BlockNeptuneDungeonSpawner("boss_spawner_neptune");
 		}
 		if (Config.PLUTO) {
-			PLUTO_SPAWNER = new BlockPlutoDungeonSpawner("bossSpawnerPluto");
+			PLUTO_SPAWNER = new BlockPlutoDungeonSpawner("boss_spawner_pluto");
 		}
 		if (Config.ERIS) {
-			ERIS_SPAWNER = new BlockErisDungeonSpawner("bossSpawnerEris");
+			ERIS_SPAWNER = new BlockErisDungeonSpawner("boss_spawner_eris");
 		}
 	}
 
@@ -388,7 +388,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.MERCURY) {
 			RegisterHelper.registerBlock(MERCURY_BLOCKS, ItemBlockMercury.class, MERCURY_BLOCKS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(MERCURY_GRAVEL, MERCURY_GRAVEL.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(MERCURY_SPAWNER, ItemBlockGC.class, "mercurySpawner");
+			RegisterHelper.registerBlock(MERCURY_SPAWNER, ItemBlockGC.class, "mercury_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_4, ItemBlockDesc.class, TREASURE_CHEST_TIER_4.getUnlocalizedName().substring(5));
 		}
 		if (Config.CERES) {
@@ -399,37 +399,37 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.registerBlock(JUPITER_BLOCKS, ItemBlockJupiter.class, JUPITER_BLOCKS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(JUPITER_GRAVEL, JUPITER_GRAVEL.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerBlock(JUIPTER_SPAWNER, ItemBlockGC.class, "jupiterSpawner");
+			RegisterHelper.registerBlock(JUIPTER_SPAWNER, ItemBlockGC.class, "jupiter_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
 			RegisterHelper.registerBlock(SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(SATURN_GRAVEL, SATURN_GRAVEL.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerBlock(SATURN_SPAWNER, ItemBlockGC.class, "saturnSpawner");
+			RegisterHelper.registerBlock(SATURN_SPAWNER, ItemBlockGC.class, "saturn_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_6, ItemBlockDesc.class, TREASURE_CHEST_TIER_6.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
 			RegisterHelper.registerBlock(URANUS_BLOCKS, ItemBlockUranus.class, URANUS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(URANUS_SPAWNER, ItemBlockGC.class, "uranusSpawner");
+			RegisterHelper.registerBlock(URANUS_SPAWNER, ItemBlockGC.class, "uranus_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_7, ItemBlockDesc.class, TREASURE_CHEST_TIER_7.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(DENSE_ICE, DENSE_ICE.getUnlocalizedName().substring(5));
 		}
 		if (Config.NEPTUNE) {
 			RegisterHelper.registerBlock(NEPTUNE_BLOCKS, ItemBlockNeptune.class, NEPTUNE_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(NEPTUNE_SPAWNER, ItemBlockGC.class, "neptuneSpawner");
+			RegisterHelper.registerBlock(NEPTUNE_SPAWNER, ItemBlockGC.class, "neptune_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_8, ItemBlockDesc.class, TREASURE_CHEST_TIER_8.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(FROZEN_NITROGEN, FROZEN_NITROGEN.getUnlocalizedName().substring(5));
 		}
 		if (Config.PLUTO) {
 			RegisterHelper.registerBlock(PLUTO_BLOCKS, ItemBlockPluto.class, PLUTO_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(PLUTO_SPAWNER, ItemBlockGC.class, "plutoSpawner");
+			RegisterHelper.registerBlock(PLUTO_SPAWNER, ItemBlockGC.class, "pluto_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_9, ItemBlockDesc.class, TREASURE_CHEST_TIER_9.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(PLUTO_GRAVEL, PLUTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.ERIS) {
 			RegisterHelper.registerBlock(ERIS_BLOCKS, ItemBlockEris.class, ERIS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ERIS_SPAWNER, ItemBlockGC.class, "erisSpawner");
+			RegisterHelper.registerBlock(ERIS_SPAWNER, ItemBlockGC.class, "eris_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_10, ItemBlockDesc.class, TREASURE_CHEST_TIER_10.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(ERIS_GRAVEL, ERIS_GRAVEL.getUnlocalizedName().substring(5));
 		}

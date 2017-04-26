@@ -75,9 +75,9 @@ public class ExtraPlanets_Machines {
 
 	private static void registerMachines() throws NoSuchMethodException {
 		if (Config.REFINERY_ADVANCED)
-			RegisterHelper.registerBlock(REFINERY_ADVANCED, "advancedRefinery");
+			RegisterHelper.registerBlock(REFINERY_ADVANCED, "advanced_refinery");
 		if (Config.REFINERY_ULTIMATE)
-			RegisterHelper.registerBlock(REFINERY_ULTIMATE, "ultimateRefinery");
+			RegisterHelper.registerBlock(REFINERY_ULTIMATE, "ultimate_refinery");
 		if (Config.SOLAR_PANELS)
 			RegisterHelper.registerBlock(SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
