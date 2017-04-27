@@ -356,6 +356,8 @@ tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad
 tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets
 tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets
+tile.advanced_fuel_loader.name=Advanced Fuel Loader
+tile.ultimate_fuel_loader.name=Ultimate Fuel Loader
 
 #Machine Containers
 container.solarhybrid.name=Panel Solar Híbrido
