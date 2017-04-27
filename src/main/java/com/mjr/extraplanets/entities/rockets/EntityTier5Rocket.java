@@ -71,7 +71,7 @@ public class EntityTier5Rocket extends EntityTieredRocket {
 
 	@Override
 	public double getOnPadYOffset() {
-		return 1.0D;
+		return 0.8D;
 	}
 
 	@Override

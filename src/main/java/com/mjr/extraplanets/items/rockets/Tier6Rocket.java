@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -112,6 +113,14 @@ public class Tier6Rocket extends Item implements IHoldableItem {
 			}
 		}
 		return EnumActionResult.PASS;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+		for (int i = 0; i < EnumRocketType.values().length; i++) {
+			par3List.add(new ItemStack(par1, 1, i));
+		}
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

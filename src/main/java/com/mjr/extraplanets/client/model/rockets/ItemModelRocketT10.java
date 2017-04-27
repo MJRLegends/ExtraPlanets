@@ -60,7 +60,7 @@ public class ItemModelRocketT10 extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.FIRST_PERSON_RIGHT_HAND)
         {
-            Vector3f trans = new Vector3f(0.5F, 3.2F, -3.6F);
+            Vector3f trans = new Vector3f(2.5F, 6.2F, -3.9F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
@@ -88,7 +88,7 @@ public class ItemModelRocketT10 extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.THIRD_PERSON_RIGHT_HAND || cameraTransformType == TransformType.THIRD_PERSON_LEFT_HAND)
         {
-            Vector3f trans = new Vector3f(1.0F, -2.4F, 1.2F);
+            Vector3f trans = new Vector3f(6.5F, -8.4F, -1.2F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();

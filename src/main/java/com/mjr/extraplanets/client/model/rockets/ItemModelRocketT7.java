@@ -65,7 +65,7 @@ public class ItemModelRocketT7 extends ModelTransformWrapper
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
             mul.setIdentity();
-            Quat4f rot = TRSRTransformation.quatFromXYZDegrees(new Vector3f(0, 45, 0));
+            Quat4f rot = TRSRTransformation.quatFromXYZDegrees(new Vector3f(0, 230, 0));
             mul.setRotation(rot);
             ret.mul(mul);
             mul.setIdentity();
@@ -88,7 +88,7 @@ public class ItemModelRocketT7 extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.THIRD_PERSON_RIGHT_HAND || cameraTransformType == TransformType.THIRD_PERSON_LEFT_HAND)
         {
-            Vector3f trans = new Vector3f(1.0F, -2.4F, 1.2F);
+            Vector3f trans = new Vector3f(1.4F, -4.6F, 1.1F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
