@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.util.RecipeUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
@@ -763,6 +764,15 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 4), 'Z',
 					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
 		}
+		
+        RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotPalladium", 'X', "ingotNickel", 'Y', "gemRedGem", 'Z', new ItemStack(GCBlocks.fuelLoader) });
+        RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotZinc", 'X', "ingotTungsten", 'Y', "gemBlueGem", 'Z', new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
+
+		
+		// Launch pads
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 0), new Object[] { "III", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'B', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 1), new Object[] { "III", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'B', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 7) });
+	
 
 		// Can of Food
 		GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_PORKCHOP, Items.COOKED_PORKCHOP });
