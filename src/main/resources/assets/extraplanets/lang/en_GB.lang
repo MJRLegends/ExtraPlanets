@@ -373,6 +373,8 @@ container.basic.decrystallizer.name=Basic Decrystallizer
 container.basic.crystallizer.name=Basic Crystallizer
 container.basic.smasher.name=Basic Smasher
 container.basic.chemical_injector.name=Basic Chemical Injector
+container.advanced.fuelloader.name=Advanced Fuel Loader
+container.ultimate.fuelloader.name=Ultimate Fuel Loader
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=Salt Water Tank
