@@ -14,6 +14,18 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.3.2 Beta Build
+*Added Custom Tier 4 - 10 rocket models
+*Added Tier 2 & 3 Launch pads
+*Changed biome id's (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Fixing missing json files
+*Fixed some of the json file errors
+*Updated lang files
+*Made Tier 1 - 4 Space Suits, take place of the Oxygen Gear/Mask (Tanks are still needed)
+*Added Advanced & Ultimate Fuel Loaders
+*Made the Tier 4 - 10 fuelable via custom Launch pads
+*Fixes for Basic Hideout on Jupiter
+
 v0.3.1 Beta Build
 *Fixed issue #79
 *Improvements to the lighting effect on Jupiter
