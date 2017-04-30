@@ -45,6 +45,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
 import com.mjr.extraplanets.itemBlocks.ItemBlockCustomLandingPad;
+import com.mjr.extraplanets.itemBlocks.ItemBlockDecorativeBlocks;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCeres;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockDeimos;
@@ -212,6 +213,8 @@ public class ExtraPlanets_Blocks {
 
 	public static Block advancedLaunchPad;
 	public static Block advancedLaunchPadFull;
+	
+	public static Block decorativeBlocks;
 
 	public static void init() {
 		initializeBlocks();
@@ -332,6 +335,8 @@ public class ExtraPlanets_Blocks {
 		}
 		advancedLaunchPad = new BlockCustomLandingPad("advancedLaunchPad");
 		advancedLaunchPadFull = new BlockCustomLandingPadFull("advancedLaunchPadFull");
+		
+		decorativeBlocks = new BlockDecorativeBlocks("decorativeBlocks");
 	}
 
 	private static void initializeDungeonBlocks() {
@@ -565,6 +570,8 @@ public class ExtraPlanets_Blocks {
 
 		GameRegistry.registerBlock(advancedLaunchPad, ItemBlockCustomLandingPad.class, advancedLaunchPad.getUnlocalizedName());
 		GameRegistry.registerBlock(advancedLaunchPadFull, ItemBlockGC.class, advancedLaunchPadFull.getUnlocalizedName());
+		
+		GameRegistry.registerBlock(decorativeBlocks, ItemBlockDecorativeBlocks.class, decorativeBlocks.getUnlocalizedName());
 	}
 
 	private static void registerTileEntitys() {
