@@ -15,6 +15,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
+import com.mjr.extraplanets.client.handlers.KeyHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.model.bosses.ModelEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.model.monsters.ModelEvolvedIceSlime;
@@ -59,6 +60,7 @@ import com.mjr.extraplanets.client.render.entities.rockets.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
+import com.mjr.extraplanets.client.render.entities.vehicles.RenderMarsRover;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier10Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
@@ -104,6 +106,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
+import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.TileEntitySolar;
@@ -135,6 +138,7 @@ public class ClientProxy extends CommonProxy {
 	public static int treasureT9ChestID;
 	public static int treasureT10ChestID;
 	public static int renderIdLandingPad;
+
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
@@ -152,6 +156,10 @@ public class ClientProxy extends CommonProxy {
 		if (Config.nuclearBomb)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 		RenderingRegistry.registerEntityRenderingHandler(EntityFireBombPrimed.class, new RenderFireBombPrimed());
+
+		FMLCommonHandler.instance().bus().register(new KeyHandlerClient());
+		ClientRegistry.registerKeyBinding(KeyHandlerClient.openFuelGui);
+
 	}
 
 	@Override
@@ -255,6 +263,9 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "blankRocketWhite"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier10Rocket, new ItemRendererTier10Rocket(rocketModelTier10));
 		}
+		IModelCustom marsRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover.obj"));
+		RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, new RenderMarsRover(marsRover));
+		// MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.marsRover, new ItemRendererMarsRover(marsRover));
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -297,7 +308,7 @@ public class ClientProxy extends CommonProxy {
 		ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(new BlockRendererMachine(renderIdMachine));
 		renderIdLandingPad = RenderingRegistry.getNextAvailableRenderId();
-        RenderingRegistry.registerBlockHandler(new BlockRendererCustomLandingPad(renderIdLandingPad));
+		RenderingRegistry.registerBlockHandler(new BlockRendererCustomLandingPad(renderIdLandingPad));
 	}
 
 	@SideOnly(Side.CLIENT)

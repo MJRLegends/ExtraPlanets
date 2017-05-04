@@ -46,6 +46,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
+import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.handlers.BoneMealHandler;
 import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.handlers.GalacticraftVersionChecker;
@@ -64,6 +65,7 @@ import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
 import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
+import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
@@ -105,6 +107,8 @@ public class ExtraPlanets {
 
 	@Instance(Constants.modID)
 	public static ExtraPlanets instance;
+	
+	public static ExtraPlanetsChannelHandler packetPipeline;
 
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
@@ -272,6 +276,8 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For Entities
 		registerNonMobEntities();
 		registerCreatures();
+		
+	    packetPipeline = ExtraPlanetsChannelHandler.init();
 
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
@@ -320,6 +326,7 @@ public class ExtraPlanets {
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.modName + "SmallSnowBall", 150, 1, true);
 		}
+		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, Constants.modName + "EntityMarsRover", 150, 1, false);
 	}
 
 	private void registerCreatures() {

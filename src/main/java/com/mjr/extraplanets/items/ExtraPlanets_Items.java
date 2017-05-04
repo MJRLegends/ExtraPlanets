@@ -56,6 +56,7 @@ import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
+import com.mjr.extraplanets.items.vehicles.ItemMarsRover;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -129,6 +130,8 @@ public class ExtraPlanets_Items {
 	public static Item tier4ThermalPadding;
 
 	public static Item wafers;
+	
+	public static Item marsRover;
 
 	public static void init() {
 		initializeItems();
@@ -257,6 +260,8 @@ public class ExtraPlanets_Items {
 			if (Config.morePlanetsCompatibility == false)
 				ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
 		}
+		
+		marsRover = new ItemMarsRover("marsRover");
 	}
 
 	private static void registerItems() {
@@ -363,6 +368,8 @@ public class ExtraPlanets_Items {
 			if (Config.morePlanetsCompatibility == false)
 				GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName());
 		}
+		
+		GameRegistry.registerItem(marsRover, marsRover.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {
