@@ -131,12 +131,7 @@ public class ItemMarsRover extends Item implements IHoldableItem
                     {
                         return par1ItemStack;
                     }
-
-                    if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("BuggyFuel"))
-                    {
-                        var35.roverFuelTank.setFluid(new FluidStack(GalacticraftCore.fluidFuel, par1ItemStack.getTagCompound().getInteger("BuggyFuel")));
-                    }
-
+                    
                     if (!par2World.isRemote)
                     {
                         par2World.spawnEntityInWorld(var35);
@@ -163,10 +158,10 @@ public class ItemMarsRover extends Item implements IHoldableItem
             par2List.add(GCCoreUtil.translate("gui.buggy.storageSpace") + ": " + par1ItemStack.getItemDamage() * 18);
         }
 
-        if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("BuggyFuel"))
-        {
-            par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("BuggyFuel") + " / " + EntityMarsRover.tankCapacity);
-        }
+//        if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("BuggyFuel"))
+//        {
+//            par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("BuggyFuel") + " / " + EntityMarsRover.tankCapacity);
+//        }
     }
 
     @Override

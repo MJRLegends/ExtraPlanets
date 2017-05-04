@@ -9,10 +9,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+import net.minecraftforge.fluids.FluidStack;
 
+import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class EntityMarsRover extends EntityVehicleBase {
+public class EntityMarsRover extends EntityPoweredVehicleBase {
 
 	public EntityMarsRover(World var1) {
 		super(var1);
@@ -32,7 +34,7 @@ public class EntityMarsRover extends EntityVehicleBase {
 
 		ItemStack buggy = new ItemStack(ExtraPlanets_Items.marsRover, 1, this.roverType);
 		buggy.setTagCompound(new NBTTagCompound());
-		buggy.getTagCompound().setInteger("MarsRoverFuel", this.roverFuelTank.getFluidAmount());
+		buggy.getTagCompound().setInteger("MarsRoverFuel", 0);
 		items.add(buggy);
 
 		for (ItemStack item : this.cargoItems) {
@@ -50,17 +52,29 @@ public class EntityMarsRover extends EntityVehicleBase {
 	}
 
 	@Override
-	public void setPad(IFuelDock pad) {
+	public void setPad(IPowerDock pad) {
 		this.landingPad = pad;
 	}
 
 	@Override
-	public IFuelDock getLandingPad() {
+	public IPowerDock getLandingPad() {
 		return this.landingPad;
 	}
 
 	@Override
-	public boolean isDockValid(IFuelDock dock) {
+	public boolean isDockValid(IPowerDock dock) {
 		return dock instanceof TileEntityBuggyFueler;
+	}
+
+	@Override
+	public float addPower(float amount, boolean doDrain) {
+		this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() + amount);
+		return this.getCurrentPowerCapacity();
+	}
+
+	@Override
+	public float removePower(float amount){
+		this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
+		return this.getCurrentPowerCapacity();
 	}
 }
