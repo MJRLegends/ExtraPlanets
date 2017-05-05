@@ -45,6 +45,7 @@ import com.mjr.extraplanets.items.rockets.Tier6Rocket;
 import com.mjr.extraplanets.items.rockets.Tier7Rocket;
 import com.mjr.extraplanets.items.rockets.Tier8Rocket;
 import com.mjr.extraplanets.items.rockets.Tier9Rocket;
+import com.mjr.extraplanets.items.schematics.SchematicMarsRover;
 import com.mjr.extraplanets.items.schematics.SchematicTier10;
 import com.mjr.extraplanets.items.schematics.SchematicTier4;
 import com.mjr.extraplanets.items.schematics.SchematicTier5;
@@ -52,6 +53,7 @@ import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
 import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.schematics.SchematicVenusRover;
 import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
@@ -133,6 +135,8 @@ public class ExtraPlanets_Items {
 
 	public static Item marsRover;
 	public static Item electricParts;
+	public static Item schematicMarsRover;
+	public static Item schematicVenusRover;
 
 	public static void init() {
 		initializeItems();
@@ -264,6 +268,9 @@ public class ExtraPlanets_Items {
 
 		marsRover = new ItemMarsRover("marsRover");
 		electricParts = new ItemElectricParts("electricParts");
+		
+		schematicMarsRover = new SchematicMarsRover("schematicMarsRover");
+		schematicVenusRover = new SchematicVenusRover("schematicVenusRover");
 	}
 
 	private static void registerItems() {
@@ -373,6 +380,8 @@ public class ExtraPlanets_Items {
 
 		GameRegistry.registerItem(marsRover, marsRover.getUnlocalizedName());
 		GameRegistry.registerItem(electricParts, electricParts.getUnlocalizedName());
+		GameRegistry.registerItem(schematicMarsRover, schematicMarsRover.getUnlocalizedName());
+		GameRegistry.registerItem(schematicVenusRover, schematicVenusRover.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {

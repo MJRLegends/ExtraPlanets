@@ -59,6 +59,7 @@ public class ExtraPlanets_Recipes {
 			Tier9RocketRecipes.registerRocketCraftingRecipe();
 		if (Config.eris)
 			Tier10RocketRecipes.registerRocketCraftingRecipe();
+		MarsRoverRecipes.registerRoverCraftingRecipe();
 	}
 
 	private static void registerFurnaceRecipes() {
@@ -898,11 +899,12 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 2), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.snow) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 3), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.ice) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 4), new Object[] { "MMM", "MBM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.volcanicRock), 'B', new ItemStack(ExtraPlanets_Items.magma_bucket) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 0, 2), 'B', new ItemStack(Items.dye, 0, 0), 'W', new ItemStack(Items.dye, 0, 15) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 6), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 0, 5)});
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 7), new Object[] { " FF", " FF", "   ", 'F', new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 0, 5)});
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 8), new Object[] { "   ", "CC ", "CC ", 'C', new ItemStack(ExtraPlanets_Items.tier5Items, 0, 5)});
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 9), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.frozenNitrogen)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 0, 2), 'B', new ItemStack(Items.dye, 0, 0), 'W',
+				new ItemStack(Items.dye, 0, 15) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 6), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 0, 5) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 7), new Object[] { " FF", " FF", "   ", 'F', new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 0, 5) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 8), new Object[] { "   ", "CC ", "CC ", 'C', new ItemStack(ExtraPlanets_Items.tier5Items, 0, 5) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 9), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.frozenNitrogen) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 10), new Object[] { "MMM", "MBM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.volcanicRock) });
 	}
 
