@@ -21,6 +21,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.proxy.ClientProxy;
+import com.mjr.extraplanets.tile.TileEntityPoweredChargingPad;
 import com.mjr.extraplanets.tile.TileEntityTier2LandingPad;
 import com.mjr.extraplanets.tile.TileEntityTier3LandingPad;
 
@@ -28,7 +29,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPartialSealableBlock {
-	private IIcon[] icons = new IIcon[2];
+	private IIcon[] icons = new IIcon[3];
 
 	public BlockCustomLandingPadFull(String assetName) {
 		super(Material.rock);
@@ -101,6 +102,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.icons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
 		this.icons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier3_launch_pad");
+		this.icons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "powered_charging_pad");
 		this.blockIcon = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
 	}
 
@@ -112,6 +114,8 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 			return this.icons[0];
 		case 1:
 			return this.icons[1];
+		case 2:
+			return this.icons[2];
 		}
 
 		return this.blockIcon;
@@ -143,6 +147,8 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 			return new TileEntityTier2LandingPad();
 		case 1:
 			return new TileEntityTier3LandingPad();
+		case 2:
+			return new TileEntityPoweredChargingPad();
 		default:
 			return null;
 		}

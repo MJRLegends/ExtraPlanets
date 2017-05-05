@@ -20,6 +20,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.tile.TileEntityPoweredChargingPadSingle;
 import com.mjr.extraplanets.tile.TileEntityTier2LandingPadSingle;
 import com.mjr.extraplanets.tile.TileEntityTier3LandingPadSingle;
 
@@ -27,7 +28,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartialSealableBlock, ItemBlockDesc.IBlockShiftDesc {
-	private IIcon[] icons = new IIcon[2];
+	private IIcon[] icons = new IIcon[3];
 
 	public BlockCustomLandingPad(String assetName) {
 		super(Material.iron);
@@ -44,7 +45,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 3; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
@@ -53,6 +54,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.icons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
 		this.icons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier3_launch_pad");
+		this.icons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "powered_charging_pad");
 		this.blockIcon = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
 	}
 
@@ -103,6 +105,8 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 			return new TileEntityTier2LandingPadSingle();
 		case 1:
 			return new TileEntityTier3LandingPadSingle();
+		case 2:
+			return new TileEntityPoweredChargingPadSingle();
 		default:
 			return null;
 		}
@@ -137,8 +141,10 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	public String getShiftDescription(int meta) {
 		if(meta == 0)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier2.desc");
-		else
+		else if(meta == 1)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier3.desc");
+		else
+			return "";
 	}
 
 	@Override

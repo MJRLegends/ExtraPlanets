@@ -6,11 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import com.mjr.extraplanets.api.IPowerDock;
-import com.mjr.extraplanets.api.IPoweredDockable;
-
-import micdoodle8.mods.galacticraft.api.entity.IDockable;
-import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
 import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
@@ -37,6 +32,10 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+
+import com.mjr.extraplanets.api.IPowerDock;
+import com.mjr.extraplanets.api.IPoweredDockable;
+
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import cpw.mods.fml.relauncher.Side;
@@ -83,7 +82,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		this.dataWatcher.addObject(this.rockDirection, new Integer(1));
 		this.ignoreFrustumCheck = true;
 		this.isImmuneToFire = true;
-		
+
 		// Power System
 		this.currentPowerCapacity = 10000;
 		this.powerMaxCapacity = 10000;

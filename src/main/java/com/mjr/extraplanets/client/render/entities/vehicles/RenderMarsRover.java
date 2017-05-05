@@ -125,6 +125,9 @@ public class RenderMarsRover extends Render {
 		this.modelRover.renderPart("Seat001");
 		this.modelRover.renderPart("SolarPanel");
 		this.modelRover.renderPart("SolarPanelBlock");
+		this.modelRover.renderPart("Wire");
+		this.modelRover.renderPart("Battery");
+		this.modelRover.renderPart("Line002");
 
 		this.bindTexture(RenderMarsRover.buggyTextureStorage);
 

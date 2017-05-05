@@ -29,6 +29,9 @@ public class ItemBlockCustomLandingPad extends ItemBlockDesc {
 		case 1:
 			name = "tier3LandingPad";
 			break;
+		case 2:
+			name = "poweredChargingPad";
+			break;
 		}
 
 		return this.field_150939_a.getUnlocalizedName() + "." + name;
