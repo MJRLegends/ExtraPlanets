@@ -11,12 +11,15 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedFuelLoader;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiSolar;
+import com.mjr.extraplanets.client.gui.machines.GuiVehicleChanger;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
+import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
 import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.TileEntitySolar;
+import com.mjr.extraplanets.tile.TileEntityVehicleChanger;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -42,6 +45,8 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
 			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
 				return new ContainerAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
+			} else if (tile instanceof TileEntityVehicleChanger) {
+				return new ContainerVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
 			}
 		}
 		return null;
@@ -67,6 +72,8 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiSolar(player.inventory, (TileEntitySolar) tile);
 			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
 				return new GuiAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
+			} else if (tile instanceof TileEntityVehicleChanger) {
+				return new GuiVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
 			}
 		}
 		return null;

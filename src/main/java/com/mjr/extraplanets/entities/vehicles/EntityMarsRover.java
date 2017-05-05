@@ -3,16 +3,14 @@ package com.mjr.extraplanets.entities.vehicles;
 import java.util.ArrayList;
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityBuggyFueler;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraftforge.fluids.FluidStack;
 
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tile.TileEntityPoweredChargingPad;
 
 public class EntityMarsRover extends EntityPoweredVehicleBase {
 
@@ -32,10 +30,10 @@ public class EntityMarsRover extends EntityPoweredVehicleBase {
 	public List<ItemStack> getItemsDropped() {
 		final List<ItemStack> items = new ArrayList<ItemStack>();
 
-		ItemStack buggy = new ItemStack(ExtraPlanets_Items.marsRover, 1, this.roverType);
-		buggy.setTagCompound(new NBTTagCompound());
-		buggy.getTagCompound().setInteger("MarsRoverFuel", 0);
-		items.add(buggy);
+		ItemStack vehicle = new ItemStack(ExtraPlanets_Items.marsRover, 1, this.roverType);
+		vehicle.setTagCompound(new NBTTagCompound());
+		vehicle.getTagCompound().setFloat("currentPowerCapacity", 0);
+		items.add(vehicle);
 
 		for (ItemStack item : this.cargoItems) {
 			if (item != null) {
@@ -63,18 +61,26 @@ public class EntityMarsRover extends EntityPoweredVehicleBase {
 
 	@Override
 	public boolean isDockValid(IPowerDock dock) {
-		return dock instanceof TileEntityBuggyFueler;
+		return dock instanceof TileEntityPoweredChargingPad;
 	}
 
 	@Override
 	public float addPower(float amount, boolean doDrain) {
-		this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() + amount);
-		return this.getCurrentPowerCapacity();
+		float beforePower = this.getCurrentPowerCapacity();
+		if (this.getCurrentPowerCapacity() >= this.getPowerMaxCapacity())
+			this.setCurrentPowerCapacity(this.getPowerMaxCapacity());
+		else
+			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() + amount);
+		return this.getCurrentPowerCapacity() - beforePower;
 	}
 
 	@Override
-	public float removePower(float amount){
-		this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
-		return this.getCurrentPowerCapacity();
+	public float removePower(float amount) {
+		float beforePower = this.getCurrentPowerCapacity();
+		if ((this.getCurrentPowerCapacity() - amount) <= 0)
+			this.setCurrentPowerCapacity(0);
+		else
+			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
+		return beforePower - this.getCurrentPowerCapacity();
 	}
 }

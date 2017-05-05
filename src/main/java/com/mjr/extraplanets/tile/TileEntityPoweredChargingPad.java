@@ -31,7 +31,7 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 		super.updateEntity();
 
 		if (!this.worldObj.isRemote) {
-			final List<?> list = this.worldObj.getEntitiesWithinAABB(IPowerable.class, AxisAlignedBB.getBoundingBox(this.xCoord - 1.5D, this.yCoord - 2.0, this.zCoord - 1.5D, this.xCoord + 1.5D, this.yCoord + 4.0, this.zCoord + 1.5D));
+			final List<?> list = this.worldObj.getEntitiesWithinAABB(IPowerable.class, AxisAlignedBB.getBoundingBox(this.xCoord - 1.5D, this.yCoord - 2.0, this.zCoord - 1.5D, this.xCoord + 6.5D, this.yCoord + 8.0, this.zCoord + 6.5D));
 
 			boolean changed = false;
 
@@ -74,8 +74,8 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 		this.mainBlockPosition = placedPosition;
 		this.markDirty();
 
-		for (int x = -1; x < 2; x++) {
-			for (int z = -1; z < 2; z++) {
+		for (int x = -2; x < 4; x++) {
+			for (int z = -2; z < 4; z++) {
 				final BlockVec3 vecToAdd = new BlockVec3(placedPosition.x + x, placedPosition.y, placedPosition.z + z);
 
 				if (!vecToAdd.equals(placedPosition)) {
@@ -91,8 +91,8 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 
 		this.worldObj.func_147480_a(thisBlock.x, thisBlock.y, thisBlock.z, true);
 
-		for (int x = -1; x < 2; x++) {
-			for (int z = -1; z < 2; z++) {
+		for (int x = -2; x < 4; x++) {
+			for (int z = -2; z < 4; z++) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(thisBlock.x + x, thisBlock.y, thisBlock.z + z, GCBlocks.landingPad, Block.getIdFromBlock(GCBlocks.landingPad) >> 12 & 255);
 				}
@@ -129,9 +129,9 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 	public HashSet<ILandingPadAttachable> getConnectedTiles() {
 		HashSet<ILandingPadAttachable> connectedTiles = new HashSet<ILandingPadAttachable>();
 
-		for (int x = -2; x < 3; x++) {
-			for (int z = -2; z < 3; z++) {
-				if (x == -2 || x == 2 || z == -2 || z == 2) {
+		for (int x = -1; x < 4; x++) {
+			for (int z = -1; z < 4; z++) {
+				if (x == -3 || x == 4 || z == -3 || z == 4) {
 					if (Math.abs(x) != Math.abs(z)) {
 						final TileEntity tile = this.worldObj.getTileEntity(this.xCoord + x, this.yCoord, this.zCoord + z);
 
@@ -169,6 +169,8 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 
 	@Override
 	public float addPower(float amount, boolean doDrain) {
+		if(this.dockedEntity == null)
+			return 0;
 		return this.dockedEntity.addPower(amount, doDrain);
 	}
 

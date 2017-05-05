@@ -9,6 +9,7 @@ import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
 import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.TileEntitySolar;
+import com.mjr.extraplanets.tile.TileEntityVehicleChanger;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -17,6 +18,7 @@ public class ExtraPlanets_Machines {
 	public static Block advancedRefinery;
 	public static Block solarPanel;
 	public static Block advancedFuelLoader;
+	public static Block chargingBlock;
 
 	public static void init() {
 		initializeMachinesBlocks();
@@ -30,6 +32,7 @@ public class ExtraPlanets_Machines {
 		if (Config.solarPanels)
 			solarPanel = new BlockSolar("solar");
 		advancedFuelLoader = new AdvancedFuelLoader("advancedFuelLoader");
+		chargingBlock = new VehicleCharger("chargingBlock");
 	}
 
 	private static void registerMachines() {
@@ -41,6 +44,7 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerBlock(solarPanel, ItemBlockSolar.class, solarPanel.getUnlocalizedName());
 		}
 		GameRegistry.registerBlock(advancedFuelLoader, "advancedFuelLoader");
+		GameRegistry.registerBlock(chargingBlock, "chargingBlock");
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -49,6 +53,6 @@ public class ExtraPlanets_Machines {
 		if (Config.advancedRefinery)
 			GameRegistry.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
 		GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
-
+		GameRegistry.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
 	}
 }
