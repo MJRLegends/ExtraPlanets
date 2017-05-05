@@ -1,8 +1,9 @@
-package com.mjr.extraplanets.client.render.entities.vehicles;
+package com.mjr.extraplanets.client.render.item;
 
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.entity.Entity;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.model.IModelCustom;
 
 import org.lwjgl.opengl.GL11;
@@ -10,69 +11,79 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import cpw.mods.fml.client.FMLClientHandler;
 
-@SideOnly(Side.CLIENT)
-public class RenderMarsRover extends Render {
+public class ItemRendererMarsRover implements IItemRenderer {
 	private static final ResourceLocation buggyTextureBody = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
 	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
 
+	EntityMarsRover spaceship = new EntityMarsRover(FMLClientHandler.instance().getClient().theWorld);
+
 	private final IModelCustom modelRover;
 
-	public RenderMarsRover(IModelCustom modelRover) {
-		this.shadowSize = 2.0F;
+	public ItemRendererMarsRover(IModelCustom modelRover) {
+		super();
 		this.modelRover = modelRover;
 	}
 
-	protected ResourceLocation func_110779_a(EntityMarsRover par1EntityArrow) {
-		return RenderMarsRover.buggyTextureBody;
-	}
-
-	@Override
-	protected ResourceLocation getEntityTexture(Entity par1Entity) {
-		return this.func_110779_a((EntityMarsRover) par1Entity);
-	}
-
-	public void renderRover(EntityMarsRover entity, double par2, double par4, double par6, float par8, float par9) {
+	private void renderPipeItem(ItemRenderType type, RenderBlocks render, ItemStack item, float translateX, float translateY, float translateZ) {
 		GL11.glPushMatrix();
-		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
-		GL11.glTranslatef((float) par2, (float) par4 - 2.5F, (float) par6);
-		GL11.glScalef(1.25F, 1.25F, 1.25F);
-		GL11.glRotatef(0.0F - par8, 0.0F, 1.0F, 0.0F);
-		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
-		GL11.glScalef(0.51F, 0.51F, 0.51F);
-		this.bindTexture(RenderMarsRover.buggyTextureWheel);
+		long var10 = this.spaceship.getEntityId() * 493286711L;
+		var10 = var10 * var10 * 4392167121L + var10 * 98761L;
+		final float var12 = (((var10 >> 16 & 7L) + 0.5F) / 8.0F - 0.5F) * 0.004F;
+		final float var13 = (((var10 >> 20 & 7L) + 0.5F) / 8.0F - 0.5F) * 0.004F;
+		final float var14 = (((var10 >> 24 & 7L) + 0.5F) / 8.0F - 0.5F) * 0.004F;
 
-		float rotation = entity.wheelRotationX;
+		GL11.glScalef(0.75F, 0.75F, 0.75F);
 
-		// Front
+		if (type == ItemRenderType.EQUIPPED) {
+			GL11.glRotatef(150.0F, 0F, 0F, 1F);
+			GL11.glScalef(2.2F, 2.2F, 2.2F);
+			GL11.glTranslatef(0.0F, -0.65F, 0.9F);
+		} else if (type == ItemRenderType.EQUIPPED_FIRST_PERSON) {
+			GL11.glTranslatef(0.0F, 1.0F, 0.0F);
+		}
+
+		GL11.glTranslatef(var12, var13 - 0.1F, var14);
+		GL11.glScalef(-0.4F, -0.4F, 0.4F);
+		if (type == ItemRenderType.INVENTORY || type == ItemRenderType.ENTITY) {
+			if (type == ItemRenderType.INVENTORY) {
+				GL11.glScalef(0.5F, 0.35F, 0.5F);
+			} else {
+				GL11.glTranslatef(0, -0.9F, 0);
+				GL11.glScalef(0.5F, 0.5F, 0.5F);
+			}
+
+			GL11.glScalef(1.5F, 1.5F, 1.5F);
+			GL11.glTranslatef(0, 1.6F, 0);
+			GL11.glRotatef(-45.0F, 0F, 1F, 0F);
+		}
+
+		GL11.glRotatef(180, 0, 0, 1);
+
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureWheel);
+
+		// Front wheels
 		GL11.glPushMatrix();
-		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
-		GL11.glRotatef(rotation, 1, 0, 0);
 		this.modelRover.renderPart("WheelFrontRight");
 		this.modelRover.renderPart("WheelFrontLeft");
 		GL11.glPopMatrix();
 
 		// Middle wheels
 		GL11.glPushMatrix();
-		GL11.glRotatef(-entity.wheelRotationZ, 0, 1, 0);
-		GL11.glRotatef(rotation, 1, 0, 0);
 		this.modelRover.renderPart("WheelMiddleRight");
 		this.modelRover.renderPart("WheelMiddleLeft");
 		GL11.glPopMatrix();
 
 		// Back wheels
 		GL11.glPushMatrix();
-		GL11.glRotatef(-entity.wheelRotationZ, 0, 1, 0);
-		GL11.glRotatef(rotation, 1, 0, 0);
 		this.modelRover.renderPart("WheelBackRight");
 		this.modelRover.renderPart("WheelBackLeft");
 		GL11.glPopMatrix();
 
-		this.bindTexture(RenderMarsRover.buggyTextureBody);
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBody);
 		this.modelRover.renderPart("AxisFront001");
 		this.modelRover.renderPart("AxisMiddle");
 		this.modelRover.renderPart("Clip1");
@@ -122,25 +133,25 @@ public class RenderMarsRover extends Render {
 		this.modelRover.renderPart("Line001");
 		this.modelRover.renderPart("PoleSolarPanel");
 		this.modelRover.renderPart("RoofRover");
-		this.bindTexture(RenderMarsRover.buggyTextureOther);
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureOther);
 		this.modelRover.renderPart("Seat");
 		this.modelRover.renderPart("Seat001");
-		this.bindTexture(RenderMarsRover.buggyTextureBody);
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBody);
 		this.modelRover.renderPart("SolarPanel");
 		this.modelRover.renderPart("SolarPanelBlock");
 		this.modelRover.renderPart("Wire");
 		this.modelRover.renderPart("Battery");
 		this.modelRover.renderPart("Line002");
 
-		this.bindTexture(RenderMarsRover.buggyTextureStorage);
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureStorage);
 
-		if (entity.roverType > 0) {
+		if (item.getItemDamage() > 0) {
 			this.modelRover.renderPart("Container");
 
-			if (entity.roverType > 1) {
+			if (item.getItemDamage() > 1) {
 				this.modelRover.renderPart("Container2");
 
-				if (entity.roverType > 2) {
+				if (item.getItemDamage() > 2) {
 					this.modelRover.renderPart("Container3");
 				}
 			}
@@ -149,8 +160,48 @@ public class RenderMarsRover extends Render {
 		GL11.glPopMatrix();
 	}
 
+	/**
+	 * IItemRenderer implementation *
+	 */
+
 	@Override
-	public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9) {
-		this.renderRover((EntityMarsRover) par1Entity, par2, par4, par6, par8, par9);
+	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
+		switch (type) {
+		case ENTITY:
+			return true;
+		case EQUIPPED:
+			return true;
+		case EQUIPPED_FIRST_PERSON:
+			return true;
+		case INVENTORY:
+			return true;
+		default:
+			return false;
+		}
 	}
+
+	@Override
+	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper) {
+		return true;
+	}
+
+	@Override
+	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+		switch (type) {
+		case EQUIPPED:
+			this.renderPipeItem(type, (RenderBlocks) data[0], item, -0.5f, -0.5f, -0.5f);
+			break;
+		case EQUIPPED_FIRST_PERSON:
+			this.renderPipeItem(type, (RenderBlocks) data[0], item, -0.5f, -0.5f, -0.5f);
+			break;
+		case INVENTORY:
+			this.renderPipeItem(type, (RenderBlocks) data[0], item, -0.5f, -0.5f, -0.5f);
+			break;
+		case ENTITY:
+			this.renderPipeItem(type, (RenderBlocks) data[0], item, -0.5f, -0.5f, -0.5f);
+			break;
+		default:
+		}
+	}
+
 }
