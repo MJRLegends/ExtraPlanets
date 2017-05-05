@@ -17,11 +17,12 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
 import com.mjr.extraplanets.tile.TileEntityVehicleChanger;
 
 public class GuiVehicleChanger extends GuiContainerGC {
-	private static final ResourceLocation vehicleChangerTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/fuel_loader.png");
+	private static final ResourceLocation vehicleChangerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/vehicle_charger.png");
 
 	private final TileEntityVehicleChanger vehicleChanger;
 
@@ -65,7 +66,7 @@ public class GuiVehicleChanger extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(this.vehicleChanger.getInventoryName(), 60, 10, 4210752);
+		this.fontRendererObj.drawString(this.vehicleChanger.getInventoryName(), 52, 10, 4210752);
 		this.buttonloadpower.displayString = !this.vehicleChanger.getDisabled(0) ? GCCoreUtil.translate("gui.button.stoploading.name") : GCCoreUtil.translate("gui.button.loadpower.name");
 		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + this.getStatus(), 28, 45 + 23 - 46, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 11, 4210752);

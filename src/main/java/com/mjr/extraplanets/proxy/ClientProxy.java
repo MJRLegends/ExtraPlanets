@@ -353,6 +353,9 @@ public class ClientProxy extends CommonProxy {
 		if (blockID == ExtraPlanets_Blocks.advancedLaunchPadFull) {
 			return ClientProxy.renderIdLandingPad;
 		}
+		if (blockID == ExtraPlanets_Machines.chargingBlock) {
+			return ClientProxy.renderIdMachine;
+		}
 		return -1;
 	}
 

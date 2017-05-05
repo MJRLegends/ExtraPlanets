@@ -426,6 +426,7 @@ container.vehicle.charger.name=Vehicle Charger
 #GUI Messages and Texts
 gui.message.power.name=Powered Vehicle
 gui.message.power.message.name=Power
+gui.button.loadpower.name=Load Power
 
 #Other Blocks
 tile.nuclearBomb.name=Jaderná bomba

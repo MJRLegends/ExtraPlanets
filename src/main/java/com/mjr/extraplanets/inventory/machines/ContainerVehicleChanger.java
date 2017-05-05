@@ -18,7 +18,6 @@ public class ContainerVehicleChanger extends Container {
 	public ContainerVehicleChanger(InventoryPlayer par1InventoryPlayer, TileEntityVehicleChanger vehicleChanger) {
 		this.tileEntity = vehicleChanger;
 		this.addSlotToContainer(new SlotSpecific(vehicleChanger, 0, 51, 55, IItemElectric.class));
-		this.addSlotToContainer(new Slot(vehicleChanger, 1, 7, 12));
 
 		int var6;
 		int var7;
