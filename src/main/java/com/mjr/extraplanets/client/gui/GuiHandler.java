@@ -16,10 +16,10 @@ import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
-import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
-import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
-import com.mjr.extraplanets.tile.TileEntitySolar;
-import com.mjr.extraplanets.tile.TileEntityVehicleChanger;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.IGuiHandler;

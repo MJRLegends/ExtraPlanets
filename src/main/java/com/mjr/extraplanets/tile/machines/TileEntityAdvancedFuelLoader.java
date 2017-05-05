@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.api.entity.IFuelable;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;

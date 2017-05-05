@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;

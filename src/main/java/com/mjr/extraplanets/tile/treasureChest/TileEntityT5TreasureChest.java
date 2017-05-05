@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.treasureChest;
 
 import java.util.Iterator;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;

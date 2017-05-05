@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.inventory.ContainerSchematicMarsRover;
+import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicMarsRover;
 
 public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicResultPage
 {

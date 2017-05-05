@@ -10,7 +10,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
-import com.mjr.extraplanets.inventory.ContainerPoweredVehicleBase;
+import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

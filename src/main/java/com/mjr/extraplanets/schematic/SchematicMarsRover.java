@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.vehicles.GuiSchematicMarsRover;
-import com.mjr.extraplanets.inventory.ContainerSchematicMarsRover;
+import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicMarsRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.relauncher.Side;

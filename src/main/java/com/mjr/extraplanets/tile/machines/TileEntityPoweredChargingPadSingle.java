@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.machines;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ import net.minecraft.tileentity.TileEntity;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-public class TileEntityTier3LandingPadSingle extends TileEntity {
+public class TileEntityPoweredChargingPadSingle extends TileEntity {
 	@Override
 	public void updateEntity() {
 		if (!this.worldObj.isRemote) {
@@ -18,7 +18,7 @@ public class TileEntityTier3LandingPadSingle extends TileEntity {
 				for (int z = this.zCoord - 1; z < this.zCoord + 4; z++) {
 					final TileEntity tile = this.worldObj.getTileEntity(x, this.yCoord, z);
 
-					if (tile instanceof TileEntityTier3LandingPadSingle) {
+					if (tile instanceof TileEntityPoweredChargingPadSingle) {
 						attachedLaunchPads.add(tile);
 					}
 				}
@@ -30,8 +30,8 @@ public class TileEntityTier3LandingPadSingle extends TileEntity {
 					tile.getWorldObj().setBlock(tile.xCoord, tile.yCoord, tile.zCoord, Blocks.air, 0, 3);
 				}
 
-				this.worldObj.setBlock(this.xCoord, this.yCoord, this.zCoord, ExtraPlanets_Blocks.advancedLaunchPadFull, 1, 3);
-				final TileEntityTier3LandingPad tilePadFull = (TileEntityTier3LandingPad) this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord);
+				this.worldObj.setBlock(this.xCoord, this.yCoord, this.zCoord, ExtraPlanets_Blocks.advancedLaunchPadFull, 2, 3);
+				final TileEntityPoweredChargingPad tilePadFull = (TileEntityPoweredChargingPad) this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord);
 
 				if (tilePadFull != null) {
 					tilePadFull.onCreate(new BlockVec3(this.xCoord, this.yCoord, this.zCoord));

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.inventory;
+package com.mjr.extraplanets.inventory.vehicles;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;

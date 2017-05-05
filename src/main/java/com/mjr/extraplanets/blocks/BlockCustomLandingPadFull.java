@@ -21,9 +21,9 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tile.TileEntityPoweredChargingPad;
-import com.mjr.extraplanets.tile.TileEntityTier2LandingPad;
-import com.mjr.extraplanets.tile.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tile.machines.TileEntityPoweredChargingPad;
+import com.mjr.extraplanets.tile.machines.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tile.machines.TileEntityTier3LandingPad;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

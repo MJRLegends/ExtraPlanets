@@ -14,7 +14,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
-import com.mjr.extraplanets.inventory.ContainerVehicleBase;
+import com.mjr.extraplanets.inventory.vehicles.ContainerVehicleBase;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

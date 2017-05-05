@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
-import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
 
 public class GuiAdvancedFuelLoader extends GuiContainerGC {
 	private static final ResourceLocation fuelLoaderTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/fuel_loader.png");

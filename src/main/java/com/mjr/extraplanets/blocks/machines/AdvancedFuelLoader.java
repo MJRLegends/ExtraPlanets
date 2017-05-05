@@ -18,7 +18,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

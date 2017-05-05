@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.machines;
 
 import java.util.HashSet;
 import java.util.List;

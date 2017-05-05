@@ -11,7 +11,7 @@ import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.inventory.InventoryMarsRover;
+import com.mjr.extraplanets.inventory.vehicles.InventoryMarsRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class MarsRoverRecipes {

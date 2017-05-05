@@ -6,10 +6,10 @@ import net.minecraft.block.Block;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
-import com.mjr.extraplanets.tile.TileEntityAdvancedFuelLoader;
-import com.mjr.extraplanets.tile.TileEntityAdvancedRefinery;
-import com.mjr.extraplanets.tile.TileEntitySolar;
-import com.mjr.extraplanets.tile.TileEntityVehicleChanger;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

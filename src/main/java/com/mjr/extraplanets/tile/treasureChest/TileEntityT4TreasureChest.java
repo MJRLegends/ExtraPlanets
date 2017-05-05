@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.treasureChest;
 
 import java.util.Iterator;
 import java.util.List;
@@ -20,11 +20,11 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 
-import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
 
 import cpw.mods.fml.relauncher.Side;
 
-public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IInventory, IKeyable {
+public class TileEntityT4TreasureChest extends TileEntityAdvanced implements IInventory, IKeyable {
 	private ItemStack[] chestContents = new ItemStack[36];
 
 	/**
@@ -35,22 +35,22 @@ public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IIn
 	/**
 	 * Contains the chest tile located adjacent to this one (if any)
 	 */
-	public TileEntityT9TreasureChest adjacentChestZNeg;
+	public TileEntityT4TreasureChest adjacentChestZNeg;
 
 	/**
 	 * Contains the chest tile located adjacent to this one (if any)
 	 */
-	public TileEntityT9TreasureChest adjacentChestXPos;
+	public TileEntityT4TreasureChest adjacentChestXPos;
 
 	/**
 	 * Contains the chest tile located adjacent to this one (if any)
 	 */
-	public TileEntityT9TreasureChest adjacentChestXNeg;
+	public TileEntityT4TreasureChest adjacentChestXNeg;
 
 	/**
 	 * Contains the chest tile located adjacent to this one (if any)
 	 */
-	public TileEntityT9TreasureChest adjacentChestZPos;
+	public TileEntityT4TreasureChest adjacentChestZPos;
 
 	/**
 	 * The current angle of the lid (between 0 and 1)
@@ -75,13 +75,13 @@ public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IIn
 	@NetworkedField(targetSide = Side.CLIENT)
 	public boolean locked = true;
 
-	public int tier = 9;
+	public int tier = 4;
 
-	public TileEntityT9TreasureChest() {
-		this(9);
+	public TileEntityT4TreasureChest() {
+		this(4);
 	}
 
-	public TileEntityT9TreasureChest(int tier) {
+	public TileEntityT4TreasureChest(int tier) {
 		this.tier = tier;
 	}
 
@@ -225,7 +225,7 @@ public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IIn
 		this.adjacentChestChecked = false;
 	}
 
-	private void func_90009_a(TileEntityT9TreasureChest par1TileEntityChest, int par2) {
+	private void func_90009_a(TileEntityT4TreasureChest par1TileEntityChest, int par2) {
 		if (par1TileEntityChest.isInvalid()) {
 			this.adjacentChestChecked = false;
 		} else if (this.adjacentChestChecked) {
@@ -268,19 +268,19 @@ public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IIn
 			this.adjacentChestZPos = null;
 
 			if (this.func_94044_a(this.xCoord - 1, this.yCoord, this.zCoord)) {
-				this.adjacentChestXNeg = (TileEntityT9TreasureChest) this.worldObj.getTileEntity(this.xCoord - 1, this.yCoord, this.zCoord);
+				this.adjacentChestXNeg = (TileEntityT4TreasureChest) this.worldObj.getTileEntity(this.xCoord - 1, this.yCoord, this.zCoord);
 			}
 
 			if (this.func_94044_a(this.xCoord + 1, this.yCoord, this.zCoord)) {
-				this.adjacentChestXPos = (TileEntityT9TreasureChest) this.worldObj.getTileEntity(this.xCoord + 1, this.yCoord, this.zCoord);
+				this.adjacentChestXPos = (TileEntityT4TreasureChest) this.worldObj.getTileEntity(this.xCoord + 1, this.yCoord, this.zCoord);
 			}
 
 			if (this.func_94044_a(this.xCoord, this.yCoord, this.zCoord - 1)) {
-				this.adjacentChestZNeg = (TileEntityT9TreasureChest) this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord - 1);
+				this.adjacentChestZNeg = (TileEntityT4TreasureChest) this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord - 1);
 			}
 
 			if (this.func_94044_a(this.xCoord, this.yCoord, this.zCoord + 1)) {
-				this.adjacentChestZPos = (TileEntityT9TreasureChest) this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord + 1);
+				this.adjacentChestZPos = (TileEntityT4TreasureChest) this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord + 1);
 			}
 
 			if (this.adjacentChestZNeg != null) {
@@ -303,7 +303,7 @@ public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IIn
 
 	private boolean func_94044_a(int par1, int par2, int par3) {
 		final Block block = this.worldObj.getBlock(par1, par2, par3);
-		return block != null && block instanceof T9TreasureChest;
+		return block != null && block instanceof T4TreasureChest;
 	}
 
 	/**
@@ -417,7 +417,7 @@ public class TileEntityT9TreasureChest extends TileEntityAdvanced implements IIn
 
 	@Override
 	public void closeInventory() {
-		if (this.getBlockType() != null && this.getBlockType() instanceof T9TreasureChest) {
+		if (this.getBlockType() != null && this.getBlockType() instanceof T4TreasureChest) {
 			--this.numUsingPlayers;
 			this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord, this.getBlockType(), 1, this.numUsingPlayers);
 			this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, this.getBlockType());

@@ -4,8 +4,8 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.inventory.ContainerPoweredVehicleBase;
-import com.mjr.extraplanets.inventory.ContainerVehicleBase;
+import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
+import com.mjr.extraplanets.inventory.vehicles.ContainerVehicleBase;
 import com.mjr.extraplanets.network.PacketSimple;
 import com.mjr.extraplanets.network.PacketSimple.EnumSimplePacket;
 

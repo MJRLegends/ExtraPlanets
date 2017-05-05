@@ -20,9 +20,9 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.TileEntityPoweredChargingPadSingle;
-import com.mjr.extraplanets.tile.TileEntityTier2LandingPadSingle;
-import com.mjr.extraplanets.tile.TileEntityTier3LandingPadSingle;
+import com.mjr.extraplanets.tile.machines.TileEntityPoweredChargingPadSingle;
+import com.mjr.extraplanets.tile.machines.TileEntityTier2LandingPadSingle;
+import com.mjr.extraplanets.tile.machines.TileEntityTier3LandingPadSingle;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

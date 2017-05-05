@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.tile;
+package com.mjr.extraplanets.tile.machines;
 
 import java.util.HashSet;
 import java.util.List;
@@ -29,7 +29,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileEntityTier3LandingPad extends TileEntityMulti implements IMultiBlock, IFuelable, IFuelDock {
+public class TileEntityTier2LandingPad extends TileEntityMulti implements IMultiBlock, IFuelable, IFuelDock {
 	private IDockable dockedEntity;
 
 	@Override
@@ -100,8 +100,7 @@ public class TileEntityTier3LandingPad extends TileEntityMulti implements IMulti
 		for (int x = -1; x < 4; x++) {
 			for (int z = -1; z < 4; z++) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
-					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(thisBlock.x + x, thisBlock.y, thisBlock.z + z, ExtraPlanets_Blocks.advancedLaunchPad,
-							Block.getIdFromBlock(ExtraPlanets_Blocks.advancedLaunchPad) >> 12 & 255);
+					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(thisBlock.x + x, thisBlock.y, thisBlock.z + z, ExtraPlanets_Blocks.advancedLaunchPad, Block.getIdFromBlock(ExtraPlanets_Blocks.advancedLaunchPad) >> 12 & 255);
 				}
 
 				this.worldObj.func_147480_a(thisBlock.x + x, thisBlock.y, thisBlock.z + z, false);
