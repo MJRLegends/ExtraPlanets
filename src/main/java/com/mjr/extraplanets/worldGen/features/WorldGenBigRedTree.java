@@ -32,7 +32,7 @@ public class WorldGenBigRedTree extends WorldGenerator {
 		else {
 			// System.out.println("Spawning BigPurpleTree at (x, y, z)" + x + " " + y
 			// + " " + z);
-			generate_r0(world, rand, x, y, z);
+			generate_r0(world, rand, x, y - 1, z);
 			return true;
 		}
 	}
