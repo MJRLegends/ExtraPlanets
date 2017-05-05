@@ -418,6 +418,9 @@ tile.advancedLaunchPad.tier3LandingPad.name=三阶火箭发射平台
 tile.advancedLaunchPadFull.name=二/三阶火箭发射平台
 tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭
 tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭
+tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
+tile.chargingBlock.name=Vehicle Charger
+container.vehicle.charger.name=Vehicle Charger
 
 #GUI Messages and Texts
 gui.message.power.name=Powered Vehicle
@@ -431,6 +434,15 @@ tile.ashBlock.name=灰烬块
 tile.frozenNitrogen.name=冷冻氮
 tile.denseIce.name=坚冰
 tile.fossil.name=化石块
+
+#Vehicles
+item.marsRover.name=Driveable Mars Rover
+item.venusRover.name=Driveable Venus Rover
+
+#Vehicle Electic Parts
+item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
+item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
+item.electricParts.sparkPlug.name=Vehicle Spark Plug
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=4阶火箭

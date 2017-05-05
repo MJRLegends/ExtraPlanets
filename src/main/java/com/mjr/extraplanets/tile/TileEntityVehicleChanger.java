@@ -86,7 +86,7 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public String getInventoryName() {
-		return GCCoreUtil.translate("container.vehicle.changer.name");
+		return GCCoreUtil.translate("container.vehicle.charger.name");
 	}
 
 	@Override

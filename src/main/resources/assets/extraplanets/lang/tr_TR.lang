@@ -418,6 +418,9 @@ tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
 tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
+tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
+tile.chargingBlock.name=Vehicle Charger
+container.vehicle.charger.name=Vehicle Charger
 
 #GUI Messages and Texts
 gui.message.power.name=Powered Vehicle
@@ -431,6 +434,15 @@ tile.ashBlock.name=Block of Ash
 tile.frozenNitrogen.name=Donmuş Nitrojen
 tile.denseIce.name=Yoğun Buz
 tile.fossil.name=Fosil Bloğu
+
+#Vehicles
+item.marsRover.name=Driveable Mars Rover
+item.venusRover.name=Driveable Venus Rover
+
+#Vehicle Electic Parts
+item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
+item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
+item.electricParts.sparkPlug.name=Vehicle Spark Plug
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Tier 4 Roketi

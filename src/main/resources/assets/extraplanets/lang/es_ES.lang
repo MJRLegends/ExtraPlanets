@@ -418,6 +418,9 @@ tile.advancedLaunchPad.tier3LandingPad.name=Plataforma de lanzamiento nivel 3
 tile.advancedLaunchPadFull.name=Plataforma de lanzamiento nivel 2/3
 tile.advancedLaunchPad.tier2.desc=Usado para lanzar cohetes nivel 4 - 8
 tile.advancedLaunchPad.tier3.desc=Usado para lanzar cohetes nivel 9 - 10
+tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
+tile.chargingBlock.name=Vehicle Charger
+container.vehicle.charger.name=Vehicle Charger
 
 #GUI Messages and Texts
 gui.message.power.name=Powered Vehicle
@@ -431,6 +434,15 @@ tile.ashBlock.name=Bloque de cenizas
 tile.frozenNitrogen.name=Nitrógeno congelado
 tile.denseIce.name=Hielo denso
 tile.fossil.name=Bloque fósil
+
+#Vehicles
+item.marsRover.name=Driveable Mars Rover
+item.venusRover.name=Driveable Venus Rover
+
+#Vehicle Electic Parts
+item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
+item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
+item.electricParts.sparkPlug.name=Vehicle Spark Plug
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Cohete nivel 4
