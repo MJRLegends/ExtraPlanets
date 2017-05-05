@@ -76,6 +76,36 @@ public class ItemBlockDecorativeBlocks extends ItemBlock
 			name = "frozenNitrogenBricks";
 			break;
 		}
+		case 10:
+		{
+			name = "volcanicRockBricks";
+			break;
+		}
+		case 11:
+		{
+			name = "carbonTitledFloor";
+			break;
+		}
+		case 12:
+		{
+			name = "carbonBrokenTitledFloor";
+			break;
+		}
+		case 13:
+		{
+			name = "magnesiumTitledFloor";
+			break;
+		}
+		case 14:
+		{
+			name = "magnesiumBrokenTitledFloor";
+			break;
+		}
+		case 15:
+		{
+			name = "ashBricks";
+			break;
+		}
 		default:
 			name = "null";
 		}

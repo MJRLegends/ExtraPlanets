@@ -35,7 +35,7 @@ public class BlockDecorativeBlocks extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcons = new IIcon[11];
+		this.blockIcons = new IIcon[16];
 		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "marble");
 		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "marbleBricks");
 		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "snowBricks");
@@ -47,6 +47,11 @@ public class BlockDecorativeBlocks extends Block {
 		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "metalMesh");
 		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "frozenNitrogenBricks");
 		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "volcanicRockBricks");
+		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "carbonTitledFloor");
+		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "carbonBrokenTitledFloor");
+		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "magnesiumTitledFloor");
+		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "magnesiumBrokenTitledFloor");
+		this.blockIcons[15] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "ashBricks");
 		this.blockIcon = this.blockIcons[0];
 	}
 
