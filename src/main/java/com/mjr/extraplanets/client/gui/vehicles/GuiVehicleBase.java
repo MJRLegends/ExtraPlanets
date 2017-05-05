@@ -6,7 +6,6 @@ import java.util.List;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.client.gui.element.GuiElementInfoRegion;
-import micdoodle8.mods.galacticraft.core.inventory.ContainerBuggy;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.inventory.IInventory;
@@ -15,6 +14,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
+import com.mjr.extraplanets.inventory.ContainerVehicleBase;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -33,7 +33,7 @@ public class GuiVehicleBase extends GuiContainerGC {
 	private final int type;
 
 	public GuiVehicleBase(IInventory par1IInventory, IInventory par2IInventory, int type) {
-		super(new ContainerBuggy(par1IInventory, par2IInventory, type));
+		super(new ContainerVehicleBase(par1IInventory, par2IInventory, type));
 		this.upperChestInventory = par1IInventory;
 		this.allowUserInput = false;
 		this.type = type;

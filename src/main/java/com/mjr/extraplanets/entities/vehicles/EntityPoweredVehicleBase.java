@@ -84,7 +84,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		this.isImmuneToFire = true;
 
 		// Power System
-		this.currentPowerCapacity = 10000;
+		this.currentPowerCapacity = 0;
 		this.powerMaxCapacity = 10000;
 
 		if (var1 != null && var1.isRemote) {

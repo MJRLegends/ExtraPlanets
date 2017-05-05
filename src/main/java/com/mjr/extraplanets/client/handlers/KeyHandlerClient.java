@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.handlers;
 
 import micdoodle8.mods.galacticraft.core.Constants;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.KeyHandler;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -14,6 +13,7 @@ import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.network.PacketSimple;
 import com.mjr.extraplanets.network.PacketSimple.EnumSimplePacket;
@@ -68,6 +68,8 @@ public class KeyHandlerClient extends KeyHandler {
 			if (kb.getKeyCode() == KeyHandlerClient.openFuelGui.getKeyCode()) {
 				if (playerBase.ridingEntity instanceof EntityVehicleBase) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_OPEN_FUEL_GUI, new Object[] { playerBase.getGameProfile().getName() }));
+				} else if (playerBase.ridingEntity instanceof EntityPoweredVehicleBase) {
+					ExtraPlanets.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_OPEN_POWER_GUI, new Object[] { playerBase.getGameProfile().getName() }));
 				}
 			}
 		}

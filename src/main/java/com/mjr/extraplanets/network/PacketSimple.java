@@ -20,7 +20,9 @@ import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
 
+import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
+import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 
@@ -32,7 +34,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class PacketSimple extends Packet implements IPacket {
 	public static enum EnumSimplePacket {
 		// SERVER
-		S_OPEN_FUEL_GUI(Side.SERVER, String.class),
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class),
 
 		// CLIENT
 		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class);
@@ -120,6 +122,9 @@ public class PacketSimple extends Packet implements IPacket {
 				if (player.ridingEntity instanceof EntityVehicleBase) {
 					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiVehicleBase(player.inventory, (EntityVehicleBase) player.ridingEntity, ((EntityVehicleBase) player.ridingEntity).getType()));
 					player.openContainer.windowId = (Integer) this.data.get(0);
+				} else if (player.ridingEntity instanceof EntityPoweredVehicleBase) {
+					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.ridingEntity, ((EntityPoweredVehicleBase) player.ridingEntity).getType()));
+					player.openContainer.windowId = (Integer) this.data.get(0);
 				}
 				break;
 			}
@@ -142,7 +147,12 @@ public class PacketSimple extends Packet implements IPacket {
 		switch (this.type) {
 		case S_OPEN_FUEL_GUI:
 			if (player.ridingEntity instanceof EntityVehicleBase) {
-				ExtraPlanetsUtli.openVehicleInv(playerBase, (EntityVehicleBase) player.ridingEntity, ((EntityVehicleBase) player.ridingEntity).getType());
+				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) player.ridingEntity, ((EntityVehicleBase) player.ridingEntity).getType());
+			}
+			break;
+		case S_OPEN_POWER_GUI:
+			if (player.ridingEntity instanceof EntityPoweredVehicleBase) {
+				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.ridingEntity, ((EntityPoweredVehicleBase) player.ridingEntity).getType());
 			}
 			break;
 		default:
