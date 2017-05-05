@@ -419,6 +419,10 @@ tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
 tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
+#GUI Messages and Texts
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+
 #Other Blocks
 tile.nuclearBomb.name=Nükleer bomba
 tile.fireBomb.name=Fire Bomb
@@ -814,6 +818,9 @@ entity.ExtraPlanetsEvolvedRedCreeper.name=Evrimleşmiş Kırmızı Creeper
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Evrimleşmiş Küçük Enderman
 entity.ExtraPlanetsEvolvedGiantSpider.name=Evrimleşmiş Dev Örümcek
+
+entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
+entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
 
 #Achievements
 achievement.mercuryPlanet=Merkür İçin Küçük Benim İçin Büyük!

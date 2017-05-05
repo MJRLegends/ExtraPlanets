@@ -420,6 +420,10 @@ tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
 tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
+#GUI Messages and Texts
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+
 #Other Blocks
 tile.nuclearBomb.name=Nuclear Bomb
 tile.fireBomb.name=Fire Bomb
@@ -816,6 +820,9 @@ entity.ExtraPlanetsEvolvedRedCreeper.name=Evolved Red Creeper
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evolved Power Skeleton
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
 entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
+
+entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
+entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
 
 #Achievements
 achievement.mercuryPlanet=Land on Mercury!

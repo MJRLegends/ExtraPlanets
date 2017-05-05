@@ -419,6 +419,10 @@ tile.advancedLaunchPadFull.name=二/三阶火箭发射平台
 tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭
 tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭
 
+#GUI Messages and Texts
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+
 #Other Blocks
 tile.nuclearBomb.name=核弹
 tile.fireBomb.name=火焰炸弹
@@ -815,6 +819,9 @@ entity.ExtraPlanetsEvolvedRedCreeper.name=红色爬行者(进化体)
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髅(进化体)
 entity.ExtraPlanetsEvolvedMiniEnderman.name=小末影人(进化体)
 entity.ExtraPlanetsEvolvedGiantSpider.name=巨型蜘蛛(进化体)
+
+entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
+entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
 
 #Achievements
 achievement.mercuryPlanet=登陆水星！

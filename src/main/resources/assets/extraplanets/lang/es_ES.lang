@@ -419,6 +419,10 @@ tile.advancedLaunchPadFull.name=Plataforma de lanzamiento nivel 2/3
 tile.advancedLaunchPad.tier2.desc=Usado para lanzar cohetes nivel 4 - 8
 tile.advancedLaunchPad.tier3.desc=Usado para lanzar cohetes nivel 9 - 10
 
+#GUI Messages and Texts
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+
 #Other Blocks
 tile.nuclearBomb.name=Bomba nuclear
 tile.fireBomb.name=Bomba de fuego
@@ -814,6 +818,9 @@ entity.ExtraPlanetsEvolvedRedCreeper.name=Creeper rojo evolucionado
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Mini enderman evolucionado
 entity.ExtraPlanetsEvolvedGiantSpider.name=Araña gigante evolucionada
+
+entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
+entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
 
 #Achievements
 achievement.mercuryPlanet=¡Aterriza en Mercurio!

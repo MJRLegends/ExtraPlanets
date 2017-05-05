@@ -326,7 +326,7 @@ public class ExtraPlanets {
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.modName + "SmallSnowBall", 150, 1, true);
 		}
-		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, Constants.modName + "EntityMarsRover", 150, 1, false);
+		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
 	}
 
 	private void registerCreatures() {

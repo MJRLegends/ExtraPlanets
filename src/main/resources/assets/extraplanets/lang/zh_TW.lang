@@ -423,6 +423,10 @@ tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
 tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 
+#GUI Messages and Texts
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+
 #Other Blocks
 tile.nuclearBomb.name=核彈
 tile.fireBomb.name=Fire Bomb
@@ -819,6 +823,9 @@ entity.ExtraPlanetsEvolvedRedCreeper.name=紅色爬行者(進化體)
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髏(進化體)
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
 entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
+
+entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
+entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
 
 #Achievement
 achievement.mercuryPlanet=登陸水星！
