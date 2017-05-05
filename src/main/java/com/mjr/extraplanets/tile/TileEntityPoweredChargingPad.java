@@ -74,8 +74,8 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 		this.mainBlockPosition = placedPosition;
 		this.markDirty();
 
-		for (int x = -2; x < 4; x++) {
-			for (int z = -2; z < 4; z++) {
+		for (int x = -1; x < 4; x++) {
+			for (int z = -1; z < 4; z++) {
 				final BlockVec3 vecToAdd = new BlockVec3(placedPosition.x + x, placedPosition.y, placedPosition.z + z);
 
 				if (!vecToAdd.equals(placedPosition)) {
@@ -91,8 +91,8 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 
 		this.worldObj.func_147480_a(thisBlock.x, thisBlock.y, thisBlock.z, true);
 
-		for (int x = -2; x < 4; x++) {
-			for (int z = -2; z < 4; z++) {
+		for (int x = -1; x < 4; x++) {
+			for (int z = -1; z < 4; z++) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(thisBlock.x + x, thisBlock.y, thisBlock.z + z, GCBlocks.landingPad, Block.getIdFromBlock(GCBlocks.landingPad) >> 12 & 255);
 				}
