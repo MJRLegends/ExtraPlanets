@@ -30,21 +30,18 @@ public class ContainerSchematicMarsRover extends Container {
 		// Body
 		for (var6 = 0; var6 < 5; ++var6) {
 			for (var7 = 0; var7 < 3; ++var7) {
-				System.out.println("Body");
 				this.addSlotToContainer(new SlotMarsRover(this.craftMatrix, var7 * 5 + var6 + 1, 39 + var7 * 18, 14 + var6 * 18 + change, x, y, z, par1InventoryPlayer.player));
 			}
 		}
 
 		for (var6 = 0; var6 < 3; ++var6) {
 			for (var7 = 0; var7 < 2; ++var7) {
-				System.out.println("Body2");
 				this.addSlotToContainer(new SlotMarsRover(this.craftMatrix, var7 * 3 + var6 + 16, 21 + var7 * 72, 14 + var6 * 35 + change, x, y, z, par1InventoryPlayer.player));
 			}
 		}
 
 		// Addons
 		for (int var8 = 0; var8 < 3; var8++) {
-			System.out.println("Addons");
 			this.addSlotToContainer(new SlotMarsRover(this.craftMatrix, 22 + var8, 93 + var8 * 26, -15 + change, x, y, z, par1InventoryPlayer.player));
 		}
 
@@ -101,7 +98,7 @@ public class ContainerSchematicMarsRover extends Container {
 			final ItemStack var4 = slot.getStack();
 			var2 = var4.copy();
 
-			if (par1 < b - 36) {
+			if (par1 < b - 33) {
 				if (!this.mergeItemStack(var4, b - 36, b, true)) {
 					return null;
 				}
@@ -110,9 +107,9 @@ public class ContainerSchematicMarsRover extends Container {
 					slot.onSlotChange(var4, var2);
 				}
 			} else {
-				ItemStack i = var4;
-				if (i == new ItemStack(MarsItems.marsItemBasic, 1, 3) || i.getItem() == GCItems.partBuggy) {
-					for (int j = 1; j < 26; j++) {
+				Item i = var4.getItem();
+				if (i == MarsItems.marsItemBasic || i == GCItems.partBuggy) {
+					for (int j = 1; j < 21; j++) {
 						if (((Slot) this.inventorySlots.get(j)).isItemValid(var4)) {
 							this.mergeOneItem(var4, j, j + 1, false);
 						}

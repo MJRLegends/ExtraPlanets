@@ -85,27 +85,27 @@ public class MarsRoverRecipes {
 		MarsRoverRecipes.addMarsRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.marsRover, 1, 1), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(19, new ItemStack(Blocks.chest));
-		input2.put(20, new ItemStack(Blocks.chest));
-		input2.put(21, null);
+		input2.put(22, new ItemStack(Blocks.chest));
+		input2.put(23, new ItemStack(Blocks.chest));
+		input2.put(24, null);
 		MarsRoverRecipes.addMarsRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(19, new ItemStack(Blocks.chest));
-		input2.put(20, null);
-		input2.put(21, new ItemStack(Blocks.chest));
+		input2.put(22, new ItemStack(Blocks.chest));
+		input2.put(23, null);
+		input2.put(24, new ItemStack(Blocks.chest));
 		MarsRoverRecipes.addMarsRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(19, null);
-		input2.put(20, new ItemStack(Blocks.chest));
-		input2.put(21, new ItemStack(Blocks.chest));
+		input2.put(22, null);
+		input2.put(23, new ItemStack(Blocks.chest));
+		input2.put(24, new ItemStack(Blocks.chest));
 		MarsRoverRecipes.addMarsRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(19, new ItemStack(Blocks.chest));
-		input2.put(20, new ItemStack(Blocks.chest));
-		input2.put(21, new ItemStack(Blocks.chest));
+		input2.put(22, new ItemStack(Blocks.chest));
+		input2.put(23, new ItemStack(Blocks.chest));
+		input2.put(24, new ItemStack(Blocks.chest));
 		MarsRoverRecipes.addMarsRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.marsRover, 1, 3), input2));
 	}
 }

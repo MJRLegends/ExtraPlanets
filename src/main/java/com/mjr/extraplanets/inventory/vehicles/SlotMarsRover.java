@@ -5,10 +5,13 @@ import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -20,7 +23,6 @@ public class SlotMarsRover extends Slot {
 
 	public SlotMarsRover(IInventory par2IInventory, int par3, int par4, int par5, int x, int y, int z, EntityPlayer player) {
 		super(par2IInventory, par3, par4, par5);
-		System.out.println(par3);
 		this.index = par3;
 		this.x = x;
 		this.y = y;
@@ -94,6 +96,12 @@ public class SlotMarsRover extends Slot {
 			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 3;
 		case 21:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 3;
+		case 22:
+			return true;
+		case 23:
+			return true;
+		case 24:
+			return true;
 		}
 
 		return false;
