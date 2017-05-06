@@ -13,6 +13,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.recipes.MarsRoverRecipes;
 
 public class ContainerSchematicMarsRover extends Container {
@@ -99,7 +100,7 @@ public class ContainerSchematicMarsRover extends Container {
 			var2 = var4.copy();
 
 			if (par1 < b - 33) {
-				if (!this.mergeItemStack(var4, b - 36, b, true)) {
+				if (!this.mergeItemStack(var4, b - 33, b, true)) {
 					return null;
 				}
 
@@ -108,8 +109,8 @@ public class ContainerSchematicMarsRover extends Container {
 				}
 			} else {
 				Item i = var4.getItem();
-				if (i == MarsItems.marsItemBasic || i == GCItems.partBuggy) {
-					for (int j = 1; j < 21; j++) {
+				if (i == MarsItems.marsItemBasic || i == ExtraPlanets_Items.electricParts|| i == GCItems.partBuggy) {
+					for (int j = 1; j < 22; j++) {
 						if (((Slot) this.inventorySlots.get(j)).isItemValid(var4)) {
 							this.mergeOneItem(var4, j, j + 1, false);
 						}
