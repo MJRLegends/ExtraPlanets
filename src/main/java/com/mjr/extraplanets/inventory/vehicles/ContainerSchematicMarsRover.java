@@ -99,8 +99,8 @@ public class ContainerSchematicMarsRover extends Container {
 			final ItemStack var4 = slot.getStack();
 			var2 = var4.copy();
 
-			if (par1 < b - 33) {
-				if (!this.mergeItemStack(var4, b - 33, b, true)) {
+			if (par1 < b - 36) {
+				if (!this.mergeItemStack(var4, b - 36, b, true)) {
 					return null;
 				}
 
