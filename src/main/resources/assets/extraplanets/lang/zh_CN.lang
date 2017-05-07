@@ -412,8 +412,6 @@ tile.solar.hybrid.name=混合型高级太阳能电池板
 tile.solar.ultimate.name=最终混合型高级太阳能电池板
 tile.solarhybrid.description=混合型高级太阳能电池板能全天候工作。
 tile.solarultimate.description=最终混合型高级太阳能电池板能全天候工作。
-container.solarhybrid.name=混合型高级太阳能电池板
-container.solarultimate.name=高级燃料注入器
 tile.advancedFuelLoader.name=Advanced Fuel Loader
 tile.ultimateFuelLoader.name=Ultimate Fuel Loader
 tile.advancedLaunchPad.tier2LandingPad.name=二阶火箭发射平台
@@ -423,11 +421,23 @@ tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭
 tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭
 tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
 tile.chargingBlock.name=Vehicle Charger
-container.vehicle.charger.name=Vehicle Charger
 tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
 tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
 tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
 tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+
+#Machine Containers
+container.solarhybrid.name=混合型高级太阳能电池板
+container.solarultimate.name=高级燃料注入器
+container.vehicle.charger.name=Vehicle Charger
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advanced.oxygencompressor.name=Advanced Oxygen Compressor
+container.advanced.oxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimate.oxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimate.oxygendecompressor.name=Ultimate Oxygen Decompressor
+container.advanced.fuelloader.name=Advanced Fuel Loader
+container.ultimate.fuelloader.name=Ultimate Fuel Loader
 
 #GUI Messages and Texts
 gui.message.power.name=Powered Vehicle
