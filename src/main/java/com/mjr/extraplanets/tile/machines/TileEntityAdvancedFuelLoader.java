@@ -136,7 +136,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
             if (this.fuelTank != null && this.fuelTank.getFluid() != null && this.fuelTank.getFluid().amount > 0)
             {
-                final FluidStack liquid = new FluidStack(GalacticraftCore.fluidFuel, 2*10);
+                final FluidStack liquid = new FluidStack(GalacticraftCore.fluidFuel, 5);
 
                 if (this.attachedFuelable != null && this.hasEnoughEnergyToRun && !this.disabled)
                 {
