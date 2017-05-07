@@ -68,7 +68,7 @@ public class PacketSimple extends Packet implements IPacket {
 
 	public PacketSimple(EnumSimplePacket packetType, List<Object> data) {
 		if (packetType.getDecodeClasses().length != data.size()) {
-			GCLog.info("Simple Packet Core found data length different than packet type");
+			GCLog.info("[ExtraPlanets] Simple Packet Core found data length different than packet type");
 			new RuntimeException().printStackTrace();
 		}
 
@@ -96,10 +96,10 @@ public class PacketSimple extends Packet implements IPacket {
 				this.data = NetworkUtil.decodeData(this.type.getDecodeClasses(), buffer);
 			}
 			if (buffer.readableBytes() > 0) {
-				GCLog.severe("Galacticraft packet length problem for packet type " + this.type.toString());
+				GCLog.severe("ExtraPlanets packet length problem for packet type " + this.type.toString());
 			}
 		} catch (Exception e) {
-			System.err.println("[Galacticraft] Error handling simple packet type: " + this.type.toString() + " " + buffer.toString());
+			System.err.println("[ExtraPlanets] Error handling simple packet type: " + this.type.toString() + " " + buffer.toString());
 			e.printStackTrace();
 		}
 	}
