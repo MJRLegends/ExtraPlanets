@@ -14,6 +14,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.3.3 Beta Build
+*Updated Galacticraft API to latest
+*Fixed issue #85
+*Fixed issue #86
+*Fixed issue #87
+
 v0.3.2 Beta Build
 *Added Custom Tier 4 - 10 rocket models
 *Added Tier 2 & 3 Launch pads
@@ -25,6 +31,7 @@ v0.3.2 Beta Build
 *Added Advanced & Ultimate Fuel Loaders
 *Made the Tier 4 - 10 fuelable via custom Launch pads
 *Fixes for Basic Hideout on Jupiter
+*Updated Galacticraft API to latest
 
 v0.3.1 Beta Build
 *Fixed issue #79
@@ -32,6 +39,7 @@ v0.3.1 Beta Build
 *Compatibility: missing IC2 compatibility
 *Updated mcmod.info
 *Fix NASA workbench schematics particles crashing dedicated server.
+*Updated Galacticraft API to latest
 
 v0.3.0 Beta Build
 *Fixed bucket handler crash (Issue #77)
