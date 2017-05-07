@@ -3,6 +3,7 @@ package com.mjr.extraplanets.client.render.entities.vehicles;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 
 import org.lwjgl.opengl.GL11;
@@ -21,6 +22,8 @@ public class RenderMarsRover extends Render {
 	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
 
 	private final IModelCustom modelRover;
+	private final IModelCustom modelRoverWheelLeft = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover-Wheel.obj"));
+	private final IModelCustom modelRoverWheelRight = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover-Wheel.obj"));
 
 	public RenderMarsRover(IModelCustom modelRover) {
 		this.shadowSize = 2.0F;
@@ -39,7 +42,7 @@ public class RenderMarsRover extends Render {
 	public void renderRover(EntityMarsRover entity, double par2, double par4, double par6, float par8, float par9) {
 		GL11.glPushMatrix();
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
-		GL11.glTranslatef((float) par2, (float) par4 - 2.5F, (float) par6);
+		GL11.glTranslatef((float) par2, (float) par4 - 2.8F, (float) par6);
 		GL11.glScalef(1.25F, 1.25F, 1.25F);
 		GL11.glRotatef(0.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
@@ -50,28 +53,38 @@ public class RenderMarsRover extends Render {
 
 		// Front
 		GL11.glPushMatrix();
+		GL11.glTranslatef(0.0F, 1.0F, 1.8F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		this.modelRover.renderPart("WheelFrontRight");
-		this.modelRover.renderPart("WheelFrontLeft");
+		GL11.glTranslatef(2.0F, 0.0F, 0.0F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-3.9F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 
 		// Middle wheels
 		GL11.glPushMatrix();
-		GL11.glRotatef(-entity.wheelRotationZ, 0, 1, 0);
+		GL11.glTranslatef(0.0F, 1.0F, -0.5F);
+		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		this.modelRover.renderPart("WheelMiddleRight");
-		this.modelRover.renderPart("WheelMiddleLeft");
+		GL11.glTranslatef(1.9F, 0.0F, 0.0F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-3.7F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 
 		// Back wheels
 		GL11.glPushMatrix();
-		GL11.glRotatef(-entity.wheelRotationZ, 0, 1, 0);
+		GL11.glTranslatef(0.0F, 1.0F, -3.7F);
+		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		this.modelRover.renderPart("WheelBackRight");
-		this.modelRover.renderPart("WheelBackLeft");
+		GL11.glTranslatef(1.9F, 0.0F, 0.0F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-3.7F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
-
+		
+		GL11.glTranslatef(0.0F, 0.6F, 0.0F);
 		this.bindTexture(RenderMarsRover.buggyTextureBody);
 		this.modelRover.renderPart("AxisFront001");
 		this.modelRover.renderPart("AxisMiddle");
