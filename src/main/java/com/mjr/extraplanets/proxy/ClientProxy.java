@@ -61,6 +61,7 @@ import com.mjr.extraplanets.client.render.entities.rockets.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.entities.vehicles.RenderMarsRover;
+import com.mjr.extraplanets.client.render.entities.vehicles.RenderVenusRover;
 import com.mjr.extraplanets.client.render.item.ItemRendererMarsRover;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier10Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
@@ -69,6 +70,7 @@ import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier7Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier8Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier9Rocket;
+import com.mjr.extraplanets.client.render.item.ItemRendererVenusRover;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
@@ -108,6 +110,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
+import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
@@ -268,9 +271,9 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, new RenderMarsRover(marsRover));
 		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.marsRover, new ItemRendererMarsRover(marsRover));
 
-		// IModelCustom venusRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover.obj"));
-		// RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, new RenderVenusRover(venusRover));
-		// MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.venusRover, new ItemRendererVenusRover(venusRover));
+		IModelCustom venusRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover.obj"));
+		RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, new RenderVenusRover(venusRover));
+		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.venusRover, new ItemRendererVenusRover(venusRover));
 	}
 
 	@SideOnly(Side.CLIENT)

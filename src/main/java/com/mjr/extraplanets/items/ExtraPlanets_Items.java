@@ -59,6 +59,7 @@ import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.vehicles.ItemMarsRover;
+import com.mjr.extraplanets.items.vehicles.ItemVenusRover;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -268,7 +269,7 @@ public class ExtraPlanets_Items {
 		}
 
 		marsRover = new ItemMarsRover("marsRover");
-		venusRover = new ItemMarsRover("venusRover");
+		venusRover = new ItemVenusRover("venusRover");
 		electricParts = new ItemElectricParts("electricParts");
 		
 		schematicMarsRover = new SchematicMarsRover("schematicMarsRover");

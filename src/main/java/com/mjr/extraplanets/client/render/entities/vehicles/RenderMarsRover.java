@@ -53,7 +53,7 @@ public class RenderMarsRover extends Render {
 
 		// Front
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.0F, 1.8F);
+		GL11.glTranslatef(0.0F, 1.0F, 2.2F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(2.0F, 0.0F, 0.0F);
@@ -64,7 +64,7 @@ public class RenderMarsRover extends Render {
 
 		// Middle wheels
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.0F, -0.5F);
+		GL11.glTranslatef(0.0F, 1.0F, -0.2F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(1.9F, 0.0F, 0.0F);
@@ -84,8 +84,10 @@ public class RenderMarsRover extends Render {
 		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 		
-		GL11.glTranslatef(0.0F, 0.6F, 0.0F);
+		GL11.glTranslatef(0.0F, 0.5F, 0.0F);
 		this.bindTexture(RenderMarsRover.buggyTextureBody);
+		this.modelRover.renderPart("AxisBack");
+		this.modelRover.renderPart("AxisFront");
 		this.modelRover.renderPart("AxisFront001");
 		this.modelRover.renderPart("AxisMiddle");
 		this.modelRover.renderPart("Clip1");
@@ -128,8 +130,9 @@ public class RenderMarsRover extends Render {
 		this.modelRover.renderPart("FrameSegment52");
 		this.modelRover.renderPart("FrameSegment53");
 		this.modelRover.renderPart("FrameSegment54");
-		this.modelRover.renderPart("GlaasBack003");
-		this.modelRover.renderPart("GlaasBack1");
+		this.modelRover.renderPart("WindowBack");
+		this.modelRover.renderPart("WindowFront1");
+		this.modelRover.renderPart("WindowFront2");
 		this.modelRover.renderPart("Helm");
 		this.modelRover.renderPart("HelmKeeper");
 		this.modelRover.renderPart("Line001");

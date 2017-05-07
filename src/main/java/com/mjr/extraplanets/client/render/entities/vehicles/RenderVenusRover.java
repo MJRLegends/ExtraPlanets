@@ -80,6 +80,7 @@ public class RenderVenusRover extends Render {
 		// this.modelRover.renderPart("WheelBackLeft");
 		// GL11.glPopMatrix();
 
+		GL11.glTranslatef(0.0F, 0.5F, 0.0F);
 		this.bindTexture(RenderVenusRover.buggyTextureBody);
 		this.modelRover.renderPart("BraceFrontWheelLeft");
 		this.modelRover.renderPart("BraceFrontWheelLeft2");
@@ -96,27 +97,25 @@ public class RenderVenusRover extends Render {
 		this.modelRover.renderPart("GlassFront");
 		this.modelRover.renderPart("GlassPaneRoof");
 		this.modelRover.renderPart("Helm");
-		this.modelRover.renderPart("RTG");
-		this.modelRover.renderPart("RTGPart1");
-		this.modelRover.renderPart("RtGPart2");
-		this.modelRover.renderPart("TRGpart3");
-		this.modelRover.renderPart("TRGpart4");
-		this.modelRover.renderPart("TRGpart5");
-		;
+		this.modelRover.renderPart("PoleHelm");
+		this.modelRover.renderPart("Box001");
+		this.bindTexture(RenderVenusRover.buggyTextureOther);
+		this.modelRover.renderPart("Box002");
+		this.modelRover.renderPart("Box003");
 
 		this.bindTexture(RenderVenusRover.buggyTextureStorage);
 
-		if (entity.roverType > 0) {
-			this.modelRover.renderPart("Box001");
-
-			if (entity.roverType > 1) {
-				this.modelRover.renderPart("Box002");
-
-				if (entity.roverType > 2) {
-					this.modelRover.renderPart("Box003");
-				}
-			}
-		}
+//		if (entity.roverType > 0) {
+//			this.modelRover.renderPart("Box001");
+//
+//			if (entity.roverType > 1) {
+//				this.modelRover.renderPart("Box002");
+//
+//				if (entity.roverType > 2) {
+//					this.modelRover.renderPart("Box003");
+//				}
+//			}
+//		}
 
 		GL11.glPopMatrix();
 	}
