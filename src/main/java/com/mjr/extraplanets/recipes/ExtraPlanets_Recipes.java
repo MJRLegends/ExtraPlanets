@@ -805,13 +805,13 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1UnPreparedSpaceSuitBoots, 1, 0), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(GCItems.basicItem, 1, 5) });
 
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2UnPreparedSpaceSuitHelmet, 1, 0),
-					new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'R', ExtraPlanets_Items.tier1UnPreparedSpaceSuitHelmet });
+					new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R', ExtraPlanets_Items.tier1UnPreparedSpaceSuitHelmet });
 			GameRegistry
-					.addRecipe(new ItemStack(ExtraPlanets_Items.tier2UnPreparedSpaceSuitChest, 1, 0), new Object[] { "MRM", "MMM", "MMM", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'R', ExtraPlanets_Items.tier1UnPreparedSpaceSuitChest });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2UnPreparedSpaceSuitLegings, 1, 0), new Object[] { "MMM", "MRM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'R',
+					.addRecipe(new ItemStack(ExtraPlanets_Items.tier2UnPreparedSpaceSuitChest, 1, 0), new Object[] { "MRM", "MMM", "MMM", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R', ExtraPlanets_Items.tier1UnPreparedSpaceSuitChest });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2UnPreparedSpaceSuitLegings, 1, 0), new Object[] { "MMM", "MRM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R',
 					ExtraPlanets_Items.tier1UnPreparedSpaceSuitLegings });
 			GameRegistry
-					.addRecipe(new ItemStack(ExtraPlanets_Items.tier2UnPreparedSpaceSuitBoots, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 5), 'R', ExtraPlanets_Items.tier1UnPreparedSpaceSuitBoots });
+					.addRecipe(new ItemStack(ExtraPlanets_Items.tier2UnPreparedSpaceSuitBoots, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R', ExtraPlanets_Items.tier1UnPreparedSpaceSuitBoots });
 
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3UnPreparedSpaceSuitHelmet, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), 'R',
 					ExtraPlanets_Items.tier2UnPreparedSpaceSuitHelmet });
@@ -937,8 +937,8 @@ public class ExtraPlanets_Recipes {
 		if (Config.pressure || Config.radiation) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier1ArmorLayer, 1, 0), new ItemStack(GCItems.basicItem, 1, 5), new ItemStack(GCItems.basicItem, 1, 5), new ItemStack(GCItems.basicItem, 1, 5), new ItemStack(
 					GCItems.basicItem, 1, 5));
-			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier2ArmorLayer, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 5), new ItemStack(AsteroidsItems.basicItem, 1, 5), new ItemStack(AsteroidsItems.basicItem, 1, 5),
-					new ItemStack(AsteroidsItems.basicItem, 1, 5));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier2ArmorLayer, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0),
+					new ItemStack(AsteroidsItems.basicItem, 1, 0));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier3ArmorLayer, 1, 0), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), new ItemStack(
 					ExtraPlanets_Items.tier5Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4ArmorLayer, 1, 0), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), new ItemStack(
@@ -959,7 +959,7 @@ public class ExtraPlanets_Recipes {
 			if (Config.mercury)
 				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 1),
 						new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.comparator) });
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 5), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_torch) });
+			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 0), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Blocks.redstone_torch) });
 			if (Config.jupiter)
 				CircuitFabricatorRecipes
 						.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 3), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
