@@ -28,7 +28,7 @@ public class WorldGenDeshTower extends WorldGenerator {
 		if (!world.checkChunksExist(x - 8, y, z - 8, x + 8, y, z + 8))
 			return false;
 		else {
-			System.out.println("Spawning Desh Tower at (x, y, z)" + x + " " + y + " " + z);
+			//System.out.println("Spawning Desh Tower at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y - 1, z);
 			return true;
 		}
