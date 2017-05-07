@@ -18,6 +18,7 @@ import com.mjr.extraplanets.worldGen.features.WorldGenBigBlueTree;
 import com.mjr.extraplanets.worldGen.features.WorldGenBigPurpleTree;
 import com.mjr.extraplanets.worldGen.features.WorldGenBigRedTree;
 import com.mjr.extraplanets.worldGen.features.WorldGenBlueHut;
+import com.mjr.extraplanets.worldGen.features.WorldGenBlueTower;
 import com.mjr.extraplanets.worldGen.features.WorldGenBrownHut;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
 import com.mjr.extraplanets.worldGen.features.WorldGenGreenHut;
@@ -59,6 +60,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	public int purpleBigTreesPerChunk;
 	public int blueBigTreesPerChunk;
 	public int redBigTreesPerChunk;
+
+	public int blueTowerPerChunk;
 
 	private World currentWorld;
 	protected Random rand;
@@ -308,7 +311,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				}
 			}
 		}
-		
+
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.purpleBigTreesPerChunk); i++) {
 			if (this.rand.nextInt(20) == 1) {
 				int x = chunk_X + this.rand.nextInt(16) + 8;
@@ -331,6 +334,15 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				int z = chunk_Z + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenBigRedTree().generate(this.currentWorld, this.rand, x, y, z);
+			}
+		}
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueTowerPerChunk); i++) {
+			if (this.rand.nextInt(100) == 1) {
+				int x = chunk_X + this.rand.nextInt(16) + 8;
+				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z) - 1;
+				(new WorldGenBlueTower()).generate(this.currentWorld, rand, x, y, z);
+				break;
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
