@@ -151,7 +151,7 @@ public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public String getInventoryName() {
-		return GCCoreUtil.translate("container.fuelloader.name");
+		return GCCoreUtil.translate("container.ultimate.fuelloader.name");
 	}
 
 	@Override

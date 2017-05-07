@@ -180,7 +180,7 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public String getInventoryName() {
-		return GCCoreUtil.translate("container.refinery.name");
+		return GCCoreUtil.translate("container.ultimate.refinery.name");
 	}
 
 	@Override
