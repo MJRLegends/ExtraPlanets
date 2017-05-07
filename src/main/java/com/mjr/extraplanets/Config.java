@@ -64,6 +64,8 @@ public class Config {
 	public static boolean ultimateRefinery;
 	public static boolean advancedFuelLoader;
 	public static boolean ultimateFuelLoader;
+	public static boolean advancedOxygenCompressor;
+	public static boolean ultimateOxygenCompressor;
 	public static boolean chargingBlock;
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
@@ -287,6 +289,9 @@ public class Config {
 		advancedFuelLoader = config.get(blocks, "Advanced Fuel Loader", true).getBoolean(true);
 		ultimateFuelLoader = config.get(blocks, "Ultimate Fuel Loader", true).getBoolean(true);
 
+		advancedOxygenCompressor = config.get(blocks, "Advanced Oxygen Compressor/Decomperssor", true).getBoolean(true);
+		ultimateOxygenCompressor = config.get(blocks, "Ultimate Oxygen Compressor/Decomperssor", true).getBoolean(true);
+		
 		chargingBlock = config.get(blocks, "Vehicle Charger", true).getBoolean(true);
 		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);
