@@ -134,6 +134,7 @@ public class ExtraPlanets_Items {
 	public static Item wafers;
 
 	public static Item marsRover;
+	public static Item venusRover;
 	public static Item electricParts;
 	public static Item schematicMarsRover;
 	public static Item schematicVenusRover;
@@ -267,6 +268,7 @@ public class ExtraPlanets_Items {
 		}
 
 		marsRover = new ItemMarsRover("marsRover");
+		venusRover = new ItemMarsRover("venusRover");
 		electricParts = new ItemElectricParts("electricParts");
 		
 		schematicMarsRover = new SchematicMarsRover("schematicMarsRover");
@@ -379,6 +381,8 @@ public class ExtraPlanets_Items {
 		}
 
 		GameRegistry.registerItem(marsRover, marsRover.getUnlocalizedName());
+		GameRegistry.registerItem(venusRover, venusRover.getUnlocalizedName());
+		
 		GameRegistry.registerItem(electricParts, electricParts.getUnlocalizedName());
 		GameRegistry.registerItem(schematicMarsRover, schematicMarsRover.getUnlocalizedName());
 		GameRegistry.registerItem(schematicVenusRover, schematicVenusRover.getUnlocalizedName());
