@@ -15,7 +15,7 @@ TODO = Not yet done
 
 ===========================================Released Updates===========================================
 0.8.6 Beta Build
-*Updated Galacticraft API to latest & Fixes for Dungeon Bosses
+*Updated Galacticraft API to latest
 *Improvements to the lighting effect on Jupiter
 *Fixed recipe issues (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Small fixes for Sky provider handler and Solar Panels
