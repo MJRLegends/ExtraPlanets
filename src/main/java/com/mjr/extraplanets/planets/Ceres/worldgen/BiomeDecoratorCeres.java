@@ -71,7 +71,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 				new WorldGenCustomLake(ExtraPlanets_Fluids.salt).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.ceresBlocks);
 			}
 		}
-		if (this.rand.nextInt(150) == 1) {
+		if (this.rand.nextInt(100) == 1) {
 			int x = this.chunkX + 8;
 			int y = this.rand.nextInt(256);
 			int z = this.chunkZ + 8;
