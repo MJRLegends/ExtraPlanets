@@ -11,14 +11,20 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedFuelLoader;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiSolar;
+import com.mjr.extraplanets.client.gui.machines.GuiUltimateFuelLoader;
+import com.mjr.extraplanets.client.gui.machines.GuiUltimateRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiVehicleChanger;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateFuelLoader;
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -41,10 +47,14 @@ public class GuiHandler implements IGuiHandler {
 		if (tile != null) {
 			if (tile instanceof TileEntityAdvancedRefinery) {
 				return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile);
+			} else if (tile instanceof TileEntityUltimateRefinery) {
+				return new ContainerUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) tile);
 			} else if (tile instanceof TileEntitySolar) {
 				return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
 			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
 				return new ContainerAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
+			} else if (tile instanceof TileEntityUltimateFuelLoader) {
+				return new ContainerUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
 			} else if (tile instanceof TileEntityVehicleChanger) {
 				return new ContainerVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
 			}
@@ -68,10 +78,14 @@ public class GuiHandler implements IGuiHandler {
 		if (tile != null) {
 			if (tile instanceof TileEntityAdvancedRefinery) {
 				return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position.intX(), position.intY(), position.intZ()));
+			} else if (tile instanceof TileEntityUltimateRefinery) {
+				return new GuiUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) world.getTileEntity(position.intX(), position.intY(), position.intZ()));
 			} else if (tile instanceof TileEntitySolar) {
 				return new GuiSolar(player.inventory, (TileEntitySolar) tile);
 			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
 				return new GuiAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
+			} else if (tile instanceof TileEntityUltimateFuelLoader) {
+				return new GuiUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
 			} else if (tile instanceof TileEntityVehicleChanger) {
 				return new GuiVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
 			}
