@@ -453,6 +453,24 @@ tile.frozenNitrogen.name=冷冻氮
 tile.denseIce.name=坚冰
 tile.fossil.name=化石块
 
+#Decorative Blocks
+tile.decorativeBlocks.marble.name=Marble
+tile.decorativeBlocks.marbleBricks.name=Marble Bricks
+tile.decorativeBlocks.snowBricks.name=Snow Bricks
+tile.decorativeBlocks.iceBricks.name=Ice Bricks
+tile.decorativeBlocks.fireBricks.name=Fire Bricks
+tile.decorativeBlocks.blackWhiteFloor.name=Black/White Tiled Floor
+tile.decorativeBlocks.marbleTitledFloor.name=Marble Tiled Floor
+tile.decorativeBlocks.marbleBrokenTitledFloor.name=Marble Broken Tiled Floor
+tile.decorativeBlocks.metalMesh.name=Metal Mesh Floor
+tile.decorativeBlocks.frozenNitrogenBricks.name=Frozen Nitrogen Bricks
+tile.decorativeBlocks.volcanicRockBricks.name=Volcanic Rock Bricks
+tile.decorativeBlocks.carbonTitledFloor.name=Carbon Tiled Floor
+tile.decorativeBlocks.carbonBrokenTitledFloor.name=Carbon Broken Tiled Floor
+tile.decorativeBlocks.magnesiumTitledFloor.name=Magnesium Tiled Floor
+tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Floor
+tile.decorativeBlocks.ashBricks.name=Ash Bricks
+
 #Vehicles
 item.marsRover.name=Driveable Mars Rover
 item.venusRover.name=Driveable Venus Rover
