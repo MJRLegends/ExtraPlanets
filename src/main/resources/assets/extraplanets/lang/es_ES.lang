@@ -406,6 +406,7 @@ tile.treasureChestT6Eris.description=Los cofres del tesoro nivel 6 se generarán
 
 #Machines
 tile.advancedRefinery.name=Refinería Avanzada
+tile.ultimateRefinery.name=Ultimate Refinery
 tile.solar.hybrid.name=Panel Solar Híbrido
 tile.solar.ultimate.name=Panel Solar Definitivo
 tile.solarhybrid.description=Este Panel Solar trabajará durante el día y la noche
@@ -413,6 +414,7 @@ tile.solarultimate.description=Este Panel Solar trabajará durante el día y la 
 container.solarhybrid.name=Panel Solar Híbrido
 container.solarultimate.name=Panel Solar Definitivo
 tile.advancedFuelLoader.name=Cargador de combustible avanzado
+tile.ultimateFuelLoader.name=Ultimate Fuel Loader
 tile.advancedLaunchPad.tier2LandingPad.name=Plataforma de lanzamiento nivel 2
 tile.advancedLaunchPad.tier3LandingPad.name=Plataforma de lanzamiento nivel 3
 tile.advancedLaunchPadFull.name=Plataforma de lanzamiento nivel 2/3
@@ -421,6 +423,10 @@ tile.advancedLaunchPad.tier3.desc=Usado para lanzar cohetes nivel 9 - 10
 tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
 tile.chargingBlock.name=Vehicle Charger
 container.vehicle.charger.name=Vehicle Charger
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
 
 #GUI Messages and Texts
 gui.message.power.name=Powered Vehicle

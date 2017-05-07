@@ -410,6 +410,7 @@ tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eri
 
 #Machines
 tile.advancedRefinery.name=高級精煉機
+tile.ultimateRefinery.name=Ultimate Refinery
 tile.solar.hybrid.name=混合型高級太陽能電池板
 tile.solar.ultimate.name=最終混合型高級太陽能電池板
 tile.solarhybrid.description=混合型高級太陽能電池板能全天候工作。
@@ -417,6 +418,7 @@ tile.solarultimate.description=最終混合型高級太陽能電池板能全天�
 container.solarhybrid.name=混合型高級太陽能電池板
 container.solarultimate.name=最終混合型高級太陽能電池板
 tile.advancedFuelLoader.name=Advanced Fuel Loader
+tile.ultimateFuelLoader.name=Ultimate Fuel Loader
 tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
@@ -425,6 +427,10 @@ tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
 tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
 tile.chargingBlock.name=Vehicle Charger
 container.vehicle.charger.name=Vehicle Charger
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
 
 #GUI Messages and Texts
 gui.message.power.name=Powered Vehicle
