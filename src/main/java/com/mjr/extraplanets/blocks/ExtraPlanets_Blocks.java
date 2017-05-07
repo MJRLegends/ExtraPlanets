@@ -217,7 +217,9 @@ public class ExtraPlanets_Blocks {
 	public static Block advancedLaunchPadFull;
 	
 	public static Block decorativeBlocks;
-
+	
+	public static Block redSand;
+	public static Block redSandstone;
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
@@ -334,6 +336,8 @@ public class ExtraPlanets_Blocks {
 			kepler22bRedGrass = new BlockBasicGrass("kepler22b_red", "kepler22b");
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow", "kepler22b");
 			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22bFlowers");
+			redSand = new BlockSand("redSand");
+			redSandstone = new BlockBasic(Material.rock).setBlockName("redSandstone").setBlockTextureName(Constants.TEXTURE_PREFIX + "redSandstone").setHardness(2F).setResistance(2F);
 		}
 		advancedLaunchPad = new BlockCustomLandingPad("advancedLaunchPad");
 		advancedLaunchPadFull = new BlockCustomLandingPadFull("advancedLaunchPadFull");
@@ -514,6 +518,8 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
 			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
 			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName());
+			GameRegistry.registerBlock(redSand, "redSand");
+			GameRegistry.registerBlock(redSandstone, "redSandstone");
 		}
 
 		if (Config.europa) {
