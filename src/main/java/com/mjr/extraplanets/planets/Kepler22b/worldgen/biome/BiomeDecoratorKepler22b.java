@@ -62,6 +62,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	public int redBigTreesPerChunk;
 
 	public int blueTowerPerChunk;
+	
+	public boolean generateHuts = true;
 
 	private World currentWorld;
 	protected Random rand;
@@ -284,30 +286,32 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
-			if (this.rand.nextInt(200) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z);
-				int randomNum = this.rand.nextInt(7) + 0;
-				switch (randomNum) {
-				case 1:
-					(new WorldGenBlueHut()).generate(this.currentWorld, rand, x, y, z);
-					break;
-				case 2:
-					(new WorldGenRedHut()).generate(this.currentWorld, rand, x, y, z);
-					break;
-				case 3:
-					(new WorldGenPurpleHut()).generate(this.currentWorld, rand, x, y, z);
-					break;
-				case 4:
-					(new WorldGenYellowHut()).generate(this.currentWorld, rand, x, y, z);
-					break;
-				case 5:
-					(new WorldGenGreenHut()).generate(this.currentWorld, rand, x, y, z);
-					break;
-				case 6:
-					(new WorldGenBrownHut()).generate(this.currentWorld, rand, x, y, z);
-					break;
+			if(this.generateHuts){
+				if (this.rand.nextInt(200) == 1) {
+					int x = chunk_X + this.rand.nextInt(16) + 8;
+					int z = chunk_Z + this.rand.nextInt(16) + 8;
+					int y = this.currentWorld.getHeightValue(x, z);
+					int randomNum = this.rand.nextInt(7) + 0;
+					switch (randomNum) {
+					case 1:
+						(new WorldGenBlueHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 2:
+						(new WorldGenRedHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 3:
+						(new WorldGenPurpleHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 4:
+						(new WorldGenYellowHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 5:
+						(new WorldGenGreenHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 6:
+						(new WorldGenBrownHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					}
 				}
 			}
 		}

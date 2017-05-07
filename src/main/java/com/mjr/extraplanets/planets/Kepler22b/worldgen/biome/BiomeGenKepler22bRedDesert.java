@@ -24,5 +24,7 @@ public class BiomeGenKepler22bRedDesert extends BiomeGenBaseKepler22b {
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityCreeper.class, 100, 4, 4));
+		
+		this.getBiomeDecorator().generateHuts = false;
 	}
 }
