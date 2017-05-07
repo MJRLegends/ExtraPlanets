@@ -9,21 +9,33 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedFuelLoader;
+import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenCompressor;
+import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiSolar;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateFuelLoader;
+import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenCompressor;
+import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenDecompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiVehicleChanger;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
+import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
+import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateFuelLoader;
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
+import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
 
@@ -57,6 +69,14 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
 			} else if (tile instanceof TileEntityVehicleChanger) {
 				return new ContainerVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
+			} else if (tile instanceof TileEntityAdvancedOxygenCompressor) {
+				return new ContainerAdvancedOxygenCompressor(player.inventory, (TileEntityAdvancedOxygenCompressor) tile);
+			} else if (tile instanceof TileEntityAdvancedOxygenDecompressor) {
+				return new ContainerAdvancedOxygenDecompressor(player.inventory, (TileEntityAdvancedOxygenDecompressor) tile);
+			} else if (tile instanceof TileEntityUltimateOxygenCompressor) {
+				return new ContainerUltimateOxygenCompressor(player.inventory, (TileEntityUltimateOxygenCompressor) tile);
+			} else if (tile instanceof TileEntityUltimateOxygenDecompressor) {
+				return new ContainerUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile);
 			}
 		}
 		return null;
@@ -88,6 +108,14 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
 			} else if (tile instanceof TileEntityVehicleChanger) {
 				return new GuiVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
+			} else if (tile instanceof TileEntityAdvancedOxygenCompressor) {
+				return new GuiAdvancedOxygenCompressor(player.inventory, (TileEntityAdvancedOxygenCompressor) tile);
+			} else if (tile instanceof TileEntityAdvancedOxygenDecompressor) {
+				return new GuiAdvancedOxygenDecompressor(player.inventory, (TileEntityAdvancedOxygenDecompressor) tile);
+			} else if (tile instanceof TileEntityUltimateOxygenCompressor) {
+				return new GuiUltimateOxygenCompressor(player.inventory, (TileEntityUltimateOxygenCompressor) tile);
+			} else if (tile instanceof TileEntityUltimateOxygenDecompressor) {
+				return new GuiUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile);
 			}
 		}
 		return null;

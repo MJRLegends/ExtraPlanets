@@ -118,7 +118,7 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements ItemB
 
 	@Override
 	public boolean onMachineActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int side, float hitX, float hitY, float hitZ) {
-		entityPlayer.openGui(GalacticraftCore.instance, -1, world, x, y, z);
+		entityPlayer.openGui(ExtraPlanets.instance, -1, world, x, y, z);
 		return true;
 	}
 
