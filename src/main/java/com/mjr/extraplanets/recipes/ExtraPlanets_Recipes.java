@@ -982,7 +982,7 @@ public class ExtraPlanets_Recipes {
 			if (Config.MERCURY)
 				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), silicon, silicon, new ItemStack(Items.REDSTONE),
 						new ItemStack(Items.COMPARATOR) });
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 5), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Blocks.REDSTONE_TORCH) });
+			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 0), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Blocks.REDSTONE_TORCH) });
 			if (Config.JUPITER)
 				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 3),
 						new ItemStack[] { new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Items.REPEATER) });
