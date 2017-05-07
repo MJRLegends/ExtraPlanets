@@ -20,7 +20,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "0.8.5-Beta-Build"
+version = "0.8.6-Beta-Build"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -42,9 +42,9 @@ minecraft {
 
 dependencies {
 	compile files (
-		"../Galacticraft 1.8.9/build/libs/GalacticraftCore-Dev-1.8.9-4.0.0.0-BETA.jar",
-		"../Galacticraft 1.8.9/build/libs/Galacticraft-Planets-Dev-1.8.9-4.0.0.0-BETA.jar",
-		"../Galacticraft 1.8.9/build/libs/MicdoodleCore-Dev-1.8.9-4.0.0.0-BETA.jar",
+		"../GalacticraftCore-Dev-1.8.9-4.0.0.84-BETA.jar",
+		"../Galacticraft-Planets-Dev-1.8.9-4.0.0.84-BETA.jar",
+		"../MicdoodleCore-Dev-1.8.9-4.0.0.84-BETA.jar",
 		
 		"../CodeChickenCore-1.8-1.0.5.36-dev.jar",
 		"../NotEnoughItems-1.8-1.0.5.104-dev.jar",
