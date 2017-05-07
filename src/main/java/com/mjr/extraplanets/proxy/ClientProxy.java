@@ -360,6 +360,12 @@ public class ClientProxy extends CommonProxy {
 		if (blockID == ExtraPlanets_Machines.ultimateFuelLoader) {
 			return ClientProxy.renderIdMachine;
 		}
+		if (blockID == ExtraPlanets_Machines.advancedOxygenCompressor) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Machines.ultimateOxygenCompressor) {
+			return ClientProxy.renderIdMachine;
+		}
 		if (blockID == ExtraPlanets_Blocks.advancedLaunchPadFull) {
 			return ClientProxy.renderIdLandingPad;
 		}
