@@ -267,6 +267,10 @@ public class ClientProxy extends CommonProxy {
 		IModelCustom marsRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover.obj"));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, new RenderMarsRover(marsRover));
 		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.marsRover, new ItemRendererMarsRover(marsRover));
+
+		// IModelCustom venusRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover.obj"));
+		// RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, new RenderVenusRover(venusRover));
+		// MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.venusRover, new ItemRendererVenusRover(venusRover));
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -347,7 +351,13 @@ public class ClientProxy extends CommonProxy {
 		if (blockID == ExtraPlanets_Machines.advancedRefinery) {
 			return ClientProxy.renderIdMachine;
 		}
+		if (blockID == ExtraPlanets_Machines.ultimateRefinery) {
+			return ClientProxy.renderIdMachine;
+		}
 		if (blockID == ExtraPlanets_Machines.advancedFuelLoader) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Machines.ultimateFuelLoader) {
 			return ClientProxy.renderIdMachine;
 		}
 		if (blockID == ExtraPlanets_Blocks.advancedLaunchPadFull) {
