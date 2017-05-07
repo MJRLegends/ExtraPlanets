@@ -47,6 +47,7 @@ import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.SkyProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
+import com.mjr.extraplanets.planets.Kepler22b.WorldProviderKepler22b;
 import com.mjr.extraplanets.planets.Mercury.SkyProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;
@@ -76,7 +77,7 @@ public class SkyProviderHandler {
 		if (world != null) {
 			// Planets
 			if (world.provider instanceof WorldProviderMercury) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderMercury((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -85,7 +86,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderCeres) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderCeres((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -94,7 +95,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderJupiter) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderJupiter((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -103,7 +104,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderSaturn) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderSaturn((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -112,7 +113,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderUranus) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderUranus((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -121,7 +122,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderNeptune) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderNeptune((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -130,7 +131,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderPluto) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderPluto((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -139,7 +140,7 @@ public class SkyProviderHandler {
 				}
 			}
 			if (world.provider instanceof WorldProviderEris) {
-				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderEris((IGalacticraftWorldProvider) world.provider));
 				}
 
@@ -148,7 +149,7 @@ public class SkyProviderHandler {
 				}
 			}
 //			if (world.provider instanceof WorldProviderKepler22b) {
-//				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
+//				if (world.provider.getSkyRenderer() == null) {
 //					world.provider.setSkyRenderer(new SkyProviderKepler22b((IGalacticraftWorldProvider) world.provider));
 //				}
 //
