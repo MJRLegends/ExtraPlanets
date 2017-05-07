@@ -36,6 +36,27 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+v1.6.6
+*Updated Galacticraft API to latest
+*Added 16 new Decorative Blocks 
+*Changed biome id's (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Added Mars Rover (WIP)
+*Added Packet Networking setup
+*Added Powered Charging Pad (WIP)
+*Added Vehicle Changer block (WIP)
+*Added Electric Parts
+*Updated lang files
+*Added some of the missing textures
+*Added new Schematics, new Electirc Parts from Rovers
+*Added Custom trees to 3 of the biomes on Kepler22b
+*Added Recipe for Mars Rover in the NASA Workbench
+*Added NEI Handler for the Mars Rover recipe
+*Clean up
+*Added Ultimate Fuel Loader & Refinery
+*Added Config options for all machines
+*Added Venus Rover (WIP)
+*Added Advanced & Ultimate Compressors/Decomperssors with Config options
+*Fixes for Advanced Fuel Loader GUI's
 
 ======================================================================================================
 
