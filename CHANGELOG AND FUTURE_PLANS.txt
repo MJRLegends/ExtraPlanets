@@ -56,7 +56,7 @@ v1.6.6
 *Added Config options for all machines
 *Added Venus Rover (WIP)
 *Added Advanced & Ultimate Compressors/Decomperssors with Config options
-*Fixes for Advanced Fuel Loader GUI's
+*Fixes for Advanced Fuel Loader GUI
 
 ======================================================================================================
 
