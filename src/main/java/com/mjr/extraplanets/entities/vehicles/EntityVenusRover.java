@@ -65,26 +65,6 @@ public class EntityVenusRover extends EntityPoweredVehicleBase {
 	}
 
 	@Override
-	public float addPower(float amount, boolean doDrain) {
-		float beforePower = this.getCurrentPowerCapacity();
-		if (this.getCurrentPowerCapacity() >= this.getPowerMaxCapacity())
-			this.setCurrentPowerCapacity(this.getPowerMaxCapacity());
-		else
-			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() + amount);
-		return this.getCurrentPowerCapacity() - beforePower;
-	}
-
-	@Override
-	public float removePower(float amount) {
-		float beforePower = this.getCurrentPowerCapacity();
-		if ((this.getCurrentPowerCapacity() - amount) <= 0)
-			this.setCurrentPowerCapacity(0);
-		else
-			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
-		return beforePower - this.getCurrentPowerCapacity();
-	}
-	
-	@Override
 	public void updateRiderPosition() {
 		if (this.riddenByEntity != null) {
 			final double var1 = Math.cos(this.rotationYaw * Math.PI / 180.0D + 114.8) * -0.2D;
