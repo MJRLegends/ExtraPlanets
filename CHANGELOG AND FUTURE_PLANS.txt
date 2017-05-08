@@ -57,6 +57,15 @@ v1.6.6
 *Added Venus Rover (WIP)
 *Added Advanced & Ultimate Compressors/Decomperssors with Config options
 *Fixes for Advanced Fuel Loader GUI
+*Tweaks to world gen on Mercury
+*Added a Custom Blue Tower to Kepler22b
+*Added a Custom Structure of Frozen Nitrogen Pile to Neptune
+*Added Red Sand, Red Sandstone blocks
+*Added a Red Sand Biome to Kepler22b generation
+*Tweaks to stop Huts generating in the Red Sand Desert for Kepler22b
+*Added a Custom Structure of Tower of Desh to Ceres
+*Tweaked Desh Tower spawn rate to 1 in 100
+*Network tweaks
 
 ======================================================================================================
 
