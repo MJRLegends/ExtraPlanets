@@ -57,7 +57,7 @@ public class RenderVenusRover extends Render {
 		GL11.glTranslatef(0.0F, 0.9F, 2.20F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		GL11.glTranslatef(4.1F, 0.0F, 0.0F);
+		GL11.glTranslatef(4.1F, -0.2F, 0.0F);
 		GL11.glScalef(1.5F, 1.9F, 1.9F);
 		this.modelRoverWheelRight.renderPart("Wheel");
 		GL11.glTranslatef(-5.3F, 0.0F, 0.0F);
@@ -69,14 +69,14 @@ public class RenderVenusRover extends Render {
 		GL11.glTranslatef(0.0F, 0.9F, -4.45F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		GL11.glTranslatef(4.1F, 0.0F, 0.0F);
+		GL11.glTranslatef(4.1F, -0.2F, 0.0F);
 		GL11.glScalef(1.5F, 1.9F, 1.9F);
 		this.modelRoverWheelRight.renderPart("Wheel");
 		GL11.glTranslatef(-5.3F, 0.0F, 0.0F);
 		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 		
-		GL11.glTranslatef(0.0F, 0.5F, 0.0F);
+		GL11.glTranslatef(0.0F, 0.3F, 0.0F);
 		this.bindTexture(RenderVenusRover.buggyTextureBody);
 		this.modelRover.renderPart("Battery");
 		this.modelRover.renderPart("Battery2");
