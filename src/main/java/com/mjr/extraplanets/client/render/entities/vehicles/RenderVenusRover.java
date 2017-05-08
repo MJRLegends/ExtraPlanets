@@ -19,6 +19,7 @@ public class RenderVenusRover extends Render {
 	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
+	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGlass.png");
 
 	private final IModelCustom modelRover;
 
@@ -79,9 +80,11 @@ public class RenderVenusRover extends Render {
 		// GL11.glTranslatef(0.0F, 0.0F, 0.0F);
 		// this.modelRover.renderPart("WheelBackLeft");
 		// GL11.glPopMatrix();
-
+		
 		GL11.glTranslatef(0.0F, 0.5F, 0.0F);
 		this.bindTexture(RenderVenusRover.buggyTextureBody);
+		this.modelRover.renderPart("Battery");
+		this.modelRover.renderPart("Battery2");
 		this.modelRover.renderPart("BraceFrontWheelLeft");
 		this.modelRover.renderPart("BraceFrontWheelLeft2");
 		this.modelRover.renderPart("BraceFrontWheelLeft003");
@@ -92,31 +95,51 @@ public class RenderVenusRover extends Render {
 		this.modelRover.renderPart("BraceFrontWheelRight004");
 		this.modelRover.renderPart("BraceFrontWheelRight005");
 		this.modelRover.renderPart("BraceFrontWheelRight006");
-		this.modelRover.renderPart("Frame");
+		this.modelRover.renderPart("Clip1");
+		this.modelRover.renderPart("Clip2");
+		this.modelRover.renderPart("door");
+		this.modelRover.renderPart("doorhandle");
+		this.modelRover.renderPart("Doorhinge1");
+		this.modelRover.renderPart("Doorhinge2");
+		this.modelRover.renderPart("Floor");
 		this.modelRover.renderPart("Frame2");
-		this.modelRover.renderPart("GlassFront");
-		this.modelRover.renderPart("GlassPaneRoof");
+		this.modelRover.renderPart("Frame003");
+		this.modelRover.renderPart("RTG");
+		this.modelRover.renderPart("RTGPart1");
+		this.modelRover.renderPart("RtGPart2");
+		this.bindTexture(RenderVenusRover.buggyTextureStorage);
+		this.modelRover.renderPart("Seat");
+		this.modelRover.renderPart("Spinka");
+		this.bindTexture(RenderVenusRover.buggyTextureBody);
+		this.modelRover.renderPart("TRGPart3");
+		this.modelRover.renderPart("TRGPart4");
+		this.modelRover.renderPart("TRGPart5");
 		this.modelRover.renderPart("Helm");
 		this.modelRover.renderPart("PoleHelm");
-		this.modelRover.renderPart("Box001");
+		this.modelRover.renderPart("Line001");
 		this.bindTexture(RenderVenusRover.buggyTextureOther);
 		this.modelRover.renderPart("Box002");
 		this.modelRover.renderPart("Box003");
+		this.bindTexture(RenderVenusRover.buggyTextureBody);
+		GL11.glEnable (GL11.GL_BLEND); GL11.glBlendFunc (GL11.GL_ONE, GL11.GL_ONE);
+		this.modelRover.renderPart("FrontWindow");
+		this.modelRover.renderPart("LeftWall");
+		this.modelRover.renderPart("RightWall");
 
+		GL11.glDisable (GL11.GL_BLEND); GL11.glBlendFunc (GL11.GL_ONE, GL11.GL_ONE);
 		this.bindTexture(RenderVenusRover.buggyTextureStorage);
 
-//		if (entity.roverType > 0) {
-//			this.modelRover.renderPart("Box001");
-//
-//			if (entity.roverType > 1) {
-//				this.modelRover.renderPart("Box002");
-//
-//				if (entity.roverType > 2) {
-//					this.modelRover.renderPart("Box003");
-//				}
-//			}
-//		}
+		if (entity.roverType > 0) {
+			this.modelRover.renderPart("Container");
 
+			if (entity.roverType > 1) {
+				this.modelRover.renderPart("Container2");
+
+				if (entity.roverType > 2) {
+					this.modelRover.renderPart("Container3");
+				}
+			}
+		}
 		GL11.glPopMatrix();
 	}
 
