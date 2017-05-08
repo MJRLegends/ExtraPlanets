@@ -3,6 +3,7 @@ package com.mjr.extraplanets.client.render.entities.vehicles;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 
 import org.lwjgl.opengl.GL11;
@@ -22,6 +23,8 @@ public class RenderVenusRover extends Render {
 	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGlass.png");
 
 	private final IModelCustom modelRover;
+	private final IModelCustom modelRoverWheelLeft = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover-Wheels.obj"));
+	private final IModelCustom modelRoverWheelRight = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover-Wheels.obj"));
 
 	public RenderVenusRover(IModelCustom modelRover) {
 		this.shadowSize = 2.0F;
@@ -51,35 +54,27 @@ public class RenderVenusRover extends Render {
 
 		// Front
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, -1.0F, -2.7F);
+		GL11.glTranslatef(0.0F, 0.9F, 2.20F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		GL11.glTranslatef(1.4F, 0.0F, 0.0F);
-		this.modelRover.renderPart("WheelFrontRight");
-		// this.modelRover.renderPart("WheelFrontLeft");
+		GL11.glTranslatef(4.1F, 0.0F, 0.0F);
+		GL11.glScalef(1.5F, 1.9F, 1.9F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-5.3F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
-		//
-		// // Middle wheels
-		// GL11.glPushMatrix();
-		// GL11.glTranslatef(0.0F, 0.0F, 0.0F);
-		// GL11.glRotatef(-entity.wheelRotationZ, 0, 1, 0);
-		// GL11.glRotatef(rotation, 1, 0, 0);
-		// GL11.glTranslatef(0.0F, 0.0F, 0.0F);
-		// this.modelRover.renderPart("WheelMiddleRight");
-		// GL11.glTranslatef(0.0F, 0.0F, 0.0F);
-		// this.modelRover.renderPart("WheelMiddleLeft");
-		// GL11.glPopMatrix();
-		//
-		// // Back wheels
-		// GL11.glPushMatrix();
-		// GL11.glTranslatef(0.0F, 0.0F, 0.0F);
-		// GL11.glRotatef(-entity.wheelRotationZ, 0, 1, 0);
-		// GL11.glRotatef(rotation, 1, 0, 0);
-		// GL11.glTranslatef(0.0F, 0.0F, 0.0F);
-		// this.modelRover.renderPart("WheelBackRight");
-		// GL11.glTranslatef(0.0F, 0.0F, 0.0F);
-		// this.modelRover.renderPart("WheelBackLeft");
-		// GL11.glPopMatrix();
+
+		// Back wheels
+		GL11.glPushMatrix();
+		GL11.glTranslatef(0.0F, 0.9F, -4.45F);
+		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
+		GL11.glRotatef(rotation, 1, 0, 0);
+		GL11.glTranslatef(4.1F, 0.0F, 0.0F);
+		GL11.glScalef(1.5F, 1.9F, 1.9F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-5.3F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
+		GL11.glPopMatrix();
 		
 		GL11.glTranslatef(0.0F, 0.5F, 0.0F);
 		this.bindTexture(RenderVenusRover.buggyTextureBody);
