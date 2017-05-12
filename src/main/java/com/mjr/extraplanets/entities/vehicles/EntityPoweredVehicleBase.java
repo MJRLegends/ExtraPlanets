@@ -354,7 +354,6 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			double d = this.motionX * this.motionX + this.motionZ * this.motionZ;
 
 			if (d != 0 && this.ticks % (MathHelper.floor_double(2 / d) + 1) == 0) {
-				System.out.println("Power: " + this.currentPowerCapacity);
 				this.removePower(10);
 			}
 		}
