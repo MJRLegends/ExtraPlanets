@@ -904,6 +904,12 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 8), new Object[] { "   ", "CC ", "CC ", 'C', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 9), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.frozenNitrogen) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 10), new Object[] { "MMM", "MBM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.volcanicRock) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 11), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 12), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 11) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 13), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 14), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 13) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 15), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ashBlock) });
+
 	}
 
 	private static void registerCompressorRecipes() {
