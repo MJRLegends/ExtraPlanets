@@ -72,4 +72,8 @@ public class EntityVenusRover extends EntityPoweredVehicleBase {
 			this.riddenByEntity.setPosition(this.posX + var1, (this.posY - 2.4 + this.riddenByEntity.getYOffset()) + 0.6, this.posZ + var3);
 		}
 	}
+
+	@Override
+	public void featureUpdate() {		
+	}
 }

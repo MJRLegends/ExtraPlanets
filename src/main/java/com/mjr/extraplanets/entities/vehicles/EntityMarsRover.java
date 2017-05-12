@@ -13,7 +13,8 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.machines.TileEntityPoweredChargingPad;
 
 public class EntityMarsRover extends EntityPoweredVehicleBase {
-
+	public float targetAngle;
+	public float currentAngle;
 	public EntityMarsRover(World var1) {
 		super(var1);
 	}
@@ -62,5 +63,11 @@ public class EntityMarsRover extends EntityPoweredVehicleBase {
 	@Override
 	public boolean isDockValid(IPowerDock dock) {
 		return dock instanceof TileEntityPoweredChargingPad;
+	}
+
+	@Override
+	public void featureUpdate() {
+		float celestialAngle = (this.worldObj.getCelestialAngle(1.0F));
+		this.addPower(celestialAngle / 2, false);
 	}
 }

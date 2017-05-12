@@ -83,7 +83,7 @@ public class RenderMarsRover extends Render {
 		GL11.glTranslatef(-3.7F, 0.0F, 0.0F);
 		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
-		
+
 		GL11.glTranslatef(0.0F, 0.5F, 0.0F);
 		this.bindTexture(RenderMarsRover.buggyTextureBody);
 		this.modelRover.renderPart("AxisBack");
@@ -140,7 +140,7 @@ public class RenderMarsRover extends Render {
 		this.modelRover.renderPart("Seat");
 		this.modelRover.renderPart("Seat001");
 		this.bindTexture(RenderMarsRover.buggyTextureBody);
-		this.modelRover.renderPart("SolarPanel");
+//		this.modelRover.renderPart("SolarPanel");
 		this.modelRover.renderPart("SolarPanelBlock");
 		this.modelRover.renderPart("Wire");
 		this.modelRover.renderPart("Battery");
@@ -150,6 +150,9 @@ public class RenderMarsRover extends Render {
 		this.modelRover.renderPart("CaseBack3");
 		this.modelRover.renderPart("WindowFragment3");
 
+		this.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/solar_panel.png"));
+		this.modelRover.renderPart("SolarPanel");
+		
 		this.bindTexture(RenderMarsRover.buggyTextureStorage);
 
 		if (entity.roverType > 0) {

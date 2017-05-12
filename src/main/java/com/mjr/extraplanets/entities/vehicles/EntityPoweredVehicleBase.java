@@ -261,7 +261,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		}
 
 		this.ticks++;
-
+		this.featureUpdate();
 		super.onUpdate();
 
 		if (this.worldObj.isRemote) {
@@ -701,6 +701,8 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	@Override
 	public float addPower(float amount, boolean doDrain) {
 		float beforePower = this.getCurrentPowerCapacity();
+		System.out.println(beforePower);
+
 		if (this.getCurrentPowerCapacity() >= this.getPowerMaxCapacity())
 			this.setCurrentPowerCapacity(this.getPowerMaxCapacity());
 		else
@@ -731,4 +733,6 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public abstract IPowerDock getLandingPad();
 
 	public abstract boolean isDockValid(IPowerDock dock);
+	
+	public abstract void featureUpdate();
 }
