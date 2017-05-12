@@ -406,7 +406,7 @@ public class ExtraPlanets {
 	}
 
 	private void addDungeonLoot() {
-		GalacticraftRegistry.addDungeonLoot(2, new ItemStack(ExtraPlanets_Items.schematicMarsRover, 1, 0));
+		GalacticraftRegistry.addDungeonLoot(1, new ItemStack(ExtraPlanets_Items.schematicMarsRover, 1, 0));
 		if (Config.venus) {
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicTier4, 1, 0));
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicVenusRover, 1, 0));
