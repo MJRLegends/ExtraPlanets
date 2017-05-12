@@ -884,9 +884,9 @@ public class ExtraPlanets_Recipes {
 		}
 
 		if (Config.advancedFuelLoader)
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.advancedFuelLoader), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotPalladium", 'X', "ingotNickel", 'Y', "gemRedGem", 'Z', new ItemStack(GCBlocks.fuelLoader) });
+			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.advancedFuelLoader), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotPalladium", 'X', "ingotNickel", 'Y', new ItemStack(ExtraPlanets_Items.wafers, 1, 1), 'Z', new ItemStack(GCBlocks.fuelLoader) });
 		if (Config.ultimateFuelLoader)
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.ultimateFuelLoader), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotZinc", 'X', "ingotTungsten", 'Y', "gemBlueGem", 'Z', new ItemStack(ExtraPlanets_Machines.advancedFuelLoader) });
+			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.ultimateFuelLoader), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotZinc", 'X', "ingotTungsten", 'Y', new ItemStack(ExtraPlanets_Items.wafers, 1, 2), 'Z', new ItemStack(ExtraPlanets_Machines.advancedFuelLoader) });
 		if (Config.chargingBlock)
 			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.chargingBlock), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, 1) });
 		// Can of Food
