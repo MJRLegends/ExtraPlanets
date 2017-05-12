@@ -30,13 +30,13 @@ public class ContainerSchematicVenusRover extends Container {
 		// Body
 		for (var6 = 0; var6 < 5; ++var6) {
 			for (var7 = 0; var7 < 3; ++var7) {
-				this.addSlotToContainer(new SlotVenusRover(this.craftMatrix, var7 * 5 + var6 + 1, 39 + var7 * 18, 14 + var6 * 18 + change, x, y, z, par1InventoryPlayer.player));
+				this.addSlotToContainer(new SlotVenusRover(this.craftMatrix, var7 * 5 + var6 + 1, 39 + var7 * 18, 6 + var6 * 18 + change, x, y, z, par1InventoryPlayer.player));
 			}
 		}
 
 		for (var6 = 0; var6 < 3; ++var6) {
 			for (var7 = 0; var7 < 2; ++var7) {
-				this.addSlotToContainer(new SlotVenusRover(this.craftMatrix, var7 * 3 + var6 + 16, 21 + var7 * 72, 14 + var6 * 35 + change, x, y, z, par1InventoryPlayer.player));
+				this.addSlotToContainer(new SlotVenusRover(this.craftMatrix, var7 * 3 + var6 + 16, 21 + var7 * 72, 6 + var6 * 36 + change, x, y, z, par1InventoryPlayer.player));
 			}
 		}
 
