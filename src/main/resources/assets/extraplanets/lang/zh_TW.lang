@@ -230,6 +230,7 @@ tile.deimos.stone.name=火衛二石頭
 tile.deimos.oreIron.name=火衛二鐵礦石
 tile.deimos.oreTin.name=火衛二錫礦石
 tile.deimos.oreCopper.name=火衛二銅礦石
+tile.deimos.oreLead.name=Deimos Lead Ore
 
 tile.europa.surface.name=木衛二地表岩石
 tile.europa.subSurface.name=木衛二地底岩石
@@ -251,6 +252,7 @@ tile.phobos.stone.name=火衛一石頭
 tile.phobos.oreIron.name=火衛一鐵礦石
 tile.phobos.oreTin.name=火衛一 錫礦石
 tile.phobos.oreCopper.name=火衛一銅礦石
+tile.phobos.oreLead.name=Phobos Lead Ore
 
 tile.triton.surface.name=海衛一地表岩石
 tile.triton.subSurface.name=海衛一地底岩石
@@ -569,6 +571,7 @@ item.ingotMercury.name=汞錠
 item.ingotUranium.name=鈾錠
 item.tier9.ingotTungsten.name=鎢錠
 item.tier10.ingotDarkIron.name=黑鐵錠
+item.ingotLead.name=Lead Ingot
 
 #Shards
 item.tier4.ashShard.name=Ash Shard

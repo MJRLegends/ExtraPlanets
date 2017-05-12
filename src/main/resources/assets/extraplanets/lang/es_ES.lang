@@ -228,6 +228,7 @@ tile.deimos.subSurface.name=Roca subterránea de Deimos
 tile.deimos.oreIron.name=Mena de hierro de Deimos
 tile.deimos.oreTin.name=Mena de estaño de Deimos
 tile.deimos.oreCopper.name=Mena de cobre de Deimos
+tile.deimos.oreLead.name=Deimos Lead Ore
 
 tile.europa.surface.name=Roca superficial de Europa
 tile.europa.subSurface.name=Roca subterránea de Europa
@@ -249,6 +250,7 @@ tile.phobos.stone.name=Roca de Fobos
 tile.phobos.oreIron.name=Mena de hierro de Fobos
 tile.phobos.oreTin.name=Mena de estaño de Fobos
 tile.phobos.oreCopper.name=Mena de cobre de Fobos
+tile.phobos.oreLead.name=Phobos Lead Ore
 
 tile.triton.surface.name=Roca superficial de Tritón
 tile.triton.subSurface.name=Roca subterránea de Tritón
@@ -565,6 +567,7 @@ item.ingotMercury.name=Lingote mercuriano
 item.ingotUranium.name=Lingore de uranio
 item.tier9.ingotTungsten.name=Lingote de tungsteno
 item.tier10.ingotDarkIron.name=Lingote de hierro oscuro
+item.ingotLead.name=Lead Ingot
 
 #Shards
 item.tier4.ashShard.name=Fragmento de ceniza

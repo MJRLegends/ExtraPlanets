@@ -14,6 +14,7 @@ public class BiomeDecoratorDeimos extends BiomeDecoratorSpace {
 	private WorldGenerator ironGen;
 	private WorldGenerator gravelGen;
 	private WorldGenerator fossilsGen;
+	private WorldGenerator leadGen;
 
 	private World currentWorld;
 
@@ -23,6 +24,7 @@ public class BiomeDecoratorDeimos extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 8, 3, true, ExtraPlanets_Blocks.deimosBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosGravel, 12, 0, true, ExtraPlanets_Blocks.deimosBlocks, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.deimosBlocks, 1);
+		this.leadGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.deimosBlocks, 3, 6, true, ExtraPlanets_Blocks.deimosBlocks, 2);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -45,6 +47,7 @@ public class BiomeDecoratorDeimos extends BiomeDecoratorSpace {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(1, this.fossilsGen, 0, 256);
+		this.generateOre(5, this.leadGen, 0, 20);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
 		// minY, int maxY);

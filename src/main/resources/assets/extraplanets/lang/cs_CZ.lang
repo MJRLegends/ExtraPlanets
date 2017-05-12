@@ -229,6 +229,7 @@ tile.deimos.stone.name=Kámen z Deimosu
 tile.deimos.OreIron.name=Železná ruda z Deimosu
 tile.deimos.OreTin.name=Cínová ruda z Deimosu
 tile.deimos.OreCopper.name=Měděná ruda z Deimosu
+tile.deimos.oreLead.name=Deimos Lead Ore
 
 tile.europa.surface.name=Povrchový kámen z Europy
 tile.europa.subSurface.name=Podpovrchový kámen z Europy
@@ -250,6 +251,7 @@ tile.phobos.stone.name=Kámen z Phobosu
 tile.phobos.OreIron.name=Železná ruda z Phobosu
 tile.phobos.OreTin.name=Cínová ruda z Phobosu
 tile.phobos.OreCopper.name=Měděná ruda z Phobosu
+tile.phobos.oreLead.name=Phobos Lead Ore
 
 tile.triton.surface.name=Povrchový kámen z Tritonu
 tile.triton.subSurface.name=Podpovrchový kámen z Tritonu
@@ -566,6 +568,7 @@ item.ingotMercury.name=Měděný Ingot
 item.ingotUranium.name=Uranový Ingot
 item.tier9.ingotTungsten.name=Tungstenový Ingot
 item.tier10.ingotDarkIron.name=Dark Iron Ingot
+item.ingotLead.name=Lead Ingot
 
 #Shards
 item.tier4.ashShard.name=Ash Shard

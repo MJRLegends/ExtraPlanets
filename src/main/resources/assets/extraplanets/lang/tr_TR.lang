@@ -229,6 +229,7 @@ tile.deimos.stone.name=Deimos Taşı
 tile.deimos.oreIron.name=Deimos Demir Cevheri
 tile.deimos.oreTin.name=Deimos Kalay Cevheri
 tile.deimos.oreCopper.name=Deimos Bakır Cevheri
+tile.deimos.oreLead.name=Deimos Lead Ore
 
 tile.europa.surface.name=Europa Yüzey Kayası
 tile.europa.subSurface.name=Europa Yeraltı Kayası
@@ -250,6 +251,7 @@ tile.phobos.stone.name=Rezzan Taşı
 tile.phobos.oreIron.name=Rezzan Demir Cevheri
 tile.phobos.oreTin.name=Rezzan Kalay Cevheri
 tile.phobos.oreCopper.name=Rezzan Bakır Cevheri
+tile.phobos.oreLead.name=Phobos Lead Ore
 
 tile.triton.surface.name=Triton Yüzey Kayası
 tile.triton.subSurface.name=Triton Yeraltı Kayası
@@ -565,6 +567,7 @@ item.ingotMercury.name=Civa Külçesi
 item.ingotUranium.name=Uranyum Külçesi
 item.tier9.ingotTungsten.name=Tungsten Külçesi
 item.tier10.ingotDarkIron.name=Koyu Demir Külçesi
+item.ingotLead.name=Lead Ingot
 
 #Shards
 item.tier4.ashShard.name=Ash Shard

@@ -125,6 +125,7 @@ public class ExtraPlanets_Items {
 	public static Item ingotUranium;
 	public static Item compressedMercury;
 	public static Item ingotMercury;
+	public static Item ingotLead;
 
 	public static Item thermalCloth;
 
@@ -262,6 +263,8 @@ public class ExtraPlanets_Items {
 
 		wafers = new ItemWafers("wafer");
 
+		ingotLead = new ItemBasicItem("ingotLead");
+
 		if (Config.batteries) {
 			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 			if (Config.morePlanetsCompatibility == false)
@@ -374,6 +377,8 @@ public class ExtraPlanets_Items {
 		}
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
+		
+		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName());
 
 		if (Config.batteries) {
 			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName());
@@ -445,5 +450,6 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 8));
 			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 9));
 		}
+		OreDictionary.registerOre("ingotLead", new ItemStack(ingotLead));
 	}
 }

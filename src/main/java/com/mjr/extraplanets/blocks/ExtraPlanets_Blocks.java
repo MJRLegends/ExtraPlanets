@@ -917,6 +917,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(deimosBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(deimosBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(deimosBlocks, 1, 3));
+			OreDictionary.registerOre("oreLead", new ItemStack(deimosBlocks, 1, 6));
 		}
 		if (Config.europa) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(europaBlocks, 1, 5));
@@ -937,6 +938,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(phobosBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(phobosBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(phobosBlocks, 1, 3));
+			OreDictionary.registerOre("oreLead", new ItemStack(phobosBlocks, 1, 6));
 		}
 		if (Config.rhea) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(rheaBlocks, 1, 5));

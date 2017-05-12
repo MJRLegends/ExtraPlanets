@@ -229,6 +229,7 @@ tile.deimos.stone.name=Deimos Stone
 tile.deimos.oreIron.name=Deimos Iron Ore
 tile.deimos.oreTin.name=Deimos Tin Ore
 tile.deimos.oreCopper.name=Deimos Copper Ore
+tile.deimos.oreLead.name=Deimos Lead Ore
 
 tile.europa.surface.name=Europa Surface Rock
 tile.europa.subSurface.name=Europa Sub-Surface Rock
@@ -250,6 +251,7 @@ tile.phobos.stone.name=Phobos Stone
 tile.phobos.oreIron.name=Phobos Iron Ore
 tile.phobos.oreTin.name=Phobos Tin Ore
 tile.phobos.oreCopper.name=Phobos Copper Ore
+tile.phobos.oreLead.name=Phobos Lead Ore
 
 tile.triton.surface.name=Triton Surface Rock
 tile.triton.subSurface.name=Triton Sub-Surface Rock
@@ -566,6 +568,7 @@ item.ingotMercury.name=Mercury Ingot
 item.ingotUranium.name=Uranium Ingot
 item.tier9.ingotTungsten.name=Tungsten Ingot
 item.tier10.ingotDarkIron.name=Dark Iron Ingot
+item.ingotLead.name=Lead Ingot
 
 #Shards
 item.tier4.ashShard.name=Ash Shard

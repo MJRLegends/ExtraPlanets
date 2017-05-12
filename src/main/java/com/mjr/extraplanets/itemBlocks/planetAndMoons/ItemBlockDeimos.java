@@ -56,6 +56,11 @@ public class ItemBlockDeimos extends ItemBlock
 			name = "oreCopper";
 			break;
 		}
+		case 6:
+		{
+			name = "oreLead";
+			break;
+		}
 		default:
 			name = "null";
 		}
