@@ -22,7 +22,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
-	private static final ResourceLocation solarEvaporationChamberTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/solarEvaporationChamber.png");
+	private static final ResourceLocation solarEvaporationChamberTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/solar_evaporation_chamber.png");
 
 	private final TileEntityBasicSolarEvaporationChamber tileEntity;
 
