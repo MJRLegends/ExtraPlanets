@@ -66,6 +66,12 @@ v1.6.6
 *Added a Custom Structure of Tower of Desh to Ceres
 *Tweaked Desh Tower spawn rate to 1 in 100
 *Network tweaks
+*Fixed texture issue with the Iron & Diamond Apples
+*Added Venus/Mars Rover Recipes & NEI support.
+*Added Venus/Mars RoverSchematics to correct dungeons
+*Matched GC change of Backport desync dungeon positions for my dungeons
+*Added Lead ingot. Two Lead ores on Deimos, Phobos
+*Fixed/Changed some recipes
 
 ======================================================================================================
 
