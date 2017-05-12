@@ -701,8 +701,6 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	@Override
 	public float addPower(float amount, boolean doDrain) {
 		float beforePower = this.getCurrentPowerCapacity();
-		System.out.println(beforePower);
-
 		if (this.getCurrentPowerCapacity() >= this.getPowerMaxCapacity())
 			this.setCurrentPowerCapacity(this.getPowerMaxCapacity());
 		else
