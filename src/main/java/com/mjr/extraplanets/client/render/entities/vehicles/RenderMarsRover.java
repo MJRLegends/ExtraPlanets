@@ -17,9 +17,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderMarsRover extends Render {
 	private static final ResourceLocation buggyTextureBody = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
-	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
+	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlack.png");
 	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
+	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketOrangeTextured.png");
+	private static final ResourceLocation buggyTextureOther3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketTextured.png");
+	private static final ResourceLocation buggyTextureOther4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketLightBlueTextured.png");
+	private static final ResourceLocation buggyTextureOther5 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlueTextured.png");
+	private static final ResourceLocation buggyTextureBatteryBolt = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketYellow.png");
+	private static final ResourceLocation buggyTextureBody2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGrey.png");
 
 	private final IModelCustom modelRover;
 	private final IModelCustom modelRoverWheelLeft = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover-Wheel.obj"));
@@ -53,7 +59,7 @@ public class RenderMarsRover extends Render {
 
 		// Front
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.0F, 2.2F);
+		GL11.glTranslatef(0.0F, 1.2F, 2.2F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(2.0F, 0.0F, 0.0F);
@@ -64,7 +70,7 @@ public class RenderMarsRover extends Render {
 
 		// Middle wheels
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.0F, -0.2F);
+		GL11.glTranslatef(0.0F, 1.2F, -0.2F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(1.9F, 0.0F, 0.0F);
@@ -75,7 +81,7 @@ public class RenderMarsRover extends Render {
 
 		// Back wheels
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.0F, -3.7F);
+		GL11.glTranslatef(0.0F, 1.2F, -3.7F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(1.9F, 0.0F, 0.0F);
@@ -84,15 +90,19 @@ public class RenderMarsRover extends Render {
 		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 
-		GL11.glTranslatef(0.0F, 0.5F, 0.0F);
+		GL11.glTranslatef(0.0F, 0.7F, 0.0F);
 		this.bindTexture(RenderMarsRover.buggyTextureBody);
+		this.modelRover.renderPart("RoofRover");
+		this.modelRover.renderPart("FloorRover");
+		this.bindTexture(RenderMarsRover.buggyTextureOther2);
+		this.modelRover.renderPart("Clip1");
+		this.modelRover.renderPart("Clip2");
+		this.bindTexture(RenderMarsRover.buggyTextureStorage);
 		this.modelRover.renderPart("AxisBack");
 		this.modelRover.renderPart("AxisFront");
 		this.modelRover.renderPart("AxisFront001");
 		this.modelRover.renderPart("AxisMiddle");
-		this.modelRover.renderPart("Clip1");
-		this.modelRover.renderPart("Clip2");
-		this.modelRover.renderPart("FloorRover");
+		this.bindTexture(RenderMarsRover.buggyTextureStorage);
 		this.modelRover.renderPart("FrameSegment010");
 		this.modelRover.renderPart("FrameSegment011");
 		this.modelRover.renderPart("FrameSegment012");
@@ -128,31 +138,46 @@ public class RenderMarsRover extends Render {
 		this.modelRover.renderPart("FrameSegment057");
 		this.modelRover.renderPart("FrameSegment058");
 		this.modelRover.renderPart("FrameSegment059");
-		this.modelRover.renderPart("WindowBack");
-		this.modelRover.renderPart("WindowFront1");
-		this.modelRover.renderPart("WindowFront2");
-		this.modelRover.renderPart("Helm");
-		this.modelRover.renderPart("HelmKeeper");
 		this.modelRover.renderPart("Line001");
-		this.modelRover.renderPart("PoleSolarPanel");
-		this.modelRover.renderPart("RoofRover");
+		this.bindTexture(RenderMarsRover.buggyTextureWheel);
+		this.modelRover.renderPart("HelmKeeper");
 		this.bindTexture(RenderMarsRover.buggyTextureOther);
+		this.modelRover.renderPart("Helm");
 		this.modelRover.renderPart("Seat");
 		this.modelRover.renderPart("Seat001");
 		this.bindTexture(RenderMarsRover.buggyTextureBody);
-//		this.modelRover.renderPart("SolarPanel");
+		this.modelRover.renderPart("SolarPanel");
+		this.bindTexture(RenderMarsRover.buggyTextureOther4);
+		this.modelRover.renderPart("PoleSolarPanel");
+		this.bindTexture(RenderMarsRover.buggyTextureWheel);
 		this.modelRover.renderPart("SolarPanelBlock");
+		this.bindTexture(RenderMarsRover.buggyTextureOther3);
 		this.modelRover.renderPart("Wire");
+		this.bindTexture(RenderMarsRover.buggyTextureOther5);
 		this.modelRover.renderPart("Battery");
+		this.bindTexture(RenderMarsRover.buggyTextureBody);
 		this.modelRover.renderPart("Line002");
+		this.bindTexture(RenderMarsRover.buggyTextureStorage);
 		this.modelRover.renderPart("CaseBack1");
 		this.modelRover.renderPart("CaseBack2");
 		this.modelRover.renderPart("CaseBack3");
+		this.bindTexture(RenderMarsRover.buggyTextureBody);
+		this.modelRover.renderPart("WindowBack");
 		this.modelRover.renderPart("WindowFragment3");
-
-		this.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/solar_panel.png"));
-		this.modelRover.renderPart("SolarPanel");
+		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
+		this.modelRover.renderPart("WindowFront1");
+		this.modelRover.renderPart("WindowFront2");
+		GL11.glDisable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 		
+		this.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/solar_panel.png"));
+		this.modelRover.renderPart("SolarPlane");
+		
+		this.bindTexture(RenderMarsRover.buggyTextureBatteryBolt);
+		this.modelRover.renderPart("Lightning");
+		this.modelRover.renderPart("Lightning2");
+
 		this.bindTexture(RenderMarsRover.buggyTextureStorage);
 
 		if (entity.roverType > 0) {

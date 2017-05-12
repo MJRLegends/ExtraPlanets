@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.client.render.entities.vehicles;
 
+import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -17,10 +18,15 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderVenusRover extends Render {
 	private static final ResourceLocation buggyTextureBody = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
-	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
+	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlack.png");
 	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
-	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGlass.png");
+	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketOrange.png");
+	private static final ResourceLocation buggyTextureOther3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketTextured.png");
+	private static final ResourceLocation buggyTextureOther4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketLightBlueTextured.png");
+	private static final ResourceLocation buggyTextureOther5 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlueTextured.png");
+	private static final ResourceLocation buggyTextureBatteryBolt = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketYellow.png");
+
 
 	private final IModelCustom modelRover;
 	private final IModelCustom modelRoverWheelLeft = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover-Wheels.obj"));
@@ -48,13 +54,14 @@ public class RenderVenusRover extends Render {
 		GL11.glRotatef(180.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		GL11.glScalef(0.51F, 0.51F, 0.51F);
+		GL11.glEnable(GL11.GL_SMOOTH);
 		this.bindTexture(RenderVenusRover.buggyTextureWheel);
 
 		float rotation = entity.wheelRotationX;
 
 		// Front
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 0.9F, 2.20F);
+		GL11.glTranslatef(0.0F, 1.2F, 2.20F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(4.1F, -0.2F, 0.0F);
@@ -66,7 +73,7 @@ public class RenderVenusRover extends Render {
 
 		// Back wheels
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 0.9F, -4.45F);
+		GL11.glTranslatef(0.0F, 1.2F, -4.45F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(4.1F, -0.2F, 0.0F);
@@ -75,8 +82,8 @@ public class RenderVenusRover extends Render {
 		GL11.glTranslatef(-5.3F, 0.0F, 0.0F);
 		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
-		
-		GL11.glTranslatef(0.0F, 0.3F, 0.0F);
+
+		GL11.glTranslatef(0.0F, 0.6F, 0.0F);
 		this.bindTexture(RenderVenusRover.buggyTextureBody);
 		this.modelRover.renderPart("Battery");
 		this.modelRover.renderPart("Battery2");
@@ -116,12 +123,14 @@ public class RenderVenusRover extends Render {
 		this.modelRover.renderPart("Box002");
 		this.modelRover.renderPart("Box003");
 		this.bindTexture(RenderVenusRover.buggyTextureBody);
-		GL11.glEnable (GL11.GL_BLEND); GL11.glBlendFunc (GL11.GL_ONE, GL11.GL_ONE);
+		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 		this.modelRover.renderPart("FrontWindow");
 		this.modelRover.renderPart("LeftWall");
 		this.modelRover.renderPart("RightWall");
-
-		GL11.glDisable (GL11.GL_BLEND); GL11.glBlendFunc (GL11.GL_ONE, GL11.GL_ONE);
+		GL11.glDisable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
+		
 		this.bindTexture(RenderVenusRover.buggyTextureStorage);
 
 		if (entity.roverType > 0) {
@@ -136,6 +145,7 @@ public class RenderVenusRover extends Render {
 			}
 		}
 		GL11.glPopMatrix();
+		RenderHelper.enableStandardItemLighting();
 	}
 
 	@Override

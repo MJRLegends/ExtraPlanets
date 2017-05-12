@@ -138,7 +138,7 @@ public class ItemRendererMarsRover implements IItemRenderer {
 		this.modelRover.renderPart("Seat");
 		this.modelRover.renderPart("Seat001");
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBody);
-		// this.modelRover.renderPart("SolarPanel");
+		this.modelRover.renderPart("SolarPanel");
 		this.modelRover.renderPart("SolarPanelBlock");
 		this.modelRover.renderPart("Wire");
 		this.modelRover.renderPart("Battery");
@@ -149,7 +149,7 @@ public class ItemRendererMarsRover implements IItemRenderer {
 		this.modelRover.renderPart("WindowFragment3");
 
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/solar_panel.png"));
-		this.modelRover.renderPart("SolarPanel");
+		this.modelRover.renderPart("SolarPlane");
 		
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureStorage);
 
