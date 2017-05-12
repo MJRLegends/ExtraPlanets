@@ -18,7 +18,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemElectricParts extends Item {
-	public static final String[] names = { "batteryTier1", "batteryTier2", "sparkPlug", "electircWheelsTier1", "electircWheelsTier2" };
+	public static final String[] names = { "batteryTier1", "batteryTier2", "sparkPlug", "electricWheelsTier1", "electricWheelsTier2" };
 
 	protected IIcon[] icons = new IIcon[ItemElectricParts.names.length];
 

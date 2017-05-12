@@ -213,6 +213,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=開普勒22b紫高草
 tile.kepler22bFlowers.greenMapleShortGrass.name=開普勒22b綠矮草
 tile.kepler22bFlowers.greenMapleMedGrass.name=開普勒22b綠中草
 tile.kepler22bFlowers.greenMapleTallGrass.name=開普勒22b綠高草
+tile.redSand.name=Red Sand
+tile.redSandstone.name=Red Sandstone
 
 #Moon Blocks
 tile.callisto.surface.name=木衛四地表岩石
@@ -482,6 +484,8 @@ item.venusRover.name=Driveable Venus Rover
 item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
 item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
 item.electricParts.sparkPlug.name=Vehicle Spark Plug
+item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
+item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=4階火箭
@@ -695,6 +699,9 @@ item.greenDiamondHoe.name=綠鑽鋤
 item.greenDiamondShovel.name=綠鑽鏟
 
 #Schematics
+item.schematicMarsRover.name=NASA Workbench Schematic
+item.schematicVenusRover.name=NASA Workbench Schematic
+
 item.schematicTier4.name=NASA工作臺圖紙
 item.schematicTier5.name=NASA工作臺圖紙
 item.schematicTier6.name=NASA工作臺圖紙
@@ -710,6 +717,9 @@ schematic.tier7.rocket.name=7階火箭
 schematic.tier8.rocket.name=8階火箭
 schematic.tier9.rocket.name=9階火箭
 schematic.tier10.rocket.name=10階火箭
+
+schematic.mars.rover.name=Mars Rover Schematic
+schematic.venus.rover.name=Venus Rover Schematic
 
 schematic.rocketT4.name=4階火箭
 schematic.rocketT5.name=5階火箭

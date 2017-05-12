@@ -212,6 +212,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 tile.kepler22bFlowers.greenMapleShortGrass.name=Kepler 22b Green Short Grass
 tile.kepler22bFlowers.greenMapleMedGrass.name=Kepler 22b Green Medium Grass
 tile.kepler22bFlowers.greenMapleTallGrass.name=Kepler 22b Green Tall Grass
+tile.redSand.name=Red Sand
+tile.redSandstone.name=Red Sandstone
 
 #Moon Blocks
 tile.callisto.surface.name=Povrchový kámen z Callisto
@@ -479,6 +481,8 @@ item.venusRover.name=Driveable Venus Rover
 item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
 item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
 item.electricParts.sparkPlug.name=Vehicle Spark Plug
+item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
+item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Raketa typ 4
@@ -691,6 +695,9 @@ item.greenDiamondHoe.name=Green Diamond Hoe
 item.greenDiamondShovel.name=Green Diamond Shovel
 
 #Schematics
+item.schematicMarsRover.name=NASA Workbench Schematic
+item.schematicVenusRover.name=NASA Workbench Schematic
+
 item.schematicTier4.name=NASA Workbench Schéma
 item.schematicTier5.name=NASA Workbench Schéma
 item.schematicTier6.name=NASA Workbench Schéma
@@ -706,6 +713,9 @@ schematic.tier7.Rocket.name=Raketa typ 7
 schematic.tier8.Rocket.name=Raketa typ 8
 schematic.tier9.Rocket.name=Raketa typ 9
 schematic.tier10.Rocket.name=Raketa typ 10
+
+schematic.mars.rover.name=Mars Rover Schematic
+schematic.venus.rover.name=Venus Rover Schematic
 
 schematic.RocketT4.name=Raketa typ 4
 schematic.RocketT5.name=Raketa typ 5

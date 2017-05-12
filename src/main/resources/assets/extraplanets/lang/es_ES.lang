@@ -212,6 +212,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=Hierba púrpura alta de Kepler 2
 tile.kepler22bFlowers.greenMapleShortGrass.name=Hierba verde corta de Kepler 22b
 tile.kepler22bFlowers.greenMapleMedGrass.name=Hierba verde media de Kepler 22b
 tile.kepler22bFlowers.greenMapleTallGrass.name=Hierba verde alta de Kepler 22b
+tile.redSand.name=Red Sand
+tile.redSandstone.name=Red Sandstone
 
 #Moon Blocks
 tile.callisto.surface.name=Roca superficial de Calisto
@@ -478,6 +480,8 @@ item.venusRover.name=Driveable Venus Rover
 item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
 item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
 item.electricParts.sparkPlug.name=Vehicle Spark Plug
+item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
+item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Cohete nivel 4
@@ -690,6 +694,9 @@ item.greenDiamondHoe.name=Azada de diamante verde
 item.greenDiamondShovel.name=Pala de diamante verde
 
 #Schematics
+item.schematicMarsRover.name=NASA Workbench Schematic
+item.schematicVenusRover.name=NASA Workbench Schematic
+
 item.schematicTier4.name=Planos
 item.schematicTier5.name=Planos
 item.schematicTier6.name=Planos
@@ -705,6 +712,9 @@ schematic.tier7.rocket.name=Cohete nivel 7
 schematic.tier8.rocket.name=Cohete nivel 8
 schematic.tier9.rocket.name=Cohete nivel 9
 schematic.tier10.rocket.name=Cohete nivel 10
+
+schematic.mars.rover.name=Mars Rover Schematic
+schematic.venus.rover.name=Venus Rover Schematic
 
 schematic.rocketT4.name=Cohete nivel 4
 schematic.rocketT5.name=Cohete nivel 5
