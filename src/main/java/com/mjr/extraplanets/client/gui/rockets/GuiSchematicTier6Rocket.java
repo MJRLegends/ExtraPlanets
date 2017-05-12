@@ -16,7 +16,7 @@ import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier6Rocket;
 
 public class GuiSchematicTier6Rocket extends GuiContainer implements ISchematicResultPage
 {
-	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbenchTier6.png");
+	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbench_tier6.png");
 
 	private int pageIndex;
 
