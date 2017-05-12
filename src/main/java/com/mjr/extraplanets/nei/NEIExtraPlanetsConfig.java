@@ -114,7 +114,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			}
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 0));
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 1));
-
+			API.hideItem(new ItemStack(ExtraPlanets_Items.electricParts, 0, 2));
 			API.registerRecipeHandler(new MarsRoverRecipeHandler());
 			API.registerUsageHandler(new MarsRoverRecipeHandler());
 		}
