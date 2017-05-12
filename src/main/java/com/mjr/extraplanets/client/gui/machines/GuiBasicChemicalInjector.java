@@ -22,7 +22,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicChemicalInjector extends GuiContainerGC {
-	private static final ResourceLocation chemicalInjectorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/chemicalInjector.png");
+	private static final ResourceLocation chemicalInjectorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/chemical_injector.png");
 
 	private final TileEntityBasicChemicalInjector tileEntity;
 
