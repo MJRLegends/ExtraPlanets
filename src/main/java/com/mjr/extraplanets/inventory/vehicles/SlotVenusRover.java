@@ -83,13 +83,13 @@ public class SlotVenusRover extends Slot {
 		case 16:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 4;
 		case 17:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 4;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 1;
 		case 18:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 4;
 		case 19:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 4;
 		case 20:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 4;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 1;
 		case 21:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 4;
 		case 22:

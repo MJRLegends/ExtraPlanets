@@ -60,6 +60,7 @@ public class ExtraPlanets_Recipes {
 		if (Config.eris)
 			Tier10RocketRecipes.registerRocketCraftingRecipe();
 		MarsRoverRecipes.registerRoverCraftingRecipe();
+		VenusRoverRecipes.registerRoverCraftingRecipe();
 	}
 
 	private static void registerFurnaceRecipes() {

@@ -747,8 +747,8 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		input1 = new HashMap<Integer, PositionedStack>();
 		input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 18));
 		input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 18));
-		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 55));
-		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 55));
+		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 1), 18, 55));
+		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 1), 90, 55));
 		input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 93));
 		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 93));
 		for (int x = 0; x < 3; x++) {
