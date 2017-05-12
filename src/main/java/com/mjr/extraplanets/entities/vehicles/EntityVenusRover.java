@@ -68,7 +68,7 @@ public class EntityVenusRover extends EntityPoweredVehicleBase {
 	public void updateRiderPosition() {
 		if (this.riddenByEntity != null) {
 			final double var1 = Math.cos(this.rotationYaw * Math.PI / 180.0D + 114.8) * -0.2D;
-			final double var3 = Math.sin(this.rotationYaw * Math.PI / 180.0D + 114.8) * -0.9D;
+			final double var3 = Math.sin(this.rotationYaw * Math.PI / 180.0D + 114.8) * + 1.0D;
 			this.riddenByEntity.setPosition(this.posX + var1, (this.posY - 2.4 + this.riddenByEntity.getYOffset()) + 0.6, this.posZ + var3);
 		}
 	}

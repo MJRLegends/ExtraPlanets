@@ -144,8 +144,8 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public void updateRiderPosition() {
 		if (this.riddenByEntity != null) {
 			final double var1 = Math.cos(this.rotationYaw * Math.PI / 180.0D + 114.8) * 0.4D;
-			final double var3 = Math.sin(this.rotationYaw * Math.PI / 180.0D + 114.8) * 0.6D;
-			this.riddenByEntity.setPosition(this.posX + var1, (this.posY - 2.4 + this.riddenByEntity.getYOffset()) + 0.4, this.posZ + var3);
+			final double var3 = Math.sin(this.rotationYaw * Math.PI / 180.0D + 114.8) * -0.4D;
+			this.riddenByEntity.setPosition(this.posX + var1, (this.posY - 2.4 + this.riddenByEntity.getYOffset()) + 0.6, this.posZ + var3);
 		}
 	}
 
@@ -531,12 +531,12 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		}
 
 		switch (key) {
-		case 0: // Accelerate
-			this.speed += this.accel / 20D;
+		case 0: // Deccelerate
+			this.speed -= this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
-		case 1: // Deccelerate
-			this.speed -= this.accel / 20D;
+		case 1: // Accelerate
+			this.speed += this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
 		case 2: // Left

@@ -21,12 +21,10 @@ public class RenderVenusRover extends Render {
 	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlack.png");
 	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
-	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketOrange.png");
-	private static final ResourceLocation buggyTextureOther3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketTextured.png");
+	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketOrangeTextured.png");
 	private static final ResourceLocation buggyTextureOther4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketLightBlueTextured.png");
 	private static final ResourceLocation buggyTextureOther5 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlueTextured.png");
 	private static final ResourceLocation buggyTextureBatteryBolt = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketYellow.png");
-
 
 	private final IModelCustom modelRover;
 	private final IModelCustom modelRoverWheelLeft = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover-Wheels.obj"));
@@ -51,10 +49,9 @@ public class RenderVenusRover extends Render {
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
 		GL11.glTranslatef((float) par2, (float) par4 - 2.5F, (float) par6);
 		GL11.glScalef(1.25F, 1.25F, 1.25F);
-		GL11.glRotatef(180.0F - par8, 0.0F, 1.0F, 0.0F);
+		GL11.glRotatef(0.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		GL11.glScalef(0.51F, 0.51F, 0.51F);
-		GL11.glEnable(GL11.GL_SMOOTH);
 		this.bindTexture(RenderVenusRover.buggyTextureWheel);
 
 		float rotation = entity.wheelRotationX;
@@ -84,9 +81,10 @@ public class RenderVenusRover extends Render {
 		GL11.glPopMatrix();
 
 		GL11.glTranslatef(0.0F, 0.6F, 0.0F);
-		this.bindTexture(RenderVenusRover.buggyTextureBody);
+		this.bindTexture(RenderVenusRover.buggyTextureOther5);
 		this.modelRover.renderPart("Battery");
 		this.modelRover.renderPart("Battery2");
+		this.bindTexture(RenderVenusRover.buggyTextureStorage);
 		this.modelRover.renderPart("BraceFrontWheelLeft");
 		this.modelRover.renderPart("BraceFrontWheelLeft2");
 		this.modelRover.renderPart("BraceFrontWheelLeft003");
@@ -97,27 +95,33 @@ public class RenderVenusRover extends Render {
 		this.modelRover.renderPart("BraceFrontWheelRight004");
 		this.modelRover.renderPart("BraceFrontWheelRight005");
 		this.modelRover.renderPart("BraceFrontWheelRight006");
+		this.bindTexture(RenderVenusRover.buggyTextureOther2);
 		this.modelRover.renderPart("Clip1");
 		this.modelRover.renderPart("Clip2");
+		this.bindTexture(RenderVenusRover.buggyTextureBody);
 		this.modelRover.renderPart("door");
+		this.bindTexture(RenderVenusRover.buggyTextureStorage);
 		this.modelRover.renderPart("doorhandle");
 		this.modelRover.renderPart("Doorhinge1");
 		this.modelRover.renderPart("Doorhinge2");
+		this.bindTexture(RenderVenusRover.buggyTextureBody);
 		this.modelRover.renderPart("Floor");
 		this.modelRover.renderPart("Frame2");
 		this.modelRover.renderPart("Frame003");
+		this.bindTexture(RenderVenusRover.buggyTextureOther4);
 		this.modelRover.renderPart("RTG");
-		this.modelRover.renderPart("RTGPart1");
-		this.modelRover.renderPart("RtGPart2");
-		this.bindTexture(RenderVenusRover.buggyTextureStorage);
+		this.bindTexture(RenderVenusRover.buggyTextureOther);
 		this.modelRover.renderPart("Seat");
 		this.modelRover.renderPart("Spinka");
-		this.bindTexture(RenderVenusRover.buggyTextureBody);
+		this.modelRover.renderPart("Helm");
+		this.bindTexture(RenderVenusRover.buggyTextureStorage);
+		this.modelRover.renderPart("PoleHelm");
+		this.bindTexture(RenderVenusRover.buggyTextureWheel);
+		this.modelRover.renderPart("RTGPart1");
+		this.modelRover.renderPart("RtGPart2");
 		this.modelRover.renderPart("TRGPart3");
 		this.modelRover.renderPart("TRGPart4");
 		this.modelRover.renderPart("TRGPart5");
-		this.modelRover.renderPart("Helm");
-		this.modelRover.renderPart("PoleHelm");
 		this.modelRover.renderPart("Line001");
 		this.bindTexture(RenderVenusRover.buggyTextureOther);
 		this.modelRover.renderPart("Box002");
@@ -130,6 +134,10 @@ public class RenderVenusRover extends Render {
 		this.modelRover.renderPart("RightWall");
 		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
+		
+		this.bindTexture(RenderVenusRover.buggyTextureBatteryBolt);
+		this.modelRover.renderPart("Lightning");
+		this.modelRover.renderPart("Lightning2");
 		
 		this.bindTexture(RenderVenusRover.buggyTextureStorage);
 

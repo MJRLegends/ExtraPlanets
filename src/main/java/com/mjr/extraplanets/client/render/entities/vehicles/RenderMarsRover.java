@@ -49,7 +49,7 @@ public class RenderMarsRover extends Render {
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
 		GL11.glTranslatef((float) par2, (float) par4 - 2.8F, (float) par6);
 		GL11.glScalef(1.25F, 1.25F, 1.25F);
-		GL11.glRotatef(0.0F - par8, 0.0F, 1.0F, 0.0F);
+		GL11.glRotatef(-180.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		GL11.glScalef(0.51F, 0.51F, 0.51F);
 		this.bindTexture(RenderMarsRover.buggyTextureWheel);

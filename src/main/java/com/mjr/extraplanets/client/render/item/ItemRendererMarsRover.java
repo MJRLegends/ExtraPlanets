@@ -4,6 +4,7 @@ import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 
 import org.lwjgl.opengl.GL11;
@@ -15,14 +16,21 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class ItemRendererMarsRover implements IItemRenderer {
 	private static final ResourceLocation buggyTextureBody = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
-	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
+	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlack.png");
 	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
 	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
+	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketOrangeTextured.png");
+	private static final ResourceLocation buggyTextureOther3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketTextured.png");
+	private static final ResourceLocation buggyTextureOther4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketLightBlueTextured.png");
+	private static final ResourceLocation buggyTextureOther5 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlueTextured.png");
+	private static final ResourceLocation buggyTextureBatteryBolt = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketYellow.png");
 
 	EntityMarsRover spaceship = new EntityMarsRover(FMLClientHandler.instance().getClient().theWorld);
 
 	private final IModelCustom modelRover;
-
+	private final IModelCustom modelRoverWheelLeft = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover-Wheel.obj"));
+	private final IModelCustom modelRoverWheelRight = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover-Wheel.obj"));
+	
 	public ItemRendererMarsRover(IModelCustom modelRover) {
 		super();
 		this.modelRover = modelRover;
@@ -65,32 +73,45 @@ public class ItemRendererMarsRover implements IItemRenderer {
 
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureWheel);
 
-		// Front wheels
+		// Front
 		GL11.glPushMatrix();
-		this.modelRover.renderPart("WheelFrontRight");
-		this.modelRover.renderPart("WheelFrontLeft");
+		GL11.glTranslatef(0.0F, 1.2F, 2.2F);
+		GL11.glTranslatef(2.0F, 0.0F, 0.0F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-3.9F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 
 		// Middle wheels
 		GL11.glPushMatrix();
-		this.modelRover.renderPart("WheelMiddleRight");
-		this.modelRover.renderPart("WheelMiddleLeft");
+		GL11.glTranslatef(0.0F, 1.2F, -0.2F);
+		GL11.glTranslatef(1.9F, 0.0F, 0.0F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-3.7F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 
 		// Back wheels
 		GL11.glPushMatrix();
-		this.modelRover.renderPart("WheelBackRight");
-		this.modelRover.renderPart("WheelBackLeft");
+		GL11.glTranslatef(0.0F, 1.2F, -3.7F);
+		GL11.glTranslatef(1.9F, 0.0F, 0.0F);
+		this.modelRoverWheelRight.renderPart("Wheel");
+		GL11.glTranslatef(-3.7F, 0.0F, 0.0F);
+		this.modelRoverWheelLeft.renderPart("Wheel");
 		GL11.glPopMatrix();
 
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBody);
+		this.modelRover.renderPart("RoofRover");
+		this.modelRover.renderPart("FloorRover");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureOther2);
+		this.modelRover.renderPart("Clip1");
+		this.modelRover.renderPart("Clip2");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureStorage);
 		this.modelRover.renderPart("AxisBack");
 		this.modelRover.renderPart("AxisFront");
 		this.modelRover.renderPart("AxisFront001");
 		this.modelRover.renderPart("AxisMiddle");
-		this.modelRover.renderPart("Clip1");
-		this.modelRover.renderPart("Clip2");
-		this.modelRover.renderPart("FloorRover");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureStorage);
 		this.modelRover.renderPart("FrameSegment010");
 		this.modelRover.renderPart("FrameSegment011");
 		this.modelRover.renderPart("FrameSegment012");
@@ -126,31 +147,46 @@ public class ItemRendererMarsRover implements IItemRenderer {
 		this.modelRover.renderPart("FrameSegment057");
 		this.modelRover.renderPart("FrameSegment058");
 		this.modelRover.renderPart("FrameSegment059");
-		this.modelRover.renderPart("WindowBack");
-		this.modelRover.renderPart("WindowFront1");
-		this.modelRover.renderPart("WindowFront2");
-		this.modelRover.renderPart("Helm");
-		this.modelRover.renderPart("HelmKeeper");
 		this.modelRover.renderPart("Line001");
-		this.modelRover.renderPart("PoleSolarPanel");
-		this.modelRover.renderPart("RoofRover");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureWheel);
+		this.modelRover.renderPart("HelmKeeper");
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureOther);
+		this.modelRover.renderPart("Helm");
 		this.modelRover.renderPart("Seat");
 		this.modelRover.renderPart("Seat001");
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBody);
 		this.modelRover.renderPart("SolarPanel");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureOther4);
+		this.modelRover.renderPart("PoleSolarPanel");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureWheel);
 		this.modelRover.renderPart("SolarPanelBlock");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureOther3);
 		this.modelRover.renderPart("Wire");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureOther5);
 		this.modelRover.renderPart("Battery");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBody);
 		this.modelRover.renderPart("Line002");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureStorage);
 		this.modelRover.renderPart("CaseBack1");
 		this.modelRover.renderPart("CaseBack2");
 		this.modelRover.renderPart("CaseBack3");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBody);
+		this.modelRover.renderPart("WindowBack");
 		this.modelRover.renderPart("WindowFragment3");
+		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
+		this.modelRover.renderPart("WindowFront1");
+		this.modelRover.renderPart("WindowFront2");
+		GL11.glDisable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/solar_panel.png"));
 		this.modelRover.renderPart("SolarPlane");
-		
+
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureBatteryBolt);
+		this.modelRover.renderPart("Lightning");
+		this.modelRover.renderPart("Lightning2");
+
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererMarsRover.buggyTextureStorage);
 
 		if (item.getItemDamage() > 0) {
