@@ -424,7 +424,7 @@ tile.advancedLaunchPadFull.name=二/三阶火箭发射平台
 tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭
 tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭
 tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
-tile.chargingBlock.name=Vehicle Charger
+tile.chargingBlock.name=Vehicle Charger (WIP)
 tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
 tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
 tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
@@ -476,8 +476,8 @@ tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Flo
 tile.decorativeBlocks.ashBricks.name=Ash Bricks
 
 #Vehicles
-item.marsRover.name=Driveable Mars Rover
-item.venusRover.name=Driveable Venus Rover
+item.marsRover.name=Driveable Mars Rover (WIP)
+item.venusRover.name=Driveable Venus Rover (WIP)
 
 #Vehicle Electic Parts
 item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
