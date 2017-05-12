@@ -699,7 +699,10 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 93 + 8));
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 5; y++) {
-				if (x == 1 && y == 1) {
+				if (x == 2 && y == 1) {
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 0), 36 + x * 18, 19 + 10 + y * 18));
+				}
+				else if (x == 1 && y == 1) {
 					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + 10 + y * 18));
 				} else {
 					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(MarsItems.marsItemBasic, 1, 3), 36 + x * 18, 19 + 10 + y * 18));

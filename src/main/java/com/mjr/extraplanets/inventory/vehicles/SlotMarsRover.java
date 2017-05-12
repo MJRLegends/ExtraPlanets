@@ -77,7 +77,7 @@ public class SlotMarsRover extends Slot {
 		case 11:
 			return par1ItemStack.getItem() == MarsItems.marsItemBasic && par1ItemStack.getItemDamage() == 3;
 		case 12:
-			return par1ItemStack.getItem() == MarsItems.marsItemBasic && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.electricParts && par1ItemStack.getItemDamage() == 0;
 		case 13:
 			return par1ItemStack.getItem() == MarsItems.marsItemBasic && par1ItemStack.getItemDamage() == 3;
 		case 14:

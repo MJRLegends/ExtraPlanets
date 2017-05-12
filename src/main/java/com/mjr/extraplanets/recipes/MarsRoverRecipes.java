@@ -51,7 +51,7 @@ public class MarsRoverRecipes {
 		input.put(9, new ItemStack(MarsItems.marsItemBasic, 1, 3));
 		input.put(10, new ItemStack(MarsItems.marsItemBasic, 1, 3));
 		input.put(11, new ItemStack(MarsItems.marsItemBasic, 1, 3));
-		input.put(12, new ItemStack(MarsItems.marsItemBasic, 1, 3));
+		input.put(12, new ItemStack(ExtraPlanets_Items.electricParts, 1, 0));
 		input.put(13, new ItemStack(MarsItems.marsItemBasic, 1, 3));
 		input.put(14, new ItemStack(MarsItems.marsItemBasic, 1, 3));
 		input.put(15, new ItemStack(MarsItems.marsItemBasic, 1, 3));
