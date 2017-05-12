@@ -84,6 +84,8 @@ public class ItemRendererVenusRover implements IItemRenderer {
 		GL11.glPopMatrix();
 
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererVenusRover.buggyTextureBody);
+		this.modelRover.renderPart("Battery");
+		this.modelRover.renderPart("Battery2");
 		this.modelRover.renderPart("BraceFrontWheelLeft");
 		this.modelRover.renderPart("BraceFrontWheelLeft2");
 		this.modelRover.renderPart("BraceFrontWheelLeft003");
@@ -94,11 +96,40 @@ public class ItemRendererVenusRover implements IItemRenderer {
 		this.modelRover.renderPart("BraceFrontWheelRight004");
 		this.modelRover.renderPart("BraceFrontWheelRight005");
 		this.modelRover.renderPart("BraceFrontWheelRight006");
-		this.modelRover.renderPart("Frame");
+		this.modelRover.renderPart("Clip1");
+		this.modelRover.renderPart("Clip2");
+		this.modelRover.renderPart("door");
+		this.modelRover.renderPart("doorhandle");
+		this.modelRover.renderPart("Doorhinge1");
+		this.modelRover.renderPart("Doorhinge2");
+		this.modelRover.renderPart("Floor");
 		this.modelRover.renderPart("Frame2");
-		this.modelRover.renderPart("GlassFront");
-		this.modelRover.renderPart("GlassPaneRoof");
+		this.modelRover.renderPart("Frame003");
+		this.modelRover.renderPart("RTG");
+		this.modelRover.renderPart("RTGPart1");
+		this.modelRover.renderPart("RtGPart2");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererVenusRover.buggyTextureStorage);
+		this.modelRover.renderPart("Seat");
+		this.modelRover.renderPart("Spinka");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererVenusRover.buggyTextureBody);
+		this.modelRover.renderPart("TRGPart3");
+		this.modelRover.renderPart("TRGPart4");
+		this.modelRover.renderPart("TRGPart5");
 		this.modelRover.renderPart("Helm");
+		this.modelRover.renderPart("PoleHelm");
+		this.modelRover.renderPart("Line001");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererVenusRover.buggyTextureOther);
+		this.modelRover.renderPart("Box002");
+		this.modelRover.renderPart("Box003");
+		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererVenusRover.buggyTextureBody);
+		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
+		this.modelRover.renderPart("FrontWindow");
+		this.modelRover.renderPart("LeftWall");
+		this.modelRover.renderPart("RightWall");
+
+		GL11.glDisable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 
 		FMLClientHandler.instance().getClient().getTextureManager().bindTexture(ItemRendererVenusRover.buggyTextureStorage);
 
