@@ -756,11 +756,11 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(GCBlocks.oxygenCompressor, 1, 0), 'Z',
 					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(GCBlocks.oxygenCompressor, 1, 4), 'Z',
-					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
 		}
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE) {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 0), 'Z',
-					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
+					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 4), 'Z',
 					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
 		}
