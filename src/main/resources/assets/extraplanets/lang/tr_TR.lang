@@ -724,6 +724,9 @@ schematic.rocketT8.name=Tier 8 Roketi
 schematic.rocketT9.name=Tier 9 Roketi
 schematic.rocketT10.name=Tier 10 Roketi
 
+schematic.marsRover.name=Mars Rover
+schematic.venusRover.name=Venus Rover
+
 #Batteries
 item.mercuryBattery.name=Merkür Pil
 item.nickelBattery.name=Nikel Pil

@@ -724,6 +724,9 @@ schematic.rocketT8.name=Cohete nivel 8
 schematic.rocketT9.name=Cohete nivel 9
 schematic.rocketT10.name=Cohete nivel 10
 
+schematic.marsRover.name=Mars Rover
+schematic.venusRover.name=Venus Rover
+
 #Batteries
 item.mercuryBattery.name=Batería de mercurio
 item.nickelBattery.name=Batería de estaño

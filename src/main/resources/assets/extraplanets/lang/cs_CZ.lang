@@ -725,6 +725,9 @@ schematic.RocketT8.name=Raketa typ 8
 schematic.RocketT9.name=Raketa typ 9
 schematic.RocketT10.name=Raketa typ 10
 
+schematic.marsRover.name=Mars Rover
+schematic.venusRover.name=Venus Rover
+
 #Batteries
 item.mercuryBattery.name=Měděná baterie
 item.nickelBattery.name=Niklová baterie

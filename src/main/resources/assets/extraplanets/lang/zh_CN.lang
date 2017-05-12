@@ -726,6 +726,9 @@ schematic.rocketT8.name=8阶火箭
 schematic.rocketT9.name=9阶火箭
 schematic.rocketT10.name=10阶火箭
 
+schematic.marsRover.name=Mars Rover
+schematic.venusRover.name=Venus Rover
+
 #Batteries
 item.mercuryBattery.name=汞电池
 item.nickelBattery.name=镍电池
