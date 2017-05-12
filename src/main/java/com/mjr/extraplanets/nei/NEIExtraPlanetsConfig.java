@@ -117,6 +117,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 0));
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 1));
 			API.hideItem(new ItemStack(ExtraPlanets_Items.electricParts, 0, 2));
+			API.hideItem(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 0, 4));
 			API.registerRecipeHandler(new MarsRoverRecipeHandler());
 			API.registerUsageHandler(new MarsRoverRecipeHandler());
 			API.registerRecipeHandler(new VenusRoverRecipeHandler());
@@ -690,18 +691,18 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		HashMap<Integer, PositionedStack> input1 = new HashMap<Integer, PositionedStack>();
 
 		input1 = new HashMap<Integer, PositionedStack>();
-		input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 18));
-		input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 18));
-		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 55));
-		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 55));
-		input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 93));
-		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 93));
+		input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 18 + 11));
+		input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 18 + 11));
+		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 55 + 10));
+		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 55 + 10));
+		input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 93 + 8));
+		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 93 + 8));
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 5; y++) {
 				if (x == 1 && y == 1) {
-					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + y * 18));
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + 10 + y * 18));
 				} else {
-					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(MarsItems.marsItemBasic, 1, 3), 36 + x * 18, 19 + y * 18));
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(MarsItems.marsItemBasic, 1, 3), 36 + x * 18, 19 + 10 + y * 18));
 				}
 			}
 		}
@@ -745,18 +746,18 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		HashMap<Integer, PositionedStack> input1 = new HashMap<Integer, PositionedStack>();
 
 		input1 = new HashMap<Integer, PositionedStack>();
-		input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 18));
-		input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 18));
-		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 1), 18, 55));
-		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 1), 90, 55));
-		input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 93));
-		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 93));
+		input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 18 + 11));
+		input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 18 + 11));
+		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 1), 18, 55 + 10));
+		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 1), 90, 55 + 10));
+		input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 93 + 8));
+		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 93 + 8));
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 5; y++) {
 				if (x == 1 && y == 1) {
-					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + y * 18));
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + 10 + y * 18));
 				} else {
-					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 36 + x * 18, 19 + y * 18));
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 36 + x * 18, 19 + 10 + y * 18));
 				}
 			}
 		}
