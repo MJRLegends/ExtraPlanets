@@ -33,6 +33,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	private static HashMap<ArrayList<PositionedStack>, PositionedStack> t10rocketBenchRecipes = new HashMap<ArrayList<PositionedStack>, PositionedStack>();
 	private static HashMap<HashMap<Integer, PositionedStack>, PositionedStack> circuitFabricatorRecipes = new HashMap<HashMap<Integer, PositionedStack>, PositionedStack>();
 	private static HashMap<HashMap<Integer, PositionedStack>, PositionedStack> marsRoverBenchRecipes = new HashMap<HashMap<Integer, PositionedStack>, PositionedStack>();
+	private static HashMap<HashMap<Integer, PositionedStack>, PositionedStack> venusRoverBenchRecipes = new HashMap<HashMap<Integer, PositionedStack>, PositionedStack>();
 
 	@Override
 	public void loadConfig() {
@@ -55,6 +56,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			}
 			this.addCircuitFabricatorRecipes();
 			this.addMarsRoverRecipes();
+			this.addVenusRoverRecipes();
 
 			if (Config.venus) {
 				if (Config.morePlanetsCompatibility == false) {
@@ -117,6 +119,8 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.hideItem(new ItemStack(ExtraPlanets_Items.electricParts, 0, 2));
 			API.registerRecipeHandler(new MarsRoverRecipeHandler());
 			API.registerUsageHandler(new MarsRoverRecipeHandler());
+			API.registerRecipeHandler(new VenusRoverRecipeHandler());
+			API.registerUsageHandler(new VenusRoverRecipeHandler());
 		}
 	}
 
@@ -193,15 +197,22 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getCircuitFabricatorRecipes() {
 		return NEIExtraPlanetsConfig.circuitFabricatorRecipes.entrySet();
 	}
-	
-    public void registerMarsRoverBenchRecipe(HashMap<Integer, PositionedStack> input, PositionedStack output)
-    {
-    	NEIExtraPlanetsConfig.marsRoverBenchRecipes.put(input, output);
-    }
-    public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getMarsRoverBenchRecipes()
-    {
-        return NEIExtraPlanetsConfig.marsRoverBenchRecipes.entrySet();
-    }
+
+	public void registerMarsRoverBenchRecipe(HashMap<Integer, PositionedStack> input, PositionedStack output) {
+		NEIExtraPlanetsConfig.marsRoverBenchRecipes.put(input, output);
+	}
+
+	public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getMarsRoverBenchRecipes() {
+		return NEIExtraPlanetsConfig.marsRoverBenchRecipes.entrySet();
+	}
+
+	public void registerVenusRoverBenchRecipe(HashMap<Integer, PositionedStack> input, PositionedStack output) {
+		NEIExtraPlanetsConfig.venusRoverBenchRecipes.put(input, output);
+	}
+
+	public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getVenusRoverBenchRecipes() {
+		return NEIExtraPlanetsConfig.venusRoverBenchRecipes.entrySet();
+	}
 
 	public void registerTier4Recipe() {
 		final int changeY = 15;
@@ -674,66 +685,115 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.wafers, 3, 5), 147, 91));
 		}
 	}
-	
-	private void addMarsRoverRecipes()
-    {
-        HashMap<Integer, PositionedStack> input1 = new HashMap<Integer, PositionedStack>();
 
-        input1 = new HashMap<Integer, PositionedStack>();
-        input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 18));
-        input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 18));
-        input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 55));
-        input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 55));
-        input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 93));
-        input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 93));
-        for (int x = 0; x < 3; x++)
-        {
-            for (int y = 0; y < 5; y++)
-            {
-                if (x == 1 && y == 1)
-                {
-                    input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + y * 18));
-                }
-                else
-                {
-                    input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(MarsItems.marsItemBasic, 1, 3), 36 + x * 18, 19 + y * 18));
-                }
-            }
-        }
-        this.registerMarsRoverBenchRecipe(input1, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 0), 139, 101));
+	private void addMarsRoverRecipes() {
+		HashMap<Integer, PositionedStack> input1 = new HashMap<Integer, PositionedStack>();
 
-        HashMap<Integer, PositionedStack> input2 = new HashMap<Integer, PositionedStack>(input1);
-        input2.put(16, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
-        this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 1), 139, 101));
+		input1 = new HashMap<Integer, PositionedStack>();
+		input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 18));
+		input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 18));
+		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 55));
+		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 55));
+		input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 18, 93));
+		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), 90, 93));
+		for (int x = 0; x < 3; x++) {
+			for (int y = 0; y < 5; y++) {
+				if (x == 1 && y == 1) {
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + y * 18));
+				} else {
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(MarsItems.marsItemBasic, 1, 3), 36 + x * 18, 19 + y * 18));
+				}
+			}
+		}
+		this.registerMarsRoverBenchRecipe(input1, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 0), 139, 101));
 
-        input2 = new HashMap<Integer, PositionedStack>(input1);
-        input2.put(17, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
-        this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 1), 139, 101));
+		HashMap<Integer, PositionedStack> input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 1), 139, 101));
 
-        input2 = new HashMap<Integer, PositionedStack>(input1);
-        input2.put(18, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
-        this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 1), 139, 101));
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 1), 139, 101));
 
-        input2 = new HashMap<Integer, PositionedStack>(input1);
-        input2.put(16, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
-        input2.put(17, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
-        this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), 139, 101));
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 1), 139, 101));
 
-        input2 = new HashMap<Integer, PositionedStack>(input1);
-        input2.put(17, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
-        input2.put(18, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
-        this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), 139, 101));
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), 139, 101));
 
-        input2 = new HashMap<Integer, PositionedStack>(input1);
-        input2.put(16, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
-        input2.put(18, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
-        this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), 139, 101));
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), 139, 101));
 
-        input2 = new HashMap<Integer, PositionedStack>(input1);
-        input2.put(16, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
-        input2.put(17, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
-        input2.put(18, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
-        this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 3), 139, 101));
-    }
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 2), 139, 101));
+
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.marsRover, 1, 3), 139, 101));
+	}
+
+	private void addVenusRoverRecipes() {
+		HashMap<Integer, PositionedStack> input1 = new HashMap<Integer, PositionedStack>();
+
+		input1 = new HashMap<Integer, PositionedStack>();
+		input1.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 18));
+		input1.put(1, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 18));
+		input1.put(2, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 55));
+		input1.put(3, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 55));
+		input1.put(4, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 18, 93));
+		input1.put(5, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), 90, 93));
+		for (int x = 0; x < 3; x++) {
+			for (int y = 0; y < 5; y++) {
+				if (x == 1 && y == 1) {
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + y * 18));
+				} else {
+					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 36 + x * 18, 19 + y * 18));
+				}
+			}
+		}
+		this.registerMarsRoverBenchRecipe(input1, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 0), 139, 101));
+
+		HashMap<Integer, PositionedStack> input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 1), 139, 101));
+
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 1), 139, 101));
+
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 1), 139, 101));
+
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 2), 139, 101));
+
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 2), 139, 101));
+
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 2), 139, 101));
+
+		input2 = new HashMap<Integer, PositionedStack>(input1);
+		input2.put(22, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 90, 8));
+		input2.put(23, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 116, 8));
+		input2.put(24, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 2), 142, 8));
+		this.registerMarsRoverBenchRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.venusRover, 1, 3), 139, 101));
+	}
 
 }

@@ -33,12 +33,6 @@ public class Config {
 	public static int ceresRocketTier;
 	public static int erisRocketTier;
 
-	// public static int venusRocketTier;
-	// public static int jupiterRocketTier;
-	// public static int saturnRocketTier;
-	// public static int uranusRocketTier;
-	// public static int neptuneRocketTier;
-
 	public static boolean genVenusVolcanos;
 	public static boolean genUranusIgloos;
 	public static boolean genUranusIceSpikes;
@@ -218,6 +212,7 @@ public class Config {
 	public static int schematicTier10GUIID;
 
 	public static int schematicMarsRoverGUIID;
+	public static int schematicVenusRoverGUIID;
 
 	public static int schematicTier4PageID;
 	public static int schematicTier5PageID;
@@ -228,6 +223,7 @@ public class Config {
 	public static int schematicTier10PageID;
 
 	public static int schematicMarsRoverPageID;
+	public static int schematicVenusRoverPageID;
 
 	public static boolean microBlock;
 	public static boolean neiSupport;
@@ -309,17 +305,8 @@ public class Config {
 		genUranusIgloos = config.get(dimensionSettings, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(dimensionSettings, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
 
-		// erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
-		// venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
-		// jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
-		// saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
-		// uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
-		// neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
-
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
-		// eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
-		// pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
 
 		triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
 		europa = config.get(dimensionsCustom, "Europa", true, "").getBoolean(true);
@@ -462,6 +449,7 @@ public class Config {
 		schematicTier10GUIID = config.get(schematicsGUI, "Schematic Tier 10 GUI ID", 5561).getInt();
 
 		schematicMarsRoverGUIID = config.get(schematicsGUI, "Schematic Mars Rover GUI ID", 5562).getInt();
+		schematicVenusRoverGUIID = config.get(schematicsGUI, "Schematic Venus Rover GUI ID", 5563).getInt();
 
 		schematicTier4PageID = config.get(schematicsPage, "Schematic Tier 4 Page ID", 6666).getInt();
 		schematicTier5PageID = config.get(schematicsPage, "Schematic Tier 5 Page ID", 6667).getInt();
@@ -472,6 +460,7 @@ public class Config {
 		schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
 
 		schematicMarsRoverPageID = config.get(schematicsPage, "Schematic Mars Rover Page ID", 6673).getInt();
+		schematicVenusRoverPageID = config.get(schematicsPage, "Schematic Venus Rover Page ID", 6674).getInt();
 
 		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);
