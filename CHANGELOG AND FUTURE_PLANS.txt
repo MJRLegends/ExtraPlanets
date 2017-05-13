@@ -42,6 +42,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.6.9
+*Fixed biome conflict with IO and Kepler22b Red Desert Biome
+
 v1.6.8
 *Fixed Venus Rover wheel issue	
 *Improved battery textures	
