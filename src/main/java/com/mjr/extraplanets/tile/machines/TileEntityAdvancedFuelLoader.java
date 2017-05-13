@@ -6,7 +6,6 @@ import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.GCItems;
-import micdoodle8.mods.galacticraft.core.blocks.BlockFuelLoader;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
@@ -14,6 +13,8 @@ import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
+import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -23,15 +24,19 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
-public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler, ILandingPadAttachable, IMachineSides {
+import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
+
+public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler, IFluidHandlerWrapper, ILandingPadAttachable, IMachineSides {
 	private final int tankCapacity = 12000 * 2;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public FluidTank fuelTank = new FluidTank(this.tankCapacity);
@@ -41,6 +46,19 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
 	public TileEntityAdvancedFuelLoader() {
 		this.storage.setMaxExtract(30 * 2);
+	}
+
+	@Override
+	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
+		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY;
+	}
+
+	@Override
+	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
+		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+			return (T) new FluidHandlerWrapper(this, facing);
+		}
+		return null;
 	}
 
 	public int getScaledFuelLevel(int i) {
@@ -197,7 +215,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	public int fill(EnumFacing from, FluidStack resource, boolean doFill) {
 		int used = 0;
 
-		if (this.getPipeInputDirection().equals(from)) {
+		if (this.getPipeInputDirection().equals(from) && resource != null) {
 			if (FluidUtil.testFuel(FluidRegistry.getFluidName(resource))) {
 				used = this.fuelTank.fill(resource, doFill);
 			}
@@ -226,7 +244,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public EnumFacing getFront() {
-		return this.worldObj.getBlockState(getPos()).getValue(BlockFuelLoader.FACING);
+		return this.worldObj.getBlockState(getPos()).getValue(AdvancedFuelLoader.FACING);
 	}
 
 	@Override
@@ -306,15 +324,14 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 		this.machineSides = new MachineSidePack[length];
 	}
 
-    @Override
-    public void onLoad()
-    {
-        this.clientOnLoad();
-    }
+	@Override
+	public void onLoad() {
+		this.clientOnLoad();
+	}
 
 	@Override
 	public IMachineSidesProperties getConfigurationType() {
-		return BlockFuelLoader.MACHINESIDES_RENDERTYPE;
+		return AdvancedFuelLoader.MACHINESIDES_RENDERTYPE;
 	}
 	// ------------------END OF IMachineSides implementation
 }
