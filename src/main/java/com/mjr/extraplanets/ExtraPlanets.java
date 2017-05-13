@@ -106,7 +106,7 @@ import com.mjr.extraplanets.schematic.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier9Rocket;
 import com.mjr.extraplanets.util.RegisterHelper;
 
-@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = "required-after:galacticraftcore;required-after:galacticraftplanets;required-after:Forge@[12.18.3.2239,);")
+@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS)
 public class ExtraPlanets {
 
 	@SidedProxy(clientSide = "com.mjr.extraplanets.proxy.ClientProxy", serverSide = "com.mjr.extraplanets.proxy.CommonProxy")

@@ -3,7 +3,15 @@ package com.mjr.extraplanets;
 public class Constants {
 	public static final String modID = "extraplanets";
 	public static final String modName = "ExtraPlanets";
-	public static final String modVersion = "0.3.5-Beta-Build";
+	
+    public static final int LOCALMAJVERSION = 0;
+    public static final int LOCALMINVERSION = 3;
+    public static final int LOCALBUILDVERSION = 5;
+	public static final String modVersion = LOCALMAJVERSION+ "." + LOCALMINVERSION + "." + LOCALBUILDVERSION + "-Beta-Build";
+	
+    public static final String MCVERSION = "[1.10.2]";
+    public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,); ";  //Keep the space at the end!
+    public static final String DEPENDENCIES_MODS = "required-after:galacticraftcore; required-after:galacticraftplanets; ";  //Keep the space at the end!
 
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
