@@ -42,7 +42,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
-v1.6.6
+v1.6.8
+*Fixed Venus Rover wheel issue	
+*Improved battery textures	
+*Added Fire bricks texture
+*Unhide Fire Bricks from NEI
+*Matched GC change of Backport desync dungeon positions for my dungeon
+
+v1.6.7
 *Updated Galacticraft API to latest
 *Added 16 new Decorative Blocks 
 *Changed biome id's (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
@@ -78,6 +85,9 @@ v1.6.6
 *Matched GC change of Backport desync dungeon positions for my dungeons
 *Added Lead ingot. Two Lead ores on Deimos, Phobos
 *Fixed/Changed some recipes
+
+v1.6.6
+*Fixed crash issue on dedicated server
 
 v1.6.5
 *Fixed issue #81
