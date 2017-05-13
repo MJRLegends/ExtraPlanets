@@ -10,6 +10,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class MapGenCaveCeres extends MapGenBaseMeta {
@@ -41,7 +42,7 @@ public class MapGenCaveCeres extends MapGenBaseMeta {
 		final int k1 = random.nextInt(par16 / 2) + par16 / 4;
 
 		for (final boolean flag1 = random.nextInt(6) == 0; par15 < par16; ++par15) {
-			final double d6 = 1.5D + MathHelper.sin(par15 * (float) Math.PI / par16) * par12 * 1.0F;
+			final double d6 = 1.5D + MathHelper.sin(par15 * Constants.floatPI / par16) * par12 * 1.0F;
 			final double d7 = d6 * par17;
 			final float f5 = MathHelper.cos(par14);
 			final float f6 = MathHelper.sin(par14);
@@ -63,8 +64,8 @@ public class MapGenCaveCeres extends MapGenBaseMeta {
 			f3 += (random.nextFloat() - random.nextFloat()) * random.nextFloat() * 4.0F;
 
 			if (!flag && par15 == k1 && par12 > 1.0F && par16 > 0) {
-				this.generateCaveNode(random.nextLong(), par3, par4, primer, par6, par8, par10, random.nextFloat() * 0.5F + 0.5F, par13 - (float) Math.PI / 2F, par14 / 3.0F, par15, par16, 1.0D);
-				this.generateCaveNode(random.nextLong(), par3, par4, primer, par6, par8, par10, random.nextFloat() * 0.5F + 0.5F, par13 + (float) Math.PI / 2F, par14 / 3.0F, par15, par16, 1.0D);
+				this.generateCaveNode(random.nextLong(), par3, par4, primer, par6, par8, par10, random.nextFloat() * 0.5F + 0.5F, par13 - Constants.floatPI / 2F, par14 / 3.0F, par15, par16, 1.0D);
+				this.generateCaveNode(random.nextLong(), par3, par4, primer, par6, par8, par10, random.nextFloat() * 0.5F + 0.5F, par13 + Constants.floatPI / 2F, par14 / 3.0F, par15, par16, 1.0D);
 				return;
 			}
 
@@ -189,7 +190,7 @@ public class MapGenCaveCeres extends MapGenBaseMeta {
 			}
 
 			for (int var16 = 0; var16 < var15; ++var16) {
-				final float var17 = this.rand.nextFloat() * (float) Math.PI * 2.0F;
+				final float var17 = this.rand.nextFloat() * Constants.twoPI;
 				final float var18 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
 				float var19 = this.rand.nextFloat() * 2.0F + this.rand.nextFloat();
 

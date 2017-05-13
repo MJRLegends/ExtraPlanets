@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -45,7 +47,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 		}
 
 		for (; p_180707_15_ < p_180707_16_; ++p_180707_15_) {
-			double d9 = 1.5D + MathHelper.sin(p_180707_15_ * (float) Math.PI / p_180707_16_) * p_180707_12_ * 1.0F;
+			double d9 = 1.5D + MathHelper.sin(p_180707_15_ * Constants.floatPI / p_180707_16_) * p_180707_12_ * 1.0F;
 			double d2 = d9 * p_180707_17_;
 			d9 = d9 * (random.nextFloat() * 0.25D + 0.75D);
 			d2 = d2 * (random.nextFloat() * 0.25D + 0.75D);
@@ -170,7 +172,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 			int i = 1;
 
 			for (int j = 0; j < i; ++j) {
-				float f = this.rand.nextFloat() * (float) Math.PI * 2.0F;
+				float f = this.rand.nextFloat() * Constants.twoPI;
 				float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
 				float f2 = (this.rand.nextFloat() * 2.0F + this.rand.nextFloat()) * 2.0F;
 				this.func_180707_a(this.rand.nextLong(), p_180701_4_, p_180701_5_, chunkPrimerIn, d0, d1, d2, f2, f, f1, 0, 0, 3.0D);

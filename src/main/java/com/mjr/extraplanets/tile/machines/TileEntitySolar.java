@@ -39,6 +39,7 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
 
 public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IPacketReceiver, IDisableableMachine, IInventory, ISidedInventory, IConnector {
@@ -109,8 +110,8 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 				if (this.worldObj.provider instanceof IGalacticraftWorldProvider || !this.worldObj.isRaining() && !this.worldObj.isThundering()) {
 					if (this.worldObj.isDaytime()) {
 						double distance = 100.0D;
-						double sinA = -Math.sin((this.currentAngle - 77.5D) * Math.PI / 180.0D);
-						double cosA = Math.abs(Math.cos((this.currentAngle - 77.5D) * Math.PI / 180.0D));
+						double sinA = -Math.sin((this.currentAngle - 77.5D) * Constants.RADIANS_TO_DEGREES_D);
+						double cosA = Math.abs(Math.cos((this.currentAngle - 77.5D) * Constants.RADIANS_TO_DEGREES_D));
 
 						for (int x = -1; x <= 1; x++) {
 							for (int z = -1; z <= 1; z++) {

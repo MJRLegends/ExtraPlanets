@@ -78,7 +78,7 @@ public class TileEntityT8TreasureChestRenderer extends TileEntitySpecialRenderer
 		var12 = 1.0F - var12 * var12 * var12;
 
 		if (var14 != null) {
-			var14.chestLid.rotateAngleX = -(var12 * (float) Math.PI / 4.0F);
+			var14.chestLid.rotateAngleX = -(var12 * Constants.floatPI / 4.0F);
 			var14.renderAll(!chest.locked);
 		}
 

@@ -10,6 +10,8 @@ import javax.vecmath.Matrix4f;
 import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
 
+import com.mjr.extraplanets.Constants;
+
 public class ItemModelRocketT6 extends ModelTransformWrapper
 {
     public ItemModelRocketT6(IBakedModel modelToWrap)
@@ -37,7 +39,7 @@ public class ItemModelRocketT6 extends ModelTransformWrapper
             mul.setTranslation(new Vector3f(-0.25F, -0.35F, 0.0F));
             ret.mul(mul);
             mul.setIdentity();
-            mul.rotY((float) (Math.PI / 2.0F));
+            mul.rotY(Constants.halfPI);
             ret.mul(mul);
             mul.setIdentity();
             mul.rotX((float) (Math.PI / 4.0F));
@@ -72,7 +74,7 @@ public class ItemModelRocketT6 extends ModelTransformWrapper
             mul.setScale(0.45F);
             ret.mul(mul);
             mul.setIdentity();
-            mul.rotX((float) (Math.PI / 2.0F));
+            mul.rotX(Constants.halfPI);
             ret.mul(mul);
             mul.setIdentity();
             mul.rotZ((float) (-0.65F + Math.PI));
