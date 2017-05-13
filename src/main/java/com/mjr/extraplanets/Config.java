@@ -438,7 +438,7 @@ public class Config {
 		oberonBiomeID = config.get(biomeID, "Oberon Biome ID", 179).getInt();
 		titaniaBiomeID = config.get(biomeID, "Titania Biome ID", 180).getInt();
 		iapetusBiomeID = config.get(biomeID, "Iapetus Biome ID", 181).getInt();
-		kepler22bRedDesertBiomeID = config.get(biomeID, "Kepler22b Red Desert Biome ID", 182).getInt();
+		kepler22bRedDesertBiomeID = config.get(biomeID, "Kepler22b Red Desert Biome ID", 185).getInt();
 		
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
