@@ -536,8 +536,8 @@ public class ExtraPlanets_Items {
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_VERY_HEAVY, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_VERY_HEAVY);
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_VERY_HEAVY);
 
-			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
-			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 		}
 		if (Config.THERMAL_PADDINGS) {
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_HELMET, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_3_THERMAL_PADDING, 1, 0));
