@@ -306,11 +306,11 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 		this.machineSides = new MachineSidePack[length];
 	}
 
-	@Override
-	public void validate() {
-		super.validate();
-		this.clientValidate();
-	}
+    @Override
+    public void onLoad()
+    {
+        this.clientOnLoad();
+    }
 
 	@Override
 	public IMachineSidesProperties getConfigurationType() {
