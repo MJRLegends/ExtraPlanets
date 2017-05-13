@@ -20,6 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class RenderTier4Rocket extends Render
 {
 	private ResourceLocation rocketTexture;
+	private ResourceLocation rocketTexture2;
 
 	protected IModelCustom rocketModelObj;
 
@@ -27,6 +28,7 @@ public class RenderTier4Rocket extends Render
 	{
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
+		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blankRocketDarkGrey.png");
 		this.shadowSize = 2F;
 	}
 
@@ -44,7 +46,7 @@ public class RenderTier4Rocket extends Render
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9 + 180;
 		final float var25 = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * par9 + 45;
 
-		GL11.glTranslatef((float) par2, (float) par4 - 0.4F, (float) par6);
+		GL11.glTranslatef((float) par2, (float) par4 - 1.6F, (float) par6);
 		GL11.glRotatef(180.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		final float var28 = entity.rollAmplitude / 3 - par9;
@@ -65,14 +67,34 @@ public class RenderTier4Rocket extends Render
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		GL11.glScalef(0.9F, 0.9F, 0.9F);
+		this.bindTexture(rocketTexture2);
+		this.rocketModelObj.renderPart("Nozzle");
+		this.bindTexture(rocketTexture);
+		this.rocketModelObj.renderPart("Body_Rocket");
+		this.bindTexture(rocketTexture2);
+		this.rocketModelObj.renderPart("CorrectedWind1");
+		this.rocketModelObj.renderPart("CorrectedWind2");
+		this.rocketModelObj.renderPart("CorrectedWind3");
+		this.rocketModelObj.renderPart("CorrectedWind4");
+		this.bindTexture(rocketTexture2);
+		this.rocketModelObj.renderPart("Tip");
+		this.rocketModelObj.renderPart("Ring");
+		this.bindTexture(rocketTexture);
+		this.rocketModelObj.renderPart("FrameWindow1");
+		this.rocketModelObj.renderPart("FrameWindow2");
+		this.rocketModelObj.renderPart("FrameWindow3");
+		this.rocketModelObj.renderPart("FrameWindow4");
+		this.rocketModelObj.renderPart("GlassWindow");
 
-		this.rocketModelObj.renderOnly("Boosters", "Rocket");
 		Vector3 teamColor = ClientUtil.updateTeamColor(FMLClientHandler.instance().getClient().thePlayer.getCommandSenderName(), true);
 		if (teamColor != null)
 		{
 			GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
 		}
-		this.rocketModelObj.renderPart("NoseCone");
+		this.rocketModelObj.renderPart("Rocket_stabilizer1");
+		this.rocketModelObj.renderPart("Rocket_stabilizer2");
+		this.rocketModelObj.renderPart("Rocket_stabilizer3");
+		this.rocketModelObj.renderPart("Rocket_stabilizer4");
 
 		if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1)
 		{
@@ -85,7 +107,7 @@ public class RenderTier4Rocket extends Render
 
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GL11.glDisable(GL11.GL_LIGHTING);
-		this.rocketModelObj.renderPart("Cube");
+		this.rocketModelObj.renderPart("Light");
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		GL11.glEnable(GL11.GL_LIGHTING);
 

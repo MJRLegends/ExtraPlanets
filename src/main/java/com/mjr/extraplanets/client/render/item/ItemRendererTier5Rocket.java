@@ -26,7 +26,10 @@ public class ItemRendererTier5Rocket implements IItemRenderer
 
 	protected static RenderItem drawItems = new RenderItem();
 
-	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/tier5rocket.png");
+	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
+	protected ResourceLocation texture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
+	protected ResourceLocation texture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGrey.png");
+	protected ResourceLocation texture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
 
 	public ItemRendererTier5Rocket(IModelCustom model)
 	{
@@ -40,7 +43,37 @@ public class ItemRendererTier5Rocket implements IItemRenderer
 		this.transform(item, type);
 
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(this.texture);
-		this.modelSpaceship.renderAll();
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture3);
+		this.modelSpaceship.renderPart("Nozzle");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("Body_Rocket");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("Rocket_stabilizer1");
+		this.modelSpaceship.renderPart("Rocket_stabilizer2");
+		this.modelSpaceship.renderPart("Rocket_stabilizer3");
+		this.modelSpaceship.renderPart("Rocket_stabilizer4");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("Tip");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("Ring");
+		this.modelSpaceship.renderPart("FrameWindow1");
+		this.modelSpaceship.renderPart("FrameWindow2");
+		this.modelSpaceship.renderPart("FrameWindow3");
+		this.modelSpaceship.renderPart("FrameWindow4");
+		this.modelSpaceship.renderPart("GlassWindow");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("CorrectedWind005");
+		this.modelSpaceship.renderPart("CorrectedWind006");
+		this.modelSpaceship.renderPart("CorrectedWind007");
+		this.modelSpaceship.renderPart("CorrectedWind008");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture3);
+		this.modelSpaceship.renderPart("Cylinder001");
+		this.modelSpaceship.renderPart("Cylinder002");
+		this.modelSpaceship.renderPart("Cylinder003");
+		this.modelSpaceship.renderPart("Cylinder004");
+		this.modelSpaceship.renderPart("Cylinder005");
+		this.modelSpaceship.renderPart("Cylinder006");
+		this.modelSpaceship.renderPart("Helix001");
 		GL11.glPopMatrix();
 
 		if (type == ItemRenderType.INVENTORY)
@@ -84,7 +117,7 @@ public class ItemRendererTier5Rocket implements IItemRenderer
 			GL11.glRotatef(70, 1.0F, 0, 0);
 			GL11.glRotatef(-10, 0.0F, 1, 0);
 			GL11.glRotatef(50, 0.0F, 1, 1);
-			GL11.glTranslatef(-0.8F, -3.2F, 0F);
+			GL11.glTranslatef(-1.2F, -8.2F, 0F);
 			GL11.glScalef(5.2F, 5.2F, 5.2F);
 
 			if (player != null && player.ridingEntity != null && player.ridingEntity instanceof EntityTier1Rocket)
@@ -116,8 +149,8 @@ public class ItemRendererTier5Rocket implements IItemRenderer
 			{
 				GL11.glRotatef(85F, 1F, 0F, 1F);
 				GL11.glRotatef(20F, 1F, 0F, 0F);
-				GL11.glScalef(0.7F, 0.7F, 0.7F);
-				GL11.glTranslatef(0.0F, 1.6F, -0.4F);
+				GL11.glScalef(0.65F, 0.65F, 0.65F);
+				GL11.glTranslatef(1.2F, 2.2F, -0.4F);
 			}
 			else
 			{

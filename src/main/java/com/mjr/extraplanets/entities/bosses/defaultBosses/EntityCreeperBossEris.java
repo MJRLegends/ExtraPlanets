@@ -5,7 +5,7 @@ import java.util.Random;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT10TreasureChest;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;

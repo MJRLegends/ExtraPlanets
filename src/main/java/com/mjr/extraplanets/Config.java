@@ -33,12 +33,6 @@ public class Config {
 	public static int ceresRocketTier;
 	public static int erisRocketTier;
 
-	// public static int venusRocketTier;
-	// public static int jupiterRocketTier;
-	// public static int saturnRocketTier;
-	// public static int uranusRocketTier;
-	// public static int neptuneRocketTier;
-
 	public static boolean genVenusVolcanos;
 	public static boolean genUranusIgloos;
 	public static boolean genUranusIceSpikes;
@@ -61,6 +55,12 @@ public class Config {
 	public static boolean cannedFood;
 	public static boolean customApples;
 
+	public static boolean ultimateRefinery;
+	public static boolean advancedFuelLoader;
+	public static boolean ultimateFuelLoader;
+	public static boolean advancedOxygenCompressor;
+	public static boolean ultimateOxygenCompressor;
+	public static boolean chargingBlock;
 	public static boolean solarPanels;
 	public static boolean advancedRefinery;
 	public static boolean slabsAndStairs;
@@ -194,6 +194,7 @@ public class Config {
 	public static int kepler22bPurpleForestBiomeID;
 	public static int kepler22bRedForestBiomeID;
 	public static int kepler22bYellowForestBiomeID;
+	public static int kepler22bRedDesertBiomeID;
 
 	public static boolean venusLiquid;
 	public static boolean jupiterLiquid;
@@ -210,6 +211,9 @@ public class Config {
 	public static int schematicTier9GUIID;
 	public static int schematicTier10GUIID;
 
+	public static int schematicMarsRoverGUIID;
+	public static int schematicVenusRoverGUIID;
+
 	public static int schematicTier4PageID;
 	public static int schematicTier5PageID;
 	public static int schematicTier6PageID;
@@ -217,6 +221,9 @@ public class Config {
 	public static int schematicTier8PageID;
 	public static int schematicTier9PageID;
 	public static int schematicTier10PageID;
+
+	public static int schematicMarsRoverPageID;
+	public static int schematicVenusRoverPageID;
 
 	public static boolean microBlock;
 	public static boolean neiSupport;
@@ -273,9 +280,19 @@ public class Config {
 		cannedFood = config.get(items, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
 		customApples = config.get(items, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable all Custom Normal/Notch Apples!").getBoolean(true);
 
-		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		advancedRefinery = config.get(blocks, "Advanced Refinery", true).getBoolean(true);
+		ultimateRefinery = config.get(blocks, "Ultimate Refinery", true).getBoolean(true);
+
+		advancedFuelLoader = config.get(blocks, "Advanced Fuel Loader", true).getBoolean(true);
+		ultimateFuelLoader = config.get(blocks, "Ultimate Fuel Loader", true).getBoolean(true);
+
+		advancedOxygenCompressor = config.get(blocks, "Advanced Oxygen Compressor/Decomperssor", true).getBoolean(true);
+		ultimateOxygenCompressor = config.get(blocks, "Ultimate Oxygen Compressor/Decomperssor", true).getBoolean(true);
+		
+		chargingBlock = config.get(blocks, "Vehicle Charger", true).getBoolean(true);
+		solarPanels = config.get(blocks, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		slabsAndStairs = config.get(blocks, "Slab & Stairs", true).getBoolean(true);
+
 		nuclearBomb = config.get(blocks, "Nuclear Bomb", true).getBoolean(true);
 
 		mobSuffocation = config.get(dimensionSettings, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
@@ -288,17 +305,8 @@ public class Config {
 		genUranusIgloos = config.get(dimensionSettings, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(dimensionSettings, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
 
-		// erisRocketTier = config.get(dimensionSettings, "Eris Rocket required", 9).getInt();
-		// venusRocketTier = config.get(dimensionSettings, "Venus Rocket required", 3).getInt();
-		// jupiterRocketTier = config.get(dimensionSettings, "Jupiter Rocket required", 4).getInt();
-		// saturnRocketTier = config.get(dimensionSettings, "Saturn Rocket required", 5).getInt();
-		// uranusRocketTier = config.get(dimensionSettings, "Uranus Rocket required", 6).getInt();
-		// neptuneRocketTier = config.get(dimensionSettings, "Neptune Rocket required", 7).getInt();
-
 		ceres = config.get(dimensionsCustom, "Ceres", true).getBoolean(true);
 		mercury = config.get(dimensionsCustom, "Mercury", true).getBoolean(true);
-		// eris = config.get(dimensionsCustom, "Eris", true, "").getBoolean(true);
-		// pluto = config.get(dimensionsCustom, "Pluto", true).getBoolean(true);
 
 		triton = config.get(dimensionsCustom, "Triton", true, "").getBoolean(true);
 		europa = config.get(dimensionsCustom, "Europa", true, "").getBoolean(true);
@@ -408,29 +416,30 @@ public class Config {
 		venusBiomeID = config.get(biomeID, "Venus Biome ID", 149).getInt();
 		ceresBiomeID = config.get(biomeID, "Ceres Biome ID", 155).getInt();
 		jupiterBiomeID = config.get(biomeID, "Jupiter Biome ID", 150).getInt();
-		saturnBiomeID = config.get(biomeID, "Saturn Biome ID", 151).getInt();
+		saturnBiomeID = config.get(biomeID, "Saturn Biome ID", 147).getInt();
 		uranusBiomeID = config.get(biomeID, "Uranus Biome ID", 152).getInt();
 		neptuneBiomeID = config.get(biomeID, "Neptune Biome ID", 153).getInt();
 		plutoBiomeID = config.get(biomeID, "Pluto Biome ID", 154).getInt();
-		erisBiomeID = config.get(biomeID, "Eris Biome ID", 156).getInt();
-		europaBiomeID = config.get(biomeID, "Europa Biome ID", 157).getInt();
-		ioBiomeID = config.get(biomeID, "Io Biome ID", 158).getInt();
+		erisBiomeID = config.get(biomeID, "Eris Biome ID", 184).getInt();
+		europaBiomeID = config.get(biomeID, "Europa Biome ID", 183).getInt();
+		ioBiomeID = config.get(biomeID, "Io Biome ID", 182).getInt();
 		deimosBiomeID = config.get(biomeID, "Deimos Biome ID", 159).getInt();
-		phobosBiomeID = config.get(biomeID, "Phobos Biome ID", 160).getInt();
-		tritonBiomeID = config.get(biomeID, "Triton Biome ID", 161).getInt();
-		callistoBiomeID = config.get(biomeID, "Callisto Biome ID", 162).getInt();
-		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 163).getInt();
-		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 164).getInt();
-		titanBiomeID = config.get(biomeID, "Titan Biome ID", 165).getInt();
-		kepler22bPlainsBiomeID = config.get(biomeID, "Kepler22b Plains Biome ID", 166).getInt();
-		kepler22bBlueForestBiomeID = config.get(biomeID, "Kepler22b Blue Maple Forest Biome ID", 168).getInt();
-		kepler22bPurpleForestBiomeID = config.get(biomeID, "Kepler22b Purple Maple Forest Biome ID", 169).getInt();
-		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 170).getInt();
-		kepler22bYellowForestBiomeID = config.get(biomeID, "Kepler22b Yellow Maple Forest Biome ID", 171).getInt();
-		oberonBiomeID = config.get(biomeID, "Oberon Biome ID", 172).getInt();
-		titaniaBiomeID = config.get(biomeID, "Titania Biome ID", 173).getInt();
-		iapetusBiomeID = config.get(biomeID, "Iapetus Biome ID", 174).getInt();
-
+		phobosBiomeID = config.get(biomeID, "Phobos Biome ID", 168).getInt();
+		tritonBiomeID = config.get(biomeID, "Triton Biome ID", 169).getInt();
+		callistoBiomeID = config.get(biomeID, "Callisto Biome ID", 170).getInt();
+		ganymedeBiomeID = config.get(biomeID, "Ganymede Biome ID", 171).getInt();
+		rheaBiomeID = config.get(biomeID, "Rhea Biome ID", 172).getInt();
+		titanBiomeID = config.get(biomeID, "Titan Biome ID", 173).getInt();
+		kepler22bPlainsBiomeID = config.get(biomeID, "Kepler22b Plains Biome ID", 174).getInt();
+		kepler22bBlueForestBiomeID = config.get(biomeID, "Kepler22b Blue Maple Forest Biome ID", 175).getInt();
+		kepler22bPurpleForestBiomeID = config.get(biomeID, "Kepler22b Purple Maple Forest Biome ID", 176).getInt();
+		kepler22bRedForestBiomeID = config.get(biomeID, "Kepler22b Blue Red Forest Biome ID", 177).getInt();
+		kepler22bYellowForestBiomeID = config.get(biomeID, "Kepler22b Yellow Maple Forest Biome ID", 178).getInt();
+		oberonBiomeID = config.get(biomeID, "Oberon Biome ID", 179).getInt();
+		titaniaBiomeID = config.get(biomeID, "Titania Biome ID", 180).getInt();
+		iapetusBiomeID = config.get(biomeID, "Iapetus Biome ID", 181).getInt();
+		kepler22bRedDesertBiomeID = config.get(biomeID, "Kepler22b Red Desert Biome ID", 182).getInt();
+		
 		schematicTier4GUIID = config.get(schematicsGUI, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(schematicsGUI, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(schematicsGUI, "Schematic Tier 6 GUI ID", 5557).getInt();
@@ -439,6 +448,9 @@ public class Config {
 		schematicTier9GUIID = config.get(schematicsGUI, "Schematic Tier 9 GUI ID", 5560).getInt();
 		schematicTier10GUIID = config.get(schematicsGUI, "Schematic Tier 10 GUI ID", 5561).getInt();
 
+		schematicMarsRoverGUIID = config.get(schematicsGUI, "Schematic Mars Rover GUI ID", 5562).getInt();
+		schematicVenusRoverGUIID = config.get(schematicsGUI, "Schematic Venus Rover GUI ID", 5563).getInt();
+
 		schematicTier4PageID = config.get(schematicsPage, "Schematic Tier 4 Page ID", 6666).getInt();
 		schematicTier5PageID = config.get(schematicsPage, "Schematic Tier 5 Page ID", 6667).getInt();
 		schematicTier6PageID = config.get(schematicsPage, "Schematic Tier 6 Page ID", 6668).getInt();
@@ -446,6 +458,9 @@ public class Config {
 		schematicTier8PageID = config.get(schematicsPage, "Schematic Tier 8 Page ID", 6670).getInt();
 		schematicTier9PageID = config.get(schematicsPage, "Schematic Tier 9 Page ID", 6671).getInt();
 		schematicTier10PageID = config.get(schematicsPage, "Schematic Tier 10 Page ID", 6672).getInt();
+
+		schematicMarsRoverPageID = config.get(schematicsPage, "Schematic Mars Rover Page ID", 6673).getInt();
+		schematicVenusRoverPageID = config.get(schematicsPage, "Schematic Venus Rover Page ID", 6674).getInt();
 
 		microBlock = config.get(compatibility, "Enable Forge Micro blocks support", true, "").getBoolean(true);
 		neiSupport = config.get(compatibility, "Enable NEI Recipe support", true, "").getBoolean(true);

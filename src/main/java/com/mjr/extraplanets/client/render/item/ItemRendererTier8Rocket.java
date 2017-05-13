@@ -26,8 +26,11 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 
 	protected static RenderItem drawItems = new RenderItem();
 
-	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/tier8rocket.png");
-
+	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
+	protected ResourceLocation texture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
+	protected ResourceLocation texture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGrey.png");
+	protected ResourceLocation texture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
+	
 	public ItemRendererTier8Rocket(IModelCustom model)
 	{
 		this.modelSpaceship = model;
@@ -40,7 +43,50 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 		this.transform(item, type);
 
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(this.texture);
-		this.modelSpaceship.renderAll();
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("Nozzle");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("BodyRocket");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture3);
+		this.modelSpaceship.renderPart("Rocket_stabilizer1");
+		this.modelSpaceship.renderPart("Rocket_stabilizer2");
+		this.modelSpaceship.renderPart("Rocket_stabilizer3");
+		this.modelSpaceship.renderPart("Rocket_stabilizer4");
+		this.modelSpaceship.renderPart("Rocket_stabilizer007");
+		this.modelSpaceship.renderPart("Rocket_stabilizer008");
+		this.modelSpaceship.renderPart("Rocket_stabilizer009");
+		this.modelSpaceship.renderPart("Rocket_stabilizer010");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("SplinePathDeform");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture2);
+		this.modelSpaceship.renderPart("RocketEngine");
+		this.modelSpaceship.renderPart("RocketEngine001");
+		this.modelSpaceship.renderPart("RocketEngine002");
+		this.modelSpaceship.renderPart("RocketEngine003");
+		this.modelSpaceship.renderPart("RocketEngine004");
+		this.modelSpaceship.renderPart("RocketEngine005");
+		this.modelSpaceship.renderPart("RocketEngine006");
+		this.modelSpaceship.renderPart("RocketEngine007");
+		this.modelSpaceship.renderPart("RocketEngineBottom");
+		this.modelSpaceship.renderPart("RocketEngineBottom001");
+		this.modelSpaceship.renderPart("RocketEngineBottom002");
+		this.modelSpaceship.renderPart("RocketEngineBottom003");
+		this.modelSpaceship.renderPart("RocketEngineBottom004");
+		this.modelSpaceship.renderPart("RocketEngineBottom005");
+		this.modelSpaceship.renderPart("RocketEngineBottom006");
+		this.modelSpaceship.renderPart("RocketEngineBottom007");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("FloorCockPit");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture4);
+		this.modelSpaceship.renderPart("NoseRocket");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
+		this.modelSpaceship.renderPart("NozzleKeeper");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture2);
+		this.modelSpaceship.renderPart("rotary_engine");
+		this.modelSpaceship.renderPart("rotary_engine2");
+		this.modelSpaceship.renderPart("rotary_engine3");
+		this.modelSpaceship.renderPart("rotary_engine4");
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
 		GL11.glPopMatrix();
 
 		if (type == ItemRenderType.INVENTORY)
@@ -84,7 +130,7 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 			GL11.glRotatef(70, 1.0F, 0, 0);
 			GL11.glRotatef(-10, 0.0F, 1, 0);
 			GL11.glRotatef(50, 0.0F, 1, 1);
-			GL11.glTranslatef(-0.8F, -3.2F, 0F);
+			GL11.glTranslatef(-2.2F, -7.5F, 2F);
 			GL11.glScalef(5.2F, 5.2F, 5.2F);
 
 			if (player != null && player.ridingEntity != null && player.ridingEntity instanceof EntityTier1Rocket)
@@ -95,7 +141,7 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 
 		if (type == ItemRenderType.EQUIPPED_FIRST_PERSON)
 		{
-			GL11.glTranslatef(2.5F, 5.9F, 1F);
+			GL11.glTranslatef(10.5F, 8.9F, 4F);
 			GL11.glRotatef(28, 0.0F, 0, 1);
 			GL11.glRotatef(50 + 180, 0.0F, 1, 0);
 			GL11.glRotatef(73, 1.0F, 0, 0);
@@ -116,8 +162,8 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 			{
 				GL11.glRotatef(85F, 1F, 0F, 1F);
 				GL11.glRotatef(20F, 1F, 0F, 0F);
-				GL11.glScalef(0.7F, 0.7F, 0.7F);
-				GL11.glTranslatef(0.0F, 1.6F, -0.4F);
+				GL11.glScalef(0.5F, 0.5F, 0.5F);
+				GL11.glTranslatef(1.4F, 2.8F, -0.4F);
 			}
 			else
 			{

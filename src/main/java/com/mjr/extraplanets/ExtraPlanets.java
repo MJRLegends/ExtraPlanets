@@ -15,6 +15,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
+import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
@@ -45,6 +46,8 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
+import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
+import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.extraplanets.handlers.BoneMealHandler;
 import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.handlers.GalacticraftVersionChecker;
@@ -63,6 +66,7 @@ import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
 import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
+import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
@@ -78,6 +82,7 @@ import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.planets.Venus.event.VenusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
+import com.mjr.extraplanets.schematic.SchematicMarsRover;
 import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier4Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier5Rocket;
@@ -85,6 +90,7 @@ import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier7Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier9Rocket;
+import com.mjr.extraplanets.schematic.SchematicVenusRover;
 import com.mjr.extraplanets.util.RegisterHelper;
 
 import cpw.mods.fml.common.Mod;
@@ -104,6 +110,8 @@ public class ExtraPlanets {
 
 	@Instance(Constants.modID)
 	public static ExtraPlanets instance;
+
+	public static ExtraPlanetsChannelHandler packetPipeline;
 
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
@@ -258,8 +266,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// Initialization/Registering Methods For
-		// SolarSystems/Planets/Moons/SpaceStations
+		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
@@ -272,6 +279,8 @@ public class ExtraPlanets {
 		// Initialization/Registering Methods For Entities
 		registerNonMobEntities();
 		registerCreatures();
+
+		packetPipeline = ExtraPlanetsChannelHandler.init();
 
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
@@ -301,6 +310,8 @@ public class ExtraPlanets {
 	private void registerNonMobEntities() {
 		if (Config.nuclearBomb)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, Constants.modName + "FireBombPrimed", 150, 1, true);
+
 		if (Config.morePlanetsCompatibility == false) {
 			if (Config.venus)
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
@@ -318,6 +329,8 @@ public class ExtraPlanets {
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.modName + "SmallSnowBall", 150, 1, true);
 		}
+		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
+		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
 	}
 
 	private void registerCreatures() {
@@ -388,11 +401,16 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
 		if (Config.eris)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
+		SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
+		SchematicRegistry.registerSchematicRecipe(new SchematicVenusRover());
 	}
 
 	private void addDungeonLoot() {
-		if (Config.venus)
+		GalacticraftRegistry.addDungeonLoot(1, new ItemStack(ExtraPlanets_Items.schematicMarsRover, 1, 0));
+		if (Config.venus) {
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicTier4, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicVenusRover, 1, 0));
+		}
 		if (Config.jupiter)
 			GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanets_Items.schematicTier5, 1, 0));
 		if (Config.saturn)

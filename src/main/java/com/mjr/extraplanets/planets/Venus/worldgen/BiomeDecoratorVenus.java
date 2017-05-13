@@ -24,7 +24,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 
 	private World currentWorld;
 
-	private int LakesPerChunk = 10;
+	private int LakesPerChunk = 20;
 
 	private boolean isDecorating = false;
 
@@ -34,10 +34,9 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 8, 3, true, ExtraPlanets_Blocks.venusBlocks, 2);
 		this.carbonGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusBlocks, 4, 6, true, ExtraPlanets_Blocks.venusBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.venusGravel, 12, 0, true, ExtraPlanets_Blocks.venusBlocks, 2);
-		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.volcanicRock, 20, 0, true, ExtraPlanets_Blocks.venusBlocks, 0);
+		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.volcanicRock, 40, 0, true, ExtraPlanets_Blocks.venusBlocks, 0);
 
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -64,11 +63,10 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		
 		for (int i = 0; i < this.LakesPerChunk; i++) {
-			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeightValue(x, z) - 2;
+			if (this.rand.nextInt(5) == 0) {
+                int x = this.chunkX + this.rand.nextInt(16) + 8;
+                int y = this.rand.nextInt(this.rand.nextInt(248) + 8);
+                int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.venusBlocks);
 			}
 		}

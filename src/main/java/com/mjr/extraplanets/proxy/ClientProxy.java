@@ -13,11 +13,14 @@ import net.minecraftforge.client.model.IModelCustom;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
+import com.mjr.extraplanets.client.handlers.KeyHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.model.bosses.ModelEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.model.monsters.ModelEvolvedIceSlime;
 import com.mjr.extraplanets.client.render.RenderPlayerExtraPlanets;
+import com.mjr.extraplanets.client.render.block.BlockRendererCustomLandingPad;
 import com.mjr.extraplanets.client.render.block.BlockRendererMachine;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier10TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier4TreasureChest;
@@ -27,6 +30,7 @@ import com.mjr.extraplanets.client.render.block.BlockRendererTier7TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier8TreasureChest;
 import com.mjr.extraplanets.client.render.block.BlockRendererTier9TreasureChest;
 import com.mjr.extraplanets.client.render.block.TileEntitySolarPanelRenderer;
+import com.mjr.extraplanets.client.render.entities.RenderFireBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
@@ -56,6 +60,9 @@ import com.mjr.extraplanets.client.render.entities.rockets.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
+import com.mjr.extraplanets.client.render.entities.vehicles.RenderMarsRover;
+import com.mjr.extraplanets.client.render.entities.vehicles.RenderVenusRover;
+import com.mjr.extraplanets.client.render.item.ItemRendererMarsRover;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier10Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier4Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier5Rocket;
@@ -63,6 +70,7 @@ import com.mjr.extraplanets.client.render.item.ItemRendererTier6Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier7Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier8Rocket;
 import com.mjr.extraplanets.client.render.item.ItemRendererTier9Rocket;
+import com.mjr.extraplanets.client.render.item.ItemRendererVenusRover;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT5TreasureChestRenderer;
@@ -70,6 +78,7 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
+import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
@@ -100,16 +109,18 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
+import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
+import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.TileEntitySolar;
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT5TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT6TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT8TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT9TreasureChest;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -130,6 +141,7 @@ public class ClientProxy extends CommonProxy {
 	public static int treasureT8ChestID;
 	public static int treasureT9ChestID;
 	public static int treasureT10ChestID;
+	public static int renderIdLandingPad;
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -147,6 +159,11 @@ public class ClientProxy extends CommonProxy {
 
 		if (Config.nuclearBomb)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
+		RenderingRegistry.registerEntityRenderingHandler(EntityFireBombPrimed.class, new RenderFireBombPrimed());
+
+		FMLCommonHandler.instance().bus().register(new KeyHandlerClient());
+		ClientRegistry.registerKeyBinding(KeyHandlerClient.openFuelGui);
+
 	}
 
 	@Override
@@ -216,40 +233,47 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	private void renderNonMobEntities() {
 		if (Config.venus) {
-			IModelCustom rocketModelTier4 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, new RenderTier4Rocket(rocketModelTier4, Constants.ASSET_PREFIX, "tier4rocket"));
+			IModelCustom rocketModelTier4 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket4Tier.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, new RenderTier4Rocket(rocketModelTier4, Constants.ASSET_PREFIX, "blankRocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4Rocket, new ItemRendererTier4Rocket(rocketModelTier4));
 		}
 		if (Config.jupiter) {
-			IModelCustom rocketModelTier5 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, new RenderTier5Rocket(rocketModelTier5, Constants.ASSET_PREFIX, "tier5rocket"));
+			IModelCustom rocketModelTier5 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket5Tier.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, new RenderTier5Rocket(rocketModelTier5, Constants.ASSET_PREFIX, "blankRocketWhite"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier5Rocket, new ItemRendererTier5Rocket(rocketModelTier5));
 		}
 		if (Config.saturn) {
-			IModelCustom rocketModelTier6 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, new RenderTier6Rocket(rocketModelTier6, Constants.ASSET_PREFIX, "tier6rocket"));
+			IModelCustom rocketModelTier6 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket6Tier.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, new RenderTier6Rocket(rocketModelTier6, Constants.ASSET_PREFIX, "blankRocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier6Rocket, new ItemRendererTier6Rocket(rocketModelTier6));
 		}
 		if (Config.uranus) {
-			IModelCustom rocketModelTier7 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, new RenderTier7Rocket(rocketModelTier7, Constants.ASSET_PREFIX, "tier7rocket"));
+			IModelCustom rocketModelTier7 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket7Tier.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, new RenderTier7Rocket(rocketModelTier7, Constants.ASSET_PREFIX, "blankRocketWhite"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier7Rocket, new ItemRendererTier7Rocket(rocketModelTier7));
 		}
 		if (Config.neptune) {
-			IModelCustom rocketModelTier8 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8, Constants.ASSET_PREFIX, "tier8rocket"));
+			IModelCustom rocketModelTier8 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket8Tier.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8, Constants.ASSET_PREFIX, "blankRocketWhite"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier8Rocket, new ItemRendererTier8Rocket(rocketModelTier8));
 		}
 		if (Config.pluto) {
-			IModelCustom rocketModelTier9 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "tier9rocket"));
+			IModelCustom rocketModelTier9 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket9Tier.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "blankRocketWhite"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
 		}
 		if (Config.eris) {
-			IModelCustom rocketModelTier10 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/tier4rocket.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "tier10rocket"));
+			IModelCustom rocketModelTier10 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket10Tier.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "blankRocketWhite"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier10Rocket, new ItemRendererTier10Rocket(rocketModelTier10));
 		}
+		IModelCustom marsRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover.obj"));
+		RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, new RenderMarsRover(marsRover));
+		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.marsRover, new ItemRendererMarsRover(marsRover));
+
+		IModelCustom venusRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover.obj"));
+		RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, new RenderVenusRover(venusRover));
+		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.venusRover, new ItemRendererVenusRover(venusRover));
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -291,6 +315,8 @@ public class ClientProxy extends CommonProxy {
 		}
 		ClientProxy.renderIdMachine = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(new BlockRendererMachine(renderIdMachine));
+		renderIdLandingPad = RenderingRegistry.getNextAvailableRenderId();
+		RenderingRegistry.registerBlockHandler(new BlockRendererCustomLandingPad(renderIdLandingPad));
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -326,6 +352,27 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	public static int getBlockRender(Block blockID) {
 		if (blockID == ExtraPlanets_Machines.advancedRefinery) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Machines.ultimateRefinery) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Machines.advancedFuelLoader) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Machines.ultimateFuelLoader) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Machines.advancedOxygenCompressor) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Machines.ultimateOxygenCompressor) {
+			return ClientProxy.renderIdMachine;
+		}
+		if (blockID == ExtraPlanets_Blocks.advancedLaunchPadFull) {
+			return ClientProxy.renderIdLandingPad;
+		}
+		if (blockID == ExtraPlanets_Machines.chargingBlock) {
 			return ClientProxy.renderIdMachine;
 		}
 		return -1;

@@ -79,6 +79,7 @@ tile.venus.OreCopper.name=Měděná ruda z Venuše
 tile.venus.OreCarbon.name=Karbonová Ruda
 tile.venus.stoneBricks.name=Venus Stone Bricks
 tile.venus.carbonBlock.name=Block of Carbon
+tile.venus.titaniumBlock.name=Block of Titanium
 
 tile.ceres.surface.name=Povrchový kámen z Ceresu
 tile.ceres.subSurface.name=Podpovrchový kámen z Ceresu
@@ -211,6 +212,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Purple Tall Grass
 tile.kepler22bFlowers.greenMapleShortGrass.name=Kepler 22b Green Short Grass
 tile.kepler22bFlowers.greenMapleMedGrass.name=Kepler 22b Green Medium Grass
 tile.kepler22bFlowers.greenMapleTallGrass.name=Kepler 22b Green Tall Grass
+tile.redSand.name=Red Sand
+tile.redSandstone.name=Red Sandstone
 
 #Moon Blocks
 tile.callisto.surface.name=Povrchový kámen z Callisto
@@ -226,6 +229,7 @@ tile.deimos.stone.name=Kámen z Deimosu
 tile.deimos.OreIron.name=Železná ruda z Deimosu
 tile.deimos.OreTin.name=Cínová ruda z Deimosu
 tile.deimos.OreCopper.name=Měděná ruda z Deimosu
+tile.deimos.oreLead.name=Deimos Lead Ore
 
 tile.europa.surface.name=Povrchový kámen z Europy
 tile.europa.subSurface.name=Podpovrchový kámen z Europy
@@ -247,6 +251,7 @@ tile.phobos.stone.name=Kámen z Phobosu
 tile.phobos.OreIron.name=Železná ruda z Phobosu
 tile.phobos.OreTin.name=Cínová ruda z Phobosu
 tile.phobos.OreCopper.name=Měděná ruda z Phobosu
+tile.phobos.oreLead.name=Phobos Lead Ore
 
 tile.triton.surface.name=Povrchový kámen z Tritonu
 tile.triton.subSurface.name=Podpovrchový kámen z Tritonu
@@ -343,15 +348,25 @@ tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Kamenný půlblok
 tile.ExtraPlanets_erisStoneBlockhalfslab.name=Kamenný půlblok
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Schody
-tile.venusStoneStairs.name=Schody
-tile.ceresStoneStairs.name=Schody
-tile.jupiterStoneStairs.name=Schody
-tile.saturnStoneStairs.name=Schody
-tile.uranusStoneStairs.name=Schody
-tile.neptuneStoneStairs.name=Schody
-tile.plutoStoneStairs.name=Schody
-tile.erisStoneStairs.name=Schody
+tile.mercuryStoneStairs.name=Mercury Stone Stairs
+tile.venusStoneStairs.name=Venus Stone Stairs
+tile.ceresStoneStairs.name=Ceres Stone Stairs
+tile.jupiterStoneStairs.name=Jupiter Stone Stairs
+tile.saturnStoneStairs.name=Saturn Stone Stairs
+tile.uranusStoneStairs.name=Uranus Stone Stairs
+tile.neptuneStoneStairs.name=Neptune Stone Stairs
+tile.plutoStoneStairs.name=Pluto Stone Stairs
+tile.erisStoneStairs.name=Eris Stone Stairs
+
+tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs
+tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs
+tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs
+tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs
+tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs
+tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs
+tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs
+tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs
+tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs
 
 #Dungeon Bricks Slabs
 tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Půlblok z kobky na Venuši
@@ -396,19 +411,80 @@ tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eri
 
 #Machines
 tile.advancedRefinery.name=Advanced Refinery
+tile.ultimateRefinery.name=Ultimate Refinery
 tile.solar.hybrid.name=Hybridní solární panel
 tile.solar.ultimate.name=Ultimátlní solární panel
 tile.solarhybrid.description=Tento solární panel bude pracovat během dne i noci
 tile.solarultimate.description=Tento solární panel bude pracovat během dne i noci
+tile.advancedFuelLoader.name=Advanced Fuel Loader
+tile.ultimateFuelLoader.name=Ultimate Fuel Loader
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
+tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
+tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
+tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
+tile.chargingBlock.name=Vehicle Charger (WIP)
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+
+#Machine Containers
 container.solarhybrid.name=Hybridní solární panel
 container.solarultimate.name=Ultimátlní solární panel
+container.vehicle.charger.name=Vehicle Charger
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advanced.oxygencompressor.name=Advanced Oxygen Compressor
+container.advanced.oxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimate.oxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimate.oxygendecompressor.name=Ultimate Oxygen Decompressor
+container.advanced.fuelloader.name=Advanced Fuel Loader
+container.ultimate.fuelloader.name=Ultimate Fuel Loader
+
+#GUI Messages and Texts
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+gui.button.loadpower.name=Load Power
 
 #Other Blocks
 tile.nuclearBomb.name=Jaderná bomba
+tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=Vulkanický kámen
+tile.ashBlock.name=Block of Ash
 tile.frozenNitrogen.name=Zmrzný dusík
 tile.denseIce.name=Hustý led
 tile.fossil.name=Fosilní blok
+
+#Decorative Blocks
+tile.decorativeBlocks.marble.name=Marble
+tile.decorativeBlocks.marbleBricks.name=Marble Bricks
+tile.decorativeBlocks.snowBricks.name=Snow Bricks
+tile.decorativeBlocks.iceBricks.name=Ice Bricks
+tile.decorativeBlocks.fireBricks.name=Fire Bricks
+tile.decorativeBlocks.blackWhiteFloor.name=Black/White Tiled Floor
+tile.decorativeBlocks.marbleTitledFloor.name=Marble Tiled Floor
+tile.decorativeBlocks.marbleBrokenTitledFloor.name=Marble Broken Tiled Floor
+tile.decorativeBlocks.metalMesh.name=Metal Mesh Floor
+tile.decorativeBlocks.frozenNitrogenBricks.name=Frozen Nitrogen Bricks
+tile.decorativeBlocks.volcanicRockBricks.name=Volcanic Rock Bricks
+tile.decorativeBlocks.carbonTitledFloor.name=Carbon Tiled Floor
+tile.decorativeBlocks.carbonBrokenTitledFloor.name=Carbon Broken Tiled Floor
+tile.decorativeBlocks.magnesiumTitledFloor.name=Magnesium Tiled Floor
+tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Floor
+tile.decorativeBlocks.ashBricks.name=Ash Bricks
+
+#Vehicles
+item.marsRover.name=Driveable Mars Rover (WIP)
+item.venusRover.name=Driveable Venus Rover (WIP)
+
+#Vehicle Electic Parts
+item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
+item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
+item.electricParts.sparkPlug.name=Vehicle Spark Plug
+item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
+item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Raketa typ 4
@@ -482,6 +558,7 @@ item.tier10.compressedDarkIron.name=Compressed Dark Iron
 
 #Ingots
 item.tier4.ingotCarbon.name=Karbonový Ingot
+item.tier4.ingotVolcanic.name=Volcanic Ingot
 item.tier5.ingotPalladium.name=Palladiový Ingot
 item.tier6.ingotMagnesium.name=Magnesiový Ingot
 item.tier7.ingotCrystal.name=Krystalový Ingot
@@ -491,6 +568,12 @@ item.ingotMercury.name=Měděný Ingot
 item.ingotUranium.name=Uranový Ingot
 item.tier9.ingotTungsten.name=Tungstenový Ingot
 item.tier10.ingotDarkIron.name=Dark Iron Ingot
+item.ingotLead.name=Lead Ingot
+
+#Shards
+item.tier4.ashShard.name=Ash Shard
+item.tier4.volcanicShard.name=Volcanic Shard
+item.tier6.magnesiumShard.name=Magnesium Shard
 
 #Gems
 item.tier5.redGem.name=Red Gem
@@ -615,6 +698,9 @@ item.greenDiamondHoe.name=Green Diamond Hoe
 item.greenDiamondShovel.name=Green Diamond Shovel
 
 #Schematics
+item.schematicMarsRover.name=NASA Workbench Schematic
+item.schematicVenusRover.name=NASA Workbench Schematic
+
 item.schematicTier4.name=NASA Workbench Schéma
 item.schematicTier5.name=NASA Workbench Schéma
 item.schematicTier6.name=NASA Workbench Schéma
@@ -631,6 +717,9 @@ schematic.tier8.Rocket.name=Raketa typ 8
 schematic.tier9.Rocket.name=Raketa typ 9
 schematic.tier10.Rocket.name=Raketa typ 10
 
+schematic.mars.rover.name=Mars Rover Schematic
+schematic.venus.rover.name=Venus Rover Schematic
+
 schematic.RocketT4.name=Raketa typ 4
 schematic.RocketT5.name=Raketa typ 5
 schematic.RocketT6.name=Raketa typ 6
@@ -638,6 +727,9 @@ schematic.RocketT7.name=Raketa typ 7
 schematic.RocketT8.name=Raketa typ 8
 schematic.RocketT9.name=Raketa typ 9
 schematic.RocketT10.name=Raketa typ 10
+
+schematic.marsRover.name=Mars Rover
+schematic.venusRover.name=Venus Rover
 
 #Batteries
 item.mercuryBattery.name=Měděná baterie
@@ -735,12 +827,20 @@ item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
 item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 
+#Sticks
+item.tier11.blueSticks.name=Blue Sticks
+item.tier11.redSticks.name=Red Sticks
+item.tier11.yellowSticks.name=Yellow Sticks
+item.tier11.purpleSticks.name=Purple Sticks
+item.tier11.greenSticks.name=Green Sticks
+
 #Other Items
 item.appleDiamond.name=Diamantové jablko
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=Plechovka jídla
-item.bodyparts.arm.name=Paže
-item.bodyparts.leg.name=Noha
+item.tier4.ash.name=Ash
+item.tier4.sledgeHammer.name=Sledge Hammer
+item.tier4.grindingWheel.name=Grinding Wheel
 
 item.cannedfood.dehydratedPorkchop.name=Dehydrované vepřové
 item.cannedfood.dehydratedFish.name=Dehydrovaná ryba
@@ -782,6 +882,9 @@ entity.ExtraPlanetsEvolvedRedCreeper.name=Vyvinutý Červený Syčák
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=Vyvinutý Silný Kostlivec
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
 entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
+
+entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
+entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
 
 #Achievement
 achievement.mercuryPlanet=Přistaň na Merkuru!

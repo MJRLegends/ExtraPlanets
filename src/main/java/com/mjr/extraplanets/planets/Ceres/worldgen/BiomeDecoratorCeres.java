@@ -10,6 +10,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
+import com.mjr.extraplanets.worldGen.features.WorldGenDeshTower;
 
 public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 
@@ -50,7 +51,8 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		if (isDecorating) return;
+		if (isDecorating)
+			return;
 		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
@@ -66,9 +68,14 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(ExtraPlanets_Fluids.salt).generate(this.currentWorld, this.rand, x, y, z,
-						ExtraPlanets_Blocks.ceresBlocks);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.salt).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.ceresBlocks);
 			}
+		}
+		if (this.rand.nextInt(100) == 1) {
+			int x = this.chunkX + 8;
+			int y = this.rand.nextInt(256);
+			int z = this.chunkZ + 8;
+			new WorldGenDeshTower().generate(this.currentWorld, this.rand, x, y, z);
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 

@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.blocks;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
+import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
@@ -43,6 +44,8 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+import com.mjr.extraplanets.itemBlocks.ItemBlockCustomLandingPad;
+import com.mjr.extraplanets.itemBlocks.ItemBlockDecorativeBlocks;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCeres;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockDeimos;
@@ -78,13 +81,6 @@ import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.DungeonSpawnerPluto;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.DungeonSpawnerSaturn;
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.DungeonSpawnerUranus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.DungeonSpawnerVenus;
-import com.mjr.extraplanets.tile.TileEntityT10TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT4TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT5TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT6TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT7TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT8TreasureChest;
-import com.mjr.extraplanets.tile.TileEntityT9TreasureChest;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
@@ -92,6 +88,19 @@ import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tile.machines.TileEntityPoweredChargingPad;
+import com.mjr.extraplanets.tile.machines.TileEntityPoweredChargingPadSingle;
+import com.mjr.extraplanets.tile.machines.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tile.machines.TileEntityTier2LandingPadSingle;
+import com.mjr.extraplanets.tile.machines.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tile.machines.TileEntityTier3LandingPadSingle;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT5TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT6TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT8TreasureChest;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT9TreasureChest;
 import com.mjr.extraplanets.util.RegisterHelper;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -154,10 +163,12 @@ public class ExtraPlanets_Blocks {
 
 	// Other Special Blocks
 	public static Block nuclearBomb;
+	public static Block fireBomb;
 	public static Block fossil;
 	public static Block denseIce;
 	public static Block volcanicRock;
 	public static Block frozenNitrogen;
+	public static Block ashBlock;
 
 	// Treasure Chests
 	public static Block treasureChestTier4;
@@ -202,6 +213,13 @@ public class ExtraPlanets_Blocks {
 	// Planks
 	public static Block kepler22bPlanks;
 
+	public static Block advancedLaunchPad;
+	public static Block advancedLaunchPadFull;
+	
+	public static Block decorativeBlocks;
+	
+	public static Block redSand;
+	public static Block redSandstone;
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
@@ -226,7 +244,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.venus) {
 			venusBlocks = new BlockBasicVenus("venus");
 			venusGravel = new BlockCustomGravel("venusGravel");
-
+			ashBlock = new BlockAshBlock("ashBlock");
 			volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanicRock").setBlockTextureName(Constants.TEXTURE_PREFIX + "volcanicRock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
 		}
 		if (Config.ceres) {
@@ -309,6 +327,7 @@ public class ExtraPlanets_Blocks {
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
+		fireBomb = new BlockFireBomb();
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
@@ -317,7 +336,13 @@ public class ExtraPlanets_Blocks {
 			kepler22bRedGrass = new BlockBasicGrass("kepler22b_red", "kepler22b");
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow", "kepler22b");
 			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22bFlowers");
+			redSand = new BlockSand("redSand");
+			redSandstone = new BlockBasic(Material.rock).setBlockName("redSandstone").setBlockTextureName(Constants.TEXTURE_PREFIX + "redSandstone").setHardness(2F).setResistance(2F);
 		}
+		advancedLaunchPad = new BlockCustomLandingPad("advancedLaunchPad");
+		advancedLaunchPadFull = new BlockCustomLandingPadFull("advancedLaunchPadFull");
+		
+		decorativeBlocks = new BlockDecorativeBlocks("decorativeBlocks");
 	}
 
 	private static void initializeDungeonBlocks() {
@@ -433,6 +458,8 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(venusSpawner, "venusSpawner");
 			GameRegistry.registerBlock(veunsDungeonBrick, "veunsDungeonBrick");
 			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName());
+
+			GameRegistry.registerBlock(ashBlock, "ashBlock");
 			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
 		}
 		if (Config.ceres) {
@@ -491,6 +518,8 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
 			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
 			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName());
+			GameRegistry.registerBlock(redSand, "redSand");
+			GameRegistry.registerBlock(redSandstone, "redSandstone");
 		}
 
 		if (Config.europa) {
@@ -545,6 +574,12 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(fossil, "fossil");
 		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
+		GameRegistry.registerBlock(fireBomb, "fireBomb");
+
+		GameRegistry.registerBlock(advancedLaunchPad, ItemBlockCustomLandingPad.class, advancedLaunchPad.getUnlocalizedName());
+		GameRegistry.registerBlock(advancedLaunchPadFull, ItemBlockGC.class, advancedLaunchPadFull.getUnlocalizedName());
+		
+		GameRegistry.registerBlock(decorativeBlocks, ItemBlockDecorativeBlocks.class, decorativeBlocks.getUnlocalizedName());
 	}
 
 	private static void registerTileEntitys() {
@@ -591,6 +626,14 @@ public class ExtraPlanets_Blocks {
 			else
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPadSingle.class, "Tier 2 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPad.class, "Tier 2 Landing Pad Full");
+
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPadSingle.class, "Tier 3 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPad.class, "Tier 3 Landing Pad Full");
+		
+		GameRegistry.registerTileEntity(TileEntityPoweredChargingPadSingle.class, "Powered Charging Pad");
+		GameRegistry.registerTileEntity(TileEntityPoweredChargingPad.class, "Powered Charging Pad Full");
 	}
 
 	private static void setHarvestLevels() {
@@ -874,6 +917,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(deimosBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(deimosBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(deimosBlocks, 1, 3));
+			OreDictionary.registerOre("oreLead", new ItemStack(deimosBlocks, 1, 6));
 		}
 		if (Config.europa) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(europaBlocks, 1, 5));
@@ -894,6 +938,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(phobosBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(phobosBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(phobosBlocks, 1, 3));
+			OreDictionary.registerOre("oreLead", new ItemStack(phobosBlocks, 1, 6));
 		}
 		if (Config.rhea) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(rheaBlocks, 1, 5));

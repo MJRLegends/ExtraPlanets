@@ -18,6 +18,7 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest").setHeight(height_LowPlains);
 	public static final BiomeGenBase kepler22bRedForest = new BiomeGenKepler22bRedMapleForest().setColor(112).setBiomeName("Kepler22b Red Maple Forest").setHeight(height_LowPlains);
 	public static final BiomeGenBase kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest().setColor(112).setBiomeName("Kepler22b Yellow Maple Forest").setHeight(height_LowPlains);
+	public static final BiomeGenBase kepler22bRedDesert = new BiomeGenKepler22bRedDesert().setColor(112).setBiomeName("Kepler22b Red Desert").setHeight(height_MidHills);
 
 	protected Block stoneBlock;
 	protected byte topMeta;

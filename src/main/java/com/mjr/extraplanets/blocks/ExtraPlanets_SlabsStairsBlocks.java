@@ -76,6 +76,16 @@ public class ExtraPlanets_SlabsStairsBlocks {
 	public static Block plutoStoneStairs;
 	public static Block erisStoneStairs;
 
+	public static Block mercuryStoneBrickStairs;
+	public static Block venusStoneBrickStairs;
+	public static Block ceresStoneBrickStairs;
+	public static Block jupiterStoneBrickStairs;
+	public static Block saturnStoneBrickStairs;
+	public static Block uranusStoneBrickStairs;
+	public static Block neptuneStoneBrickStairs;
+	public static Block plutoStoneBrickStairs;
+	public static Block erisStoneBrickStairs;
+	
 	public static Block venusDungeonBrickStoneStairs;
 	public static Block jupiterDungeonBrickStoneStairs;
 	public static Block saturnDungeonBrickStoneStairs;
@@ -92,11 +102,13 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			mercuryStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "mercuryStoneBlockhalfslab", "mercuryStone");
 			mercuryStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "mercuryStoneBlockfullslab", "mercuryStone");
 			mercuryStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.mercuryBlocks, 2, "mercuryStoneStairs");
+			mercuryStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.mercuryBlocks, 7, "mercuryStoneBrickStairs");
 		}
 		if (Config.venus) {
 			venusStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "venusStoneBlockhalfslab", "venusStone");
 			venusStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "mercuryStoneBlockfullslab", "venusStone");
 			venusStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.venusBlocks, 2, "venusStoneStairs");
+			venusStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.venusBlocks, 8, "venusStoneBrickStairs");
 
 			venusDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "venusDungeonBrickStoneBlockhalfslab", "veunsDungeonBrick");
 			venusDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "mercuryDungeonBrickStoneBlockfullslab", "veunsDungeonBrick");
@@ -106,11 +118,13 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			ceresStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "ceresStoneBlockhalfslab", "ceresStone");
 			ceresStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "ceresStoneBlockfullslab", "ceresStone");
 			ceresStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.ceresBlocks, 2, "ceresStoneStairs");
+			ceresStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.ceresBlocks, 7, "ceresStoneBrickStairs");
 		}
 		if (Config.jupiter) {
 			jupiterStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "jupiterStoneBlockhalfslab", "jupiterStone");
 			jupiterStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "jupiterStoneBlockfullslab", "jupiterStone");
 			jupiterStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.jupiterBlocks, 2, "jupiterStoneStairs");
+			jupiterStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.jupiterBlocks, 9, "jupiterStoneBrickStairs");
 
 			jupiterDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "jupiterDungeonBrickStoneBlockhalfslab", "jupiterDungeonBrick");
 			jupiterDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "jupiterDungeonBrickStoneBlockfullslab", "jupiterDungeonBrick");
@@ -120,6 +134,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			saturnStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "saturnStoneBlockhalfslab", "saturnStone");
 			saturnStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "saturnStoneBlockfullslab", "saturnStone");
 			saturnStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.saturnBlocks, 2, "saturnStoneStairs");
+			saturnStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.saturnBlocks, 8, "saturnStoneBrickStairs");
 
 			saturnDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "saturnDungeonBrickStoneBlockhalfslab", "saturnDungeonBrick");
 			saturnDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "saturnDungeonBrickStoneBlockfullslab", "saturnDungeonBrick");
@@ -129,6 +144,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			uranusStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "uranusStoneBlockhalfslab", "uranusStone");
 			uranusStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "uranusStoneBlockfullslab", "uranusStone");
 			uranusStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.uranusBlocks, 2, "uranusStoneStairs");
+			uranusStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.uranusBlocks, 5, "uranusStoneBrickStairs");
 
 			uranusDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "uranusDungeonBrickStoneBlockhalfslab", "uranusDungeonBrick");
 			uranusDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "uranusDungeonBrickStoneBlockfullslab", "uranusDungeonBrick");
@@ -138,6 +154,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			neptuneStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "neptuneStoneBlockhalfslab", "neptuneStone");
 			neptuneStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "neptuneStoneBlockfullslab", "neptuneStone");
 			neptuneStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.neptuneBlocks, 2, "neptuneStoneStairs");
+			neptuneStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.neptuneBlocks, 7, "neptuneStoneBrickStairs");
 
 			neptuneDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "neptuneDungeonBrickStoneBlockhalfslab", "neptuneDungeonBrick");
 			neptuneDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "neptuneDungeonBrickStoneBlockfullslab", "neptuneDungeonBrick");
@@ -147,11 +164,13 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			plutoStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "plutoStoneBlockhalfslab", "plutoStone");
 			plutoStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "plutoStoneBlockfullslab", "plutoStone");
 			plutoStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.plutoBlocks, 2, "plutoStoneStairs");
+			plutoStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.plutoBlocks, 8, "plutoStoneBrickStairs");
 		}
 		if (Config.eris) {
 			erisStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "erisStoneBlockhalfslab", "erisStone");
 			erisStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "erisStoneBlockfullslab", "erisStone");
 			erisStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.erisBlocks, 2, "erisStoneStairs");
+			erisStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.erisBlocks, 6, "erisStoneBrickStairs");
 		}
 	}
 
@@ -160,11 +179,13 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			GameRegistry.registerBlock(mercuryStoneBlockHalfSlab, MercuryStoneItemSlab.class, "mercuryStonehalfslab");
 			GameRegistry.registerBlock(mercuryStoneBlockDoubleSlab, MercuryStoneItemSlab.class, "mercuryStonefullslab");
 			GameRegistry.registerBlock(mercuryStoneStairs, "mercuryStoneStairs");
+			GameRegistry.registerBlock(mercuryStoneBrickStairs, "mercuryStoneBrickStairs");
 		}
 		if (Config.venus) {
 			GameRegistry.registerBlock(venusStoneBlockHalfSlab, VenusStoneItemSlab.class, "venusStonehalfslab");
 			GameRegistry.registerBlock(venusStoneBlockDoubleSlab, VenusStoneItemSlab.class, "venusStonefullslab");
 			GameRegistry.registerBlock(venusStoneStairs, "venusStoneStairs");
+			GameRegistry.registerBlock(venusStoneBrickStairs, "venusStoneBrickStairs");
 
 			GameRegistry.registerBlock(venusDungeonBrickStoneBlockHalfSlab, VenusDungeonBrickStoneItemSlab.class, "venusDungeonBrickStonehalfslab");
 			GameRegistry.registerBlock(venusDungeonBrickStoneBlockDoubleSlab, VenusDungeonBrickStoneItemSlab.class, "venusDungeonBrickStonefullslab");
@@ -174,11 +195,13 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			GameRegistry.registerBlock(ceresStoneBlockHalfSlab, CeresStoneItemSlab.class, "ceresStonehalfslab");
 			GameRegistry.registerBlock(ceresStoneBlockDoubleSlab, CeresStoneItemSlab.class, "ceresStonefullslab");
 			GameRegistry.registerBlock(ceresStoneStairs, "ceresStoneStairs");
+			GameRegistry.registerBlock(ceresStoneBrickStairs, "ceresStoneBrickStairs");
 		}
 		if (Config.jupiter) {
 			GameRegistry.registerBlock(jupiterStoneBlockHalfSlab, JupiterStoneItemSlab.class, "jupiterStonehalfslab");
 			GameRegistry.registerBlock(jupiterStoneBlockDoubleSlab, JupiterStoneItemSlab.class, "jupiterStonefullslab");
 			GameRegistry.registerBlock(jupiterStoneStairs, "jupiterStoneStairs");
+			GameRegistry.registerBlock(jupiterStoneBrickStairs, "jupiterStoneBrickStairs");
 
 			GameRegistry.registerBlock(jupiterDungeonBrickStoneBlockHalfSlab, JupiterDungeonBrickStoneItemSlab.class, "jupiterDungeonBrickStonehalfslab");
 			GameRegistry.registerBlock(jupiterDungeonBrickStoneBlockDoubleSlab, JupiterDungeonBrickStoneItemSlab.class, "jupiterDungeonBrickStonefullslab");
@@ -188,6 +211,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			GameRegistry.registerBlock(saturnStoneBlockHalfSlab, SaturnStoneItemSlab.class, "saturnStonehalfslab");
 			GameRegistry.registerBlock(saturnStoneBlockDoubleSlab, SaturnStoneItemSlab.class, "saturnStonefullslab");
 			GameRegistry.registerBlock(saturnStoneStairs, "saturnStoneStairs");
+			GameRegistry.registerBlock(saturnStoneBrickStairs, "saturnStoneBrickStairs");
 
 			GameRegistry.registerBlock(saturnDungeonBrickStoneBlockHalfSlab, SaturnDungeonBrickStoneItemSlab.class, "saturnDungeonBrickStonehalfslab");
 			GameRegistry.registerBlock(saturnDungeonBrickStoneBlockDoubleSlab, SaturnDungeonBrickStoneItemSlab.class, "saturnDungeonBrickStonefullslab");
@@ -197,6 +221,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			GameRegistry.registerBlock(uranusStoneBlockHalfSlab, UranusStoneItemSlab.class, "uranusStonehalfslab");
 			GameRegistry.registerBlock(uranusStoneBlockDoubleSlab, UranusStoneItemSlab.class, "uranusStonefullslab");
 			GameRegistry.registerBlock(uranusStoneStairs, "uranusStoneStairs");
+			GameRegistry.registerBlock(uranusStoneBrickStairs, "uranusStoneBrickStairs");
 
 			GameRegistry.registerBlock(uranusDungeonBrickStoneBlockHalfSlab, UranusDungeonBrickStoneItemSlab.class, "uranusDungeonBrickStonehalfslab");
 			GameRegistry.registerBlock(uranusDungeonBrickStoneBlockDoubleSlab, UranusDungeonBrickStoneItemSlab.class, "uranusDungeonBrickStonefullslab");
@@ -206,6 +231,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			GameRegistry.registerBlock(neptuneStoneBlockHalfSlab, NeptuneStoneItemSlab.class, "neptuneStonehalfslab");
 			GameRegistry.registerBlock(neptuneStoneBlockDoubleSlab, NeptuneStoneItemSlab.class, "neptuneStonefullslab");
 			GameRegistry.registerBlock(neptuneStoneStairs, "neptuneStoneStairs");
+			GameRegistry.registerBlock(neptuneStoneBrickStairs, "neptuneStoneBrickStairs");
 
 			GameRegistry.registerBlock(neptuneDungeonBrickStoneBlockHalfSlab, NeptuneDungeonBrickStoneItemSlab.class, "neptuneDungeonBrickStonehalfslab");
 			GameRegistry.registerBlock(neptuneDungeonBrickStoneBlockDoubleSlab, NeptuneDungeonBrickStoneItemSlab.class, "neptuneDungeonBrickStonefullslab");
@@ -215,11 +241,13 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			GameRegistry.registerBlock(plutoStoneBlockHalfSlab, PlutoStoneItemSlab.class, "plutoStonehalfslab");
 			GameRegistry.registerBlock(plutoStoneBlockDoubleSlab, PlutoStoneItemSlab.class, "plutoStonefullslab");
 			GameRegistry.registerBlock(plutoStoneStairs, "plutoStoneStairs");
+			GameRegistry.registerBlock(plutoStoneBrickStairs, "plutoStoneBrickStairs");
 		}
 		if (Config.eris) {
 			GameRegistry.registerBlock(erisStoneBlockHalfSlab, ErisStoneItemSlab.class, "erisStonehalfslab");
 			GameRegistry.registerBlock(erisStoneBlockDoubleSlab, ErisStoneItemSlab.class, "erisStonefullslab");
 			GameRegistry.registerBlock(erisStoneStairs, "erisStoneStairs");
+			GameRegistry.registerBlock(erisStoneBrickStairs, "erisStoneBrickStairs");
 		}
 	}
 }

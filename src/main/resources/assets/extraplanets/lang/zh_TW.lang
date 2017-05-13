@@ -80,6 +80,7 @@ tile.venus.oreCopper.name=金星銅礦石
 tile.venus.oreCarbon.name=金星碳礦石
 tile.venus.stoneBricks.name=金星石磚
 tile.venus.carbonBlock.name=碳塊
+tile.venus.titaniumBlock.name=Block of Titanium
 
 tile.ceres.surface.name=穀神星地表岩石
 tile.ceres.subSurface.name=穀神星地底岩石
@@ -212,6 +213,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=開普勒22b紫高草
 tile.kepler22bFlowers.greenMapleShortGrass.name=開普勒22b綠矮草
 tile.kepler22bFlowers.greenMapleMedGrass.name=開普勒22b綠中草
 tile.kepler22bFlowers.greenMapleTallGrass.name=開普勒22b綠高草
+tile.redSand.name=Red Sand
+tile.redSandstone.name=Red Sandstone
 
 #Moon Blocks
 tile.callisto.surface.name=木衛四地表岩石
@@ -227,6 +230,7 @@ tile.deimos.stone.name=火衛二石頭
 tile.deimos.oreIron.name=火衛二鐵礦石
 tile.deimos.oreTin.name=火衛二錫礦石
 tile.deimos.oreCopper.name=火衛二銅礦石
+tile.deimos.oreLead.name=Deimos Lead Ore
 
 tile.europa.surface.name=木衛二地表岩石
 tile.europa.subSurface.name=木衛二地底岩石
@@ -248,6 +252,7 @@ tile.phobos.stone.name=火衛一石頭
 tile.phobos.oreIron.name=火衛一鐵礦石
 tile.phobos.oreTin.name=火衛一 錫礦石
 tile.phobos.oreCopper.name=火衛一銅礦石
+tile.phobos.oreLead.name=Phobos Lead Ore
 
 tile.triton.surface.name=海衛一地表岩石
 tile.triton.subSurface.name=海衛一地底岩石
@@ -344,15 +349,25 @@ tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星石臺階
 tile.ExtraPlanets_erisStoneBlockhalfslab.name=鬩神星石臺階
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=水星石樓梯
-tile.venusStoneStairs.name=金星石樓梯
-tile.ceresStoneStairs.name=谷神星石樓梯
-tile.jupiterStoneStairs.name=木星石樓梯
-tile.saturnStoneStairs.name=土星石樓梯
-tile.uranusStoneStairs.name=天王星石樓梯
-tile.neptuneStoneStairs.name=海王星石樓梯
-tile.plutoStoneStairs.name=冥王星石樓梯
-tile.erisStoneStairs.name=鬩神星石樓梯
+tile.mercuryStoneStairs.name=Mercury Stone Stairs
+tile.venusStoneStairs.name=Venus Stone Stairs
+tile.ceresStoneStairs.name=Ceres Stone Stairs
+tile.jupiterStoneStairs.name=Jupiter Stone Stairs
+tile.saturnStoneStairs.name=Saturn Stone Stairs
+tile.uranusStoneStairs.name=Uranus Stone Stairs
+tile.neptuneStoneStairs.name=Neptune Stone Stairs
+tile.plutoStoneStairs.name=Pluto Stone Stairs
+tile.erisStoneStairs.name=Eris Stone Stairs
+
+tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs
+tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs
+tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs
+tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs
+tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs
+tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs
+tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs
+tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs
+tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs
 
 #Dungeon Bricks Slabs
 tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星地牢磚臺階
@@ -399,19 +414,80 @@ tile.treasureChestT6Eris.description=Tier 4 Treasure Chests will generate in Eri
 
 #Machines
 tile.advancedRefinery.name=高級精煉機
+tile.ultimateRefinery.name=Ultimate Refinery
 tile.solar.hybrid.name=混合型高級太陽能電池板
 tile.solar.ultimate.name=最終混合型高級太陽能電池板
 tile.solarhybrid.description=混合型高級太陽能電池板能全天候工作。
 tile.solarultimate.description=最終混合型高級太陽能電池板能全天候工作。
+tile.advancedFuelLoader.name=Advanced Fuel Loader
+tile.ultimateFuelLoader.name=Ultimate Fuel Loader
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
+tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
+tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
+tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
+tile.chargingBlock.name=Vehicle Charger (WIP)
+tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
+tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
+tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
+tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+
+#Machine Containers
 container.solarhybrid.name=混合型高級太陽能電池板
 container.solarultimate.name=最終混合型高級太陽能電池板
+container.vehicle.charger.name=Vehicle Charger
+container.advanced.refinery.name=Advanced Refinery
+container.ultimate.refinery.name=Ultimate Refinery
+container.advanced.oxygencompressor.name=Advanced Oxygen Compressor
+container.advanced.oxygendecompressor.name=Advanced Oxygen Decompressor
+container.ultimate.oxygencompressor.name=Ultimate Oxygen Compressor
+container.ultimate.oxygendecompressor.name=Ultimate Oxygen Decompressor
+container.advanced.fuelloader.name=Advanced Fuel Loader
+container.ultimate.fuelloader.name=Ultimate Fuel Loader
+
+#GUI Messages and Texts
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+gui.button.loadpower.name=Load Power
 
 #Other Blocks
 tile.nuclearBomb.name=核彈
+tile.fireBomb.name=Fire Bomb
 tile.volcanicRock.name=火山岩
+tile.ashBlock.name=Block of Ash
 tile.frozenNitrogen.name=冷凍氮
 tile.denseIce.name=堅冰
 tile.fossil.name=化石塊
+
+#Decorative Blocks
+tile.decorativeBlocks.marble.name=Marble
+tile.decorativeBlocks.marbleBricks.name=Marble Bricks
+tile.decorativeBlocks.snowBricks.name=Snow Bricks
+tile.decorativeBlocks.iceBricks.name=Ice Bricks
+tile.decorativeBlocks.fireBricks.name=Fire Bricks
+tile.decorativeBlocks.blackWhiteFloor.name=Black/White Tiled Floor
+tile.decorativeBlocks.marbleTitledFloor.name=Marble Tiled Floor
+tile.decorativeBlocks.marbleBrokenTitledFloor.name=Marble Broken Tiled Floor
+tile.decorativeBlocks.metalMesh.name=Metal Mesh Floor
+tile.decorativeBlocks.frozenNitrogenBricks.name=Frozen Nitrogen Bricks
+tile.decorativeBlocks.volcanicRockBricks.name=Volcanic Rock Bricks
+tile.decorativeBlocks.carbonTitledFloor.name=Carbon Tiled Floor
+tile.decorativeBlocks.carbonBrokenTitledFloor.name=Carbon Broken Tiled Floor
+tile.decorativeBlocks.magnesiumTitledFloor.name=Magnesium Tiled Floor
+tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Floor
+tile.decorativeBlocks.ashBricks.name=Ash Bricks
+
+#Vehicles
+item.marsRover.name=Driveable Mars Rover (WIP)
+item.venusRover.name=Driveable Venus Rover (WIP)
+
+#Vehicle Electic Parts
+item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
+item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
+item.electricParts.sparkPlug.name=Vehicle Spark Plug
+item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
+item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=4階火箭
@@ -485,6 +561,7 @@ item.tier10.compressedDarkIron.name=緻密黑鐵板
 
 #Ingots
 item.tier4.ingotCarbon.name=碳錠
+item.tier4.ingotVolcanic.name=Volcanic Ingot
 item.tier5.ingotPalladium.name=鈀錠
 item.tier6.ingotMagnesium.name=鎂錠
 item.tier7.ingotCrystal.name=水晶塊
@@ -494,6 +571,12 @@ item.ingotMercury.name=汞錠
 item.ingotUranium.name=鈾錠
 item.tier9.ingotTungsten.name=鎢錠
 item.tier10.ingotDarkIron.name=黑鐵錠
+item.ingotLead.name=Lead Ingot
+
+#Shards
+item.tier4.ashShard.name=Ash Shard
+item.tier4.volcanicShard.name=Volcanic Shard
+item.tier6.magnesiumShard.name=Magnesium Shard
 
 #Gems
 item.tier5.redGem.name=紅寶石
@@ -619,6 +702,9 @@ item.greenDiamondHoe.name=綠鑽鋤
 item.greenDiamondShovel.name=綠鑽鏟
 
 #Schematics
+item.schematicMarsRover.name=NASA Workbench Schematic
+item.schematicVenusRover.name=NASA Workbench Schematic
+
 item.schematicTier4.name=NASA工作臺圖紙
 item.schematicTier5.name=NASA工作臺圖紙
 item.schematicTier6.name=NASA工作臺圖紙
@@ -635,6 +721,9 @@ schematic.tier8.rocket.name=8階火箭
 schematic.tier9.rocket.name=9階火箭
 schematic.tier10.rocket.name=10階火箭
 
+schematic.mars.rover.name=Mars Rover Schematic
+schematic.venus.rover.name=Venus Rover Schematic
+
 schematic.rocketT4.name=4階火箭
 schematic.rocketT5.name=5階火箭
 schematic.rocketT6.name=6階火箭
@@ -642,6 +731,9 @@ schematic.rocketT7.name=7階火箭
 schematic.rocketT8.name=8階火箭
 schematic.rocketT9.name=9階火箭
 schematic.rocketT10.name=10階火箭
+
+schematic.marsRover.name=Mars Rover
+schematic.venusRover.name=Venus Rover
 
 #Batteries
 item.mercuryBattery.name=汞電池
@@ -739,12 +831,20 @@ item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
 item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
 
+#Sticks
+item.tier11.blueSticks.name=Blue Sticks
+item.tier11.redSticks.name=Red Sticks
+item.tier11.yellowSticks.name=Yellow Sticks
+item.tier11.purpleSticks.name=Purple Sticks
+item.tier11.greenSticks.name=Green Sticks
+
 #Other Items
 item.appleDiamond.name=鑽石蘋果
 item.appleIron.name=Iron Apple
 item.cannedfood.cannedFood.name=罐頭食品
-item.bodyparts.arm.name=手
-item.bodyparts.leg.name=腳
+item.tier4.ash.name=Ash
+item.tier4.sledgeHammer.name=Sledge Hammer
+item.tier4.grindingWheel.name=Grinding Wheel
 
 item.cannedfood.dehydratedPorkchop.name=脫水豬排
 item.cannedfood.dehydratedFish.name=脫水魚
@@ -786,6 +886,9 @@ entity.ExtraPlanetsEvolvedRedCreeper.name=紅色爬行者(進化體)
 entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髏(進化體)
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Evolved Mini Enderman
 entity.ExtraPlanetsEvolvedGiantSpider.name=Evolved Giant Spider
+
+entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
+entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
 
 #Achievement
 achievement.mercuryPlanet=登陸水星！

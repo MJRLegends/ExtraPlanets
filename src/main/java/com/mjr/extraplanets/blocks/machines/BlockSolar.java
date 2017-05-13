@@ -27,7 +27,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.TileEntitySolar;
+import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

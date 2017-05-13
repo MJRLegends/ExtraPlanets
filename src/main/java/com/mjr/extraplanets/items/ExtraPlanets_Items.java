@@ -45,6 +45,7 @@ import com.mjr.extraplanets.items.rockets.Tier6Rocket;
 import com.mjr.extraplanets.items.rockets.Tier7Rocket;
 import com.mjr.extraplanets.items.rockets.Tier8Rocket;
 import com.mjr.extraplanets.items.rockets.Tier9Rocket;
+import com.mjr.extraplanets.items.schematics.SchematicMarsRover;
 import com.mjr.extraplanets.items.schematics.SchematicTier10;
 import com.mjr.extraplanets.items.schematics.SchematicTier4;
 import com.mjr.extraplanets.items.schematics.SchematicTier5;
@@ -52,10 +53,13 @@ import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
 import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.schematics.SchematicVenusRover;
 import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier2ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
+import com.mjr.extraplanets.items.vehicles.ItemMarsRover;
+import com.mjr.extraplanets.items.vehicles.ItemVenusRover;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -121,6 +125,7 @@ public class ExtraPlanets_Items {
 	public static Item ingotUranium;
 	public static Item compressedMercury;
 	public static Item ingotMercury;
+	public static Item ingotLead;
 
 	public static Item thermalCloth;
 
@@ -129,6 +134,12 @@ public class ExtraPlanets_Items {
 	public static Item tier4ThermalPadding;
 
 	public static Item wafers;
+
+	public static Item marsRover;
+	public static Item venusRover;
+	public static Item electricParts;
+	public static Item schematicMarsRover;
+	public static Item schematicVenusRover;
 
 	public static void init() {
 		initializeItems();
@@ -252,11 +263,20 @@ public class ExtraPlanets_Items {
 
 		wafers = new ItemWafers("wafer");
 
+		ingotLead = new ItemBasicItem("ingotLead");
+
 		if (Config.batteries) {
 			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
 			if (Config.morePlanetsCompatibility == false)
 				ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
 		}
+
+		marsRover = new ItemMarsRover("marsRover");
+		venusRover = new ItemVenusRover("venusRover");
+		electricParts = new ItemElectricParts("electricParts");
+		
+		schematicMarsRover = new SchematicMarsRover("schematicMarsRover");
+		schematicVenusRover = new SchematicVenusRover("schematicVenusRover");
 	}
 
 	private static void registerItems() {
@@ -357,12 +377,21 @@ public class ExtraPlanets_Items {
 		}
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
+		
+		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName());
 
 		if (Config.batteries) {
 			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName());
 			if (Config.morePlanetsCompatibility == false)
 				GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName());
 		}
+
+		GameRegistry.registerItem(marsRover, marsRover.getUnlocalizedName());
+		GameRegistry.registerItem(venusRover, venusRover.getUnlocalizedName());
+		
+		GameRegistry.registerItem(electricParts, electricParts.getUnlocalizedName());
+		GameRegistry.registerItem(schematicMarsRover, schematicMarsRover.getUnlocalizedName());
+		GameRegistry.registerItem(schematicVenusRover, schematicVenusRover.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {
@@ -415,6 +444,12 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(tier11Items, 1, 2));
 			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(tier11Items, 1, 3));
 			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(tier11Items, 1, 4));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 5));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 6));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 7));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 8));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 9));
 		}
+		OreDictionary.registerOre("ingotLead", new ItemStack(ingotLead));
 	}
 }

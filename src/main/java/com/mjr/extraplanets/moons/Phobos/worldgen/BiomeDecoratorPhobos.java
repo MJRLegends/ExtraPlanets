@@ -14,6 +14,7 @@ public class BiomeDecoratorPhobos extends BiomeDecoratorSpace {
 	private WorldGenerator ironGen;
 	private WorldGenerator gravelGen;
 	private WorldGenerator fossilsGen;
+	private WorldGenerator leadGen;
 
 	private World currentWorld;
 
@@ -23,9 +24,9 @@ public class BiomeDecoratorPhobos extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.phobosBlocks, 8, 3, true, ExtraPlanets_Blocks.phobosBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.phobosGravel, 12, 0, true, ExtraPlanets_Blocks.phobosBlocks, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 1, 0, true, ExtraPlanets_Blocks.phobosBlocks, 1);
-
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		this.leadGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.phobosBlocks, 3, 6, true, ExtraPlanets_Blocks.phobosBlocks, 2);
+		
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -45,6 +46,7 @@ public class BiomeDecoratorPhobos extends BiomeDecoratorSpace {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(1, this.fossilsGen, 0, 256);
+		this.generateOre(5, this.leadGen, 0, 20);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
 		// minY, int maxY);
