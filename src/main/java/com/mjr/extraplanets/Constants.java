@@ -27,6 +27,14 @@ public class Constants {
 	
 	public static final int SPACE_STATION_LOWER_Y_LIMIT = 10;
 	public static final int SPACE_STATION_HIGHER_Y_LIMIT = 1200;
+	
+	public static final float PLANET_AND_MOON_SPAWN_HIGH = 900.0F;
+	public static final double PLANET_AND_MOON_SPAWN_HIGH_D = 900.0D;
+	
+	public static final double SPACE_STATION_SPAWN_HIGH_D = 65.0D;
+	
+	public static final double PLANET_AND_MOON_PARA_CHEST_SPAWN_HIGH_D = 220.0D;
+	public static final double SPACE_STATION_PARA_CHEST_SPAWN_HIGH_D = 90.0D;
 
 	public static final int GEAR_ID_OXYGEN_TANK_VERY_HEAVY = 5000;
 	public static final int GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY = 5001;

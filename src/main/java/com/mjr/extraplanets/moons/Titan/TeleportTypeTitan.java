@@ -2,6 +2,8 @@ package com.mjr.extraplanets.moons.Titan;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
@@ -21,7 +23,7 @@ public class TeleportTypeTitan implements ITeleportType {
 	public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player) {
 		if (player != null) {
 			GCPlayerStats stats = player.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
-			return new Vector3(stats.getCoordsTeleportedFromX(), 900.0, stats.getCoordsTeleportedFromZ());
+			return new Vector3(stats.getCoordsTeleportedFromX(), Constants.PLANET_AND_MOON_SPAWN_HIGH, stats.getCoordsTeleportedFromZ());
 		}
 
 		return null;
@@ -29,14 +31,14 @@ public class TeleportTypeTitan implements ITeleportType {
 
 	@Override
 	public Vector3 getEntitySpawnLocation(WorldServer world, Entity entity) {
-		return new Vector3(entity.posX, 250.0, entity.posZ);
+		return new Vector3(entity.posX, Constants.PLANET_AND_MOON_SPAWN_HIGH_D, entity.posZ);
 	}
 
 	@Override
 	public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand) {
 		final double x = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
 		final double z = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
-		return new Vector3(player.posX + x, 220.0D, player.posZ + z);
+		return new Vector3(player.posX + x, Constants.PLANET_AND_MOON_PARA_CHEST_SPAWN_HIGH_D, player.posZ + z);
 	}
 
 	@Override
