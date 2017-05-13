@@ -9,6 +9,7 @@ import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
@@ -289,17 +290,17 @@ public class ExtraPlanets_Items {
 			TIER_1_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier1_un_prepared_space_suit_chest");
 			TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier1_un_prepared_space_suit_legings");
 			TIER_1_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier1_un_prepared_space_suit_boots");
-			
+
 			TIER_2_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier2_un_prepared_space_suit_helmet");
 			TIER_2_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier2_un_prepared_space_suit_chest");
 			TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier2_un_prepared_space_suit_legings");
 			TIER_2_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier2_un_prepared_space_suit_boots");
-			
+
 			TIER_3_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier3_un_prepared_space_suit_helmet");
 			TIER_3_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier3_un_prepared_space_suit_chest");
 			TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier3_un_prepared_space_suit_legings");
 			TIER_3_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier3_un_prepared_space_suit_boots");
-			
+
 			TIER_4_UNPREPARED_SPACE_SUIT_HELMET = new ItemBasicItem("tier4_un_prepared_space_suit_helmet");
 			TIER_4_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier4_un_prepared_space_suit_chest");
 			TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier4_un_prepared_space_suit_legings");
@@ -532,27 +533,27 @@ public class ExtraPlanets_Items {
 
 	public static void registerGearItems() {
 		if (Config.OXYGEN_TANKS) {
-			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_VERY_HEAVY);
-			GalacticraftRegistry.registerGear(5000, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_VERY_HEAVY);
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_VERY_HEAVY, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_VERY_HEAVY);
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_VERY_HEAVY);
 
 			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 			GalacticraftRegistry.registerGear(5001, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 		}
 		if (Config.THERMAL_PADDINGS) {
-			GalacticraftRegistry.registerGear(6000, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_3_THERMAL_PADDING, 1, 0));
-			GalacticraftRegistry.registerGear(6001, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_3_THERMAL_PADDING, 1, 1));
-			GalacticraftRegistry.registerGear(6002, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_3_THERMAL_PADDING, 1, 2));
-			GalacticraftRegistry.registerGear(6003, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_3_THERMAL_PADDING, 1, 3));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_HELMET, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_3_THERMAL_PADDING, 1, 0));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_CHESTPLATE, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_3_THERMAL_PADDING, 1, 1));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_LEGGINGS, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_3_THERMAL_PADDING, 1, 2));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_BOOTS, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_3_THERMAL_PADDING, 1, 3));
 
-			GalacticraftRegistry.registerGear(6004, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_4_THERMAL_PADDING, 1, 0));
-			GalacticraftRegistry.registerGear(6005, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_4_THERMAL_PADDING, 1, 1));
-			GalacticraftRegistry.registerGear(6006, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_4_THERMAL_PADDING, 1, 2));
-			GalacticraftRegistry.registerGear(6007, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_4_THERMAL_PADDING, 1, 3));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T4_HELMET, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_4_THERMAL_PADDING, 1, 0));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T4_CHESTPLATE, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_4_THERMAL_PADDING, 1, 1));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T4_LEGGINGS, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_4_THERMAL_PADDING, 1, 2));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T4_BOOTS, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_4_THERMAL_PADDING, 1, 3));
 
-			GalacticraftRegistry.registerGear(6008, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_5_THERMAL_PADDING, 1, 0));
-			GalacticraftRegistry.registerGear(6009, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_5_THERMAL_PADDING, 1, 1));
-			GalacticraftRegistry.registerGear(6010, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_5_THERMAL_PADDING, 1, 2));
-			GalacticraftRegistry.registerGear(6011, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_5_THERMAL_PADDING, 1, 3));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T5_HELMET, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_5_THERMAL_PADDING, 1, 0));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T5_CHESTPLATE, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_5_THERMAL_PADDING, 1, 1));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T5_LEGGINGS, EnumExtendedInventorySlot.THERMAL_LEGGINGS, new ItemStack(TIER_5_THERMAL_PADDING, 1, 2));
+			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T5_BOOTS, EnumExtendedInventorySlot.THERMAL_BOOTS, new ItemStack(TIER_5_THERMAL_PADDING, 1, 3));
 		}
 	}
 }
