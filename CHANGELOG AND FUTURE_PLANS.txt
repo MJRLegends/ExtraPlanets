@@ -14,6 +14,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.3.5 Beta Build
+*Fixed Advanced and Ultimate Fuel Loader crash issue
+*Improvements for machine front textures
+
 v0.3.4 Beta Build
 *Updated Galacticraft API to latest
 *Fixed texture issue with the Iron & Diamond Apples
