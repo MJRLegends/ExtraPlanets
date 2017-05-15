@@ -168,4 +168,9 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.TITAN;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

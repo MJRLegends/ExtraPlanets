@@ -171,4 +171,10 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.RHEA;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+
+		return 0;
+	}
 }

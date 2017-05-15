@@ -171,4 +171,9 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.CALLISTO;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

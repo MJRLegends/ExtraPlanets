@@ -158,4 +158,9 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 	public int getSolarRadiationLevel() {
 		return 50;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

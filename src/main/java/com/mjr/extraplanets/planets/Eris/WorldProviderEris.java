@@ -160,4 +160,9 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	public int getSolarRadiationLevel() {
 		return 50;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

@@ -161,4 +161,9 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.NEPTUNE;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

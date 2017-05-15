@@ -161,4 +161,9 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.SATURN;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

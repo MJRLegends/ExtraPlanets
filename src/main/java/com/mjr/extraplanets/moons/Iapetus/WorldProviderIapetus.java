@@ -171,4 +171,9 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.IAPETUS;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

@@ -159,4 +159,9 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.KEPLER22B;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

@@ -168,4 +168,9 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.DEIMOS;
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

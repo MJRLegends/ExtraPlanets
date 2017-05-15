@@ -161,4 +161,9 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.PLUTO;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

@@ -171,4 +171,9 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.TITAN;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

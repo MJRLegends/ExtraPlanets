@@ -171,4 +171,9 @@ public class WorldProviderOberon extends WorldProviderSpace implements IGalactic
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.OBERON;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

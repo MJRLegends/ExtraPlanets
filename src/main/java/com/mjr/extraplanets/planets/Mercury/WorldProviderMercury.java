@@ -162,4 +162,9 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.MERCURY;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

@@ -161,4 +161,9 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.URANUS;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

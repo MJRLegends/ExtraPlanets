@@ -161,4 +161,9 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.JUPITER;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

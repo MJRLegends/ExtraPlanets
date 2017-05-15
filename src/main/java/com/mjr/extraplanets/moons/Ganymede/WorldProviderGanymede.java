@@ -171,4 +171,9 @@ public class WorldProviderGanymede extends WorldProviderSpace implements IGalact
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.GANYMEDE;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

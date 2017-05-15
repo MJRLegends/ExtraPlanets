@@ -171,4 +171,9 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.EUROPA;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

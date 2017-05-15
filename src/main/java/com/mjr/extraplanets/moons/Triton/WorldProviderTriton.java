@@ -171,4 +171,9 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.TRITION;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

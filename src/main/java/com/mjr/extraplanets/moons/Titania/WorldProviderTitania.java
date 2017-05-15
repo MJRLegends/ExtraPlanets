@@ -171,4 +171,9 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.TITANIA;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

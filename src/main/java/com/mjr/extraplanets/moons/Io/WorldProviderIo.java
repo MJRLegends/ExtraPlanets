@@ -171,4 +171,9 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.IO;
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }
