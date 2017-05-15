@@ -14,6 +14,21 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.3.6 Beta Build
+*Updated Galacticraft API to latest
+*Small fixes due to Updating to Latest GC API
+*Added custom textures for most Tiered GC machines
+*Fixed texture issues
+*Added missing item textures
+*Added missing celestialbodies textures
+*Refactor some TeleportType info to Constants class
+*Refactor Space Station teleport to planet and to teleport values to Constants class
+*Refactor Config Categories to Constants class
+*Made mcmod.info version be filled in via build.gradle file
+*More Refactoring of Info to Constants class
+*Refactor GEAR ID's to Constants class
+*Refactor most (float) references to PI to use Constants. (Match GC changes)
+
 v0.3.5 Beta Build
 *Fixed Advanced and Ultimate Fuel Loader crash issue
 *Improvements for machine front textures
