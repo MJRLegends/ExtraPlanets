@@ -260,6 +260,8 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket");
 		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket");
 		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad");
+		ClientUtilities.addExtraPlanetsVariants("advanced_oxygen_compressor", "advanced_oxygen_compressor", "advanced_oxygen_decompressor");
+		ClientUtilities.addExtraPlanetsVariants("ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
 
 	}
 
