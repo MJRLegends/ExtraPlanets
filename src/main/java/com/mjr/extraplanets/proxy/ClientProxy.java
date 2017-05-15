@@ -936,6 +936,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_GRAVITY_BOOTS);
 
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_HELMET);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST);
