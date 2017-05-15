@@ -1,12 +1,12 @@
 {
     "variants": {
-        "facing=north,type=hybrid_solar": { "model": "galacticraftcore:advanced_solar_model" },
-        "facing=east,type=hybrid_solar":  { "model": "galacticraftcore:advanced_solar_model", "y": 90 },
-        "facing=west,type=hybrid_solar":  { "model": "galacticraftcore:advanced_solar_model", "y": 270 },
-        "facing=south,type=hybrid_solar": { "model": "galacticraftcore:advanced_solar_model", "y": 180 },
-        "facing=north,type=ultimate_solar": { "model": "galacticraftcore:advanced_solar_model" },
-        "facing=east,type=ultimate_solar":  { "model": "galacticraftcore:advanced_solar_model", "y": 90 },
-        "facing=west,type=ultimate_solar":  { "model": "galacticraftcore:advanced_solar_model", "y": 270 },
-        "facing=south,type=ultimate_solar": { "model": "galacticraftcore:advanced_solar_model", "y": 180 }
+        "facing=north,type=hybrid_solar": { "model": "extraplanets:hybrid_solar_model" },
+        "facing=east,type=hybrid_solar":  { "model": "extraplanets:hybrid_solar_model", "y": 90 },
+        "facing=west,type=hybrid_solar":  { "model": "extraplanets:hybrid_solar_model", "y": 270 },
+        "facing=south,type=hybrid_solar": { "model": "extraplanets:hybrid_solar_model", "y": 180 },
+        "facing=north,type=ultimate_solar": { "model": "extraplanets:ultimate_solar_model" },
+        "facing=east,type=ultimate_solar":  { "model": "extraplanets:ultimate_solar_model", "y": 90 },
+        "facing=west,type=ultimate_solar":  { "model": "extraplanets:ultimate_solar_model", "y": 270 },
+        "facing=south,type=ultimate_solar": { "model": "extraplanets:ultimate_solar_model", "y": 180 }
     }
 }

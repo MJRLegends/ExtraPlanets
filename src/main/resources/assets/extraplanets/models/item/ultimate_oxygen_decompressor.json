@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/ultimate_fuel_loader_model",
+    "parent":"extraplanets:block/ultimate_decompressor_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

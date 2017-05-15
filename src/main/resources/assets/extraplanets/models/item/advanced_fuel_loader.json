@@ -1,5 +1,5 @@
 {
-    "parent":"galacticraftcore:block/fuel_loader_model",
+    "parent":"extraplanets:block/advanced_fuel_loader_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

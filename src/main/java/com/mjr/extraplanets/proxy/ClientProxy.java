@@ -547,16 +547,16 @@ public class ClientProxy extends CommonProxy {
 		if (Config.REFINERY_ULTIMATE)
 			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.REFINERY_ULTIMATE, 0, "refinery");
 		if (Config.SOLAR_PANELS) {
-			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.SOLAR_PANEL, 0, "advanced_solar");
-			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.SOLAR_PANEL, 4, "advanced_solar");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.SOLAR_PANEL, 0, "hybrid_solar");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.SOLAR_PANEL, 4, "ultimate_solar");
 		}
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED) {
-			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 0, "oxygen_compressor");
-			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 4, "oxygen_decompressor");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 0, "advanced_oxygen_compressor");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 4, "advanced_oxygen_decompressor");
 		}
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE) {
-			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 0, "oxygen_compressor");
-			ClientUtilities.registerBlockJson(micdoodle8.mods.galacticraft.core.Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 4, "oxygen_decompressor");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 0, "ultimate_oxygen_compressor");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 4, "ultimate_oxygen_decompressor");
 		}
 		if (Config.RADIATION) {
 			if (Config.BASIC_CHEMICAL_INJECTOR)

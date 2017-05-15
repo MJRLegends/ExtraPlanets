@@ -3,8 +3,8 @@
     "defaults": {
                     "textures": {
                     "particle": "galacticraftcore:blocks/machine",
-                    "front": "galacticraftcore:blocks/machine_fuelloader",
-                    "rear": "galacticraftcore:blocks/machine_fuelloader",
+                    "front": "extraplanets:blocks/machine_advanced_fuelloader",
+                    "rear": "extraplanets:blocks/machine_advanced_fuelloader",
                     "side": "galacticraftcore:blocks/machine_side",
                     "el_in": "galacticraftcore:blocks/machine_input",
                     "el_out": "galacticraftcore:blocks/machine_oil_input",
@@ -12,7 +12,7 @@
                     "base": "galacticraftcore:blocks/machine"  }
     },
     "variants": {
-        "inventory": [{ "model": "galacticraftcore:fuel_loader_model" }],
+        "inventory": [{ "model": "extraplanets:advanced_fuel_loader_model" }],
 
         "facing" : {
            "north": { },
