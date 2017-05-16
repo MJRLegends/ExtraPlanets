@@ -178,7 +178,6 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		GalacticraftVersionChecker.run();
 		Config.load();
 		// Planets Events
 		if (Config.mercury)
@@ -302,6 +301,8 @@ public class ExtraPlanets {
 		// Initialize/Register Achievements
 		if (Config.achievements)
 			ExtraPlanets_Achievements.init();
+
+		GalacticraftVersionChecker.run();
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
