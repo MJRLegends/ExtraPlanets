@@ -7,6 +7,7 @@ import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeCategory;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeHandler;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeMaker;
@@ -33,18 +34,19 @@ import com.mjr.extraplanets.jei.rockets.tier9.Tier9RocketRecipeMaker;
 public class ExtraPlanetsJEI extends BlankModPlugin {
 	@Override
 	public void register(@Nonnull IModRegistry registry) {
-		IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
-		registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper), new Tier8RocketRecipeCategory(guiHelper),
-				new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper));
-		registry.addRecipeHandlers(new Tier4RocketRecipeHandler(), new Tier5RocketRecipeHandler(), new Tier6RocketRecipeHandler(), new Tier7RocketRecipeHandler(), new Tier8RocketRecipeHandler(), new Tier9RocketRecipeHandler(),
-				new Tier10RocketRecipeHandler());
-		registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList());
-		registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList());
-		registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList());
-		registry.addRecipes(Tier7RocketRecipeMaker.getRecipesList());
-		registry.addRecipes(Tier8RocketRecipeMaker.getRecipesList());
-		registry.addRecipes(Tier9RocketRecipeMaker.getRecipesList());
-		registry.addRecipes(Tier10RocketRecipeMaker.getRecipesList());
-
+		if (Config.JEI_SUPPORT) {
+			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
+			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
+					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper));
+			registry.addRecipeHandlers(new Tier4RocketRecipeHandler(), new Tier5RocketRecipeHandler(), new Tier6RocketRecipeHandler(), new Tier7RocketRecipeHandler(), new Tier8RocketRecipeHandler(), new Tier9RocketRecipeHandler(),
+					new Tier10RocketRecipeHandler());
+			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList());
+			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList());
+			registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList());
+			registry.addRecipes(Tier7RocketRecipeMaker.getRecipesList());
+			registry.addRecipes(Tier8RocketRecipeMaker.getRecipesList());
+			registry.addRecipes(Tier9RocketRecipeMaker.getRecipesList());
+			registry.addRecipes(Tier10RocketRecipeMaker.getRecipesList());
+		}
 	}
 }

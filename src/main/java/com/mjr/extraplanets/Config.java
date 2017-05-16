@@ -40,7 +40,7 @@ public class Config {
 	public static boolean OXYGEN_COMPRESSOR_ULTIMATE;
 	public static boolean SLABS_AND_STAIRS = false;
 	public static boolean NUCLEAR_BOMB;
-
+	
 	public static boolean BASIC_DECRYSTALLIZER;
 	public static boolean BASIC_CRYSTALLIZER;
 	public static boolean BASIC_SMASHER;
@@ -197,6 +197,7 @@ public class Config {
 	public static int SCHEMATIC_TIER_10_PAGE_ID;
 
 	public static boolean NEI_SUPPORT;
+	public static boolean JEI_SUPPORT;
 	public static boolean ACHIEVEMENTS;
 
 	public static boolean PRESSURE;
@@ -411,6 +412,8 @@ public class Config {
 		SCHEMATIC_TIER_10_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 10 Page ID", 6672).getInt();
 
 		NEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "").getBoolean(true);
+		JEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable JEI Recipe support", true, "").getBoolean(true);
+
 		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
 
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable achievements", true, "").getBoolean(true);
