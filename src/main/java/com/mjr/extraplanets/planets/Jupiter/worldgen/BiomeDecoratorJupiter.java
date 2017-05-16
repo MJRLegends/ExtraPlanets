@@ -9,8 +9,8 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.worldGen.features.WorldGenBasicHideout;
-import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
+import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
+import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 

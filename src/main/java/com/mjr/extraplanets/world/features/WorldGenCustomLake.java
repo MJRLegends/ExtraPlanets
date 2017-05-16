@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.worldGen.features;
+package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 

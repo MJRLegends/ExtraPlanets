@@ -11,9 +11,9 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.worldGen.features.WorldGenCustomIceSpike;
-import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
-import com.mjr.extraplanets.worldGen.features.WorldGenIgloo;
+import com.mjr.extraplanets.world.features.WorldGenCustomIceSpike;
+import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.world.features.WorldGenIgloo;
 
 public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 

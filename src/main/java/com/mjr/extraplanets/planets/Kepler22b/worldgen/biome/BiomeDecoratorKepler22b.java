@@ -14,17 +14,17 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
-import com.mjr.extraplanets.worldGen.features.WorldGenBigBlueTree;
-import com.mjr.extraplanets.worldGen.features.WorldGenBigPurpleTree;
-import com.mjr.extraplanets.worldGen.features.WorldGenBigRedTree;
-import com.mjr.extraplanets.worldGen.features.WorldGenBlueHut;
-import com.mjr.extraplanets.worldGen.features.WorldGenBlueTower;
-import com.mjr.extraplanets.worldGen.features.WorldGenBrownHut;
-import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
-import com.mjr.extraplanets.worldGen.features.WorldGenGreenHut;
-import com.mjr.extraplanets.worldGen.features.WorldGenPurpleHut;
-import com.mjr.extraplanets.worldGen.features.WorldGenRedHut;
-import com.mjr.extraplanets.worldGen.features.WorldGenYellowHut;
+import com.mjr.extraplanets.world.features.WorldGenBigBlueTree;
+import com.mjr.extraplanets.world.features.WorldGenBigPurpleTree;
+import com.mjr.extraplanets.world.features.WorldGenBigRedTree;
+import com.mjr.extraplanets.world.features.WorldGenBlueHut;
+import com.mjr.extraplanets.world.features.WorldGenBlueTower;
+import com.mjr.extraplanets.world.features.WorldGenBrownHut;
+import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.world.features.WorldGenGreenHut;
+import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
+import com.mjr.extraplanets.world.features.WorldGenRedHut;
+import com.mjr.extraplanets.world.features.WorldGenYellowHut;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
 

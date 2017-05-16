@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.worldGen.features;
+package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
@@ -11,9 +11,9 @@ import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-public class WorldGenRedHut extends WorldGenerator {
+public class WorldGenGreenHut extends WorldGenerator {
 
-	public WorldGenRedHut() {
+	public WorldGenGreenHut() {
 
 	}
 
@@ -32,7 +32,7 @@ public class WorldGenRedHut extends WorldGenerator {
 		if (!world.checkChunksExist(x - 10, y, z - 10, x + 10, y, z + 10))
 			return false;
 		else {
-			// System.out.println("Spawning Red Hut at (x, y, z)" + x + " " + y
+			// System.out.println("Spawning Green Hut at (x, y, z)" + x + " " + y
 			// + " " + z);
 			generate_r0(world, rand, x, y, z);
 			fillChests(world, rand, x, y, z);
@@ -49,11 +49,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 0, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 0, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 0, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 0, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 0, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 0, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 0, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 0, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 0, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 0, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 0, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 0, z + 2, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 0, z + 2, Blocks.air, 0, 3);
@@ -84,11 +84,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 0, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 0, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 0, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 0, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 0, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 0, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 0, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 0, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 0, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 0, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 0, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 0, z + 7, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 0, z + 7, Blocks.air, 0, 3);
@@ -119,11 +119,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 1, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 1, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 1, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 1, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 1, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 1, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 1, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 1, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 1, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 1, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 1, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 1, z + 2, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 1, z + 2, Blocks.air, 0, 3);
@@ -154,11 +154,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 1, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 1, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 1, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 1, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 1, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 1, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 1, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 1, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 1, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 1, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 1, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 1, z + 7, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 1, z + 7, Blocks.air, 0, 3);
@@ -189,11 +189,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 2, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 2, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 2, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 2, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 2, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 2, z + 1, Blocks.oak_stairs, 6, 3);
 		world.setBlock(x + 3, y + 2, z + 1, Blocks.oak_stairs, 6, 3);
 		world.setBlock(x + 4, y + 2, z + 1, Blocks.oak_stairs, 6, 3);
-		world.setBlock(x + 5, y + 2, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 2, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 2, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 2, z + 2, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 2, z + 2, Blocks.oak_stairs, 4, 3);
@@ -224,11 +224,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 2, z + 5, Blocks.oak_stairs, 5, 3);
 		world.setBlock(x + 6, y + 2, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 2, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 2, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 2, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 2, z + 6, Blocks.fence, 0, 3);
 		world.setBlock(x + 3, y + 2, z + 6, Blocks.oak_stairs, 3, 3);
 		world.setBlock(x + 4, y + 2, z + 6, Blocks.fence, 0, 3);
-		world.setBlock(x + 5, y + 2, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 2, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 2, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 2, z + 7, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 2, z + 7, Blocks.air, 0, 3);
@@ -259,11 +259,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 3, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 3, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 3, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 3, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 3, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 3, z + 1, Blocks.fence, 0, 3);
 		world.setBlock(x + 3, y + 3, z + 1, Blocks.fence, 0, 3);
 		world.setBlock(x + 4, y + 3, z + 1, Blocks.fence, 0, 3);
-		world.setBlock(x + 5, y + 3, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 3, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 3, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 3, z + 2, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 3, z + 2, Blocks.fence, 0, 3);
@@ -294,11 +294,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 3, z + 5, Blocks.fence, 0, 3);
 		world.setBlock(x + 6, y + 3, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 3, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 3, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 3, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 3, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 3, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 3, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 3, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 3, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 3, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 3, z + 7, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 3, z + 7, Blocks.air, 0, 3);
@@ -329,11 +329,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 4, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 4, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 4, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 4, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 4, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 4, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 4, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 4, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 4, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 4, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 4, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 4, z + 2, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 4, z + 2, Blocks.air, 0, 3);
@@ -364,11 +364,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 4, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 4, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 4, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 1, y + 4, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 4, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 4, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 4, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 4, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 4, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 4, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 4, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 0, y + 4, z + 7, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 4, z + 7, Blocks.air, 0, 3);
@@ -399,11 +399,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 5, z + 0, Blocks.oak_stairs, 2, 3);
 		world.setBlock(x + 6, y + 5, z + 0, Blocks.oak_stairs, 1, 3);
 		world.setBlock(x + 0, y + 5, z + 1, Blocks.oak_stairs, 0, 3);
-		world.setBlock(x + 1, y + 5, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 5, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 5, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 5, z + 1, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 5, z + 1, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 5, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 5, z + 1, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 5, z + 1, Blocks.oak_stairs, 1, 3);
 		world.setBlock(x + 0, y + 5, z + 2, Blocks.oak_stairs, 0, 3);
 		world.setBlock(x + 1, y + 5, z + 2, Blocks.air, 0, 3);
@@ -434,11 +434,11 @@ public class WorldGenRedHut extends WorldGenerator {
 		world.setBlock(x + 5, y + 5, z + 5, Blocks.air, 0, 3);
 		world.setBlock(x + 6, y + 5, z + 5, Blocks.oak_stairs, 1, 3);
 		world.setBlock(x + 0, y + 5, z + 6, Blocks.oak_stairs, 0, 3);
-		world.setBlock(x + 1, y + 5, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 1, y + 5, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 2, y + 5, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 3, y + 5, z + 6, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 5, z + 6, Blocks.air, 0, 3);
-		world.setBlock(x + 5, y + 5, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 1, 3);
+		world.setBlock(x + 5, y + 5, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog2, 0, 3);
 		world.setBlock(x + 6, y + 5, z + 6, Blocks.oak_stairs, 1, 3);
 		world.setBlock(x + 0, y + 5, z + 7, Blocks.oak_stairs, 0, 3);
 		world.setBlock(x + 1, y + 5, z + 7, Blocks.oak_stairs, 3, 3);
