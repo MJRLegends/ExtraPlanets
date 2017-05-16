@@ -28,12 +28,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(240 / 255.0F * f, 160 / 255.0F * f, 55 / 255.0F * f);
 	}
-
-	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
+	
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -42,11 +37,6 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	@Override
 	public long getDayLength() {
 		return 24000L;
-	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
 	}
 
 	@Override
@@ -105,18 +95,8 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.SATURN;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
 	}
 
 	@Override
@@ -125,11 +105,6 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 			return 80.0F;
 		}
 		return 70.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 0.0F;
 	}
 
 	@Override
@@ -146,17 +121,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	public int getSolarRadiationLevel() {
 		return 30;
 	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
-	}
-
+	
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.SATURN;

@@ -4,6 +4,7 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
+import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.util.ResourceLocation;
@@ -74,6 +75,7 @@ public class ExtraPlanets_Planets {
 			MERCURY.atmosphereComponent(IAtmosphericGas.HYDROGEN);
 			MERCURY.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
 			MERCURY.setDimensionInfo(Config.MERCURY_ID, WorldProviderMercury.class);
+			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, 50.0F, 0.0F, 0.1F));
 		}
 		if (Config.CERES) {
 			CERES = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -85,6 +87,7 @@ public class ExtraPlanets_Planets {
 			CERES.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);
 			CERES.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"));
 			CERES.setDimensionInfo(Config.CERES_ID, WorldProviderCeres.class);
+			CERES.setAtmosphere(new AtmosphereInfo(false, false, false, -1.5F, 5.0F, 0.1F));
 		}
 		if (Config.JUPITER) {
 			JUPITER = new Planet("Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -96,6 +99,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);
 			JUPITER.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"));
 			JUPITER.setDimensionInfo(Config.JUPITER_ID, WorldProviderJupiter.class);
+			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, false, 100.0F, 3.0F, 0.1F));
 		}
 		if (Config.SATURN) {
 			SATURN = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -107,6 +111,7 @@ public class ExtraPlanets_Planets {
 			SATURN.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
+			SATURN.setAtmosphere(new AtmosphereInfo(false, false, false, 80.0F, 0.0F, 0.1F));
 		}
 		if (Config.URANUS) {
 			URANUS = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -118,6 +123,7 @@ public class ExtraPlanets_Planets {
 			URANUS.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE).atmosphereComponent(IAtmosphericGas.WATER);
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
+			URANUS.setAtmosphere(new AtmosphereInfo(false, false, false, -120.0F, 4.0F, 0.1F));
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -129,6 +135,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
+			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
 		}
 		if (Config.PLUTO) {
 			PLUTO = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -140,6 +147,7 @@ public class ExtraPlanets_Planets {
 			PLUTO.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
 			PLUTO.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
 			PLUTO.setDimensionInfo(Config.PLUTO_ID, WorldProviderPluto.class);
+			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
 		}
 		if (Config.ERIS) {
 			ERIS = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -151,6 +159,7 @@ public class ExtraPlanets_Planets {
 			ERIS.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
 			ERIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			ERIS.setDimensionInfo(Config.ERIS_ID, WorldProviderEris.class);
+			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, -150.0F, 5.0F, 0.1F));
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
@@ -162,6 +171,7 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER).atmosphereComponent(IAtmosphericGas.OXYGEN);
 			KEPLER22B.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
 			KEPLER22B.setDimensionInfo(Config.KEPLER22B_ID, WorldProviderKepler22b.class);
+			KEPLER22B.setAtmosphere(new AtmosphereInfo(true, true, false, 0.0F, 5.0F, 0.05F));
 		}
 		if (Config.KUIPER_BELT) {
 			KUIPER_BELT = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);

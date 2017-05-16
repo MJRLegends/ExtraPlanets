@@ -30,11 +30,6 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -42,11 +37,6 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	@Override
 	public long getDayLength() {
 		return 24000L;
-	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
 	}
 
 	@Override
@@ -105,18 +95,8 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.URANUS;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
 	}
 
 	@Override
@@ -125,11 +105,6 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 			return -120.0F;
 		}
 		return -115.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 4.0F;
 	}
 
 	@Override
@@ -145,16 +120,6 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	@Override
 	public int getSolarRadiationLevel() {
 		return 25;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

@@ -30,11 +30,6 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -42,11 +37,6 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	@Override
 	public long getDayLength() {
 		return 24000L;
-	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
 	}
 
 	@Override
@@ -105,18 +95,8 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.NEPTUNE;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
 	}
 
 	@Override
@@ -126,12 +106,7 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 		}
 		return -130.0F;
 	}
-
-	@Override
-	public float getWindLevel() {
-		return 5.0F;
-	}
-
+	
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 2.0D;
@@ -145,16 +120,6 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	@Override
 	public int getSolarRadiationLevel() {
 		return 10;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

@@ -28,12 +28,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(234f / 255.0F * f, 223f / 255.0F * f, 242f / 255.0F * f);
 	}
-
-	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
+	
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -43,12 +38,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	public long getDayLength() {
 		return 24000L;
 	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
-	}
-
+	
 	@Override
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEris.class;
@@ -104,46 +94,13 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.ERIS;
 	}
 
 	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return -150.0F;
-		}
-		return -150.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 5.0F;
-	}
-
-	@Override
 	public double getSolarEnergyMultiplier() {
 		return 2.0D;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

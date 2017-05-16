@@ -28,12 +28,6 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
 	}
-
-	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -42,11 +36,6 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	@Override
 	public long getDayLength() {
 		return 24000L;
-	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
 	}
 
 	@Override
@@ -105,31 +94,8 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.PLUTO;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return -140.0F;
-		}
-		return -140.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 5.0F;
 	}
 
 	@Override
@@ -145,16 +111,6 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	@Override
 	public int getSolarRadiationLevel() {
 		return 12;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

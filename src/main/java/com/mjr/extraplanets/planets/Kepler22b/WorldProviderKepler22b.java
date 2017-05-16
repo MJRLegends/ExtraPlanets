@@ -31,11 +31,6 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return true;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return true;
 	}
@@ -43,11 +38,6 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	@Override
 	public long getDayLength() {
 		return 24000L;
-	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
 	}
 
 	@Override
@@ -106,23 +96,8 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 5.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.KEPLER22B;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return true;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		return 0F;
 	}
 
 	@Override
@@ -143,16 +118,6 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	@Override
 	public int getSolarRadiationLevel() {
 		return 0;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

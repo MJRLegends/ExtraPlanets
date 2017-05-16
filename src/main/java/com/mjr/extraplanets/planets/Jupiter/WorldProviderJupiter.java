@@ -30,11 +30,6 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -42,11 +37,6 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	@Override
 	public long getDayLength() {
 		return 24000L;
-	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
 	}
 
 	@Override
@@ -103,20 +93,10 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	public float getFallDamageModifier() {
 		return 0.38F;
 	}
-
-	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
+	
 	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.JUPITER;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
 	}
 
 	@Override
@@ -126,12 +106,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 		}
 		return 90.0F;
 	}
-
-	@Override
-	public float getWindLevel() {
-		return 3.0F;
-	}
-
+	
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 8.0D;
@@ -145,16 +120,6 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	@Override
 	public int getSolarRadiationLevel() {
 		return 35;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

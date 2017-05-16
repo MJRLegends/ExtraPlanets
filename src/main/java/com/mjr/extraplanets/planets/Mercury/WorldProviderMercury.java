@@ -31,11 +31,6 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -43,11 +38,6 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	@Override
 	public long getDayLength() {
 		return 24000L;
-	}
-
-	@Override
-	public boolean shouldForceRespawn() {
-		return true;
 	}
 
 	@Override
@@ -106,31 +96,8 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.MERCURY;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return 50.0F;
-		}
-		return 50.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 0.0F;
 	}
 
 	@Override
@@ -146,16 +113,6 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	@Override
 	public int getSolarRadiationLevel() {
 		return 100;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override
