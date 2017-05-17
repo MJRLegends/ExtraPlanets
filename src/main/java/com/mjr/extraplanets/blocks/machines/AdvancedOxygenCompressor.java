@@ -51,6 +51,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements ItemB
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public int getRenderType() {
 		return ClientProxy.getBlockRender(this);
 	}
