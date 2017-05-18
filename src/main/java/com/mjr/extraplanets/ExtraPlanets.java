@@ -93,6 +93,7 @@ import com.mjr.extraplanets.schematic.SchematicTier9Rocket;
 import com.mjr.extraplanets.schematic.SchematicVenusRover;
 import com.mjr.extraplanets.util.RegisterHelper;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -101,6 +102,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = "required-after:GalacticraftCore;required-after:GalacticraftMars;;required-after:Forge@[10.13.4.1558,);")
 public class ExtraPlanets {
@@ -302,7 +304,8 @@ public class ExtraPlanets {
 		if (Config.achievements)
 			ExtraPlanets_Achievements.init();
 
-		GalacticraftVersionChecker.run();
+		if (FMLCommonHandler.instance().getSide() == Side.CLIENT)
+			GalacticraftVersionChecker.run();
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
