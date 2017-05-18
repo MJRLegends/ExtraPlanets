@@ -14,6 +14,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4 Beta Build
+*Changed planets to use new Atmosphere Info system
+*Added Tier 4 - 10 Rocket JEI recipe support
+
+*Added Tier 4 - 10 Rocket & Custom CircuitFabricator NEI recipe support
+
 v0.3.6 Beta Build
 *Updated Galacticraft API to latest
 *Small fixes due to Updating to Latest GC API
