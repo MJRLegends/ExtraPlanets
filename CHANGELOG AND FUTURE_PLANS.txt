@@ -42,6 +42,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.7.2
+*Fixed dedicated server crash
+
 v1.7.1
 *Refactor world gen features to worldgen pack from world package
 *Fixed crash issue when disabling Eris via config (Micro Blocks registering)
