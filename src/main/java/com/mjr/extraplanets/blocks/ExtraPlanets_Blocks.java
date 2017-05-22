@@ -651,15 +651,15 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 11); // Carbon Block
 		}
 		if (Config.venus) {
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 6); // Carbon Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 7); // Carbon Block
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 8); // Stone Bricks
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 2, 6); // Carbon Ore
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 1, 7); // Carbon Block
+			RegisterHelper.setHarvestLevel(venusBlocks, "pickaxe", 1, 8); // Stone Bricks
 
 		}
 		if (Config.jupiter) {
