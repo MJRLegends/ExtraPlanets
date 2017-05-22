@@ -182,7 +182,7 @@ public class ExtraPlanets_Items {
 		if (Config.saturn) {
 			glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
 
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				tier6Rocket = new Tier6Rocket("itemTier6Rocket");
 				schematicTier6 = new SchematicTier6("schematicTier6");
 				noseConeTier6 = new Tier6NoseCone("noseConeTier6");
@@ -196,7 +196,7 @@ public class ExtraPlanets_Items {
 		if (Config.uranus) {
 			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
 
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				tier7Rocket = new Tier7Rocket("itemTier7Rocket");
 				schematicTier7 = new SchematicTier7("schematicTier7");
 				noseConeTier7 = new Tier7NoseCone("noseConeTier7");
@@ -212,7 +212,7 @@ public class ExtraPlanets_Items {
 				zincBattery = new ItemBasicBattery("zincBattery", 125000f, 2);
 			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
 
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				tier8Rocket = new Tier8Rocket("itemTier8Rocket");
 				schematicTier8 = new SchematicTier8("schematicTier8");
 				noseConeTier8 = new Tier8NoseCone("noseConeTier8");
@@ -223,7 +223,7 @@ public class ExtraPlanets_Items {
 				T8key = new ItemKeyT5Neptune().setUnlocalizedName("key");
 			}
 		}
-		if (Config.pluto && Config.morePlanetsCompatibility == false) {
+		if (Config.pluto && Config.morePlanetsCompatibilityAdv == false) {
 			tier9Rocket = new Tier9Rocket("itemTier9Rocket");
 			schematicTier9 = new SchematicTier9("schematicTier9");
 			noseConeTier9 = new Tier9NoseCone("noseConeTier9");
@@ -231,7 +231,7 @@ public class ExtraPlanets_Items {
 			T9key = new ItemKeyT9().setUnlocalizedName("key");
 		}
 		if (Config.eris) {
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				tier10Rocket = new Tier10Rocket("itemTier10Rocket");
 				schematicTier10 = new SchematicTier10("schematicTier10");
 				noseConeTier10 = new Tier10NoseCone("noseConeTier10");
@@ -254,29 +254,30 @@ public class ExtraPlanets_Items {
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			bodyParts = new ItemBodyParts();
 
-		if (Config.morePlanetsCompatibility == false && Config.thermalPaddings) {
+		if (Config.morePlanetsCompatibilityAdv == false && Config.thermalPaddings) {
 			thermalCloth = new ItemThermalCloth("thermalCloth");
 			tier2ThermalPadding = new ItemTier2ThermalPadding("tier2ThermalPadding");
 			tier3ThermalPadding = new ItemTier3ThermalPadding("tier3ThermalPadding");
 			tier4ThermalPadding = new ItemTier4ThermalPadding("tier4ThermalPadding");
 		}
-
-		wafers = new ItemWafers("wafer");
-
-		ingotLead = new ItemBasicItem("ingotLead");
-
 		if (Config.batteries) {
 			advancedBattery = new ItemBasicBattery("advancedBattery", 50000f, 2);
-			if (Config.morePlanetsCompatibility == false)
+			if (Config.morePlanetsCompatibilityAdv == false)
 				ultimateBattery = new ItemBasicBattery("ultimateBattery", 200000f, 2);
 		}
+		if (Config.marsRover)
+			marsRover = new ItemMarsRover("marsRover");
+		if (Config.venusRover)
+			venusRover = new ItemVenusRover("venusRover");
+		if (Config.marsRover || Config.venusRover)
+			electricParts = new ItemElectricParts("electricParts");
+		if (Config.marsRover)
+			schematicMarsRover = new SchematicMarsRover("schematicMarsRover");
+		if (Config.venusRover)
+			schematicVenusRover = new SchematicVenusRover("schematicVenusRover");
 
-		marsRover = new ItemMarsRover("marsRover");
-		venusRover = new ItemVenusRover("venusRover");
-		electricParts = new ItemElectricParts("electricParts");
-		
-		schematicMarsRover = new SchematicMarsRover("schematicMarsRover");
-		schematicVenusRover = new SchematicVenusRover("schematicVenusRover");
+		wafers = new ItemWafers("wafer");
+		ingotLead = new ItemBasicItem("ingotLead");
 	}
 
 	private static void registerItems() {
@@ -309,7 +310,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(magma_bucket, "bucket_magma");
 		}
 		if (Config.saturn) {
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				GameRegistry.registerItem(tier6Rocket, "itemTier6Rocket");
 				GameRegistry.registerItem(schematicTier6, "schematicTier6");
 				GameRegistry.registerItem(noseConeTier6, "noseConeTier6");
@@ -319,7 +320,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");
 		}
 		if (Config.uranus) {
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				GameRegistry.registerItem(tier7Rocket, "itemTier7Rocket");
 				GameRegistry.registerItem(schematicTier7, "schematicTier7");
 				GameRegistry.registerItem(noseConeTier7, "noseConeTier7");
@@ -329,7 +330,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
 		}
 		if (Config.neptune) {
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				GameRegistry.registerItem(tier8Rocket, "itemTier8Rocket");
 				GameRegistry.registerItem(schematicTier8, "schematicTier8");
 				GameRegistry.registerItem(noseConeTier8, "noseConeTier8");
@@ -348,7 +349,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T9key, "T9key");
 		}
 		if (Config.eris) {
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
 				GameRegistry.registerItem(schematicTier10, "schematicTier10");
 				GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
@@ -369,29 +370,31 @@ public class ExtraPlanets_Items {
 		// if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 		// GameRegistry.registerItem(bodyParts, "bodyParts");
 
-		if (Config.morePlanetsCompatibility == false && Config.thermalPaddings) {
+		if (Config.morePlanetsCompatibilityAdv == false && Config.thermalPaddings) {
 			GameRegistry.registerItem(thermalCloth, thermalCloth.getUnlocalizedName());
 			GameRegistry.registerItem(tier2ThermalPadding, tier2ThermalPadding.getUnlocalizedName());
 			GameRegistry.registerItem(tier3ThermalPadding, tier3ThermalPadding.getUnlocalizedName());
 			GameRegistry.registerItem(tier4ThermalPadding, tier4ThermalPadding.getUnlocalizedName());
 		}
-
-		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
-		
-		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName());
-
 		if (Config.batteries) {
 			GameRegistry.registerItem(advancedBattery, advancedBattery.getUnlocalizedName());
-			if (Config.morePlanetsCompatibility == false)
+			if (Config.morePlanetsCompatibilityAdv == false)
 				GameRegistry.registerItem(ultimateBattery, ultimateBattery.getUnlocalizedName());
 		}
+		if (Config.marsRover)
+			GameRegistry.registerItem(marsRover, marsRover.getUnlocalizedName());
+		if (Config.venusRover)
+			GameRegistry.registerItem(venusRover, venusRover.getUnlocalizedName());
+		if (Config.marsRover || Config.venusRover)
+			GameRegistry.registerItem(electricParts, electricParts.getUnlocalizedName());
+		if (Config.marsRover)
+			GameRegistry.registerItem(schematicMarsRover, schematicMarsRover.getUnlocalizedName());
+		if (Config.venusRover)
+			GameRegistry.registerItem(schematicVenusRover, schematicVenusRover.getUnlocalizedName());
 
-		GameRegistry.registerItem(marsRover, marsRover.getUnlocalizedName());
-		GameRegistry.registerItem(venusRover, venusRover.getUnlocalizedName());
-		
-		GameRegistry.registerItem(electricParts, electricParts.getUnlocalizedName());
-		GameRegistry.registerItem(schematicMarsRover, schematicMarsRover.getUnlocalizedName());
-		GameRegistry.registerItem(schematicVenusRover, schematicVenusRover.getUnlocalizedName());
+		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
+		GameRegistry.registerItem(ingotLead, ingotLead.getUnlocalizedName());
+
 	}
 
 	private static void registerFluidContainer() {

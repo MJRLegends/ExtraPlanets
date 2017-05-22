@@ -152,7 +152,7 @@ public class ClientProxy extends CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
 		renderMobEntities();
-		if (Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibilityAdv == false)
 			renderNonMobEntities();
 		FMLCommonHandler.instance().bus().register(new MainHandler());
 		FMLCommonHandler.instance().bus().register(new SkyProviderHandler());

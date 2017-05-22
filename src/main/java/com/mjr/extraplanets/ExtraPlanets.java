@@ -134,15 +134,15 @@ public class ExtraPlanets {
 				return ExtraPlanets_Items.tier4Rocket;
 			else if (Config.jupiter)
 				return ExtraPlanets_Items.tier5Rocket;
-			else if (Config.saturn && Config.morePlanetsCompatibility == false)
+			else if (Config.saturn && Config.morePlanetsCompatibilityAdv == false)
 				return ExtraPlanets_Items.tier6Rocket;
-			else if (Config.uranus && Config.morePlanetsCompatibility == false)
+			else if (Config.uranus && Config.morePlanetsCompatibilityAdv == false)
 				return ExtraPlanets_Items.tier7Rocket;
-			else if (Config.neptune && Config.morePlanetsCompatibility == false)
+			else if (Config.neptune && Config.morePlanetsCompatibilityAdv == false)
 				return ExtraPlanets_Items.tier8Rocket;
 			else if (Config.pluto)
 				return ExtraPlanets_Items.tier9Rocket;
-			else if (Config.eris && Config.morePlanetsCompatibility == false)
+			else if (Config.eris && Config.morePlanetsCompatibilityAdv == false)
 				return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
@@ -180,7 +180,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		Config.load();
+		Config.init();
 		// Planets Events
 		if (Config.mercury)
 			MinecraftForge.EVENT_BUS.register(new MercuryEvents());
@@ -290,11 +290,11 @@ public class ExtraPlanets {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
-		if (Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibilityAdv == false)
 			registerSchematicsRecipes();
 
 		// Register/Add Dungeon Loot
-		if (Config.morePlanetsCompatibility == false)
+		if (Config.morePlanetsCompatibilityAdv == false)
 			addDungeonLoot();
 
 		// Register Recipes
@@ -316,7 +316,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, Constants.modName + "FireBombPrimed", 150, 1, true);
 
-		if (Config.morePlanetsCompatibility == false) {
+		if (Config.morePlanetsCompatibilityAdv == false) {
 			if (Config.venus)
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
 			if (Config.jupiter)
@@ -333,8 +333,10 @@ public class ExtraPlanets {
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.modName + "SmallSnowBall", 150, 1, true);
 		}
-		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
-		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
+		if (Config.marsRover)
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
+		if (Config.venusRover)
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
 	}
 
 	private void registerCreatures() {
@@ -405,15 +407,19 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
 		if (Config.eris)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
-		SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
-		SchematicRegistry.registerSchematicRecipe(new SchematicVenusRover());
+		if (Config.marsRover)
+			SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
+		if (Config.venusRover)
+			SchematicRegistry.registerSchematicRecipe(new SchematicVenusRover());
 	}
 
 	private void addDungeonLoot() {
-		GalacticraftRegistry.addDungeonLoot(1, new ItemStack(ExtraPlanets_Items.schematicMarsRover, 1, 0));
+		if (Config.marsRover)
+			GalacticraftRegistry.addDungeonLoot(1, new ItemStack(ExtraPlanets_Items.schematicMarsRover, 1, 0));
 		if (Config.venus) {
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicTier4, 1, 0));
-			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicVenusRover, 1, 0));
+			if (Config.venusRover)
+				GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.schematicVenusRover, 1, 0));
 		}
 		if (Config.jupiter)
 			GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanets_Items.schematicTier5, 1, 0));

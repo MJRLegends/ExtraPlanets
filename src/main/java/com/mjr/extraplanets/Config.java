@@ -24,6 +24,7 @@ public class Config {
 
 	private static String compatibility = "compatibility support";
 	private static String generalsettings = "general settings";
+	private static String celestialBodyMapSettings = "celestial body map settings";
 
 	// Config options
 	public static boolean mobSuffocation;
@@ -240,9 +241,42 @@ public class Config {
 	public static boolean evolvedGiantSpider;
 	public static boolean evolvedMiniEnderman;
 
-	public static boolean morePlanetsCompatibility;
+	public static boolean morePlanetsCompatibilityAdv;
+	//public static boolean amunRaCompatibility;
+	public static boolean galaxySpaceCompatibility;
+	public static boolean galaxySpaceCompatibilityAdv;
+	
+	public static float kepler22SystemYawOffset;
+	public static float kepler22SystemPitchOffset;
+	public static float kepler47SystemYawOffset;
+	public static float kepler47SystemPitchOffset;
+	public static float kepler62SystemYawOffset;
+	public static float kepler62SystemPitchOffset;
+	public static float kepler69SystemYawOffset;
+	public static float kepler69SystemPitchOffset;
+	
+	public static float mercuryDistanceOffset;
+	public static float venusDistanceOffset;
+	public static float ceresDistanceOffset;
+	public static float jupiterDistanceOffset;
+	public static float saturnDistanceOffset;
+	public static float uranusDistanceOffset;
+	public static float neptuneDistanceOffset;
+	public static float plutoDistanceOffset;
+	public static float haumeaDistanceOffset;
+	public static float erisDistanceOffset;
+	public static float kuiperBeltDistanceOffset;
+	public static float makemakeDistanceOffset;
+	
+	public static boolean marsRover;
+	public static boolean venusRover;
 
-	public static void load() {
+	public static void init() {
+		load();
+		checkCompatibility();
+	}
+
+	private static void load() {
 		Configuration config = new Configuration(new File("config/ExtraPlanets.cfg"));
 		config.load();
 
@@ -261,6 +295,7 @@ public class Config {
 		config.addCustomCategoryComment(generalsettings, "Enable/Disable general settings");
 		config.addCustomCategoryComment(entities, "Enable/Disable entities");
 		config.addCustomCategoryComment(modCompatibility, "Enable/Disable Mod Compatibility, This will change and disable anything require to make it compatibility with enabled mods!");
+		config.addCustomCategoryComment(celestialBodyMapSettings, "Advanced options for Celestial Body Map tp change locations of planets and solar systems! (For Advanced Users ONLY!)");
 
 		carbonItems = config.get(items, "Carbon Tools & Armor", true).getBoolean(true);
 		palladiumItems = config.get(items, "Palladium Tools & Armor", true).getBoolean(true);
@@ -479,11 +514,41 @@ public class Config {
 		evolvedGiantSpider = config.get(entities, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(entities, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
-		morePlanetsCompatibility = config.get(modCompatibility, "Enable More Planets Compatibility", false, "").getBoolean(false);
-
+		morePlanetsCompatibilityAdv = config.get(modCompatibility, "Enable Advanced More Planets Compatibility", false, "").getBoolean(false);
+		//amunRaCompatibility = config.get(modCompatibility, "Enable AmunRa Compatibility", false, "").getBoolean(false);
+		galaxySpaceCompatibility = config.get(modCompatibility, "Enable Basic Galaxy Space Compatibility", false, "").getBoolean(false);
+		//galaxySpaceCompatibilityAdv = config.get(modCompatibility, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
+		
+		kepler22SystemYawOffset = (float) config.get(celestialBodyMapSettings, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		kepler22SystemPitchOffset = (float) config.get(celestialBodyMapSettings, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		kepler47SystemYawOffset = (float) config.get(celestialBodyMapSettings, "Kepler47 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		kepler47SystemPitchOffset = (float) config.get(celestialBodyMapSettings, "Kepler47 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		kepler62SystemYawOffset = (float) config.get(celestialBodyMapSettings, "Kepler62 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		kepler62SystemPitchOffset = (float) config.get(celestialBodyMapSettings, "Kepler62 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		kepler69SystemYawOffset = (float) config.get(celestialBodyMapSettings, "Kepler69 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		kepler69SystemPitchOffset = (float) config.get(celestialBodyMapSettings, "Kepler69 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		
+		mercuryDistanceOffset = (float) config.get(celestialBodyMapSettings, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		venusDistanceOffset = (float) config.get(celestialBodyMapSettings, "Venus Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		ceresDistanceOffset = (float) config.get(celestialBodyMapSettings, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		jupiterDistanceOffset = (float) config.get(celestialBodyMapSettings, "Jupiter Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		saturnDistanceOffset = (float) config.get(celestialBodyMapSettings, "Saturn Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		uranusDistanceOffset = (float) config.get(celestialBodyMapSettings, "Uranus Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		neptuneDistanceOffset = (float) config.get(celestialBodyMapSettings, "Neptune Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		plutoDistanceOffset = (float) config.get(celestialBodyMapSettings, "Pluto Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		haumeaDistanceOffset = (float) config.get(celestialBodyMapSettings, "Haumea Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		erisDistanceOffset = (float) config.get(celestialBodyMapSettings, "Eris Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		kuiperBeltDistanceOffset = (float) config.get(celestialBodyMapSettings, "Kuiper Belt Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		makemakeDistanceOffset = (float) config.get(celestialBodyMapSettings, "Makemake Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
+		
+		marsRover = config.get(items, "Enable Mars Rover & Its Parts", true, "").getBoolean(true);
+		venusRover = config.get(items, "Enable Venus Rover & Its Parts", true, "").getBoolean(true);
+		
 		config.save();
-
-		if (morePlanetsCompatibility) {
+	}
+	
+	private static void checkCompatibility() {
+		if (morePlanetsCompatibilityAdv) {
 			pluto = false;
 			mercury = false;
 			venus = false;
@@ -496,6 +561,30 @@ public class Config {
 			jupiterSpaceStation = false;
 			plutoSpaceStation = false;
 			thermalPaddings = false;
+		}
+		if(galaxySpaceCompatibility || galaxySpaceCompatibilityAdv){
+			pluto = false;
+			titan = false;
+			callisto = false;
+			io = false;
+			europa = false;
+			deimos = false;
+			makemake = false;
+			phobos = false;
+			oberon = false;
+			triton = false;
+			mercury = false;
+			venus = false;
+			ceres = false;
+			haumea = false;
+			ganymede = false;
+			kuiperBelt = false;
+			marsSpaceStation = false;
+			venusSpaceStation = false;
+			if(kepler47SystemYawOffset == 0)
+				kepler47SystemYawOffset = 40.0F;
+			iapetusID = -44;
+			titaniaID = -45;
 		}
 	}
 
