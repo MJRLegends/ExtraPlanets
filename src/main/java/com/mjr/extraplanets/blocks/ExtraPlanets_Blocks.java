@@ -53,6 +53,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockCustomLandingPad;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDummy;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCeres;
@@ -201,8 +202,10 @@ public class ExtraPlanets_Blocks {
 
 	public static Block ADVANCED_LAUCHPAD;
 	public static Block ADVANCED_LAUCHPAD_FULL;
-	
+
 	public static Block FAKE_BLOCK;
+
+	public static Block DECORATIVE_BLOCKS;
 
 	public static void init() {
 		initializeBlocks();
@@ -322,10 +325,11 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.RADIATION)
 			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
-		
+
 		ADVANCED_LAUCHPAD = new BlockCustomLandingPad("advanced_launch_pad");
 		ADVANCED_LAUCHPAD_FULL = new BlockCustomLandingPadFull("advanced_launch_pad_full");
 		FAKE_BLOCK = new BlockCustomMulti("block_multi");
+		DECORATIVE_BLOCKS = new BlockDecorativeBlocks("decorative_blocks");
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -499,11 +503,12 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.registerBlock(ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
 		if (Config.RADIATION)
 			RegisterHelper.registerBlock(ORE_POTASH, "potash");
-		
+
 		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
 		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
-		
+
 		RegisterHelper.registerBlock(FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
+		RegisterHelper.registerBlock(DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerTileEntitys() {
