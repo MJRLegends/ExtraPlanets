@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.api.entity.ILandable;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.planets.mars.tile.TileEntityLaunchController;
@@ -99,7 +100,13 @@ public class TileEntityTier3LandingPad extends TileEntityMulti implements IMulti
 		this.getPositions(placedPosition, positions);
 		((BlockCustomMulti) ExtraPlanets_Blocks.FAKE_BLOCK).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.TIER_3_ROCKET_PAD);
 	}
-
+	
+    @Override
+    public BlockMulti.EnumBlockMultiType getMultiType()
+    {
+        return null;
+    }
+    
 	@Override
 	public void getPositions(BlockPos placedPosition, List<BlockPos> positions) {
 		int y = placedPosition.getY();

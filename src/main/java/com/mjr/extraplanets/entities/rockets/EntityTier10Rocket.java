@@ -158,8 +158,8 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 			}
 		}
 
-		if (this.launchPhase == EnumLaunchPhase.LAUNCHED.ordinal() && this.hasValidFuel()) {
-			if (!this.landing) {
+		if (this.launchPhase >= EnumLaunchPhase.LAUNCHED.ordinal() && this.hasValidFuel()) {
+			if (this.launchPhase == EnumLaunchPhase.LAUNCHED.ordinal()) {
 				double d = this.timeSinceLaunch / 150;
 
 				d = Math.min(d, 1);
@@ -218,7 +218,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 			double x1 = 3.2 * Math.cos(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
 			double z1 = 3.2 * Math.sin(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
 			double y1 = 3.2 * Math.cos((this.rotationPitch - 180) / 57.2957795D);
-			if (this.landing && this.targetVec != null) {
+			if (this.launchPhase == EnumLaunchPhase.LANDING.ordinal() && this.targetVec != null) {
 				double modifier = this.posY - this.targetVec.getY();
 				modifier = Math.max(modifier, 1.0);
 				x1 *= modifier / 60.0D;
