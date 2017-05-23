@@ -155,6 +155,7 @@ public class ExtraPlanets_Blocks {
 	public static Block FOSSIL;
 	public static Block DENSE_ICE;
 	public static Block VOLCANIC_ROCK;
+	public static Block ASH_ROCK;
 	public static Block FROZEN_NITROGEN;
 	public static Block ORE_LEAD;
 	public static Block ORE_POTASH;
@@ -239,6 +240,8 @@ public class ExtraPlanets_Blocks {
 		if (Config.JUPITER) {
 			JUPITER_BLOCKS = new BlockBasicJupiter("jupiter");
 			JUPITER_GRAVEL = new BlockCustomGravel("jupiter_gravel");
+			VOLCANIC_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F);
+			ASH_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("ash_rock").setHardness(2.0F).setResistance(1.5F);
 		}
 		if (Config.SATURN) {
 			SATURN_BLOCKS = new BlockBasicSaturn("saturn");
@@ -405,6 +408,10 @@ public class ExtraPlanets_Blocks {
 
 			RegisterHelper.registerBlock(JUIPTER_SPAWNER, ItemBlockGC.class, "jupiter_spawner");
 			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
+
+			RegisterHelper.registerBlock(VOLCANIC_ROCK, VOLCANIC_ROCK.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(ASH_ROCK, ASH_ROCK.getUnlocalizedName().substring(5));
+
 		}
 		if (Config.SATURN) {
 			RegisterHelper.registerBlock(SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));

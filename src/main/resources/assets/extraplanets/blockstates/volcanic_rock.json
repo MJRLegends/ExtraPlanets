@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "extraplanets:volcanicRock_model" }
+        "normal": { "model": "extraplanets:volcanic_rock_model" }
     }
 }

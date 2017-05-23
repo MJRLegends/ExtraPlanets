@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/volcanic_rock"
+        "all": "extraplanets:blocks/ash_rock"
     }
 }
