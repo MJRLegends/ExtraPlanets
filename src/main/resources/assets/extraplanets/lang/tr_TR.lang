@@ -401,6 +401,24 @@ tile.fossil.name=Fosil Bloğu
 tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
 
+#Decorative Blocks
+tile.decorative_blocks.marble.name=Marble
+tile.decorative_blocks.marble_bricks.name=Marble Bricks
+tile.decorative_blocks.snow_bricks.name=Snow Bricks
+tile.decorative_blocks.ice_bricks.name=Ice Bricks
+tile.decorative_blocks.fire_bricks.name=Fire Bricks
+tile.decorative_blocks.black_white_floor.name=Black/White Tiled Floor
+tile.decorative_blocks.marble_titled_floor.name=Marble Tiled Floor
+tile.decorative_blocks.marble_broken_titled_floor.name=Marble Broken Tiled Floor
+tile.decorative_blocks.metal_mesh.name=Metal Mesh Floor
+tile.decorative_blocks.frozen_nitrogen_bricks.name=Frozen Nitrogen Bricks
+tile.decorative_blocks.volcanic_rock_bricks.name=Volcanic Rock Bricks
+tile.decorative_blocks.carbon_titled_floor.name=Carbon Tiled Floor
+tile.decorative_blocks.carbon_broken_titled_floor.name=Carbon Broken Tiled Floor
+tile.decorative_blocks.magnesium_titled_floor.name=Magnesium Tiled Floor
+tile.decorative_blocks.magnesium_broken_titled_floor.name=Magnesium Broken Tiled Floor
+tile.decorative_blocks.ash_bricks.name=Ash Bricks
+
 #Rocket Items
 item.item_tier4_rocket.t4Rocket.name=Tier 4 Roketi
 item.item_tier5_rocket.t5Rocket.name=Tier 5 Roketi
