@@ -23,7 +23,7 @@ public class TeleportTypeNeptune implements ITeleportType {
 	public Vector3 getPlayerSpawnLocation(WorldServer world, EntityPlayerMP player) {
 		if (player != null) {
 			GCPlayerStats stats = player.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
-			return new Vector3(stats.getCoordsTeleportedFromX(), Constants.PLANET_AND_MOON_SPAWN_HIGH, stats.getCoordsTeleportedFromZ());
+			return new Vector3(stats.getCoordsTeleportedFromX(), Constants.PLANET_AND_MOON_SPAWN_HEIGHT, stats.getCoordsTeleportedFromZ());
 		}
 
 		return null;
@@ -31,14 +31,14 @@ public class TeleportTypeNeptune implements ITeleportType {
 
 	@Override
 	public Vector3 getEntitySpawnLocation(WorldServer world, Entity entity) {
-		return new Vector3(entity.posX, Constants.PLANET_AND_MOON_SPAWN_HIGH_D, entity.posZ);
+		return new Vector3(entity.posX, Constants.PLANET_AND_MOON_SPAWN_HEIGHT_D, entity.posZ);
 	}
 
 	@Override
 	public Vector3 getParaChestSpawnLocation(WorldServer world, EntityPlayerMP player, Random rand) {
 		final double x = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
 		final double z = (rand.nextDouble() * 2 - 1.0D) * 5.0D;
-		return new Vector3(player.posX + x, Constants.PLANET_AND_MOON_PARA_CHEST_SPAWN_HIGH_D, player.posZ + z);
+		return new Vector3(player.posX + x, Constants.PLANET_AND_MOON_PARA_CHEST_SPAWN_HEIGHT_D, player.posZ + z);
 	}
 
 	@Override

@@ -65,7 +65,7 @@ public class ItemOxygenTank extends Item implements ISortableItem {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand) {
 		if (player instanceof EntityPlayerMP) {
-			GCPlayerStats stats = player.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
+            GCPlayerStats stats = GCPlayerStats.get(player);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);
 			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(3);
 
