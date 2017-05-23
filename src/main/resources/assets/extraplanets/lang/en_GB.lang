@@ -395,6 +395,7 @@ gui.status.solarEvaporationChamber.name=Evaporating
 #Other Blocks
 tile.nuclear_bomb.name=Nuclear Bomb
 tile.volcanic_rock.name=Volcanic Rock
+tile.ash_rock.name=Ash Block
 tile.frozen_nitrogen.name=Frozen Nitrogen
 tile.dense_ice.name=Dense Ice
 tile.fossil.name=Fossil Block

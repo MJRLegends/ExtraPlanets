@@ -395,6 +395,7 @@ gui.status.solarEvaporationChamber.name=Evaporating
 #Other Blocks
 tile.nuclear_bomb.name=Jaderná bomba
 tile.volcanic_rock.name=Vulkanický kámen
+tile.ash_rock.name=Ash Block
 tile.frozen_nitrogen.name=Zmrzný dusík
 tile.dense_ice.name=Hustý led
 tile.fossil.name=Fosilní blok
