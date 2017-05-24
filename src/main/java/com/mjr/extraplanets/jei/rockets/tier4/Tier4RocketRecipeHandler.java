@@ -20,12 +20,7 @@ public class Tier4RocketRecipeHandler implements IRecipeHandler<Tier4RocketRecip
 	public String getRecipeCategoryUid() {
 		return RecipeCategories.ROCKET_T4_ID;
 	}
-
-	@Override
-	public String getRecipeCategoryUid(Tier4RocketRecipeWrapper recipe) {
-		return this.getRecipeCategoryUid();
-	}
-
+	
 	@Nonnull
 	@Override
 	public IRecipeWrapper getRecipeWrapper(@Nonnull Tier4RocketRecipeWrapper recipe) {
