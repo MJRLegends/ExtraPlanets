@@ -14,6 +14,21 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+0.9.0 Beta Build
+*Refactor GEAR ID's to Constants class
+*Added missing machine front textures
+*Small fixes due to Updating to Latest GC API
+*Fixes for missing machine GUI textures
+*Fixed texture issue with the Iron & Diamond Apples
+*Added Item textures for Space Suit Tier 1 - 4 Amour (WIP)
+*Fix NASA workbench schematics particles crashing dedicated server
+*Added missing Tier 1 - 4 Armour Layers recipes
+*Added missing item texture
+*Added missing celestialbodies textures
+*Updated a machine GUI texture
+*Added Tier 4 - 10 Rocket JEI recipe support
+*Fixed Tier 1 - 4 Space Suit Chestplate textures
+
 0.8.6 Beta Build
 *Updated Galacticraft API to latest
 *Improvements to the lighting effect on Jupiter
