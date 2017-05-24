@@ -162,4 +162,9 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

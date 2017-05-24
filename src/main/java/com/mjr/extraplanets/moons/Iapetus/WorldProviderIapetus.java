@@ -168,4 +168,9 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 	public String getInternalNameSuffix() {
 		return "_iapetus";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

@@ -161,4 +161,9 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

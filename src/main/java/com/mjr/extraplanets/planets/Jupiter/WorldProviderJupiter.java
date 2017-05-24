@@ -164,4 +164,9 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

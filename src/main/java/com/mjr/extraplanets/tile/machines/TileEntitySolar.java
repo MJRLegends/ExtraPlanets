@@ -254,8 +254,14 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 			((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, positions.get(0), placedPosition, EnumBlockMultiType.SOLAR_PANEL_0.getMeta());
 			positions.remove(0);
 		}
-		((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, positions, placedPosition, (this.getTierGC() == 1) ? EnumBlockMultiType.SOLAR_PANEL_1 : EnumBlockMultiType.SOLAR_PANEL_0);
+		((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, positions, placedPosition, getMultiType());
 	}
+	
+    @Override
+    public BlockMulti.EnumBlockMultiType getMultiType()
+    {
+        return (this.getTierGC() == 1) ? EnumBlockMultiType.SOLAR_PANEL_1 : EnumBlockMultiType.SOLAR_PANEL_0;
+    }
 
 	@Override
 	public void getPositions(BlockPos placedPosition, List<BlockPos> positions) {

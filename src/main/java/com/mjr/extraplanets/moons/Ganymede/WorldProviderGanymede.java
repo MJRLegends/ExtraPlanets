@@ -168,4 +168,9 @@ public class WorldProviderGanymede extends WorldProviderSpace implements IGalact
 	public String getInternalNameSuffix() {
 		return "_ganymede";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

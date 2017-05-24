@@ -168,4 +168,9 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 	public String getInternalNameSuffix() {
 		return "_callisto";
 	}
+
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

@@ -168,4 +168,9 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 	public String getInternalNameSuffix() {
 		return "_titania";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

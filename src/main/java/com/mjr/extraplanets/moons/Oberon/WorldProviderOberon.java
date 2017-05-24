@@ -168,4 +168,9 @@ public class WorldProviderOberon extends WorldProviderSpace implements IGalactic
 	public String getInternalNameSuffix() {
 		return "_oberon";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

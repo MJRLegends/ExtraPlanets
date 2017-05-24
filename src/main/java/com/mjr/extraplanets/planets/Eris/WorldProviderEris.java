@@ -164,4 +164,9 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

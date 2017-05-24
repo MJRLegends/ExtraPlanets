@@ -164,4 +164,9 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

@@ -165,4 +165,9 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 	public String getInternalNameSuffix() {
 		return "_titan";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

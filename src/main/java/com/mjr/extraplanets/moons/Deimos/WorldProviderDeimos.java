@@ -165,4 +165,9 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	public String getInternalNameSuffix() {
 		return "_deimos";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

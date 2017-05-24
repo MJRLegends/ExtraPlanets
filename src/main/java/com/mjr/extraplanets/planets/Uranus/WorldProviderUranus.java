@@ -164,4 +164,9 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 800;
+	}
 }

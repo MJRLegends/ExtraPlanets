@@ -168,4 +168,9 @@ public class WorldProviderEuropa extends WorldProviderSpace implements IGalactic
 	public String getInternalNameSuffix() {
 		return "_europa";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }

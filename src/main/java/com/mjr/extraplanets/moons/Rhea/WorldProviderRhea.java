@@ -168,4 +168,9 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 	public String getInternalNameSuffix() {
 		return "_rhea";
 	}
+	
+	@Override
+	public int getDungeonSpacing() {
+		return 0;
+	}
 }
