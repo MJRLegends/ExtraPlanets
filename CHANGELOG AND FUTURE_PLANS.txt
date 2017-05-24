@@ -14,6 +14,20 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4.1 Beta Build
+*Small fixes due to Updating to Latest GC API
+*Fixed issue #98
+*Added 16 new Decorative Blocks
+*Updated lang files
+
+*Added Ash Rock & Volcanic Rock
+*Added Decorative blocks recipes
+*Added Ash Rock and Volcanic Rock to generate in the Jupiter Sub Surface layers
+*Added Tiered Armour Layers to Space Suit Armour recipes
+*Fixed Custom Oxygen tanks not working correctly
+*Refactoring/Clean up
+*Clean up: Converted all fluids and fluid blocks to uppercase
+
 v0.4 Beta Build
 *Changed planets to use new Atmosphere Info system
 *Added Tier 4 - 10 Rocket JEI recipe support
