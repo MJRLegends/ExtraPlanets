@@ -32,7 +32,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	private ItemStack[] containingItems = new ItemStack[3];
 
 	public TileEntityBasicDecrystallizer() {
-		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, 0));
+		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, 0));
 	}
 
 	@Override
@@ -104,8 +104,8 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (nbt.hasKey("outputTank")) {
 			this.outputTank.readFromNBT(nbt.getCompoundTag("outputTank"));
 		}
-		if (this.outputTank.getFluid() != null && this.outputTank.getFluid().getFluid() != ExtraPlanets_Fluids.salt_fluid) {
-			this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, this.outputTank.getFluidAmount()));
+		if (this.outputTank.getFluid() != null && this.outputTank.getFluid().getFluid() != ExtraPlanets_Fluids.SALT_FLUID) {
+			this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, this.outputTank.getFluidAmount()));
 		}
 	}
 

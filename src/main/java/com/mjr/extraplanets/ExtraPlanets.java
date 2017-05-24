@@ -244,20 +244,20 @@ public class ExtraPlanets {
 
 		// Registering fluids with Bucket Handler
 		if (Config.CERES)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.salt, ExtraPlanets_Items.BUCKET_SALT);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.SALT, ExtraPlanets_Items.BUCKET_SALT);
 		if (Config.JUPITER)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.magma, ExtraPlanets_Items.BUCKET_MAGMA);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Items.BUCKET_MAGMA);
 		if (Config.SATURN)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.glowstone, ExtraPlanets_Items.BUCKET_GLOWSTONE);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.GLOWSTONE, ExtraPlanets_Items.BUCKET_GLOWSTONE);
 		if (Config.URANUS)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.frozen_water, ExtraPlanets_Items.BUCKET_FROZEN_WATER);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.FROZEN_WATER, ExtraPlanets_Items.BUCKET_FROZEN_WATER);
 		if (Config.NEPTUNE)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.nitrogen, ExtraPlanets_Items.BUCKET_NITROGEN);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.cleanWater, ExtraPlanets_Items.BUCKET_CLEAN_WATER);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.infectedWater, ExtraPlanets_Items.BUCKET_INFECTED_WATER);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.radioactiveWater, ExtraPlanets_Items.BUCKET_RADIOACTIVE_WATER);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.methane, ExtraPlanets_Items.BUCKET_METHANE);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.nitrogen_ice, ExtraPlanets_Items.BUCKET_NITROGEN_ICE);
+			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.NITROGEN, ExtraPlanets_Items.BUCKET_NITROGEN);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.CLEAN_WATER, ExtraPlanets_Items.BUCKET_CLEAN_WATER);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.INFECTED_WATER, ExtraPlanets_Items.BUCKET_INFECTED_WATER);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Items.BUCKET_RADIOACTIVE_WATER);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.METHANE, ExtraPlanets_Items.BUCKET_METHANE);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.NITROGEN_ICE, ExtraPlanets_Items.BUCKET_NITROGEN_ICE);
 
 		// Bucket Handler
 		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);

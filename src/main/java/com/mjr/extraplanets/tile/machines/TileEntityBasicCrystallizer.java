@@ -35,7 +35,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.IODIDE_SALT, 6, 0);
 
 	public TileEntityBasicCrystallizer() {
-		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, 0));
+		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, 0));
 	}
 
 	@Override
@@ -136,8 +136,8 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		if (nbt.hasKey("inputTank")) {
 			this.inputTank.readFromNBT(nbt.getCompoundTag("inputTank"));
 		}
-		if (this.inputTank.getFluid() != null && this.inputTank.getFluid().getFluid() != ExtraPlanets_Fluids.salt_fluid) {
-			this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, this.inputTank.getFluidAmount()));
+		if (this.inputTank.getFluid() != null && this.inputTank.getFluid().getFluid() != ExtraPlanets_Fluids.SALT_FLUID) {
+			this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, this.inputTank.getFluidAmount()));
 		}
 	}
 

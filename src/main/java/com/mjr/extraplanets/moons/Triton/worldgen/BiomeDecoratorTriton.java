@@ -60,7 +60,7 @@ public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.nitrogen_ice).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.FROZEN_NITROGEN);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.NITROGEN_ICE).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.FROZEN_NITROGEN);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));

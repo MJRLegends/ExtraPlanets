@@ -31,7 +31,7 @@ public class FluidBlockEP extends BlockFluidClassic {
 
 	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-		if (state == ExtraPlanets_Fluids.magma) {
+		if (state == ExtraPlanets_Fluids.MAGMA) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSource.lava, 4.0F);

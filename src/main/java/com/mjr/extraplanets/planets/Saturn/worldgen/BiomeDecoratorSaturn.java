@@ -69,7 +69,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.glowstone).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.SATURN_BLOCKS);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.GLOWSTONE).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.SATURN_BLOCKS);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
