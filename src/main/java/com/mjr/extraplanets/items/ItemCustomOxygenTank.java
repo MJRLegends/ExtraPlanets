@@ -2,9 +2,8 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
-import micdoodle8.mods.galacticraft.core.items.ISortableItem;
+import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
@@ -23,9 +22,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class ItemOxygenTank extends Item implements ISortableItem {
-	public ItemOxygenTank(int tier, String assetName) {
-		super();
+public class ItemCustomOxygenTank extends ItemOxygenTank {
+	public ItemCustomOxygenTank(int tier, String assetName) {
+		super(tier, assetName);
 		this.setMaxStackSize(1);
 		this.setMaxDamage(tier * 1800);
 		this.setUnlocalizedName(assetName);
@@ -65,7 +64,7 @@ public class ItemOxygenTank extends Item implements ISortableItem {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand) {
 		if (player instanceof EntityPlayerMP) {
-            GCPlayerStats stats = GCPlayerStats.get(player);
+			GCPlayerStats stats = GCPlayerStats.get(player);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);
 			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(3);
 
