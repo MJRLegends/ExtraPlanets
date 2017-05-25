@@ -56,4 +56,3 @@ public class Constants {
 	public static final String CONFIG_CATEGORY_COMPATIBILITY = "compatibility support";
 	public static final String CONFIG_CATEGORY_GENERAL_SETTINGS = "general settings";
 }
-}
