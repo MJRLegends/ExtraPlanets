@@ -18,6 +18,7 @@ public class BiomeDecoratorKepler22bOres extends BiomeDecoratorSpace {
 	private WorldGenerator yellowDiamondOre;
 	private WorldGenerator purpleDiamondOre;
 	private WorldGenerator greenDiamondOre;
+	private WorldGenerator marbleGen;
 	private World currentWorld;
 
 	private boolean isDecorating = false;
@@ -32,7 +33,7 @@ public class BiomeDecoratorKepler22bOres extends BiomeDecoratorSpace {
 		this.yellowDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 8, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
 		this.purpleDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 9, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
 		this.greenDiamondOre = new WorldGenMinableMeta(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 8, 10, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
-
+		this.marbleGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 10, 0, true, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -60,6 +61,7 @@ public class BiomeDecoratorKepler22bOres extends BiomeDecoratorSpace {
 		this.generateOre(4, this.yellowDiamondOre, 0, 10);
 		this.generateOre(4, this.purpleDiamondOre, 0, 10);
 		this.generateOre(4, this.greenDiamondOre, 0, 10);
+		this.generateOre(20, this.marbleGen, 0, 30);
 		isDecorating = false;
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
 		// minY, int maxY);
