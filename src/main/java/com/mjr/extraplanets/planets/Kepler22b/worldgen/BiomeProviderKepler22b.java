@@ -31,6 +31,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedForest);
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
+		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedDesert);
 	}
 
 	public BiomeProviderKepler22b(long seed) {

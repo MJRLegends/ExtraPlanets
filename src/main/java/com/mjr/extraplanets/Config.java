@@ -173,7 +173,8 @@ public class Config {
 	public static int KEPLER22B_PURPLE_FOREST_BIOME_ID;
 	public static int KEPLER22B_RED_FOREST_BIOME_ID;
 	public static int KEPLER22B_YELLOW_FOREST_BIOME_ID;
-
+	public static int KEPLER22B_RED_DESERT_BIOME_ID;
+	
 	public static boolean JUPITER_LIQUID;
 	public static boolean SATURN_LIQUID;
 	public static boolean URANUS_LIQUID;
@@ -394,6 +395,7 @@ public class Config {
 		OBERON_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Biome ID", 179).getInt();
 		TITANIA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180).getInt();
 		IAPETUS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181).getInt();
+		KEPLER22B_RED_DESERT_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 182).getInt();
 
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();
