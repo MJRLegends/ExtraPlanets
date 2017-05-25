@@ -3,8 +3,8 @@
 	"modid": "ExtraPlanets",
 	"name": "Extra Planets",
 	"description": "A Galacticraft Addon.",
-	"version": "0.9.0-Beta-Build",
-	"mcversion": "[1.8.9]",
+	"version": "${version}",
+	"mcversion": "${mcversion}",
 	"url": "https://minecraft.curseforge.com/projects/extraplanets",
 	"updateUrl": "https://minecraft.curseforge.com/projects/extraplanets",
 	"authors": [
