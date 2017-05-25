@@ -11,8 +11,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityT4TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT4TreasureChest>
@@ -89,7 +89,7 @@ public class TileEntityT4TreasureChestRenderer extends TileEntitySpecialRenderer
 
         if (var14 != null)
         {
-            var14.chestLid.rotateAngleX = -(var12 * (float) Math.PI / 4.0F);
+            var14.chestLid.rotateAngleX = -(var12 * Constants.floatPI / 4.0F);
             var14.renderAll(!chest.locked);
         }
 

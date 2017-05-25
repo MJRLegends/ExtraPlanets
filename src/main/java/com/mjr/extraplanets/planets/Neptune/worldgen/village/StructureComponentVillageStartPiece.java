@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen.village;
 
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.biome.WorldChunkManager;
-
 import java.util.ArrayList;
 import java.util.Random;
+
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.biome.WorldChunkManager;
 
 public class StructureComponentVillageStartPiece extends StructureComponentVillageWell
 {

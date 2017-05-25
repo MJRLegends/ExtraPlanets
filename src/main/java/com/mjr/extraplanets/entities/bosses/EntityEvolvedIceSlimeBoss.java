@@ -29,6 +29,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntityBreathable{
@@ -123,7 +124,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 			} // don't spawn particles if it's handled by the implementation
 				// itself
 			for (int j = 0; j < i * 8; ++j) {
-				float f = this.rand.nextFloat() * (float) Math.PI * 2.0F;
+				float f = this.rand.nextFloat() * Constants.floatPI * 2.0F;
 				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
 				float f2 = MathHelper.sin(f) * (float) i * 0.5F * f1;
 				float f3 = MathHelper.cos(f) * (float) i * 0.5F * f1;

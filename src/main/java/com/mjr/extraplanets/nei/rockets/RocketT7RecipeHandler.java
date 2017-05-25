@@ -11,12 +11,12 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.nei.NEIExtraPlanetsConfig;
-
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.NEIServerUtils;
 import codechicken.nei.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
+
+import com.mjr.extraplanets.nei.NEIExtraPlanetsConfig;
 
 public class RocketT7RecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GalacticraftPlanets.ASSET_PREFIX, "textures/gui/schematic_rocket_T2.png");

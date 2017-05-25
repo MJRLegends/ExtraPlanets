@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.render.entities.rockets;
 
-import com.google.common.base.Function;
-import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
+import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
@@ -28,7 +27,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import java.util.List;
+import com.google.common.base.Function;
+import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 
 @SideOnly(Side.CLIENT)
 public class RenderTier4Rocket extends Render<EntityTier4Rocket>

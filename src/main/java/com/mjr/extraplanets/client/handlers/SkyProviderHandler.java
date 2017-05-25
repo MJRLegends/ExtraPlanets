@@ -47,7 +47,6 @@ import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.SkyProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
-import com.mjr.extraplanets.planets.Kepler22b.WorldProviderKepler22b;
 import com.mjr.extraplanets.planets.Mercury.SkyProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;

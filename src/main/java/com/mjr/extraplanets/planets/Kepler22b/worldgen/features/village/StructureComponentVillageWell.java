@@ -1,6 +1,8 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.features.village;
 
-import micdoodle8.mods.galacticraft.core.GCBlocks;
+import java.util.List;
+import java.util.Random;
+
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
@@ -8,9 +10,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-
-import java.util.List;
-import java.util.Random;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 

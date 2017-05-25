@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.tile.machines;
 
+import java.util.EnumSet;
+
 import micdoodle8.mods.galacticraft.api.item.IItemOxygenSupply;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
@@ -14,8 +16,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
-
-import java.util.EnumSet;
 
 import com.mjr.extraplanets.blocks.machines.UltimateOxygenCompressor;
 

@@ -29,6 +29,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEntityBreathable {
@@ -250,7 +251,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		 */
 		public void updateTask() {
 			if (this.parentEntity.getAttackTarget() == null) {
-				this.parentEntity.renderYawOffset = this.parentEntity.rotationYaw = -((float) MathHelper.atan2(this.parentEntity.motionX, this.parentEntity.motionZ)) * 180.0F / (float) Math.PI;
+				this.parentEntity.renderYawOffset = this.parentEntity.rotationYaw = -((float) MathHelper.atan2(this.parentEntity.motionX, this.parentEntity.motionZ)) * 180.0F / Constants.floatPI;
 			} else {
 				EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
 				double d0 = 64.0D;
@@ -258,7 +259,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 				if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < d0 * d0) {
 					double d1 = entitylivingbase.posX - this.parentEntity.posX;
 					double d2 = entitylivingbase.posZ - this.parentEntity.posZ;
-					this.parentEntity.renderYawOffset = this.parentEntity.rotationYaw = -((float) MathHelper.atan2(d1, d2)) * 180.0F / (float) Math.PI;
+					this.parentEntity.renderYawOffset = this.parentEntity.rotationYaw = -((float) MathHelper.atan2(d1, d2)) * 180.0F / Constants.floatPI;
 				}
 			}
 		}

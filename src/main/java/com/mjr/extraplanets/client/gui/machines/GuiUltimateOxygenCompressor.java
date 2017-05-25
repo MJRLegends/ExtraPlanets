@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.client.gui.machines;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.client.gui.element.GuiElementInfoRegion;
@@ -15,9 +18,6 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class GuiUltimateOxygenCompressor extends GuiContainerGC
 {

@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.inventory.machines;
 
-import com.mjr.extraplanets.tile.machines.TileEntitySolar;
-
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
@@ -10,6 +8,8 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+
+import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 
 public class ContainerSolar extends Container {
 	private TileEntitySolar tileEntity;

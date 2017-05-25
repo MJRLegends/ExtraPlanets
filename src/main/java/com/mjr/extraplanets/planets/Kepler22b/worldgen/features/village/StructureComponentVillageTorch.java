@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.features.village;
 
+import java.util.List;
+import java.util.Random;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockGlowstoneTorch;
 import net.minecraft.init.Blocks;
@@ -8,9 +11,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-
-import java.util.List;
-import java.util.Random;
 
 public class StructureComponentVillageTorch extends StructureComponentVillage
 {

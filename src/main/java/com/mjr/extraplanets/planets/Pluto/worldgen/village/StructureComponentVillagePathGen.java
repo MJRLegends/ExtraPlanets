@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.planets.Pluto.worldgen.village;
 
+import java.util.List;
+import java.util.Random;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -11,9 +14,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-
-import java.util.List;
-import java.util.Random;
 
 public class StructureComponentVillagePathGen extends StructureComponentVillageRoadPiece
 {

@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.planets.Saturn.spacestation;
 
+import java.util.Random;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.world.gen.BiomeGenBaseOrbit;
@@ -13,8 +15,6 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
-
-import java.util.Random;
 
 public class ChunkProviderSaturnOrbit extends ChunkProviderGenerate
 {
