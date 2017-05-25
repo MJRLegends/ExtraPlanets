@@ -207,6 +207,8 @@ public class ExtraPlanets_Blocks {
 	public static Block FAKE_BLOCK;
 
 	public static Block DECORATIVE_BLOCKS;
+	public static Block RED_SAND;
+	public static Block RED_SANDSTONE;
 
 	public static void init() {
 		initializeBlocks();
@@ -325,6 +327,9 @@ public class ExtraPlanets_Blocks {
 			KEPLER22B_GRASS_RED = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
 			KEPLER22B_GRASS_YELLOW = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
 			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22b_flowers");
+			RED_SAND = new BlockSand("red_sand");
+			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
+			
 		}
 		if (Config.RADIATION)
 			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
@@ -452,6 +457,9 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.registerBlock(KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
+
 		}
 
 		if (Config.EUROPA) {
