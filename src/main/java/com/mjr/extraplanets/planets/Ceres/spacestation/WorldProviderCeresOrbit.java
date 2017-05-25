@@ -163,7 +163,7 @@ public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit
 	@Override
 	public int getYCoordToTeleportToPlanet()
 	{
-		return 10;
+		return Constants.SPACE_STATION_LOWER_Y_LIMIT;
 	}
 
 	@Override
@@ -181,7 +181,7 @@ public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit
 	@Override
 	public double getYCoordinateToTeleport()
 	{
-		return 1200;
+		return Constants.SPACE_STATION_HIGHER_Y_LIMIT;
 	}
 
 	@Override

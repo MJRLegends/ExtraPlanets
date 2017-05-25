@@ -25,6 +25,9 @@ public class Constants {
     public static final float halfPI = Constants.floatPI / 2F;
 	public static final float floatPI = 3.1415927F;
 	
+	public static final int SPACE_STATION_LOWER_Y_LIMIT = 10;
+	public static final int SPACE_STATION_HIGHER_Y_LIMIT = 1200;
+	
 	public static final int GEAR_ID_OXYGEN_TANK_VERY_HEAVY = 5000;
 	public static final int GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY = 5001;
     public static final int GEAR_ID_THERMAL_PADDING_T3_HELMET = 6000;
