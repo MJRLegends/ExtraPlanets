@@ -1,0 +1,20 @@
+{
+    "variants": {
+		"basictypedecorativeblocks=marble": { "model": "extraplanets:marble_model" },
+		"basictypedecorativeblocks=marble_bricks": { "model": "extraplanets:marble_bricks_model" },
+		"basictypedecorativeblocks=snow_bricks": { "model": "extraplanets:snow_bricks_model" },
+		"basictypedecorativeblocks=ice_bricks": { "model": "extraplanets:ice_bricks_model" },
+		"basictypedecorativeblocks=fire_bricks": { "model": "extraplanets:fire_bricks_model" },
+		"basictypedecorativeblocks=black_white_floor": { "model": "extraplanets:black_white_floor_model" },
+		"basictypedecorativeblocks=marble_titled_floor": { "model": "extraplanets:marble_titled_floor_model" },
+		"basictypedecorativeblocks=marble_broken_titled_floor": { "model": "extraplanets:marble_broken_titled_floor_model" },
+		"basictypedecorativeblocks=metal_mesh": { "model": "extraplanets:metal_mesh_model" },
+		"basictypedecorativeblocks=frozen_nitrogen_bricks": { "model": "extraplanets:frozen_nitrogen_bricks_model" },
+		"basictypedecorativeblocks=volcanic_rock_bricks": { "model": "extraplanets:volcanic_rock_bricks_model" },
+		"basictypedecorativeblocks=carbon_titled_floor": { "model": "extraplanets:carbon_titled_floor_model" },
+		"basictypedecorativeblocks=carbon_broken_titled_floor": { "model": "extraplanets:carbon_broken_titled_floor_model" },
+		"basictypedecorativeblocks=magnesium_titled_floor": { "model": "extraplanets:magnesium_titled_floor_model" },
+		"basictypedecorativeblocks=magnesium_broken_titled_floor": { "model": "extraplanets:magnesium_broken_titled_floor_model" },
+		"basictypedecorativeblocks=ash_bricks": { "model": "extraplanets:ash_bricks_model" }
+    }
+}

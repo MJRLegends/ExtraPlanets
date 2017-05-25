@@ -27,6 +27,7 @@ import com.google.common.collect.ImmutableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
+import com.mjr.extraplanets.blocks.BlockDecorativeBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -167,8 +168,8 @@ public class ClientProxy extends CommonProxy {
 		if (Config.ceres)
 			ClientUtilities.addExtraPlanetsVariants("ceres", "ceres_surface", "ceres_sub_surface", "ceres_stone", "ceres_ore_iron", "ceres_ore_tin", "ceres_ore_copper", "ceres_ore_uranium", "ceres_uranium_block", "ceres_stonebricks");
 		if (Config.jupiter)
-			ClientUtilities.addExtraPlanetsVariants("jupiter", "jupiter_surface", "jupiter_sub_surface", "jupiter_stone", "jupiter_ore_iron", "jupiter_ore_tin", "jupiter_ore_copper", "jupiter_ore_palladium", "jupiter_ore_nickel", "jupiter_palladium_block",
-					"jupiter_stonebricks", "jupiter_dungeon_brick", "jupiter_ore_red_gem", "jupiter_red_gem_block");
+			ClientUtilities.addExtraPlanetsVariants("jupiter", "jupiter_surface", "jupiter_sub_surface", "jupiter_stone", "jupiter_ore_iron", "jupiter_ore_tin", "jupiter_ore_copper", "jupiter_ore_palladium", "jupiter_ore_nickel",
+					"jupiter_palladium_block", "jupiter_stonebricks", "jupiter_dungeon_brick", "jupiter_ore_red_gem", "jupiter_red_gem_block");
 		if (Config.uranus)
 			ClientUtilities.addExtraPlanetsVariants("uranus", "uranus_surface", "uranus_sub_surface", "uranus_stone", "uranus_ore_crystal", "uranus_crystal_block", "uranus_stonebricks", "uranus_dungeon_brick", "uranus_ore_white_gem",
 					"uranus_white_gem_block");
@@ -246,6 +247,9 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.solarPanels)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
+
+		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
+				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
 	}
 
 	private void registerEntityRenders() {
@@ -552,8 +556,12 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.fossil);
 		if (Config.radiation)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.potash);
-		if(Config.leadOreGeneration)
+		if (Config.leadOreGeneration)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.oreLead);
+
+		for (BlockDecorativeBlocks.EnumBlockBasic blockBasic : BlockDecorativeBlocks.EnumBlockBasic.values()) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.decorativeBlocks, blockBasic.getMeta(), blockBasic.getName());
+		}
 	}
 
 	private void registerItemJsons() {

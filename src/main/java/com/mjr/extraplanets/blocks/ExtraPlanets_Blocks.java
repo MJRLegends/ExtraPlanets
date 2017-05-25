@@ -52,6 +52,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCeres;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockDeimos;
@@ -192,6 +193,8 @@ public class ExtraPlanets_Blocks {
 
 	// Planks
 	public static Block kepler22bPlanks;
+	
+	public static Block decorativeBlocks;
 
 	public static void init() {
 		initializeBlocks();
@@ -306,6 +309,8 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.radiation)
 			potash = new BlockBasic(Material.rock).setUnlocalizedName("potash").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
+		
+		decorativeBlocks = new BlockDecorativeBlocks("decorative_blocks");
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -479,6 +484,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(oreLead, oreLead.getUnlocalizedName().substring(5));
 		if (Config.radiation)
 			GameRegistry.registerBlock(potash, potash.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(decorativeBlocks, ItemBlockDecorativeBlocks.class, decorativeBlocks.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerTileEntitys() {
