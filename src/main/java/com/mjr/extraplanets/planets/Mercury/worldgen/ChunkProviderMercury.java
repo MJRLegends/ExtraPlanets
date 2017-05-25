@@ -71,22 +71,22 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	@Override
 	public double getHeightModifier() {
-		return 12;
+		return 24;
 	}
 
 	@Override
 	public double getSmallFeatureHeightModifier() {
-		return 26;
+		return 40;
 	}
 
 	@Override
 	public double getMountainHeightModifier() {
-		return 95;
+		return 160;
 	}
 
 	@Override
 	public double getValleyHeightModifier() {
-		return 50;
+		return 75;
 	}
 
 	@Override
