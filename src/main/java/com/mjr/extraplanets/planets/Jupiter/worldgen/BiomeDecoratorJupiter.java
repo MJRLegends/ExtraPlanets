@@ -1,7 +1,9 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
+import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +24,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 	private WorldGenerator nickelGen;
 	private WorldGenerator gravelGen;
 	private WorldGenerator redGemGen;
+	private WorldGenerator skyBlocksGen;
 
 	private int LakesPerChunk = 50;
 
@@ -38,6 +41,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.nickelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 7, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterGravel, 12, 0, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 10, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
+		this.skyBlocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 3, 2, false, Blocks.air, 0);
 		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -62,6 +66,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.generateOre(20, this.nickelGen, 32, 40);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.redGemGen, 0, 10);
+		this.generateOre(100, this.skyBlocksGen, 63, 256);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
