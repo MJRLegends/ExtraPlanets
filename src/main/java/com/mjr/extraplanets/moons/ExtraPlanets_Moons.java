@@ -4,7 +4,7 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
-import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
+import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.util.ResourceLocation;
 
@@ -90,7 +90,7 @@ public class ExtraPlanets_Moons {
 			triton.setRelativeOrbitTime(75.0F);
 			triton.setTierRequired(7);
 			triton.setRelativeSize(0.3867F);
-			triton.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			triton.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			triton.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/triton.png"));
 			triton.setDimensionInfo(Config.tritonID, WorldProviderTriton.class);
 		}
@@ -101,7 +101,7 @@ public class ExtraPlanets_Moons {
 			phobos.setRelativeOrbitTime(25.5785754286855436F);
 			phobos.setTierRequired(2);
 			phobos.setRelativeSize(0.3867F);
-			phobos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			phobos.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			phobos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/phobos.png"));
 			phobos.setDimensionInfo(Config.phobosID, WorldProviderPhobos.class);
 		}
@@ -112,7 +112,7 @@ public class ExtraPlanets_Moons {
 			deimos.setRelativeOrbitTime(57.415456589452485548F);
 			deimos.setTierRequired(2);
 			deimos.setRelativeSize(0.3867F);
-			deimos.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			deimos.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			deimos.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/deimos.png"));
 			deimos.setDimensionInfo(Config.deimosID, WorldProviderDeimos.class);
 		}
@@ -123,7 +123,7 @@ public class ExtraPlanets_Moons {
 			io.setRelativeOrbitTime(43.59976842345364536F);
 			io.setTierRequired(4);
 			io.setRelativeSize(0.3867F);
-			io.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			io.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			io.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
 			io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
 		}
@@ -134,7 +134,7 @@ public class ExtraPlanets_Moons {
 			europa.setRelativeOrbitTime(87.55354354345685345F);
 			europa.setTierRequired(4);
 			europa.setRelativeSize(0.3867F);
-			europa.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			europa.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			europa.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
 			europa.setDimensionInfo(Config.europaID, WorldProviderEuropa.class);
 		}
@@ -146,7 +146,7 @@ public class ExtraPlanets_Moons {
 			ganymede.setRelativeOrbitTime(123.252594612756974F);
 			ganymede.setTierRequired(4);
 			ganymede.setRelativeSize(0.3867F);
-			ganymede.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			ganymede.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			ganymede.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/ganymede.png"));
 			ganymede.setDimensionInfo(Config.ganymedeID, WorldProviderGanymede.class);
 		}
@@ -157,7 +157,7 @@ public class ExtraPlanets_Moons {
 			callisto.setRelativeOrbitTime(157.84524858485412315F);
 			callisto.setTierRequired(4);
 			callisto.setRelativeSize(0.3867F);
-			callisto.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			callisto.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			callisto.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/callisto.png"));
 			callisto.setDimensionInfo(Config.callistoID, WorldProviderCallisto.class);
 		}
@@ -168,7 +168,7 @@ public class ExtraPlanets_Moons {
 			rhea.setRelativeOrbitTime(42.74914745741246F);
 			rhea.setTierRequired(5);
 			rhea.setRelativeSize(0.3867F);
-			rhea.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			rhea.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			rhea.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/rhea.png"));
 			rhea.setDimensionInfo(Config.rheaID, WorldProviderRhea.class);
 		}
@@ -179,7 +179,7 @@ public class ExtraPlanets_Moons {
 			titan.setRelativeOrbitTime(71.452415154621642F);
 			titan.setTierRequired(5);
 			titan.setRelativeSize(0.3867F);
-			titan.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			titan.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			titan.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
 			titan.setDimensionInfo(Config.titanID, WorldProviderTitan.class);
 		}
@@ -190,7 +190,7 @@ public class ExtraPlanets_Moons {
 			oberon.setRelativeOrbitTime(68.5411941552618F);
 			oberon.setTierRequired(6);
 			oberon.setRelativeSize(0.3867F);
-			oberon.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			oberon.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			oberon.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png"));
 			oberon.setDimensionInfo(Config.oberonID, WorldProviderOberon.class);
 		}
@@ -201,7 +201,7 @@ public class ExtraPlanets_Moons {
 			titania.setRelativeOrbitTime(68.5411941552618F);
 			titania.setTierRequired(6);
 			titania.setRelativeSize(0.3867F);
-			titania.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			titania.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			titania.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png"));
 			titania.setDimensionInfo(Config.titaniaID, WorldProviderTitania.class);
 		}
@@ -212,7 +212,7 @@ public class ExtraPlanets_Moons {
 			iapetus.setRelativeOrbitTime(68.5411941552618F);
 			iapetus.setTierRequired(6);
 			iapetus.setRelativeSize(0.3867F);
-			iapetus.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			iapetus.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			iapetus.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/iapetus.png"));
 			iapetus.setDimensionInfo(Config.iapetusID, WorldProviderIapetus.class);
 		}
