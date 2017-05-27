@@ -52,7 +52,6 @@ public class WorldGenBasicHideout  extends WorldGenerator {
 	}
 
 	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
-
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 0), ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(8), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 0), ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(8), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 0, z + 0), ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(8), 3);
