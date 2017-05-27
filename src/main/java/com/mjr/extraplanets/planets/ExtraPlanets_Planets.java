@@ -5,7 +5,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
-import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
+import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.util.ResourceLocation;
 
@@ -72,7 +72,7 @@ public class ExtraPlanets_Planets {
 			MERCURY.setPhaseShift(1.45F);
 			MERCURY.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
 			MERCURY.setRelativeOrbitTime(0.24096385542168674698795180722892F);
-			MERCURY.atmosphereComponent(IAtmosphericGas.HYDROGEN);
+			MERCURY.atmosphereComponent(EnumAtmosphericGas.HYDROGEN);
 			MERCURY.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
 			MERCURY.setDimensionInfo(Config.MERCURY_ID, WorldProviderMercury.class);
 			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, 50.0F, 0.0F, 0.1F));
@@ -84,7 +84,7 @@ public class ExtraPlanets_Planets {
 			CERES.setPhaseShift(Constants.floatPI);
 			CERES.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F));
 			CERES.setRelativeOrbitTime((float) 11.861993428258488499452354874042 / 2);
-			CERES.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);
+			CERES.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM);
 			CERES.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"));
 			CERES.setDimensionInfo(Config.CERES_ID, WorldProviderCeres.class);
 			CERES.setAtmosphere(new AtmosphereInfo(false, false, false, -1.5F, 5.0F, 0.1F));
@@ -96,7 +96,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.setPhaseShift(Constants.floatPI);
 			JUPITER.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F, 1.75F));
 			JUPITER.setRelativeOrbitTime(11.861993428258488499452354874042F);
-			JUPITER.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);
+			JUPITER.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM);
 			JUPITER.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"));
 			JUPITER.setDimensionInfo(Config.JUPITER_ID, WorldProviderJupiter.class);
 			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, false, 100.0F, 3.0F, 0.1F));
@@ -108,7 +108,7 @@ public class ExtraPlanets_Planets {
 			SATURN.setPhaseShift(5.45F);
 			SATURN.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.00F, 1.00F));
 			SATURN.setRelativeOrbitTime(29.463307776560788608981380065717F);
-			SATURN.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
+			SATURN.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
 			SATURN.setAtmosphere(new AtmosphereInfo(false, false, false, 80.0F, 0.0F, 0.1F));
@@ -120,7 +120,7 @@ public class ExtraPlanets_Planets {
 			URANUS.setPhaseShift(1.38F);
 			URANUS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.25F, 2.25F));
 			URANUS.setRelativeOrbitTime(84.063526834611171960569550930997F);
-			URANUS.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE).atmosphereComponent(IAtmosphericGas.WATER);
+			URANUS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE).atmosphereComponent(EnumAtmosphericGas.WATER);
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
 			URANUS.setAtmosphere(new AtmosphereInfo(false, false, false, -120.0F, 4.0F, 0.1F));
@@ -132,7 +132,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.setPhaseShift(1.0F);
 			NEPTUNE.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.50F, 2.50F));
 			NEPTUNE.setRelativeOrbitTime(164.84118291347207009857612267251F);
-			NEPTUNE.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
+			NEPTUNE.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
 			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
@@ -144,7 +144,7 @@ public class ExtraPlanets_Planets {
 			PLUTO.setPhaseShift(1.0F);
 			PLUTO.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F, 2.75F));
 			PLUTO.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 2));
-			PLUTO.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
+			PLUTO.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			PLUTO.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
 			PLUTO.setDimensionInfo(Config.PLUTO_ID, WorldProviderPluto.class);
 			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
@@ -156,7 +156,7 @@ public class ExtraPlanets_Planets {
 			ERIS.setPhaseShift(1.0F);
 			ERIS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.75F, 3.75F));
 			ERIS.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 3));
-			ERIS.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
+			ERIS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			ERIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			ERIS.setDimensionInfo(Config.ERIS_ID, WorldProviderEris.class);
 			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, -150.0F, 5.0F, 0.1F));
@@ -168,7 +168,7 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.setPhaseShift(1.45F);
 			KEPLER22B.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
 			KEPLER22B.setRelativeOrbitTime(164.84118291347207009857612267251F);
-			KEPLER22B.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER).atmosphereComponent(IAtmosphericGas.OXYGEN);
+			KEPLER22B.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER).atmosphereComponent(EnumAtmosphericGas.OXYGEN);
 			KEPLER22B.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
 			KEPLER22B.setDimensionInfo(Config.KEPLER22B_ID, WorldProviderKepler22b.class);
 			KEPLER22B.setAtmosphere(new AtmosphereInfo(true, true, false, 0.0F, 5.0F, 0.05F));
