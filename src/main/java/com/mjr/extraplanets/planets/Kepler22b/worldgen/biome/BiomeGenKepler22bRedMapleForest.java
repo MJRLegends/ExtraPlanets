@@ -37,5 +37,6 @@ public class BiomeGenKepler22bRedMapleForest extends BiomeGenBaseKepler22b {
 		this.getBiomeDecorator().redMedGrassPerChunk = 90;
 		this.getBiomeDecorator().redTallGrassPerChunk = 90;
 		this.getBiomeDecorator().redBigTreesPerChunk = 50;
+		this.getBiomeDecorator().generateHuts = true;
 	}
 }

@@ -60,6 +60,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	public int blueBigTreesPerChunk;
 	public int redBigTreesPerChunk;
 	public int blueTowerPerChunk;
+	
+	public boolean generateHuts;
 
 	private boolean isDecorating = false;
 
@@ -143,29 +145,31 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			(new WorldGenKepler22bDungeons()).generate(worldIn, random, new BlockPos(x, y, z));
 		}
 		for (int i = 0; i < 1; i++) {
-			if (random.nextInt(200) == 1) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + (random.nextInt(16) + 8), 0, this.chunkPos.getZ() + (random.nextInt(16) + 8)));
-				blockpos.down(2);
-				int randomNum = random.nextInt(7) + 0;
-				switch (randomNum) {
-				case 1:
-					(new WorldGenBlueHut()).generate(worldIn, random, blockpos);
-					break;
-				case 2:
-					(new WorldGenRedHut()).generate(worldIn, random, blockpos);
-					break;
-				case 3:
-					(new WorldGenPurpleHut()).generate(worldIn, random, blockpos);
-					break;
-				case 4:
-					(new WorldGenYellowHut()).generate(worldIn, random, blockpos);
-					break;
-				case 5:
-					(new WorldGenGreenHut()).generate(worldIn, random, blockpos);
-					break;
-				case 6:
-					(new WorldGenBrownHut()).generate(worldIn, random, blockpos);
-					break;
+			if(generateHuts){
+				if (random.nextInt(200) == 1) {
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + (random.nextInt(16) + 8), 0, this.chunkPos.getZ() + (random.nextInt(16) + 8)));
+					blockpos.down(2);
+					int randomNum = random.nextInt(7) + 0;
+					switch (randomNum) {
+					case 1:
+						(new WorldGenBlueHut()).generate(worldIn, random, blockpos);
+						break;
+					case 2:
+						(new WorldGenRedHut()).generate(worldIn, random, blockpos);
+						break;
+					case 3:
+						(new WorldGenPurpleHut()).generate(worldIn, random, blockpos);
+						break;
+					case 4:
+						(new WorldGenYellowHut()).generate(worldIn, random, blockpos);
+						break;
+					case 5:
+						(new WorldGenGreenHut()).generate(worldIn, random, blockpos);
+						break;
+					case 6:
+						(new WorldGenBrownHut()).generate(worldIn, random, blockpos);
+						break;
+					}
 				}
 			}
 		}
