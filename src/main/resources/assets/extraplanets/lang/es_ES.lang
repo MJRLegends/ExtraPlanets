@@ -400,6 +400,8 @@ tile.dense_ice.name=Hielo denso
 tile.fossil.name=Bloque fósil
 tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
+tile.red_sand.name=Red Sand
+tile.red_sandstone.name=Red Sandstone
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Marble

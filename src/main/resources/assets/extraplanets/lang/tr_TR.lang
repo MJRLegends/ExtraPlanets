@@ -401,6 +401,8 @@ tile.dense_ice.name=Yoğun Buz
 tile.fossil.name=Fosil Bloğu
 tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
+tile.red_sand.name=Red Sand
+tile.red_sandstone.name=Red Sandstone
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Marble

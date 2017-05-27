@@ -402,6 +402,8 @@ tile.dense_ice.name=坚冰
 tile.fossil.name=化石块
 tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
+tile.red_sand.name=Red Sand
+tile.red_sandstone.name=Red Sandstone
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Marble
