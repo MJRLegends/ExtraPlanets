@@ -4,6 +4,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
@@ -128,5 +129,10 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	@Override
 	public int getDungeonSpacing() {
 		return 800;
+	}
+	
+	@Override
+	public boolean canBlockFreeze(BlockPos pos, boolean byWater){
+		return false;
 	}
 }
