@@ -19,7 +19,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
 
 public class ChunkProviderMercury extends ChunkProviderSpace {
-	// private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();
+	private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();
 
 	private final BiomeDecoratorMercury mercuryBiomeDecorator = new BiomeDecoratorMercury();
 
@@ -102,12 +102,12 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
-		// this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.worldObj, x, z, null);
-		// this.villageGenerator.generate(this, this.worldObj, x, z, null);
+		this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }
