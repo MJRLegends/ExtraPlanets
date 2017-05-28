@@ -40,6 +40,7 @@ public class Config {
 	public static boolean OXYGEN_COMPRESSOR_ULTIMATE;
 	public static boolean SLABS_AND_STAIRS = false;
 	public static boolean NUCLEAR_BOMB;
+	public static boolean FIRE_BOMB;
 	
 	public static boolean BASIC_DECRYSTALLIZER;
 	public static boolean BASIC_CRYSTALLIZER;
@@ -273,7 +274,8 @@ public class Config {
 		OXYGEN_COMPRESSOR_ADVANCED = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Compressor/Decompressor", true).getBoolean(true);
 		OXYGEN_COMPRESSOR_ULTIMATE = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Compressor/Decompressor", true).getBoolean(true);
 		NUCLEAR_BOMB = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Nuclear Bomb", true).getBoolean(true);
-
+		FIRE_BOMB = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Fire Bomb", true).getBoolean(true);
+		
 		BASIC_DECRYSTALLIZER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Decrystallizer", true).getBoolean(true);
 		BASIC_CRYSTALLIZER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Crystallizer", true).getBoolean(true);
 		BASIC_SMASHER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Block Smasher", true).getBoolean(true);

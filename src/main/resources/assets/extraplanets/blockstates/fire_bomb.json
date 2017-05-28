@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "explode=false": { "model": "extraplanets:fire_bomb_model" },
+		"explode=true": { "model": "extraplanets:fire_bomb_model" }
+    }
+}

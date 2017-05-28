@@ -152,6 +152,7 @@ public class ExtraPlanets_Blocks {
 
 	// Other Special Blocks
 	public static Block NUCLEAR_BOMB;
+	public static Block FIRE_BOMB;
 	public static Block FOSSIL;
 	public static Block DENSE_ICE;
 	public static Block VOLCANIC_ROCK;
@@ -317,6 +318,8 @@ public class ExtraPlanets_Blocks {
 			FOSSIL = new BlockFossil(Material.ROCK).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.CERES && Config.NUCLEAR_BOMB)
 			NUCLEAR_BOMB = new BlockNuclearBomb().setUnlocalizedName("nuclear_bomb");
+		if (Config.SATURN && Config.FIRE_BOMB)
+			FIRE_BOMB = new BlockFireBomb().setUnlocalizedName("fire_bomb");
 		if (Config.ORE_LEAD_GENERATION)
 			ORE_LEAD = new BlockBasic(Material.ROCK).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F);
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
@@ -514,6 +517,8 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.registerBlock(FOSSIL, FOSSIL.getUnlocalizedName().substring(5));
 		if (Config.CERES && Config.NUCLEAR_BOMB)
 			RegisterHelper.registerBlock(NUCLEAR_BOMB, NUCLEAR_BOMB.getUnlocalizedName().substring(5));
+		if (Config.SATURN && Config.FIRE_BOMB)
+			RegisterHelper.registerBlock(FIRE_BOMB, FIRE_BOMB.getUnlocalizedName().substring(5));
 		if (Config.ORE_LEAD_GENERATION)
 			RegisterHelper.registerBlock(ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
 		if (Config.RADIATION)

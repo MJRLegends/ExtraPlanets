@@ -68,6 +68,7 @@ import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT6;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT7;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT8;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT9;
+import com.mjr.extraplanets.client.render.entities.RenderFireBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
@@ -96,6 +97,7 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
+import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
@@ -263,8 +265,8 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad");
 		ClientUtilities.addExtraPlanetsVariants("advanced_oxygen_compressor", "advanced_oxygen_compressor", "advanced_oxygen_decompressor");
 		ClientUtilities.addExtraPlanetsVariants("ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
-		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh", "frozen_nitrogen_bricks", "volcanic_rock_bricks",
-				"carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
+		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
+				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
 	}
 
 	private void registerEntityRenders() {
@@ -310,8 +312,10 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 		if (Config.ERIS)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
-		if (Config.NUCLEAR_BOMB)
+		if (Config.CERES && Config.NUCLEAR_BOMB)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, (RenderManager manager) -> new RenderNuclearBombPrimed(manager));
+		if (Config.CERES && Config.FIRE_BOMB)
+			RenderingRegistry.registerEntityRenderingHandler(EntityFireBombPrimed.class, (RenderManager manager) -> new RenderFireBombPrimed(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.SNOWBALL)));
 	}
 
@@ -413,6 +417,8 @@ public class ClientProxy extends CommonProxy {
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_6);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.SATURN_GRAVEL);
+			if (Config.FIRE_BOMB)
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FIRE_BOMB);
 		}
 		if (Config.URANUS) {
 			for (BlockBasicUranus.EnumBlockBasic blockBasic : BlockBasicUranus.EnumBlockBasic.values()) {
@@ -599,7 +605,7 @@ public class ClientProxy extends CommonProxy {
 
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ADVANCED);
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE);
-		
+
 		for (BlockDecorativeBlocks.EnumBlockBasic blockBasic : BlockDecorativeBlocks.EnumBlockBasic.values()) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.DECORATIVE_BLOCKS, blockBasic.getMeta(), blockBasic.getName());
 		}
