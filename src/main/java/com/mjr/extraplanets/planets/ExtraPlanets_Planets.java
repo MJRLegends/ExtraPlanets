@@ -70,7 +70,7 @@ public class ExtraPlanets_Planets {
 			MERCURY.setTierRequired(3);
 			MERCURY.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			MERCURY.setPhaseShift(1.45F);
-			MERCURY.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
+			MERCURY.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F + Config.MERCURY_DISTANCE_OFFSET, 0.5F + Config.MERCURY_DISTANCE_OFFSET));
 			MERCURY.setRelativeOrbitTime(0.24096385542168674698795180722892F);
 			MERCURY.atmosphereComponent(EnumAtmosphericGas.HYDROGEN);
 			MERCURY.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
@@ -82,7 +82,7 @@ public class ExtraPlanets_Planets {
 			CERES.setTierRequired(Config.ROCKET_TIER_CERES);
 			CERES.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			CERES.setPhaseShift(Constants.floatPI);
-			CERES.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F));
+			CERES.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F + Config.CERES_DISTANCE_OFFSET, 1.50F + Config.CERES_DISTANCE_OFFSET));
 			CERES.setRelativeOrbitTime((float) 11.861993428258488499452354874042 / 2);
 			CERES.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM);
 			CERES.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"));
@@ -94,7 +94,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.setTierRequired(4);
 			JUPITER.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			JUPITER.setPhaseShift(Constants.floatPI);
-			JUPITER.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F, 1.75F));
+			JUPITER.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F + Config.JUPITER_DISTANCE_OFFSET, 1.75F + Config.JUPITER_DISTANCE_OFFSET));
 			JUPITER.setRelativeOrbitTime(11.861993428258488499452354874042F);
 			JUPITER.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM);
 			JUPITER.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"));
@@ -106,7 +106,7 @@ public class ExtraPlanets_Planets {
 			SATURN.setTierRequired(5);
 			SATURN.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			SATURN.setPhaseShift(5.45F);
-			SATURN.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.00F, 1.00F));
+			SATURN.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.00F + Config.SATURN_DISTANCE_OFFSET, 2.00F + Config.SATURN_DISTANCE_OFFSET));
 			SATURN.setRelativeOrbitTime(29.463307776560788608981380065717F);
 			SATURN.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
@@ -118,7 +118,7 @@ public class ExtraPlanets_Planets {
 			URANUS.setTierRequired(6);
 			URANUS.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			URANUS.setPhaseShift(1.38F);
-			URANUS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.25F, 2.25F));
+			URANUS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.25F + Config.URANUS_DISTANCE_OFFSET, 2.25F + Config.URANUS_DISTANCE_OFFSET));
 			URANUS.setRelativeOrbitTime(84.063526834611171960569550930997F);
 			URANUS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE).atmosphereComponent(EnumAtmosphericGas.WATER);
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
@@ -130,7 +130,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.setTierRequired(7);
 			NEPTUNE.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			NEPTUNE.setPhaseShift(1.0F);
-			NEPTUNE.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.50F, 2.50F));
+			NEPTUNE.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.50F + Config.NEPTUNE_DISTANCE_OFFSET, 2.50F + Config.NEPTUNE_DISTANCE_OFFSET));
 			NEPTUNE.setRelativeOrbitTime(164.84118291347207009857612267251F);
 			NEPTUNE.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
@@ -142,7 +142,7 @@ public class ExtraPlanets_Planets {
 			PLUTO.setTierRequired(8);
 			PLUTO.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			PLUTO.setPhaseShift(1.0F);
-			PLUTO.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F, 2.75F));
+			PLUTO.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F + Config.PLUTO_DISTANCE_OFFSET, 2.75F + Config.PLUTO_DISTANCE_OFFSET));
 			PLUTO.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 2));
 			PLUTO.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			PLUTO.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
@@ -154,7 +154,7 @@ public class ExtraPlanets_Planets {
 			ERIS.setTierRequired(9);
 			ERIS.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			ERIS.setPhaseShift(1.0F);
-			ERIS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.75F, 3.75F));
+			ERIS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.75F + Config.ERIS_DISTANCE_OFFSET, 3.75F + Config.ERIS_DISTANCE_OFFSET));
 			ERIS.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 3));
 			ERIS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			ERIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
@@ -176,19 +176,19 @@ public class ExtraPlanets_Planets {
 		if (Config.KUIPER_BELT) {
 			KUIPER_BELT = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (KUIPER_BELT != null)
-				KUIPER_BELT.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F, 4.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				KUIPER_BELT.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F + Config.KUIPER_BELT_DISTANCE_OFFSET, 4.0F + Config.KUIPER_BELT_DISTANCE_OFFSET)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			KUIPER_BELT.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kuiper_belt.png"));
 		}
 		if (Config.MAKEMAKE) {
 			MAKEMAKE = RegisterHelper.registerUnreachablePlanet("makemake", GalacticraftCore.solarSystemSol);
 			if (MAKEMAKE != null)
-				MAKEMAKE.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.50F, 4.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				MAKEMAKE.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.50F + Config.MAKEMAKE_DISTANCE_OFFSET, 4.50F + Config.MAKEMAKE_DISTANCE_OFFSET)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			MAKEMAKE.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/makemake.png"));
 		}
 		if (Config.HAUMEA) {
 			HAUNEA = RegisterHelper.registerUnreachablePlanet("haumea", GalacticraftCore.solarSystemSol);
 			if (HAUNEA != null)
-				HAUNEA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F, 3.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				HAUNEA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F + Config.HAUMEA_DISTANCE_OFFSET, 3.50F + Config.HAUMEA_DISTANCE_OFFSET)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			HAUNEA.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/haumea.png"));
 		}
 		if (Config.KEPLER_SOLAR_SYSTEMS) {
