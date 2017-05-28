@@ -19,14 +19,14 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
 
 public class ChunkProviderEris extends ChunkProviderSpace {
-	// private final MapGenVillageEris villageGenerator = new MapGenVillageEris();
+	private final MapGenVillageEris villageGenerator = new MapGenVillageEris();
 
 	private final BiomeDecoratorEris erisBiomeDecorator = new BiomeDecoratorEris();
 
 	private final MapGenCaveEris caveGenerator = new MapGenCaveEris();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonEris(new DungeonConfiguration(ExtraPlanets_Blocks.ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7,
-			RoomBossEris.class, RoomTreasureEris.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonEris(new DungeonConfiguration(ExtraPlanets_Blocks.ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7,
+			7, RoomBossEris.class, RoomTreasureEris.class));
 
 	public ChunkProviderEris(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -102,12 +102,12 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
-		// this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.worldObj, x, z, null);
-		// this.villageGenerator.generate(this, this.worldObj, x, z, null);
+		this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }

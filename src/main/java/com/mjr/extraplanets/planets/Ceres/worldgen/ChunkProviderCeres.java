@@ -6,6 +6,7 @@ import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
@@ -15,11 +16,11 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class ChunkProviderCeres extends ChunkProviderSpace {
-    //private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
+	private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
 
 	private final BiomeDecoratorCeres ceresBiomeDecorator = new BiomeDecoratorCeres();
 
-	 private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
+	private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
 
 	public ChunkProviderCeres(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -43,7 +44,7 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 
@@ -93,11 +94,11 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	public void onPopulate(int cX, int cZ) {
-		//this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-        //this.villageGenerator.generate(this, this.worldObj, x, z, null);
+		this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }
