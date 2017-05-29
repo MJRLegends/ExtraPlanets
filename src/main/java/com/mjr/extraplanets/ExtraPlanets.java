@@ -44,6 +44,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.handlers.BoneMealHandler;
 import com.mjr.extraplanets.handlers.BucketHandler;
+import com.mjr.extraplanets.handlers.GalacticraftVersionChecker;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -182,6 +183,7 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		GalacticraftVersionChecker.run();
 		Config.load();
 
 		// Main Events
