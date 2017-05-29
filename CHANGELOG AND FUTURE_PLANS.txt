@@ -42,6 +42,26 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.7.3
+*Fixed crash when disabling mercury in config
+*Clean up
+*Config: Tweaked and Added loads of new Config options
+
+v1.7.2
+*Fixed dedicated server crash
+
+v1.7.1
+*Refactor world gen features to worldgen pack from world package
+*Fixed crash issue when disabling Eris via config (Micro Blocks registering)
+*Set minimum version checker to build 493 of Galacticraft to make sure people are using the correct version(To stop issues with machines)
+*Fixed dedicated server crash with getting rendering type on machines
+
+v1.7.0
+*Fixed Dungeon crash issue
+
+v1.6.9
+*Fixed biome conflict with IO and Kepler22b Red Desert Biome
+
 v1.6.8
 *Fixed Venus Rover wheel issue	
 *Improved battery textures	

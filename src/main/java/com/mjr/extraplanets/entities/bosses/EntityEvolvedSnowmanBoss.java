@@ -322,7 +322,7 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if (Config.morePlanetsCompatibility)
+		if (Config.morePlanetsCompatibilityAdv)
 			stackList = GalacticraftRegistry.getDungeonLoot(4);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(8);

@@ -412,7 +412,7 @@ public class EntityCreeperBossUranus extends EntityMob implements IEntityBreatha
 	public ItemStack getGuaranteedLoot(Random rand)
 	{
 		List<ItemStack> stackList;
-		if(Config.morePlanetsCompatibility)
+		if(Config.morePlanetsCompatibilityAdv)
 			stackList = GalacticraftRegistry.getDungeonLoot(3);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(7);

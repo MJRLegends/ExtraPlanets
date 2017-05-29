@@ -10,8 +10,8 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.worldGen.features.WorldGenCustomLake;
-import com.mjr.extraplanets.worldGen.features.WorldGenVolcano;
+import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.world.features.WorldGenVolcano;
 
 public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 

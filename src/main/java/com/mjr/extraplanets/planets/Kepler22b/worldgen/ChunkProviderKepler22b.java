@@ -12,7 +12,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKeple
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
-import com.mjr.extraplanets.worldGen.prefabs.ChunkProviderSpaceNormal;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderSpaceNormal;
 
 public class ChunkProviderKepler22b extends ChunkProviderSpaceNormal {
 	private MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();

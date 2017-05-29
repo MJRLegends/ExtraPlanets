@@ -38,7 +38,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	@Override
 	public void loadConfig() {
 		if (Config.neiSupport) {
-			if (Config.morePlanetsCompatibility == false) {
+			if (Config.morePlanetsCompatibilityAdv == false) {
 				if (Config.venus)
 					this.registerTier4Recipe();
 				if (Config.jupiter)
@@ -55,53 +55,55 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 					this.registerTier10Recipe();
 			}
 			this.addCircuitFabricatorRecipes();
-			this.addMarsRoverRecipes();
-			this.addVenusRoverRecipes();
+			if (Config.marsRover)
+				this.addMarsRoverRecipes();
+			if (Config.venusRover)
+				this.addVenusRoverRecipes();
 
 			if (Config.venus) {
-				if (Config.morePlanetsCompatibility == false) {
+				if (Config.morePlanetsCompatibilityAdv == false) {
 					API.registerRecipeHandler(new RocketT4RecipeHandler());
 					API.registerUsageHandler(new RocketT4RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.venusSpawner));
 			}
 			if (Config.jupiter) {
-				if (Config.morePlanetsCompatibility == false) {
+				if (Config.morePlanetsCompatibilityAdv == false) {
 					API.registerRecipeHandler(new RocketT5RecipeHandler());
 					API.registerUsageHandler(new RocketT5RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.jupiterSpawner));
 			}
 			if (Config.saturn) {
-				if (Config.morePlanetsCompatibility == false) {
+				if (Config.morePlanetsCompatibilityAdv == false) {
 					API.registerRecipeHandler(new RocketT6RecipeHandler());
 					API.registerUsageHandler(new RocketT6RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.saturnSpawner));
 			}
 			if (Config.uranus) {
-				if (Config.morePlanetsCompatibility == false) {
+				if (Config.morePlanetsCompatibilityAdv == false) {
 					API.registerRecipeHandler(new RocketT7RecipeHandler());
 					API.registerUsageHandler(new RocketT7RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.uranusSpawner));
 			}
 			if (Config.neptune) {
-				if (Config.morePlanetsCompatibility == false) {
+				if (Config.morePlanetsCompatibilityAdv == false) {
 					API.registerRecipeHandler(new RocketT8RecipeHandler());
 					API.registerUsageHandler(new RocketT8RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.neptuneSpawner));
 			}
 			if (Config.pluto) {
-				if (Config.morePlanetsCompatibility == false) {
+				if (Config.morePlanetsCompatibilityAdv == false) {
 					API.registerRecipeHandler(new RocketT9RecipeHandler());
 					API.registerUsageHandler(new RocketT9RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.plutoSpawner));
 			}
 			if (Config.eris) {
-				if (Config.morePlanetsCompatibility == false) {
+				if (Config.morePlanetsCompatibilityAdv == false) {
 					API.registerRecipeHandler(new RocketT10RecipeHandler());
 					API.registerUsageHandler(new RocketT10RecipeHandler());
 				}
@@ -110,17 +112,22 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
 
-			if (Config.morePlanetsCompatibility) {
+			if (Config.morePlanetsCompatibilityAdv) {
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 1));
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 3));
 			}
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 0));
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.advancedLaunchPadFull, 0, 1));
-			API.hideItem(new ItemStack(ExtraPlanets_Items.electricParts, 0, 2));
-			API.registerRecipeHandler(new MarsRoverRecipeHandler());
-			API.registerUsageHandler(new MarsRoverRecipeHandler());
-			API.registerRecipeHandler(new VenusRoverRecipeHandler());
-			API.registerUsageHandler(new VenusRoverRecipeHandler());
+			if (Config.marsRover || Config.venusRover)
+				API.hideItem(new ItemStack(ExtraPlanets_Items.electricParts, 0, 2));
+			if (Config.marsRover) {
+				API.registerRecipeHandler(new MarsRoverRecipeHandler());
+				API.registerUsageHandler(new MarsRoverRecipeHandler());
+			}
+			if (Config.venusRover) {
+				API.registerRecipeHandler(new VenusRoverRecipeHandler());
+				API.registerUsageHandler(new VenusRoverRecipeHandler());
+			}
 		}
 	}
 
@@ -667,7 +674,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		if (Config.neptune) {
 			// Blue Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			if (Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibilityAdv)
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 2), 10, 22));
 			else
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 10, 22));
@@ -677,7 +684,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		if (Config.uranus) {
 			// White Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			if (Config.morePlanetsCompatibility)
+			if (Config.morePlanetsCompatibilityAdv)
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), 10, 22));
 			else
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), 10, 22));
@@ -700,8 +707,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			for (int y = 0; y < 5; y++) {
 				if (x == 2 && y == 1) {
 					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(ExtraPlanets_Items.electricParts, 1, 0), 36 + x * 18, 19 + 10 + y * 18));
-				}
-				else if (x == 1 && y == 1) {
+				} else if (x == 1 && y == 1) {
 					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(GCItems.partBuggy, 1, 1), 36 + x * 18, 19 + 10 + y * 18));
 				} else {
 					input1.put(y * 3 + x + 6, new PositionedStack(new ItemStack(MarsItems.marsItemBasic, 1, 3), 36 + x * 18, 19 + 10 + y * 18));

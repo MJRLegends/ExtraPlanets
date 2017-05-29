@@ -17,21 +17,21 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.6.8"
+version = "1.7.3"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
 minecraft {
-    version = "1.7.10-10.13.4.1558-1.7.10"
+    version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"
 }
 
 dependencies {
 	compile files (
-		"../GalacticraftCore-Dev-1.7-3.0.12.492.jar",
-		"../Galacticraft-Planets-Dev-1.7-3.0.12.492.jar",
-		"../Galacticraft-API-1.7-3.0.12.492.jar",
-		"../MicdoodleCore-Dev-1.7-3.0.12.492.jar",
+		"../GalacticraftCore-Dev-1.7-3.0.12.497.jar",
+		"../Galacticraft-Planets-Dev-1.7-3.0.12.497.jar",
+		"../Galacticraft-API-1.7-3.0.12.497.jar",
+		"../MicdoodleCore-Dev-1.7-3.0.12.497.jar",
 		"../NotEnoughItems-1.7.10-1.0.5.120-dev.jar",
 		"../CodeChickenLib-1.7.10-1.1.3.140-dev.jar"
 	)

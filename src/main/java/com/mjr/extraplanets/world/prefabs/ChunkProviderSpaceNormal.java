@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.worldGen.prefabs;
+package com.mjr.extraplanets.world.prefabs;
 
 import java.util.List;
 import java.util.Random;
