@@ -92,13 +92,13 @@ public class MainHandlerServer {
 				addX = -addX;
 			if (rand.nextInt(2) == 1)
 				addZ = -addZ;
-			if(addX <= 3)
-				addX = 5;
-			if(addZ <= 3)
-				addZ = 5;
+			if(addX <= 10)
+				addX = 10;
+			if(addZ <= 10)
+				addZ = 10;
 			int lightingSpawnChance = rand.nextInt(100);
 			if (lightingSpawnChance == 10) {
-				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX, event.player.worldObj.getHeight(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(), event.player.posZ + addZ, false));
+				event.player.worldObj.addWeatherEffect(new EntityLightningBolt(event.player.worldObj, event.player.posX + addX, event.player.worldObj.getTopSolidOrLiquidBlock(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(), event.player.posZ + addZ, false));
 			}
 		}
 	}
