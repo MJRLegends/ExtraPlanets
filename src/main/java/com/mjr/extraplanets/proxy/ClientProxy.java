@@ -268,7 +268,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
 				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
-		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "white_block", "red_block");
+		ClientUtilities.addExtraPlanetsVariants("decorative_blocks2", "white_block", "red_block");
 	}
 
 	private void registerEntityRenders() {
