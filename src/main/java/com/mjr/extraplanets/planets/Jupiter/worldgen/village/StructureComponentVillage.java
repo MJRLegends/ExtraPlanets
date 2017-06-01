@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.entities.EntityAlienVillager;
+import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -93,6 +94,15 @@ public abstract class StructureComponentVillage extends StructureComponent {
 				blockpos$mutableblockpos.setPos(l, 64, k);
 
 				if (boundingBox.isVecInside(blockpos$mutableblockpos)) {
+					if(world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY() <= 100){
+						for(int n = 0; n < 20; n++){
+							if(world.getBlockState(blockpos$mutableblockpos) == Blocks.AIR)
+								return blockpos$mutableblockpos.getY() + n;
+						}
+					}
+					else{
+						return 100;
+					}
 					i += world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY();
 					++j;
 				}
