@@ -1,8 +1,8 @@
 package com.mjr.extraplanets.client.handlers;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Iterator;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -11,7 +11,6 @@ import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
 import micdoodle8.mods.galacticraft.planets.venus.client.FakeLightningBoltRenderer;
-import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -42,7 +41,7 @@ import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 public class MainHandlerClient {
 
 	private static List<ExtraPlanetsPacketHandler> packetHandlers = Lists.newCopyOnWriteArrayList();
-    private Map<BlockPos, Integer> lightning = Maps.newHashMap();
+	private Map<BlockPos, Integer> lightning = Maps.newHashMap();
 
 	public static void addPacketHandler(ExtraPlanetsPacketHandler handler) {
 		MainHandlerClient.packetHandlers.add(handler);
@@ -95,62 +94,52 @@ public class MainHandlerClient {
 			}
 		}
 	}
-	
+
 	@SubscribeEvent
-    public void renderLightning(ClientProxyCore.EventSpecialRender event)
-    {
-        final Minecraft minecraft = FMLClientHandler.instance().getClient();
-        final EntityPlayerSP player = minecraft.thePlayer;
-        if (player != null && !ConfigManagerVenus.disableAmbientLightning)
-        {
-            Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
-            while (it.hasNext())
-            {
-                Map.Entry<BlockPos, Integer> entry = it.next();
-                long seed = entry.getValue() / 10 + entry.getKey().getX() + entry.getKey().getZ();
-                FakeLightningBoltRenderer.renderBolt(seed, entry.getKey().getX() - ClientProxyCore.playerPosX, entry.getKey().getY() - ClientProxyCore.playerPosY, entry.getKey().getZ() - ClientProxyCore.playerPosZ);
-            }
-        }
-    }
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public void onPlayerTick(TickEvent.PlayerTickEvent event)
-    {
-        final Minecraft minecraft = FMLClientHandler.instance().getClient();
-        final EntityPlayerSP player = minecraft.thePlayer;
+	public void renderLightning(ClientProxyCore.EventSpecialRender event) {
+		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final EntityPlayerSP player = minecraft.thePlayer;
+		if (player != null && !ConfigManagerVenus.disableAmbientLightning) {
+			Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
+			while (it.hasNext()) {
+				Map.Entry<BlockPos, Integer> entry = it.next();
+				long seed = entry.getValue() / 10 + entry.getKey().getX() + entry.getKey().getZ();
+				FakeLightningBoltRenderer.renderBolt(seed, entry.getKey().getX() - ClientProxyCore.playerPosX, entry.getKey().getY() - ClientProxyCore.playerPosY, entry.getKey().getZ() - ClientProxyCore.playerPosZ);
+			}
+		}
+	}
 
-        if (player == event.player)
-        {
-            if (!ConfigManagerVenus.disableAmbientLightning)
-            {
-                Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
-                while (it.hasNext())
-                {
-                    Map.Entry<BlockPos, Integer> entry = it.next();
-                    int val = entry.getValue();
-                    if (val - 1 <= 0)
-                    {
-                        it.remove();
-                    }
-                    else
-                    {
-                        entry.setValue(val - 1);
-                    }
-                }
+	@SideOnly(Side.CLIENT)
+	@SubscribeEvent
+	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final EntityPlayerSP player = minecraft.thePlayer;
 
-                if (player.getRNG().nextInt(100) == 0 && minecraft.theWorld.provider instanceof WorldProviderJupiter)
-                {
-                    double freq = player.getRNG().nextDouble() * Math.PI * 2.0F;
-                    double dist = 180.0F;
-                    double dX = dist * Math.cos(freq);
-                    double dZ = dist * Math.sin(freq);
-                    double posX = player.posX + dX;
-                    double posY = 70;
-                    double posZ = player.posZ + dZ;
-                    minecraft.theWorld.playSound(player, posX, posY, posZ, SoundEvents.ENTITY_LIGHTNING_THUNDER, SoundCategory.WEATHER, 1000.0F, 1.0F + player.getRNG().nextFloat() * 0.2F);
-                    lightning.put(new BlockPos(posX, posY, posZ), 20);
-                }
-            }
-        }
-    }
+		if (player == event.player) {
+			if (!ConfigManagerVenus.disableAmbientLightning) {
+				Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
+				while (it.hasNext()) {
+					Map.Entry<BlockPos, Integer> entry = it.next();
+					int val = entry.getValue();
+					if (val - 1 <= 0) {
+						it.remove();
+					} else {
+						entry.setValue(val - 1);
+					}
+				}
+
+				if (player.getRNG().nextInt(100) == 0 && minecraft.theWorld.provider instanceof WorldProviderJupiter) {
+					double freq = player.getRNG().nextDouble() * Math.PI * 2.0F;
+					double dist = 180.0F;
+					double dX = dist * Math.cos(freq);
+					double dZ = dist * Math.sin(freq);
+					double posX = player.posX + dX;
+					double posY = 70;
+					double posZ = player.posZ + dZ;
+					minecraft.theWorld.playSound(player, posX, posY, posZ, SoundEvents.ENTITY_LIGHTNING_THUNDER, SoundCategory.WEATHER, 1000.0F, 1.0F + player.getRNG().nextFloat() * 0.2F);
+					lightning.put(new BlockPos(posX, posY, posZ), 20);
+				}
+			}
+		}
+	}
 }
