@@ -818,21 +818,14 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 1, z + 5), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 5), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 6), Blocks.SNOW.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 4, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 6), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 7), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 7), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 1, z + 7), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 7), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 7), Blocks.SNOW.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 1, z + 7), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 7), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 8), Blocks.SNOW.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 1, z + 8), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 8), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 9), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 1, z + 9), Blocks.SNOW.getDefaultState(), 3);
@@ -887,7 +880,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 11, y + 2, z + 5), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 2, z + 6), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 2, z + 6), Blocks.SNOW.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 2, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 6), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 6), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 6), Blocks.SNOW.getDefaultState(), 3);
@@ -910,7 +902,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 8), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 8), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 8), Blocks.SNOW.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 2, z + 8), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 2, z + 8), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 2, z + 8), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 10, y + 2, z + 8), Blocks.SNOW.getDefaultState(), 3);
@@ -974,7 +965,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 11, y + 3, z + 5), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 3, z + 6), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 3, z + 6), Blocks.SNOW.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
@@ -997,7 +987,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 8), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 8), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 8), GCBlocks.oxygenDistributor.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 3, z + 8), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 3, z + 8), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 3, z + 8), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 10, y + 3, z + 8), Blocks.SNOW.getDefaultState(), 3);
