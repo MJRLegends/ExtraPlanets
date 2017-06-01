@@ -14,6 +14,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4.3 Beta Build
+*Small fixes due to Updating to Latest GC API
+
 v0.4.2 Beta Build
 *Tweaks to world gen on Mercury
 *Made Marble generate on Kepler22b
@@ -23,7 +26,6 @@ v0.4.2 Beta Build
 *Added Custom trees to 3 of the biomes on Kepler22b, Tweaks to tree generation on Kepler22b
 *Stop Huts generating in the Red Sand Desert for Kepler22b
 *Updated lang files
-
 
 v0.4.1 Beta Build
 *Small fixes due to Updating to Latest GC API
