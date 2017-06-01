@@ -422,6 +422,8 @@ tile.decorative_blocks.carbon_broken_titled_floor.name=Carbon Broken Tiled Floor
 tile.decorative_blocks.magnesium_titled_floor.name=Magnesium Tiled Floor
 tile.decorative_blocks.magnesium_broken_titled_floor.name=Magnesium Broken Tiled Floor
 tile.decorative_blocks.ash_bricks.name=Ash Bricks
+tile.decorative_blocks2.white_block.name=White Block
+tile.decorative_blocks2.red_block.name=Red Block
 
 #Rocket Items
 item.item_tier4_rocket.t4Rocket.name=4阶火箭
