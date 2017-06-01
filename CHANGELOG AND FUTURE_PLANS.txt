@@ -16,15 +16,11 @@ TODO = Not yet done
 ===========================================Released Updates===========================================
 v0.4.2 Beta Build
 *Tweaks to world gen on Mercury
-
 *Made Marble generate on Kepler22b
 *Added a Red Sand Biome to Kepler22b generation
 *Added Red Sand, Red Sandstone blocks
-*Added a sky feature to Jupiter
 *Added a Custom Structure of Frozen Nitrogen Pile to Neptune, and Enabled generation of Neptune lakes
-
 *Added Custom trees to 3 of the biomes on Kepler22b, Tweaks to tree generation on Kepler22b
-
 *Stop Huts generating in the Red Sand Desert for Kepler22b
 *Updated lang files
 
