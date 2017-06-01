@@ -228,6 +228,8 @@ public class Config {
 	public static float KEPLER69_SYSTEM_X_OFFSET;
 	public static float KEPLER69_SYSTEM_Z_OFFSET;
 	
+	public static boolean DEBUG_MODE;
+	
 	public static void load() {
 		Configuration config = new Configuration(new File(Constants.CONFIG_FILE));
 		config.load();
@@ -470,6 +472,7 @@ public class Config {
 		KEPLER69_SYSTEM_X_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler69 Planet Map X Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER69_SYSTEM_Z_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler69 Planet Map Z Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		
+		DEBUG_MODE = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Debug Mode (For testing purposes and debugging bugs)", false, "").getBoolean(false);
 		config.save();
 	}
 

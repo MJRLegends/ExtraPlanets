@@ -8,6 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class WorldGenBigPurpleTree extends WorldGenerator {
@@ -34,8 +35,8 @@ public class WorldGenBigPurpleTree extends WorldGenerator {
 		if (!world.isAreaLoaded(new BlockPos(x + 10, y, z + 10), 10))
 			return false;
 		else {
-			// System.out.println("Spawning BigPurpleTree at (x, y, z)" + x + " " + y
-			// + " " + z);
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning BigPurpleTree at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y - 1, z);
 			return true;
 		}

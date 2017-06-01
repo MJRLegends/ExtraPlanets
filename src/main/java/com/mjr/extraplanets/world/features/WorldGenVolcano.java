@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.storage.loot.LootTableList;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class WorldGenVolcano extends WorldGenerator {
@@ -36,8 +37,8 @@ public class WorldGenVolcano extends WorldGenerator {
 		if (!world.isBlockLoaded(new BlockPos(x - 10, y, z - 10)))
 			return false;
 		else {
-			// System.out.println("Spawning Volcano at (x, y, z)" + x + " " + y
-			// + " " + z);
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning Volcano at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y, z);
 			fillChests(world, rand, x, y, z);
 			return true;

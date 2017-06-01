@@ -10,6 +10,7 @@ import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 import net.minecraftforge.fml.common.FMLLog;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureComponentVillageField2;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureComponentVillageHouse;
@@ -82,7 +83,8 @@ public class MapGenVillageJupiter extends MapGenStructure {
 
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
-		FMLLog.info("Generating Jupiter Village at x" + par1 * 16 + " z" + par2 * 16);
+		if (Config.DEBUG_MODE)
+			FMLLog.info("Generating Jupiter Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartJupiter(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}
 

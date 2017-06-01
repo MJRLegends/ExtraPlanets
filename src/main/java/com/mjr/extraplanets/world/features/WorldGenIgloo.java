@@ -2,6 +2,8 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
@@ -33,7 +35,8 @@ public class WorldGenIgloo extends WorldGenerator {
 		}
 		y = y - 1;
 		int random = rand.nextInt(50) + 1;
-		//System.out.println(x + " " + y + " " + z);
+		if (Config.DEBUG_MODE)
+			System.out.println("Spawning Igloo at (x, y, z)" + x + " " + y + " " + z);
 		if (random != 50) {
 			return generateBasic(world, rand, x, y, z);
 		} else {
@@ -1392,6 +1395,8 @@ public class WorldGenIgloo extends WorldGenerator {
 		int random = rand.nextInt(10) + 1;
 		if(random < 5)
 		{
+			if (Config.DEBUG_MODE)
+				System.out.println("Loot Spawned!");
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 9, y + 3, z + 5));
 	
 			if (chest != null)
@@ -1407,6 +1412,10 @@ public class WorldGenIgloo extends WorldGenerator {
 					chest.setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
 				}
 			}
+		}
+		else{
+			if (Config.DEBUG_MODE)
+				System.out.println("No loot spawned!");
 		}
 		return true;
 	}

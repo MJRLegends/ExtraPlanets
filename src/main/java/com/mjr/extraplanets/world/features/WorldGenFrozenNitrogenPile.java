@@ -7,6 +7,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 
@@ -34,8 +35,8 @@ public class WorldGenFrozenNitrogenPile extends WorldGenerator {
 		if (!world.isAreaLoaded(new BlockPos(x + 8, y, z + 8), 8))
 			return false;
 		else {
-			// System.out.println("Spawning BigPurpleTree at (x, y, z)" + x + " " + y
-			// + " " + z, 3);
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning FrozenNitrogenPile at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y - 1, z);
 			return true;
 		}

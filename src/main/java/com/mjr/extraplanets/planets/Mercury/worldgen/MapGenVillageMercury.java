@@ -10,6 +10,7 @@ import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 import net.minecraftforge.fml.common.FMLLog;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentVillageField2;
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentVillageHouse;
@@ -82,7 +83,8 @@ public class MapGenVillageMercury extends MapGenStructure {
 
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
-		FMLLog.info("Generating Mercury Village at x" + par1 * 16 + " z" + par2 * 16);
+		if (Config.DEBUG_MODE)
+			FMLLog.info("Generating Mercury Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartMercury(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}
 

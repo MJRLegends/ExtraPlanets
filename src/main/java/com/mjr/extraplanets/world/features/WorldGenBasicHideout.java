@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.storage.loot.LootTableList;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class WorldGenBasicHideout  extends WorldGenerator {
@@ -44,7 +45,8 @@ public class WorldGenBasicHideout  extends WorldGenerator {
 		if (!world.isAreaLoaded(new BlockPos(x + 10, y, z + 10), 10))
 			return false;
 		else {
-			//System.out.println("Spawning Basic Hideout at (x, y, z)" + x + " " + y + " " + z);
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning Basic Hideout at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y, z);
 			fillChests(world, rand, x, y, z);
 		}
@@ -701,7 +703,8 @@ public class WorldGenBasicHideout  extends WorldGenerator {
 	public boolean fillChests(World world, Random rand, int x, int y, int z) {
 		int random = rand.nextInt(15) + 1;
 		if (random < 5) {
-			System.out.println("Yes Spawn Loot");
+			if (Config.DEBUG_MODE)
+				System.out.println("Loot Spawned!");
 			int lastNumber = 0;
 			for (int i = 0; i < rand.nextInt(4); i++) {
 				int randomChests;
@@ -709,7 +712,8 @@ public class WorldGenBasicHideout  extends WorldGenerator {
 					randomChests = rand.nextInt(9);
 				} while (lastNumber == randomChests);
 				lastNumber = randomChests;
-				System.out.println("Chest " + randomChests);
+				if (Config.DEBUG_MODE)
+					System.out.println("Chest " + randomChests);
 				TileEntityChest chest;
 				switch (randomChests) {
 				case 1:
@@ -801,6 +805,10 @@ public class WorldGenBasicHideout  extends WorldGenerator {
 					break;
 				}
 			}
+		}
+		else{
+			if (Config.DEBUG_MODE)
+				System.out.println("No loot spawned!");
 		}
 		return false;
 	}
