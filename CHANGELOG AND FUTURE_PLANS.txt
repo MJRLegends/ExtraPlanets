@@ -8,6 +8,12 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v0.4.4 Beta Build
 *Added new Config options that were added in 1.7.10
 *Added comment to the config section Celestial Body Map Settings
@@ -31,11 +37,6 @@ v0.4.4 Beta Build
 *Added debug mode config option
 *Updated lang files
 
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
 v0.4.3 Beta Build
 *Small fixes due to Updating to Latest GC API
 
