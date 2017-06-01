@@ -16,6 +16,20 @@ v0.4.4 Beta Build
 *Added missing file from last commit
 *Added Villages for Ceres, Eris, Jupiter (WIP)
 *Added a Galacticraft version enforcer for build 102 as a minimum version to use
+*Added a sky feature to Jupiter
+*Added lighting bolt back to Jupiter
+*Added Fake lighting bolts to Jupiter and Thunder Weather sound to Jupiter
+*Tweaks to Normal lighting bolts
+*Fixed crash on Uranus
+*Tweaks/ Fixes for Uranus World gen features
+*Made Uranus Igloos more rare on Uranus
+*Clean up
+*Added Red, White Decorative blocks and made them be used in the Basic Hideout on Jupiter
+
+*Tweaks to code for world gen elements on planets
+*Tweaks to Jupiter Village generation
+*Added debug mode config option
+*Updated lang files
 
 ======================================================================================================
 
