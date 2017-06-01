@@ -85,7 +85,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 			}
 		}
 		if (Config.GENERATE_URANUS_IGLOOS) {
-			if (this.rand.nextInt(100) == 1) {
+			if (this.rand.nextInt(200) == 1) {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY();
