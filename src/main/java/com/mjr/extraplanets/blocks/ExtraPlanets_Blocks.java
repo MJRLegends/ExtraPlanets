@@ -54,6 +54,7 @@ import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockCustomLandingPad;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks2;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDummy;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCeres;
@@ -208,6 +209,7 @@ public class ExtraPlanets_Blocks {
 	public static Block FAKE_BLOCK;
 
 	public static Block DECORATIVE_BLOCKS;
+	public static Block DECORATIVE_BLOCKS2;
 	public static Block RED_SAND;
 	public static Block RED_SANDSTONE;
 
@@ -332,7 +334,7 @@ public class ExtraPlanets_Blocks {
 			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22b_flowers");
 			RED_SAND = new BlockSand("red_sand");
 			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
-			
+
 		}
 		if (Config.RADIATION)
 			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
@@ -341,6 +343,7 @@ public class ExtraPlanets_Blocks {
 		ADVANCED_LAUCHPAD_FULL = new BlockCustomLandingPadFull("advanced_launch_pad_full");
 		FAKE_BLOCK = new BlockCustomMulti("block_multi");
 		DECORATIVE_BLOCKS = new BlockDecorativeBlocks("decorative_blocks");
+		DECORATIVE_BLOCKS2 = new BlockDecorativeBlocks2("decorative_blocks2");
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -529,6 +532,7 @@ public class ExtraPlanets_Blocks {
 
 		RegisterHelper.registerBlock(FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
 		RegisterHelper.registerBlock(DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
+		RegisterHelper.registerBlock(DECORATIVE_BLOCKS2, ItemBlockDecorativeBlocks2.class, DECORATIVE_BLOCKS2.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerTileEntitys() {

@@ -29,6 +29,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPad;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks;
+import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -267,6 +268,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
 				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
+		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "white_block", "red_block");
 	}
 
 	private void registerEntityRenders() {
@@ -609,7 +611,9 @@ public class ClientProxy extends CommonProxy {
 		for (BlockDecorativeBlocks.EnumBlockBasic blockBasic : BlockDecorativeBlocks.EnumBlockBasic.values()) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.DECORATIVE_BLOCKS, blockBasic.getMeta(), blockBasic.getName());
 		}
-
+		for (BlockDecorativeBlocks2.EnumBlockBasic blockBasic : BlockDecorativeBlocks2.EnumBlockBasic.values()) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, blockBasic.getMeta(), blockBasic.getName());
+		}
 	}
 
 	private void registerItemJsons() {
