@@ -37,6 +37,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		if (random != 50) {
 			return generateBasic(world, rand, x, y, z);
 		} else {
+			y = y - 3;
 			return generateAdvanced(world, rand, x, y, z);
 		}
 	}
