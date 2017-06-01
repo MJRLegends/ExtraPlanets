@@ -62,19 +62,18 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 			if (this.rand.nextInt(10) == 0) {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.NITROGEN).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.NEPTUNE_BLOCKS);
 			}
 		}
 		
 		if (this.rand.nextInt(20) == 1) {
-			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.chunkX + 8, 0, this.chunkZ + 8));
+			BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.chunkX + 8, 0, this.chunkZ + 8));
 			blockpos.down();
 			new WorldGenFrozenNitrogenPile().generate(this.currentWorld, this.rand, blockpos);
 		}
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

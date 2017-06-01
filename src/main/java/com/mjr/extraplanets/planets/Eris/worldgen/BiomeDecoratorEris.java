@@ -26,9 +26,7 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ERIS_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.ERIS_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.ERIS_BLOCKS, 2);
 		this.darkIronGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ERIS_BLOCKS, 5, 7, true, ExtraPlanets_Blocks.ERIS_BLOCKS, 2);
-
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -54,7 +52,6 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 		this.generateOre(10, this.darkIronGen, 0, 40);
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

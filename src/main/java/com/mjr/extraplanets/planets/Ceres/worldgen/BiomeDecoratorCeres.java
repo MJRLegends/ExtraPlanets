@@ -34,9 +34,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 2, 6, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.CERES_BLOCKS, 1);
-
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -66,7 +64,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 			if (this.rand.nextInt(10) == 0) {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.SALT).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
@@ -74,14 +72,13 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 			if (this.rand.nextInt(100) == 0) {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

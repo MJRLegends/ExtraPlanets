@@ -81,7 +81,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 				int x = this.chunkX + 8;
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.MAGMA).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.JUPITER_BLOCKS);
 			}
 		}
@@ -89,7 +89,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		if (this.rand.nextInt(50) == 1) {
 			int x = this.chunkX + 8;
 			int z = this.chunkZ + 8;
-			int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY();
+			int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY();
 			new WorldGenBasicHideout().generate(this.currentWorld, this.rand, new BlockPos(x, y, z));
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));

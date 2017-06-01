@@ -27,8 +27,7 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.PLUTO_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 1);
 		this.tungstenGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.PLUTO_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.PLUTO_BLOCKS, 2);
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -54,7 +53,6 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 		this.generateOre(20, this.tungstenGen, 0, 32);
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }
