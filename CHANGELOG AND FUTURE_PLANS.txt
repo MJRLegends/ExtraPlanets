@@ -8,6 +8,14 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+v0.4.4 Beta Build
+*Added new Config options that were added in 1.7.10
+*Added comment to the config section Celestial Body Map Settings
+*Added Fire Bomb (feature from 1.7.10)
+*Added Villages for Mercury, Neptune (WIP)
+*Added missing file from last commit
+*Added Villages for Ceres, Eris, Jupiter (WIP)
+*Added a Galacticraft version enforcer for build 102 as a minimum version to use
 
 ======================================================================================================
 
