@@ -36,7 +36,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 	protected static final AxisAlignedBB AABB_PAD = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
 
 	public enum EnumBlockMultiType implements IStringSerializable {
-		TIER_2_ROCKET_PAD(0, "tier2_rocket_pad"), TIER_3_ROCKET_PAD(1, "tier3_rocket_pad");
+		TIER_2_ROCKET_PAD(0, "tier2_rocket_pad"), TIER_3_ROCKET_PAD(1, "tier3_rocket_pad"), POWER_CHARGING_PAD(2, "powered_charging_pad");
 		private final int meta;
 		private final String name;
 
@@ -72,6 +72,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		switch ((EnumBlockMultiType) state.getValue(MULTI_TYPE)) {
 		case TIER_2_ROCKET_PAD:
 		case TIER_3_ROCKET_PAD:
+		case POWER_CHARGING_PAD:
 			return AABB_PAD;
 		default:
 			return FULL_BLOCK_AABB;

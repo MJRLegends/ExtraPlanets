@@ -6,6 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -51,6 +52,8 @@ import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
+import com.mjr.extraplanets.items.vehicles.ItemMarsRover;
+import com.mjr.extraplanets.items.vehicles.ItemVenusRover;
 import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Items {
@@ -174,6 +177,9 @@ public class ExtraPlanets_Items {
 	public static Item POTASSIUM;
 	public static Item POTASH_SHARDS;
 	public static Item ANTI_RADIATION;
+	
+	public static Item MARS_ROVER;
+	public static Item VENUS_ROVER;
 
 	public static void init() {
 		initializeItems();
@@ -324,6 +330,9 @@ public class ExtraPlanets_Items {
 		INGOT_LEAD = new ItemBasicItem("ingot_lead");
 		CLOTH = new ItemBasicItem("cloth");
 		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
+		
+		MARS_ROVER = new ItemMarsRover("marsRover");
+		VENUS_ROVER = new ItemVenusRover("venusRover");
 	}
 
 	private static void registerItems() {
@@ -466,10 +475,12 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(BUCKET_CLEAN_WATER, "bucket_clean_water");
 		RegisterHelper.registerItem(BUCKET_INFECTED_WATER, "bucket_infected_water");
-		;
 		RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
 		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
 		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
+		
+		RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName());
+		RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {

@@ -25,6 +25,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPad;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
 
@@ -32,7 +33,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	public static final PropertyEnum PAD_TYPE = PropertyEnum.create("type", EnumLandingPadFullType.class);
 
 	public enum EnumLandingPadFullType implements IStringSerializable {
-		TIER_2_ROCKET_PAD(0, "tier_2_rocket"), TIER_3_ROCKET_PAD(1, "tier_3_rocket");
+		TIER_2_ROCKET_PAD(0, "tier_2_rocket"), TIER_3_ROCKET_PAD(1, "tier_3_rocket"), POWER_CHARGING_PAD(2, "powered_charging_pad");
 
 		private final int meta;
 		private final String name;
@@ -144,6 +145,8 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 			return new TileEntityTier2LandingPad();
 		case 1:
 			return new TileEntityTier3LandingPad();
+		case 2:
+			return new TileEntityPoweredChargingPad();
 		default:
 			return null;
 		}
