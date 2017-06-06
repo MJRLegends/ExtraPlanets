@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
-import micdoodle8.mods.galacticraft.api.entity.ILandable;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
@@ -51,27 +50,27 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 			final List<Entity> list = this.worldObj.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 3.5D, this.getPos().getY(), this.getPos().getZ() - 3.5D, this.getPos().getX() + 3.5D, this.getPos().getY() + 10.0D, this
 					.getPos().getZ() + 3.5D));
 
-			boolean docked = false;
+			boolean changed = false;
 
 			for (final Object o : list) {
-				if (o instanceof IPoweredDockable && !((Entity) o).isDead) {
-					docked = true;
-
+				if (o != null && o instanceof IPoweredDockable && !this.worldObj.isRemote) {
 					final IPoweredDockable fuelable = (IPoweredDockable) o;
 
-					if (fuelable != this.dockedEntity && fuelable.isDockValid(this)) {
-						if (fuelable instanceof ILandable) {
-							((ILandable) fuelable).landEntity(this.getPos());
-						} else {
-							fuelable.setPad(this);
-						}
-					}
+					if (fuelable.isDockValid(this)) {
+						this.dockedEntity = fuelable;
 
-					break;
+						this.dockedEntity.setPad(this);
+
+						changed = true;
+					}
 				}
 			}
 
-			if (!docked) {
+			if (!changed) {
+				if (this.dockedEntity != null) {
+					this.dockedEntity.setPad(null);
+				}
+
 				this.dockedEntity = null;
 			}
 		}

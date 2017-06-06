@@ -26,6 +26,7 @@ import com.mjr.extraplanets.client.gui.machines.GuiUltimateFuelLoader;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenCompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenDecompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateRefinery;
+import com.mjr.extraplanets.client.gui.machines.GuiVehicleChanger;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;
@@ -40,6 +41,7 @@ import com.mjr.extraplanets.inventory.machines.ContainerUltimateFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
+import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
@@ -54,6 +56,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
 
 public class GuiHandler implements IGuiHandler {
 	@Override
@@ -97,6 +100,8 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
 			} else if (tile instanceof TileEntityUltimateFuelLoader) {
 				return new ContainerUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
+			} else if (tile instanceof TileEntityVehicleChanger) {
+				return new ContainerVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
 			}
 		}
 		return null;
@@ -144,6 +149,8 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
 			} else if (tile instanceof TileEntityUltimateFuelLoader) {
 				return new GuiUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
+			} else if (tile instanceof TileEntityVehicleChanger) {
+				return new GuiVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
 			}
 		}
 		return null;

@@ -22,6 +22,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
+import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
 import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Machines {
@@ -42,6 +43,8 @@ public class ExtraPlanets_Machines {
 	public static Block BASIC_SMASHER;
 	public static Block BASIC_CHEMICAL_INJECTOR;
 	public static Block BASIC_SOLAR_EVAPORTATION_CHAMBER;
+	
+	public static Block VEHICLE_CHARGER;
 
 	public static void init() {
 		initializeMachinesBlocks();
@@ -78,6 +81,8 @@ public class ExtraPlanets_Machines {
 		}
 		FUEL_LOADER_ADVANCED = new AdvancedFuelLoader("advanced_fuel_loader");
 		FUEL_LOADER_ULTIMATE = new UltimateFuelLoader("ultimate_fuel_loader");
+		
+		VEHICLE_CHARGER = new VehicleCharger("vehicle_charger");
 	}
 
 	private static void registerMachines() throws NoSuchMethodException {
@@ -105,6 +110,8 @@ public class ExtraPlanets_Machines {
 		}
 		RegisterHelper.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
 		RegisterHelper.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
+		
+		RegisterHelper.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -136,6 +143,7 @@ public class ExtraPlanets_Machines {
 		}
 		GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
 		GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
-
+		
+		GameRegistry.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
 	}
 }
