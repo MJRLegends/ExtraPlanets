@@ -78,7 +78,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	public EntityPoweredVehicleBase(World var1) {
 		super(var1);
-		this.setSize(0.98F, 1F);
+		this.setSize(2.8F, 1F);
 		this.speed = 0.0D;
 		this.preventEntitySpawning = true;
 		this.dataManager.register(CURRENT_DAMAGE, 0);
@@ -511,13 +511,16 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(PacketSimple.EnumSimplePacket.S_CONTROL_ENTITY, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { key }));
 			return true;
 		}
-
 		switch (key) {
 		case 0: // Deccelerate
+			if(this.currentPowerCapacity < 10)
+				return false;
 			this.speed -= this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
 		case 1: // Accelerate
+			if(this.currentPowerCapacity < 10)
+				return false;
 			this.speed += this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
