@@ -60,6 +60,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bM
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog2;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
+import com.mjr.extraplanets.client.handlers.KeyHandlerClient;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT10;
@@ -165,6 +166,8 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init(FMLInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new SkyProviderHandler());
+		MinecraftForge.EVENT_BUS.register(new KeyHandlerClient());
+		ClientRegistry.registerKeyBinding(KeyHandlerClient.openFuelGui);
 		renderBlocks();
 		registerBlockJsons();
 		registerItemJsons();

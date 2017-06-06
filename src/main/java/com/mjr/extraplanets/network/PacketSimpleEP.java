@@ -6,11 +6,14 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
+import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
@@ -19,13 +22,22 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
+import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
+import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
+import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
+import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 
 @SuppressWarnings("rawtypes")
 public class PacketSimpleEP extends PacketBase implements Packet {
 	public enum EnumSimplePacket {
-		// Client
+		// SERVER
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class),
+
+		// CLIENT
+		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), 
 		C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
 
 		private Side targetSide;
@@ -53,7 +65,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	public PacketSimpleEP() {
 		super();
 	}
-
+	
 	public PacketSimpleEP(EnumSimplePacket packetType, int dimID, Object[] data) {
 		this(packetType, dimID, Arrays.asList(data));
 	}
@@ -111,6 +123,19 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		}
 
 		switch (this.type) {
+		case C_OPEN_PARACHEST_GUI:
+			switch ((Integer) this.data.get(1)) {
+			case 0:
+				if (player.getRidingEntity() instanceof EntityVehicleBase) {
+					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiVehicleBase(player.inventory, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType()));
+					player.openContainer.windowId = (Integer) this.data.get(0);
+				} else if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType()));
+					player.openContainer.windowId = (Integer) this.data.get(0);
+				}
+				break;
+			}
+			break;
 		case C_UPDATE_SOLAR_RADIATION_LEVEL:
 			stats.setRadiationLevel((double) this.data.get(0));
 			break;
@@ -121,7 +146,28 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 	@Override
 	public void handleServerSide(EntityPlayer player) {
+		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
+		if (playerBase == null) {
+			return;
+		}
+
+		GCPlayerStats stats = GCPlayerStats.get(playerBase);
+
+		switch (this.type) {
+		case S_OPEN_FUEL_GUI:
+			if (player.getRidingEntity() instanceof EntityVehicleBase) {
+				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType());
+			}
+			break;
+		case S_OPEN_POWER_GUI:
+			if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType());
+			}
+			break;
+		default:
+			break;
+		}
 	}
 
 	@Override
