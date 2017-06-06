@@ -354,6 +354,7 @@ tile.basic_chemical_injector.name=Basic Chemical Injector
 tile.basic_solar_evaporation_chamber.name=Basic Solar Evaporation Chamber
 tile.advanced_launch_pad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advanced_launch_pad.poweredChargingPad.name=Vehicle Charging Pad
 tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad
 tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets
 tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets
@@ -391,6 +392,9 @@ gui.status.smasher.name=Smashing
 gui.status.crystallizing.name=Crystallizing
 gui.status.decrystallizing.name=Decrystallizing
 gui.status.solarEvaporationChamber.name=Evaporating
+gui.message.power.name=Powered Vehicle
+gui.message.power.message.name=Power
+gui.button.loadpower.name=Load Power
 
 #Other Blocks
 tile.nuclear_bomb.name=核彈
