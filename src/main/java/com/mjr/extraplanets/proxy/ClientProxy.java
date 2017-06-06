@@ -90,6 +90,7 @@ import com.mjr.extraplanets.client.render.entities.rockets.RenderTier6Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
+import com.mjr.extraplanets.client.render.entities.vehicles.RenderMarsRover;
 import com.mjr.extraplanets.client.render.tile.TileEntitySolarPanelRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
@@ -119,6 +120,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
+import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemCannedFood;
 import com.mjr.extraplanets.items.ItemWafers;
@@ -261,9 +263,9 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.SOLAR_PANELS)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
-		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket");
-		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket");
-		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad");
+		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad");
+		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad");
+		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad", "powered_charging_pad");
 		ClientUtilities.addExtraPlanetsVariants("advanced_oxygen_compressor", "advanced_oxygen_compressor", "advanced_oxygen_decompressor");
 		ClientUtilities.addExtraPlanetsVariants("ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
@@ -319,6 +321,8 @@ public class ClientProxy extends CommonProxy {
 		if (Config.CERES && Config.FIRE_BOMB)
 			RenderingRegistry.registerEntityRenderingHandler(EntityFireBombPrimed.class, (RenderManager manager) -> new RenderFireBombPrimed(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.SNOWBALL)));
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, (RenderManager manager) -> new RenderMarsRover(manager));
 	}
 
 	public void registerCustomModel() {
