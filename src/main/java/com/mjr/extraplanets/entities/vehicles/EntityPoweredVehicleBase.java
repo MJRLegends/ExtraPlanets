@@ -531,10 +531,14 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 		switch (key) {
 		case 0: // Deccelerate
+			if(this.currentPowerCapacity < 10)
+				return false;
 			this.speed -= this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
 		case 1: // Accelerate
+			if(this.currentPowerCapacity < 10)
+				return false;
 			this.speed += this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
