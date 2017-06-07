@@ -594,6 +594,9 @@ public class ClientProxy extends CommonProxy {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER);
 		}
+		
+		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.VEHICLE_CHARGER);
+
 		// Other Blocks
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FOSSIL);
