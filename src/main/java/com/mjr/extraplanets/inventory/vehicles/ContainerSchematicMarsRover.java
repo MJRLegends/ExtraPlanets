@@ -37,7 +37,7 @@ public class ContainerSchematicMarsRover extends Container {
 
 		for (var6 = 0; var6 < 3; ++var6) {
 			for (var7 = 0; var7 < 2; ++var7) {
-				this.addSlotToContainer(new SlotMarsRover(this.craftMatrix, var7 * 3 + var6 + 1, 21 + var7 * 72, 6 + var6 * 36 + change, x, y, z, par1InventoryPlayer.player));
+				this.addSlotToContainer(new SlotMarsRover(this.craftMatrix, var7 * 3 + var6 + 16, 21 + var7 * 72, 6 + var6 * 36 + change, x, y, z, par1InventoryPlayer.player));
 			}
 		}
 
