@@ -157,7 +157,6 @@ public class InventorySchematicTier4Rocket implements IInventory
     @Override
     public void setField(int id, int value)
     {
-
     }
 
     @Override
@@ -169,7 +168,6 @@ public class InventorySchematicTier4Rocket implements IInventory
     @Override
     public void clear()
     {
-
     }
 
     @Override

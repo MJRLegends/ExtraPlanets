@@ -101,6 +101,7 @@ import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
+import com.mjr.extraplanets.schematic.SchematicMarsRover;
 import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier4Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier5Rocket;
@@ -108,6 +109,7 @@ import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier7Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier9Rocket;
+import com.mjr.extraplanets.schematic.SchematicVenusRover;
 import com.mjr.extraplanets.util.RegisterHelper;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS)
@@ -341,7 +343,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
-		
+
 		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
 		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
 	}
@@ -445,6 +447,8 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
 		if (Config.ERIS)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
+		SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
+		SchematicRegistry.registerSchematicRecipe(new SchematicVenusRover());
 	}
 
 	private void addDungeonLoot() {

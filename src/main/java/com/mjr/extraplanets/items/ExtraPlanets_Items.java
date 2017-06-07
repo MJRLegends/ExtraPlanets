@@ -6,7 +6,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -41,6 +40,7 @@ import com.mjr.extraplanets.items.rockets.Tier6Rocket;
 import com.mjr.extraplanets.items.rockets.Tier7Rocket;
 import com.mjr.extraplanets.items.rockets.Tier8Rocket;
 import com.mjr.extraplanets.items.rockets.Tier9Rocket;
+import com.mjr.extraplanets.items.schematics.SchematicMarsRover;
 import com.mjr.extraplanets.items.schematics.SchematicTier10;
 import com.mjr.extraplanets.items.schematics.SchematicTier4;
 import com.mjr.extraplanets.items.schematics.SchematicTier5;
@@ -48,6 +48,7 @@ import com.mjr.extraplanets.items.schematics.SchematicTier6;
 import com.mjr.extraplanets.items.schematics.SchematicTier7;
 import com.mjr.extraplanets.items.schematics.SchematicTier8;
 import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.schematics.SchematicVenusRover;
 import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
@@ -177,9 +178,14 @@ public class ExtraPlanets_Items {
 	public static Item POTASSIUM;
 	public static Item POTASH_SHARDS;
 	public static Item ANTI_RADIATION;
-	
+
 	public static Item MARS_ROVER;
 	public static Item VENUS_ROVER;
+
+	public static Item MARS_ROVER_SCHEMATIC;
+	public static Item VENUS_ROVER_SCHEMATIC;
+
+	public static Item ELECTRIC_PARTS;
 
 	public static void init() {
 		initializeItems();
@@ -333,6 +339,11 @@ public class ExtraPlanets_Items {
 		
 		MARS_ROVER = new ItemMarsRover("marsRover");
 		VENUS_ROVER = new ItemVenusRover("venusRover");
+		
+		MARS_ROVER_SCHEMATIC = new SchematicMarsRover("schematic_mars_rover");
+		VENUS_ROVER_SCHEMATIC = new SchematicVenusRover("schematic_venus_rover");
+		
+		ELECTRIC_PARTS = new ItemElectricParts("electric_parts");
 	}
 
 	private static void registerItems() {
@@ -478,9 +489,13 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
 		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
 		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
-		
+
 		RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName());
 		RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName());
+		
+		RegisterHelper.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName());
+		RegisterHelper.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName());
+		RegisterHelper.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {

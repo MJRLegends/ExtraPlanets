@@ -189,6 +189,8 @@ public class Config {
 	public static int SCHEMATIC_TIER_8_GUI_ID;
 	public static int SCHEMATIC_TIER_9_GUI_ID;
 	public static int SCHEMATIC_TIER_10_GUI_ID;
+	public static int SCHEMATIC_MARS_ROVER_GUI_ID;
+	public static int SCHEMATIC_VENUS_ROVER_GUI_ID;
 
 	public static int SCHEMATIC_TIER_4_PAGE_ID;
 	public static int SCHEMATIC_TIER_5_PAGE_ID;
@@ -197,6 +199,8 @@ public class Config {
 	public static int SCHEMATIC_TIER_8_PAGE_ID;
 	public static int SCHEMATIC_TIER_9_PAGE_ID;
 	public static int SCHEMATIC_TIER_10_PAGE_ID;
+	public static int SCHEMATIC_MARS_ROVER_PAGE_ID;
+	public static int SCHEMATIC_VENUS_ROVER_PAGE_ID;
 
 	public static boolean NEI_SUPPORT;
 	public static boolean JEI_SUPPORT;
@@ -430,6 +434,8 @@ public class Config {
 		SCHEMATIC_TIER_8_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 8 GUI ID", 5559).getInt();
 		SCHEMATIC_TIER_9_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 9 GUI ID", 5560).getInt();
 		SCHEMATIC_TIER_10_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 10 GUI ID", 5561).getInt();
+		SCHEMATIC_MARS_ROVER_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Mars Rover GUI ID", 5562).getInt();
+		SCHEMATIC_VENUS_ROVER_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Venus Rover GUI ID", 5563).getInt();
 
 		SCHEMATIC_TIER_4_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 4 Page ID", 6666).getInt();
 		SCHEMATIC_TIER_5_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 5 Page ID", 6667).getInt();
@@ -438,7 +444,9 @@ public class Config {
 		SCHEMATIC_TIER_8_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 8 Page ID", 6670).getInt();
 		SCHEMATIC_TIER_9_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 9 Page ID", 6671).getInt();
 		SCHEMATIC_TIER_10_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 10 Page ID", 6672).getInt();
-
+		SCHEMATIC_MARS_ROVER_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Mars Rover Page ID", 6673).getInt();
+		SCHEMATIC_VENUS_ROVER_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Venus Rover Page ID", 6674).getInt();
+		
 		NEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "").getBoolean(true);
 		JEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable JEI Recipe support", true, "").getBoolean(true);
 
