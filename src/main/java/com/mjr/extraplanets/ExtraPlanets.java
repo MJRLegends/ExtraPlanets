@@ -455,7 +455,7 @@ public class ExtraPlanets {
 
 	private void addDungeonLoot() {
 		if (Config.MERCURY)
-			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.TIER_4_SCHEMATIC, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(3, new ItemStack(ExtraPlanets_Items.TIER_4_SCHEMATIC, 1, 0));
 		if (Config.JUPITER)
 			GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanets_Items.TIER_5_SCHEMATIC, 1, 0));
 		if (Config.SATURN)
@@ -468,5 +468,9 @@ public class ExtraPlanets {
 			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.TIER_9_SCHEMATIC, 1, 0));
 		if (Config.ERIS)
 			GalacticraftRegistry.addDungeonLoot(10, new ItemStack(ExtraPlanets_Items.TIER_10_SCHEMATIC, 1, 0));
+		if (Config.MARS_ROVER)
+			GalacticraftRegistry.addDungeonLoot(2, new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC, 1, 0));
+		if (Config.VENUS_ROVER)
+			GalacticraftRegistry.addDungeonLoot(3, new ItemStack(ExtraPlanets_Items.VENUS_ROVER_SCHEMATIC, 1, 0));
 	}
 }
