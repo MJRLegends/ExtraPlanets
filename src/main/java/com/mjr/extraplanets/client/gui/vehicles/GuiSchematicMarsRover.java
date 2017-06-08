@@ -29,8 +29,8 @@ public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicR
 	public void initGui() {
 		super.initGui();
 		this.buttonList.clear();
-		this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27 - 12, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
-		this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 30 + 27 + 12, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
+        this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 110, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
+        this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 110 + 25, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicR
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(GCCoreUtil.translate("schematic.marsRover.name"), 7, -20 + 27, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("schematic.mars_rover.name"), 7, -20 + 27, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, 202 - 104 + 2 + 27, 4210752);
 	}
 
