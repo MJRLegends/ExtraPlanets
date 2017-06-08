@@ -69,17 +69,17 @@ public class SlotVenusRover extends Slot {
 		case 15:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_4_ITEMS && par1ItemStack.getItemDamage() == 3;
 		case 16:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 4;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
 		case 17:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 1;
 		case 18:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 4;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
 		case 19:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 4;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
 		case 20:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 1;
 		case 21:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 4;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
 		case 22:
 			return true;
 		case 23:

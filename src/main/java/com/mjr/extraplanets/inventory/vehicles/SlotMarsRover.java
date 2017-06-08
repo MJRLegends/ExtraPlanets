@@ -69,17 +69,17 @@ public class SlotMarsRover extends Slot {
 		case 15:
 			return par1ItemStack.getItem() == MarsItems.marsItemBasic && par1ItemStack.getItemDamage() == 3;
 		case 16:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 2;
 		case 17:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 2;
 		case 18:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 2;
 		case 19:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 2;
 		case 20:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 2;
 		case 21:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 2;
 		case 22:
 			return true;
 		case 23:

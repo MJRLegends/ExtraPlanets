@@ -54,12 +54,12 @@ public class VenusRoverRecipes {
 		input.put(13, new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 3));
 		input.put(14, new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 3));
 		input.put(15, new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 3));
-		input.put(16, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 4));
+		input.put(16, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3));
 		input.put(17, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1));
-		input.put(18, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 4));
-		input.put(19, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 4));
+		input.put(18, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3));
+		input.put(19, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3));
 		input.put(20, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1));
-		input.put(21, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 4));
+		input.put(21, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3));
 		input.put(22, null);
 		input.put(23, null);
 		input.put(24, null);
