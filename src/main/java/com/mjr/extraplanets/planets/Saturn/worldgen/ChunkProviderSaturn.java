@@ -19,7 +19,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 
 public class ChunkProviderSaturn extends ChunkProviderSpace {
-    //private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
+    private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
 
 	private final BiomeDecoratorSaturn saturnBiomeDecorator = new BiomeDecoratorSaturn();
 
@@ -101,12 +101,12 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
-		//this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.worldObj, x, z, null);
-        //this.villageGenerator.generate(this, this.worldObj, x, z, null);
+        this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }
