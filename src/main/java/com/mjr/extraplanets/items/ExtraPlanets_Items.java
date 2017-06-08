@@ -336,13 +336,13 @@ public class ExtraPlanets_Items {
 		INGOT_LEAD = new ItemBasicItem("ingot_lead");
 		CLOTH = new ItemBasicItem("cloth");
 		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
-		
+
 		MARS_ROVER = new ItemMarsRover("mars_rover");
 		VENUS_ROVER = new ItemVenusRover("venus_rover");
-		
+
 		MARS_ROVER_SCHEMATIC = new SchematicMarsRover("schematic_mars_rover");
 		VENUS_ROVER_SCHEMATIC = new SchematicVenusRover("schematic_venus_rover");
-		
+
 		ELECTRIC_PARTS = new ItemElectricParts("electric_parts");
 	}
 
@@ -492,7 +492,7 @@ public class ExtraPlanets_Items {
 
 		RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName().substring(5));
-		
+
 		RegisterHelper.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));

@@ -1,6 +1,6 @@
-# Blender v2.77 (sub 0) OBJ File: 'MarsRover.obj'
+# Blender v2.77 (sub 0) OBJ File: 'mars_rover.obj'
 # www.blender.org
-mtllib MarsRover.mtl
+mtllib mars_rover.mtl
 o CaseBack2
 v -0.089400 3.189700 -1.366500
 v -0.089400 3.095800 -1.336800
