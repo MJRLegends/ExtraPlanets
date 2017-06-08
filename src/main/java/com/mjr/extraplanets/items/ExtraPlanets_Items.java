@@ -490,12 +490,12 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
 		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
 
-		RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName());
-		RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName());
+		RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName().substring(5));
 		
-		RegisterHelper.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName());
-		RegisterHelper.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName());
-		RegisterHelper.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName());
+		RegisterHelper.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerFluidContainer() {
