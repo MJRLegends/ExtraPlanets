@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemElectricParts extends Item {
-	public static final String[] names = { "batteryTier1", "batteryTier2", "sparkPlug", "electricWheelsTier1", "electricWheelsTier2" };
+	public static final String[] names = { "battery_tier1", "battery_tier2", "spark_plug", "electric_wheels_tier1", "electric_wheels_tier2" };
 
 	public ItemElectricParts(String assetName) {
 		super();

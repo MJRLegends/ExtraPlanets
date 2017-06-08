@@ -861,11 +861,11 @@ item.canned_food.dehydrated_salmon.name=脱水鲑鱼
 item.canned_food.dehydrated_chicken.name=脱水鸡肉
 item.canned_food.dehydrated_beef.name=脱水牛肉
 
-item.electric_parts.batteryTier1.name=Tier 1 Battery
-item.electric_parts.batteryTier2.name=Tier 2 Battery
-item.electric_parts.sparkPlug.name=Spark Plugs
-item.electric_parts.electricWheelsTier1.name=Tier 1 Wheel
-item.electric_parts.electricWheelsTier2.name=Tier 2 Wheel
+item.electric_parts.battery_tier1.name=Tier 1 Battery
+item.electric_parts.battery_tier2.name=Tier 2 Battery
+item.electric_parts.spark_plug.name=Spark Plugs
+item.electric_parts.electric_wheels_tier1.name=Tier 1 Wheel
+item.electric_parts.electric_wheels_tier2.name=Tier 2 Wheel
 
 #Entities
 entity.ProjectileTNT.name=飞行的TNT

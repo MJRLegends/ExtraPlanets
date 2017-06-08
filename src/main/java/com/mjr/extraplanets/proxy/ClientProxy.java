@@ -124,6 +124,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemCannedFood;
+import com.mjr.extraplanets.items.ItemElectricParts;
 import com.mjr.extraplanets.items.ItemWafers;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier10Items;
@@ -274,6 +275,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
 				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks2", "white_block", "red_block");
+		ClientUtilities.addExtraPlanetsVariants("electric_parts", "battery_tier1", "battery_tier2", "spark_plug", "electric_wheels_tier1", "electric_wheels_tier2");
 	}
 
 	private void registerEntityRenders() {
@@ -594,7 +596,7 @@ public class ClientProxy extends CommonProxy {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER);
 		}
-		
+
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.VEHICLE_CHARGER);
 
 		// Other Blocks
@@ -1004,6 +1006,10 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_RADIOACTIVE_WATER);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_METHANE);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_NITROGEN_ICE);
+
+		for (int i = 0; i < ItemElectricParts.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, i, ItemElectricParts.names[i]);
+		}
 	}
 
 	@SubscribeEvent
