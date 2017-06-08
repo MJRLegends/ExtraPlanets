@@ -1,10 +1,13 @@
 package com.mjr.extraplanets.proxy;
 
+import micdoodle8.mods.galacticraft.core.GCItems;
+import micdoodle8.mods.galacticraft.core.client.render.item.ItemModelBuggy;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,6 +15,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
+import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.model.TRSRTransformation;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -70,6 +74,7 @@ import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT6;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT7;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT8;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT9;
+import com.mjr.extraplanets.client.model.vehicles.ItemModelMarsRover;
 import com.mjr.extraplanets.client.render.entities.RenderFireBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
@@ -374,6 +379,13 @@ public class ClientProxy extends CommonProxy {
 			for (int i = 0; i < 5; ++i) {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
 			}
+		}
+		if (Config.MARS_ROVER) {
+	     for (int i = 0; i < 4; ++i)
+	        {
+	            modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "mars_rover" + (i > 0 ? "_" + i : ""), "inventory");
+	            ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.MARS_ROVER, i, modelResourceLocation);
+	        }
 		}
 	}
 
@@ -1056,6 +1068,44 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004", "RocketEngine005",
 					"RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut006",
 					"RocketEnginePlut007"), ItemModelRocketT10.class, TRSRTransformation.identity());
+		
+		if(Config.MARS_ROVER){
+			for (int i = 0; i < 4; ++i)
+	        {
+	            ImmutableList<String> objects = ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013",
+						"FrameSegment014", "FrameSegment015", "FrameSegment021", "FrameSegment022", "FrameSegment023", "FrameSegment024", "FrameSegment025", "FrameSegment026", "FrameSegment027", "FrameSegment028", "FrameSegment029",
+						"FrameSegment030", "FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050",
+						"FrameSegment051", "FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat",
+						"Seat001", "SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "WindowFront1", "WindowFront2");
+	            switch (i)
+	            {
+	            case 0:
+	                break;
+	            case 1:
+	                objects = ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013",
+							"FrameSegment014", "FrameSegment015", "FrameSegment021", "FrameSegment022", "FrameSegment023", "FrameSegment024", "FrameSegment025", "FrameSegment026", "FrameSegment027", "FrameSegment028", "FrameSegment029",
+							"FrameSegment030", "FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050",
+							"FrameSegment051", "FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat",
+							"Seat001", "SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "WindowFront1", "WindowFront2", "CaseBack1");
+	                break;
+	            case 2:
+	                objects = ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013",
+							"FrameSegment014", "FrameSegment015", "FrameSegment021", "FrameSegment022", "FrameSegment023", "FrameSegment024", "FrameSegment025", "FrameSegment026", "FrameSegment027", "FrameSegment028", "FrameSegment029",
+							"FrameSegment030", "FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050",
+							"FrameSegment051", "FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat",
+							"Seat001", "SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "WindowFront1", "WindowFront2", "CaseBack1", "CaseBack2");
+	                break;
+	            case 3:
+	                objects = ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013",
+							"FrameSegment014", "FrameSegment015", "FrameSegment021", "FrameSegment022", "FrameSegment023", "FrameSegment024", "FrameSegment025", "FrameSegment026", "FrameSegment027", "FrameSegment028", "FrameSegment029",
+							"FrameSegment030", "FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050",
+							"FrameSegment051", "FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat",
+							"Seat001", "SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "WindowFront1", "WindowFront2", "CaseBack1", "CaseBack2", "CaseBack3");
+	                break;
+	            }
+	            ClientUtilities.replaceModelDefault(event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class, TRSRTransformation.identity());
+	        }
+		}
 	}
 
 	private void registerFluidVariants() {
