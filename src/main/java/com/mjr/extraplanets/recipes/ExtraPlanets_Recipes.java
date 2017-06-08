@@ -775,6 +775,13 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 0), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'B', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 1), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'B', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 7) });
 
+		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, 1) });
+
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(ExtraPlanets_Items.INGOT_LEAD, 1, 0) });
+		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.INGOT_LEAD, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
+		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 4), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3) });
+		
 		// Can of Food
 		GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_PORKCHOP, Items.COOKED_PORKCHOP });
 		GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 1), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0) });
