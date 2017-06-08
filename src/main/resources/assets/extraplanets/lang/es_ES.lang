@@ -439,6 +439,10 @@ item.item_tier8_rocket.t8Rocket.name=Cohete nivel 8
 item.item_tier9_rocket.t9Rocket.name=Cohete nivel 9
 item.item_tier10_rocket.t10Rocket.name=Cohete nivel 10
 
+#Vehicles
+item.mars_rover.name=Mars Rover
+item.venus_rover.name=Venus Rover
+
 #Rocket Tiered Items
 item.nose_cone_tier4.name=Ojiva nivel 4
 item.nose_cone_tier5.name=Ojiva nivel 5
@@ -642,6 +646,9 @@ item.green_diamond_hoe.name=Green Diamond Hoe
 item.green_diamond_shovel.name=Green Diamond Shovel
 
 #Schematics
+item.schematic_mars_rover.name=NASA Workbench Schematic
+item.schematic_venus_rover.name=NASA Workbench Schematic
+
 item.schematic_tier4.name=Planos
 item.schematic_tier5.name=Planos
 item.schematic_tier6.name=Planos
@@ -649,6 +656,9 @@ item.schematic_tier7.name=Planos
 item.schematic_tier8.name=Planos
 item.schematic_tier9.name=Planos
 item.schematic_tier10.name=Planos
+
+schematic.mars.rover.name=Mars Rover
+schematic.venus.rover.name=Venus Rover
 
 schematic.tier4.rocket.name=Cohete nivel 4
 schematic.tier5.rocket.name=Cohete nivel 5
@@ -848,6 +858,12 @@ item.canned_food.dehydrated_fish.name=Pescados deshidratados
 item.canned_food.dehydrated_salmon.name=Salmones deshidratados
 item.canned_food.dehydrated_chicken.name=Pollos deshidratados
 item.canned_food.dehydrated_beef.name=Filetes deshidratados
+
+item.electric_parts.batteryTier1.name=Tier 1 Battery
+item.electric_parts.batteryTier2.name=Tier 2 Battery
+item.electric_parts.sparkPlug.name=Spark Plugs
+item.electric_parts.electricWheelsTier1.name=Tier 1 Wheel
+item.electric_parts.electricWheelsTier2.name=Tier 2 Wheel
 
 #Entities
 entity.ProjectileTNT.name=Projectíl de TNT

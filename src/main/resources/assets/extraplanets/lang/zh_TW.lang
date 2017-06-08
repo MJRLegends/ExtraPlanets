@@ -440,6 +440,10 @@ item.item_tier8_rocket.t8Rocket.name=8階火箭
 item.item_tier9_rocket.t9Rocket.name=9階火箭
 item.item_tier10_rocket.t10Rocket.name=Tier 10 Rocket
 
+#Vehicles
+item.mars_rover.name=Mars Rover
+item.venus_rover.name=Venus Rover
+
 #Rocket Tiered Items
 item.nose_cone_tier4.name=4階鼻錐
 item.nose_cone_tier5.name=5階鼻錐
@@ -643,6 +647,9 @@ item.green_diamond_hoe.name=Green Diamond Hoe
 item.green_diamond_shovel.name=Green Diamond Shovel
 
 #Schematics
+item.schematic_mars_rover.name=NASA Workbench Schematic
+item.schematic_venus_rover.name=NASA Workbench Schematic
+
 item.schematic_tier4.name=NASA工作臺圖紙
 item.schematic_tier5.name=NASA工作臺圖紙
 item.schematic_tier6.name=NASA工作臺圖紙
@@ -650,6 +657,9 @@ item.schematic_tier7.name=NASA工作臺圖紙
 item.schematic_tier8.name=NASA工作臺圖紙
 item.schematic_tier9.name=NASA工作臺圖紙
 item.schematic_tier10.name=NASA工作臺圖紙
+
+schematic.mars.rover.name=Mars Rover
+schematic.venus.rover.name=Venus Rover
 
 schematic.tier4.rocket.name=4階火箭
 schematic.tier5.rocket.name=5階火箭
@@ -849,6 +859,12 @@ item.canned_food.dehydrated_fish.name=脫水魚
 item.canned_food.dehydrated_salmon.name=脫水鮭魚
 item.canned_food.dehydrated_chicken.name=脫水雞肉
 item.canned_food.dehydrated_beef.name=脫水牛肉
+
+item.electric_parts.batteryTier1.name=Tier 1 Battery
+item.electric_parts.batteryTier2.name=Tier 2 Battery
+item.electric_parts.sparkPlug.name=Spark Plugs
+item.electric_parts.electricWheelsTier1.name=Tier 1 Wheel
+item.electric_parts.electricWheelsTier2.name=Tier 2 Wheel
 
 #Entities
 entity.ProjectileTNT.name=飛行的TNT

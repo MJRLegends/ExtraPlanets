@@ -440,6 +440,10 @@ item.item_tier8_rocket.t8Rocket.name=Tier 8 Roketi
 item.item_tier9_rocket.t9Rocket.name=Tier 9 Roketi
 item.item_tier10_rocket.t10Rocket.name=Tier 10 Roketi
 
+#Vehicles
+item.mars_rover.name=Mars Rover
+item.venus_rover.name=Venus Rover
+
 #Rocket Tiered Items
 item.nose_cone_tier4.name=Tier 4 Roket Burnu
 item.nose_cone_tier5.name=Tier 5 Roket Burnu
@@ -643,6 +647,9 @@ item.green_diamond_hoe.name=Green Diamond Hoe
 item.green_diamond_shovel.name=Green Diamond Shovel
 
 #Schematics
+item.schematic_mars_rover.name=NASA Workbench Schematic
+item.schematic_venus_rover.name=NASA Workbench Schematic
+
 item.schematic_tier4.name=NASA Çalışma Masası Şematiği
 item.schematic_tier5.name=NASA Çalışma Masası Şematiği
 item.schematic_tier6.name=NASA Çalışma Masası Şematiği
@@ -650,6 +657,9 @@ item.schematic_tier7.name=NASA Çalışma Masası Şematiği
 item.schematic_tier8.name=NASA Çalışma Masası Şematiği
 item.schematic_tier9.name=NASA Çalışma Masası Şematiği
 item.schematic_tier10.name=NASA Çalışma Masası Şematiği
+
+schematic.mars.rover.name=Mars Rover
+schematic.venus.rover.name=Venus Rover
 
 schematic.tier4.rocket.name=Tier 4 Roketi
 schematic.tier5.rocket.name=Tier 5 Roketi
@@ -849,6 +859,12 @@ item.canned_food.dehydrated_fish.name=Susuz Balık
 item.canned_food.dehydrated_salmon.name=Susuz Somon Balığı
 item.canned_food.dehydrated_chicken.name=Susuz Tavuk
 item.canned_food.dehydrated_beef.name=Susuz Biftek
+
+item.electric_parts.batteryTier1.name=Tier 1 Battery
+item.electric_parts.batteryTier2.name=Tier 2 Battery
+item.electric_parts.sparkPlug.name=Spark Plugs
+item.electric_parts.electricWheelsTier1.name=Tier 1 Wheel
+item.electric_parts.electricWheelsTier2.name=Tier 2 Wheel
 
 #Entities
 entity.ProjectileTNT.name=Korumacı TNT

@@ -337,8 +337,8 @@ public class ExtraPlanets_Items {
 		CLOTH = new ItemBasicItem("cloth");
 		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
 		
-		MARS_ROVER = new ItemMarsRover("marsRover");
-		VENUS_ROVER = new ItemVenusRover("venusRover");
+		MARS_ROVER = new ItemMarsRover("mars_rover");
+		VENUS_ROVER = new ItemVenusRover("venus_rover");
 		
 		MARS_ROVER_SCHEMATIC = new SchematicMarsRover("schematic_mars_rover");
 		VENUS_ROVER_SCHEMATIC = new SchematicVenusRover("schematic_venus_rover");
