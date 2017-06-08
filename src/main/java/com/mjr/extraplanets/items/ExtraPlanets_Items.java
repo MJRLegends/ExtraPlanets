@@ -325,6 +325,16 @@ public class ExtraPlanets_Items {
 			POTASH_SHARDS = new ItemBasicItem("potash_shards");
 			ANTI_RADIATION = new ItemBasicItem("anti_radiation");
 		}
+		if (Config.MARS_ROVER) {
+			MARS_ROVER = new ItemMarsRover("mars_rover");
+			MARS_ROVER_SCHEMATIC = new SchematicMarsRover("schematic_mars_rover");
+		}
+		if (Config.VENUS_ROVER) {
+			VENUS_ROVER = new ItemVenusRover("venus_rover");
+			VENUS_ROVER_SCHEMATIC = new SchematicVenusRover("schematic_venus_rover");
+		}
+		if (Config.MARS_ROVER || Config.VENUS_ROVER)
+			ELECTRIC_PARTS = new ItemElectricParts("electric_parts");
 		BUCKET_CLEAN_WATER = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.CLEAN_WATER);
 		BUCKET_INFECTED_WATER = new ItemBasicItemBucket("bucket_infected_water", ExtraPlanets_Fluids.INFECTED_WATER);
 		BUCKET_RADIOACTIVE_WATER = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
@@ -336,14 +346,6 @@ public class ExtraPlanets_Items {
 		INGOT_LEAD = new ItemBasicItem("ingot_lead");
 		CLOTH = new ItemBasicItem("cloth");
 		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
-
-		MARS_ROVER = new ItemMarsRover("mars_rover");
-		VENUS_ROVER = new ItemVenusRover("venus_rover");
-
-		MARS_ROVER_SCHEMATIC = new SchematicMarsRover("schematic_mars_rover");
-		VENUS_ROVER_SCHEMATIC = new SchematicVenusRover("schematic_venus_rover");
-
-		ELECTRIC_PARTS = new ItemElectricParts("electric_parts");
 	}
 
 	private static void registerItems() {
@@ -479,6 +481,16 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(POTASH_SHARDS, POTASH_SHARDS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(ANTI_RADIATION, ANTI_RADIATION.getUnlocalizedName().substring(5));
 		}
+		if (Config.MARS_ROVER) {
+			RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
+		}
+		if (Config.VENUS_ROVER) {
+			RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName().substring(5));
+			RegisterHelper.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
+		}
+		if (Config.MARS_ROVER || Config.VENUS_ROVER)
+			RegisterHelper.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(CANNED_FOOD, CANNED_FOOD.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(WAFERS, WAFERS.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(INGOT_LEAD, INGOT_LEAD.getUnlocalizedName().substring(5));
@@ -489,13 +501,6 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
 		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
 		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
-
-		RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName().substring(5));
-
-		RegisterHelper.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerFluidContainer() {

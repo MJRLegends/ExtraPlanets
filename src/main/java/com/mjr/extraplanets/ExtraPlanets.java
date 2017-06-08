@@ -447,8 +447,10 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
 		if (Config.ERIS)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
-		SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
-		SchematicRegistry.registerSchematicRecipe(new SchematicVenusRover());
+		if (Config.MARS_ROVER)
+			SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
+		if (Config.VENUS_ROVER)
+			SchematicRegistry.registerSchematicRecipe(new SchematicVenusRover());
 	}
 
 	private void addDungeonLoot() {
