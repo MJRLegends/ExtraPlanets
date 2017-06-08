@@ -1071,7 +1071,7 @@ public class ClientProxy extends CommonProxy {
 						"FrameSegment030", "FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050",
 						"FrameSegment051", "FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat", "Seat001",
 						"SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "WindowFront1", "WindowFront2", "WheelBackLeft", "WheelMiddleLeft",
-						"WheelFrontRight", "WheelBackRight", "WheelMiddleRight", "WheelFrontLeft");
+						"WheelFrontRight", "WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "CaseBack1", "CaseBack2", "CaseBack3");
 				switch (i) {
 				case 0:
 					break;
@@ -1081,7 +1081,7 @@ public class ClientProxy extends CommonProxy {
 							"FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050", "FrameSegment051",
 							"FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat", "Seat001", "SolarPanel",
 							"PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "WindowFront1", "WindowFront2", "WheelBackLeft", "WheelMiddleLeft", "WheelFrontRight",
-							"WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "CaseBack1");
+							"WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "CaseBack1", "CaseBack2", "CaseBack3");
 					break;
 				case 2:
 					objects = ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013", "FrameSegment014",
@@ -1089,7 +1089,7 @@ public class ClientProxy extends CommonProxy {
 							"FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050", "FrameSegment051",
 							"FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat", "Seat001", "SolarPanel",
 							"PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "WindowFront1", "WindowFront2", "WheelBackLeft", "WheelMiddleLeft", "WheelFrontRight",
-							"WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "CaseBack1", "CaseBack2");
+							"WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "CaseBack1", "CaseBack2", "CaseBack3");
 					break;
 				case 3:
 					objects = ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013", "FrameSegment014",

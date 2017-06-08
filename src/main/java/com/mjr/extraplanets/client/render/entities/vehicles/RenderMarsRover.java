@@ -16,6 +16,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
 
 import com.google.common.base.Function;
 import com.google.common.collect.ImmutableList;
@@ -36,10 +37,10 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 
 	public RenderMarsRover(RenderManager manager) {
 		super(manager);
-		this.shadowSize = 2.0F;
+		this.shadowSize = 0.0F;
 
 	}
-	
+
 	private void updateModels() {
 		if (modelRover == null) {
 			OBJModel model;
@@ -80,9 +81,11 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 	protected ResourceLocation getEntityTexture(EntityMarsRover par1Entity) {
 		return new ResourceLocation("missing");
 	}
-	
+
 	@Override
-    public void doRender(EntityMarsRover entity, double par2, double par4, double par6, float par8, float par9){
+	public void doRender(EntityMarsRover entity, double par2, double par4, double par6, float par8, float par9) {
+		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
+
 		GL11.glPushMatrix();
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
 		GL11.glTranslatef((float) par2, (float) par4 - 0.3F, (float) par6);
@@ -90,20 +93,16 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 		GL11.glRotatef(-180.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		GL11.glScalef(0.51F, 0.51F, 0.51F);
-		
+
 		this.updateModels();
-        this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 
-        if (Minecraft.isAmbientOcclusionEnabled())
-        {
-            GlStateManager.shadeModel(GL11.GL_SMOOTH);
-        }
-        else
-        {
-            GlStateManager.shadeModel(GL11.GL_FLAT);
-        }
+		if (Minecraft.isAmbientOcclusionEnabled()) {
+			GlStateManager.shadeModel(GL11.GL_SMOOTH);
+		} else {
+			GlStateManager.shadeModel(GL11.GL_FLAT);
+		}
 
-        
 		float rotation = entity.wheelRotationX;
 
 		// Front
@@ -160,7 +159,7 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 			}
 		}
 
-        GL11.glPopMatrix();
-        RenderHelper.enableStandardItemLighting();
+		GL11.glPopMatrix();
+		RenderHelper.enableStandardItemLighting();
 	}
 }
