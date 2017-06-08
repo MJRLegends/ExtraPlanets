@@ -49,11 +49,11 @@ public class GuiVehicleChanger extends GuiContainerGC {
 	public void initGui() {
 		super.initGui();
 		List<String> batterySlotDesc = new ArrayList<String>();
-		batterySlotDesc.add(GCCoreUtil.translate("gui.batterySlot.desc.0"));
-		batterySlotDesc.add(GCCoreUtil.translate("gui.batterySlot.desc.1"));
+		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
+		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 50, (this.height - this.ySize) / 2 + 54, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
-		electricityDesc.add(GCCoreUtil.translate("gui.energyStorage.desc.0"));
+		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.vehicleChanger.getEnergyStoredGC()) + " / " + (int) Math.floor(this.vehicleChanger.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
 		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
@@ -84,7 +84,7 @@ public class GuiVehicleChanger extends GuiContainerGC {
 		final int var6 = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(var5, var6 + 5, 0, 0, this.xSize, 181);
 		List<String> electricityDesc = new ArrayList<String>();
-		electricityDesc.add(GCCoreUtil.translate("gui.energyStorage.desc.0"));
+		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		EnergyDisplayHelper.getEnergyDisplayTooltip(this.vehicleChanger.getEnergyStoredGC(), this.vehicleChanger.getMaxEnergyStoredGC(), electricityDesc);
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
 
