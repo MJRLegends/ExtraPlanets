@@ -42,6 +42,11 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.7.4
+*Added a sky feature to Jupiter
+*Fixed Mars Rover recipe being broken
+*Fixed Powered Vehicle Infinite driving issue
+
 v1.7.3
 *Fixed crash when disabling mercury in config
 *Clean up
