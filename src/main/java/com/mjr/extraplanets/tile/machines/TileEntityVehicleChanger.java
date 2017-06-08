@@ -141,7 +141,7 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public Face[] listDefaultFaces() {
-		return new Face[] { Face.LEFT, Face.RIGHT };
+		return new Face[] { Face.LEFT};
 	}
 
 	private MachineSidePack[] machineSides;
