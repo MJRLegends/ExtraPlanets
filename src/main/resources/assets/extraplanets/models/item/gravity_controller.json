@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "extraplanets:items/gravityController"
+        "layer0": "extraplanets:items/gravity_controller"
     },
     "display": {
         "thirdperson": {

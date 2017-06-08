@@ -44,7 +44,7 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 		if (modelRover == null) {
 			OBJModel model;
 			try {
-				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "MarsRover.obj"));
+				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
@@ -61,12 +61,12 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 				modelRoverCase2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("CaseBack2"), false), DefaultVertexFormats.ITEM, spriteFunction);
 				modelRoverCase3 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("CaseBack3"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
-				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "MarsRover-Wheel.obj"));
+				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover_wheel.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 
 				modelRoverWheelLeft = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Wheel"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
-				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "MarsRover-Wheel.obj"));
+				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover_wheel.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 
 				modelRoverWheelRight = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Wheel"), false), DefaultVertexFormats.ITEM, spriteFunction);

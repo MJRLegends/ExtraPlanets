@@ -4,7 +4,7 @@
         "particle": "galacticraftcore:blocks/machine",
         "down": "galacticraftcore:blocks/machine",
         "up": "galacticraftcore:blocks/machine_input",
-        "north": "extraplanets:blocks/chemicalInjector_front",
+        "north": "extraplanets:blocks/chemical_injector_front",
         "east": "galacticraftcore:blocks/machine",
         "south": "galacticraftcore:blocks/machine",
         "west": "galacticraftcore:blocks/machine"

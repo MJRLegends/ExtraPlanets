@@ -15,7 +15,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicMarsRover;
 
 public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicResultPage {
-	private static final ResourceLocation marsRoverBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/marsRoverbench.png");
+	private static final ResourceLocation marsRoverBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mars_roverbench.png");
 
 	private int pageIndex;
 
