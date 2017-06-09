@@ -41,6 +41,7 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 
 	}
 
+	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (modelRover == null) {
 			OBJModel model;
@@ -54,13 +55,13 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 								"FrameSegment014", "FrameSegment015", "FrameSegment021", "FrameSegment022", "FrameSegment023", "FrameSegment024", "FrameSegment025", "FrameSegment026", "FrameSegment027", "FrameSegment028", "FrameSegment029",
 								"FrameSegment030", "FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050",
 								"FrameSegment051", "FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat",
-								"Seat001", "SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2"), false), DefaultVertexFormats.ITEM, spriteFunction);
+								"Seat001", "SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "CaseBack1", "CaseBack2", "CaseBack3"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				modelRoverWindows = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("WindowFront1", "WindowFront2"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
-				modelRoverCase1 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("CaseBack1"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				modelRoverCase2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("CaseBack2"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				modelRoverCase3 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("CaseBack3"), false), DefaultVertexFormats.ITEM, spriteFunction);
+				modelRoverCase1 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Container"), false), DefaultVertexFormats.ITEM, spriteFunction);
+				modelRoverCase2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Container2"), false), DefaultVertexFormats.ITEM, spriteFunction);
+				modelRoverCase3 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Container3"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover_wheel.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
