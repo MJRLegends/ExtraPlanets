@@ -53,8 +53,10 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			if (Config.ERIS)
 				this.registerTier10Recipe();
 			this.addCircuitFabricatorRecipes();
-			this.addMarsRoverRecipes();
-			this.addVenusRoverRecipes();
+			if (Config.MARS_ROVER)
+				this.addMarsRoverRecipes();
+			if (Config.VENUS_ROVER)
+				this.addVenusRoverRecipes();
 
 			if (Config.MERCURY) {
 				API.registerRecipeHandler(new RocketT4RecipeHandler());
@@ -97,10 +99,14 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL, 0, 0));
 			API.hideItem(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL, 0, 1));
 
-			API.registerRecipeHandler(new MarsRoverRecipeHandler());
-			API.registerUsageHandler(new MarsRoverRecipeHandler());
-			API.registerRecipeHandler(new VenusRoverRecipeHandler());
-			API.registerUsageHandler(new VenusRoverRecipeHandler());
+			if (Config.MARS_ROVER) {
+				API.registerRecipeHandler(new MarsRoverRecipeHandler());
+				API.registerUsageHandler(new MarsRoverRecipeHandler());
+			}
+			if (Config.VENUS_ROVER) {
+				API.registerRecipeHandler(new VenusRoverRecipeHandler());
+				API.registerUsageHandler(new VenusRoverRecipeHandler());
+			}
 		}
 	}
 
@@ -177,7 +183,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getCircuitFabricatorRecipes() {
 		return NEIExtraPlanetsConfig.circuitFabricatorRecipes.entrySet();
 	}
-	
+
 	public void registerMarsRoverBenchRecipe(HashMap<Integer, PositionedStack> input, PositionedStack output) {
 		NEIExtraPlanetsConfig.marsRoverBenchRecipes.put(input, output);
 	}
@@ -193,7 +199,6 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	public static Set<Entry<HashMap<Integer, PositionedStack>, PositionedStack>> getVenusRoverBenchRecipes() {
 		return NEIExtraPlanetsConfig.venusRoverBenchRecipes.entrySet();
 	}
-
 
 	public void registerTier4Recipe() {
 		final int changeY = 15;
@@ -660,6 +665,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			this.registerCircuitFabricatorRecipe(input2, new PositionedStack(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 5), 147, 91));
 		}
 	}
+
 	private void addMarsRoverRecipes() {
 		HashMap<Integer, PositionedStack> input1 = new HashMap<Integer, PositionedStack>();
 
