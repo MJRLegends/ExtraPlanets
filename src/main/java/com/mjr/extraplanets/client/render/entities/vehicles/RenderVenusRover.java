@@ -90,7 +90,7 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
 		GL11.glTranslatef((float) par2, (float) par4, (float) par6);
 		GL11.glScalef(1.25F, 1.25F, 1.25F);
-		GL11.glRotatef(-180.0F - par8, 0.0F, 1.0F, 0.0F);
+		GL11.glRotatef(0.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		GL11.glScalef(0.51F, 0.51F, 0.51F);
 
@@ -107,7 +107,7 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 
 		// Front
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.0F, 2.20F);
+		GL11.glTranslatef(0.0F, 1.1F, 2.20F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(4.1F, 0.0F, 0.0F);
@@ -119,7 +119,7 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 
 		// Back wheels
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.0F, -4.45F);
+		GL11.glTranslatef(0.0F, 1.1F, -4.45F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GL11.glTranslatef(4.1F, 0.0F, 0.0F);

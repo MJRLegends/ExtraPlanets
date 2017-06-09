@@ -58,7 +58,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public float wheelRotationZ;
 	public float wheelRotationX;
 	private float maxSpeed = 0.6F;
-	private float accel = 0.8F;
+	private float accel = 0.5F;
 	private float turnFactor = 3.0F;
 	public String texture;
 	ItemStack[] cargoItems = new ItemStack[60];
@@ -71,6 +71,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	protected IPowerDock landingPad;
 	private int timeClimbing;
 	private boolean shouldClimb;
+	protected boolean invertControls = false;
 
 	// Power System
 	private float currentPowerCapacity;
@@ -144,7 +145,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		if (this.isPassenger(passenger)) {
 			final double offsetX = Math.cos(this.rotationYaw / Constants.RADIANS_TO_DEGREES_D + 114.8) * -0.5D;
 			final double offsetZ = Math.sin(this.rotationYaw / Constants.RADIANS_TO_DEGREES_D + 114.8) * -0.5D;
-			passenger.setPosition(this.posX + offsetX, this.posY + 0.4F + passenger.getYOffset(), this.posZ + offsetZ);
+			passenger.setPosition(this.posX + offsetX - 0.1F, this.posY + 0.4F + passenger.getYOffset(), this.posZ + offsetZ);
 		}
 	}
 
@@ -513,13 +514,13 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		}
 		switch (key) {
 		case 0: // Deccelerate
-			if(this.currentPowerCapacity < 10)
+			if (this.currentPowerCapacity < 10)
 				return false;
 			this.speed -= this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
 		case 1: // Accelerate
-			if(this.currentPowerCapacity < 10)
+			if (this.currentPowerCapacity < 10)
 				return false;
 			this.speed += this.accel / 20D;
 			this.shouldClimb = true;
@@ -533,7 +534,6 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ - 0.5F));
 			return true;
 		}
-
 		return false;
 	}
 
