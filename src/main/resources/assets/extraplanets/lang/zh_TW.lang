@@ -397,6 +397,10 @@ gui.status.solarEvaporationChamber.name=Evaporating
 gui.message.power.name=Powered Vehicle
 gui.message.power.message.name=Power
 gui.button.loadpower.name=Load Power
+gui.powered.inv.name=Inventory / Power
+
+#GUI Controls/Keybinds
+keybind.vehicleInv.name=Open Powered Vehicle Inventory
 
 #Other Blocks
 tile.nuclear_bomb.name=核彈
