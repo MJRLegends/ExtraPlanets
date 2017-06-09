@@ -14,6 +14,23 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4.5 Beta Build
+*Added Mars and Venus Rovers from the 1.7.10 version
+*Updated lang files
+*Added Vehicle Charger (WIP)
+*Added Mars and Venus Schematics
+*Added Mars and Venus Recipes
+*Added Mars and Venus NEI support
+*Added Electric Items
+*Added Electric Items Recipes
+*Refactor: Changed some resources to use underscore/lowercase and not camelCase
+*Added Villages for Pluto, Saturn, Uranus (WIP)
+*Added JEI Support for Mars and Venus Rovers
+*Added Venus Rover Schematic to Venus Dungeon Loot
+*Added Mars Rover Schematic to Moon Dungeon Loot since Mars Dungeons are not able to take custom Schematics yet
+*Added Mars and Venus Config options
+*Few fixes for disabling certain config options
+
 v0.4.4 Beta Build
 *Added new Config options that were added in 1.7.10
 *Added comment to the config section Celestial Body Map Settings
