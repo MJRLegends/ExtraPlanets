@@ -71,6 +71,7 @@ import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT7;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT8;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT9;
 import com.mjr.extraplanets.client.model.vehicles.ItemModelMarsRover;
+import com.mjr.extraplanets.client.model.vehicles.ItemModelVenusRover;
 import com.mjr.extraplanets.client.render.entities.RenderFireBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
@@ -93,6 +94,7 @@ import com.mjr.extraplanets.client.render.entities.rockets.RenderTier7Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier8Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.entities.vehicles.RenderMarsRover;
+import com.mjr.extraplanets.client.render.entities.vehicles.RenderVenusRover;
 import com.mjr.extraplanets.client.render.tile.TileEntitySolarPanelRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
@@ -123,6 +125,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
+import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemCannedFood;
 import com.mjr.extraplanets.items.ItemElectricParts;
@@ -278,7 +281,7 @@ public class ClientProxy extends CommonProxy {
 				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks2", "white_block", "red_block");
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
-			ClientUtilities.addExtraPlanetsVariants("electric_parts", "battery_tier1", "battery_tier2", "spark_plug", "electric_wheels_tier1", "electric_wheels_tier2");
+			ClientUtilities.addExtraPlanetsVariants("electric_parts", "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2");
 	}
 
 	private void registerEntityRenders() {
@@ -331,6 +334,7 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.SNOWBALL)));
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, (RenderManager manager) -> new RenderMarsRover(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, (RenderManager manager) -> new RenderVenusRover(manager));
 	}
 
 	public void registerCustomModel() {
@@ -380,6 +384,12 @@ public class ClientProxy extends CommonProxy {
 			for (int i = 0; i < 4; ++i) {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "mars_rover" + (i > 0 ? "_" + i : ""), "inventory");
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.MARS_ROVER, i, modelResourceLocation);
+			}
+		}
+		if (Config.VENUS_ROVER) {
+			for (int i = 0; i < 4; ++i) {
+				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "venus_rover" + (i > 0 ? "_" + i : ""), "inventory");
+				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.VENUS_ROVER, i, modelResourceLocation);
 			}
 		}
 	}
@@ -1101,6 +1111,33 @@ public class ClientProxy extends CommonProxy {
 					break;
 				}
 				ClientUtilities.replaceModelDefault(event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class, TRSRTransformation.identity());
+			}
+		}
+		if (Config.VENUS_ROVER) {
+			for (int i = 0; i < 4; ++i) {
+				ImmutableList<String> objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2",
+						"BraceFrontWheelRight003", "BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat",
+						"Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001");
+				switch (i) {
+				case 0:
+					break;
+				case 1:
+					objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003",
+							"BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm",
+							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container");
+					break;
+				case 2:
+					objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003",
+							"BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm",
+							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2");
+					break;
+				case 3:
+					objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003",
+							"BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm",
+							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2", "Container3");
+					break;
+				}
+				ClientUtilities.replaceModelDefault(event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
 			}
 		}
 	}
