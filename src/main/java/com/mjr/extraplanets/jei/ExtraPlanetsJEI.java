@@ -29,6 +29,12 @@ import com.mjr.extraplanets.jei.rockets.tier8.Tier8RocketRecipeMaker;
 import com.mjr.extraplanets.jei.rockets.tier9.Tier9RocketRecipeCategory;
 import com.mjr.extraplanets.jei.rockets.tier9.Tier9RocketRecipeHandler;
 import com.mjr.extraplanets.jei.rockets.tier9.Tier9RocketRecipeMaker;
+import com.mjr.extraplanets.jei.vehicles.marsRover.MarsRoverRecipeCategory;
+import com.mjr.extraplanets.jei.vehicles.marsRover.MarsRoverRecipeHandler;
+import com.mjr.extraplanets.jei.vehicles.marsRover.MarsRoverRecipeMaker;
+import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeCategory;
+import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeHandler;
+import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeMaker;
 
 @JEIPlugin
 public class ExtraPlanetsJEI extends BlankModPlugin {
@@ -37,9 +43,9 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 		if (Config.JEI_SUPPORT) {
 			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
-					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper));
+					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper));
 			registry.addRecipeHandlers(new Tier4RocketRecipeHandler(), new Tier5RocketRecipeHandler(), new Tier6RocketRecipeHandler(), new Tier7RocketRecipeHandler(), new Tier8RocketRecipeHandler(), new Tier9RocketRecipeHandler(),
-					new Tier10RocketRecipeHandler());
+					new Tier10RocketRecipeHandler(), new MarsRoverRecipeHandler(), new VenusRoverRecipeHandler());
 			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList());
@@ -47,6 +53,8 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(Tier8RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier9RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier10RocketRecipeMaker.getRecipesList());
+			registry.addRecipes(MarsRoverRecipeMaker.getRecipesList());
+			registry.addRecipes(VenusRoverRecipeMaker.getRecipesList());
 		}
 	}
 }
