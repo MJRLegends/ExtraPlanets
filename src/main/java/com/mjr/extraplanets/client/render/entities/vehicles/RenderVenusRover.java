@@ -135,8 +135,8 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 		ClientUtil.drawBakedModel(modelRoverWindows);
-		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ZERO);
+		GL11.glDisable(GL11.GL_BLEND);
 
 		if (entity.roverType > 0) {
 			ClientUtil.drawBakedModel(modelRoverCase1);

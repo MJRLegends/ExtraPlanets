@@ -1117,24 +1117,24 @@ public class ClientProxy extends CommonProxy {
 			for (int i = 0; i < 4; ++i) {
 				ImmutableList<String> objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2",
 						"BraceFrontWheelRight003", "BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat",
-						"Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001");
+						"Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001");
 				switch (i) {
 				case 0:
 					break;
 				case 1:
 					objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003",
 							"BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm",
-							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container");
+							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container");
 					break;
 				case 2:
 					objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003",
 							"BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm",
-							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2");
+							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2");
 					break;
 				case 3:
 					objects = ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003",
 							"BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm",
-							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "FrontWindow", "LeftWall", "RightWall", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2", "Container3");
+							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2", "Container3");
 					break;
 				}
 				ClientUtilities.replaceModelDefault(event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
