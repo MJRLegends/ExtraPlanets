@@ -560,13 +560,13 @@ item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
 
 #Keys
-item.T4key.name=Klíč ke kobce typ 4
-item.T5key.name=Klíč ke kobce typ 5
-item.T6key.name=Klíč ke kobce typ 6
-item.T7key.name=Klíč ke kobce typ 7
-item.T8key.name=Klíč ke kobce typ 8
-item.T9key.name=Klíč ke kobce typ 9
-item.T10key.name=Klíč ke kobce typ 10
+item.t4key.name=Klíč ke kobce typ 4
+item.t5key.name=Klíč ke kobce typ 5
+item.t6key.name=Klíč ke kobce typ 6
+item.t7key.name=Klíč ke kobce typ 7
+item.t8key.name=Klíč ke kobce typ 8
+item.t9key.name=Klíč ke kobce typ 9
+item.t10key.name=Klíč ke kobce typ 10
 
 #Tools
 item.carbon_pickaxe.name=Karbonový krumpáč

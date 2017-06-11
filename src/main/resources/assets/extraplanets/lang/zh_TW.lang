@@ -560,13 +560,13 @@ item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
 
 #Keys
-item.T4key.name=4階寶箱鑰匙
-item.T5key.name=5階寶箱鑰匙
-item.T6key.name=6階寶箱鑰匙
-item.T7key.name=7階寶箱鑰匙
-item.T8key.name=8階寶箱鑰匙
-item.T9key.name=9階寶箱鑰匙
-item.T10key.name=10階寶箱鑰匙
+item.t4key.name=4階寶箱鑰匙
+item.t5key.name=5階寶箱鑰匙
+item.t6key.name=6階寶箱鑰匙
+item.t7key.name=7階寶箱鑰匙
+item.t8key.name=8階寶箱鑰匙
+item.t9key.name=9階寶箱鑰匙
+item.t10key.name=10階寶箱鑰匙
 
 #Tools
 item.carbon_pickaxe.name=碳鎬

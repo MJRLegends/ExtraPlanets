@@ -559,13 +559,13 @@ item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
 
 #Keys
-item.T4key.name=Llave de mazmorra nivel 4
-item.T5key.name=Llave de mazmorra nivel 5
-item.T6key.name=Llave de mazmorra nivel 6
-item.T7key.name=Llave de mazmorra nivel 7
-item.T8key.name=Llave de mazmorra nivel 8
-item.T9key.name=Llave de mazmorra nivel 9
-item.T10key.name=Llave de mazmorra nivel 10
+item.t4key.name=Llave de mazmorra nivel 4
+item.t5key.name=Llave de mazmorra nivel 5
+item.t6key.name=Llave de mazmorra nivel 6
+item.t7key.name=Llave de mazmorra nivel 7
+item.t8key.name=Llave de mazmorra nivel 8
+item.t9key.name=Llave de mazmorra nivel 9
+item.t10key.name=Llave de mazmorra nivel 10
 
 #Tools
 item.carbon_pickaxe.name=Pico de carbono

@@ -560,13 +560,13 @@ item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
 
 #Keys
-item.T4key.name=Tier 4 Zindan Anahtarı
-item.T5key.name=Tier 5 Zindan Anahtarı
-item.T6key.name=Tier 6 Zindan Anahtarı
-item.T7key.name=Tier 7 Zindan Anahtarı
-item.T8key.name=Tier 8 Zindan Anahtarı
-item.T9key.name=Tier 9 Zindan Anahtarı
-item.T10key.name=Tier 10 Zindan Anahtarı
+item.t4key.name=Tier 4 Zindan Anahtarı
+item.t5key.name=Tier 5 Zindan Anahtarı
+item.t6key.name=Tier 6 Zindan Anahtarı
+item.t7key.name=Tier 7 Zindan Anahtarı
+item.t8key.name=Tier 8 Zindan Anahtarı
+item.t9key.name=Tier 9 Zindan Anahtarı
+item.t10key.name=Tier 10 Zindan Anahtarı
 
 #Tools
 item.carbon_pickaxe.name=Karbon Kazma

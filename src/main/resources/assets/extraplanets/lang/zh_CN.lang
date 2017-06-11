@@ -39,7 +39,7 @@ planet.kepler22b=开普勒22b
 planet.kepler47b=开普勒47b
 planet.kepler47c=开普勒47c
 planet.kepler69b=开普勒69b
-planet.kepler69c=开普勒69c
+planet.kepler69c=开普勒69c1
 
 #Moons
 moon.triton=海卫一
@@ -561,13 +561,13 @@ item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
 
 #Keys
-item.T4key.name=4阶宝箱钥匙
-item.T5key.name=5阶宝箱钥匙
-item.T6key.name=6阶宝箱钥匙
-item.T7key.name=7阶宝箱钥匙
-item.T8key.name=8阶宝箱钥匙
-item.T9key.name=9阶宝箱钥匙
-item.T10key.name=10阶宝箱钥匙
+item.t4key.name=4阶宝箱钥匙
+item.t5key.name=5阶宝箱钥匙
+item.t6key.name=6阶宝箱钥匙
+item.t7key.name=7阶宝箱钥匙
+item.t8key.name=8阶宝箱钥匙
+item.t9key.name=9阶宝箱钥匙
+item.t10key.name=10阶宝箱钥匙
 
 #Tools
 item.carbon_pickaxe.name=碳镐
