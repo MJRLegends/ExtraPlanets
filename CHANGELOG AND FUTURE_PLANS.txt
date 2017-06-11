@@ -14,6 +14,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4.6 Beta Build
+*Added missing feature of changing some planets surface and sub surface to liquid
+*Removed debug information
+*Added missing Vehicle Charging Pad recipe
+*Added missing Fire bomb recipe
+
 v0.4.5 Beta Build
 *Added Mars and Venus Rovers from the 1.7.10 version
 *Updated lang files
