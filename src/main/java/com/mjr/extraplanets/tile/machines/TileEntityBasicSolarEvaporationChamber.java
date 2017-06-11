@@ -35,7 +35,6 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		if (!this.worldObj.isRemote) {
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
 				int processTime = (int) (BASE_PROCESS_TIME_REQUIRED - (BASE_PROCESS_TIME_REQUIRED * (this.worldObj.getCelestialAngle(1.0F) * -10))) / 4;
-				System.out.println("Process Time: " + processTime+ ", Time: " + this.worldObj.getCelestialAngle(1.0F));
 				if (this.processTicks == 0) {
 					this.processTicks = processTime;
 				} else {
