@@ -16,7 +16,9 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 
 public class ChunkProviderJupiter extends ChunkProviderSpace {
@@ -56,12 +58,18 @@ public class ChunkProviderJupiter extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks, (byte) 0);
+		if(Config.jupiterLiquid)
+			return new BlockMetaPair(ExtraPlanets_Fluids.magma,(byte) 0);
+		else
+			return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks, (byte) 1);
+		if(Config.jupiterLiquid)
+			return new BlockMetaPair(ExtraPlanets_Fluids.magma,(byte) 0);
+		else
+			return new BlockMetaPair(ExtraPlanets_Blocks.jupiterBlocks,(byte) 1);
 	}
 
 	@Override
