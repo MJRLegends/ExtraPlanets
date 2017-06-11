@@ -62,7 +62,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.getStackInSlot(slot) != null) {
 			if (this.getStackInSlot(slot).getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.getStackInSlot(slot).getCount() == 1) {
 				tank.drain(1000, true);
-				this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
+				this.setInventorySlotContents(slot, new ItemStack(ExtraPlanets_Items.BUCKET_SALT));
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.stacks, slot);
 		}
@@ -91,7 +91,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			this.outputTank.fill(FluidRegistry.getFluidStack("salt_fluid", amountToAdd), true);
 			if (amountAdded == 1000) {
 				amountAdded = 0;
-				this.decrStackSize(6, 1);
+				this.decrStackSize(1, 1);
 			}
 		}
 	}
