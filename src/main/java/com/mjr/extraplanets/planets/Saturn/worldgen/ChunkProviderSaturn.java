@@ -15,7 +15,9 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 
 public class ChunkProviderSaturn extends ChunkProviderSpace {
@@ -53,14 +55,21 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 		return generators;
 	}
 
+	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS, (byte) 0);
+		if(Config.SATURN_LIQUID)
+			return new BlockMetaPair(ExtraPlanets_Fluids.GLOWSTONE,(byte) 0);
+		else
+			return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS, (byte) 1);
+		if(Config.SATURN_LIQUID)
+			return new BlockMetaPair(ExtraPlanets_Fluids.GLOWSTONE,(byte) 0);
+		else
+			return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 1);
 	}
 
 	@Override
