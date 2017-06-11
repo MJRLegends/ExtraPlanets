@@ -13,7 +13,6 @@ import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
 import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.inventory.ISidedInventory;
@@ -25,41 +24,25 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockAccess;
-import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
-import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
 
-public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler, IFluidHandlerWrapper, ILandingPadAttachable, IMachineSides {
+public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper, ILandingPadAttachable, IMachineSides {
 	private final int tankCapacity = 12000 * 2;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public FluidTank fuelTank = new FluidTank(this.tankCapacity);
-    private NonNullList<ItemStack> stacks = NonNullList.withSize(2, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(2, ItemStack.EMPTY);
 	public IFuelable attachedFuelable;
 	private boolean loadedFuelLastTick = false;
 
 	public TileEntityAdvancedFuelLoader() {
 		this.storage.setMaxExtract(30 * 2);
-	}
-
-	@Override
-	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY;
-	}
-
-	@Override
-	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
-			return (T) new FluidHandlerWrapper(this, facing);
-		}
-		return null;
 	}
 
 	public int getScaledFuelLevel(int i) {
@@ -75,10 +58,9 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 		if (!this.world.isRemote) {
 			this.loadedFuelLastTick = false;
 
-            final FluidStack liquidContained = FluidUtil.getFluidContained(this.stacks.get(1));
-            if (FluidUtil.isFuel(liquidContained))
-            {
-                FluidUtil.loadFromContainer(this.fuelTank, GCFluids.fluidFuel, this.stacks, 1, liquidContained.amount);
+			final FluidStack liquidContained = FluidUtil.getFluidContained(this.stacks.get(1));
+			if (FluidUtil.isFuel(liquidContained)) {
+				FluidUtil.loadFromContainer(this.fuelTank, GCFluids.fluidFuel, this.stacks, 1, liquidContained.amount);
 			}
 
 			if (this.ticks % 100 == 0) {
@@ -129,7 +111,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
-        this.writeStandardItemsToNBT(nbt, this.stacks);
+		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.fuelTank.getFluid() != null) {
 			nbt.setTag("fuelTank", this.fuelTank.writeToNBT(new NBTTagCompound()));
@@ -141,12 +123,10 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	}
 
 	@Override
-    protected NonNullList<ItemStack> getContainingItems()
-    {
-        return this.stacks;
-    }
+	protected NonNullList<ItemStack> getContainingItems() {
+		return this.stacks;
+	}
 
-	
 	@Override
 	public String getName() {
 		return GCCoreUtil.translate("container.advanced.fuelloader.name");

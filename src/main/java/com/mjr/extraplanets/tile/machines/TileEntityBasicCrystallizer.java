@@ -11,6 +11,7 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -30,7 +31,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public static final int PROCESS_TIME_REQUIRED = 1;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private ItemStack[] containingItems = new ItemStack[3];
+    private NonNullList<ItemStack> stacks = NonNullList.withSize(4, ItemStack.EMPTY);
 
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.IODIDE_SALT, 6, 0);
 
@@ -61,10 +62,10 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
-		if (this.containingItems[slot] != null) {
-			if (this.containingItems[slot].getItem() == ExtraPlanets_Items.BUCKET_SALT) {
+		if (this.getStackInSlot(slot) != null) {
+			if (this.getStackInSlot(slot).getItem() == ExtraPlanets_Items.BUCKET_SALT) {
 				tank.fill(FluidRegistry.getFluidStack("salt_fluid", 1000), true);
-				this.containingItems[slot].setItem(Items.BUCKET);
+				this.getStackInSlot(slot).setItem(Items.BUCKET);
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
 		}

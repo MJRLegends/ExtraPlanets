@@ -49,13 +49,13 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	}
 
 	public boolean canProcess() {
-		if (this.containingItems[1] == null)
+		if (this.getStackInSlot(1) == null)
 			return false;
-		if (this.containingItems[2] == null)
+		if (this.getStackInSlot(2) == null)
 			return false;
-		if (this.containingItems[1].getItem() != ExtraPlanets_Items.IODIDE_SALT)
+		if (this.getStackInSlot(1).getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
-		if (this.containingItems[2].getItem() != ExtraPlanets_Items.POTASSIUM)
+		if (this.getStackInSlot(2).getItem() != ExtraPlanets_Items.POTASSIUM)
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -65,35 +65,33 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 		if (itemstack == null) {
 			return false;
 		}
-		if (this.containingItems[3] == null) {
+		if (this.getStackInSlot(3) == null) {
 			return true;
 		}
-		if (!this.containingItems[3].isItemEqual(itemstack)) {
+		if (!this.getStackInSlot(3).isItemEqual(itemstack)) {
 			return false;
 		}
-		int result = this.containingItems[3].stackSize + itemstack.stackSize;
+		int result = this.getStackInSlot(3).getCount() + itemstack.getCount();
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canOutput()) {
-			if (this.containingItems[3] == null) {
-				this.containingItems[3] = resultItemStack.copy();
-			} else if (this.containingItems[3].isItemEqual(resultItemStack)) {
-				if (this.containingItems[3].stackSize + resultItemStack.stackSize > 64) {
-					for (int i = 0; i < this.containingItems[3].stackSize + resultItemStack.stackSize - 64; i++) {
+			if (this.getStackInSlot(3).isItemEqual(resultItemStack)) {
+				if (this.getStackInSlot(3).getCount() + resultItemStack.getCount() > 64) {
+					for (int i = 0; i < this.getStackInSlot(3).getCount() + resultItemStack.getCount() - 64; i++) {
 						float var = 0.7F;
 						double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						double dz = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						EntityItem entityitem = new EntityItem(this.world, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
 						entityitem.setPickupDelay(10);
-						this.world.spawnEntityInWorld(entityitem);
+						this.world.spawnEntity(entityitem);
 					}
-					this.containingItems[3].stackSize = 64;
+					this.getStackInSlot(3).setCount(64);
 				} else {
-					this.containingItems[3].stackSize += resultItemStack.stackSize;
+					this.getStackInSlot(3).setCount(resultItemStack.getCount());
 				}
 			}
 		}
@@ -105,20 +103,20 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.containingItems = this.readStandardItemsFromNBT(nbt);
+		this.stacks = this.readStandardItemsFromNBT(nbt);
 	}
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt);
+		this.writeStandardItemsToNBT(nbt, this.stacks);
 		return nbt;
 	}
 
 	@Override
-	protected ItemStack[] getContainingItems() {
-		return this.containingItems;
+	protected NonNullList<ItemStack> getContainingItems() {
+		return this.stacks;
 	}
 
 	@Override
