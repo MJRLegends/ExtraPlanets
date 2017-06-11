@@ -31,7 +31,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public static final int PROCESS_TIME_REQUIRED = 1;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-    private NonNullList<ItemStack> stacks = NonNullList.withSize(4, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.IODIDE_SALT, 6, 0);
 
@@ -65,9 +65,9 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		if (this.getStackInSlot(slot) != null) {
 			if (this.getStackInSlot(slot).getItem() == ExtraPlanets_Items.BUCKET_SALT) {
 				tank.fill(FluidRegistry.getFluidStack("salt_fluid", 1000), true);
-				this.getStackInSlot(slot).setItem(Items.BUCKET);
+				this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 			} else
-				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
+				FluidUtil.tryFillContainerFuel(tank, this.stacks, slot);
 		}
 	}
 
@@ -84,18 +84,20 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	public boolean canCrystallize() {
-		ItemStack itemstack = this.producingStack;
-		if (itemstack == null) {
-			return false;
-		}
-		if (this.containingItems[1] == null) {
-			return true;
-		}
-		if (!this.containingItems[1].isItemEqual(itemstack)) {
-			return false;
-		}
-		int result = this.containingItems[1].stackSize + itemstack.stackSize;
-		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
+		if (this.producingStack.isEmpty())
+        {
+            return false;
+        }
+        if (this.stacks.get(1).isEmpty())
+        {
+            return true;
+        }
+        if (!this.stacks.get(1).isEmpty() && !this.stacks.get(1).isItemEqual(this.producingStack))
+        {
+            return false;
+        }
+        int result = this.stacks.get(1).isEmpty() ? 0 : this.stacks.get(1).getCount() + this.producingStack.getCount();
+        return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
 	}
 
 	public void smeltItem() {
@@ -106,22 +108,22 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 			this.inputTank.drain(amountToDrain, true);
 			if (amountDrain >= 1000) {
 				amountDrain = 0;
-				if (this.containingItems[1] == null) {
-					this.containingItems[1] = resultItemStack.copy();
-				} else if (this.containingItems[1].isItemEqual(resultItemStack)) {
-					if (this.containingItems[1].stackSize + resultItemStack.stackSize > 64) {
-						for (int i = 0; i < this.containingItems[1].stackSize + resultItemStack.stackSize - 64; i++) {
+				if (this.stacks.get(1).isEmpty()) {
+					this.stacks.set(1, resultItemStack.copy());
+				} else if (this.stacks.get(1).isItemEqual(resultItemStack)) {
+					if (this.stacks.get(1).getCount() + resultItemStack.getCount() > 64) {
+						for (int i = 0; i < this.stacks.get(1).getCount() + resultItemStack.getCount() - 64; i++) {
 							float var = 0.7F;
 							double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 							double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 							double dz = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 							EntityItem entityitem = new EntityItem(this.world, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
 							entityitem.setPickupDelay(10);
-							this.world.spawnEntityInWorld(entityitem);
+							this.world.spawnEntity(entityitem);
 						}
-						this.containingItems[1].stackSize = 64;
+						this.stacks.get(1).setCount(64);
 					} else {
-						this.containingItems[1].stackSize += resultItemStack.stackSize;
+						this.stacks.get(1).grow(resultItemStack.getCount());
 					}
 				}
 			}
@@ -132,7 +134,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.containingItems = this.readStandardItemsFromNBT(nbt);
+		this.stacks = this.readStandardItemsFromNBT(nbt);
 
 		if (nbt.hasKey("inputTank")) {
 			this.inputTank.readFromNBT(nbt.getCompoundTag("inputTank"));
@@ -146,7 +148,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt);
+		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.inputTank.getFluid() != null) {
 			nbt.setTag("inputTank", this.inputTank.writeToNBT(new NBTTagCompound()));
@@ -155,8 +157,8 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
-	protected ItemStack[] getContainingItems() {
-		return this.containingItems;
+	protected NonNullList<ItemStack> getContainingItems() {
+		return this.stacks;
 	}
 
 	@Override

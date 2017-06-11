@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -22,7 +23,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public static final int PROCESS_TIME_REQUIRED = 50;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private ItemStack[] containingItems = new ItemStack[3];
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASH_SHARDS, 3, 0);
 
@@ -50,9 +51,9 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	public boolean canProcess() {
-		if (this.containingItems[1] == null)
+		if (this.stacks.get(1).isEmpty())
 			return false;
-		if (this.containingItems[1].getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
+		if (this.stacks.get(1).getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -62,35 +63,35 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		if (itemstack == null) {
 			return false;
 		}
-		if (this.containingItems[2] == null) {
+		if (this.stacks.get(2).isEmpty()) {
 			return true;
 		}
-		if (!this.containingItems[2].isItemEqual(itemstack)) {
+		if (!this.stacks.get(2).isItemEqual(itemstack)) {
 			return false;
 		}
-		int result = this.containingItems[2].stackSize + itemstack.stackSize;
-		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
+		int result = this.stacks.get(2).isEmpty() ? 0 : this.stacks.get(2).getCount() + this.producingStack.getCount();
+		return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
 	}
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canOutput()) {
-			if (this.containingItems[2] == null) {
-				this.containingItems[2] = resultItemStack.copy();
-			} else if (this.containingItems[2].isItemEqual(resultItemStack)) {
-				if (this.containingItems[2].stackSize + resultItemStack.stackSize > 64) {
-					for (int i = 0; i < this.containingItems[2].stackSize + resultItemStack.stackSize - 64; i++) {
+			if (this.stacks.get(2).isEmpty()) {
+				this.stacks.set(2, resultItemStack.copy());
+			} else if (this.stacks.get(2).isItemEqual(resultItemStack)) {
+				if (this.stacks.get(2).getCount() + resultItemStack.getCount() > 64) {
+					for (int i = 0; i < this.stacks.get(2).getCount() + resultItemStack.getCount() - 64; i++) {
 						float var = 0.7F;
 						double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						double dz = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						EntityItem entityitem = new EntityItem(this.world, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
 						entityitem.setPickupDelay(10);
-						this.world.spawnEntityInWorld(entityitem);
+						this.world.spawnEntity(entityitem);
 					}
-					this.containingItems[2].stackSize = 64;
+					this.stacks.get(2).setCount(64);
 				} else {
-					this.containingItems[2].stackSize += resultItemStack.stackSize;
+					this.stacks.get(2).grow(resultItemStack.getCount());
 				}
 			}
 		}
@@ -101,20 +102,20 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.containingItems = this.readStandardItemsFromNBT(nbt);
+		this.stacks = this.readStandardItemsFromNBT(nbt);
 	}
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt);
+		this.writeStandardItemsToNBT(nbt, this.stacks);
 		return nbt;
 	}
 
 	@Override
-	protected ItemStack[] getContainingItems() {
-		return this.containingItems;
+	protected NonNullList<ItemStack> getContainingItems() {
+		return this.stacks;
 	}
 
 	@Override

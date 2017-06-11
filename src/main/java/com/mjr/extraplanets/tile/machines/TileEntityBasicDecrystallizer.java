@@ -10,6 +10,7 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -29,7 +30,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public static final int PROCESS_TIME_REQUIRED = 1;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private ItemStack[] containingItems = new ItemStack[3];
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	public TileEntityBasicDecrystallizer() {
 		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, 0));
@@ -59,11 +60,11 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.getStackInSlot(slot) != null) {
-			if (this.getStackInSlot(slot).getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.getStackInSlot(slot).stackSize == 1) {
+			if (this.getStackInSlot(slot).getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.getStackInSlot(slot).getCount() == 1) {
 				tank.drain(1000, true);
-				this.getStackInSlot(slot).setItem(ExtraPlanets_Items.BUCKET_SALT);
+				this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 			} else
-				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
+				FluidUtil.tryFillContainerFuel(tank, this.stacks, slot);
 		}
 	}
 
@@ -75,9 +76,9 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.outputTank.getFluidAmount() >= this.outputTank.getCapacity()) {
 			return false;
 		}
-		if (this.containingItems[1] == null)
+		if (this.stacks.get(1).isEmpty())
 			return false;
-		else if (this.containingItems[1].getItem() != ExtraPlanets_Items.IODIDE_SALT)
+		else if (this.stacks.get(1).getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
 		return !this.getDisabled(0);
 
@@ -99,7 +100,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.containingItems = this.readStandardItemsFromNBT(nbt);
+		this.stacks = this.readStandardItemsFromNBT(nbt);
 
 		if (nbt.hasKey("outputTank")) {
 			this.outputTank.readFromNBT(nbt.getCompoundTag("outputTank"));
@@ -113,7 +114,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt);
+		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.outputTank.getFluid() != null) {
 			nbt.setTag("outputTank", this.outputTank.writeToNBT(new NBTTagCompound()));
@@ -122,8 +123,8 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	}
 	
 	@Override
-	protected ItemStack[] getContainingItems() {
-		return this.containingItems;
+	protected NonNullList<ItemStack> getContainingItems() {
+		return this.stacks;
 	}
 
 	@Override

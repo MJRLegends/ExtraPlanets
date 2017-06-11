@@ -49,38 +49,38 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	}
 
 	public boolean canProcess() {
-		if (this.getStackInSlot(1) == null)
+		if (this.stacks.get(1).isEmpty())
 			return false;
-		if (this.getStackInSlot(2) == null)
+		if (this.stacks.get(2).isEmpty())
 			return false;
-		if (this.getStackInSlot(1).getItem() != ExtraPlanets_Items.IODIDE_SALT)
+		if (this.stacks.get(1).getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
-		if (this.getStackInSlot(2).getItem() != ExtraPlanets_Items.POTASSIUM)
+		if (this.stacks.get(2).getItem() != ExtraPlanets_Items.POTASSIUM)
 			return false;
 		return !this.getDisabled(0);
 	}
 
 	public boolean canOutput() {
 		ItemStack itemstack = this.producingStack;
-		if (itemstack == null) {
-			return false;
-		}
-		if (this.getStackInSlot(3) == null) {
+		if (this.stacks.get(3).isEmpty()) {
 			return true;
 		}
-		if (!this.getStackInSlot(3).isItemEqual(itemstack)) {
+		if (!this.stacks.get(3).isItemEqual(itemstack)) {
 			return false;
 		}
 		int result = this.getStackInSlot(3).getCount() + itemstack.getCount();
+		System.out.println(result);
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canOutput()) {
-			if (this.getStackInSlot(3).isItemEqual(resultItemStack)) {
-				if (this.getStackInSlot(3).getCount() + resultItemStack.getCount() > 64) {
-					for (int i = 0; i < this.getStackInSlot(3).getCount() + resultItemStack.getCount() - 64; i++) {
+			if (this.stacks.get(3).isEmpty()) {
+				this.stacks.set(3, resultItemStack.copy());
+			} else if (this.stacks.get(3).isItemEqual(resultItemStack)) {
+				if (this.stacks.get(3).getCount() + resultItemStack.getCount() > 64) {
+					for (int i = 0; i < this.stacks.get(3).getCount() + resultItemStack.getCount() - 64; i++) {
 						float var = 0.7F;
 						double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
@@ -89,9 +89,9 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 						entityitem.setPickupDelay(10);
 						this.world.spawnEntity(entityitem);
 					}
-					this.getStackInSlot(3).setCount(64);
+					this.stacks.get(3).setCount(64);
 				} else {
-					this.getStackInSlot(3).setCount(resultItemStack.getCount());
+					this.stacks.get(3).grow(resultItemStack.getCount());
 				}
 			}
 		}
