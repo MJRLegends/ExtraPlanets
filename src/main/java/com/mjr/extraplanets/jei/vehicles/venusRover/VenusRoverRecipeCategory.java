@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.jei.vehicles.venusRover;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
@@ -10,12 +14,8 @@ import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.util.ResourceLocation;
 
-import javax.annotation.Nonnull;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
-
-import java.util.List;
 
 public class VenusRoverRecipeCategory extends BlankRecipeCategory
 {
@@ -55,7 +55,7 @@ public class VenusRoverRecipeCategory extends BlankRecipeCategory
     }
 
     @Override
-    public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper)
+    public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients)
     {
         IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
 
@@ -90,26 +90,6 @@ public class VenusRoverRecipeCategory extends BlankRecipeCategory
         itemstacks.init(23, true, 141, 7);
         itemstacks.init(24, false, 138, 100);
 
-        if (recipeWrapper instanceof VenusRoverRecipeWrapper)
-        {
-            VenusRoverRecipeWrapper buggyRecipeWrapper = (VenusRoverRecipeWrapper) recipeWrapper;
-            List inputs = buggyRecipeWrapper.getInputs();
-
-            for (int i = 0; i < inputs.size(); ++i)
-            {
-                Object o = inputs.get(i);
-                if (o != null)
-                {
-                    itemstacks.setFromRecipe(i, o);
-                }
-            }
-            itemstacks.setFromRecipe(24, buggyRecipeWrapper.getOutputs());
-        }
-    }
-
-    @Override
-    public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients)
-    {
-        this.setRecipe(recipeLayout, recipeWrapper);
+        itemstacks.set(ingredients);
     }
 }

@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.jei.rockets.tier10;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.IGuiHelper;
@@ -50,7 +48,7 @@ public class Tier10RocketRecipeCategory extends BlankRecipeCategory {
 	}
 
 	@Override
-	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
+	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
 		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
 
 		itemstacks.init(0, true, 44, 0);
@@ -76,22 +74,6 @@ public class Tier10RocketRecipeCategory extends BlankRecipeCategory {
 		itemstacks.init(20, true, 141, 7);
 		itemstacks.init(21, false, 138, 95);
 
-		if (recipeWrapper instanceof Tier10RocketRecipeWrapper) {
-			Tier10RocketRecipeWrapper rocketRecipeWrapper = (Tier10RocketRecipeWrapper) recipeWrapper;
-			List inputs = rocketRecipeWrapper.getInputs();
-
-			for (int i = 0; i < inputs.size(); ++i) {
-				Object o = inputs.get(i);
-				if (o != null) {
-					itemstacks.setFromRecipe(i, o);
-				}
-			}
-			itemstacks.setFromRecipe(21, rocketRecipeWrapper.getOutputs());
-		}
-	}
-
-	@Override
-	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		this.setRecipe(recipeLayout, recipeWrapper);
+		itemstacks.set(ingredients);
 	}
 }

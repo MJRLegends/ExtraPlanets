@@ -3,10 +3,9 @@ package com.mjr.extraplanets.jei.rockets.tier7;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mjr.extraplanets.recipes.Tier7RocketRecipes;
-
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
+
+import com.mjr.extraplanets.recipes.Tier7RocketRecipes;
 
 public class Tier7RocketRecipeMaker {
 	public static List<Tier7RocketRecipeWrapper> getRecipesList() {
