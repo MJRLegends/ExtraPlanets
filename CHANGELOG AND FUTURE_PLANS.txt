@@ -42,6 +42,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.7.5
+*Fixed issue #107
+*Tweaks to Jupiter Village generation
+
 v1.7.4
 *Added a sky feature to Jupiter
 *Fixed Mars Rover recipe being broken
