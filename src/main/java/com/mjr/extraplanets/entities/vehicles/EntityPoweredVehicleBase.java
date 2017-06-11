@@ -636,6 +636,20 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public void setAccel(float accel) {
 		this.accel = accel;
 	}
+	
+    @Override
+    public boolean isEmpty()
+    {
+        for (ItemStack itemstack : this.stacks)
+        {
+            if (!itemstack.isEmpty())
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
 	/*
 	 * Power System Methods ------------------------------------------------------------------------------------------------------
