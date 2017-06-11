@@ -405,6 +405,10 @@ public class ExtraPlanets_Recipes {
 			// Block to Magnesium
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7) });
 
+			// Fire Bomb
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND, 'Z',
+					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', new ItemStack(ExtraPlanets_Items.INGOT_LEAD) });
+
 			if (Config.ITEMS_MAGNESIUM) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.magnesiumPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', Items.STICK });
