@@ -5,6 +5,7 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.entities.EntityAlienVillager;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -78,6 +79,16 @@ public abstract class StructureComponentJupiterVillage extends StructureComponen
 
 		for (int var5 = this.boundingBox.minZ; var5 <= this.boundingBox.maxZ; ++var5) {
 			for (int var6 = this.boundingBox.minX; var6 <= this.boundingBox.maxX; ++var6) {
+				if(par1World.getTopSolidOrLiquidBlock(var5, var6) <= 100){
+					for(int n = 0; n < 20; n++){
+						if(par1World.getBlock(var5, 64 + n, var6) == Blocks.air)
+							return 64 + n;
+					}
+				}
+				else{
+					return 100;
+				}
+				
 				if (par2StructureBoundingBox.isVecInside(var6, 64, var5)) {
 					var3 += Math.max(par1World.getTopSolidOrLiquidBlock(var6, var5), par1World.provider.getAverageGroundLevel());
 					++var4;
