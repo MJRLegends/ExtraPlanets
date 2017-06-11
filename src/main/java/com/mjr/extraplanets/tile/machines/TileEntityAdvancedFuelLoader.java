@@ -30,8 +30,8 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
@@ -71,7 +71,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	public void update() {
 		super.update();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			this.loadedFuelLastTick = false;
 
 			final FluidStack liquidContained = FluidUtil.getFluidContained(this.containingItems[1]);
@@ -83,7 +83,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 				this.attachedFuelable = null;
 
 				for (final EnumFacing dir : EnumFacing.values()) {
-					final TileEntity pad = new BlockVec3(this).getTileEntityOnSide(this.worldObj, dir);
+					final TileEntity pad = new BlockVec3(this).getTileEntityOnSide(this.world, dir);
 
 					if (pad instanceof TileEntityMulti) {
 						final TileEntity mainTile = ((TileEntityMulti) pad).getMainBlockTile();
@@ -244,7 +244,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public EnumFacing getFront() {
-		return this.worldObj.getBlockState(getPos()).getValue(AdvancedFuelLoader.FACING);
+		return this.world.getBlockState(getPos()).getValue(AdvancedFuelLoader.FACING);
 	}
 
 	@Override

@@ -110,14 +110,14 @@ public class BasicSolarEvaporationChamber extends BlockAdvancedTile implements I
 					final float var11 = this.crystallizerRand.nextFloat() * 0.8F + 0.1F;
 					final float var12 = this.crystallizerRand.nextFloat() * 0.8F + 0.1F;
 
-					while (var9.stackSize > 0) {
+					while (var9.getMaxStackSize() > 0) {
 						int var13 = this.crystallizerRand.nextInt(21) + 10;
 
-						if (var13 > var9.stackSize) {
-							var13 = var9.stackSize;
+						if (var13 > var9.getMaxStackSize()) {
+							var13 = var9.getMaxStackSize();
 						}
 
-						var9.stackSize -= var13;
+						var9.getMaxStackSize() -= var13;
 						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13, var9.getItemDamage()));
 
 						if (var9.hasTagCompound()) {
@@ -128,7 +128,7 @@ public class BasicSolarEvaporationChamber extends BlockAdvancedTile implements I
 						var14.motionX = (float) this.crystallizerRand.nextGaussian() * var15;
 						var14.motionY = (float) this.crystallizerRand.nextGaussian() * var15 + 0.2F;
 						var14.motionZ = (float) this.crystallizerRand.nextGaussian() * var15;
-						worldIn.spawnEntityInWorld(var14);
+						worldIn.spawnEntity(var14);
 					}
 				}
 			}
@@ -139,7 +139,7 @@ public class BasicSolarEvaporationChamber extends BlockAdvancedTile implements I
 
 	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
+		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
 	}
 

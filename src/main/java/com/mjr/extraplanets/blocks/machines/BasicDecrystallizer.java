@@ -128,7 +128,7 @@ public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDesc
 						var14.motionX = (float) this.crystallizerRand.nextGaussian() * var15;
 						var14.motionY = (float) this.crystallizerRand.nextGaussian() * var15 + 0.2F;
 						var14.motionZ = (float) this.crystallizerRand.nextGaussian() * var15;
-						worldIn.spawnEntityInWorld(var14);
+						worldIn.spawnEntity(var14);
 					}
 				}
 			}
@@ -139,7 +139,7 @@ public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDesc
 
 	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
+		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
 	}
 

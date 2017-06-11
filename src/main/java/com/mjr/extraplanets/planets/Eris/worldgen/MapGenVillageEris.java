@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
@@ -71,7 +73,7 @@ public class MapGenVillageEris extends MapGenStructure {
 
 		int randX = i / numChunks;
 		int randZ = j / numChunks;
-		final Random var7 = this.worldObj.setRandomSeed(i, j, 10387312);
+		final Random var7 = this.world.setRandomSeed(i, j, 10387312);
 		randX *= numChunks;
 		randZ *= numChunks;
 		randX += var7.nextInt(numChunks - offsetChunks);
@@ -80,12 +82,19 @@ public class MapGenVillageEris extends MapGenStructure {
 		return oldi == randX && oldj == randZ;
 
 	}
-
+	
+    @Override
+    public BlockPos getClosestStrongholdPos(World worldIn, BlockPos pos, boolean p_180706_3_)
+    {
+        this.world = worldIn;
+        return findNearestStructurePosBySpacing(worldIn, this, pos, 32, 8, 10387312, false, 100, p_180706_3_);
+    }
+    
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
 			FMLLog.info("Generating Eris Village at x" + par1 * 16 + " z" + par2 * 16);
-		return new StructureVillageStartEris(this.worldObj, this.rand, par1, par2, this.terrainType);
+		return new StructureVillageStartEris(this.world, this.rand, par1, par2, this.terrainType);
 	}
 
 	@Override

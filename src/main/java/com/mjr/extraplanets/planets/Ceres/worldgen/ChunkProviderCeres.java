@@ -94,11 +94,11 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	public void onPopulate(int cX, int cZ) {
-		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
+		this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-		this.villageGenerator.generate(this.worldObj, x, z, null);
+		this.villageGenerator.generate(this.world, x, z, null);
 	}
 }

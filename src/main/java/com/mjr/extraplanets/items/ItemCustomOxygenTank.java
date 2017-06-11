@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -34,7 +35,7 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		par3List.add(new ItemStack(par1, 1, 0));
 		par3List.add(new ItemStack(par1, 1, this.getMaxDamage()));
 	}
@@ -62,20 +63,21 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand) {
-		if (player instanceof EntityPlayerMP) {
-			GCPlayerStats stats = GCPlayerStats.get(player);
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand){
+        ItemStack itemStackIn = playerIn.getHeldItem(hand);
+		if (playerIn instanceof EntityPlayerMP) {
+			GCPlayerStats stats = GCPlayerStats.get(playerIn);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);
 			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(3);
 
 			if (gear == null) {
-				stats.getExtendedInventory().setInventorySlotContents(2, itemStack.copy());
-				itemStack.stackSize = 0;
+				stats.getExtendedInventory().setInventorySlotContents(2, itemStackIn.copy());
+				itemStackIn.setCount(0);
 			} else if (gear1 == null) {
-				stats.getExtendedInventory().setInventorySlotContents(3, itemStack.copy());
-				itemStack.stackSize = 0;
+				stats.getExtendedInventory().setInventorySlotContents(3, itemStackIn.copy());
+				itemStackIn.setCount(0);
 			}
 		}
-		return new ActionResult<>(EnumActionResult.PASS, itemStack);
+		return new ActionResult<>(EnumActionResult.PASS, itemStackIn);
 	}
 }

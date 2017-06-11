@@ -44,14 +44,14 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 	@Override
 	public void update() {
 		if (!this.initialised) {
-			if (!this.worldObj.isRemote)
-				this.onCreate(this.worldObj, this.getPos());
-			this.initialiseMultiTiles(this.getPos(), this.worldObj);
+			if (!this.world.isRemote)
+				this.onCreate(this.world, this.getPos());
+			this.initialiseMultiTiles(this.getPos(), this.world);
 			this.initialised = true;
 		}
 
-		if (!this.worldObj.isRemote) {
-			final List<Entity> list = this.worldObj.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 3.5D, this.getPos().getY(), this.getPos().getZ() - 3.5D, this.getPos().getX() + 3.5D, this.getPos().getY() + 10.0D, this
+		if (!this.world.isRemote) {
+			final List<Entity> list = this.world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 3.5D, this.getPos().getY(), this.getPos().getZ() - 3.5D, this.getPos().getX() + 3.5D, this.getPos().getY() + 10.0D, this
 					.getPos().getZ() +3.5D));
 
 			boolean docked = false;
@@ -126,16 +126,16 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 		this.getPositions(thisBlock, positions);
 
 		for (BlockPos pos : positions) {
-			IBlockState stateAt = this.worldObj.getBlockState(pos);
+			IBlockState stateAt = this.world.getBlockState(pos);
 
 			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && (EnumBlockMultiType) stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.TIER_2_ROCKET_PAD) {
-				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
-					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.worldObj.getBlockState(pos));
+				if (this.world.isRemote && this.world.rand.nextDouble() < 0.1D) {
+					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.world.getBlockState(pos));
 				}
-				this.worldObj.destroyBlock(pos, false);
+				this.world.destroyBlock(pos, false);
 			}
 		}
-		this.worldObj.destroyBlock(thisBlock, true);
+		this.world.destroyBlock(thisBlock, true);
 
 		if (this.dockedEntity != null) {
 			this.dockedEntity.onPadDestroyed();
@@ -181,12 +181,12 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 
 	private void testConnectedTile(int x, int z, HashSet<ILandingPadAttachable> connectedTiles) {
 		BlockPos testPos = new BlockPos(x, this.getPos().getY(), z);
-		if (!this.worldObj.isBlockLoaded(testPos, false))
+		if (!this.world.isBlockLoaded(testPos, false))
 			return;
 
-		final TileEntity tile = this.worldObj.getTileEntity(testPos);
+		final TileEntity tile = this.world.getTileEntity(testPos);
 
-		if (tile instanceof ILandingPadAttachable && ((ILandingPadAttachable) tile).canAttachToLandingPad(this.worldObj, this.getPos())) {
+		if (tile instanceof ILandingPadAttachable && ((ILandingPadAttachable) tile).canAttachToLandingPad(this.world, this.getPos())) {
 			connectedTiles.add((ILandingPadAttachable) tile);
 			if (GalacticraftCore.isPlanetsLoaded && tile instanceof TileEntityLaunchController) {
 				((TileEntityLaunchController) tile).setAttachedPad(this);

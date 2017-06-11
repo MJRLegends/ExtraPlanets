@@ -19,13 +19,12 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
@@ -66,7 +65,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	public void update() {
 		super.update();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			if (this.containingItems[1] != null) {
 				if (this.containingItems[1].getItem() instanceof ItemCanisterGeneric) {
 					if (this.containingItems[1].getItem() == GCItems.oilCanister) {
@@ -275,7 +274,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.worldObj.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
+		return (this.world.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
 	}
 
 	@Override

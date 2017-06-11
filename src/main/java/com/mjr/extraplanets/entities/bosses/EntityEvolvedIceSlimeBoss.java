@@ -108,7 +108,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
     @Override
 	public void onUpdate()
     {
-        if (!this.worldObj.isRemote && this.worldObj.getDifficulty() == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0)
+        if (!this.world.isRemote && this.world.getDifficulty() == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0)
         {
             this.isDead = true;
         }
@@ -127,7 +127,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
                 float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
                 float f2 = MathHelper.sin(f) * i * 0.5F * f1;
                 float f3 = MathHelper.cos(f) * i * 0.5F * f1;
-                World world = this.worldObj;
+                World world = this.world;
                 EnumParticleTypes enumparticletypes = this.getParticleType();
                 double d0 = this.posX + f2;
                 double d1 = this.posZ + f3;
@@ -158,7 +158,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	protected EntityEvolvedIceSlimeBoss createInstance() {
-		return new EntityEvolvedIceSlimeBoss(this.worldObj);
+		return new EntityEvolvedIceSlimeBoss(this.world);
 	}
 
     @Override

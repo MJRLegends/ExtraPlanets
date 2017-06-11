@@ -39,7 +39,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public void update() {
 		super.update();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			checkFluidTankTransfer(2, this.outputTank);
 
 			if (this.canProcess() && this.hasEnoughEnergyToRun) {
@@ -200,7 +200,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.worldObj.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
+		return (this.world.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
 	}
 
 	@Override

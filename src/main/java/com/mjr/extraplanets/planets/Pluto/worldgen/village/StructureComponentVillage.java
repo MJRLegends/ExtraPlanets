@@ -10,6 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
+import net.minecraft.world.gen.structure.template.TemplateManager;
 
 import com.mjr.extraplanets.planets.Pluto.worldgen.MapGenVillagePluto;
 
@@ -39,8 +40,8 @@ public abstract class StructureComponentVillage extends StructureComponent {
 	}
 
 	@Override
-	protected void readStructureFromNBT(NBTTagCompound nbttagcompound) {
-		this.villagersSpawned = nbttagcompound.getInteger("VCount");
+	protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager) {
+		this.villagersSpawned = nbt.getInteger("VCount");
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -127,7 +128,7 @@ public abstract class StructureComponentVillage extends StructureComponent {
 				++this.villagersSpawned;
 				final EntityAlienVillager var11 = new EntityAlienVillager(par1World);
 				var11.setLocationAndAngles(var8 + 0.5D, var9, var10 + 0.5D, 0.0F, 0.0F);
-				par1World.spawnEntityInWorld(var11);
+				par1World.spawnEntity(var11);
 			}
 		}
 	}

@@ -41,7 +41,7 @@ public class SchematicTier5 extends Item implements ISchematicItem, ISortableIte
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if (player.worldObj.isRemote) {
+		if (player.world.isRemote) {
 			list.add(EnumColor.GREY + GCCoreUtil.translate("schematic.tier5.rocket.name"));
 		}
 	}

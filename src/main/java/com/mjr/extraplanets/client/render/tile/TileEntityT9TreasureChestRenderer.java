@@ -27,7 +27,7 @@ public class TileEntityT9TreasureChestRenderer extends TileEntitySpecialRenderer
 	public void renderTileEntityAt(TileEntityT9TreasureChest chest, double par2, double par4, double par6, float partialTickTime, int par9) {
 		int var9;
 
-		if (!chest.hasWorldObj()) {
+		if (!chest.hasWorld()) {
 			var9 = 0;
 		} else {
 			final Block var10 = chest.getBlockType();

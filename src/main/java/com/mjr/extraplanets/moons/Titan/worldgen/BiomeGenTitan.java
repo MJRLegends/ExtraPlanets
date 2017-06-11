@@ -6,6 +6,6 @@ public class BiomeGenTitan extends TitanBiomes {
 
 	public BiomeGenTitan(BiomeProperties properties) {
 		super(properties);
-		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }

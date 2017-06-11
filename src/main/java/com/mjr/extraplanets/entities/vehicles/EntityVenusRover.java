@@ -39,7 +39,7 @@ public class EntityVenusRover extends EntityPoweredVehicleBase {
 		vehicle.getTagCompound().setFloat("currentPowerCapacity", 0);
 		items.add(vehicle);
 
-		for (ItemStack item : this.cargoItems) {
+		for (ItemStack item : this.stacks) {
 			if (item != null) {
 				items.add(item);
 			}

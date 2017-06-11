@@ -30,7 +30,7 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
 	public GuiBasicDecrystallizer(InventoryPlayer par1InventoryPlayer, TileEntityBasicDecrystallizer tileEntity) {
-		super(new ContainerBasicDecrystallizer(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
+		super(new ContainerBasicDecrystallizer(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

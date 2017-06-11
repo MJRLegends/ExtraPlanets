@@ -22,9 +22,11 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.MoverType;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -33,6 +35,7 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
@@ -61,7 +64,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	private float accel = 0.5F;
 	private float turnFactor = 3.0F;
 	public String texture;
-	ItemStack[] cargoItems = new ItemStack[60];
+	protected NonNullList<ItemStack> stacks = NonNullList.withSize(60, ItemStack.EMPTY);
 	private double boatX;
 	private double boatY;
 	private double boatZ;
@@ -101,7 +104,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		this(var1);
 		this.setPosition(var2, var4, var6);
 		this.setBuggyType(type);
-		this.cargoItems = new ItemStack[this.roverType * 18];
+		this.stacks = NonNullList.withSize(this.roverType * 18, ItemStack.EMPTY);
 	}
 
 	public ModelBase getModel() {
@@ -151,7 +154,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public void setPositionRotationAndMotion(double x, double y, double z, float yaw, float pitch, double motX, double motY, double motZ, boolean onGround) {
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			this.boatX = x;
 			this.boatY = y;
 			this.boatZ = z;
@@ -179,7 +182,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public boolean attackEntityFrom(DamageSource var1, float var2) {
-		if (this.isDead || var1.equals(DamageSource.cactus)) {
+		if (this.isDead || var1.equals(DamageSource.CACTUS)) {
 			return true;
 		} else {
 			Entity e = var1.getEntity();
@@ -206,7 +209,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 						this.setDead();
 					} else {
 						this.setDead();
-						if (!this.worldObj.isRemote) {
+						if (!this.world.isRemote) {
 							this.dropBuggyAsItem();
 						}
 					}
@@ -238,7 +241,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	@SideOnly(Side.CLIENT)
 	public void setPositionAndRotationDirect(double x, double y, double z, float yaw, float pitch, int posRotationIncrements, boolean b) {
 		if (!this.getPassengers().isEmpty()) {
-			if (this.getPassengers().contains(FMLClientHandler.instance().getClient().thePlayer)) {
+			if (this.getPassengers().contains(FMLClientHandler.instance().getClient().player)) {
 			} else {
 				this.boatPosRotationIncrements = posRotationIncrements + 5;
 				this.boatX = x;
@@ -260,13 +263,13 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		this.featureUpdate();
 		super.onUpdate();
 
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			this.wheelRotationX += Math.sqrt(this.motionX * this.motionX + this.motionZ * this.motionZ) * 150.0F * (this.speed < 0 ? 1 : -1);
 			this.wheelRotationX %= 360;
 			this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ * 0.9F));
 		}
 
-		if (this.worldObj.isRemote && !FMLClientHandler.instance().getClient().thePlayer.equals(this.worldObj.getClosestPlayerToEntity(this, -1))) {
+		if (this.world.isRemote && !FMLClientHandler.instance().getClient().player.equals(this.world.getClosestPlayerToEntity(this, -1))) {
 			double x;
 			double y;
 			double var12;
@@ -315,7 +318,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		}
 
 		if (this.inWater && this.speed > 0.2D) {
-			this.worldObj.playSound(null, (float) this.posX, (float) this.posY, (float) this.posZ, SoundEvents.ENTITY_GENERIC_BURN, SoundCategory.NEUTRAL, 0.5F, 2.6F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.8F);
+			this.world.playSound(null, (float) this.posX, (float) this.posY, (float) this.posZ, SoundEvents.ENTITY_GENERIC_BURN, SoundCategory.NEUTRAL, 0.5F, 2.6F + (this.world.rand.nextFloat() - this.world.rand.nextFloat()) * 0.8F);
 		}
 
 		this.speed *= 0.98D;
@@ -337,19 +340,19 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.timeClimbing = 0;
 		}
 
-		if (this.worldObj.isRemote && this.currentPowerCapacity > 0) {
+		if (this.world.isRemote && this.currentPowerCapacity > 0) {
 			this.motionX = -(this.speed * Math.cos((this.rotationYaw - 90F) * Math.PI / 180.0D));
 			this.motionZ = -(this.speed * Math.sin((this.rotationYaw - 90F) * Math.PI / 180.0D));
 		}
 
-		if (this.worldObj.isRemote) {
-			this.moveEntity(this.motionX, this.motionY, this.motionZ);
+		if (this.world.isRemote) {
+			this.move(MoverType.SELF, this.motionX, this.motionY, this.motionZ);
 		}
 
-		if (!this.worldObj.isRemote && Math.abs(this.motionX * this.motionZ) > 0.0) {
+		if (!this.world.isRemote && Math.abs(this.motionX * this.motionZ) > 0.0) {
 			double d = this.motionX * this.motionX + this.motionZ * this.motionZ;
 
-			if (d != 0 && this.ticks % (MathHelper.floor_double(2 / d) + 1) == 0) {
+			if (d != 0 && this.ticks % (MathHelper.floor(2 / d) + 1) == 0) {
 				this.removePower(10);
 			}
 		}
@@ -358,17 +361,17 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		this.prevPosY = this.posY;
 		this.prevPosZ = this.posZ;
 
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			GalacticraftCore.packetPipeline.sendToServer(new PacketEntityUpdate(this));
 		} else if (this.ticks % 5 == 0) {
-			GalacticraftCore.packetPipeline.sendToAllAround(new PacketEntityUpdate(this), new TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 50.0D));
-			GalacticraftCore.packetPipeline.sendToAllAround(new PacketDynamic(this), new TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 50.0D));
+			GalacticraftCore.packetPipeline.sendToAllAround(new PacketEntityUpdate(this), new TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 50.0D));
+			GalacticraftCore.packetPipeline.sendToAllAround(new PacketDynamic(this), new TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 50.0D));
 		}
 	}
 
 	@Override
 	public void getNetworkedData(ArrayList<Object> sendData) {
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			return;
 		}
 		sendData.add(this.roverType);
@@ -384,18 +387,8 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	@Override
 	protected void readEntityFromNBT(NBTTagCompound var1) {
 		this.roverType = var1.getInteger("roverType");
-		final NBTTagList var2 = var1.getTagList("Items", 10);
-		this.cargoItems = new ItemStack[this.getSizeInventory()];
+		ItemStackHelper.loadAllItems(var1, this.stacks);
 		this.currentPowerCapacity = var1.getFloat("currentPowerCapacity");
-
-		for (int var3 = 0; var3 < var2.tagCount(); ++var3) {
-			final NBTTagCompound var4 = var2.getCompoundTagAt(var3);
-			final int var5 = var4.getByte("Slot") & 255;
-
-			if (var5 < this.cargoItems.length) {
-				this.cargoItems[var5] = ItemStack.loadItemStackFromNBT(var4);
-			}
-		}
 	}
 
 	@Override
@@ -403,16 +396,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		var1.setInteger("roverType", this.roverType);
 		final NBTTagList var2 = new NBTTagList();
 		var1.setFloat("currentPowerCapacity", this.currentPowerCapacity);
-		for (int var3 = 0; var3 < this.cargoItems.length; ++var3) {
-			if (this.cargoItems[var3] != null) {
-				final NBTTagCompound var4 = new NBTTagCompound();
-				var4.setByte("Slot", (byte) var3);
-				this.cargoItems[var3].writeToNBT(var4);
-				var2.appendTag(var4);
-			}
-		}
-
-		var1.setTag("Items", var2);
+		ItemStackHelper.saveAllItems(var1, stacks);
 	}
 
 	@Override
@@ -422,50 +406,34 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public ItemStack getStackInSlot(int var1) {
-		return this.cargoItems[var1];
+		return this.stacks.get(var1);
 	}
 
 	@Override
-	public ItemStack decrStackSize(int var1, int var2) {
-		if (this.cargoItems[var1] != null) {
-			ItemStack var3;
+	public ItemStack decrStackSize(int index, int count) {
+		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
 
-			if (this.cargoItems[var1].stackSize <= var2) {
-				var3 = this.cargoItems[var1];
-				this.cargoItems[var1] = null;
-				return var3;
-			} else {
-				var3 = this.cargoItems[var1].splitStack(var2);
-
-				if (this.cargoItems[var1].stackSize == 0) {
-					this.cargoItems[var1] = null;
-				}
-
-				return var3;
-			}
-		} else {
-			return null;
+		if (!itemstack.isEmpty()) {
+			this.markDirty();
 		}
+
+		return itemstack;
 	}
 
 	@Override
-	public ItemStack removeStackFromSlot(int var1) {
-		if (this.cargoItems[var1] != null) {
-			final ItemStack var2 = this.cargoItems[var1];
-			this.cargoItems[var1] = null;
-			return var2;
-		} else {
-			return null;
-		}
+	public ItemStack removeStackFromSlot(int index) {
+		return ItemStackHelper.getAndRemove(this.stacks, index);
 	}
 
 	@Override
-	public void setInventorySlotContents(int var1, ItemStack var2) {
-		this.cargoItems[var1] = var2;
+	public void setInventorySlotContents(int index, ItemStack stack) {
+		this.stacks.set(index, stack);
 
-		if (var2 != null && var2.stackSize > this.getInventoryStackLimit()) {
-			var2.stackSize = this.getInventoryStackLimit();
+		if (stack.getCount() > this.getInventoryStackLimit()) {
+			stack.setCount(this.getInventoryStackLimit());
 		}
+
+		this.markDirty();
 	}
 
 	@Override
@@ -474,7 +442,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer var1) {
+	public boolean isUsableByPlayer(EntityPlayer var1) {
 		return !this.isDead && var1.getDistanceSqToEntity(this) <= 64.0D;
 	}
 
@@ -483,14 +451,14 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	}
 
 	@Override
-	public boolean processInitialInteract(EntityPlayer player, ItemStack stack, EnumHand hand) {
-		if (this.worldObj.isRemote) {
+	public boolean processInitialInteract(EntityPlayer player, EnumHand hand) {
+		if (this.world.isRemote) {
 			if (this.getPassengers().isEmpty()) {
-				player.addChatMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
+				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
 						+ GCCoreUtil.translate("gui.buggy.turn.name")));
-				player.addChatMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.accel.name")));
-				player.addChatMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.decel.name")));
-				player.addChatMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name")));
+				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.accel.name")));
+				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.decel.name")));
+				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name")));
 			}
 
 			return true;
@@ -508,8 +476,8 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public boolean pressKey(int key) {
-		if (this.worldObj.isRemote && (key == 6 || key == 8 || key == 9)) {
-			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(PacketSimple.EnumSimplePacket.S_CONTROL_ENTITY, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { key }));
+		if (this.world.isRemote && (key == 6 || key == 8 || key == 9)) {
+			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(PacketSimple.EnumSimplePacket.S_CONTROL_ENTITY, GCCoreUtil.getDimensionID(this.world), new Object[] { key }));
 			return true;
 		}
 		switch (key) {
@@ -550,76 +518,81 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 		int count = 0;
 
-		for (count = 0; count < this.cargoItems.length; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+		for (count = 0; count < this.stacks.size(); count++) {
+			ItemStack stackAt = this.stacks.get(count);
 
-			if (stackAt != null && stackAt.getItem() == stack.getItem() && stackAt.getItemDamage() == stack.getItemDamage() && stackAt.stackSize < stackAt.getMaxStackSize()) {
-				if (stackAt.stackSize + stack.stackSize <= stackAt.getMaxStackSize()) {
+			if (stackAt != null && stackAt.getItem() == stack.getItem() && stackAt.getItemDamage() == stack.getItemDamage() && stackAt.getCount() < stackAt.getMaxStackSize()) {
+				if (stackAt.getCount() + stack.getCount() <= stackAt.getMaxStackSize()) {
 					if (doAdd) {
-						this.cargoItems[count].stackSize += stack.stackSize;
+						stackAt.grow(stack.getCount());
 						this.markDirty();
 					}
 
 					return EnumCargoLoadingState.SUCCESS;
 				} else {
 					// Part of the stack can fill this slot but there will be some left over
-					int origSize = stackAt.stackSize;
-					int surplus = origSize + stack.stackSize - stackAt.getMaxStackSize();
+					int origSize = stackAt.getCount();
+					int surplus = origSize + stack.getCount() - stackAt.getMaxStackSize();
 
 					if (doAdd) {
-						this.cargoItems[count].stackSize = stackAt.getMaxStackSize();
+						stackAt.setCount(stackAt.getMaxStackSize());
 						this.markDirty();
 					}
 
-					stack.stackSize = surplus;
+					stack.setCount(surplus);
 					if (this.addCargo(stack, doAdd) == EnumCargoLoadingState.SUCCESS) {
 						return EnumCargoLoadingState.SUCCESS;
 					}
 
-					this.cargoItems[count].stackSize = origSize;
+					stackAt.setCount(origSize);
 					return EnumCargoLoadingState.FULL;
 				}
 			}
 		}
 
-		for (count = 0; count < this.cargoItems.length; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+		for (count = 0; count < this.stacks.size(); count++)
+        {
+            ItemStack stackAt = this.stacks.get(count);
 
-			if (stackAt == null) {
-				if (doAdd) {
-					this.cargoItems[count] = stack;
-					this.markDirty();
-				}
+            if (stackAt == null)
+            {
+                if (doAdd)
+                {
+                    this.stacks.set(count, stack);
+                    this.markDirty();
+                }
 
-				return EnumCargoLoadingState.SUCCESS;
-			}
-		}
+                return EnumCargoLoadingState.SUCCESS;
+            }
+        }
 
 		return EnumCargoLoadingState.FULL;
 	}
 
-	@Override
-	public RemovalResult removeCargo(boolean doRemove) {
-		for (int i = 0; i < this.cargoItems.length; i++) {
-			ItemStack stackAt = this.cargoItems[i];
+	 @Override
+	    public RemovalResult removeCargo(boolean doRemove)
+	    {
+	        for (int i = 0; i < this.stacks.size(); i++)
+	        {
+	            ItemStack stackAt = this.getStackInSlot(i);
 
-			if (stackAt != null) {
-				ItemStack resultStack = stackAt.copy();
-				resultStack.stackSize = 1;
+	            if (stackAt != null)
+	            {
+	                ItemStack resultStack = stackAt.copy();
+	                resultStack.setCount(1);
 
-				if (doRemove && --stackAt.stackSize <= 0) {
-					this.cargoItems[i] = null;
-				}
+	                if (doRemove)
+	                {
+	                    stackAt.shrink(1);
+	                    this.markDirty();
+	                }
 
-				if (doRemove) {
-					this.markDirty();
-				}
-				return new RemovalResult(EnumCargoLoadingState.SUCCESS, resultStack);
-			}
-		}
+	                return new RemovalResult(EnumCargoLoadingState.SUCCESS, resultStack);
+	            }
+	        }
 
-		return new RemovalResult(EnumCargoLoadingState.EMPTY, null);
-	}
+	        return new RemovalResult(EnumCargoLoadingState.EMPTY, ItemStack.EMPTY);
+	    }
 
 	@Override
 	public boolean hasCustomName() {

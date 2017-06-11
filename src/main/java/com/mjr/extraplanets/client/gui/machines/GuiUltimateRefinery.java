@@ -40,7 +40,7 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 			new ArrayList<String>(), this.width, this.height, this);
 
 	public GuiUltimateRefinery(InventoryPlayer par1InventoryPlayer, TileEntityUltimateRefinery tileEntity) {
-		super(new ContainerUltimateRefinery(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
+		super(new ContainerUltimateRefinery(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

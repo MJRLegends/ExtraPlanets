@@ -37,14 +37,14 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	public void update() {
 		super.update();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			this.loadedPowerLastTick = false;
 
 			if (this.ticks % 100 == 0) {
 				this.attachedPowerable = null;
 
 				for (final EnumFacing dir : EnumFacing.values()) {
-					final TileEntity pad = new BlockVec3(this).getTileEntityOnSide(this.worldObj, dir);
+					final TileEntity pad = new BlockVec3(this).getTileEntityOnSide(this.world, dir);
 
 					if (pad instanceof TileEntityMulti) {
 						final TileEntity mainTile = ((TileEntityMulti) pad).getMainBlockTile();
@@ -179,6 +179,6 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public EnumFacing getFront() {
-		return this.worldObj.getBlockState(getPos()).getValue(VehicleCharger.FACING);
+		return this.world.getBlockState(getPos()).getValue(VehicleCharger.FACING);
 	}
 }

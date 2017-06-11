@@ -13,12 +13,12 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class TileEntityTier2LandingPadSingle extends TileEntity implements ITickable {
 	@Override
 	public void update() {
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			final ArrayList<TileEntity> attachedLaunchPads = new ArrayList<TileEntity>();
 
 			for (int x = this.getPos().getX() - 2; x < this.getPos().getX() + 3; x++) {
 				for (int z = this.getPos().getZ() - 2; z < this.getPos().getZ() + 3; z++) {
-					final TileEntity tile = this.worldObj.getTileEntity(new BlockPos(x, this.getPos().getY(), z));
+					final TileEntity tile = this.world.getTileEntity(new BlockPos(x, this.getPos().getY(), z));
 
 					if (tile instanceof TileEntityTier2LandingPadSingle) {
 						attachedLaunchPads.add(tile);
@@ -28,13 +28,13 @@ public class TileEntityTier2LandingPadSingle extends TileEntity implements ITick
 
 			if (attachedLaunchPads.size() == 25) {
 				for (final TileEntity tile : attachedLaunchPads) {
-					this.worldObj.markTileEntityForRemoval(tile);
+					this.world.markTileEntityForRemoval(tile);
 				}
 				
 				this.getPos().south(1);
 				this.getPos().east(1);
 
-				this.worldObj.setBlockState(this.getPos(), ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL.getDefaultState(), 2);
+				this.world.setBlockState(this.getPos(), ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL.getDefaultState(), 2);
 			}
 		}
 	}

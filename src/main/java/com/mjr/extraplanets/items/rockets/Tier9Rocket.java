@@ -19,6 +19,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
@@ -42,9 +43,10 @@ public class Tier9Rocket extends Item implements IHoldableItem {
 	}
 
 	@Override
-	public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+    public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){		
 		boolean padFound = false;
 		TileEntity tile = null;
+		ItemStack stack = playerIn.getHeldItem(hand);
 
 		if (worldIn.isRemote && playerIn instanceof EntityPlayerSP) {
 			ClientProxyCore.playerClientHandler.onBuild(8, (EntityPlayerSP) playerIn);
@@ -91,19 +93,17 @@ public class Tier9Rocket extends Item implements IHoldableItem {
 				final EntityTier9Rocket spaceship = new EntityTier9Rocket(worldIn, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
 
 				spaceship.setPosition(spaceship.posX, spaceship.posY + spaceship.getOnPadYOffset(), spaceship.posZ);
-				worldIn.spawnEntityInWorld(spaceship);
+				worldIn.spawnEntity(spaceship);
 
-				if (stack.hasTagCompound() && stack.getTagCompound().hasKey("RocketFuel")) {
+				if (stack.hasTagCompound() && stack.getTagCompound().hasKey("RocketFuel"))
+                {
 					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, stack.getTagCompound().getInteger("RocketFuel")), true);
-				}
+                }
 
-				if (!playerIn.capabilities.isCreativeMode) {
-					stack.stackSize--;
-
-					if (stack.stackSize <= 0) {
-						stack = null;
-					}
-				}
+                if (!playerIn.capabilities.isCreativeMode)
+                {
+                    stack.shrink(1);
+                }
 
 				if (spaceship.rocketType.getPreFueled()) {
 					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, spaceship.getMaxFuel()), true);
@@ -117,7 +117,7 @@ public class Tier9Rocket extends Item implements IHoldableItem {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < EnumRocketType.values().length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}

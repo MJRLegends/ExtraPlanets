@@ -10,6 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -39,7 +40,7 @@ public class ItemWafers extends Item {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
@@ -53,7 +54,7 @@ public class ItemWafers extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if (player.worldObj.isRemote) {
+		if (player.world.isRemote) {
 			for (int i = 0; i < names.length; i++)
 				if (itemStack.getMetadata() == i)
 					list.add(EnumColor.YELLOW + GCCoreUtil.translate("wafers." + ItemWafers.names[i] + ".desc"));

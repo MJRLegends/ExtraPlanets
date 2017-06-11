@@ -5,6 +5,7 @@ import java.util.Random;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public class StructureComponentVillageStartPiece extends StructureComponentVillageWell {
 	public BiomeProvider biomeProvider;
@@ -33,8 +34,8 @@ public class StructureComponentVillageStartPiece extends StructureComponentVilla
 	}
 
 	@Override
-	protected void readStructureFromNBT(NBTTagCompound nbt) {
-		super.readStructureFromNBT(nbt);
+	protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager) {
+		super.readStructureFromNBT(nbt, manager);
 
 		this.terrainType = nbt.getInteger("TerrainType");
 	}

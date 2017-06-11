@@ -34,7 +34,7 @@ public class FluidBlockEP extends BlockFluidClassic {
 		if (state == ExtraPlanets_Fluids.MAGMA) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
-					((EntityLivingBase) entityIn).attackEntityFrom(DamageSource.lava, 4.0F);
+					((EntityLivingBase) entityIn).attackEntityFrom(DamageSource.LAVA, 4.0F);
 					((EntityLivingBase) entityIn).setFire(15);
 				}
 			}

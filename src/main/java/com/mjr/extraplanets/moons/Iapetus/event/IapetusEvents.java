@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 public class IapetusEvents {
 	@SubscribeEvent
 	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.IAPETUS_ID) {
+		if (event.getEntityLiving().world.provider.getDimension() == Config.IAPETUS_ID) {
 			if (event.getEntity() instanceof EntityPlayer) {
 				event.setCanceled(false);
 			} else {
@@ -24,7 +24,7 @@ public class IapetusEvents {
 
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.IAPETUS_ID) {
+		if (event.getEntityLiving().world.provider.getDimension() == Config.IAPETUS_ID) {
 			event.getEntityPlayer().heal(5.0F);
 		}
 	}

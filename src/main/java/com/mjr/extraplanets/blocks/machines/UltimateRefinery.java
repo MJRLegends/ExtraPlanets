@@ -110,14 +110,14 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 					final float var11 = this.refineryRand.nextFloat() * 0.8F + 0.1F;
 					final float var12 = this.refineryRand.nextFloat() * 0.8F + 0.1F;
 
-					while (var9.stackSize > 0) {
+					while (var9.getMaxStackSize > 0) {
 						int var13 = this.refineryRand.nextInt(21) + 10;
 
-						if (var13 > var9.stackSize) {
-							var13 = var9.stackSize;
+						if (var13 > var9.getMaxStackSize) {
+							var13 = var9.getMaxStackSize();
 						}
 
-						var9.stackSize -= var13;
+						var9.getMaxStackSize -= var13;
 						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13,
 								var9.getItemDamage()));
 
@@ -129,7 +129,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 						var14.motionX = (float) this.refineryRand.nextGaussian() * var15;
 						var14.motionY = (float) this.refineryRand.nextGaussian() * var15 + 0.2F;
 						var14.motionZ = (float) this.refineryRand.nextGaussian() * var15;
-						worldIn.spawnEntityInWorld(var14);
+						worldIn.spawnEntity(var14);
 					}
 				}
 			}
@@ -140,7 +140,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
+		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
 	}
 

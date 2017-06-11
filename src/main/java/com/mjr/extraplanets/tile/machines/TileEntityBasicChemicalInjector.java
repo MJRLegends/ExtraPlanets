@@ -31,7 +31,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	public void update() {
 		super.update();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
 				if (this.processTicks == 0) {
 					this.processTicks = TileEntityBasicChemicalInjector.PROCESS_TIME_REQUIRED;
@@ -83,12 +83,12 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 				if (this.containingItems[3].stackSize + resultItemStack.stackSize > 64) {
 					for (int i = 0; i < this.containingItems[3].stackSize + resultItemStack.stackSize - 64; i++) {
 						float var = 0.7F;
-						double dx = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-						double dy = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-						double dz = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-						EntityItem entityitem = new EntityItem(this.worldObj, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
+						double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+						double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+						double dz = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+						EntityItem entityitem = new EntityItem(this.world, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
 						entityitem.setPickupDelay(10);
-						this.worldObj.spawnEntityInWorld(entityitem);
+						this.world.spawnEntityInWorld(entityitem);
 					}
 					this.containingItems[3].stackSize = 64;
 				} else {
@@ -194,7 +194,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.worldObj.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
+		return (this.world.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
 	}
 
 	@Override

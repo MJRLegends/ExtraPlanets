@@ -57,7 +57,7 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
-		final WorldClient world = minecraft.theWorld;
+		final WorldClient world = minecraft.world;
 
 		if (event.phase == Phase.END) {
 			if (world != null) {
@@ -71,12 +71,12 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	public void onRenderTick(RenderTickEvent event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
-		final EntityPlayerSP player = minecraft.thePlayer;
+		final EntityPlayerSP player = minecraft.player;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
-		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.worldObj.provider)
+		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider)
 				&& !playerBaseClient.isSpectator()) {
-			if ((player.worldObj.provider instanceof CustomWorldProviderSpace)) {
-				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.worldObj.provider;
+			if ((player.world.provider instanceof CustomWorldProviderSpace)) {
+				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.world.provider;
 
 				if (Config.PRESSURE) {
 					int pressureLevel = provider.getPressureLevel();
@@ -98,7 +98,7 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	public void renderLightning(ClientProxyCore.EventSpecialRender event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
-		final EntityPlayerSP player = minecraft.thePlayer;
+		final EntityPlayerSP player = minecraft.player;
 		if (player != null && !ConfigManagerVenus.disableAmbientLightning) {
 			Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
 			while (it.hasNext()) {
@@ -113,7 +113,7 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
-		final EntityPlayerSP player = minecraft.thePlayer;
+		final EntityPlayerSP player = minecraft.player;
 
 		if (player == event.player) {
 			if (!ConfigManagerVenus.disableAmbientLightning) {
@@ -128,7 +128,7 @@ public class MainHandlerClient {
 					}
 				}
 
-				if (player.getRNG().nextInt(100) == 0 && minecraft.theWorld.provider instanceof WorldProviderJupiter) {
+				if (player.getRNG().nextInt(100) == 0 && minecraft.world.provider instanceof WorldProviderJupiter) {
 					double freq = player.getRNG().nextDouble() * Math.PI * 2.0F;
 					double dist = 180.0F;
 					double dX = dist * Math.cos(freq);
@@ -136,7 +136,7 @@ public class MainHandlerClient {
 					double posX = player.posX + dX;
 					double posY = 70;
 					double posZ = player.posZ + dZ;
-					minecraft.theWorld.playSound(player, posX, posY, posZ, SoundEvents.ENTITY_LIGHTNING_THUNDER, SoundCategory.WEATHER, 1000.0F, 1.0F + player.getRNG().nextFloat() * 0.2F);
+					minecraft.world.playSound(player, posX, posY, posZ, SoundEvents.ENTITY_LIGHTNING_THUNDER, SoundCategory.WEATHER, 1000.0F, 1.0F + player.getRNG().nextFloat() * 0.2F);
 					lightning.put(new BlockPos(posX, posY, posZ), 20);
 				}
 			}

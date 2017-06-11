@@ -30,7 +30,7 @@ public class GuiUltimateOxygenCompressor extends GuiContainerGC
 
     public GuiUltimateOxygenCompressor(InventoryPlayer par1InventoryPlayer, TileEntityUltimateOxygenCompressor par2TileEntityAirDistributor)
     {
-        super(new ContainerUltimateOxygenCompressor(par1InventoryPlayer, par2TileEntityAirDistributor, FMLClientHandler.instance().getClient().thePlayer));
+        super(new ContainerUltimateOxygenCompressor(par1InventoryPlayer, par2TileEntityAirDistributor, FMLClientHandler.instance().getClient().player));
         this.compressor = par2TileEntityAirDistributor;
         this.ySize = 180;
     }

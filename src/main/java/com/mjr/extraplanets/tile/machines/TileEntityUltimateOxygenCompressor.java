@@ -35,7 +35,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
     @Override
     public void update()
     {
-        if (!this.worldObj.isRemote)
+        if (!this.world.isRemote)
         {
             ItemStack oxygenItemStack = this.getStackInSlot(2);
             if (oxygenItemStack != null && oxygenItemStack.getItem() instanceof IItemOxygenSupply)
@@ -52,7 +52,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
 
         super.update();
 
-        if (!this.worldObj.isRemote)
+        if (!this.world.isRemote)
         {
             this.usingEnergy = false;
             if (this.getOxygenStored() > 0 && this.hasEnoughEnergyToRun)
@@ -198,7 +198,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
     @Override
     public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
     {
-        return this.worldObj.getTileEntity(this.getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
+        return this.world.getTileEntity(this.getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
     }
 
     @Override
@@ -286,7 +286,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
     @Override
     public EnumFacing getFront()
     {
-        return (this.worldObj.getBlockState(getPos()).getValue(UltimateOxygenCompressor.FACING)).rotateY();
+        return (this.world.getBlockState(getPos()).getValue(UltimateOxygenCompressor.FACING)).rotateY();
     }
 
     @Override

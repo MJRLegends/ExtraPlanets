@@ -30,7 +30,7 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC
 
     public GuiAdvancedOxygenDecompressor(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedOxygenDecompressor par2TileEntityAirDistributor)
     {
-        super(new ContainerAdvancedOxygenDecompressor(par1InventoryPlayer, par2TileEntityAirDistributor, FMLClientHandler.instance().getClient().thePlayer));
+        super(new ContainerAdvancedOxygenDecompressor(par1InventoryPlayer, par2TileEntityAirDistributor, FMLClientHandler.instance().getClient().player));
         this.decompressor = par2TileEntityAirDistributor;
         this.ySize = 180;
     }

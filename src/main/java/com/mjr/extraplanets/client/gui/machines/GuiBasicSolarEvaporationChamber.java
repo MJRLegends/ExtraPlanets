@@ -29,7 +29,7 @@ public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
 	public GuiBasicSolarEvaporationChamber(InventoryPlayer par1InventoryPlayer, TileEntityBasicSolarEvaporationChamber tileEntity) {
-		super(new ContainerBasicSolarEvaporationChamber(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
+		super(new ContainerBasicSolarEvaporationChamber(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

@@ -33,7 +33,7 @@ public class ItemBasicItem extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if (player.worldObj.isRemote) {
+		if (player.world.isRemote) {
 			if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
 				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier1ArmorLayer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
@@ -62,7 +62,8 @@ public class ItemBasicItem extends Item {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand){
+        ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		playerIn.setActiveHand(hand);
 		return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
 	}
@@ -73,7 +74,7 @@ public class ItemBasicItem extends Item {
 			EntityPlayer entityplayer = entityLiving instanceof EntityPlayer ? (EntityPlayer) entityLiving : null;
 
 			if (entityplayer == null || !entityplayer.capabilities.isCreativeMode) {
-				--stack.stackSize;
+				stack.shrink(1);
 			}
 
 			if (!worldIn.isRemote) {
@@ -86,7 +87,7 @@ public class ItemBasicItem extends Item {
 			}
 
 			if (entityplayer == null || !entityplayer.capabilities.isCreativeMode) {
-				if (stack.stackSize <= 0) {
+				if (!stack.isEmpty()) {
 					return new ItemStack(Items.GLASS_BOTTLE);
 				}
 

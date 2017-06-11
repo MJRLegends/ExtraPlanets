@@ -15,7 +15,7 @@ public class ExtraPlanetsUtli {
 		player.getNextWindowId();
 		player.closeContainer();
 		int id = player.currentWindowId;
-		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_OPEN_PARACHEST_GUI, GCCoreUtil.getDimensionID(player.worldObj), new Object[] { id, 0, 0 }), player);
+		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_OPEN_PARACHEST_GUI, GCCoreUtil.getDimensionID(player.world), new Object[] { id, 0, 0 }), player);
 		player.openContainer = new ContainerVehicleBase(player.inventory, buggyInv, type, player);
 		player.openContainer.windowId = id;
 		player.openContainer.addListener(player);
@@ -25,7 +25,7 @@ public class ExtraPlanetsUtli {
 		player.getNextWindowId();
 		player.closeContainer();
 		int id = player.currentWindowId;
-		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_OPEN_PARACHEST_GUI, GCCoreUtil.getDimensionID(player.worldObj), new Object[] { id, 0, 0 }), player);
+		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_OPEN_PARACHEST_GUI, GCCoreUtil.getDimensionID(player.world), new Object[] { id, 0, 0 }), player);
 		player.openContainer = new ContainerPoweredVehicleBase(player.inventory, buggyInv, type, player);
 		player.openContainer.windowId = id;
 		player.openContainer.addListener(player);

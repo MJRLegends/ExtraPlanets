@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -48,14 +49,16 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < 4; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand)
+    {
+        ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		final float var4 = 1.0F;
 		final float var5 = playerIn.prevRotationPitch + (playerIn.rotationPitch - playerIn.prevRotationPitch) * var4;
 		final float var6 = playerIn.prevRotationYaw + (playerIn.rotationYaw - playerIn.prevRotationYaw) * var4;
@@ -114,11 +117,11 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 					}
 
 					if (!worldIn.isRemote) {
-						worldIn.spawnEntityInWorld(var35);
+						worldIn.spawnEntity(var35);
 					}
 
 					if (!playerIn.capabilities.isCreativeMode) {
-						--itemStackIn.stackSize;
+						itemStackIn.shrink(1);
 					}
 				}
 

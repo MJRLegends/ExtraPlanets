@@ -56,8 +56,8 @@ public class KeyHandlerClient extends KeyHandler {
 
 	@Override
 	public void keyDown(Type types, KeyBinding kb, boolean tickEnd, boolean isRepeat) {
-		if (KeyHandlerClient.mc.thePlayer != null && tickEnd) {
-            EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.thePlayer, false);
+		if (KeyHandlerClient.mc.player != null && tickEnd) {
+            EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.player, false);
 
 			if (playerBase == null) {
 				return;
@@ -67,9 +67,9 @@ public class KeyHandlerClient extends KeyHandler {
 
 			if (kb.getKeyCode() == KeyHandlerClient.openFuelGui.getKeyCode()) {
 				if (playerBase.getRidingEntity() instanceof EntityVehicleBase) {
-					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_FUEL_GUI, mc.theWorld.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
+					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_FUEL_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 				} else if (playerBase.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_POWER_GUI, mc.theWorld.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
+					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_POWER_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 				}
 			}
 		}

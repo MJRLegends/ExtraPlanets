@@ -6,6 +6,6 @@ public class BiomeGenJupiter extends JupiterBiomes {
 
 	public BiomeGenJupiter(BiomeProperties properties) {
 		super(properties);
-        BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+        BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }

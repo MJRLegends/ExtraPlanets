@@ -15,10 +15,10 @@ public class StructureVillagePiecesEris
     public static ArrayList<StructureVillagePieceWeightEris> getStructureVillageWeightedPieceList(Random par0Random, int par1)
     {
         final ArrayList<StructureVillagePieceWeightEris> var2 = new ArrayList<StructureVillagePieceWeightEris>();
-        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageWoodHut.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 2 + par1, 5 + par1 * 3)));
-        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageField.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 3 + par1, 5 + par1)));
-        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageField2.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 3 + par1, 5 + par1)));
-        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageHouse.class, 5, MathHelper.getRandomIntegerInRange(par0Random, 3 + par1, 4 + par1 * 2)));
+        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageWoodHut.class, 5, MathHelper.getInt(par0Random, 2 + par1, 5 + par1 * 3)));
+        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageField.class, 5, MathHelper.getInt(par0Random, 3 + par1, 5 + par1)));
+        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageField2.class, 5, MathHelper.getInt(par0Random, 3 + par1, 5 + par1)));
+        var2.add(new StructureVillagePieceWeightEris(StructureComponentVillageHouse.class, 5, MathHelper.getInt(par0Random, 3 + par1, 4 + par1 * 2)));
 
         final Iterator<StructureVillagePieceWeightEris> var3 = var2.iterator();
 

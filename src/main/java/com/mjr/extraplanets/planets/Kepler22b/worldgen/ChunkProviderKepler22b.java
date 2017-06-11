@@ -62,7 +62,7 @@ public class ChunkProviderKepler22b extends ChunkProviderOverworld {
 
 		for (int j = -2; j <= 2; j++) {
 			for (int k = -2; k <= 2; k++) {
-				float f = 10.0F / MathHelper.sqrt_float(j * j + k * k + 0.2F);
+				float f = 10.0F / MathHelper.sqrt(j * j + k * k + 0.2F);
 				this.biomeWeights[j + 2 + (k + 2) * 5] = f;
 			}
 		}

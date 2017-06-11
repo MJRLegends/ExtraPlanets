@@ -17,7 +17,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class BiomeGenKepler22bRedDesert extends BiomeGenBaseKepler22b {
 	public BiomeGenKepler22bRedDesert(BiomeProperties properties) {
 		super(properties);
-		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 		this.topBlock = ExtraPlanets_Blocks.RED_SAND.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.RED_SAND.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));

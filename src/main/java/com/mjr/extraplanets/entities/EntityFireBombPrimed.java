@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.entities;
 
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.MoverType;
 import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumParticleTypes;
@@ -39,7 +40,7 @@ public class EntityFireBombPrimed extends EntityTNTPrimed {
 		this.prevPosY = this.posY;
 		this.prevPosZ = this.posZ;
 		this.motionY -= 0.03999999910593033D;
-		this.moveEntity(this.motionX, this.motionY, this.motionZ);
+        this.move(MoverType.SELF, this.motionX, this.motionY, this.motionZ);
 		this.motionX *= 0.9800000190734863D;
 		this.motionY *= 0.9800000190734863D;
 		this.motionZ *= 0.9800000190734863D;
@@ -53,40 +54,40 @@ public class EntityFireBombPrimed extends EntityTNTPrimed {
 		if (this.fuse-- <= 0) {
 			this.setDead();
 
-			if (!this.worldObj.isRemote) {
+			if (!this.world.isRemote) {
 				this.explode();
 			}
 		} else {
 			this.handleWaterMovement();
-			this.worldObj.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, this.posX, this.posY + 0.5D, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+			this.world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, this.posX, this.posY + 0.5D, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
 		}
 	}
 
 	private void explode() {
 		float f = 5.0F;
-		this.worldObj.createExplosion(this, this.posX, this.posY + this.height / 16.0F, this.posZ, f, true);
+		this.world.createExplosion(this, this.posX, this.posY + this.height / 16.0F, this.posZ, f, true);
 		for(int i = 0; i < 9; i++){
 			for(int j = 0; j < 15; j++){
 				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlockState(new BlockPos((int)this.posX + i, this.worldObj.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ + j), Blocks.FIRE.getDefaultState());
+					this.world.setBlockState(new BlockPos((int)this.posX + i, this.world.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ + j), Blocks.FIRE.getDefaultState());
 			}
 		}
 		for(int i = 0; i < 9; i++){
 			for(int j = 0; j < 9; j++){
 				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlockState(new BlockPos((int)this.posX - i, this.worldObj.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ - j), Blocks.FIRE.getDefaultState());
+					this.world.setBlockState(new BlockPos((int)this.posX - i, this.world.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ - j), Blocks.FIRE.getDefaultState());
 			}
 		}
 		for(int i = 0; i < 9; i++){
 			for(int j = 0; j < 9; j++){
 				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlockState(new BlockPos((int)this.posX + i, this.worldObj.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ - j), Blocks.FIRE.getDefaultState());
+					this.world.setBlockState(new BlockPos((int)this.posX + i, this.world.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ - j), Blocks.FIRE.getDefaultState());
 			}
 		}
 		for(int i = 0; i < 9; i++){
 			for(int j = 0; j < 9; j++){
 				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlockState(new BlockPos((int)this.posX - i, this.worldObj.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ + j), Blocks.FIRE.getDefaultState());
+					this.world.setBlockState(new BlockPos((int)this.posX - i, this.world.getTopSolidOrLiquidBlock(new BlockPos((int)this.posX + i, 0, (int)this.posZ + j)).getY(), (int)this.posZ + j), Blocks.FIRE.getDefaultState());
 			}
 		}
 	}

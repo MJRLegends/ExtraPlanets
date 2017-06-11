@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -49,7 +50,7 @@ public class ItemCannedFood extends Item {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemCannedFood.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
@@ -107,7 +108,7 @@ public class ItemCannedFood extends Item {
 	public ItemStack onItemUseFinish(ItemStack par1ItemStack, World par2World, EntityLivingBase par3EntityPlayer) {
 		if (par3EntityPlayer instanceof EntityPlayer) {
 			if (par1ItemStack.getItemDamage() < 5) {
-				--par1ItemStack.stackSize;
+				par1ItemStack.shrink(1);
 				EntityPlayer entityplayer = (EntityPlayer) par3EntityPlayer;
 				entityplayer.getFoodStats().addStats(this.getHealAmount(par1ItemStack), this.getSaturationModifier(par1ItemStack));
 				par2World.playSound((EntityPlayer) null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
@@ -139,7 +140,8 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand){
+        ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		if (playerIn.canEat(false)) {
 			playerIn.setActiveHand(hand);
 			return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);

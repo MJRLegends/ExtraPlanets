@@ -40,7 +40,7 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 			new ArrayList<String>(), this.width, this.height, this);
 
 	public GuiAdvancedRefinery(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedRefinery tileEntity) {
-		super(new ContainerAdvancedRefinery(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
+		super(new ContainerAdvancedRefinery(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}
@@ -99,7 +99,7 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 	protected void actionPerformed(GuiButton par1GuiButton) {
 		switch (par1GuiButton.id) {
 		case 0:
-			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] {
+			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, this.mc.world.provider.getDimensionType().getId(), new Object[] {
 					this.tileEntity.getPos(), 0 }));
 			break;
 		}

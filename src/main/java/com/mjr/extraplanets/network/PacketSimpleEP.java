@@ -23,11 +23,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
-import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
-import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 
 @SuppressWarnings("rawtypes")
@@ -37,8 +35,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class),
 
 		// CLIENT
-		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), 
-		C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
+		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -65,7 +62,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	public PacketSimpleEP() {
 		super();
 	}
-	
+
 	public PacketSimpleEP(EnumSimplePacket packetType, int dimID, Object[] data) {
 		this(packetType, dimID, Arrays.asList(data));
 	}
@@ -126,10 +123,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		case C_OPEN_PARACHEST_GUI:
 			switch ((Integer) this.data.get(1)) {
 			case 0:
-				if (player.getRidingEntity() instanceof EntityVehicleBase) {
-					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiVehicleBase(player.inventory, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType()));
-					player.openContainer.windowId = (Integer) this.data.get(0);
-				} else if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+				if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType()));
 					player.openContainer.windowId = (Integer) this.data.get(0);
 				}
@@ -155,11 +149,6 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
 		switch (this.type) {
-		case S_OPEN_FUEL_GUI:
-			if (player.getRidingEntity() instanceof EntityVehicleBase) {
-				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType());
-			}
-			break;
 		case S_OPEN_POWER_GUI:
 			if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType());

@@ -31,13 +31,13 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 
 			for (int k = 0; k < i; ++k) {
 				float f = (1.0F - (float) k / (float) i) * j;
-				int l = MathHelper.ceiling_float_int(f);
+				int l = MathHelper.ceil(f);
 
 				for (int i1 = -l; i1 <= l; ++i1) {
-					float f1 = MathHelper.abs_int(i1) - 0.25F;
+					float f1 = MathHelper.abs(i1) - 0.25F;
 
 					for (int j1 = -l; j1 <= l; ++j1) {
-						float f2 = MathHelper.abs_int(j1) - 0.25F;
+						float f2 = MathHelper.abs(j1) - 0.25F;
 
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
 							IBlockState block = worldIn.getBlockState(position.add(i1, k, j1));
@@ -116,13 +116,13 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 
 			for (int k = 0; k < i; ++k) {
 				float f = (1.0F - (float) k / (float) i) * j;
-				int l = MathHelper.ceiling_float_int(f);
+				int l = MathHelper.ceil(f);
 
 				for (int i1 = -l; i1 <= l; ++i1) {
-					float f1 = MathHelper.abs_int(i1) - 0.25F;
+					float f1 = MathHelper.abs(i1) - 0.25F;
 
 					for (int j1 = -l; j1 <= l; ++j1) {
-						float f2 = MathHelper.abs_int(j1) - 0.25F;
+						float f2 = MathHelper.abs(j1) - 0.25F;
 
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
 							IBlockState block = worldIn.getBlockState(position.add(i1, k, j1));

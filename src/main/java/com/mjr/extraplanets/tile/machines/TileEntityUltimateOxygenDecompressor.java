@@ -34,7 +34,7 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
     {
         super.update();
 
-        if (!this.worldObj.isRemote)
+        if (!this.world.isRemote)
         {
             this.usingEnergy = false;
             ItemStack tank1 = this.containingItems[0];
@@ -179,7 +179,7 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
     @Override
     public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
     {
-        return this.worldObj.getTileEntity(this.getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
+        return this.world.getTileEntity(this.getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
     }
 
     @Override
@@ -265,7 +265,7 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
     @Override
     public EnumFacing getFront()
     {
-        return this.worldObj.getBlockState(getPos()).getValue(UltimateOxygenCompressor.FACING);
+        return this.world.getBlockState(getPos()).getValue(UltimateOxygenCompressor.FACING);
     }
 
     @Override

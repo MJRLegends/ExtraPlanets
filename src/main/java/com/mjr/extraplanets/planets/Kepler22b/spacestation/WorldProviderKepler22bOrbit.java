@@ -59,7 +59,7 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public boolean isDaytime() {
-		final float a = this.worldObj.getCelestialAngle(0F);
+		final float a = this.world.getCelestialAngle(0F);
 		// TODO: adjust this according to size of planet below
 		return a < 0.42F || a > 0.58F;
 	}
@@ -67,7 +67,7 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
-		final float var2 = this.worldObj.getCelestialAngle(par1);
+		final float var2 = this.world.getCelestialAngle(par1);
 		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {

@@ -39,7 +39,7 @@ public class EntityMarsRover extends EntityPoweredVehicleBase implements IInvent
 		vehicle.getTagCompound().setFloat("currentPowerCapacity", 0);
 		items.add(vehicle);
 
-		for (ItemStack item : this.cargoItems) {
+		for (ItemStack item : this.stacks) {
 			if (item != null) {
 				items.add(item);
 			}
@@ -70,7 +70,7 @@ public class EntityMarsRover extends EntityPoweredVehicleBase implements IInvent
 
 	@Override
 	public void featureUpdate() {
-		float celestialAngle = (this.worldObj.getCelestialAngle(1.0F));
+		float celestialAngle = (this.world.getCelestialAngle(1.0F));
 		this.addPower(celestialAngle / 2, false);
 	}
 }

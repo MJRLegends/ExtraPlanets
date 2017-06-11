@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.items.thermalPadding;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.api.item.IItemThermal;
 import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
@@ -15,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -50,7 +49,7 @@ public class ItemTier3ThermalPadding  extends Item implements IItemThermal
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
+    public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List)
     {
         for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++)
         {
@@ -88,49 +87,54 @@ public class ItemTier3ThermalPadding  extends Item implements IItemThermal
     }
     
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand)
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand)
     {
-        if (player instanceof EntityPlayerMP)
+        ItemStack itemStackIn = playerIn.getHeldItem(hand);
+        if (playerIn instanceof EntityPlayerMP)
         {
-            GCPlayerStats stats = player.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
+            GCPlayerStats stats = playerIn.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
             ItemStack gear = stats.getExtendedInventory().getStackInSlot(6);
             ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(7);
             ItemStack gear2 = stats.getExtendedInventory().getStackInSlot(8);
             ItemStack gear3 = stats.getExtendedInventory().getStackInSlot(9);
 
-            if (itemStack.getItemDamage() == 0)
+            if (itemStackIn.getItemDamage() == 0)
             {
                 if (gear == null)
                 {
-                    stats.getExtendedInventory().setInventorySlotContents(6, itemStack.copy());
-                    itemStack.stackSize = 0;
+                    stats.getExtendedInventory().setInventorySlotContents(6, itemStackIn.copy());
+                    itemStackIn.setCount(0);
+
                 }
             }
-            else if (itemStack.getItemDamage() == 1)
+            else if (itemStackIn.getItemDamage() == 1)
             {
                 if (gear1 == null)
                 {
-                    stats.getExtendedInventory().setInventorySlotContents(7, itemStack.copy());
-                    itemStack.stackSize = 0;
+                    stats.getExtendedInventory().setInventorySlotContents(7, itemStackIn.copy());
+                    itemStackIn.setCount(0);
+
                 }
             }
-            else if (itemStack.getItemDamage() == 2)
+            else if (itemStackIn.getItemDamage() == 2)
             {
                 if (gear2 == null)
                 {
-                    stats.getExtendedInventory().setInventorySlotContents(8, itemStack.copy());
-                    itemStack.stackSize = 0;
+                    stats.getExtendedInventory().setInventorySlotContents(8, itemStackIn.copy());
+                    itemStackIn.setCount(0);
+
                 }
             }
-            else if (itemStack.getItemDamage() == 3)
+            else if (itemStackIn.getItemDamage() == 3)
             {
                 if (gear3 == null)
                 {
-                    stats.getExtendedInventory().setInventorySlotContents(9, itemStack.copy());
-                    itemStack.stackSize = 0;
+                    stats.getExtendedInventory().setInventorySlotContents(9, itemStackIn.copy());
+                    itemStackIn.setCount(0);
+
                 }
             }
         }
-        return new ActionResult<>(EnumActionResult.SUCCESS, itemStack);
+        return new ActionResult<>(EnumActionResult.SUCCESS, itemStackIn);
     }
 }
