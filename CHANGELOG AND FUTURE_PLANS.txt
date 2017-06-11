@@ -14,6 +14,13 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+0.9.2 Beta Build
+*Added missing feature of changing some planets surface and sub surface to liquid
+
+0.9.1 Beta Build
+*Added a Galacticraft version enforcer for build 102 as a minimum version to use
+*Added missing feature of changing some planets surface and sub surface to liquid
+
 0.9.0 Beta Build
 *Refactor GEAR ID's to Constants class
 *Added missing machine front textures
