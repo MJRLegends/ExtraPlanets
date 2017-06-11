@@ -2,15 +2,16 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.Config;
-
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.storage.loot.LootTableList;
+
+import com.mjr.extraplanets.Config;
 
 public class WorldGenIgloo extends WorldGenerator {
 
@@ -772,7 +773,7 @@ public class WorldGenIgloo extends WorldGenerator {
 			{
 				for (int i = 0; i < chest.getSizeInventory(); i++)
 				{
-					chest.setInventorySlotContents(i, null);
+					chest.setInventorySlotContents(i, ItemStack.EMPTY);
 				}
 	
 				
@@ -1403,7 +1404,7 @@ public class WorldGenIgloo extends WorldGenerator {
 			{
 				for (int i = 0; i < chest.getSizeInventory(); i++)
 				{
-					chest.setInventorySlotContents(i, null);
+					chest.setInventorySlotContents(i, ItemStack.EMPTY);
 				}
 					
 				//Determined how many times loot should be generated. Range: 1 - 4
