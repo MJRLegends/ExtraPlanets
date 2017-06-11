@@ -1,9 +1,5 @@
 package com.mjr.extraplanets.blocks;
 
-import javax.annotation.Nullable;
-
-import com.mjr.extraplanets.entities.EntityFireBombPrimed;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -15,9 +11,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -25,6 +21,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 
 public class BlockFireBomb extends Block {
 	public static final PropertyBool EXPLODE = PropertyBool.create("explode");
@@ -46,7 +44,7 @@ public class BlockFireBomb extends Block {
 	}
 
 	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
+	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
 		if (worldIn.isBlockPowered(pos)) {
 			this.onBlockDestroyedByPlayer(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)));
 			worldIn.setBlockToAir(pos);
@@ -61,7 +59,7 @@ public class BlockFireBomb extends Block {
 		if (!worldIn.isRemote) {
 			EntityFireBombPrimed EntityFireBombPrimed = new EntityFireBombPrimed(worldIn, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, explosionIn.getExplosivePlacedBy());
 			EntityFireBombPrimed.fuse = worldIn.rand.nextInt(EntityFireBombPrimed.fuse / 4) + EntityFireBombPrimed.fuse / 8;
-			worldIn.spawnEntityInWorld(EntityFireBombPrimed);
+			worldIn.spawnEntity(EntityFireBombPrimed);
 		}
 	}
 
@@ -77,32 +75,36 @@ public class BlockFireBomb extends Block {
 		if (!worldIn.isRemote) {
 			if (state.getValue(EXPLODE).booleanValue()) {
 				EntityFireBombPrimed EntityFireBombPrimed = new EntityFireBombPrimed(worldIn, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, igniter);
-				worldIn.spawnEntityInWorld(EntityFireBombPrimed);
+				worldIn.spawnEntity(EntityFireBombPrimed);
 				worldIn.playSound((EntityPlayer) null, EntityFireBombPrimed.posX, EntityFireBombPrimed.posY, EntityFireBombPrimed.posZ, SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.BLOCKS, 1.0F, 1.0F);
 			}
 		}
 	}
 
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (playerIn.inventory.getCurrentItem() != null) {
-			Item item = playerIn.inventory.getCurrentItem().getItem();
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+        ItemStack itemstack = playerIn.getHeldItem(hand);
 
-			if (item == Items.FLINT_AND_STEEL || item == Items.FIRE_CHARGE) {
-				this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
-				worldIn.setBlockToAir(pos);
+        if (!itemstack.isEmpty() && (itemstack.getItem() == Items.FLINT_AND_STEEL || itemstack.getItem() == Items.FIRE_CHARGE))
+        {
+            this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
+            worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
 
-				if (item == Items.FLINT_AND_STEEL) {
-					playerIn.inventory.getCurrentItem().damageItem(1, playerIn);
-				} else if (!playerIn.capabilities.isCreativeMode) {
-					--playerIn.inventory.getCurrentItem().stackSize;
-				}
+            if (itemstack.getItem() == Items.FLINT_AND_STEEL)
+            {
+                itemstack.damageItem(1, playerIn);
+            }
+            else if (!playerIn.capabilities.isCreativeMode)
+            {
+                itemstack.shrink(1);
+            }
 
-				return true;
-			}
-		}
-
-		return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
+            return true;
+        }
+        else
+        {
+            return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
+        }
 	}
 
 	/**

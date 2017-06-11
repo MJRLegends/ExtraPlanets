@@ -8,17 +8,15 @@ import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.KeyBinding;
+import net.minecraftforge.fml.common.gameevent.TickEvent.Type;
 
 import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
-import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
-
-import net.minecraftforge.fml.common.gameevent.TickEvent.Type;
 
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openFuelGui;
@@ -57,7 +55,7 @@ public class KeyHandlerClient extends KeyHandler {
 	@Override
 	public void keyDown(Type types, KeyBinding kb, boolean tickEnd, boolean isRepeat) {
 		if (KeyHandlerClient.mc.player != null && tickEnd) {
-            EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.player, false);
+			EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.player, false);
 
 			if (playerBase == null) {
 				return;
@@ -66,9 +64,7 @@ public class KeyHandlerClient extends KeyHandler {
 			GCPlayerStatsClient stats = GCPlayerStatsClient.get(playerBase);
 
 			if (kb.getKeyCode() == KeyHandlerClient.openFuelGui.getKeyCode()) {
-				if (playerBase.getRidingEntity() instanceof EntityVehicleBase) {
-					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_FUEL_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
-				} else if (playerBase.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+				if (playerBase.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_POWER_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 				}
 			}

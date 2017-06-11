@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
@@ -58,14 +59,17 @@ public class RegisterHelper {
 	}
 
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
-		EntityRegistry.registerModEntity(var0, var1, id++, ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
+        ResourceLocation registryName = new ResourceLocation(Constants.modID, var1);
+		EntityRegistry.registerModEntity(registryName, var0, var1, id++, ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
+
 	}
-	
+
 	public static void registerExtraPlanetsMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
 		registerExtraPlanetsNonMobEntity(entityClass, name, 80, 3, true);
-		EntityRegistry.registerEgg(entityClass, back, fore);
+		ResourceLocation resourcelocation = new ResourceLocation(Constants.modID, name);
+		EntityList.ENTITY_EGGS.put(resourcelocation, new EntityList.EntityEggInfo(resourcelocation, back, fore));
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public static void setHarvestLevel(Block block, String toolClass, int level, int meta) {
 		block.setHarvestLevel(toolClass, level, block.getStateFromMeta(meta));

@@ -46,7 +46,7 @@ public class ContainerAdvancedOxygenCompressor extends Container
     @Override
     public boolean canInteractWith(EntityPlayer var1)
     {
-        return this.tileEntity.isUseableByPlayer(var1);
+        return this.tileEntity.isUsableByPlayer(var1);
     }
 
     @Override
@@ -107,21 +107,22 @@ public class ContainerAdvancedOxygenCompressor extends Container
                 }
             }
 
-            if (stack.stackSize == 0)
+
+            if (stack.getCount() == 0)
             {
-                slot.putStack((ItemStack) null);
+                slot.putStack(ItemStack.EMPTY);
             }
             else
             {
                 slot.onSlotChanged();
             }
 
-            if (stack.stackSize == var2.stackSize)
+            if (stack.getCount() == var2.getCount())
             {
-                return null;
+                return ItemStack.EMPTY;
             }
 
-            slot.onPickupFromSlot(par1EntityPlayer, stack);
+            slot.onTake(par1EntityPlayer, stack);
         }
 
         return var2;

@@ -20,6 +20,7 @@ import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -778,7 +779,7 @@ public class ExtraPlanets_Recipes {
 
 		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, 1) });
 
-		if(Config.MARS_ROVER || Config.VENUS_ROVER){
+		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(ExtraPlanets_Items.INGOT_LEAD, 1, 0) });
 			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.INGOT_LEAD, 1, 0) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
@@ -1012,20 +1013,59 @@ public class ExtraPlanets_Recipes {
 				silicon = new ItemStack(GCItems.basicItem, 1, 2);
 			else
 				silicon = silicons.get(j - 1);
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 0), new ItemStack[] { new ItemStack(Items.DIAMOND), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Blocks.REDSTONE_LAMP) });
-			if (Config.MERCURY)
-				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 1), new ItemStack[] { new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), silicon, silicon, new ItemStack(Items.REDSTONE),
-						new ItemStack(Items.COMPARATOR) });
-			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 2), new ItemStack[] { new ItemStack(AsteroidsItems.basicItem, 1, 0), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Blocks.REDSTONE_TORCH) });
-			if (Config.JUPITER)
-				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 3),
-						new ItemStack[] { new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Items.REPEATER) });
-			if (Config.NEPTUNE)
-				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 4),
-						new ItemStack[] { new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Items.REPEATER) });
-			if (Config.URANUS)
-				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 5),
-						new ItemStack[] { new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), silicon, silicon, new ItemStack(Items.REDSTONE), new ItemStack(Items.REPEATER) });
+
+			NonNullList<ItemStack> input1 = NonNullList.create();
+			input1.add(new ItemStack(Items.DIAMOND));
+			input1.add(silicon);
+			input1.add(silicon);
+			input1.add(new ItemStack(Items.REDSTONE));
+			input1.add(new ItemStack(Blocks.REDSTONE_LAMP));
+			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 0), input1);
+
+			input1 = NonNullList.create();
+			input1.add(new ItemStack(AsteroidsItems.basicItem));
+			input1.add(silicon);
+			input1.add(silicon);
+			input1.add(new ItemStack(Items.REDSTONE));
+			input1.add(new ItemStack(Blocks.REDSTONE_TORCH));
+			CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 2), input1);
+
+			if (Config.MERCURY) {
+				input1 = NonNullList.create();
+				input1.add(new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5));
+				input1.add(silicon);
+				input1.add(silicon);
+				input1.add(new ItemStack(Items.REDSTONE));
+				input1.add(new ItemStack(Items.COMPARATOR));
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 1), input1);
+			}
+			if (Config.JUPITER) {
+				input1 = NonNullList.create();
+				input1.add(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8));
+				input1.add(silicon);
+				input1.add(silicon);
+				input1.add(new ItemStack(Items.REDSTONE));
+				input1.add(new ItemStack(Items.REPEATER));
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 3), input1);
+			}
+			if (Config.NEPTUNE) {
+				input1 = NonNullList.create();
+				input1.add(new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6));
+				input1.add(silicon);
+				input1.add(silicon);
+				input1.add(new ItemStack(Items.REDSTONE));
+				input1.add(new ItemStack(Items.REPEATER));
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 4), input1);
+			}
+			if (Config.URANUS) {
+				input1 = NonNullList.create();
+				input1.add(new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7));
+				input1.add(silicon);
+				input1.add(silicon);
+				input1.add(new ItemStack(Items.REDSTONE));
+				input1.add(new ItemStack(Items.REPEATER));
+				CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.WAFERS, 3, 5), input1);
+			}
 		}
 	}
 

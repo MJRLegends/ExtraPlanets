@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
-import java.util.List;
-
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
@@ -12,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -19,10 +18,7 @@ import com.google.common.base.Predicate;
 
 public class BlockKepler22bMapleTreeLog extends BlockLog {
 	public static enum EnumType implements IStringSerializable {
-		MAPLE_BLUE(0, "maple_blue_log", MapColor.BLUE), 
-		MAPLE_RED(1, "maple_red_log", MapColor.RED), 
-		MAPLE_PURPLE(2, "maple_purple_log", MapColor.PURPLE), 
-		MAPLE_YELLOW(3, "maple_yellow_log", MapColor.YELLOW);
+		MAPLE_BLUE(0, "maple_blue_log", MapColor.BLUE), MAPLE_RED(1, "maple_red_log", MapColor.RED), MAPLE_PURPLE(2, "maple_purple_log", MapColor.PURPLE), MAPLE_YELLOW(3, "maple_yellow_log", MapColor.YELLOW);
 
 		private static final BlockKepler22bMapleTreeLog.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeLog.EnumType[values().length];
 		private final int meta;
@@ -121,7 +117,7 @@ public class BlockKepler22bMapleTreeLog extends BlockLog {
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog.EnumType.MAPLE_BLUE.getMetadata()));
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog.EnumType.MAPLE_RED.getMetadata()));
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog.EnumType.MAPLE_PURPLE.getMetadata()));
@@ -178,11 +174,6 @@ public class BlockKepler22bMapleTreeLog extends BlockLog {
 	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { VARIANT, LOG_AXIS });
-	}
-
-	@Override
-	protected ItemStack createStackedBlock(IBlockState state) {
-		return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(VARIANT).getMetadata());
 	}
 
 	/**

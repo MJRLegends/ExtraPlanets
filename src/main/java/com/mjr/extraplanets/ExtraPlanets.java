@@ -4,7 +4,6 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
@@ -126,62 +125,62 @@ public class ExtraPlanets {
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
 		@Override
-		public Item getTabIconItem() {
+		public ItemStack getTabIconItem() {
 			if (Config.REFINERY_ADVANCED)
-				return Item.getItemFromBlock(ExtraPlanets_Machines.REFINERY_ADVANCED);
+				return new ItemStack(ExtraPlanets_Machines.REFINERY_ADVANCED);
 			else
-				return Item.getItemFromBlock(ExtraPlanets_Blocks.DENSE_ICE);
+				return new ItemStack(ExtraPlanets_Blocks.DENSE_ICE);
 		}
 	};
 	// Items Creative Tab
 	public static CreativeTabs ItemsTab = new CreativeTabs("SpaceItemsTab") {
 		@Override
-		public Item getTabIconItem() {
+		public ItemStack getTabIconItem() {
 			if (Config.MERCURY)
-				return ExtraPlanets_Items.TIER_4_ROCKET;
+				return new ItemStack(ExtraPlanets_Items.TIER_4_ROCKET);
 			else if (Config.JUPITER)
-				return ExtraPlanets_Items.TIER_5_ROCKET;
+				return new ItemStack(ExtraPlanets_Items.TIER_5_ROCKET);
 			else if (Config.SATURN)
-				return ExtraPlanets_Items.TIER_6_ROCKET;
+				return new ItemStack(ExtraPlanets_Items.TIER_6_ROCKET);
 			else if (Config.URANUS)
-				return ExtraPlanets_Items.TIER_7_ROCKET;
+				return new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET);
 			else if (Config.NEPTUNE)
-				return ExtraPlanets_Items.TIER_8_ROCKET;
+				return new ItemStack(ExtraPlanets_Items.TIER_8_ROCKET);
 			else if (Config.PLUTO)
-				return ExtraPlanets_Items.TIER_9_ROCKET;
+				return new ItemStack(ExtraPlanets_Items.TIER_9_ROCKET);
 			else if (Config.ERIS)
-				return ExtraPlanets_Items.TIER_10_ROCKET;
-			return GCItems.rocketTier1;
+				return new ItemStack(ExtraPlanets_Items.TIER_10_ROCKET);
+			return new ItemStack(GCItems.rocketTier1);
 		}
 	};
 	// Tools Creative Tab
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
-		public Item getTabIconItem() {
+		public ItemStack getTabIconItem() {
 			if (Config.MERCURY)
-				return ExtraPlanets_Tools.carbonPickaxe;
+				return new ItemStack(ExtraPlanets_Tools.carbonPickaxe);
 			else if (Config.JUPITER)
-				return ExtraPlanets_Tools.palladiumPickaxe;
+				return new ItemStack(ExtraPlanets_Tools.palladiumPickaxe);
 			else if (Config.SATURN)
-				return ExtraPlanets_Tools.magnesiumPickaxe;
+				return new ItemStack(ExtraPlanets_Tools.magnesiumPickaxe);
 			else if (Config.URANUS)
-				return ExtraPlanets_Tools.crystalPickaxe;
-			return GCItems.steelPickaxe;
+				return new ItemStack(ExtraPlanets_Tools.crystalPickaxe);
+			return new ItemStack(GCItems.steelPickaxe);
 		}
 	};
 	// Armour Creative Tab
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
-		public Item getTabIconItem() {
+		public ItemStack getTabIconItem() {
 			if (Config.MERCURY)
-				return ExtraPlanets_Armor.CARBON_CHEST;
+				return new ItemStack(ExtraPlanets_Armor.CARBON_CHEST);
 			else if (Config.JUPITER)
-				return ExtraPlanets_Armor.PALLASIUM_CHEST;
+				return new ItemStack(ExtraPlanets_Armor.PALLASIUM_CHEST);
 			else if (Config.SATURN)
-				return ExtraPlanets_Armor.MAGNESIUM_CHEST;
+				return new ItemStack(ExtraPlanets_Armor.MAGNESIUM_CHEST);
 			else if (Config.URANUS)
-				return ExtraPlanets_Armor.CRYSTAL_CHEST;
-			return GCItems.steelChestplate;
+				return new ItemStack(ExtraPlanets_Armor.CRYSTAL_CHEST);
+			return new ItemStack(GCItems.steelChestplate);
 		}
 	};
 

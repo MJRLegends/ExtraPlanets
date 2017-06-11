@@ -3,29 +3,31 @@ package com.mjr.extraplanets.inventory.vehicles;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 
 public class InventoryVenusRover implements IInventory {
-	private final ItemStack[] stackList;
+	private final NonNullList<ItemStack> stackList;
 	private final int inventoryWidth;
 	private final Container eventHandler;
 
 	public InventoryVenusRover(Container par1Container) {
-		final int var4 = 32;
-		this.stackList = new ItemStack[var4];
+        final int size = 32;
+        this.stackList = NonNullList.<ItemStack>withSize(size, ItemStack.EMPTY);
 		this.eventHandler = par1Container;
 		this.inventoryWidth = 5;
 	}
 
 	@Override
 	public int getSizeInventory() {
-		return this.stackList.length;
+        return this.stackList.size();
 	}
 
 	@Override
 	public ItemStack getStackInSlot(int par1) {
-		return par1 >= this.getSizeInventory() ? null : this.stackList[par1];
+        return par1 >= this.getSizeInventory() ? ItemStack.EMPTY : this.stackList.get(par1);
 	}
 
 	public ItemStack getStackInRowAndColumn(int par1, int par2) {
@@ -42,45 +44,37 @@ public class InventoryVenusRover implements IInventory {
 		return "container.crafting";
 	}
 
+    @Override
+    public ItemStack removeStackFromSlot(int index)
+    {
+        ItemStack oldstack = ItemStackHelper.getAndRemove(this.stackList, index);
+        if (!oldstack.isEmpty())
+        {
+            this.markDirty();
+            this.eventHandler.onCraftMatrixChanged(this);
+        }
+    	return oldstack;
+    }
 	@Override
-	public ItemStack removeStackFromSlot(int par1) {
-		if (this.stackList[par1] != null) {
-			final ItemStack var2 = this.stackList[par1];
-			this.stackList[par1] = null;
-			return var2;
-		} else {
-			return null;
+	public ItemStack decrStackSize(int index, int count) {
+		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stackList, index, count);
+
+		if (!itemstack.isEmpty()) {
+			this.markDirty();
+			this.eventHandler.onCraftMatrixChanged(this);
 		}
+
+		return itemstack;
 	}
 
 	@Override
-	public ItemStack decrStackSize(int par1, int par2) {
-		if (this.stackList[par1] != null) {
-			ItemStack var3;
-
-			if (this.stackList[par1].stackSize <= par2) {
-				var3 = this.stackList[par1];
-				this.stackList[par1] = null;
-				this.eventHandler.onCraftMatrixChanged(this);
-				return var3;
-			} else {
-				var3 = this.stackList[par1].splitStack(par2);
-
-				if (this.stackList[par1].stackSize == 0) {
-					this.stackList[par1] = null;
-				}
-
-				this.eventHandler.onCraftMatrixChanged(this);
-				return var3;
-			}
-		} else {
-			return null;
+	public void setInventorySlotContents(int index, ItemStack stack) {
+		if (stack.getCount() > this.getInventoryStackLimit()) {
+			stack.setCount(this.getInventoryStackLimit());
 		}
-	}
 
-	@Override
-	public void setInventorySlotContents(int par1, ItemStack par2ItemStack) {
-		this.stackList[par1] = par2ItemStack;
+		this.stackList.set(index, stack);
+		this.markDirty();
 		this.eventHandler.onCraftMatrixChanged(this);
 	}
 
@@ -94,7 +88,7 @@ public class InventoryVenusRover implements IInventory {
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
 		return true;
 	}
 
@@ -138,4 +132,18 @@ public class InventoryVenusRover implements IInventory {
 	public ITextComponent getDisplayName() {
 		return null;
 	}
+	
+    @Override
+    public boolean isEmpty()
+    {
+        for (ItemStack itemstack : this.stackList)
+        {
+            if (!itemstack.isEmpty())
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

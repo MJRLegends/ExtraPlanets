@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
-import java.util.List;
-
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
@@ -12,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -19,8 +18,7 @@ import com.google.common.base.Predicate;
 
 public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	public static enum EnumType implements IStringSerializable {
-		MAPLE_GREEN(0, "maple_green_log", MapColor.GREEN), 
-		MAPLE_BROWN(1, "maple_brown_log", MapColor.RED);
+		MAPLE_GREEN(0, "maple_green_log", MapColor.GREEN), MAPLE_BROWN(1, "maple_brown_log", MapColor.RED);
 
 		private static final BlockKepler22bMapleTreeLog2.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeLog2.EnumType[values().length];
 		private final int meta;
@@ -119,7 +117,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN.getMetadata()));
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_BROWN.getMetadata()));
 	}
@@ -175,12 +173,6 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { VARIANT, LOG_AXIS });
 	}
-
-	@Override
-	protected ItemStack createStackedBlock(IBlockState state) {
-		return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(VARIANT).getMetadata());
-	}
-
 	/**
 	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
 	 */

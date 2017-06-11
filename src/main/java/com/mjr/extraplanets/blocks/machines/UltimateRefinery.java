@@ -98,47 +98,6 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		final TileEntityUltimateRefinery var7 = (TileEntityUltimateRefinery) worldIn.getTileEntity(pos);
-
-		if (var7 != null) {
-			for (int var8 = 0; var8 < var7.getSizeInventory(); ++var8) {
-				final ItemStack var9 = var7.getStackInSlot(var8);
-
-				if (var9 != null) {
-					final float var10 = this.refineryRand.nextFloat() * 0.8F + 0.1F;
-					final float var11 = this.refineryRand.nextFloat() * 0.8F + 0.1F;
-					final float var12 = this.refineryRand.nextFloat() * 0.8F + 0.1F;
-
-					while (var9.getMaxStackSize > 0) {
-						int var13 = this.refineryRand.nextInt(21) + 10;
-
-						if (var13 > var9.getMaxStackSize) {
-							var13 = var9.getMaxStackSize();
-						}
-
-						var9.getMaxStackSize -= var13;
-						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13,
-								var9.getItemDamage()));
-
-						if (var9.hasTagCompound()) {
-							var14.getEntityItem().setTagCompound(var9.getTagCompound().copy());
-						}
-
-						final float var15 = 0.05F;
-						var14.motionX = (float) this.refineryRand.nextGaussian() * var15;
-						var14.motionY = (float) this.refineryRand.nextGaussian() * var15 + 0.2F;
-						var14.motionZ = (float) this.refineryRand.nextGaussian() * var15;
-						worldIn.spawnEntity(var14);
-					}
-				}
-			}
-		}
-
-		super.breakBlock(worldIn, pos, state);
-	}
-
-	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);

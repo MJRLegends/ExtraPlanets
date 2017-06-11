@@ -31,6 +31,7 @@ import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
 
 public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPartialSealableBlock {
 	public static final PropertyEnum PAD_TYPE = PropertyEnum.create("type", EnumLandingPadFullType.class);
+    private final AxisAlignedBB AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.2D, 1.0D);
 
 	public enum EnumLandingPadFullType implements IStringSerializable {
 		TIER_2_ROCKET_PAD(0, "tier_2_rocket"), TIER_3_ROCKET_PAD(1, "tier_3_rocket"), POWER_CHARGING_PAD(2, "powered_charging_pad");
@@ -91,33 +92,21 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 		return Item.getItemFromBlock(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD);
 	}
 
-	@Override
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
-		switch (getMetaFromState(blockState)) {
-		// case 0:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ); TODO
-		// case 2:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ);
-		default:
-			return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
-		}
-	}
-
-	@Override
-	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos) {
-		switch (getMetaFromState(worldIn.getBlockState(pos))) {
-		// case 0:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ); TODO
-		// case 2:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ);
-		default:
-			return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
-		}
-	}
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
+    {
+//        switch (getMetaFromState(blockState))
+//        {
+//        case 0:
+//            return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
+//                    pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ); TODO
+//        case 2:
+//            return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
+//                    pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ);
+//        default:
+//        }
+        return this.AABB;
+    }
 
 	@Override
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
@@ -153,7 +142,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos){
 		worldIn.notifyBlockUpdate(pos, state, state, 3);
 	}
 

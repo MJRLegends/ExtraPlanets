@@ -29,8 +29,8 @@ public class SlotSchematicTier4Rocket extends Slot {
     {
         if (this.player instanceof EntityPlayerMP)
         {
-            int dimID = GCCoreUtil.getDimensionID(this.player.worldObj);
-            GCCoreUtil.sendToAllAround(new PacketSimple(EnumSimplePacket.C_SPAWN_SPARK_PARTICLES, dimID, new Object[] { this.pos }), this.player.worldObj, dimID, this.pos, 20);
+            int dimID = GCCoreUtil.getDimensionID(this.player.world);
+            GCCoreUtil.sendToAllAround(new PacketSimple(EnumSimplePacket.C_SPAWN_SPARK_PARTICLES, dimID, new Object[] { this.pos }), this.player.world, dimID, this.pos, 20);
         }
     }
 

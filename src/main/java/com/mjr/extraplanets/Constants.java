@@ -5,13 +5,13 @@ public class Constants {
 	public static final String modName = "ExtraPlanets";
 
 	public static final int LOCALMAJVERSION = 0;
-	public static final int LOCALMINVERSION = 4;
-	public static final int LOCALBUILDVERSION = 5;
+	public static final int LOCALMINVERSION = 1;
+	public static final int LOCALBUILDVERSION = 0;
 
 	public static final String modVersion = LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION + "-Beta-Build";
 
-	public static final String MCVERSION = "[1.10.2]";
-	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,); "; // Keep the space at the end!
+	public static final String MCVERSION = "[1.11.2]";
+	public static final String DEPENDENCIES_FORGE = "required-after:forge@[13.20.0.2261,); "; // Keep the space at the end!
 	public static final String DEPENDENCIES_MODS = "required-after:galacticraftcore; required-after:galacticraftplanets; "; // Keep the space at the end!
 
 	public static final String ASSET_PREFIX = modID;

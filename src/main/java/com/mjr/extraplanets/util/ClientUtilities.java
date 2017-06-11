@@ -4,7 +4,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
@@ -13,14 +12,12 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.common.model.IModelState;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Constants;
 
 public class ClientUtilities {
 	public static void addExtraPlanetsVariants(String name, String... variants) {
-		@SuppressWarnings("deprecation")
-		Item itemBlockVariants = GameRegistry.findItem(Constants.modID, name);
+		Item itemBlockVariants = Item.REGISTRY.getObject(new ResourceLocation(Constants.modID, name));
 		ResourceLocation[] variants0 = new ResourceLocation[variants.length];
 		for (int i = 0; i < variants.length; ++i) {
 			variants0[i] = new ResourceLocation(Constants.TEXTURE_PREFIX + variants[i]);

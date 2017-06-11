@@ -8,6 +8,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -115,7 +116,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 			TileEntity tileentity = worldIn.getTileEntity(position);
 
 			if (tileentity instanceof TileEntityMobSpawner) {
-				((TileEntityMobSpawner) tileentity).getSpawnerBaseLogic().setEntityName(this.pickMobSpawner(rand));
+                ((TileEntityMobSpawner)tileentity).getSpawnerBaseLogic().setEntityId(this.pickMobSpawner(rand));
 			} else {
 				LOGGER.error("Failed to fetch mob spawner entity at ({}, {}, {})", new Object[] { Integer.valueOf(position.getX()), Integer.valueOf(position.getY()), Integer.valueOf(position.getZ()) });
 			}
@@ -129,7 +130,8 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 	/**
 	 * Randomly decides which spawner to use in a dungeon
 	 */
-	private String pickMobSpawner(Random rand) {
-		return net.minecraftforge.common.DungeonHooks.getRandomDungeonMob(rand);
-	}
+    private ResourceLocation pickMobSpawner(Random rand)
+    {
+        return net.minecraftforge.common.DungeonHooks.getRandomDungeonMob(rand);
+    }
 }

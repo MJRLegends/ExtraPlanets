@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.blocks.machines;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
@@ -22,6 +20,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
@@ -121,7 +120,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
 		par3List.add(new ItemStack(this, 1, AdvancedOxygenCompressor.OXYGEN_COMPRESSOR_METADATA));
 		par3List.add(new ItemStack(this, 1, AdvancedOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA));
 	}

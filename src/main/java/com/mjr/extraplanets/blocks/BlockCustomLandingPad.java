@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.blocks;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
@@ -21,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -82,7 +81,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < 3; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
@@ -152,7 +151,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	public String getShiftDescription(int meta) {
 		if (meta == 0)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier2.desc");
-		else if(meta == 1)
+		else if (meta == 1)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier3.desc");
 		else
 			return "";

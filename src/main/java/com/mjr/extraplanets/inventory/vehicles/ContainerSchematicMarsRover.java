@@ -24,7 +24,7 @@ public class ContainerSchematicMarsRover extends Container {
 
 	public ContainerSchematicMarsRover(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
 		final int change = 27;
-		this.worldObj = par1InventoryPlayer.player.worldObj;
+		this.worldObj = par1InventoryPlayer.player.world;
 		this.addSlotToContainer(new SlotRocketBenchResult(par1InventoryPlayer.player, this.craftMatrix, this.craftResult, 0, 142, 79 + change));
 		int var6;
 		int var7;
@@ -129,16 +129,26 @@ public class ContainerSchematicMarsRover extends Container {
 				}
 			}
 
-			if (var4.stackSize == 0) {
-				slot.putStack((ItemStack) null);
-			}
+            if (var4.getCount() == 0)
+            {
+                if (par1 == 0)
+                {
+                    slot.onTake(par1EntityPlayer, var4);
+                }
+                slot.putStack(ItemStack.EMPTY);
+                return var2;
+            }
 
-			if (var4.stackSize == var2.stackSize) {
-				return null;
-			}
+            if (var4.getCount() == var2.getCount())
+            {
+                return ItemStack.EMPTY;
+            }
 
-			slot.onSlotChanged();
-			slot.onPickupFromSlot(par1EntityPlayer, var4);
+            slot.onTake(par1EntityPlayer, var4);
+            if (par1 == 0)
+            {
+            	slot.onSlotChanged();
+            }
 		}
 
 		return var2;
@@ -146,7 +156,7 @@ public class ContainerSchematicMarsRover extends Container {
 
 	protected boolean mergeOneItem(ItemStack par1ItemStack, int par2, int par3, boolean par4) {
 		boolean flag1 = false;
-		if (par1ItemStack.stackSize > 0) {
+		if (par1ItemStack.getCount() > 0) {
 			Slot slot;
 			ItemStack slotStack;
 
@@ -156,8 +166,8 @@ public class ContainerSchematicMarsRover extends Container {
 
 				if (slotStack == null) {
 					ItemStack stackOneItem = par1ItemStack.copy();
-					stackOneItem.stackSize = 1;
-					par1ItemStack.stackSize--;
+                    stackOneItem.setCount(1);
+                    par1ItemStack.shrink(1);
 					slot.putStack(stackOneItem);
 					slot.onSlotChanged();
 					flag1 = true;
