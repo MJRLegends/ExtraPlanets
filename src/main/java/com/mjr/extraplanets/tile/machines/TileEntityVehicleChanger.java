@@ -15,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
@@ -25,7 +26,6 @@ import com.mjr.extraplanets.blocks.machines.VehicleCharger;
 
 public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory implements ISidedInventory, ILandingPadAttachable, IMachineSides {
 	@NetworkedField(targetSide = Side.CLIENT)
-	private ItemStack[] containingItems = new ItemStack[2];
 	public IPowerable attachedPowerable;
 	private boolean loadedPowerLastTick = false;
 
@@ -74,19 +74,12 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	@Override
 	public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
 		super.readFromNBT(par1NBTTagCompound);
-		this.containingItems = this.readStandardItemsFromNBT(par1NBTTagCompound);
 	}
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound par1NBTTagCompound) {
 		super.writeToNBT(par1NBTTagCompound);
-		this.writeStandardItemsToNBT(par1NBTTagCompound);
 		return par1NBTTagCompound;
-	}
-
-	@Override
-	protected ItemStack[] getContainingItems() {
-		return this.containingItems;
 	}
 
 	@Override
@@ -141,7 +134,7 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public Face[] listDefaultFaces() {
-		return new Face[] { Face.LEFT};
+		return new Face[] { Face.LEFT };
 	}
 
 	private MachineSidePack[] machineSides;
@@ -180,5 +173,10 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	@Override
 	public EnumFacing getFront() {
 		return this.world.getBlockState(getPos()).getValue(VehicleCharger.FACING);
+	}
+
+	@Override
+	protected NonNullList<ItemStack> getContainingItems() {
+		return null;
 	}
 }
