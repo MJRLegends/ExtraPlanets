@@ -204,7 +204,7 @@ public class ExtraPlanets_Items {
 			TIER_4_SCHEMATIC = new SchematicTier4("schematic_tier4");
 			TIER_4_NOSE_CONE = new Tier4NoseCone("nose_cone_tier4");
 			TIER_4_ITEMS = new ItemTier4Items("tier4_items");
-			TIER_4_KEY = new ItemKeyT4("T4key");
+			TIER_4_KEY = new ItemKeyT4("t4key");
 		}
 		if (Config.CERES) {
 			INGOT_URANIUM = new ItemBasicItem("ingot_uranium");
@@ -218,7 +218,7 @@ public class ExtraPlanets_Items {
 			TIER_5_SCHEMATIC = new SchematicTier5("schematic_tier5");
 			TIER_5_NOSE_CONE = new Tier5NoseCone("nose_cone_tier5");
 			TIER_5_ITEMS = new ItemTier5Items("tier5_items");
-			TIER_5_KEY = new ItemKeyT5("T5key");
+			TIER_5_KEY = new ItemKeyT5("t5key");
 		}
 		if (Config.SATURN) {
 			BUCKET_GLOWSTONE = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.GLOWSTONE);
@@ -226,7 +226,7 @@ public class ExtraPlanets_Items {
 			TIER_6_SCHEMATIC = new SchematicTier6("schematic_tier6");
 			TIER_6_NOSE_CONE = new Tier6NoseCone("nose_cone_tier6");
 			TIER_6_ITEMS = new ItemTier6Items("tier6_items");
-			TIER_6_KEY = new ItemKeyT6("T6key");
+			TIER_6_KEY = new ItemKeyT6("t6key");
 		}
 		if (Config.URANUS) {
 			BUCKET_FROZEN_WATER = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.FROZEN_WATER);
@@ -234,7 +234,7 @@ public class ExtraPlanets_Items {
 			TIER_7_SCHEMATIC = new SchematicTier7("schematic_tier7");
 			TIER_7_NOSE_CONE = new Tier7NoseCone("nose_cone_tier7");
 			TIER_7_ITEMS = new ItemTier7Items("tier7_items");
-			TIER_7_KEY = new ItemKeyT7("T7key");
+			TIER_7_KEY = new ItemKeyT7("t7key");
 		}
 		if (Config.NEPTUNE) {
 			if (Config.BATTERIES)
@@ -244,21 +244,21 @@ public class ExtraPlanets_Items {
 			TIER_8_SCHEMATIC = new SchematicTier8("schematic_tier8");
 			TIER_8_NOSE_CONE = new Tier8NoseCone("nose_cone_tier8");
 			TIER_8_ITEMS = new ItemTier8Items("tier8_items");
-			TIER_8_KEY = new ItemKeyT8("T8key");
+			TIER_8_KEY = new ItemKeyT8("t8key");
 		}
 		if (Config.PLUTO) {
 			TIER_9_ROCKET = new Tier9Rocket("item_tier9_rocket");
 			TIER_9_SCHEMATIC = new SchematicTier9("schematic_tier9");
 			TIER_9_NOSE_CONE = new Tier9NoseCone("nose_cone_tier9");
 			TIER_9_ITEMS = new ItemTier9Items("tier9_items");
-			TIER_9_KEY = new ItemKeyT9("T9key");
+			TIER_9_KEY = new ItemKeyT9("t9key");
 		}
 		if (Config.ERIS) {
 			TIER_10_ROCKET = new Tier10Rocket("item_tier10_rocket");
 			TIER_10_SCHEMATIC = new SchematicTier10("schematic_tier10");
 			TIER_10_NOSE_CONE = new Tier10NoseCone("nose_cone_tier10");
 			TIER_10_ITEMS = new ItemTier10Items("tier10_items");
-			TIER_10_KEY = new ItemKeyT10("T10key");
+			TIER_10_KEY = new ItemKeyT10("t10key");
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			TIER_11_ITEMS = new ItemTier11Items("tier11_items");
