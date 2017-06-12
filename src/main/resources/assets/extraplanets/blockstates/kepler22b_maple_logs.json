@@ -1,20 +1,20 @@
 {
 	"variants": {
 		"axis=y,variant=maple_blue_log": { "model": "extraplanets:maple_blue_log_model" },
-		"axis=z,variant=maple_blue_log": { "model": "extraplanets:maple_blue_log_side_model" },
-		"axis=x,variant=maple_blue_log": { "model": "extraplanets:maple_blue_log_side_model", "y": 90 },
+		"axis=z,variant=maple_blue_log": { "model": "extraplanets:maple_blue_log_model", "x": 90 },
+		"axis=x,variant=maple_blue_log": { "model": "extraplanets:maple_blue_log_model", "x": 90, "y": 90 },
 		"axis=none,variant=maple_blue_log": { "model": "extraplanets:maple_blue_log_model" },
 		"axis=y,variant=maple_red_log": { "model": "extraplanets:maple_red_log_model" },
-		"axis=z,variant=maple_red_log": { "model": "extraplanets:maple_red_log_side_model" },
-		"axis=x,variant=maple_red_log": { "model": "extraplanets:maple_red_log_side_model", "y": 90 },
+		"axis=z,variant=maple_red_log": { "model": "extraplanets:maple_red_log_model", "x": 90 },
+		"axis=x,variant=maple_red_log": { "model": "extraplanets:maple_red_log_model", "x": 90, "y": 90 },
 		"axis=none,variant=maple_red_log": { "model": "extraplanets:maple_red_log_model" },
 		"axis=y,variant=maple_purple_log": { "model": "extraplanets:maple_purple_log_model" },
-		"axis=z,variant=maple_purple_log": { "model": "extraplanets:maple_purple_log_side_model" },
-		"axis=x,variant=maple_purple_log": { "model": "extraplanets:maple_purple_log_side_model", "y": 90 },
+		"axis=z,variant=maple_purple_log": { "model": "extraplanets:maple_purple_log_model", "x": 90 },
+		"axis=x,variant=maple_purple_log": { "model": "extraplanets:maple_purple_log_model", "x": 90, "y": 90 },
 		"axis=none,variant=maple_purple_log": { "model": "extraplanets:maple_purple_log_model" },
 		"axis=y,variant=maple_yellow_log": { "model": "extraplanets:maple_yellow_log_model" },
-		"axis=z,variant=maple_yellow_log": { "model": "extraplanets:maple_yellow_log_side_model" },
-		"axis=x,variant=maple_yellow_log": { "model": "extraplanets:maple_yellow_log_side_model", "y": 90 },
+		"axis=z,variant=maple_yellow_log": { "model": "extraplanets:maple_yellow_log_model", "x": 90 },
+		"axis=x,variant=maple_yellow_log": { "model": "extraplanets:maple_yellow_log_model", "x": 90, "y": 90 },
 		"axis=none,variant=maple_yellow_log": { "model": "extraplanets:maple_yellow_log_model" }
 	}
 }

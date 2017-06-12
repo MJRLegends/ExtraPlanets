@@ -1,7 +1,0 @@
-{
-    "parent": "block/column_side",
-    "textures": {
-        "end": "extraplanets:blocks/kepler22b_maple_logs_log_yellow_maple_top",
-        "side": "extraplanets:blocks/kepler22b_maple_logs_log_yellow_maple_side"
-    }
-}
