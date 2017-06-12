@@ -334,7 +334,7 @@ public class ExtraPlanets_Blocks {
 			KEPLER22B_GRASS_RED = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
 			KEPLER22B_GRASS_YELLOW = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
 			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22b_flowers");
-			RED_SAND = new BlockSand("red_sand");
+			RED_SAND = new BlockSand("red_sand").setHardness(0.6F);
 			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
 
 		}
