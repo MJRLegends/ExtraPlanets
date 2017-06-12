@@ -8,6 +8,10 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+v0.1.2 Beta Build
+*Fixed Kepler22b log textures on different rotations
+
+*Fixed Kepler22b Red Sand being punchable with hand
 
 ======================================================================================================
 
