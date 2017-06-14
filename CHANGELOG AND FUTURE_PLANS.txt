@@ -44,7 +44,6 @@ TODO = Not yet done
 ===========================================Released Updates===========================================
 v1.7.6
 *Fixed Kepler22b Red Sand being punchable with hand
-
 *Fixes for issue #108
 
 v1.7.5
