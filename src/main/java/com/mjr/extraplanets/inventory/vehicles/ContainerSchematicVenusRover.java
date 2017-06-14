@@ -111,7 +111,7 @@ public class ContainerSchematicVenusRover extends Container {
             else
             {
                 boolean valid = false;
-                for (int i = 1; i < 19; i++)
+                for (int i = 1; i < 22; i++)
                 {
                     Slot testSlot = this.inventorySlots.get(i);
                     if (!testSlot.getHasStack() && testSlot.isItemValid(var2))
