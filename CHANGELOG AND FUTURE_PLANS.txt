@@ -14,6 +14,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4.7 Beta Build
+*Fixes for issue #108
+*Added some new Config options
+*Made Lead Ingot recipes use ore dict, so other lead ingots can be used too
+*Fixed Kepler22b Red Sand being punchable with hand
+
 v0.4.6 Beta Build
 *Added missing feature of changing some planets surface and sub surface to liquid
 *Removed debug information
