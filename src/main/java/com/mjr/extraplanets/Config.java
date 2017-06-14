@@ -182,7 +182,8 @@ public class Config {
 	public static boolean URANUS_LIQUID;
 	public static boolean NEPTUNE_LIQUID;
 	public static boolean ORE_DICTIONARY;
-
+	public static boolean ORE_DICTIONARY_INGOTS;
+	
 	public static int SCHEMATIC_TIER_4_GUI_ID;
 	public static int SCHEMATIC_TIER_5_GUI_ID;
 	public static int SCHEMATIC_TIER_6_GUI_ID;
@@ -456,7 +457,8 @@ public class Config {
 		NEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "").getBoolean(true);
 		JEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable JEI Recipe support", true, "").getBoolean(true);
 
-		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
+		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Planet and Moon Ores!").getBoolean(true);
+		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add all ingots to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All Ingots!").getBoolean(true);
 
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable achievements", true, "").getBoolean(true);
 
