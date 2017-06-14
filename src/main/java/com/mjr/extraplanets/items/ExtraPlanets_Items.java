@@ -191,7 +191,8 @@ public class ExtraPlanets_Items {
 		initializeItems();
 		registerItems();
 		registerFluidContainer();
-		OreDictionaryRegister();
+		if(Config.ORE_DICTIONARY_INGOTS)
+			OreDictionaryRegister();
 		registerGearItems();
 	}
 
