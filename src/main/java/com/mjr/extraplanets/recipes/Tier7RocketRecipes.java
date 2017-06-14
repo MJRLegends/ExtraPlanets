@@ -13,7 +13,7 @@ import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier7Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class Tier7RocketRecipes {
-	private static List<INasaWorkbenchRecipe> tier7RocketRecipes = new ArrayList();
+	private static List<INasaWorkbenchRecipe> tier7RocketRecipes = new ArrayList<INasaWorkbenchRecipe>();
 
 	public static ItemStack findMatchingTier7RocketRecipe(InventorySchematicTier7Rocket inventoryRocketBench) {
 		for (INasaWorkbenchRecipe recipe : tier7RocketRecipes) {
@@ -58,43 +58,43 @@ public class Tier7RocketRecipes {
 		input.put(16, new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 1)); // Booster
 		input.put(17, new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 2)); // Fin
 		input.put(18, new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 2)); // Fin
-		input.put(19, null);
-		input.put(20, null);
-		input.put(21, null);
+		input.put(19, ItemStack.EMPTY);
+		input.put(20, ItemStack.EMPTY);
+		input.put(21, ItemStack.EMPTY);
 		Tier7RocketRecipes.addTier7RocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET, 1, 0), input));
 
 		HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
 		input2.put(19, new ItemStack(Blocks.CHEST));
-		input2.put(20, null);
-		input2.put(21, null);
+		input2.put(20, ItemStack.EMPTY);
+		input2.put(21, ItemStack.EMPTY);
 		Tier7RocketRecipes.addTier7RocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET, 1, 1), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(19, null);
+		input2.put(19, ItemStack.EMPTY);
 		input2.put(20, new ItemStack(Blocks.CHEST));
-		input2.put(21, null);
+		input2.put(21, ItemStack.EMPTY);
 		Tier7RocketRecipes.addTier7RocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET, 1, 1), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(19, null);
-		input2.put(20, null);
+		input2.put(19, ItemStack.EMPTY);
+		input2.put(20, ItemStack.EMPTY);
 		input2.put(21, new ItemStack(Blocks.CHEST));
 		Tier7RocketRecipes.addTier7RocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET, 1, 1), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
 		input2.put(19, new ItemStack(Blocks.CHEST));
 		input2.put(20, new ItemStack(Blocks.CHEST));
-		input2.put(21, null);
+		input2.put(21, ItemStack.EMPTY);
 		Tier7RocketRecipes.addTier7RocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET, 1, 2), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
 		input2.put(19, new ItemStack(Blocks.CHEST));
-		input2.put(20, null);
+		input2.put(20, ItemStack.EMPTY);
 		input2.put(21, new ItemStack(Blocks.CHEST));
 		Tier7RocketRecipes.addTier7RocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET, 1, 2), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(19, null);
+		input2.put(19, ItemStack.EMPTY);
 		input2.put(20, new ItemStack(Blocks.CHEST));
 		input2.put(21, new ItemStack(Blocks.CHEST));
 		Tier7RocketRecipes.addTier7RocketRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ROCKET, 1, 2), input2));

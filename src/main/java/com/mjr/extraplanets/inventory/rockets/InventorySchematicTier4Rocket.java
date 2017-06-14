@@ -1,20 +1,19 @@
 package com.mjr.extraplanets.inventory.rockets;
 
+import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
 
-public class InventorySchematicTier4Rocket implements IInventory {
+public class InventorySchematicTier4Rocket implements IInventoryDefaults {
 	public NonNullList<ItemStack> stacks;
 	private final int inventoryWidth;
 	private final Container eventHandler;
 
 	public InventorySchematicTier4Rocket(Container par1Container) {
-		this.stacks = NonNullList.withSize(1, ItemStack.EMPTY);
+		this.stacks = NonNullList.withSize(22, ItemStack.EMPTY);
 		this.eventHandler = par1Container;
 		this.inventoryWidth = 5;
 	}
@@ -26,19 +25,7 @@ public class InventorySchematicTier4Rocket implements IInventory {
 
 	@Override
 	public ItemStack getStackInSlot(int par1) {
-		return this.stacks.get(par1);
-	}
-
-	public ItemStack getStackInRowAndColumn(int par1, int par2) {
-		if (par1 >= 0 && par1 < this.inventoryWidth) {
-			final int var3 = par1 + par2 * this.inventoryWidth;
-			if (var3 >= 22) {
-				return null;
-			}
-			return this.getStackInSlot(var3);
-		} else {
-			return null;
-		}
+		return par1 >= this.getSizeInventory() ? ItemStack.EMPTY : this.stacks.get(par1);
 	}
 
 	@Override
@@ -51,6 +38,7 @@ public class InventorySchematicTier4Rocket implements IInventory {
 		ItemStack oldstack = ItemStackHelper.getAndRemove(this.stacks, index);
 		if (!oldstack.isEmpty()) {
 			this.markDirty();
+			this.eventHandler.onCraftMatrixChanged(this);
 		}
 		return oldstack;
 	}
@@ -61,6 +49,7 @@ public class InventorySchematicTier4Rocket implements IInventory {
 
 		if (!itemstack.isEmpty()) {
 			this.markDirty();
+			this.eventHandler.onCraftMatrixChanged(this);
 		}
 
 		return itemstack;
@@ -68,13 +57,24 @@ public class InventorySchematicTier4Rocket implements IInventory {
 
 	@Override
 	public void setInventorySlotContents(int index, ItemStack stack) {
-		this.stacks.set(index, stack);
-
 		if (stack.getCount() > this.getInventoryStackLimit()) {
 			stack.setCount(this.getInventoryStackLimit());
 		}
 
+		this.stacks.set(index, stack);
 		this.markDirty();
+		this.eventHandler.onCraftMatrixChanged(this);
+	}
+
+	@Override
+	public boolean isEmpty() {
+		for (ItemStack itemstack : this.stacks) {
+			if (!itemstack.isEmpty()) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	@Override
@@ -92,57 +92,7 @@ public class InventorySchematicTier4Rocket implements IInventory {
 	}
 
 	@Override
-	public void openInventory(EntityPlayer player) {
-	}
-
-	@Override
-	public void closeInventory(EntityPlayer player) {
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return false;
-	}
-
-	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return false;
 	}
-
-	@Override
-	public int getField(int id) {
-		return 0;
-	}
-
-	@Override
-	public void setField(int id, int value) {
-	}
-
-	@Override
-	public int getFieldCount() {
-		return 0;
-	}
-
-	@Override
-	public void clear() {
-	}
-
-	@Override
-	public ITextComponent getDisplayName() {
-		return null;
-	}
-	
-    @Override
-    public boolean isEmpty()
-    {
-        for (ItemStack itemstack : this.stacks)
-        {
-            if (!itemstack.isEmpty())
-            {
-                return false;
-            }
-        }
-
-        return true;
-    }
 }

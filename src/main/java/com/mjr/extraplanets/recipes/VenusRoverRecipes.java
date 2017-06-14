@@ -14,7 +14,7 @@ import com.mjr.extraplanets.inventory.vehicles.InventoryVenusRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class VenusRoverRecipes {
-	private static List<INasaWorkbenchRecipe> venusRoverRecipes = new ArrayList();
+	private static List<INasaWorkbenchRecipe> venusRoverRecipes = new ArrayList<INasaWorkbenchRecipe>();
 
 	public static ItemStack findMatchingVenusRoverRecipe(InventoryVenusRover craftMatrix) {
 		for (INasaWorkbenchRecipe recipe : venusRoverRecipes) {
@@ -60,43 +60,43 @@ public class VenusRoverRecipes {
 		input.put(19, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3));
 		input.put(20, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1));
 		input.put(21, new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3));
-		input.put(22, null);
-		input.put(23, null);
-		input.put(24, null);
+		input.put(22, ItemStack.EMPTY);
+		input.put(23, ItemStack.EMPTY);
+		input.put(24, ItemStack.EMPTY);
 		VenusRoverRecipes.addVenusRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.VENUS_ROVER, 1, 0), input));
 
 		HashMap<Integer, ItemStack> input2 = new HashMap<Integer, ItemStack>(input);
 		input2.put(22, new ItemStack(Blocks.CHEST));
-		input.put(23, null);
-		input.put(24, null);
+		input.put(23, ItemStack.EMPTY);
+		input.put(24, ItemStack.EMPTY);
 		VenusRoverRecipes.addVenusRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.VENUS_ROVER, 1, 1), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(22, null);
+		input2.put(22, ItemStack.EMPTY);
 		input2.put(23, new ItemStack(Blocks.CHEST));
-		input2.put(24, null);
+		input2.put(24, ItemStack.EMPTY);
 		VenusRoverRecipes.addVenusRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.VENUS_ROVER, 1, 1), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(22, null);
-		input2.put(23, null);
+		input2.put(22, ItemStack.EMPTY);
+		input2.put(23, ItemStack.EMPTY);
 		input2.put(24, new ItemStack(Blocks.CHEST));
 		VenusRoverRecipes.addVenusRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.VENUS_ROVER, 1, 1), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
 		input2.put(22, new ItemStack(Blocks.CHEST));
 		input2.put(23, new ItemStack(Blocks.CHEST));
-		input2.put(24, null);
+		input2.put(24, ItemStack.EMPTY);
 		VenusRoverRecipes.addVenusRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.VENUS_ROVER, 1, 2), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
 		input2.put(22, new ItemStack(Blocks.CHEST));
-		input2.put(23, null);
+		input2.put(23, ItemStack.EMPTY);
 		input2.put(24, new ItemStack(Blocks.CHEST));
 		VenusRoverRecipes.addVenusRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.VENUS_ROVER, 1, 2), input2));
 
 		input2 = new HashMap<Integer, ItemStack>(input);
-		input2.put(22, null);
+		input2.put(22, ItemStack.EMPTY);
 		input2.put(23, new ItemStack(Blocks.CHEST));
 		input2.put(24, new ItemStack(Blocks.CHEST));
 		VenusRoverRecipes.addVenusRoverRecipe(new NasaWorkbenchRecipe(new ItemStack(ExtraPlanets_Items.VENUS_ROVER, 1, 2), input2));
