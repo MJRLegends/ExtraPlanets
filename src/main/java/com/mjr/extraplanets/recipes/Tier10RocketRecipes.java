@@ -21,7 +21,7 @@ public class Tier10RocketRecipes {
 				return recipe.getRecipeOutput();
 			}
 		}
-		return null;
+		return ItemStack.EMPTY;
 	}
 
 	public static void addTier10RocketRecipe(ItemStack result, HashMap<Integer, ItemStack> input) {

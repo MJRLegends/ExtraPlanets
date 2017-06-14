@@ -22,7 +22,7 @@ public class VenusRoverRecipes {
 				return recipe.getRecipeOutput();
 			}
 		}
-		return null;
+		return ItemStack.EMPTY;
 	}
 
 	public static void addVenusRoverRecipe(ItemStack result, HashMap<Integer, ItemStack> input) {

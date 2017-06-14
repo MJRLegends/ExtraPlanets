@@ -23,7 +23,7 @@ public class MarsRoverRecipes {
 				return recipe.getRecipeOutput();
 			}
 		}
-		return null;
+		return ItemStack.EMPTY;
 	}
 
 	public static void addMarsRoverRecipe(ItemStack result, HashMap<Integer, ItemStack> input) {
