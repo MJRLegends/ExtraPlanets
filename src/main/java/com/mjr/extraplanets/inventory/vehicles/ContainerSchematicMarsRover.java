@@ -70,7 +70,7 @@ public class ContainerSchematicMarsRover extends Container {
 			for (int var2 = 1; var2 < this.craftMatrix.getSizeInventory(); ++var2) {
 				final ItemStack slot = this.craftMatrix.removeStackFromSlot(var2);
 
-				if (slot != null) {
+				if(!slot.isEmpty()) {
 					par1EntityPlayer.entityDropItem(slot, 0.0F);
 				}
 			}

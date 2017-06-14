@@ -92,7 +92,7 @@ public class ContainerSchematicTier5Rocket extends Container
 			{
 				final ItemStack var3 = this.craftMatrix.removeStackFromSlot(var2);
 
-				if (var3 != null)
+				if(!var3.isEmpty())
 				{
 					par1EntityPlayer.entityDropItem(var3, 0.0F);
 				}
