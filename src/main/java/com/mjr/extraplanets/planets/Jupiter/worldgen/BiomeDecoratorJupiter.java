@@ -9,6 +9,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
@@ -45,7 +46,8 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 10, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
 		this.ashRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ASH_ROCK, 5, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 1);
 		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.VOLCANIC_ROCK, 5, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 1);
-		this.skyBlocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 3, 2, false, Blocks.AIR, 0);
+		if (Config.GENERATE_JUITPER_SKY_FEATURE)
+			this.skyBlocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 3, 2, false, Blocks.AIR, 0);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -73,7 +75,8 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.generateOre(10, this.redGemGen, 0, 10);
 		this.generateOre(10, this.ashRockGen, 0, 256);
 		this.generateOre(10, this.volcanicRockGen, 0, 256);
-		this.generateOre(100, this.skyBlocksGen, 63, 256);
+		if (Config.GENERATE_JUITPER_SKY_FEATURE)
+			this.generateOre(25, this.skyBlocksGen, 63, 256);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {

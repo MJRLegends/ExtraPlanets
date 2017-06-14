@@ -13,7 +13,8 @@ public class Config {
 
 	public static boolean GENERATE_URANUS_IGLOOS;
 	public static boolean GENERATE_URANUS_ICE_SPIKES;
-
+	public static boolean GENERATE_JUITPER_SKY_FEATURE;
+	
 	public static boolean ITEMS_CARBON;
 	public static boolean ITEMS_PALLADIUM;
 	public static boolean ITEMS_MAGNESIUM;
@@ -210,7 +211,8 @@ public class Config {
 	public static boolean RADIATION;
 
 	public static boolean ORE_LEAD_GENERATION;
-	
+	public static int ORE_LEAD_GENERATION_AMOUNT;
+
 	public static float MERCURY_DISTANCE_OFFSET;
 	public static float CERES_DISTANCE_OFFSET;
 	public static float JUPITER_DISTANCE_OFFSET;
@@ -298,6 +300,7 @@ public class Config {
 
 		GENERATE_URANUS_IGLOOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
 		GENERATE_URANUS_ICE_SPIKES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
+		GENERATE_JUITPER_SKY_FEATURE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Juitper", true, "Will disable the Sky Feature on Juitper").getBoolean(true);
 
 		CERES = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ceres", true).getBoolean(true);
 
@@ -461,7 +464,8 @@ public class Config {
 		RADIATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable radiation", true, "").getBoolean(true);
 
 		ORE_LEAD_GENERATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable generation of Lead Ore in the Overworld", true, "").getBoolean(true);
-
+		ORE_LEAD_GENERATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Amount of Lead Ore Generation per chunk", 5).getInt();
+		
 		MERCURY_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		CERES_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		JUPITER_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Jupiter Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
