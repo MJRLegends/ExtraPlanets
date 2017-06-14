@@ -8,16 +8,20 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-v0.1.2 Beta Build
-*Fixed Kepler22b log textures on different rotations
-
-*Fixed Kepler22b Red Sand being punchable with hand
 
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+v0.1.2 Beta Build
+*Fixed Kepler22b log textures on different rotations
+
+*Fixed Kepler22b Red Sand being punchable with hand
+*Fixes for issue #108
+*Added some new Config options
+*Made Lead Ingot recipes use ore dict, so other lead ingots can be used too
+
 v0.1.1 Beta Build
 *Fixed crash with some structures
 
