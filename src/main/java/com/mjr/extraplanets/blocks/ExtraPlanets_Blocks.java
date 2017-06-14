@@ -336,7 +336,7 @@ public class ExtraPlanets_Blocks {
 			kepler22bRedGrass = new BlockBasicGrass("kepler22b_red", "kepler22b");
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow", "kepler22b");
 			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22bFlowers");
-			redSand = new BlockSand("redSand");
+			redSand = new BlockSand("redSand").setHardness(0.6F);
 			redSandstone = new BlockBasic(Material.rock).setBlockName("redSandstone").setBlockTextureName(Constants.TEXTURE_PREFIX + "redSandstone").setHardness(2F).setResistance(2F);
 		}
 		advancedLaunchPad = new BlockCustomLandingPad("advancedLaunchPad");
