@@ -14,6 +14,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.1.5 Beta Build
+*Even more fixes for issue #109
+
 v0.1.4 Beta Build
 *More fixes for issue #109
 
