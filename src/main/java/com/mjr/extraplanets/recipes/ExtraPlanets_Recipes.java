@@ -407,8 +407,17 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7) });
 
 			// Fire Bomb
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND, 'Z',
-					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', new ItemStack(ExtraPlanets_Items.INGOT_LEAD) });
+			List<ItemStack> items = OreDictionary.getOres("ingotLead");
+			int count = items.size();
+			for (int j = 0; j <= count; j++) {
+				ItemStack item;
+				if (j == 0)
+					item = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
+				else
+					item = items.get(j - 1);
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND, 'Z',
+						new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', item });
+			}
 
 			if (Config.ITEMS_MAGNESIUM) {
 				// Tools
@@ -785,8 +794,17 @@ public class ExtraPlanets_Recipes {
 		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, 1) });
 
 		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(ExtraPlanets_Items.INGOT_LEAD, 1, 0) });
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.INGOT_LEAD, 1, 0) });
+			List<ItemStack> items = OreDictionary.getOres("ingotLead");
+			int count = items.size();
+			for (int j = 0; j <= count; j++) {
+				ItemStack item;
+				if (j == 0)
+					item = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
+				else
+					item = items.get(j - 1);
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', item });
+				RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', item });
+			}
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
 			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3) });
 		}
