@@ -17,28 +17,28 @@ star.kepler62=Kepler 62 Star
 star.kepler69=Kepler 69 Star
 
 #Planets
-_planet.Mercury=Merkur
-_planet.Ceres=Ceres
-_planet.Jupiter=Jupiter
-_planet.Saturn=Saturn
-_planet.Uranus=Uran
-_planet.Neptune=Neptun
-_planet.Pluto=Pluto
-_planet.Eris=Eris
-_planet.kuiperBelt=Kuiperův pás
-_planet.makemake=Makemake
-_planet.haumea=Haumea
+planet.Mercury=Merkur
+planet.Ceres=Ceres
+planet.Jupiter=Jupiter
+planet.Saturn=Saturn
+planet.Uranus=Uran
+planet.Neptune=Neptun
+planet.Pluto=Pluto
+planet.Eris=Eris
+planet.kuiperBelt=Kuiperův pás
+planet.makemake=Makemake
+planet.haumea=Haumea
 
-_planet.kepler62b=Kepler 62b
-_planet.kepler62c=Kepler 62c
-_planet.kepler62d=Kepler 62d
-_planet.kepler62e=Kepler 62e
-_planet.kepler62f=Kepler 62f
-_planet.kepler22b=Kepler 22b
-_planet.kepler47b=Kepler 47b
-_planet.kepler47c=Kepler 47c
-_planet.kepler69b=Kepler 69b
-_planet.kepler69c=Kepler 69c
+planet.kepler62b=Kepler 62b
+planet.kepler62c=Kepler 62c
+planet.kepler62d=Kepler 62d
+planet.kepler62e=Kepler 62e
+planet.kepler62f=Kepler 62f
+planet.kepler22b=Kepler 22b
+planet.kepler47b=Kepler 47b
+planet.kepler47c=Kepler 47c
+planet.kepler69b=Kepler 69b
+planet.kepler69c=Kepler 69c
 
 #Moons
 moon.triton=Triton
