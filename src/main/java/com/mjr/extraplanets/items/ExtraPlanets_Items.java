@@ -192,7 +192,6 @@ public class ExtraPlanets_Items {
 	public static Item TIER_4_EQUIPMENT_KIT;
 	public static Item TIER_3_EQUIPMENT_KIT;
 	public static Item TIER_5_EQUIPMENT_KIT;
-	public static Item TIER_6_EQUIPMENT_KIT;
 	
 	public static void init() {
 		initializeItems();
@@ -360,7 +359,6 @@ public class ExtraPlanets_Items {
 		TIER_3_EQUIPMENT_KIT = new ItemBasicKit("tier3_kit", 3);
 		TIER_4_EQUIPMENT_KIT = new ItemBasicKit("tier4_kit", 4);
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
-		TIER_6_EQUIPMENT_KIT = new ItemBasicKit("tier6_kit", 6);
 	}
 
 	private static void registerItems() {
@@ -522,7 +520,6 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(TIER_6_EQUIPMENT_KIT, TIER_6_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 
 	}
 
