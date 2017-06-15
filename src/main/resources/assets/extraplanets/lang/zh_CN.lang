@@ -847,6 +847,49 @@ item.potash_shards.name=Potash Shards
 item.anti_radiation.name=Anti-Rad
 anti_radiation.desc=Reduces Radiation Level by 2
 
+#Kits
+item.tier1_kit.full.name=Tier 1 Full Kit
+item.tier1_kit.basicSetup.name=Tier 1 Basic Setup Kit
+item.tier1_kit.withoutOxygenSetup.name=Tier 1 Full Kit without Oxygen
+item.tier1_kit.withoutThermalPadding.name=Tier 1 Full Kit without Thermal Protection
+item.tier1_kit.justOxygenSetup.name=Tier 1 Oxygen Kit
+item.tier1_kit.justProtection.name=Tier 1 Protection Kit
+
+item.tier2_kit.full.name=Tier 2 Full Kit
+item.tier2_kit.basicSetup.name=Tier 2 Basic Setup Kit
+item.tier2_kit.withoutOxygenSetup.name=Tier 2 Full Kit without Oxygen
+item.tier2_kit.withoutThermalPadding.name=Tier 2 Full Kit without Thermal Protection
+item.tier2_kit.justOxygenSetup.name=Tier 2 Oxygen Kit
+item.tier2_kit.justProtection.name=Tier 2 Protection Kit
+
+item.tier3_kit.full.name=Tier 3 Full Kit
+item.tier3_kit.basicSetup.name=Tier 3 Basic Setup Kit
+item.tier3_kit.withoutOxygenSetup.name=Tier 3 Full Kit without Oxygen
+item.tier3_kit.withoutThermalPadding.name=Tier 3 Full Kit without Thermal Protection
+item.tier3_kit.justOxygenSetup.name=Tier 3 Oxygen Kit
+item.tier3_kit.justProtection.name=Tier 3 Protection Kit
+
+item.tier4_kit.full.name=Tier 4 Full Kit
+item.tier4_kit.basicSetup.name=Tier 4 Basic Setup Kit
+item.tier4_kit.withoutOxygenSetup.name=Tier 4 Full Kit without Oxygen
+item.tier4_kit.withoutThermalPadding.name=Tier 4 Full Kit without Thermal Protection
+item.tier4_kit.justOxygenSetup.name=Tier 4 Oxygen Kit
+item.tier4_kit.justProtection.name=Tier 4 Protection Kit
+
+item.tier5_kit.full.name=Tier 5 Full Kit
+item.tier5_kit.basicSetup.name=Tier 5 Basic Setup Kit
+item.tier5_kit.withoutOxygenSetup.name=Tier 5 Full Kit without Oxygen
+item.tier5_kit.withoutThermalPadding.name=Tier 5 Full Kit without Thermal Protection
+item.tier5_kit.justOxygenSetup.name=Tier 5 Oxygen Kit
+item.tier5_kit.justProtection.name=Tier 5 Protection Kit
+
+item.tier6_kit.full.name=Tier 6 Full Kit
+item.tier6_kit.basicSetup.name=Tier 6 Basic Setup Kit
+item.tier6_kit.withoutOxygenSetup.name=Tier 6 Full Kit without Oxygen
+item.tier6_kit.withoutThermalPadding.name=Tier 6 Full Kit without Thermal Protection
+item.tier6_kit.justOxygenSetup.name=Tier 6 Oxygen Kit
+item.tier6_kit.justProtection.name=Tier 6 Protection Kit
+
 #Other Items
 item.apple_diamond.name=钻石苹果
 item.apple_iron.name=Iron Apple
