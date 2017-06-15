@@ -175,7 +175,7 @@ public class ItemBasicKit extends Item {
 				if (gear9 == null) {
 					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10 == null  && this.tier >= 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
@@ -215,7 +215,7 @@ public class ItemBasicKit extends Item {
 				if (gear9 == null) {
 					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10 == null  && this.tier >= 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
@@ -238,7 +238,7 @@ public class ItemBasicKit extends Item {
 				if (gear5 == null) {
 					stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10 == null  && this.tier >= 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
@@ -269,7 +269,7 @@ public class ItemBasicKit extends Item {
 				if (gear9 == null) {
 					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10 == null  && this.tier >= 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
