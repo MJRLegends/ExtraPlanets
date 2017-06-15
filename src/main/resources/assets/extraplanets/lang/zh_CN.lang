@@ -18,6 +18,7 @@ star.kepler62=开普勒62
 star.kepler69=开普勒69
 
 #Planets
+<<<<<<< HEAD
 planet.Mercury=水星
 planet.Ceres=谷神星
 planet.Jupiter=木星
@@ -40,6 +41,30 @@ planet.kepler47b=开普勒47b
 planet.kepler47c=开普勒47c
 planet.kepler69b=开普勒69b
 planet.kepler69c=开普勒69c1
+=======
+_planet.Mercury=水星
+_planet.Ceres=谷神星
+_planet.Jupiter=木星
+_planet.Saturn=土星
+_planet.Uranus=天王星
+_planet.Neptune=海王星
+_planet.Pluto=冥王星
+_planet.Eris=阋神星
+_planet.kuiperBelt=柯伊伯带
+_planet.makemake=鸟神星
+_planet.haumea=Haumea
+
+_planet.kepler62b=开普勒62b
+_planet.kepler62c=开普勒62c
+_planet.kepler62d=开普勒62d
+_planet.kepler62e=开普勒62e
+_planet.kepler62f=开普勒62f
+_planet.kepler22b=开普勒22b
+_planet.kepler47b=开普勒47b
+_planet.kepler47c=开普勒47c
+_planet.kepler69b=开普勒69b
+_planet.kepler69c=开普勒69c
+>>>>>>> e75a4a6... Changed achievements names to lowercase with underscores and not camelCase, Updated lang files
 
 #Moons
 moon.triton=海卫一
@@ -941,59 +966,59 @@ entity.extraplanets.EvolvedRedCreeper.name=红色爬行者(进化体)
 entity.extraplanets.EvolvedPowerSkeleton.name=骷髅(进化体)
 
 #Achievement
-achievement.mercuryPlanet=登陆水星！
-achievement.ceresPlanet=登陆谷神星！
-achievement.jupiterPlanet=登在木星！
-achievement.saturnPlanet=登陆土星！
-achievement.uranusPlanet=登陆天王星！
-achievement.neptunePlanet=登陆海王星！
-achievement.plutoPlanet=登陆冥王星！
-achievement.erisPlanet=登陆阋神星！
-achievement.kepler62bPlanet=Land on Kepler62b!
-achievement.kepler22bPlanet=Land on Kepler22b!
+achievement.mercury_planet=登陆水星！
+achievement.ceres_planet=登陆谷神星！
+achievement.jupiter_planet=登在木星！
+achievement.saturn_planet=登陆土星！
+achievement.uranus_planet=登陆天王星！
+achievement.neptune_planet=登陆海王星！
+achievement.pluto_planet=登陆冥王星！
+achievement.eris_planet=登陆阋神星！
+achievement.kepler62b_planet=Land on Kepler62b!
+achievement.kepler22b_planet=Land on Kepler22b!
 
-achievement.mercuryPlanet.desc=乘坐3阶火箭到水星
-achievement.ceresPlanet.desc=乘坐4阶火箭到谷神星
-achievement.jupiterPlanet.desc=乘坐4阶火箭到木星
-achievement.saturnPlanet.desc=乘坐5阶火箭到土星
-achievement.uranusPlanet.desc=乘坐6阶火箭到天王星
-achievement.neptunePlanet.desc=乘坐7阶火箭到海王星
-achievement.plutoPlanet.desc=乘坐8阶火箭到冥王星
-achievement.erisPlanet.desc=乘坐9阶火箭到阋神星
-achievement.kepler62bPlanet.desc=Take a Tier 10 rocket to Kepler62b
-achievement.kepler22bPlanet.desc=Take a Tier 10 rocket to Kepler22b
+achievement.mercury_planet.desc=乘坐3阶火箭到水星
+achievement.ceres_planet.desc=乘坐4阶火箭到谷神星
+achievement.jupiter_planet.desc=乘坐4阶火箭到木星
+achievement.saturn_planet.desc=乘坐5阶火箭到土星
+achievement.uranus_planet.desc=乘坐6阶火箭到天王星
+achievement.neptune_planet.desc=乘坐7阶火箭到海王星
+achievement.pluto_planet.desc=乘坐8阶火箭到冥王星
+achievement.eris_planet.desc=乘坐9阶火箭到阋神星
+achievement.kepler62b_planet.desc=Take a Tier 10 rocket to Kepler62b
+achievement.kepler22b_planet.desc=Take a Tier 10 rocket to Kepler22b
 
-achievement.mercuryBoss=Defeated Tier 4 Boss!
-achievement.jupiterBoss=击败木星地牢BOSS！
-achievement.saturnBoss=击败土星地牢BOSS！
-achievement.uranusBoss=击败天王星地牢BOSS！
-achievement.neptuneBoss=击败海王星地牢BOSS！
-achievement.plutoBoss=击败冥王星地牢BOSS！
-achievement.erisBoss=Defeated Tier 10 Boss!
+achievement.mercury_boss=Defeated Tier 4 Boss!
+achievement.jupiter_boss=击败木星地牢BOSS！
+achievement.saturn_boss=击败土星地牢BOSS！
+achievement.uranus_boss=击败天王星地牢BOSS！
+achievement.neptune_boss=击败海王星地牢BOSS！
+achievement.pluto_boss=击败冥王星地牢BOSS！
+achievement.eris_boss=Defeated Tier 10 Boss!
 
-achievement.mercuryBoss.desc=Kill the Mercury Dungeon Boss and Open the Treasure Chest
-achievement.jupiterBoss.desc=击杀木星地牢BOSS并开启宝箱！
-achievement.saturnBoss.desc=击杀土星地牢BOSS并开启宝箱！
-achievement.uranusBoss.desc=击杀天王星地牢BOSS并开启宝箱！
-achievement.neptuneBoss.desc=击杀海王星地牢BOSS并开启宝箱！
-achievement.plutoBoss.desc=击杀冥王星地牢BOSS并开启宝箱！
-achievement.erisBoss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
+achievement.mercury_boss.desc=Kill the Mercury Dungeon Boss and Open the Treasure Chest
+achievement.jupiter_boss.desc=击杀木星地牢BOSS并开启宝箱！
+achievement.saturn_boss.desc=击杀土星地牢BOSS并开启宝箱！
+achievement.uranus_boss.desc=击杀天王星地牢BOSS并开启宝箱！
+achievement.neptune_boss.desc=击杀海王星地牢BOSS并开启宝箱！
+achievement.pluto_boss.desc=击杀冥王星地牢BOSS并开启宝箱！
+achievement.eris_boss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest
 
-achievement.craftRocket4=4阶火箭！
-achievement.craftRocket5=5阶火箭！
-achievement.craftRocket6=6阶火箭！
-achievement.craftRocket7=7阶火箭！
-achievement.craftRocket8=8阶火箭！
-achievement.craftRocket9=9阶火箭！
-achievement.craftRocket10=10阶火箭！
+achievement.craft_rocket_4=4阶火箭！
+achievement.craft_rocket_5=5阶火箭！
+achievement.craft_rocket_6=6阶火箭！
+achievement.craft_rocket_7=7阶火箭！
+achievement.craft_rocket_8=8阶火箭！
+achievement.craft_rocket_9=9阶火箭！
+achievement.craft_rocket_10=10阶火箭！
 
-achievement.craftRocket4.desc=制作4阶火箭
-achievement.craftRocket5.desc=制作5阶火箭
-achievement.craftRocket6.desc=制作6阶火箭
-achievement.craftRocket7.desc=制作7阶火箭
-achievement.craftRocket8.desc=制作8阶火箭
-achievement.craftRocket9.desc=制作9阶火箭
-achievement.craftRocket10.desc=制作10阶火箭
+achievement.craft_rocket_4.desc=制作4阶火箭
+achievement.craft_rocket_5.desc=制作5阶火箭
+achievement.craft_rocket_6.desc=制作6阶火箭
+achievement.craft_rocket_7.desc=制作7阶火箭
+achievement.craft_rocket_8.desc=制作8阶火箭
+achievement.craft_rocket_9.desc=制作9阶火箭
+achievement.craft_rocket_10.desc=制作10阶火箭
 
 #Liquids/Fluid
 tile.glowstone.name=萤石水
