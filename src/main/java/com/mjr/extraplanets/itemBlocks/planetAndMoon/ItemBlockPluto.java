@@ -58,7 +58,7 @@ public class ItemBlockPluto extends ItemBlock
 		}
 		case 6:
 		{
-			name = "oreTungsten";
+			name = "ore_tungsten";
 			break;
 		}
 		case 7:
@@ -73,7 +73,7 @@ public class ItemBlockPluto extends ItemBlock
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		default:

@@ -73,12 +73,12 @@ public class ItemBlockMercury extends ItemBlock
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		case 10:
 		{
-			name = "oreCarbon";
+			name = "ore_carbon";
 			break;
 		}
 		case 11:

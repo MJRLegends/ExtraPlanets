@@ -22,27 +22,27 @@ public class ItemBlockKepler22bMapleSapling extends ItemBlock {
 
 		switch (itemstack.getItemDamage()) {
 		case 0: {
-			name = "blueMapleSapling";
+			name = "blue_maple_sapling";
 			break;
 		}
 		case 1: {
-			name = "redMapleSapling";
+			name = "red_maple_sapling";
 			break;
 		}
 		case 2: {
-			name = "purpleMapleSapling";
+			name = "purple_maple_sapling";
 			break;
 		}
 		case 3: {
-			name = "yellowMapleSapling";
+			name = "yellow_maple_sapling";
 			break;
 		}
 		case 4: {
-			name = "greenMapleSapling";
+			name = "green_maple_sapling";
 			break;
 		}
 		case 5: {
-			name = "brownMapleSapling";
+			name = "brown_maple_sapling";
 			break;
 		}
 		default:

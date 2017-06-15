@@ -58,12 +58,12 @@ public class ItemBlockEris extends ItemBlock
 		}
 		case 6:
 		{
-			name = "oreDarkIron";
+			name = "ore_dark_iron";
 			break;
 		}
 		case 7:
 		{
-			name = "darkIron_block";
+			name = "dark_iron_block";
 			break;
 		}
 		case 8:
@@ -73,7 +73,7 @@ public class ItemBlockEris extends ItemBlock
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		default:

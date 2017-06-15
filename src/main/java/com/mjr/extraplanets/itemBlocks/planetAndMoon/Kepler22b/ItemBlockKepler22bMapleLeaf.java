@@ -22,51 +22,51 @@ public class ItemBlockKepler22bMapleLeaf extends ItemBlock {
 
 		switch (itemstack.getItemDamage()) {
 		case 0: {
-			name = "blueMapleLeaf";
+			name = "blue_maple_leaf";
 			break;
 		}
 		case 1: {
-			name = "redMapleLeaf";
+			name = "red_maple_leaf";
 			break;
 		}
 		case 2: {
-			name = "purpleMapleLeaf";
+			name = "purple_maple_leaf";
 			break;
 		}
 		case 3: {
-			name = "yellowMapleLeaf";
+			name = "yellow_maple_leaf";
 			break;
 		}
 		case 4: {
-			name = "greenMapleLeaf";
+			name = "green_maple_leaf";
 			break;
 		}
 		case 5: {
-			name = "brownMapleLeaf";
+			name = "brown_maple_leaf";
 			break;
 		}
 		case 8: {
-			name = "blueMapleLeaf";
+			name = "blue_maple_leaf";
 			break;
 		}
 		case 9: {
-			name = "redMapleLeaf";
+			name = "red_maple_leaf";
 			break;
 		}
 		case 10: {
-			name = "purpleMapleLeaf";
+			name = "purple_maple_leaf";
 			break;
 		}
 		case 11: {
-			name = "yellowMapleLeaf";
+			name = "yellow_maple_leaf";
 			break;
 		}
 		case 12: {
-			name = "greenMapleLeaf";
+			name = "green_maple_leaf";
 			break;
 		}
 		case 13: {
-			name = "brownMapleLeaf";
+			name = "brown_maple_leaf";
 			break;
 		}
 		default:

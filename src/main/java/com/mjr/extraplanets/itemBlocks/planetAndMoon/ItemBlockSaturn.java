@@ -58,7 +58,7 @@ public class ItemBlockSaturn extends ItemBlock
 		}
 		case 6:
 		{
-			name = "oreMagnesium";
+			name = "ore_magnesium";
 			break;
 		}
 		case 7:
@@ -73,7 +73,7 @@ public class ItemBlockSaturn extends ItemBlock
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		default:

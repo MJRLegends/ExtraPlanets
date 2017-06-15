@@ -22,63 +22,63 @@ public class ItemBlockKepler22bTallGrass extends ItemBlock {
 
 		switch (itemstack.getItemDamage()) {
 		case 0: {
-			name = "blueMapleShortGrass";
+			name = "blue_maple_short_grass";
 			break;
 		}
 		case 1: {
-			name = "blueMapleMedGrass";
+			name = "blue_maple_med_grass";
 			break;
 		}
 		case 2: {
-			name = "blueMapleTallGrass";
+			name = "blue_maple_tall_grass";
 			break;
 		}
 		case 3: {
-			name = "redMapleShortGrass";
+			name = "red_maple_short_grass";
 			break;
 		}
 		case 4: {
-			name = "redMapleMedGrass";
+			name = "red_maple_med_grass";
 			break;
 		}
 		case 5: {
-			name = "redMapleTallGrass";
+			name = "red_maple_tall_grass";
 			break;
 		}
 		case 6: {
-			name = "purpleMapleShortGrass";
+			name = "purple_maple_short_grass";
 			break;
 		}
 		case 7: {
-			name = "purpleMapleMedGrass";
+			name = "purple_maple_med_grass";
 			break;
 		}
 		case 8: {
-			name = "purpleMapleTallGrass";
+			name = "purple_maple_tall_grass";
 			break;
 		}
 		case 9: {
-			name = "yellowMapleShortGrass";
+			name = "yellow_maple_short_grass";
 			break;
 		}
 		case 10: {
-			name = "yellowMapleMedGrass";
+			name = "yellow_maple_med_grass";
 			break;
 		}
 		case 11: {
-			name = "yellowMapleTallGrass";
+			name = "yellow_maple_tall_grass";
 			break;
 		}
 		case 12: {
-			name = "greenMapleShortGrass";
+			name = "green_maple_short_grass";
 			break;
 		}
 		case 13: {
-			name = "greenMapleMedGrass";
+			name = "green_maple_med_grass";
 			break;
 		}
 		case 14: {
-			name = "greenMapleTallGrass";
+			name = "green_maple_tall_grass";
 			break;
 		}
 		default:
