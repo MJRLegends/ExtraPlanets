@@ -58,7 +58,7 @@ public class ItemBlockCeres extends ItemBlock
 		}
 		case 6:
 		{
-			name = "oreUranium";
+			name = "ore_uranium";
 			break;
 		}
 		case 7:

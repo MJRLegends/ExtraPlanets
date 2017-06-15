@@ -43,7 +43,7 @@ public class ItemBlockUranus extends ItemBlock
 		}
 		case 3:
 		{
-			name = "oreCrystal";
+			name = "ore_crystal";
 			break;
 		}
 		case 4:
@@ -58,17 +58,17 @@ public class ItemBlockUranus extends ItemBlock
 		}		
 		case 6:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		case 7:
 		{
-			name = "oreWhiteGem";
+			name = "ore_white_gem";
 			break;
 		}
 		case 8:
 		{
-			name = "whiteGem_block";
+			name = "white_gem_block";
 			break;
 		}
 		default:

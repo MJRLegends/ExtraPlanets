@@ -58,7 +58,7 @@ public class ItemBlockNeptune extends ItemBlock
 		}
 		case 6:
 		{
-			name = "oreZinc";
+			name = "ore_zinc";
 			break;
 		}
 		case 7:
@@ -73,17 +73,17 @@ public class ItemBlockNeptune extends ItemBlock
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		case 10:
 		{
-			name = "oreBlueGem";
+			name = "ore_blue_gem";
 			break;
 		}
 		case 11:
 		{
-			name = "blueGem_block";
+			name = "blue_gem_block";
 			break;
 		}
 		default:
