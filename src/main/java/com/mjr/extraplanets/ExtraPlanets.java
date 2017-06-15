@@ -136,13 +136,13 @@ public class ExtraPlanets {
 		@Override
 		public ItemStack getTabIconItem() {
 			if (Config.MERCURY)
-				return new ItemStack(ExtraPlanets_Tools.carbonPickaxe);
+				return new ItemStack(ExtraPlanets_Tools.CARBON_PICKAXE);
 			else if (Config.JUPITER)
-				return new ItemStack(ExtraPlanets_Tools.palladiumPickaxe);
+				return new ItemStack(ExtraPlanets_Tools.PALLADIUM_PICKAXE);
 			else if (Config.SATURN)
-				return new ItemStack(ExtraPlanets_Tools.magnesiumPickaxe);
+				return new ItemStack(ExtraPlanets_Tools.MAGNESIUM_PICKAXE);
 			else if (Config.URANUS)
-				return new ItemStack(ExtraPlanets_Tools.crystalPickaxe);
+				return new ItemStack(ExtraPlanets_Tools.CRYSTAL_PICKAXE);
 			return new ItemStack(GCItems.steelPickaxe);
 		}
 	};

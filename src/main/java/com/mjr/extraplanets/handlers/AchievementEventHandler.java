@@ -25,53 +25,53 @@ public class AchievementEventHandler {
 	@SubscribeEvent
 	public void onCrafting(ItemCraftedEvent event) {
 		if (event.crafting.getItem() instanceof BasicPickaxe) {
-			if (event.crafting.getItem() == ExtraPlanets_Tools.carbonPickaxe) {
+			if (event.crafting.getItem() == ExtraPlanets_Tools.CARBON_PICKAXE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.magnesiumPickaxe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.MAGNESIUM_PICKAXE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.palladiumPickaxe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.PALLADIUM_PICKAXE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.crystalPickaxe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.CRYSTAL_PICKAXE) {
 
 			}
 		} else if (event.crafting.getItem() instanceof BasicAxe) {
-			if (event.crafting.getItem() == ExtraPlanets_Tools.carbonAxe) {
+			if (event.crafting.getItem() == ExtraPlanets_Tools.CARBON_AXE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.magnesiumAxe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.MAGNESIUM_AXE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.palladiumAxe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.PALLADIUM_AXE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.crystalAxe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.CRYSTAL_AXE) {
 
 			}
 		} else if (event.crafting.getItem() instanceof BasicSword) {
-			if (event.crafting.getItem() == ExtraPlanets_Tools.carbonSword) {
+			if (event.crafting.getItem() == ExtraPlanets_Tools.CARBON_SWORD) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.magnesiumSword) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.MAGNESIUM_SWORD) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.palladiumSword) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.PALLADIUM_SWORD) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.crystalSword) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.CRYSTAL_SWORD) {
 
 			}
 		} else if (event.crafting.getItem() instanceof BasicShovel) {
-			if (event.crafting.getItem() == ExtraPlanets_Tools.carbonShovel) {
+			if (event.crafting.getItem() == ExtraPlanets_Tools.CARBON_SHOVEL) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.magnesiumShovel) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.MAGNESIUM_SHOVEL) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.palladiumShovel) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.PALLADIUM_SHOVEL) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.crystalShovel) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.CRYSTAL_SHOVEL) {
 
 			}
 		} else if (event.crafting.getItem() instanceof BasicHoe) {
-			if (event.crafting.getItem() == ExtraPlanets_Tools.carbonHoe) {
+			if (event.crafting.getItem() == ExtraPlanets_Tools.CARBON_HOE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.magnesiumHoe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.MAGNESIUM_HOE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.palladiumHoe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.PALLADIUM_HOE) {
 
-			} else if (event.crafting.getItem() == ExtraPlanets_Tools.crystalHoe) {
+			} else if (event.crafting.getItem() == ExtraPlanets_Tools.CRYSTAL_HOE) {
 
 			}
 		}
