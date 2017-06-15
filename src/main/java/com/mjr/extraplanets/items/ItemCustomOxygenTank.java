@@ -70,12 +70,12 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);
 			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(3);
 
-			if (gear == null) {
+			if (gear.isEmpty()) {
 				stats.getExtendedInventory().setInventorySlotContents(2, itemStackIn.copy());
-				itemStackIn.setCount(0);
-			} else if (gear1 == null) {
+				itemStackIn = ItemStack.EMPTY;
+			} else if (gear1.isEmpty()) {
 				stats.getExtendedInventory().setInventorySlotContents(3, itemStackIn.copy());
-				itemStackIn.setCount(0);
+				itemStackIn = ItemStack.EMPTY;
 			}
 		}
 		return new ActionResult<>(EnumActionResult.PASS, itemStackIn);

@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -49,7 +50,7 @@ public class ItemBasicKit extends Item {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+    public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemBasicKit.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
@@ -71,7 +72,8 @@ public class ItemBasicKit extends Item {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand){
+        ItemStack itemStackIn = player.getHeldItem(hand);
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
 			// Oxygen Setup
@@ -150,139 +152,139 @@ public class ItemBasicKit extends Item {
 			}
 
 			// Basic Kit adding
-			switch (itemStack.getMetadata()) {
+			switch (itemStackIn.getMetadata()) {
 			case 0:
-				if (gear == null) {
+				if (gear.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
 				}
-				if (gear1 == null) {
+				if (gear1.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
 				}
-				if (gear2 == null) {
+				if (gear2.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
 				}
-				if (gear3 == null) {
+				if (gear3.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
 				}
-				if (gear4 == null) {
+				if (gear4.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
 				}
-				if (gear5 == null) {
+				if (gear5.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
 				}
-				if (gear6 == null) {
+				if (gear6.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
 				}
-				if (gear7 == null) {
+				if (gear7.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
 				}
-				if (gear8 == null) {
+				if (gear8.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
 				}
-				if (gear9 == null) {
+				if (gear9.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10.isEmpty() && this.tier == 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
 			case 1:
-				if (gear == null) {
+				if (gear.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
 				}
-				if (gear1 == null) {
+				if (gear1.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
 				}
-				if (gear2 == null) {
+				if (gear2.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
 				}
-				if (gear3 == null) {
+				if (gear3.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
 				}
-				if (gear4 == null) {
+				if (gear4.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
 				}
 				break;
 			case 2:
-				if (gear4 == null) {
+				if (gear4.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
 				}
-				if (gear5 == null) {
+				if (gear5.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
 				}
-				if (gear6 == null) {
+				if (gear6.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
 				}
-				if (gear7 == null) {
+				if (gear7.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
 				}
-				if (gear8 == null) {
+				if (gear8.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
 				}
-				if (gear9 == null) {
+				if (gear9.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10.isEmpty() && this.tier == 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
 			case 3:
-				if (gear == null) {
+				if (gear.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
 				}
-				if (gear1 == null) {
+				if (gear1.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
 				}
-				if (gear2 == null) {
+				if (gear2.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
 				}
-				if (gear3 == null) {
+				if (gear3.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
 				}
-				if (gear4 == null) {
+				if (gear4.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(4, new ItemStack(GCItems.parachute));
 				}
-				if (gear5 == null) {
+				if (gear5.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(5, new ItemStack(GCItems.basicItem, 1, 19));
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10.isEmpty() && this.tier == 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
 			case 4:
-				if (gear == null) {
+				if (gear.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(0, new ItemStack(GCItems.oxMask));
 				}
-				if (gear1 == null) {
+				if (gear1.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(1, new ItemStack(GCItems.oxygenGear));
 				}
-				if (gear2 == null) {
+				if (gear2.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(2, oxygenTank1);
 				}
-				if (gear3 == null) {
+				if (gear3.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(3, oxygenTank2);
 				}
 				break;
 			case 5:
-				if (gear6 == null) {
+				if (gear6.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(6, thermalPadding1);
 				}
-				if (gear7 == null) {
+				if (gear7.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(7, thermalPadding2);
 				}
-				if (gear8 == null) {
+				if (gear8.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(8, thermalPadding3);
 				}
-				if (gear9 == null) {
+				if (gear9.isEmpty()) {
 					stats.getExtendedInventory().setInventorySlotContents(9, thermalPadding4);
 				}
-				if (gear10 == null && this.tier == 2) {
+				if (gear10.isEmpty() && this.tier == 2) {
 					stats.getExtendedInventory().setInventorySlotContents(10, new ItemStack(VenusItems.basicItem, 1, 0));
 				}
 				break;
 			}
-			itemStack.stackSize = 0;
+			itemStackIn = ItemStack.EMPTY;
 		}
-		return new ActionResult<>(EnumActionResult.PASS, itemStack);
+		return new ActionResult<>(EnumActionResult.PASS, itemStackIn);
 	}
 }
