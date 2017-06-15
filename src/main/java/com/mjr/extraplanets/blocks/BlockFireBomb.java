@@ -2,8 +2,6 @@ package com.mjr.extraplanets.blocks;
 
 import javax.annotation.Nullable;
 
-import com.mjr.extraplanets.entities.EntityFireBombPrimed;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -25,6 +23,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 
 public class BlockFireBomb extends Block {
 	public static final PropertyBool EXPLODE = PropertyBool.create("explode");

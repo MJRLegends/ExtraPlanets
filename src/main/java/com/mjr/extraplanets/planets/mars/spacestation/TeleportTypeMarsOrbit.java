@@ -2,14 +2,14 @@ package com.mjr.extraplanets.planets.mars.spacestation;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.Constants;
-
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+
+import com.mjr.extraplanets.Constants;
 
 public class TeleportTypeMarsOrbit implements ITeleportType {
 	@Override

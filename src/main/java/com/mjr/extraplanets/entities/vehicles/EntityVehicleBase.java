@@ -105,7 +105,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	public int getScaledFuelLevel(int i) {
 		final double fuelLevel = this.roverFuelTank.getFluid() == null ? 0 : this.roverFuelTank.getFluid().amount;
 
-		return (int) (fuelLevel * i / this.tankCapacity);
+		return (int) (fuelLevel * i / EntityVehicleBase.tankCapacity);
 	}
 
 	public ModelBase getModel() {
@@ -233,7 +233,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			EntityItem entityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound((NBTTagCompound) item.getTagCompound().copy());
+				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}
@@ -696,11 +696,15 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 
 	public abstract List<ItemStack> getItemsDropped();
 
+	@Override
 	public abstract ItemStack getPickedResult(RayTraceResult target);
 
+	@Override
 	public abstract void setPad(IFuelDock pad);
 
+	@Override
 	public abstract IFuelDock getLandingPad();
 
+	@Override
 	public abstract boolean isDockValid(IFuelDock dock);
 }

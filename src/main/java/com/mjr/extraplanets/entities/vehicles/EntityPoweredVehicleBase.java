@@ -229,7 +229,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			EntityItem entityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound((NBTTagCompound) item.getTagCompound().copy());
+				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}
@@ -709,12 +709,16 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	public abstract List<ItemStack> getItemsDropped();
 
+	@Override
 	public abstract ItemStack getPickedResult(RayTraceResult target);
 
+	@Override
 	public abstract void setPad(IPowerDock pad);
 
+	@Override
 	public abstract IPowerDock getLandingPad();
 
+	@Override
 	public abstract boolean isDockValid(IPowerDock dock);
 
 	public abstract void featureUpdate();

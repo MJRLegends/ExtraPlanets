@@ -104,7 +104,7 @@ public class UltimateFuelLoader extends BlockAdvancedTile implements IShiftDescr
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex();
+		return state.getValue(FACING).getHorizontalIndex();
 	}
 
 	@Override

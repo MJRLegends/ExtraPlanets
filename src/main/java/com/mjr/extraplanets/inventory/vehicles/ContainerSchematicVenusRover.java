@@ -92,7 +92,7 @@ public class ContainerSchematicVenusRover extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
 		ItemStack var2 = null;
-		final Slot slot = (Slot) this.inventorySlots.get(par1);
+		final Slot slot = this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
 
 		if (slot != null && slot.getHasStack()) {
@@ -111,7 +111,7 @@ public class ContainerSchematicVenusRover extends Container {
 				Item i = var4.getItem();
 				if (i == ExtraPlanets_Items.TIER_4_ITEMS || i == ExtraPlanets_Items.ELECTRIC_PARTS || i == GCItems.partBuggy) {
 					for (int j = 1; j < 22; j++) {
-						if (((Slot) this.inventorySlots.get(j)).isItemValid(var4)) {
+						if (this.inventorySlots.get(j).isItemValid(var4)) {
 							this.mergeOneItem(var4, j, j + 1, false);
 						}
 					}
@@ -150,7 +150,7 @@ public class ContainerSchematicVenusRover extends Container {
 			ItemStack slotStack;
 
 			for (int k = par2; k < par3; k++) {
-				slot = (Slot) this.inventorySlots.get(k);
+				slot = this.inventorySlots.get(k);
 				slotStack = slot.getStack();
 
 				if (slotStack == null) {

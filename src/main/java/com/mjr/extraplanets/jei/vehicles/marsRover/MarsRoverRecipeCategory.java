@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.jei.vehicles.marsRover;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
@@ -10,12 +14,8 @@ import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.util.ResourceLocation;
 
-import javax.annotation.Nonnull;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
-
-import java.util.List;
 
 public class MarsRoverRecipeCategory extends BlankRecipeCategory
 {

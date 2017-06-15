@@ -44,6 +44,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 		return ChunkProviderEris.class;
 	}
 
+	@Override
 	public Class<? extends BiomeProvider> getBiomeProviderClass() {
 		return BiomeProviderEris.class;
 	}

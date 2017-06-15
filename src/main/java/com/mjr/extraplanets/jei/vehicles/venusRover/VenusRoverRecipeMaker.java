@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
+
 import com.mjr.extraplanets.recipes.VenusRoverRecipes;
 
 public class VenusRoverRecipeMaker {

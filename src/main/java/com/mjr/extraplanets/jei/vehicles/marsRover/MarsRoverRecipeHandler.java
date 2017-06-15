@@ -2,11 +2,11 @@ package com.mjr.extraplanets.jei.vehicles.marsRover;
 
 import javax.annotation.Nonnull;
 
-import com.mjr.extraplanets.jei.RecipeCategories;
-
 import mezz.jei.api.recipe.IRecipeHandler;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
+
+import com.mjr.extraplanets.jei.RecipeCategories;
 
 public class MarsRoverRecipeHandler implements IRecipeHandler<MarsRoverRecipeWrapper> {
 	@Nonnull
