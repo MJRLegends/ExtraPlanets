@@ -82,38 +82,38 @@ public class AchievementEventHandler {
 		if (event.getSource().getSourceOfDamage() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.getSource().getSourceOfDamage();
 			// if (event.getEntity() instanceof EntityCreeperBossMercury) {
-			// player.addStat(ExtraPlanets_Achievements.mercuryBoss, 1);
+			// player.addStat(ExtraPlanets_Achievements.mercury_boss, 1);
 			// }
 			// else
 			if (event.getEntity() instanceof EntityEvolvedMagmaCubeBoss) {
-				player.addStat(ExtraPlanets_Achievements.mercuryBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.mercury_boss, 1);
 			}
 			// else if (event.getEntity() instanceof EntityCreeperBossJupiter) {
-			// player.addStat(ExtraPlanets_Achievements.jupiterBoss, 1);
+			// player.addStat(ExtraPlanets_Achievements.jupiter_boss, 1);
 			// }
 			// else if (event.getEntity() instanceof EntityCreeperBossSaturn) {
-			// player.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
+			// player.addStat(ExtraPlanets_Achievements.saturn_boss, 1);
 			// }
 			else if (event.getEntity() instanceof EntityEvolvedGhastBoss) {
-				player.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.saturn_boss, 1);
 			}
 			// else if (event.getEntity() instanceof EntityCreeperBossJupiter) {
-			// player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
+			// player.addStat(ExtraPlanets_Achievements.uranus_boss, 1);
 			// }
 			else if (event.getEntity() instanceof EntityEvolvedIceSlimeBoss) {
-				player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.uranus_boss, 1);
 			}
 			// else if (event.getEntity() instanceof EntityCreeperBossNeptune) {
-			// player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
+			// player.addStat(ExtraPlanets_Achievements.neptune_boss, 1);
 			// }
 			else if (event.getEntity() instanceof EntityEvolvedSnowmanBoss) {
-				player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.neptune_boss, 1);
 			}
 			// else if (event.getEntity() instanceof EntityCreeperBossPluto) {
-			// player.addStat(ExtraPlanets_Achievements.plutoBoss, 1);
+			// player.addStat(ExtraPlanets_Achievements.pluto_boss, 1);
 			// }
 			// else if (event.getEntity() instanceof EntityCreeperBossEris) {
-			// player.addStat(ExtraPlanets_Achievements.erisBoss, 1);
+			// player.addStat(ExtraPlanets_Achievements.eris_boss, 1);
 			// }
 		}
 	}
@@ -121,38 +121,38 @@ public class AchievementEventHandler {
 	@SubscribeEvent
 	public void onCraftingRockets(EntityItemPickupEvent event) {
 		if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_4_ROCKET)
-			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket4, 1);
+			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craft_rocket_4, 1);
 		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_5_ROCKET)
-			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket5, 1);
+			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craft_rocket_5, 1);
 		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_6_ROCKET)
-			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket6, 1);
+			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craft_rocket_6, 1);
 		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_7_ROCKET)
-			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket7, 1);
+			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craft_rocket_7, 1);
 		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_8_ROCKET)
-			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket8, 1);
+			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craft_rocket_8, 1);
 		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_9_ROCKET)
-			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket9, 1);
+			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craft_rocket_9, 1);
 		else if (event.getItem().getEntityItem().getItem() == ExtraPlanets_Items.TIER_10_ROCKET)
-			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craftRocket10, 1);
+			event.getEntityPlayer().addStat(ExtraPlanets_Achievements.craft_rocket_10, 1);
 	}
 
 	@SubscribeEvent
 	public void onDimensionChange(PlayerChangedDimensionEvent event) {
 		if (event.toDim == Config.MERCURY_ID)
-			event.player.addStat(ExtraPlanets_Achievements.mercuryPlanet, 1);
+			event.player.addStat(ExtraPlanets_Achievements.mercury_planet, 1);
 		else if (event.toDim == Config.CERES_ID)
-			event.player.addStat(ExtraPlanets_Achievements.ceresPlanet, 1);
+			event.player.addStat(ExtraPlanets_Achievements.ceres_planet, 1);
 		else if (event.toDim == Config.JUPITER_ID)
-			event.player.addStat(ExtraPlanets_Achievements.jupiterPlanet, 1);
+			event.player.addStat(ExtraPlanets_Achievements.jupiter_planet, 1);
 		else if (event.toDim == Config.SATURN_ID)
-			event.player.addStat(ExtraPlanets_Achievements.saturnPlanet, 1);
+			event.player.addStat(ExtraPlanets_Achievements.saturn_planet, 1);
 		else if (event.toDim == Config.URANUS_ID)
-			event.player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
+			event.player.addStat(ExtraPlanets_Achievements.uranus_boss, 1);
 		else if (event.toDim == Config.NEPTUNE_ID)
-			event.player.addStat(ExtraPlanets_Achievements.neptunePlanet, 1);
+			event.player.addStat(ExtraPlanets_Achievements.neptune_planet, 1);
 		else if (event.toDim == Config.PLUTO_ID)
-			event.player.addStat(ExtraPlanets_Achievements.plutoPlanet, 1);
+			event.player.addStat(ExtraPlanets_Achievements.pluto_planet, 1);
 		else if (event.toDim == Config.ERIS_ID)
-			event.player.addStat(ExtraPlanets_Achievements.erisPlanet, 1);
+			event.player.addStat(ExtraPlanets_Achievements.eris_planet, 1);
 	}
 }
