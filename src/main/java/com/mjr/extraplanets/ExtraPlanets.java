@@ -159,13 +159,13 @@ public class ExtraPlanets {
 		@Override
 		public Item getTabIconItem() {
 			if (Config.MERCURY)
-				return ExtraPlanets_Tools.carbonPickaxe;
+				return ExtraPlanets_Tools.CARBON_PICKAXE;
 			else if (Config.JUPITER)
-				return ExtraPlanets_Tools.palladiumPickaxe;
+				return ExtraPlanets_Tools.PALLADIUM_PICKAXE;
 			else if (Config.SATURN)
-				return ExtraPlanets_Tools.magnesiumPickaxe;
+				return ExtraPlanets_Tools.MAGNESIUM_PICKAXE;
 			else if (Config.URANUS)
-				return ExtraPlanets_Tools.crystalPickaxe;
+				return ExtraPlanets_Tools.CRYSTAL_PICKAXE;
 			return GCItems.steelPickaxe;
 		}
 	};
