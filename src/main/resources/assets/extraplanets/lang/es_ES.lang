@@ -881,13 +881,6 @@ item.tier5_kit.withoutThermalPadding.name=Tier 5 Full Kit without Thermal Protec
 item.tier5_kit.justOxygenSetup.name=Tier 5 Oxygen Kit
 item.tier5_kit.justProtection.name=Tier 5 Protection Kit
 
-item.tier6_kit.full.name=Tier 6 Full Kit
-item.tier6_kit.basicSetup.name=Tier 6 Basic Setup Kit
-item.tier6_kit.withoutOxygenSetup.name=Tier 6 Full Kit without Oxygen
-item.tier6_kit.withoutThermalPadding.name=Tier 6 Full Kit without Thermal Protection
-item.tier6_kit.justOxygenSetup.name=Tier 6 Oxygen Kit
-item.tier6_kit.justProtection.name=Tier 6 Protection Kit
-
 #Other Items
 item.apple_diamond.name=Manzana de diamante
 item.apple_iron.name=Iron Apple
