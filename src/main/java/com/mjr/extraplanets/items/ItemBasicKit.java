@@ -142,13 +142,6 @@ public class ItemBasicKit extends Item {
 				thermalPadding4 = new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3);
 				oxygenTank1 = new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY);
 				oxygenTank2 = new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY);
-			} else if (this.tier == 6) {
-				thermalPadding1 = new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0);
-				thermalPadding2 = new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1);
-				thermalPadding3 = new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2);
-				thermalPadding4 = new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3);
-				oxygenTank1 = new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY);
-				oxygenTank2 = new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY);
 			}
 
 			// Basic Kit adding
