@@ -3,11 +3,9 @@ package com.mjr.extraplanets.inventory.vehicles;
 import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
 
 public class InventoryVenusRover implements IInventoryDefaults {
 	private final NonNullList<ItemStack> stackList;

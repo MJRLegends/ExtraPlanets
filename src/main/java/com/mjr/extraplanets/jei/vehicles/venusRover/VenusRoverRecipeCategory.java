@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.jei.vehicles.venusRover;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.IGuiHelper;

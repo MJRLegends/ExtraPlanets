@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.inventory.vehicles;
 
-import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.inventory.SlotRocketBenchResult;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -14,7 +13,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.recipes.VenusRoverRecipes;
 
 public class ContainerSchematicVenusRover extends Container {

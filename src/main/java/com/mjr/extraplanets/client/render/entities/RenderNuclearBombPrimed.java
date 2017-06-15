@@ -25,13 +25,14 @@ public class RenderNuclearBombPrimed extends Render<EntityNuclearBombPrimed> {
 	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends
 	 * Entity>) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doe
 	 */
+	@Override
 	public void doRender(EntityNuclearBombPrimed entity, double x, double y, double z, float entityYaw, float partialTicks) {
 		BlockRendererDispatcher blockrendererdispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
 		GlStateManager.pushMatrix();
 		GlStateManager.translate((float) x, (float) y + 0.5F, (float) z);
 
-		if ((float) entity.fuse - partialTicks + 1.0F < 10.0F) {
-			float f = 1.0F - ((float) entity.fuse - partialTicks + 1.0F) / 10.0F;
+		if (entity.fuse - partialTicks + 1.0F < 10.0F) {
+			float f = 1.0F - (entity.fuse - partialTicks + 1.0F) / 10.0F;
 			f = MathHelper.clamp(f, 0.0F, 1.0F);
 			f = f * f;
 			f = f * f;
@@ -39,7 +40,7 @@ public class RenderNuclearBombPrimed extends Render<EntityNuclearBombPrimed> {
 			GlStateManager.scale(f1, f1, f1);
 		}
 
-		float f2 = (1.0F - ((float) entity.fuse - partialTicks + 1.0F) / 100.0F) * 0.8F;
+		float f2 = (1.0F - (entity.fuse - partialTicks + 1.0F) / 100.0F) * 0.8F;
 		this.bindEntityTexture(entity);
 		GlStateManager.translate(-0.5F, -0.5F, 0.5F);
 		blockrendererdispatcher.renderBlockBrightness(ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), entity.getBrightness(partialTicks));
@@ -69,6 +70,7 @@ public class RenderNuclearBombPrimed extends Render<EntityNuclearBombPrimed> {
 	/**
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
+	@Override
 	protected ResourceLocation getEntityTexture(EntityNuclearBombPrimed entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}

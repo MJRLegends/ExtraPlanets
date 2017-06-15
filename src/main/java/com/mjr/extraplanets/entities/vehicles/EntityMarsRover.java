@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.RayTraceResult;
@@ -13,7 +12,6 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPad;
-import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPadSingle;
 
 public class EntityMarsRover extends EntityPoweredVehicleBase implements IInventoryDefaults {
 	public float targetAngle;
@@ -32,6 +30,7 @@ public class EntityMarsRover extends EntityPoweredVehicleBase implements IInvent
 		return "MarsRover";
 	}
 
+	@Override
 	public List<ItemStack> getItemsDropped() {
 		final List<ItemStack> items = new ArrayList<ItemStack>();
 

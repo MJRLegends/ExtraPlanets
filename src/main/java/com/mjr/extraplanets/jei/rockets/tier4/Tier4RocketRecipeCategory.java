@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.jei.rockets.tier4;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.IGuiHelper;
