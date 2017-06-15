@@ -186,7 +186,14 @@ public class ExtraPlanets_Items {
 	public static Item VENUS_ROVER_SCHEMATIC;
 
 	public static Item ELECTRIC_PARTS;
-
+	
+	public static Item TIER_1_EQUIPMENT_KIT;
+	public static Item TIER_2_EQUIPMENT_KIT;
+	public static Item TIER_4_EQUIPMENT_KIT;
+	public static Item TIER_3_EQUIPMENT_KIT;
+	public static Item TIER_5_EQUIPMENT_KIT;
+	public static Item TIER_6_EQUIPMENT_KIT;
+	
 	public static void init() {
 		initializeItems();
 		registerItems();
@@ -347,6 +354,13 @@ public class ExtraPlanets_Items {
 		INGOT_LEAD = new ItemBasicItem("ingot_lead");
 		CLOTH = new ItemBasicItem("cloth");
 		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
+		
+		TIER_1_EQUIPMENT_KIT = new ItemBasicKit("tier1_kit", 1);
+		TIER_2_EQUIPMENT_KIT = new ItemBasicKit("tier2_kit", 2);
+		TIER_3_EQUIPMENT_KIT = new ItemBasicKit("tier3_kit", 3);
+		TIER_4_EQUIPMENT_KIT = new ItemBasicKit("tier4_kit", 4);
+		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
+		TIER_6_EQUIPMENT_KIT = new ItemBasicKit("tier6_kit", 6);
 	}
 
 	private static void registerItems() {
@@ -502,6 +516,14 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
 		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
 		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
+		
+		RegisterHelper.registerItem(TIER_1_EQUIPMENT_KIT, TIER_1_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(TIER_2_EQUIPMENT_KIT, TIER_2_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(TIER_6_EQUIPMENT_KIT, TIER_6_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+
 	}
 
 	private static void registerFluidContainer() {
