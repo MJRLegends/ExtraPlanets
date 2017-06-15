@@ -26,7 +26,7 @@ public class ItemBlockTitania extends ItemBlock {
 			break;
 		}
 		case 1: {
-			name = "subSurface";
+			name = "sub_surface";
 			break;
 		}
 		case 2: {
@@ -34,15 +34,15 @@ public class ItemBlockTitania extends ItemBlock {
 			break;
 		}
 		case 3: {
-			name = "oreIron";
+			name = "ore_iron";
 			break;
 		}
 		case 4: {
-			name = "oreTin";
+			name = "ore_tin";
 			break;
 		}
 		case 5: {
-			name = "oreCopper";
+			name = "ore_copper";
 			break;
 		}
 		default:

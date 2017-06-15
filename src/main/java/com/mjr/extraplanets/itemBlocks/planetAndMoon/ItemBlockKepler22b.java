@@ -38,17 +38,17 @@ public class ItemBlockKepler22b extends ItemBlock
 		}
 		case 2:
 		{
-			name = "OreIron";
+			name = "ore_iron";
 			break;
 		}
 		case 3:
 		{
-			name = "OreTin";
+			name = "ore_tin";
 			break;
 		}
 		case 4:
 		{
-			name = "OreCopper";
+			name = "ore_copper";
 			break;
 		}
 		case 5:
@@ -83,7 +83,7 @@ public class ItemBlockKepler22b extends ItemBlock
 		}
 		case 11:
 		{
-			name = "StoneBricks";
+			name = "stone_bricks";
 			break;
 		}
 		case 12:
