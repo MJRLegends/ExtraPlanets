@@ -42,6 +42,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.7.8
+*Fixed recipe issue/crash
+
 v1.7.7
 *Fixed issue #110
 
