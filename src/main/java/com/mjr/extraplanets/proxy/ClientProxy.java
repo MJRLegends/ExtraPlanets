@@ -128,6 +128,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.ItemBasicKit;
 import com.mjr.extraplanets.items.ItemCannedFood;
 import com.mjr.extraplanets.items.ItemElectricParts;
 import com.mjr.extraplanets.items.ItemWafers;
@@ -285,6 +286,12 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks2", "white_block", "red_block");
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
 			ClientUtilities.addExtraPlanetsVariants("electric_parts", "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2");
+		ClientUtilities.addExtraPlanetsVariants("tier1_kit", "tier1_kitfull", "tier1_kitbasicSetup", "tier1_kitwithoutOxygenSetup", "tier1_kitwithoutThermalPadding", "tier1_kitjustOxygenSetup", "tier1_kitjustProtection");
+		ClientUtilities.addExtraPlanetsVariants("tier2_kit", "tier2_kitfull", "tier2_kitbasicSetup", "tier2_kitwithoutOxygenSetup", "tier2_kitwithoutThermalPadding", "tier2_kitjustOxygenSetup", "tier2_kitjustProtection");
+		ClientUtilities.addExtraPlanetsVariants("tier3_kit", "tier3_kitfull", "tier3_kitbasicSetup", "tier3_kitwithoutOxygenSetup", "tier3_kitwithoutThermalPadding", "tier3_kitjustOxygenSetup", "tier3_kitjustProtection");
+		ClientUtilities.addExtraPlanetsVariants("tier4_kit", "tier4_kitfull", "tier4_kitbasicSetup", "tier4_kitwithoutOxygenSetup", "tier4_kitwithoutThermalPadding", "tier4_kitjustOxygenSetup", "tier4_kitjustProtection");
+		ClientUtilities.addExtraPlanetsVariants("tier5_kit", "tier5_kitfull", "tier5_kitbasicSetup", "tier5_kitwithoutOxygenSetup", "tier5_kitwithoutThermalPadding", "tier5_kitjustOxygenSetup", "tier5_kitjustProtection");
+
 	}
 
 	private void registerEntityRenders() {
@@ -1032,6 +1039,22 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_METHANE);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_NITROGEN_ICE);
 
+		for (int i = 0; i < ItemBasicKit.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, i, "tier1_kit" + ItemBasicKit.names[i]);
+		}
+		for (int i = 0; i < ItemBasicKit.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, i, "tier2_kit" + ItemBasicKit.names[i]);
+		}
+		for (int i = 0; i < ItemBasicKit.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, i, "tier3_kit" + ItemBasicKit.names[i]);
+		}
+		for (int i = 0; i < ItemBasicKit.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, i, "tier4_kit" + ItemBasicKit.names[i]);
+		}
+		for (int i = 0; i < ItemBasicKit.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, i, "tier5_kit" + ItemBasicKit.names[i]);
+		}
+		
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
 			for (int i = 0; i < ItemElectricParts.names.length; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, i, ItemElectricParts.names[i]);
