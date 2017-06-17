@@ -157,11 +157,6 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	}
 
 	@Override
-	public boolean isVisuallyOpaque() {
-		return false;
-	}
-
-	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		IBlockState state = world.getBlockState(pos);
 		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, ((BlockKepler22bMapleTreeLeaves2.EnumType) state.getValue(VARIANT)).getMetadata())));
