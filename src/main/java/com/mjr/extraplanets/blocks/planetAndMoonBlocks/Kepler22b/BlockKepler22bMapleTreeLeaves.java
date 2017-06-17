@@ -1,6 +1,11 @@
 package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
 import java.util.List;
+import java.util.Random;
+
+import javax.annotation.Nullable;
+
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.MapColor;
@@ -163,4 +168,11 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	public net.minecraft.block.BlockPlanks.EnumType getWoodType(int meta) {
 		return null;
 	}
+	
+	@Override
+	@Nullable
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
+        return Item.getItemFromBlock(ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING);
+    }
 }
