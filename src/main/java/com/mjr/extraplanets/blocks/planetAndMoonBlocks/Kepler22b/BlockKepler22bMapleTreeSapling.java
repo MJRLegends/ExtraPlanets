@@ -143,10 +143,10 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 			worldgenerator = new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(3), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(3), false);
 			break;
 		case MAPLE_GREEN:
-			worldgenerator = new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(4), false);
+			worldgenerator = new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf2.getStateFromMeta(0), false);
 			break;
 		case MAPLE_BROWN:
-			worldgenerator = new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(5), false);
+			worldgenerator = new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf2.getStateFromMeta(1), false);
 			break;
 		}
 		worldIn.setBlockToAir(pos);

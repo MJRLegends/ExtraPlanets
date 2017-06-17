@@ -55,6 +55,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bPlanks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves2;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog2;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
@@ -230,7 +231,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("kepler22bPlanks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLogs2", "maple_green_log", "maple_brown_log");
-			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleLeaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf", "maple_green_leaf", "maple_brown_leaf");
+			ClientUtilities.addExtraPlanetsVariants("kepler22bNewMapleLeaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf");
+			ClientUtilities.addExtraPlanetsVariants("kepler22bNewMapleLeaves2", "maple_green_leaf", "maple_brown_leaf");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bMapleSaplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
 			ClientUtilities.addExtraPlanetsVariants("kepler22bFlowers", "maple_blue_short", "maple_blue_med", "maple_blue_tall", "maple_red_short", "maple_red_med", "maple_red_tall", "maple_purple_short", "maple_purple_med", "maple_purple_tall",
 					"maple_yellow_short", "maple_yellow_med", "maple_yellow_tall", "maple_green_short", "maple_green_med", "maple_green_tall");
@@ -439,6 +441,9 @@ public class ClientProxy extends CommonProxy {
 			}
 			for (BlockKepler22bMapleTreeLeaves.EnumType blockBasic : BlockKepler22bMapleTreeLeaves.EnumType.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleLeaf, blockBasic.getMetadata(), blockBasic.getName());
+			}
+			for (BlockKepler22bMapleTreeLeaves2.EnumType blockBasic : BlockKepler22bMapleTreeLeaves2.EnumType.values()) {
+				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleLeaf2, blockBasic.getMetadata(), blockBasic.getName());
 			}
 			for (BlockKepler22bMapleTreeSapling.EnumType blockBasic : BlockKepler22bMapleTreeSapling.EnumType.values()) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.kepler22bMapleSapling, blockBasic.getMetadata(), blockBasic.getName());

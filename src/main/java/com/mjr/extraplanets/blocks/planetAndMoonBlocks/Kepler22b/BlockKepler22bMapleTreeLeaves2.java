@@ -29,13 +29,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
-	public static final PropertyEnum<BlockKepler22bMapleTreeLeaves.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLeaves.EnumType> create("variant", BlockKepler22bMapleTreeLeaves.EnumType.class);
+public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
+	public static final PropertyEnum<BlockKepler22bMapleTreeLeaves2.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLeaves2.EnumType> create("variant", BlockKepler22bMapleTreeLeaves2.EnumType.class);
 
 	public static enum EnumType implements IStringSerializable {
-		MAPLE_BLUE(0, "maple_blue_leaf", MapColor.blueColor), MAPLE_RED(1, "maple_red_leaf", MapColor.redColor), MAPLE_PURPLE(2, "maple_purple_leaf", MapColor.purpleColor), MAPLE_YELLOW(3, "maple_yellow_leaf", MapColor.yellowColor);
+		MAPLE_GREEN(0, "maple_green_leaf", MapColor.greenColor), MAPLE_BROWN(1, "maple_brown_leaf", MapColor.brownColor);
 
-		private static final BlockKepler22bMapleTreeLeaves.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeLeaves.EnumType[values().length];
+		private static final BlockKepler22bMapleTreeLeaves2.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeLeaves2.EnumType[values().length];
 		private final int meta;
 		private final String name;
 		private final String unlocalizedName;
@@ -64,7 +64,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 			return this.name;
 		}
 
-		public static BlockKepler22bMapleTreeLeaves.EnumType byMetadata(int meta) {
+		public static BlockKepler22bMapleTreeLeaves2.EnumType byMetadata(int meta) {
 			if (meta < 0 || meta >= META_LOOKUP.length) {
 				meta = 0;
 			}
@@ -81,14 +81,14 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 		}
 
 		static {
-			for (BlockKepler22bMapleTreeLeaves.EnumType blockleafs$enumtype : values()) {
+			for (BlockKepler22bMapleTreeLeaves2.EnumType blockleafs$enumtype : values()) {
 				META_LOOKUP[blockleafs$enumtype.getMetadata()] = blockleafs$enumtype;
 			}
 		}
 	}
 
-	public BlockKepler22bMapleTreeLeaves() {
-		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_BLUE).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
+	public BlockKepler22bMapleTreeLeaves2() {
+		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_GREEN).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
 	}
 
 	@Override
@@ -118,14 +118,12 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	 */
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_BLUE.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_RED.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_PURPLE.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_YELLOW.getMetadata()));
+		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_GREEN.getMetadata()));
+		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_BROWN.getMetadata()));
 	}
 
 	protected ItemStack createStackedBlock(IBlockState state) {
-		return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata());
+		return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockKepler22bMapleTreeLeaves2.EnumType) state.getValue(VARIANT)).getMetadata());
 	}
 
 	/**
@@ -140,7 +138,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	 */
 	public int getMetaFromState(IBlockState state) {
 		int i = 0;
-		i = i | ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata();
+		i = i | ((BlockKepler22bMapleTreeLeaves2.EnumType) state.getValue(VARIANT)).getMetadata();
 
 		if (!((Boolean) state.getValue(DECAYABLE)).booleanValue()) {
 			i |= 4;
@@ -161,7 +159,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
 	 */
 	public int damageDropped(IBlockState state) {
-		return ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata();
+		return ((BlockKepler22bMapleTreeLeaves2.EnumType) state.getValue(VARIANT)).getMetadata();
 	}
 
 	@Override
@@ -196,7 +194,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		IBlockState state = world.getBlockState(pos);
-		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata())));
+		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, ((BlockKepler22bMapleTreeLeaves2.EnumType) state.getValue(VARIANT)).getMetadata())));
 	}
 
 	@Override

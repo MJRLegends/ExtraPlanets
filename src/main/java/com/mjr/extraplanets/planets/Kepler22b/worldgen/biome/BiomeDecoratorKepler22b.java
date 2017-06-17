@@ -88,12 +88,12 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		for (int i = 0; i < greenTreesPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(4), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf2.getStateFromMeta(0), false).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < brownTreesPerChunk; i++) {
 			BlockPos blockpos = this.currentWorld.getHeight(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 			blockpos = blockpos.add(this.randomGenerator.nextInt(8), 0, this.randomGenerator.nextInt(8));
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(5), false).generate(this.currentWorld, this.randomGenerator, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(1), ExtraPlanets_Blocks.kepler22bMapleLeaf2.getStateFromMeta(1), false).generate(this.currentWorld, this.randomGenerator, blockpos);
 		}
 		for (int i = 0; i < 1; i++) {
 			int x = this.field_180294_c.getX() + this.randomGenerator.nextInt(16) + 8;
