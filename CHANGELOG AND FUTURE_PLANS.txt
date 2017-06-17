@@ -42,6 +42,13 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.7.7
+*Fixed issue #110
+
+*Fixed issue of being unable to grow Kepler22b Marple Green and Brown Saplings
+*Changes for all Kepler22b Leaves (Will remove old ones due to a complete change)
+*Updated lang files
+
 v1.7.6
 *Fixed Kepler22b Red Sand being punchable with hand
 *Fixes for issue #108
