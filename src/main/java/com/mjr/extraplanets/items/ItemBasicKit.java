@@ -25,7 +25,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 public class ItemBasicKit extends Item {
 	public int tier;
 
-	public static final String[] names = { "full", "basicSetup", "withoutOxygenSetup", "withoutThermalPadding", "justOxygenSetup", "justProtection" };
+	public static final String[] names = { "full", "basic_setup", "without_oxygen_setup", "without_thermal_padding", "just_oxygen_setup", "just_protection" };
 
 	public ItemBasicKit(String assetName, int tier) {
 		super();

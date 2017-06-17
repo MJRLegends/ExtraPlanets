@@ -286,11 +286,11 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks2", "white_block", "red_block");
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
 			ClientUtilities.addExtraPlanetsVariants("electric_parts", "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2");
-		ClientUtilities.addExtraPlanetsVariants("tier1_kit", "tier1_kitfull", "tier1_kitbasicSetup", "tier1_kitwithoutOxygenSetup", "tier1_kitwithoutThermalPadding", "tier1_kitjustOxygenSetup", "tier1_kitjustProtection");
-		ClientUtilities.addExtraPlanetsVariants("tier2_kit", "tier2_kitfull", "tier2_kitbasicSetup", "tier2_kitwithoutOxygenSetup", "tier2_kitwithoutThermalPadding", "tier2_kitjustOxygenSetup", "tier2_kitjustProtection");
-		ClientUtilities.addExtraPlanetsVariants("tier3_kit", "tier3_kitfull", "tier3_kitbasicSetup", "tier3_kitwithoutOxygenSetup", "tier3_kitwithoutThermalPadding", "tier3_kitjustOxygenSetup", "tier3_kitjustProtection");
-		ClientUtilities.addExtraPlanetsVariants("tier4_kit", "tier4_kitfull", "tier4_kitbasicSetup", "tier4_kitwithoutOxygenSetup", "tier4_kitwithoutThermalPadding", "tier4_kitjustOxygenSetup", "tier4_kitjustProtection");
-		ClientUtilities.addExtraPlanetsVariants("tier5_kit", "tier5_kitfull", "tier5_kitbasicSetup", "tier5_kitwithoutOxygenSetup", "tier5_kitwithoutThermalPadding", "tier5_kitjustOxygenSetup", "tier5_kitjustProtection");
+		ClientUtilities.addExtraPlanetsVariants("tier1_kit", "tier1_kitfull", "tier1_kitbasic_setup", "tier1_kitwithout_oxygen_setup", "tier1_kitwithout_thermal_padding", "tier1_kitjust_oxygen_setup", "tier1_kitjust_protection");
+		ClientUtilities.addExtraPlanetsVariants("tier2_kit", "tier2_kitfull", "tier2_kitbasic_setup", "tier2_kitwithout_oxygen_setup", "tier2_kitwithout_thermal_padding", "tier2_kitjust_oxygen_setup", "tier2_kitjust_protection");
+		ClientUtilities.addExtraPlanetsVariants("tier3_kit", "tier3_kitfull", "tier3_kitbasic_setup", "tier3_kitwithout_oxygen_setup", "tier3_kitwithout_thermal_padding", "tier3_kitjust_oxygen_setup", "tier3_kitjust_protection");
+		ClientUtilities.addExtraPlanetsVariants("tier4_kit", "tier4_kitfull", "tier4_kitbasic_setup", "tier4_kitwithout_oxygen_setup", "tier4_kitwithout_thermal_padding", "tier4_kitjust_oxygen_setup", "tier4_kitjust_protection");
+		ClientUtilities.addExtraPlanetsVariants("tier5_kit", "tier5_kitfull", "tier5_kitbasic_setup", "tier5_kitwithout_oxygen_setup", "tier5_kitwithout_thermal_padding", "tier5_kitjust_oxygen_setup", "tier5_kitjust_protection");
 
 	}
 
