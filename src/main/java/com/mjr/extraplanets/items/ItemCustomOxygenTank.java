@@ -3,7 +3,7 @@ package com.mjr.extraplanets.items;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
-import micdoodle8.mods.galacticraft.core.items.ISortableItem;
+import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
@@ -19,9 +19,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class ItemOxygenTank extends Item implements ISortableItem {
-	public ItemOxygenTank(int tier, String assetName) {
-		super();
+public class ItemCustomOxygenTank extends ItemOxygenTank {
+	public ItemCustomOxygenTank(int tier, String assetName) {
+		super(tier, assetName);
 		this.setMaxStackSize(1);
 		this.setMaxDamage(tier * 1800);
 		this.setUnlocalizedName(assetName);
@@ -47,7 +47,6 @@ public class ItemOxygenTank extends Item implements ISortableItem {
 		return ClientProxyCore.galacticraftItem;
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List<String> tooltip, boolean b) {
 		tooltip.add(GCCoreUtil.translate("gui.tank.oxygen_remaining") + ": " + (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()));
