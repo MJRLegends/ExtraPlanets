@@ -79,7 +79,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 
 	@Override
 	public int damageDropped(int meta) {
-		return meta & 6;
+		return meta & 3;
 	}
 
 	@Override
@@ -310,5 +310,4 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 			world.spawnParticle("dripWater", d0, d1, d2, 0.0D, 0.0D, 0.0D);
 		}
 	}
-
 }
