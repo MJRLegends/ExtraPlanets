@@ -36,8 +36,8 @@ public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 
-		this.getBiomeDecorator().brownTreesPerChunk = 5;
-		this.getBiomeDecorator().greenTreesPerChunk = 5;
+		this.getBiomeDecorator().brownTreesPerChunk = 3;
+		this.getBiomeDecorator().greenTreesPerChunk = 3;
 		this.getBiomeDecorator().greenShortGrassPerChunk = 90;
 		this.getBiomeDecorator().greenMedGrassPerChunk = 90;
 		this.getBiomeDecorator().greenTallGrassPerChunk = 90;
