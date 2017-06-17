@@ -14,6 +14,22 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.1.6 Beta Build
+*Fixed recipe issue/crash
+*Added Tier 1 - 5 with Variants Kits (WIP)	
+*Added Tier 1 - 5 Equipment kits Recipes
+*Changed achievements names to lowercase with underscores and not camelCase, Updated lang files
+*Even more of changed some item blocks names to lowercase with underscores and not camelCase, Updated lang files
+*Changed some item blocks names to lowercase with underscores and not camelCase, Updated lang files
+*Fixed Solar System Parent Galaxy name issue with custom Solar Systems
+*Refactor: Change all Tools to use uppercase and underscores for variable names
+*Changes for all Kepler22b Leaves (Will remove old ones due to a complete change)
+*Changes to how Kepler22b Maple Trees spawn/how many
+*Fixed issue #110
+*Updated lang files
+*Clean up
+*Added Config option to disable Ingot Ore Dictonary registering & Changed comment on Ore Blocks Ore Dictonary Config option
+
 v0.1.5 Beta Build
 *Even more fixes for issue #109
 
