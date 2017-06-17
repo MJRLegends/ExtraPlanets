@@ -138,7 +138,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				int x = this.chunk_X + this.rand.nextInt(16) + 8;
 				int z = this.chunk_Z + this.rand.nextInt(16) + 8;
 
-				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 0, 4, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 0, 0, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf2);
 				tree3.setScale(1.0D, 1.0D, 1.0D);
 				tree3.generate(currentWorld, rand, x, this.currentWorld.getHeightValue(x, z), z);
 			}
@@ -149,7 +149,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				int x = this.chunk_X + this.rand.nextInt(16) + 8;
 				int z = this.chunk_Z + this.rand.nextInt(16) + 8;
 
-				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 1, 5, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf);
+				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 1, 1, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf2);
 				tree3.setScale(1.0D, 1.0D, 1.0D);
 				tree3.generate(currentWorld, rand, x, this.currentWorld.getHeightValue(x, z), z);
 			}
