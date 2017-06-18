@@ -270,6 +270,8 @@ public class Config {
 	
 	public static boolean marsRover;
 	public static boolean venusRover;
+	
+	public static boolean oldStyleGravity;
 
 	public static void init() {
 		load();
@@ -543,6 +545,8 @@ public class Config {
 		
 		marsRover = config.get(items, "Enable Mars Rover & Its Parts", true, "").getBoolean(true);
 		venusRover = config.get(items, "Enable Venus Rover & Its Parts", true, "").getBoolean(true);
+		
+		oldStyleGravity = config.get(dimensionSettings, "Enable Old Style Gravity", false, "").getBoolean(false);
 		
 		config.save();
 	}

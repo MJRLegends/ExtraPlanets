@@ -95,7 +95,10 @@ public class WorldProviderVenus extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public float getGravity() {
-		return 0.058F;
+		if(Config.oldStyleGravity)
+			return 0.058F;
+		else
+			return 0.0375F;
 	}
 
 	@Override

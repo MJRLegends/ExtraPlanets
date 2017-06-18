@@ -9,6 +9,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Ceres.worldgen.ChunkProviderCeres;
 import com.mjr.extraplanets.planets.Ceres.worldgen.WorldChunkManagerCeres;
@@ -94,7 +95,10 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public float getGravity() {
-		return 0.058F;
+		if(Config.oldStyleGravity)
+			return 0.058F;
+		else
+			return 0.065F;
 	}
 
 	@Override
