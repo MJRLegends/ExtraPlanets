@@ -68,7 +68,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 				int x = this.chunkX + 8;
 				// int y = this.rand.nextInt(16) + 16;
 				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
+				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.glowstone).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.saturnBlocks);
 			}
 		}
