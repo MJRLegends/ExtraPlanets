@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.inventory.vehicles;
 
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 
-public class InventoryVenusRover implements IInventory {
+import com.mjr.extraplanets.inventory.IInventoryDefaults;
+
+public class InventoryVenusRover implements IInventoryDefaults {
 	private final ItemStack[] stackList;
 	private final int inventoryWidth;
 	private final Container eventHandler;
@@ -81,37 +81,5 @@ public class InventoryVenusRover implements IInventory {
 	public void setInventorySlotContents(int par1, ItemStack par2ItemStack) {
 		this.stackList[par1] = par2ItemStack;
 		this.eventHandler.onCraftMatrixChanged(this);
-	}
-
-	@Override
-	public int getInventoryStackLimit() {
-		return 64;
-	}
-
-	@Override
-	public void markDirty() {
-	}
-
-	@Override
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
-		return true;
-	}
-
-	@Override
-	public void openInventory() {
-	}
-
-	@Override
-	public void closeInventory() {
-	}
-
-	@Override
-	public boolean hasCustomInventoryName() {
-		return false;
-	}
-
-	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return false;
 	}
 }
