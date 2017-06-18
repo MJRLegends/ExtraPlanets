@@ -8,18 +8,26 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
-0.9.3 Beta Build
-*Changes for all Kepler22b Leaves (Will remove old ones due to a complete change)
-*Made Marble generate on Kepler22b
-*Added missing recipes for Decorative Blocks
-*Made Tier 1 - 4 Space Suit, Take place of the Oxygen Gear/Mask (Tanks are still needed)
-*Fixed Custom Oxygen tanks not working correctly
 
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+0.9.3 Beta Build
+*Changes for all Kepler22b Leaves (Will remove old ones due to a complete change)
+*Made Marble generate on Kepler22b
+*Added missing recipes for Decorative Blocks
+*Made Tier 1 - 4 Space Suit, Take place of the Oxygen Gear/Mask (Tanks are still needed)
+*Fixed Custom Oxygen tanks not working correctly
+*Added a sky feature to Jupiter
+*Made Kuiper Belt planet texture file name lowercase with underscores and not camelCase
+*Added loads of new Config options
+*Clean up
+*Tweaks to Jupiter Village generation
+*Tweaks to code for world gen elements on planets
+*Enabled generation of Neptune lakes
+
 0.9.2 Beta Build
 *Added missing feature of changing some planets surface and sub surface to liquid
 
