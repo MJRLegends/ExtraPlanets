@@ -265,7 +265,7 @@ public class Config {
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BIOME_IDS, "Change if a biome ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Disabling this will remove the planet with all the related items/block!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable/Disable dimension settings");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Disabling this will remove the planet/moon with all the related items/block/space stations!");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Disabling this will remove the planet/moon with all the related items/block/space stations!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Change if a Schematic Page ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_ITEMS, "Changing to false will disable the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
@@ -321,28 +321,28 @@ public class Config {
 		genUranusIgloos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
 
-		ceres = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Ceres", true).getBoolean(true);
-		mercury = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Mercury", true).getBoolean(true);
+		ceres = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ceres", true).getBoolean(true);
+		mercury = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Mercury", true).getBoolean(true);
 
-		triton = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Triton", true, "").getBoolean(true);
-		europa = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Europa", true, "").getBoolean(true);
-		io = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "IO", true, "").getBoolean(true);
-		deimos = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Deimos", true, "").getBoolean(true);
-		phobos = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Phobos", true, "").getBoolean(true);
-		callisto = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Callisto", true, "").getBoolean(true);
-		ganymede = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Ganymede", true, "").getBoolean(true);
-		rhea = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Rhea", true, "").getBoolean(true);
-		titan = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Titan", true, "").getBoolean(true);
-		oberon = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Oberon", true, "").getBoolean(true);
-		titania = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Titania", true, "").getBoolean(true);
-		iapetus = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Iapetus", true, "").getBoolean(true);
+		triton = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Triton", true, "").getBoolean(true);
+		europa = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Europa", true, "").getBoolean(true);
+		io = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "IO", true, "").getBoolean(true);
+		deimos = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Deimos", true, "").getBoolean(true);
+		phobos = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Phobos", true, "").getBoolean(true);
+		callisto = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Callisto", true, "").getBoolean(true);
+		ganymede = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ganymede", true, "").getBoolean(true);
+		rhea = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Rhea", true, "").getBoolean(true);
+		titan = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titan", true, "").getBoolean(true);
+		oberon = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Oberon", true, "").getBoolean(true);
+		titania = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titania", true, "").getBoolean(true);
+		iapetus = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Iapetus", true, "").getBoolean(true);
 
-		haumea = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Haumea", true, "").getBoolean(true);
-		makemake = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Makemake", true, "").getBoolean(true);
-		kuiperBelt = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Kuiper Belt", true, "").getBoolean(true);
-		keplerSolarSystems = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Kepler SolarSystems", true, "").getBoolean(true);
+		haumea = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Haumea", true, "").getBoolean(true);
+		makemake = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Makemake", true, "").getBoolean(true);
+		kuiperBelt = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kuiper Belt", true, "").getBoolean(true);
+		keplerSolarSystems = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler SolarSystems", true, "").getBoolean(true);
 
-		kepler22b = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Kepler 22b", true, "").getBoolean(true);
+		kepler22b = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler 22b", true, "").getBoolean(true);
 
 		mercurySpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Mercury SpaceStation", true, "").getBoolean(true);
 		venusSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Venus SpaceStation", true, "").getBoolean(true);
