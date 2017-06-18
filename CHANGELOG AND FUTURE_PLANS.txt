@@ -48,7 +48,7 @@ v1.7.8
 v1.7.7
 *Fixed issue #110
 
-*Fixed issue of being unable to grow Kepler22b Marple Green and Brown Saplings
+*Fixed issue of being unable to grow Kepler22b Maple Green and Brown Saplings
 *Changes for all Kepler22b Leaves (Will remove old ones due to a complete change)
 *Updated lang files
 
