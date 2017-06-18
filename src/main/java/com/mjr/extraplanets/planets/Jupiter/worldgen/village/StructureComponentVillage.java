@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.entities.EntityAlienVillager;
+import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
@@ -88,35 +89,38 @@ public abstract class StructureComponentVillage extends StructureComponent
         }
     }
 
-    protected int getAverageGroundLevel(World world, StructureBoundingBox boundingBox)
-    {
-        int i = 0;
-        int j = 0;
-        BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
+    protected int getAverageGroundLevel(World world, StructureBoundingBox boundingBox) {
+		int i = 0;
+		int j = 0;
+		BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
-        for (int k = this.boundingBox.minZ; k <= this.boundingBox.maxZ; ++k)
-        {
-            for (int l = this.boundingBox.minX; l <= this.boundingBox.maxX; ++l)
-            {
-                blockpos$mutableblockpos.set(l, 64, k);
+		for (int k = this.boundingBox.minZ; k <= this.boundingBox.maxZ; ++k) {
+			for (int l = this.boundingBox.minX; l <= this.boundingBox.maxX; ++l) {
+				blockpos$mutableblockpos.set(l, 64, k);
 
-                if (boundingBox.isVecInside(blockpos$mutableblockpos))
-                {
-                    i += world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY();
-                    ++j;
-                }
-            }
-        }
+				if (boundingBox.isVecInside(blockpos$mutableblockpos)) {
+					if(world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY() <= 100){
+						for(int n = 0; n < 20; n++){
+							if(world.getBlockState(blockpos$mutableblockpos) == Blocks.air)
+								return blockpos$mutableblockpos.getY() + n;
+						}
+					}
+					else{
+						return 100;
+					}
+					i += world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY();
+					++j;
+				}
+			}
+		}
 
-        if (j == 0)
-        {
-            return -1;
-        }
-        else
-        {
-            return i / j;
-        }
-    }
+		if (j == 0) {
+			return -1;
+		} else {
+			return i / j;
+		}
+	}
+
 
     protected static boolean canVillageGoDeeper(StructureBoundingBox par0StructureBoundingBox)
     {
