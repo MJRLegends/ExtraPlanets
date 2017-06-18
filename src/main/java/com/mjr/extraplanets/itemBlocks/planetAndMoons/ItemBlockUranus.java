@@ -1,68 +1,49 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockUranus extends ItemBlock
-{
-	public ItemBlockUranus(Block block)
-	{
+import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+
+public class ItemBlockUranus extends ItemBlockDefaults {
+	public ItemBlockUranus(Block block) {
 		super(block);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
 	}
 
 	@Override
-	public int getMetadata(int meta)
-	{
-		return meta;
-	}
-
-	@Override
-	public String getUnlocalizedName(ItemStack itemstack)
-	{
+	public String getUnlocalizedName(ItemStack itemstack) {
 		String name = "";
 
-		switch (itemstack.getItemDamage())
-		{
-		case 0:
-		{
+		switch (itemstack.getItemDamage()) {
+		case 0: {
 			name = "surface";
 			break;
 		}
-		case 1:
-		{
+		case 1: {
 			name = "subSurface";
 			break;
 		}
-		case 2:
-		{
+		case 2: {
 			name = "stone";
 			break;
 		}
-		case 3:
-		{
+		case 3: {
 			name = "oreCrystal";
 			break;
 		}
-		case 4:
-		{
+		case 4: {
 			name = "crystalBlock";
 			break;
 		}
-		case 5:
-		{
+		case 5: {
 			name = "stoneBricks";
 			break;
 		}
-		case 6:
-		{
+		case 6: {
 			name = "oreWhiteGem";
 			break;
 		}
-		case 7:
-		{
+		case 7: {
 			name = "whiteGemBlock";
 			break;
 		}
@@ -71,11 +52,5 @@ public class ItemBlockUranus extends ItemBlock
 		}
 
 		return this.field_150939_a.getUnlocalizedName() + "." + name;
-	}
-
-	@Override
-	public String getUnlocalizedName()
-	{
-		return this.field_150939_a.getUnlocalizedName() + ".0";
 	}
 }

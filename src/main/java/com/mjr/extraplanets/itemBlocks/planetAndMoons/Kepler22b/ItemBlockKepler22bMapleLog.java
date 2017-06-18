@@ -1,19 +1,13 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockKepler22bMapleLog extends ItemBlock {
+import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+
+public class ItemBlockKepler22bMapleLog extends ItemBlockDefaults {
 	public ItemBlockKepler22bMapleLog(Block block) {
 		super(block);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-	}
-
-	@Override
-	public int getMetadata(int meta) {
-		return meta;
 	}
 
 	@Override

@@ -1,22 +1,17 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+
+import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemBlockKepler22bTallGrass extends ItemBlock {
+public class ItemBlockKepler22bTallGrass extends ItemBlockDefaults {
 	public ItemBlockKepler22bTallGrass(Block block) {
 		super(block);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-	}
-
-	@Override
-	public int getMetadata(int meta) {
-		return meta;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -94,10 +89,5 @@ public class ItemBlockKepler22bTallGrass extends ItemBlock {
 		}
 
 		return this.field_150939_a.getUnlocalizedName() + "." + name;
-	}
-
-	@Override
-	public String getUnlocalizedName() {
-		return this.field_150939_a.getUnlocalizedName() + ".0";
 	}
 }

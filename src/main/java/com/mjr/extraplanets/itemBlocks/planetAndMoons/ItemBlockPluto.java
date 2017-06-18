@@ -1,22 +1,15 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockPluto extends ItemBlock
+import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+
+public class ItemBlockPluto extends ItemBlockDefaults
 {
 	public ItemBlockPluto(Block block)
 	{
 		super(block);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-	}
-
-	@Override
-	public int getMetadata(int meta)
-	{
-		return meta;
 	}
 
 	@Override
@@ -76,11 +69,5 @@ public class ItemBlockPluto extends ItemBlock
 		}
 
 		return this.field_150939_a.getUnlocalizedName() + "." + name;
-	}
-
-	@Override
-	public String getUnlocalizedName()
-	{
-		return this.field_150939_a.getUnlocalizedName() + ".0";
 	}
 }

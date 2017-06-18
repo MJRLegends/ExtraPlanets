@@ -1,22 +1,15 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockJupiter extends ItemBlock
+import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+
+public class ItemBlockJupiter extends ItemBlockDefaults
 {
 	public ItemBlockJupiter(Block block)
 	{
 		super(block);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-	}
-
-	@Override
-	public int getMetadata(int meta)
-	{
-		return meta;
 	}
 
 	@Override
@@ -77,7 +70,7 @@ public class ItemBlockJupiter extends ItemBlock
 			break;
 		}
 		case 10:
-		{
+ {
 			name = "oreRedGem";
 			break;
 		}
@@ -91,11 +84,5 @@ public class ItemBlockJupiter extends ItemBlock
 		}
 
 		return this.field_150939_a.getUnlocalizedName() + "." + name;
-	}
-
-	@Override
-	public String getUnlocalizedName()
-	{
-		return this.field_150939_a.getUnlocalizedName() + ".0";
 	}
 }

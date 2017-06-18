@@ -1,21 +1,14 @@
 package com.mjr.extraplanets.itemBlocks.machines;
 
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedOxygenCompressor;
+import com.mjr.extraplanets.itemBlocks.ItemBlockDescDefaults;
 
-public class ItemBlockAdvancedOxygenCompressor extends ItemBlockDesc {
+public class ItemBlockAdvancedOxygenCompressor extends ItemBlockDescDefaults {
 	public ItemBlockAdvancedOxygenCompressor(Block block) {
 		super(block);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-	}
-
-	@Override
-	public int getMetadata(int damage) {
-		return damage;
 	}
 
 	@Override
@@ -29,10 +22,5 @@ public class ItemBlockAdvancedOxygenCompressor extends ItemBlockDesc {
 		}
 
 		return this.field_150939_a.getUnlocalizedName() + "." + metadata;
-	}
-
-	@Override
-	public String getUnlocalizedName() {
-		return this.field_150939_a.getUnlocalizedName() + ".0";
 	}
 }
