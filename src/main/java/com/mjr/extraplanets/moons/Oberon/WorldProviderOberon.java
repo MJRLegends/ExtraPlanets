@@ -100,7 +100,10 @@ public class WorldProviderOberon extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public float getGravity() {
-		return 0.062F;
+		if (Config.oldStyleGravity)
+			return 0.062F;
+		else
+			return 0.0375F;
 	}
 
 	@Override

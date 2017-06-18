@@ -100,7 +100,10 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public float getGravity() {
-		return 0.062F;
+		if (Config.oldStyleGravity)
+			return 0.062F;
+		else
+			return 0.015F;
 	}
 
 	@Override
@@ -125,7 +128,10 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public float getFallDamageModifier() {
-		return 0.38F;
+		if (Config.oldStyleGravity)
+			return 0.18F;
+		else
+			return 2.1F;
 	}
 
 	@Override

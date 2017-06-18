@@ -100,7 +100,10 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public float getGravity() {
-		return 0.062F;
+		if (Config.oldStyleGravity)
+			return 0.062F;
+		else
+			return 0.015F;
 	}
 
 	@Override
@@ -125,7 +128,10 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public float getFallDamageModifier() {
-		return 0.18F;
+		if (Config.oldStyleGravity)
+			return 0.18F;
+		else
+			return 2.1F;
 	}
 
 	@Override
