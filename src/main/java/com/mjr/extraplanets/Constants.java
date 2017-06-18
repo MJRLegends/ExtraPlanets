@@ -8,4 +8,23 @@ public class Constants {
 	public static final String ASSET_PREFIX = "extraplanets";
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
 	public static final String PREFIX = "extraplanets.";
+	
+	public static final String CONFIG_FILE = "config/ExtraPlanets.cfg";
+
+	public static final String CONFIG_CATEGORY_MAIN_DIMENSIONS = "main dimensions";
+	public static final String CONFIG_CATEGORY_OTHER_DIMENSIONS = "other dimensions";
+	public static final String CONFIG_CATEGORY_DIMENSION_IDS = "dimensionID";
+	public static final String CONFIG_CATEGORY_DIMENSION_SETTINGS = "dimension settings";
+	public static final String CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS = "dimension block settings";
+	public static final String CONFIG_CATEGORY_BIOME_IDS = "biomeID";
+	public static final String CONFIG_CATEGORY_ITEMS = "items";
+	public static final String CONFIG_CATEGORY_BLOCKS = "blocks";
+	public static final String CONFIG_CATEGORY_SPACE_STATIONS = "space stations";
+	public static final String CONFIG_CATEGORY_SCHEMATIC_GUI_IDS = "schematics GUI ID";
+	public static final String CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS = "schematics Page ID";
+	public static final String CONFIG_CATEGORY_COMPATIBILITY = "compatibility support";
+	public static final String CONFIG_CATEGORY_MOD_COMPATIBILITY = "mod compatibility support";
+	public static final String CONFIG_CATEGORY_GENERAL_SETTINGS = "general settings";
+	public static final String CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS = "celestial body map settings";
+	public static final String CONFIG_CATEGORY_ENTITIES = "entities";
 }
