@@ -474,6 +474,8 @@ tile.decorativeBlocks.carbonBrokenTitledFloor.name=Carbon Broken Tiled Floor
 tile.decorativeBlocks.magnesiumTitledFloor.name=Magnesium Tiled Floor
 tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Floor
 tile.decorativeBlocks.ashBricks.name=Ash Bricks
+tile.decorativeBlocks2.whiteBlock.name=White Block
+tile.decorativeBlocks2.redBlock.name=Red Block
 
 #Vehicles
 item.marsRover.name=Driveable Mars Rover (WIP)
