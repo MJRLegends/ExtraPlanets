@@ -19,6 +19,8 @@ import net.minecraftforge.client.IRenderHandler;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
+import com.mjr.extraplanets.Constants;
+
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class SkyProviderPhobos extends IRenderHandler {
@@ -346,7 +348,7 @@ public class SkyProviderPhobos extends IRenderHandler {
 
 	public float getSkyBrightness(float par1) {
 		final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.sin(var2 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.sin(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;

@@ -7,6 +7,7 @@ import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
@@ -76,7 +77,7 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOrbit
 	public float getStarBrightness(float par1)
 	{
 		final float var2 = this.worldObj.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.cos(var2 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F)
 		{

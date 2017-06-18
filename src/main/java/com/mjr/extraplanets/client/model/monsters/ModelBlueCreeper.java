@@ -7,6 +7,8 @@ import net.minecraft.util.MathHelper;
 
 import org.lwjgl.opengl.GL11;
 
+import com.mjr.extraplanets.Constants;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -267,13 +269,13 @@ public class ModelBlueCreeper extends ModelBase
 
 	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6)
 	{
-		this.oxygenMask.rotateAngleY = par4 / (180F / (float) Math.PI);
-		this.oxygenMask.rotateAngleX = par5 / (180F / (float) Math.PI);
-		this.head.rotateAngleY = par4 / (180F / (float) Math.PI);
-		this.head.rotateAngleX = par5 / (180F / (float) Math.PI);
+		this.oxygenMask.rotateAngleY = par4 / (180F / Constants.floatPI);
+		this.oxygenMask.rotateAngleX = par5 / (180F / Constants.floatPI);
+		this.head.rotateAngleY = par4 / (180F / Constants.floatPI);
+		this.head.rotateAngleX = par5 / (180F / Constants.floatPI);
 		this.leg1.rotateAngleX = MathHelper.cos(par1 * 0.6662F) * 1.4F * par2;
-		this.leg2.rotateAngleX = MathHelper.cos(par1 * 0.6662F + (float) Math.PI) * 1.4F * par2;
-		this.leg3.rotateAngleX = MathHelper.cos(par1 * 0.6662F + (float) Math.PI) * 1.4F * par2;
+		this.leg2.rotateAngleX = MathHelper.cos(par1 * 0.6662F + Constants.floatPI) * 1.4F * par2;
+		this.leg3.rotateAngleX = MathHelper.cos(par1 * 0.6662F + Constants.floatPI) * 1.4F * par2;
 		this.leg4.rotateAngleX = MathHelper.cos(par1 * 0.6662F) * 1.4F * par2;
 	}
 }

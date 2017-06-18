@@ -30,11 +30,10 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.treasureChest.TileEntityT7TreasureChest;
 
@@ -163,7 +162,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 			i = this.getSlimeSize();
 
 			for (int j = 0; j < i * 8; ++j) {
-				float f = this.rand.nextFloat() * (float) Math.PI * 2.0F;
+				float f = this.rand.nextFloat() * Constants.floatPI * 2.0F;
 				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
 				float f2 = MathHelper.sin(f) * i * 0.5F * f1;
 				float f3 = MathHelper.cos(f) * i * 0.5F * f1;

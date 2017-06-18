@@ -11,6 +11,7 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Oberon.worldgen.ChunkProviderOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.WorldChunkManagerOberon;
@@ -65,7 +66,7 @@ public class WorldProviderOberon extends WorldProviderSpace implements IGalactic
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		final float var2 = this.worldObj.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.cos(var2 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;

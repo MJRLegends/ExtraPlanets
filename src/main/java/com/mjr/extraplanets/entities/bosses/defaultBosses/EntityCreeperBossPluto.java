@@ -3,9 +3,6 @@ package com.mjr.extraplanets.entities.bosses.defaultBosses;
 import java.util.List;
 import java.util.Random;
 
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.treasureChest.TileEntityT9TreasureChest;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -46,6 +43,11 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tile.treasureChest.TileEntityT9TreasureChest;
+
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 
 public class EntityCreeperBossPluto extends EntityMob implements IEntityBreathable, IBossDisplayData, IRangedAttackMob, IBoss
@@ -473,7 +475,7 @@ public class EntityCreeperBossPluto extends EntityMob implements IEntityBreathab
 		}
 		else
 		{
-			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * (float) Math.PI;
+			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * Constants.floatPI;
 			float f1 = MathHelper.cos(f);
 			return this.posX + f1 * 1.3D;
 		}
@@ -492,7 +494,7 @@ public class EntityCreeperBossPluto extends EntityMob implements IEntityBreathab
 		}
 		else
 		{
-			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * (float) Math.PI;
+			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * Constants.floatPI;
 			float f1 = MathHelper.sin(f);
 			return this.posZ + f1 * 1.3D;
 		}

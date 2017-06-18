@@ -93,7 +93,7 @@ public class ExtraPlanets_Planets {
 			ceres = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			ceres.setTierRequired(Config.ceresRocketTier);
 			ceres.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			ceres.setPhaseShift((float) Math.PI);
+			ceres.setPhaseShift(Constants.floatPI);
 			ceres.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F + Config.ceresDistanceOffset, 1.50F + Config.ceresDistanceOffset));
 			ceres.setRelativeOrbitTime((float) 11.861993428258488499452354874042 / 2);
 			ceres.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);
@@ -104,7 +104,7 @@ public class ExtraPlanets_Planets {
 			jupiter = new Planet("Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			jupiter.setTierRequired(4);
 			jupiter.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			jupiter.setPhaseShift((float) Math.PI);
+			jupiter.setPhaseShift(Constants.floatPI);
 			jupiter.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F + Config.jupiterDistanceOffset, 1.75F + Config.jupiterDistanceOffset));
 			jupiter.setRelativeOrbitTime(11.861993428258488499452354874042F);
 			jupiter.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM);

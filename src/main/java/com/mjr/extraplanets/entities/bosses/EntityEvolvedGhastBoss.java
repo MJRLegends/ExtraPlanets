@@ -36,6 +36,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.treasureChest.TileEntityT6TreasureChest;
 
@@ -147,7 +148,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 			double d5 = this.targetedEntity.posX - this.posX;
 			double d6 = this.targetedEntity.boundingBox.minY + (double) (this.targetedEntity.height / 2.0F) - (this.posY + (double) (this.height / 2.0F));
 			double d7 = this.targetedEntity.posZ - this.posZ;
-			this.renderYawOffset = this.rotationYaw = -((float) Math.atan2(d5, d7)) * 180.0F / (float) Math.PI;
+			this.renderYawOffset = this.rotationYaw = -((float) Math.atan2(d5, d7)) * 180.0F / Constants.floatPI;
 
 			if (this.canEntityBeSeen(this.targetedEntity)) {
 				if (this.attackCounter == 10) {
@@ -172,7 +173,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 				--this.attackCounter;
 			}
 		} else {
-			this.renderYawOffset = this.rotationYaw = -((float) Math.atan2(this.motionX, this.motionZ)) * 180.0F / (float) Math.PI;
+			this.renderYawOffset = this.rotationYaw = -((float) Math.atan2(this.motionX, this.motionZ)) * 180.0F / Constants.floatPI;
 
 			if (this.attackCounter > 0) {
 				--this.attackCounter;

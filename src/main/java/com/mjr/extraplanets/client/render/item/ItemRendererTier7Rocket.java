@@ -121,7 +121,7 @@ public class ItemRendererTier7Rocket implements IItemRenderer
 				float f1 = 0;
 				f1 = 1.0F - f1;
 				f1 = 1.0F - f1 * f1 * f1;
-				modelChest.chestLid.rotateAngleX = -(f1 * (float) Math.PI / 2.0F);
+				modelChest.chestLid.rotateAngleX = -(f1 * Constants.floatPI / 2.0F);
 
 				modelChest.chestBelow.render(0.0625F);
 				modelChest.chestLid.render(0.0625F);

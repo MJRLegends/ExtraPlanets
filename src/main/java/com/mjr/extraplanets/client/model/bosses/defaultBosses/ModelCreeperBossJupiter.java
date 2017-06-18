@@ -5,6 +5,7 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
 
 public class ModelCreeperBossJupiter extends ModelBase
@@ -149,13 +150,13 @@ public class ModelCreeperBossJupiter extends ModelBase
 	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
 	{
 		super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-		this.headMain.rotateAngleY = f3 / (180F / (float) Math.PI);
-		this.headMain.rotateAngleX = f4 / (180F / (float) Math.PI);
-		this.oxygenTank.rotateAngleY = f3 / (180F / (float) Math.PI);
-		this.oxygenTank.rotateAngleX = f4 / (180F / (float) Math.PI);
+		this.headMain.rotateAngleY = f3 / (180F / Constants.floatPI);
+		this.headMain.rotateAngleX = f4 / (180F / Constants.floatPI);
+		this.oxygenTank.rotateAngleY = f3 / (180F / Constants.floatPI);
+		this.oxygenTank.rotateAngleX = f4 / (180F / Constants.floatPI);
 		this.rightLegFront.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
-		this.leftLegFront.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * 2F * f1;
-		this.leftLeg.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * 2F * f1;
+		this.leftLegFront.rotateAngleX = MathHelper.cos(f * 0.6662F + Constants.floatPI) * 2F * f1;
+		this.leftLeg.rotateAngleX = MathHelper.cos(f * 0.6662F + Constants.floatPI) * 2F * f1;
 		this.rightLeg.rotateAngleX = MathHelper.cos(f * 0.6662F) * 2F * f1;
 	}
 }

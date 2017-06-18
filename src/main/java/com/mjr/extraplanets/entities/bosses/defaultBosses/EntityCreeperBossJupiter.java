@@ -44,6 +44,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.treasureChest.TileEntityT5TreasureChest;
 
@@ -474,7 +475,7 @@ public class EntityCreeperBossJupiter extends EntityMob implements IEntityBreath
 		}
 		else
 		{
-			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * (float) Math.PI;
+			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * Constants.floatPI;
 			float f1 = MathHelper.cos(f);
 			return this.posX + f1 * 1.3D;
 		}
@@ -493,7 +494,7 @@ public class EntityCreeperBossJupiter extends EntityMob implements IEntityBreath
 		}
 		else
 		{
-			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * (float) Math.PI;
+			float f = (this.renderYawOffset + 180 * (par1 - 1)) / 180.0F * Constants.floatPI;
 			float f1 = MathHelper.sin(f);
 			return this.posZ + f1 * 1.3D;
 		}

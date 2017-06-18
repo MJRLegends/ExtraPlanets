@@ -10,6 +10,7 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Uranus.worldgen.ChunkProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.WorldChunkManagerUranus;
@@ -65,7 +66,7 @@ public class WorldProviderUranus extends WorldProviderSpace implements IGalactic
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		float f1 = this.worldObj.getCelestialAngle(par1);
-		float f2 = 1.0F - (MathHelper.cos(f1 * (float) Math.PI * 2.0F) * 2.0F + 0.25F);
+		float f2 = 1.0F - (MathHelper.cos(f1 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
 
 		if (f2 < 0.0F) {
 			f2 = 1.0F;

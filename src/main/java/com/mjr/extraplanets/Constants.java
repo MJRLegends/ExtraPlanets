@@ -8,7 +8,14 @@ public class Constants {
 	public static final String ASSET_PREFIX = "extraplanets";
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
 	public static final String PREFIX = "extraplanets.";
-	
+
+	public static final float RADIANS_TO_DEGREES = 180F / 3.1415927F;
+	public static final double RADIANS_TO_DEGREES_D = 180D / Math.PI;
+
+	public static final float twoPI = Constants.floatPI * 2F;
+	public static final float halfPI = Constants.floatPI / 2F;
+	public static final float floatPI = 3.1415927F;
+
 	public static final String CONFIG_FILE = "config/ExtraPlanets.cfg";
 
 	public static final String CONFIG_CATEGORY_MAIN_DIMENSIONS = "main dimensions";
