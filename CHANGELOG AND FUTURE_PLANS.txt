@@ -42,6 +42,22 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.7.9
+*Refactor Config Categories to Constants class (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Added missing planet textures
+*Removed random texture files that were in the resource folder
+*Added Red, White Decorative blocks and made them be used in the Basic Hideout on Jupiter
+*Updated lang files
+*Refactor common inventory code into default methods
+*Clean up
+*Refactor common itemblock code into default methods
+*Changes to Gravity and Fall Damage Modifier For Planets (With Config option to change it back to the old way!)
+*Changes to Gravity and Fall Damage Modifier for Moons to match Planets values (With Config option to change it back to the old way!)
+*Refactor most (float) references to PI to use Constants. (Match GC changes)
+*More Refactoring of Info to Constants class
+*Made mcmod.info version be filled in via build.gradle file
+
+
 v1.7.8
 *Fixed recipe issue/crash
 
