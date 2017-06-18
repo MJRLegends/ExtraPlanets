@@ -75,7 +75,7 @@ public class ItemTier4ThermalPadding extends Item implements IItemThermal {
 	@Override
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
-			GCPlayerStats stats = GCPlayerStats.get((EntityPlayerMP) player);
+			GCPlayerStats stats = GCPlayerStats.get(player);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(6);
 			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(7);
 			ItemStack gear2 = stats.getExtendedInventory().getStackInSlot(8);

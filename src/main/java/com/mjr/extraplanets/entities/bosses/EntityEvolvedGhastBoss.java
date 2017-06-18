@@ -63,6 +63,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Called to update the entity's position/logic.
 	 */
+	@Override
 	public void onUpdate() {
 		super.onUpdate();
 
@@ -74,6 +75,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Called when the entity is attacked.
 	 */
+	@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 		if (this.isEntityInvulnerable(source)) {
 			return false;
@@ -86,11 +88,13 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		}
 	}
 
+	@Override
 	protected void entityInit() {
 		super.entityInit();
 		this.dataWatcher.addObject(16, Byte.valueOf((byte) 0));
 	}
 
+	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(450.0D);
@@ -100,6 +104,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Returns the sound this mob makes while it's alive.
 	 */
+	@Override
 	protected String getLivingSound() {
 		return "mob.ghast.moan";
 	}
@@ -107,6 +112,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Returns the sound this mob makes when it is hurt.
 	 */
+	@Override
 	protected String getHurtSound() {
 		return "mob.ghast.scream";
 	}
@@ -114,10 +120,12 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Returns the sound this mob makes on death.
 	 */
+	@Override
 	protected String getDeathSound() {
 		return "mob.ghast.death";
 	}
 
+	@Override
 	protected Item getDropItem() {
 		return Items.gunpowder;
 	}
@@ -125,6 +133,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Drop 0-2 items of this living's type
 	 */
+	@Override
 	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_) {
 		int i = this.rand.nextInt(2) + this.rand.nextInt(1 + p_70628_2_);
 
@@ -142,6 +151,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Returns the volume for the sounds this mob makes.
 	 */
+	@Override
 	protected float getSoundVolume() {
 		return 10.0F;
 	}
@@ -149,6 +159,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Checks if the entity's current position is a valid location to spawn this entity.
 	 */
+	@Override
 	public boolean getCanSpawnHere() {
 		return this.rand.nextInt(20) == 0 && super.getCanSpawnHere() && this.worldObj.getDifficulty() != EnumDifficulty.PEACEFUL;
 	}
@@ -156,10 +167,12 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * Will return how many at most can spawn in a chunk at once.
 	 */
+	@Override
 	public int getMaxSpawnedInChunk() {
 		return 1;
 	}
 
+	@Override
 	public float getEyeHeight() {
 		return 2.6F;
 	}
@@ -175,6 +188,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Returns whether the EntityAIBase should begin execution.
 		 */
+		@Override
 		public boolean shouldExecute() {
 			return this.parentEntity.getAttackTarget() != null;
 		}
@@ -182,6 +196,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Execute a one shot task or start executing a continuous task
 		 */
+		@Override
 		public void startExecuting() {
 			this.attackTimer = 0;
 		}
@@ -189,6 +204,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Resets the task
 		 */
+		@Override
 		public void resetTask() {
 			this.parentEntity.setAttacking(false);
 		}
@@ -196,6 +212,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Updates the task
 		 */
+		@Override
 		public void updateTask() {
 			EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
 			double d0 = 64.0D;
@@ -212,13 +229,13 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 					double d1 = 4.0D;
 					Vec3 vec3 = this.parentEntity.getLook(1.0F);
 					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3.xCoord * d1);
-					double d3 = entitylivingbase.getEntityBoundingBox().minY + (double) (entitylivingbase.height / 2.0F) - (0.5D + this.parentEntity.posY + (double) (this.parentEntity.height / 2.0F));
+					double d3 = entitylivingbase.getEntityBoundingBox().minY + entitylivingbase.height / 2.0F - (0.5D + this.parentEntity.posY + this.parentEntity.height / 2.0F);
 					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3.zCoord * d1);
 					world.playAuxSFXAtEntity((EntityPlayer) null, 1008, new BlockPos(this.parentEntity), 0);
 					EntityLargeFireball entitylargefireball = new EntityLargeFireball(world, this.parentEntity, d2, d3, d4);
 					entitylargefireball.explosionPower = this.parentEntity.getFireballStrength();
 					entitylargefireball.posX = this.parentEntity.posX + vec3.xCoord * d1;
-					entitylargefireball.posY = this.parentEntity.posY + (double) (this.parentEntity.height / 2.0F) + 0.5D;
+					entitylargefireball.posY = this.parentEntity.posY + this.parentEntity.height / 2.0F + 0.5D;
 					entitylargefireball.posZ = this.parentEntity.posZ + vec3.zCoord * d1;
 					world.spawnEntityInWorld(entitylargefireball);
 					this.attackTimer = -40;
@@ -242,6 +259,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Returns whether the EntityAIBase should begin execution.
 		 */
+		@Override
 		public boolean shouldExecute() {
 			return true;
 		}
@@ -249,6 +267,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Updates the task
 		 */
+		@Override
 		public void updateTask() {
 			if (this.parentEntity.getAttackTarget() == null) {
 				this.parentEntity.renderYawOffset = this.parentEntity.rotationYaw = -((float) MathHelper.atan2(this.parentEntity.motionX, this.parentEntity.motionZ)) * 180.0F / Constants.floatPI;
@@ -276,6 +295,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Returns whether the EntityAIBase should begin execution.
 		 */
+		@Override
 		public boolean shouldExecute() {
 			EntityMoveHelper entitymovehelper = this.parentEntity.getMoveHelper();
 
@@ -293,6 +313,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Returns whether an in-progress EntityAIBase should continue executing
 		 */
+		@Override
 		public boolean continueExecuting() {
 			return false;
 		}
@@ -300,11 +321,12 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		/**
 		 * Execute a one shot task or start executing a continuous task
 		 */
+		@Override
 		public void startExecuting() {
 			Random random = this.parentEntity.getRNG();
-			double d0 = this.parentEntity.posX + (double) ((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-			double d1 = this.parentEntity.posY + (double) ((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-			double d2 = this.parentEntity.posZ + (double) ((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
+			double d0 = this.parentEntity.posX + (random.nextFloat() * 2.0F - 1.0F) * 16.0F;
+			double d1 = this.parentEntity.posY + (random.nextFloat() * 2.0F - 1.0F) * 16.0F;
+			double d2 = this.parentEntity.posZ + (random.nextFloat() * 2.0F - 1.0F) * 16.0F;
 			this.parentEntity.getMoveHelper().setMoveTo(d0, d1, d2, 1.0D);
 		}
 	}
@@ -318,6 +340,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 			this.parentEntity = p_i45838_1_;
 		}
 
+		@Override
 		public void onUpdateMoveHelper() {
 			if (this.update) {
 				double d0 = this.posX - this.parentEntity.posX;
@@ -327,7 +350,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 
 				if (this.courseChangeCooldown-- <= 0) {
 					this.courseChangeCooldown += this.parentEntity.getRNG().nextInt(5) + 2;
-					d3 = (double) MathHelper.sqrt_double(d3);
+					d3 = MathHelper.sqrt_double(d3);
 
 					if (this.isNotColliding(this.posX, this.posY, this.posZ, d3)) {
 						this.parentEntity.motionX += d0 / d3 * 0.1D;
@@ -349,7 +372,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 			double d2 = (p_179926_5_ - this.parentEntity.posZ) / p_179926_7_;
 			AxisAlignedBB axisalignedbb = this.parentEntity.getEntityBoundingBox();
 
-			for (int i = 1; (double) i < p_179926_7_; ++i) {
+			for (int i = 1; i < p_179926_7_; ++i) {
 				axisalignedbb = axisalignedbb.offset(d0, d1, d2);
 
 				if (!this.parentEntity.worldObj.getCollidingBoundingBoxes(this.parentEntity, axisalignedbb).isEmpty()) {
@@ -364,6 +387,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
+	@Override
 	public void writeEntityToNBT(NBTTagCompound nbt) {
 		super.writeEntityToNBT(nbt);
 		nbt.setInteger("ExplosionPower", this.explosionStrength);
@@ -372,6 +396,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
+	@Override
 	public void readEntityFromNBT(NBTTagCompound nbt) {
 		super.readEntityFromNBT(nbt);
 

@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenCustomIceSpike extends WorldGenerator {
+	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 		while (worldIn.isAirBlock(position) && position.getY() > 2) {
 			position = position.down();
@@ -28,14 +29,14 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 			}
 
 			for (int k = 0; k < i; ++k) {
-				float f = (1.0F - (float) k / (float) i) * (float) j;
+				float f = (1.0F - (float) k / (float) i) * j;
 				int l = MathHelper.ceiling_float_int(f);
 
 				for (int i1 = -l; i1 <= l; ++i1) {
-					float f1 = (float) MathHelper.abs_int(i1) - 0.25F;
+					float f1 = MathHelper.abs_int(i1) - 0.25F;
 
 					for (int j1 = -l; j1 <= l; ++j1) {
-						float f2 = (float) MathHelper.abs_int(j1) - 0.25F;
+						float f2 = MathHelper.abs_int(j1) - 0.25F;
 
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
 							Block block = worldIn.getBlockState(position.add(i1, k, j1)).getBlock();
@@ -113,14 +114,14 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 			}
 
 			for (int k = 0; k < i; ++k) {
-				float f = (1.0F - (float) k / (float) i) * (float) j;
+				float f = (1.0F - (float) k / (float) i) * j;
 				int l = MathHelper.ceiling_float_int(f);
 
 				for (int i1 = -l; i1 <= l; ++i1) {
-					float f1 = (float) MathHelper.abs_int(i1) - 0.25F;
+					float f1 = MathHelper.abs_int(i1) - 0.25F;
 
 					for (int j1 = -l; j1 <= l; ++j1) {
-						float f2 = (float) MathHelper.abs_int(j1) - 0.25F;
+						float f2 = MathHelper.abs_int(j1) - 0.25F;
 
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
 							Block block = worldIn.getBlockState(position.add(i1, k, j1)).getBlock();
