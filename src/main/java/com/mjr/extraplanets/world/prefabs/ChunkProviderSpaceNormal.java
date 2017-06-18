@@ -45,7 +45,7 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 	double[] field_147425_f;
 	double[] field_147426_g;
 	int[][] field_73219_j = new int[32][32];
-	
+
 	private List<MapGenBaseMeta> worldGenerators;
 
 	private final Gradient noiseGen;
@@ -87,16 +87,14 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 		for (int i = 0; i < chunkBiomes.length; i++) {
 			chunkBiomes[i] = ((byte) this.biomesForGeneration[i].biomeID);
 		}
-        if (this.worldGenerators == null)
-        {
-            this.worldGenerators = this.getWorldGenerators();
-        }
+		if (this.worldGenerators == null) {
+			this.worldGenerators = this.getWorldGenerators();
+		}
 
-        for (MapGenBaseMeta generator : this.worldGenerators)
-        {
-            generator.generate(this, this.worldObj, x, z, blockStorage, metaStorage);
-        }
-        this.onChunkProvide(x, z, blockStorage, metaStorage);
+		for (MapGenBaseMeta generator : this.worldGenerators) {
+			generator.generate(this, this.worldObj, x, z, blockStorage, metaStorage);
+		}
+		this.onChunkProvide(x, z, blockStorage, metaStorage);
 
 		chunk.generateSkylightMap();
 		return chunk;
@@ -303,8 +301,8 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 	public abstract String func_73148_d();
 
 	public abstract void decoratePlanet(World world, Random rand, int x, int z);
-	
+
 	protected abstract List<MapGenBaseMeta> getWorldGenerators();
-	
-    public abstract void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata);
+
+	public abstract void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata);
 }
