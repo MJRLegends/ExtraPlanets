@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -15,8 +14,9 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedOxygenCompressor;
+import com.mjr.extraplanets.inventory.IInventoryDefaults;
 
-public class TileEntityAdvancedOxygenDecompressor extends TileEntityOxygen implements IInventory, ISidedInventory {
+public class TileEntityAdvancedOxygenDecompressor extends TileEntityOxygen implements IInventoryDefaults, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[2];
 
 	public static final int OUTPUT_PER_TICK = 250;
@@ -148,15 +148,7 @@ public class TileEntityAdvancedOxygenDecompressor extends TileEntityOxygen imple
 	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
 		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) == this && par1EntityPlayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
 	}
-
-	@Override
-	public void openInventory() {
-	}
-
-	@Override
-	public void closeInventory() {
-	}
-
+	
 	// ISidedInventory Implementation:
 
 	@Override
