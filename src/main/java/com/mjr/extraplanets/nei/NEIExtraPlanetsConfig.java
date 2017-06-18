@@ -13,8 +13,10 @@ import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.API;
 import net.minecraftforge.oredict.OreDictionary;
+import codechicken.nei.PositionedStack;
+import codechicken.nei.api.API;
+import codechicken.nei.api.IConfigureNEI;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
