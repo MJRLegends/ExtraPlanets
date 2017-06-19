@@ -91,7 +91,7 @@ public class WorldProviderTitan extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public int getAverageGroundLevel() {
-		return 63;
+		return 44;
 	}
 
 	@Override
