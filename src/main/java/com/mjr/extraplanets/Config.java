@@ -166,6 +166,7 @@ public class Config {
 	public static int GANTMEDE_BIOME_ID;
 	public static int RHEA_BIOME_ID;
 	public static int TITAN_BIOME_ID;
+	public static int TITAN_SEA_BIOME_ID;
 	public static int OBERON_BIOME_ID;
 	public static int TITANIA_BIOME_ID;
 	public static int IAPETUS_BIOME_ID;
@@ -433,7 +434,8 @@ public class Config {
 		TITANIA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180).getInt();
 		IAPETUS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181).getInt();
 		KEPLER22B_RED_DESERT_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 185).getInt();
-
+		TITAN_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Sea Biome ID", 186).getInt();
+		
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();
 		SCHEMATIC_TIER_6_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557).getInt();
