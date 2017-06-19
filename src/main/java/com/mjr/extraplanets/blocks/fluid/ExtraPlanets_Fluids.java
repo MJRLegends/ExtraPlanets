@@ -42,6 +42,9 @@ public class ExtraPlanets_Fluids {
 	public static Block NITROGEN_ICE;
 	public static Fluid NITROGEN_ICE_FLUID;
 
+	public static Block LIQUID_HYDROCARBON;
+	public static Fluid LIQUID_HYDROCARBON_FLUID;
+
 	public static Material GLOWSTONE_MATERIAL = new MaterialLiquid(MapColor.YELLOW);
 	public static Material MAGMA_MATERIAL = new MaterialLiquid(MapColor.NETHERRACK);
 	public static Material NITROGEN_MATERIAL = new MaterialLiquid(MapColor.LIGHT_BLUE);
@@ -103,6 +106,11 @@ public class ExtraPlanets_Fluids {
 				.setBlock(NITROGEN_ICE).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(NITROGEN_ICE_FLUID);
 		NITROGEN_ICE = new FluidBlockEP(NITROGEN_ICE_FLUID, "nitrogen_ice", NITROGEN_MATERIAL);
+
+		LIQUID_HYDROCARBON_FLUID = new Fluid("liquid_hydrocarbon_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_hydrocarbon_still"), new ResourceLocation(Constants.TEXTURE_PREFIX
+				+ "blocks/fluids/liquid_hydrocarbon_flow")).setBlock(LIQUID_HYDROCARBON).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(LIQUID_HYDROCARBON_FLUID);
+		LIQUID_HYDROCARBON = new FluidBlockEP(LIQUID_HYDROCARBON_FLUID, "liquid_hydrocarbon", FROZEN_WATER_MATERIAL);
 	}
 
 	private static void registerBlocks() {
@@ -116,5 +124,6 @@ public class ExtraPlanets_Fluids {
 		RegisterHelper.registerBlock(INFECTED_WATER, "infected_water");
 		RegisterHelper.registerBlock(METHANE, "methane");
 		RegisterHelper.registerBlock(NITROGEN_ICE, "nitrogen_ice");
+		RegisterHelper.registerBlock(LIQUID_HYDROCARBON, "liquid_hydrocarbon");
 	}
 }
