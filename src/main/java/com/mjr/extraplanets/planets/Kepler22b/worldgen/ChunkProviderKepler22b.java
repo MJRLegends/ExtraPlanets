@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
@@ -17,6 +19,8 @@ import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomNormal;
 public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
+		this.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
+		this.waterBlock = Blocks.WATER.getDefaultState();
 	}
 
 	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();
