@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
@@ -15,6 +16,7 @@ import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorTriton ceresBiomeDecorator = new BiomeDecoratorTriton();
+	private final BiomeDecoratorTritonOther ceresBiomeDecorator2 = new BiomeDecoratorTritonOther();
 
 	private final MapGenCaveTriton caveGenerator = new MapGenCaveTriton();
 
@@ -22,6 +24,7 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.stoneBlock = ExtraPlanets_Blocks.TRITON_BLOCKS.getStateFromMeta(2);
 		this.waterBlock = ExtraPlanets_Fluids.NITROGEN_ICE.getDefaultState();
+		this.seaIceLayer = true;
 	}
 
 	@Override
@@ -44,6 +47,7 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 	@Override
 	protected void decoratePlanet(World world, Random rand, int x, int z) {
 		this.ceresBiomeDecorator.decorate(world, rand, x, z);
+		this.ceresBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
 
 	@Override
