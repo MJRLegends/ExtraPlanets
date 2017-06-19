@@ -34,7 +34,7 @@ public class WorldProviderTriton extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canRainOrSnow() {
-		return false;
+		return true;
 	}
 
 	@Override
