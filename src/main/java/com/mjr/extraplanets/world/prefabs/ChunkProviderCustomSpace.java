@@ -204,7 +204,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 							for (int l2 = 0; l2 < 4; ++l2) {
 								if ((lvt_45_1_ += d16) > 0.0D) {
 									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.stoneBlock);
-								} else if (i2 * 8 + j2 == 63 && this.seaIceLayer) {
+								} else if (i2 * 8 + j2 == (this.seaLevel - 1) && this.seaIceLayer) {
 									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, Blocks.ICE.getDefaultState());
 								}
 								 else if (i2 * 8 + j2 < (this.seaLevel - 1)) {
