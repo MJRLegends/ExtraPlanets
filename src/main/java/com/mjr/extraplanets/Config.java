@@ -244,6 +244,8 @@ public class Config {
 	public static boolean MARS_ROVER;
 	public static boolean VENUS_ROVER;
 	
+	public static boolean OLD_STYLE_GRAVITY;
+	
 	public static void load() {
 		Configuration config = new Configuration(new File(Constants.CONFIG_FILE));
 		config.load();
@@ -502,6 +504,8 @@ public class Config {
 		MARS_ROVER = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Mars Rover & Its Parts", true, "").getBoolean(true);
 		VENUS_ROVER = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "").getBoolean(true);
 		
+		OLD_STYLE_GRAVITY = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Style Gravity", false, "").getBoolean(false);
+
 		config.save();
 	}
 
