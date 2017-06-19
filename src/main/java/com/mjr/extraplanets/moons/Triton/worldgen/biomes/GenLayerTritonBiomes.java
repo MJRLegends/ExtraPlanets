@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 
 public class GenLayerTritonBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { TritonBiomes.triton, TritonBiomes.tritonIceLands };
+	private static final Biome[] biomes = new Biome[] { TritonBiomes.triton, TritonBiomes.tritonIceLands, TritonBiomes.tritonIceSea };
 
 	public GenLayerTritonBiomes(long l, GenLayer parent) {
 		super(l);

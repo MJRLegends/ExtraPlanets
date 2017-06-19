@@ -159,6 +159,7 @@ public class Config {
 
 	public static int TRITON_BIOME_ID;
 	public static int TRITON_ICE_LANDS_BIOME_ID;
+	public static int TRITON_ICE_SEA_BIOME_ID;
 	public static int EUROPA_BIOME_ID;
 	public static int IO_BIOME_ID;
 	public static int DEIMOS_BIOME_ID;
@@ -437,6 +438,7 @@ public class Config {
 		KEPLER22B_RED_DESERT_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 185).getInt();
 		TITAN_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Sea Biome ID", 186).getInt();
 		TRITON_ICE_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Lands Biome ID", 187).getInt();
+		TRITON_ICE_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Sea Biome ID", 188).getInt();
 		
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();

@@ -21,7 +21,6 @@ public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
 	private WorldGenerator fossilsGen;
 
 	private int LakesPerChunk = 5;
-
 	private World currentWorld;
 
 	public BiomeDecoratorTriton() {
@@ -30,9 +29,7 @@ public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TRITON_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.TRITON_BLOCKS, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TRITON_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.TRITON_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 1, 0, true, ExtraPlanets_Blocks.TRITON_BLOCKS, 1);
-
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
