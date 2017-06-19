@@ -22,7 +22,7 @@ import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
-	private Random rand;
+	protected Random rand;
 	protected World worldObj;
 	private double[] depthBuffer;
 	private Biome[] biomesForGeneration;
@@ -43,8 +43,8 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	private final Gradient craterGen;
 	private final int CRATER_PROB = this.getCraterProbability();
 
-	protected static IBlockState stoneBlock;
-	protected static IBlockState waterBlock;
+	protected IBlockState stoneBlock;
+	protected IBlockState waterBlock;
 
 	private static final int CHUNK_SIZE_X = 16;
 	private static final int CHUNK_SIZE_Y = 256;
@@ -357,6 +357,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 		decoratePlanet(this.worldObj, this.rand, x, z);
 		WorldEntitySpawner.performWorldGenSpawning(this.worldObj, biome, x + 8, z + 8, 16, 16, this.rand);
 		BlockFalling.fallInstantly = false;
+        this.onPopulate(x, z);
 	}
 
 	@Override
@@ -384,4 +385,6 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	protected abstract void onChunkProvide(int cX, int cZ, ChunkPrimer primer);
 
 	protected abstract int getCraterProbability();
+	
+    public abstract void onPopulate(int cX, int cZ);
 }
