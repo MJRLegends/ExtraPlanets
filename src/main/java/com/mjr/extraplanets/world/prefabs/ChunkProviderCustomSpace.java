@@ -70,7 +70,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 
 		for (int j = -2; j <= 2; j++) {
 			for (int k = -2; k <= 2; k++) {
-				float f = 10.0F / MathHelper.sqrt_float(j * j + k * k + 0.2F);
+				float f = 10.0F / MathHelper.sqrt(j * j + k * k + 0.2F);
 				this.biomeWeights[j + 2 + (k + 2) * 5] = f;
 			}
 		}
@@ -303,7 +303,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 					double d2 = this.minLimitRegion[i] / 512.0F;
 					double d3 = this.maxLimitRegion[i] / 512.0F;
 					double d4 = (this.mainNoiseRegion[i] / 10.0D + 1.0D) / 2.0D;
-					double d5 = MathHelper.denormalizeClamp(d2, d3, d4) - d1;
+					double d5 = MathHelper.clampedLerp(d2, d3, d4) - d1;
 
 					if (l1 > 29) {
 						double d6 = (l1 - 29) / 3.0F;
@@ -364,7 +364,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	}
 
 	@Override
-	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position) {
+	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position, boolean p_180513_4_) {
 		return null;
 	}
 
