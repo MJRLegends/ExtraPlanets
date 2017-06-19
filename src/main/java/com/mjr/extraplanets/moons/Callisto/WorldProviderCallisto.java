@@ -13,6 +13,7 @@ import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
@@ -101,9 +102,12 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 
 	@Override
 	public float getGravity() {
-		return 0.062F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.062F;
+		else
+			return 0.015F;
 	}
-
+	
 	@Override
 	public double getMeteorFrequency() {
 		return 7.0D;
@@ -126,7 +130,10 @@ public class WorldProviderCallisto extends WorldProviderSpace implements IGalact
 
 	@Override
 	public float getFallDamageModifier() {
-		return 0.18F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.38F;
+		else
+			return 2.1F;
 	}
 
 	@Override
