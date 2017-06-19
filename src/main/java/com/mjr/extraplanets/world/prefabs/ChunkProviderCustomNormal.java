@@ -279,7 +279,6 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderOverworld {
 		long var7 = this.rand.nextLong() / 2L * 2L + 1L;
 		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(chunkX * var7 + chunkZ * var9 ^ this.worldObj.getSeed());
-		// this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(x, z));
 		biome.decorate(this.worldObj, this.rand, pos);
 		decoratePlanet(this.worldObj, this.rand, x, z);
 		WorldEntitySpawner.performWorldGenSpawning(this.worldObj, biome, x + 8, z + 8, 16, 16, this.rand);
