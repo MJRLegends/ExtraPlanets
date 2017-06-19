@@ -21,7 +21,7 @@ public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 	public ChunkProviderTitan(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.stoneBlock = ExtraPlanets_Blocks.TITAN_BLOCKS.getStateFromMeta(2);
-		this.waterBlock = ExtraPlanets_Fluids.LIQUID_HYDROCARBON.getDefaultState();
+		this.waterBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
 	}
 
 	@Override
