@@ -38,7 +38,6 @@ public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-
 	}
 
 	@Override
@@ -48,6 +47,9 @@ public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 
 	@Override
 	protected void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-
+	}
+	
+	@Override
+	public void onPopulate(int cX, int cZ) {		
 	}
 }
