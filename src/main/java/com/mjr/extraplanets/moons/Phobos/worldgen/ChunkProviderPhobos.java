@@ -62,7 +62,7 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	@Override
 	public double getHeightModifier() {
-		return 12;
+		return 24;
 	}
 
 	@Override
@@ -72,17 +72,17 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	@Override
 	public double getMountainHeightModifier() {
-		return 95;
+		return 120;
 	}
 
 	@Override
 	public double getValleyHeightModifier() {
-		return 50;
+		return 75;
 	}
 
 	@Override
 	public int getCraterProbability() {
-		return 2000;
+		return 7000;
 	}
 
 	@Override
