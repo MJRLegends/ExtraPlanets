@@ -424,8 +424,10 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.PHOBOS_BIOME_ID, PhobosBiomes.phobos.getBiomeName(), PhobosBiomes.phobos);
 		if (Config.RHEA)
 			Biome.registerBiome(Config.RHEA_BIOME_ID, RheaBiomes.rhea.getBiomeName(), RheaBiomes.rhea);
-		if (Config.TITAN)
+		if (Config.TITAN){
 			Biome.registerBiome(Config.TITAN_BIOME_ID, TitanBiomes.titan.getBiomeName(), TitanBiomes.titan);
+			Biome.registerBiome(Config.TITAN_SEA_BIOME_ID, TitanBiomes.titanMethaneSea.getBiomeName(), TitanBiomes.titanMethaneSea);
+		}
 		if (Config.TITANIA)
 			Biome.registerBiome(Config.TITANIA_BIOME_ID, TitaniaBiomes.titania.getBiomeName(), TitaniaBiomes.titania);
 		if (Config.TRITON)
