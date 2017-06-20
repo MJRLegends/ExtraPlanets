@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -32,10 +33,12 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.client.gui.overlay.OverlayElectricLaunchCountdown;
 import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
+import com.mjr.extraplanets.entities.rockets.EntityElecticRocketBase;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
@@ -75,20 +78,17 @@ public class MainHandlerClient {
 				}
 			}
 		}
-        if (event.phase == Phase.START && player != null)
-        {
-	        boolean isPressed = KeyHandlerClient.spaceKey.isPressed();
-	        if (!isPressed)
-	        {
-	            ClientProxyCore.lastSpacebarDown = false;
-	        }
-	
-			if (player.getRidingEntity() != null && isPressed)
-	        {
-	            ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_IGNITE_ROCKET, GCCoreUtil.getDimensionID(player.worldObj), new Object[] {}));
-	            ClientProxyCore.lastSpacebarDown = true;
-	        }
-        }
+		if (event.phase == Phase.START && player != null) {
+			boolean isPressed = KeyHandlerClient.spaceKey.isPressed();
+			if (!isPressed) {
+				ClientProxyCore.lastSpacebarDown = false;
+			}
+
+			if (player.getRidingEntity() != null && isPressed) {
+				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_IGNITE_ROCKET, GCCoreUtil.getDimensionID(player.worldObj), new Object[] {}));
+				ClientProxyCore.lastSpacebarDown = true;
+			}
+		}
 	}
 
 	@SubscribeEvent
@@ -116,6 +116,11 @@ public class MainHandlerClient {
 				}
 			}
 		}
+		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElecticRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
+				&& !((EntitySpaceshipBase) minecraft.thePlayer.getRidingEntity()).getLaunched()) {
+			OverlayElectricLaunchCountdown.renderCountdownOverlay();
+		}
+
 	}
 
 	@SubscribeEvent

@@ -57,7 +57,6 @@ public class KeyHandlerClient extends KeyHandler {
 	public void keyDown(Type types, KeyBinding kb, boolean tickEnd, boolean isRepeat) {
 		if (KeyHandlerClient.mc.player != null && tickEnd) {
 			EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.player, false);
-
 			if (playerBase == null) {
 				return;
 			}
