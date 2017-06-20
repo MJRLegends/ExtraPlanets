@@ -558,6 +558,7 @@ item.bucket_infected_water.name=Infected Water Bucket
 item.bucket_radioactive_water.name=Radioactive Water Bucket
 item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
+item.bucket_liquid_hydrocarbon.name=Liquid Hydrocarbon Bucket
 
 #Keys
 item.t4key.name=Tier 4 Dungeon Key
@@ -1005,16 +1006,19 @@ tile.clean_water.name=Clean Water
 tile.infected_water.name=Infected Water
 tile.methane.name=Liquid Methane
 tile.nitrogen_ice.name=Liquid Nitrogen Ice
+tile.liquid_hydrocarbon.name=Liquid Hydrocarbon
 
 fluid.glowstone_fluid=Liquid Glowstone
 fluid.magma_fluid=Liquid Magma
 fluid.nitrogen_fluid=Liquid Nitrogen
 fluid.frozen_water_fluid=Frozen Water
+fluid.salt_fluid=Liquid Salt
 fluid.radioactive_water_fluid=Radioactive Water
 fluid.clean_water_fluid=Clean Water
 fluid.infected_water_fluid=Infected Water
 fluid.methane_fluid=Liquid Methane
 fluid.nitrogen_ice_fluid=Liquid Nitrogen Ice
+fluid.liquid_hydrocarbon_fluid=Liquid Hydrocarbon
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
