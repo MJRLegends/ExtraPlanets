@@ -524,7 +524,6 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 
 	@Override
 	public boolean pressKey(int key) {
-		System.out.println(key);
 		if (this.worldObj.isRemote && (key == 6 || key == 8 || key == 9)) {
 			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(PacketSimple.EnumSimplePacket.S_CONTROL_ENTITY, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { key }));
 			return true;

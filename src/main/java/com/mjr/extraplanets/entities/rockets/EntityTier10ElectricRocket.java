@@ -148,7 +148,6 @@ public class EntityTier10ElectricRocket extends EntityElecticRocketBase {
 	public void onUpdate() {
 		super.onUpdate();
 
-		System.out.println(this.getCurrentPowerCapacity());
 		int i;
 
 		if (this.timeUntilLaunch >= 100) {
