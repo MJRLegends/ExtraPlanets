@@ -48,7 +48,7 @@ import codechicken.multipart.asm.StackAnalyser.This;
 
 import com.google.common.base.Predicate;
 
-public abstract class EntityElecticSpaceshipBase extends Entity implements IPacketReceiver, IIgnoreShift, ITelemetry {
+public abstract class EntityElectricSpaceshipBase extends Entity implements IPacketReceiver, IIgnoreShift, ITelemetry {
 	public static enum EnumLaunchPhase {
 		UNIGNITED, IGNITED, LAUNCHED, LANDING
 	}
@@ -71,7 +71,7 @@ public abstract class EntityElecticSpaceshipBase extends Entity implements IPack
 	protected float currentPowerCapacity;
 	protected float powerMaxCapacity;
 
-	public EntityElecticSpaceshipBase(World par1World) {
+	public EntityElectricSpaceshipBase(World par1World) {
 		super(par1World);
 		this.launchPhase = EnumLaunchPhase.UNIGNITED.ordinal();
 		this.preventEntitySpawning = true;
@@ -538,9 +538,9 @@ public abstract class EntityElecticSpaceshipBase extends Entity implements IPack
 	}
 
 	public static class RocketLaunchEvent extends EntityEvent {
-		public final EntityElecticSpaceshipBase rocket;
+		public final EntityElectricSpaceshipBase rocket;
 
-		public RocketLaunchEvent(EntityElecticSpaceshipBase entity) {
+		public RocketLaunchEvent(EntityElectricSpaceshipBase entity) {
 			super(entity);
 			rocket = entity;
 		}

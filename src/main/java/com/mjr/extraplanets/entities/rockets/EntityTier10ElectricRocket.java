@@ -30,7 +30,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
 
-public class EntityTier10ElectricRocket extends EntityElecticRocketBase {
+public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 	public EntityTier10ElectricRocket(World par1World) {
 		super(par1World);
 		this.setSize(1.8F, 6F);

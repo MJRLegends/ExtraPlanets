@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.entities.rockets.EntityElecticRocketBase;
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 
 @SideOnly(Side.CLIENT)
 public class OverlayElectricLaunchCountdown extends Overlay {
@@ -20,7 +20,7 @@ public class OverlayElectricLaunchCountdown extends Overlay {
 
 	public static void renderCountdownOverlay() {
 		GlStateManager.disableLighting();
-		int count = ((EntityElecticRocketBase) OverlayElectricLaunchCountdown.minecraft.thePlayer.getRidingEntity()).timeUntilLaunch / 2;
+		int count = ((EntityElectricRocketBase) OverlayElectricLaunchCountdown.minecraft.thePlayer.getRidingEntity()).timeUntilLaunch / 2;
 
 		count = (int) Math.floor(count / 10.0F);
 
