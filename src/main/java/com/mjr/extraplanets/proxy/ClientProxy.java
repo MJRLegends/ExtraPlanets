@@ -1281,5 +1281,16 @@ public class ClientProxy extends CommonProxy {
 				return nitrogen_iceLocation;
 			}
 		});
+		
+		ModelResourceLocation liquid_hydrocarbonLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon", "fluid");
+		Item liquid_hydrocarbon = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
+		ModelBakery.registerItemVariants(liquid_hydrocarbon, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon"));
+		ModelLoader.setCustomMeshDefinition(liquid_hydrocarbon, (ItemStack stack) -> liquid_hydrocarbonLocation);
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.LIQUID_HYDROCARBON, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return liquid_hydrocarbonLocation;
+			}
+		});
 	}
 }
