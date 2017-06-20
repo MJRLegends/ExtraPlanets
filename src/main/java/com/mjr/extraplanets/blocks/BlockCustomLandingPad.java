@@ -29,6 +29,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPadSingle;
+import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPadSingle;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPadSingle;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPadSingle;
 
@@ -37,7 +38,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	protected static final AxisAlignedBB AABB = new AxisAlignedBB(0.0, 0.0, 0.0, 1.0, 0.1875, 1.0);
 
 	public enum EnumLandingPadType implements IStringSerializable {
-		TIER_2_ROCKET_PAD(0, "tier_2_rocket"), TIER_3_ROCKET_PAD(1, "tier_3_rocket"), POWER_CHARGING_PAD(2, "powered_charging_pad");
+		TIER_2_ROCKET_PAD(0, "tier_2_rocket"), TIER_3_ROCKET_PAD(1, "tier_3_rocket"), POWER_CHARGING_PAD(2, "powered_charging_pad"), ROCKET_POWER_CHARGING_PAD(3, "rocket_powered_charging_pad");
 
 		private final int meta;
 		private final String name;
@@ -81,8 +82,13 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 
 	@Override
 	@SideOnly(Side.CLIENT)
+<<<<<<< HEAD
 	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < 3; i++) {
+=======
+	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+		for (int i = 0; i < 4; i++) {
+>>>>>>> ae5ee70... Started adding a Electric Rocket (VERY WIP)
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
@@ -132,6 +138,8 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 			return new TileEntityTier3LandingPadSingle();
 		case 2:
 			return new TileEntityPoweredChargingPadSingle();
+		case 3:
+			return new TileEntityRocketChargingPadSingle();
 		default:
 			return null;
 		}

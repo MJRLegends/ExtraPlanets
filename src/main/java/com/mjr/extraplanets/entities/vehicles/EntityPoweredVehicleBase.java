@@ -689,6 +689,10 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
 		return beforePower - this.getCurrentPowerCapacity();
 	}
+	
+	public  boolean inFlight(){
+		 return false;
+	 }
 
 	// ------------------------------------------------------------------------------------------------------
 

@@ -87,6 +87,8 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bTallGrass;
 import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPad;
 import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPadSingle;
+import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
+import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPadSingle;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPadSingle;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
@@ -578,6 +580,9 @@ public class ExtraPlanets_Blocks {
 
 		GameRegistry.registerTileEntity(TileEntityPoweredChargingPadSingle.class, "Powered Charging Pad");
 		GameRegistry.registerTileEntity(TileEntityPoweredChargingPad.class, "Powered Charging Pad Full");
+		
+		GameRegistry.registerTileEntity(TileEntityRocketChargingPadSingle.class, "Rocket Charging Pad");
+		GameRegistry.registerTileEntity(TileEntityRocketChargingPad.class, "Rocket Charging Pad Full");
 	}
 
 	private static void setHarvestLevels() {
