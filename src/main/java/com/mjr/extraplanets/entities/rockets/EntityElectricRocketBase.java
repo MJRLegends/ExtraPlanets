@@ -6,8 +6,6 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javax.annotation.Nullable;
-
 import micdoodle8.mods.galacticraft.api.entity.ICameraZoomEntity;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IWorldTransferCallback;
@@ -16,7 +14,6 @@ import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IExitHeight;
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
@@ -27,7 +24,6 @@ import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumHand;
@@ -39,9 +35,6 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 
 import com.mjr.extraplanets.api.IPoweredDockable;
 
-/**
- * Do not include this prefab class in your released mod download.
- */
 public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket implements IRocketType, IPoweredDockable, IWorldTransferCallback, ICameraZoomEntity {
 	public EnumRocketType rocketType;
 	public float rumble;
@@ -253,48 +246,48 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 			if (this.targetVec != null) {
 				if (this.targetDimension != this.world.provider.getDimension()) {
 					WorldProvider targetDim = WorldUtil.getProviderForDimensionServer(this.targetDimension);
-//					if (targetDim != null && targetDim.world instanceof WorldServer) { TODO 
-//						boolean dimensionAllowed = this.targetDimension == ConfigManagerCore.idDimensionOverworld;
-//
-//						if (targetDim instanceof IGalacticraftWorldProvider) {
-//							if (((IGalacticraftWorldProvider) targetDim).canSpaceshipTierPass(this.getRocketTier()))
-//								dimensionAllowed = true;
-//							else
-//								dimensionAllowed = false;
-//						} else
-//						// No rocket flight to non-Galacticraft dimensions other than the Overworld allowed unless config
-//						if ((this.targetDimension > 1 || this.targetDimension < -1) && marsConfigAllDimsAllowed != null) {
-//							try {
-//								if (marsConfigAllDimsAllowed.getBoolean(null)) {
-//									dimensionAllowed = true;
-//								}
-//							} catch (Exception e) {
-//								e.printStackTrace();
-//							}
-//						}
-//
-//						if (dimensionAllowed) {
-//							if (!this.getPassengers().isEmpty()) {
-//								for (Entity passenger : this.getPassengers()) {
-//									if (passenger instanceof EntityPlayerMP) {
-//										WorldUtil.transferEntityToDimension(passenger, this.targetDimension, (WorldServer) targetDim.world, false, this);
-//									}
-//								}
-//							} else {
-//								Entity e = WorldUtil.transferEntityToDimension(this, this.targetDimension, (WorldServer) targetDim.world, false, null);
-//								if (e instanceof EntityElecticAutoRocket) {
-//									e.setPosition(this.targetVec.getX() + 0.5F, this.targetVec.getY() + 800, this.targetVec.getZ() + 0.5f);
-//									((EntityElecticAutoRocket) e).setLaunchPhase(EnumLaunchPhase.LANDING);
-//									((EntityElecticAutoRocket) e).setWaitForPlayer(false);
-//								} else {
-//									GCLog.info("Error: failed to recreate the unmanned rocket in landing mode on target planet.");
-//									e.setDead();
-//									this.setDead();
-//								}
-//							}
-//							return;
-//						}
-//					}
+					// if (targetDim != null && targetDim.world instanceof WorldServer) { TODO
+					// boolean dimensionAllowed = this.targetDimension == ConfigManagerCore.idDimensionOverworld;
+					//
+					// if (targetDim instanceof IGalacticraftWorldProvider) {
+					// if (((IGalacticraftWorldProvider) targetDim).canSpaceshipTierPass(this.getRocketTier()))
+					// dimensionAllowed = true;
+					// else
+					// dimensionAllowed = false;
+					// } else
+					// // No rocket flight to non-Galacticraft dimensions other than the Overworld allowed unless config
+					// if ((this.targetDimension > 1 || this.targetDimension < -1) && marsConfigAllDimsAllowed != null) {
+					// try {
+					// if (marsConfigAllDimsAllowed.getBoolean(null)) {
+					// dimensionAllowed = true;
+					// }
+					// } catch (Exception e) {
+					// e.printStackTrace();
+					// }
+					// }
+					//
+					// if (dimensionAllowed) {
+					// if (!this.getPassengers().isEmpty()) {
+					// for (Entity passenger : this.getPassengers()) {
+					// if (passenger instanceof EntityPlayerMP) {
+					// WorldUtil.transferEntityToDimension(passenger, this.targetDimension, (WorldServer) targetDim.world, false, this);
+					// }
+					// }
+					// } else {
+					// Entity e = WorldUtil.transferEntityToDimension(this, this.targetDimension, (WorldServer) targetDim.world, false, null);
+					// if (e instanceof EntityElecticAutoRocket) {
+					// e.setPosition(this.targetVec.getX() + 0.5F, this.targetVec.getY() + 800, this.targetVec.getZ() + 0.5f);
+					// ((EntityElecticAutoRocket) e).setLaunchPhase(EnumLaunchPhase.LANDING);
+					// ((EntityElecticAutoRocket) e).setWaitForPlayer(false);
+					// } else {
+					// GCLog.info("Error: failed to recreate the unmanned rocket in landing mode on target planet.");
+					// e.setDead();
+					// this.setDead();
+					// }
+					// }
+					// return;
+					// }
+					// }
 					// No destination world found - in this situation continue into regular take-off (as if Not launch controlled)
 				} else {
 					// Same dimension controlled rocket flight
@@ -367,7 +360,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 	}
 
 	@Override
-	public boolean processInitialInteract(EntityPlayer player, @Nullable ItemStack stack, EnumHand hand) {
+	public boolean processInitialInteract(EntityPlayer player, EnumHand hand) {
 		if (hand != EnumHand.MAIN_HAND) {
 			return false;
 		}

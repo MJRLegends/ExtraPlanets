@@ -18,6 +18,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
@@ -34,23 +35,12 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 	public EntityTier10ElectricRocket(World par1World) {
 		super(par1World);
 		this.setSize(1.8F, 6F);
-		this.setPowerMaxCapacity(10000);
-		this.setCurrentPowerCapacity(10000);
 	}
 
 	public EntityTier10ElectricRocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
 		super(par1World, x, y, z);
 		this.rocketType = rocketType;
-		this.cargoItems = new ItemStack[this.getSizeInventory()];
-		this.setPowerMaxCapacity(10000);
-		this.setCurrentPowerCapacity(10000);
-	}
-
-	public EntityTier10ElectricRocket(World par1World, double x, double y, double z, boolean reversed, EnumRocketType rocketType, ItemStack[] inv) {
-		this(par1World, x, y, z, rocketType);
-		this.cargoItems = inv;
-		this.setPowerMaxCapacity(10000);
-		this.setCurrentPowerCapacity(10000);
+		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 	}
 
 	@Override
@@ -60,7 +50,7 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 
 	@Override
 	public ItemStack getPickedResult(RayTraceResult target) {
-		return new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, this.rocketType.getIndex());
+		return new ItemStack(ExtraPlanets_Items.TIER_10_ROCKET, 1, this.rocketType.getIndex());
 	}
 
 	@Override
@@ -137,13 +127,14 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 
 			// Set the player's launchpad item for return on landing - or null if launchpads not removed
 			if (stats != null) {
-				stats.setLaunchpadStack(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 25, 3));
+				stats.setLaunchpadStack(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 25, 1));
 			}
 
 			this.playSound(SoundEvents.ENTITY_ITEM_PICKUP, 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
 		}
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
@@ -205,15 +196,15 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 		if (playerBase != null) {
 			GCPlayerStats stats = playerBase.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
 
-			if (this.cargoItems == null || this.cargoItems.length == 0) {
-				stats.setRocketStacks(new ItemStack[2]);
+			if (this.stacks == null || this.stacks.isEmpty()) {
+				stats.setRocketStacks(NonNullList.withSize(2, ItemStack.EMPTY));
 			} else {
-				stats.setRocketStacks(this.cargoItems);
+				stats.setRocketStacks(this.stacks);
 			}
 
 			stats.setRocketType(this.rocketType.getIndex());
 			stats.setRocketItem(ExtraPlanets_Items.TIER_10_ROCKET);
-			// stats.setFuelLevel(this.fuelTank.getFluidAmount());
+			//stats.setFuelLevel(this.fuelTank.getFluidAmount());
 		}
 	}
 
@@ -281,7 +272,7 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
 		return !this.isDead && par1EntityPlayer.getDistanceSqToEntity(this) <= 64.0D;
 	}
 
@@ -318,7 +309,7 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 		super.getItemsDropped(droppedItems);
 		ItemStack rocket = new ItemStack(ExtraPlanets_Items.TIER_10_ROCKET, 1, this.rocketType.getIndex());
 		rocket.setTagCompound(new NBTTagCompound());
-		// rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
+		//rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
 		droppedItems.add(rocket);
 		return droppedItems;
 	}

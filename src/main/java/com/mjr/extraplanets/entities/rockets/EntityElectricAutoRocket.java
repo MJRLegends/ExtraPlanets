@@ -33,12 +33,13 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ClassInheritanceMultiMap;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.TextComponentString;
@@ -60,7 +61,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	public int destinationFrequency = -1;
 	public BlockPos targetVec;
 	public int targetDimension;
-	protected ItemStack[] cargoItems;
+	protected NonNullList<ItemStack> stacks;
 	private IPowerDock landingPad;
 	public EnumAutoLaunch autoLaunchSetting;
 	public int autoLaunchCountdown;
@@ -580,8 +581,8 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 			this.lastLastMotionY = lastLastMotY;
 		}
 
-		if (this.cargoItems == null) {
-			this.cargoItems = new ItemStack[this.getSizeInventory()];
+		if (this.stacks == null) {
+			this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 		}
 
 		this.setWaitForPlayer(buffer.readBoolean());
@@ -601,7 +602,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					if (e != null) {
 						if (e.dimension != this.dimension) {
 							if (e instanceof EntityPlayer) {
-								e = WorldUtil.forceRespawnClient(this.dimension, e.world.getDifficulty().getDifficultyId(), e.world.getWorldInfo().getTerrainType().getWorldTypeID(), ((EntityPlayerMP) e).interactionManager.getGameType().getID());
+								e = WorldUtil.forceRespawnClient(this.dimension, e.world.getDifficulty().getDifficultyId(), e.world.getWorldInfo().getTerrainType().getName(), ((EntityPlayerMP) e).interactionManager.getGameType().getID());
 								e.startRiding(this);
 							}
 						} else
@@ -616,7 +617,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					if (e != null) {
 						if (e.dimension != this.dimension) {
 							if (e instanceof EntityPlayer) {
-								e = WorldUtil.forceRespawnClient(this.dimension, e.world.getDifficulty().getDifficultyId(), e.world.getWorldInfo().getTerrainType().getWorldTypeID(), ((EntityPlayerMP) e).interactionManager.getGameType().getID());
+								e = WorldUtil.forceRespawnClient(this.dimension, e.world.getDifficulty().getDifficultyId(), e.world.getWorldInfo().getTerrainType().getName(), ((EntityPlayerMP) e).interactionManager.getGameType().getID());
 								e.startRiding(this);
 							}
 						} else
@@ -810,18 +811,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		nbt.setFloat("currentPowerCapacity", this.currentPowerCapacity);
 
 		if (this.getSizeInventory() > 0) {
-			final NBTTagList var2 = new NBTTagList();
-
-			for (int var3 = 0; var3 < this.cargoItems.length; ++var3) {
-				if (this.cargoItems[var3] != null) {
-					final NBTTagCompound var4 = new NBTTagCompound();
-					var4.setByte("Slot", (byte) var3);
-					this.cargoItems[var3].writeToNBT(var4);
-					var2.appendTag(var4);
-				}
-			}
-
-			nbt.setTag("Items", var2);
+			ItemStackHelper.saveAllItems(nbt, this.stacks);
 		}
 
 		nbt.setBoolean("TargetValid", this.targetVec != null);
@@ -848,17 +838,8 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.currentPowerCapacity = nbt.getFloat("currentPowerCapacity");
 
 		if (this.getSizeInventory() > 0) {
-			final NBTTagList var2 = nbt.getTagList("Items", 10);
-			this.cargoItems = new ItemStack[this.getSizeInventory()];
-
-			for (int var3 = 0; var3 < var2.tagCount(); ++var3) {
-				final NBTTagCompound var4 = var2.getCompoundTagAt(var3);
-				final int var5 = var4.getByte("Slot") & 255;
-
-				if (var5 < this.cargoItems.length) {
-					this.cargoItems[var5] = ItemStack.loadItemStackFromNBT(var4);
-				}
-			}
+			this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
+			ItemStackHelper.loadAllItems(nbt, this.stacks);
 		}
 
 		if (nbt.getBoolean("TargetValid") && nbt.hasKey("targetTileX")) {
@@ -913,33 +894,33 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 		int count = 0;
 
-		for (count = 0; count < this.cargoItems.length - 2; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+		for (count = 0; count < this.stacks.size() - 2; count++) {
+			ItemStack stackAt = this.stacks.get(count);
 
-			if (stackAt != null && stackAt.getItem() == stack.getItem() && stackAt.getItemDamage() == stack.getItemDamage() && stackAt.stackSize < stackAt.getMaxStackSize()) {
-				if (stackAt.stackSize + stack.stackSize <= stackAt.getMaxStackSize()) {
+			if (!stackAt.isEmpty() && stackAt.getItem() == stack.getItem() && stackAt.getItemDamage() == stack.getItemDamage() && stackAt.getCount() < stackAt.getMaxStackSize()) {
+				if (stackAt.getCount() + stack.getCount() <= stackAt.getMaxStackSize()) {
 					if (doAdd) {
-						this.cargoItems[count].stackSize += stack.stackSize;
+						stackAt.grow(stack.getCount());
 						this.markDirty();
 					}
 
 					return EnumCargoLoadingState.SUCCESS;
 				} else {
 					// Part of the stack can fill this slot but there will be some left over
-					int origSize = stackAt.stackSize;
-					int surplus = origSize + stack.stackSize - stackAt.getMaxStackSize();
+					int origSize = stackAt.getCount();
+					int surplus = origSize + stack.getCount() - stackAt.getMaxStackSize();
 
 					if (doAdd) {
-						this.cargoItems[count].stackSize = stackAt.getMaxStackSize();
+						stackAt.setCount(stackAt.getMaxStackSize());
 						this.markDirty();
 					}
 
-					stack.stackSize = surplus;
+					stack.setCount(surplus);
 					if (this.addCargo(stack, doAdd) == EnumCargoLoadingState.SUCCESS) {
 						return EnumCargoLoadingState.SUCCESS;
 					}
 
-					this.cargoItems[count].stackSize = origSize;
+					stackAt.setCount(origSize);
 					if (this.autoLaunchSetting == EnumAutoLaunch.CARGO_IS_FULL) {
 						this.autoLaunch();
 					}
@@ -948,12 +929,12 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 			}
 		}
 
-		for (count = 0; count < this.cargoItems.length - 2; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+		for (count = 0; count < this.stacks.size() - 2; count++) {
+			ItemStack stackAt = this.stacks.get(count);
 
-			if (stackAt == null) {
+			if (stackAt.isEmpty()) {
 				if (doAdd) {
-					this.cargoItems[count] = stack;
+					this.stacks.set(count, stack);
 					this.markDirty();
 				}
 
@@ -970,15 +951,15 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public RemovalResult removeCargo(boolean doRemove) {
-		for (int i = 0; i < this.cargoItems.length - 2; i++) {
-			ItemStack stackAt = this.cargoItems[i];
+		for (int i = 0; i < this.stacks.size() - 2; i++) {
+			ItemStack stackAt = this.stacks.get(i);
 
-			if (stackAt != null) {
+			if (!stackAt.isEmpty()) {
 				ItemStack resultStack = stackAt.copy();
-				resultStack.stackSize = 1;
+				resultStack.setCount(1);
 
-				if (doRemove && --stackAt.stackSize <= 0) {
-					this.cargoItems[i] = null;
+				if (doRemove) {
+					stackAt.shrink(1);
 				}
 
 				if (doRemove) {
@@ -992,58 +973,43 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 			this.autoLaunch();
 		}
 
-		return new RemovalResult(EnumCargoLoadingState.EMPTY, null);
+		return new RemovalResult(EnumCargoLoadingState.EMPTY, ItemStack.EMPTY);
 	}
 
 	@Override
-	public ItemStack getStackInSlot(int par1) {
-		if (this.cargoItems == null)
-			return null;
-
-		return this.cargoItems[par1];
-	}
-
-	@Override
-	public ItemStack decrStackSize(int par1, int par2) {
-		if (this.cargoItems[par1] != null) {
-			ItemStack var3;
-
-			if (this.cargoItems[par1].stackSize <= par2) {
-				var3 = this.cargoItems[par1];
-				this.cargoItems[par1] = null;
-				return var3;
-			} else {
-				var3 = this.cargoItems[par1].splitStack(par2);
-
-				if (this.cargoItems[par1].stackSize == 0) {
-					this.cargoItems[par1] = null;
-				}
-
-				return var3;
-			}
-		} else {
-			return null;
+	public ItemStack getStackInSlot(int index) {
+		if (this.stacks == null) {
+			return ItemStack.EMPTY;
 		}
+
+		return this.stacks.get(index);
 	}
 
 	@Override
-	public ItemStack removeStackFromSlot(int par1) {
-		if (this.cargoItems[par1] != null) {
-			final ItemStack var2 = this.cargoItems[par1];
-			this.cargoItems[par1] = null;
-			return var2;
-		} else {
-			return null;
+	public ItemStack decrStackSize(int index, int count) {
+		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
+
+		if (!itemstack.isEmpty()) {
+			this.markDirty();
 		}
+
+		return itemstack;
 	}
 
 	@Override
-	public void setInventorySlotContents(int par1, ItemStack par2ItemStack) {
-		this.cargoItems[par1] = par2ItemStack;
+	public ItemStack removeStackFromSlot(int index) {
+		return ItemStackHelper.getAndRemove(this.stacks, index);
+	}
 
-		if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit()) {
-			par2ItemStack.stackSize = this.getInventoryStackLimit();
+	@Override
+	public void setInventorySlotContents(int index, ItemStack stack) {
+		this.stacks.set(index, stack);
+
+		if (stack.getCount() > this.getInventoryStackLimit()) {
+			stack.setCount(this.getInventoryStackLimit());
 		}
+
+		this.markDirty();
 	}
 
 	@Override
@@ -1062,7 +1028,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
+	public boolean isUsableByPlayer(EntityPlayer entityplayer) {
 		return !this.isDead && entityplayer.getDistanceSqToEntity(this) <= 64.0D;
 	}
 
@@ -1075,6 +1041,20 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	public void markDirty() {
 	}
 
+    @Override
+    public boolean isEmpty()
+    {
+        for (ItemStack itemstack : this.stacks)
+        {
+            if (!itemstack.isEmpty())
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 	@Override
 	public void onPadDestroyed() {
 		if (!this.isDead && this.launchPhase < EnumLaunchPhase.LAUNCHED.ordinal()) {
@@ -1085,9 +1065,9 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public List<ItemStack> getItemsDropped(List<ItemStack> droppedItemList) {
-		if (this.cargoItems != null) {
-			for (final ItemStack item : this.cargoItems) {
-				if (item != null) {
+		if (this.stacks != null) {
+			for (final ItemStack item : this.stacks) {
+				if (item != null && !item.isEmpty()) {
 					droppedItemList.add(item);
 				}
 			}
