@@ -394,6 +394,7 @@ gui.status.crystallizing.name=Crystallizing
 gui.status.decrystallizing.name=Decrystallizing
 gui.status.solarEvaporationChamber.name=Evaporating
 gui.message.power.name=Powered Vehicle
+gui.message.power.rocket.name=Electric Rocket
 gui.message.power.message.name=Power
 gui.button.loadpower.name=Load Power
 gui.powered.inv.name=Inventory / Power
