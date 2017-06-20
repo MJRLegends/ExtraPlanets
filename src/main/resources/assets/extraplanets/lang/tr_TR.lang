@@ -1006,6 +1006,16 @@ tile.infected_water.name=Infected Water
 tile.methane.name=Liquid Methane
 tile.nitrogen_ice.name=Liquid Nitrogen Ice
 
+fluid.glowstone_fluid=Liquid Glowstone
+fluid.magma_fluid=Liquid Magma
+fluid.nitrogen_fluid=Liquid Nitrogen
+fluid.frozen_water_fluid=Frozen Water
+fluid.radioactive_water_fluid=Radioactive Water
+fluid.clean_water_fluid=Clean Water
+fluid.infected_water_fluid=Infected Water
+fluid.methane_fluid=Liquid Methane
+fluid.nitrogen_ice_fluid=Liquid Nitrogen Ice
+
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
