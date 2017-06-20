@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.KeyBinding;
+import net.minecraftforge.fml.common.gameevent.TickEvent.Type;
 
 import org.lwjgl.input.Keyboard;
 
@@ -18,8 +19,6 @@ import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
-
-import net.minecraftforge.fml.common.gameevent.TickEvent.Type;
 
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openFuelGui;
@@ -58,7 +57,7 @@ public class KeyHandlerClient extends KeyHandler {
 	@Override
 	public void keyDown(Type types, KeyBinding kb, boolean tickEnd, boolean isRepeat) {
 		if (KeyHandlerClient.mc.thePlayer != null && tickEnd) {
-            EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.thePlayer, false);
+			EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.thePlayer, false);
 
 			if (playerBase == null) {
 				return;
