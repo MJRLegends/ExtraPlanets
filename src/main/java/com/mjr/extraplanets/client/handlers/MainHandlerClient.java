@@ -112,7 +112,7 @@ public class MainHandlerClient {
 			}
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
-				&& !((EntitySpaceshipBase) minecraft.player.getRidingEntity()).getLaunched()) {
+				&& !((EntityElectricRocketBase) minecraft.player.getRidingEntity()).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
 		}
 

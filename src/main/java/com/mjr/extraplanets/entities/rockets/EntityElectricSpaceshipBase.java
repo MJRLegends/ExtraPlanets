@@ -188,7 +188,6 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 		super.onUpdate();
 
-		System.out.println(this.currentPowerCapacity);
 		if (this.addToTelemetry) {
 			this.addToTelemetry = false;
 			for (BlockVec3Dim vec : new ArrayList<BlockVec3Dim>(this.telemetryList)) {
