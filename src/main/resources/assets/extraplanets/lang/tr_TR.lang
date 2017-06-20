@@ -558,6 +558,7 @@ item.bucket_infected_water.name=Infected Water Bucket
 item.bucket_radioactive_water.name=Radioactive Water Bucket
 item.bucket_methane.name=Liquid Methane Bucket
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket
+item.bucket_liquid_hydrocarbon.name=Liquid Hydrocarbon Bucket
 
 #Keys
 item.T4key.name=Tier 4 Zindan Anahtarı
@@ -1005,6 +1006,7 @@ tile.clean_water.name=Clean Water
 tile.infected_water.name=Infected Water
 tile.methane.name=Liquid Methane
 tile.nitrogen_ice.name=Liquid Nitrogen Ice
+tile.liquid_hydrocarbon.name=Liquid Hydrocarbon
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
