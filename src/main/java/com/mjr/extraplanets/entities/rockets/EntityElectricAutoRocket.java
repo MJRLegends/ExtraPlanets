@@ -58,7 +58,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredLandable;
 
-public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {
+public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {
 	public int destinationFrequency = -1;
 	public BlockPos targetVec;
 	public int targetDimension;
@@ -88,7 +88,7 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 		}
 	}
 
-	public EntityElecticAutoRocket(World world) {
+	public EntityElectricAutoRocket(World world) {
 		super(world);
 
 		if (world != null && world.isRemote) {
@@ -96,7 +96,7 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 		}
 	}
 
-	public EntityElecticAutoRocket(World world, double posX, double posY, double posZ) {
+	public EntityElectricAutoRocket(World world, double posX, double posY, double posZ) {
 		this(world);
 		this.setSize(0.98F, 2F);
 		this.setPosition(posX, posY, posZ);
@@ -296,10 +296,10 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 					this.rotationPitch = 0F;
 
 				if (yDiff > 1D && yDiff < 4D) {
-					for (Object o : this.worldObj.getEntitiesInAABBexcluding(this, this.getEntityBoundingBox().offset(0D, -3D, 0D), EntityElecticSpaceshipBase.rocketSelector)) {
-						if (o instanceof EntityElecticSpaceshipBase) {
-							((EntityElecticSpaceshipBase) o).dropShipAsItem();
-							((EntityElecticSpaceshipBase) o).setDead();
+					for (Object o : this.worldObj.getEntitiesInAABBexcluding(this, this.getEntityBoundingBox().offset(0D, -3D, 0D), EntityElectricSpaceshipBase.rocketSelector)) {
+						if (o instanceof EntityElectricSpaceshipBase) {
+							((EntityElectricSpaceshipBase) o).dropShipAsItem();
+							((EntityElectricSpaceshipBase) o).setDead();
 						}
 					}
 				}
@@ -335,18 +335,18 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 				this.autoLaunch();
 			}
 
-			if (this.autoLaunchCountdown > 0 && (!(this instanceof EntityElecticRocketBase) || !this.getPassengers().isEmpty())) {
+			if (this.autoLaunchCountdown > 0 && (!(this instanceof EntityElectricRocketBase) || !this.getPassengers().isEmpty())) {
 				if (--this.autoLaunchCountdown <= 0) {
 					this.autoLaunch();
 				}
 			}
 
-			if (this.autoLaunchSetting == EnumAutoLaunch.ROCKET_IS_POWERED && this.currentPowerCapacity == this.powerMaxCapacity && (!(this instanceof EntityElecticRocketBase) || !this.getPassengers().isEmpty())) {
+			if (this.autoLaunchSetting == EnumAutoLaunch.ROCKET_IS_POWERED && this.currentPowerCapacity == this.powerMaxCapacity && (!(this instanceof EntityElectricRocketBase) || !this.getPassengers().isEmpty())) {
 				this.autoLaunch();
 			}
 
 			if (this.autoLaunchSetting == EnumAutoLaunch.INSTANT) {
-				if (this.autoLaunchCountdown == 0 && (!(this instanceof EntityElecticRocketBase) || !this.getPassengers().isEmpty())) {
+				if (this.autoLaunchCountdown == 0 && (!(this instanceof EntityElectricRocketBase) || !this.getPassengers().isEmpty())) {
 					this.autoLaunch();
 				}
 			}
@@ -453,9 +453,9 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 			if (this.isDockValid(dock)) {
 				if (!this.worldObj.isRemote) {
 					// Drop any existing rocket on the landing pad
-					if (dock.getDockedEntity() instanceof EntityElecticSpaceshipBase && dock.getDockedEntity() != this) {
-						((EntityElecticSpaceshipBase) dock.getDockedEntity()).dropShipAsItem();
-						((EntityElecticSpaceshipBase) dock.getDockedEntity()).setDead();
+					if (dock.getDockedEntity() instanceof EntityElectricSpaceshipBase && dock.getDockedEntity() != this) {
+						((EntityElectricSpaceshipBase) dock.getDockedEntity()).dropShipAsItem();
+						((EntityElectricSpaceshipBase) dock.getDockedEntity()).setDead();
 					}
 
 					this.setPad(dock);

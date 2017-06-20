@@ -33,8 +33,8 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
-import com.mjr.extraplanets.entities.rockets.EntityElecticRocketBase;
-import com.mjr.extraplanets.entities.rockets.EntityElecticSpaceshipBase.EnumLaunchPhase;
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
+import com.mjr.extraplanets.entities.rockets.EntityElectricSpaceshipBase.EnumLaunchPhase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 
@@ -163,14 +163,14 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType());
 			}
-			else if (player.getRidingEntity() instanceof EntityElecticRocketBase)
+			else if (player.getRidingEntity() instanceof EntityElectricRocketBase)
             {
                 player.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, player.worldObj, (int) player.posX, (int) player.posY, (int) player.posZ);
             }
 			break;
 		case S_IGNITE_ROCKET:
-			if (!player.worldObj.isRemote && !player.isDead && player.getRidingEntity() != null && !player.getRidingEntity().isDead && player.getRidingEntity() instanceof EntityElecticRocketBase) {
-				final EntityElecticRocketBase ship = (EntityElecticRocketBase) player.getRidingEntity();
+			if (!player.worldObj.isRemote && !player.isDead && player.getRidingEntity() != null && !player.getRidingEntity().isDead && player.getRidingEntity() instanceof EntityElectricRocketBase) {
+				final EntityElectricRocketBase ship = (EntityElectricRocketBase) player.getRidingEntity();
 
 				if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
 					if (ship.hasValidPower()) {

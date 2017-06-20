@@ -42,7 +42,7 @@ import com.mjr.extraplanets.api.IPoweredDockable;
 /**
  * Do not include this prefab class in your released mod download.
  */
-public abstract class EntityElecticRocketBase extends EntityElecticAutoRocket implements IRocketType, IPoweredDockable, IWorldTransferCallback, ICameraZoomEntity {
+public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket implements IRocketType, IPoweredDockable, IWorldTransferCallback, ICameraZoomEntity {
 	public EnumRocketType rocketType;
 	public float rumble;
 	public int launchCooldown;
@@ -59,13 +59,13 @@ public abstract class EntityElecticRocketBase extends EntityElecticAutoRocket im
 		}
 	}
 
-	public EntityElecticRocketBase(World par1World) {
+	public EntityElectricRocketBase(World par1World) {
 		super(par1World);
 		this.setSize(0.98F, 4F);
 		// this.yOffset = this.height / 2.0F;
 	}
 
-	public EntityElecticRocketBase(World world, double posX, double posY, double posZ) {
+	public EntityElectricRocketBase(World world, double posX, double posY, double posZ) {
 		super(world, posX, posY, posZ);
 	}
 
@@ -88,7 +88,7 @@ public abstract class EntityElecticRocketBase extends EntityElecticAutoRocket im
 		// These will be done: 2 chunks per tick during IGNITE phase (so 800 chunks during the 20 second launch countdown)
 		// then the ones that are left 1 chunk per tick during flight (normally flight will last more than 450 ticks)
 		// If the server is at less than 20tps then maybe some of the outermost chunks won't be pre-generated but that's probably OK
-		if (this.destinationFrequency == -1 && !EntityElecticRocketBase.preGenInProgress) {
+		if (this.destinationFrequency == -1 && !EntityElectricRocketBase.preGenInProgress) {
 			ArrayList<Integer> toPreGen = new ArrayList();
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 				if (planet.getDimensionID() == this.dimension) {
@@ -123,7 +123,7 @@ public abstract class EntityElecticRocketBase extends EntityElecticAutoRocket im
 					}
 				}
 				this.preGenIterator = this.preGenList.iterator();
-				EntityElecticRocketBase.preGenInProgress = true;
+				EntityElectricRocketBase.preGenInProgress = true;
 			}
 		} else {
 			this.preGenIterator = null;
@@ -179,7 +179,7 @@ public abstract class EntityElecticRocketBase extends EntityElecticAutoRocket im
 					}
 				} else {
 					this.preGenIterator = null;
-					EntityElecticRocketBase.preGenInProgress = false;
+					EntityElectricRocketBase.preGenInProgress = false;
 				}
 			}
 		}
