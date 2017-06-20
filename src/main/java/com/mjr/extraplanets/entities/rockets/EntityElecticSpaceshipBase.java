@@ -186,7 +186,6 @@ public abstract class EntityElecticSpaceshipBase extends Entity implements IPack
 		this.ticks++;
 
 		super.onUpdate();
-
 		if (this.addToTelemetry) {
 			this.addToTelemetry = false;
 			for (BlockVec3Dim vec : new ArrayList<BlockVec3Dim>(this.telemetryList)) {
