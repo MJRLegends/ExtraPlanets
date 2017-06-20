@@ -8,9 +8,15 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v0.1.7 Beta Build
 *Moved Kepler22b Chunk Provider class to a prefab class & extended it for Kepler22b (for future plans)
-*Fixed biome confict issue
+*Fixed biome conflict issue (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Clean up
 *Added Liquid Hydrocarbon Fluid
 *Converted Titan over to a Multi Biome System
@@ -25,11 +31,6 @@ v0.1.7 Beta Build
 *Changes to Gravity and Fall Damage Modifier (With Config option to change it back to the old way!)
 *Changes to Gravity and Fall Damage Modifier for Moons to match Planets values (With Config option to change it back to the old way!)
 
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
 v0.1.6 Beta Build
 *Fixed recipe issue/crash
 *Added Tier 1 - 5 with Variants Kits (WIP)	
