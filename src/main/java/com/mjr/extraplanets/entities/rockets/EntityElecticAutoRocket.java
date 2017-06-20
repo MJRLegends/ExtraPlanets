@@ -712,7 +712,10 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 	}
 
 	public boolean hasValidPower() {
-		return this.currentPowerCapacity == this.getPowerMaxCapacity();
+		if (this.launchPhase >= EnumLaunchPhase.LAUNCHED.ordinal())
+			return true;
+		else
+			return this.currentPowerCapacity == this.getPowerMaxCapacity();
 	}
 
 	public void cancelLaunch() {
