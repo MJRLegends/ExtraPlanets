@@ -7,6 +7,7 @@ import java.util.Map;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
@@ -30,11 +31,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
+import com.mjr.extraplanets.network.PacketSimpleEP;
+import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
@@ -58,6 +62,7 @@ public class MainHandlerClient {
 	public void onClientTick(ClientTickEvent event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
 		final WorldClient world = minecraft.theWorld;
+		final EntityPlayerSP player = minecraft.thePlayer;
 
 		if (event.phase == Phase.END) {
 			if (world != null) {
@@ -66,6 +71,20 @@ public class MainHandlerClient {
 				}
 			}
 		}
+        if (event.phase == Phase.START && player != null)
+        {
+	        boolean isPressed = KeyHandlerClient.spaceKey.isPressed();
+	        if (!isPressed)
+	        {
+	            ClientProxyCore.lastSpacebarDown = false;
+	        }
+	
+			if (player.getRidingEntity() != null && isPressed)
+	        {
+	            ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_IGNITE_ROCKET, GCCoreUtil.getDimensionID(player.worldObj), new Object[] {}));
+	            ClientProxyCore.lastSpacebarDown = true;
+	        }
+        }
 	}
 
 	@SubscribeEvent

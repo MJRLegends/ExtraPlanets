@@ -27,4 +27,6 @@ public interface IPoweredDockable extends IPowerable, ICargoEntity {
 	 * Returning false will not let setPad be called.
 	 */
 	public boolean isDockValid(IPowerDock dock);
+    
+    boolean inFlight();
 }

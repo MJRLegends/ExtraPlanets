@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
+import micdoodle8.mods.galacticraft.api.entity.ILandable;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
@@ -29,8 +30,8 @@ import com.mjr.extraplanets.blocks.BlockCustomMulti;
 import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
-public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMultiBlock, IPowerable, IPowerDock, ICargoEntity {
-	public TileEntityPoweredChargingPad() {
+public class TileEntityRocketChargingPad extends TileEntityMulti implements IMultiBlock, IPowerable, IPowerDock, ICargoEntity {
+	public TileEntityRocketChargingPad() {
 		super(null);
 	}
 
@@ -50,27 +51,27 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 			final List<Entity> list = this.worldObj.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 3.5D, this.getPos().getY(), this.getPos().getZ() - 3.5D, this.getPos().getX() + 3.5D, this.getPos().getY() + 10.0D, this
 					.getPos().getZ() + 3.5D));
 
-			boolean changed = false;
+			boolean docked = false;
 
 			for (final Object o : list) {
-				if (o != null && o instanceof IPoweredDockable && !this.worldObj.isRemote) {
+				if (o instanceof IPoweredDockable && !((Entity) o).isDead) {
+					docked = true;
+
 					final IPoweredDockable fuelable = (IPoweredDockable) o;
 
-					if (fuelable.isDockValid(this)) {
-						this.dockedEntity = fuelable;
-
-						this.dockedEntity.setPad(this);
-
-						changed = true;
+					if (fuelable != this.dockedEntity && fuelable.isDockValid(this)) {
+						if (fuelable instanceof ILandable) {
+							((ILandable) fuelable).landEntity(this.getPos());
+						} else {
+							fuelable.setPad(this);
+						}
 					}
+
+					break;
 				}
 			}
 
-			if (!changed) {
-				if (this.dockedEntity != null) {
-					this.dockedEntity.setPad(null);
-				}
-
+			if (!docked) {
 				this.dockedEntity = null;
 			}
 		}
@@ -94,7 +95,7 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 
 		List<BlockPos> positions = new ArrayList();
 		this.getPositions(placedPosition, positions);
-		((BlockCustomMulti) ExtraPlanets_Blocks.FAKE_BLOCK).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.POWER_CHARGING_PAD);
+		((BlockCustomMulti) ExtraPlanets_Blocks.FAKE_BLOCK).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.ROCKET_POWER_CHARGING_PAD);
 	}
 
 	@Override
@@ -123,7 +124,7 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 		for (BlockPos pos : positions) {
 			IBlockState stateAt = this.worldObj.getBlockState(pos);
 
-			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && (EnumBlockMultiType) stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.POWER_CHARGING_PAD) {
+			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && (EnumBlockMultiType) stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.ROCKET_POWER_CHARGING_PAD) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.worldObj.getBlockState(pos));
 				}

@@ -35,6 +35,8 @@ public class ItemBlockCustomLandingPad extends ItemBlockDesc
             break;
 		case 2:
 			name = "poweredChargingPad";
+		case 3:
+			name = "rocketChargingPad";
 			break;
         }
 

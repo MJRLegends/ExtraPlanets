@@ -7,16 +7,20 @@ import java.util.Arrays;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
@@ -26,6 +30,8 @@ import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
+import com.mjr.extraplanets.entities.rockets.EntityElecticRocketBase;
+import com.mjr.extraplanets.entities.rockets.EntityElecticSpaceshipBase.EnumLaunchPhase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
@@ -34,11 +40,10 @@ import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 public class PacketSimpleEP extends PacketBase implements Packet {
 	public enum EnumSimplePacket {
 		// SERVER
-		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class),
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER),
 
 		// CLIENT
-		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), 
-		C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
+		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -65,7 +70,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	public PacketSimpleEP() {
 		super();
 	}
-	
+
 	public PacketSimpleEP(EnumSimplePacket packetType, int dimID, Object[] data) {
 		this(packetType, dimID, Arrays.asList(data));
 	}
@@ -163,6 +168,29 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		case S_OPEN_POWER_GUI:
 			if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType());
+			}
+			break;
+		case S_IGNITE_ROCKET:
+			if (!player.worldObj.isRemote && !player.isDead && player.getRidingEntity() != null && !player.getRidingEntity().isDead && player.getRidingEntity() instanceof EntityElecticRocketBase) {
+				final EntityElecticRocketBase ship = (EntityElecticRocketBase) player.getRidingEntity();
+
+				if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
+					if (ship.hasValidPower()) {
+						ItemStack stack2 =  GCPlayerStats.get(playerBase).getExtendedInventory().getStackInSlot(4);
+
+						if (stack2 != null && stack2.getItem() instanceof ItemParaChute || stats.getLaunchAttempts() > 0) {
+							ship.igniteCheckingCooldown();
+							 GCPlayerStats.get(playerBase).setLaunchAttempts(0);
+						} else if (stats.getChatCooldown() == 0 &&  GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
+							player.addChatMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.noparachute")));
+							stats.setChatCooldown(250);
+							 GCPlayerStats.get(playerBase).setLaunchAttempts(1);
+						}
+					} else if (stats.getChatCooldown() == 0) {
+						player.addChatMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.nofuel")));
+						stats.setChatCooldown(250);
+					}
+				}
 			}
 			break;
 		default:
