@@ -44,7 +44,7 @@ public class GuiElectricRocketInventory extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.power.name"), 8, 2 + 3, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.power.rocket.name"), 8, 2 + 3, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate(this.upperChestInventory.getName()), 8, 34 + 2 + 3, 4210752);
 
 		if (this.mc.thePlayer != null && this.mc.thePlayer.getRidingEntity() != null && this.mc.thePlayer.getRidingEntity() instanceof EntityElecticRocketBase) {
