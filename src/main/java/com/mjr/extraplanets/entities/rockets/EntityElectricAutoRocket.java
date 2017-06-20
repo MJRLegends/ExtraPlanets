@@ -13,7 +13,6 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.BlockLandingPadFull;
 import micdoodle8.mods.galacticraft.core.client.sounds.SoundUpdaterRocket;
@@ -48,7 +47,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
@@ -113,7 +111,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.statusMessageCooldown = 40;
 
 		if (this.hasValidPower()) {
-			if (this.launchPhase == EnumLaunchPhase.UNIGNITED.ordinal() && !this.worldObj.isRemote) {
+			if (this.launchPhase == EnumLaunchPhase.UNIGNITED.ordinal() && !this.world.isRemote) {
 				if (!this.setFrequency()) {
 					this.destinationFrequency = -1;
 					this.statusMessage = I18n.translateToLocal("gui.message.frequency.name") + "#" + I18n.translateToLocal("gui.message.not_set.name");
@@ -142,7 +140,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		}
 
 		if (this.activeLaunchController != null) {
-			TileEntity launchController = this.activeLaunchController.getTileEntity(this.worldObj);
+			TileEntity launchController = this.activeLaunchController.getTileEntity(this.world);
 			if (controllerClass.isInstance(launchController)) {
 				try {
 					Boolean b = (Boolean) controllerClass.getMethod("validFrequency").invoke(launchController);
@@ -169,10 +167,10 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	protected boolean setTarget(boolean doSet, int destFreq) {
 		// Server instance can sometimes be null on a single player game switched to LAN mode
-		if (FMLCommonHandler.instance().getMinecraftServerInstance() == null || FMLCommonHandler.instance().getMinecraftServerInstance().worldServers == null || !GalacticraftCore.isPlanetsLoaded || controllerClass == null) {
+		if (FMLCommonHandler.instance().getMinecraftServerInstance() == null || FMLCommonHandler.instance().getMinecraftServerInstance().worlds == null || !GalacticraftCore.isPlanetsLoaded || controllerClass == null) {
 			return false;
 		}
-		WorldServer[] servers = FMLCommonHandler.instance().getMinecraftServerInstance().worldServers;
+		WorldServer[] servers = FMLCommonHandler.instance().getMinecraftServerInstance().worlds;
 
 		for (int i = 0; i < servers.length; i++) {
 			WorldServer world = servers[i];
@@ -246,10 +244,10 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		// this entity from the WorldClient.loadedEntityList - this entity stays in the world loadedEntityList.
 		// That's why an onUpdate() tick is active for it, still!
 		// Weird, huh?
-		if (this.worldObj.isRemote && this.addedToChunk) {
-			Chunk chunk = this.worldObj.getChunkFromChunkCoords(this.chunkCoordX, this.chunkCoordZ);
-			int cx = MathHelper.floor_double(this.posX) >> 4;
-			int cz = MathHelper.floor_double(this.posZ) >> 4;
+		if (this.world.isRemote && this.addedToChunk) {
+			Chunk chunk = this.world.getChunkFromChunkCoords(this.chunkCoordX, this.chunkCoordZ);
+			int cx = MathHelper.floor(this.posX) >> 4;
+			int cz = MathHelper.floor(this.posZ) >> 4;
 			if (chunk.isLoaded() && this.chunkCoordX == cx && this.chunkCoordZ == cz) {
 				boolean thisfound = false;
 				ClassInheritanceMultiMap<Entity> mapEntities = chunk.getEntityLists()[this.chunkCoordY];
@@ -296,7 +294,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					this.rotationPitch = 0F;
 
 				if (yDiff > 1D && yDiff < 4D) {
-					for (Object o : this.worldObj.getEntitiesInAABBexcluding(this, this.getEntityBoundingBox().offset(0D, -3D, 0D), EntityElectricSpaceshipBase.rocketSelector)) {
+					for (Object o : this.world.getEntitiesInAABBexcluding(this, this.getEntityBoundingBox().offset(0D, -3D, 0D), EntityElectricSpaceshipBase.rocketSelector)) {
 						if (o instanceof EntityElectricSpaceshipBase) {
 							((EntityElectricSpaceshipBase) o).dropShipAsItem();
 							((EntityElectricSpaceshipBase) o).setDead();
@@ -304,15 +302,15 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					}
 				}
 				if (yDiff < 0.06) {
-					int yMin = MathHelper.floor_double(this.getEntityBoundingBox().minY - this.getOnPadYOffset() - 0.45D) - 2;
-					int yMax = MathHelper.floor_double(this.getEntityBoundingBox().maxY) + 1;
-					int zMin = MathHelper.floor_double(this.posZ) - 1;
-					int zMax = MathHelper.floor_double(this.posZ) + 1;
-					for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++) {
+					int yMin = MathHelper.floor(this.getEntityBoundingBox().minY - this.getOnPadYOffset() - 0.45D) - 2;
+					int yMax = MathHelper.floor(this.getEntityBoundingBox().maxY) + 1;
+					int zMin = MathHelper.floor(this.posZ) - 1;
+					int zMax = MathHelper.floor(this.posZ) + 1;
+					for (int x = MathHelper.floor(this.posX) - 1; x <= MathHelper.floor(this.posX) + 1; x++) {
 						for (int z = zMin; z <= zMax; z++) {
 							// Doing y as the inner loop may help with cacheing of chunks
 							for (int y = yMin; y <= yMax; y++) {
-								if (this.worldObj.getTileEntity(new BlockPos(x, y, z)) instanceof IPowerDock) {
+								if (this.world.getTileEntity(new BlockPos(x, y, z)) instanceof IPowerDock) {
 									// Land the rocket on the pad found
 									this.rotationPitch = 0F;
 									this.failRocket();
@@ -326,7 +324,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 		super.onUpdate();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			if (this.statusMessageCooldown > 0) {
 				this.statusMessageCooldown--;
 			}
@@ -353,7 +351,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 			if (this.autoLaunchSetting == EnumAutoLaunch.REDSTONE_SIGNAL) {
 				if (this.ticks % 11 == 0 && this.activeLaunchController != null) {
-					if (RedstoneUtil.isBlockReceivingRedstone(this.worldObj, this.activeLaunchController.toBlockPos())) {
+					if (RedstoneUtil.isBlockReceivingRedstone(this.world, this.activeLaunchController.toBlockPos())) {
 						this.autoLaunch();
 					}
 				}
@@ -392,7 +390,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	private void autoLaunch() {
 		if (this.autoLaunchSetting != null) {
 			if (this.activeLaunchController != null) {
-				TileEntity tile = this.activeLaunchController.getTileEntity(this.worldObj);
+				TileEntity tile = this.activeLaunchController.getTileEntity(this.world);
 
 				if (controllerClass.isInstance(tile)) {
 					Boolean autoLaunchEnabled = null;
@@ -445,13 +443,13 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public void landEntity(BlockPos pos) {
-		TileEntity tile = this.worldObj.getTileEntity(pos);
+		TileEntity tile = this.world.getTileEntity(pos);
 
 		if (tile instanceof IPowerDock) {
 			IPowerDock dock = (IPowerDock) tile;
 
 			if (this.isDockValid(dock)) {
-				if (!this.worldObj.isRemote) {
+				if (!this.world.isRemote) {
 					// Drop any existing rocket on the landing pad
 					if (dock.getDockedEntity() instanceof EntityElectricSpaceshipBase && dock.getDockedEntity() != this) {
 						((EntityElectricSpaceshipBase) dock.getDockedEntity()).dropShipAsItem();
@@ -540,7 +538,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public void decodePacketdata(ByteBuf buffer) {
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			double clientPosY = buffer.readDouble();
 			if (clientPosY != Double.NaN && this.hasValidPower()) {
 				if (this.launchPhase == EnumLaunchPhase.LAUNCHED.ordinal()) {
@@ -595,7 +593,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.statusValid = buffer.readBoolean();
 
 		// Update client with correct rider if needed
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			int shouldBeMountedId = buffer.readInt();
 			if (this.getPassengers().isEmpty()) {
 				if (shouldBeMountedId > -1) {
@@ -603,8 +601,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					if (e != null) {
 						if (e.dimension != this.dimension) {
 							if (e instanceof EntityPlayer) {
-								e = WorldUtil.forceRespawnClient(this.dimension, e.worldObj.getDifficulty().getDifficultyId(), e.worldObj.getWorldInfo().getTerrainType().getWorldTypeName(), ((EntityPlayerMP) e).interactionManager.getGameType()
-										.getID());
+								e = WorldUtil.forceRespawnClient(this.dimension, e.world.getDifficulty().getDifficultyId(), e.world.getWorldInfo().getTerrainType().getWorldTypeID(), ((EntityPlayerMP) e).interactionManager.getGameType().getID());
 								e.startRiding(this);
 							}
 						} else
@@ -619,8 +616,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					if (e != null) {
 						if (e.dimension != this.dimension) {
 							if (e instanceof EntityPlayer) {
-								e = WorldUtil.forceRespawnClient(this.dimension, e.worldObj.getDifficulty().getDifficultyId(), e.worldObj.getWorldInfo().getTerrainType().getWorldTypeName(), ((EntityPlayerMP) e).interactionManager.getGameType()
-										.getID());
+								e = WorldUtil.forceRespawnClient(this.dimension, e.world.getDifficulty().getDifficultyId(), e.world.getWorldInfo().getTerrainType().getWorldTypeID(), ((EntityPlayerMP) e).interactionManager.getGameType().getID());
 								e.startRiding(this);
 							}
 						} else
@@ -636,7 +632,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public void getNetworkedData(ArrayList<Object> list) {
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			if (this.getPassengers().contains(FMLClientHandler.instance().getClientPlayerEntity()) && this.hasValidPower()) {
 				list.add(this.posY);
 			} else {
@@ -669,7 +665,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		list.add(this.lastStatusMessageCooldown);
 		list.add(this.statusValid);
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			list.add(this.getPassengers().isEmpty() ? -1 : this.getPassengers().get(0).getEntityId());
 		}
 		list.add(this.statusColour != null ? this.statusColour : "");
@@ -684,12 +680,12 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 			// TODO: it would be good to land on an alternative neighbouring pad if there is already a rocket on the target pad
 			for (int i = -3; i <= 3; i++) {
 				BlockPos pos = new BlockPos((int) Math.floor(this.posX), (int) Math.floor(this.posY + i), (int) Math.floor(this.posZ));
-				if (this.launchPhase == EnumLaunchPhase.LANDING.ordinal() && this.targetVec != null && this.worldObj.getTileEntity(pos) instanceof IPowerDock && this.posY - this.targetVec.getY() < 5) {
-					for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++) {
-						for (int y = MathHelper.floor_double(this.posY - 3.0D); y <= MathHelper.floor_double(this.posY) + 1; y++) {
-							for (int z = MathHelper.floor_double(this.posZ) - 1; z <= MathHelper.floor_double(this.posZ) + 1; z++) {
+				if (this.launchPhase == EnumLaunchPhase.LANDING.ordinal() && this.targetVec != null && this.world.getTileEntity(pos) instanceof IPowerDock && this.posY - this.targetVec.getY() < 5) {
+					for (int x = MathHelper.floor(this.posX) - 1; x <= MathHelper.floor(this.posX) + 1; x++) {
+						for (int y = MathHelper.floor(this.posY - 3.0D); y <= MathHelper.floor(this.posY) + 1; y++) {
+							for (int z = MathHelper.floor(this.posZ) - 1; z <= MathHelper.floor(this.posZ) + 1; z++) {
 								BlockPos pos1 = new BlockPos(x, y, z);
-								TileEntity tile = this.worldObj.getTileEntity(pos1);
+								TileEntity tile = this.world.getTileEntity(pos1);
 
 								if (tile instanceof IPowerDock) {
 									this.landEntity(pos1);
@@ -721,26 +717,26 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	public void cancelLaunch() {
 		this.setLaunchPhase(EnumLaunchPhase.UNIGNITED);
 		this.timeUntilLaunch = 0;
-		if (!this.worldObj.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
-			this.getPassengers().get(0).addChatMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.nogyroscope")));
+		if (!this.world.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
+			this.getPassengers().get(0).sendMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.nogyroscope")));
 		}
 	}
 
 	public void failMessageLaunchController() {
-		if (!this.worldObj.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.getPassengers().get(0)).addChatMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.launchcontroller")));
+		if (!this.world.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
+			((EntityPlayerMP) this.getPassengers().get(0)).sendMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.launchcontroller")));
 		}
 	}
 
 	public void failMessageInsufficientFuel() {
-		if (!this.worldObj.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.getPassengers().get(0)).addChatMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.fuelinsufficient")));
+		if (!this.world.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
+			((EntityPlayerMP) this.getPassengers().get(0)).sendMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.fuelinsufficient")));
 		}
 	}
 
 	@Override
 	public void onLaunch() {
-		if (!(this.worldObj.provider.getDimension() == GalacticraftCore.planetOverworld.getDimensionID() || this.worldObj.provider instanceof IGalacticraftWorldProvider)) {
+		if (!(this.world.provider.getDimension() == GalacticraftCore.planetOverworld.getDimensionID() || this.world.provider instanceof IGalacticraftWorldProvider)) {
 			if (ConfigManagerCore.disableRocketLaunchAllNonGC) {
 				this.cancelLaunch();
 				return;
@@ -748,7 +744,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 			// No rocket flight in the Nether, the End etc
 			for (int i = ConfigManagerCore.disableRocketLaunchDimensions.length - 1; i >= 0; i--) {
-				if (ConfigManagerCore.disableRocketLaunchDimensions[i] == this.worldObj.provider.getDimension()) {
+				if (ConfigManagerCore.disableRocketLaunchDimensions[i] == this.world.provider.getDimension()) {
 					this.cancelLaunch();
 					return;
 				}
@@ -758,7 +754,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 		super.onLaunch();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			GCPlayerStats stats = null;
 
 			if (!this.getPassengers().isEmpty()) {
@@ -766,7 +762,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					if (player instanceof EntityPlayerMP) {
 						stats = GCPlayerStats.get(player);
 
-						if (!(this.worldObj.provider instanceof IOrbitDimension)) {
+						if (!(this.world.provider instanceof IOrbitDimension)) {
 							stats.setCoordsTeleportedFromX(player.posX);
 							stats.setCoordsTeleportedFromZ(player.posZ);
 						}
@@ -776,19 +772,19 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 			int amountRemoved = 0;
 
-			PADSEARCH: for (int x = MathHelper.floor_double(this.posX) - 1; x <= MathHelper.floor_double(this.posX) + 1; x++) {
-				for (int y = MathHelper.floor_double(this.posY) - 3; y <= MathHelper.floor_double(this.posY) + 1; y++) {
-					for (int z = MathHelper.floor_double(this.posZ) - 1; z <= MathHelper.floor_double(this.posZ) + 1; z++) {
+			PADSEARCH: for (int x = MathHelper.floor(this.posX) - 1; x <= MathHelper.floor(this.posX) + 1; x++) {
+				for (int y = MathHelper.floor(this.posY) - 3; y <= MathHelper.floor(this.posY) + 1; y++) {
+					for (int z = MathHelper.floor(this.posZ) - 1; z <= MathHelper.floor(this.posZ) + 1; z++) {
 						BlockPos pos = new BlockPos(x, y, z);
-						final Block block = this.worldObj.getBlockState(pos).getBlock();
+						final Block block = this.world.getBlockState(pos).getBlock();
 
 						if (block != null && block instanceof BlockLandingPadFull) {
 							if (amountRemoved < 9) {
-								EventLandingPadRemoval event = new EventLandingPadRemoval(this.worldObj, pos);
+								EventLandingPadRemoval event = new EventLandingPadRemoval(this.world, pos);
 								MinecraftForge.EVENT_BUS.post(event);
 
 								if (event.allow) {
-									this.worldObj.setBlockToAir(pos);
+									this.world.setBlockToAir(pos);
 									amountRemoved = 9;
 								}
 								break PADSEARCH;
@@ -866,7 +862,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		}
 
 		if (nbt.getBoolean("TargetValid") && nbt.hasKey("targetTileX")) {
-			this.targetVec = new BlockPos(MathHelper.floor_double(nbt.getDouble("targetTileX")), MathHelper.floor_double(nbt.getDouble("targetTileY")), MathHelper.floor_double(nbt.getDouble("targetTileZ")));
+			this.targetVec = new BlockPos(MathHelper.floor(nbt.getDouble("targetTileX")), MathHelper.floor(nbt.getDouble("targetTileY")), MathHelper.floor(nbt.getDouble("targetTileZ")));
 		}
 
 		this.setWaitForPlayer(nbt.getBoolean("WaitingForPlayer"));
@@ -1156,7 +1152,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	public boolean inFlight() {
 		return this.getLaunched();
 	}
-	
+
 	/*
 	 * Power System Methods ------------------------------------------------------------------------------------------------------
 	 */

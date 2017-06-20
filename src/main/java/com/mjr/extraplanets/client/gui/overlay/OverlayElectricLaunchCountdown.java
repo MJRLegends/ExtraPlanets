@@ -20,7 +20,7 @@ public class OverlayElectricLaunchCountdown extends Overlay {
 
 	public static void renderCountdownOverlay() {
 		GlStateManager.disableLighting();
-		int count = ((EntityElectricRocketBase) OverlayElectricLaunchCountdown.minecraft.thePlayer.getRidingEntity()).timeUntilLaunch / 2;
+		int count = ((EntityElectricRocketBase) OverlayElectricLaunchCountdown.minecraft.player.getRidingEntity()).timeUntilLaunch / 2;
 
 		count = (int) Math.floor(count / 10.0F);
 

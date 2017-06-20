@@ -70,7 +70,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 	}
 
 	public void igniteCheckingCooldown() {
-		if (!this.worldObj.isRemote && this.launchCooldown <= 0) {
+		if (!this.world.isRemote && this.launchCooldown <= 0) {
 			this.initiatePlanetsPreGen(this.chunkCoordX, this.chunkCoordZ);
 
 			this.ignite();
@@ -136,7 +136,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 			if (!this.getPassengers().isEmpty()) {
 				Entity passenger = this.getPassengers().get(0);
 				if (this.ticks >= 40) {
-					if (!this.worldObj.isRemote) {
+					if (!this.world.isRemote) {
 						this.removePassengers();
 						passenger.startRiding(this, true);
 						GCLog.debug("Remounting player in rocket.");
@@ -155,7 +155,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 
 		super.onUpdate();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			if (this.launchCooldown > 0) {
 				this.launchCooldown--;
 			}
@@ -202,7 +202,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 			this.rumble = (float) this.rand.nextInt(3) - 3;
 		}
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			this.lastLastMotionY = this.lastMotionY;
 			this.lastMotionY = this.motionY;
 		}
@@ -222,7 +222,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 
 	@Override
 	public void getNetworkedData(ArrayList<Object> list) {
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			return;
 		}
 		list.add(this.rocketType != null ? this.rocketType.getIndex() : 0);
@@ -242,7 +242,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 	public void onReachAtmosphere() {
 		// Launch controlled
 		if (this.destinationFrequency != -1) {
-			if (this.worldObj.isRemote) {
+			if (this.world.isRemote) {
 				// stop the sounds on the client - but do not reset, the rocket may start again
 				this.stopRocketSound();
 				return;
@@ -251,9 +251,9 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 			this.setTarget(true, this.destinationFrequency);
 
 			if (this.targetVec != null) {
-				if (this.targetDimension != this.worldObj.provider.getDimension()) {
+				if (this.targetDimension != this.world.provider.getDimension()) {
 					WorldProvider targetDim = WorldUtil.getProviderForDimensionServer(this.targetDimension);
-//					if (targetDim != null && targetDim.worldObj instanceof WorldServer) { TODO 
+//					if (targetDim != null && targetDim.world instanceof WorldServer) { TODO 
 //						boolean dimensionAllowed = this.targetDimension == ConfigManagerCore.idDimensionOverworld;
 //
 //						if (targetDim instanceof IGalacticraftWorldProvider) {
@@ -277,11 +277,11 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 //							if (!this.getPassengers().isEmpty()) {
 //								for (Entity passenger : this.getPassengers()) {
 //									if (passenger instanceof EntityPlayerMP) {
-//										WorldUtil.transferEntityToDimension(passenger, this.targetDimension, (WorldServer) targetDim.worldObj, false, this);
+//										WorldUtil.transferEntityToDimension(passenger, this.targetDimension, (WorldServer) targetDim.world, false, this);
 //									}
 //								}
 //							} else {
-//								Entity e = WorldUtil.transferEntityToDimension(this, this.targetDimension, (WorldServer) targetDim.worldObj, false, null);
+//								Entity e = WorldUtil.transferEntityToDimension(this, this.targetDimension, (WorldServer) targetDim.world, false, null);
 //								if (e instanceof EntityElecticAutoRocket) {
 //									e.setPosition(this.targetVec.getX() + 0.5F, this.targetVec.getY() + 800, this.targetVec.getZ() + 0.5f);
 //									((EntityElecticAutoRocket) e).setLaunchPhase(EnumLaunchPhase.LANDING);
@@ -305,7 +305,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 					this.motionY = 0.1D;
 					for (Entity passenger : this.getPassengers()) {
 						if (passenger instanceof EntityPlayerMP) {
-							WorldUtil.forceMoveEntityToPos(passenger, (WorldServer) this.worldObj, new Vector3(this.targetVec.getX() + 0.5F, this.targetVec.getY() + 800, this.targetVec.getZ() + 0.5F), false);
+							WorldUtil.forceMoveEntityToPos(passenger, (WorldServer) this.world, new Vector3(this.targetVec.getX() + 0.5F, this.targetVec.getY() + 800, this.targetVec.getZ() + 0.5F), false);
 							this.setWaitForPlayer(true);
 							GCLog.debug("Rocket repositioned, waiting for player");
 						}
@@ -318,13 +318,13 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 				// Launch controlled launch but no valid target frequency = rocket loss [INVESTIGATE]
 				GCLog.info("Error: the launch controlled rocket failed to find a valid landing spot when it reached space.");
 				// this.fuelTank.drain(Integer.MAX_VALUE, true);
-				this.posY = Math.max(255, (this.worldObj.provider instanceof IExitHeight ? ((IExitHeight) this.worldObj.provider).getYCoordinateToTeleport() : 1200) - 200);
+				this.posY = Math.max(255, (this.world.provider instanceof IExitHeight ? ((IExitHeight) this.world.provider).getYCoordinateToTeleport() : 1200) - 200);
 				return;
 			}
 		}
 
 		// Not launch controlled
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			for (Entity e : this.getPassengers()) {
 				if (e instanceof EntityPlayerMP) {
 					EntityPlayerMP player = (EntityPlayerMP) e;
@@ -377,8 +377,8 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 		}
 
 		if (!this.getPassengers().isEmpty() && this.getPassengers().contains(player)) {
-			if (!this.worldObj.isRemote) {
-				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_RESET_THIRD_PERSON, this.worldObj.provider.getDimension(), new Object[] {}), (EntityPlayerMP) player);
+			if (!this.world.isRemote) {
+				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_RESET_THIRD_PERSON, this.world.provider.getDimension(), new Object[] {}), (EntityPlayerMP) player);
 				GCPlayerStats stats = GCPlayerStats.get(player);
 				stats.setChatCooldown(0);
 				// Prevent player being dropped from the top of the rocket...
@@ -390,8 +390,8 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 
 			return true;
 		} else if (player instanceof EntityPlayerMP) {
-			if (!this.worldObj.isRemote) {
-				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.worldObj.provider.getDimension(), new Object[] {}), (EntityPlayerMP) player);
+			if (!this.world.isRemote) {
+				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.world.provider.getDimension(), new Object[] {}), (EntityPlayerMP) player);
 				GCPlayerStats stats = GCPlayerStats.get(player);
 				stats.setChatCooldown(0);
 				player.startRiding(this);
@@ -405,7 +405,7 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbt) {
-		if (worldObj.isRemote)
+		if (world.isRemote)
 			return;
 		nbt.setInteger("Type", this.rocketType.getIndex());
 		super.writeEntityToNBT(nbt);

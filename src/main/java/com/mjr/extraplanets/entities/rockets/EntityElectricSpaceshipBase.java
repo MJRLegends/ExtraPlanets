@@ -118,7 +118,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 	@Override
 	public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
-		if (!this.worldObj.isRemote && !this.isDead) {
+		if (!this.world.isRemote && !this.isDead) {
 			boolean flag = par1DamageSource.getEntity() instanceof EntityPlayer && ((EntityPlayer) par1DamageSource.getEntity()).capabilities.isCreativeMode;
 			Entity e = par1DamageSource.getEntity();
 			if (this.isEntityInvulnerable(par1DamageSource) || this.posY > 300 || (e instanceof EntityLivingBase && !(e instanceof EntityPlayer))) {
@@ -132,7 +132,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 					this.shipDamage = 100;
 				}
 
-				if (flag || this.shipDamage > 90 && !this.worldObj.isRemote) {
+				if (flag || this.shipDamage > 90 && !this.world.isRemote) {
 					this.removePassengers();
 
 					if (flag) {
@@ -152,7 +152,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 	}
 
 	public void dropShipAsItem() {
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			return;
 		}
 
@@ -205,10 +205,10 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 			e.fallDistance = 0.0F;
 		}
 
-		if (this.posY > (this.worldObj.provider instanceof IExitHeight ? ((IExitHeight) this.worldObj.provider).getYCoordinateToTeleport() : 1200)) {
+		if (this.posY > (this.world.provider instanceof IExitHeight ? ((IExitHeight) this.world.provider).getYCoordinateToTeleport() : 1200)) {
 			this.onReachAtmosphere();
-			// if (this.worldObj.isRemote)
-			// this.posY = 1 + (this.worldObj.provider instanceof IExitHeight ? ((IExitHeight) this.worldObj.provider).getYCoordinateToTeleport() : 1200);
+			// if (this.world.isRemote)
+			// this.posY = 1 + (this.world.provider instanceof IExitHeight ? ((IExitHeight) this.world.provider).getYCoordinateToTeleport() : 1200);
 		}
 
 		if (this.rollAmplitude > 0) {
@@ -219,10 +219,10 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 			this.shipDamage--;
 		}
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			if (this.posY < 0.0D) {
 				this.kill();
-			} else if (this.posY > (this.worldObj.provider instanceof IExitHeight ? ((IExitHeight) this.worldObj.provider).getYCoordinateToTeleport() : 1200) + 100) {
+			} else if (this.posY > (this.world.provider instanceof IExitHeight ? ((IExitHeight) this.world.provider).getYCoordinateToTeleport() : 1200) + 100) {
 				for (Entity e : this.getPassengers()) {
 					if (e instanceof EntityPlayerMP) {
 						GCPlayerStats stats = GCPlayerStats.get(e);
@@ -255,7 +255,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 		AxisAlignedBB box = this.getEntityBoundingBox().expand(0.2D, 0.2D, 0.2D);
 
-		final List<?> var15 = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, box);
+		final List<?> var15 = this.world.getEntitiesWithinAABBExcludingEntity(this, box);
 
 		if (var15 != null && !var15.isEmpty()) {
 			for (int var52 = 0; var52 < var15.size(); ++var52) {
@@ -287,7 +287,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 			this.motionX = this.motionY = this.motionZ = 0.0F;
 		}
 
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			this.setPosition(this.posX, this.posY, this.posZ);
 
 			if (this.shouldMoveClientSide()) {
@@ -299,7 +299,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 		this.setRotation(this.rotationYaw, this.rotationPitch);
 
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			this.setPosition(this.posX, this.posY, this.posZ);
 		}
 
@@ -307,11 +307,11 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 		this.prevPosY = this.posY;
 		this.prevPosZ = this.posZ;
 
-		if (!this.worldObj.isRemote && this.ticks % 3 == 0) {
-			GalacticraftCore.packetPipeline.sendToDimension(new PacketDynamic(this), this.worldObj.provider.getDimension());
+		if (!this.world.isRemote && this.ticks % 3 == 0) {
+			GalacticraftCore.packetPipeline.sendToDimension(new PacketDynamic(this), this.world.provider.getDimension());
 			// PacketDispatcher.sendPacketToAllInDimension(GCCorePacketManager.getPacket(GalacticraftCore.CHANNELENTITIES,
 			// this, this.getNetworkedData(new ArrayList())),
-			// this.worldObj.provider.getDimension());
+			// this.world.provider.getDimension());
 		}
 	}
 
@@ -323,7 +323,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 	@Override
 	public void decodePacketdata(ByteBuf buffer) {
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			new Exception().printStackTrace();
 		}
 		int newLaunchPhase = buffer.readInt();
@@ -346,7 +346,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 	@Override
 	public void getNetworkedData(ArrayList<Object> list) {
-		if (this.worldObj.isRemote) {
+		if (this.world.isRemote) {
 			return;
 		}
 		list.add(this.launchPhase);
@@ -368,7 +368,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 		}
 
 		if (!ConfigManagerCore.disableSpaceshipGrief) {
-			this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 5, true);
+			this.world.createExplosion(this, this.posX, this.posY, this.posZ, 5, true);
 		}
 
 		this.setDead();
@@ -378,14 +378,14 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 	@SideOnly(Side.CLIENT)
 	public void setPositionAndRotationDirect(double x, double y, double z, float yaw, float pitch, int posRotationIncrements, boolean b) {
 		this.setRotation(yaw, pitch);
-		if (this.syncAdjustFlag && this.worldObj.isBlockLoaded(new BlockPos(x, 255D, z)) && this.hasValidPower()) {
+		if (this.syncAdjustFlag && this.world.isBlockLoaded(new BlockPos(x, 255D, z)) && this.hasValidPower()) {
 			EntityPlayer p = FMLClientHandler.instance().getClientPlayerEntity();
 			double dx = x - p.posX;
 			double dz = z - p.posZ;
 			if (dx * dx + dz * dz < 1024) {
-				if (!this.worldObj.loadedEntityList.contains(this)) {
+				if (!this.world.loadedEntityList.contains(this)) {
 					try {
-						this.worldObj.loadedEntityList.add(this);
+						this.world.loadedEntityList.add(this);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -395,16 +395,16 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 				this.posY = y;
 				this.posZ = z;
 
-				int cx = MathHelper.floor_double(x / 16.0D);
-				int cz = MathHelper.floor_double(z / 16.0D);
+				int cx = MathHelper.floor(x / 16.0D);
+				int cz = MathHelper.floor(z / 16.0D);
 
 				if (!this.addedToChunk || this.chunkCoordX != cx || this.chunkCoordZ != cz) {
-					if (this.addedToChunk && this.worldObj.isBlockLoaded(new BlockPos(this.chunkCoordX << 4, 255, this.chunkCoordZ << 4), true)) {
-						this.worldObj.getChunkFromChunkCoords(this.chunkCoordX, this.chunkCoordZ).removeEntityAtIndex(this, this.chunkCoordY);
+					if (this.addedToChunk && this.world.isBlockLoaded(new BlockPos(this.chunkCoordX << 4, 255, this.chunkCoordZ << 4), true)) {
+						this.world.getChunkFromChunkCoords(this.chunkCoordX, this.chunkCoordZ).removeEntityAtIndex(this, this.chunkCoordY);
 					}
 
 					this.addedToChunk = true;
-					this.worldObj.getChunkFromChunkCoords(cx, cz).addEntity(this);
+					this.world.getChunkFromChunkCoords(cx, cz).addEntity(this);
 				}
 
 				this.syncAdjustX = 0D;
@@ -525,7 +525,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 	}
 
 	public ResourceLocation getSpaceshipGui() {
-		return GalacticraftRegistry.getResouceLocationForDimension(this.worldObj.provider.getClass());
+		return GalacticraftRegistry.getResouceLocationForDimension(this.world.provider.getClass());
 	}
 
 	public void setLaunchPhase(EnumLaunchPhase phase) {
@@ -616,6 +616,6 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 		if (height > 255D)
 			height = 255D;
 		BlockPos blockpos = new BlockPos(this.posX, height, this.posZ);
-		return this.worldObj.isBlockLoaded(blockpos) ? this.worldObj.getCombinedLight(blockpos, 0) : 0;
+		return this.world.isBlockLoaded(blockpos) ? this.world.getCombinedLight(blockpos, 0) : 0;
 	}
 }

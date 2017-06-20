@@ -165,11 +165,11 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			}
 			else if (player.getRidingEntity() instanceof EntityElectricRocketBase)
             {
-                player.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, player.worldObj, (int) player.posX, (int) player.posY, (int) player.posZ);
+                player.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, player.world, (int) player.posX, (int) player.posY, (int) player.posZ);
             }
 			break;
 		case S_IGNITE_ROCKET:
-			if (!player.worldObj.isRemote && !player.isDead && player.getRidingEntity() != null && !player.getRidingEntity().isDead && player.getRidingEntity() instanceof EntityElectricRocketBase) {
+			if (!player.world.isRemote && !player.isDead && player.getRidingEntity() != null && !player.getRidingEntity().isDead && player.getRidingEntity() instanceof EntityElectricRocketBase) {
 				final EntityElectricRocketBase ship = (EntityElectricRocketBase) player.getRidingEntity();
 
 				if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
@@ -180,12 +180,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 							ship.igniteCheckingCooldown();
 							 GCPlayerStats.get(playerBase).setLaunchAttempts(0);
 						} else if (stats.getChatCooldown() == 0 &&  GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
-							player.addChatMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.noparachute")));
+							player.sendMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.noparachute")));
 							stats.setChatCooldown(250);
 							 GCPlayerStats.get(playerBase).setLaunchAttempts(1);
 						}
 					} else if (stats.getChatCooldown() == 0) {
-						player.addChatMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.nofuel")));
+						player.sendMessage(new TextComponentString(GCCoreUtil.translate("gui.rocket.warning.nofuel")));
 						stats.setChatCooldown(250);
 					}
 				}

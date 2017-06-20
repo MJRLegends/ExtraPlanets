@@ -64,12 +64,8 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
-<<<<<<< HEAD
 		final WorldClient world = minecraft.world;
-=======
-		final WorldClient world = minecraft.theWorld;
-		final EntityPlayerSP player = minecraft.thePlayer;
->>>>>>> ae5ee70... Started adding a Electric Rocket (VERY WIP)
+		final EntityPlayerSP player = minecraft.player;
 
 		if (event.phase == Phase.END) {
 			if (world != null) {
@@ -85,7 +81,7 @@ public class MainHandlerClient {
 			}
 
 			if (player.getRidingEntity() != null && isPressed) {
-				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_IGNITE_ROCKET, GCCoreUtil.getDimensionID(player.worldObj), new Object[] {}));
+				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_IGNITE_ROCKET, GCCoreUtil.getDimensionID(player.world), new Object[] {}));
 				ClientProxyCore.lastSpacebarDown = true;
 			}
 		}
@@ -96,8 +92,7 @@ public class MainHandlerClient {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
 		final EntityPlayerSP player = minecraft.player;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
-		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider)
-				&& !playerBaseClient.isSpectator()) {
+		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider) && !playerBaseClient.isSpectator()) {
 			if ((player.world.provider instanceof CustomWorldProviderSpace)) {
 				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.world.provider;
 
@@ -117,7 +112,7 @@ public class MainHandlerClient {
 			}
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
-				&& !((EntitySpaceshipBase) minecraft.thePlayer.getRidingEntity()).getLaunched()) {
+				&& !((EntitySpaceshipBase) minecraft.player.getRidingEntity()).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
 		}
 
