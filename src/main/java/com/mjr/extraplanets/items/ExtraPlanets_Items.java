@@ -118,7 +118,8 @@ public class ExtraPlanets_Items {
 	public static Item BUCKET_RADIOACTIVE_WATER;
 	public static Item BUCKET_METHANE;
 	public static Item BUCKET_NITROGEN_ICE;
-
+	public static Item BUCKET_LIQUID_HYDROCARBON;
+	
 	public static Item CANNED_FOOD;
 	public static Item DIAMOND_APPLE;
 	public static Item IRON_APPLE;
@@ -347,7 +348,8 @@ public class ExtraPlanets_Items {
 		BUCKET_RADIOACTIVE_WATER = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
 		BUCKET_METHANE = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.METHANE);
 		BUCKET_NITROGEN_ICE = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.NITROGEN_ICE);
-
+		BUCKET_LIQUID_HYDROCARBON = new ItemBasicItemBucket("bucket_liquid_hydrocarbon", ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
+		
 		CANNED_FOOD = new ItemCannedFood("canned_food");
 		WAFERS = new ItemWafers("wafer");
 		INGOT_LEAD = new ItemBasicItem("ingot_lead");
@@ -514,7 +516,8 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
 		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
 		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
-		
+		RegisterHelper.registerItem(BUCKET_LIQUID_HYDROCARBON, "bucket_liquid_hydrocarbon");
+
 		RegisterHelper.registerItem(TIER_1_EQUIPMENT_KIT, TIER_1_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_2_EQUIPMENT_KIT, TIER_2_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));

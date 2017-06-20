@@ -265,6 +265,7 @@ public class ExtraPlanets {
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Items.BUCKET_RADIOACTIVE_WATER);
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.METHANE, ExtraPlanets_Items.BUCKET_METHANE);
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.NITROGEN_ICE, ExtraPlanets_Items.BUCKET_NITROGEN_ICE);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.LIQUID_HYDROCARBON, ExtraPlanets_Items.BUCKET_LIQUID_HYDROCARBON);
 
 		// Bucket Handler
 		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
