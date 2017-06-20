@@ -44,6 +44,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
+import codechicken.multipart.asm.StackAnalyser.This;
+
 import com.google.common.base.Predicate;
 
 public abstract class EntityElecticSpaceshipBase extends Entity implements IPacketReceiver, IIgnoreShift, ITelemetry {
@@ -186,6 +188,8 @@ public abstract class EntityElecticSpaceshipBase extends Entity implements IPack
 		this.ticks++;
 
 		super.onUpdate();
+		
+		System.out.println(this.currentPowerCapacity);
 		if (this.addToTelemetry) {
 			this.addToTelemetry = false;
 			for (BlockVec3Dim vec : new ArrayList<BlockVec3Dim>(this.telemetryList)) {

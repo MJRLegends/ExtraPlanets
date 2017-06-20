@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.client.gui;
 
+import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
+import micdoodle8.mods.galacticraft.core.client.gui.container.GuiRocketInventory;
+import micdoodle8.mods.galacticraft.core.inventory.ContainerRocketInventory;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -27,6 +30,8 @@ import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenCompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenDecompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiVehicleChanger;
+import com.mjr.extraplanets.client.gui.rockets.GuiElectricRocketInventory;
+import com.mjr.extraplanets.entities.rockets.EntityElecticRocketBase;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;
@@ -42,6 +47,7 @@ import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenDecompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
+import com.mjr.extraplanets.inventory.rockets.ContainerElectricRocketInventory;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
@@ -66,6 +72,10 @@ public class GuiHandler implements IGuiHandler {
 		if (playerBase == null) {
 			player.addChatMessage(new TextComponentString("ExtraPlanets player instance null server-side. This is a bug."));
 			return null;
+		}
+
+		if (ID == GuiIdsCore.ROCKET_INVENTORY && player.getRidingEntity() instanceof EntityElecticRocketBase) {
+			return new ContainerElectricRocketInventory(player.inventory, (EntityElecticRocketBase) player.getRidingEntity(), ((EntityElecticRocketBase) player.getRidingEntity()).getType(), player);
 		}
 
 		BlockPos pos = new BlockPos(x, y, z);
@@ -118,6 +128,9 @@ public class GuiHandler implements IGuiHandler {
 
 	@SideOnly(Side.CLIENT)
 	private Object getClientGuiElement(int ID, EntityPlayer player, World world, BlockPos position) {
+		if (ID == GuiIdsCore.ROCKET_INVENTORY && player.getRidingEntity() instanceof EntityElecticRocketBase) {
+			return new GuiElectricRocketInventory(player.inventory, (EntityElecticRocketBase) player.getRidingEntity(), ((EntityElecticRocketBase) player.getRidingEntity()).getType());
+		}
 		TileEntity tile = world.getTileEntity(position);
 
 		if (tile != null) {

@@ -557,7 +557,7 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 		}
 		int launchPhaseLast = this.launchPhase;
 		super.decodePacketdata(buffer);
-		this.setCurrentPowerCapacity(buffer.readInt());
+		this.setCurrentPowerCapacity(buffer.readFloat());
 		boolean landingNew = buffer.readBoolean();
 		if (landingNew && launchPhaseLast != EnumLaunchPhase.LANDING.ordinal()) {
 			this.rocketSoundUpdater = null; // Flag TickHandlerClient to restart it
@@ -1161,7 +1161,7 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 	 * Power System Methods ------------------------------------------------------------------------------------------------------
 	 */
 	public float getCurrentPowerCapacity() {
-		return currentPowerCapacity;
+		return this.currentPowerCapacity;
 	}
 
 	public void setCurrentPowerCapacity(float currentPowerCapacity) {
@@ -1169,7 +1169,7 @@ public abstract class EntityElecticAutoRocket extends EntityElecticSpaceshipBase
 	}
 
 	public float getPowerMaxCapacity() {
-		return powerMaxCapacity;
+		return this.powerMaxCapacity;
 	}
 
 	public void setPowerMaxCapacity(float powerMaxCapacity) {

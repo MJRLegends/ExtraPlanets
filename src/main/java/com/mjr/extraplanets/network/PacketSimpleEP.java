@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
@@ -26,6 +29,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
@@ -169,6 +173,10 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType());
 			}
+			else if (player.getRidingEntity() instanceof EntityElecticRocketBase)
+            {
+                player.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, player.worldObj, (int) player.posX, (int) player.posY, (int) player.posZ);
+            }
 			break;
 		case S_IGNITE_ROCKET:
 			if (!player.worldObj.isRemote && !player.isDead && player.getRidingEntity() != null && !player.getRidingEntity().isDead && player.getRidingEntity() instanceof EntityElecticRocketBase) {
