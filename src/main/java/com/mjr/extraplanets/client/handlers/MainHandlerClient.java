@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -113,7 +112,7 @@ public class MainHandlerClient {
 			}
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
-				&& !((EntitySpaceshipBase) minecraft.thePlayer.getRidingEntity()).getLaunched()) {
+				&& !((EntityElectricRocketBase) minecraft.thePlayer.getRidingEntity()).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
 		}
 
