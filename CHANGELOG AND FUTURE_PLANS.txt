@@ -10,7 +10,7 @@ TODO = Not yet done
 ===========================================Future Updates=============================================
 v1.5.0 Beta Build
 *Moved Kepler22b Chunk Provider class to a prefab class & extended it for Kepler22b (for future plans)
-*Fixed biome confict issue
+*Fixed biome conflict issue
 *Clean up
 *Added Liquid Hydrocarbon Fluid
 *Converted Titan over to a Multi Biome System
