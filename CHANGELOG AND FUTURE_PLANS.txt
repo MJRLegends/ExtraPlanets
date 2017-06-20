@@ -8,6 +8,25 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+v0.1.7 Beta Build
+*Moved Kepler22b Chunk Provider class to a prefab class & extended it for Kepler22b (for future plans)
+
+*Fixed biome confict issue
+*Clean up
+*Added Liquid Hydrocarbon Fluid
+*Converted Titan over to a Multi Biome System
+*Added a Titan Methane Sea Biome
+
+*Tweaks to Deimos, Phobos world gen features
+*Converted Triton over to a Multi Biome System
+*Added a Triton Ice Lands Biome
+
+*Added Triton Ice Sea Biome
+*Converted Jupiter over to a Multi Biome System
+*Added a Jupiter Magma Sea
+*Tweaks/Fixes for other Multi Biome System
+*Changes to Gravity and Fall Damage Modifier (With Config option to change it back to the old way!)
+*Changes to Gravity and Fall Damage Modifier for Moons to match Planets values (With Config option to change it back to the old way!)
 
 ======================================================================================================
 
