@@ -67,42 +67,12 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 		super.update();
 
 		if (!this.worldObj.isRemote) {
-			if (this.containingItems[1] != null) {
-				if (this.containingItems[1].getItem() instanceof ItemCanisterGeneric) {
-					if (this.containingItems[1].getItem() == GCItems.oilCanister) {
-						int originalDamage = this.containingItems[1].getItemDamage();
-						int used = this.oilTank.fill(new FluidStack(GCFluids.fluidOil, ItemCanisterGeneric.EMPTY - originalDamage), true);
-						this.containingItems[1] = new ItemStack(GCItems.oilCanister, 1, originalDamage + used);
-					}
-				} else {
-					FluidStack liquid = FluidContainerRegistry.getFluidForFilledItem(this.containingItems[1]);
-
-					if (liquid != null) {
-						boolean isOil = FluidRegistry.getFluidName(liquid).startsWith("oil");
-
-						if (isOil) {
-							if (this.oilTank.getFluid() == null || this.oilTank.getFluid().amount + liquid.amount <= this.oilTank.getCapacity()) {
-								this.oilTank.fill(new FluidStack(GCFluids.fluidOil, liquid.amount), true);
-
-								if (FluidContainerRegistry.isBucket(this.containingItems[1]) && FluidContainerRegistry.isFilledContainer(this.containingItems[1])) {
-									final int amount = this.containingItems[1].stackSize;
-									if (amount > 1) {
-										this.oilTank.fill(new FluidStack(GCFluids.fluidOil, (amount - 1) * FluidContainerRegistry.BUCKET_VOLUME), true);
-									}
-									this.containingItems[1] = new ItemStack(Items.BUCKET, amount);
-								} else {
-									this.containingItems[1].stackSize--;
-
-									if (this.containingItems[1].stackSize == 0) {
-										this.containingItems[1] = null;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
+			final FluidStack liquid = FluidUtil.getFluidContained(this.containingItems[1]);
+            if (FluidUtil.isFluidFuzzy(liquid, "oil"))
+            {
+                FluidUtil.loadFromContainer(this.oilTank, GCFluids.fluidOil, this.containingItems, 1, liquid.amount);
+            }
+            
 			checkFluidTankTransfer(2, this.fuelTank);
 
 			if (this.canProcess() && this.hasEnoughEnergyToRun) {
