@@ -345,10 +345,11 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
-		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10ElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
-
-		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
-		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
+		//RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10ElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
+		if(Config.MARS_ROVER)
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
+		if(Config.VENUS_ROVER)
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
 	}
 
 	private void registerCreatures() {

@@ -121,7 +121,7 @@ public class ExtraPlanets_Items {
 	public static Item BUCKET_METHANE;
 	public static Item BUCKET_NITROGEN_ICE;
 	public static Item BUCKET_LIQUID_HYDROCARBON;
-	
+
 	public static Item CANNED_FOOD;
 	public static Item DIAMOND_APPLE;
 	public static Item IRON_APPLE;
@@ -189,18 +189,18 @@ public class ExtraPlanets_Items {
 	public static Item VENUS_ROVER_SCHEMATIC;
 
 	public static Item ELECTRIC_PARTS;
-	
+
 	public static Item TIER_1_EQUIPMENT_KIT;
 	public static Item TIER_2_EQUIPMENT_KIT;
 	public static Item TIER_4_EQUIPMENT_KIT;
 	public static Item TIER_3_EQUIPMENT_KIT;
 	public static Item TIER_5_EQUIPMENT_KIT;
-	
+
 	public static void init() {
 		initializeItems();
 		registerItems();
 		registerFluidContainer();
-		if(Config.ORE_DICTIONARY_INGOTS)
+		if (Config.ORE_DICTIONARY_INGOTS)
 			OreDictionaryRegister();
 		registerGearItems();
 	}
@@ -351,20 +351,20 @@ public class ExtraPlanets_Items {
 		BUCKET_METHANE = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.METHANE);
 		BUCKET_NITROGEN_ICE = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.NITROGEN_ICE);
 		BUCKET_LIQUID_HYDROCARBON = new ItemBasicItemBucket("bucket_liquid_hydrocarbon", ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
-		
+
 		CANNED_FOOD = new ItemCannedFood("canned_food");
 		WAFERS = new ItemWafers("wafer");
 		INGOT_LEAD = new ItemBasicItem("ingot_lead");
 		CLOTH = new ItemBasicItem("cloth");
 		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
-		
+
 		TIER_1_EQUIPMENT_KIT = new ItemBasicKit("tier1_kit", 1);
 		TIER_2_EQUIPMENT_KIT = new ItemBasicKit("tier2_kit", 2);
 		TIER_3_EQUIPMENT_KIT = new ItemBasicKit("tier3_kit", 3);
 		TIER_4_EQUIPMENT_KIT = new ItemBasicKit("tier4_kit", 4);
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
-		
-		TIER_10_ELECTRIC_ROCKET = new Tier10ElectricRocket("item_tier10_electric_rocket");
+
+		//TIER_10_ELECTRIC_ROCKET = new Tier10ElectricRocket("item_tier10_electric_rocket");
 	}
 
 	private static void registerItems() {
@@ -527,8 +527,8 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		
-		RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
+
+		//RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerFluidContainer() {
