@@ -1,20 +1,15 @@
 package com.mjr.extraplanets.client.render.entities.rockets;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.VertexBuffer;
-import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.client.model.pipeline.LightUtil;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -68,7 +63,7 @@ public class RenderTier4Rocket extends Render<EntityTier4Rocket> {
 
 		updateModel();
 
-		//RenderHelper.disableStandardItemLighting();
+		// RenderHelper.disableStandardItemLighting();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 
 		if (Minecraft.isAmbientOcclusionEnabled()) {
@@ -81,34 +76,8 @@ public class RenderTier4Rocket extends Render<EntityTier4Rocket> {
 		GL11.glScalef(0.9F, 0.9F, 0.9F);
 
 		ClientUtil.drawBakedModel(rocketModel);
-
-		// Vector3 teamColor = ClientUtil.updateTeamColor(FMLClientHandler.instance().getClient().thePlayer.getName(), true);
-		// if (teamColor != null) {
-		// GL11.glColor3f(teamColor.floatX(), teamColor.floatY(), teamColor.floatZ());
-		// }
-		//
-		// if (FMLClientHandler.instance().getClient().thePlayer.ticksExisted / 10 % 2 < 1) {
-		// GL11.glColor3f(1, 0, 0);
-		// } else {
-		// GL11.glColor3f(0, 1, 0);
-		// }
-
-//		GL11.glDisable(GL11.GL_TEXTURE_2D);
-//		GL11.glDisable(GL11.GL_LIGHTING);
-//
-//		GL11.glEnable(GL11.GL_TEXTURE_2D);
-//		GL11.glEnable(GL11.GL_LIGHTING);
-
-		GL11.glColor3f(1, 0, 1);
-
 		GL11.glPopMatrix();
 
 		RenderHelper.enableStandardItemLighting();
-	}
-
-	private void renderQuads(VertexBuffer renderer, List<BakedQuad> quads, int color) {
-		for (BakedQuad bakedquad : quads) {
-			LightUtil.renderQuadColor(renderer, bakedquad, color);
-		}
 	}
 }
