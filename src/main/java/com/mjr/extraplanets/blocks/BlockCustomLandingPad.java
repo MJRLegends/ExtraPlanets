@@ -84,7 +84,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 3; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
