@@ -11,57 +11,47 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemBlockCustomLandingPad extends ItemBlockDesc
-{
-    public ItemBlockCustomLandingPad(Block block)
-    {
-        super(block);
-        this.setMaxDamage(0);
-        this.setHasSubtypes(true);
-    }
+public class ItemBlockCustomLandingPad extends ItemBlockDesc {
+	public ItemBlockCustomLandingPad(Block block) {
+		super(block);
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+	}
 
-    @Override
-    public String getUnlocalizedName(ItemStack par1ItemStack)
-    {
-        String name = "";
+	@Override
+	public String getUnlocalizedName(ItemStack par1ItemStack) {
+		String name = "";
 
-        switch (par1ItemStack.getItemDamage())
-        {
-		case 0:
-			name = "tier2LandingPad";
-			break;
-		case 1:
-			name = "tier3LandingPad";
-            break;
-		case 2:
-			name = "poweredChargingPad";
-		case 3:
-			name = "rocketChargingPad";
-			break;
-        }
+		switch (par1ItemStack.getItemDamage()) {
+			case 0:
+				name = "tier2LandingPad";
+				break;
+			case 1:
+				name = "tier3LandingPad";
+				break;
+			case 2:
+				name = "poweredChargingPad";
+				break;
+		}
 
-        return this.getBlock().getUnlocalizedName() + "." + name;
-    }
+		return this.getBlock().getUnlocalizedName() + "." + name;
+	}
 
-    @Override
-    public void onCreated(ItemStack stack, World world, EntityPlayer player)
-    {
-        if (world.isRemote && stack.getItemDamage() == 0 && player instanceof EntityPlayerSP)
-        {
-            ClientProxyCore.playerClientHandler.onBuild(5, (EntityPlayerSP) player);
-        }
-    }
+	@Override
+	public void onCreated(ItemStack stack, World world, EntityPlayer player) {
+		if (world.isRemote && stack.getItemDamage() == 0 && player instanceof EntityPlayerSP) {
+			ClientProxyCore.playerClientHandler.onBuild(5, (EntityPlayerSP) player);
+		}
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-        return ClientProxyCore.galacticraftItem;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
+		return ClientProxyCore.galacticraftItem;
+	}
 
-    @Override
-    public int getMetadata(int damage)
-    {
-        return damage;
-    }
+	@Override
+	public int getMetadata(int damage) {
+		return damage;
+	}
 }
