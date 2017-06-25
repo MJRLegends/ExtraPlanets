@@ -6,9 +6,13 @@ import javax.vecmath.Vector3f;
 
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraftforge.common.model.TRSRTransformation;
+
+import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 
@@ -24,6 +28,11 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
     {
         if (cameraTransformType == TransformType.GUI)
         {
+    		if (Minecraft.isAmbientOcclusionEnabled()) {
+    			GlStateManager.shadeModel(GL11.GL_SMOOTH);
+    		} else {
+    			GlStateManager.shadeModel(GL11.GL_FLAT);
+    		}
             Vector3f trans = new Vector3f(-0.12F, 0.0F, -0.12F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
@@ -62,6 +71,11 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.FIRST_PERSON_RIGHT_HAND)
         {
+        	if (Minecraft.isAmbientOcclusionEnabled()) {
+    			GlStateManager.shadeModel(GL11.GL_SMOOTH);
+    		} else {
+    			GlStateManager.shadeModel(GL11.GL_FLAT);
+    		}
             Vector3f trans = new Vector3f(0.5F, 4.5F, -3.9F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
@@ -90,6 +104,11 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.THIRD_PERSON_RIGHT_HAND || cameraTransformType == TransformType.THIRD_PERSON_LEFT_HAND)
         {
+        	if (Minecraft.isAmbientOcclusionEnabled()) {
+    			GlStateManager.shadeModel(GL11.GL_SMOOTH);
+    		} else {
+    			GlStateManager.shadeModel(GL11.GL_FLAT);
+    		}
             Vector3f trans = new Vector3f(0.85F, -4.2F, 1.7F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
@@ -118,6 +137,11 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.GROUND)
         {
+        	if (Minecraft.isAmbientOcclusionEnabled()) {
+    			GlStateManager.shadeModel(GL11.GL_SMOOTH);
+    		} else {
+    			GlStateManager.shadeModel(GL11.GL_FLAT);
+    		}
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
