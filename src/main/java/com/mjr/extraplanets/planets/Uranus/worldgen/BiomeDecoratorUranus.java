@@ -65,6 +65,15 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 
+		for (int i = 0; i < this.LakesPerChunk; i++) {
+			if (this.rand.nextInt(10) == 0) {
+				int x = this.chunkX + 8;
+				// int y = this.rand.nextInt(16) + 16;
+				int z = this.chunkZ + 8;
+				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
+				new WorldGenCustomLake(ExtraPlanets_Fluids.FROZEN_WATER).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.URANUS_BLOCKS);
+			}
+		}
 		if (Config.GENERATE_URANUS_ICE_SPIKES) {
 			for (int i = 0; i < this.iceSpikesPerChunk; i++) {
 				if (this.rand.nextInt(20) == 0) {
@@ -75,17 +84,8 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 				}
 			}
 		}
-		for (int i = 0; i < this.LakesPerChunk; i++) {
-			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.FROZEN_WATER).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.URANUS_BLOCKS);
-			}
-		}
 		if (Config.GENERATE_URANUS_IGLOOS) {
-			if (this.rand.nextInt(200) == 1) {
+			if (this.rand.nextInt(300) == 1) {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY();
