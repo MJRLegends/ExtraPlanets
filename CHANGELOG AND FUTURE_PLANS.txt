@@ -20,6 +20,7 @@ v1.5.1 Beta Build
 *Fixed rendering issues with the Tier 4 - 10 Rockets
 *Added Ore Dict for Block of Uranium
 *Fixed Advanced & Ultimate Refinery accepting different mods oil buckets
+*Fixed a few disabling config options issues
 
 v1.5.0 Beta Build
 *Moved Kepler22b Chunk Provider class to a prefab class & extended it for Kepler22b (for future plans)
