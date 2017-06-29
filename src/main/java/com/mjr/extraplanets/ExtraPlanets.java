@@ -421,8 +421,10 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.GANTMEDE_BIOME_ID, GanymedeBiomes.ganymede.getBiomeName(), GanymedeBiomes.ganymede);
 		if (Config.IAPETUS)
 			Biome.registerBiome(Config.IAPETUS_BIOME_ID, IapetusBiomes.iapetus.getBiomeName(), IapetusBiomes.iapetus);
-		if (Config.IO)
+		if (Config.IO){
 			Biome.registerBiome(Config.IO_BIOME_ID, IoBiomes.io.getBiomeName(), IoBiomes.io);
+			Biome.registerBiome(Config.IO_ASH_LANDS_BIOME_ID, IoBiomes.ioAshLands.getBiomeName(), IoBiomes.ioAshLands);
+		}
 		if (Config.OBERON)
 			Biome.registerBiome(Config.OBERON_BIOME_ID, OberonBiomes.oberon.getBiomeName(), OberonBiomes.oberon);
 		if (Config.PHOBOS)
