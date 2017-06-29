@@ -394,8 +394,11 @@ public class ExtraPlanets {
 		}
 		if (Config.SATURN)
 			Biome.registerBiome(Config.SATURN_BIOME_ID, SaturnBiomes.saturn.getBiomeName(), SaturnBiomes.saturn);
-		if (Config.URANUS)
+		if (Config.URANUS){
 			Biome.registerBiome(Config.URANUS_BIOME_ID, UranusBiomes.uranus.getBiomeName(), UranusBiomes.uranus);
+			Biome.registerBiome(Config.URANUS_FROZEN_SEA_BIOME_ID, UranusBiomes.uranusFrozenWater.getBiomeName(), UranusBiomes.uranusFrozenWater);
+			Biome.registerBiome(Config.URANUS_SNOW_LANDS_BIOME_ID, UranusBiomes.uranusSnowLands.getBiomeName(), UranusBiomes.uranusSnowLands);
+		}
 		if (Config.NEPTUNE)
 			Biome.registerBiome(Config.NEPTUNE_BIOME_ID, NeptuneBiomes.neptune.getBiomeName(), NeptuneBiomes.neptune);
 		if (Config.PLUTO)

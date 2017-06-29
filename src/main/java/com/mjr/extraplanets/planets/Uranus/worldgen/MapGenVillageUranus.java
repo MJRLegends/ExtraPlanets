@@ -11,6 +11,7 @@ import net.minecraft.world.gen.structure.StructureStart;
 import net.minecraftforge.fml.common.FMLLog;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageField2;
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageHouse;
