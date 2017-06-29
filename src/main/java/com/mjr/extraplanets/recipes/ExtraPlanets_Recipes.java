@@ -857,7 +857,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(GCItems.basicItem, 1, 5) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_CHEST, 1, 0), new Object[] { "M M", "MMM", "MMM", 'M', new ItemStack(GCItems.basicItem, 1, 5) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "MMM", "M M", "M M", 'M', new ItemStack(GCItems.basicItem, 1, 5) });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(GCItems.basicItem, 1, 5) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(GCItems.basicItem, 1, 5) });
 
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R',
 					ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET });
@@ -865,7 +865,7 @@ public class ExtraPlanets_Recipes {
 					ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_CHEST });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "MMM", "MRM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R',
 					ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R',
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " R ", "M M", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R',
 					ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_BOOTS });
 
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'R',
@@ -874,7 +874,7 @@ public class ExtraPlanets_Recipes {
 					ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_CHEST });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "MMM", "MRM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'R',
 					ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'R',
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " R ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'R',
 					ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_BOOTS });
 
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R',
@@ -883,7 +883,7 @@ public class ExtraPlanets_Recipes {
 					ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_CHEST });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "MMM", "MRM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R',
 					ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R',
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " R ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R',
 					ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_BOOTS });
 
 			// Tier 1 - 4 Prepared Space Suits
