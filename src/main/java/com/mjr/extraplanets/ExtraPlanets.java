@@ -35,7 +35,6 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptu
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
-import com.mjr.extraplanets.entities.rockets.EntityTier10ElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -345,10 +344,10 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
-		//RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10ElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
-		if(Config.MARS_ROVER)
+		// RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10ElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
+		if (Config.MARS_ROVER)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
-		if(Config.VENUS_ROVER)
+		if (Config.VENUS_ROVER)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
 	}
 
@@ -389,7 +388,7 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.MERCURY_BIOME_ID, MercuryBiomes.mercury.getBiomeName(), MercuryBiomes.mercury);
 		if (Config.CERES)
 			Biome.registerBiome(Config.CERES_BIOME_ID, CeresBiomes.ceres.getBiomeName(), CeresBiomes.ceres);
-		if (Config.JUPITER){
+		if (Config.JUPITER) {
 			Biome.registerBiome(Config.JUPITER_BIOME_ID, JupiterBiomes.jupiter.getBiomeName(), JupiterBiomes.jupiter);
 			Biome.registerBiome(Config.JUPITER_SEA_BIOME_ID, JupiterBiomes.jupiterMagmaSea.getBiomeName(), JupiterBiomes.jupiterMagmaSea);
 		}
@@ -430,13 +429,13 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.PHOBOS_BIOME_ID, PhobosBiomes.phobos.getBiomeName(), PhobosBiomes.phobos);
 		if (Config.RHEA)
 			Biome.registerBiome(Config.RHEA_BIOME_ID, RheaBiomes.rhea.getBiomeName(), RheaBiomes.rhea);
-		if (Config.TITAN){
+		if (Config.TITAN) {
 			Biome.registerBiome(Config.TITAN_BIOME_ID, TitanBiomes.titan.getBiomeName(), TitanBiomes.titan);
 			Biome.registerBiome(Config.TITAN_SEA_BIOME_ID, TitanBiomes.titanMethaneSea.getBiomeName(), TitanBiomes.titanMethaneSea);
 		}
 		if (Config.TITANIA)
 			Biome.registerBiome(Config.TITANIA_BIOME_ID, TitaniaBiomes.titania.getBiomeName(), TitaniaBiomes.titania);
-		if (Config.TRITON){
+		if (Config.TRITON) {
 			Biome.registerBiome(Config.TRITON_BIOME_ID, TritonBiomes.triton.getBiomeName(), TritonBiomes.triton);
 			Biome.registerBiome(Config.TRITON_ICE_LANDS_BIOME_ID, TritonBiomes.tritonIceLands.getBiomeName(), TritonBiomes.tritonIceLands);
 			Biome.registerBiome(Config.TRITON_ICE_SEA_BIOME_ID, TritonBiomes.tritonIceSea.getBiomeName(), TritonBiomes.tritonIceSea);

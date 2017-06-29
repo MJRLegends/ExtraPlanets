@@ -533,7 +533,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.ORE_LEAD_GENERATION)
 			RegisterHelper.registerBlock(ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
 		if (Config.RADIATION)
-			RegisterHelper.registerBlock(ORE_POTASH, "potash");
+			RegisterHelper.registerBlock(ORE_POTASH, ORE_POTASH.getUnlocalizedName().substring(5));
 
 		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
 		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
