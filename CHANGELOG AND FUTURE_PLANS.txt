@@ -15,6 +15,18 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.5.2 Beta Build
+*Fixes for Solar Panels (Issue #111)
+*Converted Io over to a Multi Biome System, Added a Io Ash Lands Biome
+*Tweaks to Io Ash Lands biome height
+*Fixed recipe issues
+*World gen changes for Uranus
+*Changed some recipes to accept ore dict ingots not a hardcoded recipe
+*Fixed crash issue with Kepler22b
+*Fixed overlay locations
+*Converted Uranus over to a Multi Biome System, Added a Uranus Snow Lands, Uranus Frozen Water Sea Biomes
+*Clean up
+
 v1.5.1 Beta Build
 *Fixed issue #115
 *Fixed rendering issues with the Tier 4 - 10 Rockets
