@@ -26,7 +26,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.mjr.extraplanets.blocks.machines.BlockSolar;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.inventory.IInventoryDefaults;
 
@@ -44,14 +43,14 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int disableCooldown = 0;
 	private ItemStack[] containingItems = new ItemStack[1];
-	public static final int MAX_GENERATE_WATTS = 400;
+	public static final int MAX_GENERATE_WATTS = 1000;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int generateWatts = 0;
 
 	private boolean initialised = false;
 
 	public TileEntitySolar() {
-		this(1);
+		this(2);
 	}
 
 	/*
@@ -130,13 +129,15 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 								}
 							}
 						}
+						if (this.tierGC == 2)
+							this.solarStrength = this.solarStrength * 2;
 
 					} else {
-						int metadata = this.getBlockMetadata();
-						if (metadata < BlockSolar.ULTIMATE_METADATA) {
-							solarStrength = 4;
-						} else
-							solarStrength = 8;
+						if (this.tierGC == 1) {
+							this.solarStrength = 30;
+						} else {
+							this.solarStrength = 60;
+						}
 					}
 				}
 			}
@@ -147,16 +148,32 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 		celestialAngle %= 360;
 
-		if (celestialAngle > 30 && celestialAngle < 150) {
-			float difference = this.targetAngle - celestialAngle;
-
-			this.targetAngle -= difference / 20.0F;
-		} else if (!this.worldObj.isDaytime() || this.worldObj.isRaining() || this.worldObj.isThundering()) {
-			this.targetAngle = 77.5F + 180.0F;
-		} else if (celestialAngle < 50) {
-			this.targetAngle = 50;
-		} else if (celestialAngle > 150) {
-			this.targetAngle = 150;
+		if (this.tierGC == 1) {
+			if (celestialAngle > 30 && celestialAngle < 150) {
+				float difference = this.targetAngle - celestialAngle;
+				this.targetAngle -= difference / 20.0F;
+			} else if (this.worldObj.isRaining() || this.worldObj.isThundering()) {
+				this.targetAngle = 77.5F + 180.0F;
+			} else if (celestialAngle < 50 || !this.worldObj.isDaytime()) {
+				this.targetAngle = 50;
+			} else if (celestialAngle > 150) {
+				this.targetAngle = 50;
+			} else if (celestialAngle > 160) {
+				this.targetAngle = 77;
+			}
+		} else {
+			if (celestialAngle > 30 && celestialAngle < 150) {
+				float difference = this.targetAngle - celestialAngle;
+				this.targetAngle -= difference / 20.0F;
+			} else if (this.worldObj.isRaining() || this.worldObj.isThundering()) {
+				this.targetAngle = 77.5F + 180.0F;
+			} else if (celestialAngle < 50 || !this.worldObj.isDaytime()) {
+				this.targetAngle = 50;
+			} else if (celestialAngle > 150) {
+				this.targetAngle = 50;
+			} else if (celestialAngle > 160) {
+				this.targetAngle = 77;
+			}
 		}
 
 		float difference = this.targetAngle - this.currentAngle;
@@ -165,18 +182,11 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 		if (!this.worldObj.isRemote) {
 			if (this.getGenerate() > 0.0F) {
-				int metadata = this.getBlockMetadata();
-
-				if (metadata < BlockSolar.ULTIMATE_METADATA)
-					this.generateWatts = (Math.min(Math.max(this.getGenerate(), 0), TileEntitySolar.MAX_GENERATE_WATTS)) * 2;
-				else
-					this.generateWatts = (Math.min(Math.max(this.getGenerate(), 0), TileEntitySolar.MAX_GENERATE_WATTS)) * 4;
-
+				this.generateWatts = (Math.min(Math.max(this.getGenerate(), 0), TileEntitySolar.MAX_GENERATE_WATTS));
 			} else {
 				this.generateWatts = 0;
 			}
 		}
-
 		this.produce();
 	}
 
@@ -196,7 +206,16 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		else
 			difference = (float) 0.7;
 
-		return MathHelper.floor_float(0.01F * difference * difference * (this.solarStrength * (Math.abs(difference) * 500.0F)) * this.getSolarBoost());
+		int sum = MathHelper.floor_float(0.01F * difference * difference * (this.solarStrength * (Math.abs(difference) * 500.0F)) * this.getSolarBoost());
+		if (this.worldObj.isDaytime() == false && !this.worldObj.isRaining() && !this.worldObj.isThundering()) {
+			if (this.tierGC == 1 && sum <= 5) {
+				return MathHelper.floor_float(5);
+			} else if (this.tierGC == 2 && sum <= 10) {
+				return MathHelper.floor_float(10);
+			}
+		} else
+			return sum;
+		return sum;
 	}
 
 	public float getSolarBoost() {
