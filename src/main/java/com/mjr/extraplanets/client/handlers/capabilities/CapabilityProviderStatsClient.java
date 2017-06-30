@@ -7,7 +7,8 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 
 public class CapabilityProviderStatsClient implements ICapabilityProvider
 {
-    private EntityPlayerSP owner;
+    @SuppressWarnings("unused")
+	private EntityPlayerSP owner;
     private IStatsClientCapability statsCapability;
 
     public CapabilityProviderStatsClient(EntityPlayerSP owner)

@@ -29,7 +29,8 @@ public class OverlayPressure extends Overlay
     /**
      * Render the GUI that displays oxygen level in tanks
      */
-    public static void renderPressureIndicator(int pressure, boolean right, boolean top)
+    @SuppressWarnings("unused")
+	public static void renderPressureIndicator(int pressure, boolean right, boolean top)
     {
     	boolean invalid = Math.abs(pressure) >= 60;
         final ScaledResolution scaledresolution = ClientUtil.getScaledRes(OverlayPressure.minecraft, OverlayPressure.minecraft.displayWidth, OverlayPressure.minecraft.displayHeight);

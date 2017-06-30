@@ -103,7 +103,6 @@ public class BlockDecorativeBlocks extends Block implements IDetectableResource,
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(state, target, world, pos, player);
 	}
 
