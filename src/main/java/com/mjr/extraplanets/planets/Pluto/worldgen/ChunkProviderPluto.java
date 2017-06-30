@@ -15,17 +15,19 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
 
 public class ChunkProviderPluto extends ChunkProviderSpace {
-    private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
+	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
 
 	private final BiomeDecoratorPluto plutoBiomeDecorator = new BiomeDecoratorPluto();
 
 	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(ExtraPlanets_Blocks.PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossPluto.class, RoomTreasurePluto.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(ExtraPlanets_Blocks.PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16,
+			7, 7, RoomBossPluto.class, RoomTreasurePluto.class));
 
 	public ChunkProviderPluto(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -101,12 +103,14 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
-		this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
+		if (Config.PLUTO_VILLAGES)
+			this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.world, x, z, null);
-       this.villageGenerator.generate(this.world, x, z, null);
+		if (Config.PLUTO_VILLAGES)
+			this.villageGenerator.generate(this.world, x, z, null);
 	}
 }

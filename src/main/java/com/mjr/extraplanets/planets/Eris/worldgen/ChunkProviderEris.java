@@ -15,6 +15,7 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
 
@@ -102,12 +103,14 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
-		this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
+		if (Config.ERIS_VILLAGES)
+			this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.world, x, z, null);
-		this.villageGenerator.generate(this.world, x, z, null);
+		if (Config.ERIS_VILLAGES)
+			this.villageGenerator.generate(this.world, x, z, null);
 	}
 }

@@ -17,7 +17,6 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 
 public class ChunkProviderNeptune extends ChunkProviderSpace {
@@ -55,23 +54,17 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 		generators.add(this.caveGenerator);
 		return generators;
 	}
-	
+
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		if(Config.NEPTUNE_LIQUID)
-			return new BlockMetaPair(ExtraPlanets_Fluids.NITROGEN,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		if(Config.NEPTUNE_LIQUID)
-			return new BlockMetaPair(ExtraPlanets_Fluids.NITROGEN,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, (byte) 1);
 	}
-	
+
 	@Override
 	protected BlockMetaPair getStoneBlock() {
 		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, (byte) 2);
@@ -110,12 +103,14 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
-		this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
+		if (Config.NEPTUNE_VILLAGES)
+			this.villageGenerator.generateStructure(this.world, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.world, x, z, null);
-		this.villageGenerator.generate(this.world, x, z, null);
+		if (Config.NEPTUNE_VILLAGES)
+			this.villageGenerator.generate(this.world, x, z, null);
 	}
 }
