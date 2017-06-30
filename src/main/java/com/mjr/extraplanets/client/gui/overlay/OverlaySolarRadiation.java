@@ -107,16 +107,22 @@ public class OverlaySolarRadiation extends Overlay
             {
             	if(right){
 	            	addX = 35;
-	            	addY = 20;
+	            	addY = 55;
             	}
             	else{
             		addX = 151;
-	            	addY = -30;
+	            	addY = 10;
             	}
             }
             else{
-            	addX = -10;
-            	addY = -15;
+            	if(right){
+	            	addX = -25;
+	            	addY = 60;
+            	}
+            	else{
+	            	addX = 155;
+	            	addY = 15;
+            	}
             }
             OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - radiationLevelScaled - OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 255, 10, 10));
         }
