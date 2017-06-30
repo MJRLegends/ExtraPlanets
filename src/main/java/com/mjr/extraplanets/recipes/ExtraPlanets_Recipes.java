@@ -249,7 +249,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 8), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.ingotMercury, 1, 0) });
 
 			// Block to Mercury
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ingotMercury, 9, 0), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.ingotMercury, 9, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.mercuryBlocks, 1, 8) });
 
 			if (Config.mercuryItems) {
 				// Tools
@@ -289,13 +289,13 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 5) });
 
 			// Block to Carbon
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 7) });
 
 			// Block of Titanium
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 9), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 5) });
 
 			// Block to Titanium
-			GameRegistry.addRecipe(new ItemStack(AsteroidsItems.basicItem, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 9) });
+			GameRegistry.addShapelessRecipe(new ItemStack(AsteroidsItems.basicItem, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.venusBlocks, 1, 9) });
 
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier4Items, 1, 6), new Object[] { new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7),
 					new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 7) });
@@ -350,7 +350,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 8), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.ingotUranium, 1, 0) });
 
 			// Block to Uranium
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ingotUranium, 9, 0), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.ingotUranium, 9, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.ceresBlocks, 1, 8) });
 
 			if (Config.uraniumItems) {
 				// Tools
@@ -393,10 +393,10 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8) });
 
 			// Block to Palladium
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.ingotUranium, 9, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8) });
 
 			// Block to Red Gem
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 9, 8), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 9, 8), new Object[] { new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11) });
 
 			if (Config.palladiumItems) {
 				// Tools
@@ -462,8 +462,8 @@ public class ExtraPlanets_Recipes {
 			// Block of Magnesium
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, ingot) });
 
-			// Block to Palladium
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 9, ingot), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7) });
+			// Block to Magnesium
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier6Items, 9, ingot), new Object[] { new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 7) });
 
 			// Magnesium Shards
 			if (Config.venus)
@@ -526,10 +526,10 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, whiteGem) });
 
 			// Block to Crystal
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, crystal), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, crystal), new Object[] { new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 4) });
 
 			// Block to White Gem
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, whiteGem), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, whiteGem), new Object[] { new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 7) });
 
 			if (Config.crystalItems) {
 				// Tools
@@ -599,10 +599,10 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 10), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, blueGem) });
 
 			// Block to Zinc
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 9, ingot), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 9, ingot), new Object[] { new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 7) });
 
 			// Block to Blue Gem
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 9, blueGem), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 10) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 9, blueGem), new Object[] { new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 1, 10) });
 
 			if (Config.blueGemItems) {
 				// Tools
@@ -662,7 +662,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 1, 7), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 5) });
 
 			// Block to Tungsten
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 9, 5), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 1, 7) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.plutoBlocks, 1, 7) });
 
 			if (Config.tungstenItems) {
 				// Tools
@@ -710,6 +710,7 @@ public class ExtraPlanets_Recipes {
 
 			// Block to Dark Iron
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 9, ingot), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 9, ingot), new Object[] { new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 8) });
 
 			// Slab's & Stairs
 			if (Config.slabsAndStairs) {
