@@ -107,16 +107,22 @@ public class OverlayPressure extends Overlay
             {
             	if(right){
 	            	addX = 20;
-	            	addY = 45;
+	            	addY = 70;
             	}
             	else{
             		addX = 135;
-	            	addY = 20;
+	            	addY = 30;
             	}
             }
             else{
-            	addX = -25;
-            	addY = 5;
+            	if(right){
+	            	addX = -40;
+	            	addY = 80;
+            	}
+            	else{
+	            	addX = 140;
+	            	addY = 30;
+            	}
             }
             OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 102, 178, 255));
         }
