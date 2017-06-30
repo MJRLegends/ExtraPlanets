@@ -58,18 +58,12 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		if(Config.NEPTUNE_LIQUID)
-			return new BlockMetaPair(ExtraPlanets_Fluids.NITROGEN,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		if(Config.NEPTUNE_LIQUID)
-			return new BlockMetaPair(ExtraPlanets_Fluids.NITROGEN,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 1);
 	}
 	
 	@Override

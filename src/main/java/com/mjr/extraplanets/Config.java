@@ -184,10 +184,6 @@ public class Config {
 	public static int KEPLER22B_YELLOW_FOREST_BIOME_ID;
 	public static int KEPLER22B_RED_DESERT_BIOME_ID;
 	
-	public static boolean JUPITER_LIQUID;
-	public static boolean SATURN_LIQUID;
-	public static boolean URANUS_LIQUID;
-	public static boolean NEPTUNE_LIQUID;
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
 	
@@ -353,12 +349,7 @@ public class Config {
 		NEPTUNE = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Neptune & Tier 8 Rocket", true, "Disabling this will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		PLUTO = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Pluto & Tier 9 Rocket", true, "Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		ERIS = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Eris & Tier 10 Rocket", true, "Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
-
-		JUPITER_LIQUID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Jupiter's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		SATURN_LIQUID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Saturn's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		URANUS_LIQUID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Uranus's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		NEPTUNE_LIQUID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Neptune's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-
+		
 		MERCURY_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury Dimension ID", -13).getInt();
 		CERES_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ceres Dimension ID", -20).getInt();
 		JUPITER_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Jupiter Dimension ID", -15).getInt();

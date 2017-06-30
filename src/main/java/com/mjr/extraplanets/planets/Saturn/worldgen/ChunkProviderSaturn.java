@@ -58,18 +58,12 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		if(Config.SATURN_LIQUID)
-			return new BlockMetaPair(ExtraPlanets_Fluids.GLOWSTONE,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		if(Config.SATURN_LIQUID)
-			return new BlockMetaPair(ExtraPlanets_Fluids.GLOWSTONE,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 1);
 	}
 
 	@Override
