@@ -12,7 +12,6 @@ public class StructureVillageStartJupiter extends StructureStart {
 	public StructureVillageStartJupiter() {
 	}
 
-	@SuppressWarnings("unchecked")
 	public StructureVillageStartJupiter(World par1World, Random par2Random, int par3, int par4, int par5) {
 		super(par3, par4);
 

@@ -206,11 +206,13 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 		return state.getBlock().getMetaFromState(state) == 10;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();

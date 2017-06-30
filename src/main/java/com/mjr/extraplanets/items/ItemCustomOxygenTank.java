@@ -50,7 +50,6 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 		return ClientProxyCore.galacticraftItem;
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List<String> tooltip, boolean b) {
 		tooltip.add(GCCoreUtil.translate("gui.tank.oxygen_remaining") + ": " + (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()));

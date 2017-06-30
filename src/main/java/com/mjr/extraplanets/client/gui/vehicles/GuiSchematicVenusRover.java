@@ -24,7 +24,6 @@ public class GuiSchematicVenusRover extends GuiContainerGC implements ISchematic
 		this.ySize = 221;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void initGui() {
 		super.initGui();

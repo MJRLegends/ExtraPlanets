@@ -187,6 +187,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 		return new ItemStack(Item.getItemFromBlock(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD), 1, metadata);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(PAD_TYPE, EnumLandingPadFullType.byMetadata(meta));
