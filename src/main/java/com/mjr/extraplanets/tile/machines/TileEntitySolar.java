@@ -200,11 +200,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 		celestialAngle %= 360;
 
-		float difference = 0;
-		if (this.worldObj.isDaytime())
-			difference = (180.0F - Math.abs(this.currentAngle % 180 - celestialAngle)) / 180.0F;
-		else
-			difference = (float) 0.7;
+ 		float difference = (180.0F - Math.abs(this.currentAngle % 180 - celestialAngle)) / 180.0F;
 
 		int sum = MathHelper.floor_float(0.01F * difference * difference * (this.solarStrength * (Math.abs(difference) * 500.0F)) * this.getSolarBoost());
 		if (this.worldObj.isDaytime() == false && !this.worldObj.isRaining() && !this.worldObj.isThundering()) {
