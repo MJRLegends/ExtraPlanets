@@ -22,13 +22,13 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 255 / 205.0F * f);
+		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 205.0F / 255.0F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 255 / 205.0F * f);
+		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 205.0F / 255.0F * f);
 	}
 
 	@Override
