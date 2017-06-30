@@ -130,7 +130,7 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 	@Override
 	public float getFallDamageModifier() {
 		if (Config.oldStyleGravity)
-			return 0.18F;
+			return 0.38F;
 		else
 			return 2.1F;
 	}
