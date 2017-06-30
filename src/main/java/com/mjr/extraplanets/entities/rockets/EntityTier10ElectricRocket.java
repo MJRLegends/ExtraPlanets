@@ -134,7 +134,6 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 		}
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void onUpdate() {
 		super.onUpdate();

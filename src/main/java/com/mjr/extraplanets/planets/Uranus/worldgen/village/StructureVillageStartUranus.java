@@ -12,7 +12,6 @@ public class StructureVillageStartUranus extends StructureStart {
 	public StructureVillageStartUranus() {
 	}
 
-	@SuppressWarnings("unchecked")
 	public StructureVillageStartUranus(World par1World, Random par2Random, int par3, int par4, int par5) {
 		super(par3, par4);
 

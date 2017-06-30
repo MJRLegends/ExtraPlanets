@@ -114,7 +114,6 @@ public class BlockBasicTitania extends Block implements IDetectableResource, IPl
 		return 1;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {

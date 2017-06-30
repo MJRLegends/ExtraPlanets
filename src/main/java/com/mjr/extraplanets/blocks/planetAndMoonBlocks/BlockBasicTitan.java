@@ -114,7 +114,6 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 		return 1;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {

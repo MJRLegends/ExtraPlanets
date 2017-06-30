@@ -213,6 +213,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		EnumFacing enumfacing = EnumFacing.getHorizontal(meta % 4);

@@ -86,7 +86,6 @@ public class BlockDecorativeBlocks2 extends Block implements IDetectableResource
 		return 1;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
@@ -106,6 +105,7 @@ public class BlockDecorativeBlocks2 extends Block implements IDetectableResource
 		return super.getPickBlock(state, target, world, pos, player);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));

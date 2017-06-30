@@ -106,7 +106,6 @@ public class Tier10ElectricRocket extends Item implements IHoldableItem {
 		return EnumActionResult.PASS;
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < EnumRocketType.values().length; i++) {

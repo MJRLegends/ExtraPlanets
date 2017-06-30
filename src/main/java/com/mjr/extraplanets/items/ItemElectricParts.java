@@ -33,7 +33,6 @@ public class ItemElectricParts extends Item {
 		return this.getUnlocalizedName() + "." + ItemElectricParts.names[itemStack.getItemDamage()];
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemElectricParts.names.length; i++) {

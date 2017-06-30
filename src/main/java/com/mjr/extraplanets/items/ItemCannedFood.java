@@ -48,7 +48,6 @@ public class ItemCannedFood extends Item {
 		return this.getUnlocalizedName() + "." + ItemCannedFood.names[itemStack.getItemDamage()];
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemCannedFood.names.length; i++) {

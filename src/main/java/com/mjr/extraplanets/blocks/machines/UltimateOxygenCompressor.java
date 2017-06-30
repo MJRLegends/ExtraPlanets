@@ -153,6 +153,7 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		EnumFacing enumfacing = EnumFacing.getHorizontal(meta % 4);

@@ -44,7 +44,6 @@ public class GuiVehicleChanger extends GuiContainerGC {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void initGui() {
 		super.initGui();

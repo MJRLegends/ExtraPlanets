@@ -48,7 +48,6 @@ public class ItemBasicKit extends Item {
 		return this.getUnlocalizedName() + "." + ItemBasicKit.names[itemStack.getItemDamage()];
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
     public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemBasicKit.names.length; i++) {

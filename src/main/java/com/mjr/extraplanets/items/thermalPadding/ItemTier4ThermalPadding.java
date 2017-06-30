@@ -47,7 +47,6 @@ public class ItemTier4ThermalPadding  extends Item implements IItemThermal
         return ExtraPlanets.ArmorTab;
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List)
     {

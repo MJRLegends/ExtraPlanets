@@ -38,7 +38,6 @@ public class ItemTier7Items extends Item {
 		return this.getUnlocalizedName() + "." + ItemTier7Items.names[itemStack.getItemDamage()];
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemTier7Items.names.length; i++) {

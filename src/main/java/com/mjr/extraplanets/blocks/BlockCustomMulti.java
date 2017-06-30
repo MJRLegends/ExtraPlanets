@@ -120,6 +120,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		worldObj.setTileEntity(pos, new TileEntityMulti(mainBlock));
 	}
 
+	@SuppressWarnings("unchecked")
 	public void makeFakeBlock(World worldObj, Collection<BlockPos> posList, BlockPos mainBlock, EnumBlockMultiType type) {
 		for (BlockPos pos : posList) {
 			worldObj.setBlockState(pos, this.getDefaultState().withProperty(MULTI_TYPE, type), 0);
@@ -209,6 +210,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		return super.addHitEffects(state, worldObj, target, manager);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(MULTI_TYPE, EnumBlockMultiType.byMetadata(meta));
