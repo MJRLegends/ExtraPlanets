@@ -22,6 +22,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.proxy.ClientProxy;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
@@ -65,9 +66,9 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements ItemB
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.iconMachineSide = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_blank");
-		this.iconCompressor1 = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_compressor_1");
+		this.iconCompressor1 = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "ultimate_oxygen_compressor");
 		this.iconCompressor2 = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_compressor_2");
-		this.iconDecompressor = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_decompressor_1");
+		this.iconDecompressor = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "ultimate_oxygen_decompressor");
 		this.iconOxygenInput = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_oxygen_input");
 		this.iconOxygenOutput = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_oxygen_output");
 		this.iconInput = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_input");

@@ -59,9 +59,9 @@ public class BlockSolar extends BlockTileGC implements ItemBlockDesc.IBlockShift
 	@Override
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.icons[0] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_0");
-		this.icons[1] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_1");
+		this.icons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "solar_hybrid_1");
 		this.icons[2] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_0");
-		this.icons[3] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "solar_advanced_1");
+		this.icons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "solar_ultimate_1");
 		this.icons[4] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_blank");
 		this.icons[5] = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_output");
 		this.blockIcon = this.icons[0];
