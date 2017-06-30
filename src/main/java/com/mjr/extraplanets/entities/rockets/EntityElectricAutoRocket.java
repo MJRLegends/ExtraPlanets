@@ -708,6 +708,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		return this.hasValidPower();
 	}
 
+	@Override
 	public boolean hasValidPower() {
 		if (this.launchPhase >= EnumLaunchPhase.LAUNCHED.ordinal())
 			return true;

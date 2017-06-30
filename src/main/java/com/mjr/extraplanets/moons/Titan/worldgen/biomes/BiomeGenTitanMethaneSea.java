@@ -6,7 +6,6 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 
 public class BiomeGenTitanMethaneSea extends Biome {
 	public BiomeGenTitanMethaneSea(Biome.BiomeProperties properties) {

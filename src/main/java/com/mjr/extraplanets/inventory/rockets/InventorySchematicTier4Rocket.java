@@ -9,13 +9,11 @@ import net.minecraft.util.NonNullList;
 
 public class InventorySchematicTier4Rocket implements IInventoryDefaults {
 	public NonNullList<ItemStack> stacks;
-	private final int inventoryWidth;
 	private final Container eventHandler;
 
 	public InventorySchematicTier4Rocket(Container par1Container) {
 		this.stacks = NonNullList.withSize(22, ItemStack.EMPTY);
 		this.eventHandler = par1Container;
-		this.inventoryWidth = 5;
 	}
 
 	@Override

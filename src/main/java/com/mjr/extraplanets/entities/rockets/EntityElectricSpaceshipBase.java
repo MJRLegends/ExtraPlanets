@@ -159,7 +159,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 			EntityItem entityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound((NBTTagCompound) item.getTagCompound().copy());
+				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}
@@ -610,7 +610,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 	@Override
 	@SideOnly(Side.CLIENT)
 	public int getBrightnessForRender(float partialTicks) {
-		double height = this.posY + (double) this.getEyeHeight();
+		double height = this.posY + this.getEyeHeight();
 		if (height > 255D)
 			height = 255D;
 		BlockPos blockpos = new BlockPos(this.posX, height, this.posZ);

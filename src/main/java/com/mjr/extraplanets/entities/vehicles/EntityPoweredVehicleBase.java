@@ -690,6 +690,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		return beforePower - this.getCurrentPowerCapacity();
 	}
 	
+	@Override
 	public  boolean inFlight(){
 		 return false;
 	 }

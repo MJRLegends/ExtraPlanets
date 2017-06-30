@@ -2,8 +2,6 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.Constants;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -12,6 +10,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.MapGenBase;
+
+import com.mjr.extraplanets.Constants;
 
 public class MapGenRavineKepler22b extends MapGenBase {
 	private float[] field_75046_d = new float[1024];

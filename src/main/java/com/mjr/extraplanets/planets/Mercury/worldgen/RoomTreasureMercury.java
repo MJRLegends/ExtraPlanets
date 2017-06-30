@@ -2,6 +2,7 @@ package com.mjr.extraplanets.planets.Mercury.worldgen;
 
 import java.util.Random;
 
+import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.init.Blocks;
@@ -10,7 +11,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
 
 public class RoomTreasureMercury extends RoomTreasure {
 	public RoomTreasureMercury() {
@@ -60,7 +60,7 @@ public class RoomTreasureMercury extends RoomTreasure {
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
 						this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
-						this.setBlockState(worldIn, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_4.getDefaultState().withProperty(T4TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
+						this.setBlockState(worldIn, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_4.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
 					} else {
 						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
 					}
