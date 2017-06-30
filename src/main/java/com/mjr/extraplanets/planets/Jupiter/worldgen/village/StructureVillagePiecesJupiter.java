@@ -10,8 +10,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 
-import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureVillagePieceWeightJupiter;
-
 public class StructureVillagePiecesJupiter {
 	public static ArrayList<StructureVillagePieceWeightJupiter> getStructureVillageWeightedPieceList(Random par0Random, int par1) {
 		final ArrayList<StructureVillagePieceWeightJupiter> var2 = new ArrayList<StructureVillagePieceWeightJupiter>();

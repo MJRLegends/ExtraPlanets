@@ -19,8 +19,8 @@ import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomNormal;
 public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
-		this.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
-		this.waterBlock = Blocks.WATER.getDefaultState();
+		ChunkProviderCustomNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
+		ChunkProviderCustomNormal.waterBlock = Blocks.WATER.getDefaultState();
 	}
 
 	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();

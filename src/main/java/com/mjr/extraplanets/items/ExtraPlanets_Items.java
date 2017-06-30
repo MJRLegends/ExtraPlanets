@@ -33,7 +33,6 @@ import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier6Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier7Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier8Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier9Items;
-import com.mjr.extraplanets.items.rockets.Tier10ElectricRocket;
 import com.mjr.extraplanets.items.rockets.Tier10Rocket;
 import com.mjr.extraplanets.items.rockets.Tier4Rocket;
 import com.mjr.extraplanets.items.rockets.Tier5Rocket;

@@ -38,10 +38,12 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
+	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		return FULL_BLOCK_AABB;
 	}
 
+	@Override
 	public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state) {
 		return super.canBlockStay(worldIn, pos, state);
 	}
@@ -56,6 +58,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	/**
 	 * Get the Item that this Block should drop when harvested.
 	 */
+	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return null;
 	}
@@ -63,6 +66,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	/**
 	 * Get the quantity dropped based on the given fortune level
 	 */
+	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random) {
 		return 1 + random.nextInt(fortune * 2 + 1);
 	}
@@ -80,6 +84,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	/**
 	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
 	 */
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
 		for (int i = 0; i < 15; ++i) {
@@ -90,14 +95,17 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	/**
 	 * Whether this IGrowable can grow
 	 */
+	@Override
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
 	}
 
+	@Override
 	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
 		return true;
 	}
 
+	@Override
 	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
 		BlockDoublePlant.EnumPlantType blockdoubleplant$enumplanttype = BlockDoublePlant.EnumPlantType.GRASS;
 
@@ -109,6 +117,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	/**
 	 * Convert the given metadata into a BlockState for this Block
 	 */
+	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(TYPE, BlockBasicKepler22bTallGrass.EnumType.byMetadata(meta));
 	}
@@ -116,10 +125,12 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	/**
 	 * Convert the BlockState into the correct metadata value
 	 */
+	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((BlockBasicKepler22bTallGrass.EnumType) state.getValue(TYPE)).getMeta();
+		return state.getValue(TYPE).getMeta();
 	}
 
+	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { TYPE });
 	}
@@ -127,6 +138,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	/**
 	 * Get the OffsetType for this Block. Determines if the model is rendered slightly offset.
 	 */
+	@Override
 	@SideOnly(Side.CLIENT)
 	public Block.EnumOffsetType getOffsetType() {
 		return Block.EnumOffsetType.XYZ;
@@ -156,6 +168,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 			return this.meta;
 		}
 
+		@Override
 		public String toString() {
 			return this.name;
 		}
@@ -168,6 +181,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 			return META_LOOKUP[meta];
 		}
 
+		@Override
 		public String getName() {
 			return this.name;
 		}
@@ -187,7 +201,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
-		ret.add(new ItemStack(Blocks.TALLGRASS, 1, ((BlockBasicKepler22bTallGrass.EnumType) world.getBlockState(pos).getValue(TYPE)).getMeta()));
+		ret.add(new ItemStack(Blocks.TALLGRASS, 1, world.getBlockState(pos).getValue(TYPE).getMeta()));
 		return ret;
 	}
 

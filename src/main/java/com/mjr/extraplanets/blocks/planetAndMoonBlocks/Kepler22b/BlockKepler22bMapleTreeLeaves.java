@@ -5,8 +5,6 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
@@ -24,6 +22,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	public static final PropertyEnum<BlockKepler22bMapleTreeLeaves.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLeaves.EnumType> create("variant", BlockKepler22bMapleTreeLeaves.EnumType.class);
@@ -56,6 +56,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 			return this.field_181071_k;
 		}
 
+		@Override
 		public String toString() {
 			return this.name;
 		}
@@ -68,6 +69,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 			return META_LOOKUP[meta];
 		}
 
+		@Override
 		public String getName() {
 			return this.name;
 		}
@@ -87,6 +89,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_BLUE).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
 	}
 
+	@Override
 	protected int getSaplingDropChance(IBlockState state) {
 		return super.getSaplingDropChance(state);
 	}
@@ -94,6 +97,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	/**
 	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
 	 */
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_BLUE.getMetadata()));
@@ -102,13 +106,15 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_YELLOW.getMetadata()));
 	}
 
+	@Override
 	protected ItemStack createStackedBlock(IBlockState state) {
-		return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata());
+		return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(VARIANT).getMetadata());
 	}
 
 	/**
 	 * Convert the given metadata into a BlockState for this Block
 	 */
+	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(VARIANT, EnumType.byMetadata((meta & 3) % 4)).withProperty(DECAYABLE, Boolean.valueOf((meta & 4) == 0)).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
 	}
@@ -116,21 +122,23 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	/**
 	 * Convert the BlockState into the correct metadata value
 	 */
+	@Override
 	public int getMetaFromState(IBlockState state) {
 		int i = 0;
-		i = i | ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata();
+		i = i | state.getValue(VARIANT).getMetadata();
 
-		if (!((Boolean) state.getValue(DECAYABLE)).booleanValue()) {
+		if (!state.getValue(DECAYABLE).booleanValue()) {
 			i |= 4;
 		}
 
-		if (((Boolean) state.getValue(CHECK_DECAY)).booleanValue()) {
+		if (state.getValue(CHECK_DECAY).booleanValue()) {
 			i |= 8;
 		}
 
 		return i;
 	}
 
+	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { VARIANT, CHECK_DECAY, DECAYABLE });
 	}
@@ -138,8 +146,9 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	/**
 	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
 	 */
+	@Override
 	public int damageDropped(IBlockState state) {
-		return ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata();
+		return state.getValue(VARIANT).getMetadata();
 	}
 
 	@Override
@@ -166,7 +175,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		IBlockState state = world.getBlockState(pos);
-		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, ((BlockKepler22bMapleTreeLeaves.EnumType) state.getValue(VARIANT)).getMetadata())));
+		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, state.getValue(VARIANT).getMetadata())));
 	}
 
 	@Override

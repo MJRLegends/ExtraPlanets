@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 
 public class RoomTreasureSaturn extends RoomTreasure {
 	public RoomTreasureSaturn() {

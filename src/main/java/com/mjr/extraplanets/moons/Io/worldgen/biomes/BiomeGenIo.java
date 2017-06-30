@@ -3,7 +3,6 @@ package com.mjr.extraplanets.moons.Io.worldgen.biomes;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.Io.worldgen.BiomeDecoratorIoOther;
 import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
 
 public class BiomeGenIo extends IoBiomes {
