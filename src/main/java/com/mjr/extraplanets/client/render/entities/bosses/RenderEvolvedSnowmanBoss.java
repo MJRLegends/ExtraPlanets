@@ -29,6 +29,7 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 	}
 
+	@Override
 	protected void preRenderCallback(EntityLivingBase p_77041_1_, float p_77041_2_) {
 		this.preRenderCallback((EntityEvolvedSnowmanBoss) p_77041_1_, p_77041_2_);
 	}
@@ -37,6 +38,7 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving {
 		return snowManTextures;
 	}
 
+	@Override
 	protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
 		return this.getEntityTexture((EntityEvolvedSnowmanBoss) p_110775_1_);
 	}

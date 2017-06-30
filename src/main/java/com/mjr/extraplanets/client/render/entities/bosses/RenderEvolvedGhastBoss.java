@@ -32,18 +32,20 @@ public class RenderEvolvedGhastBoss extends RenderLiving
     protected void preRenderCallback(EntityEvolvedGhastBoss p_77041_1_, float p_77041_2_)
     {
         float f1 = 10F;
-		float f2 = ((float)p_77041_1_.prevAttackCounter + (float)(p_77041_1_.attackCounter - p_77041_1_.prevAttackCounter) * p_77041_2_) / 20.0F;
+		float f2 = (p_77041_1_.prevAttackCounter + (p_77041_1_.attackCounter - p_77041_1_.prevAttackCounter) * p_77041_2_) / 20.0F;
 		float f3 = 1.0F / (f2 + 1.0F);
 		GL11.glScalef(f3 * f1, 1.0F / f3 * f1, f3 * f1);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
     }
 
-    protected void preRenderCallback(EntityLivingBase p_77041_1_, float p_77041_2_)
+    @Override
+	protected void preRenderCallback(EntityLivingBase p_77041_1_, float p_77041_2_)
     {
         this.preRenderCallback((EntityEvolvedGhastBoss)p_77041_1_, p_77041_2_);
     }
 
-    protected ResourceLocation getEntityTexture(Entity p_110775_1_)
+    @Override
+	protected ResourceLocation getEntityTexture(Entity p_110775_1_)
     {
         return this.getEntityTexture((EntityEvolvedGhastBoss)p_110775_1_);
     }

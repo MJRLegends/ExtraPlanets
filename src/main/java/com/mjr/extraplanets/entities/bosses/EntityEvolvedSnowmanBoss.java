@@ -71,16 +71,19 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 	/**
 	 * Returns true if the newer Entity AI code should be run
 	 */
+	@Override
 	public boolean isAIEnabled() {
 		return true;
 	}
 
+	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(400.0F);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
 	}
 
+	@Override
 	protected void updateEntityActionState() {
 		if (!this.worldObj.isRemote && this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL) {
 			this.setDead();
@@ -106,6 +109,7 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 	/**
 	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
+	@Override
 	public void onLivingUpdate() {
 		super.onLivingUpdate();
 
@@ -142,6 +146,7 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 		}
 	}
 
+	@Override
 	protected Item getDropItem() {
 		return Items.snowball;
 	}
@@ -149,6 +154,7 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 	/**
 	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
 	 */
+	@Override
 	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_) {
 		int j = this.rand.nextInt(16);
 
@@ -160,10 +166,11 @@ public class EntityEvolvedSnowmanBoss extends EntityGolem implements IRangedAtta
 	/**
 	 * Attack the specified entity using a ranged attack.
 	 */
+	@Override
 	public void attackEntityWithRangedAttack(EntityLivingBase p_82196_1_, float p_82196_2_) {
 		EntitySmallSnowball entitysnowball = new EntitySmallSnowball(this.worldObj, this);
 		double d0 = p_82196_1_.posX - this.posX;
-		double d1 = p_82196_1_.posY + (double) p_82196_1_.getEyeHeight() - 1.100000023841858D - entitysnowball.posY;
+		double d1 = p_82196_1_.posY + p_82196_1_.getEyeHeight() - 1.100000023841858D - entitysnowball.posY;
 		double d2 = p_82196_1_.posZ - this.posZ;
 		entitysnowball.setThrowableHeading(d0, d1, d2, 1.6F, 1.0F);
 		this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));

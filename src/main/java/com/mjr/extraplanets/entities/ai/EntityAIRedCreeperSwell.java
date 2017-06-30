@@ -11,7 +11,6 @@ public class EntityAIRedCreeperSwell extends EntityAIBase
 	EntityEvolvedRedCreeper swellingCreeper;
 	/** The creeper's attack target. This is used for the changing of the creeper's state. */
 	EntityLivingBase creeperAttackTarget;
-	private static final String __OBFID = "CL_00001614";
 
 	public EntityAIRedCreeperSwell(EntityEvolvedRedCreeper evolvedBlueCreeper)
 	{

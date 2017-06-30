@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
-import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -32,8 +31,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
 	private boolean isDecorating = false;
 
-	public BiomeDecoratorJupiter()
-	{
+	public BiomeDecoratorJupiter() {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 5, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 4, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 8, 3, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
@@ -42,7 +40,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterGravel, 12, 0, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 10, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.skyBlocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 3, 2, false, Blocks.air, 0);
-		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -57,7 +55,8 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		if (isDecorating) return;
+		if (isDecorating)
+			return;
 		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
@@ -71,9 +70,9 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(5) == 0) {
-                int x = this.chunkX + this.rand.nextInt(16) + 8;
-                int y = this.rand.nextInt(this.rand.nextInt(248) + 8);
-                int z = this.chunkZ + this.rand.nextInt(16) + 8;
+				int x = this.chunkX + this.rand.nextInt(16) + 8;
+				int y = this.rand.nextInt(this.rand.nextInt(248) + 8);
+				int z = this.chunkZ + this.rand.nextInt(16) + 8;
 				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.jupiterBlocks);
 			}
 		}
@@ -86,7 +85,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 
 		isDecorating = false;
-		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 
 }

@@ -27,6 +27,7 @@ public class EntityVenusRover extends EntityPoweredVehicleBase {
 		return "VenusRover";
 	}
 
+	@Override
 	public List<ItemStack> getItemsDropped() {
 		final List<ItemStack> items = new ArrayList<ItemStack>();
 

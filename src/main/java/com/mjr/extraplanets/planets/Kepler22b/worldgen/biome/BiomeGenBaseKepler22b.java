@@ -10,7 +10,6 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 
 public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains").setHeight(height_LowPlains);

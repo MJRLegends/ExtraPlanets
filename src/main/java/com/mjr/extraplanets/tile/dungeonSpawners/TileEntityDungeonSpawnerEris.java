@@ -3,8 +3,6 @@ package com.mjr.extraplanets.tile.dungeonSpawners;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
-
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
@@ -12,6 +10,8 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 
 public class TileEntityDungeonSpawnerEris extends TileEntityDungeonSpawner
 {

@@ -29,7 +29,8 @@ public class EntitySmallSnowball extends EntityThrowable
     /**
      * Called when this EntityThrowable hits a block or entity.
      */
-    protected void onImpact(MovingObjectPosition p_70184_1_)
+    @Override
+	protected void onImpact(MovingObjectPosition p_70184_1_)
     {
         if (p_70184_1_.entityHit != null)
         {
@@ -43,7 +44,7 @@ public class EntitySmallSnowball extends EntityThrowable
             {
                 b0 = 8;
             }
-            p_70184_1_.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
+            p_70184_1_.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), b0);
         }
 
         for (int i = 0; i < 8; ++i)

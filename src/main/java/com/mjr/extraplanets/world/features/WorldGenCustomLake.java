@@ -13,7 +13,6 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 public class WorldGenCustomLake extends WorldGenerator
 {
 	private Block field_150556_a;
-	private static final String __OBFID = "CL_00000418";
 
 	public WorldGenCustomLake(Block p_i45455_1_)
 	{

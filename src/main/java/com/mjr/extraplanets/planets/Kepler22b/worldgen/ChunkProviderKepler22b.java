@@ -31,14 +31,17 @@ public class ChunkProviderKepler22b extends ChunkProviderSpaceNormal {
 		super(world, seed, flag);
 	}
 
+	@Override
 	public void decoratePlanet(World world, Random rand, int x, int z) {
 		this.BiomeDecorator.decorate(world, rand, x, z);
 	}
 
+	@Override
 	public String func_73148_d() {
 		return "Kepler22bLevelSource";
 	}
 
+	@Override
 	public void recreateStructures(int par1, int par2) {
 		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}

@@ -21,5 +21,6 @@ public abstract class ItemBlockDefaults extends ItemBlock {
 		return this.field_150939_a.getUnlocalizedName() + ".0";
 	}
 
+	@Override
 	public abstract String getUnlocalizedName(ItemStack itemstack);
 }

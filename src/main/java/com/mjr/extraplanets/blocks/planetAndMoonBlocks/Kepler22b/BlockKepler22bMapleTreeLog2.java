@@ -42,6 +42,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockRotatedPillar {
 		this.name = name;
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		this.logsTextures = new IIcon[logs.length];
@@ -52,11 +53,13 @@ public class BlockKepler22bMapleTreeLog2 extends BlockRotatedPillar {
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	protected IIcon getSideIcon(int meta) {
 		return this.logsTextures[meta % logsTextures.length];
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	protected IIcon getTopIcon(int meta) {
 		return this.logsTexturesTop[meta % logsTexturesTop.length];
@@ -67,10 +70,12 @@ public class BlockKepler22bMapleTreeLog2 extends BlockRotatedPillar {
 		return true;
 	}
 
+	@Override
 	public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		return 20;
 	}
 
+	@Override
 	public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		return 5;
 	}
@@ -85,6 +90,7 @@ public class BlockKepler22bMapleTreeLog2 extends BlockRotatedPillar {
 		return Item.getItemFromBlock(this);
 	}
 
+	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List blockList) {

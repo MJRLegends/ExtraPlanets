@@ -97,10 +97,12 @@ public class BlockBasicKepler22bPlanks extends Block {
 		return super.getPickBlock(target, world, x, y, z, player);
 	}
 
+	@Override
 	public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		return 20;
 	}
 
+	@Override
 	public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		return 5;
 	}

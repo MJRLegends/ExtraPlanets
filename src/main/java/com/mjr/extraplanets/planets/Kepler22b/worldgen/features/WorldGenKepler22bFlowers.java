@@ -16,7 +16,8 @@ public class WorldGenKepler22bFlowers extends WorldGenerator
         this.flowerBlockMeta = flowerBlockMeta;
     }
 
-    public boolean generate(World world, Random rand, int x, int y, int z)
+    @Override
+	public boolean generate(World world, Random rand, int x, int y, int z)
     {
         for (int l = 0; l < 64; ++l)
         {

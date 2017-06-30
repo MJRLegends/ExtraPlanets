@@ -79,6 +79,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * Called when the entity is attacked.
 	 */
+	@Override
 	public boolean attackEntityFrom(DamageSource damageSource, float p_70097_2_) {
 		if (this.isEntityInvulnerable()) {
 			return false;
@@ -87,16 +88,19 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 		}
 	}
 
+	@Override
 	protected void entityInit() {
 		super.entityInit();
 		this.dataWatcher.addObject(16, Byte.valueOf((byte) 0));
 	}
 
+	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300.0F);
 	}
 
+	@Override
 	protected void updateEntityActionState() {
 		if (!this.worldObj.isRemote && this.worldObj.difficultySetting == EnumDifficulty.PEACEFUL) {
 			this.setDead();
@@ -110,14 +114,14 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 		double d3 = d0 * d0 + d1 * d1 + d2 * d2;
 
 		if (d3 < 1.0D || d3 > 3600.0D) {
-			this.waypointX = this.posX + (double) ((this.rand.nextFloat() * 2.0F - 1.0F) * 16.0F);
-			this.waypointY = this.posY + (double) ((this.rand.nextFloat() * 2.0F - 1.0F) * 16.0F);
-			this.waypointZ = this.posZ + (double) ((this.rand.nextFloat() * 2.0F - 1.0F) * 16.0F);
+			this.waypointX = this.posX + (this.rand.nextFloat() * 2.0F - 1.0F) * 16.0F;
+			this.waypointY = this.posY + (this.rand.nextFloat() * 2.0F - 1.0F) * 16.0F;
+			this.waypointZ = this.posZ + (this.rand.nextFloat() * 2.0F - 1.0F) * 16.0F;
 		}
 
 		if (this.courseChangeCooldown-- <= 0) {
 			this.courseChangeCooldown += this.rand.nextInt(5) + 2;
-			d3 = (double) MathHelper.sqrt_double(d3);
+			d3 = MathHelper.sqrt_double(d3);
 
 			if (this.isCourseTraversable(this.waypointX, this.waypointY, this.waypointZ, d3)) {
 				this.motionX += d0 / d3 * 0.1D;
@@ -146,7 +150,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 
 		if (this.targetedEntity != null && this.targetedEntity.getDistanceSqToEntity(this) < d4 * d4) {
 			double d5 = this.targetedEntity.posX - this.posX;
-			double d6 = this.targetedEntity.boundingBox.minY + (double) (this.targetedEntity.height / 2.0F) - (this.posY + (double) (this.height / 2.0F));
+			double d6 = this.targetedEntity.boundingBox.minY + this.targetedEntity.height / 2.0F - (this.posY + this.height / 2.0F);
 			double d7 = this.targetedEntity.posZ - this.posZ;
 			this.renderYawOffset = this.rotationYaw = -((float) Math.atan2(d5, d7)) * 180.0F / Constants.floatPI;
 
@@ -164,7 +168,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 					double d8 = 4.0D;
 					Vec3 vec3 = this.getLook(1.0F);
 					entitylargefireball.posX = this.posX + vec3.xCoord * d8;
-					entitylargefireball.posY = this.posY + (double) (this.height / 2.0F) + 0.5D;
+					entitylargefireball.posY = this.posY + this.height / 2.0F + 0.5D;
 					entitylargefireball.posZ = this.posZ + vec3.zCoord * d8;
 					this.worldObj.spawnEntityInWorld(entitylargefireball);
 					this.attackCounter = -40;
@@ -196,7 +200,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 		double d6 = (this.waypointZ - this.posZ) / p_70790_7_;
 		AxisAlignedBB axisalignedbb = this.boundingBox.copy();
 
-		for (int i = 1; (double) i < p_70790_7_; ++i) {
+		for (int i = 1; i < p_70790_7_; ++i) {
 			axisalignedbb.offset(d4, d5, d6);
 
 			if (!this.worldObj.getCollidingBoundingBoxes(this, axisalignedbb).isEmpty()) {
@@ -210,6 +214,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * Returns the sound this mob makes while it's alive.
 	 */
+	@Override
 	protected String getLivingSound() {
 		return "mob.ghast.moan";
 	}
@@ -217,6 +222,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * Returns the sound this mob makes when it is hurt.
 	 */
+	@Override
 	protected String getHurtSound() {
 		return "mob.ghast.scream";
 	}
@@ -224,10 +230,12 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * Returns the sound this mob makes on death.
 	 */
+	@Override
 	protected String getDeathSound() {
 		return "mob.ghast.death";
 	}
 
+	@Override
 	protected Item getDropItem() {
 		return Items.gunpowder;
 	}
@@ -235,6 +243,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
 	 */
+	@Override
 	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_) {
 		int j = this.rand.nextInt(2) + this.rand.nextInt(1 + p_70628_2_);
 		int k;
@@ -253,6 +262,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * Returns the volume for the sounds this mob makes.
 	 */
+	@Override
 	protected float getSoundVolume() {
 		return 10.0F;
 	}
@@ -260,6 +270,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
+	@Override
 	public void writeEntityToNBT(NBTTagCompound nbt) {
 		super.writeEntityToNBT(nbt);
 		nbt.setInteger("ExplosionPower", this.explosionStrength);
@@ -276,6 +287,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
+	@Override
 	public void readEntityFromNBT(NBTTagCompound nbt) {
 		super.readEntityFromNBT(nbt);
 

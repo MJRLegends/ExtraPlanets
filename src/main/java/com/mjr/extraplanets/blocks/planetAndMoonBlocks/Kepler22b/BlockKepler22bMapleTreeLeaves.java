@@ -55,6 +55,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
         setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
@@ -66,10 +67,12 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		return true;
 	}
 
+	@Override
 	public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		return 40;
 	}
 
+	@Override
 	public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
 		return 10;
 	}
@@ -96,6 +99,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		return true;
 	}
 
+	@Override
 	public boolean isOpaqueCube() {
 		return !this.field_150121_P;
 	}
@@ -106,6 +110,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		this.field_150127_b = (par1 ? 0 : 1);
 	}
 
+	@Override
 	protected ItemStack createStackedBlock(int par1) {
 		return new ItemStack(Item.getItemFromBlock(this), 1, par1 & 3);
 	}
@@ -115,10 +120,12 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		world.setBlockToAir(x, y, z);
 	}
 
+	@Override
 	public int quantityDropped(Random parRandom1) {
 		return parRandom1.nextInt(40) == 0 ? 1 : 0;
 	}
 
+	@Override
 	public Item getItemDropped(int x, Random yRandom, int z) {
 		return Item.getItemFromBlock(ExtraPlanets_Blocks.kepler22bMapleSapling);
 	}
@@ -140,6 +147,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		return j;
 	}
 
+	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List listLeaves) {
@@ -158,6 +166,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		world.setBlockMetadataWithNotify(x, y, z, world.getBlockMetadata(x, y, z) | 8, 4);
 	}
 
+	@Override
 	public void dropBlockAsItemWithChance(World world, int x, int y, int z, int meta, float par1, int par2) {
 		if (!world.isRemote) {
 			int j1 = this.func_150123_b(meta);
@@ -191,10 +200,12 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		}
 	}
 
+	@Override
 	public void harvestBlock(World world, EntityPlayer player, int x, int y, int z, int meta) {
 		super.harvestBlock(world, player, x, y, z, meta);
 	}
 
+	@Override
 	public void breakBlock(World world, int x, int y, int z, Block bloque, int meta) {
 		byte b0 = 1;
 		int i1 = b0 + 1;
@@ -213,6 +224,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		}
 	}
 
+	@Override
 	public void updateTick(World world, int x, int y, int z, Random parRandom1) {
 		if (!world.isRemote) {
 			int l = world.getBlockMetadata(x, y, z);
@@ -301,12 +313,13 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World world, int x, int y, int z, Random parRandom1) {
 		if (world.canLightningStrikeAt(x, y + 1, z) && !World.doesBlockHaveSolidTopSurface(world, x, y - 1, z) && parRandom1.nextInt(15) == 1) {
-			double d0 = (double) ((float) x + parRandom1.nextFloat());
-			double d1 = (double) y - 0.05D;
-			double d2 = (double) ((float) z + parRandom1.nextFloat());
+			double d0 = x + parRandom1.nextFloat();
+			double d1 = y - 0.05D;
+			double d2 = z + parRandom1.nextFloat();
 			world.spawnParticle("dripWater", d0, d1, d2, 0.0D, 0.0D, 0.0D);
 		}
 	}

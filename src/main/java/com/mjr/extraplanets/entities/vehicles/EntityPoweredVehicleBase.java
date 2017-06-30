@@ -723,16 +723,21 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	// ------------------------------------------------------------------------------------------------------
 
+	@Override
 	public abstract String getInventoryName();
 
 	public abstract List<ItemStack> getItemsDropped();
 
+	@Override
 	public abstract ItemStack getPickedResult(MovingObjectPosition target);
 
+	@Override
 	public abstract void setPad(IPowerDock pad);
 
+	@Override
 	public abstract IPowerDock getLandingPad();
 
+	@Override
 	public abstract boolean isDockValid(IPowerDock dock);
 	
 	public abstract void featureUpdate();

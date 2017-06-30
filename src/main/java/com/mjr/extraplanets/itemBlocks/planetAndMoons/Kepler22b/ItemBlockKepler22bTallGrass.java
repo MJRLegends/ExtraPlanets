@@ -14,6 +14,7 @@ public class ItemBlockKepler22bTallGrass extends ItemBlockDefaults {
 		super(block);
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIconFromDamage(int meta) {
 		return this.field_150939_a.getIcon(0, meta);

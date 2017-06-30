@@ -75,6 +75,7 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 		noiseGen = new Gradient(this.rand.nextLong(), 1, 0.25F);
 	}
 
+	@Override
 	public Chunk provideChunk(int x, int z) {
 		this.rand.setSeed(x * 341873128712L + z * 132897987541L);
 		Block[] blockStorage = new Block[65536];
@@ -236,6 +237,7 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 	/**
 	 * Replaces the stone that was placed in with blocks that match the biome
 	 */
+	@Override
 	public void replaceBlocksForBiome(int chunkX, int chunkZ, Block[] blockStorage, byte[] metaStorage, BiomeGenBase[] biomes) {
 		double d0 = 0.03125D;
 		this.stoneNoise = this.field_147430_m.func_151599_a(this.stoneNoise, chunkX * 16, chunkZ * 16, 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);
@@ -248,14 +250,17 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 		}
 	}
 
+	@Override
 	public Chunk loadChunk(int x, int z) {
 		return provideChunk(x, z);
 	}
 
+	@Override
 	public boolean chunkExists(int x, int z) {
 		return true;
 	}
 
+	@Override
 	public void populate(IChunkProvider chunk, int x, int z) {
 		net.minecraft.block.BlockFalling.fallInstantly = true;
 		int var4 = x * 16;
@@ -280,17 +285,21 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 		return true;
 	}
 
+	@Override
 	public int getLoadedChunkCount() {
 		return 0;
 	}
 
+	@Override
 	public boolean unloadQueuedChunks() {
 		return false;
 	}
 
+	@Override
 	public void saveExtraData() {
 	}
 
+	@Override
 	public ChunkPosition func_147416_a(World world, String string, int x, int y, int z) {
 		return null;
 	}

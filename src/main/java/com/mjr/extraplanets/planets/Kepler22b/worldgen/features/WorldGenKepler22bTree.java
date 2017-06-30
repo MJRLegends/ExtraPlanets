@@ -33,6 +33,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 		this.leaf = leaf;
 	}
 
+	@Override
 	public boolean generate(World par1World, Random par2Random, int par3, int par4, int par5) {
 		int l = par2Random.nextInt(3) + this.minTreeHeight;
 		boolean flag = true;

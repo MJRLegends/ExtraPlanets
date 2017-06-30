@@ -99,7 +99,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventory, IP
 	public int getScaledFuelLevel(int i) {
 		final double fuelLevel = this.roverFuelTank.getFluid() == null ? 0 : this.roverFuelTank.getFluid().amount;
 
-		return (int) (fuelLevel * i / this.tankCapacity);
+		return (int) (fuelLevel * i / EntityVehicleBase.tankCapacity);
 	}
 
 	public ModelBase getModel() {
@@ -707,15 +707,20 @@ public abstract class EntityVehicleBase extends Entity implements IInventory, IP
 		this.accel = accel;
 	}
 
+	@Override
 	public abstract String getInventoryName();
 
 	public abstract List<ItemStack> getItemsDropped();
 
+	@Override
 	public abstract ItemStack getPickedResult(MovingObjectPosition target);
 
+	@Override
 	public abstract void setPad(IFuelDock pad);
 
+	@Override
 	public abstract IFuelDock getLandingPad();
 
+	@Override
 	public abstract boolean isDockValid(IFuelDock dock);
 }

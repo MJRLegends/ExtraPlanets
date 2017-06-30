@@ -36,6 +36,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 		this.name = name;
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		this.saplingsTextures = new IIcon[saplings.length];
@@ -44,6 +45,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		if ((meta < 0) || (meta >= saplings.length)) {
@@ -56,6 +58,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockFlower {
 		return par1World.getBlock(par2, par3, par4) == this && (par1World.getBlockMetadata(par2, par3, par4) & 3) == par5;
 	}
 
+	@Override
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item item, CreativeTabs tab, List listSaplings) {

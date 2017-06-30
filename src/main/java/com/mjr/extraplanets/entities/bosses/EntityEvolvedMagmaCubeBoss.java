@@ -61,7 +61,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 		// int i = 5;
 		this.yOffset = 0.0F;
 		this.slimeJumpDelay = this.rand.nextInt(20) + 10;
-		this.setSlimeSize((int) i);
+		this.setSlimeSize(i);
 	}
 
 	@Override

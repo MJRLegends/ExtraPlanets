@@ -23,7 +23,6 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedMagmaCube;
-import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.MapGenDungeon;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomBossVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomChestsVenus;
