@@ -12,6 +12,7 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
@@ -24,8 +25,8 @@ public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 
 	private final MapGenCaveUranus caveGenerator = new MapGenCaveUranus();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(ExtraPlanets_Blocks.URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.DUNGEON_BRICK), 30,
-			8, 16, 7, 7, RoomBossUranus.class, RoomTreasureUranus.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(ExtraPlanets_Blocks.URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
+			16, 7, 7, RoomBossUranus.class, RoomTreasureUranus.class));
 
 	public ChunkProviderUranus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -53,13 +54,15 @@ public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
-		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
+		if (Config.URANUS_VILLAGES)
+			this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.worldObj, x, z, null);
-		this.villageGenerator.generate(this.worldObj, x, z, null);
+		if (Config.URANUS_VILLAGES)
+			this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 
 	@Override

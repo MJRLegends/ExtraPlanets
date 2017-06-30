@@ -13,6 +13,7 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class ChunkProviderCeres extends ChunkProviderSpace {
@@ -94,11 +95,13 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	@Override
 	public void onPopulate(int cX, int cZ) {
-		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
+		if (Config.CERES_VILLAGES)
+			this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-		this.villageGenerator.generate(this.worldObj, x, z, null);
+		if (Config.CERES_VILLAGES)
+			this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }

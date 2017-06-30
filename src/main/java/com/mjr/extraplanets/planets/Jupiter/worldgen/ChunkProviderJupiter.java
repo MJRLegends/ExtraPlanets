@@ -12,6 +12,7 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
@@ -53,13 +54,15 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
-		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
+		if (Config.JUPITER_VILLAGES)
+			this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.worldObj, x, z, null);
-		this.villageGenerator.generate(this.worldObj, x, z, null);
+		if (Config.JUPITER_VILLAGES)
+			this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 
 	@Override

@@ -17,17 +17,17 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 
 public class ChunkProviderSaturn extends ChunkProviderSpace {
-    private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
+	private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
 
 	private final BiomeDecoratorSaturn saturnBiomeDecorator = new BiomeDecoratorSaturn();
 
 	private final MapGenCaveSaturn caveGenerator = new MapGenCaveSaturn();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
+			16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
 
 	public ChunkProviderSaturn(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -55,15 +55,14 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 		return generators;
 	}
 
-	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.SATURN_BLOCKS, (byte) 1);
 	}
 
 	@Override
@@ -104,12 +103,14 @@ public class ChunkProviderSaturn extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
-		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
+		if (Config.SATURN_VILLAGES)
+			this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.worldObj, x, z, null);
-        this.villageGenerator.generate(this.worldObj, x, z, null);
+		if (Config.SATURN_VILLAGES)
+			this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }

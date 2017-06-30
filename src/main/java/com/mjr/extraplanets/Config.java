@@ -245,6 +245,15 @@ public class Config {
 	
 	public static boolean OLD_STYLE_GRAVITY;
 	
+	public static boolean MERCURY_VILLAGES;
+	public static boolean CERES_VILLAGES;
+	public static boolean JUPITER_VILLAGES;
+	public static boolean SATURN_VILLAGES;
+	public static boolean URANUS_VILLAGES;
+	public static boolean NEPTUNE_VILLAGES;
+	public static boolean PLUTO_VILLAGES;
+	public static boolean ERIS_VILLAGES;
+	
 	public static void load() {
 		Configuration config = new Configuration(new File(Constants.CONFIG_FILE));
 		config.load();
@@ -502,6 +511,15 @@ public class Config {
 		VENUS_ROVER = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "").getBoolean(true);
 		
 		OLD_STYLE_GRAVITY = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Style Gravity", false, "").getBoolean(false);
+		
+		MERCURY_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Mercury Villages", true, "").getBoolean(true);
+		CERES_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ceres Villages", true, "").getBoolean(true);
+		JUPITER_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Jupiter Villages", true, "").getBoolean(true);
+		SATURN_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Saturn Villages", true, "").getBoolean(true);
+		URANUS_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Uranus Villages", true, "").getBoolean(true);
+		NEPTUNE_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Neptune Villages", true, "").getBoolean(true);
+		PLUTO_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Pluto Villages", true, "").getBoolean(true);
+		ERIS_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Eris Villages", true, "").getBoolean(true);
 
 		config.save();
 	}
