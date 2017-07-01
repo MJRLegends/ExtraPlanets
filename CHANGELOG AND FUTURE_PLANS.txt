@@ -1,40 +1,6 @@
 TODO = Not yet done
 ? = Maybe
 
-=====================================Future Ideas/Suggestions=======================================
-*Add Evolved Ice Blaze(Entity)
-*Add Evolved Ice Blaze to Uranus and Neptune
-*Add Evolved Wizard(Entity)
-*Add Evolved Wizard to Merucry, Venus, Ceres, Jupiter, Saturn, Pluto and Eris
-*Add Evolved Fire Allen(Entity)
-*Add Evolved Fire Allen to Mercury, Venus, Ceres, Jupiter, Saturn, Pluto and Eris
-*Add Evolved Ice Allen(Entity)
-*Add Evolved Ice Allen to Uranus, Neptune
-*Add Powered Pickaxe?
-*Add Powered Armour?
-*Add Charger Block
-*Add Multi Biome System to Venus
-*Add Volcanic Biome to Venus
-*Add Magma Sea Biome to Venus
-*Add Multi Biome System to Jupiter
-*Add Magma Sea Biome to Jupiter
-*Add Multi Biome System to Saturn
-*Add Glowstone Sea Biome to Saturn
-*Add Multi Biome System to Neptune
-*Add Frozen Nitrogen Sea Biome to Neptune
-*Add Multi Biome System to Uranus
-*Add Frozen Water Sea Biome to Uranus
-*Add Multi Biome System to Ceres
-*Add Salt Sea Biome to Uranus
-*Add Space Crops(Wheat, Carrots, Potato's) They will have different saturation and that levels from the vanilla ones 
-*Add Space Crops Seeds
-*Add Can of Golden Apple (Notch and normal), Can of Diamond Apple (Notch and normal), Can of Iron Apple (Notch and normal)
-*Add Basic, Advanced, Ultimate Hideouts containing loot depending on tier level (with mob spawners?)
-*Add Loot Treasure Rooms with spawner's some loot chests to each planet, with the Stone brick version for that planet
-======================================================================================================
-
-
-
 ===========================================Future Updates=============================================
 
 ======================================================================================================
@@ -42,6 +8,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.8.0
+*Fixed issue #122
+*Fixed wrong gravity of old style gravity on Iapetus*
+*Fixes for Solar Panels (Issue #111)
+*Added custom textures for most Tiered GC machines
+*Improvements to some item textures
+*Clean up
+
 v1.7.9
 *Refactor Config Categories to Constants class (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Added missing planet textures
