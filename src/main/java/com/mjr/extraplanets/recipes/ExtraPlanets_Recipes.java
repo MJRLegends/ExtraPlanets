@@ -847,12 +847,6 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_PRESSURE_LAYER, 1, 0), new Object[] { "CCC", "ORO", "CCC", 'O', GCItems.oxygenConcentrator, 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_PRESSURE_LAYER, 1, 0), new Object[] { "CCC", "ORO", "CCC", 'O', GCItems.oxygenConcentrator, 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
 
-			// Tier 1 - 4 Armour Layers
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_ARMOR_LAYER, 1, 0), new Object[] { "CCC", "ORO", "CCC", 'O', GCItems.heavyPlatingTier1, 'C', Items.DIAMOND });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_ARMOR_LAYER, 1, 0), new Object[] { "CCC", "ORO", "CCC", 'O', GCItems.heavyPlatingTier1, 'C', Items.DIAMOND, 'R', ExtraPlanets_Items.TIER_1_ARMOR_LAYER });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_ARMOR_LAYER, 1, 0), new Object[] { "CCC", "ORO", "CCC", 'O', GCItems.heavyPlatingTier1, 'C', Items.DIAMOND, 'R', ExtraPlanets_Items.TIER_2_ARMOR_LAYER });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_ARMOR_LAYER, 1, 0), new Object[] { "CCC", "ORO", "CCC", 'O', GCItems.heavyPlatingTier1, 'C', Items.DIAMOND, 'R', ExtraPlanets_Items.TIER_3_ARMOR_LAYER });
-
 			// Tier 1 - 4 UnPrepared Space Suits
 			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { "   ", "MMM", "M M", 'M', "ingotAluminum" });
 			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_CHEST, 1, 0), new Object[] { "M M", "MMM", "MMM", 'M', "ingotAluminum" });
