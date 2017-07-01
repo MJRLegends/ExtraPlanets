@@ -47,7 +47,6 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	protected IBlockState waterBlock;
 
 	private static final int CHUNK_SIZE_X = 16;
-	private static final int CHUNK_SIZE_Y = 256;
 	private static final int CHUNK_SIZE_Z = 16;
 
 	protected int seaLevel = 63;
@@ -151,11 +150,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 			}
 		}
 	}
-
-	private int getIndex(int x, int y, int z) {
-		return (x * 16 + z) * 256 + y;
-	}
-
+	
 	private double randFromPoint(int x, int z) {
 		int n;
 		n = x + z * 57;

@@ -1,8 +1,6 @@
 package com.mjr.extraplanets.client.render.entities.bosses.defaultBosses;
 
-import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
@@ -14,8 +12,6 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossMercu
 
 public class RenderCreeperBossMercury extends RenderLiving<EntityCreeperBossMercury> {
 	private static final ResourceLocation creeperTexture = new ResourceLocation(GalacticraftPlanets.ASSET_PREFIX, "textures/model/creeper.png");
-	private static final ResourceLocation powerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/power.png");
-	private final ModelBase creeperModel = new ModelCreeperBossMercury(2.0F);
 
 	public RenderCreeperBossMercury(RenderManager renderManager) {
 		super(renderManager, new ModelCreeperBossMercury(), 1.0F);
