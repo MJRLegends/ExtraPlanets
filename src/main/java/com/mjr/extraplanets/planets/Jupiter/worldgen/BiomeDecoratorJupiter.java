@@ -15,7 +15,6 @@ import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
-	private WorldGenerator deshGen;
 	private WorldGenerator tinGen;
 	private WorldGenerator copperGen;
 	private WorldGenerator ironGen;
