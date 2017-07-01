@@ -15,6 +15,20 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.5.3 Beta Build
+*Fixed issue #122
+*Improvements to some item textures
+*Removed generating liquid surface and sub surface for some planets, config options  (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Fixed tying error in config comments  (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Added Config options to disable Planets Villages  (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Clean up
+*Removed unneeded code
+*Added JEI Support for Block Smasher, Solar Evaporation Chamber Machines
+*Fixes for Mars Rover and Venus Rover JEI Support
+*Remove not needed recipes
+
+*Fixed broken tool tips
+
 v1.5.2 Beta Build
 *Fixes for Solar Panels (Issue #111)
 *Converted Io over to a Multi Biome System, Added a Io Ash Lands Biome
