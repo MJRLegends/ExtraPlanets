@@ -34,7 +34,7 @@ public class MarsRoverRecipeHandler implements IRecipeHandler<MarsRoverRecipeWra
 
 	@Override
 	public boolean isRecipeValid(@Nonnull MarsRoverRecipeWrapper recipe) {
-		if (recipe.getInputs().size() < 17 || recipe.getInputs().size() > 19) {
+		if (recipe.getInputs().size() < 22 || recipe.getInputs().size() > 24) {
 			GCLog.severe(this.getClass().getSimpleName() + " JEI recipe has wrong number of inputs!");
 		}
 		if (recipe.getOutputs().size() != 1) {
