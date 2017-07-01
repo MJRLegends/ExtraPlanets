@@ -35,15 +35,15 @@ public class ItemBasicItem extends Item {
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (player.world.isRemote) {
 			if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier1ArmorLayer.desc"));
+				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier1_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier2ArmorLayer.desc"));
+				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier2_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_3_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier3ArmorLayer.desc"));
+				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier3_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier4ArmorLayer.desc"));
+				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier4_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("antiRadiation.desc"));
+				list.add(EnumColor.YELLOW + GCCoreUtil.translate("anti_radiation.desc"));
 		}
 	}
 
