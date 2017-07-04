@@ -212,8 +212,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=开普勒22b紫高草
 tile.kepler22bFlowers.greenMapleShortGrass.name=开普勒22b绿矮草
 tile.kepler22bFlowers.greenMapleMedGrass.name=开普勒22b绿中草
 tile.kepler22bFlowers.greenMapleTallGrass.name=开普勒22b绿高草
-tile.redSand.name=Red Sand
-tile.redSandstone.name=Red Sandstone
+tile.redSand.name=红沙
+tile.redSandstone.name=红色砂石
 
 #Moon Blocks
 tile.callisto.surface.name=木卫四地表岩石
@@ -229,7 +229,7 @@ tile.deimos.stone.name=火卫二石头
 tile.deimos.oreIron.name=火卫二铁矿石
 tile.deimos.oreTin.name=火卫二锡矿石
 tile.deimos.oreCopper.name=火卫二铜矿石
-tile.deimos.oreLead.name=Deimos Lead Ore
+tile.deimos.oreLead.name=火卫二铅矿石
 
 tile.europa.surface.name=木卫二地表岩石
 tile.europa.subSurface.name=木卫二地底岩石
@@ -251,7 +251,7 @@ tile.phobos.stone.name=火卫一石头
 tile.phobos.oreIron.name=火卫一铁矿石
 tile.phobos.oreTin.name=火卫一 锡矿石
 tile.phobos.oreCopper.name=火卫一铜矿石
-tile.phobos.oreLead.name=Phobos Lead Ore
+tile.phobos.oreLead.name=火卫一铅矿石
 
 tile.triton.surface.name=海卫一地表岩石
 tile.triton.subSurface.name=海卫一地底岩石
@@ -411,42 +411,42 @@ tile.treasureChestT6Eris.description=6阶宝箱会在阋神星地牢形成。当
 
 #Machines
 tile.advancedRefinery.name=高级精炼机
-tile.ultimateRefinery.name=Ultimate Refinery
+tile.ultimateRefinery.name=终极精炼机
 tile.solar.hybrid.name=混合型高级太阳能电池板
-tile.solar.ultimate.name=最终混合型高级太阳能电池板
+tile.solar.ultimate.name=终极混合型高级太阳能电池板
 tile.solarhybrid.description=混合型高级太阳能电池板能全天候工作。
-tile.solarultimate.description=最终混合型高级太阳能电池板能全天候工作。
-tile.advancedFuelLoader.name=Advanced Fuel Loader
-tile.ultimateFuelLoader.name=Ultimate Fuel Loader
+tile.solarultimate.description=终极混合型高级太阳能电池板能全天候工作。
+tile.advancedFuelLoader.name=高级燃料注入器
+tile.ultimateFuelLoader.name=终极燃料注入器
 tile.advancedLaunchPad.tier2LandingPad.name=二阶火箭发射平台
 tile.advancedLaunchPad.tier3LandingPad.name=三阶火箭发射平台
 tile.advancedLaunchPadFull.name=二/三阶火箭发射平台
 tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭
 tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭
-tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
-tile.chargingBlock.name=Vehicle Charger (WIP)
-tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
-tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
-tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
-tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+tile.advancedLaunchPad.poweredChargingPad.name=载具充能台
+tile.chargingBlock.name=载具充能器 (WIP)
+tile.advancedOxygenCompressor.0.name=高级氧气压缩机
+tile.advancedOxygenCompressor.1.name=高级氧气解压机
+tile.ultimateOxygenCompressor.0.name=终极氧气压缩机
+tile.ultimateOxygenCompressor.1.name=终极氧气解压机
 
 #Machine Containers
 container.solarhybrid.name=混合型高级太阳能电池板
 container.solarultimate.name=高级燃料注入器
-container.vehicle.charger.name=Vehicle Charger
-container.advanced.refinery.name=Advanced Refinery
-container.ultimate.refinery.name=Ultimate Refinery
-container.advanced.oxygencompressor.name=Advanced Oxygen Compressor
-container.advanced.oxygendecompressor.name=Advanced Oxygen Decompressor
-container.ultimate.oxygencompressor.name=Ultimate Oxygen Compressor
-container.ultimate.oxygendecompressor.name=Ultimate Oxygen Decompressor
-container.advanced.fuelloader.name=Advanced Fuel Loader
-container.ultimate.fuelloader.name=Ultimate Fuel Loader
+container.vehicle.charger.name=载具充能器
+container.advanced.refinery.name=高级精炼机
+container.ultimate.refinery.name=终极精炼机
+container.advanced.oxygencompressor.name=高级氧气压缩机
+container.advanced.oxygendecompressor.name=高级氧气解压机
+container.ultimate.oxygencompressor.name=终极氧气压缩机
+container.ultimate.oxygendecompressor.name=终极氧气解压机
+container.advanced.fuelloader.name=高级燃料注入器
+container.ultimate.fuelloader.name=终极燃料注入器
 
 #GUI Messages and Texts
-gui.message.power.name=Powered Vehicle
-gui.message.power.message.name=Power
-gui.button.loadpower.name=Load Power
+gui.message.power.name=充能载具
+gui.message.power.message.name=能量
+gui.button.loadpower.name=装载能量
 
 #Other Blocks
 tile.nuclearBomb.name=核弹
@@ -458,35 +458,35 @@ tile.denseIce.name=坚冰
 tile.fossil.name=化石块
 
 #Decorative Blocks
-tile.decorativeBlocks.marble.name=Marble
-tile.decorativeBlocks.marbleBricks.name=Marble Bricks
-tile.decorativeBlocks.snowBricks.name=Snow Bricks
-tile.decorativeBlocks.iceBricks.name=Ice Bricks
-tile.decorativeBlocks.fireBricks.name=Fire Bricks
-tile.decorativeBlocks.blackWhiteFloor.name=Black/White Tiled Floor
-tile.decorativeBlocks.marbleTitledFloor.name=Marble Tiled Floor
-tile.decorativeBlocks.marbleBrokenTitledFloor.name=Marble Broken Tiled Floor
-tile.decorativeBlocks.metalMesh.name=Metal Mesh Floor
-tile.decorativeBlocks.frozenNitrogenBricks.name=Frozen Nitrogen Bricks
-tile.decorativeBlocks.volcanicRockBricks.name=Volcanic Rock Bricks
-tile.decorativeBlocks.carbonTitledFloor.name=Carbon Tiled Floor
-tile.decorativeBlocks.carbonBrokenTitledFloor.name=Carbon Broken Tiled Floor
-tile.decorativeBlocks.magnesiumTitledFloor.name=Magnesium Tiled Floor
-tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Floor
-tile.decorativeBlocks.ashBricks.name=Ash Bricks
-tile.decorativeBlocks2.whiteBlock.name=White Block
-tile.decorativeBlocks2.redBlock.name=Red Block
+tile.decorativeBlocks.marble.name=大理石
+tile.decorativeBlocks.marbleBricks.name=大理石石砖
+tile.decorativeBlocks.snowBricks.name=雪砖
+tile.decorativeBlocks.iceBricks.name=冰砖
+tile.decorativeBlocks.fireBricks.name=灼热石砖
+tile.decorativeBlocks.blackWhiteFloor.name=黑白瓷砖地板
+tile.decorativeBlocks.marbleTitledFloor.name=大理石瓷砖地板
+tile.decorativeBlocks.marbleBrokenTitledFloor.name=大理石裂纹瓷砖地板
+tile.decorativeBlocks.metalMesh.name=金属网格地板
+tile.decorativeBlocks.frozenNitrogenBricks.name=冰冻氮石砖
+tile.decorativeBlocks.volcanicRockBricks.name=火山岩石转
+tile.decorativeBlocks.carbonTitledFloor.name=碳纤维瓷砖地板
+tile.decorativeBlocks.carbonBrokenTitledFloor.name=碳纤维裂纹瓷砖地板
+tile.decorativeBlocks.magnesiumTitledFloor.name=镁块瓷砖地板
+tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=镁块裂纹瓷砖地板
+tile.decorativeBlocks.ashBricks.name=尘埃方块
+tile.decorativeBlocks2.whiteBlock.name=白色方块
+tile.decorativeBlocks2.redBlock.name=红色方块
 
 #Vehicles
-item.marsRover.name=Driveable Mars Rover (WIP)
-item.venusRover.name=Driveable Venus Rover (WIP)
+item.marsRover.name=可驾驶火星漫步者 (WIP)
+item.venusRover.name=可驾驶金星漫步者 (WIP)
 
 #Vehicle Electic Parts
-item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
-item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
-item.electricParts.sparkPlug.name=Vehicle Spark Plug
-item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
-item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
+item.electricParts.batteryTier1.name=1阶载具电池
+item.electricParts.batteryTier2.name=2阶载具电池
+item.electricParts.sparkPlug.name=载具火花塞
+item.electricParts.electricWheelsTier1.name=1阶轮胎
+item.electricParts.electricWheelsTier2.name=2阶轮胎
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=4阶火箭
@@ -570,7 +570,7 @@ item.ingotMercury.name=汞锭
 item.ingotUranium.name=铀锭
 item.tier9.ingotTungsten.name=钨锭
 item.tier10.ingotDarkIron.name=黑铁锭
-item.ingotLead.name=Lead Ingot
+item.ingotLead.name=铅锭
 
 #Shards
 item.tier4.ashShard.name=灰烬碎片
@@ -701,8 +701,8 @@ item.greenDiamondHoe.name=绿钻锄
 item.greenDiamondShovel.name=绿钻铲
 
 #Schematics
-item.schematicMarsRover.name=NASA Workbench Schematic
-item.schematicVenusRover.name=NASA Workbench Schematic
+item.schematicMarsRover.name=NASA工作台图纸
+item.schematicVenusRover.name=NASA工作台图纸
 
 item.schematicTier4.name=NASA工作台图纸
 item.schematicTier5.name=NASA工作台图纸
@@ -720,8 +720,8 @@ schematic.tier8.rocket.name=8阶火箭
 schematic.tier9.rocket.name=9阶火箭
 schematic.tier10.rocket.name=10阶火箭
 
-schematic.mars.rover.name=Mars Rover Schematic
-schematic.venus.rover.name=Venus Rover Schematic
+schematic.mars.rover.name=火星漫步者图纸
+schematic.venus.rover.name=金星漫步者图纸
 
 schematic.rocketT4.name=4阶火箭
 schematic.rocketT5.name=5阶火箭
@@ -731,8 +731,8 @@ schematic.rocketT8.name=8阶火箭
 schematic.rocketT9.name=9阶火箭
 schematic.rocketT10.name=10阶火箭
 
-schematic.marsRover.name=Mars Rover
-schematic.venusRover.name=Venus Rover
+schematic.marsRover.name=火星漫步者
+schematic.venusRover.name=金星漫步者
 
 #Batteries
 item.mercuryBattery.name=汞电池
@@ -886,8 +886,8 @@ entity.ExtraPlanetsEvolvedPowerSkeleton.name=骷髅(进化体)
 entity.ExtraPlanetsEvolvedMiniEnderman.name=小末影人(进化体)
 entity.ExtraPlanetsEvolvedGiantSpider.name=巨型蜘蛛(进化体)
 
-entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
-entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
+entity.ExtraPlanets.EntityMarsRover.name=可驾驶火星漫步者
+entity.ExtraPlanets.EntityVenusRover.name=可驾驶金星漫步者
 
 #Achievements
 achievement.mercuryPlanet=登陆水星！
