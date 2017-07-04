@@ -79,7 +79,7 @@ tile.venus.oreCopper.name=Venüs Bakır Cevheri
 tile.venus.oreCarbon.name=Karbon Cevheri
 tile.venus.stoneBricks.name=Venüs Taş Tuğla
 tile.venus.carbonBlock.name=Karbon Bloğu
-tile.venus.titaniumBlock.name=Block of Titanium
+tile.venus.titaniumBlock.name=Titanyum Bloğu
 
 tile.ceres.surface.name=Ceres Yüzey Kayası
 tile.ceres.subSurface.name=Ceres Yeraltı Kayası
@@ -212,8 +212,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=Kepler 22b Mor Uzun Çimen
 tile.kepler22bFlowers.greenMapleShortGrass.name=Kepler 22b Yeşil Kısa Çimen
 tile.kepler22bFlowers.greenMapleMedGrass.name=Kepler 22b Yeşil Orta Boy Çimen
 tile.kepler22bFlowers.greenMapleTallGrass.name=Kepler 22b Yeşil Uzun Çimen
-tile.redSand.name=Red Sand
-tile.redSandstone.name=Red Sandstone
+tile.redSand.name=Kırmızı Kum
+tile.redSandstone.name=Kırmızı Kum Taşı
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Yüzey Kayası
@@ -229,7 +229,7 @@ tile.deimos.stone.name=Deimos Taşı
 tile.deimos.oreIron.name=Deimos Demir Cevheri
 tile.deimos.oreTin.name=Deimos Kalay Cevheri
 tile.deimos.oreCopper.name=Deimos Bakır Cevheri
-tile.deimos.oreLead.name=Deimos Lead Ore
+tile.deimos.oreLead.name=Deimos Kurşun Cevheri
 
 tile.europa.surface.name=Europa Yüzey Kayası
 tile.europa.subSurface.name=Europa Yeraltı Kayası
@@ -251,7 +251,7 @@ tile.phobos.stone.name=Rezzan Taşı
 tile.phobos.oreIron.name=Rezzan Demir Cevheri
 tile.phobos.oreTin.name=Rezzan Kalay Cevheri
 tile.phobos.oreCopper.name=Rezzan Bakır Cevheri
-tile.phobos.oreLead.name=Phobos Lead Ore
+tile.phobos.oreLead.name=Rezzan Kurşun Cevheri
 
 tile.triton.surface.name=Triton Yüzey Kayası
 tile.triton.subSurface.name=Triton Yeraltı Kayası
@@ -288,7 +288,7 @@ tile.oberon.oreIron.name=Oberon Demir Cevheri
 tile.oberon.oreTin.name=Oberon Kalay Cevheri
 tile.oberon.oreCopper.name=Oberon Bakır Cevheri
 
-tile.titania.surface.name=Titania Surface Rock
+tile.titania.surface.name=Titania Yüzey Kayası
 tile.titania.subSurface.name=Titania Yeraltı Kayası
 tile.titania.stone.name=Titania Taşı
 tile.titania.oreIron.name=Titania Demir Cevheri
@@ -326,7 +326,7 @@ tile.saturnGravel.name=Satürn Çakılı
 tile.uranusGravel.name=Uranüs Çakılı
 tile.neptuneGravel.name=Neptün Çakılı
 
-#Dungeon Bricks
+#Dungeon Tuğla
 tile.veunsDungeonBrick.name=Venüs Zindan Tuğlası
 tile.jupiterDungeonBrick.name=Jüpiter Zindan Tuğlası
 tile.saturnDungeonBrick.name=Satürn Zindan Tuğlası
@@ -347,34 +347,34 @@ tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Taş Basamağı
 tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Taş Basamağı
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Mercury Stone Stairs
-tile.venusStoneStairs.name=Venus Stone Stairs
-tile.ceresStoneStairs.name=Ceres Stone Stairs
-tile.jupiterStoneStairs.name=Jupiter Stone Stairs
-tile.saturnStoneStairs.name=Saturn Stone Stairs
-tile.uranusStoneStairs.name=Uranus Stone Stairs
-tile.neptuneStoneStairs.name=Neptune Stone Stairs
-tile.plutoStoneStairs.name=Pluto Stone Stairs
-tile.erisStoneStairs.name=Eris Stone Stairs
+tile.mercuryStoneStairs.name=Mercury Taş Basamağı
+tile.venusStoneStairs.name=Venus Taş Basamağı
+tile.ceresStoneStairs.name=Ceres Taş Basamağı
+tile.jupiterStoneStairs.name=Jupiter Taş Basamağı
+tile.saturnStoneStairs.name=Saturn Taş Basamağı
+tile.uranusStoneStairs.name=Uranus Taş Basamağı
+tile.neptuneStoneStairs.name=Neptune Taş Basamağı
+tile.plutoStoneStairs.name=Pluto Taş Basamağı
+tile.erisStoneStairs.name=Eris Taş Basamağı
 
-tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs
-tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs
-tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs
-tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs
-tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs
-tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs
-tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs
-tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs
-tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs
+tile.mercuryStoneBrickStairs.name=Mercury Stone Tuğla Stairs
+tile.venusStoneBrickStairs.name=Venus Stone Tuğla Stairs
+tile.ceresStoneBrickStairs.name=Ceres Stone Tuğla Stairs
+tile.jupiterStoneBrickStairs.name=Jupiter Stone Tuğla Stairs
+tile.saturnStoneBrickStairs.name=Saturn Stone Tuğla Stairs
+tile.uranusStoneBrickStairs.name=Uranus Stone Tuğla Stairs
+tile.neptuneStoneBrickStairs.name=Neptune Stone Tuğla Stairs
+tile.plutoStoneBrickStairs.name=Pluto Stone Tuğla Stairs
+tile.erisStoneBrickStairs.name=Eris Stone Tuğla Stairs
 
-#Dungeon Bricks Slabs
+#Dungeon Tuğla Slabs
 tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Zindan Tuğlası Basamağı
 tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Zindan Tuğlası Basamağı
 tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Zindan Tuğlası Basamağı
 tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Zindan Tuğlası Basamağı
 tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Zindan Tuğlası Basamağı
 
-#Dungeon Bricks Merdiveni
+#Dungeon Tuğla Merdiveni
 tile.venusDungeonBrickStoneStairs.name=Venus Zindan Tuğlası Merdiveni
 tile.jupiterDungeonBrickStoneStairs.name=Jupiter Zindan Tuğlası Merdiveni
 tile.saturnDungeonBrickStoneStairs.name=Saturn Zindan Tuğlası Merdiveni
@@ -410,82 +410,82 @@ tile.treasureChestT6Eris.description=Tier 4 Hazine Sandığı Eris zindanında b
 
 #Machines
 tile.advancedRefinery.name=Gelişmiş Rafineri
-tile.ultimateRefinery.name=Ultimate Refinery
-tile.solar.hybrid.name=Karışık Güneş Paneli
+tile.ultimateRefinery.name=En Yüksek Refinery
+tile.solar.hybrid.name=Hibrid Güneş Paneli
 tile.solar.ultimate.name=En Yüksek Güneş Paneli
-tile.solarhybrid.description=Karışık Güneş Paneli, hem gece hemde gündüz enerji toplar.
+tile.solarhybrid.description=Hibrid Güneş Paneli, hem gece hemde gündüz enerji toplar.
 tile.solarultimate.description=En Yüksek Güneş Paneli, hem gece hemde gündüz enerji toplar. Normal güneş panelinden daha fazla enerji üretir.
-tile.advancedFuelLoader.name=Advanced Fuel Loader
-tile.ultimateFuelLoader.name=Ultimate Fuel Loader
-tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
-tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
-tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
-tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets
-tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets
-tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
-tile.chargingBlock.name=Vehicle Charger (WIP)
-tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
-tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
-tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
-tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+tile.advancedFuelLoader.name=Gelişmiş Yakıt Yükleyici
+tile.ultimateFuelLoader.name=En Yüksek Yakıt Yükleyici
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Kalkış Pedi
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Kalkış Pedi
+tile.advancedLaunchPadFull.name=Tier 2/3 Kalkış Pedi
+tile.advancedLaunchPad.tier2.desc=Kalkış Pedini 4 - 8 Numaralı Roketler İçin Kullanın
+tile.advancedLaunchPad.tier3.desc=Kalkış Pedini 9 - 10 Numaralı Roketler İçin Kullanın
+tile.advancedLaunchPad.poweredChargingPad.name=Araç Şarj Pedi
+tile.chargingBlock.name=Araç Şarj Cihazı (WIP)
+tile.advancedOxygenCompressor.0.name=Gelişmiş Oksijen Kompresörü
+tile.advancedOxygenCompressor.1.name=Gelişmiş Oksijen Açıcı
+tile.ultimateOxygenCompressor.0.name=En Yüksek Oksijen Kompresörü
+tile.ultimateOxygenCompressor.1.name=En Yüksek Oksijen Açıcı
 
 #Machine Containers
 container.solarhybrid.name=Karışık Güneş Paneli
 container.solarultimate.name=En Yüksek Güneş Paneli
-container.vehicle.charger.name=Vehicle Charger
-container.advanced.refinery.name=Advanced Refinery
-container.ultimate.refinery.name=Ultimate Refinery
-container.advanced.oxygencompressor.name=Advanced Oxygen Compressor
-container.advanced.oxygendecompressor.name=Advanced Oxygen Decompressor
-container.ultimate.oxygencompressor.name=Ultimate Oxygen Compressor
-container.ultimate.oxygendecompressor.name=Ultimate Oxygen Decompressor
-container.advanced.fuelloader.name=Advanced Fuel Loader
-container.ultimate.fuelloader.name=Ultimate Fuel Loader
+container.vehicle.charger.name=Araç Şarj Aleti
+container.advanced.refinery.name=Gelişmiş Rafineri
+container.ultimate.refinery.name=En Yüksek Rafineri
+container.advanced.oxygencompressor.name=Gelişmiş Oksijen Kopresör
+container.advanced.oxygendecompressor.name=Gelişmiş Oksijen Açıcı
+container.ultimate.oxygencompressor.name=En Yüksek Oksijen Kopresör
+container.ultimate.oxygendecompressor.name=En Yüksek Oksijen Açıcı
+container.advanced.fuelloader.name=Gelişmiş Yakıt Yükleyici
+container.ultimate.fuelloader.name=En Yüksek Yakıt Yükleyici
 
 #GUI Messages and Texts
-gui.message.power.name=Powered Vehicle
-gui.message.power.message.name=Power
-gui.button.loadpower.name=Load Power
+gui.message.power.name=Enerji Paneli
+gui.message.power.message.name=Güç
+gui.button.loadpower.name=Yükleme Gücü
 
 #Other Blocks
 tile.nuclearBomb.name=Nükleer bomba
-tile.fireBomb.name=Fire Bomb
+tile.fireBomb.name=Ateş Bombası
 tile.volcanicRock.name=Volkanik Kaya
-tile.ashBlock.name=Block of Ash
+tile.ashBlock.name=Kül Bloğu
 tile.frozenNitrogen.name=Donmuş Nitrojen
 tile.denseIce.name=Yoğun Buz
 tile.fossil.name=Fosil Bloğu
 
 #Decorative Blocks
-tile.decorativeBlocks.marble.name=Marble
-tile.decorativeBlocks.marbleBricks.name=Marble Bricks
-tile.decorativeBlocks.snowBricks.name=Snow Bricks
-tile.decorativeBlocks.iceBricks.name=Ice Bricks
-tile.decorativeBlocks.fireBricks.name=Fire Bricks
-tile.decorativeBlocks.blackWhiteFloor.name=Black/White Tiled Floor
-tile.decorativeBlocks.marbleTitledFloor.name=Marble Tiled Floor
-tile.decorativeBlocks.marbleBrokenTitledFloor.name=Marble Broken Tiled Floor
-tile.decorativeBlocks.metalMesh.name=Metal Mesh Floor
-tile.decorativeBlocks.frozenNitrogenBricks.name=Frozen Nitrogen Bricks
-tile.decorativeBlocks.volcanicRockBricks.name=Volcanic Rock Bricks
-tile.decorativeBlocks.carbonTitledFloor.name=Carbon Tiled Floor
-tile.decorativeBlocks.carbonBrokenTitledFloor.name=Carbon Broken Tiled Floor
-tile.decorativeBlocks.magnesiumTitledFloor.name=Magnesium Tiled Floor
-tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Floor
-tile.decorativeBlocks.ashBricks.name=Ash Bricks
-tile.decorativeBlocks2.whiteBlock.name=White Block
-tile.decorativeBlocks2.redBlock.name=Red Block
+tile.decorativeBlocks.marble.name=Mermer
+tile.decorativeBlocks.marbleBricks.name=Mermer Tuğlası
+tile.decorativeBlocks.snowBricks.name=Kar Tuğlası
+tile.decorativeBlocks.iceBricks.name=Buz Tuğlası
+tile.decorativeBlocks.fireBricks.name=Ateş Tuğlası
+tile.decorativeBlocks.blackWhiteFloor.name=Siyah/Beyaz Seramik Zemin
+tile.decorativeBlocks.marbleTitledFloor.name=Mermer Seramik Zemin
+tile.decorativeBlocks.marbleBrokenTitledFloor.name=Mermer Kırık Seramik Zemin
+tile.decorativeBlocks.metalMesh.name=Metal Ağ Zemin
+tile.decorativeBlocks.frozenNitrogenBricks.name=Donmuş Nitrojen Tuğlası
+tile.decorativeBlocks.volcanicRockBricks.name=Volkanik Kaya Tuğlası
+tile.decorativeBlocks.carbonTitledFloor.name=Karbon Sermik Zemin
+tile.decorativeBlocks.carbonBrokenTitledFloor.name=Karbon Kırık Sermik Zemin
+tile.decorativeBlocks.magnesiumTitledFloor.name=Magnezyum Sermik Zemin
+tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnezyum Kırık Sermik Zemin
+tile.decorativeBlocks.ashBricks.name=Kül Tuğlası
+tile.decorativeBlocks2.whiteBlock.name=Beyaz Blok
+tile.decorativeBlocks2.redBlock.name=Kırmızı Blok
 
 #Vehicles
-item.marsRover.name=Driveable Mars Rover (WIP)
-item.venusRover.name=Driveable Venus Rover (WIP)
+item.marsRover.name=Sürülebilir Mars Aracı (WIP)
+item.venusRover.name=Sürülebilir Venüs Aracı (WIP)
 
 #Vehicle Electic Parts
-item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
-item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
-item.electricParts.sparkPlug.name=Vehicle Spark Plug
-item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
-item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
+item.electricParts.batteryTier1.name=Tier 1 Araç Bataryası
+item.electricParts.batteryTier2.name=Tier 2 Araç Bataryası
+item.electricParts.sparkPlug.name=Araç Bujileri
+item.electricParts.electricWheelsTier1.name=Tier 1 Tekerleği
+item.electricParts.electricWheelsTier2.name=Tier 2 Tekerleği
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Tier 4 Roketi
@@ -569,12 +569,12 @@ item.ingotMercury.name=Civa Külçesi
 item.ingotUranium.name=Uranyum Külçesi
 item.tier9.ingotTungsten.name=Tungsten Külçesi
 item.tier10.ingotDarkIron.name=Koyu Demir Külçesi
-item.ingotLead.name=Lead Ingot
+item.ingotLead.name=Kurşun Külçesi
 
 #Shards
-item.tier4.ashShard.name=Ash Shard
-item.tier4.volcanicShard.name=Volcanic Shard
-item.tier6.magnesiumShard.name=Magnesium Shard
+item.tier4.ashShard.name=Kül Parçacığı
+item.tier4.volcanicShard.name=Volkanik Kaya Parçacığı
+item.tier6.magnesiumShard.name=Magnezyum Parçacığı
 
 #Gems
 item.tier5.redGem.name=Kırmızıtaş
@@ -699,8 +699,8 @@ item.greenDiamondHoe.name=Yeşil Elmas Çapa
 item.greenDiamondShovel.name=Yeşil Elmas Kürek
 
 #Schematics
-item.schematicMarsRover.name=NASA Workbench Schematic
-item.schematicVenusRover.name=NASA Workbench Schematic
+item.schematicMarsRover.name=NASA Çalışma Masası Şematiği
+item.schematicVenusRover.name=NASA Çalışma Masası Şematiği
 
 item.schematicTier4.name=NASA Çalışma Masası Şematiği
 item.schematicTier5.name=NASA Çalışma Masası Şematiği
@@ -718,8 +718,8 @@ schematic.tier8.rocket.name=Tier 8 Roketi
 schematic.tier9.rocket.name=Tier 9 Roketi
 schematic.tier10.rocket.name=Tier 10 Roketi
 
-schematic.mars.rover.name=Mars Rover Schematic
-schematic.venus.rover.name=Venus Rover Schematic
+schematic.mars.rover.name=NASA Araç Şematiği
+schematic.venus.rover.name=NASA Araç Şematiği
 
 schematic.rocketT4.name=Tier 4 Roketi
 schematic.rocketT5.name=Tier 5 Roketi
@@ -729,8 +729,8 @@ schematic.rocketT8.name=Tier 8 Roketi
 schematic.rocketT9.name=Tier 9 Roketi
 schematic.rocketT10.name=Tier 10 Roketi
 
-schematic.marsRover.name=Mars Rover
-schematic.venusRover.name=Venus Rover
+schematic.marsRover.name=Mars Aracı
+schematic.venusRover.name=Venüs Aracı
 
 #Batteries
 item.mercuryBattery.name=Merkür Pil
@@ -829,19 +829,19 @@ item.thermalCloth.tier3ThermalCloth.name=Tier 3 Termal İçlik
 item.thermalCloth.tier4ThermalCloth.name=Tier 4 Termal İçlik
 
 #Sticks
-item.tier11.blueSticks.name=Blue Sticks
-item.tier11.redSticks.name=Red Sticks
-item.tier11.yellowSticks.name=Yellow Sticks
-item.tier11.purpleSticks.name=Purple Sticks
-item.tier11.greenSticks.name=Green Sticks
+item.tier11.blueSticks.name=Mavi Çubuk
+item.tier11.redSticks.name=Kırmızı Çubuk
+item.tier11.yellowSticks.name=Sarı Çubuk
+item.tier11.purpleSticks.name=Mor Çubuk
+item.tier11.greenSticks.name=Yeşil Çubuk
 
 #Other Items
 item.appleDiamond.name=Elmas Elma
 item.appleIron.name=Demir Elma
 item.cannedfood.cannedFood.name=Uzay Yiyecekleri
-item.tier4.ash.name=Ash
-item.tier4.sledgeHammer.name=Sledge Hammer
-item.tier4.grindingWheel.name=Grinding Wheel
+item.tier4.ash.name=Kül
+item.tier4.sledgeHammer.name=Balyoz
+item.tier4.grindingWheel.name=Taşlama Tekerleği
 
 item.cannedfood.dehydratedPorkchop.name=Susuz Domuz Pirzolası
 item.cannedfood.dehydratedFish.name=Susuz Balık
@@ -884,8 +884,8 @@ entity.ExtraPlanetsEvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Evrimleşmiş Küçük Enderman
 entity.ExtraPlanetsEvolvedGiantSpider.name=Evrimleşmiş Dev Örümcek
 
-entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
-entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
+entity.ExtraPlanets.EntityMarsRover.name=Sürülebilir Mars Aracı
+entity.ExtraPlanets.EntityVenusRover.name=Sürülebilir Venüs Aracı
 
 #Achievements
 achievement.mercuryPlanet=Merkür İçin Küçük Benim İçin Büyük!
