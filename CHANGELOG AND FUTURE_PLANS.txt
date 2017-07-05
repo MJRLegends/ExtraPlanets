@@ -15,6 +15,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.5.4 Beta Build
+*Fixed Tier 1 Armor Layer recipe requiring any other ingot type other than GC
+
 v1.5.3 Beta Build
 *Fixed issue #122
 *Improvements to some item textures
