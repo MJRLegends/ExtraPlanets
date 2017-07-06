@@ -11,7 +11,6 @@ import micdoodle8.mods.galacticraft.api.world.SpaceStationType;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.core.util.RecipeUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
@@ -21,9 +20,11 @@ import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -192,6 +193,10 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.ORE_LEAD, 1, 0), OreDictionary.getOres("ingotLead").get(0), 0.0F);
 	}
 
+	public static void addRecipe(ItemStack result, Object[] obj) {
+		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(result, obj));
+	}
+
 	private static void registerCraftingRecipes() {
 		if (Config.THERMAL_PADDINGS) {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.THERMAL_CLOTH, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(MarsItems.marsItemBasic, 1, 5) });
@@ -230,7 +235,7 @@ public class ExtraPlanets_Recipes {
 
 			// Block to Mercury
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 9, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 7) });
-			
+
 			if (Config.ITEMS_MERCURY) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', Items.STICK });
@@ -784,15 +789,15 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
 		}
 
-		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotPalladium", 'X', "ingotNickel", 'Y', "gemRedGem", 'Z', new ItemStack(GCBlocks.fuelLoader) });
-		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotZinc", 'X', "ingotTungsten", 'Y', "gemBlueGem", 'Z', new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
+		addRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotPalladium", 'X', "ingotNickel", 'Y', "gemRedGem", 'Z', new ItemStack(GCBlocks.fuelLoader) });
+		addRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', "ingotZinc", 'X', "ingotTungsten", 'Y', "gemBlueGem", 'Z', new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
 
 		// Launch pads
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 0), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'B', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 1), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'B', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 7) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 2), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(MarsItems.marsItemBasic, 0, 2), 'B', new ItemStack(MarsBlocks.marsBlock, 1, 8) });
 
-		RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, 1) });
+		addRecipe(new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, 1) });
 
 		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
 			List<ItemStack> items = OreDictionary.getOres("ingotLead");
@@ -804,10 +809,10 @@ public class ExtraPlanets_Recipes {
 				else
 					item = items.get(j - 1);
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', item });
-				RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', item });
+				addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', item });
 			}
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3) });
+			addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3) });
 		}
 		// Can of Food
 		GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_PORKCHOP, Items.COOKED_PORKCHOP });
@@ -848,10 +853,10 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_PRESSURE_LAYER, 1, 0), new Object[] { "CCC", "ORO", "CCC", 'O', GCItems.oxygenConcentrator, 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER });
 
 			// Tier 1 - 4 UnPrepared Space Suits
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { "   ", "MMM", "M M", 'M', "ingotAluminum" });
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_CHEST, 1, 0), new Object[] { "M M", "MMM", "MMM", 'M', "ingotAluminum" });
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "MMM", "M M", "M M", 'M', "ingotAluminum" });
-			RecipeUtil.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "   ", "M M", "M M", 'M', "ingotAluminum" });
+			addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { "   ", "MMM", "M M", 'M', "ingotAluminum" });
+			addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_CHEST, 1, 0), new Object[] { "M M", "MMM", "MMM", 'M', "ingotAluminum" });
+			addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "MMM", "M M", "M M", 'M', "ingotAluminum" });
+			addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "   ", "M M", "M M", 'M', "ingotAluminum" });
 
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_HELMET, 1, 0), new Object[] { " R ", "MMM", "M M", 'M', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'R',
 					ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_HELMET });
@@ -955,8 +960,7 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 1), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 2), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.SNOW) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 3), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.ICE) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2), 'B', new ItemStack(Items.DYE, 1, 0), 'W',
-				new ItemStack(Items.DYE, 1, 15) });
+		addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2), 'B', "dyeWhite", 'W', "dyeBlack" });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 7), new Object[] { " FF", " FF", "   ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6) });
 		if (Config.JUPITER) {
