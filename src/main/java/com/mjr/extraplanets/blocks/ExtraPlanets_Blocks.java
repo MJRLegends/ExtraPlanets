@@ -161,7 +161,8 @@ public class ExtraPlanets_Blocks {
 	public static Block frozenNitrogen;
 	public static Block oreLead;
 	public static Block potash;
-
+	public static Block ashBlock;
+	
 	// Treasure Chests
 	public static Block treasureChestTier4;
 	public static Block treasureChestTier5;
@@ -226,6 +227,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.jupiter) {
 			jupiterBlocks = new BlockBasicJupiter("jupiter");
 			jupiterGravel = new BlockCustomGravel("jupiterGravel");
+			ashBlock = new BlockAshBlock("ashBlock");
 		}
 		if (Config.saturn) {
 			saturnBlocks = new BlockBasicSaturn("saturn");
@@ -388,6 +390,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(jupiterGravel, jupiterGravel.getUnlocalizedName().substring(5));
 
+			GameRegistry.registerBlock(ashBlock, ashBlock.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(jupiterSpawner, ItemBlockGC.class, "jupiterSpawner");
 			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName().substring(5));
 		}
