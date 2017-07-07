@@ -2,6 +2,7 @@ package com.mjr.extraplanets.planets.Uranus.worldgen;
 
 import java.util.Random;
 
+import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.init.Blocks;
@@ -87,7 +88,7 @@ public class RoomTreasureUranus extends RoomTreasure
                     }
                     else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2)
                     {
-                        this.setBlockState(worldIn, ExtraPlanets_Blocks.treasureChestTier7.getDefaultState().withProperty(T7TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
+                        this.setBlockState(worldIn, ExtraPlanets_Blocks.treasureChestTier7.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
                     }
                     else
                     {

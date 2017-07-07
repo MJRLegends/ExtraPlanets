@@ -33,15 +33,17 @@ public class BlockBasicKepler22bPlanks extends Block
      * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It
      * returns the metadata of the dropped item based on the old metadata of the block.
      */
-    public int damageDropped(IBlockState state)
+    @Override
+	public int damageDropped(IBlockState state)
     {
-        return ((BlockBasicKepler22bPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        return state.getValue(VARIANT).getMetadata();
     }
 
     /**
      * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
      */
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
     {
         for (BlockBasicKepler22bPlanks.EnumType blockplanks$enumtype : BlockBasicKepler22bPlanks.EnumType.values())
@@ -53,7 +55,8 @@ public class BlockBasicKepler22bPlanks extends Block
     /**
      * Convert the given metadata into a BlockState for this Block
      */
-    public IBlockState getStateFromMeta(int meta)
+    @Override
+	public IBlockState getStateFromMeta(int meta)
     {
         return this.getDefaultState().withProperty(VARIANT, BlockBasicKepler22bPlanks.EnumType.byMetadata(meta));
     }
@@ -61,20 +64,23 @@ public class BlockBasicKepler22bPlanks extends Block
     /**
      * Get the MapColor for this Block and the given BlockState
      */
-    public MapColor getMapColor(IBlockState state)
+    @Override
+	public MapColor getMapColor(IBlockState state)
     {
-        return ((BlockBasicKepler22bPlanks.EnumType)state.getValue(VARIANT)).func_181070_c();
+        return state.getValue(VARIANT).func_181070_c();
     }
 
     /**
      * Convert the BlockState into the correct metadata value
      */
-    public int getMetaFromState(IBlockState state)
+    @Override
+	public int getMetaFromState(IBlockState state)
     {
-        return ((BlockBasicKepler22bPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        return state.getValue(VARIANT).getMetadata();
     }
 
-    protected BlockState createBlockState()
+    @Override
+	protected BlockState createBlockState()
     {
         return new BlockState(this, new IProperty[] {VARIANT});
     }
@@ -117,7 +123,8 @@ public class BlockBasicKepler22bPlanks extends Block
             return this.field_181071_k;
         }
 
-        public String toString()
+        @Override
+		public String toString()
         {
             return this.name;
         }
@@ -132,7 +139,8 @@ public class BlockBasicKepler22bPlanks extends Block
             return META_LOOKUP[meta];
         }
 
-        public String getName()
+        @Override
+		public String getName()
         {
             return this.name;
         }

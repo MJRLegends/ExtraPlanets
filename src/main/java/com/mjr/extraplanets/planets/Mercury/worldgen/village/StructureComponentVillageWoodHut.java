@@ -5,6 +5,7 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockGlowstoneTorch;
+import micdoodle8.mods.galacticraft.core.blocks.BlockTorchBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -205,10 +206,10 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
         this.setBlockState(par1World, ExtraPlanets_Blocks.mercuryBlocks.getStateFromMeta(0), 6, yLevel, 1, par3StructureBoundingBox);
         this.setBlockState(par1World, ExtraPlanets_Blocks.mercuryBlocks.getStateFromMeta(0), 5, yLevel, 1, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockGlowstoneTorch.FACING, this.coordBaseMode), 8, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockGlowstoneTorch.FACING, this.coordBaseMode.rotateYCCW()), 14, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockGlowstoneTorch.FACING, this.coordBaseMode.getOpposite()), 8, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockGlowstoneTorch.FACING, this.coordBaseMode.rotateY()), 2, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode), 8, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode.rotateYCCW()), 14, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode.getOpposite()), 8, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode.rotateY()), 2, yLevel, 8, par3StructureBoundingBox);
 
         yLevel = 5;
 

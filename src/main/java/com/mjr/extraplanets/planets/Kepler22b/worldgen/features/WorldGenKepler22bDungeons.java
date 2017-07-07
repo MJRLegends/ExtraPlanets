@@ -29,6 +29,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 			new WeightedRandomChestContent(Items.record_13, 0, 1, 1, 4), new WeightedRandomChestContent(Items.record_cat, 0, 1, 1, 4), new WeightedRandomChestContent(Items.name_tag, 0, 1, 1, 10),
 			new WeightedRandomChestContent(Items.golden_horse_armor, 0, 1, 1, 2), new WeightedRandomChestContent(Items.iron_horse_armor, 0, 1, 1, 5), new WeightedRandomChestContent(Items.diamond_horse_armor, 0, 1, 1, 1) });
 
+	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 		int j = rand.nextInt(2) + 2;
 		int k = -j - 1;

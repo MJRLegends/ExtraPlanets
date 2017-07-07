@@ -62,6 +62,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 			return this.field_181071_k;
 		}
 
+		@Override
 		public String toString() {
 			return this.name;
 		}
@@ -74,6 +75,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 			return META_LOOKUP[meta];
 		}
 
+		@Override
 		public String getName() {
 			return this.name;
 		}
@@ -99,10 +101,12 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	/**
 	 * Gets the localized name of this block. Used for the statistics page.
 	 */
+	@Override
 	public String getLocalizedName() {
 		return StatCollector.translateToLocal(this.getUnlocalizedName() + "." + BlockKepler22bMapleTreeSapling.EnumType.MAPLE_BLUE.getUnlocalizedName() + ".name");
 	}
 
+	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!worldIn.isRemote) {
 			super.updateTick(worldIn, pos, state, rand);
@@ -114,7 +118,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	}
 
 	public void grow(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if (((Integer) state.getValue(STAGE)).intValue() == 0) {
+		if (state.getValue(STAGE).intValue() == 0) {
 			worldIn.setBlockState(pos, state.cycleProperty(STAGE), 4);
 		} else {
 			this.generateTree(worldIn, pos, state, rand);
@@ -124,12 +128,12 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	public void generateTree(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(worldIn, rand, pos))
 			return;
-		WorldGenerator worldgenerator = (WorldGenerator) (rand.nextInt(10) == 0 ? new WorldGenBigTree(true) : new WorldGenTrees(true));
+		WorldGenerator worldgenerator = rand.nextInt(10) == 0 ? new WorldGenBigTree(true) : new WorldGenTrees(true);
 		int i = 0;
 		int j = 0;
 		boolean flag = false;
 
-		switch ((BlockKepler22bMapleTreeSapling.EnumType) state.getValue(VARIANT)) {
+		switch (state.getValue(VARIANT)) {
 		case MAPLE_BLUE:
 			worldgenerator = new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.kepler22bMapleLog.getStateFromMeta(0), ExtraPlanets_Blocks.kepler22bMapleLeaf.getStateFromMeta(0), false);
 			break;
@@ -151,7 +155,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		}
 		worldIn.setBlockToAir(pos);
 
-		if (!((WorldGenerator) worldgenerator).generate(worldIn, rand, pos)) {
+		if (!worldgenerator.generate(worldIn, rand, pos)) {
 			worldIn.setBlockState(pos, state, 2);
 		}
 	}
@@ -167,13 +171,15 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	/**
 	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
 	 */
+	@Override
 	public int damageDropped(IBlockState state) {
-		return ((BlockKepler22bMapleTreeSapling.EnumType) state.getValue(VARIANT)).getMetadata();
+		return state.getValue(VARIANT).getMetadata();
 	}
 
 	/**
 	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
 	 */
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
 		for (BlockKepler22bMapleTreeSapling.EnumType blockplanks$enumtype : BlockKepler22bMapleTreeSapling.EnumType.values()) {
@@ -184,14 +190,17 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	/**
 	 * Whether this IGrowable can grow
 	 */
+	@Override
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
 	}
 
+	@Override
 	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		return (double) worldIn.rand.nextFloat() < 0.45D;
+		return worldIn.rand.nextFloat() < 0.45D;
 	}
 
+	@Override
 	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
 		this.grow(worldIn, pos, state, rand);
 	}
@@ -199,6 +208,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	/**
 	 * Convert the given metadata into a BlockState for this Block
 	 */
+	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(VARIANT, BlockKepler22bMapleTreeSapling.EnumType.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
 	}
@@ -206,13 +216,15 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	/**
 	 * Convert the BlockState into the correct metadata value
 	 */
+	@Override
 	public int getMetaFromState(IBlockState state) {
 		int i = 0;
-		i = i | ((BlockKepler22bMapleTreeSapling.EnumType) state.getValue(VARIANT)).getMetadata();
-		i = i | ((Integer) state.getValue(STAGE)).intValue() << 3;
+		i = i | state.getValue(VARIANT).getMetadata();
+		i = i | state.getValue(STAGE).intValue() << 3;
 		return i;
 	}
 
+	@Override
 	protected BlockState createBlockState() {
 		return new BlockState(this, new IProperty[] { VARIANT, STAGE });
 	}

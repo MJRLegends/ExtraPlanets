@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCocoa;
+import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
@@ -187,7 +188,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 	}
 
 	private void func_181652_a(World p_181652_1_, int p_181652_2_, BlockPos p_181652_3_, EnumFacing p_181652_4_) {
-		this.setBlockAndNotifyAdequately(p_181652_1_, p_181652_3_, Blocks.cocoa.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockCocoa.FACING, p_181652_4_));
+		this.setBlockAndNotifyAdequately(p_181652_1_, p_181652_3_, Blocks.cocoa.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockDirectional.FACING, p_181652_4_));
 	}
 
 	private void func_181651_a(World p_181651_1_, BlockPos p_181651_2_, PropertyBool p_181651_3_) {
@@ -204,6 +205,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 		}
 	}
 
+	@Override
 	protected void func_175921_a(World worldIn, BlockPos p_175921_2_) {
 		if (worldIn.getBlockState(p_175921_2_).getBlock() != ExtraPlanets_Blocks.kepler22bBlocks) {
 			this.setBlockAndNotifyAdequately(worldIn, p_175921_2_, ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState());

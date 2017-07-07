@@ -22,12 +22,14 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanB
     /**
      * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
      */
-    protected ResourceLocation getEntityTexture(EntityEvolvedSnowmanBoss entity)
+    @Override
+	protected ResourceLocation getEntityTexture(EntityEvolvedSnowmanBoss entity)
     {
         return snowManTextures;
     }
 
-    public ModelEvolvedSnowmanBoss getMainModel()
+    @Override
+	public ModelEvolvedSnowmanBoss getMainModel()
     {
         return (ModelEvolvedSnowmanBoss)super.getMainModel();
     }
@@ -35,7 +37,8 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanB
      * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
      * entityLiving, partialTickTime
      */
-    protected void preRenderCallback(EntityEvolvedSnowmanBoss entitylivingbaseIn, float partialTickTime)
+    @Override
+	protected void preRenderCallback(EntityEvolvedSnowmanBoss entitylivingbaseIn, float partialTickTime)
     {
         float f = 4.0F;
         float f1 = (10.0F + f) / 2.0F;

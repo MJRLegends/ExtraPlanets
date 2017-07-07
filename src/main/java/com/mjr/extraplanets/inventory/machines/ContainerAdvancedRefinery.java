@@ -59,7 +59,7 @@ public class ContainerAdvancedRefinery extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
 		ItemStack var2 = null;
-		final Slot slot = (Slot) this.inventorySlots.get(par1);
+		final Slot slot = this.inventorySlots.get(par1);
 
 		if (slot != null && slot.getHasStack()) {
 			final ItemStack var4 = slot.getStack();

@@ -30,7 +30,7 @@ public class RenderCreeperBossPluto extends RenderLiving<EntityCreeperBossPluto>
 
 	@Override
 	public void doRender(EntityCreeperBossPluto par1EntityLiving, double par2, double par4, double par6, float par8, float par9) {
-		BossStatus.setBossStatus((IBossDisplayData) par1EntityLiving, false);
+		BossStatus.setBossStatus(par1EntityLiving, false);
 
 		super.doRender(par1EntityLiving, par2, par4, par6, par8, par9);
 	}

@@ -23,6 +23,7 @@ public class RenderEvolvedIceSlimeBoss extends RenderLiving<EntityEvolvedIceSlim
 	 * Returns the location of an entity's texture. Doesn't seem to be called
 	 * unless you call Render.bindEntityTexture.
 	 */
+	@Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedIceSlimeBoss entity) {
 		return slimeTextures;
 	}
@@ -31,11 +32,12 @@ public class RenderEvolvedIceSlimeBoss extends RenderLiving<EntityEvolvedIceSlim
 	 * Allows the render to do any OpenGL state modifications necessary before
 	 * the model is rendered. Args: entityLiving, partialTickTime
 	 */
+	@Override
 	protected void preRenderCallback(EntityEvolvedIceSlimeBoss entitylivingbaseIn, float partialTickTime) {
 		int i = entitylivingbaseIn.getSlimeSize();
-		float f = (entitylivingbaseIn.prevSquishFactor + (entitylivingbaseIn.squishFactor - entitylivingbaseIn.prevSquishFactor) * partialTickTime) / ((float) i * 0.5F + 1.0F);
+		float f = (entitylivingbaseIn.prevSquishFactor + (entitylivingbaseIn.squishFactor - entitylivingbaseIn.prevSquishFactor) * partialTickTime) / (i * 0.5F + 1.0F);
 		float f1 = 1.0F / (f + 1.0F);
-		float f2 = (float) i;
+		float f2 = i;
 		GlStateManager.scale(f1 * f2, 1.0F / f1 * f2, f1 * f2);
 	}
 }
