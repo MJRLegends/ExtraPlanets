@@ -15,10 +15,21 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
-v1.5.4 Beta Build
+v0.5.5 Beta Build
+*Changed recipes to use ore dict on dyes used in recipes
+*Fixed issue #125
+*Added Tooltips to Thermal Padding
+*Updated/Added Tooltips for Launch/Powered Custom Pads
+*Updated lang files
+*Clean up
+*Added Information to Pre Checklist Book for GC for All Planets, Moons, Space Stations
+*Added Tool tips to Space Suits 
+*Added Radiation, Pressure Systems to All moons except Mars ones
+
+v0.5.4 Beta Build
 *Fixed Tier 1 Armor Layer recipe requiring any other ingot type other than GC
 
-v1.5.3 Beta Build
+v0.5.3 Beta Build
 *Fixed issue #122
 *Improvements to some item textures
 *Removed generating liquid surface and sub surface for some planets, config options  (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
@@ -32,7 +43,7 @@ v1.5.3 Beta Build
 
 *Fixed broken tool tips
 
-v1.5.2 Beta Build
+v0.5.2 Beta Build
 *Fixes for Solar Panels (Issue #111)
 *Converted Io over to a Multi Biome System, Added a Io Ash Lands Biome
 *Tweaks to Io Ash Lands biome height
@@ -44,14 +55,14 @@ v1.5.2 Beta Build
 *Converted Uranus over to a Multi Biome System, Added a Uranus Snow Lands, Uranus Frozen Water Sea Biomes
 *Clean up
 
-v1.5.1 Beta Build
+v0.5.1 Beta Build
 *Fixed issue #115
 *Fixed rendering issues with the Tier 4 - 10 Rockets
 *Added Ore Dict for Block of Uranium
 *Fixed Advanced & Ultimate Refinery accepting different mods oil buckets
 *Fixed a few disabling config options issues
 
-v1.5.0 Beta Build
+v0.5.0 Beta Build
 *Moved Kepler22b Chunk Provider class to a prefab class & extended it for Kepler22b (for future plans)
 *Fixed biome conflict issue (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Clean up
@@ -68,11 +79,11 @@ v1.5.0 Beta Build
 *Changes to Gravity and Fall Damage Modifier (With Config option to change it back to the old way!)
 *Changes to Gravity and Fall Damage Modifier for Moons to match Planets values (With Config option to change it back to the old way!)
 
-v1.4.9 Beta Build
+v0.4.9 Beta Build
 *Fixed recipe issue/crash
 *Converted all Equipment Kits to lowercase, Updated lang files
 
-v1.4.8 Beta Build
+v0.4.8 Beta Build
 *Added Tier 1 - 5 with Variants Kits (WIP)	
 *Added Tier 1 - 5 Equipment kits Recipes
 *Changed achievements names to lowercase with underscores and not camelCase, Updated lang files
