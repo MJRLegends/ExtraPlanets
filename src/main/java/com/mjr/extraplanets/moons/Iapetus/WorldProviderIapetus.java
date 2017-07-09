@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.moons.Iapetus;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
@@ -16,11 +15,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Iapetus.worldgen.BiomeProviderIapetus;
 import com.mjr.extraplanets.moons.Iapetus.worldgen.ChunkProviderIapetus;
+import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
-public class WorldProviderIapetus extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderIapetus extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
@@ -172,6 +173,16 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 	@Override
 	public boolean shouldCorrodeArmor() {
 		return false;
+	}
+
+	@Override
+	public int getPressureLevel() {
+		return 100;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 30;
 	}
 
 	@Override
