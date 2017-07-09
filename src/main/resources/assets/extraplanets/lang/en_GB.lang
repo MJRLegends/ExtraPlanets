@@ -1026,3 +1026,25 @@ gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
 death.attack.radiation=%1$s forgot radiation protection
 death.attack.pressure=%1$s forgot pressure protection
+
+#CheckList GUI Messages
+checklist.tier_3_thermal_padding.key=Equip Tier 3 Thermal Suit
+checklist.tier_4_thermal_padding.key=Equip Tier 4 Thermal Suit
+checklist.tier_5_thermal_padding.key=Equip Tier 5 Thermal Suit
+
+checklist.tier_1_space_suit.key=Equip Tier 1 Space Suit
+checklist.tier_2_space_suit.key=Equip Tier 2 Space Suit
+checklist.tier_3_space_suit.key=Equip Tier 3 Space Suit
+checklist.tier_4_space_suit.key=Equip Tier 4 Space Suit
+
+satellite.space_station.mercury=Mercury Space Station
+satellite.space_station.venus=Venus Space Station
+satellite.space_station.ceres=Ceres Space Station
+satellite.space_station.mars=Mars Space Station
+satellite.space_station.jupiter=Jupiter Space Station
+satellite.space_station.saturn=Saturn Space Station
+satellite.space_station.uranus=Uranus Space Station
+satellite.space_station.neptune=Neptune Space Station
+satellite.space_station.pluto=Pluto Space Station
+satellite.space_station.eris=Eris Space Station
+satellite.space_station.kepler22b=Kepler22b Space Station

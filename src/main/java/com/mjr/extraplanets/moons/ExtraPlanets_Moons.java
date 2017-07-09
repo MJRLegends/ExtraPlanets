@@ -93,6 +93,7 @@ public class ExtraPlanets_Moons {
 			TRITON.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			TRITON.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/triton.png"));
 			TRITON.setDimensionInfo(Config.TRITON_ID, WorldProviderTriton.class);
+			TRITON.addChecklistKeys("tier_5_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.PHOBOS) {
 			PHOBOS = new Moon("phobos").setParentPlanet(MarsModule.planetMars);
@@ -104,6 +105,8 @@ public class ExtraPlanets_Moons {
 			PHOBOS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			PHOBOS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/phobos.png"));
 			PHOBOS.setDimensionInfo(Config.PHOBOS_ID, WorldProviderPhobos.class);
+			PHOBOS.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
+			
 		}
 		if (Config.DEIMOS) {
 			DEIMOS = new Moon("deimos").setParentPlanet(MarsModule.planetMars);
@@ -115,6 +118,7 @@ public class ExtraPlanets_Moons {
 			DEIMOS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			DEIMOS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/deimos.png"));
 			DEIMOS.setDimensionInfo(Config.DEIMOS_ID, WorldProviderDeimos.class);
+			DEIMOS.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.IO) {
 			IO = new Moon("io").setParentPlanet(ExtraPlanets_Planets.JUPITER);
@@ -126,6 +130,7 @@ public class ExtraPlanets_Moons {
 			IO.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			IO.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
 			IO.setDimensionInfo(Config.IO_ID, WorldProviderIo.class);
+			IO.addChecklistKeys("tier_4_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.EUROPA) {
 			EUROPA = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.JUPITER);
@@ -137,6 +142,7 @@ public class ExtraPlanets_Moons {
 			EUROPA.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			EUROPA.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
 			EUROPA.setDimensionInfo(Config.EUROPA_ID, WorldProviderEuropa.class);
+			EUROPA.addChecklistKeys("tier_4_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 
 		if (Config.GANYMEDE) {
@@ -149,6 +155,7 @@ public class ExtraPlanets_Moons {
 			GANYMEDE.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			GANYMEDE.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/ganymede.png"));
 			GANYMEDE.setDimensionInfo(Config.GANYMEDE_ID, WorldProviderGanymede.class);
+			GANYMEDE.addChecklistKeys("tier_4_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.CALLISTO) {
 			CALLISTO = new Moon("callisto").setParentPlanet(ExtraPlanets_Planets.JUPITER);
@@ -160,6 +167,7 @@ public class ExtraPlanets_Moons {
 			CALLISTO.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			CALLISTO.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/callisto.png"));
 			CALLISTO.setDimensionInfo(Config.CALLISTO_ID, WorldProviderCallisto.class);
+			CALLISTO.addChecklistKeys("tier_4_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.RHEA) {
 			RHEA = new Moon("rhea").setParentPlanet(ExtraPlanets_Planets.SATURN);
@@ -171,6 +179,7 @@ public class ExtraPlanets_Moons {
 			RHEA.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			RHEA.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/rhea.png"));
 			RHEA.setDimensionInfo(Config.RHEA_ID, WorldProviderRhea.class);
+			RHEA.addChecklistKeys("tier_4_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.TITAN) {
 			TITAN = new Moon("titan").setParentPlanet(ExtraPlanets_Planets.SATURN);
@@ -182,6 +191,7 @@ public class ExtraPlanets_Moons {
 			TITAN.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			TITAN.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
 			TITAN.setDimensionInfo(Config.TITAN_ID, WorldProviderTitan.class);
+			TITAN.addChecklistKeys("tier_4_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.OBERON) {
 			OBERON = new Moon("oberon").setParentPlanet(ExtraPlanets_Planets.URANUS);
@@ -193,6 +203,7 @@ public class ExtraPlanets_Moons {
 			OBERON.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			OBERON.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png"));
 			OBERON.setDimensionInfo(Config.OBERON_ID, WorldProviderOberon.class);
+			OBERON.addChecklistKeys("tier_5_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.TITANIA) {
 			TITANIA = new Moon("titania").setParentPlanet(ExtraPlanets_Planets.URANUS);
@@ -204,6 +215,7 @@ public class ExtraPlanets_Moons {
 			TITANIA.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			TITANIA.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png"));
 			TITANIA.setDimensionInfo(Config.TITANIA_ID, WorldProviderTitania.class);
+			TITANIA.addChecklistKeys("tier_5_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.IAPETUS) {
 			IAPETUS = new Moon("iapetus").setParentPlanet(ExtraPlanets_Planets.SATURN);
@@ -215,6 +227,7 @@ public class ExtraPlanets_Moons {
 			IAPETUS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			IAPETUS.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/iapetus.png"));
 			IAPETUS.setDimensionInfo(Config.IAPETUS_ID, WorldProviderIapetus.class);
+			IAPETUS.addChecklistKeys("tier_4_thermal_padding", "equipOxygenSuit", "equipParachute");
 		}
 	}
 

@@ -76,6 +76,7 @@ public class ExtraPlanets_Planets {
 			MERCURY.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
 			MERCURY.setDimensionInfo(Config.MERCURY_ID, WorldProviderMercury.class);
 			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, 50.0F, 0.0F, 0.1F));
+			MERCURY.addChecklistKeys("tier_3_thermal_padding", "tier_1_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.CERES) {
 			CERES = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -88,6 +89,7 @@ public class ExtraPlanets_Planets {
 			CERES.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"));
 			CERES.setDimensionInfo(Config.CERES_ID, WorldProviderCeres.class);
 			CERES.setAtmosphere(new AtmosphereInfo(false, false, false, -1.5F, 5.0F, 0.1F));
+			CERES.addChecklistKeys("thermalPadding", "tier_1_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.JUPITER) {
 			JUPITER = new Planet("Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -100,6 +102,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"));
 			JUPITER.setDimensionInfo(Config.JUPITER_ID, WorldProviderJupiter.class);
 			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, false, 100.0F, 3.0F, 0.1F));
+			JUPITER.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.SATURN) {
 			SATURN = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -112,6 +115,7 @@ public class ExtraPlanets_Planets {
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
 			SATURN.setAtmosphere(new AtmosphereInfo(false, false, false, 80.0F, 0.0F, 0.1F));
+			SATURN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.URANUS) {
 			URANUS = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -124,6 +128,7 @@ public class ExtraPlanets_Planets {
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
 			URANUS.setAtmosphere(new AtmosphereInfo(false, false, false, -120.0F, 4.0F, 0.1F));
+			URANUS.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -136,6 +141,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
 			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
+			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.PLUTO) {
 			PLUTO = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -148,6 +154,7 @@ public class ExtraPlanets_Planets {
 			PLUTO.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
 			PLUTO.setDimensionInfo(Config.PLUTO_ID, WorldProviderPluto.class);
 			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
+			PLUTO.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.ERIS) {
 			ERIS = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -160,6 +167,7 @@ public class ExtraPlanets_Planets {
 			ERIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			ERIS.setDimensionInfo(Config.ERIS_ID, WorldProviderEris.class);
 			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, -150.0F, 5.0F, 0.1F));
+			ERIS.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
@@ -172,6 +180,7 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
 			KEPLER22B.setDimensionInfo(Config.KEPLER22B_ID, WorldProviderKepler22b.class);
 			KEPLER22B.setAtmosphere(new AtmosphereInfo(true, true, false, 0.0F, 5.0F, 0.05F));
+			KEPLER22B.addChecklistKeys("equipParachute");
 		}
 		if (Config.KUIPER_BELT) {
 			KUIPER_BELT = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
