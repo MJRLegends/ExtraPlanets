@@ -14,6 +14,18 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.2.1 Beta Build
+*Changed recipes to use ore dict on dyes used in recipes
+*Fixed issue #125
+*Added Tooltips to Thermal Padding
+*Updated/Added Tooltips for Launch/Powered Custom Pads
+*Updated lang files
+*Clean up
+*Added Information to Pre Checklist Book for GC for All Planets, Moons, Space Stations
+*Added Tool tips to Space Suits 
+*Added Radiation, Pressure Systems to All moons except Mars ones
+*Fixed Tier 1 Armor Layer recipe requiring any other ingot type other than GC
+
 v0.2.0 Beta Build
 *Fixed issue #122
 *Improvements to some item textures
