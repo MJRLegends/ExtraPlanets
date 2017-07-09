@@ -6,6 +6,8 @@ import micdoodle8.mods.galacticraft.api.item.IItemThermal;
 import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -133,4 +135,12 @@ public class ItemTier5ThermalPadding  extends Item implements IItemThermal
         }
         return new ActionResult<>(EnumActionResult.SUCCESS, itemStack);
     }
+    
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+		if (player.worldObj.isRemote) {
+			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier5.thermal.padding.information"));
+		}
+	}
 }

@@ -356,8 +356,9 @@ tile.advanced_launch_pad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advanced_launch_pad.poweredChargingPad.name=Vehicle Charging Pad
 tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad
-tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets
-tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets
+tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets. To be placed in a 5x5 square
+tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets. To be placed in a 5x5 square
+tile.advanced_launch_pad.powered.desc=Used to power Mars Rover & Venus Rover Vehicles. To be placed in a 5x5 square
 tile.advanced_fuel_loader.name=Advanced Fuel Loader
 tile.ultimate_fuel_loader.name=Ultimate Fuel Loader
 tile.vehicle_charger.name=Vehicle Charger (WIP)
@@ -790,9 +791,9 @@ item.tier5_thermal_chestplate.name=Tier 5 Thermal Padding Chestpiece
 item.tier5_thermal_leggings.name=Tier 5 Thermal Padding Leggings
 item.tier5_thermal_boots.name=Tier 5 Thermal Padding Boots
 
-tier3.information=Required for Mercury during day and the night
-tier4.information=Required for Jupiter and Saturn including their moons during day and the night
-tier5.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
+tier3.thermal.padding.information=Required for Mercury
+tier4.thermal.padding.information=Required for Jupiter and Saturn including their moons
+tier5.thermal.padding.information=Required for Uranus, Neptune, Pluto and Eris including their moons
 
 #Space Suit Layers
 item.tier1_pressure_layer.name=Tier 1 Pressure Layer

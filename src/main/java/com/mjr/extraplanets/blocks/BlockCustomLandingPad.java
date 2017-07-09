@@ -157,6 +157,8 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier2.desc");
 		else if(meta == 1)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier3.desc");
+		else if(meta == 2)
+			return GCCoreUtil.translate(this.getUnlocalizedName() + ".powered.desc");
 		else
 			return "";
 	}
