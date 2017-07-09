@@ -778,6 +778,11 @@ item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings (WIP)
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots (WIP)
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots (WIP)
 
+tier1.space.suit.information=Required for Mercury, Ceres
+tier2.space.suit.information=Required for Jupiter
+tier3.space.suit.information=Required for Saturn, Uranus
+tier4.space.suit.information=Required for Neptune, Pluto, Eris
+
 item.tier3_thermal_helm.name=Tier 3 Termal Dolgulu Kask
 item.tier3_thermal_chestplate.name=Tier 3 Termal Dolgulu Zırh
 item.tier3_thermal_leggings.name=Tier 3 Termal Dolgulu Pantolon
