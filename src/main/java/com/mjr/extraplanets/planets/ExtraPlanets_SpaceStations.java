@@ -60,6 +60,7 @@ public class ExtraPlanets_SpaceStations {
 			MERCURY_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.MERCURY.getTierRequirement());
 			MERCURY_SPACE_STATION.setDimensionInfo(Config.MERCURY_SPACE_STATION_ID, Config.MERCURY_SPACE_STATION_STATIC_ID, WorldProviderMercuryOrbit.class);
 			MERCURY_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			MERCURY_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.VENUS_SPACE_STATION) {
 			VENUS_SPACE_STATION = new Satellite("space_station.venus").setParentBody(VenusModule.planetVenus);
@@ -69,6 +70,7 @@ public class ExtraPlanets_SpaceStations {
 			VENUS_SPACE_STATION.setTierRequired(VenusModule.planetVenus.getTierRequirement());
 			VENUS_SPACE_STATION.setDimensionInfo(Config.VENUS_SPACE_STATION_ID, Config.VENUS_SPACE_STATION_STATIC_ID, WorldProviderVenusOrbit.class);
 			VENUS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			VENUS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.CERES_SPACE_STATION && Config.CERES) {
 			CERES_SPACE_STATION = new Satellite("space_station.ceres").setParentBody(ExtraPlanets_Planets.CERES);
@@ -78,6 +80,7 @@ public class ExtraPlanets_SpaceStations {
 			CERES_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.CERES.getTierRequirement());
 			CERES_SPACE_STATION.setDimensionInfo(Config.CERES_SPACE_STATION_ID, Config.CERES_SPACE_STATION_STATIC_ID, WorldProviderCeresOrbit.class);
 			CERES_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			CERES_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.MARS_SPACE_STATION && MarsModule.planetMars != null) {
 			MARS_SPACE_STATION = new Satellite("space_station.mars").setParentBody(MarsModule.planetMars);
@@ -87,6 +90,7 @@ public class ExtraPlanets_SpaceStations {
 			MARS_SPACE_STATION.setTierRequired(MarsModule.planetMars.getTierRequirement());
 			MARS_SPACE_STATION.setDimensionInfo(Config.MARS_SPACE_STATION_ID, Config.MARS_SPACE_STATION_STATIC_ID, WorldProviderMarsOrbit.class);
 			MARS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			MARS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.JUPITER_SPACE_STATION && Config.JUPITER) {
 			JUPITER_SPACE_STATION = new Satellite("space_station.jupiter").setParentBody(ExtraPlanets_Planets.JUPITER);
@@ -96,6 +100,7 @@ public class ExtraPlanets_SpaceStations {
 			JUPITER_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.JUPITER.getTierRequirement());
 			JUPITER_SPACE_STATION.setDimensionInfo(Config.JUPITER_SPACE_STATION_ID, Config.JUPITER_SPACE_STATION_STATIC_ID, WorldProviderJupiterOrbit.class);
 			JUPITER_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			JUPITER_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.SATURN_SPACE_STATION && Config.SATURN) {
 			SATURN_SPACE_STATION = new Satellite("space_station.saturn").setParentBody(ExtraPlanets_Planets.SATURN);
@@ -105,6 +110,7 @@ public class ExtraPlanets_SpaceStations {
 			SATURN_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.SATURN.getTierRequirement());
 			SATURN_SPACE_STATION.setDimensionInfo(Config.SATURN_SPACE_STATION_ID, Config.SATURN_SPACE_STATION_STATIC_ID, WorldProviderSaturnOrbit.class);
 			SATURN_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			SATURN_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.URANUS_SPACE_STATION && Config.URANUS) {
 			URANUS_SPACE_STATION = new Satellite("space_station.uranus").setParentBody(ExtraPlanets_Planets.URANUS);
@@ -114,6 +120,7 @@ public class ExtraPlanets_SpaceStations {
 			URANUS_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.URANUS.getTierRequirement());
 			URANUS_SPACE_STATION.setDimensionInfo(Config.URANUS_SPACE_STATION_ID, Config.URANUS_SPACE_STATION_STATIC_ID, WorldProviderUranusOrbit.class);
 			URANUS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			URANUS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.NEPTUNE_SPACE_STATION && Config.NEPTUNE) {
 			NEPTUNE_SPACE_STATION = new Satellite("space_station.neptune").setParentBody(ExtraPlanets_Planets.NEPTUNE);
@@ -123,6 +130,7 @@ public class ExtraPlanets_SpaceStations {
 			NEPTUNE_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.NEPTUNE.getTierRequirement());
 			NEPTUNE_SPACE_STATION.setDimensionInfo(Config.NEPTUNE_SPACE_STATION_ID, Config.NEPTUNE_SPACE_STATION_STATIC_ID, WorldProviderNeptuneOrbit.class);
 			NEPTUNE_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			NEPTUNE_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.PLUTO_SPACE_STATION && Config.PLUTO) {
 			PLUTO_SPACE_STATION = new Satellite("space_station.pluto").setParentBody(ExtraPlanets_Planets.PLUTO);
@@ -132,6 +140,7 @@ public class ExtraPlanets_SpaceStations {
 			PLUTO_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.PLUTO.getTierRequirement());
 			PLUTO_SPACE_STATION.setDimensionInfo(Config.PLUTO_SPACE_STATION_ID, Config.PLUTO_SPACE_STATION_STATIC_ID, WorldProviderPlutoOrbit.class);
 			PLUTO_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			PLUTO_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.ERIS_SPACE_STATION && Config.ERIS) {
 			ERIS_SPACE_STATION = new Satellite("space_station.eris").setParentBody(ExtraPlanets_Planets.ERIS);
@@ -141,6 +150,7 @@ public class ExtraPlanets_SpaceStations {
 			ERIS_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.ERIS.getTierRequirement());
 			ERIS_SPACE_STATION.setDimensionInfo(Config.ERIS_SPACE_STATION_ID, Config.ERIS_SPACE_STATION_STATIC_ID, WorldProviderErisOrbit.class);
 			ERIS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			ERIS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.KEPLER22B_SPACE_STATION && Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B_SPACE_STATION = new Satellite("space_station.kepler22b").setParentBody(ExtraPlanets_Planets.KEPLER22B);
@@ -150,6 +160,7 @@ public class ExtraPlanets_SpaceStations {
 			KEPLER22B_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.KEPLER22B.getTierRequirement());
 			KEPLER22B_SPACE_STATION.setDimensionInfo(Config.KEPLER22B_SPACE_STATION_ID, Config.KEPLER22B_SPACE_STATION_STATIC_ID, WorldProviderKepler22bOrbit.class);
 			KEPLER22B_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			KEPLER22B_SPACE_STATION.addChecklistKeys("equipParachute");
 		}
 	}
 
