@@ -48,7 +48,7 @@ public class AdvancedRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	@Override
 	@SideOnly(Side.CLIENT)
-    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand){
+	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
 		final TileEntity te = worldIn.getTileEntity(pos);
 
 		if (te instanceof TileEntityAdvancedRefinery) {
@@ -78,7 +78,7 @@ public class AdvancedRefinery extends BlockAdvancedTile implements IShiftDescrip
 	}
 
 	@Override
-    public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ){
+	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		int metadata = getMetaFromState(world.getBlockState(pos));
 		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
 
@@ -118,8 +118,7 @@ public class AdvancedRefinery extends BlockAdvancedTile implements IShiftDescrip
 						}
 
 						var9.stackSize -= var13;
-						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13,
-								var9.getItemDamage()));
+						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13, var9.getItemDamage()));
 
 						if (var9.hasTagCompound()) {
 							var14.getEntityItem().setTagCompound(var9.getTagCompound().copy());

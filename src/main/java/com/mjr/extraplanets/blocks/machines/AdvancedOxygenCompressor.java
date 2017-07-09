@@ -74,7 +74,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-    public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ){
+	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		int metadata = getMetaFromState(world.getBlockState(pos));
 		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
 
@@ -89,7 +89,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-    public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ){
+	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		entityPlayer.openGui(ExtraPlanets.instance, -1, world, pos.getX(), pos.getY(), pos.getZ());
 		return true;
 	}
