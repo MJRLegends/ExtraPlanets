@@ -470,7 +470,7 @@ public class ExtraPlanets {
 
 	private void addDungeonLoot() {
 		if (Config.MERCURY)
-			GalacticraftRegistry.addDungeonLoot(3, new ItemStack(ExtraPlanets_Items.TIER_4_SCHEMATIC, 1, 0));
+			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.TIER_4_SCHEMATIC, 1, 0));
 		if (Config.JUPITER)
 			GalacticraftRegistry.addDungeonLoot(5, new ItemStack(ExtraPlanets_Items.TIER_5_SCHEMATIC, 1, 0));
 		if (Config.SATURN)
