@@ -15,6 +15,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.5.6 Beta Build
+*Fixed Tier 4 Schematic being added to the wrong GC loot table
+*Fixed missing texture in Pluto Sky Provider
+*Small fixes due to Updating to Latest GC API
+
+
 v0.5.5 Beta Build
 *Changed recipes to use ore dict on dyes used in recipes
 *Fixed issue #125
