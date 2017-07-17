@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
@@ -194,5 +195,11 @@ public class WorldProviderRhea extends CustomWorldProviderSpace implements IGala
 	public int getDungeonSpacing() {
 
 		return 0;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

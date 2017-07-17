@@ -4,6 +4,8 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
@@ -123,5 +125,10 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	@Override
 	public int getDungeonSpacing() {
 		return 800;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+        return RoomTreasure.MOONCHEST;
 	}
 }
