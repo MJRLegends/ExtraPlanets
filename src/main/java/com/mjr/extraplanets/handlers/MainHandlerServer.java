@@ -212,9 +212,13 @@ public class MainHandlerServer {
 				&& !(playerMP.inventory.armorInventory.get(2).getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory.get(3).getItem() instanceof IRadiationSuit)) {
 			damageModifer = 0.2;
 			doDamage = true;
-		} else if (playerMP.inventory.armorInventory.get(0).getItem() instanceof IRadiationSuit) {
+		} else if (playerMP.inventory.armorInventory.get(0).getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory.get(1).getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory.get(2).getItem() instanceof IRadiationSuit
+				&& playerMP.inventory.armorInventory.get(3).getItem() instanceof IRadiationSuit) {
 			doArmorCheck = true;
 			doDamage = false;
+		} else {
+			damageModifer = 0.2;
+			doDamage = true;
 		}
 		if (doArmorCheck) {
 			int helmetTier = ((IRadiationSuit) playerMP.inventory.armorInventory.get(0).getItem()).getArmorTier();
@@ -232,9 +236,9 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			if (stats.getRadiationLevel() >= 100)
+			if (stats.getRadiationLevel() >= 100) {
 				playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
-			else if (stats.getRadiationLevel() >= 0)
+			} else if (stats.getRadiationLevel() >= 0)
 				stats.setRadiationLevel(stats.getRadiationLevel() + (damageModifer * (radiationLevel / 10) / 6));
 			else
 				stats.setRadiationLevel(0);
