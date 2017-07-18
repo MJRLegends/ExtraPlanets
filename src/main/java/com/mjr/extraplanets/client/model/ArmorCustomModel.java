@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.client.model;
 
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -28,15 +29,16 @@ public abstract class ArmorCustomModel extends ModelBiped {
 
 	public abstract void partLeftLeg();
 
+	@Override
 	public void render(Entity entity, float x, float y, float z, float yaw, float pitch, float parTicks) {
 		super.render(entity, x, y, z, yaw, pitch, parTicks);
 		GL11.glPushMatrix();
-		if (color != -1) {
-			float red = (float) (color >> 16 & 255) / 255F;
-			float blue = (float) (color >> 8 & 255) / 255F;
-			float green = (float) (color & 255) / 255F;
-			GL11.glColor3f(red, blue, green);
-		}
+//		if (color != -1) {
+//			float red = (float) (color >> 16 & 255) / 255F;
+//			float blue = (float) (color >> 8 & 255) / 255F;
+//			float green = (float) (color & 255) / 255F;
+//			GL11.glColor3f(red, blue, green);
+//		}
 
 		pre();
 		float f6 = 2.0F;
@@ -121,7 +123,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glPopMatrix();
 		}
 		post();
-		GL11.glColor3f(1F, 1F, 1F);
+		//GL11.glColor3f(1F, 1F, 1F);
 		GL11.glPopMatrix();
 	}
 }

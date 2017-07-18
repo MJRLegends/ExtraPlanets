@@ -1,7 +1,10 @@
 package com.mjr.extraplanets.client.model;
 
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
+import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -28,6 +31,18 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 
 	public ArmorSpaceSuitModel(EntityEquipmentSlot armorSlot) {
 		partType = armorSlot;
+		updateModel();
+	}
+
+	@Override
+	public void pre() {
+		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		GlStateManager.shadeModel(GL11.GL_SMOOTH);
+		updateModel();
+	}
+
+	private void updateModel() {
 		if (armourModelHead == null) {
 			OBJModel model;
 			try {
@@ -42,7 +57,6 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 						DefaultVertexFormats.ITEM, spriteFunction);
 				armourModelBody = (OBJModel.OBJBakedModel) model.bake(
 						new OBJModel.OBJState(ImmutableList.of(
-								"right_boot",
 								"Amplifier",
 								"Amplifier2",
 								"Amplifier3",
@@ -52,33 +66,69 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 								"DecorationDetail1",
 								"DecorationDetail3",
 								"decorationpipe",
+								"GlassHelmet",
 								"Helix001",
 								"HydrogenPipe",
-								"HydrogenTank"), false),
+								"HydrogenTank",
+								"leftboot",
+								"leftsleeve",
+								"leftTrouserleg",
+								"Line001",
+								"NitrogenPipe",
+								"NitrogenTank",
+								"OxygenCapsule1",
+								"OxygenCapsule2",
+								"OxygenPipe",
+								"OxygenTank",
+								"Pipe1",
+								"Pipe2",
+								"Pipe3",
+								"Pipe4",
+								"Pipe5",
+								"Pipe6",
+								"Pipe7",
+								"Pipe8",
+								"Pipe9",
+								"Piston1Part1",
+								"Piston1Part2",
+								"Piston2Part1",
+								"Piston2Part2",
+								"Piston3Part1",
+								"Piston3Part2",
+								"Piston4Part1",
+								"Piston4Part2",
+								"rightboot",
+								"Rightsleeve",
+								"rightTrouserleg",
+								"SolarDectector",
+								"Spacebreatplate",
+								"SpaceHelmet1",
+								"SpacerAntenna1",
+								"SpacerAntenna2",
+								"SpacerAntenna4",
+								"Spring",
+								"Spring2",
+								"Valvepiston 2",
+								"Valvepiston1"), false),
 						DefaultVertexFormats.ITEM, spriteFunction);
 
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
-	}
-
-	@Override
-	public void pre() {
-		GL11.glEnable(GL11.GL_BLEND);
-		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		}		
 	}
 
 	@Override
 	public void post() {
 		GL11.glDisable(GL11.GL_BLEND);
+		RenderHelper.enableStandardItemLighting();
 	}
 
 	@Override
 	public void partHead() {
 		if (partType == EntityEquipmentSlot.HEAD) {
 			GL11.glTranslatef(0F, -1.5F, 0F);
-			ClientUtil.drawBakedModel(armourModelHead);
+			ClientUtil.drawBakedModelColored(armourModelHead, ColorUtil.to32BitColor(255,255,255,255));
 		}
 	}
 
@@ -86,7 +136,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partBody() {
 		if (partType == EntityEquipmentSlot.CHEST) {
 			GL11.glTranslatef(0F, -1.5F, 0F);
-			ClientUtil.drawBakedModel(armourModelBody);
+			ClientUtil.drawBakedModelColored(armourModelBody, ColorUtil.to32BitColor(255,255,255,255));
 		}
 	}
 

@@ -6,9 +6,7 @@ import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -20,7 +18,6 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
-import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
 
 public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor {
 	public String name;
@@ -76,7 +73,7 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	public boolean canBreathe(ItemStack helmetInSlot, EntityPlayer playerWearing, EnumGearType type) {
 		return true;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
@@ -84,10 +81,10 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier1.space.suit.information"));
 		}
 	}
-	
-    @SideOnly(Side.CLIENT)
-    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default)
-    {
-        return new ArmorSpaceSuitModel(armorSlot);
-    }
+
+	// @SideOnly(Side.CLIENT)
+	// public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default)
+	// {
+	// return new ArmorSpaceSuitModel(armorSlot);
+	// }
 }
