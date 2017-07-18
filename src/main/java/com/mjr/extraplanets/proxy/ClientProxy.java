@@ -277,9 +277,9 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.SOLAR_PANELS)
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
-		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad");
-		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad");
-		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad", "powered_charging_pad");
+		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
+		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
+		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad", "powered_charging_pad", "rocket_powered_charging_pad");
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
 			ClientUtilities.addExtraPlanetsVariants("advanced_oxygen_compressor", "advanced_oxygen_compressor", "advanced_oxygen_decompressor");
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
