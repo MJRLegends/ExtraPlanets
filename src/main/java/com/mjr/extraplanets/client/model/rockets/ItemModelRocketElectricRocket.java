@@ -42,10 +42,10 @@ public class ItemModelRocketElectricRocket extends ModelTransformWrapper
             mul.setRotation(rot);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setScale(0.25F);
+            mul.setScale(1.20F);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setTranslation(new Vector3f(-1.55F, -1.30F, 0.0F));
+            mul.setTranslation(new Vector3f(-0.45F, -0.50F, 0.0F));
             ret.mul(mul);
             mul.setIdentity();
             mul.rotY(Constants.halfPI);
@@ -109,16 +109,16 @@ public class ItemModelRocketElectricRocket extends ModelTransformWrapper
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
-            Vector3f trans = new Vector3f(6.5F, -8.4F, -1.2F);
+            Vector3f trans = new Vector3f(1.1F, -2.2F, 0.5F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
             mul.setIdentity();
-            Quat4f rot = TRSRTransformation.quatFromXYZDegrees(new Vector3f(75, 15, 0));
+            Quat4f rot = TRSRTransformation.quatFromXYZDegrees(new Vector3f(75, 15, -2));
             mul.setRotation(rot);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setScale(0.6F);
+            mul.setScale(3.0F);
             ret.mul(mul);
             mul.setIdentity();
             mul.rotX((float) (Math.PI / 3.0F));
@@ -146,7 +146,7 @@ public class ItemModelRocketElectricRocket extends ModelTransformWrapper
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
             mul.setIdentity();
-            mul.setScale(0.1F);
+            mul.setScale(0.4F);
             ret.mul(mul);
             return ret;
         }
