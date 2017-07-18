@@ -41,6 +41,7 @@ import com.mjr.extraplanets.items.rockets.Tier8Rocket;
 import com.mjr.extraplanets.items.rockets.Tier9Rocket;
 import com.mjr.extraplanets.items.schematics.SchematicMarsRover;
 import com.mjr.extraplanets.items.schematics.SchematicTier10;
+import com.mjr.extraplanets.items.schematics.SchematicTier10ElectricRocket;
 import com.mjr.extraplanets.items.schematics.SchematicTier4;
 import com.mjr.extraplanets.items.schematics.SchematicTier5;
 import com.mjr.extraplanets.items.schematics.SchematicTier6;
@@ -73,6 +74,7 @@ public class ExtraPlanets_Items {
 	public static Item TIER_8_SCHEMATIC;
 	public static Item TIER_9_SCHEMATIC;
 	public static Item TIER_10_SCHEMATIC;
+	public static Item TIER_10_ELECTRIC_ROCKET_SCHEMATIC;
 
 	public static Item TIER_4_NOSE_CONE;
 	public static Item TIER_5_NOSE_CONE;
@@ -267,6 +269,9 @@ public class ExtraPlanets_Items {
 			TIER_10_NOSE_CONE = new Tier10NoseCone("nose_cone_tier10");
 			TIER_10_ITEMS = new ItemTier10Items("tier10_items");
 			TIER_10_KEY = new ItemKeyT10("t10key");
+			if(Config.KEPLER22B){
+				TIER_10_ELECTRIC_ROCKET_SCHEMATIC = new SchematicTier10ElectricRocket("schematic_tier10_electric_rocket");
+			}
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			TIER_11_ITEMS = new ItemTier11Items("tier11_items");
@@ -360,8 +365,8 @@ public class ExtraPlanets_Items {
 		TIER_3_EQUIPMENT_KIT = new ItemBasicKit("tier3_kit", 3);
 		TIER_4_EQUIPMENT_KIT = new ItemBasicKit("tier4_kit", 4);
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
-
-		TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
+		if(Config.ERIS && Config.KEPLER22B)
+			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 	}
 
 	private static void registerItems() {
@@ -432,6 +437,9 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_10_NOSE_CONE, TIER_10_NOSE_CONE.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_10_ITEMS, TIER_10_ITEMS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_10_KEY, TIER_10_KEY.getUnlocalizedName().substring(5));
+			if(Config.KEPLER22B){
+				RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET_SCHEMATIC, TIER_10_ELECTRIC_ROCKET_SCHEMATIC.getUnlocalizedName().substring(5));
+			}
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			RegisterHelper.registerItem(TIER_11_ITEMS, TIER_11_ITEMS.getUnlocalizedName().substring(5));
@@ -524,8 +532,8 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-
-		RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
+		if(Config.ERIS && Config.KEPLER22B)
+			RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 	}
 
 	public static void OreDictionaryRegister() {
@@ -560,6 +568,7 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(TIER_11_ITEMS, 1, 2));
 			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(TIER_11_ITEMS, 1, 3));
 			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(TIER_11_ITEMS, 1, 4));
+			OreDictionary.registerOre("ingotPlatinum", new ItemStack(TIER_11_ITEMS, 1, 5));
 		}
 		OreDictionary.registerOre("ingotLead", new ItemStack(INGOT_LEAD));
 	}

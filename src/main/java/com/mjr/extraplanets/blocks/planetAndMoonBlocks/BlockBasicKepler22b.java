@@ -41,7 +41,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	public enum EnumBlockBasic implements IStringSerializable {
 		DIRT(0, "kepler22b_dirt"), STONE(1, "kepler22b_stone"), ORE_IRON(2, "kepler22b_ore_iron"), ORE_TIN(3, "kepler22b_ore_tin"), ORE_COPPER(4, "kepler22b_ore_copper"), ORE_DENSE_COAL(5, "kepler22b_ore_dense_coal"), ORE_BLUE_DIAMOND(6,
 				"kepler22b_ore_blue_diamond"), ORE_RED_DIAMOND(7, "kepler22b_ore_red_diamond"), ORE_PURPLE_DIAMOND(8, "kepler22b_ore_purple_diamond"), ORE_YELLOW_DIAMOND(9, "kepler22b_ore_yellow_diamond"), ORE_GREEN_DIAMOND(10,
-				"kepler22b_ore_green_diamond"), STONEBRICKS(11, "kepler22b_stonebricks"), COBBLESTONE(12, "kepler22b_cobblestone");
+				"kepler22b_ore_green_diamond"), STONEBRICKS(11, "kepler22b_stonebricks"), COBBLESTONE(12, "kepler22b_cobblestone"), ORE_PLATINUM(13, "keler22b_ore_platinum");
 
 		private final int meta;
 		private final String name;
@@ -87,7 +87,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 			return 6.0F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
 				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND
-				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_YELLOW_DIAMOND)
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_YELLOW_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PLATINUM)
 			return 3.0F;
 		return super.getExplosionResistance(world, pos, exploder, explosion);
 	}
@@ -99,7 +99,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 			return 0.5F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
 				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_GREEN_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PURPLE_DIAMOND
-				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_YELLOW_DIAMOND)
+				|| state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_YELLOW_DIAMOND || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PLATINUM)
 			return 5.0F;
 		else
 			return 1.5F;
@@ -141,6 +141,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		case 8:
 		case 9:
 		case 10:
+		case 13:
 			return true;
 		default:
 			return false;
@@ -214,6 +215,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		case 8:
 		case 9:
 		case 10:
+		case 13:
 			return EnumSortCategoryBlock.ORE;
 		case 11:
 			return EnumSortCategoryBlock.BRICKS;
