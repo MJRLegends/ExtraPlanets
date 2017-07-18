@@ -64,6 +64,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bM
 import com.mjr.extraplanets.client.handlers.KeyHandlerClient;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
+import com.mjr.extraplanets.client.model.rockets.ItemModelRocketElectricRocket;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT10;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT4;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT5;
@@ -87,6 +88,7 @@ import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCr
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossSaturn;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossUranus;
 import com.mjr.extraplanets.client.render.entities.projectiles.RenderSmallSnowBall;
+import com.mjr.extraplanets.client.render.entities.rockets.RenderElectricRocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier10Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier4Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier5Rocket;
@@ -118,6 +120,7 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -337,6 +340,7 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 		if (Config.ERIS)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
+		RenderingRegistry.registerEntityRenderingHandler(EntityElectricRocket.class, (RenderManager manager) -> new RenderElectricRocket(manager));
 		if (Config.CERES && Config.NUCLEAR_BOMB)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, (RenderManager manager) -> new RenderNuclearBombPrimed(manager));
 		if (Config.CERES && Config.FIRE_BOMB)
@@ -389,6 +393,10 @@ public class ClientProxy extends CommonProxy {
 			for (int i = 0; i < 5; ++i) {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
 			}
+		}
+		modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "electric_rocket", "inventory");
+		for (int i = 0; i < 5; ++i) {
+			ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, i, modelResourceLocation);
 		}
 		if (Config.MARS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
@@ -1055,7 +1063,7 @@ public class ClientProxy extends CommonProxy {
 		for (int i = 0; i < ItemBasicKit.names.length; i++) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, i, "tier5_kit" + ItemBasicKit.names[i]);
 		}
-		
+
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
 			for (int i = 0; i < ItemElectricParts.names.length; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, i, ItemElectricParts.names[i]);
@@ -1103,6 +1111,9 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004", "RocketEngine005",
 					"RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut006",
 					"RocketEnginePlut007"), ItemModelRocketT10.class, TRSRTransformation.identity());
+		ClientUtilities.replaceModelDefault(event, "electric_rocket", "electric_rocket.obj", ImmutableList.of("Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Cylinder007", "Cylinder008", "Cylinder009",
+				"Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001", "Line002", "Torus001", "Torus002",
+				"Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class, TRSRTransformation.identity());
 
 		if (Config.MARS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
@@ -1282,7 +1293,7 @@ public class ClientProxy extends CommonProxy {
 				return nitrogen_iceLocation;
 			}
 		});
-		
+
 		ModelResourceLocation liquid_hydrocarbonLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon", "fluid");
 		Item liquid_hydrocarbon = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
 		ModelBakery.registerItemVariants(liquid_hydrocarbon, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon"));

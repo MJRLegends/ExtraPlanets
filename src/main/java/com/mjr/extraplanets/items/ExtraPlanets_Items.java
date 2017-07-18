@@ -33,6 +33,7 @@ import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier6Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier7Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier8Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier9Items;
+import com.mjr.extraplanets.items.rockets.ElectricRocket;
 import com.mjr.extraplanets.items.rockets.Tier10Rocket;
 import com.mjr.extraplanets.items.rockets.Tier4Rocket;
 import com.mjr.extraplanets.items.rockets.Tier5Rocket;
@@ -363,7 +364,7 @@ public class ExtraPlanets_Items {
 		TIER_4_EQUIPMENT_KIT = new ItemBasicKit("tier4_kit", 4);
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
 
-		//TIER_10_ELECTRIC_ROCKET = new Tier10ElectricRocket("item_tier10_electric_rocket");
+		TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 	}
 
 	private static void registerItems() {
@@ -527,7 +528,7 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 
-		//RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerFluidContainer() {

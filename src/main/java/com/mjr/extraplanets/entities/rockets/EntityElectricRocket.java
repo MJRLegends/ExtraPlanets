@@ -30,15 +30,15 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
 
-public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
-	public EntityTier10ElectricRocket(World par1World) {
+public class EntityElectricRocket extends EntityElectricRocketBase {
+	public EntityElectricRocket(World par1World) {
 		super(par1World);
 		this.setSize(1.8F, 6F);
 		this.setPowerMaxCapacity(10000);
 		this.setCurrentPowerCapacity(10000);
 	}
 
-	public EntityTier10ElectricRocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
+	public EntityElectricRocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
 		super(par1World, x, y, z);
 		this.rocketType = rocketType;
 		this.cargoItems = new ItemStack[this.getSizeInventory()];
@@ -46,7 +46,7 @@ public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
 		this.setCurrentPowerCapacity(10000);
 	}
 
-	public EntityTier10ElectricRocket(World par1World, double x, double y, double z, boolean reversed, EnumRocketType rocketType, ItemStack[] inv) {
+	public EntityElectricRocket(World par1World, double x, double y, double z, boolean reversed, EnumRocketType rocketType, ItemStack[] inv) {
 		this(par1World, x, y, z, rocketType);
 		this.cargoItems = inv;
 		this.setPowerMaxCapacity(10000);

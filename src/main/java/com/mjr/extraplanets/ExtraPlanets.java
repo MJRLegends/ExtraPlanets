@@ -35,6 +35,7 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptu
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
@@ -344,7 +345,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
-		// RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10ElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
+		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
 		if (Config.MARS_ROVER)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
 		if (Config.VENUS_ROVER)

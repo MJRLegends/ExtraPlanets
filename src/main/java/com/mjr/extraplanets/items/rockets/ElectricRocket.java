@@ -26,11 +26,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.entities.rockets.EntityTier10ElectricRocket;
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
 import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
 
-public class Tier10ElectricRocket extends Item implements IHoldableItem {
-	public Tier10ElectricRocket(String assetName) {
+public class ElectricRocket extends Item implements IHoldableItem {
+	public ElectricRocket(String assetName) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -86,7 +86,7 @@ public class Tier10ElectricRocket extends Item implements IHoldableItem {
 					return EnumActionResult.FAIL;
 				}
 
-				final EntityTier10ElectricRocket spaceship = new EntityTier10ElectricRocket(worldIn, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
+				final EntityElectricRocket spaceship = new EntityElectricRocket(worldIn, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
 
 				spaceship.setPosition(spaceship.posX, spaceship.posY + spaceship.getOnPadYOffset(), spaceship.posZ);
 				worldIn.spawnEntityInWorld(spaceship);
@@ -143,7 +143,7 @@ public class Tier10ElectricRocket extends Item implements IHoldableItem {
 		}
 
 		if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("RocketFuel")) {
-			EntityTier10ElectricRocket rocket = new EntityTier10ElectricRocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
+			EntityElectricRocket rocket = new EntityElectricRocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
 			par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.getCurrentPowerCapacity());
 		}
 	}
