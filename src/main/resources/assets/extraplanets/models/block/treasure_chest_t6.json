@@ -1,7 +1,8 @@
 {
+"parent": "block/block",
 "textures": {
-    "particle": "extraplanets:blocks/parachest",
-    "texture": "extraplanets:model/treasure_t6"
+    "particle": "galacticraftplanets:blocks/treasure_chest_mars",    
+	"texture": "extraplanets:model/treasure_t6"
 },
 "elements": [ 
 {
