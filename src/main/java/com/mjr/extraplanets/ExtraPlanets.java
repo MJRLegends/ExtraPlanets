@@ -87,6 +87,7 @@ import com.mjr.extraplanets.schematic.SchematicTier6Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier7Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier9Rocket;
+import com.mjr.extraplanets.schematic.SchematicTierElectricRocket;
 import com.mjr.extraplanets.schematic.SchematicVenusRover;
 import com.mjr.extraplanets.util.RegisterHelper;
 
@@ -373,6 +374,8 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
 		if (Config.ERIS)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
+		if (Config.ERIS && Config.KEPLER22B)
+			SchematicRegistry.registerSchematicRecipe(new SchematicTierElectricRocket());
 		if (Config.MARS_ROVER)
 			SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
 		if (Config.VENUS_ROVER)
