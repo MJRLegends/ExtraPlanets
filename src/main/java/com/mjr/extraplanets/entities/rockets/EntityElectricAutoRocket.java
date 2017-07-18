@@ -3,12 +3,9 @@ package com.mjr.extraplanets.entities.rockets;
 import io.netty.buffer.ByteBuf;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.entity.IEntityNoisy;
-import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
-import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
 import micdoodle8.mods.galacticraft.core.Constants;
@@ -24,7 +21,6 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
-import micdoodle8.mods.galacticraft.core.util.RedstoneUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.block.Block;
 import net.minecraft.client.audio.ISound;
@@ -42,13 +38,10 @@ import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -57,15 +50,10 @@ import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredLandable;
 
 public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {
-	public int destinationFrequency = -1;
 	public BlockPos targetVec;
 	public int targetDimension;
 	protected ItemStack[] cargoItems;
 	private IPowerDock landingPad;
-	public EnumAutoLaunch autoLaunchSetting;
-	public int autoLaunchCountdown;
-	private BlockVec3 activeLaunchController;
-
 	public String statusMessage;
 	public String statusColour;
 	public int statusMessageCooldown;
@@ -104,128 +92,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.prevPosX = posX;
 		this.prevPosY = posY;
 		this.prevPosZ = posZ;
-	}
-
-	// Used for Cargo Rockets, client is asking the server what is the status
-	public boolean checkLaunchValidity() {
-		this.statusMessageCooldown = 40;
-
-		if (this.hasValidPower()) {
-			if (this.launchPhase == EnumLaunchPhase.UNIGNITED.ordinal() && !this.worldObj.isRemote) {
-				if (!this.setFrequency()) {
-					this.destinationFrequency = -1;
-					this.statusMessage = I18n.translateToLocal("gui.message.frequency.name") + "#" + I18n.translateToLocal("gui.message.not_set.name");
-					this.statusColour = "\u00a7c";
-					return false;
-				} else {
-					this.statusMessage = I18n.translateToLocal("gui.message.success.name");
-					this.statusColour = "\u00a7a";
-					return true;
-				}
-			}
-		} else {
-			this.destinationFrequency = -1;
-			this.statusMessage = I18n.translateToLocal("gui.message.not_enough.name") + "#" + I18n.translateToLocal("gui.message.fuel.name");
-			this.statusColour = "\u00a7c";
-			return false;
-		}
-
-		this.destinationFrequency = -1;
-		return false;
-	}
-
-	public boolean setFrequency() {
-		if (!GalacticraftCore.isPlanetsLoaded || controllerClass == null) {
-			return false;
-		}
-
-		if (this.activeLaunchController != null) {
-			TileEntity launchController = this.activeLaunchController.getTileEntity(this.worldObj);
-			if (controllerClass.isInstance(launchController)) {
-				try {
-					Boolean b = (Boolean) controllerClass.getMethod("validFrequency").invoke(launchController);
-
-					if (b != null && b) {
-						int controllerFrequency = controllerClass.getField("destFrequency").getInt(launchController);
-						boolean foundPad = this.setTarget(false, controllerFrequency);
-
-						if (foundPad) {
-							this.destinationFrequency = controllerFrequency;
-							GCLog.debug("Rocket under launch control: going to target frequency " + controllerFrequency);
-							return true;
-						}
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}
-
-		this.destinationFrequency = -1;
-		return false;
-	}
-
-	protected boolean setTarget(boolean doSet, int destFreq) {
-		// Server instance can sometimes be null on a single player game switched to LAN mode
-		if (FMLCommonHandler.instance().getMinecraftServerInstance() == null || FMLCommonHandler.instance().getMinecraftServerInstance().worldServers == null || !GalacticraftCore.isPlanetsLoaded || controllerClass == null) {
-			return false;
-		}
-		WorldServer[] servers = FMLCommonHandler.instance().getMinecraftServerInstance().worldServers;
-
-		for (int i = 0; i < servers.length; i++) {
-			WorldServer world = servers[i];
-
-			try {
-				for (TileEntity tile : new ArrayList<TileEntity>(world.loadedTileEntityList)) {
-					if (!controllerClass.isInstance(tile))
-						continue;
-
-					tile = world.getTileEntity(tile.getPos());
-					if (!controllerClass.isInstance(tile))
-						continue;
-
-					int controllerFrequency = controllerClass.getField("frequency").getInt(tile);
-
-					if (destFreq == controllerFrequency) {
-						boolean targetSet = false;
-
-						blockLoop: for (int x = -2; x <= 2; x++) {
-							for (int z = -2; z <= 2; z++) {
-								BlockPos pos = new BlockPos(tile.getPos().add(x, 0, z));
-								Block block = world.getBlockState(pos).getBlock();
-
-								if (block instanceof BlockLandingPadFull) {
-									if (doSet) {
-										this.targetVec = pos;
-									}
-
-									targetSet = true;
-									break blockLoop;
-								}
-							}
-						}
-
-						if (doSet) {
-							this.targetDimension = tile.getWorld().provider.getDimension();
-						}
-
-						if (!targetSet) {
-							if (doSet) {
-								this.targetVec = null;
-							}
-
-							return false;
-						} else {
-							return true;
-						}
-					}
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-
-		return false;
 	}
 
 	@Override
@@ -329,40 +195,8 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 				this.statusMessageCooldown--;
 			}
 
-			if (this.statusMessageCooldown == 0 && this.lastStatusMessageCooldown > 0 && this.statusValid) {
-				this.autoLaunch();
-			}
-
-			if (this.autoLaunchCountdown > 0 && (!(this instanceof EntityElectricRocketBase) || !this.getPassengers().isEmpty())) {
-				if (--this.autoLaunchCountdown <= 0) {
-					this.autoLaunch();
-				}
-			}
-
-			if (this.autoLaunchSetting == EnumAutoLaunch.ROCKET_IS_POWERED && this.currentPowerCapacity == this.powerMaxCapacity && (!(this instanceof EntityElectricRocketBase) || !this.getPassengers().isEmpty())) {
-				this.autoLaunch();
-			}
-
-			if (this.autoLaunchSetting == EnumAutoLaunch.INSTANT) {
-				if (this.autoLaunchCountdown == 0 && (!(this instanceof EntityElectricRocketBase) || !this.getPassengers().isEmpty())) {
-					this.autoLaunch();
-				}
-			}
-
-			if (this.autoLaunchSetting == EnumAutoLaunch.REDSTONE_SIGNAL) {
-				if (this.ticks % 11 == 0 && this.activeLaunchController != null) {
-					if (RedstoneUtil.isBlockReceivingRedstone(this.worldObj, this.activeLaunchController.toBlockPos())) {
-						this.autoLaunch();
-					}
-				}
-			}
-
 			if (this.launchPhase >= EnumLaunchPhase.LAUNCHED.ordinal()) {
 				this.setPad(null);
-			} else {
-				if (this.launchPhase == EnumLaunchPhase.UNIGNITED.ordinal() && this.landingPad != null && this.ticks % 17 == 0) {
-					this.updateControllerSettings(this.landingPad);
-				}
 			}
 
 			this.lastStatusMessageCooldown = this.statusMessageCooldown;
@@ -386,50 +220,11 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		return false;
 	}
 
-	// Server side only - this is a Launch Controlled ignition attempt
-	private void autoLaunch() {
-		if (this.autoLaunchSetting != null) {
-			if (this.activeLaunchController != null) {
-				TileEntity tile = this.activeLaunchController.getTileEntity(this.worldObj);
-
-				if (controllerClass.isInstance(tile)) {
-					Boolean autoLaunchEnabled = null;
-					try {
-						autoLaunchEnabled = controllerClass.getField("controlEnabled").getBoolean(tile);
-					} catch (Exception e) {
-					}
-
-					// if (autoLaunchEnabled != null && autoLaunchEnabled) {
-					// if (this.fuelTank.getFluidAmount() > this.fuelTank.getCapacity() * 2 / 5) TODO
-					// this.ignite();
-					// else
-					// this.failMessageInsufficientFuel();
-					// } else {
-					// this.failMessageLaunchController();
-					// }
-				}
-			}
-			this.autoLaunchSetting = null;
-
-			return;
-		} else {
-			this.ignite();
-		}
-	}
-
 	public boolean igniteWithResult() {
-		if (this.setFrequency()) {
+		if (this.isPlayerRocket()) {
 			super.ignite();
-			this.activeLaunchController = null;
 			return true;
 		} else {
-			if (this.isPlayerRocket()) {
-				super.ignite();
-				this.activeLaunchController = null;
-				return true;
-			}
-
-			this.activeLaunchController = null;
 			return false;
 		}
 	}
@@ -461,56 +256,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 				this.onRocketLand(pos);
 			}
-		}
-	}
-
-	public void updateControllerSettings(IPowerDock dock) {
-		HashSet<ILandingPadAttachable> connectedTiles = dock.getConnectedTiles();
-
-		try {
-			for (ILandingPadAttachable updatedTile : connectedTiles) {
-				if (controllerClass.isInstance(updatedTile)) {
-					// This includes a check for whether it has enough energy to run (if it doesn't, then a launch would not go to the destination frequency and the rocket would be lost!)
-					Boolean autoLaunchEnabled = controllerClass.getField("controlEnabled").getBoolean(updatedTile);
-
-					this.activeLaunchController = new BlockVec3((TileEntity) updatedTile);
-
-					if (autoLaunchEnabled) {
-						this.autoLaunchSetting = EnumAutoLaunch.values()[controllerClass.getField("launchDropdownSelection").getInt(updatedTile)];
-
-						switch (this.autoLaunchSetting) {
-						case INSTANT:
-							// Small countdown to give player a moment to exit the Launch Controller GUI
-							if (this.autoLaunchCountdown <= 0 || this.autoLaunchCountdown > 12)
-								this.autoLaunchCountdown = 12;
-							break;
-						// The other settings set time to count down AFTER player mounts rocket but BEFORE engine ignition
-						// TODO: if autoLaunchCountdown > 0 add some smoke (but not flame) particle effects or other pre-flight test feedback so the player knows something is happening
-						case TIME_10_SECONDS:
-							if (this.autoLaunchCountdown <= 0 || this.autoLaunchCountdown > 200)
-								this.autoLaunchCountdown = 200;
-							break;
-						case TIME_30_SECONDS:
-							if (this.autoLaunchCountdown <= 0 || this.autoLaunchCountdown > 600)
-								this.autoLaunchCountdown = 600;
-							break;
-						case TIME_1_MINUTE:
-							if (this.autoLaunchCountdown <= 0 || this.autoLaunchCountdown > 1200)
-								this.autoLaunchCountdown = 1200;
-							break;
-						default:
-							break;
-						}
-					} else {
-						// This LaunchController is out of power, disabled, invalid target or set not to launch
-						// No auto launch - but maybe another connectedTile will have some launch settings?
-						this.autoLaunchSetting = null;
-						this.autoLaunchCountdown = 0;
-					}
-				}
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
 	}
 
@@ -560,7 +305,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		if (landingNew && launchPhaseLast != EnumLaunchPhase.LANDING.ordinal()) {
 			this.rocketSoundUpdater = null; // Flag TickHandlerClient to restart it
 		}
-		this.destinationFrequency = buffer.readInt();
 
 		if (buffer.readBoolean()) {
 			this.targetVec = new BlockPos(buffer.readInt(), buffer.readInt(), buffer.readInt());
@@ -645,7 +389,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 		list.add(this.currentPowerCapacity);
 		list.add(this.launchPhase == EnumLaunchPhase.LANDING.ordinal());
-		list.add(this.destinationFrequency);
 		list.add(this.targetVec != null);
 
 		if (this.targetVec != null) {
@@ -834,11 +577,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 		nbt.setBoolean("WaitingForPlayer", this.getWaitForPlayer());
 		nbt.setBoolean("Landing", this.launchPhase == EnumLaunchPhase.LANDING.ordinal());
-		nbt.setInteger("AutoLaunchSetting", this.autoLaunchSetting != null ? this.autoLaunchSetting.getIndex() : -1);
-		nbt.setInteger("TimeUntilAutoLaunch", this.autoLaunchCountdown);
-		nbt.setInteger("DestinationFrequency", this.destinationFrequency);
-		if (this.activeLaunchController != null)
-			this.activeLaunchController.writeToNBT(nbt, "ALCat");
 	}
 
 	@Override
@@ -866,11 +604,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		}
 
 		this.setWaitForPlayer(nbt.getBoolean("WaitingForPlayer"));
-		int autoLaunchValue = nbt.getInteger("AutoLaunchSetting");
-		this.autoLaunchSetting = autoLaunchValue == -1 ? null : EnumAutoLaunch.values()[autoLaunchValue];
-		this.autoLaunchCountdown = nbt.getInteger("TimeUntilAutoLaunch");
-		this.destinationFrequency = nbt.getInteger("DestinationFrequency");
-		this.activeLaunchController = BlockVec3.readFromNBT(nbt, "ALCat");
 	}
 
 	@Override
@@ -884,9 +617,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 			if (!(this.launchPhase == EnumLaunchPhase.IGNITED.ordinal())) {
 				this.setLaunchPhase(EnumLaunchPhase.UNIGNITED);
 				this.targetVec = null;
-				if (GalacticraftCore.isPlanetsLoaded) {
-					this.updateControllerSettings(pad);
-				}
 			}
 		}
 	}
@@ -904,10 +634,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	@Override
 	public EnumCargoLoadingState addCargo(ItemStack stack, boolean doAdd) {
 		if (this.getSizeInventory() <= 3) {
-			if (this.autoLaunchSetting == EnumAutoLaunch.CARGO_IS_FULL) {
-				this.autoLaunch();
-			}
-
 			return EnumCargoLoadingState.NOINVENTORY;
 		}
 
@@ -940,9 +666,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					}
 
 					this.cargoItems[count].stackSize = origSize;
-					if (this.autoLaunchSetting == EnumAutoLaunch.CARGO_IS_FULL) {
-						this.autoLaunch();
-					}
 					return EnumCargoLoadingState.FULL;
 				}
 			}
@@ -960,11 +683,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 				return EnumCargoLoadingState.SUCCESS;
 			}
 		}
-
-		if (this.autoLaunchSetting == EnumAutoLaunch.CARGO_IS_FULL) {
-			this.autoLaunch();
-		}
-
 		return EnumCargoLoadingState.FULL;
 	}
 
@@ -987,11 +705,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 				return new RemovalResult(EnumCargoLoadingState.SUCCESS, resultStack);
 			}
 		}
-
-		if (this.autoLaunchSetting == EnumAutoLaunch.CARGO_IS_UNLOADED) {
-			this.autoLaunch();
-		}
-
 		return new RemovalResult(EnumCargoLoadingState.EMPTY, null);
 	}
 
@@ -1152,7 +865,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	public boolean inFlight() {
 		return this.getLaunched();
 	}
-	
+
 	/*
 	 * Power System Methods ------------------------------------------------------------------------------------------------------
 	 */
