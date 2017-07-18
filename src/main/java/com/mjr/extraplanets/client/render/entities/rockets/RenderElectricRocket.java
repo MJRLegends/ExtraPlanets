@@ -49,8 +49,8 @@ public class RenderElectricRocket extends Render<EntityElectricRocket> {
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9 + 180;
 		final float var25 = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * par9 + 45;
 
-		GL11.glTranslatef((float) (par2 + 0.1), (float) par4 + 1, (float) (par6 + 0));
-		GL11.glRotatef(180.0F - par8, 0.0F, 1.0F, 0.0F);
+		GL11.glTranslatef((float) (par2), (float) (par4 - 0.6), (float) (par6 + 0));
+		GL11.glRotatef(45.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 		GL11.glTranslatef(0.0F, entity.getRenderOffsetY(), 0.0F);
 		final float var28 = entity.rollAmplitude / 3 - par9;
