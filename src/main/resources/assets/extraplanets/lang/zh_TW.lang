@@ -666,6 +666,7 @@ item.schematic_tier7.name=NASA工作臺圖紙
 item.schematic_tier8.name=NASA工作臺圖紙
 item.schematic_tier9.name=NASA工作臺圖紙
 item.schematic_tier10.name=NASA工作臺圖紙
+item.schematic_tier10_electric_rocket.name=NASA Workbench Schematic
 
 schematic.mars.rover.name=Mars Rover
 schematic.venus.rover.name=Venus Rover
@@ -678,13 +679,14 @@ schematic.tier8.rocket.name=8階火箭
 schematic.tier9.rocket.name=9階火箭
 schematic.tier10.rocket.name=10階火箭
 
-schematic.rocketT4.name=4階火箭
-schematic.rocketT5.name=5階火箭
-schematic.rocketT6.name=6階火箭
-schematic.rocketT7.name=7階火箭
-schematic.rocketT8.name=8階火箭
-schematic.rocketT9.name=9階火箭
-schematic.rocketT10.name=10階火箭
+schematic.rocket.t4.name=4階火箭
+schematic.rocket.t5.name=5階火箭
+schematic.rocket.t6.name=6階火箭
+schematic.rocket.t7.name=7階火箭
+schematic.rocket.t8.name=8階火箭
+schematic.rocket.t9.name=9階火箭
+schematic.rocket.t10.name=10階火箭
+schematic.rocket.electric.t10.name=Electric Rocket
 
 #Batteries
 item.mercury_battery.name=汞電池
