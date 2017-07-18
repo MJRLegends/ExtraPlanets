@@ -329,7 +329,7 @@ tile.treasure_chest_t7.name=7阶宝箱
 tile.treasure_chest_t8.name=8阶宝箱
 tile.treasure_chest_t9.name=9阶宝箱
 tile.treasure_chest_t10.name=10阶宝箱
-tile.treasure_chest_t4.description=4阶宝箱会在金星地牢形成。当你击败了金星地牢BOSS后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t4.description=Tier 4 Treasure Chests will generate in Mercury Dungeons. They are unlockable after defeating the final boss.
 tile.treasure_chest_t5.description=5阶宝箱会在木星地牢形成。当你击败了木星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasure_chest_t6.description=6阶宝箱会在土星地牢形成。当你击败了土星地牢BOSS后，就能拿到钥匙来打开宝箱。
 tile.treasure_chest_t7.description=7阶宝箱会在天王星地牢形成。当你击败了天王星地牢BOSS后，就能拿到钥匙来打开宝箱。
@@ -356,6 +356,7 @@ tile.basic_solar_evaporation_chamber.name=Basic Solar Evaporation Chamber
 tile.advanced_launch_pad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advanced_launch_pad.poweredChargingPad.name=Vehicle Charging Pad
+tile.advanced_launch_pad.rocketPoweredChargingPad.name=Powered Rocket Launch Pad
 tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad
 tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets. To be placed in a 5x5 square
 tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets. To be placed in a 5x5 square
@@ -446,6 +447,7 @@ item.item_tier7_rocket.t7Rocket.name=7阶火箭
 item.item_tier8_rocket.t8Rocket.name=8阶火箭
 item.item_tier9_rocket.t9Rocket.name=9阶火箭
 item.item_tier10_rocket.t10Rocket.name=10阶火箭
+item.item_tier10_electric_rocket.t10Rocket.name=Tier 10 Electric Rocket
 
 #Vehicles
 item.mars_rover.name=Mars Rover

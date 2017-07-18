@@ -131,7 +131,6 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
