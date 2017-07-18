@@ -31,13 +31,13 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
 
-public class EntityTier10ElectricRocket extends EntityElectricRocketBase {
-	public EntityTier10ElectricRocket(World par1World) {
+public class EntityElectricRocket extends EntityElectricRocketBase {
+	public EntityElectricRocket(World par1World) {
 		super(par1World);
 		this.setSize(1.8F, 6F);
 	}
 
-	public EntityTier10ElectricRocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
+	public EntityElectricRocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
 		super(par1World, x, y, z);
 		this.rocketType = rocketType;
 		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);

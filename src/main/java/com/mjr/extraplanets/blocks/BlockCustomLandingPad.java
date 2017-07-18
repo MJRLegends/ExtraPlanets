@@ -83,7 +83,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 4; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
@@ -156,7 +156,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier2.desc");
 		else if (meta == 1)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier3.desc");
-		else if(meta == 2)
+		else if (meta == 2)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".powered.desc");
 		else
 			return "";
