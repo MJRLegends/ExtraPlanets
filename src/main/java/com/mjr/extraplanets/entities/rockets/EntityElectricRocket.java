@@ -141,7 +141,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-
+		
 		int i;
 
 		if (this.timeUntilLaunch >= 100) {
@@ -180,7 +180,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 			}
 
 			if (this.timeSinceLaunch % MathHelper.floor(2 * (1 / multiplier)) == 0) {
-				this.removePower(1);
+				this.removePower(35);
 				if (!this.hasValidPower()) {
 					this.stopRocketSound();
 				}
