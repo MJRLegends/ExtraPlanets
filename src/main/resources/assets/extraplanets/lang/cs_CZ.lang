@@ -666,6 +666,7 @@ item.schematic_tier7.name=NASA Workbench Schéma
 item.schematic_tier8.name=NASA Workbench Schéma
 item.schematic_tier9.name=NASA Workbench Schéma
 item.schematic_tier10.name=NASA Workbench Schéma
+item.schematic_tier10_electric_rocket.name=NASA Workbench Schematic
 
 schematic.mars.rover.name=Mars Rover
 schematic.venus.rover.name=Venus Rover
@@ -678,13 +679,14 @@ schematic.tier8.Rocket.name=Raketa typ 8
 schematic.tier9.Rocket.name=Raketa typ 9
 schematic.tier10.Rocket.name=Raketa typ 10
 
-schematic.RocketT4.name=Raketa typ 4
-schematic.RocketT5.name=Raketa typ 5
-schematic.RocketT6.name=Raketa typ 6
-schematic.RocketT7.name=Raketa typ 7
-schematic.RocketT8.name=Raketa typ 8
-schematic.RocketT9.name=Raketa typ 9
-schematic.RocketT10.name=Raketa typ 10
+schematic.rocket.t4.name=Raketa typ 4
+schematic.rocket.t5.name=Raketa typ 5
+schematic.rocket.t6.name=Raketa typ 6
+schematic.rocket.t7.name=Raketa typ 7
+schematic.rocket.t8.name=Raketa typ 8
+schematic.rocket.t9.name=Raketa typ 9
+schematic.rocket.t10.name=Raketa typ 10
+schematic.rocket.electric.t10.name=Electric Rocket
 
 #Batteries
 item.mercury_battery.name=Měděná baterie

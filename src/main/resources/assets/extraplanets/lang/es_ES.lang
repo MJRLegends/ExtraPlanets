@@ -665,6 +665,7 @@ item.schematic_tier7.name=Planos
 item.schematic_tier8.name=Planos
 item.schematic_tier9.name=Planos
 item.schematic_tier10.name=Planos
+item.schematic_tier10_electric_rocket.name=NASA Workbench Schematic
 
 schematic.mars.rover.name=Mars Rover
 schematic.venus.rover.name=Venus Rover
@@ -677,13 +678,14 @@ schematic.tier8.rocket.name=Cohete nivel 8
 schematic.tier9.rocket.name=Cohete nivel 9
 schematic.tier10.rocket.name=Cohete nivel 10
 
-schematic.rocketT4.name=Cohete nivel 4
-schematic.rocketT5.name=Cohete nivel 5
-schematic.rocketT6.name=Cohete nivel 6
-schematic.rocketT7.name=Cohete nivel 7
-schematic.rocketT8.name=Cohete nivel 8
-schematic.rocketT9.name=Cohete nivel 9
-schematic.rocketT10.name=Cohete nivel 10
+schematic.rocket.t4.name=Cohete nivel 4
+schematic.rocket.t5.name=Cohete nivel 5
+schematic.rocket.t6.name=Cohete nivel 6
+schematic.rocket.t7.name=Cohete nivel 7
+schematic.rocket.t8.name=Cohete nivel 8
+schematic.rocket.t9.name=Cohete nivel 9
+schematic.rocket.t10.name=Cohete nivel 10
+schematic.rocket.electric.t10.name=Electric Rocket
 
 #Batteries
 item.mercury_battery.name=Batería de mercurio

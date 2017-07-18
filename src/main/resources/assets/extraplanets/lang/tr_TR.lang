@@ -666,6 +666,7 @@ item.schematic_tier7.name=NASA Çalışma Masası Şematiği
 item.schematic_tier8.name=NASA Çalışma Masası Şematiği
 item.schematic_tier9.name=NASA Çalışma Masası Şematiği
 item.schematic_tier10.name=NASA Çalışma Masası Şematiği
+item.schematic_tier10_electric_rocket.name=NASA Workbench Schematic
 
 schematic.mars.rover.name=Mars Rover
 schematic.venus.rover.name=Venus Rover
@@ -678,13 +679,14 @@ schematic.tier8.rocket.name=Tier 8 Roketi
 schematic.tier9.rocket.name=Tier 9 Roketi
 schematic.tier10.rocket.name=Tier 10 Roketi
 
-schematic.rocketT4.name=Tier 4 Roketi
-schematic.rocketT5.name=Tier 5 Roketi
-schematic.rocketT6.name=Tier 6 Roketi
-schematic.rocketT7.name=Tier 7 Roketi
-schematic.rocketT8.name=Tier 8 Roketi
-schematic.rocketT9.name=Tier 9 Roketi
-schematic.rocketT10.name=Tier 10 Roketi
+schematic.rocket.t4.name=Tier 4 Roketi
+schematic.rocket.t5.name=Tier 5 Roketi
+schematic.rocket.t6.name=Tier 6 Roketi
+schematic.rocket.t7.name=Tier 7 Roketi
+schematic.rocket.t8.name=Tier 8 Roketi
+schematic.rocket.t9.name=Tier 9 Roketi
+schematic.rocket.t10.name=Tier 10 Roketi
+schematic.rocket.electric.t10.name=Electric Rocket
 
 #Batteries
 item.mercury_battery.name=Merkür Pil
