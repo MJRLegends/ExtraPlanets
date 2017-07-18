@@ -328,7 +328,7 @@ tile.treasure_chest_t7.name=Tier 7 Treasure Chest
 tile.treasure_chest_t8.name=Tier 8 Treasure Chest
 tile.treasure_chest_t9.name=Tier 9 Treasure Chest
 tile.treasure_chest_t10.name=Tier 10 Treasure Chest
-tile.treasure_chest_t4.description=Tier 4 Treasure Chests will generate in Venus Dungeons. They are unlockable after defeating the final boss.
+tile.treasure_chest_t4.description=Tier 4 Treasure Chests will generate in Mercury Dungeons. They are unlockable after defeating the final boss.
 tile.treasure_chest_t5.description=Tier 5 Treasure Chests will generate in Jupiter Dungeons. They are unlockable after defeating the final boss.
 tile.treasure_chest_t6.description=Tier 6 Treasure Chests will generate in Saturn Dungeons. They are unlockable after defeating the final boss.
 tile.treasure_chest_t7.description=Tier 7 Treasure Chests will generate in Uranus Dungeons. They are unlockable after defeating the final boss.
@@ -355,6 +355,7 @@ tile.basic_solar_evaporation_chamber.name=Basic Solar Evaporation Chamber
 tile.advanced_launch_pad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advanced_launch_pad.poweredChargingPad.name=Vehicle Charging Pad
+tile.advanced_launch_pad.rocketPoweredChargingPad.name=Powered Rocket Launch Pad
 tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad
 tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets. To be placed in a 5x5 square
 tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets. To be placed in a 5x5 square
@@ -445,6 +446,7 @@ item.item_tier7_rocket.t7Rocket.name=Tier 7 Rocket
 item.item_tier8_rocket.t8Rocket.name=Tier 8 Rocket
 item.item_tier9_rocket.t9Rocket.name=Tier 9 Rocket
 item.item_tier10_rocket.t10Rocket.name=Tier 10 Rocket
+item.item_tier10_electric_rocket.t10Rocket.name=Tier 10 Electric Rocket
 
 #Vehicles
 item.mars_rover.name=Mars Rover

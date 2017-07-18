@@ -327,7 +327,7 @@ tile.treasure_chest_t7.name=Cofre del tesoro nivel 7
 tile.treasure_chest_t8.name=Cofre del tesoro nivel 8
 tile.treasure_chest_t9.name=Cofre del tesoro nivel 9
 tile.treasure_chest_t10.name=Cofre del tesoro nivel 10
-tile.treasure_chest_t4.description=Los cofres del tesoro nivel 4 se generarán en las mazmorras de Venus. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t4.description=Tier 4 Treasure Chests will generate in Mercury Dungeons. They are unlockable after defeating the final boss.
 tile.treasure_chest_t5.description=Los cofres del tesoro nivel 5 se generarán en las mazmorras de Júpiter. Se desbloquean despues de matar al jefe final.
 tile.treasure_chest_t6.description=Los cofres del tesoro nivel 6 se generarán en las mazmorras de Saturno. Se desbloquean despues de matar al jefe final.
 tile.treasure_chest_t7.description=Los cofres del tesoro nivel 7 se generarán en las mazmorras de Urano. Se desbloquean despues de matar al jefe final.
@@ -354,6 +354,7 @@ tile.basic_solar_evaporation_chamber.name=Basic Solar Evaporation Chamber
 tile.advanced_launch_pad.tier2LandingPad.name=Tier 2 Launch Pad
 tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Launch Pad
 tile.advanced_launch_pad.poweredChargingPad.name=Vehicle Charging Pad
+tile.advanced_launch_pad.rocketPoweredChargingPad.name=Powered Rocket Launch Pad
 tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad
 tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets. To be placed in a 5x5 square
 tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets. To be placed in a 5x5 square
@@ -444,6 +445,7 @@ item.item_tier7_rocket.t7Rocket.name=Cohete nivel 7
 item.item_tier8_rocket.t8Rocket.name=Cohete nivel 8
 item.item_tier9_rocket.t9Rocket.name=Cohete nivel 9
 item.item_tier10_rocket.t10Rocket.name=Cohete nivel 10
+item.item_tier10_electric_rocket.t10Rocket.name=Tier 10 Electric Rocket
 
 #Vehicles
 item.mars_rover.name=Mars Rover
