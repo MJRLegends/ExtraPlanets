@@ -44,39 +44,39 @@ public class SlotSchematicTier10ElectricRocket extends Slot
 		case 1:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_NOSE_CONE;
 		case 2:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 3:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 4:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 5:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 6:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ROCKET;
 		case 7:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 8:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 9:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 10:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 6;
 		case 11:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ROCKET;
 		case 12:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 1;
 		case 13:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 2;
 		case 14:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 2;
 		case 15:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 0;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 0;
 		case 16:
 			return par1ItemStack.getItem() == ExtraPlanets_Items.ELECTRIC_PARTS && par1ItemStack.getItemDamage() == 1;
 		case 17:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 2;
 		case 18:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
+			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_11_ITEMS && par1ItemStack.getItemDamage() == 2;
 		case 19:
 			return true;
 		case 20:
