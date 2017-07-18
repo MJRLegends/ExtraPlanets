@@ -711,10 +711,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public boolean hasValidPower() {
-		if (this.launchPhase >= EnumLaunchPhase.LAUNCHED.ordinal())
-			return true;
-		else
-			return this.currentPowerCapacity == this.getPowerMaxCapacity();
+		return this.currentPowerCapacity <= (this.getPowerMaxCapacity() - ((10/100) * this.getPowerMaxCapacity()));
 	}
 
 	public void cancelLaunch() {
