@@ -876,6 +876,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 9));
 			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 10));
 			OreDictionary.registerOre("cobblestone", new ItemStack(KEPLER22B_BLOCKS, 1, 12));
+			OreDictionary.registerOre("orePlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 13));
 		}
 		if (Config.ORE_LEAD_GENERATION) {
 			OreDictionary.registerOre("oreLead", new ItemStack(ORE_LEAD, 1, 0));

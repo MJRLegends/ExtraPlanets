@@ -1,11 +1,13 @@
-package com.mjr.extraplanets.items.planetAndMoonItems;
+package com.mjr.extraplanets.items.schematics;
 
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
+import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -15,13 +17,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class ItemTier11Items extends Item {
-	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum" };
-
-	public ItemTier11Items(String assetName) {
+public class SchematicTier10ElectricRocket extends Item implements ISchematicItem, ISortableItem {
+	public SchematicTier10ElectricRocket(String assetName) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
+		this.setMaxStackSize(1);
 		this.setUnlocalizedName(assetName);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
@@ -33,19 +34,6 @@ public class ItemTier11Items extends Item {
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemStack) {
-		return this.getUnlocalizedName() + "." + ItemTier11Items.names[itemStack.getItemDamage()];
-	}
-
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
-		for (int i = 0; i < ItemTier11Items.names.length; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
-		}
-	}
-
-	@Override
 	public int getMetadata(int par1) {
 		return par1;
 	}
@@ -53,11 +41,13 @@ public class ItemTier11Items extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if (itemStack != null && itemStack.getItemDamage() == 3) {
-			if (player.worldObj.isRemote) {
-				list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
-			}
+		if (player.worldObj.isRemote) {
+			list.add(EnumColor.GREY + GCCoreUtil.translate("schematic.tier10.electric.rocket.name"));
 		}
 	}
 
+	@Override
+	public EnumSortCategoryItem getCategory(int meta) {
+		return EnumSortCategoryItem.SCHEMATIC;
+	}
 }
