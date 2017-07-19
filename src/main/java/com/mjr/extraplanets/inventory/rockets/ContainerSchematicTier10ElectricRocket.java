@@ -22,7 +22,7 @@ public class ContainerSchematicTier10ElectricRocket extends Container {
 
 	public ContainerSchematicTier10ElectricRocket(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
 		final int change = 27;
-		this.worldObj = par1InventoryPlayer.player.worldObj;
+		this.worldObj = par1InventoryPlayer.player.world;
 		this.addSlotToContainer(new SlotRocketBenchResult(par1InventoryPlayer.player, this.craftMatrix, this.craftResult, 0, 142, 18 + 69 + change));
 		int var6;
 		int var7;
@@ -99,73 +99,121 @@ public class ContainerSchematicTier10ElectricRocket extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
-		ItemStack var2 = null;
-		final Slot var3 = this.inventorySlots.get(par1);
+    public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1)
+    {
+        ItemStack var2 = ItemStack.EMPTY;
+        final Slot var3 = this.inventorySlots.get(par1);
 
-		if (var3 != null && var3.getHasStack()) {
-			final ItemStack var4 = var3.getStack();
-			var2 = var4.copy();
+        if (var3 != null && var3.getHasStack())
+        {
+            final ItemStack var4 = var3.getStack();
+            var2 = var4.copy();
 
-			boolean done = false;
-			if (par1 <= 21) {
-				if (!this.mergeItemStack(var4, 22, 58, false)) {
-					return null;
-				}
+            boolean done = false;
+            if (par1 <= 21)
+            {
+                if (!this.mergeItemStack(var4, 22, 58, false))
+                {
+                    return ItemStack.EMPTY;
+                }
 
-				var3.onSlotChange(var4, var2);
-			} else {
-				for (int i = 1; i < 19; i++) {
-					Slot testSlot = this.inventorySlots.get(i);
-					if (!testSlot.getHasStack() && testSlot.isItemValid(var2)) {
-						if (!this.mergeItemStack(var4, i, i + 1, false)) {
-							return null;
-						}
-						done = true;
-						break;
-					}
-				}
+                var3.onSlotChange(var4, var2);
+            }
+            else
+            {
+                boolean valid = false;
+                for (int i = 1; i < 19; i++)
+                {
+                    Slot testSlot = this.inventorySlots.get(i);
+                    if (!testSlot.getHasStack() && testSlot.isItemValid(var2))
+                    {
+                        valid = true;
+                        break;
+                    }
+                }
+                if (valid)
+                {
+                    if (!this.mergeOneItemTestValid(var4, 1, 19, false))
+                    {
+                        return ItemStack.EMPTY;
+                    }
+                }
+                else
+                {
+                    if (var2.getItem() == Item.getItemFromBlock(Blocks.CHEST))
+                    {
+                        if (!this.mergeOneItemTestValid(var4, 19, 22, false))
+                        {
+                            return ItemStack.EMPTY;
+                        }
+                    }
+                    else if (par1 >= 22 && par1 < 49)
+                    {
+                        if (!this.mergeItemStack(var4, 49, 58, false))
+                        {
+                            return ItemStack.EMPTY;
+                        }
+                    }
+                    else if (par1 >= 49 && par1 < 58)
+                    {
+                        if (!this.mergeItemStack(var4, 22, 49, false))
+                        {
+                            return ItemStack.EMPTY;
+                        }
+                    }
+                    else if (!this.mergeItemStack(var4, 22, 58, false))
+                    {
+                        return ItemStack.EMPTY;
+                    }
+                }
+            }
 
-				if (!done) {
-					if (var2.getItem() == Item.getItemFromBlock(Blocks.CHEST) && !this.inventorySlots.get(19).getHasStack()) {
-						if (!this.mergeItemStack(var4, 19, 20, false)) {
-							return null;
-						}
-					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.CHEST) && !this.inventorySlots.get(20).getHasStack()) {
-						if (!this.mergeItemStack(var4, 20, 21, false)) {
-							return null;
-						}
-					} else if (var2.getItem() == Item.getItemFromBlock(Blocks.CHEST) && !this.inventorySlots.get(21).getHasStack()) {
-						if (!this.mergeItemStack(var4, 21, 22, false)) {
-							return null;
-						}
-					} else if (par1 >= 22 && par1 < 49) {
-						if (!this.mergeItemStack(var4, 49, 58, false)) {
-							return null;
-						}
-					} else if (par1 >= 49 && par1 < 58) {
-						if (!this.mergeItemStack(var4, 22, 49, false)) {
-							return null;
-						}
-					} else if (!this.mergeItemStack(var4, 22, 58, false)) {
-						return null;
-					}
-				}
-			}
+            if (var4.isEmpty())
+            {
+                var3.putStack(ItemStack.EMPTY);
+            }
+            else
+            {
+                var3.onSlotChanged();
+            }
 
-			if (var4.stackSize == 0) {
-				var3.putStack((ItemStack) null);
-			} else {
-				var3.onSlotChanged();
-			}
+            if (var4.getCount() == var2.getCount())
+            {
+                return ItemStack.EMPTY;
+            }
 
-			if (var4.stackSize == var2.stackSize) {
-				return null;
-			}
+            var3.onTake(par1EntityPlayer, var4);
+        }
 
-			var3.onPickupFromSlot(par1EntityPlayer, var4);
-		}
+        return var2;
+    }
 
-		return var2;
-	}
+    protected boolean mergeOneItemTestValid(ItemStack par1ItemStack, int par2, int par3, boolean par4)
+    {
+        boolean flag1 = false;
+        if (!par1ItemStack.isEmpty())
+        {
+            Slot slot;
+            ItemStack slotStack;
+
+            for (int k = par2; k < par3; k++)
+            {
+                slot = this.inventorySlots.get(k);
+                slotStack = slot.getStack();
+
+                if (slotStack.isEmpty() && slot.isItemValid(par1ItemStack))
+                {
+                    ItemStack stackOneItem = par1ItemStack.copy();
+                    stackOneItem.setCount(1);
+                    par1ItemStack.shrink(1);
+                    slot.putStack(stackOneItem);
+                    slot.onSlotChanged();
+                    flag1 = true;
+                    break;
+                }
+            }
+        }
+
+        return flag1;
+    }
 }

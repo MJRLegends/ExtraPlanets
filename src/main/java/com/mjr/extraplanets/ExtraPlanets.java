@@ -50,6 +50,13 @@ import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
+import com.mjr.extraplanets.items.schematics.SchematicTier10;
+import com.mjr.extraplanets.items.schematics.SchematicTier4;
+import com.mjr.extraplanets.items.schematics.SchematicTier5;
+import com.mjr.extraplanets.items.schematics.SchematicTier6;
+import com.mjr.extraplanets.items.schematics.SchematicTier7;
+import com.mjr.extraplanets.items.schematics.SchematicTier8;
+import com.mjr.extraplanets.items.schematics.SchematicTier9;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
@@ -284,6 +291,9 @@ public class ExtraPlanets {
 		// Register Schematics Recipes
 		registerSchematicsRecipes();
 
+		// Register Schematics (For Handing Enities versions)
+		registerSchematicsItems();
+
 		// Register/Add Dungeon Loot
 		addDungeonLoot();
 
@@ -320,7 +330,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
-		if(Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
 		if (Config.MARS_ROVER)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
@@ -382,6 +392,16 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicVenusRover());
 	}
 
+	private void registerSchematicsItems() {
+		SchematicTier4.registerSchematicItems();
+		SchematicTier5.registerSchematicItems();
+		SchematicTier6.registerSchematicItems();
+		SchematicTier7.registerSchematicItems();
+		SchematicTier8.registerSchematicItems();
+		SchematicTier9.registerSchematicItems();
+		SchematicTier10.registerSchematicItems();
+	}
+
 	private void addDungeonLoot() {
 		if (Config.MERCURY)
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.TIER_4_SCHEMATIC, 1, 0));
@@ -397,7 +417,7 @@ public class ExtraPlanets {
 			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.TIER_9_SCHEMATIC, 1, 0));
 		if (Config.ERIS)
 			GalacticraftRegistry.addDungeonLoot(10, new ItemStack(ExtraPlanets_Items.TIER_10_SCHEMATIC, 1, 0));
-		if(Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B)
 			GalacticraftRegistry.addDungeonLoot(10, new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET_SCHEMATIC, 1, 0));
 		if (Config.MARS_ROVER)
 			GalacticraftRegistry.addDungeonLoot(1, new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC, 1, 0));
