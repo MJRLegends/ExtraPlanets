@@ -35,7 +35,7 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS) {
-			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_3.png";
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		} else {
 			return null;
 		}
