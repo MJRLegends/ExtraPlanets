@@ -144,6 +144,13 @@ import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier6Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier7Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier8Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier9Items;
+import com.mjr.extraplanets.items.schematics.SchematicTier10;
+import com.mjr.extraplanets.items.schematics.SchematicTier4;
+import com.mjr.extraplanets.items.schematics.SchematicTier5;
+import com.mjr.extraplanets.items.schematics.SchematicTier6;
+import com.mjr.extraplanets.items.schematics.SchematicTier7;
+import com.mjr.extraplanets.items.schematics.SchematicTier8;
+import com.mjr.extraplanets.items.schematics.SchematicTier9;
 import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
@@ -187,6 +194,9 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		MinecraftForge.EVENT_BUS.register(new MainHandlerClient());
+
+		// Register Schematics Textures (For Handing Enities versions)
+		registerSchematicsTextures();
 		super.postInit(event);
 	}
 
@@ -340,7 +350,7 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 		if (Config.ERIS)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
-		if(Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B)
 			RenderingRegistry.registerEntityRenderingHandler(EntityElectricRocket.class, (RenderManager manager) -> new RenderElectricRocket(manager));
 		if (Config.CERES && Config.NUCLEAR_BOMB)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, (RenderManager manager) -> new RenderNuclearBombPrimed(manager));
@@ -395,7 +405,7 @@ public class ClientProxy extends CommonProxy {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
 			}
 		}
-		if(Config.ERIS && Config.KEPLER22B){
+		if (Config.ERIS && Config.KEPLER22B) {
 			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "electric_rocket", "inventory");
 			for (int i = 0; i < 5; ++i) {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, i, modelResourceLocation);
@@ -1114,10 +1124,10 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004", "RocketEngine005",
 					"RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut006",
 					"RocketEnginePlut007"), ItemModelRocketT10.class, TRSRTransformation.identity());
-		if(Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B)
 			ClientUtilities.replaceModelDefault(event, "electric_rocket", "electric_rocket.obj", ImmutableList.of("Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Cylinder007", "Cylinder008", "Cylinder009",
-				"Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001", "Line002", "Torus001", "Torus002",
-				"Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class, TRSRTransformation.identity());
+					"Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001", "Line002", "Torus001", "Torus002",
+					"Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class, TRSRTransformation.identity());
 
 		if (Config.MARS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
@@ -1308,5 +1318,15 @@ public class ClientProxy extends CommonProxy {
 				return liquid_hydrocarbonLocation;
 			}
 		});
+	}
+
+	private void registerSchematicsTextures() {
+		SchematicTier4.registerTextures();
+		SchematicTier5.registerTextures();
+		SchematicTier6.registerTextures();
+		SchematicTier7.registerTextures();
+		SchematicTier8.registerTextures();
+		SchematicTier9.registerTextures();
+		SchematicTier10.registerTextures();
 	}
 }
