@@ -209,6 +209,7 @@ tile.kepler22b_flowers.green_maple_short_grass.name=Kepler 22b Green Short Grass
 tile.kepler22b_flowers.green_maple_med_grass.name=Kepler 22b Green Medium Grass
 tile.kepler22b_flowers.green_maple_tall_grass.name=Kepler 22b Green Tall Grass
 tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
+tile.kepler22b.ore_platinum.name=Kepler 22b Platinum Ore
 
 #Moon Blocks
 tile.callisto.surface.name=Roca Superficial de Calisto
@@ -759,6 +760,8 @@ item.green_diamond_helmet.name=Green Diamond Helmet
 item.green_diamond_chest.name=Green Diamond Chestplate
 item.green_diamond_legings.name=Green Diamond Leggings
 item.green_diamond_boots.name=Green Diamond Boots
+item.tier11_items.ingot_platinum.name=Platinum Ingot
+item.tier11_items.compressed_platinum.name=Compressed Platinum
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet (WIP)
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate (WIP)
