@@ -100,7 +100,7 @@ public class SchematicTier10 extends ItemHangingEntity implements ISchematicItem
 	 * Make sure the number of these will match the index values
 	 */
 	public static void registerSchematicItems() {
-		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.TIER_9_SCHEMATIC));
+		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.TIER_10_SCHEMATIC));
 	}
 
 	/**
@@ -108,6 +108,6 @@ public class SchematicTier10 extends ItemHangingEntity implements ISchematicItem
 	 */
 	@SideOnly(value = Side.CLIENT)
 	public static void registerTextures() {
-		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/tier9_schematic_rocket.png"));
+		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/tier10_schematic_rocket.png"));
 	}
 }
