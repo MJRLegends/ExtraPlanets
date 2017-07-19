@@ -12,6 +12,7 @@
 		"basictypekepler22b=kepler22b_ore_yellow_diamond": { "model": "extraplanets:kepler22b_ore_yellow_diamond_model" },
 		"basictypekepler22b=kepler22b_ore_green_diamond": { "model": "extraplanets:kepler22b_ore_green_diamond_model" },
 		"basictypekepler22b=kepler22b_stonebricks": { "model": "extraplanets:kepler22b_stonebricks_model" },
-		"basictypekepler22b=kepler22b_cobblestone": { "model": "extraplanets:kepler22b_cobblestone_model" }
+		"basictypekepler22b=kepler22b_cobblestone": { "model": "extraplanets:kepler22b_cobblestone_model" },
+		"basictypekepler22b=keler22b_ore_platinum": { "model": "extraplanets:keler22b_ore_platinum_model" }
     }
 }

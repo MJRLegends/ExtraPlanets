@@ -225,7 +225,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("eris", "eris_surface", "eris_sub_surface", "eris_stone", "eris_ore_iron", "eris_ore_tin", "eris_ore_copper", "eris_ore_dark_iron", "eris_dark_iron_block", "eris_stonebricks", "eris_dungeon_brick");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS)
 			ClientUtilities.addExtraPlanetsVariants("kepler22b", "kepler22b_dirt", "kepler22b_stone", "kepler22b_ore_iron", "kepler22b_ore_tin", "kepler22b_ore_copper", "kepler22b_ore_dense_coal", "kepler22b_ore_blue_diamond",
-					"kepler22b_ore_red_diamond", "kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone");
+					"kepler22b_ore_red_diamond", "kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone", "keler22b_ore_platinum");
 		if (Config.CALLISTO)
 			ClientUtilities.addExtraPlanetsVariants("callisto", "callisto_surface", "callisto_sub_surface", "callisto_stone", "callisto_ore_iron", "callisto_ore_tin", "callisto_ore_copper");
 		if (Config.DEIMOS)
@@ -265,7 +265,7 @@ public class ClientProxy extends CommonProxy {
 		if (Config.ERIS)
 			ClientUtilities.addExtraPlanetsVariants("tier10_items", "tier10engine", "tier10booster", "tier10fin", "tier10heavy_duty_plate", "compressed_dark_iron", "ingot_dark_iron");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			ClientUtilities.addExtraPlanetsVariants("tier11_items", "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond");
+			ClientUtilities.addExtraPlanetsVariants("tier11_items", "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum");
 			ClientUtilities.addExtraPlanetsVariants("kepler22b_planks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
 			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_logs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
 			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_logs2", "maple_green_log", "maple_brown_log");
