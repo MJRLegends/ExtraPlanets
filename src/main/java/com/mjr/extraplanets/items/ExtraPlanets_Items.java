@@ -268,8 +268,7 @@ public class ExtraPlanets_Items {
 			TIER_10_SCHEMATIC = new SchematicTier10("schematic_tier10");
 			TIER_10_NOSE_CONE = new Tier10NoseCone("nose_cone_tier10");
 			TIER_10_ITEMS = new ItemTier10Items("tier10_items");
-			TIER_10_KEY = new ItemKeyT10("t10key");
-			if(Config.KEPLER22B){
+			if (Config.KEPLER22B) {
 				TIER_10_ELECTRIC_ROCKET_SCHEMATIC = new SchematicTier10ElectricRocket("schematic_tier10_electric_rocket");
 			}
 		}
@@ -365,7 +364,7 @@ public class ExtraPlanets_Items {
 		TIER_3_EQUIPMENT_KIT = new ItemBasicKit("tier3_kit", 3);
 		TIER_4_EQUIPMENT_KIT = new ItemBasicKit("tier4_kit", 4);
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
-		if(Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 	}
 
@@ -437,7 +436,7 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_10_NOSE_CONE, TIER_10_NOSE_CONE.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_10_ITEMS, TIER_10_ITEMS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_10_KEY, TIER_10_KEY.getUnlocalizedName().substring(5));
-			if(Config.KEPLER22B){
+			if (Config.KEPLER22B) {
 				RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET_SCHEMATIC, TIER_10_ELECTRIC_ROCKET_SCHEMATIC.getUnlocalizedName().substring(5));
 			}
 		}
@@ -532,7 +531,7 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		if(Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B)
 			RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 	}
 
