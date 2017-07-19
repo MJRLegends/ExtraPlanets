@@ -114,7 +114,7 @@ public class ItemTier4ThermalPadding extends Item implements IItemThermal {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
 			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier4.thermal.padding.information"));
 		}

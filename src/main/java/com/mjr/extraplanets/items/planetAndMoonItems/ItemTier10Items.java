@@ -52,7 +52,7 @@ public class ItemTier10Items extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
 			if (player.worldObj.isRemote) {
 				list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));

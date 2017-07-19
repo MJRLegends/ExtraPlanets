@@ -76,7 +76,7 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
 			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier2.space.suit.information"));
 		}
