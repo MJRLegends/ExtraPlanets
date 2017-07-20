@@ -946,6 +946,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_SHOVEL);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_SWORD);
 		}
+		if (Config.ERIS && Config.KEPLER22B)
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET_SCHEMATIC);
 		if (Config.CUSTOM_APPLES) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.DIAMOND_APPLE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.IRON_APPLE);
