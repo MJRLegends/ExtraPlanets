@@ -8,6 +8,7 @@ public class RecipeCategories {
     public static final String ROCKET_T8_ID = "extraplanets.rocketT8";
     public static final String ROCKET_T9_ID = "extraplanets.rocketT9";
     public static final String ROCKET_T10_ID = "extraplanets.rocketT10";
+    public static final String ROCKET_T10_ELECTRIC_ID = "extraplanets.rocketT10Electric";
     public static final String MARS_ROVER_ID = "extraplanets.marsRover";
     public static final String VENUS_ROVER_ID = "extraplanets.venusRover";
     
