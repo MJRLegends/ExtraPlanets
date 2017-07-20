@@ -850,6 +850,8 @@ item.cannedfood.dehydratedSalmon.name=Salmones deshidratados
 item.cannedfood.dehydratedChicken.name=Pollos deshidratados
 item.cannedfood.dehydratedBeef.name=Filetes deshidratados
 
+currently.unused.name=Currently Unused!
+
 #Entities
 entity.ProjectileTNT.name=Projectíl de TNT
 

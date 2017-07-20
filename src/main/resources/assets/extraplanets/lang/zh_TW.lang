@@ -855,6 +855,8 @@ item.cannedfood.dehydratedSalmon.name=脫水鮭魚
 item.cannedfood.dehydratedChicken.name=脫水雞肉
 item.cannedfood.dehydratedBeef.name=脫水牛肉
 
+currently.unused.name=Currently Unused!
+
 #Entities
 entity.ProjectileTNT.name=飛行的TNT
 

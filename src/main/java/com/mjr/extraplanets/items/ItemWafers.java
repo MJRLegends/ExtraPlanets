@@ -3,11 +3,14 @@ package com.mjr.extraplanets.items;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 
 import com.mjr.extraplanets.Constants;
@@ -71,5 +74,15 @@ public class ItemWafers extends Item {
 	@Override
 	public int getMetadata(int par1) {
 		return par1;
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+		if (itemStack != null && itemStack.getItemDamage() == 0) {
+			if (player.worldObj.isRemote) {
+				list.add(EnumChatFormatting.RED + GCCoreUtil.translate("currently.unused.name"));
+			}
+		}
 	}
 }

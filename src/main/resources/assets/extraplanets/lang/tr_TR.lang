@@ -850,6 +850,8 @@ item.cannedfood.dehydratedSalmon.name=Susuz Somon Balığı
 item.cannedfood.dehydratedChicken.name=Susuz Tavuk
 item.cannedfood.dehydratedBeef.name=Susuz Biftek
 
+currently.unused.name=Currently Unused!
+
 #Entities
 entity.ProjectileTNT.name=TNT Efendisi
 

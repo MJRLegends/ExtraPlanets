@@ -851,6 +851,8 @@ item.cannedfood.dehydratedSalmon.name=Dehydrovaný losos
 item.cannedfood.dehydratedChicken.name=Dehydrované kuře
 item.cannedfood.dehydratedBeef.name=Dehydrované hovězí
 
+currently.unused.name=Currently Unused!
+
 #Entities
 entity.ProjectileTNT.name=Projectile TNT
 
