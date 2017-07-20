@@ -8,6 +8,17 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.8.1
+*Update tr_TR.lang (Thanks to kralrindo1)
+*Improved some of the Rocket Schematics
+*Updated lang files
+*Updated lang files (Removed  WIP tags from blocks and items since they are no longer needed)
+
+*Fixed Dark Iron Ingot and Block of Dark Iron recipes
+*Fixed Palladium Ingot and Block to Palladium recipes
+*Updated lang files (Added Tool tip to the Diamond Wafer)
+*Improvements for the Tier 1 & 2 Batteries textures
+
 v1.8.0
 *Fixed issue #122
 *Fixed wrong gravity of old style gravity on Iapetus*
@@ -15,6 +26,7 @@ v1.8.0
 *Added custom textures for most Tiered GC machines
 *Improvements to some item textures
 *Clean up
+
 
 v1.7.9
 *Refactor Config Categories to Constants class (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
