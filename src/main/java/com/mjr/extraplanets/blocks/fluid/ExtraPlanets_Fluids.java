@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.blocks.fluid;
 
+import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -54,7 +55,11 @@ public class ExtraPlanets_Fluids {
 
 	public static void init() {
 		initFluid();
-		registerBlocks();
+		try {
+			registerBlocks();
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private static void initFluid() {
@@ -113,17 +118,17 @@ public class ExtraPlanets_Fluids {
 		LIQUID_HYDROCARBON = new FluidBlockEP(LIQUID_HYDROCARBON_FLUID, "liquid_hydrocarbon", FROZEN_WATER_MATERIAL);
 	}
 
-	private static void registerBlocks() {
-		RegisterHelper.registerBlock(GLOWSTONE, "glowstone");
-		RegisterHelper.registerBlock(MAGMA, "magma");
-		RegisterHelper.registerBlock(NITROGEN, "nitrogen");
-		RegisterHelper.registerBlock(FROZEN_WATER, "frozen_water");
-		RegisterHelper.registerBlock(SALT, "salt");
-		RegisterHelper.registerBlock(RADIO_ACTIVE_WATER, "radioactive_water");
-		RegisterHelper.registerBlock(CLEAN_WATER, "clean_water");
-		RegisterHelper.registerBlock(INFECTED_WATER, "infected_water");
-		RegisterHelper.registerBlock(METHANE, "methane");
-		RegisterHelper.registerBlock(NITROGEN_ICE, "nitrogen_ice");
-		RegisterHelper.registerBlock(LIQUID_HYDROCARBON, "liquid_hydrocarbon");
+	private static void registerBlocks() throws NoSuchMethodException {
+		RegisterHelper.registerBlock(GLOWSTONE, ItemBlockGC.class, "glowstone");
+		RegisterHelper.registerBlock(MAGMA, ItemBlockGC.class, "magma");
+		RegisterHelper.registerBlock(NITROGEN, ItemBlockGC.class, "nitrogen");
+		RegisterHelper.registerBlock(FROZEN_WATER, ItemBlockGC.class, "frozen_water");
+		RegisterHelper.registerBlock(SALT, ItemBlockGC.class, "salt");
+		RegisterHelper.registerBlock(RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
+		RegisterHelper.registerBlock(CLEAN_WATER, ItemBlockGC.class, "clean_water");
+		RegisterHelper.registerBlock(INFECTED_WATER, ItemBlockGC.class, "infected_water");
+		RegisterHelper.registerBlock(METHANE, ItemBlockGC.class, "methane");
+		RegisterHelper.registerBlock(NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
+		RegisterHelper.registerBlock(LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
 	}
 }
