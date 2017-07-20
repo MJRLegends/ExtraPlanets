@@ -709,7 +709,6 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 8), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier10Items, 1, ingot) });
 
 			// Block to Dark Iron
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 9, ingot), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 8) });
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 9, ingot), new Object[] { new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 8) });
 
 			// Slab's & Stairs
