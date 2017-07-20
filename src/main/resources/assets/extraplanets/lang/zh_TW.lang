@@ -428,7 +428,7 @@ tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets. To be place
 tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets. To be placed in a 5x5 square
 tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
 tile.advancedLaunchPad.powered.desc=Used to power Mars Rover & Venus Rover Vehicles. To be placed in a 5x5 square
-tile.chargingBlock.name=Vehicle Charger (WIP)
+tile.chargingBlock.name=Vehicle Charger
 tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
 tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
 tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
@@ -482,8 +482,8 @@ tile.decorativeBlocks2.whiteBlock.name=White Block
 tile.decorativeBlocks2.redBlock.name=Red Block
 
 #Vehicles
-item.marsRover.name=Driveable Mars Rover (WIP)
-item.venusRover.name=Driveable Venus Rover (WIP)
+item.marsRover.name=Driveable Mars Rover
+item.venusRover.name=Driveable Venus Rover
 
 #Vehicle Electic Parts
 item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery

@@ -424,7 +424,7 @@ tile.advancedLaunchPad.tier2.desc=Kalkış Pedini 4 - 8 Numaralı Roketler İçi
 tile.advancedLaunchPad.tier3.desc=Kalkış Pedini 9 - 10 Numaralı Roketler İçin Kullanın. To be placed in a 5x5 square
 tile.advancedLaunchPad.poweredChargingPad.name=Araç Şarj Pedi
 tile.advancedLaunchPad.powered.desc=Used to power Mars Rover & Venus Rover Vehicles. To be placed in a 5x5 square
-tile.chargingBlock.name=Araç Şarj Cihazı (WIP)
+tile.chargingBlock.name=Araç Şarj Cihazı
 tile.advancedOxygenCompressor.0.name=Gelişmiş Oksijen Kompresörü
 tile.advancedOxygenCompressor.1.name=Gelişmiş Oksijen Açıcı
 tile.ultimateOxygenCompressor.0.name=En Yüksek Oksijen Kompresörü
@@ -478,8 +478,8 @@ tile.decorativeBlocks2.whiteBlock.name=Beyaz Blok
 tile.decorativeBlocks2.redBlock.name=Kırmızı Blok
 
 #Vehicles
-item.marsRover.name=Sürülebilir Mars Aracı (WIP)
-item.venusRover.name=Sürülebilir Venüs Aracı (WIP)
+item.marsRover.name=Sürülebilir Mars Aracı
+item.venusRover.name=Sürülebilir Venüs Aracı
 
 #Vehicle Electic Parts
 item.electricParts.batteryTier1.name=Tier 1 Araç Bataryası

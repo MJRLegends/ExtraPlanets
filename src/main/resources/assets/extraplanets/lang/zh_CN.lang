@@ -425,7 +425,7 @@ tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭. To be placed in a 5x
 tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭. To be placed in a 5x5 square
 tile.advancedLaunchPad.poweredChargingPad.name=载具充能台
 tile.advancedLaunchPad.powered.desc=Used to power Mars Rover & Venus Rover Vehicles. To be placed in a 5x5 square
-tile.chargingBlock.name=载具充能器 (WIP)
+tile.chargingBlock.name=载具充能器
 tile.advancedOxygenCompressor.0.name=高级氧气压缩机
 tile.advancedOxygenCompressor.1.name=高级氧气解压机
 tile.ultimateOxygenCompressor.0.name=终极氧气压缩机
@@ -479,8 +479,8 @@ tile.decorativeBlocks2.whiteBlock.name=白色方块
 tile.decorativeBlocks2.redBlock.name=红色方块
 
 #Vehicles
-item.marsRover.name=可驾驶火星漫步者 (WIP)
-item.venusRover.name=可驾驶金星漫步者 (WIP)
+item.marsRover.name=可驾驶火星漫步者
+item.venusRover.name=可驾驶金星漫步者
 
 #Vehicle Electic Parts
 item.electricParts.batteryTier1.name=1阶载具电池
