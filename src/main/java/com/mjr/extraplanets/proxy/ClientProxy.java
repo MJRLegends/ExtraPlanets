@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.proxy;
 
+import micdoodle8.mods.galacticraft.api.client.IItemMeshDefinitionCustom;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -289,7 +290,6 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("solar", "ultimate_solar", "hybrid_solar");
 		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
 		ClientUtilities.addExtraPlanetsVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
-		ClientUtilities.addExtraPlanetsVariants("block_multi", "tier2_rocket_pad", "tier3_rocket_pad", "powered_charging_pad", "rocket_powered_charging_pad");
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
 			ClientUtilities.addExtraPlanetsVariants("advanced_oxygen_compressor", "advanced_oxygen_compressor", "advanced_oxygen_decompressor");
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
@@ -1201,7 +1201,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation nitrogenLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen", "fluid");
 		Item nitrogen = Item.getItemFromBlock(ExtraPlanets_Fluids.NITROGEN);
 		ModelBakery.registerItemVariants(nitrogen, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen"));
-		ModelLoader.setCustomMeshDefinition(nitrogen, (ItemStack stack) -> nitrogenLocation);
+		ModelLoader.setCustomMeshDefinition(nitrogen, IItemMeshDefinitionCustom.create((ItemStack stack) -> nitrogenLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.NITROGEN, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1212,7 +1212,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation glowstoneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "glowstone", "fluid");
 		Item glowstone = Item.getItemFromBlock(ExtraPlanets_Fluids.GLOWSTONE);
 		ModelBakery.registerItemVariants(glowstone, new ResourceLocation(Constants.TEXTURE_PREFIX + "glowstone"));
-		ModelLoader.setCustomMeshDefinition(glowstone, (ItemStack stack) -> glowstoneLocation);
+		ModelLoader.setCustomMeshDefinition(glowstone, IItemMeshDefinitionCustom.create((ItemStack stack) -> glowstoneLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.GLOWSTONE, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1223,7 +1223,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation magmaLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "magma", "fluid");
 		Item magma = Item.getItemFromBlock(ExtraPlanets_Fluids.MAGMA);
 		ModelBakery.registerItemVariants(magma, new ResourceLocation(Constants.TEXTURE_PREFIX + "magma"));
-		ModelLoader.setCustomMeshDefinition(magma, (ItemStack stack) -> magmaLocation);
+		ModelLoader.setCustomMeshDefinition(magma, IItemMeshDefinitionCustom.create((ItemStack stack) -> magmaLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.MAGMA, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1234,7 +1234,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation frozen_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water", "fluid");
 		Item frozen_water = Item.getItemFromBlock(ExtraPlanets_Fluids.FROZEN_WATER);
 		ModelBakery.registerItemVariants(frozen_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water"));
-		ModelLoader.setCustomMeshDefinition(frozen_water, (ItemStack stack) -> frozen_waterLocation);
+		ModelLoader.setCustomMeshDefinition(frozen_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> frozen_waterLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.FROZEN_WATER, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1245,7 +1245,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation saltLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "salt", "fluid");
 		Item salt = Item.getItemFromBlock(ExtraPlanets_Fluids.SALT);
 		ModelBakery.registerItemVariants(salt, new ResourceLocation(Constants.TEXTURE_PREFIX + "salt"));
-		ModelLoader.setCustomMeshDefinition(salt, (ItemStack stack) -> saltLocation);
+		ModelLoader.setCustomMeshDefinition(salt, IItemMeshDefinitionCustom.create((ItemStack stack) -> saltLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.SALT, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1256,7 +1256,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation radioactive_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water", "fluid");
 		Item radioactive_water = Item.getItemFromBlock(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
 		ModelBakery.registerItemVariants(radioactive_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water"));
-		ModelLoader.setCustomMeshDefinition(radioactive_water, (ItemStack stack) -> radioactive_waterLocation);
+		ModelLoader.setCustomMeshDefinition(radioactive_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> radioactive_waterLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1267,7 +1267,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation clean_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "clean_water", "fluid");
 		Item clean_water = Item.getItemFromBlock(ExtraPlanets_Fluids.CLEAN_WATER);
 		ModelBakery.registerItemVariants(clean_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "clean_water"));
-		ModelLoader.setCustomMeshDefinition(clean_water, (ItemStack stack) -> clean_waterLocation);
+		ModelLoader.setCustomMeshDefinition(clean_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> clean_waterLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.CLEAN_WATER, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1278,7 +1278,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation infected_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "infected_water", "fluid");
 		Item infected_water = Item.getItemFromBlock(ExtraPlanets_Fluids.INFECTED_WATER);
 		ModelBakery.registerItemVariants(infected_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "infected_water"));
-		ModelLoader.setCustomMeshDefinition(infected_water, (ItemStack stack) -> infected_waterLocation);
+		ModelLoader.setCustomMeshDefinition(infected_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> infected_waterLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.INFECTED_WATER, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1289,7 +1289,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation methaneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "methane", "fluid");
 		Item methane = Item.getItemFromBlock(ExtraPlanets_Fluids.METHANE);
 		ModelBakery.registerItemVariants(methane, new ResourceLocation(Constants.TEXTURE_PREFIX + "methane"));
-		ModelLoader.setCustomMeshDefinition(methane, (ItemStack stack) -> methaneLocation);
+		ModelLoader.setCustomMeshDefinition(methane, IItemMeshDefinitionCustom.create((ItemStack stack) -> methaneLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.METHANE, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1300,7 +1300,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
 		Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.NITROGEN_ICE);
 		ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
-		ModelLoader.setCustomMeshDefinition(nitrogen_ice, (ItemStack stack) -> nitrogen_iceLocation);
+		ModelLoader.setCustomMeshDefinition(nitrogen_ice, IItemMeshDefinitionCustom.create((ItemStack stack) -> nitrogen_iceLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.NITROGEN_ICE, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -1311,7 +1311,7 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation liquid_hydrocarbonLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon", "fluid");
 		Item liquid_hydrocarbon = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
 		ModelBakery.registerItemVariants(liquid_hydrocarbon, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon"));
-		ModelLoader.setCustomMeshDefinition(liquid_hydrocarbon, (ItemStack stack) -> liquid_hydrocarbonLocation);
+		ModelLoader.setCustomMeshDefinition(liquid_hydrocarbon, IItemMeshDefinitionCustom.create((ItemStack stack) -> liquid_hydrocarbonLocation));
 		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.LIQUID_HYDROCARBON, new StateMapperBase() {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
