@@ -109,7 +109,7 @@ public class ItemTier3ThermalPadding extends Item implements IItemThermal {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumChatFormatting.BLUE + GCCoreUtil.translate("tier3.information"));
+			list.add(EnumChatFormatting.AQUA + GCCoreUtil.translate("tier3.information"));
 		}
 	}
 }
