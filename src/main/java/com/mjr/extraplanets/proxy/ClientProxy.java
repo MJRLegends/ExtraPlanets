@@ -622,9 +622,9 @@ public class ClientProxy extends CommonProxy {
 
 		// Machines
 		if (Config.REFINERY_ADVANCED)
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.REFINERY_ADVANCED, 0, "refinery");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.REFINERY_ADVANCED, 0, "advanced_refinery");
 		if (Config.REFINERY_ULTIMATE)
-			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.REFINERY_ULTIMATE, 0, "refinery");
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.REFINERY_ULTIMATE, 0, "ultimate_refinery");
 		if (Config.SOLAR_PANELS) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.SOLAR_PANEL, 0, "hybrid_solar");
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.SOLAR_PANEL, 4, "ultimate_solar");
