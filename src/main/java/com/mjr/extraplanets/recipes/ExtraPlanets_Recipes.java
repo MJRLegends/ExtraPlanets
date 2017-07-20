@@ -393,7 +393,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8) });
 
 			// Block to Palladium
-			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.ingotUranium, 9, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8) });
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 1, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 8) });
 
 			// Block to Red Gem
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 9, 8), new Object[] { new ItemStack(ExtraPlanets_Blocks.jupiterBlocks, 1, 11) });
