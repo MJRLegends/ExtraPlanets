@@ -418,8 +418,8 @@ tile.solarhybrid.description=This Solar Panel will work during the day and night
 tile.solarultimate.description=This Solar Panel will work during the day and night
 tile.advancedFuelLoader.name=Advanced Fuel Loader
 tile.ultimateFuelLoader.name=Ultimate Fuel Loader
-tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Launch Pad
-tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Launch Pad
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Rocket Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Rocket Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Launch Pad
 tile.advancedLaunchPad.tier2.desc=Used to launch Tier 4 - 8 Rockets. To be placed in a 5x5 square
 tile.advancedLaunchPad.tier3.desc=Used to launch Tier 9 - 10 Rockets. To be placed in a 5x5 square
@@ -823,9 +823,9 @@ item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
 item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
 item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
 
-tier2.information=Required for Venus and Mercury during day and the night
-tier3.information=Required for Jupiter and Saturn including their moons during day and the night
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons during day and the night
+tier2.information=Required for Venus and Mercury
+tier3.information=Required for Jupiter and Saturn including their moons
+tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
 
 item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
 item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth

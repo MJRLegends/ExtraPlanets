@@ -417,8 +417,8 @@ tile.solarhybrid.description=Este Panel Solar trabajará durante el día y la no
 tile.solarultimate.description=Este Panel Solar trabajará durante el día y la noche
 tile.advancedFuelLoader.name=Cargador de combustible avanzado
 tile.ultimateFuelLoader.name=Ultimate Fuel Loader
-tile.advancedLaunchPad.tier2LandingPad.name=Plataforma de lanzamiento nivel 2
-tile.advancedLaunchPad.tier3LandingPad.name=Plataforma de lanzamiento nivel 3
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Rocket Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Rocket Launch Pad nivel 3
 tile.advancedLaunchPadFull.name=Plataforma de lanzamiento nivel 2/3
 tile.advancedLaunchPad.tier2.desc=Usado para lanzar cohetes nivel 4 - 8. To be placed in a 5x5 square
 tile.advancedLaunchPad.tier3.desc=Usado para lanzar cohetes nivel 9 - 10. To be placed in a 5x5 square
@@ -821,9 +821,9 @@ item.tier4ThermalChestplate.name=Suéter térmico nivel 4
 item.tier4ThermalLeggings.name=Leggings térmicos nivel 4
 item.tier4ThermalBoots.name=Calcetines térmicos nivel 4
 
-tier2.information=Requerido para Venus y Mercurio durante el día y la noche
-tier3.information=Requerido para Júpiter y Saturno incluyendo sus lunas durante el día y la noche
-tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas durante el día y la noche
+tier2.information=Required for Venus and Mercury
+tier3.information=Required for Jupiter and Saturn including their moons
+tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
 
 item.thermalCloth.tier2ThermalCloth.name=Tela términca nivel 2
 item.thermalCloth.tier3ThermalCloth.name=Tela términca nivel 3

@@ -417,8 +417,8 @@ tile.solarhybrid.description=Hibrid Güneş Paneli, hem gece hemde gündüz ener
 tile.solarultimate.description=En Yüksek Güneş Paneli, hem gece hemde gündüz enerji toplar. Normal güneş panelinden daha fazla enerji üretir.
 tile.advancedFuelLoader.name=Gelişmiş Yakıt Yükleyici
 tile.ultimateFuelLoader.name=En Yüksek Yakıt Yükleyici
-tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Kalkış Pedi
-tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Kalkış Pedi
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Rocket Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Rocket Launch Pad
 tile.advancedLaunchPadFull.name=Tier 2/3 Kalkış Pedi
 tile.advancedLaunchPad.tier2.desc=Kalkış Pedini 4 - 8 Numaralı Roketler İçin Kullanın. To be placed in a 5x5 square
 tile.advancedLaunchPad.tier3.desc=Kalkış Pedini 9 - 10 Numaralı Roketler İçin Kullanın. To be placed in a 5x5 square
@@ -821,9 +821,9 @@ item.tier4ThermalChestplate.name=Tier 4 Termal Dolgulu Zırh
 item.tier4ThermalLeggings.name=Tier 4 Termal Dolgulu Pantolon
 item.tier4ThermalBoots.name=Tier 4 Termal Dolgulu Bot
 
-tier2.information=Venüs ve Merkür İçin Gerekli
-tier3.information=Jüpiter Ve Satürn İçin Gerekli
-tier4.information=Uranüs Neptün, Pluto ve Eris İçin Gerekli
+tier2.information=Required for Venus and Mercury
+tier3.information=Required for Jupiter and Saturn including their moons
+tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
 
 item.thermalCloth.tier2ThermalCloth.name=Tier 2 Termal İçlik
 item.thermalCloth.tier3ThermalCloth.name=Tier 3 Termal İçlik

@@ -418,8 +418,8 @@ tile.solarhybrid.description=混合型高级太阳能电池板能全天候工作
 tile.solarultimate.description=终极混合型高级太阳能电池板能全天候工作。
 tile.advancedFuelLoader.name=高级燃料注入器
 tile.ultimateFuelLoader.name=终极燃料注入器
-tile.advancedLaunchPad.tier2LandingPad.name=二阶火箭发射平台
-tile.advancedLaunchPad.tier3LandingPad.name=三阶火箭发射平台
+tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Rocket Launch Pad
+tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Rocket Launch Pad
 tile.advancedLaunchPadFull.name=二/三阶火箭发射平台
 tile.advancedLaunchPad.tier2.desc=用于发射4-8阶火箭. To be placed in a 5x5 square
 tile.advancedLaunchPad.tier3.desc=用于发射9-10阶火箭. To be placed in a 5x5 square
@@ -823,9 +823,9 @@ item.tier4ThermalChestplate.name=4阶热力充能胸甲
 item.tier4ThermalLeggings.name=4阶热力充能护腿
 item.tier4ThermalBoots.name=4阶热力充能靴
 
-tier2.information=在金星和水星度过一天的必需品
-tier3.information=在木星和土星以及它们的卫星度过一天的必需品
-tier4.information=在天王星，海王星，冥王星和阋神星以及它们的卫星度过一天的必需品
+tier2.information=Required for Venus and Mercury
+tier3.information=Required for Jupiter and Saturn including their moons
+tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
 
 item.thermalCloth.tier2ThermalCloth.name=2阶热力布匹
 item.thermalCloth.tier3ThermalCloth.name=3阶热力布匹
