@@ -15,6 +15,36 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.5.7
+*Removed Beta tag
+*Fixed possible crash when equiping the Space Suit
+*Work on adding a Tier 10 Electric Rocket (WIP)
+*Cleaned up Electric Rocket Prefab classes
+*Updated lang files
+*Fixed rendering issues with Tier 4 - 10 Treasure Chests
+*Added Powered Rocket Launch Pad
+*Improvements for the Tier 1 & 2 Batteries textures
+*Added Tier 10 Electric Rocket Schematic
+*Added Platinum Ore, Ingot and Compressed Platinum
+*Fixed a few recipes
+
+*Added Platinum Ore to Kepler22b's World gen
+*Added Electric Rocket recipe for the NASA Workbench
+*Changed NASA Workbench Schematic pages GUI name to lowercase
+*Added the ability to hand the Tier 4 - 10 Rocket Schematics on walls
+*Clean up/Fixing some Java IDE warnings
+*Changed the Electric Parts like Batteries & Wheels to be non stackable items
+*Improved some of the Rocket Schematics
+
+*Added Temp texture for Tier 1 - 4 Space Suits
+*Fixed issue #127
+*Added some missing textures/json files for items and blocks
+*Fixed possible crash when loading ExtraPlanets with other GC addons
+*Fixed last of the json model errors
+*Added Electric Rocket recipe support for JEI
+*Added recipe for Powered Rocket Launch Pad
+*Added temp texture for Tier 10 Electric Rocket Schematic
+
 v0.5.6 Beta Build
 *Fixed Tier 4 Schematic being added to the wrong GC loot table
 *Fixed missing texture in Pluto Sky Provider
