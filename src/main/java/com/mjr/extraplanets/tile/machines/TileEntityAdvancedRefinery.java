@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.tile.machines;
 
+import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
@@ -10,6 +11,7 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
 import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -241,14 +243,24 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.worldObj.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof AdvancedRefinery) {
+			return state.getValue(AdvancedRefinery.FACING);
+		}
+		return EnumFacing.NORTH;
+	}
+
+	private EnumFacing getOilPipe() {
+		return getFront().rotateY();
+	}
+
+	private EnumFacing getFuelPipe() {
+		return getFront().rotateYCCW();
 	}
 
 	@Override
 	public boolean canDrain(EnumFacing from, Fluid fluid) {
-		if (from.equals(getFront()))
-		// if (from.equals(EnumFacing.getFront((this.getBlockMetadata() + 2) ^ 1)))
-		{
+		if (from == getFuelPipe()) {
 			return this.fuelTank.getFluid() != null && this.fuelTank.getFluidAmount() > 0;
 		}
 
@@ -257,9 +269,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public FluidStack drain(EnumFacing from, FluidStack resource, boolean doDrain) {
-		if (from.equals(getFront()))
-		// if (from.equals(EnumFacing.getFront((this.getBlockMetadata() + 2) ^ 1)))
-		{
+		if (from == getFuelPipe() && resource != null) {
 			return this.fuelTank.drain(resource.amount, doDrain);
 		}
 
@@ -268,9 +278,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public FluidStack drain(EnumFacing from, int maxDrain, boolean doDrain) {
-		if (from.equals(getFront()))
-		// if (from.equals(EnumFacing.getFront((this.getBlockMetadata() + 2) ^ 1)))
-		{
+		if (from == getFuelPipe()) {
 			return this.drain(from, new FluidStack(GCFluids.fluidFuel, maxDrain), doDrain);
 		}
 
@@ -279,9 +287,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public boolean canFill(EnumFacing from, Fluid fluid) {
-		if (from.equals(getFront()))
-		// if (from.equals(EnumFacing.getFront(this.getBlockMetadata() + 2)))
-		{
+		if (from == getOilPipe()) {
 			return this.oilTank.getFluid() == null || this.oilTank.getFluidAmount() < this.oilTank.getCapacity();
 		}
 
@@ -292,22 +298,16 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	public int fill(EnumFacing from, FluidStack resource, boolean doFill) {
 		int used = 0;
 
-		if (from.equals(getFront()))
-		// if (from.equals(EnumFacing.getFront(this.getBlockMetadata() + 2)))
-		{
+		if (from == getOilPipe() && resource != null) {
 			final String liquidName = FluidRegistry.getFluidName(resource);
 
-			if (liquidName != null && liquidName.startsWith("oil")) {
+			if (liquidName != null && FluidUtil.testOil(liquidName)) {
 				if (liquidName.equals(GCFluids.fluidOil.getName())) {
 					used = this.oilTank.fill(resource, doFill);
 				} else {
 					used = this.oilTank.fill(new FluidStack(GCFluids.fluidOil, resource.amount), doFill);
 				}
 			}
-			// else if (liquidName != null && liquidName.equalsIgnoreCase("oilgc"))
-			// {
-			// used = this.oilTank.fill(new FluidStack(GalacticraftCore.fluidOil, resource.amount), doFill);
-			// }
 		}
 
 		return used;
@@ -317,13 +317,9 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	public FluidTankInfo[] getTankInfo(EnumFacing from) {
 		FluidTankInfo[] tankInfo = new FluidTankInfo[] {};
 
-		if (from.equals(getFront()))
-		// if (from == EnumFacing.getFront(this.getBlockMetadata() + 2))
-		{
+		if (from == getOilPipe()) {
 			tankInfo = new FluidTankInfo[] { new FluidTankInfo(this.oilTank) };
-		} else if (from.equals(getFront()))
-		// else if (from == EnumFacing.getFront((this.getBlockMetadata() + 2) ^ 1))
-		{
+		} else if (from == getFuelPipe()) {
 			tankInfo = new FluidTankInfo[] { new FluidTankInfo(this.fuelTank) };
 		}
 
@@ -333,5 +329,20 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	@Override
 	public ITextComponent getDisplayName() {
 		return null;
+	}
+
+	@Override
+	public boolean canConnect(EnumFacing direction, NetworkType type) {
+		if (direction == null) {
+			return false;
+		}
+		if (type == NetworkType.POWER) {
+			return direction == this.getElectricInputDirection();
+		}
+		if (type == NetworkType.FLUID) {
+			EnumFacing pipeSide = getFuelPipe();
+			return direction == pipeSide || direction == pipeSide.getOpposite();
+		}
+		return false;
 	}
 }

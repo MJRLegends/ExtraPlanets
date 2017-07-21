@@ -16,6 +16,7 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
 import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -244,7 +245,12 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public EnumFacing getFront() {
-		return this.worldObj.getBlockState(getPos()).getValue(AdvancedFuelLoader.FACING);
+        IBlockState state = this.worldObj.getBlockState(getPos()); 
+        if (state.getBlock() instanceof AdvancedFuelLoader)
+        {
+            return state.getValue(AdvancedFuelLoader.FACING).rotateY();
+        }
+        return EnumFacing.NORTH;
 	}
 
 	@Override

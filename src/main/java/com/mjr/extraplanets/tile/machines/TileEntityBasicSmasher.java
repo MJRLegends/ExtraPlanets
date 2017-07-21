@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithIn
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
@@ -15,7 +16,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
+import com.mjr.extraplanets.blocks.machines.BasicSmasher;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory implements ISidedInventory {
@@ -186,10 +187,14 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public EnumFacing getElectricInputDirection() {
 		return EnumFacing.UP;
 	}
-
+	
 	@Override
 	public EnumFacing getFront() {
-		return (this.worldObj.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof BasicSmasher) {
+			return state.getValue(BasicSmasher.FACING);
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override
