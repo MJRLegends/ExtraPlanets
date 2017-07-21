@@ -11,6 +11,9 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.jei.blocksmasher.BlockSmasherRecipeCategory;
 import com.mjr.extraplanets.jei.blocksmasher.BlockSmasherRecipeHandler;
 import com.mjr.extraplanets.jei.blocksmasher.BlockSmasherRecipeMaker;
+import com.mjr.extraplanets.jei.chemicalInjector.ChemicalInjectorRecipeCategory;
+import com.mjr.extraplanets.jei.chemicalInjector.ChemicalInjectorRecipeHandler;
+import com.mjr.extraplanets.jei.chemicalInjector.ChemicalInjectorRecipeMaker;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeCategory;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeHandler;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeMaker;
@@ -52,9 +55,11 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 		if (Config.JEI_SUPPORT) {
 			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
-					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper));
+					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper),
+					new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper));
 			registry.addRecipeHandlers(new Tier4RocketRecipeHandler(), new Tier5RocketRecipeHandler(), new Tier6RocketRecipeHandler(), new Tier7RocketRecipeHandler(), new Tier8RocketRecipeHandler(), new Tier9RocketRecipeHandler(),
-					new Tier10RocketRecipeHandler(), new MarsRoverRecipeHandler(), new VenusRoverRecipeHandler(), new BlockSmasherRecipeHandler(), new SolarEvaporationChamberRecipeHandler(), new Tier10ElectricRocketRecipeHandler());
+					new Tier10RocketRecipeHandler(), new MarsRoverRecipeHandler(), new VenusRoverRecipeHandler(), new BlockSmasherRecipeHandler(), new SolarEvaporationChamberRecipeHandler(), new Tier10ElectricRocketRecipeHandler(),
+					new ChemicalInjectorRecipeHandler());
 			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList());
@@ -67,6 +72,7 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(VenusRoverRecipeMaker.getRecipesList());
 			registry.addRecipes(BlockSmasherRecipeMaker.getRecipesList());
 			registry.addRecipes(SolarEvaporationChamberRecipeMaker.getRecipesList());
+			registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList());
 		}
 	}
 }
