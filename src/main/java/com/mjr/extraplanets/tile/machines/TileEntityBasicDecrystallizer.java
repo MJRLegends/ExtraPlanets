@@ -194,10 +194,11 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		return this.canProcess();
 	}
 
-	@Override
-	public EnumFacing getElectricInputDirection() {
-		return EnumFacing.UP;
-	}
+    @Override
+    public EnumFacing getElectricInputDirection()
+    {
+        return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
+    }
 
 	@Override
 	public EnumFacing getFront() {
