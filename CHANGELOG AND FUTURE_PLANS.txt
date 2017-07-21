@@ -15,6 +15,16 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.5.8
+*Added JEI Support for the Basic Chemical Injector Machine
+*Added JEI Support for the Basic Crystallizer Machine
+*Fix rare tileEntity-blockState issue
+*Made a few other fixes/tweaks to machines
+
+*Fix NPE with Solar Panels at high altitude
+*Fixes to Advanced and Ultimate Refinery GUI's/Inventorys
+*Changed the Electric Input Direction on Custom Machines
+
 v0.5.7
 *Removed Beta tag
 *Fixed possible crash when equiping the Space Suit
