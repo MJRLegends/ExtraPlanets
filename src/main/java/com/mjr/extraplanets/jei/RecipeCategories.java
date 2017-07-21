@@ -14,5 +14,6 @@ public class RecipeCategories {
     
     public static final String BLOCK_SMASHER_ID = "extraplanets.blockSmasher";
     public static final String CHEMAICAL_INJECTOR_ID = "extraplanets.chemicalInjector";
+    public static final String CRYSTALLIZER_ID = "extraplanets.crystallizer";
     public static final String SOLAR_EVAPORTATION_CHAMBER_ID = "extraplanets.solarEvaporationChamber";
 }
