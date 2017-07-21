@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -50,7 +51,7 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 		if (!this.world.isRemote) {
 			this.usingEnergy = false;
 			if (this.getOxygenStored() > 0 && this.hasEnoughEnergyToRun) {
-                ItemStack tank0 = this.stacks.get(0);
+				ItemStack tank0 = this.stacks.get(0);
 
 				if (tank0 != null) {
 					if (tank0.getItem() instanceof ItemOxygenTank && tank0.getItemDamage() > 0) {
@@ -64,22 +65,20 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 	}
 
 	@Override
-    public void readFromNBT(NBTTagCompound nbt)
-    {
-        super.readFromNBT(nbt);
+	public void readFromNBT(NBTTagCompound nbt) {
+		super.readFromNBT(nbt);
 
-        this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-        ItemStackHelper.loadAllItems(nbt, this.stacks);
-    }
+		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
+		ItemStackHelper.loadAllItems(nbt, this.stacks);
+	}
 
-    @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound nbt)
-    {
-        super.writeToNBT(nbt);
+	@Override
+	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
+		super.writeToNBT(nbt);
 
-        ItemStackHelper.saveAllItems(nbt, this.stacks);
-        return nbt;
-    }
+		ItemStackHelper.saveAllItems(nbt, this.stacks);
+		return nbt;
+	}
 
 	@Override
 	public int getSizeInventory() {
@@ -88,59 +87,50 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 
 	@Override
 	public ItemStack getStackInSlot(int par1) {
-        return this.stacks.get(par1);
+		return this.stacks.get(par1);
 	}
 
-    @Override
-    public ItemStack decrStackSize(int index, int count)
-    {
-        ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
+	@Override
+	public ItemStack decrStackSize(int index, int count) {
+		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
 
-        if (!itemstack.isEmpty())
-        {
-            this.markDirty();
-        }
+		if (!itemstack.isEmpty()) {
+			this.markDirty();
+		}
 
-        return itemstack;
-    }
+		return itemstack;
+	}
 
-    @Override
-    public ItemStack removeStackFromSlot(int index)
-    {
-        ItemStack oldstack = ItemStackHelper.getAndRemove(this.stacks, index);
-        if (!oldstack.isEmpty())
-        {
-        	this.markDirty();
-        }
-    	return oldstack;
-    }
+	@Override
+	public ItemStack removeStackFromSlot(int index) {
+		ItemStack oldstack = ItemStackHelper.getAndRemove(this.stacks, index);
+		if (!oldstack.isEmpty()) {
+			this.markDirty();
+		}
+		return oldstack;
+	}
 
-    @Override
-    public void setInventorySlotContents(int index, ItemStack stack)
-    {
-        this.stacks.set(index, stack);
+	@Override
+	public void setInventorySlotContents(int index, ItemStack stack) {
+		this.stacks.set(index, stack);
 
-        if (stack.getCount() > this.getInventoryStackLimit())
-        {
-            stack.setCount(this.getInventoryStackLimit());
-        }
+		if (stack.getCount() > this.getInventoryStackLimit()) {
+			stack.setCount(this.getInventoryStackLimit());
+		}
 
-        this.markDirty();
-    }
+		this.markDirty();
+	}
 
-    @Override
-    public boolean isEmpty()
-    {
-        for (ItemStack itemstack : this.stacks)
-        {
-            if (!itemstack.isEmpty())
-            {
-                return false;
-            }
-        }
+	@Override
+	public boolean isEmpty() {
+		for (ItemStack itemstack : this.stacks) {
+			if (!itemstack.isEmpty()) {
+				return false;
+			}
+		}
 
-        return true;
-    }
+		return true;
+	}
 
 	@Override
 	public String getName() {
@@ -229,7 +219,11 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.world.getBlockState(getPos()).getValue(AdvancedOxygenCompressor.FACING)).rotateY();
+		IBlockState state = this.world.getBlockState(getPos());
+		if (state.getBlock() instanceof AdvancedOxygenCompressor) {
+			return state.getValue(AdvancedOxygenCompressor.FACING).rotateY();
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override

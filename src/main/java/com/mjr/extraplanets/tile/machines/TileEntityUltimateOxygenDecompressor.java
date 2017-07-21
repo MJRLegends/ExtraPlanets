@@ -6,6 +6,7 @@ import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -230,11 +231,16 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
     {
         return this.usingEnergy;
     }
-
+    
     @Override
     public EnumFacing getFront()
     {
-        return this.world.getBlockState(getPos()).getValue(UltimateOxygenCompressor.FACING);
+        IBlockState state = this.world.getBlockState(getPos()); 
+        if (state.getBlock() instanceof UltimateOxygenCompressor)
+        {
+            return state.getValue(UltimateOxygenCompressor.FACING).rotateY();
+        }
+        return EnumFacing.NORTH;
     }
 
     @Override

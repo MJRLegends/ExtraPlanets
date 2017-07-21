@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithIn
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -18,7 +19,7 @@ import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
+import com.mjr.extraplanets.blocks.machines.BasicDecrystallizer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory {
@@ -201,9 +202,13 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.world.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
+		IBlockState state = this.world.getBlockState(getPos());
+		if (state.getBlock() instanceof BasicDecrystallizer) {
+			return state.getValue(BasicDecrystallizer.FACING);
+		}
+		return EnumFacing.NORTH;
 	}
-
+	
 	@Override
 	public ITextComponent getDisplayName() {
 		return null;
