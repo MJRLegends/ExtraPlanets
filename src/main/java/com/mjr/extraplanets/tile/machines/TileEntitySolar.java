@@ -127,7 +127,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 												break;
 											}
 										}
-
+										
 										if (valid) {
 											this.solarStrength++;
 										}
@@ -376,12 +376,11 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	}
 
 	public EnumFacing getFront() {
-        IBlockState state = this.worldObj.getBlockState(getPos()); 
-        if (state.getBlock() instanceof BlockSolar)
-        {
-            return state.getValue(BlockSolar.FACING);
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof BlockSolar) {
+			return state.getValue(BlockSolar.FACING);
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override

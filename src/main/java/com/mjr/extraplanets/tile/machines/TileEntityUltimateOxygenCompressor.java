@@ -246,6 +246,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
         }
         return EnumFacing.NORTH;
 	}
+	
 	@Override
 	public EnumFacing getElectricInputDirection() {
 		return getFront();
