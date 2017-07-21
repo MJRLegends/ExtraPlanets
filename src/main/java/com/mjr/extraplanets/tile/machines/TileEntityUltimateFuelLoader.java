@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -225,9 +226,14 @@ public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public EnumFacing getFront() {
-		return this.worldObj.getBlockState(getPos()).getValue(UltimateFuelLoader.FACING);
+        IBlockState state = this.worldObj.getBlockState(getPos()); 
+        if (state.getBlock() instanceof UltimateFuelLoader)
+        {
+            return state.getValue(UltimateFuelLoader.FACING).rotateY();
+        }
+        return EnumFacing.NORTH;
 	}
-
+	
 	@Override
 	public boolean canConnect(EnumFacing direction, NetworkType type) {
 		if (direction == null) {

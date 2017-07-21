@@ -5,6 +5,7 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithIn
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
@@ -15,7 +16,7 @@ import net.minecraft.util.IChatComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
+import com.mjr.extraplanets.blocks.machines.BasicSolarEvaporationChamber;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBlockWithInventory implements ISidedInventory {
@@ -191,7 +192,11 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.worldObj.getBlockState(getPos()).getValue(AdvancedRefinery.FACING));
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof BasicSolarEvaporationChamber) {
+			return state.getValue(BasicSolarEvaporationChamber.FACING);
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override

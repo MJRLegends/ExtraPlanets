@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -237,7 +238,12 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 
 	@Override
 	public EnumFacing getFront() {
-		return (this.worldObj.getBlockState(getPos()).getValue(AdvancedOxygenCompressor.FACING)).rotateY();
+        IBlockState state = this.worldObj.getBlockState(getPos()); 
+        if (state.getBlock() instanceof AdvancedOxygenCompressor)
+        {
+            return state.getValue(AdvancedOxygenCompressor.FACING).rotateY();
+        }
+        return EnumFacing.NORTH;
 	}
 
 	@Override
