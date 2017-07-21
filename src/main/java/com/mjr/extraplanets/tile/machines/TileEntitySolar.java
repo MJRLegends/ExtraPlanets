@@ -128,6 +128,11 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 												break;
 											}
 										}
+
+	                                    if (valid)
+	                                    {
+	                                        this.solarStrength++;
+	                                    }
 									}
 								} else {
 									boolean valid = true;
