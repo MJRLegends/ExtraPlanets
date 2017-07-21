@@ -3,9 +3,9 @@
     "textures": {
         "particle": "galacticraftcore:blocks/machine",
         "down": "galacticraftcore:blocks/machine",
-        "up": "galacticraftcore:blocks/machine_input",
+        "up": "galacticraftcore:blocks/machine",
         "north": "extraplanets:blocks/cystallizer_front",
-        "east": "galacticraftcore:blocks/machine",
+        "east": "galacticraftcore:blocks/machine_input",
         "south": "galacticraftcore:blocks/machine",
         "west": "galacticraftcore:blocks/machine"
     }
