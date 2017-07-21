@@ -120,18 +120,20 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 										boolean valid = true;
 
 										for (int y = this.getPos().getY() + 3; y < 256; y++) {
-											IBlockState block = this.world.getBlockState(new BlockPos(this.getPos().getX() + x, y, this.getPos().getZ() + z));
-
-											if (block.getBlock().isOpaqueCube(block)) {
-												valid = false;
+											IBlockState state = this.world.getBlockState(new BlockPos(this.getPos().getX() + x, y, this.getPos().getZ() + z));
+											if (state == null) {
 												break;
 											}
+											if (state.getBlock().isOpaqueCube(state))
+												valid = false;
+											break;
 										}
 
 										if (valid) {
 											this.solarStrength++;
 										}
 									}
+
 								} else {
 									boolean valid = true;
 
@@ -139,7 +141,9 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 									for (double d = 0.0D; d < distance; d++) {
 										BlockVec3 blockAt = blockVec.clone().translate((int) (d * sinA), (int) (d * cosA), 0);
 										IBlockState state = blockAt.getBlockState(this.world);
-
+										if (state == null) {
+											break;
+										}
 										if (state.getBlock().isOpaqueCube(state)) {
 											valid = false;
 											break;
@@ -357,12 +361,11 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	}
 
 	public EnumFacing getFront() {
-        IBlockState state = this.world.getBlockState(getPos()); 
-        if (state.getBlock() instanceof BlockSolar)
-        {
-            return state.getValue(BlockSolar.FACING);
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.world.getBlockState(getPos());
+		if (state.getBlock() instanceof BlockSolar) {
+			return state.getValue(BlockSolar.FACING);
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override
