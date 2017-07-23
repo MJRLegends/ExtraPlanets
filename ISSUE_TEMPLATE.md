@@ -10,7 +10,7 @@
 
 **Crash log/Log (if applicable):** [PASTEBIN. Do NOT copy and paste the log into the issue post itself.]
 
-**ScreenShots (if applicable):** 
+**Screenshots (if applicable):** 
 
 **Version of Mod Pack using:** [VERSION]
 
