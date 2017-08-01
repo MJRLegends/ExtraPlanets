@@ -15,7 +15,11 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
-v1.5.8
+v0.5.9
+*Fixed crash issue when disabling some config options
+*Fixes for 4 Custom Bosses
+
+v0.5.8
 *Added JEI Support for the Basic Chemical Injector Machine
 *Added JEI Support for the Basic Crystallizer Machine
 *Fix rare tileEntity-blockState issue
