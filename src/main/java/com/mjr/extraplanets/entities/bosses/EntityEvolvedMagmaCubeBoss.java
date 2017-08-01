@@ -5,7 +5,10 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
@@ -13,6 +16,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
 import net.minecraft.entity.ai.EntityMoveHelper;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -28,6 +32,7 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -47,7 +52,21 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		this.tasks.addTask(5, new EntityEvolvedMagmaCubeBoss.AISlimeHop(this));
 		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
 	}
+	
+    @Override
+    protected void onDeathUpdate()
+    {
+        super.onDeathUpdate();
 
+        if (!this.worldObj.isRemote)
+        {
+            if (this.deathTicks == 100)
+            {
+                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+            }
+        }
+    }
+    
 	@Override
 	protected void entityInit() {
 		super.entityInit();
@@ -541,6 +560,23 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 			}
 		}
 	}
+	
+    @Override
+    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
+    {
+        final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+        entityitem.motionY = -2.0D;
+        entityitem.setDefaultPickupDelay();
+        if (this.captureDrops)
+        {
+            this.capturedDrops.add(entityitem);
+        }
+        else
+        {
+            this.worldObj.spawnEntityInWorld(entityitem);
+        }
+        return entityitem;
+    }
 
 	@Override
 	public boolean canBreath() {

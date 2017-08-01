@@ -5,7 +5,10 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
@@ -13,6 +16,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
 import net.minecraft.entity.ai.EntityMoveHelper;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -28,16 +32,17 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntityBreathable{
+public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntityBreathable {
 	public float squishAmount;
 	public float squishFactor;
 	public float prevSquishFactor;
 	private boolean wasOnGround;
-	
+
 	public EntityEvolvedIceSlimeBoss(World worldIn) {
 		super(worldIn);
 		this.moveHelper = new EntityEvolvedIceSlimeBoss.SlimeMoveHelper(this);
@@ -46,6 +51,18 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 		this.tasks.addTask(3, new EntityEvolvedIceSlimeBoss.AISlimeFaceRandom(this));
 		this.tasks.addTask(5, new EntityEvolvedIceSlimeBoss.AISlimeHop(this));
 		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+	}
+
+	@Override
+	protected void onDeathUpdate() {
+		super.onDeathUpdate();
+
+		if (!this.worldObj.isRemote) {
+			if (this.deathTicks == 100) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+			}
+		}
 	}
 
 	@Override
@@ -184,8 +201,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/**
-	 * Applies a velocity to each of the entities pushing them away from each
-	 * other. Args: entity
+	 * Applies a velocity to each of the entities pushing them away from each other. Args: entity
 	 */
 	@Override
 	public void applyEntityCollision(Entity entityIn) {
@@ -217,16 +233,14 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/**
-	 * Indicates weather the slime is able to damage the player (based upon the
-	 * slime's size)
+	 * Indicates weather the slime is able to damage the player (based upon the slime's size)
 	 */
 	protected boolean canDamagePlayer() {
 		return this.getSlimeSize() > 1;
 	}
 
 	/**
-	 * Gets the amount of damage dealt to the player when "attacked" by the
-	 * slime.
+	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
 	 */
 	protected int getAttackStrength() {
 		return this.getSlimeSize();
@@ -254,8 +268,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/**
-	 * Checks if the entity's current position is a valid location to spawn this
-	 * entity.
+	 * Checks if the entity's current position is a valid location to spawn this entity.
 	 */
 	@Override
 	public boolean getCanSpawnHere() {
@@ -268,7 +281,8 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 			if (this.worldObj.getDifficulty() != EnumDifficulty.PEACEFUL) {
 				BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(blockpos);
 
-				if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor() && this.worldObj.getLightFromNeighbors(new BlockPos(this)) <= this.rand.nextInt(8)) {
+				if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor()
+						&& this.worldObj.getLightFromNeighbors(new BlockPos(this)) <= this.rand.nextInt(8)) {
 					return super.getCanSpawnHere();
 				}
 
@@ -290,8 +304,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/**
-	 * The speed it takes to move the entityliving's rotationPitch through the
-	 * faceEntity method. This is only currently use in wolves.
+	 * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	 */
 	@Override
 	public int getVerticalFaceSpeed() {
@@ -299,16 +312,14 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it jumps (based upon the
-	 * slime's size)
+	 * Returns true if the slime makes a sound when it jumps (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnJump() {
 		return this.getSlimeSize() > 0;
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it lands after a jump (based
-	 * upon the slime's size)
+	 * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnLand() {
 		return this.getSlimeSize() > 2;
@@ -324,9 +335,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/**
-	 * Called only once on an entity when first time spawned, via egg, mob
-	 * spawner, natural spawning etc, but not called when entity is reloaded
-	 * from nbt. Mainly used for initializing attributes and inventory
+	 * Called only once on an entity when first time spawned, via egg, mob spawner, natural spawning etc, but not called when entity is reloaded from nbt. Mainly used for initializing attributes and inventory
 	 */
 	@Override
 	public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata) {
@@ -335,20 +344,17 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/*
-	 * ======================================== FORGE START
-	 * =====================================
+	 * ======================================== FORGE START =====================================
 	 */
 	/**
-	 * Called when the slime spawns particles on landing, see onUpdate. Return
-	 * true to prevent the spawning of the default particles.
+	 * Called when the slime spawns particles on landing, see onUpdate. Return true to prevent the spawning of the default particles.
 	 */
 	protected boolean spawnCustomParticles() {
 		return false;
 	}
 
 	/*
-	 * ======================================== FORGE END
-	 * =====================================
+	 * ======================================== FORGE END =====================================
 	 */
 
 	static class AISlimeAttack extends EntityAIBase {
@@ -543,6 +549,19 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	@Override
+	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		entityitem.motionY = -2.0D;
+		entityitem.setDefaultPickupDelay();
+		if (this.captureDrops) {
+			this.capturedDrops.add(entityitem);
+		} else {
+			this.worldObj.spawnEntityInWorld(entityitem);
+		}
+		return entityitem;
+	}
+
+	@Override
 	public boolean canBreath() {
 		return true;
 	}
@@ -554,12 +573,12 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 
 	@Override
 	public void dropKey() {
-        this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_7_KEY, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_7_KEY, 1, 0), 0.5F);
 	}
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(7);
-        return stackList.get(rand.nextInt(stackList.size())).copy();
+		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 }
