@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.client.render.entities.bosses;
 
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -39,5 +41,6 @@ public class RenderEvolvedGhastBoss extends RenderLiving<EntityEvolvedGhastBoss>
         float f2 = (8.0F + 1.0F / f) / 2.0F;
         GlStateManager.scale(f2, f1, f2);
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+		GL11.glRotatef((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
     }
 }

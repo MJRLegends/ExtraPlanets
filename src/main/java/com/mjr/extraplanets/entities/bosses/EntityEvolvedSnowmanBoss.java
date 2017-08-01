@@ -5,8 +5,11 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityAIArrowAttack;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
+import micdoodle8.mods.galacticraft.core.network.PacketSimple;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -15,12 +18,14 @@ import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.BossInfo.Color;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -38,6 +43,21 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
 	}
+
+	
+    @Override
+    protected void onDeathUpdate()
+    {
+        super.onDeathUpdate();
+
+        if (!this.worldObj.isRemote)
+        {
+            if (this.deathTicks == 100)
+            {
+                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+            }
+        }
+    }
 
 	/**
 	 * Returns true if the newer Entity AI code should be run
@@ -100,6 +120,23 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.worldObj.spawnEntityInWorld(entitysnowball);
 	}
 
+    @Override
+    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
+    {
+        final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+        entityitem.motionY = -2.0D;
+        entityitem.setDefaultPickupDelay();
+        if (this.captureDrops)
+        {
+            this.capturedDrops.add(entityitem);
+        }
+        else
+        {
+            this.worldObj.spawnEntityInWorld(entityitem);
+        }
+        return entityitem;
+    }
+    
 	@Override
 	public boolean canBreath() {
 		return true;
