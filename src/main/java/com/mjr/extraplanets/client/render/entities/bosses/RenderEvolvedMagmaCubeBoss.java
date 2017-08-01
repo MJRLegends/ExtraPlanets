@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.client.render.entities.bosses;
 
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -39,5 +41,6 @@ public class RenderEvolvedMagmaCubeBoss extends RenderLiving<EntityEvolvedMagmaC
 		float f1 = 1.0F / (f + 1.0F);
 		float f2 = i;
 		GlStateManager.scale(f1 * f2, 1.0F / f1 * f2, f1 * f2);
+		GL11.glRotatef((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
 	}
 }
