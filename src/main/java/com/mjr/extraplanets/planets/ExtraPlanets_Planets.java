@@ -180,7 +180,10 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22b = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
-			kepler22b.setTierRequired(10);
+			if (Config.morePlanetsCompatibilityAdv)
+				kepler22b.setTierRequired(7);
+			else
+				kepler22b.setTierRequired(10);
 			kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			kepler22b.setPhaseShift(1.45F);
 			kepler22b.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
