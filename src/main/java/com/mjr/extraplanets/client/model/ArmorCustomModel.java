@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.model;
 
 import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

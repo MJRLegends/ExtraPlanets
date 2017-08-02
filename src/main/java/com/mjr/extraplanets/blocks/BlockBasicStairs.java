@@ -49,14 +49,14 @@ public class BlockBasicStairs extends BlockStairs implements ISortableBlock {
 
 	// Correct bugged version in vanilla Minecraft
 	private static BlockStairs.EnumShape getStairsShape(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-		EnumFacing enumfacing = (EnumFacing) state.getValue(FACING);
+		EnumFacing enumfacing = state.getValue(FACING);
 		IBlockState iblockstate = worldIn.getBlockState(pos.offset(enumfacing));
 		boolean top = state.getValue(HALF) == EnumHalf.TOP;
 
 		if (isBlockStairs(iblockstate) && state.getValue(HALF) == iblockstate.getValue(HALF)) {
-			EnumFacing enumfacing1 = (EnumFacing) iblockstate.getValue(FACING);
+			EnumFacing enumfacing1 = iblockstate.getValue(FACING);
 
-			if (enumfacing1.getAxis() != ((EnumFacing) state.getValue(FACING)).getAxis() && isDifferentStairs(state, worldIn, pos, enumfacing1.getOpposite())) {
+			if (enumfacing1.getAxis() != state.getValue(FACING).getAxis() && isDifferentStairs(state, worldIn, pos, enumfacing1.getOpposite())) {
 				if (enumfacing1 == (top ? enumfacing.rotateY() : enumfacing.rotateYCCW())) {
 					return BlockStairs.EnumShape.OUTER_LEFT;
 				}
@@ -68,9 +68,9 @@ public class BlockBasicStairs extends BlockStairs implements ISortableBlock {
 		IBlockState iblockstate1 = worldIn.getBlockState(pos.offset(enumfacing.getOpposite()));
 
 		if (isBlockStairs(iblockstate1) && state.getValue(HALF) == iblockstate1.getValue(HALF)) {
-			EnumFacing enumfacing2 = (EnumFacing) iblockstate1.getValue(FACING);
+			EnumFacing enumfacing2 = iblockstate1.getValue(FACING);
 
-			if (enumfacing2.getAxis() != ((EnumFacing) state.getValue(FACING)).getAxis() && isDifferentStairs(state, worldIn, pos, enumfacing2)) {
+			if (enumfacing2.getAxis() != state.getValue(FACING).getAxis() && isDifferentStairs(state, worldIn, pos, enumfacing2)) {
 				if (enumfacing2 == (top ? enumfacing.rotateY() : enumfacing.rotateYCCW())) {
 					return BlockStairs.EnumShape.INNER_LEFT;
 				}
