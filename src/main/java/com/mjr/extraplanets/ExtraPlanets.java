@@ -22,6 +22,7 @@ import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
@@ -346,7 +347,10 @@ public class ExtraPlanets {
 			else
 				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedMagmaCubeBoss.class, "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.JUPITER)
-			RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
+			if (Config.USE_DEFAULT_BOSSES)
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
+			else
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedFireBatBoss.class, "EvolvedFireBatBoss", 894731, 0);
 		if (Config.SATURN)
 
 			if (Config.USE_DEFAULT_BOSSES)

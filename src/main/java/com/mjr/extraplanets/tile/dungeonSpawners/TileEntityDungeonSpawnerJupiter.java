@@ -12,11 +12,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.SoundCategory;
 
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 
-public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner<EntityCreeperBossJupiter> {
+public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner<EntityEvolvedFireBatBoss> {
 	public TileEntityDungeonSpawnerJupiter() {
-		super(EntityCreeperBossJupiter.class);
+		super(EntityEvolvedFireBatBoss.class);
 	}
 
 	@Override
@@ -30,6 +30,6 @@ public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner<En
 
 	@Override
 	public void playSpawnSound(Entity entity) {
-        this.world.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
+		this.world.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
 	}
 }

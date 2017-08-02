@@ -77,6 +77,7 @@ import com.mjr.extraplanets.client.model.vehicles.ItemModelMarsRover;
 import com.mjr.extraplanets.client.model.vehicles.ItemModelVenusRover;
 import com.mjr.extraplanets.client.render.entities.RenderFireBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
+import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedFireBatBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedMagmaCubeBoss;
@@ -109,6 +110,7 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
@@ -314,7 +316,10 @@ public class ClientProxy extends CommonProxy {
 			else
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
 		if (Config.JUPITER)
-			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
+			if (Config.USE_DEFAULT_BOSSES)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedFireBatBoss.class, (RenderManager manager) -> new RenderEvolvedFireBatBoss(manager));
 		if (Config.SATURN)
 			if (Config.USE_DEFAULT_BOSSES)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, (RenderManager manager) -> new RenderCreeperBossSaturn(manager));
