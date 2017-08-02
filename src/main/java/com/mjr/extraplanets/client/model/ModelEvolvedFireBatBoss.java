@@ -7,8 +7,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
-
 @SideOnly(Side.CLIENT)
 public class ModelEvolvedFireBatBoss extends ModelBase {
 	private final ModelRenderer batHead;
@@ -70,33 +68,17 @@ public class ModelEvolvedFireBatBoss extends ModelBase {
 	 * can swing at most.
 	 */
 	public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
-		if (((EntityEvolvedFireBatBoss) entityIn).getIsBatHanging()) {
-			this.batHead.rotateAngleX = headPitch * 0.017453292F;
-			this.batHead.rotateAngleY = (float) Math.PI - netHeadYaw * 0.017453292F;
-			this.batHead.rotateAngleZ = (float) Math.PI;
-			this.batHead.setRotationPoint(0.0F, -2.0F, 0.0F);
-			this.batRightWing.setRotationPoint(-3.0F, 0.0F, 3.0F);
-			this.batLeftWing.setRotationPoint(3.0F, 0.0F, 3.0F);
-			this.batBody.rotateAngleX = (float) Math.PI;
-			this.batRightWing.rotateAngleX = -0.15707964F;
-			this.batRightWing.rotateAngleY = -((float) Math.PI * 2F / 5F);
-			this.batOuterRightWing.rotateAngleY = -1.7278761F;
-			this.batLeftWing.rotateAngleX = this.batRightWing.rotateAngleX;
-			this.batLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY;
-			this.batOuterLeftWing.rotateAngleY = -this.batOuterRightWing.rotateAngleY;
-		} else {
-			this.batHead.rotateAngleX = headPitch * 0.017453292F;
-			this.batHead.rotateAngleY = netHeadYaw * 0.017453292F;
-			this.batHead.rotateAngleZ = 0.0F;
-			this.batHead.setRotationPoint(0.0F, 0.0F, 0.0F);
-			this.batRightWing.setRotationPoint(0.0F, 0.0F, 0.0F);
-			this.batLeftWing.setRotationPoint(0.0F, 0.0F, 0.0F);
-			this.batBody.rotateAngleX = ((float) Math.PI / 4F) + MathHelper.cos(ageInTicks * 0.1F) * 0.15F;
-			this.batBody.rotateAngleY = 0.0F;
-			this.batRightWing.rotateAngleY = MathHelper.cos(ageInTicks * 1.3F) * (float) Math.PI * 0.25F;
-			this.batLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY;
-			this.batOuterRightWing.rotateAngleY = this.batRightWing.rotateAngleY * 0.5F;
-			this.batOuterLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY * 0.5F;
-		}
+		this.batHead.rotateAngleX = headPitch * 0.017453292F;
+		this.batHead.rotateAngleY = netHeadYaw * 0.017453292F;
+		this.batHead.rotateAngleZ = 0.0F;
+		this.batHead.setRotationPoint(0.0F, 0.0F, 0.0F);
+		this.batRightWing.setRotationPoint(0.0F, 0.0F, 0.0F);
+		this.batLeftWing.setRotationPoint(0.0F, 0.0F, 0.0F);
+		this.batBody.rotateAngleX = ((float) Math.PI / 4F) + MathHelper.cos(ageInTicks * 0.1F) * 0.15F;
+		this.batBody.rotateAngleY = 0.0F;
+		this.batRightWing.rotateAngleY = MathHelper.cos(ageInTicks * 1.3F) * (float) Math.PI * 0.25F;
+		this.batLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY;
+		this.batOuterRightWing.rotateAngleY = this.batRightWing.rotateAngleY * 0.5F;
+		this.batOuterLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY * 0.5F;
 	}
 }
