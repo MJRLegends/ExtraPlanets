@@ -13,7 +13,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
@@ -95,7 +94,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 		}
 
 		this.onChunkProvide(chunkX, chunkX, chunkprimer);
-		//this.createCraters(chunkX, chunkX, chunkprimer);
+		// this.createCraters(chunkX, chunkX, chunkprimer);
 
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
 		byte[] abyte = chunk.getBiomeArray();
@@ -201,10 +200,9 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.stoneBlock);
 								} else if (i2 * 8 + j2 == (this.seaLevel - 1) && this.seaIceLayer) {
 									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, Blocks.ICE.getDefaultState());
+								} else if (i2 * 8 + j2 < (this.seaLevel - 1)) {
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.waterBlock);
 								}
-								 else if (i2 * 8 + j2 < (this.seaLevel - 1)) {
-										p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.waterBlock);
-									}
 							}
 
 							d10 += d12;
@@ -338,21 +336,19 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	}
 
 	@Override
-	public void populate(int chunkX, int chunkZ) {
+	public void populate(int x, int z) {
 		BlockFalling.fallInstantly = true;
-		int x = chunkX * 16;
-		int z = chunkZ * 16;
-		BlockPos pos = new BlockPos(x, 0, z);
-		Biome biome = this.worldObj.getBiome(pos.add(16, 0, 16));
+		int var4 = x * 16;
+		int var5 = z * 16;
+		this.worldObj.getBiome(new BlockPos(var4 + 16, 0, var5 + 16));
 		this.rand.setSeed(this.worldObj.getSeed());
-		long var7 = this.rand.nextLong() / 2L * 2L + 1L;
-		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
-		this.rand.setSeed(chunkX * var7 + chunkZ * var9 ^ this.worldObj.getSeed());
-		biome.decorate(this.worldObj, this.rand, pos);
-		decoratePlanet(this.worldObj, this.rand, x, z);
-		WorldEntitySpawner.performWorldGenSpawning(this.worldObj, biome, x + 8, z + 8, 16, 16, this.rand);
+		final long var7 = this.rand.nextLong() / 2L * 2L + 1L;
+		final long var9 = this.rand.nextLong() / 2L * 2L + 1L;
+		this.rand.setSeed(x * var7 + z * var9 ^ this.worldObj.getSeed());
+		this.decoratePlanet(this.worldObj, this.rand, var4, var5);
+		this.onPopulate(x, z);
+
 		BlockFalling.fallInstantly = false;
-        this.onPopulate(x, z);
 	}
 
 	@Override
@@ -380,6 +376,6 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	protected abstract void onChunkProvide(int cX, int cZ, ChunkPrimer primer);
 
 	protected abstract int getCraterProbability();
-	
-    public abstract void onPopulate(int cX, int cZ);
+
+	public abstract void onPopulate(int cX, int cZ);
 }
