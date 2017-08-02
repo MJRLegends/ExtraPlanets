@@ -33,7 +33,6 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 	public EnumRocketType rocketType;
 	public float rumble;
 	public int launchCooldown;
-	static boolean preGenInProgress = false;
 	static Field marsConfigAllDimsAllowed;
 
 	static {

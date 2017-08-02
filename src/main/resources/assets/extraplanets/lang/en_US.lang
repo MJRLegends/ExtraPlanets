@@ -933,6 +933,10 @@ entity.extraplanets.EntityTier7Rocket.name=Tier 7 Rocket
 entity.extraplanets.EntityTier8Rocket.name=Tier 8 Rocket
 entity.extraplanets.EntityTier9Rocket.name=Tier 9 Rocket
 entity.extraplanets.EntityTier10Rocket.name=Tier 10 Rocket
+entity.extraplanets.EntityTier10ElectricRocket.name=Tier 10 Electric Rocket
+
+entity.extraplanets.EntityMarsRover.name=Mars Rover
+entity.extraplanets.EntityVenusRover.name=Venus Rover
 
 entity.extraplanets.CreeperBossVenus.name=Creeper Boss Venus
 entity.extraplanets.CreeperBossJupiter.name=Creeper Boss Jupiter

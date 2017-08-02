@@ -3,11 +3,13 @@ package com.mjr.extraplanets.entities.rockets;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
+import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -18,6 +20,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
 
 public class EntityTier10Rocket extends EntityTieredRocket {
 	public EntityTier10Rocket(World par1World) {
@@ -279,4 +282,13 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 		return 1.1F;
 	}
 
+	@Override
+	public boolean isDockValid(IFuelDock dock) {
+		return dock instanceof TileEntityTier3LandingPad;
+	}
+	
+	@Override
+	public String getName() {
+		return GCCoreUtil.translate("entity.extraplanets.EntityTier10Rocket.name");
+	}
 }

@@ -617,7 +617,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public boolean hasCustomName() {
-		return true;
+		return false;
 	}
 
 	@Override
