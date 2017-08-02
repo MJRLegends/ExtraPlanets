@@ -376,7 +376,7 @@ public class ExtraPlanets {
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
 			else
-				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedFireBatBoss.class, "EvolvedFireBatBoss", 894731, 0);
+				RegisterHelper.registerExtraPlanetsMobEntity(EntityEvolvedFireBatBoss.class, "EvolvedFireBatBoss", 16167425, 0);
 		if (Config.SATURN)
 
 			if (Config.USE_DEFAULT_BOSSES)
