@@ -623,7 +623,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public boolean hasCustomName() {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -702,11 +702,11 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
 		return beforePower - this.getCurrentPowerCapacity();
 	}
-	
+
 	@Override
-	public  boolean inFlight(){
-		 return false;
-	 }
+	public boolean inFlight() {
+		return false;
+	}
 
 	// ------------------------------------------------------------------------------------------------------
 

@@ -20,7 +20,6 @@ import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.util.GCLog;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.block.Block;
 import net.minecraft.client.audio.ISound;
@@ -64,15 +63,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	private boolean waitForPlayer;
 	protected ITickable rocketSoundUpdater;
 	private boolean rocketSoundToStop = false;
-	private static Class<?> controllerClass = null;
-
-	static {
-		try {
-			controllerClass = Class.forName("micdoodle8.mods.galacticraft.planets.mars.tile.TileEntityLaunchController");
-		} catch (ClassNotFoundException e) {
-			GCLog.info("Galacticraft-Planets' LaunchController not present, rockets will not be launch controlled.");
-		}
-	}
 
 	public EntityElectricAutoRocket(World world) {
 		super(world);
@@ -760,18 +750,13 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	}
 
 	@Override
-	public String getName() {
-		return GCCoreUtil.translate("container.spaceship.name");
-	}
-
-	@Override
 	public int getInventoryStackLimit() {
 		return 64;
 	}
 
 	@Override
 	public boolean hasCustomName() {
-		return true;
+		return false;
 	}
 
 	@Override

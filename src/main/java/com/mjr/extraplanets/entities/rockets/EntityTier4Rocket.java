@@ -13,6 +13,7 @@ import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.event.EventLandingPadRemoval;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
@@ -352,5 +353,10 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 	@Override
 	public boolean isDockValid(IFuelDock dock) {
 		return (dock instanceof TileEntityTier2LandingPad);
+	}
+	
+	@Override
+	public String getName() {
+		return GCCoreUtil.translate("entity.extraplanets.EntityTier4Rocket.name");
 	}
 }

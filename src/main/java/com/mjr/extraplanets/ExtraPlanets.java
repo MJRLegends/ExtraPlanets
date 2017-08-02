@@ -340,25 +340,25 @@ public class ExtraPlanets {
 
 	private void registerNonMobEntities() {
 		if (Config.CERES && Config.NUCLEAR_BOMB)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, "NuclearBombPrimed", 150, 1, true);
 		if (Config.SATURN && Config.FIRE_BOMB)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, Constants.modName + "FireBombPrimed", 150, 1, true);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, "FireBombPrimed", 150, 1, true);
 		if (Config.MERCURY)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "EntityTier4Rocket", 150, 1, false);
 		if (Config.JUPITER)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "EntityTier5Rocket", 150, 1, false);
 		if (Config.SATURN)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modName + "EntityTier6Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "EntityTier6Rocket", 150, 1, false);
 		if (Config.URANUS)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modName + "EntityTier7Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "EntityTier7Rocket", 150, 1, false);
 		if (Config.NEPTUNE)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "EntityTier8Rocket", 150, 1, false);
 		if (Config.PLUTO)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, "EntityTier10Rocket", 150, 1, false);
 		if (Config.ERIS && Config.KEPLER22B)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityElectricRocket.class, Constants.modName + "EntityTier10ElectricRocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityElectricRocket.class, "EntityTier10ElectricRocket", 150, 1, false);
 		if (Config.MARS_ROVER)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
 		if (Config.VENUS_ROVER)
