@@ -9,7 +9,6 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
 import com.mjr.extraplanets.items.keys.ItemKeyT6;
