@@ -1,6 +1,6 @@
 # Blender v2.77 (sub 0) OBJ File: 'electric_rocket.obj'
 # www.blender.org
-mtllib rocket_t4.mtl
+mtllib electric_rocket.mtl
 o Cylinder021
 v 0.000000 1.050800 0.000000
 v 0.186800 1.050800 -0.451200
@@ -319,7 +319,7 @@ vn 0.9239 -0.0000 0.3826
 vn 0.6032 -0.7574 0.2500
 vn -0.0880 -0.9955 -0.0362
 vn -0.6916 -0.6630 -0.2865
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 55//31 56//32 57//33
 f 55//31 58//34 56//32
@@ -950,7 +950,7 @@ vn 0.6424 0.7664 0.0000
 vn 0.6426 0.7662 -0.0000
 vn 0.6427 0.7661 0.0000
 usemtl blankRocketLightBlueTextured
-
+s off
 f 173//125 174//125 175//125
 f 175//125 176//125 173//125
 f 177//126 178//126 176//126
@@ -1517,7 +1517,7 @@ vn 0.9240 0.0000 0.3824
 vn 0.6033 -0.7574 0.2499
 vn -0.0879 -0.9955 -0.0365
 vn -0.6916 -0.6630 -0.2865
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 389//219 390//220 391//221
 f 389//219 392//222 390//220
@@ -1805,7 +1805,7 @@ vn 0.0001 -0.5879 0.8090
 vn -0.7470 -0.3908 0.5378
 vn -0.9971 0.0447 -0.0616
 vn -0.6708 0.4363 -0.5997
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 453//283 454//284 455//285
 f 453//283 456//286 454//284
@@ -2362,7 +2362,7 @@ vn 0.4618 0.7572 0.4619
 vn 0.4619 -0.7572 0.4618
 vn -0.0673 -0.9955 -0.0673
 vn -0.5294 -0.6630 -0.5294
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 611//405 612//406 613//407
 f 611//405 614//408 612//406
@@ -2648,7 +2648,7 @@ vn 0.0000 -0.5878 -0.8090
 vn 0.7469 -0.3908 -0.5380
 vn 0.9971 0.0447 0.0616
 vn 0.6713 0.4356 0.5997
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 675//461 676//462 677//463
 f 675//461 678//464 676//462
@@ -3609,7 +3609,7 @@ vn 0.9240 0.0000 0.3824
 vn 0.6033 -0.7574 0.2499
 vn -0.0879 -0.9955 -0.0365
 vn -0.6916 -0.6630 -0.2865
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 935//675 936//676 937//677
 f 935//675 938//678 936//676
@@ -4027,7 +4027,7 @@ vn 0.4618 0.7572 0.4619
 vn 0.4617 -0.7574 0.4617
 vn -0.0673 -0.9955 -0.0673
 vn -0.5294 -0.6629 -0.5294
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 1041//780 1042//781 1043//782
 f 1041//780 1044//783 1042//781
@@ -4282,7 +4282,7 @@ vn 0.9239 -0.0001 0.3827
 vn 0.6035 -0.7572 0.2499
 vn -0.0872 -0.9955 -0.0362
 vn -0.6916 -0.6631 -0.2863
-usemtl blankRocketLightBlueTextured
+usemtl blankRocketBlack
 
 f 1105//836 1106//837 1107//838
 f 1105//836 1108//839 1106//837
