@@ -326,8 +326,8 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 
 		for (int z = 0; z < 16; z++) {
 			for (int x = 0; x < 16; x++) {
-                BiomeGenBase biomegenbase = biomeGen[x + z * 16];
-                biomegenbase.genTerrainBlocks(this.worldObj, this.rand, chunk, chunkX * 16 + z, chunkZ * 16 + x, this.depthBuffer[x + z * 16]);
+				BiomeGenBase biomegenbase = biomeGen[x + z * 16];
+				biomegenbase.genTerrainBlocks(this.worldObj, this.rand, chunk, chunkX * 16 + z, chunkZ * 16 + x, this.depthBuffer[x + z * 16]);
 			}
 		}
 	}
@@ -341,16 +341,14 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 		BlockFalling.fallInstantly = true;
 		int x = chunkX * 16;
 		int z = chunkZ * 16;
-		BlockPos pos = new BlockPos(x, 0, z);
-		BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(pos.add(16, 0, 16));
+		this.worldObj.getBiomeGenForCoords(new BlockPos(16, 0, 16));
 		this.rand.setSeed(this.worldObj.getSeed());
 		long var7 = this.rand.nextLong() / 2L * 2L + 1L;
 		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(chunkX * var7 + chunkZ * var9 ^ this.worldObj.getSeed());
-		biomegenbase.decorate(this.worldObj, this.rand, pos);
 		decoratePlanet(this.worldObj, this.rand, x, z);
-		BlockFalling.fallInstantly = false;
 		this.onPopulate(x, z);
+		BlockFalling.fallInstantly = false;
 	}
 
 	@Override
