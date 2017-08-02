@@ -127,7 +127,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	public void onUpdate() {
 		super.onUpdate();
 
-		if (!this.worldObj.isRemote && this.worldObj.getDifficulty() == EnumDifficulty.PEACEFUL) {
+		if (!this.world.isRemote && this.world.getDifficulty() == EnumDifficulty.PEACEFUL) {
 			this.setDead();
 		}
 		this.motionY *= 0.6000000238418579D;
@@ -135,7 +135,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 	protected void updateAITasks() {
 		super.updateAITasks();
-		if (this.spawnPosition != null && (!this.worldObj.isAirBlock(this.spawnPosition) || this.spawnPosition.getY() < 1)) {
+		if (this.spawnPosition != null && (!this.world.isAirBlock(this.spawnPosition) || this.spawnPosition.getY() < 1)) {
 			this.spawnPosition = null;
 		}
 
@@ -195,7 +195,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 			EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
 
 			if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
-				World world = this.parentEntity.worldObj;
+				World world = this.parentEntity.world;
 				++this.attackTimer;
 
 				if (this.attackTimer == 10) {
@@ -213,7 +213,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 					entitylargefireball.posX = this.parentEntity.posX + vec3d.xCoord * 4.0D;
 					entitylargefireball.posY = this.parentEntity.posY + this.parentEntity.height / 2.0F + 0.5D;
 					entitylargefireball.posZ = this.parentEntity.posZ + vec3d.zCoord * 4.0D;
-					world.spawnEntityInWorld(entitylargefireball);
+					world.spawnEntity(entitylargefireball);
 					if (this.attackTimer == 70)
 						this.attackTimer = -40;
 				}
@@ -257,7 +257,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	}
 
 	public static void registerFixesBat(DataFixer fixer) {
-		EntityLiving.registerFixesMob(fixer, "Bat");
+		EntityLiving.registerFixesMob(fixer, EntityEvolvedFireBatBoss.class);
 	}
 
 	/**
@@ -287,13 +287,13 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 	@Override
 	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
 		entityitem.motionY = -2.0D;
 		entityitem.setDefaultPickupDelay();
 		if (this.captureDrops) {
 			this.capturedDrops.add(entityitem);
 		} else {
-			this.worldObj.spawnEntityInWorld(entityitem);
+			this.world.spawnEntity(entityitem);
 		}
 		return entityitem;
 	}
