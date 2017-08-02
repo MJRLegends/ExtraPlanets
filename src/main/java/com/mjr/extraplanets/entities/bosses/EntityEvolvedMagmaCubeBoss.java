@@ -61,11 +61,11 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
     {
         super.onDeathUpdate();
 
-        if (!this.worldObj.isRemote)
+        if (!this.world.isRemote)
         {
             if (this.deathTicks == 100)
             {
-                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.world), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 40.0D));
             }
         }
     }
@@ -567,7 +567,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
     @Override
     public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
     {
-        final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+        final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
         entityitem.motionY = -2.0D;
         entityitem.setDefaultPickupDelay();
         if (this.captureDrops)
@@ -576,7 +576,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
         }
         else
         {
-            this.worldObj.spawnEntityInWorld(entityitem);
+            this.world.spawnEntity(entityitem);
         }
         return entityitem;
     }
