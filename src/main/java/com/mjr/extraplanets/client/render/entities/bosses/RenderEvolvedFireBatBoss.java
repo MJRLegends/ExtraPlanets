@@ -8,12 +8,13 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.ModelEvolvedFireBatBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatBoss> {
-	private static final ResourceLocation BAT_TEXTURES = new ResourceLocation("textures/entity/bat.png");
+	private static final ResourceLocation BAT_TEXTURES = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/fire_bat.png");
 
 	public RenderEvolvedFireBatBoss(RenderManager renderManagerIn) {
 		super(renderManagerIn, new ModelEvolvedFireBatBoss(), 0.25F);
