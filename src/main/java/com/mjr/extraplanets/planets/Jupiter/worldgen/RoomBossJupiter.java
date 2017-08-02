@@ -23,7 +23,7 @@ public class RoomBossJupiter extends RoomBoss {
 	}
 
 	public RoomBossJupiter(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, EnumFacing entranceDir) {
-		super(configuration, rand, blockPosX, blockPosZ, 24, 11, 24, entranceDir);
+		super(configuration, rand, blockPosX, blockPosZ, 30, 24, 30, entranceDir);
 	}
 
 	@Override
