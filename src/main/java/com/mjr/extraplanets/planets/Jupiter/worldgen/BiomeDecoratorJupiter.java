@@ -17,7 +17,6 @@ import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
-	private WorldGenerator deshGen;
 	private WorldGenerator tinGen;
 	private WorldGenerator copperGen;
 	private WorldGenerator ironGen;
@@ -29,7 +28,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 	private WorldGenerator volcanicRockGen;
 	private WorldGenerator skyBlocksGen;
 
-	private int LakesPerChunk = 5;
+	private int LakesPerChunk = 2;
 
 	private World currentWorld;
 
@@ -76,7 +75,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.generateOre(10, this.ashRockGen, 0, 256);
 		this.generateOre(10, this.volcanicRockGen, 0, 256);
 		if (Config.GENERATE_JUITPER_SKY_FEATURE)
-			this.generateOre(25, this.skyBlocksGen, 63, 256);
+			this.generateOre(5, this.skyBlocksGen, 63, 256);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
@@ -89,7 +88,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 			}
 		}
 
-		if (this.rand.nextInt(50) == 1) {
+		if (this.rand.nextInt(250) == 1) {
 			int x = this.chunkX + 8;
 			int z = this.chunkZ + 8;
 			int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY();
