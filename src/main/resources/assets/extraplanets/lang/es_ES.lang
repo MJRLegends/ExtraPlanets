@@ -945,6 +945,7 @@ entity.extraplanets.EvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
 entity.extraplanets.EvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
 entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
+entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss
 
 entity.extraplanets.EvolvedWitch.name=Bruja evolucionada
 entity.extraplanets.EvolvedMagmaCube.name=Slime magmático evolucionado
