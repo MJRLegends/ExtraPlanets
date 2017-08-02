@@ -11,11 +11,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 
-public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner<EntityCreeperBossJupiter> {
+public class TileEntityDungeonSpawnerJupiter extends TileEntityDungeonSpawner<EntityEvolvedFireBatBoss> {
 	public TileEntityDungeonSpawnerJupiter() {
-		super(EntityCreeperBossJupiter.class);
+		super(EntityEvolvedFireBatBoss.class);
 	}
 
 	@Override
