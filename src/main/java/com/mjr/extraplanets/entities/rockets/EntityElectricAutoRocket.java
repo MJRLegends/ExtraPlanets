@@ -1011,18 +1011,13 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	}
 
 	@Override
-	public String getName() {
-		return GCCoreUtil.translate("container.spaceship.name");
-	}
-
-	@Override
 	public int getInventoryStackLimit() {
 		return 64;
 	}
 
 	@Override
 	public boolean hasCustomName() {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -1039,19 +1034,16 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	public void markDirty() {
 	}
 
-    @Override
-    public boolean isEmpty()
-    {
-        for (ItemStack itemstack : this.stacks)
-        {
-            if (!itemstack.isEmpty())
-            {
-                return false;
-            }
-        }
+	@Override
+	public boolean isEmpty() {
+		for (ItemStack itemstack : this.stacks) {
+			if (!itemstack.isEmpty()) {
+				return false;
+			}
+		}
 
-        return true;
-    }
+		return true;
+	}
 
 	@Override
 	public void onPadDestroyed() {

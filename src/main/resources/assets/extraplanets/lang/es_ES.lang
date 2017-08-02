@@ -932,6 +932,10 @@ entity.extraplanets.EntityTier7Rocket.name=Cohete nivel 7
 entity.extraplanets.EntityTier8Rocket.name=Cohete nivel 8
 entity.extraplanets.EntityTier9Rocket.name=Cohete nivel 9
 entity.extraplanets.EntityTier10Rocket.name=Cohete nivel 10
+entity.extraplanets.EntityTier10ElectricRocket.name=Tier 10 Electric Rocket
+
+entity.extraplanets.EntityMarsRover.name=Mars Rover
+entity.extraplanets.EntityVenusRover.name=Venus Rover
 
 entity.extraplanets.CreeperBossVenus.name=Jefe creeper evolucionado de Venus
 entity.extraplanets.CreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter

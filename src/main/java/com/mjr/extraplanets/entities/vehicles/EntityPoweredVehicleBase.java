@@ -29,7 +29,6 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
@@ -394,7 +393,6 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound var1) {
 		var1.setInteger("roverType", this.roverType);
-		final NBTTagList var2 = new NBTTagList();
 		var1.setFloat("currentPowerCapacity", this.currentPowerCapacity);
 		ItemStackHelper.saveAllItems(var1, stacks);
 	}
@@ -550,53 +548,46 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			}
 		}
 
-		for (count = 0; count < this.stacks.size(); count++)
-        {
-            ItemStack stackAt = this.stacks.get(count);
+		for (count = 0; count < this.stacks.size(); count++) {
+			ItemStack stackAt = this.stacks.get(count);
 
-            if (stackAt == null)
-            {
-                if (doAdd)
-                {
-                    this.stacks.set(count, stack);
-                    this.markDirty();
-                }
+			if (stackAt == null) {
+				if (doAdd) {
+					this.stacks.set(count, stack);
+					this.markDirty();
+				}
 
-                return EnumCargoLoadingState.SUCCESS;
-            }
-        }
+				return EnumCargoLoadingState.SUCCESS;
+			}
+		}
 
 		return EnumCargoLoadingState.FULL;
 	}
 
-	 @Override
-	    public RemovalResult removeCargo(boolean doRemove)
-	    {
-	        for (int i = 0; i < this.stacks.size(); i++)
-	        {
-	            ItemStack stackAt = this.getStackInSlot(i);
+	@Override
+	public RemovalResult removeCargo(boolean doRemove) {
+		for (int i = 0; i < this.stacks.size(); i++) {
+			ItemStack stackAt = this.getStackInSlot(i);
 
-	            if (stackAt != null)
-	            {
-	                ItemStack resultStack = stackAt.copy();
-	                resultStack.setCount(1);
+			if (stackAt != null) {
+				ItemStack resultStack = stackAt.copy();
+				resultStack.setCount(1);
 
-	                if (doRemove)
-	                {
-	                    stackAt.shrink(1);
-	                    this.markDirty();
-	                }
+				if (doRemove) {
+					stackAt.shrink(1);
+					this.markDirty();
+				}
 
-	                return new RemovalResult(EnumCargoLoadingState.SUCCESS, resultStack);
-	            }
-	        }
+				return new RemovalResult(EnumCargoLoadingState.SUCCESS, resultStack);
+			}
+		}
 
-	        return new RemovalResult(EnumCargoLoadingState.EMPTY, ItemStack.EMPTY);
-	    }
+		return new RemovalResult(EnumCargoLoadingState.EMPTY, ItemStack.EMPTY);
+	}
 
 	@Override
 	public boolean hasCustomName() {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -636,20 +627,17 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public void setAccel(float accel) {
 		this.accel = accel;
 	}
-	
-    @Override
-    public boolean isEmpty()
-    {
-        for (ItemStack itemstack : this.stacks)
-        {
-            if (!itemstack.isEmpty())
-            {
-                return false;
-            }
-        }
 
-        return true;
-    }
+	@Override
+	public boolean isEmpty() {
+		for (ItemStack itemstack : this.stacks) {
+			if (!itemstack.isEmpty()) {
+				return false;
+			}
+		}
+
+		return true;
+	}
 
 	/*
 	 * Power System Methods ------------------------------------------------------------------------------------------------------
@@ -689,11 +677,11 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
 		return beforePower - this.getCurrentPowerCapacity();
 	}
-	
+
 	@Override
-	public  boolean inFlight(){
-		 return false;
-	 }
+	public boolean inFlight() {
+		return false;
+	}
 
 	// ------------------------------------------------------------------------------------------------------
 
