@@ -17,6 +17,7 @@ import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
@@ -343,20 +344,22 @@ public class ExtraPlanets {
 		// Dungeon Bosses
 		if (Config.venus)
 			if (Config.useDefaultBosses)
-				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossVenus.class, "CreeperBossVenus", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossVenus.class, Constants.modName + "CreeperBossVenus", 894731, 0);
 			else
 				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
-			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
+			if (Config.useDefaultBosses)
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
+			else
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedFireBatBoss.class, Constants.modName + "EvolvedFireBatBoss", 16167425, 0);
 		if (Config.saturn)
-
 			if (Config.useDefaultBosses)
 				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
 			else
 				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedGhastBoss.class, Constants.modName + "EvolvedGhastBoss", 894731, 0);
 		if (Config.uranus)
 			if (Config.useDefaultBosses)
-				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossUranus.class, Constants.modName + "CreeperBossUranus", 894731, 0);
 			else
 				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
