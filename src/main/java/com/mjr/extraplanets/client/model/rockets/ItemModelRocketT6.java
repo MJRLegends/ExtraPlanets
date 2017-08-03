@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.resources.model.IBakedModel;
 import net.minecraftforge.client.model.TRSRTransformation;
@@ -33,6 +34,7 @@ public class ItemModelRocketT6 extends ModelTransformWrapper
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
+    		RenderHelper.enableStandardItemLighting();
             Vector3f trans = new Vector3f(-0.12F, 0.0F, -0.12F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
