@@ -175,6 +175,7 @@ public class Config {
 	public static int TITAN_SEA_BIOME_ID;
 	public static int OBERON_BIOME_ID;
 	public static int OBERON_LARGE_MOUNTAIN_BIOME_ID;
+	public static int OBERON_VALLEYS_BIOME_ID;
 	public static int TITANIA_BIOME_ID;
 	public static int IAPETUS_BIOME_ID;
 
@@ -453,7 +454,8 @@ public class Config {
 		URANUS_FROZEN_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Frozen Sea Biome ID", 191).getInt();
 		URANUS_SNOW_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Snow Lands Biome ID", 192).getInt();
 		OBERON_LARGE_MOUNTAIN_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Large Mountain Biome ID", 193).getInt();
-
+		OBERON_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Valleys Biome ID", 194).getInt();
+		
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();
 		SCHEMATIC_TIER_6_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557).getInt();

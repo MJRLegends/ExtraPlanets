@@ -448,6 +448,7 @@ public class ExtraPlanets {
 		if (Config.OBERON) {
 			Biome.registerBiome(Config.OBERON_BIOME_ID, OberonBiomes.oberon.getBiomeName(), OberonBiomes.oberon);
 			Biome.registerBiome(Config.OBERON_LARGE_MOUNTAIN_BIOME_ID, OberonBiomes.oberonLargeMountain.getBiomeName(), OberonBiomes.oberonLargeMountain);
+			Biome.registerBiome(Config.OBERON_LARGE_MOUNTAIN_BIOME_ID, OberonBiomes.oberonValleys.getBiomeName(), OberonBiomes.oberonValleys);
 		}
 		if (Config.PHOBOS)
 			Biome.registerBiome(Config.PHOBOS_BIOME_ID, PhobosBiomes.phobos.getBiomeName(), PhobosBiomes.phobos);
