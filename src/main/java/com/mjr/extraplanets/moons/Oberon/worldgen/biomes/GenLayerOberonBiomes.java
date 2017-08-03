@@ -7,8 +7,8 @@ import net.minecraft.world.gen.layer.GenLayer;
 import com.mjr.extraplanets.moons.Oberon.worldgen.OberonBiomes;
 
 public class GenLayerOberonBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { OberonBiomes.oberon, OberonBiomes.oberonLargeMountain };
-	private static final Biome[] biomesRare = new Biome[] { OberonBiomes.oberon };
+	private static final Biome[] biomes = new Biome[] { OberonBiomes.oberon, OberonBiomes.oberonValleys };
+	private static final Biome[] biomesRare = new Biome[] { OberonBiomes.oberonLargeMountain };
 
 	public GenLayerOberonBiomes(long l, GenLayer parent) {
 		super(l);
@@ -25,17 +25,15 @@ public class GenLayerOberonBiomes extends GenLayer {
 
 		for (int k = 0; k < depth; ++k) {
 			for (int i = 0; i < width; ++i) {
-				initChunkSeed(x + i, z + k);
-				dest[i + k * width] = Biome.getIdForBiome(biomes[nextInt(biomes.length)]);
-				
-//				if (this.nextInt(15) == 0)
-//				{
-//					dest[i + k * width] = Biome.getIdForBiome(biomesRare[nextInt(biomesRare.length)]);
-//				}
-//				else
-//				{
-//					dest[i + k * width] = Biome.getIdForBiome(biomes[nextInt(biomes.length)]);
-//				}
+				initChunkSeed(x + i, z + k);			
+				if (this.nextInt(5) == 0)
+				{
+					dest[i + k * width] = Biome.getIdForBiome(biomesRare[nextInt(biomesRare.length)]);
+				}
+				else
+				{
+					dest[i + k * width] = Biome.getIdForBiome(biomes[nextInt(biomes.length)]);
+				}
 			}
 		}
 
