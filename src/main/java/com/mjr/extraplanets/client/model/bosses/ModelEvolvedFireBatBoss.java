@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.client.model;
+package com.mjr.extraplanets.client.model.bosses;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
