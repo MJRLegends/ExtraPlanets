@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
@@ -22,7 +23,8 @@ public class ChunkProviderOberon extends ChunkProviderCustomSpace {
 	public ChunkProviderOberon(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.stoneBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(2);
-		this.waterBlock = ExtraPlanets_Fluids.FROZEN_WATER.getDefaultState();
+		this.waterBlock = Blocks.AIR.getDefaultState();
+		this.seaLevel = 50;
 	}
 
 	@Override
