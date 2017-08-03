@@ -26,16 +26,11 @@ public class GenLayerOberonBiomes extends GenLayer {
 		for (int k = 0; k < depth; ++k) {
 			for (int i = 0; i < width; ++i) {
 				initChunkSeed(x + i, z + k);
-				dest[i + k * width] = biomes[nextInt(biomes.length)].biomeID;
-
-				// if (this.nextInt(15) == 0)
-				// {
-				// dest[i + k * width] = BiomeGenBase.getIdForBiome(biomesRare[nextInt(biomesRare.length)]);
-				// }
-				// else
-				// {
-				// dest[i + k * width] = BiomeGenBase.getIdForBiome(biomes[nextInt(biomes.length)]);
-				// }
+				if (this.nextInt(5) == 0) {
+					dest[i + k * width] = biomesRare[nextInt(biomesRare.length)].biomeID;
+				} else {
+					dest[i + k * width] = biomes[nextInt(biomes.length)].biomeID;
+				}
 			}
 		}
 
