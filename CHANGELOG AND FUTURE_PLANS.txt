@@ -15,6 +15,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.6.1
+*Fixed rendering issues with Item Rocket Models
+
 v0.6.0
 *Fixed Issues with Jupiter and possibly other dungeons
 *Changed spawn rate of some world gen features on Jupiter
