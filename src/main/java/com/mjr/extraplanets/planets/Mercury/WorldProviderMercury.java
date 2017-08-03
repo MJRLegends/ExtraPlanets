@@ -114,7 +114,7 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 100;
+		return 25;
 	}
 
 	@Override
