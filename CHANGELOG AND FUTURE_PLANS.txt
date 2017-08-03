@@ -15,6 +15,19 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.6.0
+*Fixed Issues with Jupiter and possibly other dungeons
+*Changed spawn rate of some world gen features on Jupiter
+*Added Fire Bat Boss to Jupiter
+*Made the Jupiter Dungeon Boss room bigger
+*Tweaks to Electric Rocket rendering/textures
+*Fixed Entity names for Mobs, Rockets, Vehicles
+*Updated lang files
+*Clean up
+*Converted Oberon over to a Multi Biome System, Added a Oberon Large Ice Mountains Biome
+*Fixed weird black grid issue with oberon blocks
+*Added Oberon Valleys Biome
+
 v0.5.9
 *Fixed crash issue when disabling some config options
 *Fixes for 4 Custom Bosses
