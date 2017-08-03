@@ -103,14 +103,14 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 	@Override
 	public void onPopulate(int cX, int cZ) {
 		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
-		if(Config.MERCURY_VILLAGES)
+		if (Config.MERCURY_VILLAGES)
 			this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 		this.dungeonGenerator.generate(this.worldObj, x, z, null);
-		if(Config.MERCURY_VILLAGES)
+		if (Config.MERCURY_VILLAGES)
 			this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }

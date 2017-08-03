@@ -1,88 +1,40 @@
 package com.mjr.extraplanets.moons.Oberon.worldgen;
 
 import java.util.List;
+import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
-public class ChunkProviderOberon extends ChunkProviderSpace {
-	private final BiomeDecoratorOberon ceresBiomeDecorator = new BiomeDecoratorOberon();
+public class ChunkProviderOberon extends ChunkProviderCustomSpace {
+	private final BiomeDecoratorOberon ioBiomeDecorator = new BiomeDecoratorOberon();
+	private final BiomeDecoratorOberonOther ioBiomeDecorator2 = new BiomeDecoratorOberonOther();
 
-	 private final MapGenCaveOberon caveGenerator = new MapGenCaveOberon();
+	private final MapGenCaveOberon caveGenerator = new MapGenCaveOberon();
 
 	public ChunkProviderOberon(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-	}
-
-	@Override
-	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.ceresBiomeDecorator;
-	}
-
-	@Override
-	protected Biome[] getBiomesForGeneration() {
-		return new Biome[] { OberonBiomes.oberon };
-	}
-
-	@Override
-	protected int getSeaLevel() {
-		return 93;
+		this.stoneBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(2);
+		this.waterBlock = ExtraPlanets_Fluids.FROZEN_WATER.getDefaultState();
 	}
 
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 
 	@Override
-	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.OBERON_BLOCKS, (byte) 0);
-	}
-
-	@Override
-	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.OBERON_BLOCKS, (byte) 1);
-	}
-
-	@Override
-	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.OBERON_BLOCKS, (byte) 2);
-	}
-
-	@Override
-	public double getHeightModifier() {
-		return 12;
-	}
-
-	@Override
-	public double getSmallFeatureHeightModifier() {
-		return 26;
-	}
-
-	@Override
-	public double getMountainHeightModifier() {
-		return 95;
-	}
-
-	@Override
-	public double getValleyHeightModifier() {
-		return 50;
-	}
-
-	@Override
 	public int getCraterProbability() {
-		return 2000;
+		return 0;
 	}
 
 	@Override
@@ -95,5 +47,11 @@ public class ChunkProviderOberon extends ChunkProviderSpace {
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
+	}
+
+	@Override
+	protected void decoratePlanet(World world, Random rand, int x, int z) {
+		this.ioBiomeDecorator.decorate(world, rand, x, z);
+		// this.ioBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
 }
