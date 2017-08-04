@@ -1,0 +1,955 @@
+#Creative Tabs
+itemGroup.SpaceItemsTab=Extra Planets: Предметы
+itemGroup.SpaceBlocksTab=Extra Planets: Блоки
+itemGroup.SpaceToolsTab=Extra Planets: Инструменты
+itemGroup.SpaceArmorTab=Extra Planets: Броня
+
+#Solar Systems
+solarsystem.Kepler22=Система Кеплер 22
+solarsystem.Kepler47=Система Кеплер 47
+solarsystem.Kepler62=Система Кеплер 62
+solarsystem.Kepler69=Система Кеплер 69
+
+#Stars
+star.Kepler22=Звезда Кеплер 22
+star.Kepler47=Звезда Кеплер 47
+star.Kepler62=Звезда Кеплер 62
+star.Kepler69=Звезда Кеплер 69
+
+#Planets
+planet.Mercury=Меркурий
+planet.Venus=Венера
+planet.Ceres=Церера
+planet.Jupiter=Юпитер
+planet.Saturn=Сатурн
+planet.Uranus=Уран
+planet.Neptune=Нептун
+planet.Pluto=Плутон
+planet.Eris=Эрида
+planet.kuiperBelt=Пояс Койпера
+planet.makemake=Макемаке
+planet.haumea=Хаумеа
+
+planet.Kepler62b=Кеплер 62b
+planet.Kepler62c=Кеплер 62c
+planet.Kepler62d=Кеплер 62d
+planet.Kepler62e=Кеплер 62e
+planet.Kepler62f=Кеплер 62f
+planet.Kepler22b=Кеплер 22b
+planet.Kepler47b=Кеплер 47b
+planet.Kepler47c=Кеплер 47c
+planet.Kepler69b=Кеплер 69b
+planet.Kepler69c=Кеплер 69c
+
+#Moons
+moon.triton=Тритон
+moon.callisto=Каллисто
+moon.europa=Европа
+moon.ganymede=Ганимед
+moon.io=Ио
+moon.deimos=Деймос
+moon.phobos=Фобос
+moon.iapetus=Япет
+moon.rhea=Рея
+moon.titan=Титан
+moon.oberon=Оберон
+moon.titania=Титания
+moon.charon=Харон
+moon.nix=Никта
+moon.hydra=Гидра
+moon.dysnomia=Дисномия
+
+#Planet Blocks
+tile.mercury.surface.name=Поверхность Меркурия
+tile.mercury.subSurface.name=Подповерхностный грунт Меркурия
+tile.mercury.stone.name=Камень Меркурия
+tile.mercury.oreIron.name=Железная руда Меркурия
+tile.mercury.oreTin.name=Оловянная руда Меркурия
+tile.mercury.oreCopper.name=Медная руда Меркурия
+tile.mercury.oreMercury.name=Ртутная руда
+tile.mercury.stoneBricks.name=Каменные кирпичи Меркурия
+tile.mercury.mercuryBlock.name=Ртутный блок
+
+tile.venus.surface.name=Поверхность Венеры
+tile.venus.subSurface.name=Подповерхностный грунт Венеры
+tile.venus.stone.name=Камень Венеры
+tile.venus.oreIron.name=Железная руда Венеры
+tile.venus.oreTin.name=Оловянная руда Венеры
+tile.venus.oreCopper.name=Медная руда Венеры
+tile.venus.oreCarbon.name=Углеродная руда
+tile.venus.stoneBricks.name=Каменные кирпичи Венеры
+tile.venus.carbonBlock.name=Углеродный блок
+tile.venus.titaniumBlock.name=Титановый блок
+
+tile.ceres.surface.name=Поверхность Цереры
+tile.ceres.subSurface.name=Подповерхностный грунт Цереры
+tile.ceres.stone.name=Камень Цереры
+tile.ceres.oreIron.name=Железная руда Цереры
+tile.ceres.oreTin.name=Оловянная руда Цереры
+tile.ceres.oreCopper.name=Медная руда Цереры
+tile.ceres.oreUranium.name=Урановая руда Цереры
+tile.ceres.stoneBricks.name=Каменные кирпичи Цереры
+tile.ceres.uraniumBlock.name=Урановый блок
+
+tile.jupiter.surface.name=Поверхность Юпитера
+tile.jupiter.subSurface.name=Подповерхность Юпитера
+tile.jupiter.stone.name=Камень Юпитера
+tile.jupiter.oreIron.name=Железная руда Юпитера
+tile.jupiter.oreTin.name=Оловянная руда Юпитера
+tile.jupiter.oreCopper.name=Медная руда Юпитера
+tile.jupiter.orePalladium.name=Паллаиевая руда Юпитера
+tile.jupiter.oreNickel.name=Никелевая руда Юпитера
+tile.jupiter.oreRedGem.name=Руда красного драгоценного камня Юпитера
+tile.jupiter.stoneBricks.name=Каменные кирпичи Юпитера
+tile.jupiter.palladiumBlock.name=Палладиевый блок
+tile.jupiter.redGemBlock.name=Блок красного драгоценного камня
+
+tile.saturn.surface.name=Поверхность Сатурна
+tile.saturn.subSurface.name=Подповерхностный грунт Сатурна
+tile.saturn.stone.name=Камень Сатурна
+tile.saturn.oreIron.name=Железная руда Сатурна
+tile.saturn.oreTin.name=Оловянная руда Сатурна
+tile.saturn.oreCopper.name=Медная руда Сатурна
+tile.saturn.oreMagnesium.name=Магниевая руда Сатурна
+tile.saturn.stoneBricks.name=Каменные кирпичи Сатурна
+tile.saturn.magnesiumBlock.name=Магниевый блок
+
+tile.uranus.surface.name=Поверхность Урана
+tile.uranus.subSurface.name=Подповерхностный грунт Урана
+tile.uranus.stone.name=Камень Урана
+tile.uranus.oreCrystal.name=Кристалльный камень
+tile.uranus.oreWhiteGem.name=Руда белого драгоценного камня Урана
+tile.uranus.stoneBricks.name=Каменные кирпичи Урана
+tile.uranus.crystalBlock.name=Кристалльный блок
+tile.uranus.whiteGemBlock.name=Блок белого драгоценного камня
+
+tile.neptune.surface.name=Поверхность Нептуна
+tile.neptune.subSurface.name=Подповерхность Нептуна
+tile.neptune.stone.name=Камень Нептуна
+tile.neptune.oreIron.name=Железная руда Нептуна
+tile.neptune.oreTin.name=Оловянная руда Нептуна
+tile.neptune.oreCopper.name=Медная руда Нептуна
+tile.neptune.oreZinc.name=Цинковая руда Нептуна
+tile.neptune.oreBlueGem.name=Руда синего драгоценного камня Нептуна
+tile.neptune.stoneBricks.name=Каменные кирпичи Немптуна
+tile.neptune.zincBlock.name=Цинковый блок
+tile.neptune.blueGemBlock.name=Блок синего драгоценного камня
+
+tile.pluto.surface.name=Поверхность Плутона
+tile.pluto.subSurface.name=Подповерхностный грунт Плутона
+tile.pluto.stone.name=Камень Плутона
+tile.pluto.oreIron.name=Железная руда Плутона
+tile.pluto.oreTin.name=Оловянная руда Плутона
+tile.pluto.oreCopper.name=Медная руда Плутона
+tile.pluto.oreTungsten.name=Вольфрамовая руда Плутона
+tile.pluto.stoneBricks.name=Каменные кирпичи Плутона
+tile.pluto.tungstenBlock.name=Вольфрамовыый блок
+
+tile.eris.surface.name=Поверхность Эриды
+tile.eris.subSurface.name=Подповерхностный грунт Эриды
+tile.eris.stone.name=Камень Эриды
+tile.eris.oreIron.name=Железная руда Эриды
+tile.eris.oreTin.name=Оловянная руда Эриды
+tile.eris.oreCopper.name=Медная руда Эриды
+tile.eris.stoneBricks.name=Каменные кирпичи Эриды
+tile.eris.oreDarkIron.name=Руда тёмного железа Эриды
+tile.eris.darkIronBlock.name=лок тёмного железа
+
+tile.kepler22b.Dirt.name=Земля Кеплера 22b
+tile.kepler22b.Stone.name=Камень Кеплера 22b
+tile.kepler22b.Cobblestone.name=Булыжник Кеплера 22b
+tile.kepler22bGrass.name=Блок травы Кеплера 22b
+tile.kepler22b_blueGrass.name=Блок синей травы Кеплера 22b
+tile.kepler22b_purpleGrass.name=Блок фиолетовой травы Кеплера 22b
+tile.kepler22b_redGrass.name=Блок красной травы Кеплера 22b
+tile.kepler22b_yellowGrass.name=Блок жёлтой травы Кеплера 22b
+tile.kepler22b.OreIron.name=Железная руда Кеплера 22b
+tile.kepler22b.OreTin.name=Оловянная руда Кеплера 22b
+tile.kepler22b.OreCopper.name=Медная руда Кеплера 22b
+tile.kepler22b.OreDenseCoal.name=Руда плотного угля Кеплера 22b
+tile.kepler22b.OreBlueDiamonds.name=Руда синего алмаза Кеплера 22b
+tile.kepler22b.OreRedDiamonds.name=Руда красного алмаза Кеплера 22b
+tile.kepler22b.OrePurpleDiamonds.name=Руда фиолетового алмаза Кеплера 22b
+tile.kepler22b.OreYellowDiamonds.name=Руда жёлтого алмаза Кеплера 22b
+tile.kepler22b.OreGreenDiamonds.name=Руда зелёного алмаза Кеплера 22b
+tile.kepler22bPlanks.PlankMapleBlue.name=Синие доски Кеплера 22b
+tile.kepler22bPlanks.PlankMapleRed.name=Красные доски Кеплера 22b
+tile.kepler22bPlanks.PlankMaplePurple.name=Фиолетовые доски Кеплера 22b
+tile.kepler22bPlanks.PlankMapleYellow.name=Жёлтые доски Кеплера 22b
+tile.kepler22bPlanks.PlankMapleGreen.name=Зелёные доски Кеплера 22b
+tile.kepler22bPlanks.PlankMapleBrown.name=Коричневые доски Кеплера 22b
+tile.kepler22b.StoneBricks.name=Каменные кирпичи Кеплера 22b
+tile.kepler22bMapleLogs.blueMapleLog.name=Синий дуб Кеплера 22b
+tile.kepler22bMapleLogs.redMapleLog.name=Красный дуб Кеплера 22b
+tile.kepler22bMapleLogs.purpleMapleLog.name=Фиолетовый дуб Кеплера 22b
+tile.kepler22bMapleLogs.yellowMapleLog.name=Жёлтый дуб Кеплера 22b
+tile.kepler22bMapleLogs2.greenMapleLog.name=Зелёный дуб Кеплера 22b
+tile.kepler22bMapleLogs2.brownMapleLog.name=Коричневый дуб Кеплера 22b
+tile.kepler22bMapleSaplings.blueMapleSapling.name=Саженец синего дуба Кеплера 22b
+tile.kepler22bMapleSaplings.redMapleSapling.name=Саженец красного дуба Кеплера 22b
+tile.kepler22bMapleSaplings.purpleMapleSapling.name=Саженец фиолетового дуба Кеплера 22b
+tile.kepler22bMapleSaplings.yellowMapleSapling.name=Саженец жёлтого дуба Кеплера 22b
+tile.kepler22bMapleSaplings.greenMapleSapling.name=Саженец зелёного дуба Кеплера 22b
+tile.kepler22bMapleSaplings.brownMapleSapling.name=Саженец коричневого дуба Кеплера 22b
+tile.kepler22bNewMapleLeaves.blueMapleLeaf.name=Саженец синего дуба Кеплера 22b
+tile.kepler22bNewMapleLeaves.redMapleLeaf.name=Листва красного дуба Кеплера 22b
+tile.kepler22bNewMapleLeaves.purpleMapleLeaf.name=Листва фиолетового дуба Кеплера 22b
+tile.kepler22bNewMapleLeaves.yellowMapleLeaf.name=Листва жёлтого дуба Кеплера 22b
+tile.kepler22bNewMapleLeaves2.greenMapleLeaf.name=Листва зелёного дуба Кеплера 22b
+tile.kepler22bNewMapleLeaves2.brownMapleLeaf.name=Листва коричневого дуба Кеплера 22b
+tile.kepler22bFlowers.blueMapleShortGrass.name=Низкая синяя трава Кеплера 22b
+tile.kepler22bFlowers.blueMapleMedGrass.name=Средняя синяя трава Кеплера 22b
+tile.kepler22bFlowers.blueMapleTallGrass.name=Высокая синяя трава Кеплера 22b
+tile.kepler22bFlowers.redMapleShortGrass.name=Низкая красная трава Кеплера 22b
+tile.kepler22bFlowers.redMapleMedGrass.name=Средняя красная трава Кеплера 22b
+tile.kepler22bFlowers.redMapleTallGrass.name=Высокая красная трава Кеплера 22b
+tile.kepler22bFlowers.yellowMapleShortGrass.name=Низкая жёлтая трава Кеплера 22b
+tile.kepler22bFlowers.yellowMapleMedGrass.name=Средняя жёлтая трава Кеплера 22b
+tile.kepler22bFlowers.yellowMapleTallGrass.name=Высокая жёлтая трава Кеплера 22b
+tile.kepler22bFlowers.purpleMapleShortGrass.name=Низкая фиолетовая трава Кеплера 22b
+tile.kepler22bFlowers.purpleMapleMedGrass.name=Средняя фиолетовая трава Кеплера 22b
+tile.kepler22bFlowers.purpleMapleTallGrass.name=Высокая фиолетовая трава Кеплера 22b
+tile.kepler22bFlowers.greenMapleShortGrass.name=Низкая зелёная трава Кеплера 22b
+tile.kepler22bFlowers.greenMapleMedGrass.name=Средняя зелёная трава Кеплера 22b
+tile.kepler22bFlowers.greenMapleTallGrass.name=Высокая зелёная трава Кеплера 22b
+tile.redSand.name=Касный песок
+tile.redSandstone.name=Красный песчаник
+
+#Moon Blocks
+tile.callisto.surface.name=Поверхность Каллисто
+tile.callisto.subSurface.name=Подповерхностный грунт Каллисто
+tile.callisto.stone.name=Камень Каллисто
+tile.callisto.oreIron.name=Железная руда Каллисто
+tile.callisto.oreTin.name=Оловянная руда Каллисто
+tile.callisto.oreCopper.name=Медная руда Каллисто
+
+tile.deimos.surface.name=Поверхность Деймоса
+tile.deimos.subSurface.name=Подповерхностный грунт Деймоса
+tile.deimos.stone.name=Камень Деймоса
+tile.deimos.oreIron.name=Железная руда Деймоса
+tile.deimos.oreTin.name=Оловянная руда Деймоса
+tile.deimos.oreCopper.name=Медная руда Деймоса
+tile.deimos.oreLead.name=Свинцовая руда Деймоса
+
+tile.europa.surface.name=Поверхность Европы
+tile.europa.subSurface.name=Подповерхностный грунт Европы
+tile.europa.stone.name=Камень Европы
+tile.europa.oreIron.name=Железная руда Европы
+tile.europa.oreTin.name=Оловянная руда Европы
+tile.europa.oreCopper.name=Медная руда Европы
+
+tile.io.surface.name=Поверхность Ио
+tile.io.subSurface.name=Подповерхностный грунт Ио
+tile.io.stone.name=Камень Ио
+tile.io.oreIron.name=Железная руда Ио
+tile.io.oreTin.name=Оловянная руда Ио
+tile.io.oreCopper.name=Медная руда Ио
+
+tile.phobos.surface.name=Поверхность Фобоса
+tile.phobos.subSurface.name=Подповерхностный грунт Фобоса
+tile.phobos.stone.name=Камень Фобоса
+tile.phobos.oreIron.name=Железная руда Фобоса
+tile.phobos.oreTin.name=Оловянная руда Фобоса
+tile.phobos.oreCopper.name=Медная руда Фобоса
+tile.phobos.oreLead.name=Свинцовая руда Фобоса
+
+tile.triton.surface.name=Поверхность Тритона
+tile.triton.subSurface.name=Подповерхностный грунт Тритона
+tile.triton.stone.name=Камень Тритона
+tile.triton.oreIron.name=Железная руда Тритона
+tile.triton.oreTin.name=Оловянная руда Тритона
+tile.triton.oreCopper.name=Медная руда Тритона
+
+tile.ganymede.surface.name=Поверхность Ганимеда
+tile.ganymede.subSurface.name=Подповерхностный грунт Ганимеда
+tile.ganymede.stone.name=Камень Ганимеда
+tile.ganymede.oreIron.name=Железная руда Ганимеда
+tile.ganymede.oreTin.name=Оловянная руда Ганимеда
+tile.ganymede.oreCopper.name=Медная руда Ганимеда
+
+tile.rhea.surface.name=Поверхность Реи
+tile.rhea.subSurface.name=Подповерхностный грунт Реи
+tile.rhea.stone.name=Камень Реи
+tile.rhea.oreIron.name=Железная руда Реи
+tile.rhea.oreTin.name=Оловянная руда Реи
+tile.rhea.oreCopper.name=Меданя руда Реи
+
+tile.titan.surface.name=Поверхность Титана
+tile.titan.subSurface.name=Подповерхностный грунт Титана
+tile.titan.stone.name=Камень Титана
+tile.titan.oreIron.name=Железная руда Титана
+tile.titan.oreTin.name=Оловянная руда Титана
+tile.titan.oreCopper.name=Медная руда Титана
+
+tile.oberon.surface.name=Поверхность Оберона
+tile.oberon.subSurface.name=Подповерхностный грунт Оберона
+tile.oberon.stone.name=Камень Оберона
+tile.oberon.oreIron.name=Железная руда Оберона
+tile.oberon.oreTin.name=Оловянная руда Оберона
+tile.oberon.oreCopper.name=Медная руда Оберона
+
+tile.titania.surface.name=Поверхность Титании
+tile.titania.subSurface.name=Подповерхностный грунт Титании
+tile.titania.stone.name=Камень Титании
+tile.titania.oreIron.name=Железная руда Титании
+tile.titania.oreTin.name=Оловянная руда Титании
+tile.titania.oreCopper.name=Медная руда Титании
+
+tile.iapetus.surface.name=Поверхность Япета
+tile.iapetus.subSurface.name=Подповерхностный грунт Япета
+tile.iapetus.stone.name=Камень Япета
+tile.iapetus.oreIron.name=Железная руда Япета
+tile.iapetus.oreTin.name=Оловянная руда Япета
+tile.iapetus.oreCopper.name=Медная руда Япета
+tile.iapetus.ice.name=Лёд Япета
+
+#Planet Gravel Blocks
+tile.mercuryGravel.name=Гравий Меркурия
+tile.ceresGravel.name=Гравий Цереры
+tile.plutoGravel.name=Гравий Плутона
+tile.erisGravel.name=Гравий Эриды
+tile.ioGravel.name=Гравий Ио
+tile.europaGravel.name=Гравий Европы
+tile.deimosGravel.name=Гравий Деймоса
+tile.phobosGravel.name=Гравий Фобоса
+tile.tritonGravel.name=Гравий Тритона
+tile.callistoGravel.name=Гравий Каллисто
+tile.ganymedeGravel.name=Гравий Ганимеда
+tile.rheaGravel.name=Гравий Реи
+tile.titanGravel.name=Гравий Титана
+tile.oberonGravel.name=Гравий Оберона
+tile.titaniaGravel.name=Гравий Титании
+tile.iapetusGravel.name=Гравий Япета
+
+tile.venusGravel.name=Гравий Венеры
+tile.jupiterGravel.name=Гравий Юпитера
+tile.saturnGravel.name=Гравий Сатурна
+tile.uranusGravel.name=Гравий Урана
+tile.neptuneGravel.name=Гравий Нептуна
+
+#Dungeon Bricks
+tile.veunsDungeonBrick.name=Кирпич сокровищницы Венеры
+tile.jupiterDungeonBrick.name=Кирпич сокровищницы Юпитера
+tile.saturnDungeonBrick.name=Кирпич сокровищницы Сатурна
+tile.uranusDungeonBrick.name=Кирпич сокровищницы Урана
+tile.neptuneDungeonBrick.name=Кирпич сокровищницы Нептуна
+tile.plutoDungeonBrick.name=Кирпич сокровищницы Плутона
+tile.erisDungeonBrick.name=Кирпич сокровищницы Эриды
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Плита из камня Меркурия
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Плита из камня Венеры
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Плита из камня Цереры
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Плита из камня Юпитера
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Плита из камня Сатурна
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Плита из камня Урана
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Плита из камня Нептуна
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Плита из камня Плутона
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Плита из камня Эриды
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=Ступеньки из камня Меркурия
+tile.venusStoneStairs.name=Ступеньки из камня Венеры
+tile.ceresStoneStairs.name=Ступеньки из камня Цереры
+tile.jupiterStoneStairs.name=Ступеньки из камня Юпитера
+tile.saturnStoneStairs.name=Ступеньки из камня Сатурна
+tile.uranusStoneStairs.name=Ступеньки из камня Урана
+tile.neptuneStoneStairs.name=Ступеньки из камня Нептуна
+tile.plutoStoneStairs.name=Ступеньки из камня Плутона
+tile.erisStoneStairs.name=Ступеньки из камня Эриды
+
+tile.mercuryStoneBrickStairs.name=Ступеньки из каменного кирпича Меркурия
+tile.venusStoneBrickStairs.name=Ступеньки из каменного кирпича Венеры
+tile.ceresStoneBrickStairs.name=Ступеньки из каменного кирпича Цереры
+tile.jupiterStoneBrickStairs.name=Ступеньки из каменного кирпича Юпитера
+tile.saturnStoneBrickStairs.name=Ступеньки из каменного кирпича Сатурна
+tile.uranusStoneBrickStairs.name=Ступеньки из каменного кирпича Урана
+tile.neptuneStoneBrickStairs.name=Ступеньки из каменного кирпича Нептуна
+tile.plutoStoneBrickStairs.name=Ступеньки из каменного кирпича Плутона
+tile.erisStoneBrickStairs.name=Ступеньки из каменного кирпича Эриды
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Венеры
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Юпитера
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Сатурна
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Урана
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Нептуна
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Венеры
+tile.jupiterDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Юпитера
+tile.saturnDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Сатурна
+tile.uranusDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Урана
+tile.neptuneDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Нептуна
+
+#Treasure Chests
+tile.treasureChestT4.name=Сундук с сокровищами 4-го уровня
+tile.treasureChestT5.name=Сундук с сокровищами 5-го уровня
+tile.treasureChestT6.name=Сундук с сокровищами 6-го уровня
+tile.treasureChestT7.name=Сундук с сокровищами 7-го уровня
+tile.treasureChestT8.name=Сундук с сокровищами 8-го уровня
+tile.treasureChestT9.name=Сундук с сокровищами 9-го уровня
+tile.treasureChestT10.name=Сундук с сокровищами 10-го уровня
+tile.treasureChestT4.description=Сундуки с сокровищами 4-го уровня будут генерировать в подземельях Венеры. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT5.description=Сундуки с сокровищами 5-го уровня будут генерировать в подземельях Юпитера. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT6.description=Сундуки с сокровищами 6-го уровня будут генерировать в подземельях Сатурна. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT7.description=Сундуки с сокровищами 7-го уровня будут генерировать в подземельях Урана. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT8.description=Сундуки с сокровищами 8-го уровня будут генерировать в подземельях Нептуна. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT9.description=Сундуки с сокровищами 9-го уровня будут генерировать в подземельях Плутона. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT10.description=Сундуки с сокровищами 10-го уровня будут генерировать в подземельях Эриды. Они могут быть открыты после победы над финальным боссом.
+
+#Treasure Chests For More Planets Compatibility
+tile.treasureChestT4Saturn.name=Сундук с сокровищами 4-го уровня
+tile.treasureChestT4Uranus.name=Сундук с сокровищами 4-го уровня
+tile.treasureChestT5Neptune.name=Сундук с сокровищами 5-го уровня
+tile.treasureChestT6Eris.name=Сундук с сокровищами 6-го уровня
+
+tile.treasureChestT4Saturn.description=Сундуки с сокровищами 4-го уровня будут генерировать в подземельях Сатурна. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT4Uranus.description=Сундуки с сокровищами 4-го уровня будут генерировать в подземельях Урана. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT5Neptune.description=Сундуки с сокровищами 5-го уровня будут генерировать в подземельях Нептуна. Они могут быть открыты после победы над финальным боссом.
+tile.treasureChestT6Eris.description=Сундуки с сокровищами 6-го уровня будут генерировать в подземельях Эриды. Они могут быть открыты после победы над финальным боссом.
+
+#Machines
+tile.advancedRefinery.name=Улучшенный нефтеперерабатывающий завод
+tile.ultimateRefinery.name=Максимальный нефтеперерабатывающий завод
+tile.solar.hybrid.name=Гибридная солнечная панель
+tile.solar.ultimate.name=Максимальная солнечная панель
+tile.solarhybrid.description=Эти солнечные панели будут работать днем и ночью
+tile.solarultimate.description=Эти солнечные панели будут работать днем и ночью
+tile.advancedFuelLoader.name=Улучшенный загрузчик топлива
+tile.ultimateFuelLoader.name=Максимальный загрузчик топлива
+tile.advancedLaunchPad.tier2LandingPad.name=Взлётная площадка 2-го уровня
+tile.advancedLaunchPad.tier3LandingPad.name=Взлётная площадка 3-го уровня
+tile.advancedLaunchPadFull.name=Взлётная площадка 2/3 уровня
+tile.advancedLaunchPad.tier2.desc=Используется для запуска ракет 4 - 8 уровня. Должны быть помещены в квадрат 5х5
+tile.advancedLaunchPad.tier3.desc=Используется для запуска ракет 9 - 10 уровня. Должны быть помещены в квадрат 5х5
+tile.advancedLaunchPad.poweredChargingPad.name=Заправочная площадка для транспорта
+tile.advancedLaunchPad.powered.desc=Используется для питания Марсианского & Венерианского роверов. Должны быть помещены в квадрат 5х5
+tile.chargingBlock.name=Зарядное устройство для транспорта
+tile.advancedOxygenCompressor.0.name=Улучшенный кислородный компрессор
+tile.advancedOxygenCompressor.1.name=Улучшенный кислородный декомпрессор
+tile.ultimateOxygenCompressor.0.name=Максимальный кислородный компрессор
+tile.ultimateOxygenCompressor.1.name=Максимальный кислородный декомпрессор
+
+#Machine Containers
+container.solarhybrid.name=Гибридная солнечная панель
+container.solarultimate.name=Максимальная солнечная панель
+container.vehicle.charger.name=Зарядное устройство для транспорта
+container.advanced.refinery.name=Улучшенный нефтеперерабатывающий завод
+container.ultimate.refinery.name=Максимальный нефтеперерабатывающий завод
+container.advanced.oxygencompressor.name=Улучшенный кислородный компрессор
+container.advanced.oxygendecompressor.name=Улучшенный кислородный декомпрессор
+container.ultimate.oxygencompressor.name=Максимальный кислородный компрессор
+container.ultimate.oxygendecompressor.name=Максимальный кислородный декомпрессор
+container.advanced.fuelloader.name=Улучшенный загрузчик топлива
+container.ultimate.fuelloader.name=Максимальный загрузчик топлива
+
+#GUI Messages and Texts
+gui.message.power.name=Мощность транспорта
+gui.message.power.message.name=Мощность
+gui.button.loadpower.name=Начать зарядку
+
+#Other Blocks
+tile.nuclearBomb.name=Ядерная бомба
+tile.fireBomb.name=Огненная бомба
+tile.volcanicRock.name=Вулканические породы
+tile.ashBlock.name=Блок пепла
+tile.frozenNitrogen.name=Замороженый азот
+tile.denseIce.name=Плотный лёд
+tile.fossil.name=Блок ископаемых
+
+#Decorative Blocks
+tile.decorativeBlocks.marble.name=Мрамор
+tile.decorativeBlocks.marbleBricks.name=Мраморные кирпичи
+tile.decorativeBlocks.snowBricks.name=Снежные кирпичи
+tile.decorativeBlocks.iceBricks.name=Ледянные кирпичи
+tile.decorativeBlocks.fireBricks.name=Огненные кирпичи
+tile.decorativeBlocks.blackWhiteFloor.name=Чёрно-белый кафельный пол
+tile.decorativeBlocks.marbleTitledFloor.name=Мраморный кафельный пол
+tile.decorativeBlocks.marbleBrokenTitledFloor.name=Сломанный мраморный кафельный пол
+tile.decorativeBlocks.metalMesh.name=Металлическая сетка
+tile.decorativeBlocks.frozenNitrogenBricks.name=Кирпичи из замороженного азота
+tile.decorativeBlocks.volcanicRockBricks.name=Кирпичи из вулканических пород
+tile.decorativeBlocks.carbonTitledFloor.name=Углеродный кафельный пол
+tile.decorativeBlocks.carbonBrokenTitledFloor.name=Сломанный углеродный кафельный пол
+tile.decorativeBlocks.magnesiumTitledFloor.name=Магниевый кафельный пол
+tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Сломанный магниевый кафельный пол
+tile.decorativeBlocks.ashBricks.name=Пепельные кирпичи
+tile.decorativeBlocks2.whiteBlock.name=Белый блок
+tile.decorativeBlocks2.redBlock.name=Красный блок
+
+#Vehicles
+item.marsRover.name=Марсианский ровер
+item.venusRover.name=Венерианский ровер
+
+#Vehicle Electic Parts
+item.electricParts.batteryTier1.name=Аккумулятор для транспорта 1-го уровня
+item.electricParts.batteryTier2.name=Аккумулятор для транспорта 2-го уровня
+item.electricParts.sparkPlug.name=Vehicle Spark Plug
+item.electricParts.electricWheelsTier1.name=Колёса 1-го уровня
+item.electricParts.electricWheelsTier2.name=Колёса 2-го уровня
+
+#Rocket Items
+item.itemTier4Rocket.t4Rocket.name=Ракета 4-го уровня
+item.itemTier5Rocket.t5Rocket.name=Ракета 5-го уровня
+item.itemTier6Rocket.t6Rocket.name=Ракета 6-го уровня
+item.itemTier7Rocket.t7Rocket.name=Ракета 7-го уровня
+item.itemTier8Rocket.t8Rocket.name=Ракета 8-го уровня
+item.itemTier9Rocket.t9Rocket.name=Ракета 9-го уровня
+item.itemTier10Rocket.t10Rocket.name=Ракета 10-го уровня
+
+#Rocket Tiered Items
+item.noseConeTier4.name=Носовой обтекатель 4-го уровня
+item.noseConeTier5.name=Носовой обтекатель 5-го уровня
+item.noseConeTier6.name=Носовой обтекатель 6-го уровня
+item.noseConeTier7.name=Носовой обтекатель 7-го уровня
+item.noseConeTier8.name=Носовой обтекатель 8-го уровня
+item.noseConeTier9.name=Носовой обтекатель 9-го уровня
+item.noseConeTier10.name=Носовой обтекатель 10-го уровня
+
+item.tier4.tier4Fin.name=Ракетный стабилизатор 4-го уровня
+item.tier5.tier5Fin.name=Ракетный стабилизатор 5-го уровня
+item.tier6.tier6Fin.name=Ракетный стабилизатор 6-го уровня
+item.tier7.tier7Fin.name=Ракетный стабилизатор 7-го уровня
+item.tier8.tier8Fin.name=Ракетный стабилизатор 8-го уровня
+item.tier9.tier9Fin.name=Ракетный стабилизатор 9-го уровня
+item.tier10.tier10Fin.name=Ракетный стабилизатор 10-го уровня
+
+item.tier4.tier4engine.name=Ракетный двигатель 4-го уровня
+item.tier5.tier5engine.name=Ракетный двигатель 5-го уровня
+item.tier6.tier6engine.name=Ракетный двигатель 6-го уровня
+item.tier7.tier7engine.name=Ракетный двигатель 7-го уровня
+item.tier8.tier8engine.name=Ракетный двигатель 8-го уровня
+item.tier9.tier9engine.name=Ракетный двигатель 9-го уровня
+item.tier10.tier10engine.name=Ракетный двигатель 10-го уровня
+
+item.tier4.tier4booster.name=Ускоритель 4-го уровня
+item.tier5.tier5booster.name=Ускоритель 5-го уровня
+item.tier6.tier6booster.name=Ускоритель 6-го уровня
+item.tier7.tier7booster.name=Ускоритель 7-го уровня
+item.tier8.tier8booster.name=Ускоритель 8-го уровня
+item.tier9.tier9booster.name=Ускоритель 9-го уровня
+item.tier10.tier10booster.name=Ускоритель 10-го уровня
+
+item.tier4.tier4HeavyDutyPlate.name=Сверхпрочное покрытие
+item.tier5.tier5HeavyDutyPlate.name=Сверхпрочное покрытие
+item.tier6.tier6HeavyDutyPlate.name=Сверхпрочное покрытие
+item.tier7.tier7HeavyDutyPlate.name=Сверхпрочное покрытие
+item.tier8.tier8HeavyDutyPlate.name=Сверхпрочное покрытие
+item.tier9.tier9HeavyDutyPlate.name=Сверхпрочное покрытие
+item.tier10.tier10HeavyDutyPlate.name=Сверхпрочное покрытие
+
+tier4.heavyDutyPlate.name=4-ый уровень
+tier5.heavyDutyPlate.name=5-ый уровень
+tier6.heavyDutyPlate.name=6-ой уровень
+tier7.heavyDutyPlate.name=7-ой уровень
+tier8.heavyDutyPlate.name=8-ой уровень
+tier9.heavyDutyPlate.name=9-ый уровень
+tier10.heavyDutyPlate.name=10-ый уровень
+
+#Compressed Items
+item.tier4.compressedCarbon.name=Сжатый углерод
+item.tier5.compressedPalladium.name=Сжатый палладиум
+item.tier6.compressedMagnesium.name=Сжатый магний
+item.tier7.compressedReinforcedCrystal.name=Сжатый усиленный кристалл
+item.tier7.compressedCrystal.name=Сжатый кристалл
+item.tier8.compressedZinc.name=Сжатый цинк
+item.tier5.compressedNickel.name=Сжатый никель
+item.compressedMercury.name=Сжатый меркурий
+item.tier9.compressedTungsten.name=Сжатый вольфрам
+item.tier10.compressedDarkIron.name=Сжатое тёмное железо
+
+#Ingots
+item.tier4.ingotCarbon.name=Углеродный слиток
+item.tier4.ingotVolcanic.name=Вулканический слиток
+item.tier5.ingotPalladium.name=Палладиевый слиток
+item.tier6.ingotMagnesium.name=Магниевый слиток
+item.tier7.ingotCrystal.name=Кристалльный слиток
+item.tier8.ingotZinc.name=Цинковый слиток
+item.tier5.ingotNickel.name=Никелевый слиток
+item.ingotMercury.name=Ртутный слиток
+item.ingotUranium.name=Урановый слиток
+item.tier9.ingotTungsten.name=Вольфрамовый слиток
+item.tier10.ingotDarkIron.name=Слиток тёмного железа
+item.ingotLead.name=Свинцовый слиток
+
+#Shards
+item.tier4.ashShard.name=Пепельный осколок
+item.tier4.volcanicShard.name=Вулканический осколок
+item.tier6.magnesiumShard.name=Магниевый осколок
+
+#Gems
+item.tier5.redGem.name=Красный драгоценный камень
+item.tier8.blueGem.name=Синий драгоценный камень
+item.tier7.whiteGem.name=Белый драгоценный камень
+item.tier11.blueDiamond.name=Синий алмаз
+item.tier11.redDiamond.name=Класный алмаз
+item.tier11.yellowDiamond.name=Жёлтый алмаз
+item.tier11.purpleDiamond.name=Фиолетовый алмаз
+item.tier11.greenDiamond.name=Зелёный алмаз
+item.tier10.ingotDarkIron.name=Слиток тёмного железа
+
+#Wafers
+item.wafer.diamond.name=Алмазная полупроводниковая пластина
+item.wafer.carbon.name=Углеродная полупроводниковая пластина
+item.wafer.titanium.name=Титановая полупроводниковая пластина
+item.wafer.redGem.name=Полупроводниковая пластина из красного драгоценного камня
+item.wafer.blueGem.name=Полупроводниковая пластина из синего драгоценного камня
+item.wafer.whiteGem.name=Полупроводниковая пластина из белого драгоценного камня
+
+#Buckets
+item.bucket_glowstone.name=Ведро светящейся пыли
+item.bucket_salt.name=Ведро соленой воды
+item.bucket_magma.name=Ведро магмы
+item.bucket_frozen_water.name=Ведро замерзшей воды
+item.bucket_nitrogen.name=Ведро азота
+
+#Keys
+item.key.T4.name=Ключ от подземелья 4-го уровня
+item.key.T5.name=Ключ от подземелья 5-го уровня
+item.key.T6.name=Ключ от подземелья 6-го уровня
+item.key.T7.name=Ключ от подземелья 7-го уровня
+item.key.T8.name=Ключ от подземелья 8-го уровня
+item.key.T9.name=Ключ от подземелья 9-го уровня
+item.key.T10.name=Ключ от подземелья 10-го уровня
+
+#Keys For More Planets Compatibility
+item.key.T4Saturn.name=Ключ от подземелья 4-го уровня Сатурна
+item.key.T4Uranus.name=Ключ от подземелья 4-го уровня Урана
+item.key.T5Neptune.name=Ключ от подземелья 5-го уровня Нептуна
+item.key.T6Eris.name=Ключ от подземелья 6-го уровня Эриды
+
+#Tools
+item.carbonPickaxe.name=Углеродная кирка
+item.carbonAxe.name=Углеродный топор
+item.carbonSword.name=Углеродный меч
+item.carbonHoe.name=Углеродная мотыга
+item.carbonShovel.name=Углеродная лопата
+item.palladiumPickaxe.name=Палладиевая кирка
+item.palladiumAxe.name=Палладиевый топор
+item.palladiumSword.name=Палладиевый меч
+item.palladiumHoe.name=Палладиевая мотыга
+item.palladiumShovel.name=Палладиевая лопата
+item.magnesiumPickaxe.name=Магниевая кирка
+item.magnesiumAxe.name=Магниевый топор
+item.magnesiumSword.name=Магниевый меч
+item.magnesiumHoe.name=Магниевая мотыга
+item.magnesiumShovel.name=Магниевая лопата
+item.crystalPickaxe.name=Кристалльная кирка
+item.crystalAxe.name=Кристалльный топор
+item.crystalSword.name=Кристалльный меч
+item.crystalHoe.name=Кристалльная мотыга
+item.crystalShovel.name=Кристалльная лопата
+item.tungstenPickaxe.name=Вольфрамовая кирка
+item.tungstenAxe.name=Вольфрамовый топор
+item.tungstenSword.name=Вольфрамовый меч
+item.tungstenHoe.name=Вольфрамовая мотыга
+item.tungstenShovel.name=Вольфрамовая лопата
+item.redGemPickaxe.name=Кирка из красного драгоценного камня
+item.redGemAxe.name=Топор из красного драгоценного камня
+item.redGemSword.name=Меч из красного драгоценного камня
+item.redGemHoe.name=Мотыга из красного драгоценного камня
+item.redGemShovel.name=Лопата из красного драгоценного камня
+item.blueGemPickaxe.name=Кирка из синего драгоценного камня
+item.blueGemAxe.name=Топор из синего драгоценного камня
+item.blueGemSword.name=Меч из синего драгоценного камня
+item.blueGemHoe.name=Мотыга из синего драгоценного камня
+item.blueGemShovel.name=Лопата из синего драгоценного камня
+item.whiteGemPickaxe.name=Кирка из белого драгоценного камня
+item.whiteGemAxe.name=Топор из белого драгоценного камня
+item.whiteGemSword.name=Лопата из белого драгоценного камня
+item.whiteGemHoe.name=Мотыга из белого драгоценного камня
+item.whiteGemShovel.name=Лопата из белого драгоценного камня
+item.mercuryPickaxe.name=Ртутная кирка
+item.mercuryAxe.name=Ртутный топор
+item.mercurySword.name=Ртутный меч
+item.mercuryHoe.name=Ртутная мотыга
+item.mercuryShovel.name=Ртутная лопата
+item.zincPickaxe.name=Цинковая кирка
+item.zincAxe.name=Цинковый топор
+item.zincSword.name=Цинковый меч
+item.zincHoe.name=Цинковая мотыга
+item.zincShovel.name=Цинковая лопата
+item.uraniumPickaxe.name=Урановая кирка
+item.uraniumAxe.name=Урановый топор
+item.uraniumSword.name=Урановый меч
+item.uraniumHoe.name=Урановая мотыга
+item.uraniumShovel.name=Урановая лопата
+item.blueDiamondPickaxe.name=Кирка из синего алмаза
+item.blueDiamondAxe.name=Топор из синего алмаза
+item.blueDiamondSword.name=Меч из синего алмаза
+item.blueDiamondHoe.name=Мотыга из синего алмаза
+item.blueDiamondShovel.name=Лопата из синего алмаза
+item.redDiamondPickaxe.name=Кирка из красного алмаза
+item.redDiamondAxe.name=Топор из красного алмаза
+item.redDiamondSword.name=Меч из красного алмаза
+item.redDiamondHoe.name=Мотыга из красного алмаза
+item.redDiamondShovel.name=Лопата из красного алмаза
+item.purpleDiamondPickaxe.name=Кирка из фиолетового алмаза
+item.purpleDiamondAxe.name=Топор из фиолетового алмаза
+item.purpleDiamondSword.name=Меч из фиолетового алмаза
+item.purpleDiamondHoe.name=Мотыга из фиолетового алмаза
+item.purpleDiamondShovel.name=Лопата из фиолетового алмаза
+item.yellowDiamondPickaxe.name=Кирка из жёлтого алмаза
+item.yellowDiamondAxe.name=Топор из жёлтого алмаза
+item.yellowDiamondSword.name=Меч из жёлтого алмаза
+item.yellowDiamondHoe.name=Мотыга из жёлтого алмаза
+item.yellowDiamondShovel.name=Меч из жёлтого алмаза
+item.greenDiamondPickaxe.name=Кирка из зёленого алмаза
+item.greenDiamondAxe.name=Топор из зёленого алмаза
+item.greenDiamondSword.name=Меч из зёленого алмаза
+item.greenDiamondHoe.name=Мотыга из зёленого алмаза
+item.greenDiamondShovel.name=Лопата из зёленого алмаза
+
+#Schematics
+item.schematicMarsRover.name=Схема для верстака NASA
+item.schematicVenusRover.name=Схема для верстака NASA
+
+item.schematicTier4.name=Схема для верстака NASA
+item.schematicTier5.name=Схема для верстака NASA
+item.schematicTier6.name=Схема для верстака NASA
+item.schematicTier7.name=Схема для верстака NASA
+item.schematicTier8.name=Схема для верстака NASA
+item.schematicTier9.name=Схема для верстака NASA
+item.schematicTier10.name=Схема для верстака NASA
+
+schematic.tier4.rocket.name=Ракета 4-го уровня
+schematic.tier5.rocket.name=Ракета 5-го уровня
+schematic.tier6.rocket.name=Ракета 6-го уровня
+schematic.tier7.rocket.name=Ракета 7-го уровня
+schematic.tier8.rocket.name=Ракета 8-го уровня
+schematic.tier9.rocket.name=Ракета 9-го уровня
+schematic.tier10.rocket.name=Ракета 10-го уровня
+
+schematic.mars.rover.name=Марсианский ровер
+schematic.venus.rover.name=Венерианский ровер
+
+schematic.rocketT4.name=Ракета 4-го уровня
+schematic.rocketT5.name=Ракета 5-го уровня
+schematic.rocketT6.name=Ракета 6-го уровня
+schematic.rocketT7.name=Ракета 7-го уровня
+schematic.rocketT8.name=Ракета 8-го уровня
+schematic.rocketT9.name=Ракета 9-го уровня
+schematic.rocketT10.name=Ракета 10-го уровня
+
+schematic.marsRover.name=Марсианский ровер
+schematic.venusRover.name=Венерианский ровер
+
+#Batteries
+item.mercuryBattery.name=Ртутный аккумулятор
+item.nickelBattery.name=Никелевый аккумулятор
+item.zincBattery.name=Цинковый аккумулятор
+item.advancedBattery.name=Улучшенный аккумулятор
+item.ultimateBattery.name=Максимальный аккумулятор
+
+#Armor
+item.carbonHelmet.name=Углеродный шлем
+item.carbonChest.name=Углеродный нагрудник
+item.carbonLegings.name=Углеродные поножи
+item.carbonBoots.name=Углеродный ботинки
+item.palladiumHelmet.name=Палладиевый шлем
+item.palladiumChest.name=Палладиевый нагрудник
+item.palladiumLegings.name=Палладиевые поножи
+item.palladiumBoots.name=Палладиевые ботинки
+item.magnesiumHelmet.name=Магниевый шлем
+item.magnesiumChest.name=Магниевый нагрудник
+item.magnesiumLegings.name=Магниевые поножи
+item.magnesiumBoots.name=Магниевые ботинки
+item.crystalHelmet.name=Кристалльный шлем
+item.crystalChest.name=Кристалльный нагрудник
+item.crystalLegings.name=Кристалльные поножи
+item.crystalBoots.name=Кристалльные ботинки
+item.redGemHelmet.name=Шлем из красного драгоценного камня
+item.redGemChest.name=Нагрудник из красного драгоценного камня
+item.redGemLegings.name=Поножи из красного драгоценного камня
+item.redGemBoots.name=Ботинки из красного драгоценного камня
+item.blueGemHelmet.name=Шлем из синего драгоценного камня
+item.blueGemChest.name=Нагрудник из синего драгоценного камня
+item.blueGemLegings.name=Поножи из синего драгоценного камня
+item.blueGemBoots.name=Ботинки из синего драгоценного камня
+item.whiteGemHelmet.name=Шлем из белого драгоценного камня
+item.whiteGemChest.name=Нагрудник из белого драгоценного камня
+item.whiteGemLegings.name=Поножи из белого драгоценного камня
+item.whiteGemBoots.name=Ботинки из белого драгоценного камня
+item.mercuryHelmet.name=Ртутный шлем
+item.mercuryChest.name=Ртутный нагрудник
+item.mercuryLegings.name=Ртутные поножи
+item.mercuryBoots.name=Ртутные ботинки
+item.uraniumHelmet.name=Урановый шлем
+item.uraniumChest.name=Урановый нагрудник
+item.uraniumLegings.name=Урановые поножи
+item.uraniumBoots.name=Урановые ботинки
+item.zincHelmet.name=Цинковый шлем
+item.zincChest.name=Цинковый нагрудник
+item.zincLegings.name=Цинковые поножи
+item.zincBoots.name=Цинковые ботинки
+item.tungstenHelmet.name=Вольфрамовый шлем
+item.tungstenChest.name=Вольфрамовый нагрудник
+item.tungstenLegings.name=Вольфрамовые поножи
+item.tungstenBoots.name=Вольфрамовые ботинки
+item.blueDiamondHelmet.name=Шлем из синего алмаза
+item.blueDiamondChest.name=Нагрудник из синего алмаза
+item.blueDiamondLegings.name=Поножи из синего алмаза
+item.blueDiamondBoots.name=Ботинки из синего алмаза
+item.redDiamondHelmet.name=Шлем из красного алмаза
+item.redDiamondChest.name=Нагрудник из красного алмаза
+item.redDiamondLegings.name=Поножи из красного алмаза
+item.redDiamondBoots.name=Ботинки из красного алмаза
+item.purpleDiamondHelmet.name=Шлем из фиолетового алмаза
+item.purpleDiamondChest.name=Нагрудник из фиолетового алмаза
+item.purpleDiamondLegings.name=Поножи из фиолетового алмаза
+item.purpleDiamondBoots.name=Ботинки из фиолетового алмаза
+item.yellowDiamondHelmet.name=Шлем из жёлтого алмаза
+item.yellowDiamondChest.name=Нагрудник из жёлтого алмаза
+item.yellowDiamondLegings.name=Поножи из жёлтого алмаза
+item.yellowDiamondBoots.name=Ботинки из жёлтого алмаза
+item.greenDiamondHelmet.name=Шлем из зелёного алмаза
+item.greenDiamondChest.name=Нагрудник из зелёного алмаза
+item.greenDiamondLegings.name=Поножи из зелёного алмаза
+item.greenDiamondBoots.name=Ботинки из зелёного алмаза
+
+item.tier2ThermalHelm.name=Tier 2 Thermal Padding Helm
+item.tier2ThermalChestplate.name=Tier 2 Thermal Padding Chestpiece
+item.tier2ThermalLeggings.name=Tier 2 Thermal Padding Leggings
+item.tier2ThermalBoots.name=Tier 2 Thermal Padding Boots
+
+item.tier3ThermalHelm.name=Tier 3 Thermal Padding Helm
+item.tier3ThermalChestplate.name=Tier 3 Thermal Padding Chestpiece
+item.tier3ThermalLeggings.name=Tier 3 Thermal Padding Leggings
+item.tier3ThermalBoots.name=Tier 3 Thermal Padding Boots
+
+item.tier4ThermalHelm.name=Tier 4 Thermal Padding Helm
+item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
+item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
+item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
+
+tier2.information=Required for Venus and Mercury
+tier3.information=Required for Jupiter and Saturn including their moons
+tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
+
+item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
+item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
+item.thermalCloth.tier4ThermalCloth.name=Tier 4 Thermal Cloth
+
+#Sticks
+item.tier11.blueSticks.name=Синяя палка
+item.tier11.redSticks.name=Красная палка
+item.tier11.yellowSticks.name=Жёлтая палка
+item.tier11.purpleSticks.name=Фиолетовая палка
+item.tier11.greenSticks.name=Зелёная палка
+
+#Other Items
+item.appleDiamond.name=Алмазное яблоко
+item.appleIron.name=Железное яблоко
+item.cannedfood.cannedFood.name=Консервированная еда
+item.tier4.ash.name=Пепел
+item.tier4.sledgeHammer.name=Кувалда
+item.tier4.grindingWheel.name=Шлифовальный круг
+
+item.cannedfood.dehydratedPorkchop.name=Дегидратированная жаренная свинина
+item.cannedfood.dehydratedFish.name=Дегидратированная приготовленная рыба
+item.cannedfood.dehydratedSalmon.name=Дегидратированный приготовленный лосось
+item.cannedfood.dehydratedChicken.name=Дегидратированная жаренная курица
+item.cannedfood.dehydratedBeef.name=Дегидратированный стейк
+
+currently.unused.name=В настоящее время не используется!
+
+#Entities
+entity.ProjectileTNT.name=Снаряд TNT
+
+entity.ExtraPlanets.ExtraPlanetsEntityTier4Rocket.name=Ракета 4-го уровня
+entity.ExtraPlanets.ExtraPlanetsEntityTier5Rocket.name=Ракета 5-го уровня
+entity.ExtraPlanets.ExtraPlanetsEntityTier6Rocket.name=Ракета 6-го уровня
+entity.ExtraPlanets.ExtraPlanetsEntityTier7Rocket.name=Ракета 7-го уровня
+entity.ExtraPlanets.ExtraPlanetsEntityTier8Rocket.name=Ракета 8-го уровня
+entity.ExtraPlanets.ExtraPlanetsEntityTier9Rocket.name=Ракета 9-го уровня
+entity.ExtraPlanets.ExtraPlanetsEntityTier10Rocket.name=Ракета 10-го уровня
+
+entity.ExtraPlanetsCreeperBossVenus.name=Крипер-босс Венеры
+entity.ExtraPlanetsCreeperBossJupiter.name=Крипер-босс Юпитера
+entity.ExtraPlanetsCreeperBossSaturn.name=Крипер-босс Сатурна
+entity.ExtraPlanetsCreeperBossUranus.name=Крипер-босс Урана
+entity.ExtraPlanetsCreeperBossNeptune.name=Крипер-босс Нептуна
+entity.ExtraPlanetsCreeperBossPluto.name=Крипер-босс Плутона
+entity.ExtraPlanetsCreeperBossEris.name=Крипер-босс Эриды
+
+entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Эволюционировавший адский слизень-босс
+entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Эволюционировавший слизень-босс
+entity.ExtraPlanetsEvolvedGhastBoss.name=Эволюционировавший гаст-босс
+entity.ExtraPlanetsEvolvedSnowmanBoss.name=Эволюционировавший снеговик-босс
+entity.ExtraPlanetsEvolvedFireBatBoss.name=Evolved Fire Bat Boss
+
+entity.ExtraPlanetsEvolvedWitch.name=Эволюционировавшая ведьма
+entity.ExtraPlanetsEvolvedMagmaCube.name=Эволюционировавший адский слизень
+entity.ExtraPlanetsEvolvedIceSlime.name=Эволюционировавший ледянной слизень
+entity.ExtraPlanetsEvolvedEnderman.name=Эволюционировавший эндермен
+entity.ExtraPlanetsEvolvedBlaze.name=Эволюционировавший ифрит
+entity.ExtraPlanetsEvolvedBlueCreeper.name=Эволюционировавший синий крипер
+entity.ExtraPlanetsEvolvedRedCreeper.name=Эволюционировавший красный крипер
+entity.ExtraPlanetsEvolvedPowerSkeleton.name=Эволюционировавший мощный скелет
+entity.ExtraPlanetsEvolvedMiniEnderman.name=Эволюционировавший мини эндермен
+entity.ExtraPlanetsEvolvedGiantSpider.name=Эволюционировавший гигантский паук
+
+entity.ExtraPlanets.EntityMarsRover.name=Марсианский ровер
+entity.ExtraPlanets.EntityVenusRover.name=Венерианский ровер
+
+#Achievements
+achievement.mercuryPlanet=Приземлитесь на Меркурий!
+achievement.venusPlanet=Приземлитесь на Венеру!
+achievement.ceresPlanet=Приземлитесь на Цереру!
+achievement.jupiterPlanet=Приземлитесь на Юпитер!
+achievement.saturnPlanet=Приземлитесь на Сатурн!
+achievement.uranusPlanet=Приземлитесь на Уран!
+achievement.neptunePlanet=Приземлитесь на Нептун!
+achievement.plutoPlanet=Приземлитесь на Плутон!
+achievement.erisPlanet=Приземлитесь на Эриду!
+achievement.kepler22bPlanet=Приземлитесь на Кеплер 22b!
+
+achievement.mercuryPlanet.desc=Посадите ракету 4-го уровня на Меркурий
+achievement.venusPlanet.desc=Посадите ракету 3-го уровня на Венеру
+achievement.ceresPlanet.desc=Посадите ракету 4-го уровня на Цереру
+achievement.jupiterPlanet.desc=Посадите ракету 4-го уровня на Юпитер
+achievement.saturnPlanet.desc=Посадите ракету 5-го уровня на Сатурн
+achievement.uranusPlanet.desc=Посадите ракету 6-го уровня на Уран
+achievement.neptunePlanet.desc=Посадите ракету 7-го уровня на Нептун
+achievement.plutoPlanet.desc=Посадите ракету 8-го уровня на Плутон
+achievement.erisPlanet.desc=Посадите ракету 9-го уровня на Эриду
+achievement.kepler62bPlanet.desc=Посадите ракету 10-го уровня на Кеплер 22b
+
+achievement.venusBoss=Победить босса 4-го уровня!
+achievement.jupiterBoss=Победить босса 5-го уровня!
+achievement.saturnBoss=Победить босса 6-го уровня!
+achievement.uranusBoss=Победить босса 7-го уровня!
+achievement.neptuneBoss=Победить босса 8-го уровня!
+achievement.plutoBoss=Победить босса 9-го уровня!
+achievement.erisBoss=Победить босса 10-го уровня!
+
+achievement.venusBoss.desc=Убить босса подземелья Венеры и открыть сундук с сокровищами
+achievement.jupiterBoss.desc=Убить босса подземелья Юпитера и открыть сундук с сокровищами
+achievement.saturnBoss.desc=Убить босса подземелья Сатурна и открыть сундук с сокровищами
+achievement.uranusBoss.desc=Убить босса подземелья Урана и открыть сундук с сокровищами
+achievement.neptuneBoss.desc=Убить босса подземелья Нептуна и открыть сундук с сокровищами
+achievement.plutoBoss.desc=Убить босса подземелья Плутона и открыть сундук с сокровищами
+
+achievement.craftRocket4=Ракета 4-го уровня!
+achievement.craftRocket5=Ракета 5-го уровня!
+achievement.craftRocket6=Ракета 6-го уровня!
+achievement.craftRocket7=Ракета 7-го уровня!
+achievement.craftRocket8=Ракета 8-го уровня!
+achievement.craftRocket9=Ракета 9-го уровня!
+achievement.craftRocket10=Ракета 10-го уровня!
+
+achievement.craftRocket4.desc=Создать ракету 4-го уровня
+achievement.craftRocket5.desc=Создать ракету 5-го уровня
+achievement.craftRocket6.desc=Создать ракету 6-го уровня
+achievement.craftRocket7.desc=Создать ракету 7-го уровня
+achievement.craftRocket8.desc=Создать ракету 8-го уровня
+achievement.craftRocket9.desc=Создать ракету 9-го уровня
+achievement.craftRocket10.desc=Создать ракету 10-го уровня
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=Жидкая светящиеся пыль
+tile.magma_fluid.name=Жидкая магма
+tile.nitrogen_fluid.name=Жидкий азот
+tile.frozen_water_fluid.name=Замерзшая вода
+tile.salt_fluid.name=Жидкая соленая вода
