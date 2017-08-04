@@ -15,6 +15,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.6.2
+*Reduced the level of Radiation on Mercury
+
 v0.6.1
 *Fixed rendering issues with Item Rocket Models
 
