@@ -5,16 +5,16 @@ itemGroup.SpaceToolsTab=Extra Planets: Инструменты
 itemGroup.SpaceArmorTab=Extra Planets: Броня
 
 #Solar Systems
-solarsystem.Kepler22=Система Кеплер 22
-solarsystem.Kepler47=Система Кеплер 47
-solarsystem.Kepler62=Система Кеплер 62
-solarsystem.Kepler69=Система Кеплер 69
+solarsystem.kepler22=Система Кеплер 22
+solarsystem.kepler47=Система Кеплер 47
+solarsystem.kepler62=Система Кеплер 62
+solarsystem.kepler69=Система Кеплер 69
 
 #Stars
-star.Kepler22=Звезда Кеплер 22
-star.Kepler47=Звезда Кеплер 47
-star.Kepler62=Звезда Кеплер 62
-star.Kepler69=Звезда Кеплер 69
+star.kepler22=Звезда Кеплер 22
+star.kepler47=Звезда Кеплер 47
+star.kepler62=Звезда Кеплер 62
+star.kepler69=Звезда Кеплер 69
 
 #Planets
 planet.Mercury=Меркурий
@@ -30,16 +30,16 @@ planet.kuiperBelt=Пояс Койпера
 planet.makemake=Макемаке
 planet.haumea=Хаумеа
 
-planet.Kepler62b=Кеплер 62b
-planet.Kepler62c=Кеплер 62c
-planet.Kepler62d=Кеплер 62d
-planet.Kepler62e=Кеплер 62e
-planet.Kepler62f=Кеплер 62f
-planet.Kepler22b=Кеплер 22b
-planet.Kepler47b=Кеплер 47b
-planet.Kepler47c=Кеплер 47c
-planet.Kepler69b=Кеплер 69b
-planet.Kepler69c=Кеплер 69c
+planet.kepler62b=Кеплер 62b
+planet.kepler62c=Кеплер 62c
+planet.kepler62d=Кеплер 62d
+planet.kepler62e=Кеплер 62e
+planet.kepler62f=Кеплер 62f
+planet.kepler22b=Кеплер 22b
+planet.kepler47b=Кеплер 47b
+planet.kepler47c=Кеплер 47c
+planet.kepler69b=Кеплер 69b
+planet.kepler69c=Кеплер 69c
 
 #Moons
 moon.triton=Тритон
@@ -555,7 +555,7 @@ item.tier7.compressedReinforcedCrystal.name=Сжатый усиленный кр
 item.tier7.compressedCrystal.name=Сжатый кристалл
 item.tier8.compressedZinc.name=Сжатый цинк
 item.tier5.compressedNickel.name=Сжатый никель
-item.compressedMercury.name=Сжатый меркурий
+item.compressedMercury.name=Сжатая ртуть
 item.tier9.compressedTungsten.name=Сжатый вольфрам
 item.tier10.compressedDarkIron.name=Сжатое тёмное железо
 
