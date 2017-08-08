@@ -8,6 +8,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.8.3
+*Updated ru_RU.lang (Thanks to rykllan)
+*Fix Kepler 22b being inaccessible with More Planets Advanced compatibility enabled
+
 v1.8.2
 *Added Fire Bat Boss to Jupiter
 *Changed spawn rate of some world gen features on Jupiter
