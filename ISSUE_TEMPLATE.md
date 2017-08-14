@@ -14,7 +14,7 @@
 
 **Screenshots (if applicable):** 
 
-**Version of Mod Pack using:** [VERSION]
+**Version of Mod using:** [VERSION]
 
 **Where did this bug happen:** [Single Player or Server]
 
