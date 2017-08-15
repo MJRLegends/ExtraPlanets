@@ -26,15 +26,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityJupiterLander extends EntityLanderBase implements IIgnoreShift, ICameraZoomEntity {
+public class EntitySaturnLander extends EntityLanderBase implements IIgnoreShift, ICameraZoomEntity {
 	private double lastMotionY;
 
-	public EntityJupiterLander(World world) {
+	public EntitySaturnLander(World world) {
 		super(world);
 		this.setSize(3.0F, 4.25F);
 	}
 
-	public EntityJupiterLander(EntityPlayerMP player) {
+	public EntitySaturnLander(EntityPlayerMP player) {
 		super(player, 0.0F);
 	}
 

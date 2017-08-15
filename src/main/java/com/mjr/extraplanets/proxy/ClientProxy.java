@@ -90,6 +90,7 @@ import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCr
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossSaturn;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossUranus;
 import com.mjr.extraplanets.client.render.entities.landers.RenderJupiterLander;
+import com.mjr.extraplanets.client.render.entities.landers.RenderSaturnLander;
 import com.mjr.extraplanets.client.render.entities.projectiles.RenderSmallSnowBall;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderElectricRocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier10Rocket;
@@ -124,6 +125,7 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
+import com.mjr.extraplanets.entities.landers.EntitySaturnLander;
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
@@ -324,11 +326,13 @@ public class ClientProxy extends CommonProxy {
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedFireBatBoss.class, (RenderManager manager) -> new RenderEvolvedFireBatBoss(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityJupiterLander.class, (RenderManager manager) -> new RenderJupiterLander(manager));
 		}
-		if (Config.SATURN)
+		if (Config.SATURN) {
 			if (Config.USE_DEFAULT_BOSSES)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, (RenderManager manager) -> new RenderCreeperBossSaturn(manager));
 			else
 				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGhastBoss.class, (RenderManager manager) -> new RenderEvolvedGhastBoss(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntitySaturnLander.class, (RenderManager manager) -> new RenderSaturnLander(manager));
+		}
 		if (Config.URANUS)
 			if (Config.USE_DEFAULT_BOSSES)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, (RenderManager manager) -> new RenderCreeperBossUranus(manager));

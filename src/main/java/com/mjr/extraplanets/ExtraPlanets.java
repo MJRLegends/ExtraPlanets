@@ -35,6 +35,7 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
+import com.mjr.extraplanets.entities.landers.EntitySaturnLander;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
@@ -320,12 +321,14 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, Constants.modID + "." + "FireBombPrimed", 150, 1, true);
 		if (Config.MERCURY)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modID + "." + "EntityTier4Rocket", 150, 1, false);
-		if (Config.JUPITER){
+		if (Config.JUPITER) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modID + "." + "EntityTier5Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityJupiterLander.class, Constants.modID + "." + "EntitJupiterLander", 150, 5, false);
 		}
-		if (Config.SATURN)
+		if (Config.SATURN) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modID + "." + "EntityTier6Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySaturnLander.class, Constants.modID + "." + "EntitSaturnLander", 150, 5, false);
+		}
 		if (Config.URANUS)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modID + "." + "EntityTier7Rocket", 150, 1, false);
 		if (Config.NEPTUNE)
@@ -338,7 +341,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityElectricRocket.class, Constants.modID + "." + "EntityTier10ElectricRocket", 150, 1, false);
 		if (Config.MARS_ROVER)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, Constants.modID + "." + "EntityMarsRover", 150, 1, false);
-		if(Config.VENUS_ROVER)
+		if (Config.VENUS_ROVER)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, Constants.modID + "." + "EntityVenusRover", 150, 1, false);
 	}
 
