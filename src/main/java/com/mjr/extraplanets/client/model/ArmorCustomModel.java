@@ -41,7 +41,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 
 		pre();
 		float f6 = 2.0F;
-
+		GL11.glScalef(1.1F, 1.1F, 1.1F);
 		{// partHead
 			GL11.glPushMatrix();
 			if (isChild) {
@@ -53,6 +53,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedHead.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedHead.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
+			GL11.glRotatef(180F, 0F, 1F, 0F);
 			partHead();
 			GL11.glPopMatrix();
 		}
@@ -70,6 +71,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedBody.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedBody.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
+			GL11.glRotatef(180F, 0F, 1F, 0F);
 			partBody();
 			GL11.glPopMatrix();
 		}
@@ -81,6 +83,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedRightArm.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedRightArm.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
+			GL11.glRotatef(180F, 0F, 1F, 0F);
 			partRightArm();
 			GL11.glPopMatrix();
 		}
@@ -92,6 +95,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedLeftArm.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedLeftArm.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
+			GL11.glRotatef(180F, 0F, 1F, 0F);
 			partLeftArm();
 			GL11.glPopMatrix();
 		}
@@ -103,6 +107,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedRightLeg.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedRightLeg.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
+			GL11.glRotatef(180F, 0F, 1F, 0F);
 			partRightLeg();
 			GL11.glPopMatrix();
 		}
@@ -114,6 +119,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedLeftLeg.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedLeftLeg.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
+			GL11.glRotatef(180F, 0F, 1F, 0F);
 			partLeftLeg();
 			GL11.glPopMatrix();
 		}
