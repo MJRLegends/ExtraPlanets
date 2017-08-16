@@ -3,7 +3,6 @@ package com.mjr.extraplanets.client.model;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -40,7 +39,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void pre() {
 		GL11.glEnable(GL11.GL_BLEND);
-        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		updateModel();
 	}
@@ -57,26 +56,21 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 				armourModelHead = (OBJModel.OBJBakedModel) model.bake(
 						new OBJModel.OBJState(ImmutableList.of("HelmetOxygenCapsule1", "HelmetOxygenCapsule2", "HelmetPart1", "HelmetPart2", "HelmetPart4", "HelmetPart5", "HelmetPart6", "HelmetPart7", "HelmetPart8", "HelmetPart9", "HelmetPart10",
 								"HelmetPart11", "MainPartHelmet"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
-				armourModelHead2 = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("HelmetPart3"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
+
+				armourModelHead2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("HelmetPart3"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
 				armourModelBody = (OBJModel.OBJBakedModel) model.bake(
 						new OBJModel.OBJState(ImmutableList.of("BodyPart1", "BodyPart2", "BodyPart3", "BodyPart4", "BodyPart5", "BodyPart6", "BodyPart7", "BodyPart8", "BodyPart9", "BodyPart10", "BodyPart11", "BodyPart12", "BodyPart13", "BodyPart14",
 								"BodyPart15", "BodyPart16", "BodyPart17", "BodyPart18"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
-				armourModelLeftArm = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("LeftHandPart1", "LeftHandPart2", "LeftHandPart3", "LeftHandPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
-				armourModelRightArm = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("RightHandPart1", "RightHandPart2", "RightHandPart3", "RightHandPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
-				armourModelLeftLeg = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("LeftLegPart1", "LeftLegPart2", "LeftLegPart3", "LeftLegPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
-				armourModelRightLeg = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("RightLegPart1", "RightLegPart2", "RightLegPart3", "RightLegPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
+
+				armourModelLeftArm = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("LeftHandPart1", "LeftHandPart2", "LeftHandPart3", "LeftHandPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
+				armourModelRightArm = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("RightHandPart1", "RightHandPart2", "RightHandPart3", "RightHandPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
+				armourModelLeftLeg = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("LeftLegPart1", "LeftLegPart2", "LeftLegPart3", "LeftLegPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
+				armourModelRightLeg = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("RightLegPart1", "RightLegPart2", "RightLegPart3", "RightLegPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -91,10 +85,13 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partHead() {
 		if (partType == EntityEquipmentSlot.HEAD) {
-			GL11.glTranslatef(0F, -1.5F, 0F);
+			GL11.glTranslatef(0F, -1.55F, -0.005F);
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_layer_1.png"));
 			ClientUtil.drawBakedModel(armourModelHead);
 			GL11.glEnable(GL11.GL_BLEND);
+			GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 			ClientUtil.drawBakedModel(armourModelHead2);
+			GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ZERO);
 			GL11.glDisable(GL11.GL_BLEND);
 		}
 	}
@@ -102,7 +99,9 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partBody() {
 		if (partType == EntityEquipmentSlot.CHEST) {
-			GL11.glTranslatef(0F, -1.5F, 0F);
+			GL11.glScalef(1.0F, 1.0F, 1.0F);
+			GL11.glTranslatef(0F, -1.50F, 0F);
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_layer_1.png"));
 			ClientUtil.drawBakedModel(armourModelBody);
 		}
 	}
@@ -110,7 +109,8 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partRightArm() {
 		if (partType == EntityEquipmentSlot.CHEST) {
-			GL11.glTranslatef(-0.3125F, -1.375F, 0F);
+			GL11.glTranslatef(-0.3525F, -1.375F, 0F);
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_layer_1.png"));
 			ClientUtil.drawBakedModel(armourModelRightArm);
 		}
 	}
@@ -118,24 +118,29 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partLeftArm() {
 		if (partType == EntityEquipmentSlot.CHEST) {
-			GL11.glTranslatef(0.3125F, -1.375F, 0F);
+			GL11.glTranslatef(0.3525F, -1.375F, 0F);
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_layer_1.png"));
 			ClientUtil.drawBakedModel(armourModelLeftArm);
 		}
 	}
 
 	@Override
 	public void partRightLeg() {
-		GL11.glTranslatef(-0.125F, -0.75F, 0F);
 		if (partType == EntityEquipmentSlot.LEGS) {
-			ClientUtil.drawBakedModel(armourModelRightLeg);
+			GL11.glScalef(1F, 1F, 1.4F);
+			GL11.glTranslatef(-0.125F, -0.7F, -0.01F);
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_layer_1.png"));
+			ClientUtil.drawBakedModel(armourModelLeftLeg);
 		}
 	}
 
 	@Override
 	public void partLeftLeg() {
-		GL11.glTranslatef(0.125F, -0.75F, 0F);
 		if (partType == EntityEquipmentSlot.LEGS) {
-			ClientUtil.drawBakedModel(armourModelLeftLeg);
+			GL11.glScalef(1F, 1F, 1.4F);
+			GL11.glTranslatef(0.125F, -0.7F, -0.01F);
+			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_layer_1.png"));
+			ClientUtil.drawBakedModel(armourModelRightLeg);
 
 		}
 	}
