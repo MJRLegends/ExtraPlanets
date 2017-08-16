@@ -20,29 +20,40 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
+import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
 
 public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor {
 	public String name;
 
 	public Tier1SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
-		super(material, 0, placement);
+		super(material, 1, placement);
 		setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
 
-	 @Override
-	 public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
-	 if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS) {
-	 return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-	 } else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS) {
-	 return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-	 } else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS) {
-	 return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-	 } else {
-	 return null;
-	 }
-	 }
+	@Override
+	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
+		if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS) {
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_main.png";
+		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS) {
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_main.png";
+		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS) {
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_main.png";
+		} else {
+			return null;
+		}
+	}
+
+	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
+		if (model == null)
+			return model;
+		model.bipedHead.showModel = model.bipedHeadwear.showModel = model.bipedBody.showModel = model.bipedRightArm.showModel = model.bipedLeftArm.showModel = model.bipedRightLeg.showModel = model.bipedLeftLeg.showModel = false;
+		model.isSneak = entityLiving.isSneaking();
+		model.isRiding = entityLiving.isRiding();
+		model.isChild = entityLiving.isChild();
+		return model;
+	}
 
 	@Override
 	public int getArmorTier() {
@@ -88,14 +99,12 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
-		return new ArmorSpaceSuitModel(armorSlot);
-	}
-
-	public boolean hasColor(ItemStack stack) {
-		return true;
-	}
-
-	public int getColor(ItemStack stack) {
-		return 16777215;
+		ModelBiped armorModel = new ArmorSpaceSuitModel(armorSlot);
+		if (itemStack.getItem() instanceof Tier1SpaceSuitArmor) {
+			armorModel = fillingArmorModel(armorModel, entityLiving);
+			if (hasColor(itemStack) && armorModel instanceof ArmorCustomModel)
+				((ArmorCustomModel) armorModel).color = getColor(itemStack);
+		}
+		return armorModel;
 	}
 }
