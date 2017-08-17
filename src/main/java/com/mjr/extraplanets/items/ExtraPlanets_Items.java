@@ -203,7 +203,8 @@ public class ExtraPlanets_Items {
 		registerItems();
 		registerFluidContainer();
 		if (Config.ORE_DICTIONARY_INGOTS)
-			OreDictionaryRegister();
+			OreDictionaryIngotsRegister();
+		OreDictionaryItemsRegister();
 		registerGearItems();
 	}
 
@@ -562,7 +563,7 @@ public class ExtraPlanets_Items {
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, new ItemStack(BUCKET_NITROGEN_ICE, 1, 0), new ItemStack(Items.bucket));
 	}
 
-	public static void OreDictionaryRegister() {
+	public static void OreDictionaryIngotsRegister() {
 		if (Config.MERCURY) {
 			OreDictionary.registerOre("ingotMercury", new ItemStack(INGOT_MERCURY));
 			OreDictionary.registerOre("ingotCarbon", new ItemStack(TIER_4_ITEMS, 1, 5));
@@ -597,6 +598,17 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("ingotPlatinum", new ItemStack(TIER_11_ITEMS, 1, 5));
 		}
 		OreDictionary.registerOre("ingotLead", new ItemStack(INGOT_LEAD));
+	}
+	
+	public static void OreDictionaryItemsRegister() {
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 7));
+			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 8));
+			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 9));
+			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 10));
+			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 11));
+			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 12));
+		}
 	}
 
 	public static void registerGearItems() {
