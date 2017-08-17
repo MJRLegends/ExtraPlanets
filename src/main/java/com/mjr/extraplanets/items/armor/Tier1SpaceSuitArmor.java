@@ -35,26 +35,16 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
 		if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS) {
-			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_main.png";
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS) {
-			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_main.png";
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS) {
-			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_main.png";
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else {
 			return null;
 		}
 	}
 
-	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
-		if (model == null)
-			return model;
-		model.bipedHead.showModel = model.bipedHeadwear.showModel = model.bipedBody.showModel = model.bipedRightArm.showModel = model.bipedLeftArm.showModel = model.bipedRightLeg.showModel = model.bipedLeftLeg.showModel = false;
-		model.isSneak = entityLiving.isSneaking();
-		model.isRiding = entityLiving.isRiding();
-		model.isChild = entityLiving.isChild();
-		return model;
-	}
-	
 	@Override
 	public int getArmorTier() {
 		return 1;
@@ -96,6 +86,16 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		}
 	}
 
+	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
+		if (model == null)
+			return model;
+		model.bipedHead.showModel = model.bipedHeadwear.showModel = model.bipedBody.showModel = model.bipedRightArm.showModel = model.bipedLeftArm.showModel = model.bipedRightLeg.showModel = model.bipedLeftLeg.showModel = false;
+		model.isSneak = entityLiving.isSneaking();
+		model.isRiding = entityLiving.isRiding();
+		model.isChild = entityLiving.isChild();
+		return model;
+	}
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {

@@ -6,7 +6,9 @@ import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -18,6 +20,8 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
+import com.mjr.extraplanets.client.model.ArmorCustomModel;
+import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
 
 public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor  {
 	public String name;
@@ -31,11 +35,11 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
 		if (stack.getItem() == ExtraPlanets_Armor.TIER_3_SPACE_SUIT_HELMET || stack.getItem() == ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST || stack.getItem() == ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS) {
-			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_3_SPACE_SUIT_LEGINGS) {
-			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS) {
-			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
+			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else {
 			return null;
 		}
@@ -80,5 +84,27 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		if (player.world.isRemote) {
 			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier3.space.suit.information"));
 		}
+	}
+
+	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
+		if (model == null)
+			return model;
+		model.bipedHead.showModel = model.bipedHeadwear.showModel = model.bipedBody.showModel = model.bipedRightArm.showModel = model.bipedLeftArm.showModel = model.bipedRightLeg.showModel = model.bipedLeftLeg.showModel = false;
+		model.isSneak = entityLiving.isSneaking();
+		model.isRiding = entityLiving.isRiding();
+		model.isChild = entityLiving.isChild();
+		return model;
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
+		ModelBiped armorModel = new ArmorSpaceSuitModel(armorSlot);
+		if (itemStack.getItem() instanceof Tier3SpaceSuitArmor) {
+			armorModel = fillingArmorModel(armorModel, entityLiving);
+			if (hasColor(itemStack) && armorModel instanceof ArmorCustomModel)
+				((ArmorCustomModel) armorModel).color = getColor(itemStack);
+		}
+		return armorModel;
 	}
 }
