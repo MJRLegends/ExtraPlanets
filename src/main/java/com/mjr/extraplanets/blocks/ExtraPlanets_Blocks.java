@@ -192,6 +192,7 @@ public class ExtraPlanets_Blocks {
 	public static Block KEPLER22B_GRASS_PURPLE;
 	public static Block KEPLER22B_GRASS_RED;
 	public static Block KEPLER22B_GRASS_YELLOW;
+	public static Block KEPLER22B_GRASS_INFECTED;
 
 	// Logs
 	public static Block KEPLER22B_MAPLE_LOG;
@@ -338,6 +339,7 @@ public class ExtraPlanets_Blocks {
 			KEPLER22B_GRASS_PURPLE = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple_grass");
 			KEPLER22B_GRASS_RED = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
 			KEPLER22B_GRASS_YELLOW = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
+			KEPLER22B_GRASS_INFECTED = new BlockBasicGrass().setUnlocalizedName("kepler22b_infected_grass");
 			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22b_flowers");
 			RED_SAND = new BlockSand("red_sand").setHardness(0.6F);
 			RED_SANDSTONE = new BlockBasic(Material.rock).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
@@ -470,10 +472,10 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(KEPLER22B_GRASS_PURPLE, KEPLER22B_GRASS_PURPLE.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(KEPLER22B_GRASS_INFECTED, KEPLER22B_GRASS_INFECTED.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
-
 		}
 
 		if (Config.EUROPA) {

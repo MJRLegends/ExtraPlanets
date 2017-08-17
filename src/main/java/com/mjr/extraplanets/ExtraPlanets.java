@@ -379,7 +379,7 @@ public class ExtraPlanets {
 		if (Config.ERIS)
 			RegisterHelper.registerExtraPlanetsMobEntity(EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);
 	}
-	
+
 	private void registerSchematicsRecipes() {
 		if (Config.MERCURY)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier4Rocket());

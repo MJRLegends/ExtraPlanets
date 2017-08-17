@@ -1,0 +1,10 @@
+{
+    "parent": "block/grass",
+    "textures": {
+        "particle": "blocks/dirt",
+        "bottom": "extraplanets:blocks/kepler22b_dirt",
+        "top": "extraplanets:blocks/kepler22b_infected_grass_top",
+        "side": "extraplanets:blocks/kepler22b_infected_grass_side",
+        "overlay": "extraplanets:blocks/kepler22b_grass_blank_overlay"
+    }
+}

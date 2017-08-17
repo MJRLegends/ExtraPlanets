@@ -9,6 +9,7 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
@@ -21,6 +22,7 @@ import com.mjr.extraplanets.world.features.WorldGenBlueTower;
 import com.mjr.extraplanets.world.features.WorldGenBrownHut;
 import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 import com.mjr.extraplanets.world.features.WorldGenGreenHut;
+import com.mjr.extraplanets.world.features.WorldGenLogTree;
 import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
 import com.mjr.extraplanets.world.features.WorldGenRedHut;
 import com.mjr.extraplanets.world.features.WorldGenYellowHut;
@@ -28,6 +30,7 @@ import com.mjr.extraplanets.world.features.WorldGenYellowHut;
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 	public int LakesPerChunk;
+	public int InfectedLakesPerChunk;
 
 	public int blueTreesPerChunk;
 	public int redTreesPerChunk;
@@ -61,12 +64,14 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	public int redBigTreesPerChunk;
 	public int blueTowerPerChunk;
 
+	public int treeWithNoLeafsPerChunk;
+	public int bigTreeWithNoLeafsPerChunk;
 	public boolean generateHuts;
 
 	private boolean isDecorating = false;
 
 	@Override
-    public void decorate(World worldIn, Random random, BiomeGenBase p_180292_3_, BlockPos pos){
+	public void decorate(World worldIn, Random random, BiomeGenBase p_180292_3_, BlockPos pos) {
 		if (isDecorating)
 			return;
 		isDecorating = true;
@@ -77,6 +82,29 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				int z = this.field_180294_c.getZ() + random.nextInt(80) + 8;
 				int y = random.nextInt(256);
 				new WorldGenCustomLake(Blocks.water).generate(worldIn, random, new BlockPos(x, y, z), Blocks.grass);
+			}
+		}
+		for (int i = 0; i < this.InfectedLakesPerChunk; i++) {
+			if (random.nextInt(15) == 0) {
+				int x = this.field_180294_c.getX() + random.nextInt(80) + 8;
+				int z = this.field_180294_c.getZ() + random.nextInt(80) + 8;
+				int y = random.nextInt(256);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.INFECTED_WATER).generate(worldIn, random, new BlockPos(x, y, z), Blocks.grass);
+			}
+		}
+		for (int i = 0; i < this.treeWithNoLeafsPerChunk; i++) {
+			BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+			if (random.nextInt(5) < 5)
+				blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
+			else
+				blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(1), Blocks.air.getDefaultState(), false).generate(worldIn, random, blockpos);
+		}
+		for (int i = 0; i < this.bigTreeWithNoLeafsPerChunk; i++) {
+			if (random.nextInt(5) == 1) {
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
+				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
+				new WorldGenLogTree().generate(worldIn, random, blockpos);
 			}
 		}
 		for (int i = 0; i < this.purpleBigTreesPerChunk; i++) {
