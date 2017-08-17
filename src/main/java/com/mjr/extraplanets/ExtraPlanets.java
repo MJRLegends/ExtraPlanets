@@ -434,6 +434,7 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.KEPLER22B_PURPLE_FOREST_BIOME_ID, BiomeGenBaseKepler22b.kepler22bPurpleForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bPurpleForest);
 			Biome.registerBiome(Config.KEPLER22B_YELLOW_FOREST_BIOME_ID, BiomeGenBaseKepler22b.kepler22bYellowForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bYellowForest);
 			Biome.registerBiome(Config.KEPLER22B_RED_DESERT_BIOME_ID, BiomeGenBaseKepler22b.kepler22bRedDesert.getBiomeName(), BiomeGenBaseKepler22b.kepler22bRedDesert);
+			Biome.registerBiome(Config.KEPLER22B_WASTE_LANDS_BIOME_ID, BiomeGenBaseKepler22b.kepler22bWasteLands.getBiomeName(), BiomeGenBaseKepler22b.kepler22bWasteLands);
 		}
 		// Moons
 		if (Config.CALLISTO)
