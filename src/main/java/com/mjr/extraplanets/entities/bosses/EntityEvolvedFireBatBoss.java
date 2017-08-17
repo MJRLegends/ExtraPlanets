@@ -423,7 +423,7 @@ public class EntityEvolvedFireBatBoss extends EntityMob implements IMob, IEntity
 				}
 			}
 
-			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T6key, 1, 0), 0.5F);
+			this.entityDropItem(new ItemStack(ExtraPlanets_Items.T5key, 1, 0), 0.5F);
 
 			super.setDead();
 
