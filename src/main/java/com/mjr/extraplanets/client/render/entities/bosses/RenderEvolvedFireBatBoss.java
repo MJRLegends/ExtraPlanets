@@ -9,7 +9,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.client.model.ModelEvolvedFireBatBoss;
+import com.mjr.extraplanets.client.model.bosses.ModelEvolvedFireBatBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 
 @SideOnly(Side.CLIENT)
