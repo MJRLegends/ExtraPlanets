@@ -28,12 +28,12 @@ public class ItemBlockKepler22b extends ItemBlock
 		{
 		case 0:
 		{
-			name = "Dirt";
+			name = "dirt";
 			break;
 		}
 		case 1:
 		{
-			name = "Stone";
+			name = "stone";
 			break;
 		}
 		case 2:
@@ -88,7 +88,7 @@ public class ItemBlockKepler22b extends ItemBlock
 		}
 		case 12:
 		{
-			name = "Cobblestone";
+			name = "cobblestone";
 			break;
 		}
 		case 13:

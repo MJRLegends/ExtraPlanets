@@ -152,13 +152,14 @@ tile.eris.dungeon_brick.name=Кирпич сокровищницы Эриды
 tile.eris.ore_dark_iron.name=Руда тёмного железа Эриды
 tile.eris.dark_iron_block.name=Блок тёмного железа Эриды
 
-tile.kepler22b.Dirt.name=Земля Кеплера 22b
-tile.kepler22b.Stone.name=Камень Кеплера 22b
+tile.kepler22b.dirt.name=Земля Кеплера 22b
+tile.kepler22b.stone.name=Камень Кеплера 22b
 tile.kepler22b_grass.name=Блок травы Кеплера 22b
 tile.kepler22b_blue_grass.name=Блок синей травы Кеплера 22b
 tile.kepler22b_purple_grass.name=Блок фиолетовой травы Кеплера 22b
 tile.kepler22b_red_grass.name=Блок красной травы Кеплера 22b
 tile.kepler22b_yellow_grass.name=Блок жёлтой травы Кеплера 22b
+tile.kepler22b_infected_grass.name=Kepler 22b Infected Grass
 tile.kepler22b.ore_iron.name=Железная руда Кеплера 22b
 tile.kepler22b.ore_tin.name=Оловянная руда Кеплера 22b
 tile.kepler22b.ore_copper.name=Медная руда Кеплера 22b
@@ -208,7 +209,7 @@ tile.kepler22b_flowers.purple_maple_tall_grass.name=Высокая фиолет�
 tile.kepler22b_flowers.green_maple_short_grass.name=Низкая коричневая трава Кеплера 22b
 tile.kepler22b_flowers.green_maple_med_grass.name=Средняя коричневая трава Кеплера 22b
 tile.kepler22b_flowers.green_maple_tall_grass.name=Высокая коричневая трава Кеплера 22b
-tile.kepler22b.Cobblestone.name=Булыжник Кеплера 22b
+tile.kepler22b.cobblestone.name=Булыжник Кеплера 22b
 tile.kepler22b.ore_platinum.name=Платиновая руда Кеплера 22b
 
 #Moon Blocks
@@ -418,6 +419,8 @@ tile.ore_lead.name=Свинцовая руда
 tile.potash.name=Potash
 tile.red_sand.name=Красный песок
 tile.red_sandstone.name=Красный песчаник
+tile.orange_sand.name=Orange Sand
+tile.orange_sandstone.name=Orange Sandstone
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Мрамор
@@ -897,6 +900,14 @@ item.tier5_kit.without_oxygen_setup.name=Полный комплект 5-го у
 item.tier5_kit.without_thermal_padding.name=Полный комплект 5-го уровня без тепловой защиты
 item.tier5_kit.just_oxygen_setup.name=Кислородный комплект 5-го уровня
 item.tier5_kit.just_protection.name=Защитный комплект 5-го уровня
+
+#Sticks
+item.tier11_items.blue_sticks.name=Blue Sticks
+item.tier11_items.red_sticks.name=Red Sticks
+item.tier11_items.yellow_sticks.name=Yellow Sticks
+item.tier11_items.purple_sticks.name=Purple Sticks
+item.tier11_items.green_sticks.name=Green Sticks
+item.tier11_items.brown_sticks.name=Brown Sticks
 
 #Other Items
 item.apple_diamond.name=Алмазное яблоко

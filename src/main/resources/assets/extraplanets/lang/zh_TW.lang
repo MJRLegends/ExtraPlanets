@@ -153,13 +153,14 @@ tile.eris.dungeon_brick.name=Eris Dungeon Brick
 tile.eris.ore_dark_iron.name=Eris Dark Iron Ore
 tile.eris.dark_iron_block.name=Block of Dark Iron
 
-tile.kepler22b.Dirt.name=Kepler 22b Dirt
-tile.kepler22b.Stone.name=Kepler 22b Stone
+tile.kepler22b.dirt.name=Kepler 22b Dirt
+tile.kepler22b.stone.name=Kepler 22b Stone
 tile.kepler22b_grass.name=Kepler 22b Grass
 tile.kepler22b_blue_grass.name=Kepler 22b Blue Grass
 tile.kepler22b_purple_grass.name=Kepler 22b Purple Grass
 tile.kepler22b_red_grass.name=Kepler 22b Red Grass
 tile.kepler22b_yellow_grass.name=Kepler 22b Yellow Grass
+tile.kepler22b_infected_grass.name=Kepler 22b Infected Grass
 tile.kepler22b.ore_iron.name=Kepler 22b Iron Ore
 tile.kepler22b.ore_tin.name=Kepler 22b Tin Ore
 tile.kepler22b.ore_copper.name=Kepler 22b Copper Ore
@@ -209,7 +210,7 @@ tile.kepler22b_flowers.purple_maple_tall_grass.name=Kepler 22b Purple Tall Grass
 tile.kepler22b_flowers.green_maple_short_grass.name=Kepler 22b Green Short Grass
 tile.kepler22b_flowers.green_maple_med_grass.name=Kepler 22b Green Medium Grass
 tile.kepler22b_flowers.green_maple_tall_grass.name=Kepler 22b Green Tall Grass
-tile.kepler22b.Cobblestone.name=Kepler 22b Cobblestone
+tile.kepler22b.cobblestone.name=Kepler 22b Cobblestone
 tile.kepler22b.ore_platinum.name=Kepler 22b Platinum Ore
 
 #Moon Blocks
@@ -419,6 +420,8 @@ tile.ore_lead.name=Lead Ore
 tile.potash.name=Potash
 tile.red_sand.name=Red Sand
 tile.red_sandstone.name=Red Sandstone
+tile.orange_sand.name=Orange Sand
+tile.orange_sandstone.name=Orange Sandstone
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Marble
@@ -898,6 +901,14 @@ item.tier5_kit.without_oxygen_setup.name=Tier 5 Full Kit without Oxygen
 item.tier5_kit.without_thermal_padding.name=Tier 5 Full Kit without Thermal Protection
 item.tier5_kit.just_oxygen_setup.name=Tier 5 Oxygen Kit
 item.tier5_kit.just_protection.name=Tier 5 Protection Kit
+
+#Sticks
+item.tier11_items.blue_sticks.name=Blue Sticks
+item.tier11_items.red_sticks.name=Red Sticks
+item.tier11_items.yellow_sticks.name=Yellow Sticks
+item.tier11_items.purple_sticks.name=Purple Sticks
+item.tier11_items.green_sticks.name=Green Sticks
+item.tier11_items.brown_sticks.name=Brown Sticks
 
 #Other Items
 item.apple_diamond.name=鑽石蘋果
