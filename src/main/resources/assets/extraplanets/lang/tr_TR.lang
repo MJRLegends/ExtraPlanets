@@ -152,13 +152,14 @@ tile.eris.dungeon_brick.name=Eris Dungeon Tuğlası
 tile.eris.ore_dark_iron.name=Kara Demir Cevheri
 tile.eris.dark_iron_block.name=Kara Demir Bloğu
 
-tile.kepler22b.Dirt.name= Kepler 22b Toprak
-tile.kepler22b.Stone.name=Kepler 22b Taş
+tile.kepler22b.dirt.name= Kepler 22b Toprak
+tile.kepler22b.stone.name=Kepler 22b Taş
 tile.kepler22b_grass.name=Kepler 22b Çimen
 tile.kepler22b_blue_grass.name=Kepler 22b Mavi Çimen
 tile.kepler22b_purple_grass.name=Kepler 22b Mor Çimen
 tile.kepler22b_red_grass.name=Kepler 22b Kırmızı Çimen
 tile.kepler22b_yellow_grass.name=Kepler 22b Sarı Çimen
+tile.kepler22b_infected_grass.name=Kepler 22b Infected Grass
 tile.kepler22b.ore_iron.name=Kepler 22b Demir Cevheri
 tile.kepler22b.ore_tin.name=Kepler 22b Kalay Cevheri
 tile.kepler22b.ore_copper.name=Kepler 22b Bakır Cevheri
@@ -208,7 +209,7 @@ tile.kepler22b_flowers.purple_maple_tall_grass.name=Kepler 22b Purple Tall Grass
 tile.kepler22b_flowers.green_maple_short_grass.name=Kepler 22b Green Short Grass
 tile.kepler22b_flowers.green_maple_med_grass.name=Kepler 22b Green Medium Grass
 tile.kepler22b_flowers.green_maple_tall_grass.name=Kepler 22b Yeşil Uzun Çim
-tile.kepler22b.Cobblestone.name=Kepler 22b Kırıktaş
+tile.kepler22b.cobblestone.name=Kepler 22b Kırıktaş
 tile.kepler22b.ore_platinum.name=Kepler 22b Platinyum Cevheri
 
 #Moon Blocks
@@ -403,6 +404,8 @@ gui.message.power.rocket.name=Elektrikli Roket
 gui.message.power.message.name=Güç
 gui.button.loadpower.name=Güç Yükle
 gui.powered.inv.name=Envanter / Güç
+tile.orange_sand.name=Orange Sand
+tile.orange_sandstone.name=Orange Sandstone
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Güçlü Araç Envanterini Aç.
@@ -898,6 +901,14 @@ item.tier5_kit.without_oxygen_setup.name=Tier 5 Full Kit without Oxygen
 item.tier5_kit.without_thermal_padding.name=Tier 5 Full Kit without Thermal Protection
 item.tier5_kit.just_oxygen_setup.name=Tier 5 Oxygen Kit
 item.tier5_kit.just_protection.name=Tier 5 Protection Kit
+
+#Sticks
+item.tier11_items.blue_sticks.name=Blue Sticks
+item.tier11_items.red_sticks.name=Red Sticks
+item.tier11_items.yellow_sticks.name=Yellow Sticks
+item.tier11_items.purple_sticks.name=Purple Sticks
+item.tier11_items.green_sticks.name=Green Sticks
+item.tier11_items.brown_sticks.name=Brown Sticks
 
 #Other Items
 item.apple_diamond.name=Elmas Elma
