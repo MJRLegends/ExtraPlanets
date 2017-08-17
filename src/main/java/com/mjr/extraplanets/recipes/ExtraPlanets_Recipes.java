@@ -1097,7 +1097,7 @@ public class ExtraPlanets_Recipes {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
-			inputMap.put(new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 24);
+			inputMap.put("ingotUranium", 24);
 			inputMap.put(Items.IRON_INGOT, 24);
 			GalacticraftRegistry.registerSpaceStation(new SpaceStationType(Config.CERES_SPACE_STATION_ID, Config.CERES_ID, new SpaceStationRecipe(inputMap)));
 		}
