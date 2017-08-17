@@ -154,7 +154,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 			neptuneStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "neptuneStoneBlockhalfslab", "neptuneStone");
 			neptuneStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "neptuneStoneBlockfullslab", "neptuneStone");
 			neptuneStoneStairs = new BlockBasicStairs(ExtraPlanets_Blocks.neptuneBlocks, 2, "neptuneStoneStairs");
-			neptuneStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.neptuneBlocks, 7, "neptuneStoneBrickStairs");
+			neptuneStoneBrickStairs = new BlockBasicStairs(ExtraPlanets_Blocks.neptuneBlocks, 8, "neptuneStoneBrickStairs");
 
 			neptuneDungeonBrickStoneBlockHalfSlab = new BlockBasicSlab(false, ExtraPlanets.BlocksTab, "neptuneDungeonBrickStoneBlockhalfslab", "neptuneDungeonBrick");
 			neptuneDungeonBrickStoneBlockDoubleSlab = new BlockBasicSlab(true, null, "neptuneDungeonBrickStoneBlockfullslab", "neptuneDungeonBrick");
