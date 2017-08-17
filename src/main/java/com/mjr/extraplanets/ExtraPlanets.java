@@ -413,6 +413,7 @@ public class ExtraPlanets {
 		if (Config.JUPITER) {
 			Biome.registerBiome(Config.JUPITER_BIOME_ID, JupiterBiomes.jupiter.getBiomeName(), JupiterBiomes.jupiter);
 			Biome.registerBiome(Config.JUPITER_SEA_BIOME_ID, JupiterBiomes.jupiterMagmaSea.getBiomeName(), JupiterBiomes.jupiterMagmaSea);
+			Biome.registerBiome(Config.JUPITER_SANDS_BIOME_ID, JupiterBiomes.jupiterSands.getBiomeName(), JupiterBiomes.jupiterSands);
 		}
 		if (Config.SATURN)
 			Biome.registerBiome(Config.SATURN_BIOME_ID, SaturnBiomes.saturn.getBiomeName(), SaturnBiomes.saturn);
