@@ -349,7 +349,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "EntityTier4Rocket", 150, 1, false);
 		if (Config.JUPITER) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "EntityTier5Rocket", 150, 1, false);
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityJupiterLander.class, "EntitJupiterLander", 150, 5, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityJupiterLander.class, "EntityJupiterLander", 150, 5, false);
 		}
 		if (Config.SATURN){
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "EntityTier6Rocket", 150, 1, false);

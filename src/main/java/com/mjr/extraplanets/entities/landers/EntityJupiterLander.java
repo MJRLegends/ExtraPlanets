@@ -201,7 +201,7 @@ public class EntityJupiterLander extends EntityLanderBase implements IIgnoreShif
         {
             if (!this.onGround)
             {
-                this.motionY -= 0.008D;
+                this.motionY -= 0.016D;
             }
 
             double motY = -1 * Math.sin(this.rotationPitch / Constants.RADIANS_TO_DEGREES_D);

@@ -33,10 +33,12 @@ import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.client.gui.overlay.OverlayElectricLaunchCountdown;
+import com.mjr.extraplanets.client.gui.overlay.OverlayJupiterLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
+import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
@@ -115,7 +117,9 @@ public class MainHandlerClient {
 				&& !((EntityElectricRocketBase) minecraft.thePlayer.getRidingEntity()).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
 		}
-
+		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityJupiterLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+			OverlayJupiterLander.renderLanderOverlay();
+		}
 	}
 
 	@SubscribeEvent
