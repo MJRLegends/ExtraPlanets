@@ -6,6 +6,7 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
@@ -22,6 +23,7 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 	private final MapGenVillageJupiter villageGenerator = new MapGenVillageJupiter();
 
 	private final BiomeDecoratorJupiter jupiterBiomeDecorator = new BiomeDecoratorJupiter();
+	private final BiomeDecoratorJupiterOther jupiterBiomeDecorator2 = new BiomeDecoratorJupiterOther();
 
 	private final MapGenCaveJupiter caveGenerator = new MapGenCaveJupiter();
 
@@ -68,6 +70,7 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 	@Override
 	protected void decoratePlanet(World world, Random rand, int x, int z) {
 		this.jupiterBiomeDecorator.decorate(worldObj, rand, x, z);
+		this.jupiterBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
 
 }

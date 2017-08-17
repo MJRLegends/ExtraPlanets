@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 
 public class GenLayerJupiterBiomes extends GenLayer {
-	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { JupiterBiomes.jupiter, JupiterBiomes.jupiterMagmaSea };
+	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { JupiterBiomes.jupiter, JupiterBiomes.jupiterMagmaSea, JupiterBiomes.jupiterSands };
 
 	public GenLayerJupiterBiomes(long l, GenLayer parent) {
 		super(l);

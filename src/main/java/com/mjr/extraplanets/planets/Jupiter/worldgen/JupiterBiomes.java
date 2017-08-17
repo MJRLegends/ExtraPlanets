@@ -19,10 +19,12 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands;
 
 public class JupiterBiomes extends BiomeGenBase {
 	public static final BiomeGenBase jupiter = new BiomeGenJupiter(Config.JUPITER_BIOME_ID).setBiomeName("jupiter").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase jupiterMagmaSea = new BiomeGenJupiterMagmaSea(Config.JUPITER_SEA_BIOME_ID).setBiomeName("jupiterMagmaSea").setHeight(new Height(-1.0F, 0.0F));
+	public static final BiomeGenBase jupiterSands = new BiomeGenJupiterMagmaSea(Config.JUPITER_SANDS_BIOME_ID).setBiomeName("jupiterSands").setHeight(new Height(1.0F, 0.5F));
 
 	protected JupiterBiomes(int var1) {
 		super(var1);
