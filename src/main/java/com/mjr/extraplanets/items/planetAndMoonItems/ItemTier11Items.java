@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier11Items extends Item {
-	public static final String[] names = { "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond", "blueSticks", "redSticks", "purpleSticks", "yellowSticks", "greenSticks" };
+	public static final String[] names = { "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond", "blueSticks", "redSticks", "purpleSticks", "yellowSticks", "greenSticks", "brownSticks" };
 
 	protected IIcon[] icons = new IIcon[ItemTier11Items.names.length];
 

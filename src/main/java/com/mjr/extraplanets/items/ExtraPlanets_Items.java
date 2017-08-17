@@ -452,6 +452,7 @@ public class ExtraPlanets_Items {
 			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 7));
 			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 8));
 			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 9));
+			OreDictionary.registerOre("stickWood", new ItemStack(tier11Items, 1, 10));
 		}
 		OreDictionary.registerOre("ingotLead", new ItemStack(ingotLead));
 	}
