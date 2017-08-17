@@ -36,7 +36,9 @@ public class Config {
 
 	public static boolean SOLAR_PANELS;
 	public static boolean REFINERY_ADVANCED;
-	public static boolean REFINERY_ULTIMATE;
+	public static boolean REFINERY_ULTIMATE;	
+	public static boolean FUEL_LOADER_ADVANCED;
+	public static boolean FUEL_LOADER_ULTIMATE;
 	public static boolean OXYGEN_COMPRESSOR_ADVANCED;
 	public static boolean OXYGEN_COMPRESSOR_ULTIMATE;
 	public static boolean SLABS_AND_STAIRS = false;
@@ -300,7 +302,9 @@ public class Config {
 
 		SOLAR_PANELS = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		REFINERY_ADVANCED = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Refinery", true).getBoolean(true);
-		REFINERY_ULTIMATE = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Refinery", true).getBoolean(true);
+		REFINERY_ULTIMATE = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Refinery", true).getBoolean(true);		
+		FUEL_LOADER_ADVANCED = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Fuel Loader", true).getBoolean(true);
+		FUEL_LOADER_ULTIMATE = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Fuel Loader", true).getBoolean(true);
 		OXYGEN_COMPRESSOR_ADVANCED = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Compressor/Decompressor", true).getBoolean(true);
 		OXYGEN_COMPRESSOR_ULTIMATE = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Compressor/Decompressor", true).getBoolean(true);
 		NUCLEAR_BOMB = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Nuclear Bomb", true).getBoolean(true);

@@ -34,7 +34,7 @@ public class ExtraPlanets_Machines {
 	public static Block OXYGEN_COMPRESSOR_ULTIMATE;
 
 	public static Block SOLAR_PANEL;
-	
+
 	public static Block FUEL_LOADER_ADVANCED;
 	public static Block FUEL_LOADER_ULTIMATE;
 
@@ -43,7 +43,7 @@ public class ExtraPlanets_Machines {
 	public static Block BASIC_SMASHER;
 	public static Block BASIC_CHEMICAL_INJECTOR;
 	public static Block BASIC_SOLAR_EVAPORTATION_CHAMBER;
-	
+
 	public static Block VEHICLE_CHARGER;
 
 	public static void init() {
@@ -79,9 +79,11 @@ public class ExtraPlanets_Machines {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basic_solar_evaporation_chamber");
 		}
-		FUEL_LOADER_ADVANCED = new AdvancedFuelLoader("advanced_fuel_loader");
-		FUEL_LOADER_ULTIMATE = new UltimateFuelLoader("ultimate_fuel_loader");
-		
+		if (Config.FUEL_LOADER_ADVANCED)
+			FUEL_LOADER_ADVANCED = new AdvancedFuelLoader("advanced_fuel_loader");
+		if (Config.FUEL_LOADER_ULTIMATE)
+			FUEL_LOADER_ULTIMATE = new UltimateFuelLoader("ultimate_fuel_loader");
+
 		VEHICLE_CHARGER = new VehicleCharger("vehicle_charger");
 	}
 
@@ -108,9 +110,11 @@ public class ExtraPlanets_Machines {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				RegisterHelper.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 		}
-		RegisterHelper.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
-		
+		if (Config.FUEL_LOADER_ADVANCED)
+			RegisterHelper.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
+		if (Config.FUEL_LOADER_ULTIMATE)
+			RegisterHelper.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
+
 		RegisterHelper.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
 	}
 
@@ -141,9 +145,11 @@ public class ExtraPlanets_Machines {
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
 		}
-		GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
-		GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
-		
+		if (Config.FUEL_LOADER_ADVANCED)
+			GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
+		if (Config.FUEL_LOADER_ULTIMATE)
+			GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
+
 		GameRegistry.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
 	}
 }
