@@ -272,7 +272,8 @@ public class ClientProxy extends CommonProxy {
 		if (Config.ERIS)
 			ClientUtilities.addExtraPlanetsVariants("tier10_items", "tier10engine", "tier10booster", "tier10fin", "tier10heavy_duty_plate", "compressed_dark_iron", "ingot_dark_iron");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			ClientUtilities.addExtraPlanetsVariants("tier11_items", "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum");
+			ClientUtilities.addExtraPlanetsVariants("tier11_items", "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks",
+					"yellow_sticks", "green_sticks", "brown_sticks");
 			ClientUtilities.addExtraPlanetsVariants("kepler22b_planks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
 			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_logs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
 			ClientUtilities.addExtraPlanetsVariants("kepler22b_maple_logs2", "maple_green_log", "maple_brown_log");
@@ -1078,7 +1079,7 @@ public class ClientProxy extends CommonProxy {
 		for (int i = 0; i < ItemBasicKit.names.length; i++) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, i, "tier5_kit" + ItemBasicKit.names[i]);
 		}
-		if (Config.MARS_ROVER || Config.VENUS_ROVER){
+		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
 			for (int i = 0; i < ItemElectricParts.names.length; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, i, ItemElectricParts.names[i]);
 			}
@@ -1087,7 +1088,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MARS_ROVER_SCHEMATIC);
 		if (Config.VENUS_ROVER)
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.VENUS_ROVER_SCHEMATIC);
-		
+
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.INGOT_LEAD);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CLOTH);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.GRAVITY_CONTROLLER);
