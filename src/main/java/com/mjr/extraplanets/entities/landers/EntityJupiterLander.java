@@ -26,6 +26,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+// Signal switch off flames
 public class EntityJupiterLander extends EntityLanderBase implements IIgnoreShift, ICameraZoomEntity {
 	private double lastMotionY;
 

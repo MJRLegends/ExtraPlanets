@@ -323,7 +323,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modID + "." + "EntityTier4Rocket", 150, 1, false);
 		if (Config.JUPITER) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modID + "." + "EntityTier5Rocket", 150, 1, false);
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityJupiterLander.class, Constants.modID + "." + "EntitJupiterLander", 150, 5, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityJupiterLander.class, Constants.modID + "." + "EntityJupiterLander", 150, 5, false);
 		}
 		if (Config.SATURN) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modID + "." + "EntityTier6Rocket", 150, 1, false);

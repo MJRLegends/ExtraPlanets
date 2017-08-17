@@ -3,6 +3,7 @@ package com.mjr.extraplanets.client.render.entities.landers;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -84,5 +85,6 @@ public class RenderJupiterLander extends Render<EntityJupiterLander> {
 		GL11.glScalef(0.2F, 0.2F, 0.2F);
 		ClientUtil.drawBakedModel(landerModel);
 		GL11.glPopMatrix();
+		RenderHelper.enableStandardItemLighting();
 	}
 }
