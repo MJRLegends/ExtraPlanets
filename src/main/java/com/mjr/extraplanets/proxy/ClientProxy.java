@@ -484,6 +484,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.JUPITER_GRAVEL);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.VOLCANIC_ROCK);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ASH_ROCK);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ORANGE_SAND);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ORANGE_SANDSTONE);
 
 		}
 		if (Config.SATURN) {
@@ -529,6 +531,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.KEPLER22B_GRASS_PURPLE);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.KEPLER22B_GRASS_YELLOW);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN);
+
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.RED_SAND);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.RED_SANDSTONE);
 
@@ -559,7 +562,10 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS, blockBasic.getMeta(), blockBasic.getName());
 			}
 		}
-
+		if (Config.KEPLER22B || Config.JUPITER) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.RED_SAND);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.RED_SANDSTONE);
+		}
 		// Moons
 		if (Config.CALLISTO) {
 			for (BlockBasicCallisto.EnumBlockBasic blockBasic : BlockBasicCallisto.EnumBlockBasic.values()) {

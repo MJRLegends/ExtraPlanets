@@ -219,6 +219,8 @@ public class ExtraPlanets_Blocks {
 	public static Block DECORATIVE_BLOCKS2;
 	public static Block RED_SAND;
 	public static Block RED_SANDSTONE;
+	public static Block ORANGE_SAND;
+	public static Block ORANGE_SANDSTONE;
 
 	public static void init() {
 		initializeBlocks();
@@ -254,6 +256,8 @@ public class ExtraPlanets_Blocks {
 			JUPITER_GRAVEL = new BlockCustomGravel("jupiter_gravel");
 			VOLCANIC_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F);
 			ASH_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("ash_rock").setHardness(2.0F).setResistance(1.5F);
+			ORANGE_SAND = new BlockSand("orange_sand").setHardness(0.6F);
+			ORANGE_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("orange_sandstone").setHardness(2F).setResistance(2F);
 		}
 		if (Config.SATURN) {
 			SATURN_BLOCKS = new BlockBasicSaturn("saturn");
@@ -339,9 +343,10 @@ public class ExtraPlanets_Blocks {
 			KEPLER22B_GRASS_RED = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
 			KEPLER22B_GRASS_YELLOW = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
 			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22b_flowers");
+		}
+		if (Config.JUPITER || Config.KEPLER22B) {
 			RED_SAND = new BlockSand("red_sand").setHardness(0.6F);
 			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
-
 		}
 		if (Config.RADIATION)
 			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
@@ -430,7 +435,8 @@ public class ExtraPlanets_Blocks {
 
 			RegisterHelper.registerBlock(VOLCANIC_ROCK, VOLCANIC_ROCK.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(ASH_ROCK, ASH_ROCK.getUnlocalizedName().substring(5));
-
+			RegisterHelper.registerBlock(ORANGE_SAND, ORANGE_SAND.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(ORANGE_SANDSTONE, ORANGE_SANDSTONE.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
 			RegisterHelper.registerBlock(SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));
@@ -471,9 +477,10 @@ public class ExtraPlanets_Blocks {
 			RegisterHelper.registerBlock(KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
+		}
+		if (Config.KEPLER22B || Config.JUPITER) {
 			RegisterHelper.registerBlock(RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
 			RegisterHelper.registerBlock(RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
-
 		}
 
 		if (Config.EUROPA) {
@@ -580,7 +587,7 @@ public class ExtraPlanets_Blocks {
 
 		GameRegistry.registerTileEntity(TileEntityPoweredChargingPadSingle.class, "Powered Charging Pad");
 		GameRegistry.registerTileEntity(TileEntityPoweredChargingPad.class, "Powered Charging Pad Full");
-		
+
 		GameRegistry.registerTileEntity(TileEntityRocketChargingPadSingle.class, "Rocket Charging Pad");
 		GameRegistry.registerTileEntity(TileEntityRocketChargingPad.class, "Rocket Charging Pad Full");
 	}
