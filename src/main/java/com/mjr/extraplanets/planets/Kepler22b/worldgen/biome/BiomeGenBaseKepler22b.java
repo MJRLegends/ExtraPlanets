@@ -30,7 +30,8 @@ public class BiomeGenBaseKepler22b extends Biome {
 	public static final Biome kepler22bRedForest = new BiomeGenKepler22bRedMapleForest(new BiomeProperties("Kepler22b Red Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest(new BiomeProperties("Kepler22b Yellow Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome kepler22bRedDesert = new BiomeGenKepler22bRedDesert(new BiomeProperties("Kepler22b Red Desert").setBaseHeight(0.125F).setHeightVariation(0.1F).setRainfall(0.0F).setRainDisabled());
-	
+	public static final Biome kepler22bWasteLands = new BiomeGenKepler22bWasteLands(new BiomeProperties("Kepler22b WasteLands").setBaseHeight(-0.2F).setHeightVariation(0.1F).setTemperature(0.8F).setRainfall(0.9F).setWaterColor(14745518));
+
 	protected byte topMeta;
 	protected byte fillerMeta;
 

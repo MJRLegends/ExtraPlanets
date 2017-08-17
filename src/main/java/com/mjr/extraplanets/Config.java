@@ -188,6 +188,7 @@ public class Config {
 	public static int KEPLER22B_RED_FOREST_BIOME_ID;
 	public static int KEPLER22B_YELLOW_FOREST_BIOME_ID;
 	public static int KEPLER22B_RED_DESERT_BIOME_ID;
+	public static int KEPLER22B_WASTE_LANDS_BIOME_ID;
 	
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
@@ -460,6 +461,7 @@ public class Config {
 		URANUS_SNOW_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Snow Lands Biome ID", 192).getInt();
 		OBERON_LARGE_MOUNTAIN_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Large Mountain Biome ID", 193).getInt();
 		OBERON_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Valleys Biome ID", 194).getInt();
+		KEPLER22B_WASTE_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Waste Lands Biome ID", 195).getInt();
 		JUPITER_SANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Sands ID", 196).getInt();
 
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();

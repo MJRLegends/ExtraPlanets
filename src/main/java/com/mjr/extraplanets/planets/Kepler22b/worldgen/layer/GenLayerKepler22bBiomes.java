@@ -8,7 +8,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler2
 
 public class GenLayerKepler22bBiomes extends GenLayer {
 	protected Biome[] commonBiomes = { BiomeGenBaseKepler22b.kepler22bPlains, BiomeGenBaseKepler22b.kepler22bBlueForest, BiomeGenBaseKepler22b.kepler22bPurpleForest, BiomeGenBaseKepler22b.kepler22bRedForest,
-			BiomeGenBaseKepler22b.kepler22bYellowForest, BiomeGenBaseKepler22b.kepler22bRedDesert };
+			BiomeGenBaseKepler22b.kepler22bYellowForest, BiomeGenBaseKepler22b.kepler22bRedDesert, BiomeGenBaseKepler22b.kepler22bWasteLands };
 
 	protected Biome[] rareBiomes = { BiomeGenBaseKepler22b.kepler22bBlueForest };
 
