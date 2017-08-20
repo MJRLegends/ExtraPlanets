@@ -15,6 +15,9 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.3.0
+*Fixed Space Suit missing textures due to my development environment lied to me
+
 v0.2.9
 *Added ru_RU.lang (Thanks to rykllan)
 *Updated tr_TR.lang (Thanks to ttlyntmnic)
