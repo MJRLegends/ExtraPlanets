@@ -58,7 +58,7 @@ public class EntityTier9Rocket extends EntityTieredRocket {
 
 	@Override
 	public double getMountedYOffset() {
-		return 1.75D;
+		return 5.75D;
 	}
 
 	@Override
