@@ -37,10 +37,12 @@ import com.mjr.extraplanets.client.gui.overlay.OverlayJupiterLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayMercuryLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
+import com.mjr.extraplanets.client.gui.overlay.OverlayUranusLander;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
+import com.mjr.extraplanets.entities.landers.EntityUranusLander;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
@@ -124,6 +126,9 @@ public class MainHandlerClient {
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityMercuryLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayMercuryLander.renderLanderOverlay();
+		}
+		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityUranusLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+			OverlayUranusLander.renderLanderOverlay();
 		}
 	}
 
