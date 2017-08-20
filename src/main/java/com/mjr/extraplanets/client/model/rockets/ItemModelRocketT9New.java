@@ -66,7 +66,7 @@ public class ItemModelRocketT9New extends ModelTransformWrapper
             mul.setTranslation(trans);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setScale(0.3F);
+            mul.setScale(0.2F);
             ret.mul(mul);
             return ret;
         }
@@ -78,7 +78,7 @@ public class ItemModelRocketT9New extends ModelTransformWrapper
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
-            Vector3f trans = new Vector3f(0.5F, 3.2F, -4.8F);
+            Vector3f trans = new Vector3f(0.5F, 11.2F, -4.8F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
@@ -111,7 +111,7 @@ public class ItemModelRocketT9New extends ModelTransformWrapper
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
-            Vector3f trans = new Vector3f(-0.6F, -5.4F, 1.8F);
+            Vector3f trans = new Vector3f(-0.6F, -9.4F, 1.8F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
