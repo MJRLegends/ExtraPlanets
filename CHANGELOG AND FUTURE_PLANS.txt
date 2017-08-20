@@ -8,6 +8,28 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+v0.2.9
+*Added ru_RU.lang (Thanks to rykllan)
+*Updated tr_TR.lang (Thanks to ttlyntmnic)
+*Added a Lander for Jupiter
+*Added a Lander for Saturn
+*Added a Space Suit model to Tier 1 - 4 Space Suits
+*Added Waste Lands Biome to Kepler22b
+*Added Sands Biome to Jupiter
+*Added Orange Sand & Sandstone Blocks for Jupiter
+*Added missing recipes
+*Fixes for recipes, added missing config option
+*Fixed disabling of recipes and registering json files when config options are changed
+*Changed Ceres Space Station recipe to take any Uranium Ingot
+*Added Blue, Red, Purple, Yellow, Green, Brown Sticks
+*Changed Planks to Sticks recipes for Kepler22b to make the sticks
+*Updated lang files
+*Added a Lander for Mercury
+*Added a Lander for Uranus
+*Added a Lander for Neptune
+*Added a Replacement for the Tier 9 Rocket Model
+*Added a Replacement for the Tier 10 Rocket Model
+*Fixed Advanced/Ultimate Refinery item texture
 
 ======================================================================================================
 
