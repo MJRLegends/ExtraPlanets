@@ -8,6 +8,12 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v0.6.3
 *Added ru_RU.lang (Thanks to rykllan)
 *Updated tr_TR.lang (Thanks to ttlyntmnic)
@@ -29,13 +35,6 @@ v0.6.3
 *Added a Lander for Neptune
 *Added a Replacement for the Tier 9 Rocket Model
 *Added a Replacement for the Tier 10 Rocket Model
-
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
-
 
 v0.6.2
 *Reduced the level of Radiation on Mercury
