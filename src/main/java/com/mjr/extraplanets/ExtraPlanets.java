@@ -37,6 +37,7 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranu
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
 import com.mjr.extraplanets.entities.landers.EntitySaturnLander;
+import com.mjr.extraplanets.entities.landers.EntityUranusLander;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier4Rocket;
@@ -332,8 +333,10 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modID + "." + "EntityTier6Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySaturnLander.class, Constants.modID + "." + "EntitSaturnLander", 150, 5, false);
 		}
-		if (Config.URANUS)
+		if (Config.URANUS) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modID + "." + "EntityTier7Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityUranusLander.class, Constants.modID + "." + "EntityUranusLander", 150, 5, false);
+		}
 		if (Config.NEPTUNE)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modID + "." + "EntityTier8Rocket", 150, 1, false);
 		if (Config.PLUTO)
