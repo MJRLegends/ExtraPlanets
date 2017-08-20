@@ -36,12 +36,14 @@ import com.mjr.extraplanets.client.gui.overlay.OverlayElectricLaunchCountdown;
 import com.mjr.extraplanets.client.gui.overlay.OverlayJupiterLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayMercuryLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
+import com.mjr.extraplanets.client.gui.overlay.OverlaySaturnLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.client.gui.overlay.OverlayUranusLander;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
+import com.mjr.extraplanets.entities.landers.EntitySaturnLander;
 import com.mjr.extraplanets.entities.landers.EntityUranusLander;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
@@ -123,6 +125,9 @@ public class MainHandlerClient {
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityJupiterLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayJupiterLander.renderLanderOverlay();
+		}		
+		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntitySaturnLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+			OverlaySaturnLander.renderLanderOverlay();
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityMercuryLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayMercuryLander.renderLanderOverlay();
