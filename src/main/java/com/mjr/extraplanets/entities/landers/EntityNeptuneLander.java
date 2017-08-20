@@ -34,7 +34,7 @@ public class EntityNeptuneLander extends EntityLanderBase implements IIgnoreShif
     public EntityNeptuneLander(World world)
     {
         super(world);
-        this.setSize(3.0F, 4.25F);
+        this.setSize(4.0F, 7.25F);
     }
 
     public EntityNeptuneLander(EntityPlayerMP player)

@@ -58,7 +58,7 @@ public class RenderUranusLander extends Render<EntityUranusLander> {
 	public void doRender(EntityUranusLander lander, double par2, double par4, double par6, float par8, float par9) {
 		GL11.glPushMatrix();
 		final float var24 = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * par9;
-		GL11.glTranslatef((float) par2, (float) par4 + 1.25F, (float) par6);
+		GL11.glTranslatef((float) (par2 - 0.25), (float) par4 + 1.25F, (float) (par6 - 0.15));
 		GL11.glRotatef(par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
 

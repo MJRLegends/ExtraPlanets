@@ -34,7 +34,7 @@ public class EntitySaturnLander extends EntityLanderBase implements IIgnoreShift
     public EntitySaturnLander(World world)
     {
         super(world);
-        this.setSize(3.0F, 4.25F);
+        this.setSize(6.0F, 6.25F);
     }
 
     public EntitySaturnLander(EntityPlayerMP player)

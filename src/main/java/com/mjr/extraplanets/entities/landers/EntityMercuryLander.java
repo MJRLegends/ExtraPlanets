@@ -34,7 +34,7 @@ public class EntityMercuryLander extends EntityLanderBase implements IIgnoreShif
     public EntityMercuryLander(World world)
     {
         super(world);
-        this.setSize(3.0F, 4.25F);
+        this.setSize(5.0F, 8.25F);
     }
 
     public EntityMercuryLander(EntityPlayerMP player)
