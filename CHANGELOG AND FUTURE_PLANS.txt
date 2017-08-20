@@ -8,6 +8,13 @@ TODO = Not yet done
 
 
 ===========================================Future Updates=============================================
+
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v0.2.9
 *Added ru_RU.lang (Thanks to rykllan)
 *Updated tr_TR.lang (Thanks to ttlyntmnic)
@@ -31,11 +38,6 @@ v0.2.9
 *Added a Replacement for the Tier 10 Rocket Model
 *Fixed Advanced/Ultimate Refinery item texture
 
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
 v0.2.8
 *Reduced the level of Radiation on Mercury
 
