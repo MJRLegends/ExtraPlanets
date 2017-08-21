@@ -15,7 +15,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier9Rocket;
 
 public class GuiSchematicTier9Rocket extends GuiContainer implements ISchematicResultPage {
-	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbenchTier9.png");
+	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbench_tier9.png");
 
 	private int pageIndex;
 
@@ -27,8 +27,8 @@ public class GuiSchematicTier9Rocket extends GuiContainer implements ISchematicR
 	@Override
 	public void initGui() {
 		super.initGui();
-		this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 30 + 27 - 12, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
-		this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 30 + 27 + 12, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
+        this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 110, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
+        this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 110 + 25, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class GuiSchematicTier9Rocket extends GuiContainer implements ISchematicR
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(GCCoreUtil.translate("schematic.rocketT9.name"), 7, -20 + 27, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("schematic.rocket.t9.name"), 7, -20 + 27, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, 220 - 104 + 2 + 27, 4210752);
 	}
 

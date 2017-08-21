@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "extraplanets:frozen_nitrogen_model" }
+    }
+}

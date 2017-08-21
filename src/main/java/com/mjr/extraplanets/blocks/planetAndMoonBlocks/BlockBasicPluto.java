@@ -17,6 +17,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.audio.SoundCategory;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -38,7 +39,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicPluto extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypePluto", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypepluto", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "pluto_surface"), SUB_SURFACE(1, "pluto_sub_surface"), STONE(2, "pluto_stone"), ORE_IRON(3, "pluto_ore_iron"), ORE_TIN(4, "pluto_ore_tin"), ORE_COPPER(5, "pluto_ore_copper"), ORE_TUNGSTEN(6, "pluto_ore_tungsten"), TUNGSTEN_BLOCK(
@@ -162,22 +163,27 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if (rand.nextInt(10) == 0) {
-			if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK) {
-				GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    {
+        if (rand.nextInt(10) == 0)
+        {
+            if (state.getBlock() == this && state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
+            {
+                GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
 
-				if (rand.nextInt(100) == 0) {
+                if (rand.nextInt(100) == 0)
+                {
 					worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), Constants.TEXTURE_PREFIX + "ambience.singledrip", 1, 0.8F + rand.nextFloat() / 5.0F, false);
-				}
-			}
-		}
-	}
+                }
+            }
+        }
+    }
 
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
+		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
 	}
 
@@ -189,7 +195,7 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
+	    public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.stone) {
 			return false;
 		}

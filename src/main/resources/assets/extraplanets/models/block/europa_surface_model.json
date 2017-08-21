@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/europaSurface"
+        "all": "extraplanets:blocks/europa_surface"
     }
 }

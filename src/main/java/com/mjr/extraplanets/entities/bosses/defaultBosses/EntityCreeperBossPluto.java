@@ -216,7 +216,7 @@ public class EntityCreeperBossPluto extends EntityBossBase implements IEntityBre
 
 	@Override
 	public void dropKey() {
-		this.entityDropItem(new ItemStack(ExtraPlanets_Items.T9key, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_9_KEY, 1, 0), 0.5F);
 	}
 
 	@Override

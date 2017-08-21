@@ -18,7 +18,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemCannedFood extends Item {
 
-	public static final String[] names = { "dehydratedPorkchop", "dehydratedFish", "dehydratedSalmon", "dehydratedChicken", "dehydratedBeef" };
+	public static final String[] names = { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef" };
 
 	public ItemCannedFood(String assetName) {
 		super();
@@ -35,7 +35,7 @@ public class ItemCannedFood extends Item {
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
 		if (itemStack.getItemDamage() < 5) {
-			return this.getUnlocalizedName() + ".cannedFood";
+			return this.getUnlocalizedName() + ".canned_food";
 		}
 
 		return this.getUnlocalizedName() + "." + ItemCannedFood.names[itemStack.getItemDamage()];
@@ -99,16 +99,18 @@ public class ItemCannedFood extends Item {
 
 	@Override
 	public ItemStack onItemUseFinish(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
-		if (par1ItemStack.getItemDamage() < 5) {
-			--par1ItemStack.stackSize;
-			par3EntityPlayer.getFoodStats().addStats(this.getHealAmount(par1ItemStack), this.getSaturationModifier(par1ItemStack));
-			par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
-			if (!par2World.isRemote) {
-				par3EntityPlayer.entityDropItem(new ItemStack(GCItems.canister, 1, 0), 0.0F);
+		if (par3EntityPlayer instanceof EntityPlayer) {
+			if (par1ItemStack.getItemDamage() < 5) {
+				--par1ItemStack.stackSize;
+				EntityPlayer entityplayer = (EntityPlayer) par3EntityPlayer;
+				entityplayer.getFoodStats().addStats(this.getHealAmount(par1ItemStack), this.getSaturationModifier(par1ItemStack));
+				par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
+				if (!par2World.isRemote) {
+					par3EntityPlayer.entityDropItem(new ItemStack(GCItems.canister, 1, 0), 0.0F);
+				}
+				return par1ItemStack;
 			}
-			return par1ItemStack;
 		}
-
 		return super.onItemUseFinish(par1ItemStack, par2World, par3EntityPlayer);
 	}
 
@@ -138,5 +140,4 @@ public class ItemCannedFood extends Item {
 
 		return par1ItemStack;
 	}
-
 }

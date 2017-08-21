@@ -24,14 +24,13 @@ public class BlockBasicGrass extends Block implements IGrowable {
 		this.setTickRandomly(true);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.blockHardness = 0.6F;
-		this.setStepSound(soundTypeGrass);
 	}
 
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!worldIn.isRemote) {
 			if (worldIn.getLightFromNeighbors(pos.up()) < 4 && worldIn.getBlockState(pos.up()).getBlock().getLightOpacity(worldIn, pos.up()) > 2) {
-				worldIn.setBlockState(pos, ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState());
+				worldIn.setBlockState(pos, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState());
 			} else {
 				if (worldIn.getLightFromNeighbors(pos.up()) >= 9) {
 					for (int i = 0; i < 4; ++i) {
@@ -39,7 +38,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 						Block block = worldIn.getBlockState(blockpos.up()).getBlock();
 						IBlockState iblockstate = worldIn.getBlockState(blockpos);
 
-						if (iblockstate.getBlock() == ExtraPlanets_Blocks.kepler22bBlocks && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && block.getLightOpacity(worldIn, blockpos.up()) <= 2) {
+						if (iblockstate.getBlock() == ExtraPlanets_Blocks.KEPLER22B_BLOCKS && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && block.getLightOpacity(worldIn, blockpos.up()) <= 2) {
 							worldIn.setBlockState(blockpos, this.getDefaultState());
 						}
 					}
@@ -48,17 +47,11 @@ public class BlockBasicGrass extends Block implements IGrowable {
 		}
 	}
 
-	/**
-	 * Get the Item that this Block should drop when harvested.
-	 */
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return ExtraPlanets_Blocks.kepler22bBlocks.getItemDropped(ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState(), rand, fortune);
+		return ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getItemDropped(ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), rand, fortune);
 	}
 
-	/**
-	 * Whether this IGrowable can grow
-	 */
 	@Override
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
@@ -80,23 +73,12 @@ public class BlockBasicGrass extends Block implements IGrowable {
 			while (true) {
 				if (j >= i / 16) {
 					if (worldIn.isAirBlock(blockpos1)) {
-						// if (rand.nextInt(8) == 0)
-						// {
-						// BlockFlower.EnumFlowerType blockflower$enumflowertype = worldIn.getBiomeGenForCoords(blockpos1).pickRandomFlower(rand, blockpos1);
-						// BlockFlower blockflower = blockflower$enumflowertype.getBlockType().getBlock();
-						// IBlockState iblockstate = blockflower.getDefaultState().withProperty(blockflower.getTypeProperty(), blockflower$enumflowertype);
+						// if (rand.nextInt(8) == 0) {
+						// worldIn.getBiome(blockpos1).plantFlower(worldIn, rand, blockpos1);
+						// } else {
+						// IBlockState iblockstate1 = Blocks.TALLGRASS.getDefaultState().withProperty(BlockTallGrass.TYPE, BlockTallGrass.EnumType.GRASS);
 						//
-						// if (blockflower.canBlockStay(worldIn, blockpos1, iblockstate))
-						// {
-						// worldIn.setBlockState(blockpos1, iblockstate, 3);
-						// }
-						// }
-						// else
-						// {
-						// IBlockState iblockstate1 = Blocks.tallgrass.getDefaultState().withProperty(BlockTallGrass.TYPE, BlockTallGrass.EnumType.GRASS);
-						//
-						// if (Blocks.tallgrass.canBlockStay(worldIn, blockpos1, iblockstate1))
-						// {
+						// if (Blocks.TALLGRASS.canBlockStay(worldIn, blockpos1, iblockstate1)) {
 						// worldIn.setBlockState(blockpos1, iblockstate1, 3);
 						// }
 						// }
@@ -125,6 +107,6 @@ public class BlockBasicGrass extends Block implements IGrowable {
 	@Override
 	public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing side, IPlantable plant) {
 		Block block = plant.getPlant(world, pos).getBlock();
-		return block == ExtraPlanets_Blocks.kepler22bMapleSapling || block == ExtraPlanets_Blocks.kepler22bGrassFlowers;
+		return block == ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING || block == ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS;
 	}
 }

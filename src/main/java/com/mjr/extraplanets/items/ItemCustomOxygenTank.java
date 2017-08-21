@@ -58,7 +58,7 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
+	public ItemStack onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);

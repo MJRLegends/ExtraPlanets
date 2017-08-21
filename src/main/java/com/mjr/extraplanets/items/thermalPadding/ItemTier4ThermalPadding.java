@@ -3,8 +3,11 @@ package com.mjr.extraplanets.items.thermalPadding;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.item.IItemThermal;
+import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -18,7 +21,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier4ThermalPadding extends Item implements IItemThermal {
-	public static String[] names = { "tier4ThermalHelm", "tier4ThermalChestplate", "tier4ThermalLeggings", "tier4ThermalBoots", "tier4ThermalHelm0", "tier4ThermalChestplate0", "tier4ThermalLeggings0", "tier4ThermalBoots0" };
+	public static String[] names = { "tier4_thermal_helm", "tier4_thermal_chestplate", "tier4_thermal_leggings", "tier4_thermal_boots", "tier4_thermal_helm0", "tier4_thermal_chestplate0", "tier4_thermal_leggings0", "tier4_thermal_boots0" };
 
 	public ItemTier4ThermalPadding(String assetName) {
 		super();
@@ -75,7 +78,7 @@ public class ItemTier4ThermalPadding extends Item implements IItemThermal {
 	@Override
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
-			GCPlayerStats stats = GCPlayerStats.get(player);
+			GCPlayerStats stats = player.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(6);
 			ItemStack gear1 = stats.getExtendedInventory().getStackInSlot(7);
 			ItemStack gear2 = stats.getExtendedInventory().getStackInSlot(8);
@@ -104,5 +107,13 @@ public class ItemTier4ThermalPadding extends Item implements IItemThermal {
 			}
 		}
 		return itemStack;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
+		if (player.worldObj.isRemote) {
+			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier4.thermal.padding.information"));
+		}
 	}
 }

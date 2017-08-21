@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/titaniaOreIron"
+        "all": "extraplanets:blocks/titania_ore_iron"
     }
 }

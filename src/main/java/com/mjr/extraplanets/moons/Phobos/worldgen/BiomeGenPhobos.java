@@ -1,13 +1,11 @@
 package com.mjr.extraplanets.moons.Phobos.worldgen;
 
+import net.minecraftforge.common.BiomeDictionary;
+
 public class BiomeGenPhobos extends PhobosBiomes {
 
-	public BiomeGenPhobos(int par1)
-	{
-		super(par1);
-		this.setBiomeName("phobos");
-		this.setColor(16711680);
-		this.setHeight(new Height(2.5F, 0.4F));
+	public BiomeGenPhobos(BiomeProperties properties) {
+		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
-
 }

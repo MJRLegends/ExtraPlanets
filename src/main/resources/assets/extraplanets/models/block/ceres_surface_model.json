@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/ceresSurface"
+        "all": "extraplanets:blocks/ceres_surface"
     }
 }

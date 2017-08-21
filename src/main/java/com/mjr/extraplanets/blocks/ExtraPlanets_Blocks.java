@@ -53,7 +53,10 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockCustomLandingPad;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks2;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDummy;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockCeres;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.ItemBlockDeimos;
@@ -82,6 +85,14 @@ import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bMapleSapling;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bPlanks;
 import com.mjr.extraplanets.itemBlocks.planetAndMoon.Kepler22b.ItemBlockKepler22bTallGrass;
+import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPad;
+import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPadSingle;
+import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
+import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPadSingle;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPadSingle;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPadSingle;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
@@ -102,776 +113,783 @@ import com.mjr.extraplanets.world.WorldGenerationOverworld;
 public class ExtraPlanets_Blocks {
 
 	// Planet Blocks
-	public static Block mercuryBlocks;
-	public static Block ceresBlocks;
-	public static Block erisBlocks;
+	public static Block MERCURY_BLOCKS;
+	public static Block CERES_BLOCKS;
+	public static Block ERIS_BLOCKS;
+	public static Block JUPITER_BLOCKS;
+	public static Block SATURN_BLOCKS;
+	public static Block URANUS_BLOCKS;
+	public static Block NEPTUNE_BLOCKS;
+	public static Block PLUTO_BLOCKS;
+	public static Block KEPLER22B_BLOCKS;
 
-	public static Block jupiterBlocks;
-	public static Block saturnBlocks;
-	public static Block uranusBlocks;
-	public static Block neptuneBlocks;
-	public static Block plutoBlocks;
-
-	public static Block kepler22bBlocks;
-	public static Block kepler22bGrass;
-	public static Block kepler22bBlueGrass;
-	public static Block kepler22bPurpleGrass;
-	public static Block kepler22bRedGrass;
-	public static Block kepler22bYellowGrass;
-
-	public static Block callistoBlocks;
-	public static Block deimosBlocks;
-	public static Block europaBlocks;
-	public static Block ioBlocks;
-	public static Block phobosBlocks;
-	public static Block tritonBlocks;
-	public static Block ganymedeBlocks;
-	public static Block rheaBlocks;
-	public static Block titanBlocks;
-	public static Block oberonBlocks;
-	public static Block titaniaBlocks;
-	public static Block iapetusBlocks;
+	public static Block CALLISTO_BLOCKS;
+	public static Block DEIMOS_BLOCKS;
+	public static Block EUROPA_BLOCKS;
+	public static Block IO_BLOCKS;
+	public static Block PHOBOS_BLOCKS;
+	public static Block TRITON_BLOCKS;
+	public static Block GANYMEDE_BLOCKS;
+	public static Block RHEA_BLOCKS;
+	public static Block TITAN_BLOCKS;
+	public static Block OBERON_BLOCKS;
+	public static Block TITANIA_BLOCKS;
+	public static Block IAPETUS_BLOCKS;
 
 	// Gravels
-	public static Block mercuryGravel;
-	public static Block ceresGravel;
-	public static Block jupiterGravel;
-	public static Block saturnGravel;
-	public static Block plutoGravel;
-	public static Block erisGravel;
+	public static Block MERCURY_GRAVEL;
+	public static Block CERES_GRAVEL;
+	public static Block JUPITER_GRAVEL;
+	public static Block SATURN_GRAVEL;
+	public static Block PLUTO_GRAVEL;
+	public static Block ERIS_GRAVEL;
 
-	public static Block ioGravel;
-	public static Block europaGravel;
-	public static Block deimosGravel;
-	public static Block phobosGravel;
-	public static Block tritonGravel;
-	public static Block ganymedeGravel;
-	public static Block callistoGravel;
-	public static Block rheaGravel;
-	public static Block titanGravel;
-	public static Block oberonGravel;
-	public static Block titaniaGravel;
-	public static Block iapetusGravel;
+	public static Block IO_GRAVEL;
+	public static Block EUROPA_GRAVEL;
+	public static Block DEIMOS_GRAVEL;
+	public static Block PHOBOS_GRAVEL;
+	public static Block TRITON_GRAVEL;
+	public static Block GANYMEDE_GRAVEL;
+	public static Block CALLISTO_GRAVEL;
+	public static Block RHEA_GRAVEL;
+	public static Block TITAN_GRAVEL;
+	public static Block OBERON_GRAVEL;
+	public static Block TITANIA_GRAVEL;
+	public static Block IAPETUS_GRAVEL;
 
 	// Other Special Blocks
-	public static Block nuclearBomb;
-	public static Block fossil;
-	public static Block denseIce;
-	public static Block volcanicRock;
-	public static Block frozenNitrogen;
-	public static Block oreLead;
-	public static Block potash;
-	public static Block ashBlock;
-	
+	public static Block NUCLEAR_BOMB;
+	public static Block FIRE_BOMB;
+	public static Block FOSSIL;
+	public static Block DENSE_ICE;
+	public static Block VOLCANIC_ROCK;
+	public static Block ASH_ROCK;
+	public static Block FROZEN_NITROGEN;
+	public static Block ORE_LEAD;
+	public static Block ORE_POTASH;
+
 	// Treasure Chests
-	public static Block treasureChestTier4;
-	public static Block treasureChestTier5;
-	public static Block treasureChestTier6;
-	public static Block treasureChestTier7;
-	public static Block treasureChestTier8;
-	public static Block treasureChestTier9;
-	public static Block treasureChestTier10;
+	public static Block TREASURE_CHEST_TIER_4;
+	public static Block TREASURE_CHEST_TIER_5;
+	public static Block TREASURE_CHEST_TIER_6;
+	public static Block TREASURE_CHEST_TIER_7;
+	public static Block TREASURE_CHEST_TIER_8;
+	public static Block TREASURE_CHEST_TIER_9;
+	public static Block TREASURE_CHEST_TIER_10;
 
 	// Dungeon Spawners
-	public static Block mercurySpawner;
-	public static Block jupiterSpawner;
-	public static Block saturnSpawner;
-	public static Block uranusSpawner;
-	public static Block neptuneSpawner;
-	public static Block plutoSpawner;
-	public static Block erisSpawner;
+	public static Block MERCURY_SPAWNER;
+	public static Block JUIPTER_SPAWNER;
+	public static Block SATURN_SPAWNER;
+	public static Block URANUS_SPAWNER;
+	public static Block NEPTUNE_SPAWNER;
+	public static Block PLUTO_SPAWNER;
+	public static Block ERIS_SPAWNER;
+
+	// Grass
+	public static Block KEPLER22B_GRASS_GREEN;
+	public static Block KEPLER22B_GRASS_BLUE;
+	public static Block KEPLER22B_GRASS_PURPLE;
+	public static Block KEPLER22B_GRASS_RED;
+	public static Block KEPLER22B_GRASS_YELLOW;
 
 	// Logs
-	public static Block kepler22bMapleLog;
-	public static Block kepler22bMapleLog2;
+	public static Block KEPLER22B_MAPLE_LOG;
+	public static Block KEPLER22B_MAPLE_LOG_2;
 
 	// Saplings
-	public static Block kepler22bMapleSapling;
+	public static Block KEPLER22B_MAPLE_SAPLING;
 
 	// Leaves
-	public static Block kepler22bMapleLeaf;
-	public static Block kepler22bMapleLeaf2;
+	public static Block KEPLER22B_MAPLE_LEAF;
+	public static Block KEPLER22B_MAPLE_LEAF2;
 
 	// Flowers
-	public static Block kepler22bGrassFlowers;
+	public static Block KEPLER22B_MAPLE_FLOWERS;
 
 	// Planks
-	public static Block kepler22bPlanks;
-	
-	public static Block decorativeBlocks;
+	public static Block KEPLER22B_MAPLE_PLANKS;
+
+	public static Block ADVANCED_LAUCHPAD;
+	public static Block ADVANCED_LAUCHPAD_FULL;
+
+	public static Block FAKE_BLOCK;
+
+	public static Block DECORATIVE_BLOCKS;
+	public static Block DECORATIVE_BLOCKS2;
+	public static Block RED_SAND;
+	public static Block RED_SANDSTONE;
 
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
 		initializeSpawnerBlocks();
-		registerBlocks();
-		registerTileEntitys();
-		setHarvestLevels();
-		if (Config.oreDictionary)
-			OreDictionaryRegister();
-		if (Config.kepler22b && Config.keplerSolarSystems) {
-			initializeTreeBlocks();
-			registerTreeBlocks();
+		try {
+			registerBlocks();
+			registerTileEntitys();
+			setHarvestLevels();
+			if (Config.ORE_DICTIONARY)
+				OreDictionaryRegister();
+			if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+				initializeTreeBlocks();
+				registerTreeBlocks();
+			}
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
 		}
+
 	}
 
 	private static void initializeBlocks() {
-		if (Config.mercury) {
-			mercuryBlocks = new BlockBasicMercury("mercury");
-			mercuryGravel = new BlockCustomGravel("mercuryGravel");
+		if (Config.MERCURY) {
+			MERCURY_BLOCKS = new BlockBasicMercury("mercury");
+			MERCURY_GRAVEL = new BlockCustomGravel("mercury_gravel");
 		}
-		if (Config.ceres) {
-			ceresBlocks = new BlockBasicCeres("ceres");
-			ceresGravel = new BlockCustomGravel("ceresGravel");
+		if (Config.CERES) {
+			CERES_BLOCKS = new BlockBasicCeres("ceres");
+			CERES_GRAVEL = new BlockCustomGravel("ceres_gravel");
 		}
-		if (Config.jupiter) {
-			jupiterBlocks = new BlockBasicJupiter("jupiter");
-			jupiterGravel = new BlockCustomGravel("jupiterGravel");
-			ashBlock = new BlockAshBlock("ashBlock");
+		if (Config.JUPITER) {
+			JUPITER_BLOCKS = new BlockBasicJupiter("jupiter");
+			JUPITER_GRAVEL = new BlockCustomGravel("jupiter_gravel");
+			VOLCANIC_ROCK = new BlockBasic(Material.rock).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F);
+			ASH_ROCK = new BlockBasic(Material.rock).setUnlocalizedName("ash_rock").setHardness(2.0F).setResistance(1.5F);
 		}
-		if (Config.saturn) {
-			saturnBlocks = new BlockBasicSaturn("saturn");
-			saturnGravel = new BlockCustomGravel("saturnGravel");
+		if (Config.SATURN) {
+			SATURN_BLOCKS = new BlockBasicSaturn("saturn");
+			SATURN_GRAVEL = new BlockCustomGravel("saturn_gravel");
 		}
-		if (Config.uranus) {
-			uranusBlocks = new BlockBasicUranus("uranus");
-			denseIce = new BlockBasic(Material.ice).setUnlocalizedName("denseIce").setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeSnow);
+		if (Config.URANUS) {
+			URANUS_BLOCKS = new BlockBasicUranus("uranus");
+			DENSE_ICE = new BlockBasic(Material.ice).setUnlocalizedName("dense_ice").setHardness(2.2F).setResistance(3.0F);
 		}
-		if (Config.neptune) {
-			neptuneBlocks = new BlockBasicNeptune("neptune");
-			frozenNitrogen = new BlockBasic(Material.ice).setUnlocalizedName("frozenNitrogen").setStepSound(Block.soundTypeSnow);
+		if (Config.NEPTUNE) {
+			NEPTUNE_BLOCKS = new BlockBasicNeptune("neptune");
+			FROZEN_NITROGEN = new BlockBasic(Material.ice).setUnlocalizedName("frozen_nitrogen");
 		}
-		if (Config.pluto) {
-			plutoBlocks = new BlockBasicPluto("pluto");
-			plutoGravel = new BlockCustomGravel("plutoGravel");
+		if (Config.PLUTO) {
+			PLUTO_BLOCKS = new BlockBasicPluto("pluto");
+			PLUTO_GRAVEL = new BlockCustomGravel("pluto_gravel");
 		}
-		if (Config.eris) {
-			erisBlocks = new BlockBasicEris("eris");
-			erisGravel = new BlockCustomGravel("erisGravel");
+		if (Config.ERIS) {
+			ERIS_BLOCKS = new BlockBasicEris("eris");
+			ERIS_GRAVEL = new BlockCustomGravel("eris_gravel");
 		}
-		if (Config.europa) {
-			europaBlocks = new BlockBasicEuropa("europa");
-			europaGravel = new BlockCustomGravel("europaGravel");
+		if (Config.EUROPA) {
+			EUROPA_BLOCKS = new BlockBasicEuropa("europa");
+			EUROPA_GRAVEL = new BlockCustomGravel("europa_gravel");
 		}
-		if (Config.io) {
-			ioBlocks = new BlockBasicIo("io");
-			ioGravel = new BlockCustomGravel("ioGravel");
+		if (Config.IO) {
+			IO_BLOCKS = new BlockBasicIo("io");
+			IO_GRAVEL = new BlockCustomGravel("io_gravel");
 		}
-		if (Config.deimos) {
-			deimosBlocks = new BlockBasicDeimos("deimos");
-			deimosGravel = new BlockCustomGravel("deimosGravel");
+		if (Config.DEIMOS) {
+			DEIMOS_BLOCKS = new BlockBasicDeimos("deimos");
+			DEIMOS_GRAVEL = new BlockCustomGravel("deimos_gravel");
 		}
-		if (Config.phobos) {
-			phobosBlocks = new BlockBasicPhobos("phobos");
-			phobosGravel = new BlockCustomGravel("phobosGravel");
+		if (Config.PHOBOS) {
+			PHOBOS_BLOCKS = new BlockBasicPhobos("phobos");
+			PHOBOS_GRAVEL = new BlockCustomGravel("phobos_gravel");
 		}
-		if (Config.triton) {
-			tritonBlocks = new BlockBasicTriton("triton");
-			tritonGravel = new BlockCustomGravel("tritonGravel");
+		if (Config.TRITON) {
+			TRITON_BLOCKS = new BlockBasicTriton("triton");
+			TRITON_GRAVEL = new BlockCustomGravel("triton_gravel");
 		}
-		if (Config.callisto) {
-			callistoBlocks = new BlockBasicCallisto("callisto");
-			callistoGravel = new BlockCustomGravel("callistoGravel");
+		if (Config.CALLISTO) {
+			CALLISTO_BLOCKS = new BlockBasicCallisto("callisto");
+			CALLISTO_GRAVEL = new BlockCustomGravel("callisto_gravel");
 		}
-		if (Config.ganymede) {
-			ganymedeBlocks = new BlockBasicGanymede("ganymede");
-			ganymedeGravel = new BlockCustomGravel("ganymedeGravel");
+		if (Config.GANYMEDE) {
+			GANYMEDE_BLOCKS = new BlockBasicGanymede("ganymede");
+			GANYMEDE_GRAVEL = new BlockCustomGravel("ganymede_gravel");
 		}
-		if (Config.rhea) {
-			rheaBlocks = new BlockBasicRhea("rhea");
-			rheaGravel = new BlockCustomGravel("rheaGravel");
+		if (Config.RHEA) {
+			RHEA_BLOCKS = new BlockBasicRhea("rhea");
+			RHEA_GRAVEL = new BlockCustomGravel("rhea_gravel");
 		}
-		if (Config.titan) {
-			titanBlocks = new BlockBasicTitan("titan");
-			titanGravel = new BlockCustomGravel("titanGravel");
+		if (Config.TITAN) {
+			TITAN_BLOCKS = new BlockBasicTitan("titan");
+			TITAN_GRAVEL = new BlockCustomGravel("titan_gravel");
 		}
-		if (Config.oberon) {
-			oberonBlocks = new BlockBasicOberon("oberon");
-			oberonGravel = new BlockCustomGravel("oberonGravel");
+		if (Config.OBERON) {
+			OBERON_BLOCKS = new BlockBasicOberon("oberon");
+			OBERON_GRAVEL = new BlockCustomGravel("oberon_gravel");
 		}
-		if (Config.titania) {
-			titaniaBlocks = new BlockBasicTitania("titania");
-			titaniaGravel = new BlockCustomGravel("titaniaGravel");
+		if (Config.TITANIA) {
+			TITANIA_BLOCKS = new BlockBasicTitania("titania");
+			TITANIA_GRAVEL = new BlockCustomGravel("titania_gravel");
 		}
-		if (Config.iapetus) {
-			iapetusBlocks = new BlockBasicIapetus("iapetus");
-			iapetusGravel = new BlockCustomGravel("iapetusGravel");
+		if (Config.IAPETUS) {
+			IAPETUS_BLOCKS = new BlockBasicIapetus("iapetus");
+			IAPETUS_GRAVEL = new BlockCustomGravel("iapetus_gravel");
 		}
-		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-			fossil = new BlockFossil(Material.rock).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
-		if (Config.ceres && Config.nuclearBomb)
-			nuclearBomb = new BlockNuclearBomb().setUnlocalizedName("nuclearBomb");
-		if (Config.leadOreGeneration)
-			oreLead = new BlockBasic(Material.rock).setUnlocalizedName("oreLead").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
-		if (Config.kepler22b && Config.keplerSolarSystems) {
-			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
-			kepler22bGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
-			kepler22bBlueGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_blue_grass");
-			kepler22bPurpleGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple_grass");
-			kepler22bRedGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
-			kepler22bYellowGrass = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
-			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22bFlowers");
+		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
+			FOSSIL = new BlockFossil(Material.rock).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
+		if (Config.CERES && Config.NUCLEAR_BOMB)
+			NUCLEAR_BOMB = new BlockNuclearBomb().setUnlocalizedName("nuclear_bomb");
+		if (Config.SATURN && Config.FIRE_BOMB)
+			FIRE_BOMB = new BlockFireBomb().setUnlocalizedName("fire_bomb");
+		if (Config.ORE_LEAD_GENERATION)
+			ORE_LEAD = new BlockBasic(Material.rock).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F);
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			KEPLER22B_BLOCKS = new BlockBasicKepler22b("kepler22b");
+			KEPLER22B_GRASS_GREEN = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
+			KEPLER22B_GRASS_BLUE = new BlockBasicGrass().setUnlocalizedName("kepler22b_blue_grass");
+			KEPLER22B_GRASS_PURPLE = new BlockBasicGrass().setUnlocalizedName("kepler22b_purple_grass");
+			KEPLER22B_GRASS_RED = new BlockBasicGrass().setUnlocalizedName("kepler22b_red_grass");
+			KEPLER22B_GRASS_YELLOW = new BlockBasicGrass().setUnlocalizedName("kepler22b_yellow_grass");
+			KEPLER22B_MAPLE_FLOWERS = new BlockBasicKepler22bTallGrass().setUnlocalizedName("kepler22b_flowers");
+			RED_SAND = new BlockSand("red_sand").setHardness(0.6F);
+			RED_SANDSTONE = new BlockBasic(Material.rock).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
+
 		}
-		if (Config.radiation)
-			potash = new BlockBasic(Material.rock).setUnlocalizedName("potash").setStepSound(Block.soundTypeStone).setHardness(5.0F).setResistance(3.0F);
-		
-		decorativeBlocks = new BlockDecorativeBlocks("decorative_blocks");
+		if (Config.RADIATION)
+			ORE_POTASH = new BlockBasic(Material.rock).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
+
+		ADVANCED_LAUCHPAD = new BlockCustomLandingPad("advanced_launch_pad");
+		ADVANCED_LAUCHPAD_FULL = new BlockCustomLandingPadFull("advanced_launch_pad_full");
+		FAKE_BLOCK = new BlockCustomMulti("block_multi");
+		DECORATIVE_BLOCKS = new BlockDecorativeBlocks("decorative_blocks");
+		DECORATIVE_BLOCKS2 = new BlockDecorativeBlocks2("decorative_blocks2");
 	}
 
 	private static void initializeTreasureChestBlocks() {
-		if (Config.mercury) {
-			treasureChestTier4 = new T4TreasureChest("treasureChestT4");
+		if (Config.MERCURY) {
+			TREASURE_CHEST_TIER_4 = new T4TreasureChest("treasure_chest_t4");
 		}
-		if (Config.jupiter) {
-			treasureChestTier5 = new T5TreasureChest("treasureChestT5");
+		if (Config.JUPITER) {
+			TREASURE_CHEST_TIER_5 = new T5TreasureChest("treasure_chest_t5");
 		}
-		if (Config.saturn) {
-			treasureChestTier6 = new T6TreasureChest("treasureChestT6");
+		if (Config.SATURN) {
+			TREASURE_CHEST_TIER_6 = new T6TreasureChest("treasure_chest_t6");
 		}
-		if (Config.uranus) {
-			treasureChestTier7 = new T7TreasureChest("treasureChestT7");
+		if (Config.URANUS) {
+			TREASURE_CHEST_TIER_7 = new T7TreasureChest("treasure_chest_t7");
 		}
-		if (Config.neptune) {
-			treasureChestTier8 = new T8TreasureChest("treasureChestT8");
+		if (Config.NEPTUNE) {
+			TREASURE_CHEST_TIER_8 = new T8TreasureChest("treasure_chest_t8");
 		}
-		if (Config.pluto) {
-			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
+		if (Config.PLUTO) {
+			TREASURE_CHEST_TIER_9 = new T9TreasureChest("treasure_chest_t9");
 		}
-		if (Config.eris) {
-			treasureChestTier10 = new T10TreasureChest("treasureChestT10");
+		if (Config.ERIS) {
+			TREASURE_CHEST_TIER_10 = new T10TreasureChest("treasure_chest_t10");
 		}
 	}
 
 	private static void initializeSpawnerBlocks() {
-		if (Config.mercury) {
-			mercurySpawner = new BlockMercuryDungeonSpawner("bossSpawnerVenus");
+		if (Config.MERCURY) {
+			MERCURY_SPAWNER = new BlockMercuryDungeonSpawner("boss_spawner_venus");
 		}
-		if (Config.jupiter) {
-			jupiterSpawner = new BlockJupiterDungeonSpawner("bossSpawnerVenus");
+		if (Config.JUPITER) {
+			JUIPTER_SPAWNER = new BlockJupiterDungeonSpawner("boss_spawner_jupiter");
 		}
-		if (Config.saturn) {
-			saturnSpawner = new BlockSaturnDungeonSpawner("bossSpawnerSaturn");
+		if (Config.SATURN) {
+			SATURN_SPAWNER = new BlockSaturnDungeonSpawner("boss_spawner_saturn");
 		}
-		if (Config.uranus) {
-			uranusSpawner = new BlockUranusDungeonSpawner("bossSpawnerUranus");
+		if (Config.URANUS) {
+			URANUS_SPAWNER = new BlockUranusDungeonSpawner("boss_spawner_uranus");
 		}
-		if (Config.neptune) {
-			neptuneSpawner = new BlockNeptuneDungeonSpawner("bossSpawnerNeptune");
+		if (Config.NEPTUNE) {
+			NEPTUNE_SPAWNER = new BlockNeptuneDungeonSpawner("boss_spawner_neptune");
 		}
-		if (Config.pluto) {
-			plutoSpawner = new BlockPlutoDungeonSpawner("bossSpawnerPluto");
+		if (Config.PLUTO) {
+			PLUTO_SPAWNER = new BlockPlutoDungeonSpawner("boss_spawner_pluto");
 		}
-		if (Config.eris) {
-			erisSpawner = new BlockErisDungeonSpawner("bossSpawnerEris");
+		if (Config.ERIS) {
+			ERIS_SPAWNER = new BlockErisDungeonSpawner("boss_spawner_eris");
 		}
 	}
 
 	private static void initializeTreeBlocks() {
-		kepler22bMapleLog = new BlockKepler22bMapleTreeLog().setUnlocalizedName("kepler22bMapleLogs").setCreativeTab(ExtraPlanets.BlocksTab);
-		kepler22bMapleLog2 = new BlockKepler22bMapleTreeLog2().setUnlocalizedName("kepler22bMapleLogs2").setCreativeTab(ExtraPlanets.BlocksTab);
-		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling().setUnlocalizedName("kepler22bMapleSaplings");
-		kepler22bMapleLeaf = new BlockKepler22bMapleTreeLeaves().setUnlocalizedName("kepler22bNewMapleLeaves");
-		kepler22bMapleLeaf2 = new BlockKepler22bMapleTreeLeaves2().setUnlocalizedName("kepler22bNewMapleLeaves2");
-		kepler22bPlanks = new BlockBasicKepler22bPlanks().setUnlocalizedName("kepler22bPlanks");
+		KEPLER22B_MAPLE_LOG = new BlockKepler22bMapleTreeLog().setUnlocalizedName("kepler22b_maple_logs").setCreativeTab(ExtraPlanets.BlocksTab);
+		KEPLER22B_MAPLE_LOG_2 = new BlockKepler22bMapleTreeLog2().setUnlocalizedName("kepler22b_maple_logs2").setCreativeTab(ExtraPlanets.BlocksTab);
+		KEPLER22B_MAPLE_SAPLING = new BlockKepler22bMapleTreeSapling().setUnlocalizedName("kepler22b_maple_saplings");
+		KEPLER22B_MAPLE_LEAF = new BlockKepler22bMapleTreeLeaves().setUnlocalizedName("kepler22b_new_maple_leaves");
+		KEPLER22B_MAPLE_LEAF2 = new BlockKepler22bMapleTreeLeaves2().setUnlocalizedName("kepler22b_new_maple_leaves_2");
+		KEPLER22B_MAPLE_PLANKS = new BlockBasicKepler22bPlanks().setUnlocalizedName("kepler22b_planks");
 	}
 
-	private static void registerBlocks() {
-		if (Config.mercury) {
-			GameRegistry.registerBlock(mercuryBlocks, ItemBlockMercury.class, mercuryBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(mercuryGravel, mercuryGravel.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(mercurySpawner, ItemBlockGC.class, "mercurySpawner");
-			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName().substring(5));
+	private static void registerBlocks() throws NoSuchMethodException {
+		if (Config.MERCURY) {
+			GameRegistry.registerBlock(MERCURY_BLOCKS, ItemBlockMercury.class, MERCURY_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(MERCURY_GRAVEL, MERCURY_GRAVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(MERCURY_SPAWNER, ItemBlockGC.class, "mercury_spawner");
+			GameRegistry.registerBlock(TREASURE_CHEST_TIER_4, ItemBlockDesc.class, TREASURE_CHEST_TIER_4.getUnlocalizedName().substring(5));
 		}
-		if (Config.ceres) {
-			GameRegistry.registerBlock(ceresBlocks, ItemBlockCeres.class, ceresBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(ceresGravel, ceresGravel.getUnlocalizedName().substring(5));
+		if (Config.CERES) {
+			GameRegistry.registerBlock(CERES_BLOCKS, ItemBlockCeres.class, CERES_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(CERES_GRAVEL, CERES_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.jupiter) {
-			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(jupiterGravel, jupiterGravel.getUnlocalizedName().substring(5));
+		if (Config.JUPITER) {
+			GameRegistry.registerBlock(JUPITER_BLOCKS, ItemBlockJupiter.class, JUPITER_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(JUPITER_GRAVEL, JUPITER_GRAVEL.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerBlock(ashBlock, ashBlock.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(jupiterSpawner, ItemBlockGC.class, "jupiterSpawner");
-			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName().substring(5));
-		}
-		if (Config.saturn) {
-			GameRegistry.registerBlock(saturnBlocks, ItemBlockSaturn.class, saturnBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(saturnGravel, saturnGravel.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(JUIPTER_SPAWNER, ItemBlockGC.class, "jupiter_spawner");
+			GameRegistry.registerBlock(TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerBlock(saturnSpawner, ItemBlockGC.class, "saturnSpawner");
-			GameRegistry.registerBlock(treasureChestTier6, ItemBlockDesc.class, treasureChestTier6.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(VOLCANIC_ROCK, VOLCANIC_ROCK.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(ASH_ROCK, ASH_ROCK.getUnlocalizedName().substring(5));
+
 		}
-		if (Config.uranus) {
-			GameRegistry.registerBlock(uranusBlocks, ItemBlockUranus.class, uranusBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(uranusSpawner, ItemBlockGC.class, "uranusSpawner");
-			GameRegistry.registerBlock(treasureChestTier7, ItemBlockDesc.class, treasureChestTier7.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(denseIce, denseIce.getUnlocalizedName().substring(5));
+		if (Config.SATURN) {
+			GameRegistry.registerBlock(SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(SATURN_GRAVEL, SATURN_GRAVEL.getUnlocalizedName().substring(5));
+
+			GameRegistry.registerBlock(SATURN_SPAWNER, ItemBlockGC.class, "saturn_spawner");
+			GameRegistry.registerBlock(TREASURE_CHEST_TIER_6, ItemBlockDesc.class, TREASURE_CHEST_TIER_6.getUnlocalizedName().substring(5));
 		}
-		if (Config.neptune) {
-			GameRegistry.registerBlock(neptuneBlocks, ItemBlockNeptune.class, neptuneBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(neptuneSpawner, ItemBlockGC.class, "neptuneSpawner");
-			GameRegistry.registerBlock(treasureChestTier8, ItemBlockDesc.class, treasureChestTier8.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(frozenNitrogen, frozenNitrogen.getUnlocalizedName().substring(5));
+		if (Config.URANUS) {
+			GameRegistry.registerBlock(URANUS_BLOCKS, ItemBlockUranus.class, URANUS_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(URANUS_SPAWNER, ItemBlockGC.class, "uranus_spawner");
+			GameRegistry.registerBlock(TREASURE_CHEST_TIER_7, ItemBlockDesc.class, TREASURE_CHEST_TIER_7.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(DENSE_ICE, DENSE_ICE.getUnlocalizedName().substring(5));
 		}
-		if (Config.pluto) {
-			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(plutoSpawner, ItemBlockGC.class, "plutoSpawner");
-			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(plutoGravel, plutoGravel.getUnlocalizedName().substring(5));
+		if (Config.NEPTUNE) {
+			GameRegistry.registerBlock(NEPTUNE_BLOCKS, ItemBlockNeptune.class, NEPTUNE_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(NEPTUNE_SPAWNER, ItemBlockGC.class, "neptune_spawner");
+			GameRegistry.registerBlock(TREASURE_CHEST_TIER_8, ItemBlockDesc.class, TREASURE_CHEST_TIER_8.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(FROZEN_NITROGEN, FROZEN_NITROGEN.getUnlocalizedName().substring(5));
 		}
-		if (Config.eris) {
-			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(erisSpawner, ItemBlockGC.class, "erisSpawner");
-			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(erisGravel, erisGravel.getUnlocalizedName().substring(5));
+		if (Config.PLUTO) {
+			GameRegistry.registerBlock(PLUTO_BLOCKS, ItemBlockPluto.class, PLUTO_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(PLUTO_SPAWNER, ItemBlockGC.class, "pluto_spawner");
+			GameRegistry.registerBlock(TREASURE_CHEST_TIER_9, ItemBlockDesc.class, TREASURE_CHEST_TIER_9.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(PLUTO_GRAVEL, PLUTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.kepler22b && Config.keplerSolarSystems) {
-			GameRegistry.registerBlock(kepler22bBlocks, ItemBlockKepler22b.class, kepler22bBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(kepler22bGrass, kepler22bGrass.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(kepler22bBlueGrass, kepler22bBlueGrass.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(kepler22bPurpleGrass, kepler22bPurpleGrass.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(kepler22bRedGrass, kepler22bRedGrass.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(kepler22bYellowGrass, kepler22bYellowGrass.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName().substring(5));
+		if (Config.ERIS) {
+			GameRegistry.registerBlock(ERIS_BLOCKS, ItemBlockEris.class, ERIS_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(ERIS_SPAWNER, ItemBlockGC.class, "eris_spawner");
+			GameRegistry.registerBlock(TREASURE_CHEST_TIER_10, ItemBlockDesc.class, TREASURE_CHEST_TIER_10.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(ERIS_GRAVEL, ERIS_GRAVEL.getUnlocalizedName().substring(5));
+		}
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			GameRegistry.registerBlock(KEPLER22B_BLOCKS, ItemBlockKepler22b.class, KEPLER22B_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(KEPLER22B_GRASS_GREEN, KEPLER22B_GRASS_GREEN.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(KEPLER22B_GRASS_BLUE, KEPLER22B_GRASS_BLUE.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(KEPLER22B_GRASS_PURPLE, KEPLER22B_GRASS_PURPLE.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
+
 		}
 
-		if (Config.europa) {
-			GameRegistry.registerBlock(europaBlocks, ItemBlockEuropa.class, europaBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(europaGravel, europaGravel.getUnlocalizedName().substring(5));
+		if (Config.EUROPA) {
+			GameRegistry.registerBlock(EUROPA_BLOCKS, ItemBlockEuropa.class, EUROPA_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(EUROPA_GRAVEL, EUROPA_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.io) {
-			GameRegistry.registerBlock(ioBlocks, ItemBlockIo.class, ioBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(ioGravel, ioGravel.getUnlocalizedName().substring(5));
+		if (Config.IO) {
+			GameRegistry.registerBlock(IO_BLOCKS, ItemBlockIo.class, IO_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(IO_GRAVEL, IO_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.deimos) {
-			GameRegistry.registerBlock(deimosBlocks, ItemBlockDeimos.class, deimosBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(deimosGravel, deimosGravel.getUnlocalizedName().substring(5));
+		if (Config.DEIMOS) {
+			GameRegistry.registerBlock(DEIMOS_BLOCKS, ItemBlockDeimos.class, DEIMOS_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(DEIMOS_GRAVEL, DEIMOS_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.phobos) {
-			GameRegistry.registerBlock(phobosBlocks, ItemBlockPhobos.class, phobosBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(phobosGravel, phobosGravel.getUnlocalizedName().substring(5));
+		if (Config.PHOBOS) {
+			GameRegistry.registerBlock(PHOBOS_BLOCKS, ItemBlockPhobos.class, PHOBOS_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(PHOBOS_GRAVEL, PHOBOS_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.triton) {
-			GameRegistry.registerBlock(tritonBlocks, ItemBlockTriton.class, tritonBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(tritonGravel, tritonGravel.getUnlocalizedName().substring(5));
+		if (Config.TRITON) {
+			GameRegistry.registerBlock(TRITON_BLOCKS, ItemBlockTriton.class, TRITON_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(TRITON_GRAVEL, TRITON_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.callisto) {
-			GameRegistry.registerBlock(callistoBlocks, ItemBlockCallisto.class, callistoBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(callistoGravel, callistoGravel.getUnlocalizedName().substring(5));
+		if (Config.CALLISTO) {
+			GameRegistry.registerBlock(CALLISTO_BLOCKS, ItemBlockCallisto.class, CALLISTO_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(CALLISTO_GRAVEL, CALLISTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.ganymede) {
-			GameRegistry.registerBlock(ganymedeBlocks, ItemBlockGanymede.class, ganymedeBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(ganymedeGravel, ganymedeGravel.getUnlocalizedName().substring(5));
+		if (Config.GANYMEDE) {
+			GameRegistry.registerBlock(GANYMEDE_BLOCKS, ItemBlockGanymede.class, GANYMEDE_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(GANYMEDE_GRAVEL, GANYMEDE_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.rhea) {
-			GameRegistry.registerBlock(rheaBlocks, ItemBlockRhea.class, rheaBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(rheaGravel, rheaGravel.getUnlocalizedName().substring(5));
+		if (Config.RHEA) {
+			GameRegistry.registerBlock(RHEA_BLOCKS, ItemBlockRhea.class, RHEA_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(RHEA_GRAVEL, RHEA_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.titan) {
-			GameRegistry.registerBlock(titanBlocks, ItemBlockTitan.class, titanBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(titanGravel, titanGravel.getUnlocalizedName().substring(5));
+		if (Config.TITAN) {
+			GameRegistry.registerBlock(TITAN_BLOCKS, ItemBlockTitan.class, TITAN_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(TITAN_GRAVEL, TITAN_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.oberon) {
-			GameRegistry.registerBlock(oberonBlocks, ItemBlockOberon.class, oberonBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(oberonGravel, oberonGravel.getUnlocalizedName().substring(5));
+		if (Config.OBERON) {
+			GameRegistry.registerBlock(OBERON_BLOCKS, ItemBlockOberon.class, OBERON_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(OBERON_GRAVEL, OBERON_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.titania) {
-			GameRegistry.registerBlock(titaniaBlocks, ItemBlockTitania.class, titaniaBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(titaniaGravel, titaniaGravel.getUnlocalizedName().substring(5));
+		if (Config.TITANIA) {
+			GameRegistry.registerBlock(TITANIA_BLOCKS, ItemBlockTitania.class, TITANIA_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(TITANIA_GRAVEL, TITANIA_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.iapetus) {
-			GameRegistry.registerBlock(iapetusBlocks, ItemBlockIapetus.class, iapetusBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(iapetusGravel, iapetusGravel.getUnlocalizedName().substring(5));
+		if (Config.IAPETUS) {
+			GameRegistry.registerBlock(IAPETUS_BLOCKS, ItemBlockIapetus.class, IAPETUS_BLOCKS.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(IAPETUS_GRAVEL, IAPETUS_GRAVEL.getUnlocalizedName().substring(5));
 		}
-		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
-			GameRegistry.registerBlock(fossil, fossil.getUnlocalizedName().substring(5));
-		if (Config.ceres && Config.nuclearBomb)
-			GameRegistry.registerBlock(nuclearBomb, nuclearBomb.getUnlocalizedName().substring(5));
-		if (Config.leadOreGeneration)
-			GameRegistry.registerBlock(oreLead, oreLead.getUnlocalizedName().substring(5));
-		if (Config.radiation)
-			GameRegistry.registerBlock(potash, potash.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(decorativeBlocks, ItemBlockDecorativeBlocks.class, decorativeBlocks.getUnlocalizedName().substring(5));
+		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
+			GameRegistry.registerBlock(FOSSIL, FOSSIL.getUnlocalizedName().substring(5));
+		if (Config.CERES && Config.NUCLEAR_BOMB)
+			GameRegistry.registerBlock(NUCLEAR_BOMB, NUCLEAR_BOMB.getUnlocalizedName().substring(5));
+		if (Config.SATURN && Config.FIRE_BOMB)
+			GameRegistry.registerBlock(FIRE_BOMB, FIRE_BOMB.getUnlocalizedName().substring(5));
+		if (Config.ORE_LEAD_GENERATION)
+			GameRegistry.registerBlock(ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
+		if (Config.RADIATION)
+			GameRegistry.registerBlock(ORE_POTASH, ORE_POTASH.getUnlocalizedName().substring(5));
+
+		GameRegistry.registerBlock(ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
+
+		GameRegistry.registerBlock(FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(DECORATIVE_BLOCKS2, ItemBlockDecorativeBlocks2.class, DECORATIVE_BLOCKS2.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerTileEntitys() {
-		if (Config.mercury) {
+		if (Config.MERCURY) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerMercury.class, Constants.modName + "Mercury Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
-		if (Config.jupiter) {
+		if (Config.JUPITER) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT5TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
 		}
-		if (Config.saturn) {
+		if (Config.SATURN) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
-		if (Config.uranus) {
+		if (Config.URANUS) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
-		if (Config.neptune) {
+		if (Config.NEPTUNE) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
-		if (Config.pluto) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
+		if (Config.PLUTO) {
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "PLUTO Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
-		if (Config.eris) {
+		if (Config.ERIS) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPadSingle.class, "Tier 2 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier2LandingPad.class, "Tier 2 Landing Pad Full");
+
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPadSingle.class, "Tier 3 Landing Pad");
+		GameRegistry.registerTileEntity(TileEntityTier3LandingPad.class, "Tier 3 Landing Pad Full");
+
+		GameRegistry.registerTileEntity(TileEntityPoweredChargingPadSingle.class, "Powered Charging Pad");
+		GameRegistry.registerTileEntity(TileEntityPoweredChargingPad.class, "Powered Charging Pad Full");
+
+		GameRegistry.registerTileEntity(TileEntityRocketChargingPadSingle.class, "Rocket Charging Pad");
+		GameRegistry.registerTileEntity(TileEntityRocketChargingPad.class, "Rocket Charging Pad Full");
 	}
 
 	private static void setHarvestLevels() {
-		if (Config.mercury) {
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 6); // Mercury Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 7); // Mercury Block
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 8); // Stone Bricks
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 2, 10); // Carbon Ore
-			RegisterHelper.setHarvestLevel(mercuryBlocks, "pickaxe", 1, 11); // Carbon Block
+		if (Config.MERCURY) {
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 6); // Mercury Ore
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 7); // Mercury Block
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 10); // Carbon Ore
+			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 11); // Carbon Block
 		}
-		if (Config.jupiter) {
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 6); // Palladium Ore
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 7); // Palladium Block
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 8); // Stone Bricks
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 2, 10); // Red Gem Ore
-			RegisterHelper.setHarvestLevel(jupiterBlocks, "pickaxe", 1, 11); // Red Gem Block
+		if (Config.JUPITER) {
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 6); // Palladium Ore
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 7); // Palladium Block
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 10); // Red Gem Ore
+			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 11); // Red Gem Block
 		}
-		if (Config.saturn) {
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 2, 6); // Magnesium Ore
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 7); // Magnesium Block
-			RegisterHelper.setHarvestLevel(saturnBlocks, "pickaxe", 1, 8); // Stone Bricks
+		if (Config.SATURN) {
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 6); // Magnesium Ore
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 1, 7); // Magnesium Block
+			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
 		}
-		if (Config.uranus) {
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 2, 3); // Crystal Ore
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 4); // Crystal Block
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 5); // Stone Bricks
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 2, 7); // White Gem Ore
-			RegisterHelper.setHarvestLevel(uranusBlocks, "pickaxe", 1, 8); // White Gem Block
+		if (Config.URANUS) {
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 2, 3); // Crystal Ore
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 4); // Crystal Block
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 5); // Stone Bricks
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 2, 7); // White Gem Ore
+			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 8); // White Gem Block
 		}
-		if (Config.neptune) {
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 6); // Zinc Ore
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 7); // Zinc Block
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 8); // Stone Bricks
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 2, 10); // Blue Gem Ore
-			RegisterHelper.setHarvestLevel(neptuneBlocks, "pickaxe", 1, 11); // Blue Gem Block
+		if (Config.NEPTUNE) {
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 6); // Zinc Ore
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 7); // Zinc Block
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 10); // Blue Gem Ore
+			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 11); // Blue Gem Block
 		}
-		if (Config.pluto) {
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 2, 6); // Tungsten Ore
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 7); // Tungsten Block
-			RegisterHelper.setHarvestLevel(plutoBlocks, "pickaxe", 1, 8); // Stone Bricks
+		if (Config.PLUTO) {
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 6); // Tungsten Ore
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 1, 7); // Tungsten Block
+			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
 		}
-		if (Config.eris) {
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 2, 6); // Dark Iron Ore
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 7); // Dark Iron Block
-			RegisterHelper.setHarvestLevel(erisBlocks, "pickaxe", 1, 8); // Stone Bricks
+		if (Config.ERIS) {
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 6); // Dark Iron Ore
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 1, 7); // Dark Iron Block
+			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
 		}
-		if (Config.kepler22b) {
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 0, 0); // Dirt
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 1); // Stone
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 2); // Iron Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 3); // Tin Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 4); // Copper Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 5); // Dense Coal Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 6); // Blue Diamond Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 7); // Red Diamond Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 8); // Purple Diamond Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 9); // Yellow Diamond Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 2, 10); // Green Diamond Ore
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 11); // Stone Bricks
-			RegisterHelper.setHarvestLevel(kepler22bBlocks, "pickaxe", 1, 12); // Cobblestone
+		if (Config.CALLISTO) {
+			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.callisto) {
-			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(callistoBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.DEIMOS) {
+			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.deimos) {
-			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(deimosBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.EUROPA) {
+			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.europa) {
-			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(europaBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.GANYMEDE) {
+			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.ganymede) {
-			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(ganymedeBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.IO) {
+			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.io) {
-			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(ioBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.PHOBOS) {
+			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.phobos) {
-			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(phobosBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.RHEA) {
+			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.rhea) {
-			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(rheaBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.TITAN) {
+			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.titan) {
-			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(titanBlocks, "pickaxe", 2, 5); // Copper Ore
+		if (Config.TRITON) {
+			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
-		if (Config.triton) {
-			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(tritonBlocks, "pickaxe", 2, 5); // Copper Ore
-		}
-		if (Config.iapetus) {
-			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(iapetusBlocks, "pickaxe", 2, 5); // Copper Ore
-		}
-		if (Config.oberon) {
-			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(oberonBlocks, "pickaxe", 2, 5); // Copper Ore
-		}
-		if (Config.titania) {
-			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(titaniaBlocks, "pickaxe", 2, 5); // Copper Ore
-		}
-		if (Config.leadOreGeneration)
-			RegisterHelper.setHarvestLevel(oreLead, "pickaxe", 2, 0); // Lead Ore
+		if (Config.ORE_LEAD_GENERATION)
+			RegisterHelper.setHarvestLevel(ORE_LEAD, "pickaxe", 2, 0); // Lead Ore
 	}
 
 	public static void OreDictionaryRegister() {
-		if (Config.mercury) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(mercuryBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(mercuryBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(mercuryBlocks, 1, 3));
-			OreDictionary.registerOre("oreMercury", new ItemStack(mercuryBlocks, 1, 6));
-			OreDictionary.registerOre("oreCarbon", new ItemStack(mercuryBlocks, 1, 10));
-			OreDictionary.registerOre("blockCarbon", new ItemStack(mercuryBlocks, 1, 11));
+		if (Config.MERCURY) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(MERCURY_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(MERCURY_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(MERCURY_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreMercury", new ItemStack(MERCURY_BLOCKS, 1, 6));
+			OreDictionary.registerOre("oreCarbon", new ItemStack(MERCURY_BLOCKS, 1, 10));
+			OreDictionary.registerOre("blockCarbon", new ItemStack(MERCURY_BLOCKS, 1, 11));
 		}
-		// if (Config.venus) {
-		// OreDictionary.registerOre("oreCopper", new ItemStack(venusBlocks, 1, 5));
-		// OreDictionary.registerOre("oreTin", new ItemStack(venusBlocks, 1, 4));
-		// OreDictionary.registerOre("oreIron", new ItemStack(venusBlocks, 1, 3));
-		// }
-		if (Config.ceres) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(ceresBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(ceresBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(ceresBlocks, 1, 3));
-			OreDictionary.registerOre("oreUranium", new ItemStack(ceresBlocks, 1, 6));
+		if (Config.CERES) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(CERES_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(CERES_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(CERES_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreUranium", new ItemStack(CERES_BLOCKS, 1, 6));
+			OreDictionary.registerOre("blockUranium", new ItemStack(CERES_BLOCKS, 1, 7));
 		}
-		if (Config.jupiter) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(jupiterBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(jupiterBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(jupiterBlocks, 1, 3));
-			OreDictionary.registerOre("orePalladium", new ItemStack(jupiterBlocks, 1, 6));
-			OreDictionary.registerOre("oreNickel", new ItemStack(jupiterBlocks, 1, 7));
-			OreDictionary.registerOre("oreRedGem", new ItemStack(jupiterBlocks, 1, 10));
-			OreDictionary.registerOre("blockPalladium", new ItemStack(jupiterBlocks, 1, 8));
-			OreDictionary.registerOre("blockRedGem", new ItemStack(jupiterBlocks, 1, 11));
+		if (Config.JUPITER) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(JUPITER_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(JUPITER_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(JUPITER_BLOCKS, 1, 3));
+			OreDictionary.registerOre("orePalladium", new ItemStack(JUPITER_BLOCKS, 1, 6));
+			OreDictionary.registerOre("oreNickel", new ItemStack(JUPITER_BLOCKS, 1, 7));
+			OreDictionary.registerOre("oreRedGem", new ItemStack(JUPITER_BLOCKS, 1, 10));
+			OreDictionary.registerOre("blockPalladium", new ItemStack(JUPITER_BLOCKS, 1, 8));
+			OreDictionary.registerOre("blockRedGem", new ItemStack(JUPITER_BLOCKS, 1, 11));
 		}
-		if (Config.saturn) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(saturnBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(saturnBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(saturnBlocks, 1, 3));
-			OreDictionary.registerOre("oreMagnesium", new ItemStack(saturnBlocks, 1, 6));
-			OreDictionary.registerOre("blockMagnesium", new ItemStack(saturnBlocks, 1, 7));
+		if (Config.SATURN) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(SATURN_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(SATURN_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(SATURN_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreMagnesium", new ItemStack(SATURN_BLOCKS, 1, 6));
+			OreDictionary.registerOre("blockMagnesium", new ItemStack(SATURN_BLOCKS, 1, 7));
 		}
-		if (Config.uranus) {
-			OreDictionary.registerOre("oreCrystal", new ItemStack(uranusBlocks, 1, 3));
-			OreDictionary.registerOre("oreWhiteGem", new ItemStack(uranusBlocks, 1, 6));
-			OreDictionary.registerOre("blockCrystal", new ItemStack(uranusBlocks, 1, 4));
-			OreDictionary.registerOre("blockWhiteGem", new ItemStack(uranusBlocks, 1, 7));
+		if (Config.URANUS) {
+			OreDictionary.registerOre("oreCrystal", new ItemStack(URANUS_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 6));
+			OreDictionary.registerOre("blockCrystal", new ItemStack(URANUS_BLOCKS, 1, 4));
+			OreDictionary.registerOre("blockWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 7));
 		}
-		if (Config.neptune) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(neptuneBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(neptuneBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(neptuneBlocks, 1, 3));
-			OreDictionary.registerOre("oreZinc", new ItemStack(neptuneBlocks, 1, 6));
-			OreDictionary.registerOre("oreBlueGem", new ItemStack(neptuneBlocks, 1, 9));
-			OreDictionary.registerOre("blockZinc", new ItemStack(neptuneBlocks, 1, 7));
-			OreDictionary.registerOre("blockBlueGem", new ItemStack(neptuneBlocks, 1, 10));
+		if (Config.NEPTUNE) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(NEPTUNE_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(NEPTUNE_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(NEPTUNE_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 6));
+			OreDictionary.registerOre("oreBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 9));
+			OreDictionary.registerOre("blockZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 7));
+			OreDictionary.registerOre("blockBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 10));
 		}
-		if (Config.pluto) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(plutoBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(plutoBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(plutoBlocks, 1, 3));
-			OreDictionary.registerOre("oreTungsten", new ItemStack(plutoBlocks, 1, 6));
-			OreDictionary.registerOre("blockTungsten", new ItemStack(plutoBlocks, 1, 7));
+		if (Config.PLUTO) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(PLUTO_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(PLUTO_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(PLUTO_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreTungsten", new ItemStack(PLUTO_BLOCKS, 1, 6));
+			OreDictionary.registerOre("blockTungsten", new ItemStack(PLUTO_BLOCKS, 1, 7));
 		}
-		if (Config.eris) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(erisBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(erisBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(erisBlocks, 1, 3));
+		if (Config.ERIS) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(ERIS_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(ERIS_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(ERIS_BLOCKS, 1, 3));
 		}
-		if (Config.callisto) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(callistoBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(callistoBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(callistoBlocks, 1, 3));
+		if (Config.CALLISTO) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(CALLISTO_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(CALLISTO_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(CALLISTO_BLOCKS, 1, 3));
 		}
-		if (Config.deimos) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(deimosBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(deimosBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(deimosBlocks, 1, 3));
+		if (Config.DEIMOS) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(DEIMOS_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(DEIMOS_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(DEIMOS_BLOCKS, 1, 3));
 		}
-		if (Config.europa) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(europaBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(europaBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(europaBlocks, 1, 3));
+		if (Config.EUROPA) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(EUROPA_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(EUROPA_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(EUROPA_BLOCKS, 1, 3));
 		}
-		if (Config.ganymede) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(ganymedeBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(ganymedeBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(ganymedeBlocks, 1, 3));
+		if (Config.GANYMEDE) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(GANYMEDE_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(GANYMEDE_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(GANYMEDE_BLOCKS, 1, 3));
 		}
-		if (Config.io) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(ioBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(ioBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(ioBlocks, 1, 3));
+		if (Config.IO) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(IO_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(IO_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(IO_BLOCKS, 1, 3));
 		}
-		if (Config.phobos) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(phobosBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(phobosBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(phobosBlocks, 1, 3));
+		if (Config.PHOBOS) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(PHOBOS_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(PHOBOS_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(PHOBOS_BLOCKS, 1, 3));
 		}
-		if (Config.rhea) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(rheaBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(rheaBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(rheaBlocks, 1, 3));
+		if (Config.RHEA) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(RHEA_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(RHEA_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(RHEA_BLOCKS, 1, 3));
 		}
-		if (Config.titan) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(titanBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(titanBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(titanBlocks, 1, 3));
+		if (Config.TITAN) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(TITAN_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(TITAN_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(TITAN_BLOCKS, 1, 3));
 		}
-		if (Config.triton) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(tritonBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(tritonBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(tritonBlocks, 1, 3));
+		if (Config.TRITON) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(TRITON_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(TRITON_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(TRITON_BLOCKS, 1, 3));
 		}
-		if (Config.oberon) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(oberonBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(oberonBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(oberonBlocks, 1, 3));
+		if (Config.OBERON) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(OBERON_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(OBERON_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(OBERON_BLOCKS, 1, 3));
 		}
-		if (Config.iapetus) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(iapetusBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(iapetusBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(iapetusBlocks, 1, 3));
+		if (Config.IAPETUS) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(IAPETUS_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(IAPETUS_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(IAPETUS_BLOCKS, 1, 3));
 		}
-		if (Config.titania) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(titaniaBlocks, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(titaniaBlocks, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(titaniaBlocks, 1, 3));
+		if (Config.TITANIA) {
+			OreDictionary.registerOre("oreCopper", new ItemStack(TITANIA_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreTin", new ItemStack(TITANIA_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreIron", new ItemStack(TITANIA_BLOCKS, 1, 3));
 		}
-		if (Config.kepler22b && Config.keplerSolarSystems) {
-			OreDictionary.registerOre("stone", new ItemStack(kepler22bBlocks, 1, 1));
-			OreDictionary.registerOre("oreIron", new ItemStack(kepler22bBlocks, 1, 2));
-			OreDictionary.registerOre("oreCopper", new ItemStack(kepler22bBlocks, 1, 3));
-			OreDictionary.registerOre("oreTin", new ItemStack(kepler22bBlocks, 1, 4));
-			OreDictionary.registerOre("oreDenseCoal", new ItemStack(kepler22bBlocks, 1, 5));
-			OreDictionary.registerOre("oreBlueDiamond", new ItemStack(kepler22bBlocks, 1, 6));
-			OreDictionary.registerOre("oreRedDiamond", new ItemStack(kepler22bBlocks, 1, 7));
-			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(kepler22bBlocks, 1, 8));
-			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(kepler22bBlocks, 1, 9));
-			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(kepler22bBlocks, 1, 10));
-			OreDictionary.registerOre("cobblestone", new ItemStack(kepler22bBlocks, 1, 12));
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			OreDictionary.registerOre("stone", new ItemStack(KEPLER22B_BLOCKS, 1, 1));
+			OreDictionary.registerOre("oreIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
+			OreDictionary.registerOre("oreCopper", new ItemStack(KEPLER22B_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreTin", new ItemStack(KEPLER22B_BLOCKS, 1, 4));
+			OreDictionary.registerOre("oreDenseCoal", new ItemStack(KEPLER22B_BLOCKS, 1, 5));
+			OreDictionary.registerOre("oreBlueDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 6));
+			OreDictionary.registerOre("oreRedDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 7));
+			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 8));
+			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 9));
+			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 10));
+			OreDictionary.registerOre("cobblestone", new ItemStack(KEPLER22B_BLOCKS, 1, 12));
+			OreDictionary.registerOre("orePlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 13));
 		}
-		if (Config.leadOreGeneration) {
-			OreDictionary.registerOre("oreLead", new ItemStack(oreLead, 1, 0));
+		if (Config.ORE_LEAD_GENERATION) {
+			OreDictionary.registerOre("oreLead", new ItemStack(ORE_LEAD, 1, 0));
 			GameRegistry.registerWorldGenerator(new WorldGenerationOverworld(), 1);
 		}
 	}
 
-	private static void registerTreeBlocks() {
-		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, kepler22bMapleLeaf.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(kepler22bMapleLeaf2, ItemBlockKepler22bMapleLeaf2.class, kepler22bMapleLeaf2.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, kepler22bPlanks.getUnlocalizedName().substring(5));
+	private static void registerTreeBlocks() throws NoSuchMethodException {
+		GameRegistry.registerBlock(KEPLER22B_MAPLE_LOG, ItemBlockKepler22bMapleLog.class, KEPLER22B_MAPLE_LOG.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(KEPLER22B_MAPLE_LOG_2, ItemBlockKepler22bMapleLog2.class, KEPLER22B_MAPLE_LOG_2.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(KEPLER22B_MAPLE_SAPLING, ItemBlockKepler22bMapleSapling.class, KEPLER22B_MAPLE_SAPLING.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(KEPLER22B_MAPLE_LEAF, ItemBlockKepler22bMapleLeaf.class, KEPLER22B_MAPLE_LEAF.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(KEPLER22B_MAPLE_LEAF2, ItemBlockKepler22bMapleLeaf2.class, KEPLER22B_MAPLE_LEAF2.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(KEPLER22B_MAPLE_PLANKS, ItemBlockKepler22bPlanks.class, KEPLER22B_MAPLE_PLANKS.getUnlocalizedName().substring(5));
 	}
 }

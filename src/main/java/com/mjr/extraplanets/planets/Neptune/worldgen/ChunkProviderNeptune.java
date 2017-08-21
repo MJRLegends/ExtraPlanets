@@ -8,27 +8,24 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 
 public class ChunkProviderNeptune extends ChunkProviderSpace {
-    private final MapGenVillageNeptune villageGenerator = new MapGenVillageNeptune();
-	
+	private final MapGenVillageNeptune villageGenerator = new MapGenVillageNeptune();
+
 	private final BiomeDecoratorNeptune neptuneBiomeDecorator = new BiomeDecoratorNeptune();
 
 	private final MapGenCaveNeptune caveGenerator = new MapGenCaveNeptune();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(new DungeonConfiguration(ExtraPlanets_Blocks.neptuneBlocks.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossNeptune.class, RoomTreasureNeptune.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(new DungeonConfiguration(ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.DUNGEON_BRICK), 30,
+			8, 16, 7, 7, RoomBossNeptune.class, RoomTreasureNeptune.class));
 
 	public ChunkProviderNeptune(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -40,8 +37,8 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected BiomeGenBase[] getBiomesForGeneration() {
-		return new BiomeGenBase[] { NeptuneBiomes.neptune };
+	protected Biome[] getBiomesForGeneration() {
+		return new Biome[] { NeptuneBiomes.neptune };
 	}
 
 	@Override
@@ -58,23 +55,17 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 	
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		if(Config.neptuneLiquid)
-			return new BlockMetaPair(ExtraPlanets_Fluids.nitrogen,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		if(Config.neptuneLiquid)
-			return new BlockMetaPair(ExtraPlanets_Fluids.nitrogen,(byte) 0);
-		else
-			return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS,(byte) 1);
 	}
 	
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.neptuneBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, (byte) 2);
 	}
 
 	@Override
@@ -104,18 +95,20 @@ public class ChunkProviderNeptune extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		this.dungeonGenerator.generate(this, this.worldObj, cX, cZ, primer);
+		this.dungeonGenerator.generate(this.worldObj, cX, cZ, primer);
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
-		this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkCoordIntPair(cX, cZ));
+	public void onPopulate(int cX, int cZ) {
+		this.dungeonGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
+		if(Config.NEPTUNE_VILLAGES)
+			this.villageGenerator.generateStructure(this.worldObj, this.rand, new ChunkPos(cX, cZ));
 	}
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
-		this.dungeonGenerator.generate(this, this.worldObj, x, z, null);
-        this.villageGenerator.generate(this, this.worldObj, x, z, null);
+		this.dungeonGenerator.generate(this.worldObj, x, z, null);
+		if(Config.NEPTUNE_VILLAGES)
+			this.villageGenerator.generate(this.worldObj, x, z, null);
 	}
 }

@@ -57,11 +57,11 @@ public class RoomBossUranus extends RoomBoss {
 						if (placeBlock) {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
+							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
 						}
 					} else if (j == this.sizeY) {
 						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(4) == 0) {
-							this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, chunkBox);
+							this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, chunkBox);
 						} else {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						}
@@ -70,7 +70,7 @@ public class RoomBossUranus extends RoomBoss {
 					// this.setBlockState(worldIn, MarsBlocks.creeperEgg.getDefaultState(), i, j, k, chunkBox);
 					// }
 					else {
-						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
+						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
 					}
 				}
 			}
@@ -82,7 +82,7 @@ public class RoomBossUranus extends RoomBoss {
 		BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
 		// Is this position inside the chunk currently being generated?
 		if (chunkBox.isVecInside(blockpos)) {
-			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.uranusSpawner.getDefaultState(), 2);
+			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.URANUS_SPAWNER.getDefaultState(), 2);
 			TileEntityDungeonSpawnerUranus spawner = (TileEntityDungeonSpawnerUranus) worldIn.getTileEntity(blockpos);
 			if (spawner != null) {
 				spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));

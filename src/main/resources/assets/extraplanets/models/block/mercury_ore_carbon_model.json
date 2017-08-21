@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/mercuryOreCarbon"
+        "all": "extraplanets:blocks/mercury_ore_carbon"
     }
 }

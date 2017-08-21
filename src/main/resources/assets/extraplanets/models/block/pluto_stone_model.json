@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/plutoStone"
+        "all": "extraplanets:blocks/pluto_stone"
     }
 }

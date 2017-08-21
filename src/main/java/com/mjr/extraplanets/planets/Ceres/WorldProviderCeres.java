@@ -4,13 +4,14 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Ceres.worldgen.BiomeProviderCeres;
 import com.mjr.extraplanets.planets.Ceres.worldgen.ChunkProviderCeres;
-import com.mjr.extraplanets.planets.Ceres.worldgen.WorldChunkManagerCeres;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderCeres extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -28,11 +29,6 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -43,18 +39,13 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public boolean shouldForceRespawn() {
-		return true;
-	}
-
-	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderCeres.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerCeres.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderCeres.class;
 	}
 
 	@Override
@@ -74,7 +65,10 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public float getGravity() {
-		return 0.058F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.058F;
+		else
+			return 0.065F;
 	}
 
 	@Override
@@ -94,7 +88,7 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.ceres.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.CERES.getTierRequirement();
 	}
 
 	@Override
@@ -103,28 +97,8 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.ceres;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		return -1.5F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 5.0F;
+		return ExtraPlanets_Planets.CERES;
 	}
 
 	@Override
@@ -133,13 +107,8 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Ceres";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_ceres";
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.CERES;
 	}
 
 	@Override
@@ -153,17 +122,12 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
+	public int getDungeonSpacing() {
+		return 0;
 	}
 
 	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
-	}
-	
-	@Override
-	public int getDungeonSpacing() {
-		return 0;
+	public ResourceLocation getDungeonChestType() {
+		return null;
 	}
 }

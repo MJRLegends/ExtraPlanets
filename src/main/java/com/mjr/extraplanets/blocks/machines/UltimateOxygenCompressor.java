@@ -8,7 +8,6 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
@@ -24,7 +23,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
@@ -66,7 +64,6 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 	public UltimateOxygenCompressor(boolean isActive, String assetName) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setStepSound(Block.soundTypeMetal);
 		this.setUnlocalizedName(assetName);
 	}
 
@@ -141,12 +138,6 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = this.getDamageValue(world, pos);
-		return new ItemStack(this, 1, metadata);
-	}
-
-	@Override
 	public String getShiftDescription(int meta) {
 		switch (meta) {
 		case OXYGEN_COMPRESSOR_METADATA:
@@ -162,6 +153,7 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		EnumFacing enumfacing = EnumFacing.getHorizontal(meta % 4);
@@ -174,10 +166,11 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 		return state.getValue(FACING).getHorizontalIndex() + ((EnumCompressorType) state.getValue(TYPE)).getMeta() * 4;
 	}
 
-	@Override
-	protected BlockState createBlockState() {
-		return new BlockState(this, FACING, TYPE);
-	}
+    @Override
+    protected BlockState createBlockState()
+    {
+        return new BlockState(this, FACING, TYPE);
+    }
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {

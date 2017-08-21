@@ -1,21 +1,21 @@
 package com.mjr.extraplanets.moons.Ganymede.worldgen;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.Config;
 
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+
 public class GanymedeBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase ganymede = new BiomeGenGanymede(Config.ganymedeBiomeID).setBiomeName("ganymede");
+	public static final BiomeGenBase ganymede = new BiomeGenGanymede(Config.GANTMEDE_BIOME_ID).setBiomeName("ganymede").setHeight(new Height(2.5F, 0.4F));
 
-	@SuppressWarnings("unchecked")
-	GanymedeBiomes(int var1)
+	GanymedeBiomes(int par1)
 	{
-		super(var1);
+		super(par1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
@@ -24,12 +24,6 @@ public class GanymedeBiomes extends BiomeGenBase {
         this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
         this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.rainfall = 0F;
-	}
-
-	@Override
-	public GanymedeBiomes setColor(int var1)
-	{
-		return (GanymedeBiomes) super.setColor(var1);
 	}
 
 	@Override

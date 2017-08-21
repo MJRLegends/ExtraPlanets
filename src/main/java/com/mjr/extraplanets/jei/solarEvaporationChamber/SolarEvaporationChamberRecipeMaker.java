@@ -10,7 +10,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class SolarEvaporationChamberRecipeMaker {
 	public static List<SolarEvaporationChamberRecipeWrapper> getRecipesList() {
 		List<SolarEvaporationChamberRecipeWrapper> recipes = new ArrayList<>();
-		SolarEvaporationChamberRecipeWrapper wrapper = new SolarEvaporationChamberRecipeWrapper(new ItemStack(ExtraPlanets_Items.potash), new ItemStack(ExtraPlanets_Items.potassium, 1, 0));
+		SolarEvaporationChamberRecipeWrapper wrapper = new SolarEvaporationChamberRecipeWrapper(new ItemStack(ExtraPlanets_Items.POTASH_SHARDS), new ItemStack(ExtraPlanets_Items.POTASSIUM, 1, 0));
 		recipes.add(wrapper);
 
 		return recipes;

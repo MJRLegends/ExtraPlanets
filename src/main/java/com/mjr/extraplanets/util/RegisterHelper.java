@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -17,9 +16,10 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class RegisterHelper {
+	private static int id = 0;
 
 	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
-		EntityRegistry.registerModEntity(var0, var1, GCCoreUtil.nextInternalID(), ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
+		EntityRegistry.registerModEntity(var0, var1, id++, ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
 	}
 
 	public static void registerExtraPlanetsMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {

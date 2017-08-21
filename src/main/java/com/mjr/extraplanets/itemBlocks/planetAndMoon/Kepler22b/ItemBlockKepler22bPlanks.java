@@ -28,32 +28,32 @@ public class ItemBlockKepler22bPlanks extends ItemBlock
 		{
 		case 0:
 		{
-			name = "PlankMapleBlue";
+			name = "plank_maple_blue";
 			break;
 		}
 		case 1:
 		{
-			name = "PlankMapleRed";
+			name = "plank_maple_red";
 			break;
 		}
 		case 2:
 		{
-			name = "PlankMaplePurple";
+			name = "plank_maple_purple";
 			break;
 		}
 		case 3:
 		{
-			name = "PlankMapleYellow";
+			name = "plank_maple_yellow";
 			break;
 		}
 		case 4:
 		{
-			name = "PlankMapleGreen";
+			name = "plank_maple_green";
 			break;
 		}
 		case 5:
 		{
-			name = "PlankMapleBrown";
+			name = "plank_maple_brown";
 			break;
 		}
 		default:

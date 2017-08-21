@@ -2,7 +2,6 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
@@ -14,7 +13,6 @@ public class BlockCustomGravel extends BlockFalling {
 	public BlockCustomGravel(String name) {
 		super();
 		setHardness(0.6F);
-		setStepSound(Block.soundTypeGravel);
 		setCreativeTab(ExtraPlanets.BlocksTab);
 		setUnlocalizedName(name);
 	}

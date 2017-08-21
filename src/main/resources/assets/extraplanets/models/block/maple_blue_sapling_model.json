@@ -1,6 +1,6 @@
 {
     "parent": "block/cross",
     "textures": {
-        "cross": "extraplanets:blocks/kepler22bMapleSaplings_sapling_blue_maple"
+        "cross": "extraplanets:blocks/kepler22b_maple_saplings_sapling_blue_maple"
     }
 }

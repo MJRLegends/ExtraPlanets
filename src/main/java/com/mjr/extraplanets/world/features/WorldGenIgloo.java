@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
 
+import com.mjr.extraplanets.Config;
+
 public class WorldGenIgloo extends WorldGenerator {
 
 	public WorldGenIgloo() {
@@ -34,10 +36,12 @@ public class WorldGenIgloo extends WorldGenerator {
 		}
 		y = y - 1;
 		int random = rand.nextInt(50) + 1;
-		System.out.println(x + " " + y + " " + z);
+		if (Config.DEBUG_MODE)
+			System.out.println("Spawning Igloo at (x, y, z)" + x + " " + y + " " + z);
 		if (random != 50) {
 			return generateBasic(world, rand, x, y, z);
 		} else {
+			y = y - 3;
 			return generateAdvanced(world, rand, x, y, z);
 		}
 	}
@@ -758,25 +762,22 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 10, y + 5, z + 11), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 11, y + 5, z + 11), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 12, y + 5, z + 11), Blocks.air.getDefaultState(), 3);
-		
-		//Determined if loot should be generated using a 1/2 chance
+
+		// Determined if loot should be generated using a 1/2 chance
 		int random = rand.nextInt(10) + 1;
-		if(random < 5)
-		{
+		if (random < 5) {
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 9, y + 1, z + 5));
-	
-			if (chest != null)
-			{
-				for (int i = 0; i < chest.getSizeInventory(); i++)
-				{
+
+			if (chest != null) {
+				for (int i = 0; i < chest.getSizeInventory(); i++) {
 					chest.setInventorySlotContents(i, null);
 				}
-	
-				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
-				
-				//Determined how many times loot should be generated. Range: 1 - 2
+
+				// Determined how many times loot should be generated. Range: 1 - 2
 				int lootTimes = rand.nextInt(2) + 1;
-				for(int i = 0; i < lootTimes; i++){
+				for (int i = 0; i < lootTimes; i++) {
+					ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
 					WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 				}
 			}
@@ -820,21 +821,14 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 1, z + 5), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 5), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 6), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 4, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 1, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 6), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 7), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 7), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 1, z + 7), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 7), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 7), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 1, z + 7), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 7), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 8), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 1, z + 8), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 8), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 9), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 1, z + 9), Blocks.snow.getDefaultState(), 3);
@@ -889,7 +883,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 11, y + 2, z + 5), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 2, z + 6), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 2, z + 6), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 2, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 6), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 6), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 6), Blocks.snow.getDefaultState(), 3);
@@ -912,7 +905,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 8), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 8), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 8), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 2, z + 8), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 2, z + 8), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 2, z + 8), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 10, y + 2, z + 8), Blocks.snow.getDefaultState(), 3);
@@ -976,7 +968,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 11, y + 3, z + 5), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 3, z + 6), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 3, z + 6), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 6), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
@@ -999,7 +990,6 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 8), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 8), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 8), GCBlocks.oxygenDistributor.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 7, y + 3, z + 8), GCBlocks.aluminumWire.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 3, z + 8), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 3, z + 8), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 10, y + 3, z + 8), Blocks.snow.getDefaultState(), 3);
@@ -1009,7 +999,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 9), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 3, z + 9), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 3, z + 9), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 9, y + 3, z + 9), Blocks.snow.getDefaultState(), 3); 
+		world.setBlockState(new BlockPos(x + 9, y + 3, z + 9), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 10), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 10), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 3, z + 10), Blocks.snow.getDefaultState(), 3);
@@ -1036,7 +1026,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 4, z + 3), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 4, z + 3), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 4, z + 3), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 10, y + 4, z + 3), Blocks.snow.getDefaultState(), 3); 
+		world.setBlockState(new BlockPos(x + 10, y + 4, z + 3), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 4, z + 4), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 4, z + 4), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 4, z + 4), Blocks.air.getDefaultState(), 3);
@@ -1074,7 +1064,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 4, z + 7), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 4, z + 7), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 4, z + 7), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 10, y + 4, z + 7), Blocks.snow.getDefaultState(), 3); 
+		world.setBlockState(new BlockPos(x + 10, y + 4, z + 7), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 4, z + 8), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 4, z + 8), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 4, z + 8), Blocks.air.getDefaultState(), 3);
@@ -1399,28 +1389,30 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 9, y + 6, z + 11), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 10, y + 6, z + 11), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 11, y + 6, z + 11), Blocks.air.getDefaultState(), 3);
-		
-		//Determined if loot should be generated using a 1/2 chance
+
+		// Determined if loot should be generated using a 1/2 chance
 		int random = rand.nextInt(10) + 1;
-		if(random < 5)
-		{
+		if (random < 5) {
+			if (Config.DEBUG_MODE)
+				System.out.println("Loot Spawned!");
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 9, y + 3, z + 5));
-	
-			if (chest != null)
-			{
-				for (int i = 0; i < chest.getSizeInventory(); i++)
-				{
+
+			if (chest != null) {
+				for (int i = 0; i < chest.getSizeInventory(); i++) {
 					chest.setInventorySlotContents(i, null);
 				}
-	
-				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
-				
-				//Determined how many times loot should be generated. Range: 1 - 4
+
+				// Determined how many times loot should be generated. Range: 1 - 4
 				int lootTimes = rand.nextInt(4) + 1;
-				for(int i = 0; i < lootTimes; i++){
+				for (int i = 0; i < lootTimes; i++) {
+					ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
 					WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 				}
 			}
+		} else {
+			if (Config.DEBUG_MODE)
+				System.out.println("No loot spawned!");
 		}
 		return true;
 	}

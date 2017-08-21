@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/erisOreTin"
+        "all": "extraplanets:blocks/eris_ore_tin"
     }
 }

@@ -2,9 +2,9 @@
     "parent": "block/grass",
     "textures": {
         "particle": "blocks/dirt",
-        "bottom": "extraplanets:blocks/kepler22bDirt",
+        "bottom": "extraplanets:blocks/kepler22b_dirt",
         "top": "extraplanets:blocks/kepler22b_blue_grass_top",
         "side": "extraplanets:blocks/kepler22b_blue_grass_side",
-        "overlay": "extraplanets:blocks/kepler22bGrassBlankOverlay"
+        "overlay": "extraplanets:blocks/kepler22b_grass_blank_overlay"
     }
 }

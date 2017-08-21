@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/plutoOreTungsten"
+        "all": "extraplanets:blocks/pluto_ore_tungsten"
     }
 }

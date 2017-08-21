@@ -3,20 +3,20 @@ package com.mjr.extraplanets.items.planetAndMoonItems;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier11Items extends Item {
-	public static final String[] names = { "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond" };
+	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum" };
 
 	public ItemTier11Items(String assetName) {
 		super();
@@ -52,10 +52,10 @@ public class ItemTier11Items extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
 			if (player.worldObj.isRemote) {
-				list.add(EnumChatFormatting.GRAY + GCCoreUtil.translate("tier10.heavyDutyPlate.name"));
+				list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
 			}
 		}
 	}

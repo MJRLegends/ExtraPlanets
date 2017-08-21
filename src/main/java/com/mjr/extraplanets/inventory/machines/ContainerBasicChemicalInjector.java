@@ -98,14 +98,14 @@ public class ContainerBasicChemicalInjector extends Container
                         return null;
                     }
                 }
-                else if (var4.getItem() == ExtraPlanets_Items.iodideSalt)
+                else if (var4.getItem() == ExtraPlanets_Items.IODIDE_SALT)
                 {
                     if (!this.mergeItemStack(var4, 1, 2, false))
                     {
                         return null;
                     }
                 }
-                else if (var4.getItem() == ExtraPlanets_Items.potassium)
+                else if (var4.getItem() == ExtraPlanets_Items.POTASSIUM)
                 {
                     if (!this.mergeItemStack(var4, 2, 3, false))
                     {

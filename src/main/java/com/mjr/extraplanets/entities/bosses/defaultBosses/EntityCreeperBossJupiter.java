@@ -216,7 +216,7 @@ public class EntityCreeperBossJupiter extends EntityBossBase implements IEntityB
 
 	@Override
 	public void dropKey() {
-		this.entityDropItem(new ItemStack(ExtraPlanets_Items.T5key, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_5_KEY, 1, 0), 0.5F);
 	}
 
 	@Override

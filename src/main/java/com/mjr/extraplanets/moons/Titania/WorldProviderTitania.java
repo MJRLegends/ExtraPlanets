@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.moons.Titania;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
@@ -12,12 +11,15 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Titania.worldgen.BiomeProviderTitania;
 import com.mjr.extraplanets.moons.Titania.worldgen.ChunkProviderTitania;
-import com.mjr.extraplanets.moons.Titania.worldgen.WorldChunkManagerTitania;
+import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
-public class WorldProviderTitania extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderTitania extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
@@ -57,14 +59,14 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerTitania.class;
+		return BiomeProviderTitania.class;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		final float var2 = this.worldObj.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;
@@ -99,7 +101,10 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public float getGravity() {
-		return 0.062F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.062F;
+		else
+			return 0.0375F;
 	}
 
 	@Override
@@ -119,7 +124,7 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.titania.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.TITANIA.getTierRequirement();
 	}
 
 	@Override
@@ -134,7 +139,7 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.titania;
+		return ExtraPlanets_Moons.TITANIA;
 	}
 
 	@Override
@@ -166,12 +171,27 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 	}
 
 	@Override
-	public String getInternalNameSuffix() {
-		return "_titania";
+	public int getPressureLevel() {
+		return 100;
 	}
-	
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 25;
+	}
+
 	@Override
 	public int getDungeonSpacing() {
 		return 0;
+	}
+
+	@Override
+	public String getDungeonChestType() {
+		return null;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "titania";
 	}
 }

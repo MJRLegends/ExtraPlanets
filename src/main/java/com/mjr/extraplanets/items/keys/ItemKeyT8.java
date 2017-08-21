@@ -15,49 +15,58 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 
-public class ItemKeyT8 extends Item implements IKeyItem, ISortableItem {
-	public ItemKeyT8(String assetName) {
-		super();
-		this.setMaxStackSize(1);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
-		// this.setTextureName("arrow");
-	}
+public class ItemKeyT8 extends Item implements IKeyItem, ISortableItem
+{
+    public ItemKeyT8(String assetName)
+    {
+        super();
+        this.setMaxStackSize(1);
+        this.setMaxDamage(0);
+        this.setHasSubtypes(true);
+        this.setUnlocalizedName(assetName);
+        //this.setTextureName("arrow");
+    }
 
-	@Override
-	public CreativeTabs getCreativeTab() {
-		return ExtraPlanets.ItemsTab;
-	}
+    @Override
+    public CreativeTabs getCreativeTab()
+    {
+    	return ExtraPlanets.ItemsTab;
+    }
 
-	@Override
-	public String getUnlocalizedName(ItemStack itemStack) {
-		return this.getUnlocalizedName();
-	}
+    @Override
+    public String getUnlocalizedName(ItemStack itemStack)
+    {
+        return this.getUnlocalizedName();
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
-		return ClientProxyCore.galacticraftItem;
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public EnumRarity getRarity(ItemStack par1ItemStack)
+    {
+        return ClientProxyCore.galacticraftItem;
+    }
 
-	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
-		par3List.add(new ItemStack(par1, 1, 0));
-	}
+    @Override
+    public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List)
+    {
+        par3List.add(new ItemStack(par1, 1, 0));
+    }
 
-	@Override
-	public int getMetadata(int par1) {
-		return par1;
-	}
+    @Override
+    public int getMetadata(int par1)
+    {
+        return par1;
+    }
 
-	@Override
-	public int getTier(ItemStack keyStack) {
-		return 8;
-	}
+    @Override
+    public int getTier(ItemStack keyStack)
+    {
+        return 8;
+    }
 
-	@Override
-	public EnumSortCategoryItem getCategory(int meta) {
-		return EnumSortCategoryItem.GENERAL;
-	}
+    @Override
+    public EnumSortCategoryItem getCategory(int meta)
+    {
+        return EnumSortCategoryItem.GENERAL;
+    }
 }

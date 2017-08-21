@@ -2,6 +2,7 @@ package com.mjr.extraplanets.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.Explosion;
@@ -22,7 +23,7 @@ public class BlockDungeonBrick extends Block {
 	}
 
 	@Override
-	public float getBlockHardness(World par1World, BlockPos pos) {
+	public float getBlockHardness(World worldIn, BlockPos pos) {
 		return 4.0F;
 	}
 }

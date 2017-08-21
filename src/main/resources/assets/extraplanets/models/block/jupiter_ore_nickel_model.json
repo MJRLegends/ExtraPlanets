@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/jupiterOreNickel"
+        "all": "extraplanets:blocks/jupiter_ore_nickel"
     }
 }

@@ -32,10 +32,10 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.iodideSalt, 6, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.IODIDE_SALT, 6, 0);
 
 	public TileEntityBasicCrystallizer() {
-		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, 0));
+		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, 0));
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.containingItems[slot] != null) {
-			if (this.containingItems[slot].getItem() == ExtraPlanets_Items.salt_bucket) {
+			if (this.containingItems[slot].getItem() == ExtraPlanets_Items.BUCKET_SALT) {
 				tank.fill(FluidRegistry.getFluidStack("salt_fluid", 1000), true);
 				this.containingItems[slot].setItem(Items.bucket);
 			} else
@@ -136,8 +136,8 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		if (nbt.hasKey("inputTank")) {
 			this.inputTank.readFromNBT(nbt.getCompoundTag("inputTank"));
 		}
-		if (this.inputTank.getFluid() != null && this.inputTank.getFluid().getFluid() != ExtraPlanets_Fluids.salt_fluid) {
-			this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, this.inputTank.getFluidAmount()));
+		if (this.inputTank.getFluid() != null && this.inputTank.getFluid().getFluid() != ExtraPlanets_Fluids.SALT_FLUID) {
+			this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, this.inputTank.getFluidAmount()));
 		}
 	}
 
@@ -181,7 +181,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 2:
-				return itemstack == new ItemStack(ExtraPlanets_Items.salt_bucket);
+				return itemstack == new ItemStack(ExtraPlanets_Items.BUCKET_SALT);
 			default:
 				return false;
 			}
@@ -196,7 +196,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.iodideSalt;
+				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 			case 2:
 				return itemstack == new ItemStack(Items.bucket);
 			default:

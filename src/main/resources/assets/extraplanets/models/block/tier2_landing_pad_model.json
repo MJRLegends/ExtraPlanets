@@ -1,0 +1,25 @@
+{
+    "parent": "block/block",
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 3, 16 ],
+            "faces": {
+                "down":  { "texture": "#down", "cullface": "down" },
+                "up":    { "texture": "#up", "cullface": "up" },
+                "north": { "texture": "#north", "cullface": "north" },
+                "south": { "texture": "#south", "cullface": "south" },
+                "west":  { "texture": "#west", "cullface": "west" },
+                "east":  { "texture": "#east", "cullface": "east" }
+            }
+        }
+    ],
+    "textures": {
+        "particle": "extraplanets:blocks/tier2_landing_pad",
+        "down": "extraplanets:blocks/tier2_landing_pad",
+        "up": "extraplanets:blocks/tier2_landing_pad",
+        "north": "extraplanets:blocks/tier2_landing_pad",
+        "east": "extraplanets:blocks/tier2_landing_pad",
+        "south": "extraplanets:blocks/tier2_landing_pad",
+        "west": "extraplanets:blocks/tier2_landing_pad"
+    }
+}

@@ -169,24 +169,20 @@ public class MapGenCaveCallisto extends MapGenBaseMeta
 
                                     if (xfactorSq + zfactorSq < 1.0D)
                                     {
-                                        final int coords = (localX * 16 + localZ) * 256 + localY;
-
                                         if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D)
                                         {
-                                            IBlockState state = primer.getBlockState(coords);
+                                            IBlockState state = primer.getBlockState(localX, localY, localZ);
                                             Block block = state.getBlock();
                                             int metadata = state.getBlock().getMetaFromState(state);
-                                            if (block == ExtraPlanets_Blocks.callistoBlocks)
+                                            if (block == ExtraPlanets_Blocks.CALLISTO_BLOCKS)
                                             {
-                                                if (metadata == 1 || metadata == 2)
+                                                if (metadata == 6 || metadata == 9)
                                                 {
-                                                    primer.setBlockState(coords, Blocks.air.getDefaultState());
-//                                                    blockIdArray[coords] = Blocks.air;
-                                                }
-                                                else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0)
-                                                {
-                                                    primer.setBlockState(coords, Blocks.air.getDefaultState());
-//                                                    blockIdArray[coords] = Blocks.air;
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
+													// blockIdArray[coords] = Blocks.AIR;
+												} else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0) {
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
+													// blockIdArray[coords] = Blocks.AIR;
                                                 }
                                             }
                                         }
@@ -230,7 +226,7 @@ public class MapGenCaveCallisto extends MapGenBaseMeta
 
             for (int var16 = 0; var16 < var15; ++var16)
             {
-                final float var17 = this.rand.nextFloat() * Constants.floatPI * 2.0F;
+                final float var17 = this.rand.nextFloat() * Constants.twoPI;
                 final float var18 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
                 float var19 = this.rand.nextFloat() * 2.0F + this.rand.nextFloat();
 

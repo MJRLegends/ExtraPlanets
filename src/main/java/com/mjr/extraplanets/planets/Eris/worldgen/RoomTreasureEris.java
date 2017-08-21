@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.treasureChest.T10TreasureChest;
 
 public class RoomTreasureEris extends RoomTreasure {
 	public RoomTreasureEris() {
@@ -56,14 +55,14 @@ public class RoomTreasureEris extends RoomTreasure {
 						if (placeBlock) {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
+							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
 						}
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
-						this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
-						this.setBlockState(worldIn, ExtraPlanets_Blocks.treasureChestTier10.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
+						this.setBlockState(worldIn, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_10.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
 					} else {
-						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
 					}
 				}
 			}

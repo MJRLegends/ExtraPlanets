@@ -14,21 +14,17 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 
-public class RoomBossPluto extends RoomBoss
-{
-    public RoomBossPluto()
-    {
-    }
+public class RoomBossPluto extends RoomBoss {
+	public RoomBossPluto() {
+	}
 
-    public RoomBossPluto(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir)
-    {
-        super(configuration, rand, blockPosX, blockPosZ, sizeX, sizeY, sizeZ, entranceDir);
-    }
+	public RoomBossPluto(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir) {
+		super(configuration, rand, blockPosX, blockPosZ, sizeX, sizeY, sizeZ, entranceDir);
+	}
 
-    public RoomBossPluto(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, EnumFacing entranceDir)
-    {
-        super(configuration, rand, blockPosX, blockPosZ, 24, 11, 24, entranceDir);
-    }
+	public RoomBossPluto(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, EnumFacing entranceDir) {
+		super(configuration, rand, blockPosX, blockPosZ, 24, 11, 24, entranceDir);
+	}
 
 	@Override
 	public boolean addComponentParts(World worldIn, Random random, StructureBoundingBox chunkBox) {
@@ -61,11 +57,11 @@ public class RoomBossPluto extends RoomBoss
 						if (placeBlock) {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
+							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
 						}
 					} else if (j == this.sizeY) {
 						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(4) == 0) {
-							this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, chunkBox);
+							this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, chunkBox);
 						} else {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						}
@@ -74,7 +70,7 @@ public class RoomBossPluto extends RoomBoss
 					// this.setBlockState(worldIn, MarsBlocks.creeperEgg.getDefaultState(), i, j, k, chunkBox);
 					// }
 					else {
-						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
+						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
 					}
 				}
 			}
@@ -86,7 +82,7 @@ public class RoomBossPluto extends RoomBoss
 		BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
 		// Is this position inside the chunk currently being generated?
 		if (chunkBox.isVecInside(blockpos)) {
-			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.plutoSpawner.getDefaultState(), 2);
+			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.PLUTO_SPAWNER.getDefaultState(), 2);
 			TileEntityDungeonSpawnerPluto spawner = (TileEntityDungeonSpawnerPluto) worldIn.getTileEntity(blockpos);
 			if (spawner != null) {
 				spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));

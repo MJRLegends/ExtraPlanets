@@ -7,10 +7,8 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -30,8 +28,8 @@ public class ChunkProviderOberon extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected BiomeGenBase[] getBiomesForGeneration() {
-		return new BiomeGenBase[] { OberonBiomes.oberon };
+	protected Biome[] getBiomesForGeneration() {
+		return new Biome[] { OberonBiomes.oberon };
 	}
 
 	@Override
@@ -48,17 +46,17 @@ public class ChunkProviderOberon extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.oberonBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.OBERON_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.oberonBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.OBERON_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.oberonBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.OBERON_BLOCKS, (byte) 2);
 	}
 
 	@Override
@@ -91,7 +89,7 @@ public class ChunkProviderOberon extends ChunkProviderSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	public void onPopulate(int cX, int cZ) {
 	}
 
 	@Override

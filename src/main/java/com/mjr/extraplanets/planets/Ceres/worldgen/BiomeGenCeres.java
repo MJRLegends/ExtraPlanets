@@ -1,14 +1,12 @@
 package com.mjr.extraplanets.planets.Ceres.worldgen;
 
+import net.minecraftforge.common.BiomeDictionary;
+
 
 public class BiomeGenCeres extends CeresBiomes {
 
-	public BiomeGenCeres(int par1)
-	{
-		super(par1);
-		this.setBiomeName("ceres");
-		this.setColor(16711680);
-		this.setHeight(new Height(2.5F, 0.4F));
+	public BiomeGenCeres(BiomeProperties properties) {
+		super(properties);
+        BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
-
 }

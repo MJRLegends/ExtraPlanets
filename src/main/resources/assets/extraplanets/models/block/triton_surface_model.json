@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/tritonSurface"
+        "all": "extraplanets:blocks/triton_surface"
     }
 }

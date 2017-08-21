@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicMercury extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeMercury", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypemercury", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "mercury_surface"), SUB_SURFACE(1, "mercury_sub_surface"), STONE(2, "mercury_stone"), ORE_IRON(3, "mercury_ore_iron"), ORE_TIN(4, "mercury_ore_tin"), ORE_COPPER(5, "mercury_ore_copper"), ORE_MERCURY(6, "mercury_ore_mercury"), MERCURY_BLOCK(
@@ -161,6 +161,7 @@ public class BlockBasicMercury extends Block implements IDetectableResource, IPl
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
+		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
 	}
 

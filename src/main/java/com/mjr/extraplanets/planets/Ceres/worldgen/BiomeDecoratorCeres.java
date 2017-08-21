@@ -28,15 +28,13 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorCeres() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 4, 5, true, ExtraPlanets_Blocks.ceresBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 4, 4, true, ExtraPlanets_Blocks.ceresBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 8, 3, true, ExtraPlanets_Blocks.ceresBlocks, 2);
-		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresBlocks, 2, 6, true, ExtraPlanets_Blocks.ceresBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ceresGravel, 12, 0, true, ExtraPlanets_Blocks.ceresBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.ceresBlocks, 1);
-
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 2, 6, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.CERES_BLOCKS, 1);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -67,7 +65,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.salt).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.ceresBlocks);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.SALT).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
 		for (int i = 0; i < 1; i++) {
@@ -75,13 +73,12 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.radioactiveWater).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.ceresBlocks);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

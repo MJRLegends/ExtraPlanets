@@ -14,8 +14,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Phobos.worldgen.BiomeProviderPhobos;
 import com.mjr.extraplanets.moons.Phobos.worldgen.ChunkProviderPhobos;
-import com.mjr.extraplanets.moons.Phobos.worldgen.WorldChunkManagerPhobos;
 
 public class WorldProviderPhobos extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
@@ -56,15 +56,15 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerPhobos.class;
+		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return BiomeProviderPhobos.class;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		final float var2 = this.worldObj.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;
@@ -119,7 +119,7 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.phobos.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.PHOBOS.getTierRequirement();
 	}
 
 	@Override
@@ -134,7 +134,7 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.phobos;
+		return ExtraPlanets_Moons.PHOBOS;
 	}
 
 	@Override
@@ -161,14 +161,19 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_titan";
-	}
 	
 	@Override
 	public int getDungeonSpacing() {
 		return 0;
+	}
+
+	@Override
+	public String getDungeonChestType() {
+		return null;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "phobos";
 	}
 }

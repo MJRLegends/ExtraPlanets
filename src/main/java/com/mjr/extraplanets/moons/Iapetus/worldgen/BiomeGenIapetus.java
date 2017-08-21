@@ -1,13 +1,11 @@
 package com.mjr.extraplanets.moons.Iapetus.worldgen;
 
+import net.minecraftforge.common.BiomeDictionary;
+
 public class BiomeGenIapetus extends IapetusBiomes {
 
-	public BiomeGenIapetus(int par1)
-	{
+	public BiomeGenIapetus(int par1) {
 		super(par1);
-		this.setBiomeName("iapetus");
-		this.setColor(16711680);
-		this.setHeight(new Height(2.5F, 0.4F));
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
-
 }

@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "extraplanets:basicChemicalInjector_model" },
-        "facing=east":  { "model": "extraplanets:basicChemicalInjector_model", "y": 90 },
-        "facing=west":  { "model": "extraplanets:basicChemicalInjector_model", "y": 270 },
-        "facing=south": { "model": "extraplanets:basicChemicalInjector_model", "y": 180 }
-    }
-}

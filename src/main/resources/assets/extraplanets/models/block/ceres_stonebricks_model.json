@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/ceresStoneBricks"
+        "all": "extraplanets:blocks/ceres_stone_bricks"
     }
 }

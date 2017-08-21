@@ -38,7 +38,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicNeptune extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeNeptune", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeneptune", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "neptune_surface"), SUB_SURFACE(1, "neptune_sub_surface"), STONE(2, "neptune_stone"), ORE_IRON(3, "neptune_ore_iron"), ORE_TIN(4, "neptune_ore_tin"), ORE_COPPER(5, "neptune_ore_copper"), ORE_ZINC(6, "neptune_ore_zinc"), ZINC_BLOCK(
@@ -164,22 +164,27 @@ public class BlockBasicNeptune extends Block implements IDetectableResource, IPl
 	}
 
 	@Override
-	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if (rand.nextInt(10) == 0) {
-			if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK) {
-				GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    {
+        if (rand.nextInt(10) == 0)
+        {
+            if (state.getBlock() == this && state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
+            {
+                GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
 
-				if (rand.nextInt(100) == 0) {
+                if (rand.nextInt(100) == 0)
+                {
 					worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), Constants.TEXTURE_PREFIX + "ambience.singledrip", 1, 0.8F + rand.nextFloat() / 5.0F, false);
-				}
-			}
-		}
-	}
+                }
+            }
+        }
+    }
 
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
+		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
 	}
 
@@ -191,7 +196,7 @@ public class BlockBasicNeptune extends Block implements IDetectableResource, IPl
 	}
 
 	@Override
-	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
+	    public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.stone) {
 			return false;
 		}

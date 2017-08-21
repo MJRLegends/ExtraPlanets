@@ -24,7 +24,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potassium, 1, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASSIUM, 1, 0);
 
 	public TileEntityBasicSolarEvaporationChamber() {
 	}
@@ -35,7 +35,6 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		if (!this.worldObj.isRemote) {
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
 				int processTime = (int) (BASE_PROCESS_TIME_REQUIRED - (BASE_PROCESS_TIME_REQUIRED * (this.worldObj.getCelestialAngle(1.0F) * -10))) / 4;
-				System.out.println("Process Time: " + processTime+ ", Time: " + this.worldObj.getCelestialAngle(1.0F));
 				if (this.processTicks == 0) {
 					this.processTicks = processTime;
 				} else {
@@ -49,13 +48,13 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			}
 		}
 	}
-	
+
 	public boolean canProcess() {
 		if (this.containingItems[1] == null)
 			return false;
-		if (this.containingItems[1].getItem() != ExtraPlanets_Items.potash)
+		if (this.containingItems[1].getItem() != ExtraPlanets_Items.POTASH_SHARDS)
 			return false;
-		if(this.worldObj.isDaytime() == false || this.worldObj.canBlockSeeSky(pos.add(0, 1, 0)) == false){
+		if (this.worldObj.isDaytime() == false || this.worldObj.canBlockSeeSky(pos.add(0, 1, 0)) == false) {
 			return false;
 		}
 		return !this.getDisabled(0);
@@ -144,7 +143,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.potash);
+				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
 			default:
 				return false;
 			}
@@ -159,7 +158,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.potash;
+				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 			default:
 				return false;
 			}

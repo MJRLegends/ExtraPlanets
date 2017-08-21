@@ -96,7 +96,7 @@ public class ContainerBasicSmasher extends Container
                         return null;
                     }
                 }
-                else if (var4.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.potash))
+                else if (var4.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
                 {
                     if (!this.mergeItemStack(var4, 1, 2, false))
                     {

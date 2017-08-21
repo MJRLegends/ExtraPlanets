@@ -33,7 +33,7 @@ public class ItemBlockPluto extends ItemBlock
 		}
 		case 1:
 		{
-			name = "subSurface";
+			name = "sub_surface";
 			break;
 		}
 		case 2:
@@ -43,37 +43,37 @@ public class ItemBlockPluto extends ItemBlock
 		}
 		case 3:
 		{
-			name = "oreIron";
+			name = "ore_iron";
 			break;
 		}
 		case 4:
 		{
-			name = "oreTin";
+			name = "ore_tin";
 			break;
 		}
 		case 5:
 		{
-			name = "oreCopper";
+			name = "ore_copper";
 			break;
 		}
 		case 6:
 		{
-			name = "oreTungsten";
+			name = "ore_tungsten";
 			break;
 		}
 		case 7:
 		{
-			name = "tungstenBlock";
+			name = "tungsten_block";
 			break;
 		}
 		case 8:
 		{
-			name = "stoneBricks";
+			name = "stone_bricks";
 			break;
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		default:

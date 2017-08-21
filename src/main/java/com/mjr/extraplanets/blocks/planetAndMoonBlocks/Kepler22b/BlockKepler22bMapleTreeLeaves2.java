@@ -3,7 +3,8 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.block.Block;
+import javax.annotation.Nullable;
+
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
@@ -11,19 +12,14 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.StatList;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -91,24 +87,6 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 
 	public BlockKepler22bMapleTreeLeaves2() {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_GREEN).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getBlockColor() {
-		return -1;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int getRenderColor(IBlockState state) {
-		return -1;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass) {
-		return -1;
 	}
 
 	@Override
@@ -193,15 +171,6 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	}
 
 	@Override
-	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
-		if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears) {
-			player.triggerAchievement(StatList.mineBlockStatArray[Block.getIdFromBlock(this)]);
-		} else {
-			super.harvestBlock(worldIn, player, pos, state, te);
-		}
-	}
-
-	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		IBlockState state = world.getBlockState(pos);
 		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, state.getValue(VARIANT).getMetadata())));
@@ -213,7 +182,8 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	}
 
 	@Override
+	@Nullable
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		return Item.getItemFromBlock(ExtraPlanets_Blocks.kepler22bMapleSapling);
+		return Item.getItemFromBlock(ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING);
 	}
 }

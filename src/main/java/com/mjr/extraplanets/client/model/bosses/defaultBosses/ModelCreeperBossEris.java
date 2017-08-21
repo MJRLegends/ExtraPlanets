@@ -8,8 +8,7 @@ import net.minecraft.util.MathHelper;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 
-public class ModelCreeperBossEris extends ModelBase
-{
+public class ModelCreeperBossEris extends ModelBase {
 	ModelRenderer headMain;
 	ModelRenderer bodyMain;
 	ModelRenderer rightLegFront;
@@ -22,13 +21,11 @@ public class ModelCreeperBossEris extends ModelBase
 	ModelRenderer neckRight;
 	ModelRenderer neckLeft;
 
-	public ModelCreeperBossEris()
-	{
+	public ModelCreeperBossEris() {
 		this(0.0F);
 	}
 
-	public ModelCreeperBossEris(float scale)
-	{
+	public ModelCreeperBossEris(float scale) {
 		this.textureWidth = 128;
 		this.textureHeight = 64;
 		this.neckRight = new ModelRenderer(this, 16, 20);
@@ -103,31 +100,25 @@ public class ModelCreeperBossEris extends ModelBase
 	}
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
-	{
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 
 		final EntityCreeperBossEris creeper = (EntityCreeperBossEris) entity;
 
-		if (creeper.headsRemaining > 2)
-		{
+		if (creeper.headsRemaining > 2) {
 			this.headLeft.render(f5);
 			this.neckLeft.render(f5);
 			this.headRight.render(f5);
 			this.neckRight.render(f5);
 			this.headMain.render(f5);
 			this.oxygenTank.render(f5);
-		}
-		else if (creeper.headsRemaining > 1)
-		{
+		} else if (creeper.headsRemaining > 1) {
 			this.headRight.render(f5);
 			this.neckRight.render(f5);
 			this.headMain.render(f5);
 			this.oxygenTank.render(f5);
-		}
-		else if (creeper.headsRemaining > 0)
-		{
+		} else if (creeper.headsRemaining > 0) {
 			this.headMain.render(f5);
 			this.oxygenTank.render(f5);
 		}
@@ -139,16 +130,14 @@ public class ModelCreeperBossEris extends ModelBase
 		this.leftLeg.render(f5);
 	}
 
-	private void setRotation(ModelRenderer model, float x, float y, float z)
-	{
+	private void setRotation(ModelRenderer model, float x, float y, float z) {
 		model.rotateAngleX = x;
 		model.rotateAngleY = y;
 		model.rotateAngleZ = z;
 	}
 
 	@Override
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
-	{
+	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity) {
 		super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 		this.headMain.rotateAngleY = f3 / Constants.RADIANS_TO_DEGREES;
 		this.headMain.rotateAngleX = f4 / Constants.RADIANS_TO_DEGREES;

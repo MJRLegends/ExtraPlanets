@@ -4,13 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Eris.worldgen.BiomeProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.WorldChunkManagerEris;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderEris extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -26,12 +28,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(234f / 255.0F * f, 223f / 255.0F * f, 242f / 255.0F * f);
 	}
-
-	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
+	
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -41,20 +38,15 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	public long getDayLength() {
 		return 24000L;
 	}
-
+	
 	@Override
-	public boolean shouldForceRespawn() {
-		return true;
-	}
-
-	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEris.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerEris.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderEris.class;
 	}
 
 	@Override
@@ -74,7 +66,10 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 
 	@Override
 	public float getGravity() {
-		return 0.058F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.058F;
+		else
+			return 0.065F;
 	}
 
 	@Override
@@ -103,31 +98,8 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.eris;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return -150.0F;
-		}
-		return -150.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 5.0F;
+		return ExtraPlanets_Planets.ERIS;
 	}
 
 	@Override
@@ -136,37 +108,27 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Eris";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_eris";
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.ERIS;
 	}
 
 	@Override
 	public int getPressureLevel() {
-		return 8;
+		return 2;
 	}
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 14;
+		return 50;
 	}
 
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
-	}
-	
 	@Override
 	public int getDungeonSpacing() {
 		return 800;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+        return RoomTreasure.MOONCHEST;
 	}
 }

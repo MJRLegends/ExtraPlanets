@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.moons.Iapetus;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
@@ -12,12 +11,15 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Iapetus.worldgen.ChunkProviderIapetus;
 import com.mjr.extraplanets.moons.Iapetus.worldgen.WorldChunkManagerIapetus;
+import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
-public class WorldProviderIapetus extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderIapetus extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
@@ -64,7 +66,7 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		final float var2 = this.worldObj.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;
@@ -99,7 +101,10 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public float getGravity() {
-		return 0.062F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.062F;
+		else
+			return 0.015F;
 	}
 
 	@Override
@@ -119,12 +124,15 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.iapetus.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.IAPETUS.getTierRequirement();
 	}
 
 	@Override
 	public float getFallDamageModifier() {
-		return 0.38F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.38F;
+		else
+			return 2.1F;
 	}
 
 	@Override
@@ -134,7 +142,7 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.iapetus;
+		return ExtraPlanets_Moons.IAPETUS;
 	}
 
 	@Override
@@ -166,12 +174,27 @@ public class WorldProviderIapetus extends WorldProviderSpace implements IGalacti
 	}
 
 	@Override
-	public String getInternalNameSuffix() {
-		return "_iapetus";
+	public int getPressureLevel() {
+		return 100;
 	}
-	
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return 30;
+	}
+
 	@Override
 	public int getDungeonSpacing() {
 		return 0;
+	}
+
+	@Override
+	public String getDungeonChestType() {
+		return null;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "iaptus";
 	}
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class WorldGenGreenHut extends WorldGenerator {
@@ -36,7 +37,8 @@ public class WorldGenGreenHut extends WorldGenerator {
 		if (!world.isAreaLoaded(new BlockPos(x + 10, y, z + 10), 10))
 			return false;
 		else {
-			// System.out.println("Spawning Green Hut at (x, y, z)" + x + " " + y + " " + z);
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning Green Hut at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y, z);
 			fillChests(world, rand, x, y, z);
 			return true;
@@ -52,11 +54,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 0, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 0, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 0, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 0, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 0, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 0, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 0, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 0, z + 2), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 0, z + 2), Blocks.air.getDefaultState(), 3);
@@ -87,11 +89,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 0, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 0, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 0, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 0, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 0, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 0, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 0, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 0, z + 7), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 0, z + 7), Blocks.air.getDefaultState(), 3);
@@ -122,11 +124,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 1, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 1, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 1, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 1, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 1, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 1, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 1, z + 2), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 1, z + 2), Blocks.air.getDefaultState(), 3);
@@ -157,11 +159,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 1, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 1, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 1, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 1, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 1, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 1, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 1, z + 7), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 1, z + 7), Blocks.air.getDefaultState(), 3);
@@ -192,11 +194,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 2, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 2, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 2, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 2, z + 1), Blocks.oak_stairs.getStateFromMeta(6), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 2, z + 1), Blocks.oak_stairs.getStateFromMeta(6), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 1), Blocks.oak_stairs.getStateFromMeta(6), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 2, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 2, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 2, z + 2), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 2, z + 2), Blocks.oak_stairs.getStateFromMeta(4), 3);
@@ -227,11 +229,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 5), Blocks.oak_stairs.getStateFromMeta(5), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 2, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 2, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 2, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 2, z + 6), Blocks.oak_fence.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 2, z + 6), Blocks.oak_stairs.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 6), Blocks.oak_fence.getStateFromMeta(0), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 2, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 2, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 2, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 2, z + 7), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 2, z + 7), Blocks.air.getDefaultState(), 3);
@@ -262,11 +264,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 3, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 3, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 3, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 3, z + 1), Blocks.oak_fence.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 3, z + 1), Blocks.oak_fence.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 1), Blocks.oak_fence.getStateFromMeta(0), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 3, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 3, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 3, z + 2), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 3, z + 2), Blocks.oak_fence.getStateFromMeta(0), 3);
@@ -297,11 +299,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 5), Blocks.oak_fence.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 3, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 3, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 3, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 3, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 3, z + 7), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 3, z + 7), Blocks.air.getDefaultState(), 3);
@@ -332,11 +334,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 4, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 4, z + 0), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 4, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 4, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 4, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 4, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 4, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 4, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 4, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 4, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 4, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 4, z + 2), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 4, z + 2), Blocks.air.getDefaultState(), 3);
@@ -367,11 +369,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 4, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 4, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 4, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 4, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 4, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 4, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 4, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 4, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 4, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 4, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 4, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 4, z + 7), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 4, z + 7), Blocks.air.getDefaultState(), 3);
@@ -402,11 +404,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 5, z + 0), Blocks.oak_stairs.getStateFromMeta(2), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 5, z + 0), Blocks.oak_stairs.getStateFromMeta(1), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 5, z + 1), Blocks.oak_stairs.getStateFromMeta(0), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 5, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 5, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 5, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 5, z + 1), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 5, z + 1), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 5, z + 1), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 5, z + 1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 5, z + 1), Blocks.oak_stairs.getStateFromMeta(1), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 5, z + 2), Blocks.oak_stairs.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 5, z + 2), Blocks.air.getDefaultState(), 3);
@@ -437,11 +439,11 @@ public class WorldGenGreenHut extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 5, z + 5), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 5, z + 5), Blocks.oak_stairs.getStateFromMeta(1), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 5, z + 6), Blocks.oak_stairs.getStateFromMeta(0), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 5, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 5, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 5, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 5, z + 6), Blocks.air.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 5, z + 6), Blocks.air.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 5, z + 6), ExtraPlanets_Blocks.kepler22bMapleLog2.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 5, z + 6), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 5, z + 6), Blocks.oak_stairs.getStateFromMeta(1), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 5, z + 7), Blocks.oak_stairs.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 5, z + 7), Blocks.oak_stairs.getStateFromMeta(3), 3);

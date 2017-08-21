@@ -29,16 +29,15 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorMercury() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 5, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 4, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 8, 3, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
-		this.mercuryGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 6, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
-		this.carbonGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryBlocks, 4, 11, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
-		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.mercuryGravel, 12, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
-		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 1);
-
-		if (Config.radiation)
-			this.potashGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.potash, 5, 0, true, ExtraPlanets_Blocks.mercuryBlocks, 2);
+		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 2);
+		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 2);
+		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.MERCURY_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 2);
+		this.mercuryGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 2);
+		this.carbonGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 11, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 2);
+		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.MERCURY_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 2);
+		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 1);
+		if (Config.RADIATION)
+			this.potashGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ORE_POTASH, 5, 0, true, ExtraPlanets_Blocks.MERCURY_BLOCKS, 2);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
 		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -66,7 +65,7 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		this.generateOre(20, this.carbonGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
-		if (Config.radiation)
+		if (Config.RADIATION)
 			this.generateOre(10, this.potashGen, 0, 20);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
@@ -75,7 +74,7 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 				int x = this.chunkX + 8;
 				int z = this.chunkZ + 8;
 				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.infectedWater).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.ceresBlocks);
+				new WorldGenCustomLake(ExtraPlanets_Fluids.INFECTED_WATER).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));

@@ -34,7 +34,7 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 		return new BiomeGenBase[] { DeimosBiomes.deimos };
 	}
 
-	@Override
+	@Override	
 	protected int getSeaLevel() {
 		return 93;
 	}
@@ -48,22 +48,22 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.DEIMOS_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.DEIMOS_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.DEIMOS_BLOCKS, (byte) 2);
 	}
 
 	@Override
 	public double getHeightModifier() {
-		return 12;
+		return 24;
 	}
 
 	@Override
@@ -73,28 +73,28 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	@Override
 	public double getMountainHeightModifier() {
-		return 95;
+		return 100;
 	}
 
 	@Override
 	public double getValleyHeightModifier() {
-		return 50;
+		return 25;
 	}
 
 	@Override
 	public int getCraterProbability() {
-		return 2000;
+		return 6000;
 	}
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
 	}
-
+	
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	public void recreateStructures(Chunk chunk, int x, int z) {
 	}
 
 	@Override
-	public void recreateStructures(Chunk chunk, int x, int z) {
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {		
 	}
 }

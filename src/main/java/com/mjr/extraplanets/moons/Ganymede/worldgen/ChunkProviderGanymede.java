@@ -48,17 +48,17 @@ public class ChunkProviderGanymede extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.ganymedeBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.ganymedeBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.ganymedeBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, (byte) 2);
 	}
 
 	@Override
@@ -91,10 +91,10 @@ public class ChunkProviderGanymede extends ChunkProviderSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	public void recreateStructures(Chunk chunk, int x, int z) {
 	}
 
 	@Override
-	public void recreateStructures(Chunk chunk, int x, int z) {
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {		
 	}
 }

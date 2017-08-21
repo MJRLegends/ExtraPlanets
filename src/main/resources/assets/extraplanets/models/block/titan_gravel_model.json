@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/titanGravel"
+        "all": "extraplanets:blocks/titan_gravel"
     }
 }

@@ -15,6 +15,8 @@ import com.mjr.extraplanets.planets.Eris.spacestation.TeleportTypeErisOrbit;
 import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.TeleportTypeJupiterOrbit;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
+import com.mjr.extraplanets.planets.Kepler22b.spacestation.TeleportTypeKepler22bOrbit;
+import com.mjr.extraplanets.planets.Kepler22b.spacestation.WorldProviderKepler22bOrbit;
 import com.mjr.extraplanets.planets.Mercury.spacestation.TeleportTypeMercuryOrbit;
 import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;
 import com.mjr.extraplanets.planets.Neptune.spacestation.TeleportTypeNeptuneOrbit;
@@ -32,17 +34,17 @@ import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
 
 public class ExtraPlanets_SpaceStations {
 
-	public static Satellite mercurySpaceStation;
-	public static Satellite venusSpaceStation;
-	public static Satellite ceresSpaceStation;
-	public static Satellite marsSpaceStation;
-	public static Satellite jupiterSpaceStation;
-	public static Satellite saturnSpaceStation;
-	public static Satellite uranusSpaceStation;
-	public static Satellite neptuneSpaceStation;
-	public static Satellite plutoSpaceStation;
-	public static Satellite erisSpaceStation;
-	public static Satellite kepler22bSpaceStation;
+	public static Satellite MERCURY_SPACE_STATION;
+	public static Satellite VENUS_SPACE_STATION;
+	public static Satellite CERES_SPACE_STATION;
+	public static Satellite MARS_SPACE_STATION;
+	public static Satellite JUPITER_SPACE_STATION;
+	public static Satellite SATURN_SPACE_STATION;
+	public static Satellite URANUS_SPACE_STATION;
+	public static Satellite NEPTUNE_SPACE_STATION;
+	public static Satellite PLUTO_SPACE_STATION;
+	public static Satellite ERIS_SPACE_STATION;
+	public static Satellite KEPLER22B_SPACE_STATION;
 
 	public static void init() {
 		initializeSatellites();
@@ -50,173 +52,184 @@ public class ExtraPlanets_SpaceStations {
 	}
 
 	private static void initializeSatellites() {
-		if (Config.mercurySpaceStation && Config.mercury) {
-			mercurySpaceStation = new Satellite("spaceStation.mercury").setParentBody(ExtraPlanets_Planets.mercury);
-			mercurySpaceStation.setRelativeSize(0.2667F);
-			mercurySpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			mercurySpaceStation.setRelativeOrbitTime(20.0F);
-			mercurySpaceStation.setTierRequired(ExtraPlanets_Planets.mercury.getTierRequirement());
-			mercurySpaceStation.setDimensionInfo(Config.mercurySpaceStationID, Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class);
-			mercurySpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.MERCURY_SPACE_STATION && Config.MERCURY) {
+			MERCURY_SPACE_STATION = new Satellite("space_station.mercury").setParentBody(ExtraPlanets_Planets.MERCURY);
+			MERCURY_SPACE_STATION.setRelativeSize(0.2667F);
+			MERCURY_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			MERCURY_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			MERCURY_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.MERCURY.getTierRequirement());
+			MERCURY_SPACE_STATION.setDimensionInfo(Config.MERCURY_SPACE_STATION_ID, Config.MERCURY_SPACE_STATION_STATIC_ID, WorldProviderMercuryOrbit.class);
+			MERCURY_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			MERCURY_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.venusSpaceStation) {
-			venusSpaceStation = new Satellite("spaceStation.venus").setParentBody(VenusModule.planetVenus);
-			venusSpaceStation.setRelativeSize(0.2667F);
-			venusSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			venusSpaceStation.setRelativeOrbitTime(20.0F);
-			venusSpaceStation.setTierRequired(VenusModule.planetVenus.getTierRequirement());
-			venusSpaceStation.setDimensionInfo(Config.venusSpaceStationID, Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class);
-			venusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.VENUS_SPACE_STATION) {
+			VENUS_SPACE_STATION = new Satellite("space_station.venus").setParentBody(VenusModule.planetVenus);
+			VENUS_SPACE_STATION.setRelativeSize(0.2667F);
+			VENUS_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			VENUS_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			VENUS_SPACE_STATION.setTierRequired(VenusModule.planetVenus.getTierRequirement());
+			VENUS_SPACE_STATION.setDimensionInfo(Config.VENUS_SPACE_STATION_ID, Config.VENUS_SPACE_STATION_STATIC_ID, WorldProviderVenusOrbit.class);
+			VENUS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			VENUS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.ceresSpaceStation && Config.ceres) {
-			ceresSpaceStation = new Satellite("spaceStation.ceres").setParentBody(ExtraPlanets_Planets.ceres);
-			ceresSpaceStation.setRelativeSize(0.2667F);
-			ceresSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			ceresSpaceStation.setRelativeOrbitTime(20.0F);
-			ceresSpaceStation.setTierRequired(ExtraPlanets_Planets.ceres.getTierRequirement());
-			ceresSpaceStation.setDimensionInfo(Config.ceresSpaceStationID, Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class);
-			ceresSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.CERES_SPACE_STATION && Config.CERES) {
+			CERES_SPACE_STATION = new Satellite("space_station.ceres").setParentBody(ExtraPlanets_Planets.CERES);
+			CERES_SPACE_STATION.setRelativeSize(0.2667F);
+			CERES_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			CERES_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			CERES_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.CERES.getTierRequirement());
+			CERES_SPACE_STATION.setDimensionInfo(Config.CERES_SPACE_STATION_ID, Config.CERES_SPACE_STATION_STATIC_ID, WorldProviderCeresOrbit.class);
+			CERES_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			CERES_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.marsSpaceStation && MarsModule.planetMars != null) {
-			marsSpaceStation = new Satellite("spaceStation.mars").setParentBody(MarsModule.planetMars);
-			marsSpaceStation.setRelativeSize(0.2667F);
-			marsSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			marsSpaceStation.setRelativeOrbitTime(20.0F);
-			marsSpaceStation.setTierRequired(MarsModule.planetMars.getTierRequirement());
-			marsSpaceStation.setDimensionInfo(Config.marsSpaceStationID, Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class);
-			marsSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.MARS_SPACE_STATION && MarsModule.planetMars != null) {
+			MARS_SPACE_STATION = new Satellite("space_station.mars").setParentBody(MarsModule.planetMars);
+			MARS_SPACE_STATION.setRelativeSize(0.2667F);
+			MARS_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			MARS_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			MARS_SPACE_STATION.setTierRequired(MarsModule.planetMars.getTierRequirement());
+			MARS_SPACE_STATION.setDimensionInfo(Config.MARS_SPACE_STATION_ID, Config.MARS_SPACE_STATION_STATIC_ID, WorldProviderMarsOrbit.class);
+			MARS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			MARS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.jupiterSpaceStation && Config.jupiter) {
-			jupiterSpaceStation = new Satellite("spaceStation.jupiter").setParentBody(ExtraPlanets_Planets.jupiter);
-			jupiterSpaceStation.setRelativeSize(0.2667F);
-			jupiterSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			jupiterSpaceStation.setRelativeOrbitTime(20.0F);
-			jupiterSpaceStation.setTierRequired(ExtraPlanets_Planets.jupiter.getTierRequirement());
-			jupiterSpaceStation.setDimensionInfo(Config.jupiterSpaceStationID, Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class);
-			jupiterSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.JUPITER_SPACE_STATION && Config.JUPITER) {
+			JUPITER_SPACE_STATION = new Satellite("space_station.jupiter").setParentBody(ExtraPlanets_Planets.JUPITER);
+			JUPITER_SPACE_STATION.setRelativeSize(0.2667F);
+			JUPITER_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			JUPITER_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			JUPITER_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.JUPITER.getTierRequirement());
+			JUPITER_SPACE_STATION.setDimensionInfo(Config.JUPITER_SPACE_STATION_ID, Config.JUPITER_SPACE_STATION_STATIC_ID, WorldProviderJupiterOrbit.class);
+			JUPITER_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			JUPITER_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.saturnSpaceStation && Config.saturn) {
-			saturnSpaceStation = new Satellite("spaceStation.saturn").setParentBody(ExtraPlanets_Planets.saturn);
-			saturnSpaceStation.setRelativeSize(0.2667F);
-			saturnSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			saturnSpaceStation.setRelativeOrbitTime(20.0F);
-			saturnSpaceStation.setTierRequired(ExtraPlanets_Planets.saturn.getTierRequirement());
-			saturnSpaceStation.setDimensionInfo(Config.saturnSpaceStationID, Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class);
-			saturnSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.SATURN_SPACE_STATION && Config.SATURN) {
+			SATURN_SPACE_STATION = new Satellite("space_station.saturn").setParentBody(ExtraPlanets_Planets.SATURN);
+			SATURN_SPACE_STATION.setRelativeSize(0.2667F);
+			SATURN_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			SATURN_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			SATURN_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.SATURN.getTierRequirement());
+			SATURN_SPACE_STATION.setDimensionInfo(Config.SATURN_SPACE_STATION_ID, Config.SATURN_SPACE_STATION_STATIC_ID, WorldProviderSaturnOrbit.class);
+			SATURN_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			SATURN_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.uranusSpaceStation && Config.uranus) {
-			uranusSpaceStation = new Satellite("spaceStation.uranus").setParentBody(ExtraPlanets_Planets.uranus);
-			uranusSpaceStation.setRelativeSize(0.2667F);
-			uranusSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			uranusSpaceStation.setRelativeOrbitTime(20.0F);
-			uranusSpaceStation.setTierRequired(ExtraPlanets_Planets.uranus.getTierRequirement());
-			uranusSpaceStation.setDimensionInfo(Config.uranusSpaceStationID, Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class);
-			uranusSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.URANUS_SPACE_STATION && Config.URANUS) {
+			URANUS_SPACE_STATION = new Satellite("space_station.uranus").setParentBody(ExtraPlanets_Planets.URANUS);
+			URANUS_SPACE_STATION.setRelativeSize(0.2667F);
+			URANUS_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			URANUS_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			URANUS_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.URANUS.getTierRequirement());
+			URANUS_SPACE_STATION.setDimensionInfo(Config.URANUS_SPACE_STATION_ID, Config.URANUS_SPACE_STATION_STATIC_ID, WorldProviderUranusOrbit.class);
+			URANUS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			URANUS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.neptuneSpaceStation && Config.neptune) {
-			neptuneSpaceStation = new Satellite("spaceStation.neptune").setParentBody(ExtraPlanets_Planets.neptune);
-			neptuneSpaceStation.setRelativeSize(0.2667F);
-			neptuneSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			neptuneSpaceStation.setRelativeOrbitTime(20.0F);
-			neptuneSpaceStation.setTierRequired(ExtraPlanets_Planets.neptune.getTierRequirement());
-			neptuneSpaceStation.setDimensionInfo(Config.neptuneSpaceStationID, Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class);
-			neptuneSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.NEPTUNE_SPACE_STATION && Config.NEPTUNE) {
+			NEPTUNE_SPACE_STATION = new Satellite("space_station.neptune").setParentBody(ExtraPlanets_Planets.NEPTUNE);
+			NEPTUNE_SPACE_STATION.setRelativeSize(0.2667F);
+			NEPTUNE_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			NEPTUNE_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			NEPTUNE_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.NEPTUNE.getTierRequirement());
+			NEPTUNE_SPACE_STATION.setDimensionInfo(Config.NEPTUNE_SPACE_STATION_ID, Config.NEPTUNE_SPACE_STATION_STATIC_ID, WorldProviderNeptuneOrbit.class);
+			NEPTUNE_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			NEPTUNE_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.plutoSpaceStation && Config.pluto) {
-			plutoSpaceStation = new Satellite("spaceStation.pluto").setParentBody(ExtraPlanets_Planets.pluto);
-			plutoSpaceStation.setRelativeSize(0.2667F);
-			plutoSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			plutoSpaceStation.setRelativeOrbitTime(20.0F);
-			plutoSpaceStation.setTierRequired(ExtraPlanets_Planets.pluto.getTierRequirement());
-			plutoSpaceStation.setDimensionInfo(Config.plutoSpaceStationID, Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class);
-			plutoSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.PLUTO_SPACE_STATION && Config.PLUTO) {
+			PLUTO_SPACE_STATION = new Satellite("space_station.pluto").setParentBody(ExtraPlanets_Planets.PLUTO);
+			PLUTO_SPACE_STATION.setRelativeSize(0.2667F);
+			PLUTO_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			PLUTO_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			PLUTO_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.PLUTO.getTierRequirement());
+			PLUTO_SPACE_STATION.setDimensionInfo(Config.PLUTO_SPACE_STATION_ID, Config.PLUTO_SPACE_STATION_STATIC_ID, WorldProviderPlutoOrbit.class);
+			PLUTO_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			PLUTO_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.erisSpaceStation && Config.eris) {
-			erisSpaceStation = new Satellite("spaceStation.eris").setParentBody(ExtraPlanets_Planets.eris);
-			erisSpaceStation.setRelativeSize(0.2667F);
-			erisSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			erisSpaceStation.setRelativeOrbitTime(20.0F);
-			erisSpaceStation.setTierRequired(ExtraPlanets_Planets.eris.getTierRequirement());
-			erisSpaceStation.setDimensionInfo(Config.erisSpaceStationID, Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class);
-			erisSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.ERIS_SPACE_STATION && Config.ERIS) {
+			ERIS_SPACE_STATION = new Satellite("space_station.eris").setParentBody(ExtraPlanets_Planets.ERIS);
+			ERIS_SPACE_STATION.setRelativeSize(0.2667F);
+			ERIS_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			ERIS_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			ERIS_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.ERIS.getTierRequirement());
+			ERIS_SPACE_STATION.setDimensionInfo(Config.ERIS_SPACE_STATION_ID, Config.ERIS_SPACE_STATION_STATIC_ID, WorldProviderErisOrbit.class);
+			ERIS_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			ERIS_SPACE_STATION.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
 		}
-		if (Config.kepler22bSpaceStation && Config.kepler22b && Config.keplerSolarSystems) {
-			// kepler22bSpaceStation = new Satellite("spaceStation.kepler22b").setParentBody(ExtraPlanets_Planets.kepler22b);
-			// kepler22bSpaceStation.setRelativeSize(0.2667F);
-			// kepler22bSpaceStation.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
-			// kepler22bSpaceStation.setRelativeOrbitTime(20.0F);
-			// kepler22bSpaceStation.setTierRequired(ExtraPlanets_Planets.kepler22b.getTierRequirement());
-			// kepler22bSpaceStation.setDimensionInfo(Config.kepler22bSpaceStationID, Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class);
-			// kepler22bSpaceStation.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+		if (Config.KEPLER22B_SPACE_STATION && Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			KEPLER22B_SPACE_STATION = new Satellite("space_station.kepler22b").setParentBody(ExtraPlanets_Planets.KEPLER22B);
+			KEPLER22B_SPACE_STATION.setRelativeSize(0.2667F);
+			KEPLER22B_SPACE_STATION.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(5.5F, 5.5F));
+			KEPLER22B_SPACE_STATION.setRelativeOrbitTime(20.0F);
+			KEPLER22B_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.KEPLER22B.getTierRequirement());
+			KEPLER22B_SPACE_STATION.setDimensionInfo(Config.KEPLER22B_SPACE_STATION_ID, Config.KEPLER22B_SPACE_STATION_STATIC_ID, WorldProviderKepler22bOrbit.class);
+			KEPLER22B_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
+			KEPLER22B_SPACE_STATION.addChecklistKeys("equipParachute");
 		}
 	}
 
 	private static void registerSatellites() {
-		if (Config.mercurySpaceStation && Config.mercury) {
-			GalaxyRegistry.registerSatellite(mercurySpaceStation);
+		if (Config.MERCURY_SPACE_STATION && Config.MERCURY) {
+			GalaxyRegistry.registerSatellite(MERCURY_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderMercuryOrbit.class, new TeleportTypeMercuryOrbit());
-			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationID, WorldProviderMercuryOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.mercurySpaceStationStaticID, WorldProviderMercuryOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Mercury Space Station", "_mercury_orbit", Config.MERCURY_SPACE_STATION_ID, WorldProviderMercuryOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Mercury Space Station", "_mercury_orbit", Config.MERCURY_SPACE_STATION_STATIC_ID, WorldProviderMercuryOrbit.class, true);
 		}
-		if (Config.venusSpaceStation) {
-			GalaxyRegistry.registerSatellite(venusSpaceStation);
+		if (Config.VENUS_SPACE_STATION) {
+			GalaxyRegistry.registerSatellite(VENUS_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderVenusOrbit.class, new TeleportTypeVenusOrbit());
-			GalacticraftRegistry.registerProvider(Config.venusSpaceStationID, WorldProviderVenusOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.venusSpaceStationStaticID, WorldProviderVenusOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Venus Space Station", "_venus_orbit", Config.VENUS_SPACE_STATION_ID, WorldProviderVenusOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Venus Space Station", "_venus_orbit", Config.VENUS_SPACE_STATION_STATIC_ID, WorldProviderVenusOrbit.class, true);
 		}
-		if (Config.ceresSpaceStation && Config.ceres) {
-			GalaxyRegistry.registerSatellite(ceresSpaceStation);
+		if (Config.CERES_SPACE_STATION && Config.CERES) {
+			GalaxyRegistry.registerSatellite(CERES_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderCeresOrbit.class, new TeleportTypeCeresOrbit());
-			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationID, WorldProviderCeresOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.ceresSpaceStationStaticID, WorldProviderCeresOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Ceres Space Station", "_ceres_orbit", Config.CERES_SPACE_STATION_ID, WorldProviderCeresOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Ceres Space Station", "_ceres_orbit", Config.CERES_SPACE_STATION_STATIC_ID, WorldProviderCeresOrbit.class, true);
 		}
-		if (Config.marsSpaceStation && MarsModule.planetMars != null) {
-			GalaxyRegistry.registerSatellite(marsSpaceStation);
+		if (Config.MARS_SPACE_STATION && MarsModule.planetMars != null) {
+			GalaxyRegistry.registerSatellite(MARS_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderMarsOrbit.class, new TeleportTypeMarsOrbit());
-			GalacticraftRegistry.registerProvider(Config.marsSpaceStationID, WorldProviderMarsOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.marsSpaceStationStaticID, WorldProviderMarsOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Mars Space Station", "_mars_orbit", Config.MARS_SPACE_STATION_ID, WorldProviderMarsOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Mars Space Station", "_mars_orbit", Config.MARS_SPACE_STATION_STATIC_ID, WorldProviderMarsOrbit.class, true);
 		}
-		if (Config.jupiterSpaceStation && Config.jupiter) {
-			GalaxyRegistry.registerSatellite(jupiterSpaceStation);
+		if (Config.JUPITER_SPACE_STATION && Config.JUPITER) {
+			GalaxyRegistry.registerSatellite(JUPITER_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderJupiterOrbit.class, new TeleportTypeJupiterOrbit());
-			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationID, WorldProviderJupiterOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.jupiterSpaceStationStaticID, WorldProviderJupiterOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Jupiter Space Station", "_jupiter_orbit", Config.JUPITER_SPACE_STATION_ID, WorldProviderJupiterOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Jupiter Space Station", "_jupiter_orbit", Config.JUPITER_SPACE_STATION_STATIC_ID, WorldProviderJupiterOrbit.class, true);
 		}
-		if (Config.saturnSpaceStation && Config.saturn) {
-			GalaxyRegistry.registerSatellite(saturnSpaceStation);
+		if (Config.SATURN_SPACE_STATION && Config.SATURN) {
+			GalaxyRegistry.registerSatellite(SATURN_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderSaturnOrbit.class, new TeleportTypeSaturnOrbit());
-			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationID, WorldProviderSaturnOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.saturnSpaceStationStaticID, WorldProviderSaturnOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Saturn Space Station", "_saturn_orbit", Config.SATURN_SPACE_STATION_ID, WorldProviderSaturnOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Saturn Space Station", "_saturn_orbit", Config.SATURN_SPACE_STATION_STATIC_ID, WorldProviderSaturnOrbit.class, true);
 		}
-		if (Config.uranusSpaceStation && Config.uranus) {
-			GalaxyRegistry.registerSatellite(uranusSpaceStation);
+		if (Config.URANUS_SPACE_STATION && Config.URANUS) {
+			GalaxyRegistry.registerSatellite(URANUS_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderUranusOrbit.class, new TeleportTypeUranusOrbit());
-			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationID, WorldProviderUranusOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.uranusSpaceStationStaticID, WorldProviderUranusOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Uranus Space Station", "_uranus_orbit", Config.URANUS_SPACE_STATION_ID, WorldProviderUranusOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Uranus Space Station", "_uranus_orbit", Config.URANUS_SPACE_STATION_STATIC_ID, WorldProviderUranusOrbit.class, true);
 		}
-		if (Config.neptuneSpaceStation && Config.neptune) {
-			GalaxyRegistry.registerSatellite(neptuneSpaceStation);
+		if (Config.NEPTUNE_SPACE_STATION && Config.NEPTUNE) {
+			GalaxyRegistry.registerSatellite(NEPTUNE_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderNeptuneOrbit.class, new TeleportTypeNeptuneOrbit());
-			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationID, WorldProviderNeptuneOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.neptuneSpaceStationStaticID, WorldProviderNeptuneOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Neptune Space Station", "_neptune_orbit", Config.NEPTUNE_SPACE_STATION_ID, WorldProviderNeptuneOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Neptune Space Station", "_neptune_orbit", Config.NEPTUNE_SPACE_STATION_STATIC_ID, WorldProviderNeptuneOrbit.class, true);
 		}
-		if (Config.plutoSpaceStation && Config.pluto) {
-			GalaxyRegistry.registerSatellite(plutoSpaceStation);
+		if (Config.PLUTO_SPACE_STATION && Config.PLUTO) {
+			GalaxyRegistry.registerSatellite(PLUTO_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderPlutoOrbit.class, new TeleportTypePlutoOrbit());
-			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationID, WorldProviderPlutoOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.plutoSpaceStationStaticID, WorldProviderPlutoOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Pluto Space Station", "_pluto_orbit", Config.PLUTO_SPACE_STATION_ID, WorldProviderPlutoOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Pluto Space Station", "_pluto_orbit", Config.PLUTO_SPACE_STATION_STATIC_ID, WorldProviderPlutoOrbit.class, true);
 		}
-		if (Config.erisSpaceStation && Config.eris) {
-			GalaxyRegistry.registerSatellite(erisSpaceStation);
+		if (Config.ERIS_SPACE_STATION && Config.ERIS) {
+			GalaxyRegistry.registerSatellite(ERIS_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderErisOrbit.class, new TeleportTypeErisOrbit());
-			GalacticraftRegistry.registerProvider(Config.erisSpaceStationID, WorldProviderErisOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.erisSpaceStationStaticID, WorldProviderErisOrbit.class, true, 0);
+			GalacticraftRegistry.registerDimension("Eris Space Station", "_eris_orbit", Config.ERIS_SPACE_STATION_ID, WorldProviderErisOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Eris Space Station", "_eris_orbit", Config.ERIS_SPACE_STATION_STATIC_ID, WorldProviderErisOrbit.class, true);
 		}
-		if (Config.kepler22bSpaceStation && Config.kepler22b && Config.keplerSolarSystems) {
-			// GalaxyRegistry.registerSatellite(kepler22bSpaceStation);
-			// GalacticraftRegistry.registerTeleportType(WorldProviderKepler22bOrbit.class, new TeleportTypeKepler22bOrbit());
-			// GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationID, WorldProviderKepler22bOrbit.class, false, 0);
-			// GalacticraftRegistry.registerProvider(Config.kepler22bSpaceStationStaticID, WorldProviderKepler22bOrbit.class, true, 0);
+		if (Config.KEPLER22B_SPACE_STATION && Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			GalaxyRegistry.registerSatellite(KEPLER22B_SPACE_STATION);
+			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22bOrbit.class, new TeleportTypeKepler22bOrbit());
+			GalacticraftRegistry.registerDimension("Kepler22b Space Station", "_kepler22b_orbit", Config.KEPLER22B_SPACE_STATION_ID, WorldProviderKepler22bOrbit.class, false);
+			GalacticraftRegistry.registerDimension("Kepler22b Space Station", "_kepler22b_orbit", Config.KEPLER22B_SPACE_STATION_STATIC_ID, WorldProviderKepler22bOrbit.class, true);
 		}
 	}
 }

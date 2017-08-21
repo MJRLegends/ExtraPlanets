@@ -109,6 +109,7 @@ public class BlockDecorativeBlocks extends Block implements IDetectableResource,
 		return super.getPickBlock(target, world, pos, player);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));

@@ -92,7 +92,7 @@ public class TileEntityAdvancedOxygenDecompressor extends TileEntityOxygen imple
         }
 
         par1NBTTagCompound.setTag("Items", list);
-    }
+	}
 
     @Override
     public int getSizeInventory()

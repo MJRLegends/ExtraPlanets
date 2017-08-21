@@ -4,14 +4,16 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.api.ISolarRadiationWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.BiomeProviderKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.ChunkProviderKepler22b;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.WorldChunkManagerKepler22b;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderKepler22b extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld, ISolarRadiationWorld {
@@ -19,18 +21,13 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 255 / 205.0F * f);
+		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 205.0F / 255.0F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 255 / 205.0F * f);
-	}
-
-	@Override
-	public boolean canRainOrSnow() {
-		return true;
+		return new Vector3(102 / 255.0F * f, 178 / 255.0F * f, 205.0F / 255.0F * f);
 	}
 
 	@Override
@@ -44,18 +41,13 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public boolean shouldForceRespawn() {
-		return true;
-	}
-
-	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderKepler22b.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerKepler22b.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderKepler22b.class;
 	}
 
 	@Override
@@ -95,7 +87,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.kepler22b.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.KEPLER22B.getTierRequirement();
 	}
 
 	@Override
@@ -104,23 +96,8 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 5.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.kepler22b;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return true;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		return 0F;
+		return ExtraPlanets_Planets.KEPLER22B;
 	}
 
 	@Override
@@ -134,16 +111,6 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public String getDimensionName() {
-		return "Kepler22b";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_kepler22b";
-	}
-
-	@Override
 	public int getPressureLevel() {
 		return 0;
 	}
@@ -154,17 +121,22 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	}
 
 	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.KEPLER22B;
 	}
 
 	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
+	public int getDungeonSpacing() {
+		return 800;
 	}
 	
 	@Override
-	public int getDungeonSpacing() {
-		return 0;
+	public boolean canBlockFreeze(BlockPos pos, boolean byWater){
+		return false;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+        return RoomTreasure.MOONCHEST;
 	}
 }

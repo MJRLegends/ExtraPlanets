@@ -44,7 +44,7 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 
 	@Override
 	public ItemStack getPickedResult(MovingObjectPosition target) {
-		return new ItemStack(ExtraPlanets_Items.tier4Rocket, 1, this.rocketType.getIndex());
+		return new ItemStack(ExtraPlanets_Items.TIER_4_ROCKET, 1, this.rocketType.getIndex());
 	}
 
 	@Override
@@ -134,7 +134,7 @@ public class EntityTier4Rocket extends EntityTieredRocket {
             }
 
             stats.setRocketType(this.rocketType.getIndex());
-            stats.setRocketItem(ExtraPlanets_Items.tier4Rocket);
+            stats.setRocketItem(ExtraPlanets_Items.TIER_4_ROCKET);
             stats.setFuelLevel(this.fuelTank.getFluidAmount());
 		}
 	}
@@ -241,7 +241,7 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 	@Override
 	public List<ItemStack> getItemsDropped(List<ItemStack> droppedItems) {
 		super.getItemsDropped(droppedItems);
-		ItemStack rocket = new ItemStack(ExtraPlanets_Items.tier4Rocket, 1, this.rocketType.getIndex());
+		ItemStack rocket = new ItemStack(ExtraPlanets_Items.TIER_4_ROCKET, 1, this.rocketType.getIndex());
 		rocket.setTagCompound(new NBTTagCompound());
 		rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
 		droppedItems.add(rocket);

@@ -21,7 +21,6 @@ public class ItemAppleIron extends ItemFood {
 		super(p_i45341_1_, p_i45341_2_, p_i45341_3_);
 		this.setHasSubtypes(true);
 		this.setAlwaysEdible();
-		this.setUnlocalizedName("appleIron");
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -63,7 +62,6 @@ public class ItemAppleIron extends ItemFood {
 			super.onFoodEaten(p_77849_1_, p_77849_2_, p_77849_3_);
 		}
 	}
-
 	/**
 	 * returns a list of items with the same ID, but different meta (eg: dye returns 16 items)
 	 */

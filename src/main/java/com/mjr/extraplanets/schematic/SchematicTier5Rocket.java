@@ -23,17 +23,17 @@ public class SchematicTier5Rocket extends ItemSchematic implements ISchematicPag
 
 	@Override
 	public int getPageID() {
-		return Config.schematicTier5PageID;
+		return Config.SCHEMATIC_TIER_5_PAGE_ID;
 	}
 
 	@Override
 	public int getGuiID() {
-		return Config.schematicTier5GUIID;
+		return Config.SCHEMATIC_TIER_5_GUI_ID;
 	}
 
 	@Override
 	public ItemStack getRequiredItem() {
-		return new ItemStack(ExtraPlanets_Items.schematicTier5, 1, 0);
+		return new ItemStack(ExtraPlanets_Items.TIER_5_SCHEMATIC, 1, 0);
 	}
 
 	@SideOnly(Side.CLIENT)

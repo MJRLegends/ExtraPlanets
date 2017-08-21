@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/uranusSubSurface"
+        "all": "extraplanets:blocks/uranus_sub_surface"
     }
 }

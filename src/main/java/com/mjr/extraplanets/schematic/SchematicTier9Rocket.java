@@ -23,17 +23,17 @@ public class SchematicTier9Rocket extends ItemSchematic implements ISchematicPag
 
 	@Override
 	public int getPageID() {
-		return Config.schematicTier9PageID;
+		return Config.SCHEMATIC_TIER_9_PAGE_ID;
 	}
 
 	@Override
 	public int getGuiID() {
-		return Config.schematicTier9GUIID;
+		return Config.SCHEMATIC_TIER_9_GUI_ID;
 	}
 
 	@Override
 	public ItemStack getRequiredItem() {
-		return new ItemStack(ExtraPlanets_Items.schematicTier9, 1, 0);
+		return new ItemStack(ExtraPlanets_Items.TIER_9_SCHEMATIC, 1, 0);
 	}
 
 	@SideOnly(Side.CLIENT)

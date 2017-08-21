@@ -10,18 +10,17 @@ import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
+import net.minecraftforge.common.BiomeDictionary;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
-	public BiomeGenKepler22bPlains() {
-		super(Config.kepler22bPlainsBiomeID);
-		this.enableRain = true;
-		this.enableSnow = true;
-		this.setTemperatureRainfall(0.8F, 0.9F);
-		this.topBlock = ExtraPlanets_Blocks.kepler22bGrass.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.kepler22bBlocks.getDefaultState();
+	public BiomeGenKepler22bPlains(BiomeProperties properties) {
+		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));
@@ -33,11 +32,12 @@ public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
-		
-		this.getBiomeDecorator().brownTreesPerChunk = 1;
-		this.getBiomeDecorator().greenTreesPerChunk = 1;
+
+		this.getBiomeDecorator().brownTreesPerChunk = 3;
+		this.getBiomeDecorator().greenTreesPerChunk = 3;
 		this.getBiomeDecorator().greenShortGrassPerChunk = 90;
 		this.getBiomeDecorator().greenMedGrassPerChunk = 90;
 		this.getBiomeDecorator().greenTallGrassPerChunk = 90;
+		this.getBiomeDecorator().generateHuts = true;
 	}
 }

@@ -33,7 +33,7 @@ public class ItemBlockNeptune extends ItemBlock
 		}
 		case 1:
 		{
-			name = "subSurface";
+			name = "sub_surface";
 			break;
 		}
 		case 2:
@@ -43,47 +43,47 @@ public class ItemBlockNeptune extends ItemBlock
 		}
 		case 3:
 		{
-			name = "oreIron";
+			name = "ore_iron";
 			break;
 		}
 		case 4:
 		{
-			name = "oreTin";
+			name = "ore_tin";
 			break;
 		}
 		case 5:
 		{
-			name = "oreCopper";
+			name = "ore_copper";
 			break;
 		}
 		case 6:
 		{
-			name = "oreZinc";
+			name = "ore_zinc";
 			break;
 		}
 		case 7:
 		{
-			name = "zincBlock";
+			name = "zinc_block";
 			break;
 		}
 		case 8:
 		{
-			name = "stoneBricks";
+			name = "stone_bricks";
 			break;
 		}
 		case 9:
 		{
-			name = "dungeonBrick";
+			name = "dungeon_brick";
 			break;
 		}
 		case 10:
 		{
-			name = "oreBlueGem";
+			name = "ore_blue_gem";
 			break;
 		}
 		case 11:
 		{
-			name = "blueGemBlock";
+			name = "blue_gem_block";
 			break;
 		}
 		default:

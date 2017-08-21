@@ -4,10 +4,8 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
@@ -27,7 +25,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
+import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
 
 public class Tier8Rocket extends Item implements IHoldableItem {
 	public Tier8Rocket(String assetName) {
@@ -59,7 +59,7 @@ public class Tier8Rocket extends Item implements IHoldableItem {
 					final Block id = state.getBlock();
 					int meta = id.getMetaFromState(state);
 
-					if (id == GCBlocks.landingPadFull && meta == 0) {
+					if (id == ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL && meta == 0) {
 						padFound = true;
 						tile = worldIn.getTileEntity(pos.add(i, 0, j));
 
@@ -78,8 +78,8 @@ public class Tier8Rocket extends Item implements IHoldableItem {
 
 			if (padFound) {
 				// Check whether there is already a rocket on the pad
-				if (tile instanceof TileEntityLandingPad) {
-					if (((TileEntityLandingPad) tile).getDockedEntity() != null) {
+				if (tile instanceof TileEntityTier2LandingPad) {
+					if (((TileEntityTier2LandingPad) tile).getDockedEntity() != null) {
 						return false;
 					}
 				} else {
@@ -104,7 +104,7 @@ public class Tier8Rocket extends Item implements IHoldableItem {
 				}
 
 				if (spaceship.rocketType.getPreFueled()) {
-					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, 2000), true);
+					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, spaceship.getMaxFuel()), true);
 				}
 			} else {
 				return false;

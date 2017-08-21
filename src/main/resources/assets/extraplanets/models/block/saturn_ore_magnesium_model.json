@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/saturnOreMagnesium"
+        "all": "extraplanets:blocks/saturn_ore_magnesium"
     }
 }

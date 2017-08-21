@@ -39,9 +39,6 @@ public class BlockNuclearBomb extends Block {
 		}
 	}
 
-	/**
-	 * Called when a neighboring block changes.
-	 */
 	@Override
 	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock) {
 		if (worldIn.isBlockPowered(pos)) {
@@ -82,17 +79,17 @@ public class BlockNuclearBomb extends Block {
 
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (playerIn.getCurrentEquippedItem() != null) {
-			Item item = playerIn.getCurrentEquippedItem().getItem();
+		if (playerIn.inventory.getCurrentItem() != null) {
+			Item item = playerIn.inventory.getCurrentItem().getItem();
 
 			if (item == Items.flint_and_steel || item == Items.fire_charge) {
 				this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
 				worldIn.setBlockToAir(pos);
 
 				if (item == Items.flint_and_steel) {
-					playerIn.getCurrentEquippedItem().damageItem(1, playerIn);
+					playerIn.inventory.getCurrentItem().damageItem(1, playerIn);
 				} else if (!playerIn.capabilities.isCreativeMode) {
-					--playerIn.getCurrentEquippedItem().stackSize;
+					--playerIn.inventory.getCurrentItem().stackSize;
 				}
 
 				return true;

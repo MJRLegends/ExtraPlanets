@@ -8,7 +8,6 @@ import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockState;
@@ -39,7 +38,6 @@ public class BasicCrystallizer extends BlockAdvancedTile implements IShiftDescri
 	public BasicCrystallizer(String assetName) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setStepSound(Block.soundTypeMetal);
 		this.setUnlocalizedName(assetName);
 	}
 
@@ -166,10 +164,11 @@ public class BasicCrystallizer extends BlockAdvancedTile implements IShiftDescri
 		return state.getValue(FACING).getHorizontalIndex();
 	}
 
-	@Override
-	protected BlockState createBlockState() {
-		return new BlockState(this, FACING);
-	}
+    @Override
+    protected BlockState createBlockState()
+    {
+        return new BlockState(this, FACING);
+    }
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {

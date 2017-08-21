@@ -32,7 +32,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	private ItemStack[] containingItems = new ItemStack[3];
 
 	public TileEntityBasicDecrystallizer() {
-		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, 0));
+		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, 0));
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.containingItems[slot] != null) {
 			if (this.containingItems[slot].getItem() == Items.bucket && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
 				tank.drain(1000, true);
-				this.containingItems[slot].setItem(ExtraPlanets_Items.salt_bucket);
+				this.containingItems[slot].setItem(ExtraPlanets_Items.BUCKET_SALT);
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
 		}
@@ -77,7 +77,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		}
 		if (this.containingItems[1] == null)
 			return false;
-		else if (this.containingItems[1].getItem() != ExtraPlanets_Items.iodideSalt)
+		else if (this.containingItems[1].getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
 		return !this.getDisabled(0);
 
@@ -104,8 +104,8 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (nbt.hasKey("outputTank")) {
 			this.outputTank.readFromNBT(nbt.getCompoundTag("outputTank"));
 		}
-		if (this.outputTank.getFluid() != null && this.outputTank.getFluid().getFluid() != ExtraPlanets_Fluids.salt_fluid) {
-			this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.salt_fluid, this.outputTank.getFluidAmount()));
+		if (this.outputTank.getFluid() != null && this.outputTank.getFluid().getFluid() != ExtraPlanets_Fluids.SALT_FLUID) {
+			this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, this.outputTank.getFluidAmount()));
 		}
 	}
 
@@ -149,7 +149,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.iodideSalt;
+				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 			case 2:
 				return itemstack.getItem() == Items.bucket;
 			default:
@@ -166,7 +166,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.salt_bucket;
+				return itemstack.getItem() == ExtraPlanets_Items.BUCKET_SALT;
 			default:
 				return false;
 			}

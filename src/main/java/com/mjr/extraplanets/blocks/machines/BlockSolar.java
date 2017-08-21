@@ -25,7 +25,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -68,7 +67,6 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	public BlockSolar(String assetName) {
 		super(Material.iron);
 		this.setHardness(1.0F);
-		this.setStepSound(Block.soundTypeMetal);
 		this.setUnlocalizedName(assetName);
 	}
 
@@ -176,13 +174,6 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = this.getDamageValue(world, pos);
-
-		return new ItemStack(this, 1, metadata);
-	}
-
-	@Override
 	public TileEntity createTileEntity(World world, IBlockState state) {
 		if (getMetaFromState(state) >= BlockSolar.ULTIMATE_METADATA) {
 			return new TileEntitySolar(2);
@@ -222,6 +213,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		EnumFacing enumfacing = EnumFacing.getHorizontal(meta % 4);

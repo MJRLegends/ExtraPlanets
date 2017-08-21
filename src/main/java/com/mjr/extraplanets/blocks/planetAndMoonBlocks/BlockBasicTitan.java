@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicTitan extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basicTypeTitan", EnumBlockBasic.class);
+	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypetitan", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "titan_surface"), SUB_SURFACE(1, "titan_sub_surface"), STONE(2, "titan_stone"), ORE_IRON(3, "titan_ore_iron"), ORE_TIN(4, "titan_ore_tin"), ORE_COPPER(5, "titan_ore_copper");
@@ -154,6 +154,7 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
+		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
 	}
 
@@ -165,7 +166,7 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
+	    public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.stone) {
 			return false;
 		}

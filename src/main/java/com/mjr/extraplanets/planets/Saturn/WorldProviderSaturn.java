@@ -4,13 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Saturn.worldgen.BiomeProviderSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.ChunkProviderSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.WorldChunkManagerSaturn;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -26,12 +28,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(240 / 255.0F * f, 160 / 255.0F * f, 55 / 255.0F * f);
 	}
-
-	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
+	
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -43,18 +40,13 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public boolean shouldForceRespawn() {
-		return true;
-	}
-
-	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderSaturn.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerSaturn.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderSaturn.class;
 	}
 
 	@Override
@@ -74,7 +66,10 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public float getGravity() {
-		return 0.058F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.058F;
+		else
+			return 0.015F;
 	}
 
 	@Override
@@ -94,27 +89,20 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.saturn.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.SATURN.getTierRequirement();
 	}
 
 	@Override
 	public float getFallDamageModifier() {
-		return 0.38F;
-	}
-
-	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.38F;
+		else
+			return 2.1F;
 	}
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.saturn;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
+		return ExtraPlanets_Planets.SATURN;
 	}
 
 	@Override
@@ -126,23 +114,8 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public float getWindLevel() {
-		return 0.0F;
-	}
-
-	@Override
 	public double getSolarEnergyMultiplier() {
 		return 6.0D;
-	}
-
-	@Override
-	public String getDimensionName() {
-		return "Saturn";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_saturn";
 	}
 
 	@Override
@@ -154,19 +127,19 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	public int getSolarRadiationLevel() {
 		return 30;
 	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
-	}
 	
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.SATURN;
+	}
+
 	@Override
 	public int getDungeonSpacing() {
 		return 800;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+        return RoomTreasure.MOONCHEST;
 	}
 }

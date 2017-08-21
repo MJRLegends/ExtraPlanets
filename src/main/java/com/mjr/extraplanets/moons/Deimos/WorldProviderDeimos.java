@@ -56,7 +56,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
 		return WorldChunkManagerDeimos.class;
 	}
 
@@ -64,7 +64,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		final float var2 = this.worldObj.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;
@@ -119,7 +119,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Moons.deimos.getTierRequirement();
+		return tier >= ExtraPlanets_Moons.DEIMOS.getTierRequirement();
 	}
 
 	@Override
@@ -134,7 +134,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Moons.deimos;
+		return ExtraPlanets_Moons.DEIMOS;
 	}
 
 	@Override
@@ -163,12 +163,17 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public String getInternalNameSuffix() {
-		return "_deimos";
-	}
-	
-	@Override
 	public int getDungeonSpacing() {
 		return 0;
+	}
+
+	@Override
+	public String getDungeonChestType() {
+		return null;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "deimos";
 	}
 }

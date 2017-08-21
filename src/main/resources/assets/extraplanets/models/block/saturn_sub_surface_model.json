@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/saturnSubSurface"
+        "all": "extraplanets:blocks/saturn_sub_surface"
     }
 }

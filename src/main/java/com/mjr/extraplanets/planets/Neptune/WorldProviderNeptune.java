@@ -4,13 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeProviderNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.WorldChunkManagerNeptune;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderNeptune extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -28,11 +30,6 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -43,18 +40,13 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public boolean shouldForceRespawn() {
-		return true;
-	}
-
-	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderNeptune.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerNeptune.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderNeptune.class;
 	}
 
 	@Override
@@ -74,7 +66,10 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public float getGravity() {
-		return 0.058F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.058F;
+		else
+			return 0.010F;
 	}
 
 	@Override
@@ -94,27 +89,20 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.neptune.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.NEPTUNE.getTierRequirement();
 	}
 
 	@Override
 	public float getFallDamageModifier() {
-		return 0.38F;
-	}
-
-	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.38F;
+		else
+			return 3.2F;
 	}
 
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.neptune;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
+		return ExtraPlanets_Planets.NEPTUNE;
 	}
 
 	@Override
@@ -124,25 +112,10 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 		}
 		return -130.0F;
 	}
-
-	@Override
-	public float getWindLevel() {
-		return 5.0F;
-	}
-
+	
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 2.0D;
-	}
-
-	@Override
-	public String getDimensionName() {
-		return "Neptune";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_neptune";
 	}
 
 	@Override
@@ -156,17 +129,17 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.NEPTUNE;
 	}
 
 	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
-	}
-	
-	@Override
 	public int getDungeonSpacing() {
 		return 800;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+        return RoomTreasure.MOONCHEST;
 	}
 }

@@ -4,13 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Pluto.worldgen.BiomeProviderPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.ChunkProviderPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.WorldChunkManagerPluto;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderPluto extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -26,12 +28,6 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
 	}
-
-	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -43,18 +39,13 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public boolean shouldForceRespawn() {
-		return true;
-	}
-
-	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderPluto.class;
 	}
 
 	@Override
-	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return WorldChunkManagerPluto.class;
+	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+		return BiomeProviderPluto.class;
 	}
 
 	@Override
@@ -74,7 +65,10 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public float getGravity() {
-		return 0.058F;
+		if (Config.OLD_STYLE_GRAVITY)
+			return 0.058F;
+		else
+			return 0.065F;
 	}
 
 	@Override
@@ -94,7 +88,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= ExtraPlanets_Planets.pluto.getTierRequirement();
+		return tier >= ExtraPlanets_Planets.PLUTO.getTierRequirement();
 	}
 
 	@Override
@@ -103,46 +97,13 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_Planets.pluto;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		if (isDaytime()) {
-			return -140.0F;
-		}
-		return -140.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 5.0F;
+		return ExtraPlanets_Planets.PLUTO;
 	}
 
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 2.0D;
-	}
-
-	@Override
-	public String getDimensionName() {
-		return "Pluto";
-	}
-
-	@Override
-	public String getInternalNameSuffix() {
-		return "_pluto";
 	}
 
 	@Override
@@ -156,17 +117,17 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.PLUTO;
 	}
 
 	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
-	}
-	
-	@Override
 	public int getDungeonSpacing() {
 		return 800;
+	}
+
+	@Override
+	public ResourceLocation getDungeonChestType() {
+        return RoomTreasure.MOONCHEST;
 	}
 }

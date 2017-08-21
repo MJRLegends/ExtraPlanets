@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/iapetusGravel"
+        "all": "extraplanets:blocks/iapetus_gravel"
     }
 }

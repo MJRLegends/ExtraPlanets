@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/phobosOreIron"
+        "all": "extraplanets:blocks/phobos_ore_iron"
     }
 }

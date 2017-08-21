@@ -8,9 +8,9 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class BoneMealHandler {
 	@SubscribeEvent
 	public void usedBonemeal(BonemealEvent event) {
-		if (event.block == ExtraPlanets_Blocks.kepler22bMapleSapling) {
+		if (event.block == ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING) {
 			if (!event.world.isRemote) {
-				// ((BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.kepler22bMapleSapling).markOrGrowMarked(event.world, event.x, event.y, event.z, event.world.rand);
+				// ((BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING).markOrGrowMarked(event.world, event.x, event.y, event.z, event.world.rand);
 				// event.setResult(Result.ALLOW);
 			}
 		}

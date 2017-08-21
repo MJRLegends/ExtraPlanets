@@ -4,19 +4,19 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
 public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public CelestialBody getCelestialBody() {
-		return ExtraPlanets_SpaceStations.marsSpaceStation;
+		return ExtraPlanets_SpaceStations.MARS_SPACE_STATION;
 	}
 
 	@Override
@@ -50,8 +50,8 @@ public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	}
 
 	@Override
-	public Class<? extends IChunkProvider> getChunkProviderClass() {
-		return ChunkProviderMarsOrbit.class;
+	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+		return ChunkProviderOrbit.class;
 	}
 
 	@Override
@@ -65,7 +65,7 @@ public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		final float var2 = this.worldObj.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.cos(var2 * Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;
@@ -135,7 +135,7 @@ public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getSaveFolder() {
-		return "DIM_SPACESTATION_Mars_" + this.dimensionId;
+		return "DIM_SPACESTATION_Mars_" + this.getDimension();
 	}
 
 	@Override
@@ -172,4 +172,10 @@ public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	public float getWindLevel() {
 		return 0.1F;
 	}
+	
+    @Override
+    public DimensionType getDimensionType()
+    {
+        return ExtraPlanetsDimensions.MARS_ORBIT;
+    }
 }

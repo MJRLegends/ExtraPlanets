@@ -23,7 +23,7 @@ public class BlockSmasherRecipeHandler implements IRecipeHandler<BlockSmasherRec
     {
         return RecipeCategories.BLOCK_SMASHER_ID;
     }
-    
+
     @Nonnull
     @Override
     public IRecipeWrapper getRecipeWrapper(@Nonnull BlockSmasherRecipeWrapper recipe)

@@ -554,7 +554,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 
 	@Override
 	public void dropKey() {
-        this.entityDropItem(new ItemStack(ExtraPlanets_Items.T4key, 1, 0), 0.5F);
+        this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_4_KEY, 1, 0), 0.5F);
 	}
 
 	@Override

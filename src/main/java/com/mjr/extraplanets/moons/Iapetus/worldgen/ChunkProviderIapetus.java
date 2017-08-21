@@ -18,7 +18,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class ChunkProviderIapetus extends ChunkProviderSpace {
 	private final BiomeDecoratorIapetus ceresBiomeDecorator = new BiomeDecoratorIapetus();
 
-	 private final MapGenCaveIapetus caveGenerator = new MapGenCaveIapetus();
+	private final MapGenCaveIapetus caveGenerator = new MapGenCaveIapetus();
 
 	public ChunkProviderIapetus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -42,23 +42,23 @@ public class ChunkProviderIapetus extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.iapetusBlocks, (byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.IAPETUS_BLOCKS, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.iapetusBlocks, (byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.IAPETUS_BLOCKS, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.iapetusBlocks, (byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.IAPETUS_BLOCKS, (byte) 2);
 	}
 
 	@Override
@@ -89,12 +89,12 @@ public class ChunkProviderIapetus extends ChunkProviderSpace {
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
 	}
-
+	
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	public void recreateStructures(Chunk chunk, int x, int z) {
 	}
 
 	@Override
-	public void recreateStructures(Chunk chunk, int x, int z) {
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {		
 	}
 }

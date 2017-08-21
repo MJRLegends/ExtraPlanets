@@ -95,7 +95,7 @@ public class ContainerBasicCrystallizer extends Container
                         return null;
                     }
                 }
-                else if (var4.getItem() == ExtraPlanets_Items.salt_bucket)
+                else if (var4.getItem() == ExtraPlanets_Items.BUCKET_SALT)
                 {
                     if (!this.mergeItemStack(var4, 2, 3, false))
                     {

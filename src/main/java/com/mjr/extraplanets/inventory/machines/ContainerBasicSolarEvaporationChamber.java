@@ -95,7 +95,7 @@ public class ContainerBasicSolarEvaporationChamber extends Container
                         return null;
                     }
                 }
-                else if (var4.getItem() == ExtraPlanets_Items.potash)
+                else if (var4.getItem() == ExtraPlanets_Items.POTASH_SHARDS)
                 {
                     if (!this.mergeItemStack(var4, 1, 2, false))
                     {

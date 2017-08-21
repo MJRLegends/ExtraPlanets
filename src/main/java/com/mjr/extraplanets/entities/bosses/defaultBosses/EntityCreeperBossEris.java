@@ -216,7 +216,7 @@ public class EntityCreeperBossEris extends EntityBossBase implements IEntityBrea
 
 	@Override
 	public void dropKey() {
-		this.entityDropItem(new ItemStack(ExtraPlanets_Items.T10key, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_10_KEY, 1, 0), 0.5F);
 	}
 
 	@Override

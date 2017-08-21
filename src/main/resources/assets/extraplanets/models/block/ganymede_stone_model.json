@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/ganymedeStone"
+        "all": "extraplanets:blocks/ganymede_stone"
     }
 }

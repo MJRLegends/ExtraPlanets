@@ -8,121 +8,121 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.mjr.extraplanets.Config;
 
 public class ExtraPlanets_Tools {
-	private static ToolMaterial carbonMaterial = EnumHelper.addToolMaterial("Carbon Material", 3, 40, 4.0F, 6.0F, 30);
-	private static ToolMaterial palladiumMaterial = EnumHelper.addToolMaterial("Palladium Material", 4, 60, 6.0F, 8.0F, 30);
-	private static ToolMaterial magnesiumMaterial = EnumHelper.addToolMaterial("Magnesium Material", 5, 80, 8.0F, 10.0F, 30);
-	private static ToolMaterial crystalMaterial = EnumHelper.addToolMaterial("Crystal Material", 6, 120, 10.0F, 12.0F, 30);
-	private static ToolMaterial tungstenMaterial = EnumHelper.addToolMaterial("Tungsten Material", 7, 120, 10.0F, 12.0F, 30);
+	private static ToolMaterial CARBON_MATERIAL = EnumHelper.addToolMaterial("Carbon Material", 3, 40, 4.0F, 6.0F, 30);
+	private static ToolMaterial PALLADIUM_MATERIAL = EnumHelper.addToolMaterial("Palladium Material", 4, 60, 6.0F, 8.0F, 30);
+	private static ToolMaterial MAGNESIUM_MATERIAL = EnumHelper.addToolMaterial("Magnesium Material", 5, 80, 8.0F, 10.0F, 30);
+	private static ToolMaterial CRYSTAL_MATERIAL = EnumHelper.addToolMaterial("Crystal Material", 6, 120, 10.0F, 12.0F, 30);
+	private static ToolMaterial TUNGSTEN_MATERIAL = EnumHelper.addToolMaterial("Tungsten Material", 7, 120, 10.0F, 12.0F, 30);
 
-	private static ToolMaterial zincMaterial = EnumHelper.addToolMaterial("Zinc Material", 6, 160, 10.0F, 12.0F, 30);
-	private static ToolMaterial mercuryMaterial = EnumHelper.addToolMaterial("Mercury Material", 6, 160, 10.0F, 12.0F, 30);
-	private static ToolMaterial uraniumMaterial = EnumHelper.addToolMaterial("Uranium Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial ZINC_MATERIAL = EnumHelper.addToolMaterial("Zinc Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial MERCURY_MATERIAL = EnumHelper.addToolMaterial("Mercury Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial URANIUM_MATERIAL = EnumHelper.addToolMaterial("Uranium Material", 6, 160, 10.0F, 12.0F, 30);
 
-	private static ToolMaterial redGemMaterial = EnumHelper.addToolMaterial("Red Gem Material", 4, 80, 6.0F, 8.0F, 30);
-	private static ToolMaterial blueGemMaterial = EnumHelper.addToolMaterial("Blue Gem Material", 5, 100, 8.0F, 10.0F, 30);
-	private static ToolMaterial whiteGemMaterial = EnumHelper.addToolMaterial("White Gem Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial RED_GEM_MATERIAL = EnumHelper.addToolMaterial("Red Gem Material", 4, 80, 6.0F, 8.0F, 30);
+	private static ToolMaterial BLUE_GEM_MATERIAL = EnumHelper.addToolMaterial("Blue Gem Material", 5, 100, 8.0F, 10.0F, 30);
+	private static ToolMaterial WHITE_GEM_MATERIAL = EnumHelper.addToolMaterial("White Gem Material", 6, 160, 10.0F, 12.0F, 30);
 
-	private static ToolMaterial blueDiamondMaterial = EnumHelper.addToolMaterial("Blue Diamond Material", 6, 160, 10.0F, 12.0F, 30);
-	private static ToolMaterial redDiamondMaterial = EnumHelper.addToolMaterial("Red Diamond Material", 6, 160, 10.0F, 12.0F, 30);
-	private static ToolMaterial purpleDiamondMaterial = EnumHelper.addToolMaterial("Purple Diamond Material", 6, 160, 10.0F, 12.0F, 30);
-	private static ToolMaterial yellowDiamondMaterial = EnumHelper.addToolMaterial("Yellow Diamond Material", 6, 160, 10.0F, 12.0F, 30);
-	private static ToolMaterial greenDiamondMaterial = EnumHelper.addToolMaterial("Green Diamond Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial BLUE_DIAMOND_MATERIAL = EnumHelper.addToolMaterial("Blue Diamond Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial RED_DIAMOND_MATERIAL = EnumHelper.addToolMaterial("Red Diamond Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial PURPLE_DIAMOND_MATERIAL = EnumHelper.addToolMaterial("Purple Diamond Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial YELLOW_DIAMOND_MATERIAL = EnumHelper.addToolMaterial("Yellow Diamond Material", 6, 160, 10.0F, 12.0F, 30);
+	private static ToolMaterial GREEN_DIAMOND_MATERIAL = EnumHelper.addToolMaterial("Green Diamond Material", 6, 160, 10.0F, 12.0F, 30);
 
-	public static Item carbonPickaxe;
-	public static Item carbonAxe;
-	public static Item carbonHoe;
-	public static Item carbonShovel;
-	public static Item carbonSword;
+	public static Item CARBON_PICKAXE;
+	public static Item CARBON_AXE;
+	public static Item CARBON_HOE;
+	public static Item CARBON_SHOVEL;
+	public static Item CARBON_SWORD;
 
-	public static Item palladiumPickaxe;
-	public static Item palladiumAxe;
-	public static Item palladiumHoe;
-	public static Item palladiumShovel;
-	public static Item palladiumSword;
+	public static Item PALLADIUM_PICKAXE;
+	public static Item PALLADIUM_AXE;
+	public static Item PALLADIUM_HOE;
+	public static Item PALLADIUM_SHOVEL;
+	public static Item PALLADIUM_SWORD;
 
-	public static Item magnesiumPickaxe;
-	public static Item magnesiumAxe;
-	public static Item magnesiumHoe;
-	public static Item magnesiumShovel;
-	public static Item magnesiumSword;
+	public static Item MAGNESIUM_PICKAXE;
+	public static Item MAGNESIUM_AXE;
+	public static Item MAGNESIUM_HOE;
+	public static Item MAGNESIUM_SHOVEL;
+	public static Item MAGNESIUM_SWORD;
 
-	public static Item crystalPickaxe;
-	public static Item crystalAxe;
-	public static Item crystalHoe;
-	public static Item crystalShovel;
-	public static Item crystalSword;
+	public static Item CRYSTAL_PICKAXE;
+	public static Item CRYSTAL_AXE;
+	public static Item CRYSTAL_HOE;
+	public static Item CRYSTAL_SHOVEL;
+	public static Item CRYSTAL_SWORD;
 
-	public static Item tungstenPickaxe;
-	public static Item tungstenAxe;
-	public static Item tungstenHoe;
-	public static Item tungstenShovel;
-	public static Item tungstenSword;
+	public static Item TUNGSTEN_PICKAXE;
+	public static Item TUNGSTEN_AXE;
+	public static Item TUNGSTEN_HOE;
+	public static Item TUNGSTEN_SHOVEL;
+	public static Item TUNGSTEN_SWORD;
 
-	public static Item redGemPickaxe;
-	public static Item redGemAxe;
-	public static Item redGemHoe;
-	public static Item redGemShovel;
-	public static Item redGemSword;
+	public static Item RED_GEM_PICKAXE;
+	public static Item RED_GEM_AXE;
+	public static Item RED_GEM_HOE;
+	public static Item RED_GEM_SHOVEL;
+	public static Item RED_GEM_SWORD;
 
-	public static Item blueGemPickaxe;
-	public static Item blueGemAxe;
-	public static Item blueGemHoe;
-	public static Item blueGemShovel;
-	public static Item blueGemSword;
+	public static Item BLUE_GEM_PICKAXE;
+	public static Item BLUE_GEM_AXE;
+	public static Item BLUE_GEM_HOE;
+	public static Item BLUE_GEM_SHOVEL;
+	public static Item BLUE_GEM_SWORD;
 
-	public static Item whiteGemPickaxe;
-	public static Item whiteGemAxe;
-	public static Item whiteGemHoe;
-	public static Item whiteGemShovel;
-	public static Item whiteGemSword;
+	public static Item WHITE_GEM_PICKAXE;
+	public static Item WHITE_GEM_AXE;
+	public static Item WHITE_GEM_HOE;
+	public static Item WHITE_GEM_SHOVEL;
+	public static Item WHITE_GEM_SWORD;
 
-	public static Item zincPickaxe;
-	public static Item zincAxe;
-	public static Item zincHoe;
-	public static Item zincShovel;
-	public static Item zincSword;
+	public static Item ZINC_PICKAXE;
+	public static Item ZINC_AXE;
+	public static Item ZINC_HOE;
+	public static Item ZINC_SHOVEL;
+	public static Item ZINC_SWORD;
 
-	public static Item mercuryPickaxe;
-	public static Item mercuryAxe;
-	public static Item mercuryHoe;
-	public static Item mercuryShovel;
-	public static Item mercurySword;
+	public static Item MERCURY_PICKAXE;
+	public static Item MERCURY_AXE;
+	public static Item MERCURY_HOE;
+	public static Item MERCURY_SHOVEL;
+	public static Item MERCURY_SWORD;
 
-	public static Item uraniumPickaxe;
-	public static Item uraniumAxe;
-	public static Item uraniumHoe;
-	public static Item uraniumShovel;
-	public static Item uraniumSword;
+	public static Item URANIUM_PICKAXE;
+	public static Item URANIUM_AXE;
+	public static Item URANIUM_HOE;
+	public static Item URANIUM_SHOVEL;
+	public static Item URANIUM_SWORD;
 
-	public static Item blueDiamondPickaxe;
-	public static Item blueDiamondAxe;
-	public static Item blueDiamondHoe;
-	public static Item blueDiamondShovel;
-	public static Item blueDiamondSword;
+	public static Item BLUE_DIAMOND_PICKAXE;
+	public static Item BLUE_DIAMOND_AXE;
+	public static Item BLUE_DIAMOND_HOE;
+	public static Item BLUE_DIAMOND_SHOVEL;
+	public static Item BLUE_DIAMOND_SWORD;
 
-	public static Item redDiamondPickaxe;
-	public static Item redDiamondAxe;
-	public static Item redDiamondHoe;
-	public static Item redDiamondShovel;
-	public static Item redDiamondSword;
+	public static Item RED_DIAMOND_PICKAXE;
+	public static Item RED_DIAMOND_AXE;
+	public static Item RED_DIAMOND_HOE;
+	public static Item RED_DIAMOND_SHOVEL;
+	public static Item RED_DIAMOND_SWORD;
 
-	public static Item purpleDiamondPickaxe;
-	public static Item purpleDiamondAxe;
-	public static Item purpleDiamondHoe;
-	public static Item purpleDiamondShovel;
-	public static Item purpleDiamondSword;
+	public static Item PURPLE_DIAMOND_PICKAXE;
+	public static Item PURPLE_DIAMOND_AXE;
+	public static Item PURPLE_DIAMOND_HOE;
+	public static Item PURPLE_DIAMOND_SHOVEL;
+	public static Item PURPLE_DIAMOND_SWORD;
 
-	public static Item yellowDiamondPickaxe;
-	public static Item yellowDiamondAxe;
-	public static Item yellowDiamondHoe;
-	public static Item yellowDiamondShovel;
-	public static Item yellowDiamondSword;
+	public static Item YELLOW_DIAMOND_PICKAXE;
+	public static Item YELLOW_DIAMOND_AXE;
+	public static Item YELLOW_DIAMOND_HOE;
+	public static Item YELLOW_DIAMOND_SHOVEL;
+	public static Item YELLOW_DIAMOND_SWORD;
 
-	public static Item greenDiamondPickaxe;
-	public static Item greenDiamondAxe;
-	public static Item greenDiamondHoe;
-	public static Item greenDiamondShovel;
-	public static Item greenDiamondSword;
+	public static Item GREEN_DIAMOND_PICKAXE;
+	public static Item GREEN_DIAMOND_AXE;
+	public static Item GREEN_DIAMOND_HOE;
+	public static Item GREEN_DIAMOND_SHOVEL;
+	public static Item GREEN_DIAMOND_SWORD;
 
 	public static void init() {
 		initializeTools();
@@ -130,236 +130,236 @@ public class ExtraPlanets_Tools {
 	}
 
 	private static void initializeTools() {
-		if (Config.mercury && Config.mercuryItems) {
-			mercuryPickaxe = new BasicPickaxe(mercuryMaterial, "mercuryPickaxe");
-			mercuryAxe = new BasicAxe(mercuryMaterial, "mercuryAxe");
-			mercuryHoe = new BasicHoe(mercuryMaterial, "mercuryHoe");
-			mercuryShovel = new BasicShovel(mercuryMaterial, "mercuryShovel");
-			mercurySword = new BasicSword(mercuryMaterial, "mercurySword");
+		if (Config.MERCURY && Config.ITEMS_MERCURY) {
+			MERCURY_PICKAXE = new BasicPickaxe(MERCURY_MATERIAL, "mercury_pickaxe");
+			MERCURY_AXE = new BasicAxe(MERCURY_MATERIAL, "mercury_axe");
+			MERCURY_HOE = new BasicHoe(MERCURY_MATERIAL, "mercury_hoe");
+			MERCURY_SHOVEL = new BasicShovel(MERCURY_MATERIAL, "mercury_shovel");
+			MERCURY_SWORD = new BasicSword(MERCURY_MATERIAL, "mercury_sword");
 		}
-		if (Config.mercury && Config.carbonItems) {
-			carbonPickaxe = new BasicPickaxe(carbonMaterial, "carbonPickaxe");
-			carbonAxe = new BasicAxe(carbonMaterial, "carbonAxe");
-			carbonHoe = new BasicHoe(carbonMaterial, "carbonHoe");
-			carbonShovel = new BasicShovel(carbonMaterial, "carbonShovel");
-			carbonSword = new BasicSword(carbonMaterial, "carbonSword");
+		if (Config.MERCURY && Config.ITEMS_CARBON) {
+			CARBON_PICKAXE = new BasicPickaxe(CARBON_MATERIAL, "carbon_pickaxe");
+			CARBON_AXE = new BasicAxe(CARBON_MATERIAL, "carbon_axe");
+			CARBON_HOE = new BasicHoe(CARBON_MATERIAL, "carbon_hoe");
+			CARBON_SHOVEL = new BasicShovel(CARBON_MATERIAL, "carbon_shovel");
+			CARBON_SWORD = new BasicSword(CARBON_MATERIAL, "carbon_sword");
 		}
-		if (Config.ceres && Config.uraniumItems) {
-			uraniumPickaxe = new BasicPickaxe(uraniumMaterial, "uraniumPickaxe");
-			uraniumAxe = new BasicAxe(uraniumMaterial, "uraniumAxe");
-			uraniumHoe = new BasicHoe(uraniumMaterial, "uraniumHoe");
-			uraniumShovel = new BasicShovel(uraniumMaterial, "uraniumShovel");
-			uraniumSword = new BasicSword(uraniumMaterial, "uraniumSword");
+		if (Config.CERES && Config.ITEMS_URANIUM) {
+			URANIUM_PICKAXE = new BasicPickaxe(URANIUM_MATERIAL, "uranium_pickaxe");
+			URANIUM_AXE = new BasicAxe(URANIUM_MATERIAL, "uranium_axe");
+			URANIUM_HOE = new BasicHoe(URANIUM_MATERIAL, "uranium_hoe");
+			URANIUM_SHOVEL = new BasicShovel(URANIUM_MATERIAL, "uranium_shovel");
+			URANIUM_SWORD = new BasicSword(URANIUM_MATERIAL, "uranium_sword");
 		}
-		if (Config.jupiter) {
-			if (Config.palladiumItems) {
-				palladiumPickaxe = new BasicPickaxe(palladiumMaterial, "palladiumPickaxe");
-				palladiumAxe = new BasicAxe(palladiumMaterial, "palladiumAxe");
-				palladiumHoe = new BasicHoe(palladiumMaterial, "palladiumHoe");
-				palladiumShovel = new BasicShovel(palladiumMaterial, "palladiumShovel");
-				palladiumSword = new BasicSword(palladiumMaterial, "palladiumSword");
+		if (Config.JUPITER) {
+			if (Config.ITEMS_PALLADIUM) {
+				PALLADIUM_PICKAXE = new BasicPickaxe(PALLADIUM_MATERIAL, "palladium_pickaxe");
+				PALLADIUM_AXE = new BasicAxe(PALLADIUM_MATERIAL, "palladium_axe");
+				PALLADIUM_HOE = new BasicHoe(PALLADIUM_MATERIAL, "palladium_hoe");
+				PALLADIUM_SHOVEL = new BasicShovel(PALLADIUM_MATERIAL, "palladium_shovel");
+				PALLADIUM_SWORD = new BasicSword(PALLADIUM_MATERIAL, "palladium_sword");
 			}
-			if (Config.redGemItems) {
-				redGemPickaxe = new BasicPickaxe(redGemMaterial, "redGemPickaxe");
-				redGemAxe = new BasicAxe(redGemMaterial, "redGemAxe");
-				redGemHoe = new BasicHoe(redGemMaterial, "redGemHoe");
-				redGemShovel = new BasicShovel(redGemMaterial, "redGemShovel");
-				redGemSword = new BasicSword(redGemMaterial, "redGemSword");
-			}
-		}
-		if (Config.saturn && Config.magnesiumItems) {
-			magnesiumPickaxe = new BasicPickaxe(magnesiumMaterial, "magnesiumPickaxe");
-			magnesiumAxe = new BasicAxe(magnesiumMaterial, "magnesiumAxe");
-			magnesiumHoe = new BasicHoe(magnesiumMaterial, "magnesiumHoe");
-			magnesiumShovel = new BasicShovel(magnesiumMaterial, "magnesiumShovel");
-			magnesiumSword = new BasicSword(magnesiumMaterial, "magnesiumSword");
-		}
-		if (Config.uranus) {
-			if (Config.palladiumItems) {
-				crystalPickaxe = new BasicPickaxe(crystalMaterial, "crystalPickaxe");
-				crystalAxe = new BasicAxe(crystalMaterial, "crystalAxe");
-				crystalHoe = new BasicHoe(crystalMaterial, "crystalHoe");
-				crystalShovel = new BasicShovel(crystalMaterial, "crystalShovel");
-				crystalSword = new BasicSword(crystalMaterial, "crystalSword");
-			}
-			if (Config.whiteGemItems) {
-				whiteGemPickaxe = new BasicPickaxe(whiteGemMaterial, "whiteGemPickaxe");
-				whiteGemAxe = new BasicAxe(whiteGemMaterial, "whiteGemAxe");
-				whiteGemHoe = new BasicHoe(whiteGemMaterial, "whiteGemHoe");
-				whiteGemShovel = new BasicShovel(whiteGemMaterial, "whiteGemShovel");
-				whiteGemSword = new BasicSword(whiteGemMaterial, "whiteGemSword");
+			if (Config.ITEMS_GEM_RED) {
+				RED_GEM_PICKAXE = new BasicPickaxe(RED_GEM_MATERIAL, "red_gem_pickaxe");
+				RED_GEM_AXE = new BasicAxe(RED_GEM_MATERIAL, "red_gem_axe");
+				RED_GEM_HOE = new BasicHoe(RED_GEM_MATERIAL, "red_gem_hoe");
+				RED_GEM_SHOVEL = new BasicShovel(RED_GEM_MATERIAL, "red_gem_shovel");
+				RED_GEM_SWORD = new BasicSword(RED_GEM_MATERIAL, "red_gem_sword");
 			}
 		}
-		if (Config.neptune) {
-			if (Config.blueGemItems) {
-				blueGemPickaxe = new BasicPickaxe(blueGemMaterial, "blueGemPickaxe");
-				blueGemAxe = new BasicAxe(blueGemMaterial, "blueGemAxe");
-				blueGemHoe = new BasicHoe(blueGemMaterial, "blueGemHoe");
-				blueGemShovel = new BasicShovel(blueGemMaterial, "blueGemShovel");
-				blueGemSword = new BasicSword(blueGemMaterial, "blueGemSword");
+		if (Config.SATURN && Config.ITEMS_MAGNESIUM) {
+			MAGNESIUM_PICKAXE = new BasicPickaxe(MAGNESIUM_MATERIAL, "magnesium_pickaxe");
+			MAGNESIUM_AXE = new BasicAxe(MAGNESIUM_MATERIAL, "magnesium_axe");
+			MAGNESIUM_HOE = new BasicHoe(MAGNESIUM_MATERIAL, "magnesium_hoe");
+			MAGNESIUM_SHOVEL = new BasicShovel(MAGNESIUM_MATERIAL, "magnesium_shovel");
+			MAGNESIUM_SWORD = new BasicSword(MAGNESIUM_MATERIAL, "magnesium_sword");
+		}
+		if (Config.URANUS) {
+			if (Config.ITEMS_PALLADIUM) {
+				CRYSTAL_PICKAXE = new BasicPickaxe(CRYSTAL_MATERIAL, "crystal_pickaxe");
+				CRYSTAL_AXE = new BasicAxe(CRYSTAL_MATERIAL, "crystal_axe");
+				CRYSTAL_HOE = new BasicHoe(CRYSTAL_MATERIAL, "crystal_hoe");
+				CRYSTAL_SHOVEL = new BasicShovel(CRYSTAL_MATERIAL, "crystal_shovel");
+				CRYSTAL_SWORD = new BasicSword(CRYSTAL_MATERIAL, "crystal_sword");
 			}
-			if (Config.zincItems) {
-				zincPickaxe = new BasicPickaxe(zincMaterial, "zincPickaxe");
-				zincAxe = new BasicAxe(zincMaterial, "zincAxe");
-				zincHoe = new BasicHoe(zincMaterial, "zincHoe");
-				zincShovel = new BasicShovel(zincMaterial, "zincShovel");
-				zincSword = new BasicSword(zincMaterial, "zincSword");
+			if (Config.ITEMS_GEM_WHITE) {
+				WHITE_GEM_PICKAXE = new BasicPickaxe(WHITE_GEM_MATERIAL, "white_gem_pickaxe");
+				WHITE_GEM_AXE = new BasicAxe(WHITE_GEM_MATERIAL, "white_gem_axe");
+				WHITE_GEM_HOE = new BasicHoe(WHITE_GEM_MATERIAL, "white_gem_hoe");
+				WHITE_GEM_SHOVEL = new BasicShovel(WHITE_GEM_MATERIAL, "white_gem_shovel");
+				WHITE_GEM_SWORD = new BasicSword(WHITE_GEM_MATERIAL, "white_gem_sword");
 			}
 		}
-		if (Config.pluto && Config.tungstenItems) {
-			tungstenPickaxe = new BasicPickaxe(tungstenMaterial, "tungstenPickaxe");
-			tungstenAxe = new BasicAxe(tungstenMaterial, "tungstenAxe");
-			tungstenHoe = new BasicHoe(tungstenMaterial, "tungstenHoe");
-			tungstenShovel = new BasicShovel(tungstenMaterial, "tungstenShovel");
-			tungstenSword = new BasicSword(tungstenMaterial, "tungstenSword");
+		if (Config.NEPTUNE) {
+			if (Config.ITEMS_GEM_BLUE) {
+				BLUE_GEM_PICKAXE = new BasicPickaxe(BLUE_GEM_MATERIAL, "blue_gem_pickaxe");
+				BLUE_GEM_AXE = new BasicAxe(BLUE_GEM_MATERIAL, "blue_gem_axe");
+				BLUE_GEM_HOE = new BasicHoe(BLUE_GEM_MATERIAL, "blue_gem_hoe");
+				BLUE_GEM_SHOVEL = new BasicShovel(BLUE_GEM_MATERIAL, "blue_gem_shovel");
+				BLUE_GEM_SWORD = new BasicSword(BLUE_GEM_MATERIAL, "blue_gem_sword");
+			}
+			if (Config.ITEMS_ZINC) {
+				ZINC_PICKAXE = new BasicPickaxe(ZINC_MATERIAL, "zinc_pickaxe");
+				ZINC_AXE = new BasicAxe(ZINC_MATERIAL, "zinc_axe");
+				ZINC_HOE = new BasicHoe(ZINC_MATERIAL, "zinc_hoe");
+				ZINC_SHOVEL = new BasicShovel(ZINC_MATERIAL, "zinc_shovel");
+				ZINC_SWORD = new BasicSword(ZINC_MATERIAL, "zinc_sword");
+			}
 		}
-		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
-			blueDiamondPickaxe = new BasicPickaxe(blueDiamondMaterial, "blueDiamondPickaxe");
-			blueDiamondAxe = new BasicAxe(blueDiamondMaterial, "blueDiamondAxe");
-			blueDiamondHoe = new BasicHoe(blueDiamondMaterial, "blueDiamondHoe");
-			blueDiamondShovel = new BasicShovel(blueDiamondMaterial, "blueDiamondShovel");
-			blueDiamondSword = new BasicSword(blueDiamondMaterial, "blueDiamondSword");
+		if (Config.PLUTO && Config.ITEMS_TUNGSTEN) {
+			TUNGSTEN_PICKAXE = new BasicPickaxe(TUNGSTEN_MATERIAL, "tungsten_pickaxe");
+			TUNGSTEN_AXE = new BasicAxe(TUNGSTEN_MATERIAL, "tungsten_axe");
+			TUNGSTEN_HOE = new BasicHoe(TUNGSTEN_MATERIAL, "tungsten_hoe");
+			TUNGSTEN_SHOVEL = new BasicShovel(TUNGSTEN_MATERIAL, "tungsten_shovel");
+			TUNGSTEN_SWORD = new BasicSword(TUNGSTEN_MATERIAL, "tungsten_sword");
+		}
+		if (Config.KEPLER22B && Config.ITEMS_KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			BLUE_DIAMOND_PICKAXE = new BasicPickaxe(BLUE_DIAMOND_MATERIAL, "blue_diamond_pickaxe");
+			BLUE_DIAMOND_AXE = new BasicAxe(BLUE_DIAMOND_MATERIAL, "blue_diamond_axe");
+			BLUE_DIAMOND_HOE = new BasicHoe(BLUE_DIAMOND_MATERIAL, "blue_diamond_hoe");
+			BLUE_DIAMOND_SHOVEL = new BasicShovel(BLUE_DIAMOND_MATERIAL, "blue_diamond_shovel");
+			BLUE_DIAMOND_SWORD = new BasicSword(BLUE_DIAMOND_MATERIAL, "blue_diamond_sword");
 
-			redDiamondPickaxe = new BasicPickaxe(redDiamondMaterial, "redDiamondPickaxe");
-			redDiamondAxe = new BasicAxe(redDiamondMaterial, "redDiamondAxe");
-			redDiamondHoe = new BasicHoe(redDiamondMaterial, "redDiamondHoe");
-			redDiamondShovel = new BasicShovel(redDiamondMaterial, "redDiamondShovel");
-			redDiamondSword = new BasicSword(redDiamondMaterial, "redDiamondSword");
+			RED_DIAMOND_PICKAXE = new BasicPickaxe(RED_DIAMOND_MATERIAL, "red_diamond_pickaxe");
+			RED_DIAMOND_AXE = new BasicAxe(RED_DIAMOND_MATERIAL, "red_diamond_axe");
+			RED_DIAMOND_HOE = new BasicHoe(RED_DIAMOND_MATERIAL, "red_diamond_hoe");
+			RED_DIAMOND_SHOVEL = new BasicShovel(RED_DIAMOND_MATERIAL, "red_diamond_shovel");
+			RED_DIAMOND_SWORD = new BasicSword(RED_DIAMOND_MATERIAL, "red_diamond_sword");
 
-			purpleDiamondPickaxe = new BasicPickaxe(purpleDiamondMaterial, "purpleDiamondPickaxe");
-			purpleDiamondAxe = new BasicAxe(purpleDiamondMaterial, "purpleDiamondAxe");
-			purpleDiamondHoe = new BasicHoe(purpleDiamondMaterial, "purpleDiamondHoe");
-			purpleDiamondShovel = new BasicShovel(purpleDiamondMaterial, "purpleDiamondShovel");
-			purpleDiamondSword = new BasicSword(purpleDiamondMaterial, "purpleDiamondSword");
+			PURPLE_DIAMOND_PICKAXE = new BasicPickaxe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_pickaxe");
+			PURPLE_DIAMOND_AXE = new BasicAxe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_axe");
+			PURPLE_DIAMOND_HOE = new BasicHoe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_hoe");
+			PURPLE_DIAMOND_SHOVEL = new BasicShovel(PURPLE_DIAMOND_MATERIAL, "purple_diamond_shovel");
+			PURPLE_DIAMOND_SWORD = new BasicSword(PURPLE_DIAMOND_MATERIAL, "purple_diamond_sword");
 
-			yellowDiamondPickaxe = new BasicPickaxe(yellowDiamondMaterial, "yellowDiamondPickaxe");
-			yellowDiamondAxe = new BasicAxe(yellowDiamondMaterial, "yellowDiamondAxe");
-			yellowDiamondHoe = new BasicHoe(yellowDiamondMaterial, "yellowDiamondHoe");
-			yellowDiamondShovel = new BasicShovel(yellowDiamondMaterial, "yellowDiamondShovel");
-			yellowDiamondSword = new BasicSword(yellowDiamondMaterial, "yellowDiamondSword");
+			YELLOW_DIAMOND_PICKAXE = new BasicPickaxe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_pickaxe");
+			YELLOW_DIAMOND_AXE = new BasicAxe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_axe");
+			YELLOW_DIAMOND_HOE = new BasicHoe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_hoe");
+			YELLOW_DIAMOND_SHOVEL = new BasicShovel(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_shovel");
+			YELLOW_DIAMOND_SWORD = new BasicSword(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_sword");
 
-			greenDiamondPickaxe = new BasicPickaxe(greenDiamondMaterial, "greenDiamondPickaxe");
-			greenDiamondAxe = new BasicAxe(greenDiamondMaterial, "greenDiamondAxe");
-			greenDiamondHoe = new BasicHoe(greenDiamondMaterial, "greenDiamondHoe");
-			greenDiamondShovel = new BasicShovel(greenDiamondMaterial, "greenDiamondShovel");
-			greenDiamondSword = new BasicSword(greenDiamondMaterial, "greenDiamondSword");
+			GREEN_DIAMOND_PICKAXE = new BasicPickaxe(GREEN_DIAMOND_MATERIAL, "green_diamond_pickaxe");
+			GREEN_DIAMOND_AXE = new BasicAxe(GREEN_DIAMOND_MATERIAL, "green_diamond_axe");
+			GREEN_DIAMOND_HOE = new BasicHoe(GREEN_DIAMOND_MATERIAL, "green_diamond_hoe");
+			GREEN_DIAMOND_SHOVEL = new BasicShovel(GREEN_DIAMOND_MATERIAL, "green_diamond_shovel");
+			GREEN_DIAMOND_SWORD = new BasicSword(GREEN_DIAMOND_MATERIAL, "green_diamond_sword");
 		}
 	}
 
 	private static void registerTools() {
-		if (Config.mercury && Config.mercuryItems) {
-			GameRegistry.registerItem(mercuryPickaxe, "mercuryPickaxe");
-			GameRegistry.registerItem(mercuryAxe, "mercuryAxe");
-			GameRegistry.registerItem(mercuryHoe, "mercuryHoe");
-			GameRegistry.registerItem(mercuryShovel, "mercuryShovel");
-			GameRegistry.registerItem(mercurySword, "mercurySword");
+		if (Config.MERCURY && Config.ITEMS_MERCURY) {
+			GameRegistry.registerItem(MERCURY_PICKAXE, MERCURY_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MERCURY_AXE, MERCURY_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MERCURY_HOE, MERCURY_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MERCURY_SHOVEL, MERCURY_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MERCURY_SWORD, MERCURY_SWORD.getUnlocalizedName().substring(5));
 		}
-		if (Config.mercury && Config.carbonItems) {
-			GameRegistry.registerItem(carbonPickaxe, "carbonPickaxe");
-			GameRegistry.registerItem(carbonAxe, "carbonAxe");
-			GameRegistry.registerItem(carbonHoe, "carbonHoe");
-			GameRegistry.registerItem(carbonShovel, "carbonShovel");
-			GameRegistry.registerItem(carbonSword, "carbonSword");
+		if (Config.MERCURY && Config.ITEMS_CARBON) {
+			GameRegistry.registerItem(CARBON_PICKAXE, CARBON_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(CARBON_AXE, CARBON_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(CARBON_HOE, CARBON_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(CARBON_SHOVEL, CARBON_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(CARBON_SWORD, CARBON_SWORD.getUnlocalizedName().substring(5));
 		}
-		if (Config.ceres && Config.uraniumItems) {
-			GameRegistry.registerItem(uraniumPickaxe, "uraniumPickaxe");
-			GameRegistry.registerItem(uraniumAxe, "uraniumAxe");
-			GameRegistry.registerItem(uraniumHoe, "uraniumHoe");
-			GameRegistry.registerItem(uraniumShovel, "uraniumShovel");
-			GameRegistry.registerItem(uraniumSword, "uraniumSword");
+		if (Config.CERES && Config.ITEMS_URANIUM) {
+			GameRegistry.registerItem(URANIUM_PICKAXE, URANIUM_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(URANIUM_AXE, URANIUM_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(URANIUM_HOE, URANIUM_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(URANIUM_SHOVEL, URANIUM_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(URANIUM_SWORD, URANIUM_SWORD.getUnlocalizedName().substring(5));
 		}
-		if (Config.jupiter) {
-			if (Config.palladiumItems) {
-				GameRegistry.registerItem(palladiumPickaxe, "palladiumPickaxe");
-				GameRegistry.registerItem(palladiumAxe, "palladiumAxe");
-				GameRegistry.registerItem(palladiumHoe, "palladiumHoe");
-				GameRegistry.registerItem(palladiumShovel, "palladiumShovel");
-				GameRegistry.registerItem(palladiumSword, "palladiumSword");
+		if (Config.JUPITER) {
+			if (Config.ITEMS_PALLADIUM) {
+				GameRegistry.registerItem(PALLADIUM_PICKAXE, PALLADIUM_PICKAXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(PALLADIUM_AXE, PALLADIUM_AXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(PALLADIUM_HOE, PALLADIUM_HOE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(PALLADIUM_SHOVEL, PALLADIUM_SHOVEL.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(PALLADIUM_SWORD, PALLADIUM_SWORD.getUnlocalizedName().substring(5));
 			}
-			if (Config.redGemItems) {
-				GameRegistry.registerItem(redGemPickaxe, "redGemPickaxe");
-				GameRegistry.registerItem(redGemAxe, "redGemAxe");
-				GameRegistry.registerItem(redGemHoe, "redGemHoe");
-				GameRegistry.registerItem(redGemShovel, "redGemShovel");
-				GameRegistry.registerItem(redGemSword, "redGemSword");
-			}
-		}
-		if (Config.saturn && Config.magnesiumItems) {
-			GameRegistry.registerItem(magnesiumPickaxe, "magnesiumPickaxe");
-			GameRegistry.registerItem(magnesiumAxe, "magnesiumAxe");
-			GameRegistry.registerItem(magnesiumHoe, "magnesiumHoe");
-			GameRegistry.registerItem(magnesiumShovel, "magnesiumShovel");
-			GameRegistry.registerItem(magnesiumSword, "magnesiumSword");
-		}
-		if (Config.uranus) {
-			if (Config.crystalItems) {
-				GameRegistry.registerItem(crystalPickaxe, "crystalPickaxe");
-				GameRegistry.registerItem(crystalAxe, "crystalAxe");
-				GameRegistry.registerItem(crystalHoe, "crystalHoe");
-				GameRegistry.registerItem(crystalShovel, "crystalShovel");
-				GameRegistry.registerItem(crystalSword, "crystalSword");
-			}
-			if (Config.whiteGemItems) {
-				GameRegistry.registerItem(whiteGemPickaxe, "whiteGemPickaxe");
-				GameRegistry.registerItem(whiteGemAxe, "whiteGemAxe");
-				GameRegistry.registerItem(whiteGemHoe, "whiteGemHoe");
-				GameRegistry.registerItem(whiteGemShovel, "whiteGemShovel");
-				GameRegistry.registerItem(whiteGemSword, "whiteGemSword");
+			if (Config.ITEMS_GEM_RED) {
+				GameRegistry.registerItem(RED_GEM_PICKAXE, RED_GEM_PICKAXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(RED_GEM_AXE, RED_GEM_AXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(RED_GEM_HOE, RED_GEM_HOE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(RED_GEM_SHOVEL, RED_GEM_SHOVEL.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(RED_GEM_SWORD, RED_GEM_SWORD.getUnlocalizedName().substring(5));
 			}
 		}
-		if (Config.neptune) {
-			if (Config.blueGemItems) {
-				GameRegistry.registerItem(blueGemPickaxe, "blueGemPickaxe");
-				GameRegistry.registerItem(blueGemAxe, "blueGemAxe");
-				GameRegistry.registerItem(blueGemHoe, "blueGemHoe");
-				GameRegistry.registerItem(blueGemShovel, "blueGemShovel");
-				GameRegistry.registerItem(blueGemSword, "blueGemSword");
+		if (Config.SATURN && Config.ITEMS_MAGNESIUM) {
+			GameRegistry.registerItem(MAGNESIUM_PICKAXE, MAGNESIUM_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MAGNESIUM_AXE, MAGNESIUM_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MAGNESIUM_HOE, MAGNESIUM_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MAGNESIUM_SHOVEL, MAGNESIUM_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(MAGNESIUM_SWORD, MAGNESIUM_SWORD.getUnlocalizedName().substring(5));
+		}
+		if (Config.URANUS) {
+			if (Config.ITEMS_CRYSTAL) {
+				GameRegistry.registerItem(CRYSTAL_PICKAXE, CRYSTAL_PICKAXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(CRYSTAL_AXE, CRYSTAL_AXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(CRYSTAL_HOE, CRYSTAL_HOE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(CRYSTAL_SHOVEL, CRYSTAL_SHOVEL.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(CRYSTAL_SWORD, CRYSTAL_SWORD.getUnlocalizedName().substring(5));
 			}
-			if (Config.zincItems) {
-				GameRegistry.registerItem(zincPickaxe, "zincPickaxe");
-				GameRegistry.registerItem(zincAxe, "zincAxe");
-				GameRegistry.registerItem(zincHoe, "zincHoe");
-				GameRegistry.registerItem(zincShovel, "zincShovel");
-				GameRegistry.registerItem(zincSword, "zincSword");
+			if (Config.ITEMS_GEM_WHITE) {
+				GameRegistry.registerItem(WHITE_GEM_PICKAXE, WHITE_GEM_PICKAXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(WHITE_GEM_AXE, WHITE_GEM_AXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(WHITE_GEM_HOE, WHITE_GEM_HOE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(WHITE_GEM_SHOVEL, WHITE_GEM_SHOVEL.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(WHITE_GEM_SWORD, WHITE_GEM_SWORD.getUnlocalizedName().substring(5));
 			}
 		}
-		if (Config.pluto && Config.tungstenItems) {
-			GameRegistry.registerItem(tungstenPickaxe, "tungstenPickaxe");
-			GameRegistry.registerItem(tungstenAxe, "tungstenAxe");
-			GameRegistry.registerItem(tungstenHoe, "tungstenHoe");
-			GameRegistry.registerItem(tungstenShovel, "tungstenShovel");
-			GameRegistry.registerItem(tungstenSword, "tungstenSword");
+		if (Config.NEPTUNE) {
+			if (Config.ITEMS_GEM_BLUE) {
+				GameRegistry.registerItem(BLUE_GEM_PICKAXE, BLUE_GEM_PICKAXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(BLUE_GEM_AXE, BLUE_GEM_AXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(BLUE_GEM_HOE, BLUE_GEM_HOE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(BLUE_GEM_SHOVEL, BLUE_GEM_SHOVEL.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(BLUE_GEM_SWORD, BLUE_GEM_SWORD.getUnlocalizedName().substring(5));
+			}
+			if (Config.ITEMS_ZINC) {
+				GameRegistry.registerItem(ZINC_PICKAXE, ZINC_PICKAXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(ZINC_AXE, ZINC_AXE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(ZINC_HOE, ZINC_HOE.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(ZINC_SHOVEL, ZINC_SHOVEL.getUnlocalizedName().substring(5));
+				GameRegistry.registerItem(ZINC_SWORD, ZINC_SWORD.getUnlocalizedName().substring(5));
+			}
 		}
-		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
-			GameRegistry.registerItem(blueDiamondPickaxe, "blueDiamondPickaxe");
-			GameRegistry.registerItem(blueDiamondAxe, "blueDiamondAxe");
-			GameRegistry.registerItem(blueDiamondHoe, "blueDiamondHoe");
-			GameRegistry.registerItem(blueDiamondShovel, "blueDiamondShovel");
-			GameRegistry.registerItem(blueDiamondSword, "blueDiamondSword");
+		if (Config.PLUTO && Config.ITEMS_TUNGSTEN) {
+			GameRegistry.registerItem(TUNGSTEN_PICKAXE, TUNGSTEN_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(TUNGSTEN_AXE, TUNGSTEN_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(TUNGSTEN_HOE, TUNGSTEN_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(TUNGSTEN_SHOVEL, TUNGSTEN_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(TUNGSTEN_SWORD, TUNGSTEN_SWORD.getUnlocalizedName().substring(5));
+		}
+		if (Config.KEPLER22B && Config.ITEMS_KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			GameRegistry.registerItem(BLUE_DIAMOND_PICKAXE, BLUE_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(BLUE_DIAMOND_AXE, BLUE_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(BLUE_DIAMOND_HOE, BLUE_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(BLUE_DIAMOND_SHOVEL, BLUE_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(BLUE_DIAMOND_SWORD, BLUE_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(redDiamondPickaxe, "redDiamondPickaxe");
-			GameRegistry.registerItem(redDiamondAxe, "redDiamondAxe");
-			GameRegistry.registerItem(redDiamondHoe, "redDiamondHoe");
-			GameRegistry.registerItem(redDiamondShovel, "redDiamondShovel");
-			GameRegistry.registerItem(redDiamondSword, "redDiamondSword");
+			GameRegistry.registerItem(RED_DIAMOND_PICKAXE, RED_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(RED_DIAMOND_AXE, RED_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(RED_DIAMOND_HOE, RED_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(RED_DIAMOND_SHOVEL, RED_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(RED_DIAMOND_SWORD, RED_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(purpleDiamondPickaxe, "purpleDiamondPickaxe");
-			GameRegistry.registerItem(purpleDiamondAxe, "purpleDiamondAxe");
-			GameRegistry.registerItem(purpleDiamondHoe, "purpleDiamondHoe");
-			GameRegistry.registerItem(purpleDiamondShovel, "purpleDiamondShovel");
-			GameRegistry.registerItem(purpleDiamondSword, "purpleDiamondSword");
+			GameRegistry.registerItem(PURPLE_DIAMOND_PICKAXE, PURPLE_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(PURPLE_DIAMOND_AXE, PURPLE_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(PURPLE_DIAMOND_HOE, PURPLE_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(PURPLE_DIAMOND_SHOVEL, PURPLE_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(PURPLE_DIAMOND_SWORD, PURPLE_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(yellowDiamondPickaxe, "yellowDiamondPickaxe");
-			GameRegistry.registerItem(yellowDiamondAxe, "yellowDiamondAxe");
-			GameRegistry.registerItem(yellowDiamondHoe, "yellowDiamondHoe");
-			GameRegistry.registerItem(yellowDiamondShovel, "yellowDiamondShovel");
-			GameRegistry.registerItem(yellowDiamondSword, "yellowDiamondSword");
+			GameRegistry.registerItem(YELLOW_DIAMOND_PICKAXE, YELLOW_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(YELLOW_DIAMOND_AXE, YELLOW_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(YELLOW_DIAMOND_HOE, YELLOW_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(YELLOW_DIAMOND_SHOVEL, YELLOW_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(YELLOW_DIAMOND_SWORD, YELLOW_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(greenDiamondPickaxe, "greenDiamondPickaxe");
-			GameRegistry.registerItem(greenDiamondAxe, "greenDiamondAxe");
-			GameRegistry.registerItem(greenDiamondHoe, "greenDiamondHoe");
-			GameRegistry.registerItem(greenDiamondShovel, "greenDiamondShovel");
-			GameRegistry.registerItem(greenDiamondSword, "greenDiamondSword");
+			GameRegistry.registerItem(GREEN_DIAMOND_PICKAXE, GREEN_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(GREEN_DIAMOND_AXE, GREEN_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(GREEN_DIAMOND_HOE, GREEN_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(GREEN_DIAMOND_SHOVEL, GREEN_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			GameRegistry.registerItem(GREEN_DIAMOND_SWORD, GREEN_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 		}
 	}
 }

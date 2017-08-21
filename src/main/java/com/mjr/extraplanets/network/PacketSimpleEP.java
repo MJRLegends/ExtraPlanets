@@ -6,29 +6,46 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase.EnumLaunchPhase;
+import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.client.handlers.EPPlayerStatsClient;
-import com.mjr.extraplanets.handlers.EPPlayerStats;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
+import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
+import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
+import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
+import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 
 @SuppressWarnings("rawtypes")
 public class PacketSimpleEP extends PacketBase implements Packet {
 	public enum EnumSimplePacket {
-		// Client
-		C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
+		// SERVER
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER),
+
+		// CLIENT
+		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -105,16 +122,29 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	@Override
 	public void handleClientSide(EntityPlayer player) {
 		EntityPlayerSP playerBaseClient = null;
-		EPPlayerStatsClient stats = null;
+		IStatsClientCapability stats = null;
 
 		if (player instanceof EntityPlayerSP) {
 			playerBaseClient = (EntityPlayerSP) player;
-			stats = EPPlayerStatsClient.get(playerBaseClient);
+			stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
 		}
 
 		switch (this.type) {
+		case C_OPEN_PARACHEST_GUI:
+			switch ((Integer) this.data.get(1)) {
+			case 0:
+				if (player.ridingEntity instanceof EntityVehicleBase) {
+					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiVehicleBase(player.inventory, (EntityVehicleBase) player.ridingEntity, ((EntityVehicleBase) player.ridingEntity).getType()));
+					player.openContainer.windowId = (Integer) this.data.get(0);
+				} else if (player.ridingEntity instanceof EntityPoweredVehicleBase) {
+					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.ridingEntity, ((EntityPoweredVehicleBase) player.ridingEntity).getType()));
+					player.openContainer.windowId = (Integer) this.data.get(0);
+				}
+				break;
+			}
+			break;
 		case C_UPDATE_SOLAR_RADIATION_LEVEL:
-			stats.radiationLevel = (Double) this.data.get(0);
+			stats.setRadiationLevel((double) this.data.get(0));
 			break;
 		default:
 			break;
@@ -123,16 +153,50 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 	@Override
 	public void handleServerSide(EntityPlayer player) {
-		final EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
+		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
 		if (playerBase == null) {
 			return;
 		}
 
-		@SuppressWarnings("unused")
-		final EPPlayerStats stats = EPPlayerStats.get(playerBase);
+		GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
 		switch (this.type) {
+		case S_OPEN_FUEL_GUI:
+			if (player.ridingEntity instanceof EntityVehicleBase) {
+				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) player.ridingEntity, ((EntityVehicleBase) player.ridingEntity).getType());
+			}
+			break;
+		case S_OPEN_POWER_GUI:
+			if (player.ridingEntity instanceof EntityPoweredVehicleBase) {
+				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.ridingEntity, ((EntityPoweredVehicleBase) player.ridingEntity).getType());
+			} else if (player.ridingEntity instanceof EntityElectricRocketBase) {
+				player.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, player.worldObj, (int) player.posX, (int) player.posY, (int) player.posZ);
+			}
+			break;
+		case S_IGNITE_ROCKET:
+			if (!player.worldObj.isRemote && !player.isDead && player.ridingEntity != null && !player.ridingEntity.isDead && player.ridingEntity instanceof EntityElectricRocketBase) {
+				final EntityElectricRocketBase ship = (EntityElectricRocketBase) player.ridingEntity;
+
+				if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
+					if (ship.hasValidPower()) {
+						ItemStack stack2 = GCPlayerStats.get(playerBase).getExtendedInventory().getStackInSlot(4);
+
+						if (stack2 != null && stack2.getItem() instanceof ItemParaChute || stats.getLaunchAttempts() > 0) {
+							ship.igniteCheckingCooldown();
+							GCPlayerStats.get(playerBase).setLaunchAttempts(0);
+						} else if (stats.getChatCooldown() == 0 && GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
+							player.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.noparachute")));
+							stats.setChatCooldown(250);
+							GCPlayerStats.get(playerBase).setLaunchAttempts(1);
+						}
+					} else if (stats.getChatCooldown() == 0) {
+						player.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.nofuel")));
+						stats.setChatCooldown(250);
+					}
+				}
+			}
+			break;
 		default:
 			break;
 		}

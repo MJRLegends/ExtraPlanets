@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.blocks.fluid;
 
+import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -12,109 +13,122 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.mjr.extraplanets.Constants;
 
 public class ExtraPlanets_Fluids {
-	public static Block glowstone;
-	public static Fluid glowstone_fluid;
+	public static Block GLOWSTONE;
+	public static Fluid GLOWSTONE_FLUID;
 
-	public static Block magma;
-	public static Fluid magma_fluid;
+	public static Block MAGMA;
+	public static Fluid MAGMA_FLUID;
 
-	public static Block nitrogen;
-	public static Fluid nitrogen_fluid;
+	public static Block NITROGEN;
+	public static Fluid NITROGEN_FLUID;
 
-	public static Block frozen_water;
-	public static Fluid frozen_water_fluid;
+	public static Block FROZEN_WATER;
+	public static Fluid FROZEN_WATER_FLUID;
 
-	public static Block salt;
-	public static Fluid salt_fluid;
+	public static Block SALT;
+	public static Fluid SALT_FLUID;
 
-	public static Block radioactiveWater;
-	public static Fluid radioactiveWater_fluid;
+	public static Block RADIO_ACTIVE_WATER;
+	public static Fluid RADIO_ACTIVE_WATER_FLUID;
 
-	public static Block cleanWater;
-	public static Fluid cleanWater_fluid;
+	public static Block CLEAN_WATER;
+	public static Fluid CLEAN_WATER_FLUID;
 
-	public static Block infectedWater;
-	public static Fluid infectedWater_fluid;
+	public static Block INFECTED_WATER;
+	public static Fluid INFECTED_WATER_FLUID;
 
-	public static Block methane;
-	public static Fluid methane_fluid;
+	public static Block METHANE;
+	public static Fluid METHANE_FLUID;
 
-	public static Block nitrogen_ice;
-	public static Fluid nitrogen_ice_fluid;
+	public static Block NITROGEN_ICE;
+	public static Fluid NITROGEN_ICE_FLUID;
 
-	public static Material glowstone_material = new MaterialLiquid(MapColor.yellowColor);
-	public static Material magma_material = new MaterialLiquid(MapColor.tntColor);
-	public static Material nitrogen_material = new MaterialLiquid(MapColor.lightBlueColor);
-	public static Material frozen_water_material = new MaterialLiquid(MapColor.waterColor);
-	public static Material salt_material = new MaterialLiquid(MapColor.grayColor);
-	public static Material methane_material = new MaterialLiquid(MapColor.greenColor);
+	public static Block LIQUID_HYDROCARBON;
+	public static Fluid LIQUID_HYDROCARBON_FLUID;
+
+	public static Material GLOWSTONE_MATERIAL = new MaterialLiquid(MapColor.yellowColor);
+	public static Material MAGMA_MATERIAL = new MaterialLiquid(MapColor.obsidianColor);
+	public static Material NITROGEN_MATERIAL = new MaterialLiquid(MapColor.lightBlueColor);
+	public static Material FROZEN_WATER_MATERIAL = new MaterialLiquid(MapColor.diamondColor);
+	public static Material SALT_MATERIAL = new MaterialLiquid(MapColor.grayColor);
+	public static Material METHANE_MATERIAL = new MaterialLiquid(MapColor.grassColor);
 
 	public static void init() {
 		initFluid();
-		registerBlocks();
+		try {
+			registerBlocks();
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private static void initFluid() {
-		glowstone_fluid = new Fluid("glowstone_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_flow")).setBlock(glowstone)
+		GLOWSTONE_FLUID = new Fluid("glowstone_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/glowstone_flow")).setBlock(GLOWSTONE)
 				.setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(glowstone_fluid);
-		glowstone = new FluidGlowstone("glowstone");
+		FluidRegistry.registerFluid(GLOWSTONE_FLUID);
+		GLOWSTONE = new FluidBlockEP(GLOWSTONE_FLUID, "glowstone", GLOWSTONE_MATERIAL).setLightLevel(1.0F);
 
-		magma_fluid = new Fluid("magma_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_flow")).setBlock(magma).setDensity(800)
+		MAGMA_FLUID = new Fluid("magma_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/magma_flow")).setBlock(MAGMA).setDensity(800)
 				.setViscosity(1500);
-		FluidRegistry.registerFluid(magma_fluid);
-		magma = new FluidMagma("magma");
+		FluidRegistry.registerFluid(MAGMA_FLUID);
+		MAGMA = new FluidBlockEP(MAGMA_FLUID, "magma", Material.lava);
 
-		nitrogen_fluid = new Fluid("nitrogen_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_flow")).setBlock(nitrogen).setDensity(800)
+		NITROGEN_FLUID = new Fluid("nitrogen_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_flow")).setBlock(NITROGEN).setDensity(800)
 				.setViscosity(1500);
-		FluidRegistry.registerFluid(nitrogen_fluid);
-		nitrogen = new FluidNitrogen("nitrogen");
+		FluidRegistry.registerFluid(NITROGEN_FLUID);
+		NITROGEN = new FluidBlockEP(NITROGEN_FLUID, "nitrogen", NITROGEN_MATERIAL);
 
-		frozen_water_fluid = new Fluid("frozen_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_flow"))
-				.setBlock(frozen_water).setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(frozen_water_fluid);
-		frozen_water = new FluidFrozenWater("frozen_water");
+		FROZEN_WATER_FLUID = new Fluid("frozen_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/frozen_water_flow"))
+				.setBlock(FROZEN_WATER).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(FROZEN_WATER_FLUID);
+		FROZEN_WATER = new FluidBlockEP(FROZEN_WATER_FLUID, "frozen_water", FROZEN_WATER_MATERIAL);
 
-		salt_fluid = new Fluid("salt_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_flow")).setBlock(salt).setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(salt_fluid);
-		salt = new FluidSalt("salt");
+		SALT_FLUID = new Fluid("salt_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/salt_flow")).setBlock(SALT).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(SALT_FLUID);
+		SALT = new FluidBlockEP(SALT_FLUID, "salt", SALT_MATERIAL);
 
-		radioactiveWater_fluid = new Fluid("radioactive_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_flow"))
-				.setBlock(radioactiveWater).setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(radioactiveWater_fluid);
-		radioactiveWater = new FluidRadioactiveWater("radioactive_water");
+		RADIO_ACTIVE_WATER_FLUID = new Fluid("radioactive_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/radioactive_water_flow"))
+				.setBlock(RADIO_ACTIVE_WATER).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(RADIO_ACTIVE_WATER_FLUID);
+		RADIO_ACTIVE_WATER = new FluidBlockEP(RADIO_ACTIVE_WATER_FLUID, "radioactive_water", FROZEN_WATER_MATERIAL);
 
-		cleanWater_fluid = new Fluid("clean_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_flow")).setBlock(cleanWater)
+		CLEAN_WATER_FLUID = new Fluid("clean_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/clean_water_flow")).setBlock(CLEAN_WATER)
 				.setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(cleanWater_fluid);
-		cleanWater = new FluidCleanWater("clean_water");
+		FluidRegistry.registerFluid(CLEAN_WATER_FLUID);
+		CLEAN_WATER = new FluidBlockEP(CLEAN_WATER_FLUID, "clean_water", FROZEN_WATER_MATERIAL);
 
-		infectedWater_fluid = new Fluid("infected_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_flow"))
-				.setBlock(infectedWater).setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(infectedWater_fluid);
-		infectedWater = new FluidInfectedWater("infected_water");
+		INFECTED_WATER_FLUID = new Fluid("infected_water_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/infected_water_flow"))
+				.setBlock(INFECTED_WATER).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(INFECTED_WATER_FLUID);
+		INFECTED_WATER = new FluidBlockEP(INFECTED_WATER_FLUID, "infected_water", FROZEN_WATER_MATERIAL);
 
-		methane_fluid = new Fluid("methane_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_flow")).setBlock(methane).setDensity(800)
+		METHANE_FLUID = new Fluid("methane_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/methane_flow")).setBlock(METHANE).setDensity(800)
 				.setViscosity(1500);
-		FluidRegistry.registerFluid(methane_fluid);
-		methane = new FluidMethane("methane");
+		FluidRegistry.registerFluid(METHANE_FLUID);
+		METHANE = new FluidBlockEP(METHANE_FLUID, "methane", METHANE_MATERIAL);
 
-		nitrogen_ice_fluid = new Fluid("nitrogen_ice_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_ice_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_ice_flow"))
-				.setBlock(nitrogen_ice).setDensity(800).setViscosity(1500);
-		FluidRegistry.registerFluid(nitrogen_ice_fluid);
-		nitrogen_ice = new FluidNitrogenIce("nitrogen_ice");
+		NITROGEN_ICE_FLUID = new Fluid("nitrogen_ice_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_ice_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/nitrogen_ice_flow"))
+				.setBlock(NITROGEN_ICE).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(NITROGEN_ICE_FLUID);
+		NITROGEN_ICE = new FluidBlockEP(NITROGEN_ICE_FLUID, "nitrogen_ice", NITROGEN_MATERIAL);
+
+		LIQUID_HYDROCARBON_FLUID = new Fluid("liquid_hydrocarbon_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_hydrocarbon_still"), new ResourceLocation(Constants.TEXTURE_PREFIX
+				+ "blocks/fluids/liquid_hydrocarbon_flow")).setBlock(LIQUID_HYDROCARBON).setDensity(800).setViscosity(1500);
+		FluidRegistry.registerFluid(LIQUID_HYDROCARBON_FLUID);
+		LIQUID_HYDROCARBON = new FluidBlockEP(LIQUID_HYDROCARBON_FLUID, "liquid_hydrocarbon", FROZEN_WATER_MATERIAL);
 	}
 
-	private static void registerBlocks() {
-		GameRegistry.registerBlock(glowstone, glowstone.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(magma, magma.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(nitrogen, nitrogen.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(frozen_water, frozen_water.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(salt, salt.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(radioactiveWater, radioactiveWater.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(cleanWater, cleanWater.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(infectedWater, infectedWater.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(methane, methane.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(nitrogen_ice, nitrogen_ice.getUnlocalizedName().substring(5));
+	private static void registerBlocks() throws NoSuchMethodException {
+		GameRegistry.registerBlock(GLOWSTONE, ItemBlockGC.class, "glowstone");
+		GameRegistry.registerBlock(MAGMA, ItemBlockGC.class, "magma");
+		GameRegistry.registerBlock(NITROGEN, ItemBlockGC.class, "nitrogen");
+		GameRegistry.registerBlock(FROZEN_WATER, ItemBlockGC.class, "frozen_water");
+		GameRegistry.registerBlock(SALT, ItemBlockGC.class, "salt");
+		GameRegistry.registerBlock(RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
+		GameRegistry.registerBlock(CLEAN_WATER, ItemBlockGC.class, "clean_water");
+		GameRegistry.registerBlock(INFECTED_WATER, ItemBlockGC.class, "infected_water");
+		GameRegistry.registerBlock(METHANE, ItemBlockGC.class, "methane");
+		GameRegistry.registerBlock(NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
+		GameRegistry.registerBlock(LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
 	}
 }

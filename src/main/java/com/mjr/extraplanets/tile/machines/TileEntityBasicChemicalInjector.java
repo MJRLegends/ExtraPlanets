@@ -22,7 +22,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[4];
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.potassiumIodide, 1, 0);
+	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE, 1, 0);
 
 	public TileEntityBasicChemicalInjector() {
 	}
@@ -52,9 +52,9 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 			return false;
 		if (this.containingItems[2] == null)
 			return false;
-		if (this.containingItems[1].getItem() != ExtraPlanets_Items.iodideSalt)
+		if (this.containingItems[1].getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
-		if (this.containingItems[2].getItem() != ExtraPlanets_Items.potassium)
+		if (this.containingItems[2].getItem() != ExtraPlanets_Items.POTASSIUM)
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -143,9 +143,9 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.iodideSalt;
+				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.potassium;
+				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
 			default:
 				return false;
 			}
@@ -160,7 +160,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 4:
-				return itemstack.getItem() == ExtraPlanets_Items.potassiumIodide;
+				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
 			default:
 				return false;
 			}

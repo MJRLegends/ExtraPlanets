@@ -10,31 +10,22 @@ import com.mjr.extraplanets.Config;
 
 public class DeimosBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase deimos = new BiomeGenDeimos(Config.deimosBiomeID).setBiomeName("deimos");
+	public static final BiomeGenBase deimos = new BiomeGenDeimos(Config.DEIMOS_BIOME_ID).setBiomeName("deimos").setHeight(new Height(2.5F, 0.4F));
 
-	@SuppressWarnings("unchecked")
-	DeimosBiomes(int var1)
-	{
-		super(var1);
+	DeimosBiomes(int par1) {
+		super(par1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.rainfall = 0F;
 	}
 
 	@Override
-	public DeimosBiomes setColor(int var1)
-	{
-		return (DeimosBiomes) super.setColor(var1);
-	}
-
-	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

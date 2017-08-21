@@ -154,6 +154,7 @@ public class BlockBasicIo extends Block implements IDetectableResource, IPlantab
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
+		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
 	}
 
@@ -165,7 +166,7 @@ public class BlockBasicIo extends Block implements IDetectableResource, IPlantab
 	}
 
 	@Override
-	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
+	    public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.stone) {
 			return false;
 		}

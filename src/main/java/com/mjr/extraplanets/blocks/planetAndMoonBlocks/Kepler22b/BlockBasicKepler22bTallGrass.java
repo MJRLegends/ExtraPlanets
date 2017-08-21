@@ -69,9 +69,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 
 	@Override
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
-		{
-			super.harvestBlock(worldIn, player, pos, state, te);
-		}
+		super.harvestBlock(worldIn, player, pos, state, te);
 	}
 
 	@Override

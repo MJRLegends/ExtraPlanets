@@ -1,7 +1,7 @@
 {
-    "parent": "builtin/generated",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "extraplanets:items/tier6.tier6Fin"
+        "layer0": "extraplanets:items/tier6.tier6_fin"
     },
     "display": {
         "thirdperson": {

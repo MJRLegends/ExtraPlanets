@@ -1,20 +1,20 @@
 package com.mjr.extraplanets;
 
 public class Constants {
-	public static final String modID = "ExtraPlanets";
+	public static final String modID = "extraplanets";
 	public static final String modName = "ExtraPlanets";
 
 	public static final int LOCALMAJVERSION = 0;
-	public static final int LOCALMINVERSION = 9;
-	public static final int LOCALBUILDVERSION = 3;
+	public static final int LOCALMINVERSION = 5;
+	public static final int LOCALBUILDVERSION = 7;
 
-	public static final String modVersion = LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION + "-Beta-Build";
+	public static final String modVersion = LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
 	public static final String MCVERSION = "[1.8.9]";
-	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[11.15.1.1764,); "; // Keep the space at the end!
-	public static final String DEPENDENCIES_MODS = "required-after:GalacticraftCore;required-after:GalacticraftPlanets; "; // Keep the space at the end!
+	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,); "; // Keep the space at the end!
+	public static final String DEPENDENCIES_MODS = "required-after:galacticraftcore; required-after:galacticraftplanets; "; // Keep the space at the end!
 
-	public static final String ASSET_PREFIX = "extraplanets";
+	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
 	public static final String PREFIX = modID + ".";
 
@@ -24,9 +24,17 @@ public class Constants {
 	public static final float twoPI = Constants.floatPI * 2F;
 	public static final float halfPI = Constants.floatPI / 2F;
 	public static final float floatPI = 3.1415927F;
-
+	
 	public static final int SPACE_STATION_LOWER_Y_LIMIT = 10;
 	public static final int SPACE_STATION_HIGHER_Y_LIMIT = 1200;
+	
+	public static final float PLANET_AND_MOON_SPAWN_HEIGHT = 900.0F;
+	public static final double PLANET_AND_MOON_SPAWN_HEIGHT_D = 900.0D;
+	
+	public static final double SPACE_STATION_SPAWN_HEIGHT_D = 65.0D;
+	
+	public static final double PLANET_AND_MOON_PARA_CHEST_SPAWN_HEIGHT_D = 220.0D;
+	public static final double SPACE_STATION_PARA_CHEST_SPAWN_HEIGHT_D = 90.0D;
 
 	public static final int GEAR_ID_OXYGEN_TANK_VERY_HEAVY = 5000;
 	public static final int GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY = 5001;
