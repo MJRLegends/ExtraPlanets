@@ -4,15 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
-import net.minecraft.util.ResourceLocation;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
+import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.api.ISolarRadiationWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Mercury.worldgen.BiomeProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.ChunkProviderMercury;
+import com.mjr.extraplanets.planets.Mercury.worldgen.WorldChunkManagerMercury;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderMercury extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld, ISolarRadiationWorld {
@@ -40,13 +40,13 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+	public Class<? extends IChunkProvider> getChunkProviderClass() {
 		return ChunkProviderMercury.class;
 	}
 
 	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		return BiomeProviderMercury.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerMercury.class;
 	}
 
 	@Override
@@ -115,17 +115,17 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public DimensionType getDimensionType() {
-		return ExtraPlanetsDimensions.MERCURY;
-	}
-
-	@Override
 	public int getDungeonSpacing() {
 		return 800;
 	}
 
 	@Override
-	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+	public String getDungeonChestType() {
+		return RoomChest.MOONCHEST;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "mercury";
 	}
 }

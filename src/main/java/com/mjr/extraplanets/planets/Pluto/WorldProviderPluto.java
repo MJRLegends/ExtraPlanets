@@ -4,15 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
-import net.minecraft.util.ResourceLocation;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
+import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Pluto.worldgen.BiomeProviderPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.ChunkProviderPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.WorldChunkManagerPluto;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderPluto extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -28,6 +28,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
 	}
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -39,13 +40,13 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+	public Class<? extends IChunkProvider> getChunkProviderClass() {
 		return ChunkProviderPluto.class;
 	}
 
 	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		return BiomeProviderPluto.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerPluto.class;
 	}
 
 	@Override
@@ -117,17 +118,17 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public DimensionType getDimensionType() {
-		return ExtraPlanetsDimensions.PLUTO;
-	}
-
-	@Override
 	public int getDungeonSpacing() {
 		return 800;
 	}
 
 	@Override
-	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+	public String getDungeonChestType() {
+		return RoomChest.MOONCHEST;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "pluto";
 	}
 }

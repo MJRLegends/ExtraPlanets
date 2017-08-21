@@ -15,8 +15,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Triton.worldgen.BiomeProviderTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.ChunkProviderTriton;
+import com.mjr.extraplanets.moons.Triton.worldgen.WorldChunkManagerTriton;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderTriton extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -58,8 +58,8 @@ public class WorldProviderTriton extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return BiomeProviderTriton.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerTriton.class;
 	}
 
 	@Override
@@ -182,7 +182,7 @@ public class WorldProviderTriton extends CustomWorldProviderSpace implements IGa
 	public int getSolarRadiationLevel() {
 		return 10;
 	}
-	
+
 	@Override
 	public int getDungeonSpacing() {
 		return 0;

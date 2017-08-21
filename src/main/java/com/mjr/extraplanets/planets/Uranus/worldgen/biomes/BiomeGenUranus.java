@@ -7,8 +7,8 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 
 public class BiomeGenUranus extends UranusBiomes {
 
-	public BiomeGenUranus(BiomeProperties properties) {
-		super(properties);
+	public BiomeGenUranus(int var1) {
+		super(var1);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 		this.topBlock = ExtraPlanets_Blocks.URANUS_BLOCKS.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(1);

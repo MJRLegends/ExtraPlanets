@@ -10,8 +10,8 @@ import com.mjr.extraplanets.Config;
 public class UranusEvents {
 	@SubscribeEvent
 	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.URANUS_ID) {
-			if (event.getEntity() instanceof EntityPlayer) {
+		if (event.entityLiving.worldObj.provider.getDimensionId() == Config.URANUS_ID) {
+			if (event.entity instanceof EntityPlayer) {
 				event.setCanceled(false);
 			} else {
 				if (Config.MOB_SUFFOCATION)
@@ -24,8 +24,8 @@ public class UranusEvents {
 
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.URANUS_ID) {
-			event.getEntityPlayer().heal(5.0F);
+		if (event.entityLiving.worldObj.provider.getDimensionId() == Config.URANUS_ID) {
+			event.entityPlayer.heal(5.0F);
 		}
 	}
 }

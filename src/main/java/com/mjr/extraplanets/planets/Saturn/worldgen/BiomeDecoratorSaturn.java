@@ -32,7 +32,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
-		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,boolean usingMetaData, Block StoneBlock, int StoneMeta);

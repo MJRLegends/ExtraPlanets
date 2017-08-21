@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.biome.WorldChunkManager;
 
 public class StructureComponentVillageStartPiece extends StructureComponentVillageWell {
-	public BiomeProvider biomeProvider;
+	public WorldChunkManager biomeProvider;
 	public int terrainType;
 	public StructureVillagePieceWeightNeptune structVillagePieceWeight;
 	public ArrayList<StructureVillagePieceWeightNeptune> structureVillageWeightedPieceList;
@@ -16,7 +17,7 @@ public class StructureComponentVillageStartPiece extends StructureComponentVilla
 	public StructureComponentVillageStartPiece() {
 	}
 
-	public StructureComponentVillageStartPiece(BiomeProvider biomeProvider, int par2, Random par3Random, int par4, int par5, ArrayList<StructureVillagePieceWeightNeptune> par6ArrayList, int par7) {
+	public StructureComponentVillageStartPiece(WorldChunkManager biomeProvider, int par2, Random par3Random, int par4, int par5, ArrayList<StructureVillagePieceWeightNeptune> par6ArrayList, int par7) {
 		super((StructureComponentVillageStartPiece) null, 0, par3Random, par4, par5);
 		this.biomeProvider = biomeProvider;
 		this.structureVillageWeightedPieceList = par6ArrayList;
@@ -38,7 +39,7 @@ public class StructureComponentVillageStartPiece extends StructureComponentVilla
 		this.terrainType = nbt.getInteger("TerrainType");
 	}
 
-	public BiomeProvider getBiomeProvider() {
+	public WorldChunkManager getWorldChunkManager() {
 		return this.biomeProvider;
 	}
 }

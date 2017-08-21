@@ -12,26 +12,28 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
 
-public class JupiterBiomes extends Biome {
+public class JupiterBiomes extends BiomeGenBase {
+	public static final BiomeGenBase jupiter = new BiomeGenJupiter(Config.JUPITER_BIOME_ID).setBiomeName("jupiter").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase jupiterMagmaSea = new BiomeGenJupiterMagmaSea(Config.JUPITER_SEA_BIOME_ID).setBiomeName("jupiterMagmaSea").setHeight(new Height(-1.0F, 0.0F));
 
-	public static final Biome jupiter = new BiomeGenJupiter(new BiomeProperties("jupiter").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome jupiterMagmaSea = new BiomeGenJupiterMagmaSea(new BiomeProperties("jupiterMagmaSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-
-	protected JupiterBiomes(BiomeProperties properties) {
-		super(properties);
+	protected JupiterBiomes(int var1) {
+		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.rainfall = 0F;
 	}
 
 	@Override
@@ -60,10 +62,10 @@ public class JupiterBiomes extends Biome {
 
 		for (int j1 = 255; j1 >= 0; --j1) {
 			if (j1 <= rand.nextInt(5)) {
-				chunk.setBlockState(i1, j1, l, Blocks.BEDROCK.getDefaultState());
+				chunk.setBlockState(i1, j1, l, Blocks.bedrock.getDefaultState());
 			} else {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
-				if (iblockstate2.getMaterial() == Material.AIR) {
+				if (iblockstate2.getBlock().getMaterial() == Material.air) {
 					j = -1;
 				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(2).getBlock()) {
 					if (j == -1) {
@@ -75,11 +77,11 @@ public class JupiterBiomes extends Biome {
 							iblockstate1 = this.fillerBlock;
 						}
 
-						if (j1 < 63 && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							if (this.getFloatTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
-								iblockstate = Blocks.ICE.getDefaultState();
+						if (j1 < 63 && (iblockstate == null || iblockstate.getBlock().getMaterial() == Material.air)) {
+							if (this.getFloatTemperature(blockpos$mutableblockpos.set(x, j1, z)) < 0.15F) {
+								iblockstate = Blocks.ice.getDefaultState();
 							} else {
-								iblockstate = Blocks.WATER.getDefaultState();
+								iblockstate = Blocks.water.getDefaultState();
 							}
 						}
 
@@ -90,7 +92,7 @@ public class JupiterBiomes extends Biome {
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
 							iblockstate1 = ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(2);
-							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
+							chunk.setBlockState(i1, j1, l, Blocks.gravel.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);
 						}

@@ -25,7 +25,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
     public StructureComponentVillageHouse(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, int par2, Random par3Random, StructureBoundingBox par4StructureBoundingBox, EnumFacing par5)
     {
         super(par1ComponentVillageStartPiece, par2);
-        this.setCoordBaseMode(par5);
+        this.coordBaseMode = par5;
         this.boundingBox = par4StructureBoundingBox;
     }
 
@@ -111,7 +111,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 1, yLevel, 5, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 1, yLevel, 6, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 1, yLevel, 7, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.air.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 1, yLevel, 9, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 1, yLevel, 10, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 1, yLevel, 11, par3StructureBoundingBox);
@@ -124,7 +124,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 5, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 6, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 7, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.air.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 9, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 10, yLevel, 15, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 11, yLevel, 15, par3StructureBoundingBox);
@@ -137,7 +137,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 15, yLevel, 11, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 15, yLevel, 10, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 15, yLevel, 9, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.air.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 15, yLevel, 7, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 15, yLevel, 6, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 15, yLevel, 5, par3StructureBoundingBox);
@@ -150,7 +150,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 11, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 10, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 9, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.AIR.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2) : Blocks.air.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 7, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 6, yLevel, 1, par3StructureBoundingBox);
             this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 5, yLevel, 1, par3StructureBoundingBox);
@@ -206,10 +206,10 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
         this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 6, yLevel, 1, par3StructureBoundingBox);
         this.setBlockState(par1World, ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2), 5, yLevel, 1, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode()), 8, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode().rotateY()), 14, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode().getOpposite()), 8, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode().rotateYCCW()), 2, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode), 8, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode.rotateY()), 14, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode.getOpposite()), 8, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.coordBaseMode.rotateYCCW()), 2, yLevel, 8, par3StructureBoundingBox);
 
         yLevel = 5;
 
@@ -451,7 +451,7 @@ public class StructureComponentVillageHouse extends StructureComponentVillage
                 {
                     if (i >= 7 && i <= 9 && j >= 7 && j <= 9)
                     {
-                        this.setBlockState(par1World, Blocks.GLASS.getDefaultState(), i, yLevel, j, par3StructureBoundingBox);
+                        this.setBlockState(par1World, Blocks.glass.getDefaultState(), i, yLevel, j, par3StructureBoundingBox);
                     }
                     else
                     {

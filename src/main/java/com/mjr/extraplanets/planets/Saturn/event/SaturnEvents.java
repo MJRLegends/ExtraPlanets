@@ -10,8 +10,8 @@ import com.mjr.extraplanets.Config;
 public class SaturnEvents {
 	@SubscribeEvent
 	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.SATURN_ID) {
-			if (event.getEntity() instanceof EntityPlayer) {
+		if (event.entityLiving.worldObj.provider.getDimensionId() == Config.SATURN_ID) {
+			if (event.entity instanceof EntityPlayer) {
 				event.setCanceled(false);
 			} else {
 				if (Config.MOB_SUFFOCATION)
@@ -24,8 +24,8 @@ public class SaturnEvents {
 
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.SATURN_ID) {
-			event.getEntityPlayer().heal(5.0F);
+		if (event.entityLiving.worldObj.provider.getDimensionId() == Config.SATURN_ID) {
+			event.entityPlayer.heal(5.0F);
 		}
 	}
 }

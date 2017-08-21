@@ -4,8 +4,8 @@ import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenEris extends ErisBiomes {
 
-	public BiomeGenEris(BiomeProperties properties) {
-		super(properties);
+	public BiomeGenEris(int var1) {
+		super(var1);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }

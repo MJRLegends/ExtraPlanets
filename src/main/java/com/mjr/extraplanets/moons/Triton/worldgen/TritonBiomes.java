@@ -13,28 +13,30 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.BiomeGenBase.Height;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceLands;
 
 public class TritonBiomes extends BiomeGenBase {
+	public static final BiomeGenBase triton = new BiomeGenTriton(Config.IO_BIOME_ID).setBiomeName("triton").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase tritonIceLands = new BiomeGenTritonIceLands(Config.IO_BIOME_ID).setBiomeName("tritonIceLands").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase tritonIceSea = new BiomeGenTritonIceLands(Config.IO_BIOME_ID).setBiomeName("tritonIceSea").setHeight(new Height(-1.0F, 0.0F));
 
-	public static final BiomeGenBase triton = new BiomeGenTriton(new BiomeProperties("triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceLands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
-	public static final BiomeGenBase tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
-
-	protected TritonBiomes(BiomeProperties properties) {
-		super(properties);
+	protected TritonBiomes(int par1) {
+		super(par1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		this.rainfall = 0F;
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+        this.rainfall = 0F;
 	}
 
 	@Override
@@ -67,10 +69,10 @@ public class TritonBiomes extends BiomeGenBase {
 
 		for (int j1 = 255; j1 >= 0; --j1) {
 			if (j1 <= rand.nextInt(5)) {
-				chunk.setBlockState(i1, j1, l, Blocks.BEDROCK.getDefaultState());
+				chunk.setBlockState(i1, j1, l, Blocks.bedrock.getDefaultState());
 			} else {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
-				if (iblockstate2.getMaterial() == Material.AIR) {
+				if (iblockstate2.getBlock().getMaterial() == Material.air) {
 					j = -1;
 				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.TRITON_BLOCKS.getStateFromMeta(2).getBlock()) {
 					if (j == -1) {
@@ -82,11 +84,11 @@ public class TritonBiomes extends BiomeGenBase {
 							iblockstate1 = this.fillerBlock;
 						}
 
-						if (j1 < 63 && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							if (this.getFloatTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
-								iblockstate = Blocks.ICE.getDefaultState();
+						if (j1 < 63 && (iblockstate == null || iblockstate.getBlock().getMaterial() == Material.air)) {
+							if (this.getFloatTemperature(blockpos$mutableblockpos.set(x, j1, z)) < 0.15F) {
+								iblockstate = Blocks.ice.getDefaultState();
 							} else {
-								iblockstate = Blocks.WATER.getDefaultState();
+								iblockstate = Blocks.water.getDefaultState();
 							}
 						}
 
@@ -97,7 +99,7 @@ public class TritonBiomes extends BiomeGenBase {
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
 							iblockstate1 = ExtraPlanets_Blocks.TRITON_BLOCKS.getStateFromMeta(2);
-							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
+							chunk.setBlockState(i1, j1, l, Blocks.gravel.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);
 						}

@@ -4,8 +4,8 @@ import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenPluto extends PlutoBiomes {
 
-	public BiomeGenPluto(BiomeProperties properties) {
-		super(properties);
+	public BiomeGenPluto(int var1) {
+		super(var1);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }

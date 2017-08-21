@@ -9,6 +9,7 @@ import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
@@ -38,7 +39,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 			for (int l2 = -1; l2 <= 4; ++l2) {
 				for (int i3 = l1; i3 <= i2; ++i3) {
 					BlockPos blockpos = position.add(k2, l2, i3);
-					Material material = worldIn.getBlockState(blockpos).getMaterial();
+					Material material = worldIn.getBlockState(blockpos).getBlock().getMaterial();
 					boolean flag = material.isSolid();
 
 					if (l2 == -1 && !flag) {
@@ -64,12 +65,12 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 						BlockPos blockpos1 = position.add(k3, i4, k4);
 
 						if (k3 != k && i4 != -1 && k4 != l1 && k3 != l && i4 != 4 && k4 != i2) {
-							if (worldIn.getBlockState(blockpos1).getBlock() != Blocks.CHEST) {
+							if (worldIn.getBlockState(blockpos1).getBlock() != Blocks.chest) {
 								worldIn.setBlockToAir(blockpos1);
 							}
-						} else if (blockpos1.getY() >= 0 && !worldIn.getBlockState(blockpos1.down()).getMaterial().isSolid()) {
+						} else if (blockpos1.getY() >= 0 && !worldIn.getBlockState(blockpos1.down()).getBlock().getMaterial().isSolid()) {
 							worldIn.setBlockToAir(blockpos1);
-						} else if (worldIn.getBlockState(blockpos1).getMaterial().isSolid() && worldIn.getBlockState(blockpos1).getBlock() != Blocks.CHEST) {
+						} else if (worldIn.getBlockState(blockpos1).getBlock().getMaterial().isSolid() && worldIn.getBlockState(blockpos1).getBlock() != Blocks.chest) {
 							if (i4 == -1 && rand.nextInt(4) != 0) {
 								worldIn.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(11), 2);
 							} else {
@@ -91,17 +92,17 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 						int j3 = 0;
 
 						for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
-							if (worldIn.getBlockState(blockpos2.offset(enumfacing)).getMaterial().isSolid()) {
+							if (worldIn.getBlockState(blockpos2.offset(enumfacing)).getBlock().getMaterial().isSolid()) {
 								++j3;
 							}
 						}
 
 						if (j3 == 1) {
-							worldIn.setBlockState(blockpos2, Blocks.CHEST.correctFacing(worldIn, blockpos2, Blocks.CHEST.getDefaultState()), 2);
+							worldIn.setBlockState(blockpos2, Blocks.chest.correctFacing(worldIn, blockpos2, Blocks.chest.getDefaultState()), 2);
 							TileEntity tileentity1 = worldIn.getTileEntity(blockpos2);
 
 							if (tileentity1 instanceof TileEntityChest) {
-								((TileEntityChest) tileentity1).setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
+								WeightedRandomChestContent.generateChestContents(rand, net.minecraftforge.common.ChestGenHooks.getItems(net.minecraftforge.common.ChestGenHooks.DUNGEON_CHEST, rand), (TileEntityChest) tileentity1, 8);
 							}
 
 							break;
@@ -110,7 +111,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 				}
 			}
 
-			worldIn.setBlockState(position, Blocks.MOB_SPAWNER.getDefaultState(), 2);
+			worldIn.setBlockState(position, Blocks.mob_spawner.getDefaultState(), 2);
 			TileEntity tileentity = worldIn.getTileEntity(position);
 
 			if (tileentity instanceof TileEntityMobSpawner) {

@@ -4,15 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
-import net.minecraft.util.ResourceLocation;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
+import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeProviderNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.WorldChunkManagerNeptune;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderNeptune extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -40,13 +40,13 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+	public Class<? extends IChunkProvider> getChunkProviderClass() {
 		return ChunkProviderNeptune.class;
 	}
 
 	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		return BiomeProviderNeptune.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerNeptune.class;
 	}
 
 	@Override
@@ -112,7 +112,7 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 		}
 		return -130.0F;
 	}
-	
+
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 2.0D;
@@ -129,17 +129,17 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 	}
 
 	@Override
-	public DimensionType getDimensionType() {
-		return ExtraPlanetsDimensions.NEPTUNE;
-	}
-
-	@Override
 	public int getDungeonSpacing() {
 		return 800;
 	}
 
 	@Override
-	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+	public String getDungeonChestType() {
+		return RoomChest.MOONCHEST;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "neptune";
 	}
 }

@@ -20,7 +20,7 @@ public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
 		ChunkProviderCustomNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
-		ChunkProviderCustomNormal.waterBlock = Blocks.WATER.getDefaultState();
+		ChunkProviderCustomNormal.waterBlock = Blocks.water.getDefaultState();
 	}
 
 	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();
@@ -45,6 +45,6 @@ public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		this.ravineGenerator.generate(worldObj, cX, cX, primer);
+		this.ravineGenerator.generate(this, this.worldObj, cX, cX, primer);
 	}
 }

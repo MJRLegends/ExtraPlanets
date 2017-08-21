@@ -12,28 +12,29 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusFrozenWaterSea;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusSnowLands;
 
-public class UranusBiomes extends Biome {
+public class UranusBiomes extends BiomeGenBase {
+	public static final BiomeGenBase uranus = new BiomeGenUranus(Config.URANUS_BIOME_ID).setBiomeName("uranus").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase uranusFrozenWater = new BiomeGenUranusFrozenWaterSea(Config.URANUS_FROZEN_SEA_BIOME_ID).setBiomeName("uranusFrozenWater").setHeight(new Height(-1.0F, 0.0F));
+	public static final BiomeGenBase uranusSnowLands = new BiomeGenUranusSnowLands(Config.URANUS_SNOW_LANDS_BIOME_ID).setBiomeName("uranusSnowLands").setHeight(new Height(0.825F, 0.25F));
 
-	public static final Biome uranus = new BiomeGenUranus(new BiomeProperties("uranus").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome uranusFrozenWater = new BiomeGenUranusFrozenWaterSea(new BiomeProperties("uranusFrozenWater").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome uranusSnowLands = new BiomeGenUranusSnowLands(new BiomeProperties("uranusSnowLands").setBaseHeight(0.825F).setHeightVariation(0.25F).setRainfall(0.0F).setRainDisabled());
-
-	protected UranusBiomes(BiomeProperties properties) {
-		super(properties);
+	protected UranusBiomes(int var1) {
+		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 	}
 
 	@Override
@@ -62,10 +63,10 @@ public class UranusBiomes extends Biome {
 
 		for (int j1 = 255; j1 >= 0; --j1) {
 			if (j1 <= rand.nextInt(5)) {
-				chunk.setBlockState(i1, j1, l, Blocks.BEDROCK.getDefaultState());
+				chunk.setBlockState(i1, j1, l, Blocks.bedrock.getDefaultState());
 			} else {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
-				if (iblockstate2.getMaterial() == Material.AIR) {
+				if (iblockstate2.getBlock().getMaterial() == Material.air) {
 					j = -1;
 				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2).getBlock()) {
 					if (j == -1) {
@@ -77,11 +78,11 @@ public class UranusBiomes extends Biome {
 							iblockstate1 = this.fillerBlock;
 						}
 
-						if (j1 < 63 && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							if (this.getFloatTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
-								iblockstate = Blocks.ICE.getDefaultState();
+						if (j1 < 63 && (iblockstate == null || iblockstate.getBlock().getMaterial() == Material.air)) {
+							if (this.getFloatTemperature(blockpos$mutableblockpos.set(x, j1, z)) < 0.15F) {
+								iblockstate = Blocks.ice.getDefaultState();
 							} else {
-								iblockstate = Blocks.WATER.getDefaultState();
+								iblockstate = Blocks.water.getDefaultState();
 							}
 						}
 
@@ -92,7 +93,7 @@ public class UranusBiomes extends Biome {
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
 							iblockstate1 = ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2);
-							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
+							chunk.setBlockState(i1, j1, l, Blocks.gravel.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);
 						}

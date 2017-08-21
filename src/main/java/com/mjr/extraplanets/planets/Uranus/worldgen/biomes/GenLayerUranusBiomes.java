@@ -1,12 +1,13 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
 import micdoodle8.mods.miccore.IntCache;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 
 public class GenLayerUranusBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { UranusBiomes.uranus, UranusBiomes.uranusFrozenWater, UranusBiomes.uranusSnowLands};
+	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { UranusBiomes.uranus, UranusBiomes.uranusFrozenWater, UranusBiomes.uranusSnowLands };
 
 	public GenLayerUranusBiomes(long l, GenLayer parent) {
 		super(l);
@@ -24,7 +25,7 @@ public class GenLayerUranusBiomes extends GenLayer {
 		for (int k = 0; k < depth; ++k) {
 			for (int i = 0; i < width; ++i) {
 				initChunkSeed(x + i, z + k);
-				dest[i + k * width] = Biome.getIdForBiome(biomes[nextInt(biomes.length)]);
+				dest[i + k * width] = biomes[nextInt(biomes.length)].biomeID;
 			}
 		}
 

@@ -7,6 +7,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.MapGenBase;
 
@@ -171,7 +172,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 			int i = 1;
 
 			for (int j = 0; j < i; ++j) {
-				float f = this.rand.nextFloat() * Constants.twoPI;
+				float f = this.rand.nextFloat() * Constants.floatPI * 2.0F;
 				float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
 				float f2 = (this.rand.nextFloat() * 2.0F + this.rand.nextFloat()) * 2.0F;
 				this.func_180707_a(this.rand.nextLong(), p_180701_4_, p_180701_5_, chunkPrimerIn, d0, d1, d2, f2, f, f1, 0, 0, 3.0D);
@@ -181,20 +182,26 @@ public class MapGenRavineKepler22b extends MapGenBase {
 
 	protected boolean isOceanBlock(ChunkPrimer data, int x, int y, int z, int chunkX, int chunkZ) {
 		net.minecraft.block.Block block = data.getBlockState(x, y, z).getBlock();
-		return block == Blocks.FLOWING_WATER || block == Blocks.WATER;
+		return block == Blocks.flowing_water || block == Blocks.water;
 	}
 
 	// Exception biomes to make sure we generate like vanilla
-	private boolean isExceptionBiome(Biome biome) {
+	private boolean isExceptionBiome(BiomeGenBase biome) {
+		if (biome == BiomeGenBase.mushroomIsland)
+			return true;
+		if (biome == BiomeGenBase.beach)
+			return true;
+		if (biome == BiomeGenBase.desert)
+			return true;
 		return false;
 	}
 
 	// Determine if the block at the specified location is the top block for the biome, we take into account
 	// Vanilla bugs to make sure that we generate the map the same way vanilla does.
 	private boolean isTopBlock(ChunkPrimer data, int x, int y, int z, int chunkX, int chunkZ) {
-		net.minecraft.world.biome.Biome biome = worldObj.getBiome(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
+		net.minecraft.world.biome.BiomeGenBase biome = worldObj.getBiomeGenForCoords(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
 		IBlockState state = data.getBlockState(x, y, z);
-		return (isExceptionBiome(biome) ? state.getBlock() == Blocks.GRASS : state.getBlock() == biome.topBlock);
+		return (isExceptionBiome(biome) ? state.getBlock() == Blocks.grass : state.getBlock() == biome.topBlock);
 	}
 
 	/**
@@ -219,14 +226,14 @@ public class MapGenRavineKepler22b extends MapGenBase {
 	 *            True if we've encountered the biome's top block. Ideally if we've broken the surface.
 	 */
 	protected void digBlock(ChunkPrimer data, int x, int y, int z, int chunkX, int chunkZ, boolean foundTop) {
-		net.minecraft.world.biome.Biome biome = worldObj.getBiome(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
+		net.minecraft.world.biome.BiomeGenBase biome = worldObj.getBiomeGenForCoords(new BlockPos(x + chunkX * 16, 0, z + chunkZ * 16));
 		IBlockState state = data.getBlockState(x, y, z);
 		IBlockState top = biome.topBlock;
 		IBlockState filler = biome.fillerBlock;
 
-		if (state.getBlock() == Blocks.STONE || state.getBlock() == top.getBlock() || state.getBlock() == filler.getBlock()) {
+		if (state.getBlock() == Blocks.stone || state.getBlock() == top.getBlock() || state.getBlock() == filler.getBlock()) {
 			if (y < 10) {
-				data.setBlockState(x, y, z, Blocks.LAVA.getDefaultState());
+				data.setBlockState(x, y, z, Blocks.lava.getDefaultState());
 			} else {
 				data.setBlockState(x, y, z, Blocks.air.getDefaultState());
 

@@ -4,15 +4,15 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
-import net.minecraft.util.ResourceLocation;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
+import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Saturn.worldgen.BiomeProviderSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.ChunkProviderSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.WorldChunkManagerSaturn;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -28,7 +28,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(240 / 255.0F * f, 160 / 255.0F * f, 55 / 255.0F * f);
 	}
-	
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -40,13 +40,13 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+	public Class<? extends IChunkProvider> getChunkProviderClass() {
 		return ChunkProviderSaturn.class;
 	}
 
 	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		return BiomeProviderSaturn.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerSaturn.class;
 	}
 
 	@Override
@@ -127,11 +127,6 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	public int getSolarRadiationLevel() {
 		return 30;
 	}
-	
-	@Override
-	public DimensionType getDimensionType() {
-		return ExtraPlanetsDimensions.SATURN;
-	}
 
 	@Override
 	public int getDungeonSpacing() {
@@ -139,7 +134,12 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+	public String getDungeonChestType() {
+		return RoomChest.MOONCHEST;
+	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		return "saturn";
 	}
 }

@@ -31,7 +31,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorUranus() {
-		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
 		this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 3, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
 		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DENSE_ICE, 8, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 0);
 		this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);

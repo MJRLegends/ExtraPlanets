@@ -46,7 +46,7 @@ public abstract class StructureComponentVillage extends StructureComponent {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	protected StructureComponent getNextComponentNN(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5) {
-		switch (this.getCoordBaseMode().getHorizontalIndex()) {
+		switch (this.coordBaseMode.getHorizontalIndex()) {
 		case 0:
 			return StructureVillagePiecesJupiter.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(1),
 					this.getComponentType());
@@ -66,7 +66,7 @@ public abstract class StructureComponentVillage extends StructureComponent {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	protected StructureComponent getNextComponentPP(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5) {
-		switch (this.getCoordBaseMode().getHorizontalIndex()) {
+		switch (this.coordBaseMode.getHorizontalIndex()) {
 		case 0:
 			return StructureVillagePiecesJupiter.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(3),
 					this.getComponentType());
@@ -91,12 +91,12 @@ public abstract class StructureComponentVillage extends StructureComponent {
 
 		for (int k = this.boundingBox.minZ; k <= this.boundingBox.maxZ; ++k) {
 			for (int l = this.boundingBox.minX; l <= this.boundingBox.maxX; ++l) {
-				blockpos$mutableblockpos.setPos(l, 64, k);
+				blockpos$mutableblockpos.set(l, 64, k);
 
 				if (boundingBox.isVecInside(blockpos$mutableblockpos)) {
 					if(world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY() <= 100){
 						for(int n = 0; n < 20; n++){
-							if(world.getBlockState(blockpos$mutableblockpos) == Blocks.AIR)
+							if(world.getBlockState(blockpos$mutableblockpos) == Blocks.air)
 								return blockpos$mutableblockpos.getY() + n;
 						}
 					}

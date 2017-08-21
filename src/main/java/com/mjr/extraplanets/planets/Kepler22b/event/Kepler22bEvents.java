@@ -8,8 +8,8 @@ import com.mjr.extraplanets.Config;
 public class Kepler22bEvents {
 	@SubscribeEvent
 	public void GCCoreEventWakePlayer(EventWakePlayer event) {
-		if (event.getEntityLiving().worldObj.provider.getDimension() == Config.KEPLER22B_ID) {
-			event.getEntityPlayer().heal(5.0F);
+		if (event.entityLiving.worldObj.provider.getDimensionId() == Config.KEPLER22B_ID) {
+			event.entityPlayer.heal(5.0F);
 		}
 	}
 }

@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
@@ -21,7 +22,7 @@ import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVil
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureVillageStartCeres;
 
 public class MapGenVillageCeres extends MapGenStructure {
-	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenCeres.ceres });
+	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenCeres.ceres });
 	private final int terrainType;
 	private static boolean initialized;
 

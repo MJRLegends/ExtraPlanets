@@ -78,12 +78,12 @@ public class RoomTreasureUranus extends RoomTreasure
                         }
                         else
                         {
-                            this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+                            this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
                         }
                     }
                     else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1))
                     {
-                        this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, boundingBox);
+                        this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
                     }
                     else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2)
                     {
@@ -91,7 +91,7 @@ public class RoomTreasureUranus extends RoomTreasure
                     }
                     else
                     {
-                        this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+                        this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
                     }
                 }
             }

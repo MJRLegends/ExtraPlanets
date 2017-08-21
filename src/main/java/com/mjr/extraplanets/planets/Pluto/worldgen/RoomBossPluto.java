@@ -57,11 +57,11 @@ public class RoomBossPluto extends RoomBoss {
 						if (placeBlock) {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
+							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
 						}
 					} else if (j == this.sizeY) {
 						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(4) == 0) {
-							this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, chunkBox);
+							this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, chunkBox);
 						} else {
 							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						}
@@ -70,7 +70,7 @@ public class RoomBossPluto extends RoomBoss {
 					// this.setBlockState(worldIn, MarsBlocks.creeperEgg.getDefaultState(), i, j, k, chunkBox);
 					// }
 					else {
-						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
+						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
 					}
 				}
 			}

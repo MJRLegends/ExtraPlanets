@@ -5,11 +5,12 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
@@ -50,7 +51,7 @@ public class WorldProviderMercuryOrbit extends WorldProviderOverworldOrbit {
 	}
 
 	@Override
-	public Class<? extends IChunkGenerator> getChunkProviderClass() {
+	public Class<? extends IChunkProvider> getChunkProviderClass() {
 		return ChunkProviderOrbit.class;
 	}
 
@@ -135,7 +136,7 @@ public class WorldProviderMercuryOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getSaveFolder() {
-		return "DIM_SPACESTATION_Mercury_" + this.getDimension();
+		return "DIM_SPACESTATION_Mercury_" + this.getDimensionId();
 	}
 
 	@Override
@@ -172,10 +173,4 @@ public class WorldProviderMercuryOrbit extends WorldProviderOverworldOrbit {
 	public float getWindLevel() {
 		return 0.1F;
 	}
-	
-    @Override
-    public DimensionType getDimensionType()
-    {
-        return ExtraPlanetsDimensions.MERCURY_ORBIT;
-    }
 }

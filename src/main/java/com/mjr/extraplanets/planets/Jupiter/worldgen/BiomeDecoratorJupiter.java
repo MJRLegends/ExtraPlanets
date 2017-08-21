@@ -47,7 +47,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		this.ashRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ASH_ROCK, 5, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 1);
 		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.VOLCANIC_ROCK, 5, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 1);
 		if (Config.GENERATE_JUITPER_SKY_FEATURE)
-			this.skyBlocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 3, 2, false, Blocks.AIR, 0);
+			this.skyBlocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 3, 2, false, Blocks.air, 0);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 

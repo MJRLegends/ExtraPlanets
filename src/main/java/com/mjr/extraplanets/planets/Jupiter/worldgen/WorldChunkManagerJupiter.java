@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeCache;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 import net.minecraftforge.fml.relauncher.Side;
@@ -17,36 +17,31 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.GenLayerJupiter;
 
-public class BiomeProviderJupiter extends BiomeProvider {
+public class WorldChunkManagerJupiter extends WorldChunkManager {
 	private GenLayer unzoomedBiomes;
 	private GenLayer zoomedBiomes;
 	private BiomeCache biomeCache;
-	private List<Biome> biomesToSpawnIn;
+	private List<BiomeGenBase> biomesToSpawnIn;
 
-	protected BiomeProviderJupiter() {
+	protected WorldChunkManagerJupiter() {
 		biomeCache = new BiomeCache(this);
 		biomesToSpawnIn = new ArrayList<>();
 	}
 
-	public BiomeProviderJupiter(long seed, WorldType type) {
+	public WorldChunkManagerJupiter(long seed, WorldType type) {
 		this();
 		GenLayer[] genLayers = GenLayerJupiter.createWorld(seed);
 		this.unzoomedBiomes = genLayers[0];
 		this.zoomedBiomes = genLayers[1];
 	}
 
-	public BiomeProviderJupiter(World world) {
+	public WorldChunkManagerJupiter(World world) {
 		this(world.getSeed(), world.getWorldInfo().getTerrainType());
 	}
 
 	@Override
-	public List<Biome> getBiomesToSpawnIn() {
+	public List<BiomeGenBase> getBiomesToSpawnIn() {
 		return this.biomesToSpawnIn;
-	}
-
-	@Override
-	public Biome getBiome(BlockPos pos, Biome defaultBiome) {
-		return this.biomeCache.getBiome(pos.getX(), pos.getZ(), JupiterBiomes.jupiter);
 	}
 
 	@Override
@@ -56,18 +51,18 @@ public class BiomeProviderJupiter extends BiomeProvider {
 	}
 
 	@Override
-	public Biome[] getBiomesForGeneration(Biome[] biomes, int x, int z, int length, int width) {
+	public BiomeGenBase[] getBiomesForGeneration(BiomeGenBase[] biomes, int x, int z, int length, int width) {
 		IntCache.resetIntCache();
 
 		if (biomes == null || biomes.length < length * width) {
-			biomes = new Biome[length * width];
+			biomes = new BiomeGenBase[length * width];
 		}
 
 		int[] intArray = unzoomedBiomes.getInts(x, z, length, width);
 
 		for (int i = 0; i < length * width; ++i) {
 			if (intArray[i] >= 0) {
-				biomes[i] = Biome.getBiome(intArray[i]);
+				biomes[i] = BiomeGenBase.getBiome(intArray[i]);
 			} else {
 				biomes[i] = JupiterBiomes.jupiter;
 			}
@@ -77,20 +72,20 @@ public class BiomeProviderJupiter extends BiomeProvider {
 	}
 
 	@Override
-	public Biome[] getBiomes(@Nullable Biome[] oldBiomeList, int x, int z, int width, int depth) {
-		return getBiomes(oldBiomeList, x, z, width, depth, true);
+	public BiomeGenBase[] loadBlockGeneratorData(BiomeGenBase[] oldBiomeList, int x, int z, int length, int width) {
+		return getBiomeGenAt(oldBiomeList, x, z, length, width, true);
 	}
 
 	@Override
-	public Biome[] getBiomes(@Nullable Biome[] listToReuse, int x, int z, int width, int length, boolean cacheFlag) {
+	public BiomeGenBase[] getBiomeGenAt(BiomeGenBase[] listToReuse, int x, int z, int length, int width, boolean cacheFlag) {
 		IntCache.resetIntCache();
 
 		if (listToReuse == null || listToReuse.length < length * width) {
-			listToReuse = new Biome[width * length];
+			listToReuse = new BiomeGenBase[width * length];
 		}
 
 		if (cacheFlag && width == 16 && length == 16 && (x & 15) == 0 && (z & 15) == 0) {
-			Biome[] cached = this.biomeCache.getCachedBiomes(x, z);
+			BiomeGenBase[] cached = this.biomeCache.getCachedBiomes(x, z);
 			System.arraycopy(cached, 0, listToReuse, 0, width * length);
 			return listToReuse;
 		}
@@ -99,7 +94,7 @@ public class BiomeProviderJupiter extends BiomeProvider {
 
 		for (int i = 0; i < width * length; ++i) {
 			if (zoomed[i] >= 0) {
-				listToReuse[i] = Biome.getBiome(zoomed[i]);
+				listToReuse[i] = BiomeGenBase.getBiome(zoomed[i]);
 			} else {
 				listToReuse[i] = JupiterBiomes.jupiter;
 			}
@@ -109,7 +104,7 @@ public class BiomeProviderJupiter extends BiomeProvider {
 	}
 
 	@Override
-	public boolean areBiomesViable(int x, int z, int range, List<Biome> viables) {
+	public boolean areBiomesViable(int x, int z, int range, List<BiomeGenBase> viables) {
 		int i = x - range >> 2;
 		int j = z - range >> 2;
 		int k = x + range >> 2;
@@ -119,7 +114,7 @@ public class BiomeProviderJupiter extends BiomeProvider {
 		int[] unzoomed = this.unzoomedBiomes.getInts(i, j, diffX, diffZ);
 
 		for (int a = 0; a < diffX * diffZ; ++a) {
-			Biome biome = Biome.getBiome(unzoomed[a]);
+			BiomeGenBase biome = BiomeGenBase.getBiome(unzoomed[a]);
 
 			if (!viables.contains(biome)) {
 				return false;
@@ -130,7 +125,7 @@ public class BiomeProviderJupiter extends BiomeProvider {
 	}
 
 	@Override
-	public BlockPos findBiomePosition(int x, int z, int range, List<Biome> biomes, Random random) {
+	public BlockPos findBiomePosition(int x, int z, int range, List<BiomeGenBase> biomes, Random random) {
 		int i = x - range >> 2;
 		int j = z - range >> 2;
 		int k = x + range >> 2;
@@ -144,7 +139,7 @@ public class BiomeProviderJupiter extends BiomeProvider {
 		for (int a = 0; a < unzoomed.length; ++a) {
 			int x0 = i + a % diffX << 2;
 			int z0 = j + a / diffX << 2;
-			Biome biome = Biome.getBiome(unzoomed[a]);
+			BiomeGenBase biome = BiomeGenBase.getBiome(unzoomed[a]);
 
 			if (biomes.contains(biome) && (blockPos == null || random.nextInt(count + 1) == 0)) {
 				blockPos = new BlockPos(x0, 0, z0);
