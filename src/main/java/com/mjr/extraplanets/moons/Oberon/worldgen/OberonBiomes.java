@@ -19,7 +19,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class OberonBiomes extends BiomeGenBase {
 	public static final BiomeGenBase oberon = new BiomeGenOberon(Config.OBERON_BIOME_ID).setBiomeName("oberon").setHeight(new Height(2.5F, 0.4F));
-	public static final BiomeGenBase oberonLargeIceMountain = new BiomeGenOberon(Config.OBERON_LARGE_MOUNTAIN_BIOME_ID).setBiomeName("oberonLargeIceMountain").setHeight(new Height(2.0F, 1.0F));
+	public static final BiomeGenBase oberonLargeIceMountain = new BiomeGenOberon(Config.OBERON_LARGE_MOUNTAIN_BIOME_ID).setBiomeName("oberonLargeIceMountain").setHeight(new Height(3.0F, 2.5F));
 
 	protected OberonBiomes(int var1) {
 		super(var1);
