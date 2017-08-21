@@ -70,6 +70,9 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public EntityPoweredVehicleBase(World var1) {
 		super(var1);
 		this.setSize(2.8F, 1F);
+        this.currentDamage = 18;
+        this.timeSinceHit = 19;
+        this.rockDirection = 20;
 		this.speed = 0.0D;
 		this.preventEntitySpawning = true;
 		this.dataWatcher.addObject(this.currentDamage, new Integer(0));

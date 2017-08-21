@@ -174,6 +174,7 @@ public class ClientProxy extends CommonProxy {
 	// Event Methods
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
+		MinecraftForge.EVENT_BUS.register(this);
 		OBJLoader.instance.addDomain(Constants.ASSET_PREFIX);
 		registerVariants();
 		registerEntityRenders();
