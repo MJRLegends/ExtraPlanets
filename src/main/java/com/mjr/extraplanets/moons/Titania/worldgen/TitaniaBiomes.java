@@ -4,21 +4,24 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import net.minecraft.world.biome.BiomeGenBase;
 
-public class TitaniaBiomes extends Biome {
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.moons.Ganymede.worldgen.BiomeGenGanymede;
 
-	public static final Biome titania = new BiomeGenTitania(new BiomeProperties("titania").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+public class TitaniaBiomes extends BiomeGenBase {
+	public static final BiomeGenBase titania = new BiomeGenGanymede(Config.TITANIA_BIOME_ID).setBiomeName("titania").setHeight(new Height(2.5F, 0.4F));
 
-	TitaniaBiomes(BiomeProperties properties)
-	{
-		super(properties);
+	TitaniaBiomes(int par1) {
+		super(par1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+        this.rainfall = 0F;
 	}
 
 	@Override

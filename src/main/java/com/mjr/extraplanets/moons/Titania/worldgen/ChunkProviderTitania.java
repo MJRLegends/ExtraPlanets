@@ -7,8 +7,10 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -16,7 +18,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 public class ChunkProviderTitania extends ChunkProviderSpace {
 	private final BiomeDecoratorTitania ceresBiomeDecorator = new BiomeDecoratorTitania();
 
-	 private final MapGenCaveTitania caveGenerator = new MapGenCaveTitania();
+	private final MapGenCaveTitania caveGenerator = new MapGenCaveTitania();
 
 	public ChunkProviderTitania(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -28,8 +30,8 @@ public class ChunkProviderTitania extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected Biome[] getBiomesForGeneration() {
-		return new Biome[] { TitaniaBiomes.titania };
+	protected BiomeGenBase[] getBiomesForGeneration() {
+		return new BiomeGenBase[] { TitaniaBiomes.titania };
 	}
 
 	@Override
@@ -40,7 +42,7 @@ public class ChunkProviderTitania extends ChunkProviderSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 
@@ -89,10 +91,10 @@ public class ChunkProviderTitania extends ChunkProviderSpace {
 	}
 
 	@Override
-	public void onPopulate(int cX, int cZ) {
+	public void recreateStructures(Chunk chunk, int x, int z) {
 	}
 
 	@Override
-	public void recreateStructures(Chunk chunk, int x, int z) {
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 	}
 }

@@ -17,11 +17,12 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.Ganymede.worldgen.BiomeGenGanymede;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
 
 public class IoBiomes extends BiomeGenBase {
-	public static final BiomeGenBase io = new BiomeGenGanymede(Config.IO_BIOME_ID).setBiomeName("io").setHeight(new Height(0.125F, 0.05F));
-	public static final BiomeGenBase ioAshLands = new BiomeGenGanymede(Config.IO_ASH_LANDS_BIOME_ID).setBiomeName("ioAshLands").setHeight(new Height(2.0F, 2.0F));
+	public static final BiomeGenBase io = new BiomeGenIo(Config.IO_BIOME_ID).setBiomeName("io").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase ioAshLands = new BiomeGenIoAshLands(Config.IO_ASH_LANDS_BIOME_ID).setBiomeName("ioAshLands").setHeight(new Height(2.0F, 2.0F));
 
 	protected IoBiomes(int par1) {
 		super(par1);

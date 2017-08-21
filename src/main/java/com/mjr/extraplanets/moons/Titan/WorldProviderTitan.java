@@ -15,8 +15,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Titan.worldgen.BiomeProviderTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
+import com.mjr.extraplanets.moons.Titan.worldgen.WorldChunkManagerTitan;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderTitan extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -58,8 +58,8 @@ public class WorldProviderTitan extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return BiomeProviderTitan.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerTitan.class;
 	}
 
 	@Override

@@ -14,8 +14,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Phobos.worldgen.BiomeProviderPhobos;
 import com.mjr.extraplanets.moons.Phobos.worldgen.ChunkProviderPhobos;
+import com.mjr.extraplanets.moons.Phobos.worldgen.WorldChunkManagerPhobos;
 
 public class WorldProviderPhobos extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
 	@Override
@@ -56,8 +56,8 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return BiomeProviderPhobos.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerPhobos.class;
 	}
 
 	@Override
@@ -161,7 +161,7 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 	public boolean shouldCorrodeArmor() {
 		return false;
 	}
-	
+
 	@Override
 	public int getDungeonSpacing() {
 		return 0;

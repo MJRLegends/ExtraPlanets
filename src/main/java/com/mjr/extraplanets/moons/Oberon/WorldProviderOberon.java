@@ -15,8 +15,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Oberon.worldgen.BiomeProviderOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.ChunkProviderOberon;
+import com.mjr.extraplanets.moons.Oberon.worldgen.WorldChunkManagerOberon;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderOberon extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -58,8 +58,8 @@ public class WorldProviderOberon extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return BiomeProviderOberon.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerOberon.class;
 	}
 
 	@Override

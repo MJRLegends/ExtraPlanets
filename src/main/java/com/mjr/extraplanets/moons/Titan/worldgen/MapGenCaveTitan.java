@@ -6,6 +6,7 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 
@@ -148,11 +149,11 @@ public class MapGenCaveTitan extends MapGenBaseMeta {
 											int metadata = state.getBlock().getMetaFromState(state);
 											if (block == ExtraPlanets_Blocks.TRITON_BLOCKS) {
 												if (metadata == 1 || metadata == 2) {
-													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
+													// blockIdArray[coords] = Blocks.air;
 												} else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0) {
-													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
+													// blockIdArray[coords] = Blocks.air;
 												}
 											}
 										}

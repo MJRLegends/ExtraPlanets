@@ -15,8 +15,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Titania.worldgen.BiomeProviderTitania;
 import com.mjr.extraplanets.moons.Titania.worldgen.ChunkProviderTitania;
+import com.mjr.extraplanets.moons.Titania.worldgen.WorldChunkManagerTitania;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderTitania extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -59,7 +59,7 @@ public class WorldProviderTitania extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return BiomeProviderTitania.class;
+		return WorldChunkManagerTitania.class;
 	}
 
 	@Override

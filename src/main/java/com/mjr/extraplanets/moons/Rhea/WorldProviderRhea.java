@@ -15,8 +15,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Rhea.worldgen.BiomeProviderRhea;
 import com.mjr.extraplanets.moons.Rhea.worldgen.ChunkProviderRhea;
+import com.mjr.extraplanets.moons.Rhea.worldgen.WorldChunkManagerRhea;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class WorldProviderRhea extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
@@ -58,8 +58,8 @@ public class WorldProviderRhea extends CustomWorldProviderSpace implements IGala
 	}
 
 	@Override
-		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
-		return BiomeProviderRhea.class;
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+		return WorldChunkManagerRhea.class;
 	}
 
 	@Override

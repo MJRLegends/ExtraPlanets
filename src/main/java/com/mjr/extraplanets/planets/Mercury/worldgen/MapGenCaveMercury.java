@@ -6,6 +6,7 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 
@@ -147,11 +148,11 @@ public class MapGenCaveMercury extends MapGenBaseMeta {
 											int metadata = state.getBlock().getMetaFromState(state);
 											if (block == ExtraPlanets_Blocks.MERCURY_BLOCKS) {
 												if (metadata == 1 || metadata == 2) {
-													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
+													// blockIdArray[coords] = Blocks.air;
 												} else if (state.getBlock().getMetaFromState(state) == 5) {
-													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
+													// blockIdArray[coords] = Blocks.air;
 												}
 											}
 										}

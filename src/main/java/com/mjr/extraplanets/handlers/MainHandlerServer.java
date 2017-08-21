@@ -7,19 +7,18 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.WorldServer;
-import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.world.WorldEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
@@ -32,6 +31,9 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -128,24 +130,19 @@ public class MainHandlerServer {
 	}
 
 	@SubscribeEvent
-	public void onEntityConstructing(EntityEvent.EntityConstructing event) {
-		if (event.entity instanceof EntityPlayerMP && EPPlayerStats.get((EntityPlayerMP) event.entity) == null) {
-			EPPlayerStats.register((EntityPlayerMP) event.entity);
-		}
-		if (FMLCommonHandler.instance().getEffectiveSide().isClient()) {
-			this.onEntityConstructingClient(event);
+    public void onAttachCapability(AttachCapabilitiesEvent.Entity event){
+		if (event.getEntity() instanceof EntityPlayerMP) {
+			event.addCapability(CapabilityStatsHandler.EP_PLAYER_PROP, new CapabilityProviderStats((EntityPlayerMP) event.getEntity()));
+
+		} else if (event.getEntity() instanceof EntityPlayer && ((EntityPlayer) event.getEntity()).worldObj.isRemote) {
+			this.onAttachCapabilityClient(event);
 		}
 	}
 
 	@SideOnly(Side.CLIENT)
-	public void onEntityConstructingClient(EntityEvent.EntityConstructing event) {
-		if (event.entity instanceof EntityPlayerSP) {
-			if (EPPlayerStatsClient.get((EntityPlayerSP) event.entity) == null) {
-				EPPlayerStatsClient.register((EntityPlayerSP) event.entity);
-			}
-
-			Minecraft.getMinecraft().gameSettings.sendSettingsToServer();
-		}
+	private void onAttachCapabilityClient(AttachCapabilitiesEvent.Entity event) {
+		if (event.getEntity() instanceof EntityPlayerSP)
+			event.addCapability(CapabilityStatsClientHandler.EP_PLAYER_CLIENT_PROP, new CapabilityProviderStatsClient((EntityPlayerSP) event.getEntity()));
 	}
 
 	@SubscribeEvent

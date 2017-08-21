@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.MapGenBase;
@@ -227,7 +228,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 			if (y < 10) {
 				data.setBlockState(x, y, z, Blocks.LAVA.getDefaultState());
 			} else {
-				data.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
+				data.setBlockState(x, y, z, Blocks.air.getDefaultState());
 
 				if (foundTop && data.getBlockState(x, y - 1, z).getBlock() == filler.getBlock()) {
 					data.setBlockState(x, y - 1, z, top.getBlock().getDefaultState());

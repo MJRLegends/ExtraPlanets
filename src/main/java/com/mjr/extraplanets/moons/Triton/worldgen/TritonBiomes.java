@@ -9,29 +9,32 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceLands;
 
-public class TritonBiomes extends Biome {
+public class TritonBiomes extends BiomeGenBase {
 
-	public static final Biome triton = new BiomeGenTriton(new BiomeProperties("triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceLands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
-	public static final Biome tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
+	public static final BiomeGenBase triton = new BiomeGenTriton(new BiomeProperties("triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceLands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
+	public static final BiomeGenBase tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
 
 	protected TritonBiomes(BiomeProperties properties) {
 		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.rainfall = 0F;
 	}
 
 	@Override

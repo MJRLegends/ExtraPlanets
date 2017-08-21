@@ -6,6 +6,7 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 
@@ -148,12 +149,12 @@ public class MapGenCaveKepler22b extends MapGenBaseMeta {
 											if (block == ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE || block == ExtraPlanets_Blocks.KEPLER22B_GRASS_PURPLE || block == ExtraPlanets_Blocks.KEPLER22B_GRASS_RED
 													|| block == ExtraPlanets_Blocks.KEPLER22B_GRASS_YELLOW) {
 												if (random.nextInt(MapGenCaveKepler22b.BREAK_THROUGH_CHANCE) == 0) {
-													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
 												}
 											}
 											if (block == ExtraPlanets_Blocks.KEPLER22B_BLOCKS) {
 												if (metadata == 0 || metadata == 1) {
-													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
+													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
 												}
 											}
 										}
