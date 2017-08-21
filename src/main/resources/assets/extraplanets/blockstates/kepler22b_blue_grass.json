@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "extraplanets:kepler22b_blue_grass_model" },
+            { "model": "extraplanets:kepler22b_blue_grass_model", "y": 90 },
+            { "model": "extraplanets:kepler22b_blue_grass_model", "y": 180 },
+            { "model": "extraplanets:kepler22b_blue_grass_model", "y": 270 }
+        ]
+	}
+}

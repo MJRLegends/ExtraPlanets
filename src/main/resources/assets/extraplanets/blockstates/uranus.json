@@ -1,0 +1,13 @@
+{
+    "variants": {
+		"basictypeuranus=uranus_surface": { "model": "extraplanets:uranus_surface_model" },
+        "basictypeuranus=uranus_sub_surface": { "model": "extraplanets:uranus_sub_surface_model" },
+        "basictypeuranus=uranus_stone": { "model": "extraplanets:uranus_stone_model" },
+		"basictypeuranus=uranus_ore_crystal": { "model": "extraplanets:uranus_ore_crystal_model" },
+        "basictypeuranus=uranus_crystal_block": { "model": "extraplanets:uranus_crystal_block_model" },
+        "basictypeuranus=uranus_stonebricks": { "model": "extraplanets:uranus_stonebricks_model" },
+		"basictypeuranus=uranus_dungeon_brick": { "model": "extraplanets:uranus_dungeon_brick_model" },
+		"basictypeuranus=uranus_ore_white_gem": { "model": "extraplanets:uranus_ore_white_gem_model" },
+		"basictypeuranus=uranus_white_gem_block": { "model": "extraplanets:uranus_white_gem_block_model" }
+    }
+}

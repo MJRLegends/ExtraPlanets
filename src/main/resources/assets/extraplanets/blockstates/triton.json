@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"basictypetriton=triton_surface": { "model": "extraplanets:triton_surface_model" },
+        "basictypetriton=triton_sub_surface": { "model": "extraplanets:triton_sub_surface_model" },
+        "basictypetriton=triton_stone": { "model": "extraplanets:triton_stone_model" },
+        "basictypetriton=triton_ore_iron": { "model": "extraplanets:triton_ore_iron_model" },
+        "basictypetriton=triton_ore_tin": { "model": "extraplanets:triton_ore_tin_model" },
+        "basictypetriton=triton_ore_copper": { "model": "extraplanets:triton_ore_copper_model" }
+    }
+}

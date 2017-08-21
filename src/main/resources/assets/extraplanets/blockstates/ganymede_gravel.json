@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "extraplanets:ganymede_gravel_model" }
+    }
+}

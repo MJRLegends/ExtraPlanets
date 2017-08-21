@@ -1,0 +1,24 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "type": {
+           "tier2_rocket_pad":     { "model": "extraplanets:tier2_landing_pad_model" },
+           "tier3_rocket_pad":     { "model": "extraplanets:tier3_landing_pad_model" },
+		   "powered_charging_pad": { "model": "extraplanets:powered_charging_pad_model" },
+		   "rocket_powered_charging_pad": { "model": "extraplanets:rocket_powered_charging_pad_model" }
+        },
+
+        "rendertype": {
+            "0": { },
+			"1": { },
+			"2": { },
+			"3": { },
+			"4": { },
+			"5": { },
+			"6": { },
+			"7": { }
+        },
+
+        "inventory": [{ "model": "galacticraftcore:block_multi_model" }]
+    }
+}

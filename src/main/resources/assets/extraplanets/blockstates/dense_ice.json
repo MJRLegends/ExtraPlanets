@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "extraplanets:dense_ice_model" }
+    }
+}

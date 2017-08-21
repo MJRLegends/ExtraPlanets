@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "explode=false": { "model": "extraplanets:nuclear_bomb_model" },
+		"explode=true": { "model": "extraplanets:nuclear_bomb_model" }
+    }
+}

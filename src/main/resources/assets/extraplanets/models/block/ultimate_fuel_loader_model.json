@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "galacticraftcore:blocks/machine",
+        "down": "galacticraftcore:blocks/machine",
+        "up": "galacticraftcore:blocks/machine",
+        "north": "extraplanets:blocks/machine_ultimate_fuelloader",
+        "east": "galacticraftcore:blocks/machine_input",
+        "south": "extraplanets:blocks/machine_ultimate_fuelloader",
+        "west": "galacticraftcore:blocks/machine_oil_input"
+    }
+}

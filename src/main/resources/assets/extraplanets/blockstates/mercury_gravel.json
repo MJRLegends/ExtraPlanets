@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "extraplanets:mercury_gravel_model" }
+    }
+}
