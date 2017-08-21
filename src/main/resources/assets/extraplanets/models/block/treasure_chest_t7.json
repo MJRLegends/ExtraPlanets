@@ -1,5 +1,4 @@
 {
-"parent": "block/block",
 "textures": {
     "particle": "galacticraftplanets:blocks/treasure_chest_mars",    
 	"texture": "extraplanets:model/treasure_t7"

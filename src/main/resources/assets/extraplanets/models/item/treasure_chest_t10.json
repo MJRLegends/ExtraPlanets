@@ -1,3 +1,8 @@
 {
-    "parent":"extraplanets:block/treasure_chest_t10"
+    "parent":"extraplanets:block/treasure_chest_t10",
+    "display": {
+		"gui": {
+            "rotation": [ 0, 180, 0 ]
+		}
+    }
 }
