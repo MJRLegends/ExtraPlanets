@@ -1,9 +1,0 @@
-{
-    "variants": {
-        "normal": { "model": "extraplanets:tier2_landing_pad_full_model" },
-        "type=tier_2_rocket": { "model": "extraplanets:tier2_landing_pad_full_model" },
-        "type=tier_3_rocket": { "model": "extraplanets:tier3_landing_pad_full_model" },
-		"type=powered_charging_pad": { "model": "extraplanets:powered_charging_pad_full_model" },
-		"type=rocket_powered_charging_pad": { "model": "extraplanets:rocket_powered_charging_pad_full_model" }
-    }
-}

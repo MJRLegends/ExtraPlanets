@@ -1,6 +1,0 @@
-{
-    "variants": {
-		"basictypedecorativeblocks=white_block": { "model": "extraplanets:white_block_model" },
-		"basictypedecorativeblocks=red_block": { "model": "extraplanets:red_block_model" }
-    }
-}

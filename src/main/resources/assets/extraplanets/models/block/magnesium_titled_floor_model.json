@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "extraplanets:blocks/decorative_blocks_magnesium_titled_floor"
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "parent": "block/cube_bottom_top",
-    "textures": {
-        "bottom": "extraplanets:blocks/fire_bomb_bottom",
-        "top": "extraplanets:blocks/fire_bomb_top",
-        "side": "extraplanets:blocks/fire_bomb_side"
-    }
-}

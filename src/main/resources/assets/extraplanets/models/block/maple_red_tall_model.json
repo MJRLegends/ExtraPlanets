@@ -1,6 +1,0 @@
-{
-    "parent": "extraplanets:block/maple_blue_short_model_cross",
-    "textures": {
-        "cross": "extraplanets:blocks/kepler22b_flowers_red_maple_tall_grass"
-    }
-}
