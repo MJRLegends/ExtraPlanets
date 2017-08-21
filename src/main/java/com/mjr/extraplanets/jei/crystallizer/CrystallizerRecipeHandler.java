@@ -24,12 +24,6 @@ public class CrystallizerRecipeHandler implements IRecipeHandler<CrystallizerRec
         return RecipeCategories.CRYSTALLIZER_ID;
     }
 
-    @Override
-    public String getRecipeCategoryUid(CrystallizerRecipeWrapper recipe)
-    {
-        return this.getRecipeCategoryUid();
-    }
-
     @Nonnull
     @Override
     public IRecipeWrapper getRecipeWrapper(@Nonnull CrystallizerRecipeWrapper recipe)

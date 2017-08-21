@@ -3,14 +3,11 @@ package com.mjr.extraplanets.entities.bosses;
 import java.util.List;
 import java.util.Random;
 
-import javax.annotation.Nullable;
-
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
@@ -19,23 +16,14 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.network.datasync.DataSerializers;
-import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.datafix.DataFixer;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.BossInfo.Color;
+import net.minecraft.util.MathHelper;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -44,7 +32,6 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IEntityBreathable {
 	private int explosionStrength = 1;
 
-	private static final DataParameter<Boolean> ATTACKING = EntityDataManager.<Boolean> createKey(EntityEvolvedFireBatBoss.class, DataSerializers.BOOLEAN);
 	/** Coordinates of where the bat spawned. */
 	private BlockPos spawnPosition;
 
@@ -58,7 +45,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 	protected void entityInit() {
 		super.entityInit();
-		this.dataManager.register(ATTACKING, Boolean.valueOf(false));
+		this.dataWatcher.addObject(16, Byte.valueOf((byte) 0));
 	}
 
 	/**
@@ -75,17 +62,25 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		return super.getSoundPitch() * 0.95F;
 	}
 
-	@Nullable
-	protected SoundEvent getAmbientSound() {
-		return this.rand.nextInt(4) != 0 ? null : SoundEvents.ENTITY_BAT_AMBIENT;
+	/**
+	 * Returns the sound this mob makes while it's alive.
+	 */
+	protected String getLivingSound() {
+		return "mob.bat.idle";
 	}
 
-	protected SoundEvent getHurtSound() {
-		return SoundEvents.ENTITY_BAT_HURT;
+	/**
+	 * Returns the sound this mob makes when it is hurt.
+	 */
+	protected String getHurtSound() {
+		return "mob.bat.hurt";
 	}
 
-	protected SoundEvent getDeathSound() {
-		return SoundEvents.ENTITY_BAT_DEATH;
+	/**
+	 * Returns the sound this mob makes on death.
+	 */
+	protected String getDeathSound() {
+		return "mob.bat.death";
 	}
 
 	/**
@@ -103,17 +98,17 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(450.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(100.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(450.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(100.0D);
 	}
 
 	@SideOnly(Side.CLIENT)
 	public boolean isAttacking() {
-		return this.dataManager.get(ATTACKING).booleanValue();
+		return this.dataWatcher.getWatchableObjectByte(16) != 0;
 	}
 
-	public void setAttacking(boolean attacking) {
-		this.dataManager.set(ATTACKING, Boolean.valueOf(attacking));
+	public void setAttacking(boolean p_175454_1_) {
+		this.dataWatcher.updateObject(16, Byte.valueOf((byte) (p_175454_1_ ? 1 : 0)));
 	}
 
 	public int getFireballStrength() {
@@ -150,7 +145,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		this.motionY += (Math.signum(d1) * 0.699999988079071D - this.motionY) * 0.10000000149011612D;
 		this.motionZ += (Math.signum(d2) * 0.5D - this.motionZ) * 0.10000000149011612D;
 		float f = (float) (MathHelper.atan2(this.motionZ, this.motionX) * (180D / Math.PI)) - 90.0F;
-		float f1 = MathHelper.wrapDegrees(f - this.rotationYaw);
+		float f1 = MathHelper.wrapAngleTo180_float(f - this.rotationYaw);
 		this.moveForward = 0.5F;
 		this.rotationYaw += f1;
 	}
@@ -166,7 +161,6 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		/**
 		 * Returns whether the EntityAIBase should begin execution.
 		 */
-		@Override
 		public boolean shouldExecute() {
 			return this.parentEntity.getAttackTarget() != null;
 		}
@@ -174,7 +168,6 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		/**
 		 * Execute a one shot task or start executing a continuous task
 		 */
-		@Override
 		public void startExecuting() {
 			this.attackTimer = 0;
 		}
@@ -182,7 +175,6 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		/**
 		 * Resets the task
 		 */
-		@Override
 		public void resetTask() {
 			this.parentEntity.setAttacking(false);
 		}
@@ -190,32 +182,32 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		/**
 		 * Updates the task
 		 */
-		@Override
 		public void updateTask() {
 			EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
+			double d0 = 64.0D;
 
-			if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
+			if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < d0 * d0 && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
 				World world = this.parentEntity.worldObj;
 				++this.attackTimer;
 
 				if (this.attackTimer == 10) {
-					world.playEvent((EntityPlayer) null, 1015, new BlockPos(this.parentEntity), 0);
+					world.playAuxSFXAtEntity((EntityPlayer) null, 1007, new BlockPos(this.parentEntity), 0);
 				}
 
-				if (this.attackTimer == 10 || this.attackTimer == 30 || this.attackTimer == 50 || this.attackTimer == 70) {
-					Vec3d vec3d = this.parentEntity.getLook(1.0F);
-					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.xCoord * 4.0D);
-					double d3 = entitylivingbase.getEntityBoundingBox().minY + entitylivingbase.height / 2.0F - (0.5D + this.parentEntity.posY + this.parentEntity.height / 2.0F);
-					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.zCoord * 4.0D);
-					world.playEvent((EntityPlayer) null, 1016, new BlockPos(this.parentEntity), 0);
+				if (this.attackTimer == 20) {
+					double d1 = 4.0D;
+					Vec3 vec3 = this.parentEntity.getLook(1.0F);
+					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3.xCoord * d1);
+					double d3 = entitylivingbase.getEntityBoundingBox().minY + (double) (entitylivingbase.height / 2.0F) - (0.5D + this.parentEntity.posY + (double) (this.parentEntity.height / 2.0F));
+					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3.zCoord * d1);
+					world.playAuxSFXAtEntity((EntityPlayer) null, 1008, new BlockPos(this.parentEntity), 0);
 					EntityLargeFireball entitylargefireball = new EntityLargeFireball(world, this.parentEntity, d2, d3, d4);
 					entitylargefireball.explosionPower = this.parentEntity.getFireballStrength();
-					entitylargefireball.posX = this.parentEntity.posX + vec3d.xCoord * 4.0D;
-					entitylargefireball.posY = this.parentEntity.posY + this.parentEntity.height / 2.0F + 0.5D;
-					entitylargefireball.posZ = this.parentEntity.posZ + vec3d.zCoord * 4.0D;
+					entitylargefireball.posX = this.parentEntity.posX + vec3.xCoord * d1;
+					entitylargefireball.posY = this.parentEntity.posY + (double) (this.parentEntity.height / 2.0F) + 0.5D;
+					entitylargefireball.posZ = this.parentEntity.posZ + vec3.zCoord * d1;
 					world.spawnEntityInWorld(entitylargefireball);
-					if (this.attackTimer == 70)
-						this.attackTimer = -40;
+					this.attackTimer = -40;
 				}
 			} else if (this.attackTimer > 0) {
 				--this.attackTimer;
@@ -256,10 +248,6 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		}
 	}
 
-	public static void registerFixesBat(DataFixer fixer) {
-		EntityLiving.registerFixesMob(fixer, "Bat");
-	}
-
 	/**
 	 * /** (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
@@ -298,11 +286,6 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		return entityitem;
 	}
 
-	@Nullable
-	protected ResourceLocation getLootTable() {
-		return LootTableList.ENTITIES_BAT;
-	}
-
 	@Override
 	public boolean canBreath() {
 		return true;
@@ -322,10 +305,5 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(5);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
-	}
-
-	@Override
-	public Color getHealthBarColor() {
-		return Color.BLUE;
 	}
 }

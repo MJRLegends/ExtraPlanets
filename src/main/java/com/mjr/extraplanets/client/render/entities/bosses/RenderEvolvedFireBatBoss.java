@@ -3,8 +3,8 @@ package com.mjr.extraplanets.client.render.entities.bosses;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -35,12 +35,7 @@ public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatB
 	}
 
 	protected void rotateCorpse(EntityEvolvedFireBatBoss entityLiving, float p_77043_2_, float p_77043_3_, float partialTicks) {
-		if (entityLiving.getIsBatHanging()) {
-			GlStateManager.translate(0.0F, -0.1F, 0.0F);
-		} else {
-			GlStateManager.translate(0.0F, MathHelper.cos(p_77043_2_ * 0.3F) * 0.2F, 0.0F);
-		}
-
+		GlStateManager.translate(0.0F, MathHelper.cos(p_77043_2_ * 0.3F) * 0.2F, 0.0F);
 		super.rotateCorpse(entityLiving, p_77043_2_, p_77043_3_, partialTicks);
 	}
 }

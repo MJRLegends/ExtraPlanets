@@ -8,7 +8,6 @@ import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
-import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
@@ -61,20 +60,13 @@ public class ChemicalInjectorRecipeCategory extends BlankRecipeCategory {
 			ChemicalInjectorRecipeWrapper circuitFabricatorRecipeWrapper = (ChemicalInjectorRecipeWrapper) recipeWrapper;
 			List inputs = circuitFabricatorRecipeWrapper.getInputs();
 
-            for (int i = 0; i < inputs.size(); ++i)
-            {
-                Object o = inputs.get(i);
-                if (o != null)
-                {
-                    itemstacks.setFromRecipe(i, o);
-                }
-            }
+			for (int i = 0; i < inputs.size(); ++i) {
+				Object o = inputs.get(i);
+				if (o != null) {
+					itemstacks.setFromRecipe(i, o);
+				}
+			}
 			itemstacks.setFromRecipe(2, circuitFabricatorRecipeWrapper.getOutputs());
 		}
-	}
-
-	@Override
-	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		this.setRecipe(recipeLayout, recipeWrapper);
 	}
 }

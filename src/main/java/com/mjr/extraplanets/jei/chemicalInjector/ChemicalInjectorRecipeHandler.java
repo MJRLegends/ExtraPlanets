@@ -24,12 +24,6 @@ public class ChemicalInjectorRecipeHandler implements IRecipeHandler<ChemicalInj
         return RecipeCategories.CHEMAICAL_INJECTOR_ID;
     }
 
-    @Override
-    public String getRecipeCategoryUid(ChemicalInjectorRecipeWrapper recipe)
-    {
-        return this.getRecipeCategoryUid();
-    }
-
     @Nonnull
     @Override
     public IRecipeWrapper getRecipeWrapper(@Nonnull ChemicalInjectorRecipeWrapper recipe)
