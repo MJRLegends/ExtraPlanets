@@ -17,7 +17,7 @@ import com.mjr.extraplanets.entities.landers.EntitySaturnLander;
 public class TeleportTypeSaturn implements ITeleportType {
 	@Override
 	public boolean useParachute() {
-		return true;
+		return false;
 	}
 
 	@Override

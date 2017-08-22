@@ -19,7 +19,7 @@ import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
 public class TeleportTypeNeptune implements ITeleportType {
 	@Override
 	public boolean useParachute() {
-		return true;
+		return false;
 	}
 
 	@Override

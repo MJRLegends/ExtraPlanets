@@ -19,7 +19,7 @@ import com.mjr.extraplanets.entities.landers.EntityUranusLander;
 public class TeleportTypeUranus implements ITeleportType {
 	@Override
 	public boolean useParachute() {
-		return true;
+		return false;
 	}
 
 	@Override
