@@ -73,7 +73,7 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 		}
 
 		this.updateModels();
-		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+		this.bindTexture(TextureMap.locationBlocksTexture);
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {

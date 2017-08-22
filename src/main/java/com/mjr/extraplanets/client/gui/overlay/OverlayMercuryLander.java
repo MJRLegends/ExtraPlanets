@@ -36,7 +36,7 @@ public class OverlayMercuryLander extends Overlay {
 
 		GL11.glScalef(2.0F, 2.0F, 0.0F);
 
-		if (OverlayMercuryLander.minecraft.thePlayer.getRidingEntity().motionY < -2.0) {
+		if (OverlayMercuryLander.minecraft.thePlayer.ridingEntity.motionY < -2.0) {
 			OverlayMercuryLander.minecraft.fontRendererObj.drawString(GCCoreUtil.translate("gui.warning"), width / 4 - OverlayMercuryLander.minecraft.fontRendererObj.getStringWidth(GCCoreUtil.translate("gui.warning")) / 2, height / 8 - 20,
 					ColorUtil.to32BitColor(255, 255, 0, 0));
 			final int alpha = (int) (255 * Math.sin(OverlayMercuryLander.screenTicks / 20.0F));
@@ -49,11 +49,11 @@ public class OverlayMercuryLander extends Overlay {
 
 		GL11.glPopMatrix();
 
-		if (OverlayMercuryLander.minecraft.thePlayer.getRidingEntity().motionY != 0.0D) {
-			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityMercuryLander) OverlayMercuryLander.minecraft.thePlayer.getRidingEntity()).motionY * 1000) / 100.0D + " "
+		if (OverlayMercuryLander.minecraft.thePlayer.ridingEntity.motionY != 0.0D) {
+			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityMercuryLander) OverlayMercuryLander.minecraft.thePlayer.ridingEntity).motionY * 1000) / 100.0D + " "
 					+ GCCoreUtil.translate("gui.lander.velocityu");
-			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayMercuryLander.minecraft.thePlayer.getRidingEntity().motionY) * 51.0D),
-					255 - (int) Math.floor(Math.abs(OverlayMercuryLander.minecraft.thePlayer.getRidingEntity().motionY) * 51.0D), 0);
+			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayMercuryLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D),
+					255 - (int) Math.floor(Math.abs(OverlayMercuryLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D), 0);
 			OverlayMercuryLander.minecraft.fontRendererObj.drawString(string, width / 2 - OverlayMercuryLander.minecraft.fontRendererObj.getStringWidth(string) / 2, height / 3, color);
 		}
 	}

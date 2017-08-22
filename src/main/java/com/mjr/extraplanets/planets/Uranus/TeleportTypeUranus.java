@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
 import com.mjr.extraplanets.entities.landers.EntityUranusLander;
 
 public class TeleportTypeUranus implements ITeleportType {
@@ -51,12 +52,11 @@ public class TeleportTypeUranus implements ITeleportType {
 					player.capabilities.isFlying = false;
 				}
 
+				EntityUranusLander lander = new EntityUranusLander(player);
+
 				if (!newWorld.isRemote) {
-					EntityUranusLander entryPod = new EntityUranusLander(player);
-					CompatibilityManager.forceLoadChunks((WorldServer) newWorld);
-					entryPod.forceSpawn = true;
-					newWorld.spawnEntityInWorld(entryPod);
-					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld);
+					lander.forceSpawn = true;
+					newWorld.spawnEntityInWorld(lander);
 				}
 
 				stats.setTeleportCooldown(10);

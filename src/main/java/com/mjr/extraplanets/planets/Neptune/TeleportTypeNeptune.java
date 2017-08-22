@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
 import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
 
 public class TeleportTypeNeptune implements ITeleportType {
@@ -51,12 +52,11 @@ public class TeleportTypeNeptune implements ITeleportType {
 					player.capabilities.isFlying = false;
 				}
 
+				EntityNeptuneLander lander = new EntityNeptuneLander(player);
+
 				if (!newWorld.isRemote) {
-					EntityNeptuneLander entryPod = new EntityNeptuneLander(player);
-					CompatibilityManager.forceLoadChunks((WorldServer) newWorld);
-					entryPod.forceSpawn = true;
-					newWorld.spawnEntityInWorld(entryPod);
-					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld);
+					lander.forceSpawn = true;
+					newWorld.spawnEntityInWorld(lander);
 				}
 
 				stats.setTeleportCooldown(10);
