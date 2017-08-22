@@ -18,7 +18,7 @@ import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 public class TeleportTypeJupiter implements ITeleportType {
 	@Override
 	public boolean useParachute() {
-		return true;
+		return false;
 	}
 
 	@Override
