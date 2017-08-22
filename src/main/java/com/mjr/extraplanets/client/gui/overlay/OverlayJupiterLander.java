@@ -36,7 +36,7 @@ public class OverlayJupiterLander extends Overlay {
 
 		GL11.glScalef(2.0F, 2.0F, 0.0F);
 
-		if (OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY < -2.0) {
+		if (OverlayJupiterLander.minecraft.thePlayer.ridingEntity.motionY < -2.0) {
 			OverlayJupiterLander.minecraft.fontRendererObj.drawString(GCCoreUtil.translate("gui.warning"), width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(GCCoreUtil.translate("gui.warning")) / 2, height / 8 - 20,
 					ColorUtil.to32BitColor(255, 255, 0, 0));
 			final int alpha = (int) (255 * Math.sin(OverlayJupiterLander.screenTicks / 20.0F));
@@ -48,10 +48,10 @@ public class OverlayJupiterLander extends Overlay {
 
 		GL11.glPopMatrix();
 
-		if (OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY != 0.0D) {
-			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityJupiterLander) OverlayJupiterLander.minecraft.thePlayer.getRidingEntity()).motionY * 1000) / 100.0D + " " + GCCoreUtil.translate("gui.lander.velocityu");
-			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY) * 51.0D),
-					255 - (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY) * 51.0D), 0);
+		if (OverlayJupiterLander.minecraft.thePlayer.ridingEntity.motionY != 0.0D) {
+			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityJupiterLander) OverlayJupiterLander.minecraft.thePlayer.ridingEntity).motionY * 1000) / 100.0D + " " + GCCoreUtil.translate("gui.lander.velocityu");
+			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D),
+					255 - (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D), 0);
 			OverlayJupiterLander.minecraft.fontRendererObj.drawString(string, width / 2 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(string) / 2, height / 3, color);
 		}
 	}

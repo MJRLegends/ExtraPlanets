@@ -13,7 +13,6 @@ import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
 import micdoodle8.mods.galacticraft.planets.venus.client.FakeLightningBoltRenderer;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.audio.SoundCategory;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.util.BlockPos;
@@ -116,7 +115,7 @@ public class MainHandlerClient {
 				&& !((EntityElectricRocketBase) minecraft.thePlayer.ridingEntity).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
 		}
-		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityJupiterLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+		if (minecraft.currentScreen == null && player.ridingEntity instanceof EntityJupiterLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayJupiterLander.renderLanderOverlay();
 		}
 	}
