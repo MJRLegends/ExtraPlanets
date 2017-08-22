@@ -1,5 +1,5 @@
 {
-    "parent": "item/generated",
+    "parent": "builtin/generated",
     "textures": {
         "layer0": "extraplanets:items/tier11.blue_sticks"
     },

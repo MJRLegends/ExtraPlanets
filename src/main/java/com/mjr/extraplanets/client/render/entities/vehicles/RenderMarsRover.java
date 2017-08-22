@@ -80,13 +80,12 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityMarsRover par1Entity) {
-		return new ResourceLocation("missing");
+		return TextureMap.locationBlocksTexture;
 	}
 
 	@Override
 	public void doRender(EntityMarsRover entity, double par2, double par4, double par6, float par8, float par9) {
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-
 		GL11.glPushMatrix();
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
 		GL11.glTranslatef((float) par2, (float) par4 - 0.3F, (float) par6);
@@ -96,7 +95,7 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 		GL11.glScalef(0.51F, 0.51F, 0.51F);
 
 		this.updateModels();
-		this.bindTexture(TextureMap.LOCATION_MISSING_TEXTURE);
+		this.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_white.png"));
 
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);

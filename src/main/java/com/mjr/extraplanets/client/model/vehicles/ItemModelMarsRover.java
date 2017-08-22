@@ -22,6 +22,8 @@ public class ItemModelMarsRover extends ModelTransformWrapper
     {
         if (cameraTransformType == TransformType.GUI)
         {
+        	//
+
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
@@ -43,6 +45,8 @@ public class ItemModelMarsRover extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.FIRST_PERSON)
         {
+        	
+
             Vector3f trans = new Vector3f(0.0F, -0.4F, -0.3F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
@@ -58,6 +62,8 @@ public class ItemModelMarsRover extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.THIRD_PERSON)
         {
+        	
+
             Vector3f trans = new Vector3f(0.0F, -0.3F, 0.6F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
@@ -89,6 +95,8 @@ public class ItemModelMarsRover extends ModelTransformWrapper
 
         if (cameraTransformType == TransformType.GROUND)
         {
+        	
+
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
@@ -102,6 +110,8 @@ public class ItemModelMarsRover extends ModelTransformWrapper
         }
         if (cameraTransformType == TransformType.FIXED)
         {
+        	
+
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();

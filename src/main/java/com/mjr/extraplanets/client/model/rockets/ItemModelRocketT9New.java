@@ -25,6 +25,8 @@ public class ItemModelRocketT9New extends ModelTransformWrapper {
 	@Override
 	protected Matrix4f getTransformForPerspective(TransformType cameraTransformType) {
 		if (cameraTransformType == TransformType.GUI) {
+        	//
+
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);
 			} else {
@@ -68,6 +70,8 @@ public class ItemModelRocketT9New extends ModelTransformWrapper {
 		}
 
 		if (cameraTransformType == TransformType.FIRST_PERSON) {
+        	
+
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);
 			} else {
@@ -100,6 +104,8 @@ public class ItemModelRocketT9New extends ModelTransformWrapper {
 		}
 
 		if (cameraTransformType == TransformType.THIRD_PERSON) {
+        	
+
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);
 			} else {
@@ -132,6 +138,8 @@ public class ItemModelRocketT9New extends ModelTransformWrapper {
 		}
 
 		if (cameraTransformType == TransformType.GROUND) {
+        	
+
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);
 			} else {

@@ -6,7 +6,6 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
@@ -64,7 +63,7 @@ public class RenderTier9RocketNew extends Render<EntityTier9Rocket> {
 		updateModel();
 
 		// RenderHelper.disableStandardItemLighting();
-		this.bindTexture(TextureMap.locationBlocksTexture);
+		this.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_white.png"));
 
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
