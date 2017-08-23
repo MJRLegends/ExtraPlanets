@@ -3,6 +3,7 @@ package com.mjr.extraplanets;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
+import micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -93,6 +94,16 @@ import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
+import com.mjr.extraplanets.recipes.MarsRoverRecipes;
+import com.mjr.extraplanets.recipes.Tier10ElectricRocketRecipes;
+import com.mjr.extraplanets.recipes.Tier10RocketRecipes;
+import com.mjr.extraplanets.recipes.Tier4RocketRecipes;
+import com.mjr.extraplanets.recipes.Tier5RocketRecipes;
+import com.mjr.extraplanets.recipes.Tier6RocketRecipes;
+import com.mjr.extraplanets.recipes.Tier7RocketRecipes;
+import com.mjr.extraplanets.recipes.Tier8RocketRecipes;
+import com.mjr.extraplanets.recipes.Tier9RocketRecipes;
+import com.mjr.extraplanets.recipes.VenusRoverRecipes;
 import com.mjr.extraplanets.schematic.SchematicMarsRover;
 import com.mjr.extraplanets.schematic.SchematicTier10Rocket;
 import com.mjr.extraplanets.schematic.SchematicTier4Rocket;
@@ -314,6 +325,9 @@ public class ExtraPlanets {
 		// Register GUI Handler
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 
+		//Register Deconstructor Compatibility
+		RegisterDeconstructorCompatibility();
+
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
 	}
@@ -323,7 +337,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, "NuclearBombPrimed", 150, 1, true);
 		if (Config.SATURN && Config.FIRE_BOMB)
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, "FireBombPrimed", 150, 1, true);
-		if (Config.MERCURY){
+		if (Config.MERCURY) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, "EntityTier4Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMercuryLander.class, "EntityMercuryLander", 150, 5, false);
 		}
@@ -331,15 +345,15 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, "EntityTier5Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityJupiterLander.class, "EntityJupiterLander", 150, 5, false);
 		}
-		if (Config.SATURN){
+		if (Config.SATURN) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, "EntityTier6Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySaturnLander.class, "EntitySaturnLander", 150, 5, false);
 		}
-		if (Config.URANUS){
+		if (Config.URANUS) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, "EntityTier7Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityUranusLander.class, "EntityUranusLander", 150, 5, false);
 		}
-		if (Config.NEPTUNE){
+		if (Config.NEPTUNE) {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, "EntityTier8Rocket", 150, 1, false);
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNeptuneLander.class, "EntityNeptuneLander", 150, 5, false);
 		}
@@ -443,5 +457,37 @@ public class ExtraPlanets {
 			GalacticraftRegistry.addDungeonLoot(1, new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC, 1, 0));
 		if (Config.VENUS_ROVER)
 			GalacticraftRegistry.addDungeonLoot(3, new ItemStack(ExtraPlanets_Items.VENUS_ROVER_SCHEMATIC, 1, 0));
+	}
+
+	private void RegisterDeconstructorCompatibility() {
+		TileEntityDeconstructor.knownRecipes.addAll(Tier4RocketRecipes.getTier4RocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(Tier5RocketRecipes.getTier5RocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(Tier6RocketRecipes.getTier6RocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(Tier7RocketRecipes.getTier7RocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(Tier8RocketRecipes.getTier8RocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(Tier9RocketRecipes.getTier9RocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(Tier10RocketRecipes.getTier10RocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(Tier10ElectricRocketRecipes.getTier10ElectricRocketRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(MarsRoverRecipes.getMarsRoverRecipes());
+		TileEntityDeconstructor.knownRecipes.addAll(VenusRoverRecipes.getVenusRoverRecipes());
+
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 3));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 3));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 4));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 3));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 4));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 3));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 4));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 6));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 3));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 4));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 3));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 4));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 3));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 4));
+		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6));
+		
 	}
 }

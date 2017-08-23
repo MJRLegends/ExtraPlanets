@@ -33,7 +33,7 @@ public class VenusRoverRecipes {
 		venusRoverRecipes.add(recipe);
 	}
 
-	public static List<INasaWorkbenchRecipe> getvenusRoverRecipes() {
+	public static List<INasaWorkbenchRecipe> getVenusRoverRecipes() {
 		return venusRoverRecipes;
 	}
 

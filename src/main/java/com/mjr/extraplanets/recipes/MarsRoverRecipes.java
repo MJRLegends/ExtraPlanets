@@ -34,7 +34,7 @@ public class MarsRoverRecipes {
 		marsRoverRecipes.add(recipe);
 	}
 
-	public static List<INasaWorkbenchRecipe> getmarsRoverRecipes() {
+	public static List<INasaWorkbenchRecipe> getMarsRoverRecipes() {
 		return marsRoverRecipes;
 	}
 
