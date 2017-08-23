@@ -11,7 +11,7 @@ public class MarsRoverRecipeMaker {
 	public static List<MarsRoverRecipeWrapper> getRecipesList() {
 		List<MarsRoverRecipeWrapper> recipes = new ArrayList<>();
 
-		for (INasaWorkbenchRecipe recipe : MarsRoverRecipes.getmarsRoverRecipes()) {
+		for (INasaWorkbenchRecipe recipe : MarsRoverRecipes.getMarsRoverRecipes()) {
 			MarsRoverRecipeWrapper wrapper = new MarsRoverRecipeWrapper(recipe);
 			recipes.add(wrapper);
 		}

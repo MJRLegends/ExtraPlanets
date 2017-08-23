@@ -11,7 +11,7 @@ public class VenusRoverRecipeMaker {
 	public static List<VenusRoverRecipeWrapper> getRecipesList() {
 		List<VenusRoverRecipeWrapper> recipes = new ArrayList<>();
 
-		for (INasaWorkbenchRecipe recipe : VenusRoverRecipes.getvenusRoverRecipes()) {
+		for (INasaWorkbenchRecipe recipe : VenusRoverRecipes.getVenusRoverRecipes()) {
 			VenusRoverRecipeWrapper wrapper = new VenusRoverRecipeWrapper(recipe);
 			recipes.add(wrapper);
 		}
