@@ -94,7 +94,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 			generator.generate(this, this.worldObj, chunkX, chunkZ, chunkprimer);
 		}
 
-		this.onChunkProvide(chunkX, chunkX, chunkprimer);
+		this.onChunkProvide(chunkX, chunkZ, chunkprimer);
 		// this.createCraters(chunkX, chunkX, chunkprimer);
 
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
