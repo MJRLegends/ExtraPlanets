@@ -14,6 +14,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+1.0.0
+*Backport of 1.10.2 branch (This is so that 1.8.9 is the same as 1.10.2 and 1.11.2 versions). Everything is the same apart from the Space Suit models are still yet to be added to this version. 
+(Everything in your MC 1.8.9 world for ExtraPlanets will probably get removed due to name changes in this update (World resets are recommended)
+
 0.9.3 Beta Build
 *Changes for all Kepler22b Leaves (Will remove old ones due to a complete change)
 *Made Marble generate on Kepler22b
