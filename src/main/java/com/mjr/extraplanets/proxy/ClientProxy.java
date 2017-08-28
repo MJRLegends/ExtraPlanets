@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.TRSRTransformation;
 import net.minecraftforge.client.model.obj.OBJLoader;
@@ -1124,6 +1125,25 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_METHANE);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_NITROGEN_ICE);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BUCKET_LIQUID_HYDROCARBON);
+	}
+
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public void loadTextures(TextureStitchEvent.Pre event) {
+		registerTexture(event, "blank_rocket");
+		registerTexture(event, "blank_rocket_black");
+		registerTexture(event, "blank_rocket_blue_textured");
+		registerTexture(event, "blank_rocket_dark_grey");
+		registerTexture(event, "blank_rocket_grey");
+		registerTexture(event, "blank_rocket_light_blue_textured");
+		registerTexture(event, "blank_rocket_orange_textured");
+		registerTexture(event, "blank_rocket_textured");
+		registerTexture(event, "blank_rocket_white");
+		registerTexture(event, "blank_rocket_yellow");
+	}
+
+	private void registerTexture(TextureStitchEvent.Pre event, String texture) {
+		event.map.registerSprite(new ResourceLocation(Constants.TEXTURE_PREFIX + "model/" + texture));
 	}
 
 	@SubscribeEvent
