@@ -95,7 +95,7 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 		GL11.glScalef(0.51F, 0.51F, 0.51F);
 
 		this.updateModels();
-		this.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_white.png"));
+		this.bindTexture(TextureMap.locationBlocksTexture);
 
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
