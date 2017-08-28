@@ -48,7 +48,7 @@ public class ItemModelRocketElectricRocket extends ModelTransformWrapper
             mul.setScale(1.20F);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setTranslation(new Vector3f(-0.45F, -0.50F, 0.0F));
+            mul.setTranslation(new Vector3f(0.1F, -0.50F, 0.0F));
             ret.mul(mul);
             mul.setIdentity();
             mul.rotY(Constants.halfPI);
@@ -67,65 +67,54 @@ public class ItemModelRocketElectricRocket extends ModelTransformWrapper
             mul.setTranslation(trans);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setScale(0.3F);
+            mul.setScale(0.4F);
             ret.mul(mul);
             return ret;
         }
 
         if (cameraTransformType == TransformType.FIRST_PERSON)
         {
-        	
-
         	if (Minecraft.isAmbientOcclusionEnabled()) {
     			GlStateManager.shadeModel(GL11.GL_SMOOTH);
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
-            Vector3f trans = new Vector3f(-0.12F, 2.0F, -3.12F);
+            Vector3f trans = new Vector3f(1.0F, -1.2F, -0.3F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
             mul.setIdentity();
-            Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(0, 45, 0));
-            mul.setRotation(rot);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.setScale(0.45F);
+            mul.setScale(24.0F);
             ret.mul(mul);
             mul.setIdentity();
             mul.rotX(Constants.halfPI);
             ret.mul(mul);
             mul.setIdentity();
-            mul.rotZ((float) (-0.65F + Math.PI));
+            mul.rotZ(-0.65F);
             ret.mul(mul);
             mul.setIdentity();
             mul.setTranslation(trans);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.rotX((float) (Math.PI));
             ret.mul(mul);
             return ret;
         }
 
         if (cameraTransformType == TransformType.THIRD_PERSON)
         {
-        	
-
         	if (Minecraft.isAmbientOcclusionEnabled()) {
     			GlStateManager.shadeModel(GL11.GL_SMOOTH);
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
-            Vector3f trans = new Vector3f(1.1F, -2.2F, 0.5F);
+            Vector3f trans = new Vector3f(0.0F, -1.0F, -0.05F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
             mul.setIdentity();
-            Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(75, 15, -2));
+            Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(0, 10, 0));
             mul.setRotation(rot);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setScale(3.0F);
+            mul.setScale(1.6F);
             ret.mul(mul);
             mul.setIdentity();
             mul.rotX((float) (Math.PI / 3.0F));

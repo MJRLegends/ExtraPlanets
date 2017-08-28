@@ -49,7 +49,7 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
             mul.setScale(0.61F);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setTranslation(new Vector3f(-0.25F, -0.35F, 0.0F));
+            mul.setTranslation(new Vector3f(-0.15F, -0.55F, 0.0F));
             ret.mul(mul);
             mul.setIdentity();
             mul.rotY(Constants.halfPI);
@@ -68,42 +68,33 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
             mul.setTranslation(trans);
             ret.mul(mul);
             mul.setIdentity();
-            mul.setScale(0.3F);
+            mul.setScale(0.4F);
             ret.mul(mul);
             return ret;
         }
 
         if (cameraTransformType == TransformType.FIRST_PERSON)
         {
-        	
-
         	if (Minecraft.isAmbientOcclusionEnabled()) {
     			GlStateManager.shadeModel(GL11.GL_SMOOTH);
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
-            Vector3f trans = new Vector3f(0.5F, 4.5F, -3.9F);
+            Vector3f trans = new Vector3f(0.5F, -1.9F, -0.8F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
             mul.setIdentity();
-            Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(0, 45, 0));
-            mul.setRotation(rot);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.setScale(0.45F);
+            mul.setScale(4.0F);
             ret.mul(mul);
             mul.setIdentity();
             mul.rotX(Constants.halfPI);
             ret.mul(mul);
             mul.setIdentity();
-            mul.rotZ((float) (-0.65F + Math.PI));
+            mul.rotZ(-0.65F);
             ret.mul(mul);
             mul.setIdentity();
             mul.setTranslation(trans);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.rotX((float) (Math.PI));
             ret.mul(mul);
             return ret;
         }
@@ -117,12 +108,12 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
     		} else {
     			GlStateManager.shadeModel(GL11.GL_FLAT);
     		}
-            Vector3f trans = new Vector3f(0.85F, -4.2F, 1.7F);
+            Vector3f trans = new Vector3f(0.0F, -1.4F, -0.4F);
             Matrix4f ret = new Matrix4f();
             ret.setIdentity();
             Matrix4f mul = new Matrix4f();
             mul.setIdentity();
-            Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(75, 15, 0));
+            Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(0, 10, 0));
             mul.setRotation(rot);
             ret.mul(mul);
             mul.setIdentity();
@@ -142,7 +133,7 @@ public class ItemModelRocketT4 extends ModelTransformWrapper
             ret.mul(mul);
             return ret;
         }
-
+        
         if (cameraTransformType == TransformType.GROUND)
         {
         	

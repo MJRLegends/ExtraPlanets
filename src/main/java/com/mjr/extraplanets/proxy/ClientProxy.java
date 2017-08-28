@@ -1140,6 +1140,7 @@ public class ClientProxy extends CommonProxy {
 		registerTexture(event, "blank_rocket_textured");
 		registerTexture(event, "blank_rocket_white");
 		registerTexture(event, "blank_rocket_yellow");
+		registerTexture(event, "solar_panel");
 	}
 
 	private void registerTexture(TextureStitchEvent.Pre event, String texture) {
