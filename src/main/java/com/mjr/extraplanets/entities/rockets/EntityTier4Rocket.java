@@ -7,6 +7,7 @@ import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -88,10 +89,14 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 			if (this.launchPhase == EnumLaunchPhase.LAUNCHED.ordinal()) {
 				double d = this.timeSinceLaunch / 150;
 
-				d = Math.min(d, 1);
+				if (this.worldObj.provider instanceof IGalacticraftWorldProvider && ((IGalacticraftWorldProvider) this.worldObj.provider).hasNoAtmosphere()) {
+					d = Math.min(d * 1.2, 2);
+				} else {
+					d = Math.min(d, 1.4);
+				}
 
 				if (d != 0.0) {
-					this.motionY = -d * 2.5D * Math.cos((this.rotationPitch - 180) / 57.2957795D);
+					this.motionY = -d * 2.5D * Math.cos((this.rotationPitch - 180) / Constants.RADIANS_TO_DEGREES);
 				}
 			} else {
 				this.motionY -= 0.008D;
@@ -125,20 +130,17 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
 		if (playerBase != null) {
-            GCPlayerStats stats = GCPlayerStats.get(playerBase);
+			GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
-            if (this.cargoItems == null || this.cargoItems.length == 0)
-            {
-                stats.setRocketStacks(new ItemStack[2]);
-            }
-            else
-            {
-                stats.setRocketStacks(this.cargoItems);
-            }
+			if (this.cargoItems == null || this.cargoItems.length == 0) {
+				stats.setRocketStacks(new ItemStack[2]);
+			} else {
+				stats.setRocketStacks(this.cargoItems);
+			}
 
-            stats.setRocketType(this.rocketType.getIndex());
-            stats.setRocketItem(ExtraPlanets_Items.TIER_4_ROCKET);
-            stats.setFuelLevel(this.fuelTank.getFluidAmount());
+			stats.setRocketType(this.rocketType.getIndex());
+			stats.setRocketItem(ExtraPlanets_Items.TIER_4_ROCKET);
+			stats.setFuelLevel(this.fuelTank.getFluidAmount());
 		}
 	}
 
@@ -280,7 +282,7 @@ public class EntityTier4Rocket extends EntityTieredRocket {
 	public boolean isDockValid(IFuelDock dock) {
 		return (dock instanceof TileEntityTier2LandingPad);
 	}
-	
+
 	@Override
 	public String getName() {
 		return GCCoreUtil.translate("entity.extraplanets.EntityTier4Rocket.name");

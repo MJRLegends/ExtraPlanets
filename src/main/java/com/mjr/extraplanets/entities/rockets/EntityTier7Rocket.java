@@ -20,6 +20,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
 
@@ -91,7 +92,7 @@ public class EntityTier7Rocket extends EntityTieredRocket {
 				d = Math.min(d, 1);
 
 				if (d != 0.0) {
-					this.motionY = -d * 2.5D * Math.cos((this.rotationPitch - 180) / 57.2957795D);
+					this.motionY = -d * 2.5D * Math.cos((this.rotationPitch - 180) / Constants.RADIANS_TO_DEGREES);
 				}
 			} else {
 				this.motionY -= 0.008D;
@@ -141,9 +142,9 @@ public class EntityTier7Rocket extends EntityTieredRocket {
 
 	protected void spawnParticles(boolean launched) {
 		if (!this.isDead) {
-			double x1 = 3.2 * Math.cos(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
-			double z1 = 3.2 * Math.sin(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
-			double y1 = 3.2 * Math.cos((this.rotationPitch - 180) / 57.2957795D);
+			double x1 = 3.2 * Math.cos(this.rotationYaw / Constants.RADIANS_TO_DEGREES) * Math.sin(this.rotationPitch / Constants.RADIANS_TO_DEGREES);
+			double z1 = 3.2 * Math.sin(this.rotationYaw / Constants.RADIANS_TO_DEGREES) * Math.sin(this.rotationPitch / Constants.RADIANS_TO_DEGREES);
+			double y1 = 3.2 * Math.cos((this.rotationPitch - 180) / Constants.RADIANS_TO_DEGREES);
 			if (this.launchPhase == EnumLaunchPhase.LANDING.ordinal() && this.targetVec != null) {
 				double modifier = this.posY - this.targetVec.getY();
 				modifier = Math.max(modifier, 1.0);

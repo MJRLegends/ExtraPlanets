@@ -12,7 +12,6 @@ import micdoodle8.mods.galacticraft.core.event.EventLandingPadRemoval;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.block.Block;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -23,6 +22,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -169,7 +169,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 				d = Math.min(d, 1);
 
 				if (d != 0.0) {
-					this.motionY = -d * 2.5D * Math.cos((this.rotationPitch - 180) / 57.2957795D);
+					this.motionY = -d * 2.5D * Math.cos((this.rotationPitch - 180) / Constants.RADIANS_TO_DEGREES);
 				}
 			} else {
 				this.motionY -= 0.008D;
@@ -219,9 +219,9 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 
 	protected void spawnParticles(boolean launched) {
 		if (!this.isDead) {
-			double x1 = 3.2 * Math.cos(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
-			double z1 = 3.2 * Math.sin(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
-			double y1 = 3.2 * Math.cos((this.rotationPitch - 180) / 57.2957795D);
+			double x1 = 3.2 * Math.cos(this.rotationYaw / Constants.RADIANS_TO_DEGREES) * Math.sin(this.rotationPitch / Constants.RADIANS_TO_DEGREES);
+			double z1 = 3.2 * Math.sin(this.rotationYaw / Constants.RADIANS_TO_DEGREES) * Math.sin(this.rotationPitch / Constants.RADIANS_TO_DEGREES);
+			double y1 = 3.2 * Math.cos((this.rotationPitch - 180) / Constants.RADIANS_TO_DEGREES);
 			if (this.launchPhase == EnumLaunchPhase.LANDING.ordinal() && this.targetVec != null) {
 				double modifier = this.posY - this.targetVec.getY();
 				modifier = Math.max(modifier, 1.0);
