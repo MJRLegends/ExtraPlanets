@@ -116,7 +116,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(450.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1000.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(100.0D);
 	}
 
