@@ -1,12 +1,7 @@
 package com.mjr.extraplanets.items;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -48,15 +43,5 @@ public class ItemWafers extends Item {
 	@Override
 	public int getMetadata(int par1) {
 		return par1;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if (player.world.isRemote) {
-			for (int i = 0; i < names.length; i++)
-				if (itemStack.getMetadata() == i)
-					list.add(EnumColor.YELLOW + GCCoreUtil.translate("wafers." + ItemWafers.names[i] + ".desc"));
-		}
 	}
 }
