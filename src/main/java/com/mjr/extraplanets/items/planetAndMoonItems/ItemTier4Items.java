@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier4Items extends Item {
-	public static final String[] names = { "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "diamond_shards" };
+	public static final String[] names = { "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "diamond_shard" };
 
 	public ItemTier4Items(String assetName) {
 		super();

@@ -530,6 +530,12 @@ item.ingot_uranium.name=鈾錠
 item.tier9_items.ingot_tungsten.name=鎢錠
 item.tier10_items.ingot_dark_iron.name=Dark Iron Ingot
 item.ingot_lead.name=Lead Ingot
+item.tier5_items.ingot_volcanic.name=Volcanic Ingot
+
+#Shards
+item.tier5_items.volcanic_shard.name=Volcanic Shard
+item.tier5_items.ash_shard.name=Ash Shard
+item.tier4_items.diamond_shard.name=Diamond Shard
 
 #Gems
 item.tier5_items.red_gem.name=紅寶石
@@ -548,13 +554,6 @@ item.wafer.titanium_wafer.name=鈦晶圓
 item.wafer.red_gem_wafer.name=紅寶石晶圓
 item.wafer.blue_gem_wafer.name=藍寶石晶圓
 item.wafer.white_gem_wafer.name=白寶石晶圓
-
-wafers.diamond_wafer.desc=CircuitFabricator Recipe: Diamonds & Redstone Lamp
-wafers.carbon_wafer.desc=CircuitFabricator Recipe: Carbon Ingot & Redstone Comparator
-wafers.titanium_wafer.desc=CircuitFabricator Recipe: Titanium Ingot & Redstone Torch
-wafers.red_gem_wafer.desc=CircuitFabricator Recipe: Red Gem & Redstone Repeater
-wafers.blue_gem_wafer.desc=CircuitFabricator Recipe: Blue Gem Ingot & Redstone Repeater
-wafers.white_gem_wafer.desc=CircuitFabricator Recipe: White Gem Ingot & Redstone Repeater
 
 #Buckets
 item.bucket_glowstone.name=螢石水
@@ -862,7 +861,7 @@ item.oxygen_tank_extremely_heavy_full.name=Extremely Heavy Oxygen Tank
 item.iodide_salt.name=Iodided Salt
 item.potassium_iodide.name=Potassium Iodide
 item.potassium.name=Potassium
-item.potash_shards.name=Potash Shards
+item.potash_shards.name=Potash Shard
 item.anti_radiation.name=Anti-Rad
 anti_radiation.desc=Reduces Radiation Level by 2
 
@@ -910,6 +909,10 @@ item.tier11_items.purple_sticks.name=Purple Sticks
 item.tier11_items.green_sticks.name=Green Sticks
 item.tier11_items.brown_sticks.name=Brown Sticks
 
+#Tools
+item.tools.sledge_hammer.name=Sledge Hammer
+item.tools.grinding_wheel.name=Grinding Wheel
+
 #Other Items
 item.apple_diamond.name=鑽石蘋果
 item.apple_iron.name=Iron Apple
@@ -921,13 +924,16 @@ item.gravity_controller.name=Gravity Controller
 item.thermal_cloth.tier3_thermal_cloth.name=Tier 3 Thermal Cloth
 item.thermal_cloth.tier4_thermal_cloth.name=Tier 4 Thermal Cloth
 item.thermal_cloth.tier5_thermal_cloth.name=Tier 5 Thermal Cloth
+item.tier5_items.ash.name=Ash Powder
 
+#Canned Food
 item.canned_food.dehydrated_porkchop.name=脫水豬排
 item.canned_food.dehydrated_fish.name=脫水魚
 item.canned_food.dehydrated_salmon.name=脫水鮭魚
 item.canned_food.dehydrated_chicken.name=脫水雞肉
 item.canned_food.dehydrated_beef.name=脫水牛肉
 
+#Electric Parts
 item.electric_parts.battery_tier1.name=Tier 1 Battery
 item.electric_parts.battery_tier2.name=Tier 2 Battery
 item.electric_parts.spark_plug.name=Spark Plugs
