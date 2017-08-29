@@ -265,7 +265,7 @@ public class ClientProxy extends CommonProxy {
 		if (Config.IAPETUS)
 			ClientUtilities.addExtraPlanetsVariants("iapetus", "iapetus_surface", "iapetus_sub_surface", "iapetus_stone", "iapetus_ore_iron", "iapetus_ore_tin", "iapetus_ore_copper", "iapetus_ice");
 		if (Config.MERCURY)
-			ClientUtilities.addExtraPlanetsVariants("tier4_items", "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon");
+			ClientUtilities.addExtraPlanetsVariants("tier4_items", "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "diamond_shards");
 		if (Config.JUPITER)
 			ClientUtilities.addExtraPlanetsVariants("tier5_items", "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash", "ash_shard",
 					"volcanic_shard", "ingot_volcanic");
