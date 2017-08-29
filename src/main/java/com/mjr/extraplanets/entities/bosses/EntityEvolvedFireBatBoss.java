@@ -42,7 +42,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IEntityBreathable {
-	private int explosionStrength = 1;
+	private int explosionStrength = 2;
 
 	private static final DataParameter<Boolean> ATTACKING = EntityDataManager.<Boolean> createKey(EntityEvolvedFireBatBoss.class, DataSerializers.BOOLEAN);
 	/** Coordinates of where the bat spawned. */
@@ -113,7 +113,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(450.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(800.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(100.0D);
 	}
 
