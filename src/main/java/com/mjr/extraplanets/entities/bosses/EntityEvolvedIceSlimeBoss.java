@@ -76,7 +76,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 		this.setSize(0.51000005F * size, 0.51000005F * size);
 		this.setPosition(this.posX, this.posY, this.posZ);
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.2F + 0.1F * size);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue((0.2F + 0.1F * size) / 2);
 		this.setHealth(this.getMaxHealth());
 		this.experienceValue = size;
 	}
@@ -243,7 +243,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
 	 */
 	protected int getAttackStrength() {
-		return this.getSlimeSize() * 8;
+		return this.getSlimeSize() * 7;
 	}
 
 	/**
