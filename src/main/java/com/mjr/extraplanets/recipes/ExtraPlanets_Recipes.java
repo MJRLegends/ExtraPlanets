@@ -1033,6 +1033,11 @@ public class ExtraPlanets_Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5));
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 3), new ItemStack(AsteroidsItems.basicItem, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4), new ItemStack(
 					ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 3, 6), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), new ItemStack(
+					ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5));
+			CompressorRecipes.addShapelessRecipe(new ItemStack(Items.DIAMOND), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6),
+					new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6),
+					new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 6));
 		}
 		if (Config.JUPITER) {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 4), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5));
