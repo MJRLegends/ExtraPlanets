@@ -197,11 +197,13 @@ public class MainHandlerServer {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
 
 		CustomWorldProviderSpace provider = (CustomWorldProviderSpace) playerMP.worldObj.provider;
-		// Normal/Nothing 0.005
-		// Tier 1 0.0045
-		// Tier 2 0.004
-		// Tier 3 0.0035
-		// Tier 4 0.00325
+		// Tier 1 Space Suit
+			// 25 Level = 36 mins
+			// 50 Level = 14 mins
+		// Tier 2 Space Suit
+			// 25 Level = 38 mins
+			// 50 Level = 15 mins
+
 		boolean doDamage = false;
 		boolean doArmorCheck = false;
 		double damageModifer = 0;
@@ -229,7 +231,7 @@ public class MainHandlerServer {
 
 			int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
 			double damageToTake = 0.005 * tierValue;
-			damageModifer = 0.005 - (damageToTake / 2) / 10;
+			damageModifer = 0.0075 - (damageToTake / 2) / 10;
 			doDamage = true;
 		}
 		if (doDamage) {
@@ -261,5 +263,4 @@ public class MainHandlerServer {
 	protected void sendSolarRadiationPacket(EntityPlayerMP player, IStatsCapability stats) {
 		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.worldObj.provider.getDimensionId(), new Object[] { stats.getRadiationLevel() }), player);
 	}
-
 }

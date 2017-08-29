@@ -180,7 +180,7 @@ public class WorldProviderEuropa extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 35;
+		return 45;
 	}
 
 	@Override

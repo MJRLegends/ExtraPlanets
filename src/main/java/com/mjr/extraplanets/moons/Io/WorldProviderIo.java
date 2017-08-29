@@ -180,7 +180,7 @@ public class WorldProviderIo extends CustomWorldProviderSpace implements IGalact
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 35;
+		return 45;
 	}
 
 	@Override

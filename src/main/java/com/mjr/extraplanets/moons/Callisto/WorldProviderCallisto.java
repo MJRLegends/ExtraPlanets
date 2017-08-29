@@ -180,7 +180,7 @@ public class WorldProviderCallisto extends CustomWorldProviderSpace implements I
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 35;
+		return 45;
 	}
 
 	@Override

@@ -4,12 +4,13 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -79,7 +80,13 @@ public class ItemBasicItem extends Item {
 				if (playerIn != null) {
 					stats = playerIn.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
-				stats.setRadiationLevel(stats.getRadiationLevel() / 2);
+				double level = stats.getRadiationLevel() / 2;
+				if (level < 0)
+					stats.setRadiationLevel(0);
+				else
+					stats.setRadiationLevel(level);
+				playerIn.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by 50%"));
+				playerIn.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
 			}
 
 			if (!playerIn.capabilities.isCreativeMode) {

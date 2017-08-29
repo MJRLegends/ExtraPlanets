@@ -124,7 +124,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 25;
+		return 35;
 	}
 
 	@Override

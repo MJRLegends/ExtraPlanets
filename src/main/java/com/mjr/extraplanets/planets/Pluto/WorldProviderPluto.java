@@ -114,7 +114,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 12;
+		return 30;
 	}
 
 	@Override
