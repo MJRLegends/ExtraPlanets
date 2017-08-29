@@ -147,6 +147,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemBasicKit;
 import com.mjr.extraplanets.items.ItemCannedFood;
 import com.mjr.extraplanets.items.ItemElectricParts;
+import com.mjr.extraplanets.items.ItemTools;
 import com.mjr.extraplanets.items.ItemWafers;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier10Items;
@@ -266,7 +267,8 @@ public class ClientProxy extends CommonProxy {
 		if (Config.MERCURY)
 			ClientUtilities.addExtraPlanetsVariants("tier4_items", "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon");
 		if (Config.JUPITER)
-			ClientUtilities.addExtraPlanetsVariants("tier5_items", "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem");
+			ClientUtilities.addExtraPlanetsVariants("tier5_items", "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash", "ash_shard",
+					"volcanic_shard", "ingot_volcanic");
 		if (Config.SATURN)
 			ClientUtilities.addExtraPlanetsVariants("tier6_items", "tier6engine", "tier6booster", "tier6fin", "tier6heavy_duty_plate", "compressed_magnesium", "ingot_magnesium");
 		if (Config.URANUS)
@@ -291,6 +293,7 @@ public class ClientProxy extends CommonProxy {
 					"maple_yellow_short", "maple_yellow_med", "maple_yellow_tall", "maple_green_short", "maple_green_med", "maple_green_tall");
 		}
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamond_wafer", "carbon_wafer", "titanium_wafer", "red_gem_wafer", "blue_gem_wafer", "white_gem_wafer");
+		ClientUtilities.addExtraPlanetsVariants("tools", "sledge_hammer", "grinding_wheel");
 		if (Config.CANNED_FOOD)
 			ClientUtilities.addExtraPlanetsVariants("canned_food", "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef");
 		if (Config.THERMAL_PADDINGS) {
@@ -1083,6 +1086,9 @@ public class ClientProxy extends CommonProxy {
 		}
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WAFERS, i, ItemWafers.names[i]);
+		}
+		for (int i = 0; i < ItemTools.names.length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TOOLS, i, ItemTools.names[i]);
 		}
 		if (Config.CANNED_FOOD) {
 			for (int i = 0; i < ItemCannedFood.names.length; i++) {
