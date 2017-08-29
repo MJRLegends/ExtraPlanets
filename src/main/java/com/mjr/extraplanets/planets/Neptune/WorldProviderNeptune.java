@@ -128,7 +128,7 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 10;
+		return 42;
 	}
 
 	@Override
