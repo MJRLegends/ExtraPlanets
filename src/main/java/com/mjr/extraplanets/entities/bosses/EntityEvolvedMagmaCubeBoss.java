@@ -80,7 +80,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
         this.dataManager.set(SLIME_SIZE, Integer.valueOf(size));
 		this.setSize(0.51000005F * size, 0.51000005F * size);
 		this.setPosition(this.posX, this.posY, this.posZ);
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(300.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(600.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.2F + 0.1F * size);
 		this.setHealth(this.getMaxHealth());
 		this.experienceValue = size;
@@ -251,7 +251,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	 * slime.
 	 */
 	protected int getAttackStrength() {
-		return this.getSlimeSize() * 4;
+		return this.getSlimeSize() * 6;
 	}
 
 	 @Override
