@@ -132,6 +132,8 @@ public class ExtraPlanets_Items {
 	public static Item INGOT_URANIUM;
 	public static Item INGOT_MERCURY;
 	public static Item INGOT_LEAD;
+	
+	public static Item TOOLS;
 
 	public static Item CLOTH;
 	public static Item GRAVITY_CONTROLLER;
@@ -362,6 +364,7 @@ public class ExtraPlanets_Items {
 		WAFERS = new ItemWafers("wafer");
 		INGOT_LEAD = new ItemBasicItem("ingot_lead");
 		CLOTH = new ItemBasicItem("cloth");
+		TOOLS = new ItemTools("tools");
 		GRAVITY_CONTROLLER = new ItemBasicItem("gravity_controller");
 
 		TIER_1_EQUIPMENT_KIT = new ItemBasicKit("tier1_kit", 1);
@@ -523,6 +526,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(WAFERS, WAFERS.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(INGOT_LEAD, INGOT_LEAD.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TOOLS, TOOLS.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(BUCKET_CLEAN_WATER, "bucket_clean_water");
 		GameRegistry.registerItem(BUCKET_INFECTED_WATER, "bucket_infected_water");
@@ -536,6 +540,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		
 		if (Config.ERIS && Config.KEPLER22B)
 			GameRegistry.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 	}
