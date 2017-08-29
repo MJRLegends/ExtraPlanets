@@ -180,7 +180,7 @@ public class WorldProviderTitania extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 25;
+		return 35;
 	}
 
 	@Override

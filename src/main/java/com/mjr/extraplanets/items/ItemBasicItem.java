@@ -13,6 +13,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -83,7 +85,13 @@ public class ItemBasicItem extends Item {
 				if (entityLiving != null) {
 					stats = entityLiving.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
-				stats.setRadiationLevel(stats.getRadiationLevel() / 2);
+				double level = stats.getRadiationLevel() / 2;
+				if(level < 0)
+					stats.setRadiationLevel(0);
+				else
+					stats.setRadiationLevel(level);
+				entityplayer.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 50%"));
+				entityplayer.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
 			}
 
 			if (entityplayer == null || !entityplayer.capabilities.isCreativeMode) {

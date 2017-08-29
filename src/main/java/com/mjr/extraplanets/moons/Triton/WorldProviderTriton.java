@@ -183,7 +183,7 @@ public class WorldProviderTriton extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 10;
+		return 42;
 	}
 
 	@Override
