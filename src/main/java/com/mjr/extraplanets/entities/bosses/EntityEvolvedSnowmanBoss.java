@@ -36,7 +36,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 	public EntityEvolvedSnowmanBoss(World p_i1692_1_) {
 		super(p_i1692_1_);
 		this.setSize(0.4F * 8, 1.8F * 6.5F);
-		this.tasks.addTask(1, new EntityAIArrowAttack(this, 0.75D, 20, 5F));
+		this.tasks.addTask(1, new EntityAIArrowAttack(this, 1.0D, 20, 5F));
 		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));
 		this.tasks.addTask(4, new EntityAILookIdle(this));
@@ -70,7 +70,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1250.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.20000000298023224D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue((0.20000000298023224D * 8));
 	}
 
 //	@Override

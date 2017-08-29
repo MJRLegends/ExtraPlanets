@@ -29,11 +29,8 @@ public class EntitySmallSnowball extends EntitySnowball {
 	protected void onImpact(RayTraceResult p_70184_1_) {
 		if (p_70184_1_.entityHit != null) {
 			int i = 0;
-
-			if (p_70184_1_.entityHit instanceof EntityBlaze) {
-				i = 3;
-			} else if (p_70184_1_.entityHit instanceof EntityPlayer) {
-				i = 8;
+			if (p_70184_1_.entityHit instanceof EntityPlayer) {
+				i = 20;
 			}
 
 			p_70184_1_.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), i);

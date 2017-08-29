@@ -79,7 +79,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 		this.setSize(0.51000005F * size, 0.51000005F * size);
 		this.setPosition(this.posX, this.posY, this.posZ);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.2F + 0.1F * size);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue((0.2F + 0.1F * size) / 2);
 		this.setHealth(this.getMaxHealth());
 		this.experienceValue = size;
 	}
@@ -249,7 +249,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	 * slime.
 	 */
 	protected int getAttackStrength() {
-		return this.getSlimeSize() * 8;
+		return this.getSlimeSize() * 7;
 	}
 
     @Override
