@@ -87,6 +87,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 7), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 7), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 11), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 0.0F);
+			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.VOLCANIC_ROCK), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 0.0F);
 		}
 		if (Config.SATURN) {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
@@ -335,9 +336,21 @@ public class ExtraPlanets_Recipes {
 			// Block to Red Gem
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 9, 8), new Object[] { new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 12) });
 
-			//Orange Sand to Orange Sandstone
-			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.ORANGE_SANDSTONE, 1, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0)});
-			
+			// Orange Sand to Orange Sandstone
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.ORANGE_SANDSTONE, 1, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0),
+					new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0) });
+
+			// Ash Block to Ash Shards
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 2, 10), new Object[] { new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new ItemStack(ExtraPlanets_Blocks.ASH_ROCK, 1, 0) });
+
+			// Ash Shards to Ash
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 9), new Object[] { new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10),
+					new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10) });
+
+			// Volcanic Ingot to Volcanic Shards
+			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 2, 11), new Object[] { new ItemStack(ExtraPlanets_Items.TOOLS, 1, 1), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12),
+					new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12) });
+
 			if (Config.ITEMS_PALLADIUM) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', Items.STICK });
@@ -391,16 +404,22 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7) });
 
 			// Fire Bomb
-			List<ItemStack> items = OreDictionary.getOres("ingotLead");
-			int count = items.size();
-			for (int j = 0; j <= count; j++) {
-				ItemStack item;
-				if (j == 0)
-					item = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
-				else
-					item = items.get(j - 1);
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND, 'Z',
-						new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', item });
+			if (Config.JUPITER)
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SVS", "GZG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND, 'Z',
+						new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'V', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 11) });
+			else {
+				List<ItemStack> items = OreDictionary.getOres("ingotLead");
+				int count = items.size();
+				for (int j = 0; j <= count; j++) {
+					ItemStack item;
+					if (j == 0)
+						item = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
+					else
+						item = items.get(j - 1);
+
+					GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND, 'Z',
+							new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', item });
+				}
 			}
 
 			if (Config.ITEMS_MAGNESIUM) {
@@ -786,6 +805,13 @@ public class ExtraPlanets_Recipes {
 
 		// Gravity Controller
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1, 0), new Object[] { "RTR", "TCT", "RTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R', GCItems.battery, 'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
+
+		// Sledge Hammer
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 'Y', new ItemStack(GCItems.itemBasicMoon), 'S', Items.STICK });
+
+		// Grinding Wheel
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 1), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'H', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'Z',
+				new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12) });
 
 		if (Config.PRESSURE || Config.RADIATION) {
 			// Tier 1 - 4 Radiation Layers
