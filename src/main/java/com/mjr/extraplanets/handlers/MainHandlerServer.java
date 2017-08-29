@@ -263,4 +263,20 @@ public class MainHandlerServer {
 	protected void sendSolarRadiationPacket(EntityPlayerMP player, IStatsCapability stats) {
 		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_UPDATE_SOLAR_RADIATION_LEVEL, player.world.provider.getDimensionType().getId(), new Object[] { stats.getRadiationLevel() }), player);
 	}
+
+	@SubscribeEvent
+	public void onSleepInBedEvent(PlayerSleepInBedEvent event) {
+		EntityPlayerMP playerMP = (EntityPlayerMP) event.getEntityPlayer();
+		IStatsCapability stats = null;
+		if (playerMP != null) {
+			stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+		}
+		double level = (5 / 100) * stats.getRadiationLevel();
+		if(level < 0)
+			stats.setRadiationLevel(0);
+		else
+			stats.setRadiationLevel(level);
+		playerMP.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
+		playerMP.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+	}
 }
