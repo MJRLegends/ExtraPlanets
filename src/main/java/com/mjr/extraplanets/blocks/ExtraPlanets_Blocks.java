@@ -258,7 +258,12 @@ public class ExtraPlanets_Blocks {
 	public static Block PLUTO_SUB_SURFACE_STAIRS;
 	public static Block PLUTO_STONE_STAIRS;
 	public static Block PLUTO_STONE_BRICKS_STAIRS;
-
+	
+	public static Block ERIS_SURFACE_STAIRS;
+	public static Block ERIS_SUB_SURFACE_STAIRS;
+	public static Block ERIS_STONE_STAIRS;
+	public static Block ERIS_STONE_BRICKS_STAIRS;
+	
 	public static void init() {
 		initializeBlocks();
 		if (Config.SLABS_AND_STAIRS)
@@ -443,6 +448,12 @@ public class ExtraPlanets_Blocks {
 			PLUTO_SUB_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_sub_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
 			PLUTO_STONE_STAIRS = new BlockBasicStairs("pluto_stairs_stone", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONE)).setHardness(2.0F);
 			PLUTO_STONE_BRICKS_STAIRS = new BlockBasicStairs("pluto_stairs_stone_bricks", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
+		if (Config.ERIS) {
+			ERIS_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			ERIS_SUB_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_sub_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			ERIS_STONE_STAIRS = new BlockBasicStairs("eris_stairs_stone", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONE)).setHardness(2.0F);
+			ERIS_STONE_BRICKS_STAIRS = new BlockBasicStairs("eris_stairs_stone_bricks", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
 		}
 	}
 
@@ -681,6 +692,12 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(PLUTO_SUB_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(PLUTO_STONE_STAIRS, ItemBlockGC.class, PLUTO_STONE_STAIRS.getUnlocalizedName().substring(5));
 			GameRegistry.registerBlock(PLUTO_STONE_BRICKS_STAIRS, ItemBlockGC.class, PLUTO_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
+		if (Config.ERIS) {
+			RegisterHelper.registerBlock(ERIS_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(ERIS_SUB_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(ERIS_STONE_STAIRS, ItemBlockGC.class, ERIS_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(ERIS_STONE_BRICKS_STAIRS, ItemBlockGC.class, ERIS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 	}
 
