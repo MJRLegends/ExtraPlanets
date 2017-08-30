@@ -40,6 +40,7 @@ public class StatsCapability implements IStatsCapability {
 
 	@Override
 	public void copyFrom(IStatsCapability oldData, boolean keepInv) {
+		this.radiationLevel = oldData.getRadiationLevel();
 	}
 
 	@Override
