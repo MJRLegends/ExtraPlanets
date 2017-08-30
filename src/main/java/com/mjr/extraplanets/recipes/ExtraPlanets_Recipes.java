@@ -404,7 +404,7 @@ public class ExtraPlanets_Recipes {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 0) });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 1) });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 9) });
 			}
 		}
 		if (Config.SATURN) {
@@ -524,7 +524,7 @@ public class ExtraPlanets_Recipes {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 0) });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 1) });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 5) });
 			}
 		}
 		if (Config.NEPTUNE) {
@@ -649,6 +649,14 @@ public class ExtraPlanets_Recipes {
 
 			// Block to Dark Iron
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.ERIS_BLOCKS, 1, 7) });
+		
+			// Slab's & Stairs
+			if (Config.SLABS_AND_STAIRS) {
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ERIS_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ERIS_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ERIS_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ERIS_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ERIS_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ERIS_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ERIS_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ERIS_BLOCKS, 1, 8) });
+			}
 		}
 
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {

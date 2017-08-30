@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "extraplanets:blocks/eris_surface",
+        "top": "extraplanets:blocks/eris_surface",
+        "side": "extraplanets:blocks/eris_surface"
+    }
+}
