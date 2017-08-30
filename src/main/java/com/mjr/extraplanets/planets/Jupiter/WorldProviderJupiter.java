@@ -39,7 +39,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 9550L;
 	}
 
 	@Override
