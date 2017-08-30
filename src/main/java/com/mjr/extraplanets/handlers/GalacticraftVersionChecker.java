@@ -11,7 +11,7 @@ import com.mjr.extraplanets.Constants;
 public class GalacticraftVersionChecker {
 	public static void run() {
 		try {
-			Class.forName("micdoodle8.mods.galacticraft.core.energy.tile.TileCableIC2Sealed");
+			Class.forName("micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor");
 		} catch (ClassNotFoundException e) {
 			Logger log = LogManager.getLogger();
 			log.fatal(Constants.modName + ": has detected you are using a version below the required minimum version of build #117, You can find it here https://micdoodle8.com/mods/galacticraft/downloads");
