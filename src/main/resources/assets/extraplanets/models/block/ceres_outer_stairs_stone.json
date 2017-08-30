@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "extraplanets:blocks/ceres_stone",
+        "top": "extraplanets:blocks/ceres_stone",
+        "side": "extraplanets:blocks/ceres_stone"
+    }
+}

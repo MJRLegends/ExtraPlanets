@@ -41,7 +41,7 @@ public class Config {
 	public static boolean FUEL_LOADER_ULTIMATE;
 	public static boolean OXYGEN_COMPRESSOR_ADVANCED;
 	public static boolean OXYGEN_COMPRESSOR_ULTIMATE;
-	public static boolean SLABS_AND_STAIRS = false;
+	public static boolean SLABS_AND_STAIRS;
 	public static boolean NUCLEAR_BOMB;
 	public static boolean FIRE_BOMB;
 	
@@ -491,6 +491,8 @@ public class Config {
 
 		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Planet and Moon Ores!").getBoolean(true);
 		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add all ingots to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All Ingots!").getBoolean(true);
+		
+		SLABS_AND_STAIRS = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Enable Slab & Stairs", true).getBoolean(true);
 
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable achievements", true, "").getBoolean(true);
 
