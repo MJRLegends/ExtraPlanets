@@ -197,7 +197,7 @@ public class ExtraPlanets_Items {
 	public static Item TIER_3_EQUIPMENT_KIT;
 	public static Item TIER_5_EQUIPMENT_KIT;
 	
-	public static Item GEIGERCOUNTER;
+	public static Item GEIGER_COUNTER;
 
 	public static void init() {
 		initializeItems();
@@ -372,7 +372,7 @@ public class ExtraPlanets_Items {
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
 		if (Config.ERIS && Config.KEPLER22B)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
-		GEIGERCOUNTER = new ItemGeigerCounter("geigercounter");
+		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
 	}
 
 	private static void registerItems() {
@@ -541,7 +541,7 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		if (Config.ERIS && Config.KEPLER22B)
 			RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(GEIGERCOUNTER, GEIGERCOUNTER.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
 	}
 
 	public static void OreDictionaryIngotsRegister() {
