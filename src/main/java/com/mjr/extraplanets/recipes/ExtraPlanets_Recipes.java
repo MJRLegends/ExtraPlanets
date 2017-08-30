@@ -285,10 +285,10 @@ public class ExtraPlanets_Recipes {
 
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 0) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_SUB_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_STONE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_STONE_BRICKS_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 8) });
 			}
 		}
 		if (Config.CERES) {
@@ -320,10 +320,10 @@ public class ExtraPlanets_Recipes {
 			}
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 0) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_SUB_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_STONE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_STONE_BRICKS_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CERES_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.CERES_BLOCKS, 1, 8) });
 			}
 		}
 		if (Config.JUPITER) {
@@ -399,10 +399,10 @@ public class ExtraPlanets_Recipes {
 			if (Config.BATTERIES)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R', Items.redstone, 'C', Items.coal });// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 0) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SUB_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_STONE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_STONE_BRICKS_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 8) });
 			}
 		}
 		if (Config.SATURN) {
@@ -458,10 +458,10 @@ public class ExtraPlanets_Recipes {
 			}
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 0) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_SUB_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_STONE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_STONE_BRICKS_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.SATURN_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 8) });
 			}
 		}
 		if (Config.URANUS) {
@@ -519,10 +519,10 @@ public class ExtraPlanets_Recipes {
 			}
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 0) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_SUB_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_STONE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_STONE_BRICKS_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.URANUS_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 8) });
 			}
 		}
 		if (Config.NEPTUNE) {
@@ -583,10 +583,10 @@ public class ExtraPlanets_Recipes {
 			if (Config.BATTERIES)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R', Items.redstone, 'C', Items.coal });// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 0) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SUB_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_STONE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_STONE_BRICKS_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 8) });
 			}
 		}
 		if (Config.PLUTO) {
@@ -623,10 +623,10 @@ public class ExtraPlanets_Recipes {
 			}
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 0) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_SUB_SURFACE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 1) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_STONE_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 2) });
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_STONE_BRICKS_STAIRS), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 8) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 0) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_SUB_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 1) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_STONE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 2) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.PLUTO_STONE_BRICKS_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 8) });
 			}
 		}
 		if (Config.ERIS) {
