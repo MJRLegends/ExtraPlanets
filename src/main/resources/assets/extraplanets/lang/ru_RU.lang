@@ -924,6 +924,9 @@ item.thermal_cloth.tier3_thermal_cloth.name=Теплоустойчивая тк�
 item.thermal_cloth.tier4_thermal_cloth.name=Теплоустойчивая ткань 4-го уровня
 item.thermal_cloth.tier5_thermal_cloth.name=Теплоустойчивая ткань 5-го уровня
 item.tier5_items.ash.name=Ash Powder
+item.geiger_counter.name=Geiger Counter
+
+geiger.counter.desc=Right Click to see your Current Radiation Level!
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Дегидратированная жаренная свинина

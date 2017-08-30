@@ -925,6 +925,9 @@ item.thermal_cloth.tier3_thermal_cloth.name=Tier 3 Thermal Cloth
 item.thermal_cloth.tier4_thermal_cloth.name=Tier 4 Thermal Cloth
 item.thermal_cloth.tier5_thermal_cloth.name=Tier 5 Thermal Cloth
 item.tier5_items.ash.name=Ash Powder
+item.geiger_counter.name=Geiger Counter
+
+geiger.counter.desc=Right Click to see your Current Radiation Level!
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=脱水猪排
