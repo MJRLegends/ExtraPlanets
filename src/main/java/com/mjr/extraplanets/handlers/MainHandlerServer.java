@@ -283,7 +283,7 @@ public class MainHandlerServer {
 	@SubscribeEvent
 	public void onSleepInBedEvent(PlayerWakeUpEvent event) {
 		EntityPlayer player = event.getEntityPlayer();
-		if (player.worldObj.isRemote == false) {
+		if (player.world.isRemote == false) {
 			EntityPlayerMP playerMP = (EntityPlayerMP) player;
 			IStatsCapability stats = null;
 			if (playerMP != null) {
@@ -294,8 +294,8 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else
 				stats.setRadiationLevel(level);
-			player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
-			player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+			player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
+			player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
 		}
 	}
 }

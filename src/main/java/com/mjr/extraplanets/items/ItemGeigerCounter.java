@@ -34,7 +34,7 @@ public class ItemGeigerCounter extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.worldObj.isRemote) {
+		if (player.world.isRemote) {
 			list.add(EnumColor.YELLOW + GCCoreUtil.translate("geiger.counter.desc"));
 		}
 	}
@@ -45,15 +45,16 @@ public class ItemGeigerCounter extends Item {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
-		playerIn.setActiveHand(hand);
-		if (playerIn.worldObj.isRemote == false) {
-			EntityPlayerMP playerMP = (EntityPlayerMP) playerIn;
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand){
+        ItemStack itemStackIn = player.getHeldItem(hand);
+		player.setActiveHand(hand);
+		if (player.world.isRemote == false) {
+			EntityPlayerMP playerMP = (EntityPlayerMP) player;
 			IStatsCapability stats = null;
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			playerIn.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+			player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
 		}
 		return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
 	}
