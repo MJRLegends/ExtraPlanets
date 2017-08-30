@@ -15,6 +15,29 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.3.2
+*Added Loads of Comments to Config options, Renamed some Config options (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Changed the Galacticraft version enforcer for to build 117 as a minimum version to use
+*Changes to Planet Bosses
+*Fixed the fact carbon blocks were generating on Mercury when Carbon Ore should be generating
+*Removed not needed tool tip of Wafers
+*Changes to Tier 4 - 10 Heavy Duty Plating Compressor Recipes
+*Added Ash Shards, Volcanic Shards/Ingot, and Added Sledge Hammer, Grinding Wheel
+*Changed Fire Bomb Recipe
+*Added Diamond Shards, Added recipe to compress 5 Carbon ingots in to 3 Diamond Shards, which then can be turned in to 1 Diamond with 9 Diamond Shards
+*Changed Radiation Levels
+*Added a message for when the radiation is reduced
+*Added the ability reduce your Radation by 5% when sleeping in a bed
+*Added Geiger Counter Item
+*Changed the Radiation so Death reduces it by 20% but wont go below 50% overall level
+*Updated lang files
+*Changed the day lengths on all the Planets
+*Changed the day length for Kepler22b
+*Added Surface, Sub Surface, Stone, Stone Bricks Stairs for Mercury, Ceres, Jupiter, Saturn, Uranus, Neptune, Pluto, Eris
+*Changed Solar Energy Multiplier values for all Planets and Moons
+*Fixed 'Use Default Bosses' Config option not working
+*Removed not needed Config section
+
 v0.3.1
 *Fixed Tier 2 Battery recipe
 *Fixed Parachute still opening when going to planets with landers
