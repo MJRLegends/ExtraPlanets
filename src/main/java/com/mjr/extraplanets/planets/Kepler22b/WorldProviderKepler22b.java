@@ -37,7 +37,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 20000L;
 	}
 
 	@Override
