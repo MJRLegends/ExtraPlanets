@@ -90,11 +90,11 @@ public class MainHandlerServer {
 			if (entityLiving != null) {
 				stats = entityLiving.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			if (stats.getRadiationLevel() >= 80)
+			if (stats.getRadiationLevel() >= 85)
 				stats.setRadiationLevel(80);
-			else if (stats.getRadiationLevel() >= 60 && stats.getRadiationLevel() < 80)
+			else if (stats.getRadiationLevel() >= 65 && stats.getRadiationLevel() < 85)
 				stats.setRadiationLevel(60);
-			else if (stats.getRadiationLevel() >= 50 && stats.getRadiationLevel() < 60)
+			else if (stats.getRadiationLevel() >= 50 && stats.getRadiationLevel() < 65)
 				stats.setRadiationLevel(50);
 		}
 	}
@@ -226,18 +226,18 @@ public class MainHandlerServer {
 		double damageModifer = 0;
 		int radiationLevel = provider.getSolarRadiationLevel();
 		if (playerMP.inventory.armorInventory[0] == null || playerMP.inventory.armorInventory[1] == null || playerMP.inventory.armorInventory[2] == null || playerMP.inventory.armorInventory[3] == null) {
-			damageModifer = 0.2;
+			damageModifer = 0.1;
 			doDamage = true;
 		} else if (!(playerMP.inventory.armorInventory[0].getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory[1].getItem() instanceof IRadiationSuit)
 				&& !(playerMP.inventory.armorInventory[2].getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory[3].getItem() instanceof IRadiationSuit)) {
-			damageModifer = 0.2;
+			damageModifer = 0.1;
 			doDamage = true;
 		} else if (playerMP.inventory.armorInventory[0].getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory[1].getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory[2].getItem() instanceof IRadiationSuit
 				&& playerMP.inventory.armorInventory[3].getItem() instanceof IRadiationSuit) {
 			doArmorCheck = true;
 			doDamage = false;
 		} else {
-			damageModifer = 0.2;
+			damageModifer = 0.1;
 			doDamage = true;
 		}
 		if (doArmorCheck) {
