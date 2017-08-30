@@ -39,7 +39,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 17140L;
 	}
 
 	@Override
