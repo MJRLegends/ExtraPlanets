@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "extraplanets:blocks/mercury_stone_bricks",
+        "top": "extraplanets:blocks/mercury_stone_bricks",
+        "side": "extraplanets:blocks/mercury_stone_bricks"
+    }
+}
