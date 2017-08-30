@@ -443,6 +443,47 @@ tile.decorative_blocks.ash_bricks.name=Ash Bricks
 tile.decorative_blocks2.white_block.name=White Block
 tile.decorative_blocks2.red_block.name=Red Block
 
+#Stairs
+tile.mercury_stairs_surface.name=Mercury Surface Stairs
+tile.mercury_stairs_sub_surface.name=Mercury Sub Surface Stairs
+tile.mercury_stairs_stone.name=Mercury Stone Stairs
+tile.mercury_stairs_stone_bricks.name=Mercury Stone Bricks Stairs
+
+tile.ceres_stairs_surface.name=Ceres Surface Stairs
+tile.ceres_stairs_sub_surface.name=Ceres Sub Surface Stairs
+tile.ceres_stairs_stone.name=Ceres Stone Stairs
+tile.ceres_stairs_stone_bricks.name=Ceres Stone Bricks Stairs
+
+tile.jupiter_stairs_surface.name=Jupiter Surface Stairs
+tile.jupiter_stairs_sub_surface.name=Jupiter Sub Surface Stairs
+tile.jupiter_stairs_stone.name=Jupiter Stone Stairs
+tile.jupiter_stairs_stone_bricks.name=Jupiter Stone Bricks Stairs
+
+tile.saturn_stairs_surface.name=Saturn Surface Stairs
+tile.saturn_stairs_sub_surface.name=Saturn Sub Surface Stairs
+tile.saturn_stairs_stone.name=Saturn Stone Stairs
+tile.saturn_stairs_stone_bricks.name=Saturn Stone Bricks Stairs
+
+tile.uranus_stairs_surface.name=Uranus Surface Stairs
+tile.uranus_stairs_sub_surface.name=Uranus Sub Surface Stairs
+tile.uranus_stairs_stone.name=Uranus Stone Stairs
+tile.uranus_stairs_stone_bricks.name=Uranus Stone Bricks Stairs
+
+tile.neptune_stairs_surface.name=Neptune Surface Stairs
+tile.neptune_stairs_sub_surface.name=Neptune Sub Surface Stairs
+tile.neptune_stairs_stone.name=Neptune Stone Stairs
+tile.neptune_stairs_stone_bricks.name=Neptune Stone Bricks Stairs
+
+tile.pluto_stairs_surface.name=Pluto Surface Stairs
+tile.pluto_stairs_sub_surface.name=Pluto Sub Surface Stairs
+tile.pluto_stairs_stone.name=Pluto Stone Stairs
+tile.pluto_stairs_stone_bricks.name=Pluto Stone Bricks Stairs
+
+tile.eris_stairs_surface.name=Eris Surface Stairs
+tile.eris_stairs_sub_surface.name=Eris Sub Surface Stairs
+tile.eris_stairs_stone.name=Eris Stone Stairs
+tile.eris_stairs_stone_bricks.name=Eris Stone Bricks Stairs
+
 #Rocket Items
 item.item_tier4_rocket.t4Rocket.name=4階火箭
 item.item_tier5_rocket.t5Rocket.name=5階火箭
@@ -958,7 +999,7 @@ entity.extraplanets.EntityTier10ElectricRocket.name=Tier 10 Electric Rocket
 entity.extraplanets.EntityMarsRover.name=Mars Rover
 entity.extraplanets.EntityVenusRover.name=Venus Rover
 
-entity.extraplanets.CreeperBossVenus.name=金星爬行者之王(進化體)
+entity.extraplanets.CreeperBossMercury.name=金星爬行者之王(進化體)
 entity.extraplanets.CreeperBossJupiter.name=木星爬行者之王(進化體)
 entity.extraplanets.CreeperBossSaturn.name=土星爬行者之王(進化體)
 entity.extraplanets.CreeperBossUranus.name=天王星爬行者之王(進化體)
