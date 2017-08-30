@@ -26,6 +26,7 @@ public class ItemGeigerCounter extends Item {
 		this.setHasSubtypes(true);
 		this.setUnlocalizedName(assetName);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
+		this.setMaxStackSize(1);
 	}
 
 	@Override
