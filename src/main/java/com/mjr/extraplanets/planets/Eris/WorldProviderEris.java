@@ -36,7 +36,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 90000L;
 	}
 
 	@Override

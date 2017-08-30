@@ -36,7 +36,7 @@ public class WorldProviderCeres extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 18000L;
 	}
 
 	@Override
