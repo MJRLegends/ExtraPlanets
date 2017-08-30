@@ -119,7 +119,7 @@ public class WorldProviderOberon extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 4.0D;
+		return 3.0D;
 	}
 
 	@Override

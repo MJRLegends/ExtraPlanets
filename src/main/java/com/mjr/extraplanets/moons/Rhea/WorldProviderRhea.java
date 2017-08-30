@@ -119,7 +119,7 @@ public class WorldProviderRhea extends CustomWorldProviderSpace implements IGala
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 6.0D;
+		return 3.5D;
 	}
 
 	@Override

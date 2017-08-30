@@ -104,7 +104,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 2.0D;
+		return 1.0D;
 	}
 
 	@Override

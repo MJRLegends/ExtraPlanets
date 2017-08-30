@@ -101,7 +101,7 @@ public class WorldProviderMercury extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 12.0D;
+		return 6.0D;
 	}
 
 	@Override
