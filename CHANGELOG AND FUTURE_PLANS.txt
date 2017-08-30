@@ -14,11 +14,34 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
-1.0.0
+v1.0.1
+*Added Loads of Comments to Config options, Renamed some Config options (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Changed the Galacticraft version enforcer for to build 117 as a minimum version to use
+*Changes to Planet Bosses
+*Fixed the fact carbon blocks were generating on Mercury when Carbon Ore should be generating
+*Removed not needed tool tip of Wafers
+*Changes to Tier 4 - 10 Heavy Duty Plating Compressor Recipes
+*Added Ash Shards, Volcanic Shards/Ingot, and Added Sledge Hammer, Grinding Wheel
+*Changed Fire Bomb Recipe
+*Added Diamond Shards, Added recipe to compress 5 Carbon ingots in to 3 Diamond Shards, which then can be turned in to 1 Diamond with 9 Diamond Shards
+*Changed Radiation Levels
+*Added a message for when the radiation is reduced
+*Added the ability reduce your Radation by 5% when sleeping in a bed
+*Added Geiger Counter Item
+*Changed the Radiation so Death reduces it by 20% but wont go below 50% overall level
+*Updated lang files
+*Changed the day lengths on all the Planets
+*Changed the day length for Kepler22b
+*Added Surface, Sub Surface, Stone, Stone Bricks Stairs for Mercury, Ceres, Jupiter, Saturn, Uranus, Neptune, Pluto, Eris
+*Changed Solar Energy Multiplier values for all Planets and Moons
+*Fixed 'Use Default Bosses' Config option not working
+*Removed not needed Config section
+
+v1.0.0
 *Backport of 1.10.2 branch (This is so that 1.8.9 is the same as 1.10.2 and 1.11.2 versions). Everything is the same apart from the Space Suit models are still yet to be added to this version. 
 (Everything in your MC 1.8.9 world for ExtraPlanets will probably get removed due to name changes in this update (World resets are recommended)
 
-0.9.3 Beta Build
+v0.9.3 Beta Build
 *Changes for all Kepler22b Leaves (Will remove old ones due to a complete change)
 *Made Marble generate on Kepler22b
 *Added missing recipes for Decorative Blocks
@@ -32,14 +55,14 @@ TODO = Not yet done
 *Tweaks to code for world gen elements on planets
 *Enabled generation of Neptune lakes
 
-0.9.2 Beta Build
+v0.9.2 Beta Build
 *Added missing feature of changing some planets surface and sub surface to liquid
 
-0.9.1 Beta Build
+v0.9.1 Beta Build
 *Added a Galacticraft version enforcer for build 102 as a minimum version to use
 *Added missing feature of changing some planets surface and sub surface to liquid
 
-0.9.0 Beta Build
+v0.9.0 Beta Build
 *Refactor GEAR ID's to Constants class
 *Added missing machine front textures
 *Small fixes due to Updating to Latest GC API
@@ -54,23 +77,23 @@ TODO = Not yet done
 *Added Tier 4 - 10 Rocket JEI recipe support
 *Fixed Tier 1 - 4 Space Suit Chestplate textures
 
-0.8.6 Beta Build
+v0.8.6 Beta Build
 *Updated Galacticraft API to latest
 *Improvements to the lighting effect on Jupiter
 *Fixed recipe issues (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Small fixes for Sky provider handler and Solar Panels
 *Changed biome id's
 
-0.8.5 Beta Build
+v0.8.5 Beta Build
 *Updated Galacticraft API to latest & Fixes for Dungeon Bosses
 *Compatibility: full IC2 compatibility
 *Fixes for Dungeons & Dungeon Bosses
 *Fixes for Treasure Chests & Dungeon Spawners
 
-0.8.1 Beta Build
+v0.8.1 Beta Build
 *Fixed config issue when disabling Lead Ore Generation option (Fixes #75)
 
-0.8.0 Beta Build
+v0.8.0 Beta Build
 *Update zh_CN.lang
 *Fixed Advanced & Ultimate rendering due to GC resources name changes
 *Fixed Space Stations icon not rendering due to GC resources name changes
@@ -79,7 +102,7 @@ TODO = Not yet done
 *Small fixes/Clean up
 *Updated Galacticraft API to latest
 
-0.7.5 Beta Build
+v0.7.5 Beta Build
 *Cleaned up the version number to a more organized version system
 *Fixed OreDictionary for Oberon/Iaptus/Titania
 *Fixed Diamond Types of Armours not rendering on player
@@ -110,7 +133,7 @@ TODO = Not yet done
 *Fixed Tier 3 Pressure Layer texture
 *Added missing rocket gui's
 
-0.7 Beta Build
+v0.7 Beta Build
 *Fixed Tier 10 Schematic GUI not showing in the Nasa Workbench
 *Added Kepler22b Grass Blocks back
 *Added Kepler22b Main Planet blocks back
@@ -173,14 +196,14 @@ TODO = Not yet done
 *Added some missing recipes
 *Fixes for Achievements
 
-0.6 Alpha Build
+v0.6 Alpha Build
 *Added Tier 1 - 4 Pressure & Armor & Radiation Layers textures/json files
 *Added Tier 1 - 4 UnPrepared SpaceSuit Helmet, Chest, Legings, Boots textures/json files (Textures might change later on)
 *Completely changed how the pressure system works
 *Fixes for Tier 3 - 5 Thermal Padding not working	
 *Added Tier 1 - 4 Space Suits json files
 
-0.5 Alpha Build
+v0.5 Alpha Build
 *Fixed Mars Space Station Sky Provider
 *Added recipes for Space Suit Gravity Boots
 *Tweaked recipe for Gravity Controller item
@@ -203,7 +226,7 @@ TODO = Not yet done
 *Retexturing some of the planet blocks and all the rocket parts
 *Changed Block Creative tab icon
 
-0.4 Alpha Build
+v0.4 Alpha Build
 *Changed Overlay bars for Radiation/Pressure Systems, making them more visible to which bar is related to what!
 *Added Lead Ore for the Overworld
 *Added World gen for it in the Overworld
@@ -223,10 +246,10 @@ TODO = Not yet done
 *Fixed Venus not using the correct biome
 *Fixes for Pressure and Radiation bars when on the left or bottom of the screen via config
 
-0.3.5 Alpha Build
+v0.3.5 Alpha Build
 *Fixed #62
 
-0.3 Alpha Build
+v0.3 Alpha Build
 *Fixed most of the Block textures
 *Fixed most of the Armour textures
 *Added Beta Pressure & Radiation system
@@ -241,7 +264,7 @@ TODO = Not yet done
 *Added Config option for Pressure and Radiation
 *Few fixes for Achievements
 
-0.2 Alpha Build
+v0.2 Alpha Build
 *Fixed Rockets not being craftable (Issue 58)
 *Added more json files for items
 *Updated lang files
@@ -250,5 +273,5 @@ TODO = Not yet done
 *Added event handlers (BoneMealHandler, BucketHandler, MainHandler, AchievementEventHandler)
 *Fixes and cleanup
 
-0.1 Alpha Build
+v0.1 Alpha Build
 *Alpha Release

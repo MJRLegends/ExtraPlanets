@@ -20,7 +20,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "1.0.0"
+version = "1.0.1"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -42,6 +42,7 @@ minecraft {
 
 dependencies {
 	compile files (
+		"../Galacticraft-API-1.8.9-4.0.0.117.jar",
 		"../GalacticraftCore-Dev-1.8.9-4.0.0.117.jar",
 		"../Galacticraft-Planets-Dev-1.8.9-4.0.0.117.jar",
 		"../MicdoodleCore-Dev-1.8.9-4.0.0.117.jar",
