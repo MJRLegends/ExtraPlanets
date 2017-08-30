@@ -44,7 +44,7 @@ public class WorldProviderSaturn extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 10320L;
 	}
 
 	@Override

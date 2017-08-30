@@ -44,7 +44,7 @@ public class WorldProviderUranus extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 17140L;
 	}
 
 	@Override

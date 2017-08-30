@@ -44,7 +44,7 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 18000L;
 	}
 
 	@Override

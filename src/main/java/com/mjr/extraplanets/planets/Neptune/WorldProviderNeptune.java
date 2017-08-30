@@ -44,7 +44,7 @@ public class WorldProviderNeptune extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 16660L;
 	}
 
 	@Override

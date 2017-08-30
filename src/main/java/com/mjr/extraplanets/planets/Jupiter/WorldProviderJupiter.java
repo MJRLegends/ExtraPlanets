@@ -44,7 +44,7 @@ public class WorldProviderJupiter extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 9550L;
 	}
 
 	@Override
