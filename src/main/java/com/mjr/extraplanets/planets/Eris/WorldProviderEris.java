@@ -107,7 +107,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 2.0D;
+		return 1.0D;
 	}
 
 	@Override

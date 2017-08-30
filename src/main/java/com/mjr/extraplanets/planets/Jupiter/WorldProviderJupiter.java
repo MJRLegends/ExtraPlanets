@@ -118,7 +118,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 	
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 8.0D;
+		return 4.0D;
 	}
 
 	@Override

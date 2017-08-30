@@ -122,7 +122,7 @@ public class WorldProviderEuropa extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 8.0D;
+		return 4.0D;
 	}
 
 	@Override
