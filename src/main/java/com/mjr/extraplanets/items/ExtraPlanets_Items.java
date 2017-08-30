@@ -199,6 +199,8 @@ public class ExtraPlanets_Items {
 	public static Item TIER_4_EQUIPMENT_KIT;
 	public static Item TIER_3_EQUIPMENT_KIT;
 	public static Item TIER_5_EQUIPMENT_KIT;
+	
+	public static Item GEIGERCOUNTER;
 
 	public static void init() {
 		initializeItems();
@@ -374,6 +376,7 @@ public class ExtraPlanets_Items {
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
 		if (Config.ERIS && Config.KEPLER22B)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
+		GEIGERCOUNTER = new ItemGeigerCounter("geigercounter");
 	}
 
 	private static void registerItems() {
@@ -543,6 +546,7 @@ public class ExtraPlanets_Items {
 		
 		if (Config.ERIS && Config.KEPLER22B)
 			GameRegistry.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(GEIGERCOUNTER, GEIGERCOUNTER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerFluidContainer() {
