@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "extraplanets:blocks/jupiter_sub_surface",
+        "top": "extraplanets:blocks/jupiter_sub_surface",
+        "side": "extraplanets:blocks/jupiter_sub_surface"
+    }
+}

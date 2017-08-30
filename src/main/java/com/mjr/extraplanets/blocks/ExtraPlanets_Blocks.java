@@ -223,12 +223,52 @@ public class ExtraPlanets_Blocks {
 	public static Block ORANGE_SAND;
 	public static Block ORANGE_SANDSTONE;
 
+	// Stairs
+	public static Block MERCURY_SURFACE_STAIRS;
+	public static Block MERCURY_SUB_SURFACE_STAIRS;
+	public static Block MERCURY_STONE_STAIRS;
+	public static Block MERCURY_STONE_BRICKS_STAIRS;
+
+	public static Block CERES_SURFACE_STAIRS;
+	public static Block CERES_SUB_SURFACE_STAIRS;
+	public static Block CERES_STONE_STAIRS;
+	public static Block CERES_STONE_BRICKS_STAIRS;
+
+	public static Block JUPITER_SURFACE_STAIRS;
+	public static Block JUPITER_SUB_SURFACE_STAIRS;
+	public static Block JUPITER_STONE_STAIRS;
+	public static Block JUPITER_STONE_BRICKS_STAIRS;
+
+	public static Block SATURN_SURFACE_STAIRS;
+	public static Block SATURN_SUB_SURFACE_STAIRS;
+	public static Block SATURN_STONE_STAIRS;
+	public static Block SATURN_STONE_BRICKS_STAIRS;
+
+	public static Block URANUS_SURFACE_STAIRS;
+	public static Block URANUS_SUB_SURFACE_STAIRS;
+	public static Block URANUS_STONE_STAIRS;
+	public static Block URANUS_STONE_BRICKS_STAIRS;
+
+	public static Block NEPTUNE_SURFACE_STAIRS;
+	public static Block NEPTUNE_SUB_SURFACE_STAIRS;
+	public static Block NEPTUNE_STONE_STAIRS;
+	public static Block NEPTUNE_STONE_BRICKS_STAIRS;
+
+	public static Block PLUTO_SURFACE_STAIRS;
+	public static Block PLUTO_SUB_SURFACE_STAIRS;
+	public static Block PLUTO_STONE_STAIRS;
+	public static Block PLUTO_STONE_BRICKS_STAIRS;
+
 	public static void init() {
 		initializeBlocks();
+		if (Config.SLABS_AND_STAIRS)
+			initializeStairs();
 		initializeTreasureChestBlocks();
 		initializeSpawnerBlocks();
 		try {
 			registerBlocks();
+			if (Config.SLABS_AND_STAIRS)
+				registerStairs();
 			registerTileEntitys();
 			setHarvestLevels();
 			if (Config.ORE_DICTIONARY)
@@ -358,6 +398,52 @@ public class ExtraPlanets_Blocks {
 		FAKE_BLOCK = new BlockCustomMulti("block_multi");
 		DECORATIVE_BLOCKS = new BlockDecorativeBlocks("decorative_blocks");
 		DECORATIVE_BLOCKS2 = new BlockDecorativeBlocks2("decorative_blocks2");
+	}
+
+	@SuppressWarnings("unchecked")
+	public static void initializeStairs() {
+		if (Config.MERCURY) {
+			MERCURY_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			MERCURY_SUB_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_sub_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			MERCURY_STONE_STAIRS = new BlockBasicStairs("mercury_stairs_stone", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE)).setHardness(2.0F);
+			MERCURY_STONE_BRICKS_STAIRS = new BlockBasicStairs("mercury_stairs_stone_bricks", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
+		if (Config.CERES) {
+			CERES_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			CERES_SUB_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_sub_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			CERES_STONE_STAIRS = new BlockBasicStairs("ceres_stairs_stone", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE)).setHardness(2.0F);
+			CERES_STONE_BRICKS_STAIRS = new BlockBasicStairs("ceres_stairs_stone_bricks", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
+		if (Config.JUPITER) {
+			JUPITER_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			JUPITER_SUB_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_sub_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			JUPITER_STONE_STAIRS = new BlockBasicStairs("jupiter_stairs_stone", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONE)).setHardness(2.0F);
+			JUPITER_STONE_BRICKS_STAIRS = new BlockBasicStairs("jupiter_stairs_stone_bricks", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
+		if (Config.SATURN) {
+			SATURN_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			SATURN_SUB_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_sub_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			SATURN_STONE_STAIRS = new BlockBasicStairs("saturn_stairs_stone", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONE)).setHardness(2.0F);
+			SATURN_STONE_BRICKS_STAIRS = new BlockBasicStairs("saturn_stairs_stone_bricks", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
+		if (Config.URANUS) {
+			URANUS_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			URANUS_SUB_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_sub_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			URANUS_STONE_STAIRS = new BlockBasicStairs("uranus_stairs_stone", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONE)).setHardness(2.0F);
+			URANUS_STONE_BRICKS_STAIRS = new BlockBasicStairs("uranus_stairs_stone_bricks", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
+		if (Config.NEPTUNE) {
+			NEPTUNE_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			NEPTUNE_SUB_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_sub_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			NEPTUNE_STONE_STAIRS = new BlockBasicStairs("neptune_stairs_stone", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE)).setHardness(2.0F);
+			NEPTUNE_STONE_BRICKS_STAIRS = new BlockBasicStairs("neptune_stairs_stone_bricks", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
+		if (Config.PLUTO) {
+			PLUTO_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SURFACE)).setHardness(2.0F);
+			PLUTO_SUB_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_sub_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
+			PLUTO_STONE_STAIRS = new BlockBasicStairs("pluto_stairs_stone", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONE)).setHardness(2.0F);
+			PLUTO_STONE_BRICKS_STAIRS = new BlockBasicStairs("pluto_stairs_stone_bricks", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+		}
 	}
 
 	private static void initializeTreasureChestBlocks() {
@@ -551,6 +637,51 @@ public class ExtraPlanets_Blocks {
 		RegisterHelper.registerBlock(FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
 		RegisterHelper.registerBlock(DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
 		RegisterHelper.registerBlock(DECORATIVE_BLOCKS2, ItemBlockDecorativeBlocks2.class, DECORATIVE_BLOCKS2.getUnlocalizedName().substring(5));
+	}
+
+	private static void registerStairs() throws NoSuchMethodException {
+		if (Config.MERCURY) {
+			RegisterHelper.registerBlock(MERCURY_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(MERCURY_SUB_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(MERCURY_STONE_STAIRS, ItemBlockGC.class, MERCURY_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(MERCURY_STONE_BRICKS_STAIRS, ItemBlockGC.class, MERCURY_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
+		if (Config.CERES) {
+			RegisterHelper.registerBlock(CERES_SURFACE_STAIRS, ItemBlockGC.class, CERES_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(CERES_SUB_SURFACE_STAIRS, ItemBlockGC.class, CERES_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(CERES_STONE_STAIRS, ItemBlockGC.class, CERES_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(CERES_STONE_BRICKS_STAIRS, ItemBlockGC.class, CERES_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
+		if (Config.JUPITER) {
+			RegisterHelper.registerBlock(JUPITER_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(JUPITER_SUB_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(JUPITER_STONE_STAIRS, ItemBlockGC.class, JUPITER_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(JUPITER_STONE_BRICKS_STAIRS, ItemBlockGC.class, JUPITER_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
+		if (Config.SATURN) {
+			RegisterHelper.registerBlock(SATURN_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(SATURN_SUB_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(SATURN_STONE_STAIRS, ItemBlockGC.class, SATURN_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(SATURN_STONE_BRICKS_STAIRS, ItemBlockGC.class, SATURN_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
+		if (Config.URANUS) {
+			RegisterHelper.registerBlock(URANUS_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(URANUS_SUB_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(URANUS_STONE_STAIRS, ItemBlockGC.class, URANUS_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(URANUS_STONE_BRICKS_STAIRS, ItemBlockGC.class, URANUS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
+		if (Config.NEPTUNE) {
+			RegisterHelper.registerBlock(NEPTUNE_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(NEPTUNE_SUB_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(NEPTUNE_STONE_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(NEPTUNE_STONE_BRICKS_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
+		if (Config.PLUTO) {
+			RegisterHelper.registerBlock(PLUTO_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(PLUTO_SUB_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(PLUTO_STONE_STAIRS, ItemBlockGC.class, PLUTO_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterHelper.registerBlock(PLUTO_STONE_BRICKS_STAIRS, ItemBlockGC.class, PLUTO_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+		}
 	}
 
 	private static void registerTileEntitys() {
