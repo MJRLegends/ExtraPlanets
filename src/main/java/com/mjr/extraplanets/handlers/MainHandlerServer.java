@@ -14,6 +14,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -73,9 +75,9 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onPlayerCloned(PlayerEvent.Clone event) {
-		if (event.isWasDeath()) {
-			IStatsCapability oldStats = event.getOriginal().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
-			IStatsCapability newStats = event.getEntityPlayer().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+		if (event.wasDeath) {
+			IStatsCapability oldStats = event.original.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+			IStatsCapability newStats = event.entityPlayer.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 
 			newStats.copyFrom(oldStats, false);
 		}
@@ -283,7 +285,7 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onSleepInBedEvent(PlayerWakeUpEvent event) {
-		EntityPlayer player = event.getEntityPlayer();
+		EntityPlayer player = event.entityPlayer;
 		if (player.worldObj.isRemote == false) {
 			EntityPlayerMP playerMP = (EntityPlayerMP) player;
 			IStatsCapability stats = null;
@@ -295,8 +297,8 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else
 				stats.setRadiationLevel(level);
-			player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
-			player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+			player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
+			player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
 		}
 	}
 }
