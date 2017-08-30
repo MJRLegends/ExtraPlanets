@@ -122,7 +122,7 @@ public class WorldProviderGanymede extends CustomWorldProviderSpace implements I
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 8.0D;
+		return 4.0D;
 	}
 
 	@Override

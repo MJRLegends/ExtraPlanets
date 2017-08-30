@@ -110,7 +110,7 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 8.0D;
+		return 6.5D;
 	}
 
 	@Override

@@ -118,7 +118,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public double getSolarEnergyMultiplier() {
-		return 6.0D;
+		return 3.5D;
 	}
 
 	@Override
