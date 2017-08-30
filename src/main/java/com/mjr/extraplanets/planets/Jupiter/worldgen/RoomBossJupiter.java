@@ -11,8 +11,10 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiterDefault;
 
 public class RoomBossJupiter extends RoomBoss {
 	public RoomBossJupiter() {
@@ -83,9 +85,16 @@ public class RoomBossJupiter extends RoomBoss {
 		// Is this position inside the chunk currently being generated?
 		if (chunkBox.isVecInside(blockpos)) {
 			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.JUIPTER_SPAWNER.getDefaultState(), 2);
-			TileEntityDungeonSpawnerJupiter spawner = (TileEntityDungeonSpawnerJupiter) worldIn.getTileEntity(blockpos);
-			if (spawner != null) {
-				spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
+			if (Config.USE_DEFAULT_BOSSES) {
+				TileEntityDungeonSpawnerJupiterDefault spawner = (TileEntityDungeonSpawnerJupiterDefault) worldIn.getTileEntity(blockpos);
+				if (spawner != null) {
+					spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
+				}
+			} else {
+				TileEntityDungeonSpawnerJupiter spawner = (TileEntityDungeonSpawnerJupiter) worldIn.getTileEntity(blockpos);
+				if (spawner != null) {
+					spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
+				}
 			}
 		}
 

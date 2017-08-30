@@ -95,11 +95,16 @@ import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPadSingle;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiterDefault;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercuryDefault;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptuneDefault;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturnDefault;
 import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
+import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
 import com.mjr.extraplanets.tile.treasureChests.TileEntityT5TreasureChest;
@@ -258,12 +263,12 @@ public class ExtraPlanets_Blocks {
 	public static Block PLUTO_SUB_SURFACE_STAIRS;
 	public static Block PLUTO_STONE_STAIRS;
 	public static Block PLUTO_STONE_BRICKS_STAIRS;
-	
+
 	public static Block ERIS_SURFACE_STAIRS;
 	public static Block ERIS_SUB_SURFACE_STAIRS;
 	public static Block ERIS_STONE_STAIRS;
 	public static Block ERIS_STONE_BRICKS_STAIRS;
-	
+
 	public static void init() {
 		initializeBlocks();
 		if (Config.SLABS_AND_STAIRS)
@@ -703,27 +708,42 @@ public class ExtraPlanets_Blocks {
 
 	private static void registerTileEntitys() {
 		if (Config.MERCURY) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerMercury.class, Constants.modName + "Mercury Dungeon Spawner");
+			if (Config.USE_DEFAULT_BOSSES)
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerMercuryDefault.class, Constants.modName + "Mercury Dungeon Default Spawner");
+			else
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerMercury.class, Constants.modName + "Mercury Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
 		if (Config.JUPITER) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
+			if (Config.USE_DEFAULT_BOSSES)
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiterDefault.class, Constants.modName + "Juptier Dungeon Default Spawner");
+			else
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT5TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
 		}
 		if (Config.SATURN) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
+			if (Config.USE_DEFAULT_BOSSES)
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturnDefault.class, Constants.modName + "Saturn Dungeon Default Spawner");
+			else
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
 		if (Config.URANUS) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
+			if (Config.USE_DEFAULT_BOSSES)
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranusDefault.class, Constants.modName + "Uranus Dungeon Default Spawner");
+			else
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
 		if (Config.NEPTUNE) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
+			if (Config.USE_DEFAULT_BOSSES)
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptuneDefault.class, Constants.modName + "Neptune Dungeon Default Spawner");
+			else
+				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.PLUTO) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "PLUTO Dungeon Spawner");
+			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
 			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
 		if (Config.ERIS) {
