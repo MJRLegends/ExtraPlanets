@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "extraplanets:blocks/eris_stone_bricks",
+        "top": "extraplanets:blocks/eris_stone_bricks",
+        "side": "extraplanets:blocks/eris_stone_bricks"
+    }
+}
