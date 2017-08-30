@@ -18,6 +18,7 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -71,6 +72,16 @@ public class MainHandlerServer {
 	}
 
 	@SubscribeEvent
+	public void onPlayerCloned(PlayerEvent.Clone event) {
+		if (event.isWasDeath()) {
+			IStatsCapability oldStats = event.getOriginal().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+			IStatsCapability newStats = event.getEntityPlayer().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+
+			newStats.copyFrom(oldStats, false);
+		}
+	}
+
+	@SubscribeEvent
 	public void onEntityDealth(LivingDeathEvent event) {
 		if (event.entity instanceof EntityPlayerMP) {
 			final EntityLivingBase entityLiving = event.entityLiving;
@@ -79,7 +90,12 @@ public class MainHandlerServer {
 			if (entityLiving != null) {
 				stats = entityLiving.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			stats.setRadiationLevel(0);
+			if (stats.getRadiationLevel() >= 80)
+				stats.setRadiationLevel(80);
+			else if (stats.getRadiationLevel() >= 60 && stats.getRadiationLevel() < 80)
+				stats.setRadiationLevel(60);
+			else if (stats.getRadiationLevel() >= 50 && stats.getRadiationLevel() < 60)
+				stats.setRadiationLevel(50);
 		}
 	}
 
