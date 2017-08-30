@@ -48,7 +48,7 @@ public class WorldProviderKepler22b extends WorldProviderSpace implements IGalac
 
 	@Override
 	public long getDayLength() {
-		return 24000L;
+		return 20000L;
 	}
 
 	@Override
