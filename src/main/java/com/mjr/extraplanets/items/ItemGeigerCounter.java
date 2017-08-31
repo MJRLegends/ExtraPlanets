@@ -37,6 +37,7 @@ public class ItemGeigerCounter extends Item {
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
 			list.add(EnumColor.YELLOW + GCCoreUtil.translate("geiger.counter.desc"));
+			list.add(EnumColor.AQUA + GCCoreUtil.translate("geiger.counter.location.desc"));
 		}
 	}
 

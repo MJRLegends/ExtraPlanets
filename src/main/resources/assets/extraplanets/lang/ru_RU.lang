@@ -968,6 +968,7 @@ item.tier5_items.ash.name=Ash Powder
 item.geiger_counter.name=Geiger Counter
 
 geiger.counter.desc=Right Click to see your Current Radiation Level!
+geiger.counter.location.desc=Can be Obtained from a Mercury Dungeon!
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Дегидратированная жаренная свинина
