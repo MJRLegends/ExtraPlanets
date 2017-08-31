@@ -292,10 +292,10 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			float temp = (int) stats.getRadiationLevel();
-			float level = (temp * 5) / 100;
+			double temp = stats.getRadiationLevel();
+			double level = (temp * 5) / 100;
 			if (level <= 0)
-				stats.setRadiationLevel(79);
+				stats.setRadiationLevel(0);
 			else
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
 			player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
