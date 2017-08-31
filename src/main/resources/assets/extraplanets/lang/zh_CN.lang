@@ -904,7 +904,7 @@ item.potassium_iodide.name=Potassium Iodide
 item.potassium.name=Potassium
 item.potash_shards.name=Potash Shard
 item.anti_radiation.name=Anti-Rad
-anti_radiation.desc=Reduces Radiation Level by 2
+anti_radiation.desc=Reduces Radiation Level by 50%
 
 #Kits
 item.tier1_kit.full.name=Tier 1 Full Kit
@@ -969,6 +969,7 @@ item.tier5_items.ash.name=Ash Powder
 item.geiger_counter.name=Geiger Counter
 
 geiger.counter.desc=Right Click to see your Current Radiation Level!
+geiger.counter.location.desc=Can be Obtained from a Mercury Dungeon!
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=脱水猪排
