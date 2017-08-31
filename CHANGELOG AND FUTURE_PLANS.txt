@@ -14,6 +14,11 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.6.7
+*Fixed Bed reducing radiation because Java cant do 5 divded by 100??
+*Added Geiger Counter to Mercury Dungeon Loot, Added another Tool tip to the Geiger Counter, Updated lang files
+
+
 v0.6.6
 *Added Loads of Comments to Config options, Renamed some Config options (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Changed the Galacticraft version enforcer for to build 117 as a minimum version to use
