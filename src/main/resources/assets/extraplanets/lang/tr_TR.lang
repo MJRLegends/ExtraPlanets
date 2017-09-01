@@ -1079,17 +1079,17 @@ achievement.craft_rocket_9.desc=Tier 9 Roket İnşa Et
 achievement.craft_rocket_9.desc=Tier 10 Roket İnşa Et
 
 #Liquids/Fluid
-tile.glowstone.name=Işıktaşı Yakıtı
-tile.magma.name=Mağma Yakıtı
-tile.nitrogen.name=Nitrojen Yakıtı
-tile.frozen_water.name=Soğumuş Su
-tile.salt.name=Tuz Yakıtı
-tile.radioactive_water.name=Radioactive Water
-tile.clean_water.name=Clean Water
-tile.infected_water.name=Infected Water
-tile.methane.name=Liquid Methane
-tile.nitrogen_ice.name=Liquid Nitrogen Ice
-tile.liquid_hydrocarbon.name=Liquid Hydrocarbon
+fluid.glowstone_fluid=Işıktaşı Yakıtı
+fluid.magma_fluid=Mağma Yakıtı
+fluid.nitrogen_fluid=Nitrojen Yakıtı
+fluid.frozen_water_fluid=Soğumuş Su
+fluid.salt_fluid=Tuz Yakıtı
+fluid.radioactive_water_fluid=Radioactive Water
+fluid.clean_water_fluid=Clean Water
+fluid.infected_water_fluid=Infected Water
+fluid.methane_fluid=Liquid Methane
+fluid.nitrogen_ice_fluid=Liquid Nitrogen Ice
+fluid.liquid_hydrocarbon_fluid=Liquid Hydrocarbon
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure

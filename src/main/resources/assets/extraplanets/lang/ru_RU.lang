@@ -1078,17 +1078,17 @@ achievement.craft_rocket_9.desc=Создать ракету 9-го уровня
 achievement.craft_rocket_10.desc=Создать ракету 10-го уровня
 
 #Liquids/Fluid
-tile.glowstone.name=Жидкая светящиеся пыль
-tile.magma.name=Жидкая магма
-tile.nitrogen.name=Жидкий азот
-tile.frozen_water.name=Замерзшая вода
-tile.salt.name=Соленая вода
-tile.radioactive_water.name=Радиоактивная вода
-tile.clean_water.name=Чистая вода
-tile.infected_water.name=Зараженная вода
-tile.methane.name=Жидкий метан
-tile.nitrogen_ice.name=Жидкий замерзший азот
-tile.liquid_hydrocarbon.name=Жидкий углеводород
+fluid.glowstone_fluid=Жидкая светящиеся пыль
+fluid.magma_fluid=Жидкая магма
+fluid.nitrogen_fluid=Жидкий азот
+fluid.frozen_water_fluid=Замерзшая вода
+fluid.salt_fluid=Соленая вода
+fluid.radioactive_water_fluid=Радиоактивная вода
+fluid.clean_water_fluid=Чистая вода
+fluid.infected_water_fluid=Зараженная вода
+fluid.methane_fluid=Жидкий метан
+fluid.nitrogen_ice_fluid=Жидкий замерзший азот
+fluid.liquid_hydrocarbon_fluid=Жидкий углеводород
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Предупреждение о высоком давлении
