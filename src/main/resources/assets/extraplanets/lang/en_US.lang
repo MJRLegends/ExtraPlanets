@@ -1079,18 +1079,6 @@ achievement.craft_rocket_9.desc=Craft Tier 9 Rocket
 achievement.craft_rocket_10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
-tile.glowstone.name=Liquid Glowstone
-tile.magma.name=Liquid Magma
-tile.nitrogen.name=Liquid Nitrogen
-tile.frozen_water.name=Frozen Water
-tile.salt.name=Liquid Salt
-tile.radioactive_water.name=Radioactive Water
-tile.clean_water.name=Clean Water
-tile.infected_water.name=Infected Water
-tile.methane.name=Liquid Methane
-tile.nitrogen_ice.name=Liquid Nitrogen Ice
-tile.liquid_hydrocarbon.name=Liquid Hydrocarbon
-
 fluid.glowstone_fluid=Liquid Glowstone
 fluid.magma_fluid=Liquid Magma
 fluid.nitrogen_fluid=Liquid Nitrogen
