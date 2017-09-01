@@ -63,7 +63,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.getStackInSlot(slot) != null) {
 			if (this.getStackInSlot(slot).getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.getStackInSlot(slot).getCount() == 1) {
 				tank.drain(1000, true);
-				this.setInventorySlotContents(slot, new ItemStack(ExtraPlanets_Items.BUCKET_SALT));
+				// this.setInventorySlotContents(slot, new ItemStack(ExtraPlanets_Items.BUCKET_SALT));
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.stacks, slot);
 		}
@@ -122,7 +122,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		}
 		return nbt;
 	}
-	
+
 	@Override
 	protected NonNullList<ItemStack> getContainingItems() {
 		return this.stacks;
@@ -169,7 +169,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.BUCKET_SALT;
+				return FluidUtil.isValidContainer(itemstack);
 			default:
 				return false;
 			}
@@ -195,11 +195,10 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		return this.canProcess();
 	}
 
-    @Override
-    public EnumFacing getElectricInputDirection()
-    {
-        return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
-    }
+	@Override
+	public EnumFacing getElectricInputDirection() {
+		return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
+	}
 
 	@Override
 	public EnumFacing getFront() {
@@ -209,7 +208,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		}
 		return EnumFacing.NORTH;
 	}
-	
+
 	@Override
 	public ITextComponent getDisplayName() {
 		return null;
