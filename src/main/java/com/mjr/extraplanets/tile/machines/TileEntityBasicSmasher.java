@@ -2,7 +2,6 @@ package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
@@ -132,7 +131,12 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 
 	@Override
 	public int[] getSlotsForFace(EnumFacing side) {
-		return new int[] { 0, 1, 2 };
+		if (side == EnumFacing.DOWN) {
+			return new int[] { 2 };
+		} else if (side == EnumFacing.UP) {
+			return new int[] { 1 };
+		}
+		return null;
 	}
 
 	@Override
@@ -171,8 +175,9 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		case 0:
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
+			return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
 		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 		}
 
 		return false;
@@ -183,12 +188,11 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		return this.canProcess();
 	}
 
-    @Override
-    public EnumFacing getElectricInputDirection()
-    {
-        return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
-    }
-	
+	@Override
+	public EnumFacing getElectricInputDirection() {
+		return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
+	}
+
 	@Override
 	public EnumFacing getFront() {
 		IBlockState state = this.worldObj.getBlockState(getPos());
