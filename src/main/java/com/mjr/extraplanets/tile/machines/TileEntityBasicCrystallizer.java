@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.tile.machines;
 
+import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
@@ -13,16 +14,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
+import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
+import net.minecraftforge.fluids.FluidTankInfo;
+import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicCrystallizer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory {
+public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 20000;
 	private int amountDrain = 0;
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -61,9 +65,11 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.containingItems[slot] != null) {
-			if (this.containingItems[slot].getItem() == ExtraPlanets_Items.BUCKET_SALT) {
+			if (FluidUtil.isEmptyContainer(this.containingItems[slot]) == false && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() != null
+					&& FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.SALT_FLUID)) {
 				tank.fill(FluidRegistry.getFluidStack("salt_fluid", 1000), true);
 				this.containingItems[slot].setItem(Items.bucket);
 			} else
@@ -172,7 +178,10 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 
 	@Override
 	public int[] getSlotsForFace(EnumFacing side) {
-		return new int[] { 0, 1, 2 };
+		if (side == EnumFacing.DOWN) {
+			return new int[] { 1 };
+		}
+		return null;
 	}
 
 	@Override
@@ -182,7 +191,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 2:
-				return itemstack == new ItemStack(ExtraPlanets_Items.BUCKET_SALT);
+				return true;
 			default:
 				return false;
 			}
@@ -213,6 +222,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		case 0:
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
+			return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 		case 2:
 			return FluidUtil.isValidContainer(itemstack);
 		}
@@ -225,11 +235,10 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		return this.canProcess();
 	}
 
-    @Override
-    public EnumFacing getElectricInputDirection()
-    {
-        return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
-    }
+	@Override
+	public EnumFacing getElectricInputDirection() {
+		return getFront().rotateYCCW();
+	}
 
 	@Override
 	public EnumFacing getFront() {
@@ -241,7 +250,70 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
+	public boolean canConnect(EnumFacing direction, NetworkType type) {
+		if (type == NetworkType.POWER) {
+			return direction == this.getElectricInputDirection();
+		}
+		if (type == NetworkType.FLUID) {
+			return direction == this.getInputPipe();
+		}
+		return false;
+	}
+
+	@Override
 	public IChatComponent getDisplayName() {
 		return null;
+	}
+
+	private EnumFacing getInputPipe() {
+		return getFront().rotateY();
+	}
+
+	@Override
+	public boolean canDrain(EnumFacing from, Fluid fluid) {
+		return false;
+	}
+
+	@Override
+	public FluidStack drain(EnumFacing from, FluidStack resource, boolean doDrain) {
+		return null;
+	}
+
+	@Override
+	public FluidStack drain(EnumFacing from, int maxDrain, boolean doDrain) {
+		return null;
+	}
+
+	@Override
+	public boolean canFill(EnumFacing from, Fluid fluid) {
+		if (from == getInputPipe()) {
+			return this.inputTank.getFluid() == null || this.inputTank.getFluidAmount() < this.inputTank.getCapacity();
+		}
+
+		return false;
+	}
+
+	@Override
+	public int fill(EnumFacing from, FluidStack resource, boolean doFill) {
+		int used = 0;
+
+		if (from == getInputPipe() && resource != null) {
+			final String liquidName = FluidRegistry.getFluidName(resource);
+
+			if (liquidName != null && liquidName.contains("salt")) {
+				if (liquidName.equals("salt")) {
+					used = this.inputTank.fill(resource, doFill);
+				} else {
+					used = this.inputTank.fill(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, resource.amount), doFill);
+				}
+			}
+		}
+
+		return used;
+	}
+
+	@Override
+	public FluidTankInfo[] getTankInfo(EnumFacing from) {
+		return new FluidTankInfo[] { new FluidTankInfo(this.inputTank) };
 	}
 }

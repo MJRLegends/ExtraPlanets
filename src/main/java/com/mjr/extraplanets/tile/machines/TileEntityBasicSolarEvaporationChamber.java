@@ -2,20 +2,17 @@ package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.machines.BasicSolarEvaporationChamber;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
@@ -134,7 +131,12 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 
 	@Override
 	public int[] getSlotsForFace(EnumFacing side) {
-		return new int[] { 0, 1, 2 };
+		if (side == EnumFacing.DOWN) {
+			return new int[] { 2 };
+		} else if (side == EnumFacing.UP) {
+			return new int[] { 1 };
+		}
+		return null;
 	}
 
 	@Override
@@ -144,7 +146,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
+				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 			default:
 				return false;
 			}
@@ -159,7 +161,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
 			default:
 				return false;
 			}
@@ -173,8 +175,9 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		case 0:
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
+			return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
 		}
 
 		return false;
@@ -185,11 +188,10 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		return this.canProcess();
 	}
 
-    @Override
-    public EnumFacing getElectricInputDirection()
-    {
-        return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
-    }
+	@Override
+	public EnumFacing getElectricInputDirection() {
+		return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
+	}
 
 	@Override
 	public EnumFacing getFront() {

@@ -2,7 +2,6 @@ package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
@@ -134,7 +133,14 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 
 	@Override
 	public int[] getSlotsForFace(EnumFacing side) {
-		return new int[] { 0, 1, 2 };
+		if (side == EnumFacing.WEST) {
+			return new int[] { 1 };
+		} else if (side == EnumFacing.EAST) {
+			return new int[] { 2 };
+		} else if (side == EnumFacing.DOWN) {
+			return new int[] { 3 };
+		}
+		return null;
 	}
 
 	@Override
@@ -160,7 +166,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 			switch (slotID) {
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
-			case 4:
+			case 3:
 				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
 			default:
 				return false;
@@ -175,8 +181,11 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 		case 0:
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
+			return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
+		case 3:
+			return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
 		}
 
 		return false;
@@ -186,21 +195,19 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	public boolean shouldUseEnergy() {
 		return this.canProcess();
 	}
-	
-    @Override
-    public EnumFacing getElectricInputDirection()
-    {
-        return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
-    }
+
+	@Override
+	public EnumFacing getElectricInputDirection() {
+		return EnumFacing.UP;
+	}
 
 	@Override
 	public EnumFacing getFront() {
-        IBlockState state = this.worldObj.getBlockState(getPos()); 
-        if (state.getBlock() instanceof BasicChemicalInjector)
-        {
-            return (state.getValue(BasicChemicalInjector.FACING));
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof BasicChemicalInjector) {
+			return (state.getValue(BasicChemicalInjector.FACING));
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override
