@@ -13,7 +13,7 @@ A Galacticraft Addon, Made By MJRLegends
 https://github.com/MJRLegends/ExtraPlanets/tree/master/src/main/resources/assets/extraplanets/lang
 
 **1.8.9, 1.10.2, 1.11.2:**
-https://github.com/MJRLegends/Extra...2/src/main/resources/assets/extraplanets/lang
+https://github.com/MJRLegends/ExtraPlanets/tree/dev_1.10.2/src/main/resources/assets/extraplanets/lang
 
 **Note: They are different lang files as the unlocalized names are different for each version due to changes that needed to happen, but 1.8.9 and 1.10.2 and 1.11.2 are the same!!.**
 
