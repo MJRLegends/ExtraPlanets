@@ -3,6 +3,7 @@ package com.mjr.extraplanets.inventory.machines;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
+import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -95,7 +96,7 @@ public class ContainerBasicCrystallizer extends Container
                         return null;
                     }
                 }
-                else if (var4.getItem() == ExtraPlanets_Items.BUCKET_SALT)
+                else if (FluidUtil.isValidContainer(var4))
                 {
                     if (!this.mergeItemStack(var4, 2, 3, false))
                     {
