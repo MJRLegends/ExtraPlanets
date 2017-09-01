@@ -67,4 +67,9 @@ public class CrystallizerRecipeCategory extends BlankRecipeCategory {
 		itemstacks.init(2, false, 108, 30);
 		itemstacks.set(ingredients);
 	}
+
+	@Override
+	public String getModName() {
+		return Constants.modName;
+	}
 }

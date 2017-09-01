@@ -54,4 +54,9 @@ public class BlockSmasherRecipeCategory extends BlankRecipeCategory {
 		itemstacks.init(1, false, 108, 30);
 		itemstacks.set(ingredients);
 	}
+
+	@Override
+	public String getModName() {
+		return Constants.modName;
+	}
 }

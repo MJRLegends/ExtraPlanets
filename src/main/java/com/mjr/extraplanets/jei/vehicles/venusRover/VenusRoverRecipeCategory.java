@@ -90,4 +90,9 @@ public class VenusRoverRecipeCategory extends BlankRecipeCategory
 
         itemstacks.set(ingredients);
     }
+
+	@Override
+	public String getModName() {
+		return Constants.modName;
+	}
 }

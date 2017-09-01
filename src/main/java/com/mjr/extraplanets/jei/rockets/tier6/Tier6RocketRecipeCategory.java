@@ -13,6 +13,7 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import net.minecraft.util.ResourceLocation;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 
 public class Tier6RocketRecipeCategory extends BlankRecipeCategory {
@@ -75,5 +76,10 @@ public class Tier6RocketRecipeCategory extends BlankRecipeCategory {
 		itemstacks.init(21, false, 138, 95);
 
 		itemstacks.set(ingredients);
+	}
+
+	@Override
+	public String getModName() {
+		return Constants.modName;
 	}
 }
