@@ -2,16 +2,13 @@ package com.mjr.extraplanets.items;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.item.EnumExtendedInventorySlot;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
@@ -112,18 +109,6 @@ public class ExtraPlanets_Items {
 	public static Item OXYGEN_TANK_VERY_HEAVY;
 	public static Item OXYGEN_TANK_EXTREMELY_HEAVY;
 
-	public static Item BUCKET_GLOWSTONE;
-	public static Item BUCKET_MAGMA;
-	public static Item BUCKET_NITROGEN;
-	public static Item BUCKET_FROZEN_WATER;
-	public static Item BUCKET_SALT;
-	public static Item BUCKET_CLEAN_WATER;
-	public static Item BUCKET_INFECTED_WATER;
-	public static Item BUCKET_RADIOACTIVE_WATER;
-	public static Item BUCKET_METHANE;
-	public static Item BUCKET_NITROGEN_ICE;
-	public static Item BUCKET_LIQUID_HYDROCARBON;
-
 	public static Item CANNED_FOOD;
 	public static Item DIAMOND_APPLE;
 	public static Item IRON_APPLE;
@@ -132,7 +117,7 @@ public class ExtraPlanets_Items {
 	public static Item INGOT_URANIUM;
 	public static Item INGOT_MERCURY;
 	public static Item INGOT_LEAD;
-	
+
 	public static Item TOOLS;
 
 	public static Item CLOTH;
@@ -199,13 +184,12 @@ public class ExtraPlanets_Items {
 	public static Item TIER_4_EQUIPMENT_KIT;
 	public static Item TIER_3_EQUIPMENT_KIT;
 	public static Item TIER_5_EQUIPMENT_KIT;
-	
+
 	public static Item GEIGER_COUNTER;
 
 	public static void init() {
 		initializeItems();
 		registerItems();
-		registerFluidContainer();
 		if (Config.ORE_DICTIONARY_INGOTS)
 			OreDictionaryIngotsRegister();
 		OreDictionaryItemsRegister();
@@ -226,12 +210,10 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.CERES) {
 			INGOT_URANIUM = new ItemBasicItem("ingot_uranium");
-			BUCKET_SALT = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.SALT);
 		}
 		if (Config.JUPITER) {
 			if (Config.BATTERIES)
 				BATTERY_NICKEL = new ItemBasicBattery("nickel_battery", 45000f, 2);
-			BUCKET_MAGMA = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.MAGMA);
 			TIER_5_ROCKET = new Tier5Rocket("item_tier5_rocket");
 			TIER_5_SCHEMATIC = new SchematicTier5("schematic_tier5");
 			TIER_5_NOSE_CONE = new Tier5NoseCone("nose_cone_tier5");
@@ -239,7 +221,6 @@ public class ExtraPlanets_Items {
 			TIER_5_KEY = new ItemKeyT5("T5key");
 		}
 		if (Config.SATURN) {
-			BUCKET_GLOWSTONE = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.GLOWSTONE);
 			TIER_6_ROCKET = new Tier6Rocket("item_tier6_rocket");
 			TIER_6_SCHEMATIC = new SchematicTier6("schematic_tier6");
 			TIER_6_NOSE_CONE = new Tier6NoseCone("nose_cone_tier6");
@@ -247,7 +228,6 @@ public class ExtraPlanets_Items {
 			TIER_6_KEY = new ItemKeyT6("T6key");
 		}
 		if (Config.URANUS) {
-			BUCKET_FROZEN_WATER = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.FROZEN_WATER);
 			TIER_7_ROCKET = new Tier7Rocket("item_tier7_rocket");
 			TIER_7_SCHEMATIC = new SchematicTier7("schematic_tier7");
 			TIER_7_NOSE_CONE = new Tier7NoseCone("nose_cone_tier7");
@@ -257,7 +237,6 @@ public class ExtraPlanets_Items {
 		if (Config.NEPTUNE) {
 			if (Config.BATTERIES)
 				BATTERY_ZINC = new ItemBasicBattery("zinc_battery", 125000f, 2);
-			BUCKET_NITROGEN = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.NITROGEN);
 			TIER_8_ROCKET = new Tier8Rocket("item_tier8_rocket");
 			TIER_8_SCHEMATIC = new SchematicTier8("schematic_tier8");
 			TIER_8_NOSE_CONE = new Tier8NoseCone("nose_cone_tier8");
@@ -355,12 +334,6 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
 			ELECTRIC_PARTS = new ItemElectricParts("electric_parts");
-		BUCKET_CLEAN_WATER = new ItemBasicItemBucket("bucket_clean_water", ExtraPlanets_Fluids.CLEAN_WATER);
-		BUCKET_INFECTED_WATER = new ItemBasicItemBucket("bucket_infected_water", ExtraPlanets_Fluids.INFECTED_WATER);
-		BUCKET_RADIOACTIVE_WATER = new ItemBasicItemBucket("bucket_radioactive_water", ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
-		BUCKET_METHANE = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.METHANE);
-		BUCKET_NITROGEN_ICE = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.NITROGEN_ICE);
-		BUCKET_LIQUID_HYDROCARBON = new ItemBasicItemBucket("bucket_liquid_hydrocarbon", ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
 
 		CANNED_FOOD = new ItemCannedFood("canned_food");
 		WAFERS = new ItemWafers("wafer");
@@ -394,7 +367,6 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.CERES) {
 			GameRegistry.registerItem(INGOT_URANIUM, INGOT_URANIUM.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BUCKET_SALT, "bucket_salt");
 		}
 		if (Config.JUPITER) {
 			GameRegistry.registerItem(TIER_5_ROCKET, TIER_5_ROCKET.getUnlocalizedName().substring(5));
@@ -405,7 +377,6 @@ public class ExtraPlanets_Items {
 
 			if (Config.BATTERIES)
 				GameRegistry.registerItem(BATTERY_NICKEL, BATTERY_NICKEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BUCKET_MAGMA, "bucket_magma");
 		}
 		if (Config.SATURN) {
 			GameRegistry.registerItem(TIER_6_ROCKET, TIER_6_ROCKET.getUnlocalizedName().substring(5));
@@ -413,8 +384,6 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(TIER_6_NOSE_CONE, TIER_6_NOSE_CONE.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_6_ITEMS, TIER_6_ITEMS.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_6_KEY, TIER_6_KEY.getUnlocalizedName().substring(5));
-
-			GameRegistry.registerItem(BUCKET_GLOWSTONE, "bucket_glowstone");
 		}
 		if (Config.URANUS) {
 			GameRegistry.registerItem(TIER_7_ROCKET, TIER_7_ROCKET.getUnlocalizedName().substring(5));
@@ -422,7 +391,6 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(TIER_7_NOSE_CONE, TIER_7_NOSE_CONE.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_7_ITEMS, TIER_7_ITEMS.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_7_KEY, TIER_7_KEY.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BUCKET_FROZEN_WATER, "bucket_frozen_water");
 		}
 		if (Config.NEPTUNE) {
 			GameRegistry.registerItem(TIER_8_ROCKET, TIER_8_ROCKET.getUnlocalizedName().substring(5));
@@ -432,7 +400,6 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(TIER_8_KEY, TIER_8_KEY.getUnlocalizedName().substring(5));
 			if (Config.BATTERIES)
 				GameRegistry.registerItem(BATTERY_ZINC, BATTERY_ZINC.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BUCKET_NITROGEN, "bucket_nitrogen");
 		}
 		if (Config.PLUTO) {
 			GameRegistry.registerItem(TIER_9_ROCKET, TIER_9_ROCKET.getUnlocalizedName().substring(5));
@@ -531,45 +498,16 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(TOOLS, TOOLS.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(BUCKET_CLEAN_WATER, "bucket_clean_water");
-		GameRegistry.registerItem(BUCKET_INFECTED_WATER, "bucket_infected_water");
-		GameRegistry.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
-		GameRegistry.registerItem(BUCKET_METHANE, "bucket_methane");
-		GameRegistry.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
-		GameRegistry.registerItem(BUCKET_LIQUID_HYDROCARBON, "bucket_liquid_hydrocarbon");
 
 		GameRegistry.registerItem(TIER_1_EQUIPMENT_KIT, TIER_1_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(TIER_2_EQUIPMENT_KIT, TIER_2_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		
+
 		if (Config.ERIS && Config.KEPLER22B)
 			GameRegistry.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
-	}
-
-	private static void registerFluidContainer() {
-		if (Config.SATURN) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.GLOWSTONE_FLUID, new ItemStack(BUCKET_GLOWSTONE, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.JUPITER) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.MAGMA_FLUID, new ItemStack(BUCKET_MAGMA, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.NEPTUNE) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.NITROGEN_FLUID, new ItemStack(BUCKET_NITROGEN, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.URANUS) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, new ItemStack(BUCKET_FROZEN_WATER, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.CERES) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.SALT_FLUID, new ItemStack(BUCKET_SALT, 1, 0), new ItemStack(Items.bucket));
-		}
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.CLEAN_WATER_FLUID, new ItemStack(BUCKET_CLEAN_WATER, 1, 0), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.INFECTED_WATER_FLUID, new ItemStack(BUCKET_INFECTED_WATER, 1, 0), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID, new ItemStack(BUCKET_RADIOACTIVE_WATER, 1, 0), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.METHANE_FLUID, new ItemStack(BUCKET_METHANE, 1, 0), new ItemStack(Items.bucket));
-		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, new ItemStack(BUCKET_NITROGEN_ICE, 1, 0), new ItemStack(Items.bucket));
 	}
 
 	public static void OreDictionaryIngotsRegister() {
@@ -608,7 +546,7 @@ public class ExtraPlanets_Items {
 		}
 		OreDictionary.registerOre("ingotLead", new ItemStack(INGOT_LEAD));
 	}
-	
+
 	public static void OreDictionaryItemsRegister() {
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 7));

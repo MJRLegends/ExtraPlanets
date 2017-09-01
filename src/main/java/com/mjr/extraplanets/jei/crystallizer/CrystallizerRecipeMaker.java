@@ -4,14 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.fluids.UniversalBucket;
 
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class CrystallizerRecipeMaker {
 	public static List<CrystallizerRecipeWrapper> getRecipesList() {
 		List<CrystallizerRecipeWrapper> recipes = new ArrayList<>();
 		ItemStack[] inputs = new ItemStack[2];
-		inputs[0] = (new ItemStack(ExtraPlanets_Items.BUCKET_SALT));
+		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.SALT_FLUID);
 		CrystallizerRecipeWrapper wrapper = new CrystallizerRecipeWrapper(inputs, new ItemStack(ExtraPlanets_Items.IODIDE_SALT, 6, 0));
 		recipes.add(wrapper);
 		return recipes;
