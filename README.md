@@ -17,4 +17,6 @@ https://github.com/MJRLegends/ExtraPlanets/tree/dev_1.10.2/src/main/resources/as
 
 **Note: They are different lang files as the unlocalized names are different between 1.7.10 and 1.8+ due to changes that needed to happen, but 1.8.9 and 1.10.2 and 1.11.2 are all the same language files!!.**
 
+**You can submit a pull request or you can make a issue report containing the file!**
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
