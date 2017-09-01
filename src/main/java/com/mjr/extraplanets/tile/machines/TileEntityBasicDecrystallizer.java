@@ -62,7 +62,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.containingItems[slot] != null) {
 			if (this.containingItems[slot].getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
 				tank.drain(1000, true);
-				this.containingItems[slot].setItem(ExtraPlanets_Items.BUCKET_SALT);
+				//this.containingItems[slot].setItem(ExtraPlanets_Items.BUCKET_SALT);
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
 		}
@@ -168,7 +168,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.BUCKET_SALT;
+				return FluidUtil.isValidContainer(itemstack);
 			default:
 				return false;
 			}

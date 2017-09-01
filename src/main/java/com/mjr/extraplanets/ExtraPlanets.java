@@ -53,7 +53,6 @@ import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.extraplanets.handlers.BoneMealHandler;
-import com.mjr.extraplanets.handlers.BucketHandler;
 import com.mjr.extraplanets.handlers.GalacticraftVersionChecker;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
@@ -211,6 +210,10 @@ public class ExtraPlanets {
 		}
 	};
 
+	static {
+		ExtraPlanets_Fluids.initFluid();
+	}
+
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		GalacticraftVersionChecker.run();
@@ -275,27 +278,6 @@ public class ExtraPlanets {
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
-		// Registering fluids with Bucket Handler
-		if (Config.CERES)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.SALT, ExtraPlanets_Items.BUCKET_SALT);
-		if (Config.JUPITER)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Items.BUCKET_MAGMA);
-		if (Config.SATURN)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.GLOWSTONE, ExtraPlanets_Items.BUCKET_GLOWSTONE);
-		if (Config.URANUS)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.FROZEN_WATER, ExtraPlanets_Items.BUCKET_FROZEN_WATER);
-		if (Config.NEPTUNE)
-			BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.NITROGEN, ExtraPlanets_Items.BUCKET_NITROGEN);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.CLEAN_WATER, ExtraPlanets_Items.BUCKET_CLEAN_WATER);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.INFECTED_WATER, ExtraPlanets_Items.BUCKET_INFECTED_WATER);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Items.BUCKET_RADIOACTIVE_WATER);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.METHANE, ExtraPlanets_Items.BUCKET_METHANE);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.NITROGEN_ICE, ExtraPlanets_Items.BUCKET_NITROGEN_ICE);
-		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.LIQUID_HYDROCARBON, ExtraPlanets_Items.BUCKET_LIQUID_HYDROCARBON);
-
-		// Bucket Handler
-		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
-
 		// Bone Meal Handler
 		MinecraftForge.EVENT_BUS.register(new BoneMealHandler());
 
@@ -350,7 +332,7 @@ public class ExtraPlanets {
 		// Register GUI Handler
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 
-		//Register Deconstructor Compatibility
+		// Register Deconstructor Compatibility
 		RegisterDeconstructorCompatibility();
 
 		// Proxy PostInit Method
@@ -531,7 +513,7 @@ public class ExtraPlanets {
 	}
 
 	private void addDungeonLoot() {
-		if (Config.MERCURY){
+		if (Config.MERCURY) {
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.TIER_4_SCHEMATIC, 1, 0));
 			GalacticraftRegistry.addDungeonLoot(4, new ItemStack(ExtraPlanets_Items.GEIGER_COUNTER, 1, 0));
 		}
@@ -584,6 +566,6 @@ public class ExtraPlanets {
 		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 3));
 		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 4));
 		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6));
-		
+
 	}
 }

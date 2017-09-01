@@ -21,16 +21,20 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
+import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
+import com.mjr.extraplanets.util.ShapedNBTRecipe;
 
 public class ExtraPlanets_Recipes {
 	public static void init() {
@@ -648,7 +652,7 @@ public class ExtraPlanets_Recipes {
 
 			// Block to Dark Iron
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.ERIS_BLOCKS, 1, 7) });
-		
+
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.ERIS_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.ERIS_BLOCKS, 1, 0) });
@@ -967,9 +971,19 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 		}
 		if (Config.RADIATION) {
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0), new Object[] { "PPP", "WGW", "PPP", 'P', ExtraPlanets_Items.POTASSIUM_IODIDE, 'W', ExtraPlanets_Items.BUCKET_CLEAN_WATER, 'G', Items.GLASS_BOTTLE });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.BUCKET_CLEAN_WATER, 1, 0), new Object[] { "SSS", "SBS", "SSS", 'S', ExtraPlanets_Items.IODIDE_SALT, 'B', ExtraPlanets_Items.BUCKET_INFECTED_WATER });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.BUCKET_INFECTED_WATER, 1, 0), new Object[] { "SSS", "SBS", "SSS", 'S', ExtraPlanets_Items.IODIDE_SALT, 'B', ExtraPlanets_Items.BUCKET_RADIOACTIVE_WATER });
+			GameRegistry.addRecipe(new ShapedNBTRecipe(new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0), new ItemStack[] { new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
+					new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(Items.GLASS_BOTTLE),
+					UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
+					new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE) }));
+			GameRegistry.addRecipe(new ShapedNBTRecipe(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack[] { new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
+					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
+					UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.INFECTED_WATER_FLUID), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
+					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), }));
+			GameRegistry.addRecipe(new ShapedNBTRecipe(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.INFECTED_WATER_FLUID), new ItemStack[] { new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
+					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
+					UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
+					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), }));
+
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER, 1, 0), new Object[] { "SBS", "MMM", "SBS", 'S', GCBlocks.solarPanel, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'B',
 						new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 7) });
@@ -999,7 +1013,7 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 7), new Object[] { " FF", " FF", "   ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6) });
 		if (Config.JUPITER) {
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 4), new Object[] { "MMM", "MBM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.VOLCANIC_ROCK), 'B', new ItemStack(ExtraPlanets_Items.BUCKET_MAGMA) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 4), new Object[] { "MMM", "MBM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.VOLCANIC_ROCK), 'B', Items.LAVA_BUCKET });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 8), new Object[] { "   ", "CC ", "CC ", 'C', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5) });
 		}
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 9), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.FROZEN_NITROGEN) });
