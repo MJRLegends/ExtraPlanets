@@ -63,7 +63,7 @@ public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
 			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.idle.name");
 		}
 
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 65 - displayText.length(), 45 + 23 + yOffset, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 18 - displayText.length(), 45 + 24 + yOffset, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 
@@ -83,6 +83,10 @@ public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
 
 		if (this.tileEntity.getEnergyStoredGC() > 0) {
 			this.drawTexturedModalRect(containerWidth + 49, containerHeight + 16, 208, 0, 11, 10);
+		}
+
+		if (this.tileEntity.isDaylight) {
+			this.drawTexturedModalRect(containerWidth + 81, containerHeight + 57, 176, 45, 16, 16);
 		}
 
 		this.drawTexturedModalRect(containerWidth + 63, containerHeight + 17, 176, 38, Math.min(this.tileEntity.getScaledElecticalLevel(54), 54), 7);

@@ -24,6 +24,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASSIUM, 1, 0);
+	@NetworkedField(targetSide = Side.CLIENT)
+	public boolean isDaylight = false;
 
 	public TileEntityBasicSolarEvaporationChamber() {
 	}
@@ -32,6 +34,10 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	public void update() {
 		super.update();
 		if (!this.world.isRemote) {
+			if (this.world.isDaytime())
+				isDaylight = true;
+			else
+				isDaylight = false;
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
 				int processTime = (int) (BASE_PROCESS_TIME_REQUIRED - (BASE_PROCESS_TIME_REQUIRED * (this.world.getCelestialAngle(1.0F) * -10))) / 4;
 				if (this.processTicks == 0) {
