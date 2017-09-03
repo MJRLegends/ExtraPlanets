@@ -212,8 +212,8 @@ tile.kepler22bFlowers.purpleMapleTallGrass.name=Hierba púrpura alta de Kepler 2
 tile.kepler22bFlowers.greenMapleShortGrass.name=Hierba verde corta de Kepler 22b
 tile.kepler22bFlowers.greenMapleMedGrass.name=Hierba verde media de Kepler 22b
 tile.kepler22bFlowers.greenMapleTallGrass.name=Hierba verde alta de Kepler 22b
-tile.redSand.name=Red Sand
-tile.redSandstone.name=Red Sandstone
+tile.redSand.name=Arena roja
+tile.redSandstone.name=Arenisca Roja
 
 #Moon Blocks
 tile.callisto.surface.name=Roca superficial de Calisto
@@ -228,7 +228,7 @@ tile.deimos.subSurface.name=Roca subterránea de Deimos
 tile.deimos.oreIron.name=Mena de hierro de Deimos
 tile.deimos.oreTin.name=Mena de estaño de Deimos
 tile.deimos.oreCopper.name=Mena de cobre de Deimos
-tile.deimos.oreLead.name=Deimos Lead Ore
+tile.deimos.oreLead.name=Mena de plomo de Deimos
 
 tile.europa.surface.name=Roca superficial de Europa
 tile.europa.subSurface.name=Roca subterránea de Europa
@@ -250,7 +250,7 @@ tile.phobos.stone.name=Roca de Fobos
 tile.phobos.oreIron.name=Mena de hierro de Fobos
 tile.phobos.oreTin.name=Mena de estaño de Fobos
 tile.phobos.oreCopper.name=Mena de cobre de Fobos
-tile.phobos.oreLead.name=Phobos Lead Ore
+tile.phobos.oreLead.name=Mena de plomo de Fobos
 
 tile.triton.surface.name=Roca superficial de Tritón
 tile.triton.subSurface.name=Roca subterránea de Tritón
@@ -409,44 +409,44 @@ tile.treasureChestT5Neptune.description=Los cofres del tesoro nivel 5 se generar
 tile.treasureChestT6Eris.description=Los cofres del tesoro nivel 6 se generarán en las mazmorras de Eris. Se desbloquean despues de matar al jefe final.
 
 #Machines
-tile.advancedRefinery.name=Refinería Avanzada
-tile.ultimateRefinery.name=Ultimate Refinery
-tile.solar.hybrid.name=Panel Solar Híbrido
-tile.solar.ultimate.name=Panel Solar Definitivo
-tile.solarhybrid.description=Este Panel Solar trabajará durante el día y la noche
-tile.solarultimate.description=Este Panel Solar trabajará durante el día y la noche
+tile.advancedRefinery.name=Refinería avanzada
+tile.ultimateRefinery.name=Refinería definitiva
+tile.solar.hybrid.name=Panel solar híbrido
+tile.solar.ultimate.name=Panel solar definitivo
+tile.solarhybrid.description=Este panel solar trabajará durante el día y la noche
+tile.solarultimate.description=Este panel solar trabajará durante el día y la noche
 tile.advancedFuelLoader.name=Cargador de combustible avanzado
-tile.ultimateFuelLoader.name=Ultimate Fuel Loader
-tile.advancedLaunchPad.tier2LandingPad.name=Tier 2 Rocket Launch Pad
-tile.advancedLaunchPad.tier3LandingPad.name=Tier 3 Rocket Launch Pad nivel 3
+tile.ultimateFuelLoader.name=Cargador de combustible definitivo
+tile.advancedLaunchPad.tier2LandingPad.name=Plataforma de lanzamiento nivel 2
+tile.advancedLaunchPad.tier3LandingPad.name=Plataforma de lanzamiento nivel 3
 tile.advancedLaunchPadFull.name=Plataforma de lanzamiento nivel 2/3
-tile.advancedLaunchPad.tier2.desc=Usado para lanzar cohetes nivel 4 - 8. To be placed in a 5x5 square
-tile.advancedLaunchPad.tier3.desc=Usado para lanzar cohetes nivel 9 - 10. To be placed in a 5x5 square
-tile.advancedLaunchPad.poweredChargingPad.name=Vehicle Charging Pad
-tile.advancedLaunchPad.powered.desc=Used to power Mars Rover & Venus Rover Vehicles. To be placed in a 5x5 square
-tile.chargingBlock.name=Vehicle Charger
-tile.advancedOxygenCompressor.0.name=Advanced Oxygen Compressor
-tile.advancedOxygenCompressor.1.name=Advanced Oxygen Decompressor
-tile.ultimateOxygenCompressor.0.name=Ultimate Oxygen Compressor
-tile.ultimateOxygenCompressor.1.name=Ultimate Oxygen Decompressor
+tile.advancedLaunchPad.tier2.desc=Usado para lanzar cohetes nivel 4 - 8. Debe colocarse en 5x5
+tile.advancedLaunchPad.tier3.desc=Usado para lanzar cohetes nivel 9 - 10. Debe colocarse en 5x5
+tile.advancedLaunchPad.poweredChargingPad.name=Plataforma de carga de vehículos
+tile.advancedLaunchPad.powered.desc=Usado para cargar los vehículos rover marciano y rover de Venus. Debe colocarse en 5x5
+tile.chargingBlock.name=Cargador de vehículos
+tile.advancedOxygenCompressor.0.name=Compresor de oxígeno avanzado
+tile.advancedOxygenCompressor.1.name=Descompresor de oxígeno avanzado
+tile.ultimateOxygenCompressor.0.name=Compresor de oxígeno definitivo
+tile.ultimateOxygenCompressor.1.name=Descompresor de oxígeno definitivo
 
 #Machine Containers
-container.solarhybrid.name=Panel Solar Híbrido
-container.solarultimate.name=Panel Solar Definitivo
-container.vehicle.charger.name=Vehicle Charger
-container.advanced.refinery.name=Advanced Refinery
-container.ultimate.refinery.name=Ultimate Refinery
-container.advanced.oxygencompressor.name=Advanced Oxygen Compressor
-container.advanced.oxygendecompressor.name=Advanced Oxygen Decompressor
-container.ultimate.oxygencompressor.name=Ultimate Oxygen Compressor
-container.ultimate.oxygendecompressor.name=Ultimate Oxygen Decompressor
-container.advanced.fuelloader.name=Advanced Fuel Loader
-container.ultimate.fuelloader.name=Ultimate Fuel Loader
+container.solarhybrid.name=Panel solar híbrido
+container.solarultimate.name=Panel solar definitivo
+container.vehicle.charger.name=Cargador de rover
+container.advanced.refinery.name=Refinería avanzada
+container.ultimate.refinery.name=Refinería definitiva
+container.advanced.oxygencompressor.name=Compresor de oxígeno avanzado
+container.advanced.oxygendecompressor.name=Descompresor de oxígeno avanzado
+container.ultimate.oxygencompressor.name=Compresor de oxígeno definitivo
+container.ultimate.oxygendecompressor.name=Descompresor de oxígeno definitivo
+container.advanced.fuelloader.name=Cargador de combustible avanzado
+container.ultimate.fuelloader.name=Cargador de combustible definitivo
 
 #GUI Messages and Texts
-gui.message.power.name=Powered Vehicle
-gui.message.power.message.name=Power
-gui.button.loadpower.name=Load Power
+gui.message.power.name=Rover eléctrico
+gui.message.power.message.name=Energía
+gui.button.loadpower.name=Cargar energía
 
 #Other Blocks
 tile.nuclearBomb.name=Bomba nuclear
@@ -458,35 +458,35 @@ tile.denseIce.name=Hielo denso
 tile.fossil.name=Bloque fósil
 
 #Decorative Blocks
-tile.decorativeBlocks.marble.name=Marble
-tile.decorativeBlocks.marbleBricks.name=Marble Bricks
-tile.decorativeBlocks.snowBricks.name=Snow Bricks
-tile.decorativeBlocks.iceBricks.name=Ice Bricks
-tile.decorativeBlocks.fireBricks.name=Fire Bricks
-tile.decorativeBlocks.blackWhiteFloor.name=Black/White Tiled Floor
-tile.decorativeBlocks.marbleTitledFloor.name=Marble Tiled Floor
-tile.decorativeBlocks.marbleBrokenTitledFloor.name=Marble Broken Tiled Floor
-tile.decorativeBlocks.metalMesh.name=Metal Mesh Floor
-tile.decorativeBlocks.frozenNitrogenBricks.name=Frozen Nitrogen Bricks
-tile.decorativeBlocks.volcanicRockBricks.name=Volcanic Rock Bricks
-tile.decorativeBlocks.carbonTitledFloor.name=Carbon Tiled Floor
-tile.decorativeBlocks.carbonBrokenTitledFloor.name=Carbon Broken Tiled Floor
-tile.decorativeBlocks.magnesiumTitledFloor.name=Magnesium Tiled Floor
-tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Magnesium Broken Tiled Floor
-tile.decorativeBlocks.ashBricks.name=Ash Bricks
-tile.decorativeBlocks2.whiteBlock.name=White Block
-tile.decorativeBlocks2.redBlock.name=Red Block
+tile.decorativeBlocks.marble.name=Mármol
+tile.decorativeBlocks.marbleBricks.name=Ladrillos de mármol
+tile.decorativeBlocks.snowBricks.name=Ladrillos de nieve
+tile.decorativeBlocks.iceBricks.name=Ladrillos de hielo
+tile.decorativeBlocks.fireBricks.name=Ladrillos de fuego
+tile.decorativeBlocks.blackWhiteFloor.name=Piso de azulejos blanco/negro
+tile.decorativeBlocks.marbleTitledFloor.name=Piso de azulejos de mármol
+tile.decorativeBlocks.marbleBrokenTitledFloor.name=Piso de azulejos rotos de mármol
+tile.decorativeBlocks.metalMesh.name=Piso de malla de metal
+tile.decorativeBlocks.frozenNitrogenBricks.name=Ladrillos de nitrógeno congelado
+tile.decorativeBlocks.volcanicRockBricks.name=Ladrillos de roca volcánica
+tile.decorativeBlocks.carbonTitledFloor.name=Piso de azulejos de carbono
+tile.decorativeBlocks.carbonBrokenTitledFloor.name=Piso de azulejos rotos de carbono
+tile.decorativeBlocks.magnesiumTitledFloor.name=Piso de azulejos de magnesio
+tile.decorativeBlocks.magnesiumBrokenTitledFloor.name=Piso de azulejos rotos de magnesio
+tile.decorativeBlocks.ashBricks.name=Ladrillos de ceniza
+tile.decorativeBlocks2.whiteBlock.name=Bloque blanco
+tile.decorativeBlocks2.redBlock.name=Bloque rojo
 
 #Vehicles
-item.marsRover.name=Driveable Mars Rover
-item.venusRover.name=Driveable Venus Rover
+item.marsRover.name=Rover marciano
+item.venusRover.name=Rover de Venus
 
 #Vehicle Electic Parts
-item.electricParts.batteryTier1.name=Tier 1 Vehicle Battery
-item.electricParts.batteryTier2.name=Tier 2 Vehicle Battery
-item.electricParts.sparkPlug.name=Vehicle Spark Plug
-item.electricParts.electricWheelsTier1.name=Tier 1 Wheels
-item.electricParts.electricWheelsTier2.name=Tier 2 Wheels
+item.electricParts.batteryTier1.name=Batería de vehículo nivel 1
+item.electricParts.batteryTier2.name=Batería de vehiculo nivel 2
+item.electricParts.sparkPlug.name=VBujía de vehículo
+item.electricParts.electricWheelsTier1.name=Llantas nivel 1
+item.electricParts.electricWheelsTier2.name=Llantas nivel 2
 
 #Rocket Items
 item.itemTier4Rocket.t4Rocket.name=Cohete nivel 4
@@ -570,7 +570,7 @@ item.ingotMercury.name=Lingote mercuriano
 item.ingotUranium.name=Lingore de uranio
 item.tier9.ingotTungsten.name=Lingote de tungsteno
 item.tier10.ingotDarkIron.name=Lingote de hierro oscuro
-item.ingotLead.name=Lead Ingot
+item.ingotLead.name=Lingote de plomo
 
 #Shards
 item.tier4.ashShard.name=Fragmento de ceniza
@@ -700,8 +700,8 @@ item.greenDiamondHoe.name=Azada de diamante verde
 item.greenDiamondShovel.name=Pala de diamante verde
 
 #Schematics
-item.schematicMarsRover.name=NASA Workbench Schematic
-item.schematicVenusRover.name=NASA Workbench Schematic
+item.schematicMarsRover.name=Plano de mesa de trabajo de la NASA
+item.schematicVenusRover.name=Plano de mesa de trabajo de la NASA
 
 item.schematicTier4.name=Planos
 item.schematicTier5.name=Planos
@@ -719,8 +719,8 @@ schematic.tier8.rocket.name=Cohete nivel 8
 schematic.tier9.rocket.name=Cohete nivel 9
 schematic.tier10.rocket.name=Cohete nivel 10
 
-schematic.mars.rover.name=Mars Rover Schematic
-schematic.venus.rover.name=Venus Rover Schematic
+schematic.mars.rover.name=Plano de rover marciano
+schematic.venus.rover.name=Plano de rover de Venus
 
 schematic.rocketT4.name=Cohete nivel 4
 schematic.rocketT5.name=Cohete nivel 5
@@ -730,8 +730,8 @@ schematic.rocketT8.name=Cohete nivel 8
 schematic.rocketT9.name=Cohete nivel 9
 schematic.rocketT10.name=Cohete nivel 10
 
-schematic.marsRover.name=Mars Rover
-schematic.venusRover.name=Venus Rover
+schematic.marsRover.name=Rover marciano
+schematic.venusRover.name=Rover de venus
 
 #Batteries
 item.mercuryBattery.name=Batería de mercurio
@@ -821,9 +821,9 @@ item.tier4ThermalChestplate.name=Suéter térmico nivel 4
 item.tier4ThermalLeggings.name=Leggings térmicos nivel 4
 item.tier4ThermalBoots.name=Calcetines térmicos nivel 4
 
-tier2.information=Required for Venus and Mercury
-tier3.information=Required for Jupiter and Saturn including their moons
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
+tier2.information=Requerido para Venus y Mercurio
+tier3.information=Requerido para Júpiter y Saturno incluyendo sus lunas
+tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas
 
 item.thermalCloth.tier2ThermalCloth.name=Tela términca nivel 2
 item.thermalCloth.tier3ThermalCloth.name=Tela términca nivel 3
@@ -850,7 +850,7 @@ item.cannedfood.dehydratedSalmon.name=Salmones deshidratados
 item.cannedfood.dehydratedChicken.name=Pollos deshidratados
 item.cannedfood.dehydratedBeef.name=Filetes deshidratados
 
-currently.unused.name=Currently Unused!
+currently.unused.name=¡Actualmente sin uso!
 
 #Entities
 entity.ProjectileTNT.name=Projectíl de TNT
@@ -875,7 +875,7 @@ entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Jefe slime magmático evolucionado
 entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Jefe slime de hielo evolucionado
 entity.ExtraPlanetsEvolvedGhastBoss.name=Jefe ghast evolucionado
 entity.ExtraPlanetsEvolvedSnowmanBoss.name=Jefe muñeco de nieve evolucionado
-entity.ExtraPlanetsEvolvedFireBatBoss.name=Evolved Fire Bat Boss
+entity.ExtraPlanetsEvolvedFireBatBoss.name=Jefe murciélago de fuego evolucionado
 
 entity.ExtraPlanetsEvolvedWitch.name=Bruja evolucionada
 entity.ExtraPlanetsEvolvedMagmaCube.name=Slime magmático evolucionado
@@ -888,8 +888,8 @@ entity.ExtraPlanetsEvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
 entity.ExtraPlanetsEvolvedMiniEnderman.name=Mini enderman evolucionado
 entity.ExtraPlanetsEvolvedGiantSpider.name=Araña gigante evolucionada
 
-entity.ExtraPlanets.EntityMarsRover.name=Driveable Mars Rover
-entity.ExtraPlanets.EntityVenusRover.name=Driveable Venus Rover
+entity.ExtraPlanets.EntityMarsRover.name=Rover marciano
+entity.ExtraPlanets.EntityVenusRover.name=Rover de Venus
 
 #Achievements
 achievement.mercuryPlanet=¡Aterriza en Mercurio!
