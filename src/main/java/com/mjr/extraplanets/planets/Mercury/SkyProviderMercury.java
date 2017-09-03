@@ -33,7 +33,7 @@ public class SkyProviderMercury extends IRenderHandler {
 	private float sunSize;
 
 	public SkyProviderMercury(IGalacticraftWorldProvider marsProvider) {
-		this.sunSize = 17.5F * marsProvider.getSolarSize();
+		this.sunSize = 17.5F * marsProvider.getSolarSize() * 7;
 
 		int displayLists = GLAllocation.generateDisplayLists(3);
 		this.starList = displayLists;
