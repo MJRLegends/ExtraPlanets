@@ -24,7 +24,7 @@ import org.lwjgl.opengl.GL12;
 
 public class SkyProviderIapetus extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;

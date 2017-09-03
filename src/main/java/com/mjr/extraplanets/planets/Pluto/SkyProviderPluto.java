@@ -25,7 +25,7 @@ import com.mjr.extraplanets.Constants;
 
 public class SkyProviderPluto extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/jupiter.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;
