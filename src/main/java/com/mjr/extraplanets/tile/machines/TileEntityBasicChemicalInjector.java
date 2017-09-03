@@ -57,6 +57,10 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 			return false;
 		if (this.stacks.get(2).getItem() != ExtraPlanets_Items.POTASSIUM)
 			return false;
+		if (this.stacks.get(1).getCount() < 3)
+			return false;
+		if (this.stacks.get(2).getCount() < 6)
+			return false;
 		return !this.getDisabled(0);
 	}
 
