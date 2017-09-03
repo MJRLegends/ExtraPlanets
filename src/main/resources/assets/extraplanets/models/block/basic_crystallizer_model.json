@@ -5,8 +5,8 @@
         "down": "galacticraftcore:blocks/machine",
         "up": "galacticraftcore:blocks/machine",
         "north": "extraplanets:blocks/cystallizer_front",
-        "east": "galacticraftcore:blocks/machine_input",
+        "east": "galacticraftcore:blocks/machine_oxygen_input",
         "south": "galacticraftcore:blocks/machine",
-        "west": "galacticraftcore:blocks/machine"
+        "west": "galacticraftcore:blocks/machine_input"
     }
 }
