@@ -55,6 +55,9 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int generateWatts = 0;
 
+	@NetworkedField(targetSide = Side.CLIENT)
+	public boolean isDaylight = false;
+	
 	private boolean initialised = false;
 	private boolean initialisedMulti = false;
 
@@ -97,6 +100,10 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		super.update();
 
 		if (!this.worldObj.isRemote) {
+			if (this.worldObj.isDaytime())
+				isDaylight = true;
+			else
+				isDaylight = false;
 			this.recharge(this.containingItems[0]);
 
 			if (this.disableCooldown > 0) {

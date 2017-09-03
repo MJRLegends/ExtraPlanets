@@ -142,7 +142,7 @@ public class GuiSolar extends GuiContainerGC {
 			this.drawTexturedModalRect(var5 + 83, var6 + 24, 176, 0, 11, 10);
 		}
 
-		if (this.solarPanel.solarStrength > 0) {
+		if (this.solarPanel.isDaylight) {
 			this.drawTexturedModalRect(var5 + 48, var6 + 21, 176, 10, 16, 16);
 		}
 
