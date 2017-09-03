@@ -52,6 +52,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			return false;
 		if (this.containingItems[1].getItem() != ExtraPlanets_Items.POTASH_SHARDS)
 			return false;
+		if (this.containingItems[1].stackSize < 12)
+			return false;
 		if (this.worldObj.isDaytime() == false || this.worldObj.canBlockSeeSky(pos.add(0, 1, 0)) == false) {
 			return false;
 		}
