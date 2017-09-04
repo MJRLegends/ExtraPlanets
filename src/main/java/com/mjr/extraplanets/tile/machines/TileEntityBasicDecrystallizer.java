@@ -12,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
+import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
@@ -62,7 +63,13 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.containingItems[slot] != null) {
 			if (this.containingItems[slot].getItem() == Items.bucket && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
 				tank.drain(1000, true);
-				//this.containingItems[slot].setItem(ExtraPlanets_Items.BUCKET_SALT);
+				if (FluidUtil.isValidContainer(this.containingItems[slot])) {
+					final FluidStack liquid = tank.getFluid();
+
+					if (liquid != null) {
+						FluidUtil.tryFillContainer(tank, liquid, this.containingItems, slot, ForgeModContainer.getInstance().universalBucket);
+					}
+				}
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
 		}
@@ -80,6 +87,8 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			return false;
 		else if (this.containingItems[1].getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
+		else if (this.containingItems[1].stackSize < 6)
+			return false;
 		return !this.getDisabled(0);
 
 	}
@@ -91,7 +100,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			this.outputTank.fill(FluidRegistry.getFluidStack("salt_fluid", amountToAdd), true);
 			if (amountAdded == 1000) {
 				amountAdded = 0;
-				this.decrStackSize(6, 1);
+				this.decrStackSize(1, 6);
 			}
 		}
 	}
@@ -193,11 +202,10 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		return this.canProcess();
 	}
 
-    @Override
-    public EnumFacing getElectricInputDirection()
-    {
-        return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
-    }
+	@Override
+	public EnumFacing getElectricInputDirection() {
+		return EnumFacing.getHorizontal(((this.getBlockMetadata() & 3) + 1) % 4);
+	}
 
 	@Override
 	public EnumFacing getFront() {
@@ -207,7 +215,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		}
 		return EnumFacing.NORTH;
 	}
-	
+
 	@Override
 	public IChatComponent getDisplayName() {
 		return null;
