@@ -14,10 +14,22 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.6.8
+*Fixed Automation for Custom Machines
+*Changed Buckets to the Forge Universal ones, since most mods are using them for compatibility reasons
+*Updated JEI API to 4.5.0
+*Updated lang files
+*Fixed machine issues with using the wrong amount of materials
+*Fixed machine sides textures since changes from automation
+*Added a Sun Light indicator to the Solar Evaporation Chamber GUI
+*Fixed Sun Light indicator for Hybrid and Ultimate Solar Panels GUIs
+*Made Sun on Mercury bigger (More sky changes will be soon) #146
+*Changed sun types for all Planets and Moons
+*Fixes for Decrystallizer
+
 v0.6.7
 *Fixed Bed reducing radiation because Java cant do 5 divded by 100??
 *Added Geiger Counter to Mercury Dungeon Loot, Added another Tool tip to the Geiger Counter, Updated lang files
-
 
 v0.6.6
 *Added Loads of Comments to Config options, Renamed some Config options (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
