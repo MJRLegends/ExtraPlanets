@@ -1079,6 +1079,18 @@ achievement.craft_rocket_9.desc=製作9階火箭
 achievement.craft_rocket_10.desc=製作10階火箭
 
 #Liquids/Fluid
+tile.glowstone.name=螢石水
+tile.magma.name=岩漿水
+tile.nitrogen.name=液氮
+tile.frozen_water.name=冰凍水
+tile.salt.name=液態鹽水
+tile.radioactive_water.name=Radioactive Water
+tile.clean_water.name=Clean Water
+tile.infected_water.name=Infected Water
+tile.methane.name=Liquid Methane
+tile.nitrogen_ice.name=Liquid Nitrogen Ice
+tile.liquid_hydrocarbon.name=Liquid Hydrocarbon
+
 fluid.glowstone_fluid=螢石水
 fluid.magma_fluid=岩漿水
 fluid.nitrogen_fluid=液氮

@@ -1078,6 +1078,18 @@ achievement.craft_rocket_9.desc=Crea un cohete nivel 9
 achievement.craft_rocket_10.desc=Crea un cohete nivel 10
 
 #Liquids/Fluid
+tile.glowstone.name=Piedra luminosa líquida
+tile.magma.name=Magma líquido
+tile.nitrogen.name=Nitrógeno líquido 
+tile.frozen_water.name=Agua Congelada
+tile.salt.name=Sal líquida
+tile.radioactive_water.name=Radioactive Water
+tile.clean_water.name=Clean Water
+tile.infected_water.name=Infected Water
+tile.methane.name=Liquid Methane
+tile.nitrogen_ice.name=Liquid Nitrogen Ice
+tile.liquid_hydrocarbon.name=Liquid Hydrocarbon
+
 fluid.glowstone_fluid=Piedra luminosa líquida
 fluid.magma_fluid=Magma líquido
 fluid.nitrogen_fluid=Nitrógeno líquido 
