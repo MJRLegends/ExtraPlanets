@@ -14,6 +14,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.0.4
+*Fixed red gem ore generating on Jupiter
+*Fixed White/Blue Gem Ore generating on Uranus and Neptune
+
 v1.0.3
 *Fixed Automation for Custom Machines
 *Changed Buckets to the Forge Universal ones, since most mods are using them for compatibility reasons
