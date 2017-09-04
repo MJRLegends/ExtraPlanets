@@ -13,6 +13,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
@@ -63,7 +64,13 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.getStackInSlot(slot) != null) {
 			if (this.getStackInSlot(slot).getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.getStackInSlot(slot).getCount() == 1) {
 				tank.drain(1000, true);
-				// this.setInventorySlotContents(slot, new ItemStack(ExtraPlanets_Items.BUCKET_SALT));
+				if (FluidUtil.isValidContainer(this.getStackInSlot(slot))) {
+					final FluidStack liquid = tank.getFluid();
+
+					if (liquid != null) {
+						FluidUtil.tryFillContainer(tank, liquid, this.stacks, slot, ForgeModContainer.getInstance().universalBucket);
+					}
+				}
 			} else
 				FluidUtil.tryFillContainerFuel(tank, this.stacks, slot);
 		}
@@ -81,6 +88,8 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			return false;
 		else if (this.stacks.get(1).getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
+		else if (this.getStackInSlot(1).getCount() < 6)
+			return false;
 		return !this.getDisabled(0);
 
 	}
@@ -92,7 +101,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			this.outputTank.fill(FluidRegistry.getFluidStack("salt_fluid", amountToAdd), true);
 			if (amountAdded == 1000) {
 				amountAdded = 0;
-				this.decrStackSize(1, 1);
+				this.decrStackSize(1, 6);
 			}
 		}
 	}
