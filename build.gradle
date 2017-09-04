@@ -14,7 +14,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "0.3.3"
+version = "0.3.4"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -40,7 +40,7 @@ dependencies {
 		"../GalacticraftCore-Dev-1.11.2-4.0.0.117.jar",
 		"../Galacticraft-Planets-Dev-1.11.2-4.0.0.117.jar",
 		"../MicdoodleCore-Dev-1.11.2-4.0.0.117.jar",
-		"../jei_1.11.2-4.3.5.277.jar",
+		"../jei_1.11.2-4.5.0.294.jar",
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
