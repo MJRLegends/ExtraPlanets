@@ -8,6 +8,13 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.8.6
+*Added Brown Sticks
+*Added a recipe to change Brown Planks to Brown Sticks
+*Changed the day lengths on all the Planets
+*Changed the day length for Kepler22b
+*Updated es_ES.lang (Thanks to Spellkaze)
+
 v1.8.5
 *Fixed issue #139
 
