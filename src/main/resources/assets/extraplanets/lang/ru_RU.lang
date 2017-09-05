@@ -159,7 +159,7 @@ tile.kepler22b_blue_grass.name=Блок синей травы Кеплера 22b
 tile.kepler22b_purple_grass.name=Блок фиолетовой травы Кеплера 22b
 tile.kepler22b_red_grass.name=Блок красной травы Кеплера 22b
 tile.kepler22b_yellow_grass.name=Блок жёлтой травы Кеплера 22b
-tile.kepler22b_infected_grass.name=Kepler 22b Infected Grass
+tile.kepler22b_infected_grass.name=Зараженное стекло Кеплера 22b
 tile.kepler22b.ore_iron.name=Железная руда Кеплера 22b
 tile.kepler22b.ore_tin.name=Оловянная руда Кеплера 22b
 tile.kepler22b.ore_copper.name=Медная руда Кеплера 22b
@@ -236,6 +236,7 @@ tile.europa.ore_copper.name=Медная руда Европы
 
 tile.io.surface.name=Поверхность Ио
 tile.io.sub_surface.name=Подповерхностный грунт Ио
+tile.io.stone.name=Камень Ио
 tile.io.ore_iron.name=Железная руда Ио
 tile.io.ore_tin.name=Оловянная руда Ио
 tile.io.ore_copper.name=Медная руда Ио
@@ -397,15 +398,15 @@ gui.status.injecting.name=Впрыскивание
 gui.status.smasher.name=Разрушение
 gui.status.crystallizing.name=Кристаллизация
 gui.status.decrystallizing.name=Декристаллизация
-gui.status.solarEvaporationChamber.name=Evaporating
-gui.message.power.name=Powered Vehicle
+gui.status.solarEvaporationChamber.name=Испарение
+gui.message.power.name=Заряженный транспорт
 gui.message.power.rocket.name=Электрическая ракета
 gui.message.power.message.name=Заряд
 gui.button.loadpower.name=Начать зарядку
-gui.powered.inv.name=Inventory / Power
+gui.powered.inv.name=Инвентарь / Заряд
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=Open Powered Vehicle Inventory
+keybind.vehicleInv.name=Открыть инвентарь заряженного транспорта
 
 #Other Blocks
 tile.nuclear_bomb.name=Ядерная бомба
@@ -419,8 +420,8 @@ tile.ore_lead.name=Свинцовая руда
 tile.potash.name=Potash
 tile.red_sand.name=Красный песок
 tile.red_sandstone.name=Красный песчаник
-tile.orange_sand.name=Orange Sand
-tile.orange_sandstone.name=Orange Sandstone
+tile.orange_sand.name=Оранжевый песок
+tile.orange_sandstone.name=Оранжевый песчаник
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Мрамор
@@ -443,45 +444,45 @@ tile.decorative_blocks2.white_block.name=Белый блок
 tile.decorative_blocks2.red_block.name=Красный блок
 
 #Stairs
-tile.mercury_stairs_surface.name=Mercury Surface Stairs
-tile.mercury_stairs_sub_surface.name=Mercury Sub Surface Stairs
-tile.mercury_stairs_stone.name=Mercury Stone Stairs
-tile.mercury_stairs_stone_bricks.name=Mercury Stone Bricks Stairs
+tile.mercury_stairs_surface.name=Ступеньки из поверхности Меркурия
+tile.mercury_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Меркурия
+tile.mercury_stairs_stone.name=Ступеньки из камня Меркурия
+tile.mercury_stairs_stone_bricks.name=Ступеньки из каменного кирпича Меркурия
 
-tile.ceres_stairs_surface.name=Ceres Surface Stairs
-tile.ceres_stairs_sub_surface.name=Ceres Sub Surface Stairs
-tile.ceres_stairs_stone.name=Ceres Stone Stairs
-tile.ceres_stairs_stone_bricks.name=Ceres Stone Bricks Stairs
+tile.ceres_stairs_surface.name=Ступеньки из поверхности Цереры
+tile.ceres_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Цереры
+tile.ceres_stairs_stone.name=Ступеньки из камня Цереры
+tile.ceres_stairs_stone_bricks.name=Ступеньки из каменного кирпича Цереры
 
-tile.jupiter_stairs_surface.name=Jupiter Surface Stairs
-tile.jupiter_stairs_sub_surface.name=Jupiter Sub Surface Stairs
-tile.jupiter_stairs_stone.name=Jupiter Stone Stairs
-tile.jupiter_stairs_stone_bricks.name=Jupiter Stone Bricks Stairs
+tile.jupiter_stairs_surface.name=Ступеньки из поверхности Юпитера
+tile.jupiter_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Юпитера
+tile.jupiter_stairs_stone.name=Ступеньки из камня Юпитера
+tile.jupiter_stairs_stone_bricks.name=Ступеньки из каменного кирпича Юпитера
 
-tile.saturn_stairs_surface.name=Saturn Surface Stairs
-tile.saturn_stairs_sub_surface.name=Saturn Sub Surface Stairs
-tile.saturn_stairs_stone.name=Saturn Stone Stairs
-tile.saturn_stairs_stone_bricks.name=Saturn Stone Bricks Stairs
+tile.saturn_stairs_surface.name=Ступеньки из поверхности Сатурна
+tile.saturn_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Сатурна
+tile.saturn_stairs_stone.name=Ступеньки из камня Сатурна
+tile.saturn_stairs_stone_bricks.name=Ступеньки из каменного кирпича Сатурна
 
-tile.uranus_stairs_surface.name=Uranus Surface Stairs
-tile.uranus_stairs_sub_surface.name=Uranus Sub Surface Stairs
-tile.uranus_stairs_stone.name=Uranus Stone Stairs
-tile.uranus_stairs_stone_bricks.name=Uranus Stone Bricks Stairs
+tile.uranus_stairs_surface.name=Ступеньки из поверхности Урана
+tile.uranus_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Урана
+tile.uranus_stairs_stone.name=Ступеньки из камня Урана
+tile.uranus_stairs_stone_bricks.name=Ступеньки из каменного кирпича Урана
 
-tile.neptune_stairs_surface.name=Neptune Surface Stairs
-tile.neptune_stairs_sub_surface.name=Neptune Sub Surface Stairs
-tile.neptune_stairs_stone.name=Neptune Stone Stairs
-tile.neptune_stairs_stone_bricks.name=Neptune Stone Bricks Stairs
+tile.neptune_stairs_surface.name=Ступеньки из поверхности Нептуна
+tile.neptune_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Нептуна
+tile.neptune_stairs_stone.name=Ступеньки из камня Нептуна
+tile.neptune_stairs_stone_bricks.name=Ступеньки из каменного кирпича Нептуна
 
-tile.pluto_stairs_surface.name=Pluto Surface Stairs
-tile.pluto_stairs_sub_surface.name=Pluto Sub Surface Stairs
-tile.pluto_stairs_stone.name=Pluto Stone Stairs
-tile.pluto_stairs_stone_bricks.name=Pluto Stone Bricks Stairs
+tile.pluto_stairs_surface.name=Ступеньки из поверхности Плутона
+tile.pluto_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Плутона
+tile.pluto_stairs_stone.name=Ступеньки из камня Плутона
+tile.pluto_stairs_stone_bricks.name=Ступеньки из каменного кирпича Плутона
 
-tile.eris_stairs_surface.name=Eris Surface Stairs
-tile.eris_stairs_sub_surface.name=Eris Sub Surface Stairs
-tile.eris_stairs_stone.name=Eris Stone Stairs
-tile.eris_stairs_stone_bricks.name=Eris Stone Bricks Stairs
+tile.eris_stairs_surface.name=Ступеньки из поверхности Эриды
+tile.eris_stairs_sub_surface.name=Ступеньки из подповерхностного грунта Эриды
+tile.eris_stairs_stone.name=Ступеньки из камня Эриды
+tile.eris_stairs_stone_bricks.name=Ступеньки из каменного кирпича Эриды
 
 #Rocket Items
 item.item_tier4_rocket.t4Rocket.name=Ракета 4-го уровня
@@ -570,12 +571,12 @@ item.ingot_uranium.name=Урановый слиток
 item.tier9_items.ingot_tungsten.name=Вольфрамовый слиток
 item.tier10_items.ingot_dark_iron.name=Слиток тёмного железа
 item.ingot_lead.name=Свинцовый слиток
-item.tier5_items.ingot_volcanic.name=Volcanic Ingot
+item.tier5_items.ingot_volcanic.name=Вулканический слиток
 
 #Shards
-item.tier5_items.volcanic_shard.name=Volcanic Shard
-item.tier5_items.ash_shard.name=Ash Shard
-item.tier4_items.diamond_shard.name=Diamond Shard
+item.tier5_items.volcanic_shard.name=Вулканический осколок
+item.tier5_items.ash_shard.name=Пепельный осколок
+item.tier4_items.diamond_shard.name=Алмазный осколок
 
 #Gems
 item.tier5_items.red_gem.name=Красный драгоценный камень
@@ -942,16 +943,16 @@ item.tier5_kit.just_oxygen_setup.name=Кислородный комплект 5-
 item.tier5_kit.just_protection.name=Защитный комплект 5-го уровня
 
 #Sticks
-item.tier11_items.blue_sticks.name=Blue Sticks
-item.tier11_items.red_sticks.name=Red Sticks
-item.tier11_items.yellow_sticks.name=Yellow Sticks
-item.tier11_items.purple_sticks.name=Purple Sticks
-item.tier11_items.green_sticks.name=Green Sticks
-item.tier11_items.brown_sticks.name=Brown Sticks
+item.tier11_items.blue_sticks.name=Синяя палка
+item.tier11_items.red_sticks.name=Красная палка
+item.tier11_items.yellow_sticks.name=Желтая палка
+item.tier11_items.purple_sticks.name=Фиолетовая палка
+item.tier11_items.green_sticks.name=Зеленая палка
+item.tier11_items.brown_sticks.name=Коричневая палка
 
 #Tools
-item.tools.sledge_hammer.name=Sledge Hammer
-item.tools.grinding_wheel.name=Grinding Wheel
+item.tools.sledge_hammer.name=Кувалда
+item.tools.grinding_wheel.name=Шлифовальный круг
 
 #Other Items
 item.apple_diamond.name=Алмазное яблоко
@@ -964,11 +965,11 @@ item.gravity_controller.name=Котроллер гравитации
 item.thermal_cloth.tier3_thermal_cloth.name=Теплоустойчивая ткань 3-го уровня
 item.thermal_cloth.tier4_thermal_cloth.name=Теплоустойчивая ткань 4-го уровня
 item.thermal_cloth.tier5_thermal_cloth.name=Теплоустойчивая ткань 5-го уровня
-item.tier5_items.ash.name=Ash Powder
-item.geiger_counter.name=Geiger Counter
+item.tier5_items.ash.name=Порошковая зола
+item.geiger_counter.name=Счётчик Гейгера
 
-geiger.counter.desc=Right Click to see your Current Radiation Level!
-geiger.counter.location.desc=Can be Obtained from a Mercury Dungeon!
+geiger.counter.desc=Щелкните ПКМ, чтобы увидеть ваш текущий уровень радиации!
+geiger.counter.location.desc=Могут быть получены из подземелья Меркурия!
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Дегидратированная жаренная свинина
