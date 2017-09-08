@@ -35,6 +35,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
@@ -580,7 +581,11 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(4);
-		return stackList.get(rand.nextInt(stackList.size())).copy();
+		List<ItemStack> stackList;
+		if(Config.MORE_PLANETS_COMPATIBILITY)
+			stackList = GalacticraftRegistry.getDungeonLoot(11);
+		else
+			stackList = GalacticraftRegistry.getDungeonLoot(4);
+        return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 }
