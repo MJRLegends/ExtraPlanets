@@ -17,9 +17,9 @@ star.kepler62=开普勒-62
 star.kepler69=开普勒-69
 
 #Planets
-planet.汞=水星
+planet.Mercury=水星
 planet.Ceres=谷神星
-planet.木星=木星
+planet.Jupiter=木星
 planet.Saturn=土星
 planet.Uranus=天王星
 planet.Neptune=海王星
