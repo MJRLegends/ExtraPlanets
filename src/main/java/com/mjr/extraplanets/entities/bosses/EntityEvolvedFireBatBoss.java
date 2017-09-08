@@ -39,6 +39,7 @@ import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IEntityBreathable {
@@ -338,7 +339,11 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(5);
+		List<ItemStack> stackList;
+		if(Config.MORE_PLANETS_COMPATIBILITY)
+			stackList = GalacticraftRegistry.getDungeonLoot(4);
+		else
+			stackList = GalacticraftRegistry.getDungeonLoot(5);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

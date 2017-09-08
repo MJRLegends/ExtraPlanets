@@ -262,6 +262,8 @@ public class Config {
 	public static boolean PLUTO_VILLAGES;
 	public static boolean ERIS_VILLAGES;
 
+	public static boolean MORE_PLANETS_COMPATIBILITY;
+
 	public static void load() {
 		Configuration config = new Configuration(new File(Constants.CONFIG_FILE));
 		config.load();
@@ -496,6 +498,8 @@ public class Config {
 				true);
 		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Ingots to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All Ingots!").getBoolean(true);
 
+		MORE_PLANETS_COMPATIBILITY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Compatibility", false, "FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
+		
 		SLABS_AND_STAIRS = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Enable Slab & Stairs", true, "Setting this option to false will remove all Slabs and Stairs").getBoolean(true);
 
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Achievements", true, "Setting this option to false will disable Achievements for ExtraPlanets").getBoolean(true);
@@ -543,6 +547,9 @@ public class Config {
 		PLUTO_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Pluto Villages", true, "").getBoolean(true);
 		ERIS_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Eris Villages", true, "").getBoolean(true);
 
+		if(MORE_PLANETS_COMPATIBILITY){
+			KEPLER62_SYSTEM_Z_OFFSET = -0.5F;
+		}
 		config.save();
 	}
 
