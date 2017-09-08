@@ -41,6 +41,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
@@ -483,7 +484,11 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(6);
+		List<ItemStack> stackList;
+		if(Config.MORE_PLANETS_COMPATIBILITY)
+			stackList = GalacticraftRegistry.getDungeonLoot(5);
+		else
+			stackList = GalacticraftRegistry.getDungeonLoot(6);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 

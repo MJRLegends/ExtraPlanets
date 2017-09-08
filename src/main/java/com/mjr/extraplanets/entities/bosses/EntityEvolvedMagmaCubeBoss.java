@@ -37,6 +37,7 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntityBreathable{
@@ -598,7 +599,11 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(4);
+		List<ItemStack> stackList;
+		if(Config.MORE_PLANETS_COMPATIBILITY)
+			stackList = GalacticraftRegistry.getDungeonLoot(11);
+		else
+			stackList = GalacticraftRegistry.getDungeonLoot(4);
         return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 
