@@ -144,7 +144,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 		} else if (side == EnumFacing.DOWN) {
 			return new int[] { 3 };
 		}
-		return null;
+		return new int[] { 0, 1, 2, 3 };
 	}
 
 	@Override

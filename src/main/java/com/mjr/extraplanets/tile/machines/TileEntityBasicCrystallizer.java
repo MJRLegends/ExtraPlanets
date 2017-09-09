@@ -181,7 +181,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		if (side == EnumFacing.DOWN) {
 			return new int[] { 1 };
 		}
-		return null;
+		return new int[] { 0, 1, 2 };
 	}
 
 	@Override

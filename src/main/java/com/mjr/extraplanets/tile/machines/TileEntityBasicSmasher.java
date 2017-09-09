@@ -135,7 +135,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		} else if (side == EnumFacing.UP) {
 			return new int[] { 1 };
 		}
-		return null;
+		return new int[] { 0, 1, 2 };
 	}
 
 	@Override
