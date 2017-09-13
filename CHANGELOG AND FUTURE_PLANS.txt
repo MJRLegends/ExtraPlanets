@@ -14,6 +14,11 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.0.5
+*Updated ru_RU.lang (Thanks to rykllan)
+*Updated zh_CN.lang (Thanks to SihenZhang)
+*Fixed crash with Custom Machines when inputting and outputing items and blocks
+
 v1.0.4
 *Fixed red gem ore generating on Jupiter
 *Fixed White/Blue Gem Ore generating on Uranus and Neptune
