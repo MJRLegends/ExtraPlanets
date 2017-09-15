@@ -384,16 +384,16 @@ container.advanced.fuelloader.name=Улучшенный загрузчик то�
 container.ultimate.fuelloader.name=Максимальный загрузчик топлива
 container.basic.solar.evaporation.chamber.name=Базовая солнечная испарительная камера
 container.vehicle.charger.name=Зарядное устройство для транспорта
+container.basic.purifier.name=Purifier
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=Бак соленой воды
 gui.message.salt_water.name=Соленая вода
-gui.salt_water_input.desc.0=Поместите ведро соленой воды в этот
-gui.salt_water_input.desc.1=слот, чтобы заполнить топливный бак.
-gui.salt_water_input.desc.2=За каждое ведро соленой воды дают 1000
-gui.salt_water_output.desc.0=Поместите пустое ванильное ведро
-gui.salt_water_output.desc.1=в этот слот, чтобы заполнить
-gui.salt_water_output.desc.2=топливный бак
+gui.salt_water_input.desc.0=Place Salt bucket into
+gui.salt_water_input.desc.1=this slot to fill the tank.
+gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
+gui.salt_water_output.desc.0=Place empty vanilla bucket into
+gui.salt_water_output.desc.1=this slot to fill them from the tank
 gui.status.injecting.name=Впрыскивание
 gui.status.smasher.name=Разрушение
 gui.status.crystallizing.name=Кристаллизация
@@ -404,6 +404,21 @@ gui.message.power.rocket.name=Электрическая ракета
 gui.message.power.message.name=Заряд
 gui.button.loadpower.name=Начать зарядку
 gui.powered.inv.name=Инвентарь / Заряд
+gui.status.purifiering.name=Purifiering
+gui.radioactive_water_tank.desc.4=Radioactive Water Tank
+gui.message.radioactive_water.name=Radioactive Water 
+gui.infected_water_tank.desc.4=Infected Water Tank
+gui.message.infected_water.name=Infected Water
+gui.clean_water_tank.desc.4=Clean Water Tank
+gui.message.clean_water.name=Clean Water
+gui.radioactive_water_input.desc.0=Place Radioactive Water bucket into
+gui.radioactive_water_input.desc.1=this slot to fill the tank.
+gui.radioactive_water_input.desc.2=Each Radioactive Water Bucket will give 1000mB
+gui.infected_water_input.desc.0=Place Infected Water bucket into
+gui.infected_water_input.desc.1=this slot to fill the tank.
+gui.infected_water_input.desc.2=Each Infected Water Bucket will give 1000mB
+gui.clean_water_output.desc.0=Place empty vanilla bucket into
+gui.clean_water_output.desc.1=this slot to fill them from the tank
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Открыть инвентарь заряженного транспорта

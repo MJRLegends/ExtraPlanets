@@ -56,7 +56,6 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 		List<String> fuelSlotDesc = new ArrayList<String>();
 		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.0"));
 		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.1"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_output.desc.2"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
