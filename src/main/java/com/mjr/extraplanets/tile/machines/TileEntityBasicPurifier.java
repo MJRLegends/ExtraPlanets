@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
+import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
@@ -26,7 +27,7 @@ import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.blocks.machines.BasicCrystallizer;
+import com.mjr.extraplanets.blocks.machines.BasicPurifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper {
@@ -187,7 +188,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		}
 		if (nbt.hasKey("inputTank2")) {
 			this.inputTank2.readFromNBT(nbt.getCompoundTag("inputTank2"));
-		}		
+		}
 		if (nbt.hasKey("outputTank")) {
 			this.outputTank.readFromNBT(nbt.getCompoundTag("outputTank"));
 		}
@@ -296,14 +297,14 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 
 	@Override
 	public EnumFacing getElectricInputDirection() {
-		return getFront().rotateYCCW();
+		return EnumFacing.UP;
 	}
 
 	@Override
 	public EnumFacing getFront() {
 		IBlockState state = this.worldObj.getBlockState(getPos());
-		if (state.getBlock() instanceof BasicCrystallizer) {
-			return state.getValue(BasicCrystallizer.FACING);
+		if (state.getBlock() instanceof BasicPurifier) {
+			return state.getValue(BasicPurifier.FACING);
 		}
 		return EnumFacing.NORTH;
 	}
@@ -314,10 +315,8 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 			return direction == this.getElectricInputDirection();
 		}
 		if (type == NetworkType.FLUID) {
-			return direction == this.getInputPipe();
-		}
-		if (type == NetworkType.FLUID) {
-			return direction == this.getInput2Pipe();
+			EnumFacing pipeSide = getInputPipe();
+			return direction == pipeSide || direction == pipeSide.getOpposite() || direction == pipeSide.DOWN;		
 		}
 		return false;
 	}
@@ -330,23 +329,35 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	private EnumFacing getInputPipe() {
 		return getFront().rotateY();
 	}
-	
+
 	private EnumFacing getInput2Pipe() {
 		return getFront().rotateYCCW();
 	}
-	
+
 	@Override
 	public boolean canDrain(EnumFacing from, Fluid fluid) {
+		if (from == getFront().rotateY().DOWN) {
+			return this.outputTank.getFluid() != null && this.outputTank.getFluidAmount() > 0;
+		}
+
 		return false;
 	}
 
 	@Override
 	public FluidStack drain(EnumFacing from, FluidStack resource, boolean doDrain) {
+		if (from == getFront().rotateY().DOWN && resource != null) {
+			return this.outputTank.drain(resource.amount, doDrain);
+		}
+
 		return null;
 	}
 
 	@Override
 	public FluidStack drain(EnumFacing from, int maxDrain, boolean doDrain) {
+		if (from == getFront().rotateY().DOWN) {
+			return this.drain(from, new FluidStack(ExtraPlanets_Fluids.CLEAN_WATER_FLUID, maxDrain), doDrain);
+		}
+
 		return null;
 	}
 
