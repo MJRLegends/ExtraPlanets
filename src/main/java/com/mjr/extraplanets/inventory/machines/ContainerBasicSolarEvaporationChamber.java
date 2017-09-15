@@ -21,7 +21,7 @@ public class ContainerBasicSolarEvaporationChamber extends Container
         this.tileEntity = tileEntity;
 
         // Electric Input Slot
-        this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 153, 7, IItemElectric.class));
+        this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 153, 19, IItemElectric.class));
 
         // Input Slot
         this.addSlotToContainer(new Slot(tileEntity, 1, 50, 35));
