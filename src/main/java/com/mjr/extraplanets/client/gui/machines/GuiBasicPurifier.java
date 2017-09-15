@@ -44,22 +44,38 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
-		List<String> inputTankDesc = new ArrayList<String>();
-		inputTankDesc.add(GCCoreUtil.translate("gui.fuel_tank.desc.4"));
-		int fuelLevel = this.tileEntity.inputTank != null && this.tileEntity.inputTank.getFluid() != null ? this.tileEntity.inputTank.getFluid().amount : 0;
-		int fuelCapacity = this.tileEntity.inputTank != null ? this.tileEntity.inputTank.getCapacity() : 0;
-		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.fuel.name") + ": " + fuelLevel + " / " + fuelCapacity);
-		this.inputTankRegion.tooltipStrings = inputTankDesc;
+		
 		this.inputTankRegion.xPosition = (this.width - this.xSize) / 2 + 7;
 		this.inputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
 		this.inputTankRegion.parentWidth = this.width;
 		this.inputTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.inputTankRegion);
+		this.inputTank2Region.xPosition = (this.width - this.xSize) / 2 + 32;
+		this.inputTank2Region.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.inputTank2Region.parentWidth = this.width;
+		this.inputTank2Region.parentHeight = this.height;
+		this.infoRegions.add(this.inputTank2Region);
+		this.outputTankRegion.xPosition = (this.width - this.xSize) / 2 + 122;
+		this.outputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.outputTankRegion.parentWidth = this.width;
+		this.outputTankRegion.parentHeight = this.height;
+		this.infoRegions.add(this.outputTankRegion);
+		
 		List<String> fuelSlotDesc = new ArrayList<String>();
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_input.desc.0"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_input.desc.1"));
-		fuelSlotDesc.add(GCCoreUtil.translate("gui.salt_water_input.desc.2"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.radioactive_water_input.desc.0"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.radioactive_water_input.desc.1"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.radioactive_water_input.desc.2"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
+		fuelSlotDesc = new ArrayList<String>();
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.infected_water_input.desc.0"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.infected_water_input.desc.1"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.infected_water_input.desc.2"));
+		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 32, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
+		fuelSlotDesc = new ArrayList<String>();
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.clean_water_output.desc.0"));
+		fuelSlotDesc.add(GCCoreUtil.translate("gui.clean_water_output.desc.1"));
+		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 122, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
+		
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
@@ -106,11 +122,25 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		this.drawTexturedModalRect((this.width - this.xSize) / 2 + 122, (this.height - this.ySize) / 2 + 17 + 49 - displayInt, 176 + 16, 38 - displayInt, 16, displayInt);
 
 		List<String> inputTankDesc = new ArrayList<String>();
-		inputTankDesc.add(GCCoreUtil.translate("gui.salt_water_tank.desc.4"));
+		inputTankDesc.add(GCCoreUtil.translate("gui.radioactive_water_tank.desc.4"));
 		int fuelLevel = this.tileEntity.inputTank != null && this.tileEntity.inputTank.getFluid() != null ? this.tileEntity.inputTank.getFluid().amount : 0;
 		int fuelCapacity = this.tileEntity.inputTank != null ? this.tileEntity.inputTank.getCapacity() : 0;
-		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.salt_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
+		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.radioactive_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
 		this.inputTankRegion.tooltipStrings = inputTankDesc;
+		
+		inputTankDesc = new ArrayList<String>();
+		inputTankDesc.add(GCCoreUtil.translate("gui.infected_water_tank.desc.4"));
+		fuelLevel = this.tileEntity.inputTank2 != null && this.tileEntity.inputTank2.getFluid() != null ? this.tileEntity.inputTank2.getFluid().amount : 0;
+		fuelCapacity = this.tileEntity.inputTank2 != null ? this.tileEntity.inputTank2.getCapacity() : 0;
+		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.infected_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
+		this.inputTank2Region.tooltipStrings = inputTankDesc;
+		
+		inputTankDesc = new ArrayList<String>();
+		inputTankDesc.add(GCCoreUtil.translate("gui.clean_water_tank.desc.4"));
+		fuelLevel = this.tileEntity.outputTank != null && this.tileEntity.outputTank.getFluid() != null ? this.tileEntity.outputTank.getFluid().amount : 0;
+		fuelCapacity = this.tileEntity.outputTank != null ? this.tileEntity.outputTank.getCapacity() : 0;
+		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.clean_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
+		this.outputTankRegion.tooltipStrings = inputTankDesc;
 
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));

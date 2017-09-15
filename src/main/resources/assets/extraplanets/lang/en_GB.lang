@@ -384,16 +384,16 @@ container.advanced.fuelloader.name=Advanced Fuel Loader
 container.ultimate.fuelloader.name=Ultimate Fuel Loader
 container.basic.solar.evaporation.chamber.name=Basic Solar Evaporation Chamber
 container.vehicle.charger.name=Vehicle Charger
+container.basic.purifier.name=Purifier
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=Salt Water Tank
 gui.message.salt_water.name=Salt Water
-gui.salt_water_input.desc.0=Place Salt Water bucket into
-gui.salt_water_input.desc.1=this slot to fill the fuel tank.
+gui.salt_water_input.desc.0=Place Salt bucket into
+gui.salt_water_input.desc.1=this slot to fill the tank.
 gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
 gui.salt_water_output.desc.0=Place empty vanilla bucket into
-gui.salt_water_output.desc.1=this slot to fill them from the
-gui.salt_water_output.desc.2=fuel tank
+gui.salt_water_output.desc.1=this slot to fill them from the tank
 gui.status.injecting.name=Injecting
 gui.status.smasher.name=Smashing
 gui.status.crystallizing.name=Crystallizing
@@ -404,6 +404,21 @@ gui.message.power.rocket.name=Electric Rocket
 gui.message.power.message.name=Power
 gui.button.loadpower.name=Load Power
 gui.powered.inv.name=Inventory / Power
+gui.status.purifiering.name=Purifiering
+gui.radioactive_water_tank.desc.4=Radioactive Water Tank
+gui.message.radioactive_water.name=Radioactive Water 
+gui.infected_water_tank.desc.4=Infected Water Tank
+gui.message.infected_water.name=Infected Water
+gui.clean_water_tank.desc.4=Clean Water Tank
+gui.message.clean_water.name=Clean Water
+gui.radioactive_water_input.desc.0=Place Radioactive Water bucket into
+gui.radioactive_water_input.desc.1=this slot to fill the tank.
+gui.radioactive_water_input.desc.2=Each Radioactive Water Bucket will give 1000mB
+gui.infected_water_input.desc.0=Place Infected Water bucket into
+gui.infected_water_input.desc.1=this slot to fill the tank.
+gui.infected_water_input.desc.2=Each Infected Water Bucket will give 1000mB
+gui.clean_water_output.desc.0=Place empty vanilla bucket into
+gui.clean_water_output.desc.1=this slot to fill them from the tank
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Open Powered Vehicle Inventory

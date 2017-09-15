@@ -384,16 +384,16 @@ container.advanced.fuelloader.name=Gelişmiş Yakıt Yükleyici
 container.ultimate.fuelloader.name=Güçlü Yakıt Yükleyici
 container.basic.solar.evaporation.chamber.name=Basit Buharlaştırma Bölgesi
 container.vehicle.charger.name=Araç Sarj Edici
+container.basic.purifier.name=Purifier
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=Tuzlu Su Tankı
 gui.message.salt_water.name=Tuzlu Su
-gui.salt_water_input.desc.0=Place salt water buckrt in
-gui.salt_water_input.desc.1=this slot to fill the fuel tank.
+gui.salt_water_input.desc.0=Place Salt bucket into
+gui.salt_water_input.desc.1=this slot to fill the tank.
 gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
 gui.salt_water_output.desc.0=Place empty vanilla bucket into
-gui.salt_water_output.desc.1=this slot to fill them from the
-gui.salt_water_output.desc.2=fuel tank
+gui.salt_water_output.desc.1=this slot to fill them from the tank
 gui.status.injecting.name=Enjekte ediliyor
 gui.status.smasher.name=Parçalanıyor
 gui.status.crystallizing.name=Kristalleştiriliyor
@@ -404,8 +404,21 @@ gui.message.power.rocket.name=Elektrikli Roket
 gui.message.power.message.name=Güç
 gui.button.loadpower.name=Güç Yükle
 gui.powered.inv.name=Envanter / Güç
-tile.orange_sand.name=Orange Sand
-tile.orange_sandstone.name=Orange Sandstone
+gui.status.purifiering.name=Purifiering
+gui.radioactive_water_tank.desc.4=Radioactive Water Tank
+gui.message.radioactive_water.name=Radioactive Water 
+gui.infected_water_tank.desc.4=Infected Water Tank
+gui.message.infected_water.name=Infected Water
+gui.clean_water_tank.desc.4=Clean Water Tank
+gui.message.clean_water.name=Clean Water
+gui.radioactive_water_input.desc.0=Place Radioactive Water bucket into
+gui.radioactive_water_input.desc.1=this slot to fill the tank.
+gui.radioactive_water_input.desc.2=Each Radioactive Water Bucket will give 1000mB
+gui.infected_water_input.desc.0=Place Infected Water bucket into
+gui.infected_water_input.desc.1=this slot to fill the tank.
+gui.infected_water_input.desc.2=Each Infected Water Bucket will give 1000mB
+gui.clean_water_output.desc.0=Place empty vanilla bucket into
+gui.clean_water_output.desc.1=this slot to fill them from the tank
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Güçlü Araç Envanterini Aç.
@@ -422,6 +435,8 @@ tile.ore_lead.name=Kurşun Cevheri
 tile.potash.name=Potas
 tile.red_sand.name=Kırmızı Kum
 tile.red_sandstone.name=Kırmızı Kumtaşı
+tile.orange_sand.name=Orange Sand
+tile.orange_sandstone.name=Orange Sandstone
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Mermer
