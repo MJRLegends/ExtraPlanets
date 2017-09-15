@@ -976,14 +976,6 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(Items.GLASS_BOTTLE),
 					UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
 					new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE) }));
-			GameRegistry.addRecipe(new ShapedNBTRecipe(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack[] { new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
-					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
-					UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.INFECTED_WATER_FLUID), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
-					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), }));
-			GameRegistry.addRecipe(new ShapedNBTRecipe(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.INFECTED_WATER_FLUID), new ItemStack[] { new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
-					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
-					UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT),
-					new ItemStack(ExtraPlanets_Items.IODIDE_SALT), new ItemStack(ExtraPlanets_Items.IODIDE_SALT), }));
 
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER, 1, 0), new Object[] { "SBS", "MMM", "SBS", 'S', GCBlocks.solarPanel, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'B',
