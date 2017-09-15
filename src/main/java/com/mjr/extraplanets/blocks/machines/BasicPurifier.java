@@ -14,7 +14,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -98,48 +97,8 @@ public class BasicPurifier extends BlockAdvancedTile implements IShiftDescriptio
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		final TileEntityBasicPurifier var7 = (TileEntityBasicPurifier) worldIn.getTileEntity(pos);
-
-		if (var7 != null) {
-			for (int var8 = 0; var8 < var7.getSizeInventory(); ++var8) {
-				final ItemStack var9 = var7.getStackInSlot(var8);
-
-				if (var9 != null) {
-					final float var10 = this.crystallizerRand.nextFloat() * 0.8F + 0.1F;
-					final float var11 = this.crystallizerRand.nextFloat() * 0.8F + 0.1F;
-					final float var12 = this.crystallizerRand.nextFloat() * 0.8F + 0.1F;
-
-					while (var9.stackSize > 0) {
-						int var13 = this.crystallizerRand.nextInt(21) + 10;
-
-						if (var13 > var9.stackSize) {
-							var13 = var9.stackSize;
-						}
-
-						var9.stackSize -= var13;
-						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13, var9.getItemDamage()));
-
-						if (var9.hasTagCompound()) {
-							var14.getEntityItem().setTagCompound(var9.getTagCompound().copy());
-						}
-
-						final float var15 = 0.05F;
-						var14.motionX = (float) this.crystallizerRand.nextGaussian() * var15;
-						var14.motionY = (float) this.crystallizerRand.nextGaussian() * var15 + 0.2F;
-						var14.motionZ = (float) this.crystallizerRand.nextGaussian() * var15;
-						worldIn.spawnEntityInWorld(var14);
-					}
-				}
-			}
-		}
-
-		super.breakBlock(worldIn, pos, state);
-	}
-
-	@Override
 	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
+		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
 	}
 

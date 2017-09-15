@@ -32,7 +32,7 @@ public class GuiBasicPurifier extends GuiContainerGC {
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
 	public GuiBasicPurifier(InventoryPlayer par1InventoryPlayer, TileEntityBasicPurifier tileEntity) {
-		super(new ContainerBasicPurifier(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
+		super(new ContainerBasicPurifier(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}
