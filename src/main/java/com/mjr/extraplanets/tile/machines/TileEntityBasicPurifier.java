@@ -1,13 +1,10 @@
 package com.mjr.extraplanets.tile.machines;
 
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
-import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
-import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
@@ -15,22 +12,21 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.IChatComponent;
 import net.minecraftforge.common.ForgeModContainer;
-import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicPurifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper {
+public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 20000;
 	private int amountDrain = 0;
 	private int amountDrain2 = 0;
@@ -53,20 +49,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID, 0));
 		this.inputTank2.setFluid(new FluidStack(ExtraPlanets_Fluids.INFECTED_WATER_FLUID, 0));
 		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.CLEAN_WATER_FLUID, 0));
-	}
-
-	@Override
-	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY;
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
-			return (T) new FluidHandlerWrapper(this, facing);
-		}
-		return null;
 	}
 
 	@Override
@@ -99,15 +81,15 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 			if (FluidUtil.isEmptyContainer(this.containingItems[slot]) == false && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() != null) {
 				if (slot == 1 && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
 					tank.fill(FluidRegistry.getFluidStack("radioactive_water_fluid", 1000), true);
-					this.containingItems[slot].setItem(Items.BUCKET);
+					this.containingItems[slot].setItem(Items.bucket);
 				}
 				if (slot == 2 && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
 					tank.fill(FluidRegistry.getFluidStack("infected_water_fluid", 1000), true);
-					this.containingItems[slot].setItem(Items.BUCKET);
+					this.containingItems[slot].setItem(Items.bucket);
 				}
 			}
 			if (slot == 3) {
-				if (this.containingItems[slot].getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
+				if (this.containingItems[slot].getItem() == Items.bucket && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
 					if (FluidUtil.isValidContainer(this.containingItems[slot])) {
 						final FluidStack liquid = tank.getFluid();
 
@@ -204,7 +186,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	}
 
 	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
+	public void writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt);
@@ -218,7 +200,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		if (this.outputTank.getFluid() != null) {
 			nbt.setTag("outputTank", this.outputTank.writeToNBT(new NBTTagCompound()));
 		}
-		return nbt;
 	}
 
 	@Override
@@ -316,13 +297,13 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		}
 		if (type == NetworkType.FLUID) {
 			EnumFacing pipeSide = getInputPipe();
-			return direction == pipeSide || direction == pipeSide.getOpposite() || direction == pipeSide.DOWN;		
+			return direction == pipeSide || direction == pipeSide.getOpposite() || direction == pipeSide.DOWN;
 		}
 		return false;
 	}
 
 	@Override
-	public ITextComponent getDisplayName() {
+	public IChatComponent getDisplayName() {
 		return null;
 	}
 
