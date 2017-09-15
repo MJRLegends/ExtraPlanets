@@ -3,7 +3,7 @@
     "textures": {
         "particle": "galacticraftcore:blocks/machine",
         "down": "galacticraftcore:blocks/machine",
-        "up": "galacticraftcore:blocks/machine",
+        "up": "galacticraftcore:blocks/machine_item_input",
         "north": "extraplanets:blocks/decystallizer_front",
         "east": "galacticraftcore:blocks/machine_input",
         "south": "galacticraftcore:blocks/machine",
