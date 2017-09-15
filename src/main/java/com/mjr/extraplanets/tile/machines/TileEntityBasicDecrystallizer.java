@@ -62,7 +62,6 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.containingItems[slot] != null) {
 			if (this.containingItems[slot].getItem() == Items.bucket && tank.getFluidAmount() >= 1000 && this.containingItems[slot].stackSize == 1) {
-				tank.drain(1000, true);
 				if (FluidUtil.isValidContainer(this.containingItems[slot])) {
 					final FluidStack liquid = tank.getFluid();
 
@@ -70,8 +69,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 						FluidUtil.tryFillContainer(tank, liquid, this.containingItems, slot, ForgeModContainer.getInstance().universalBucket);
 					}
 				}
-			} else
-				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
+			}
 		}
 	}
 

@@ -40,7 +40,7 @@ public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
 		List<String> batterySlotDesc = new ArrayList<String>();
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
-		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
+		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6 + 12, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
@@ -86,7 +86,7 @@ public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
 		}
 
 		if (this.tileEntity.isDaylight) {
-			this.drawTexturedModalRect(containerWidth + 81, containerHeight + 57, 176, 45, 16, 16);
+			this.drawTexturedModalRect(containerWidth + 81 + 62, containerHeight + 57, 176, 45, 16, 16);
 		}
 
 		this.drawTexturedModalRect(containerWidth + 63, containerHeight + 17, 176, 38, Math.min(this.tileEntity.getScaledElecticalLevel(54), 54), 7);

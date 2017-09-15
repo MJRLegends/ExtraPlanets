@@ -81,7 +81,7 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.idle.name");
 		}
 
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 65 - displayText.length(), 45 + 23 + yOffset, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 20, 45 + 23 + yOffset, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 
