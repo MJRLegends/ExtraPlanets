@@ -2,8 +2,8 @@
     "parent": "block/cube",
     "textures": {
         "particle": "galacticraftcore:blocks/machine",
-        "down": "galacticraftcore:blocks/machine",
-        "up": "galacticraftcore:blocks/machine",
+        "down": "galacticraftcore:blocks/machine_item_output",
+        "up": "galacticraftcore:blocks/machine_item_input",
         "north": "extraplanets:blocks/solar_evaporation_chamber_front",
         "east": "galacticraftcore:blocks/machine_input",
         "south": "galacticraftcore:blocks/machine",
