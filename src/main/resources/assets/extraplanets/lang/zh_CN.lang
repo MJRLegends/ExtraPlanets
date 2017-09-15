@@ -384,16 +384,16 @@ container.advanced.fuelloader.name=高级燃料装载机
 container.ultimate.fuelloader.name=终极燃料装载机
 container.basic.solar.evaporation.chamber.name=基础太阳能蒸发室
 container.vehicle.charger.name=漫游车充能器
+container.basic.purifier.name=Purifier
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=盐水槽
 gui.message.salt_water.name=盐水
-gui.salt_water_input.desc.0=将盐水桶放在这个格以
-gui.salt_water_input.desc.1=填充盐水槽。每桶盐水
-gui.salt_water_input.desc.2=将提供1000mB盐水。
-gui.salt_water_output.desc.0=将原版的空桶放在
-gui.salt_water_output.desc.1=这个格来用盐水槽
-gui.salt_water_output.desc.2=的盐水灌满它。
+gui.salt_water_input.desc.0=Place Salt bucket into
+gui.salt_water_input.desc.1=this slot to fill the tank.
+gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
+gui.salt_water_output.desc.0=Place empty vanilla bucket into
+gui.salt_water_output.desc.1=this slot to fill them from the tank
 gui.status.injecting.name=注入中
 gui.status.smasher.name=粉碎中
 gui.status.crystallizing.name=结晶中
@@ -404,6 +404,21 @@ gui.message.power.rocket.name=电力火箭
 gui.message.power.message.name=能量
 gui.button.loadpower.name=充能
 gui.powered.inv.name=物品栏/能量
+gui.status.purifiering.name=Purifiering
+gui.radioactive_water_tank.desc.4=Radioactive Water Tank
+gui.message.radioactive_water.name=Radioactive Water 
+gui.infected_water_tank.desc.4=Infected Water Tank
+gui.message.infected_water.name=Infected Water
+gui.clean_water_tank.desc.4=Clean Water Tank
+gui.message.clean_water.name=Clean Water
+gui.radioactive_water_input.desc.0=Place Radioactive Water bucket into
+gui.radioactive_water_input.desc.1=this slot to fill the tank.
+gui.radioactive_water_input.desc.2=Each Radioactive Water Bucket will give 1000mB
+gui.infected_water_input.desc.0=Place Infected Water bucket into
+gui.infected_water_input.desc.1=this slot to fill the tank.
+gui.infected_water_input.desc.2=Each Infected Water Bucket will give 1000mB
+gui.clean_water_output.desc.0=Place empty vanilla bucket into
+gui.clean_water_output.desc.1=this slot to fill them from the tank
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=打开电力漫游车的物品栏
