@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "galacticraftcore:blocks/machine",
+        "down": "extraplanets:blocks/machine_clean_water_output",
+        "up": "galacticraftcore:blocks/machine_input",
+        "north": "extraplanets:blocks/purifier_front",
+        "east": "extraplanets:blocks/machine_radioactive_input",
+        "south": "galacticraftcore:blocks/machine_item_input",
+        "west": "extraplanets:blocks/machine_infected_water_input"
+    }
+}
