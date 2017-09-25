@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
@@ -39,6 +40,7 @@ import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
@@ -176,6 +178,10 @@ public class MainHandlerServer {
 
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
+			return;
+		if ((entityLiving.getRidingEntity() instanceof EntityLanderBase))
+			return;
+		if ((entityLiving.getRidingEntity() instanceof EntityElectricRocketBase))
 			return;
 		if ((entityLiving.world.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).world.provider instanceof CustomWorldProviderSpace)) {
 			if (Config.PRESSURE)
