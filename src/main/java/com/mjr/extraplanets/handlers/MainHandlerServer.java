@@ -25,6 +25,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
@@ -214,11 +215,12 @@ public class MainHandlerServer {
 	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
 		CustomWorldProviderSpace provider = (CustomWorldProviderSpace) playerMP.world.provider;
-		// Normal/Nothing 0.005
-		// Tier 1 0.0045
-		// Tier 2 0.004
-		// Tier 3 0.0035
-		// Tier 4 0.00325
+		// Tier 1 Space Suit
+		// 25 Level = 36 mins
+		// 50 Level = 14 mins
+		// Tier 2 Space Suit
+		// 25 Level = 38 mins
+		// 50 Level = 15 mins
 
 		boolean doDamage = false;
 		boolean doArmorCheck = false;
@@ -293,10 +295,22 @@ public class MainHandlerServer {
 			double level = (temp * 5) / 100;
 			if (level <= 0)
 				stats.setRadiationLevel(0);
-			else
+			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-			player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
-			player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
+				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+			}
+		}
+	}
+
+	@SubscribeEvent
+	public void onWorldChange(PlayerChangedDimensionEvent event) {
+		if (event.player.world.isRemote == false) {
+			if (event.player.world.provider instanceof CustomWorldProviderSpace) {
+				EntityPlayer player = event.player;
+				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", You're now subject to " + ((CustomWorldProviderSpace) event.player.world.provider).getSolarRadiationLevel() + "% Radiation!"));
+				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", You can use Anti-Rad Drinks or Sleeping to help reverse the damage!"));
+			}
 		}
 	}
 }
