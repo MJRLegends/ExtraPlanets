@@ -24,6 +24,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
@@ -296,10 +297,23 @@ public class MainHandlerServer {
 			double level = (temp * 5) / 100;
 			if (level <= 0)
 				stats.setRadiationLevel(0);
-			else
+			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-			player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
-			player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+			}
+		}
+	}
+
+	@SubscribeEvent
+	public void onWorldChange(PlayerChangedDimensionEvent event) {
+		if (event.player.worldObj.isRemote == false) {
+			if (event.player.worldObj.provider instanceof CustomWorldProviderSpace) {
+				EntityPlayer player = event.player;
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", You're now subject to "
+						+ ((CustomWorldProviderSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% Radiation!"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", You can use Anti-Rad Drinks or Sleeping to help reverse the damage!"));
+			}
 		}
 	}
 }

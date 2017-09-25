@@ -46,5 +46,4 @@ public class ItemTools extends Item {
 	public int getMetadata(int par1) {
 		return par1;
 	}
-
 }
