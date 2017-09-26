@@ -1126,6 +1126,10 @@ gui.warning.high.pressure=高压警告
 gui.warning.high.radiation=高辐射警告
 death.attack.radiation=%1$s忘记了防辐射
 death.attack.pressure=%1$s忘记了抗高压
+death.attack.hypothermia=%1$s died from hypothermia
+death.attack.magma=%1$s burned to death from magma
+death.attack.radiationLiquid=%1$s forgot that radiation will kill you
+death.attack.infection=%1$s got taken over by an infection
 
 #CheckList GUI Messages
 checklist.tier_3_thermal_padding.key=需要3阶热防护服

@@ -14,7 +14,9 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
@@ -38,6 +40,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
@@ -171,10 +174,16 @@ public class MainHandlerServer {
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.getEntityLiving();
 		if (entityLiving instanceof EntityPlayerMP) {
+			if (isInGlowstone((EntityPlayerMP) entityLiving))
+				entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 500, 0));
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false)
 				runChecks(event, entityLiving);
 		}
+	}
+
+	public boolean isInGlowstone(EntityPlayerMP player) {
+		return player.worldObj.isMaterialInBB(player.getEntityBoundingBox().expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), ExtraPlanets_Fluids.GLOWSTONE_MATERIAL);
 	}
 
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
@@ -316,7 +325,8 @@ public class MainHandlerServer {
 		if (event.player.worldObj.isRemote == false) {
 			if (event.player.worldObj.provider instanceof CustomWorldProviderSpace) {
 				EntityPlayer player = event.player;
-				player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", You're now subject to " + ((CustomWorldProviderSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% Radiation!"));
+				player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", You're now subject to "
+						+ ((CustomWorldProviderSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% Radiation!"));
 				player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", You can use Anti-Rad Drinks or Sleeping to help reverse the damage!"));
 			}
 		}

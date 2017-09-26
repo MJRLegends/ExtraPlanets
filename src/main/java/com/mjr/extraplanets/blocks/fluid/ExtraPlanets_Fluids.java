@@ -126,7 +126,7 @@ public class ExtraPlanets_Fluids {
 		FROZEN_WATER = new FluidBlockEP(FROZEN_WATER_FLUID, "frozen_water", FROZEN_WATER_MATERIAL);
 		SALT = new FluidBlockEP(SALT_FLUID, "salt", SALT_MATERIAL);
 		RADIO_ACTIVE_WATER = new FluidBlockEP(RADIO_ACTIVE_WATER_FLUID, "radioactive_water", FROZEN_WATER_MATERIAL);
-		CLEAN_WATER = new FluidBlockEP(CLEAN_WATER_FLUID, "clean_water", FROZEN_WATER_MATERIAL);
+		CLEAN_WATER = new FluidBlockEP(CLEAN_WATER_FLUID, "clean_water", Material.WATER);
 		INFECTED_WATER = new FluidBlockEP(INFECTED_WATER_FLUID, "infected_water", FROZEN_WATER_MATERIAL);
 		METHANE = new FluidBlockEP(METHANE_FLUID, "methane", METHANE_MATERIAL);
 		NITROGEN_ICE = new FluidBlockEP(NITROGEN_ICE_FLUID, "nitrogen_ice", NITROGEN_MATERIAL);
