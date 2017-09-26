@@ -1126,6 +1126,10 @@ gui.warning.high.pressure=Предупреждение о высоком дав�
 gui.warning.high.radiation=Предупреждение о высокой радиации
 death.attack.radiation=%1$s забыл радиационную защиту
 death.attack.pressure=%1$s забыл защиту от давления
+death.attack.hypothermia=%1$s died from hypothermia
+death.attack.magma=%1$s burned to death from magma
+death.attack.radiationLiquid=%1$s forgot that radiation will kill you
+death.attack.infection=%1$s got taken over by an infection
 
 #CheckList GUI Messages
 checklist.tier_3_thermal_padding.key=Оборудовать тепловой костюм 3-го уровня

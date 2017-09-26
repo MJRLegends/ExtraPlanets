@@ -14,6 +14,8 @@ import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
@@ -37,6 +39,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
@@ -171,10 +174,16 @@ public class MainHandlerServer {
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.entityLiving;
 		if (entityLiving instanceof EntityPlayerMP) {
+			if (isInGlowstone((EntityPlayerMP) entityLiving))
+				entityLiving.addPotionEffect(new PotionEffect(Potion.nightVision.id, 500, 0));
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false)
 				runChecks(event, entityLiving);
 		}
+	}
+
+	public boolean isInGlowstone(EntityPlayerMP player) {
+		return player.worldObj.isMaterialInBB(player.getEntityBoundingBox().expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), ExtraPlanets_Fluids.GLOWSTONE_MATERIAL);
 	}
 
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
