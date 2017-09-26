@@ -366,6 +366,7 @@ tile.advanced_launch_pad.powered.rocket.desc=Used to launch Tier 10 Electric Roc
 tile.advanced_fuel_loader.name=Advanced Fuel Loader
 tile.ultimate_fuel_loader.name=Ultimate Fuel Loader
 tile.vehicle_charger.name=Vehicle Charger (WIP)
+tile.basic_purifier.name=Basic Purifier
 
 #Machine Containers
 container.solarhybrid.name=混合型高級太陽能電池板
@@ -968,6 +969,8 @@ item.tier11_items.brown_sticks.name=Brown Sticks
 #Tools
 item.tools.sledge_hammer.name=Sledge Hammer
 item.tools.grinding_wheel.name=Grinding Wheel
+item.tools.mesh.name=String Mesh
+item.tools.filter.name=Filter
 
 #Other Items
 item.apple_diamond.name=鑽石蘋果
