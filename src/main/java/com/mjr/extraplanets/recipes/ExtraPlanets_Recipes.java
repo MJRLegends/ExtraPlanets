@@ -876,6 +876,12 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 1), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'H', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'Z',
 				new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12) });
 
+		// Mesh
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), new Object[] { "SSS", "SSS", "SSS", 'S', Items.STRING });
+
+		// Filter
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), new Object[] { "CPC", "MMM", "CPC", 'C', new ItemStack(ExtraPlanets_Items.CLOTH), 'P', Items.PAPER, 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2) });
+
 		if (Config.PRESSURE || Config.RADIATION) {
 			// Tier 1 - 4 Radiation Layers
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH });
@@ -972,11 +978,13 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 		}
 		if (Config.RADIATION) {
+			// Anti Radiation Drinks
 			GameRegistry.addRecipe(new ShapedNBTRecipe(new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0), new ItemStack[] { new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
 					new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(Items.GLASS_BOTTLE),
 					UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
 					new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE) }));
 
+			// Machines
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER, 1, 0), new Object[] { "SBS", "MMM", "SBS", 'S', GCBlocks.solarPanel, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'B',
 						new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 7) });
@@ -990,7 +998,11 @@ public class ExtraPlanets_Recipes {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SMASHER, 1, 0), new Object[] { "MAM", "PPP", "MAM", 'P', Blocks.PISTON, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'A', Blocks.ANVIL });
 			if (Config.BASIC_CHEMICAL_INJECTOR)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.PISTON, 'U', ExtraPlanets_Items.INGOT_URANIUM });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), 'U',
+					ExtraPlanets_Items.INGOT_URANIUM, 'E', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4), 'S', GCBlocks.solarPanel });
 		}
+		
+		//Oxygen Tanks
 		if (Config.OXYGEN_TANKS) {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY, 1, ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', GCItems.oxTankHeavy, 'Y',
 					new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'Z', new ItemStack(Blocks.WOOL, 1, 11) });

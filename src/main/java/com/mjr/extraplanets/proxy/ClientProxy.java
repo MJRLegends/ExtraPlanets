@@ -1,15 +1,5 @@
 package com.mjr.extraplanets.proxy;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.HashMap;
-import java.util.Map;
-
 import micdoodle8.mods.galacticraft.api.client.IItemMeshDefinitionCustom;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelBakery;
@@ -27,7 +17,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.model.TRSRTransformation;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -192,7 +181,7 @@ import com.mjr.extraplanets.tile.treasureChests.TileEntityT9TreasureChest;
 import com.mjr.extraplanets.util.ClientUtilities;
 
 public class ClientProxy extends CommonProxy {
-	
+
 	// Event Methods
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -304,7 +293,7 @@ public class ClientProxy extends CommonProxy {
 					"maple_yellow_short", "maple_yellow_med", "maple_yellow_tall", "maple_green_short", "maple_green_med", "maple_green_tall");
 		}
 		ClientUtilities.addExtraPlanetsVariants("wafer", "diamond_wafer", "carbon_wafer", "titanium_wafer", "red_gem_wafer", "blue_gem_wafer", "white_gem_wafer");
-		ClientUtilities.addExtraPlanetsVariants("tools", "sledge_hammer", "grinding_wheel");
+		ClientUtilities.addExtraPlanetsVariants("tools", "sledge_hammer", "grinding_wheel", "mesh", "filter");
 		if (Config.CANNED_FOOD)
 			ClientUtilities.addExtraPlanetsVariants("canned_food", "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef");
 		if (Config.THERMAL_PADDINGS) {
@@ -751,7 +740,6 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_SMASHER);
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER);
-			
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_PURIFIER);
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
