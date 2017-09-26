@@ -366,6 +366,7 @@ tile.advanced_launch_pad.powered.rocket.desc=将其摆成5x5的形状，用以�
 tile.advanced_fuel_loader.name=高级燃料装载机
 tile.ultimate_fuel_loader.name=终极燃料装载机
 tile.vehicle_charger.name=漫游车充能器(WIP)
+tile.basic_purifier.name=Basic Purifier
 
 #Machine Containers
 container.solarhybrid.name=混合型高级太阳能电池板
@@ -968,6 +969,8 @@ item.tier11_items.brown_sticks.name=棕色木棍
 #Tools
 item.tools.sledge_hammer.name=巨锤
 item.tools.grinding_wheel.name=砂轮
+item.tools.mesh.name=String Mesh
+item.tools.filter.name=Filter
 
 #Other Items
 item.apple_diamond.name=钻石苹果

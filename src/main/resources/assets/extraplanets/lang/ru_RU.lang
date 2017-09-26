@@ -366,6 +366,7 @@ tile.advanced_launch_pad.powered.rocket.desc=Используется для з�
 tile.advanced_fuel_loader.name=Улучшенный загрузчик топлива
 tile.ultimate_fuel_loader.name=Максимальный загрузчик топлива
 tile.vehicle_charger.name=Зарядное устройство для транспорта (WIP)
+tile.basic_purifier.name=Basic Purifier
 
 #Machine Containers
 container.solarhybrid.name=Гибридная солнечная панель
@@ -968,6 +969,8 @@ item.tier11_items.brown_sticks.name=Коричневая палка
 #Tools
 item.tools.sledge_hammer.name=Кувалда
 item.tools.grinding_wheel.name=Шлифовальный круг
+item.tools.mesh.name=String Mesh
+item.tools.filter.name=Filter
 
 #Other Items
 item.apple_diamond.name=Алмазное яблоко
