@@ -180,9 +180,9 @@ public class MainHandlerServer {
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
 			return;
-		if ((entityLiving.getRidingEntity() instanceof EntityLanderBase))
+		if ((entityLiving.ridingEntity instanceof EntityLanderBase))
 			return;
-		if ((entityLiving.getRidingEntity() instanceof EntityElectricRocketBase))
+		if ((entityLiving.ridingEntity instanceof EntityElectricRocketBase))
 			return;
 		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)) {
 			if (Config.PRESSURE)
