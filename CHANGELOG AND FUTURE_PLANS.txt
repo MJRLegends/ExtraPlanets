@@ -14,6 +14,24 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.0.6
+*Added Basic Purifier Machine
+*Fixed automation with the Basic Purifier
+*Few fixes for Custom machines
+*Added Item input and output side textures to Custom Machines
+*Changed to side textures on the Crystallizer
+*Added most of the textures for the Basic Purifier
+*Removed not needed recipes now that the Basic Purifier is a thing
+*Fixed up tool tips in Basic Purifier and Decrystallizer
+*Updated lang files
+*Fixed message showing all the time when sleeping
+*Added message for when player travels to a planet or moon
+*Made the player not get damaged by Radiation or Pressure when in a Lander or Electric Rocket
+*Added Mesh & Filter Item
+*Made Recipe for Both and for the Basic Purifier
+*Fixed the glitch with reducing Radiation via bed sleeping
+*Added Effects/Damage Sources for some Liquids
+
 v1.0.5
 *Updated ru_RU.lang (Thanks to rykllan)
 *Updated zh_CN.lang (Thanks to SihenZhang)
