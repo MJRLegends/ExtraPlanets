@@ -293,7 +293,7 @@ public class MainHandlerServer {
 	@SubscribeEvent
 	public void onSleepInBedEvent(PlayerWakeUpEvent event) {
 		EntityPlayer player = event.entityPlayer;
-		if (player.worldObj.isRemote == false) {
+		if (player.worldObj.isRemote == false && (!event.wakeImmediatly && !event.updateWorld && event.setSpawn)) {
 			EntityPlayerMP playerMP = (EntityPlayerMP) player;
 			IStatsCapability stats = null;
 			if (playerMP != null) {
