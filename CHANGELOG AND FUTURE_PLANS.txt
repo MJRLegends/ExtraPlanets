@@ -15,12 +15,16 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.3.8
+*Fixed Parachest dropping the Tier 10 rocket for the Electric Rocket
+*Fixed the Vehicle Charger recipe
+
 v0.3.7
 *Added Basic Purifier Machine
 *Fixed automation with the Basic Purifier
 *Few fixes for Custom machines
 *Added Item input and output side textures to Custom Machines
-*Changed to side textures on the Crystallizer
+*Changed side textures on the Crystallizer
 *Added most of the textures for the Basic Purifier
 *Removed not needed recipes now that the Basic Purifier is a thing
 *Fixed up tool tips in Basic Purifier and Decrystallizer
