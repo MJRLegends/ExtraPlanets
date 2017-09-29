@@ -150,7 +150,7 @@ public class ElectricRocket extends Item implements IHoldableItem {
 
 	@Override
 	public String getUnlocalizedName(ItemStack par1ItemStack) {
-		return super.getUnlocalizedName(par1ItemStack) + ".t10Rocket";
+		return super.getUnlocalizedName(par1ItemStack) + ".t10ElectricRocket";
 	}
 
 	@Override

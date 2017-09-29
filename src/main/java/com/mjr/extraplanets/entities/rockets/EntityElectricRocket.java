@@ -212,7 +212,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 			}
 
 			stats.setRocketType(this.rocketType.getIndex());
-			stats.setRocketItem(ExtraPlanets_Items.TIER_10_ROCKET);
+			stats.setRocketItem(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET);
 			// stats.setFuelLevel(this.fuelTank.getFluidAmount());
 		}
 	}
