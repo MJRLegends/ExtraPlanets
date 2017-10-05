@@ -509,6 +509,9 @@ item.item_tier8_rocket.t8Rocket.name=8阶火箭
 item.item_tier9_rocket.t9Rocket.name=9阶火箭
 item.item_tier10_rocket.t10Rocket.name=10阶火箭
 item.item_tier10_electric_rocket.t10Rocket.name=10阶电力火箭
+rocket_pad.tier2.desc=Needs to be placed on a Tier 2 Launch Pad
+rocket_pad.tier3.desc=Needs to be placed on a Tier 3 Launch Pad
+rocket_pad.electric.desc=Needs to be placed on a Powered Rocket Launch Pad
 
 #Vehicles
 item.mars_rover.name=火星漫游车

@@ -508,6 +508,9 @@ item.item_tier8_rocket.t8Rocket.name=Cohete nivel 8
 item.item_tier9_rocket.t9Rocket.name=Cohete nivel 9
 item.item_tier10_rocket.t10Rocket.name=Cohete nivel 10
 item.item_tier10_electric_rocket.t10Rocket.name=Tier 10 Electric Rocket
+rocket_pad.tier2.desc=Needs to be placed on a Tier 2 Launch Pad
+rocket_pad.tier3.desc=Needs to be placed on a Tier 3 Launch Pad
+rocket_pad.electric.desc=Needs to be placed on a Powered Rocket Launch Pad
 
 #Vehicles
 item.mars_rover.name=Mars Rover

@@ -146,8 +146,9 @@ public class ElectricRocket extends Item implements IHoldableItem {
 			EntityElectricRocket rocket = new EntityElectricRocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
 			par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.getCurrentPowerCapacity());
 		}
+		
+		par2List.add(EnumColor.DARK_AQUA + GCCoreUtil.translate("rocket_pad.electric.desc"));
 	}
-
 	@Override
 	public String getUnlocalizedName(ItemStack par1ItemStack) {
 		return super.getUnlocalizedName(par1ItemStack) + ".t10Rocket";

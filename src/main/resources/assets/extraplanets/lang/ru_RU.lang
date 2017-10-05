@@ -509,6 +509,9 @@ item.item_tier8_rocket.t8Rocket.name=Ракета 8-го уровня
 item.item_tier9_rocket.t9Rocket.name=Ракета 9-го уровня
 item.item_tier10_rocket.t10Rocket.name=Ракета 10-го уровня
 item.item_tier10_electric_rocket.t10Rocket.name=Электрическая ракета 10-го уровня
+rocket_pad.tier2.desc=Needs to be placed on a Tier 2 Launch Pad
+rocket_pad.tier3.desc=Needs to be placed on a Tier 3 Launch Pad
+rocket_pad.electric.desc=Needs to be placed on a Powered Rocket Launch Pad
 
 #Vehicles
 item.mars_rover.name=Марсианский ровер

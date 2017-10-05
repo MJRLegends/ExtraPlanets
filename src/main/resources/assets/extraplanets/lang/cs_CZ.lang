@@ -507,8 +507,11 @@ item.item_tier6_rocket.t6Rocket.name=Raketa typ 6
 item.item_tier7_rocket.t7Rocket.name=Raketa typ 7
 item.item_tier8_rocket.t8Rocket.name=Raketa typ 8
 item.item_tier9_rocket.t9Rocket.name=Raketa typ 9
-item.item_tier10_rocket.t10Rocket.name=Tier 10 Rocket
+item.item_tier10_rocket..name=Tier 10 Rocket
 item.item_tier10_electric_rocket.t10Rocket.name=Tier 10 Electric Rocket
+rocket_pad.tier2.desc=Needs to be placed on a Tier 2 Launch Pad
+rocket_pad.tier3.desc=Needs to be placed on a Tier 3 Launch Pad
+rocket_pad.electric.desc=Needs to be placed on a Powered Rocket Launch Pad
 
 #Vehicles
 item.mars_rover.name=Mars Rover
@@ -563,7 +566,7 @@ tier8.heavy_duty_plate.name=typ 8
 tier9.heavy_duty_plate.name=typ 9
 tier10.heavy_duty_plate.name=Tier 10
 
-#Stlačený Items
+#Compressed Items
 item.tier4_items.compressed_carbon.name=Stlačený Karbon
 item.tier5_items.compressed_palladium.name=Stlačené Palladium
 item.tier6_items.compressed_magnesium.name=Stlačené Magnesium
