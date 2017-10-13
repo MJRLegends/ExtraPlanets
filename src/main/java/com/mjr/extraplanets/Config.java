@@ -302,8 +302,8 @@ public class Config {
 		advancedFuelLoader = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Fuel Loader", true).getBoolean(true);
 		ultimateFuelLoader = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Fuel Loader", true).getBoolean(true);
 
-		advancedOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Oxygen Compressor/Decomperssor", true).getBoolean(true);
-		ultimateOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Oxygen Compressor/Decomperssor", true).getBoolean(true);
+		advancedOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Oxygen Compressor/Decompressor", true).getBoolean(true);
+		ultimateOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Oxygen Compressor/Decompressor", true).getBoolean(true);
 		
 		chargingBlock = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Vehicle Charger", true).getBoolean(true);
 		solarPanels = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
