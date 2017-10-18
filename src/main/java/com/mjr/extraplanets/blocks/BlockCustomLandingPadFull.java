@@ -72,7 +72,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 
 	@Override
 	public int quantityDropped(Random par1Random) {
-		return 9;
+		return 25;
 	}
 
 	@Override
