@@ -8,6 +8,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.8.7
+*Updated ru_RU.lang (Thanks to rykllan)
+*Fixes a typo in Config
+*Corrects a small typo
+*Fixed some ore gen on multiple planets/moons & Fixed some gravels not generating
+
 v1.8.6
 *Added Brown Sticks
 *Added a recipe to change Brown Planks to Brown Sticks
