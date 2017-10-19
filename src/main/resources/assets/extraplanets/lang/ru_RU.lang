@@ -388,11 +388,11 @@ container.vehicle.charger.name=Зарядное устройство для тр
 container.basic.purifier.name=Purifier
 
 #Machine GUI Components
-gui.salt_water_tank.desc.4=Бак соленой воды
-gui.message.salt_water.name=Соленая вода
-gui.salt_water_input.desc.0=Place Salt bucket into
+gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
+gui.message.salt_water.name=Crystallized Water
+gui.salt_water_input.desc.0=Place Liquid Crystallized Water bucket into
 gui.salt_water_input.desc.1=this slot to fill the tank.
-gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
+gui.salt_water_input.desc.2=Each Liquid Crystallized Water Bucket will give 1000
 gui.salt_water_output.desc.0=Place empty vanilla bucket into
 gui.salt_water_output.desc.1=this slot to fill them from the tank
 gui.status.injecting.name=Впрыскивание
@@ -617,7 +617,7 @@ item.wafer.white_gem_wafer.name=Полупроводниковая пласти�
 
 #Buckets
 item.bucket_glowstone.name=Ведро светящейся пыли
-item.bucket_salt.name=Ведро соленой воды
+tile.salt.name=Liquid Crystallized Water
 item.bucket_magma.name=Ведро магмы
 item.bucket_frozen_water.name=Ведро замерзшей воды
 item.bucket_nitrogen.name=Ведро азота
@@ -1104,7 +1104,7 @@ tile.glowstone.name=Жидкая светящиеся пыль
 tile.magma.name=Жидкая магма
 tile.nitrogen.name=Жидкий азот
 tile.frozen_water.name=Замерзшая вода
-tile.salt.name=Соленая вода
+tile.salt.name=Liquid Crystallized Water
 tile.radioactive_water.name=Радиоактивная вода
 tile.clean_water.name=Чистая вода
 tile.infected_water.name=Зараженная вода
@@ -1116,7 +1116,7 @@ fluid.glowstone_fluid=Жидкая светящиеся пыль
 fluid.magma_fluid=Жидкая магма
 fluid.nitrogen_fluid=Жидкий азот
 fluid.frozen_water_fluid=Замерзшая вода
-fluid.salt_fluid=Соленая вода
+fluid.salt_fluid=Liquid Crystallized Water
 fluid.radioactive_water_fluid=Радиоактивная вода
 fluid.clean_water_fluid=Чистая вода
 fluid.infected_water_fluid=Зараженная вода
