@@ -18,6 +18,9 @@ import com.mjr.extraplanets.jei.chemicalInjector.ChemicalInjectorRecipeWrapper;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeCategory;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeMaker;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeWrapper;
+import com.mjr.extraplanets.jei.purifier.PurifierRecipeCategory;
+import com.mjr.extraplanets.jei.purifier.PurifierRecipeMaker;
+import com.mjr.extraplanets.jei.purifier.PurifierRecipeWrapper;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeCategory;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeMaker;
 import com.mjr.extraplanets.jei.rockets.tier10.Tier10RocketRecipeWrapper;
@@ -61,7 +64,7 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
 					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper),
 					new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(
-							guiHelper));
+							guiHelper), new PurifierRecipeCategory(guiHelper));
 
 			registry.handleRecipes(INasaWorkbenchRecipe.class, Tier4RocketRecipeWrapper::new, RecipeCategories.ROCKET_T4_ID);
 			registry.handleRecipes(INasaWorkbenchRecipe.class, Tier5RocketRecipeWrapper::new, RecipeCategories.ROCKET_T5_ID);
@@ -79,6 +82,7 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.handleRecipes(SolarEvaporationChamberRecipeWrapper.class, recipe -> recipe, RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
 			registry.handleRecipes(ChemicalInjectorRecipeWrapper.class, recipe -> recipe, RecipeCategories.CHEMAICAL_INJECTOR_ID);
 			registry.handleRecipes(CrystallizerRecipeWrapper.class, recipe -> recipe, RecipeCategories.CRYSTALLIZER_ID);
+			registry.handleRecipes(PurifierRecipeWrapper.class, recipe -> recipe, RecipeCategories.PURIFIER_ID);
 
 			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T4_ID);
 			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T5_ID);
@@ -94,6 +98,7 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(SolarEvaporationChamberRecipeMaker.getRecipesList(), RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
 			registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList(), RecipeCategories.CHEMAICAL_INJECTOR_ID);
 			registry.addRecipes(CrystallizerRecipeMaker.getRecipesList(), RecipeCategories.CRYSTALLIZER_ID);
+			registry.addRecipes(PurifierRecipeMaker.getRecipesList(), RecipeCategories.PURIFIER_ID);
 		}
 	}
 }
