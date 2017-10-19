@@ -1,9 +1,5 @@
 package com.mjr.extraplanets.jei.purifier;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.ingredients.IIngredients;
@@ -22,25 +18,9 @@ public class PurifierRecipeWrapper extends BlankRecipeWrapper implements ICrafti
 		this.output = output;
 	}
 
-	@Nonnull
-	@Override
-	public List<ItemStack> getInputs() {
-		List<ItemStack> list = new ArrayList<>();
-		list.addAll(Arrays.asList(this.input));
-		return list;
-	}
-
-	@Nonnull
-	@Override
-	public List<ItemStack> getOutputs() {
-		List<ItemStack> list = new ArrayList<>();
-		list.addAll(Arrays.asList(this.output));
-		return list;
-	}
-
 	@Override
 	public void getIngredients(IIngredients ingredients) {
-		ingredients.setInputs(ItemStack.class, this.getInputs());
-		ingredients.setOutputs(ItemStack.class, this.getOutputs());
+		ingredients.setInput(ItemStack.class, this.input);
+		ingredients.setOutput(ItemStack.class, this.output);
 	}
 }

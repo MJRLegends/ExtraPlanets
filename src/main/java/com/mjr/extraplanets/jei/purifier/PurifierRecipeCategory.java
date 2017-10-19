@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.jei.purifier;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.IGuiHelper;
@@ -63,14 +61,14 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 	}
 
 	@Override
-	public void drawAnimations(@Nonnull Minecraft minecraft) {
-//		this.saltBar.draw(minecraft, 4, 24);
-//		this.saltBar2.draw(minecraft, 29, 24);
-//		this.saltBar3.draw(minecraft, 129, 24);
+	public void drawExtras(@Nonnull Minecraft minecraft) {
+		// this.saltBar.draw(minecraft, 4, 24);
+		// this.saltBar2.draw(minecraft, 29, 24);
+		// this.saltBar3.draw(minecraft, 129, 24);
 	}
 
 	@Override
-	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
+	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
 		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
 
 		itemstacks.init(0, true, 3, 2);
@@ -78,31 +76,10 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 		itemstacks.init(2, true, 89, 31);
 		itemstacks.init(3, false, 28, 2);
 		itemstacks.init(4, false, 118, 2);
-
-		if (recipeWrapper instanceof PurifierRecipeWrapper) {
-			PurifierRecipeWrapper circuitFabricatorRecipeWrapper = (PurifierRecipeWrapper) recipeWrapper;
-			List inputs = circuitFabricatorRecipeWrapper.getInputs();
-
-			for (int i = 0; i < inputs.size(); ++i) {
-				Object o = inputs.get(i);
-				if (o != null) {
-					itemstacks.setFromRecipe(i, o);
-				}
-			}
-
-			List outputs = circuitFabricatorRecipeWrapper.getOutputs();
-
-			for (int i = 0; i < outputs.size(); ++i) {
-				Object o = outputs.get(i);
-				if (o != null) {
-					itemstacks.setFromRecipe(i + 3, o);
-				}
-			}
-		}
 	}
 
 	@Override
-	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		this.setRecipe(recipeLayout, recipeWrapper);
+	public String getModName() {
+		return Constants.modName;
 	}
 }
