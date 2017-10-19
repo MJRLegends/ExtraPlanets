@@ -21,7 +21,6 @@ v0.3.9
 *Renamed Liquid Salt to Liquid Crystallized Water
 *Added JEI support for the Basic Purifier
 *Fixed possible null crash
-*Enabled corroding of armor for Jupiter, Saturn, Uranus, Neptune Planets
 
 v0.3.8
 *Fixed Parachest dropping the Tier 10 rocket for the Electric Rocket
