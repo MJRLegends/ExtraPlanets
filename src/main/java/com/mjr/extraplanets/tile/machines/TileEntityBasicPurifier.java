@@ -95,7 +95,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.getStackInSlot(slot) != null && FluidUtil.isValidContainer(this.getStackInSlot(slot))) {
-			if (FluidUtil.isEmptyContainer(this.getStackInSlot(slot)) == false && FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid() != null) {
+			if (FluidUtil.isEmptyContainer(this.getStackInSlot(slot)) == false && FluidUtil.getFluidContained(this.getStackInSlot(slot)) != null && FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid() != null) {
 				if (slot == 1 && FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid().equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
 					tank.fill(FluidRegistry.getFluidStack("radioactive_water_fluid", 1000), true);
 					this.stacks.set(slot, new ItemStack(Items.BUCKET));
