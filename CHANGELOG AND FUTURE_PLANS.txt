@@ -15,6 +15,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4.0
+*Enabled corroding of armor for Jupiter, Saturn, Uranus, Neptune Planets
+*Fixed some ore gen on multiple planets/moons
+
 v0.3.9
 *Added a Tooltip to all Tier 4 - 10 Rockets for which pad they require to be used with, Updated lang files
 *Fixed issue #157
