@@ -388,11 +388,11 @@ container.vehicle.charger.name=Vehicle Charger
 container.basic.purifier.name=Purifier
 
 #Machine GUI Components
-gui.salt_water_tank.desc.4=Salt Water Tank
-gui.message.salt_water.name=Salt Water
-gui.salt_water_input.desc.0=Place Salt bucket into
+gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
+gui.message.salt_water.name=Crystallized Water
+gui.salt_water_input.desc.0=Place Liquid Crystallized Water bucket into
 gui.salt_water_input.desc.1=this slot to fill the tank.
-gui.salt_water_input.desc.2=Each Salt Bucket will give 1000
+gui.salt_water_input.desc.2=Each Liquid Crystallized Water Bucket will give 1000
 gui.salt_water_output.desc.0=Place empty vanilla bucket into
 gui.salt_water_output.desc.1=this slot to fill them from the tank
 gui.status.injecting.name=Injecting
@@ -617,7 +617,7 @@ item.wafer.white_gem_wafer.name=White Gem Wafer
 
 #Buckets
 item.bucket_glowstone.name=Glowstone Bucket
-item.bucket_salt.name=Salt Bucket
+tile.salt.name=Liquid Crystallized Water
 item.bucket_magma.name=Magma Bucket
 item.bucket_frozen_water.name=Frozen Water Bucket
 item.bucket_nitrogen.name=Nitrogen Bucket
@@ -1104,7 +1104,7 @@ tile.glowstone.name=Liquid Glowstone
 tile.magma.name=Liquid Magma
 tile.nitrogen.name=Liquid Nitrogen
 tile.frozen_water.name=Frozen Water
-tile.salt.name=Liquid Salt
+tile.salt.name=Liquid Crystallized Water
 tile.radioactive_water.name=Radioactive Water
 tile.clean_water.name=Clean Water
 tile.infected_water.name=Infected Water
@@ -1116,7 +1116,7 @@ fluid.glowstone_fluid=Liquid Glowstone
 fluid.magma_fluid=Liquid Magma
 fluid.nitrogen_fluid=Liquid Nitrogen
 fluid.frozen_water_fluid=Frozen Water
-fluid.salt_fluid=Liquid Salt
+fluid.salt_fluid=Liquid Crystallized Water
 fluid.radioactive_water_fluid=Radioactive Water
 fluid.clean_water_fluid=Clean Water
 fluid.infected_water_fluid=Infected Water
