@@ -101,7 +101,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM);
 			JUPITER.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"));
 			JUPITER.setDimensionInfo(Config.JUPITER_ID, WorldProviderJupiter.class);
-			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, false, 100.0F, 3.0F, 0.1F));
+			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, true, 100.0F, 3.0F, 0.1F));
 			JUPITER.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.SATURN) {
@@ -114,7 +114,7 @@ public class ExtraPlanets_Planets {
 			SATURN.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
-			SATURN.setAtmosphere(new AtmosphereInfo(false, false, false, 80.0F, 0.0F, 0.1F));
+			SATURN.setAtmosphere(new AtmosphereInfo(false, false, true, 80.0F, 0.0F, 0.1F));
 			SATURN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.URANUS) {
@@ -127,7 +127,7 @@ public class ExtraPlanets_Planets {
 			URANUS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE).atmosphereComponent(EnumAtmosphericGas.WATER);
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
-			URANUS.setAtmosphere(new AtmosphereInfo(false, false, false, -120.0F, 4.0F, 0.1F));
+			URANUS.setAtmosphere(new AtmosphereInfo(false, false, true, -120.0F, 4.0F, 0.1F));
 			URANUS.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.NEPTUNE) {
@@ -140,7 +140,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
-			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
+			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, true, -140.0F, 5.0F, 0.1F));
 			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.PLUTO) {
