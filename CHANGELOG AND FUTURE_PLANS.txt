@@ -14,6 +14,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.0.8
+*Added a Tooltip to all Tier 4 - 10 Rockets for which pad they require to be used with, Updated lang files
+*Fixed issue #157
+*Renamed Liquid Salt to Liquid Crystallized Water
+*Added JEI support for the Basic Purifier
+*Fixed possible null crash
+*Enabled corroding of armor for Jupiter, Saturn, Uranus, Neptune Planets
+
 v1.0.7
 *Fixed Parachest dropping the Tier 10 rocket for the Electric Rocket
 *Fixed the Vehicle Charger recipe
