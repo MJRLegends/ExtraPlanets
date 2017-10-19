@@ -10,7 +10,6 @@ import mezz.jei.api.gui.IDrawableAnimated;
 import mezz.jei.api.gui.IDrawableStatic;
 import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
-import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
@@ -64,9 +63,9 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void drawAnimations(@Nonnull Minecraft minecraft) {
-//		this.saltBar.draw(minecraft, 4, 24);
-//		this.saltBar2.draw(minecraft, 29, 24);
-//		this.saltBar3.draw(minecraft, 129, 24);
+		// this.saltBar.draw(minecraft, 4, 24);
+		// this.saltBar2.draw(minecraft, 29, 24);
+		// this.saltBar3.draw(minecraft, 129, 24);
 	}
 
 	@Override
@@ -99,10 +98,5 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 				}
 			}
 		}
-	}
-
-	@Override
-	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		this.setRecipe(recipeLayout, recipeWrapper);
 	}
 }

@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
 import net.minecraft.item.ItemStack;
@@ -36,11 +35,5 @@ public class PurifierRecipeWrapper extends BlankRecipeWrapper implements ICrafti
 		List<ItemStack> list = new ArrayList<>();
 		list.addAll(Arrays.asList(this.output));
 		return list;
-	}
-
-	@Override
-	public void getIngredients(IIngredients ingredients) {
-		ingredients.setInputs(ItemStack.class, this.getInputs());
-		ingredients.setOutputs(ItemStack.class, this.getOutputs());
 	}
 }
