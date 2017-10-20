@@ -48,10 +48,10 @@ dependencies {
     compile "codechicken:NotEnoughItems:${minecraft_version}-${NEI_version}:dev"
     compile "codechicken:ForgeMultipart:${minecraft_version}-${fmp_version}:dev"
 	compile files (
-		"/var/lib/jenkins/workspace/ExtraPlanets/GalacticraftCore-Dev-1.7-3.0.12.502.jar",
-		"/var/lib/jenkins/workspace/ExtraPlanets/Galacticraft-Planets-Dev-1.7-3.0.12.502.jar",
-		"/var/lib/jenkins/workspace/ExtraPlanets/Galacticraft-API-1.7-3.0.12.502.jar",
-		"/var/lib/jenkins/workspace/ExtraPlanets/MicdoodleCore-Dev-1.7-3.0.12.502.jar"
+		"GalacticraftCore-Dev-1.7-3.0.12.502.jar",
+		"Galacticraft-Planets-Dev-1.7-3.0.12.502.jar",
+		"Galacticraft-API-1.7-3.0.12.502.jar",
+		"MicdoodleCore-Dev-1.7-3.0.12.502.jar"
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
