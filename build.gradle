@@ -53,10 +53,10 @@ minecraft {
 dependencies {
     deobfCompile "mezz.jei:jei_${minecraft_version}:${jei_version}"
 	compile files (
-		"Galacticraft-API-1.8.9-4.0.0.117.jar",
-		"GalacticraftCore-Dev-1.8.9-4.0.0.117.jar",
-		"Galacticraft-Planets-Dev-1.8.9-4.0.0.117.jar",
-		"MicdoodleCore-Dev-1.8.9-4.0.0.117.jar"
+		"Galacticraft-API-1.8.9-4.0.0.118.jar",
+		"GalacticraftCore-Dev-1.8.9-4.0.0.118.jar",
+		"Galacticraft-Planets-Dev-1.8.9-4.0.0.118.jar",
+		"MicdoodleCore-Dev-1.8.9-4.0.0.118.jar"
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
