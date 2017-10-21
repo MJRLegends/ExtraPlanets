@@ -7,6 +7,8 @@ import java.util.Map;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
@@ -16,9 +18,14 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -32,6 +39,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.client.gui.overlay.OverlayElectricLaunchCountdown;
 import com.mjr.extraplanets.client.gui.overlay.OverlayJupiterLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayMercuryLander;
@@ -127,7 +135,7 @@ public class MainHandlerClient {
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityJupiterLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayJupiterLander.renderLanderOverlay();
-		}		
+		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntitySaturnLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlaySaturnLander.renderLanderOverlay();
 		}
@@ -136,7 +144,7 @@ public class MainHandlerClient {
 		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityUranusLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayUranusLander.renderLanderOverlay();
-		}		
+		}
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityNeptuneLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayNeptuneLander.renderLanderOverlay();
 		}
@@ -186,6 +194,31 @@ public class MainHandlerClient {
 					minecraft.theWorld.playSound(player, posX, posY, posZ, SoundEvents.ENTITY_LIGHTNING_THUNDER, SoundCategory.WEATHER, 1000.0F, 1.0F + player.getRNG().nextFloat() * 0.2F);
 					lightning.put(new BlockPos(posX, posY, posZ), 20);
 				}
+			}
+		}
+	}
+
+	@SubscribeEvent
+	public void onToolTip(ItemTooltipEvent event) {
+		ItemStack stack = event.getItemStack();
+		if (stack != null && stack.getItem() != null && stack.getItem() instanceof UniversalBucket) {
+			if (FluidUtil.getFluidContained(stack) != null && FluidUtil.getFluidContained(stack).getFluid() != null) {
+				FluidStack fluidStack = FluidUtil.getFluidContained(stack);
+				Fluid fluid = fluidStack.getFluid();
+				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) 
+						|| fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) 
+						|| fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) 
+						|| fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) 
+						|| fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) 
+						|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID)){
+					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding"));
+					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2"));
+				}
+				else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
+					event.getToolTip().add(EnumColor.ORANGE + GCCoreUtil.translate("gui.bucket.message.crafting"));
 			}
 		}
 	}
