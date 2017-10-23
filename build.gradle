@@ -1,3 +1,5 @@
+def minecraft_version="1.11.2"
+def jei_version="4.5.0.294"
 
 // For those who want the bleeding edge
 buildscript {
@@ -12,6 +14,14 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
     }
 }
+
+repositories {
+    maven {
+        name 'DVS1 Maven FS'
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
+}
+
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = "0.4.0"
@@ -36,11 +46,10 @@ minecraft {
 
 dependencies {
 	compile files (
-		"../Galacticraft-API-1.11.2-4.0.0.117.jar",
-		"../GalacticraftCore-Dev-1.11.2-4.0.0.117.jar",
-		"../Galacticraft-Planets-Dev-1.11.2-4.0.0.117.jar",
-		"../MicdoodleCore-Dev-1.11.2-4.0.0.117.jar",
-		"../jei_1.11.2-4.5.0.294.jar",
+		"Galacticraft-API-1.11.2-4.0.0.118.jar",
+		"GalacticraftCore-Dev-1.11.2-4.0.0.118.jar",
+		"Galacticraft-Planets-Dev-1.11.2-4.0.0.118.jar",
+		"MicdoodleCore-Dev-1.11.2-4.0.0.118.jar"
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
