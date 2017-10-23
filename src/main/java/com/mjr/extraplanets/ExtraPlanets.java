@@ -21,6 +21,8 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.compatibility.ExtremeReactorsCompatibility;
+import com.mjr.extraplanets.compatibility.MCMultiPartCompatibility;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
@@ -308,6 +310,12 @@ public class ExtraPlanets {
 
 		// Register Deconstructor Compatibility
 		RegisterDeconstructorCompatibility();
+		
+		// Register Extreme Reactors Compatibility
+		ExtremeReactorsCompatibility.init();
+		
+		// Register MC MultiPart Compatibility
+		MCMultiPartCompatibility.init();
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
