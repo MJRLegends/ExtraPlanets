@@ -45,6 +45,7 @@ minecraft {
 }
 
 dependencies {
+    deobfCompile "mezz.jei:jei_${minecraft_version}:${jei_version}"
 	compile files (
 		"Galacticraft-API-1.11.2-4.0.0.118.jar",
 		"GalacticraftCore-Dev-1.11.2-4.0.0.118.jar",
