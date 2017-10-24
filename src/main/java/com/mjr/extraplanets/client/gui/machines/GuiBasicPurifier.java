@@ -34,7 +34,7 @@ public class GuiBasicPurifier extends GuiContainerGC {
 	public GuiBasicPurifier(InventoryPlayer par1InventoryPlayer, TileEntityBasicPurifier tileEntity) {
 		super(new ContainerBasicPurifier(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().thePlayer));
 		this.tileEntity = tileEntity;
-		this.ySize = 168;
+		this.ySize = 168 + 20;
 	}
 
 	@Override
@@ -93,13 +93,23 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		String displayText = "";
 		int yOffset = -10;
 
-		if (this.tileEntity.canProcess()) {
-			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.purifiering.name");
+		if (!this.tileEntity.hasInputs()) {
+			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.inputs.name");
+		} else if (!this.tileEntity.hasEnoughEnergyToRun) {
+			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
+		} else if (this.tileEntity.canProcess()) {
+			int progress;
+			if (this.tileEntity.canProcess() && this.tileEntity.canPurify()){
+				progress = (this.tileEntity.processTicks * 2) * 10;
+			}
+			else
+				progress = 0;
+			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.purifiering.name") + " " + progress + "%";
 		} else {
-			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.idle.name");
+			displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.idle.name");
 		}
 
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 102 - (displayText.length() * 2), 62 + 23 + yOffset, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 80 - (displayText.length() * 2), 62 + 35 + yOffset, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 

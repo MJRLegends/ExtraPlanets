@@ -72,6 +72,12 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
+	public boolean hasInputs(){
+		if(this.containingItems[1] != null && this.containingItems[1].getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
+			return true;
+		return false;
+	}
+	
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canOutput()) {
