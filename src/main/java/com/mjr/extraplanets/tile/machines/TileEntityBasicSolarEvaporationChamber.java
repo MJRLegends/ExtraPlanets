@@ -22,6 +22,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
+	public int processTime = 0;
+	private ItemStack[] containingItems = new ItemStack[3];
 
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASSIUM, 1, 0);
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -39,7 +41,9 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			else
 				isDaylight = false;
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
-				int processTime = (int) (BASE_PROCESS_TIME_REQUIRED - (BASE_PROCESS_TIME_REQUIRED * (this.world.getCelestialAngle(1.0F) * -10))) / 4;
+				processTime = (int) (BASE_PROCESS_TIME_REQUIRED - (this.worldObj.getCelestialAngle(1.0F) * 100));
+				if(processTime < 0)
+					processTime = processTime * -1;
 				if (this.processTicks == 0) {
 					this.processTicks = processTime;
 				} else {
@@ -80,6 +84,13 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		}
 		int result = this.stacks.get(2).isEmpty() ? 0 : this.stacks.get(2).getCount() + this.producingStack.getCount();
 		return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
+	}
+	
+	public boolean hasInputs(){
+		if(this.containingItems[1] != null && this.containingItems[1].getItem() == ExtraPlanets_Items.POTASH_SHARDS)
+			if(this.containingItems[1].stackSize >= 12)
+				return true;
+		return false;
 	}
 
 	public void smeltItem() {

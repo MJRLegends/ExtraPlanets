@@ -423,6 +423,7 @@ gui.clean_water_output.desc.1=this slot to fill them from the tank
 gui.bucket.message.finding=You can obtain this Fluid
 gui.bucket.message.finding.2=by Finding it on Planets/Moons
 gui.bucket.message.crafting=Press R to See How to Obtain
+gui.status.missing.power.name=Missing Power
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Open Powered Vehicle Inventory
