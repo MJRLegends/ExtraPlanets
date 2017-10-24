@@ -57,13 +57,24 @@ public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {
 		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
 		String displayText = "";
 		int yOffset = -10;
-		if (this.tileEntity.canProcess()) {
-			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.solarEvaporationChamber.name");
-		} else {
-			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.idle.name");
-		}
 
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 18 - displayText.length(), 45 + 24 + yOffset, 4210752);
+		if (!this.tileEntity.hasInputs()) {
+			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.inputs.name");
+		} else if (!this.tileEntity.hasEnoughEnergyToRun) {
+			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
+		} else if (this.tileEntity.canProcess()) {
+			int progress;
+			if (this.tileEntity.canProcess() && this.tileEntity.canOutput()){
+				progress = 100 - this.tileEntity.processTicks;
+			}
+			else
+				progress = 0;
+			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.solarEvaporationChamber.name") + " " + progress + "%";
+		} else {
+			displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.idle.name");
+		}
+		
+		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 48 - (displayText.length() * 2), 45 + 24 + yOffset, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 

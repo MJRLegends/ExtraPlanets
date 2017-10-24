@@ -17,7 +17,7 @@ import com.mjr.extraplanets.blocks.machines.BasicChemicalInjector;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithInventory implements ISidedInventory {
-	public static final int PROCESS_TIME_REQUIRED = 150;
+	public static final int PROCESS_TIME_REQUIRED = 100;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[4];
@@ -76,6 +76,13 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 		}
 		int result = this.containingItems[3].stackSize + itemstack.stackSize;
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
+	}
+	
+	public boolean hasInputs(){
+		if(this.containingItems[1] != null && this.containingItems[2] != null && this.containingItems[1].getItem() == ExtraPlanets_Items.IODIDE_SALT && this.containingItems[2].getItem() == ExtraPlanets_Items.POTASSIUM)
+			if(this.containingItems[1].stackSize >= 3 && this.containingItems[2].stackSize >= 6)
+				return true;
+		return false;
 	}
 
 	public void smeltItem() {

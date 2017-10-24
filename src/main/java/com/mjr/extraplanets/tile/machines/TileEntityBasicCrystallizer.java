@@ -32,7 +32,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	@NetworkedField(targetSide = Side.CLIENT)
 	public FluidTank inputTank = new FluidTank(this.tankCapacity);
 
-	public static final int PROCESS_TIME_REQUIRED = 1;
+	public static final int PROCESS_TIME_REQUIRED = 5;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[3];
@@ -104,10 +104,16 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
+	public boolean hasInputs(){
+		if(this.inputTank.getFluidAmount() >= 1000)
+			return true;
+		return false;
+	}
+	
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canCrystallize()) {
-			final int amountToDrain = 25;
+			final int amountToDrain = 50;
 			amountDrain = amountDrain + amountToDrain;
 			this.inputTank.drain(amountToDrain, true);
 			if (amountDrain >= 1000) {

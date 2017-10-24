@@ -9,6 +9,7 @@ import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -22,6 +23,7 @@ import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicPurifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -40,7 +42,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	@NetworkedField(targetSide = Side.CLIENT)
 	public FluidTank outputTank = new FluidTank(this.tankCapacity);
 
-	public static final int PROCESS_TIME_REQUIRED = 1;
+	public static final int PROCESS_TIME_REQUIRED = 5;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
 	private ItemStack[] containingItems = new ItemStack[5];
@@ -135,9 +137,17 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 			return true;
 	}
 
+	public boolean hasInputs() {
+		if(this.inputTank.getFluidAmount() >= 1000 || this.inputTank2.getFluidAmount() >= 1000)
+			if(this.containingItems[4] != null && this.containingItems[4].getItem() == ExtraPlanets_Items.IODIDE_SALT)
+				if(this.containingItems[4].stackSize >= 6)
+					return true;
+		return false;	
+	}
+	
 	public void smeltItem() {
 		if (this.canProcess() && canPurify()) {
-			final int amountToDrain = 25;
+			final int amountToDrain = 50;
 			if (this.inputTank.getFluidAmount() >= amountToDrain) {
 				this.inputTank.drain(amountToDrain, true);
 				amountDrain = amountDrain + amountToDrain;
