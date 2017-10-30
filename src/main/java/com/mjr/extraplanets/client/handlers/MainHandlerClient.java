@@ -108,7 +108,7 @@ public class MainHandlerClient {
 		final EntityPlayerSP player = minecraft.thePlayer;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
 		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.worldObj.provider)
-				&& !playerBaseClient.isSpectator()) {
+				&& !playerBaseClient.isSpectator() && !minecraft.gameSettings.showDebugInfo) {
 			if ((player.worldObj.provider instanceof CustomWorldProviderSpace)) {
 				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.worldObj.provider;
 
