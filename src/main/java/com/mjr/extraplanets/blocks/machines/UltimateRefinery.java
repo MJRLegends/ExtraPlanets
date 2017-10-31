@@ -30,8 +30,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 
 public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
-	private final Random refineryRand = new Random();
-
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	public UltimateRefinery(String assetName) {
@@ -47,7 +45,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	@Override
 	@SideOnly(Side.CLIENT)
-    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand){
+	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
 		final TileEntity te = worldIn.getTileEntity(pos);
 
 		if (te instanceof TileEntityUltimateRefinery) {
@@ -77,7 +75,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 	}
 
 	@Override
-    public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ){
+	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		int metadata = getMetaFromState(world.getBlockState(pos));
 		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
 

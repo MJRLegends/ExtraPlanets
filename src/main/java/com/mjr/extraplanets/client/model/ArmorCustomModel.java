@@ -37,9 +37,9 @@ public abstract class ArmorCustomModel extends ModelBipedGC {
 		super.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 		GL11.glPushMatrix();
 		if (color != -1) {
-			float red = (float) (color >> 16 & 255) / 255F;
-			float blue = (float) (color >> 8 & 255) / 255F;
-			float green = (float) (color & 255) / 255F;
+			float red = (color >> 16 & 255) / 255F;
+			float blue = (color >> 8 & 255) / 255F;
+			float green = (color & 255) / 255F;
 			GL11.glColor3f(red, blue, green);
 		}
 

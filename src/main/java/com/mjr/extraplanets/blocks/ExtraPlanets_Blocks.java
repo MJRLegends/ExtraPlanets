@@ -410,7 +410,6 @@ public class ExtraPlanets_Blocks {
 		DECORATIVE_BLOCKS2 = new BlockDecorativeBlocks2("decorative_blocks2");
 	}
 
-	@SuppressWarnings("unchecked")
 	public static void initializeStairs() {
 		if (Config.MERCURY) {
 			MERCURY_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SURFACE)).setHardness(2.0F);

@@ -76,6 +76,6 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 				itemStackIn = ItemStack.EMPTY;
 			}
 		}
-		return new ActionResult<>(EnumActionResult.PASS, itemStackIn);
+		return new ActionResult<ItemStack>(EnumActionResult.PASS, itemStackIn);
 	}
 }

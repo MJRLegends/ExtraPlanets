@@ -30,7 +30,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableBlock, ITileEntityProvider {
-	public static final PropertyEnum MULTI_TYPE = PropertyEnum.create("type", EnumBlockMultiType.class);
+	public static final PropertyEnum<EnumBlockMultiType> MULTI_TYPE = PropertyEnum.create("type", EnumBlockMultiType.class);
 	public static final PropertyInteger RENDER_TYPE = PropertyInteger.create("rendertype", 0, 7);
 
 	protected static final AxisAlignedBB AABB_PAD = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
@@ -97,7 +97,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 			BlockPos mainBlockPosition = ((TileEntityMulti) tileEntity).mainBlockPosition;
 
 			if (mainBlockPosition != null && !mainBlockPosition.equals(pos)) {
-				return worldIn.getBlockState(mainBlockPosition).getBlock().getBlockHardness(blockState, worldIn, pos);
+				return worldIn.getBlockState(mainBlockPosition).getBlockHardness(worldIn, pos);
 			}
 		}
 
@@ -120,7 +120,6 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		worldObj.setTileEntity(pos, new TileEntityMulti(mainBlock));
 	}
 
-	@SuppressWarnings("unchecked")
 	public void makeFakeBlock(World worldObj, Collection<BlockPos> posList, BlockPos mainBlock, EnumBlockMultiType type) {
 		for (BlockPos pos : posList) {
 			worldObj.setBlockState(pos, this.getDefaultState().withProperty(MULTI_TYPE, type), 0);
@@ -151,7 +150,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 	@Override
 	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		TileEntityMulti tileEntity = (TileEntityMulti) world.getTileEntity(pos);
-        return tileEntity.onBlockWrenched(world, pos, entityPlayer, hand, side, hitX, hitY, hitZ);
+		return tileEntity.onBlockWrenched(world, pos, entityPlayer, hand, side, hitX, hitY, hitZ);
 	}
 
 	/**

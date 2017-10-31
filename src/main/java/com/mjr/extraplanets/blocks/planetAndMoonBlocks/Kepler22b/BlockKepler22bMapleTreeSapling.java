@@ -96,7 +96,6 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 
 	public BlockKepler22bMapleTreeSapling() {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeSapling.EnumType.MAPLE_BLUE).withProperty(STAGE, Integer.valueOf(0)));
-		float f = 0.4F;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -136,9 +135,6 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(worldIn, rand, pos))
 			return;
 		WorldGenerator worldgenerator = rand.nextInt(10) == 0 ? new WorldGenBigTree(true) : new WorldGenTrees(true);
-		int i = 0;
-		int j = 0;
-		boolean flag = false;
 
 		switch (state.getValue(VARIANT)) {
 		case MAPLE_BLUE:

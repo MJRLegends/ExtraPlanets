@@ -33,7 +33,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
 public class VehicleCharger extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	public static IMachineSidesProperties MACHINESIDES_RENDERTYPE = IMachineSidesProperties.ONEFACE_HORIZ;
-	public static final PropertyEnum SIDES = MACHINESIDES_RENDERTYPE.asProperty;
+	public static final PropertyEnum<?> SIDES = MACHINESIDES_RENDERTYPE.asProperty;
 
 	public VehicleCharger(String assetName) {
 		super(Material.ROCK);

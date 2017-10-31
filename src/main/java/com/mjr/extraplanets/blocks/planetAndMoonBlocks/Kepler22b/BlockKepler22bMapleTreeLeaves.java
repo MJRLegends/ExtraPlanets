@@ -168,7 +168,7 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeaves {
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		IBlockState state = world.getBlockState(pos);
-		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, state.getValue(VARIANT).getMetadata())));
+		return new java.util.ArrayList<ItemStack>(java.util.Arrays.asList(new ItemStack(this, 1, state.getValue(VARIANT).getMetadata())));
 	}
 
 	@Override

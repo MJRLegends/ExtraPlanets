@@ -16,8 +16,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemAppleIron extends ItemFood {
-	public ItemAppleIron(int p_i45341_1_, float p_i45341_2_, boolean p_i45341_3_) {
-		super(p_i45341_1_, p_i45341_2_, p_i45341_3_);
+	public ItemAppleIron(int amount, float saturation, boolean isWolfFood) {
+		super(amount, saturation, isWolfFood);
 		this.setHasSubtypes(true);
 		this.setAlwaysEdible();
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
@@ -25,50 +25,44 @@ public class ItemAppleIron extends ItemFood {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public boolean hasEffect(ItemStack p_77636_1_) {
-		return p_77636_1_.getItemDamage() > 0;
-	}
-
-	/**
-	 * Return an item rarity from EnumRarity
-	 */
-	@Override
-	public EnumRarity getRarity(ItemStack p_77613_1_) {
-		return p_77613_1_.getItemDamage() == 0 ? EnumRarity.RARE : EnumRarity.EPIC;
+	public boolean hasEffect(ItemStack itemStack) {
+		return itemStack.getItemDamage() > 0;
 	}
 
 	@Override
-	protected void onFoodEaten(ItemStack p_77849_1_, World p_77849_2_, EntityPlayer p_77849_3_) {
-		if (!p_77849_2_.isRemote) {
-			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 250, 0));
-			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 400, 0));
-			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 600, 0));
-			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 120, 1));
-			p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.HASTE, 120, 1));
+	public EnumRarity getRarity(ItemStack itemStack) {
+		return itemStack.getItemDamage() == 0 ? EnumRarity.RARE : EnumRarity.EPIC;
+	}
+
+	@Override
+	protected void onFoodEaten(ItemStack itemStack, World world, EntityPlayer player) {
+		if (!world.isRemote) {
+			player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 250, 0));
+			player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 400, 0));
+			player.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 600, 0));
+			player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 120, 1));
+			player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 120, 1));
 
 		}
 
-		if (p_77849_1_.getItemDamage() > 0) {
-			if (!p_77849_2_.isRemote) {
-				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 350, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 600, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 700, 0));
-				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.SPEED, 850, 1));
-				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 240, 2));
-				p_77849_3_.addPotionEffect(new PotionEffect(MobEffects.HASTE, 300, 1));
+		if (itemStack.getItemDamage() > 0) {
+			if (!world.isRemote) {
+				player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 350, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 600, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, 700, 0));
+				player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 850, 1));
+				player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 240, 2));
+				player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 300, 1));
 			}
 		} else {
-			super.onFoodEaten(p_77849_1_, p_77849_2_, p_77849_3_);
+			super.onFoodEaten(itemStack, world, player);
 		}
 	}
 
-	/**
-	 * returns a list of items with the same ID, but different meta (eg: dye returns 16 items)
-	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		par3List.add(new ItemStack(par1, 1, 0));
-		par3List.add(new ItemStack(par1, 1, 1));
+	public void getSubItems(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
+		list.add(new ItemStack(item, 1, 0));
+		list.add(new ItemStack(item, 1, 1));
 	}
 }

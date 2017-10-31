@@ -30,8 +30,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
 
 public class AdvancedRefinery extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
-	private final Random refineryRand = new Random();
-
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	public AdvancedRefinery(String assetName) {

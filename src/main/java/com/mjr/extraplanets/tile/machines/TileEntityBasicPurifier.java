@@ -323,7 +323,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		}
 		if (type == NetworkType.FLUID) {
 			EnumFacing pipeSide = getInputPipe();
-			return direction == pipeSide || direction == pipeSide.getOpposite() || direction == pipeSide.DOWN;
+			return direction == pipeSide || direction == pipeSide.getOpposite() || direction == EnumFacing.DOWN;
 		}
 		return false;
 	}
@@ -343,7 +343,8 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 
 	@Override
 	public boolean canDrain(EnumFacing from, Fluid fluid) {
-		if (from == getFront().rotateY().DOWN) {
+		getFront().rotateY();
+		if (from == EnumFacing.DOWN) {
 			return this.outputTank.getFluid() != null && this.outputTank.getFluidAmount() > 0;
 		}
 
@@ -352,7 +353,8 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 
 	@Override
 	public FluidStack drain(EnumFacing from, FluidStack resource, boolean doDrain) {
-		if (from == getFront().rotateY().DOWN && resource != null) {
+		getFront().rotateY();
+		if (from == EnumFacing.DOWN && resource != null) {
 			return this.outputTank.drain(resource.amount, doDrain);
 		}
 
@@ -361,7 +363,8 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 
 	@Override
 	public FluidStack drain(EnumFacing from, int maxDrain, boolean doDrain) {
-		if (from == getFront().rotateY().DOWN) {
+		getFront().rotateY();
+		if (from == EnumFacing.DOWN) {
 			return this.drain(from, new FluidStack(ExtraPlanets_Fluids.CLEAN_WATER_FLUID, maxDrain), doDrain);
 		}
 

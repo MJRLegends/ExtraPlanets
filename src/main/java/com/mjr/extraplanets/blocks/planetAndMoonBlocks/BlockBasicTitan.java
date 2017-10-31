@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicTitan extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypetitan", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypetitan", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "titan_surface"), SUB_SURFACE(1, "titan_sub_surface"), STONE(2, "titan_stone"), ORE_IRON(3, "titan_ore_iron"), ORE_TIN(4, "titan_ore_tin"), ORE_COPPER(5, "titan_ore_copper");
@@ -154,12 +154,11 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
 		IBlockState stateAbove = world.getBlockState(pos.up());
-		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.getBlock().isFullCube(stateAbove);
+		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.isFullCube();
 	}
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(state, target, world, pos, player);
 	}
 
@@ -172,18 +171,13 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-	public boolean hasTileEntity(IBlockState state) {
-		return state.getBlock().getMetaFromState(state) == 10;
-	}
-
-	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

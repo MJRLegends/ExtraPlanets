@@ -30,8 +30,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber;
 
 public class BasicSolarEvaporationChamber extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
-	private final Random crystallizerRand = new Random();
-
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	public BasicSolarEvaporationChamber(String assetName) {

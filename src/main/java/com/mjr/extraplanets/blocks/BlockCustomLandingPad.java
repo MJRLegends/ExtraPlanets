@@ -34,7 +34,7 @@ import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPadSingle;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPadSingle;
 
 public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartialSealableBlock, IShiftDescription, ISortableBlock {
-	public static final PropertyEnum PAD_TYPE = PropertyEnum.create("type", EnumLandingPadType.class);
+	public static final PropertyEnum<EnumLandingPadType> PAD_TYPE = PropertyEnum.create("type", EnumLandingPadType.class);
 	protected static final AxisAlignedBB AABB = new AxisAlignedBB(0.0, 0.0, 0.0, 1.0, 0.1875, 1.0);
 
 	public enum EnumLandingPadType implements IStringSerializable {
@@ -158,7 +158,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier3.desc");
 		else if (meta == 2)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".powered.desc");
-		else if(meta == 3)
+		else if (meta == 3)
 			return GCCoreUtil.translate(this.getUnlocalizedName() + ".powered.rocket.desc");
 		else
 			return "";
@@ -169,13 +169,11 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 		return true;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(PAD_TYPE, EnumLandingPadType.byMetadata(meta));
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		return ((EnumLandingPadType) state.getValue(PAD_TYPE)).getMeta();

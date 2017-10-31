@@ -34,7 +34,6 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	public BlockBasicKepler22bTallGrass() {
 		super(Material.VINE);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_SHORT));
-		float f = 0.4F;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
