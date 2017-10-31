@@ -35,7 +35,7 @@ public class TileEntityTier3LandingPadSingle extends TileEntity implements ITick
 				this.getPos().south(1);
 				this.getPos().east(1);
 
-				this.world.setBlockState(this.getPos(), ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL.getStateFromMeta(BlockCustomLandingPadFull.EnumLandingPadFullType.TIER_3_ROCKET_PAD.getMeta()), 2);
+				this.world.setBlockState(this.getPos(), ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL.getDefaultState().withProperty(BlockCustomLandingPadFull.PAD_TYPE, BlockCustomLandingPadFull.EnumLandingPadFullType.TIER_3_ROCKET_PAD));
 			}
 		}
 	}
