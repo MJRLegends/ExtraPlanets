@@ -14,7 +14,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -40,12 +41,12 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntityBreathable{
+public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntityBreathable {
 	public float squishAmount;
 	public float squishFactor;
 	public float prevSquishFactor;
 	private boolean wasOnGround;
-    private static final DataParameter<Integer> SLIME_SIZE = EntityDataManager.<Integer>createKey(EntityEvolvedMagmaCubeBoss.class, DataSerializers.VARINT);
+	private static final DataParameter<Integer> SLIME_SIZE = EntityDataManager.<Integer> createKey(EntityEvolvedMagmaCubeBoss.class, DataSerializers.VARINT);
 
 	public EntityEvolvedMagmaCubeBoss(World worldIn) {
 		super(worldIn);
@@ -54,31 +55,30 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		this.tasks.addTask(2, new EntityEvolvedMagmaCubeBoss.AISlimeAttack(this));
 		this.tasks.addTask(3, new EntityEvolvedMagmaCubeBoss.AISlimeFaceRandom(this));
 		this.tasks.addTask(5, new EntityEvolvedMagmaCubeBoss.AISlimeHop(this));
-		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true, false, null));
 	}
-	
-    @Override
-    protected void onDeathUpdate()
-    {
-        super.onDeathUpdate();
 
-        if (!this.worldObj.isRemote)
-        {
-            if (this.deathTicks == 100)
-            {
-                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
-            }
-        }
-    }
-    
+	@Override
+	protected void onDeathUpdate() {
+		super.onDeathUpdate();
+
+		if (!this.worldObj.isRemote) {
+			if (this.deathTicks == 100) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+			}
+		}
+	}
+
 	@Override
 	protected void entityInit() {
 		super.entityInit();
-        this.dataManager.register(SLIME_SIZE, Integer.valueOf(1));
+		this.dataManager.register(SLIME_SIZE, Integer.valueOf(1));
 	}
 
 	protected void setSlimeSize(int size) {
-        this.dataManager.set(SLIME_SIZE, Integer.valueOf(size));
+		this.dataManager.set(SLIME_SIZE, Integer.valueOf(size));
 		this.setSize(0.51000005F * size, 0.51000005F * size);
 		this.setPosition(this.posX, this.posY, this.posZ);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(600.0D);
@@ -91,7 +91,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	 * Returns the size of the slime.
 	 */
 	public int getSlimeSize() {
-        return this.dataManager.get(SLIME_SIZE).intValue();
+		return this.dataManager.get(SLIME_SIZE).intValue();
 	}
 
 	/**
@@ -125,48 +125,44 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-     * Called to update the entity's position/logic.
-     */
-    @Override
-	public void onUpdate()
-    {
-        if (!this.worldObj.isRemote && this.worldObj.getDifficulty() == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0)
-        {
-            this.isDead = true;
-        }
+	 * Called to update the entity's position/logic.
+	 */
+	@Override
+	public void onUpdate() {
+		if (!this.worldObj.isRemote && this.worldObj.getDifficulty() == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0) {
+			this.isDead = true;
+		}
 
-        this.squishFactor += (this.squishAmount - this.squishFactor) * 0.5F;
-        this.prevSquishFactor = this.squishFactor;
-        super.onUpdate();
+		this.squishFactor += (this.squishAmount - this.squishFactor) * 0.5F;
+		this.prevSquishFactor = this.squishFactor;
+		super.onUpdate();
 
-        if (this.onGround && !this.wasOnGround)
-        {
-            int i = this.getSlimeSize();
-            if (spawnCustomParticles()) { i = 0; } // don't spawn particles if it's handled by the implementation itself
-            for (int j = 0; j < i * 8; ++j)
-            {
-                float f = this.rand.nextFloat() * ((float)Math.PI * 2F);
-                float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
-                float f2 = MathHelper.sin(f) * i * 0.5F * f1;
-                float f3 = MathHelper.cos(f) * i * 0.5F * f1;
-                World world = this.worldObj;
-                EnumParticleTypes enumparticletypes = this.getParticleType();
-                double d0 = this.posX + f2;
-                double d1 = this.posZ + f3;
-                world.spawnParticle(enumparticletypes, d0, this.getEntityBoundingBox().minY, d1, 0.0D, 0.0D, 0.0D, new int[0]);
-            }
+		if (this.onGround && !this.wasOnGround) {
+			int i = this.getSlimeSize();
+			if (spawnCustomParticles()) {
+				i = 0;
+			} // don't spawn particles if it's handled by the implementation itself
+			for (int j = 0; j < i * 8; ++j) {
+				float f = this.rand.nextFloat() * ((float) Math.PI * 2F);
+				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
+				float f2 = MathHelper.sin(f) * i * 0.5F * f1;
+				float f3 = MathHelper.cos(f) * i * 0.5F * f1;
+				World world = this.worldObj;
+				EnumParticleTypes enumparticletypes = this.getParticleType();
+				double d0 = this.posX + f2;
+				double d1 = this.posZ + f3;
+				world.spawnParticle(enumparticletypes, d0, this.getEntityBoundingBox().minY, d1, 0.0D, 0.0D, 0.0D, new int[0]);
+			}
 
-            this.playSound(this.getSquishSound(), this.getSoundVolume(), ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F) / 0.8F);
-            this.squishAmount = -0.5F;
-        }
-        else if (!this.onGround && this.wasOnGround)
-        {
-            this.squishAmount = 1.0F;
-        }
+			this.playSound(this.getSquishSound(), this.getSoundVolume(), ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F) / 0.8F);
+			this.squishAmount = -0.5F;
+		} else if (!this.onGround && this.wasOnGround) {
+			this.squishAmount = 1.0F;
+		}
 
-        this.wasOnGround = this.onGround;
-        this.alterSquishAmount();
-    }
+		this.wasOnGround = this.onGround;
+		this.alterSquishAmount();
+	}
 
 	protected void alterSquishAmount() {
 		this.squishAmount *= 0.6F;
@@ -183,56 +179,48 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		return new EntityEvolvedMagmaCubeBoss(this.worldObj);
 	}
 
-    @Override
-	public void notifyDataManagerChange(DataParameter<?> key)
-    {
-        if (SLIME_SIZE.equals(key))
-        {
-            int i = this.getSlimeSize();
-            this.setSize(0.51000005F * i, 0.51000005F * i);
-            this.rotationYaw = this.rotationYawHead;
-            this.renderYawOffset = this.rotationYawHead;
+	@Override
+	public void notifyDataManagerChange(DataParameter<?> key) {
+		if (SLIME_SIZE.equals(key)) {
+			int i = this.getSlimeSize();
+			this.setSize(0.51000005F * i, 0.51000005F * i);
+			this.rotationYaw = this.rotationYawHead;
+			this.renderYawOffset = this.rotationYawHead;
 
-            if (this.isInWater() && this.rand.nextInt(20) == 0)
-            {
-                this.resetHeight();
-            }
-        }
+			if (this.isInWater() && this.rand.nextInt(20) == 0) {
+				this.resetHeight();
+			}
+		}
 
-        super.notifyDataManagerChange(key);
-    }
+		super.notifyDataManagerChange(key);
+	}
 
 	/**
-	 * Applies a velocity to each of the entities pushing them away from each
-	 * other. Args: entity
+	 * Applies a velocity to each of the entities pushing them away from each other. Args: entity
 	 */
 	@Override
 	public void applyEntityCollision(Entity entityIn) {
 		super.applyEntityCollision(entityIn);
 	}
 
-    /**
-     * Called by a player entity when they collide with an entity
-     */
-    @Override
-	public void onCollideWithPlayer(EntityPlayer entityIn)
-    {
-        if (this.canDamagePlayer())
-        {
-            this.dealDamage(entityIn);
-        }
-    }
+	/**
+	 * Called by a player entity when they collide with an entity
+	 */
+	@Override
+	public void onCollideWithPlayer(EntityPlayer entityIn) {
+		if (this.canDamagePlayer()) {
+			this.dealDamage(entityIn);
+		}
+	}
 
-    protected void dealDamage(EntityLivingBase entityIn)
-    {
-        int i = this.getSlimeSize();
+	protected void dealDamage(EntityLivingBase entityIn) {
+		int i = this.getSlimeSize();
 
-        if (this.canEntityBeSeen(entityIn) && this.getDistanceSqToEntity(entityIn) < 0.6D * i * 0.6D * i && entityIn.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength()))
-        {
-            this.playSound(SoundEvents.ENTITY_SLIME_ATTACK, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.applyEnchantments(this, entityIn);
-        }
-    }
+		if (this.canEntityBeSeen(entityIn) && this.getDistanceSqToEntity(entityIn) < 0.6D * i * 0.6D * i && entityIn.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength())) {
+			this.playSound(SoundEvents.ENTITY_SLIME_ATTACK, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
+			this.applyEnchantments(this, entityIn);
+		}
+	}
 
 	@Override
 	public float getEyeHeight() {
@@ -240,43 +228,36 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Indicates weather the slime is able to damage the player (based upon the
-	 * slime's size)
+	 * Indicates weather the slime is able to damage the player (based upon the slime's size)
 	 */
 	protected boolean canDamagePlayer() {
 		return this.getSlimeSize() > 1;
 	}
 
 	/**
-	 * Gets the amount of damage dealt to the player when "attacked" by the
-	 * slime.
+	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
 	 */
 	protected int getAttackStrength() {
 		return this.getSlimeSize() * 6;
 	}
 
-	 @Override
-	protected SoundEvent getHurtSound()
-	    {
-	        return SoundEvents.ENTITY_SLIME_HURT;
-	    }
+	@Override
+	protected SoundEvent getHurtSound() {
+		return SoundEvents.ENTITY_SLIME_HURT;
+	}
 
-	    @Override
-		protected SoundEvent getDeathSound()
-	    {
-	        return SoundEvents.ENTITY_SLIME_DEATH;
-	    }
+	@Override
+	protected SoundEvent getDeathSound() {
+		return SoundEvents.ENTITY_SLIME_DEATH;
+	}
 
-	    protected SoundEvent getSquishSound()
-	    {
-	        return SoundEvents.ENTITY_SLIME_SQUISH;
-	    }
+	protected SoundEvent getSquishSound() {
+		return SoundEvents.ENTITY_SLIME_SQUISH;
+	}
 
-	    protected SoundEvent getJumpSound()
-	    {
-	        return SoundEvents.ENTITY_SLIME_JUMP;
-	    }
-	    
+	protected SoundEvent getJumpSound() {
+		return SoundEvents.ENTITY_SLIME_JUMP;
+	}
 
 	@Override
 	protected Item getDropItem() {
@@ -292,8 +273,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * The speed it takes to move the entityliving's rotationPitch through the
-	 * faceEntity method. This is only currently use in wolves.
+	 * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	 */
 	@Override
 	public int getVerticalFaceSpeed() {
@@ -301,16 +281,14 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it jumps (based upon the
-	 * slime's size)
+	 * Returns true if the slime makes a sound when it jumps (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnJump() {
 		return this.getSlimeSize() > 0;
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it lands after a jump (based
-	 * upon the slime's size)
+	 * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnLand() {
 		return this.getSlimeSize() > 2;
@@ -326,9 +304,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Called only once on an entity when first time spawned, via egg, mob
-	 * spawner, natural spawning etc, but not called when entity is reloaded
-	 * from nbt. Mainly used for initializing attributes and inventory
+	 * Called only once on an entity when first time spawned, via egg, mob spawner, natural spawning etc, but not called when entity is reloaded from nbt. Mainly used for initializing attributes and inventory
 	 */
 	@Override
 	public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata) {
@@ -337,20 +313,17 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/*
-	 * ======================================== FORGE START
-	 * =====================================
+	 * ======================================== FORGE START =====================================
 	 */
 	/**
-	 * Called when the slime spawns particles on landing, see onUpdate. Return
-	 * true to prevent the spawning of the default particles.
+	 * Called when the slime spawns particles on landing, see onUpdate. Return true to prevent the spawning of the default particles.
 	 */
 	protected boolean spawnCustomParticles() {
 		return false;
 	}
 
 	/*
-	 * ======================================== FORGE END
-	 * =====================================
+	 * ======================================== FORGE END =====================================
 	 */
 
 	static class AISlimeAttack extends EntityAIBase {
@@ -389,15 +362,14 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 			return entitylivingbase == null ? false : (!entitylivingbase.isEntityAlive() ? false : (entitylivingbase instanceof EntityPlayer && ((EntityPlayer) entitylivingbase).capabilities.disableDamage ? false : --this.field_179465_b > 0));
 		}
 
-        /**
-         * Updates the task
-         */
-        @Override
-		public void updateTask()
-        {
-            this.slime.faceEntity(this.slime.getAttackTarget(), 10.0F, 10.0F);
-            ((EntityEvolvedMagmaCubeBoss.SlimeMoveHelper)this.slime.getMoveHelper()).setDirection(this.slime.rotationYaw, this.slime.canDamagePlayer());
-        }
+		/**
+		 * Updates the task
+		 */
+		@Override
+		public void updateTask() {
+			this.slime.faceEntity(this.slime.getAttackTarget(), 10.0F, 10.0F);
+			((EntityEvolvedMagmaCubeBoss.SlimeMoveHelper) this.slime.getMoveHelper()).setDirection(this.slime.rotationYaw, this.slime.canDamagePlayer());
+		}
 	}
 
 	static class AISlimeFaceRandom extends EntityAIBase {
@@ -418,20 +390,18 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 			return this.slime.getAttackTarget() == null && (this.slime.onGround || this.slime.isInWater() || this.slime.isInLava());
 		}
 
-        /**
-         * Updates the task
-         */
-        @Override
-		public void updateTask()
-        {
-            if (--this.field_179460_c <= 0)
-            {
-                this.field_179460_c = 40 + this.slime.getRNG().nextInt(60);
-                this.field_179459_b = this.slime.getRNG().nextInt(360);
-            }
+		/**
+		 * Updates the task
+		 */
+		@Override
+		public void updateTask() {
+			if (--this.field_179460_c <= 0) {
+				this.field_179460_c = 40 + this.slime.getRNG().nextInt(60);
+				this.field_179459_b = this.slime.getRNG().nextInt(360);
+			}
 
-            ((EntityEvolvedMagmaCubeBoss.SlimeMoveHelper)this.slime.getMoveHelper()).setDirection(this.field_179459_b, false);
-        }
+			((EntityEvolvedMagmaCubeBoss.SlimeMoveHelper) this.slime.getMoveHelper()).setDirection(this.field_179459_b, false);
+		}
 	}
 
 	static class AISlimeFloat extends EntityAIBase {
@@ -489,98 +459,78 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		}
 	}
 
-	static class SlimeMoveHelper extends EntityMoveHelper
-    {
-        private float yRot;
-        private int jumpDelay;
-        private final EntityEvolvedMagmaCubeBoss slime;
-        private boolean isAggressive;
+	static class SlimeMoveHelper extends EntityMoveHelper {
+		private float yRot;
+		private int jumpDelay;
+		private final EntityEvolvedMagmaCubeBoss slime;
+		private boolean isAggressive;
 
-        public SlimeMoveHelper(EntityEvolvedMagmaCubeBoss slimeIn)
-        {
-            super(slimeIn);
-            this.slime = slimeIn;
-            this.yRot = 180.0F * slimeIn.rotationYaw / (float)Math.PI;
-        }
+		public SlimeMoveHelper(EntityEvolvedMagmaCubeBoss slimeIn) {
+			super(slimeIn);
+			this.slime = slimeIn;
+			this.yRot = 180.0F * slimeIn.rotationYaw / (float) Math.PI;
+		}
 
-        public void setDirection(float p_179920_1_, boolean p_179920_2_)
-        {
-            this.yRot = p_179920_1_;
-            this.isAggressive = p_179920_2_;
-        }
+		public void setDirection(float p_179920_1_, boolean p_179920_2_) {
+			this.yRot = p_179920_1_;
+			this.isAggressive = p_179920_2_;
+		}
 
-        public void setSpeed(double speedIn)
-        {
-            this.speed = speedIn;
-            this.action = EntityMoveHelper.Action.MOVE_TO;
-        }
+		public void setSpeed(double speedIn) {
+			this.speed = speedIn;
+			this.action = EntityMoveHelper.Action.MOVE_TO;
+		}
 
-        @Override
-		public void onUpdateMoveHelper()
-        {
-            this.entity.rotationYaw = this.limitAngle(this.entity.rotationYaw, this.yRot, 90.0F);
-            this.entity.rotationYawHead = this.entity.rotationYaw;
-            this.entity.renderYawOffset = this.entity.rotationYaw;
+		@Override
+		public void onUpdateMoveHelper() {
+			this.entity.rotationYaw = this.limitAngle(this.entity.rotationYaw, this.yRot, 90.0F);
+			this.entity.rotationYawHead = this.entity.rotationYaw;
+			this.entity.renderYawOffset = this.entity.rotationYaw;
 
-            if (this.action != EntityMoveHelper.Action.MOVE_TO)
-            {
-                this.entity.setMoveForward(0.0F);
-            }
-            else
-            {
-                this.action = EntityMoveHelper.Action.WAIT;
+			if (this.action != EntityMoveHelper.Action.MOVE_TO) {
+				this.entity.setMoveForward(0.0F);
+			} else {
+				this.action = EntityMoveHelper.Action.WAIT;
 
-                if (this.entity.onGround)
-                {
-                    this.entity.setAIMoveSpeed((float)(this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
+				if (this.entity.onGround) {
+					this.entity.setAIMoveSpeed((float) (this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
 
-                    if (this.jumpDelay-- <= 0)
-                    {
-                        this.jumpDelay = this.slime.getJumpDelay();
+					if (this.jumpDelay-- <= 0) {
+						this.jumpDelay = this.slime.getJumpDelay();
 
-                        if (this.isAggressive)
-                        {
-                            this.jumpDelay /= 3;
-                        }
+						if (this.isAggressive) {
+							this.jumpDelay /= 3;
+						}
 
-                        this.slime.getJumpHelper().setJumping();
+						this.slime.getJumpHelper().setJumping();
 
-                        if (this.slime.makesSoundOnJump())
-                        {
-                            this.slime.playSound(this.slime.getJumpSound(), this.slime.getSoundVolume(), ((this.slime.getRNG().nextFloat() - this.slime.getRNG().nextFloat()) * 0.2F + 1.0F) * 0.8F);
-                        }
-                    }
-                    else
-                    {
-                        this.slime.moveStrafing = 0.0F;
-                        this.slime.moveForward = 0.0F;
-                        this.entity.setAIMoveSpeed(0.0F);
-                    }
-                }
-                else
-                {
-                    this.entity.setAIMoveSpeed((float)(this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
-                }
-            }
-        }
-    }
-	
-    @Override
-    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
-    {
-        final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-        entityitem.motionY = -2.0D;
-        entityitem.setDefaultPickupDelay();
-        if (this.captureDrops)
-        {
-            this.capturedDrops.add(entityitem);
-        }
-        else
-        {
-            this.worldObj.spawnEntityInWorld(entityitem);
-        }
-        return entityitem;
-    }
+						if (this.slime.makesSoundOnJump()) {
+							this.slime.playSound(this.slime.getJumpSound(), this.slime.getSoundVolume(), ((this.slime.getRNG().nextFloat() - this.slime.getRNG().nextFloat()) * 0.2F + 1.0F) * 0.8F);
+						}
+					} else {
+						this.slime.moveStrafing = 0.0F;
+						this.slime.moveForward = 0.0F;
+						this.entity.setAIMoveSpeed(0.0F);
+					}
+				} else {
+					this.entity.setAIMoveSpeed((float) (this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
+				}
+			}
+		}
+	}
+
+	@Override
+	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		entityitem.motionY = -2.0D;
+		entityitem.setDefaultPickupDelay();
+		if (this.captureDrops) {
+			this.capturedDrops.add(entityitem);
+		} else {
+			this.worldObj.spawnEntityInWorld(entityitem);
+		}
+		return entityitem;
+	}
 
 	@Override
 	public boolean canBreath() {
@@ -594,17 +544,17 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 
 	@Override
 	public void dropKey() {
-        this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_4_KEY, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_4_KEY, 1, 0), 0.5F);
 	}
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if(Config.MORE_PLANETS_COMPATIBILITY)
+		if (Config.MORE_PLANETS_COMPATIBILITY)
 			stackList = GalacticraftRegistry.getDungeonLoot(11);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(4);
-        return stackList.get(rand.nextInt(stackList.size())).copy();
+		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 
 	@Override

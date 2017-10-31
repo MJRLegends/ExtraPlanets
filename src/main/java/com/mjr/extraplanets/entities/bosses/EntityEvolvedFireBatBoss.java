@@ -14,7 +14,8 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
@@ -54,7 +55,8 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		this.setSize(6.5F, 6.9F);
 		this.isImmuneToFire = true;
 		this.tasks.addTask(7, new EntityEvolvedFireBatBoss.AIFireballAttack(this));
-		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true, false, null));
 	}
 
 	@Override
@@ -340,7 +342,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if(Config.MORE_PLANETS_COMPATIBILITY)
+		if (Config.MORE_PLANETS_COMPATIBILITY)
 			stackList = GalacticraftRegistry.getDungeonLoot(4);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(5);
