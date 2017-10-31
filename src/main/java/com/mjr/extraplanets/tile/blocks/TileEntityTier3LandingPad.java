@@ -128,7 +128,7 @@ public class TileEntityTier3LandingPad extends TileEntityMulti implements IMulti
 		for (BlockPos pos : positions) {
 			IBlockState stateAt = this.worldObj.getBlockState(pos);
 
-			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && (EnumBlockMultiType) stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.TIER_3_ROCKET_PAD) {
+			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.TIER_3_ROCKET_PAD) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.worldObj.getBlockState(pos));
 				}

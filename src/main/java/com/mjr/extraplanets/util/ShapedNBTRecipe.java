@@ -14,7 +14,8 @@ public class ShapedNBTRecipe extends ShapedRecipes {
 	/**
      * Used to check if a recipe matches current crafting inventory
      */
-    public boolean matches(InventoryCrafting inv, World worldIn)
+    @Override
+	public boolean matches(InventoryCrafting inv, World worldIn)
     {
         for (int i = 0; i <= 3 - this.recipeWidth; ++i)
         {

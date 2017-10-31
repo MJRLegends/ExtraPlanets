@@ -178,7 +178,7 @@ public class BlockBasicTitania extends Block implements IDetectableResource, IPl
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

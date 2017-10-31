@@ -190,7 +190,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

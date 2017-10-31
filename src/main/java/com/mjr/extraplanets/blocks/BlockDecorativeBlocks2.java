@@ -112,7 +112,7 @@ public class BlockDecorativeBlocks2 extends Block implements IDetectableResource
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

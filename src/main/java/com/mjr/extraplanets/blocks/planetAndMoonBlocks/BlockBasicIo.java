@@ -178,7 +178,7 @@ public class BlockBasicIo extends Block implements IDetectableResource, IPlantab
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

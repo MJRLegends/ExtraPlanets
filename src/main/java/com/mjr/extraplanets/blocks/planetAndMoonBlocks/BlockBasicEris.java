@@ -203,7 +203,7 @@ public class BlockBasicEris extends Block implements IDetectableResource, IPlant
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override
