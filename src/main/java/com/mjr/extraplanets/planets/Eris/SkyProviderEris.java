@@ -163,7 +163,6 @@ public class SkyProviderEris extends IRenderHandler {
 		float b = f8 * f18;
 		float a = afloat[3] * 2 / f18;
 		worldRenderer1.pos(0.0D, 100.0D, 0.0D).color(r, g, b, a).endVertex();
-		byte b0 = 16;
 		r = afloat[0] * f18;
 		g = afloat[1] * f18;
 		b = afloat[2] * f18;
@@ -364,10 +363,6 @@ public class SkyProviderEris extends IRenderHandler {
 		}
 
 		var2.draw();
-	}
-
-	private Vec3d getCustomSkyColor() {
-		return new Vec3d(0.26796875D, 0.1796875D, 0.0D);
 	}
 
 	public float getSkyBrightness(float par1) {
