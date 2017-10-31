@@ -12,6 +12,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Callisto.worldgen.MapGenCaveCallisto;
 
 public class MapGenCaveJupiter extends MapGenBaseMeta {
 	public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
@@ -111,7 +112,6 @@ public class MapGenCaveJupiter extends MapGenBaseMeta {
 						i3 = 16;
 					}
 
-					final boolean flag2 = false;
 					int j3;
 					for (j3 = l1; j3 < i2; ++j3) {
 						for (int l3 = l2; l3 < i3; ++l3) {
@@ -140,8 +140,6 @@ public class MapGenCaveJupiter extends MapGenBaseMeta {
 									final double xfactorSq = xfactor * xfactor;
 
 									if (xfactorSq + zfactorSq < 1.0D) {
-										final int coords = (localX * 16 + localZ) * 256 + localY;
-
 										if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D) {
 											IBlockState state = primer.getBlockState(localX, localY, localZ);
 											Block block = state.getBlock();
@@ -149,10 +147,8 @@ public class MapGenCaveJupiter extends MapGenBaseMeta {
 											if (block == ExtraPlanets_Blocks.JUPITER_BLOCKS) {
 												if (metadata == 1 || metadata == 2) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
-												} else if (state.getBlock().getMetaFromState(state) == 5) {
+												} else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
 												}
 											}
 										}
