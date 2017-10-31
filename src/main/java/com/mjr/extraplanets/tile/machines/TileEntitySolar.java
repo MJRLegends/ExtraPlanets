@@ -126,14 +126,15 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 									if (this.world.canBlockSeeSky(this.getPos().add(x, 2, z))) {
 										boolean valid = true;
 
-										for (int y = this.getPos().getY() + 3; y < 256; y++) {
+	                                    for (int y = this.getPos().getY() + 3; y < 256; y++){
 											IBlockState state = this.world.getBlockState(new BlockPos(this.getPos().getX() + x, y, this.getPos().getZ() + z));
 											if (state == null) {
 												break;
 											}
-											if (state.getBlock().isOpaqueCube(state))
+											if (state.isOpaqueCube()){
 												valid = false;
-											break;
+												break;
+											}
 										}
 
 										if (valid) {
@@ -151,7 +152,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 										if (state == null) {
 											break;
 										}
-										if (state.getBlock().isOpaqueCube(state)) {
+										if (state.isOpaqueCube()) {
 											valid = false;
 											break;
 										}
