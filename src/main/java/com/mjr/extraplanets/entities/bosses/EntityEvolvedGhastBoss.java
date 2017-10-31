@@ -12,7 +12,8 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.IMob;
@@ -47,7 +48,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEntityBreathable {
 	private int explosionStrength = 1;
-    private static final DataParameter<Boolean> ATTACKING = EntityDataManager.<Boolean>createKey(EntityEvolvedGhastBoss.class, DataSerializers.BOOLEAN);
+	private static final DataParameter<Boolean> ATTACKING = EntityDataManager.<Boolean> createKey(EntityEvolvedGhastBoss.class, DataSerializers.BOOLEAN);
 
 	public EntityEvolvedGhastBoss(World worldIn) {
 		super(worldIn);
@@ -58,30 +59,29 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		this.tasks.addTask(5, new EntityEvolvedGhastBoss.AIRandomFly(this));
 		this.tasks.addTask(7, new EntityEvolvedGhastBoss.AILookAround(this));
 		this.tasks.addTask(7, new EntityEvolvedGhastBoss.AIFireballAttack(this));
-		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true, false, null));
 	}
-	
-    @Override
-    protected void onDeathUpdate()
-    {
-        super.onDeathUpdate();
 
-        if (!this.world.isRemote)
-        {
-            if (this.deathTicks == 100)
-            {
-                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.world), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 40.0D));
-            }
-        }
-    }
-	
+	@Override
+	protected void onDeathUpdate() {
+		super.onDeathUpdate();
+
+		if (!this.world.isRemote) {
+			if (this.deathTicks == 100) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.world), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 40.0D));
+			}
+		}
+	}
+
 	@SideOnly(Side.CLIENT)
 	public boolean isAttacking() {
-        return this.dataManager.get(ATTACKING).booleanValue();
+		return this.dataManager.get(ATTACKING).booleanValue();
 	}
 
 	public void setAttacking(boolean attacking) {
-        this.dataManager.set(ATTACKING, Boolean.valueOf(attacking));
+		this.dataManager.set(ATTACKING, Boolean.valueOf(attacking));
 	}
 
 	public int getFireballStrength() {
@@ -109,7 +109,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 			return false;
 		} else if ("fireball".equals(source.getDamageType()) && source.getEntity() instanceof EntityPlayer) {
 			super.attackEntityFrom(source, 10.0F);
-            ((EntityPlayer)source.getEntity()).addStat(AchievementList.GHAST);
+			((EntityPlayer) source.getEntity()).addStat(AchievementList.GHAST);
 			return true;
 		} else {
 			return super.attackEntityFrom(source, amount);
@@ -118,8 +118,8 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 
 	@Override
 	protected void entityInit() {
-        super.entityInit();
-        this.dataManager.register(ATTACKING, Boolean.valueOf(false));
+		super.entityInit();
+		this.dataManager.register(ATTACKING, Boolean.valueOf(false));
 	}
 
 	@Override
@@ -129,29 +129,25 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(100.0D);
 	}
 
-    @Override
-	public SoundCategory getSoundCategory()
-    {
-        return SoundCategory.HOSTILE;
-    }
+	@Override
+	public SoundCategory getSoundCategory() {
+		return SoundCategory.HOSTILE;
+	}
 
-    @Override
-	protected SoundEvent getAmbientSound()
-    {
-        return SoundEvents.ENTITY_GHAST_AMBIENT;
-    }
+	@Override
+	protected SoundEvent getAmbientSound() {
+		return SoundEvents.ENTITY_GHAST_AMBIENT;
+	}
 
-    @Override
-	protected SoundEvent getHurtSound()
-    {
-        return SoundEvents.ENTITY_GHAST_HURT;
-    }
+	@Override
+	protected SoundEvent getHurtSound() {
+		return SoundEvents.ENTITY_GHAST_HURT;
+	}
 
-    @Override
-	protected SoundEvent getDeathSound()
-    {
-        return SoundEvents.ENTITY_GHAST_DEATH;
-    }
+	@Override
+	protected SoundEvent getDeathSound() {
+		return SoundEvents.ENTITY_GHAST_DEATH;
+	}
 
 	@Override
 	protected Item getDropItem() {
@@ -238,48 +234,42 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		}
 
 		/**
-         * Updates the task
-         */
-        @Override
-		public void updateTask()
-        {
-            EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
-            double d0 = 64.0D;
+		 * Updates the task
+		 */
+		@Override
+		public void updateTask() {
+			EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
+			double d0 = 64.0D;
 
-            if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase))
-            {
-                World world = this.parentEntity.world;
-                ++this.attackTimer;
+			if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
+				World world = this.parentEntity.world;
+				++this.attackTimer;
 
-                if (this.attackTimer == 10)
-                {
-                    world.playEvent((EntityPlayer)null, 1015, new BlockPos(this.parentEntity), 0);
-                }
+				if (this.attackTimer == 10) {
+					world.playEvent((EntityPlayer) null, 1015, new BlockPos(this.parentEntity), 0);
+				}
 
-                if (this.attackTimer == 20)
-                {
-                    double d1 = 4.0D;
-                    Vec3d vec3d = this.parentEntity.getLook(1.0F);
-                    double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.xCoord * 4.0D);
-                    double d3 = entitylivingbase.getEntityBoundingBox().minY + entitylivingbase.height / 2.0F - (0.5D + this.parentEntity.posY + this.parentEntity.height / 2.0F);
-                    double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.zCoord * 4.0D);
-                    world.playEvent((EntityPlayer)null, 1016, new BlockPos(this.parentEntity), 0);
-                    EntityLargeFireball entitylargefireball = new EntityLargeFireball(world, this.parentEntity, d2, d3, d4);
-                    entitylargefireball.explosionPower = this.parentEntity.getFireballStrength();
-                    entitylargefireball.posX = this.parentEntity.posX + vec3d.xCoord * 4.0D;
-                    entitylargefireball.posY = this.parentEntity.posY + this.parentEntity.height / 2.0F + 0.5D;
-                    entitylargefireball.posZ = this.parentEntity.posZ + vec3d.zCoord * 4.0D;
-                    world.spawnEntity(entitylargefireball);
-                    this.attackTimer = -40;
-                }
-            }
-            else if (this.attackTimer > 0)
-            {
-                --this.attackTimer;
-            }
+				if (this.attackTimer == 20) {
+					double d1 = 4.0D;
+					Vec3d vec3d = this.parentEntity.getLook(1.0F);
+					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.xCoord * 4.0D);
+					double d3 = entitylivingbase.getEntityBoundingBox().minY + entitylivingbase.height / 2.0F - (0.5D + this.parentEntity.posY + this.parentEntity.height / 2.0F);
+					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.zCoord * 4.0D);
+					world.playEvent((EntityPlayer) null, 1016, new BlockPos(this.parentEntity), 0);
+					EntityLargeFireball entitylargefireball = new EntityLargeFireball(world, this.parentEntity, d2, d3, d4);
+					entitylargefireball.explosionPower = this.parentEntity.getFireballStrength();
+					entitylargefireball.posX = this.parentEntity.posX + vec3d.xCoord * 4.0D;
+					entitylargefireball.posY = this.parentEntity.posY + this.parentEntity.height / 2.0F + 0.5D;
+					entitylargefireball.posZ = this.parentEntity.posZ + vec3d.zCoord * 4.0D;
+					world.spawnEntity(entitylargefireball);
+					this.attackTimer = -40;
+				}
+			} else if (this.attackTimer > 0) {
+				--this.attackTimer;
+			}
 
-            this.parentEntity.setAttacking(this.attackTimer > 10);
-        }
+			this.parentEntity.setAttacking(this.attackTimer > 10);
+		}
 	}
 
 	static class AILookAround extends EntityAIBase {
@@ -365,69 +355,58 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		}
 	}
 
-	static class GhastMoveHelper extends EntityMoveHelper
-    {
-        private final EntityEvolvedGhastBoss parentEntity;
-        private int courseChangeCooldown;
+	static class GhastMoveHelper extends EntityMoveHelper {
+		private final EntityEvolvedGhastBoss parentEntity;
+		private int courseChangeCooldown;
 
-        public GhastMoveHelper(EntityEvolvedGhastBoss ghast)
-        {
-            super(ghast);
-            this.parentEntity = ghast;
-        }
+		public GhastMoveHelper(EntityEvolvedGhastBoss ghast) {
+			super(ghast);
+			this.parentEntity = ghast;
+		}
 
-        @Override
-		public void onUpdateMoveHelper()
-        {
-            if (this.action == EntityMoveHelper.Action.MOVE_TO)
-            {
-                double d0 = this.posX - this.parentEntity.posX;
-                double d1 = this.posY - this.parentEntity.posY;
-                double d2 = this.posZ - this.parentEntity.posZ;
-                double d3 = d0 * d0 + d1 * d1 + d2 * d2;
+		@Override
+		public void onUpdateMoveHelper() {
+			if (this.action == EntityMoveHelper.Action.MOVE_TO) {
+				double d0 = this.posX - this.parentEntity.posX;
+				double d1 = this.posY - this.parentEntity.posY;
+				double d2 = this.posZ - this.parentEntity.posZ;
+				double d3 = d0 * d0 + d1 * d1 + d2 * d2;
 
-                if (this.courseChangeCooldown-- <= 0)
-                {
-                    this.courseChangeCooldown += this.parentEntity.getRNG().nextInt(5) + 2;
-                    d3 = MathHelper.sqrt(d3);
+				if (this.courseChangeCooldown-- <= 0) {
+					this.courseChangeCooldown += this.parentEntity.getRNG().nextInt(5) + 2;
+					d3 = MathHelper.sqrt(d3);
 
-                    if (this.isNotColliding(this.posX, this.posY, this.posZ, d3))
-                    {
-                        this.parentEntity.motionX += d0 / d3 * 0.1D;
-                        this.parentEntity.motionY += d1 / d3 * 0.1D;
-                        this.parentEntity.motionZ += d2 / d3 * 0.1D;
-                    }
-                    else
-                    {
-                        this.action = EntityMoveHelper.Action.WAIT;
-                    }
-                }
-            }
-        }
+					if (this.isNotColliding(this.posX, this.posY, this.posZ, d3)) {
+						this.parentEntity.motionX += d0 / d3 * 0.1D;
+						this.parentEntity.motionY += d1 / d3 * 0.1D;
+						this.parentEntity.motionZ += d2 / d3 * 0.1D;
+					} else {
+						this.action = EntityMoveHelper.Action.WAIT;
+					}
+				}
+			}
+		}
 
-        /**
-         * Checks if entity bounding box is not colliding with terrain
-         */
-        private boolean isNotColliding(double x, double y, double z, double p_179926_7_)
-        {
-            double d0 = (x - this.parentEntity.posX) / p_179926_7_;
-            double d1 = (y - this.parentEntity.posY) / p_179926_7_;
-            double d2 = (z - this.parentEntity.posZ) / p_179926_7_;
-            AxisAlignedBB axisalignedbb = this.parentEntity.getEntityBoundingBox();
+		/**
+		 * Checks if entity bounding box is not colliding with terrain
+		 */
+		private boolean isNotColliding(double x, double y, double z, double p_179926_7_) {
+			double d0 = (x - this.parentEntity.posX) / p_179926_7_;
+			double d1 = (y - this.parentEntity.posY) / p_179926_7_;
+			double d2 = (z - this.parentEntity.posZ) / p_179926_7_;
+			AxisAlignedBB axisalignedbb = this.parentEntity.getEntityBoundingBox();
 
-            for (int i = 1; i < p_179926_7_; ++i)
-            {
-                axisalignedbb = axisalignedbb.offset(d0, d1, d2);
+			for (int i = 1; i < p_179926_7_; ++i) {
+				axisalignedbb = axisalignedbb.offset(d0, d1, d2);
 
-                if (!this.parentEntity.world.getCollisionBoxes(this.parentEntity, axisalignedbb).isEmpty())
-                {
-                    return false;
-                }
-            }
+				if (!this.parentEntity.world.getCollisionBoxes(this.parentEntity, axisalignedbb).isEmpty()) {
+					return false;
+				}
+			}
 
-            return true;
-        }
-    }
+			return true;
+		}
+	}
 
 	/**
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
@@ -449,23 +428,19 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 			this.explosionStrength = nbt.getInteger("ExplosionPower");
 		}
 	}
-	
-    @Override
-    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
-    {
-        final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-        entityitem.motionY = -2.0D;
-        entityitem.setDefaultPickupDelay();
-        if (this.captureDrops)
-        {
-            this.capturedDrops.add(entityitem);
-        }
-        else
-        {
-            this.world.spawnEntity(entityitem);
-        }
-        return entityitem;
-    }
+
+	@Override
+	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		entityitem.motionY = -2.0D;
+		entityitem.setDefaultPickupDelay();
+		if (this.captureDrops) {
+			this.capturedDrops.add(entityitem);
+		} else {
+			this.world.spawnEntity(entityitem);
+		}
+		return entityitem;
+	}
 
 	@Override
 	public boolean canBreath() {
@@ -485,7 +460,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if(Config.MORE_PLANETS_COMPATIBILITY)
+		if (Config.MORE_PLANETS_COMPATIBILITY)
 			stackList = GalacticraftRegistry.getDungeonLoot(5);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(6);
