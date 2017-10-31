@@ -130,7 +130,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 											if (state == null) {
 												break;
 											}
-											if (state.getBlock().isOpaqueCube(state)) {
+											if (state.isOpaqueCube()) {
 												valid = false;
 												break;
 											}
@@ -151,7 +151,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 										if (state == null) {
 											break;
 										}
-										if (state.getBlock().isOpaqueCube(state)) {
+										if (state.isOpaqueCube()) {
 											valid = false;
 											break;
 										}
