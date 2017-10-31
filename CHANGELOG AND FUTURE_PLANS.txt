@@ -14,6 +14,15 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.1.0
+*Added Missing Power, Missing Inputs Status Messages
+*Added Arrows to all GUI's
+*Resized Basic Purifier GUI
+*Updated lang files
+
+*Disabled the showing of Pressure and Radiation Overlays when in F3 mode
+*Added tooltip for hints to where you can find each fluid in ExtraPlanets
+
 v1.0.9
 *Enabled corroding of armor for Jupiter, Saturn, Uranus, Neptune Planets
 *Fixed some ore gen on multiple planets/moons
