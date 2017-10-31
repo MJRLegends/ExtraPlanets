@@ -12,7 +12,7 @@ public class CapabilityProviderStatsClient implements ICapabilityProvider
 
     public CapabilityProviderStatsClient(EntityPlayerSP owner)
     {
-        this.owner = owner;
+        this.setOwner(owner);
         this.statsCapability = CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY.getDefaultInstance();
     }
 
@@ -32,4 +32,12 @@ public class CapabilityProviderStatsClient implements ICapabilityProvider
 
         return null;
     }
+
+	public EntityPlayerSP getOwner() {
+		return owner;
+	}
+
+	public void setOwner(EntityPlayerSP owner) {
+		this.owner = owner;
+	}
 }

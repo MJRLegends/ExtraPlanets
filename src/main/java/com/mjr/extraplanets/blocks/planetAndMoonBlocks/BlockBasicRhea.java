@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicRhea extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictyperhea", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictyperhea", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "rhea_surface"), SUB_SURFACE(1, "rhea_sub_surface"), STONE(2, "rhea_stone"), ORE_IRON(3, "rhea_ore_iron"), ORE_TIN(4, "rhea_ore_tin"), ORE_COPPER(5, "rhea_ore_copper");
@@ -155,26 +155,20 @@ public class BlockBasicRhea extends Block implements IDetectableResource, IPlant
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
 		IBlockState stateAbove = world.getBlockState(pos.up());
-		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.getBlock().isFullCube(stateAbove);
+		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.isFullCube();
 	}
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(state, target, world, pos, player);
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.STONE) {
 			return false;
 		}
 		return (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE);
-	}
-
-	@Override
-	public boolean hasTileEntity(IBlockState state) {
-		return state.getBlock().getMetaFromState(state) == 10;
 	}
 
 	@Override

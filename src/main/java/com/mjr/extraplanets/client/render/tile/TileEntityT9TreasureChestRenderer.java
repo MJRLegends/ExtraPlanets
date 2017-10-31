@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.render.tile;
 
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChest;
-import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChestLarge;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -39,7 +38,6 @@ public class TileEntityT9TreasureChestRenderer extends TileEntitySpecialRenderer
 		}
 
 		ModelTreasureChest var14 = null;
-		ModelTreasureChestLarge var14b = null;
 
 		var14 = this.chestModel;
 		this.bindTexture(TileEntityT9TreasureChestRenderer.treasureChestTexture);
@@ -71,8 +69,6 @@ public class TileEntityT9TreasureChestRenderer extends TileEntitySpecialRenderer
 		GL11.glRotatef(var11, 0.0F, 1.0F, 0.0F);
 		GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
 		float var12 = chest.prevLidAngle + (chest.lidAngle - chest.prevLidAngle) * partialTickTime;
-
-		float var13;
 
 		var12 = 1.0F - var12;
 		var12 = 1.0F - var12 * var12 * var12;

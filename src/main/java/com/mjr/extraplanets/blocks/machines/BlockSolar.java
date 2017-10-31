@@ -38,7 +38,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	public static final int ULTIMATE_METADATA = 4;
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-	public static final PropertyEnum TYPE = PropertyEnum.create("type", EnumSolarType.class);
+	public static final PropertyEnum<EnumSolarType> TYPE = PropertyEnum.create("type", EnumSolarType.class);
 
 	public enum EnumSolarType implements IStringSerializable {
 		HYBRID_SOLAR(0, "hybrid_solar"), ULTIMATE_SOLAR(1, "ultimate_solar"); // 3 for backwards compatibility
@@ -110,7 +110,6 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 		}
 
 		return true;
-		// return new BlockVec3(x1, y1, z1).newVecSide(side ^ 1).getBlock(world) != GCBlocks.fakeBlock; TODO
 	}
 
 	@Override
@@ -214,7 +213,6 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 		return true;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		EnumFacing enumfacing = EnumFacing.getHorizontal(meta % 4);

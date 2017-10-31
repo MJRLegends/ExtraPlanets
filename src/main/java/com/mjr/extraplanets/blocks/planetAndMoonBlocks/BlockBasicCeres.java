@@ -35,7 +35,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicCeres extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeceres", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypeceres", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "ceres_surface"), SUB_SURFACE(1, "ceres_sub_surface"), STONE(2, "ceres_stone"), ORE_IRON(3, "ceres_ore_iron"), ORE_TIN(4, "ceres_ore_tin"), ORE_COPPER(5, "ceres_ore_copper"), ORE_URANIUM(6, "ceres_ore_uranium"), URANIUM_BLOCK(7,
@@ -156,26 +156,20 @@ public class BlockBasicCeres extends Block implements IDetectableResource, IPlan
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
 		IBlockState stateAbove = world.getBlockState(pos.up());
-		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.getBlock().isFullCube(stateAbove);
+		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.isFullCube();
 	}
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(state, target, world, pos, player);
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.STONE) {
 			return false;
 		}
 		return (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE);
-	}
-
-	@Override
-	public boolean hasTileEntity(IBlockState state) {
-		return state.getBlock().getMetaFromState(state) == 10;
 	}
 
 	@Override

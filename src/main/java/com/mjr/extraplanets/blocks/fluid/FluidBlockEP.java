@@ -38,22 +38,19 @@ public class FluidBlockEP extends BlockFluidClassic {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.magma, 4.0F);
 				}
 			}
-		} 
-		else if (state.getBlock() == ExtraPlanets_Fluids.FROZEN_WATER || state == ExtraPlanets_Fluids.NITROGEN || state == ExtraPlanets_Fluids.NITROGEN_ICE) {
+		} else if (state.getBlock() == ExtraPlanets_Fluids.FROZEN_WATER || state == ExtraPlanets_Fluids.NITROGEN || state == ExtraPlanets_Fluids.NITROGEN_ICE) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.hypothermia, 2.5F);
 				}
 			}
-		} 
-		else if (state.getBlock() == ExtraPlanets_Fluids.RADIO_ACTIVE_WATER) {
+		} else if (state.getBlock() == ExtraPlanets_Fluids.RADIO_ACTIVE_WATER) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.radiationLiquid, 3.5F);
 				}
 			}
-		}
-		else if (state.getBlock() == ExtraPlanets_Fluids.INFECTED_WATER || state.getBlock() == ExtraPlanets_Fluids.METHANE) {
+		} else if (state.getBlock() == ExtraPlanets_Fluids.INFECTED_WATER || state.getBlock() == ExtraPlanets_Fluids.METHANE) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.infection, 1.0F);
@@ -64,19 +61,15 @@ public class FluidBlockEP extends BlockFluidClassic {
 
 	@Override
 	public boolean canDisplace(IBlockAccess world, BlockPos pos) {
-		if (world.getBlockState(pos).getBlock().getMaterial(world.getBlockState(pos)).isLiquid()) {
+		if (world.getBlockState(pos).getMaterial().isLiquid())
 			return false;
-		}
-
 		return super.canDisplace(world, pos);
 	}
 
 	@Override
 	public boolean displaceIfPossible(World world, BlockPos pos) {
-		if (world.getBlockState(pos).getBlock().getMaterial(world.getBlockState(pos)).isLiquid()) {
+		if (world.getBlockState(pos).getMaterial().isLiquid())
 			return false;
-		}
-
 		return super.displaceIfPossible(world, pos);
 	}
 
@@ -91,7 +84,7 @@ public class FluidBlockEP extends BlockFluidClassic {
 		if (rand.nextInt(10) == 0) {
 			BlockPos below = pos.down();
 			IBlockState state = worldIn.getBlockState(below);
-			if (state.getBlock().isSideSolid(state, worldIn, below, EnumFacing.UP) && !worldIn.getBlockState(pos.down(2)).getBlock().getMaterial(worldIn.getBlockState(pos)).blocksMovement()) {
+			if (state.getBlock().isSideSolid(state, worldIn, below, EnumFacing.UP) && !worldIn.getBlockState(pos.down(2)).getMaterial().blocksMovement()) {
 				GalacticraftCore.proxy.spawnParticle("", new Vector3(pos.getX() + rand.nextFloat(), pos.getY() - 1.05D, pos.getZ() + rand.nextFloat()), new Vector3(0, 0, 0), new Object[] {});
 			}
 		}

@@ -42,14 +42,14 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
 							IBlockState block = worldIn.getBlockState(position.add(i1, k, j1));
 
-							if (block.getBlock().getMaterial(block) == Material.AIR || block == Blocks.DIRT || block == Blocks.SNOW || block == Blocks.ICE) {
+							if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == Blocks.SNOW || block == Blocks.ICE) {
 								this.setBlockAndNotifyAdequately(worldIn, position.add(i1, k, j1), Blocks.PACKED_ICE.getDefaultState());
 							}
 
 							if (k != 0 && l > 1) {
 								block = worldIn.getBlockState(position.add(i1, -k, j1));
 
-								if (block.getBlock().getMaterial(block) == Material.AIR || block == Blocks.DIRT || block == Blocks.SNOW || block == Blocks.ICE) {
+								if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == Blocks.SNOW || block == Blocks.ICE) {
 									this.setBlockAndNotifyAdequately(worldIn, position.add(i1, -k, j1), Blocks.PACKED_ICE.getDefaultState());
 								}
 							}
@@ -78,7 +78,7 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 					while (blockpos.getY() > 50) {
 						IBlockState block1 = worldIn.getBlockState(blockpos);
 
-						if (block1.getBlock().getMaterial(block1) != Material.AIR && block1 != Blocks.DIRT && block1 != Blocks.SNOW && block1 != Blocks.ICE && block1 != Blocks.PACKED_ICE) {
+						if (block1.getMaterial() != Material.AIR && block1 != Blocks.DIRT && block1 != Blocks.SNOW && block1 != Blocks.ICE && block1 != Blocks.PACKED_ICE) {
 							break;
 						}
 
@@ -127,7 +127,7 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
 							IBlockState block = worldIn.getBlockState(position.add(i1, k, j1));
 
-							if (block.getBlock().getMaterial(block) == Material.AIR || block == Blocks.DIRT || block == surfaceblock || block == Blocks.ICE) {
+							if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == surfaceblock || block == Blocks.ICE) {
 								this.setBlockAndNotifyAdequately(worldIn, position.add(i1, k, j1), Blocks.PACKED_ICE.getDefaultState());
 							}
 
@@ -163,7 +163,7 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 					while (blockpos.getY() > 50) {
 						IBlockState block1 = worldIn.getBlockState(blockpos);
 
-						if (block1.getBlock().getMaterial(block1) != Material.AIR && block1 != Blocks.DIRT && block1 != surfaceblock && block1 != Blocks.ICE && block1 != Blocks.PACKED_ICE) {
+						if (block1.getMaterial() != Material.AIR && block1 != Blocks.DIRT && block1 != surfaceblock && block1 != Blocks.ICE && block1 != Blocks.PACKED_ICE) {
 							break;
 						}
 

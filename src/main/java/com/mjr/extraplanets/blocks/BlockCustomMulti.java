@@ -3,6 +3,8 @@ package com.mjr.extraplanets.blocks;
 import java.util.Collection;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
+
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvanced;
@@ -30,7 +32,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableBlock, ITileEntityProvider {
-	public static final PropertyEnum MULTI_TYPE = PropertyEnum.create("type", EnumBlockMultiType.class);
+	public static final PropertyEnum<EnumBlockMultiType> MULTI_TYPE = PropertyEnum.create("type", EnumBlockMultiType.class);
 	public static final PropertyInteger RENDER_TYPE = PropertyInteger.create("rendertype", 0, 7);
 
 	protected static final AxisAlignedBB AABB_PAD = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
@@ -97,7 +99,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 			BlockPos mainBlockPosition = ((TileEntityMulti) tileEntity).mainBlockPosition;
 
 			if (mainBlockPosition != null && !mainBlockPosition.equals(pos)) {
-				return worldIn.getBlockState(mainBlockPosition).getBlock().getBlockHardness(blockState, worldIn, pos);
+				return worldIn.getBlockState(mainBlockPosition).getBlockHardness(worldIn, pos);
 			}
 		}
 
@@ -120,7 +122,6 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		worldObj.setTileEntity(pos, new TileEntityMulti(mainBlock));
 	}
 
-	@SuppressWarnings("unchecked")
 	public void makeFakeBlock(World worldObj, Collection<BlockPos> posList, BlockPos mainBlock, EnumBlockMultiType type) {
 		for (BlockPos pos : posList) {
 			worldObj.setBlockState(pos, this.getDefaultState().withProperty(MULTI_TYPE, type), 0);
@@ -210,7 +211,6 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		return super.addHitEffects(state, worldObj, target, manager);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(MULTI_TYPE, EnumBlockMultiType.byMetadata(meta));

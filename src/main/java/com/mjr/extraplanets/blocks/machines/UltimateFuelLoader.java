@@ -33,7 +33,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
 public class UltimateFuelLoader extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	public static IMachineSidesProperties MACHINESIDES_RENDERTYPE = IMachineSidesProperties.TWOFACES_HORIZ;
-	public static final PropertyEnum SIDES = MACHINESIDES_RENDERTYPE.asProperty;
+	public static final PropertyEnum<?> SIDES = MACHINESIDES_RENDERTYPE.asProperty;
 
 	public UltimateFuelLoader(String assetName) {
 		super(Material.ROCK);

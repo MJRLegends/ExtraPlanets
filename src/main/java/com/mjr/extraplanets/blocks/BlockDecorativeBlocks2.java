@@ -27,7 +27,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockDecorativeBlocks2 extends Block implements IDetectableResource, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypedecorativeblocks", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypedecorativeblocks", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		WHITE_BLOCK(0, "white_block"), RED_BLOCK(1, "red_block");
@@ -102,11 +102,9 @@ public class BlockDecorativeBlocks2 extends Block implements IDetectableResource
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(state, target, world, pos, player);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));

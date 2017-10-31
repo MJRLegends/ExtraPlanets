@@ -61,16 +61,6 @@ public class ItemBasicKit extends Item {
 	}
 
 	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		// if (itemStack != null && itemStack.getItemDamage() == 3) {
-		// if (player.worldObj.isRemote) {
-		// list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
-		// }
-		// }
-	}
-
-	@Override
 	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player, EnumHand hand) {
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
