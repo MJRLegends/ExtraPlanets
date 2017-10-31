@@ -111,7 +111,6 @@ public class MapGenCaveEris extends MapGenBaseMeta {
 						i3 = 16;
 					}
 
-					final boolean flag2 = false;
 					int j3;
 					for (j3 = l1; j3 < i2; ++j3) {
 						for (int l3 = l2; l3 < i3; ++l3) {
@@ -140,8 +139,6 @@ public class MapGenCaveEris extends MapGenBaseMeta {
 									final double xfactorSq = xfactor * xfactor;
 
 									if (xfactorSq + zfactorSq < 1.0D) {
-										final int coords = (localX * 16 + localZ) * 256 + localY;
-
 										if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D) {
 											IBlockState state = primer.getBlockState(localX, localY, localZ);
 											Block block = state.getBlock();
@@ -149,10 +146,8 @@ public class MapGenCaveEris extends MapGenBaseMeta {
 											if (block == ExtraPlanets_Blocks.ERIS_BLOCKS) {
 												if (metadata == 1 || metadata == 2) {
 													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
-													// blockIdArray[coords] = Blocks.air;
 												} else if (state.getBlock().getMetaFromState(state) == 5) {
 													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
-													// blockIdArray[coords] = Blocks.air;
 												}
 											}
 										}
