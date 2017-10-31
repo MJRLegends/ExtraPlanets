@@ -10,8 +10,6 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
-import net.minecraftforge.fml.common.FMLLog;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageField2;
@@ -93,7 +91,7 @@ public class MapGenVillagePluto extends MapGenStructure {
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			FMLLog.info("Generating Pluto Village at x" + par1 * 16 + " z" + par2 * 16);
+			System.out.println("Generating Pluto Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartPluto(this.world, this.rand, par1, par2, this.terrainType);
 	}
 

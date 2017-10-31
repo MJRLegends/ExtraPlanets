@@ -117,13 +117,13 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 	@Override
 	public void onDestroy(TileEntity callingBlock) {
 		final BlockPos thisBlock = getPos();
-		List<BlockPos> positions = new ArrayList();
+		List<BlockPos> positions = new ArrayList<BlockPos>();
 		this.getPositions(thisBlock, positions);
 
 		for (BlockPos pos : positions) {
 			IBlockState stateAt = this.world.getBlockState(pos);
 
-			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && (EnumBlockMultiType) stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.POWER_CHARGING_PAD) {
+			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.POWER_CHARGING_PAD) {
 				if (this.world.isRemote && this.world.rand.nextDouble() < 0.1D) {
 					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.world.getBlockState(pos));
 				}

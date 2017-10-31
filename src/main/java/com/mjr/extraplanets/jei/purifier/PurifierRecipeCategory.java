@@ -27,7 +27,9 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 	private final String localizedName;
 	@Nonnull
 	private final IDrawableAnimated saltBar;
+	@Nonnull
 	private final IDrawableAnimated saltBar2;
+	@Nonnull
 	private final IDrawableAnimated saltBar3;
 
 	@Nonnull

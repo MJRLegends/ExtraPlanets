@@ -177,7 +177,7 @@ public class BlockBasicPhobos extends Block implements IDetectableResource, IPla
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

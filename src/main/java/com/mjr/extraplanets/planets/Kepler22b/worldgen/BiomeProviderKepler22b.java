@@ -25,7 +25,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 
 	protected BiomeProviderKepler22b() {
 		this.biomeCache = new BiomeCache(this);
-		this.biomesToSpawn = new ArrayList();
+		this.biomesToSpawn = new ArrayList<Biome>();
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
@@ -51,7 +51,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	}
 
 	@Override
-	public List getBiomesToSpawnIn() {
+	public List<Biome> getBiomesToSpawnIn() {
 		return this.biomesToSpawn;
 	}
 
@@ -128,7 +128,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
     }
 
 	@Override
-	public boolean areBiomesViable(int par1, int par2, int par3, List par4List) {
+	public boolean areBiomesViable(int par1, int par2, int par3, List<Biome> par4List) {
 		int i = par1 - par3 >> 2;
 		int j = par2 - par3 >> 2;
 		int k = par1 + par3 >> 2;
@@ -148,7 +148,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	}
 
 	@Override
-	public BlockPos findBiomePosition(int par1, int par2, int par3, List par4List, Random par5Random) {
+	public BlockPos findBiomePosition(int par1, int par2, int par3, List<Biome> par4List, Random par5Random) {
 		int i = par1 - par3 >> 2;
 		int j = par2 - par3 >> 2;
 		int k = par1 + par3 >> 2;

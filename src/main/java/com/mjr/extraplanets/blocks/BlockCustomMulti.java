@@ -69,7 +69,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		switch ((EnumBlockMultiType) state.getValue(MULTI_TYPE)) {
+		switch (state.getValue(MULTI_TYPE)) {
 		case TIER_2_ROCKET_PAD:
 		case TIER_3_ROCKET_PAD:
 		case POWER_CHARGING_PAD:
@@ -209,7 +209,6 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		return super.addHitEffects(state, worldObj, target, manager);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(MULTI_TYPE, EnumBlockMultiType.byMetadata(meta));
@@ -217,7 +216,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockMultiType) state.getValue(MULTI_TYPE)).getMeta();
+		return state.getValue(MULTI_TYPE).getMeta();
 	}
 
 	@Override
@@ -227,7 +226,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 
 	@Override
 	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-		EnumBlockMultiType type = (EnumBlockMultiType) state.getValue(MULTI_TYPE);
+		EnumBlockMultiType type = state.getValue(MULTI_TYPE);
 		int renderType = 0;
 
 		switch (type) {

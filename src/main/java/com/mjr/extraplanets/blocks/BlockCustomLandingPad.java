@@ -176,7 +176,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumLandingPadType) state.getValue(PAD_TYPE)).getMeta();
+		return state.getValue(PAD_TYPE).getMeta();
 	}
 
 	@Override

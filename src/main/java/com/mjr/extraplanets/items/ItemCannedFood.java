@@ -143,9 +143,9 @@ public class ItemCannedFood extends Item {
         ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		if (playerIn.canEat(false)) {
 			playerIn.setActiveHand(hand);
-			return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
 		} else {
-			return new ActionResult(EnumActionResult.FAIL, itemStackIn);
+			return new ActionResult<ItemStack>(EnumActionResult.FAIL, itemStackIn);
 		}
 	}
 

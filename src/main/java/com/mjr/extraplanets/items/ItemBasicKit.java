@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.items;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -58,16 +56,6 @@ public class ItemBasicKit extends Item {
 	@Override
 	public int getMetadata(int par1) {
 		return par1;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		// if (itemStack != null && itemStack.getItemDamage() == 3) {
-		// if (player.worldObj.isRemote) {
-		// list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
-		// }
-		// }
 	}
 
 	@Override
