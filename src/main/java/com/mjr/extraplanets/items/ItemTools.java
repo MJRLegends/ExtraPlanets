@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.items;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
@@ -14,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTools extends Item {
-	public static final String[] names = {"sledge_hammer", "grinding_wheel", "mesh", "filter" };
+	public static final String[] names = { "sledge_hammer", "grinding_wheel", "mesh", "filter" };
 
 	public ItemTools(String assetName) {
 		super();
@@ -35,7 +33,6 @@ public class ItemTools extends Item {
 		return this.getUnlocalizedName() + "." + ItemTools.names[itemStack.getItemDamage()];
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemTools.names.length; i++) {
