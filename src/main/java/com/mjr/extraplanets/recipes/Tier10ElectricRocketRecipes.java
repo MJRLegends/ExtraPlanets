@@ -13,7 +13,7 @@ import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier10ElectricRo
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class Tier10ElectricRocketRecipes {
-	private static List<INasaWorkbenchRecipe> tier10ElectricRocketRecipes = new ArrayList();
+	private static List<INasaWorkbenchRecipe> tier10ElectricRocketRecipes = new ArrayList<INasaWorkbenchRecipe>();
 
 	public static ItemStack findMatchingTier10ElectricRocketRecipe(InventorySchematicTier10ElectricRocket inventoryRocketBench) {
 		for (INasaWorkbenchRecipe recipe : tier10ElectricRocketRecipes) {

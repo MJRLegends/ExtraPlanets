@@ -22,7 +22,7 @@ public class Tier10RocketRecipeWrapper extends BlankRecipeWrapper implements ICr
 
 	@Nonnull
 	@Override
-	public List getInputs() {
+	public List<ItemStack> getInputs() {
 		List<ItemStack> list = new ArrayList<>();
 		list.addAll(recipe.getRecipeInput().values());
 		return list;

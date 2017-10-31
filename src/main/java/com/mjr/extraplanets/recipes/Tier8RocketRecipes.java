@@ -13,7 +13,7 @@ import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier8Rocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class Tier8RocketRecipes {
-	private static List<INasaWorkbenchRecipe> tier8RocketRecipes = new ArrayList();
+	private static List<INasaWorkbenchRecipe> tier8RocketRecipes = new ArrayList<INasaWorkbenchRecipe>();
 
 	public static ItemStack findMatchingTier8RocketRecipe(InventorySchematicTier8Rocket inventoryRocketBench) {
 		for (INasaWorkbenchRecipe recipe : tier8RocketRecipes) {

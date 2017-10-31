@@ -3,8 +3,6 @@ package com.mjr.extraplanets.blocks;
 import java.util.Collection;
 import java.util.Random;
 
-import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
-
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvanced;

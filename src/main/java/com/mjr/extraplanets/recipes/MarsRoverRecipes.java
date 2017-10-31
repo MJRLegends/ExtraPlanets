@@ -15,7 +15,7 @@ import com.mjr.extraplanets.inventory.vehicles.InventoryMarsRover;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class MarsRoverRecipes {
-	private static List<INasaWorkbenchRecipe> marsRoverRecipes = new ArrayList();
+	private static List<INasaWorkbenchRecipe> marsRoverRecipes = new ArrayList<INasaWorkbenchRecipe>();
 
 	public static ItemStack findMatchingMarsRoverRecipe(InventoryMarsRover craftMatrix) {
 		for (INasaWorkbenchRecipe recipe : marsRoverRecipes) {

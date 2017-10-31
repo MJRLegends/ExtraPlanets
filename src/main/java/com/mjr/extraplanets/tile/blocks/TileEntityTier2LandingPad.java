@@ -96,7 +96,7 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 		this.mainBlockPosition = placedPosition;
 		this.markDirty();
 
-		List<BlockPos> positions = new ArrayList();
+		List<BlockPos> positions = new ArrayList<BlockPos>();
 		this.getPositions(placedPosition, positions);
 		((BlockCustomMulti) ExtraPlanets_Blocks.FAKE_BLOCK).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.TIER_2_ROCKET_PAD);
 	}
@@ -122,7 +122,7 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 	@Override
 	public void onDestroy(TileEntity callingBlock) {
 		final BlockPos thisBlock = getPos();
-		List<BlockPos> positions = new ArrayList();
+		List<BlockPos> positions = new ArrayList<BlockPos>();
 		this.getPositions(thisBlock, positions);
 
 		for (BlockPos pos : positions) {

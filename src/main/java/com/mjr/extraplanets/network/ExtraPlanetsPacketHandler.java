@@ -78,7 +78,7 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 
 		if (side != null) {
 			getQueue(side, msg.getDimensionID()).add(new PacketPlayerPair(msg, player));
-			livePacketCount++;
+			setLivePacketCount(getLivePacketCount() + 1);
 		}
 	}
 
@@ -88,6 +88,14 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 			map.put(dimID, Queues.<PacketPlayerPair> newConcurrentLinkedQueue());
 		}
 		return map.get(dimID);
+	}
+
+	public static int getLivePacketCount() {
+		return livePacketCount;
+	}
+
+	public static void setLivePacketCount(int livePacketCount) {
+		ExtraPlanetsPacketHandler.livePacketCount = livePacketCount;
 	}
 
 	private final class PacketPlayerPair {
@@ -103,14 +111,16 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 			return packet;
 		}
 
+		@SuppressWarnings("unused")
 		public void setPacket(IPacket packet) {
 			this.packet = packet;
 		}
-
+		
 		public EntityPlayer getPlayer() {
 			return player;
 		}
 
+		@SuppressWarnings("unused")
 		public void setPlayer(EntityPlayer player) {
 			this.player = player;
 		}
