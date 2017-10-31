@@ -229,7 +229,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		if (world.isRemote)
 			this.onCreate(world, pos);
 
-		List<BlockPos> positions = new ArrayList();
+		List<BlockPos> positions = new ArrayList<BlockPos>();
 		this.getPositions(pos, positions);
 		boolean result = true;
 		for (BlockPos vecToAdd : positions) {
@@ -276,7 +276,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public void onCreate(World world, BlockPos placedPosition) {
-		List<BlockPos> positions = new LinkedList();
+		List<BlockPos> positions = new LinkedList<BlockPos>();
 		this.getPositions(placedPosition, positions);
 		if (positions.size() > 0) {
 			((BlockMulti) GCBlocks.fakeBlock).makeFakeBlock(world, positions.get(0), placedPosition, EnumBlockMultiType.SOLAR_PANEL_0.getMeta());
@@ -313,7 +313,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	@Override
 	public void onDestroy(TileEntity callingBlock) {
 		final BlockPos thisBlock = getPos();
-		List<BlockPos> positions = new ArrayList();
+		List<BlockPos> positions = new ArrayList<BlockPos>();
 		this.getPositions(thisBlock, positions);
 
 		for (BlockPos pos : positions) {
