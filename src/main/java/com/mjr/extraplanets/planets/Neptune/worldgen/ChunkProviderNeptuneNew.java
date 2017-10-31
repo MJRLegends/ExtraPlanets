@@ -324,9 +324,9 @@ public class ChunkProviderNeptuneNew extends ChunkProviderGenerate {
 	}
 
 	@Override
-	public List getPossibleCreatures(EnumCreatureType type, int x, int y, int z) {
+	public List<SpawnListEntry> getPossibleCreatures(EnumCreatureType type, int x, int y, int z) {
 		if (type == EnumCreatureType.monster) {
-			List monsters = new ArrayList();
+			List<SpawnListEntry> monsters = new ArrayList<SpawnListEntry>();
 
 			monsters.add(new SpawnListEntry(EntityEvolvedZombie.class, 100, 4, 4));
 			monsters.add(new SpawnListEntry(EntityEvolvedSpider.class, 100, 4, 4));
@@ -336,7 +336,7 @@ public class ChunkProviderNeptuneNew extends ChunkProviderGenerate {
 
 			return monsters;
 		} else if (type == EnumCreatureType.creature) {
-			List creatures = new ArrayList();
+			List<SpawnListEntry> creatures = new ArrayList<SpawnListEntry>();
 
 			creatures.add(new SpawnListEntry(EntitySheep.class, 12, 4, 4));
 			creatures.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
@@ -345,7 +345,7 @@ public class ChunkProviderNeptuneNew extends ChunkProviderGenerate {
 
 			return creatures;
 		} else if (type == EnumCreatureType.waterCreature) {
-			List waterCreatures = new ArrayList();
+			List<SpawnListEntry> waterCreatures = new ArrayList<SpawnListEntry>();
 			waterCreatures.add(new SpawnListEntry(EntitySquid.class, 10, 4, 4));
 			return waterCreatures;
 		}
