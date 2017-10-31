@@ -14,7 +14,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -50,7 +51,8 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 		this.tasks.addTask(2, new EntityEvolvedIceSlimeBoss.AISlimeAttack(this));
 		this.tasks.addTask(3, new EntityEvolvedIceSlimeBoss.AISlimeFaceRandom(this));
 		this.tasks.addTask(5, new EntityEvolvedIceSlimeBoss.AISlimeHop(this));
-		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
 	}
 
 	@Override

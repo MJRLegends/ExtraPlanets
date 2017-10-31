@@ -14,7 +14,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -37,7 +38,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntityBreathable{
+public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntityBreathable {
 	public float squishAmount;
 	public float squishFactor;
 	public float prevSquishFactor;
@@ -50,23 +51,22 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		this.tasks.addTask(2, new EntityEvolvedMagmaCubeBoss.AISlimeAttack(this));
 		this.tasks.addTask(3, new EntityEvolvedMagmaCubeBoss.AISlimeFaceRandom(this));
 		this.tasks.addTask(5, new EntityEvolvedMagmaCubeBoss.AISlimeHop(this));
-		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
 	}
-	
-    @Override
-    protected void onDeathUpdate()
-    {
-        super.onDeathUpdate();
 
-        if (!this.worldObj.isRemote)
-        {
-            if (this.deathTicks == 100)
-            {
-                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
-            }
-        }
-    }
-    
+	@Override
+	protected void onDeathUpdate() {
+		super.onDeathUpdate();
+
+		if (!this.worldObj.isRemote) {
+			if (this.deathTicks == 100) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+			}
+		}
+	}
+
 	@Override
 	protected void entityInit() {
 		super.entityInit();
@@ -203,8 +203,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Applies a velocity to each of the entities pushing them away from each
-	 * other. Args: entity
+	 * Applies a velocity to each of the entities pushing them away from each other. Args: entity
 	 */
 	@Override
 	public void applyEntityCollision(Entity entityIn) {
@@ -236,16 +235,14 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Indicates weather the slime is able to damage the player (based upon the
-	 * slime's size)
+	 * Indicates weather the slime is able to damage the player (based upon the slime's size)
 	 */
 	protected boolean canDamagePlayer() {
 		return this.getSlimeSize() > 1;
 	}
 
 	/**
-	 * Gets the amount of damage dealt to the player when "attacked" by the
-	 * slime.
+	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
 	 */
 	protected int getAttackStrength() {
 		return this.getSlimeSize() * 6;
@@ -273,8 +270,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Checks if the entity's current position is a valid location to spawn this
-	 * entity.
+	 * Checks if the entity's current position is a valid location to spawn this entity.
 	 */
 	@Override
 	public boolean getCanSpawnHere() {
@@ -287,7 +283,8 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 			if (this.worldObj.getDifficulty() != EnumDifficulty.PEACEFUL) {
 				BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(blockpos);
 
-				if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor() && this.worldObj.getLightFromNeighbors(new BlockPos(this)) <= this.rand.nextInt(8)) {
+				if (biomegenbase == BiomeGenBase.swampland && this.posY > 50.0D && this.posY < 70.0D && this.rand.nextFloat() < 0.5F && this.rand.nextFloat() < this.worldObj.getCurrentMoonPhaseFactor()
+						&& this.worldObj.getLightFromNeighbors(new BlockPos(this)) <= this.rand.nextInt(8)) {
 					return super.getCanSpawnHere();
 				}
 
@@ -309,8 +306,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * The speed it takes to move the entityliving's rotationPitch through the
-	 * faceEntity method. This is only currently use in wolves.
+	 * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	 */
 	@Override
 	public int getVerticalFaceSpeed() {
@@ -318,16 +314,14 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it jumps (based upon the
-	 * slime's size)
+	 * Returns true if the slime makes a sound when it jumps (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnJump() {
 		return this.getSlimeSize() > 0;
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it lands after a jump (based
-	 * upon the slime's size)
+	 * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnLand() {
 		return this.getSlimeSize() > 2;
@@ -343,9 +337,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/**
-	 * Called only once on an entity when first time spawned, via egg, mob
-	 * spawner, natural spawning etc, but not called when entity is reloaded
-	 * from nbt. Mainly used for initializing attributes and inventory
+	 * Called only once on an entity when first time spawned, via egg, mob spawner, natural spawning etc, but not called when entity is reloaded from nbt. Mainly used for initializing attributes and inventory
 	 */
 	@Override
 	public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata) {
@@ -354,20 +346,17 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	/*
-	 * ======================================== FORGE START
-	 * =====================================
+	 * ======================================== FORGE START =====================================
 	 */
 	/**
-	 * Called when the slime spawns particles on landing, see onUpdate. Return
-	 * true to prevent the spawning of the default particles.
+	 * Called when the slime spawns particles on landing, see onUpdate. Return true to prevent the spawning of the default particles.
 	 */
 	protected boolean spawnCustomParticles() {
 		return false;
 	}
 
 	/*
-	 * ======================================== FORGE END
-	 * =====================================
+	 * ======================================== FORGE END =====================================
 	 */
 
 	static class AISlimeAttack extends EntityAIBase {
@@ -560,23 +549,19 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 			}
 		}
 	}
-	
-    @Override
-    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
-    {
-        final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-        entityitem.motionY = -2.0D;
-        entityitem.setDefaultPickupDelay();
-        if (this.captureDrops)
-        {
-            this.capturedDrops.add(entityitem);
-        }
-        else
-        {
-            this.worldObj.spawnEntityInWorld(entityitem);
-        }
-        return entityitem;
-    }
+
+	@Override
+	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		entityitem.motionY = -2.0D;
+		entityitem.setDefaultPickupDelay();
+		if (this.captureDrops) {
+			this.capturedDrops.add(entityitem);
+		} else {
+			this.worldObj.spawnEntityInWorld(entityitem);
+		}
+		return entityitem;
+	}
 
 	@Override
 	public boolean canBreath() {
@@ -590,12 +575,12 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 
 	@Override
 	public void dropKey() {
-        this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_4_KEY, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_4_KEY, 1, 0), 0.5F);
 	}
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList = GalacticraftRegistry.getDungeonLoot(4);
-        return stackList.get(rand.nextInt(stackList.size())).copy();
+		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 }

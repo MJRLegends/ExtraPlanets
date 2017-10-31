@@ -12,7 +12,8 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.IMob;
@@ -49,23 +50,22 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		this.tasks.addTask(5, new EntityEvolvedGhastBoss.AIRandomFly(this));
 		this.tasks.addTask(7, new EntityEvolvedGhastBoss.AILookAround(this));
 		this.tasks.addTask(7, new EntityEvolvedGhastBoss.AIFireballAttack(this));
-		this.targetTasks.addTask(1, new EntityAIFindEntityNearestPlayer(this));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
 	}
-	
-    @Override
-    protected void onDeathUpdate()
-    {
-        super.onDeathUpdate();
 
-        if (!this.worldObj.isRemote)
-        {
-            if (this.deathTicks == 100)
-            {
-                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
-            }
-        }
-    }
-	
+	@Override
+	protected void onDeathUpdate() {
+		super.onDeathUpdate();
+
+		if (!this.worldObj.isRemote) {
+			if (this.deathTicks == 100) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+			}
+		}
+	}
+
 	@SideOnly(Side.CLIENT)
 	public boolean isAttacking() {
 		return this.dataWatcher.getWatchableObjectByte(16) != 0;
@@ -423,23 +423,19 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 			this.explosionStrength = nbt.getInteger("ExplosionPower");
 		}
 	}
-	
-    @Override
-    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
-    {
-        final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-        entityitem.motionY = -2.0D;
-        entityitem.setDefaultPickupDelay();
-        if (this.captureDrops)
-        {
-            this.capturedDrops.add(entityitem);
-        }
-        else
-        {
-            this.worldObj.spawnEntityInWorld(entityitem);
-        }
-        return entityitem;
-    }
+
+	@Override
+	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		entityitem.motionY = -2.0D;
+		entityitem.setDefaultPickupDelay();
+		if (this.captureDrops) {
+			this.capturedDrops.add(entityitem);
+		} else {
+			this.worldObj.spawnEntityInWorld(entityitem);
+		}
+		return entityitem;
+	}
 
 	@Override
 	public boolean canBreath() {
