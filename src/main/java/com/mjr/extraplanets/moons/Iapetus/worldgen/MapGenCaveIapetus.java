@@ -112,7 +112,6 @@ public class MapGenCaveIapetus extends MapGenBaseMeta {
 						i3 = 16;
 					}
 
-					final boolean flag2 = false;
 					int j3;
 					for (j3 = l1; j3 < i2; ++j3) {
 						for (int l3 = l2; l3 < i3; ++l3) {
@@ -127,7 +126,6 @@ public class MapGenCaveIapetus extends MapGenBaseMeta {
 					}
 
 					if (true) {
-
 						for (int localY = j2; localY < k2; localY++) {
 							final double yfactor = (localY + 0.5D - par8) / d7;
 							final double yfactorSq = yfactor * yfactor;
@@ -141,8 +139,6 @@ public class MapGenCaveIapetus extends MapGenBaseMeta {
 									final double xfactorSq = xfactor * xfactor;
 
 									if (xfactorSq + zfactorSq < 1.0D) {
-										final int coords = (localX * 16 + localZ) * 256 + localY;
-
 										if (yfactor > -0.7D && xfactorSq + yfactorSq + zfactorSq < 1.0D) {
 											IBlockState state = primer.getBlockState(localX, localY, localZ);
 											Block block = state.getBlock();
@@ -150,10 +146,8 @@ public class MapGenCaveIapetus extends MapGenBaseMeta {
 											if (block == ExtraPlanets_Blocks.IAPETUS_BLOCKS) {
 												if (metadata == 1 || metadata == 2) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
 												} else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-													// blockIdArray[coords] = Blocks.AIR;
 												}
 											}
 										}
