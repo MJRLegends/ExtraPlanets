@@ -23,6 +23,7 @@ public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatB
 	/**
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
+	@Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedFireBatBoss entity) {
 		return BAT_TEXTURES;
 	}
@@ -30,11 +31,13 @@ public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatB
 	/**
 	 * Allows the render to do state modifications necessary before the model is rendered.
 	 */
+	@Override
 	protected void preRenderCallback(EntityEvolvedFireBatBoss entitylivingbaseIn, float partialTickTime) {
 		GlStateManager.scale(8.35F, 8.35F, 8.35F);
 		GlStateManager.translate(0.0F, 0.9F, 0.0F);
 	}
 
+	@Override
 	protected void rotateCorpse(EntityEvolvedFireBatBoss entityLiving, float p_77043_2_, float p_77043_3_, float partialTicks) {
 		GlStateManager.translate(0.0F, MathHelper.cos(p_77043_2_ * 0.3F) * 0.2F, 0.0F);
 		super.rotateCorpse(entityLiving, p_77043_2_, p_77043_3_, partialTicks);

@@ -65,7 +65,6 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.containingItems[slot] != null) {
 			if (FluidUtil.isEmptyContainer(this.containingItems[slot]) == false && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() != null

@@ -30,7 +30,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableBlock, ITileEntityProvider {
-	public static final PropertyEnum MULTI_TYPE = PropertyEnum.create("type", EnumBlockMultiType.class);
+	public static final PropertyEnum<EnumBlockMultiType> MULTI_TYPE = PropertyEnum.create("type", EnumBlockMultiType.class);
 	public static final PropertyInteger RENDER_TYPE = PropertyInteger.create("rendertype", 0, 7);
 
 	protected static final AxisAlignedBB AABB_PAD = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
@@ -108,7 +108,6 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		worldObj.setTileEntity(pos, new TileEntityMulti(mainBlock));
 	}
 
-	@SuppressWarnings("unchecked")
 	public void makeFakeBlock(World worldObj, Collection<BlockPos> posList, BlockPos mainBlock, EnumBlockMultiType type) {
 		for (BlockPos pos : posList) {
 			worldObj.setBlockState(pos, this.getDefaultState().withProperty(MULTI_TYPE, type), 0);
@@ -201,7 +200,6 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		return super.addHitEffects(worldObj, target, effectRenderer);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(MULTI_TYPE, EnumBlockMultiType.byMetadata(meta));
@@ -209,7 +207,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockMultiType) state.getValue(MULTI_TYPE)).getMeta();
+		return state.getValue(MULTI_TYPE).getMeta();
 	}
 
 	@Override
@@ -219,7 +217,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 
 	@Override
 	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-		EnumBlockMultiType type = (EnumBlockMultiType) state.getValue(MULTI_TYPE);
+		EnumBlockMultiType type = state.getValue(MULTI_TYPE);
 		int renderType = 0;
 
 		switch (type) {

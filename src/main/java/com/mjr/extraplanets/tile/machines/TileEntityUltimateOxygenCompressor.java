@@ -18,7 +18,6 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
 
-import com.mjr.extraplanets.blocks.machines.AdvancedOxygenCompressor;
 import com.mjr.extraplanets.blocks.machines.UltimateOxygenCompressor;
 
 public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen implements IInventory, ISidedInventory {

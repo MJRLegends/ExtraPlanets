@@ -46,9 +46,6 @@ public class OverlayPressure extends Overlay
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
 
         int minLeftX = 0;
-        int maxLeftX = 0;
-        int minRightX = 0;
-        int maxRightX = 0;
         double bottomY = 0;
         double topY = 0;
         double zLevel = -190.0D;
@@ -56,16 +53,10 @@ public class OverlayPressure extends Overlay
         if (right)
         {
             minLeftX = i - 27;
-            maxLeftX = i - 30;
-            minRightX = i - 29;
-            maxRightX = i - 10;
         }
         else
         {
             minLeftX = 42;
-            maxLeftX = 29;
-            minRightX = 30;
-            maxRightX = 49;
         }
 
         if (top)

@@ -17,7 +17,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.audio.SoundCategory;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -39,7 +38,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicUranus extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypeuranus", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypeuranus", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "uranus_surface"), SUB_SURFACE(1, "uranus_sub_surface"), STONE(2, "uranus_stone"), ORE_CRYISTAL(3, "uranus_ore_crystal"), CRYISTAL_BLOCK(4, "uranus_crystal_block"), STONEBRICKS(5, "uranus_stonebricks"), DUNGEON_BRICK(6,
@@ -183,14 +182,11 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
-		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
 	}
 
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		IBlockState state = world.getBlockState(pos);
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(target, world, pos, player);
 	}
 
@@ -208,16 +204,14 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 		return state.getBlock().getMetaFromState(state) == 10;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

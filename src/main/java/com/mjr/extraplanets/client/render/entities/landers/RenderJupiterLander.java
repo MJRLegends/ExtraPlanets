@@ -32,7 +32,6 @@ public class RenderJupiterLander extends Render<EntityJupiterLander> {
 		this.shadowSize = 2F;
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (landerModel == null) {
 			OBJModel model;

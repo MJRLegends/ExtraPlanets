@@ -27,7 +27,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockDecorativeBlocks extends Block implements IDetectableResource, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypedecorativeblocks", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypedecorativeblocks", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		MARBLE(0, "marble"), MARBLE_BRICKS(1, "marble_bricks"), SNOW_BRICKS(2, "snow_bricks"), ICE_BRICKS(3, "ice_bricks"), FIRE_BRICKS(4, "fire_bricks"), BLACK_WHITE_FLOOR(5, "black_white_floor"), MARBLE_TITLED_FLOOR(6, "marble_titled_floor"), MARBLE_BROKEN_TITLED_FLOOR(
@@ -104,12 +104,9 @@ public class BlockDecorativeBlocks extends Block implements IDetectableResource,
 
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		IBlockState state = world.getBlockState(pos);
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(target, world, pos, player);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));
@@ -117,7 +114,7 @@ public class BlockDecorativeBlocks extends Block implements IDetectableResource,
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

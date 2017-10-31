@@ -93,7 +93,7 @@ public class TileEntityRocketChargingPad extends TileEntityMulti implements IMul
 		this.mainBlockPosition = placedPosition;
 		this.markDirty();
 
-		List<BlockPos> positions = new ArrayList();
+		List<BlockPos> positions = new ArrayList<BlockPos>();
 		this.getPositions(placedPosition, positions);
 		((BlockCustomMulti) ExtraPlanets_Blocks.FAKE_BLOCK).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.ROCKET_POWER_CHARGING_PAD);
 	}
@@ -118,13 +118,13 @@ public class TileEntityRocketChargingPad extends TileEntityMulti implements IMul
 	@Override
 	public void onDestroy(TileEntity callingBlock) {
 		final BlockPos thisBlock = getPos();
-		List<BlockPos> positions = new ArrayList();
+		List<BlockPos> positions = new ArrayList<BlockPos>();
 		this.getPositions(thisBlock, positions);
 
 		for (BlockPos pos : positions) {
 			IBlockState stateAt = this.worldObj.getBlockState(pos);
 
-			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && (EnumBlockMultiType) stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.ROCKET_POWER_CHARGING_PAD) {
+			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.ROCKET_POWER_CHARGING_PAD) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
 					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.worldObj.getBlockState(pos));
 				}

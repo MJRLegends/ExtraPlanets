@@ -38,7 +38,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicJupiter extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypejupiter", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypejupiter", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "jupiter_surface"), SUB_SURFACE(1, "jupiter_sub_surface"), STONE(2, "jupiter_stone"), ORE_IRON(3, "jupiter_ore_iron"), ORE_TIN(4, "jupiter_ore_tin"), ORE_COPPER(5, "jupiter_ore_copper"), ORE_PALLADIUM(6, "jupiter_ore_palladium"), ORE_NICKEL(
@@ -186,8 +186,6 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		IBlockState state = world.getBlockState(pos);
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(target, world, pos, player);
 	}
 
@@ -212,7 +210,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

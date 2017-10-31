@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.handlers;
 
 import micdoodle8.mods.galacticraft.core.client.KeyHandler;
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
@@ -62,8 +61,6 @@ public class KeyHandlerClient extends KeyHandler {
 			if (playerBase == null) {
 				return;
 			}
-
-			GCPlayerStatsClient stats = GCPlayerStatsClient.get(playerBase);
 
 			if (kb.getKeyCode() == KeyHandlerClient.openFuelGui.getKeyCode()) {
 				if (playerBase.ridingEntity instanceof EntityVehicleBase) {

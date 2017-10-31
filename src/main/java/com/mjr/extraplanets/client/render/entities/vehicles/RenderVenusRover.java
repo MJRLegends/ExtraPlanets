@@ -41,7 +41,6 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (modelRover == null) {
 			OBJModel model;

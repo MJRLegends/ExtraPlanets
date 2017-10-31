@@ -19,7 +19,6 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands;
 
 public class JupiterBiomes extends BiomeGenBase {
 	public static final BiomeGenBase jupiter = new BiomeGenJupiter(Config.JUPITER_BIOME_ID).setBiomeName("jupiter").setHeight(new Height(0.125F, 0.05F));

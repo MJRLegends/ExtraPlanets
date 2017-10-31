@@ -23,7 +23,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 
 	protected WorldChunkManagerKepler22b() {
 		this.biomeCache = new BiomeCache(this);
-		this.biomesToSpawn = new ArrayList();
+		this.biomesToSpawn = new ArrayList<BiomeGenBase>();
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
 		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
@@ -49,7 +49,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	}
 
 	@Override
-	public List getBiomesToSpawnIn() {
+	public List<BiomeGenBase> getBiomesToSpawnIn() {
 		return this.biomesToSpawn;
 	}
 
@@ -108,7 +108,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	}
 
 	@Override
-	public boolean areBiomesViable(int par1, int par2, int par3, List par4List) {
+	public boolean areBiomesViable(int par1, int par2, int par3, List<BiomeGenBase> par4List) {
 		int i = par1 - par3 >> 2;
 		int j = par2 - par3 >> 2;
 		int k = par1 + par3 >> 2;
@@ -128,7 +128,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	}
 
 	@Override
-	public BlockPos findBiomePosition(int par1, int par2, int par3, List par4List, Random par5Random) {
+	public BlockPos findBiomePosition(int par1, int par2, int par3, List<BiomeGenBase> par4List, Random par5Random) {
 		int i = par1 - par3 >> 2;
 		int j = par2 - par3 >> 2;
 		int k = par1 + par3 >> 2;

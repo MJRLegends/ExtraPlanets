@@ -32,12 +32,12 @@ import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
 public class UltimateFuelLoader extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	public static IMachineSidesProperties MACHINESIDES_RENDERTYPE = IMachineSidesProperties.TWOFACES_HORIZ;
-	public static final PropertyEnum SIDES = MACHINESIDES_RENDERTYPE.asProperty;
+	public static final PropertyEnum<?> SIDES = MACHINESIDES_RENDERTYPE.asProperty;
 
 	public UltimateFuelLoader(String assetName) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-        this.setStepSound(Block.soundTypeMetal);
+		this.setStepSound(Block.soundTypeMetal);
 		this.setUnlocalizedName(assetName);
 	}
 
@@ -106,11 +106,10 @@ public class UltimateFuelLoader extends BlockAdvancedTile implements IShiftDescr
 		return state.getValue(FACING).getHorizontalIndex();
 	}
 
-    @Override
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, FACING, SIDES);
-    }
+	@Override
+	protected BlockState createBlockState() {
+		return new BlockState(this, FACING, SIDES);
+	}
 
 	@Override
 	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {

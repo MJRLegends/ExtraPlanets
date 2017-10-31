@@ -34,7 +34,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	public static final int OXYGEN_DECOMPRESSOR_METADATA = 4;
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-	public static final PropertyEnum TYPE = PropertyEnum.create("type", EnumCompressorType.class);
+	public static final PropertyEnum<EnumCompressorType> TYPE = PropertyEnum.create("type", EnumCompressorType.class);
 
 	public enum EnumCompressorType implements IStringSerializable {
 		COMPRESSOR(0, "compressor"), DECOMPRESSOR(1, "decompressor");
@@ -162,14 +162,13 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return state.getValue(FACING).getHorizontalIndex() + ((EnumCompressorType) state.getValue(TYPE)).getMeta() * 4;
+		return state.getValue(FACING).getHorizontalIndex() + state.getValue(TYPE).getMeta() * 4;
 	}
 
-    @Override
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, FACING, TYPE);
-    }
+	@Override
+	protected BlockState createBlockState() {
+		return new BlockState(this, FACING, TYPE);
+	}
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {

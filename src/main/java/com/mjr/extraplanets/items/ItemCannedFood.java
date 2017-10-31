@@ -102,7 +102,7 @@ public class ItemCannedFood extends Item {
 		if (par3EntityPlayer instanceof EntityPlayer) {
 			if (par1ItemStack.getItemDamage() < 5) {
 				--par1ItemStack.stackSize;
-				EntityPlayer entityplayer = (EntityPlayer) par3EntityPlayer;
+				EntityPlayer entityplayer = par3EntityPlayer;
 				entityplayer.getFoodStats().addStats(this.getHealAmount(par1ItemStack), this.getSaturationModifier(par1ItemStack));
 				par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
 				if (!par2World.isRemote) {

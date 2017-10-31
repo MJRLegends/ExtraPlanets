@@ -17,7 +17,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.audio.SoundCategory;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -39,7 +38,7 @@ import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicPluto extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
-	public static final PropertyEnum BASIC_TYPE = PropertyEnum.create("basictypepluto", EnumBlockBasic.class);
+	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypepluto", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "pluto_surface"), SUB_SURFACE(1, "pluto_sub_surface"), STONE(2, "pluto_stone"), ORE_IRON(3, "pluto_ore_iron"), ORE_TIN(4, "pluto_ore_tin"), ORE_COPPER(5, "pluto_ore_copper"), ORE_TUNGSTEN(6, "pluto_ore_tungsten"), TUNGSTEN_BLOCK(
@@ -183,14 +182,11 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
-		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
 	}
 
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		IBlockState state = world.getBlockState(pos);
-		int metadata = state.getBlock().getMetaFromState(state);
 		return super.getPickBlock(target, world, pos, player);
 	}
 
@@ -215,7 +211,7 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((EnumBlockBasic) state.getValue(BASIC_TYPE)).getMeta();
+		return state.getValue(BASIC_TYPE).getMeta();
 	}
 
 	@Override

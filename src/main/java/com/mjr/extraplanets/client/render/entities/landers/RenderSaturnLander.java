@@ -31,7 +31,6 @@ public class RenderSaturnLander extends Render<EntitySaturnLander> {
 		this.shadowSize = 2F;
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (landerModel == null) {
 			OBJModel model;

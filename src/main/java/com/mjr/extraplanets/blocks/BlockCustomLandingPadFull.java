@@ -30,7 +30,7 @@ import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
 import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
 
 public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPartialSealableBlock {
-	public static final PropertyEnum PAD_TYPE = PropertyEnum.create("type", EnumLandingPadFullType.class);
+	public static final PropertyEnum<EnumLandingPadFullType> PAD_TYPE = PropertyEnum.create("type", EnumLandingPadFullType.class);
 
 	public enum EnumLandingPadFullType implements IStringSerializable {
 		TIER_2_ROCKET_PAD(0, "tier_2_rocket"), TIER_3_ROCKET_PAD(1, "tier_3_rocket"), POWER_CHARGING_PAD(2, "powered_charging_pad"), ROCKET_POWER_CHARGING_PAD(3, "rocket_powered_charging_pad");
@@ -92,31 +92,14 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
-    public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state){
-		switch (getMetaFromState(state)) {
-		// case 0:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ); TODO
-		// case 2:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ);
-		default:
-			return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
-		}
+	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state) {
+		return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
+		
 	}
 
 	@Override
-    public AxisAlignedBB getSelectedBoundingBox(World worldIn, BlockPos pos){
-		switch (getMetaFromState(worldIn.getBlockState(pos))) {
-		// case 0:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ); TODO
-		// case 2:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ);
-		default:
-			return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
-		}
+	public AxisAlignedBB getSelectedBoundingBox(World worldIn, BlockPos pos) {
+		return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
 	}
 
 	@Override
@@ -153,28 +136,25 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 			return null;
 		}
 	}
-	
-    @Override
-    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
-    {
-        worldIn.markBlockForUpdate(pos);
-    }
 
-    @Override
-    public boolean isOpaqueCube()
-    {
-        return false;
-    }
+	@Override
+	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock) {
+		worldIn.markBlockForUpdate(pos);
+	}
 
-    @Override
-    public boolean isFullCube()
-    {
-        return false;
-    }
+	@Override
+	public boolean isOpaqueCube() {
+		return false;
+	}
+
+	@Override
+	public boolean isFullCube() {
+		return false;
+	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-    public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side){
+	public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side) {
 		return true;
 	}
 
@@ -189,21 +169,18 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 		return new ItemStack(Item.getItemFromBlock(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD), 1, metadata);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(PAD_TYPE, EnumLandingPadFullType.byMetadata(meta));
 	}
 
-    @Override
-    public int getMetaFromState(IBlockState state)
-    {
-        return ((EnumLandingPadFullType) state.getValue(PAD_TYPE)).getMeta();
-    }
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		return state.getValue(PAD_TYPE).getMeta();
+	}
 
-    @Override
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, PAD_TYPE);
-    }
+	@Override
+	protected BlockState createBlockState() {
+		return new BlockState(this, PAD_TYPE);
+	}
 }

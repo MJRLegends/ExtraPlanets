@@ -252,6 +252,7 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 	/**
 	 * Replaces the stone that was placed in with blocks that match the biome
 	 */
+	@Override
 	public void replaceBlocksForBiome(int chunkX, int chunkZ, ChunkPrimer chunk, BiomeGenBase[] biomeGen) {
 		double d0 = 0.03125D;
 		this.depthBuffer = this.surfaceNoise.func_151599_a(this.depthBuffer, chunkX * 16, chunkZ * 16, 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);

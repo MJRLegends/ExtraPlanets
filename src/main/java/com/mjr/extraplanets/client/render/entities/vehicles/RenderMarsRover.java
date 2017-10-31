@@ -41,7 +41,6 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (modelRover == null) {
 			OBJModel model;
