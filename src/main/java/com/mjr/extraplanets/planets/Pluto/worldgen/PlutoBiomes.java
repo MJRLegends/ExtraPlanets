@@ -1,14 +1,13 @@
 package com.mjr.extraplanets.planets.Pluto.worldgen;
 
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.Eris.worldgen.BiomeGenEris;
-
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenBase.Height;
+
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.planets.Eris.worldgen.BiomeGenEris;
 
 public class PlutoBiomes extends BiomeGenBase {
 	public static final BiomeGenBase pluto = new BiomeGenEris(Config.PLUTO_BIOME_ID).setBiomeName("pluto").setHeight(new Height(2.5F, 0.4F));

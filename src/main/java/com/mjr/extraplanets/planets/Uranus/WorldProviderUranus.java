@@ -5,8 +5,6 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
@@ -131,7 +129,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	public int getDungeonSpacing() {
 		return 800;
 	}
-	
+
 	@Override
 	public String getDungeonChestType() {
 		return RoomChest.MOONCHEST;

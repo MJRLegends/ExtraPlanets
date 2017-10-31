@@ -1,14 +1,13 @@
 package com.mjr.extraplanets.planets.Saturn.worldgen;
 
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeGenNeptune;
-
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenBase.Height;
+
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeGenNeptune;
 
 public class SaturnBiomes extends BiomeGenBase {
 	public static final BiomeGenBase saturn = new BiomeGenNeptune(Config.SATURN_BIOME_ID).setBiomeName("saturn").setHeight(new Height(2.5F, 0.4F));

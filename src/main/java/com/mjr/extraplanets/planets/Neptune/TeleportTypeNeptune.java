@@ -6,14 +6,12 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
-import micdoodle8.mods.galacticraft.core.util.CompatibilityManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
 import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
 
 public class TeleportTypeNeptune implements ITeleportType {

@@ -10,13 +10,12 @@ import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bRedMapleForest extends BiomeGenBaseKepler22b {
-	public BiomeGenKepler22bRedMapleForest(int var1){
+	public BiomeGenKepler22bRedMapleForest(int var1) {
 		super(var1);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_RED.getDefaultState();

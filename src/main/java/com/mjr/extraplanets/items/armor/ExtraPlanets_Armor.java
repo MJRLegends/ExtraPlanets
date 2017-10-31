@@ -6,7 +6,6 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Armor {
 	private static ArmorMaterial CARBON_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15);
@@ -376,13 +375,13 @@ public class ExtraPlanets_Armor {
 			GameRegistry.registerItem(TIER_2_SPACE_SUIT_LEGINGS, TIER_2_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_2_SPACE_SUIT_BOOTS, TIER_2_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_2_SPACE_SUIT_GRAVITY_BOOTS, TIER_2_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(TIER_3_SPACE_SUIT_HELMET, TIER_3_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_3_SPACE_SUIT_CHEST, TIER_3_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_3_SPACE_SUIT_LEGINGS, TIER_3_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_3_SPACE_SUIT_BOOTS, TIER_3_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_3_SPACE_SUIT_GRAVITY_BOOTS, TIER_3_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
-			
+
 			GameRegistry.registerItem(TIER_4_SPACE_SUIT_HELMET, TIER_4_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_4_SPACE_SUIT_CHEST, TIER_4_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			GameRegistry.registerItem(TIER_4_SPACE_SUIT_LEGINGS, TIER_4_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
