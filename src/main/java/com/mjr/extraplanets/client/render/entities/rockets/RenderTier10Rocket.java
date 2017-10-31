@@ -16,10 +16,10 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class RenderTier10Rocket extends Render
 {
-	private ResourceLocation rocketTexture;
-	private ResourceLocation rocketTexture2;
-	private ResourceLocation rocketTexture3;
-	private ResourceLocation rocketTexture4;
+	protected ResourceLocation rocketTexture;
+	protected ResourceLocation rocketTexture2;
+	protected ResourceLocation rocketTexture3;
+	protected ResourceLocation rocketTexture4;
 
 	protected IModelCustom rocketModelObj;
 

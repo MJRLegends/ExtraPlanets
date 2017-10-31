@@ -21,7 +21,7 @@ import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 	private Random rand;
-	private NoiseGeneratorOctaves noiseGen4;
+	public NoiseGeneratorOctaves noiseGen4;
 	public NoiseGeneratorOctaves field_73214_a;
 	public NoiseGeneratorOctaves field_73212_b;
 	public NoiseGeneratorOctaves field_73213_c;
@@ -48,7 +48,7 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 
 	private List<MapGenBaseMeta> worldGenerators;
 
-	private final Gradient noiseGen;
+	public final Gradient noiseGen;
 
 	public ChunkProviderSpaceNormal(World world, long seed, boolean flag) {
 		super(world, seed, flag);

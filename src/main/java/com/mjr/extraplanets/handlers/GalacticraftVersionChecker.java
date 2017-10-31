@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 import com.mjr.extraplanets.Constants;
 
 public class GalacticraftVersionChecker {
+	@SuppressWarnings("unused")
 	public static void run() {
 		try {
 			Method m = GCCoreUtil.class.getMethod("isDeobfuscated");

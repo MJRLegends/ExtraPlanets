@@ -30,8 +30,6 @@ public class SlotMarsRover extends Slot {
 	@Override
 	public void onSlotChanged() {
 		if (this.player instanceof EntityPlayerMP) {
-			final Object[] toSend = { this.x, this.y, this.z };
-
 			for (int var12 = 0; var12 < this.player.worldObj.playerEntities.size(); ++var12) {
 				final EntityPlayerMP var13 = (EntityPlayerMP) this.player.worldObj.playerEntities.get(var12);
 

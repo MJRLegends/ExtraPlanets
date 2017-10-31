@@ -23,7 +23,7 @@ public class WorldChunkManagerNeptuneNew extends WorldChunkManagerSpace {
 
 	protected WorldChunkManagerNeptuneNew() {
 		this.biomeCache = new BiomeCache(this);
-		this.biomesToSpawn = new ArrayList();
+		this.biomesToSpawn = new ArrayList<BiomeGenBase>();
 		this.biomesToSpawn.add(BiomeGenBaseNeptune.neptune);
 		this.biomesToSpawn.add(BiomeGenBaseNeptune.test);
 	}

@@ -16,7 +16,6 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 	private boolean vinesGrow;
 	private int metaWood;
 	private int metaLeaves;
-	private static Random rand = new Random();
 
 	private Block sapling;
 	private Block log;
