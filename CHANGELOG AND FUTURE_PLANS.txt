@@ -14,6 +14,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.1.1
+*Cleaned up Cave WorldGen Class of unneeded code for all Moons and Pla… …
+*Cleaned up Sky Provider unneeded code for all Moons and Planets
+*Clean up, Removed unneeded code, fixed some deprecated code
+*Fixed issue #162
+
 v1.1.0
 *Added Missing Power, Missing Inputs Status Messages
 *Added Arrows to all GUI's
