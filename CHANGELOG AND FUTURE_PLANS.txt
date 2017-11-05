@@ -15,6 +15,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v0.4.2
+*Fixes for Custom Solar Panels
+*Changed Tile Entities Pads over to the new get meta method
+*Cleaned up Cave WorldGen Class of unneeded code for all Moons and Pla… …
+*Cleaned up Sky Provider unneeded code for all Moons and Planets
+*Clean up, Removed unneeded code, fixed some deprecated code
+*Fixed issue #162
+
 v0.4.1
 *Added Basic Extreme Reactors & MCMultiPart Compatibility
 *Added Missing Power, Missing Inputs Status Messages
