@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+		"particle": "extraplanets:blocks/candy_cane_brown",
+        "down": "extraplanets:blocks/candy_cane_brown",
+        "up": "extraplanets:blocks/candy_cane_brown",
+        "north": "extraplanets:blocks/candy_cane_brown_inverted",
+        "east": "extraplanets:blocks/candy_cane_brown",
+        "south": "extraplanets:blocks/candy_cane_brown_inverted",
+        "west": "extraplanets:blocks/candy_cane_brown"
+    }
+}

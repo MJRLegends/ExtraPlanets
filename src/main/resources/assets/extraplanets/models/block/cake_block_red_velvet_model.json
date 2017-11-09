@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+		"particle": "extraplanets:blocks/cake_block_red_velvet",
+        "down": "extraplanets:blocks/cake_block_red_velvet",
+        "up": "extraplanets:blocks/cake_block_red_velvet",
+        "north": "extraplanets:blocks/cake_block_red_velvet",
+        "east": "extraplanets:blocks/cake_block_red_velvet",
+        "south": "extraplanets:blocks/cake_block_red_velvet",
+        "west": "extraplanets:blocks/cake_block_red_velvet"
+    }
+}

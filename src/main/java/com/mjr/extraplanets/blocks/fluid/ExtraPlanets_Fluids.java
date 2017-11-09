@@ -46,12 +46,19 @@ public class ExtraPlanets_Fluids {
 	public static Block LIQUID_HYDROCARBON;
 	public static Fluid LIQUID_HYDROCARBON_FLUID;
 
+	public static Block LIQUID_CHOCOLATE;
+	public static Fluid LIQUID_CHOCOLATE_FLUID;
+
+	public static Block LIQUID_CARAMEL;
+	public static Fluid LIQUID_CARAMEL_FLUID;
+	
 	public static Material GLOWSTONE_MATERIAL = new MaterialLiquid(MapColor.YELLOW);
 	public static Material MAGMA_MATERIAL = new MaterialLiquid(MapColor.NETHERRACK);
 	public static Material NITROGEN_MATERIAL = new MaterialLiquid(MapColor.LIGHT_BLUE);
 	public static Material FROZEN_WATER_MATERIAL = new MaterialLiquid(MapColor.DIAMOND);
 	public static Material SALT_MATERIAL = new MaterialLiquid(MapColor.GRAY);
 	public static Material METHANE_MATERIAL = new MaterialLiquid(MapColor.GRASS);
+	public static Material CHOCOLATE_MATERIAL = new MaterialLiquid(MapColor.BROWN);
 
 	public static void init() {
 		initFluidBlocks();
@@ -117,6 +124,17 @@ public class ExtraPlanets_Fluids {
 				+ "blocks/fluids/liquid_hydrocarbon_flow")).setBlock(LIQUID_HYDROCARBON).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(LIQUID_HYDROCARBON_FLUID);
 		FluidRegistry.addBucketForFluid(LIQUID_HYDROCARBON_FLUID);
+
+		LIQUID_CHOCOLATE_FLUID = new Fluid("liquid_chocolate_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_chocolate_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_chocolate_flow"))
+				.setBlock(LIQUID_CHOCOLATE).setDensity(1000).setViscosity(300);
+		FluidRegistry.registerFluid(LIQUID_CHOCOLATE_FLUID);
+		FluidRegistry.addBucketForFluid(LIQUID_CHOCOLATE_FLUID);
+		
+		LIQUID_CARAMEL_FLUID = new Fluid("liquid_caramel_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_caramel_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_caramel_flow"))
+		.setBlock(LIQUID_CARAMEL).setDensity(1000).setViscosity(300);
+		FluidRegistry.registerFluid(LIQUID_CARAMEL_FLUID);
+		FluidRegistry.addBucketForFluid(LIQUID_CARAMEL_FLUID);
+		
 	}
 
 	private static void initFluidBlocks() {
@@ -131,6 +149,8 @@ public class ExtraPlanets_Fluids {
 		METHANE = new FluidBlockEP(METHANE_FLUID, "methane", METHANE_MATERIAL);
 		NITROGEN_ICE = new FluidBlockEP(NITROGEN_ICE_FLUID, "nitrogen_ice", NITROGEN_MATERIAL);
 		LIQUID_HYDROCARBON = new FluidBlockEP(LIQUID_HYDROCARBON_FLUID, "liquid_hydrocarbon", FROZEN_WATER_MATERIAL);
+		LIQUID_CHOCOLATE = new FluidBlockEP(LIQUID_CHOCOLATE_FLUID, "liquid_chocolate", CHOCOLATE_MATERIAL);
+		LIQUID_CARAMEL = new FluidBlockEP(LIQUID_CARAMEL_FLUID, "liquid_caramel", CHOCOLATE_MATERIAL);
 	}
 
 	private static void registerFluidBlocks() throws NoSuchMethodException {
@@ -145,5 +165,7 @@ public class ExtraPlanets_Fluids {
 		RegisterHelper.registerBlock(METHANE, ItemBlockGC.class, "methane");
 		RegisterHelper.registerBlock(NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
 		RegisterHelper.registerBlock(LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
+		RegisterHelper.registerBlock(LIQUID_CHOCOLATE, ItemBlockGC.class, "liquid_chocolate");
+		RegisterHelper.registerBlock(LIQUID_CARAMEL, ItemBlockGC.class, "liquid_caramel");
 	}
 }

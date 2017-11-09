@@ -27,6 +27,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.google.common.collect.ImmutableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.BlockCakeBlocks;
+import com.mjr.extraplanets.blocks.BlockCandyBlocks;
+import com.mjr.extraplanets.blocks.BlockCandyBlocksHorizontal;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPad;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks;
@@ -320,7 +323,9 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("tier3_kit", "tier3_kitfull", "tier3_kitbasic_setup", "tier3_kitwithout_oxygen_setup", "tier3_kitwithout_thermal_padding", "tier3_kitjust_oxygen_setup", "tier3_kitjust_protection");
 		ClientUtilities.addExtraPlanetsVariants("tier4_kit", "tier4_kitfull", "tier4_kitbasic_setup", "tier4_kitwithout_oxygen_setup", "tier4_kitwithout_thermal_padding", "tier4_kitjust_oxygen_setup", "tier4_kitjust_protection");
 		ClientUtilities.addExtraPlanetsVariants("tier5_kit", "tier5_kitfull", "tier5_kitbasic_setup", "tier5_kitwithout_oxygen_setup", "tier5_kitwithout_thermal_padding", "tier5_kitjust_oxygen_setup", "tier5_kitjust_protection");
-
+		ClientUtilities.addExtraPlanetsVariants("candy_blocks", "candy_cane_red", "candy_cane_green", "candy_cane_blue", "candy_cane_orange", "candy_cane_magenta", "candy_cane_pink", "candy_cane_lime", "candy_cane_purple", "candy_cane_brown", "candy_cane_black");
+		ClientUtilities.addExtraPlanetsVariants("candy_blocks_horizontal", "candy_cane_red_horizontal", "candy_cane_green_horizontal", "candy_cane_blue_horizontal", "candy_cane_orange_horizontal", "candy_cane_magenta_horizontal", "candy_cane_pink_horizontal", "candy_cane_lime_horizontal", "candy_cane_purple_horizontal", "candy_cane_brown_horizontal", "candy_cane_black_horizontal");
+		ClientUtilities.addExtraPlanetsVariants("cake_blocks", "cake_block", "cake_block_red_velvet", "cake_block_chocolate", "white_icing_red_dots", "white_icing_green_dots", "white_icing_pink_dots", "white_icing_orange_dots", "cookie_rocks");
 	}
 
 	private void registerEntityRenders() {
@@ -763,7 +768,16 @@ public class ClientProxy extends CommonProxy {
 		for (BlockDecorativeBlocks2.EnumBlockBasic blockBasic : BlockDecorativeBlocks2.EnumBlockBasic.values()) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, blockBasic.getMeta(), blockBasic.getName());
 		}
-
+		for (BlockCandyBlocks.EnumBlockBasic blockBasic : BlockCandyBlocks.EnumBlockBasic.values()) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.CANDY_BLOCKS, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockCandyBlocksHorizontal.EnumBlockBasic blockBasic : BlockCandyBlocksHorizontal.EnumBlockBasic.values()) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, blockBasic.getMeta(), blockBasic.getName());
+		}
+		for (BlockCakeBlocks.EnumBlockBasic blockBasic : BlockCakeBlocks.EnumBlockBasic.values()) {
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.CAKE_BLOCKS, blockBasic.getMeta(), blockBasic.getName());
+		}
+		
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.VEHICLE_CHARGER);
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FAKE_BLOCK);
 	}
@@ -1403,6 +1417,28 @@ public class ClientProxy extends CommonProxy {
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
 				return liquid_hydrocarbonLocation;
+			}
+		});
+		
+		ModelResourceLocation liquid_chocolateLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_chocolate", "fluid");
+		Item liquid_chocolate = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_CHOCOLATE);
+		ModelBakery.registerItemVariants(liquid_chocolate, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_chocolate"));
+		ModelLoader.setCustomMeshDefinition(liquid_chocolate, IItemMeshDefinitionCustom.create((ItemStack stack) -> liquid_chocolateLocation));
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.LIQUID_CHOCOLATE, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return liquid_chocolateLocation;
+			}
+		});
+		
+		ModelResourceLocation liquid_caramelLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_caramel", "fluid");
+		Item liquid_caramel = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_CARAMEL);
+		ModelBakery.registerItemVariants(liquid_caramel, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_caramel"));
+		ModelLoader.setCustomMeshDefinition(liquid_caramel, IItemMeshDefinitionCustom.create((ItemStack stack) -> liquid_caramelLocation));
+		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.LIQUID_CARAMEL, new StateMapperBase() {
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+				return liquid_caramelLocation;
 			}
 		});
 	}
