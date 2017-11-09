@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.blocks;
 
-import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
@@ -18,6 +17,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
@@ -92,10 +92,9 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 		return 1;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
 			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
 		}

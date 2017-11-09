@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.blocks;
 
-import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
@@ -17,6 +16,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
@@ -30,16 +30,8 @@ public class BlockCandyBlocks extends Block implements IDetectableResource, ISor
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypecandyblocks", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		CANDY_CANE_RED(0, "candy_cane_red"),
-		CANDY_CANE_GREEN(1, "candy_cane_green"),
-		CANDY_CANE_BLUE(2, "candy_cane_blue"),
-		CANDY_CANE_ORANGE(3, "candy_cane_orange"),
-		CANDY_CANE_MAGENTA(4, "candy_cane_magenta"),
-		CANDY_CANE_PINK(5, "candy_cane_pink"),
-		CANDY_CANE_LIME(6, "candy_cane_lime"),
-		CANDY_CANE_PURPLE(7, "candy_cane_purple"),
-		CANDY_CANE_BROWN(8, "candy_cane_brown"),
-		CANDY_CANE_BLACK(9, "candy_cane_black");
+		CANDY_CANE_RED(0, "candy_cane_red"), CANDY_CANE_GREEN(1, "candy_cane_green"), CANDY_CANE_BLUE(2, "candy_cane_blue"), CANDY_CANE_ORANGE(3, "candy_cane_orange"), CANDY_CANE_MAGENTA(4, "candy_cane_magenta"), CANDY_CANE_PINK(5, "candy_cane_pink"), CANDY_CANE_LIME(
+				6, "candy_cane_lime"), CANDY_CANE_PURPLE(7, "candy_cane_purple"), CANDY_CANE_BROWN(8, "candy_cane_brown"), CANDY_CANE_BLACK(9, "candy_cane_black");
 
 		private final int meta;
 		private final String name;
@@ -96,10 +88,9 @@ public class BlockCandyBlocks extends Block implements IDetectableResource, ISor
 		return 1;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
 			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
 		}
