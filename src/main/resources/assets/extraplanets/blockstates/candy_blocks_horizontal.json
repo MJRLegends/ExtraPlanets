@@ -1,0 +1,14 @@
+{
+    "variants": {
+		"basictypecandyblocks=candy_cane_red_horizontal": { "model": "extraplanets:candy_cane_red_horizontal_model" },
+		"basictypecandyblocks=candy_cane_green_horizontal": { "model": "extraplanets:candy_cane_green_horizontal_model" },
+		"basictypecandyblocks=candy_cane_blue_horizontal": { "model": "extraplanets:candy_cane_blue_horizontal_model" },
+		"basictypecandyblocks=candy_cane_orange_horizontal": { "model": "extraplanets:candy_cane_orange_horizontal_model" },
+		"basictypecandyblocks=candy_cane_magenta_horizontal": { "model": "extraplanets:candy_cane_magenta_horizontal_model" },
+		"basictypecandyblocks=candy_cane_pink_horizontal": { "model": "extraplanets:candy_cane_pink_horizontal_model" },
+		"basictypecandyblocks=candy_cane_lime_horizontal": { "model": "extraplanets:candy_cane_lime_horizontal_model" },
+		"basictypecandyblocks=candy_cane_purple_horizontal": { "model": "extraplanets:candy_cane_purple_horizontal_model" },
+		"basictypecandyblocks=candy_cane_brown_horizontal": { "model": "extraplanets:candy_cane_brown_horizontal_model" },
+		"basictypecandyblocks=candy_cane_black_horizontal": { "model": "extraplanets:candy_cane_black_horizontal_model" }
+    }
+}

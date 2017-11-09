@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+		"particle": "extraplanets:blocks/cake_block_chocolate",
+        "down": "extraplanets:blocks/cake_block_chocolate",
+        "up": "extraplanets:blocks/cake_block_chocolate",
+        "north": "extraplanets:blocks/cake_block_chocolate",
+        "east": "extraplanets:blocks/cake_block_chocolate",
+        "south": "extraplanets:blocks/cake_block_chocolate",
+        "west": "extraplanets:blocks/cake_block_chocolate"
+    }
+}

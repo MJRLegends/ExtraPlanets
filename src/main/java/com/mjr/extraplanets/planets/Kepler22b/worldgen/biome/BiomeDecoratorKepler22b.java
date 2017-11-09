@@ -20,6 +20,10 @@ import com.mjr.extraplanets.world.features.WorldGenBigRedTree;
 import com.mjr.extraplanets.world.features.WorldGenBlueHut;
 import com.mjr.extraplanets.world.features.WorldGenBlueTower;
 import com.mjr.extraplanets.world.features.WorldGenBrownHut;
+import com.mjr.extraplanets.world.features.WorldGenCandyCaneType1;
+import com.mjr.extraplanets.world.features.WorldGenCandyCaneType2;
+import com.mjr.extraplanets.world.features.WorldGenCandyCaneType3;
+import com.mjr.extraplanets.world.features.WorldGenCookieRocksType1;
 import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 import com.mjr.extraplanets.world.features.WorldGenGreenHut;
 import com.mjr.extraplanets.world.features.WorldGenLogTree;
@@ -67,6 +71,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 	public int treeWithNoLeafsPerChunk;
 	public int bigTreeWithNoLeafsPerChunk;
 	public boolean generateHuts;
+
+	public boolean generateCandyCanes = false;
 
 	private boolean isDecorating = false;
 
@@ -132,6 +138,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			if (random.nextInt(100) == 1) {
 				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + 8, 0, this.field_180294_c.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
+				blockpos.down(5);
 				(new WorldGenBlueTower()).generate(worldIn, random, blockpos);
 				break;
 			}
@@ -216,6 +223,42 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 						(new WorldGenBrownHut()).generate(worldIn, random, blockpos);
 						break;
 					}
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			if (generateCandyCanes) {
+				if (random.nextInt(5) == 1) {
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + (random.nextInt(16)), 0, this.field_180294_c.getZ() + (random.nextInt(16))));
+					blockpos.down(2);
+					int randomNum = random.nextInt(7) + 0;
+					switch (randomNum) {
+					default:
+					case 1:
+						(new WorldGenCandyCaneType1()).generate(worldIn, random, blockpos);
+						break;
+					case 2:
+						(new WorldGenCandyCaneType2()).generate(worldIn, random, blockpos);
+						break;
+					case 3:
+						(new WorldGenCandyCaneType3()).generate(worldIn, random, blockpos);
+						break;
+					}
+				}
+				if (random.nextInt(2) == 1) {
+					worldIn.setBlockState(worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + (random.nextInt(6)), 0, this.field_180294_c.getZ() + (random.nextInt(6)))), Blocks.cake.getDefaultState());
+				}
+				if (random.nextInt(100) == 1) {
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + (random.nextInt(6)), 0, this.field_180294_c.getZ() + (random.nextInt(6))).down(2));
+					(new WorldGenCookieRocksType1()).generate(worldIn, random, blockpos);
+				}
+				if (random.nextInt(10) == 0) {
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + (random.nextInt(6)), 0, this.field_180294_c.getZ() + (random.nextInt(6))).down(1));
+					new WorldGenCustomLake(ExtraPlanets_Fluids.LIQUID_CHOCOLATE).generate(worldIn, random, blockpos, ExtraPlanets_Blocks.CAKE_BLOCKS);
+				}
+				if (random.nextInt(10) == 0) {
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + (random.nextInt(16) + 6), 0, this.field_180294_c.getZ() + (random.nextInt(16) + 6)).down(1));
+					new WorldGenCustomLake(ExtraPlanets_Fluids.LIQUID_CARAMEL).generate(worldIn, random, blockpos, ExtraPlanets_Blocks.CAKE_BLOCKS);
 				}
 			}
 		}

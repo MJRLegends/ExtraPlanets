@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+		"particle": "extraplanets:blocks/cookie_rock",
+        "down": "extraplanets:blocks/cookie_rock",
+        "up": "extraplanets:blocks/cookie_rock",
+        "north": "extraplanets:blocks/cookie_rock",
+        "east": "extraplanets:blocks/cookie_rock",
+        "south": "extraplanets:blocks/cookie_rock",
+        "west": "extraplanets:blocks/cookie_rock"
+    }
+}
