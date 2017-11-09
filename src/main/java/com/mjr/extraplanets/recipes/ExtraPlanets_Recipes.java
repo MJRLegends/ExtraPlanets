@@ -909,6 +909,26 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 3)});
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 0)});
 		
+		// Cake/Icing Blocks
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', new ItemStack(Items.DYE, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', new ItemStack(Items.DYE, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', new ItemStack(Items.DYE, 1, 1)});
+		
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', new ItemStack(Items.DYE, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', new ItemStack(Items.DYE, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', new ItemStack(Items.DYE, 1, 2)});
+		
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', new ItemStack(Items.DYE, 1, 9)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', new ItemStack(Items.DYE, 1, 9)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', new ItemStack(Items.DYE, 1, 9)});
+		
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', new ItemStack(Items.DYE, 1, 14)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', new ItemStack(Items.DYE, 1, 14)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', new ItemStack(Items.DYE, 1, 14)});
+		
+		// Cookies to Cookie Rocks
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 7), new Object[] { "CCC", "CCC", "CCC", 'C', new ItemStack(Items.COOKIE)});
+		
 		if (Config.PRESSURE || Config.RADIATION) {
 			// Tier 1 - 4 Radiation Layers
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH });
