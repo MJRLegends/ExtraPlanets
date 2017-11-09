@@ -7,6 +7,6 @@
 		"basictypecakeblocks=white_icing_pink_dots": { "model": "extraplanets:white_icing_pink_dots_model" },
 		"basictypecakeblocks=white_icing_orange_dots": { "model": "extraplanets:white_icing_orange_dots_model" },
 		"basictypecakeblocks=white_icing_red_dots": { "model": "extraplanets:white_icing_red_dots_model" },
-		"basictypecakeblocks=cookie_rocks": { "model": "extraplanets:cookie_rock_model" }
+		"basictypecakeblocks=cookie_rocks": { "model": "extraplanets:cookie_rocks_model" }
     }
 }
