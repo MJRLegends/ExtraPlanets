@@ -879,6 +879,33 @@ public class ExtraPlanets_Recipes {
 		// Filter
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), new Object[] { "CPC", "MMM", "CPC", 'C', new ItemStack(ExtraPlanets_Items.CLOTH), 'P', Items.paper, 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2) });
 
+		//Candy Cane
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 0), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 4)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 6)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 12)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 14)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 13)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 9)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 10)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 5)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 3)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 0)});
+
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 0), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 4)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 6)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 12)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 14)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 13)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 9)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 10)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 5)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 3)});
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.DYE, 1, 0)});
+		
 		if (Config.PRESSURE || Config.RADIATION) {
 			// Tier 1 - 4 Radiation Layers
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH });
