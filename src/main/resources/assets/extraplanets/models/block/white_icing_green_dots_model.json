@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+		"particle": "extraplanets:blocks/white_icing",
+        "down": "extraplanets:blocks/white_icing",
+        "up": "extraplanets:blocks/white_icing_green_dots",
+        "north": "extraplanets:blocks/white_icing",
+        "east": "extraplanets:blocks/white_icing",
+        "south": "extraplanets:blocks/white_icing",
+        "west": "extraplanets:blocks/white_icing"
+    }
+}
