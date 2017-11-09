@@ -112,7 +112,7 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 				return EnumActionResult.FAIL;
 			}
 		}
-		return EnumActionResult.PASS;
+		return EnumActionResult.SUCCESS;
 	}
 
 	@Override

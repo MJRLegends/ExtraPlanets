@@ -101,7 +101,7 @@ public class ElectricRocket extends Item implements IHoldableItem {
 				return EnumActionResult.FAIL;
 			}
 		}
-		return EnumActionResult.PASS;
+		return EnumActionResult.SUCCESS;
 	}
 
 	@Override
