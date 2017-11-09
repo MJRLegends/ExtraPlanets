@@ -7,6 +7,7 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
+import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.Entity;
@@ -27,8 +28,10 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
@@ -124,7 +127,8 @@ public class MainHandlerServer {
 				addZ = 10;
 			int lightingSpawnChance = rand.nextInt(100);
 			if (lightingSpawnChance == 10) {
-				event.player.world.addWeatherEffect(new EntityLightningBolt(event.player.world, event.player.posX + addX, event.player.world.getTopSolidOrLiquidBlock(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(), event.player.posZ + addZ, false));
+				event.player.world.addWeatherEffect(new EntityLightningBolt(event.player.world, event.player.posX + addX, event.player.world.getTopSolidOrLiquidBlock(new BlockPos(event.player.posX + addX, 0, (int) event.player.posZ + addZ)).getY(),
+						event.player.posZ + addZ, false));
 			}
 		}
 	}
@@ -248,8 +252,8 @@ public class MainHandlerServer {
 				&& !(playerMP.inventory.armorInventory.get(2).getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory.get(3).getItem() instanceof IRadiationSuit)) {
 			damageModifer = 0.1;
 			doDamage = true;
-		} else if (playerMP.inventory.armorInventory.get(0).getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory.get(1).getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory.get(2).getItem() instanceof IRadiationSuit
-				&& playerMP.inventory.armorInventory.get(3).getItem() instanceof IRadiationSuit) {
+		} else if (playerMP.inventory.armorInventory.get(0).getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory.get(1).getItem() instanceof IRadiationSuit
+				&& playerMP.inventory.armorInventory.get(2).getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory.get(3).getItem() instanceof IRadiationSuit) {
 			doArmorCheck = true;
 			doDamage = false;
 		} else {
@@ -323,9 +327,21 @@ public class MainHandlerServer {
 		if (event.player.world.isRemote == false) {
 			if (event.player.world.provider instanceof CustomWorldProviderSpace) {
 				EntityPlayer player = event.player;
-				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", You're now subject to " + ((CustomWorldProviderSpace) event.player.world.provider).getSolarRadiationLevel() + "% Radiation!"));
+				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", You're now subject to "
+						+ ((CustomWorldProviderSpace) event.player.world.provider).getSolarRadiationLevel() + "% Radiation!"));
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", You can use Anti-Rad Drinks or Sleeping to help reverse the damage!"));
 			}
 		}
 	}
+
+	/*
+	 * Debug use for changing dimensions since /dimensiontp screen is broke in dev workspace
+	 */
+//	@SubscribeEvent(priority = EventPriority.LOWEST)
+//	public void onPlayerJoin(PlayerLoggedInEvent event) {
+//		if (event.player instanceof EntityPlayer) {
+//			final WorldServer world = (WorldServer) ((EntityPlayerMP) event.player).world;
+//			WorldUtil.transferEntityToDimension((EntityPlayerMP) event.player, Config.KEPLER22B_ID, world);
+//		}
+//	}
 }
