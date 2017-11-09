@@ -444,6 +444,38 @@ tile.red_sandstone.name=红沙石
 tile.orange_sand.name=橘沙
 tile.orange_sandstone.name=橘沙石
 
+#CandyCane/Cake/Icing Blocks
+tile.candy_blocks.candy_cane_red.name=Red Candy Cane
+tile.candy_blocks.candy_cane_green.name=Green Candy Cane
+tile.candy_blocks.candy_cane_blue.name=Blue Candy Cane
+tile.candy_blocks.candy_cane_orange.name=Orange Candy Cane
+tile.candy_blocks.candy_cane_magenta.name=Magenta Candy Cane
+tile.candy_blocks.candy_cane_pink.name=Pink Candy Cane
+tile.candy_blocks.candy_cane_lime.name=Lime Candy Cane
+tile.candy_blocks.candy_cane_purple.name=Purple Candy Cane
+tile.candy_blocks.candy_cane_brown.name=Brown Candy Cane
+tile.candy_blocks.candy_cane_black.name=Black Candy Cane
+
+tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=Red Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=Green Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=Blue Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=Orange Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=Magenta Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=Pink Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Lime Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Purple Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Brown Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Black Candy Cane (Horizontal)
+
+tile.cake_blocks.cake_block.name=Cake Block
+tile.cake_blocks.cake_block_red_velvet.name=Red Velvet Cake Block
+tile.cake_blocks.cake_block_chocolate.name=Chocolate Cake Block
+tile.cake_blocks.white_icing_red_dots.name=White Icing with Red Dots
+tile.cake_blocks.white_icing_green_dots.name=White Icing with Green Dots
+tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots
+tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots
+tile.cake_blocks.cookie_rocks.name=Cookie Rocks
+
 #Decorative Blocks
 tile.decorative_blocks.marble.name=大理石
 tile.decorative_blocks.marble_bricks.name=大理石砖
