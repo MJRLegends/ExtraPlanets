@@ -112,7 +112,7 @@ public class Tier10Rocket extends Item implements IHoldableItem {
 				return EnumActionResult.FAIL;
 			}
 		}
-		return EnumActionResult.PASS;
+		return EnumActionResult.SUCCESS;
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
