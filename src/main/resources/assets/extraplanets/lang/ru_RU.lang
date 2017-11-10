@@ -476,6 +476,8 @@ tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots
 tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots
 tile.cake_blocks.cookie_rocks.name=Cookie Rocks
 
+tile.white_sugar_cane.name=White Sugar Cane Block
+
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Мрамор
 tile.decorative_blocks.marble_bricks.name=Мраморный блок
@@ -1025,6 +1027,7 @@ item.thermal_cloth.tier4_thermal_cloth.name=Теплоустойчивая тк�
 item.thermal_cloth.tier5_thermal_cloth.name=Теплоустойчивая ткань 5-го уровня
 item.tier5_items.ash.name=Порошковая зола
 item.geiger_counter.name=Счётчик Гейгера
+item.white_sugar_cane_item.name=White Sugar Cane
 
 geiger.counter.desc=Щелкните ПКМ, чтобы увидеть ваш текущий уровень радиации!
 geiger.counter.location.desc=Могут быть получены из подземелья Меркурия!
@@ -1148,6 +1151,8 @@ tile.infected_water.name=Зараженная вода
 tile.methane.name=Жидкий метан
 tile.nitrogen_ice.name=Жидкий замерзший азот
 tile.liquid_hydrocarbon.name=Жидкий углеводород
+tile.liquid_chocolate.name=Liquid Chocolate
+tile.liquid_caramel.name=Liquid Caramel
 
 fluid.glowstone_fluid=Жидкая светящиеся пыль
 fluid.magma_fluid=Жидкая магма
@@ -1160,6 +1165,8 @@ fluid.infected_water_fluid=Зараженная вода
 fluid.methane_fluid=Жидкий метан
 fluid.nitrogen_ice_fluid=Жидкий замерзший азот
 fluid.liquid_hydrocarbon_fluid=Жидкий углеводород
+fluid.liquid_chocolate.name=Liquid Chocolate
+fluid.liquid_caramel.name=Liquid Caramel
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Предупреждение о высоком давлении
