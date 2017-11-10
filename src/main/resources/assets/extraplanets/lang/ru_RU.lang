@@ -1165,8 +1165,8 @@ fluid.infected_water_fluid=Зараженная вода
 fluid.methane_fluid=Жидкий метан
 fluid.nitrogen_ice_fluid=Жидкий замерзший азот
 fluid.liquid_hydrocarbon_fluid=Жидкий углеводород
-fluid.liquid_chocolate.name=Liquid Chocolate
-fluid.liquid_caramel.name=Liquid Caramel
+fluid.liquid_chocolate_fluid=Liquid Chocolate
+fluid.liquid_caramel_fluid=Liquid Caramel
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Предупреждение о высоком давлении
