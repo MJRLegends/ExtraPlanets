@@ -81,7 +81,7 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 			generator.generate(this, this.worldObj, chunkX, chunkZ, chunkprimer);
 		}
 
-		this.onChunkProvide(chunkX, chunkX, chunkprimer);
+		this.onChunkProvide(chunkX, chunkZ, chunkprimer);
 
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
 		byte[] abyte = chunk.getBiomeArray();
