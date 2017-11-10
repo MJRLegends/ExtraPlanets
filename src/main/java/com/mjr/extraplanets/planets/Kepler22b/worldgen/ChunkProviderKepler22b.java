@@ -45,6 +45,6 @@ public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		this.ravineGenerator.generate(worldObj, cX, cX, primer);
+		this.ravineGenerator.generate(worldObj, cX, cZ, primer);
 	}
 }
