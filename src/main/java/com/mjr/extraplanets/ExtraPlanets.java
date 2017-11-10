@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.oredict.RecipeSorter;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -116,6 +117,7 @@ import com.mjr.extraplanets.schematic.SchematicTier9Rocket;
 import com.mjr.extraplanets.schematic.SchematicTierElectricRocket;
 import com.mjr.extraplanets.schematic.SchematicVenusRover;
 import com.mjr.extraplanets.util.RegisterHelper;
+import com.mjr.extraplanets.util.ShapedNBTRecipe;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS)
 public class ExtraPlanets {
@@ -315,6 +317,8 @@ public class ExtraPlanets {
 		// Register Deconstructor Compatibility
 		RegisterDeconstructorCompatibility();
 
+		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
+		
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
 	}
