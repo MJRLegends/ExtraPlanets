@@ -6,7 +6,6 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
@@ -50,7 +49,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		this.dungeonGenerator.generate(this.world, cX, cZ, primer);
+		this.dungeonGenerator.generate(this.worldObj, cX, cZ, primer);
 	}
 
 	@Override
@@ -70,7 +69,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 	@Override
 	protected void decoratePlanet(World world, Random rand, int x, int z) {
 		this.neptuneBiomeDecorator.decorate(worldObj, rand, x, z);
-		//this.neptuneBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
+		// this.neptuneBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
 
 }
