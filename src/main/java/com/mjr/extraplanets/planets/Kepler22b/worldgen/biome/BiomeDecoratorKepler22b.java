@@ -232,7 +232,6 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			if (generateCandyCanes) {
 				if (random.nextInt(5) == 1) {
 					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(16)), 0, pos.getZ() + (random.nextInt(16))));
-					blockpos = blockpos.down(2);
 					int randomNum = random.nextInt(7) + 0;
 					switch (randomNum) {
 					default:
