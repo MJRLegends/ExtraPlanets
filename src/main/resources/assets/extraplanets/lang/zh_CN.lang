@@ -476,6 +476,8 @@ tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots
 tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots
 tile.cake_blocks.cookie_rocks.name=Cookie Rocks
 
+tile.white_sugar_cane.name=White Sugar Cane Block
+
 #Decorative Blocks
 tile.decorative_blocks.marble.name=大理石
 tile.decorative_blocks.marble_bricks.name=大理石砖
@@ -1025,6 +1027,7 @@ item.thermal_cloth.tier4_thermal_cloth.name=4阶热防护布料
 item.thermal_cloth.tier5_thermal_cloth.name=5阶热防护布料
 item.tier5_items.ash.name=粉尘
 item.geiger_counter.name=盖氏计量器
+item.white_sugar_cane_item.name=White Sugar Cane
 
 geiger.counter.desc=右键以查看你当前的辐射等级！
 geiger.counter.location.desc=可在水星地牢中获得！
@@ -1148,6 +1151,8 @@ tile.infected_water.name=污染水
 tile.methane.name=液态甲烷
 tile.nitrogen_ice.name=液氮冰
 tile.liquid_hydrocarbon.name=液态烃
+tile.liquid_chocolate.name=Liquid Chocolate
+tile.liquid_caramel.name=Liquid Caramel
 
 fluid.glowstone_fluid=萤石水
 fluid.magma_fluid=岩浆水
@@ -1160,6 +1165,8 @@ fluid.infected_water_fluid=污染水
 fluid.methane_fluid=液态甲烷
 fluid.nitrogen_ice_fluid=液氮冰
 fluid.liquid_hydrocarbon_fluid=液态烃
+fluid.liquid_chocolate.name=Liquid Chocolate
+fluid.liquid_caramel.name=Liquid Caramel
 
 #Gui/Damage Sources
 gui.warning.high.pressure=高压警告

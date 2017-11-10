@@ -475,6 +475,8 @@ tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots
 tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots
 tile.cake_blocks.cookie_rocks.name=Cookie Rocks
 
+tile.white_sugar_cane.name=White Sugar Cane Block
+
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Marble
 tile.decorative_blocks.marble_bricks.name=Marble Bricks
@@ -1024,6 +1026,7 @@ item.thermal_cloth.tier4_thermal_cloth.name=Tier 4 Thermal Cloth
 item.thermal_cloth.tier5_thermal_cloth.name=Tier 5 Thermal Cloth
 item.tier5_items.ash.name=Ash Powder
 item.geiger_counter.name=Geiger Counter
+item.white_sugar_cane_item.name=White Sugar Cane
 
 geiger.counter.desc=Right Click to see your Current Radiation Level!
 geiger.counter.location.desc=Can be Obtained from a Mercury Dungeon!
@@ -1147,6 +1150,8 @@ tile.infected_water.name=Infected Water
 tile.methane.name=Liquid Methane
 tile.nitrogen_ice.name=Liquid Nitrogen Ice
 tile.liquid_hydrocarbon.name=Liquid Hydrocarbon
+tile.liquid_chocolate.name=Liquid Chocolate
+tile.liquid_caramel.name=Liquid Caramel
 
 fluid.glowstone_fluid=Piedra luminosa líquida
 fluid.magma_fluid=Magma líquido
@@ -1159,6 +1164,8 @@ fluid.infected_water_fluid=Infected Water
 fluid.methane_fluid=Liquid Methane
 fluid.nitrogen_ice_fluid=Liquid Nitrogen Ice
 fluid.liquid_hydrocarbon_fluid=Liquid Hydrocarbon
+fluid.liquid_chocolate.name=Liquid Chocolate
+fluid.liquid_caramel.name=Liquid Caramel
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
