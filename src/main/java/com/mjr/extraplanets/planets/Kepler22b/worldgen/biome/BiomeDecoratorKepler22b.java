@@ -202,7 +202,6 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			if (generateHuts) {
 				if (random.nextInt(200) == 1) {
 					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + (random.nextInt(16) + 8), 0, this.chunkPos.getZ() + (random.nextInt(16) + 8)));
-					blockpos = blockpos.down(2);
 					int randomNum = random.nextInt(7) + 0;
 					switch (randomNum) {
 					case 1:
