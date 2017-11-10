@@ -11,6 +11,7 @@ import net.minecraft.world.gen.structure.StructureStart;
 import net.minecraftforge.fml.common.FMLLog;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageField2;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageHouse;
