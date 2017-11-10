@@ -141,7 +141,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			if (random.nextInt(100) == 1) {
 				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-				blockpos.down(5);
+				blockpos = blockpos.down(4);
 				(new WorldGenBlueTower()).generate(worldIn, random, blockpos);
 				break;
 			}
@@ -204,7 +204,6 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			if (generateHuts) {
 				if (random.nextInt(200) == 1) {
 					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(16) + 8), 0, pos.getZ() + (random.nextInt(16) + 8)));
-					blockpos.down(2);
 					int randomNum = random.nextInt(7) + 0;
 					switch (randomNum) {
 					case 1:
@@ -233,7 +232,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			if (generateCandyCanes) {
 				if (random.nextInt(5) == 1) {
 					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(16)), 0, pos.getZ() + (random.nextInt(16))));
-					blockpos.down(2);
+					blockpos = blockpos.down(2);
 					int randomNum = random.nextInt(7) + 0;
 					switch (randomNum) {
 					default:
