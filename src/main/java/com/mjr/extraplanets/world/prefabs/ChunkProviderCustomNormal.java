@@ -281,7 +281,7 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(chunkX * var7 + chunkZ * var9 ^ this.worldObj.getSeed());
 		biomegenbase.decorate(this.worldObj, this.rand, pos);
-		decoratePlanet(this.worldObj, this.rand, x, z);
+		this.decoratePlanet(this.worldObj, this.rand, x, z);
 		BlockFalling.fallInstantly = false;
 	}
 
