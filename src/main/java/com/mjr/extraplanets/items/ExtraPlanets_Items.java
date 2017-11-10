@@ -9,6 +9,8 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
@@ -187,6 +189,8 @@ public class ExtraPlanets_Items {
 
 	public static Item GEIGER_COUNTER;
 
+	public static Item WHITE_SUGAR_CANE;
+
 	public static void init() {
 		initializeItems();
 		registerItems();
@@ -350,6 +354,7 @@ public class ExtraPlanets_Items {
 		if (Config.ERIS && Config.KEPLER22B)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
+		WHITE_SUGAR_CANE = new ItemBlockSpecial(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
 	private static void registerItems() {

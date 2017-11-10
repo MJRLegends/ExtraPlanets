@@ -276,6 +276,8 @@ public class ExtraPlanets_Blocks {
 	public static Block CANDY_BLOCKS_HORIZONTAL;
 	public static Block CAKE_BLOCKS;
 	
+	public static BlockWhiteSugerCane WHITE_SUGAR_CANE;
+
 	public static void init() {
 		initializeBlocks();
 		if (Config.SLABS_AND_STAIRS)
@@ -418,6 +420,7 @@ public class ExtraPlanets_Blocks {
 		CANDY_BLOCKS = new BlockCandyBlocks("candy_blocks");
 		CANDY_BLOCKS_HORIZONTAL = new BlockCandyBlocksHorizontal("candy_blocks_horizontal");
 		CAKE_BLOCKS = new BlockCakeBlocks("cake_blocks");
+		WHITE_SUGAR_CANE = new BlockWhiteSugerCane("white_sugar_cane");
 	}
 
 	public static void initializeStairs() {
@@ -665,6 +668,7 @@ public class ExtraPlanets_Blocks {
 		GameRegistry.registerBlock(CANDY_BLOCKS, ItemBlockCandyBlocks.class, CANDY_BLOCKS.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(CANDY_BLOCKS_HORIZONTAL, ItemBlockCandyBlocksHorizontal.class, CANDY_BLOCKS_HORIZONTAL.getUnlocalizedName().substring(5));		
 		GameRegistry.registerBlock(CAKE_BLOCKS, ItemBlockCakeBlocks.class, CAKE_BLOCKS.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerStairs() throws NoSuchMethodException {
