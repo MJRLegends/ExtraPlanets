@@ -44,7 +44,7 @@ public class PurifierRecipeHandler implements IRecipeHandler<PurifierRecipeWrapp
         {
             GCLog.severe(this.getClass().getSimpleName() + " JEI recipe has wrong number of inputs!");
         }
-        if (recipe.getOutputs().size() != 1)
+        if (recipe.getOutputs().size() != 2)
         {
             GCLog.severe(this.getClass().getSimpleName() + " JEI recipe has wrong number of outputs!");
         }
