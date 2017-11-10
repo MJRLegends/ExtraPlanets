@@ -445,8 +445,8 @@ container.advanced.fuelloader.name=Улучшенный загрузчик то�
 container.ultimate.fuelloader.name=Максимальный загрузчик топлива
 
 #GUI Messages and Texts
-gui.message.power.name=Мощность транспорта
-gui.message.power.message.name=Мощность
+gui.message.power.name=Заряд транспорта
+gui.message.power.message.name=Заряд
 gui.button.loadpower.name=Начать зарядку
 
 #Other Blocks
@@ -485,7 +485,7 @@ item.venusRover.name=Венерианский ровер
 #Vehicle Electic Parts
 item.electricParts.batteryTier1.name=Аккумулятор для транспорта 1-го уровня
 item.electricParts.batteryTier2.name=Аккумулятор для транспорта 2-го уровня
-item.electricParts.sparkPlug.name=Vehicle Spark Plug
+item.electricParts.sparkPlug.name=Свеча зажигания транспорта
 item.electricParts.electricWheelsTier1.name=Колёса 1-го уровня
 item.electricParts.electricWheelsTier2.name=Колёса 2-го уровня
 
@@ -808,24 +808,24 @@ item.greenDiamondChest.name=Нагрудник из зелёного алмаз�
 item.greenDiamondLegings.name=Поножи из зелёного алмаза
 item.greenDiamondBoots.name=Ботинки из зелёного алмаза
 
-item.tier2ThermalHelm.name=Tier 2 Thermal Padding Helm
-item.tier2ThermalChestplate.name=Tier 2 Thermal Padding Chestpiece
-item.tier2ThermalLeggings.name=Tier 2 Thermal Padding Leggings
-item.tier2ThermalBoots.name=Tier 2 Thermal Padding Boots
+item.tier2ThermalHelm.name=Тепловая набивка шлема 2-го уровня
+item.tier2ThermalChestplate.name=Тепловая набивка нагрудника 2-го уровня
+item.tier2ThermalLeggings.name=Тепловая набивка поножи 2-го уровня
+item.tier2ThermalBoots.name=Тепловая набивка ботинок 2-го уровня
 
-item.tier3ThermalHelm.name=Tier 3 Thermal Padding Helm
-item.tier3ThermalChestplate.name=Tier 3 Thermal Padding Chestpiece
-item.tier3ThermalLeggings.name=Tier 3 Thermal Padding Leggings
-item.tier3ThermalBoots.name=Tier 3 Thermal Padding Boots
+item.tier3ThermalHelm.name=Тепловая набивка шлема 3-го уровня
+item.tier3ThermalChestplate.name=Тепловая набивка нагружника 3-го уровня
+item.tier3ThermalLeggings.name=Тепловая набивка поножи 3-го уровня
+item.tier3ThermalBoots.name=Тепловая набивка ботинок 3-го уровня
 
-item.tier4ThermalHelm.name=Tier 4 Thermal Padding Helm
-item.tier4ThermalChestplate.name=Tier 4 Thermal Padding Chestpiece
-item.tier4ThermalLeggings.name=Tier 4 Thermal Padding Leggings
-item.tier4ThermalBoots.name=Tier 4 Thermal Padding Boots
+item.tier4ThermalHelm.name=Тепловая набивка шлема 4-го уровня
+item.tier4ThermalChestplate.name=Тепловая набивка нагрудника 4-го уровня
+item.tier4ThermalLeggings.name=Тепловая набивка поножи 4-го уровня
+item.tier4ThermalBoots.name=Тепловая набивка ботинок 4-го уровня
 
-tier2.information=Required for Venus and Mercury
-tier3.information=Required for Jupiter and Saturn including their moons
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
+tier2.information=Требуется для Венеры и Меркурия
+tier3.information=Требуется для Юпитера и Сатурна, включая их луны
+tier4.information=Требуется для Урана, Нептуна, Плутона и Эриды, включая их луны
 
 item.thermalCloth.tier2ThermalCloth.name=Tier 2 Thermal Cloth
 item.thermalCloth.tier3ThermalCloth.name=Tier 3 Thermal Cloth
@@ -855,7 +855,7 @@ item.cannedfood.dehydratedBeef.name=Дегидратированный стей�
 currently.unused.name=В настоящее время не используется!
 
 #Entities
-entity.ProjectileTNT.name=Снаряд TNT
+entity.ProjectileTNT.name=Снаряд динамита
 
 entity.ExtraPlanets.ExtraPlanetsEntityTier4Rocket.name=Ракета 4-го уровня
 entity.ExtraPlanets.ExtraPlanetsEntityTier5Rocket.name=Ракета 5-го уровня
@@ -877,7 +877,7 @@ entity.ExtraPlanetsEvolvedMagmaCubeBoss.name=Эволюционировавши�
 entity.ExtraPlanetsEvolvedIceSlimeBoss.name=Эволюционировавший слизень-босс
 entity.ExtraPlanetsEvolvedGhastBoss.name=Эволюционировавший гаст-босс
 entity.ExtraPlanetsEvolvedSnowmanBoss.name=Эволюционировавший снеговик-босс
-entity.ExtraPlanetsEvolvedFireBatBoss.name=Evolved Fire Bat Boss
+entity.ExtraPlanetsEvolvedFireBatBoss.name=Эволюционировавшая огненная летучая мышь-босс
 
 entity.ExtraPlanetsEvolvedWitch.name=Эволюционировавшая ведьма
 entity.ExtraPlanetsEvolvedMagmaCube.name=Эволюционировавший адский слизень
