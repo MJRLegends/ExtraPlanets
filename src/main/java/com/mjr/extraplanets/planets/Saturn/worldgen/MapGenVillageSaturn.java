@@ -11,6 +11,7 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageField2;
 import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageHouse;
