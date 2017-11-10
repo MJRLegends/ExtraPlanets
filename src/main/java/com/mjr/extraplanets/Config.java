@@ -161,6 +161,7 @@ public class Config {
 	public static int URANUS_FROZEN_SEA_BIOME_ID;
 	public static int URANUS_SNOW_LANDS_BIOME_ID;
 	public static int NEPTUNE_BIOME_ID;
+	public static int NEPTUNE_RADIO_ACTIVE_WATER_SEA_ID;
 	public static int PLUTO_BIOME_ID;
 	public static int ERIS_BIOME_ID;
 
@@ -472,6 +473,7 @@ public class Config {
 		JUPITER_SANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Sands Biome ID", 196, "[range: 0 ~ 255, default: 196]").getInt();
 		KEPLER22B_CANDY_LAND_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Candy Land Biome ID", 197, "[range: 0 ~ 255, default: 196]").getInt();
 		SATURN_HYDROCARBON_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn HydroCarbon Sea Biome ID", 198, "[range: 0 ~ 255, default: 196]").getInt();
+		NEPTUNE_RADIO_ACTIVE_WATER_SEA_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Radio Active Water Sea Biome ID", 199, "[range: 0 ~ 255, default: 196]").getInt();
 		
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
