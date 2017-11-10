@@ -366,7 +366,7 @@ tile.advanced_launch_pad.powered.rocket.desc=Используется для з�
 tile.advanced_fuel_loader.name=Улучшенный загрузчик топлива
 tile.ultimate_fuel_loader.name=Максимальный загрузчик топлива
 tile.vehicle_charger.name=Зарядное устройство для транспорта (WIP)
-tile.basic_purifier.name=Basic Purifier
+tile.basic_purifier.name=Базовый очиститель
 
 #Machine Containers
 container.solarhybrid.name=Гибридная солнечная панель
@@ -385,16 +385,16 @@ container.advanced.fuelloader.name=Улучшенный загрузчик то�
 container.ultimate.fuelloader.name=Максимальный загрузчик топлива
 container.basic.solar.evaporation.chamber.name=Базовая солнечная испарительная камера
 container.vehicle.charger.name=Зарядное устройство для транспорта
-container.basic.purifier.name=Purifier
+container.basic.purifier.name=Очиститель
 
 #Machine GUI Components
-gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
-gui.message.salt_water.name=Crystallized Water
-gui.salt_water_input.desc.0=Place Liquid Crystallized Water bucket into
-gui.salt_water_input.desc.1=this slot to fill the tank.
-gui.salt_water_input.desc.2=Each Liquid Crystallized Water Bucket will give 1000
-gui.salt_water_output.desc.0=Place empty vanilla bucket into
-gui.salt_water_output.desc.1=this slot to fill them from the tank
+gui.salt_water_tank.desc.4=Бак с жидкой кристаллической водой
+gui.message.salt_water.name=Кристаллическая вода
+gui.salt_water_input.desc.0=Поместите ведро с жидкой кристаллической водой
+gui.salt_water_input.desc.1=в этот слот для заполнения бака.
+gui.salt_water_input.desc.2=Каждое ведро с жидкой кристаллической водой даёт 1000mB
+gui.salt_water_output.desc.0=Поместите пустое ванильное ведро в
+gui.salt_water_output.desc.1=этот слот для заполнения его из бака
 gui.status.injecting.name=Впрыскивание
 gui.status.smasher.name=Разрушение
 gui.status.crystallizing.name=Кристаллизация
@@ -405,26 +405,26 @@ gui.message.power.rocket.name=Электрическая ракета
 gui.message.power.message.name=Заряд
 gui.button.loadpower.name=Начать зарядку
 gui.powered.inv.name=Инвентарь / Заряд
-gui.status.purifiering.name=Purifiering
-gui.radioactive_water_tank.desc.4=Radioactive Water Tank
-gui.message.radioactive_water.name=Radioactive Water 
-gui.infected_water_tank.desc.4=Infected Water Tank
-gui.message.infected_water.name=Infected Water
-gui.clean_water_tank.desc.4=Clean Water Tank
-gui.message.clean_water.name=Clean Water
-gui.radioactive_water_input.desc.0=Place Radioactive Water bucket into
-gui.radioactive_water_input.desc.1=this slot to fill the tank.
-gui.radioactive_water_input.desc.2=Each Radioactive Water Bucket will give 1000mB
-gui.infected_water_input.desc.0=Place Infected Water bucket into
-gui.infected_water_input.desc.1=this slot to fill the tank.
-gui.infected_water_input.desc.2=Each Infected Water Bucket will give 1000mB
-gui.clean_water_output.desc.0=Place empty vanilla bucket into
-gui.clean_water_output.desc.1=this slot to fill them from the tank
-gui.bucket.message.finding=You can obtain this Fluid
-gui.bucket.message.finding.2=by Finding it on Planets/Moons
-gui.bucket.message.crafting=Press R to See How to Obtain
-gui.status.missing.inputs.name=Missing Items/Fluids
-gui.status.missing.power.name=Missing Power
+gui.status.purifiering.name=Очистка
+gui.radioactive_water_tank.desc.4=Бак с радиоктивной водой
+gui.message.radioactive_water.name=Радиоактивная вода
+gui.infected_water_tank.desc.4=Бак с зараженной водой
+gui.message.infected_water.name=Зараженная вода
+gui.clean_water_tank.desc.4=Бак с чистой водой
+gui.message.clean_water.name=Чистая вода
+gui.radioactive_water_input.desc.0=Поместите ведро с радиоактивной водой
+gui.radioactive_water_input.desc.1=в этот слот для заполнения бака.
+gui.radioactive_water_input.desc.2=Каждое ведро с радиоактивной водой даёт 1000mB
+gui.infected_water_input.desc.0=Поместите ведро с зараженной водой
+gui.infected_water_input.desc.1=в этот слот для заполнения бака.
+gui.infected_water_input.desc.2=Каждое ведро с зараженной водой даёт 1000mB
+gui.clean_water_output.desc.0=Поместите пустое ванильное ведро в
+gui.clean_water_output.desc.1=этот слот для заполнения его из бака
+gui.bucket.message.finding=Вы можете получить эту жидкость,
+gui.bucket.message.finding.2=найдя её на планетах или лунах
+gui.bucket.message.crafting=Нажмите R, чтобы посмотреть как получить
+gui.status.missing.inputs.name=Отсутствуют предметы или жидкости
+gui.status.missing.power.name=Отсутствует мощность
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Открыть инвентарь заряженного транспорта
@@ -438,7 +438,7 @@ tile.frozen_nitrogen.name=Замороженный азот
 tile.dense_ice.name=Плотный лёд
 tile.fossil.name=Блок ископаемых
 tile.ore_lead.name=Свинцовая руда
-tile.potash.name=Potash
+tile.potash.name=Карбонат калия
 tile.red_sand.name=Красный песок
 tile.red_sandstone.name=Красный песчаник
 tile.orange_sand.name=Оранжевый песок
@@ -546,9 +546,9 @@ item.item_tier8_rocket.t8Rocket.name=Ракета 8-го уровня
 item.item_tier9_rocket.t9Rocket.name=Ракета 9-го уровня
 item.item_tier10_rocket.t10Rocket.name=Ракета 10-го уровня
 item.item_tier10_electric_rocket.t10Rocket.name=Электрическая ракета 10-го уровня
-rocket_pad.tier2.desc=Needs to be placed on a Tier 2 Launch Pad
-rocket_pad.tier3.desc=Needs to be placed on a Tier 3 Launch Pad
-rocket_pad.electric.desc=Needs to be placed on a Powered Rocket Launch Pad
+rocket_pad.tier2.desc=Нужно размещать на взлётной площадке 2-го уровня
+rocket_pad.tier3.desc=Нужно размещать на взлётной площадке 3-го уровня
+rocket_pad.electric.desc=Нужно размещать на взлётной площадке для электрической ракеты
 
 #Vehicles
 item.mars_rover.name=Марсианский ровер
@@ -654,7 +654,7 @@ item.wafer.white_gem_wafer.name=Полупроводниковая пласти�
 
 #Buckets
 item.bucket_glowstone.name=Ведро светящейся пыли
-tile.salt.name=Liquid Crystallized Water
+tile.salt.name=Жидкая кристаллическая вода
 item.bucket_magma.name=Ведро магмы
 item.bucket_frozen_water.name=Ведро замерзшей воды
 item.bucket_nitrogen.name=Ведро азота
@@ -1009,8 +1009,8 @@ item.tier11_items.brown_sticks.name=Коричневая палка
 #Tools
 item.tools.sledge_hammer.name=Кувалда
 item.tools.grinding_wheel.name=Шлифовальный круг
-item.tools.mesh.name=String Mesh
-item.tools.filter.name=Filter
+item.tools.mesh.name=Строчная сетка
+item.tools.filter.name=Фильтр
 
 #Other Items
 item.apple_diamond.name=Алмазное яблоко
@@ -1044,7 +1044,7 @@ item.electric_parts.electric_wheels_tier1.name=Колесо 1-го уровня
 item.electric_parts.electric_wheels_tier2.name=Колесо 2-го уровня
 
 #Entities
-entity.ProjectileTNT.name=Снаряд TNT
+entity.ProjectileTNT.name=Снаряд динамита
 
 entity.extraplanets.EntityTier4Rocket.name=Ракета 4-го уровня
 entity.extraplanets.EntityTier5Rocket.name=Ракета 5-го уровня
@@ -1070,7 +1070,7 @@ entity.extraplanets.EvolvedMagmaCubeBoss.name=Эволюционировавши
 entity.extraplanets.EvolvedIceSlimeBoss.name=Эволюционировавший ледяной слизень-босс
 entity.extraplanets.EvolvedGhastBoss.name=Эволюционировавший гаст-босс
 entity.extraplanets.EvolvedSnowmanBoss.name=Эволюционировавший снеговик-босс
-entity.extraplanets.EvolvedFireBatBoss.name=Эволюционировавший огненный летучая мышь-босс
+entity.extraplanets.EvolvedFireBatBoss.name=Эволюционировавшая огненная летучая мышь-босс
 
 entity.extraplanets.EvolvedWitch.name=Эволюционировавшая ведьма
 entity.extraplanets.EvolvedMagmaCube.name=Эволюционировавший адский слизень
@@ -1141,7 +1141,7 @@ tile.glowstone.name=Жидкая светящиеся пыль
 tile.magma.name=Жидкая магма
 tile.nitrogen.name=Жидкий азот
 tile.frozen_water.name=Замерзшая вода
-tile.salt.name=Liquid Crystallized Water
+tile.salt.name=Жидкая кристаллическая вода
 tile.radioactive_water.name=Радиоактивная вода
 tile.clean_water.name=Чистая вода
 tile.infected_water.name=Зараженная вода
@@ -1153,7 +1153,7 @@ fluid.glowstone_fluid=Жидкая светящиеся пыль
 fluid.magma_fluid=Жидкая магма
 fluid.nitrogen_fluid=Жидкий азот
 fluid.frozen_water_fluid=Замерзшая вода
-fluid.salt_fluid=Liquid Crystallized Water
+fluid.salt_fluid=Жидкая кристаллическая вода
 fluid.radioactive_water_fluid=Радиоактивная вода
 fluid.clean_water_fluid=Чистая вода
 fluid.infected_water_fluid=Зараженная вода
@@ -1166,10 +1166,10 @@ gui.warning.high.pressure=Предупреждение о высоком дав�
 gui.warning.high.radiation=Предупреждение о высокой радиации
 death.attack.radiation=%1$s забыл радиационную защиту
 death.attack.pressure=%1$s забыл защиту от давления
-death.attack.hypothermia=%1$s died from hypothermia
-death.attack.magma=%1$s burned to death from magma
-death.attack.radiationLiquid=%1$s forgot that radiation will kill you
-death.attack.infection=%1$s got taken over by an infection
+death.attack.hypothermia=%1$s умер от гипотермии
+death.attack.magma=%1$s был сожжён до смерти от магмы
+death.attack.radiationLiquid=%1$s забыл, что радиация убивает
+death.attack.infection=%1$s заразился инфекцией
 
 #CheckList GUI Messages
 checklist.tier_3_thermal_padding.key=Оборудовать тепловой костюм 3-го уровня
