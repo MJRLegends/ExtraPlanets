@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "extraplanets:items/white_sugar_cane_item"
+    }
+}

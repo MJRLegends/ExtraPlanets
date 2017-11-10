@@ -14,5 +14,6 @@ public class BiomeGenKepler22bCandyLand extends BiomeGenBaseKepler22b {
 
 		this.getBiomeDecorator().generateHuts = false;
 		this.getBiomeDecorator().generateCandyCanes = true;
+        this.getBiomeDecorator().reedsPerChunk = 10;
 	}
 }

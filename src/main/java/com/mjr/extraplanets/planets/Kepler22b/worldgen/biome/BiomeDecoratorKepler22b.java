@@ -8,7 +8,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 
-import com.mjr.extraplanets.blocks.BlockCakeBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
@@ -30,6 +29,7 @@ import com.mjr.extraplanets.world.features.WorldGenGreenHut;
 import com.mjr.extraplanets.world.features.WorldGenLogTree;
 import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
 import com.mjr.extraplanets.world.features.WorldGenRedHut;
+import com.mjr.extraplanets.world.features.WorldGenWhiteSugerCane;
 import com.mjr.extraplanets.world.features.WorldGenYellowHut;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
@@ -261,6 +261,18 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + (random.nextInt(16) + 6), 0, this.chunkPos.getZ() + (random.nextInt(16) + 6)).down(1));
 					new WorldGenCustomLake(ExtraPlanets_Fluids.LIQUID_CARAMEL).generate(worldIn, random, blockpos, ExtraPlanets_Blocks.CAKE_BLOCKS);
 				}
+				for (int k4 = 0; k4 < this.reedsPerChunk; ++k4)
+		        {
+		            int x = random.nextInt(16) + 8;
+		            int z = random.nextInt(16) + 8;
+		            int y = worldIn.getHeight(this.chunkPos.add(x, 0, z)).getY() * 2;
+
+		            if (y > 0)
+		            {
+		                y = random.nextInt(y);
+		                new WorldGenWhiteSugerCane().generate(worldIn, random, this.chunkPos.add(x, y, z));
+		            }
+		        }
 			}
 		}
 		for (int i = 0; i < this.blueShortGrassPerChunk; i++) {

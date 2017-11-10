@@ -3,11 +3,14 @@ package com.mjr.extraplanets.items;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.item.EnumExtendedInventorySlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlockSpecial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
@@ -187,6 +190,8 @@ public class ExtraPlanets_Items {
 
 	public static Item GEIGER_COUNTER;
 
+	public static Item WHITE_SUGAR_CANE;
+
 	public static void init() {
 		initializeItems();
 		registerItems();
@@ -350,6 +355,7 @@ public class ExtraPlanets_Items {
 		if (Config.ERIS && Config.KEPLER22B)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
+		WHITE_SUGAR_CANE = new ItemBlockSpecial(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
 	private static void registerItems() {
@@ -367,7 +373,7 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.CERES) {
 			RegisterHelper.registerItem(INGOT_URANIUM, INGOT_URANIUM.getUnlocalizedName().substring(5));
-			//RegisterHelper.registerItem(BUCKET_SALT, "bucket_salt");
+			// RegisterHelper.registerItem(BUCKET_SALT, "bucket_salt");
 		}
 		if (Config.JUPITER) {
 			RegisterHelper.registerItem(TIER_5_ROCKET, TIER_5_ROCKET.getUnlocalizedName().substring(5));
@@ -378,7 +384,7 @@ public class ExtraPlanets_Items {
 
 			if (Config.BATTERIES)
 				RegisterHelper.registerItem(BATTERY_NICKEL, BATTERY_NICKEL.getUnlocalizedName().substring(5));
-			//RegisterHelper.registerItem(BUCKET_MAGMA, "bucket_magma");
+			// RegisterHelper.registerItem(BUCKET_MAGMA, "bucket_magma");
 		}
 		if (Config.SATURN) {
 			RegisterHelper.registerItem(TIER_6_ROCKET, TIER_6_ROCKET.getUnlocalizedName().substring(5));
@@ -387,7 +393,7 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_6_ITEMS, TIER_6_ITEMS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_6_KEY, TIER_6_KEY.getUnlocalizedName().substring(5));
 
-			//RegisterHelper.registerItem(BUCKET_GLOWSTONE, "bucket_glowstone");
+			// RegisterHelper.registerItem(BUCKET_GLOWSTONE, "bucket_glowstone");
 		}
 		if (Config.URANUS) {
 			RegisterHelper.registerItem(TIER_7_ROCKET, TIER_7_ROCKET.getUnlocalizedName().substring(5));
@@ -395,7 +401,7 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_7_NOSE_CONE, TIER_7_NOSE_CONE.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_7_ITEMS, TIER_7_ITEMS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_7_KEY, TIER_7_KEY.getUnlocalizedName().substring(5));
-			//RegisterHelper.registerItem(BUCKET_FROZEN_WATER, "bucket_frozen_water");
+			// RegisterHelper.registerItem(BUCKET_FROZEN_WATER, "bucket_frozen_water");
 		}
 		if (Config.NEPTUNE) {
 			RegisterHelper.registerItem(TIER_8_ROCKET, TIER_8_ROCKET.getUnlocalizedName().substring(5));
@@ -405,7 +411,7 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_8_KEY, TIER_8_KEY.getUnlocalizedName().substring(5));
 			if (Config.BATTERIES)
 				RegisterHelper.registerItem(BATTERY_ZINC, BATTERY_ZINC.getUnlocalizedName().substring(5));
-			//RegisterHelper.registerItem(BUCKET_NITROGEN, "bucket_nitrogen");
+			// RegisterHelper.registerItem(BUCKET_NITROGEN, "bucket_nitrogen");
 		}
 		if (Config.PLUTO) {
 			RegisterHelper.registerItem(TIER_9_ROCKET, TIER_9_ROCKET.getUnlocalizedName().substring(5));
@@ -504,12 +510,12 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TOOLS, TOOLS.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
-//		RegisterHelper.registerItem(BUCKET_CLEAN_WATER, "bucket_clean_water");
-//		RegisterHelper.registerItem(BUCKET_INFECTED_WATER, "bucket_infected_water");
-//		RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
-//		RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
-//		RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
-//		RegisterHelper.registerItem(BUCKET_LIQUID_HYDROCARBON, "bucket_liquid_hydrocarbon");
+		// RegisterHelper.registerItem(BUCKET_CLEAN_WATER, "bucket_clean_water");
+		// RegisterHelper.registerItem(BUCKET_INFECTED_WATER, "bucket_infected_water");
+		// RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
+		// RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
+		// RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
+		// RegisterHelper.registerItem(BUCKET_LIQUID_HYDROCARBON, "bucket_liquid_hydrocarbon");
 
 		RegisterHelper.registerItem(TIER_1_EQUIPMENT_KIT, TIER_1_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_2_EQUIPMENT_KIT, TIER_2_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
@@ -519,6 +525,7 @@ public class ExtraPlanets_Items {
 		if (Config.ERIS && Config.KEPLER22B)
 			RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 	}
 
 	public static void OreDictionaryIngotsRegister() {
