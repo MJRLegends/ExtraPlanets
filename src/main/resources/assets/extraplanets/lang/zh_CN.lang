@@ -1165,8 +1165,8 @@ fluid.infected_water_fluid=污染水
 fluid.methane_fluid=液态甲烷
 fluid.nitrogen_ice_fluid=液氮冰
 fluid.liquid_hydrocarbon_fluid=液态烃
-fluid.liquid_chocolate.name=Liquid Chocolate
-fluid.liquid_caramel.name=Liquid Caramel
+fluid.liquid_chocolate_fluid=Liquid Chocolate
+fluid.liquid_caramel_fluid=Liquid Caramel
 
 #Gui/Damage Sources
 gui.warning.high.pressure=高压警告

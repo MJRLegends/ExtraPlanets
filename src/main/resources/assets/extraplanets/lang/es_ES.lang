@@ -1164,8 +1164,8 @@ fluid.infected_water_fluid=Infected Water
 fluid.methane_fluid=Liquid Methane
 fluid.nitrogen_ice_fluid=Liquid Nitrogen Ice
 fluid.liquid_hydrocarbon_fluid=Liquid Hydrocarbon
-fluid.liquid_chocolate.name=Liquid Chocolate
-fluid.liquid_caramel.name=Liquid Caramel
+fluid.liquid_chocolate_fluid=Liquid Chocolate
+fluid.liquid_caramel_fluid=Liquid Caramel
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
