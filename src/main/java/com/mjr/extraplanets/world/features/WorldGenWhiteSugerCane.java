@@ -2,7 +2,7 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
@@ -17,8 +17,8 @@ public class WorldGenWhiteSugerCane extends WorldGenerator {
 			if (worldIn.isAirBlock(blockpos)) {
 				BlockPos blockpos1 = blockpos.down();
 
-				if (worldIn.getBlockState(blockpos1.west()).getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL || worldIn.getBlockState(blockpos1.east()).getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL
-						|| worldIn.getBlockState(blockpos1.north()).getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL || worldIn.getBlockState(blockpos1.south()).getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL) {
+				if (worldIn.getBlockState(blockpos1.west()).getBlock().getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL || worldIn.getBlockState(blockpos1.east()).getBlock().getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL
+						|| worldIn.getBlockState(blockpos1.north()).getBlock().getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL || worldIn.getBlockState(blockpos1.south()).getBlock().getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL) {
 					int j = 2 + rand.nextInt(rand.nextInt(3) + 1);
 
 					for (int k = 0; k < j; ++k) {

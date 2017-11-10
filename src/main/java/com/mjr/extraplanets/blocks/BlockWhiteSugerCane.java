@@ -5,18 +5,18 @@ import java.util.Random;
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
-import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,52 +27,53 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class BlockWhiteSugerCane extends Block implements net.minecraftforge.common.IPlantable {
 	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 15);
-	protected static final AxisAlignedBB REED_AABB = new AxisAlignedBB(0.125D, 0.0D, 0.125D, 0.875D, 1.0D, 0.875D);
 
 	protected BlockWhiteSugerCane(String name) {
-		super(Material.PLANTS);
+		super(Material.plants);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
+        float f = 0.375F;
+        this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 1.0F, 0.5F + f);
 		this.setTickRandomly(true);
 		this.setHardness(0.0F);
-		this.setSoundType(SoundType.PLANT);
 		this.setUnlocalizedName(name);
 	}
 
-	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		return REED_AABB;
-	}
 
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if (worldIn.getBlockState(pos.down()).getBlock() == ExtraPlanets_Blocks.WHITE_SUGAR_CANE || this.checkForDrop(worldIn, pos, state)) {
-			if (worldIn.isAirBlock(pos.up())) {
-				int i;
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    {
+        if (worldIn.getBlockState(pos.down()).getBlock() == Blocks.reeds || this.checkForDrop(worldIn, pos, state))
+        {
+            if (worldIn.isAirBlock(pos.up()))
+            {
+                int i;
 
-				for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i) {
-					;
-				}
+                for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i)
+                {
+                    ;
+                }
 
-				if (i < 3) {
-					int j = ((Integer) state.getValue(AGE)).intValue();
+                if (i < 3)
+                {
+                    int j = ((Integer)state.getValue(AGE)).intValue();
 
-					if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, pos, state, true)) {
-						if (j == 15) {
-							worldIn.setBlockState(pos.up(), this.getDefaultState());
-							worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(0)), 4);
-						} else {
-							worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
-						}
-						net.minecraftforge.common.ForgeHooks.onCropsGrowPost(worldIn, pos, state, worldIn.getBlockState(pos));
-					}
-				}
-			}
-		}
-	}
+                    if (j == 15)
+                    {
+                        worldIn.setBlockState(pos.up(), this.getDefaultState());
+                        worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(0)), 4);
+                    }
+                    else
+                    {
+                        worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
+                    }
+                }
+            }
+        }
+    }
 
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
 		IBlockState state = worldIn.getBlockState(pos.down());
 		Block block = state.getBlock();
-		if (block.canSustainPlant(state, worldIn, pos.down(), EnumFacing.UP, this))
-			return true;
+        if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this)) return true;
 
 		if (block == this) {
 			return true;
@@ -84,7 +85,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 			for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
 				IBlockState iblockstate = worldIn.getBlockState(blockpos.offset(enumfacing));
 
-				if (iblockstate.getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL) {
+				if (iblockstate.getBlock().getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL) {
 					return true;
 				}
 			}
@@ -116,7 +117,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 
 	@Nullable
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
-		return NULL_AABB;
+		return null;
 	}
 
 	/**
@@ -150,9 +151,10 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	}
 
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.CUTOUT;
-	}
+    public EnumWorldBlockLayer getBlockLayer()
+    {
+        return EnumWorldBlockLayer.CUTOUT;
+    }
 
 	/**
 	 * Convert the BlockState into the correct metadata value
@@ -171,7 +173,8 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		return this.getDefaultState();
 	}
 
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { AGE });
-	}
+    protected BlockState createBlockState()
+    {
+        return new BlockState(this, new IProperty[] {AGE});
+    }
 }

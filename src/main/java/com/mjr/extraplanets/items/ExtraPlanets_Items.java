@@ -3,6 +3,7 @@ package com.mjr.extraplanets.items;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.item.EnumExtendedInventorySlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemReed;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -354,7 +355,7 @@ public class ExtraPlanets_Items {
 		if (Config.ERIS && Config.KEPLER22B)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
-		WHITE_SUGAR_CANE = new ItemBlockSpecial(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
+		WHITE_SUGAR_CANE = new ItemReed(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
 	private static void registerItems() {

@@ -265,12 +265,12 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		        {
 		            int x = random.nextInt(16) + 8;
 		            int z = random.nextInt(16) + 8;
-		            int y = worldIn.getHeight(this.chunkPos.add(x, 0, z)).getY() * 2;
+		            int y = worldIn.getHeight(this.field_180294_c.add(x, 0, z)).getY() * 2;
 
 		            if (y > 0)
 		            {
 		                y = random.nextInt(y);
-		                new WorldGenWhiteSugerCane().generate(worldIn, random, this.chunkPos.add(x, y, z));
+		                new WorldGenWhiteSugerCane().generate(worldIn, random, this.field_180294_c.add(x, y, z));
 		            }
 		        }
 			}
