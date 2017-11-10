@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "age=6": { "model": "extraplanets:white_sugar_cane_model" },
+		"age=5": { "model": "extraplanets:white_sugar_cane_model" },
+		"age=4": { "model": "extraplanets:white_sugar_cane_model" },
+		"age=3": { "model": "extraplanets:white_sugar_cane_model" },
+		"age=2": { "model": "extraplanets:white_sugar_cane_model" },
+		"age=1": { "model": "extraplanets:white_sugar_cane_model" },
+		"age=0": { "model": "extraplanets:white_sugar_cane_model" }
+    }
+}
