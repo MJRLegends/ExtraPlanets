@@ -34,7 +34,7 @@ public class CrystallizerRecipeHandler implements IRecipeHandler<CrystallizerRec
     @Override
     public boolean isRecipeValid(@Nonnull CrystallizerRecipeWrapper recipe)
     {
-        if (recipe.getInputs().size() != 2)
+        if (recipe.getInputs().size() != 1)
         {
             GCLog.severe(this.getClass().getSimpleName() + " JEI recipe has wrong number of inputs!");
         }
