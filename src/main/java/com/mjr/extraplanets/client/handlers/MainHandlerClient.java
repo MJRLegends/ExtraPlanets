@@ -213,7 +213,9 @@ public class MainHandlerClient {
 						|| fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) 
 						|| fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) 
 						|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID)){
+						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)){
 					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding"));
 					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2"));
 				}
