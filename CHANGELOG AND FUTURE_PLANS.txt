@@ -1,4 +1,4 @@
-TODO = Not yet done
+﻿TODO = Not yet done
 ? = Maybe
 
 =====================================Future Ideas/Suggestions=======================================
@@ -18,7 +18,7 @@ TODO = Not yet done
 v0.4.2
 *Fixes for Custom Solar Panels
 *Changed Tile Entities Pads over to the new get meta method
-*Cleaned up Cave WorldGen Class of unneeded code for all Moons and Pla… …
+*Cleaned up Cave WorldGen Class of unneeded code for all Moons and Planets
 *Cleaned up Sky Provider unneeded code for all Moons and Planets
 *Clean up, Removed unneeded code, fixed some deprecated code
 *Fixed issue #162
