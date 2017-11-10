@@ -75,7 +75,7 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 
 		itemstacks.init(0, true, 3, 2);
 		itemstacks.init(1, true, 28, 2);
-		itemstacks.init(2, true, 89, 31);
+		itemstacks.init(2, true, 69, 31);
 		itemstacks.init(3, false, 28, 2);
 		itemstacks.init(4, false, 118, 2);
 	}
