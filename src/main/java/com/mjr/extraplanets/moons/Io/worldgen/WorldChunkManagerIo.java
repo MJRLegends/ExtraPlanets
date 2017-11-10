@@ -43,7 +43,26 @@ public class WorldChunkManagerIo extends WorldChunkManager {
 	public List<BiomeGenBase> getBiomesToSpawnIn() {
 		return this.biomesToSpawnIn;
 	}
+	
+	@Override
+	public float[] getRainfall(float[] par1, int x, int z, int width, int depth) {
+		IntCache.resetIntCache();
+		int[] aint = this.zoomedBiomes.getInts(x, z, width, depth);
 
+		if (par1 == null || par1.length < width * depth) {
+			par1 = new float[width * depth];
+		}
+		for (int i1 = 0; i1 < width * depth; ++i1) {
+			float f = BiomeGenBase.getBiome(aint[i1]).getIntRainfall() / 65536.0F;
+
+			if (f > 1.0F) {
+				f = 1.0F;
+			}
+			par1[i1] = f;
+		}
+		return par1;
+	}
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getTemperatureAtHeight(float par1, int par2) {
