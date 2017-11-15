@@ -1015,7 +1015,8 @@ public class ExtraPlanets_Recipes {
 			// Tier 1 - 4 Gravity Boots
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS, 'G',
 					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 'G',
+					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS, 'G',
 					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 'G',
@@ -1045,8 +1046,8 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), 'U',
 					ExtraPlanets_Items.INGOT_URANIUM, 'E', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4), 'S', GCBlocks.solarPanel });
 		}
-		
-		//Oxygen Tanks
+
+		// Oxygen Tanks
 		if (Config.OXYGEN_TANKS) {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY, 1, ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', GCItems.oxTankHeavy, 'Y',
 					new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'Z', new ItemStack(Blocks.wool, 1, 11) });
