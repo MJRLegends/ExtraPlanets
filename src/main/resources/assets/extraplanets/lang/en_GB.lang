@@ -957,7 +957,7 @@ item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank
 item.oxygen_tank_extremely_heavy_full.name=Extremely Heavy Oxygen Tank
 
 #Radiation Items
-item.iodide_salt.name=Iodided Salt
+item.iodide_salt.name=Iodized Salt
 item.potassium_iodide.name=Potassium Iodide
 item.potassium.name=Potassium
 item.potash_shards.name=Potash Shard
