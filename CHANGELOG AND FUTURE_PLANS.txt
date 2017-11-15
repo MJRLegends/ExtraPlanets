@@ -14,6 +14,34 @@
 
 
 ===========================================Released Updates===========================================
+v0.7.8
+*Fixes for "Return SUCCESS after consuming of rocket item"
+*Added Candy Land biome to Kepler22b,
+*Added 20 Candy Cane blocks,
+*Added 3 Cake Blocks,
+*Added 4 Icing Blocks,
+*Added Cookie Rocks Blocks,
+*Added Liquid Chocolate, Caramel Lakes,
+*Added WorldGen for 3 different types of Candy Canes,
+*Added World gen for 1 type of Cookie Rocks,
+*Added Biome ID for Candy Land biome to the Config
+*Added recipes to convert Candy Canes to other colours using dyes
+*Added recipes for Icing Blocks, Cookie Rocks
+*Updated lang files
+*Added White Suger Cane to Kepler22b Candy Land Biome
+*Converted Saturn over to a Multi biome system
+*Added Saturn HydroCarbon Sea Biome
+*Converted Neptune over to a Multi biome system
+*Added Neptune Radio Active Water Sea Biome
+*Updated ru_RU.lang (Thanks to rykllan)
+*Added textures for when submerged in custom fluids
+*Fixes for Kepler22b world gen
+*Fixes for Kepler22b world gen of structures
+*Added tool tips to new custom fluid buckets
+*Fixed some errors that were in the console
+*Fixes for JEI Support 
+*Fixed not registering custom recipe class
+
 v0.7.7
 *Fixes for Custom Solar Panels
 *Changed Tile Entities Pads over to the new get meta method
