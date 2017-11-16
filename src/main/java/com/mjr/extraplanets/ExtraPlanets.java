@@ -465,7 +465,8 @@ public class ExtraPlanets {
 		}
 		if (Config.NEPTUNE) {
 			Biome.registerBiome(Config.NEPTUNE_BIOME_ID, NeptuneBiomes.neptune.getBiomeName(), NeptuneBiomes.neptune);
-			Biome.registerBiome(Config.NEPTUNE_RADIO_ACTIVE_WATER_SEA_ID, NeptuneBiomes.neptuneRadioActiveWaterSea.getBiomeName(), NeptuneBiomes.neptuneRadioActiveWaterSea);
+			Biome.registerBiome(Config.NEPTUNE_RADIO_ACTIVE_WATER_SEA_BIOME_ID, NeptuneBiomes.neptuneRadioActiveWaterSea.getBiomeName(), NeptuneBiomes.neptuneRadioActiveWaterSea);
+			Biome.registerBiome(Config.NEPTUNE_LAYERED_HILLS_BIOME_ID, NeptuneBiomes.neptuneLayeredHills.getBiomeName(), NeptuneBiomes.neptuneLayeredHills);
 		}
 		if (Config.PLUTO)
 			Biome.registerBiome(Config.PLUTO_BIOME_ID, PlutoBiomes.pluto.getBiomeName(), PlutoBiomes.pluto);

@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
 
 public class GenLayerNeptuneBiomes extends GenLayer {
-    private static final Biome[] biomes = new Biome[] { NeptuneBiomes.neptune, NeptuneBiomes.neptuneRadioActiveWaterSea };
+    private static final Biome[] biomes = new Biome[] { NeptuneBiomes.neptune, NeptuneBiomes.neptuneRadioActiveWaterSea, NeptuneBiomes.neptuneLayeredHills };
 
 	public GenLayerNeptuneBiomes(long l, GenLayer parent) {
 		super(l);
