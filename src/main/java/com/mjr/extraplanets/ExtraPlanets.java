@@ -318,7 +318,7 @@ public class ExtraPlanets {
 		RegisterDeconstructorCompatibility();
 
 		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
-		
+
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
 	}

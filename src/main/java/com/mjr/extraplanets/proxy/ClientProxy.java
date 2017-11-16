@@ -316,7 +316,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addExtraPlanetsVariants("ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
 		ClientUtilities.addExtraPlanetsVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
 				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
-		ClientUtilities.addExtraPlanetsVariants("decorative_blocks2", "white_block", "red_block");
+		ClientUtilities.addExtraPlanetsVariants("decorative_blocks2", "white_block", "red_block", "blue_block", "light_blue_block", "yellow_block", "green_block");
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
 			ClientUtilities.addExtraPlanetsVariants("electric_parts", "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2");
 		ClientUtilities.addExtraPlanetsVariants("tier1_kit", "tier1_kitfull", "tier1_kitbasic_setup", "tier1_kitwithout_oxygen_setup", "tier1_kitwithout_thermal_padding", "tier1_kitjust_oxygen_setup", "tier1_kitjust_protection");
