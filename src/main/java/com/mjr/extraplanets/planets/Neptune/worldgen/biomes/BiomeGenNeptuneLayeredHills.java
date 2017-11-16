@@ -1,59 +1,43 @@
-package com.mjr.extraplanets.planets.Neptune.worldgen;
+package com.mjr.extraplanets.planets.Neptune.worldgen.biomes;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraftforge.common.BiomeDictionary;
 
+import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneLayeredHills;
-import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadioActiveWaterSea;
+import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
 
-public class NeptuneBiomes extends Biome {
+public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
 
-	public static final Biome neptune = new BiomeGenNeptune(new BiomeProperties("neptune").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(new BiomeProperties("neptuneRadioActiveWaterSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(new BiomeProperties("neptuneLayeredHills").setBaseHeight(1.5F).setHeightVariation(0.025F).setRainfall(0.0F).setRainDisabled());
+	public IBlockState secondtopBlock;
+	public IBlockState thridtopBlocks;
 
-	protected NeptuneBiomes(BiomeProperties properties) {
+	public BiomeGenNeptuneLayeredHills(BiomeProperties properties) {
 		super(properties);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-	}
-
-	@Override
-	public BiomeDecorator createBiomeDecorator() {
-		return new BiomeDecoratorNeptuneOther();
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT);
+		this.topBlock = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.BLUE_BLOCK);
+		this.thridtopBlocks = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.LIGHT_BLUE_BLOCK);
+		this.secondtopBlock = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.GREEN_BLOCK);
+		this.fillerBlock = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.YELLOW_BLOCK);
 	}
 
 	@Override
 	public void genTerrainBlocks(World world, Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
-		generateNeptuneBiomeTerrain(rand, chunk, x, z, stoneNoise);
+		this.generateNeptuneBiomeTerrain(rand, chunk, x, z, stoneNoise);
 	}
 
+	@Override
 	public void generateNeptuneBiomeTerrain(Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
 		IBlockState iblockstate = this.topBlock;
+		IBlockState iblockstate3 = this.secondtopBlock;
+		IBlockState iblockstate4 = this.thridtopBlocks;
 		IBlockState iblockstate1 = this.fillerBlock;
 		int j = -1;
 		int k = (int) (stoneNoise / 3.0D + 3.0D + rand.nextDouble() * 0.25D);
@@ -73,9 +57,13 @@ public class NeptuneBiomes extends Biome {
 						if (k <= 0) {
 							iblockstate = null;
 							iblockstate1 = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getStateFromMeta(2);
+							iblockstate3 = null;
+							iblockstate4 = null;
 						} else if (j1 >= 63 - 4 && j1 <= 63 + 1) {
 							iblockstate = this.topBlock;
 							iblockstate1 = this.fillerBlock;
+							iblockstate3 = this.secondtopBlock;
+							iblockstate4 = this.thridtopBlocks;
 						}
 
 						if (j1 < 63 && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
@@ -88,10 +76,24 @@ public class NeptuneBiomes extends Biome {
 
 						j = k;
 
-						if (j1 >= 63 - 1) {
+						if (j1 >= 65 + 18) {
 							chunk.setBlockState(i1, j1, l, iblockstate);
+							iblockstate1 = iblockstate;
+							iblockstate3 = iblockstate;
+							iblockstate4 = iblockstate;
+						} else if (j1 >= 65 + 12) {
+							chunk.setBlockState(i1, j1, l, iblockstate3);
+							iblockstate1 = iblockstate3;
+							iblockstate = iblockstate3;
+							iblockstate4 = iblockstate3;
+						} else if (j1 >= 65 + 4) {
+							chunk.setBlockState(i1, j1, l, iblockstate4);
+							iblockstate1 = iblockstate4;
+							iblockstate = iblockstate4;
+							iblockstate3 = iblockstate4;
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
+							iblockstate3 = null;
 							iblockstate1 = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getStateFromMeta(2);
 							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
 						} else {

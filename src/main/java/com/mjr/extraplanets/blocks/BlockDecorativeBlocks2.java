@@ -30,7 +30,7 @@ public class BlockDecorativeBlocks2 extends Block implements IDetectableResource
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypedecorativeblocks", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		WHITE_BLOCK(0, "white_block"), RED_BLOCK(1, "red_block");
+		WHITE_BLOCK(0, "white_block"), RED_BLOCK(1, "red_block"), BLUE_BLOCK(2, "blue_block"), LIGHT_BLUE_BLOCK(3, "light_blue_block"), YELLOW_BLOCK(4, "yellow_block"), GREEN_BLOCK(5, "green_block");
 
 		private final int meta;
 		private final String name;

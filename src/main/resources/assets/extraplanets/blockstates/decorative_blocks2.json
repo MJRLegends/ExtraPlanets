@@ -1,6 +1,10 @@
 {
     "variants": {
 		"basictypedecorativeblocks=white_block": { "model": "extraplanets:white_block_model" },
-		"basictypedecorativeblocks=red_block": { "model": "extraplanets:red_block_model" }
+		"basictypedecorativeblocks=red_block": { "model": "extraplanets:red_block_model" },
+		"basictypedecorativeblocks=blue_block": { "model": "extraplanets:blue_block_model" },
+		"basictypedecorativeblocks=light_blue_block": { "model": "extraplanets:light_blue_block_model" },
+		"basictypedecorativeblocks=yellow_block": { "model": "extraplanets:yellow_block_model" },
+		"basictypedecorativeblocks=green_block": { "model": "extraplanets:green_block_model" }
     }
 }
