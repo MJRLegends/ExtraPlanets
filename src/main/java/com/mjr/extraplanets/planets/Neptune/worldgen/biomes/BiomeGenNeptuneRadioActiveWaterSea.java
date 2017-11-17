@@ -12,7 +12,7 @@ public class BiomeGenNeptuneRadioActiveWaterSea extends NeptuneBiomes {
 
 	public BiomeGenNeptuneRadioActiveWaterSea(BiomeProperties properties) {
 		super(properties);
-		Biome.registerBiome(Config.NEPTUNE_RADIO_ACTIVE_WATER_SEA_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
+		Biome.registerBiome(Config.NEPTUNE_RADIO_ACTIVE_WATER_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getStateFromMeta(1);
