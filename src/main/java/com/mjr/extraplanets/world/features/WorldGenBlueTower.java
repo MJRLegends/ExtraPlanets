@@ -11,41 +11,27 @@ import net.minecraft.world.storage.loot.LootTableList;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenBlueTower extends WorldGenerator {
 
-	public WorldGenBlueTower() {
-
-	}
-
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		int x = position.getX();
-		int y = position.getY();
-		int z = position.getZ();
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 5; j++) {
-				try {
-					if (world.getBlockState(new BlockPos(x + i, y - 3, z + j)) == Blocks.AIR)
-						return false;
-				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
-				}
-			}
-		}
-		if (!world.isAreaLoaded(new BlockPos(x + 10, y, z + 10), 10))
+		if (WorldGenHelper.checkValidSpawn(world, position, 5) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Blue Tower at (x, y, z)" + x + " " + y + " " + z);
-			y = y - 2;
-			generate_r0(world, rand, x, y, z);
-			fillChests(world, rand, x, y, z);
-			return true;
+				System.out.println("Spawning Blue Tower at (x, y, z)" + position.toString());
+			generateStructure(world, rand, position.down());
+			fillChests(world, rand, position.down());
 		}
+		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
+	public boolean generateStructure(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
 		world.setBlockState(new BlockPos(x + 2, y + 0, z + 2), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 0, z + 2), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 0, z + 2), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
@@ -77,7 +63,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 2), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 2), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 3), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
-		if(Config.NUCLEAR_BOMB){
+		if (Config.NUCLEAR_BOMB) {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
@@ -86,8 +72,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
-		}
-		else if(Config.FIRE_BOMB){
+		} else if (Config.FIRE_BOMB) {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 3), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 3), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 3), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
@@ -96,8 +81,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 5), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 5), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 5), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
-		}
-		else{
+		} else {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 3), Blocks.TNT.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 3), Blocks.TNT.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 3), Blocks.TNT.getDefaultState(), 3);
@@ -341,18 +325,21 @@ public class WorldGenBlueTower extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 10, z + 5), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 4, z + 3), Blocks.LADDER.getStateFromMeta(2), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 5, z + 3), Blocks.LADDER.getStateFromMeta(2), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 4, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 4, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 3, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 4, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 5, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 3, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 5, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 4, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 5, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
 		return true;
 	}
 
-	public boolean fillChests(World world, Random rand, int x, int y, int z) {
+	public boolean fillChests(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
 		// Determined if loot should be generated using a 1/2 chance
 		int random = rand.nextInt(10) + 1;
 		if (random <= 6) {

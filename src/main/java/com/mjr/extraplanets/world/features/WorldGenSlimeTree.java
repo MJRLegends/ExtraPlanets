@@ -12,30 +12,22 @@ import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenSlimeTree extends WorldGenerator {
 
-	public WorldGenSlimeTree() {
-
-	}
-
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		int x = position.getX();
-		int y = position.getY();
-		int z = position.getZ();
-
-		if (WorldGenHelper.checkValidSpawn(world, position, 5) == false)
-			return false;
-
-		if (!world.isAreaLoaded(new BlockPos(x + 8, y, z + 8), 8))
+		if (WorldGenHelper.checkValidSpawn(world, position, 15) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Slime Tree at (x, y, z)" + x + " " + y + " " + z);
-			generate_r0(world, rand, x, y, z);
-			return true;
+				System.out.println("Spawning Slime Tree at (x, y, z)" + position.toString());
+			generateStructure(world, rand, position);
 		}
+		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
+	public boolean generateStructure(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
 		world.setBlockState(new BlockPos(x + 4, y + 0, z + 3), Blocks.SLIME_BLOCK.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 3), Blocks.SLIME_BLOCK.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 4), Blocks.SLIME_BLOCK.getDefaultState(), 3);

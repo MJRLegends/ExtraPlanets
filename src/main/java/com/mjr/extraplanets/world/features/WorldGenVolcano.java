@@ -11,41 +11,27 @@ import net.minecraft.world.storage.loot.LootTableList;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenVolcano extends WorldGenerator {
 
-	public WorldGenVolcano() {
-
-	}
-
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		int x = position.getX();
-		int y = position.getY();
-		int z = position.getZ();
-		for (int i = 0; i < 25; i++) {
-			for (int j = 0; j < 25; j++) {
-				try {
-					if (world.getBlockState(new BlockPos(x + i, y - 3, z + j)).getBlock() == Blocks.AIR)
-						return false;
-				}
-				catch(Exception ex){
-					System.out.println("ExtraPlanets: " + ex.getMessage());
-				}
-			}
-		}
-		if (!world.isBlockLoaded(new BlockPos(x - 10, y, z - 10)))
+		if (WorldGenHelper.checkValidSpawn(world, position, 25) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Volcano at (x, y, z)" + x + " " + y + " " + z);
-			generate_r0(world, rand, x, y, z);
-			fillChests(world, rand, x, y, z);
-			return true;
+				System.out.println("Spawning Volcano at (x, y, z)" + position.toString());
+			generateStructure(world, rand, position);
+			fillChests(world, rand, position);
 		}
+		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
+	public boolean generateStructure(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
 		world.setBlockState(new BlockPos(x + 11, y + 0, z + 1), ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 13, y + 0, z + 1), ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 10, y + 0, z + 2), ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState(), 3);
@@ -1542,7 +1528,10 @@ public class WorldGenVolcano extends WorldGenerator {
 
 	}
 
-	public boolean fillChests(World world, Random rand, int x, int y, int z) {
+	public boolean fillChests(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
 		TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(new BlockPos(x + 18, y + 0, z + 13)));
 
 		if (chest != null) {
