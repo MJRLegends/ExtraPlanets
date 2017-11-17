@@ -113,6 +113,7 @@ import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
 import com.mjr.extraplanets.entities.rockets.EntityTier9Rocket;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
+import com.mjr.extraplanets.handlers.MainHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 import com.mjr.extraplanets.tile.treasureChest.TileEntityT10TreasureChest;
@@ -155,13 +156,15 @@ public class ClientProxy extends CommonProxy {
 		renderMobEntities();
 		if (Config.morePlanetsCompatibilityAdv == false)
 			renderNonMobEntities();
+
 		FMLCommonHandler.instance().bus().register(new SkyProviderHandler());
+		FMLCommonHandler.instance().bus().register(new MainHandler());
+		FMLCommonHandler.instance().bus().register(new KeyHandlerClient());
 
 		if (Config.nuclearBomb)
 			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, new RenderNuclearBombPrimed());
 		RenderingRegistry.registerEntityRenderingHandler(EntityFireBombPrimed.class, new RenderFireBombPrimed());
 
-		FMLCommonHandler.instance().bus().register(new KeyHandlerClient());
 		ClientRegistry.registerKeyBinding(KeyHandlerClient.openFuelGui);
 
 	}
