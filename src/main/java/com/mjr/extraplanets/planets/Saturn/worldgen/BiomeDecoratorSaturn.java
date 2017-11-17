@@ -11,7 +11,12 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
+import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.world.features.WorldGenNuclearPile;
+import com.mjr.extraplanets.world.features.WorldGenSlimeTree;
 
 public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 
@@ -21,6 +26,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 	private WorldGenerator iceGen;
 	private WorldGenerator magnesiumGen;
 	private WorldGenerator gravelGen;
+	private WorldGenerator slimeGen;
 
 	private int LakesPerChunk = 5;
 
@@ -35,6 +41,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 18, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		this.slimeGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 12, 12, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 10);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -59,19 +66,37 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 		this.generateOre(4, this.iceGen, 50, 120);
 		this.generateOre(20, this.magnesiumGen, 0, 32);
 		this.generateOre(15, this.gravelGen, 0, 80);
-
+		this.generateOre(10, this.slimeGen, 60, 256);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+		
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
-		for (int i = 0; i < this.LakesPerChunk; i++) {
-			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.GLOWSTONE).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.SATURN_BLOCKS);
+
+		if (this.getCurrentWorld().getBiome(new BlockPos(this.chunkX, 0, this.chunkZ)) instanceof BiomeGenSaturn)
+			for (int i = 0; i < this.LakesPerChunk; i++) {
+				if (this.rand.nextInt(10) == 0) {
+					WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.GLOWSTONE,
+							ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SURFACE));
+				}
+			}
+
+		if (this.getCurrentWorld().getBiome(new BlockPos(this.chunkX, 0, this.chunkZ)) instanceof BiomeGenSaturnNuclearLand) {
+			for (int i = 0; i < LakesPerChunk * 2; i++) {
+				if (this.rand.nextInt(10) == 0) {
+					WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.METHANE,
+							ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.BROKEN_INFECTED_STONE));
+				}
+			}
+			if (this.rand.nextInt(5) == 1) {
+				BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.chunkX + (this.rand.nextInt(16) + 8), 0, this.chunkZ + (this.rand.nextInt(16) + 8)));
+				new WorldGenNuclearPile().generate(this.currentWorld, this.rand, blockpos);
+			}
+			if (this.rand.nextInt(5) == 1) {
+				BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.chunkX + (this.rand.nextInt(16) + 8), 0, this.chunkZ + (this.rand.nextInt(16) + 8)));
+				new WorldGenSlimeTree().generate(this.currentWorld, this.rand, blockpos);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+
 		isDecorating = false;
 	}
 }
