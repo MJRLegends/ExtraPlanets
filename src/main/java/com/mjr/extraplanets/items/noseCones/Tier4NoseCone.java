@@ -21,7 +21,6 @@ public class Tier4NoseCone extends Item {
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setUnlocalizedName(assetName);
-		this.setTextureName(Constants.TEXTURE_PREFIX + assetName);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -47,8 +46,8 @@ public class Tier4NoseCone extends Item {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
 		this.icons = new IIcon[2];
-		this.icons[0] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier4NoseCone");
-		this.icons[1] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier4NoseCone.0");
+		this.icons[0] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier4_nose_cone");
+		this.icons[1] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier4_nose_cone.0");
 	}
 
 	@Override

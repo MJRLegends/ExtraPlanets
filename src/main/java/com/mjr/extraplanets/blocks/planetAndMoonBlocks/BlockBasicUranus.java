@@ -23,13 +23,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBasicUranus extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
-	private String name;
 
 	public BlockBasicUranus(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
-		this.name = assetName;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -37,14 +35,14 @@ public class BlockBasicUranus extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.blockIcons = new IIcon[8];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Surface");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "SubSurface");
-		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Stone");
-		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreCrystal");
-		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "crystalBlock");
-		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "StoneBricks");
-		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreWhiteGem");
-		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "whiteGemBlock");
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_surface");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_sub_surface");
+		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_stone");
+		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_ore_crystal");
+		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_crystal_block");
+		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_stone_bricks");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_ore_white_gem");
+		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_white_gem_block");
 		this.blockIcon = this.blockIcons[0];
 	}
 

@@ -23,35 +23,33 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockDecorativeBlocks extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
-	private String name;
 
 	public BlockDecorativeBlocks(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
-		this.name = assetName;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.blockIcons = new IIcon[16];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "marble");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "marbleBricks");
-		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "snowBricks");
-		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "iceBricks");
-		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "fireBricks");
-		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "blackWhiteFloor");
-		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "marbleTitledFloor");
-		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "marbleBrokenTitledFloor");
-		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "metalMesh");
-		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "frozenNitrogenBricks");
-		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "volcanicRockBricks");
-		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "carbonTitledFloor");
-		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "carbonBrokenTitledFloor");
-		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "magnesiumTitledFloor");
-		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "magnesiumBrokenTitledFloor");
-		this.blockIcons[15] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "ashBricks");
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "marble");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "marble_bricks");
+		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "snow_bricks");
+		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "ice_bricks");
+		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "fire_bricks");
+		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "black_white_floor");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "marble_titled_floor");
+		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "marble_broken_titled_floor");
+		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "metal_mesh");
+		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "frozen_nitrogen_bricks");
+		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "volcanic_rock_bricks");
+		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "carbon_titled_floor");
+		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "carbon_broken_titled_floor");
+		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "magnesium_titled_floor");
+		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "magnesium_broken_titled_floor");
+		this.blockIcons[15] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_" + "ash_bricks");
 		this.blockIcon = this.blockIcons[0];
 	}
 

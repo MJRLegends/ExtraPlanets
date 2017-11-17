@@ -30,7 +30,7 @@ public class BlockFireBomb extends Block {
 	public BlockFireBomb() {
 		super(Material.tnt);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
-		this.setBlockName("fireBomb");
+		this.setBlockName("fire_bomb");
 	}
 
 	/**

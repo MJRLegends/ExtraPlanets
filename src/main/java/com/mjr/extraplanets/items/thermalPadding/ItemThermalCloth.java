@@ -18,6 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemThermalCloth extends Item {
 	public static final String[] names = { "tier2ThermalCloth", "tier3ThermalCloth", "tier4ThermalCloth" };
+	public static final String[] textureNames = { "thermal_cloth.tier3_thermal_cloth", "thermal_cloth.tier4_thermal_cloth", "thermal_cloth.tier5_thermal_cloth" };
 
 	protected IIcon[] icons = new IIcon[ItemThermalCloth.names.length];
 
@@ -41,8 +42,8 @@ public class ItemThermalCloth extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemThermalCloth.names) {
-			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
+		for (final String name : ItemThermalCloth.textureNames) {
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
 		}
 	}
 

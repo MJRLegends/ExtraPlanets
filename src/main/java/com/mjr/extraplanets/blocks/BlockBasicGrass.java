@@ -27,7 +27,7 @@ public class BlockBasicGrass extends Block {
 		super(Material.grass);
 		this.name = name;
 		this.planetName = planetName;
-		this.setBlockName(name + "Grass");
+		this.setBlockName(name + "_grass");
 		this.setTickRandomly(true);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.blockHardness = 0.6F;

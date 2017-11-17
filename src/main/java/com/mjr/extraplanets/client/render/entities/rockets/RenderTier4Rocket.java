@@ -28,7 +28,7 @@ public class RenderTier4Rocket extends Render
 	{
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
-		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blankRocketDarkGrey.png");
+		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blank_rocket_dark_grey.png");
 		this.shadowSize = 2F;
 	}
 

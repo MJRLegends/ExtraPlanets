@@ -3,7 +3,7 @@ package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 public class ItemBlockUranus extends ItemBlockDefaults {
 	public ItemBlockUranus(Block block) {
@@ -20,7 +20,7 @@ public class ItemBlockUranus extends ItemBlockDefaults {
 			break;
 		}
 		case 1: {
-			name = "subSurface";
+			name = "sub_surface";
 			break;
 		}
 		case 2: {
@@ -28,23 +28,23 @@ public class ItemBlockUranus extends ItemBlockDefaults {
 			break;
 		}
 		case 3: {
-			name = "oreCrystal";
+			name = "ore_crystal";
 			break;
 		}
 		case 4: {
-			name = "crystalBlock";
+			name = "crystal_block";
 			break;
 		}
 		case 5: {
-			name = "stoneBricks";
+			name = "stone_bricks";
 			break;
 		}
 		case 6: {
-			name = "oreWhiteGem";
+			name = "ore_white_gem";
 			break;
 		}
 		case 7: {
-			name = "whiteGemBlock";
+			name = "white_gem_block";
 			break;
 		}
 		default:

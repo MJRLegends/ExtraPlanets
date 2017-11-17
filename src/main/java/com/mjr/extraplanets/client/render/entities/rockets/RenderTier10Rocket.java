@@ -26,9 +26,9 @@ public class RenderTier10Rocket extends Render
 	public RenderTier10Rocket(IModelCustom spaceshipModel, String textureDomain, String texture) {
 		this.rocketModelObj = spaceshipModel;
 		this.rocketTexture = new ResourceLocation(textureDomain, "textures/model/" + texture + ".png");
-		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blankRocket.png");
-		this.rocketTexture3 = new ResourceLocation(textureDomain, "textures/model/blankRocketGrey.png");
-		this.rocketTexture4 = new ResourceLocation(textureDomain, "textures/model/blankRocketDarkGrey.png");
+		this.rocketTexture2 = new ResourceLocation(textureDomain, "textures/model/blank_rocket.png");
+		this.rocketTexture3 = new ResourceLocation(textureDomain, "textures/model/blank_rocket_grey.png");
+		this.rocketTexture4 = new ResourceLocation(textureDomain, "textures/model/blank_rocket_dark_grey.png");
 		this.shadowSize = 2F;
 	}
 

@@ -23,13 +23,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBasicIo extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
-	private String name;
 
 	public BlockBasicIo(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
-		this.name = assetName;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -37,12 +35,12 @@ public class BlockBasicIo extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.blockIcons = new IIcon[6];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Surface");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "SubSurface");
-		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Stone");
-		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreIron");
-		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreTin");
-		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreCopper");
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "io_surface");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "io_sub_surface");
+		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "io_stone");
+		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "io_ore_iron");
+		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "io_ore_tin");
+		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "io_ore_copper");
 		this.blockIcon = this.blockIcons[0];
 	}
 

@@ -23,13 +23,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBasicMercury extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
-	private String name;
 
 	public BlockBasicMercury(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
-		this.name = assetName;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -37,15 +35,15 @@ public class BlockBasicMercury extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.blockIcons = new IIcon[9];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Surface");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "SubSurface");
-		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Stone");
-		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreIron");
-		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreTin");
-		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreCopper");
-		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreMercury");
-		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "StoneBricks");
-		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "mercuryBlock");
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_surface");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_sub_surface");
+		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_stone");
+		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_ore_iron");
+		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_ore_tin");
+		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_ore_copper");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_ore_mercury");
+		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_stone_bricks");
+		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "mercury_mercury_block");
 		this.blockIcon = this.blockIcons[0];
 	}
 

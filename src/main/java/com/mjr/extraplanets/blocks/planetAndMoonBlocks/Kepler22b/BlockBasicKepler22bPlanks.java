@@ -25,12 +25,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBasicKepler22bPlanks extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
-	private String name;
 
 	public BlockBasicKepler22bPlanks(String assetName) {
 		super(Material.wood);
 		this.setBlockName(assetName);
-		this.name = assetName;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -38,12 +36,12 @@ public class BlockBasicKepler22bPlanks extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.blockIcons = new IIcon[6];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleBlue");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleRed");
-		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMaplePurple");
-		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleYellow");
-		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleGreen");
-		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "PlankMapleBrown");
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_plank_maple_blue");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_plank_maple_red");
+		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_plank_maple_purple");
+		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_plank_maple_yellow");
+		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_plank_maple_green");
+		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_plank_maple_brown");
 		this.blockIcon = this.blockIcons[0];
 	}
 

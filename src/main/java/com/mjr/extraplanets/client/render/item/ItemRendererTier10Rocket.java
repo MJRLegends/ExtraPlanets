@@ -27,10 +27,10 @@ public class ItemRendererTier10Rocket implements IItemRenderer
 
 	protected static RenderItem drawItems = new RenderItem();
 
-	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
-	protected ResourceLocation texture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
-	protected ResourceLocation texture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketGrey.png");
-	protected ResourceLocation texture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
+	protected ResourceLocation texture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_white.png");
+	protected ResourceLocation texture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png");
+	protected ResourceLocation texture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_grey.png");
+	protected ResourceLocation texture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_dark_grey.png");
 	
 	public ItemRendererTier10Rocket(IModelCustom model)
 	{

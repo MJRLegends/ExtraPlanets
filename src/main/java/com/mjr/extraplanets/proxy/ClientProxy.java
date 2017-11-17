@@ -240,37 +240,37 @@ public class ClientProxy extends CommonProxy {
 	private void renderNonMobEntities() {
 		if (Config.venus) {
 			IModelCustom rocketModelTier4 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket4Tier.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, new RenderTier4Rocket(rocketModelTier4, Constants.ASSET_PREFIX, "blankRocket"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, new RenderTier4Rocket(rocketModelTier4, Constants.ASSET_PREFIX, "blank_rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier4Rocket, new ItemRendererTier4Rocket(rocketModelTier4));
 		}
 		if (Config.jupiter) {
 			IModelCustom rocketModelTier5 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket5Tier.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, new RenderTier5Rocket(rocketModelTier5, Constants.ASSET_PREFIX, "blankRocketWhite"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, new RenderTier5Rocket(rocketModelTier5, Constants.ASSET_PREFIX, "blank_rocket_white"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier5Rocket, new ItemRendererTier5Rocket(rocketModelTier5));
 		}
 		if (Config.saturn) {
 			IModelCustom rocketModelTier6 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket6Tier.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, new RenderTier6Rocket(rocketModelTier6, Constants.ASSET_PREFIX, "blankRocket"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, new RenderTier6Rocket(rocketModelTier6, Constants.ASSET_PREFIX, "blank_rocket"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier6Rocket, new ItemRendererTier6Rocket(rocketModelTier6));
 		}
 		if (Config.uranus) {
 			IModelCustom rocketModelTier7 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket7Tier.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, new RenderTier7Rocket(rocketModelTier7, Constants.ASSET_PREFIX, "blankRocketWhite"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, new RenderTier7Rocket(rocketModelTier7, Constants.ASSET_PREFIX, "blank_rocket_white"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier7Rocket, new ItemRendererTier7Rocket(rocketModelTier7));
 		}
 		if (Config.neptune) {
 			IModelCustom rocketModelTier8 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket8Tier.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8, Constants.ASSET_PREFIX, "blankRocketWhite"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, new RenderTier8Rocket(rocketModelTier8, Constants.ASSET_PREFIX, "blank_rocket_white"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier8Rocket, new ItemRendererTier8Rocket(rocketModelTier8));
 		}
 		if (Config.pluto) {
 			IModelCustom rocketModelTier9 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket9Tier.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "blankRocketWhite"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, new RenderTier9Rocket(rocketModelTier9, Constants.ASSET_PREFIX, "blank_rocket_white"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier9Rocket, new ItemRendererTier9Rocket(rocketModelTier9));
 		}
 		if (Config.eris) {
 			IModelCustom rocketModelTier10 = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/Rocket10Tier.obj"));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "blankRocketWhite"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "blank_rocket_white"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier10Rocket, new ItemRendererTier10Rocket(rocketModelTier10));
 		}
 		IModelCustom marsRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover.obj"));

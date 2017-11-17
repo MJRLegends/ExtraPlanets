@@ -132,118 +132,118 @@ public class ExtraPlanets_Tools {
 
 	private static void initializeTools() {
 		if (Config.mercury && Config.mercuryItems) {
-			mercuryPickaxe = new BasicPickaxe(mercuryMaterial, "mercuryPickaxe");
-			mercuryAxe = new BasicAxe(mercuryMaterial, "mercuryAxe");
-			mercuryHoe = new BasicHoe(mercuryMaterial, "mercuryHoe");
-			mercuryShovel = new BasicShovel(mercuryMaterial, "mercuryShovel");
-			mercurySword = new BasicSword(mercuryMaterial, "mercurySword");
+			mercuryPickaxe = new BasicPickaxe(mercuryMaterial, "mercury_pickaxe");
+			mercuryAxe = new BasicAxe(mercuryMaterial, "mercury_axe");
+			mercuryHoe = new BasicHoe(mercuryMaterial, "mercury_hoe");
+			mercuryShovel = new BasicShovel(mercuryMaterial, "mercury_shovel");
+			mercurySword = new BasicSword(mercuryMaterial, "mercury_sword");
 		}
 		if (Config.venus && Config.carbonItems) {
-			carbonPickaxe = new BasicPickaxe(carbonMaterial, "carbonPickaxe");
-			carbonAxe = new BasicAxe(carbonMaterial, "carbonAxe");
-			carbonHoe = new BasicHoe(carbonMaterial, "carbonHoe");
-			carbonShovel = new BasicShovel(carbonMaterial, "carbonShovel");
-			carbonSword = new BasicSword(carbonMaterial, "carbonSword");
+			carbonPickaxe = new BasicPickaxe(carbonMaterial, "carbon_pickaxe");
+			carbonAxe = new BasicAxe(carbonMaterial, "carbon_axe");
+			carbonHoe = new BasicHoe(carbonMaterial, "carbon_hoe");
+			carbonShovel = new BasicShovel(carbonMaterial, "carbon_shovel");
+			carbonSword = new BasicSword(carbonMaterial, "carbon_sword");
 		}
 		if (Config.ceres && Config.uraniumItems) {
-			uraniumPickaxe = new BasicPickaxe(uraniumMaterial, "uraniumPickaxe");
-			uraniumAxe = new BasicAxe(uraniumMaterial, "uraniumAxe");
-			uraniumHoe = new BasicHoe(uraniumMaterial, "uraniumHoe");
-			uraniumShovel = new BasicShovel(uraniumMaterial, "uraniumShovel");
-			uraniumSword = new BasicSword(uraniumMaterial, "uraniumSword");
+			uraniumPickaxe = new BasicPickaxe(uraniumMaterial, "uranium_pickaxe");
+			uraniumAxe = new BasicAxe(uraniumMaterial, "uranium_axe");
+			uraniumHoe = new BasicHoe(uraniumMaterial, "uranium_hoe");
+			uraniumShovel = new BasicShovel(uraniumMaterial, "uranium_shovel");
+			uraniumSword = new BasicSword(uraniumMaterial, "uranium_sword");
 		}
 		if (Config.jupiter) {
 			if (Config.palladiumItems) {
-				palladiumPickaxe = new BasicPickaxe(palladiumMaterial, "palladiumPickaxe");
-				palladiumAxe = new BasicAxe(palladiumMaterial, "palladiumAxe");
-				palladiumHoe = new BasicHoe(palladiumMaterial, "palladiumHoe");
-				palladiumShovel = new BasicShovel(palladiumMaterial, "palladiumShovel");
-				palladiumSword = new BasicSword(palladiumMaterial, "palladiumSword");
+				palladiumPickaxe = new BasicPickaxe(palladiumMaterial, "palladium_pickaxe");
+				palladiumAxe = new BasicAxe(palladiumMaterial, "palladium_axe");
+				palladiumHoe = new BasicHoe(palladiumMaterial, "palladium_hoe");
+				palladiumShovel = new BasicShovel(palladiumMaterial, "palladium_shovel");
+				palladiumSword = new BasicSword(palladiumMaterial, "palladium_sword");
 			}
 			if (Config.redGemItems) {
-				redGemPickaxe = new BasicPickaxe(redGemMaterial, "redGemPickaxe");
-				redGemAxe = new BasicAxe(redGemMaterial, "redGemAxe");
-				redGemHoe = new BasicHoe(redGemMaterial, "redGemHoe");
-				redGemShovel = new BasicShovel(redGemMaterial, "redGemShovel");
-				redGemSword = new BasicSword(redGemMaterial, "redGemSword");
+				redGemPickaxe = new BasicPickaxe(redGemMaterial, "red_gem_pickaxe");
+				redGemAxe = new BasicAxe(redGemMaterial, "red_gem_axe");
+				redGemHoe = new BasicHoe(redGemMaterial, "red_gem_hoe");
+				redGemShovel = new BasicShovel(redGemMaterial, "red_gem_shovel");
+				redGemSword = new BasicSword(redGemMaterial, "red_gem_sword");
 			}
 		}
 		if (Config.saturn && Config.magnesiumItems) {
-			magnesiumPickaxe = new BasicPickaxe(magnesiumMaterial, "magnesiumPickaxe");
-			magnesiumAxe = new BasicAxe(magnesiumMaterial, "magnesiumAxe");
-			magnesiumHoe = new BasicHoe(magnesiumMaterial, "magnesiumHoe");
-			magnesiumShovel = new BasicShovel(magnesiumMaterial, "magnesiumShovel");
-			magnesiumSword = new BasicSword(magnesiumMaterial, "magnesiumSword");
+			magnesiumPickaxe = new BasicPickaxe(magnesiumMaterial, "magnesium_pickaxe");
+			magnesiumAxe = new BasicAxe(magnesiumMaterial, "magnesium_axe");
+			magnesiumHoe = new BasicHoe(magnesiumMaterial, "magnesium_hoe");
+			magnesiumShovel = new BasicShovel(magnesiumMaterial, "magnesium_shovel");
+			magnesiumSword = new BasicSword(magnesiumMaterial, "magnesium_sword");
 		}
 		if (Config.uranus) {
 			if (Config.palladiumItems) {
-				crystalPickaxe = new BasicPickaxe(crystalMaterial, "crystalPickaxe");
-				crystalAxe = new BasicAxe(crystalMaterial, "crystalAxe");
-				crystalHoe = new BasicHoe(crystalMaterial, "crystalHoe");
-				crystalShovel = new BasicShovel(crystalMaterial, "crystalShovel");
-				crystalSword = new BasicSword(crystalMaterial, "crystalSword");
+				crystalPickaxe = new BasicPickaxe(crystalMaterial, "crystal_pickaxe");
+				crystalAxe = new BasicAxe(crystalMaterial, "crystal_axe");
+				crystalHoe = new BasicHoe(crystalMaterial, "crystal_hoe");
+				crystalShovel = new BasicShovel(crystalMaterial, "crystal_shovel");
+				crystalSword = new BasicSword(crystalMaterial, "crystal_sword");
 			}
 			if (Config.whiteGemItems) {
-				whiteGemPickaxe = new BasicPickaxe(whiteGemMaterial, "whiteGemPickaxe");
-				whiteGemAxe = new BasicAxe(whiteGemMaterial, "whiteGemAxe");
-				whiteGemHoe = new BasicHoe(whiteGemMaterial, "whiteGemHoe");
-				whiteGemShovel = new BasicShovel(whiteGemMaterial, "whiteGemShovel");
-				whiteGemSword = new BasicSword(whiteGemMaterial, "whiteGemSword");
+				whiteGemPickaxe = new BasicPickaxe(whiteGemMaterial, "white_gem_pickaxe");
+				whiteGemAxe = new BasicAxe(whiteGemMaterial, "white_gem_axe");
+				whiteGemHoe = new BasicHoe(whiteGemMaterial, "white_gem_hoe");
+				whiteGemShovel = new BasicShovel(whiteGemMaterial, "white_gem_shovel");
+				whiteGemSword = new BasicSword(whiteGemMaterial, "white_gem_sword");
 			}
 		}
 		if (Config.neptune) {
 			if (Config.blueGemItems) {
-				blueGemPickaxe = new BasicPickaxe(blueGemMaterial, "blueGemPickaxe");
-				blueGemAxe = new BasicAxe(blueGemMaterial, "blueGemAxe");
-				blueGemHoe = new BasicHoe(blueGemMaterial, "blueGemHoe");
-				blueGemShovel = new BasicShovel(blueGemMaterial, "blueGemShovel");
-				blueGemSword = new BasicSword(blueGemMaterial, "blueGemSword");
+				blueGemPickaxe = new BasicPickaxe(blueGemMaterial, "blue_gem_pickaxe");
+				blueGemAxe = new BasicAxe(blueGemMaterial, "blue_gem_axe");
+				blueGemHoe = new BasicHoe(blueGemMaterial, "blue_gem_hoe");
+				blueGemShovel = new BasicShovel(blueGemMaterial, "blue_gem_shovel");
+				blueGemSword = new BasicSword(blueGemMaterial, "blue_gem_sword");
 			}
 			if (Config.zincItems) {
-				zincPickaxe = new BasicPickaxe(zincMaterial, "zincPickaxe");
-				zincAxe = new BasicAxe(zincMaterial, "zincAxe");
-				zincHoe = new BasicHoe(zincMaterial, "zincHoe");
-				zincShovel = new BasicShovel(zincMaterial, "zincShovel");
-				zincSword = new BasicSword(zincMaterial, "zincSword");
+				zincPickaxe = new BasicPickaxe(zincMaterial, "zinc_pickaxe");
+				zincAxe = new BasicAxe(zincMaterial, "zinc_axe");
+				zincHoe = new BasicHoe(zincMaterial, "zinc_hoe");
+				zincShovel = new BasicShovel(zincMaterial, "zinc_shovel");
+				zincSword = new BasicSword(zincMaterial, "zinc_sword");
 			}
 		}
 		if (Config.pluto && Config.tungstenItems) {
-			tungstenPickaxe = new BasicPickaxe(tungstenMaterial, "tungstenPickaxe");
-			tungstenAxe = new BasicAxe(tungstenMaterial, "tungstenAxe");
-			tungstenHoe = new BasicHoe(tungstenMaterial, "tungstenHoe");
-			tungstenShovel = new BasicShovel(tungstenMaterial, "tungstenShovel");
-			tungstenSword = new BasicSword(tungstenMaterial, "tungstenSword");
+			tungstenPickaxe = new BasicPickaxe(tungstenMaterial, "tungsten_pickaxe");
+			tungstenAxe = new BasicAxe(tungstenMaterial, "tungsten_axe");
+			tungstenHoe = new BasicHoe(tungstenMaterial, "tungsten_hoe");
+			tungstenShovel = new BasicShovel(tungstenMaterial, "tungsten_shovel");
+			tungstenSword = new BasicSword(tungstenMaterial, "tungsten_sword");
 		}
 		if (Config.kepler22b && Config.kepler22bItems) {
-			blueDiamondPickaxe = new BasicPickaxe(blueDiamondMaterial, "blueDiamondPickaxe");
-			blueDiamondAxe = new BasicAxe(blueDiamondMaterial, "blueDiamondAxe");
-			blueDiamondHoe = new BasicHoe(blueDiamondMaterial, "blueDiamondHoe");
-			blueDiamondShovel = new BasicShovel(blueDiamondMaterial, "blueDiamondShovel");
-			blueDiamondSword = new BasicSword(blueDiamondMaterial, "blueDiamondSword");
+			blueDiamondPickaxe = new BasicPickaxe(blueDiamondMaterial, "blue_diamond_pickaxe");
+			blueDiamondAxe = new BasicAxe(blueDiamondMaterial, "blue_diamond_axe");
+			blueDiamondHoe = new BasicHoe(blueDiamondMaterial, "blue_diamond_hoe");
+			blueDiamondShovel = new BasicShovel(blueDiamondMaterial, "blue_diamond_shovel");
+			blueDiamondSword = new BasicSword(blueDiamondMaterial, "blue_diamond_sword");
 
-			redDiamondPickaxe = new BasicPickaxe(redDiamondMaterial, "redDiamondPickaxe");
-			redDiamondAxe = new BasicAxe(redDiamondMaterial, "redDiamondAxe");
-			redDiamondHoe = new BasicHoe(redDiamondMaterial, "redDiamondHoe");
-			redDiamondShovel = new BasicShovel(redDiamondMaterial, "redDiamondShovel");
-			redDiamondSword = new BasicSword(redDiamondMaterial, "redDiamondSword");
+			redDiamondPickaxe = new BasicPickaxe(redDiamondMaterial, "red_diamond_pickaxe");
+			redDiamondAxe = new BasicAxe(redDiamondMaterial, "red_diamond_axe");
+			redDiamondHoe = new BasicHoe(redDiamondMaterial, "red_diamond_hoe");
+			redDiamondShovel = new BasicShovel(redDiamondMaterial, "red_diamond_shovel");
+			redDiamondSword = new BasicSword(redDiamondMaterial, "red_diamond_sword");
 
-			purpleDiamondPickaxe = new BasicPickaxe(purpleDiamondMaterial, "purpleDiamondPickaxe");
-			purpleDiamondAxe = new BasicAxe(purpleDiamondMaterial, "purpleDiamondAxe");
-			purpleDiamondHoe = new BasicHoe(purpleDiamondMaterial, "purpleDiamondHoe");
-			purpleDiamondShovel = new BasicShovel(purpleDiamondMaterial, "purpleDiamondShovel");
-			purpleDiamondSword = new BasicSword(purpleDiamondMaterial, "purpleDiamondSword");
+			purpleDiamondPickaxe = new BasicPickaxe(purpleDiamondMaterial, "purple_diamond_pickaxe");
+			purpleDiamondAxe = new BasicAxe(purpleDiamondMaterial, "purple_diamond_axe");
+			purpleDiamondHoe = new BasicHoe(purpleDiamondMaterial, "purple_diamond_hoe");
+			purpleDiamondShovel = new BasicShovel(purpleDiamondMaterial, "purple_diamond_shovel");
+			purpleDiamondSword = new BasicSword(purpleDiamondMaterial, "purple_diamond_sword");
 
-			yellowDiamondPickaxe = new BasicPickaxe(yellowDiamondMaterial, "yellowDiamondPickaxe");
-			yellowDiamondAxe = new BasicAxe(yellowDiamondMaterial, "yellowDiamondAxe");
-			yellowDiamondHoe = new BasicHoe(yellowDiamondMaterial, "yellowDiamondHoe");
-			yellowDiamondShovel = new BasicShovel(yellowDiamondMaterial, "yellowDiamondShovel");
-			yellowDiamondSword = new BasicSword(yellowDiamondMaterial, "yellowDiamondSword");
+			yellowDiamondPickaxe = new BasicPickaxe(yellowDiamondMaterial, "yellow_diamond_pickaxe");
+			yellowDiamondAxe = new BasicAxe(yellowDiamondMaterial, "yellow_diamond_axe");
+			yellowDiamondHoe = new BasicHoe(yellowDiamondMaterial, "yellow_diamond_hoe");
+			yellowDiamondShovel = new BasicShovel(yellowDiamondMaterial, "yellow_diamond_shovel");
+			yellowDiamondSword = new BasicSword(yellowDiamondMaterial, "yellow_diamond_sword");
 
-			greenDiamondPickaxe = new BasicPickaxe(greenDiamondMaterial, "greenDiamondPickaxe");
-			greenDiamondAxe = new BasicAxe(greenDiamondMaterial, "greenDiamondAxe");
-			greenDiamondHoe = new BasicHoe(greenDiamondMaterial, "greenDiamondHoe");
-			greenDiamondShovel = new BasicShovel(greenDiamondMaterial, "greenDiamondShovel");
-			greenDiamondSword = new BasicSword(greenDiamondMaterial, "greenDiamondSword");
+			greenDiamondPickaxe = new BasicPickaxe(greenDiamondMaterial, "green_diamond_pickaxe");
+			greenDiamondAxe = new BasicAxe(greenDiamondMaterial, "green_diamond_axe");
+			greenDiamondHoe = new BasicHoe(greenDiamondMaterial, "green_diamond_hoe");
+			greenDiamondShovel = new BasicShovel(greenDiamondMaterial, "green_diamond_shovel");
+			greenDiamondSword = new BasicSword(greenDiamondMaterial, "green_diamond_sword");
 		}
 	}
 

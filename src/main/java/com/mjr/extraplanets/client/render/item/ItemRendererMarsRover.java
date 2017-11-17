@@ -15,15 +15,15 @@ import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class ItemRendererMarsRover implements IItemRenderer {
-	private static final ResourceLocation buggyTextureBody = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketDarkGrey.png");
-	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlack.png");
-	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocket.png");
-	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketWhite.png");
-	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketOrangeTextured.png");
-	private static final ResourceLocation buggyTextureOther3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketTextured.png");
-	private static final ResourceLocation buggyTextureOther4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketLightBlueTextured.png");
-	private static final ResourceLocation buggyTextureOther5 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketBlueTextured.png");
-	private static final ResourceLocation buggyTextureBatteryBolt = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blankRocketYellow.png");
+	private static final ResourceLocation buggyTextureBody = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_dark_grey.png");
+	private static final ResourceLocation buggyTextureWheel = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_black.png");
+	private static final ResourceLocation buggyTextureStorage = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png");
+	private static final ResourceLocation buggyTextureOther = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_white.png");
+	private static final ResourceLocation buggyTextureOther2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_orange_textured.png");
+	private static final ResourceLocation buggyTextureOther3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_textured.png");
+	private static final ResourceLocation buggyTextureOther4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_light_blue_textured.png");
+	private static final ResourceLocation buggyTextureOther5 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_blue_textured.png");
+	private static final ResourceLocation buggyTextureBatteryBolt = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_yellow.png");
 
 	EntityMarsRover spaceship = new EntityMarsRover(FMLClientHandler.instance().getClient().theWorld);
 

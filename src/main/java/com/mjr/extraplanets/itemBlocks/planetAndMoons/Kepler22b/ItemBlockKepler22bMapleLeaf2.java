@@ -3,7 +3,7 @@ package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 public class ItemBlockKepler22bMapleLeaf2 extends ItemBlockDefaults {
 	public ItemBlockKepler22bMapleLeaf2(Block block) {
@@ -16,19 +16,19 @@ public class ItemBlockKepler22bMapleLeaf2 extends ItemBlockDefaults {
 
 		switch (itemstack.getItemDamage()) {
 		case 0: {
-			name = "greenMapleLeaf";
+			name = "green_maple_leaf";
 			break;
 		}
 		case 1: {
-			name = "brownMapleLeaf";
+			name = "brown_maple_leaf";
 			break;
 		}
 		case 8: {
-			name = "greenMapleLeaf";
+			name = "green_maple_leaf";
 			break;
 		}
 		case 9: {
-			name = "brownMapleLeaf";
+			name = "brown_maple_leaf";
 			break;
 		}
 		default:

@@ -23,29 +23,30 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBasicSaturn extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
-	private String name;
 
 	public BlockBasicSaturn(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
-		this.name = assetName;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcons = new IIcon[9];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Surface");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "SubSurface");
-		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Stone");
-		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreIron");
-		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreTin");
-		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreCopper");
-		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreMagnesium");
-		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "MagnesiumBlock");
-		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "StoneBricks");
+		this.blockIcons = new IIcon[12];
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_surface");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_sub_surface");
+		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_stone");
+		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_ore_iron");
+		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_ore_tin");
+		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_ore_copper");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_ore_magnesium");
+		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_magnesium_block");
+		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_stone_bricks");
+		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "broken_infected_stone");
+		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "infected_stone");
+		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "saturn_ore_slime");
 		this.blockIcon = this.blockIcons[0];
 	}
 

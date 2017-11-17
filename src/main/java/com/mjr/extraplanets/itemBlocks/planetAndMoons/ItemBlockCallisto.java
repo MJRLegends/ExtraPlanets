@@ -3,7 +3,7 @@ package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.itemBlocks.ItemBlockDefaults;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 public class ItemBlockCallisto extends ItemBlockDefaults
  {
@@ -26,7 +26,7 @@ public class ItemBlockCallisto extends ItemBlockDefaults
 		}
 		case 1:
 		{
-			name = "subSurface";
+			name = "sub_surface";
 			break;
 		}
 		case 2:
@@ -36,17 +36,17 @@ public class ItemBlockCallisto extends ItemBlockDefaults
 		}
 		case 3:
 		{
-			name = "oreIron";
+			name = "ore_iron";
 			break;
 		}
 		case 4:
 		{
-			name = "oreTin";
+			name = "ore_tin";
 			break;
 		}
 		case 5:
 		{
-			name = "oreCopper";
+			name = "ore_copper";
 			break;
 		}
 		default:

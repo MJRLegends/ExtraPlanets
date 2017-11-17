@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedOxygenCompressor;
-import com.mjr.extraplanets.itemBlocks.ItemBlockDescDefaults;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDescDefaults;
 
 public class ItemBlockAdvancedOxygenCompressor extends ItemBlockDescDefaults {
 	public ItemBlockAdvancedOxygenCompressor(Block block) {

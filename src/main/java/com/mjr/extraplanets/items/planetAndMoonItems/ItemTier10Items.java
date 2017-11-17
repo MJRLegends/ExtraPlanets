@@ -21,6 +21,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier10Items extends Item {
 	public static final String[] names = { "tier10engine", "tier10booster", "tier10Fin", "tier10HeavyDutyPlate", "compressedDarkIron", "ingotDarkIron" };
+	public static final String[] textureNames = { "tier10.tier10engine", "tier10.tier10booster", "tier10.tier10_fin", "tier10.tier10_heavy_duty_plate", "tier10.compressed_dark_iron", "tier10.ingot_dark_iron" };
 
 	protected IIcon[] icons = new IIcon[ItemTier10Items.names.length];
 
@@ -29,7 +30,6 @@ public class ItemTier10Items extends Item {
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setUnlocalizedName(assetName);
-		this.setTextureName(Constants.TEXTURE_PREFIX + assetName);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -44,8 +44,8 @@ public class ItemTier10Items extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemTier10Items.names) {
-			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
+		for (final String name : ItemTier10Items.textureNames) {
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
 		}
 	}
 

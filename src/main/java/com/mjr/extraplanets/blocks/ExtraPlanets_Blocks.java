@@ -45,9 +45,9 @@ import com.mjr.extraplanets.blocks.treasureChest.T6TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T8TreasureChest;
 import com.mjr.extraplanets.blocks.treasureChest.T9TreasureChest;
-import com.mjr.extraplanets.itemBlocks.ItemBlockCustomLandingPad;
-import com.mjr.extraplanets.itemBlocks.ItemBlockDecorativeBlocks;
-import com.mjr.extraplanets.itemBlocks.ItemBlockDecorativeBlocks2;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockCustomLandingPad;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks;
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDecorativeBlocks2;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCallisto;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockCeres;
 import com.mjr.extraplanets.itemBlocks.planetAndMoons.ItemBlockDeimos;
@@ -244,25 +244,25 @@ public class ExtraPlanets_Blocks {
 	private static void initializeBlocks() {
 		if (Config.mercury) {
 			mercuryBlocks = new BlockBasicMercury("mercury");
-			mercuryGravel = new BlockCustomGravel("mercuryGravel");
+			mercuryGravel = new BlockCustomGravel("mercury_gravel");
 		}
 		if (Config.venus) {
 			venusBlocks = new BlockBasicVenus("venus");
-			venusGravel = new BlockCustomGravel("venusGravel");
-			ashBlock = new BlockAshBlock("ashBlock");
-			volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanicRock").setBlockTextureName(Constants.TEXTURE_PREFIX + "volcanicRock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
+			venusGravel = new BlockCustomGravel("venus_gravel");
+			ashBlock = new BlockBasic(Material.rock).setBlockName("ash_rock").setHardness(2.0F).setResistance(1.5F).setBlockTextureName(Constants.TEXTURE_PREFIX + "ash_rock");
+			volcanicRock = new BlockBasic(Material.rock).setBlockName("volcanic_rock").setBlockTextureName(Constants.TEXTURE_PREFIX + "volcanic_rock").setHardness(3.0F).setResistance(6.0F).setStepSound(Block.soundTypeStone);
 		}
 		if (Config.ceres) {
 			ceresBlocks = new BlockBasicCeres("ceres");
-			ceresGravel = new BlockCustomGravel("ceresGravel");
+			ceresGravel = new BlockCustomGravel("ceres_gravel");
 		}
 		if (Config.jupiter) {
 			jupiterBlocks = new BlockBasicJupiter("jupiter");
-			jupiterGravel = new BlockCustomGravel("jupiterGravel");
+			jupiterGravel = new BlockCustomGravel("jupiter_gravel");
 		}
 		if (Config.saturn) {
 			saturnBlocks = new BlockBasicSaturn("saturn");
-			saturnGravel = new BlockCustomGravel("saturnGravel");
+			saturnGravel = new BlockCustomGravel("saturn_gravel");
 		}
 		if (Config.uranus) {
 			uranusBlocks = new BlockBasicUranus("uranus");
@@ -270,63 +270,63 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.neptune) {
 			neptuneBlocks = new BlockBasicNeptune("neptune");
-			frozenNitrogen = new BlockBasic(Material.ice).setBlockName("frozenNitrogen").setBlockTextureName(Constants.TEXTURE_PREFIX + "frozenNitrogen").setStepSound(Block.soundTypeSnow);
+			frozenNitrogen = new BlockBasic(Material.ice).setBlockName("frozen_nitrogen").setBlockTextureName(Constants.TEXTURE_PREFIX + "frozen_nitrogen").setStepSound(Block.soundTypeSnow);
 		}
 		if (Config.pluto) {
 			plutoBlocks = new BlockBasicPluto("pluto");
-			plutoGravel = new BlockCustomGravel("plutoGravel");
+			plutoGravel = new BlockCustomGravel("pluto_gravel");
 		}
 		if (Config.eris) {
 			erisBlocks = new BlockBasicEris("eris");
-			erisGravel = new BlockCustomGravel("erisGravel");
+			erisGravel = new BlockCustomGravel("eris_gravel");
 		}
 		if (Config.europa) {
 			europaBlocks = new BlockBasicEuropa("europa");
-			europaGravel = new BlockCustomGravel("europaGravel");
+			europaGravel = new BlockCustomGravel("europa_gravel");
 		}
 		if (Config.io) {
 			ioBlocks = new BlockBasicIo("io");
-			ioGravel = new BlockCustomGravel("ioGravel");
+			ioGravel = new BlockCustomGravel("io_gravel");
 		}
 		if (Config.deimos) {
 			deimosBlocks = new BlockBasicDeimos("deimos");
-			deimosGravel = new BlockCustomGravel("deimosGravel");
+			deimosGravel = new BlockCustomGravel("deimos_gravel");
 		}
 		if (Config.phobos) {
 			phobosBlocks = new BlockBasicPhobos("phobos");
-			phobosGravel = new BlockCustomGravel("phobosGravel");
+			phobosGravel = new BlockCustomGravel("phobos_gravel");
 		}
 		if (Config.triton) {
 			tritonBlocks = new BlockBasicTriton("triton");
-			tritonGravel = new BlockCustomGravel("tritonGravel");
+			tritonGravel = new BlockCustomGravel("triton_gravel");
 		}
 		if (Config.callisto) {
 			callistoBlocks = new BlockBasicCallisto("callisto");
-			callistoGravel = new BlockCustomGravel("callistoGravel");
+			callistoGravel = new BlockCustomGravel("callisto_gravel");
 		}
 		if (Config.ganymede) {
 			ganymedeBlocks = new BlockBasicGanymede("ganymede");
-			ganymedeGravel = new BlockCustomGravel("ganymedeGravel");
+			ganymedeGravel = new BlockCustomGravel("ganymede_gravel");
 		}
 		if (Config.rhea) {
 			rheaBlocks = new BlockBasicRhea("rhea");
-			rheaGravel = new BlockCustomGravel("rheaGravel");
+			rheaGravel = new BlockCustomGravel("rhea_gravel");
 		}
 		if (Config.titan) {
 			titanBlocks = new BlockBasicTitan("titan");
-			titanGravel = new BlockCustomGravel("titanGravel");
+			titanGravel = new BlockCustomGravel("titan_gravel");
 		}
 		if (Config.oberon) {
 			oberonBlocks = new BlockBasicOberon("oberon");
-			oberonGravel = new BlockCustomGravel("oberonGravel");
+			oberonGravel = new BlockCustomGravel("oberon_gravel");
 		}
 		if (Config.titania) {
 			titaniaBlocks = new BlockBasicTitania("titania");
-			titaniaGravel = new BlockCustomGravel("titaniaGravel");
+			titaniaGravel = new BlockCustomGravel("titania_gravel");
 		}
 		if (Config.iapetus) {
 			iapetusBlocks = new BlockBasicIapetus("iapetus");
-			iapetusGravel = new BlockCustomGravel("iapetusGravel");
+			iapetusGravel = new BlockCustomGravel("iapetus_gravel");
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
@@ -340,83 +340,83 @@ public class ExtraPlanets_Blocks {
 			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_purple", "kepler22b");
 			kepler22bRedGrass = new BlockBasicGrass("kepler22b_red", "kepler22b");
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow", "kepler22b");
-			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22bFlowers");
-			redSand = new BlockSand("redSand").setHardness(0.6F);
-			redSandstone = new BlockBasic(Material.rock).setBlockName("redSandstone").setBlockTextureName(Constants.TEXTURE_PREFIX + "redSandstone").setHardness(2F).setResistance(2F);
+			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22b_flowers");
+			redSand = new BlockSand("red_sand").setHardness(0.6F);
+			redSandstone = new BlockBasic(Material.rock).setBlockName("red_sandstone").setBlockTextureName(Constants.TEXTURE_PREFIX + "red_sandstone").setHardness(2F).setResistance(2F);
 		}
 		advancedLaunchPad = new BlockCustomLandingPad("advancedLaunchPad");
 		advancedLaunchPadFull = new BlockCustomLandingPadFull("advancedLaunchPadFull");
 		
-		decorativeBlocks = new BlockDecorativeBlocks("decorativeBlocks");
-		decorativeBlocks2 = new BlockDecorativeBlocks2("decorativeBlocks2");
+		decorativeBlocks = new BlockDecorativeBlocks("decorative_blocks");
+		decorativeBlocks2 = new BlockDecorativeBlocks2("decorative_blocks2");
 	}
 
 	private static void initializeDungeonBlocks() {
 		if (Config.venus) {
-			veunsDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("veunsDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "veunsDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			veunsDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("veuns.dungeon_brick").setBlockTextureName(Constants.TEXTURE_PREFIX + "veuns_dungeon_brick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
 			veunsDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore 2
 		}
 		if (Config.jupiter) {
-			jupiterDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("jupiterDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiterDungeonBrick").setHardness(4.0F).setResistance(40.0F)
+			jupiterDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("jupiter.dungeon_brick").setBlockTextureName(Constants.TEXTURE_PREFIX + "jupiter_dungeon_brick").setHardness(4.0F).setResistance(40.0F)
 					.setStepSound(Block.soundTypeMetal);
 			jupiterDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.saturn) {
-			saturnDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("saturnDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "saturnDungeonBrick").setHardness(4.0f).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			saturnDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("saturn.dungeon_brick").setBlockTextureName(Constants.TEXTURE_PREFIX + "saturn_dungeon_brick").setHardness(4.0f).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
 			saturnDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.uranus) {
-			uranusDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("uranusDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "uranusDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			uranusDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("uranus.dungeon_brick").setBlockTextureName(Constants.TEXTURE_PREFIX + "uranus_dungeon_brick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
 			uranusDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.neptune) {
-			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("neptuneDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "neptuneDungeonBrick").setHardness(4.0F).setResistance(40.0F)
+			neptuneDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("neptune.dungeon_brick").setBlockTextureName(Constants.TEXTURE_PREFIX + "neptune_dungeon_brick").setHardness(4.0F).setResistance(40.0F)
 					.setStepSound(Block.soundTypeMetal);
 			neptuneDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.pluto) {
-			plutoDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("plutoDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "plutoDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			plutoDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("pluto.dungeon_brick").setBlockTextureName(Constants.TEXTURE_PREFIX + "pluto_dungeon_brick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
 			plutoDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 		if (Config.eris) {
-			erisDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("erisDungeonBrick").setBlockTextureName(Constants.TEXTURE_PREFIX + "erisDungeonBrick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
+			erisDungeonBrick = new BlockDungeonBrick(Material.rock).setBlockName("eris.dungeon_brick").setBlockTextureName(Constants.TEXTURE_PREFIX + "eris_dungeon_brick").setHardness(4.0F).setResistance(40.0F).setStepSound(Block.soundTypeMetal);
 			erisDungeonBrick.setHarvestLevel("pickaxe", 0); // Normal 0 | Ore
 		}
 	}
 
 	private static void initializeTreasureChestBlocks() {
 		if (Config.venus) {
-			treasureChestTier4 = new T4TreasureChest("treasureChestT4");
+			treasureChestTier4 = new T4TreasureChest("treasure_chest_t4");
 		}
 		if (Config.jupiter) {
-			treasureChestTier5 = new T5TreasureChest("treasureChestT5");
+			treasureChestTier5 = new T5TreasureChest("treasure_chest_t5");
 		}
 		if (Config.saturn) {
 			if (Config.morePlanetsCompatibilityAdv)
-				treasureChestTier6 = new T6TreasureChest("treasureChestT4Saturn");
+				treasureChestTier6 = new T6TreasureChest("treasure_chest_t4_saturn");
 			else
-				treasureChestTier6 = new T6TreasureChest("treasureChestT6");
+				treasureChestTier6 = new T6TreasureChest("treasure_chest_t6");
 		}
 		if (Config.uranus) {
 			if (Config.morePlanetsCompatibilityAdv)
-				treasureChestTier7 = new T7TreasureChest("treasureChestT4Uranus");
+				treasureChestTier7 = new T7TreasureChest("treasure_chest_t4_uranus");
 			else
-				treasureChestTier7 = new T7TreasureChest("treasureChestT7");
+				treasureChestTier7 = new T7TreasureChest("treasure_chest_t7");
 		}
 		if (Config.neptune) {
 			if (Config.morePlanetsCompatibilityAdv)
-				treasureChestTier8 = new T8TreasureChest("treasureChestT5Neptune");
+				treasureChestTier8 = new T8TreasureChest("treasure_chest_t5_neptune");
 			else
-				treasureChestTier8 = new T8TreasureChest("treasureChestT8");
+				treasureChestTier8 = new T8TreasureChest("treasure_chest_t8");
 		}
 		if (Config.pluto) {
-			treasureChestTier9 = new T9TreasureChest("treasureChestT9");
+			treasureChestTier9 = new T9TreasureChest("treasure_chest_t9");
 		}
 		if (Config.eris) {
 			if (Config.morePlanetsCompatibilityAdv)
-				treasureChestTier10 = new T10TreasureChest("treasureChestT6Eris");
+				treasureChestTier10 = new T10TreasureChest("treasure_chest_t6_eris");
 			else
-				treasureChestTier10 = new T10TreasureChest("treasureChestT10");
+				treasureChestTier10 = new T10TreasureChest("treasure_chest_t10");
 		}
 	}
 
@@ -445,12 +445,12 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void initializeTreeBlocks() {
-		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22bMapleLogs");
-		kepler22bMapleLog2 = new BlockKepler22bMapleTreeLog2("kepler22bMapleLogs2");
-		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22bMapleSaplings");
-		kepler22bMapleLeaf = new BlockKepler22bMapleTreeLeaves("kepler22bNewMapleLeaves");
-		kepler22bMapleLeaf2 = new BlockKepler22bMapleTreeLeaves2("kepler22bNewMapleLeaves2");
-		kepler22bPlanks = new BlockBasicKepler22bPlanks("kepler22bPlanks");
+		kepler22bMapleLog = new BlockKepler22bMapleTreeLog("kepler22b_maple_logs");
+		kepler22bMapleLog2 = new BlockKepler22bMapleTreeLog2("kepler22b_maple_logs2");
+		kepler22bMapleSapling = new BlockKepler22bMapleTreeSapling("kepler22b_maple_saplings");
+		kepler22bMapleLeaf = new BlockKepler22bMapleTreeLeaves("kepler22b_new_maple_leaves");
+		kepler22bMapleLeaf2 = new BlockKepler22bMapleTreeLeaves2("kepler22b_new_maple_leaves_2");
+		kepler22bPlanks = new BlockBasicKepler22bPlanks("kepler22b_planks");
 	}
 
 	private static void registerBlocks() {
@@ -464,7 +464,7 @@ public class ExtraPlanets_Blocks {
 
 			GameRegistry.registerBlock(venusSpawner, "venusSpawner");
 			GameRegistry.registerBlock(veunsDungeonBrick, "veunsDungeonBrick");
-			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, treasureChestTier4.getUnlocalizedName());
+			GameRegistry.registerBlock(treasureChestTier4, ItemBlockDesc.class, "tile.treasureChestT4");
 
 			GameRegistry.registerBlock(ashBlock, "ashBlock");
 			GameRegistry.registerBlock(volcanicRock, "volcanicRock");
@@ -479,7 +479,7 @@ public class ExtraPlanets_Blocks {
 
 			GameRegistry.registerBlock(jupiterSpawner, "jupiterSpawner");
 			GameRegistry.registerBlock(jupiterDungeonBrick, "jupiterDungeonBrick");
-			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, treasureChestTier5.getUnlocalizedName());
+			GameRegistry.registerBlock(treasureChestTier5, ItemBlockDesc.class, "tile.treasureChestT5");
 		}
 		if (Config.saturn) {
 			GameRegistry.registerBlock(saturnBlocks, ItemBlockSaturn.class, saturnBlocks.getUnlocalizedName());
@@ -487,34 +487,34 @@ public class ExtraPlanets_Blocks {
 
 			GameRegistry.registerBlock(saturnSpawner, "saturnSpawner");
 			GameRegistry.registerBlock(saturnDungeonBrick, "saturnDungeonBrick");
-			GameRegistry.registerBlock(treasureChestTier6, ItemBlockDesc.class, treasureChestTier6.getUnlocalizedName());
+			GameRegistry.registerBlock(treasureChestTier6, ItemBlockDesc.class, "tile.treasureChestT6");
 		}
 		if (Config.uranus) {
 			GameRegistry.registerBlock(uranusBlocks, ItemBlockUranus.class, uranusBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(uranusSpawner, "uranusSpawner");
 			GameRegistry.registerBlock(uranusDungeonBrick, "uranusDungeonBrick");
-			GameRegistry.registerBlock(treasureChestTier7, ItemBlockDesc.class, treasureChestTier7.getUnlocalizedName());
+			GameRegistry.registerBlock(treasureChestTier7, ItemBlockDesc.class, "tile.treasureChestT7");
 			GameRegistry.registerBlock(denseIce, "denseIce");
 		}
 		if (Config.neptune) {
 			GameRegistry.registerBlock(neptuneBlocks, ItemBlockNeptune.class, neptuneBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(neptuneSpawner, "neptuneSpawner");
 			GameRegistry.registerBlock(neptuneDungeonBrick, "neptuneDungeonBrick");
-			GameRegistry.registerBlock(treasureChestTier8, ItemBlockDesc.class, treasureChestTier8.getUnlocalizedName());
+			GameRegistry.registerBlock(treasureChestTier8, ItemBlockDesc.class, "tile.treasureChestT8");
 			GameRegistry.registerBlock(frozenNitrogen, "frozenNitrogen");
 		}
 		if (Config.pluto) {
 			GameRegistry.registerBlock(plutoBlocks, ItemBlockPluto.class, plutoBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(plutoSpawner, "plutoSpawner");
 			GameRegistry.registerBlock(plutoDungeonBrick, "plutoDungeonBrick");
-			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, treasureChestTier9.getUnlocalizedName());
+			GameRegistry.registerBlock(treasureChestTier9, ItemBlockDesc.class, "tile.treasureChestT9");
 			GameRegistry.registerBlock(plutoGravel, "plutoGravel");
 		}
 		if (Config.eris) {
 			GameRegistry.registerBlock(erisBlocks, ItemBlockEris.class, erisBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(erisSpawner, "erisSpawner");
 			GameRegistry.registerBlock(erisDungeonBrick, "erisDungeonBrick");
-			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, treasureChestTier10.getUnlocalizedName());
+			GameRegistry.registerBlock(treasureChestTier10, ItemBlockDesc.class, "tile.treasureChestT10");
 			GameRegistry.registerBlock(erisGravel, "erisGravel");
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
@@ -524,7 +524,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(kepler22bPurpleGrass, "kepler22bPurpleGrass");
 			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
 			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
-			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, kepler22bGrassFlowers.getUnlocalizedName());
+			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, "tile.kepler22bFlowers");
 			GameRegistry.registerBlock(redSand, "redSand");
 			GameRegistry.registerBlock(redSandstone, "redSandstone");
 		}
@@ -567,15 +567,15 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.oberon) {
 			GameRegistry.registerBlock(oberonBlocks, ItemBlockOberon.class, oberonBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(oberonGravel, oberonGravel.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(oberonGravel, "oberonGravel");
 		}
 		if (Config.titania) {
 			GameRegistry.registerBlock(titaniaBlocks, ItemBlockTitania.class, titaniaBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(titaniaGravel, titaniaGravel.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(titaniaGravel, "titaniaGravel");
 		}
 		if (Config.iapetus) {
 			GameRegistry.registerBlock(iapetusBlocks, ItemBlockIapetus.class, iapetusBlocks.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(iapetusGravel, iapetusGravel.getUnlocalizedName().substring(5));
+			GameRegistry.registerBlock(iapetusGravel, "iapetusGravel");
 		}
 		if (Config.mercury || Config.ceres || Config.pluto || Config.eris)
 			GameRegistry.registerBlock(fossil, "fossil");
@@ -583,11 +583,11 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
 		GameRegistry.registerBlock(fireBomb, "fireBomb");
 
-		GameRegistry.registerBlock(advancedLaunchPad, ItemBlockCustomLandingPad.class, advancedLaunchPad.getUnlocalizedName());
-		GameRegistry.registerBlock(advancedLaunchPadFull, ItemBlockGC.class, advancedLaunchPadFull.getUnlocalizedName());
+		GameRegistry.registerBlock(advancedLaunchPad, ItemBlockCustomLandingPad.class, "tile.advancedLaunchPad");
+		GameRegistry.registerBlock(advancedLaunchPadFull, ItemBlockGC.class, "tile.advancedLaunchPadFull");
 		
-		GameRegistry.registerBlock(decorativeBlocks, ItemBlockDecorativeBlocks.class, decorativeBlocks.getUnlocalizedName());
-		GameRegistry.registerBlock(decorativeBlocks2, ItemBlockDecorativeBlocks2.class, decorativeBlocks2.getUnlocalizedName());
+		GameRegistry.registerBlock(decorativeBlocks, ItemBlockDecorativeBlocks.class, "tile.decorativeBlocks");
+		GameRegistry.registerBlock(decorativeBlocks2, ItemBlockDecorativeBlocks2.class, "tile.decorativeBlocks2");
 	}
 
 	private static void registerTileEntitys() {
@@ -994,11 +994,11 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void registerTreeBlocks() {
-		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, kepler22bMapleLog.getUnlocalizedName());
-		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, kepler22bMapleLog2.getUnlocalizedName());
-		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, kepler22bMapleSapling.getUnlocalizedName());
-		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, kepler22bMapleLeaf.getUnlocalizedName());
-		GameRegistry.registerBlock(kepler22bMapleLeaf2, ItemBlockKepler22bMapleLeaf2.class, kepler22bMapleLeaf2.getUnlocalizedName());
-		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, kepler22bPlanks.getUnlocalizedName());
+		GameRegistry.registerBlock(kepler22bMapleLog, ItemBlockKepler22bMapleLog.class, "tile.kepler22bMapleLogs");
+		GameRegistry.registerBlock(kepler22bMapleLog2, ItemBlockKepler22bMapleLog2.class, "tile.kepler22bMapleLogs2");
+		GameRegistry.registerBlock(kepler22bMapleSapling, ItemBlockKepler22bMapleSapling.class, "tile.kepler22bMapleSaplings");
+		GameRegistry.registerBlock(kepler22bMapleLeaf, ItemBlockKepler22bMapleLeaf.class, "tile.kepler22bNewMapleLeaves");
+		GameRegistry.registerBlock(kepler22bMapleLeaf2, ItemBlockKepler22bMapleLeaf2.class, "tile.kepler22bNewMapleLeaves2");
+		GameRegistry.registerBlock(kepler22bPlanks, ItemBlockKepler22bPlanks.class, "tile.kepler22bPlanks");
 	}
 }

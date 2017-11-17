@@ -24,7 +24,7 @@ public class ItemAppleIron extends ItemFood {
 		this.setHasSubtypes(true);
 		this.setAlwaysEdible();
 		this.setUnlocalizedName("appleIron");
-		this.setTextureName(Constants.TEXTURE_PREFIX + "apple_Iron");
+		this.setTextureName(Constants.TEXTURE_PREFIX + "apple_iron");
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 

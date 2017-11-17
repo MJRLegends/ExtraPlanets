@@ -23,13 +23,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBasicJupiter extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon[] blockIcons;
-	private String name;
 
 	public BlockBasicJupiter(String assetName) {
 		super(Material.rock);
 		this.blockHardness = 3.0F;
 		this.setBlockName(assetName);
-		this.name = assetName;
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -37,18 +35,18 @@ public class BlockBasicJupiter extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.blockIcons = new IIcon[12];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Surface");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "SubSurface");
-		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "Stone");
-		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreIron");
-		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreTin");
-		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreCopper");
-		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OrePalladium");
-		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreNickel");
-		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "palladiumBlock");
-		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "StoneBricks");
-		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreRedGem");
-		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "redGemBlock");
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_surface");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_sub_surface");
+		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_stone");
+		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_ore_iron");
+		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_ore_tin");
+		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_ore_copper");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_ore_palladium");
+		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_ore_nickel");
+		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_palladium_block");
+		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_stone_bricks");
+		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_ore_red_gem");
+		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_red_gem_block");
 		this.blockIcon = this.blockIcons[0];
 	}
 
