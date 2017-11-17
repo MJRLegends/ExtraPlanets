@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenFrozenNitrogenPile;
 
 public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
@@ -58,22 +58,18 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 		this.generateOre(5, this.frozenNitrogenGen, 0, 256);
 		this.generateOre(10, this.blueGemGen, 0, 10);
 
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + 8;
-				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.NITROGEN).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.NEPTUNE_BLOCKS);
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.NITROGEN, ExtraPlanets_Blocks.NEPTUNE_BLOCKS);
 			}
 		}
-		
+
 		if (this.rand.nextInt(20) == 1) {
-			BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.chunkX + 8, 0, this.chunkZ + 8));
-			blockpos.down();
-			new WorldGenFrozenNitrogenPile().generate(this.currentWorld, this.rand, blockpos);
+			WorldGenHelper.generateStructure(new WorldGenFrozenNitrogenPile(), this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ));
 		}
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

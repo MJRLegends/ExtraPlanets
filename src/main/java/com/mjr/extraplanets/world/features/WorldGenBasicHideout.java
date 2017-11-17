@@ -13,49 +13,27 @@ import net.minecraft.world.storage.loot.LootTableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenBasicHideout extends WorldGenerator {
-
-	public WorldGenBasicHideout() {
-
-	}
-
+	
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		int x = position.getX();
-		int y = position.getY();
-		int z = position.getZ();
-		for (int i = 0; i < 11; i++) {
-			for (int j = 0; j < 11; j++) {
-				try {
-					if (world.getBlockState(new BlockPos(x + i, y - 3, z + j)).getBlock() == Blocks.AIR)
-						return false;
-				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
-				}
-			}
-		}
-		for (int i = 0; i < 11; i++) {
-			for (int j = 0; j < 11; j++) {
-				for (int k = 0; k < 6; k++) {
-					if (world.getBlockState(new BlockPos(x + i, (y + 2) + k, z + j)).getBlock() != Blocks.AIR)
-						return false;
-				}
-			}
-		}
-		y = y - 1;
-		if (!world.isAreaLoaded(new BlockPos(x + 10, y, z + 10), 10))
+		if (WorldGenHelper.checkValidSpawn(world, position, 10) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Basic Hideout at (x, y, z)" + x + " " + y + " " + z);
-			generate_r0(world, rand, x, y, z);
-			fillChests(world, rand, x, y, z);
+				System.out.println("Spawning Basic Hideout at (x, y, z)" + position.toString());
+			generateStructure(world, rand, position);
+			fillChests(world, rand, position);
 		}
 		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
+	public boolean generateStructure(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 0), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 0), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 0, z + 0), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState(), 3);
@@ -702,7 +680,10 @@ public class WorldGenBasicHideout extends WorldGenerator {
 
 	}
 
-	public boolean fillChests(World world, Random rand, int x, int y, int z) {
+	public boolean fillChests(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
 		int random = rand.nextInt(15) + 1;
 		if (random < 5) {
 			if (Config.DEBUG_MODE)
