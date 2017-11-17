@@ -19,10 +19,12 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnHydroCarbonSea;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
 
 public class SaturnBiomes extends BiomeGenBase {
 	public static final BiomeGenBase saturn = new BiomeGenSaturn(Config.SATURN_BIOME_ID).setBiomeName("saturn").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase saturnHydroCarbonSea = new BiomeGenSaturnHydroCarbonSea(Config.SATURN_HYDROCARBON_SEA_BIOME_ID).setBiomeName("saturnHydroCarbonSea").setHeight(new Height(-1.0F, 0.0F));
+	public static final BiomeGenBase saturnNuclearLand = new BiomeGenSaturnNuclearLand(Config.SATURN_NUCLEAR_LAND_BIOME_ID).setBiomeName("saturnNuclearLand").setHeight(new Height(0.225F, 0.2F));
 
 	protected SaturnBiomes(int var1) {
 		super(var1);
