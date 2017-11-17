@@ -226,9 +226,9 @@ public class MainHandlerClient {
 	public void onGuiOpenEvent(GuiOpenEvent event) {
 		if (((event.getGui() instanceof GuiCelestialSelection))) {
 			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
-				event.setGui(new CustomCelestaialSelection(true, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
+				event.setGui(new CustomCelestaialSelection(true, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
 			} else {
-				event.setGui(new CustomCelestaialSelection(false, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
+				event.setGui(new CustomCelestaialSelection(false, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
 			}
 		}
 	}
