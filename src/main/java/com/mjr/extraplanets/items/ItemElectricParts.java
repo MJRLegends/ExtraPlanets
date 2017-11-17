@@ -18,7 +18,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemElectricParts extends Item {
-	public static final String[] names = { "batteryTier1", "batteryTier2", "sparkPlug", "electricWheelsTier1", "electricWheelsTier2" };
+	public static final String[] names = { "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2" };
 
 	protected IIcon[] icons = new IIcon[ItemElectricParts.names.length];
 
@@ -43,7 +43,7 @@ public class ItemElectricParts extends Item {
 		int i = 0;
 
 		for (final String name : ItemElectricParts.names) {
-			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
 		}
 	}
 

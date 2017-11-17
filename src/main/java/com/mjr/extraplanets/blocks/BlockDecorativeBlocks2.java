@@ -34,8 +34,8 @@ public class BlockDecorativeBlocks2 extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.blockIcons = new IIcon[7];
-		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_2_" + "white_block");
-		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_2_" + "red_block");
+		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "uranus_white_gem_block");
+		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_red_gem_block");
 		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_2_" + "blue_block");
 		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_2_" + "light_blue_block");
 		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "decorative_blocks_2_" + "yellow_block");

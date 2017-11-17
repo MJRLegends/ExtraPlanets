@@ -23,7 +23,7 @@ public class ItemAppleDiamond extends ItemFood {
 		super(p_i45341_1_, p_i45341_2_, p_i45341_3_);
 		this.setHasSubtypes(true);
 		this.setAlwaysEdible();
-		this.setUnlocalizedName("appleDiamond");
+		this.setUnlocalizedName("apple_diamond");
 		this.setTextureName(Constants.TEXTURE_PREFIX + "apple_diamond");
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}

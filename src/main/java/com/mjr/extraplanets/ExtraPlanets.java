@@ -324,80 +324,80 @@ public class ExtraPlanets {
 
 		if (Config.morePlanetsCompatibilityAdv == false) {
 			if (Config.venus)
-				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.modName + "EntityTier4Rocket", 150, 1, false);
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier4Rocket", 150, 1, false);
 			if (Config.jupiter)
-				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.modName + "EntityTier5Rocket", 150, 1, false);
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier5Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier5Rocket", 150, 1, false);
 			if (Config.saturn)
-				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.modName + "EntityTier6Rocket", 150, 1, false);
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier6Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier6Rocket", 150, 1, false);
 			if (Config.uranus)
-				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.modName + "EntityTier7Rocket", 150, 1, false);
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier7Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier7Rocket", 150, 1, false);
 			if (Config.neptune)
-				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.modName + "EntityTier8Rocket", 150, 1, false);
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier8Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier8Rocket", 150, 1, false);
 			if (Config.pluto)
-				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.modName + "EntityTier9Rocket", 150, 1, false);
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier9Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier9Rocket", 150, 1, false);
 			if (Config.eris)
-				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.modName + "EntityTier10Rocket", 150, 1, false);
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.modName + "SmallSnowBall", 150, 1, true);
+				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier10Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier10Rocket", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntitySmallSnowball.class, Constants.ASSET_PREFIX + "." + "SmallSnowBall", 150, 1, true);
 		}
 		if (Config.marsRover)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityMarsRover.class, Constants.ASSET_PREFIX + "." + "EntityMarsRover", 150, 1, false);
 		if (Config.venusRover)
-			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
+			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityVenusRover.class, Constants.ASSET_PREFIX + "." + "EntityVenusRover", 150, 1, false);
 	}
 
 	private void registerCreatures() {
 		// Dungeon Bosses
 		if (Config.venus)
 			if (Config.useDefaultBosses)
-				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossVenus.class, Constants.modName + "CreeperBossVenus", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossVenus.class, Constants.ASSET_PREFIX + "." + "CreeperBossVenus", 894731, 0);
 			else
-				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.modName + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMagmaCubeBoss.class, Constants.ASSET_PREFIX + "." + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.jupiter)
 			if (Config.useDefaultBosses)
-				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.modName + "CreeperBossJupiter", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossJupiter.class, Constants.ASSET_PREFIX + "." + "CreeperBossJupiter", 894731, 0);
 			else
-				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedFireBatBoss.class, Constants.modName + "EvolvedFireBatBoss", 16167425, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedFireBatBoss.class, Constants.ASSET_PREFIX + "." + "EvolvedFireBatBoss", 16167425, 0);
 		if (Config.saturn)
 			if (Config.useDefaultBosses)
-				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.modName + "CreeperBossSaturn", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossSaturn.class, Constants.ASSET_PREFIX + "." + "CreeperBossSaturn", 894731, 0);
 			else
-				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedGhastBoss.class, Constants.modName + "EvolvedGhastBoss", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedGhastBoss.class, Constants.ASSET_PREFIX + "." + "EvolvedGhastBoss", 894731, 0);
 		if (Config.uranus)
 			if (Config.useDefaultBosses)
-				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossUranus.class, Constants.modName + "CreeperBossUranus", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossUranus.class, Constants.ASSET_PREFIX + "." + "CreeperBossUranus", 894731, 0);
 			else
-				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.modName + "EvolvedIceSlimeBoss", 16382457, 44975);
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedIceSlimeBoss.class, Constants.ASSET_PREFIX + "." + "EvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.neptune)
 			if (Config.useDefaultBosses)
-				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.modName + "CreeperBossNeptune", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossNeptune.class, Constants.ASSET_PREFIX + "." + "CreeperBossNeptune", 894731, 0);
 			else
-				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedSnowmanBoss.class, Constants.modName + "EvolvedSnowmanBoss", 894731, 0);
+				RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedSnowmanBoss.class, Constants.ASSET_PREFIX + "." + "EvolvedSnowmanBoss", 894731, 0);
 		if (Config.pluto)
-			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.modName + "CreeperBossPluto", 894731, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossPluto.class, Constants.ASSET_PREFIX + "." + "CreeperBossPluto", 894731, 0);
 		if (Config.eris)
-			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossEris.class, Constants.modName + "CreeperBossEris", 894731, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityCreeperBossEris.class, Constants.ASSET_PREFIX + "." + "CreeperBossEris", 894731, 0);
 
 		// Entities
 		if (Config.evolvedMagmaCube)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.modName + "EvolvedMagmaCube", 3407872, 16579584);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMagmaCube.class, Constants.ASSET_PREFIX + "." + "EvolvedMagmaCube", 3407872, 16579584);
 		if (Config.evolvedIceSlime)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.modName + "EvolvedIceSlime", 16382457, 44975);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedIceSlime.class, Constants.ASSET_PREFIX + "." + "EvolvedIceSlime", 16382457, 44975);
 		if (Config.evolvedWitch)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.modName + "EvolvedWitch", 3407872, 5349438);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedWitch.class, Constants.ASSET_PREFIX + "." + "EvolvedWitch", 3407872, 5349438);
 		if (Config.evolvedEnderman)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.modName + "EvolvedEnderman", 1447446, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedEnderman.class, Constants.ASSET_PREFIX + "." + "EvolvedEnderman", 1447446, 0);
 		if (Config.evolvedBlaze)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.modName + "EvolvedBlaze", 16167425, 16775294);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedBlaze.class, Constants.ASSET_PREFIX + "." + "EvolvedBlaze", 16167425, 16775294);
 		if (Config.evolvedBlueCreeper)
-			RegisterHelper.registerExtraPlanetsCreature(EntityBlueCreeper.class, Constants.modName + "EvolvedBlueCreeper", 44975, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityBlueCreeper.class, Constants.ASSET_PREFIX + "." + "EvolvedBlueCreeper", 44975, 0);
 		if (Config.evolvedRedCreeper)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, Constants.modName + "EvolvedRedCreeper", 11013646, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedRedCreeper.class, Constants.ASSET_PREFIX + "." + "EvolvedRedCreeper", 11013646, 0);
 		if (Config.evolvedPowerSkeleton)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, Constants.modName + "EvolvedPowerSkeleton", 12698049, 4802889);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedPowerSkeleton.class, Constants.ASSET_PREFIX + "." + "EvolvedPowerSkeleton", 12698049, 4802889);
 		if (Config.evolvedGiantSpider)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class, Constants.modName + "EvolvedGiantSpider", 12698049, 4802889);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedGiantSpider.class, Constants.ASSET_PREFIX + "." + "EvolvedGiantSpider", 12698049, 4802889);
 		if (Config.evolvedMiniEnderman)
-			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class, Constants.modName + "EvolvedMiniEnderman", 1447446, 0);
+			RegisterHelper.registerExtraPlanetsCreature(EntityEvolvedMiniEnderman.class, Constants.ASSET_PREFIX + "." + "EvolvedMiniEnderman", 1447446, 0);
 	}
 
 	private void registerSchematicsRecipes() {

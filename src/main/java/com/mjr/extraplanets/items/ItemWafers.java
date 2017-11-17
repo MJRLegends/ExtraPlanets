@@ -51,7 +51,7 @@ public class ItemWafers extends Item {
 
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
-		return this.getUnlocalizedName() + "." + ItemWafers.names[itemStack.getItemDamage()];
+		return this.getUnlocalizedName() + "." + ItemWafers.names[itemStack.getItemDamage()] + "_wafer";
 	}
 
 	@Override

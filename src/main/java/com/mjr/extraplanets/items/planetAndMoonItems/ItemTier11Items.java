@@ -74,15 +74,4 @@ public class ItemTier11Items extends Item {
 	public int getMetadata(int par1) {
 		return par1;
 	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if (itemStack != null && itemStack.getItemDamage() == 3) {
-			if (player.worldObj.isRemote) {
-				list.add(EnumChatFormatting.GRAY + GCCoreUtil.translate("tier10.heavyDutyPlate.name"));
-			}
-		}
-	}
-
 }

@@ -39,7 +39,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						temp = (WorldProviderSpace) DimensionManager.getProvider(this.selectedBody.getDimensionID());
+						temp = DimensionManager.getProvider(this.selectedBody.getDimensionID());
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));

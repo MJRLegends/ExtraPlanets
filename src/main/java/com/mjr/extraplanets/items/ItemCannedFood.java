@@ -52,7 +52,7 @@ public class ItemCannedFood extends Item {
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
 		if (itemStack.getItemDamage() < 5) {
-			return this.getUnlocalizedName() + ".cannedFood";
+			return this.getUnlocalizedName() + ".canned_food";
 		}
 
 		return this.getUnlocalizedName() + "." + ItemCannedFood.names[itemStack.getItemDamage()];

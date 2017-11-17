@@ -52,10 +52,10 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 
 	@Override
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.icons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
-		this.icons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier3_launch_pad");
+		this.icons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_landing_pad");
+		this.icons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier3_landing_pad");
 		this.icons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "powered_charging_pad_blank");
-		this.blockIcon = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_launch_pad");
+		this.blockIcon = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier2_landing_pad");
 	}
 
 	@Override

@@ -18,12 +18,12 @@ public class ItemBlockKepler22bMapleLog2 extends ItemBlockDefaults {
 		case 0:
 		case 4:
 		case 8:
-			name = "green_maple_log";
+			name = "maple_green_log";
 			break;
 		case 1:
 		case 5:
 		case 9:
-			name = "brown_maple_log";
+			name = "maple_brown_log";
 			break;
 		default:
 			name = "null";
