@@ -27,8 +27,8 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 
 	private final MapGenCaveSaturn caveGenerator = new MapGenCaveSaturn();
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30,
-			8, 16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
+			16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
 
 	public ChunkProviderSaturn(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

@@ -9,6 +9,9 @@
 		"basictypesaturn=saturn_ore_magnesium": { "model": "extraplanets:saturn_ore_magnesium_model" },
         "basictypesaturn=saturn_magnesium_block": { "model": "extraplanets:saturn_magnesium_block_model" },
         "basictypesaturn=saturn_stonebricks": { "model": "extraplanets:saturn_stonebricks_model" },
-		"basictypesaturn=saturn_dungeon_brick": { "model": "extraplanets:saturn_dungeon_brick_model" }
+		"basictypesaturn=saturn_dungeon_brick": { "model": "extraplanets:saturn_dungeon_brick_model" },
+		"basictypesaturn=broken_infected_stone": { "model": "extraplanets:broken_infected_stone_model" },
+		"basictypesaturn=infected_stone": { "model": "extraplanets:infected_stone_model" },
+		"basictypesaturn=saturn_ore_slime": { "model": "extraplanets:saturn_ore_slime_model" }
     }
 }
