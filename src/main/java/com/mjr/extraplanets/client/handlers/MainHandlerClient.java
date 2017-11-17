@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.Constants;
+import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
@@ -17,10 +19,12 @@ import micdoodle8.mods.galacticraft.planets.venus.client.FakeLightningBoltRender
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
+import net.minecraft.client.settings.GameSettings;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fluids.Fluid;
@@ -34,6 +38,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.server.permission.PermissionAPI;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -48,6 +53,7 @@ import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySaturnLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.client.gui.overlay.OverlayUranusLander;
+import com.mjr.extraplanets.client.gui.screen.CustomCelestaialSelection;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
@@ -205,22 +211,25 @@ public class MainHandlerClient {
 			if (FluidUtil.getFluidContained(stack) != null && FluidUtil.getFluidContained(stack).getFluid() != null) {
 				FluidStack fluidStack = FluidUtil.getFluidContained(stack);
 				Fluid fluid = fluidStack.getFluid();
-				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) 
-						|| fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) 
-						|| fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) 
-						|| fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) 
-						|| fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) 
-						|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)){
+				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) || fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
 					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding"));
 					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2"));
-				}
-				else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
+				} else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
 					event.getToolTip().add(EnumColor.ORANGE + GCCoreUtil.translate("gui.bucket.message.crafting"));
+			}
+		}
+	}
+
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public void onGuiOpenEvent(GuiOpenEvent event) {
+		if (((event.getGui() instanceof GuiCelestialSelection))) {
+			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
+				event.setGui(new CustomCelestaialSelection(true, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
+			} else {
+				event.setGui(new CustomCelestaialSelection(false, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
 			}
 		}
 	}
