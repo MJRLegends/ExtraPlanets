@@ -13,122 +13,114 @@ import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenNuclearPile extends WorldGenerator {
 
-	public WorldGenNuclearPile() {
-
-	}
-
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		int x = position.getX();
-		int y = position.getY();
-		int z = position.getZ();
-
 		if (WorldGenHelper.checkValidSpawn(world, position, 5) == false)
-			return false;
-
-		if (!world.isAreaLoaded(new BlockPos(x + 8, y, z + 8), 8))
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning NuclearPile at (x, y, z)" + x + " " + y + " " + z);
-			generate_r0(world, rand, x, y - 1, z);
-			return true;
+				System.out.println("Spawning Nuclear Pile at (x, y, z)" + position.toString());
+			generateStructure(world, rand, position);
 		}
+		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int i, int j, int k) {
-		world.setBlockState(new BlockPos(i + 0, j + 0, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 0, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 0, j + 0, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 1, j + 0, k + 1), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 1, j + 0, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 1, j + 0, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 1, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 1, j + 0, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 0), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 1), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 0, k + 7), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 1, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 1, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 1, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 1, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 2, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 2, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 2, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 2, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 2, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 3, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 2, j + 3, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 0, k + 1), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 0, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 0, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 0, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 0, k + 7), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 1, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 1, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 1, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 1, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 1, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 2, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 2, k + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 2, k + 4), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 2, k + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 2, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 3, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 3, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 3, j + 3, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 0), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 1), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 7), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 0, k + 8), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 1, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 1, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 1, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 1, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 1, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 2, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 2, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 2, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 2, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 2, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 3, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 3, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 4, j + 3, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 0, k + 1), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 0, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 0, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 0, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 0, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 1, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 1, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 1, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 1, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 1, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 2, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 2, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 2, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 2, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 2, k + 6), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 5, j + 3, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 6, j + 0, k + 1), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 6, j + 0, k + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 6, j + 0, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 6, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 6, j + 0, k + 5), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 7, j + 0, k + 3), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(i + 7, j + 0, k + 4), Blocks.slime_block.getDefaultState(), 3);
+	public boolean generateStructure(World world, Random rand, BlockPos position) {
+		int x = position.getX();
+		int y = position.getY();
+		int z = position.getZ();
+		world.setBlockState(new BlockPos(x + 0, y + 0, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 0, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 0, y + 0, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 0, z + 1), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 0, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 0, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 0, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 0), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 1), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 0, z + 7), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 1, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 1, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 1, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 1, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 2, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 2, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 2, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 2, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 2, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 3, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 3, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 0, z + 1), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 0, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 0, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 0, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 0, z + 7), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 1, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 1, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 1, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 1, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 1, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 2, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 2, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 2, z + 4), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 2, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 2, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 3, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 3, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 0), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 1), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 7), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 8), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 1, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 1, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 1, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 1, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 1, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 2, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 2, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 2, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 2, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 2, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 3, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 3, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 3, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 1), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 0, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 1, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 1, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 1, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 1, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 1, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 2, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 2, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 2, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 2, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 2, z + 6), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 3, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 0, z + 1), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 0, z + 2), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 0, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 0, z + 5), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 7, y + 0, z + 3), Blocks.slime_block.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 7, y + 0, z + 4), Blocks.slime_block.getDefaultState(), 3);
 		return true;
 	}
 }

@@ -7,8 +7,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -16,6 +14,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
+import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenBigBlueTree;
 import com.mjr.extraplanets.world.features.WorldGenBigPurpleTree;
 import com.mjr.extraplanets.world.features.WorldGenBigRedTree;
@@ -26,7 +25,6 @@ import com.mjr.extraplanets.world.features.WorldGenCandyCaneType1;
 import com.mjr.extraplanets.world.features.WorldGenCandyCaneType2;
 import com.mjr.extraplanets.world.features.WorldGenCandyCaneType3;
 import com.mjr.extraplanets.world.features.WorldGenCookieRocksType1;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 import com.mjr.extraplanets.world.features.WorldGenGreenHut;
 import com.mjr.extraplanets.world.features.WorldGenLogTree;
 import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
@@ -84,23 +82,98 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		if (isDecorating)
 			return;
 		isDecorating = true;
-		
+
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (random.nextInt(10) == 0) {
-				int x = pos.getX() + random.nextInt(80) + 8;
-				int z = pos.getZ() + random.nextInt(80) + 8;
-				int y = random.nextInt(256);
-				new WorldGenCustomLake(Blocks.water).generate(worldIn, random, new BlockPos(x, y, z), Blocks.grass);
+				WorldGenHelper.generateLake(worldIn, random, new BlockPos(this.field_180294_c.getX(), 0, this.field_180294_c.getZ()), Blocks.water, Blocks.grass);
 			}
 		}
 		for (int i = 0; i < this.InfectedLakesPerChunk; i++) {
 			if (random.nextInt(15) == 0) {
-				int x = pos.getX() + random.nextInt(80) + 8;
-				int z = pos.getZ() + random.nextInt(80) + 8;
-				int y = random.nextInt(256);
-				new WorldGenCustomLake(ExtraPlanets_Fluids.INFECTED_WATER).generate(worldIn, random, new BlockPos(x, y, z), Blocks.grass);
+				WorldGenHelper.generateLake(worldIn, random, new BlockPos(this.field_180294_c.getX(), 0, this.field_180294_c.getZ()), ExtraPlanets_Fluids.INFECTED_WATER, Blocks.grass);
 			}
 		}
+
+		for (int i = 0; i < 1; i++) {
+			int x = this.field_180294_c.getX() + random.nextInt(16) + 8;
+			int y = random.nextInt(256);
+			int z = this.field_180294_c.getZ() + random.nextInt(16) + 8;
+			(new WorldGenKepler22bDungeons()).generate(worldIn, random, new BlockPos(x, y, z));
+		}
+		for (int i = 0; i < 1; i++) {
+			if (generateHuts) {
+				if (random.nextInt(200) == 1) {
+					switch (random.nextInt(7)) {
+					case 1:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenBlueHut(), worldIn, random, field_180294_c, 16);
+						break;
+					case 2:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenRedHut(), worldIn, random, field_180294_c, 16);
+						break;
+					case 3:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenPurpleHut(), worldIn, random, field_180294_c, 16);
+						break;
+					case 4:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenYellowHut(), worldIn, random, field_180294_c, 16);
+						break;
+					case 5:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenGreenHut(), worldIn, random, field_180294_c, 16);
+						break;
+					case 6:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenBrownHut(), worldIn, random, field_180294_c, 16);
+						break;
+					}
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			if (generateCandyCanes) {
+				if (random.nextInt(5) == 1) {
+					switch (random.nextInt(7)) {
+					default:
+					case 1:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenCandyCaneType1(), worldIn, random, field_180294_c, 16);
+						break;
+					case 2:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenCandyCaneType2(), worldIn, random, field_180294_c, 16);
+						break;
+					case 3:
+						WorldGenHelper.generateStructureWithRandom(new WorldGenCandyCaneType3(), worldIn, random, field_180294_c, 16);
+						break;
+					}
+				}
+				if (random.nextInt(2) == 1) {
+					worldIn.setBlockState(worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + (random.nextInt(6)), 0, this.field_180294_c.getZ() + (random.nextInt(6)))), Blocks.cake.getDefaultState());
+				}
+				if (random.nextInt(100) == 1) {
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.field_180294_c.getX() + (random.nextInt(6)), 0, this.field_180294_c.getZ() + (random.nextInt(6))).down(2));
+					(new WorldGenCookieRocksType1()).generate(worldIn, random, blockpos);
+				}
+				if (random.nextInt(10) == 0) {
+					WorldGenHelper.generateLake(worldIn, random, field_180294_c, ExtraPlanets_Fluids.LIQUID_CHOCOLATE, ExtraPlanets_Blocks.CAKE_BLOCKS);
+				}
+				if (random.nextInt(10) == 0) {
+					WorldGenHelper.generateLake(worldIn, random, field_180294_c, ExtraPlanets_Fluids.LIQUID_CARAMEL, ExtraPlanets_Blocks.CAKE_BLOCKS);
+				}
+				for (int k4 = 0; k4 < this.reedsPerChunk; ++k4) {
+					int x = random.nextInt(16) + 8;
+					int z = random.nextInt(16) + 8;
+					int y = worldIn.getHeight(this.field_180294_c.add(x, 0, z)).getY() * 2;
+
+					if (y > 0) {
+						y = random.nextInt(y);
+						new WorldGenWhiteSugerCane().generate(worldIn, random, this.field_180294_c.add(x, y, z));
+					}
+				}
+			}
+		}
+
+		for (int i = 0; i < this.blueTowerPerChunk; i++) {
+			if (random.nextInt(100) == 1) {
+				WorldGenHelper.generateStructureWithRandom(new WorldGenBlueTower(), worldIn, random, field_180294_c, 8);
+			}
+		}
+
 		for (int i = 0; i < this.treeWithNoLeafsPerChunk; i++) {
 			BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 			if (random.nextInt(5) < 5)
@@ -135,15 +208,6 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
 				new WorldGenBigRedTree().generate(worldIn, random, blockpos);
-			}
-		}
-		for (int i = 0; i < this.blueTowerPerChunk; i++) {
-			if (random.nextInt(100) == 1) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
-				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-				blockpos = blockpos.down(4);
-				(new WorldGenBlueTower()).generate(worldIn, random, blockpos);
-				break;
 			}
 		}
 		for (int i = 0; i < blueTreesPerChunk; i++) {
@@ -193,87 +257,6 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			else
 				blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
 			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF2.getStateFromMeta(1), false).generate(worldIn, random, blockpos);
-		}
-		for (int i = 0; i < 1; i++) {
-			int x = pos.getX() + random.nextInt(16) + 8;
-			int y = random.nextInt(256);
-			int z = pos.getZ() + random.nextInt(16) + 8;
-			(new WorldGenKepler22bDungeons()).generate(worldIn, random, new BlockPos(x, y, z));
-		}
-		for (int i = 0; i < 1; i++) {
-			if (generateHuts) {
-				if (random.nextInt(200) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(16) + 8), 0, pos.getZ() + (random.nextInt(16) + 8)));
-					int randomNum = random.nextInt(7) + 0;
-					switch (randomNum) {
-					case 1:
-						(new WorldGenBlueHut()).generate(worldIn, random, blockpos);
-						break;
-					case 2:
-						(new WorldGenRedHut()).generate(worldIn, random, blockpos);
-						break;
-					case 3:
-						(new WorldGenPurpleHut()).generate(worldIn, random, blockpos);
-						break;
-					case 4:
-						(new WorldGenYellowHut()).generate(worldIn, random, blockpos);
-						break;
-					case 5:
-						(new WorldGenGreenHut()).generate(worldIn, random, blockpos);
-						break;
-					case 6:
-						(new WorldGenBrownHut()).generate(worldIn, random, blockpos);
-						break;
-					}
-				}
-			}
-		}
-		for (int i = 0; i < 5; i++) {
-			if (generateCandyCanes) {
-				if (random.nextInt(5) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(16)), 0, pos.getZ() + (random.nextInt(16))));
-					int randomNum = random.nextInt(7) + 0;
-					switch (randomNum) {
-					default:
-					case 1:
-						(new WorldGenCandyCaneType1()).generate(worldIn, random, blockpos);
-						break;
-					case 2:
-						(new WorldGenCandyCaneType2()).generate(worldIn, random, blockpos);
-						break;
-					case 3:
-						(new WorldGenCandyCaneType3()).generate(worldIn, random, blockpos);
-						break;
-					}
-				}
-				if (random.nextInt(2) == 1) {
-					worldIn.setBlockState(worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(6)), 0, pos.getZ() + (random.nextInt(6)))), Blocks.cake.getDefaultState());
-				}
-				if (random.nextInt(100) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(6)), 0, pos.getZ() + (random.nextInt(6))).down(2));
-					(new WorldGenCookieRocksType1()).generate(worldIn, random, blockpos);
-				}
-				if (random.nextInt(10) == 0) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(6)), 0, pos.getZ() + (random.nextInt(6))).down(1));
-					new WorldGenCustomLake(ExtraPlanets_Fluids.LIQUID_CHOCOLATE).generate(worldIn, random, blockpos, ExtraPlanets_Blocks.CAKE_BLOCKS);
-				}
-				if (random.nextInt(10) == 0) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(16) + 6), 0, pos.getZ() + (random.nextInt(16) + 6)).down(1));
-					new WorldGenCustomLake(ExtraPlanets_Fluids.LIQUID_CARAMEL).generate(worldIn, random, blockpos, ExtraPlanets_Blocks.CAKE_BLOCKS);
-				}
-				for (int k4 = 0; k4 < this.reedsPerChunk; ++k4)
-		        {
-		            int x = random.nextInt(16) + 8;
-		            int z = random.nextInt(16) + 8;
-		            int y = worldIn.getHeight(pos.add(x, 0, z)).getY() * 2;
-
-		            if (y > 0)
-		            {
-		                y = random.nextInt(y);
-		                new WorldGenWhiteSugerCane().generate(worldIn, random, pos.add(x, y, z));
-		            }
-		        }
-			}
 		}
 		for (int i = 0; i < this.blueShortGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
