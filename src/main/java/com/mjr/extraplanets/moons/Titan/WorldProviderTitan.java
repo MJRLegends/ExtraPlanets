@@ -36,11 +36,6 @@ public class WorldProviderTitan extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -139,18 +134,8 @@ public class WorldProviderTitan extends CustomWorldProviderSpace implements IGal
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 20.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Moons.TITAN;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
 	}
 
 	@Override
@@ -159,21 +144,6 @@ public class WorldProviderTitan extends CustomWorldProviderSpace implements IGal
 			return 80.0F;
 		}
 		return 70.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 0;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

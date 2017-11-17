@@ -34,11 +34,6 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -131,38 +126,8 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 20.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Moons.DEIMOS;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
-	}
-
-	@Override
-	public float getThermalLevelModifier() {
-		return -1;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 0;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override

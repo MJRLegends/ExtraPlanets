@@ -36,11 +36,6 @@ public class WorldProviderOberon extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public boolean canRainOrSnow() {
-		return false;
-	}
-
-	@Override
 	public boolean hasSunset() {
 		return false;
 	}
@@ -136,18 +131,8 @@ public class WorldProviderOberon extends CustomWorldProviderSpace implements IGa
 	}
 
 	@Override
-	public float getSoundVolReductionAmount() {
-		return 10.0F;
-	}
-
-	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Moons.OBERON;
-	}
-
-	@Override
-	public boolean hasBreathableAtmosphere() {
-		return false;
 	}
 
 	@Override
@@ -156,21 +141,6 @@ public class WorldProviderOberon extends CustomWorldProviderSpace implements IGa
 			return -120.0F;
 		}
 		return -115.0F;
-	}
-
-	@Override
-	public float getWindLevel() {
-		return 4.0F;
-	}
-
-	@Override
-	public boolean shouldDisablePrecipitation() {
-		return true;
-	}
-
-	@Override
-	public boolean shouldCorrodeArmor() {
-		return false;
 	}
 
 	@Override
