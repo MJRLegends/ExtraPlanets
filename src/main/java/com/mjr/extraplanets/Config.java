@@ -221,10 +221,10 @@ public class Config {
 	public static boolean evolvedMiniEnderman;
 
 	public static boolean morePlanetsCompatibilityAdv;
-	//public static boolean amunRaCompatibility;
+	// public static boolean amunRaCompatibility;
 	public static boolean galaxySpaceCompatibility;
 	public static boolean galaxySpaceCompatibilityAdv;
-	
+
 	public static float kepler22SystemYawOffset;
 	public static float kepler22SystemPitchOffset;
 	public static float kepler47SystemYawOffset;
@@ -233,7 +233,7 @@ public class Config {
 	public static float kepler62SystemPitchOffset;
 	public static float kepler69SystemYawOffset;
 	public static float kepler69SystemPitchOffset;
-	
+
 	public static float mercuryDistanceOffset;
 	public static float venusDistanceOffset;
 	public static float ceresDistanceOffset;
@@ -246,11 +246,13 @@ public class Config {
 	public static float erisDistanceOffset;
 	public static float kuiperBeltDistanceOffset;
 	public static float makemakeDistanceOffset;
-	
+
 	public static boolean marsRover;
 	public static boolean venusRover;
-	
+
 	public static boolean oldStyleGravity;
+
+	public static boolean useCustomCelestaialSelection;
 
 	public static void init() {
 		load();
@@ -268,10 +270,12 @@ public class Config {
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Disabling this will remove the planet/moon with all the related items/block/space stations!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Change if a Schematic Page ID is causing conflicts!");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_ITEMS, "Changing to false will disable the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_ITEMS,
+				"Changing to false will disable the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BLOCKS, "Changing to false will disable the blocks/machines");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid" + "\"" + " option can cause lag! And It will disable the villages for that planet!");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SPACE_STATIONS,
+				"Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable/Disable compatibility settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable/Disable general settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_ENTITIES, "Enable/Disable Entities");
@@ -304,7 +308,7 @@ public class Config {
 
 		advancedOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Oxygen Compressor/Decompressor", true).getBoolean(true);
 		ultimateOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Oxygen Compressor/Decompressor", true).getBoolean(true);
-		
+
 		chargingBlock = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Vehicle Charger", true).getBoolean(true);
 		solarPanels = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
 		slabsAndStairs = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Slab & Stairs", true).getBoolean(true);
@@ -455,7 +459,7 @@ public class Config {
 		titaniaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180).getInt();
 		iapetusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181).getInt();
 		kepler22bRedDesertBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 185).getInt();
-		
+
 		schematicTier4GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557).getInt();
@@ -496,10 +500,10 @@ public class Config {
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
 		morePlanetsCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced More Planets Compatibility", false, "").getBoolean(false);
-		//amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "").getBoolean(false);
+		// amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "").getBoolean(false);
 		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "").getBoolean(false);
-		//galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
-		
+		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
+
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler22SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler47SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler47 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -508,7 +512,7 @@ public class Config {
 		kepler62SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler62 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler69SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler69 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler69SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler69 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
-		
+
 		mercuryDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		venusDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Venus Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		ceresDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
@@ -521,15 +525,18 @@ public class Config {
 		erisDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Eris Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		kuiperBeltDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kuiper Belt Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		makemakeDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Makemake Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
-		
+
 		marsRover = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Mars Rover & Its Parts", true, "").getBoolean(true);
 		venusRover = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "").getBoolean(true);
-		
+
 		oldStyleGravity = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Old Style Gravity", false, "").getBoolean(false);
-		
+
+		useCustomCelestaialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", true,
+				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestaial Selection Screen").getBoolean(true);
+
 		config.save();
 	}
-	
+
 	private static void checkCompatibility() {
 		if (morePlanetsCompatibilityAdv) {
 			pluto = false;
@@ -545,7 +552,7 @@ public class Config {
 			plutoSpaceStation = false;
 			thermalPaddings = false;
 		}
-		if(galaxySpaceCompatibility || galaxySpaceCompatibilityAdv){
+		if (galaxySpaceCompatibility || galaxySpaceCompatibilityAdv) {
 			pluto = false;
 			titan = false;
 			callisto = false;
@@ -564,7 +571,7 @@ public class Config {
 			kuiperBelt = false;
 			marsSpaceStation = false;
 			venusSpaceStation = false;
-			if(kepler47SystemYawOffset == 0)
+			if (kepler47SystemYawOffset == 0)
 				kepler47SystemYawOffset = 40.0F;
 			iapetusID = -44;
 			titaniaID = -45;
