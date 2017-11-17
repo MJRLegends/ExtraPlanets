@@ -52,11 +52,11 @@ public class FluidGlowstone extends FluidBasic {
 
 	@Override
 	public String getStillTextures() {
-		return Constants.TEXTURE_PREFIX + "glowstone_still";
+		return Constants.TEXTURE_PREFIX + "/fluids/" + "glowstone_still";
 	}
 
 	@Override
 	public String getFlowingTextures() {
-		return Constants.TEXTURE_PREFIX + "glowstone_flow";
+		return Constants.TEXTURE_PREFIX + "/fluids/" + "glowstone_flow";
 	}
 }

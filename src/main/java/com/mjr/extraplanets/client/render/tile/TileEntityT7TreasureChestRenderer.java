@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class TileEntityT7TreasureChestRenderer extends TileEntitySpecialRenderer
 {
-	private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT7.png");
+	private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t7.png");
 	private static final ResourceLocation treasureLargeChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT7large.png");
 
 	private final ModelTreasureChest chestModel = new ModelTreasureChest();

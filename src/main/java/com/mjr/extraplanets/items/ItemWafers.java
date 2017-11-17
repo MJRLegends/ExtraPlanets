@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemWafers extends Item {
-	public static final String[] names = { "diamond", "carbon", "titanium", "redGem", "blueGem", "whiteGem" };
+	public static final String[] names = { "diamond", "carbon", "titanium", "red_gem", "blue_gem", "white_gem" };
 
 	protected IIcon[] icons = new IIcon[ItemWafers.names.length];
 

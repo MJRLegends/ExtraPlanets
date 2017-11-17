@@ -20,8 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier7Items extends Item {
-	public static final String[] names = { "tier7engine", "tier7booster", "tier7Fin", "tier7HeavyDutyPlate", "compressedCrystal", "ingotCrystal", "compressedReinforcedCrystal", "whiteGem" };
-	public static final String[] textureNames = { "tier7.tier7engine", "tier7.tier7booster", "tier7.tier7_fin", "tier7.tier7_heavy_duty_plate", "tier7.compressed_crystal", "tier7.ingot_crystal", "tier7.compressed_reinforced_crystal", "tier7.white_gem" };
+	public static final String[] names = { "tier7engine", "tier7booster", "tier7fin", "tier7heavy_duty_plate", "compressed_crystal", "ingot_crystal", "compressed_reinforced_crystal", "white_gem" };
 
 	protected IIcon[] icons = new IIcon[ItemTier7Items.names.length];
 
@@ -44,8 +43,12 @@ public class ItemTier7Items extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemTier7Items.textureNames) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
+		for (String name : ItemTier7Items.names) {
+			if(name.contains("fin"))
+				name = name.replace("fin", "_fin");
+			else if(name.contains("heavy"))
+				name= name.replace("heavy", "_heavy");
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5).replace("_items", ".") + name);
 		}
 	}
 

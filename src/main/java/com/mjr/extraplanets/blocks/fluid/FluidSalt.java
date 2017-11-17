@@ -51,11 +51,11 @@ public class FluidSalt extends FluidBasic {
 
 	@Override
 	public String getStillTextures() {
-		return Constants.TEXTURE_PREFIX + "salt_still";
+		return Constants.TEXTURE_PREFIX + "/fluids/" + "salt_still";
 	}
 
 	@Override
 	public String getFlowingTextures() {
-		return Constants.TEXTURE_PREFIX + "salt_flow";
+		return Constants.TEXTURE_PREFIX + "/fluids/" + "salt_flow";
 	}
 }

@@ -20,8 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier4Items extends Item {
-	public static final String[] names = { "tier4engine", "tier4booster", "tier4Fin", "tier4HeavyDutyPlate", "compressedCarbon", "ingotCarbon", "ash", "ashShard", "sledgeHammer", "grindingWheel", "volcanicShard", "ingotVolcanic" };
-	public static final String[] textureNames = { "tier4.tier4engine", "tier4.tier4booster", "tier4.tier4_fin", "tier4.tier4_heavy_duty_plate", "tier4.compressed_carbon", "tier4.ingot_carbon", "ash", "ashShard", "sledgeHammer", "grindingWheel", "volcanicShard", "ingotVolcanic" };
+	public static final String[] names = { "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "ash", "ash_shard", "sledgeHammer", "grindingWheel", "volcanic_shard", "ingot_volcanic" };
 
 	protected IIcon[] icons = new IIcon[ItemTier4Items.names.length];
 
@@ -44,8 +43,12 @@ public class ItemTier4Items extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemTier4Items.textureNames) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
+		for (String name : ItemTier4Items.names) {
+			if(name.contains("fin"))
+				name = name.replace("fin", "_fin");
+			else if(name.contains("heavy"))
+				name= name.replace("heavy", "_heavy");
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5).replace("_items", ".") + name);
 		}
 	}
 

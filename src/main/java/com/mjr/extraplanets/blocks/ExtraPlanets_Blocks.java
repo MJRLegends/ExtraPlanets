@@ -266,7 +266,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.uranus) {
 			uranusBlocks = new BlockBasicUranus("uranus");
-			denseIce = new BlockBasic(Material.ice).setBlockName("denseIce").setBlockTextureName(Constants.TEXTURE_PREFIX + "denseIce").setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeSnow);
+			denseIce = new BlockBasic(Material.ice).setBlockName("dense_ice").setBlockTextureName(Constants.TEXTURE_PREFIX + "dense_ice").setHardness(2.2F).setResistance(3.0F).setStepSound(Block.soundTypeSnow);
 		}
 		if (Config.neptune) {
 			neptuneBlocks = new BlockBasicNeptune("neptune");
@@ -344,8 +344,8 @@ public class ExtraPlanets_Blocks {
 			redSand = new BlockSand("red_sand").setHardness(0.6F);
 			redSandstone = new BlockBasic(Material.rock).setBlockName("red_sandstone").setBlockTextureName(Constants.TEXTURE_PREFIX + "red_sandstone").setHardness(2F).setResistance(2F);
 		}
-		advancedLaunchPad = new BlockCustomLandingPad("advancedLaunchPad");
-		advancedLaunchPadFull = new BlockCustomLandingPadFull("advancedLaunchPadFull");
+		advancedLaunchPad = new BlockCustomLandingPad("advanced_launch_pad");
+		advancedLaunchPadFull = new BlockCustomLandingPadFull("advanced_launch_pad_full");
 		
 		decorativeBlocks = new BlockDecorativeBlocks("decorative_blocks");
 		decorativeBlocks2 = new BlockDecorativeBlocks2("decorative_blocks2");

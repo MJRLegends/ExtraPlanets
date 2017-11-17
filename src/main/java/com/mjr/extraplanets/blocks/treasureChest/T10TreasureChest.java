@@ -48,7 +48,7 @@ public class T10TreasureChest extends BlockContainer implements ITileEntityProvi
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcon = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "treasureChestT10");
+		this.blockIcon = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "treasure_chest_t10");
 	}
 
 	@Override

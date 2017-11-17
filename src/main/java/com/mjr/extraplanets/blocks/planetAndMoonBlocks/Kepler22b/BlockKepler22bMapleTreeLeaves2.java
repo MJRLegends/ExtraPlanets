@@ -50,8 +50,8 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeavesBase implements I
 	public void registerBlockIcons(IIconRegister iconReg) {
 		this.leafTextures = new IIcon[3][leaves.length];
 		for (int i = 0; i < leaves.length; ++i) {
-			this.leafTextures[0][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + name + "_leaves_" + leaves[i]);
-			this.leafTextures[1][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + name + "_leaves_" + leaves[i] + "_opaque");
+			this.leafTextures[0][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + name.replace("_new", "").replace("_2", "") + "_leaves_" + leaves[i]);
+			this.leafTextures[1][i] = iconReg.registerIcon(Constants.TEXTURE_PREFIX + name.replace("_new", "").replace("_2", "") + "_leaves_" + leaves[i]);
 		}
 	}
 

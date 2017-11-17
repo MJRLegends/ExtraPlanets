@@ -20,10 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier11Items extends Item {
-	public static final String[] names = { "blueDiamond", "redDiamond", "purpleDiamond", "yellowDiamond", "greenDiamond", "blueSticks", "redSticks", "purpleSticks", "yellowSticks", "greenSticks", "brownSticks", "ingotPlatinum", "compressedPlatinum" };
-
-	public static final String[] textureNames = { "tier11.blue_diamond", "tier11.red_diamond", "tier11.purple_diamond", "tier11.yellow_diamond", "tier11.green_diamond", "tier11.blue_sticks", "tier11.red_sticks", "tier11.purple_sticks",
-			"tier11.yellow_sticks", "tier11.green_sticks", "tier11.brown_sticks", "tier11.ingot_platinum", "tier11.compressed_platinum" };
+	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks", "green_sticks", "brown_sticks", "ingot_platinum", "compressed_platinum" };
 
 	protected IIcon[] icons = new IIcon[ItemTier11Items.names.length];
 
@@ -46,8 +43,8 @@ public class ItemTier11Items extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemTier11Items.textureNames) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
+		for (final String name : ItemTier11Items.names) {
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5).replace("_items", ".") + name);
 		}
 	}
 

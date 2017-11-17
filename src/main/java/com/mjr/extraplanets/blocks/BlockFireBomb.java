@@ -145,8 +145,8 @@ public class BlockFireBomb extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister p_149651_1_) {
-		this.blockIcon = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + "fireBomb" + "_side");
-		this.field_150116_a = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + "fireBomb" + "_top");
-		this.field_150115_b = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + "fireBomb" + "_bottom");
+		this.blockIcon = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5) + "_side");
+		this.field_150116_a = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5) + "_top");
+		this.field_150115_b = p_149651_1_.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5) + "_bottom");
 	}
 }

@@ -20,8 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier9Items extends Item {
-	public static final String[] names = { "tier9engine", "tier9booster", "tier9Fin", "tier9HeavyDutyPlate", "compressedTungsten", "ingotTungsten" };
-	public static final String[] textureNames = { "tier9.tier9engine", "tier9.tier9booster", "tier9.tier9_fin", "tier9.tier9_heavy_duty_plate", "tier9.compressed_tungsten", "tier9.ingot_tungsten" };
+	public static final String[] names = { "tier9engine", "tier9booster", "tier9fin", "tier9heavy_duty_plate", "compressed_tungsten", "ingot_tungsten" };
 
 	protected IIcon[] icons = new IIcon[ItemTier9Items.names.length];
 
@@ -44,8 +43,12 @@ public class ItemTier9Items extends Item {
 	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemTier9Items.textureNames) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
+		for (String name : ItemTier9Items.names) {
+			if(name.contains("fin"))
+				name = name.replace("fin", "_fin");
+			else if(name.contains("heavy"))
+				name= name.replace("heavy", "_heavy");
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5).replace("_items", ".") + name);
 		}
 	}
 

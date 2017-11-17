@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedWitch extends RenderLiving
 {
-	private static final ResourceLocation witchTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/evolvedWitch.png");
+	private static final ResourceLocation witchTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/evolved_witch.png");
 	private final ModelEvolvedWitch witchModel;
 
 	public RenderEvolvedWitch()
