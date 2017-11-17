@@ -372,7 +372,6 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.CERES) {
 			RegisterHelper.registerItem(INGOT_URANIUM, INGOT_URANIUM.getUnlocalizedName().substring(5));
-			// RegisterHelper.registerItem(BUCKET_SALT, "bucket_salt");
 		}
 		if (Config.JUPITER) {
 			RegisterHelper.registerItem(TIER_5_ROCKET, TIER_5_ROCKET.getUnlocalizedName().substring(5));
@@ -383,7 +382,6 @@ public class ExtraPlanets_Items {
 
 			if (Config.BATTERIES)
 				RegisterHelper.registerItem(BATTERY_NICKEL, BATTERY_NICKEL.getUnlocalizedName().substring(5));
-			// RegisterHelper.registerItem(BUCKET_MAGMA, "bucket_magma");
 		}
 		if (Config.SATURN) {
 			RegisterHelper.registerItem(TIER_6_ROCKET, TIER_6_ROCKET.getUnlocalizedName().substring(5));
@@ -391,8 +389,6 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_6_NOSE_CONE, TIER_6_NOSE_CONE.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_6_ITEMS, TIER_6_ITEMS.getUnlocalizedName().substring(5));
 			RegisterHelper.registerItem(TIER_6_KEY, TIER_6_KEY.getUnlocalizedName().substring(5));
-
-			// RegisterHelper.registerItem(BUCKET_GLOWSTONE, "bucket_glowstone");
 		}
 		if (Config.URANUS) {
 			RegisterHelper.registerItem(TIER_7_ROCKET, TIER_7_ROCKET.getUnlocalizedName().substring(5));
@@ -410,7 +406,6 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_8_KEY, TIER_8_KEY.getUnlocalizedName().substring(5));
 			if (Config.BATTERIES)
 				RegisterHelper.registerItem(BATTERY_ZINC, BATTERY_ZINC.getUnlocalizedName().substring(5));
-			// RegisterHelper.registerItem(BUCKET_NITROGEN, "bucket_nitrogen");
 		}
 		if (Config.PLUTO) {
 			RegisterHelper.registerItem(TIER_9_ROCKET, TIER_9_ROCKET.getUnlocalizedName().substring(5));
@@ -509,12 +504,6 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TOOLS, TOOLS.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
-		// RegisterHelper.registerItem(BUCKET_CLEAN_WATER, "bucket_clean_water");
-		// RegisterHelper.registerItem(BUCKET_INFECTED_WATER, "bucket_infected_water");
-		// RegisterHelper.registerItem(BUCKET_RADIOACTIVE_WATER, "bucket_radioactive_water");
-		// RegisterHelper.registerItem(BUCKET_METHANE, "bucket_methane");
-		// RegisterHelper.registerItem(BUCKET_NITROGEN_ICE, "bucket_nitrogen_ice");
-		// RegisterHelper.registerItem(BUCKET_LIQUID_HYDROCARBON, "bucket_liquid_hydrocarbon");
 
 		RegisterHelper.registerItem(TIER_1_EQUIPMENT_KIT, TIER_1_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(TIER_2_EQUIPMENT_KIT, TIER_2_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
