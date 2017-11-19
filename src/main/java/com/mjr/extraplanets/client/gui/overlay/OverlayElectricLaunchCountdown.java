@@ -34,12 +34,12 @@ public class OverlayElectricLaunchCountdown extends Overlay {
 		if (count <= 10) {
 			GL11.glScalef(4.0F, 4.0F, 0.0F);
 
-			OverlayElectricLaunchCountdown.minecraft.fontRendererObj.drawString(String.valueOf(count), width / 8 - OverlayElectricLaunchCountdown.minecraft.fontRendererObj.getStringWidth(String.valueOf(count)) / 2, height / 20,
+			OverlayElectricLaunchCountdown.minecraft.fontRenderer.drawString(String.valueOf(count), width / 8 - OverlayElectricLaunchCountdown.minecraft.fontRenderer.getStringWidth(String.valueOf(count)) / 2, height / 20,
 					ColorUtil.to32BitColor(255, 255, 0, 0));
 		} else {
 			GL11.glScalef(2.0F, 2.0F, 0.0F);
 
-			OverlayElectricLaunchCountdown.minecraft.fontRendererObj.drawString(String.valueOf(count), width / 4 - OverlayElectricLaunchCountdown.minecraft.fontRendererObj.getStringWidth(String.valueOf(count)) / 2, height / 8,
+			OverlayElectricLaunchCountdown.minecraft.fontRenderer.drawString(String.valueOf(count), width / 4 - OverlayElectricLaunchCountdown.minecraft.fontRenderer.getStringWidth(String.valueOf(count)) / 2, height / 8,
 					ColorUtil.to32BitColor(255, 255, 0, 0));
 		}
 

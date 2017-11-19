@@ -2,17 +2,21 @@ package com.mjr.extraplanets.items.armor;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -23,7 +27,7 @@ import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
 
-public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor  {
+public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor {
 	public String name;
 
 	public Tier3SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
@@ -77,13 +81,11 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	public boolean canBreathe(ItemStack helmetInSlot, EntityPlayer playerWearing, EnumGearType type) {
 		return true;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.world.isRemote) {
-			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier3.space.suit.information"));
-		}
+	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+		list.add(EnumColor.AQUA + GCCoreUtil.translate("tier3.space.suit.information"));
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
@@ -95,7 +97,7 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		model.isChild = entityLiving.isChild();
 		return model;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {

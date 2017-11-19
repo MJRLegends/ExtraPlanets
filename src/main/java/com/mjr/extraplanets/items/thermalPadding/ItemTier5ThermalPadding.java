@@ -2,12 +2,15 @@ package com.mjr.extraplanets.items.thermalPadding;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.api.item.IItemThermal;
 import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -48,9 +51,9 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
+	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
+			par3List.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -115,9 +118,7 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.world.isRemote) {
-			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier5.thermal.padding.information"));
-		}
+	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+		list.add(EnumColor.AQUA + GCCoreUtil.translate("tier5.thermal.padding.information"));
 	}
 }

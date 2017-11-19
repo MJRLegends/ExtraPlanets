@@ -8,7 +8,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -175,10 +175,9 @@ public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	public float getWindLevel() {
 		return 0.1F;
 	}
-	
-    @Override
-    public DimensionType getDimensionType()
-    {
-        return ExtraPlanetsDimensions.MARS_ORBIT;
-    }
+
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.MARS_ORBIT;
+	}
 }

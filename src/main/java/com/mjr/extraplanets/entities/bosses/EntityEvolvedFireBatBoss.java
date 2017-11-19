@@ -208,7 +208,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		public void updateTask() {
 			EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
 
-			if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
+			if (entitylivingbase.getDistanceSq(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
 				World world = this.parentEntity.world;
 				++this.attackTimer;
 
@@ -218,15 +218,15 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 				if (this.attackTimer == 10 || this.attackTimer == 30 || this.attackTimer == 50 || this.attackTimer == 70) {
 					Vec3d vec3d = this.parentEntity.getLook(1.0F);
-					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.xCoord * 4.0D);
+					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.x * 4.0D);
 					double d3 = entitylivingbase.getEntityBoundingBox().minY + entitylivingbase.height / 2.0F - (0.5D + this.parentEntity.posY + this.parentEntity.height / 2.0F);
-					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.zCoord * 4.0D);
+					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.z * 4.0D);
 					world.playEvent((EntityPlayer) null, 1016, new BlockPos(this.parentEntity), 0);
 					EntityLargeFireball entitylargefireball = new EntityLargeFireball(world, this.parentEntity, d2, d3, d4);
 					entitylargefireball.explosionPower = this.parentEntity.getFireballStrength();
-					entitylargefireball.posX = this.parentEntity.posX + vec3d.xCoord * 4.0D;
+					entitylargefireball.posX = this.parentEntity.posX + vec3d.x * 4.0D;
 					entitylargefireball.posY = this.parentEntity.posY + this.parentEntity.height / 2.0F + 0.5D;
-					entitylargefireball.posZ = this.parentEntity.posZ + vec3d.zCoord * 4.0D;
+					entitylargefireball.posZ = this.parentEntity.posZ + vec3d.z * 4.0D;
 					world.spawnEntity(entitylargefireball);
 					if (this.attackTimer == 70)
 						this.attackTimer = -40;

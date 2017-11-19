@@ -326,7 +326,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.speed = this.maxSpeed;
 		}
 
-		if (this.isCollidedHorizontally && this.shouldClimb) {
+		if (this.collidedHorizontally && this.shouldClimb) {
 			this.speed *= 0.9;
 			this.motionY = 0.15D * ((-Math.pow((this.timeClimbing) - 1, 2)) / 250.0F) + 0.15F;
 			this.motionY = Math.max(-0.15, this.motionY);
@@ -441,7 +441,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public boolean isUsableByPlayer(EntityPlayer var1) {
-		return !this.isDead && var1.getDistanceSqToEntity(this) <= 64.0D;
+		return !this.isDead && var1.getDistanceSq(this) <= 64.0D;
 	}
 
 	@Override

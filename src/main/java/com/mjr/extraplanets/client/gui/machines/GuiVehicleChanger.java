@@ -55,8 +55,8 @@ public class GuiVehicleChanger extends GuiContainerGC {
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.vehicleChanger.getEnergyStoredGC()) + " / " + (int) Math.floor(this.vehicleChanger.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
-		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 65;
+		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 112;
+		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 65;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);
@@ -65,10 +65,10 @@ public class GuiVehicleChanger extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(this.vehicleChanger.getName(), 52, 10, 4210752);
+		this.fontRenderer.drawString(this.vehicleChanger.getName(), 52, 10, 4210752);
 		this.buttonloadpower.displayString = !this.vehicleChanger.getDisabled(0) ? GCCoreUtil.translate("gui.button.stoploading.name") : GCCoreUtil.translate("gui.button.loadpower.name");
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + this.getStatus(), 28, 45 + 23 - 46, 4210752);
-		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 11, 4210752);
+		this.fontRenderer.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + this.getStatus(), 28, 45 + 23 - 46, 4210752);
+		this.fontRenderer.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 11, 4210752);
 	}
 
 	private String getStatus() {

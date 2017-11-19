@@ -62,7 +62,7 @@ public class EntityCreeperBossJupiter extends EntityBossBase implements IEntityB
 			if (this.isEntityInvulnerable(damageSource)) {
 				return false;
 			} else if (super.attackEntityFrom(damageSource, damage)) {
-				Entity entity = damageSource.getEntity();
+				Entity entity = damageSource.getTrueSource();
 
 				if (this.getPassengers().contains(entity) && this.getRidingEntity() != entity) {
 					if (entity != this && entity instanceof EntityLivingBase) {
@@ -157,7 +157,7 @@ public class EntityCreeperBossJupiter extends EntityBossBase implements IEntityB
 		final EntityPlayer player = this.world.getClosestPlayer(this.posX, this.posY, this.posZ, 20.0, false);
 
 		if (player != null && !player.equals(this.targetEntity)) {
-			if (this.getDistanceSqToEntity(player) < 400.0D) {
+			if (this.getDistanceSq(player) < 400.0D) {
 				this.getNavigator().getPathToEntityLiving(player);
 				this.targetEntity = player;
 			}

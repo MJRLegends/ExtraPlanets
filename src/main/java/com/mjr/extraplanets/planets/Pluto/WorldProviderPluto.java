@@ -8,7 +8,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
@@ -31,6 +31,7 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
 	}
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -131,6 +132,6 @@ public class WorldProviderPluto extends CustomWorldProviderSpace implements IGal
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

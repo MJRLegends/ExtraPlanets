@@ -8,7 +8,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
@@ -102,7 +102,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 		else
 			return 2.1F;
 	}
-	
+
 	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.JUPITER;
@@ -115,7 +115,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 		}
 		return 90.0F;
 	}
-	
+
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 4.0D;
@@ -143,6 +143,6 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

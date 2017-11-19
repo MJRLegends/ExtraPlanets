@@ -55,8 +55,8 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 		int oilCapacity = this.tileEntity.oilTank != null ? this.tileEntity.oilTank.getCapacity() : 0;
 		oilTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.oil.name") + ": " + oilLevel + " / " + oilCapacity);
 		this.oilTankRegion.tooltipStrings = oilTankDesc;
-		this.oilTankRegion.xPosition = (this.width - this.xSize) / 2 + 7;
-		this.oilTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.oilTankRegion.x = (this.width - this.xSize) / 2 + 7;
+		this.oilTankRegion.y = (this.height - this.ySize) / 2 + 28;
 		this.oilTankRegion.parentWidth = this.width;
 		this.oilTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.oilTankRegion);
@@ -71,8 +71,8 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 		int fuelCapacity = this.tileEntity.fuelTank != null ? this.tileEntity.fuelTank.getCapacity() : 0;
 		fuelTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.fuel.name") + ": " + fuelLevel + " / " + fuelCapacity);
 		this.fuelTankRegion.tooltipStrings = fuelTankDesc;
-		this.fuelTankRegion.xPosition = (this.width - this.xSize) / 2 + 153;
-		this.fuelTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.fuelTankRegion.x = (this.width - this.xSize) / 2 + 153;
+		this.fuelTankRegion.y = (this.height - this.ySize) / 2 + 28;
 		this.fuelTankRegion.parentWidth = this.width;
 		this.fuelTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.fuelTankRegion);
@@ -87,8 +87,8 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1")
 				+ ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 62;
-		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 16;
+		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 62;
+		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 16;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);
@@ -107,7 +107,7 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
+		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRenderer);
 		String displayText = "";
 		int yOffset = -18;
 
@@ -120,11 +120,11 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 
         this.buttonDisable.enabled = this.tileEntity.disableCooldown == 0;
         this.buttonDisable.displayString = this.tileEntity.processTicks == 0 ? GCCoreUtil.translate("gui.button.refine.name") : GCCoreUtil.translate("gui.button.stoprefine.name");
-        this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": ", 60, 45 + 23 + yOffset, 4210752);
-        this.fontRendererObj.drawString(displayText, 60, 45 + 34 + yOffset, 4210752);
-        //		this.fontRendererObj.drawString(ElectricityDisplay.getDisplay(this.tileEntity.ueWattsPerTick * 20, ElectricUnit.WATT), 72, 56 + 23 + yOffset, 4210752);
-        //		this.fontRendererObj.drawString(ElectricityDisplay.getDisplay(this.tileEntity.getVoltage(), ElectricUnit.VOLTAGE), 72, 68 + 23 + yOffset, 4210752);
-        this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
+        this.fontRenderer.drawString(GCCoreUtil.translate("gui.message.status.name") + ": ", 60, 45 + 23 + yOffset, 4210752);
+        this.fontRenderer.drawString(displayText, 60, 45 + 34 + yOffset, 4210752);
+        //		this.fontRenderer.drawString(ElectricityDisplay.getDisplay(this.tileEntity.ueWattsPerTick * 20, ElectricUnit.WATT), 72, 56 + 23 + yOffset, 4210752);
+        //		this.fontRenderer.drawString(ElectricityDisplay.getDisplay(this.tileEntity.getVoltage(), ElectricUnit.VOLTAGE), 72, 68 + 23 + yOffset, 4210752);
+        this.fontRenderer.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 
 	@Override

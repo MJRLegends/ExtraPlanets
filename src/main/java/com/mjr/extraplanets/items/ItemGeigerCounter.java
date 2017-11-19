@@ -2,8 +2,11 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumAction;
@@ -34,11 +37,9 @@ public class ItemGeigerCounter extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.world.isRemote) {
-			list.add(EnumColor.YELLOW + GCCoreUtil.translate("geiger.counter.desc"));
-			list.add(EnumColor.AQUA + GCCoreUtil.translate("geiger.counter.location.desc"));
-		}
+	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+		list.add(EnumColor.YELLOW + GCCoreUtil.translate("geiger.counter.desc"));
+		list.add(EnumColor.AQUA + GCCoreUtil.translate("geiger.counter.location.desc"));
 	}
 
 	@Override
@@ -47,8 +48,8 @@ public class ItemGeigerCounter extends Item {
 	}
 
 	@Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand){
-        ItemStack itemStackIn = player.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand) {
+		ItemStack itemStackIn = player.getHeldItem(hand);
 		player.setActiveHand(hand);
 		if (player.world.isRemote == false) {
 			EntityPlayerMP playerMP = (EntityPlayerMP) player;

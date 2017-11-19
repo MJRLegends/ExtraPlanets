@@ -2,15 +2,19 @@ package com.mjr.extraplanets.items.planetAndMoonItems;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -39,9 +43,9 @@ public class ItemTier8Items extends Item {
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
+	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemTier8Items.names.length; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
+			par3List.add(new ItemStack(this, 1, i));
 		}
 	}
 
@@ -52,11 +56,9 @@ public class ItemTier8Items extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
+	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
-			if (player.world.isRemote) {
-				list.add(EnumColor.GREY + GCCoreUtil.translate("tier8.heavy_duty_plate.name"));
-			}
+			list.add(EnumColor.GREY + GCCoreUtil.translate("tier8.heavy_duty_plate.name"));
 		}
 	}
 

@@ -45,18 +45,18 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
 		
-		this.inputTankRegion.xPosition = (this.width - this.xSize) / 2 + 7;
-		this.inputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.inputTankRegion.x = (this.width - this.xSize) / 2 + 7;
+		this.inputTankRegion.y = (this.height - this.ySize) / 2 + 28;
 		this.inputTankRegion.parentWidth = this.width;
 		this.inputTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.inputTankRegion);
-		this.inputTank2Region.xPosition = (this.width - this.xSize) / 2 + 32;
-		this.inputTank2Region.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.inputTank2Region.x = (this.width - this.xSize) / 2 + 32;
+		this.inputTank2Region.y = (this.height - this.ySize) / 2 + 28;
 		this.inputTank2Region.parentWidth = this.width;
 		this.inputTank2Region.parentHeight = this.height;
 		this.infoRegions.add(this.inputTank2Region);
-		this.outputTankRegion.xPosition = (this.width - this.xSize) / 2 + 122;
-		this.outputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
+		this.outputTankRegion.x = (this.width - this.xSize) / 2 + 122;
+		this.outputTankRegion.y = (this.height - this.ySize) / 2 + 28;
 		this.outputTankRegion.parentWidth = this.width;
 		this.outputTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.outputTankRegion);
@@ -80,8 +80,8 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 62;
-		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 16;
+		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 62;
+		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 16;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);
@@ -89,7 +89,7 @@ public class GuiBasicPurifier extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
+		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRenderer);
 		String displayText = "";
 		int yOffset = -10;
 
@@ -109,8 +109,8 @@ public class GuiBasicPurifier extends GuiContainerGC {
 			displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.idle.name");
 		}
 
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 80 - (displayText.length() * 2), 62 + 35 + yOffset, 4210752);
-		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
+		this.fontRenderer.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 80 - (displayText.length() * 2), 62 + 35 + yOffset, 4210752);
+		this.fontRenderer.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 
 	@Override

@@ -2,8 +2,11 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -34,19 +37,17 @@ public class ItemBasicItem extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.world.isRemote) {
-			if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier1_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier2_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_3_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier3_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier4_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("anti_radiation.desc"));
-		}
+	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+		if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier1_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier2_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.TIER_3_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier3_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier4_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
+			list.add(EnumColor.YELLOW + GCCoreUtil.translate("anti_radiation.desc"));
 	}
 
 	@Override
@@ -64,8 +65,8 @@ public class ItemBasicItem extends Item {
 	}
 
 	@Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand){
-        ItemStack itemStackIn = playerIn.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
+		ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		playerIn.setActiveHand(hand);
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
 	}
@@ -86,7 +87,7 @@ public class ItemBasicItem extends Item {
 					stats = entityLiving.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
 				double level = stats.getRadiationLevel() / 2;
-				if(level < 0)
+				if (level < 0)
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);

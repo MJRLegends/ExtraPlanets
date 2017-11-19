@@ -72,9 +72,9 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
-		par3List.add(new ItemStack(par1, 1, BlockSolar.HYBRID_METADATA));
-		par3List.add(new ItemStack(par1, 1, BlockSolar.ULTIMATE_METADATA));
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> par3List) {
+		par3List.add(new ItemStack(this, 1, BlockSolar.HYBRID_METADATA));
+		par3List.add(new ItemStack(this, 1, BlockSolar.ULTIMATE_METADATA));
 	}
 
 	@Override

@@ -77,7 +77,7 @@ public class TitanBiomes extends Biome {
 						}
 
 						if (j1 < 63 && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							if (this.getFloatTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
+							if (this.getTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
 								iblockstate = Blocks.ICE.getDefaultState();
 							} else {
 								iblockstate = Blocks.WATER.getDefaultState();

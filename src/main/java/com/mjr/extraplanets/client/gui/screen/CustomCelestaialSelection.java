@@ -36,15 +36,15 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 				int xOffset = 100 + (GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE);
 				this.drawTexturedModalRect(xOffset, yOffset, 93 + widthSizeOffset, 4, 159, 102, 93, 4, false, false);
 				for (int barY = 0; barY < 25; ++barY) {
-					this.drawTexturedModalRect(xOffset, yOffset + barY * this.fontRendererObj.FONT_HEIGHT + 4, 93 + widthSizeOffset, this.fontRendererObj.FONT_HEIGHT, 159, 106, 93, this.fontRendererObj.FONT_HEIGHT, false, false);
+					this.drawTexturedModalRect(xOffset, yOffset + barY * this.fontRenderer.FONT_HEIGHT + 4, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT, 159, 106, 93, this.fontRenderer.FONT_HEIGHT, false, false);
 				}
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						temp = (WorldProviderSpace) DimensionManager.getProvider(this.selectedBody.getDimensionID());
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					String type;
 					if (GalaxyRegistry.getRegisteredPlanets().containsValue(this.selectedBody))
 						type = "Planet";
@@ -55,14 +55,14 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					else
 						type = "Unknown";
 
-					this.drawString(this.fontRendererObj, "Type: " + type, xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, "Type: " + type, xOffset + 10, yOffset + 23, 14737632);
 					if ((this.selectedBody instanceof Planet))
-						this.drawString(this.fontRendererObj, "Amount of Moons: " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
+						this.drawString(this.fontRenderer, "Amount of Moons: " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
 					yOffset = yOffset + 45;
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Celestaial Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Orbit Time: " + this.selectedBody.getRelativeOrbitTime() * 24 + " days", xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "Celestaial Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "Orbit Time: " + this.selectedBody.getRelativeOrbitTime() * 24 + " days", xOffset + 10, yOffset + 23, 14737632);
 					float gravity = 0;
 					long dayLengh = 0;
 					if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getName().contains("overworld")) {
@@ -72,12 +72,12 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 						gravity = 1;
 						dayLengh = 24;
 					}
-					this.drawString(this.fontRendererObj, "Gravity: " + (this.selectedBody.getReachable() ? gravity : "Unknown"), xOffset + 10, yOffset + 33, 14737632);
-					this.drawString(this.fontRendererObj, "Day Lengh: " + (this.selectedBody.getReachable() ? dayLengh + " hours" : "Unknown"), xOffset + 10, yOffset + 43, 14737632);
+					this.drawString(this.fontRenderer, "Gravity: " + (this.selectedBody.getReachable() ? gravity : "Unknown"), xOffset + 10, yOffset + 33, 14737632);
+					this.drawString(this.fontRenderer, "Day Lengh: " + (this.selectedBody.getReachable() ? dayLengh + " hours" : "Unknown"), xOffset + 10, yOffset + 43, 14737632);
 					yOffset = yOffset + 60;
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "General Feature Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "General Feature Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					double meteorFrequency = 0;
 					if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getName().contains("overworld")) {
 						double number = ((WorldProviderSpace) temp).getMeteorFrequency();
@@ -86,18 +86,18 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					} else {
 						meteorFrequency = 0;
 					}
-					this.drawString(this.fontRendererObj, "Meteor Frequency: " + (this.selectedBody.getReachable() ? meteorFrequency : "Unknown"), xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, "Meteor Frequency: " + (this.selectedBody.getReachable() ? meteorFrequency : "Unknown"), xOffset + 10, yOffset + 23, 14737632);
 
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 39, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Atmosphere Details: ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 51, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Wind Level: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : "Unknown"), xOffset + 10, yOffset + 60, 14737632);
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 39, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "Atmosphere Details: ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 51, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "Wind Level: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : "Unknown"), xOffset + 10, yOffset + 60, 14737632);
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
-					this.drawString(this.fontRendererObj, "Temperature: " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
-					this.drawString(this.fontRendererObj, "Breathable: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isBreathable() : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
-					this.drawString(this.fontRendererObj, "Corrosive Atmosphere: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10, yOffset + 90, 14737632);
+					this.drawString(this.fontRenderer, "Temperature: " + (this.selectedBody.getReachable() ? temperature + " C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
+					this.drawString(this.fontRenderer, "Breathable: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isBreathable() : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
+					this.drawString(this.fontRenderer, "Corrosive Atmosphere: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10, yOffset + 90, 14737632);
 					int radiationLevel = 0;
 					int pressureLevel = 0;
 					try {
@@ -106,28 +106,28 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					} catch (Exception ex) {
 					}
 
-					this.drawString(this.fontRendererObj, "Radiation Level: " + (this.selectedBody.getReachable() ? radiationLevel + "%" : "Unknown"), xOffset + 10, yOffset + 100, 14737632);
-					this.drawString(this.fontRendererObj, "Pressure Level: " + (this.selectedBody.getReachable() ? pressureLevel + "%" : "Unknown"), xOffset + 10, yOffset + 110, 14737632);
+					this.drawString(this.fontRenderer, "Radiation Level: " + (this.selectedBody.getReachable() ? radiationLevel + "%" : "Unknown"), xOffset + 10, yOffset + 100, 14737632);
+					this.drawString(this.fontRenderer, "Pressure Level: " + (this.selectedBody.getReachable() ? pressureLevel + "%" : "Unknown"), xOffset + 10, yOffset + 110, 14737632);
 				} else if (this.selectedBody instanceof Star) {
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Type: " + "Star", xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "Type: " + "Star", xOffset + 10, yOffset + 23, 14737632);
 					List<CelestialBody> planets = this.getChildren(((Star) this.selectedBody).getParentSolarSystem());
 					int amountofPlanets = planets.size();
-					this.drawString(this.fontRendererObj, "Amount of Planets: " + amountofPlanets, xOffset + 10, yOffset + 33, 14737632);
+					this.drawString(this.fontRenderer, "Amount of Planets: " + amountofPlanets, xOffset + 10, yOffset + 33, 14737632);
 
 					yOffset = yOffset + 50;
 
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Parent Solar System Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "Parent Solar System Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 
 					int amountofMoons = 0;
 					for (int i = 0; i < amountofPlanets; i++) {
 						amountofMoons += this.getChildren(planets.get(i)).size();
 					}
-					this.drawString(this.fontRendererObj, "Amount of Moons: " + amountofMoons, xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, "Amount of Moons: " + amountofMoons, xOffset + 10, yOffset + 23, 14737632);
 				}
 			}
 		}

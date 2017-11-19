@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
@@ -132,14 +132,14 @@ public class WorldProviderKepler22b extends CustomWorldProviderSpace implements 
 	public int getDungeonSpacing() {
 		return 800;
 	}
-	
+
 	@Override
-	public boolean canBlockFreeze(BlockPos pos, boolean byWater){
+	public boolean canBlockFreeze(BlockPos pos, boolean byWater) {
 		return false;
 	}
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

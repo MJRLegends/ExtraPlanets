@@ -8,7 +8,7 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
@@ -31,7 +31,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(234f / 255.0F * f, 223f / 255.0F * f, 242f / 255.0F * f);
 	}
-	
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -41,7 +41,7 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 	public long getDayLength() {
 		return 90000L;
 	}
-	
+
 	@Override
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEris.class;
@@ -132,6 +132,6 @@ public class WorldProviderEris extends CustomWorldProviderSpace implements IGala
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

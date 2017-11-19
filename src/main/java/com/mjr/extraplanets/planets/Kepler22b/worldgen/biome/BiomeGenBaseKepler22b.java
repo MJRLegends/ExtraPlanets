@@ -63,7 +63,7 @@ public class BiomeGenBaseKepler22b extends Biome {
 	}
 
 	protected BiomeDecoratorKepler22b getBiomeDecorator() {
-		return (BiomeDecoratorKepler22b) this.theBiomeDecorator;
+		return (BiomeDecoratorKepler22b) this.decorator;
 	}
 
 	@Override
@@ -98,7 +98,7 @@ public class BiomeGenBaseKepler22b extends Biome {
 						}
 
 						if (j1 < 63 && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							if (this.getFloatTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
+							if (this.getTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
 								iblockstate = Blocks.ICE.getDefaultState();
 							} else {
 								iblockstate = Blocks.WATER.getDefaultState();

@@ -70,15 +70,6 @@ public class BlockBasicCeres extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-	public MapColor getMapColor(IBlockState state) {
-		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE) {
-			return MapColor.DIRT;
-		}
-
-		return MapColor.RED;
-	}
-
-	@Override
 	public float getExplosionResistance(World world, BlockPos pos, Entity exploder, Explosion explosion) {
 		IBlockState state = world.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE || state.getValue(BASIC_TYPE) == EnumBlockBasic.STONEBRICKS)
@@ -117,9 +108,9 @@ public class BlockBasicCeres extends Block implements IDetectableResource, IPlan
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> par3List) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
+			par3List.add(new ItemStack(this, 1, blockBasic.getMeta()));
 		}
 	}
 

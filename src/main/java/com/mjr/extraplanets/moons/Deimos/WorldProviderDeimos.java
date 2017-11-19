@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -134,7 +134,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.DEIMOS;
 	}
-	
+
 	@Override
 	public int getDungeonSpacing() {
 		return 0;

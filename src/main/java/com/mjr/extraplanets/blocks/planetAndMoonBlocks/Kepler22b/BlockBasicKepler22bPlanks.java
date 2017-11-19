@@ -39,9 +39,9 @@ public class BlockBasicKepler22bPlanks extends Block {
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (BlockBasicKepler22bPlanks.EnumType blockplanks$enumtype : BlockBasicKepler22bPlanks.EnumType.values()) {
-			list.add(new ItemStack(itemIn, 1, blockplanks$enumtype.getMetadata()));
+			list.add(new ItemStack(this, 1, blockplanks$enumtype.getMetadata()));
 		}
 	}
 
@@ -51,14 +51,6 @@ public class BlockBasicKepler22bPlanks extends Block {
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(VARIANT, BlockBasicKepler22bPlanks.EnumType.byMetadata(meta));
-	}
-
-	/**
-	 * Get the MapColor for this Block and the given BlockState
-	 */
-	@Override
-	public MapColor getMapColor(IBlockState state) {
-		return state.getValue(VARIANT).func_181070_c();
 	}
 
 	/**

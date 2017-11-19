@@ -2,6 +2,8 @@ package com.mjr.extraplanets.items.rockets;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.GCFluids;
@@ -11,6 +13,7 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -116,16 +119,16 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
+	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < EnumRocketType.values().length; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
+			par3List.add(new ItemStack(this, 1, i));
 		}
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List par2List, boolean b) {
+	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> par2List, ITooltipFlag flagIn) {
 		EnumRocketType type;
 
 		if (par1ItemStack.getItemDamage() < 10) {

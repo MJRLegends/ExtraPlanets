@@ -27,7 +27,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.stats.AchievementList;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -107,9 +106,9 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 		if (this.isEntityInvulnerable(source)) {
 			return false;
-		} else if ("fireball".equals(source.getDamageType()) && source.getEntity() instanceof EntityPlayer) {
+		} else if ("fireball".equals(source.getDamageType()) && source.getTrueSource() instanceof EntityPlayer) {
 			super.attackEntityFrom(source, 10.0F);
-			((EntityPlayer) source.getEntity()).addStat(AchievementList.GHAST);
+			((EntityPlayer) source.getTrueSource()).addStat(AchievementList.GHAST);
 			return true;
 		} else {
 			return super.attackEntityFrom(source, amount);
@@ -239,7 +238,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		@Override
 		public void updateTask() {
 			EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
-			if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
+			if (entitylivingbase.getDistanceSq(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
 				World world = this.parentEntity.world;
 				++this.attackTimer;
 
@@ -249,15 +248,15 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 
 				if (this.attackTimer == 20) {
 					Vec3d vec3d = this.parentEntity.getLook(1.0F);
-					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.xCoord * 4.0D);
+					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.x * 4.0D);
 					double d3 = entitylivingbase.getEntityBoundingBox().minY + entitylivingbase.height / 2.0F - (0.5D + this.parentEntity.posY + this.parentEntity.height / 2.0F);
-					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.zCoord * 4.0D);
+					double d4 = entitylivingbase.posZ - (this.parentEntity.posZ + vec3d.z * 4.0D);
 					world.playEvent((EntityPlayer) null, 1016, new BlockPos(this.parentEntity), 0);
 					EntityLargeFireball entitylargefireball = new EntityLargeFireball(world, this.parentEntity, d2, d3, d4);
 					entitylargefireball.explosionPower = this.parentEntity.getFireballStrength();
-					entitylargefireball.posX = this.parentEntity.posX + vec3d.xCoord * 4.0D;
+					entitylargefireball.posX = this.parentEntity.posX + vec3d.x * 4.0D;
 					entitylargefireball.posY = this.parentEntity.posY + this.parentEntity.height / 2.0F + 0.5D;
-					entitylargefireball.posZ = this.parentEntity.posZ + vec3d.zCoord * 4.0D;
+					entitylargefireball.posZ = this.parentEntity.posZ + vec3d.z * 4.0D;
 					world.spawnEntity(entitylargefireball);
 					this.attackTimer = -40;
 				}
@@ -296,7 +295,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 				EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
 				double d0 = 64.0D;
 
-				if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < d0 * d0) {
+				if (entitylivingbase.getDistanceSq(this.parentEntity) < d0 * d0) {
 					double d1 = entitylivingbase.posX - this.parentEntity.posX;
 					double d2 = entitylivingbase.posZ - this.parentEntity.posZ;
 					this.parentEntity.renderYawOffset = this.parentEntity.rotationYaw = -((float) MathHelper.atan2(d1, d2)) * 180.0F / Constants.floatPI;

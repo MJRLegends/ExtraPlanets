@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -34,7 +34,7 @@ public class WorldProviderGanymede extends CustomWorldProviderSpace implements I
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(70 / 255.0F * f, 35 / 255.0F * f, 10 / 255.0F * f);
 	}
-	
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -145,7 +145,7 @@ public class WorldProviderGanymede extends CustomWorldProviderSpace implements I
 		}
 		return 90.0F;
 	}
-	
+
 	@Override
 	public int getPressureLevel() {
 		return 2;

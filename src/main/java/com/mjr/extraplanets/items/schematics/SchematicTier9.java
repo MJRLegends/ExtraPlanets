@@ -2,6 +2,8 @@ package com.mjr.extraplanets.items.schematics;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.entities.EntityHangingSchematic;
@@ -10,6 +12,7 @@ import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemHangingEntity;
@@ -52,10 +55,8 @@ public class SchematicTier9 extends ItemHangingEntity implements ISchematicItem,
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.world.isRemote) {
-			list.add(EnumColor.GREY + GCCoreUtil.translate("schematic.tier9.rocket.name"));
-		}
+	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+		list.add(EnumColor.GREY + GCCoreUtil.translate("schematic.tier9.rocket.name"));
 	}
 
 	@Override
@@ -64,34 +65,28 @@ public class SchematicTier9 extends ItemHangingEntity implements ISchematicItem,
 	}
 
 	@Override
-    public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
-    {
-        ItemStack stack = playerIn.getHeldItem(hand);
-        BlockPos blockpos = pos.offset(facing);
+	public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+		ItemStack stack = playerIn.getHeldItem(hand);
+		BlockPos blockpos = pos.offset(facing);
 
-        if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack))
-        {
-            EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
+		if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack)) {
+			EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
 
-            if (entityhanging != null && entityhanging.onValidSurface())
-            {
-                if (!worldIn.isRemote)
-                {
-                    entityhanging.playPlaceSound();
-                    worldIn.spawnEntity(entityhanging);
-                    entityhanging.sendToClient(worldIn, blockpos);
-                }
+			if (entityhanging != null && entityhanging.onValidSurface()) {
+				if (!worldIn.isRemote) {
+					entityhanging.playPlaceSound();
+					worldIn.spawnEntity(entityhanging);
+					entityhanging.sendToClient(worldIn, blockpos);
+				}
 
-                stack.shrink(1);
-            }
+				stack.shrink(1);
+			}
 
-            return EnumActionResult.SUCCESS;
-        }
-        else
-        {
-            return EnumActionResult.FAIL;
-        }
-    }
+			return EnumActionResult.SUCCESS;
+		} else {
+			return EnumActionResult.FAIL;
+		}
+	}
 
 	private EntityHangingSchematic createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide, int index) {
 		return new EntityHangingSchematic(worldIn, pos, clickedSide, index);

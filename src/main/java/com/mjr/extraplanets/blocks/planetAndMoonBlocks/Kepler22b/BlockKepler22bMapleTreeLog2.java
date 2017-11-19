@@ -90,36 +90,13 @@ public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	}
 
 	/**
-	 * Get the MapColor for this Block and the given BlockState
-	 */
-	@Override
-	public MapColor getMapColor(IBlockState state) {
-		BlockKepler22bMapleTreeLog2.EnumType blockplanks$enumtype = state.getValue(VARIANT);
-
-		switch (state.getValue(LOG_AXIS)) {
-		case X:
-		case Z:
-		case NONE:
-		default:
-
-			switch (blockplanks$enumtype) {
-			default:
-				return BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN.func_181070_c();
-			}
-
-		case Y:
-			return blockplanks$enumtype.func_181070_c();
-		}
-	}
-
-	/**
 	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_BROWN.getMetadata()));
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
+		list.add(new ItemStack(this, 1, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN.getMetadata()));
+		list.add(new ItemStack(this, 1, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_BROWN.getMetadata()));
 	}
 
 	/**

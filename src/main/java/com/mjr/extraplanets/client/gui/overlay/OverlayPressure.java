@@ -8,7 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.VertexBuffer;
+import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -40,7 +40,7 @@ public class OverlayPressure extends Overlay
         GlStateManager.disableAlpha();
         FMLClientHandler.instance().getClient().renderEngine.bindTexture(OverlayPressure.guiTexture);
         final Tessellator tessellator = Tessellator.getInstance();
-        VertexBuffer worldRenderer = tessellator.getBuffer();
+        BufferBuilder worldRenderer = tessellator.getBuffer();
         GlStateManager.enableDepth();
         GlStateManager.enableAlpha();
         GlStateManager.disableLighting();
@@ -125,7 +125,7 @@ public class OverlayPressure extends Overlay
 	            	addY = 30;
             	}
             }
-            OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 102, 178, 255));
+            OverlayPressure.minecraft.fontRenderer.drawString(value, minLeftX + addX - OverlayPressure.minecraft.fontRenderer.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRenderer.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 102, 178, 255));
         }
         GlStateManager.disableBlend();
     }
