@@ -1079,13 +1079,13 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 13), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 14), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 13) });
 
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 0), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 15), 'B', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 1), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 1), 'B', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 2), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 4), 'B', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 3), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 12), 'B', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 4), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 11), 'B', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1) });
-		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 5), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 2), 'B', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1) });
-		
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 0), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 15), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 1), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 1), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 2), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 4), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 3), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 12), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 4), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 11), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 5), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.DYE, 1, 2), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+
 		// Kits
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TTA", "BCD", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankLight), 'A', new ItemStack(AsteroidsItems.thermalPadding, 1, 0), 'B', new ItemStack(AsteroidsItems.thermalPadding, 1, 1), 'C',
