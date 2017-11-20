@@ -13,8 +13,8 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class BiomeDecoratorJupiter extends BiomeDecorator {
 
@@ -76,25 +76,21 @@ public class BiomeDecoratorJupiter extends BiomeDecorator {
 		this.generateOre(10, this.redGemGen, 0, 10);
 		this.generateOre(5, this.skyBlocksGen, 63, 256);
 
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
-			if (this.rand.nextInt(5) == 0) {
-				int x = this.chunkX + this.rand.nextInt(16) + 8;
-				int y = this.rand.nextInt(this.rand.nextInt(248) + 8);
-				int z = this.chunkZ + this.rand.nextInt(16) + 8;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.magma).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.jupiterBlocks);
+			if (this.rand.nextInt(10) == 0) {
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ, ExtraPlanets_Fluids.magma, ExtraPlanets_Blocks.jupiterBlocks);
 			}
 		}
-		if (this.rand.nextInt(200) == 1) {
-			int x = this.chunkX + 8;
-			int z = this.chunkZ + 8;
-			int y = this.currentWorld.getHeightValue(x, z);
-			new WorldGenBasicHideout().generate(this.currentWorld, this.rand, x, y, z);
+
+		if (this.rand.nextInt(250) == 1) {
+			WorldGenHelper.generateStructure(new WorldGenBasicHideout(), this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ);
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 
 }

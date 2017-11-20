@@ -12,7 +12,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenFrozenNitrogenPile;
 
 public class BiomeDecoratorNeptune extends BiomeDecorator {
@@ -69,27 +69,20 @@ public class BiomeDecoratorNeptune extends BiomeDecorator {
 		this.generateOre(5, this.frozenNitrogenGen, 0, 256);
 		this.generateOre(10, this.blueGemGen, 0, 10);
 
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.chunkZ + 8;
-				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenCustomLake(ExtraPlanets_Fluids.nitrogen).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.neptuneBlocks);
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ, ExtraPlanets_Fluids.nitrogen, ExtraPlanets_Blocks.neptuneBlocks);
 			}
 		}
 
 		if (this.rand.nextInt(20) == 1) {
-			int x = this.chunkX + 8;
-			int z = this.chunkZ + 8;
-			int y = this.currentWorld.getHeightValue(x, z);
-			y = y - 1;
-			new WorldGenFrozenNitrogenPile().generate(this.currentWorld, this.rand, x, y, z);
+			WorldGenHelper.generateStructure(new WorldGenFrozenNitrogenPile(), this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ);
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 
 		isDecorating = false;
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

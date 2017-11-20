@@ -10,7 +10,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenVolcano;
 
 public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
@@ -51,7 +51,8 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		if (isDecorating) return;
+		if (isDecorating)
+			return;
 		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
@@ -60,25 +61,22 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(30, this.volcanicRockGen, 0, 256);
 		
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-		
+
 		for (int i = 0; i < this.LakesPerChunk; i++) {
-			if (this.rand.nextInt(5) == 0) {
-                int x = this.chunkX + this.rand.nextInt(16) + 8;
-                int y = this.rand.nextInt(this.rand.nextInt(248) + 8);
-                int z = this.chunkZ + this.rand.nextInt(16) + 8;
-				new WorldGenCustomLake(Blocks.lava).generate(this.currentWorld, this.rand, x, y, z, ExtraPlanets_Blocks.venusBlocks);
+			if (this.rand.nextInt(10) == 0) {
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ, Blocks.lava, ExtraPlanets_Blocks.venusBlocks);
+
 			}
 		}
-		if(Config.genVenusVolcanos){
+		if (Config.genVenusVolcanos) {
 			if (this.rand.nextInt(20) == 1) {
-				int x = this.chunkX;
-				int z = this.chunkZ;
-				int y = this.currentWorld.getHeightValue(x, z) - 3;
-				new WorldGenVolcano().generate(this.currentWorld, this.rand, x, y, z);
+				WorldGenHelper.generateStructure(new WorldGenVolcano(), this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ);
 			}
 		}
-		
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		isDecorating = false;
 	}
