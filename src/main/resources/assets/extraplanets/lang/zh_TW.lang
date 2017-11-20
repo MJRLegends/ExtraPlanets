@@ -107,6 +107,9 @@ tile.saturn.ore_magnesium.name=土星鎂礦石
 tile.saturn.stone_bricks.name=土星方塊磚
 tile.saturn.magnesium_block.name=鎂塊
 tile.saturn.dungeon_brick.name=Saturn Dungeon Brick
+tile.saturn.broken_infected_stone.name=Saturn Broken Infected Stone
+tile.saturn.infected_stone.name=Saturn Infected Stone
+tile.saturn.ore_slime.name=Saturn Slime Ore
 
 tile.uranus.surface.name=天王星地表方塊
 tile.uranus.sub_surface.name=天王星地底方塊
@@ -497,6 +500,10 @@ tile.decorative_blocks.magnesium_broken_titled_floor.name=Magnesium Broken Tiled
 tile.decorative_blocks.ash_bricks.name=Ash Bricks
 tile.decorative_blocks2.white_block.name=White Block
 tile.decorative_blocks2.red_block.name=Red Block
+tile.decorative_blocks2.blue_block.name=Blue Block
+tile.decorative_blocks2.light_blue_block.name=Light Blue Block
+tile.decorative_blocks2.yellow_block.name=Yellow Block
+tile.decorative_blocks2.green_block.name=Green Block
 
 #Stairs
 tile.mercury_stairs_surface.name=Mercury Surface Stairs

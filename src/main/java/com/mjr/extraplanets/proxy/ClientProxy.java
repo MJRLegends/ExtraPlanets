@@ -235,7 +235,7 @@ public class ClientProxy extends CommonProxy {
 					"neptune_dungeon_brick", "neptune_ore_blue_gem", "neptune_blue_gem_block");
 		if (Config.SATURN)
 			ClientUtilities.addExtraPlanetsVariants("saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper", "saturn_ore_magnesium", "saturn_magnesium_block", "saturn_stonebricks",
-					"saturn_dungeon_brick", "broken_infected_stone", "infected_stone");
+					"saturn_dungeon_brick", "broken_infected_stone", "infected_stone", "saturn_ore_slime");
 		if (Config.PLUTO)
 			ClientUtilities.addExtraPlanetsVariants("pluto", "pluto_surface", "pluto_sub_surface", "pluto_stone", "pluto_ore_iron", "pluto_ore_tin", "pluto_ore_copper", "pluto_ore_tungsten", "pluto_tungsten_block", "pluto_stonebricks",
 					"pluto_dungeon_brick");
