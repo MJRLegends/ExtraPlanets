@@ -63,7 +63,7 @@ public class NeptuneBiomes extends BiomeGenBase {
 		int maskX = x & 15;
 		int maskZ = z & 15;
 		int worldHeight = block.length / 256;
-		int seaLevel = 32;
+		int seaLevel = 63;
 
 		for (int y = 255; y >= 0; y--) {
 			int index = (maskZ * 16 + maskX) * worldHeight + y;
