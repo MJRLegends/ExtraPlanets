@@ -58,10 +58,10 @@ dependencies {
     compile "codechicken:NotEnoughItems:${minecraft_version}-${NEI_version}:deobf"
 
 	compile files (
-		"Galacticraft-API-1.10.2-4.0.0.118.jar",
-		"GalacticraftCore-Dev-1.10.2-4.0.0.118.jar",
-		"Galacticraft-Planets-Dev-1.10.2-4.0.0.118.jar",
-		"MicdoodleCore-Dev-1.10.2-4.0.0.118.jar"
+		"Galacticraft-API-1.10.2-4.0.0.119.jar",
+		"GalacticraftCore-Dev-1.10.2-4.0.0.119.jar",
+		"Galacticraft-Planets-Dev-1.10.2-4.0.0.119.jar",
+		"MicdoodleCore-Dev-1.10.2-4.0.0.119.jar"
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..

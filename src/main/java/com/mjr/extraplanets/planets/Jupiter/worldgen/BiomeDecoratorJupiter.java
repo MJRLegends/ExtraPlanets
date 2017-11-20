@@ -78,17 +78,17 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.JUPITER_BLOCKS);
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.JUPITER_BLOCKS);
 			}
 		}
 
 		if (this.rand.nextInt(250) == 1) {
-			WorldGenHelper.generateStructure(new WorldGenBasicHideout(), this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ));
+			WorldGenHelper.generateStructure(new WorldGenBasicHideout(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
 		isDecorating = false;
 	}

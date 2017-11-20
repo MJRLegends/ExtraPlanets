@@ -61,18 +61,18 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.FROZEN_WATER, ExtraPlanets_Blocks.URANUS_BLOCKS);
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.FROZEN_WATER, ExtraPlanets_Blocks.URANUS_BLOCKS);
 			}
 		}
 		if (Config.GENERATE_URANUS_ICE_SPIKES) {
 			for (int i = 0; i < this.iceSpikesPerChunk; i++) {
 				if (this.rand.nextInt(20) == 0) {
-					int x = this.chunkX + 6;
-					int z = this.chunkZ + 6;
+					int x = this.posX + 6;
+					int z = this.posZ + 6;
 					int y = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY();
 					new WorldGenCustomIceSpike().generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.URANUS_BLOCKS);
 				}
@@ -80,11 +80,11 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 		}
 		if (Config.GENERATE_URANUS_IGLOOS) {
 			if (this.rand.nextInt(300) == 1) {
-				WorldGenHelper.generateStructure(new WorldGenIgloo(), this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ));
+				WorldGenHelper.generateStructure(new WorldGenIgloo(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}
 
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		isDecorating = false;
 	}
 }
