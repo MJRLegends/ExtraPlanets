@@ -27,7 +27,7 @@ public class BiomeDecoratorJupiter extends BiomeDecorator {
 	private WorldGenerator redGemGen;
 	private WorldGenerator skyBlocksGen;
 
-	private int LakesPerChunk = 50;
+	private int LakesPerChunk = 5;
 
 	private World currentWorld;
 	protected Random rand;

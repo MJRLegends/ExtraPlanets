@@ -25,7 +25,7 @@ public class WorldGenHelper {
 		x = x + 8;
 		z = z + 8;
 		y = world.getTopSolidOrLiquidBlock(x, z) - 2;
-		new WorldGenCustomLake(fluid).generate(world, rand, x, y, z);
+		new WorldGenCustomLake(fluid).generate(world, rand, x, y, z, block);
 	}
 
 	public static boolean checkValidSpawn(World world, int x, int y, int z, int size) {
@@ -35,6 +35,10 @@ public class WorldGenHelper {
 		
 		for (int i = y; i > 5 && world.isAirBlock(x, y, z) || world.getBlock(x, y, z).getMaterial().isLiquid(); y--) {
 			;
+		}
+		
+		if (y <= 4) {
+			return false;
 		}
 		
 		for (int i = -size; i <= size; ++i) {
