@@ -29,25 +29,22 @@ public class WorldGenHelper {
 	}
 
 	public static boolean checkValidSpawn(World world, int x, int y, int z, int size) {
-//		if (!world.checkChunksExist(x, y, z, x + size, y + size, z + size))
-//			return false;
-//
-//		for (int i = y; y > 5 && world.isAirBlock(x, y, z) || world.getBlock(x, y, z).getMaterial().isLiquid(); y = y--) {
-//
-//		}
-//
-//		if (y <= 4) {
-//			return false;
-//		}
-//
-//		for (int i = -size; i <= size; ++i) {
-//			for (int j = -size; j <= size; ++j) {
-//				if (world.isAirBlock(x, y - 1, z) && world.isAirBlock(x, y - 2, z) || world.getBlock(x, y-1, z).getMaterial().isLiquid()
-//						&& world.getBlock(x, y - 2, z).getMaterial().isLiquid()) {
-//					return false;
-//				}
-//			}
-//		}
-		return false;
+		if (!world.checkChunksExist(x, y, z, x + size, y + size, z + size))
+			return false;
+
+		
+		for (int i = y; i > 5 && world.isAirBlock(x, y, z) || world.getBlock(x, y, z).getMaterial().isLiquid(); y--) {
+			;
+		}
+		
+		for (int i = -size; i <= size; ++i) {
+			for (int j = -size; j <= size; ++j) {
+				if (world.isAirBlock(x, y - 1, z) && world.isAirBlock(x, y - 2, z) || world.getBlock(x, y-1, z).getMaterial().isLiquid()
+						&& world.getBlock(x, y - 2, z).getMaterial().isLiquid()) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 }

@@ -87,7 +87,7 @@ public class JupiterBiomes extends BiomeGenBase {
 								topMeta = 0;
 								fillerBlock = ExtraPlanets_Blocks.jupiterBlocks;
 								fillerMeta = 1;
-							} else if (y >= seaLevel - 5 && y <= seaLevel) {
+							} else if (y >= seaLevel - 4 && y <= seaLevel) {
 								topBlock = this.topBlock;
 								topMeta = this.topMeta;
 								fillerBlock = this.fillerBlock;
@@ -108,7 +108,7 @@ public class JupiterBiomes extends BiomeGenBase {
 							if (y >= seaLevel - 2) {
 								block[index] = topBlock;
 								meta[index] = topMeta;
-							} else if (y < seaLevel - 8 - maxFillerDepth) {
+							} else if (y < seaLevel - 0 - maxFillerDepth) {
 								topBlock = null;
 								fillerBlock = ExtraPlanets_Blocks.jupiterBlocks;
 								fillerMeta = 1;

@@ -56,8 +56,8 @@ public class BiomeDecoratorNeptune extends BiomeDecorator {
 	public void decorateChunk(World world, Random rand, BiomeGenBase biome, int xChunk, int zChunk) {
 		this.currentWorld = world;
 		this.rand = rand;
-		this.chunk_X = xChunk;
-		this.chunk_Z = zChunk;
+		this.chunkX = xChunk;
+		this.chunkZ = zChunk;
 
 		if (isDecorating)
 			return;
