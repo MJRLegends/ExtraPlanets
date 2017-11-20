@@ -42,7 +42,7 @@ public class ItemThermalCloth extends Item {
 		int i = 0;
 
 		for (final String name : ItemThermalCloth.names) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName() + "." + name);
 		}
 	}
 

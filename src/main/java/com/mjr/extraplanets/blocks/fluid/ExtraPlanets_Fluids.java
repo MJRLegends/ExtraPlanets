@@ -101,6 +101,7 @@ public class ExtraPlanets_Fluids {
 		GameRegistry.registerBlock(glowstone, "glowstone");
 		GameRegistry.registerBlock(magma, "magma");
 		GameRegistry.registerBlock(nitrogen, "nitrogen");
+		GameRegistry.registerBlock(salt, "salt");
 		GameRegistry.registerBlock(frozen_water, "frozen_water");
 		GameRegistry.registerBlock(radio_active_water, "radio_active_water");
 		GameRegistry.registerBlock(infected_water, "infected_water");

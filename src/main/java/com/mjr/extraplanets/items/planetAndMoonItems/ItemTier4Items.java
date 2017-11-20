@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier4Items extends Item {
-	public static final String[] names = { "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "ash", "ash_shard", "sledgeHammer", "grindingWheel", "volcanic_shard", "ingot_volcanic" };
+	public static final String[] names = { "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "ash", "ash_shard", "sledge_hammer", "grinding_wheel", "volcanic_shard", "ingot_volcanic" };
 
 	protected IIcon[] icons = new IIcon[ItemTier4Items.names.length];
 

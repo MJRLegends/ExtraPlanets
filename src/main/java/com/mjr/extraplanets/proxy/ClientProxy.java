@@ -328,25 +328,25 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	private static void renderItems() {
 		if (Config.venus) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T4key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT4.png")));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T4key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t4.png")));
 		}
 		if (Config.jupiter) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T5key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT5.png")));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T5key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t5.png")));
 		}
 		if (Config.saturn) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T6key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT6.png")));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T6key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t6.png")));
 		}
 		if (Config.uranus) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T7key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT7.png")));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T7key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t7.png")));
 		}
 		if (Config.neptune) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT8.png")));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T8key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t8.png")));
 		}
 		if (Config.pluto) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT9.png")));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T9key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t9.png")));
 		}
 		if (Config.eris) {
-			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasureT10.png")));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.T10key, new ItemRendererKey(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t10.png")));
 		}
 		if (Config.thermalPaddings) {
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier2ThermalPadding, new ItemRendererThermalArmor());

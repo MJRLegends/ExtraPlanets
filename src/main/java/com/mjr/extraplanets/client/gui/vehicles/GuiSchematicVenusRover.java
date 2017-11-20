@@ -14,7 +14,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicVenusRover;
 
 public class GuiSchematicVenusRover extends GuiContainerGC implements ISchematicResultPage {
-	private static final ResourceLocation venusRoverBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venusRoverbench.png");
+	private static final ResourceLocation venusRoverBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venus_roverbench.png");
 
 	private int pageIndex;
 
