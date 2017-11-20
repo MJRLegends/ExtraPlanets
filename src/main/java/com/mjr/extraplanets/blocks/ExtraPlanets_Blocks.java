@@ -525,7 +525,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
 			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
 			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, "tile.kepler22bFlowers");
-			GameRegistry.registerBlock(redSand, "ExtraPlanets:redSand");
+			GameRegistry.registerBlock(redSand, "redSand");
 			GameRegistry.registerBlock(redSandstone, "redSandstone");
 		}
 

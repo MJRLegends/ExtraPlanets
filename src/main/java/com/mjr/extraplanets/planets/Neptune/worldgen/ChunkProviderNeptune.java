@@ -33,7 +33,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 
 	public ChunkProviderNeptune(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.waterBlock = ExtraPlanets_Fluids.nitrogen;
+		this.waterBlock = ExtraPlanets_Fluids.radio_active_water;
 		this.dungeonGenerator.otherRooms.add(new RoomEmptyNeptune(null, 0, 0, 0, ForgeDirection.UNKNOWN));
 		this.dungeonGenerator.otherRooms.add(new RoomSpawnerNeptune(null, 0, 0, 0, ForgeDirection.UNKNOWN));
 		this.dungeonGenerator.otherRooms.add(new RoomSpawnerNeptune(null, 0, 0, 0, ForgeDirection.UNKNOWN));

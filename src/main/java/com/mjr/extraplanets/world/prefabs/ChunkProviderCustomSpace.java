@@ -141,7 +141,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 								if ((d15 += d16) > 0.0D) {
 									p_147424_3_[j3 += short1] = Blocks.stone;
 								} else if (k2 * 8 + l2 < b0) {
-									p_147424_3_[j3 += short1] = ExtraPlanets_Fluids.frozen_water;
+									p_147424_3_[j3 += short1] = this.waterBlock;
 								} else {
 									p_147424_3_[j3 += short1] = null;
 								}
