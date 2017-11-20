@@ -10,8 +10,10 @@ import com.mjr.extraplanets.Constants;
 
 public class GalacticraftVersionChecker {
 	public static void run() {
-		if (micdoodle8.mods.galacticraft.core.Constants.LOCALBUILDVERSION >= 119) {
-			Logger log = LogManager.getLogger();
+		Logger log = LogManager.getLogger();
+		if (micdoodle8.mods.galacticraft.core.Constants.LOCALBUILDVERSION >= 119)
+			log.info(Constants.modName + ": Correct Galacticraft Version Found!, " + Constants.modName + " has detected you are using the required minimum version or higher of Galacticraft!");
+		else{
 			log.fatal(Constants.modName + ": has detected you are using a version below the required minimum version of build #119, You can find it here https://micdoodle8.com/mods/galacticraft/downloads");
 			JFrame frame = new JFrame();
 			frame.setSize(600, 600);
