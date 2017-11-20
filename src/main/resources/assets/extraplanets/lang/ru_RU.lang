@@ -106,6 +106,9 @@ tile.saturn.ore_magnesium.name=Магниевая руда Сатурна
 tile.saturn.stone_bricks.name=Каменные кирпичи Сатурна
 tile.saturn.magnesium_block.name=Магниевый блок
 tile.saturn.dungeon_brick.name=Кирпич сокровищницы Сатурна
+tile.saturn.broken_infected_stone.name=Saturn Broken Infected Stone
+tile.saturn.infected_stone.name=Saturn Infected Stone
+tile.saturn.ore_slime.name=Saturn Slime Ore
 
 tile.uranus.surface.name=Поверхность Урана
 tile.uranus.sub_surface.name=Подповерхностный грунт Урана
@@ -497,6 +500,10 @@ tile.decorative_blocks.magnesium_broken_titled_floor.name=Сломанный м�
 tile.decorative_blocks.ash_bricks.name=Пепельные кирпичи
 tile.decorative_blocks2.white_block.name=Белый блок
 tile.decorative_blocks2.red_block.name=Красный блок
+tile.decorative_blocks2.blue_block.name=Blue Block
+tile.decorative_blocks2.light_blue_block.name=Light Blue Block
+tile.decorative_blocks2.yellow_block.name=Yellow Block
+tile.decorative_blocks2.green_block.name=Green Block
 
 #Stairs
 tile.mercury_stairs_surface.name=Ступеньки из поверхности Меркурия

@@ -106,6 +106,9 @@ tile.saturn.ore_magnesium.name=Saturn Magnezyum Cevheri
 tile.saturn.stone_bricks.name=Saturn Taşı Tuğla
 tile.saturn.magnesium_block.name=Magnezyum Bloğu
 tile.saturn.dungeon_brick.name=Satürn Dungeon Tuğlası
+tile.saturn.broken_infected_stone.name=Saturn Broken Infected Stone
+tile.saturn.infected_stone.name=Saturn Infected Stone
+tile.saturn.ore_slime.name=Saturn Slime Ore
 
 tile.uranus.surface.name=Uranüs Yüzey Kayası
 tile.uranus.sub_surface.name=Uranüs Yeraltı Kayası
@@ -497,6 +500,10 @@ tile.decorative_blocks.magnesium_broken_titled_floor.name=Magnesium Broken Tiled
 tile.decorative_blocks.ash_bricks.name=Kül Tuğlaları
 tile.decorative_blocks2.white_block.name=Beyaz Blok
 tile.decorative_blocks2.red_block.name=Kırmızı Blok
+tile.decorative_blocks2.blue_block.name=Blue Block
+tile.decorative_blocks2.light_blue_block.name=Light Blue Block
+tile.decorative_blocks2.yellow_block.name=Yellow Block
+tile.decorative_blocks2.green_block.name=Green Block
 
 #Stairs
 tile.mercury_stairs_surface.name=Mercury Surface Stairs
