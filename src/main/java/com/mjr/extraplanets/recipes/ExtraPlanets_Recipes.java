@@ -492,6 +492,10 @@ public class ExtraPlanets_Recipes {
 			// Block to Crystal
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 4) });
 
+			// Dense Ice to Ice
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.DENSE_ICE, 1), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(Blocks.ICE, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ICE, 9), new Object[] { new ItemStack(ExtraPlanets_Blocks.DENSE_ICE, 1) });
+			
 			if (Config.ITEMS_CRYSTAL) {
 				// Tools
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', Items.stick });
