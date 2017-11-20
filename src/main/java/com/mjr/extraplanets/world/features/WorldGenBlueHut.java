@@ -9,38 +9,26 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenBlueHut extends WorldGenerator {
 
-	public WorldGenBlueHut() {
-
-	}
-
 	@Override
 	public boolean generate(World world, Random rand, int x, int y, int z) {
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 5; j++) {
-				try {
-					if (world.getBlock(x + i, y - 3, z + j) == Blocks.air)
-						return false;
-				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
-				}
-			}
-		}
-		if (!world.checkChunksExist(x - 10, y, z - 10, x + 10, y, z + 10))
+		if (WorldGenHelper.checkValidSpawn(world, x, y, z, 5) == false)
 			return false;
 		else {
-			// System.out.println("Spawning Blue Hut at (x, y, z)" + x + " " + y
-			// + " " + z);
-			generate_r0(world, rand, x, y, z);
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning Blue Hut at (x, y, z)" + x + " " + y + " " + z);
+			generatreStructure(world, rand, x, y, z);
 			fillChests(world, rand, x, y, z);
-			return true;
 		}
+		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
+	public boolean generatreStructure(World world, Random rand, int x, int y, int z) {
 		world.setBlock(x + 0, y + 0, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 1, y + 0, z + 0, Blocks.air, 0, 3);
 		world.setBlock(x + 2, y + 0, z + 0, Blocks.air, 0, 3);

@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.IProgressUpdate;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.SpawnerAnimals;
@@ -20,7 +19,7 @@ import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
-	private Random rand;
+	protected Random rand;
 	public NoiseGeneratorOctaves noiseGen4;
 	public NoiseGeneratorOctaves field_73214_a;
 	public NoiseGeneratorOctaves field_73212_b;
@@ -275,14 +274,6 @@ public abstract class ChunkProviderSpaceNormal extends ChunkProviderGenerate {
 		decoratePlanet(this.worldObj, this.rand, var4, var5);
 		SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomeGen, var4 + 8, var5 + 8, 16, 16, this.rand);
 		net.minecraft.block.BlockFalling.fallInstantly = false;
-	}
-
-	public boolean func_73151_a(boolean flag, IProgressUpdate progress) {
-		return true;
-	}
-
-	public boolean func_73157_c() {
-		return true;
 	}
 
 	@Override

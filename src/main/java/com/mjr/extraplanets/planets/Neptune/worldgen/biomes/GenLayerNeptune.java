@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Neptune.worldgen.layer;
+package com.mjr.extraplanets.planets.Neptune.worldgen.biomes;
 
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.GenLayerRiver;

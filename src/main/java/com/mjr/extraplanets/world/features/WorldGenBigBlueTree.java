@@ -3,41 +3,28 @@ package com.mjr.extraplanets.world.features;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenBigBlueTree extends WorldGenerator {
 
-	public WorldGenBigBlueTree() {
-
-	}
-
 	@Override
 	public boolean generate(World world, Random rand, int x, int y, int z) {
-		for (int i = 0; i < 25; i++) {
-			for (int j = 0; j < 25; j++) {
-				try {
-					if (world.getBlock(x + i, y - 3, z + j) == Blocks.air)
-						return false;
-				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
-				}
-			}
-		}
-		if (!world.checkChunksExist(x - 10, y, z - 10, x + 10, y, z + 10))
+		if (WorldGenHelper.checkValidSpawn(world, x, y, z, 10) == false)
 			return false;
 		else {
-			// System.out.println("Spawning BigPurpleTree at (x, y, z)" + x + " " + y
-			// + " " + z);
-			generate_r0(world, rand, x, y - 1, z);
-			return true;
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning Big Blue Tree at (x, y, z)" + x + " " + y + " " + z);
+			generatreStructure(world, rand, x, y, z);
 		}
+		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
+	public boolean generatreStructure(World world, Random rand, int x, int y, int z) {
 		world.setBlock(x + 6, y + 0, z + 5, ExtraPlanets_Blocks.kepler22bMapleLog, 0, 3);
 		world.setBlock(x + 7, y + 0, z + 5, ExtraPlanets_Blocks.kepler22bMapleLog, 0, 3);
 		world.setBlock(x + 4, y + 0, z + 6, ExtraPlanets_Blocks.kepler22bMapleLog, 0, 3);

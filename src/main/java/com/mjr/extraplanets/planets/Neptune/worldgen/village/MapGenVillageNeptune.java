@@ -9,7 +9,7 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
-import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeGenNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
 
 public class MapGenVillageNeptune extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenNeptune.neptune });
@@ -44,8 +44,8 @@ public class MapGenVillageNeptune extends MapGenStructure {
 
 	@Override
 	protected boolean canSpawnStructureAtCoords(int i, int j) {
-		final byte numChunks = 32; //32
-		final byte offsetChunks = 8; //8
+		final byte numChunks = 32; // 32
+		final byte offsetChunks = 8; // 8
 		final int oldi = i;
 		final int oldj = j;
 

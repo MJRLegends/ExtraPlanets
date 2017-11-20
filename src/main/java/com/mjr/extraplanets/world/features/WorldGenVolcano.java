@@ -9,38 +9,25 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenVolcano extends WorldGenerator {
 
-	public WorldGenVolcano() {
-
-	}
-
 	@Override
 	public boolean generate(World world, Random rand, int x, int y, int z) {
-		for (int i = 0; i < 25; i++) {
-			for (int j = 0; j < 25; j++) {
-				try {
-					if (world.getBlock(x + i, y - 3, z + j) == Blocks.air)
-						return false;
-				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
-				}
-			}
-		}
-		if (!world.checkChunksExist(x - 10, y, z - 10, x + 10, y, z + 10))
+		if (WorldGenHelper.checkValidSpawn(world, x, y, z, 25) == false)
 			return false;
 		else {
-			// System.out.println("Spawning Volcano at (x, y, z)" + x + " " + y
-			// + " " + z);
-			generate_r0(world, rand, x, y, z);
-			fillChests(world, rand, x, y, z);
-			return true;
+			if (Config.DEBUG_MODE)
+				System.out.println("Spawning Volcano Pile at (x, y, z)" + x + " " + y + " " + z);
+			generatreStructure(world, rand, x, y, z);
 		}
+		return true;
 	}
 
-	public boolean generate_r0(World world, Random rand, int x, int y, int z) {
+	public boolean generatreStructure(World world, Random rand, int x, int y, int z) {
 		world.setBlock(x + 11, y + 0, z + 1, ExtraPlanets_Blocks.volcanicRock, 0, 3);
 		world.setBlock(x + 13, y + 0, z + 1, ExtraPlanets_Blocks.volcanicRock, 0, 3);
 		world.setBlock(x + 10, y + 0, z + 2, ExtraPlanets_Blocks.volcanicRock, 0, 3);
