@@ -43,19 +43,19 @@ public class ExtraPlanets_Machines {
 
 	private static void initializeMachinesBlocks() {
 		if (Config.advancedRefinery)
-			advancedRefinery = new AdvancedRefinery("advancedRefinery");
+			advancedRefinery = new AdvancedRefinery("advanced_refinery");
 		if (Config.ultimateRefinery)
-			ultimateRefinery = new UltimateRefinery("ultimateRefinery");
+			ultimateRefinery = new UltimateRefinery("ultimate_refinery");
 		if (Config.advancedFuelLoader)
-			advancedFuelLoader = new AdvancedFuelLoader("advancedFuelLoader");
+			advancedFuelLoader = new AdvancedFuelLoader("advanced_fuel_loader");
 		if (Config.ultimateFuelLoader)
-			ultimateFuelLoader = new UltimateFuelLoader("ultimateFuelLoader");
-		advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advancedOxygenCompressor");
-		ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimateOxygenCompressor");
+			ultimateFuelLoader = new UltimateFuelLoader("ultimate_fuel_loader");
+		advancedOxygenCompressor = new AdvancedOxygenCompressor(false, "advanced_oxygen_compressor");
+		ultimateOxygenCompressor = new UltimateOxygenCompressor(false, "ultimate_oxygen_compressor");
 		if (Config.solarPanels)
 			solarPanel = new BlockSolar("solar");
 		if (Config.chargingBlock)
-			chargingBlock = new VehicleCharger("chargingBlock");
+			chargingBlock = new VehicleCharger("vehicle_charger");
 	}
 
 	private static void registerMachines() {

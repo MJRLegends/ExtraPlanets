@@ -1220,6 +1220,18 @@ tile.magma_fluid.name=Liquid Magma
 tile.nitrogen_fluid.name=Liquid Nitrogen
 tile.frozen_water_fluid.name=Frozen Water
 tile.salt_fluid.name=Liquid Crystallized Water
+tile.glowstone_fluid.name=Liquid Glowstone
+tile.magma_fluid.name=Liquid Magma
+tile.nitrogen_fluid.name=Liquid Nitrogen
+tile.frozen_water_fluid.name=Frozen Water
+tile.salt_fluid.name=Liquid Crystallized Water
+tile.radioactive_water_fluid.name=Radioactive Water
+tile.infected_water_fluid.name=Infected Water
+tile.methane_fluid.name=Liquid Methane
+tile.nitrogen_ice_fluid.name=Liquid Nitrogen Ice
+tile.liquid_hydrocarbon_fluid.name=Liquid Hydrocarbon
+tile.liquid_chocolate_fluid.name=Liquid Chocolate
+tile.liquid_caramel_fluid.name=Liquid Caramel
 
 #Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab
@@ -1267,3 +1279,16 @@ tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs
 tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs
 tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs
 
+#Planets
+planet.Venus=Venus
+
+#Other Items
+item.tier4_items.ash_shard.name=Ash Shard
+item.tier4_items.volcanic_shard.name=Volcanic Shard
+item.tier4_items.ingot_volcanic.name=Volcanic Ingot
+item.tier6_items.magnesium_shard.name=Magnesium Shard
+item.tier4_items.ash.name=Ash
+item.tier4_items.sledge_hammer.name=Sledge Hammer
+item.tier4_items.grinding_wheel.name=Grinding Wheel
+
+currently.unused.name=Currently Unused!

@@ -31,7 +31,7 @@ public class ItemKeyT5 extends Item implements IKeyItem {
 
 	@Override
 	public String getUnlocalizedName(ItemStack itemStack) {
-		return "item." + "key." + ItemKeyT5.keyTypes[itemStack.getItemDamage()];
+		return "item." + ItemKeyT5.keyTypes[itemStack.getItemDamage()] + "key";
 	}
 
 	@Override

@@ -36,7 +36,7 @@ public class BlockSolar extends BlockTileGC implements ItemBlockDesc.IBlockShift
 	public static final int HYBRID_METADATA = 0;
 	public static final int ULTIMATE_METADATA = 4;
 
-	public static String[] names = { "hybrid", "ultimate" };
+	public static String[] names = { "hybrid_solar", "ultimate_solar" };
 
 	private IIcon[] icons = new IIcon[6];
 
@@ -246,9 +246,9 @@ public class BlockSolar extends BlockTileGC implements ItemBlockDesc.IBlockShift
 	public String getShiftDescription(int meta) {
 		switch (meta) {
 		case HYBRID_METADATA:
-			return GCCoreUtil.translate("tile.solarhybrid.description");
+			return GCCoreUtil.translate("tile.solar_hybrid.description");
 		case ULTIMATE_METADATA:
-			return GCCoreUtil.translate("tile.solarultimate.description");
+			return GCCoreUtil.translate("tile.solar_ultimate.description");
 		}
 		return "";
 	}

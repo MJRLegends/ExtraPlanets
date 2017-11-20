@@ -46,7 +46,7 @@ public class ItemBlockIapetus extends ItemBlockDefaults {
 			break;
 		}
 		case 6: {
-			name = "iapetus_ice";
+			name = "ice";
 			break;
 		}
 		default:
