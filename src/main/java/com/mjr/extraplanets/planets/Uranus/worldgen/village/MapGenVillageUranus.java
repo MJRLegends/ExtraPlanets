@@ -9,10 +9,10 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
-import com.mjr.extraplanets.planets.Uranus.worldgen.BiomeGenUranus;
+import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 
 public class MapGenVillageUranus extends MapGenStructure {
-	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenUranus.uranus });
+	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { UranusBiomes.uranus });
 	private final int terrainType;
 	private static boolean initialized;
 

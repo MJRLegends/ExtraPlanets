@@ -1,20 +1,20 @@
-package com.mjr.extraplanets.planets.Jupiter.worldgen.biomes;
+package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
+import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 
-public class GenLayerJupiterBiomes extends GenLayer {
-	protected BiomeGenBase[] biomes = { JupiterBiomes.jupiter, JupiterBiomes.jupiterMagma, JupiterBiomes.jupiterSands };
+public class GenLayerUranusBiomes extends GenLayer {
+	protected BiomeGenBase[] biomes = { UranusBiomes.uranus, UranusBiomes.uranusFrozenSea, UranusBiomes.uranusSnowLands };
 
-	public GenLayerJupiterBiomes(long seed, GenLayer genlayer) {
+	public GenLayerUranusBiomes(long seed, GenLayer genlayer) {
 		super(seed);
 		this.parent = genlayer;
 	}
 
-	public GenLayerJupiterBiomes(long seed) {
+	public GenLayerUranusBiomes(long seed) {
 		super(seed);
 	}
 

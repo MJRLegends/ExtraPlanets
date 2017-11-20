@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadio
 
 public class NeptuneBiomes extends BiomeGenBase {
 	public static BiomeGenBase neptune = new BiomeGenNeptune(Config.neptuneBiomeID).setBiomeName("Neptune").setHeight(BiomeGenBase.height_LowPlains);
-	public static BiomeGenBase neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(200).setBiomeName("NeptuneRadioActiveWaterSea").setHeight(BiomeGenBase.height_Oceans);
+	public static BiomeGenBase neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(Config.neptuneRadioActiveWaterSeaBiomeID).setBiomeName("NeptuneRadioActiveWaterSea").setHeight(BiomeGenBase.height_Oceans);
 
 	protected Block stoneBlock;
 	protected byte topMeta;

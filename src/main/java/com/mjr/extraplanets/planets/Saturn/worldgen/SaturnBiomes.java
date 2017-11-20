@@ -18,7 +18,7 @@ import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnHydroca
 
 public class SaturnBiomes extends BiomeGenBase {
 	public static BiomeGenBase saturn = new BiomeGenSaturn(Config.saturnBiomeID).setBiomeName("Saturn").setHeight(BiomeGenBase.height_LowPlains);
-	public static BiomeGenBase saturnHydrocarbonSea = new BiomeGenSaturnHydrocarbonSea(202).setBiomeName("SaturnHydrocarbonSea").setHeight(BiomeGenBase.height_Oceans);
+	public static BiomeGenBase saturnHydrocarbonSea = new BiomeGenSaturnHydrocarbonSea(Config.saturnHydrocarbonSeaBiomeID).setBiomeName("SaturnHydrocarbonSea").setHeight(BiomeGenBase.height_Oceans);
 
 	protected Block stoneBlock;
 	protected byte topMeta;

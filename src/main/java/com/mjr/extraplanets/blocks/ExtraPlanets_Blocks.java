@@ -225,6 +225,10 @@ public class ExtraPlanets_Blocks {
 
 	public static Block redSand;
 	public static Block redSandstone;
+	
+	public static Block orangeSand;
+	public static Block orangeSandstone;
+	
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
@@ -259,6 +263,8 @@ public class ExtraPlanets_Blocks {
 		if (Config.jupiter) {
 			jupiterBlocks = new BlockBasicJupiter("jupiter");
 			jupiterGravel = new BlockCustomGravel("jupiter_gravel");
+			orangeSand = new BlockSand("orange_sand").setHardness(0.6F);
+			orangeSandstone = new BlockBasic(Material.rock).setBlockName("orange_sandstone").setHardness(2F).setResistance(2F).setBlockTextureName(Constants.TEXTURE_PREFIX + "orange_sandstone");
 		}
 		if (Config.saturn) {
 			saturnBlocks = new BlockBasicSaturn("saturn");
@@ -476,6 +482,9 @@ public class ExtraPlanets_Blocks {
 		if (Config.jupiter) {
 			GameRegistry.registerBlock(jupiterBlocks, ItemBlockJupiter.class, jupiterBlocks.getUnlocalizedName());
 			GameRegistry.registerBlock(jupiterGravel, "jupiterGravel");
+			
+			GameRegistry.registerBlock(orangeSand, "orangeSand");
+			GameRegistry.registerBlock(orangeSandstone, "orangeSandstone");
 
 			GameRegistry.registerBlock(jupiterSpawner, "jupiterSpawner");
 			GameRegistry.registerBlock(jupiterDungeonBrick, "jupiterDungeonBrick");
