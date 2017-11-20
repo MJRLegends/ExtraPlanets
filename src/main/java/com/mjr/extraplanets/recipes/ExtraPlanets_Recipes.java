@@ -530,7 +530,11 @@ public class ExtraPlanets_Recipes {
 
 			// Block to White Gem
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, whiteGem), new Object[] { new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 7) });
-
+			
+			// Dense Ice to Ice
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.denseIce, 1), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(Blocks.ice, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ice, 9), new Object[] { new ItemStack(ExtraPlanets_Blocks.denseIce, 1) });
+			
 			if (Config.crystalItems) {
 				// Tools
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.crystalPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', "stickWood" }));
