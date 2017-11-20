@@ -95,7 +95,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
-					this.drawString(this.fontRendererObj, "Temperature: " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
+					this.drawString(this.fontRendererObj, "Temperature: " + (this.selectedBody.getReachable() ? temperature + " C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
 					this.drawString(this.fontRendererObj, "Breathable: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isBreathable() : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
 					this.drawString(this.fontRendererObj, "Corrosive Atmosphere: " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10, yOffset + 90, 14737632);
 					int radiationLevel = 0;
