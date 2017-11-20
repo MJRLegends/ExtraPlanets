@@ -33,6 +33,9 @@ public class ExtraPlanets_Fluids {
 	public static Block nitrogen_ice;
 	public static Fluid nitrogen_ice_fluid;
 	
+	public static Block liquid_hydrocarbon;
+	public static Fluid liquid_hydrocarbon_fluid;
+	
 	public static Block liquid_chocolate;
 	public static Fluid liquid_chocolate_fluid;
 
@@ -81,6 +84,10 @@ public class ExtraPlanets_Fluids {
 		FluidRegistry.registerFluid(nitrogen_ice_fluid);
 		nitrogen_ice = new FluidNitrogenIce("nitrogen_ice_fluid");
 
+		liquid_hydrocarbon_fluid = new Fluid("liquid_hydrocarbon_fluid").setBlock(liquid_hydrocarbon);
+		FluidRegistry.registerFluid(liquid_hydrocarbon_fluid);
+		liquid_hydrocarbon = new FluidLiquidHydrocarbon("liquid_hydrocarbon_fluid");
+		
 		liquid_chocolate_fluid = new Fluid("liquid_choclate_fluid").setBlock(liquid_chocolate);
 		FluidRegistry.registerFluid(liquid_chocolate_fluid);
 		liquid_chocolate = new FluidLiquidChocolate("liquid_chocolate_fluid");

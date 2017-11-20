@@ -5,15 +5,13 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeGenJupiter;
 
-public class CeresBiomes extends BiomeGenBase  {
+public class CeresBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase ceres = new BiomeGenJupiter(Config.ceresBiomeID).setBiomeName("ceres");
+	public static final BiomeGenBase ceres = new BiomeGenCeres(Config.ceresBiomeID).setBiomeName("ceres");
 
 	@SuppressWarnings("unchecked")
-	CeresBiomes(int var1)
-	{
+	CeresBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -24,14 +22,12 @@ public class CeresBiomes extends BiomeGenBase  {
 	}
 
 	@Override
-	public CeresBiomes setColor(int var1)
-	{
+	public CeresBiomes setColor(int var1) {
 		return (CeresBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

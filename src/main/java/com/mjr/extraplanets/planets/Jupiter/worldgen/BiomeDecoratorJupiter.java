@@ -1,9 +1,12 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
+import java.util.Random;
+
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeDecorator;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
@@ -13,7 +16,7 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
 import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
-public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
+public class BiomeDecoratorJupiter extends BiomeDecorator {
 
 	private WorldGenerator tinGen;
 	private WorldGenerator copperGen;
@@ -27,6 +30,9 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 	private int LakesPerChunk = 50;
 
 	private World currentWorld;
+	protected Random rand;
+	protected int chunkX;
+	protected int chunkZ;
 
 	private boolean isDecorating = false;
 
@@ -42,18 +48,22 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
+	protected void generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY) {
+		for (int var5 = 0; var5 < amountPerChunk; ++var5) {
+			final int var6 = this.chunkX + this.rand.nextInt(16);
+			final int var7 = this.rand.nextInt(maxY - minY) + minY;
+			final int var8 = this.chunkZ + this.rand.nextInt(16);
+			worldGenerator.generate(this.currentWorld, this.rand, var6, var7, var8);
+		}
+	}
+
 	@Override
-	protected void setCurrentWorld(World world) {
+	public void decorateChunk(World world, Random rand, BiomeGenBase biome, int xChunk, int zChunk) {
 		this.currentWorld = world;
-	}
+		this.rand = rand;
+		this.chunk_X = xChunk;
+		this.chunk_Z = zChunk;
 
-	@Override
-	protected World getCurrentWorld() {
-		return this.currentWorld;
-	}
-
-	@Override
-	protected void decorate() {
 		if (isDecorating)
 			return;
 		isDecorating = true;

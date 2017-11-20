@@ -9,10 +9,10 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
-import com.mjr.extraplanets.planets.Saturn.worldgen.BiomeGenSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 
 public class MapGenVillageSaturn extends MapGenStructure {
-	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenSaturn.saturn });
+	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { SaturnBiomes.saturn });
 	private final int terrainType;
 	private static boolean initialized;
 
@@ -44,8 +44,8 @@ public class MapGenVillageSaturn extends MapGenStructure {
 
 	@Override
 	protected boolean canSpawnStructureAtCoords(int i, int j) {
-		final byte numChunks = 32; //32
-		final byte offsetChunks = 8; //8
+		final byte numChunks = 32; // 32
+		final byte offsetChunks = 8; // 8
 		final int oldi = i;
 		final int oldj = j;
 
