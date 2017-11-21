@@ -2,15 +2,12 @@ package com.mjr.extraplanets.handlers;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
-import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraftforge.client.event.GuiOpenEvent;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.client.gui.screen.CustomCelestaialSelection;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -29,9 +26,9 @@ public class MainHandler {
 				addX = -addX;
 			if (rand.nextInt(2) == 1)
 				addZ = -addZ;
-			if(addX <= 3)
+			if (addX <= 3)
 				addX = 5;
-			if(addZ <= 3)
+			if (addZ <= 3)
 				addZ = 5;
 			int lightingSpawnChance = rand.nextInt(100);
 			if (lightingSpawnChance == 10)
@@ -64,16 +61,16 @@ public class MainHandler {
 		}
 		event.setArmorAddResult(ThermalArmorEvent.ArmorAddResult.NOTHING);
 	}
-	
+
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onGuiOpenEvent(GuiOpenEvent event) {
-		if (((event.gui instanceof GuiCelestialSelection))) {
-			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.useCustomCelestaialSelection) {
-				event.gui = new CustomCelestaialSelection(true, null);
-			} else {
-				event.gui = new CustomCelestaialSelection(false, null);
-			}
-		}
+		// if (((event.gui instanceof GuiCelestialSelection))) {
+		// if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.useCustomCelestaialSelection) {
+		// event.gui = new CustomCelestaialSelection(true, null);
+		// } else {
+		// event.gui = new CustomCelestaialSelection(false, null);
+		// }
+		// }
 	}
 }

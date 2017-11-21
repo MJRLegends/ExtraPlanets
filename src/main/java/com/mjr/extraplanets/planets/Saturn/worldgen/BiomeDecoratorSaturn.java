@@ -14,7 +14,10 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
 import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.world.features.WorldGenNuclearPile;
+import com.mjr.extraplanets.world.features.WorldGenSlimeTree;
 
 public class BiomeDecoratorSaturn extends BiomeDecorator {
 
@@ -73,35 +76,34 @@ public class BiomeDecoratorSaturn extends BiomeDecorator {
 		this.generateOre(20, this.magnesiumGen, 0, 32);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.slimeGen, 60, 256);
+
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-		if (this.currentWorld.getBiomeGenForCoords(this.chunkX, this.chunkZ) instanceof BiomeGenSaturn)
+
+		if (this.currentWorld.getBiomeGenForCoords(this.chunkX, this.chunkZ) instanceof BiomeGenSaturn) {
 			for (int i = 0; i < this.LakesPerChunk; i++) {
 				if (this.rand.nextInt(10) == 0) {
 					WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ, ExtraPlanets_Fluids.glowstone, ExtraPlanets_Blocks.saturnBlocks);
 				}
 			}
-
-		// if (this.getCurrentWorld().getBiomeGenForCoords(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenSaturnNuclearLand) {
-		// for (int i = 0; i < LakesPerChunk * 2; i++) {
-		// if (this.rand.nextInt(10) == 0) {
-		// WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.METHANE,
-		// ExtraPlanets_Blocks.saturnBlocks.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.BROKEN_INFECTED_STONE));
-		// }
-		// }
-		// if (this.rand.nextInt(5) == 1) {
-		// BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.posX + (this.rand.nextInt(16) + 8), 0, this.posZ + (this.rand.nextInt(16) + 8)));
-		// new WorldGenNuclearPile().generate(this.currentWorld, this.rand, blockpos);
-		// }
-		// if (this.rand.nextInt(5) == 1) {
-		// BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.posX + (this.rand.nextInt(16) + 8), 0, this.posZ + (this.rand.nextInt(16) + 8)));
-		// new WorldGenSlimeTree().generate(this.currentWorld, this.rand, blockpos);
-		// }
-		// }
+		}
+		if (this.currentWorld.getBiomeGenForCoords(this.chunkX, this.chunkZ) instanceof BiomeGenSaturnNuclearLand) {
+			for (int i = 0; i < LakesPerChunk * 2; i++) {
+				if (this.rand.nextInt(10) == 0) {
+					WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ, ExtraPlanets_Fluids.methane, ExtraPlanets_Blocks.saturnBlocks);
+				}
+			}
+			if (this.rand.nextInt(5) == 1) {
+				WorldGenHelper.generateStructure(new WorldGenNuclearPile(), this.currentWorld, this.rand, this.chunkX + (this.rand.nextInt(16)), 0, this.chunkZ + (this.rand.nextInt(16)));
+			}
+			if (this.rand.nextInt(5) == 1) {
+				WorldGenHelper.generateStructure(new WorldGenSlimeTree(), this.currentWorld, this.rand, this.chunkX + (this.rand.nextInt(16)), 0, this.chunkZ + (this.rand.nextInt(16)));
+			}
+		}
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+
 		isDecorating = false;
 	}
 }

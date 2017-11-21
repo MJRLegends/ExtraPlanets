@@ -229,6 +229,8 @@ public class ExtraPlanets_Blocks {
 	public static Block orangeSand;
 	public static Block orangeSandstone;
 	
+	public static Block slimeBlock;
+	
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
@@ -355,6 +357,8 @@ public class ExtraPlanets_Blocks {
 		
 		decorativeBlocks = new BlockDecorativeBlocks("decorative_blocks");
 		decorativeBlocks2 = new BlockDecorativeBlocks2("decorative_blocks2");
+		
+		slimeBlock = new BlockSlime("slime_block");
 	}
 
 	private static void initializeDungeonBlocks() {
@@ -597,6 +601,8 @@ public class ExtraPlanets_Blocks {
 		
 		GameRegistry.registerBlock(decorativeBlocks, ItemBlockDecorativeBlocks.class, "tile.decorativeBlocks");
 		GameRegistry.registerBlock(decorativeBlocks2, ItemBlockDecorativeBlocks2.class, "tile.decorativeBlocks2");
+		
+		GameRegistry.registerBlock(slimeBlock, "slimeBlock");
 	}
 
 	private static void registerTileEntitys() {

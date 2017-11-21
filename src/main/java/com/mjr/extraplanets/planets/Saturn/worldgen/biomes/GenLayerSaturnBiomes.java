@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.IntCache;
 import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 
 public class GenLayerSaturnBiomes extends GenLayer {
-	protected BiomeGenBase[] biomes = { SaturnBiomes.saturn, SaturnBiomes.saturnHydrocarbonSea };
+	protected BiomeGenBase[] biomes = { SaturnBiomes.saturn, SaturnBiomes.saturnHydrocarbonSea, SaturnBiomes.saturnNuclearLand };
 
 	public GenLayerSaturnBiomes(long seed, GenLayer genlayer) {
 		super(seed);
