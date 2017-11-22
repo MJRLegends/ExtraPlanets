@@ -18,6 +18,8 @@ import com.mjr.extraplanets.jei.chemicalInjector.ChemicalInjectorRecipeWrapper;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeCategory;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeMaker;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeWrapper;
+import com.mjr.extraplanets.jei.densifier.DensifierRecipeCategory;
+import com.mjr.extraplanets.jei.densifier.DensifierRecipeMaker;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeCategory;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeMaker;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeWrapper;
@@ -64,7 +66,7 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
 					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper),
 					new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(
-							guiHelper), new PurifierRecipeCategory(guiHelper));
+							guiHelper), new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
 
 			registry.handleRecipes(INasaWorkbenchRecipe.class, Tier4RocketRecipeWrapper::new, RecipeCategories.ROCKET_T4_ID);
 			registry.handleRecipes(INasaWorkbenchRecipe.class, Tier5RocketRecipeWrapper::new, RecipeCategories.ROCKET_T5_ID);
@@ -99,6 +101,8 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList(), RecipeCategories.CHEMAICAL_INJECTOR_ID);
 			registry.addRecipes(CrystallizerRecipeMaker.getRecipesList(), RecipeCategories.CRYSTALLIZER_ID);
 			registry.addRecipes(PurifierRecipeMaker.getRecipesList(), RecipeCategories.PURIFIER_ID);
+			registry.addRecipes(DensifierRecipeMaker.getRecipesList(), RecipeCategories.DENSIFIER_ID);
+
 		}
 	}
 }
