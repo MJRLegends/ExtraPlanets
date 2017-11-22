@@ -24,12 +24,6 @@ public class DensifierRecipeHandler implements IRecipeHandler<DensifierRecipeWra
         return RecipeCategories.DENSIFIER_ID;
     }
 
-    @Override
-    public String getRecipeCategoryUid(DensifierRecipeWrapper recipe)
-    {
-        return this.getRecipeCategoryUid();
-    }
-
     @Nonnull
     @Override
     public IRecipeWrapper getRecipeWrapper(@Nonnull DensifierRecipeWrapper recipe)

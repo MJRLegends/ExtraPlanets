@@ -5,8 +5,6 @@ import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
-import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
@@ -16,21 +14,20 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraftforge.common.capabilities.Capability;
+import net.minecraft.util.IChatComponent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicDensifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper {
+public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 20000;
 	private int amountDrain = 0;
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -42,26 +39,12 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	private ItemStack[] containingItems = new ItemStack[3];
 
 	private ItemStack producingStack = null;
-	
+
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int outputTextureOffset;
-	
+
 	public TileEntityBasicDensifier() {
 		inputTank = new FluidTank(this.tankCapacity);
-	}
-
-	@Override
-	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY;
-	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
-		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
-			return (T) new FluidHandlerWrapper(this, facing);
-		}
-		return null;
 	}
 
 	@Override
@@ -95,31 +78,28 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
-					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+						this.containingItems[slot].setItem(Items.bucket);
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.containingItems[slot].setItem(Items.bucket);
 					}
 				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
-					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+						this.containingItems[slot].setItem(Items.bucket);
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.containingItems[slot].setItem(Items.bucket);
 					}
 				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
-					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+						this.containingItems[slot].setItem(Items.bucket);
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.containingItems[slot].setItem(Items.bucket);
 					}
 				}
 			}
@@ -132,11 +112,11 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0)))
 			this.producingStack = new ItemStack(ExtraPlanets_Items.CHOCOLATE_BAR, 6);
 		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)))
-			this.producingStack = new ItemStack(Blocks.ICE, 6);
+			this.producingStack = new ItemStack(Blocks.ice, 6);
 	}
-	
+
 	public void updateTextureOffset() {
-		if(this.inputTank.getFluid() == null)
+		if (this.inputTank.getFluid() == null)
 			return;
 		if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0)))
 			this.outputTextureOffset = 48;
@@ -221,7 +201,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	}
 
 	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
+	public void writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt);
@@ -229,7 +209,6 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (this.inputTank.getFluid() != null) {
 			nbt.setTag("inputTank", this.inputTank.writeToNBT(new NBTTagCompound()));
 		}
-		return nbt;
 	}
 
 	@Override
@@ -281,7 +260,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			case 1:
 				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 			case 2:
-				return itemstack == new ItemStack(Items.BUCKET);
+				return itemstack == new ItemStack(Items.bucket);
 			default:
 				return false;
 			}
@@ -327,14 +306,14 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (type == NetworkType.POWER) {
 			return direction == this.getElectricInputDirection();
 		}
-//		if (type == NetworkType.FLUID) {
-//			return direction == this.getInputPipe();
-//		}
+		// if (type == NetworkType.FLUID) {
+		// return direction == this.getInputPipe();
+		// }
 		return false;
 	}
 
 	@Override
-	public ITextComponent getDisplayName() {
+	public IChatComponent getDisplayName() {
 		return null;
 	}
 

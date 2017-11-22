@@ -26,7 +26,7 @@ public class DensifierRecipeMaker {
 		
 		inputs = new ItemStack[2];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.NITROGEN_ICE_FLUID);
-		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.ICE, 6, 0));
+		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.ice, 6, 0));
 		recipes.add(wrapper);
 		return recipes;
 	}
