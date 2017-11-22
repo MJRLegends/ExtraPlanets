@@ -16,6 +16,7 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.Fluid;
@@ -39,7 +40,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public static final int PROCESS_TIME_REQUIRED = 5;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private ItemStack[] containingItems = new ItemStack[3];
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	private ItemStack producingStack = null;
 	
@@ -68,7 +69,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public void update() {
 		super.update();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			checkFluidTankTransfer(2, this.inputTank);
 
 			if (this.canProcess() && this.hasEnoughEnergyToRun) {
@@ -89,37 +90,37 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 
 	@SuppressWarnings("deprecation")
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
-		if (this.containingItems[slot] != null) {
-			if (FluidUtil.isEmptyContainer(this.containingItems[slot]) == false && FluidUtil.getFluidContained(this.getStackInSlot(slot)) != null && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() != null) {
-				if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID)) {
+		if (this.getStackInSlot(slot) != null) {
+			if (FluidUtil.isEmptyContainer(this.getStackInSlot(slot)) == false && FluidUtil.getFluidContained(this.getStackInSlot(slot)) != null && FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid() != null) {
+				if (FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid().equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+					else if(FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid() == this.inputTank.getFluid().getFluid()){
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
+				} else if (FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid().equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+					else if(FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid() == this.inputTank.getFluid().getFluid()){
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
+				} else if (FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid().equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+					else if(FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid() == this.inputTank.getFluid().getFluid()){
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.BUCKET);
+						this.setInventorySlotContents(slot, new ItemStack(Items.BUCKET));
 					}
 				}
 			}
@@ -159,18 +160,20 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	}
 
 	public boolean canCrystallize() {
-		ItemStack itemstack = this.producingStack;
-		if (itemstack == null) {
-			return false;
-		}
-		if (this.containingItems[1] == null) {
-			return true;
-		}
-		if (!this.containingItems[1].isItemEqual(producingStack)) {
-			return false;
-		}
-		int result = this.containingItems[1].stackSize + producingStack.stackSize;
-		return result <= this.getInventoryStackLimit() && result <= producingStack.getMaxStackSize();
+		if (this.producingStack.isEmpty())
+        {
+            return false;
+        }
+        if (this.stacks.get(1).isEmpty())
+        {
+            return true;
+        }
+        if (!this.stacks.get(1).isEmpty() && !this.stacks.get(1).isItemEqual(this.producingStack))
+        {
+            return false;
+        }
+        int result = this.stacks.get(1).isEmpty() ? 0 : this.stacks.get(1).getCount() + this.producingStack.getCount();
+        return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
 	}
 
 	public boolean hasInputs() {
@@ -187,22 +190,22 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			this.inputTank.drain(amountToDrain, true);
 			if (amountDrain >= 1000) {
 				amountDrain = 0;
-				if (this.containingItems[1] == null) {
-					this.containingItems[1] = resultItemStack.copy();
-				} else if (this.containingItems[1].isItemEqual(resultItemStack)) {
-					if (this.containingItems[1].stackSize + resultItemStack.stackSize > 64) {
-						for (int i = 0; i < this.containingItems[1].stackSize + resultItemStack.stackSize - 64; i++) {
+				if (this.stacks.get(1).isEmpty()) {
+					this.stacks.set(1, resultItemStack.copy());
+				} else if (this.stacks.get(1).isItemEqual(resultItemStack)) {
+					if (this.stacks.get(1).getCount() + resultItemStack.getCount() > 64) {
+						for (int i = 0; i < this.stacks.get(1).getCount() + resultItemStack.getCount() - 64; i++) {
 							float var = 0.7F;
-							double dx = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-							double dy = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-							double dz = this.worldObj.rand.nextFloat() * var + (1.0F - var) * 0.5D;
-							EntityItem entityitem = new EntityItem(this.worldObj, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
+							double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+							double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+							double dz = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
+							EntityItem entityitem = new EntityItem(this.world, this.getPos().getX() + dx, this.getPos().getY() + dy, this.getPos().getZ() + dz, new ItemStack(resultItemStack.getItem(), 1, resultItemStack.getItemDamage()));
 							entityitem.setPickupDelay(10);
-							this.worldObj.spawnEntityInWorld(entityitem);
+							this.world.spawnEntity(entityitem);
 						}
-						this.containingItems[1].stackSize = 64;
+						this.stacks.get(1).setCount(64);
 					} else {
-						this.containingItems[1].stackSize += resultItemStack.stackSize;
+						this.stacks.get(1).grow(resultItemStack.getCount());
 					}
 				}
 			}
@@ -213,7 +216,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.containingItems = this.readStandardItemsFromNBT(nbt);
+		this.stacks = this.readStandardItemsFromNBT(nbt);
 
 		if (nbt.hasKey("inputTank")) {
 			this.inputTank.readFromNBT(nbt.getCompoundTag("inputTank"));
@@ -224,7 +227,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt);
+		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.inputTank.getFluid() != null) {
 			nbt.setTag("inputTank", this.inputTank.writeToNBT(new NBTTagCompound()));
@@ -233,8 +236,8 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	}
 
 	@Override
-	protected ItemStack[] getContainingItems() {
-		return this.containingItems;
+	protected NonNullList<ItemStack> getContainingItems() {
+		return this.stacks;
 	}
 
 	@Override
@@ -315,7 +318,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public EnumFacing getFront() {
-		IBlockState state = this.worldObj.getBlockState(getPos());
+		IBlockState state = this.world.getBlockState(getPos());
 		if (state.getBlock() instanceof BasicDensifier) {
 			return state.getValue(BasicDensifier.FACING);
 		}
