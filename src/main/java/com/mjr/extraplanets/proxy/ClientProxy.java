@@ -1186,6 +1186,8 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.GRAVITY_CONTROLLER);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.GEIGER_COUNTER);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WHITE_SUGAR_CANE);	
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CARAMEL_BAR);	
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CHOCOLATE_BAR);	
 	}
 
 	@SubscribeEvent
