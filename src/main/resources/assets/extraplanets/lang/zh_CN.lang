@@ -370,6 +370,7 @@ tile.advanced_fuel_loader.name=高级燃料装载机
 tile.ultimate_fuel_loader.name=终极燃料装载机
 tile.vehicle_charger.name=漫游车充能器(WIP)
 tile.basic_purifier.name=Basic Purifier
+tile.basic_densifier.name=Basic Densifier
 
 #Machine Containers
 container.solarhybrid.name=混合型高级太阳能电池板
@@ -389,6 +390,7 @@ container.ultimate.fuelloader.name=终极燃料装载机
 container.basic.solar.evaporation.chamber.name=基础太阳能蒸发室
 container.vehicle.charger.name=漫游车充能器
 container.basic.purifier.name=Purifier
+container.basic.densifier.name=Basic Densifier
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
@@ -428,6 +430,14 @@ gui.bucket.message.finding.2=by Finding it on Planets/Moons
 gui.bucket.message.crafting=Press R to See How to Obtain
 gui.status.missing.inputs.name=Missing Items/Fluids
 gui.status.missing.power.name=Missing Power
+gui.densifier_input.desc.0=You can place the following 
+gui.densifier_input.desc.1=buckets in this slot:
+gui.densifier_input.desc.2=Liquid Caramel
+gui.densifier_input.desc.3=Liquid Chocolate
+gui.densifier_input.desc.4=Nitrogen Ice
+gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb
+gui.message.general.tank.name=Fluid Tank
+gui.message.general.tank.fluid.name=Fluid
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=打开电力漫游车的物品栏
