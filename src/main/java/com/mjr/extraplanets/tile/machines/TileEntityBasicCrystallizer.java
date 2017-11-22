@@ -123,7 +123,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	public boolean hasInputs(){
-		if(this.inputTank.getFluidAmount() >= 1000)
+		if(this.inputTank.getFluidAmount() >= 50)
 			return true;
 		return false;
 	}
