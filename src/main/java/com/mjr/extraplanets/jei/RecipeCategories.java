@@ -17,4 +17,5 @@ public class RecipeCategories {
     public static final String CRYSTALLIZER_ID = "extraplanets.crystallizer";
     public static final String PURIFIER_ID = "extraplanets.purifier";
     public static final String SOLAR_EVAPORTATION_CHAMBER_ID = "extraplanets.solarEvaporationChamber";
+    public static final String DENSIFIER_ID = "extraplanets.densifier";
 }
