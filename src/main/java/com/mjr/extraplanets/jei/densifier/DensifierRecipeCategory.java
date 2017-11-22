@@ -27,15 +27,11 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 	private final IDrawable background;
 	@Nonnull
 	private final String localizedName;
-	@Nonnull
-	private final IDrawableAnimated saltBar;
 
 	@Nonnull
 	public DensifierRecipeCategory(IGuiHelper guiHelper) {
 		this.background = guiHelper.createDrawable(guiTexture, 3, 4, 168, 80);
 		this.localizedName = GCCoreUtil.translate("container.basic.densifier.name");
-		IDrawableStatic progressBarDrawableSalt = guiHelper.createDrawable(guiTexture, 192, 0, 16, 38);
-		this.saltBar = guiHelper.createAnimatedDrawable(progressBarDrawableSalt, 70, IDrawableAnimated.StartDirection.TOP, true);
 	}
 
 	@Nonnull
@@ -54,11 +50,6 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 	@Override
 	public IDrawable getBackground() {
 		return this.background;
-	}
-
-	@Override
-	public void drawExtras(Minecraft minecraft) {
-		this.saltBar.draw(minecraft, 4, 24);
 	}
 
 	@Override
