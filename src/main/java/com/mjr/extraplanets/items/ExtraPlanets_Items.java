@@ -4,6 +4,7 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.item.EnumExtendedInventorySlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlockSpecial;
+import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -190,6 +191,9 @@ public class ExtraPlanets_Items {
 	public static Item GEIGER_COUNTER;
 
 	public static Item WHITE_SUGAR_CANE;
+	
+	public static Item CHOCOLATE_BAR;
+	public static Item CARAMEL_BAR;
 
 	public static void init() {
 		initializeItems();
@@ -355,6 +359,9 @@ public class ExtraPlanets_Items {
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
 		WHITE_SUGAR_CANE = new ItemBlockSpecial(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
+		
+		CHOCOLATE_BAR = new ItemFood(1, 0.3F, false).setCreativeTab(ExtraPlanets.ItemsTab).setUnlocalizedName("chocolate_bar");
+		CARAMEL_BAR = new ItemFood(1, 0.25F, false).setCreativeTab(ExtraPlanets.ItemsTab).setUnlocalizedName("caramel_bar");
 	}
 
 	private static void registerItems() {
@@ -514,6 +521,8 @@ public class ExtraPlanets_Items {
 			RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(CHOCOLATE_BAR, CHOCOLATE_BAR.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(CARAMEL_BAR, CARAMEL_BAR.getUnlocalizedName().substring(5));
 	}
 
 	public static void OreDictionaryIngotsRegister() {
