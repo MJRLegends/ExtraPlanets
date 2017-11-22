@@ -17,6 +17,9 @@ import com.mjr.extraplanets.jei.chemicalInjector.ChemicalInjectorRecipeMaker;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeCategory;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeHandler;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeMaker;
+import com.mjr.extraplanets.jei.densifier.DensifierRecipeCategory;
+import com.mjr.extraplanets.jei.densifier.DensifierRecipeHandler;
+import com.mjr.extraplanets.jei.densifier.DensifierRecipeMaker;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeCategory;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeHandler;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeMaker;
@@ -63,10 +66,10 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
 					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper),
 					new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(
-							guiHelper), new PurifierRecipeCategory(guiHelper));
+							guiHelper), new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
 			registry.addRecipeHandlers(new Tier4RocketRecipeHandler(), new Tier5RocketRecipeHandler(), new Tier6RocketRecipeHandler(), new Tier7RocketRecipeHandler(), new Tier8RocketRecipeHandler(), new Tier9RocketRecipeHandler(),
 					new Tier10RocketRecipeHandler(), new MarsRoverRecipeHandler(), new VenusRoverRecipeHandler(), new BlockSmasherRecipeHandler(), new SolarEvaporationChamberRecipeHandler(), new Tier10ElectricRocketRecipeHandler(),
-					new ChemicalInjectorRecipeHandler(), new CrystallizerRecipeHandler(), new PurifierRecipeHandler());
+					new ChemicalInjectorRecipeHandler(), new CrystallizerRecipeHandler(), new PurifierRecipeHandler(), new DensifierRecipeHandler());
 			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList());
@@ -82,6 +85,7 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList());
 			registry.addRecipes(CrystallizerRecipeMaker.getRecipesList());
 			registry.addRecipes(PurifierRecipeMaker.getRecipesList());
+			registry.addRecipes(DensifierRecipeMaker.getRecipesList());
 		}
 	}
 }
