@@ -1045,9 +1045,10 @@ item.thermal_cloth.tier5_thermal_cloth.name=Теплоустойчивая тк�
 item.tier5_items.ash.name=Порошковая зола
 item.geiger_counter.name=Счётчик Гейгера
 item.white_sugar_cane_item.name=White Sugar Cane
-
 geiger.counter.desc=Щелкните ПКМ, чтобы увидеть ваш текущий уровень радиации!
 geiger.counter.location.desc=Могут быть получены из подземелья Меркурия!
+item.chocolate_bar.name=Chocolate Bar
+item.caramel_bar.name=Caramel Bar
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Дегидратированная жаренная свинина
