@@ -1045,9 +1045,10 @@ item.thermal_cloth.tier5_thermal_cloth.name=5阶热防护布料
 item.tier5_items.ash.name=粉尘
 item.geiger_counter.name=盖氏计量器
 item.white_sugar_cane_item.name=White Sugar Cane
-
 geiger.counter.desc=右键以查看你当前的辐射等级！
 geiger.counter.location.desc=可在水星地牢中获得！
+item.chocolate_bar.name=Chocolate Bar
+item.caramel_bar.name=Caramel Bar
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=脱水猪排
