@@ -751,6 +751,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ADVANCED);
 		if (Config.FUEL_LOADER_ULTIMATE)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE);
+		
+		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_DENSIFIER);
 
 		// Other Blocks
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
