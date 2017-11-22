@@ -15,6 +15,7 @@ import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
+import com.mjr.extraplanets.tile.machines.TileEntityBasicDensifier;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicPurifier;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber;
@@ -47,6 +48,8 @@ public class ExtraPlanets_Machines {
 	public static Block BASIC_PURIFIER;
 
 	public static Block VEHICLE_CHARGER;
+	
+	public static Block BASIC_DENSIFIER;
 
 	public static void init() {
 		initializeMachinesBlocks();
@@ -88,6 +91,7 @@ public class ExtraPlanets_Machines {
 			FUEL_LOADER_ULTIMATE = new UltimateFuelLoader("ultimate_fuel_loader");
 
 		VEHICLE_CHARGER = new VehicleCharger("vehicle_charger");
+		BASIC_DENSIFIER = new BasicDensifier("basic_densifier");
 	}
 
 	private static void registerMachines() throws NoSuchMethodException {
@@ -120,6 +124,7 @@ public class ExtraPlanets_Machines {
 			RegisterHelper.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
 
 		RegisterHelper.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
+		RegisterHelper.registerBlock(BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -156,5 +161,6 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
 
 		GameRegistry.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
+		GameRegistry.registerTileEntity(TileEntityBasicDensifier.class, Constants.modName + "Basic Densifier");
 	}
 }
