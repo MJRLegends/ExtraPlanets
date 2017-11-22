@@ -141,9 +141,9 @@ public class WorldProviderEuropa extends CustomWorldProviderSpace implements IGa
 	@Override
 	public float getThermalLevelModifier() {
 		if (isDaytime()) {
-			return 100.0F;
+			return -90.0F;
 		}
-		return 90.0F;
+		return -100.0F;
 	}
 
 	@Override
