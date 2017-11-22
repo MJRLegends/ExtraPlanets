@@ -128,11 +128,11 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 
 	public void updateOutput() {
 		if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0)))
-			this.producingStack = new ItemStack(ExtraPlanets_Items.CARAMEL_BAR);
+			this.producingStack = new ItemStack(ExtraPlanets_Items.CARAMEL_BAR, 6);
 		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0)))
-			this.producingStack = new ItemStack(ExtraPlanets_Items.CARAMEL_BAR);
+			this.producingStack = new ItemStack(ExtraPlanets_Items.CHOCOLATE_BAR, 6);
 		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)))
-			this.producingStack = new ItemStack(Blocks.ICE);
+			this.producingStack = new ItemStack(Blocks.ICE, 6);
 	}
 	
 	public void updateTextureOffset() {
