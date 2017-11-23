@@ -34,6 +34,7 @@ import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.entities.rockets.EntityElectricSpaceshipBase.EnumLaunchPhase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
+import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 
 @SuppressWarnings("rawtypes")
@@ -157,6 +158,11 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
 		switch (this.type) {
+		case S_OPEN_FUEL_GUI:
+			if (player.getRidingEntity() instanceof EntityVehicleBase) {
+				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType());
+			}
+			break;
 		case S_OPEN_POWER_GUI:
 			if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType());
