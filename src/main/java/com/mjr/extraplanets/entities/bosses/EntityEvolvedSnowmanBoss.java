@@ -40,7 +40,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));
 		this.tasks.addTask(4, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, false, true));
 	}
 
 	@Override

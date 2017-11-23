@@ -43,7 +43,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 		this.isImmuneToFire = true;
 		this.tasks.addTask(7, new EntityEvolvedFireBatBoss.AIFireballAttack(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, false, true));
 	}
 
 	@Override

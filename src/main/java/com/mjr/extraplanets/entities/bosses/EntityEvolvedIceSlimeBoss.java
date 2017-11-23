@@ -52,7 +52,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 		this.tasks.addTask(3, new EntityEvolvedIceSlimeBoss.AISlimeFaceRandom(this));
 		this.tasks.addTask(5, new EntityEvolvedIceSlimeBoss.AISlimeHop(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, false, true));
 	}
 
 	@Override

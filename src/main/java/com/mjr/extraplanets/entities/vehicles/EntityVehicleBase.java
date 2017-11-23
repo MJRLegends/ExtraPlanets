@@ -44,7 +44,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 import com.mjr.extraplanets.Constants;
 
 public abstract class EntityVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IDockable, IControllableEntity, IEntityFullSync {
-	public static final int tankCapacity = 1000;
+	public final int tankCapacity = 1000;
 	public FluidTank roverFuelTank = new FluidTank(this.tankCapacity);
 	protected long ticks = 0;
 	public int roverType;
@@ -95,7 +95,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	public int getScaledFuelLevel(int i) {
 		final double fuelLevel = this.roverFuelTank.getFluid() == null ? 0 : this.roverFuelTank.getFluid().amount;
 
-		return (int) (fuelLevel * i / EntityVehicleBase.tankCapacity);
+		return (int) (fuelLevel * i / this.tankCapacity);
 	}
 
 	public ModelBase getModel() {

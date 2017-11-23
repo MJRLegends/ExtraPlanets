@@ -53,7 +53,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		this.tasks.addTask(3, new EntityEvolvedMagmaCubeBoss.AISlimeFaceRandom(this));
 		this.tasks.addTask(5, new EntityEvolvedMagmaCubeBoss.AISlimeHop(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, false, true));
 	}
 
 	@Override

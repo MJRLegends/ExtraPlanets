@@ -52,7 +52,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		this.tasks.addTask(7, new EntityEvolvedGhastBoss.AILookAround(this));
 		this.tasks.addTask(7, new EntityEvolvedGhastBoss.AIFireballAttack(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false, true));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, false, true));
 	}
 
 	@Override
