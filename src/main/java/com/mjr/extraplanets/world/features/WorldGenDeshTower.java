@@ -2,13 +2,13 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.util.WorldGenHelper;
-
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenDeshTower extends WorldGenerator {
 

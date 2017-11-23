@@ -5,7 +5,6 @@ import java.util.List;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -73,15 +72,4 @@ public class ItemElectricParts extends Item {
 	public int getMetadata(int par1) {
 		return par1;
 	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		// if (itemStack != null && itemStack.getItemDamage() == 3) {
-		// if (player.worldObj.isRemote) {
-		// list.add(EnumChatFormatting.GRAY + GCCoreUtil.translate(""));
-		// }
-		// }
-	}
-
 }

@@ -16,8 +16,6 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-
 public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 	protected Random rand;
 	protected World worldObj;
@@ -96,6 +94,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 		return chunk;
 	}
 
+	@Override
 	public void func_147424_a(int p_147424_1_, int p_147424_2_, Block[] p_147424_3_) {
 		byte b0 = 63;
 		this.biomesForGeneration = this.worldObj.getWorldChunkManager().getBiomesForGeneration(this.biomesForGeneration, p_147424_1_ * 4 - 2, p_147424_2_ * 4 - 2, 10, 10);
@@ -225,14 +224,14 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 				}
 
 				++i1;
-				double d13 = (double) f1;
-				double d14 = (double) f;
+				double d13 = f1;
+				double d14 = f;
 				d13 += d12 * 0.2D;
 				d13 = d13 * 8.5D / 8.0D;
 				double d5 = 8.5D + d13 * 4.0D;
 
 				for (int j2 = 0; j2 < 33; ++j2) {
-					double d6 = ((double) j2 - d5) * 12.0D * 128.0D / 256.0D / d14;
+					double d6 = (j2 - d5) * 12.0D * 128.0D / 256.0D / d14;
 
 					if (d6 < 0.0D) {
 						d6 *= 4.0D;
@@ -244,7 +243,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 					double d10 = MathHelper.denormalizeClamp(d7, d8, d9) - d6;
 
 					if (j2 > 29) {
-						double d11 = (double) ((float) (j2 - 29) / 3.0F);
+						double d11 = (j2 - 29) / 3.0F;
 						d10 = d10 * (1.0D - d11) + -10.0D * d11;
 					}
 

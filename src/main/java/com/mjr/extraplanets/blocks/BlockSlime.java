@@ -24,20 +24,24 @@ public class BlockSlime extends BlockBreakable {
 		this.setBlockName(name);
 	}
 
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
     public IIcon getIcon(int p_149691_1_, int p_149691_2_){
         return this.blockIcon; 
     }
     
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
     public int getRenderBlockPass(){
         return 1;
     }
     
-    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world_, int x, int y, int z){
-        return AxisAlignedBB.getBoundingBox((double)x, (double)y, (double)z, (double)(x + 1), (double)((float)(y + 1) - 0.0625F), (double)(z + 1));
+    @Override
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world_, int x, int y, int z){
+        return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1 - 0.0625F, z + 1);
    }
     
+	@Override
 	public void onFallenUpon(World world, int X, int Y, int Z, Entity entity, float entityFallDistance) {
 		if (entity.isSneaking()) {
 			super.onFallenUpon(world, X, Y, Z, entity, entityFallDistance);
@@ -48,6 +52,7 @@ public class BlockSlime extends BlockBreakable {
 		}
 	}
 
+	@Override
 	public void onEntityCollidedWithBlock(World world, int X, int Y, int Z, Entity entity) {
 		if (!entity.isSneaking()) {
 			if (bounce) {

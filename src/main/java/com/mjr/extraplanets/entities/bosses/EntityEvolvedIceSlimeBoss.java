@@ -404,8 +404,6 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 			this.spawner.boss = null;
 			this.spawner.spawned = false;
 		}
-		int i = this.getSlimeSize();
-
 		super.setDead();
 	}
 

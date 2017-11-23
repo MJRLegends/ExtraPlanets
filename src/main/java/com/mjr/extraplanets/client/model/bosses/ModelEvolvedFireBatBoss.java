@@ -4,24 +4,16 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
-
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class ModelEvolvedFireBatBoss extends ModelBase {
 	private ModelRenderer batHead;
-	/** The body box of the bat model. */
 	private ModelRenderer batBody;
-	/** The inner right wing box of the bat model. */
 	private ModelRenderer batRightWing;
-	/** The inner left wing box of the bat model. */
 	private ModelRenderer batLeftWing;
-	/** The outer right wing box of the bat model. */
 	private ModelRenderer batOuterRightWing;
-	/** The outer left wing box of the bat model. */
 	private ModelRenderer batOuterLeftWing;
 
 	public ModelEvolvedFireBatBoss() {
@@ -57,21 +49,12 @@ public class ModelEvolvedFireBatBoss extends ModelBase {
 		this.batLeftWing.addChild(this.batOuterLeftWing);
 	}
 
-	/**
-	 * not actually sure this is size, is not used as of now, but the model would be recreated if the value changed and it seems a good match for a bats size
-	 */
 	public int getBatSize() {
 		return 36;
 	}
 
-	/**
-	 * Sets the models various rotation angles then renders the model.
-	 */
 	@Override
 	public void render(Entity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-		EntityEvolvedFireBatBoss entitybat = (EntityEvolvedFireBatBoss) p_78088_1_;
-		float f6;
-		f6 = (180F / (float) Math.PI);
 		this.batHead.rotateAngleX = p_78088_6_ / (180F / (float) Math.PI);
 		this.batHead.rotateAngleY = p_78088_5_ / (180F / (float) Math.PI);
 		this.batHead.rotateAngleZ = 0.0F;

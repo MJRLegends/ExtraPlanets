@@ -390,8 +390,6 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 			this.spawner.boss = null;
 			this.spawner.spawned = false;
 		}
-		int i = this.getSlimeSize();
-
 		super.setDead();
 	}
 
