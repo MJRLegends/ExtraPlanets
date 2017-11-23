@@ -28,7 +28,7 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 
 	public RenderMercuryLander(RenderManager manager) {
 		super(manager);
-		this.shadowSize = 2F;
+		this.shadowSize = 4F;
 	}
 
 	private void updateModels() {
@@ -49,19 +49,21 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityMercuryLander par1Entity) {
-		return new ResourceLocation("missing");
+		return TextureMap.locationBlocksTexture;
 	}
 
 	@Override
-	public void doRender(EntityMercuryLander lander, double par2, double par4, double par6, float par8, float par9) {
-		GL11.glPushMatrix();
-		final float var24 = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * par9;
-		GL11.glTranslatef((float) par2, (float) par4 + 3.60F, (float) par6);
-		GL11.glRotatef(par8, 0.0F, 1.0F, 0.0F);
-		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		float f6 = lander.timeSinceHit - par9;
-		float f7 = lander.currentDamage - par9;
+	public void doRender(EntityMercuryLander lander, double x, double y, double z, float entityYaw, float partialTicks) {
+		float pitch = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * partialTicks;
+		GlStateManager.disableRescaleNormal();
+		GlStateManager.pushMatrix();
+		GlStateManager.translate((float) x, (float) y + 3.8F, (float) z);
+		GlStateManager.scale(0.5F, 0.5F, 0.5F);
+		GlStateManager.rotate(180.0F - entityYaw, 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
+
+		float f6 = lander.timeSinceHit - partialTicks;
+		float f7 = lander.currentDamage - partialTicks;
 
 		if (f7 < 0.0F) {
 			f7 = 0.0F;
@@ -73,13 +75,15 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 
 		this.updateModels();
 		this.bindTexture(TextureMap.locationBlocksTexture);
+
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
-		GL11.glScalef(0.8F, 0.8F, 0.8F);
-		ClientUtil.drawBakedModel(landerModel);
-		GL11.glPopMatrix();
+		
+		ClientUtil.drawBakedModel(this.landerModel);
+		
+		GlStateManager.popMatrix();
 	}
 }
