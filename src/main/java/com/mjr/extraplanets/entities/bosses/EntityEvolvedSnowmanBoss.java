@@ -32,7 +32,6 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedAttackMob, IEntityBreathable {
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public EntityEvolvedSnowmanBoss(World p_i1692_1_) {
 		super(p_i1692_1_);
 		this.setSize(0.4F * 8, 1.8F * 6.5F);
@@ -41,7 +40,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));
 		this.tasks.addTask(4, new EntityAILookIdle(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true, false, null));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, 0, true, false, null));
 	}
 
 	

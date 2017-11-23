@@ -57,7 +57,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	private static final DataParameter<Integer> TIME_SINCE_HIT = EntityDataManager.createKey(EntityBuggy.class, DataSerializers.VARINT);
 	private static final DataParameter<Integer> ROCK_DIRECTION = EntityDataManager.createKey(EntityBuggy.class, DataSerializers.VARINT);
 
-	public static final int tankCapacity = 1000;
+	public final int tankCapacity = 1000;
 	public FluidTank roverFuelTank = new FluidTank(this.tankCapacity);
 	protected long ticks = 0;
 	public int roverType;
@@ -105,7 +105,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	public int getScaledFuelLevel(int i) {
 		final double fuelLevel = this.roverFuelTank.getFluid() == null ? 0 : this.roverFuelTank.getFluid().amount;
 
-		return (int) (fuelLevel * i / EntityVehicleBase.tankCapacity);
+		return (int) (fuelLevel * i / this.tankCapacity);
 	}
 
 	public ModelBase getModel() {
