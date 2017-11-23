@@ -7,8 +7,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import org.lwjgl.opengl.GL11;
-
 import com.mjr.extraplanets.client.model.bosses.ModelEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 
@@ -21,9 +19,6 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanB
         super(renderManagerIn, new ModelEvolvedSnowmanBoss(), 0.5F);
     }
 
-    /**
-     * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
-     */
     @Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedSnowmanBoss entity)
     {
@@ -35,10 +30,7 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanB
     {
         return (ModelEvolvedSnowmanBoss)super.getMainModel();
     }
-    /**
-     * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
-     * entityLiving, partialTickTime
-     */
+
     @Override
 	protected void preRenderCallback(EntityEvolvedSnowmanBoss entitylivingbaseIn, float partialTickTime)
     {
@@ -47,6 +39,6 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanB
         float f2 = (10.0F + 1.0F / f) / 2.0F;
         GlStateManager.scale(f2, f1, f2);
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		GL11.glRotatef((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
+        GlStateManager.rotate((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
     }
 }

@@ -7,8 +7,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import org.lwjgl.opengl.GL11;
-
 import com.mjr.extraplanets.client.model.bosses.ModelEvolvedGhastBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 
@@ -29,10 +27,6 @@ public class RenderEvolvedGhastBoss extends RenderLiving<EntityEvolvedGhastBoss>
         return entity.isAttacking() ? ghastShootingTextures : ghastTextures;
     }
 
-    /**
-     * Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args:
-     * entityLiving, partialTickTime
-     */
     @Override
 	protected void preRenderCallback(EntityEvolvedGhastBoss entitylivingbaseIn, float partialTickTime)
     {
@@ -41,6 +35,6 @@ public class RenderEvolvedGhastBoss extends RenderLiving<EntityEvolvedGhastBoss>
         float f2 = (8.0F + 1.0F / f) / 2.0F;
         GlStateManager.scale(f2, f1, f2);
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		GL11.glRotatef((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
     }
 }
