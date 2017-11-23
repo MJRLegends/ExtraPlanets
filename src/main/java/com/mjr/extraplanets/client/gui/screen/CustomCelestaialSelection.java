@@ -12,8 +12,8 @@ import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
+import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.world.WorldProvider;
-import net.minecraftforge.common.DimensionManager;
 
 import org.lwjgl.opengl.GL11;
 
@@ -41,7 +41,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						temp = (WorldProviderSpace) DimensionManager.getProvider(this.selectedBody.getDimensionID());
+						temp = (WorldProviderSpace) WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
