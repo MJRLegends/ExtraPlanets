@@ -9,6 +9,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
@@ -110,7 +112,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
 			return 80.0F;
 		}
 		return 70.0F;

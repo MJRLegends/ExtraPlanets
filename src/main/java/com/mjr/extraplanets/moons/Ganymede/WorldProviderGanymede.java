@@ -10,6 +10,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -140,7 +141,7 @@ public class WorldProviderGanymede extends CustomWorldProviderSpace implements I
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
 			return 100.0F;
 		}
 		return 90.0F;
