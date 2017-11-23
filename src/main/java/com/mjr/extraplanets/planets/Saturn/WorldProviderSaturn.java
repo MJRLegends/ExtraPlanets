@@ -7,6 +7,8 @@ import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.api.IPressureWorld;
@@ -107,7 +109,7 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
 			return 80.0F;
 		}
 		return 70.0F;

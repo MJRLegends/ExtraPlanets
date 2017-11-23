@@ -25,7 +25,6 @@ import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
-import com.mjr.extraplanets.util.RegisterHelper;
 
 public class ExtraPlanets_Machines {
 	// Machines

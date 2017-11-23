@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -137,7 +138,7 @@ public class WorldProviderIo extends CustomWorldProviderSpace implements IGalact
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
 			return 100.0F;
 		}
 		return 90.0F;
