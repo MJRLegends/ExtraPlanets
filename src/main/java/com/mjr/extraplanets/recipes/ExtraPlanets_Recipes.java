@@ -1050,8 +1050,8 @@ public class ExtraPlanets_Recipes {
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SMASHER, 1, 0), new Object[] { "MAM", "PPP", "MAM", 'P', Blocks.PISTON, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'A', Blocks.ANVIL });
 			if (Config.BASIC_CHEMICAL_INJECTOR)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.PISTON, 'U', ExtraPlanets_Items.INGOT_URANIUM });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), 'U',
-					ExtraPlanets_Items.INGOT_URANIUM, 'E', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4), 'S', GCBlocks.solarPanel });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), 'E', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4), 'S', GCBlocks.solarPanel });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_DENSIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'E', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 4), 'S', new ItemStack(GCItems.basicItem, 1, 9) });
 		}
 
 		// Oxygen Tanks
