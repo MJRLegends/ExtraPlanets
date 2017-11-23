@@ -3,8 +3,6 @@ package com.mjr.extraplanets;
 import java.util.ArrayList;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
-import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
