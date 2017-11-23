@@ -15,7 +15,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT9New;
@@ -31,38 +30,36 @@ public class RenderTier9RocketNew extends Render<EntityTier9Rocket> {
 	}
 
 	private void updateModel() {
-		if (rocketModel == null) {
+		if (this.rocketModel == null) {
 			ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t9_new", "inventory");
-			rocketModel = (ItemModelRocketT9New) FMLClientHandler.instance().getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
+			this.rocketModel = (ItemModelRocketT9New) FMLClientHandler.instance().getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
 		}
 	}
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityTier9Rocket par1Entity) {
-		return new ResourceLocation("missing");
+		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 
 	@Override
-	public void doRender(EntityTier9Rocket entity, double par2, double par4, double par6, float par8, float par9) {
-		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-		GL11.glPushMatrix();
-		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9 + 180;
+	public void doRender(EntityTier9Rocket entity, double x, double y, double z, float entityYaw, float partialTicks) {
+		GlStateManager.disableRescaleNormal();
+		GlStateManager.pushMatrix();
+		final float pitch = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * partialTicks + 180;
 
-		GL11.glTranslatef((float) par2 - 0, (float) par4, (float) (par6));
-		GL11.glRotatef(180.0F - par8, 0.0F, 1.0F, 0.0F);
-		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
-		GL11.glTranslatef(0.0F, entity.getRenderOffsetY(), 0.0F);
-		final float var28 = entity.rollAmplitude / 3 - par9;
+		GlStateManager.translate((float) x, (float) y, (float) z);
+		GlStateManager.rotate(180.0F - entityYaw, 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
+		GlStateManager.translate(0.0F, entity.getRenderOffsetY(), 0.0F);
+		final float var28 = entity.rollAmplitude / 3 - partialTicks;
 
 		if (var28 > 0.0F) {
 			final float i = entity.getLaunched() ? (5 - MathHelper.floor_double(entity.timeUntilLaunch / 85)) / 10F : 0.3F;
-			GL11.glRotatef(MathHelper.sin(var28) * var28 * i * par9, 1.0F, 0.0F, 0.0F);
-			GL11.glRotatef(MathHelper.sin(var28) * var28 * i * par9, 1.0F, 0.0F, 1.0F);
+			GlStateManager.rotate(MathHelper.sin(var28) * var28 * i * partialTicks, 1.0F, 0.0F, 0.0F);
+			GlStateManager.rotate(MathHelper.sin(var28) * var28 * i * partialTicks, 1.0F, 0.0F, 1.0F);
 		}
 
 		updateModel();
-
-		// RenderHelper.disableStandardItemLighting();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 
 		if (Minecraft.isAmbientOcclusionEnabled()) {
@@ -71,11 +68,11 @@ public class RenderTier9RocketNew extends Render<EntityTier9Rocket> {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
 
-		GL11.glScalef(-1.0F, -1.0F, 1.0F);
-		GL11.glScalef(0.7F, 0.7F, 0.7F);
+		GlStateManager.scale(-1.0F, -1.0F, 1.0F);
+		GlStateManager.scale(0.7F, 0.7F, 0.7F);
 
-		ClientUtil.drawBakedModel(rocketModel);
-		GL11.glPopMatrix();
+		ClientUtil.drawBakedModel(this.rocketModel);
+		GlStateManager.popMatrix();
 
 		RenderHelper.enableStandardItemLighting();
 	}

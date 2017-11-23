@@ -3,7 +3,6 @@ package com.mjr.extraplanets.client.render.entities.landers;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -29,19 +28,19 @@ public class RenderJupiterLander extends Render<EntityJupiterLander> {
 
 	public RenderJupiterLander(RenderManager manager) {
 		super(manager);
-		this.shadowSize = 2F;
+		this.shadowSize = 3F;
 	}
 
 	@SuppressWarnings("deprecation")
 	private void updateModels() {
-		if (landerModel == null) {
+		if (this.landerModel == null) {
 			OBJModel model;
 			try {
 				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "jupiter_lander.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
-				landerModel = (OBJModel.OBJBakedModel) model.bake(
+				this.landerModel = (OBJModel.OBJBakedModel) model.bake(
 						new OBJModel.OBJState(ImmutableList.of("Body", "FirstLeg", "FirstLegPart1", "FirstLegPart2", "TwoLeg", "TwoLegPart1", "TwoLegPart2", "ThirdLeg", "ThirdLegPart1", "ThirdLegPart2", "FourLeg", "FourLegPart1", "FourLegPart2"),
 								false), DefaultVertexFormats.ITEM, spriteFunction);
 
@@ -53,19 +52,21 @@ public class RenderJupiterLander extends Render<EntityJupiterLander> {
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityJupiterLander par1Entity) {
-		return new ResourceLocation("missing");
+		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 
 	@Override
-	public void doRender(EntityJupiterLander lander, double par2, double par4, double par6, float par8, float par9) {
-		GL11.glPushMatrix();
-		final float var24 = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * par9;
-		GL11.glTranslatef((float) par2, (float) par4 + 0.8F, (float) par6);
-		GL11.glRotatef(par8, 0.0F, 1.0F, 0.0F);
-		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
+	public void doRender(EntityJupiterLander lander, double x, double y, double z, float entityYaw, float partialTicks) {
+		float pitch = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * partialTicks;
+		GlStateManager.disableRescaleNormal();
+		GlStateManager.pushMatrix();
+		GlStateManager.translate((float) x, (float) y + 0.8F, (float) z);
+		GlStateManager.scale(0.2F, 0.2F, 0.2F);
+		GlStateManager.rotate(180.0F - entityYaw, 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
 
-		float f6 = lander.timeSinceHit - par9;
-		float f7 = lander.currentDamage - par9;
+		float f6 = lander.timeSinceHit - partialTicks;
+		float f7 = lander.currentDamage - partialTicks;
 
 		if (f7 < 0.0F) {
 			f7 = 0.0F;
@@ -77,14 +78,15 @@ public class RenderJupiterLander extends Render<EntityJupiterLander> {
 
 		this.updateModels();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+		
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
-		GL11.glScalef(0.2F, 0.2F, 0.2F);
-		ClientUtil.drawBakedModel(landerModel);
-		GL11.glPopMatrix();
-		RenderHelper.enableStandardItemLighting();
+		
+		ClientUtil.drawBakedModel(this.landerModel);
+		
+		GlStateManager.popMatrix();
 	}
 }

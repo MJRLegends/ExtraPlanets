@@ -88,7 +88,7 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 
 		GL11.glPushMatrix();
 		final float var24 = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * par9;
-		GL11.glTranslatef((float) par2, (float) par4, (float) par6);
+		GlStateManager.translate((float) par2, (float) par4, (float) par6);
 		GL11.glScalef(1.25F, 1.25F, 1.25F);
 		GL11.glRotatef(0.0F - par8, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
@@ -107,29 +107,29 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 
 		// Front
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.1F, 2.20F);
+		GlStateManager.translate(0.0F, 1.1F, 2.20F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		GL11.glTranslatef(4.1F, 0.0F, 0.0F);
+		GlStateManager.translate(4.1F, 0.0F, 0.0F);
 		GL11.glScalef(1.5F, 1.9F, 1.9F);
 		ClientUtil.drawBakedModel(modelRoverWheelRight);
-		GL11.glTranslatef(-5.3F, 0.0F, 0.0F);
+		GlStateManager.translate(-5.3F, 0.0F, 0.0F);
 		ClientUtil.drawBakedModel(modelRoverWheelLeft);
 		GL11.glPopMatrix();
 
 		// Back wheels
 		GL11.glPushMatrix();
-		GL11.glTranslatef(0.0F, 1.1F, -4.45F);
+		GlStateManager.translate(0.0F, 1.1F, -4.45F);
 		GL11.glRotatef(entity.wheelRotationZ, 0, 1, 0);
 		GL11.glRotatef(rotation, 1, 0, 0);
-		GL11.glTranslatef(4.1F, 0.0F, 0.0F);
+		GlStateManager.translate(4.1F, 0.0F, 0.0F);
 		GL11.glScalef(1.5F, 1.9F, 1.9F);
 		ClientUtil.drawBakedModel(modelRoverWheelRight);
-		GL11.glTranslatef(-5.3F, 0.0F, 0.0F);
+		GlStateManager.translate(-5.3F, 0.0F, 0.0F);
 		ClientUtil.drawBakedModel(modelRoverWheelLeft);
 		GL11.glPopMatrix();
 
-		GL11.glTranslatef(0.0F, 0.7F, 0.0F);
+		GlStateManager.translate(0.0F, 0.7F, 0.0F);
 		ClientUtil.drawBakedModel(modelRover);
 
 		GL11.glEnable(GL11.GL_BLEND);

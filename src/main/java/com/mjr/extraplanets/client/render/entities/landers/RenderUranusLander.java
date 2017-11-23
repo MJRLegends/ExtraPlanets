@@ -3,7 +3,6 @@ package com.mjr.extraplanets.client.render.entities.landers;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -29,7 +28,7 @@ public class RenderUranusLander extends Render<EntityUranusLander> {
 
 	public RenderUranusLander(RenderManager manager) {
 		super(manager);
-		this.shadowSize = 2F;
+		this.shadowSize = 3F;
 	}
 
 	@SuppressWarnings("deprecation")
@@ -51,19 +50,21 @@ public class RenderUranusLander extends Render<EntityUranusLander> {
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityUranusLander par1Entity) {
-		return new ResourceLocation("missing");
+		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 
 	@Override
-	public void doRender(EntityUranusLander lander, double par2, double par4, double par6, float par8, float par9) {
-		GL11.glPushMatrix();
-		final float var24 = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * par9;
-		GL11.glTranslatef((float) (par2 - 0.25), (float) par4 + 1.25F, (float) (par6 - 0.15));
-		GL11.glRotatef(par8, 0.0F, 1.0F, 0.0F);
-		GL11.glRotatef(-var24, 0.0F, 0.0F, 1.0F);
+	public void doRender(EntityUranusLander lander, double x, double y, double z, float entityYaw, float partialTicks) {
+		float pitch = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * partialTicks;
+		GlStateManager.disableRescaleNormal();
+		GlStateManager.pushMatrix();
+		GlStateManager.translate((float) x - 0.20, (float) y + 1.25F, (float) z - 0.20);
+		GlStateManager.scale(0.2F, 0.2F, 0.2F);
+		GlStateManager.rotate(180.0F - entityYaw, 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
 
-		float f6 = lander.timeSinceHit - par9;
-		float f7 = lander.currentDamage - par9;
+		float f6 = lander.timeSinceHit - partialTicks;
+		float f7 = lander.currentDamage - partialTicks;
 
 		if (f7 < 0.0F) {
 			f7 = 0.0F;
@@ -75,14 +76,15 @@ public class RenderUranusLander extends Render<EntityUranusLander> {
 
 		this.updateModels();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+		
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
-		GL11.glScalef(0.2F, 0.2F, 0.2F);
-		ClientUtil.drawBakedModel(landerModel);
-		GL11.glPopMatrix();
-		RenderHelper.enableStandardItemLighting();
+		
+		ClientUtil.drawBakedModel(this.landerModel);
+		
+		GlStateManager.popMatrix();
 	}
 }
