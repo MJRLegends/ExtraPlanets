@@ -438,6 +438,7 @@ gui.densifier_input.desc.4=Nitrogen Ice
 gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb
 gui.message.general.tank.name=Fluid Tank
 gui.message.general.tank.fluid.name=Fluid
+gui.status.densifier.name=Densifying
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Open Powered Vehicle Inventory
