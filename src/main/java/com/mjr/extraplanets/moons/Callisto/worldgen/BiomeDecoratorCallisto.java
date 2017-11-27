@@ -24,8 +24,7 @@ public class BiomeDecoratorCallisto extends BiomeDecoratorSpace {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.callistoGravel, 12, 0, true, ExtraPlanets_Blocks.callistoBlocks, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.callistoBlocks, 1);
 
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -46,7 +45,6 @@ public class BiomeDecoratorCallisto extends BiomeDecoratorSpace {
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

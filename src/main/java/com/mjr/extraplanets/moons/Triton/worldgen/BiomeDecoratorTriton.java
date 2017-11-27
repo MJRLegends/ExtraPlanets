@@ -7,8 +7,12 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class BiomeDecoratorTriton extends BiomeDecorator {
 
@@ -63,6 +67,14 @@ public class BiomeDecoratorTriton extends BiomeDecorator {
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, intminY, int maxY);
+
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+		for (int i = 0; i < this.LakesPerChunk; i++) {
+			if (this.rand.nextInt(10) == 0) {
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ, ExtraPlanets_Fluids.nitrogen_ice, ExtraPlanets_Blocks.frozenNitrogen);
+			}
+		}
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 
 		isDecorating = false;
 	}
