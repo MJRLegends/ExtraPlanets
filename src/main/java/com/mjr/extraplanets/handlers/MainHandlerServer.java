@@ -3,6 +3,7 @@ package com.mjr.extraplanets.handlers;
 import java.util.List;
 import java.util.Random;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
@@ -192,6 +193,8 @@ public class MainHandlerServer {
 		if ((entityLiving.getRidingEntity() instanceof EntityLanderBase))
 			return;
 		if ((entityLiving.getRidingEntity() instanceof EntityElectricRocketBase))
+			return;
+		if ((entityLiving.getRidingEntity() instanceof EntitySpaceshipBase))
 			return;
 		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof CustomWorldProviderSpace)) {
 			if (Config.PRESSURE)
