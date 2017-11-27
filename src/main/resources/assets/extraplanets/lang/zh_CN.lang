@@ -974,6 +974,54 @@ item.tier4_un_prepared_space_suit_boots.name=4阶未完成太空服靴子
 item.oxygen_tank_very_heavy_full.name=超重型氧气罐
 item.oxygen_tank_extremely_heavy_full.name=极重型氧气罐
 
+item.oxygen_tank_light_full_black.name=Light Oxygen Tank
+item.oxygen_tank_light_full_red.name=Light Oxygen Tank
+item.oxygen_tank_light_full_green.name=Light Oxygen Tank
+item.oxygen_tank_light_full_brown.name=Light Oxygen Tank
+item.oxygen_tank_light_full_blue.name=Light Oxygen Tank
+item.oxygen_tank_light_full_purple.name=Light Oxygen Tank
+item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank
+item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank
+item.oxygen_tank_light_full_gray.name=Light Oxygen Tank
+item.oxygen_tank_light_full_pink.name=Light Oxygen Tank
+item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank
+item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank
+item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank
+item.oxygen_tank_light_full_orange.name=Light Oxygen Tank
+item.oxygen_tank_light_full_white.name=Light Oxygen Tank
+
+item.oxygen_tank_med_full_black.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_red.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_green.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_white.name=Medium Oxygen Tank
+
+item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank
+
 #Radiation Items
 item.iodide_salt.name=碘盐
 item.potassium_iodide.name=碘化钾
