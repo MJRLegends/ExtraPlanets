@@ -29,8 +29,8 @@ public class TitanBiomes extends BiomeGenBase {
 	protected TitanBiomes(int par1) {
 		super(par1);
 		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
+		this.spawnableWaterCreatureList.clear();
 		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));

@@ -71,5 +71,4 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 		this.neptuneBiomeDecorator.decorate(worldObj, rand, x, z);
 		// this.neptuneBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
-
 }
