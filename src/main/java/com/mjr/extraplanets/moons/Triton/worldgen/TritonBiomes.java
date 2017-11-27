@@ -19,8 +19,8 @@ import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceSea;
 
 public class TritonBiomes extends BiomeGenBase {
 	public static final BiomeGenBase triton = new BiomeGenTriton(Config.tritonBiomeID).setBiomeName("triton").setHeight(new Height(0.125F, 0.05F));
-	public static final BiomeGenBase tritonMethaneSea = new BiomeGenTritonIceSea(Config.tritonIceSeaBiomeID).setBiomeName("tritonMethaneSea").setHeight(new Height(-1.0F, 0.0F));
-	public static final BiomeGenBase tritonMethaneHills = new BiomeGenTritonIceLands(Config.tritonIceLandsBiomeID).setBiomeName("tritonMethaneHills").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase tritonMethaneSea = new BiomeGenTritonIceSea(Config.tritonIceSeaBiomeID).setBiomeName("tritonIceSea").setHeight(new Height(-1.0F, 0.0F));
+	public static final BiomeGenBase tritonMethaneHills = new BiomeGenTritonIceLands(Config.tritonIceLandsBiomeID).setBiomeName("tritonIceLands").setHeight(new Height(2.5F, 0.4F));
 
 	protected Block stoneBlock;
 	protected byte topMeta;
