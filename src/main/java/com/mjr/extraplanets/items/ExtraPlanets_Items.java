@@ -192,9 +192,57 @@ public class ExtraPlanets_Items {
 	public static Item GEIGER_COUNTER;
 
 	public static Item WHITE_SUGAR_CANE;
-	
+
 	public static Item CHOCOLATE_BAR;
 	public static Item CARAMEL_BAR;
+
+	public static Item LIGHT_OXYGEN_TANK_BLACK;
+	public static Item LIGHT_OXYGEN_TANK_RED;
+	public static Item LIGHT_OXYGEN_TANK_GREEN;
+	public static Item LIGHT_OXYGEN_TANK_BROWN;
+	public static Item LIGHT_OXYGEN_TANK_BLUE;
+	public static Item LIGHT_OXYGEN_TANK_PURPLE;
+	public static Item LIGHT_OXYGEN_TANK_CYAN;
+	public static Item LIGHT_OXYGEN_TANK_LIGHT_GRAY;
+	public static Item LIGHT_OXYGEN_TANK_GRAY;
+	public static Item LIGHT_OXYGEN_TANK_PINK;
+	public static Item LIGHT_OXYGEN_TANK_YELLOW;
+	public static Item LIGHT_OXYGEN_TANK_LIGHT_BLUE;
+	public static Item LIGHT_OXYGEN_TANK_MAGENTA;
+	public static Item LIGHT_OXYGEN_TANK_ORANGE;
+	public static Item LIGHT_OXYGEN_TANK_WHITE;
+
+	public static Item MED_OXYGEN_TANK_BLACK;
+	public static Item MED_OXYGEN_TANK_RED;
+	public static Item MED_OXYGEN_TANK_GREEN;
+	public static Item MED_OXYGEN_TANK_BROWN;
+	public static Item MED_OXYGEN_TANK_BLUE;
+	public static Item MED_OXYGEN_TANK_PURPLE;
+	public static Item MED_OXYGEN_TANK_CYAN;
+	public static Item MED_OXYGEN_TANK_LIGHT_GRAY;
+	public static Item MED_OXYGEN_TANK_GRAY;
+	public static Item MED_OXYGEN_TANK_PINK;
+	public static Item MED_OXYGEN_TANK_YELLOW;
+	public static Item MED_OXYGEN_TANK_LIGHT_BLUE;
+	public static Item MED_OXYGEN_TANK_MAGENTA;
+	public static Item MED_OXYGEN_TANK_LIME;
+	public static Item MED_OXYGEN_TANK_WHITE;
+
+	public static Item HEAVY_OXYGEN_TANK_BLACK;
+	public static Item HEAVY_OXYGEN_TANK_LIME;
+	public static Item HEAVY_OXYGEN_TANK_GREEN;
+	public static Item HEAVY_OXYGEN_TANK_BROWN;
+	public static Item HEAVY_OXYGEN_TANK_BLUE;
+	public static Item HEAVY_OXYGEN_TANK_PURPLE;
+	public static Item HEAVY_OXYGEN_TANK_CYAN;
+	public static Item HEAVY_OXYGEN_TANK_LIGHT_GRAY;
+	public static Item HEAVY_OXYGEN_TANK_GRAY;
+	public static Item HEAVY_OXYGEN_TANK_PINK;
+	public static Item HEAVY_OXYGEN_TANK_YELLOW;
+	public static Item HEAVY_OXYGEN_TANK_LIGHT_BLUE;
+	public static Item HEAVY_OXYGEN_TANK_MAGENTA;
+	public static Item HEAVY_OXYGEN_TANK_ORANGE;
+	public static Item HEAVY_OXYGEN_TANK_WHITE;
 
 	public static void init() {
 		initializeItems();
@@ -360,9 +408,57 @@ public class ExtraPlanets_Items {
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
 		WHITE_SUGAR_CANE = new ItemBlockSpecial(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
-		
+
 		CHOCOLATE_BAR = new ItemFood(1, 0.3F, false).setCreativeTab(ExtraPlanets.ItemsTab).setUnlocalizedName("chocolate_bar");
 		CARAMEL_BAR = new ItemFood(1, 0.25F, false).setCreativeTab(ExtraPlanets.ItemsTab).setUnlocalizedName("caramel_bar");
+
+		LIGHT_OXYGEN_TANK_BLACK = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "black");
+		LIGHT_OXYGEN_TANK_RED = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "red");
+		LIGHT_OXYGEN_TANK_GREEN = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "green");
+		LIGHT_OXYGEN_TANK_BROWN = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "brown");
+		LIGHT_OXYGEN_TANK_BLUE = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "blue");
+		LIGHT_OXYGEN_TANK_PURPLE = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "purple");
+		LIGHT_OXYGEN_TANK_CYAN = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "cyan");
+		LIGHT_OXYGEN_TANK_LIGHT_GRAY = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "light_gray");
+		LIGHT_OXYGEN_TANK_GRAY = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "gray");
+		LIGHT_OXYGEN_TANK_PINK = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "pink");
+		LIGHT_OXYGEN_TANK_YELLOW = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "yellow");
+		LIGHT_OXYGEN_TANK_LIGHT_BLUE = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "light_blue");
+		LIGHT_OXYGEN_TANK_MAGENTA = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "magenta");
+		LIGHT_OXYGEN_TANK_ORANGE = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "orange");
+		LIGHT_OXYGEN_TANK_WHITE = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "white");
+		
+		MED_OXYGEN_TANK_BLACK = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "black");
+		MED_OXYGEN_TANK_RED = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "red");
+		MED_OXYGEN_TANK_GREEN = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "green");
+		MED_OXYGEN_TANK_BROWN = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "brown");
+		MED_OXYGEN_TANK_BLUE = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "blue");
+		MED_OXYGEN_TANK_PURPLE = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "purple");
+		MED_OXYGEN_TANK_CYAN = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "cyan");
+		MED_OXYGEN_TANK_LIGHT_GRAY = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "light_gray");
+		MED_OXYGEN_TANK_GRAY = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "gray");
+		MED_OXYGEN_TANK_PINK = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "pink");
+		MED_OXYGEN_TANK_YELLOW = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "yellow");
+		MED_OXYGEN_TANK_LIGHT_BLUE = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "light_blue");
+		MED_OXYGEN_TANK_MAGENTA = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "magenta");
+		MED_OXYGEN_TANK_LIME = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "orange");
+		MED_OXYGEN_TANK_WHITE = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "white");
+		
+		HEAVY_OXYGEN_TANK_BLACK = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "black");
+		HEAVY_OXYGEN_TANK_LIME = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "lime");
+		HEAVY_OXYGEN_TANK_GREEN = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "green");
+		HEAVY_OXYGEN_TANK_BROWN = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "brown");
+		HEAVY_OXYGEN_TANK_BLUE = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "blue");
+		HEAVY_OXYGEN_TANK_PURPLE = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "purple");
+		HEAVY_OXYGEN_TANK_CYAN = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "cyan");
+		HEAVY_OXYGEN_TANK_LIGHT_GRAY = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "light_gray");
+		HEAVY_OXYGEN_TANK_GRAY = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "gray");
+		HEAVY_OXYGEN_TANK_PINK = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "pink");
+		HEAVY_OXYGEN_TANK_YELLOW = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "yellow");
+		HEAVY_OXYGEN_TANK_LIGHT_BLUE = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "light_blue");
+		HEAVY_OXYGEN_TANK_MAGENTA = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "magenta");
+		HEAVY_OXYGEN_TANK_ORANGE = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "orange");
+		HEAVY_OXYGEN_TANK_WHITE = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "white");
 	}
 
 	private static void registerItems() {
@@ -523,6 +619,54 @@ public class ExtraPlanets_Items {
 		RegisterHelper.registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(CHOCOLATE_BAR, CHOCOLATE_BAR.getUnlocalizedName().substring(5));
 		RegisterHelper.registerItem(CARAMEL_BAR, CARAMEL_BAR.getUnlocalizedName().substring(5));
+		
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_BLACK, LIGHT_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_RED, LIGHT_OXYGEN_TANK_RED.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_GREEN, LIGHT_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_BROWN, LIGHT_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_BLUE, LIGHT_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_PURPLE, LIGHT_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_CYAN, LIGHT_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_LIGHT_GRAY, LIGHT_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_GRAY, LIGHT_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_PINK, LIGHT_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_YELLOW, LIGHT_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_LIGHT_BLUE, LIGHT_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_MAGENTA, LIGHT_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_ORANGE, LIGHT_OXYGEN_TANK_ORANGE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_WHITE, LIGHT_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
+
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_BLACK, MED_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_RED, MED_OXYGEN_TANK_RED.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_GREEN, MED_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_BROWN, MED_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_BLUE, MED_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_PURPLE, MED_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_CYAN, MED_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_LIGHT_GRAY, MED_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_GRAY, MED_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_PINK, MED_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_YELLOW, MED_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_LIGHT_BLUE, MED_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_MAGENTA, MED_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_LIME, MED_OXYGEN_TANK_LIME.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(MED_OXYGEN_TANK_WHITE, MED_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
+
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_BLACK, HEAVY_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_LIME, HEAVY_OXYGEN_TANK_LIME.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_GREEN, HEAVY_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_BROWN, HEAVY_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_BLUE, HEAVY_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_PURPLE, HEAVY_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_CYAN, HEAVY_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_LIGHT_GRAY, HEAVY_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_GRAY, HEAVY_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_PINK, HEAVY_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_YELLOW, HEAVY_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_LIGHT_BLUE, HEAVY_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_MAGENTA, HEAVY_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_ORANGE, HEAVY_OXYGEN_TANK_ORANGE.getUnlocalizedName().substring(5));
+		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_WHITE, HEAVY_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
 	}
 
 	public static void OreDictionaryIngotsRegister() {
@@ -581,6 +725,103 @@ public class ExtraPlanets_Items {
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 		}
+		
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_BLACK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_RED, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_RED);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_GREEN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BROWN, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_BROWN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BLUE, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_PURPLE, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_PURPLE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_CYAN, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_CYAN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_LIGHT_GRAY, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_LIGHT_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_GRAY, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_PINK, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_PINK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_YELLOW, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_YELLOW);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_LIGHT_BLUE, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_LIGHT_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_MAGENTA);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_ORANGE, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_ORANGE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_WHITE);
+
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_BLACK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_RED, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_RED);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_GREEN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_BROWN, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_BROWN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_BLUE, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_PURPLE, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_PURPLE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_CYAN, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_CYAN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_LIGHT_GRAY, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_LIGHT_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_GRAY, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_PINK, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_PINK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_YELLOW, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_YELLOW);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_LIGHT_BLUE, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_LIGHT_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_MAGENTA);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_LIME, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_LIME);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.LEFT_TANK, MED_OXYGEN_TANK_WHITE);
+
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_BLACK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_LIME, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_LIME);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_GREEN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_BROWN, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_BROWN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_BLUE, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_PURPLE, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_PURPLE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_CYAN, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_CYAN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_LIGHT_GRAY, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_LIGHT_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_GRAY, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_PINK, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_PINK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_YELLOW, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_YELLOW);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_LIGHT_BLUE, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_LIGHT_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_MAGENTA);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_ORANGE, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_ORANGE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_WHITE);
+		
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_BLACK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_RED, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_RED);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_GREEN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BROWN, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_BROWN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BLUE, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_PURPLE, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_PURPLE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_CYAN, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_CYAN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_LIGHT_GRAY, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_LIGHT_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_GRAY, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_PINK, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_PINK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_YELLOW, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_YELLOW);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_LIGHT_BLUE, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_LIGHT_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_MAGENTA);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_ORANGE, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_ORANGE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_WHITE);
+
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_BLACK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_RED, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_RED);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_GREEN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_BROWN, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_BROWN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_BLUE, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_PURPLE, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_PURPLE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_CYAN, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_CYAN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_LIGHT_GRAY, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_LIGHT_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_GRAY, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_PINK, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_PINK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_YELLOW, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_YELLOW);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_LIGHT_BLUE, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_LIGHT_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_MAGENTA);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_LIME, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_LIME);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_MED_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.RIGHT_TANK, MED_OXYGEN_TANK_WHITE);
+
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_BLACK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_LIME, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_LIME);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_GREEN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_BROWN, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_BROWN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_BLUE, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_PURPLE, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_PURPLE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_CYAN, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_CYAN);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_LIGHT_GRAY, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_LIGHT_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_GRAY, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_GRAY);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_PINK, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_PINK);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_YELLOW, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_YELLOW);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_LIGHT_BLUE, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_LIGHT_BLUE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_MAGENTA);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_ORANGE, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_ORANGE);
+		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_WHITE);
+		
 		if (Config.THERMAL_PADDINGS) {
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_HELMET, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_3_THERMAL_PADDING, 1, 0));
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_CHESTPLATE, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_3_THERMAL_PADDING, 1, 1));
