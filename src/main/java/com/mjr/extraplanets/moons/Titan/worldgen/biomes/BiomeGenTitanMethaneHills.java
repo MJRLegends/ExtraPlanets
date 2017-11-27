@@ -13,5 +13,7 @@ public class BiomeGenTitanMethaneHills extends TitanBiomes {
 		this.topMeta = 6;
 		this.fillerBlock = ExtraPlanets_Blocks.titanBlocks;
 		this.fillerMeta = 7;
+		this.stoneBlock = ExtraPlanets_Blocks.titanBlocks;
+		this.stoneMeta = 2;
 	}
 }

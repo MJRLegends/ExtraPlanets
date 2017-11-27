@@ -13,5 +13,7 @@ public class BiomeGenTritonIceLands extends TritonBiomes {
 		this.topMeta = 0;
 		this.fillerBlock = ExtraPlanets_Blocks.tritonBlocks;
 		this.fillerMeta = 1;
+		this.stoneBlock = ExtraPlanets_Blocks.tritonBlocks;
+		this.stoneMeta = 2;
 	}
 }
