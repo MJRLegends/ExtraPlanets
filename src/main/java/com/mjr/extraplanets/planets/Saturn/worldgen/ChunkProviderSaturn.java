@@ -6,7 +6,6 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
@@ -72,5 +71,4 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 		this.saturnBiomeDecorator.decorate(worldObj, rand, x, z);
 		//this.saturnBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
-
 }

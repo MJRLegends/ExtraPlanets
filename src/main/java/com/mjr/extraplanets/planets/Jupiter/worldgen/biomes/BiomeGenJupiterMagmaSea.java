@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.biomes;
 
+import java.util.List;
+
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -12,5 +16,10 @@ public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
         BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
         this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
         this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(1);
+	}
+	
+	@Override
+	public List<Biome.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
+		return null;
 	}
 }

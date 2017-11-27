@@ -69,5 +69,4 @@ public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 	protected void decoratePlanet(World world, Random rand, int x, int z) {
 		this.uranusBiomeDecorator.decorate(worldObj, rand, x, z);
 	}
-
 }

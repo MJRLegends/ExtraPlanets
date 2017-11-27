@@ -72,5 +72,4 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 		this.jupiterBiomeDecorator.decorate(worldObj, rand, x, z);
 		this.jupiterBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
-
 }
