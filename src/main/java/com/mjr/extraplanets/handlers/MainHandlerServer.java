@@ -3,6 +3,7 @@ package com.mjr.extraplanets.handlers;
 import java.util.List;
 import java.util.Random;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
@@ -193,6 +194,8 @@ public class MainHandlerServer {
 			return;
 		if ((entityLiving.getRidingEntity() instanceof EntityElectricRocketBase))
 			return;
+		if ((entityLiving.getRidingEntity() instanceof EntitySpaceshipBase))
+			return;
 		if ((entityLiving.world.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).world.provider instanceof CustomWorldProviderSpace)) {
 			if (Config.PRESSURE)
 				checkPressure(event, entityLiving);
@@ -334,11 +337,11 @@ public class MainHandlerServer {
 	/*
 	 * Debug use for changing dimensions since /dimensiontp screen is broke in dev workspace
 	 */
-//	@SubscribeEvent(priority = EventPriority.LOWEST)
-//	public void onPlayerJoin(PlayerLoggedInEvent event) {
-//		if (event.player instanceof EntityPlayer) {
-//			final WorldServer world = (WorldServer) ((EntityPlayerMP) event.player).world;
-//			WorldUtil.transferEntityToDimension((EntityPlayerMP) event.player, Config.KEPLER22B_ID, world);
-//		}
-//	}
+	// @SubscribeEvent(priority = EventPriority.LOWEST)
+	// public void onPlayerJoin(PlayerLoggedInEvent event) {
+	// if (event.player instanceof EntityPlayer) {
+	// final WorldServer world = (WorldServer) ((EntityPlayerMP) event.player).world;
+	// WorldUtil.transferEntityToDimension((EntityPlayerMP) event.player, Config.KEPLER22B_ID, world);
+	// }
+	// }
 }
