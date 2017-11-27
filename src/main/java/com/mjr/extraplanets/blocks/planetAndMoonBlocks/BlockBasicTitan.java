@@ -34,13 +34,16 @@ public class BlockBasicTitan extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcons = new IIcon[6];
+		this.blockIcons = new IIcon[9];
 		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_surface");
 		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_sub_surface");
 		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_stone");
 		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_ore_iron");
 		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_ore_tin");
 		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_ore_copper");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_methane_surface");
+		this.blockIcons[7] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_methane_sub_surface");
+		this.blockIcons[8] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "titan_rocks");
 		this.blockIcon = this.blockIcons[0];
 	}
 

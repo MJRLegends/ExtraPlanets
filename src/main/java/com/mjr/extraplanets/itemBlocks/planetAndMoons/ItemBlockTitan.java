@@ -45,6 +45,18 @@ public class ItemBlockTitan extends ItemBlockDefaults {
 			name = "ore_copper";
 			break;
 		}
+		case 6: {
+			name = "titan_methane_surface";
+			break;
+		}
+		case 7: {
+			name = "titan_methane_sub_surface";
+			break;
+		}
+		case 8:{
+			name = "titan_rocks";
+			break;
+		}
 		default:
 			name = "null";
 		}

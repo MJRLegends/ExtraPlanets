@@ -173,6 +173,8 @@ public class Config {
 	public static int ganymedeBiomeID;
 	public static int rheaBiomeID;
 	public static int titanBiomeID;
+	public static int titanSeaBiomeID;
+	public static int titanMethaneHillsBiomeID;
 	public static int oberonBiomeID;
 	public static int titaniaBiomeID;
 	public static int iapetusBiomeID;
@@ -261,7 +263,6 @@ public class Config {
 	public static boolean oldStyleGravity;
 
 	public static boolean useCustomCelestaialSelection;
-	
 	public static boolean DEBUG_MODE;
 
 	public static void init() {
@@ -472,7 +473,7 @@ public class Config {
 		//TITANIA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180, "[range: 0 ~ 255, default: 180]").getInt();
 		//IAPETUS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181, "[range: 0 ~ 255, default: 181]").getInt();
 		kepler22bRedDesertBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 185, "[range: 0 ~ 255, default: 185]").getInt();
-		//TITAN_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Sea Biome ID", 186, "[range: 0 ~ 255, default: 186]").getInt();
+		titanSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Sea Biome ID", 186, "[range: 0 ~ 255, default: 186]").getInt();
 		//TRITON_ICE_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Lands Biome ID", 187, "[range: 0 ~ 255, default: 187]").getInt();
 		//TRITON_ICE_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Sea Biome ID", 188, "[range: 0 ~ 255, default: 188]").getInt();
 		jupiterSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Sea Biome ID", 189, "[range: 0 ~ 255, default: 189]").getInt();
@@ -488,7 +489,8 @@ public class Config {
 		neptuneRadioActiveWaterSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Radio Active Water Sea Biome ID", 199, "[range: 0 ~ 255, default: 199]").getInt();
 		neptuneLayeredHillsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Layered Hills Biome ID", 200, "[range: 0 ~ 255, default: 200]").getInt();
 		saturnNuclearLandBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Nuclear Land Biome ID", 201, "[range: 0 ~ 255, default: 201]").getInt();	
-		
+		titanMethaneHillsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
+
 		schematicTier4GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();
 		schematicTier6GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557).getInt();
