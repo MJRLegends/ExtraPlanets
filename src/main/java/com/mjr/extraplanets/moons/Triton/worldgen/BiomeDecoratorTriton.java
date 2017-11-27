@@ -10,6 +10,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
@@ -53,11 +54,7 @@ public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				int x = this.posX + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.posZ + 8;
-				int y = this.currentWorld.getHeight(new BlockPos(x, 0, z)).getY() - 2;
-				new WorldGenCustomLake(ExtraPlanets_Fluids.NITROGEN_ICE).generate(this.currentWorld, this.rand, new BlockPos(x, y, z), ExtraPlanets_Blocks.FROZEN_NITROGEN);
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.NITROGEN_ICE, ExtraPlanets_Blocks.FROZEN_NITROGEN);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
