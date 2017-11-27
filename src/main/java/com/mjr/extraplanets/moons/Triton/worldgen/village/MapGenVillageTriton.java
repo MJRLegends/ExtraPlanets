@@ -9,7 +9,7 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
-import com.mjr.extraplanets.moons.Triton.worldgen.BiomeGenTriton;
+import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
 
 public class MapGenVillageTriton extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenTriton.triton });
