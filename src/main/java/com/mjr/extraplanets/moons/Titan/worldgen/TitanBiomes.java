@@ -18,11 +18,13 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
+import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneHills;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
 
 public class TitanBiomes extends BiomeGenBase {
 	public static final BiomeGenBase titan = new BiomeGenTitan(Config.TITAN_BIOME_ID).setBiomeName("titan").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase titanMethaneSea = new BiomeGenTitanMethaneSea(Config.TITAN_SEA_BIOME_ID).setBiomeName("titanMethaneSea").setHeight(new Height(-1.0F, 0.0F));
+	public static final Biome titanMethaneHills = new BiomeGenTitanMethaneHills(new BiomeProperties("titanMethaneHills").setBaseHeight(0.125F).setHeightVariation(0.55F).setRainfall(0.0F).setRainDisabled());
 
 	protected TitanBiomes(int par1) {
 		super(par1);
