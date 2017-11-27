@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 
 public class GanymedeBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase ganymede = new BiomeGenGanymede(Config.GANTMEDE_BIOME_ID).setBiomeName("ganymede").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase ganymede = new BiomeGenGanymede(Config.GANYMEDE_BIOME_ID).setBiomeName("ganymede").setHeight(new Height(2.5F, 0.4F));
 
 	GanymedeBiomes(int par1)
 	{
