@@ -350,13 +350,8 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 
 		BlockFalling.fallInstantly = false;
 	}
-
-	@Override
-	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
-		return this.worldObj.getBiome(pos).getSpawnableList(creatureType);
-	}
-
-	@Override
+    
+    @Override
 	public boolean generateStructures(Chunk chunkIn, int x, int z) {
 		return false;
 	}
@@ -365,7 +360,14 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position, boolean p_180513_4_) {
 		return null;
 	}
-
+	
+    @Override
+    public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos)
+    {
+        Biome biomegenbase = this.worldObj.getBiome(pos);
+        return biomegenbase.getSpawnableList(creatureType);
+    }
+	
 	@Override
 	public abstract void recreateStructures(Chunk chunk, int x, int z);
 

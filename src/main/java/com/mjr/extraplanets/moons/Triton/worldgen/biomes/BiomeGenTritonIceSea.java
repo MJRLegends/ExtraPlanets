@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.moons.Triton.worldgen.biomes;
 
+import java.util.List;
+
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
@@ -13,5 +16,10 @@ public class BiomeGenTritonIceSea extends TritonBiomes {
 		super(properties);
 		Biome.registerBiome(Config.TRITON_ICE_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
+	}
+
+	@Override
+	public List<Biome.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
+		return null;
 	}
 }
