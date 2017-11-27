@@ -324,8 +324,10 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addExtraPlanetsVariants("tier3_kit", "tier3_kitfull", "tier3_kitbasic_setup", "tier3_kitwithout_oxygen_setup", "tier3_kitwithout_thermal_padding", "tier3_kitjust_oxygen_setup", "tier3_kitjust_protection");
 		ClientUtilities.addExtraPlanetsVariants("tier4_kit", "tier4_kitfull", "tier4_kitbasic_setup", "tier4_kitwithout_oxygen_setup", "tier4_kitwithout_thermal_padding", "tier4_kitjust_oxygen_setup", "tier4_kitjust_protection");
 		ClientUtilities.addExtraPlanetsVariants("tier5_kit", "tier5_kitfull", "tier5_kitbasic_setup", "tier5_kitwithout_oxygen_setup", "tier5_kitwithout_thermal_padding", "tier5_kitjust_oxygen_setup", "tier5_kitjust_protection");
-		ClientUtilities.addExtraPlanetsVariants("candy_blocks", "candy_cane_red", "candy_cane_green", "candy_cane_blue", "candy_cane_orange", "candy_cane_magenta", "candy_cane_pink", "candy_cane_lime", "candy_cane_purple", "candy_cane_brown", "candy_cane_black");
-		ClientUtilities.addExtraPlanetsVariants("candy_blocks_horizontal", "candy_cane_red_horizontal", "candy_cane_green_horizontal", "candy_cane_blue_horizontal", "candy_cane_orange_horizontal", "candy_cane_magenta_horizontal", "candy_cane_pink_horizontal", "candy_cane_lime_horizontal", "candy_cane_purple_horizontal", "candy_cane_brown_horizontal", "candy_cane_black_horizontal");
+		ClientUtilities.addExtraPlanetsVariants("candy_blocks", "candy_cane_red", "candy_cane_green", "candy_cane_blue", "candy_cane_orange", "candy_cane_magenta", "candy_cane_pink", "candy_cane_lime", "candy_cane_purple", "candy_cane_brown",
+				"candy_cane_black");
+		ClientUtilities.addExtraPlanetsVariants("candy_blocks_horizontal", "candy_cane_red_horizontal", "candy_cane_green_horizontal", "candy_cane_blue_horizontal", "candy_cane_orange_horizontal", "candy_cane_magenta_horizontal",
+				"candy_cane_pink_horizontal", "candy_cane_lime_horizontal", "candy_cane_purple_horizontal", "candy_cane_brown_horizontal", "candy_cane_black_horizontal");
 		ClientUtilities.addExtraPlanetsVariants("cake_blocks", "cake_block", "cake_block_red_velvet", "cake_block_chocolate", "white_icing_red_dots", "white_icing_green_dots", "white_icing_pink_dots", "white_icing_orange_dots", "cookie_rocks");
 	}
 
@@ -749,7 +751,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ADVANCED);
 		if (Config.FUEL_LOADER_ULTIMATE)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE);
-		
+
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_DENSIFIER);
 
 		// Other Blocks
@@ -780,7 +782,7 @@ public class ClientProxy extends CommonProxy {
 		for (BlockCakeBlocks.EnumBlockBasic blockBasic : BlockCakeBlocks.EnumBlockBasic.values()) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.CAKE_BLOCKS, blockBasic.getMeta(), blockBasic.getName());
 		}
-		
+
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.VEHICLE_CHARGER);
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FAKE_BLOCK);
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.WHITE_SUGAR_CANE);
@@ -1185,9 +1187,57 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CLOTH);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.GRAVITY_CONTROLLER);
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.GEIGER_COUNTER);
-		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WHITE_SUGAR_CANE);	
-		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CARAMEL_BAR);	
-		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CHOCOLATE_BAR);	
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WHITE_SUGAR_CANE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CARAMEL_BAR);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CHOCOLATE_BAR);
+
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLACK);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_RED);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GREEN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BROWN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLUE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PURPLE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_CYAN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_GRAY);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GRAY);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PINK);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_YELLOW);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_BLUE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_MAGENTA);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_ORANGE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_WHITE);
+
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_BLACK);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_RED);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_GREEN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_BROWN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_BLUE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_PURPLE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_CYAN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_GRAY);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_GRAY);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_PINK);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_YELLOW);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_BLUE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_MAGENTA);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_LIME);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MED_OXYGEN_TANK_WHITE);
+
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLACK);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIME);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GREEN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BROWN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLUE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PURPLE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_CYAN);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_GRAY);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GRAY);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PINK);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_YELLOW);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_BLUE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_MAGENTA);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_ORANGE);
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_WHITE);
 	}
 
 	@SubscribeEvent
@@ -1446,7 +1496,7 @@ public class ClientProxy extends CommonProxy {
 				return liquid_hydrocarbonLocation;
 			}
 		});
-		
+
 		ModelResourceLocation liquid_chocolateLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_chocolate", "fluid");
 		Item liquid_chocolate = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_CHOCOLATE);
 		ModelBakery.registerItemVariants(liquid_chocolate, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_chocolate"));
@@ -1457,7 +1507,7 @@ public class ClientProxy extends CommonProxy {
 				return liquid_chocolateLocation;
 			}
 		});
-		
+
 		ModelResourceLocation liquid_caramelLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_caramel", "fluid");
 		Item liquid_caramel = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_CARAMEL);
 		ModelBakery.registerItemVariants(liquid_caramel, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_caramel"));

@@ -50,6 +50,54 @@ public class Constants {
 	public static final int GEAR_ID_THERMAL_PADDING_T5_CHESTPLATE = 6009;
 	public static final int GEAR_ID_THERMAL_PADDING_T5_LEGGINGS = 6010;
 	public static final int GEAR_ID_THERMAL_PADDING_T5_BOOTS = 6011;
+	
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_BLACK = 6011;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_RED = 6012;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_GREEN = 6013;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_BROWN = 6014;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_BLUE = 6015;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_PURPLE = 6016;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_CYAN = 6017;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_LIGHT_GRAY = 6018;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_GRAY = 6019;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_PINK = 6020;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_YELLOW = 6021;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_LIGHT_BLUE = 6022;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_MAGENTA = 6023;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_ORANGE = 6024;
+	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_WHITE = 6025;
+
+	public static final int GEAR_ID_MED_OXYGEN_TANK_BLACK = 6026;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_RED = 6027;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_GREEN = 6028;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_BROWN = 6029;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_BLUE = 6030;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_PURPLE = 6031;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_CYAN = 6032;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_LIGHT_GRAY = 6033;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_GRAY = 6034;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_PINK = 6035;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_YELLOW = 6036;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_LIGHT_BLUE = 6037;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_MAGENTA = 6038;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_LIME = 6039;
+	public static final int GEAR_ID_MED_OXYGEN_TANK_WHITE = 6040;
+
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_BLACK = 6041;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_LIME = 6042;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_GREEN = 6043;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_BROWN = 6044;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_BLUE = 6045;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_PURPLE = 6046;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_CYAN = 6047;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_LIGHT_GRAY = 6048;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_GRAY = 6049;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_PINK = 6050;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_YELLOW = 6051;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_LIGHT_BLUE = 6052;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_MAGENTA = 6053;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_ORANGE = 6054;
+	public static final int GEAR_ID_HEAVY_OXYGEN_TANK_WHITE = 6055;
 
 	public static final String CONFIG_FILE = "config/ExtraPlanets.cfg";
 
