@@ -11,7 +11,6 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.util.WorldGenHelper;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
 
@@ -58,7 +57,6 @@ public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }
