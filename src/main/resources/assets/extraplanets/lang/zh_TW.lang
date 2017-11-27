@@ -278,6 +278,9 @@ tile.titan.stone.name=土衛一石頭
 tile.titan.ore_iron.name=土衛一鐵礦石
 tile.titan.ore_tin.name=土衛一錫礦石
 tile.titan.ore_copper.name=土衛一銅礦石
+tile.titan.titan_methane_surface.name=Titan Methane Surface
+tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface
+tile.titan.titan_rocks.name=Titan Rocks
 
 tile.oberon.surface.name=Oberon Surface Rock
 tile.oberon.sub_surface.name=Oberon Sub-Surface Rock
