@@ -71,5 +71,4 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 		this.saturnBiomeDecorator.decorate(worldObj, rand, x, z);
 		//this.saturnBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
-
 }

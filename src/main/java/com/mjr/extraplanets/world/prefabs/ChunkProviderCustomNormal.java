@@ -282,15 +282,16 @@ public abstract class ChunkProviderCustomNormal extends ChunkGeneratorOverworld 
 	}
 
 	@Override
-	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
-		return this.worldObj.getBiome(pos).getSpawnableList(creatureType);
-	}
-
-	@Override
 	public boolean generateStructures(Chunk chunkIn, int x, int z) {
 		return false;
 	}
 
+
+	@Override
+	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
+		Biome biomegenbase = this.worldObj.getBiome(pos);
+		return biomegenbase.getSpawnableList(creatureType);
+	}
 
 	@Override
 	public abstract void recreateStructures(Chunk chunk, int x, int z);
