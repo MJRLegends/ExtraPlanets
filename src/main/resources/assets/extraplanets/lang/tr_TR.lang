@@ -278,6 +278,9 @@ tile.titan.stone.name=Titan Taşı
 tile.titan.ore_iron.name=Titan Demir Cevheri
 tile.titan.ore_tin.name=Titan Kalay Cevheri
 tile.titan.ore_copper.name=Titan Bakır Cevheri
+tile.titan.titan_methane_surface.name=Titan Methane Surface
+tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface
+tile.titan.titan_rocks.name=Titan Rocks
 
 tile.oberon.surface.name=Oberon Yüzey Kayası
 tile.oberon.sub_surface.name=Oberon Yeraltı Kayası
