@@ -8,6 +8,46 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.8.8
+*Fixed some events not running
+*Started work on changing all textures for items and blocks to support files from 1.8+
+*Started work on changing all names for items and blocks to support files from 1.8+
+*Started porting missing blocks and items
+*Work on backporting biomes
+*Fixed world gen stuff
+*Backported fluids from 1.8+
+*Backported more biomes
+*Added Hyrdocarbon fluid
+*Fixed Unlocalized Names, Updated lang files
+*Added recipes to convert Decorative Blocks 2 to other colours using dyes
+*Changed last added recipes to use all blocks not just white
+*Added recipe for 1 Dense Ice to 9 Ice Blocks & 9 Ice to 1 Dense Ice
+*Fixed for DecorativeBlocks2 blocks
+*Work on fixing/adding world gen features to Mercury, Ceres, Jupiter, Saturn, Uranus, Neptune
+*Fixed for Jupiter Lakes and Fixes for All custom lakes world gen
+*Improvements for textures for Callisto, Deimos, Europa, Ganymede, Oberon, Phobos, Titania, Triton blocks
+*Converted Titan over to multi biome system
+*Changed Titan Surface, Sub Surface, Stone textures
+*Added Titan Methane Hills Biome
+*Added Titan Methane Surface Rock
+*Added Titan Methane Sub Surface Rock
+*Added Titan Rocks
+*Added Titan Methane Sea Biome
+*Tweaks for Blocks added in last commit
+*Tweaks to Titan Ore Textures
+*Converted Triton over to multi biome system
+*Added Triton Ice Lands Biome
+*Added Triton Ice Sea Biome
+*Fixed/Added missing world gen features
+*Fixed Triton & Titan biomes
+*Converted Saturn over to multi biome system
+*Added Saturn Nuclear Land Biome
+*Added Saturn Hydrocarbon Sea Biome
+*Converted Jupiter over to multi biome system
+*Added Jupiter Magma Sea Biome
+*Converted Neptune over to multi biome system
+*Added Neptune Radio Active Water Sea Biome
+
 v1.8.7
 *Updated ru_RU.lang (Thanks to rykllan)
 *Fixes a typo in Config
