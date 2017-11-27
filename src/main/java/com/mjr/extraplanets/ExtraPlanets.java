@@ -490,7 +490,7 @@ public class ExtraPlanets {
 		if (Config.EUROPA)
 			Biome.registerBiome(Config.EUROPA_BIOME_ID, EuropaBiomes.europa.getBiomeName(), EuropaBiomes.europa);
 		if (Config.GANYMEDE)
-			Biome.registerBiome(Config.GANTMEDE_BIOME_ID, GanymedeBiomes.ganymede.getBiomeName(), GanymedeBiomes.ganymede);
+			Biome.registerBiome(Config.GANYMEDE_BIOME_ID, GanymedeBiomes.ganymede.getBiomeName(), GanymedeBiomes.ganymede);
 		if (Config.IAPETUS)
 			Biome.registerBiome(Config.IAPETUS_BIOME_ID, IapetusBiomes.iapetus.getBiomeName(), IapetusBiomes.iapetus);
 		if (Config.IO) {
@@ -508,6 +508,7 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.RHEA_BIOME_ID, RheaBiomes.rhea.getBiomeName(), RheaBiomes.rhea);
 		if (Config.TITAN) {
 			Biome.registerBiome(Config.TITAN_BIOME_ID, TitanBiomes.titan.getBiomeName(), TitanBiomes.titan);
+			Biome.registerBiome(Config.TITAN_METHANE_HILLS_BIOME_ID, TitanBiomes.titanMethaneHills.getBiomeName(), TitanBiomes.titanMethaneHills);
 			Biome.registerBiome(Config.TITAN_SEA_BIOME_ID, TitanBiomes.titanMethaneSea.getBiomeName(), TitanBiomes.titanMethaneSea);
 		}
 		if (Config.TITANIA)

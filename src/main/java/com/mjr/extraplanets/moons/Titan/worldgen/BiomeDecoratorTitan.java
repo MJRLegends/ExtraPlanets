@@ -19,6 +19,7 @@ public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 	private WorldGenerator ironGen;
 	private WorldGenerator gravelGen;
 	private WorldGenerator fossilsGen;
+	private WorldGenerator rocksGen;
 
 	private int LakesPerChunk = 5;
 
@@ -30,6 +31,7 @@ public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 1);
+		this.rocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 12, 8, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 0);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -50,6 +52,7 @@ public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
+		this.generateOre(60, this.rocksGen, 40, 120);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
