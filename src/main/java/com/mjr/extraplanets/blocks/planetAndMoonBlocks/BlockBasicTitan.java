@@ -37,7 +37,8 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypetitan", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "titan_surface"), SUB_SURFACE(1, "titan_sub_surface"), STONE(2, "titan_stone"), ORE_IRON(3, "titan_ore_iron"), ORE_TIN(4, "titan_ore_tin"), ORE_COPPER(5, "titan_ore_copper");
+		SURFACE(0, "titan_surface"), SUB_SURFACE(1, "titan_sub_surface"), STONE(2, "titan_stone"), ORE_IRON(3, "titan_ore_iron"), ORE_TIN(4, "titan_ore_tin"), ORE_COPPER(5, "titan_ore_copper"), METHANE_INFECTED_SURFACE_ROCK(6,
+				"titan_methane_surface"), METHANE_INFECTED_SUB_SURFACE_ROCK(7, "titan_methane_sub_surface"), ROCKS(8, "titan_rocks");
 
 		private final int meta;
 		private final String name;
