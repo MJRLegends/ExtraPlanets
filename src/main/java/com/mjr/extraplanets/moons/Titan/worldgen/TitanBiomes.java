@@ -13,6 +13,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneHills;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
 

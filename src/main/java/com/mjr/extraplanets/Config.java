@@ -469,9 +469,6 @@ public class Config {
 		oberonBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Biome ID", 179).getInt();
 		titaniaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180).getInt();
 		iapetusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181).getInt();
-		//OBERON_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Biome ID", 179, "[range: 0 ~ 255, default: 179]").getInt();
-		//TITANIA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180, "[range: 0 ~ 255, default: 180]").getInt();
-		//IAPETUS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181, "[range: 0 ~ 255, default: 181]").getInt();
 		kepler22bRedDesertBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 185, "[range: 0 ~ 255, default: 185]").getInt();
 		titanSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Sea Biome ID", 186, "[range: 0 ~ 255, default: 186]").getInt();
 		//TRITON_ICE_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Lands Biome ID", 187, "[range: 0 ~ 255, default: 187]").getInt();

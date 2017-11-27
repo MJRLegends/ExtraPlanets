@@ -9,7 +9,7 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
-import com.mjr.extraplanets.moons.Titan.worldgen.BiomeGenTitan;
+import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
 
 public class MapGenVillageTitan extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenTitan.titan });
