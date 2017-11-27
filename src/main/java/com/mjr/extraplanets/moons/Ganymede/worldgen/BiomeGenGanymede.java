@@ -10,7 +10,7 @@ public class BiomeGenGanymede extends GanymedeBiomes {
 
 	public BiomeGenGanymede(BiomeProperties properties) {
 		super(properties);
-		Biome.registerBiome(Config.GANTMEDE_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
+		Biome.registerBiome(Config.GANYMEDE_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }
