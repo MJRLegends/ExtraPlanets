@@ -278,6 +278,9 @@ tile.titan.stone.name=Kámen z Titanu
 tile.titan.ore_iron.name=Železná ruda z Titanu
 tile.titan.ore_tin.name=Cínová ruda z Titanu
 tile.titan.ore_copper.name=Měděná ruda z Titanu
+tile.titan.titan_methane_surface.name=Titan Methane Surface
+tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface
+tile.titan.titan_rocks.name=Titan Rocks
 
 tile.oberon.surface.name=Oberon Surface Rock
 tile.oberon.sub_surface.name=Oberon Sub-Surface Rock
