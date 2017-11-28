@@ -14,6 +14,12 @@
 
 
 ===========================================Released Updates===========================================
+v1.1.5
+*Few small fixes
+*Added de_DE.lang (Thanks to Suum)
+*Fixed Ceres Space Station using the wrong dimension ids
+
+
 v1.1.4
 *Fixes/Clean up for all Entity & Tile rendering
 *Fixes/Clean up for all Entities
