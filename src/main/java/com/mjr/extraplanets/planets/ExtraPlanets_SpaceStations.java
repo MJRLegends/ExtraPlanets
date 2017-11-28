@@ -180,8 +180,8 @@ public class ExtraPlanets_SpaceStations {
 		if (Config.CERES_SPACE_STATION && Config.CERES) {
 			GalaxyRegistry.registerSatellite(CERES_SPACE_STATION);
 			GalacticraftRegistry.registerTeleportType(WorldProviderCeresOrbit.class, new TeleportTypeCeresOrbit());
-			GalacticraftRegistry.registerProvider(Config.MERCURY_SPACE_STATION_ID, WorldProviderCeresOrbit.class, false, 0);
-			GalacticraftRegistry.registerProvider(Config.MERCURY_SPACE_STATION_STATIC_ID, WorldProviderCeresOrbit.class, true, 0);
+			GalacticraftRegistry.registerProvider(Config.CERES_SPACE_STATION_ID, WorldProviderCeresOrbit.class, false, 0);
+			GalacticraftRegistry.registerProvider(Config.CERES_SPACE_STATION_STATIC_ID, WorldProviderCeresOrbit.class, true, 0);
 		}
 		if (Config.MARS_SPACE_STATION && MarsModule.planetMars != null) {
 			GalaxyRegistry.registerSatellite(MARS_SPACE_STATION);
