@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
+import java.util.Collections;
 import java.util.List;
 
 import net.minecraft.entity.EnumCreatureType;
@@ -20,6 +21,6 @@ public class BiomeGenUranusFrozenWaterSea extends UranusBiomes {
 
 	@Override
 	public List<BiomeGenBase.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return null;
+		return Collections.<BiomeGenBase.SpawnListEntry> emptyList();
 	}
 }

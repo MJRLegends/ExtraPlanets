@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.moons.Titan.worldgen.biomes;
 
+import java.util.Collections;
 import java.util.List;
 
 import net.minecraft.entity.EnumCreatureType;
@@ -19,6 +20,6 @@ public class BiomeGenTitanMethaneSea extends BiomeGenBase {
 
 	@Override
 	public List<BiomeGenBase.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return null;
+		return Collections.<BiomeGenBase.SpawnListEntry> emptyList();
 	}
 }
