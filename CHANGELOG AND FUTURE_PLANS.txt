@@ -14,7 +14,12 @@
 
 
 ===========================================Released Updates===========================================
-v0.8.8
+v0.8.1
+*Few crash fixes
+
+*Few small fixes
+
+v0.8.0
 *Fixes/Clean up for all Entity & Tile rendering
 *Fixes/Clean up for all Entities
 *Added Light, Medium, Heavy, Oxygen Tanks for all 15 other dyes
