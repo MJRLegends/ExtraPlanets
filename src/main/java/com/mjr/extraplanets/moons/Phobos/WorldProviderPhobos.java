@@ -132,7 +132,7 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public DimensionType getDimensionType() {
-		return ExtraPlanetsDimensions.TITAN;
+		return ExtraPlanetsDimensions.PHOBOS;
 	}
 
 	@Override
