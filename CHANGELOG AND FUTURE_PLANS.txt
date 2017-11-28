@@ -15,6 +15,32 @@
 
 
 ===========================================Released Updates===========================================
+<<<<<<< HEAD
+=======
+v0.4.6
+*Few small fixes
+*Added de_DE.lang (Thanks to Suum)
+
+v0.4.5
+*Fixes/Clean up for all Entity & Tile rendering
+*Fixes/Clean up for all Entities
+*Added Light, Medium, Heavy, Oxygen Tanks for all 15 other dyes
+*Made Radiation/Pressure systems not affect the player when in Tier 1 - 10 Rockets
+*Removed not needed lines from the Venus Rover Wheels model file
+*Changed Titan Surface, Sub Surface, Stone textures
+*Added Titan Methane Hills Biome
+*Added Titan Methane Surface Rock
+*Added Titan Methane Sub Surface Rock
+*Added Titan Rocks
+*Tweaks to Titan Ore Textures
+*Improvements for textures for Callisto, Deimos, Europa, Ganymede, Oberon, Phobos, Titania, Triton blocks
+*Fixed Squid spawning in custom ocean biomes
+*Fixes for Triton & Titan lakes world gen
+*Fixed/Added missing world gen features
+*Updated lang files
+*Clean up
+
+>>>>>>> 44b16da... Released v0.4.6
 v0.4.4
 *Fixed Tier 2 Space Suit Gravity Boots recipe
 *Fixed spelling error in lang files
