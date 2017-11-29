@@ -66,7 +66,7 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 					itemstacks.setFromRecipe(i, o);
 				}
 			}
-			itemstacks.setFromRecipe(2, circuitFabricatorRecipeWrapper.getOutputs());
+			itemstacks.setFromRecipe(1, circuitFabricatorRecipeWrapper.getOutputs());
 		}
 	}
 
