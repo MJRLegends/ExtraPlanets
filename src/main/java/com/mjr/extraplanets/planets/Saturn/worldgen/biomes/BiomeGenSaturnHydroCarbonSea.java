@@ -1,12 +1,12 @@
 package com.mjr.extraplanets.planets.Saturn.worldgen.biomes;
 
-import java.util.Collections;
 import java.util.List;
 
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
 
+import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 
@@ -21,6 +21,6 @@ public class BiomeGenSaturnHydroCarbonSea extends SaturnBiomes {
 
 	@Override
 	public List<BiomeGenBase.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return Collections.<BiomeGenBase.SpawnListEntry> emptyList();
+		return Lists.<BiomeGenBase.SpawnListEntry>newArrayList();
 	}
 }
