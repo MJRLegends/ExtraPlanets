@@ -1,12 +1,12 @@
-package com.mjr.extraplanets.itemBlocks.planetAndMoon;
+package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockDeimos extends ItemBlock
+public class ItemBlockKepler22bPlanks extends ItemBlock
 {
-	public ItemBlockDeimos(Block block)
+	public ItemBlockKepler22bPlanks(Block block)
 	{
 		super(block);
 		this.setMaxDamage(0);
@@ -28,38 +28,37 @@ public class ItemBlockDeimos extends ItemBlock
 		{
 		case 0:
 		{
-			name = "surface";
+			name = "plank_maple_blue";
 			break;
 		}
 		case 1:
 		{
-			name = "sub_surface";
+			name = "plank_maple_red";
 			break;
 		}
 		case 2:
 		{
-			name = "stone";
+			name = "plank_maple_purple";
 			break;
 		}
 		case 3:
 		{
-			name = "ore_iron";
+			name = "plank_maple_yellow";
 			break;
 		}
 		case 4:
 		{
-			name = "ore_tin";
+			name = "plank_maple_green";
 			break;
 		}
 		case 5:
 		{
-			name = "ore_copper";
+			name = "plank_maple_brown";
 			break;
 		}
 		default:
 			name = "null";
 		}
-
 		return this.block.getUnlocalizedName() + "." + name;
 	}
 
