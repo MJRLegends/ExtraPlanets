@@ -27,7 +27,7 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 	public ItemCustomOxygenTank(int tier, String assetName) {
 		super(tier, assetName);
 		this.setMaxStackSize(1);
-		this.setMaxDamage(tier * 1800);
+		this.setMaxDamage(tier * 900);
 		this.setUnlocalizedName(assetName);
 		this.setNoRepair();
 	}

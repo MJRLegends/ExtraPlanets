@@ -334,8 +334,8 @@ public class ExtraPlanets_Items {
 			BATTERY_ULTIMATE = new ItemBasicBattery("ultimate_battery", 200000f, 2);
 		}
 		if (Config.OXYGEN_TANKS) {
-			OXYGEN_TANK_VERY_HEAVY = new ItemCustomOxygenTank(4, "oxygen_tank_very_heavy_full");
-			OXYGEN_TANK_EXTREMELY_HEAVY = new ItemCustomOxygenTank(5, "oxygen_tank_extremely_heavy_full");
+			OXYGEN_TANK_VERY_HEAVY = new ItemCustomOxygenTank(8, "oxygen_tank_very_heavy_full");
+			OXYGEN_TANK_EXTREMELY_HEAVY = new ItemCustomOxygenTank(10, "oxygen_tank_extremely_heavy_full");
 		}
 		if (Config.PRESSURE || Config.RADIATION) {
 			TIER_1_PRESSURE_LAYER = new ItemBasicItem("tier1_pressure_layer");
