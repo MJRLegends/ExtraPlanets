@@ -1,11 +1,11 @@
-package com.mjr.extraplanets.itemBlocks.planetAndMoon;
+package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockRhea extends ItemBlock {
-	public ItemBlockRhea(Block block) {
+public class ItemBlockSaturn extends ItemBlock {
+	public ItemBlockSaturn(Block block) {
 		super(block);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -43,6 +43,34 @@ public class ItemBlockRhea extends ItemBlock {
 		}
 		case 5: {
 			name = "ore_copper";
+			break;
+		}
+		case 6: {
+			name = "ore_magnesium";
+			break;
+		}
+		case 7: {
+			name = "magnesium_block";
+			break;
+		}
+		case 8: {
+			name = "stone_bricks";
+			break;
+		}
+		case 9: {
+			name = "dungeon_brick";
+			break;
+		}
+		case 10: {
+			name = "broken_infected_stone";
+			break;
+		}
+		case 11: {
+			name = "infected_stone";
+			break;
+		}
+		case 12: {
+			name = "ore_slime";
 			break;
 		}
 		default:

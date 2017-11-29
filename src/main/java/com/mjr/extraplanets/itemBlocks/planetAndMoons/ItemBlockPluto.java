@@ -1,12 +1,12 @@
-package com.mjr.extraplanets.itemBlocks.planetAndMoon;
+package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockCeres extends ItemBlock
+public class ItemBlockPluto extends ItemBlock
 {
-	public ItemBlockCeres(Block block)
+	public ItemBlockPluto(Block block)
 	{
 		super(block);
 		this.setMaxDamage(0);
@@ -58,17 +58,22 @@ public class ItemBlockCeres extends ItemBlock
 		}
 		case 6:
 		{
-			name = "ore_uranium";
+			name = "ore_tungsten";
 			break;
 		}
 		case 7:
 		{
-			name = "uranium_block";
+			name = "tungsten_block";
 			break;
 		}
 		case 8:
 		{
 			name = "stone_bricks";
+			break;
+		}
+		case 9:
+		{
+			name = "dungeon_brick";
 			break;
 		}
 		default:
