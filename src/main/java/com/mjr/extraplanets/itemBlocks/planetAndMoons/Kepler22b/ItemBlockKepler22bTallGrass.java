@@ -1,11 +1,11 @@
-package com.mjr.extraplanets.itemBlocks.planetAndMoon;
+package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockSaturn extends ItemBlock {
-	public ItemBlockSaturn(Block block) {
+public class ItemBlockKepler22bTallGrass extends ItemBlock {
+	public ItemBlockKepler22bTallGrass(Block block) {
 		super(block);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -22,55 +22,63 @@ public class ItemBlockSaturn extends ItemBlock {
 
 		switch (itemstack.getItemDamage()) {
 		case 0: {
-			name = "surface";
+			name = "blue_maple_short_grass";
 			break;
 		}
 		case 1: {
-			name = "sub_surface";
+			name = "blue_maple_med_grass";
 			break;
 		}
 		case 2: {
-			name = "stone";
+			name = "blue_maple_tall_grass";
 			break;
 		}
 		case 3: {
-			name = "ore_iron";
+			name = "red_maple_short_grass";
 			break;
 		}
 		case 4: {
-			name = "ore_tin";
+			name = "red_maple_med_grass";
 			break;
 		}
 		case 5: {
-			name = "ore_copper";
+			name = "red_maple_tall_grass";
 			break;
 		}
 		case 6: {
-			name = "ore_magnesium";
+			name = "purple_maple_short_grass";
 			break;
 		}
 		case 7: {
-			name = "magnesium_block";
+			name = "purple_maple_med_grass";
 			break;
 		}
 		case 8: {
-			name = "stone_bricks";
+			name = "purple_maple_tall_grass";
 			break;
 		}
 		case 9: {
-			name = "dungeon_brick";
+			name = "yellow_maple_short_grass";
 			break;
 		}
 		case 10: {
-			name = "broken_infected_stone";
+			name = "yellow_maple_med_grass";
 			break;
 		}
 		case 11: {
-			name = "infected_stone";
+			name = "yellow_maple_tall_grass";
 			break;
 		}
 		case 12: {
-			name = "ore_slime";
+			name = "green_maple_short_grass";
+			break;
+		}
+		case 13: {
+			name = "green_maple_med_grass";
+			break;
+		}
+		case 14: {
+			name = "green_maple_tall_grass";
 			break;
 		}
 		default:

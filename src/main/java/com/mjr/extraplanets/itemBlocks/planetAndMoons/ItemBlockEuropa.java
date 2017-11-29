@@ -1,12 +1,12 @@
-package com.mjr.extraplanets.itemBlocks.planetAndMoon;
+package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockPhobos extends ItemBlock
+public class ItemBlockEuropa extends ItemBlock
 {
-	public ItemBlockPhobos(Block block)
+	public ItemBlockEuropa(Block block)
 	{
 		super(block);
 		this.setMaxDamage(0);

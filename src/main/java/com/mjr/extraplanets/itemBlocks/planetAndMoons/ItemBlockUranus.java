@@ -1,12 +1,12 @@
-package com.mjr.extraplanets.itemBlocks.planetAndMoon;
+package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockKepler22b extends ItemBlock
+public class ItemBlockUranus extends ItemBlock
 {
-	public ItemBlockKepler22b(Block block)
+	public ItemBlockUranus(Block block)
 	{
 		super(block);
 		this.setMaxDamage(0);
@@ -28,77 +28,53 @@ public class ItemBlockKepler22b extends ItemBlock
 		{
 		case 0:
 		{
-			name = "dirt";
+			name = "surface";
 			break;
 		}
 		case 1:
 		{
-			name = "stone";
+			name = "sub_surface";
 			break;
 		}
 		case 2:
 		{
-			name = "ore_iron";
+			name = "stone";
 			break;
 		}
 		case 3:
 		{
-			name = "ore_tin";
+			name = "ore_crystal";
 			break;
 		}
 		case 4:
 		{
-			name = "ore_copper";
+			name = "crystal_block";
 			break;
 		}
 		case 5:
 		{
-			name = "ore_dense_coal";
+			name = "stone_bricks";
 			break;
-		}
+		}		
 		case 6:
 		{
-			name = "ore_blue_diamonds";
+			name = "dungeon_brick";
 			break;
 		}
 		case 7:
 		{
-			name = "ore_red_diamonds";
+			name = "ore_white_gem";
 			break;
 		}
 		case 8:
 		{
-			name = "ore_purple_diamonds";
-			break;
-		}
-		case 9:
-		{
-			name = "ore_yellow_diamonds";
-			break;
-		}
-		case 10:
-		{
-			name = "ore_green_diamonds";
-			break;
-		}
-		case 11:
-		{
-			name = "stone_bricks";
-			break;
-		}
-		case 12:
-		{
-			name = "cobblestone";
-			break;
-		}
-		case 13:
-		{
-			name = "ore_platinum";
+			name = "white_gem_block";
 			break;
 		}
 		default:
 			name = "null";
 		}
+
 		return this.block.getUnlocalizedName() + "." + name;
 	}
 
