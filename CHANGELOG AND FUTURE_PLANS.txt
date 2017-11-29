@@ -46,28 +46,19 @@ v0.7.9
 *Fixed spelling error in lang files
 *Changed Moons to use Atmosphere Info system
 *Added Neptune Layered Hills Biome to Neptune
-
 *Added Blue, Light Blue, Yellow, Green blocks
-
 *Fixed Config wrong numbers on some comments
 *Added Saturn Nuclear Land biome to Saturn
-
 *Tweaked Methane Texture
-
 *Added Slime ore for Saturn Nuclear Land biome
-
 *Added WorldGen SlimeTree & Nuclear Pile for Saturn Nuclear Land biome
-
 *Added Helper class for world gen features
 *Fixed spawning of all world gen Lakes, Structures
 *Added Custom Galaxy Map/Celestaial Selection Screen to show Planets, Moons, Stars, Satellites Details
 *Updated Galacticraft API
-
 *Fixes for Galacticraft Version checker
-
 *Fixed Unlocalized Name for Saturn Slime Ore
 *Updated lang files
-
 *Model rendering fixes
 *Added recipes to convert Decorative Blocks 2 to other colours using dyes
 *Added recipe for 1 Dense Ice to 9 Ice Blocks & 9 Ice to 1 Dense Ice
