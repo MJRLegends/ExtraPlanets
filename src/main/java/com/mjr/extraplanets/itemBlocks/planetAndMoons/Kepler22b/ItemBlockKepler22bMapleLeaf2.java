@@ -1,11 +1,11 @@
-package com.mjr.extraplanets.itemBlocks.planetAndMoon;
+package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockIapetus extends ItemBlock {
-	public ItemBlockIapetus(Block block) {
+public class ItemBlockKepler22bMapleLeaf2 extends ItemBlock {
+	public ItemBlockKepler22bMapleLeaf2(Block block) {
 		super(block);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -22,31 +22,19 @@ public class ItemBlockIapetus extends ItemBlock {
 
 		switch (itemstack.getItemDamage()) {
 		case 0: {
-			name = "surface";
+			name = "green_maple_leaf";
 			break;
 		}
 		case 1: {
-			name = "sub_surface";
+			name = "brown_maple_leaf";
 			break;
 		}
-		case 2: {
-			name = "stone";
+		case 8: {
+			name = "green_maple_leaf";
 			break;
 		}
-		case 3: {
-			name = "ore_iron";
-			break;
-		}
-		case 4: {
-			name = "ore_tin";
-			break;
-		}
-		case 5: {
-			name = "ore_copper";
-			break;
-		}
-		case 6: {
-			name = "ice";
+		case 9: {
+			name = "brown_maple_leaf";
 			break;
 		}
 		default:
@@ -54,10 +42,5 @@ public class ItemBlockIapetus extends ItemBlock {
 		}
 
 		return this.block.getUnlocalizedName() + "." + name;
-	}
-
-	@Override
-	public String getUnlocalizedName() {
-		return this.block.getUnlocalizedName() + ".0";
 	}
 }
