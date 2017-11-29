@@ -54,7 +54,7 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
 
 		itemstacks.init(0, true, 3, 2);
-		itemstacks.init(2, false, 108, 30);
+		itemstacks.init(1, false, 108, 30);
 
 		if (recipeWrapper instanceof DensifierRecipeWrapper) {
 			DensifierRecipeWrapper circuitFabricatorRecipeWrapper = (DensifierRecipeWrapper) recipeWrapper;
