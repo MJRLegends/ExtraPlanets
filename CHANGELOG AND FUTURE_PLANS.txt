@@ -14,9 +14,12 @@
 
 
 ===========================================Released Updates===========================================
+v0.8.2
+*Fixed Custom Light, Medium, Heavy tanks having 2x the amount of oxygen they should have
+*Added de_DE.lang (Thanks to Suum)
+
 v0.8.1
 *Few crash fixes
-
 *Few small fixes
 
 v0.8.0
