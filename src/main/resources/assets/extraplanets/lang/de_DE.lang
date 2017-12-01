@@ -359,7 +359,8 @@ tile.basic_decrystallizer.name=Basis Dekristallisierer
 tile.basic_crystallizer.name=Basis Kristallisierer
 tile.basic_smasher.name=Basis zerstörer
 tile.basic_chemical_injector.name=Basis Chemischer Injektor
-tile.basic_solar_evaporation_chamber.name=Basis Solarverdampfungskammer tile.advanced_launch_pad.tier2LandingPad.name=Stufe 2 Raketenstartrampe
+tile.basic_solar_evaporation_chamber.name=Basis Solarverdampfungskammer 
+tile.advanced_launch_pad.tier2LandingPad.name=Stufe 2 Raketenstartrampe
 tile.advanced_launch_pad.tier3LandingPad.name= Stufe 3 Raketenstartrampe
 tile.advanced_launch_pad.poweredChargingPad.name=Fahrzeugsaufladungsplatform
 tile.advanced_launch_pad.rocketPoweredChargingPad.name= Aufgeladene Raketenplatform
