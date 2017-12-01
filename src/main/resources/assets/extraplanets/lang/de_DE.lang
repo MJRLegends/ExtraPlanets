@@ -1301,3 +1301,107 @@ item.tier4_items.sledge_hammer.name=Vorschlaghammer
 item.tier4_items.grinding_wheel.name=Schleifscheibe
 
 currently.unused.name=Zur Zeit unbenutzt!
+
+#------------------1.7.10 Only Section------------------
+#Venus Blocks
+tile.venus.surface.name=Venus Oberflächengestein
+tile.venus.sub_surface.name=Venus Untergrundgestein
+tile.venus.stone.name=Venus Stein
+tile.venus.ore_iron.name=Venus Eisenerz
+tile.venus.ore_tin.name=Venus Zinnerz
+tile.venus.ore_copper.name=Venus Kupfererz
+tile.venus.ore_carbon.name=Kohlenstofferz
+tile.venus.stone_bricks.name=Venus Steinziegel
+tile.venus.carbon_block.name=StickstoffBlock
+tile.venus.titanium_block.name=TitaniumBlock
+tile.veuns.dungeon_brick.name=Venus Dungeonziegel
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=Flüssiger Glowstone
+tile.magma_fluid.name=Flüssige Magma
+tile.nitrogen_fluid.name=Flüssiges Stickstoff
+tile.frozen_water_fluid.name=Eingefrorenes Wasser
+tile.salt_fluid.name=Flüssiges Kristallisiertes Wasser
+tile.glowstone_fluid.name=Flüssgier Glowstone
+tile.magma_fluid.name=Flüssige Magma
+tile.nitrogen_fluid.name=Flüssige Stickstoff
+tile.frozen_water_fluid.name=Gefrorenes Wasser
+tile.salt_fluid.name=Flüssiges Kirstallisiertes Wasser
+tile.radioactive_water_fluid.name=Radioaktives Wasser
+tile.infected_water_fluid.name=Infiziertes Wasser
+tile.methane_fluid.name=Flüssiges Methan
+tile.nitrogen_ice_fluid.name=Flüssiges Stickstoffeis
+tile.liquid_hydrocarbon_fluid.name=Flüssiges Kohlenwasserstoff
+tile.liquid_chocolate_fluid.name=Flüssige Schokolade
+tile.liquid_caramel_fluid.name=Flüssiges Caramel
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Merkur Steinstufe
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Venus Steinstufe
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Ceres Steinstufe
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Jupiter Steinstufe
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Saturn Steinstufe
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Uranus Steinstufe
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Neptun Steinstufe
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Steinstufe
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Steinstufe
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=Merkur Steintreppen
+tile.venusStoneStairs.name=Venus Steintreppen
+tile.ceresStoneStairs.name=Ceres Steintreppen
+tile.jupiterStoneStairs.name=Jupiter Steintreppen
+tile.saturnStoneStairs.name=Saturn Steintreppen
+tile.uranusStoneStairs.name=Uranus Steintreppen
+tile.neptuneStoneStairs.name=Neptun Steintreppen
+tile.plutoStoneStairs.name=Pluto Steintreppen
+tile.erisStoneStairs.name=Eris Steintreppen
+
+tile.mercuryStoneBrickStairs.name=Merkur Steinziegeltreppen
+tile.venusStoneBrickStairs.name=Venus Steinziegeltreppen
+tile.ceresStoneBrickStairs.name=Ceres Steinziegeltreppen
+tile.jupiterStoneBrickStairs.name=Jupiter Steinziegeltreppen
+tile.saturnStoneBrickStairs.name=Saturn Steinziegeltreppen
+tile.uranusStoneBrickStairs.name=Uranus Steinziegeltreppen
+tile.neptuneStoneBrickStairs.name=Neptun Steinziegeltreppen
+tile.plutoStoneBrickStairs.name=Pluto Steinziegeltreppen
+tile.erisStoneBrickStairs.name=Eris Steinziegeltreppen
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeonziegelstufe
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeonziegelstufe
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeonziegelstufe
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeonziegelstufe
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeonziegelstufe
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=Venus Dungeonziegeltreppen 
+tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeonziegeltreppen 
+tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeonziegeltreppen 
+tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeonziegeltreppen 
+tile.neptuneDungeonBrickStoneStairs.name=Neptun Dungeonziegeltreppen 
+
+#Planets
+planet.Venus=Venus
+
+#Other Items
+item.tier4_items.ash_shard.name=Aschenscherbe
+item.tier4_items.volcanic_shard.name=Vulaknische Scherbe
+item.tier4_items.ingot_volcanic.name=Vulkanischerbarren
+item.tier6_items.magnesium_shard.name=Magnesium Scherbe
+item.tier4_items.ash.name=Asche
+item.tier4_items.sledge_hammer.name=Vorschlaghammer
+item.tier4_items.grinding_wheel.name=Schleifscheibe
+
+#MorePlanetsCompactBlocks&Items
+tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest
+tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest
+tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest
+tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest
+
+item.T4_saturn.name=Tier 4 Dungeon Key
+item.T4_uranus.name=Tier 4 Dungeon Key
+item.T5_neptune.name=Tier 5 Dungeon Key
+item.T6_eris.name=Tier 6 Dungeon Key
+
+currently.unused.name=Zur Zeit unbenutzt!
