@@ -373,6 +373,7 @@ tile.advanced_fuel_loader.name=Advanced Fuel Loader
 tile.ultimate_fuel_loader.name=Ultimate Fuel Loader
 tile.vehicle_charger.name=Vehicle Charger (WIP)
 tile.basic_purifier.name=Basic Purifier
+tile.basic_densifier.name=Basic Densifier
 
 #Machine Containers
 container.solarhybrid.name=Hybrid Solar Panel
@@ -392,6 +393,7 @@ container.ultimate.fuelloader.name=Ultimate Fuel Loader
 container.basic.solar.evaporation.chamber.name=Basic Solar Evaporation Chamber
 container.vehicle.charger.name=Vehicle Charger
 container.basic.purifier.name=Purifier
+container.basic.densifier.name=Basic Densifier
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
@@ -431,6 +433,15 @@ gui.bucket.message.finding.2=by Finding it on Planets/Moons
 gui.bucket.message.crafting=Press R to See How to Obtain
 gui.status.missing.inputs.name=Missing Items/Fluids
 gui.status.missing.power.name=Missing Power
+gui.densifier_input.desc.0=You can place the following 
+gui.densifier_input.desc.1=buckets in this slot:
+gui.densifier_input.desc.2=Liquid Caramel
+gui.densifier_input.desc.3=Liquid Chocolate
+gui.densifier_input.desc.4=Nitrogen Ice
+gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb
+gui.message.general.tank.name=Fluid Tank
+gui.message.general.tank.fluid.name=Fluid
+gui.status.densifier.name=Densifying
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Open Powered Vehicle Inventory
@@ -666,7 +677,7 @@ item.wafer.white_gem_wafer.name=White Gem Wafer
 
 #Buckets
 item.bucket_glowstone.name=Glowstone Bucket
-item.bucket_salt.name=Liquid Crystallized Water
+tile.salt.name=Liquid Crystallized Water
 item.bucket_magma.name=Magma Bucket
 item.bucket_frozen_water.name=Frozen Water Bucket
 item.bucket_nitrogen.name=Nitrogen Bucket
@@ -966,6 +977,54 @@ item.tier4_un_prepared_space_suit_boots.name=Tier 4 Un-Prepared Space Suit Boots
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank
 item.oxygen_tank_extremely_heavy_full.name=Extremely Heavy Oxygen Tank
 
+item.oxygen_tank_light_full_black.name=Light Oxygen Tank
+item.oxygen_tank_light_full_red.name=Light Oxygen Tank
+item.oxygen_tank_light_full_green.name=Light Oxygen Tank
+item.oxygen_tank_light_full_brown.name=Light Oxygen Tank
+item.oxygen_tank_light_full_blue.name=Light Oxygen Tank
+item.oxygen_tank_light_full_purple.name=Light Oxygen Tank
+item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank
+item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank
+item.oxygen_tank_light_full_gray.name=Light Oxygen Tank
+item.oxygen_tank_light_full_pink.name=Light Oxygen Tank
+item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank
+item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank
+item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank
+item.oxygen_tank_light_full_orange.name=Light Oxygen Tank
+item.oxygen_tank_light_full_white.name=Light Oxygen Tank
+
+item.oxygen_tank_med_full_black.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_red.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_green.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_white.name=Medium Oxygen Tank
+
+item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank
+
 #Radiation Items
 item.iodide_salt.name=Iodized Salt
 item.potassium_iodide.name=Potassium Iodide
@@ -1038,9 +1097,10 @@ item.thermal_cloth.tier5_thermal_cloth.name=Tier 5 Thermal Cloth
 item.tier5_items.ash.name=Ash Powder
 item.geiger_counter.name=Geiger Counter
 item.white_sugar_cane_item.name=White Sugar Cane
-
 geiger.counter.desc=Right Click to see your Current Radiation Level!
 geiger.counter.location.desc=Can be Obtained from a Mercury Dungeon!
+item.chocolate_bar.name=Chocolate Bar
+item.caramel_bar.name=Caramel Bar
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Dehydrated Porkchop
