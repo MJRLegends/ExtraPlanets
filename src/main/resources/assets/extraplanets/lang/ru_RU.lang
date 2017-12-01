@@ -278,9 +278,9 @@ tile.titan.stone.name=Камень Титана
 tile.titan.ore_iron.name=Железная руда Титана
 tile.titan.ore_tin.name=Оловянная руда Титана
 tile.titan.ore_copper.name=Медная руда Титана
-tile.titan.titan_methane_surface.name=Titan Methane Surface
-tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface
-tile.titan.titan_rocks.name=Titan Rocks
+tile.titan.titan_methane_surface.name=Titan Methane Surface ##NEEDS TRANSLATE##
+tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface ##NEEDS TRANSLATE##
+tile.titan.titan_rocks.name=Titan Rocks ##NEEDS TRANSLATE##
 
 tile.oberon.surface.name=Поверхность Оберона
 tile.oberon.sub_surface.name=Подповерхностный грунт Оберона
@@ -373,7 +373,7 @@ tile.advanced_fuel_loader.name=Улучшенный загрузчик топл�
 tile.ultimate_fuel_loader.name=Максимальный загрузчик топлива
 tile.vehicle_charger.name=Зарядное устройство для транспорта (WIP)
 tile.basic_purifier.name=Базовый очиститель
-tile.basic_densifier.name=Basic Densifier
+tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Гибридная солнечная панель
@@ -393,7 +393,7 @@ container.ultimate.fuelloader.name=Максимальный загрузчик �
 container.basic.solar.evaporation.chamber.name=Базовая солнечная испарительная камера
 container.vehicle.charger.name=Зарядное устройство для транспорта
 container.basic.purifier.name=Очиститель
-container.basic.densifier.name=Basic Densifier
+container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
 
 #Machine GUI Components
 gui.salt_water_tank.desc.4=Бак с жидкой кристаллической водой
@@ -433,15 +433,15 @@ gui.bucket.message.finding.2=найдя её на планетах или лун
 gui.bucket.message.crafting=Нажмите R, чтобы посмотреть как получить
 gui.status.missing.inputs.name=Отсутствуют предметы или жидкости
 gui.status.missing.power.name=Отсутствует мощность
-gui.densifier_input.desc.0=You can place the following 
-gui.densifier_input.desc.1=buckets in this slot:
-gui.densifier_input.desc.2=Liquid Caramel
-gui.densifier_input.desc.3=Liquid Chocolate
-gui.densifier_input.desc.4=Nitrogen Ice
-gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb
-gui.message.general.tank.name=Fluid Tank
-gui.message.general.tank.fluid.name=Fluid
-gui.status.densifier.name=Densifying
+gui.densifier_input.desc.0=You can place the following  ##NEEDS TRANSLATE##
+gui.densifier_input.desc.1=buckets in this slot: ##NEEDS TRANSLATE##
+gui.densifier_input.desc.2=Liquid Caramel ##NEEDS TRANSLATE##
+gui.densifier_input.desc.3=Liquid Chocolate ##NEEDS TRANSLATE##
+gui.densifier_input.desc.4=Nitrogen Ice ##NEEDS TRANSLATE##
+gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb ##NEEDS TRANSLATE##
+gui.message.general.tank.name=Fluid Tank ##NEEDS TRANSLATE##
+gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
+gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Открыть инвентарь заряженного транспорта
@@ -462,38 +462,38 @@ tile.orange_sand.name=Оранжевый песок
 tile.orange_sandstone.name=Оранжевый песчаник
 
 #CandyCane/Cake/Icing Blocks
-tile.candy_blocks.candy_cane_red.name=Red Candy Cane
-tile.candy_blocks.candy_cane_green.name=Green Candy Cane
-tile.candy_blocks.candy_cane_blue.name=Blue Candy Cane
-tile.candy_blocks.candy_cane_orange.name=Orange Candy Cane
-tile.candy_blocks.candy_cane_magenta.name=Magenta Candy Cane
-tile.candy_blocks.candy_cane_pink.name=Pink Candy Cane
-tile.candy_blocks.candy_cane_lime.name=Lime Candy Cane
-tile.candy_blocks.candy_cane_purple.name=Purple Candy Cane
-tile.candy_blocks.candy_cane_brown.name=Brown Candy Cane
-tile.candy_blocks.candy_cane_black.name=Black Candy Cane
+tile.candy_blocks.candy_cane_red.name=Red Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_green.name=Green Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_blue.name=Blue Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_orange.name=Orange Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_magenta.name=Magenta Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_pink.name=Pink Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_lime.name=Lime Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_purple.name=Purple Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_brown.name=Brown Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_black.name=Black Candy Cane ##NEEDS TRANSLATE##
 
-tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=Red Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=Green Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=Blue Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=Orange Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=Magenta Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=Pink Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Lime Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Purple Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Brown Candy Cane (Horizontal)
-tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Black Candy Cane (Horizontal)
+tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=Red Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=Green Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=Blue Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=Orange Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=Magenta Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=Pink Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Lime Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Purple Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Brown Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Black Candy Cane (Horizontal) ##NEEDS TRANSLATE##
 
-tile.cake_blocks.cake_block.name=Cake Block
-tile.cake_blocks.cake_block_red_velvet.name=Red Velvet Cake Block
-tile.cake_blocks.cake_block_chocolate.name=Chocolate Cake Block
-tile.cake_blocks.white_icing_red_dots.name=White Icing with Red Dots
-tile.cake_blocks.white_icing_green_dots.name=White Icing with Green Dots
-tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots
-tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots
-tile.cake_blocks.cookie_rocks.name=Cookie Rocks
+tile.cake_blocks.cake_block.name=Cake Block ##NEEDS TRANSLATE##
+tile.cake_blocks.cake_block_red_velvet.name=Red Velvet Cake Block ##NEEDS TRANSLATE##
+tile.cake_blocks.cake_block_chocolate.name=Chocolate Cake Block ##NEEDS TRANSLATE##
+tile.cake_blocks.white_icing_red_dots.name=White Icing with Red Dots ##NEEDS TRANSLATE##
+tile.cake_blocks.white_icing_green_dots.name=White Icing with Green Dots ##NEEDS TRANSLATE##
+tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots ##NEEDS TRANSLATE##
+tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots ##NEEDS TRANSLATE##
+tile.cake_blocks.cookie_rocks.name=Cookie Rocks ##NEEDS TRANSLATE##
 
-tile.white_sugar_cane.name=White Sugar Cane Block
+tile.white_sugar_cane.name=White Sugar Cane Block ##NEEDS TRANSLATE##
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Мрамор
@@ -514,10 +514,10 @@ tile.decorative_blocks.magnesium_broken_titled_floor.name=Сломанный м�
 tile.decorative_blocks.ash_bricks.name=Пепельные кирпичи
 tile.decorative_blocks2.white_block.name=Белый блок
 tile.decorative_blocks2.red_block.name=Красный блок
-tile.decorative_blocks2.blue_block.name=Blue Block
-tile.decorative_blocks2.light_blue_block.name=Light Blue Block
-tile.decorative_blocks2.yellow_block.name=Yellow Block
-tile.decorative_blocks2.green_block.name=Green Block
+tile.decorative_blocks2.blue_block.name=Blue Block ##NEEDS TRANSLATE##
+tile.decorative_blocks2.light_blue_block.name=Light Blue Block ##NEEDS TRANSLATE##
+tile.decorative_blocks2.yellow_block.name=Yellow Block ##NEEDS TRANSLATE##
+tile.decorative_blocks2.green_block.name=Green Block ##NEEDS TRANSLATE##
 
 #Stairs
 tile.mercury_stairs_surface.name=Ступеньки из поверхности Меркурия
@@ -977,53 +977,53 @@ item.tier4_un_prepared_space_suit_boots.name=Ботинки неподготов
 item.oxygen_tank_very_heavy_full.name=Очень большой кислородный баллон
 item.oxygen_tank_extremely_heavy_full.name=Черезвычайно большой кислородный баллон
 
-item.oxygen_tank_light_full_black.name=Light Oxygen Tank
-item.oxygen_tank_light_full_red.name=Light Oxygen Tank
-item.oxygen_tank_light_full_green.name=Light Oxygen Tank
-item.oxygen_tank_light_full_brown.name=Light Oxygen Tank
-item.oxygen_tank_light_full_blue.name=Light Oxygen Tank
-item.oxygen_tank_light_full_purple.name=Light Oxygen Tank
-item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank
-item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank
-item.oxygen_tank_light_full_gray.name=Light Oxygen Tank
-item.oxygen_tank_light_full_pink.name=Light Oxygen Tank
-item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank
-item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank
-item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank
-item.oxygen_tank_light_full_orange.name=Light Oxygen Tank
-item.oxygen_tank_light_full_white.name=Light Oxygen Tank
+item.oxygen_tank_light_full_black.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_red.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_green.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_brown.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_purple.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_pink.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_orange.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_white.name=Light Oxygen Tank ##NEEDS TRANSLATE##
 
-item.oxygen_tank_med_full_black.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_red.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_green.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank
-item.oxygen_tank_med_full_white.name=Medium Oxygen Tank
+item.oxygen_tank_med_full_black.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_red.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_green.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 
-item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank
-item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank
+item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
 
 #Radiation Items
 item.iodide_salt.name=Йодированная соль
@@ -1099,8 +1099,8 @@ item.geiger_counter.name=Счётчик Гейгера
 item.white_sugar_cane_item.name=White Sugar Cane
 geiger.counter.desc=Щелкните ПКМ, чтобы увидеть ваш текущий уровень радиации!
 geiger.counter.location.desc=Могут быть получены из подземелья Меркурия!
-item.chocolate_bar.name=Chocolate Bar
-item.caramel_bar.name=Caramel Bar
+item.chocolate_bar.name=Chocolate Bar ##NEEDS TRANSLATE##
+item.caramel_bar.name=Caramel Bar ##NEEDS TRANSLATE##
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Дегидратированная жаренная свинина
@@ -1269,3 +1269,107 @@ satellite.space_station.neptune=Космическая станция Непту
 satellite.space_station.pluto=Космическая станция Плутона
 satellite.space_station.eris=Космическая станция Эриды
 satellite.space_station.kepler22b=Космическая станция Кеплера 22b
+
+#------------------1.7.10 Only Section------------------
+#Venus Blocks
+tile.venus.surface.name=Venus Surface Rock ##NEEDS TRANSLATE##
+tile.venus.sub_surface.name=Venus Sub-Surface Rock ##NEEDS TRANSLATE##
+tile.venus.stone.name=Venus Stone ##NEEDS TRANSLATE##
+tile.venus.ore_iron.name=Venus Iron Ore ##NEEDS TRANSLATE##
+tile.venus.ore_tin.name=Venus Tin Ore ##NEEDS TRANSLATE##
+tile.venus.ore_copper.name=Venus Copper Ore ##NEEDS TRANSLATE##
+tile.venus.ore_carbon.name=Carbon Ore ##NEEDS TRANSLATE##
+tile.venus.stone_bricks.name=Venus Stone Bricks ##NEEDS TRANSLATE##
+tile.venus.carbon_block.name=Block of Carbon ##NEEDS TRANSLATE##
+tile.venus.titanium_block.name=Block of Titanium ##NEEDS TRANSLATE##
+tile.veuns.dungeon_brick.name=Venus Dungeon Brick ##NEEDS TRANSLATE##
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
+tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
+tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
+tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
+tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
+tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
+tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
+tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
+tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
+tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
+tile.radioactive_water_fluid.name=Radioactive Water ##NEEDS TRANSLATE##
+tile.infected_water_fluid.name=Infected Water ##NEEDS TRANSLATE##
+tile.methane_fluid.name=Liquid Methane ##NEEDS TRANSLATE##
+tile.nitrogen_ice_fluid.name=Liquid Nitrogen Ice ##NEEDS TRANSLATE##
+tile.liquid_hydrocarbon_fluid.name=Liquid Hydrocarbon ##NEEDS TRANSLATE##
+tile.liquid_chocolate_fluid.name=Liquid Chocolate ##NEEDS TRANSLATE##
+tile.liquid_caramel_fluid.name=Liquid Caramel ##NEEDS TRANSLATE##
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Venus Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Ceres Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Jupiter Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Saturn Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Uranus Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Neptune Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Stone Slab ##NEEDS TRANSLATE##
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=Mercury Stone Stairs ##NEEDS TRANSLATE##
+tile.venusStoneStairs.name=Venus Stone Stairs ##NEEDS TRANSLATE##
+tile.ceresStoneStairs.name=Ceres Stone Stairs ##NEEDS TRANSLATE##
+tile.jupiterStoneStairs.name=Jupiter Stone Stairs ##NEEDS TRANSLATE##
+tile.saturnStoneStairs.name=Saturn Stone Stairs ##NEEDS TRANSLATE##
+tile.uranusStoneStairs.name=Uranus Stone Stairs ##NEEDS TRANSLATE##
+tile.neptuneStoneStairs.name=Neptune Stone Stairs ##NEEDS TRANSLATE##
+tile.plutoStoneStairs.name=Pluto Stone Stairs ##NEEDS TRANSLATE##
+tile.erisStoneStairs.name=Eris Stone Stairs ##NEEDS TRANSLATE##
+
+tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs ##NEEDS TRANSLATE##
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeon Brick Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeon Brick Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeon Brick Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeon Brick Slab ##NEEDS TRANSLATE##
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs ##NEEDS TRANSLATE##
+tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeon Brick Stairs ##NEEDS TRANSLATE##
+tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs ##NEEDS TRANSLATE##
+tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs ##NEEDS TRANSLATE##
+tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TRANSLATE##
+
+#Planets
+planet.Venus=Venus ##NEEDS TRANSLATE##
+
+#Other Items
+item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##
+item.tier4_items.volcanic_shard.name=Volcanic Shard ##NEEDS TRANSLATE##
+item.tier4_items.ingot_volcanic.name=Volcanic Ingot ##NEEDS TRANSLATE##
+item.tier6_items.magnesium_shard.name=Magnesium Shard ##NEEDS TRANSLATE##
+item.tier4_items.ash.name=Ash ##NEEDS TRANSLATE##
+item.tier4_items.sledge_hammer.name=Sledge Hammer ##NEEDS TRANSLATE##
+item.tier4_items.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
+
+#MorePlanetsCompactBlocks&Items
+tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
+
+item.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
+item.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+
+currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
