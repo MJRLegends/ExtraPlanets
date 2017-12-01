@@ -51,11 +51,11 @@ public class FluidInfectedWater extends FluidBasic {
 
 	@Override
 	public String getStillTextures() {
-		return Constants.TEXTURE_PREFIX + "/fluids/" + "infected_water_still";
+		return Constants.TEXTURE_PREFIX + "fluids/" + "infected_water_still";
 	}
 
 	@Override
 	public String getFlowingTextures() {
-		return Constants.TEXTURE_PREFIX + "/fluids/" + "infected_water_flow";
+		return Constants.TEXTURE_PREFIX + "fluids/" + "infected_water_flow";
 	}
 }

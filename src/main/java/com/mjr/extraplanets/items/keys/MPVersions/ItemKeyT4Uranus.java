@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemKeyT4Uranus extends Item implements IKeyItem
 {
-	public static String[] keyTypes = new String[] { "T4Uranus" };
+	public static String[] keyTypes = new String[] { "T4_uranus" };
 	public IIcon[] keyIcons = new IIcon[1];
 
 	public ItemKeyT4Uranus()

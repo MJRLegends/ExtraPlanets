@@ -51,11 +51,11 @@ public class FluidLiquidCaramel extends FluidBasic {
 
 	@Override
 	public String getStillTextures() {
-		return Constants.TEXTURE_PREFIX + "/fluids/" + "liquid_caramel_still";
+		return Constants.TEXTURE_PREFIX + "fluids/" + "liquid_caramel_still";
 	}
 
 	@Override
 	public String getFlowingTextures() {
-		return Constants.TEXTURE_PREFIX + "/fluids/" + "liquid_caramel_flow";
+		return Constants.TEXTURE_PREFIX + "fluids/" + "liquid_caramel_flow";
 	}
 }

@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemKeyT5Neptune extends Item implements IKeyItem
 {
-	public static String[] keyTypes = new String[] { "T5Neptune" };
+	public static String[] keyTypes = new String[] { "T5_neptune" };
 	public IIcon[] keyIcons = new IIcon[1];
 
 	public ItemKeyT5Neptune()

@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedGiantSpider extends RenderLiving {
 	private static final ResourceLocation spiderEyesTextures = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/model/spider_eyes.png");
-	private static final ResourceLocation spiderTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/entity/giantSpider.png");
+	private static final ResourceLocation spiderTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/entity/giant_spider.png");
 	private static final ResourceLocation powerTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/model/power.png");
 
 	private final ModelBase model = new ModelEvolvedGiantSpider(0.2F);

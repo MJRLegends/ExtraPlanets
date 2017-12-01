@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier7ItemsMP extends Item {
-	public static final String[] names = { "compressedCrystal", "ingotCrystal", "compressedReinforcedCrystal", "whiteGem"  };
+	public static final String[] names = { "compressed_crystal", "ingot_crystal", "compressed_reinforced_crystal", "white_gem"  };
 
 	protected IIcon[] icons = new IIcon[ItemTier7ItemsMP.names.length];
 
@@ -42,7 +42,7 @@ public class ItemTier7ItemsMP extends Item {
 		int i = 0;
 
 		for (final String name : ItemTier7ItemsMP.names) {
-			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5).replace("_items", ".") + name);
 		}
 	}
 

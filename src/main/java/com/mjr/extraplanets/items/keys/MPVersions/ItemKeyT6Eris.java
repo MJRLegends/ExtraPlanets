@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemKeyT6Eris extends Item implements IKeyItem
 {
-	public static String[] keyTypes = new String[] { "T6Eris" };
+	public static String[] keyTypes = new String[] { "T6_eris" };
 	public IIcon[] keyIcons = new IIcon[1];
 
 	public ItemKeyT6Eris()

@@ -1300,4 +1300,15 @@ item.tier4_items.ash.name=Asche
 item.tier4_items.sledge_hammer.name=Vorschlaghammer
 item.tier4_items.grinding_wheel.name=Schleifscheibe
 
+#MorePlanetsCompactBlocks&Items
+tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest
+tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest
+tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest
+tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest
+
+item.T4_saturn.name=Tier 4 Dungeon Key
+item.T4_uranus.name=Tier 4 Dungeon Key
+item.T5_neptune.name=Tier 5 Dungeon Key
+item.T6_eris.name=Tier 6 Dungeon Key
+
 currently.unused.name=Zur Zeit unbenutzt!

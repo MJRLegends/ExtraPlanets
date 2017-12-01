@@ -665,7 +665,7 @@ item.wafer.white_gem_wafer.name=Oblea de gema blanca
 
 #Buckets
 item.bucket_glowstone.name=Cubeta de piedra luminosa
-tile.salt.name=Liquid Crystallized Water
+item.bucket_salt.name=Liquid Crystallized Water
 item.bucket_magma.name=Cubeta de magma
 item.bucket_frozen_water.name=Cubeta de agua congelada
 item.bucket_nitrogen.name=Cubeta de nitrógeno
@@ -1299,5 +1299,16 @@ item.tier6_items.magnesium_shard.name=Magnesium Shard
 item.tier4_items.ash.name=Ash
 item.tier4_items.sledge_hammer.name=Sledge Hammer
 item.tier4_items.grinding_wheel.name=Grinding Wheel
+
+#MorePlanetsCompactBlocks&Items
+tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest
+tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest
+tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest
+tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest
+
+item.T4_saturn.name=Tier 4 Dungeon Key
+item.T4_uranus.name=Tier 4 Dungeon Key
+item.T5_neptune.name=Tier 5 Dungeon Key
+item.T6_eris.name=Tier 6 Dungeon Key
 
 currently.unused.name=Currently Unused!

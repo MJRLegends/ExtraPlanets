@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier6ItemsMP extends Item {
-	public static final String[] names = { "compressedMagnesium", "ingotMagnesium" };
+	public static final String[] names = { "compressed_magnesium", "ingot_magnesium" };
 
 	protected IIcon[] icons = new IIcon[ItemTier6ItemsMP.names.length];
 
@@ -42,7 +42,7 @@ public class ItemTier6ItemsMP extends Item {
 		int i = 0;
 
 		for (final String name : ItemTier6ItemsMP.names) {
-			this.icons[i++] = iconRegister.registerIcon(this.getIconString() + "." + name);
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5).replace("_items", ".") + name);
 		}
 	}
 

@@ -51,11 +51,11 @@ public class FluidNitrogenIce extends FluidBasic {
 
 	@Override
 	public String getStillTextures() {
-		return Constants.TEXTURE_PREFIX + "/fluids/" + "nitrogen_ice_still";
+		return Constants.TEXTURE_PREFIX + "fluids/" + "nitrogen_ice_still";
 	}
 
 	@Override
 	public String getFlowingTextures() {
-		return Constants.TEXTURE_PREFIX + "/fluids/" + "nitrogen_ice_flow";
+		return Constants.TEXTURE_PREFIX + "fluids/" + "nitrogen_ice_flow";
 	}
 }

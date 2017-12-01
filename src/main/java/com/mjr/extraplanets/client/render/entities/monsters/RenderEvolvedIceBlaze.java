@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedIceBlaze extends RenderLiving
 {
-	private static final ResourceLocation blazeTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/iceBlaze.png");
+	private static final ResourceLocation blazeTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/ice_blaze.png");
 	private int field_77068_a;
 
 	public RenderEvolvedIceBlaze()
