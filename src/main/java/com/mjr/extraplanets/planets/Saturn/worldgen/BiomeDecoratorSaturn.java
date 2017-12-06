@@ -87,12 +87,10 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 				}
 			}
 			if (this.rand.nextInt(5) == 1) {
-				BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.posX + (this.rand.nextInt(16) + 8), 0, this.posZ + (this.rand.nextInt(16) + 8)));
-				new WorldGenNuclearPile().generate(this.currentWorld, this.rand, blockpos);
+				WorldGenHelper.generateStructure(new WorldGenNuclearPile(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 			if (this.rand.nextInt(5) == 1) {
-				BlockPos blockpos = this.currentWorld.getTopSolidOrLiquidBlock(new BlockPos(this.posX + (this.rand.nextInt(16) + 8), 0, this.posZ + (this.rand.nextInt(16) + 8)));
-				new WorldGenSlimeTree().generate(this.currentWorld, this.rand, blockpos);
+				WorldGenHelper.generateStructure(new WorldGenSlimeTree(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
