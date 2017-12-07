@@ -266,7 +266,6 @@ public class ExtraPlanets {
 
 		// Proxy PreInit Method
 		ExtraPlanets.proxy.preInit(event);
-
 	}
 
 	@EventHandler
@@ -324,8 +323,9 @@ public class ExtraPlanets {
 		// Register MC MultiPart Compatibility
 		MCMultiPartCompatibility.init();
 
+		// Register Custom Recipe Type
 		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
-		
+
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
 	}
