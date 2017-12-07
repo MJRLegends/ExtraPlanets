@@ -50,7 +50,7 @@ public class VehicleCharger extends BlockAdvancedTile {
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
 		this.iconInput = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_input");
 		this.iconMachineSide = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_blank");
-		this.iconFront = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "machine_power");
+		this.iconFront = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "machine_vehicle_charger");
 		this.iconFuelInput = par1IconRegister.registerIcon(GalacticraftCore.TEXTURE_PREFIX + "machine_blank");
 	}
 
