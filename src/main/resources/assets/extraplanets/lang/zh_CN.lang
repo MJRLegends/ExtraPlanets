@@ -1083,6 +1083,9 @@ item.tools.grinding_wheel.name=砂轮
 item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
 item.tools.filter.name=Filter ##NEEDS TRANSLATE##
 
+#Other Blocks
+tile.slime_block.name=Slime Block
+
 #Other Items
 item.apple_diamond.name=钻石苹果
 item.apple_iron.name=铁苹果
@@ -1153,6 +1156,8 @@ entity.extraplanets.EvolvedBlaze.name=烈焰人（进化体）
 entity.extraplanets.EvolvedBlueCreeper.name=蓝色爬行者（进化体）
 entity.extraplanets.EvolvedRedCreeper.name=红色爬行者（进化体）
 entity.extraplanets.EvolvedPowerSkeleton.name=骷髅（进化体）
+entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman ##NEEDS TRANSLATE##
 
 #Achievements
 achievement.mercury_planet=登陆水星！
@@ -1367,9 +1372,9 @@ tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
 
-item.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
-item.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
 
 currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
