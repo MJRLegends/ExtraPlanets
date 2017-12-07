@@ -59,6 +59,8 @@ public class ExtraPlanets_Planets {
 	public static Planet KEPLER69B;
 	public static Planet KEPLER69C;
 
+	public static Planet test;
+
 	public static void init() {
 		initializePlanets();
 		registerPlanets();
@@ -265,6 +267,11 @@ public class ExtraPlanets_Planets {
 				KEPLER69C.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 				KEPLER69C.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler69c.png"));
 			}
+		}
+		test = RegisterHelper.registerUnreachablePlanet("test", ExtraPlanets_SolarSystems.test);
+		if (test != null) {
+			test.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+			test.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/test.png"));
 		}
 	}
 
