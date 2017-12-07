@@ -969,24 +969,6 @@ public class WorldGenVolcano extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 10, y + 5, z + 16), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 11, y + 5, z + 16), ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 12, y + 5, z + 16), ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 13, y + 5, z + 16), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 14, y + 5, z + 16), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 15, y + 5, z + 16), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 8, y + 5, z + 17), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 9, y + 5, z + 17), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 10, y + 5, z + 17), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 14, y + 5, z + 17), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 15, y + 5, z + 17), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 16, y + 5, z + 17), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 17, y + 5, z + 17), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 8, y + 5, z + 18), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 9, y + 5, z + 18), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 10, y + 5, z + 18), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 14, y + 5, z + 18), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 15, y + 5, z + 18), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 16, y + 5, z + 18), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 9, y + 5, z + 19), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 10, y + 5, z + 19), ExtraPlanets_Fluids.MAGMA.getDefaultState(), 3);
 		return true;
 
 	}
