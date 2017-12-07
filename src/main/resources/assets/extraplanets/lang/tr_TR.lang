@@ -1153,6 +1153,8 @@ entity.extraplanets.EvolvedBlaze.name=Evrimleşmiş Blaze
 entity.extraplanets.EvolvedBlueCreeper.name=Evrimleşmiş Mavi Creeper
 entity.extraplanets.EvolvedRedCreeper.name=Evrimleşmiş Kırmızı Creeper
 entity.extraplanets.EvolvedPowerSkeleton.name=Evrimleşmiş Güç İskeleti
+entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman ##NEEDS TRANSLATE##
 
 #Achievements
 achievement.mercury_planet=Merkür İçin Küçük Benim İçin Büyük!
@@ -1352,6 +1354,9 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TR
 #Planets
 planet.Venus=Venus ##NEEDS TRANSLATE##
 
+#Other Blocks
+tile.slime_block.name=Slime Block
+
 #Other Items
 item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##
 item.tier4_items.volcanic_shard.name=Volcanic Shard ##NEEDS TRANSLATE##
@@ -1367,9 +1372,9 @@ tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
 
-item.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
-item.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
 
 currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
