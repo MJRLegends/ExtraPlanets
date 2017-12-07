@@ -5,9 +5,11 @@ A Galacticraft Addon, Made By MJRLegends
 
 **Change Log and Future Plans:** https://github.com/MJRLegends/ExtraPlanets/blob/master/CHANGELOG%20AND%20FUTURE_PLANS.txt
 
-## Translators:
+## Translators Information:
 
 **If you would like to help then open up one of the links below and if the file doesn't exist for that language already then please take the en_US.lang file and translate from that one.**
+
+**Any lines that need translating within the current lang files have the tag "##NEEDS TRANSLATE##"**
 
 **1.7.10, 1.8.9, 1.10.2, 1.11.2:**
 https://github.com/MJRLegends/ExtraPlanets/tree/master/src/main/resources/assets/extraplanets/lang
