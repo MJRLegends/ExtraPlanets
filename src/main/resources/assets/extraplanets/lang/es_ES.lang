@@ -1082,6 +1082,9 @@ item.tools.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
 item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
 item.tools.filter.name=Filter ##NEEDS TRANSLATE##
 
+#Other Blocks
+tile.slime_block.name=Slime Block
+
 #Other Items
 item.apple_diamond.name=Manzana de diamante
 item.apple_iron.name=Iron Apple
@@ -1152,6 +1155,8 @@ entity.extraplanets.EvolvedBlaze.name=Blaze evolucionado
 entity.extraplanets.EvolvedBlueCreeper.name=Creeper azúl evolucionado
 entity.extraplanets.EvolvedRedCreeper.name=Creeper rojo evolucionado
 entity.extraplanets.EvolvedPowerSkeleton.name=Esqueleto poderoso evolucionado
+entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman ##NEEDS TRANSLATE##
 
 #Achievements
 achievement.mercury_planet=¡Aterriza en Mercurio!
@@ -1366,9 +1371,9 @@ tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
 
-item.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
-item.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
 
 currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##

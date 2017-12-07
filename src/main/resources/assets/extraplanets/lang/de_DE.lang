@@ -666,7 +666,7 @@ item.wafer.white_gem_wafer.name=WeißerEdelstein-Wafer
 
 #Buckets
 item.bucket_glowstone.name=GlowstoneEimer
-tile.salt.name=Flüssiges KristallisiertesWasser
+item.bucket_salt.name=Flüssiges KristallisiertesWasser
 item.bucket_magma.name=Magma Eimer
 item.bucket_frozen_water.name=Gefrorener Wasser Eimer
 item.bucket_nitrogen.name=Kohlenstoff Eimer
@@ -1024,6 +1024,9 @@ item.tools.grinding_wheel.name=Schleifscheibe
 item.tools.mesh.name=Netz
 item.tools.filter.name=Filter
 
+#Other Blocks
+tile.slime_block.name=Slime Block
+
 #Other Items
 item.apple_diamond.name=Diamant Apfel
 item.apple_iron.name=Eisen Apfel
@@ -1093,6 +1096,8 @@ entity.extraplanets.EvolvedBlaze.name=Entwickelte Lohe
 entity.extraplanets.EvolvedBlueCreeper.name=Entwickelter Blauer Creeper
 entity.extraplanets.EvolvedRedCreeper.name=Entwickelter Roter Creeper
 entity.extraplanets.EvolvedPowerSkeleton.name=Entwickeltes Macht Skelett
+entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman ##NEEDS TRANSLATE##
 
 #Achievements
 achievement.mercury_planet=Lande auf Merkur!
@@ -1400,9 +1405,9 @@ tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
 
-item.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
-item.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
 
 currently.unused.name=Zur Zeit unbenutzt!
