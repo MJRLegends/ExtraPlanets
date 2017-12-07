@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
 
 public class GenLayerIoBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { IoBiomes.io, IoBiomes.ioAshLands};
+	private static final Biome[] biomes = new Biome[] { IoBiomes.io, IoBiomes.ioAshLands, IoBiomes.ioBurningPlains};
 
 	public GenLayerIoBiomes(long l, GenLayer parent) {
 		super(l);
