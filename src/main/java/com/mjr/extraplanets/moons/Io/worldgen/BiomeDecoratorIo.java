@@ -2,10 +2,17 @@ package com.mjr.extraplanets.moons.Io.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
+import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.world.features.WorldGenVolcano;
 
 public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 
@@ -15,7 +22,11 @@ public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 	private WorldGenerator gravelGen;
 	private WorldGenerator fossilsGen;
 
+	private int LakesPerChunk = 5;
+
 	private World currentWorld;
+
+	private boolean isDecorating = false;
 
 	public BiomeDecoratorIo() {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.IO_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.IO_BLOCKS, 2);
@@ -24,8 +35,7 @@ public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.IO_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.IO_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.IO_BLOCKS, 1);
 
-		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,
-		// boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -40,13 +50,33 @@ public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
+		if (isDecorating)
+			return;
+		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
-		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
-		// minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
+
+		if (this.getCurrentWorld().getBiomeGenForCoords(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenIOBurningPlains) {
+			for (int i = 0; i < LakesPerChunk * 2; i++) {
+				if (this.rand.nextInt(10) == 0) {
+					WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState());
+				}
+			}
+			if (this.rand.nextInt(5) == 1) {
+				WorldGenHelper.generateStructure(new WorldGenVolcano(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
+			}
+		}
+
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
+
+		isDecorating = false;
+
 	}
 }
