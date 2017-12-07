@@ -12,6 +12,7 @@ public class ExtraPlanets_SolarSystems {
 	public static SolarSystem kepler47;
 	public static SolarSystem kepler62;
 	public static SolarSystem kepler69;
+	public static SolarSystem test;
 
 	public static void init() {
 		initializeSolarSystems();
@@ -40,6 +41,11 @@ public class ExtraPlanets_SolarSystems {
 			starSol4.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler69.setMainStar(starSol4);
 		}
+		
+		test = new SolarSystem("test", "whirlpool").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
+		Star starSol5 = (Star) new Star("test").setParentSolarSystem(test).setTierRequired(-1);
+		starSol5.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
+		test.setMainStar(starSol5);
 	}
 
 	private static void registerSolarSystems() {
@@ -49,5 +55,6 @@ public class ExtraPlanets_SolarSystems {
 			GalaxyRegistry.registerSolarSystem(kepler62);
 			GalaxyRegistry.registerSolarSystem(kepler69);
 		}
+		GalaxyRegistry.registerSolarSystem(test);
 	}
 }
