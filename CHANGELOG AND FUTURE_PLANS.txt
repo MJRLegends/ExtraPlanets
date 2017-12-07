@@ -15,6 +15,16 @@
 
 
 ===========================================Released Updates===========================================
+v0.4.8
+*More fixes for Ender Zoo mod
+*Fixes for Densifier JEI support 
+*Moved classes around to match MC 1.7.10 version
+*Clean up
+
+v0.4.7
+*Fixed issue #129
+*Fixed Custom Light, Medium, Heavy tanks having 2x the amount of oxygen they should have
+
 v0.4.6
 *Few small fixes
 *Added de_DE.lang (Thanks to Suum)
