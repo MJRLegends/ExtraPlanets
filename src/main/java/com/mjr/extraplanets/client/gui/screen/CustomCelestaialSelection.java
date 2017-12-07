@@ -182,8 +182,11 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					}
 
 					if (alpha != 0) {
+						if(!this.isZoomed())
+							this.drawCenteredString(fontRendererObj, planet.getLocalizedName(), 0, 5, 14737632);
 						CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(planet, planet.getBodyIcon(), 12);
 						MinecraftForge.EVENT_BUS.post(preEvent);
+						
 
 						GL11.glColor4f(1, 1, 1, alpha);
 						if (preEvent.celestialBodyTexture != null) {
@@ -192,8 +195,8 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 						if (!preEvent.isCanceled()) {
 							int size = getWidthForCelestialBodyStatic(planet);
-							this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
 							matrixMap.put(planet, worldMatrix1);
+							this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
 						}
 
 						CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(planet);
@@ -302,7 +305,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 		return matrixMap;
 	}
-	
+
 	@Override
 	public void drawCircles() {
 		GL11.glColor4f(1, 1, 1, 1);
@@ -408,15 +411,10 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 	}
 
 	public boolean drawCircle(CelestialBody body, int count, float sin, float cos) {
-		if (body.getUnlocalizedName().contains("planet")) {
+		if (!this.isZoomed() && body.getUnlocalizedName().contains("planet")) {
 			if (((Planet) body).getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
 				return false;
-		} else if (body.getUnlocalizedName().contains("moon")) {
-			if (((Moon) body).getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
-				return false;
-		} else if (body.getUnlocalizedName().contains("satellite"))
-			if (((Satellite) body).getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
-				return false;
+		}
 		float x = this.getScale(body);
 		float y = 0;
 
@@ -513,12 +511,15 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 			if (this.selectedBody != null) {
 				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
-				int yOffset = 35;
+				int yOffset = 27;
 				int widthSizeOffset = 75;
-				int xOffset = 100 + (GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE);
+				int xOffset = (this.width - 270) - (GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE);
 				this.drawTexturedModalRect(xOffset, yOffset, 93 + widthSizeOffset, 4, 159, 102, 93, 4, false, false);
 				for (int barY = 0; barY < 25; ++barY) {
 					this.drawTexturedModalRect(xOffset, yOffset + barY * this.fontRenderer.FONT_HEIGHT + 4, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT, 159, 106, 93, this.fontRenderer.FONT_HEIGHT, false, false);
+				}
+				for (int barx = 0; barx < 1; ++barx) {
+					this.drawTexturedModalRect(xOffset + barx, yOffset * this.fontRendererObj.FONT_HEIGHT + 10, 93 + widthSizeOffset, this.fontRendererObj.FONT_HEIGHT / 2, 159, 106, 1, this.fontRendererObj.FONT_HEIGHT, false, false);
 				}
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
@@ -618,7 +619,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 			for (int i = 0; i < this.galaxies.size(); i++) {
 				String child = this.galaxies.get(i);
-				int xOffset = 130;
+				int xOffset = 100;
 
 				scale = (int) Math.min(95.0F, Math.max(0.0F, (this.ticksSinceMenuOpen * 25.0F) - 95 * i));
 
@@ -657,7 +658,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 		int yPos;
 
 		for (int i = 0; i < this.galaxies.size(); i++) {
-			int xOffset = 130;
+			int xOffset = 100;
 
 			xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset;
 			yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14;
