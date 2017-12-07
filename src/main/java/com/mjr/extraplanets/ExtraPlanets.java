@@ -496,6 +496,7 @@ public class ExtraPlanets {
 		if (Config.IO) {
 			Biome.registerBiome(Config.IO_BIOME_ID, IoBiomes.io.getBiomeName(), IoBiomes.io);
 			Biome.registerBiome(Config.IO_ASH_LANDS_BIOME_ID, IoBiomes.ioAshLands.getBiomeName(), IoBiomes.ioAshLands);
+			Biome.registerBiome(Config.IO_BURNING_PLAINS_BIOME_ID, IoBiomes.ioBurningPlains.getBiomeName(), IoBiomes.ioBurningPlains);
 		}
 		if (Config.OBERON) {
 			Biome.registerBiome(Config.OBERON_BIOME_ID, OberonBiomes.oberon.getBiomeName(), OberonBiomes.oberon);

@@ -36,9 +36,9 @@ public class WorldGenHelper {
 		int y = world.getTopSolidOrLiquidBlock(new BlockPos(x, 0, z)).getY() - 2;
 		new WorldGenCustomLake(fluid).generate(world, rand, new BlockPos(x, y, z), block);
 	}
-
-	public static boolean checkValidSpawn(World world, BlockPos position, int size) {
-		if (!world.isAreaLoaded(position, size))
+	
+	public static boolean checkValidSpawn(World world, BlockPos position, int checkSize, int loadedCheckSize) {
+		if (!world.isAreaLoaded(position, loadedCheckSize))
 			return false;
 
 		for (position = position.add(0, 0, 0); position.getY() > 5 && world.isAirBlock(position) || world.getBlockState(position).getMaterial().isLiquid(); position = position.down()) {
@@ -49,13 +49,17 @@ public class WorldGenHelper {
 			return false;
 		}
 
-		for (int i = -size; i <= size; ++i) {
-			for (int j = -size; j <= size; ++j) {
+		for (int i = -checkSize; i <= checkSize; ++i) {
+			for (int j = -checkSize; j <= checkSize; ++j) {
 				if (world.isAirBlock(position.add(i, -1, j)) && world.isAirBlock(position.add(i, -2, j)) || world.getBlockState(position.add(i, -1, j)).getMaterial().isLiquid() && world.getBlockState(position.add(i, -2, j)).getMaterial().isLiquid()) {
 					return false;
 				}
 			}
 		}
 		return true;
+	}
+	
+	public static boolean checkValidSpawn(World world, BlockPos position, int size) {
+		return checkValidSpawn(world, position, size, size);
 	}
 }
