@@ -14,6 +14,16 @@
 
 
 ===========================================Released Updates===========================================
+v0.8.4
+*More fixes for Ender Zoo mod
+*Fixes for Triton Ice Sea 
+*Fixes for Densifier JEI support 
+*Fixed Densifier JEI support output not showing 
+*Moved classes around to match MC 1.7.10 version
+
+v0.8.3
+*Fixed issue #129
+
 v0.8.2
 *Fixed Custom Light, Medium, Heavy tanks having 2x the amount of oxygen they should have
 *Added de_DE.lang (Thanks to Suum)
