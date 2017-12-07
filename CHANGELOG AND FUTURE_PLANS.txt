@@ -8,6 +8,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.8.9
+*Added de_DE.lang (Thanks to Suum)
+*Fixes for missing textures
+*Added  ##NEEDS TRANSLATE## tags to all lines that need translating
+*Update to match MC 1.10.2 lang files
+*Fixed Vehicle Charger front texture
+*Updated lang files to fix missing entries
+
 v1.8.8
 *Fixed some events not running
 *Started work on changing all textures for items and blocks to support files from 1.8+
