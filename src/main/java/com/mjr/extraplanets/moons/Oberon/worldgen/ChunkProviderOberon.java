@@ -15,7 +15,7 @@ import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderOberon extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorOberon ioBiomeDecorator = new BiomeDecoratorOberon();
-	private final BiomeDecoratorOberonOther ioBiomeDecorator2 = new BiomeDecoratorOberonOther();
+	//private final BiomeDecoratorOberonOther ioBiomeDecorator2 = new BiomeDecoratorOberonOther();
 
 	private final MapGenCaveOberon caveGenerator = new MapGenCaveOberon();
 

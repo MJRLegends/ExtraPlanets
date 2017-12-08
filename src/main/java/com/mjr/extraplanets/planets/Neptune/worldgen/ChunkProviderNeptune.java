@@ -22,7 +22,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 	private final MapGenVillageNeptune villageGenerator = new MapGenVillageNeptune();
 
 	private final BiomeDecoratorNeptune neptuneBiomeDecorator = new BiomeDecoratorNeptune();
-	private final BiomeDecoratorNeptuneOther neptuneBiomeDecorator2 = new BiomeDecoratorNeptuneOther();
+	//private final BiomeDecoratorNeptuneOther neptuneBiomeDecorator2 = new BiomeDecoratorNeptuneOther();
 
 	private final MapGenCaveNeptune caveGenerator = new MapGenCaveNeptune();
 

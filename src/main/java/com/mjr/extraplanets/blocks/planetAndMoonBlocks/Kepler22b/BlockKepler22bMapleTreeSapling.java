@@ -31,6 +31,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 
+@SuppressWarnings("deprecation")
 public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowable, IPlantable {
 	public static final PropertyEnum<BlockKepler22bMapleTreeSapling.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeSapling.EnumType> create("variant", BlockKepler22bMapleTreeSapling.EnumType.class);
 	public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);

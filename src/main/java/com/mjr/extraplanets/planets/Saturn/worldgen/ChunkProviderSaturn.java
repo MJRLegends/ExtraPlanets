@@ -22,7 +22,7 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 	private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
 
 	private final BiomeDecoratorSaturn saturnBiomeDecorator = new BiomeDecoratorSaturn();
-	private final BiomeDecoratorSaturnOther saturnBiomeDecorator2 = new BiomeDecoratorSaturnOther();
+	//private final BiomeDecoratorSaturnOther saturnBiomeDecorator2 = new BiomeDecoratorSaturnOther();
 
 	private final MapGenCaveSaturn caveGenerator = new MapGenCaveSaturn();
 
