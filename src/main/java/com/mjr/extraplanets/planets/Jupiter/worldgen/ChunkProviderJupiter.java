@@ -17,6 +17,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
@@ -24,7 +25,7 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 
 	private final BiomeDecoratorJupiter jupiterBiomeDecorator = new BiomeDecoratorJupiter();
 	private final BiomeDecoratorJupiterOther jupiterBiomeDecorator2 = new BiomeDecoratorJupiterOther();
-
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 	private final MapGenCaveJupiter caveGenerator = new MapGenCaveJupiter();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonJupiter(new DungeonConfiguration(ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.DUNGEON_BRICK), 30,
@@ -50,6 +51,7 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this.worldObj, cX, cZ, primer);
 		this.dungeonGenerator.generate(this.worldObj, cX, cZ, primer);
 	}
 
