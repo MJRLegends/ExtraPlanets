@@ -5,7 +5,9 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTorchBase;
+import net.minecraft.block.BlockColored;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
@@ -74,7 +76,7 @@ public class StructureComponentVillageTorch extends StructureComponentVillage
         this.setBlockState(par1World, Blocks.DARK_OAK_FENCE.getDefaultState(), 1, 0, 0, par3StructureBoundingBox);
         this.setBlockState(par1World, Blocks.DARK_OAK_FENCE.getDefaultState(), 1, 1, 0, par3StructureBoundingBox);
         this.setBlockState(par1World, Blocks.DARK_OAK_FENCE.getDefaultState(), 1, 2, 0, par3StructureBoundingBox);
-        this.setBlockState(par1World, Blocks.WOOL.getStateFromMeta(15), 1, 3, 0, par3StructureBoundingBox);
+        this.setBlockState(par1World, Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLACK), 1, 3, 0, par3StructureBoundingBox);
         boolean flag = this.getCoordBaseMode() == EnumFacing.EAST || this.getCoordBaseMode() == EnumFacing.NORTH;
         this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode().rotateY()), flag ? 2 : 0, 3, 0, par3StructureBoundingBox);
         this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode()), 1, 3, 1, par3StructureBoundingBox);
