@@ -65,7 +65,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 			this.storage.setCapacity(90000);
 		}
 		this.setTierGC(tier);
-		this.initialised = true;
+		this.setInitialised(true);
 	}
 
 	@Override
@@ -284,7 +284,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 			}
 		}
 
-		this.initialised = false;
+		this.setInitialised(false);
 	}
 
 	@Override
@@ -451,5 +451,13 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 		}
 
 		return direction == this.getElectricalOutputDirectionMain();
+	}
+
+	public boolean isInitialised() {
+		return initialised;
+	}
+
+	public void setInitialised(boolean initialised) {
+		this.initialised = initialised;
 	}
 }
