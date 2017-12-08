@@ -159,7 +159,6 @@ public class SkyProviderSaturn extends IRenderHandler {
 		tessellator1.startDrawing(GL11.GL_TRIANGLE_FAN);
 		tessellator1.setColorRGBA_F(f6 * f18, f7 * f18, f8 * f18, afloat[3] * 2 / f18);
 		tessellator1.addVertex(0.0D, 100.0D, 0.0D);
-		byte b0 = 16;
 		tessellator1.setColorRGBA_F(afloat[0] * f18, afloat[1] * f18, afloat[2] * f18, 0.0F);
 
 		// Render sun aura
@@ -402,11 +401,7 @@ public class SkyProviderSaturn extends IRenderHandler {
 
 		var2.draw();
 	}
-
-	private Vec3 getCustomSkyColor() {
-		return Vec3.createVectorHelper(0.26796875D, 0.1796875D, 0.0D);
-	}
-
+	
 	public float getSkyBrightness(float par1) {
 		final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
 		float var3 = 1.0F - (MathHelper.sin(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);

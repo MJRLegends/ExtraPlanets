@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient;
 import micdoodle8.mods.galacticraft.core.network.IPacket;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
@@ -104,6 +103,7 @@ public class PacketSimple extends Packet implements IPacket {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void handleClientSide(EntityPlayer player) {
@@ -141,8 +141,6 @@ public class PacketSimple extends Packet implements IPacket {
 		if (playerBase == null) {
 			return;
 		}
-
-		GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
 		switch (this.type) {
 		case S_OPEN_FUEL_GUI:

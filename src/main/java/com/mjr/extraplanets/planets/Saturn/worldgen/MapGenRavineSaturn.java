@@ -133,8 +133,6 @@ public class MapGenRavineSaturn extends MapGenBase
 
                                 if (i3 >= 0 && i3 < 256)
                                 {
-                                    Block block = p_151540_5_[j3];
-
                                     if (isOceanBlock(p_151540_5_, j3, k2, i3, l2, p_151540_3_, p_151540_4_))
                                     {
                                         flag2 = true;
@@ -169,8 +167,6 @@ public class MapGenRavineSaturn extends MapGenBase
 
                                         if ((d13 * d13 + d14 * d14) * this.field_75046_d[l3] + d11 * d11 / 6.0D < 1.0D)
                                         {
-                                            Block block1 = p_151540_5_[k3];
-
                                             if (isTopBlock(p_151540_5_, k3, k2, l3, j3, p_151540_3_, p_151540_4_))
                                             {
                                                 flag = true;

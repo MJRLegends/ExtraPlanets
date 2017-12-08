@@ -131,7 +131,6 @@ public class MapGenCaveNeptune extends MapGenBaseMeta
 						i3 = 16;
 					}
 
-					final boolean flag2 = false;
 					int j3;
 					for (j3 = l1; j3 < i2; ++j3)
 					{
