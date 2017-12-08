@@ -59,6 +59,7 @@ import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeWrapper;
 
 @JEIPlugin
 public class ExtraPlanetsJEI extends BlankModPlugin {
+	@SuppressWarnings("deprecation")
 	@Override
 	public void register(@Nonnull IModRegistry registry) {
 		if (Config.JEI_SUPPORT) {
