@@ -15,6 +15,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonLargeMountain;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
@@ -71,11 +72,11 @@ public class OberonBiomes extends Biome {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
 				if (iblockstate2.getMaterial() == Material.AIR) {
 					j = -1;
-				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(2).getBlock()) {
+				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE).getBlock()) {
 					if (j == -1) {
 						if (k <= 0) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE);
 						} else if (j1 >= 63 - 4 && j1 <= 63 + 1) {
 							iblockstate = this.topBlock;
 							iblockstate1 = this.fillerBlock;
@@ -95,7 +96,7 @@ public class OberonBiomes extends Biome {
 							chunk.setBlockState(i1, j1, l, iblockstate);
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE);
 							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);

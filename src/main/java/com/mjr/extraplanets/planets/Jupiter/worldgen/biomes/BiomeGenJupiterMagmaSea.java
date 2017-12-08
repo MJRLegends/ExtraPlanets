@@ -8,6 +8,7 @@ import net.minecraftforge.common.BiomeDictionary;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 
 public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
@@ -16,7 +17,7 @@ public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
 		super(properties);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(1);
+		this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE);
 	}
 
 	@Override

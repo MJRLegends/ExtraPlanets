@@ -11,17 +11,18 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderOberon extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorOberon ioBiomeDecorator = new BiomeDecoratorOberon();
-	//private final BiomeDecoratorOberonOther ioBiomeDecorator2 = new BiomeDecoratorOberonOther();
+	// private final BiomeDecoratorOberonOther ioBiomeDecorator2 = new BiomeDecoratorOberonOther();
 
 	private final MapGenCaveOberon caveGenerator = new MapGenCaveOberon();
 
 	public ChunkProviderOberon(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.stoneBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(2);
+		this.stoneBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE);
 		this.waterBlock = Blocks.AIR.getDefaultState();
 		this.seaLevel = 50;
 	}

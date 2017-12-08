@@ -115,6 +115,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		return false;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void makeFakeBlock(World worldObj, BlockPos pos, BlockPos mainBlock, int meta) {
 		worldObj.setBlockState(pos, GCBlocks.fakeBlock.getStateFromMeta(meta), meta == 5 ? 3 : 0);
 		worldObj.setTileEntity(pos, new TileEntityMulti(mainBlock));

@@ -32,7 +32,7 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 
 	public ChunkProviderJupiter(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.stoneBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(2);
+		this.stoneBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONE);
 		this.waterBlock = ExtraPlanets_Fluids.MAGMA.getDefaultState();
 	}
 

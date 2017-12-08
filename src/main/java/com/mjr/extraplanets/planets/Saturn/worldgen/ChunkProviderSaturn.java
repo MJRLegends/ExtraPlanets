@@ -31,7 +31,7 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 
 	public ChunkProviderSaturn(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.stoneBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getStateFromMeta(2);
+		this.stoneBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONE);
 		this.waterBlock = ExtraPlanets_Fluids.LIQUID_HYDROCARBON.getDefaultState();
 	}
 

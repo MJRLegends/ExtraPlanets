@@ -3,6 +3,7 @@ package com.mjr.extraplanets.moons.Io.worldgen.biomes;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
 import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
 
 public class BiomeGenIo extends IoBiomes {
@@ -11,6 +12,6 @@ public class BiomeGenIo extends IoBiomes {
 		super(properties);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 		this.topBlock = ExtraPlanets_Blocks.IO_BLOCKS.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.IO_BLOCKS.getStateFromMeta(1);
+		this.fillerBlock = ExtraPlanets_Blocks.IO_BLOCKS.getDefaultState().withProperty(BlockBasicIo.BASIC_TYPE, BlockBasicIo.EnumBlockBasic.SUB_SURFACE);
 	}
 }
