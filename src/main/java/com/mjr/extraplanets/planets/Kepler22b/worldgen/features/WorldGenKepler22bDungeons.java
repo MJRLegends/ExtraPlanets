@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 
 public class WorldGenKepler22bDungeons extends WorldGenerator {
 	private static final Logger LOGGER = LogManager.getLogger();
@@ -68,9 +69,9 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 							worldIn.setBlockToAir(blockpos1);
 						} else if (worldIn.getBlockState(blockpos1).getMaterial().isSolid() && worldIn.getBlockState(blockpos1).getBlock() != Blocks.CHEST) {
 							if (i4 == -1 && rand.nextInt(4) != 0) {
-								worldIn.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(11), 2);
+								worldIn.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState().withProperty(BlockBasicKepler22b.BASIC_TYPE, BlockBasicKepler22b.EnumBlockBasic.STONEBRICKS), 2);
 							} else {
-								worldIn.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(12), 2);
+								worldIn.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState().withProperty(BlockBasicKepler22b.BASIC_TYPE, BlockBasicKepler22b.EnumBlockBasic.COBBLESTONE), 2);
 							}
 						}
 					}

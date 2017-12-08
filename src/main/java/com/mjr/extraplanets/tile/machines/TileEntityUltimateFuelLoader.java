@@ -37,6 +37,7 @@ import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.UltimateFuelLoader;
 
+@SuppressWarnings("deprecation")
 public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler, IFluidHandlerWrapper, ILandingPadAttachable, IMachineSides {
 	private final int tankCapacity = 12000 * 3;
 	@NetworkedField(targetSide = Side.CLIENT)

@@ -29,6 +29,7 @@ import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.UltimateRefinery;
 
+@SuppressWarnings("deprecation")
 public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler, IFluidHandlerWrapper {
 	private final int tankCapacity = 24000 * 4;
 	@NetworkedField(targetSide = Side.CLIENT)
