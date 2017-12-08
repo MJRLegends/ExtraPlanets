@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Jupiter.worldgen;
+package com.mjr.extraplanets.world;
 
 import java.util.Random;
 
@@ -11,11 +11,21 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.Callisto.worldgen.MapGenCaveCallisto;
 
-public class MapGenCaveJupiter extends MapGenBaseMeta {
+public class MapGenCavePlanet extends MapGenBaseMeta {
 	public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance
+
+	public Block block;
+	public int surfaceMeta;
+	public int subSurfaceMeta;
+	public int stoneMeta;
+
+	public MapGenCavePlanet(Block block, int surfaceMeta, int subSurfaceMeta, int stoneMeta) {
+		this.block = block;
+		this.surfaceMeta = surfaceMeta;
+		this.subSurfaceMeta = subSurfaceMeta;
+		this.stoneMeta = stoneMeta;
+	}
 
 	protected void generateLargeCaveNode(long par1, int par3, int par4, ChunkPrimer primer, double par6, double par8, double par10) {
 		this.generateCaveNode(par1, par3, par4, primer, par6, par8, par10, 1.0F + this.rand.nextFloat() * 6.0F, 0.0F, 0.0F, -1, -1, 0.5D);
@@ -144,10 +154,10 @@ public class MapGenCaveJupiter extends MapGenBaseMeta {
 											IBlockState state = primer.getBlockState(localX, localY, localZ);
 											Block block = state.getBlock();
 											int metadata = state.getBlock().getMetaFromState(state);
-											if (block == ExtraPlanets_Blocks.JUPITER_BLOCKS) {
-												if (metadata == 1 || metadata == 2) {
+											if (block == this.block) {
+												if (metadata == this.subSurfaceMeta || metadata == this.stoneMeta) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
-												} else if (metadata == 5 && random.nextInt(MapGenCaveCallisto.BREAK_THROUGH_CHANCE) == 0) {
+												} else if (metadata == this.surfaceMeta && random.nextInt(MapGenCavePlanet.BREAK_THROUGH_CHANCE) == 0) {
 													primer.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
 												}
 											}

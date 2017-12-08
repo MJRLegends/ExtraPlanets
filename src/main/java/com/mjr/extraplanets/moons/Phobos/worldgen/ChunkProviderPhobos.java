@@ -13,12 +13,13 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderPhobos extends ChunkProviderSpace {
 	private final BiomeDecoratorPhobos ceresBiomeDecorator = new BiomeDecoratorPhobos();
-	private final MapGenCavePhobos caveGenerator = new MapGenCavePhobos();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.PHOBOS_BLOCKS, 0, 1, 2);
 
 	public ChunkProviderPhobos(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

@@ -18,6 +18,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderMercury extends ChunkProviderSpace {
@@ -25,7 +26,7 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	private final BiomeDecoratorMercury mercuryBiomeDecorator = new BiomeDecoratorMercury();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCaveMercury caveGenerator = new MapGenCaveMercury();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.MERCURY_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonMercury(new DungeonConfiguration(ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.DUNGEON_BRICK), 30,
 			8, 16, 7, 7, RoomBossMercury.class, RoomTreasureMercury.class));
