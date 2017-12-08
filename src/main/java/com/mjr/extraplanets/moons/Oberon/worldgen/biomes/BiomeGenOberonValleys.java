@@ -6,6 +6,7 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.OberonBiomes;
 
 public class BiomeGenOberonValleys extends OberonBiomes {
@@ -14,7 +15,7 @@ public class BiomeGenOberonValleys extends OberonBiomes {
 		super(properties);
 		Biome.registerBiome(Config.OBERON_VALLEYS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
-		this.topBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(1);
-		this.fillerBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getStateFromMeta(2);
+		this.topBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.SUB_SURFACE);
+		this.fillerBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE);
 	}
 }

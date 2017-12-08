@@ -10,6 +10,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 
 public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
@@ -19,7 +20,7 @@ public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
 		Biome.registerBiome(Config.JUPITER_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(1);
+		this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE);
 	}
 
 	@Override

@@ -15,6 +15,6 @@ public class BiomeGenJupiterSands extends JupiterBiomes {
 		Biome.registerBiome(Config.JUPITER_SANDS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Blocks.ORANGE_SAND.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.ORANGE_SANDSTONE.getStateFromMeta(1);
+		this.fillerBlock = ExtraPlanets_Blocks.ORANGE_SANDSTONE.getDefaultState();
 	}
 }
