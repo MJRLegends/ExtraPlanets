@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 
 import com.google.common.collect.Lists;
 
+@SuppressWarnings("deprecation")
 public class Tier5RocketRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
 	@Nonnull
 	private final INasaWorkbenchRecipe recipe;
