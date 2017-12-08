@@ -17,6 +17,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 
+@SuppressWarnings("deprecation")
 public class ItemModelRocketT10New extends ModelTransformWrapper {
 	public ItemModelRocketT10New(IBakedModel modelToWrap) {
 		super(modelToWrap);

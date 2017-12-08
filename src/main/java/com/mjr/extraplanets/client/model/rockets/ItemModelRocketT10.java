@@ -17,6 +17,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 
+@SuppressWarnings("deprecation")
 public class ItemModelRocketT10 extends ModelTransformWrapper
 {
     public ItemModelRocketT10(IBakedModel modelToWrap)
@@ -24,7 +25,7 @@ public class ItemModelRocketT10 extends ModelTransformWrapper
         super(modelToWrap);
     }
 
-    @Override
+	@Override
     protected Matrix4f getTransformForPerspective(TransformType cameraTransformType)
     {
     	

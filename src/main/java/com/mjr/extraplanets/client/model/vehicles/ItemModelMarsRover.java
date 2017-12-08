@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformT
 import net.minecraft.client.resources.model.IBakedModel;
 import net.minecraftforge.client.model.TRSRTransformation;
 
+@SuppressWarnings("deprecation")
 public class ItemModelMarsRover extends ModelTransformWrapper
 {
     public ItemModelMarsRover(IBakedModel modelToWrap)
@@ -17,7 +18,7 @@ public class ItemModelMarsRover extends ModelTransformWrapper
         super(modelToWrap);
     }
 
-    @Override
+	@Override
     protected Matrix4f getTransformForPerspective(TransformType cameraTransformType)
     {
         if (cameraTransformType == TransformType.GUI)

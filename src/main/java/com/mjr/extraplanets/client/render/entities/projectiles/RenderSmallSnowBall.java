@@ -12,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+@SuppressWarnings("deprecation")
 @SideOnly(Side.CLIENT)
 public class RenderSmallSnowBall extends Render<Entity> {
 	protected final ItemStack itemStack;
