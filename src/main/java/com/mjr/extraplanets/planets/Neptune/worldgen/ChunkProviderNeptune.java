@@ -16,6 +16,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
@@ -23,7 +24,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 
 	private final BiomeDecoratorNeptune neptuneBiomeDecorator = new BiomeDecoratorNeptune();
 	// private final BiomeDecoratorNeptuneOther neptuneBiomeDecorator2 = new BiomeDecoratorNeptuneOther();
-
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 	private final MapGenCaveNeptune caveGenerator = new MapGenCaveNeptune();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(new DungeonConfiguration(ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.DUNGEON_BRICK), 30,
@@ -49,6 +50,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this.worldObj, cX, cZ, primer);
 		this.dungeonGenerator.generate(this.worldObj, cX, cZ, primer);
 	}
 
