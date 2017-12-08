@@ -12,13 +12,14 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorTriton ceresBiomeDecorator = new BiomeDecoratorTriton();
 	private final BiomeDecoratorTritonOther ceresBiomeDecorator2 = new BiomeDecoratorTritonOther();
-
 	private final MapGenCaveTriton caveGenerator = new MapGenCaveTriton();
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderTriton(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -51,9 +52,10 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 
 	@Override
 	protected void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 
 	@Override
-	public void onPopulate(int cX, int cZ) {		
+	public void onPopulate(int cX, int cZ) {
 	}
 }

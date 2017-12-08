@@ -14,11 +14,12 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderDeimos extends ChunkProviderSpace {
 	private final BiomeDecoratorDeimos ceresBiomeDecorator = new BiomeDecoratorDeimos();
-
 	private final MapGenCaveDeimos caveGenerator = new MapGenCaveDeimos();
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderDeimos(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -88,6 +89,7 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 	
 	@Override

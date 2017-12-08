@@ -14,11 +14,12 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderPhobos extends ChunkProviderSpace {
 	private final BiomeDecoratorPhobos ceresBiomeDecorator = new BiomeDecoratorPhobos();
-
 	private final MapGenCavePhobos caveGenerator = new MapGenCavePhobos();
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderPhobos(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -88,13 +89,14 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
-	
+
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {		
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 	}
 }

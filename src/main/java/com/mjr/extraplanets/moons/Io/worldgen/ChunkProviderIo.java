@@ -12,12 +12,13 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderIo extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorIo ioBiomeDecorator = new BiomeDecoratorIo();
 	private final BiomeDecoratorIoOther ioBiomeDecorator2 = new BiomeDecoratorIoOther();
-
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 	private final MapGenCaveIo caveGenerator = new MapGenCaveIo();
 
 	public ChunkProviderIo(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -40,6 +41,7 @@ public class ChunkProviderIo extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 
 	@Override

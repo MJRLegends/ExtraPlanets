@@ -19,12 +19,13 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEris;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderEris extends ChunkProviderSpace {
 	private final MapGenVillageEris villageGenerator = new MapGenVillageEris();
 
 	private final BiomeDecoratorEris erisBiomeDecorator = new BiomeDecoratorEris();
-
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 	private final MapGenCaveEris caveGenerator = new MapGenCaveEris();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonEris(new DungeonConfiguration(ExtraPlanets_Blocks.ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7,
@@ -98,6 +99,7 @@ public class ChunkProviderEris extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this, this.worldObj, cX, cZ, primer);
 		this.dungeonGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 

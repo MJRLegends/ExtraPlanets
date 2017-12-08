@@ -16,13 +16,14 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 	private final MapGenVillageUranus villageGenerator = new MapGenVillageUranus();
 
 	private final BiomeDecoratorUranus uranusBiomeDecorator = new BiomeDecoratorUranus();
-
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 	private final MapGenCaveUranus caveGenerator = new MapGenCaveUranus();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(ExtraPlanets_Blocks.URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
@@ -48,6 +49,7 @@ public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this, this.worldObj, cX, cZ, primer);
 		this.dungeonGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
 
