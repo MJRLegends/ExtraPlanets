@@ -19,6 +19,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderPluto extends ChunkProviderSpace {
@@ -26,7 +27,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	private final BiomeDecoratorPluto plutoBiomeDecorator = new BiomeDecoratorPluto();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.PLUTO_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(ExtraPlanets_Blocks.PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16,
 			7, 7, RoomBossPluto.class, RoomTreasurePluto.class));

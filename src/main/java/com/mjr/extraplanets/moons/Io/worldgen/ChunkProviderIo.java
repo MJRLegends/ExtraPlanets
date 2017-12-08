@@ -12,6 +12,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
@@ -19,7 +20,7 @@ public class ChunkProviderIo extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorIo ioBiomeDecorator = new BiomeDecoratorIo();
 	private final BiomeDecoratorIoOther ioBiomeDecorator2 = new BiomeDecoratorIoOther();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCaveIo caveGenerator = new MapGenCaveIo();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.IO_BLOCKS, 0, 1, 2);
 
 	public ChunkProviderIo(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

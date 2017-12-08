@@ -16,6 +16,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderCeres extends ChunkProviderSpace {
@@ -23,7 +24,7 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 
 	private final BiomeDecoratorCeres ceresBiomeDecorator = new BiomeDecoratorCeres();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.CERES_BLOCKS, 0, 1, 2);
 
 	public ChunkProviderCeres(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

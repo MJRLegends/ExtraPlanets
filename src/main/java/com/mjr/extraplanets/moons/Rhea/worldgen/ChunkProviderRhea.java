@@ -14,13 +14,14 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderRhea extends ChunkProviderSpace {
 	private final BiomeDecoratorRhea ceresBiomeDecorator = new BiomeDecoratorRhea();
-	private final MapGenCaveRhea caveGenerator = new MapGenCaveRhea();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.RHEA_BLOCKS, 0, 1, 2);
+	
 	public ChunkProviderRhea(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 	}

@@ -14,11 +14,12 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderGanymede extends ChunkProviderSpace {
 	private final BiomeDecoratorGanymede ceresBiomeDecorator = new BiomeDecoratorGanymede();
-	private final MapGenCaveGanymede caveGenerator = new MapGenCaveGanymede();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 0, 1, 2);
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderGanymede(World par1World, long seed, boolean mapFeaturesEnabled) {

@@ -11,6 +11,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
@@ -19,7 +20,7 @@ public class ChunkProviderOberon extends ChunkProviderCustomSpace {
 	@SuppressWarnings("unused")
 	private final BiomeDecoratorOberonOther ioBiomeDecorator2 = new BiomeDecoratorOberonOther();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCaveOberon caveGenerator = new MapGenCaveOberon();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.OBERON_BLOCKS, 0, 1, 2);
 
 	public ChunkProviderOberon(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

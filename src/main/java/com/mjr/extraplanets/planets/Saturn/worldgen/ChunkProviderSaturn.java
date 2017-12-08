@@ -16,6 +16,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
@@ -25,7 +26,7 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorSaturn saturnBiomeDecorator = new BiomeDecoratorSaturn();
 	// private final BiomeDecoratorSaturnOther saturnBiomeDecorator2 = new BiomeDecoratorSaturnOther();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCaveSaturn caveGenerator = new MapGenCaveSaturn();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.SATURN_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
 			16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));

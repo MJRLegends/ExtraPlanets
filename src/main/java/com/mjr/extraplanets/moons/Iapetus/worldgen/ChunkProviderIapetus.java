@@ -14,11 +14,12 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderIapetus extends ChunkProviderSpace {
 	private final BiomeDecoratorIapetus ceresBiomeDecorator = new BiomeDecoratorIapetus();
-	private final MapGenCaveIapetus caveGenerator = new MapGenCaveIapetus();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.IAPETUS_BLOCKS, 0, 1, 2);	
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderIapetus(World par1World, long seed, boolean mapFeaturesEnabled) {

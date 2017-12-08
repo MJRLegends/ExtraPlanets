@@ -14,11 +14,12 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderEuropa extends ChunkProviderSpace {
 	private final BiomeDecoratorEuropa ceresBiomeDecorator = new BiomeDecoratorEuropa();
-	private final MapGenCaveEuropa caveGenerator = new MapGenCaveEuropa();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.EUROPA_BLOCKS, 0, 1, 2);
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderEuropa(World par1World, long seed, boolean mapFeaturesEnabled) {
