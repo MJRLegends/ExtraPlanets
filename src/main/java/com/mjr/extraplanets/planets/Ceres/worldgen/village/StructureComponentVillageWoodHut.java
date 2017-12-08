@@ -14,6 +14,7 @@ import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.template.TemplateManager;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 
 public class StructureComponentVillageWoodHut extends StructureComponentVillage
 {
@@ -79,7 +80,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
         {
             for (int j = 3; j <= 13; j++)
             {
-                this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), i, 0, j, par3StructureBoundingBox);
+                this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState(), i, 0, j, par3StructureBoundingBox);
             }
         }
 
@@ -87,7 +88,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
         {
             for (int j = 2; j <= 14; j++)
             {
-                this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), i, 0, j, par3StructureBoundingBox);
+                this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState(), i, 0, j, par3StructureBoundingBox);
             }
         }
 
@@ -95,7 +96,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
         {
             for (int j = 5; j <= 11; j++)
             {
-                this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), i, 0, j, par3StructureBoundingBox);
+                this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState(), i, 0, j, par3StructureBoundingBox);
             }
         }
 
@@ -103,108 +104,108 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
 
         for (yLevel = -8; yLevel < 4; yLevel++)
         {
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 2, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 2, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 3, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 4, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 2, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 2, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 3, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 4, par3StructureBoundingBox);
 
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 5, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 6, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 7, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 9, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 10, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 11, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 5, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 6, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 7, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE) : Blocks.AIR.getDefaultState(), 1, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 9, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 10, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 11, par3StructureBoundingBox);
 
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 12, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 13, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 14, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 14, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 12, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 13, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 14, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 14, par3StructureBoundingBox);
 
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 15, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE) : Blocks.AIR.getDefaultState(), 8, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 15, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 15, par3StructureBoundingBox);
 
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 14, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 14, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 13, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 12, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 14, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 14, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 13, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 12, par3StructureBoundingBox);
 
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 11, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 10, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 9, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 7, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 6, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 5, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 11, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 10, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 9, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE) : Blocks.AIR.getDefaultState(), 15, yLevel, 8, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 7, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 6, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 5, par3StructureBoundingBox);
 
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 4, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 3, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 2, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 2, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 4, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 3, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 2, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 2, par3StructureBoundingBox);
 
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0) : Blocks.AIR.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 1, par3StructureBoundingBox);
-            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, yLevel <= 1 ? ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE) : Blocks.AIR.getDefaultState(), 8, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 1, par3StructureBoundingBox);
+            this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 1, par3StructureBoundingBox);
         }
 
         yLevel = 4;
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 4, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 6, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 10, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 11, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 14, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 15, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 12, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 10, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 6, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 5, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 2, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 1, par3StructureBoundingBox);
 
         this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode()), 8, yLevel, 2, par3StructureBoundingBox);
         this.setBlockState(par1World, GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockTorchBase.FACING, this.getCoordBaseMode().rotateYCCW()), 14, yLevel, 8, par3StructureBoundingBox);
@@ -214,232 +215,232 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
         yLevel = 5;
 
         // corner 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 5, par3StructureBoundingBox);
 
         // side 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 6, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 1, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 1, yLevel, 10, par3StructureBoundingBox);
 
         // corner 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 14, par3StructureBoundingBox);
 
         // side 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 15, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 15, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 15, par3StructureBoundingBox);
 
         // corner 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 11, par3StructureBoundingBox);
 
         // side 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 10, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 15, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 15, yLevel, 6, par3StructureBoundingBox);
 
         // corner 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 2, par3StructureBoundingBox);
 
         // side 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 1, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 1, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 1, par3StructureBoundingBox);
 
         yLevel = 6;
 
         // corner 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 4, par3StructureBoundingBox);
 
         // side 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 6, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 10, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 11, par3StructureBoundingBox);
 
         // corner 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 13, par3StructureBoundingBox);
 
         // side 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 14, par3StructureBoundingBox);
 
         // corner 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 12, par3StructureBoundingBox);
 
         // side 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 10, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 6, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 5, par3StructureBoundingBox);
 
         // corner 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 3, par3StructureBoundingBox);
 
         // side 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 2, par3StructureBoundingBox);
 
         yLevel = 7;
 
         // corner 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 6, par3StructureBoundingBox);
 
         // side 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 2, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 2, yLevel, 9, par3StructureBoundingBox);
 
         // corner 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 10, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 13, par3StructureBoundingBox);
 
         // side 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 14, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 14, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 14, par3StructureBoundingBox);
 
         // corner 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 10, par3StructureBoundingBox);
 
         // side 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 14, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 14, yLevel, 7, par3StructureBoundingBox);
 
         // corner 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 6, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 3, par3StructureBoundingBox);
 
         // side 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 2, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 2, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 2, par3StructureBoundingBox);
 
         yLevel = 8;
 
         // corner 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 6, par3StructureBoundingBox);
 
         // side 1
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 3, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 3, yLevel, 9, par3StructureBoundingBox);
 
         // corner 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 10, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 6, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 6, yLevel, 12, par3StructureBoundingBox);
 
         // side 2
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 13, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 13, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 13, par3StructureBoundingBox);
 
         // corner 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 10, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 10, par3StructureBoundingBox);
 
         // side 3
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 9, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 13, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 13, yLevel, 7, par3StructureBoundingBox);
 
         // corner 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 6, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 10, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 6, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 10, yLevel, 4, par3StructureBoundingBox);
 
         // side 4
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 3, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 3, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 3, par3StructureBoundingBox);
 
         // extras
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 5, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 5, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 11, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 11, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 5, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 5, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 11, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 11, yLevel, 5, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 4, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 4, yLevel, 9, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 12, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 12, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 12, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 9, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 8, yLevel, 4, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 7, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 9, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 8, yLevel, 4, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 7, yLevel, 4, par3StructureBoundingBox);
 
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 7, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 8, par3StructureBoundingBox);
-        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), 12, yLevel, 9, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 7, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 8, par3StructureBoundingBox);
+        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), 12, yLevel, 9, par3StructureBoundingBox);
 
         yLevel = 9;
 
@@ -455,7 +456,7 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage
                     }
                     else
                     {
-                        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getStateFromMeta(0), i, yLevel, j, par3StructureBoundingBox);
+                        this.setBlockState(par1World, ExtraPlanets_Blocks.CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE), i, yLevel, j, par3StructureBoundingBox);
                     }
                 }
             }
