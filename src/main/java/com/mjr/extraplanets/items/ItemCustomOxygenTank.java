@@ -34,6 +34,7 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 		this.setNoRepair();
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {

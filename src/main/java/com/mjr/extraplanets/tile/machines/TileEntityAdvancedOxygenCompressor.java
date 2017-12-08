@@ -162,6 +162,7 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 		return new int[] { 0, 1, 2 };
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
 		if (this.isItemValidForSlot(slotID, itemstack)) {
