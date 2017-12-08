@@ -12,6 +12,7 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicMercury;
 
 public class StructureComponentVillageWell extends StructureComponentVillage {
 	private int averageGroundLevel = -1;
@@ -72,7 +73,8 @@ public class StructureComponentVillageWell extends StructureComponentVillage {
 			this.boundingBox.offset(0, this.averageGroundLevel - this.boundingBox.maxY + 3, 0);
 		}
 
-		this.fillWithBlocks(par1World, par3StructureBoundingBox, 1, 0, 1, 4, 12, 4, ExtraPlanets_Blocks.MERCURY_BLOCKS.getStateFromMeta(0), Blocks.FLOWING_WATER.getDefaultState(), false);
+		this.fillWithBlocks(par1World, par3StructureBoundingBox, 1, 0, 1, 4, 12, 4, ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE),
+				Blocks.FLOWING_WATER.getDefaultState(), false);
 		this.setBlockState(par1World, Blocks.AIR.getDefaultState(), 2, 12, 2, par3StructureBoundingBox);
 		this.setBlockState(par1World, Blocks.AIR.getDefaultState(), 3, 12, 2, par3StructureBoundingBox);
 		this.setBlockState(par1World, Blocks.AIR.getDefaultState(), 2, 12, 3, par3StructureBoundingBox);
@@ -85,7 +87,8 @@ public class StructureComponentVillageWell extends StructureComponentVillage {
 		this.setBlockState(par1World, Blocks.DARK_OAK_FENCE.getDefaultState(), 1, 14, 4, par3StructureBoundingBox);
 		this.setBlockState(par1World, Blocks.DARK_OAK_FENCE.getDefaultState(), 4, 13, 4, par3StructureBoundingBox);
 		this.setBlockState(par1World, Blocks.DARK_OAK_FENCE.getDefaultState(), 4, 14, 4, par3StructureBoundingBox);
-		this.fillWithBlocks(par1World, par3StructureBoundingBox, 1, 15, 1, 4, 15, 4, ExtraPlanets_Blocks.MERCURY_BLOCKS.getStateFromMeta(0), ExtraPlanets_Blocks.MERCURY_BLOCKS.getStateFromMeta(0), false);
+		this.fillWithBlocks(par1World, par3StructureBoundingBox, 1, 15, 1, 4, 15, 4, ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE),
+				ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE), false);
 
 		for (int var4 = 0; var4 <= 5; ++var4) {
 			for (int var5 = 0; var5 <= 5; ++var5) {

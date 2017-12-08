@@ -409,7 +409,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 11, y + 3, z + 4), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 3, z + 5), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 3, z + 5), Blocks.SNOW.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), GCBlocks.machineBase.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), GCBlocks.machineBase.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 3, z + 5), Blocks.CHEST.getStateFromMeta(4), 3);
 		world.setBlockState(new BlockPos(x + 10, y + 3, z + 5), Blocks.SNOW.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 11, y + 3, z + 5), Blocks.SNOW.getDefaultState(), 3);

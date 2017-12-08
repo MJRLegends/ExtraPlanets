@@ -30,7 +30,7 @@ public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 
 	public ChunkProviderUranus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.stoneBlock = ExtraPlanets_Blocks.URANUS_BLOCKS.getStateFromMeta(2);
+		this.stoneBlock = ExtraPlanets_Blocks.URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONE);
 		this.waterBlock = ExtraPlanets_Fluids.FROZEN_WATER.getDefaultState();
 	}
 

@@ -11,6 +11,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
@@ -19,7 +20,7 @@ import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomNormal;
 public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
-		ChunkProviderCustomNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
+		ChunkProviderCustomNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState().withProperty(BlockBasicKepler22b.BASIC_TYPE, BlockBasicKepler22b.EnumBlockBasic.STONE);
 		ChunkProviderCustomNormal.waterBlock = Blocks.WATER.getDefaultState();
 	}
 

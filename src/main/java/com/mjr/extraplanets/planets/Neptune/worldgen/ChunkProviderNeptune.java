@@ -22,7 +22,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 	private final MapGenVillageNeptune villageGenerator = new MapGenVillageNeptune();
 
 	private final BiomeDecoratorNeptune neptuneBiomeDecorator = new BiomeDecoratorNeptune();
-	//private final BiomeDecoratorNeptuneOther neptuneBiomeDecorator2 = new BiomeDecoratorNeptuneOther();
+	// private final BiomeDecoratorNeptuneOther neptuneBiomeDecorator2 = new BiomeDecoratorNeptuneOther();
 
 	private final MapGenCaveNeptune caveGenerator = new MapGenCaveNeptune();
 
@@ -31,7 +31,7 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 
 	public ChunkProviderNeptune(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.stoneBlock = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getStateFromMeta(2);
+		this.stoneBlock = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE);
 		this.waterBlock = ExtraPlanets_Fluids.RADIO_ACTIVE_WATER.getDefaultState();
 	}
 
@@ -69,6 +69,6 @@ public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 	@Override
 	protected void decoratePlanet(World world, Random rand, int x, int z) {
 		this.neptuneBiomeDecorator.decorate(worldObj, rand, x, z);
-		//this.neptuneBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
+		// this.neptuneBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
 }

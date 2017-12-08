@@ -12,6 +12,7 @@ import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
 
 public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
@@ -52,11 +53,11 @@ public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
 				if (iblockstate2.getMaterial() == Material.AIR) {
 					j = -1;
-				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getStateFromMeta(2).getBlock()) {
+				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE).getBlock()) {
 					if (j == -1) {
 						if (k <= 0) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE);
 							iblockstate3 = null;
 							iblockstate4 = null;
 						} else if (j1 >= 63 - 4 && j1 <= 63 + 1) {
@@ -94,7 +95,7 @@ public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
 							iblockstate3 = null;
-							iblockstate1 = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE);
 							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);
