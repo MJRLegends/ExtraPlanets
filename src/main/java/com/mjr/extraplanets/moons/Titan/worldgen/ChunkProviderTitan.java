@@ -12,13 +12,14 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorTitan ceresBiomeDecorator = new BiomeDecoratorTitan();
-	private final MapGenCaveTitan caveGenerator = new MapGenCaveTitan();
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.TITAN_BLOCKS, 0, 1, 2);
 
 	public ChunkProviderTitan(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
