@@ -132,8 +132,6 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 							}
 
 							if (k != 0 && l > 1) {
-								Block block2 = worldIn.getBlockState(position.add(i1, -k, j1)).getBlock();
-
 								if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == surfaceblock || block == Blocks.ICE) {
 									this.setBlockAndNotifyAdequately(worldIn, position.add(i1, -k, j1), Blocks.PACKED_ICE.getDefaultState());
 								}

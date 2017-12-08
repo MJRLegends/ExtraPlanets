@@ -21,16 +21,12 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class WorldGenKepler22bDungeons extends WorldGenerator {
 	private static final Logger LOGGER = LogManager.getLogger();
-	private static final String[] SPAWNERTYPES = new String[] { "Skeleton", "Zombie", "Zombie", "Spider" };
 
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
-		int i = 3;
 		int j = rand.nextInt(2) + 2;
 		int k = -j - 1;
 		int l = j + 1;
-		int i1 = -1;
-		int j1 = 4;
 		int k1 = rand.nextInt(2) + 2;
 		int l1 = -k1 - 1;
 		int i2 = k1 + 1;

@@ -30,8 +30,6 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tile.machines.TileEntityBasicDensifier;
 
 public class BasicDensifier extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
-	private final Random densifierRand = new Random();
-
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	public BasicDensifier(String assetName) {

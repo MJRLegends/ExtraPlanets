@@ -123,7 +123,6 @@ public class ContainerSchematicTier6Rocket extends Container
             final ItemStack var4 = var3.getStack();
             var2 = var4.copy();
 
-            boolean done = false;
             if (par1 <= 21)
             {
                 if (!this.mergeItemStack(var4, 22, 58, false))

@@ -55,12 +55,13 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 		this.currentGalaxyName = "galaxy.milky_way";
 	}
 
+	@Override
 	protected List<CelestialBody> getChildren(Object object) {
 		List<CelestialBody> bodyList = Lists.newArrayList();
 
 		if (object instanceof Planet) {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
-				if (planet.equals((Planet) object))
+				if (planet.equals(object))
 					if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Moon> moons = GalaxyRegistry.getMoonsForPlanet((Planet) object);
 						bodyList.addAll(moons);
@@ -68,7 +69,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 			}
 		} else if (object instanceof SolarSystem) {
 			for (SolarSystem solarSystems : GalaxyRegistry.getRegisteredSolarSystems().values()) {
-				if (solarSystems.equals((SolarSystem) object))
+				if (solarSystems.equals(object))
 					if (solarSystems.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Planet> planets = GalaxyRegistry.getPlanetsForSolarSystem((SolarSystem) object);
 						bodyList.addAll(planets);
@@ -183,7 +184,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 					if (alpha != 0) {
 						if(!this.isZoomed())
-							this.drawCenteredString(fontRendererObj, planet.getLocalizedName(), 0, 5, 14737632);
+							this.drawCenteredString(fontRenderer, planet.getLocalizedName(), 0, 5, 14737632);
 						CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(planet, planet.getBodyIcon(), 12);
 						MinecraftForge.EVENT_BUS.post(preEvent);
 						
@@ -519,12 +520,12 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					this.drawTexturedModalRect(xOffset, yOffset + barY * this.fontRenderer.FONT_HEIGHT + 4, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT, 159, 106, 93, this.fontRenderer.FONT_HEIGHT, false, false);
 				}
 				for (int barx = 0; barx < 1; ++barx) {
-					this.drawTexturedModalRect(xOffset + barx, yOffset * this.fontRendererObj.FONT_HEIGHT + 10, 93 + widthSizeOffset, this.fontRendererObj.FONT_HEIGHT / 2, 159, 106, 1, this.fontRendererObj.FONT_HEIGHT, false, false);
+					this.drawTexturedModalRect(xOffset + barx, yOffset * this.fontRenderer.FONT_HEIGHT + 10, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT / 2, 159, 106, 1, this.fontRenderer.FONT_HEIGHT, false, false);
 				}
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						temp = (WorldProviderSpace) WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
+						temp = WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
@@ -635,7 +636,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 					str = child;
 					int color = 14737632;
-					this.fontRendererObj.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 8 + i * 14, color);
+					this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 8 + i * 14, color);
 				}
 			}
 
