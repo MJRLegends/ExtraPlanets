@@ -38,10 +38,12 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		this.setUnlocalizedName(name);
 	}
 
+	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		return REED_AABB;
 	}
 
+	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (worldIn.getBlockState(pos.down()).getBlock() == ExtraPlanets_Blocks.WHITE_SUGAR_CANE || this.checkForDrop(worldIn, pos, state)) {
 			if (worldIn.isAirBlock(pos.up())) {
@@ -52,7 +54,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 				}
 
 				if (i < 3) {
-					int j = ((Integer) state.getValue(AGE)).intValue();
+					int j = state.getValue(AGE).intValue();
 
 					if (net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, pos, state, true)) {
 						if (j == 15) {
@@ -68,6 +70,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		}
 	}
 
+	@Override
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
 		IBlockState state = worldIn.getBlockState(pos.down());
 		Block block = state.getBlock();
@@ -122,6 +125,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	/**
 	 * Get the Item that this Block should drop when harvested.
 	 */
+	@Override
 	@Nullable
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Item.getItemFromBlock(this);
@@ -130,14 +134,17 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	/**
 	 * Used to determine ambient occlusion and culling when rebuilding chunks for render
 	 */
+	@Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
 
+	@Override
 	public boolean isFullCube(IBlockState state) {
 		return false;
 	}
 
+	@Override
 	public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
 		return new ItemStack(ExtraPlanets_Items.WHITE_SUGAR_CANE);
 	}
@@ -145,10 +152,12 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	/**
 	 * Convert the given metadata into a BlockState for this Block
 	 */
+	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(AGE, Integer.valueOf(meta));
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public BlockRenderLayer getBlockLayer() {
 		return BlockRenderLayer.CUTOUT;
@@ -157,8 +166,9 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	/**
 	 * Convert the BlockState into the correct metadata value
 	 */
+	@Override
 	public int getMetaFromState(IBlockState state) {
-		return ((Integer) state.getValue(AGE)).intValue();
+		return state.getValue(AGE).intValue();
 	}
 
 	@Override
@@ -171,6 +181,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		return this.getDefaultState();
 	}
 
+	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, new IProperty[] { AGE });
 	}

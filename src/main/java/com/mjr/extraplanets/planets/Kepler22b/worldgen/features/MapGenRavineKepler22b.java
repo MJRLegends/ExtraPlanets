@@ -112,8 +112,6 @@ public class MapGenRavineKepler22b extends MapGenBase {
 						for (int k1 = i3; !flag2 && k1 < i1; ++k1) {
 							for (int l1 = l + 1; !flag2 && l1 >= l2 - 1; --l1) {
 								if (l1 >= 0 && l1 < 256) {
-									IBlockState iblockstate = p_180707_5_.getBlockState(j1, l1, k1);
-
 									if (isOceanBlock(p_180707_5_, j1, l1, k1, p_180707_3_, p_180707_4_)) {
 										flag2 = true;
 									}
@@ -127,8 +125,6 @@ public class MapGenRavineKepler22b extends MapGenBase {
 					}
 
 					if (!flag2) {
-						BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
-
 						for (int j3 = k2; j3 < k; ++j3) {
 							double d10 = (j3 + p_180707_3_ * 16 + 0.5D - p_180707_6_) / d9;
 
@@ -141,8 +137,6 @@ public class MapGenRavineKepler22b extends MapGenBase {
 										double d8 = (j2 - 1 + 0.5D - p_180707_8_) / d2;
 
 										if ((d10 * d10 + d7 * d7) * this.field_75046_d[j2 - 1] + d8 * d8 / 6.0D < 1.0D) {
-											IBlockState iblockstate1 = p_180707_5_.getBlockState(j3, j2, i2);
-
 											if (isTopBlock(p_180707_5_, j3, j2, i2, p_180707_3_, p_180707_4_)) {
 												flag = true;
 											}
