@@ -55,12 +55,13 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 		this.currentGalaxyName = "galaxy.milky_way";
 	}
 
+	@Override
 	protected List<CelestialBody> getChildren(Object object) {
 		List<CelestialBody> bodyList = Lists.newArrayList();
 
 		if (object instanceof Planet) {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
-				if (planet.equals((Planet) object))
+				if (planet.equals(object))
 					if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Moon> moons = GalaxyRegistry.getMoonsForPlanet((Planet) object);
 						bodyList.addAll(moons);
@@ -68,7 +69,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 			}
 		} else if (object instanceof SolarSystem) {
 			for (SolarSystem solarSystems : GalaxyRegistry.getRegisteredSolarSystems().values()) {
-				if (solarSystems.equals((SolarSystem) object))
+				if (solarSystems.equals(object))
 					if (solarSystems.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Planet> planets = GalaxyRegistry.getPlanetsForSolarSystem((SolarSystem) object);
 						bodyList.addAll(planets);

@@ -239,7 +239,6 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		@Override
 		public void updateTask() {
 			EntityLivingBase entitylivingbase = this.parentEntity.getAttackTarget();
-			double d0 = 64.0D;
 
 			if (entitylivingbase.getDistanceSqToEntity(this.parentEntity) < 4096.0D && this.parentEntity.canEntityBeSeen(entitylivingbase)) {
 				World world = this.parentEntity.worldObj;
@@ -250,7 +249,6 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 				}
 
 				if (this.attackTimer == 20) {
-					double d1 = 4.0D;
 					Vec3d vec3d = this.parentEntity.getLook(1.0F);
 					double d2 = entitylivingbase.posX - (this.parentEntity.posX + vec3d.xCoord * 4.0D);
 					double d3 = entitylivingbase.getEntityBoundingBox().minY + entitylivingbase.height / 2.0F - (0.5D + this.parentEntity.posY + this.parentEntity.height / 2.0F);

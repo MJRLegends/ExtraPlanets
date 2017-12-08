@@ -204,6 +204,7 @@ public class ExtraPlanets_Recipes {
 		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(result, obj));
 	}
 
+	@SuppressWarnings("deprecation")
 	private static void registerCraftingRecipes() {
 		if (Config.THERMAL_PADDINGS) {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.THERMAL_CLOTH, 1, 0), new Object[] { "XXX", "XYX", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7), 'Y', new ItemStack(MarsItems.marsItemBasic, 1, 5) });
