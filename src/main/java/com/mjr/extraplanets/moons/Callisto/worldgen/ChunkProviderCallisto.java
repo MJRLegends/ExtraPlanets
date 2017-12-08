@@ -13,11 +13,12 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenCavePlanet;
 import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderCallisto extends ChunkProviderSpace {
 	private final BiomeDecoratorCallisto ceresBiomeDecorator = new BiomeDecoratorCallisto();
-	private final MapGenCaveCallisto caveGenerator = new MapGenCaveCallisto();
+	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.CALLISTO_BLOCKS, 0, 1, 2);
 	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderCallisto(World par1World, long seed, boolean mapFeaturesEnabled) {
