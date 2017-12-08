@@ -78,7 +78,7 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 
 		if (side != null) {
 			getQueue(side, msg.getDimensionID()).add(new PacketPlayerPair(msg, player));
-			livePacketCount++;
+			setLivePacketCount(getLivePacketCount() + 1);
 		}
 	}
 
@@ -90,6 +90,15 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 		return map.get(dimID);
 	}
 
+	public static int getLivePacketCount() {
+		return livePacketCount;
+	}
+
+	public static void setLivePacketCount(int livePacketCount) {
+		ExtraPlanetsPacketHandler.livePacketCount = livePacketCount;
+	}
+
+	@SuppressWarnings("unused")
 	private final class PacketPlayerPair {
 		private IPacket packet;
 		private EntityPlayer player;
