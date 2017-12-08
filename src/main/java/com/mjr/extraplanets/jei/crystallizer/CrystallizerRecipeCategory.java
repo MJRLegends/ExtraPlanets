@@ -61,6 +61,7 @@ public class CrystallizerRecipeCategory extends BlankRecipeCategory {
 		this.saltBar.draw(minecraft, 4, 24);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
 		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();

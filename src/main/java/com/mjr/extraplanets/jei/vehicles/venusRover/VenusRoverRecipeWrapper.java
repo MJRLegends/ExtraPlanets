@@ -12,6 +12,7 @@ import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import net.minecraft.item.ItemStack;
 
+@SuppressWarnings("deprecation")
 public class VenusRoverRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
 	@Nonnull
 	private final INasaWorkbenchRecipe recipe;

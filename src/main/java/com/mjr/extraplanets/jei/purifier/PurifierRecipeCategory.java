@@ -71,6 +71,7 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 //		this.saltBar3.draw(minecraft, 129, 24);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
 		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
