@@ -55,12 +55,13 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 		this.currentGalaxyName = "galaxy.milky_way";
 	}
 
+	@Override
 	protected List<CelestialBody> getChildren(Object object) {
 		List<CelestialBody> bodyList = Lists.newArrayList();
 
 		if (object instanceof Planet) {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
-				if (planet.equals((Planet) object))
+				if (planet.equals(object))
 					if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Moon> moons = GalaxyRegistry.getMoonsForPlanet((Planet) object);
 						bodyList.addAll(moons);
@@ -68,7 +69,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 			}
 		} else if (object instanceof SolarSystem) {
 			for (SolarSystem solarSystems : GalaxyRegistry.getRegisteredSolarSystems().values()) {
-				if (solarSystems.equals((SolarSystem) object))
+				if (solarSystems.equals(object))
 					if (solarSystems.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
 						List<Planet> planets = GalaxyRegistry.getPlanetsForSolarSystem((SolarSystem) object);
 						bodyList.addAll(planets);
@@ -524,7 +525,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						temp = (WorldProviderSpace) WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
+						temp = WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));

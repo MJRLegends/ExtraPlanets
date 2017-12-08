@@ -10,6 +10,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 
 public class WorldGenWhiteSugerCane extends WorldGenerator {
+	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos position) {
 		for (int i = 0; i < 20; ++i) {
 			BlockPos blockpos = position.add(rand.nextInt(4) - rand.nextInt(4), 0, rand.nextInt(4) - rand.nextInt(4));

@@ -70,7 +70,6 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.containingItems[slot] != null) {
 			if (FluidUtil.isEmptyContainer(this.containingItems[slot]) == false && FluidUtil.getFluidContained(this.getStackInSlot(slot)) != null && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() != null) {
