@@ -11,6 +11,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 
 public class ChunkProviderTitan extends ChunkProviderCustomSpace {
@@ -20,7 +21,8 @@ public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 
 	public ChunkProviderTitan(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.stoneBlock = ExtraPlanets_Blocks.TITAN_BLOCKS.getStateFromMeta(2);
+
+		this.stoneBlock = ExtraPlanets_Blocks.TITAN_BLOCKS.getDefaultState().withProperty(BlockBasicTitan.BASIC_TYPE, BlockBasicTitan.EnumBlockBasic.STONE);
 		this.waterBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
 	}
 
@@ -48,8 +50,8 @@ public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 	@Override
 	protected void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
 	}
-	
+
 	@Override
-	public void onPopulate(int cX, int cZ) {		
+	public void onPopulate(int cX, int cZ) {
 	}
 }

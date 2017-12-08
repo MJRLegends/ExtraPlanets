@@ -10,6 +10,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 
 public class BiomeGenSaturnHydroCarbonSea extends SaturnBiomes {
@@ -19,7 +20,7 @@ public class BiomeGenSaturnHydroCarbonSea extends SaturnBiomes {
 		Biome.registerBiome(Config.SATURN_HYDROCARBON_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getStateFromMeta(1);
+        this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE);
 	}
 
 	@Override

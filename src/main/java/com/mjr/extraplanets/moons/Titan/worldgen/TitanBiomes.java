@@ -16,6 +16,7 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneHills;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
@@ -68,11 +69,11 @@ public class TitanBiomes extends Biome {
 				IBlockState iblockstate2 = chunk.getBlockState(i1, j1, l);
 				if (iblockstate2.getMaterial() == Material.AIR) {
 					j = -1;
-				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.TITAN_BLOCKS.getStateFromMeta(2).getBlock()) {
+				} else if (iblockstate2.getBlock() == ExtraPlanets_Blocks.TITAN_BLOCKS.getDefaultState().withProperty(BlockBasicTitan.BASIC_TYPE, BlockBasicTitan.EnumBlockBasic.STONE).getBlock()) {
 					if (j == -1) {
 						if (k <= 0) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.TITAN_BLOCKS.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.TITAN_BLOCKS.getDefaultState().withProperty(BlockBasicTitan.BASIC_TYPE, BlockBasicTitan.EnumBlockBasic.STONE);
 						} else if (j1 >= 63 - 4 && j1 <= 63 + 1) {
 							iblockstate = this.topBlock;
 							iblockstate1 = this.fillerBlock;
@@ -92,7 +93,7 @@ public class TitanBiomes extends Biome {
 							chunk.setBlockState(i1, j1, l, iblockstate);
 						} else if (j1 < 63 - 7 - k) {
 							iblockstate = null;
-							iblockstate1 = ExtraPlanets_Blocks.TITAN_BLOCKS.getStateFromMeta(2);
+							iblockstate1 = ExtraPlanets_Blocks.TITAN_BLOCKS.getDefaultState().withProperty(BlockBasicTitan.BASIC_TYPE, BlockBasicTitan.EnumBlockBasic.STONE);
 							chunk.setBlockState(i1, j1, l, Blocks.GRAVEL.getDefaultState());
 						} else {
 							chunk.setBlockState(i1, j1, l, iblockstate1);
