@@ -13,11 +13,12 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderIapetus extends ChunkProviderSpace {
 	private final BiomeDecoratorIapetus ceresBiomeDecorator = new BiomeDecoratorIapetus();
-
-	 private final MapGenCaveIapetus caveGenerator = new MapGenCaveIapetus();
+	private final MapGenCaveIapetus caveGenerator = new MapGenCaveIapetus();
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 
 	public ChunkProviderIapetus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -87,6 +88,7 @@ public class ChunkProviderIapetus extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this.worldObj, cX, cZ, primer);
 	}
 
 	@Override

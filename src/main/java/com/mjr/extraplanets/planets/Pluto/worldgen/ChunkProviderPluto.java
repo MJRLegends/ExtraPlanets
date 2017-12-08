@@ -18,12 +18,13 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
+import com.mjr.extraplanets.world.MapGenRavinePlanet;
 
 public class ChunkProviderPluto extends ChunkProviderSpace {
 	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
 
 	private final BiomeDecoratorPluto plutoBiomeDecorator = new BiomeDecoratorPluto();
-
+	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
 	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonPluto(new DungeonConfiguration(ExtraPlanets_Blocks.PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16,
@@ -97,6 +98,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
+		this.ravineGenerator.generate(this.worldObj, cX, cZ, primer);
 		this.dungeonGenerator.generate(this.world, cX, cZ, primer);
 	}
 
