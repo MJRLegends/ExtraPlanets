@@ -89,7 +89,7 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
-		this.ravineGenerator.generate(this.worldObj, cX, cZ, primer);
+		this.ravineGenerator.generate(this.world, cX, cZ, primer);
 	}
 
 	@Override
