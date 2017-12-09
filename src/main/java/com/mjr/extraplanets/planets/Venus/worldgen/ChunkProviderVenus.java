@@ -38,33 +38,26 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 	private final MapGenCaveVenus caveGenerator = new MapGenCaveVenus();
 
 	private final MapGenRavineVenus ravineGenerator = new MapGenRavineVenus();
-	
+
 	private final MapGenVillageVenus villageGenerator = new MapGenVillageVenus();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.veunsDungeonBrick, 14, 8, 16, 3);
 
 	public ChunkProviderVenus(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-		this.dungeonGenerator.otherRooms.add(new RoomEmptyVenus(null, 0, 0, 0,
-				ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
-						RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-				this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0,
-						0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
-								RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-						this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0,
-								0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
-										RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-								this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0,
-										0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
-												RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-										this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0,
-												0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.otherRooms.add(new
-														RoomChestsVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-												this.dungeonGenerator.otherRooms.add(new RoomChestsVenus(null, 0, 0,
-														0, ForgeDirection.UNKNOWN)); this.dungeonGenerator.bossRooms.add(new
-																RoomBossVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
-														this.dungeonGenerator.treasureRooms.add(new RoomTreasureVenus(null, 0,
-																0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomEmptyVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomSpawnerVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomChestsVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.otherRooms.add(new RoomChestsVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.bossRooms.add(new RoomBossVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
+		this.dungeonGenerator.treasureRooms.add(new RoomTreasureVenus(null, 0, 0, 0, ForgeDirection.UNKNOWN));
 	}
 
 	@Override
@@ -78,7 +71,7 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected int getSeaLevel(){
+	protected int getSeaLevel() {
 		return 64;
 	}
 
@@ -90,41 +83,39 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 	}
 
 	@Override
-	protected BiomeGenBase.SpawnListEntry[] getMonsters()
-	{
+	protected BiomeGenBase.SpawnListEntry[] getMonsters() {
 		List<BiomeGenBase.SpawnListEntry> monsters = new ArrayList<BiomeGenBase.SpawnListEntry>();
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedMagmaCube)
+		if (Config.evolvedMagmaCube)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedMagmaCube.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		if(Config.evolvedBlaze)
+		if (Config.evolvedBlaze)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedBlaze.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
 
 	@Override
-	protected BiomeGenBase.SpawnListEntry[] getCreatures()
-	{
+	protected BiomeGenBase.SpawnListEntry[] getCreatures() {
 		return new BiomeGenBase.SpawnListEntry[0];
 	}
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks,(byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.venusBlocks, (byte) 2);
 	}
 
 	@Override
@@ -154,8 +145,7 @@ public class ChunkProviderVenus extends ChunkProviderSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
-		this.dungeonGenerator.generateUsingArrays(this.worldObj,
-				this.worldObj.getSeed(), cX * 16, 25, cZ * 16, cX, cZ, blocks,metadata);
+		this.dungeonGenerator.generateUsingArrays(this.worldObj, this.worldObj.getSeed(), cX * 16, 25, cZ * 16, cX, cZ, blocks, metadata);
 		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
