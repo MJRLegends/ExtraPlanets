@@ -259,6 +259,7 @@ public class Config {
 	public static boolean VENUS_ROVER;
 
 	public static boolean OLD_STYLE_GRAVITY;
+	public static boolean OLD_ROCKET_MODELS;
 
 	public static boolean MERCURY_VILLAGES;
 	public static boolean CERES_VILLAGES;
@@ -555,7 +556,8 @@ public class Config {
 		VENUS_ROVER = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "Setting this option to false will remove the Venus Rover Entity & Schematic & Parts needed to Craft it").getBoolean(true);
 
 		OLD_STYLE_GRAVITY = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Style Gravity", false, "This option will change all the gravity of Planets & Moons back to the old style of gravity").getBoolean(false);
-
+		OLD_ROCKET_MODELS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Models for Tier 9 & 10 Rockets", false, "This option will change all the Tier 9 & 10 Rockets models to the old type").getBoolean(false);
+		
 		MERCURY_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Mercury Villages", true, "").getBoolean(true);
 		CERES_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ceres Villages", true, "").getBoolean(true);
 		JUPITER_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Jupiter Villages", true, "").getBoolean(true);
