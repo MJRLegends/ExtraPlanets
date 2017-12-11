@@ -104,7 +104,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"));
 			JUPITER.setDimensionInfo(Config.JUPITER_ID, WorldProviderJupiter.class);
 			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, true, 100.0F, 3.0F, 0.1F));
-			JUPITER.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			JUPITER.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
 		}
 		if (Config.SATURN) {
 			SATURN = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -117,7 +117,7 @@ public class ExtraPlanets_Planets {
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
 			SATURN.setAtmosphere(new AtmosphereInfo(false, false, true, 80.0F, 0.0F, 0.1F));
-			SATURN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			SATURN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
 		}
 		if (Config.URANUS) {
 			URANUS = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -130,7 +130,7 @@ public class ExtraPlanets_Planets {
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
 			URANUS.setAtmosphere(new AtmosphereInfo(false, false, true, -120.0F, 4.0F, 0.1F));
-			URANUS.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			URANUS.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -143,7 +143,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
 			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, true, -140.0F, 5.0F, 0.1F));
-			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
+			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
 		}
 		if (Config.PLUTO) {
 			PLUTO = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
