@@ -182,6 +182,9 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		if (FMLCommonHandler.instance().getSide() == Side.CLIENT)
+			GalacticraftVersionChecker.run();
+		
 		Config.init();
 
 		// Main Events
@@ -309,9 +312,6 @@ public class ExtraPlanets {
 		// Initialize/Register Achievements
 		if (Config.achievements)
 			ExtraPlanets_Achievements.init();
-
-		if (FMLCommonHandler.instance().getSide() == Side.CLIENT)
-			GalacticraftVersionChecker.run();
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);

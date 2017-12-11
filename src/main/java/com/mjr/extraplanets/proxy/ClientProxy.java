@@ -273,13 +273,16 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, new RenderTier10Rocket(rocketModelTier10, Constants.ASSET_PREFIX, "blank_rocket_white"));
 			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.tier10Rocket, new ItemRendererTier10Rocket(rocketModelTier10));
 		}
-		IModelCustom marsRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover.obj"));
-		RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, new RenderMarsRover(marsRover));
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.marsRover, new ItemRendererMarsRover(marsRover));
-
-		IModelCustom venusRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover.obj"));
-		RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, new RenderVenusRover(venusRover));
-		MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.venusRover, new ItemRendererVenusRover(venusRover));
+		if (Config.marsRover) {
+			IModelCustom marsRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, new RenderMarsRover(marsRover));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.marsRover, new ItemRendererMarsRover(marsRover));
+		}
+		if (Config.venusRover) {
+			IModelCustom venusRover = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/VenusRover.obj"));
+			RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, new RenderVenusRover(venusRover));
+			MinecraftForgeClient.registerItemRenderer(ExtraPlanets_Items.venusRover, new ItemRendererVenusRover(venusRover));
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
