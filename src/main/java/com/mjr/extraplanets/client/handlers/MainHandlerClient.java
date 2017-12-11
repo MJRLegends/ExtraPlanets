@@ -14,7 +14,6 @@ import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
 import micdoodle8.mods.galacticraft.planets.venus.client.FakeLightningBoltRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -115,7 +114,8 @@ public class MainHandlerClient {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
 		final EntityPlayerSP player = minecraft.player;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
-		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider) && !playerBaseClient.isSpectator() && !minecraft.gameSettings.showDebugInfo) {
+		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider) && !playerBaseClient.isSpectator()
+				&& !minecraft.gameSettings.showDebugInfo) {
 			if ((player.world.provider instanceof CustomWorldProviderSpace)) {
 				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.world.provider;
 
@@ -159,7 +159,7 @@ public class MainHandlerClient {
 	public void renderLightning(ClientProxyCore.EventSpecialRender event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
 		final EntityPlayerSP player = minecraft.player;
-		if (player != null && !ConfigManagerVenus.disableAmbientLightning) {
+		if (player != null && Config.JUITPER_LIGHTING) {
 			Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
 			while (it.hasNext()) {
 				Map.Entry<BlockPos, Integer> entry = it.next();
@@ -176,7 +176,7 @@ public class MainHandlerClient {
 		final EntityPlayerSP player = minecraft.player;
 
 		if (player == event.player) {
-			if (!ConfigManagerVenus.disableAmbientLightning) {
+			if (Config.JUITPER_LIGHTING) {
 				Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
 				while (it.hasNext()) {
 					Map.Entry<BlockPos, Integer> entry = it.next();
