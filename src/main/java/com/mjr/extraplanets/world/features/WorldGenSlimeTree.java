@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenSlimeTree extends WorldGenerator {
@@ -18,7 +19,7 @@ public class WorldGenSlimeTree extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Slime Tree at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Slime Tree at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position);
 		}
 		return true;

@@ -10,6 +10,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog2;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class WorldGenLogTree extends WorldGenerator {
 
@@ -28,7 +29,7 @@ public class WorldGenLogTree extends WorldGenerator {
 					if (world.getBlockState(new BlockPos(x + i, y, z + j)) == Blocks.AIR)
 						return false;
 				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
+					MessageUtilities.debugMessageToLog("ExtraPlanets: " + ex.getMessage());
 				}
 			}
 		}
@@ -36,7 +37,7 @@ public class WorldGenLogTree extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Log Tree at (x, y, z)" + x + " " + y + " " + z);
+				MessageUtilities.debugMessageToLog("Spawning Log Tree at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y - 1, z);
 			return true;
 		}

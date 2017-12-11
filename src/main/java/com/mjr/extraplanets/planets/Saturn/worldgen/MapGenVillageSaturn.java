@@ -22,6 +22,7 @@ import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVi
 import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageTorch;
 import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureVillageStartSaturn;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageSaturn extends MapGenStructure {
 	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenSaturn.saturn });
@@ -83,17 +84,16 @@ public class MapGenVillageSaturn extends MapGenStructure {
 
 	}
 	
-    @Override
-    public BlockPos getNearestStructurePos(World worldIn, BlockPos pos, boolean p_180706_3_)
-    {
-        this.world = worldIn;
-        return findNearestStructurePosBySpacing(worldIn, this, pos, 32, 8, 10387312, false, 100, p_180706_3_);
-    }
+	@Override
+	public BlockPos getClosestStrongholdPos(World worldIn, BlockPos pos, boolean p_180706_3_) {
+		this.world = worldIn;
+		return findNearestStructurePosBySpacing(worldIn, this, pos, 32, 8, 10387312, false, 100, p_180706_3_);
+	}
 
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			System.out.println("Generating Saturn Village at x" + par1 * 16 + " z" + par2 * 16);
+			MessageUtilities.debugMessageToLog("Generating Saturn Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartSaturn(this.world, this.rand, par1, par2, this.terrainType);
 	}
 
