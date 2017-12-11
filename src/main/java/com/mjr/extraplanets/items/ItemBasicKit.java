@@ -14,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
 import cpw.mods.fml.relauncher.Side;
@@ -29,6 +30,7 @@ public class ItemBasicKit extends Item {
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setUnlocalizedName(assetName);
+		this.setTextureName(Constants.TEXTURE_PREFIX + "tier_" + tier + "_kit");
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 		this.tier = tier;
 	}
@@ -75,8 +77,6 @@ public class ItemBasicKit extends Item {
 			ItemStack gear7 = stats.extendedInventory.getStackInSlot(7);
 			ItemStack gear8 = stats.extendedInventory.getStackInSlot(8);
 			ItemStack gear9 = stats.extendedInventory.getStackInSlot(9);
-			// Shield
-			ItemStack gear10 = stats.extendedInventory.getStackInSlot(10);
 			ItemStack thermalPadding1 = null;
 			ItemStack thermalPadding2 = null;
 			ItemStack thermalPadding3 = null;
