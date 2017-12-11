@@ -14,17 +14,17 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class DensifierRecipeMaker {
 	public static List<DensifierRecipeWrapper> getRecipesList() {
 		List<DensifierRecipeWrapper> recipes = new ArrayList<>();
-		ItemStack[] inputs = new ItemStack[2];
+		ItemStack[] inputs = new ItemStack[1];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID);
 		DensifierRecipeWrapper wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(ExtraPlanets_Items.CARAMEL_BAR, 6, 0));
 		recipes.add(wrapper);
 		
-		inputs = new ItemStack[2];
+		inputs = new ItemStack[1];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID);
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(ExtraPlanets_Items.CHOCOLATE_BAR, 6, 0));
 		recipes.add(wrapper);
 		
-		inputs = new ItemStack[2];
+		inputs = new ItemStack[1];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.NITROGEN_ICE_FLUID);
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.ice, 6, 0));
 		recipes.add(wrapper);

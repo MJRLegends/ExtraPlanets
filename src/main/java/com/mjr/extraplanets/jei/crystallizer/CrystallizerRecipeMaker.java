@@ -13,7 +13,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class CrystallizerRecipeMaker {
 	public static List<CrystallizerRecipeWrapper> getRecipesList() {
 		List<CrystallizerRecipeWrapper> recipes = new ArrayList<>();
-		ItemStack[] inputs = new ItemStack[2];
+		ItemStack[] inputs = new ItemStack[1];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.SALT_FLUID);
 		CrystallizerRecipeWrapper wrapper = new CrystallizerRecipeWrapper(inputs, new ItemStack(ExtraPlanets_Items.IODIDE_SALT, 6, 0));
 		recipes.add(wrapper);
