@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier4ThermalPadding extends Item implements IItemThermal {
-	public static String[] names = { "tier5_thermal_helm", "tier5_thermal_chestplate", "tier5_thermal_leggings", "tier5_thermal_boots", "tier5_thermal_helm0", "tier5_thermal_chestplate0", "tier5_thermal_leggings0", "tier5_thermal_boots0" };
+	public static String[] names = { "tier4_thermal_helm", "tier4_thermal_chestplate", "tier4_thermal_leggings", "tier4_thermal_boots", "tier4_thermal_helm0", "tier4_thermal_chestplate0", "tier4_thermal_leggings0", "tier4_thermal_boots0" };
 
 	protected IIcon[] icons = new IIcon[ItemTier4ThermalPadding.names.length];
 
@@ -61,7 +61,7 @@ public class ItemTier4ThermalPadding extends Item implements IItemThermal {
 		int i = 0;
 
 		for (String name : ItemTier4ThermalPadding.names) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + name);
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier5" + name.substring(5));
 		}
 	}
 

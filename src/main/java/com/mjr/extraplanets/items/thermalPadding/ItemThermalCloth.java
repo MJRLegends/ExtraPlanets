@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemThermalCloth extends Item {
-	public static String[] names = { "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth" };
+	public static String[] names = { "tier2_thermal_cloth", "tier3_thermal_cloth", "tier4_thermal_cloth" };
 
 	protected IIcon[] icons = new IIcon[ItemThermalCloth.names.length];
 
@@ -42,7 +42,14 @@ public class ItemThermalCloth extends Item {
 		int i = 0;
 
 		for (final String name : ItemThermalCloth.names) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5) + "." + name);
+			String temp = name;
+			if (temp.contains("tier2"))
+				temp = temp.replace("tier2", "tier3");
+			else if (temp.contains("tier3"))
+				temp = temp.replace("tier3", "tier4");
+			else if (temp.contains("tier4"))
+				temp = temp.replace("tier4", "tier5");
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5) + "." + temp);
 		}
 	}
 
