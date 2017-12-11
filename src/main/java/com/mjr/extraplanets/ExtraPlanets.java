@@ -314,7 +314,8 @@ public class ExtraPlanets {
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 
 		// Register Deconstructor Compatibility
-		RegisterDeconstructorCompatibility();
+		if(Config.GC_DECONSTRUCTOR_SUPPORT)
+			RegisterDeconstructorCompatibility();
 
 		// Register Custom Recipe Type
 		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
