@@ -238,7 +238,8 @@ public class Config {
 	// public static boolean amunRaCompatibility;
 	public static boolean galaxySpaceCompatibility;
 	public static boolean galaxySpaceCompatibilityAdv;
-
+	public static boolean extendedPlanetsCompatibility;
+	
 	public static float kepler22SystemYawOffset;
 	public static float kepler22SystemPitchOffset;
 	public static float kepler47SystemYawOffset;
@@ -537,7 +538,8 @@ public class Config {
 		// amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "").getBoolean(false);
 		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "This option will disable conflicting planets/moons/spacestations/thermal paddings").getBoolean(false);
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
-
+		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable conflicting planets/moons/spacestations/thermal paddings").getBoolean(false);
+		
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler22SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler47SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler47 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -609,6 +611,18 @@ public class Config {
 				kepler47SystemYawOffset = 40.0F;
 			iapetusID = -44;
 			titaniaID = -45;
+		}
+		if(extendedPlanetsCompatibility){
+			neptune = false;
+			uranus = false;
+			ceres = false;
+			pluto = false;
+			jupiter = false;
+			io = false;
+			saturn = false;
+			plutoSpaceStation = false;
+			titania = false;
+			titan = false;
 		}
 	}
 
