@@ -233,6 +233,7 @@ public class Config {
 	public static boolean evolvedGiantSpider;
 	public static boolean evolvedMiniEnderman;
 
+	public static boolean morePlanetsCompatibility;
 	public static boolean morePlanetsCompatibilityAdv;
 	// public static boolean amunRaCompatibility;
 	public static boolean galaxySpaceCompatibility;
@@ -530,10 +531,11 @@ public class Config {
 		evolvedPowerSkeleton = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Power Skeleton", true, "").getBoolean(true);
 		evolvedGiantSpider = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
-
-		morePlanetsCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced More Planets Compatibility", false, "").getBoolean(false);
+		
+		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic More Planets Compatibility", false, "This option will disable conflicting planets/moons/spacestations/thermal paddings").getBoolean(false);
+		morePlanetsCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced More Planets Compatibility", false, "This option will do the same as the basic one but will also fix the progression between addons (Note: Will disable blocks/items/entities/recipes)").getBoolean(false);
 		// amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "").getBoolean(false);
-		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "").getBoolean(false);
+		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "This option will disable conflicting planets/moons/spacestations/thermal paddings").getBoolean(false);
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -570,7 +572,7 @@ public class Config {
 	}
 
 	private static void checkCompatibility() {
-		if (morePlanetsCompatibilityAdv) {
+		if (morePlanetsCompatibility || morePlanetsCompatibilityAdv) {
 			pluto = false;
 			mercury = false;
 			venus = false;
