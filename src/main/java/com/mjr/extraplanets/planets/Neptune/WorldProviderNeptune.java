@@ -109,10 +109,13 @@ public class WorldProviderNeptune extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
-			return -140.0F;
+		if (Config.THERMAL_PADDINGS) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+				return -140.0F;
+			}
+			return -130.0F;
 		}
-		return -130.0F;
+		return 5.0F;
 	}
 
 	@Override

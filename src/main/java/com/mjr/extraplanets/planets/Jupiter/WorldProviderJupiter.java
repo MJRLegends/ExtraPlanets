@@ -109,10 +109,13 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
-			return 100.0F;
+		if (Config.THERMAL_PADDINGS) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+				return 100.0F;
+			}
+			return 90.0F;
 		}
-		return 90.0F;
+		return 5.0F;
 	}
 
 	@Override
