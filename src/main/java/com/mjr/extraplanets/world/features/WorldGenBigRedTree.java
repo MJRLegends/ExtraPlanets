@@ -12,6 +12,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class WorldGenBigRedTree extends WorldGenerator {
 
@@ -30,7 +31,7 @@ public class WorldGenBigRedTree extends WorldGenerator {
 					if (world.getBlockState(new BlockPos(x + i, y - 3, z + j)) == Blocks.AIR)
 						return false;
 				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
+					MessageUtilities.debugMessageToLog("ExtraPlanets: " + ex.getMessage());
 				}
 			}
 		}
@@ -38,7 +39,7 @@ public class WorldGenBigRedTree extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning BigRedTree at (x, y, z)" + x + " " + y + " " + z);
+				MessageUtilities.debugMessageToLog("Spawning BigRedTree at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y - 1, z);
 			return true;
 		}

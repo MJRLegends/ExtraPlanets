@@ -8,7 +8,6 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
-import net.minecraftforge.fml.common.FMLLog;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
@@ -21,6 +20,7 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureComponentV
 import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureComponentVillageTorch;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.village.StructureVillageStartJupiter;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageJupiter extends MapGenStructure {
 	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenJupiter.jupiter });
@@ -85,7 +85,7 @@ public class MapGenVillageJupiter extends MapGenStructure {
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			FMLLog.info("Generating Jupiter Village at x" + par1 * 16 + " z" + par2 * 16);
+			MessageUtilities.debugMessageToLog("Generating Jupiter Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartJupiter(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}
 

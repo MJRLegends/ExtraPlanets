@@ -12,6 +12,7 @@ import net.minecraft.world.storage.loot.LootTableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenYellowHut extends WorldGenerator {
@@ -22,7 +23,7 @@ public class WorldGenYellowHut extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Yellow Hut at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Yellow Hut at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position.up());
 			fillChests(world, rand, position.up());
 		}

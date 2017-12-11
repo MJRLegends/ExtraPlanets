@@ -8,6 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenCandyCaneType3 extends WorldGenerator {
@@ -18,7 +19,7 @@ public class WorldGenCandyCaneType3 extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Candy Cane Type 3 at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Candy Cane Type 3 at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position);
 		}
 		return true;
