@@ -10,6 +10,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class WorldGenBigPurpleTree extends WorldGenerator {
 
@@ -28,7 +29,7 @@ public class WorldGenBigPurpleTree extends WorldGenerator {
 					if (world.getBlockState(new BlockPos(x + i, y - 3, z + j)) == Blocks.air)
 						return false;
 				} catch (Exception ex) {
-					System.out.println("ExtraPlanets: " + ex.getMessage());
+					MessageUtilities.debugMessageToLog("ExtraPlanets: " + ex.getMessage());
 				}
 			}
 		}
@@ -36,7 +37,7 @@ public class WorldGenBigPurpleTree extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning BigPurpleTree at (x, y, z)" + x + " " + y + " " + z);
+				MessageUtilities.debugMessageToLog("Spawning BigPurpleTree at (x, y, z)" + x + " " + y + " " + z);
 			generate_r0(world, rand, x, y - 1, z);
 			return true;
 		}

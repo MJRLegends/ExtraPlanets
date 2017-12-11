@@ -8,7 +8,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
-import net.minecraftforge.fml.common.FMLLog;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
@@ -21,6 +20,7 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVi
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageTorch;
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureVillageStartUranus;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageUranus extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenUranus.uranus });
@@ -85,7 +85,7 @@ public class MapGenVillageUranus extends MapGenStructure {
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			FMLLog.info("Generating Uranus Village at x" + par1 * 16 + " z" + par2 * 16);
+			MessageUtilities.debugMessageToLog("Generating Uranus Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartUranus(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}
 

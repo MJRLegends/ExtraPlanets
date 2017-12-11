@@ -12,6 +12,7 @@ import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenRedHut extends WorldGenerator {
@@ -22,7 +23,7 @@ public class WorldGenRedHut extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Red Hut at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Red Hut at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position.up());
 			fillChests(world, rand, position.up());
 		}

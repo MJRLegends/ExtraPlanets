@@ -8,7 +8,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
-import net.minecraftforge.fml.common.FMLLog;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageField;
@@ -20,6 +19,7 @@ import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVill
 import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageTorch;
 import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureVillageStartEris;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageEris extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenEris.eris });
@@ -84,7 +84,7 @@ public class MapGenVillageEris extends MapGenStructure {
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			FMLLog.info("Generating Eris Village at x" + par1 * 16 + " z" + par2 * 16);
+			MessageUtilities.debugMessageToLog("Generating Eris Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartEris(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}
 

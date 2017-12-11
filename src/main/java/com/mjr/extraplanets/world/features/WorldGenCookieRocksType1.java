@@ -9,6 +9,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.BlockCakeBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenCookieRocksType1 extends WorldGenerator {
@@ -19,7 +20,7 @@ public class WorldGenCookieRocksType1 extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Cookie Rocks Type 1 at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Cookie Rocks Type 1 at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position);
 		}
 		return true;

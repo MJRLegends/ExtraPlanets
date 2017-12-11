@@ -13,6 +13,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenBasicHideout extends WorldGenerator {
@@ -23,7 +24,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Basic Hideout at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Basic Hideout at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position);
 			fillChests(world, rand, position);
 		}
@@ -687,7 +688,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		int random = rand.nextInt(15) + 1;
 		if (random < 5) {
 			if (Config.DEBUG_MODE)
-				System.out.println("Loot Spawned!");
+				MessageUtilities.debugMessageToLog("Loot Spawned!");
 			int lastNumber = 0;
 			for (int i = 0; i < rand.nextInt(4); i++) {
 				int randomChests;
@@ -696,7 +697,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 				} while (lastNumber == randomChests);
 				lastNumber = randomChests;
 				if (Config.DEBUG_MODE)
-					System.out.println("Chest " + randomChests);
+					MessageUtilities.debugMessageToLog("Chest " + randomChests);
 				TileEntityChest chest;
 				switch (randomChests) {
 				case 1:
@@ -806,7 +807,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 			}
 		} else {
 			if (Config.DEBUG_MODE)
-				System.out.println("No loot spawned!");
+				MessageUtilities.debugMessageToLog("No loot spawned!");
 		}
 		return false;
 	}
