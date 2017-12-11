@@ -24,7 +24,6 @@ public class SlotMarsRover extends Slot {
 		this.index = par3;
 		this.pos = pos;
 		this.player = player;
-		System.out.println(this.index + ", " + this.pos);
 	}
 
 	@Override
