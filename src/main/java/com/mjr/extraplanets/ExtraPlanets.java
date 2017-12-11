@@ -341,13 +341,16 @@ public class ExtraPlanets {
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 
 		// Register Deconstructor Compatibility
-		RegisterDeconstructorCompatibility();
+		if(Config.GC_DECONSTRUCTOR_SUPPORT)
+			RegisterDeconstructorCompatibility();
 
 		// Register Extreme Reactors Compatibility
-		ExtremeReactorsCompatibility.init();
+		if(Config.EXTREME_REACTORS_SUPPORT)
+			ExtremeReactorsCompatibility.init();
 
 		// Register MC MultiPart Compatibility
-		MCMultiPartCompatibility.init();
+		if(Config.MC_MULITPART_SUPPORT)
+			MCMultiPartCompatibility.init();
 
 		// Register Custom Recipe Type
 		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
