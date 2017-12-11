@@ -140,6 +140,11 @@ public class ExtraPlanets_Items {
 	public static Item schematicMarsRover;
 	public static Item schematicVenusRover;
 
+	public static Item tier1EquipmentKit;
+	public static Item tier2EquipmentKit;
+	public static Item tier3EquipmentKit;
+	public static Item tier4EquipmentKit;
+
 	public static void init() {
 		initializeItems();
 		registerItems();
@@ -274,6 +279,11 @@ public class ExtraPlanets_Items {
 
 		wafers = new ItemWafers("wafer");
 		ingotLead = new ItemBasicItem("ingot_lead");
+		
+		tier1EquipmentKit = new ItemBasicKit("tier1_kit", 1);
+		tier2EquipmentKit = new ItemBasicKit("tier2_kit", 2);
+		tier3EquipmentKit = new ItemBasicKit("tier3_kit", 3);
+		tier4EquipmentKit = new ItemBasicKit("tier4_kit", 4);
 	}
 
 	private static void registerItems() {
@@ -387,7 +397,11 @@ public class ExtraPlanets_Items {
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
 		GameRegistry.registerItem(ingotLead, "item.ingotLead");
-
+		
+		GameRegistry.registerItem(tier1EquipmentKit, tier1EquipmentKit.getUnlocalizedName());
+		GameRegistry.registerItem(tier2EquipmentKit, tier2EquipmentKit.getUnlocalizedName());
+		GameRegistry.registerItem(tier3EquipmentKit, tier3EquipmentKit.getUnlocalizedName());
+		GameRegistry.registerItem(tier4EquipmentKit, tier4EquipmentKit.getUnlocalizedName());
 	}
 
 	private static void registerFluidContainer() {

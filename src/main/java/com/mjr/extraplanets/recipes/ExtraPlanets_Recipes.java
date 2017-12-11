@@ -530,11 +530,11 @@ public class ExtraPlanets_Recipes {
 
 			// Block to White Gem
 			GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 9, whiteGem), new Object[] { new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 1, 7) });
-			
+
 			// Dense Ice to Ice
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.denseIce, 1), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(Blocks.ice, 1) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ice, 9), new Object[] { new ItemStack(ExtraPlanets_Blocks.denseIce, 1) });
-			
+
 			if (Config.crystalItems) {
 				// Tools
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ExtraPlanets_Tools.crystalPickaxe), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, crystal), 'S', "stickWood" }));
@@ -961,6 +961,56 @@ public class ExtraPlanets_Recipes {
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks2, 1, 3), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 12), 'B', ExtraPlanets_Blocks.decorativeBlocks2 });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks2, 1, 4), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 11), 'B', ExtraPlanets_Blocks.decorativeBlocks2 });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks2, 1, 5), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 2), 'B', ExtraPlanets_Blocks.decorativeBlocks2 });
+
+		// Kits
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1EquipmentKit, 1, 0), new Object[] { "MGF", "TTA", "BCD", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankLight), 'A', new ItemStack(AsteroidsItems.thermalPadding, 1, 0), 'B', new ItemStack(AsteroidsItems.thermalPadding, 1, 1), 'C', new ItemStack(AsteroidsItems.thermalPadding, 1, 2), 'D',
+				new ItemStack(AsteroidsItems.thermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1EquipmentKit, 1, 1), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankLight) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1EquipmentKit, 1, 2), new Object[] { "F A", "BCD", "   ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(AsteroidsItems.thermalPadding, 1, 0), 'B',
+				new ItemStack(AsteroidsItems.thermalPadding, 1, 1), 'C', new ItemStack(AsteroidsItems.thermalPadding, 1, 2), 'D', new ItemStack(AsteroidsItems.thermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1EquipmentKit, 1, 3), new Object[] { "MGF", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankLight) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1EquipmentKit, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankLight) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier1EquipmentKit, 1, 5), new Object[] { "ABC", " D ", "   ", 'A', new ItemStack(AsteroidsItems.thermalPadding, 1, 0), 'B', new ItemStack(AsteroidsItems.thermalPadding, 1, 1), 'C',
+				new ItemStack(AsteroidsItems.thermalPadding, 1, 2), 'D', new ItemStack(AsteroidsItems.thermalPadding, 1, 3) });
+
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2EquipmentKit, 1, 0), new Object[] { "MGF", "TTA", "BCD", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankMedium), 'A', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 1), 'C',
+				new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2EquipmentKit, 1, 1), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankMedium) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2EquipmentKit, 1, 2), new Object[] { "F A", "BCD", "   ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 0), 'B',
+				new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2EquipmentKit, 1, 3), new Object[] { "MGF", "T T", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankMedium) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2EquipmentKit, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankMedium) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier2EquipmentKit, 1, 5), new Object[] { "ABC", " D ", "   ", 'A', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 0), 'B',
+				new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier2ThermalPadding, 1, 3) });
+
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3EquipmentKit, 1, 0), new Object[] { "MGF", "TTA", "BCD", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankHeavy), 'A', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 1), 'C',
+				new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3EquipmentKit, 1, 1), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3EquipmentKit, 1, 2), new Object[] { "F A", "BCD", "   ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 0), 'B',
+				new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3EquipmentKit, 1, 3), new Object[] { "MGF", "T T", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankHeavy) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3EquipmentKit, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier3EquipmentKit, 1, 5), new Object[] { "ABC", " D ", "   ", 'A', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 0), 'B',
+				new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier3ThermalPadding, 1, 3) });
+
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4EquipmentKit, 1, 0), new Object[] { "MGF", "TTA", "BCD", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankHeavy), 'A', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 1), 'C',
+				new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4EquipmentKit, 1, 1), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4EquipmentKit, 1, 2), new Object[] { "F A", "BCD", "   ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 0), 'B',
+				new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 3) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4EquipmentKit, 1, 3), new Object[] { "MGF", "T T", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'T', new ItemStack(GCItems.oxTankHeavy) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4EquipmentKit, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy) });
+		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4EquipmentKit, 1, 5), new Object[] { "ABC", " D ", "   ", 'A', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 0), 'B',
+				new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 3) });
+
 	}
 
 	private static void registerCompressorRecipes() {
