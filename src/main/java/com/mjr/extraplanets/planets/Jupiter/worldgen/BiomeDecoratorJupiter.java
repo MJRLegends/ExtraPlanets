@@ -26,6 +26,7 @@ public class BiomeDecoratorJupiter extends BiomeDecorator {
 	private WorldGenerator gravelGen;
 	private WorldGenerator redGemGen;
 	private WorldGenerator skyBlocksGen;
+	private WorldGenerator redSandGen;
 
 	private int LakesPerChunk = 5;
 
@@ -45,6 +46,7 @@ public class BiomeDecoratorJupiter extends BiomeDecorator {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterGravel, 12, 0, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 4, 10, true, ExtraPlanets_Blocks.jupiterBlocks, 2);
 		this.skyBlocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.jupiterBlocks, 3, 2, false, Blocks.air, 0);
+		this.redSandGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.RED_SAND, 25, 0, false, ExtraPlanets_Blocks.ORANGE_SAND, 0);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -75,6 +77,7 @@ public class BiomeDecoratorJupiter extends BiomeDecorator {
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.redGemGen, 0, 10);
 		this.generateOre(5, this.skyBlocksGen, 63, 256);
+		this.generateOre(150, this.redSandGen, 0, 256);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
