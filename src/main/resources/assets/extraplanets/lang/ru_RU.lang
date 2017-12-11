@@ -1365,6 +1365,7 @@ item.tier6_items.magnesium_shard.name=Magnesium Shard ##NEEDS TRANSLATE##
 item.tier4_items.ash.name=Ash ##NEEDS TRANSLATE##
 item.tier4_items.sledge_hammer.name=Sledge Hammer ##NEEDS TRANSLATE##
 item.tier4_items.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
+item.thermal_cloth.tier2_thermal_cloth.name=Tier 2 Thermal Cloth ##NEEDS TRANSLATE##
 
 #MorePlanetsCompactBlocks&Items
 tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
@@ -1372,9 +1373,21 @@ tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
 tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
 
+#Keys
 item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
 item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
 item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
 item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
 
+#Thermal Paddings
+item.tier2_thermal_helm.name=Tier 2 Thermal Padding Helm ##NEEDS TRANSLATE##
+item.tier2_thermal_chestplate.name=Tier 2 Thermal Padding Chestpiece ##NEEDS TRANSLATE##
+item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings ##NEEDS TRANSLATE##
+item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
+
+#Messages
 currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
+currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
+tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
+tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
+tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
