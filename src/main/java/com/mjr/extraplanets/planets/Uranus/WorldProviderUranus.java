@@ -109,10 +109,13 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
-			return -120.0F;
+		if (Config.THERMAL_PADDINGS) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+				return -120.0F;
+			}
+			return -115.0F;
 		}
-		return -115.0F;
+		return 5.0F;
 	}
 
 	@Override
