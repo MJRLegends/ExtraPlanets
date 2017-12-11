@@ -225,6 +225,9 @@ public class Config {
 	public static boolean NEI_SUPPORT;
 	public static boolean JEI_SUPPORT;
 	public static boolean ACHIEVEMENTS;
+	public static boolean EXTREME_REACTORS_SUPPORT;
+	public static boolean MC_MULITPART_SUPPORT;
+	public static boolean GC_DECONSTRUCTOR_SUPPORT;
 
 	public static boolean PRESSURE;
 	public static boolean RADIATION;
@@ -515,6 +518,10 @@ public class Config {
 		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Ingots to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All Ingots!").getBoolean(true);
 
 		MORE_PLANETS_COMPATIBILITY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Compatibility", false, "FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
+		
+		EXTREME_REACTORS_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Extreme Reactors Compatibility", true, "Setting this to false will disable Extreme Reactors Compatibility!").getBoolean(true);
+		MC_MULITPART_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable MC MultiPart Compatibility", true, "Setting this to false will disable MC MultiPart Compatibility!").getBoolean(true);
+		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstuctor Machine Compatibility!").getBoolean(true);
 		
 		SLABS_AND_STAIRS = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Enable Slab & Stairs", true, "Setting this option to false will remove all Slabs and Stairs").getBoolean(true);
 
