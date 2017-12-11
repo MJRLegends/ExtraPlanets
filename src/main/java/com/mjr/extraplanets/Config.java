@@ -268,7 +268,7 @@ public class Config {
 	public static boolean oldStyleGravity;
 
 	public static boolean useCustomCelestaialSelection;
-	public static boolean DEBUG_MODE;
+	public static boolean debugMode;
 
 	public static void init() {
 		load();

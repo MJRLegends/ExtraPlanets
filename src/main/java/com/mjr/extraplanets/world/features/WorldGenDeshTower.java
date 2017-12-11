@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenDeshTower extends WorldGenerator {
@@ -17,8 +18,8 @@ public class WorldGenDeshTower extends WorldGenerator {
 		if (WorldGenHelper.checkValidSpawn(world, x, y, z, 10) == false)
 			return false;
 		else {
-			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Desh Tower at (x, y, z)" + x + " " + y + " " + z);
+			if (Config.debugMode)
+				MessageUtilities.debugMessageToLog("Spawning Desh Tower at (x, y, z)" + x + " " + y + " " + z);
 			generatreStructure(world, rand, x, y, z);
 		}
 		return true;

@@ -11,6 +11,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenIgloo extends WorldGenerator {
@@ -20,8 +21,8 @@ public class WorldGenIgloo extends WorldGenerator {
 		if (WorldGenHelper.checkValidSpawn(world, x, y, z, 5) == false)
 			return false;
 		else {
-			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Brown Hut at (x, y, z)" + x + " " + y + " " + z);
+			if (Config.debugMode)
+				MessageUtilities.debugMessageToLog("Spawning Brown Hut at (x, y, z)" + x + " " + y + " " + z);
 
 			if (rand.nextInt(50) != 50) {
 				return generateBasic(world, rand, x, y, z);

@@ -9,7 +9,9 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageTitan extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenTitan.titan });
@@ -69,7 +71,8 @@ public class MapGenVillageTitan extends MapGenStructure {
 
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
-		System.out.println("Generating Village at x" + par1 * 16 + " z" + par2 * 16);
+		if(Config.debugMode)
+			MessageUtilities.debugMessageToLog("Generating Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartTitan(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}
 
