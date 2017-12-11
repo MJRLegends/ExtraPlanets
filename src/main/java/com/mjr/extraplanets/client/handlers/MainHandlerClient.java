@@ -156,7 +156,7 @@ public class MainHandlerClient {
 	public void renderLightning(ClientProxyCore.EventSpecialRender event) {
 		final Minecraft minecraft = FMLClientHandler.instance().getClient();
 		final EntityPlayerSP player = minecraft.thePlayer;
-		if (player != null && !ConfigManagerVenus.disableAmbientLightning) {
+		if (player != null && Config.JUITPER_LIGHTING) {
 			Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
 			while (it.hasNext()) {
 				Map.Entry<BlockPos, Integer> entry = it.next();
@@ -173,7 +173,7 @@ public class MainHandlerClient {
 		final EntityPlayerSP player = minecraft.thePlayer;
 
 		if (player == event.player) {
-			if (!ConfigManagerVenus.disableAmbientLightning) {
+			if (Config.JUITPER_LIGHTING) {
 				Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
 				while (it.hasNext()) {
 					Map.Entry<BlockPos, Integer> entry = it.next();
