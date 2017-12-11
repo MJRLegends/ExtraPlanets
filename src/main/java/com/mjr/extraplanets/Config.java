@@ -249,12 +249,16 @@ public class Config {
 	public static float KUIPER_BELT_DISTANCE_OFFSET;
 
 	public static float KEPLER22_SYSTEM_X_OFFSET;
+	public static float KEPLER22_SYSTEM_Y_OFFSET;
 	public static float KEPLER22_SYSTEM_Z_OFFSET;
 	public static float KEPLER47_SYSTEM_X_OFFSET;
+	public static float KEPLER47_SYSTEM_Y_OFFSET;
 	public static float KEPLER47_SYSTEM_Z_OFFSET;
 	public static float KEPLER62_SYSTEM_X_OFFSET;
+	public static float KEPLER62_SYSTEM_Y_OFFSET;
 	public static float KEPLER62_SYSTEM_Z_OFFSET;
 	public static float KEPLER69_SYSTEM_X_OFFSET;
+	public static float KEPLER69_SYSTEM_Y_OFFSET;
 	public static float KEPLER69_SYSTEM_Z_OFFSET;
 
 	public static boolean DEBUG_MODE;
@@ -550,12 +554,16 @@ public class Config {
 		KUIPER_BELT_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kuiper Belt Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 
 		KEPLER22_SYSTEM_X_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map X Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		KEPLER22_SYSTEM_Y_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Y Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER22_SYSTEM_Z_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Z Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER47_SYSTEM_X_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler47 Planet Map X Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		KEPLER47_SYSTEM_Y_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler47 Planet Map Y Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER47_SYSTEM_Z_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler47 Planet Map Z Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER62_SYSTEM_X_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler62 Planet Map X Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		KEPLER62_SYSTEM_Y_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler62 Planet Map Y Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER62_SYSTEM_Z_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler62 Planet Map Z Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER69_SYSTEM_X_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler69 Planet Map X Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
+		KEPLER69_SYSTEM_Y_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler69 Planet Map Y Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		KEPLER69_SYSTEM_Z_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler69 Planet Map Z Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 
 		DEBUG_MODE = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Debug Mode (For testing purposes and debugging bugs)", false, "Setting this option to false will enable debug messages in to the console").getBoolean(false);
@@ -573,9 +581,10 @@ public class Config {
 		NEPTUNE_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Neptune Villages", true, "").getBoolean(true);
 		PLUTO_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Pluto Villages", true, "").getBoolean(true);
 		ERIS_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Eris Villages", true, "").getBoolean(true);
-
-		if(MORE_PLANETS_COMPATIBILITY){
-			KEPLER62_SYSTEM_Z_OFFSET = -0.5F;
+		
+		if (MORE_PLANETS_COMPATIBILITY) {
+			KEPLER62_SYSTEM_X_OFFSET = 0.40F;
+			KEPLER62_SYSTEM_Y_OFFSET = 0.8F;
 		}
 		config.save();
 	}
