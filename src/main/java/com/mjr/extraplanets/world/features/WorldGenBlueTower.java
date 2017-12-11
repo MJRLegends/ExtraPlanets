@@ -13,6 +13,7 @@ import net.minecraft.world.storage.loot.LootTableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenBlueTower extends WorldGenerator {
@@ -23,7 +24,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Blue Tower at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Blue Tower at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position.down());
 			fillChests(world, rand, position.down());
 		}

@@ -13,6 +13,7 @@ import net.minecraft.world.storage.loot.LootTableList;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenVolcano extends WorldGenerator {
@@ -24,7 +25,7 @@ public class WorldGenVolcano extends WorldGenerator {
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				System.out.println("Spawning Volcano at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog("Spawning Volcano at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position);
 			fillChests(world, rand, position);
 		}

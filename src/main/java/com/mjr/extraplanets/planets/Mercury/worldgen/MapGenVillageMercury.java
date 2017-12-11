@@ -21,6 +21,7 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentV
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentVillageTorch;
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureVillageStartMercury;
+import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageMercury extends MapGenStructure {
 	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenMercury.mercury });
@@ -81,18 +82,17 @@ public class MapGenVillageMercury extends MapGenStructure {
 		return oldi == randX && oldj == randZ;
 
 	}
-	
-    @Override
-    public BlockPos getClosestStrongholdPos(World worldIn, BlockPos pos, boolean p_180706_3_)
-    {
-        this.world = worldIn;
-        return findNearestStructurePosBySpacing(worldIn, this, pos, 32, 8, 10387312, false, 100, p_180706_3_);
-    }
+
+	@Override
+	public BlockPos getClosestStrongholdPos(World worldIn, BlockPos pos, boolean p_180706_3_) {
+		this.world = worldIn;
+		return findNearestStructurePosBySpacing(worldIn, this, pos, 32, 8, 10387312, false, 100, p_180706_3_);
+	}
 
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			System.out.println("Generating Mercury Village at x" + par1 * 16 + " z" + par2 * 16);
+			MessageUtilities.debugMessageToLog("Generating Mercury Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartMercury(this.world, this.rand, par1, par2, this.terrainType);
 	}
 
