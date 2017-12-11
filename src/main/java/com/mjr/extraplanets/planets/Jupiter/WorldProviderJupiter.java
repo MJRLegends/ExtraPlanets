@@ -104,7 +104,7 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 		else
 			return 2.1F;
 	}
-	
+
 	@Override
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Planets.JUPITER;
@@ -112,12 +112,15 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
-			return 100.0F;
+		if (Config.THERMAL_PADDINGS) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+				return 100.0F;
+			}
+			return 90.0F;
 		}
-		return 90.0F;
+		return 5.0F;
 	}
-	
+
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 4.0D;
@@ -145,6 +148,6 @@ public class WorldProviderJupiter extends CustomWorldProviderSpace implements IG
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

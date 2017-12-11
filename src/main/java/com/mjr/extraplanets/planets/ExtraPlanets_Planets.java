@@ -77,7 +77,7 @@ public class ExtraPlanets_Planets {
 			MERCURY.atmosphereComponent(EnumAtmosphericGas.HYDROGEN);
 			MERCURY.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
 			MERCURY.setDimensionInfo(Config.MERCURY_ID, WorldProviderMercury.class);
-			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, 50.0F, 0.0F, 0.1F));
+			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS? 50.0F: 5.0F, 0.0F, 0.1F));
 			MERCURY.addChecklistKeys("tier_3_thermal_padding", "tier_1_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.CERES) {
@@ -155,7 +155,7 @@ public class ExtraPlanets_Planets {
 			PLUTO.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			PLUTO.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
 			PLUTO.setDimensionInfo(Config.PLUTO_ID, WorldProviderPluto.class);
-			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, -140.0F, 5.0F, 0.1F));
+			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS? -140.0F: 5.0F, 5.0F, 0.1F));
 			PLUTO.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.ERIS) {
@@ -168,7 +168,7 @@ public class ExtraPlanets_Planets {
 			ERIS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			ERIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			ERIS.setDimensionInfo(Config.ERIS_ID, WorldProviderEris.class);
-			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, -150.0F, 5.0F, 0.1F));
+			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS? -150.0F: 5.0F, 5.0F, 0.1F));
 			ERIS.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
