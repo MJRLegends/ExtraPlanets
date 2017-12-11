@@ -112,10 +112,13 @@ public class WorldProviderSaturn extends CustomWorldProviderSpace implements IGa
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
-			return 80.0F;
+		if (Config.THERMAL_PADDINGS) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+				return 80.0F;
+			}
+			return 70.0F;
 		}
-		return 70.0F;
+		return 5.0F;
 	}
 
 	@Override
