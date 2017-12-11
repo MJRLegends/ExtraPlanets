@@ -2,10 +2,15 @@ package com.mjr.extraplanets.moons.Europa.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 
@@ -14,6 +19,8 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 	private WorldGenerator ironGen;
 	private WorldGenerator gravelGen;
 	private WorldGenerator fossilsGen;
+
+	private int LakesPerChunk = 5;
 
 	private World currentWorld;
 
@@ -46,5 +53,18 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+		
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
+		for (int i = 0; i < this.LakesPerChunk; i++) {
+			if (this.rand.nextInt(10) == 0) {
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.SALT, ExtraPlanets_Blocks.CERES_BLOCKS);
+			}
+		}
+		for (int i = 0; i < 1; i++) {
+			if (this.rand.nextInt(100) == 0) {
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Blocks.CERES_BLOCKS);
+			}
+		}
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 	}
 }
