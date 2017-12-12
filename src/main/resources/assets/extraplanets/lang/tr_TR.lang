@@ -1083,6 +1083,10 @@ item.tools.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
 item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
 item.tools.filter.name=Filter ##NEEDS TRANSLATE##
 
+#Other Blocks
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+
 #Other Items
 item.apple_diamond.name=Elmas Elma
 item.apple_iron.name=Iron Apple
