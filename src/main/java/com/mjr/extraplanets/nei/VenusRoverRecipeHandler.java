@@ -22,7 +22,7 @@ import com.mjr.extraplanets.Constants;
 
 public class VenusRoverRecipeHandler extends TemplateRecipeHandler
 {
-    private static final ResourceLocation venusRoverGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venusRoverbench.png");
+    private static final ResourceLocation venusRoverGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venus_roverbench.png");
 
     public String getRecipeId()
     {

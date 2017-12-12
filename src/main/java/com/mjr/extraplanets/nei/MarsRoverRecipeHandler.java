@@ -22,7 +22,7 @@ import com.mjr.extraplanets.Constants;
 
 public class MarsRoverRecipeHandler extends TemplateRecipeHandler
 {
-    private static final ResourceLocation marsRoverGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/marsRoverbench.png");
+    private static final ResourceLocation marsRoverGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mars_roverbench.png");
 
     public String getRecipeId()
     {
