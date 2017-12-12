@@ -180,7 +180,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
     @Override
     public String getInventoryName()
     {
-        return GCCoreUtil.translate("container.ultimate.oxygencompressor.name");
+        return GCCoreUtil.translate("container.ultimateoxygencompressor.name");
     }
 
     @Override

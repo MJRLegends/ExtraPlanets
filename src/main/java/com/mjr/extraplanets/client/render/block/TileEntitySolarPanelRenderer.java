@@ -14,7 +14,7 @@ import com.mjr.extraplanets.tile.machines.TileEntitySolar;
 
 public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer
 {
-	private static final ResourceLocation solarPanelAdvTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/model/solar_panel_advanced.png");
+	private static final ResourceLocation solarPanelAdvTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/model/solarPanelAdvanced.png");
 	public ModelSolarPanel model = new ModelSolarPanel();
 
 	@Override
