@@ -41,7 +41,7 @@ public class BlockBasicDeimos extends Block {
 		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "deimos_ore_iron");
 		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "deimos_ore_tin");
 		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "deimos_ore_copper");
-		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "OreLead");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "deimos_ore_lead");
 		this.blockIcon = this.blockIcons[0];
 	}
 

@@ -43,7 +43,7 @@ public class BlockBasicPhobos extends Block {
 		this.blockIcons[3] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "phobos_ore_iron");
 		this.blockIcons[4] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "phobos_ore_tin");
 		this.blockIcons[5] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "phobos_ore_copper");
-		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.name + "OreLead");
+		this.blockIcons[6] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "phobos_ore_lead");
 		this.blockIcon = this.blockIcons[0];
 	}
 
