@@ -8,6 +8,36 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.0
+*Removed unneeded code
+*Fixed warning in TileEntitySolar
+*Palladium Blocks -> Palladium Ingots fix
+*Clean up
+*Added Volcanic Rock Feature to IO
+*Added Red Sand Feature to Jupiter
+*Fixes for last commit
+*Added Config option for Generating Jupiter Sky Gen
+*Added/Ported Equipment kits
+*Added Basic More Planets Compatibility option to the Config
+*Added comments to Mod Compatibility options
+*Added Basic Extended Planets Compatibility option to the Config
+*Fixes for Mars & Venus Config option
+*Moved Galacticraft Version checker to pre init
+*Cleaned up Client Proxy class
+*Added comments to Client Proxy class
+*Removed not needed class
+*Fixed textures on Equipment kits
+*Fixed Tier 2 - 4 Thermal Padding/ Thermal Cloths names and textures
+*Updated lang files
+*Added MessageUtilities class for outputting errors and debug message)
+*Fixed issue #180
+*Fixed Achievements unlocalized language names
+*Fixes for last commit
+*Fixed few missing textures
+*Fixed few missing localized names
+*Few last missing textures, localized names fixes
+*Few small fixes for NEI Support
+
 v1.8.9
 *Added de_DE.lang (Thanks to Suum)
 *Fixes for missing textures
