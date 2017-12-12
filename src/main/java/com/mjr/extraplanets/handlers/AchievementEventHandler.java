@@ -89,27 +89,27 @@ public class AchievementEventHandler {
 		if (event.source.getSourceOfDamage() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
 			if (event.entity instanceof EntityCreeperBossVenus) {
-				player.addStat(ExtraPlanets_Achievements.venusBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.venus_boss, 1);
 			} else if (event.entity instanceof EntityEvolvedMagmaCubeBoss) {
-				player.addStat(ExtraPlanets_Achievements.venusBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.venus_boss, 1);
 			} else if (event.entity instanceof EntityCreeperBossJupiter) {
-				player.addStat(ExtraPlanets_Achievements.jupiterBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.jupiter_boss, 1);
 			} else if (event.entity instanceof EntityCreeperBossSaturn) {
-				player.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.saturn_boss, 1);
 			} else if (event.entity instanceof EntityEvolvedGhastBoss) {
-				player.addStat(ExtraPlanets_Achievements.saturnBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.saturn_boss, 1);
 			} else if (event.entity instanceof EntityCreeperBossJupiter) {
-				player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.uranus_boss, 1);
 			} else if (event.entity instanceof EntityEvolvedIceSlimeBoss) {
-				player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.uranus_boss, 1);
 			} else if (event.entity instanceof EntityCreeperBossNeptune) {
-				player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.neptune_boss, 1);
 			} else if (event.entity instanceof EntityEvolvedSnowmanBoss) {
-				player.addStat(ExtraPlanets_Achievements.neptuneBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.neptune_boss, 1);
 			} else if (event.entity instanceof EntityCreeperBossPluto) {
-				player.addStat(ExtraPlanets_Achievements.plutoBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.pluto_boss, 1);
 			} else if (event.entity instanceof EntityCreeperBossEris) {
-				player.addStat(ExtraPlanets_Achievements.erisBoss, 1);
+				player.addStat(ExtraPlanets_Achievements.eris_boss, 1);
 			}
 		}
 	}
@@ -145,7 +145,7 @@ public class AchievementEventHandler {
 		else if (event.toDim == Config.saturnID)
 			event.player.addStat(ExtraPlanets_Achievements.saturn_planet, 1);
 		else if (event.toDim == Config.uranusID)
-			event.player.addStat(ExtraPlanets_Achievements.uranusBoss, 1);
+			event.player.addStat(ExtraPlanets_Achievements.uranus_boss, 1);
 		else if (event.toDim == Config.neptuneID)
 			event.player.addStat(ExtraPlanets_Achievements.neptune_planet, 1);
 		else if (event.toDim == Config.plutoID)
