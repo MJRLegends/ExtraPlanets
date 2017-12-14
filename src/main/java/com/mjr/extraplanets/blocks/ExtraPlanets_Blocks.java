@@ -944,6 +944,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(MERCURY_BLOCKS, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(MERCURY_BLOCKS, 1, 3));
 			OreDictionary.registerOre("oreMercury", new ItemStack(MERCURY_BLOCKS, 1, 6));
+			OreDictionary.registerOre("blockMercury", new ItemStack(MERCURY_BLOCKS, 1, 7));
 			OreDictionary.registerOre("oreCarbon", new ItemStack(MERCURY_BLOCKS, 1, 10));
 			OreDictionary.registerOre("blockCarbon", new ItemStack(MERCURY_BLOCKS, 1, 11));
 		}
@@ -960,9 +961,9 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreIron", new ItemStack(JUPITER_BLOCKS, 1, 3));
 			OreDictionary.registerOre("orePalladium", new ItemStack(JUPITER_BLOCKS, 1, 6));
 			OreDictionary.registerOre("oreNickel", new ItemStack(JUPITER_BLOCKS, 1, 7));
-			OreDictionary.registerOre("oreRedGem", new ItemStack(JUPITER_BLOCKS, 1, 10));
+			OreDictionary.registerOre("oreRedGem", new ItemStack(JUPITER_BLOCKS, 1, 11));
 			OreDictionary.registerOre("blockPalladium", new ItemStack(JUPITER_BLOCKS, 1, 8));
-			OreDictionary.registerOre("blockRedGem", new ItemStack(JUPITER_BLOCKS, 1, 11));
+			OreDictionary.registerOre("blockRedGem", new ItemStack(JUPITER_BLOCKS, 1, 12));
 		}
 		if (Config.SATURN) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(SATURN_BLOCKS, 1, 5));
@@ -970,6 +971,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreIron", new ItemStack(SATURN_BLOCKS, 1, 3));
 			OreDictionary.registerOre("oreMagnesium", new ItemStack(SATURN_BLOCKS, 1, 6));
 			OreDictionary.registerOre("blockMagnesium", new ItemStack(SATURN_BLOCKS, 1, 7));
+			OreDictionary.registerOre("oreSlime", new ItemStack(SATURN_BLOCKS, 1, 12));
 		}
 		if (Config.URANUS) {
 			OreDictionary.registerOre("oreCrystal", new ItemStack(URANUS_BLOCKS, 1, 3));
@@ -982,9 +984,9 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(NEPTUNE_BLOCKS, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(NEPTUNE_BLOCKS, 1, 3));
 			OreDictionary.registerOre("oreZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 6));
-			OreDictionary.registerOre("oreBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 9));
+			OreDictionary.registerOre("oreBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 10));
 			OreDictionary.registerOre("blockZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 7));
-			OreDictionary.registerOre("blockBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 10));
+			OreDictionary.registerOre("blockBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 11));
 		}
 		if (Config.PLUTO) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(PLUTO_BLOCKS, 1, 5));
@@ -997,6 +999,8 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(ERIS_BLOCKS, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(ERIS_BLOCKS, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(ERIS_BLOCKS, 1, 3));
+			OreDictionary.registerOre("oreDarkIron", new ItemStack(ERIS_BLOCKS, 1, 6));
+			OreDictionary.registerOre("blockDarkIron", new ItemStack(ERIS_BLOCKS, 1, 7));
 		}
 		if (Config.CALLISTO) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(CALLISTO_BLOCKS, 1, 5));
