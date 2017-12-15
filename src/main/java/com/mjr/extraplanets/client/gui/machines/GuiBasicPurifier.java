@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicPurifier;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicPurifier;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicPurifier;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicPurifier extends GuiContainerGC {

@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicDecrystallizer extends GuiContainerGC {

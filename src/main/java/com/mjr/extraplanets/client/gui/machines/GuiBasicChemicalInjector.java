@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicChemicalInjector;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicChemicalInjector;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicChemicalInjector extends GuiContainerGC {
