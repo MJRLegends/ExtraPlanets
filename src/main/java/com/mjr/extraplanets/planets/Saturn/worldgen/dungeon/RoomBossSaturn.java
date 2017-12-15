@@ -12,8 +12,8 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturnDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerSaturnDefault;
 
 public class RoomBossSaturn extends DungeonRoom {
 	public int sizeX;

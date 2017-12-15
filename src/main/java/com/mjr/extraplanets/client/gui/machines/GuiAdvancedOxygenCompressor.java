@@ -16,7 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenCompressor;
 
 public class GuiAdvancedOxygenCompressor extends GuiContainerGC {
 	private static final ResourceLocation compressorTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/compressor.png");

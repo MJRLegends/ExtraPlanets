@@ -35,7 +35,7 @@ import net.minecraftforge.common.ChestGenHooks;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.treasureChest.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT7TreasureChest;
 
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 

@@ -9,7 +9,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.treasureChest.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT7TreasureChest;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 

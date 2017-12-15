@@ -10,7 +10,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
-import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 
 public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer
 {

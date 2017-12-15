@@ -23,7 +23,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

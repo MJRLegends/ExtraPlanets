@@ -9,7 +9,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.treasureChest.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT9TreasureChest;
 
 public class RoomTreasurePluto extends DungeonRoom
 {

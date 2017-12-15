@@ -28,7 +28,7 @@ import net.minecraftforge.common.MinecraftForge;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.machines.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityTier3LandingPad;
 
 public class EntityTier9Rocket extends EntityTieredRocket {
 	public EntityTier9Rocket(World par1World) {

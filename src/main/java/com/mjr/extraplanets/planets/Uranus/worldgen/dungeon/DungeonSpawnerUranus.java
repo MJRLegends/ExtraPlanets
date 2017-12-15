@@ -16,8 +16,8 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranus;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

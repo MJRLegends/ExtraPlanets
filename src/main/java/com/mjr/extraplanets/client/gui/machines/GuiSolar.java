@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerSolar;
-import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 
 public class GuiSolar extends GuiContainerGC
 {

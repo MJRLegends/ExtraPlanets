@@ -11,7 +11,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerEris;
 
 public class RoomBossEris extends DungeonRoom
 {

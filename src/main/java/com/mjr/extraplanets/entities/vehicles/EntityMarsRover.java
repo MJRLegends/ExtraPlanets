@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.machines.TileEntityPoweredChargingPad;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityPoweredChargingPad;
 
 public class EntityMarsRover extends EntityPoweredVehicleBase {
 	public float targetAngle;

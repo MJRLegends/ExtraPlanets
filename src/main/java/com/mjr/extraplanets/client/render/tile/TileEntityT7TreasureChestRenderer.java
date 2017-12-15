@@ -12,7 +12,7 @@ import org.lwjgl.opengl.GL12;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.treasureChest.T7TreasureChest;
-import com.mjr.extraplanets.tile.treasureChest.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT7TreasureChest;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

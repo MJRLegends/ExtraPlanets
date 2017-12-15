@@ -25,8 +25,8 @@ import net.minecraftforge.common.util.ForgeDirection;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenDecompressor;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

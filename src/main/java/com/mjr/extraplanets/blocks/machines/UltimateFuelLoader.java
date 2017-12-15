@@ -19,7 +19,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateFuelLoader;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

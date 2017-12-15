@@ -11,7 +11,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
 
 public class ContainerUltimateOxygenCompressor extends Container {
 	private TileBaseElectricBlock tileEntity;

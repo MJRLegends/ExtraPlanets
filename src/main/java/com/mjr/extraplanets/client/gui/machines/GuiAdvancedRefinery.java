@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedRefinery;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

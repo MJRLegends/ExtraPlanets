@@ -8,16 +8,16 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockAdvancedOxygenCompressor;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockUltimateOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedFuelLoader;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedOxygenDecompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
-import com.mjr.extraplanets.tile.machines.TileEntitySolar;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateFuelLoader;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
-import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedFuelLoader;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenDecompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateFuelLoader;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

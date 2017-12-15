@@ -12,8 +12,8 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranus;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
 
 public class RoomBossUranus extends DungeonRoom {
 	public int sizeX;

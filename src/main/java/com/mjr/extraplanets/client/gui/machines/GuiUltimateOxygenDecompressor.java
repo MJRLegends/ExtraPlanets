@@ -16,7 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenDecompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
 
 public class GuiUltimateOxygenDecompressor extends GuiContainerGC {
 	private static final ResourceLocation compressorTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/decompressor.png");

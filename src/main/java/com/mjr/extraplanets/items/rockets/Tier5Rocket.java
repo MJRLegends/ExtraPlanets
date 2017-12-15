@@ -19,7 +19,7 @@ import net.minecraftforge.fluids.FluidStack;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
-import com.mjr.extraplanets.tile.machines.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityTier2LandingPad;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;

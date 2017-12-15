@@ -16,8 +16,8 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenusDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerVenusDefault;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -12,8 +12,8 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenus;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerVenusDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerVenus;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerVenusDefault;
 
 public class RoomBossVenus extends DungeonRoom
 {
