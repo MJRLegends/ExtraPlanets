@@ -78,7 +78,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 	}
 	
 	public boolean hasInputs(){
-		if(this.stacks.get(1).isEmpty() && this.stacks.get(2).isEmpty() && this.stacks.get(1).getItem() == ExtraPlanets_Items.IODIDE_SALT && this.stacks.get(2).getItem() == ExtraPlanets_Items.POTASSIUM)
+		if(!this.stacks.get(1).isEmpty() && !this.stacks.get(2).isEmpty() && this.stacks.get(1).getItem() == ExtraPlanets_Items.IODIDE_SALT && this.stacks.get(2).getItem() == ExtraPlanets_Items.POTASSIUM)
 			if(this.stacks.get(1).getCount() >= 3 && this.stacks.get(2).getCount() >= 6)
 				return true;
 		return false;
