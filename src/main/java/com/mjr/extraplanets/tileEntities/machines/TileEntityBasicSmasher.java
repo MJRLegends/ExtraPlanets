@@ -74,7 +74,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	public boolean hasInputs() {
-		if (this.stacks.get(1).isEmpty() && this.stacks.get(1).getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
+		if (!this.stacks.get(1).isEmpty() && this.stacks.get(1).getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
 			return true;
 		return false;
 	}
