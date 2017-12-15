@@ -23,7 +23,6 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	public int processTicks = 0;
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 	public int processTime = 0;
-	private ItemStack[] containingItems = new ItemStack[3];
 
 	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASSIUM, 1, 0);
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -87,8 +86,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	public boolean hasInputs() {
-		if (this.containingItems[1].isEmpty() && this.containingItems[1].getItem() == ExtraPlanets_Items.POTASH_SHARDS)
-			if (this.containingItems[1].getCount() >= 12)
+		if (this.stacks.get(1).isEmpty() && this.stacks.get(1).getItem() == ExtraPlanets_Items.POTASH_SHARDS)
+			if (this.stacks.get(1).getCount() >= 12)
 				return true;
 		return false;
 	}
