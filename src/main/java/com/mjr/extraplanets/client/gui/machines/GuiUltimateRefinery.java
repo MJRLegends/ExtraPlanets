@@ -22,7 +22,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateRefinery;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 
 @SideOnly(Side.CLIENT)
 public class GuiUltimateRefinery extends GuiContainerGC {

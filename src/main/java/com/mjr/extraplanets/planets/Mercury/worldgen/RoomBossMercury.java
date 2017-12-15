@@ -13,8 +13,8 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercury;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerMercuryDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerMercury;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerMercuryDefault;
 
 public class RoomBossMercury extends RoomBoss {
 	public RoomBossMercury() {

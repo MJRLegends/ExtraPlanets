@@ -27,7 +27,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
-import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
 
 public class Tier10Rocket extends Item implements IHoldableItem {
 	public Tier10Rocket(String assetName) {

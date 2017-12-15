@@ -174,14 +174,14 @@ import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
-import com.mjr.extraplanets.tile.machines.TileEntitySolar;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT10TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT4TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT5TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT6TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT7TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT8TreasureChest;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT10TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT4TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT5TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT6TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT7TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT8TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChest;
 import com.mjr.extraplanets.util.ClientUtilities;
 
 public class ClientProxy extends CommonProxy {

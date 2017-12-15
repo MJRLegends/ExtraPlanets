@@ -26,8 +26,8 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenDecompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
 
 public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final int OXYGEN_COMPRESSOR_METADATA = 0;

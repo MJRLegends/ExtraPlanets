@@ -28,7 +28,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicCrystallizer;
 
 public class BasicCrystallizer extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	private final Random crystallizerRand = new Random();

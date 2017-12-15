@@ -13,8 +13,8 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranus;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranus;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
 
 public class RoomBossUranus extends RoomBoss {
 	public RoomBossUranus() {

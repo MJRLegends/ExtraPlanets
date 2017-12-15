@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicSmasher;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicSmasher;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicSmasher extends GuiContainerGC {

@@ -11,7 +11,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.tile.machines.TileEntityAdvancedRefinery;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedRefinery;
 
 public class ContainerAdvancedRefinery extends Container {
 	private final TileEntityAdvancedRefinery tileEntity;

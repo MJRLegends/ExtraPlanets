@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
 
 public class EntityTier10Rocket extends EntityTieredRocket {
 	public EntityTier10Rocket(World par1World) {

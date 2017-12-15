@@ -7,7 +7,7 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
-import com.mjr.extraplanets.tile.machines.TileEntitySolar;
+import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 
 public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer<TileEntitySolar>
 {

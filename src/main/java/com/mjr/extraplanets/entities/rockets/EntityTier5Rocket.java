@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
 
 public class EntityTier5Rocket extends EntityTieredRocket {
 	public EntityTier5Rocket(World world) {

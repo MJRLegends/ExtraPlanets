@@ -24,10 +24,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.tile.blocks.TileEntityPoweredChargingPad;
-import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
-import com.mjr.extraplanets.tile.blocks.TileEntityTier2LandingPad;
-import com.mjr.extraplanets.tile.blocks.TileEntityTier3LandingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
 
 public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPartialSealableBlock {
 	public static final PropertyEnum<EnumLandingPadFullType> PAD_TYPE = PropertyEnum.create("type", EnumLandingPadFullType.class);

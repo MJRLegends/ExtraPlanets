@@ -10,7 +10,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.tile.machines.TileEntityBasicPurifier;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicPurifier;
 
 public class ContainerBasicPurifier extends Container {
 	private final TileEntityBasicPurifier tileEntity;

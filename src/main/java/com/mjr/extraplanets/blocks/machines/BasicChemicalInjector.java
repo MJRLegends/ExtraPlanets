@@ -28,7 +28,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicChemicalInjector;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicChemicalInjector;
 
 public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	private final Random crystallizerRand = new Random();
