@@ -100,7 +100,7 @@ public class ContainerAdvancedFuelLoader extends Container
 
             if (var5.getCount() == 0)
             {
-                slot.putStack((ItemStack) null);
+                slot.putStack(ItemStack.EMPTY);
             }
             else
             {
