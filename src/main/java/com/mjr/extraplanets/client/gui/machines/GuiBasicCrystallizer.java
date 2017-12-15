@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicCrystallizer;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicCrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicCrystallizer;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicCrystallizer extends GuiContainerGC {

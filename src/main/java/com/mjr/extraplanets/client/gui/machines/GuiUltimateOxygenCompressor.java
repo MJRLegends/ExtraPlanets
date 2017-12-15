@@ -17,7 +17,7 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerUltimateOxygenCompressor;
-import com.mjr.extraplanets.tile.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
 
 public class GuiUltimateOxygenCompressor extends GuiContainerGC
 {

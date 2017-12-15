@@ -10,7 +10,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 
 public class ContainerVehicleChanger extends Container {
 	private TileBaseElectricBlock tileEntity;

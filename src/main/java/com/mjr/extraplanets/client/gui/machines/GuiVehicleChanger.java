@@ -19,7 +19,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
-import com.mjr.extraplanets.tile.machines.TileEntityVehicleChanger;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 
 public class GuiVehicleChanger extends GuiContainerGC {
 	private static final ResourceLocation vehicleChangerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/vehicle_charger.png");

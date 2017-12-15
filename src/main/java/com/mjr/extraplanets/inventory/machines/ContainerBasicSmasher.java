@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicSmasher;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicSmasher;
 
 public class ContainerBasicSmasher extends Container
 {

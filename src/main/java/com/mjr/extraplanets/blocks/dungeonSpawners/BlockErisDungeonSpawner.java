@@ -4,7 +4,7 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockBossSpawner;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerEris;
 
 public class BlockErisDungeonSpawner extends BlockBossSpawner {
 	public BlockErisDungeonSpawner(String assetName) {

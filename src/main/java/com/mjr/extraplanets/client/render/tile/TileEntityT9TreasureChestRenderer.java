@@ -9,7 +9,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.tile.treasureChests.TileEntityT9TreasureChest;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChest;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityT9TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT9TreasureChest> {

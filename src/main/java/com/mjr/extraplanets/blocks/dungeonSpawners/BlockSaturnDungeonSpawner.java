@@ -5,8 +5,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerSaturnDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerSaturnDefault;
 
 public class BlockSaturnDungeonSpawner extends BlockBossSpawner {
 	public BlockSaturnDungeonSpawner(String assetName) {

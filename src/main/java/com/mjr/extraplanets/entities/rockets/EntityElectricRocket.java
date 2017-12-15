@@ -28,7 +28,7 @@ import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.blocks.TileEntityRocketChargingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
 
 public class EntityElectricRocket extends EntityElectricRocketBase {
 	public EntityElectricRocket(World par1World) {

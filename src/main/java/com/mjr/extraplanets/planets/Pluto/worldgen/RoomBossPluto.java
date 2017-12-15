@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerPluto;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 
 public class RoomBossPluto extends RoomBoss {
 	public RoomBossPluto() {
