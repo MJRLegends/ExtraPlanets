@@ -86,7 +86,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	public boolean hasInputs() {
-		if (this.stacks.get(1).isEmpty() && this.stacks.get(1).getItem() == ExtraPlanets_Items.POTASH_SHARDS)
+		if (!this.stacks.get(1).isEmpty() && this.stacks.get(1).getItem() == ExtraPlanets_Items.POTASH_SHARDS)
 			if (this.stacks.get(1).getCount() >= 12)
 				return true;
 		return false;

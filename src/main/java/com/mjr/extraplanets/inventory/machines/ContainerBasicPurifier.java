@@ -99,7 +99,7 @@ public class ContainerBasicPurifier extends Container {
 			}
 
 			if (var4.getCount() == 0) {
-				slot.putStack((ItemStack) null);
+				slot.putStack(ItemStack.EMPTY);
 			} else {
 				slot.onSlotChanged();
 			}
