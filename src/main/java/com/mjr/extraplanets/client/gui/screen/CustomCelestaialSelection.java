@@ -23,6 +23,8 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -183,8 +185,10 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					}
 
 					if (alpha != 0) {
-						if(!this.isZoomed())
-							this.drawCenteredString(fontRendererObj, planet.getLocalizedName(), 0, 5, 14737632);
+						if(!this.isZoomed()){
+							this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
+							this.drawCenteredString(this.fontRendererObj, planet.getLocalizedName(), 0, 5, 14737632);
+						}
 						CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(planet, planet.getBodyIcon(), 12);
 						MinecraftForge.EVENT_BUS.post(preEvent);
 						
