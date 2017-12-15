@@ -153,7 +153,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	}
 
 	public boolean hasInputs() {
-		if (this.inputTank.getFluidAmount() >= 1000 || this.inputTank2.getFluidAmount() >= 1000)
+		if (this.inputTank.getFluidAmount() >= 50 || this.inputTank2.getFluidAmount() >= 50)
 			if (this.containingItems[4] != null && this.containingItems[4].getItem() == ExtraPlanets_Items.IODIDE_SALT)
 				if (this.containingItems[4].stackSize >= 6)
 					return true;
