@@ -10,7 +10,7 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
 
 public class ContainerBasicDecrystallizer extends Container
 {

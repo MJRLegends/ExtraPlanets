@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicSolarEvaporationChamber;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicSolarEvaporationChamber;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicSolarEvaporationChamber;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicSolarEvaporationChamber extends GuiContainerGC {

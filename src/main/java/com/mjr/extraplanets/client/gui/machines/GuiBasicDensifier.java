@@ -18,7 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDensifier;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicDensifier;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDensifier;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicDensifier extends GuiContainerGC {

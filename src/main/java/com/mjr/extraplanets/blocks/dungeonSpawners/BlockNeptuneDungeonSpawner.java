@@ -5,8 +5,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerNeptuneDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerNeptuneDefault;
 
 public class BlockNeptuneDungeonSpawner extends BlockBossSpawner {
 	public BlockNeptuneDungeonSpawner(String assetName) {

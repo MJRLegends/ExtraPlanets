@@ -27,7 +27,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tile.machines.TileEntityBasicDecrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
 
 public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);

@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerEris;
 
 public class RoomBossEris extends RoomBoss {
 	public RoomBossEris() {

@@ -13,8 +13,8 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
-import com.mjr.extraplanets.tile.dungeonSpawners.TileEntityDungeonSpawnerJupiterDefault;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerJupiterDefault;
 
 public class RoomBossJupiter extends RoomBoss {
 	public RoomBossJupiter() {
