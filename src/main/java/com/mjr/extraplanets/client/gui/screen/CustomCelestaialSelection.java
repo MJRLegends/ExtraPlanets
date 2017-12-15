@@ -5,9 +5,12 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
@@ -19,14 +22,17 @@ import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
+import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.FMLClientHandler;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
@@ -41,10 +47,10 @@ import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 public class CustomCelestaialSelection extends GuiCelestialSelection {
 	private List<String> galaxies = new ArrayList<String>();
 	private String currentGalaxyName = "";
-
 	private int mousePosX = 0;
 	private int mousePosY = 0;
 	private float partialTicks = 0;
+	private boolean showGalaxies = false;
 
 	public CustomCelestaialSelection(boolean mapMode, List<CelestialBody> possibleBodies, boolean canCreateStations) {
 		super(mapMode, possibleBodies, canCreateStations);
@@ -185,13 +191,12 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					}
 
 					if (alpha != 0) {
-						if(!this.isZoomed()){
+						if (!this.isZoomed()) {
 							this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
 							this.drawCenteredString(this.fontRenderer, planet.getLocalizedName(), 0, 5, 14737632);
 						}
 						CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(planet, planet.getBodyIcon(), 12);
 						MinecraftForge.EVENT_BUS.post(preEvent);
-						
 
 						GL11.glColor4f(1, 1, 1, alpha);
 						if (preEvent.celestialBodyTexture != null) {
@@ -510,8 +515,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 		return new Vector3f(0, 0, 0);
 	}
 
-	@Override
-	public void drawButtons(int mousePosX, int mousePosY) {
+	public void drawCustomButtons(int mousePosX, int mousePosY) {
 		if (this.viewState != EnumView.PROFILE) {
 			if (this.selectedBody != null) {
 				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
@@ -622,30 +626,629 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 			int scale = (int) Math.min(95, this.ticksSinceMenuOpen * 12.0F);
 			String str;
 
-			for (int i = 0; i < this.galaxies.size(); i++) {
-				String child = this.galaxies.get(i);
-				int xOffset = 100;
+			if (this.showGalaxies) {
+				for (int i = 0; i < this.galaxies.size(); i++) {
+					String child = this.galaxies.get(i);
+					int xOffset = 0;
+					int yOffset = 45;
 
-				scale = (int) Math.min(95.0F, Math.max(0.0F, (this.ticksSinceMenuOpen * 25.0F) - 95 * i));
+					scale = (int) Math.min(95.0F, Math.max(0.0F, (this.ticksSinceMenuOpen * 25.0F) - 95 * i));
+
+					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+					GL11.glColor4f(0.0F, 0.6F, 0.0F, scale / 95.0F);
+					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 3 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 6 + i * 14 + yOffset, 86, 10, 0, 489, 86, 10,
+							false, false);
+					GL11.glColor4f(0.0F, 0.6F, 1.0F, scale / 95.0F);
+					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset, 93, 12, 95, 464, 93,
+							12, false, false);
+
+					if (scale > 0) {
+						GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+						str = child;
+						int color = 14737632;
+						this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 8 + i * 14 + yOffset, color);
+					}
+				}
+			} else
+				this.drawString(this.fontRenderer, "+", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 14737632);
+		}
+	}
+
+	@Override
+	public void drawButtons(int mousePosX, int mousePosY) {
+		this.drawCustomButtons(mousePosX, mousePosY);
+		this.zLevel = 0.0F;
+		boolean handledSliderPos = false;
+
+		if (this.viewState == EnumView.PROFILE) {
+			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+			GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+			this.drawTexturedModalRect(width / 2 - 43, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 86, 15, 266, 0, 172, 29, false, false);
+			String str = GCCoreUtil.translate("gui.message.catalog.name").toUpperCase();
+			this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + this.fontRenderer.FONT_HEIGHT / 2,
+					ColorUtil.to32BitColor(255, 255, 255, 255));
+
+			if (this.selectedBody != null) {
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+
+				if (mousePosX > BORDER_SIZE + BORDER_EDGE_SIZE && mousePosX < BORDER_SIZE + BORDER_EDGE_SIZE + 88 && mousePosY > BORDER_SIZE + BORDER_EDGE_SIZE && mousePosY < BORDER_SIZE + BORDER_EDGE_SIZE + 13) {
+					GL11.glColor3f(3.0F, 0.0F, 0.0F);
+				} else {
+					GL11.glColor3f(0.9F, 0.2F, 0.2F);
+				}
+
+				this.drawTexturedModalRect(BORDER_SIZE + BORDER_EDGE_SIZE, BORDER_SIZE + BORDER_EDGE_SIZE, 88, 13, 0, 392, 148, 22, false, false);
+				str = GCCoreUtil.translate("gui.message.back.name").toUpperCase();
+				this.fontRenderer.drawString(str, BORDER_SIZE + BORDER_EDGE_SIZE + 45 - this.fontRenderer.getStringWidth(str) / 2, BORDER_SIZE + BORDER_EDGE_SIZE + this.fontRenderer.FONT_HEIGHT / 2 - 2,
+						ColorUtil.to32BitColor(255, 255, 255, 255));
 
 				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
-				GL11.glColor4f(0.0F, 0.6F, 0.0F, scale / 95.0F);
-				this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 3 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 6 + i * 14, 86, 10, 0, 489, 86, 10,
-						false, false);
-				GL11.glColor4f(0.0F, 0.6F, 1.0F, scale / 95.0F);
-				this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14, 93, 12, 95, 464, 93, 12,
-						false, false);
+				if (mousePosX > width - BORDER_SIZE - BORDER_EDGE_SIZE - 88 && mousePosX < width - BORDER_SIZE - BORDER_EDGE_SIZE && mousePosY > BORDER_SIZE + BORDER_EDGE_SIZE && mousePosY < BORDER_SIZE + BORDER_EDGE_SIZE + 13) {
+					GL11.glColor3f(0.0F, 3.0F, 0.0F);
+				} else {
+					GL11.glColor3f(0.2F, 0.9F, 0.2F);
+				}
 
-				if (scale > 0) {
-					GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-					str = child;
-					int color = 14737632;
-					this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 8 + i * 14, color);
+				this.drawTexturedModalRect(width - BORDER_SIZE - BORDER_EDGE_SIZE - 88, BORDER_SIZE + BORDER_EDGE_SIZE, 88, 13, 0, 392, 148, 22, true, false);
+
+				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+				this.drawTexturedModalRect(BORDER_SIZE + BORDER_EDGE_SIZE, height - BORDER_SIZE - BORDER_EDGE_SIZE - 13, 88, 13, 0, 392, 148, 22, false, true);
+				this.drawTexturedModalRect(width - BORDER_SIZE - BORDER_EDGE_SIZE - 88, height - BORDER_SIZE - BORDER_EDGE_SIZE - 13, 88, 13, 0, 392, 148, 22, true, true);
+				int menuTopLeft = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE - 115 + height / 2 - 4;
+				int posX = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + Math.min(this.ticksSinceSelection * 10, 133) - 134;
+				int posX2 = (int) (GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + Math.min(this.ticksSinceSelection * 1.25F, 15) - 15);
+				int fontPosY = menuTopLeft + GuiCelestialSelection.BORDER_EDGE_SIZE + this.fontRenderer.FONT_HEIGHT / 2 - 2;
+				this.drawTexturedModalRect(posX, menuTopLeft + 12, 133, 196, 0, 0, 266, 392, false, false);
+
+				// str = this.selectedBody.getLocalizedName();
+				// this.fontRendererObj.drawString(str, posX + 20, fontPosY, GCCoreUtil.to32BitColor(255, 255, 255, 255));
+
+				str = GCCoreUtil.translate("gui.message.daynightcycle.name") + ":";
+				this.fontRenderer.drawString(str, posX + 5, fontPosY + 14, ColorUtil.to32BitColor(255, 150, 200, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".daynightcycle.0.name");
+				this.fontRenderer.drawString(str, posX + 10, fontPosY + 25, ColorUtil.to32BitColor(255, 255, 255, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".daynightcycle.1.name");
+				if (!str.isEmpty()) {
+					this.fontRenderer.drawString(str, posX + 10, fontPosY + 36, ColorUtil.to32BitColor(255, 255, 255, 255));
+				}
+
+				str = GCCoreUtil.translate("gui.message.surfacegravity.name") + ":";
+				this.fontRenderer.drawString(str, posX + 5, fontPosY + 50, ColorUtil.to32BitColor(255, 150, 200, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacegravity.0.name");
+				this.fontRenderer.drawString(str, posX + 10, fontPosY + 61, ColorUtil.to32BitColor(255, 255, 255, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacegravity.1.name");
+				if (!str.isEmpty()) {
+					this.fontRenderer.drawString(str, posX + 10, fontPosY + 72, ColorUtil.to32BitColor(255, 255, 255, 255));
+				}
+
+				str = GCCoreUtil.translate("gui.message.surfacecomposition.name") + ":";
+				this.fontRenderer.drawString(str, posX + 5, fontPosY + 88, ColorUtil.to32BitColor(255, 150, 200, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacecomposition.0.name");
+				this.fontRenderer.drawString(str, posX + 10, fontPosY + 99, ColorUtil.to32BitColor(255, 255, 255, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacecomposition.1.name");
+				if (!str.isEmpty()) {
+					this.fontRenderer.drawString(str, posX + 10, fontPosY + 110, ColorUtil.to32BitColor(255, 255, 255, 255));
+				}
+
+				str = GCCoreUtil.translate("gui.message.atmosphere.name") + ":";
+				this.fontRenderer.drawString(str, posX + 5, fontPosY + 126, ColorUtil.to32BitColor(255, 150, 200, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".atmosphere.0.name");
+				this.fontRenderer.drawString(str, posX + 10, fontPosY + 137, ColorUtil.to32BitColor(255, 255, 255, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".atmosphere.1.name");
+				if (!str.isEmpty()) {
+					this.fontRenderer.drawString(str, posX + 10, fontPosY + 148, ColorUtil.to32BitColor(255, 255, 255, 255));
+				}
+
+				str = GCCoreUtil.translate("gui.message.meansurfacetemp.name") + ":";
+				this.fontRenderer.drawString(str, posX + 5, fontPosY + 165, ColorUtil.to32BitColor(255, 150, 200, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".meansurfacetemp.0.name");
+				this.fontRenderer.drawString(str, posX + 10, fontPosY + 176, ColorUtil.to32BitColor(255, 255, 255, 255));
+				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".meansurfacetemp.1.name");
+				if (!str.isEmpty()) {
+					this.fontRenderer.drawString(str, posX + 10, fontPosY + 187, ColorUtil.to32BitColor(255, 255, 255, 255));
+				}
+
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+				this.drawTexturedModalRect(posX2, menuTopLeft + 12, 17, 199, 439, 0, 32, 399, false, false);
+				// this.drawRectD(posX2 + 16.5, menuTopLeft + 13, posX + 131, menuTopLeft + 14, GCCoreUtil.to32BitColor(120, 0, (int) (0.6F * 255), 255));
+			}
+		} else {
+			String str;
+			// Catalog:
+			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+			GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+			this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, false, false);
+			str = GCCoreUtil.translate("gui.message.catalog.name").toUpperCase();
+			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE
+					+ 1, ColorUtil.to32BitColor(255, 255, 255, 255));
+
+			int scale = (int) Math.min(95, this.ticksSinceMenuOpen * 12.0F);
+
+			// Parent frame:
+			GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+			this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE - 95 + scale, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 12, 95, 41, 0, 436, 95, 41, false, false);
+			str = this.isZoomed() ? this.selectedBody.getLocalizedName() : this.getParentName();
+			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 9 - 95 + scale, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 34,
+					ColorUtil.to32BitColor(255, 255, 255, 255));
+			GL11.glColor4f(1, 1, 0, 1);
+			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+
+			// Grandparent frame:
+			this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 - 95 + scale, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 14, 93, 17, 95, 436, 93, 17, false,
+					false);
+			str = this.isZoomed() ? this.getParentName() : this.getGrandparentName();
+			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 - 95 + scale, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16,
+					ColorUtil.to32BitColor(255, 120, 120, 120));
+			GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+
+			List<CelestialBody> children = this.getChildren(this.isZoomed() ? this.selectedBody : this.selectedParent);
+
+			if (showGalaxies == false) {
+				for (int i = 0; i < children.size(); i++) {
+					CelestialBody child = children.get(i);
+					int xOffset = 0;
+
+					if (child.equals(this.selectedBody)) {
+						xOffset += 4;
+					}
+
+					scale = (int) Math.min(95.0F, Math.max(0.0F, (this.ticksSinceMenuOpen * 25.0F) - 95 * i));
+
+					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+					if (child.getReachable()) {
+						GL11.glColor4f(0.0F, 0.6F, 0.0F, scale / 95.0F);
+					} else {
+						GL11.glColor4f(0.6F, 0.0F, 0.0F, scale / 95.0F);
+					}
+					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 3 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 51 + i * 14, 86, 10, 0, 489, 86,
+							10, false, false);
+					GL11.glColor4f(0.0F, 0.6F, 1.0F, scale / 95.0F);
+					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 50 + i * 14, 93, 12, 95, 464, 93,
+							12, false, false);
+
+					if (scale > 0) {
+						GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+						str = child.getLocalizedName();
+						int color = 14737632;
+						this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 52 + i * 14, color);
+					}
 				}
 			}
 
+			if (this.mapMode) {
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+				GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+				this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 74, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, true, false);
+				str = GCCoreUtil.translate("gui.message.exit.name").toUpperCase();
+				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+				this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE
+						+ GuiCelestialSelection.BORDER_EDGE_SIZE + 1, ColorUtil.to32BitColor(255, 255, 255, 255));
+			}
+
+			if (this.selectedBody != null) {
+				// Right-hand bar (basic selectionState info)
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
+				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+
+				if (this.selectedBody instanceof Satellite) {
+					Satellite selectedSatellite = (Satellite) this.selectedBody;
+					int stationListSize = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).size();
+
+					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
+					int max = Math.min((this.height / 2) / 14, stationListSize);
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 95, 53,
+							this.selectedStationOwner.length() == 0 ? 95 : 0, 186, 95, 53, false, false);
+					if (this.spaceStationListOffset <= 0) {
+						GL11.glColor4f(0.65F, 0.65F, 0.65F, 1);
+					} else {
+						GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+					}
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 85, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 45, 61, 4, 0, 239, 61, 4, false,
+							false);
+					if (max + spaceStationListOffset >= stationListSize) {
+						GL11.glColor4f(0.65F, 0.65F, 0.65F, 1);
+					} else {
+						GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+					}
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 85, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 49 + max * 14, 61, 4, 0, 239, 61, 4,
+							false, true);
+					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+
+					if (this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(this.selectedStationOwner) == null) {
+						str = GCCoreUtil.translate("gui.message.select_ss.name");
+						this.drawSplitString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 47, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 20, 91,
+								ColorUtil.to32BitColor(255, 255, 255, 255), false, false);
+					} else {
+						str = GCCoreUtil.translate("gui.message.ss_owner.name");
+						this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 85, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 18,
+								ColorUtil.to32BitColor(255, 255, 255, 255));
+						str = this.selectedStationOwner;
+						this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 47 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE
+								+ GuiCelestialSelection.BORDER_EDGE_SIZE + 30, ColorUtil.to32BitColor(255, 255, 255, 255));
+					}
+
+					Iterator<Map.Entry<String, StationDataGUI>> it = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).entrySet().iterator();
+					int i = 0;
+					int j = 0;
+					while (it.hasNext() && i < max) {
+						Map.Entry<String, StationDataGUI> e = it.next();
+
+						if (j >= this.spaceStationListOffset) {
+							this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+							GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+							int xOffset = 0;
+
+							if (e.getKey().equalsIgnoreCase(this.selectedStationOwner)) {
+								xOffset -= 5;
+							}
+
+							this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 50 + i * 14, 93,
+									12, 95, 464, 93, 12, true, false);
+							str = "";
+							String str0 = e.getValue().getStationName();
+							int point = 0;
+							while (this.fontRenderer.getStringWidth(str) < 80 && point < str0.length()) {
+								str = str + str0.substring(point, point + 1);
+								point++;
+							}
+							if (this.fontRenderer.getStringWidth(str) >= 80) {
+								str = str.substring(0, str.length() - 3);
+								str = str + "...";
+							}
+							this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 88 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 52 + i
+									* 14, ColorUtil.to32BitColor(255, 255, 255, 255));
+							i++;
+						}
+						j++;
+					}
+				} else {
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 96, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 96, 139, 63, 0, 96, 139, false, false);
+				}
+
+				if (this.canCreateSpaceStation(this.selectedBody) && (!(this.selectedBody instanceof Satellite))) {
+					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
+					int canCreateLength = Math.max(0, this.drawSplitString(GCCoreUtil.translate("gui.message.can_create_space_station.name"), 0, 0, 91, 0, true, true) - 2);
+					canCreateOffset = canCreateLength * this.fontRenderer.FONT_HEIGHT;
+
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 134, 93, 4, 159, 102, 93, 4, false,
+							false);
+					for (int barY = 0; barY < canCreateLength; ++barY) {
+						this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 138 + barY
+								* this.fontRenderer.FONT_HEIGHT, 93, this.fontRenderer.FONT_HEIGHT, 159, 106, 93, this.fontRenderer.FONT_HEIGHT, false, false);
+					}
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 138 + canCreateOffset, 93, 43, 159,
+							106, 93, 43, false, false);
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 79, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 129, 61, 4, 0, 170, 61, 4, false,
+							false);
+
+					SpaceStationRecipe recipe = WorldUtil.getSpaceStationRecipe(this.selectedBody.getDimensionID());
+					if (recipe != null) {
+						GL11.glColor4f(0.0F, 1.0F, 0.1F, 1);
+						boolean validInputMaterials = true;
+
+						int i = 0;
+						for (Map.Entry<Object, Integer> e : recipe.getInput().entrySet()) {
+							Object next = e.getKey();
+							int xPos = (int) (width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95 + i * 93 / (double) recipe.getInput().size() + 5);
+							int yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 154 + canCreateOffset;
+
+							if (next instanceof ItemStack) {
+								int amount = getAmountInInventory((ItemStack) next);
+								RenderHelper.enableGUIStandardItemLighting();
+								ItemStack toRender = ((ItemStack) next).copy();
+								this.itemRender.renderItemAndEffectIntoGUI(toRender, xPos, yPos);
+								this.itemRender.renderItemOverlayIntoGUI(mc.fontRenderer, toRender, xPos, yPos, null);
+								RenderHelper.disableStandardItemLighting();
+								GL11.glEnable(GL11.GL_BLEND);
+
+								if (mousePosX >= xPos && mousePosX <= xPos + 16 && mousePosY >= yPos && mousePosY <= yPos + 16) {
+									GL11.glDepthMask(true);
+									GL11.glEnable(GL11.GL_DEPTH_TEST);
+									GL11.glPushMatrix();
+									GL11.glTranslatef(0, 0, 300);
+									int k = this.fontRenderer.getStringWidth(((ItemStack) next).getDisplayName());
+									int j2 = mousePosX - k / 2;
+									int k2 = mousePosY - 12;
+									int i1 = 8;
+
+									if (j2 + k > this.width) {
+										j2 -= (j2 - this.width + k);
+									}
+
+									if (k2 + i1 + 6 > this.height) {
+										k2 = this.height - i1 - 6;
+									}
+
+									int j1 = ColorUtil.to32BitColor(190, 0, 153, 255);
+									this.drawGradientRect(j2 - 3, k2 - 4, j2 + k + 3, k2 - 3, j1, j1);
+									this.drawGradientRect(j2 - 3, k2 + i1 + 3, j2 + k + 3, k2 + i1 + 4, j1, j1);
+									this.drawGradientRect(j2 - 3, k2 - 3, j2 + k + 3, k2 + i1 + 3, j1, j1);
+									this.drawGradientRect(j2 - 4, k2 - 3, j2 - 3, k2 + i1 + 3, j1, j1);
+									this.drawGradientRect(j2 + k + 3, k2 - 3, j2 + k + 4, k2 + i1 + 3, j1, j1);
+									int k1 = ColorUtil.to32BitColor(170, 0, 153, 255);
+									int l1 = (k1 & 16711422) >> 1 | k1 & -16777216;
+									this.drawGradientRect(j2 - 3, k2 - 3 + 1, j2 - 3 + 1, k2 + i1 + 3 - 1, k1, l1);
+									this.drawGradientRect(j2 + k + 2, k2 - 3 + 1, j2 + k + 3, k2 + i1 + 3 - 1, k1, l1);
+									this.drawGradientRect(j2 - 3, k2 - 3, j2 + k + 3, k2 - 3 + 1, k1, k1);
+									this.drawGradientRect(j2 - 3, k2 + i1 + 2, j2 + k + 3, k2 + i1 + 3, l1, l1);
+
+									this.fontRenderer.drawString(((ItemStack) next).getDisplayName(), j2, k2, ColorUtil.to32BitColor(255, 255, 255, 255));
+
+									GL11.glPopMatrix();
+								}
+
+								str = "" + e.getValue();
+								boolean valid = amount >= e.getValue();
+								if (!valid && validInputMaterials) {
+									validInputMaterials = false;
+								}
+								int color = valid | this.mc.thePlayer.capabilities.isCreativeMode ? ColorUtil.to32BitColor(255, 0, 255, 0) : ColorUtil.to32BitColor(255, 255, 0, 0);
+								this.fontRenderer.drawString(str, xPos + 8 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 170 + canCreateOffset, color);
+							} else if (next instanceof Collection) {
+								Collection<ItemStack> items = (Collection<ItemStack>) next;
+
+								int amount = 0;
+
+								for (ItemStack stack : items) {
+									amount += getAmountInInventory(stack);
+								}
+
+								RenderHelper.enableGUIStandardItemLighting();
+
+								Iterator<ItemStack> it = items.iterator();
+								int count = 0;
+								int toRenderIndex = (this.ticksSinceMenuOpen / 20) % items.size();
+								ItemStack toRender = null;
+								while (it.hasNext()) {
+									ItemStack stack = it.next();
+									if (count == toRenderIndex) {
+										toRender = stack;
+										break;
+									}
+									count++;
+								}
+
+								if (toRender == null) {
+									continue;
+								}
+
+								this.itemRender.renderItemAndEffectIntoGUI(toRender, xPos, yPos);
+								this.itemRender.renderItemOverlayIntoGUI(mc.fontRenderer, toRender, xPos, yPos, null);
+								RenderHelper.disableStandardItemLighting();
+								GL11.glEnable(GL11.GL_BLEND);
+
+								if (mousePosX >= xPos && mousePosX <= xPos + 16 && mousePosY >= yPos && mousePosY <= yPos + 16) {
+									GL11.glDepthMask(true);
+									GL11.glEnable(GL11.GL_DEPTH_TEST);
+									GL11.glPushMatrix();
+									GL11.glTranslatef(0, 0, 300);
+									int k = this.fontRenderer.getStringWidth(toRender.getDisplayName());
+									int j2 = mousePosX - k / 2;
+									int k2 = mousePosY - 12;
+									int i1 = 8;
+
+									if (j2 + k > this.width) {
+										j2 -= (j2 - this.width + k);
+									}
+
+									if (k2 + i1 + 6 > this.height) {
+										k2 = this.height - i1 - 6;
+									}
+
+									int j1 = ColorUtil.to32BitColor(190, 0, 153, 255);
+									this.drawGradientRect(j2 - 3, k2 - 4, j2 + k + 3, k2 - 3, j1, j1);
+									this.drawGradientRect(j2 - 3, k2 + i1 + 3, j2 + k + 3, k2 + i1 + 4, j1, j1);
+									this.drawGradientRect(j2 - 3, k2 - 3, j2 + k + 3, k2 + i1 + 3, j1, j1);
+									this.drawGradientRect(j2 - 4, k2 - 3, j2 - 3, k2 + i1 + 3, j1, j1);
+									this.drawGradientRect(j2 + k + 3, k2 - 3, j2 + k + 4, k2 + i1 + 3, j1, j1);
+									int k1 = ColorUtil.to32BitColor(170, 0, 153, 255);
+									int l1 = (k1 & 16711422) >> 1 | k1 & -16777216;
+									this.drawGradientRect(j2 - 3, k2 - 3 + 1, j2 - 3 + 1, k2 + i1 + 3 - 1, k1, l1);
+									this.drawGradientRect(j2 + k + 2, k2 - 3 + 1, j2 + k + 3, k2 + i1 + 3 - 1, k1, l1);
+									this.drawGradientRect(j2 - 3, k2 - 3, j2 + k + 3, k2 - 3 + 1, k1, k1);
+									this.drawGradientRect(j2 - 3, k2 + i1 + 2, j2 + k + 3, k2 + i1 + 3, l1, l1);
+
+									this.fontRenderer.drawString(toRender.getDisplayName(), j2, k2, ColorUtil.to32BitColor(255, 255, 255, 255));
+
+									GL11.glPopMatrix();
+								}
+
+								str = "" + e.getValue();
+								boolean valid = amount >= e.getValue();
+								if (!valid && validInputMaterials) {
+									validInputMaterials = false;
+								}
+								int color = valid | this.mc.thePlayer.capabilities.isCreativeMode ? ColorUtil.to32BitColor(255, 0, 255, 0) : ColorUtil.to32BitColor(255, 255, 0, 0);
+								this.fontRenderer.drawString(str, xPos + 8 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 170 + canCreateOffset, color);
+							}
+
+							i++;
+						}
+
+						if (validInputMaterials || this.mc.thePlayer.capabilities.isCreativeMode) {
+							GL11.glColor4f(0.0F, 1.0F, 0.1F, 1);
+						} else {
+							GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
+						}
+
+						this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
+
+						if (!this.mapMode) {
+							if (mousePosX >= width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95 && mousePosX <= width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE
+									&& mousePosY >= GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 182 + canCreateOffset
+									&& mousePosY <= GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 182 + 12 + canCreateOffset) {
+								this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 182 + canCreateOffset,
+										93, 12, 0, 174, 93, 12, false, false);
+							}
+						}
+
+						this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 182 + canCreateOffset, 93, 12,
+								0, 174, 93, 12, false, false);
+
+						int color = (int) ((Math.sin(this.ticksSinceMenuOpen / 5.0) * 0.5 + 0.5) * 255);
+						this.drawSplitString(GCCoreUtil.translate("gui.message.can_create_space_station.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
+								+ GuiCelestialSelection.BORDER_EDGE_SIZE + 137, 91, ColorUtil.to32BitColor(255, color, 255, color), true, false);
+
+						if (!mapMode) {
+							this.drawSplitString(GCCoreUtil.translate("gui.message.create_ss.name").toUpperCase(), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
+									+ GuiCelestialSelection.BORDER_EDGE_SIZE + 185 + canCreateOffset, 91, ColorUtil.to32BitColor(255, 255, 255, 255), false, false);
+						}
+					} else {
+						this.drawSplitString(GCCoreUtil.translate("gui.message.cannot_create_space_station.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
+								+ GuiCelestialSelection.BORDER_EDGE_SIZE + 138, 91, ColorUtil.to32BitColor(255, 255, 255, 255), true, false);
+					}
+				}
+
+				// Catalog overlay
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+				GL11.glColor4f(1.0F, 1.0F, 1.0F, 0.3F - Math.min(0.3F, this.ticksSinceSelection / 50.0F));
+				this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, false, false);
+				str = GCCoreUtil.translate("gui.message.catalog.name").toUpperCase();
+				this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE
+						+ GuiCelestialSelection.BORDER_EDGE_SIZE + 1, ColorUtil.to32BitColor(255, 255, 255, 255));
+
+				// Top bar title:
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+				if (this.selectedBody instanceof Satellite) {
+					if (this.selectedStationOwner.length() == 0 || !this.selectedStationOwner.equalsIgnoreCase(this.mc.thePlayer.getGameProfile().getName())) {
+						GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
+					} else {
+						GL11.glColor4f(0.0F, 1.0F, 0.0F, 1);
+					}
+					this.drawTexturedModalRect(width / 2 - 47, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 94, 11, 0, 414, 188, 22, false, false);
+				} else {
+					this.drawTexturedModalRect(width / 2 - 47, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 94, 11, 0, 414, 188, 22, false, false);
+				}
+				if (this.selectedBody.getTierRequirement() >= 0 && (!(this.selectedBody instanceof Satellite))) {
+					boolean canReach;
+					if (!this.selectedBody.getReachable() || (this.possibleBodies != null && !this.possibleBodies.contains(this.selectedBody))) {
+						canReach = false;
+						GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
+					} else {
+						canReach = true;
+						GL11.glColor4f(0.0F, 1.0F, 0.0F, 1);
+					}
+					this.drawTexturedModalRect(width / 2 - 30, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 11, 30, 11, 0, 414, 60, 22, false, false);
+					this.drawTexturedModalRect(width / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 11, 30, 11, 128, 414, 60, 22, false, false);
+					str = GCCoreUtil.translateWithFormat("gui.message.tier.name", this.selectedBody.getTierRequirement() == 0 ? "?" : this.selectedBody.getTierRequirement());
+					this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 13, canReach ? ColorUtil.to32BitColor(255, 140, 140, 140)
+							: ColorUtil.to32BitColor(255, 255, 100, 100));
+				}
+
+				str = this.selectedBody.getLocalizedName();
+
+				if (this.selectedBody instanceof Satellite) {
+					str = GCCoreUtil.translate("gui.message.rename.name").toUpperCase();
+				}
+
+				this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2, ColorUtil.to32BitColor(255, 255, 255, 255));
+
+				// Catalog wedge:
+				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+				this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 4, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 83, 12, 0, 477, 83, 12, false, false);
+
+				if (!this.mapMode) {
+					if (!this.selectedBody.getReachable() || (this.possibleBodies != null && !this.possibleBodies.contains(this.selectedBody)) || (this.selectedBody instanceof Satellite && this.selectedStationOwner.equals(""))) {
+						GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
+					} else {
+						GL11.glColor4f(0.0F, 1.0F, 0.0F, 1);
+					}
+
+					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 74, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, true, false);
+					str = GCCoreUtil.translate("gui.message.launch.name").toUpperCase();
+					GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+					this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE
+							+ GuiCelestialSelection.BORDER_EDGE_SIZE + 2, ColorUtil.to32BitColor(255, 255, 255, 255));
+				}
+
+				if (this.selectionState == EnumSelection.SELECTED && !(this.selectedBody instanceof Satellite)) {
+					handledSliderPos = true;
+
+					int sliderPos = this.zoomTooltipPos;
+					if (zoomTooltipPos != 38) {
+						sliderPos = Math.min(this.ticksSinceSelection * 2, 38);
+						this.zoomTooltipPos = sliderPos;
+					}
+
+					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - sliderPos, 83, 38,
+							512 - 166, 512 - 76, 166, 76, true, false);
+
+					boolean flag0 = GalaxyRegistry.getSatellitesForCelestialBody(this.selectedBody).size() > 0;
+					boolean flag1 = this.selectedBody instanceof Planet && GalaxyRegistry.getMoonsForPlanet((Planet) this.selectedBody).size() > 0;
+					if (flag0 && flag1) {
+						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.0.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+								- GuiCelestialSelection.BORDER_EDGE_SIZE + 2 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
+					} else if (!flag0 && flag1) {
+						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.1.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+								- GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
+					} else if (flag0) {
+						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.2.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+								- GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
+					} else {
+						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.3.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+								- GuiCelestialSelection.BORDER_EDGE_SIZE + 11 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
+					}
+
+				}
+
+				if (this.selectedBody instanceof Satellite && renamingSpaceStation) {
+					this.drawDefaultBackground();
+					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
+					this.drawTexturedModalRect(width / 2 - 90, this.height / 2 - 38, 179, 67, 159, 0, 179, 67, false, false);
+					this.drawTexturedModalRect(width / 2 - 90 + 4, this.height / 2 - 38 + 2, 171, 10, 159, 92, 171, 10, false, false);
+					this.drawTexturedModalRect(width / 2 - 90 + 8, this.height / 2 - 38 + 18, 161, 13, 159, 67, 161, 13, false, false);
+					this.drawTexturedModalRect(width / 2 - 90 + 17, this.height / 2 - 38 + 59, 72, 12, 159, 80, 72, 12, true, false);
+					this.drawTexturedModalRect(width / 2, this.height / 2 - 38 + 59, 72, 12, 159, 80, 72, 12, false, false);
+					str = GCCoreUtil.translate("gui.message.assign_name.name");
+					this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2, this.height / 2 - 35, ColorUtil.to32BitColor(255, 255, 255, 255));
+					str = GCCoreUtil.translate("gui.message.apply.name");
+					this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2 - 36, this.height / 2 + 23, ColorUtil.to32BitColor(255, 255, 255, 255));
+					str = GCCoreUtil.translate("gui.message.cancel.name");
+					this.fontRenderer.drawString(str, width / 2 + 36 - this.fontRenderer.getStringWidth(str) / 2, this.height / 2 + 23, ColorUtil.to32BitColor(255, 255, 255, 255));
+
+					if (this.renamingString == null) {
+						Satellite selectedSatellite = (Satellite) this.selectedBody;
+						String playerName = FMLClientHandler.instance().getClient().thePlayer.getGameProfile().getName();
+						this.renamingString = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(playerName).getStationName();
+						if (this.renamingString == null) {
+							this.renamingString = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(playerName.toLowerCase()).getStationName();
+						}
+						if (this.renamingString == null) {
+							this.renamingString = "";
+						}
+					}
+
+					str = this.renamingString;
+					String str0 = this.renamingString;
+
+					if ((this.ticksSinceMenuOpen / 10) % 2 == 0) {
+						str0 += "_";
+					}
+
+					this.fontRenderer.drawString(str0, width / 2 - this.fontRenderer.getStringWidth(str) / 2, this.height / 2 - 17, ColorUtil.to32BitColor(255, 255, 255, 255));
+				}
+
+				// this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+				// GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
+			}
 		}
-		super.drawButtons(mousePosX, mousePosY);
+
+		if (!handledSliderPos) {
+			this.zoomTooltipPos = 0;
+		}
 	}
 
 	@Override
@@ -658,15 +1261,23 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 	@Override
 	protected void mouseClicked(int x, int y, int button) throws IOException {
-		super.mouseClicked(x, y, button);
+		if (x >= 20 && x <= 110 && y >= 30 && y <= 40)
+			this.showGalaxies = true;
+		else
+			this.showGalaxies = false;
+
+		if (this.showGalaxies == false)
+			super.mouseClicked(x, y, button);
+
 		int xPos;
 		int yPos;
 
 		for (int i = 0; i < this.galaxies.size(); i++) {
-			int xOffset = 100;
+			int xOffset = 0;
+			int yOffset = 45;
 
 			xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset;
-			yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14;
+			yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset;
 
 			if (x >= xPos && x <= xPos + 93 && y >= yPos && y <= yPos + 12) {
 				boolean clicked = false;
@@ -681,6 +1292,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 				if (clicked) {
 					this.currentGalaxyName = this.galaxies.get(i);
 					this.drawScreen(this.mousePosX, this.mousePosY, this.partialTicks);
+					this.selectedBody = null;
 				}
 			}
 		}
