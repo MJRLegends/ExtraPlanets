@@ -993,7 +993,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 								if (!valid && validInputMaterials) {
 									validInputMaterials = false;
 								}
-								int color = valid | this.mc.thePlayer.capabilities.isCreativeMode ? ColorUtil.to32BitColor(255, 0, 255, 0) : ColorUtil.to32BitColor(255, 255, 0, 0);
+								int color = valid | this.mc.player.capabilities.isCreativeMode ? ColorUtil.to32BitColor(255, 0, 255, 0) : ColorUtil.to32BitColor(255, 255, 0, 0);
 								this.fontRenderer.drawString(str, xPos + 8 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 170 + canCreateOffset, color);
 							} else if (next instanceof Collection) {
 								Collection<ItemStack> items = (Collection<ItemStack>) next;
@@ -1069,14 +1069,14 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 								if (!valid && validInputMaterials) {
 									validInputMaterials = false;
 								}
-								int color = valid | this.mc.thePlayer.capabilities.isCreativeMode ? ColorUtil.to32BitColor(255, 0, 255, 0) : ColorUtil.to32BitColor(255, 255, 0, 0);
+								int color = valid | this.mc.player.capabilities.isCreativeMode ? ColorUtil.to32BitColor(255, 0, 255, 0) : ColorUtil.to32BitColor(255, 255, 0, 0);
 								this.fontRenderer.drawString(str, xPos + 8 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 170 + canCreateOffset, color);
 							}
 
 							i++;
 						}
 
-						if (validInputMaterials || this.mc.thePlayer.capabilities.isCreativeMode) {
+						if (validInputMaterials || this.mc.player.capabilities.isCreativeMode) {
 							GL11.glColor4f(0.0F, 1.0F, 0.1F, 1);
 						} else {
 							GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
@@ -1122,7 +1122,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 				GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 				if (this.selectedBody instanceof Satellite) {
-					if (this.selectedStationOwner.length() == 0 || !this.selectedStationOwner.equalsIgnoreCase(this.mc.thePlayer.getGameProfile().getName())) {
+					if (this.selectedStationOwner.length() == 0 || !this.selectedStationOwner.equalsIgnoreCase(this.mc.player.getGameProfile().getName())) {
 						GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
 					} else {
 						GL11.glColor4f(0.0F, 1.0F, 0.0F, 1);
@@ -1225,7 +1225,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 					if (this.renamingString == null) {
 						Satellite selectedSatellite = (Satellite) this.selectedBody;
-						String playerName = FMLClientHandler.instance().getClient().thePlayer.getGameProfile().getName();
+						String playerName = FMLClientHandler.instance().getClient().player.getGameProfile().getName();
 						this.renamingString = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(playerName).getStationName();
 						if (this.renamingString == null) {
 							this.renamingString = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(playerName.toLowerCase()).getStationName();
