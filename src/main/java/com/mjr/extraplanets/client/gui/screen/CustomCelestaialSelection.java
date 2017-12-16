@@ -627,6 +627,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 			String str;
 
 			if (this.showGalaxies) {
+				this.drawString(this.fontRendererObj, "-", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
 				for (int i = 0; i < this.galaxies.size(); i++) {
 					String child = this.galaxies.get(i);
 					int xOffset = 0;
@@ -650,7 +651,10 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 					}
 				}
 			} else
-				this.drawString(this.fontRendererObj, "+", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 14737632);
+				if(!this.showGalaxies){
+					this.drawString(this.fontRendererObj, "+", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
+					this.drawString(this.fontRendererObj, "< New Galaxies!", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 100, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
+				}
 		}
 	}
 
@@ -1261,16 +1265,20 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 	@Override
 	protected void mouseClicked(int x, int y, int button) throws IOException {
-		if (x >= 20 && x <= 110 && y >= 30 && y <= 40)
-			this.showGalaxies = true;
-		else
-			this.showGalaxies = false;
-
-		if (this.showGalaxies == false)
-			super.mouseClicked(x, y, button);
-
 		int xPos;
 		int yPos;
+
+		xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 0;
+		yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 10;
+		if (this.showGalaxies == false && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
+			this.showGalaxies = true;
+		else if (this.showGalaxies && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
+			this.showGalaxies = false;
+		else
+			this.showGalaxies = false;
+		
+		if (this.showGalaxies == false)
+			super.mouseClicked(x, y, button);
 
 		for (int i = 0; i < this.galaxies.size(); i++) {
 			int xOffset = 0;
