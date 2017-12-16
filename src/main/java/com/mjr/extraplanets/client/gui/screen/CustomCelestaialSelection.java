@@ -41,6 +41,7 @@ import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets_SolarSystems;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
@@ -637,24 +638,24 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 					GL11.glColor4f(0.0F, 0.6F, 0.0F, scale / 95.0F);
-					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 3 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 6 + i * 14 + yOffset, 86, 10, 0, 489, 86, 10,
-							false, false);
+					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 3 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 6 + i * 14 + yOffset, 86, 10, 0,
+							489, 86, 10, false, false);
 					GL11.glColor4f(0.0F, 0.6F, 1.0F, scale / 95.0F);
-					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset, 93, 12, 95, 464, 93,
-							12, false, false);
+					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset, 93, 12, 95,
+							464, 93, 12, false, false);
 
 					if (scale > 0) {
 						GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 						str = child;
 						int color = 14737632;
-						this.fontRendererObj.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 8 + i * 14 + yOffset, color);
+						this.fontRendererObj.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 8 + i * 14 + yOffset,
+								color);
 					}
 				}
-			} else
-				if(!this.showGalaxies){
-					this.drawString(this.fontRendererObj, "+", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
-					this.drawString(this.fontRendererObj, "< New Galaxies!", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 100, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
-				}
+			} else if (!this.showGalaxies && Config.CUSTOM_GALAXIES) {
+				this.drawString(this.fontRendererObj, "+", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
+				this.drawString(this.fontRendererObj, "< New Galaxies!", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 100, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
+			}
 		}
 	}
 
@@ -1265,45 +1266,48 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 	@Override
 	protected void mouseClicked(int x, int y, int button) throws IOException {
-		int xPos;
-		int yPos;
+		if (Config.CUSTOM_GALAXIES) {
+			int xPos;
+			int yPos;
 
-		xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 0;
-		yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 10;
-		if (this.showGalaxies == false && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
-			this.showGalaxies = true;
-		else if (this.showGalaxies && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
-			this.showGalaxies = false;
-		else
-			this.showGalaxies = false;
-		
-		if (this.showGalaxies == false)
-			super.mouseClicked(x, y, button);
+			xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 0;
+			yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 10;
+			if (this.showGalaxies == false && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
+				this.showGalaxies = true;
+			else if (this.showGalaxies && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
+				this.showGalaxies = false;
+			else
+				this.showGalaxies = false;
 
-		for (int i = 0; i < this.galaxies.size(); i++) {
-			int xOffset = 0;
-			int yOffset = 45;
+			if (this.showGalaxies == false)
+				super.mouseClicked(x, y, button);
 
-			xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset;
-			yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset;
+			for (int i = 0; i < this.galaxies.size(); i++) {
+				int xOffset = 0;
+				int yOffset = 45;
 
-			if (x >= xPos && x <= xPos + 93 && y >= yPos && y <= yPos + 12) {
-				boolean clicked = false;
-				if (i == 0) {
-					this.selectedParent = GalacticraftCore.solarSystemSol;
-					clicked = true;
-				}
-				if (i == 1) {
-					this.selectedParent = ExtraPlanets_SolarSystems.test;
-					clicked = true;
-				}
-				if (clicked) {
-					this.currentGalaxyName = this.galaxies.get(i);
-					this.drawScreen(this.mousePosX, this.mousePosY, this.partialTicks);
-					this.selectedBody = null;
+				xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset;
+				yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset;
+
+				if (x >= xPos && x <= xPos + 93 && y >= yPos && y <= yPos + 12) {
+					boolean clicked = false;
+					if (i == 0) {
+						this.selectedParent = GalacticraftCore.solarSystemSol;
+						clicked = true;
+					}
+					if (i == 1) {
+						this.selectedParent = ExtraPlanets_SolarSystems.test;
+						clicked = true;
+					}
+					if (clicked) {
+						this.currentGalaxyName = this.galaxies.get(i);
+						this.drawScreen(this.mousePosX, this.mousePosY, this.partialTicks);
+						this.selectedBody = null;
+					}
 				}
 			}
-		}
+		} else
+			super.mouseClicked(x, y, button);
 	}
 
 	private boolean isZoomed() {
