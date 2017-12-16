@@ -10,6 +10,7 @@ public class BlockBasic extends Block {
 	protected BlockBasic(Material material) {
 		super(material);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setHarvestLevel("pickaxe", 1);
 	}
 
 }
