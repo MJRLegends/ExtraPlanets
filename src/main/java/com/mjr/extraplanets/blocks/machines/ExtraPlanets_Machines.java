@@ -48,7 +48,7 @@ public class ExtraPlanets_Machines {
 	public static Block BASIC_PURIFIER;
 
 	public static Block VEHICLE_CHARGER;
-	
+
 	public static Block BASIC_DENSIFIER;
 
 	public static void init() {
@@ -83,15 +83,16 @@ public class ExtraPlanets_Machines {
 				BASIC_CHEMICAL_INJECTOR = new BasicChemicalInjector("basic_chemical_injector");
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basic_solar_evaporation_chamber");
-			BASIC_PURIFIER = new BasicPurifier("basic_purifier");
+			if (Config.BASIC_PURIFIER)
+				BASIC_PURIFIER = new BasicPurifier("basic_purifier");
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			FUEL_LOADER_ADVANCED = new AdvancedFuelLoader("advanced_fuel_loader");
 		if (Config.FUEL_LOADER_ULTIMATE)
 			FUEL_LOADER_ULTIMATE = new UltimateFuelLoader("ultimate_fuel_loader");
-
+		if (Config.BASIC_DENSIFIER)
+			BASIC_DENSIFIER = new BasicDensifier("basic_densifier");
 		VEHICLE_CHARGER = new VehicleCharger("vehicle_charger");
-		BASIC_DENSIFIER = new BasicDensifier("basic_densifier");
 	}
 
 	private static void registerMachines() throws NoSuchMethodException {
@@ -116,15 +117,16 @@ public class ExtraPlanets_Machines {
 				RegisterHelper.registerBlock(BASIC_CHEMICAL_INJECTOR, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				RegisterHelper.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
+			if (Config.BASIC_PURIFIER)
+				RegisterHelper.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			RegisterHelper.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.FUEL_LOADER_ULTIMATE)
 			RegisterHelper.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
-
+		if (Config.BASIC_DENSIFIER)
+			RegisterHelper.registerBlock(BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
 		RegisterHelper.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -153,14 +155,15 @@ public class ExtraPlanets_Machines {
 				GameRegistry.registerTileEntity(TileEntityBasicChemicalInjector.class, Constants.modName + "Basic Chemical Injector");
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
 				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
-			GameRegistry.registerTileEntity(TileEntityBasicPurifier.class, Constants.modName + "Basic Purifier");
+			if (Config.BASIC_PURIFIER)
+				GameRegistry.registerTileEntity(TileEntityBasicPurifier.class, Constants.modName + "Basic Purifier");
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
 		if (Config.FUEL_LOADER_ULTIMATE)
 			GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
-
+		if (Config.BASIC_DENSIFIER)
+			GameRegistry.registerTileEntity(TileEntityBasicDensifier.class, Constants.modName + "Basic Densifier");
 		GameRegistry.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
-		GameRegistry.registerTileEntity(TileEntityBasicDensifier.class, Constants.modName + "Basic Densifier");
 	}
 }
