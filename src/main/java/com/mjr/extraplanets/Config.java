@@ -51,6 +51,8 @@ public class Config {
 	public static boolean BASIC_SMASHER;
 	public static boolean BASIC_CHEMICAL_INJECTOR;
 	public static boolean BASIC_SOLAR_EVAPORTATION_CHAMBER;
+	public static boolean BASIC_PURIFIER;
+	public static boolean BASIC_DENSIFIER;
 
 	public static boolean MERCURY;
 	public static boolean CERES;
@@ -332,6 +334,8 @@ public class Config {
 		BASIC_SMASHER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Block Smasher", true).getBoolean(true);
 		BASIC_CHEMICAL_INJECTOR = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Chemical Injector", true).getBoolean(true);
 		BASIC_SOLAR_EVAPORTATION_CHAMBER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Solar Evaporation Chamber", true).getBoolean(true);
+		BASIC_PURIFIER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Purifier", true).getBoolean(true);
+		BASIC_DENSIFIER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Densifier", true).getBoolean(true);
 
 		MOB_SUFFOCATION = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		USE_DEFAULT_BOSSES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(
