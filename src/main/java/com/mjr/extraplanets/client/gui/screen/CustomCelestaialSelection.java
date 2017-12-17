@@ -2,25 +2,252 @@ package com.mjr.extraplanets.client.gui.screen;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.nio.FloatBuffer;
+import java.util.HashMap;
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.IChildBody;
+import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
+import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.MinecraftForge;
 
+import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.util.vector.Matrix4f;
+import org.lwjgl.util.vector.Vector3f;
+
+import com.google.common.collect.Maps;
 
 public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 	public CustomCelestaialSelection(boolean mapMode, List<CelestialBody> possibleBodies) {
 		super(mapMode, possibleBodies);
+	}
+
+	@Override
+	public HashMap<CelestialBody, Matrix4f> drawCelestialBodies(Matrix4f worldMatrix) {
+		GL11.glColor3f(1, 1, 1);
+		FloatBuffer fb = BufferUtils.createFloatBuffer(16 * Float.SIZE);
+		HashMap<CelestialBody, Matrix4f> matrixMap = Maps.newHashMap();
+
+		for (SolarSystem solarSystem : GalaxyRegistry.getRegisteredSolarSystems().values()) {
+			Star star = solarSystem.getMainStar();
+
+			if (star != null && star.getBodyIcon() != null) {
+				GL11.glPushMatrix();
+				Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
+
+				Matrix4f.translate(this.getCelestialBodyPosition(star), worldMatrix0, worldMatrix0);
+
+				Matrix4f worldMatrix1 = new Matrix4f();
+				Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix1, worldMatrix1);
+				Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix1, worldMatrix1);
+				worldMatrix1 = Matrix4f.mul(worldMatrix0, worldMatrix1, worldMatrix1);
+
+				fb.rewind();
+				worldMatrix1.store(fb);
+				fb.flip();
+				GL11.glMultMatrix(fb);
+
+				float alpha = 1.0F;
+
+				if (this.selectedBody != null && this.selectedBody != star && this.selectionCount >= 2) {
+					alpha = 1.0F - Math.min(this.ticksSinceSelection / 25.0F, 1.0F);
+				}
+
+				if (this.selectedBody != null && this.selectionCount >= 2) {
+					if (star != this.selectedBody) {
+						alpha = 1.0F - Math.min(this.ticksSinceSelection / 25.0F, 1.0F);
+
+						if (!(this.lastSelectedBody instanceof Star) && this.lastSelectedBody != null) {
+							alpha = 0.0F;
+						}
+					}
+				}
+
+				if (alpha != 0) {
+					CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(star, star.getBodyIcon(), 8);
+					MinecraftForge.EVENT_BUS.post(preEvent);
+
+					GL11.glColor4f(1, 1, 1, alpha);
+					if (preEvent.celestialBodyTexture != null) {
+						this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
+					}
+
+					if (!preEvent.isCanceled()) {
+						int size = GuiCelestialSelection.getWidthForCelestialBodyStatic(star);
+						if (star == this.selectedBody && this.selectionCount == 1) {
+							size /= 2;
+							size *= 3;
+						}
+						this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
+						matrixMap.put(star, worldMatrix1);
+					}
+
+					CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(star);
+					MinecraftForge.EVENT_BUS.post(postEvent);
+				}
+
+				fb.clear();
+				GL11.glPopMatrix();
+			}
+		}
+
+		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
+			if (planet.getBodyIcon() != null) {
+				GL11.glPushMatrix();
+				Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
+
+				Matrix4f.translate(this.getCelestialBodyPosition(planet), worldMatrix0, worldMatrix0);
+
+				Matrix4f worldMatrix1 = new Matrix4f();
+				Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix1, worldMatrix1);
+				Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix1, worldMatrix1);
+				worldMatrix1 = Matrix4f.mul(worldMatrix0, worldMatrix1, worldMatrix1);
+
+				fb.rewind();
+				worldMatrix1.store(fb);
+				fb.flip();
+				GL11.glMultMatrix(fb);
+
+				float alpha = 1.0F;
+
+				if ((this.selectedBody instanceof IChildBody && ((IChildBody) this.selectedBody).getParentPlanet() != planet) || (this.selectedBody instanceof Planet && this.selectedBody != planet && this.selectionCount >= 2)) {
+					if (this.lastSelectedBody == null && !(this.selectedBody instanceof IChildBody)) {
+						alpha = 1.0F - Math.min(this.ticksSinceSelection / 25.0F, 1.0F);
+					} else {
+						alpha = 0.0F;
+					}
+				}
+
+				if (alpha != 0) {
+					if (!(this.selectedBody instanceof Planet)) {
+						this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
+						this.drawCenteredString(this.fontRendererObj, planet.getLocalizedName(), 0, 5, 14737632);
+					}
+					CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(planet, planet.getBodyIcon(), 12);
+					MinecraftForge.EVENT_BUS.post(preEvent);
+
+					GL11.glColor4f(1, 1, 1, alpha);
+					if (preEvent.celestialBodyTexture != null) {
+						this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
+					}
+
+					if (!preEvent.isCanceled()) {
+						int size = GuiCelestialSelection.getWidthForCelestialBodyStatic(planet);
+						this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
+						matrixMap.put(planet, worldMatrix1);
+					}
+
+					CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(planet);
+					MinecraftForge.EVENT_BUS.post(postEvent);
+				}
+
+				fb.clear();
+				GL11.glPopMatrix();
+			}
+		}
+
+		if (this.selectedBody != null) {
+			Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
+
+			for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
+				if ((moon == this.selectedBody || (moon.getParentPlanet() == this.selectedBody && this.selectionCount != 1))
+						&& (this.ticksSinceSelection > 35 || this.selectedBody == moon || (this.lastSelectedBody instanceof Moon && GalaxyRegistry.getMoonsForPlanet(((Moon) this.lastSelectedBody).getParentPlanet()).contains(moon)))
+						|| getSiblings(this.selectedBody).contains(moon)) {
+					GL11.glPushMatrix();
+					Matrix4f worldMatrix1 = new Matrix4f(worldMatrix0);
+					Matrix4f.translate(this.getCelestialBodyPosition(moon), worldMatrix1, worldMatrix1);
+
+					Matrix4f worldMatrix2 = new Matrix4f();
+					Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix2, worldMatrix2);
+					Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix2, worldMatrix2);
+					Matrix4f.scale(new Vector3f(0.25F, 0.25F, 1.0F), worldMatrix2, worldMatrix2);
+					worldMatrix2 = Matrix4f.mul(worldMatrix1, worldMatrix2, worldMatrix2);
+
+					fb.rewind();
+					worldMatrix2.store(fb);
+					fb.flip();
+					GL11.glMultMatrix(fb);
+
+					CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(moon, moon.getBodyIcon(), 8);
+					MinecraftForge.EVENT_BUS.post(preEvent);
+
+					GL11.glColor4f(1, 1, 1, 1);
+					if (preEvent.celestialBodyTexture != null) {
+						this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
+					}
+
+					if (!preEvent.isCanceled()) {
+						int size = GuiCelestialSelection.getWidthForCelestialBodyStatic(moon);
+						this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
+						matrixMap.put(moon, worldMatrix1);
+					}
+
+					CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(moon);
+					MinecraftForge.EVENT_BUS.post(postEvent);
+					fb.clear();
+					GL11.glPopMatrix();
+				}
+			}
+		}
+
+		if (this.selectedBody != null) {
+			Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
+
+			for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
+				if (this.possibleBodies != null && this.possibleBodies.contains(satellite)) {
+					if ((satellite == this.selectedBody || (satellite.getParentPlanet() == this.selectedBody && this.selectionCount != 1))
+							&& (this.ticksSinceSelection > 35 || this.selectedBody == satellite || (this.lastSelectedBody instanceof Satellite && GalaxyRegistry.getSatellitesForCelestialBody(((Satellite) this.lastSelectedBody).getParentPlanet())
+									.contains(satellite)))) {
+						GL11.glPushMatrix();
+						Matrix4f worldMatrix1 = new Matrix4f(worldMatrix0);
+						Matrix4f.translate(this.getCelestialBodyPosition(satellite), worldMatrix1, worldMatrix1);
+
+						Matrix4f worldMatrix2 = new Matrix4f();
+						Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix2, worldMatrix2);
+						Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix2, worldMatrix2);
+						Matrix4f.scale(new Vector3f(0.25F, 0.25F, 1.0F), worldMatrix2, worldMatrix2);
+						worldMatrix2 = Matrix4f.mul(worldMatrix1, worldMatrix2, worldMatrix2);
+
+						fb.rewind();
+						worldMatrix2.store(fb);
+						fb.flip();
+						GL11.glMultMatrix(fb);
+
+						CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(satellite, satellite.getBodyIcon(), 8);
+						MinecraftForge.EVENT_BUS.post(preEvent);
+
+						GL11.glColor4f(1, 1, 1, 1);
+						this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
+
+						if (!preEvent.isCanceled()) {
+							int size = GuiCelestialSelection.getWidthForCelestialBodyStatic(satellite);
+							this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
+							matrixMap.put(satellite, worldMatrix1);
+						}
+
+						CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(satellite);
+						MinecraftForge.EVENT_BUS.post(postEvent);
+						fb.clear();
+						GL11.glPopMatrix();
+					}
+				}
+			}
+		}
+
+		return matrixMap;
 	}
 
 	@Override
