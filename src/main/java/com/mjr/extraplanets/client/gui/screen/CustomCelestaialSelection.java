@@ -55,12 +55,11 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 	public CustomCelestaialSelection(boolean mapMode, List<CelestialBody> possibleBodies, boolean canCreateStations) {
 		super(mapMode, possibleBodies, canCreateStations);
-		this.galaxies.add("galaxy.milky_way");
-		this.galaxies.add("galaxy.whirlpool");
-		this.galaxies.add("galaxy.test2");
-		this.galaxies.add("galaxy.test3");
-		this.galaxies.add("galaxy.test4");
-		this.galaxies.add("galaxy.test5");
+		for (SolarSystem system : GalaxyRegistry.getRegisteredSolarSystems().values()) {
+			String name = system.getUnlocalizedParentGalaxyName();
+			if (!this.galaxies.contains(name))
+				this.galaxies.add(name);
+		}
 		this.currentGalaxyName = "galaxy.milky_way";
 	}
 
