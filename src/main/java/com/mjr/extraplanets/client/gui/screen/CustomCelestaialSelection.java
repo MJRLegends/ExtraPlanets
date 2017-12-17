@@ -42,12 +42,12 @@ import org.lwjgl.util.vector.Vector3f;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.ExtraPlanets_SolarSystems;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
 public class CustomCelestaialSelection extends GuiCelestialSelection {
 	private List<String> galaxies = new ArrayList<String>();
 	private String currentGalaxyName = "";
+	private SolarSystem currentGalaxyMainSystem;
 	private int mousePosX = 0;
 	private int mousePosY = 0;
 	private float partialTicks = 0;
@@ -61,6 +61,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 				this.galaxies.add(name);
 		}
 		this.currentGalaxyName = "galaxy.milky_way";
+		this.currentGalaxyMainSystem = GalacticraftCore.solarSystemSol;
 	}
 
 	@Override
@@ -1271,37 +1272,43 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 
 			xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 0;
 			yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 10;
-			if (this.showGalaxies == false && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
+			if (this.showGalaxies == false && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 25)
 				this.showGalaxies = true;
-			else if (this.showGalaxies && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 50)
-				this.showGalaxies = false;
-			else
+			else if (this.showGalaxies && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 25)
 				this.showGalaxies = false;
 
-			if (this.showGalaxies == false)
+			if (this.showGalaxies == false) {
 				super.mouseClicked(x, y, button);
+				this.selectedParent = this.currentGalaxyMainSystem;
+			}
 
-			for (int i = 0; i < this.galaxies.size(); i++) {
-				int xOffset = 0;
-				int yOffset = 45;
-
-				xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset;
-				yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset;
-
-				if (x >= xPos && x <= xPos + 93 && y >= yPos && y <= yPos + 12) {
-					boolean clicked = false;
-					if (i == 0) {
-						this.selectedParent = GalacticraftCore.solarSystemSol;
-						clicked = true;
-					}
-					if (i == 1) {
-						this.selectedParent = ExtraPlanets_SolarSystems.test;
-						clicked = true;
-					}
-					if (clicked) {
-						this.currentGalaxyName = this.galaxies.get(i);
-						this.drawScreen(this.mousePosX, this.mousePosY, this.partialTicks);
-						this.selectedBody = null;
+			if(this.showGalaxies){
+				for (int i = 0; i < this.galaxies.size(); i++) {
+					int xOffset = 0;
+					int yOffset = 45;
+	
+					xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset;
+					yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset;
+	
+					if (x >= xPos && x <= xPos + 93 && y >= yPos && y <= yPos + 12) {
+						boolean clicked = false;
+						if (i == 0) {
+							this.currentGalaxyName = this.galaxies.get(i);
+							currentGalaxyMainSystem = GalacticraftCore.solarSystemSol;
+							clicked = true;
+						} else {
+							this.currentGalaxyName = this.galaxies.get(i);
+							for (SolarSystem system : GalaxyRegistry.getRegisteredSolarSystems().values())
+								if (system.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
+									this.currentGalaxyMainSystem = system;
+							clicked = true;
+						}
+						if (clicked) {
+							this.drawScreen(this.mousePosX, this.mousePosY, this.partialTicks);
+							this.selectedParent = this.currentGalaxyMainSystem;
+							this.selectedBody = null;
+							this.showGalaxies = false;
+						}
 					}
 				}
 			}
