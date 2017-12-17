@@ -157,7 +157,7 @@ public class ExtraPlanets_Planets {
 			pluto = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			pluto.setTierRequired(8);
 			pluto.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			pluto.setPhaseShift(1.0F);
+			pluto.setPhaseShift(2.0F);
 			pluto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F + Config.plutoDistanceOffset, 2.75F + Config.plutoDistanceOffset));
 			pluto.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 2));
 			pluto.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.WATER);
@@ -227,38 +227,38 @@ public class ExtraPlanets_Planets {
 			// Kepler 62 Solar System
 			kepler62b = RegisterHelper.registerUnreachablePlanet("kepler62b", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62b != null)
-				kepler62b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kepler62b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(0.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 6);
 			kepler62b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62b.png"));
 
 			kepler62c = RegisterHelper.registerUnreachablePlanet("kepler62c", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62c != null)
-				kepler62c.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kepler62c.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 5);
 			kepler62c.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62c.png"));
 
 			kepler62d = RegisterHelper.registerUnreachablePlanet("kepler62d", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62d != null)
-				kepler62d.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kepler62d.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 4);
 			kepler62d.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62d.png"));
 
 			kepler62e = RegisterHelper.registerUnreachablePlanet("kepler62e", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62e != null)
-				kepler62e.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F, 1.75F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kepler62e.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(3.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F, 1.75F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 3);
 			kepler62e.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62e.png"));
 
 			kepler62f = RegisterHelper.registerUnreachablePlanet("kepler62f", ExtraPlanets_SolarSystems.kepler62);
 			if (kepler62f != null)
-				kepler62f.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kepler62f.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(4.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 2);
 			kepler62f.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62f.png"));
 
 			// Kepler 69 Solar System
 			kepler69b = RegisterHelper.registerUnreachablePlanet("kepler69b", ExtraPlanets_SolarSystems.kepler69);
 			if (kepler69b != null)
-				kepler69b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kepler69b.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(5.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 1);
 			kepler69b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler69b.png"));
 
 			kepler69c = RegisterHelper.registerUnreachablePlanet("kepler69c", ExtraPlanets_SolarSystems.kepler69);
 			if (kepler69c != null)
-				kepler69c.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kepler69c.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(6.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kepler69c.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler69c.png"));
 		}
 	}
