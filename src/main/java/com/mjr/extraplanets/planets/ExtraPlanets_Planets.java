@@ -59,7 +59,22 @@ public class ExtraPlanets_Planets {
 	public static Planet KEPLER69B;
 	public static Planet KEPLER69C;
 
-	public static Planet test;
+	public static Planet TATOOINE;
+	public static Planet CRAIT;
+	public static Planet HOTH;
+	public static Planet AQUA;
+
+	public static Planet QUSTROITHEA;
+	public static Planet JETRARUTA;
+	public static Planet MOSWION;
+	public static Planet KETHERTH;
+	public static Planet XOVIS;
+
+	public static Planet OARILIA;
+	public static Planet STRURONIDES;
+	public static Planet BRAJUTOV;
+	public static Planet SPESHANI16;
+	public static Planet TRARS9;
 
 	public static void init() {
 		initializePlanets();
@@ -77,7 +92,7 @@ public class ExtraPlanets_Planets {
 			MERCURY.atmosphereComponent(EnumAtmosphericGas.HYDROGEN);
 			MERCURY.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
 			MERCURY.setDimensionInfo(Config.MERCURY_ID, WorldProviderMercury.class);
-			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS? 50.0F: 5.0F, 0.0F, 0.1F));
+			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 50.0F : 5.0F, 0.0F, 0.1F));
 			MERCURY.addChecklistKeys("tier_3_thermal_padding", "tier_1_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.CERES) {
@@ -155,7 +170,7 @@ public class ExtraPlanets_Planets {
 			PLUTO.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			PLUTO.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
 			PLUTO.setDimensionInfo(Config.PLUTO_ID, WorldProviderPluto.class);
-			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS? -140.0F: 5.0F, 5.0F, 0.1F));
+			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -140.0F : 5.0F, 5.0F, 0.1F));
 			PLUTO.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.ERIS) {
@@ -168,7 +183,7 @@ public class ExtraPlanets_Planets {
 			ERIS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			ERIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			ERIS.setDimensionInfo(Config.ERIS_ID, WorldProviderEris.class);
-			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS? -150.0F: 5.0F, 5.0F, 0.1F));
+			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -150.0F : 5.0F, 5.0F, 0.1F));
 			ERIS.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
@@ -239,13 +254,13 @@ public class ExtraPlanets_Planets {
 
 			KEPLER62D = RegisterHelper.registerUnreachablePlanet("kepler62d", ExtraPlanets_SolarSystems.kepler62);
 			if (KEPLER62D != null) {
-				KEPLER62D.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F/ 4);
+				KEPLER62D.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F, 1.50F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 4);
 				KEPLER62D.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62d.png"));
 			}
 
 			KEPLER62E = RegisterHelper.registerUnreachablePlanet("kepler62e", ExtraPlanets_SolarSystems.kepler62);
 			if (KEPLER62E != null) {
-				KEPLER62E.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(3.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F, 1.75F)).setRelativeOrbitTime(164.84118291347207009857612267251F/ 3);
+				KEPLER62E.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(3.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F, 1.75F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 3);
 				KEPLER62E.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler62e.png"));
 			}
 
@@ -268,10 +283,79 @@ public class ExtraPlanets_Planets {
 				KEPLER69C.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler69c.png"));
 			}
 		}
-		test = RegisterHelper.registerUnreachablePlanet("test", ExtraPlanets_SolarSystems.test);
-		if (test != null) {
-			test.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
-			test.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/test.png"));
+		if(Config.CUSTOM_GALAXIES){
+			TATOOINE = RegisterHelper.registerUnreachablePlanet("tatooine", ExtraPlanets_SolarSystems.epsilonSolaria);
+			if (TATOOINE != null) {
+				TATOOINE.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(0.75F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 8);
+				TATOOINE.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/tatooine.png"));
+			}
+			CRAIT = RegisterHelper.registerUnreachablePlanet("crait", ExtraPlanets_SolarSystems.epsilonSolaria);
+			if (CRAIT != null) {
+				CRAIT.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(5.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 6);
+				CRAIT.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/crait.png"));
+			}
+			HOTH = RegisterHelper.registerUnreachablePlanet("hoth", ExtraPlanets_SolarSystems.epsilonSolaria);
+			if (HOTH != null) {
+				HOTH.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.5F, 1.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 4);
+				HOTH.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/hoth.png"));
+			}
+			AQUA = RegisterHelper.registerUnreachablePlanet("aqua", ExtraPlanets_SolarSystems.epsilonSolaria);
+			if (AQUA != null) {
+				AQUA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 2);
+				AQUA.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/aqua.png"));
+			}
+	
+			QUSTROITHEA = RegisterHelper.registerUnreachablePlanet("qustroithea", ExtraPlanets_SolarSystems.xenos157);
+			if (QUSTROITHEA != null) {
+				QUSTROITHEA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 8);
+				QUSTROITHEA.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/qustroithea.png"));
+			}
+			JETRARUTA = RegisterHelper.registerUnreachablePlanet("jetraruta", ExtraPlanets_SolarSystems.xenos157);
+			if (JETRARUTA != null) {
+				JETRARUTA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 6);
+				JETRARUTA.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/jetraruta.png"));
+			}
+			MOSWION = RegisterHelper.registerUnreachablePlanet("moswion", ExtraPlanets_SolarSystems.xenos157);
+			if (MOSWION != null) {
+				MOSWION.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(3.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.0F, 3.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 4);
+				MOSWION.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/moswion.png"));
+			}
+			KETHERTH = RegisterHelper.registerUnreachablePlanet("ketherth", ExtraPlanets_SolarSystems.xenos157);
+			if (KETHERTH != null) {
+				KETHERTH.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(4.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F, 4.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 2);
+				KETHERTH.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ketherth.png"));
+			}
+			XOVIS = RegisterHelper.registerUnreachablePlanet("xovis", ExtraPlanets_SolarSystems.xenos157);
+			if (XOVIS != null) {
+				XOVIS.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(5.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.5F, 4.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				XOVIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/xovis.png"));
+			}
+	
+			OARILIA = RegisterHelper.registerUnreachablePlanet("oarilia", ExtraPlanets_SolarSystems.vendrizi161);
+			if (OARILIA != null) {
+				OARILIA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 8);
+				OARILIA.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/oarilia.png"));
+			}
+			STRURONIDES = RegisterHelper.registerUnreachablePlanet("struronides", ExtraPlanets_SolarSystems.vendrizi161);
+			if (STRURONIDES != null) {
+				STRURONIDES.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.0F, 1.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 6);
+				STRURONIDES.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/struronides.png"));
+			}
+			BRAJUTOV = RegisterHelper.registerUnreachablePlanet("brajutov", ExtraPlanets_SolarSystems.vendrizi161);
+			if (BRAJUTOV != null) {
+				BRAJUTOV.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(3.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.5F, 1.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 4);
+				BRAJUTOV.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/brajutov.png"));
+			}
+			SPESHANI16 = RegisterHelper.registerUnreachablePlanet("speshani16", ExtraPlanets_SolarSystems.vendrizi161);
+			if (SPESHANI16 != null) {
+				SPESHANI16.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(4.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 2);
+				SPESHANI16.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/speshani16.png"));
+			}
+			TRARS9 = RegisterHelper.registerUnreachablePlanet("trars9", ExtraPlanets_SolarSystems.vendrizi161);
+			if (TRARS9 != null) {
+				TRARS9.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(5.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.5F, 2.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				TRARS9.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/trars9.png"));
+			}
 		}
 	}
 
