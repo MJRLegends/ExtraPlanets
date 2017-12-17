@@ -611,6 +611,7 @@ public class Config {
 				kepler47SystemYawOffset = 40.0F;
 			iapetusID = -44;
 			titaniaID = -45;
+			useCustomCelestaialSelection = false;
 		}
 		if(extendedPlanetsCompatibility){
 			neptune = false;
