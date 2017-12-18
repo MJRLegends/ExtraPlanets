@@ -242,18 +242,18 @@ public class MainHandlerClient {
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
 		}
-		else if (event.getEntity().worldObj.provider.getDimensionType().getId() == Config.URANUS_ID) {
-			event.setDensity(0.008f);
+		else if (event.entity.worldObj.provider.getDimensionId() == Config.URANUS_ID) {
+			event.density = 0.008f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
 		}
-		else if (event.getEntity().worldObj.provider.getDimensionType().getId() == Config.SATURN_ID) {
-			event.setDensity(0.015f);
+		else if (event.entity.worldObj.provider.getDimensionId() == Config.SATURN_ID) {
+			event.density = 0.015f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
 		}
-		else if (event.getEntity().worldObj.provider.getDimensionType().getId() == Config.NEPTUNE_ID) {
-			event.setDensity(0.01f);
+		else if (event.entity.worldObj.provider.getDimensionId() == Config.NEPTUNE_ID) {
+			event.density = 0.01f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
 		}
