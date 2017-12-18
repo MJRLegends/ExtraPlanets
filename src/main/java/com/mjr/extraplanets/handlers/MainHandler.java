@@ -89,10 +89,21 @@ public class MainHandler {
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
 		}
-		if (event.entity.worldObj.provider.dimensionId == Config.uranusID) {
+		else if (event.entity.worldObj.provider.dimensionId == Config.uranusID) {
 			event.density = 0.008f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
 		}
+        else if (event.entity.worldObj.provider.dimensionId == Config.saturnID) {
+            event.density = 0.015f;
+            GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+            event.setCanceled(true);
+        }
+        else if (event.entity.worldObj.provider.dimensionId == Config.neptuneID) {
+            event.density = 0.01f;
+            GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+            event.setCanceled(true);
+        }
+
 	}
 }
