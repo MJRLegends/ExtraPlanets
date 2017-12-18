@@ -44,7 +44,7 @@ import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
-public class CustomCelestaialSelection extends GuiCelestialSelection {
+public class CustomCelestialSelection extends GuiCelestialSelection {
 	private List<String> galaxies = new ArrayList<String>();
 	private String currentGalaxyName = "";
 	private SolarSystem currentGalaxyMainSystem;
@@ -53,7 +53,7 @@ public class CustomCelestaialSelection extends GuiCelestialSelection {
 	private float partialTicks = 0;
 	private boolean showGalaxies = false;
 
-	public CustomCelestaialSelection(boolean mapMode, List<CelestialBody> possibleBodies, boolean canCreateStations) {
+	public CustomCelestialSelection(boolean mapMode, List<CelestialBody> possibleBodies, boolean canCreateStations) {
 		super(mapMode, possibleBodies, canCreateStations);
 		for (SolarSystem system : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 			String name = system.getUnlocalizedParentGalaxyName();
