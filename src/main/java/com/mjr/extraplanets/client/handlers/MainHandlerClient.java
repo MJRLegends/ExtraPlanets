@@ -20,6 +20,7 @@ import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -27,6 +28,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.client.FMLClientHandler;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
@@ -34,6 +36,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import org.lwjgl.opengl.GL11;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -192,13 +196,14 @@ public class MainHandlerClient {
 					double posX = player.posX + dX;
 					double posY = 70;
 					double posZ = player.posZ + dZ;
-					minecraft.theWorld.playSound(posX, posY, posZ, "ambient.weather.thunder", 1000.0F, 1.0F + player.getRNG().nextFloat() * 0.2F, false);
+					minecraft.theWorld.playSound(posX, posY, posZ, "ambient.weather.thunder", 1000.0F, 5.0F + player.getRNG().nextFloat() * 0.2F, false);
 					lightning.put(new BlockPos(posX, posY, posZ), 20);
 				}
 			}
 		}
 	}
 
+	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onToolTip(ItemTooltipEvent event) {
 		ItemStack stack = event.itemStack;
@@ -226,6 +231,16 @@ public class MainHandlerClient {
 			} else {
 				event.gui = new CustomCelestaialSelection(false, null);
 			}
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
+	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
+		if (event.entity.worldObj.provider.getDimensionId() == Config.JUPITER_ID) {
+			event.density = 0.02f;
+			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+			event.setCanceled(true);
 		}
 	}
 }
