@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Mercury;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -21,11 +22,10 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.mjr.extraplanets.Constants;
-
 public class SkyProviderMercury extends IRenderHandler {
-	private static final ResourceLocation overworldTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/venus.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/planets/atmosphericsun.png");
+	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/venus.png");
+	private static final ResourceLocation overworldTexture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/earth.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/planets/atmosphericsun.png");
 
 	public int starList;
 	public int glSkyList;
@@ -233,9 +233,27 @@ public class SkyProviderMercury extends IRenderHandler {
 		worldRenderer1.pos(f10, 100.0D, f10).tex(1.0D, 1.0D).endVertex();
 		worldRenderer1.pos(-f10, 100.0D, f10).tex(0.0D, 1.0D).endVertex();
 		tessellator1.draw();
+		
+		GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth
-		f10 = 0.5F;
+		f10 = 1.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderMercury.overworldTexture2);
+		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
+		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
+		tessellator1.draw();
+
+		GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
+
+		// Render earth
+		f10 = 6.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
