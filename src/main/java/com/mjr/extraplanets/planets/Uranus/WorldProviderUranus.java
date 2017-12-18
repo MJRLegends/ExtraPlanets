@@ -25,7 +25,7 @@ public class WorldProviderUranus extends CustomWorldProviderSpace implements IGa
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(100 / 255F * f, 210 / 255F * f, 222 / 255F * f);
+		return new Vector3(255 / 255F * f, 255 / 255F * f, 255 / 255F * f);
 	}
 
 	@Override
