@@ -27,8 +27,8 @@ public class CloudRenderJupiter extends IRenderHandler {
 		double d1 = (entity.prevPosX + (entity.posX - entity.prevPosX) * (double) partialTicks + d0 * 0.029999999329447746D) / 12.0D;
 		double d2 = (entity.prevPosZ + (entity.posZ - entity.prevPosZ) * (double) partialTicks) / 12.0D + 0.33000001311302185D;
 		float f3 = world.provider.getCloudHeight() - 25 - f + 0.33F;
-		int i = MathHelper.floor_double(d1 / 2048.0D);
-		int j = MathHelper.floor_double(d2 / 2048.0D);
+		int i = MathHelper.floor(d1 / 2048.0D);
+		int j = MathHelper.floor(d2 / 2048.0D);
 		d1 = d1 - (double) (i * 2048);
 		d2 = d2 - (double) (j * 2048);
 		mc.renderEngine.bindTexture(CLOUDS_TEXTURES);
@@ -48,10 +48,10 @@ public class CloudRenderJupiter extends IRenderHandler {
 		float f13 = f4 * 0.8F;
 		float f14 = f5 * 0.8F;
 		float f15 = f6 * 0.8F;
-		float f17 = (float) MathHelper.floor_double(d1) * 0.00390625F;
-		float f18 = (float) MathHelper.floor_double(d2) * 0.00390625F;
-		float f19 = (float) (d1 - (double) MathHelper.floor_double(d1));
-		float f20 = (float) (d2 - (double) MathHelper.floor_double(d2));
+		float f17 = (float) MathHelper.floor(d1) * 0.00390625F;
+		float f18 = (float) MathHelper.floor(d2) * 0.00390625F;
+		float f19 = (float) (d1 - (double) MathHelper.floor(d1));
+		float f20 = (float) (d2 - (double) MathHelper.floor(d2));
 		GlStateManager.scale(12.0F, 1.0F, 12.0F);
 
 		for (int i1 = 0; i1 < 2; ++i1) {
