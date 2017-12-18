@@ -23,6 +23,7 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -30,6 +31,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.client.FMLClientHandler;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
@@ -38,6 +40,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.server.permission.PermissionAPI;
+
+import org.lwjgl.opengl.GL11;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -196,13 +200,14 @@ public class MainHandlerClient {
 					double posX = player.posX + dX;
 					double posY = 70;
 					double posZ = player.posZ + dZ;
-					minecraft.theWorld.playSound(player, posX, posY, posZ, SoundEvents.ENTITY_LIGHTNING_THUNDER, SoundCategory.WEATHER, 1000.0F, 1.0F + player.getRNG().nextFloat() * 0.2F);
+					minecraft.theWorld.playSound(player, posX, posY, posZ, SoundEvents.ENTITY_LIGHTNING_THUNDER, SoundCategory.WEATHER, 1000.0F, 5.0F + player.getRNG().nextFloat() * 0.2F);
 					lightning.put(new BlockPos(posX, posY, posZ), 20);
 				}
 			}
 		}
 	}
 
+	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onToolTip(ItemTooltipEvent event) {
 		ItemStack stack = event.getItemStack();
@@ -230,6 +235,16 @@ public class MainHandlerClient {
 			} else {
 				event.setGui(new CustomCelestaialSelection(false, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
 			}
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
+	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
+		if (event.getEntity().worldObj.provider.getDimensionType().getId() == Config.JUPITER_ID) {
+			event.setDensity(0.02f);
+			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+			event.setCanceled(true);
 		}
 	}
 }
