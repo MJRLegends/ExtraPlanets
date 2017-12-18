@@ -231,11 +231,11 @@ public class SkyProviderMercury extends IRenderHandler {
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderMercury.overworldTexture2);
-		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
-		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
+		tessellator1.startDrawingQuads();
+		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
+		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
+		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
+		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
 		tessellator1.draw();
 
 		GL11.glRotatef(360.0F, 1.0F, 0.0F, 0.0F);

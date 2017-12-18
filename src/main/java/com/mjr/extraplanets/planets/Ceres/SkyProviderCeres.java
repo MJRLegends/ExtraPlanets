@@ -177,15 +177,15 @@ public class SkyProviderCeres extends IRenderHandler {
 
 		// Render larger sun aura
 		f10 = 5.0F;
-		worldRenderer1.pos(-f10, 100.0D, -f10).color(r, g, b, a).endVertex();
-		worldRenderer1.pos(0, 100.0D, (double) -f10 * 1.5F).color(r, g, b, a).endVertex();
-		worldRenderer1.pos(f10, 100.0D, -f10).color(r, g, b, a).endVertex();
-		worldRenderer1.pos((double) f10 * 1.5F, 100.0D, 0).color(r, g, b, a).endVertex();
-		worldRenderer1.pos(f10, 100.0D, f10).color(r, g, b, a).endVertex();
-		worldRenderer1.pos(0, 100.0D, (double) f10 * 1.5F).color(r, g, b, a).endVertex();
-		worldRenderer1.pos(-f10, 100.0D, f10).color(r, g, b, a).endVertex();
-		worldRenderer1.pos((double) -f10 * 1.5F, 100.0D, 0).color(r, g, b, a).endVertex();
-		worldRenderer1.pos(-f10, 100.0D, -f10).color(r, g, b, a).endVertex();
+		tessellator1.addVertex(-f10, 100.0D, -f10);
+		tessellator1.addVertex(0, 100.0D, (double) -f10 * 1.5F);
+		tessellator1.addVertex(f10, 100.0D, -f10);
+		tessellator1.addVertex((double) f10 * 1.5F, 100.0D, 0);
+		tessellator1.addVertex(f10, 100.0D, f10);
+		tessellator1.addVertex(0, 100.0D, (double) f10 * 1.5F);
+		tessellator1.addVertex(-f10, 100.0D, f10);
+		tessellator1.addVertex((double) -f10 * 1.5F, 100.0D, 0);
+		tessellator1.addVertex(-f10, 100.0D, -f10);
 
 		tessellator1.draw();
 		GL11.glPopMatrix();
@@ -250,20 +250,6 @@ public class SkyProviderCeres extends IRenderHandler {
 		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
 		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
 		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
-		tessellator1.draw();
-
-		// Render earth
-		f10 = 5.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderCeres.overworldTexture2);
-		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
-		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
 
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
