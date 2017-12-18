@@ -23,7 +23,8 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 public class SkyProviderCeres extends IRenderHandler {
-	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/jupiter.png");
+	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/mars.png");
+	private static final ResourceLocation overworldTexture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/jupiter.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
@@ -192,7 +193,7 @@ public class SkyProviderCeres extends IRenderHandler {
 		a = 0.0F;
 
 		// Render larger sun aura
-		f10 = 40.0F;
+		f10 = 5.0F;
 		worldRenderer1.pos(-f10, 100.0D, -f10).color(r, g, b, a).endVertex();
 		worldRenderer1.pos(0, 100.0D, (double) -f10 * 1.5F).color(r, g, b, a).endVertex();
 		worldRenderer1.pos(f10, 100.0D, -f10).color(r, g, b, a).endVertex();
@@ -237,14 +238,30 @@ public class SkyProviderCeres extends IRenderHandler {
 		worldRenderer1.pos(f10, 100.0D, f10).tex(1.0D, 1.0D).endVertex();
 		worldRenderer1.pos(-f10, 100.0D, f10).tex(0.0D, 1.0D).endVertex();
 		tessellator1.draw();
+		
+		GL11.glRotatef(-20.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth
-		f10 = 0.5F;
+		f10 = 2.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(0.7F, 0.5F, 0.5F, 0.6F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderCeres.overworldTexture);
+		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
+		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
+		tessellator1.draw();
+		
+		// Render earth
+		f10 = 5.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderCeres.overworldTexture);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderCeres.overworldTexture2);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
