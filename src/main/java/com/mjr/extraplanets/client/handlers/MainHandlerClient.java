@@ -4,7 +4,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -20,6 +22,7 @@ import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -52,7 +55,7 @@ import com.mjr.extraplanets.client.gui.overlay.OverlayPressure;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySaturnLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlaySolarRadiation;
 import com.mjr.extraplanets.client.gui.overlay.OverlayUranusLander;
-import com.mjr.extraplanets.client.gui.screen.CustomCelestaialSelection;
+import com.mjr.extraplanets.client.gui.screen.CustomCelestialSelection;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
@@ -64,6 +67,7 @@ import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.world.CustomWorldProviderSpace;
 
@@ -227,9 +231,9 @@ public class MainHandlerClient {
 	public void onGuiOpenEvent(GuiOpenEvent event) {
 		if (((event.gui instanceof GuiCelestialSelection))) {
 			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
-				event.gui = new CustomCelestaialSelection(true, null);
+				event.gui = new CustomCelestialSelection(true, null);
 			} else {
-				event.gui = new CustomCelestaialSelection(false, null);
+				event.gui = new CustomCelestialSelection(false, null);
 			}
 		}
 	}
@@ -256,6 +260,32 @@ public class MainHandlerClient {
 			event.density = 0.01f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
+		}
+	}
+
+	@SubscribeEvent
+	public void onRenderPlanetPost(CelestialBodyRenderEvent.Post event) {
+		Minecraft mc = Minecraft.getMinecraft();
+		if (mc.currentScreen instanceof GuiCelestialSelection) {
+			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
+				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
+				float size = GuiCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
+			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
+				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
+				float size = GuiCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
+			}
+		} else if (mc.currentScreen instanceof CustomCelestialSelection) {
+			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
+				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
+				float size = CustomCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
+			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
+				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
+				float size = CustomCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
+			}
 		}
 	}
 }
