@@ -2,17 +2,21 @@ package com.mjr.extraplanets.handlers;
 
 import java.util.Random;
 
+import org.lwjgl.opengl.GL11;
+
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.effect.EntityLightningBolt;
+import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.GuiOpenEvent;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.screen.CustomCelestaialSelection;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
+import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import cpw.mods.fml.relauncher.Side;
@@ -23,8 +27,8 @@ public class MainHandler {
 	public void onPlayer(PlayerTickEvent event) {
 		if (event.player.worldObj.provider.dimensionId == Config.jupiterID) {
 			Random rand = new Random();
-			int addX = rand.nextInt(35);
-			int addZ = rand.nextInt(35);
+			int addX = rand.nextInt(64);
+			int addZ = rand.nextInt(64);
 			if (rand.nextInt(2) == 1)
 				addX = -addX;
 			if (rand.nextInt(2) == 1)
@@ -74,6 +78,16 @@ public class MainHandler {
 			} else {
 				event.gui = new CustomCelestaialSelection(false, null);
 			}
+		}
+	}
+	
+	@SideOnly(Side.CLIENT)
+	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
+	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
+		if (event.entity.worldObj.provider.dimensionId == Config.jupiterID) {
+			event.density = 0.02f;
+			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+			event.setCanceled(true);
 		}
 	}
 }

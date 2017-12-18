@@ -33,6 +33,7 @@ import com.mjr.extraplanets.planets.Ceres.spacestation.WorldProviderCeresOrbit;
 import com.mjr.extraplanets.planets.Eris.SkyProviderEris;
 import com.mjr.extraplanets.planets.Eris.WorldProviderEris;
 import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
+import com.mjr.extraplanets.planets.Jupiter.CloudRenderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.SkyProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
@@ -108,7 +109,12 @@ public class SkyProviderHandler {
 				}
 
 				if (world.provider.getCloudRenderer() == null) {
-					world.provider.setCloudRenderer(new CloudRenderer());
+					world.provider.setCloudRenderer(new CloudRenderJupiter());
+				}
+				else{
+					if (!FMLClientHandler.instance().getClient().isGamePaused()) {
+						CloudRenderJupiter.cloudTickCounter += 5;
+					}
 				}
 			}
 			if (world.provider instanceof WorldProviderSaturn) {
