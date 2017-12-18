@@ -24,8 +24,8 @@ import com.mjr.extraplanets.Constants;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class SkyProviderCeres extends IRenderHandler {
-	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/jupiter.png");
-	private static final ResourceLocation overworldTexture2 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/mars.png");
+	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/mars.png");
+	private static final ResourceLocation overworldTexture2 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/jupiter.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
@@ -176,16 +176,16 @@ public class SkyProviderCeres extends IRenderHandler {
 		tessellator1.setColorRGBA_F(afloat[0] * f18, afloat[1] * f18, afloat[2] * f18, 0.0F);
 
 		// Render larger sun aura
-		f10 = 40.0F;
-		tessellator1.addVertex(-f10, 100.0D, -f10);
-		tessellator1.addVertex(0, 100.0D, (double) -f10 * 1.5F);
-		tessellator1.addVertex(f10, 100.0D, -f10);
-		tessellator1.addVertex((double) f10 * 1.5F, 100.0D, 0);
-		tessellator1.addVertex(f10, 100.0D, f10);
-		tessellator1.addVertex(0, 100.0D, (double) f10 * 1.5F);
-		tessellator1.addVertex(-f10, 100.0D, f10);
-		tessellator1.addVertex((double) -f10 * 1.5F, 100.0D, 0);
-		tessellator1.addVertex(-f10, 100.0D, -f10);
+		f10 = 5.0F;
+		worldRenderer1.pos(-f10, 100.0D, -f10).color(r, g, b, a).endVertex();
+		worldRenderer1.pos(0, 100.0D, (double) -f10 * 1.5F).color(r, g, b, a).endVertex();
+		worldRenderer1.pos(f10, 100.0D, -f10).color(r, g, b, a).endVertex();
+		worldRenderer1.pos((double) f10 * 1.5F, 100.0D, 0).color(r, g, b, a).endVertex();
+		worldRenderer1.pos(f10, 100.0D, f10).color(r, g, b, a).endVertex();
+		worldRenderer1.pos(0, 100.0D, (double) f10 * 1.5F).color(r, g, b, a).endVertex();
+		worldRenderer1.pos(-f10, 100.0D, f10).color(r, g, b, a).endVertex();
+		worldRenderer1.pos((double) -f10 * 1.5F, 100.0D, 0).color(r, g, b, a).endVertex();
+		worldRenderer1.pos(-f10, 100.0D, -f10).color(r, g, b, a).endVertex();
 
 		tessellator1.draw();
 		GL11.glPopMatrix();
@@ -236,18 +236,34 @@ public class SkyProviderCeres extends IRenderHandler {
 		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
 		tessellator1.draw();
 
+		GL11.glRotatef(-20.0F, 1.0F, 0.0F, 0.0F);
+
 		// Render earth
-		f10 = 5.5F;
+		f10 = 2.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		GL11.glColor4f(0.7F, 0.5F, 0.5F, 0.6F);
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderCeres.overworldTexture);
 		tessellator1.startDrawingQuads();
 		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
 		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
 		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
 		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
+		tessellator1.draw();
+
+		// Render earth
+		f10 = 5.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderCeres.overworldTexture2);
+		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
+		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
 
 		GL11.glDisable(GL11.GL_TEXTURE_2D);

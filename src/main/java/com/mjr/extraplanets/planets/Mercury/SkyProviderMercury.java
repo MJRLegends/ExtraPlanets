@@ -222,7 +222,7 @@ public class SkyProviderMercury extends IRenderHandler {
 		tessellator1.addVertexWithUV(-f10, 100.0D, f10, 0.0D, 1.0D);
 		tessellator1.draw();
 		
-		GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
+		GL11.glRotatef(360.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth
 		f10 = 1.5F;
@@ -238,7 +238,7 @@ public class SkyProviderMercury extends IRenderHandler {
 		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
 
-		GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
+		GL11.glRotatef(360.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth
 		f10 = 6.5F;
