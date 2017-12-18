@@ -242,5 +242,10 @@ public class MainHandlerClient {
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
 		}
+		else if (event.getEntity().worldObj.provider.getDimensionType().getId() == Config.URANUS_ID) {
+			event.setDensity(0.008f);
+			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+			event.setCanceled(true);
+		}
 	}
 }
