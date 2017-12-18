@@ -25,6 +25,7 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 public class SkyProviderMercury extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/venus.png");
+	private static final ResourceLocation overworldTexture2 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/earth.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
@@ -220,9 +221,27 @@ public class SkyProviderMercury extends IRenderHandler {
 		tessellator1.addVertexWithUV(f10, 100.0D, f10, 1.0D, 1.0D);
 		tessellator1.addVertexWithUV(-f10, 100.0D, f10, 0.0D, 1.0D);
 		tessellator1.draw();
+		
+		GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth
-		f10 = 5.5F;
+		f10 = 1.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderMercury.overworldTexture2);
+		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
+		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
+		tessellator1.draw();
+
+		GL11.glRotatef(world.getCelestialAngle(partialTicks) * 360.0F, 1.0F, 0.0F, 0.0F);
+
+		// Render earth
+		f10 = 6.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
