@@ -113,8 +113,8 @@ public class MainHandlerServer {
 	public void onPlayer(PlayerTickEvent event) {
 		if (Config.JUITPER_LIGHTING && event.player.world.provider.getDimensionType().getId() == Config.JUPITER_ID) {
 			Random rand = new Random();
-			int addX = rand.nextInt(35);
-			int addZ = rand.nextInt(35);
+			int addX = rand.nextInt(64);
+			int addZ = rand.nextInt(64);
 			if (rand.nextInt(2) == 1)
 				addX = -addX;
 			if (rand.nextInt(2) == 1)
