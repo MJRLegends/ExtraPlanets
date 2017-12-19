@@ -59,10 +59,10 @@ public class ExtraPlanets_SolarSystems {
 			starSol5.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			xenos157.setMainStar(starSol5);
 			
-			deltiri10 = new SolarSystem("deltiri10", "andromeda").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
-			Star starSol6 = (Star) new Star("deltiri10").setParentSolarSystem(deltiri10).setTierRequired(-1);
-			starSol6.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
-			deltiri10.setMainStar(starSol6);
+//			deltiri10 = new SolarSystem("deltiri10", "andromeda").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
+//			Star starSol6 = (Star) new Star("deltiri10").setParentSolarSystem(deltiri10).setTierRequired(-1);
+//			starSol6.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
+//			deltiri10.setMainStar(starSol6);
 			
 			vendrizi161 = new SolarSystem("vendrizi161", "black_eye").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
 			Star starSol7 = (Star) new Star("vendrizi161").setParentSolarSystem(vendrizi161).setTierRequired(-1);
@@ -85,7 +85,7 @@ public class ExtraPlanets_SolarSystems {
 		}
 		if(Config.CUSTOM_GALAXIES){
 			GalaxyRegistry.registerSolarSystem(xenos157);
-			GalaxyRegistry.registerSolarSystem(deltiri10);
+			//GalaxyRegistry.registerSolarSystem(deltiri10);
 			GalaxyRegistry.registerSolarSystem(vendrizi161);
 			GalaxyRegistry.registerSolarSystem(epsilonSolaria);
 		}
