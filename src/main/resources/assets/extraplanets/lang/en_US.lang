@@ -4,17 +4,33 @@ itemGroup.SpaceBlocksTab=Extra Planets Blocks
 itemGroup.SpaceToolsTab=Extra Planets Tools
 itemGroup.SpaceArmorTab=Extra Planets Armor
 
+#Galaxies
+galaxy.whirlpool=Whirlpool
+galaxy.andromeda=Andromeda
+galaxy.black_eye=Black Eye
+galaxy.proxima_centauri=Proxima Centauri
+
 #Solar Systems
 solarsystem.kepler22=Kepler 22 System
 solarsystem.kepler47=Kepler 47 System
 solarsystem.kepler62=Kepler 62 System
 solarsystem.kepler69=Kepler 69 System
 
+solarsystem.xenos157=Xenos 157
+solarsystem.deltiri10=Deltiri 10
+solarsystem.vendrizi161=Vendrizi 161
+solarsystem.epsilonSolaria=Epsilon Solaria
+
 #Stars
 star.kepler22=Kepler 22 Star
 star.kepler47=Kepler 47 Star
 star.kepler62=Kepler 62 Star
 star.kepler69=Kepler 69 Star
+
+star.xenos157=Xenos 157 Star
+star.deltiri10=Deltiri 10 Star
+star.vendrizi161=Vendrizi 161 Star
+star.epsilonSolaria=Epsilon Solaria Star
 
 #Planets
 planet.Mercury=Mercury
@@ -39,6 +55,23 @@ planet.kepler47b=Kepler 47b
 planet.kepler47c=Kepler 47c
 planet.kepler69b=Kepler 69b
 planet.kepler69c=Kepler 69c
+
+planet.tatooine=Tatooine
+planet.crait=Crait
+planet.hoth=Hoth
+planet.aqua=Aqua
+
+planet.qustroithea=Qustroithea
+planet.jetraruta=Jetraruta
+planet.moswion=Moswion
+planet.ketherth=Ketherth
+planet.xovis=Xovis
+
+planet.oarilia=Oarilia
+planet.struronides=Struronides
+planet.brajutov=Brajutov
+planet.speshani16=Speshani 16
+planet.trars9=Trars 9
 
 #Moons
 moon.triton=Triton
@@ -442,6 +475,27 @@ gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb
 gui.message.general.tank.name=Fluid Tank
 gui.message.general.tank.fluid.name=Fluid
 gui.status.densifier.name=Densifying
+
+#Celestial Selection Screen GUI Components
+gui.celestial_details.name=Celestial Details
+gui.general_features_details.name=General Feature Details
+gui.atmosphere_details.name=Atmosphere Details
+gui.general_details.name=General Details
+gui.parent_solar_system_details.name=Parent Solar System Details
+
+gui.celestial_body_type.name=Type
+gui.celestial_body_amount_of_moons.name=Amount of Moons
+gui.celestial_body_orbit_time.name=Orbit Time
+gui.celestial_body_gravity.name=Gravity
+gui.celestial_body_day_lengh.name=Day Length
+gui.celestial_body_meteor_frequency.name=Meteor Frequency
+gui.celestial_body_wind_level.name=Wind Level
+gui.celestial_body_temperature.name=Temperature
+gui.celestial_body_breathable.name=Breathable
+gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere
+gui.celestial_body_radiation_level.name=Radiation Level
+gui.celestial_body_pressure_level.name=Pressure Level
+gui.celestial_body_amount_of_planets.name=Amount of Planets
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Open Powered Vehicle Inventory
