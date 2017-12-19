@@ -1,14 +1,25 @@
 #Creative Tabs
-itemGroup.SpaceItemsTab=Extra Planets Items
+itemGroup.SpaceItemsTab=Extra Planets Items ##NEEDS TRANSLATE##
 itemGroup.SpaceBlocksTab=Extra Planets Blöcke
 itemGroup.SpaceToolsTab=Extra Planets Werkzeug
 itemGroup.SpaceArmorTab=Extra Planets Rüstung
 
+#Galaxies
+galaxy.whirlpool=Whirlpool ##NEEDS TRANSLATE##
+galaxy.andromeda=Andromeda ##NEEDS TRANSLATE##
+galaxy.black_eye=Black Eye ##NEEDS TRANSLATE##
+galaxy.proxima_centauri=Proxima Centauri ##NEEDS TRANSLATE##
+
 #Solar Systems
-solarsystem.kepler22=Kepler 22 System
-solarsystem.kepler47=Kepler 47 System
-solarsystem.kepler62=Kepler 62 System
-solarsystem.kepler69=Kepler 69 System
+solarsystem.kepler22=Kepler 22 System ##NEEDS TRANSLATE##
+solarsystem.kepler47=Kepler 47 System ##NEEDS TRANSLATE##
+solarsystem.kepler62=Kepler 62 System ##NEEDS TRANSLATE##
+solarsystem.kepler69=Kepler 69 System ##NEEDS TRANSLATE##
+
+solarsystem.xenos157=Xenos 157 ##NEEDS TRANSLATE##
+solarsystem.deltiri10=Deltiri 10 ##NEEDS TRANSLATE##
+solarsystem.vendrizi161=Vendrizi 161 ##NEEDS TRANSLATE##
+solarsystem.epsilonSolaria=Epsilon Solaria ##NEEDS TRANSLATE##
 
 #Stars
 star.kepler22=Kepler 22 Stern
@@ -16,47 +27,69 @@ star.kepler47=Kepler 47 Stern
 star.kepler62=Kepler 62 Stern
 star.kepler69=Kepler 69 Stern
 
+star.xenos157=Xenos 157 Star ##NEEDS TRANSLATE##
+star.deltiri10=Deltiri 10 Star ##NEEDS TRANSLATE##
+star.vendrizi161=Vendrizi 161 Star ##NEEDS TRANSLATE##
+star.epsilonSolaria=Epsilon Solaria Star ##NEEDS TRANSLATE##
+
 #Planets
 planet.Mercury=Merkur
-planet.Ceres=Ceres
-planet.Jupiter=Jupiter
-planet.Saturn=Saturn
-planet.Uranus=Uranus
+planet.Ceres=Ceres ##NEEDS TRANSLATE##
+planet.Jupiter=Jupiter ##NEEDS TRANSLATE##
+planet.Saturn=Saturn ##NEEDS TRANSLATE##
+planet.Uranus=Uranus ##NEEDS TRANSLATE##
 planet.Neptune=Neptun
-planet.Pluto=Pluto
-planet.Eris=Eris
+planet.Pluto=Pluto ##NEEDS TRANSLATE##
+planet.Eris=Eris ##NEEDS TRANSLATE##
 planet.kuiperBelt=Kuipergürtel
-planet.makemake=Makemake
-planet.haumea=Haumea
+planet.makemake=Makemake ##NEEDS TRANSLATE##
+planet.haumea=Haumea ##NEEDS TRANSLATE##
 
-planet.kepler62b=Kepler 62b
-planet.kepler62c=Kepler 62c
-planet.kepler62d=Kepler 62d
-planet.kepler62e=Kepler 62e
-planet.kepler62f=Kepler 62f
-planet.kepler22b=Kepler 22b
-planet.kepler47b=Kepler 47b
-planet.kepler47c=Kepler 47c
-planet.kepler69b=Kepler 69b
-planet.kepler69c=Kepler 69c
+planet.kepler62b=Kepler 62b ##NEEDS TRANSLATE##
+planet.kepler62c=Kepler 62c ##NEEDS TRANSLATE##
+planet.kepler62d=Kepler 62d ##NEEDS TRANSLATE##
+planet.kepler62e=Kepler 62e ##NEEDS TRANSLATE##
+planet.kepler62f=Kepler 62f ##NEEDS TRANSLATE##
+planet.kepler22b=Kepler 22b ##NEEDS TRANSLATE##
+planet.kepler47b=Kepler 47b ##NEEDS TRANSLATE##
+planet.kepler47c=Kepler 47c ##NEEDS TRANSLATE##
+planet.kepler69b=Kepler 69b ##NEEDS TRANSLATE##
+planet.kepler69c=Kepler 69c ##NEEDS TRANSLATE##
+
+planet.tatooine=Tatooine ##NEEDS TRANSLATE##
+planet.crait=Crait ##NEEDS TRANSLATE##
+planet.hoth=Hoth ##NEEDS TRANSLATE##
+planet.aqua=Aqua ##NEEDS TRANSLATE##
+
+planet.qustroithea=Qustroithea ##NEEDS TRANSLATE##
+planet.jetraruta=Jetraruta ##NEEDS TRANSLATE##
+planet.moswion=Moswion ##NEEDS TRANSLATE##
+planet.ketherth=Ketherth ##NEEDS TRANSLATE##
+planet.xovis=Xovis ##NEEDS TRANSLATE##
+
+planet.oarilia=Oarilia ##NEEDS TRANSLATE##
+planet.struronides=Struronides ##NEEDS TRANSLATE##
+planet.brajutov=Brajutov ##NEEDS TRANSLATE##
+planet.speshani16=Speshani 16 ##NEEDS TRANSLATE##
+planet.trars9=Trars 9 ##NEEDS TRANSLATE##
 
 #Moons
-moon.triton=Triton
-moon.callisto=Callisto
-moon.europa=Europa
-moon.ganymede=Ganymede
-moon.io=Io
-moon.deimos=Deimos
-moon.phobos=Phobos
-moon.iapetus=Iapetus
-moon.rhea=Rhea
-moon.titan=Titan
-moon.oberon=Oberon
-moon.titania=Titania
-moon.charon=Charon
-moon.nix=Nix
-moon.hydra=Hydra
-moon.dysnomia=Dysnomia
+moon.triton=Triton ##NEEDS TRANSLATE##
+moon.callisto=Callisto ##NEEDS TRANSLATE##
+moon.europa=Europa ##NEEDS TRANSLATE##
+moon.ganymede=Ganymede ##NEEDS TRANSLATE##
+moon.io=Io ##NEEDS TRANSLATE##
+moon.deimos=Deimos ##NEEDS TRANSLATE##
+moon.phobos=Phobos ##NEEDS TRANSLATE##
+moon.iapetus=Iapetus ##NEEDS TRANSLATE##
+moon.rhea=Rhea ##NEEDS TRANSLATE##
+moon.titan=Titan ##NEEDS TRANSLATE##
+moon.oberon=Oberon ##NEEDS TRANSLATE##
+moon.titania=Titania ##NEEDS TRANSLATE##
+moon.charon=Charon ##NEEDS TRANSLATE##
+moon.nix=Nix ##NEEDS TRANSLATE##
+moon.hydra=Hydra ##NEEDS TRANSLATE##
+moon.dysnomia=Dysnomia ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=Merkur Oberflächengestein
@@ -431,6 +464,27 @@ gui.bucket.message.finding.2=du musst sie an monden/planeten finden.
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
 gui.status.missing.inputs.name=Fehlende Items/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
+
+#Celestial Selection Screen GUI Components
+gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
+gui.general_features_details.name=General Feature Details ##NEEDS TRANSLATE##
+gui.atmosphere_details.name=Atmosphere Details ##NEEDS TRANSLATE##
+gui.general_details.name=General Details ##NEEDS TRANSLATE##
+gui.parent_solar_system_details.name=Parent Solar System Details ##NEEDS TRANSLATE##
+
+gui.celestial_body_type.name=Type ##NEEDS TRANSLATE##
+gui.celestial_body_amount_of_moons.name=Amount of Moons ##NEEDS TRANSLATE##
+gui.celestial_body_orbit_time.name=Orbit Time ##NEEDS TRANSLATE##
+gui.celestial_body_gravity.name=Gravity ##NEEDS TRANSLATE##
+gui.celestial_body_day_lengh.name=Day Length ##NEEDS TRANSLATE##
+gui.celestial_body_meteor_frequency.name=Meteor Frequency ##NEEDS TRANSLATE##
+gui.celestial_body_wind_level.name=Wind Level ##NEEDS TRANSLATE##
+gui.celestial_body_temperature.name=Temperature ##NEEDS TRANSLATE##
+gui.celestial_body_breathable.name=Breathable ##NEEDS TRANSLATE##
+gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere ##NEEDS TRANSLATE##
+gui.celestial_body_radiation_level.name=Radiation Level ##NEEDS TRANSLATE##
+gui.celestial_body_pressure_level.name=Pressure Level ##NEEDS TRANSLATE##
+gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Fahrzeug Inventar öffnen
