@@ -166,7 +166,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 			int i = 1;
 
 			for (int j = 0; j < i; ++j) {
-				float f = this.rand.nextFloat() * Constants.floatPI * 2.0F;
+				float f = this.rand.nextFloat() * Constants.twoPI;
 				float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
 				float f2 = (this.rand.nextFloat() * 2.0F + this.rand.nextFloat()) * 2.0F;
 				this.func_180707_a(this.rand.nextLong(), p_180701_4_, p_180701_5_, chunkPrimerIn, d0, d1, d2, f2, f, f1, 0, 0, 3.0D);
