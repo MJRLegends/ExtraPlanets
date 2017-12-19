@@ -659,7 +659,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				}
 			} else if (!this.showGalaxies && Config.CUSTOM_GALAXIES) {
 				this.drawString(this.fontRenderer, "+", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
-				this.drawString(this.fontRenderer, "< New Galaxies!", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 100, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
+				this.drawString(this.fontRenderer, "< New Galaxies (Currently in Beta)!", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 100, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
 			}
 		}
 	}
