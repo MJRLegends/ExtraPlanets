@@ -28,7 +28,6 @@ public class SkyProviderPluto extends IRenderHandler {
 	private static final ResourceLocation overworldTexture3 = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/charon.png");
 	private static final ResourceLocation overworldTexture4 = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/nix.png");
 	private static final ResourceLocation overworldTexture5 = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/hydra.png");
-	private static final ResourceLocation overworldTexture6 = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/dysnomia.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
@@ -306,20 +305,6 @@ public class SkyProviderPluto extends IRenderHandler {
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderPluto.overworldTexture5);
-		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
-		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
-		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
-		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
-		tessellator1.draw();
-		
-		// Render earth
-		f10 = 3.5F;
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
-		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderPluto.overworldTexture6);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
