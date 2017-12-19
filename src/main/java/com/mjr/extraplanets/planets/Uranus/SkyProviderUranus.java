@@ -24,8 +24,11 @@ import org.lwjgl.opengl.GL12;
 import com.mjr.extraplanets.Constants;
 
 public class SkyProviderUranus extends IRenderHandler {
-	private static final ResourceLocation overworldTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/planets/atmosphericsun.png");
+	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");
+	private static final ResourceLocation overworldTexture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png");
+	private static final ResourceLocation overworldTexture3 = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png");
+	private static final ResourceLocation overworldTexture4 = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/planets/atmosphericsun.png");
 
 	public int starList;
 	public int glSkyList;
@@ -235,12 +238,54 @@ public class SkyProviderUranus extends IRenderHandler {
 		tessellator1.draw();
 
 		// Render earth
-		f10 = 0.5F;
+		f10 = 2.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture);
+		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
+		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
+		tessellator1.draw();
+
+		// Render earth
+		f10 = 4.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture2);
+		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
+		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
+		tessellator1.draw();
+
+		// Render earth
+		f10 = 3.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture3);
+		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
+		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
+		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
+		tessellator1.draw();
+
+		// Render earth
+		f10 = 3.5F;
+		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderUranus.overworldTexture4);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
@@ -362,7 +407,7 @@ public class SkyProviderUranus extends IRenderHandler {
 
 	public float getSkyBrightness(float par1) {
 		final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.sin(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.sin(var2 * com.mjr.extraplanets.Constants.floatPI * 2.0F) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;
