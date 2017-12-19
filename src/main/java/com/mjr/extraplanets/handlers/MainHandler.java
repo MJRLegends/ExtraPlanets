@@ -2,8 +2,6 @@ package com.mjr.extraplanets.handlers;
 
 import java.util.Random;
 
-import org.lwjgl.opengl.GL11;
-
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
@@ -11,6 +9,8 @@ import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.GuiOpenEvent;
+
+import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.screen.CustomCelestaialSelection;
