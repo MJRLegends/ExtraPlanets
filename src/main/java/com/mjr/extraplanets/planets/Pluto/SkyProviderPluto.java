@@ -24,8 +24,8 @@ import com.mjr.extraplanets.Constants;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class SkyProviderPluto extends IRenderHandler {
-	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/eris.png");
-	private static final ResourceLocation overworldTexture2 = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png");
+	private static final ResourceLocation overworldTexture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/eris.png");
+	private static final ResourceLocation overworldTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/celestialbodies/neptune.png");
 	private static final ResourceLocation sunTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
@@ -223,12 +223,12 @@ public class SkyProviderPluto extends IRenderHandler {
 		tessellator1.draw();
 
 		// Render earth
-		f10 = 5.5F;
+		f10 = 2.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderPluto.overworldTexture2);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderPluto.overworldTexture);
 		tessellator1.startDrawingQuads();
 		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
 		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
@@ -237,12 +237,12 @@ public class SkyProviderPluto extends IRenderHandler {
 		tessellator1.draw();
 
 		// Render earth
-		f10 = 5.5F;
+		f10 = 4.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderPluto.overworldTexture);
+		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderPluto.overworldTexture2);
 		tessellator1.startDrawingQuads();
 		tessellator1.addVertexWithUV(-f10, -100.0D, f10, 0, 1);
 		tessellator1.addVertexWithUV(f10, -100.0D, f10, 1, 1);
