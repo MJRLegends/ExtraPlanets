@@ -35,6 +35,7 @@ v0.8.5
 *Fixed some villages structures on planets using the wrong blocks
 *Added Ravines to all Planets and Moons
 *Fixed cave gen on all planets and moons from not generating correctly
+*Added Config option for Old Tier 9/10 Rocket models
 *Fixed JEI support warning messages
 *Changed Kepler22b Tools material levels
 *Fixed crash when disabling Ceres Planet in the Config
