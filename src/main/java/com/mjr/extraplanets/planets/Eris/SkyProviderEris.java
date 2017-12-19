@@ -25,7 +25,7 @@ import org.lwjgl.opengl.GL12;
 public class SkyProviderEris extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/pluto.png");
 	private static final ResourceLocation overworldTexture2 = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/dysnomia.png");
-	private static final ResourceLocation sunTexture = new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
+	private static final ResourceLocation sunTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/planets/orbitalsun.png");
 
 	public int starList;
 	public int glSkyList;
