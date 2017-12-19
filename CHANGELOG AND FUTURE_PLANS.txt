@@ -14,6 +14,85 @@
 
 
 ===========================================Released Updates===========================================
+v0.8.5
+*Updated lang files to include mc 1.7.10 only ones
+*Added ##NEEDS TRANSLATE## tags to all lines that need translating
+*Correction with line spacing in de_DE.lang
+*Converted Saturn World gen over to use world gen helper class
+*Added missing comments
+*Added ability to have custom galaxies with its own solar systems
+*Fixes and Tweaks for Custom Celestaial Selection Map/Screen
+*Changes to a Few Planets orbit time and phaseshift amounts
+*Updated change log
+*Added Io Burning Plains Biome to IO Moon
+*Changes to Volcano World gen feature
+*Updated lang files to fix missing entries
+*Clean up, Removed unneeded code
+*Even more clean up, Removed unneeded code
+*Suppressed Warnings that are nothing to worry about
+*Commented out some used code for future use
+*Fixed some deprecated code
+*Fixed some villages structures on planets using the wrong blocks
+*Added Ravines to all Planets and Moons
+*Fixed cave gen on all planets and moons from not generating correctly
+*Fixed JEI support warning messages
+*Changed Kepler22b Tools material levels
+*Fixed crash when disabling Ceres Planet in the Config
+*Added Liquid Crystallized Water, Radio Active lakes to Europa
+*Added Config option for Deconstructor, Extreme Reactors, MC MultiPart Compatibility
+*Clean up formatting in Config class
+*Fixed thermal levels when disabling the Tier 3 - 4 Thermal Padding Config option
+*Added Config option for Lighting & Lighting Effects on Jupiter
+*Fixed some misspelling of Jupiter in the Config file
+*Fixed issue with Kepler22 and some other solar system bugging out when being zoomed in on
+*Added Config options for Solar Systems Y Offset
+*Removed unneeded debug output
+*Added Shield Controller to Pre Launch Checklist for Planets that require it
+*Updated lang files
+*Added MessageUtilities class for outputting errors and debug messages
+*Changed all debug outputs to use the MessageUtilities class
+*Fixed ore dict for some blocks, Added ore dict for Eris
+*Updated to Forge 12.18.3.2511
+*Refactoring of some packages names
+*Fixed Purifier Machine Status message
+*Fixed Celestaial Body text rendering
+*Added dropdown system for Galaxy Selection Menu
+*Fixes for Celestaial Section screen
+*Fixed missing harvest levels for blocks
+*Added config option for Basic Purifier and Basic Densifier machines
+*Fixes for Coloured Oxygen Tanks recipes
+*Changed all recipes to use a Recipe Helper class
+*Added config option for Custom Galaxies on Celestaial Selection Screen
+*Changed Custom Galaxies System to constuct the galaxy list based on the registered solar systems parent galaxy names
+*Few fixes for the Celestaial Selection Screen
+*Started adding more Solar Systems and Planets for new Custom Galaxies
+*Added Clouds, Fog to Jupiter 
+*Tweaks to lighting effects, weather
+*Added light fog to Uranus 
+*Changed Uranus Fog colour
+*Added fog to Saturn & Neptune
+*Changes to Mercury Sky Provider
+*Changes to Mercury & Ceres Sky Provider
+*Changes to Jupiter Sky Provider
+*Changes to Saturn Sky Provider
+*Added moons to Jupiter's sky
+*Added moons to Saturn's sky
+*Added rings back to Saturn and Uranus
+*Fixed spelling error in a class
+*Added moons to Uranus's sky
+*Added moons to Neptune's sky
+*Added moons to Pluto's sky
+*Added moons to Eris's sky
+*Fixes for Eris Sky Provider
+*Changed some math over to using Constants variables
+*More changing of some math over to using Constants variables
+*Converted all remaining casting of Math.Pie to use variables from the Constants class
+*Clean up
+*Temp disabled Deltiri 10 Solar System since its got no Planets yet
+*Updated lang files
+*Made most of the text in the Information Panel on the Celestial Screen use lang localization
+*Added beta text to Celestial Screen Custom Galaxies selection message
+
 v0.8.4
 *More fixes for Ender Zoo mod
 *Fixes for Triton Ice Sea 
