@@ -4,17 +4,33 @@ itemGroup.SpaceBlocksTab=额外行星|方块
 itemGroup.SpaceToolsTab=额外行星|工具
 itemGroup.SpaceArmorTab=额外行星|装备
 
+#Galaxies
+galaxy.whirlpool=Whirlpool ##NEEDS TRANSLATE##
+galaxy.andromeda=Andromeda ##NEEDS TRANSLATE##
+galaxy.black_eye=Black Eye ##NEEDS TRANSLATE##
+galaxy.proxima_centauri=Proxima Centauri ##NEEDS TRANSLATE##
+
 #Solar Systems
 solarsystem.kepler22=开普勒-22星系
 solarsystem.kepler47=开普勒-47星系
 solarsystem.kepler62=开普勒-62星系
 solarsystem.kepler69=开普勒-69星系
 
+solarsystem.xenos157=Xenos 157 ##NEEDS TRANSLATE##
+solarsystem.deltiri10=Deltiri 10 ##NEEDS TRANSLATE##
+solarsystem.vendrizi161=Vendrizi 161 ##NEEDS TRANSLATE##
+solarsystem.epsilonSolaria=Epsilon Solaria ##NEEDS TRANSLATE##
+
 #Stars
 star.kepler22=开普勒-22
 star.kepler47=开普勒-47
 star.kepler62=开普勒-62
 star.kepler69=开普勒-69
+
+star.xenos157=Xenos 157 Star ##NEEDS TRANSLATE##
+star.deltiri10=Deltiri 10 Star ##NEEDS TRANSLATE##
+star.vendrizi161=Vendrizi 161 Star ##NEEDS TRANSLATE##
+star.epsilonSolaria=Epsilon Solaria Star ##NEEDS TRANSLATE##
 
 #Planets
 planet.Mercury=水星
@@ -39,6 +55,23 @@ planet.kepler47b=开普勒-47b
 planet.kepler47c=开普勒-47c
 planet.kepler69b=开普勒-69b
 planet.kepler69c=开普勒-69c
+
+planet.tatooine=Tatooine ##NEEDS TRANSLATE##
+planet.crait=Crait ##NEEDS TRANSLATE##
+planet.hoth=Hoth ##NEEDS TRANSLATE##
+planet.aqua=Aqua ##NEEDS TRANSLATE##
+
+planet.qustroithea=Qustroithea ##NEEDS TRANSLATE##
+planet.jetraruta=Jetraruta ##NEEDS TRANSLATE##
+planet.moswion=Moswion ##NEEDS TRANSLATE##
+planet.ketherth=Ketherth ##NEEDS TRANSLATE##
+planet.xovis=Xovis ##NEEDS TRANSLATE##
+
+planet.oarilia=Oarilia ##NEEDS TRANSLATE##
+planet.struronides=Struronides ##NEEDS TRANSLATE##
+planet.brajutov=Brajutov ##NEEDS TRANSLATE##
+planet.speshani16=Speshani 16 ##NEEDS TRANSLATE##
+planet.trars9=Trars 9 ##NEEDS TRANSLATE##
 
 #Moons
 moon.triton=海卫一
@@ -442,6 +475,27 @@ gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb ##NEEDS TRANSLATE##
 gui.message.general.tank.name=Fluid Tank ##NEEDS TRANSLATE##
 gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
 gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
+
+#Celestial Selection Screen GUI Components
+gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
+gui.general_features_details.name=General Feature Details ##NEEDS TRANSLATE##
+gui.atmosphere_details.name=Atmosphere Details ##NEEDS TRANSLATE##
+gui.general_details.name=General Details ##NEEDS TRANSLATE##
+gui.parent_solar_system_details.name=Parent Solar System Details ##NEEDS TRANSLATE##
+
+gui.celestial_body_type.name=Type ##NEEDS TRANSLATE##
+gui.celestial_body_amount_of_moons.name=Amount of Moons ##NEEDS TRANSLATE##
+gui.celestial_body_orbit_time.name=Orbit Time ##NEEDS TRANSLATE##
+gui.celestial_body_gravity.name=Gravity ##NEEDS TRANSLATE##
+gui.celestial_body_day_lengh.name=Day Length ##NEEDS TRANSLATE##
+gui.celestial_body_meteor_frequency.name=Meteor Frequency ##NEEDS TRANSLATE##
+gui.celestial_body_wind_level.name=Wind Level ##NEEDS TRANSLATE##
+gui.celestial_body_temperature.name=Temperature ##NEEDS TRANSLATE##
+gui.celestial_body_breathable.name=Breathable ##NEEDS TRANSLATE##
+gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere ##NEEDS TRANSLATE##
+gui.celestial_body_radiation_level.name=Radiation Level ##NEEDS TRANSLATE##
+gui.celestial_body_pressure_level.name=Pressure Level ##NEEDS TRANSLATE##
+gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=打开电力漫游车的物品栏
