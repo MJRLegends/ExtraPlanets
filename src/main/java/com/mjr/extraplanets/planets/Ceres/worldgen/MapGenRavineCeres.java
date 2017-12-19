@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.MapGenBase;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class MapGenRavineCeres extends MapGenBase
@@ -51,7 +52,7 @@ public class MapGenRavineCeres extends MapGenBase
 
         for (; p_151540_15_ < p_151540_16_; ++p_151540_15_)
         {
-            double d12 = 1.5D + MathHelper.sin(p_151540_15_ * (float)Math.PI / p_151540_16_) * p_151540_12_ * 1.0F;
+            double d12 = 1.5D + MathHelper.sin(p_151540_15_ * Constants.floatPI / p_151540_16_) * p_151540_12_ * 1.0F;
             double d6 = d12 * p_151540_17_;
             d12 *= random.nextFloat() * 0.25D + 0.75D;
             d6 *= random.nextFloat() * 0.25D + 0.75D;
@@ -203,7 +204,7 @@ public class MapGenRavineCeres extends MapGenBase
 
             for (int i1 = 0; i1 < b0; ++i1)
             {
-                float f = this.rand.nextFloat() * (float)Math.PI * 2.0F;
+                float f = this.rand.nextFloat() * Constants.twoPI;
                 float f1 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
                 float f2 = (this.rand.nextFloat() * 2.0F + this.rand.nextFloat()) * 2.0F;
                 this.func_151540_a(this.rand.nextLong(), p_151538_4_, p_151538_5_, p_151538_6_, d0, d1, d2, f2, f, f1, 0, 0, 3.0D);

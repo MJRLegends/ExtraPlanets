@@ -4,6 +4,9 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
+
+import com.mjr.extraplanets.Constants;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -46,15 +49,15 @@ public class ModelEvolvedSnowmanBoss extends ModelBase
 	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_)
     {
         super.setRotationAngles(p_78087_1_, p_78087_2_, p_78087_3_, p_78087_4_, p_78087_5_, p_78087_6_, p_78087_7_);
-        this.head.rotateAngleY = p_78087_4_ / (180F / (float)Math.PI);
-        this.head.rotateAngleX = p_78087_5_ / (180F / (float)Math.PI);
-        this.body.rotateAngleY = p_78087_4_ / (180F / (float)Math.PI) * 0.25F;
+        this.head.rotateAngleY = p_78087_4_ / (180F / Constants.floatPI);
+        this.head.rotateAngleX = p_78087_5_ / (180F / Constants.floatPI);
+        this.body.rotateAngleY = p_78087_4_ / (180F / Constants.floatPI) * 0.25F;
         float f6 = MathHelper.sin(this.body.rotateAngleY);
         float f7 = MathHelper.cos(this.body.rotateAngleY);
         this.rightHand.rotateAngleZ = 1.0F;
         this.leftHand.rotateAngleZ = -1.0F;
         this.rightHand.rotateAngleY = 0.0F + this.body.rotateAngleY;
-        this.leftHand.rotateAngleY = (float)Math.PI + this.body.rotateAngleY;
+        this.leftHand.rotateAngleY = Constants.floatPI + this.body.rotateAngleY;
         this.rightHand.rotationPointX = f7 * 5.0F;
         this.rightHand.rotationPointZ = -f6 * 5.0F;
         this.leftHand.rotationPointX = -f7 * 5.0F;

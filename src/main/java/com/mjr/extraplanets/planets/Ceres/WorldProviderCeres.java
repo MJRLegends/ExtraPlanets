@@ -66,7 +66,7 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {
 		float f1 = this.worldObj.getCelestialAngle(par1);
-		float f2 = 1.0F - (MathHelper.cos(f1 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float f2 = 1.0F - (MathHelper.cos(f1 * Constants.twoPI) * 2.0F + 0.25F);
 
 		if (f2 < 0.0F) {
 			f2 = 1.0F;

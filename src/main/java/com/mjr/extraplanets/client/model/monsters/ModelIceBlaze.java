@@ -4,6 +4,9 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
+
+import com.mjr.extraplanets.Constants;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -54,7 +57,7 @@ public class ModelIceBlaze extends ModelBase
 	@Override
 	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_)
 	{
-		float f6 = p_78087_3_ * (float)Math.PI * -0.1F;
+		float f6 = p_78087_3_ * Constants.floatPI * -0.1F;
 		int i;
 
 		for (i = 0; i < 4; ++i)
@@ -65,7 +68,7 @@ public class ModelIceBlaze extends ModelBase
 			++f6;
 		}
 
-		f6 = ((float)Math.PI / 4F) + p_78087_3_ * (float)Math.PI * 0.03F;
+		f6 = (Constants.floatPI / 4F) + p_78087_3_ * Constants.floatPI * 0.03F;
 
 		for (i = 4; i < 8; ++i)
 		{
@@ -75,7 +78,7 @@ public class ModelIceBlaze extends ModelBase
 			++f6;
 		}
 
-		f6 = 0.47123894F + p_78087_3_ * (float)Math.PI * -0.05F;
+		f6 = 0.47123894F + p_78087_3_ * Constants.floatPI * -0.05F;
 
 		for (i = 8; i < 12; ++i)
 		{
@@ -85,7 +88,7 @@ public class ModelIceBlaze extends ModelBase
 			++f6;
 		}
 
-		this.blazeHead.rotateAngleY = p_78087_4_ / (180F / (float)Math.PI);
-		this.blazeHead.rotateAngleX = p_78087_5_ / (180F / (float)Math.PI);
+		this.blazeHead.rotateAngleY = p_78087_4_ / (180F / Constants.floatPI);
+		this.blazeHead.rotateAngleX = p_78087_5_ / (180F / Constants.floatPI);
 	}
 }

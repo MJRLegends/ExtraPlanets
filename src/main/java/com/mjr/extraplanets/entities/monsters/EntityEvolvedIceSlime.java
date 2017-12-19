@@ -15,6 +15,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 
+import com.mjr.extraplanets.Constants;
+
 public class EntityEvolvedIceSlime extends EntityLiving implements IMob, IEntityBreathable
 {
 	public float squishAmount;
@@ -124,7 +126,7 @@ public class EntityEvolvedIceSlime extends EntityLiving implements IMob, IEntity
 
 			for (int j = 0; j < i * 8; ++j)
 			{
-				float f = this.rand.nextFloat() * (float)Math.PI * 2.0F;
+				float f = this.rand.nextFloat() * Constants.twoPI;
 				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
 				float f2 = MathHelper.sin(f) * i * 0.5F * f1;
 				float f3 = MathHelper.cos(f) * i * 0.5F * f1;

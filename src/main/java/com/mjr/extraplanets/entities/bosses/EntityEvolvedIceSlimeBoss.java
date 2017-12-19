@@ -162,7 +162,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 			i = this.getSlimeSize();
 
 			for (int j = 0; j < i * 8; ++j) {
-				float f = this.rand.nextFloat() * Constants.floatPI * 2.0F;
+				float f = this.rand.nextFloat() * Constants.twoPI;
 				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
 				float f2 = MathHelper.sin(f) * i * 0.5F * f1;
 				float f3 = MathHelper.cos(f) * i * 0.5F * f1;

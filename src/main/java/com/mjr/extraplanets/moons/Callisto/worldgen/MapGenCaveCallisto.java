@@ -220,7 +220,7 @@ public class MapGenCaveCallisto extends MapGenBaseMeta
 
 			for (int var16 = 0; var16 < var15; ++var16)
 			{
-				final float var17 = this.rand.nextFloat() * Constants.floatPI * 2.0F;
+				final float var17 = this.rand.nextFloat() * Constants.twoPI;
 				final float var18 = (this.rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
 				float var19 = this.rand.nextFloat() * 2.0F + this.rand.nextFloat();
 

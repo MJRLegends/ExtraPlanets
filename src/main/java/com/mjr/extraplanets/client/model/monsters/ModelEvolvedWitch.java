@@ -4,6 +4,9 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.model.ModelVillager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
+
+import com.mjr.extraplanets.Constants;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -55,9 +58,9 @@ public class ModelEvolvedWitch extends ModelVillager
 		super.setRotationAngles(p_78087_1_, p_78087_2_, p_78087_3_, p_78087_4_, p_78087_5_, p_78087_6_, p_78087_7_);
 		this.villagerNose.offsetX = this.villagerNose.offsetY = this.villagerNose.offsetZ = 0.0F;
 		float f6 = 0.01F * (p_78087_7_.getEntityId() % 10);
-		this.villagerNose.rotateAngleX = MathHelper.sin(p_78087_7_.ticksExisted * f6) * 4.5F * (float)Math.PI / 180.0F;
+		this.villagerNose.rotateAngleX = MathHelper.sin(p_78087_7_.ticksExisted * f6) * 4.5F * Constants.floatPI / 180.0F;
 		this.villagerNose.rotateAngleY = 0.0F;
-		this.villagerNose.rotateAngleZ = MathHelper.cos(p_78087_7_.ticksExisted * f6) * 2.5F * (float)Math.PI / 180.0F;
+		this.villagerNose.rotateAngleZ = MathHelper.cos(p_78087_7_.ticksExisted * f6) * 2.5F * Constants.floatPI / 180.0F;
 
 		if (this.field_82900_g)
 		{
