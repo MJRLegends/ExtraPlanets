@@ -36,6 +36,7 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntityBreathable {
@@ -53,21 +54,20 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 		this.tasks.addTask(3, new EntityEvolvedIceSlimeBoss.AISlimeFaceRandom(this));
 		this.tasks.addTask(5, new EntityEvolvedIceSlimeBoss.AISlimeHop(this));
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, 0, true, false, null));	}
-	
-    @Override
-    protected void onDeathUpdate()
-    {
-        super.onDeathUpdate();
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, 0, true, false, null));
+	}
 
-        if (!this.world.isRemote)
-        {
-            if (this.deathTicks == 100)
-            {
-                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.world), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 40.0D));
-            }
-        }
-    }
+	@Override
+	protected void onDeathUpdate() {
+		super.onDeathUpdate();
+
+		if (!this.world.isRemote) {
+			if (this.deathTicks == 100) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.world), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 40.0D));
+			}
+		}
+	}
 
 	@Override
 	protected void entityInit() {
@@ -123,48 +123,44 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	/**
-     * Called to update the entity's position/logic.
-     */
-    @Override
-	public void onUpdate()
-    {
-        if (!this.world.isRemote && this.world.getDifficulty() == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0)
-        {
-            this.isDead = true;
-        }
+	 * Called to update the entity's position/logic.
+	 */
+	@Override
+	public void onUpdate() {
+		if (!this.world.isRemote && this.world.getDifficulty() == EnumDifficulty.PEACEFUL && this.getSlimeSize() > 0) {
+			this.isDead = true;
+		}
 
-        this.squishFactor += (this.squishAmount - this.squishFactor) * 0.5F;
-        this.prevSquishFactor = this.squishFactor;
-        super.onUpdate();
+		this.squishFactor += (this.squishAmount - this.squishFactor) * 0.5F;
+		this.prevSquishFactor = this.squishFactor;
+		super.onUpdate();
 
-        if (this.onGround && !this.wasOnGround)
-        {
-            int i = this.getSlimeSize();
-            if (spawnCustomParticles()) { i = 0; } // don't spawn particles if it's handled by the implementation itself
-            for (int j = 0; j < i * 8; ++j)
-            {
-                float f = this.rand.nextFloat() * ((float)Math.PI * 2F);
-                float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
-                float f2 = MathHelper.sin(f) * i * 0.5F * f1;
-                float f3 = MathHelper.cos(f) * i * 0.5F * f1;
-                World world = this.world;
-                EnumParticleTypes enumparticletypes = this.getParticleType();
-                double d0 = this.posX + f2;
-                double d1 = this.posZ + f3;
-                world.spawnParticle(enumparticletypes, d0, this.getEntityBoundingBox().minY, d1, 0.0D, 0.0D, 0.0D, new int[0]);
-            }
+		if (this.onGround && !this.wasOnGround) {
+			int i = this.getSlimeSize();
+			if (spawnCustomParticles()) {
+				i = 0;
+			} // don't spawn particles if it's handled by the implementation itself
+			for (int j = 0; j < i * 8; ++j) {
+				float f = this.rand.nextFloat() * Constants.twoPI;
+				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
+				float f2 = MathHelper.sin(f) * i * 0.5F * f1;
+				float f3 = MathHelper.cos(f) * i * 0.5F * f1;
+				World world = this.world;
+				EnumParticleTypes enumparticletypes = this.getParticleType();
+				double d0 = this.posX + f2;
+				double d1 = this.posZ + f3;
+				world.spawnParticle(enumparticletypes, d0, this.getEntityBoundingBox().minY, d1, 0.0D, 0.0D, 0.0D, new int[0]);
+			}
 
-            this.playSound(this.getSquishSound(), this.getSoundVolume(), ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F) / 0.8F);
-            this.squishAmount = -0.5F;
-        }
-        else if (!this.onGround && this.wasOnGround)
-        {
-            this.squishAmount = 1.0F;
-        }
+			this.playSound(this.getSquishSound(), this.getSoundVolume(), ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F) / 0.8F);
+			this.squishAmount = -0.5F;
+		} else if (!this.onGround && this.wasOnGround) {
+			this.squishAmount = 1.0F;
+		}
 
-        this.wasOnGround = this.onGround;
-        this.alterSquishAmount();
-    }
+		this.wasOnGround = this.onGround;
+		this.alterSquishAmount();
+	}
 
 	protected void alterSquishAmount() {
 		this.squishAmount *= 0.6F;
@@ -456,99 +452,79 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 		}
 	}
 
-	static class SlimeMoveHelper extends EntityMoveHelper
-    {
-        private float yRot;
-        private int jumpDelay;
-        private final EntityEvolvedIceSlimeBoss slime;
-        private boolean isAggressive;
+	static class SlimeMoveHelper extends EntityMoveHelper {
+		private float yRot;
+		private int jumpDelay;
+		private final EntityEvolvedIceSlimeBoss slime;
+		private boolean isAggressive;
 
-        public SlimeMoveHelper(EntityEvolvedIceSlimeBoss slimeIn)
-        {
-            super(slimeIn);
-            this.slime = slimeIn;
-            this.yRot = 180.0F * slimeIn.rotationYaw / (float)Math.PI;
-        }
+		public SlimeMoveHelper(EntityEvolvedIceSlimeBoss slimeIn) {
+			super(slimeIn);
+			this.slime = slimeIn;
+			this.yRot = 180.0F * slimeIn.rotationYaw / (float) Math.PI;
+		}
 
-        public void setDirection(float p_179920_1_, boolean p_179920_2_)
-        {
-            this.yRot = p_179920_1_;
-            this.isAggressive = p_179920_2_;
-        }
+		public void setDirection(float p_179920_1_, boolean p_179920_2_) {
+			this.yRot = p_179920_1_;
+			this.isAggressive = p_179920_2_;
+		}
 
-        public void setSpeed(double speedIn)
-        {
-            this.speed = speedIn;
-            this.action = EntityMoveHelper.Action.MOVE_TO;
-        }
+		public void setSpeed(double speedIn) {
+			this.speed = speedIn;
+			this.action = EntityMoveHelper.Action.MOVE_TO;
+		}
 
-        @Override
-		public void onUpdateMoveHelper()
-        {
-            this.entity.rotationYaw = this.limitAngle(this.entity.rotationYaw, this.yRot, 90.0F);
-            this.entity.rotationYawHead = this.entity.rotationYaw;
-            this.entity.renderYawOffset = this.entity.rotationYaw;
+		@Override
+		public void onUpdateMoveHelper() {
+			this.entity.rotationYaw = this.limitAngle(this.entity.rotationYaw, this.yRot, 90.0F);
+			this.entity.rotationYawHead = this.entity.rotationYaw;
+			this.entity.renderYawOffset = this.entity.rotationYaw;
 
-            if (this.action != EntityMoveHelper.Action.MOVE_TO)
-            {
-                this.entity.setMoveForward(0.0F);
-            }
-            else
-            {
-                this.action = EntityMoveHelper.Action.WAIT;
+			if (this.action != EntityMoveHelper.Action.MOVE_TO) {
+				this.entity.setMoveForward(0.0F);
+			} else {
+				this.action = EntityMoveHelper.Action.WAIT;
 
-                if (this.entity.onGround)
-                {
-                    this.entity.setAIMoveSpeed((float)(this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
+				if (this.entity.onGround) {
+					this.entity.setAIMoveSpeed((float) (this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
 
-                    if (this.jumpDelay-- <= 0)
-                    {
-                        this.jumpDelay = this.slime.getJumpDelay();
+					if (this.jumpDelay-- <= 0) {
+						this.jumpDelay = this.slime.getJumpDelay();
 
-                        if (this.isAggressive)
-                        {
-                            this.jumpDelay /= 3;
-                        }
+						if (this.isAggressive) {
+							this.jumpDelay /= 3;
+						}
 
-                        this.slime.getJumpHelper().setJumping();
+						this.slime.getJumpHelper().setJumping();
 
-                        if (this.slime.makesSoundOnJump())
-                        {
-                            this.slime.playSound(this.slime.getJumpSound(), this.slime.getSoundVolume(), ((this.slime.getRNG().nextFloat() - this.slime.getRNG().nextFloat()) * 0.2F + 1.0F) * 0.8F);
-                        }
-                    }
-                    else
-                    {
-                        this.slime.moveStrafing = 0.0F;
-                        this.slime.moveForward = 0.0F;
-                        this.entity.setAIMoveSpeed(0.0F);
-                    }
-                }
-                else
-                {
-                    this.entity.setAIMoveSpeed((float)(this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
-                }
-            }
-        }
-    }
+						if (this.slime.makesSoundOnJump()) {
+							this.slime.playSound(this.slime.getJumpSound(), this.slime.getSoundVolume(), ((this.slime.getRNG().nextFloat() - this.slime.getRNG().nextFloat()) * 0.2F + 1.0F) * 0.8F);
+						}
+					} else {
+						this.slime.moveStrafing = 0.0F;
+						this.slime.moveForward = 0.0F;
+						this.entity.setAIMoveSpeed(0.0F);
+					}
+				} else {
+					this.entity.setAIMoveSpeed((float) (this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
+				}
+			}
+		}
+	}
 
-    @Override
-    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
-    {
-        final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-        entityitem.motionY = -2.0D;
-        entityitem.setDefaultPickupDelay();
-        if (this.captureDrops)
-        {
-            this.capturedDrops.add(entityitem);
-        }
-        else
-        {
-            this.world.spawnEntity(entityitem);
-        }
-        return entityitem;
-    }
-    
+	@Override
+	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		entityitem.motionY = -2.0D;
+		entityitem.setDefaultPickupDelay();
+		if (this.captureDrops) {
+			this.capturedDrops.add(entityitem);
+		} else {
+			this.world.spawnEntity(entityitem);
+		}
+		return entityitem;
+	}
+
 	@Override
 	public boolean canBreath() {
 		return true;
