@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Eris;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -20,8 +21,6 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
-
-import com.mjr.extraplanets.Constants;
 
 public class SkyProviderEris extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/pluto.png");
@@ -377,7 +376,7 @@ public class SkyProviderEris extends IRenderHandler {
 
 	public float getSkyBrightness(float par1) {
 		final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
-		float var3 = 1.0F - (MathHelper.sin(var2 * Constants.floatPI * 2.0F) * 2.0F + 0.25F);
+		float var3 = 1.0F - (MathHelper.sin(var2 * com.mjr.extraplanets.Constants.floatPI * 2.0F) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
 			var3 = 0.0F;
