@@ -23,6 +23,7 @@ public class Constants {
 
 	public static final float twoPI = Constants.floatPI * 2F;
 	public static final float halfPI = Constants.floatPI / 2F;
+	public static final float quarterPI = Constants.halfPI / 2F;
 	public static final float floatPI = 3.1415927F;
 	
 	public static final int SPACE_STATION_LOWER_Y_LIMIT = 10;
