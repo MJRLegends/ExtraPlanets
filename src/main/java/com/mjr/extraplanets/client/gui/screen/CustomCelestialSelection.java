@@ -29,9 +29,9 @@ import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Maps;
 
-public class CustomCelestaialSelection extends GuiCelestialSelection {
+public class CustomCelestialSelection extends GuiCelestialSelection {
 
-	public CustomCelestaialSelection(boolean mapMode, List<CelestialBody> possibleBodies) {
+	public CustomCelestialSelection(boolean mapMode, List<CelestialBody> possibleBodies) {
 		super(mapMode, possibleBodies);
 	}
 
