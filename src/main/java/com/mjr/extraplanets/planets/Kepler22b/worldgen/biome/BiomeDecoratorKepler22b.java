@@ -328,7 +328,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.purpleBigTreesPerChunk); i++) {
-			if (this.rand.nextInt(20) == 1) {
+			if (this.rand.nextInt(100) == 1) {
 				int x = chunk_X + this.rand.nextInt(16) + 8;
 				int z = chunk_Z + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
@@ -336,7 +336,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			}
 		}
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueBigTreesPerChunk); i++) {
-			if (this.rand.nextInt(20) == 1) {
+			if (this.rand.nextInt(100) == 1) {
 				int x = chunk_X + this.rand.nextInt(16) + 8;
 				int z = chunk_Z + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
@@ -344,7 +344,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			}
 		}
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.redBigTreesPerChunk); i++) {
-			if (this.rand.nextInt(20) == 1) {
+			if (this.rand.nextInt(100) == 1) {
 				int x = chunk_X + this.rand.nextInt(16) + 8;
 				int z = chunk_Z + this.rand.nextInt(16) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
