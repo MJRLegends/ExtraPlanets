@@ -93,6 +93,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		this.chunk_Z = zChunk;
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
+
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.blueTreesPerChunk); i++) {
 			if (this.rand.nextInt(10) == 0) {
 				int x = this.chunkX + this.rand.nextInt(80) + 8;
@@ -102,9 +103,101 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				new WorldGenCustomLake(Blocks.water).generate(this.currentWorld, this.rand, x, y, z, Blocks.grass);
 			}
 		}
+
 		for (int i = 0; i < this.InfectedLakesPerChunk; i++) {
 			if (this.rand.nextInt(15) == 0) {
 				WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunk_X, 0, this.chunk_Z, ExtraPlanets_Fluids.infected_water, Blocks.grass);
+			}
+		}
+
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
+			int x = chunk_X + this.rand.nextInt(16) + 8;
+			int y = this.rand.nextInt(256);
+			int z = chunk_Z + this.rand.nextInt(16) + 8;
+			(new WorldGenKepler22bDungeons()).generate(this.currentWorld, rand, x, y, z);
+		}
+
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
+			if (this.generateHuts) {
+				if (this.rand.nextInt(200) == 1) {
+					int x = chunk_X + this.rand.nextInt(16) + 8;
+					int z = chunk_Z + this.rand.nextInt(16) + 8;
+					int y = this.currentWorld.getHeightValue(x, z);
+					int randomNum = this.rand.nextInt(7) + 0;
+					switch (randomNum) {
+					case 1:
+						(new WorldGenBlueHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 2:
+						(new WorldGenRedHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 3:
+						(new WorldGenPurpleHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 4:
+						(new WorldGenYellowHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 5:
+						(new WorldGenGreenHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					case 6:
+						(new WorldGenBrownHut()).generate(this.currentWorld, rand, x, y, z);
+						break;
+					}
+				}
+			}
+		}
+
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueTowerPerChunk); i++) {
+			if (this.rand.nextInt(100) == 1) {
+				int x = chunk_X + this.rand.nextInt(16) + 8;
+				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z) - 1;
+				(new WorldGenBlueTower()).generate(this.currentWorld, rand, x, y, z);
+				break;
+			}
+		}
+
+		for (int i = 0; i < this.treeWithNoLeafsPerChunk; i++) {
+			int x = this.chunk_X + this.rand.nextInt(8);
+			int z = this.chunk_Z + this.rand.nextInt(8);
+			int y = this.currentWorld.getTopSolidOrLiquidBlock(x, z);
+			new WorldGenKepler22bTree(true, 8, 0, 0, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, Blocks.air).generate(this.currentWorld, this.rand, x, y, z);
+		}
+
+		for (int i = 0; i < this.bigTreeWithNoLeafsPerChunk; i++) {
+			if (this.rand.nextInt(5) == 1) {
+				int x = chunk_X + this.rand.nextInt(16) + 8;
+				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z) - 1;
+				new WorldGenLogTree().generate(this.currentWorld, this.rand, x, y, z);
+			}
+		}
+
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.purpleBigTreesPerChunk); i++) {
+			if (this.rand.nextInt(100) == 1) {
+				int x = chunk_X + this.rand.nextInt(16) + 8;
+				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z);
+				new WorldGenBigPurpleTree().generate(this.currentWorld, this.rand, x, y, z);
+			}
+		}
+
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueBigTreesPerChunk); i++) {
+			if (this.rand.nextInt(100) == 1) {
+				int x = chunk_X + this.rand.nextInt(16) + 8;
+				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z);
+				new WorldGenBigBlueTree().generate(this.currentWorld, this.rand, x, y, z);
+			}
+		}
+
+		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.redBigTreesPerChunk); i++) {
+			if (this.rand.nextInt(100) == 1) {
+				int x = chunk_X + this.rand.nextInt(16) + 8;
+				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int y = this.currentWorld.getHeightValue(x, z);
+				new WorldGenBigRedTree().generate(this.currentWorld, this.rand, x, y, z);
 			}
 		}
 
@@ -286,93 +379,6 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 14).generate(world, rand, x, y, z);
-
-		}
-
-		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
-			int x = chunk_X + this.rand.nextInt(16) + 8;
-			int y = this.rand.nextInt(256);
-			int z = chunk_Z + this.rand.nextInt(16) + 8;
-			(new WorldGenKepler22bDungeons()).generate(this.currentWorld, rand, x, y, z);
-		}
-
-		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
-			if (this.generateHuts) {
-				if (this.rand.nextInt(200) == 1) {
-					int x = chunk_X + this.rand.nextInt(16) + 8;
-					int z = chunk_Z + this.rand.nextInt(16) + 8;
-					int y = this.currentWorld.getHeightValue(x, z);
-					int randomNum = this.rand.nextInt(7) + 0;
-					switch (randomNum) {
-					case 1:
-						(new WorldGenBlueHut()).generate(this.currentWorld, rand, x, y, z);
-						break;
-					case 2:
-						(new WorldGenRedHut()).generate(this.currentWorld, rand, x, y, z);
-						break;
-					case 3:
-						(new WorldGenPurpleHut()).generate(this.currentWorld, rand, x, y, z);
-						break;
-					case 4:
-						(new WorldGenYellowHut()).generate(this.currentWorld, rand, x, y, z);
-						break;
-					case 5:
-						(new WorldGenGreenHut()).generate(this.currentWorld, rand, x, y, z);
-						break;
-					case 6:
-						(new WorldGenBrownHut()).generate(this.currentWorld, rand, x, y, z);
-						break;
-					}
-				}
-			}
-		}
-
-		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.purpleBigTreesPerChunk); i++) {
-			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenBigPurpleTree().generate(this.currentWorld, this.rand, x, y, z);
-			}
-		}
-		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueBigTreesPerChunk); i++) {
-			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenBigBlueTree().generate(this.currentWorld, this.rand, x, y, z);
-			}
-		}
-		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.redBigTreesPerChunk); i++) {
-			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z);
-				new WorldGenBigRedTree().generate(this.currentWorld, this.rand, x, y, z);
-			}
-		}
-		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueTowerPerChunk); i++) {
-			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z) - 1;
-				(new WorldGenBlueTower()).generate(this.currentWorld, rand, x, y, z);
-				break;
-			}
-		}
-		for (int i = 0; i < this.treeWithNoLeafsPerChunk; i++) {
-			int x = this.chunk_X + this.rand.nextInt(8);
-			int z = this.chunk_Z + this.rand.nextInt(8);
-			int y = this.currentWorld.getTopSolidOrLiquidBlock(x, z);
-			new WorldGenKepler22bTree(true, 8, 0, 0, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, Blocks.air).generate(this.currentWorld, this.rand, x, y, z);
-		}
-		for (int i = 0; i < this.bigTreeWithNoLeafsPerChunk; i++) {
-			if (this.rand.nextInt(5) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z) - 1;
-				new WorldGenLogTree().generate(this.currentWorld, this.rand, x, y, z);
-			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
 		isDecorating = false;
