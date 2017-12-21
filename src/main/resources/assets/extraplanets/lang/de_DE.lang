@@ -1351,6 +1351,10 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptun Dungeonziegeltreppen
 #Planets
 planet.Venus=Venus
 
+#Other Blocks
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+
 #Other Items
 item.tier4_items.ash_shard.name=Aschenscherbe
 item.tier4_items.volcanic_shard.name=Vulaknische Scherbe
