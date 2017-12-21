@@ -1140,6 +1140,10 @@ item.tools.filter.name=Фильтр
 #Other Blocks
 tile.slime_block.name=Slime Block
 
+#Other Blocks
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+
 #Other Items
 item.apple_diamond.name=Алмазное яблоко
 item.apple_iron.name=Железное яблоко
