@@ -128,6 +128,7 @@ public class ExtraPlanets_Blocks {
 	public static Block kepler22bPurpleGrass;
 	public static Block kepler22bRedGrass;
 	public static Block kepler22bYellowGrass;
+	public static Block kepler22bInfectedGrass;
 
 	public static Block callistoBlocks;
 	public static Block deimosBlocks;
@@ -348,6 +349,7 @@ public class ExtraPlanets_Blocks {
 			kepler22bPurpleGrass = new BlockBasicGrass("kepler22b_purple", "kepler22b");
 			kepler22bRedGrass = new BlockBasicGrass("kepler22b_red", "kepler22b");
 			kepler22bYellowGrass = new BlockBasicGrass("kepler22b_yellow", "kepler22b");
+			kepler22bInfectedGrass = new BlockBasicGrass("kepler22b_infected", "kepler22b");
 			kepler22bGrassFlowers = new BlockBasicKepler22bTallGrass("kepler22b_flowers");
 			redSand = new BlockSand("red_sand").setHardness(0.6F);
 			redSandstone = new BlockBasic(Material.rock).setBlockName("red_sandstone").setBlockTextureName(Constants.TEXTURE_PREFIX + "red_sandstone").setHardness(2F).setResistance(2F);
@@ -537,6 +539,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(kepler22bPurpleGrass, "kepler22bPurpleGrass");
 			GameRegistry.registerBlock(kepler22bRedGrass, "kepler22bRedGrass");
 			GameRegistry.registerBlock(kepler22bYellowGrass, "kepler22bYellowGrass");
+			GameRegistry.registerBlock(kepler22bInfectedGrass, "kepler22bInfectedGrass");
 			GameRegistry.registerBlock(kepler22bGrassFlowers, ItemBlockKepler22bTallGrass.class, "tile.kepler22bFlowers");
 			GameRegistry.registerBlock(redSand, "redSand");
 			GameRegistry.registerBlock(redSandstone, "redSandstone");

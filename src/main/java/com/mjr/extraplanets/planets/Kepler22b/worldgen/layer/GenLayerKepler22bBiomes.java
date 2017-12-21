@@ -14,7 +14,8 @@ public class GenLayerKepler22bBiomes extends GenLayer
 			BiomeGenBaseKepler22b.kepler22bPurpleForest, 
 			BiomeGenBaseKepler22b.kepler22bRedForest, 
 			BiomeGenBaseKepler22b.kepler22bYellowForest,
-			BiomeGenBaseKepler22b.kepler22bRedDesert
+			BiomeGenBaseKepler22b.kepler22bRedDesert,
+			BiomeGenBaseKepler22b.kepler22bWasteLands
 	};
 	
 	protected BiomeGenBase[] rareBiomes = {BiomeGenBaseKepler22b.kepler22bBlueForest};
