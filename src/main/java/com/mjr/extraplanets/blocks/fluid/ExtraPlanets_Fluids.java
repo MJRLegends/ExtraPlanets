@@ -108,5 +108,6 @@ public class ExtraPlanets_Fluids {
 		GameRegistry.registerBlock(methane, "methane");
 		GameRegistry.registerBlock(nitrogen_ice, "nitrogen_ice");
 		GameRegistry.registerBlock(liquid_chocolate, "liquid_chocolate");
+		GameRegistry.registerBlock(liquid_caramel, "liquid_caramel");
 	}
 }
