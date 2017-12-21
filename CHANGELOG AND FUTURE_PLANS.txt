@@ -8,6 +8,46 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.1
+*Updated change log file
+*Refactoring of some packages names
+*Re-enabled custom Celestaial Section Screen, Auto disable custom Celestaial Section Screen on Galaxy Space compatibility config option enabling
+*Added names for each Planet on the Celestaial Selection Screen
+*Changes to a Few Planets orbit time and phaseshift amounts
+*Added Clouds, Fog to Jupiter 
+*Tweaks to lighting effects, weather
+*Added light fog to Uranus 
+*Changed Uranus Fog colour
+*Added fog to Saturn & Neptune
+*Changes to Mercury Sky Provider
+*Changes to Mercury & Ceres Sky Provider
+*Changes to Jupiter Sky Provider
+*Changes to Saturn Sky Provider
+*Fixes for MC 1.7.10
+*Added moons to Jupiter's sky
+*Added moons to Saturn's sky
+*Added moons to Eris's sky
+*Added moons to Neptune's sky
+*Changes to Ceres Sky Provider
+*Added moons to Pluto's sky
+*Changes to Uranus Sky Provider
+*Converted all remaining casting of Math.Pie to use variables from the Constants class
+*Changed some math over to using Constants variables
+*Clean up
+*Updated lang files to match 1.8+ changes
+*Fixed few missing localized names
+*Added Kepler22b Wastelands Biome
+*Added blocks, world gen for the Kepler22b Wastelands Biome
+*Fixes for over generating world gen on Kepler22b
+*Fixes for Kepler22b Wastelands Biome
+*Reordered the Kepler22b world gen to match 1.8+ versions
+*Fixed Planets Sky Providers
+*Fixed Liquid Caramel fluid not being registered
+*Fixed missing harvest levels for blocks
+*Changed Kepler22b Tools material levels
+*Added rings back to Saturn and Uranus 
+*Fixed spelling error in a class
+
 v1.9.0
 *Removed unneeded code
 *Fixed warning in TileEntitySolar
