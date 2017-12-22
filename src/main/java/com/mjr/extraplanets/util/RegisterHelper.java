@@ -58,14 +58,13 @@ public class RegisterHelper {
 		GameRegistry.register(item.setRegistryName(name));
 	}
 
-	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
+	public static void registerNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
         ResourceLocation registryName = new ResourceLocation(Constants.modID, var1);
 		EntityRegistry.registerModEntity(registryName, var0, var1, id++, ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
-
 	}
 
-	public static void registerExtraPlanetsMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
-		registerExtraPlanetsNonMobEntity(entityClass, name, 80, 3, true);
+	public static void registerMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
+		registerNonMobEntity(entityClass, name, 80, 3, true);
 		ResourceLocation resourcelocation = new ResourceLocation(Constants.modID, name);
 		EntityList.ENTITY_EGGS.put(resourcelocation, new EntityList.EntityEggInfo(resourcelocation, back, fore));
 	}
