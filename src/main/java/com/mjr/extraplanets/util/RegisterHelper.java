@@ -18,12 +18,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 public class RegisterHelper {
 	private static int id = 0;
 
-	public static void registerExtraPlanetsNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
+	public static void registerNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
 		EntityRegistry.registerModEntity(var0, var1, id++, ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
 	}
 
-	public static void registerExtraPlanetsMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
-		registerExtraPlanetsNonMobEntity(entityClass, name, 80, 3, true);
+	public static void registerMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
+		registerNonMobEntity(entityClass, name, 80, 3, true);
 		EntityRegistry.registerEgg(entityClass, back, fore);
 	}
 
