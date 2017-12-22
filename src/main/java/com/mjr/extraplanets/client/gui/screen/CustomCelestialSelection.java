@@ -18,8 +18,8 @@ import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
+import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.world.WorldProvider;
-import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 
 import org.lwjgl.BufferUtils;
@@ -28,6 +28,9 @@ import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Maps;
+
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.relauncher.Side;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
 
@@ -265,8 +268,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				}
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
-					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						temp = DimensionManager.getProvider(this.selectedBody.getDimensionID());
+					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().contains("overworld") && !(this.selectedBody instanceof Satellite))
+						if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
+							temp = WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
+						else
+							temp = WorldUtil.getProviderForDimensionServer(this.selectedBody.getDimensionID());
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
@@ -290,10 +296,10 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawString(this.fontRendererObj, "Orbit Time: " + this.selectedBody.getRelativeOrbitTime() * 24 + " days", xOffset + 10, yOffset + 23, 14737632);
 					float gravity = 0;
 					long dayLengh = 0;
-					if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getName().contains("overworld")) {
+					if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
 						gravity = ((WorldProviderSpace) temp).getGravity();
 						dayLengh = ((WorldProviderSpace) temp).getDayLength() / 1000;
-					} else if (this.selectedBody.getName().contains("overworld")) {
+					} else if (this.selectedBody.getUnlocalizedName().contains("overworld")) {
 						gravity = 1;
 						dayLengh = 24;
 					}
@@ -304,7 +310,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawString(this.fontRendererObj, "General Feature Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					double meteorFrequency = 0;
-					if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getName().contains("overworld")) {
+					if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
 						double number = ((WorldProviderSpace) temp).getMeteorFrequency();
 						BigDecimal bd = new BigDecimal(number).setScale(7, RoundingMode.DOWN);
 						meteorFrequency = bd.doubleValue();
@@ -321,7 +327,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						windLevel = ((WorldProviderSpace) temp).getWindLevel();
 					this.drawString(this.fontRendererObj, "Wind Level: " + (this.selectedBody.getReachable() ? windLevel * 10 + "%" : "Unknown"), xOffset + 10, yOffset + 60, 14737632);
 					float temperature = 0;
-					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
+					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
 					this.drawString(this.fontRendererObj, "Temperature: " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
 					boolean breathable = false;
