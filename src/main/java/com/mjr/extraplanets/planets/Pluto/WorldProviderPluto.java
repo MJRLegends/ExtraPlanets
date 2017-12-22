@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Pluto.worldgen.ChunkProviderPluto;
 import com.mjr.extraplanets.planets.Pluto.worldgen.WorldChunkManagerPluto;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -145,7 +146,7 @@ public class WorldProviderPluto extends WorldProviderSpace implements IGalacticr
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return -140.0F;
 			}
 			return -140.0F;

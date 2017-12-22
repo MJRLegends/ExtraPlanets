@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Saturn.worldgen.ChunkProviderSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.WorldChunkManagerSaturn;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -148,7 +149,7 @@ public class WorldProviderSaturn extends WorldProviderSpace implements IGalactic
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return 80.0F;
 			}
 			return 70.0F;

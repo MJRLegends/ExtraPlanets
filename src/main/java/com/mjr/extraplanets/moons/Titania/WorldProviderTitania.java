@@ -16,6 +16,7 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Titania.worldgen.ChunkProviderTitania;
 import com.mjr.extraplanets.moons.Titania.worldgen.WorldChunkManagerTitania;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -150,7 +151,7 @@ public class WorldProviderTitania extends WorldProviderSpace implements IGalacti
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return -120.0F;
 			}
 			return -115.0F;

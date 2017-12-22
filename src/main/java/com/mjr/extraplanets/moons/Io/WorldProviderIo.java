@@ -16,6 +16,7 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Io.worldgen.ChunkProviderIo;
 import com.mjr.extraplanets.moons.Io.worldgen.WorldChunkManagerIo;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -153,7 +154,7 @@ public class WorldProviderIo extends WorldProviderSpace implements IGalacticraft
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return 100.0F;
 			}
 			return -90.0F;

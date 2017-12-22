@@ -16,6 +16,7 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Rhea.worldgen.ChunkProviderRhea;
 import com.mjr.extraplanets.moons.Rhea.worldgen.WorldChunkManagerRhea;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -153,7 +154,7 @@ public class WorldProviderRhea extends WorldProviderSpace implements IGalacticra
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return 80.0F;
 			}
 			return -70.0F;

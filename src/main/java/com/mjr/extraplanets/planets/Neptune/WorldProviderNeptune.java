@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.WorldChunkManagerNeptune;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -148,7 +149,7 @@ public class WorldProviderNeptune extends WorldProviderSpace implements IGalacti
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return -140.0F;
 			}
 			return -130.0F;

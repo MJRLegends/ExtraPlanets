@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Mercury.worldgen.ChunkProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.worldgen.WorldChunkManagerMercury;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -142,7 +143,7 @@ public class WorldProviderMercury extends WorldProviderSpace implements IGalacti
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return 50.0F;
 			}
 			return 50.0F;

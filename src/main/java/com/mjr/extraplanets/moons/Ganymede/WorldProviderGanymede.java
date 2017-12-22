@@ -16,6 +16,7 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Ganymede.worldgen.ChunkProviderGanymede;
 import com.mjr.extraplanets.moons.Ganymede.worldgen.WorldChunkManagerGanymede;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -153,7 +154,7 @@ public class WorldProviderGanymede extends WorldProviderSpace implements IGalact
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return 100.0F;
 			}
 			return -90.0F;

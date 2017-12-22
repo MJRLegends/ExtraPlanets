@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.ChunkProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.WorldChunkManagerJupiter;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -148,7 +149,7 @@ public class WorldProviderJupiter extends WorldProviderSpace implements IGalacti
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return 100.0F;
 			}
 			return 90.0F;

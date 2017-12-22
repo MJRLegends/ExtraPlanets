@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.WorldChunkManagerEris;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -145,7 +146,7 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return -150.0F;
 			}
 			return -150.0F;

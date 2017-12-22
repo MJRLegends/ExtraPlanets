@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Uranus.worldgen.ChunkProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.WorldChunkManagerUranus;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -145,7 +146,7 @@ public class WorldProviderUranus extends WorldProviderSpace implements IGalactic
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return -120.0F;
 			}
 			return -115.0F;

@@ -15,6 +15,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Venus.worldgen.ChunkProviderVenus;
 import com.mjr.extraplanets.planets.Venus.worldgen.WorldChunkManagerVenus;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -145,7 +146,7 @@ public class WorldProviderVenus extends WorldProviderSpace implements IGalacticr
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.thermalPaddings) {
-			if (isDaytime()) {
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 				return 50.0F;
 			}
 			return 45.0F;
