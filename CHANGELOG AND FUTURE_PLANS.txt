@@ -8,6 +8,10 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.2
+*Fixed issue #187
+*Fixed issue #186
+
 v1.9.1
 *Updated change log file
 *Refactoring of some packages names
