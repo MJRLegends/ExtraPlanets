@@ -535,7 +535,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				}
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
-					if (this.selectedBody.getReachable() && !this.selectedBody.getName().contains("overworld") && !(this.selectedBody instanceof Satellite))
+					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						if(FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
 							temp = WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
 						else
@@ -577,7 +577,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.general_features_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					double meteorFrequency = 0;
-					if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getName().contains("overworld")) {
+					if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
 						double number = ((WorldProviderSpace) temp).getMeteorFrequency();
 						BigDecimal bd = new BigDecimal(number).setScale(7, RoundingMode.DOWN);
 						meteorFrequency = bd.doubleValue();
