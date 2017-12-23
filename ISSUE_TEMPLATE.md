@@ -1,4 +1,6 @@
 ### ---Issue Report---
+**(PLEASE DONT DELETE THIS TEMPLATE, YOUR ISSUE WILL BE IGNORED AND CLOSED IF YOU DO.)**
+
 **Have you checked Closed Issues (if applicable & PLEASE CHECK BEFORE POSTING):** [Yes or No]
 
 ### Description of Issue
