@@ -225,6 +225,11 @@ public class MainHandlerClient {
 					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2"));
 				} else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
 					event.getToolTip().add(EnumColor.ORANGE + GCCoreUtil.translate("gui.bucket.message.crafting"));
+
+				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)
+						|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)|| fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID)) {
+					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
+				}
 			}
 		}
 	}

@@ -464,6 +464,7 @@ gui.bucket.message.finding.2=du musst sie an monden/planeten finden.
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
 gui.status.missing.inputs.name=Fehlende Items/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
+gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility ##NEEDS TRANSLATE##
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
