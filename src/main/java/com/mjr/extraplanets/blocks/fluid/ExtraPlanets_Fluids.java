@@ -51,7 +51,7 @@ public class ExtraPlanets_Fluids {
 
 	public static Block LIQUID_CARAMEL;
 	public static Fluid LIQUID_CARAMEL_FLUID;
-	
+
 	public static Material GLOWSTONE_MATERIAL = new MaterialLiquid(MapColor.YELLOW);
 	public static Material MAGMA_MATERIAL = new MaterialLiquid(MapColor.NETHERRACK);
 	public static Material NITROGEN_MATERIAL = new MaterialLiquid(MapColor.LIGHT_BLUE);

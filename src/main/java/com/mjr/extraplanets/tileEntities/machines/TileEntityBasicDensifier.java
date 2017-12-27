@@ -26,6 +26,7 @@ import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicDensifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -42,10 +43,10 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	private ItemStack[] containingItems = new ItemStack[3];
 
 	private ItemStack producingStack = null;
-	
+
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int outputTextureOffset;
-	
+
 	public TileEntityBasicDensifier() {
 		inputTank = new FluidTank(this.tankCapacity);
 	}
@@ -96,8 +97,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.BUCKET);
-					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.BUCKET);
 					}
@@ -106,8 +106,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.BUCKET);
-					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.BUCKET);
 					}
@@ -116,9 +115,44 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.BUCKET);
-					}
-					else if(FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()){
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					}
+				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID)) {
+					if (this.inputTank.getFluid() == null) {
+						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0));
+						tank.fill(FluidRegistry.getFluidStack("glowstone_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						tank.fill(FluidRegistry.getFluidStack("glowstone_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					}
+				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.NITROGEN_FLUID)) {
+					if (this.inputTank.getFluid() == null) {
+						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0));
+						tank.fill(FluidRegistry.getFluidStack("nitrogen_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						tank.fill(FluidRegistry.getFluidStack("nitrogen_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					}
+				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID)) {
+					if (this.inputTank.getFluid() == null) {
+						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0));
+						tank.fill(FluidRegistry.getFluidStack("frozen_water_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						tank.fill(FluidRegistry.getFluidStack("frozen_water_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					}
+				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)) {
+					if (this.inputTank.getFluid() == null) {
+						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0));
+						tank.fill(FluidRegistry.getFluidStack("liquid_hydrocarbon_fluid", 1000), true);
+						this.containingItems[slot].setItem(Items.BUCKET);
+					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						tank.fill(FluidRegistry.getFluidStack("liquid_hydrocarbon_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.BUCKET);
 					}
 				}
@@ -133,10 +167,18 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			this.producingStack = new ItemStack(ExtraPlanets_Items.CHOCOLATE_BAR, 6);
 		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)))
 			this.producingStack = new ItemStack(Blocks.ICE, 6);
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0)))
+			this.producingStack = new ItemStack(Blocks.GLOWSTONE, 1);
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0)))
+			this.producingStack = new ItemStack(ExtraPlanets_Blocks.FROZEN_NITROGEN, 2);
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0)))
+			this.producingStack = new ItemStack(Blocks.ICE, 3);
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0)))
+			this.producingStack = new ItemStack(Items.COAL, 3);
 	}
-	
+
 	public void updateTextureOffset() {
-		if(this.inputTank.getFluid() == null)
+		if (this.inputTank.getFluid() == null)
 			return;
 		if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0)))
 			this.outputTextureOffset = 48;
@@ -144,6 +186,14 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			this.outputTextureOffset = 16;
 		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)))
 			this.outputTextureOffset = 0;
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0)))
+			this.outputTextureOffset = 0; // TODO Add texture
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0)))
+			this.outputTextureOffset = 0; // TODO Add texture
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0)))
+			this.outputTextureOffset = 0; // TODO Add texture
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0)))
+			this.outputTextureOffset = 0; // TODO Add texture
 	}
 
 	public int getScaledFuelLevel(int i) {
@@ -327,9 +377,9 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (type == NetworkType.POWER) {
 			return direction == this.getElectricInputDirection();
 		}
-//		if (type == NetworkType.FLUID) {
-//			return direction == this.getInputPipe();
-//		}
+		// if (type == NetworkType.FLUID) {
+		// return direction == this.getInputPipe();
+		// }
 		return false;
 	}
 
