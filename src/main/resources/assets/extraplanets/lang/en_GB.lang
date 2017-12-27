@@ -486,6 +486,7 @@ gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb
 gui.message.general.tank.name=Fluid Tank
 gui.message.general.tank.fluid.name=Fluid
 gui.status.densifier.name=Densifying
+gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details
