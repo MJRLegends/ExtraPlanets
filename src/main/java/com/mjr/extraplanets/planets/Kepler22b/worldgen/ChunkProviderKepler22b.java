@@ -14,13 +14,13 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomNormal;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeNormal;
 
-public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
+public class ChunkProviderKepler22b extends ChunkProviderMultiBiomeNormal {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
-		ChunkProviderCustomNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
-		ChunkProviderCustomNormal.waterBlock = Blocks.water.getDefaultState();
+		ChunkProviderMultiBiomeNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(1);
+		ChunkProviderMultiBiomeNormal.waterBlock = Blocks.water.getDefaultState();
 	}
 
 	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();

@@ -5,10 +5,11 @@ import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
 
 import micdoodle8.mods.galacticraft.core.Constants;
-import com.mjr.mjrlegendslib.client.model.ModelTransformWrapper;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.resources.model.IBakedModel;
 import net.minecraftforge.client.model.TRSRTransformation;
+
+import com.mjr.mjrlegendslib.client.model.ModelTransformWrapper;
 
 @SuppressWarnings("deprecation")
 public class ItemModelVenusRover extends ModelTransformWrapper {

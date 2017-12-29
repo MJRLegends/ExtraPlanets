@@ -3,7 +3,6 @@ package com.mjr.extraplanets.moons.Triton.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
@@ -12,15 +11,16 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.world.MapGenCavePlanet;
-import com.mjr.extraplanets.world.MapGenRavinePlanet;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeSpace;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-public class ChunkProviderTriton extends ChunkProviderCustomSpace {
+public class ChunkProviderTriton extends ChunkProviderMultiBiomeSpace {
 	private final BiomeDecoratorTriton ceresBiomeDecorator = new BiomeDecoratorTriton();
 	private final BiomeDecoratorTritonOther ceresBiomeDecorator2 = new BiomeDecoratorTritonOther();
-	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.TRITON_BLOCKS, 0, 1, 2);
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.TRITON_BLOCKS, 0, 1, 2);
 
 	public ChunkProviderTriton(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

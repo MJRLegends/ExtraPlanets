@@ -3,7 +3,6 @@ package com.mjr.extraplanets.planets.Saturn.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 import net.minecraft.world.ChunkCoordIntPair;
@@ -16,17 +15,18 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
-import com.mjr.extraplanets.world.MapGenCavePlanet;
-import com.mjr.extraplanets.world.MapGenRavinePlanet;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeSpace;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
+public class ChunkProviderSaturn extends ChunkProviderMultiBiomeSpace {
 	private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
 
 	private final BiomeDecoratorSaturn saturnBiomeDecorator = new BiomeDecoratorSaturn();
 	// private final BiomeDecoratorSaturnOther saturnBiomeDecorator2 = new BiomeDecoratorSaturnOther();
-	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.SATURN_BLOCKS, 0, 1, 2);
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.SATURN_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
 			16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));

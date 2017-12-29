@@ -44,7 +44,7 @@ import org.lwjgl.util.vector.Vector3f;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.world.CustomWorldProviderSpace;
+import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
 	private List<String> galaxies = new ArrayList<String>();
@@ -599,8 +599,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					int radiationLevel = 0;
 					int pressureLevel = 0;
 					try {
-						radiationLevel = ((CustomWorldProviderSpace) temp).getSolarRadiationLevel();
-						pressureLevel = ((CustomWorldProviderSpace) temp).getPressureLevel();
+						radiationLevel = ((WorldProviderRealisticSpace) temp).getSolarRadiationLevel();
+						pressureLevel = ((WorldProviderRealisticSpace) temp).getPressureLevel();
 					} catch (Exception ex) {
 					}
 

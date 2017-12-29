@@ -3,7 +3,6 @@ package com.mjr.extraplanets.planets.Uranus.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 import net.minecraft.world.ChunkCoordIntPair;
@@ -16,16 +15,17 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
-import com.mjr.extraplanets.world.MapGenCavePlanet;
-import com.mjr.extraplanets.world.MapGenRavinePlanet;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeSpace;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-public class ChunkProviderUranus extends ChunkProviderCustomSpace {
+public class ChunkProviderUranus extends ChunkProviderMultiBiomeSpace {
 	private final MapGenVillageUranus villageGenerator = new MapGenVillageUranus();
 
 	private final BiomeDecoratorUranus uranusBiomeDecorator = new BiomeDecoratorUranus();
-	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.URANUS_BLOCKS, 0, 1, 2);
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.URANUS_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonUranus(new DungeonConfiguration(ExtraPlanets_Blocks.URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
 			16, 7, 7, RoomBossUranus.class, RoomTreasureUranus.class));

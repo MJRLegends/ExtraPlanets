@@ -3,10 +3,12 @@ package com.mjr.extraplanets.world.prefabs;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
+import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -18,8 +20,10 @@ import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
-	private Random rand;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+
+public abstract class ChunkProviderMultiBiomeSpace extends ChunkProviderGenerate {
+	protected Random rand;
 	protected World worldObj;
 	private double[] depthBuffer;
 	private BiomeGenBase[] biomesForGeneration;
@@ -37,12 +41,21 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 	double[] maxLimitRegion;
 	double[] depthRegion;
 
-	protected static IBlockState stoneBlock;
-	protected static IBlockState waterBlock;
+	private final Gradient craterGen;
+	private final int CRATER_PROB = this.getCraterProbability();
+
+	protected IBlockState stoneBlock;
+	protected IBlockState waterBlock;
+
+	private static final int CHUNK_SIZE_X = 16;
+	private static final int CHUNK_SIZE_Z = 16;
+
+	protected int seaLevel = 63;
+	protected boolean seaIceLayer = false;
 
 	private List<MapGenBaseMeta> worldGenerators;
 
-	public ChunkProviderCustomNormal(World world, long seed, boolean flag) {
+	public ChunkProviderMultiBiomeSpace(World world, long seed, boolean flag) {
 		super(world, seed, flag, "");
 		this.depthBuffer = new double[256];
 		this.worldObj = world;
@@ -56,6 +69,7 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 		this.forestNoise = new NoiseGeneratorOctaves(this.rand, 8);
 		this.terrainCalcs = new double[825];
 		this.biomeWeights = new float[25];
+		this.craterGen = new Gradient(this.rand.nextLong(), 1, 0.25F);
 
 		for (int j = -2; j <= 2; j++) {
 			for (int k = -2; k <= 2; k++) {
@@ -82,6 +96,7 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 		}
 
 		this.onChunkProvide(chunkX, chunkZ, chunkprimer);
+		// this.createCraters(chunkX, chunkX, chunkprimer);
 
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
 		byte[] abyte = chunk.getBiomeArray();
@@ -90,6 +105,58 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 		}
 		chunk.generateSkylightMap();
 		return chunk;
+	}
+
+	public void createCraters(int chunkX, int chunkZ, ChunkPrimer primer) {
+		this.craterGen.setFrequency(0.015F);
+		for (int cx = chunkX - 2; cx <= chunkX + 2; cx++) {
+			for (int cz = chunkZ - 2; cz <= chunkZ + 2; cz++) {
+				for (int x = 0; x < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_X; x++) {
+					for (int z = 0; z < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_Z; z++) {
+						if (Math.abs(this.randFromPoint(cx * 16 + x, (cz * 16 + z) * 1000)) < this.craterGen.getNoise(cx * 16 + x, cz * 16 + z) / this.CRATER_PROB) {
+							final Random random = new Random(cx * 16 + x + (cz * 16 + z) * 5000);
+							final EnumCraterSize cSize = EnumCraterSize.sizeArray[random.nextInt(EnumCraterSize.sizeArray.length)];
+							final int size = random.nextInt(cSize.MAX_SIZE - cSize.MIN_SIZE) + cSize.MIN_SIZE + 15;
+							this.makeCrater(cx * 16 + x, cz * 16 + z, chunkX * 16, chunkZ * 16, size, primer);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public void makeCrater(int craterX, int craterZ, int chunkX, int chunkZ, int size, ChunkPrimer primer) {
+		for (int x = 0; x < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_X; x++) {
+			for (int z = 0; z < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_Z; z++) {
+				double xDev = craterX - (chunkX + x);
+				double zDev = craterZ - (chunkZ + z);
+				if (xDev * xDev + zDev * zDev < size * size) {
+					xDev /= size;
+					zDev /= size;
+					final double sqrtY = xDev * xDev + zDev * zDev;
+					double yDev = sqrtY * sqrtY * 6;
+					yDev = 5 - yDev;
+					int helper = 0;
+					for (int y = 127; y > 0; y--) {
+						if (Blocks.air != primer.getBlockState(x, y, z).getBlock() && helper <= yDev) {
+							primer.setBlockState(x, y, z, Blocks.air.getDefaultState());
+							helper++;
+						}
+
+						if (helper > yDev) {
+							break;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	private double randFromPoint(int x, int z) {
+		int n;
+		n = x + z * 57;
+		n = n << 13 ^ n;
+		return 1.0 - (n * (n * n * 15731 + 789221) + 1376312589 & 0x7fffffff) / 1073741824.0;
 	}
 
 	@Override
@@ -132,9 +199,11 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 
 							for (int l2 = 0; l2 < 4; ++l2) {
 								if ((lvt_45_1_ += d16) > 0.0D) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderCustomNormal.stoneBlock);
-								} else if (i2 * 8 + j2 < 63) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderCustomNormal.waterBlock);
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.stoneBlock);
+								} else if (i2 * 8 + j2 == (this.seaLevel - 1) && this.seaIceLayer) {
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, Blocks.ice.getDefaultState());
+								} else if (i2 * 8 + j2 < (this.seaLevel - 1)) {
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.waterBlock);
 								}
 							}
 
@@ -274,14 +343,13 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 		BlockFalling.fallInstantly = true;
 		int x = chunkX * 16;
 		int z = chunkZ * 16;
-		BlockPos pos = new BlockPos(x, 0, z);
-		BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(pos.add(16, 0, 16));
+		this.worldObj.getBiomeGenForCoords(new BlockPos(16, 0, 16));
 		this.rand.setSeed(this.worldObj.getSeed());
 		long var7 = this.rand.nextLong() / 2L * 2L + 1L;
 		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(chunkX * var7 + chunkZ * var9 ^ this.worldObj.getSeed());
-		biomegenbase.decorate(this.worldObj, this.rand, pos);
-		this.decoratePlanet(this.worldObj, this.rand, x, z);
+		decoratePlanet(this.worldObj, this.rand, x, z);
+		this.onPopulate(x, z);
 		BlockFalling.fallInstantly = false;
 	}
 
@@ -308,4 +376,8 @@ public abstract class ChunkProviderCustomNormal extends ChunkProviderGenerate {
 	protected abstract List<MapGenBaseMeta> getWorldGenerators();
 
 	protected abstract void onChunkProvide(int cX, int cZ, ChunkPrimer primer);
+
+	protected abstract int getCraterProbability();
+
+	public abstract void onPopulate(int cX, int cZ);
 }
