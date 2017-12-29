@@ -242,113 +242,113 @@ public class ClientProxy extends CommonProxy {
 
 	private void registerVariants() {
 		if (Config.MERCURY)
-			ClientUtilities.addVariants("mercury", "mercury_surface", "mercury_sub_surface", "mercury_stone", "mercury_ore_iron", "mercury_ore_tin", "mercury_ore_copper", "mercury_ore_mercury", "mercury_mercury_block", "mercury_stonebricks",
+			ClientUtilities.addVariants(Constants.modID, "mercury", "mercury_surface", "mercury_sub_surface", "mercury_stone", "mercury_ore_iron", "mercury_ore_tin", "mercury_ore_copper", "mercury_ore_mercury", "mercury_mercury_block", "mercury_stonebricks",
 					"mercury_dungeon_brick", "mercury_ore_carbon", "mercury_carbon_block");
 		if (Config.CERES)
-			ClientUtilities.addVariants("ceres", "ceres_surface", "ceres_sub_surface", "ceres_stone", "ceres_ore_iron", "ceres_ore_tin", "ceres_ore_copper", "ceres_ore_uranium", "ceres_uranium_block", "ceres_stonebricks");
+			ClientUtilities.addVariants(Constants.modID, "ceres", "ceres_surface", "ceres_sub_surface", "ceres_stone", "ceres_ore_iron", "ceres_ore_tin", "ceres_ore_copper", "ceres_ore_uranium", "ceres_uranium_block", "ceres_stonebricks");
 		if (Config.JUPITER)
-			ClientUtilities.addVariants("jupiter", "jupiter_surface", "jupiter_sub_surface", "jupiter_stone", "jupiter_ore_iron", "jupiter_ore_tin", "jupiter_ore_copper", "jupiter_ore_palladium", "jupiter_ore_nickel", "jupiter_palladium_block",
+			ClientUtilities.addVariants(Constants.modID, "jupiter", "jupiter_surface", "jupiter_sub_surface", "jupiter_stone", "jupiter_ore_iron", "jupiter_ore_tin", "jupiter_ore_copper", "jupiter_ore_palladium", "jupiter_ore_nickel", "jupiter_palladium_block",
 					"jupiter_stonebricks", "jupiter_dungeon_brick", "jupiter_ore_red_gem", "jupiter_red_gem_block");
 		if (Config.URANUS)
-			ClientUtilities.addVariants("uranus", "uranus_surface", "uranus_sub_surface", "uranus_stone", "uranus_ore_crystal", "uranus_crystal_block", "uranus_stonebricks", "uranus_dungeon_brick", "uranus_ore_white_gem", "uranus_white_gem_block");
+			ClientUtilities.addVariants(Constants.modID, "uranus", "uranus_surface", "uranus_sub_surface", "uranus_stone", "uranus_ore_crystal", "uranus_crystal_block", "uranus_stonebricks", "uranus_dungeon_brick", "uranus_ore_white_gem", "uranus_white_gem_block");
 		if (Config.NEPTUNE)
-			ClientUtilities.addVariants("neptune", "neptune_surface", "neptune_sub_surface", "neptune_stone", "neptune_ore_iron", "neptune_ore_tin", "neptune_ore_copper", "neptune_ore_zinc", "neptune_zinc_block", "neptune_stonebricks",
+			ClientUtilities.addVariants(Constants.modID, "neptune", "neptune_surface", "neptune_sub_surface", "neptune_stone", "neptune_ore_iron", "neptune_ore_tin", "neptune_ore_copper", "neptune_ore_zinc", "neptune_zinc_block", "neptune_stonebricks",
 					"neptune_dungeon_brick", "neptune_ore_blue_gem", "neptune_blue_gem_block");
 		if (Config.SATURN)
-			ClientUtilities.addVariants("saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper", "saturn_ore_magnesium", "saturn_magnesium_block", "saturn_stonebricks",
+			ClientUtilities.addVariants(Constants.modID, "saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper", "saturn_ore_magnesium", "saturn_magnesium_block", "saturn_stonebricks",
 					"saturn_dungeon_brick", "broken_infected_stone", "infected_stone", "saturn_ore_slime");
 		if (Config.PLUTO)
-			ClientUtilities.addVariants("pluto", "pluto_surface", "pluto_sub_surface", "pluto_stone", "pluto_ore_iron", "pluto_ore_tin", "pluto_ore_copper", "pluto_ore_tungsten", "pluto_tungsten_block", "pluto_stonebricks", "pluto_dungeon_brick");
+			ClientUtilities.addVariants(Constants.modID, "pluto", "pluto_surface", "pluto_sub_surface", "pluto_stone", "pluto_ore_iron", "pluto_ore_tin", "pluto_ore_copper", "pluto_ore_tungsten", "pluto_tungsten_block", "pluto_stonebricks", "pluto_dungeon_brick");
 		if (Config.ERIS)
-			ClientUtilities.addVariants("eris", "eris_surface", "eris_sub_surface", "eris_stone", "eris_ore_iron", "eris_ore_tin", "eris_ore_copper", "eris_ore_dark_iron", "eris_dark_iron_block", "eris_stonebricks", "eris_dungeon_brick");
+			ClientUtilities.addVariants(Constants.modID, "eris", "eris_surface", "eris_sub_surface", "eris_stone", "eris_ore_iron", "eris_ore_tin", "eris_ore_copper", "eris_ore_dark_iron", "eris_dark_iron_block", "eris_stonebricks", "eris_dungeon_brick");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS)
-			ClientUtilities.addVariants("kepler22b", "kepler22b_dirt", "kepler22b_stone", "kepler22b_ore_iron", "kepler22b_ore_tin", "kepler22b_ore_copper", "kepler22b_ore_dense_coal", "kepler22b_ore_blue_diamond", "kepler22b_ore_red_diamond",
+			ClientUtilities.addVariants(Constants.modID, "kepler22b", "kepler22b_dirt", "kepler22b_stone", "kepler22b_ore_iron", "kepler22b_ore_tin", "kepler22b_ore_copper", "kepler22b_ore_dense_coal", "kepler22b_ore_blue_diamond", "kepler22b_ore_red_diamond",
 					"kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone", "keler22b_ore_platinum");
 		if (Config.CALLISTO)
-			ClientUtilities.addVariants("callisto", "callisto_surface", "callisto_sub_surface", "callisto_stone", "callisto_ore_iron", "callisto_ore_tin", "callisto_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "callisto", "callisto_surface", "callisto_sub_surface", "callisto_stone", "callisto_ore_iron", "callisto_ore_tin", "callisto_ore_copper");
 		if (Config.DEIMOS)
-			ClientUtilities.addVariants("deimos", "deimos_surface", "deimos_sub_surface", "deimos_stone", "deimos_ore_iron", "deimos_ore_tin", "deimos_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "deimos", "deimos_surface", "deimos_sub_surface", "deimos_stone", "deimos_ore_iron", "deimos_ore_tin", "deimos_ore_copper");
 		if (Config.EUROPA)
-			ClientUtilities.addVariants("europa", "europa_surface", "europa_sub_surface", "europa_stone", "europa_ore_iron", "europa_ore_tin", "europa_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "europa", "europa_surface", "europa_sub_surface", "europa_stone", "europa_ore_iron", "europa_ore_tin", "europa_ore_copper");
 		if (Config.GANYMEDE)
-			ClientUtilities.addVariants("ganymede", "ganymede_surface", "ganymede_sub_surface", "ganymede_stone", "ganymede_ore_iron", "ganymede_ore_tin", "ganymede_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "ganymede", "ganymede_surface", "ganymede_sub_surface", "ganymede_stone", "ganymede_ore_iron", "ganymede_ore_tin", "ganymede_ore_copper");
 		if (Config.IO)
-			ClientUtilities.addVariants("io", "io_surface", "io_sub_surface", "io_stone", "io_ore_iron", "io_ore_tin", "io_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "io", "io_surface", "io_sub_surface", "io_stone", "io_ore_iron", "io_ore_tin", "io_ore_copper");
 		if (Config.PHOBOS)
-			ClientUtilities.addVariants("phobos", "phobos_surface", "phobos_sub_surface", "phobos_stone", "phobos_ore_iron", "phobos_ore_tin", "phobos_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "phobos", "phobos_surface", "phobos_sub_surface", "phobos_stone", "phobos_ore_iron", "phobos_ore_tin", "phobos_ore_copper");
 		if (Config.RHEA)
-			ClientUtilities.addVariants("rhea", "rhea_surface", "rhea_sub_surface", "rhea_stone", "rhea_ore_iron", "rhea_ore_tin", "rhea_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "rhea", "rhea_surface", "rhea_sub_surface", "rhea_stone", "rhea_ore_iron", "rhea_ore_tin", "rhea_ore_copper");
 		if (Config.TITAN)
-			ClientUtilities.addVariants("titan", "titan_surface", "titan_sub_surface", "titan_stone", "titan_ore_iron", "titan_ore_tin", "titan_ore_copper", "titan_methane_surface", "titan_methane_sub_surface", "titan_rocks");
+			ClientUtilities.addVariants(Constants.modID, "titan", "titan_surface", "titan_sub_surface", "titan_stone", "titan_ore_iron", "titan_ore_tin", "titan_ore_copper", "titan_methane_surface", "titan_methane_sub_surface", "titan_rocks");
 		if (Config.TRITON)
-			ClientUtilities.addVariants("triton", "triton_surface", "triton_sub_surface", "triton_stone", "triton_ore_iron", "triton_ore_tin", "triton_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "triton", "triton_surface", "triton_sub_surface", "triton_stone", "triton_ore_iron", "triton_ore_tin", "triton_ore_copper");
 		if (Config.OBERON)
-			ClientUtilities.addVariants("oberon", "oberon_surface", "oberon_sub_surface", "oberon_stone", "oberon_ore_iron", "oberon_ore_tin", "oberon_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "oberon", "oberon_surface", "oberon_sub_surface", "oberon_stone", "oberon_ore_iron", "oberon_ore_tin", "oberon_ore_copper");
 		if (Config.TITANIA)
-			ClientUtilities.addVariants("titania", "titania_surface", "titania_sub_surface", "titania_stone", "titania_ore_iron", "titania_ore_tin", "titania_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "titania", "titania_surface", "titania_sub_surface", "titania_stone", "titania_ore_iron", "titania_ore_tin", "titania_ore_copper");
 		if (Config.IAPETUS)
-			ClientUtilities.addVariants("iapetus", "iapetus_surface", "iapetus_sub_surface", "iapetus_stone", "iapetus_ore_iron", "iapetus_ore_tin", "iapetus_ore_copper", "iapetus_ice");
+			ClientUtilities.addVariants(Constants.modID, "iapetus", "iapetus_surface", "iapetus_sub_surface", "iapetus_stone", "iapetus_ore_iron", "iapetus_ore_tin", "iapetus_ore_copper", "iapetus_ice");
 		if (Config.MERCURY)
-			ClientUtilities.addVariants("tier4_items", "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "diamond_shard");
+			ClientUtilities.addVariants(Constants.modID, "tier4_items", "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "diamond_shard");
 		if (Config.JUPITER)
-			ClientUtilities.addVariants("tier5_items", "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash", "ash_shard",
+			ClientUtilities.addVariants(Constants.modID, "tier5_items", "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash", "ash_shard",
 					"volcanic_shard", "ingot_volcanic");
 		if (Config.SATURN)
-			ClientUtilities.addVariants("tier6_items", "tier6engine", "tier6booster", "tier6fin", "tier6heavy_duty_plate", "compressed_magnesium", "ingot_magnesium");
+			ClientUtilities.addVariants(Constants.modID, "tier6_items", "tier6engine", "tier6booster", "tier6fin", "tier6heavy_duty_plate", "compressed_magnesium", "ingot_magnesium");
 		if (Config.URANUS)
-			ClientUtilities.addVariants("tier7_items", "tier7engine", "tier7booster", "tier7fin", "tier7heavy_duty_plate", "compressed_crystal", "ingot_crystal", "compressed_reinforced_crystal", "white_gem");
+			ClientUtilities.addVariants(Constants.modID, "tier7_items", "tier7engine", "tier7booster", "tier7fin", "tier7heavy_duty_plate", "compressed_crystal", "ingot_crystal", "compressed_reinforced_crystal", "white_gem");
 		if (Config.NEPTUNE)
-			ClientUtilities.addVariants("tier8_items", "tier8engine", "tier8booster", "tier8fin", "tier8heavy_duty_plate", "compressed_zinc", "ingot_zinc", "blue_gem");
+			ClientUtilities.addVariants(Constants.modID, "tier8_items", "tier8engine", "tier8booster", "tier8fin", "tier8heavy_duty_plate", "compressed_zinc", "ingot_zinc", "blue_gem");
 		if (Config.PLUTO)
-			ClientUtilities.addVariants("tier9_items", "tier9engine", "tier9booster", "tier9fin", "tier9heavy_duty_plate", "compressed_tungsten", "ingot_tungsten");
+			ClientUtilities.addVariants(Constants.modID, "tier9_items", "tier9engine", "tier9booster", "tier9fin", "tier9heavy_duty_plate", "compressed_tungsten", "ingot_tungsten");
 		if (Config.ERIS)
-			ClientUtilities.addVariants("tier10_items", "tier10engine", "tier10booster", "tier10fin", "tier10heavy_duty_plate", "compressed_dark_iron", "ingot_dark_iron");
+			ClientUtilities.addVariants(Constants.modID, "tier10_items", "tier10engine", "tier10booster", "tier10fin", "tier10heavy_duty_plate", "compressed_dark_iron", "ingot_dark_iron");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			ClientUtilities.addVariants("tier11_items", "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks",
+			ClientUtilities.addVariants(Constants.modID, "tier11_items", "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks",
 					"green_sticks", "brown_sticks");
-			ClientUtilities.addVariants("kepler22b_planks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
-			ClientUtilities.addVariants("kepler22b_maple_logs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
-			ClientUtilities.addVariants("kepler22b_maple_logs2", "maple_green_log", "maple_brown_log");
-			ClientUtilities.addVariants("kepler22b_new_maple_leaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf");
-			ClientUtilities.addVariants("kepler22b_new_maple_leaves_2", "maple_green_leaf", "maple_brown_leaf");
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_planks", "maple_blue_plank", "maple_red_plank", "maple_purple_plank", "maple_yellow_plank", "maple_green_plank", "maple_brown_plank");
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_maple_logs", "maple_blue_log", "maple_red_log", "maple_purple_log", "maple_yellow_log");
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_maple_logs2", "maple_green_log", "maple_brown_log");
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_new_maple_leaves", "maple_blue_leaf", "maple_red_leaf", "maple_purple_leaf", "maple_yellow_leaf");
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_new_maple_leaves_2", "maple_green_leaf", "maple_brown_leaf");
 
-			ClientUtilities.addVariants("kepler22b_maple_saplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
-			ClientUtilities.addVariants("kepler22b_flowers", "maple_blue_short", "maple_blue_med", "maple_blue_tall", "maple_red_short", "maple_red_med", "maple_red_tall", "maple_purple_short", "maple_purple_med", "maple_purple_tall",
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_maple_saplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_flowers", "maple_blue_short", "maple_blue_med", "maple_blue_tall", "maple_red_short", "maple_red_med", "maple_red_tall", "maple_purple_short", "maple_purple_med", "maple_purple_tall",
 					"maple_yellow_short", "maple_yellow_med", "maple_yellow_tall", "maple_green_short", "maple_green_med", "maple_green_tall");
 		}
-		ClientUtilities.addVariants("wafer", "diamond_wafer", "carbon_wafer", "titanium_wafer", "red_gem_wafer", "blue_gem_wafer", "white_gem_wafer");
-		ClientUtilities.addVariants("tools", "sledge_hammer", "grinding_wheel", "mesh", "filter");
+		ClientUtilities.addVariants(Constants.modID, "wafer", "diamond_wafer", "carbon_wafer", "titanium_wafer", "red_gem_wafer", "blue_gem_wafer", "white_gem_wafer");
+		ClientUtilities.addVariants(Constants.modID, "tools", "sledge_hammer", "grinding_wheel", "mesh", "filter");
 		if (Config.CANNED_FOOD)
-			ClientUtilities.addVariants("canned_food", "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef");
+			ClientUtilities.addVariants(Constants.modID, "canned_food", "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef");
 		if (Config.THERMAL_PADDINGS) {
-			ClientUtilities.addVariants("thermal_cloth", "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth");
-			ClientUtilities.addVariants("tier3_thermal_padding", "tier3_thermal_helm", "tier3_thermal_chestplate", "tier3_thermal_leggings", "tier3_thermal_boots");
-			ClientUtilities.addVariants("tier4_thermal_padding", "tier4_thermal_helm", "tier4_thermal_chestplate", "tier4_thermal_leggings", "tier4_thermal_boots");
-			ClientUtilities.addVariants("tier5_thermal_padding", "tier5_thermal_helm", "tier5_thermal_chestplate", "tier5_thermal_leggings", "tier5_thermal_boots");
+			ClientUtilities.addVariants(Constants.modID, "thermal_cloth", "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth");
+			ClientUtilities.addVariants(Constants.modID, "tier3_thermal_padding", "tier3_thermal_helm", "tier3_thermal_chestplate", "tier3_thermal_leggings", "tier3_thermal_boots");
+			ClientUtilities.addVariants(Constants.modID, "tier4_thermal_padding", "tier4_thermal_helm", "tier4_thermal_chestplate", "tier4_thermal_leggings", "tier4_thermal_boots");
+			ClientUtilities.addVariants(Constants.modID, "tier5_thermal_padding", "tier5_thermal_helm", "tier5_thermal_chestplate", "tier5_thermal_leggings", "tier5_thermal_boots");
 		}
 		if (Config.SOLAR_PANELS)
-			ClientUtilities.addVariants("solar", "ultimate_solar", "hybrid_solar");
-		ClientUtilities.addVariants("advanced_launch_pad", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
-		ClientUtilities.addVariants("advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
+			ClientUtilities.addVariants(Constants.modID, "solar", "ultimate_solar", "hybrid_solar");
+		ClientUtilities.addVariants(Constants.modID, "advanced_launch_pad", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
+		ClientUtilities.addVariants(Constants.modID, "advanced_launch_pad_full", "tier_2_rocket", "tier_3_rocket", "powered_charging_pad", "rocket_powered_charging_pad");
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
-			ClientUtilities.addVariants("advanced_oxygen_compressor", "advanced_oxygen_compressor", "advanced_oxygen_decompressor");
+			ClientUtilities.addVariants(Constants.modID, "advanced_oxygen_compressor", "advanced_oxygen_compressor", "advanced_oxygen_decompressor");
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
-			ClientUtilities.addVariants("ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
-		ClientUtilities.addVariants("decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh", "frozen_nitrogen_bricks",
+			ClientUtilities.addVariants(Constants.modID, "ultimate_oxygen_compressor", "ultimate_oxygen_compressor", "ultimate_oxygen_decompressor");
+		ClientUtilities.addVariants(Constants.modID, "decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh", "frozen_nitrogen_bricks",
 				"volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
-		ClientUtilities.addVariants("decorative_blocks2", "white_block", "red_block", "blue_block", "light_blue_block", "yellow_block", "green_block");
+		ClientUtilities.addVariants(Constants.modID, "decorative_blocks2", "white_block", "red_block", "blue_block", "light_blue_block", "yellow_block", "green_block");
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
-			ClientUtilities.addVariants("electric_parts", "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2");
-		ClientUtilities.addVariants("tier1_kit", "tier1_kitfull", "tier1_kitbasic_setup", "tier1_kitwithout_oxygen_setup", "tier1_kitwithout_thermal_padding", "tier1_kitjust_oxygen_setup", "tier1_kitjust_protection");
-		ClientUtilities.addVariants("tier2_kit", "tier2_kitfull", "tier2_kitbasic_setup", "tier2_kitwithout_oxygen_setup", "tier2_kitwithout_thermal_padding", "tier2_kitjust_oxygen_setup", "tier2_kitjust_protection");
-		ClientUtilities.addVariants("tier3_kit", "tier3_kitfull", "tier3_kitbasic_setup", "tier3_kitwithout_oxygen_setup", "tier3_kitwithout_thermal_padding", "tier3_kitjust_oxygen_setup", "tier3_kitjust_protection");
-		ClientUtilities.addVariants("tier4_kit", "tier4_kitfull", "tier4_kitbasic_setup", "tier4_kitwithout_oxygen_setup", "tier4_kitwithout_thermal_padding", "tier4_kitjust_oxygen_setup", "tier4_kitjust_protection");
-		ClientUtilities.addVariants("tier5_kit", "tier5_kitfull", "tier5_kitbasic_setup", "tier5_kitwithout_oxygen_setup", "tier5_kitwithout_thermal_padding", "tier5_kitjust_oxygen_setup", "tier5_kitjust_protection");
+			ClientUtilities.addVariants(Constants.modID, "electric_parts", "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2");
+		ClientUtilities.addVariants(Constants.modID, "tier1_kit", "tier1_kitfull", "tier1_kitbasic_setup", "tier1_kitwithout_oxygen_setup", "tier1_kitwithout_thermal_padding", "tier1_kitjust_oxygen_setup", "tier1_kitjust_protection");
+		ClientUtilities.addVariants(Constants.modID, "tier2_kit", "tier2_kitfull", "tier2_kitbasic_setup", "tier2_kitwithout_oxygen_setup", "tier2_kitwithout_thermal_padding", "tier2_kitjust_oxygen_setup", "tier2_kitjust_protection");
+		ClientUtilities.addVariants(Constants.modID, "tier3_kit", "tier3_kitfull", "tier3_kitbasic_setup", "tier3_kitwithout_oxygen_setup", "tier3_kitwithout_thermal_padding", "tier3_kitjust_oxygen_setup", "tier3_kitjust_protection");
+		ClientUtilities.addVariants(Constants.modID, "tier4_kit", "tier4_kitfull", "tier4_kitbasic_setup", "tier4_kitwithout_oxygen_setup", "tier4_kitwithout_thermal_padding", "tier4_kitjust_oxygen_setup", "tier4_kitjust_protection");
+		ClientUtilities.addVariants(Constants.modID, "tier5_kit", "tier5_kitfull", "tier5_kitbasic_setup", "tier5_kitwithout_oxygen_setup", "tier5_kitwithout_thermal_padding", "tier5_kitjust_oxygen_setup", "tier5_kitjust_protection");
 		ClientUtilities
 				.addVariants("candy_blocks", "candy_cane_red", "candy_cane_green", "candy_cane_blue", "candy_cane_orange", "candy_cane_magenta", "candy_cane_pink", "candy_cane_lime", "candy_cane_purple", "candy_cane_brown", "candy_cane_black");
-		ClientUtilities.addVariants("candy_blocks_horizontal", "candy_cane_red_horizontal", "candy_cane_green_horizontal", "candy_cane_blue_horizontal", "candy_cane_orange_horizontal", "candy_cane_magenta_horizontal", "candy_cane_pink_horizontal",
+		ClientUtilities.addVariants(Constants.modID, "candy_blocks_horizontal", "candy_cane_red_horizontal", "candy_cane_green_horizontal", "candy_cane_blue_horizontal", "candy_cane_orange_horizontal", "candy_cane_magenta_horizontal", "candy_cane_pink_horizontal",
 				"candy_cane_lime_horizontal", "candy_cane_purple_horizontal", "candy_cane_brown_horizontal", "candy_cane_black_horizontal");
-		ClientUtilities.addVariants("cake_blocks", "cake_block", "cake_block_red_velvet", "cake_block_chocolate", "white_icing_red_dots", "white_icing_green_dots", "white_icing_pink_dots", "white_icing_orange_dots", "cookie_rocks");
+		ClientUtilities.addVariants(Constants.modID, "cake_blocks", "cake_block", "cake_block_red_velvet", "cake_block_chocolate", "white_icing_red_dots", "white_icing_green_dots", "white_icing_pink_dots", "white_icing_orange_dots", "cookie_rocks");
 	}
 
 	private void registerEntityRenders() {
