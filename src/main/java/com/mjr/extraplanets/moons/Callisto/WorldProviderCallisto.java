@@ -21,9 +21,9 @@ import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.worldgen.BiomeProviderCallisto;
 import com.mjr.extraplanets.moons.Callisto.worldgen.ChunkProviderCallisto;
-import com.mjr.extraplanets.world.CustomWorldProviderSpace;
+import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
-public class WorldProviderCallisto extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
+public class WorldProviderCallisto extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
@@ -169,7 +169,6 @@ public class WorldProviderCallisto extends CustomWorldProviderSpace implements I
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

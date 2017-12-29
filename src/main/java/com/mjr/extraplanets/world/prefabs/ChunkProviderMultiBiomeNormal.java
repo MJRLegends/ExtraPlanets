@@ -4,15 +4,13 @@ import java.util.List;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
-import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
-import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
@@ -20,8 +18,8 @@ import net.minecraft.world.gen.ChunkProviderOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
-	protected Random rand;
+public abstract class ChunkProviderMultiBiomeNormal extends ChunkProviderOverworld {
+	private Random rand;
 	protected World worldObj;
 	private double[] depthBuffer;
 	private Biome[] biomesForGeneration;
@@ -39,21 +37,12 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	double[] maxLimitRegion;
 	double[] depthRegion;
 
-	private final Gradient craterGen;
-	private final int CRATER_PROB = this.getCraterProbability();
-
-	protected IBlockState stoneBlock;
-	protected IBlockState waterBlock;
-
-	private static final int CHUNK_SIZE_X = 16;
-	private static final int CHUNK_SIZE_Z = 16;
-
-	protected int seaLevel = 63;
-	protected boolean seaIceLayer = false;
+	protected static IBlockState stoneBlock;
+	protected static IBlockState waterBlock;
 
 	private List<MapGenBaseMeta> worldGenerators;
 
-	public ChunkProviderCustomSpace(World world, long seed, boolean flag) {
+	public ChunkProviderMultiBiomeNormal(World world, long seed, boolean flag) {
 		super(world, seed, flag, "");
 		this.depthBuffer = new double[256];
 		this.worldObj = world;
@@ -67,7 +56,6 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 		this.forestNoise = new NoiseGeneratorOctaves(this.rand, 8);
 		this.terrainCalcs = new double[825];
 		this.biomeWeights = new float[25];
-		this.craterGen = new Gradient(this.rand.nextLong(), 1, 0.25F);
 
 		for (int j = -2; j <= 2; j++) {
 			for (int k = -2; k <= 2; k++) {
@@ -94,7 +82,6 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 		}
 
 		this.onChunkProvide(chunkX, chunkZ, chunkprimer);
-		// this.createCraters(chunkX, chunkX, chunkprimer);
 
 		Chunk chunk = new Chunk(this.worldObj, chunkprimer, chunkX, chunkZ);
 		byte[] abyte = chunk.getBiomeArray();
@@ -103,58 +90,6 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 		}
 		chunk.generateSkylightMap();
 		return chunk;
-	}
-
-	public void createCraters(int chunkX, int chunkZ, ChunkPrimer primer) {
-		this.craterGen.setFrequency(0.015F);
-		for (int cx = chunkX - 2; cx <= chunkX + 2; cx++) {
-			for (int cz = chunkZ - 2; cz <= chunkZ + 2; cz++) {
-				for (int x = 0; x < ChunkProviderCustomSpace.CHUNK_SIZE_X; x++) {
-					for (int z = 0; z < ChunkProviderCustomSpace.CHUNK_SIZE_Z; z++) {
-						if (Math.abs(this.randFromPoint(cx * 16 + x, (cz * 16 + z) * 1000)) < this.craterGen.getNoise(cx * 16 + x, cz * 16 + z) / this.CRATER_PROB) {
-							final Random random = new Random(cx * 16 + x + (cz * 16 + z) * 5000);
-							final EnumCraterSize cSize = EnumCraterSize.sizeArray[random.nextInt(EnumCraterSize.sizeArray.length)];
-							final int size = random.nextInt(cSize.MAX_SIZE - cSize.MIN_SIZE) + cSize.MIN_SIZE + 15;
-							this.makeCrater(cx * 16 + x, cz * 16 + z, chunkX * 16, chunkZ * 16, size, primer);
-						}
-					}
-				}
-			}
-		}
-	}
-
-	public void makeCrater(int craterX, int craterZ, int chunkX, int chunkZ, int size, ChunkPrimer primer) {
-		for (int x = 0; x < ChunkProviderCustomSpace.CHUNK_SIZE_X; x++) {
-			for (int z = 0; z < ChunkProviderCustomSpace.CHUNK_SIZE_Z; z++) {
-				double xDev = craterX - (chunkX + x);
-				double zDev = craterZ - (chunkZ + z);
-				if (xDev * xDev + zDev * zDev < size * size) {
-					xDev /= size;
-					zDev /= size;
-					final double sqrtY = xDev * xDev + zDev * zDev;
-					double yDev = sqrtY * sqrtY * 6;
-					yDev = 5 - yDev;
-					int helper = 0;
-					for (int y = 127; y > 0; y--) {
-						if (Blocks.AIR != primer.getBlockState(x, y, z).getBlock() && helper <= yDev) {
-							primer.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
-							helper++;
-						}
-
-						if (helper > yDev) {
-							break;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	private double randFromPoint(int x, int z) {
-		int n;
-		n = x + z * 57;
-		n = n << 13 ^ n;
-		return 1.0 - (n * (n * n * 15731 + 789221) + 1376312589 & 0x7fffffff) / 1073741824.0;
 	}
 
 	@Override
@@ -197,11 +132,9 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 
 							for (int l2 = 0; l2 < 4; ++l2) {
 								if ((lvt_45_1_ += d16) > 0.0D) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.stoneBlock);
-								} else if (i2 * 8 + j2 == (this.seaLevel - 1) && this.seaIceLayer) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, Blocks.ICE.getDefaultState());
-								} else if (i2 * 8 + j2 < (this.seaLevel - 1)) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, this.waterBlock);
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderMultiBiomeNormal.stoneBlock);
+								} else if (i2 * 8 + j2 < 63) {
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderMultiBiomeNormal.waterBlock);
 								}
 							}
 
@@ -336,22 +269,23 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	}
 
 	@Override
-	public void populate(int x, int z) {
+	public void populate(int chunkX, int chunkZ) {
 		BlockFalling.fallInstantly = true;
-		int var4 = x * 16;
-		int var5 = z * 16;
-		this.worldObj.getBiome(new BlockPos(var4 + 16, 0, var5 + 16));
+		int x = chunkX * 16;
+		int z = chunkZ * 16;
+		BlockPos pos = new BlockPos(x, 0, z);
+		Biome biome = this.worldObj.getBiome(pos.add(16, 0, 16));
 		this.rand.setSeed(this.worldObj.getSeed());
-		final long var7 = this.rand.nextLong() / 2L * 2L + 1L;
-		final long var9 = this.rand.nextLong() / 2L * 2L + 1L;
-		this.rand.setSeed(x * var7 + z * var9 ^ this.worldObj.getSeed());
-		this.decoratePlanet(this.worldObj, this.rand, var4, var5);
-		this.onPopulate(x, z);
-
+		long var7 = this.rand.nextLong() / 2L * 2L + 1L;
+		long var9 = this.rand.nextLong() / 2L * 2L + 1L;
+		this.rand.setSeed(chunkX * var7 + chunkZ * var9 ^ this.worldObj.getSeed());
+		biome.decorate(this.worldObj, this.rand, pos);
+		decoratePlanet(this.worldObj, this.rand, x, z);
+		WorldEntitySpawner.performWorldGenSpawning(this.worldObj, biome, x + 8, z + 8, 16, 16, this.rand);
 		BlockFalling.fallInstantly = false;
 	}
-    
-    @Override
+
+	@Override
 	public boolean generateStructures(Chunk chunkIn, int x, int z) {
 		return false;
 	}
@@ -360,14 +294,13 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position) {
 		return null;
 	}
-	
-    @Override
-    public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos)
-    {
-        Biome biomegenbase = this.worldObj.getBiome(pos);
-        return biomegenbase.getSpawnableList(creatureType);
-    }
-	
+
+	@Override
+	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
+		Biome biomegenbase = this.worldObj.getBiome(pos);
+		return biomegenbase.getSpawnableList(creatureType);
+	}
+
 	@Override
 	public abstract void recreateStructures(Chunk chunk, int x, int z);
 
@@ -376,8 +309,4 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderOverworld {
 	protected abstract List<MapGenBaseMeta> getWorldGenerators();
 
 	protected abstract void onChunkProvide(int cX, int cZ, ChunkPrimer primer);
-
-	protected abstract int getCraterProbability();
-
-	public abstract void onPopulate(int cX, int cZ);
 }

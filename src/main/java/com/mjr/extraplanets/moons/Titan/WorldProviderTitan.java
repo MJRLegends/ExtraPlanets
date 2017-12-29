@@ -21,9 +21,9 @@ import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Titan.worldgen.BiomeProviderTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
-import com.mjr.extraplanets.world.CustomWorldProviderSpace;
+import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
-public class WorldProviderTitan extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
+public class WorldProviderTitan extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
