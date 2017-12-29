@@ -53,7 +53,7 @@ import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.util.DamageSourceEP;
-import com.mjr.extraplanets.world.CustomWorldProviderSpace;
+import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
 public class MainHandlerServer {
 
@@ -196,7 +196,7 @@ public class MainHandlerServer {
 			return;
 		if ((entityLiving.getRidingEntity() instanceof EntitySpaceshipBase))
 			return;
-		if ((entityLiving.world.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).world.provider instanceof CustomWorldProviderSpace)) {
+		if ((entityLiving.world.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).world.provider instanceof WorldProviderRealisticSpace)) {
 			if (Config.PRESSURE)
 				checkPressure(event, entityLiving);
 			if (Config.RADIATION)
@@ -225,7 +225,7 @@ public class MainHandlerServer {
 			doDamage = true;
 
 		if (doDamage) {
-			float tempLevel = ((CustomWorldProviderSpace) playerMP.world.provider).getPressureLevel();
+			float tempLevel = ((WorldProviderRealisticSpace) playerMP.world.provider).getPressureLevel();
 			tempLevel = (tempLevel / 100) * 8;
 			playerMP.attackEntityFrom(DamageSourceEP.pressure, tempLevel);
 		}
@@ -233,7 +233,7 @@ public class MainHandlerServer {
 
 	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
-		CustomWorldProviderSpace provider = (CustomWorldProviderSpace) playerMP.world.provider;
+		WorldProviderRealisticSpace provider = (WorldProviderRealisticSpace) playerMP.world.provider;
 		// Tier 1 Space Suit
 		// 25 Level = 36 mins
 		// 50 Level = 14 mins
@@ -325,10 +325,10 @@ public class MainHandlerServer {
 	@SubscribeEvent
 	public void onWorldChange(PlayerChangedDimensionEvent event) {
 		if (event.player.world.isRemote == false) {
-			if (event.player.world.provider instanceof CustomWorldProviderSpace) {
+			if (event.player.world.provider instanceof WorldProviderRealisticSpace) {
 				EntityPlayer player = event.player;
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", You're now subject to "
-						+ ((CustomWorldProviderSpace) event.player.world.provider).getSolarRadiationLevel() + "% Radiation!"));
+						+ ((WorldProviderRealisticSpace) event.player.world.provider).getSolarRadiationLevel() + "% Radiation!"));
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", You can use Anti-Rad Drinks or Sleeping to help reverse the damage!"));
 			}
 		}

@@ -18,8 +18,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 public class WorldGenKepler22bDungeons extends WorldGenerator {
 	private static final Logger LOGGER = LogManager.getLogger();
@@ -58,7 +59,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 
 		if (j2 >= 1 && j2 <= 5) {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Generating Kepler22b Dungeon at:" + position.getX() + " " + position.getY() + " " + position.getZ());
+				MessageUtilities.debugMessageToLog(Constants.modID, "Generating Kepler22b Dungeon at:" + position.getX() + " " + position.getY() + " " + position.getZ());
 			for (int k3 = k; k3 <= l; ++k3) {
 				for (int i4 = 3; i4 >= -1; --i4) {
 					for (int k4 = l1; k4 <= i2; ++k4) {

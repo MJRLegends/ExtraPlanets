@@ -11,7 +11,7 @@ public class Constants {
 
 	public static final String MCVERSION = "[1.11.2]";
 	public static final String DEPENDENCIES_FORGE = "required-after:forge@[13.20.1.2513,); "; // Keep the space at the end!
-	public static final String DEPENDENCIES_MODS = "required-after:galacticraftcore; required-after:galacticraftplanets; "; // Keep the space at the end!
+	public static final String DEPENDENCIES_MODS = "required-after:galacticraftcore; required-after:galacticraftplanets; required-after:mjrlegendslib; "; // Keep the space at the end!
 
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";

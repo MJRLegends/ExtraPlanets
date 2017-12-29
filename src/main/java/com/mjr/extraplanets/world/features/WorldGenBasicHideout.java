@@ -11,20 +11,21 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.storage.loot.LootTableList;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.util.MessageUtilities;
-import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenBasicHideout extends WorldGenerator {
 	
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		if (WorldGenHelper.checkValidSpawn(world, position, 10) == false)
+		if (WorldGenUtilities.checkValidSpawn(world, position, 10) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Spawning Basic Hideout at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog(Constants.modID, "Spawning Basic Hideout at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position);
 			fillChests(world, rand, position);
 		}
@@ -688,7 +689,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		int random = rand.nextInt(15) + 1;
 		if (random < 5) {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Loot Spawned!");
+				MessageUtilities.debugMessageToLog(Constants.modID, "Loot Spawned!");
 			int lastNumber = 0;
 			for (int i = 0; i < rand.nextInt(4); i++) {
 				int randomChests;
@@ -697,7 +698,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 				} while (lastNumber == randomChests);
 				lastNumber = randomChests;
 				if (Config.DEBUG_MODE)
-					MessageUtilities.debugMessageToLog("Chest " + randomChests);
+					MessageUtilities.debugMessageToLog(Constants.modID, "Chest " + randomChests);
 				TileEntityChest chest;
 				switch (randomChests) {
 				case 1:
@@ -791,7 +792,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 			}
 		} else {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("No loot spawned!");
+				MessageUtilities.debugMessageToLog(Constants.modID, "No loot spawned!");
 		}
 		return false;
 	}

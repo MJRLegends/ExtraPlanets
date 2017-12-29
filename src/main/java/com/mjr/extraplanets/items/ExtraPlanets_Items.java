@@ -57,7 +57,7 @@ import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
 import com.mjr.extraplanets.items.vehicles.ItemMarsRover;
 import com.mjr.extraplanets.items.vehicles.ItemVenusRover;
-import com.mjr.extraplanets.util.RegisterHelper;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Items {
 	public static Item TIER_4_ROCKET;
@@ -463,210 +463,210 @@ public class ExtraPlanets_Items {
 	private static void registerItems() {
 		if (Config.MERCURY) {
 			if (Config.BATTERIES)
-				RegisterHelper.registerItem(BATTERY_MERCURY, BATTERY_MERCURY.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(COMPRESSED_MERCURY, COMPRESSED_MERCURY.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(INGOT_MERCURY, INGOT_MERCURY.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BATTERY_MERCURY, BATTERY_MERCURY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(COMPRESSED_MERCURY, COMPRESSED_MERCURY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(INGOT_MERCURY, INGOT_MERCURY.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(TIER_4_ROCKET, TIER_4_ROCKET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_SCHEMATIC, TIER_4_SCHEMATIC.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_NOSE_CONE, TIER_4_NOSE_CONE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_ITEMS, TIER_4_ITEMS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_KEY, TIER_4_KEY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_ROCKET, TIER_4_ROCKET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_SCHEMATIC, TIER_4_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_NOSE_CONE, TIER_4_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_ITEMS, TIER_4_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_KEY, TIER_4_KEY.getUnlocalizedName().substring(5));
 		}
 		if (Config.CERES) {
-			RegisterHelper.registerItem(INGOT_URANIUM, INGOT_URANIUM.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(INGOT_URANIUM, INGOT_URANIUM.getUnlocalizedName().substring(5));
 		}
 		if (Config.JUPITER) {
-			RegisterHelper.registerItem(TIER_5_ROCKET, TIER_5_ROCKET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_5_SCHEMATIC, TIER_5_SCHEMATIC.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_5_NOSE_CONE, TIER_5_NOSE_CONE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_5_ITEMS, TIER_5_ITEMS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_5_KEY, TIER_5_KEY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_5_ROCKET, TIER_5_ROCKET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_5_SCHEMATIC, TIER_5_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_5_NOSE_CONE, TIER_5_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_5_ITEMS, TIER_5_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_5_KEY, TIER_5_KEY.getUnlocalizedName().substring(5));
 
 			if (Config.BATTERIES)
-				RegisterHelper.registerItem(BATTERY_NICKEL, BATTERY_NICKEL.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BATTERY_NICKEL, BATTERY_NICKEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
-			RegisterHelper.registerItem(TIER_6_ROCKET, TIER_6_ROCKET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_6_SCHEMATIC, TIER_6_SCHEMATIC.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_6_NOSE_CONE, TIER_6_NOSE_CONE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_6_ITEMS, TIER_6_ITEMS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_6_KEY, TIER_6_KEY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_6_ROCKET, TIER_6_ROCKET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_6_SCHEMATIC, TIER_6_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_6_NOSE_CONE, TIER_6_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_6_ITEMS, TIER_6_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_6_KEY, TIER_6_KEY.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
-			RegisterHelper.registerItem(TIER_7_ROCKET, TIER_7_ROCKET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_7_SCHEMATIC, TIER_7_SCHEMATIC.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_7_NOSE_CONE, TIER_7_NOSE_CONE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_7_ITEMS, TIER_7_ITEMS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_7_KEY, TIER_7_KEY.getUnlocalizedName().substring(5));
-			// RegisterHelper.registerItem(BUCKET_FROZEN_WATER, "bucket_frozen_water");
+			RegisterUtilities.registerItem(TIER_7_ROCKET, TIER_7_ROCKET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_7_SCHEMATIC, TIER_7_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_7_NOSE_CONE, TIER_7_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_7_ITEMS, TIER_7_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_7_KEY, TIER_7_KEY.getUnlocalizedName().substring(5));
+			// RegisterUtilities.registerItem(BUCKET_FROZEN_WATER, "bucket_frozen_water");
 		}
 		if (Config.NEPTUNE) {
-			RegisterHelper.registerItem(TIER_8_ROCKET, TIER_8_ROCKET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_8_SCHEMATIC, TIER_8_SCHEMATIC.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_8_NOSE_CONE, TIER_8_NOSE_CONE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_8_ITEMS, TIER_8_ITEMS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_8_KEY, TIER_8_KEY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_8_ROCKET, TIER_8_ROCKET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_8_SCHEMATIC, TIER_8_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_8_NOSE_CONE, TIER_8_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_8_ITEMS, TIER_8_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_8_KEY, TIER_8_KEY.getUnlocalizedName().substring(5));
 			if (Config.BATTERIES)
-				RegisterHelper.registerItem(BATTERY_ZINC, BATTERY_ZINC.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BATTERY_ZINC, BATTERY_ZINC.getUnlocalizedName().substring(5));
 		}
 		if (Config.PLUTO) {
-			RegisterHelper.registerItem(TIER_9_ROCKET, TIER_9_ROCKET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_9_SCHEMATIC, TIER_9_SCHEMATIC.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_9_NOSE_CONE, TIER_9_NOSE_CONE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_9_ITEMS, TIER_9_ITEMS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_9_KEY, TIER_9_KEY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_9_ROCKET, TIER_9_ROCKET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_9_SCHEMATIC, TIER_9_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_9_NOSE_CONE, TIER_9_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_9_ITEMS, TIER_9_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_9_KEY, TIER_9_KEY.getUnlocalizedName().substring(5));
 		}
 		if (Config.ERIS) {
-			RegisterHelper.registerItem(TIER_10_ROCKET, TIER_10_ROCKET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_10_SCHEMATIC, TIER_10_SCHEMATIC.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_10_NOSE_CONE, TIER_10_NOSE_CONE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_10_ITEMS, TIER_10_ITEMS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_10_KEY, TIER_10_KEY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_10_ROCKET, TIER_10_ROCKET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_10_SCHEMATIC, TIER_10_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_10_NOSE_CONE, TIER_10_NOSE_CONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_10_ITEMS, TIER_10_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_10_KEY, TIER_10_KEY.getUnlocalizedName().substring(5));
 			if (Config.KEPLER22B) {
-				RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET_SCHEMATIC, TIER_10_ELECTRIC_ROCKET_SCHEMATIC.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(TIER_10_ELECTRIC_ROCKET_SCHEMATIC, TIER_10_ELECTRIC_ROCKET_SCHEMATIC.getUnlocalizedName().substring(5));
 			}
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			RegisterHelper.registerItem(TIER_11_ITEMS, TIER_11_ITEMS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_11_ITEMS, TIER_11_ITEMS.getUnlocalizedName().substring(5));
 		}
 		if (Config.CUSTOM_APPLES) {
-			RegisterHelper.registerItem(DIAMOND_APPLE, DIAMOND_APPLE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(IRON_APPLE, IRON_APPLE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(DIAMOND_APPLE, DIAMOND_APPLE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(IRON_APPLE, IRON_APPLE.getUnlocalizedName().substring(5));
 		}
 		if (Config.THERMAL_PADDINGS) {
-			RegisterHelper.registerItem(THERMAL_CLOTH, THERMAL_CLOTH.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_3_THERMAL_PADDING, TIER_3_THERMAL_PADDING.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_THERMAL_PADDING, TIER_4_THERMAL_PADDING.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_5_THERMAL_PADDING, TIER_5_THERMAL_PADDING.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(THERMAL_CLOTH, THERMAL_CLOTH.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_THERMAL_PADDING, TIER_3_THERMAL_PADDING.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_THERMAL_PADDING, TIER_4_THERMAL_PADDING.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_5_THERMAL_PADDING, TIER_5_THERMAL_PADDING.getUnlocalizedName().substring(5));
 		}
 		if (Config.BATTERIES) {
-			RegisterHelper.registerItem(BATTERY_ADVANCED, BATTERY_ADVANCED.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(BATTERY_ULTIMATE, BATTERY_ULTIMATE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BATTERY_ADVANCED, BATTERY_ADVANCED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BATTERY_ULTIMATE, BATTERY_ULTIMATE.getUnlocalizedName().substring(5));
 		}
 		if (Config.OXYGEN_TANKS) {
-			RegisterHelper.registerItem(OXYGEN_TANK_VERY_HEAVY, OXYGEN_TANK_VERY_HEAVY.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(OXYGEN_TANK_EXTREMELY_HEAVY, OXYGEN_TANK_EXTREMELY_HEAVY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(OXYGEN_TANK_VERY_HEAVY, OXYGEN_TANK_VERY_HEAVY.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(OXYGEN_TANK_EXTREMELY_HEAVY, OXYGEN_TANK_EXTREMELY_HEAVY.getUnlocalizedName().substring(5));
 		}
 		if (Config.PRESSURE || Config.RADIATION) {
-			RegisterHelper.registerItem(TIER_1_PRESSURE_LAYER, TIER_1_PRESSURE_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_2_PRESSURE_LAYER, TIER_2_PRESSURE_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_3_PRESSURE_LAYER, TIER_3_PRESSURE_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_PRESSURE_LAYER, TIER_4_PRESSURE_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_PRESSURE_LAYER, TIER_1_PRESSURE_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_PRESSURE_LAYER, TIER_2_PRESSURE_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_PRESSURE_LAYER, TIER_3_PRESSURE_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_PRESSURE_LAYER, TIER_4_PRESSURE_LAYER.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(TIER_1_RADIATION_LAYER, TIER_1_RADIATION_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_2_RADIATION_LAYER, TIER_2_RADIATION_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_3_RADIATION_LAYER, TIER_3_RADIATION_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_RADIATION_LAYER, TIER_4_RADIATION_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_RADIATION_LAYER, TIER_1_RADIATION_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_RADIATION_LAYER, TIER_2_RADIATION_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_RADIATION_LAYER, TIER_3_RADIATION_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_RADIATION_LAYER, TIER_4_RADIATION_LAYER.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(TIER_1_ARMOR_LAYER, TIER_1_ARMOR_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_2_ARMOR_LAYER, TIER_2_ARMOR_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_3_ARMOR_LAYER, TIER_3_ARMOR_LAYER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_ARMOR_LAYER, TIER_4_ARMOR_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_ARMOR_LAYER, TIER_1_ARMOR_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_ARMOR_LAYER, TIER_2_ARMOR_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_ARMOR_LAYER, TIER_3_ARMOR_LAYER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_ARMOR_LAYER, TIER_4_ARMOR_LAYER.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_HELMET, TIER_1_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_CHEST, TIER_1_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, TIER_1_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_HELMET, TIER_1_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_CHEST, TIER_1_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_UNPREPARED_SPACE_SUIT_BOOTS, TIER_1_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_HELMET, TIER_2_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_CHEST, TIER_2_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_BOOTS, TIER_2_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_HELMET, TIER_2_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_CHEST, TIER_2_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_UNPREPARED_SPACE_SUIT_BOOTS, TIER_2_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_HELMET, TIER_3_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_CHEST, TIER_3_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_BOOTS, TIER_3_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_HELMET, TIER_3_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_CHEST, TIER_3_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_UNPREPARED_SPACE_SUIT_BOOTS, TIER_3_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_HELMET, TIER_4_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_CHEST, TIER_4_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, TIER_4_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_HELMET, TIER_4_UNPREPARED_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_CHEST, TIER_4_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, TIER_4_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.RADIATION) {
-			RegisterHelper.registerItem(IODIDE_SALT, IODIDE_SALT.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(POTASSIUM_IODIDE, POTASSIUM_IODIDE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(POTASSIUM, POTASSIUM.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(POTASH_SHARDS, POTASH_SHARDS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(ANTI_RADIATION, ANTI_RADIATION.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(IODIDE_SALT, IODIDE_SALT.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(POTASSIUM_IODIDE, POTASSIUM_IODIDE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(POTASSIUM, POTASSIUM.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(POTASH_SHARDS, POTASH_SHARDS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(ANTI_RADIATION, ANTI_RADIATION.getUnlocalizedName().substring(5));
 		}
 		if (Config.MARS_ROVER) {
-			RegisterHelper.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MARS_ROVER, MARS_ROVER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MARS_ROVER_SCHEMATIC, MARS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
 		}
 		if (Config.VENUS_ROVER) {
-			RegisterHelper.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName().substring(5));
-			RegisterHelper.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
 		}
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
-			RegisterHelper.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(CANNED_FOOD, CANNED_FOOD.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(WAFERS, WAFERS.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(INGOT_LEAD, INGOT_LEAD.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(TOOLS, TOOLS.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(CANNED_FOOD, CANNED_FOOD.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(WAFERS, WAFERS.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(INGOT_LEAD, INGOT_LEAD.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(TOOLS, TOOLS.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(GRAVITY_CONTROLLER, GRAVITY_CONTROLLER.getUnlocalizedName().substring(5));
 
-		RegisterHelper.registerItem(TIER_1_EQUIPMENT_KIT, TIER_1_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(TIER_2_EQUIPMENT_KIT, TIER_2_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(TIER_1_EQUIPMENT_KIT, TIER_1_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(TIER_2_EQUIPMENT_KIT, TIER_2_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		if (Config.ERIS && Config.KEPLER22B)
-			RegisterHelper.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(CHOCOLATE_BAR, CHOCOLATE_BAR.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(CARAMEL_BAR, CARAMEL_BAR.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(CHOCOLATE_BAR, CHOCOLATE_BAR.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(CARAMEL_BAR, CARAMEL_BAR.getUnlocalizedName().substring(5));
 		
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_BLACK, LIGHT_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_RED, LIGHT_OXYGEN_TANK_RED.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_GREEN, LIGHT_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_BROWN, LIGHT_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_BLUE, LIGHT_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_PURPLE, LIGHT_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_CYAN, LIGHT_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_LIGHT_GRAY, LIGHT_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_GRAY, LIGHT_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_PINK, LIGHT_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_YELLOW, LIGHT_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_LIGHT_BLUE, LIGHT_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_MAGENTA, LIGHT_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_ORANGE, LIGHT_OXYGEN_TANK_ORANGE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(LIGHT_OXYGEN_TANK_WHITE, LIGHT_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_BLACK, LIGHT_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_RED, LIGHT_OXYGEN_TANK_RED.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_GREEN, LIGHT_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_BROWN, LIGHT_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_BLUE, LIGHT_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_PURPLE, LIGHT_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_CYAN, LIGHT_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_LIGHT_GRAY, LIGHT_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_GRAY, LIGHT_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_PINK, LIGHT_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_YELLOW, LIGHT_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_LIGHT_BLUE, LIGHT_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_MAGENTA, LIGHT_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_ORANGE, LIGHT_OXYGEN_TANK_ORANGE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_WHITE, LIGHT_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
 
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_BLACK, MED_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_RED, MED_OXYGEN_TANK_RED.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_GREEN, MED_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_BROWN, MED_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_BLUE, MED_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_PURPLE, MED_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_CYAN, MED_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_LIGHT_GRAY, MED_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_GRAY, MED_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_PINK, MED_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_YELLOW, MED_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_LIGHT_BLUE, MED_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_MAGENTA, MED_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_LIME, MED_OXYGEN_TANK_LIME.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(MED_OXYGEN_TANK_WHITE, MED_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_BLACK, MED_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_RED, MED_OXYGEN_TANK_RED.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_GREEN, MED_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_BROWN, MED_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_BLUE, MED_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_PURPLE, MED_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_CYAN, MED_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_LIGHT_GRAY, MED_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_GRAY, MED_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_PINK, MED_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_YELLOW, MED_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_LIGHT_BLUE, MED_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_MAGENTA, MED_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_LIME, MED_OXYGEN_TANK_LIME.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(MED_OXYGEN_TANK_WHITE, MED_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
 
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_BLACK, HEAVY_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_LIME, HEAVY_OXYGEN_TANK_LIME.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_GREEN, HEAVY_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_BROWN, HEAVY_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_BLUE, HEAVY_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_PURPLE, HEAVY_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_CYAN, HEAVY_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_LIGHT_GRAY, HEAVY_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_GRAY, HEAVY_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_PINK, HEAVY_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_YELLOW, HEAVY_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_LIGHT_BLUE, HEAVY_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_MAGENTA, HEAVY_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_ORANGE, HEAVY_OXYGEN_TANK_ORANGE.getUnlocalizedName().substring(5));
-		RegisterHelper.registerItem(HEAVY_OXYGEN_TANK_WHITE, HEAVY_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_BLACK, HEAVY_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_LIME, HEAVY_OXYGEN_TANK_LIME.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_GREEN, HEAVY_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_BROWN, HEAVY_OXYGEN_TANK_BROWN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_BLUE, HEAVY_OXYGEN_TANK_BLUE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_PURPLE, HEAVY_OXYGEN_TANK_PURPLE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_CYAN, HEAVY_OXYGEN_TANK_CYAN.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_LIGHT_GRAY, HEAVY_OXYGEN_TANK_LIGHT_GRAY.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_GRAY, HEAVY_OXYGEN_TANK_GRAY.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_PINK, HEAVY_OXYGEN_TANK_PINK.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_YELLOW, HEAVY_OXYGEN_TANK_YELLOW.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_LIGHT_BLUE, HEAVY_OXYGEN_TANK_LIGHT_BLUE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_MAGENTA, HEAVY_OXYGEN_TANK_MAGENTA.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_ORANGE, HEAVY_OXYGEN_TANK_ORANGE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerItem(HEAVY_OXYGEN_TANK_WHITE, HEAVY_OXYGEN_TANK_WHITE.getUnlocalizedName().substring(5));
 	}
 
 	public static void OreDictionaryIngotsRegister() {

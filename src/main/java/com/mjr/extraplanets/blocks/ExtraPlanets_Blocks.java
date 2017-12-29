@@ -115,8 +115,11 @@ import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT6TreasureChes
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChest;
-import com.mjr.extraplanets.util.RegisterHelper;
 import com.mjr.extraplanets.world.WorldGenerationOverworld;
+import com.mjr.mjrlegendslib.block.BlockBasic;
+import com.mjr.mjrlegendslib.block.BlockBasicGravel;
+import com.mjr.mjrlegendslib.block.BlockBasicStairs;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Blocks {
 
@@ -275,7 +278,7 @@ public class ExtraPlanets_Blocks {
 	public static Block CANDY_BLOCKS;
 	public static Block CANDY_BLOCKS_HORIZONTAL;
 	public static Block CAKE_BLOCKS;
-	
+
 	public static BlockWhiteSugerCane WHITE_SUGAR_CANE;
 
 	public static void init() {
@@ -305,87 +308,87 @@ public class ExtraPlanets_Blocks {
 	private static void initializeBlocks() {
 		if (Config.MERCURY) {
 			MERCURY_BLOCKS = new BlockBasicMercury("mercury");
-			MERCURY_GRAVEL = new BlockCustomGravel("mercury_gravel");
+			MERCURY_GRAVEL = new BlockBasicGravel("mercury_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.CERES) {
 			CERES_BLOCKS = new BlockBasicCeres("ceres");
-			CERES_GRAVEL = new BlockCustomGravel("ceres_gravel");
+			CERES_GRAVEL = new BlockBasicGravel("ceres_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.JUPITER) {
 			JUPITER_BLOCKS = new BlockBasicJupiter("jupiter");
-			JUPITER_GRAVEL = new BlockCustomGravel("jupiter_gravel");
-			VOLCANIC_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F);
-			ASH_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("ash_rock").setHardness(2.0F).setResistance(1.5F);
+			JUPITER_GRAVEL = new BlockBasicGravel("jupiter_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
+			VOLCANIC_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ASH_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("ash_rock").setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab).setResistance(1.5F).setCreativeTab(ExtraPlanets.BlocksTab);
 			ORANGE_SAND = new BlockSand("orange_sand").setHardness(0.6F);
-			ORANGE_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("orange_sandstone").setHardness(2F).setResistance(2F);
+			ORANGE_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("orange_sandstone").setHardness(2F).setResistance(2F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.SATURN) {
 			SATURN_BLOCKS = new BlockBasicSaturn("saturn");
-			SATURN_GRAVEL = new BlockCustomGravel("saturn_gravel");
+			SATURN_GRAVEL = new BlockBasicGravel("saturn_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.URANUS) {
 			URANUS_BLOCKS = new BlockBasicUranus("uranus");
-			DENSE_ICE = new BlockBasic(Material.ICE).setUnlocalizedName("dense_ice").setHardness(2.2F).setResistance(3.0F);
+			DENSE_ICE = new BlockBasic(Material.ICE).setUnlocalizedName("dense_ice").setHardness(2.2F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE_BLOCKS = new BlockBasicNeptune("neptune");
-			FROZEN_NITROGEN = new BlockBasic(Material.ICE).setUnlocalizedName("frozen_nitrogen");
+			FROZEN_NITROGEN = new BlockBasic(Material.ICE).setUnlocalizedName("frozen_nitrogen").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.PLUTO) {
 			PLUTO_BLOCKS = new BlockBasicPluto("pluto");
-			PLUTO_GRAVEL = new BlockCustomGravel("pluto_gravel");
+			PLUTO_GRAVEL = new BlockBasicGravel("pluto_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.ERIS) {
 			ERIS_BLOCKS = new BlockBasicEris("eris");
-			ERIS_GRAVEL = new BlockCustomGravel("eris_gravel");
+			ERIS_GRAVEL = new BlockBasicGravel("eris_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.EUROPA) {
 			EUROPA_BLOCKS = new BlockBasicEuropa("europa");
-			EUROPA_GRAVEL = new BlockCustomGravel("europa_gravel");
+			EUROPA_GRAVEL = new BlockBasicGravel("europa_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.IO) {
 			IO_BLOCKS = new BlockBasicIo("io");
-			IO_GRAVEL = new BlockCustomGravel("io_gravel");
+			IO_GRAVEL = new BlockBasicGravel("io_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.DEIMOS) {
 			DEIMOS_BLOCKS = new BlockBasicDeimos("deimos");
-			DEIMOS_GRAVEL = new BlockCustomGravel("deimos_gravel");
+			DEIMOS_GRAVEL = new BlockBasicGravel("deimos_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.PHOBOS) {
 			PHOBOS_BLOCKS = new BlockBasicPhobos("phobos");
-			PHOBOS_GRAVEL = new BlockCustomGravel("phobos_gravel");
+			PHOBOS_GRAVEL = new BlockBasicGravel("phobos_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.TRITON) {
 			TRITON_BLOCKS = new BlockBasicTriton("triton");
-			TRITON_GRAVEL = new BlockCustomGravel("triton_gravel");
+			TRITON_GRAVEL = new BlockBasicGravel("triton_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.CALLISTO) {
 			CALLISTO_BLOCKS = new BlockBasicCallisto("callisto");
-			CALLISTO_GRAVEL = new BlockCustomGravel("callisto_gravel");
+			CALLISTO_GRAVEL = new BlockBasicGravel("callisto_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.GANYMEDE) {
 			GANYMEDE_BLOCKS = new BlockBasicGanymede("ganymede");
-			GANYMEDE_GRAVEL = new BlockCustomGravel("ganymede_gravel");
+			GANYMEDE_GRAVEL = new BlockBasicGravel("ganymede_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.RHEA) {
 			RHEA_BLOCKS = new BlockBasicRhea("rhea");
-			RHEA_GRAVEL = new BlockCustomGravel("rhea_gravel");
+			RHEA_GRAVEL = new BlockBasicGravel("rhea_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.TITAN) {
 			TITAN_BLOCKS = new BlockBasicTitan("titan");
-			TITAN_GRAVEL = new BlockCustomGravel("titan_gravel");
+			TITAN_GRAVEL = new BlockBasicGravel("titan_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.OBERON) {
 			OBERON_BLOCKS = new BlockBasicOberon("oberon");
-			OBERON_GRAVEL = new BlockCustomGravel("oberon_gravel");
+			OBERON_GRAVEL = new BlockBasicGravel("oberon_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.TITANIA) {
 			TITANIA_BLOCKS = new BlockBasicTitania("titania");
-			TITANIA_GRAVEL = new BlockCustomGravel("titania_gravel");
+			TITANIA_GRAVEL = new BlockBasicGravel("titania_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.IAPETUS) {
 			IAPETUS_BLOCKS = new BlockBasicIapetus("iapetus");
-			IAPETUS_GRAVEL = new BlockCustomGravel("iapetus_gravel");
+			IAPETUS_GRAVEL = new BlockBasicGravel("iapetus_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
 			FOSSIL = new BlockFossil(Material.ROCK).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
@@ -394,7 +397,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.SATURN && Config.FIRE_BOMB)
 			FIRE_BOMB = new BlockFireBomb().setUnlocalizedName("fire_bomb");
 		if (Config.ORE_LEAD_GENERATION)
-			ORE_LEAD = new BlockBasic(Material.ROCK).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F);
+			ORE_LEAD = new BlockBasic(Material.ROCK).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B_BLOCKS = new BlockBasicKepler22b("kepler22b");
 			KEPLER22B_GRASS_GREEN = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
@@ -407,10 +410,10 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.JUPITER || Config.KEPLER22B) {
 			RED_SAND = new BlockSand("red_sand").setHardness(0.6F);
-			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
+			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.RADIATION)
-			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
+			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 
 		ADVANCED_LAUCHPAD = new BlockCustomLandingPad("advanced_launch_pad");
 		ADVANCED_LAUCHPAD_FULL = new BlockCustomLandingPadFull("advanced_launch_pad_full");
@@ -425,52 +428,76 @@ public class ExtraPlanets_Blocks {
 
 	public static void initializeStairs() {
 		if (Config.MERCURY) {
-			MERCURY_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			MERCURY_SUB_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_sub_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			MERCURY_STONE_STAIRS = new BlockBasicStairs("mercury_stairs_stone", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE)).setHardness(2.0F);
-			MERCURY_STONE_BRICKS_STAIRS = new BlockBasicStairs("mercury_stairs_stone_bricks", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			MERCURY_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			MERCURY_SUB_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_sub_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			MERCURY_STONE_STAIRS = new BlockBasicStairs("mercury_stairs_stone", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			MERCURY_STONE_BRICKS_STAIRS = new BlockBasicStairs("mercury_stairs_stone_bricks", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F)
+					.setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.CERES) {
-			CERES_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			CERES_SUB_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_sub_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			CERES_STONE_STAIRS = new BlockBasicStairs("ceres_stairs_stone", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE)).setHardness(2.0F);
-			CERES_STONE_BRICKS_STAIRS = new BlockBasicStairs("ceres_stairs_stone_bricks", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			CERES_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			CERES_SUB_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_sub_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			CERES_STONE_STAIRS = new BlockBasicStairs("ceres_stairs_stone", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			CERES_STONE_BRICKS_STAIRS = new BlockBasicStairs("ceres_stairs_stone_bricks", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.JUPITER) {
-			JUPITER_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			JUPITER_SUB_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_sub_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			JUPITER_STONE_STAIRS = new BlockBasicStairs("jupiter_stairs_stone", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONE)).setHardness(2.0F);
-			JUPITER_STONE_BRICKS_STAIRS = new BlockBasicStairs("jupiter_stairs_stone_bricks", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			JUPITER_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			JUPITER_SUB_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_sub_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			JUPITER_STONE_STAIRS = new BlockBasicStairs("jupiter_stairs_stone", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			JUPITER_STONE_BRICKS_STAIRS = new BlockBasicStairs("jupiter_stairs_stone_bricks", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F)
+					.setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.SATURN) {
-			SATURN_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			SATURN_SUB_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_sub_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			SATURN_STONE_STAIRS = new BlockBasicStairs("saturn_stairs_stone", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONE)).setHardness(2.0F);
-			SATURN_STONE_BRICKS_STAIRS = new BlockBasicStairs("saturn_stairs_stone_bricks", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			SATURN_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			SATURN_SUB_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_sub_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			SATURN_STONE_STAIRS = new BlockBasicStairs("saturn_stairs_stone", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			SATURN_STONE_BRICKS_STAIRS = new BlockBasicStairs("saturn_stairs_stone_bricks", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.URANUS) {
-			URANUS_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			URANUS_SUB_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_sub_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			URANUS_STONE_STAIRS = new BlockBasicStairs("uranus_stairs_stone", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONE)).setHardness(2.0F);
-			URANUS_STONE_BRICKS_STAIRS = new BlockBasicStairs("uranus_stairs_stone_bricks", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			URANUS_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			URANUS_SUB_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_sub_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			URANUS_STONE_STAIRS = new BlockBasicStairs("uranus_stairs_stone", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			URANUS_STONE_BRICKS_STAIRS = new BlockBasicStairs("uranus_stairs_stone_bricks", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.NEPTUNE) {
-			NEPTUNE_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			NEPTUNE_SUB_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_sub_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			NEPTUNE_STONE_STAIRS = new BlockBasicStairs("neptune_stairs_stone", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE)).setHardness(2.0F);
-			NEPTUNE_STONE_BRICKS_STAIRS = new BlockBasicStairs("neptune_stairs_stone_bricks", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			NEPTUNE_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			NEPTUNE_SUB_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_sub_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			NEPTUNE_STONE_STAIRS = new BlockBasicStairs("neptune_stairs_stone", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			NEPTUNE_STONE_BRICKS_STAIRS = new BlockBasicStairs("neptune_stairs_stone_bricks", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F)
+					.setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.PLUTO) {
-			PLUTO_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			PLUTO_SUB_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_sub_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			PLUTO_STONE_STAIRS = new BlockBasicStairs("pluto_stairs_stone", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONE)).setHardness(2.0F);
-			PLUTO_STONE_BRICKS_STAIRS = new BlockBasicStairs("pluto_stairs_stone_bricks", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			PLUTO_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			PLUTO_SUB_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_sub_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			PLUTO_STONE_STAIRS = new BlockBasicStairs("pluto_stairs_stone", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			PLUTO_STONE_BRICKS_STAIRS = new BlockBasicStairs("pluto_stairs_stone_bricks", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.ERIS) {
-			ERIS_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			ERIS_SUB_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_sub_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			ERIS_STONE_STAIRS = new BlockBasicStairs("eris_stairs_stone", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONE)).setHardness(2.0F);
-			ERIS_STONE_BRICKS_STAIRS = new BlockBasicStairs("eris_stairs_stone_bricks", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			ERIS_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ERIS_SUB_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_sub_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			ERIS_STONE_STAIRS = new BlockBasicStairs("eris_stairs_stone", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ERIS_STONE_BRICKS_STAIRS = new BlockBasicStairs("eris_stairs_stone_bricks", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 	}
 
@@ -533,192 +560,192 @@ public class ExtraPlanets_Blocks {
 
 	private static void registerBlocks() throws NoSuchMethodException {
 		if (Config.MERCURY) {
-			RegisterHelper.registerBlock(MERCURY_BLOCKS, ItemBlockMercury.class, MERCURY_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(MERCURY_GRAVEL, MERCURY_GRAVEL.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(MERCURY_SPAWNER, ItemBlockGC.class, "mercury_spawner");
-			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_4, ItemBlockDesc.class, TREASURE_CHEST_TIER_4.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, MERCURY_BLOCKS, ItemBlockMercury.class, MERCURY_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, MERCURY_GRAVEL, MERCURY_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, MERCURY_SPAWNER, ItemBlockGC.class, "mercury_spawner");
+			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_4, ItemBlockDesc.class, TREASURE_CHEST_TIER_4.getUnlocalizedName().substring(5));
 		}
 		if (Config.CERES) {
-			RegisterHelper.registerBlock(CERES_BLOCKS, ItemBlockCeres.class, CERES_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(CERES_GRAVEL, CERES_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CERES_BLOCKS, ItemBlockCeres.class, CERES_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CERES_GRAVEL, CERES_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.JUPITER) {
-			RegisterHelper.registerBlock(JUPITER_BLOCKS, ItemBlockJupiter.class, JUPITER_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(JUPITER_GRAVEL, JUPITER_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, JUPITER_BLOCKS, ItemBlockJupiter.class, JUPITER_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, JUPITER_GRAVEL, JUPITER_GRAVEL.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerBlock(JUIPTER_SPAWNER, ItemBlockGC.class, "jupiter_spawner");
-			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, JUIPTER_SPAWNER, ItemBlockGC.class, "jupiter_spawner");
+			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerBlock(VOLCANIC_ROCK, VOLCANIC_ROCK.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ASH_ROCK, ASH_ROCK.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ORANGE_SAND, ORANGE_SAND.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ORANGE_SANDSTONE, ORANGE_SANDSTONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, VOLCANIC_ROCK, VOLCANIC_ROCK.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ASH_ROCK, ASH_ROCK.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ORANGE_SAND, ORANGE_SAND.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ORANGE_SANDSTONE, ORANGE_SANDSTONE.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
-			RegisterHelper.registerBlock(SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(SATURN_GRAVEL, SATURN_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SATURN_GRAVEL, SATURN_GRAVEL.getUnlocalizedName().substring(5));
 
-			RegisterHelper.registerBlock(SATURN_SPAWNER, ItemBlockGC.class, "saturn_spawner");
-			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_6, ItemBlockDesc.class, TREASURE_CHEST_TIER_6.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SATURN_SPAWNER, ItemBlockGC.class, "saturn_spawner");
+			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_6, ItemBlockDesc.class, TREASURE_CHEST_TIER_6.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
-			RegisterHelper.registerBlock(URANUS_BLOCKS, ItemBlockUranus.class, URANUS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(URANUS_SPAWNER, ItemBlockGC.class, "uranus_spawner");
-			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_7, ItemBlockDesc.class, TREASURE_CHEST_TIER_7.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(DENSE_ICE, DENSE_ICE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, URANUS_BLOCKS, ItemBlockUranus.class, URANUS_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, URANUS_SPAWNER, ItemBlockGC.class, "uranus_spawner");
+			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_7, ItemBlockDesc.class, TREASURE_CHEST_TIER_7.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, DENSE_ICE, DENSE_ICE.getUnlocalizedName().substring(5));
 		}
 		if (Config.NEPTUNE) {
-			RegisterHelper.registerBlock(NEPTUNE_BLOCKS, ItemBlockNeptune.class, NEPTUNE_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(NEPTUNE_SPAWNER, ItemBlockGC.class, "neptune_spawner");
-			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_8, ItemBlockDesc.class, TREASURE_CHEST_TIER_8.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(FROZEN_NITROGEN, FROZEN_NITROGEN.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_BLOCKS, ItemBlockNeptune.class, NEPTUNE_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_SPAWNER, ItemBlockGC.class, "neptune_spawner");
+			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_8, ItemBlockDesc.class, TREASURE_CHEST_TIER_8.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, FROZEN_NITROGEN, FROZEN_NITROGEN.getUnlocalizedName().substring(5));
 		}
 		if (Config.PLUTO) {
-			RegisterHelper.registerBlock(PLUTO_BLOCKS, ItemBlockPluto.class, PLUTO_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(PLUTO_SPAWNER, ItemBlockGC.class, "pluto_spawner");
-			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_9, ItemBlockDesc.class, TREASURE_CHEST_TIER_9.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(PLUTO_GRAVEL, PLUTO_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PLUTO_BLOCKS, ItemBlockPluto.class, PLUTO_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PLUTO_SPAWNER, ItemBlockGC.class, "pluto_spawner");
+			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_9, ItemBlockDesc.class, TREASURE_CHEST_TIER_9.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PLUTO_GRAVEL, PLUTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.ERIS) {
-			RegisterHelper.registerBlock(ERIS_BLOCKS, ItemBlockEris.class, ERIS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ERIS_SPAWNER, ItemBlockGC.class, "eris_spawner");
-			RegisterHelper.registerBlock(TREASURE_CHEST_TIER_10, ItemBlockDesc.class, TREASURE_CHEST_TIER_10.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ERIS_GRAVEL, ERIS_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ERIS_BLOCKS, ItemBlockEris.class, ERIS_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ERIS_SPAWNER, ItemBlockGC.class, "eris_spawner");
+			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_10, ItemBlockDesc.class, TREASURE_CHEST_TIER_10.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ERIS_GRAVEL, ERIS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			RegisterHelper.registerBlock(KEPLER22B_BLOCKS, ItemBlockKepler22b.class, KEPLER22B_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(KEPLER22B_GRASS_GREEN, KEPLER22B_GRASS_GREEN.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(KEPLER22B_GRASS_BLUE, KEPLER22B_GRASS_BLUE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(KEPLER22B_GRASS_PURPLE, KEPLER22B_GRASS_PURPLE.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(KEPLER22B_GRASS_INFECTED, KEPLER22B_GRASS_INFECTED.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_BLOCKS, ItemBlockKepler22b.class, KEPLER22B_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_GREEN, KEPLER22B_GRASS_GREEN.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_BLUE, KEPLER22B_GRASS_BLUE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_PURPLE, KEPLER22B_GRASS_PURPLE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_INFECTED, KEPLER22B_GRASS_INFECTED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
 		}
 		if (Config.KEPLER22B || Config.JUPITER) {
-			RegisterHelper.registerBlock(RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
 		}
 
 		if (Config.EUROPA) {
-			RegisterHelper.registerBlock(EUROPA_BLOCKS, ItemBlockEuropa.class, EUROPA_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(EUROPA_GRAVEL, EUROPA_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, EUROPA_BLOCKS, ItemBlockEuropa.class, EUROPA_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, EUROPA_GRAVEL, EUROPA_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.IO) {
-			RegisterHelper.registerBlock(IO_BLOCKS, ItemBlockIo.class, IO_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(IO_GRAVEL, IO_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, IO_BLOCKS, ItemBlockIo.class, IO_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, IO_GRAVEL, IO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.DEIMOS) {
-			RegisterHelper.registerBlock(DEIMOS_BLOCKS, ItemBlockDeimos.class, DEIMOS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(DEIMOS_GRAVEL, DEIMOS_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, DEIMOS_BLOCKS, ItemBlockDeimos.class, DEIMOS_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, DEIMOS_GRAVEL, DEIMOS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.PHOBOS) {
-			RegisterHelper.registerBlock(PHOBOS_BLOCKS, ItemBlockPhobos.class, PHOBOS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(PHOBOS_GRAVEL, PHOBOS_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PHOBOS_BLOCKS, ItemBlockPhobos.class, PHOBOS_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PHOBOS_GRAVEL, PHOBOS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.TRITON) {
-			RegisterHelper.registerBlock(TRITON_BLOCKS, ItemBlockTriton.class, TRITON_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(TRITON_GRAVEL, TRITON_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, TRITON_BLOCKS, ItemBlockTriton.class, TRITON_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, TRITON_GRAVEL, TRITON_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.CALLISTO) {
-			RegisterHelper.registerBlock(CALLISTO_BLOCKS, ItemBlockCallisto.class, CALLISTO_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(CALLISTO_GRAVEL, CALLISTO_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CALLISTO_BLOCKS, ItemBlockCallisto.class, CALLISTO_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CALLISTO_GRAVEL, CALLISTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.GANYMEDE) {
-			RegisterHelper.registerBlock(GANYMEDE_BLOCKS, ItemBlockGanymede.class, GANYMEDE_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(GANYMEDE_GRAVEL, GANYMEDE_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, GANYMEDE_BLOCKS, ItemBlockGanymede.class, GANYMEDE_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, GANYMEDE_GRAVEL, GANYMEDE_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.RHEA) {
-			RegisterHelper.registerBlock(RHEA_BLOCKS, ItemBlockRhea.class, RHEA_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(RHEA_GRAVEL, RHEA_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, RHEA_BLOCKS, ItemBlockRhea.class, RHEA_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, RHEA_GRAVEL, RHEA_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.TITAN) {
-			RegisterHelper.registerBlock(TITAN_BLOCKS, ItemBlockTitan.class, TITAN_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(TITAN_GRAVEL, TITAN_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, TITAN_BLOCKS, ItemBlockTitan.class, TITAN_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, TITAN_GRAVEL, TITAN_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.OBERON) {
-			RegisterHelper.registerBlock(OBERON_BLOCKS, ItemBlockOberon.class, OBERON_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(OBERON_GRAVEL, OBERON_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, OBERON_BLOCKS, ItemBlockOberon.class, OBERON_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, OBERON_GRAVEL, OBERON_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.TITANIA) {
-			RegisterHelper.registerBlock(TITANIA_BLOCKS, ItemBlockTitania.class, TITANIA_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(TITANIA_GRAVEL, TITANIA_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, TITANIA_BLOCKS, ItemBlockTitania.class, TITANIA_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, TITANIA_GRAVEL, TITANIA_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.IAPETUS) {
-			RegisterHelper.registerBlock(IAPETUS_BLOCKS, ItemBlockIapetus.class, IAPETUS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(IAPETUS_GRAVEL, IAPETUS_GRAVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, IAPETUS_BLOCKS, ItemBlockIapetus.class, IAPETUS_BLOCKS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, IAPETUS_GRAVEL, IAPETUS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
-			RegisterHelper.registerBlock(FOSSIL, FOSSIL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, FOSSIL, FOSSIL.getUnlocalizedName().substring(5));
 		if (Config.CERES && Config.NUCLEAR_BOMB)
-			RegisterHelper.registerBlock(NUCLEAR_BOMB, NUCLEAR_BOMB.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, NUCLEAR_BOMB, NUCLEAR_BOMB.getUnlocalizedName().substring(5));
 		if (Config.SATURN && Config.FIRE_BOMB)
-			RegisterHelper.registerBlock(FIRE_BOMB, FIRE_BOMB.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, FIRE_BOMB, FIRE_BOMB.getUnlocalizedName().substring(5));
 		if (Config.ORE_LEAD_GENERATION)
-			RegisterHelper.registerBlock(ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
 		if (Config.RADIATION)
-			RegisterHelper.registerBlock(ORE_POTASH, "potash");
+			RegisterUtilities.registerBlock(Constants.modID, ORE_POTASH, "potash");
 
-		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
 
-		RegisterHelper.registerBlock(FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(DECORATIVE_BLOCKS2, ItemBlockDecorativeBlocks2.class, DECORATIVE_BLOCKS2.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(CANDY_BLOCKS, ItemBlockCandyBlocks.class, CANDY_BLOCKS.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(CANDY_BLOCKS_HORIZONTAL, ItemBlockCandyBlocksHorizontal.class, CANDY_BLOCKS_HORIZONTAL.getUnlocalizedName().substring(5));		
-		RegisterHelper.registerBlock(CAKE_BLOCKS, ItemBlockCakeBlocks.class, CAKE_BLOCKS.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, DECORATIVE_BLOCKS2, ItemBlockDecorativeBlocks2.class, DECORATIVE_BLOCKS2.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, CANDY_BLOCKS, ItemBlockCandyBlocks.class, CANDY_BLOCKS.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, CANDY_BLOCKS_HORIZONTAL, ItemBlockCandyBlocksHorizontal.class, CANDY_BLOCKS_HORIZONTAL.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, CAKE_BLOCKS, ItemBlockCakeBlocks.class, CAKE_BLOCKS.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerStairs() throws NoSuchMethodException {
 		if (Config.MERCURY) {
-			RegisterHelper.registerBlock(MERCURY_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(MERCURY_SUB_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(MERCURY_STONE_STAIRS, ItemBlockGC.class, MERCURY_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(MERCURY_STONE_BRICKS_STAIRS, ItemBlockGC.class, MERCURY_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, MERCURY_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, MERCURY_SUB_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, MERCURY_STONE_STAIRS, ItemBlockGC.class, MERCURY_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, MERCURY_STONE_BRICKS_STAIRS, ItemBlockGC.class, MERCURY_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.CERES) {
-			RegisterHelper.registerBlock(CERES_SURFACE_STAIRS, ItemBlockGC.class, CERES_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(CERES_SUB_SURFACE_STAIRS, ItemBlockGC.class, CERES_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(CERES_STONE_STAIRS, ItemBlockGC.class, CERES_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(CERES_STONE_BRICKS_STAIRS, ItemBlockGC.class, CERES_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CERES_SURFACE_STAIRS, ItemBlockGC.class, CERES_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CERES_SUB_SURFACE_STAIRS, ItemBlockGC.class, CERES_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CERES_STONE_STAIRS, ItemBlockGC.class, CERES_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, CERES_STONE_BRICKS_STAIRS, ItemBlockGC.class, CERES_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.JUPITER) {
-			RegisterHelper.registerBlock(JUPITER_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(JUPITER_SUB_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(JUPITER_STONE_STAIRS, ItemBlockGC.class, JUPITER_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(JUPITER_STONE_BRICKS_STAIRS, ItemBlockGC.class, JUPITER_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, JUPITER_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, JUPITER_SUB_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, JUPITER_STONE_STAIRS, ItemBlockGC.class, JUPITER_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, JUPITER_STONE_BRICKS_STAIRS, ItemBlockGC.class, JUPITER_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
-			RegisterHelper.registerBlock(SATURN_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(SATURN_SUB_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(SATURN_STONE_STAIRS, ItemBlockGC.class, SATURN_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(SATURN_STONE_BRICKS_STAIRS, ItemBlockGC.class, SATURN_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SATURN_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SATURN_SUB_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SATURN_STONE_STAIRS, ItemBlockGC.class, SATURN_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SATURN_STONE_BRICKS_STAIRS, ItemBlockGC.class, SATURN_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
-			RegisterHelper.registerBlock(URANUS_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(URANUS_SUB_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(URANUS_STONE_STAIRS, ItemBlockGC.class, URANUS_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(URANUS_STONE_BRICKS_STAIRS, ItemBlockGC.class, URANUS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, URANUS_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, URANUS_SUB_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, URANUS_STONE_STAIRS, ItemBlockGC.class, URANUS_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, URANUS_STONE_BRICKS_STAIRS, ItemBlockGC.class, URANUS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.NEPTUNE) {
-			RegisterHelper.registerBlock(NEPTUNE_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(NEPTUNE_SUB_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(NEPTUNE_STONE_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(NEPTUNE_STONE_BRICKS_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_SUB_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_STONE_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_STONE_BRICKS_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.PLUTO) {
-			RegisterHelper.registerBlock(PLUTO_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(PLUTO_SUB_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(PLUTO_STONE_STAIRS, ItemBlockGC.class, PLUTO_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(PLUTO_STONE_BRICKS_STAIRS, ItemBlockGC.class, PLUTO_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PLUTO_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PLUTO_SUB_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PLUTO_STONE_STAIRS, ItemBlockGC.class, PLUTO_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, PLUTO_STONE_BRICKS_STAIRS, ItemBlockGC.class, PLUTO_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.ERIS) {
-			RegisterHelper.registerBlock(ERIS_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ERIS_SUB_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ERIS_STONE_STAIRS, ItemBlockGC.class, ERIS_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterHelper.registerBlock(ERIS_STONE_BRICKS_STAIRS, ItemBlockGC.class, ERIS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ERIS_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ERIS_SUB_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ERIS_STONE_STAIRS, ItemBlockGC.class, ERIS_STONE_STAIRS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, ERIS_STONE_BRICKS_STAIRS, ItemBlockGC.class, ERIS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 	}
 
@@ -781,220 +808,220 @@ public class ExtraPlanets_Blocks {
 
 	private static void setHarvestLevels() {
 		if (Config.MERCURY) {
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 6); // Mercury Ore
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 7); // Mercury Block
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 2, 10); // Carbon Ore
-			RegisterHelper.setHarvestLevel(MERCURY_BLOCKS, "pickaxe", 1, 11); // Carbon Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 2, 6); // Mercury Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 1, 7); // Mercury Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 2, 10); // Carbon Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, MERCURY_BLOCKS, "pickaxe", 1, 11); // Carbon Block
 		}
 		if (Config.CERES) {
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 2, 6); // Uranium Ore
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 1, 7); // Uranium Block
-			RegisterHelper.setHarvestLevel(CERES_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 2, 6); // Uranium Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 1, 7); // Uranium Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, CERES_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
 		}
 		if (Config.JUPITER) {
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 6); // Palladium Ore
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 7); // Nickel Ore
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 8); // Palladium Block
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 9); // Stone Bricks
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 2, 11); // Red Gem Ore
-			RegisterHelper.setHarvestLevel(JUPITER_BLOCKS, "pickaxe", 1, 12); // Red Gem Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 2, 6); // Palladium Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 2, 7); // Nickel Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 1, 8); // Palladium Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 1, 9); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 2, 11); // Red Gem Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, JUPITER_BLOCKS, "pickaxe", 1, 12); // Red Gem Block
 		}
 		if (Config.SATURN) {
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 6); // Magnesium Ore
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 1, 7); // Magnesium Block
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 10); // Broken Infected Stone
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 11); // Infected Stone
-			RegisterHelper.setHarvestLevel(SATURN_BLOCKS, "pickaxe", 2, 12); // Slime Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 2, 6); // Magnesium Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 1, 7); // Magnesium Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 2, 10); // Broken Infected Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 2, 11); // Infected Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, SATURN_BLOCKS, "pickaxe", 2, 12); // Slime Ore
 		}
 		if (Config.URANUS) {
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 2, 3); // Crystal Ore
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 4); // Crystal Block
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 5); // Stone Bricks
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 2, 7); // White Gem Ore
-			RegisterHelper.setHarvestLevel(URANUS_BLOCKS, "pickaxe", 1, 8); // White Gem Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 2, 3); // Crystal Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 1, 4); // Crystal Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 1, 5); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 2, 7); // White Gem Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, URANUS_BLOCKS, "pickaxe", 1, 8); // White Gem Block
 		}
 		if (Config.NEPTUNE) {
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 6); // Zinc Ore
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 7); // Zinc Block
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 2, 10); // Blue Gem Ore
-			RegisterHelper.setHarvestLevel(NEPTUNE_BLOCKS, "pickaxe", 1, 11); // Blue Gem Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 2, 6); // Zinc Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 1, 7); // Zinc Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 2, 10); // Blue Gem Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, NEPTUNE_BLOCKS, "pickaxe", 1, 11); // Blue Gem Block
 		}
 		if (Config.PLUTO) {
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 2, 6); // Tungsten Ore
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 1, 7); // Tungsten Block
-			RegisterHelper.setHarvestLevel(PLUTO_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 2, 6); // Tungsten Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 1, 7); // Tungsten Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, PLUTO_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
 		}
 		if (Config.ERIS) {
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 2, 6); // Dark Iron Ore
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 1, 7); // Dark Iron Block
-			RegisterHelper.setHarvestLevel(ERIS_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 2, 6); // Dark Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 1, 7); // Dark Iron Block
+			RegisterUtilities.setHarvestLevel(Constants.modID, ERIS_BLOCKS, "pickaxe", 1, 8); // Stone Bricks
 		}
 		if (Config.KEPLER22B) {
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "shovel", 0, 0); // Dirt
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 1, 1); // Stone
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 2); // Iron Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 3); // Tin Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 4); // Copper Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 5); // Dense Coal Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 6); // Blue Diamond Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 7); // Red Diamond Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 8); // Purple Diamond Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 9); // Yellow Diamond Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 10); // Green Diamond Ore
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 1, 11); // Stone Bricks
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 1, 12); // Cobblestone
-			RegisterHelper.setHarvestLevel(KEPLER22B_BLOCKS, "pickaxe", 2, 13); // Platinum Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "shovel", 0, 0); // Dirt
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 1, 1); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 2); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 3); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 4); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 5); // Dense Coal Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 6); // Blue Diamond Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 7); // Red Diamond Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 8); // Purple Diamond Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 9); // Yellow Diamond Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 10); // Green Diamond Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 1, 11); // Stone Bricks
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 1, 12); // Cobblestone
+			RegisterUtilities.setHarvestLevel(Constants.modID, KEPLER22B_BLOCKS, "pickaxe", 2, 13); // Platinum Ore
 		}
 		if (Config.CALLISTO) {
-			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(CALLISTO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, CALLISTO_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, CALLISTO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, CALLISTO_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, CALLISTO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, CALLISTO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, CALLISTO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.DEIMOS) {
-			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(DEIMOS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, DEIMOS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, DEIMOS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, DEIMOS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, DEIMOS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, DEIMOS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, DEIMOS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.EUROPA) {
-			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(EUROPA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, EUROPA_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, EUROPA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, EUROPA_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, EUROPA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, EUROPA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, EUROPA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.GANYMEDE) {
-			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(GANYMEDE_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, GANYMEDE_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, GANYMEDE_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, GANYMEDE_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, GANYMEDE_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, GANYMEDE_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, GANYMEDE_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.IO) {
-			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(IO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, IO_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, IO_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, IO_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, IO_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, IO_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, IO_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.PHOBOS) {
-			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(PHOBOS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, PHOBOS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, PHOBOS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, PHOBOS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, PHOBOS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, PHOBOS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, PHOBOS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.RHEA) {
-			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(RHEA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, RHEA_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, RHEA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, RHEA_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, RHEA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, RHEA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, RHEA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.TITAN) {
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 1, 6); // Methane Surface
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 1, 7); // Methane Sub-Surface
-			RegisterHelper.setHarvestLevel(TITAN_BLOCKS, "pickaxe", 2, 8); // Rocks
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 1, 6); // Methane Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 1, 7); // Methane Sub-Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITAN_BLOCKS, "pickaxe", 2, 8); // Rocks
 		}
 		if (Config.TRITON) {
-			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(TRITON_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TRITON_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TRITON_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TRITON_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, TRITON_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TRITON_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TRITON_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.IAPETUS) {
-			RegisterHelper.setHarvestLevel(IAPETUS_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(IAPETUS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(IAPETUS_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(IAPETUS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(IAPETUS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(IAPETUS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
-			RegisterHelper.setHarvestLevel(IAPETUS_BLOCKS, "pickaxe", 1, 6); // Ice
-		}		
+			RegisterUtilities.setHarvestLevel(Constants.modID, IAPETUS_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, IAPETUS_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, IAPETUS_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, IAPETUS_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, IAPETUS_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, IAPETUS_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, IAPETUS_BLOCKS, "pickaxe", 1, 6); // Ice
+		}
 		if (Config.OBERON) {
-			RegisterHelper.setHarvestLevel(OBERON_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(OBERON_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(OBERON_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(OBERON_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(OBERON_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(OBERON_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, OBERON_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, OBERON_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, OBERON_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, OBERON_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, OBERON_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, OBERON_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.TITANIA) {
-			RegisterHelper.setHarvestLevel(TITANIA_BLOCKS, "pickaxe", 0, 0); // Surface
-			RegisterHelper.setHarvestLevel(TITANIA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
-			RegisterHelper.setHarvestLevel(TITANIA_BLOCKS, "pickaxe", 1, 2); // Stone
-			RegisterHelper.setHarvestLevel(TITANIA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
-			RegisterHelper.setHarvestLevel(TITANIA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
-			RegisterHelper.setHarvestLevel(TITANIA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITANIA_BLOCKS, "pickaxe", 0, 0); // Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITANIA_BLOCKS, "pickaxe", 0, 1); // Sub Surface
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITANIA_BLOCKS, "pickaxe", 1, 2); // Stone
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITANIA_BLOCKS, "pickaxe", 2, 3); // Iron Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITANIA_BLOCKS, "pickaxe", 2, 4); // Tin Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, TITANIA_BLOCKS, "pickaxe", 2, 5); // Copper Ore
 		}
 		if (Config.ORE_LEAD_GENERATION)
-			RegisterHelper.setHarvestLevel(ORE_LEAD, "pickaxe", 2, 0); // Lead Ore
+			RegisterUtilities.setHarvestLevel(Constants.modID, ORE_LEAD, "pickaxe", 2, 0); // Lead Ore
 	}
 
 	public static void OreDictionaryRegister() {
@@ -1123,7 +1150,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			OreDictionary.registerOre("stone", new ItemStack(KEPLER22B_BLOCKS, 1, 1));
-			OreDictionary.registerOre("oreIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
+			OreDictionary.registerOre("or	eIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
 			OreDictionary.registerOre("oreCopper", new ItemStack(KEPLER22B_BLOCKS, 1, 3));
 			OreDictionary.registerOre("oreTin", new ItemStack(KEPLER22B_BLOCKS, 1, 4));
 			OreDictionary.registerOre("oreDenseCoal", new ItemStack(KEPLER22B_BLOCKS, 1, 5));
@@ -1142,11 +1169,11 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void registerTreeBlocks() throws NoSuchMethodException {
-		RegisterHelper.registerBlock(KEPLER22B_MAPLE_LOG, ItemBlockKepler22bMapleLog.class, KEPLER22B_MAPLE_LOG.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(KEPLER22B_MAPLE_LOG_2, ItemBlockKepler22bMapleLog2.class, KEPLER22B_MAPLE_LOG_2.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(KEPLER22B_MAPLE_SAPLING, ItemBlockKepler22bMapleSapling.class, KEPLER22B_MAPLE_SAPLING.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(KEPLER22B_MAPLE_LEAF, ItemBlockKepler22bMapleLeaf.class, KEPLER22B_MAPLE_LEAF.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(KEPLER22B_MAPLE_LEAF2, ItemBlockKepler22bMapleLeaf2.class, KEPLER22B_MAPLE_LEAF2.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(KEPLER22B_MAPLE_PLANKS, ItemBlockKepler22bPlanks.class, KEPLER22B_MAPLE_PLANKS.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LOG, ItemBlockKepler22bMapleLog.class, KEPLER22B_MAPLE_LOG.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LOG_2, ItemBlockKepler22bMapleLog2.class, KEPLER22B_MAPLE_LOG_2.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_SAPLING, ItemBlockKepler22bMapleSapling.class, KEPLER22B_MAPLE_SAPLING.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LEAF, ItemBlockKepler22bMapleLeaf.class, KEPLER22B_MAPLE_LEAF.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LEAF2, ItemBlockKepler22bMapleLeaf2.class, KEPLER22B_MAPLE_LEAF2.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_PLANKS, ItemBlockKepler22bPlanks.class, KEPLER22B_MAPLE_PLANKS.getUnlocalizedName().substring(5));
 	}
 }

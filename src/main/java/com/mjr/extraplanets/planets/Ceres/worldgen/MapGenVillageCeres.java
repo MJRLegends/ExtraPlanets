@@ -12,6 +12,7 @@ import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageField2;
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageHouse;
@@ -21,7 +22,7 @@ import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVil
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageTorch;
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureVillageStartCeres;
-import com.mjr.extraplanets.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 public class MapGenVillageCeres extends MapGenStructure {
 	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenCeres.ceres });
@@ -93,7 +94,7 @@ public class MapGenVillageCeres extends MapGenStructure {
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			MessageUtilities.debugMessageToLog("Generating Ceres Village at x" + par1 * 16 + " z" + par2 * 16);
+			MessageUtilities.debugMessageToLog(Constants.modID, "Generating Ceres Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartCeres(this.world, this.rand, par1, par2, this.terrainType);
 	}
 

@@ -10,7 +10,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 
@@ -57,12 +57,12 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.SALT, ExtraPlanets_Blocks.CERES_BLOCKS);
+				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.SALT, ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
 		for (int i = 0; i < 1; i++) {
 			if (this.rand.nextInt(100) == 0) {
-				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Blocks.CERES_BLOCKS);
+				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));

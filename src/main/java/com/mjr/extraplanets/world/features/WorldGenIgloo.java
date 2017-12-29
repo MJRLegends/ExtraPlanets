@@ -12,18 +12,19 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.storage.loot.LootTableList;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.util.MessageUtilities;
-import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenIgloo extends WorldGenerator {
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		if (WorldGenHelper.checkValidSpawn(world, position, 10) == false)
+		if (WorldGenUtilities.checkValidSpawn(world, position, 10) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Spawning Igloo at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog(Constants.modID, "Spawning Igloo at (x, y, z)" + position.toString());
 			if ((rand.nextInt(50) + 1) != 50) {
 				return generateBasic(world, rand, position.down());
 			} else {
@@ -526,7 +527,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		int random = rand.nextInt(10) + 1;
 		if (random < 5) {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Loot Spawned!");
+				MessageUtilities.debugMessageToLog(Constants.modID, "Loot Spawned!");
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 9, y + 3, z + 5));
 
 			if (chest != null) {
@@ -542,7 +543,7 @@ public class WorldGenIgloo extends WorldGenerator {
 			}
 		} else {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("No loot spawned!");
+				MessageUtilities.debugMessageToLog(Constants.modID, "No loot spawned!");
 		}
 		return true;
 	}

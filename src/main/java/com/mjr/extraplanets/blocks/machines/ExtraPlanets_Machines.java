@@ -25,7 +25,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompre
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
-import com.mjr.extraplanets.util.RegisterHelper;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Machines {
 	// Machines
@@ -97,36 +97,36 @@ public class ExtraPlanets_Machines {
 
 	private static void registerMachines() throws NoSuchMethodException {
 		if (Config.REFINERY_ADVANCED)
-			RegisterHelper.registerBlock(REFINERY_ADVANCED, "advanced_refinery");
+			RegisterUtilities.registerBlock(Constants.modID, REFINERY_ADVANCED, "advanced_refinery");
 		if (Config.REFINERY_ULTIMATE)
-			RegisterHelper.registerBlock(REFINERY_ULTIMATE, "ultimate_refinery");
+			RegisterUtilities.registerBlock(Constants.modID, REFINERY_ULTIMATE, "ultimate_refinery");
 		if (Config.SOLAR_PANELS)
-			RegisterHelper.registerBlock(SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
-			RegisterHelper.registerBlock(OXYGEN_COMPRESSOR_ADVANCED, ItemBlockAdvancedOxygenCompressor.class, OXYGEN_COMPRESSOR_ADVANCED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, OXYGEN_COMPRESSOR_ADVANCED, ItemBlockAdvancedOxygenCompressor.class, OXYGEN_COMPRESSOR_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
-			RegisterHelper.registerBlock(OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.RADIATION) {
 			if (Config.BASIC_DECRYSTALLIZER)
-				RegisterHelper.registerBlock(BASIC_DECRYSALLIZER, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(Constants.modID, BASIC_DECRYSALLIZER, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_CRYSTALLIZER)
-				RegisterHelper.registerBlock(BASIC_CRYSALLIZER, BASIC_CRYSALLIZER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(Constants.modID, BASIC_CRYSALLIZER, BASIC_CRYSALLIZER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_SMASHER)
-				RegisterHelper.registerBlock(BASIC_SMASHER, BASIC_SMASHER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(Constants.modID, BASIC_SMASHER, BASIC_SMASHER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_CHEMICAL_INJECTOR)
-				RegisterHelper.registerBlock(BASIC_CHEMICAL_INJECTOR, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(Constants.modID, BASIC_CHEMICAL_INJECTOR, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
-				RegisterHelper.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(Constants.modID, BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_PURIFIER)
-				RegisterHelper.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(Constants.modID, BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
-			RegisterHelper.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.FUEL_LOADER_ULTIMATE)
-			RegisterHelper.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.BASIC_DENSIFIER)
-			RegisterHelper.registerBlock(BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
-		RegisterHelper.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(Constants.modID, VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {

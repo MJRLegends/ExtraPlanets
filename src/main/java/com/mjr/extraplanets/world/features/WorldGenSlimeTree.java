@@ -8,18 +8,19 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.util.MessageUtilities;
-import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenSlimeTree extends WorldGenerator {
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		if (WorldGenHelper.checkValidSpawn(world, position, 15) == false)
+		if (WorldGenUtilities.checkValidSpawn(world, position, 15) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Spawning Slime Tree at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog(Constants.modID, "Spawning Slime Tree at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position);
 		}
 		return true;

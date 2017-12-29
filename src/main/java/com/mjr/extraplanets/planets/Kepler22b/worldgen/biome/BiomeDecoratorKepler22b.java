@@ -14,7 +14,6 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
-import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenBigBlueTree;
 import com.mjr.extraplanets.world.features.WorldGenBigPurpleTree;
 import com.mjr.extraplanets.world.features.WorldGenBigRedTree;
@@ -31,6 +30,7 @@ import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
 import com.mjr.extraplanets.world.features.WorldGenRedHut;
 import com.mjr.extraplanets.world.features.WorldGenWhiteSugerCane;
 import com.mjr.extraplanets.world.features.WorldGenYellowHut;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
@@ -85,12 +85,12 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (random.nextInt(10) == 0) {
-				WorldGenHelper.generateLake(worldIn, random, new BlockPos(this.chunkPos.getX(), 0, this.chunkPos.getZ()), Blocks.WATER, Blocks.GRASS);
+				WorldGenUtilities.generateLake(worldIn, random, new BlockPos(this.chunkPos.getX(), 0, this.chunkPos.getZ()), Blocks.WATER, Blocks.GRASS);
 			}
 		}
 		for (int i = 0; i < this.InfectedLakesPerChunk; i++) {
 			if (random.nextInt(15) == 0) {
-				WorldGenHelper.generateLake(worldIn, random, new BlockPos(this.chunkPos.getX(), 0, this.chunkPos.getZ()), ExtraPlanets_Fluids.INFECTED_WATER, Blocks.GRASS);
+				WorldGenUtilities.generateLake(worldIn, random, new BlockPos(this.chunkPos.getX(), 0, this.chunkPos.getZ()), ExtraPlanets_Fluids.INFECTED_WATER, Blocks.GRASS);
 			}
 		}
 
@@ -105,22 +105,22 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				if (random.nextInt(200) == 1) {
 					switch (random.nextInt(7)) {
 					case 1:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenBlueHut(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), worldIn, random, chunkPos, 16);
 						break;
 					case 2:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenRedHut(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), worldIn, random, chunkPos, 16);
 						break;
 					case 3:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenPurpleHut(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), worldIn, random, chunkPos, 16);
 						break;
 					case 4:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenYellowHut(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), worldIn, random, chunkPos, 16);
 						break;
 					case 5:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenGreenHut(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), worldIn, random, chunkPos, 16);
 						break;
 					case 6:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenBrownHut(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), worldIn, random, chunkPos, 16);
 						break;
 					}
 				}
@@ -132,13 +132,13 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					switch (random.nextInt(7)) {
 					default:
 					case 1:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenCandyCaneType1(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType1(), worldIn, random, chunkPos, 16);
 						break;
 					case 2:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenCandyCaneType2(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType2(), worldIn, random, chunkPos, 16);
 						break;
 					case 3:
-						WorldGenHelper.generateStructureWithRandom(new WorldGenCandyCaneType3(), worldIn, random, chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType3(), worldIn, random, chunkPos, 16);
 						break;
 					}
 				}
@@ -150,10 +150,10 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					(new WorldGenCookieRocksType1()).generate(worldIn, random, blockpos);
 				}
 				if (random.nextInt(10) == 0) {
-					WorldGenHelper.generateLake(worldIn, random, chunkPos, ExtraPlanets_Fluids.LIQUID_CHOCOLATE, ExtraPlanets_Blocks.CAKE_BLOCKS);
+					WorldGenUtilities.generateLake(worldIn, random, chunkPos, ExtraPlanets_Fluids.LIQUID_CHOCOLATE, ExtraPlanets_Blocks.CAKE_BLOCKS);
 				}
 				if (random.nextInt(10) == 0) {
-					WorldGenHelper.generateLake(worldIn, random, chunkPos, ExtraPlanets_Fluids.LIQUID_CARAMEL, ExtraPlanets_Blocks.CAKE_BLOCKS);
+					WorldGenUtilities.generateLake(worldIn, random, chunkPos, ExtraPlanets_Fluids.LIQUID_CARAMEL, ExtraPlanets_Blocks.CAKE_BLOCKS);
 				}
 				for (int k4 = 0; k4 < this.reedsPerChunk; ++k4) {
 					int x = random.nextInt(16) + 8;
@@ -170,7 +170,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; i < this.blueTowerPerChunk; i++) {
 			if (random.nextInt(100) == 1) {
-				WorldGenHelper.generateStructureWithRandom(new WorldGenBlueTower(), worldIn, random, chunkPos, 8);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueTower(), worldIn, random, chunkPos, 8);
 			}
 		}
 

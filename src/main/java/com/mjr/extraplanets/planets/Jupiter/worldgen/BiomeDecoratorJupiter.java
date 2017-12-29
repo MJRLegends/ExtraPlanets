@@ -12,8 +12,8 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
@@ -81,12 +81,12 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.JUPITER_BLOCKS);
+				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.JUPITER_BLOCKS);
 			}
 		}
 
 		if (this.rand.nextInt(250) == 1) {
-			WorldGenHelper.generateStructure(new WorldGenBasicHideout(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
+			WorldGenUtilities.generateStructure(new WorldGenBasicHideout(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
