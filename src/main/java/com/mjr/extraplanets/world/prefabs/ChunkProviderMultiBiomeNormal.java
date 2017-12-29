@@ -18,6 +18,10 @@ import net.minecraft.world.gen.ChunkProviderOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
+/*
+ * Class from Galacticraft Core
+ * Credit micdoodle8, radfast
+ */
 public abstract class ChunkProviderMultiBiomeNormal extends ChunkProviderOverworld {
 	private Random rand;
 	protected World worldObj;
