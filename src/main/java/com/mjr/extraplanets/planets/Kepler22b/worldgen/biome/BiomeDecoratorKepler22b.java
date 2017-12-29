@@ -95,29 +95,29 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; i < 1; i++) {
-			WorldGenUtilities.generateStructureWithRandom(new WorldGenKepler22bDungeons(), worldIn, random, field_180294_c, 16, 256);
+			WorldGenUtilities.generateStructureWithRandom(new WorldGenKepler22bDungeons(), worldIn, random, this.field_180294_c, 16, 256);
 		}
 		for (int i = 0; i < 1; i++) {
 			if (generateHuts) {
 				if (random.nextInt(200) == 1) {
 					switch (random.nextInt(7)) {
 					case 1:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), worldIn, random, this.field_180294_c, 16);
 						break;
 					case 2:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), worldIn, random, this.field_180294_c, 16);
 						break;
 					case 3:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), worldIn, random, this.field_180294_c, 16);
 						break;
 					case 4:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), worldIn, random, this.field_180294_c, 16);
 						break;
 					case 5:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), worldIn, random, this.field_180294_c, 16);
 						break;
 					case 6:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), worldIn, random, this.field_180294_c, 16);
 						break;
 					}
 				}
@@ -129,13 +129,13 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					switch (random.nextInt(7)) {
 					default:
 					case 1:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType1(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType1(), worldIn, random, this.field_180294_c, 16);
 						break;
 					case 2:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType2(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType2(), worldIn, random, this.field_180294_c, 16);
 						break;
 					case 3:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType3(), worldIn, random, field_180294_c, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType3(), worldIn, random, this.field_180294_c, 16);
 						break;
 					}
 				}
@@ -147,10 +147,10 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					(new WorldGenCookieRocksType1()).generate(worldIn, random, blockpos);
 				}
 				if (random.nextInt(10) == 0) {
-					WorldGenUtilities.generateLake(worldIn, random, field_180294_c, ExtraPlanets_Fluids.LIQUID_CHOCOLATE, ExtraPlanets_Blocks.CAKE_BLOCKS);
+					WorldGenUtilities.generateLake(worldIn, random, this.field_180294_c, ExtraPlanets_Fluids.LIQUID_CHOCOLATE, ExtraPlanets_Blocks.CAKE_BLOCKS);
 				}
 				if (random.nextInt(10) == 0) {
-					WorldGenUtilities.generateLake(worldIn, random, field_180294_c, ExtraPlanets_Fluids.LIQUID_CARAMEL, ExtraPlanets_Blocks.CAKE_BLOCKS);
+					WorldGenUtilities.generateLake(worldIn, random, this.field_180294_c, ExtraPlanets_Fluids.LIQUID_CARAMEL, ExtraPlanets_Blocks.CAKE_BLOCKS);
 				}
 				for (int k4 = 0; k4 < this.reedsPerChunk; ++k4) {
 					int x = random.nextInt(16) + 8;
@@ -167,7 +167,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; i < this.blueTowerPerChunk; i++) {
 			if (random.nextInt(100) == 1) {
-				WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueTower(), worldIn, random, field_180294_c, 8);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueTower(), worldIn, random, this.field_180294_c, 8);
 			}
 		}
 
