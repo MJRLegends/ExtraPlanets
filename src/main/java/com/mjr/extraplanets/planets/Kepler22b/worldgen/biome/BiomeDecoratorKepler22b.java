@@ -95,10 +95,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; i < 1; i++) {
-			int x = this.field_180294_c.getX() + random.nextInt(16) + 8;
-			int y = random.nextInt(256);
-			int z = this.field_180294_c.getZ() + random.nextInt(16) + 8;
-			(new WorldGenKepler22bDungeons()).generate(worldIn, random, new BlockPos(x, y, z));
+			WorldGenUtilities.generateStructureWithRandom(new WorldGenKepler22bDungeons(), worldIn, random, field_180294_c, 16, 256);
 		}
 		for (int i = 0; i < 1; i++) {
 			if (generateHuts) {
