@@ -3,7 +3,6 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
@@ -15,13 +14,14 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomNormal;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeNormal;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
-public class ChunkProviderKepler22b extends ChunkProviderCustomNormal {
+public class ChunkProviderKepler22b extends ChunkProviderMultiBiomeNormal {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
-		ChunkProviderCustomNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState().withProperty(BlockBasicKepler22b.BASIC_TYPE, BlockBasicKepler22b.EnumBlockBasic.STONE);
-		ChunkProviderCustomNormal.waterBlock = Blocks.WATER.getDefaultState();
+		ChunkProviderMultiBiomeNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState().withProperty(BlockBasicKepler22b.BASIC_TYPE, BlockBasicKepler22b.EnumBlockBasic.STONE);
+		ChunkProviderMultiBiomeNormal.waterBlock = Blocks.WATER.getDefaultState();
 	}
 
 	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();

@@ -14,11 +14,10 @@ import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.gen.ChunkGeneratorOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-public abstract class ChunkProviderCustomNormal extends ChunkGeneratorOverworld {
+public abstract class ChunkProviderMultiBiomeNormal extends ChunkProviderOverworld {
 	private Random rand;
 	protected World worldObj;
 	private double[] depthBuffer;
@@ -42,7 +41,7 @@ public abstract class ChunkProviderCustomNormal extends ChunkGeneratorOverworld 
 
 	private List<MapGenBaseMeta> worldGenerators;
 
-	public ChunkProviderCustomNormal(World world, long seed, boolean flag) {
+	public ChunkProviderMultiBiomeNormal(World world, long seed, boolean flag) {
 		super(world, seed, flag, "");
 		this.depthBuffer = new double[256];
 		this.worldObj = world;
@@ -132,9 +131,9 @@ public abstract class ChunkProviderCustomNormal extends ChunkGeneratorOverworld 
 
 							for (int l2 = 0; l2 < 4; ++l2) {
 								if ((lvt_45_1_ += d16) > 0.0D) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderCustomNormal.stoneBlock);
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderMultiBiomeNormal.stoneBlock);
 								} else if (i2 * 8 + j2 < 63) {
-									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderCustomNormal.waterBlock);
+									p_180518_3_.setBlockState(i * 4 + k2, i2 * 8 + j2, l * 4 + l2, ChunkProviderMultiBiomeNormal.waterBlock);
 								}
 							}
 
@@ -263,7 +262,7 @@ public abstract class ChunkProviderCustomNormal extends ChunkGeneratorOverworld 
 			}
 		}
 	}
-	
+
 	@Override
 	public void populate(int chunkX, int chunkZ) {
 		BlockFalling.fallInstantly = true;
@@ -285,7 +284,6 @@ public abstract class ChunkProviderCustomNormal extends ChunkGeneratorOverworld 
 	public boolean generateStructures(Chunk chunkIn, int x, int z) {
 		return false;
 	}
-
 
 	@Override
 	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {

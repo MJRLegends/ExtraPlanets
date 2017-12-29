@@ -72,7 +72,7 @@ import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
-import com.mjr.extraplanets.world.CustomWorldProviderSpace;
+import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
 public class MainHandlerClient {
 
@@ -123,8 +123,8 @@ public class MainHandlerClient {
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
 		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider) && !playerBaseClient.isSpectator()
 				&& !minecraft.gameSettings.showDebugInfo) {
-			if ((player.world.provider instanceof CustomWorldProviderSpace)) {
-				CustomWorldProviderSpace provider = (CustomWorldProviderSpace) player.world.provider;
+			if ((player.world.provider instanceof WorldProviderRealisticSpace)) {
+				WorldProviderRealisticSpace provider = (WorldProviderRealisticSpace) player.world.provider;
 
 				if (Config.PRESSURE) {
 					int pressureLevel = provider.getPressureLevel();

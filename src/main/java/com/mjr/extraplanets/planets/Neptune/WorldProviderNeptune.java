@@ -18,9 +18,9 @@ import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeProviderNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
-import com.mjr.extraplanets.world.CustomWorldProviderSpace;
+import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
-public class WorldProviderNeptune extends CustomWorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
+public class WorldProviderNeptune extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
 	@Override
 	public Vector3 getFogColor() {

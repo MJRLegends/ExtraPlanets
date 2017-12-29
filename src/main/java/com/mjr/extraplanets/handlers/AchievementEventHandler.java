@@ -14,12 +14,12 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.items.tools.BasicAxe;
-import com.mjr.extraplanets.items.tools.BasicHoe;
-import com.mjr.extraplanets.items.tools.BasicPickaxe;
-import com.mjr.extraplanets.items.tools.BasicShovel;
-import com.mjr.extraplanets.items.tools.BasicSword;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
+import com.mjr.mjrlegendslib.item.BasicAxe;
+import com.mjr.mjrlegendslib.item.BasicHoe;
+import com.mjr.mjrlegendslib.item.BasicPickaxe;
+import com.mjr.mjrlegendslib.item.BasicShovel;
+import com.mjr.mjrlegendslib.item.BasicSword;
 
 public class AchievementEventHandler {
 	@SubscribeEvent

@@ -3,7 +3,6 @@ package com.mjr.extraplanets.planets.Jupiter.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 import net.minecraft.util.math.BlockPos;
@@ -17,17 +16,18 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
-import com.mjr.extraplanets.world.MapGenCavePlanet;
-import com.mjr.extraplanets.world.MapGenRavinePlanet;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
+import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeSpace;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
+public class ChunkProviderJupiter extends ChunkProviderMultiBiomeSpace {
 	private final MapGenVillageJupiter villageGenerator = new MapGenVillageJupiter();
 
 	private final BiomeDecoratorJupiter jupiterBiomeDecorator = new BiomeDecoratorJupiter();
 	private final BiomeDecoratorJupiterOther jupiterBiomeDecorator2 = new BiomeDecoratorJupiterOther();
-	private final MapGenRavinePlanet ravineGenerator = new MapGenRavinePlanet();
-	private final MapGenCavePlanet caveGenerator = new MapGenCavePlanet(ExtraPlanets_Blocks.JUPITER_BLOCKS, 0, 1, 2);
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.JUPITER_BLOCKS, 0, 1, 2);
 	
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonJupiter(new DungeonConfiguration(ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.DUNGEON_BRICK), 30,
 			8, 16, 7, 7, RoomBossJupiter.class, RoomTreasureJupiter.class));

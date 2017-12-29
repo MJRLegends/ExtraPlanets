@@ -8,8 +8,8 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenFrozenNitrogenPile;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 
@@ -62,12 +62,12 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.NITROGEN, ExtraPlanets_Blocks.NEPTUNE_BLOCKS);
+				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.NITROGEN, ExtraPlanets_Blocks.NEPTUNE_BLOCKS);
 			}
 		}
 
 		if (this.rand.nextInt(20) == 1) {
-			WorldGenHelper.generateStructure(new WorldGenFrozenNitrogenPile(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
+			WorldGenUtilities.generateStructure(new WorldGenFrozenNitrogenPile(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
 
 		isDecorating = false;

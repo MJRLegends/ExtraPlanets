@@ -16,11 +16,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.gen.ChunkGeneratorOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-public abstract class ChunkProviderCustomSpace extends ChunkGeneratorOverworld {
+/*
+ * Class from Galacticraft Core
+ * Credit micdoodle8, radfast
+ */
+public abstract class ChunkProviderMultiBiomeSpace extends ChunkProviderOverworld {
 	protected Random rand;
 	protected World worldObj;
 	private double[] depthBuffer;
@@ -53,7 +56,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkGeneratorOverworld {
 
 	private List<MapGenBaseMeta> worldGenerators;
 
-	public ChunkProviderCustomSpace(World world, long seed, boolean flag) {
+	public ChunkProviderMultiBiomeSpace(World world, long seed, boolean flag) {
 		super(world, seed, flag, "");
 		this.depthBuffer = new double[256];
 		this.worldObj = world;
@@ -109,8 +112,8 @@ public abstract class ChunkProviderCustomSpace extends ChunkGeneratorOverworld {
 		this.craterGen.setFrequency(0.015F);
 		for (int cx = chunkX - 2; cx <= chunkX + 2; cx++) {
 			for (int cz = chunkZ - 2; cz <= chunkZ + 2; cz++) {
-				for (int x = 0; x < ChunkProviderCustomSpace.CHUNK_SIZE_X; x++) {
-					for (int z = 0; z < ChunkProviderCustomSpace.CHUNK_SIZE_Z; z++) {
+				for (int x = 0; x < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_X; x++) {
+					for (int z = 0; z < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_Z; z++) {
 						if (Math.abs(this.randFromPoint(cx * 16 + x, (cz * 16 + z) * 1000)) < this.craterGen.getNoise(cx * 16 + x, cz * 16 + z) / this.CRATER_PROB) {
 							final Random random = new Random(cx * 16 + x + (cz * 16 + z) * 5000);
 							final EnumCraterSize cSize = EnumCraterSize.sizeArray[random.nextInt(EnumCraterSize.sizeArray.length)];
@@ -124,8 +127,8 @@ public abstract class ChunkProviderCustomSpace extends ChunkGeneratorOverworld {
 	}
 
 	public void makeCrater(int craterX, int craterZ, int chunkX, int chunkZ, int size, ChunkPrimer primer) {
-		for (int x = 0; x < ChunkProviderCustomSpace.CHUNK_SIZE_X; x++) {
-			for (int z = 0; z < ChunkProviderCustomSpace.CHUNK_SIZE_Z; z++) {
+		for (int x = 0; x < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_X; x++) {
+			for (int z = 0; z < ChunkProviderMultiBiomeSpace.CHUNK_SIZE_Z; z++) {
 				double xDev = craterX - (chunkX + x);
 				double zDev = craterZ - (chunkZ + z);
 				if (xDev * xDev + zDev * zDev < size * size) {
@@ -346,8 +349,8 @@ public abstract class ChunkProviderCustomSpace extends ChunkGeneratorOverworld {
 
 		BlockFalling.fallInstantly = false;
 	}
-    
-    @Override
+
+	@Override
 	public boolean generateStructures(Chunk chunkIn, int x, int z) {
 		return false;
 	}
@@ -356,14 +359,13 @@ public abstract class ChunkProviderCustomSpace extends ChunkGeneratorOverworld {
 	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position, boolean p_180513_4_) {
 		return null;
 	}
-	
-    @Override
-    public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos)
-    {
-        Biome biomegenbase = this.worldObj.getBiome(pos);
-        return biomegenbase.getSpawnableList(creatureType);
-    }
-	
+
+	@Override
+	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
+		Biome biomegenbase = this.worldObj.getBiome(pos);
+		return biomegenbase.getSpawnableList(creatureType);
+	}
+
 	@Override
 	public abstract void recreateStructures(Chunk chunk, int x, int z);
 
