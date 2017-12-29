@@ -116,6 +116,9 @@ import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT7TreasureChes
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChest;
 import com.mjr.extraplanets.world.WorldGenerationOverworld;
+import com.mjr.mjrlegendslib.block.BlockBasic;
+import com.mjr.mjrlegendslib.block.BlockBasicGravel;
+import com.mjr.mjrlegendslib.block.BlockBasicStairs;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Blocks {
@@ -305,87 +308,87 @@ public class ExtraPlanets_Blocks {
 	private static void initializeBlocks() {
 		if (Config.MERCURY) {
 			MERCURY_BLOCKS = new BlockBasicMercury("mercury");
-			MERCURY_GRAVEL = new BlockCustomGravel("mercury_gravel");
+			MERCURY_GRAVEL = new BlockBasicGravel("mercury_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.CERES) {
 			CERES_BLOCKS = new BlockBasicCeres("ceres");
-			CERES_GRAVEL = new BlockCustomGravel("ceres_gravel");
+			CERES_GRAVEL = new BlockBasicGravel("ceres_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.JUPITER) {
 			JUPITER_BLOCKS = new BlockBasicJupiter("jupiter");
-			JUPITER_GRAVEL = new BlockCustomGravel("jupiter_gravel");
-			VOLCANIC_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F);
-			ASH_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("ash_rock").setHardness(2.0F).setResistance(1.5F);
+			JUPITER_GRAVEL = new BlockBasicGravel("jupiter_gravel");
+			VOLCANIC_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ASH_ROCK = new BlockBasic(Material.ROCK).setUnlocalizedName("ash_rock").setHardness(2.0F).setResistance(1.5F).setCreativeTab(ExtraPlanets.BlocksTab);
 			ORANGE_SAND = new BlockSand("orange_sand").setHardness(0.6F);
-			ORANGE_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("orange_sandstone").setHardness(2F).setResistance(2F);
+			ORANGE_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("orange_sandstone").setHardness(2F).setResistance(2F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.SATURN) {
 			SATURN_BLOCKS = new BlockBasicSaturn("saturn");
-			SATURN_GRAVEL = new BlockCustomGravel("saturn_gravel");
+			SATURN_GRAVEL = new BlockBasicGravel("saturn_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.URANUS) {
 			URANUS_BLOCKS = new BlockBasicUranus("uranus");
-			DENSE_ICE = new BlockBasic(Material.ICE).setUnlocalizedName("dense_ice").setHardness(2.2F).setResistance(3.0F);
+			DENSE_ICE = new BlockBasic(Material.ICE).setUnlocalizedName("dense_ice").setHardness(2.2F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE_BLOCKS = new BlockBasicNeptune("neptune");
-			FROZEN_NITROGEN = new BlockBasic(Material.ICE).setUnlocalizedName("frozen_nitrogen");
+			FROZEN_NITROGEN = new BlockBasic(Material.ICE).setUnlocalizedName("frozen_nitrogen").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.PLUTO) {
 			PLUTO_BLOCKS = new BlockBasicPluto("pluto");
-			PLUTO_GRAVEL = new BlockCustomGravel("pluto_gravel");
+			PLUTO_GRAVEL = new BlockBasicGravel("pluto_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.ERIS) {
 			ERIS_BLOCKS = new BlockBasicEris("eris");
-			ERIS_GRAVEL = new BlockCustomGravel("eris_gravel");
+			ERIS_GRAVEL = new BlockBasicGravel("eris_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.EUROPA) {
 			EUROPA_BLOCKS = new BlockBasicEuropa("europa");
-			EUROPA_GRAVEL = new BlockCustomGravel("europa_gravel");
+			EUROPA_GRAVEL = new BlockBasicGravel("europa_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.IO) {
 			IO_BLOCKS = new BlockBasicIo("io");
-			IO_GRAVEL = new BlockCustomGravel("io_gravel");
+			IO_GRAVEL = new BlockBasicGravel("io_gravel");
 		}
 		if (Config.DEIMOS) {
 			DEIMOS_BLOCKS = new BlockBasicDeimos("deimos");
-			DEIMOS_GRAVEL = new BlockCustomGravel("deimos_gravel");
+			DEIMOS_GRAVEL = new BlockBasicGravel("deimos_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.PHOBOS) {
 			PHOBOS_BLOCKS = new BlockBasicPhobos("phobos");
-			PHOBOS_GRAVEL = new BlockCustomGravel("phobos_gravel");
+			PHOBOS_GRAVEL = new BlockBasicGravel("phobos_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.TRITON) {
 			TRITON_BLOCKS = new BlockBasicTriton("triton");
-			TRITON_GRAVEL = new BlockCustomGravel("triton_gravel");
+			TRITON_GRAVEL = new BlockBasicGravel("triton_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.CALLISTO) {
 			CALLISTO_BLOCKS = new BlockBasicCallisto("callisto");
-			CALLISTO_GRAVEL = new BlockCustomGravel("callisto_gravel");
+			CALLISTO_GRAVEL = new BlockBasicGravel("callisto_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.GANYMEDE) {
 			GANYMEDE_BLOCKS = new BlockBasicGanymede("ganymede");
-			GANYMEDE_GRAVEL = new BlockCustomGravel("ganymede_gravel");
+			GANYMEDE_GRAVEL = new BlockBasicGravel("ganymede_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.RHEA) {
 			RHEA_BLOCKS = new BlockBasicRhea("rhea");
-			RHEA_GRAVEL = new BlockCustomGravel("rhea_gravel");
+			RHEA_GRAVEL = new BlockBasicGravel("rhea_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.TITAN) {
 			TITAN_BLOCKS = new BlockBasicTitan("titan");
-			TITAN_GRAVEL = new BlockCustomGravel("titan_gravel");
+			TITAN_GRAVEL = new BlockBasicGravel("titan_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.OBERON) {
 			OBERON_BLOCKS = new BlockBasicOberon("oberon");
-			OBERON_GRAVEL = new BlockCustomGravel("oberon_gravel");
+			OBERON_GRAVEL = new BlockBasicGravel("oberon_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.TITANIA) {
 			TITANIA_BLOCKS = new BlockBasicTitania("titania");
-			TITANIA_GRAVEL = new BlockCustomGravel("titania_gravel");
+			TITANIA_GRAVEL = new BlockBasicGravel("titania_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.IAPETUS) {
 			IAPETUS_BLOCKS = new BlockBasicIapetus("iapetus");
-			IAPETUS_GRAVEL = new BlockCustomGravel("iapetus_gravel");
+			IAPETUS_GRAVEL = new BlockBasicGravel("iapetus_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
 			FOSSIL = new BlockFossil(Material.ROCK).setUnlocalizedName("fossil").setHardness(2.5F).setResistance(1.0F);
@@ -394,7 +397,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.SATURN && Config.FIRE_BOMB)
 			FIRE_BOMB = new BlockFireBomb().setUnlocalizedName("fire_bomb");
 		if (Config.ORE_LEAD_GENERATION)
-			ORE_LEAD = new BlockBasic(Material.ROCK).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F);
+			ORE_LEAD = new BlockBasic(Material.ROCK).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B_BLOCKS = new BlockBasicKepler22b("kepler22b");
 			KEPLER22B_GRASS_GREEN = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
@@ -407,10 +410,10 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.JUPITER || Config.KEPLER22B) {
 			RED_SAND = new BlockSand("red_sand").setHardness(0.6F);
-			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F);
+			RED_SANDSTONE = new BlockBasic(Material.ROCK).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.RADIATION)
-			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F);
+			ORE_POTASH = new BlockBasic(Material.ROCK).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 
 		ADVANCED_LAUCHPAD = new BlockCustomLandingPad("advanced_launch_pad");
 		ADVANCED_LAUCHPAD_FULL = new BlockCustomLandingPadFull("advanced_launch_pad_full");
@@ -425,52 +428,76 @@ public class ExtraPlanets_Blocks {
 
 	public static void initializeStairs() {
 		if (Config.MERCURY) {
-			MERCURY_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			MERCURY_SUB_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_sub_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			MERCURY_STONE_STAIRS = new BlockBasicStairs("mercury_stairs_stone", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE)).setHardness(2.0F);
-			MERCURY_STONE_BRICKS_STAIRS = new BlockBasicStairs("mercury_stairs_stone_bricks", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			MERCURY_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			MERCURY_SUB_SURFACE_STAIRS = new BlockBasicStairs("mercury_stairs_sub_surface", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			MERCURY_STONE_STAIRS = new BlockBasicStairs("mercury_stairs_stone", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			MERCURY_STONE_BRICKS_STAIRS = new BlockBasicStairs("mercury_stairs_stone_bricks", MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F)
+					.setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.CERES) {
-			CERES_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			CERES_SUB_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_sub_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			CERES_STONE_STAIRS = new BlockBasicStairs("ceres_stairs_stone", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE)).setHardness(2.0F);
-			CERES_STONE_BRICKS_STAIRS = new BlockBasicStairs("ceres_stairs_stone_bricks", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			CERES_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			CERES_SUB_SURFACE_STAIRS = new BlockBasicStairs("ceres_stairs_sub_surface", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			CERES_STONE_STAIRS = new BlockBasicStairs("ceres_stairs_stone", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			CERES_STONE_BRICKS_STAIRS = new BlockBasicStairs("ceres_stairs_stone_bricks", CERES_BLOCKS.getDefaultState().withProperty(BlockBasicCeres.BASIC_TYPE, BlockBasicCeres.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.JUPITER) {
-			JUPITER_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			JUPITER_SUB_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_sub_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			JUPITER_STONE_STAIRS = new BlockBasicStairs("jupiter_stairs_stone", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONE)).setHardness(2.0F);
-			JUPITER_STONE_BRICKS_STAIRS = new BlockBasicStairs("jupiter_stairs_stone_bricks", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			JUPITER_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			JUPITER_SUB_SURFACE_STAIRS = new BlockBasicStairs("jupiter_stairs_sub_surface", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			JUPITER_STONE_STAIRS = new BlockBasicStairs("jupiter_stairs_stone", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			JUPITER_STONE_BRICKS_STAIRS = new BlockBasicStairs("jupiter_stairs_stone_bricks", JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F)
+					.setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.SATURN) {
-			SATURN_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			SATURN_SUB_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_sub_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			SATURN_STONE_STAIRS = new BlockBasicStairs("saturn_stairs_stone", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONE)).setHardness(2.0F);
-			SATURN_STONE_BRICKS_STAIRS = new BlockBasicStairs("saturn_stairs_stone_bricks", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			SATURN_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			SATURN_SUB_SURFACE_STAIRS = new BlockBasicStairs("saturn_stairs_sub_surface", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			SATURN_STONE_STAIRS = new BlockBasicStairs("saturn_stairs_stone", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			SATURN_STONE_BRICKS_STAIRS = new BlockBasicStairs("saturn_stairs_stone_bricks", SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.URANUS) {
-			URANUS_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			URANUS_SUB_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_sub_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			URANUS_STONE_STAIRS = new BlockBasicStairs("uranus_stairs_stone", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONE)).setHardness(2.0F);
-			URANUS_STONE_BRICKS_STAIRS = new BlockBasicStairs("uranus_stairs_stone_bricks", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			URANUS_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			URANUS_SUB_SURFACE_STAIRS = new BlockBasicStairs("uranus_stairs_sub_surface", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			URANUS_STONE_STAIRS = new BlockBasicStairs("uranus_stairs_stone", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			URANUS_STONE_BRICKS_STAIRS = new BlockBasicStairs("uranus_stairs_stone_bricks", URANUS_BLOCKS.getDefaultState().withProperty(BlockBasicUranus.BASIC_TYPE, BlockBasicUranus.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.NEPTUNE) {
-			NEPTUNE_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			NEPTUNE_SUB_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_sub_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			NEPTUNE_STONE_STAIRS = new BlockBasicStairs("neptune_stairs_stone", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE)).setHardness(2.0F);
-			NEPTUNE_STONE_BRICKS_STAIRS = new BlockBasicStairs("neptune_stairs_stone_bricks", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			NEPTUNE_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			NEPTUNE_SUB_SURFACE_STAIRS = new BlockBasicStairs("neptune_stairs_sub_surface", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			NEPTUNE_STONE_STAIRS = new BlockBasicStairs("neptune_stairs_stone", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			NEPTUNE_STONE_BRICKS_STAIRS = new BlockBasicStairs("neptune_stairs_stone_bricks", NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F)
+					.setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.PLUTO) {
-			PLUTO_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			PLUTO_SUB_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_sub_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			PLUTO_STONE_STAIRS = new BlockBasicStairs("pluto_stairs_stone", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONE)).setHardness(2.0F);
-			PLUTO_STONE_BRICKS_STAIRS = new BlockBasicStairs("pluto_stairs_stone_bricks", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			PLUTO_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			PLUTO_SUB_SURFACE_STAIRS = new BlockBasicStairs("pluto_stairs_sub_surface", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			PLUTO_STONE_STAIRS = new BlockBasicStairs("pluto_stairs_stone", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			PLUTO_STONE_BRICKS_STAIRS = new BlockBasicStairs("pluto_stairs_stone_bricks", PLUTO_BLOCKS.getDefaultState().withProperty(BlockBasicPluto.BASIC_TYPE, BlockBasicPluto.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 		if (Config.ERIS) {
-			ERIS_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SURFACE)).setHardness(2.0F);
-			ERIS_SUB_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_sub_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F);
-			ERIS_STONE_STAIRS = new BlockBasicStairs("eris_stairs_stone", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONE)).setHardness(2.0F);
-			ERIS_STONE_BRICKS_STAIRS = new BlockBasicStairs("eris_stairs_stone_bricks", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F);
+			ERIS_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SURFACE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ERIS_SUB_SURFACE_STAIRS = new BlockBasicStairs("eris_stairs_sub_surface", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.SUB_SURFACE)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
+			ERIS_STONE_STAIRS = new BlockBasicStairs("eris_stairs_stone", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONE)).setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ERIS_STONE_BRICKS_STAIRS = new BlockBasicStairs("eris_stairs_stone_bricks", ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.STONEBRICKS)).setHardness(2.0F).setCreativeTab(
+					ExtraPlanets.BlocksTab);
 		}
 	}
 
