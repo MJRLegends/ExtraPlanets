@@ -344,8 +344,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addVariants(Constants.modID, "tier3_kit", "tier3_kitfull", "tier3_kitbasic_setup", "tier3_kitwithout_oxygen_setup", "tier3_kitwithout_thermal_padding", "tier3_kitjust_oxygen_setup", "tier3_kitjust_protection");
 		ClientUtilities.addVariants(Constants.modID, "tier4_kit", "tier4_kitfull", "tier4_kitbasic_setup", "tier4_kitwithout_oxygen_setup", "tier4_kitwithout_thermal_padding", "tier4_kitjust_oxygen_setup", "tier4_kitjust_protection");
 		ClientUtilities.addVariants(Constants.modID, "tier5_kit", "tier5_kitfull", "tier5_kitbasic_setup", "tier5_kitwithout_oxygen_setup", "tier5_kitwithout_thermal_padding", "tier5_kitjust_oxygen_setup", "tier5_kitjust_protection");
-		ClientUtilities
-				.addVariants("candy_blocks", "candy_cane_red", "candy_cane_green", "candy_cane_blue", "candy_cane_orange", "candy_cane_magenta", "candy_cane_pink", "candy_cane_lime", "candy_cane_purple", "candy_cane_brown", "candy_cane_black");
+		ClientUtilities.addVariants(Constants.modID, "candy_blocks", "candy_cane_red", "candy_cane_green", "candy_cane_blue", "candy_cane_orange", "candy_cane_magenta", "candy_cane_pink", "candy_cane_lime", "candy_cane_purple", "candy_cane_brown", "candy_cane_black");
 		ClientUtilities.addVariants(Constants.modID, "candy_blocks_horizontal", "candy_cane_red_horizontal", "candy_cane_green_horizontal", "candy_cane_blue_horizontal", "candy_cane_orange_horizontal", "candy_cane_magenta_horizontal", "candy_cane_pink_horizontal",
 				"candy_cane_lime_horizontal", "candy_cane_purple_horizontal", "candy_cane_brown_horizontal", "candy_cane_black_horizontal");
 		ClientUtilities.addVariants(Constants.modID, "cake_blocks", "cake_block", "cake_block_red_velvet", "cake_block_chocolate", "white_icing_red_dots", "white_icing_green_dots", "white_icing_pink_dots", "white_icing_orange_dots", "cookie_rocks");
