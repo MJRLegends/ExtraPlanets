@@ -361,72 +361,72 @@ public class ExtraPlanets {
 
 	private void registerNonMobEntities() {
 		if (Config.CERES && Config.NUCLEAR_BOMB)
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityNuclearBombPrimed.class, "NuclearBombPrimed", 150, 1, true);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityNuclearBombPrimed.class, "NuclearBombPrimed", 150, 1, true);
 		if (Config.SATURN && Config.FIRE_BOMB)
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityFireBombPrimed.class, "FireBombPrimed", 150, 1, true);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityFireBombPrimed.class, "FireBombPrimed", 150, 1, true);
 		if (Config.MERCURY) {
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityTier4Rocket.class, "EntityTier4Rocket", 150, 1, false);
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityMercuryLander.class, "EntityMercuryLander", 150, 5, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier4Rocket.class, "EntityTier4Rocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityMercuryLander.class, "EntityMercuryLander", 150, 5, false);
 		}
 		if (Config.JUPITER) {
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityTier5Rocket.class, "EntityTier5Rocket", 150, 1, false);
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityJupiterLander.class, "EntityJupiterLander", 150, 5, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier5Rocket.class, "EntityTier5Rocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityJupiterLander.class, "EntityJupiterLander", 150, 5, false);
 		}
 		if (Config.SATURN) {
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityTier6Rocket.class, "EntityTier6Rocket", 150, 1, false);
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntitySaturnLander.class, "EntitySaturnLander", 150, 5, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier6Rocket.class, "EntityTier6Rocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntitySaturnLander.class, "EntitySaturnLander", 150, 5, false);
 		}
 		if (Config.URANUS) {
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityTier7Rocket.class, "EntityTier7Rocket", 150, 1, false);
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityUranusLander.class, "EntityUranusLander", 150, 5, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier7Rocket.class, "EntityTier7Rocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityUranusLander.class, "EntityUranusLander", 150, 5, false);
 		}
 		if (Config.NEPTUNE) {
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityTier8Rocket.class, "EntityTier8Rocket", 150, 1, false);
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityNeptuneLander.class, "EntityNeptuneLander", 150, 5, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier8Rocket.class, "EntityTier8Rocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityNeptuneLander.class, "EntityNeptuneLander", 150, 5, false);
 		}
 		if (Config.PLUTO)
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityTier9Rocket.class, "EntityTier9Rocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier9Rocket.class, "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityTier10Rocket.class, "EntityTier10Rocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier10Rocket.class, "EntityTier10Rocket", 150, 1, false);
 		if (Config.ERIS && Config.KEPLER22B)
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityElectricRocket.class, "EntityTier10ElectricRocket", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityElectricRocket.class, "EntityTier10ElectricRocket", 150, 1, false);
 		if (Config.MARS_ROVER)
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
 		if (Config.VENUS_ROVER)
-			RegisterUtilities.registerNonMobEntity(Constants.modID, EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
+			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityVenusRover.class, "EntityVenusRover", 150, 1, false);
 	}
 
 	private void registerCreatures() {
 		// Dungeon Bosses
 		if (Config.MERCURY)
 			if (Config.USE_DEFAULT_BOSSES)
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityCreeperBossMercury.class, "CreeperBossMercury", 894731, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossMercury.class, "CreeperBossMercury", 894731, 0);
 			else
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityEvolvedMagmaCubeBoss.class, "EvolvedMagmaCubeBoss", 3407872, 16579584);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedMagmaCubeBoss.class, "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		if (Config.JUPITER)
 			if (Config.USE_DEFAULT_BOSSES)
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
 			else
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityEvolvedFireBatBoss.class, "EvolvedFireBatBoss", 16167425, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedFireBatBoss.class, "EvolvedFireBatBoss", 16167425, 0);
 		if (Config.SATURN)
 			if (Config.USE_DEFAULT_BOSSES)
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityCreeperBossSaturn.class, "CreeperBossSaturn", 894731, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossSaturn.class, "CreeperBossSaturn", 894731, 0);
 			else
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityEvolvedGhastBoss.class, "EvolvedGhastBoss", 894731, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedGhastBoss.class, "EvolvedGhastBoss", 894731, 0);
 		if (Config.URANUS)
 			if (Config.USE_DEFAULT_BOSSES)
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossUranus.class, "CreeperBossUranus", 894731, 0);
 			else
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityEvolvedIceSlimeBoss.class, "EvolvedIceSlimeBoss", 16382457, 44975);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedIceSlimeBoss.class, "EvolvedIceSlimeBoss", 16382457, 44975);
 		if (Config.NEPTUNE)
 			if (Config.USE_DEFAULT_BOSSES)
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityCreeperBossNeptune.class, "CreeperBossNeptune", 894731, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossNeptune.class, "CreeperBossNeptune", 894731, 0);
 			else
-				RegisterUtilities.registerMobEntity(Constants.modID, EntityEvolvedSnowmanBoss.class, "EvolvedSnowmanBoss", 894731, 0);
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedSnowmanBoss.class, "EvolvedSnowmanBoss", 894731, 0);
 		if (Config.PLUTO)
-			RegisterUtilities.registerMobEntity(Constants.modID, EntityCreeperBossPluto.class, "CreeperBossPluto", 894731, 0);
+			RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossPluto.class, "CreeperBossPluto", 894731, 0);
 		if (Config.ERIS)
-			RegisterUtilities.registerMobEntity(Constants.modID, EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);
+			RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);
 	}
 
 	private void registerFluidSubmergedTextures() {
