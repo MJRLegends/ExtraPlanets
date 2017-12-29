@@ -5,6 +5,12 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.mjrlegendslib.item.BasicAxe;
+import com.mjr.mjrlegendslib.item.BasicHoe;
+import com.mjr.mjrlegendslib.item.BasicPickaxe;
+import com.mjr.mjrlegendslib.item.BasicShovel;
+import com.mjr.mjrlegendslib.item.BasicSword;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Tools {
@@ -131,118 +137,118 @@ public class ExtraPlanets_Tools {
 
 	private static void initializeTools() {
 		if (Config.MERCURY && Config.ITEMS_MERCURY) {
-			MERCURY_PICKAXE = new BasicPickaxe(MERCURY_MATERIAL, "mercury_pickaxe");
-			MERCURY_AXE = new BasicAxe(MERCURY_MATERIAL, "mercury_axe");
-			MERCURY_HOE = new BasicHoe(MERCURY_MATERIAL, "mercury_hoe");
-			MERCURY_SHOVEL = new BasicShovel(MERCURY_MATERIAL, "mercury_shovel");
-			MERCURY_SWORD = new BasicSword(MERCURY_MATERIAL, "mercury_sword");
+			MERCURY_PICKAXE = new BasicPickaxe(MERCURY_MATERIAL, "mercury_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			MERCURY_AXE = new BasicAxe(MERCURY_MATERIAL, "mercury_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			MERCURY_HOE = new BasicHoe(MERCURY_MATERIAL, "mercury_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			MERCURY_SHOVEL = new BasicShovel(MERCURY_MATERIAL, "mercury_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			MERCURY_SWORD = new BasicSword(MERCURY_MATERIAL, "mercury_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 		}
 		if (Config.MERCURY && Config.ITEMS_CARBON) {
-			CARBON_PICKAXE = new BasicPickaxe(CARBON_MATERIAL, "carbon_pickaxe");
-			CARBON_AXE = new BasicAxe(CARBON_MATERIAL, "carbon_axe");
-			CARBON_HOE = new BasicHoe(CARBON_MATERIAL, "carbon_hoe");
-			CARBON_SHOVEL = new BasicShovel(CARBON_MATERIAL, "carbon_shovel");
-			CARBON_SWORD = new BasicSword(CARBON_MATERIAL, "carbon_sword");
+			CARBON_PICKAXE = new BasicPickaxe(CARBON_MATERIAL, "carbon_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			CARBON_AXE = new BasicAxe(CARBON_MATERIAL, "carbon_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			CARBON_HOE = new BasicHoe(CARBON_MATERIAL, "carbon_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			CARBON_SHOVEL = new BasicShovel(CARBON_MATERIAL, "carbon_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			CARBON_SWORD = new BasicSword(CARBON_MATERIAL, "carbon_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 		}
 		if (Config.CERES && Config.ITEMS_URANIUM) {
-			URANIUM_PICKAXE = new BasicPickaxe(URANIUM_MATERIAL, "uranium_pickaxe");
-			URANIUM_AXE = new BasicAxe(URANIUM_MATERIAL, "uranium_axe");
-			URANIUM_HOE = new BasicHoe(URANIUM_MATERIAL, "uranium_hoe");
-			URANIUM_SHOVEL = new BasicShovel(URANIUM_MATERIAL, "uranium_shovel");
-			URANIUM_SWORD = new BasicSword(URANIUM_MATERIAL, "uranium_sword");
+			URANIUM_PICKAXE = new BasicPickaxe(URANIUM_MATERIAL, "uranium_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			URANIUM_AXE = new BasicAxe(URANIUM_MATERIAL, "uranium_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			URANIUM_HOE = new BasicHoe(URANIUM_MATERIAL, "uranium_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			URANIUM_SHOVEL = new BasicShovel(URANIUM_MATERIAL, "uranium_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			URANIUM_SWORD = new BasicSword(URANIUM_MATERIAL, "uranium_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 		}
 		if (Config.JUPITER) {
 			if (Config.ITEMS_PALLADIUM) {
-				PALLADIUM_PICKAXE = new BasicPickaxe(PALLADIUM_MATERIAL, "palladium_pickaxe");
-				PALLADIUM_AXE = new BasicAxe(PALLADIUM_MATERIAL, "palladium_axe");
-				PALLADIUM_HOE = new BasicHoe(PALLADIUM_MATERIAL, "palladium_hoe");
-				PALLADIUM_SHOVEL = new BasicShovel(PALLADIUM_MATERIAL, "palladium_shovel");
-				PALLADIUM_SWORD = new BasicSword(PALLADIUM_MATERIAL, "palladium_sword");
+				PALLADIUM_PICKAXE = new BasicPickaxe(PALLADIUM_MATERIAL, "palladium_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+				PALLADIUM_AXE = new BasicAxe(PALLADIUM_MATERIAL, "palladium_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+				PALLADIUM_HOE = new BasicHoe(PALLADIUM_MATERIAL, "palladium_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+				PALLADIUM_SHOVEL = new BasicShovel(PALLADIUM_MATERIAL, "palladium_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+				PALLADIUM_SWORD = new BasicSword(PALLADIUM_MATERIAL, "palladium_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 			}
 			if (Config.ITEMS_GEM_RED) {
-				RED_GEM_PICKAXE = new BasicPickaxe(RED_GEM_MATERIAL, "red_gem_pickaxe");
-				RED_GEM_AXE = new BasicAxe(RED_GEM_MATERIAL, "red_gem_axe");
-				RED_GEM_HOE = new BasicHoe(RED_GEM_MATERIAL, "red_gem_hoe");
-				RED_GEM_SHOVEL = new BasicShovel(RED_GEM_MATERIAL, "red_gem_shovel");
-				RED_GEM_SWORD = new BasicSword(RED_GEM_MATERIAL, "red_gem_sword");
+				RED_GEM_PICKAXE = new BasicPickaxe(RED_GEM_MATERIAL, "red_gem_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+				RED_GEM_AXE = new BasicAxe(RED_GEM_MATERIAL, "red_gem_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+				RED_GEM_HOE = new BasicHoe(RED_GEM_MATERIAL, "red_gem_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+				RED_GEM_SHOVEL = new BasicShovel(RED_GEM_MATERIAL, "red_gem_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+				RED_GEM_SWORD = new BasicSword(RED_GEM_MATERIAL, "red_gem_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 			}
 		}
 		if (Config.SATURN && Config.ITEMS_MAGNESIUM) {
-			MAGNESIUM_PICKAXE = new BasicPickaxe(MAGNESIUM_MATERIAL, "magnesium_pickaxe");
-			MAGNESIUM_AXE = new BasicAxe(MAGNESIUM_MATERIAL, "magnesium_axe");
-			MAGNESIUM_HOE = new BasicHoe(MAGNESIUM_MATERIAL, "magnesium_hoe");
-			MAGNESIUM_SHOVEL = new BasicShovel(MAGNESIUM_MATERIAL, "magnesium_shovel");
-			MAGNESIUM_SWORD = new BasicSword(MAGNESIUM_MATERIAL, "magnesium_sword");
+			MAGNESIUM_PICKAXE = new BasicPickaxe(MAGNESIUM_MATERIAL, "magnesium_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			MAGNESIUM_AXE = new BasicAxe(MAGNESIUM_MATERIAL, "magnesium_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			MAGNESIUM_HOE = new BasicHoe(MAGNESIUM_MATERIAL, "magnesium_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			MAGNESIUM_SHOVEL = new BasicShovel(MAGNESIUM_MATERIAL, "magnesium_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			MAGNESIUM_SWORD = new BasicSword(MAGNESIUM_MATERIAL, "magnesium_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 		}
 		if (Config.URANUS) {
 			if (Config.ITEMS_PALLADIUM) {
-				CRYSTAL_PICKAXE = new BasicPickaxe(CRYSTAL_MATERIAL, "crystal_pickaxe");
-				CRYSTAL_AXE = new BasicAxe(CRYSTAL_MATERIAL, "crystal_axe");
-				CRYSTAL_HOE = new BasicHoe(CRYSTAL_MATERIAL, "crystal_hoe");
-				CRYSTAL_SHOVEL = new BasicShovel(CRYSTAL_MATERIAL, "crystal_shovel");
-				CRYSTAL_SWORD = new BasicSword(CRYSTAL_MATERIAL, "crystal_sword");
+				CRYSTAL_PICKAXE = new BasicPickaxe(CRYSTAL_MATERIAL, "crystal_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+				CRYSTAL_AXE = new BasicAxe(CRYSTAL_MATERIAL, "crystal_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+				CRYSTAL_HOE = new BasicHoe(CRYSTAL_MATERIAL, "crystal_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+				CRYSTAL_SHOVEL = new BasicShovel(CRYSTAL_MATERIAL, "crystal_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+				CRYSTAL_SWORD = new BasicSword(CRYSTAL_MATERIAL, "crystal_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 			}
 			if (Config.ITEMS_GEM_WHITE) {
-				WHITE_GEM_PICKAXE = new BasicPickaxe(WHITE_GEM_MATERIAL, "white_gem_pickaxe");
-				WHITE_GEM_AXE = new BasicAxe(WHITE_GEM_MATERIAL, "white_gem_axe");
-				WHITE_GEM_HOE = new BasicHoe(WHITE_GEM_MATERIAL, "white_gem_hoe");
-				WHITE_GEM_SHOVEL = new BasicShovel(WHITE_GEM_MATERIAL, "white_gem_shovel");
-				WHITE_GEM_SWORD = new BasicSword(WHITE_GEM_MATERIAL, "white_gem_sword");
+				WHITE_GEM_PICKAXE = new BasicPickaxe(WHITE_GEM_MATERIAL, "white_gem_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+				WHITE_GEM_AXE = new BasicAxe(WHITE_GEM_MATERIAL, "white_gem_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+				WHITE_GEM_HOE = new BasicHoe(WHITE_GEM_MATERIAL, "white_gem_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+				WHITE_GEM_SHOVEL = new BasicShovel(WHITE_GEM_MATERIAL, "white_gem_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+				WHITE_GEM_SWORD = new BasicSword(WHITE_GEM_MATERIAL, "white_gem_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 			}
 		}
 		if (Config.NEPTUNE) {
 			if (Config.ITEMS_GEM_BLUE) {
-				BLUE_GEM_PICKAXE = new BasicPickaxe(BLUE_GEM_MATERIAL, "blue_gem_pickaxe");
-				BLUE_GEM_AXE = new BasicAxe(BLUE_GEM_MATERIAL, "blue_gem_axe");
-				BLUE_GEM_HOE = new BasicHoe(BLUE_GEM_MATERIAL, "blue_gem_hoe");
-				BLUE_GEM_SHOVEL = new BasicShovel(BLUE_GEM_MATERIAL, "blue_gem_shovel");
-				BLUE_GEM_SWORD = new BasicSword(BLUE_GEM_MATERIAL, "blue_gem_sword");
+				BLUE_GEM_PICKAXE = new BasicPickaxe(BLUE_GEM_MATERIAL, "blue_gem_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+				BLUE_GEM_AXE = new BasicAxe(BLUE_GEM_MATERIAL, "blue_gem_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+				BLUE_GEM_HOE = new BasicHoe(BLUE_GEM_MATERIAL, "blue_gem_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+				BLUE_GEM_SHOVEL = new BasicShovel(BLUE_GEM_MATERIAL, "blue_gem_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+				BLUE_GEM_SWORD = new BasicSword(BLUE_GEM_MATERIAL, "blue_gem_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 			}
 			if (Config.ITEMS_ZINC) {
-				ZINC_PICKAXE = new BasicPickaxe(ZINC_MATERIAL, "zinc_pickaxe");
-				ZINC_AXE = new BasicAxe(ZINC_MATERIAL, "zinc_axe");
-				ZINC_HOE = new BasicHoe(ZINC_MATERIAL, "zinc_hoe");
-				ZINC_SHOVEL = new BasicShovel(ZINC_MATERIAL, "zinc_shovel");
-				ZINC_SWORD = new BasicSword(ZINC_MATERIAL, "zinc_sword");
+				ZINC_PICKAXE = new BasicPickaxe(ZINC_MATERIAL, "zinc_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+				ZINC_AXE = new BasicAxe(ZINC_MATERIAL, "zinc_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+				ZINC_HOE = new BasicHoe(ZINC_MATERIAL, "zinc_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+				ZINC_SHOVEL = new BasicShovel(ZINC_MATERIAL, "zinc_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+				ZINC_SWORD = new BasicSword(ZINC_MATERIAL, "zinc_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 			}
 		}
 		if (Config.PLUTO && Config.ITEMS_TUNGSTEN) {
-			TUNGSTEN_PICKAXE = new BasicPickaxe(TUNGSTEN_MATERIAL, "tungsten_pickaxe");
-			TUNGSTEN_AXE = new BasicAxe(TUNGSTEN_MATERIAL, "tungsten_axe");
-			TUNGSTEN_HOE = new BasicHoe(TUNGSTEN_MATERIAL, "tungsten_hoe");
-			TUNGSTEN_SHOVEL = new BasicShovel(TUNGSTEN_MATERIAL, "tungsten_shovel");
-			TUNGSTEN_SWORD = new BasicSword(TUNGSTEN_MATERIAL, "tungsten_sword");
+			TUNGSTEN_PICKAXE = new BasicPickaxe(TUNGSTEN_MATERIAL, "tungsten_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			TUNGSTEN_AXE = new BasicAxe(TUNGSTEN_MATERIAL, "tungsten_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			TUNGSTEN_HOE = new BasicHoe(TUNGSTEN_MATERIAL, "tungsten_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			TUNGSTEN_SHOVEL = new BasicShovel(TUNGSTEN_MATERIAL, "tungsten_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			TUNGSTEN_SWORD = new BasicSword(TUNGSTEN_MATERIAL, "tungsten_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 		}
 		if (Config.KEPLER22B && Config.ITEMS_KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			BLUE_DIAMOND_PICKAXE = new BasicPickaxe(BLUE_DIAMOND_MATERIAL, "blue_diamond_pickaxe");
-			BLUE_DIAMOND_AXE = new BasicAxe(BLUE_DIAMOND_MATERIAL, "blue_diamond_axe");
-			BLUE_DIAMOND_HOE = new BasicHoe(BLUE_DIAMOND_MATERIAL, "blue_diamond_hoe");
-			BLUE_DIAMOND_SHOVEL = new BasicShovel(BLUE_DIAMOND_MATERIAL, "blue_diamond_shovel");
-			BLUE_DIAMOND_SWORD = new BasicSword(BLUE_DIAMOND_MATERIAL, "blue_diamond_sword");
+			BLUE_DIAMOND_PICKAXE = new BasicPickaxe(BLUE_DIAMOND_MATERIAL, "blue_diamond_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			BLUE_DIAMOND_AXE = new BasicAxe(BLUE_DIAMOND_MATERIAL, "blue_diamond_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			BLUE_DIAMOND_HOE = new BasicHoe(BLUE_DIAMOND_MATERIAL, "blue_diamond_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			BLUE_DIAMOND_SHOVEL = new BasicShovel(BLUE_DIAMOND_MATERIAL, "blue_diamond_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			BLUE_DIAMOND_SWORD = new BasicSword(BLUE_DIAMOND_MATERIAL, "blue_diamond_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 
-			RED_DIAMOND_PICKAXE = new BasicPickaxe(RED_DIAMOND_MATERIAL, "red_diamond_pickaxe");
-			RED_DIAMOND_AXE = new BasicAxe(RED_DIAMOND_MATERIAL, "red_diamond_axe");
-			RED_DIAMOND_HOE = new BasicHoe(RED_DIAMOND_MATERIAL, "red_diamond_hoe");
-			RED_DIAMOND_SHOVEL = new BasicShovel(RED_DIAMOND_MATERIAL, "red_diamond_shovel");
-			RED_DIAMOND_SWORD = new BasicSword(RED_DIAMOND_MATERIAL, "red_diamond_sword");
+			RED_DIAMOND_PICKAXE = new BasicPickaxe(RED_DIAMOND_MATERIAL, "red_diamond_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			RED_DIAMOND_AXE = new BasicAxe(RED_DIAMOND_MATERIAL, "red_diamond_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			RED_DIAMOND_HOE = new BasicHoe(RED_DIAMOND_MATERIAL, "red_diamond_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			RED_DIAMOND_SHOVEL = new BasicShovel(RED_DIAMOND_MATERIAL, "red_diamond_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			RED_DIAMOND_SWORD = new BasicSword(RED_DIAMOND_MATERIAL, "red_diamond_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 
-			PURPLE_DIAMOND_PICKAXE = new BasicPickaxe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_pickaxe");
-			PURPLE_DIAMOND_AXE = new BasicAxe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_axe");
-			PURPLE_DIAMOND_HOE = new BasicHoe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_hoe");
-			PURPLE_DIAMOND_SHOVEL = new BasicShovel(PURPLE_DIAMOND_MATERIAL, "purple_diamond_shovel");
-			PURPLE_DIAMOND_SWORD = new BasicSword(PURPLE_DIAMOND_MATERIAL, "purple_diamond_sword");
+			PURPLE_DIAMOND_PICKAXE = new BasicPickaxe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			PURPLE_DIAMOND_AXE = new BasicAxe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			PURPLE_DIAMOND_HOE = new BasicHoe(PURPLE_DIAMOND_MATERIAL, "purple_diamond_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			PURPLE_DIAMOND_SHOVEL = new BasicShovel(PURPLE_DIAMOND_MATERIAL, "purple_diamond_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			PURPLE_DIAMOND_SWORD = new BasicSword(PURPLE_DIAMOND_MATERIAL, "purple_diamond_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 
-			YELLOW_DIAMOND_PICKAXE = new BasicPickaxe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_pickaxe");
-			YELLOW_DIAMOND_AXE = new BasicAxe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_axe");
-			YELLOW_DIAMOND_HOE = new BasicHoe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_hoe");
-			YELLOW_DIAMOND_SHOVEL = new BasicShovel(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_shovel");
-			YELLOW_DIAMOND_SWORD = new BasicSword(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_sword");
+			YELLOW_DIAMOND_PICKAXE = new BasicPickaxe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			YELLOW_DIAMOND_AXE = new BasicAxe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			YELLOW_DIAMOND_HOE = new BasicHoe(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			YELLOW_DIAMOND_SHOVEL = new BasicShovel(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			YELLOW_DIAMOND_SWORD = new BasicSword(YELLOW_DIAMOND_MATERIAL, "yellow_diamond_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 
-			GREEN_DIAMOND_PICKAXE = new BasicPickaxe(GREEN_DIAMOND_MATERIAL, "green_diamond_pickaxe");
-			GREEN_DIAMOND_AXE = new BasicAxe(GREEN_DIAMOND_MATERIAL, "green_diamond_axe");
-			GREEN_DIAMOND_HOE = new BasicHoe(GREEN_DIAMOND_MATERIAL, "green_diamond_hoe");
-			GREEN_DIAMOND_SHOVEL = new BasicShovel(GREEN_DIAMOND_MATERIAL, "green_diamond_shovel");
-			GREEN_DIAMOND_SWORD = new BasicSword(GREEN_DIAMOND_MATERIAL, "green_diamond_sword");
+			GREEN_DIAMOND_PICKAXE = new BasicPickaxe(GREEN_DIAMOND_MATERIAL, "green_diamond_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
+			GREEN_DIAMOND_AXE = new BasicAxe(GREEN_DIAMOND_MATERIAL, "green_diamond_axe").setCreativeTab(ExtraPlanets.ToolsTab);
+			GREEN_DIAMOND_HOE = new BasicHoe(GREEN_DIAMOND_MATERIAL, "green_diamond_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
+			GREEN_DIAMOND_SHOVEL = new BasicShovel(GREEN_DIAMOND_MATERIAL, "green_diamond_shovel").setCreativeTab(ExtraPlanets.ToolsTab);
+			GREEN_DIAMOND_SWORD = new BasicSword(GREEN_DIAMOND_MATERIAL, "green_diamond_sword").setCreativeTab(ExtraPlanets.ToolsTab);
 		}
 	}
 
