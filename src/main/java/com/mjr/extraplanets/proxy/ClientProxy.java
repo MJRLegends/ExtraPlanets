@@ -1362,7 +1362,7 @@ public class ClientProxy extends CommonProxy {
 							"WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "SolarPlane", "CaseBack1", "CaseBack2", "CaseBack3", "Container", "Container2", "Container3");
 					break;
 				}
-				ClientUtilities.replaceModelDefault(Constants.modID, event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class, TRSRTransformation.identity(), "");
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class, TRSRTransformation.identity());
 			}
 		}
 		if (Config.VENUS_ROVER) {
