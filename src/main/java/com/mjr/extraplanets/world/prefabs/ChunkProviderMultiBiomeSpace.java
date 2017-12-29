@@ -21,6 +21,10 @@ import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
+/*
+ * Class from Galacticraft Core
+ * Credit micdoodle8, radfast
+ */
 public abstract class ChunkProviderMultiBiomeSpace extends ChunkProviderOverworld {
 	protected Random rand;
 	protected World worldObj;
