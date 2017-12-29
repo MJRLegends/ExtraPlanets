@@ -185,7 +185,7 @@ import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT6TreasureChes
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT7TreasureChest;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChest;
-import com.mjr.extraplanets.util.ClientUtilities;
+import com.mjr.mjrlegendslib.util.ClientUtilities;
 
 public class ClientProxy extends CommonProxy {
 
@@ -476,8 +476,7 @@ public class ClientProxy extends CommonProxy {
 				for (int i = 0; i < 5; ++i) {
 					ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
 				}
-			}
-			else {
+			} else {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t10_new", "inventory");
 				for (int i = 0; i < 5; ++i) {
 					ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
@@ -1277,55 +1276,55 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	public void onModelBakeEvent(ModelBakeEvent event) {
 		if (Config.MERCURY)
-			ClientUtilities.replaceModelDefault(event, "rocket_t4", "rocket_t4.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Tip", "Ring", "FrameWindow1", "FrameWindow2",
-					"FrameWindow3", "FrameWindow4", "GlassWindow", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4"), ItemModelRocketT4.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t4", "rocket_t4.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Tip", "Ring", "FrameWindow1",
+					"FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4"), ItemModelRocketT4.class, TRSRTransformation.identity());
 		if (Config.JUPITER)
-			ClientUtilities.replaceModelDefault(event, "rocket_t5", "rocket_t5.obj", ImmutableList.of("Nozzle", "Body_Rocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1",
-					"FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005",
-					"Cylinder006", "Helix001", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4"), ItemModelRocketT5.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t5", "rocket_t5.obj", ImmutableList.of("Nozzle", "Body_Rocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring",
+					"FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004",
+					"Cylinder005", "Cylinder006", "Helix001", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4"), ItemModelRocketT5.class, TRSRTransformation.identity());
 		if (Config.SATURN)
-			ClientUtilities.replaceModelDefault(event, "rocket_t6", "rocket_t6.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1", "Rocket_stabilizer2",
-					"Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008",
-					"Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001", "RocketEngine002",
-					"RocketEngine003", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002", "RocketEnginePlut003"), ItemModelRocketT6.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t6", "rocket_t6.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1",
+					"Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007",
+					"CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001",
+					"RocketEngine002", "RocketEngine003", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002", "RocketEnginePlut003"), ItemModelRocketT6.class, TRSRTransformation.identity());
 		if (Config.URANUS)
-			ClientUtilities.replaceModelDefault(event, "rocket_t7", "rocket_t7.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1", "Rocket_stabilizer2",
-					"Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008",
-					"Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001", "RocketEngine002",
-					"RocketEngine003", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "PathDeform2", "Wire1", "Wire2", "WireLight", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002",
-					"RocketEnginePlut003"), ItemModelRocketT7.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t7", "rocket_t7.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1",
+					"Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007",
+					"CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001",
+					"RocketEngine002", "RocketEngine003", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "PathDeform2", "Wire1", "Wire2", "WireLight", "RocketEnginePlut", "RocketEnginePlut001",
+					"RocketEnginePlut002", "RocketEnginePlut003"), ItemModelRocketT7.class, TRSRTransformation.identity());
 		if (Config.NEPTUNE)
-			ClientUtilities.replaceModelDefault(event, "rocket_t8", "rocket_t8.obj", ImmutableList.of("Nozzle", "BodyRocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Rocket_stabilizer007",
-					"Rocket_stabilizer008", "Rocket_stabilizer009", "Rocket_stabilizer010", "SplinePathDeform", "RocketEngine", "RocketEngine001", "RocketEngine002", "RocketEngine003", "RocketEngine004", "RocketEngine005", "RocketEngine006",
-					"RocketEngine007", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007",
-					"FloorCockPit", "NoseRocket", "NozzleKeeper", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002", "RocketEnginePlut003", "RocketEnginePlut004",
-					"RocketEnginePlut005", "RocketEnginePlut006", "RocketEnginePlut007"), ItemModelRocketT8.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t8", "rocket_t8.obj", ImmutableList.of("Nozzle", "BodyRocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4",
+					"Rocket_stabilizer007", "Rocket_stabilizer008", "Rocket_stabilizer009", "Rocket_stabilizer010", "SplinePathDeform", "RocketEngine", "RocketEngine001", "RocketEngine002", "RocketEngine003", "RocketEngine004", "RocketEngine005",
+					"RocketEngine006", "RocketEngine007", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006",
+					"RocketEngineBottom007", "FloorCockPit", "NoseRocket", "NozzleKeeper", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002",
+					"RocketEnginePlut003", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut006", "RocketEnginePlut007"), ItemModelRocketT8.class, TRSRTransformation.identity());
 		if (Config.PLUTO)
 			if (Config.OLD_ROCKET_MODELS) {
-				ClientUtilities.replaceModelDefault(event, "rocket_t9", "rocket_t9.obj", ImmutableList.of("Nozzle", "Nozzle001", "Nozzle002", "NozzleKeeper", "NozzleKeeper001", "BodyRocket", "BodyRocket001", "Rocket_stabilizer1",
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t9", "rocket_t9.obj", ImmutableList.of("Nozzle", "Nozzle001", "Nozzle002", "NozzleKeeper", "NozzleKeeper001", "BodyRocket", "BodyRocket001", "Rocket_stabilizer1",
 						"Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Rocket_stabilizer007", "Rocket_stabilizer008", "Rocket_stabilizer009", "Rocket_stabilizer010", "Rocket_stabilizer011", "Rocket_stabilizer012",
 						"SplinePathDeform", "RocketEngine", "RocketEngine002", "RocketEngine004", "RocketEngine005", "RocketEngine007", "RocketEngine008", "RocketEngineBottom", "RocketEngineBottom003", "RocketEngineBottom004",
 						"RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "RocketEngineBottom008", "FloorCockPit", "Cockoit", "NoseRocket", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4",
 						"rotary_engine005", "rotary_engine006", "RocketEnginePlut", "RocketEnginePlut002", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut007", "RocketEnginePlut008"), ItemModelRocketT9.class, TRSRTransformation
 						.identity());
 			} else {
-				ClientUtilities.replaceModelDefault(event, "rocket_t9_new", "rocket_t9_new.obj",
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t9_new", "rocket_t9_new.obj",
 						ImmutableList.of("BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket", "NoseRocketMiddle", "SideEngine1", "SideEngine2", "SideEngine3", "SideEngine4", "Spike"), ItemModelRocketT9New.class,
 						TRSRTransformation.identity());
 			}
 		if (Config.ERIS)
 			if (Config.OLD_ROCKET_MODELS) {
-				ClientUtilities.replaceModelDefault(event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004", "RocketEngine005",
-						"RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut006",
-						"RocketEnginePlut007"), ItemModelRocketT10.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004",
+						"RocketEngine005", "RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit", "RocketEnginePlut004", "RocketEnginePlut005",
+						"RocketEnginePlut006", "RocketEnginePlut007"), ItemModelRocketT10.class, TRSRTransformation.identity());
 			} else {
-				ClientUtilities.replaceModelDefault(event, "rocket_t10_new", "rocket_t10_new.obj", ImmutableList.of("BigSideWing1", "BigSideWing2", "BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket", "NoseRocketMiddle",
-						"SideEngine1", "SideEngine2", "SideEngine3", "SideEngine3", "SideEngine4", "SideWing1", "SideWing2", "SideWing3", "SideWing4", "Spike"), ItemModelRocketT10New.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t10_new", "rocket_t10_new.obj", ImmutableList.of("BigSideWing1", "BigSideWing2", "BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket",
+						"NoseRocketMiddle", "SideEngine1", "SideEngine2", "SideEngine3", "SideEngine3", "SideEngine4", "SideWing1", "SideWing2", "SideWing3", "SideWing4", "Spike"), ItemModelRocketT10New.class, TRSRTransformation.identity());
 			}
 		if (Config.ERIS && Config.KEPLER22B)
-			ClientUtilities.replaceModelDefault(event, "electric_rocket", "electric_rocket.obj", ImmutableList.of("Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Cylinder007", "Cylinder008", "Cylinder009",
-					"Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001", "Line002", "Torus001", "Torus002",
-					"Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "electric_rocket", "electric_rocket.obj", ImmutableList.of("Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Cylinder007",
+					"Cylinder008", "Cylinder009", "Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001",
+					"Line002", "Torus001", "Torus002", "Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class, TRSRTransformation.identity());
 
 		if (Config.MARS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
@@ -1363,7 +1362,7 @@ public class ClientProxy extends CommonProxy {
 							"WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "SolarPlane", "CaseBack1", "CaseBack2", "CaseBack3", "Container", "Container2", "Container3");
 					break;
 				}
-				ClientUtilities.replaceModelDefault(event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class, TRSRTransformation.identity(), "");
 			}
 		}
 		if (Config.VENUS_ROVER) {
@@ -1390,7 +1389,7 @@ public class ClientProxy extends CommonProxy {
 							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2", "Container3");
 					break;
 				}
-				ClientUtilities.replaceModelDefault(event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
 			}
 		}
 	}

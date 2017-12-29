@@ -10,7 +10,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.util.RegisterHelper;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Fluids {
 	public static Block GLOWSTONE;
@@ -129,12 +129,12 @@ public class ExtraPlanets_Fluids {
 				.setBlock(LIQUID_CHOCOLATE).setDensity(1000).setViscosity(300);
 		FluidRegistry.registerFluid(LIQUID_CHOCOLATE_FLUID);
 		FluidRegistry.addBucketForFluid(LIQUID_CHOCOLATE_FLUID);
-		
+
 		LIQUID_CARAMEL_FLUID = new Fluid("liquid_caramel_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_caramel_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_caramel_flow"))
-		.setBlock(LIQUID_CARAMEL).setDensity(1000).setViscosity(300);
+				.setBlock(LIQUID_CARAMEL).setDensity(1000).setViscosity(300);
 		FluidRegistry.registerFluid(LIQUID_CARAMEL_FLUID);
 		FluidRegistry.addBucketForFluid(LIQUID_CARAMEL_FLUID);
-		
+
 	}
 
 	private static void initFluidBlocks() {
@@ -154,18 +154,18 @@ public class ExtraPlanets_Fluids {
 	}
 
 	private static void registerFluidBlocks() throws NoSuchMethodException {
-		RegisterHelper.registerBlock(GLOWSTONE, ItemBlockGC.class, "glowstone");
-		RegisterHelper.registerBlock(MAGMA, ItemBlockGC.class, "magma");
-		RegisterHelper.registerBlock(NITROGEN, ItemBlockGC.class, "nitrogen");
-		RegisterHelper.registerBlock(FROZEN_WATER, ItemBlockGC.class, "frozen_water");
-		RegisterHelper.registerBlock(SALT, ItemBlockGC.class, "salt");
-		RegisterHelper.registerBlock(RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
-		RegisterHelper.registerBlock(CLEAN_WATER, ItemBlockGC.class, "clean_water");
-		RegisterHelper.registerBlock(INFECTED_WATER, ItemBlockGC.class, "infected_water");
-		RegisterHelper.registerBlock(METHANE, ItemBlockGC.class, "methane");
-		RegisterHelper.registerBlock(NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
-		RegisterHelper.registerBlock(LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
-		RegisterHelper.registerBlock(LIQUID_CHOCOLATE, ItemBlockGC.class, "liquid_chocolate");
-		RegisterHelper.registerBlock(LIQUID_CARAMEL, ItemBlockGC.class, "liquid_caramel");
+		RegisterUtilities.registerBlock(Constants.modID, GLOWSTONE, ItemBlockGC.class, "glowstone");
+		RegisterUtilities.registerBlock(Constants.modID, MAGMA, ItemBlockGC.class, "magma");
+		RegisterUtilities.registerBlock(Constants.modID, NITROGEN, ItemBlockGC.class, "nitrogen");
+		RegisterUtilities.registerBlock(Constants.modID, FROZEN_WATER, ItemBlockGC.class, "frozen_water");
+		RegisterUtilities.registerBlock(Constants.modID, SALT, ItemBlockGC.class, "salt");
+		RegisterUtilities.registerBlock(Constants.modID, RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
+		RegisterUtilities.registerBlock(Constants.modID, CLEAN_WATER, ItemBlockGC.class, "clean_water");
+		RegisterUtilities.registerBlock(Constants.modID, INFECTED_WATER, ItemBlockGC.class, "infected_water");
+		RegisterUtilities.registerBlock(Constants.modID, METHANE, ItemBlockGC.class, "methane");
+		RegisterUtilities.registerBlock(Constants.modID, NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
+		RegisterUtilities.registerBlock(Constants.modID, LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
+		RegisterUtilities.registerBlock(Constants.modID, LIQUID_CHOCOLATE, ItemBlockGC.class, "liquid_chocolate");
+		RegisterUtilities.registerBlock(Constants.modID, LIQUID_CARAMEL, ItemBlockGC.class, "liquid_caramel");
 	}
 }

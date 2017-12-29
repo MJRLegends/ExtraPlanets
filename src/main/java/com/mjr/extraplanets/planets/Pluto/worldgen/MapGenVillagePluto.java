@@ -10,6 +10,7 @@ import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageField;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageField2;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageHouse;
@@ -19,7 +20,7 @@ import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVil
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageTorch;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureVillageStartPluto;
-import com.mjr.extraplanets.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 public class MapGenVillagePluto extends MapGenStructure {
 	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenPluto.pluto });
@@ -84,7 +85,7 @@ public class MapGenVillagePluto extends MapGenStructure {
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
 		if (Config.DEBUG_MODE)
-			MessageUtilities.debugMessageToLog("Generating Pluto Village at x" + par1 * 16 + " z" + par2 * 16);
+			MessageUtilities.debugMessageToLog(Constants.modID, "Generating Pluto Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartPluto(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}
 

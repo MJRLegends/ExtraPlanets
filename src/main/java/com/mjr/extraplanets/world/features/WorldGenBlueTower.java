@@ -10,20 +10,21 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.storage.loot.LootTableList;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
-import com.mjr.extraplanets.util.MessageUtilities;
-import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenBlueTower extends WorldGenerator {
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		if (WorldGenHelper.checkValidSpawn(world, position, 5) == false)
+		if (WorldGenUtilities.checkValidSpawn(world, position, 5) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Spawning Blue Tower at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog(Constants.modID, "Spawning Blue Tower at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position.down());
 			fillChests(world, rand, position.down());
 		}
