@@ -12,9 +12,9 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenCustomIceSpike;
 import com.mjr.extraplanets.world.features.WorldGenIgloo;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
@@ -65,7 +65,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.FROZEN_WATER, ExtraPlanets_Blocks.URANUS_BLOCKS);
+				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.FROZEN_WATER, ExtraPlanets_Blocks.URANUS_BLOCKS);
 			}
 		}
 		if (Config.GENERATE_URANUS_ICE_SPIKES) {
@@ -80,7 +80,7 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 		}
 		if (Config.GENERATE_URANUS_IGLOOS) {
 			if (this.rand.nextInt(300) == 1) {
-				WorldGenHelper.generateStructure(new WorldGenIgloo(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
+				WorldGenUtilities.generateStructure(new WorldGenIgloo(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}
 

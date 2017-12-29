@@ -11,8 +11,8 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
-import com.mjr.extraplanets.util.WorldGenHelper;
 import com.mjr.extraplanets.world.features.WorldGenVolcano;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 
@@ -66,11 +66,11 @@ public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 		if (this.getCurrentWorld().getBiomeGenForCoords(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenIOBurningPlains) {
 			for (int i = 0; i < LakesPerChunk * 2; i++) {
 				if (this.rand.nextInt(10) == 0) {
-					WorldGenHelper.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState());
+					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState());
 				}
 			}
 			if (this.rand.nextInt(5) == 1) {
-				WorldGenHelper.generateStructure(new WorldGenVolcano(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
+				WorldGenUtilities.generateStructure(new WorldGenVolcano(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}
 

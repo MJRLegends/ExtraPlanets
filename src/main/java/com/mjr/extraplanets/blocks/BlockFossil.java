@@ -7,6 +7,8 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
+import com.mjr.mjrlegendslib.block.BlockBasic;
+
 public class BlockFossil extends BlockBasic {
 
 	int randomItem = 0;

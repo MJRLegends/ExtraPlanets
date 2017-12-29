@@ -11,19 +11,20 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.util.MessageUtilities;
-import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenGreenHut extends WorldGenerator {
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		if (WorldGenHelper.checkValidSpawn(world, position, 5) == false)
+		if (WorldGenUtilities.checkValidSpawn(world, position, 5) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog("Spawning Green Hut at (x, y, z)" + position.toString());
+				MessageUtilities.debugMessageToLog(Constants.modID, "Spawning Green Hut at (x, y, z)" + position.toString());
 			generateStructure(world, rand, position.up());
 			fillChests(world, rand, position.up());
 		}

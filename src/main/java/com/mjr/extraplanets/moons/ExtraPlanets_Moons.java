@@ -36,7 +36,7 @@ import com.mjr.extraplanets.moons.Titania.WorldProviderTitania;
 import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.util.RegisterHelper;
+import com.mjr.extraplanets.util.GCRegisterUtilities;
 
 public class ExtraPlanets_Moons {
 
@@ -65,20 +65,20 @@ public class ExtraPlanets_Moons {
 
 	public static void initializeUnReachableMoons() {
 		// Pluto Moons
-		CHARON = RegisterHelper.registerUnreachableMoon("charon", ExtraPlanets_Planets.PLUTO);
+		CHARON = GCRegisterUtilities.registerUnreachableMoon("charon", ExtraPlanets_Planets.PLUTO);
 		if (CHARON != null)
 			CHARON.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 
-		NIX = RegisterHelper.registerUnreachableMoon("nix", ExtraPlanets_Planets.PLUTO);
+		NIX = GCRegisterUtilities.registerUnreachableMoon("nix", ExtraPlanets_Planets.PLUTO);
 		if (NIX != null)
 			NIX.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(57.415456589452485548F);
 
-		HYDRA = RegisterHelper.registerUnreachableMoon("hydra", ExtraPlanets_Planets.PLUTO);
+		HYDRA = GCRegisterUtilities.registerUnreachableMoon("hydra", ExtraPlanets_Planets.PLUTO);
 		if (HYDRA != null)
 			HYDRA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(123.252594612756974F);
 
 		// Eris Moons
-		DYSNOMIA = RegisterHelper.registerUnreachableMoon("dysnomia", ExtraPlanets_Planets.ERIS);
+		DYSNOMIA = GCRegisterUtilities.registerUnreachableMoon("dysnomia", ExtraPlanets_Planets.ERIS);
 		if (DYSNOMIA != null)
 			DYSNOMIA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 	}

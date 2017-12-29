@@ -7,30 +7,11 @@ import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
 
-public class RegisterHelper {
-	private static int id = 0;
-
-	public static void registerNonMobEntity(Class<? extends Entity> var0, String var1, int trackingDistance, int updateFreq, boolean sendVel) {
-		EntityRegistry.registerModEntity(var0, var1, id++, ExtraPlanets.instance, trackingDistance, updateFreq, sendVel);
-	}
-
-	public static void registerMobEntity(Class<? extends Entity> entityClass, String name, int back, int fore) {
-		registerNonMobEntity(entityClass, name, 80, 3, true);
-		EntityRegistry.registerEgg(entityClass, back, fore);
-	}
-
-	public static void setHarvestLevel(Block block, String toolClass, int level, int meta) {
-		block.setHarvestLevel(toolClass, level, block.getStateFromMeta(meta));
-	}
-
+public class GCRegisterUtilities {
 	public static Planet registerUnreachablePlanet(String name, SolarSystem system) {
 		ArrayList<CelestialBody> cBodyList = new ArrayList<CelestialBody>();
 		cBodyList.addAll(GalaxyRegistry.getRegisteredPlanets().values());
