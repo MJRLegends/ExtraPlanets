@@ -17,8 +17,8 @@ import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import micdoodle8.mods.galacticraft.planets.GuiIdsPlanets;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -36,6 +36,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
+import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock implements IMultiBlock, IInventoryDefaults, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[1];
@@ -50,8 +52,17 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	@Override
 	public void update() {
 		if (!this.worldObj.isRemote) {
-			List containedEntities = worldObj.getEntitiesWithinAABB(EntityLivingBase.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
+			List containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
 					this.getPos().getZ() + 1));
+
+			for (int i = 0; i < containedEntities.size(); i++) {
+				IStatsCapability stats = null;
+				if (((EntityPlayerMP) containedEntities.get(i)) != null) {
+					stats = ((EntityPlayerMP) containedEntities.get(i)).getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+				}
+				stats.setRadiationLevel(100);
+				System.out.println(stats.getRadiationLevel());
+			}
 
 		}
 		super.update();
@@ -114,19 +125,43 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 
 	@Override
 	public void getPositions(BlockPos placedPosition, List<BlockPos> positions) {
-		int buildHeight = this.worldObj.getHeight() - 1;
-		for (int y = 0; y < 3; y += 2) {
-			if (placedPosition.getY() + y > buildHeight) {
-				return;
-			}
-			for (int x = -1; x <= 1; x++) {
-				for (int z = -1; z <= 1; z++) {
-					if (x == 0 && y == 0 && z == 0)
-						continue;
-					positions.add(placedPosition.add(x, y, z));
-				}
-			}
-		}
+		positions.add(placedPosition.add(-2, 2, 0));
+		positions.add(placedPosition.add(-2, 3, 0));
+		positions.add(placedPosition.add(-2, 1, 0));
+		positions.add(placedPosition.add(-2, 0, 0));
+		positions.add(placedPosition.add(-2, 2, -1));
+		positions.add(placedPosition.add(-2, 3, -1));
+		positions.add(placedPosition.add(-2, 1, -1));
+		positions.add(placedPosition.add(-2, 0, -1));
+		positions.add(placedPosition.add(-1, 2, 0));
+		positions.add(placedPosition.add(-1, 3, 0));
+		positions.add(placedPosition.add(-1, 1, 0));
+		positions.add(placedPosition.add(-1, 0, 0));
+		positions.add(placedPosition.add(-1, 1, -1));
+		positions.add(placedPosition.add(-1, 2, -1));
+		positions.add(placedPosition.add(-1, 3, -1));
+		positions.add(placedPosition.add(-1, 0, -1));
+		positions.add(placedPosition.add(0, 3, 0));
+		positions.add(placedPosition.add(0, 0, -1));
+		positions.add(placedPosition.add(0, 1, -1));
+		positions.add(placedPosition.add(0, 2, -1));
+		positions.add(placedPosition.add(0, 3, -1));
+		positions.add(placedPosition.add(1, 1, -1));
+		positions.add(placedPosition.add(1, 0, -1));
+		positions.add(placedPosition.add(1, 2, -1));
+		positions.add(placedPosition.add(1, 3, -1));
+		positions.add(placedPosition.add(1, 2, 0));
+		positions.add(placedPosition.add(1, 3, 0));
+		positions.add(placedPosition.add(1, 1, 0));
+		positions.add(placedPosition.add(1, 0, 0));
+		positions.add(placedPosition.add(2, 2, 0));
+		positions.add(placedPosition.add(2, 3, 0));
+		positions.add(placedPosition.add(2, 1, 0));
+		positions.add(placedPosition.add(2, 0, 0));
+		positions.add(placedPosition.add(2, 2, -1));
+		positions.add(placedPosition.add(2, 3, -1));
+		positions.add(placedPosition.add(2, 1, -1));
+		positions.add(placedPosition.add(2, 0, -1));
 	}
 
 	@Override
