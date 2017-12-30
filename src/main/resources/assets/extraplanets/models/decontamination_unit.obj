@@ -4046,7 +4046,7 @@ vn -0.9181 0.1224 0.3769
 vn -0.1554 0.3053 -0.9395
 vn -0.1557 -0.7992 -0.5806
 vn -0.1557 -0.7991 0.5806
-usemtl blankRocketBlueTextured
+usemtl blankRocketTextured
 s off
 f 1223//355 1221//355 1222//355
 f 1222//355 1225//355 1224//355
