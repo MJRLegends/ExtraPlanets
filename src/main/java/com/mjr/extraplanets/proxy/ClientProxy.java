@@ -68,6 +68,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bM
 import com.mjr.extraplanets.client.handlers.KeyHandlerClient;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.client.handlers.SkyProviderHandler;
+import com.mjr.extraplanets.client.model.ItemModelDecontaminationUnit;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketElectricRocket;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT10;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT10New;
@@ -112,6 +113,7 @@ import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9Rocket;
 import com.mjr.extraplanets.client.render.entities.rockets.RenderTier9RocketNew;
 import com.mjr.extraplanets.client.render.entities.vehicles.RenderMarsRover;
 import com.mjr.extraplanets.client.render.entities.vehicles.RenderVenusRover;
+import com.mjr.extraplanets.client.render.tile.TileEntityBasicDecontaminationUnitRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntitySolarPanelRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT10TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT4TreasureChestRenderer;
@@ -177,6 +179,7 @@ import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier5ThermalPadding;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
 import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT10TreasureChest;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT4TreasureChest;
@@ -518,6 +521,7 @@ public class ClientProxy extends CommonProxy {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
 		if (Config.SOLAR_PANELS)
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBasicDecontaminationUnit.class, new TileEntityBasicDecontaminationUnitRenderer());
 	}
 
 	private void registerBlockJsons() {
@@ -1392,6 +1396,7 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.replaceModelDefault(Constants.modID, event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
 			}
 		}
+		ClientUtilities.replaceModelDefault(Constants.modID, event, "decontamination_unit", "decontamination_unit.obj", ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "Glass_Door", "AtomaziersTwo"), ItemModelDecontaminationUnit.class, TRSRTransformation.identity());
 	}
 
 	private void registerFluidVariants() {

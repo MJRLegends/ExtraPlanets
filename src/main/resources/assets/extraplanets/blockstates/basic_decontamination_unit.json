@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "variants": {
+     "normal": {
+         "model": "extraplanets:decontamination_unit.obj",
+         "textures": { "particle": "galacticraftplanets:buggy_pad_full" },
+         "custom": { "flip-v": true  }
+        }
+    }
+}
