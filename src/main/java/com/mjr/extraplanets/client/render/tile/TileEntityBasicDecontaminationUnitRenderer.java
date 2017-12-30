@@ -3,6 +3,7 @@ package com.mjr.extraplanets.client.render.tile;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -40,6 +41,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 
 	@Override
 	public void renderTileEntityAt(TileEntityBasicDecontaminationUnit te, double x, double y, double z, float partialTicks, int destroyStage) {
+		GlStateManager.disableRescaleNormal();
 		GL11.glPushMatrix();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 		if (Minecraft.isAmbientOcclusionEnabled()) {
@@ -47,14 +49,15 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 		} else {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
-
 		updateModels();
 
 		GL11.glTranslatef((float) x + 0.5F, (float) y, (float) z + 0.5F);
 
-		GL11.glScalef(0.15F, 0.15F, 0.15F);
+		GL11.glScalef(0.21F, 0.15F, 0.15F);
 
 		ClientUtil.drawBakedModel(mainModel);
+		
 		GL11.glPopMatrix();
+		RenderHelper.enableStandardItemLighting();
 	}
 }
