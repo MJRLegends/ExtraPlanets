@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockAdvancedOxygenCompressor;
+import com.mjr.extraplanets.itemBlocks.machines.ItemBlockBasicDecontaminationUnit;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockUltimateOxygenCompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedFuelLoader;
@@ -14,6 +15,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenDecomp
 import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicChemicalInjector;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicCrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDensifier;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicPurifier;
@@ -50,6 +52,7 @@ public class ExtraPlanets_Machines {
 	public static Block VEHICLE_CHARGER;
 
 	public static Block BASIC_DENSIFIER;
+	public static Block BASIC_DECONTAMINATION_UNIT;
 
 	public static void init() {
 		initializeMachinesBlocks();
@@ -85,6 +88,7 @@ public class ExtraPlanets_Machines {
 				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basic_solar_evaporation_chamber");
 			if (Config.BASIC_PURIFIER)
 				BASIC_PURIFIER = new BasicPurifier("basic_purifier");
+			BASIC_DECONTAMINATION_UNIT = new BasicDecontaminationUnit("basic_decontamination_unit");
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			FUEL_LOADER_ADVANCED = new AdvancedFuelLoader("advanced_fuel_loader");
@@ -119,6 +123,7 @@ public class ExtraPlanets_Machines {
 				RegisterUtilities.registerBlock(Constants.modID, BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_PURIFIER)
 				RegisterUtilities.registerBlock(Constants.modID, BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(Constants.modID, BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			RegisterUtilities.registerBlock(Constants.modID, FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
@@ -157,6 +162,7 @@ public class ExtraPlanets_Machines {
 				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
 			if (Config.BASIC_PURIFIER)
 				GameRegistry.registerTileEntity(TileEntityBasicPurifier.class, Constants.modName + "Basic Purifier");
+			GameRegistry.registerTileEntity(TileEntityBasicDecontaminationUnit.class, Constants.modName + "Basic Decontamination Unit");
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
