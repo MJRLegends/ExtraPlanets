@@ -13,8 +13,6 @@ import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
-import micdoodle8.mods.galacticraft.planets.GuiIdsPlanets;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -34,13 +32,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock implements IMultiBlock, IInventoryDefaults, ISidedInventory {
-	private ItemStack[] containingItems = new ItemStack[1];
+	private ItemStack[] containingItems = new ItemStack[3];
 	@NetworkedField(targetSide = Side.CLIENT)
 	private AxisAlignedBB renderAABB;
 
@@ -104,7 +103,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 
 	@Override
 	public boolean onActivated(EntityPlayer entityPlayer) {
-		entityPlayer.openGui(GalacticraftPlanets.instance, GuiIdsPlanets.MACHINE_ASTEROIDS, this.worldObj, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ());
+		entityPlayer.openGui(ExtraPlanets.instance, -1, this.worldObj, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ());
 		return true;
 	}
 

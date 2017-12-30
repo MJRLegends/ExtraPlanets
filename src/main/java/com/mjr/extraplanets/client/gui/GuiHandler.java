@@ -19,6 +19,7 @@ import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicChemicalInjector;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicCrystallizer;
+import com.mjr.extraplanets.client.gui.machines.GuiBasicDecontaminationUnit;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicDecrystallizer;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicDensifier;
 import com.mjr.extraplanets.client.gui.machines.GuiBasicPurifier;
@@ -38,6 +39,7 @@ import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompress
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicChemicalInjector;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicCrystallizer;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicDecontaminationUnit;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDensifier;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicPurifier;
@@ -56,6 +58,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenDecomp
 import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicChemicalInjector;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicCrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDensifier;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicPurifier;
@@ -120,6 +123,8 @@ public class GuiHandler implements IGuiHandler {
 				return new ContainerBasicPurifier(player.inventory, (TileEntityBasicPurifier) tile, player);
 			} else if (tile instanceof TileEntityBasicDensifier) {
 				return new ContainerBasicDensifier(player.inventory, (TileEntityBasicDensifier) tile, player);
+			} else if (tile instanceof TileEntityBasicDecontaminationUnit) {
+				return new ContainerBasicDecontaminationUnit(player.inventory, (TileEntityBasicDecontaminationUnit) tile, player);
 			}
 		}
 		return null;
@@ -176,6 +181,8 @@ public class GuiHandler implements IGuiHandler {
 				return new GuiBasicPurifier(player.inventory, (TileEntityBasicPurifier) tile);
 			} else if (tile instanceof TileEntityBasicDensifier) {
 				return new GuiBasicDensifier(player.inventory, (TileEntityBasicDensifier) tile);
+			} else if (tile instanceof TileEntityBasicDecontaminationUnit) {
+				return new GuiBasicDecontaminationUnit(player.inventory, (TileEntityBasicDecontaminationUnit) tile);
 			}
 		}
 		return null;
