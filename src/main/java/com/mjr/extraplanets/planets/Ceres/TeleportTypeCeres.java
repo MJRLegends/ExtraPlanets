@@ -55,7 +55,7 @@ public class TeleportTypeCeres implements ITeleportType {
 					EntityGeneralLander entryPod = new EntityGeneralLander(player);
 					CompatibilityManager.forceLoadChunks((WorldServer) newWorld);
 					entryPod.forceSpawn = true;
-					newWorld.spawnEntityInWorld(entryPod);
+					newWorld.spawnEntity(entryPod);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld);
 				}
 
