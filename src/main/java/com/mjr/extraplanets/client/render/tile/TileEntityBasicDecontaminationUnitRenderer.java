@@ -23,7 +23,6 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontamination
 public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecialRenderer<TileEntityBasicDecontaminationUnit> {
 	private static OBJModel.OBJBakedModel mainModel;
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (mainModel == null) {
 			try {
