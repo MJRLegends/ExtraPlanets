@@ -26,7 +26,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 	private void updateModels() {
 		if (mainModel == null) {
 			try {
-				OBJModel model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "decontamination_unit.obj"));
+				OBJModel model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "block/decontamination_unit.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 
 				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
