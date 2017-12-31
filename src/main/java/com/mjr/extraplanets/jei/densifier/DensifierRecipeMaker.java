@@ -33,7 +33,7 @@ public class DensifierRecipeMaker {
 		
 		inputs = new ItemStack[1];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.GLOWSTONE_FLUID);
-		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.GLOWSTONE, 1, 0));
+		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.glowstone, 1, 0));
 		recipes.add(wrapper);
 		
 		inputs = new ItemStack[1];
@@ -43,12 +43,12 @@ public class DensifierRecipeMaker {
 		
 		inputs = new ItemStack[1];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.FROZEN_WATER_FLUID);
-		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.ICE, 3, 0));
+		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.ice, 3, 0));
 		recipes.add(wrapper);
 		
 		inputs = new ItemStack[1];
 		inputs[0] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID);
-		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Items.COAL, 3, 0));
+		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Items.coal, 3, 0));
 		recipes.add(wrapper);
 		return recipes;
 	}

@@ -6,15 +6,16 @@ import javax.vecmath.Vector3f;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
-import net.minecraftforge.common.model.TRSRTransformation;
+import net.minecraft.client.resources.model.IBakedModel;
+import net.minecraftforge.client.model.TRSRTransformation;
 
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.mjrlegendslib.client.model.ModelTransformWrapper;
 
+@SuppressWarnings("deprecation")
 public class ItemModelDecontaminationUnit extends ModelTransformWrapper {
 	public ItemModelDecontaminationUnit(IBakedModel modelToWrap) {
 		super(modelToWrap);
@@ -41,7 +42,7 @@ public class ItemModelDecontaminationUnit extends ModelTransformWrapper {
 			return ret;
 		}
 
-		if (cameraTransformType == TransformType.FIRST_PERSON_RIGHT_HAND) {
+		if (cameraTransformType == TransformType.FIRST_PERSON) {
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);
 			} else {
@@ -51,7 +52,7 @@ public class ItemModelDecontaminationUnit extends ModelTransformWrapper {
 			ret.setIdentity();
 			Matrix4f mul = new Matrix4f();
 			mul.setIdentity();
-			Quat4f rot = TRSRTransformation.quatFromXYZDegrees(new Vector3f(0, 45, 0));
+			Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(0, 45, 0));
 			mul.setRotation(rot);
 			ret.mul(mul);
 			mul.setIdentity();
@@ -71,7 +72,7 @@ public class ItemModelDecontaminationUnit extends ModelTransformWrapper {
 			return ret;
 		}
 
-		if (cameraTransformType == TransformType.THIRD_PERSON_RIGHT_HAND || cameraTransformType == TransformType.THIRD_PERSON_LEFT_HAND) {
+		if (cameraTransformType == TransformType.THIRD_PERSON) {
 			Matrix4f ret = new Matrix4f();
 			ret.setIdentity();
 			Matrix4f mul = new Matrix4f();

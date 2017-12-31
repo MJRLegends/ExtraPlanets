@@ -43,7 +43,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 	public void renderTileEntityAt(TileEntityBasicDecontaminationUnit te, double x, double y, double z, float partialTicks, int destroyStage) {
 		GlStateManager.disableRescaleNormal();
 		GL11.glPushMatrix();
-		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+		this.bindTexture(TextureMap.locationBlocksTexture);
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {
@@ -56,7 +56,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 		GL11.glScalef(0.21F, 0.15F, 0.15F);
 
 		ClientUtil.drawBakedModel(mainModel);
-		
+
 		GL11.glPopMatrix();
 		RenderHelper.enableStandardItemLighting();
 	}
