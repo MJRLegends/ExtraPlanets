@@ -95,6 +95,7 @@ import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCr
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossPluto;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossSaturn;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossUranus;
+import com.mjr.extraplanets.client.render.entities.landers.RenderGeneralLander;
 import com.mjr.extraplanets.client.render.entities.landers.RenderJupiterLander;
 import com.mjr.extraplanets.client.render.entities.landers.RenderMercuryLander;
 import com.mjr.extraplanets.client.render.entities.landers.RenderNeptuneLander;
@@ -136,6 +137,7 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptu
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
 import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
@@ -428,6 +430,7 @@ public class ClientProxy extends CommonProxy {
 		if (Config.VENUS_ROVER)
 			RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, (RenderManager manager) -> new RenderVenusRover(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.SNOWBALL)));
+		RenderingRegistry.registerEntityRenderingHandler(EntityGeneralLander.class, (RenderManager manager) -> new RenderGeneralLander(manager));
 	}
 
 	public void registerCustomModel() {
