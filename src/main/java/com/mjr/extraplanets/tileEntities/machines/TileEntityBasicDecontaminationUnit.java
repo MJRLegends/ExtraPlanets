@@ -4,6 +4,7 @@ import java.util.EnumSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
@@ -253,8 +254,22 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	}
 
 	@Override
+	public float receiveElectricity(EnumFacing from, float energy, int tier, boolean doReceive) {
+		return 0;
+	}
+
+	@Override
 	public EnumSet<EnumFacing> getElectricalInputDirections() {
 		return EnumSet.noneOf(EnumFacing.class);
+	}
+
+	@Override
+	public boolean canConnect(EnumFacing direction, NetworkType type) {
+		if (direction == null || type == NetworkType.POWER) {
+			return false;
+		}
+		return false;
+
 	}
 
 	@Override
