@@ -20,6 +20,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.settings.GameSettings;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ResourceLocation;
@@ -236,9 +237,9 @@ public class MainHandlerClient {
 					}
 				}
 			}
-			else if(stack == new ItemStack(ExtraPlanets_Blocks.VOLCANIC_ROCK)){
+			else if(stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.VOLCANIC_ROCK))){
 				event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.finding.block"));
-				event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.volcanic.rock"));
+				event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.finding.volcanic.rock"));
 			}
 		}
 	}
