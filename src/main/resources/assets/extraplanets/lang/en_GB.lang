@@ -495,6 +495,7 @@ gui.radiation.current.message=Your Current Radiation Level is
 gui.radiation.subject.message=You're now subject to
 gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage
 gui.radiation.type.message=Radiation
+gui.status.waiting.on.player.name=No Player in Machine
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details
