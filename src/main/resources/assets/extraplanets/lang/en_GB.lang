@@ -496,6 +496,8 @@ gui.radiation.subject.message=You're now subject to
 gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage
 gui.radiation.type.message=Radiation
 gui.status.waiting.on.player.name=No Player in Machine
+gui.message.finding.block=Can be found on
+gui.message.finding.volcanic.rock=Jupiter & Io
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details
