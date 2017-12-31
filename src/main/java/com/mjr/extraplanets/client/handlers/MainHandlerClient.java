@@ -52,6 +52,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.overlay.OverlayElectricLaunchCountdown;
 import com.mjr.extraplanets.client.gui.overlay.OverlayGeneralLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayJupiterLander;
@@ -239,10 +240,11 @@ public class MainHandlerClient {
 						event.getToolTip().add(EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
 					}
 				}
-			}
-			else if(stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.VOLCANIC_ROCK))){
+			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.VOLCANIC_ROCK))) {
 				event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.finding.block"));
 				event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.finding.volcanic.rock"));
+			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT))) {
+				event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.decontamination.unit"));
 			}
 		}
 	}
