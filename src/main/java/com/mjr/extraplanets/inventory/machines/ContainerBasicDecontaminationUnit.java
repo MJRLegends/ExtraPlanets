@@ -21,11 +21,11 @@ public class ContainerBasicDecontaminationUnit extends Container {
 		// Electric Input Slot
 		this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 153, 7, IItemElectric.class));
 
-		// Input Slot 1
-		this.addSlotToContainer(new Slot(tileEntity, 1, 112, 35));
-
-		// Input Slot 2
-		this.addSlotToContainer(new Slot(tileEntity, 2, 7, 7));
+//		// Input Slot 1
+//		this.addSlotToContainer(new Slot(tileEntity, 1, 112, 35));
+//
+//		// Input Slot 2
+//		this.addSlotToContainer(new Slot(tileEntity, 2, 7, 7));
 		int var3;
 
 		for (var3 = 0; var3 < 3; ++var3) {

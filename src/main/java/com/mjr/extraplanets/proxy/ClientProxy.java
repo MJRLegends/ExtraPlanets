@@ -506,6 +506,9 @@ public class ClientProxy extends CommonProxy {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.VENUS_ROVER, i, modelResourceLocation);
 			}
 		}
+		Item unit = Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT);
+		modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "basic_decontamination_unit", "inventory");
+		ModelLoader.setCustomModelResourceLocation(unit, 0, modelResourceLocation);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -1418,7 +1421,9 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.replaceModelDefault(Constants.modID, event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
 			}
 		}
-		ClientUtilities.replaceModelDefault(Constants.modID, event, "decontamination_unit", "decontamination_unit.obj", ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "Glass_Door", "AtomaziersTwo"), ItemModelDecontaminationUnit.class, TRSRTransformation.identity());
+		ClientUtilities.replaceModelDefault(Constants.modID, event, "basic_decontamination_unit", "decontamination_unit.obj",
+				ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"), ItemModelDecontaminationUnit.class,
+				TRSRTransformation.identity());
 	}
 
 	private void registerFluidVariants() {
