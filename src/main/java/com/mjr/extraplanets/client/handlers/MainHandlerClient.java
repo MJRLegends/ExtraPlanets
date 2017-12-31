@@ -46,6 +46,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.client.gui.overlay.OverlayElectricLaunchCountdown;
 import com.mjr.extraplanets.client.gui.overlay.OverlayGeneralLander;
@@ -216,22 +217,28 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	public void onToolTip(ItemTooltipEvent event) {
 		ItemStack stack = event.itemStack;
-		if (stack != null && stack.getItem() != null && stack.getItem() instanceof UniversalBucket) {
-			if (FluidUtil.getFluidContained(stack) != null && FluidUtil.getFluidContained(stack).getFluid() != null) {
-				FluidStack fluidStack = FluidUtil.getFluidContained(stack);
-				Fluid fluid = fluidStack.getFluid();
-				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) || fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
-					event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding"));
-					event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2." + fluid.getUnlocalizedName().substring(6)));
-				} else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
-					event.toolTip.add(EnumColor.ORANGE + GCCoreUtil.translate("gui.bucket.message.crafting"));
+		if (stack != null && stack.getItem() != null) {
+			if (stack.getItem() instanceof UniversalBucket) {
+				if (FluidUtil.getFluidContained(stack) != null && FluidUtil.getFluidContained(stack).getFluid() != null) {
+					FluidStack fluidStack = FluidUtil.getFluidContained(stack);
+					Fluid fluid = fluidStack.getFluid();
+					if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
+							|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) || fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
+							|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
+						event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding"));
+						event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2." + fluid.getUnlocalizedName().substring(6)));
+					} else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
+						event.toolTip.add(EnumColor.ORANGE + GCCoreUtil.translate("gui.bucket.message.crafting"));
 
-				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)|| fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID)) {
-					event.toolTip.add(EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
+					if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)
+							|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID)) {
+						event.toolTip.add(EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
+					}
 				}
+			}
+			else if(stack == new ItemStack(ExtraPlanets_Blocks.VOLCANIC_ROCK)){
+				event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.finding.block"));
+				event.toolTip.add(EnumColor.AQUA + GCCoreUtil.translate("gui.message.volcanic.rock"));
 			}
 		}
 	}
@@ -255,18 +262,15 @@ public class MainHandlerClient {
 			event.density = 0.02f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
-		}
-		else if (event.entity.worldObj.provider.getDimensionId() == Config.URANUS_ID) {
+		} else if (event.entity.worldObj.provider.getDimensionId() == Config.URANUS_ID) {
 			event.density = 0.008f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
-		}
-		else if (event.entity.worldObj.provider.getDimensionId() == Config.SATURN_ID) {
+		} else if (event.entity.worldObj.provider.getDimensionId() == Config.SATURN_ID) {
 			event.density = 0.015f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
-		}
-		else if (event.entity.worldObj.provider.getDimensionId() == Config.NEPTUNE_ID) {
+		} else if (event.entity.worldObj.provider.getDimensionId() == Config.NEPTUNE_ID) {
 			event.density = 0.01f;
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
