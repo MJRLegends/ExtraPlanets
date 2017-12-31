@@ -3,7 +3,6 @@ package com.mjr.extraplanets.items.tools;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -12,6 +11,7 @@ import com.mjr.mjrlegendslib.item.BasicHoe;
 import com.mjr.mjrlegendslib.item.BasicPickaxe;
 import com.mjr.mjrlegendslib.item.BasicShovel;
 import com.mjr.mjrlegendslib.item.BasicSword;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Tools {
 	private static ToolMaterial CARBON_MATERIAL = EnumHelper.addToolMaterial("Carbon Material", 3, 40, 4.0F, 6.0F, 30);
@@ -254,118 +254,118 @@ public class ExtraPlanets_Tools {
 
 	private static void registerTools() {
 		if (Config.MERCURY && Config.ITEMS_MERCURY) {
-			GameRegistry.registerItem(MERCURY_PICKAXE, MERCURY_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MERCURY_AXE, MERCURY_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MERCURY_HOE, MERCURY_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MERCURY_SHOVEL, MERCURY_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MERCURY_SWORD, MERCURY_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_PICKAXE, MERCURY_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_AXE, MERCURY_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_HOE, MERCURY_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_SHOVEL, MERCURY_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_SWORD, MERCURY_SWORD.getUnlocalizedName().substring(5));
 		}
 		if (Config.MERCURY && Config.ITEMS_CARBON) {
-			GameRegistry.registerItem(CARBON_PICKAXE, CARBON_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(CARBON_AXE, CARBON_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(CARBON_HOE, CARBON_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(CARBON_SHOVEL, CARBON_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(CARBON_SWORD, CARBON_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_PICKAXE, CARBON_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_AXE, CARBON_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_HOE, CARBON_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_SHOVEL, CARBON_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_SWORD, CARBON_SWORD.getUnlocalizedName().substring(5));
 		}
 		if (Config.CERES && Config.ITEMS_URANIUM) {
-			GameRegistry.registerItem(URANIUM_PICKAXE, URANIUM_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(URANIUM_AXE, URANIUM_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(URANIUM_HOE, URANIUM_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(URANIUM_SHOVEL, URANIUM_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(URANIUM_SWORD, URANIUM_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_PICKAXE, URANIUM_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_AXE, URANIUM_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_HOE, URANIUM_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_SHOVEL, URANIUM_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_SWORD, URANIUM_SWORD.getUnlocalizedName().substring(5));
 		}
 		if (Config.JUPITER) {
 			if (Config.ITEMS_PALLADIUM) {
-				GameRegistry.registerItem(PALLADIUM_PICKAXE, PALLADIUM_PICKAXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(PALLADIUM_AXE, PALLADIUM_AXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(PALLADIUM_HOE, PALLADIUM_HOE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(PALLADIUM_SHOVEL, PALLADIUM_SHOVEL.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(PALLADIUM_SWORD, PALLADIUM_SWORD.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLADIUM_PICKAXE, PALLADIUM_PICKAXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLADIUM_AXE, PALLADIUM_AXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLADIUM_HOE, PALLADIUM_HOE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLADIUM_SHOVEL, PALLADIUM_SHOVEL.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLADIUM_SWORD, PALLADIUM_SWORD.getUnlocalizedName().substring(5));
 			}
 			if (Config.ITEMS_GEM_RED) {
-				GameRegistry.registerItem(RED_GEM_PICKAXE, RED_GEM_PICKAXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(RED_GEM_AXE, RED_GEM_AXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(RED_GEM_HOE, RED_GEM_HOE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(RED_GEM_SHOVEL, RED_GEM_SHOVEL.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(RED_GEM_SWORD, RED_GEM_SWORD.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_PICKAXE, RED_GEM_PICKAXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_AXE, RED_GEM_AXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_HOE, RED_GEM_HOE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_SHOVEL, RED_GEM_SHOVEL.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_SWORD, RED_GEM_SWORD.getUnlocalizedName().substring(5));
 			}
 		}
 		if (Config.SATURN && Config.ITEMS_MAGNESIUM) {
-			GameRegistry.registerItem(MAGNESIUM_PICKAXE, MAGNESIUM_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MAGNESIUM_AXE, MAGNESIUM_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MAGNESIUM_HOE, MAGNESIUM_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MAGNESIUM_SHOVEL, MAGNESIUM_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MAGNESIUM_SWORD, MAGNESIUM_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_PICKAXE, MAGNESIUM_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_AXE, MAGNESIUM_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_HOE, MAGNESIUM_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_SHOVEL, MAGNESIUM_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_SWORD, MAGNESIUM_SWORD.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
 			if (Config.ITEMS_CRYSTAL) {
-				GameRegistry.registerItem(CRYSTAL_PICKAXE, CRYSTAL_PICKAXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(CRYSTAL_AXE, CRYSTAL_AXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(CRYSTAL_HOE, CRYSTAL_HOE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(CRYSTAL_SHOVEL, CRYSTAL_SHOVEL.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(CRYSTAL_SWORD, CRYSTAL_SWORD.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_PICKAXE, CRYSTAL_PICKAXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_AXE, CRYSTAL_AXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_HOE, CRYSTAL_HOE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_SHOVEL, CRYSTAL_SHOVEL.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_SWORD, CRYSTAL_SWORD.getUnlocalizedName().substring(5));
 			}
 			if (Config.ITEMS_GEM_WHITE) {
-				GameRegistry.registerItem(WHITE_GEM_PICKAXE, WHITE_GEM_PICKAXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(WHITE_GEM_AXE, WHITE_GEM_AXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(WHITE_GEM_HOE, WHITE_GEM_HOE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(WHITE_GEM_SHOVEL, WHITE_GEM_SHOVEL.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(WHITE_GEM_SWORD, WHITE_GEM_SWORD.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_PICKAXE, WHITE_GEM_PICKAXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_AXE, WHITE_GEM_AXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_HOE, WHITE_GEM_HOE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_SHOVEL, WHITE_GEM_SHOVEL.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_SWORD, WHITE_GEM_SWORD.getUnlocalizedName().substring(5));
 			}
 		}
 		if (Config.NEPTUNE) {
 			if (Config.ITEMS_GEM_BLUE) {
-				GameRegistry.registerItem(BLUE_GEM_PICKAXE, BLUE_GEM_PICKAXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(BLUE_GEM_AXE, BLUE_GEM_AXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(BLUE_GEM_HOE, BLUE_GEM_HOE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(BLUE_GEM_SHOVEL, BLUE_GEM_SHOVEL.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(BLUE_GEM_SWORD, BLUE_GEM_SWORD.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_PICKAXE, BLUE_GEM_PICKAXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_AXE, BLUE_GEM_AXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_HOE, BLUE_GEM_HOE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_SHOVEL, BLUE_GEM_SHOVEL.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_SWORD, BLUE_GEM_SWORD.getUnlocalizedName().substring(5));
 			}
 			if (Config.ITEMS_ZINC) {
-				GameRegistry.registerItem(ZINC_PICKAXE, ZINC_PICKAXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(ZINC_AXE, ZINC_AXE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(ZINC_HOE, ZINC_HOE.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(ZINC_SHOVEL, ZINC_SHOVEL.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(ZINC_SWORD, ZINC_SWORD.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_PICKAXE, ZINC_PICKAXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_AXE, ZINC_AXE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_HOE, ZINC_HOE.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_SHOVEL, ZINC_SHOVEL.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_SWORD, ZINC_SWORD.getUnlocalizedName().substring(5));
 			}
 		}
 		if (Config.PLUTO && Config.ITEMS_TUNGSTEN) {
-			GameRegistry.registerItem(TUNGSTEN_PICKAXE, TUNGSTEN_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TUNGSTEN_AXE, TUNGSTEN_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TUNGSTEN_HOE, TUNGSTEN_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TUNGSTEN_SHOVEL, TUNGSTEN_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TUNGSTEN_SWORD, TUNGSTEN_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_PICKAXE, TUNGSTEN_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_AXE, TUNGSTEN_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_HOE, TUNGSTEN_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_SHOVEL, TUNGSTEN_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_SWORD, TUNGSTEN_SWORD.getUnlocalizedName().substring(5));
 		}
 		if (Config.KEPLER22B && Config.ITEMS_KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			GameRegistry.registerItem(BLUE_DIAMOND_PICKAXE, BLUE_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BLUE_DIAMOND_AXE, BLUE_DIAMOND_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BLUE_DIAMOND_HOE, BLUE_DIAMOND_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BLUE_DIAMOND_SHOVEL, BLUE_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BLUE_DIAMOND_SWORD, BLUE_DIAMOND_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_PICKAXE, BLUE_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_AXE, BLUE_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_HOE, BLUE_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_SHOVEL, BLUE_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_SWORD, BLUE_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(RED_DIAMOND_PICKAXE, RED_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(RED_DIAMOND_AXE, RED_DIAMOND_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(RED_DIAMOND_HOE, RED_DIAMOND_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(RED_DIAMOND_SHOVEL, RED_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(RED_DIAMOND_SWORD, RED_DIAMOND_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_PICKAXE, RED_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_AXE, RED_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_HOE, RED_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_SHOVEL, RED_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_SWORD, RED_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(PURPLE_DIAMOND_PICKAXE, PURPLE_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(PURPLE_DIAMOND_AXE, PURPLE_DIAMOND_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(PURPLE_DIAMOND_HOE, PURPLE_DIAMOND_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(PURPLE_DIAMOND_SHOVEL, PURPLE_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(PURPLE_DIAMOND_SWORD, PURPLE_DIAMOND_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_PICKAXE, PURPLE_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_AXE, PURPLE_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_HOE, PURPLE_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_SHOVEL, PURPLE_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_SWORD, PURPLE_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(YELLOW_DIAMOND_PICKAXE, YELLOW_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(YELLOW_DIAMOND_AXE, YELLOW_DIAMOND_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(YELLOW_DIAMOND_HOE, YELLOW_DIAMOND_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(YELLOW_DIAMOND_SHOVEL, YELLOW_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(YELLOW_DIAMOND_SWORD, YELLOW_DIAMOND_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_PICKAXE, YELLOW_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_AXE, YELLOW_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_HOE, YELLOW_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_SHOVEL, YELLOW_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_SWORD, YELLOW_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(GREEN_DIAMOND_PICKAXE, GREEN_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(GREEN_DIAMOND_AXE, GREEN_DIAMOND_AXE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(GREEN_DIAMOND_HOE, GREEN_DIAMOND_HOE.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(GREEN_DIAMOND_SHOVEL, GREEN_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(GREEN_DIAMOND_SWORD, GREEN_DIAMOND_SWORD.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_PICKAXE, GREEN_DIAMOND_PICKAXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_AXE, GREEN_DIAMOND_AXE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_HOE, GREEN_DIAMOND_HOE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_SHOVEL, GREEN_DIAMOND_SHOVEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_SWORD, GREEN_DIAMOND_SWORD.getUnlocalizedName().substring(5));
 		}
 	}
 }

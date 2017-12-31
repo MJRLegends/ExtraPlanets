@@ -27,6 +27,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompre
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Machines {
 	// Machines
@@ -101,38 +102,38 @@ public class ExtraPlanets_Machines {
 
 	private static void registerMachines() throws NoSuchMethodException {
 		if (Config.REFINERY_ADVANCED)
-			GameRegistry.registerBlock(REFINERY_ADVANCED, REFINERY_ADVANCED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(REFINERY_ADVANCED, REFINERY_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.REFINERY_ULTIMATE)
-			GameRegistry.registerBlock(REFINERY_ULTIMATE, REFINERY_ULTIMATE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(REFINERY_ULTIMATE, REFINERY_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.SOLAR_PANELS)
-			GameRegistry.registerBlock(SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
-			GameRegistry.registerBlock(OXYGEN_COMPRESSOR_ADVANCED, ItemBlockAdvancedOxygenCompressor.class, OXYGEN_COMPRESSOR_ADVANCED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(OXYGEN_COMPRESSOR_ADVANCED, ItemBlockAdvancedOxygenCompressor.class, OXYGEN_COMPRESSOR_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
-			GameRegistry.registerBlock(OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.RADIATION) {
 			if (Config.BASIC_DECRYSTALLIZER)
-				GameRegistry.registerBlock(BASIC_DECRYSALLIZER, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(BASIC_DECRYSALLIZER, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_CRYSTALLIZER)
-				GameRegistry.registerBlock(BASIC_CRYSALLIZER, BASIC_CRYSALLIZER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(BASIC_CRYSALLIZER, BASIC_CRYSALLIZER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_SMASHER)
-				GameRegistry.registerBlock(BASIC_SMASHER, BASIC_SMASHER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(BASIC_SMASHER, BASIC_SMASHER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_CHEMICAL_INJECTOR)
-				GameRegistry.registerBlock(BASIC_CHEMICAL_INJECTOR, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(BASIC_CHEMICAL_INJECTOR, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
-				GameRegistry.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_PURIFIER)
-				GameRegistry.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_DECONTAMINATION_UNIT)
-				GameRegistry.registerBlock(BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerBlock(BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
-			GameRegistry.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.FUEL_LOADER_ULTIMATE)
-			GameRegistry.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.BASIC_DENSIFIER)
-			GameRegistry.registerBlock(BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerBlock(BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
+		RegisterUtilities.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {

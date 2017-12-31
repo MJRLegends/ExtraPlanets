@@ -3,9 +3,9 @@ package com.mjr.extraplanets.items.armor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Armor {
 	private static ArmorMaterial CARBON_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15);
@@ -266,127 +266,127 @@ public class ExtraPlanets_Armor {
 
 	private static void registerArmor() {
 		if (Config.ITEMS_MERCURY && Config.MERCURY) {
-			GameRegistry.registerItem(MERCURY_HELMET, MERCURY_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MERCURY_CHEST, MERCURY_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MERCURY_LEGINGS, MERCURY_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MERCURY_BOOTS, MERCURY_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_HELMET, MERCURY_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_CHEST, MERCURY_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_LEGINGS, MERCURY_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MERCURY_BOOTS, MERCURY_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.ITEMS_CARBON && Config.MERCURY) {
-			GameRegistry.registerItem(CARBON_HELMET, CARBON_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(CARBON_CHEST, CARBON_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(CARBON_LEGINGS, CARBON_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(CARBON_BOOTS, CARBON_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_HELMET, CARBON_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_CHEST, CARBON_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_LEGINGS, CARBON_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(CARBON_BOOTS, CARBON_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.ITEMS_URANIUM && Config.CERES) {
-			GameRegistry.registerItem(URANIUM_HELMET, URANIUM_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(URANIUM_CHEST, URANIUM_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(URANIUM_LEGINGS, URANIUM_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(URANIUM_BOOTS, URANIUM_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_HELMET, URANIUM_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_CHEST, URANIUM_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_LEGINGS, URANIUM_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(URANIUM_BOOTS, URANIUM_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.JUPITER) {
 			if (Config.ITEMS_PALLADIUM) {
-				GameRegistry.registerItem(PALLASIUM_HELMET, PALLASIUM_HELMET.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(PALLASIUM_CHEST, PALLASIUM_CHEST.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(PALLASIUM_LEGINGS, PALLASIUM_LEGINGS.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(PALLASIUM_BOOTS, PALLASIUM_BOOTS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLASIUM_HELMET, PALLASIUM_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLASIUM_CHEST, PALLASIUM_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLASIUM_LEGINGS, PALLASIUM_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(PALLASIUM_BOOTS, PALLASIUM_BOOTS.getUnlocalizedName().substring(5));
 			}
 			if (Config.ITEMS_GEM_RED) {
-				GameRegistry.registerItem(RED_GEM_HELMET, RED_GEM_HELMET.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(RED_GEM_CHEST, RED_GEM_CHEST.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(RED_GEM_LEGINGS, RED_GEM_LEGINGS.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(RED_GEM_BOOTS, RED_GEM_BOOTS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_HELMET, RED_GEM_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_CHEST, RED_GEM_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_LEGINGS, RED_GEM_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(RED_GEM_BOOTS, RED_GEM_BOOTS.getUnlocalizedName().substring(5));
 			}
 		}
 		if (Config.ITEMS_MAGNESIUM && Config.SATURN) {
-			GameRegistry.registerItem(MAGNESIUM_HELMET, MAGNESIUM_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MAGNESIUM_CHEST, MAGNESIUM_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MAGNESIUM_LEGINGS, MAGNESIUM_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(MAGNESIUM_BOOTS, MAGNESIUM_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_HELMET, MAGNESIUM_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_CHEST, MAGNESIUM_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_LEGINGS, MAGNESIUM_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MAGNESIUM_BOOTS, MAGNESIUM_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
 			if (Config.ITEMS_CRYSTAL) {
-				GameRegistry.registerItem(CRYSTAL_HELMET, CRYSTAL_HELMET.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(CRYSTAL_CHEST, CRYSTAL_CHEST.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(CRYSTAL_LEGINGS, CRYSTAL_LEGINGS.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(CRYSTAL_BOOTS, CRYSTAL_BOOTS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_HELMET, CRYSTAL_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_CHEST, CRYSTAL_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_LEGINGS, CRYSTAL_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CRYSTAL_BOOTS, CRYSTAL_BOOTS.getUnlocalizedName().substring(5));
 			}
 			if (Config.ITEMS_GEM_WHITE) {
-				GameRegistry.registerItem(WHITE_GEM_HELMET, WHITE_GEM_HELMET.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(WHITE_GEM_CHEST, WHITE_GEM_CHEST.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(WHITE_GEM_LEGINGS, WHITE_GEM_LEGINGS.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(WHITE_GEM_BOOTS, WHITE_GEM_BOOTS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_HELMET, WHITE_GEM_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_CHEST, WHITE_GEM_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_LEGINGS, WHITE_GEM_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(WHITE_GEM_BOOTS, WHITE_GEM_BOOTS.getUnlocalizedName().substring(5));
 			}
 		}
 		if (Config.NEPTUNE) {
 			if (Config.ITEMS_ZINC) {
-				GameRegistry.registerItem(ZINC_HELMET, ZINC_HELMET.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(ZINC_CHEST, ZINC_CHEST.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(ZINC_LEGINGS, ZINC_LEGINGS.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(ZINC_BOOTS, ZINC_BOOTS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_HELMET, ZINC_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_CHEST, ZINC_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_LEGINGS, ZINC_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(ZINC_BOOTS, ZINC_BOOTS.getUnlocalizedName().substring(5));
 			}
 			if (Config.ITEMS_GEM_BLUE) {
-				GameRegistry.registerItem(BLUE_GEM_HELMET, BLUE_GEM_HELMET.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(BLUE_GEM_CHEST, BLUE_GEM_CHEST.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(BLUE_GEM_LEGINGS, BLUE_GEM_LEGINGS.getUnlocalizedName().substring(5));
-				GameRegistry.registerItem(BLUE_GEM_BOOTS, BLUE_GEM_BOOTS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_HELMET, BLUE_GEM_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_CHEST, BLUE_GEM_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_LEGINGS, BLUE_GEM_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(BLUE_GEM_BOOTS, BLUE_GEM_BOOTS.getUnlocalizedName().substring(5));
 			}
 		}
 		if (Config.ITEMS_TUNGSTEN && Config.PLUTO) {
-			GameRegistry.registerItem(TUNGSTEN_HELMET, TUNGSTEN_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TUNGSTEN_CHEST, TUNGSTEN_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TUNGSTEN_LEGINGS, TUNGSTEN_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TUNGSTEN_BOOTS, TUNGSTEN_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_HELMET, TUNGSTEN_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_CHEST, TUNGSTEN_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_LEGINGS, TUNGSTEN_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TUNGSTEN_BOOTS, TUNGSTEN_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.KEPLER22B && Config.ITEMS_KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			GameRegistry.registerItem(BLUE_DIAMOND_HELMET, BLUE_DIAMOND_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BLUE_DIAMOND_CHEST, BLUE_DIAMOND_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BLUE_DIAMOND_LEGINGS, BLUE_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(BLUE_DIAMOND_BOOTS, BLUE_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_HELMET, BLUE_DIAMOND_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_CHEST, BLUE_DIAMOND_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_LEGINGS, BLUE_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BLUE_DIAMOND_BOOTS, BLUE_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(RED_DIAMOND_HELMET, RED_DIAMOND_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(RED_DIAMOND_CHEST, RED_DIAMOND_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(RED_DIAMOND_LEGINGS, RED_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(RED_DIAMOND_BOOTS, RED_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_HELMET, RED_DIAMOND_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_CHEST, RED_DIAMOND_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_LEGINGS, RED_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(RED_DIAMOND_BOOTS, RED_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(PURPLE_DIAMOND_HELMET, PURPLE_DIAMOND_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(PURPLE_DIAMOND_CHEST, PURPLE_DIAMOND_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(PURPLE_DIAMOND_LEGINGS, PURPLE_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(PURPLE_DIAMOND_BOOTS, PURPLE_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_HELMET, PURPLE_DIAMOND_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_CHEST, PURPLE_DIAMOND_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_LEGINGS, PURPLE_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(PURPLE_DIAMOND_BOOTS, PURPLE_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(YELLOW_DIAMOND_HELMET, YELLOW_DIAMOND_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(YELLOW_DIAMOND_CHEST, YELLOW_DIAMOND_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(YELLOW_DIAMOND_LEGINGS, YELLOW_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(YELLOW_DIAMOND_BOOTS, YELLOW_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_HELMET, YELLOW_DIAMOND_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_CHEST, YELLOW_DIAMOND_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_LEGINGS, YELLOW_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(YELLOW_DIAMOND_BOOTS, YELLOW_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(GREEN_DIAMOND_HELMET, GREEN_DIAMOND_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(GREEN_DIAMOND_CHEST, GREEN_DIAMOND_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(GREEN_DIAMOND_LEGINGS, GREEN_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(GREEN_DIAMOND_BOOTS, GREEN_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_HELMET, GREEN_DIAMOND_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_CHEST, GREEN_DIAMOND_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_LEGINGS, GREEN_DIAMOND_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(GREEN_DIAMOND_BOOTS, GREEN_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.PRESSURE || Config.RADIATION) {
-			GameRegistry.registerItem(TIER_1_SPACE_SUIT_HELMET, TIER_1_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_1_SPACE_SUIT_CHEST, TIER_1_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_1_SPACE_SUIT_LEGINGS, TIER_1_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_1_SPACE_SUIT_BOOTS, TIER_1_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_1_SPACE_SUIT_GRAVITY_BOOTS, TIER_1_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_HELMET, TIER_1_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_CHEST, TIER_1_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_LEGINGS, TIER_1_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_BOOTS, TIER_1_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_GRAVITY_BOOTS, TIER_1_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(TIER_2_SPACE_SUIT_HELMET, TIER_2_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_2_SPACE_SUIT_CHEST, TIER_2_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_2_SPACE_SUIT_LEGINGS, TIER_2_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_2_SPACE_SUIT_BOOTS, TIER_2_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_2_SPACE_SUIT_GRAVITY_BOOTS, TIER_2_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_HELMET, TIER_2_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_CHEST, TIER_2_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_LEGINGS, TIER_2_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_BOOTS, TIER_2_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_GRAVITY_BOOTS, TIER_2_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(TIER_3_SPACE_SUIT_HELMET, TIER_3_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_3_SPACE_SUIT_CHEST, TIER_3_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_3_SPACE_SUIT_LEGINGS, TIER_3_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_3_SPACE_SUIT_BOOTS, TIER_3_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_3_SPACE_SUIT_GRAVITY_BOOTS, TIER_3_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_HELMET, TIER_3_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_CHEST, TIER_3_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_LEGINGS, TIER_3_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_BOOTS, TIER_3_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_GRAVITY_BOOTS, TIER_3_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
 
-			GameRegistry.registerItem(TIER_4_SPACE_SUIT_HELMET, TIER_4_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_4_SPACE_SUIT_CHEST, TIER_4_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_4_SPACE_SUIT_LEGINGS, TIER_4_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_4_SPACE_SUIT_BOOTS, TIER_4_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
-			GameRegistry.registerItem(TIER_4_SPACE_SUIT_GRAVITY_BOOTS, TIER_4_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_HELMET, TIER_4_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_CHEST, TIER_4_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_LEGINGS, TIER_4_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_BOOTS, TIER_4_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_GRAVITY_BOOTS, TIER_4_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
 		}
 	}
 }
