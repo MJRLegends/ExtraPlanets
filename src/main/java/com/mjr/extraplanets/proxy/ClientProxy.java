@@ -502,9 +502,11 @@ public class ClientProxy extends CommonProxy {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.VENUS_ROVER, i, modelResourceLocation);
 			}
 		}
-		Item unit = Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT);
-		modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "basic_decontamination_unit", "inventory");
-		ModelLoader.setCustomModelResourceLocation(unit, 0, modelResourceLocation);
+		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT) {
+			Item unit = Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT);
+			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "basic_decontamination_unit", "inventory");
+			ModelLoader.setCustomModelResourceLocation(unit, 0, modelResourceLocation);
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -525,7 +527,8 @@ public class ClientProxy extends CommonProxy {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
 		if (Config.SOLAR_PANELS)
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBasicDecontaminationUnit.class, new TileEntityBasicDecontaminationUnitRenderer());
+		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
+			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBasicDecontaminationUnit.class, new TileEntityBasicDecontaminationUnitRenderer());
 	}
 
 	private void registerBlockJsons() {
@@ -791,8 +794,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ADVANCED);
 		if (Config.FUEL_LOADER_ULTIMATE)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE);
-
-		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_DENSIFIER);
+		if (Config.BASIC_DENSIFIER)
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_DENSIFIER);
 
 		// Other Blocks
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
@@ -1400,9 +1403,10 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.replaceModelDefault(Constants.modID, event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
 			}
 		}
-		ClientUtilities.replaceModelDefault(Constants.modID, event, "basic_decontamination_unit", "block/decontamination_unit.obj",
-				ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"), ItemModelDecontaminationUnit.class,
-				TRSRTransformation.identity());
+		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT) {
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "basic_decontamination_unit", "block/decontamination_unit.obj",
+					ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"), ItemModelDecontaminationUnit.class, TRSRTransformation.identity());
+		}
 	}
 
 	private void registerFluidVariants() {
