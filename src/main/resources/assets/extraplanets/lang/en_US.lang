@@ -498,6 +498,7 @@ gui.radiation.type.message=Radiation
 gui.status.waiting.on.player.name=No Player in Machine
 gui.message.finding.block=Can be found on
 gui.message.finding.volcanic.rock=Jupiter & Io
+gui.message.decontamination.unit=Reduces Radiation Level by 10%
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details
