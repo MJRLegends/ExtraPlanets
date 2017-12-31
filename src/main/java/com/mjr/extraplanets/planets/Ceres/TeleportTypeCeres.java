@@ -6,7 +6,6 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
 import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
-import micdoodle8.mods.galacticraft.core.util.CompatibilityManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
@@ -51,12 +50,11 @@ public class TeleportTypeCeres implements ITeleportType {
 					player.capabilities.isFlying = false;
 				}
 
+				EntityGeneralLander lander = new EntityGeneralLander(player);
+
 				if (!newWorld.isRemote) {
-					EntityGeneralLander entryPod = new EntityGeneralLander(player);
-					CompatibilityManager.forceLoadChunks((WorldServer) newWorld);
-					entryPod.forceSpawn = true;
-					newWorld.spawnEntityInWorld(entryPod);
-					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld);
+					lander.forceSpawn = true;
+					newWorld.spawnEntityInWorld(lander);
 				}
 
 				stats.setTeleportCooldown(10);

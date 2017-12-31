@@ -159,7 +159,7 @@ public class MainHandlerClient {
 		if (minecraft.currentScreen == null && player.ridingEntity instanceof EntityNeptuneLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayNeptuneLander.renderLanderOverlay();
 		}
-		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityGeneralLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+		if (minecraft.currentScreen == null && player.ridingEntity instanceof EntityGeneralLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayGeneralLander.renderLanderOverlay();
 		}
 	}
