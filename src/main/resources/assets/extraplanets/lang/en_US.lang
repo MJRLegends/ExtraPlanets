@@ -407,6 +407,8 @@ tile.ultimate_fuel_loader.name=Ultimate Fuel Loader
 tile.vehicle_charger.name=Vehicle Charger (WIP)
 tile.basic_purifier.name=Basic Purifier
 tile.basic_densifier.name=Basic Densifier
+tile.basic_decontamination_unit.name=Basic Decontamination Unit
+tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit
 
 #Machine Containers
 container.solarhybrid.name=Hybrid Solar Panel
@@ -427,8 +429,9 @@ container.basic.solar.evaporation.chamber.name=Basic Solar Evaporation Chamber
 container.vehicle.charger.name=Vehicle Charger
 container.basic.purifier.name=Purifier
 container.basic.densifier.name=Basic Densifier
+container.basic.decontamination.unit.name=Basic Decontamination Unit
 
-#Machine GUI Components
+#GUI Components/Messages
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
 gui.message.salt_water.name=Crystallized Water
 gui.salt_water_input.desc.0=Place Liquid Crystallized Water bucket into
@@ -462,7 +465,18 @@ gui.infected_water_input.desc.2=Each Infected Water Bucket will give 1000mB
 gui.clean_water_output.desc.0=Place empty vanilla bucket into
 gui.clean_water_output.desc.1=this slot to fill them from the tank
 gui.bucket.message.finding=You can obtain this Fluid
-gui.bucket.message.finding.2=by Finding it on Planets/Moons
+gui.bucket.message.finding.2.infected_water_fluid=on Mercury
+gui.bucket.message.finding.2.radioactive_water_fluid=on Ceres & Europa
+gui.bucket.message.finding.2.nitrogen_fluid=on Neptune
+gui.bucket.message.finding.2.glowstone_fluid=on Saturn
+gui.bucket.message.finding.2.magma_fluid=on Jupiter & IO
+gui.bucket.message.finding.2.liquid_caramel_fluid=on Kepler22b
+gui.bucket.message.finding.2.liquid_chocolate_fluid=on Kepler22b
+gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=on Saturn
+gui.bucket.message.finding.2.salt_fluid=on Ceres & Europa
+gui.bucket.message.finding.2.methane_fluid=on Titan
+gui.bucket.message.finding.2.frozen_water_fluid=on Uranus & Triton
+gui.bucket.message.finding.2.nitrogen_ice_fluid=on Triton
 gui.bucket.message.crafting=Press R to See How to Obtain
 gui.status.missing.inputs.name=Missing Items/Fluids
 gui.status.missing.power.name=Missing Power
@@ -475,6 +489,13 @@ gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb
 gui.message.general.tank.name=Fluid Tank
 gui.message.general.tank.fluid.name=Fluid
 gui.status.densifier.name=Densifying
+gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility
+gui.radiation.reduced.message=Your Radiation Level has been reduced by
+gui.radiation.current.message=Your Current Radiation Level is
+gui.radiation.subject.message=You're now subject to
+gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage
+gui.radiation.type.message=Radiation
+gui.status.waiting.on.player.name=No Player in Machine
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details

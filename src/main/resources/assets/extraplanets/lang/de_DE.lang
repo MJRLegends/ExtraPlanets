@@ -406,6 +406,8 @@ tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofflader
 tile.ultimate_fuel_loader.name=Ultimativer Treibstofflader
 tile.vehicle_charger.name=Fahrzeug Auflader (WIP)
 tile.basic_purifier.name=Basis Reiniger
+tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Hybrid Solarmodul
@@ -425,8 +427,9 @@ container.ultimate.fuelloader.name=Ultimativer Treibstofflader
 container.basic.solar.evaporation.chamber.name=Basis Solarverdampfungskammer
 container.vehicle.charger.name=Fahrzeugs Auflader
 container.basic.purifier.name=Basis Reiniger
+container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
-#Machine GUI Components
+#GUI Components/Messages
 gui.salt_water_tank.desc.4=Flüssigkristallisierterwassertank
 gui.message.salt_water.name=Kristallisiertes Wasser
 gui.salt_water_input.desc.0=Platziere einen Flüssigkristallisierterwassereimer in
@@ -460,10 +463,28 @@ gui.infected_water_input.desc.2=Jeder Infiziertenwassereimer wird 1000mB geben.
 gui.clean_water_output.desc.0=Platziere einen leeren eimer in
 gui.clean_water_output.desc.1=diesen slot um die eimer von dem tank zu füllen
 gui.bucket.message.finding=Du kannst die flüssigkeit aufnehmen
-gui.bucket.message.finding.2=du musst sie an monden/planeten finden.
+gui.bucket.message.finding.2.infected_water_fluid=on Mercury ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.radioactive_water_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.nitrogen_fluid=on Neptune ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.glowstone_fluid=on Saturn ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.magma_fluid=on Jupiter & IO ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.liquid_caramel_fluid=on Kepler22b ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.liquid_chocolate_fluid=on Kepler22b ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=on Saturn ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.salt_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.methane_fluid=on Titan ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.frozen_water_fluid=on Uranus & Triton ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.nitrogen_ice_fluid=on Triton ##NEEDS TRANSLATE##
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
 gui.status.missing.inputs.name=Fehlende Items/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
+gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility ##NEEDS TRANSLATE##
+gui.radiation.reduced.message=Your Radiation Level has been reduced by ##NEEDS TRANSLATE##
+gui.radiation.current.message=Your Current Radiation Level is ##NEEDS TRANSLATE##
+gui.radiation.subject.message=You're now subject to ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage ##NEEDS TRANSLATE##
+gui.radiation.type.message=Radiation ##NEEDS TRANSLATE##
+gui.status.waiting.on.player.name=No Player in Machine ##NEEDS TRANSLATE##
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
