@@ -39,7 +39,6 @@ public class GuiBasicDecontaminationUnit extends GuiContainerGC {
 		super.initGui();
 		List<String> batterySlotDesc = new ArrayList<String>();
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
-		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
