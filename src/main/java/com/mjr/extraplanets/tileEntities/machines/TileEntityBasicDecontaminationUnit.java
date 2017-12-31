@@ -11,7 +11,6 @@ import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
 import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
@@ -28,6 +27,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -39,33 +39,45 @@ import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock implements IMultiBlock, IInventoryDefaults, ISidedInventory {
-	private ItemStack[] containingItems = new ItemStack[3];
+	private ItemStack[] containingItems = new ItemStack[1];
 	@NetworkedField(targetSide = Side.CLIENT)
 	private AxisAlignedBB renderAABB;
 
 	public TileEntityBasicDecontaminationUnit() {
 		super();
-		this.storage.setMaxExtract(ConfigManagerCore.hardMode ? 115 : 50);
+		this.storage.setCapacity(1000000);
 	}
 
 	@Override
 	public void update() {
 		if (!this.worldObj.isRemote) {
-			List containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
-					this.getPos().getZ() + 1));
-
-			for (int i = 0; i < containedEntities.size(); i++) {
+			List containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2, this.getPos()
+					.getZ() + 1));
+			if (this.storage.getEnergyStoredGC() >= 1000000 && containedEntities.size() == 1) {
+				this.storage.setEnergyStored(0);
+				EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(0));
 				IStatsCapability stats = null;
-				if (((EntityPlayerMP) containedEntities.get(i)) != null) {
-					stats = ((EntityPlayerMP) containedEntities.get(i)).getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+				if (player != null) {
+					stats = (player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null));
 				}
-				stats.setRadiationLevel(100);
-				System.out.println(stats.getRadiationLevel());
+				double temp = stats.getRadiationLevel();
+				double level = (temp * 10) / 100;
+				if (level <= 0)
+					stats.setRadiationLevel(0);
+				else {
+					stats.setRadiationLevel(stats.getRadiationLevel() - level);
+					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 10%"));
+					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+				}
 			}
-
 		}
 		super.update();
 	}
+    
+	@Override
+	public void slowDischarge()
+    {
+    }
 
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
@@ -246,7 +258,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 
 	@Override
 	public boolean shouldUseEnergy() {
-		return !this.getDisabled(0);
+		return false;
 	}
 
 	@Override

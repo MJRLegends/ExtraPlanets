@@ -255,15 +255,16 @@ public class ClientProxy extends CommonProxy {
 		if (Config.URANUS)
 			ClientUtilities.addVariants(Constants.modID, "uranus", "uranus_surface", "uranus_sub_surface", "uranus_stone", "uranus_ore_crystal", "uranus_crystal_block", "uranus_stonebricks", "uranus_dungeon_brick", "uranus_ore_white_gem", "uranus_white_gem_block");
 		if (Config.NEPTUNE)
-			ClientUtilities.addVariants(Constants.modID, "neptune", "neptune_surface", "neptune_sub_surface", "neptune_stone", "neptune_ore_iron", "neptune_ore_tin", "neptune_ore_copper", "neptune_ore_zinc", "neptune_zinc_block", "neptune_stonebricks",
-					"neptune_dungeon_brick", "neptune_ore_blue_gem", "neptune_blue_gem_block");
+			ClientUtilities.addVariants(Constants.modID, "neptune", "neptune_surface", "neptune_sub_surface", "neptune_stone", "neptune_ore_iron", "neptune_ore_tin", "neptune_ore_copper", "neptune_ore_zinc", "neptune_zinc_block",
+					"neptune_stonebricks", "neptune_dungeon_brick", "neptune_ore_blue_gem", "neptune_blue_gem_block");
 		if (Config.SATURN)
-			ClientUtilities.addVariants(Constants.modID, "saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper", "saturn_ore_magnesium", "saturn_magnesium_block", "saturn_stonebricks",
-					"saturn_dungeon_brick", "broken_infected_stone", "infected_stone", "saturn_ore_slime");
+			ClientUtilities.addVariants(Constants.modID, "saturn", "saturn_surface", "saturn_sub_surface", "saturn_stone", "saturn_ore_iron", "saturn_ore_tin", "saturn_ore_copper", "saturn_ore_magnesium", "saturn_magnesium_block",
+					"saturn_stonebricks", "saturn_dungeon_brick", "broken_infected_stone", "infected_stone", "saturn_ore_slime");
 		if (Config.PLUTO)
 			ClientUtilities.addVariants(Constants.modID, "pluto", "pluto_surface", "pluto_sub_surface", "pluto_stone", "pluto_ore_iron", "pluto_ore_tin", "pluto_ore_copper", "pluto_ore_tungsten", "pluto_tungsten_block", "pluto_stonebricks", "pluto_dungeon_brick");
 		if (Config.ERIS)
-			ClientUtilities.addVariants(Constants.modID, "eris", "eris_surface", "eris_sub_surface", "eris_stone", "eris_ore_iron", "eris_ore_tin", "eris_ore_copper", "eris_ore_dark_iron", "eris_dark_iron_block", "eris_stonebricks", "eris_dungeon_brick");
+			ClientUtilities.addVariants(Constants.modID, "eris", "eris_surface", "eris_sub_surface", "eris_stone", "eris_ore_iron", "eris_ore_tin", "eris_ore_copper", "eris_ore_dark_iron", "eris_dark_iron_block", "eris_stonebricks",
+					"eris_dungeon_brick");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS)
 			ClientUtilities.addVariants(Constants.modID, "kepler22b", "kepler22b_dirt", "kepler22b_stone", "kepler22b_ore_iron", "kepler22b_ore_tin", "kepler22b_ore_copper", "kepler22b_ore_dense_coal", "kepler22b_ore_blue_diamond", "kepler22b_ore_red_diamond",
 					"kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone", "keler22b_ore_platinum");
@@ -294,8 +295,8 @@ public class ClientProxy extends CommonProxy {
 		if (Config.MERCURY)
 			ClientUtilities.addVariants(Constants.modID, "tier4_items", "tier4engine", "tier4booster", "tier4fin", "tier4heavy_duty_plate", "compressed_carbon", "ingot_carbon", "diamond_shard");
 		if (Config.JUPITER)
-			ClientUtilities.addVariants(Constants.modID, "tier5_items", "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash", "ash_shard",
-					"volcanic_shard", "ingot_volcanic");
+			ClientUtilities.addVariants(Constants.modID, "tier5_items", "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash",
+					"ash_shard", "volcanic_shard", "ingot_volcanic");
 		if (Config.SATURN)
 			ClientUtilities.addVariants(Constants.modID, "tier6_items", "tier6engine", "tier6booster", "tier6fin", "tier6heavy_duty_plate", "compressed_magnesium", "ingot_magnesium");
 		if (Config.URANUS)
@@ -316,8 +317,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addVariants(Constants.modID, "kepler22b_new_maple_leaves_2", "maple_green_leaf", "maple_brown_leaf");
 
 			ClientUtilities.addVariants(Constants.modID, "kepler22b_maple_saplings", "maple_blue_sapling", "maple_red_sapling", "maple_purple_sapling", "maple_yellow_sapling", "maple_green_sapling", "maple_brown_sapling");
-			ClientUtilities.addVariants(Constants.modID, "kepler22b_flowers", "maple_blue_short", "maple_blue_med", "maple_blue_tall", "maple_red_short", "maple_red_med", "maple_red_tall", "maple_purple_short", "maple_purple_med", "maple_purple_tall",
-					"maple_yellow_short", "maple_yellow_med", "maple_yellow_tall", "maple_green_short", "maple_green_med", "maple_green_tall");
+			ClientUtilities.addVariants(Constants.modID, "kepler22b_flowers", "maple_blue_short", "maple_blue_med", "maple_blue_tall", "maple_red_short", "maple_red_med", "maple_red_tall", "maple_purple_short", "maple_purple_med",
+					"maple_purple_tall", "maple_yellow_short", "maple_yellow_med", "maple_yellow_tall", "maple_green_short", "maple_green_med", "maple_green_tall");
 		}
 		ClientUtilities.addVariants(Constants.modID, "wafer", "diamond_wafer", "carbon_wafer", "titanium_wafer", "red_gem_wafer", "blue_gem_wafer", "white_gem_wafer");
 		ClientUtilities.addVariants(Constants.modID, "tools", "sledge_hammer", "grinding_wheel", "mesh", "filter");
@@ -501,6 +502,9 @@ public class ClientProxy extends CommonProxy {
 				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.VENUS_ROVER, i, modelResourceLocation);
 			}
 		}
+		Item unit = Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT);
+		modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "basic_decontamination_unit", "inventory");
+		ModelLoader.setCustomModelResourceLocation(unit, 0, modelResourceLocation);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -1396,7 +1400,9 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.replaceModelDefault(Constants.modID, event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
 			}
 		}
-		ClientUtilities.replaceModelDefault(Constants.modID, event, "decontamination_unit", "decontamination_unit.obj", ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "Glass_Door", "AtomaziersTwo"), ItemModelDecontaminationUnit.class, TRSRTransformation.identity());
+		ClientUtilities.replaceModelDefault(Constants.modID, event, "basic_decontamination_unit", "decontamination_unit.obj",
+				ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"), ItemModelDecontaminationUnit.class,
+				TRSRTransformation.identity());
 	}
 
 	private void registerFluidVariants() {
