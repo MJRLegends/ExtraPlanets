@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "extraplanets:blocks/basic_decontamination_unit"
+        "layer0": "galacticraftcore:blocks/buggy_pad_full"
     },
     "display": {
         "thirdperson": {
