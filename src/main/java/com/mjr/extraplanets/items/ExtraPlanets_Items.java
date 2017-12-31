@@ -255,7 +255,7 @@ public class ExtraPlanets_Items {
 	private static void initializeItems() {
 		if (Config.MERCURY) {
 			if (Config.BATTERIES)
-				BATTERY_MERCURY = new ItemBasicBattery("mercury_battery", 85000f, 2);
+				BATTERY_MERCURY = new ItemBasicBattery("mercury_battery", 100000f, 2);
 			INGOT_MERCURY = new ItemBasicItem("ingot_mercury");
 			COMPRESSED_MERCURY = new ItemMercuryCompressed("compressed_mercury");
 			TIER_4_ROCKET = new Tier4Rocket("item_tier4_rocket");
@@ -269,7 +269,7 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.JUPITER) {
 			if (Config.BATTERIES)
-				BATTERY_NICKEL = new ItemBasicBattery("nickel_battery", 45000f, 2);
+				BATTERY_NICKEL = new ItemBasicBattery("nickel_battery", 85000f, 2);
 			TIER_5_ROCKET = new Tier5Rocket("item_tier5_rocket");
 			TIER_5_SCHEMATIC = new SchematicTier5("schematic_tier5");
 			TIER_5_NOSE_CONE = new Tier5NoseCone("nose_cone_tier5");
@@ -330,7 +330,7 @@ public class ExtraPlanets_Items {
 			TIER_5_THERMAL_PADDING = new ItemTier5ThermalPadding("tier5_thermal_padding");
 		}
 		if (Config.BATTERIES) {
-			BATTERY_ADVANCED = new ItemBasicBattery("advanced_battery", 50000f, 2);
+			BATTERY_ADVANCED = new ItemBasicBattery("advanced_battery", 150000f, 2);
 			BATTERY_ULTIMATE = new ItemBasicBattery("ultimate_battery", 200000f, 2);
 		}
 		if (Config.OXYGEN_TANKS) {
