@@ -428,7 +428,7 @@ container.vehicle.charger.name=Vehicle Charger
 container.basic.purifier.name=Purifier
 container.basic.densifier.name=Basic Densifier
 
-#Machine GUI Components
+#GUI Components/Messages
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
 gui.message.salt_water.name=Crystallized Water
 gui.salt_water_input.desc.0=Place Liquid Crystallized Water bucket into
@@ -487,6 +487,11 @@ gui.message.general.tank.name=Fluid Tank
 gui.message.general.tank.fluid.name=Fluid
 gui.status.densifier.name=Densifying
 gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility
+gui.radiation.reduced.message=Your Radiation Level has been reduced by
+gui.radiation.current.message=Your Current Radiation Level is
+gui.radiation.subject.message=You're now subject to
+gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage
+gui.radiation.type.message=Radiation
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details

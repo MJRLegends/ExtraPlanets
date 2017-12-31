@@ -7,6 +7,7 @@ import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -317,8 +318,8 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by 5%"));
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 5%"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%"));
 			}
 		}
 	}
@@ -328,9 +329,9 @@ public class MainHandlerServer {
 		if (event.player.worldObj.isRemote == false) {
 			if (event.player.worldObj.provider instanceof WorldProviderRealisticSpace) {
 				EntityPlayer player = event.player;
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", You're now subject to "
-						+ ((WorldProviderRealisticSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% Radiation!"));
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", You can use Anti-Rad Drinks or Sleeping to help reverse the damage!"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + GCCoreUtil.translate("gui.radiation.subject.message") + " "
+						+ ((WorldProviderRealisticSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% " + GCCoreUtil.translate("gui.radiation.type.message") + ""));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", " + GCCoreUtil.translate("gui.radiation.reverse.message") + "!"));
 			}
 		}
 	}
