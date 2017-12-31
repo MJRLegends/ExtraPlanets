@@ -28,16 +28,16 @@ public class ItemModelDecontaminationUnit extends ModelTransformWrapper {
 			ret.setIdentity();
 			Matrix4f mul = new Matrix4f();
 			mul.setIdentity();
-			mul.setTranslation(new Vector3f(0.05F, -0.45F, 0.24F));
+			mul.setTranslation(new Vector3f(-0.2F, -0.55F, 0.24F));
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.rotX((float) Math.PI / 12.0F);
+			mul.rotX(0.0F);
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.rotY((float) Math.PI / 5.0F);
+			mul.rotY(90.0F);
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.setScale(0.04F);
+			mul.setScale(0.06F);
 			ret.mul(mul);
 			return ret;
 		}
@@ -76,6 +76,9 @@ public class ItemModelDecontaminationUnit extends ModelTransformWrapper {
 			Matrix4f ret = new Matrix4f();
 			ret.setIdentity();
 			Matrix4f mul = new Matrix4f();
+			mul.setIdentity();
+			mul.setTranslation(new Vector3f(0F, 0F, -0.1F));
+			ret.mul(mul);
 			mul.setIdentity();
 			mul.setScale(0.02F);
 			ret.mul(mul);
