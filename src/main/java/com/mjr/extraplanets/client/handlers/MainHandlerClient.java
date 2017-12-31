@@ -220,15 +220,15 @@ public class MainHandlerClient {
 				Fluid fluid = fluidStack.getFluid();
 				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
 						|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) || fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
-						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
+						|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
 					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding"));
-					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2"));
+					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.finding.2." + fluid.getUnlocalizedName().substring(6)));
 				} else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
 					event.getToolTip().add(EnumColor.ORANGE + GCCoreUtil.translate("gui.bucket.message.crafting"));
 
 				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)
 						|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)|| fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID)) {
-					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
+					event.getToolTip().add(EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
 				}
 			}
 		}
