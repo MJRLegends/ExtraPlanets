@@ -87,7 +87,8 @@ public class ExtraPlanets_Machines {
 				BASIC_SOLAR_EVAPORTATION_CHAMBER = new BasicSolarEvaporationChamber("basic_solar_evaporation_chamber");
 			if (Config.BASIC_PURIFIER)
 				BASIC_PURIFIER = new BasicPurifier("basic_purifier");
-			BASIC_DECONTAMINATION_UNIT = new BasicDecontaminationUnit("basic_decontamination_unit");
+			if (Config.BASIC_DECONTAMINATION_UNIT)
+				BASIC_DECONTAMINATION_UNIT = new BasicDecontaminationUnit("basic_decontamination_unit");
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			FUEL_LOADER_ADVANCED = new AdvancedFuelLoader("advanced_fuel_loader");
@@ -122,7 +123,8 @@ public class ExtraPlanets_Machines {
 				GameRegistry.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_PURIFIER)
 				GameRegistry.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
-			GameRegistry.registerBlock(BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
+			if (Config.BASIC_DECONTAMINATION_UNIT)
+				GameRegistry.registerBlock(BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			GameRegistry.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
@@ -161,7 +163,8 @@ public class ExtraPlanets_Machines {
 				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
 			if (Config.BASIC_PURIFIER)
 				GameRegistry.registerTileEntity(TileEntityBasicPurifier.class, Constants.modName + "Basic Purifier");
-			GameRegistry.registerTileEntity(TileEntityBasicDecontaminationUnit.class, Constants.modName + "Basic Decontamination Unit");
+			if (Config.BASIC_DECONTAMINATION_UNIT)
+				GameRegistry.registerTileEntity(TileEntityBasicDecontaminationUnit.class, Constants.modName + "Basic Decontamination Unit");
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
