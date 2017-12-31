@@ -1030,10 +1030,10 @@ public class ExtraPlanets_Recipes {
 			// Anti Radiation Drinks
 			RecipeUtilities.addNBTRecipe(
 					new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0),
-					new ItemStack[] { new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
+					new ItemStack[] { new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 4), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
 							UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(Items.glass_bottle),
 							UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
-							new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE) });
+							new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 4), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE) });
 
 			// Machines
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
