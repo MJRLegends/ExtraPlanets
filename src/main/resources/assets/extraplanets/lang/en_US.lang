@@ -407,6 +407,8 @@ tile.ultimate_fuel_loader.name=Ultimate Fuel Loader
 tile.vehicle_charger.name=Vehicle Charger (WIP)
 tile.basic_purifier.name=Basic Purifier
 tile.basic_densifier.name=Basic Densifier
+tile.basic_decontamination_unit.name=Basic Decontamination Unit
+tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit
 
 #Machine Containers
 container.solarhybrid.name=Hybrid Solar Panel
@@ -427,6 +429,7 @@ container.basic.solar.evaporation.chamber.name=Basic Solar Evaporation Chamber
 container.vehicle.charger.name=Vehicle Charger
 container.basic.purifier.name=Purifier
 container.basic.densifier.name=Basic Densifier
+container.basic.decontamination.unit.name=Basic Decontamination Unit
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank

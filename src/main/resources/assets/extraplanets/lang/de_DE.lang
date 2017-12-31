@@ -406,6 +406,8 @@ tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofflader
 tile.ultimate_fuel_loader.name=Ultimativer Treibstofflader
 tile.vehicle_charger.name=Fahrzeug Auflader (WIP)
 tile.basic_purifier.name=Basis Reiniger
+tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Hybrid Solarmodul
@@ -425,6 +427,7 @@ container.ultimate.fuelloader.name=Ultimativer Treibstofflader
 container.basic.solar.evaporation.chamber.name=Basis Solarverdampfungskammer
 container.vehicle.charger.name=Fahrzeugs Auflader
 container.basic.purifier.name=Basis Reiniger
+container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Flüssigkristallisierterwassertank

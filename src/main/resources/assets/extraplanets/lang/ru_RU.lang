@@ -407,6 +407,8 @@ tile.ultimate_fuel_loader.name=Максимальный загрузчик то�
 tile.vehicle_charger.name=Зарядное устройство для транспорта (WIP)
 tile.basic_purifier.name=Базовый очиститель
 tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Гибридная солнечная панель
@@ -427,6 +429,7 @@ container.basic.solar.evaporation.chamber.name=Базовая солнечная
 container.vehicle.charger.name=Зарядное устройство для транспорта
 container.basic.purifier.name=Очиститель
 container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Бак с жидкой кристаллической водой

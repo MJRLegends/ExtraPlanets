@@ -407,6 +407,8 @@ tile.ultimate_fuel_loader.name=Güçlü Yakıt Yükleyicisi
 tile.vehicle_charger.name=Araç Sarj Edici (WIP)
 tile.basic_purifier.name=Basic Purifier ##NEEDS TRANSLATE##
 tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Hibrit Güneş Paneli
@@ -427,6 +429,7 @@ container.basic.solar.evaporation.chamber.name=Basit Buharlaştırma Bölgesi
 container.vehicle.charger.name=Araç Sarj Edici
 container.basic.purifier.name=Purifier ##NEEDS TRANSLATE##
 container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank ##NEEDS TRANSLATE##
