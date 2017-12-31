@@ -29,10 +29,10 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
     {
         this.setMainBlockInternal(mainBlock);
 
-        if (!this.worldObj.isRemote)
+        if (!this.world.isRemote)
         {
-            IBlockState state = this.worldObj.getBlockState(this.getPos());
-            this.worldObj.notifyBlockUpdate(this.getPos(), state, state, 3);
+            IBlockState state = this.world.getBlockState(this.getPos());
+            this.world.notifyBlockUpdate(this.getPos(), state, state, 3);
         }
     }
 
@@ -83,7 +83,7 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
 
         if (mainTelepad == null)
         {
-            TileEntity tileEntity = this.worldObj.getTileEntity(this.mainBlockPosition);
+            TileEntity tileEntity = this.world.getTileEntity(this.mainBlockPosition);
 
             if (tileEntity != null)
             {
@@ -96,7 +96,7 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
 
         if (mainTelepad == null)
         {
-            this.worldObj.setBlockToAir(this.mainBlockPosition);
+            this.world.setBlockToAir(this.mainBlockPosition);
         }
         else
         {
@@ -108,7 +108,7 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
             }
             else
             {
-                this.worldObj.removeTileEntity(this.getPos());
+                this.world.removeTileEntity(this.getPos());
             }
         }
 
@@ -163,7 +163,7 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
         {
         if (this.mainBlockPosition == null)
         {
-            if (this.worldObj.isRemote || !this.resetMainBlockPosition())
+            if (this.world.isRemote || !this.resetMainBlockPosition())
             {
                 return;
         }
@@ -180,7 +180,7 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
                 for (int y = -2; y < 1; y += 2)
                 {
                     final BlockPos vecToCheck = this.getPos().add(x, y, z);
-                    if (this.worldObj.getTileEntity(vecToCheck) instanceof TileEntityBasicDecontaminationUnit)
+                    if (this.world.getTileEntity(vecToCheck) instanceof TileEntityBasicDecontaminationUnit)
                     {
                         this.setMainBlock(vecToCheck);
                         return true;
