@@ -46,7 +46,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	public TileEntityBasicDecontaminationUnit() {
 		super();
 		this.storage.setCapacity(1000000);
-		this.storage.setMaxExtract(1000000);
+		this.storage.setMaxExtract(500);
 	}
 
 	@Override
