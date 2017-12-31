@@ -407,6 +407,8 @@ tile.ultimate_fuel_loader.name=终极燃料装载机
 tile.vehicle_charger.name=漫游车充能器(WIP)
 tile.basic_purifier.name=Basic Purifier ##NEEDS TRANSLATE##
 tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=混合型高级太阳能电池板
@@ -427,6 +429,7 @@ container.basic.solar.evaporation.chamber.name=基础太阳能蒸发室
 container.vehicle.charger.name=漫游车充能器
 container.basic.purifier.name=Purifier ##NEEDS TRANSLATE##
 container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank ##NEEDS TRANSLATE##
