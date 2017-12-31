@@ -8,7 +8,7 @@ import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
+import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
@@ -19,9 +19,9 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
@@ -38,8 +38,8 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 
-public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock implements IMultiBlock, IInventoryDefaults, ISidedInventory {
-	private ItemStack[] containingItems = new ItemStack[1];
+public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWithInventory implements IMultiBlock, IInventoryDefaults, ISidedInventory {
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
 	@NetworkedField(targetSide = Side.CLIENT)
 	private AxisAlignedBB renderAABB;
 
@@ -51,9 +51,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 
 	@Override
 	public void update() {
-		if (!this.worldObj.isRemote) {
-			List containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2, this.getPos()
-					.getZ() + 1));
+		if (!this.world.isRemote) {
+			List containedEntities = world.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2, this.getPos().getZ() + 1));
 			if (this.storage.getEnergyStoredGC() >= 1000000 && containedEntities.size() == 1) {
 				this.storage.setEnergyStored(0);
 				EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(0));
@@ -67,56 +66,41 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 					stats.setRadiationLevel(0);
 				else {
 					stats.setRadiationLevel(stats.getRadiationLevel() - level);
-					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 10%"));
-					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%"));
+					player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 10%"));
+					player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+							+ (int) stats.getRadiationLevel() + "%"));
 				}
 			}
 		}
 		super.update();
 	}
-    
+
 	@Override
-	public void slowDischarge()
-    {
-    }
+	public void slowDischarge() {
+	}
 
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
-		NBTTagList var2 = nbt.getTagList("Items", 10);
-		this.containingItems = new ItemStack[this.getSizeInventory()];
+		this.stacks = this.readStandardItemsFromNBT(nbt);
 
-		for (int var3 = 0; var3 < var2.tagCount(); ++var3) {
-			NBTTagCompound var4 = var2.getCompoundTagAt(var3);
-			int var5 = var4.getByte("Slot") & 255;
-
-			if (var5 < this.containingItems.length) {
-				this.containingItems[var5] = ItemStack.loadItemStackFromNBT(var4);
-			}
-		}
 	}
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
-		NBTTagList var2 = new NBTTagList();
-
-		for (int var3 = 0; var3 < this.containingItems.length; ++var3) {
-			if (this.containingItems[var3] != null) {
-				NBTTagCompound var4 = new NBTTagCompound();
-				var4.setByte("Slot", (byte) var3);
-				this.containingItems[var3].writeToNBT(var4);
-				var2.appendTag(var4);
-			}
-		}
-
-		nbt.setTag("Items", var2);
+		this.writeStandardItemsToNBT(nbt, this.stacks);
 		return nbt;
 	}
 
 	@Override
+	protected NonNullList<ItemStack> getContainingItems() {
+		return this.stacks;
+	}
+
+	@Override
 	public boolean onActivated(EntityPlayer entityPlayer) {
-		entityPlayer.openGui(ExtraPlanets.instance, -1, this.worldObj, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ());
+		entityPlayer.openGui(ExtraPlanets.instance, -1, this.world, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ());
 		return true;
 	}
 
@@ -183,13 +167,13 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 		this.getPositions(thisBlock, positions);
 
 		for (BlockPos pos : positions) {
-			IBlockState stateAt = this.worldObj.getBlockState(pos);
+			IBlockState stateAt = this.world.getBlockState(pos);
 
 			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK_DECONTAMINATION_UNIT) {
-				this.worldObj.destroyBlock(pos, false);
+				this.world.destroyBlock(pos, false);
 			}
 		}
-		this.worldObj.destroyBlock(thisBlock, true);
+		this.world.destroyBlock(thisBlock, true);
 	}
 
 	@Override
@@ -225,16 +209,6 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	@Override
 	public ITextComponent getDisplayName() {
 		return (this.hasCustomName() ? new TextComponentString(this.getName()) : new TextComponentTranslation(this.getName(), new Object[0]));
-	}
-
-	@Override
-	public int getInventoryStackLimit() {
-		return 64;
-	}
-
-	@Override
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
-		return this.worldObj.getTileEntity(getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
 	}
 
 	@Override
@@ -296,59 +270,6 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 		}
 
 		return true;
-	}
-
-	@Override
-	public int getSizeInventory() {
-		return this.containingItems.length;
-	}
-
-	@Override
-	public ItemStack getStackInSlot(int par1) {
-		return this.containingItems[par1];
-	}
-
-	@Override
-	public ItemStack decrStackSize(int par1, int par2) {
-		if (this.containingItems[par1] != null) {
-			ItemStack var3;
-
-			if (this.containingItems[par1].stackSize <= par2) {
-				var3 = this.containingItems[par1];
-				this.containingItems[par1] = null;
-				return var3;
-			} else {
-				var3 = this.containingItems[par1].splitStack(par2);
-
-				if (this.containingItems[par1].stackSize == 0) {
-					this.containingItems[par1] = null;
-				}
-
-				return var3;
-			}
-		} else {
-			return null;
-		}
-	}
-
-	@Override
-	public ItemStack removeStackFromSlot(int par1) {
-		if (this.containingItems[par1] != null) {
-			ItemStack var2 = this.containingItems[par1];
-			this.containingItems[par1] = null;
-			return var2;
-		} else {
-			return null;
-		}
-	}
-
-	@Override
-	public void setInventorySlotContents(int par1, ItemStack par2ItemStack) {
-		this.containingItems[par1] = par2ItemStack;
-
-		if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit()) {
-			par2ItemStack.stackSize = this.getInventoryStackLimit();
-		}
 	}
 
 	@Override

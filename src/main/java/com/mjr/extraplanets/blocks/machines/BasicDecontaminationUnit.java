@@ -98,7 +98,7 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 
 			if (placer instanceof EntityPlayer) {
 				if (!worldIn.isRemote) {
-					((EntityPlayer) placer).addChatMessage(new TextComponentString(EnumColor.RED + GCCoreUtil.translate("gui.warning.noroom")));
+					((EntityPlayer) placer).sendMessage(new TextComponentString(EnumColor.RED + GCCoreUtil.translate("gui.warning.noroom")));
 				}
 				((EntityPlayer) placer).inventory.addItemStackToInventory(new ItemStack(Item.getItemFromBlock(this), 1, 0));
 			}

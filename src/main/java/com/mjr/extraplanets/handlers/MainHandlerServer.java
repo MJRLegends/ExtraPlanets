@@ -329,7 +329,7 @@ public class MainHandlerServer {
 			if (event.player.world.provider instanceof WorldProviderRealisticSpace) {
 				EntityPlayer player = event.player;
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", " + GCCoreUtil.translate("gui.radiation.subject.message") + " "
-						+ ((WorldProviderRealisticSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% " + GCCoreUtil.translate("gui.radiation.type.message") + ""));
+						+ ((WorldProviderRealisticSpace) event.player.world.provider).getSolarRadiationLevel() + "% " + GCCoreUtil.translate("gui.radiation.type.message") + ""));
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", " + GCCoreUtil.translate("gui.radiation.reverse.message") + "!"));
 			}
 		}

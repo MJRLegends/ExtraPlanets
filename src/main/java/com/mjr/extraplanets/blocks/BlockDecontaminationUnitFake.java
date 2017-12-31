@@ -88,9 +88,9 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		TileEntityBasicDecontaminationUnitFake tileEntity = (TileEntityBasicDecontaminationUnitFake) worldIn.getTileEntity(pos);
-		return tileEntity.onActivated(playerIn);
+	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+		TileEntityBasicDecontaminationUnitFake tileEntity = (TileEntityBasicDecontaminationUnitFake) world.getTileEntity(pos);
+		return tileEntity.onActivated(entityPlayer);
 	}
 
 	@Override
