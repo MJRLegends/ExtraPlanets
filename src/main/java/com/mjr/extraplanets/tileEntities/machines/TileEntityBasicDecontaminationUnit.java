@@ -54,7 +54,6 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 			List containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
 					this.getPos().getZ() + 1));
 			if (this.storage.getEnergyStoredGC() >= 1000000 && containedEntities.size() == 1) {
-				this.storage.setEnergyStored(0);
 				EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(0));
 				IStatsCapability stats = null;
 				if (player != null) {
@@ -65,6 +64,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 				if (level <= 0)
 					stats.setRadiationLevel(0);
 				else {
+					this.storage.setEnergyStored(0);
 					stats.setRadiationLevel(stats.getRadiationLevel() - level);
 					player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 10%"));
 					player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
@@ -261,8 +261,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	}
 
 	@Override
-	public EnumFacing getElectricInputDirection() {
-		return EnumFacing.getFront((this.getBlockMetadata() & 3) + 2);
+	public EnumSet<EnumFacing> getElectricalInputDirections() {
+		return EnumSet.noneOf(EnumFacing.class);
 	}
 
 	@Override
