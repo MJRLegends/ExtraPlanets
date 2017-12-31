@@ -60,6 +60,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		((TileEntityBasicDecontaminationUnitFake) worldObj.getTileEntity(pos)).setMainBlock(mainBlock);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
 		TileEntity tileEntity = worldIn.getTileEntity(pos);
@@ -132,6 +133,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		return null;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public EnumFacing getBedDirection(IBlockState state, IBlockAccess world, BlockPos pos) {
 		TileEntity tileEntity = world.getTileEntity(pos);
