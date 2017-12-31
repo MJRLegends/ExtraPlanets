@@ -281,7 +281,7 @@ public class ExtraPlanets_Blocks {
 	public static Block CAKE_BLOCKS;
 
 	public static BlockWhiteSugerCane WHITE_SUGAR_CANE;
-	
+
 	public static Block FAKE_BLOCK_DECONTAMINATION_UNIT;
 
 	public static void init() {
@@ -427,8 +427,8 @@ public class ExtraPlanets_Blocks {
 		CANDY_BLOCKS_HORIZONTAL = new BlockCandyBlocksHorizontal("candy_blocks_horizontal");
 		CAKE_BLOCKS = new BlockCakeBlocks("cake_blocks");
 		WHITE_SUGAR_CANE = new BlockWhiteSugerCane("white_sugar_cane");
-		
-		FAKE_BLOCK_DECONTAMINATION_UNIT = new BlockDecontaminationUnitFake("basic_decontamination_unit_fake_block");
+		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
+			FAKE_BLOCK_DECONTAMINATION_UNIT = new BlockDecontaminationUnitFake("basic_decontamination_unit_fake_block");
 	}
 
 	public static void initializeStairs() {
@@ -701,7 +701,8 @@ public class ExtraPlanets_Blocks {
 		RegisterUtilities.registerBlock(Constants.modID, CANDY_BLOCKS_HORIZONTAL, ItemBlockCandyBlocksHorizontal.class, CANDY_BLOCKS_HORIZONTAL.getUnlocalizedName().substring(5));
 		RegisterUtilities.registerBlock(Constants.modID, CAKE_BLOCKS, ItemBlockCakeBlocks.class, CAKE_BLOCKS.getUnlocalizedName().substring(5));
 		RegisterUtilities.registerBlock(Constants.modID, WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, FAKE_BLOCK_DECONTAMINATION_UNIT, FAKE_BLOCK_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
+		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
+			RegisterUtilities.registerBlock(Constants.modID, FAKE_BLOCK_DECONTAMINATION_UNIT, FAKE_BLOCK_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerStairs() throws NoSuchMethodException {
@@ -810,7 +811,8 @@ public class ExtraPlanets_Blocks {
 
 		GameRegistry.registerTileEntity(TileEntityRocketChargingPadSingle.class, "Rocket Charging Pad");
 		GameRegistry.registerTileEntity(TileEntityRocketChargingPad.class, "Rocket Charging Pad Full");
-		GameRegistry.registerTileEntity(TileEntityBasicDecontaminationUnitFake.class, Constants.modName + "Basic Decontamination Unit Fake");
+		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
+			GameRegistry.registerTileEntity(TileEntityBasicDecontaminationUnitFake.class, Constants.modName + "Basic Decontamination Unit Fake");
 	}
 
 	private static void setHarvestLevels() {
