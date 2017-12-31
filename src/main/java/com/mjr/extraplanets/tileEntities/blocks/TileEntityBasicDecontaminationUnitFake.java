@@ -2,7 +2,9 @@ package com.mjr.extraplanets.tileEntities.blocks;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.EnumSet;
 
+import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.entity.player.EntityPlayer;
@@ -154,17 +156,37 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
 	}
 
 	@Override
+	public EnumSet<EnumFacing> getElectricalOutputDirections() {
+		return EnumSet.noneOf(EnumFacing.class);
+	}
+
+	@Override
 	public boolean shouldUseEnergy() {
 		return false;
 	}
 
 	@Override
-	public EnumFacing getElectricInputDirection() {
-		if (!this.canConnect) {
-			return null;
-		}
+	public float receiveElectricity(EnumFacing from, float energy, int tier, boolean doReceive) {
+		return 0;
+	}
 
-		return EnumFacing.UP;
+	@Override
+	public EnumSet<EnumFacing> getElectricalInputDirections() {
+		return EnumSet.noneOf(EnumFacing.class);
+	}
+
+	@Override
+	public boolean canConnect(EnumFacing direction, NetworkType type) {
+		if (direction == null || type == NetworkType.POWER) {
+			return false;
+		}
+		return false;
+
+	}
+
+	@Override
+	public EnumFacing getElectricInputDirection() {
+		return null;
 	}
 
 	@Override
