@@ -93,13 +93,13 @@ public class ContainerBasicDecontaminationUnit extends Container {
 			}
 
 			if (var4.getCount() == 0) {
-				slot.putStack((ItemStack) null);
+                slot.putStack(ItemStack.EMPTY);
 			} else {
 				slot.onSlotChanged();
 			}
 
 			if (var4.getCount() == var2.getCount()) {
-				return null;
+                return ItemStack.EMPTY;
 			}
 
 			slot.onTake(par1EntityPlayer, var4);
