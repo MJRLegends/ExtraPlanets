@@ -51,6 +51,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.client.gui.overlay.OverlayElectricLaunchCountdown;
+import com.mjr.extraplanets.client.gui.overlay.OverlayGeneralLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayJupiterLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayMercuryLander;
 import com.mjr.extraplanets.client.gui.overlay.OverlayNeptuneLander;
@@ -61,6 +62,7 @@ import com.mjr.extraplanets.client.gui.overlay.OverlayUranusLander;
 import com.mjr.extraplanets.client.gui.screen.CustomCelestialSelection;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
+import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
 import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
@@ -160,6 +162,9 @@ public class MainHandlerClient {
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityNeptuneLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
 			OverlayNeptuneLander.renderLanderOverlay();
 		}
+		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityGeneralLander && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+			OverlayGeneralLander.renderLanderOverlay();
+		}
 	}
 
 	@SubscribeEvent
@@ -228,7 +233,7 @@ public class MainHandlerClient {
 
 				if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)
 						|| fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)|| fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID)) {
-					event.getToolTip().add(EnumColor.AQUA + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
+					event.getToolTip().add(EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.bucket.message.extreme.reactors.compact"));
 				}
 			}
 		}

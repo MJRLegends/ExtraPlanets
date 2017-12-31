@@ -40,6 +40,7 @@ import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossNeptu
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
+import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
 import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
 import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
@@ -384,6 +385,7 @@ public class ExtraPlanets {
 			RegisterUtilities.registerNonMobEntity(Constants.modID, ExtraPlanets.instance, EntityMarsRover.class, Constants.modID + "." + "EntityMarsRover", 150, 1, false);
 		if (Config.VENUS_ROVER)
 			RegisterUtilities.registerNonMobEntity(Constants.modID, ExtraPlanets.instance, EntityVenusRover.class, Constants.modID + "." + "EntityVenusRover", 150, 1, false);
+		RegisterUtilities.registerNonMobEntity(Constants.modID, ExtraPlanets.instance, EntityGeneralLander.class, "EntityGeneralLander", 150, 5, false);
 	}
 
 	private void registerCreatures() {
