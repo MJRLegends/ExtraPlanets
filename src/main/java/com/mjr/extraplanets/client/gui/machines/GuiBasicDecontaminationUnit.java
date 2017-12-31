@@ -53,26 +53,18 @@ public class GuiBasicDecontaminationUnit extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
+		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2 - 10, 5, 4210752, this.fontRendererObj);
 		String displayText = "";
 		int yOffset = -10;
 
-		// if (!this.tileEntity.hasInputs()) {
-		// displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.inputs.name");
-		// } else if (!this.tileEntity.hasEnoughEnergyToRun) {
-		// displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
-		// } else if (this.tileEntity.canProcess()) {
-		// int progress;
-		// if (this.tileEntity.canProcess() && this.tileEntity.canCrystallize())
-		// progress = (this.tileEntity.processTicks * 2) * 100 / 10;
-		// else
-		// progress = 0;
-		// displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.crystallizing.name") + " " + progress + "%";
-		// } else {
-		// displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.idle.name");
-		// }
+		if (this.tileEntity.storage.getEnergyStoredGC() < 1000000) {
+		 displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
+		 }
+		else {
+		 displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.waiting.on.player.name");
+		 }
 
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 70 - (displayText.length() * 2), 45 + 23 + yOffset, 4210752);
+		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 30 - ((displayText.length())), 45 + 10 + yOffset, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 
