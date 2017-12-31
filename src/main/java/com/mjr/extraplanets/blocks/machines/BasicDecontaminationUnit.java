@@ -2,7 +2,6 @@ package com.mjr.extraplanets.blocks.machines;
 
 import micdoodle8.mods.galacticraft.core.blocks.BlockTileGC;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
-import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
@@ -31,7 +30,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
 
-public class BasicDecontaminationUnit extends BlockTileGC implements IShiftDescription, ISortableBlock {
+public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBlock {
 	protected static final AxisAlignedBB AABB_UNIT = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.45F, 1.0F);
 
 	protected BasicDecontaminationUnit(String assetName) {
@@ -142,16 +141,6 @@ public class BasicDecontaminationUnit extends BlockTileGC implements IShiftDescr
 		}
 
 		super.breakBlock(worldIn, pos, state);
-	}
-
-	@Override
-	public String getShiftDescription(int meta) {
-		return GCCoreUtil.translate(this.getUnlocalizedName() + ".description");
-	}
-
-	@Override
-	public boolean showDescription(int meta) {
-		return true;
 	}
 
 	@Override
