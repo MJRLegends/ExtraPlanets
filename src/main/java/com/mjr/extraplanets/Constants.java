@@ -6,13 +6,13 @@ public class Constants {
 
 	public static final int LOCALMAJVERSION = 0;
 	public static final int LOCALMINVERSION = 8;
-	public static final int LOCALBUILDVERSION = 5;
+	public static final int LOCALBUILDVERSION = 6;
 
 	public static final String modVersion = LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
 	public static final String MCVERSION = "[1.10.2]";
-	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,); "; // Keep the space at the end!
-	public static final String DEPENDENCIES_MODS = "required-after:galacticraftcore; required-after:galacticraftplanets; required-after:mjrlegendslib@[" + com.mjr.mjrlegendslib.Constants.modVersion + ",]; "; // Keep the space at the end!
+	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,);";
+	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib; required-after:galacticraftcore; required-after:galacticraftplanets;";
 
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
@@ -25,15 +25,15 @@ public class Constants {
 	public static final float halfPI = Constants.floatPI / 2F;
 	public static final float quarterPI = Constants.halfPI / 2F;
 	public static final float floatPI = 3.1415927F;
-	
+
 	public static final int SPACE_STATION_LOWER_Y_LIMIT = 10;
 	public static final int SPACE_STATION_HIGHER_Y_LIMIT = 1200;
-	
+
 	public static final float PLANET_AND_MOON_SPAWN_HEIGHT = 900.0F;
 	public static final double PLANET_AND_MOON_SPAWN_HEIGHT_D = 900.0D;
-	
+
 	public static final double SPACE_STATION_SPAWN_HEIGHT_D = 65.0D;
-	
+
 	public static final double PLANET_AND_MOON_PARA_CHEST_SPAWN_HEIGHT_D = 220.0D;
 	public static final double SPACE_STATION_PARA_CHEST_SPAWN_HEIGHT_D = 90.0D;
 
@@ -51,7 +51,7 @@ public class Constants {
 	public static final int GEAR_ID_THERMAL_PADDING_T5_CHESTPLATE = 6009;
 	public static final int GEAR_ID_THERMAL_PADDING_T5_LEGGINGS = 6010;
 	public static final int GEAR_ID_THERMAL_PADDING_T5_BOOTS = 6011;
-	
+
 	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_BLACK = 6011;
 	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_RED = 6012;
 	public static final int GEAR_ID_LIGHT_OXYGEN_TANK_GREEN = 6013;
