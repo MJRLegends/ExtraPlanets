@@ -14,6 +14,44 @@
 
 
 ===========================================Released Updates===========================================
+v1.1.9
+*Added Config option for Old Tier 9/10 Rocket models 
+*Added comments
+*Small fixes for Celestial Selection screen
+*Added MJRLegends Lib as a dependency
+*Refactor some code over to MJRLegends Lib
+*Fixed issue #192
+*Started adding the Basic Decontamination Unit
+*Work/fixes for the Basic Decontamination Unit
+*Work on adding a GUI for the Basic Decontamination Unit
+*Changes to the textures for the Basic Decontamination Unit
+*Fixed item rendering for Basic Decontamination Unit
+*Progress on making the Basic Decontamination Unit function
+*Fixed power requirement on the tool tip for the Basic Decontamination
+*Added tool tips for each bucket to say where the liquid can be obtained
+*Added tool tips for fluids that have Extreme Reactors Compatibility
+*Changed the Anti Radiation Drinks to require player to reach Saturn to
+*Converted more ingame texture to have lang file support
+*More converting of ingame texture to have lang file support
+*Added missing lang entries for new features
+*More fixes for Basic Decontamination Unit GUI
+*Added JEI Support for new Densifier recipes
+*Added more Fluids to have uses in the Basic Densifier machine
+*Fixes for Basic Decontamination Unit GUI/Missing GUI Texture
+*Fixed for Basic Decontamination Unit Model & json files
+*Model render fixes for MC 1.8.9
+*Added Config option for Basic Decontamination Unit
+*Added a General Lander for Planets & Moons that current dont have one
+*Fixed missing Pluto texture in Eris Sky
+*Added missing textures for new Planets (14 of them)
+*Added Recipe for the Basic Decontamination Unit
+*Fixes for disabling certain config options for machinesAdded tool tip for Volcanic Rock *Few fixes to current tool tips
+*Tweaks for Basic Decontamination Unit
+*Tweaks for Custom Battery storage levels
+*Stop power cable connection to the Basic Decontamination Unit
+*Added a Tool tip to the Basic Decontamination Unit machine
+*Added Fluid Connection to the Basic Densifier
+
 v1.1.8
 *Added ##NEEDS TRANSLATE## tags to all lines that need translating
 *Update to match MC 1.10.2 lang files
