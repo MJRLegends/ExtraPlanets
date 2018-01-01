@@ -6,13 +6,13 @@ public class Constants {
 
 	public static final int LOCALMAJVERSION = 1;
 	public static final int LOCALMINVERSION = 1;
-	public static final int LOCALBUILDVERSION = 8;
+	public static final int LOCALBUILDVERSION = 9;
 
 	public static final String modVersion = LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
 	public static final String MCVERSION = "[1.8.9]";
-	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[11.15.1.1764,); "; // Keep the space at the end!
-	public static final String DEPENDENCIES_MODS = "required-after:GalacticraftCore; required-after:GalacticraftPlanets; required-after:mjrlegendslib@[" + com.mjr.mjrlegendslib.Constants.modVersion + ",]; "; // Keep the space at the end!
+	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[11.15.1.1764,);";
+	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib; required-after:GalacticraftCore; required-after:GalacticraftPlanets;";
 
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
