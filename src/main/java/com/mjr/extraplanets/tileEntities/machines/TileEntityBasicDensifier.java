@@ -377,9 +377,9 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (type == NetworkType.POWER) {
 			return direction == this.getElectricInputDirection();
 		}
-		// if (type == NetworkType.FLUID) {
-		// return direction == this.getInputPipe();
-		// }
+		if (type == NetworkType.FLUID) {
+			return direction == this.getInputPipe();
+		}
 		return false;
 	}
 
@@ -423,11 +423,15 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (from == getInputPipe() && resource != null) {
 			final String liquidName = FluidRegistry.getFluidName(resource);
 
-			if (liquidName != null && liquidName.contains("salt")) {
-				if (liquidName.equals("salt")) {
+			if (liquidName != null) {
+				if (resource.equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0)) || resource.equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0))
+						|| resource.equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)) || resource.equals(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0))
+						|| resource.equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0)) || resource.equals(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0))
+						|| resource.equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0))) {
+					if (this.inputTank.getFluid().equals(resource))
+						if (this.inputTank.getFluidAmount() == 0)
+							this.inputTank.setFluid(resource);
 					used = this.inputTank.fill(resource, doFill);
-				} else {
-					used = this.inputTank.fill(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, resource.amount), doFill);
 				}
 			}
 		}
