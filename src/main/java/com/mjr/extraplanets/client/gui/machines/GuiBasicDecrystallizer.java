@@ -67,7 +67,7 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);
 	}
-	
+
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);

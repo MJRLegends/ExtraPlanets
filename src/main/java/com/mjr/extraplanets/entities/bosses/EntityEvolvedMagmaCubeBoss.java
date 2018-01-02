@@ -582,10 +582,10 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if(Config.MORE_PLANETS_COMPATIBILITY)
+		if (Config.MORE_PLANETS_COMPATIBILITY)
 			stackList = GalacticraftRegistry.getDungeonLoot(11);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(4);
-        return stackList.get(rand.nextInt(stackList.size())).copy();
+		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 }

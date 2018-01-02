@@ -62,7 +62,6 @@ public class RenderTier9Rocket extends Render<EntityTier9Rocket> {
 		updateModel();
 		this.bindTexture(TextureMap.locationBlocksTexture);
 
-
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {

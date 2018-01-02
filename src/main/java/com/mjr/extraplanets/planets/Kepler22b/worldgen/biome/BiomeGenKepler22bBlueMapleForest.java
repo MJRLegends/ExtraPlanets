@@ -15,7 +15,7 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bBlueMapleForest extends BiomeGenBaseKepler22b {
-	public BiomeGenKepler22bBlueMapleForest(int var1){
+	public BiomeGenKepler22bBlueMapleForest(int var1) {
 		super(var1);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE.getDefaultState();

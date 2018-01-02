@@ -26,14 +26,12 @@ public class SlotVenusRover extends Slot {
 	}
 
 	@Override
-    public void onSlotChanged()
-    {
-        if (this.player instanceof EntityPlayerMP)
-        {
-            int dimID = GCCoreUtil.getDimensionID(this.player.worldObj);
-            GCCoreUtil.sendToAllAround(new PacketSimple(EnumSimplePacket.C_SPAWN_SPARK_PARTICLES, dimID, new Object[] { this.pos }), this.player.worldObj, dimID, this.pos, 20);
-        }
-    }
+	public void onSlotChanged() {
+		if (this.player instanceof EntityPlayerMP) {
+			int dimID = GCCoreUtil.getDimensionID(this.player.worldObj);
+			GCCoreUtil.sendToAllAround(new PacketSimple(EnumSimplePacket.C_SPAWN_SPARK_PARTICLES, dimID, new Object[] { this.pos }), this.player.worldObj, dimID, this.pos, 20);
+		}
+	}
 
 	@Override
 	public boolean isItemValid(ItemStack par1ItemStack) {

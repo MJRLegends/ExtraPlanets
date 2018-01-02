@@ -40,7 +40,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 				isDaylight = false;
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
 				processTime = (int) (BASE_PROCESS_TIME_REQUIRED - (this.worldObj.getCelestialAngle(1.0F) * 100));
-				if(processTime < 0)
+				if (processTime < 0)
 					processTime = processTime * -1;
 				if (this.processTicks == 0) {
 					this.processTicks = processTime;
@@ -83,10 +83,10 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		int result = this.containingItems[2].stackSize + itemstack.stackSize;
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
-	
-	public boolean hasInputs(){
-		if(this.containingItems[1] != null && this.containingItems[1].getItem() == ExtraPlanets_Items.POTASH_SHARDS)
-			if(this.containingItems[1].stackSize >= 12)
+
+	public boolean hasInputs() {
+		if (this.containingItems[1] != null && this.containingItems[1].getItem() == ExtraPlanets_Items.POTASH_SHARDS)
+			if (this.containingItems[1].stackSize >= 12)
 				return true;
 		return false;
 	}

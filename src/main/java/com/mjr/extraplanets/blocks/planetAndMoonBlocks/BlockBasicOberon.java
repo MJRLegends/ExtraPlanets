@@ -163,7 +163,7 @@ public class BlockBasicOberon extends Block implements IDetectableResource, IPla
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.stone) {
 			return false;
 		}

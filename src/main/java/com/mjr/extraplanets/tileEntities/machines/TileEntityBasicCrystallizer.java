@@ -103,12 +103,12 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
-	public boolean hasInputs(){
-		if(this.inputTank.getFluidAmount() >= 50)
+	public boolean hasInputs() {
+		if (this.inputTank.getFluidAmount() >= 50)
 			return true;
 		return false;
 	}
-	
+
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canCrystallize()) {

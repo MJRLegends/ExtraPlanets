@@ -33,7 +33,7 @@ public class TileEntityT8TreasureChestRenderer extends TileEntitySpecialRenderer
 		}
 
 		ModelTreasureChest var14 = null;
-		
+
 		var14 = this.chestModel;
 		this.bindTexture(TileEntityT8TreasureChestRenderer.treasureChestTexture);
 

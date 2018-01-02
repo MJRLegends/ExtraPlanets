@@ -6,7 +6,7 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeGenKepler22bWasteLands extends BiomeGenBaseKepler22b {
-	public BiomeGenKepler22bWasteLands(int var1){
+	public BiomeGenKepler22bWasteLands(int var1) {
 		super(var1);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_INFECTED.getDefaultState();

@@ -52,8 +52,7 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 				modelRover = (OBJModel.OBJBakedModel) model.bake(
 						new OBJModel.OBJState(ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2",
 								"BraceFrontWheelRight003", "BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG",
-								"Seat", "Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003"), false), DefaultVertexFormats.ITEM,
-						spriteFunction);
+								"Seat", "Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				modelRoverWindows = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("FrontWindow", "LeftWall", "RightWall"), false), DefaultVertexFormats.ITEM, spriteFunction);
 

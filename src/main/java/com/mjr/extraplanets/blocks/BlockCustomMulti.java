@@ -85,7 +85,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 			BlockPos mainBlockPosition = ((TileEntityMulti) tileEntity).mainBlockPosition;
 
 			if (mainBlockPosition != null && !mainBlockPosition.equals(pos)) {
-                return worldIn.getBlockState(mainBlockPosition).getBlock().getBlockHardness(worldIn, pos);
+				return worldIn.getBlockState(mainBlockPosition).getBlock().getBlockHardness(worldIn, pos);
 			}
 		}
 
@@ -126,16 +126,14 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		super.breakBlock(worldIn, pos, state);
 	}
 
-    @Override
-    public boolean onMachineActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-        TileEntityMulti tileEntity = (TileEntityMulti) worldIn.getTileEntity(pos);
-        if (tileEntity == null)
-        {
-            return false;
-        }
-        return tileEntity.onBlockActivated(worldIn, pos, playerIn);
-    }
+	@Override
+	public boolean onMachineActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
+		TileEntityMulti tileEntity = (TileEntityMulti) worldIn.getTileEntity(pos);
+		if (tileEntity == null) {
+			return false;
+		}
+		return tileEntity.onBlockActivated(worldIn, pos, playerIn);
+	}
 
 	@Override
 	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumFacing side, float hitX, float hitY, float hitZ) {

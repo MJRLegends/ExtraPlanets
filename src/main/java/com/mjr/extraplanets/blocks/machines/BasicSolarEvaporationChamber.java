@@ -164,11 +164,10 @@ public class BasicSolarEvaporationChamber extends BlockAdvancedTile implements I
 		return state.getValue(FACING).getHorizontalIndex();
 	}
 
-    @Override
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, FACING);
-    }
+	@Override
+	protected BlockState createBlockState() {
+		return new BlockState(this, FACING);
+	}
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {

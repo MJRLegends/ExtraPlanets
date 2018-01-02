@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
 
 public class GenLayerIoBiomes extends GenLayer {
-	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { IoBiomes.io, IoBiomes.ioAshLands, IoBiomes.ioBurningPlains};
+	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { IoBiomes.io, IoBiomes.ioAshLands, IoBiomes.ioBurningPlains };
 
 	public GenLayerIoBiomes(long l, GenLayer parent) {
 		super(l);
@@ -25,7 +25,7 @@ public class GenLayerIoBiomes extends GenLayer {
 		for (int k = 0; k < depth; ++k) {
 			for (int i = 0; i < width; ++i) {
 				initChunkSeed(x + i, z + k);
-                dest[i + k * width] = biomes[nextInt(biomes.length)].biomeID;
+				dest[i + k * width] = biomes[nextInt(biomes.length)].biomeID;
 			}
 		}
 

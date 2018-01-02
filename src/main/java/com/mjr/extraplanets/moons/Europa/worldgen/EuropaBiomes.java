@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 
 public class EuropaBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase europa = new BiomeGenEuropa(Config.EUROPA_BIOME_ID).setBiomeName("europa").setHeight(new Height(2.5F,0.4F));
+	public static final BiomeGenBase europa = new BiomeGenEuropa(Config.EUROPA_BIOME_ID).setBiomeName("europa").setHeight(new Height(2.5F, 0.4F));
 
 	EuropaBiomes(int var1) {
 		super(var1);

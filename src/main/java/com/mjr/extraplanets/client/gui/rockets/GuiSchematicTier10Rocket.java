@@ -19,7 +19,7 @@ public class GuiSchematicTier10Rocket extends GuiContainer implements ISchematic
 
 	private int pageIndex;
 
-    public GuiSchematicTier10Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos){
+	public GuiSchematicTier10Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
 		super(new ContainerSchematicTier10Rocket(par1InventoryPlayer, pos));
 		this.ySize = 238;
 	}
@@ -27,8 +27,8 @@ public class GuiSchematicTier10Rocket extends GuiContainer implements ISchematic
 	@Override
 	public void initGui() {
 		super.initGui();
-        this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 110, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
-        this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 110 + 25, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
+		this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 110, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
+		this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 110 + 25, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
 	}
 
 	@Override

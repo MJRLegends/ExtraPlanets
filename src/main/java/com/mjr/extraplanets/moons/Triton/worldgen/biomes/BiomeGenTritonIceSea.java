@@ -21,6 +21,6 @@ public class BiomeGenTritonIceSea extends TritonBiomes {
 
 	@Override
 	public List<BiomeGenBase.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return Lists.<BiomeGenBase.SpawnListEntry>newArrayList();
+		return Lists.<BiomeGenBase.SpawnListEntry> newArrayList();
 	}
 }

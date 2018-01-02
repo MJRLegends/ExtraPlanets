@@ -100,16 +100,14 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 		if (!this.worldObj.isRemote) {
 			GCPlayerStats stats = null;
 
-            if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP)
-            {
-                stats = GCPlayerStats.get(this.riddenByEntity);
+			if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP) {
+				stats = GCPlayerStats.get(this.riddenByEntity);
 
-                if (!(this.worldObj.provider instanceof IOrbitDimension))
-                {
-                    stats.setCoordsTeleportedFromX(this.riddenByEntity.posX);
-                    stats.setCoordsTeleportedFromZ(this.riddenByEntity.posZ);
-                }
-            }
+				if (!(this.worldObj.provider instanceof IOrbitDimension)) {
+					stats.setCoordsTeleportedFromX(this.riddenByEntity.posX);
+					stats.setCoordsTeleportedFromZ(this.riddenByEntity.posZ);
+				}
+			}
 
 			int amountRemoved = 0;
 
@@ -140,14 +138,14 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 				stats.setLaunchpadStack(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 25, 3));
 			}
 
-            this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+			this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
 		}
 	}
 
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-		
+
 		int i;
 
 		if (this.timeUntilLaunch >= 100) {

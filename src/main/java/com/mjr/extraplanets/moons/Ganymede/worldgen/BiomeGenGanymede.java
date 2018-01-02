@@ -4,8 +4,7 @@ import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenGanymede extends GanymedeBiomes {
 
-	public BiomeGenGanymede(int par1)
-	{
+	public BiomeGenGanymede(int par1) {
 		super(par1);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}

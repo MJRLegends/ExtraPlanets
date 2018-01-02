@@ -9,8 +9,8 @@ public class BiomeGenSaturn extends SaturnBiomes {
 
 	public BiomeGenSaturn(int var1) {
 		super(var1);
-        BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
-        this.topBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState();
-        this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getStateFromMeta(1);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		this.topBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getStateFromMeta(1);
 	}
 }

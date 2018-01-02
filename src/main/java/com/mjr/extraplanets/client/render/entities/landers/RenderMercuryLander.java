@@ -81,9 +81,9 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 		} else {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
-		
+
 		ClientUtil.drawBakedModel(this.landerModel);
-		
+
 		GlStateManager.popMatrix();
 	}
 }

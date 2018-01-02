@@ -39,9 +39,7 @@ public class RenderSaturnLander extends Render<EntitySaturnLander> {
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
-				landerModel = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("Body", "OneLeg", "TwoLeg", "ThirdLeg", "FourLeg"),
-								false), DefaultVertexFormats.ITEM, spriteFunction);
+				landerModel = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Body", "OneLeg", "TwoLeg", "ThirdLeg", "FourLeg"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -83,9 +81,9 @@ public class RenderSaturnLander extends Render<EntitySaturnLander> {
 		} else {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
-		
+
 		ClientUtil.drawBakedModel(this.landerModel);
-		
+
 		GlStateManager.popMatrix();
 	}
 }

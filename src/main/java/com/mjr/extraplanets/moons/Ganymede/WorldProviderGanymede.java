@@ -32,7 +32,7 @@ public class WorldProviderGanymede extends WorldProviderRealisticSpace implement
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(70 / 255.0F * f, 35 / 255.0F * f, 10 / 255.0F * f);
 	}
-	
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -138,12 +138,12 @@ public class WorldProviderGanymede extends WorldProviderRealisticSpace implement
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 			return 100.0F;
 		}
 		return 90.0F;
 	}
-	
+
 	@Override
 	public int getPressureLevel() {
 		return 2;

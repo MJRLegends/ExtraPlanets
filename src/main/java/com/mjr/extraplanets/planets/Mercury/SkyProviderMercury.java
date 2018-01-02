@@ -233,7 +233,7 @@ public class SkyProviderMercury extends IRenderHandler {
 		worldRenderer1.pos(f10, 100.0D, f10).tex(1.0D, 1.0D).endVertex();
 		worldRenderer1.pos(-f10, 100.0D, f10).tex(0.0D, 1.0D).endVertex();
 		tessellator1.draw();
-		
+
 		GL11.glRotatef(360.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth

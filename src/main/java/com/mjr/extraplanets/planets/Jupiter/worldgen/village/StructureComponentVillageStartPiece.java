@@ -38,7 +38,7 @@ public class StructureComponentVillageStartPiece extends StructureComponentVilla
 
 		this.terrainType = nbt.getInteger("TerrainType");
 	}
-	
+
 	public WorldChunkManager getWorldChunkManager() {
 		return this.biomeProvider;
 	}

@@ -217,15 +217,14 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	public boolean shouldUseEnergy() {
 		return this.usingEnergy;
 	}
-	
+
 	@Override
 	public EnumFacing getFront() {
-        IBlockState state = this.worldObj.getBlockState(getPos()); 
-        if (state.getBlock() instanceof UltimateOxygenCompressor)
-        {
-            return state.getValue(UltimateOxygenCompressor.FACING).rotateY();
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof UltimateOxygenCompressor) {
+			return state.getValue(UltimateOxygenCompressor.FACING).rotateY();
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override

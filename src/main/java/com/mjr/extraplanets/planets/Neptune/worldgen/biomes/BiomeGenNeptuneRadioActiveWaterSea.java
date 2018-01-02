@@ -21,6 +21,6 @@ public class BiomeGenNeptuneRadioActiveWaterSea extends NeptuneBiomes {
 
 	@Override
 	public List<BiomeGenBase.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return Lists.<BiomeGenBase.SpawnListEntry>newArrayList();
+		return Lists.<BiomeGenBase.SpawnListEntry> newArrayList();
 	}
 }

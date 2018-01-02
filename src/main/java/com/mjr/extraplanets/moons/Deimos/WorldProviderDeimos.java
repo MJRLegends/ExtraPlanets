@@ -51,7 +51,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	}
 
 	@Override
-		public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
+	public Class<? extends WorldChunkManager> getWorldChunkManagerClass() {
 		return WorldChunkManagerDeimos.class;
 	}
 

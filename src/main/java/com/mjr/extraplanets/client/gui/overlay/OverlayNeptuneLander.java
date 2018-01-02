@@ -50,8 +50,7 @@ public class OverlayNeptuneLander extends Overlay {
 		GL11.glPopMatrix();
 
 		if (OverlayNeptuneLander.minecraft.thePlayer.ridingEntity.motionY != 0.0D) {
-			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityNeptuneLander) OverlayNeptuneLander.minecraft.thePlayer.ridingEntity).motionY * 1000) / 100.0D + " "
-					+ GCCoreUtil.translate("gui.lander.velocityu");
+			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityNeptuneLander) OverlayNeptuneLander.minecraft.thePlayer.ridingEntity).motionY * 1000) / 100.0D + " " + GCCoreUtil.translate("gui.lander.velocityu");
 			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayNeptuneLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D),
 					255 - (int) Math.floor(Math.abs(OverlayNeptuneLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D), 0);
 			OverlayNeptuneLander.minecraft.fontRendererObj.drawString(string, width / 2 - OverlayNeptuneLander.minecraft.fontRendererObj.getStringWidth(string) / 2, height / 3, color);

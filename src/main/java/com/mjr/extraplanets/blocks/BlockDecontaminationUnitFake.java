@@ -166,7 +166,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 			return world.getBlockState(pos).getBlock().getBedDirection(world, mainBlockPosition);
 		}
 
-		return (EnumFacing) getActualState(world.getBlockState(pos), world, pos).getValue(BlockDirectional.FACING);
+		return getActualState(world.getBlockState(pos), world, pos).getValue(BlockDirectional.FACING);
 	}
 
 	@Override

@@ -150,7 +150,7 @@ public class BlockBasicEuropa extends Block implements IDetectableResource, IPla
 	public boolean isPlantable(IBlockState arg0) {
 		return false;
 	}
-	
+
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
@@ -161,9 +161,9 @@ public class BlockBasicEuropa extends Block implements IDetectableResource, IPla
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
 		return super.getPickBlock(target, world, pos, player);
 	}
-	
+
 	@Override
-	    public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.stone) {
 			return false;
 		}
@@ -190,6 +190,7 @@ public class BlockBasicEuropa extends Block implements IDetectableResource, IPla
 	protected BlockState createBlockState() {
 		return new BlockState(this, BASIC_TYPE);
 	}
+
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {

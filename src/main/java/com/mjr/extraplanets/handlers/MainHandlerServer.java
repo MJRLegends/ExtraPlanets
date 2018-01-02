@@ -319,7 +319,8 @@ public class MainHandlerServer {
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
 				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 5%"));
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+						+ (int) stats.getRadiationLevel() + "%"));
 			}
 		}
 	}

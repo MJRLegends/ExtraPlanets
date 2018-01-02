@@ -49,72 +49,18 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
-				armourModelHead = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of(
-								"SpaceHelmet1",
-								"GlassHelmet"), false),
-						DefaultVertexFormats.ITEM, spriteFunction);
+				armourModelHead = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("SpaceHelmet1", "GlassHelmet"), false), DefaultVertexFormats.ITEM, spriteFunction);
 				armourModelBody = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of(
-								"Amplifier",
-								"Amplifier2",
-								"Amplifier3",
-								"Amplifier4",
-								"Antenna",
-								"AntennaDetector",
-								"DecorationDetail1",
-								"DecorationDetail3",
-								"decorationpipe",
-								"GlassHelmet",
-								"Helix001",
-								"HydrogenPipe",
-								"HydrogenTank",
-								"leftboot",
-								"leftsleeve",
-								"leftTrouserleg",
-								"Line001",
-								"NitrogenPipe",
-								"NitrogenTank",
-								"OxygenCapsule1",
-								"OxygenCapsule2",
-								"OxygenPipe",
-								"OxygenTank",
-								"Pipe1",
-								"Pipe2",
-								"Pipe3",
-								"Pipe4",
-								"Pipe5",
-								"Pipe6",
-								"Pipe7",
-								"Pipe8",
-								"Pipe9",
-								"Piston1Part1",
-								"Piston1Part2",
-								"Piston2Part1",
-								"Piston2Part2",
-								"Piston3Part1",
-								"Piston3Part2",
-								"Piston4Part1",
-								"Piston4Part2",
-								"rightboot",
-								"Rightsleeve",
-								"rightTrouserleg",
-								"SolarDectector",
-								"Spacebreatplate",
-								"SpaceHelmet1",
-								"SpacerAntenna1",
-								"SpacerAntenna2",
-								"SpacerAntenna4",
-								"Spring",
-								"Spring2",
-								"Valvepiston 2",
-								"Valvepiston1"), false),
-						DefaultVertexFormats.ITEM, spriteFunction);
+						new OBJModel.OBJState(ImmutableList.of("Amplifier", "Amplifier2", "Amplifier3", "Amplifier4", "Antenna", "AntennaDetector", "DecorationDetail1", "DecorationDetail3", "decorationpipe", "GlassHelmet", "Helix001",
+								"HydrogenPipe", "HydrogenTank", "leftboot", "leftsleeve", "leftTrouserleg", "Line001", "NitrogenPipe", "NitrogenTank", "OxygenCapsule1", "OxygenCapsule2", "OxygenPipe", "OxygenTank", "Pipe1", "Pipe2", "Pipe3",
+								"Pipe4", "Pipe5", "Pipe6", "Pipe7", "Pipe8", "Pipe9", "Piston1Part1", "Piston1Part2", "Piston2Part1", "Piston2Part2", "Piston3Part1", "Piston3Part2", "Piston4Part1", "Piston4Part2", "rightboot", "Rightsleeve",
+								"rightTrouserleg", "SolarDectector", "Spacebreatplate", "SpaceHelmet1", "SpacerAntenna1", "SpacerAntenna2", "SpacerAntenna4", "Spring", "Spring2", "Valvepiston 2", "Valvepiston1"), false), DefaultVertexFormats.ITEM,
+						spriteFunction);
 
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}		
+		}
 	}
 
 	@Override
@@ -127,7 +73,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partHead() {
 		if (partType == 0) {
 			GL11.glTranslatef(0F, -1.5F, 0F);
-			ClientUtil.drawBakedModelColored(armourModelHead, ColorUtil.to32BitColor(255,255,255,255));
+			ClientUtil.drawBakedModelColored(armourModelHead, ColorUtil.to32BitColor(255, 255, 255, 255));
 		}
 	}
 
@@ -135,7 +81,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partBody() {
 		if (partType == 1) {
 			GL11.glTranslatef(0F, -1.5F, 0F);
-			ClientUtil.drawBakedModelColored(armourModelBody, ColorUtil.to32BitColor(255,255,255,255));
+			ClientUtil.drawBakedModelColored(armourModelBody, ColorUtil.to32BitColor(255, 255, 255, 255));
 		}
 	}
 

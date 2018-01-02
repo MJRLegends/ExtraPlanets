@@ -129,12 +129,12 @@ public class ExtraPlanets_Fluids {
 				.setBlock(LIQUID_CHOCOLATE).setDensity(1000).setViscosity(300);
 		FluidRegistry.registerFluid(LIQUID_CHOCOLATE_FLUID);
 		FluidRegistry.addBucketForFluid(LIQUID_CHOCOLATE_FLUID);
-		
+
 		LIQUID_CARAMEL_FLUID = new Fluid("liquid_caramel_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_caramel_still"), new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_caramel_flow"))
-		.setBlock(LIQUID_CARAMEL).setDensity(1000).setViscosity(300);
+				.setBlock(LIQUID_CARAMEL).setDensity(1000).setViscosity(300);
 		FluidRegistry.registerFluid(LIQUID_CARAMEL_FLUID);
 		FluidRegistry.addBucketForFluid(LIQUID_CARAMEL_FLUID);
-		
+
 	}
 
 	private static void initFluidBlocks() {

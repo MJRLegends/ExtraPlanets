@@ -186,31 +186,27 @@ public class EntityUranusLander extends EntityLanderBase implements IIgnoreShift
 		this.rotationPitch = 0.0000001F;
 	}
 
-    @Override
-    public void onGroundHit()
-    {
-        if (!this.worldObj.isRemote)
-        {
-            if (Math.abs(this.lastMotionY) > 2.0D)
-            {
-                if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP)
-                {
-                    EntityPlayerMP entity = (EntityPlayerMP) this.riddenByEntity;
-                    entity.mountEntity(null);
-                    GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_RESET_THIRD_PERSON, GCCoreUtil.getDimensionID(this.worldObj), new Object[] {}), entity);
-                    entity.motionX = 0;
-                    entity.motionY = 0;
-                    entity.motionZ = 0;
-                    entity.setPosition(entity.posX, this.posY + this.getMountedYOffset(), entity.posZ);
-                    this.worldObj.updateEntityWithOptionalForce(entity, false);
-                }
+	@Override
+	public void onGroundHit() {
+		if (!this.worldObj.isRemote) {
+			if (Math.abs(this.lastMotionY) > 2.0D) {
+				if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP) {
+					EntityPlayerMP entity = (EntityPlayerMP) this.riddenByEntity;
+					entity.mountEntity(null);
+					GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_RESET_THIRD_PERSON, GCCoreUtil.getDimensionID(this.worldObj), new Object[] {}), entity);
+					entity.motionX = 0;
+					entity.motionY = 0;
+					entity.motionZ = 0;
+					entity.setPosition(entity.posX, this.posY + this.getMountedYOffset(), entity.posZ);
+					this.worldObj.updateEntityWithOptionalForce(entity, false);
+				}
 
-                this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 12, true);
+				this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 12, true);
 
-                this.setDead();
-            }
-        }
-    }
+				this.setDead();
+			}
+		}
+	}
 
 	@Override
 	public Vector3 getMotionVec() {

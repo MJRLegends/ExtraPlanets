@@ -327,7 +327,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if(Config.MORE_PLANETS_COMPATIBILITY)
+		if (Config.MORE_PLANETS_COMPATIBILITY)
 			stackList = GalacticraftRegistry.getDungeonLoot(4);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(5);

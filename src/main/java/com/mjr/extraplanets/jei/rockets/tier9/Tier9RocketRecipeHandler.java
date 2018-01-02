@@ -20,7 +20,7 @@ public class Tier9RocketRecipeHandler implements IRecipeHandler<Tier9RocketRecip
 	public String getRecipeCategoryUid() {
 		return RecipeCategories.ROCKET_T9_ID;
 	}
-	
+
 	@Nonnull
 	@Override
 	public IRecipeWrapper getRecipeWrapper(@Nonnull Tier9RocketRecipeWrapper recipe) {

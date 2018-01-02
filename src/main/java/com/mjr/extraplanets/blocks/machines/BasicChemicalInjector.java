@@ -164,11 +164,10 @@ public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDe
 		return state.getValue(FACING).getHorizontalIndex();
 	}
 
-    @Override
-    protected BlockState createBlockState()
-    {
+	@Override
+	protected BlockState createBlockState() {
 		return new BlockState(this, FACING);
-    }
+	}
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {

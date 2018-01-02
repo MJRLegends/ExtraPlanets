@@ -283,7 +283,7 @@ public class ExtraPlanets_Planets {
 				KEPLER69C.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler69c.png"));
 			}
 		}
-		if(Config.CUSTOM_GALAXIES){
+		if (Config.CUSTOM_GALAXIES) {
 			TATOOINE = GCRegisterUtilities.registerUnreachablePlanet("tatooine", ExtraPlanets_SolarSystems.epsilonSolaria);
 			if (TATOOINE != null) {
 				TATOOINE.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(0.75F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 8);
@@ -304,7 +304,7 @@ public class ExtraPlanets_Planets {
 				AQUA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(2.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.0F, 2.0F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 2);
 				AQUA.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/aqua.png"));
 			}
-	
+
 			QUSTROITHEA = GCRegisterUtilities.registerUnreachablePlanet("qustroithea", ExtraPlanets_SolarSystems.xenos157);
 			if (QUSTROITHEA != null) {
 				QUSTROITHEA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 8);
@@ -330,7 +330,7 @@ public class ExtraPlanets_Planets {
 				XOVIS.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(5.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.5F, 4.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F);
 				XOVIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/xovis.png"));
 			}
-	
+
 			OARILIA = GCRegisterUtilities.registerUnreachablePlanet("oarilia", ExtraPlanets_SolarSystems.vendrizi161);
 			if (OARILIA != null) {
 				OARILIA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F)).setRelativeOrbitTime(164.84118291347207009857612267251F / 8);

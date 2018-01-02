@@ -135,10 +135,10 @@ public class WorldProviderRhea extends WorldProviderRealisticSpace implements IG
 	public CelestialBody getCelestialBody() {
 		return ExtraPlanets_Moons.RHEA;
 	}
-	
+
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 			return 80.0F;
 		}
 		return 70.0F;

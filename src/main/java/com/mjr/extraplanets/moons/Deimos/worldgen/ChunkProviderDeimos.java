@@ -36,7 +36,7 @@ public class ChunkProviderDeimos extends ChunkProviderSingleBiomeSpace {
 		return new BiomeGenBase[] { DeimosBiomes.deimos };
 	}
 
-	@Override	
+	@Override
 	protected int getSeaLevel() {
 		return 93;
 	}
@@ -92,12 +92,12 @@ public class ChunkProviderDeimos extends ChunkProviderSingleBiomeSpace {
 	public void onChunkProvide(int cX, int cZ, ChunkPrimer primer) {
 		this.ravineGenerator.generate(this, this.worldObj, cX, cZ, primer);
 	}
-	
+
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {		
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 	}
 }

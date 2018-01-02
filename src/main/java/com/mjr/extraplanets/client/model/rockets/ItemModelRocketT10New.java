@@ -26,7 +26,7 @@ public class ItemModelRocketT10New extends ModelTransformWrapper {
 	@Override
 	protected Matrix4f getTransformForPerspective(TransformType cameraTransformType) {
 		if (cameraTransformType == TransformType.GUI) {
-        	//
+			//
 
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);
@@ -70,69 +70,65 @@ public class ItemModelRocketT10New extends ModelTransformWrapper {
 			return ret;
 		}
 
-        if (cameraTransformType == TransformType.FIRST_PERSON)
-        {
-        	if (Minecraft.isAmbientOcclusionEnabled()) {
-    			GlStateManager.shadeModel(GL11.GL_SMOOTH);
-    		} else {
-    			GlStateManager.shadeModel(GL11.GL_FLAT);
-    		}
-            Vector3f trans = new Vector3f(0.5F, -1.9F, -1.8F);
-            Matrix4f ret = new Matrix4f();
-            ret.setIdentity();
-            Matrix4f mul = new Matrix4f();
-            mul.setIdentity();
-            mul.setScale(4.0F);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.rotX(Constants.halfPI);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.rotZ(-0.65F);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.setTranslation(trans);
-            ret.mul(mul);
-            return ret;
-        }
+		if (cameraTransformType == TransformType.FIRST_PERSON) {
+			if (Minecraft.isAmbientOcclusionEnabled()) {
+				GlStateManager.shadeModel(GL11.GL_SMOOTH);
+			} else {
+				GlStateManager.shadeModel(GL11.GL_FLAT);
+			}
+			Vector3f trans = new Vector3f(0.5F, -1.9F, -1.8F);
+			Matrix4f ret = new Matrix4f();
+			ret.setIdentity();
+			Matrix4f mul = new Matrix4f();
+			mul.setIdentity();
+			mul.setScale(4.0F);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.rotX(Constants.halfPI);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.rotZ(-0.65F);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.setTranslation(trans);
+			ret.mul(mul);
+			return ret;
+		}
 
-        if (cameraTransformType == TransformType.THIRD_PERSON)
-        {
-        	
+		if (cameraTransformType == TransformType.THIRD_PERSON) {
 
-        	if (Minecraft.isAmbientOcclusionEnabled()) {
-    			GlStateManager.shadeModel(GL11.GL_SMOOTH);
-    		} else {
-    			GlStateManager.shadeModel(GL11.GL_FLAT);
-    		}
-            Vector3f trans = new Vector3f(0.0F, -4.9F, -0.8F);
-            Matrix4f ret = new Matrix4f();
-            ret.setIdentity();
-            Matrix4f mul = new Matrix4f();
-            mul.setIdentity();
-            Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(0, 10, 0));
-            mul.setRotation(rot);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.setScale(0.6F);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.rotX((float) (Math.PI / 3.0F));
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.rotZ((float) (-Math.PI / 2.0F));
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.rotX(0.3F);
-            ret.mul(mul);
-            mul.setIdentity();
-            mul.setTranslation(trans);
-            ret.mul(mul);
-            return ret;
-        }
+			if (Minecraft.isAmbientOcclusionEnabled()) {
+				GlStateManager.shadeModel(GL11.GL_SMOOTH);
+			} else {
+				GlStateManager.shadeModel(GL11.GL_FLAT);
+			}
+			Vector3f trans = new Vector3f(0.0F, -4.9F, -0.8F);
+			Matrix4f ret = new Matrix4f();
+			ret.setIdentity();
+			Matrix4f mul = new Matrix4f();
+			mul.setIdentity();
+			Quat4f rot = TRSRTransformation.quatFromYXZDegrees(new Vector3f(0, 10, 0));
+			mul.setRotation(rot);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.setScale(0.6F);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.rotX((float) (Math.PI / 3.0F));
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.rotZ((float) (-Math.PI / 2.0F));
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.rotX(0.3F);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.setTranslation(trans);
+			ret.mul(mul);
+			return ret;
+		}
 
 		if (cameraTransformType == TransformType.GROUND) {
-        	
 
 			if (Minecraft.isAmbientOcclusionEnabled()) {
 				GlStateManager.shadeModel(GL11.GL_SMOOTH);

@@ -21,7 +21,7 @@ public class ChunkProviderRhea extends ChunkProviderSingleBiomeSpace {
 	private final BiomeDecoratorRhea ceresBiomeDecorator = new BiomeDecoratorRhea();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.RHEA_BLOCKS, 0, 1, 2);
-	
+
 	public ChunkProviderRhea(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 	}
@@ -44,7 +44,7 @@ public class ChunkProviderRhea extends ChunkProviderSingleBiomeSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 
@@ -98,6 +98,6 @@ public class ChunkProviderRhea extends ChunkProviderSingleBiomeSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {		
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 	}
 }

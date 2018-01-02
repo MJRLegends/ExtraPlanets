@@ -142,7 +142,7 @@ public class GuiHandler implements IGuiHandler {
 	@SideOnly(Side.CLIENT)
 	private Object getClientGuiElement(int ID, EntityPlayer player, World world, BlockPos position) {
 		if (ID == GuiIdsCore.ROCKET_INVENTORY && player.ridingEntity instanceof EntityElectricRocketBase) {
-            return new GuiElectricRocketInventory(player.inventory, (EntityElectricRocketBase) player.ridingEntity, ((EntityElectricRocketBase) player.ridingEntity).getType());
+			return new GuiElectricRocketInventory(player.inventory, (EntityElectricRocketBase) player.ridingEntity, ((EntityElectricRocketBase) player.ridingEntity).getType());
 
 		}
 		TileEntity tile = world.getTileEntity(position);

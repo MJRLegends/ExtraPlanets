@@ -264,7 +264,7 @@ public class SkyProviderPluto extends IRenderHandler {
 		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
 		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
-		
+
 		// Render earth
 		f10 = 3.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
@@ -278,7 +278,7 @@ public class SkyProviderPluto extends IRenderHandler {
 		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
 		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
-		
+
 		// Render earth
 		f10 = 3.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
@@ -292,7 +292,7 @@ public class SkyProviderPluto extends IRenderHandler {
 		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
 		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
-		
+
 		// Render earth
 		f10 = 3.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
@@ -306,7 +306,7 @@ public class SkyProviderPluto extends IRenderHandler {
 		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
 		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
-		
+
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);

@@ -18,7 +18,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 
-public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor  {
+public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor {
 	public String name;
 
 	public Tier3SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
@@ -72,7 +72,7 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	public boolean canBreathe(ItemStack helmetInSlot, EntityPlayer playerWearing, EnumGearType type) {
 		return true;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {

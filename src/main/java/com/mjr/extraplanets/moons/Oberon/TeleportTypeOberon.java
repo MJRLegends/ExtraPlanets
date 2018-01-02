@@ -49,7 +49,7 @@ public class TeleportTypeOberon implements ITeleportType {
 				if (player.capabilities.isFlying) {
 					player.capabilities.isFlying = false;
 				}
-				
+
 				EntityGeneralLander lander = new EntityGeneralLander(player);
 
 				if (!newWorld.isRemote) {

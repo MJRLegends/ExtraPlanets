@@ -164,7 +164,7 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(World world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.stone) {
 			return false;
 		}

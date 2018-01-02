@@ -10,35 +10,30 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
 
-public class ItemBlockSolar extends ItemBlockDesc
-{
-    public ItemBlockSolar(Block block)
-    {
-        super(block);
-        this.setMaxDamage(0);
-        this.setHasSubtypes(true);
-    }
+public class ItemBlockSolar extends ItemBlockDesc {
+	public ItemBlockSolar(Block block) {
+		super(block);
+		this.setMaxDamage(0);
+		this.setHasSubtypes(true);
+	}
 
-    @Override
-    public String getUnlocalizedName(ItemStack par1ItemStack)
-    {
-        int index = Math.min(Math.max(par1ItemStack.getItemDamage() / 4, 0), BlockSolar.EnumSolarType.values().length);
+	@Override
+	public String getUnlocalizedName(ItemStack par1ItemStack) {
+		int index = Math.min(Math.max(par1ItemStack.getItemDamage() / 4, 0), BlockSolar.EnumSolarType.values().length);
 
-        String name = BlockSolar.EnumSolarType.values()[index].getName();
+		String name = BlockSolar.EnumSolarType.values()[index].getName();
 
-        return this.getBlock().getUnlocalizedName() + "." + name;
-    }
+		return this.getBlock().getUnlocalizedName() + "." + name;
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public EnumRarity getRarity(ItemStack par1ItemStack)
-    {
-        return ClientProxyCore.galacticraftItem;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
+		return ClientProxyCore.galacticraftItem;
+	}
 
-    @Override
-    public int getMetadata(int damage)
-    {
-        return damage;
-    }
+	@Override
+	public int getMetadata(int damage) {
+		return damage;
+	}
 }

@@ -60,45 +60,34 @@ public class SchematicTier5 extends ItemHangingEntity implements ISchematicItem,
 	public EnumSortCategoryItem getCategory(int meta) {
 		return EnumSortCategoryItem.SCHEMATIC;
 	}
-	
+
 	@Override
-    public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-        if (side == EnumFacing.DOWN)
-        {
-            return false;
-        }
-        else if (side == EnumFacing.UP)
-        {
-            return false;
-        }
-        else
-        {
-            BlockPos blockpos = pos.offset(side);
+	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
+		if (side == EnumFacing.DOWN) {
+			return false;
+		} else if (side == EnumFacing.UP) {
+			return false;
+		} else {
+			BlockPos blockpos = pos.offset(side);
 
-            if (!playerIn.canPlayerEdit(blockpos, side, stack))
-            {
-                return false;
-            }
-            else
-            {
-                EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, side, this.getIndex(stack.getItemDamage()));
+			if (!playerIn.canPlayerEdit(blockpos, side, stack)) {
+				return false;
+			} else {
+				EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, side, this.getIndex(stack.getItemDamage()));
 
-                if (entityhanging != null && entityhanging.onValidSurface())
-                {
-                    if (!worldIn.isRemote)
-                    {
-                        worldIn.spawnEntityInWorld(entityhanging);
-                        entityhanging.sendToClient(worldIn, blockpos);
-                    }
+				if (entityhanging != null && entityhanging.onValidSurface()) {
+					if (!worldIn.isRemote) {
+						worldIn.spawnEntityInWorld(entityhanging);
+						entityhanging.sendToClient(worldIn, blockpos);
+					}
 
-                    --stack.stackSize;
-                }
+					--stack.stackSize;
+				}
 
-                return true;
-            }
-        }
-    }
+				return true;
+			}
+		}
+	}
 
 	private EntityHangingSchematic createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide, int index) {
 		return new EntityHangingSchematic(worldIn, pos, clickedSide, index);

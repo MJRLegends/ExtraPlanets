@@ -124,20 +124,17 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
 		if (playerBase != null) {
-            GCPlayerStats stats = GCPlayerStats.get(playerBase);
+			GCPlayerStats stats = GCPlayerStats.get(playerBase);
 
-            if (this.cargoItems == null || this.cargoItems.length == 0)
-            {
-                stats.setRocketStacks(new ItemStack[2]);
-            }
-            else
-            {
-                stats.setRocketStacks(this.cargoItems);
-            }
+			if (this.cargoItems == null || this.cargoItems.length == 0) {
+				stats.setRocketStacks(new ItemStack[2]);
+			} else {
+				stats.setRocketStacks(this.cargoItems);
+			}
 
-            stats.setRocketType(this.rocketType.getIndex());
-            stats.setRocketItem(ExtraPlanets_Items.TIER_10_ROCKET);
-            stats.setFuelLevel(this.fuelTank.getFluidAmount());
+			stats.setRocketType(this.rocketType.getIndex());
+			stats.setRocketItem(ExtraPlanets_Items.TIER_10_ROCKET);
+			stats.setFuelLevel(this.fuelTank.getFluidAmount());
 		}
 	}
 
@@ -286,7 +283,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 	public boolean isDockValid(IFuelDock dock) {
 		return dock instanceof TileEntityTier3LandingPad;
 	}
-	
+
 	@Override
 	public String getName() {
 		return GCCoreUtil.translate("entity.extraplanets.EntityTier10Rocket.name");

@@ -184,45 +184,38 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 		return true;
 	}
 
-	 @Override
-	    public boolean interactFirst(EntityPlayer par1EntityPlayer)
-	    {
-	        if (this.launchPhase >= EnumLaunchPhase.LAUNCHED.ordinal())
-	        {
-	            return false;
-	        }
+	@Override
+	public boolean interactFirst(EntityPlayer par1EntityPlayer) {
+		if (this.launchPhase >= EnumLaunchPhase.LAUNCHED.ordinal()) {
+			return false;
+		}
 
-	        if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP)
-	        {
-	            if (!this.worldObj.isRemote && this.riddenByEntity == par1EntityPlayer)
-	            {
-	                GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_RESET_THIRD_PERSON, this.worldObj.provider.getDimensionId(), new Object[] { }), (EntityPlayerMP) par1EntityPlayer);
-	                GCPlayerStats stats = GCPlayerStats.get(par1EntityPlayer);
-	                stats.setChatCooldown(0);
-	                // Prevent player being dropped from the top of the rocket...
-	                float heightBefore = this.height;
-	                this.height = this.height / 2.0F;
-	                par1EntityPlayer.mountEntity(null);
-	                this.height = heightBefore;
-	            }
+		if (this.riddenByEntity != null && this.riddenByEntity instanceof EntityPlayerMP) {
+			if (!this.worldObj.isRemote && this.riddenByEntity == par1EntityPlayer) {
+				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_RESET_THIRD_PERSON, this.worldObj.provider.getDimensionId(), new Object[] {}), (EntityPlayerMP) par1EntityPlayer);
+				GCPlayerStats stats = GCPlayerStats.get(par1EntityPlayer);
+				stats.setChatCooldown(0);
+				// Prevent player being dropped from the top of the rocket...
+				float heightBefore = this.height;
+				this.height = this.height / 2.0F;
+				par1EntityPlayer.mountEntity(null);
+				this.height = heightBefore;
+			}
 
-	            return true;
-	        }
-	        else if (par1EntityPlayer instanceof EntityPlayerMP)
-	        {
-	            if (!this.worldObj.isRemote)
-	            {
-	                GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.worldObj.provider.getDimensionId(), new Object[] { }), (EntityPlayerMP) par1EntityPlayer);
-	                GCPlayerStats stats = GCPlayerStats.get(par1EntityPlayer);
-	                stats.setChatCooldown(0);
-	                par1EntityPlayer.mountEntity(this);
-	            }
+			return true;
+		} else if (par1EntityPlayer instanceof EntityPlayerMP) {
+			if (!this.worldObj.isRemote) {
+				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.worldObj.provider.getDimensionId(), new Object[] {}), (EntityPlayerMP) par1EntityPlayer);
+				GCPlayerStats stats = GCPlayerStats.get(par1EntityPlayer);
+				stats.setChatCooldown(0);
+				par1EntityPlayer.mountEntity(this);
+			}
 
-	            return true;
-	        }
+			return true;
+		}
 
-	        return false;
-	    }
+		return false;
+	}
 
 	@Override
 	protected void writeEntityToNBT(NBTTagCompound nbt) {

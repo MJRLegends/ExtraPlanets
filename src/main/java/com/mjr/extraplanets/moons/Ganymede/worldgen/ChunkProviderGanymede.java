@@ -44,7 +44,7 @@ public class ChunkProviderGanymede extends ChunkProviderSingleBiomeSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 
@@ -98,6 +98,6 @@ public class ChunkProviderGanymede extends ChunkProviderSingleBiomeSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {		
+	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
 	}
 }

@@ -94,7 +94,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state) {
 		return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
-		
+
 	}
 
 	@Override

@@ -12,10 +12,10 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT4TreasureChest;
 
 @SideOnly(Side.CLIENT)
-public class TileEntityT4TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT4TreasureChest>{
-    private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t4.png");
+public class TileEntityT4TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT4TreasureChest> {
+	private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t4.png");
 
-    private final ModelTreasureChest chestModel = new ModelTreasureChest();
+	private final ModelTreasureChest chestModel = new ModelTreasureChest();
 
 	@Override
 	public void renderTileEntityAt(TileEntityT4TreasureChest chest, double par2, double par4, double par6, float partialTickTime, int par9) {

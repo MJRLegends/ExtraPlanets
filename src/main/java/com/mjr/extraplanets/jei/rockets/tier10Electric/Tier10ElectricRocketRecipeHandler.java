@@ -20,7 +20,7 @@ public class Tier10ElectricRocketRecipeHandler implements IRecipeHandler<Tier10E
 	public String getRecipeCategoryUid() {
 		return RecipeCategories.ROCKET_T10_ELECTRIC_ID;
 	}
-	
+
 	@Nonnull
 	@Override
 	public IRecipeWrapper getRecipeWrapper(@Nonnull Tier10ElectricRocketRecipeWrapper recipe) {

@@ -31,51 +31,43 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	protected BlockWhiteSugerCane(String name) {
 		super(Material.plants);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
-        float f = 0.375F;
-        this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 1.0F, 0.5F + f);
+		float f = 0.375F;
+		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 1.0F, 0.5F + f);
 		this.setTickRandomly(true);
 		this.setHardness(0.0F);
 		this.setUnlocalizedName(name);
 	}
 
-
 	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-    {
-        if (worldIn.getBlockState(pos.down()).getBlock() == Blocks.reeds || this.checkForDrop(worldIn, pos, state))
-        {
-            if (worldIn.isAirBlock(pos.up()))
-            {
-                int i;
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+		if (worldIn.getBlockState(pos.down()).getBlock() == Blocks.reeds || this.checkForDrop(worldIn, pos, state)) {
+			if (worldIn.isAirBlock(pos.up())) {
+				int i;
 
-                for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i)
-                {
-                    ;
-                }
+				for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i) {
+					;
+				}
 
-                if (i < 3)
-                {
-                    int j = state.getValue(AGE).intValue();
+				if (i < 3) {
+					int j = state.getValue(AGE).intValue();
 
-                    if (j == 15)
-                    {
-                        worldIn.setBlockState(pos.up(), this.getDefaultState());
-                        worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(0)), 4);
-                    }
-                    else
-                    {
-                        worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
-                    }
-                }
-            }
-        }
-    }
+					if (j == 15) {
+						worldIn.setBlockState(pos.up(), this.getDefaultState());
+						worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(0)), 4);
+					} else {
+						worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
+					}
+				}
+			}
+		}
+	}
 
 	@Override
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
 		IBlockState state = worldIn.getBlockState(pos.down());
 		Block block = state.getBlock();
-        if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this)) return true;
+		if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this))
+			return true;
 
 		if (block == this) {
 			return true;
@@ -156,10 +148,9 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 
 	@Override
 	@SideOnly(Side.CLIENT)
-    public EnumWorldBlockLayer getBlockLayer()
-    {
-        return EnumWorldBlockLayer.CUTOUT;
-    }
+	public EnumWorldBlockLayer getBlockLayer() {
+		return EnumWorldBlockLayer.CUTOUT;
+	}
 
 	/**
 	 * Convert the BlockState into the correct metadata value
@@ -179,9 +170,8 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		return this.getDefaultState();
 	}
 
-    @Override
-	protected BlockState createBlockState()
-    {
-        return new BlockState(this, new IProperty[] {AGE});
-    }
+	@Override
+	protected BlockState createBlockState() {
+		return new BlockState(this, new IProperty[] { AGE });
+	}
 }

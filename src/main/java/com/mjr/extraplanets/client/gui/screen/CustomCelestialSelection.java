@@ -536,7 +536,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						if(FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
+						if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
 							temp = WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
 						else
 							temp = WorldUtil.getProviderForDimensionServer(this.selectedBody.getDimensionID());
@@ -589,13 +589,16 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 39, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 51, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : "Unknown"), xOffset + 10, yOffset + 60, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : "Unknown"), xOffset + 10,
+							yOffset + 60, 14737632);
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
-					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isBreathable() : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
-					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_corrosive_atmosphere.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10, yOffset + 90, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isBreathable() : "Unknown"), xOffset + 10, yOffset + 80,
+							14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_corrosive_atmosphere.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10,
+							yOffset + 90, 14737632);
 					int radiationLevel = 0;
 					int pressureLevel = 0;
 					try {
@@ -659,7 +662,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				}
 			} else if (!this.showGalaxies && Config.CUSTOM_GALAXIES) {
 				this.drawString(this.fontRendererObj, "+", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
-				this.drawString(this.fontRendererObj, "< New Galaxies (Currently in Beta)!", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 100, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
+				this.drawString(this.fontRendererObj, "< New Galaxies (Currently in Beta)!", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 100, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE
+						+ 16, 8087790);
 			}
 		}
 	}
@@ -1287,14 +1291,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				this.selectedParent = this.currentGalaxyMainSystem;
 			}
 
-			if(this.showGalaxies){
+			if (this.showGalaxies) {
 				for (int i = 0; i < this.galaxies.size(); i++) {
 					int xOffset = 0;
 					int yOffset = 45;
-	
+
 					xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset;
 					yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset;
-	
+
 					if (x >= xPos && x <= xPos + 93 && y >= yPos && y <= yPos + 12) {
 						boolean clicked = false;
 						if (i == 0) {

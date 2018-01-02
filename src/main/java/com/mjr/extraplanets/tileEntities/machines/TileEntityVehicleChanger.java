@@ -179,11 +179,10 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public EnumFacing getFront() {
-        IBlockState state = this.worldObj.getBlockState(getPos()); 
-        if (state.getBlock() instanceof VehicleCharger)
-        {
-            return state.getValue(VehicleCharger.FACING);
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof VehicleCharger) {
+			return state.getValue(VehicleCharger.FACING);
+		}
+		return EnumFacing.NORTH;
 	}
 }

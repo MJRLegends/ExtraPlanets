@@ -43,7 +43,7 @@ public class WorldChunkManagerTriton extends WorldChunkManager {
 	public List<BiomeGenBase> getBiomesToSpawnIn() {
 		return this.biomesToSpawnIn;
 	}
-	
+
 	@Override
 	public float[] getRainfall(float[] par1, int x, int z, int width, int depth) {
 		IntCache.resetIntCache();
@@ -62,7 +62,7 @@ public class WorldChunkManagerTriton extends WorldChunkManager {
 		}
 		return par1;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getTemperatureAtHeight(float par1, int par2) {

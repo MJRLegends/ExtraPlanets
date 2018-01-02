@@ -61,7 +61,6 @@ public class RenderElectricRocket extends Render<EntityElectricRocket> {
 		updateModel();
 		this.bindTexture(TextureMap.locationBlocksTexture);
 
-
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {

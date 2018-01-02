@@ -106,11 +106,10 @@ public class AdvancedFuelLoader extends BlockAdvancedTile implements IShiftDescr
 		return state.getValue(FACING).getHorizontalIndex();
 	}
 
-    @Override
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, FACING, SIDES);
-    }
+	@Override
+	protected BlockState createBlockState() {
+		return new BlockState(this, FACING, SIDES);
+	}
 
 	@Override
 	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {

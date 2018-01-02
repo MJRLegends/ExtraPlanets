@@ -14,13 +14,13 @@ public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
 
 	public BiomeGenJupiterMagmaSea(int var1) {
 		super(var1);
-        BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
-        this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
-        this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(1);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
+		this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getStateFromMeta(1);
 	}
 
 	@Override
 	public List<BiomeGenBase.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return Lists.<BiomeGenBase.SpawnListEntry>newArrayList();
+		return Lists.<BiomeGenBase.SpawnListEntry> newArrayList();
 	}
 }

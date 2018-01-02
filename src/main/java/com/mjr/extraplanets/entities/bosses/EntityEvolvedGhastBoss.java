@@ -456,7 +456,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if(Config.MORE_PLANETS_COMPATIBILITY)
+		if (Config.MORE_PLANETS_COMPATIBILITY)
 			stackList = GalacticraftRegistry.getDungeonLoot(5);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(6);

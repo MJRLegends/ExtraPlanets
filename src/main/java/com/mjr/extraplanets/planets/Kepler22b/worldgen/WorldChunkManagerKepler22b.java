@@ -52,7 +52,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	public List<BiomeGenBase> getBiomesToSpawnIn() {
 		return this.biomesToSpawn;
 	}
-	
+
 	@Override
 	public float[] getRainfall(float[] par1, int x, int z, int width, int depth) {
 		IntCache.resetIntCache();
@@ -71,7 +71,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 		}
 		return par1;
 	}
-	
+
 	@Override
 	public float getTemperatureAtHeight(float par1, int par2) {
 		return par1;

@@ -4,65 +4,52 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockCakeBlocks extends ItemBlock
-{
-	public ItemBlockCakeBlocks(Block block)
-	{
+public class ItemBlockCakeBlocks extends ItemBlock {
+	public ItemBlockCakeBlocks(Block block) {
 		super(block);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 	}
 
 	@Override
-	public int getMetadata(int meta)
-	{
+	public int getMetadata(int meta) {
 		return meta;
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemstack)
-	{
+	public String getUnlocalizedName(ItemStack itemstack) {
 		String name = "";
 
-		switch (itemstack.getItemDamage())
-		{
-		case 0:
-		{
+		switch (itemstack.getItemDamage()) {
+		case 0: {
 			name = "cake_block";
 			break;
 		}
-		case 1:
-		{
+		case 1: {
 			name = "cake_block_red_velvet";
 			break;
 		}
-		case 2:
-		{
+		case 2: {
 			name = "cake_block_chocolate";
 			break;
 		}
-		case 3:
-		{
+		case 3: {
 			name = "white_icing_red_dots";
 			break;
 		}
-		case 4:
-		{
+		case 4: {
 			name = "white_icing_green_dots";
 			break;
 		}
-		case 5:
-		{
+		case 5: {
 			name = "white_icing_pink_dots";
 			break;
 		}
-		case 6:
-		{
+		case 6: {
 			name = "white_icing_orange_dots";
 			break;
 		}
-		case 7:
-		{
+		case 7: {
 			name = "cookie_rocks";
 			break;
 		}
@@ -73,9 +60,8 @@ public class ItemBlockCakeBlocks extends ItemBlock
 		return this.getBlock().getUnlocalizedName() + "." + name;
 	}
 
-    @Override
-    public String getUnlocalizedName()
-    {
-        return this.getBlock().getUnlocalizedName() + ".0";
-    }
+	@Override
+	public String getUnlocalizedName() {
+		return this.getBlock().getUnlocalizedName() + ".0";
+	}
 }
