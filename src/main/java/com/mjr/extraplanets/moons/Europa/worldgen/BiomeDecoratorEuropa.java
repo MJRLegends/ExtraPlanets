@@ -53,7 +53,7 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
-		
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {

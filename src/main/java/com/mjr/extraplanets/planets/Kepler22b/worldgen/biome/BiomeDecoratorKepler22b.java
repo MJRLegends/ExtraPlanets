@@ -181,7 +181,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 			else
 				blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getDefaultState().withProperty(BlockKepler22bMapleTreeLog2.VARIANT, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN), Blocks.AIR.getDefaultState(), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getDefaultState().withProperty(BlockKepler22bMapleTreeLog2.VARIANT, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN), Blocks.AIR.getDefaultState(), false)
+					.generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.bigTreeWithNoLeafsPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
@@ -225,8 +226,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 			else
 				blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getDefaultState().withProperty(BlockKepler22bMapleTreeLog.VARIANT, BlockKepler22bMapleTreeLog.EnumType.MAPLE_RED),
-					ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves.VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_RED), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getDefaultState().withProperty(BlockKepler22bMapleTreeLog.VARIANT, BlockKepler22bMapleTreeLog.EnumType.MAPLE_RED), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF
+					.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves.VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_RED), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < purpleTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
@@ -234,8 +235,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 			else
 				blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getDefaultState().withProperty(BlockKepler22bMapleTreeLog.VARIANT, BlockKepler22bMapleTreeLog.EnumType.MAPLE_PURPLE), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves.VARIANT,
-					BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_PURPLE), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getDefaultState().withProperty(BlockKepler22bMapleTreeLog.VARIANT, BlockKepler22bMapleTreeLog.EnumType.MAPLE_PURPLE), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF
+					.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves.VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_PURPLE), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < yellowTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
@@ -243,8 +244,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 			else
 				blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getDefaultState().withProperty(BlockKepler22bMapleTreeLog.VARIANT, BlockKepler22bMapleTreeLog.EnumType.MAPLE_YELLOW),
-					ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves.VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_YELLOW), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getDefaultState().withProperty(BlockKepler22bMapleTreeLog.VARIANT, BlockKepler22bMapleTreeLog.EnumType.MAPLE_YELLOW), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF
+					.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves.VARIANT, BlockKepler22bMapleTreeLeaves.EnumType.MAPLE_YELLOW), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < greenTreesPerChunk; i++) {
 			BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
@@ -260,7 +261,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 			else
 				blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
-			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getDefaultState().withProperty(BlockKepler22bMapleTreeLog2.VARIANT, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF2.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves2.VARIANT, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_BROWN), false).generate(worldIn, random, blockpos);
+			new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getDefaultState().withProperty(BlockKepler22bMapleTreeLog2.VARIANT, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF2
+					.getDefaultState().withProperty(BlockKepler22bMapleTreeLeaves2.VARIANT, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_BROWN), false).generate(worldIn, random, blockpos);
 		}
 		for (int i = 0; i < this.blueShortGrassPerChunk; i++) {
 			BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));

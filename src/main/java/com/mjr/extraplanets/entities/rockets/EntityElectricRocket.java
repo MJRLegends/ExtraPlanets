@@ -147,7 +147,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-		
+
 		int i;
 
 		if (this.timeUntilLaunch >= 100) {

@@ -354,7 +354,7 @@ public class EntityTier8Rocket extends EntityTieredRocket {
 	public boolean isDockValid(IFuelDock dock) {
 		return (dock instanceof TileEntityTier2LandingPad);
 	}
-	
+
 	@Override
 	public String getName() {
 		return GCCoreUtil.translate("entity.extraplanets.EntityTier8Rocket.name");

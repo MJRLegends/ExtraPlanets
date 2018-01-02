@@ -94,13 +94,12 @@ public abstract class StructureComponentVillage extends StructureComponent {
 				blockpos$mutableblockpos.setPos(l, 64, k);
 
 				if (boundingBox.isVecInside(blockpos$mutableblockpos)) {
-					if(world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY() <= 100){
-						for(int n = 0; n < 20; n++){
-							if(world.getBlockState(blockpos$mutableblockpos) == Blocks.AIR)
+					if (world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY() <= 100) {
+						for (int n = 0; n < 20; n++) {
+							if (world.getBlockState(blockpos$mutableblockpos) == Blocks.AIR)
 								return blockpos$mutableblockpos.getY() + n;
 						}
-					}
-					else{
+					} else {
 						return 100;
 					}
 					i += world.getTopSolidOrLiquidBlock(blockpos$mutableblockpos).getY();

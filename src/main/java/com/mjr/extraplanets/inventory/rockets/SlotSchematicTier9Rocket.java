@@ -25,14 +25,12 @@ public class SlotSchematicTier9Rocket extends Slot {
 	}
 
 	@Override
-    public void onSlotChanged()
-    {
-        if (this.player instanceof EntityPlayerMP)
-        {
-            int dimID = GCCoreUtil.getDimensionID(this.player.worldObj);
-            GCCoreUtil.sendToAllAround(new PacketSimple(EnumSimplePacket.C_SPAWN_SPARK_PARTICLES, dimID, new Object[] { this.pos }), this.player.worldObj, dimID, this.pos, 20);
-        }
-    }
+	public void onSlotChanged() {
+		if (this.player instanceof EntityPlayerMP) {
+			int dimID = GCCoreUtil.getDimensionID(this.player.worldObj);
+			GCCoreUtil.sendToAllAround(new PacketSimple(EnumSimplePacket.C_SPAWN_SPARK_PARTICLES, dimID, new Object[] { this.pos }), this.player.worldObj, dimID, this.pos, 20);
+		}
+	}
 
 	@Override
 	public boolean isItemValid(ItemStack par1ItemStack) {
@@ -85,8 +83,7 @@ public class SlotSchematicTier9Rocket extends Slot {
 	}
 
 	/**
-	 * Returns the maximum stack size for a given slot (usually the same as
-	 * getInventoryStackLimit(), but 1 in the case of armor slots)
+	 * Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)
 	 */
 	@Override
 	public int getSlotStackLimit() {

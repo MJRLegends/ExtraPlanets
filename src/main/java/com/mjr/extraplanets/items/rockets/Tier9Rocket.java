@@ -147,7 +147,7 @@ public class Tier9Rocket extends Item implements IHoldableItem {
 			EntityTier9Rocket rocket = new EntityTier9Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
 			par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.fuelTank.getCapacity());
 		}
-		
+
 		par2List.add(EnumColor.DARK_AQUA + GCCoreUtil.translate("rocket_pad.tier3.desc"));
 	}
 

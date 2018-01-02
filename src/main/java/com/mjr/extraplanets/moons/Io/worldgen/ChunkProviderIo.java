@@ -22,7 +22,7 @@ public class ChunkProviderIo extends ChunkProviderMultiBiomeSpace {
 	private final BiomeDecoratorIoOther ioBiomeDecorator2 = new BiomeDecoratorIoOther();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.IO_BLOCKS, 0, 1, 2);
-	
+
 	public ChunkProviderIo(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.stoneBlock = ExtraPlanets_Blocks.IO_BLOCKS.getDefaultState().withProperty(BlockBasicIo.BASIC_TYPE, BlockBasicIo.EnumBlockBasic.STONE);

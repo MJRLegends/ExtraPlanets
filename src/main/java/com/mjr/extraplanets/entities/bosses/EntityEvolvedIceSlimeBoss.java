@@ -141,7 +141,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 				i = 0;
 			} // don't spawn particles if it's handled by the implementation itself
 			for (int j = 0; j < i * 8; ++j) {
-                float f = this.rand.nextFloat() * Constants.twoPI;
+				float f = this.rand.nextFloat() * Constants.twoPI;
 				float f1 = this.rand.nextFloat() * 0.5F + 0.5F;
 				float f2 = MathHelper.sin(f) * i * 0.5F * f1;
 				float f3 = MathHelper.cos(f) * i * 0.5F * f1;

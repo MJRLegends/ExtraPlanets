@@ -180,11 +180,10 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	public net.minecraft.block.BlockPlanks.EnumType getWoodType(int meta) {
 		return null;
 	}
-	
+
 	@Override
 	@Nullable
-    public Item getItemDropped(IBlockState state, Random rand, int fortune)
-    {
-        return Item.getItemFromBlock(ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING);
-    }
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		return Item.getItemFromBlock(ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING);
+	}
 }

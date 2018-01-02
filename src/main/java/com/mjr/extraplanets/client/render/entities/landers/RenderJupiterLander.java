@@ -78,15 +78,15 @@ public class RenderJupiterLander extends Render<EntityJupiterLander> {
 
 		this.updateModels();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
-		
+
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
-		
+
 		ClientUtil.drawBakedModel(this.landerModel);
-		
+
 		GlStateManager.popMatrix();
 	}
 }

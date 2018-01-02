@@ -16,7 +16,7 @@ public class TileEntityT6TreasureChestRenderer extends TileEntitySpecialRenderer
 	private static final ResourceLocation treasureChestTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/treasure_t6.png");
 
 	private final ModelTreasureChest chestModel = new ModelTreasureChest();
-	
+
 	@Override
 	public void renderTileEntityAt(TileEntityT6TreasureChest chest, double par2, double par4, double par6, float partialTickTime, int par9) {
 		int var9;

@@ -53,7 +53,7 @@ public class ItemBlockTitan extends ItemBlock {
 			name = "titan_methane_sub_surface";
 			break;
 		}
-		case 8:{
+		case 8: {
 			name = "titan_rocks";
 			break;
 		}

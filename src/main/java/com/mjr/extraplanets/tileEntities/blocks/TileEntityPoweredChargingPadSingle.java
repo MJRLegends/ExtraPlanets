@@ -31,7 +31,7 @@ public class TileEntityPoweredChargingPadSingle extends TileEntity implements IT
 				for (final TileEntity tile : attachedLaunchPads) {
 					this.worldObj.markTileEntityForRemoval(tile);
 				}
-				
+
 				this.getPos().south(1);
 				this.getPos().east(1);
 				this.worldObj.setBlockState(this.getPos(), ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL.getDefaultState().withProperty(BlockCustomLandingPadFull.PAD_TYPE, BlockCustomLandingPadFull.EnumLandingPadFullType.POWER_CHARGING_PAD));

@@ -21,7 +21,7 @@ public class ChunkProviderOberon extends ChunkProviderMultiBiomeSpace {
 	// private final BiomeDecoratorOberonOther ioBiomeDecorator2 = new BiomeDecoratorOberonOther();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.OBERON_BLOCKS, 0, 1, 2);
-	
+
 	public ChunkProviderOberon(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.stoneBlock = ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE);

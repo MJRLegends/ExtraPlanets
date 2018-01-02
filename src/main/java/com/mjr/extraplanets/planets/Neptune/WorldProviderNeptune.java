@@ -120,7 +120,7 @@ public class WorldProviderNeptune extends WorldProviderRealisticSpace implements
 		}
 		return 5.0F;
 	}
-	
+
 	@Override
 	public double getSolarEnergyMultiplier() {
 		return 2.0D;
@@ -148,6 +148,6 @@ public class WorldProviderNeptune extends WorldProviderRealisticSpace implements
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

@@ -10,8 +10,8 @@ public class BiomeGenJupiter extends JupiterBiomes {
 
 	public BiomeGenJupiter(BiomeProperties properties) {
 		super(properties);
-        BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
-        this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE);
 	}
 }

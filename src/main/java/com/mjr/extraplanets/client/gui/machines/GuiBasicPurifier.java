@@ -44,7 +44,7 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
 		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
-		
+
 		this.inputTankRegion.xPosition = (this.width - this.xSize) / 2 + 7;
 		this.inputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
 		this.inputTankRegion.parentWidth = this.width;
@@ -60,7 +60,7 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		this.outputTankRegion.parentWidth = this.width;
 		this.outputTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.outputTankRegion);
-		
+
 		List<String> fuelSlotDesc = new ArrayList<String>();
 		fuelSlotDesc.add(GCCoreUtil.translate("gui.radioactive_water_input.desc.0"));
 		fuelSlotDesc.add(GCCoreUtil.translate("gui.radioactive_water_input.desc.1"));
@@ -75,7 +75,7 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		fuelSlotDesc.add(GCCoreUtil.translate("gui.clean_water_output.desc.0"));
 		fuelSlotDesc.add(GCCoreUtil.translate("gui.clean_water_output.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 122, (this.height - this.ySize) / 2 + 6, 18, 18, fuelSlotDesc, this.width, this.height, this));
-		
+
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
@@ -99,10 +99,9 @@ public class GuiBasicPurifier extends GuiContainerGC {
 			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
 		} else if (this.tileEntity.canProcess()) {
 			int progress;
-			if (this.tileEntity.canProcess() && this.tileEntity.canPurify()){
+			if (this.tileEntity.canProcess() && this.tileEntity.canPurify()) {
 				progress = (this.tileEntity.processTicks * 2) * 10;
-			}
-			else
+			} else
 				progress = 0;
 			displayText = EnumColor.BRIGHT_GREEN + GCCoreUtil.translate("gui.status.purifiering.name") + " " + progress + "%";
 		} else {
@@ -137,14 +136,14 @@ public class GuiBasicPurifier extends GuiContainerGC {
 		int fuelCapacity = this.tileEntity.inputTank != null ? this.tileEntity.inputTank.getCapacity() : 0;
 		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.radioactive_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
 		this.inputTankRegion.tooltipStrings = inputTankDesc;
-		
+
 		inputTankDesc = new ArrayList<String>();
 		inputTankDesc.add(GCCoreUtil.translate("gui.infected_water_tank.desc.4"));
 		fuelLevel = this.tileEntity.inputTank2 != null && this.tileEntity.inputTank2.getFluid() != null ? this.tileEntity.inputTank2.getFluid().amount : 0;
 		fuelCapacity = this.tileEntity.inputTank2 != null ? this.tileEntity.inputTank2.getCapacity() : 0;
 		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.infected_water.name") + ": " + fuelLevel + " / " + fuelCapacity);
 		this.inputTank2Region.tooltipStrings = inputTankDesc;
-		
+
 		inputTankDesc = new ArrayList<String>();
 		inputTankDesc.add(GCCoreUtil.translate("gui.clean_water_tank.desc.4"));
 		fuelLevel = this.tileEntity.outputTank != null && this.tileEntity.outputTank.getFluid() != null ? this.tileEntity.outputTank.getFluid().amount : 0;

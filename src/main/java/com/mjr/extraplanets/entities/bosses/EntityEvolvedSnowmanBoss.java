@@ -43,20 +43,17 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, 0, true, false, null));
 	}
 
-	
-    @Override
-    protected void onDeathUpdate()
-    {
-        super.onDeathUpdate();
+	@Override
+	protected void onDeathUpdate() {
+		super.onDeathUpdate();
 
-        if (!this.worldObj.isRemote)
-        {
-            if (this.deathTicks == 100)
-            {
-                GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }), new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
-            }
-        }
-    }
+		if (!this.worldObj.isRemote) {
+			if (this.deathTicks == 100) {
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+			}
+		}
+	}
 
 	/**
 	 * Returns true if the newer Entity AI code should be run
@@ -72,21 +69,21 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue((0.20000000298023224D * 8));
 	}
 
-//	@Override
-//	protected String getLivingSound() {
-//		return null;
-//	}
-//
-//	@Override
-//	protected String getHurtSound() {
-//		this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
-//		return null;
-//	}
-//
-//	@Override
-//	protected String getDeathSound() {
-//		return null;
-//	}
+	// @Override
+	// protected String getLivingSound() {
+	// return null;
+	// }
+	//
+	// @Override
+	// protected String getHurtSound() {
+	// this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
+	// return null;
+	// }
+	//
+	// @Override
+	// protected String getDeathSound() {
+	// return null;
+	// }
 
 	@Override
 	protected Item getDropItem() {
@@ -115,27 +112,23 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		double d1 = p_82196_1_.posY + p_82196_1_.getEyeHeight() - 1.100000023841858D - entitysnowball.posY;
 		double d2 = p_82196_1_.posZ - this.posZ;
 		entitysnowball.setThrowableHeading(d0, d1, d2, 1.6F, 1.0F);
-		//this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
+		// this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
 		this.worldObj.spawnEntityInWorld(entitysnowball);
 	}
 
-    @Override
-    public EntityItem entityDropItem(ItemStack par1ItemStack, float par2)
-    {
-        final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-        entityitem.motionY = -2.0D;
-        entityitem.setDefaultPickupDelay();
-        if (this.captureDrops)
-        {
-            this.capturedDrops.add(entityitem);
-        }
-        else
-        {
-            this.worldObj.spawnEntityInWorld(entityitem);
-        }
-        return entityitem;
-    }
-    
+	@Override
+	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		entityitem.motionY = -2.0D;
+		entityitem.setDefaultPickupDelay();
+		if (this.captureDrops) {
+			this.capturedDrops.add(entityitem);
+		} else {
+			this.worldObj.spawnEntityInWorld(entityitem);
+		}
+		return entityitem;
+	}
+
 	@Override
 	public boolean canBreath() {
 		return true;

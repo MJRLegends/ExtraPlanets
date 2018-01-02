@@ -141,7 +141,7 @@ public class WorldProviderTriton extends WorldProviderRealisticSpace implements 
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 			return -140.0F;
 		}
 		return -130.0F;

@@ -19,8 +19,7 @@ import com.google.common.base.Predicate;
 
 public class BlockKepler22bMapleTreeLog2 extends BlockLog {
 	public static enum EnumType implements IStringSerializable {
-		MAPLE_GREEN(0, "maple_green_log", MapColor.GREEN), 
-		MAPLE_BROWN(1, "maple_brown_log", MapColor.RED);
+		MAPLE_GREEN(0, "maple_green_log", MapColor.GREEN), MAPLE_BROWN(1, "maple_brown_log", MapColor.RED);
 
 		private static final BlockKepler22bMapleTreeLog2.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeLog2.EnumType[values().length];
 		private final int meta;

@@ -30,6 +30,6 @@ public class TileEntityDungeonSpawnerMercury extends TileEntityDungeonSpawner<En
 
 	@Override
 	public void playSpawnSound(Entity entity) {
-        this.worldObj.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
+		this.worldObj.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
 	}
 }

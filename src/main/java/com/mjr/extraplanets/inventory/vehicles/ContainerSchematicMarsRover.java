@@ -110,7 +110,7 @@ public class ContainerSchematicMarsRover extends Container {
 				}
 			} else {
 				Item i = var4.getItem();
-				if (i == MarsItems.marsItemBasic || i == ExtraPlanets_Items.ELECTRIC_PARTS|| i == GCItems.partBuggy) {
+				if (i == MarsItems.marsItemBasic || i == ExtraPlanets_Items.ELECTRIC_PARTS || i == GCItems.partBuggy) {
 					for (int j = 1; j < 22; j++) {
 						if (this.inventorySlots.get(j).isItemValid(var4)) {
 							this.mergeOneItem(var4, j, j + 1, false);

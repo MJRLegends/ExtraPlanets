@@ -43,7 +43,7 @@ public class ChunkProviderTitania extends ChunkProviderSingleBiomeSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

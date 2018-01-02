@@ -66,9 +66,9 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void drawAnimations(@Nonnull Minecraft minecraft) {
-//		this.saltBar.draw(minecraft, 4, 24);
-//		this.saltBar2.draw(minecraft, 29, 24);
-//		this.saltBar3.draw(minecraft, 129, 24);
+		// this.saltBar.draw(minecraft, 4, 24);
+		// this.saltBar2.draw(minecraft, 29, 24);
+		// this.saltBar3.draw(minecraft, 129, 24);
 	}
 
 	@SuppressWarnings("deprecation")

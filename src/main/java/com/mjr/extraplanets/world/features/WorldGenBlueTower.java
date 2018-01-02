@@ -328,14 +328,22 @@ public class WorldGenBlueTower extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 10, z + 5), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 4, z + 3), Blocks.LADDER.getStateFromMeta(2), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 5, z + 3), Blocks.LADDER.getStateFromMeta(2), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 3, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 4, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 5, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 3, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 5, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 4, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
-		if(rand.nextInt(10) <= 5)world.setBlockState(new BlockPos(x + 5, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 3, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 4, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 5, y + 3, z + 3), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 3, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 5, y + 3, z + 4), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 4, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
+		if (rand.nextInt(10) <= 5)
+			world.setBlockState(new BlockPos(x + 5, y + 3, z + 5), Blocks.WOODEN_PRESSURE_PLATE.getDefaultState(), 3);
 		return true;
 	}
 

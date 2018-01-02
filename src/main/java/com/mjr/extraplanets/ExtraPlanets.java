@@ -342,15 +342,15 @@ public class ExtraPlanets {
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 
 		// Register Deconstructor Compatibility
-		if(Config.GC_DECONSTRUCTOR_SUPPORT)
+		if (Config.GC_DECONSTRUCTOR_SUPPORT)
 			RegisterDeconstructorCompatibility();
 
 		// Register Extreme Reactors Compatibility
-		if(Config.EXTREME_REACTORS_SUPPORT)
+		if (Config.EXTREME_REACTORS_SUPPORT)
 			ExtremeReactorsCompatibility.init();
 
 		// Register MC MultiPart Compatibility
-		if(Config.MC_MULITPART_SUPPORT)
+		if (Config.MC_MULITPART_SUPPORT)
 			MCMultiPartCompatibility.init();
 
 		// Register Custom Recipe Type

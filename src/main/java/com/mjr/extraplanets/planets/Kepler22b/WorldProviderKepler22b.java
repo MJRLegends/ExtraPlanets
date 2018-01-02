@@ -132,14 +132,14 @@ public class WorldProviderKepler22b extends WorldProviderRealisticSpace implemen
 	public int getDungeonSpacing() {
 		return 800;
 	}
-	
+
 	@Override
-	public boolean canBlockFreeze(BlockPos pos, boolean byWater){
+	public boolean canBlockFreeze(BlockPos pos, boolean byWater) {
 		return false;
 	}
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

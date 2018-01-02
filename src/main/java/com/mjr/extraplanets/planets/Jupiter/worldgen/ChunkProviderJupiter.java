@@ -28,7 +28,7 @@ public class ChunkProviderJupiter extends ChunkProviderMultiBiomeSpace {
 	private final BiomeDecoratorJupiterOther jupiterBiomeDecorator2 = new BiomeDecoratorJupiterOther();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.JUPITER_BLOCKS, 0, 1, 2);
-	
+
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonJupiter(new DungeonConfiguration(ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.DUNGEON_BRICK), 30,
 			8, 16, 7, 7, RoomBossJupiter.class, RoomTreasureJupiter.class));
 

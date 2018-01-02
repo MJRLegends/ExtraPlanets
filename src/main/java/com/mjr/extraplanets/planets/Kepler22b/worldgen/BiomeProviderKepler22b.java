@@ -87,45 +87,37 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 		return par1ArrayOfBiome;
 	}
 
-    @Override
-    public Biome[] getBiomes(@Nullable Biome[] oldBiomeList, int x, int z, int width, int depth)
-    {
-        return getBiomes(oldBiomeList, x, z, width, depth, true);
-    }
+	@Override
+	public Biome[] getBiomes(@Nullable Biome[] oldBiomeList, int x, int z, int width, int depth) {
+		return getBiomes(oldBiomeList, x, z, width, depth, true);
+	}
 
-    @Override
-    public Biome[] getBiomes(@Nullable Biome[] listToReuse, int x, int z, int width, int length, boolean cacheFlag)
-    {
-        IntCache.resetIntCache();
+	@Override
+	public Biome[] getBiomes(@Nullable Biome[] listToReuse, int x, int z, int width, int length, boolean cacheFlag) {
+		IntCache.resetIntCache();
 
-        if (listToReuse == null || listToReuse.length < length * width)
-        {
-            listToReuse = new Biome[width * length];
-        }
+		if (listToReuse == null || listToReuse.length < length * width) {
+			listToReuse = new Biome[width * length];
+		}
 
-        if (cacheFlag && width == 16 && length == 16 && (x & 15) == 0 && (z & 15) == 0)
-        {
-            Biome[] cached = this.biomeCache.getCachedBiomes(x, z);
-            System.arraycopy(cached, 0, listToReuse, 0, width * length);
-            return listToReuse;
-        }
+		if (cacheFlag && width == 16 && length == 16 && (x & 15) == 0 && (z & 15) == 0) {
+			Biome[] cached = this.biomeCache.getCachedBiomes(x, z);
+			System.arraycopy(cached, 0, listToReuse, 0, width * length);
+			return listToReuse;
+		}
 
-        int[] zoomed = zoomedBiomes.getInts(x, z, width, length);
+		int[] zoomed = zoomedBiomes.getInts(x, z, width, length);
 
-        for (int i = 0; i < width * length; ++i)
-        {
-            if (zoomed[i] >= 0)
-            {
-                listToReuse[i] = Biome.getBiome(zoomed[i]);
-            }
-            else
-            {
-                listToReuse[i] = this.getBiome();
-            }
-        }
+		for (int i = 0; i < width * length; ++i) {
+			if (zoomed[i] >= 0) {
+				listToReuse[i] = Biome.getBiome(zoomed[i]);
+			} else {
+				listToReuse[i] = this.getBiome();
+			}
+		}
 
-        return listToReuse;
-    }
+		return listToReuse;
+	}
 
 	@Override
 	public boolean areBiomesViable(int par1, int par2, int par3, List<Biome> par4List) {

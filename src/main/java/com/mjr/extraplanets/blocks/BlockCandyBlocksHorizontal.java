@@ -30,16 +30,9 @@ public class BlockCandyBlocksHorizontal extends Block implements IDetectableReso
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypecandyblocks", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		CANDY_CANE_RED_HORIZONTAL(0, "candy_cane_red_horizontal"),
-		CANDY_CANE_GREEN_HORIZONTAL(1, "candy_cane_green_horizontal"),
-		CANDY_CANE_BLUE_HORIZONTAL(2, "candy_cane_blue_horizontal"),
-		CANDY_CANE_ORANGE_HORIZONTAL(3, "candy_cane_orange_horizontal"),
-		CANDY_CANE_MAGENTA_HORIZONTAL(4, "candy_cane_magenta_horizontal"),
-		CANDY_CANE_PINK_HORIZONTAL(5, "candy_cane_pink_horizontal"),
-		CANDY_CANE_LIME_HORIZONTAL(6, "candy_cane_lime_horizontal"),
-		CANDY_CANE_PURPLE_HORIZONTAL(7, "candy_cane_purple_horizontal"),
-		CANDY_CANE_BROWN_HORIZONTAL(8, "candy_cane_brown_horizontal"),
-		CANDY_CANE_BLACK_HORIZONTAL(9, "candy_cane_black_horizontal");
+		CANDY_CANE_RED_HORIZONTAL(0, "candy_cane_red_horizontal"), CANDY_CANE_GREEN_HORIZONTAL(1, "candy_cane_green_horizontal"), CANDY_CANE_BLUE_HORIZONTAL(2, "candy_cane_blue_horizontal"), CANDY_CANE_ORANGE_HORIZONTAL(3,
+				"candy_cane_orange_horizontal"), CANDY_CANE_MAGENTA_HORIZONTAL(4, "candy_cane_magenta_horizontal"), CANDY_CANE_PINK_HORIZONTAL(5, "candy_cane_pink_horizontal"), CANDY_CANE_LIME_HORIZONTAL(6, "candy_cane_lime_horizontal"), CANDY_CANE_PURPLE_HORIZONTAL(
+				7, "candy_cane_purple_horizontal"), CANDY_CANE_BROWN_HORIZONTAL(8, "candy_cane_brown_horizontal"), CANDY_CANE_BLACK_HORIZONTAL(9, "candy_cane_black_horizontal");
 
 		private final int meta;
 		private final String name;

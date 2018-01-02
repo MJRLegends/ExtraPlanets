@@ -43,13 +43,15 @@ public class OverlayJupiterLander extends Overlay {
 			final String press1 = GCCoreUtil.translate("gui.lander.warning2");
 			final String press2 = GCCoreUtil.translate("gui.lander.warning3");
 			OverlayJupiterLander.minecraft.fontRendererObj.drawString(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2,
-					width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8, ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
+					width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8,
+					ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
 		}
 
 		GL11.glPopMatrix();
 
 		if (OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY != 0.0D) {
-			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityJupiterLander) OverlayJupiterLander.minecraft.thePlayer.getRidingEntity()).motionY * 1000) / 100.0D + " " + GCCoreUtil.translate("gui.lander.velocityu");
+			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityJupiterLander) OverlayJupiterLander.minecraft.thePlayer.getRidingEntity()).motionY * 1000) / 100.0D + " "
+					+ GCCoreUtil.translate("gui.lander.velocityu");
 			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY) * 51.0D),
 					255 - (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY) * 51.0D), 0);
 			OverlayJupiterLander.minecraft.fontRendererObj.drawString(string, width / 2 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(string) / 2, height / 3, color);

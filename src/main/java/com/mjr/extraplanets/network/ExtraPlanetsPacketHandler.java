@@ -115,7 +115,7 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 		public void setPacket(IPacket packet) {
 			this.packet = packet;
 		}
-		
+
 		public EntityPlayer getPlayer() {
 			return player;
 		}

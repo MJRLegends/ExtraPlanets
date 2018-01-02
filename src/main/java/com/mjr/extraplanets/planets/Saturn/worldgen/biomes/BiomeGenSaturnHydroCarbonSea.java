@@ -17,11 +17,11 @@ public class BiomeGenSaturnHydroCarbonSea extends SaturnBiomes {
 		super(properties);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState();
-        this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE);
+		this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE);
 	}
 
 	@Override
 	public List<Biome.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return Lists.<Biome.SpawnListEntry>newArrayList();
+		return Lists.<Biome.SpawnListEntry> newArrayList();
 	}
 }

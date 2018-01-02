@@ -141,7 +141,7 @@ public class WorldProviderEuropa extends WorldProviderRealisticSpace implements 
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 			return -90.0F;
 		}
 		return -100.0F;

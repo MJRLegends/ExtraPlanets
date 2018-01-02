@@ -238,7 +238,7 @@ public class SkyProviderCeres extends IRenderHandler {
 		worldRenderer1.pos(f10, 100.0D, f10).tex(1.0D, 1.0D).endVertex();
 		worldRenderer1.pos(-f10, 100.0D, f10).tex(0.0D, 1.0D).endVertex();
 		tessellator1.draw();
-		
+
 		GL11.glRotatef(-20.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth
@@ -254,7 +254,7 @@ public class SkyProviderCeres extends IRenderHandler {
 		worldRenderer1.pos(f10, -100.0D, -f10).tex(1, 0).endVertex();
 		worldRenderer1.pos(-f10, -100.0D, -f10).tex(0, 0).endVertex();
 		tessellator1.draw();
-		
+
 		// Render earth
 		f10 = 5.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);

@@ -240,12 +240,11 @@ public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen impleme
 
 	@Override
 	public EnumFacing getFront() {
-        IBlockState state = this.worldObj.getBlockState(getPos()); 
-        if (state.getBlock() instanceof AdvancedOxygenCompressor)
-        {
-            return state.getValue(AdvancedOxygenCompressor.FACING).rotateY();
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof AdvancedOxygenCompressor) {
+			return state.getValue(AdvancedOxygenCompressor.FACING).rotateY();
+		}
+		return EnumFacing.NORTH;
 	}
 
 	@Override

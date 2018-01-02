@@ -6,6 +6,6 @@ public class BiomeGenDeimos extends DeimosBiomes {
 
 	public BiomeGenDeimos(BiomeProperties properties) {
 		super(properties);
-        BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }

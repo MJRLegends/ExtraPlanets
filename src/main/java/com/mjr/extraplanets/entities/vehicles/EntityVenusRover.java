@@ -72,7 +72,7 @@ public class EntityVenusRover extends EntityPoweredVehicleBase {
 	@Override
 	public void featureUpdate() {
 	}
-	
+
 	@Override
 	public void updatePassenger(Entity passenger) {
 		if (this.isPassenger(passenger)) {

@@ -175,9 +175,9 @@ public class WorldProviderVenusOrbit extends WorldProviderOverworldOrbit {
 	public float getWindLevel() {
 		return 0.1F;
 	}
-    @Override
-    public DimensionType getDimensionType()
-    {
-        return ExtraPlanetsDimensions.VENUS_ORBIT;
-    }
+
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.VENUS_ORBIT;
+	}
 }

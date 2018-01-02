@@ -62,14 +62,12 @@ public class ChemicalInjectorRecipeCategory extends BlankRecipeCategory {
 			ChemicalInjectorRecipeWrapper circuitFabricatorRecipeWrapper = (ChemicalInjectorRecipeWrapper) recipeWrapper;
 			List inputs = circuitFabricatorRecipeWrapper.getInputs();
 
-            for (int i = 0; i < inputs.size(); ++i)
-            {
-                Object o = inputs.get(i);
-                if (o != null)
-                {
-                    itemstacks.setFromRecipe(i, o);
-                }
-            }
+			for (int i = 0; i < inputs.size(); ++i) {
+				Object o = inputs.get(i);
+				if (o != null) {
+					itemstacks.setFromRecipe(i, o);
+				}
+			}
 			itemstacks.setFromRecipe(2, circuitFabricatorRecipeWrapper.getOutputs());
 		}
 	}

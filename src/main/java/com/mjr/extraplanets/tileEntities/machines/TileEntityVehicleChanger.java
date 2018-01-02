@@ -142,7 +142,7 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public Face[] listDefaultFaces() {
-		return new Face[] { Face.LEFT};
+		return new Face[] { Face.LEFT };
 	}
 
 	private MachineSidePack[] machineSides;
@@ -180,11 +180,10 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public EnumFacing getFront() {
-        IBlockState state = this.worldObj.getBlockState(getPos()); 
-        if (state.getBlock() instanceof VehicleCharger)
-        {
-            return state.getValue(VehicleCharger.FACING);
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.worldObj.getBlockState(getPos());
+		if (state.getBlock() instanceof VehicleCharger) {
+			return state.getValue(VehicleCharger.FACING);
+		}
+		return EnumFacing.NORTH;
 	}
 }

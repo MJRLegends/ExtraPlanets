@@ -33,7 +33,7 @@ public class WorldProviderSaturn extends WorldProviderRealisticSpace implements 
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(240 / 255.0F * f, 160 / 255.0F * f, 55 / 255.0F * f);
 	}
-	
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -135,7 +135,7 @@ public class WorldProviderSaturn extends WorldProviderRealisticSpace implements 
 	public int getSolarRadiationLevel() {
 		return 30;
 	}
-	
+
 	@Override
 	public DimensionType getDimensionType() {
 		return ExtraPlanetsDimensions.SATURN;
@@ -148,6 +148,6 @@ public class WorldProviderSaturn extends WorldProviderRealisticSpace implements 
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

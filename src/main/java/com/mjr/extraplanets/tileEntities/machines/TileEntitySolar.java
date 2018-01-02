@@ -57,7 +57,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@NetworkedField(targetSide = Side.CLIENT)
 	public boolean isDaylight = false;
-	
+
 	private boolean initialised = false;
 	private boolean initialisedMulti = false;
 
@@ -136,10 +136,9 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 											}
 										}
 
-	                                    if (valid)
-	                                    {
-	                                        this.solarStrength++;
-	                                    }
+										if (valid) {
+											this.solarStrength++;
+										}
 									}
 								} else {
 									boolean valid = true;

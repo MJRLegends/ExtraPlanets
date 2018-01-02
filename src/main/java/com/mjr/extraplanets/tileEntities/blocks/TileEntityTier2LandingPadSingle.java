@@ -30,7 +30,7 @@ public class TileEntityTier2LandingPadSingle extends TileEntity implements ITick
 				for (final TileEntity tile : attachedLaunchPads) {
 					this.worldObj.markTileEntityForRemoval(tile);
 				}
-				
+
 				this.getPos().south(1);
 				this.getPos().east(1);
 

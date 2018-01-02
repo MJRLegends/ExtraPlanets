@@ -10,21 +10,19 @@ public class GanymedeBiomes extends Biome {
 
 	public static final Biome ganymede = new BiomeGenGanymede(new BiomeProperties("ganymede").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
-	GanymedeBiomes(BiomeProperties properties)
-	{
+	GanymedeBiomes(BiomeProperties properties) {
 		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
 		this.spawnableCreatureList.clear();
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-        this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

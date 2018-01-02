@@ -13,15 +13,13 @@ public class ItemBlockKepler22bMapleLog extends ItemBlock {
 		this.setHasSubtypes(true);
 	}
 
-    @Override
-    public int getMetadata(int meta)
-    {
-        return meta & 3;
-    }
+	@Override
+	public int getMetadata(int meta) {
+		return meta & 3;
+	}
 
-    @Override
-    public String getUnlocalizedName(ItemStack itemStack)
-    {
-        return super.getUnlocalizedName() + "." + BlockKepler22bMapleTreeLog.EnumType.byMetadata(itemStack.getMetadata()).getUnlocalizedName();
-    }
+	@Override
+	public String getUnlocalizedName(ItemStack itemStack) {
+		return super.getUnlocalizedName() + "." + BlockKepler22bMapleTreeLog.EnumType.byMetadata(itemStack.getMetadata()).getUnlocalizedName();
+	}
 }
