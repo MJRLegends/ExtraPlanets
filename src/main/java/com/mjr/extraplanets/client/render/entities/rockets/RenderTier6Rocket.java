@@ -60,7 +60,7 @@ public class RenderTier6Rocket extends Render<EntityTier6Rocket> {
 		}
 		updateModel();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
-		
+
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
 		} else {
@@ -69,7 +69,7 @@ public class RenderTier6Rocket extends Render<EntityTier6Rocket> {
 
 		GlStateManager.scale(-1.0F, -1.0F, 1.0F);
 		GlStateManager.scale(0.9F, 0.9F, 0.9F);
-		
+
 		ClientUtil.drawBakedModel(this.rocketModel);
 		GlStateManager.popMatrix();
 

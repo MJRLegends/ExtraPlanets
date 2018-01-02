@@ -11,6 +11,6 @@ public class BiomeGenDeimos extends DeimosBiomes {
 	public BiomeGenDeimos(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.DEIMOS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-        BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }

@@ -31,6 +31,7 @@ public class WorldProviderPluto extends WorldProviderRealisticSpace implements I
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
 	}
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -131,6 +132,6 @@ public class WorldProviderPluto extends WorldProviderRealisticSpace implements I
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

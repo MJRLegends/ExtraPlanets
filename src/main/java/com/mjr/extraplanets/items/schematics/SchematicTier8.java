@@ -64,34 +64,28 @@ public class SchematicTier8 extends ItemHangingEntity implements ISchematicItem,
 	}
 
 	@Override
-    public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
-    {
-        ItemStack stack = playerIn.getHeldItem(hand);
-        BlockPos blockpos = pos.offset(facing);
+	public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+		ItemStack stack = playerIn.getHeldItem(hand);
+		BlockPos blockpos = pos.offset(facing);
 
-        if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack))
-        {
-            EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
+		if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack)) {
+			EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
 
-            if (entityhanging != null && entityhanging.onValidSurface())
-            {
-                if (!worldIn.isRemote)
-                {
-                    entityhanging.playPlaceSound();
-                    worldIn.spawnEntity(entityhanging);
-                    entityhanging.sendToClient(worldIn, blockpos);
-                }
+			if (entityhanging != null && entityhanging.onValidSurface()) {
+				if (!worldIn.isRemote) {
+					entityhanging.playPlaceSound();
+					worldIn.spawnEntity(entityhanging);
+					entityhanging.sendToClient(worldIn, blockpos);
+				}
 
-                stack.shrink(1);
-            }
+				stack.shrink(1);
+			}
 
-            return EnumActionResult.SUCCESS;
-        }
-        else
-        {
-            return EnumActionResult.FAIL;
-        }
-    }
+			return EnumActionResult.SUCCESS;
+		} else {
+			return EnumActionResult.FAIL;
+		}
+	}
 
 	private EntityHangingSchematic createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide, int index) {
 		return new EntityHangingSchematic(worldIn, pos, clickedSide, index);

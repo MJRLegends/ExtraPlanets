@@ -141,7 +141,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-		
+
 		int i;
 
 		if (this.timeUntilLaunch >= 100) {
@@ -207,7 +207,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 
 			stats.setRocketType(this.rocketType.getIndex());
 			stats.setRocketItem(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET);
-			//stats.setFuelLevel(this.fuelTank.getFluidAmount());
+			// stats.setFuelLevel(this.fuelTank.getFluidAmount());
 		}
 	}
 
@@ -312,7 +312,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 		super.getItemsDropped(droppedItems);
 		ItemStack rocket = new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, 1, this.rocketType.getIndex());
 		rocket.setTagCompound(new NBTTagCompound());
-		//rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
+		// rocket.getTagCompound().setInteger("RocketFuel", this.fuelTank.getFluidAmount());
 		droppedItems.add(rocket);
 		return droppedItems;
 	}

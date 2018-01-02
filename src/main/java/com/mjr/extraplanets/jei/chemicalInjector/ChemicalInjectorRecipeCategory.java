@@ -54,9 +54,9 @@ public class ChemicalInjectorRecipeCategory extends BlankRecipeCategory {
 		itemstacks.init(0, true, 26, 30);
 		itemstacks.init(1, true, 66, 30);
 		itemstacks.init(2, false, 116, 30);
-        itemstacks.set(ingredients);
+		itemstacks.set(ingredients);
 	}
-	
+
 	@Override
 	public String getModName() {
 		return Constants.modName;

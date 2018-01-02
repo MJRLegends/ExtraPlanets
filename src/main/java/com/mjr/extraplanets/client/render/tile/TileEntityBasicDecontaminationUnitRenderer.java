@@ -56,7 +56,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 		GL11.glScalef(0.21F, 0.15F, 0.15F);
 
 		ClientUtil.drawBakedModel(mainModel);
-		
+
 		GL11.glPopMatrix();
 		RenderHelper.enableStandardItemLighting();
 	}

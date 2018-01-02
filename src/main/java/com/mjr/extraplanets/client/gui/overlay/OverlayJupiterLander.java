@@ -43,7 +43,8 @@ public class OverlayJupiterLander extends Overlay {
 			final String press1 = GCCoreUtil.translate("gui.lander.warning2");
 			final String press2 = GCCoreUtil.translate("gui.lander.warning3");
 			OverlayJupiterLander.minecraft.fontRendererObj.drawString(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2,
-					width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8, ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
+					width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8,
+					ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
 		}
 
 		GL11.glPopMatrix();

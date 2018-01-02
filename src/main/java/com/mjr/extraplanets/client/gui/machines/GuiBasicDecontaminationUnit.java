@@ -58,11 +58,10 @@ public class GuiBasicDecontaminationUnit extends GuiContainerGC {
 		int yOffset = -10;
 
 		if (this.tileEntity.storage.getEnergyStoredGC() < 1000000) {
-		 displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
-		 }
-		else {
-		 displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.waiting.on.player.name");
-		 }
+			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
+		} else {
+			displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.waiting.on.player.name");
+		}
 
 		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 30 - ((displayText.length())), 45 + 10 + yOffset, 4210752);
 		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);

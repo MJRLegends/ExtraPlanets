@@ -4,90 +4,72 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockJupiter extends ItemBlock
-{
-	public ItemBlockJupiter(Block block)
-	{
+public class ItemBlockJupiter extends ItemBlock {
+	public ItemBlockJupiter(Block block) {
 		super(block);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 	}
 
 	@Override
-	public int getMetadata(int meta)
-	{
+	public int getMetadata(int meta) {
 		return meta;
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemstack)
-	{
+	public String getUnlocalizedName(ItemStack itemstack) {
 		String name = "";
 
-		switch (itemstack.getItemDamage())
-		{
-		case 0:
-		{
+		switch (itemstack.getItemDamage()) {
+		case 0: {
 			name = "surface";
 			break;
 		}
-		case 1:
-		{
+		case 1: {
 			name = "sub_surface";
 			break;
 		}
-		case 2:
-		{
+		case 2: {
 			name = "stone";
 			break;
 		}
-		case 3:
-		{
+		case 3: {
 			name = "ore_iron";
 			break;
 		}
-		case 4:
-		{
+		case 4: {
 			name = "ore_tin";
 			break;
 		}
-		case 5:
-		{
+		case 5: {
 			name = "ore_copper";
 			break;
 		}
-		case 6:
-		{
+		case 6: {
 			name = "ore_palladium";
 			break;
 		}
-		case 7:
-		{
+		case 7: {
 			name = "ore_nickel";
 			break;
 		}
-		case 8:
-		{
+		case 8: {
 			name = "palladium_block";
 			break;
 		}
-		case 9:
-		{
+		case 9: {
 			name = "stone_bricks";
 			break;
 		}
-		case 10:
-		{
+		case 10: {
 			name = "dungeon_brick";
 			break;
 		}
-		case 11:
-		{
+		case 11: {
 			name = "ore_red_gem";
 			break;
 		}
-		case 12:
-		{
+		case 12: {
 			name = "red_gem_block";
 			break;
 		}
@@ -99,8 +81,7 @@ public class ItemBlockJupiter extends ItemBlock
 	}
 
 	@Override
-	public String getUnlocalizedName()
-	{
+	public String getUnlocalizedName() {
 		return this.block.getUnlocalizedName() + ".0";
 	}
 }

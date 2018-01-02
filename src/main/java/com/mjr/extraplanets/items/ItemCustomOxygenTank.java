@@ -62,8 +62,8 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 	}
 
 	@Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand){
-        ItemStack itemStackIn = playerIn.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
+		ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		if (playerIn instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(playerIn);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);

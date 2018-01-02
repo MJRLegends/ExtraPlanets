@@ -64,8 +64,8 @@ public class ItemBasicItem extends Item {
 	}
 
 	@Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand){
-        ItemStack itemStackIn = playerIn.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
+		ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		playerIn.setActiveHand(hand);
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
 	}
@@ -86,7 +86,7 @@ public class ItemBasicItem extends Item {
 					stats = entityLiving.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
 				double level = stats.getRadiationLevel() / 2;
-				if(level < 0)
+				if (level < 0)
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);

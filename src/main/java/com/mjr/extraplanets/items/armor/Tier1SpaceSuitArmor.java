@@ -95,7 +95,7 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		model.isChild = entityLiving.isChild();
 		return model;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {

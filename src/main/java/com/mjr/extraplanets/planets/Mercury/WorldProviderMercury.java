@@ -129,6 +129,6 @@ public class WorldProviderMercury extends WorldProviderRealisticSpace implements
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

@@ -20,7 +20,7 @@ public class ContainerUltimateRefinery extends Container {
 		this.tileEntity = tileEntity;
 
 		// Electric Input Slot
-        this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 38, 51, IItemElectric.class));
+		this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 38, 51, IItemElectric.class));
 
 		// To be smelted
 		this.addSlotToContainer(new Slot(tileEntity, 1, 7, 7));
@@ -82,11 +82,10 @@ public class ContainerUltimateRefinery extends Container {
 					if (FluidUtil.isOilContainerAny(var4)) {
 						if (!this.mergeItemStack(var4, 1, 2, false)) {
 							return null;
-						}
-	                    else if (FluidUtil.isPartialContainer(var4, GCItems.fuelCanister))
-						if (!this.mergeItemStack(var4, 2, 3, false)) {
-							return null;
-						}
+						} else if (FluidUtil.isPartialContainer(var4, GCItems.fuelCanister))
+							if (!this.mergeItemStack(var4, 2, 3, false)) {
+								return null;
+							}
 					} else if (par1 < 30) {
 						if (!this.mergeItemStack(var4, 30, 39, false)) {
 							return null;
@@ -97,21 +96,17 @@ public class ContainerUltimateRefinery extends Container {
 				}
 			}
 
-            if (var4.getCount() == 0)
-            {
-                slot.putStack(ItemStack.EMPTY);
-            }
-            else
-            {
-                slot.onSlotChanged();
-            }
+			if (var4.getCount() == 0) {
+				slot.putStack(ItemStack.EMPTY);
+			} else {
+				slot.onSlotChanged();
+			}
 
-            if (var4.getCount() == var2.getCount())
-            {
-                return ItemStack.EMPTY;
-            }
+			if (var4.getCount() == var2.getCount()) {
+				return ItemStack.EMPTY;
+			}
 
-            slot.onTake(par1EntityPlayer, var4);
+			slot.onTake(par1EntityPlayer, var4);
 		}
 
 		return var2;

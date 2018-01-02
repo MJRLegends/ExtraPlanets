@@ -5,12 +5,12 @@ import net.minecraft.util.math.BlockPos;
 /**
  * An entity which requires a hook into landing pad events should implement this interface
  */
-public interface IPoweredLandable extends IPoweredDockable
-{
+public interface IPoweredLandable extends IPoweredDockable {
 	/**
 	 * Called when the entity lands on a dock
 	 * 
-	 * @param pos coordinates of the dock
+	 * @param pos
+	 *            coordinates of the dock
 	 */
 	void landEntity(BlockPos pos);
 }

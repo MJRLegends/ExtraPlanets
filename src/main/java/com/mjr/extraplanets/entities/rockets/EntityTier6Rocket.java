@@ -43,7 +43,7 @@ public class EntityTier6Rocket extends EntityTieredRocket {
 	public EntityTier6Rocket(World world, double x, double y, double z, IRocketType.EnumRocketType type) {
 		super(world, x, y, z);
 		this.rocketType = type;
-        this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
+		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 	}
 
 	@Override
@@ -198,10 +198,9 @@ public class EntityTier6Rocket extends EntityTieredRocket {
 		if (playerBase != null) {
 			GCPlayerStats stats = playerBase.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
 
-			if (this.stacks == null || this.stacks.isEmpty())
-            {
-                stats.setRocketStacks(NonNullList.withSize(2, ItemStack.EMPTY));
-            } else {
+			if (this.stacks == null || this.stacks.isEmpty()) {
+				stats.setRocketStacks(NonNullList.withSize(2, ItemStack.EMPTY));
+			} else {
 				stats.setRocketStacks(this.stacks);
 			}
 
@@ -275,7 +274,7 @@ public class EntityTier6Rocket extends EntityTieredRocket {
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer){
+	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
 		return !this.isDead && par1EntityPlayer.getDistanceSqToEntity(this) <= 64.0D;
 	}
 

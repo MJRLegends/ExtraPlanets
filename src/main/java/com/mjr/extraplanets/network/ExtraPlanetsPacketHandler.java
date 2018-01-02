@@ -97,7 +97,7 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 	public static void setLivePacketCount(int livePacketCount) {
 		ExtraPlanetsPacketHandler.livePacketCount = livePacketCount;
 	}
-	
+
 	@SuppressWarnings("unused")
 	private final class PacketPlayerPair {
 		private IPacket packet;

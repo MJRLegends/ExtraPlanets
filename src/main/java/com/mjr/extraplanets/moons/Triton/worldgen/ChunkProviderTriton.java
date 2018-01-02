@@ -58,6 +58,6 @@ public class ChunkProviderTriton extends ChunkProviderMultiBiomeSpace {
 	}
 
 	@Override
-	public void onPopulate(int cX, int cZ) {		
+	public void onPopulate(int cX, int cZ) {
 	}
 }

@@ -170,7 +170,7 @@ public class BlockBasicMercury extends Block implements IDetectableResource, IPl
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.STONE) {
 			return false;
 		}

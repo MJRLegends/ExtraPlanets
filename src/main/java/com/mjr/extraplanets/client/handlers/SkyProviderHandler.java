@@ -101,8 +101,7 @@ public class SkyProviderHandler {
 
 				if (world.provider.getCloudRenderer() == null) {
 					world.provider.setCloudRenderer(new CloudRenderJupiter());
-				}
-				else{
+				} else {
 					if (!FMLClientHandler.instance().getClient().isGamePaused()) {
 						CloudRenderJupiter.cloudTickCounter += 5;
 					}

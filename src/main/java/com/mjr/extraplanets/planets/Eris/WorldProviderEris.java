@@ -31,7 +31,7 @@ public class WorldProviderEris extends WorldProviderRealisticSpace implements IG
 		float f = 1.0F - this.getStarBrightness(1.0F);
 		return new Vector3(234f / 255.0F * f, 223f / 255.0F * f, 242f / 255.0F * f);
 	}
-	
+
 	@Override
 	public boolean hasSunset() {
 		return false;
@@ -41,7 +41,7 @@ public class WorldProviderEris extends WorldProviderRealisticSpace implements IG
 	public long getDayLength() {
 		return 90000L;
 	}
-	
+
 	@Override
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEris.class;
@@ -132,6 +132,6 @@ public class WorldProviderEris extends WorldProviderRealisticSpace implements IG
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-        return RoomTreasure.MOONCHEST;
+		return RoomTreasure.MOONCHEST;
 	}
 }

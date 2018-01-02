@@ -15,7 +15,7 @@ public class BiomeGenJupiter extends JupiterBiomes {
 		super(properties);
 		Biome.registerBiome(Config.JUPITER_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
-        this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
+		this.topBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.JUPITER_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE);
 	}
 }

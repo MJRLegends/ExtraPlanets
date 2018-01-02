@@ -11,6 +11,6 @@ public class BiomeGenEuropa extends EuropaBiomes {
 	public BiomeGenEuropa(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.EUROPA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-        BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }

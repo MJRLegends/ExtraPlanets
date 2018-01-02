@@ -163,13 +163,13 @@ public class BlockBasicRhea extends Block implements IDetectableResource, IPlant
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.STONE) {
 			return false;
 		}
 		return (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE);
 	}
-	
+
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));

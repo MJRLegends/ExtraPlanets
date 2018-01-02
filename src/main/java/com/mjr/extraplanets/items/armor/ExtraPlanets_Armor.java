@@ -377,13 +377,13 @@ public class ExtraPlanets_Armor {
 			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_LEGINGS, TIER_2_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_BOOTS, TIER_2_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_2_SPACE_SUIT_GRAVITY_BOOTS, TIER_2_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
-			
+
 			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_HELMET, TIER_3_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_CHEST, TIER_3_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_LEGINGS, TIER_3_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_BOOTS, TIER_3_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_3_SPACE_SUIT_GRAVITY_BOOTS, TIER_3_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
-			
+
 			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_HELMET, TIER_4_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_CHEST, TIER_4_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_SPACE_SUIT_LEGINGS, TIER_4_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));

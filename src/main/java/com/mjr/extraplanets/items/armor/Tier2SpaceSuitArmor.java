@@ -77,7 +77,7 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	public boolean canBreathe(ItemStack helmetInSlot, EntityPlayer playerWearing, EnumGearType type) {
 		return true;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
@@ -95,7 +95,7 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		model.isChild = entityLiving.isChild();
 		return model;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {

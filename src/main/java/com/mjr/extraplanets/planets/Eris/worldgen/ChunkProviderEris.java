@@ -27,7 +27,7 @@ public class ChunkProviderEris extends ChunkProviderSingleBiomeSpace {
 	private final BiomeDecoratorEris erisBiomeDecorator = new BiomeDecoratorEris();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.ERIS_BLOCKS, 0, 1, 2);
-	
+
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonEris(new DungeonConfiguration(ExtraPlanets_Blocks.ERIS_BLOCKS.getDefaultState().withProperty(BlockBasicEris.BASIC_TYPE, BlockBasicEris.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7,
 			7, RoomBossEris.class, RoomTreasureEris.class));
 

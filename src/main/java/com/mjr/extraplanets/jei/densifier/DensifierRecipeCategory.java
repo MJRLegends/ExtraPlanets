@@ -53,7 +53,7 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 
 		itemstacks.init(0, true, 3, 2);
 		itemstacks.init(1, false, 108, 30);
-        itemstacks.set(ingredients);
+		itemstacks.set(ingredients);
 	}
 
 	@Override

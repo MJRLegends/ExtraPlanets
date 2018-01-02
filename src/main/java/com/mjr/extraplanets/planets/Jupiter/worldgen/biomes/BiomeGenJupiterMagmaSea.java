@@ -25,6 +25,6 @@ public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
 
 	@Override
 	public List<Biome.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return Lists.<Biome.SpawnListEntry>newArrayList();
+		return Lists.<Biome.SpawnListEntry> newArrayList();
 	}
 }

@@ -175,10 +175,9 @@ public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	public float getWindLevel() {
 		return 0.1F;
 	}
-	
-    @Override
-    public DimensionType getDimensionType()
-    {
-        return ExtraPlanetsDimensions.MARS_ORBIT;
-    }
+
+	@Override
+	public DimensionType getDimensionType() {
+		return ExtraPlanetsDimensions.MARS_ORBIT;
+	}
 }

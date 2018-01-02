@@ -24,7 +24,7 @@ public class ChunkProviderSaturn extends ChunkProviderMultiBiomeSpace {
 	private final MapGenVillageSaturn villageGenerator = new MapGenVillageSaturn();
 
 	private final BiomeDecoratorSaturn saturnBiomeDecorator = new BiomeDecoratorSaturn();
-	//private final BiomeDecoratorSaturnOther saturnBiomeDecorator2 = new BiomeDecoratorSaturnOther();
+	// private final BiomeDecoratorSaturnOther saturnBiomeDecorator2 = new BiomeDecoratorSaturnOther();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.SATURN_BLOCKS, 0, 1, 2);
 
@@ -72,6 +72,6 @@ public class ChunkProviderSaturn extends ChunkProviderMultiBiomeSpace {
 	@Override
 	protected void decoratePlanet(World world, Random rand, int x, int z) {
 		this.saturnBiomeDecorator.decorate(worldObj, rand, x, z);
-		//this.saturnBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
+		// this.saturnBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
 	}
 }
