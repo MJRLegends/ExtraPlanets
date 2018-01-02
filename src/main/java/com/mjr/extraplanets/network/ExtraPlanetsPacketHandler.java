@@ -11,24 +11,21 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Sharable
-public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPacket>
-{
-    @Override
-    protected void channelRead0(ChannelHandlerContext ctx, IPacket msg) throws Exception
-    {
-        INetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
-        EntityPlayer player = GalacticraftCore.proxy.getPlayerFromNetHandler(netHandler);
+public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPacket> {
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, IPacket msg) throws Exception {
+		INetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
+		EntityPlayer player = GalacticraftCore.proxy.getPlayerFromNetHandler(netHandler);
 
-        switch (FMLCommonHandler.instance().getEffectiveSide())
-        {
-        case CLIENT:
-            msg.handleClientSide(player);
-            break;
-        case SERVER:
-            msg.handleServerSide(player);
-            break;
-        default:
-            break;
-        }
-    }
+		switch (FMLCommonHandler.instance().getEffectiveSide()) {
+		case CLIENT:
+			msg.handleClientSide(player);
+			break;
+		case SERVER:
+			msg.handleServerSide(player);
+			break;
+		default:
+			break;
+		}
+	}
 }

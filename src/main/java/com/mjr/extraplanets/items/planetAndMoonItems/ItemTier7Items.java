@@ -44,10 +44,10 @@ public class ItemTier7Items extends Item {
 		int i = 0;
 
 		for (String name : ItemTier7Items.names) {
-			if(name.contains("fin"))
+			if (name.contains("fin"))
 				name = name.replace("fin", "_fin");
-			else if(name.contains("heavy"))
-				name= name.replace("heavy", "_heavy");
+			else if (name.contains("heavy"))
+				name = name.replace("heavy", "_heavy");
 			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + this.getUnlocalizedName().substring(5).replace("_items", ".") + name);
 		}
 	}

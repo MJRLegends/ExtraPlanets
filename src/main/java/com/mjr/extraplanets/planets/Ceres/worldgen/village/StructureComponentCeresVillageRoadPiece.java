@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Ceres.worldgen.village;
 
-
 public abstract class StructureComponentCeresVillageRoadPiece extends StructureComponentCeresVillage {
 	public StructureComponentCeresVillageRoadPiece() {
 	}

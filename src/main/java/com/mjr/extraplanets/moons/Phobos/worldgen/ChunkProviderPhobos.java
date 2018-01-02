@@ -27,11 +27,11 @@ import com.mjr.extraplanets.moons.Phobos.worldgen.village.MapGenVillagePhobos;
 public class ChunkProviderPhobos extends ChunkProviderSpace {
 
 	private final BiomeDecoratorPhobos biomeDecorator = new BiomeDecoratorPhobos();
-	
+
 	private final MapGenCavePhobos caveGenerator = new MapGenCavePhobos();
 
 	private final MapGenRavinePhobos ravineGenerator = new MapGenRavinePhobos();
-	
+
 	private final MapGenVillagePhobos villageGenerator = new MapGenVillagePhobos();
 
 	public ChunkProviderPhobos(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -67,9 +67,9 @@ public class ChunkProviderPhobos extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

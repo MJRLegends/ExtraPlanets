@@ -9,36 +9,30 @@ import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 
-public class BlockRendererMachine implements ISimpleBlockRenderingHandler
-{
+public class BlockRendererMachine implements ISimpleBlockRenderingHandler {
 	final int renderID;
 
-	public BlockRendererMachine(int var1)
-	{
+	public BlockRendererMachine(int var1) {
 		this.renderID = var1;
 	}
 
 	@Override
-	public boolean renderWorldBlock(IBlockAccess var1, int x, int y, int z, Block block, int var6, RenderBlocks renderBlocks)
-	{
+	public boolean renderWorldBlock(IBlockAccess var1, int x, int y, int z, Block block, int var6, RenderBlocks renderBlocks) {
 		renderBlocks.renderStandardBlock(block, x, y, z);
 		return true;
 	}
 
 	@Override
-	public boolean shouldRender3DInInventory(int modelId)
-	{
+	public boolean shouldRender3DInInventory(int modelId) {
 		return true;
 	}
 
 	@Override
-	public int getRenderId()
-	{
+	public int getRenderId() {
 		return this.renderID;
 	}
 
-	public static void renderInvNormalBlock(RenderBlocks var0, Block var1, int var2)
-	{
+	public static void renderInvNormalBlock(RenderBlocks var0, Block var1, int var2) {
 		final Tessellator var3 = Tessellator.instance;
 		GL11.glRotatef(270, 0, 1, 0);
 		GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
@@ -71,8 +65,7 @@ public class BlockRendererMachine implements ISimpleBlockRenderingHandler
 	}
 
 	@Override
-	public void renderInventoryBlock(Block block, int metadata, int modelID, RenderBlocks renderer)
-	{
+	public void renderInventoryBlock(Block block, int metadata, int modelID, RenderBlocks renderer) {
 		BlockRendererMachine.renderInvNormalBlock(renderer, block, metadata);
 	}
 }

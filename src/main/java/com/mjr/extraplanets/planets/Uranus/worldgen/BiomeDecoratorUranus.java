@@ -69,9 +69,9 @@ public class BiomeDecoratorUranus extends BiomeDecorator {
 		this.generateOre(5, this.whiteGemGen, 0, 10);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
-		
+
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));
-		
+
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
 				WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunkX, 0, this.chunkZ, ExtraPlanets_Fluids.frozen_water, ExtraPlanets_Blocks.uranusBlocks);

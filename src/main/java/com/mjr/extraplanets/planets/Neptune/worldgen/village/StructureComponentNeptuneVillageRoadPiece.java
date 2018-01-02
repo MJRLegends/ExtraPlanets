@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen.village;
 
-
 public abstract class StructureComponentNeptuneVillageRoadPiece extends StructureComponentNeptuneVillage {
 	public StructureComponentNeptuneVillageRoadPiece() {
 	}

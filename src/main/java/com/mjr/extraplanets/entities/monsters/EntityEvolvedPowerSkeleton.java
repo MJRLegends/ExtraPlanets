@@ -27,10 +27,8 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 
-public class EntityEvolvedPowerSkeleton extends EntitySkeleton implements IEntityBreathable
-{
-	public EntityEvolvedPowerSkeleton(World par1World)
-	{
+public class EntityEvolvedPowerSkeleton extends EntitySkeleton implements IEntityBreathable {
+	public EntityEvolvedPowerSkeleton(World par1World) {
 		super(par1World);
 		this.tasks.addTask(1, new EntityAISwimming(this));
 		this.tasks.addTask(2, new EntityAIRestrictSun(this));
@@ -44,39 +42,33 @@ public class EntityEvolvedPowerSkeleton extends EntitySkeleton implements IEntit
 	}
 
 	@Override
-	protected void applyEntityAttributes()
-	{
+	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(25);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.55F);
 	}
 
 	@Override
-	public boolean canBreath()
-	{
+	public boolean canBreath() {
 		return true;
 	}
 
 	@Override
-	public void attackEntityWithRangedAttack(EntityLivingBase par1EntityLivingBase, float par2)
-	{
+	public void attackEntityWithRangedAttack(EntityLivingBase par1EntityLivingBase, float par2) {
 		EntityArrow entityarrow = new EntityArrow(this.worldObj, this, par1EntityLivingBase, 0.4F, 17 - this.worldObj.difficultySetting.getDifficultyId() * 4);
 		int i = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, this.getHeldItem());
 		int j = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, this.getHeldItem());
 		entityarrow.setDamage(par2 * 2.0F + this.rand.nextGaussian() * 0.25D + this.worldObj.difficultySetting.getDifficultyId() * 0.11F);
 
-		if (i > 0)
-		{
+		if (i > 0) {
 			entityarrow.setDamage(entityarrow.getDamage() + i * 0.8D + 0.8D);
 		}
 
-		if (j > 0)
-		{
+		if (j > 0) {
 			entityarrow.setKnockbackStrength(j);
 		}
 
-		if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, this.getHeldItem()) > 0 || this.getSkeletonType() == 1)
-		{
+		if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, this.getHeldItem()) > 0 || this.getSkeletonType() == 1) {
 			entityarrow.setFire(100);
 		}
 
@@ -85,18 +77,16 @@ public class EntityEvolvedPowerSkeleton extends EntitySkeleton implements IEntit
 	}
 
 	@Override
-	protected void jump()
-	{
+	protected void jump() {
 		this.motionY = 0.45D / WorldUtil.getGravityFactor(this);
-		if (this.motionY < 0.24D) this.motionY = 0.24D;
+		if (this.motionY < 0.24D)
+			this.motionY = 0.24D;
 
-		if (this.isPotionActive(Potion.jump))
-		{
+		if (this.isPotionActive(Potion.jump)) {
 			this.motionY += (this.getActivePotionEffect(Potion.jump).getAmplifier() + 1) * 0.1F;
 		}
 
-		if (this.isSprinting())
-		{
+		if (this.isSprinting()) {
 			float f = this.rotationYaw * 0.017453292F;
 			this.motionX -= MathHelper.sin(f) * 0.2F;
 			this.motionZ += MathHelper.cos(f) * 0.2F;
@@ -107,16 +97,13 @@ public class EntityEvolvedPowerSkeleton extends EntitySkeleton implements IEntit
 	}
 
 	@Override
-	protected void dropRareDrop(int p_70600_1_)
-	{
-		if (this.getSkeletonType() == 1)
-		{
+	protected void dropRareDrop(int p_70600_1_) {
+		if (this.getSkeletonType() == 1) {
 			this.entityDropItem(new ItemStack(Items.skull, 1, 1), 0.0F);
 			return;
 		}
 
-		switch (this.rand.nextInt(10))
-		{
+		switch (this.rand.nextInt(10)) {
 		case 0:
 		case 1:
 		case 9:
@@ -131,7 +118,7 @@ public class EntityEvolvedPowerSkeleton extends EntitySkeleton implements IEntit
 			this.dropItem(Items.arrow, 3);
 			break;
 		case 6:
-			//Oxygen tank half empty or less
+			// Oxygen tank half empty or less
 			this.entityDropItem(new ItemStack(GCItems.oxTankMedium, 1, 901 + this.rand.nextInt(900)), 0.0F);
 			break;
 		case 7:

@@ -127,8 +127,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 	}
 
 	/**
-	 * Returns the name of a particle effect that may be randomly created by
-	 * EntitySlime.onUpdate()
+	 * Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
 	 */
 	protected String getSlimeParticle() {
 		return "slime";
@@ -249,15 +248,17 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 
 		if (this.roomCoords != null && this.roomSize != null) {
 			@SuppressWarnings("unchecked")
-			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class,
-					AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ() + this.roomSize.intZ()));
+			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(
+					EntityPlayer.class,
+					AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ()
+							+ this.roomSize.intZ()));
 
 			this.entitiesWithin = entitiesWithin.size();
 
 			if (this.entitiesWithin == 0 && this.entitiesWithinLast != 0) {
 				@SuppressWarnings("unchecked")
-				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class,
-						AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX() + this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
+				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX()
+						+ this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
 
 				for (EntityPlayer p : entitiesWithin2) {
 					p.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.skeletonBoss.message")));
@@ -408,16 +409,14 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 	}
 
 	/**
-	 * Indicates weather the slime is able to damage the player (based upon the
-	 * slime's size)
+	 * Indicates weather the slime is able to damage the player (based upon the slime's size)
 	 */
 	protected boolean canDamagePlayer() {
 		return this.getSlimeSize() > 1;
 	}
 
 	/**
-	 * Gets the amount of damage dealt to the player when "attacked" by the
-	 * slime.
+	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
 	 */
 	protected int getAttackStrength() {
 		return this.getSlimeSize();
@@ -453,8 +452,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 	}
 
 	/**
-	 * The speed it takes to move the entityliving's rotationPitch through the
-	 * faceEntity method. This is only currently use in wolves.
+	 * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	 */
 	@Override
 	public int getVerticalFaceSpeed() {
@@ -462,16 +460,14 @@ public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBrea
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it jumps (based upon the
-	 * slime's size)
+	 * Returns true if the slime makes a sound when it jumps (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnJump() {
 		return this.getSlimeSize() > 0;
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it lands after a jump (based
-	 * upon the slime's size)
+	 * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnLand() {
 		return this.getSlimeSize() > 2;

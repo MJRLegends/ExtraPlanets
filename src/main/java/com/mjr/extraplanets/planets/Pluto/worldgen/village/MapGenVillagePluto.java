@@ -46,8 +46,8 @@ public class MapGenVillagePluto extends MapGenStructure {
 
 	@Override
 	protected boolean canSpawnStructureAtCoords(int i, int j) {
-		final byte numChunks = 32; //32
-		final byte offsetChunks = 8; //8
+		final byte numChunks = 32; // 32
+		final byte offsetChunks = 8; // 8
 		final int oldi = i;
 		final int oldj = j;
 
@@ -71,7 +71,7 @@ public class MapGenVillagePluto extends MapGenStructure {
 
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
-		if(Config.debugMode)
+		if (Config.debugMode)
 			MessageUtilities.debugMessageToLog("Generating Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartPluto(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}

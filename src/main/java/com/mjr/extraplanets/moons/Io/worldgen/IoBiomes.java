@@ -11,8 +11,7 @@ public class IoBiomes extends BiomeGenBase {
 	public static final BiomeGenBase io = new BiomeGenIo(Config.ioBiomeID).setBiomeName("io");
 
 	@SuppressWarnings("unchecked")
-	IoBiomes(int var1)
-	{
+	IoBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class IoBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public IoBiomes setColor(int var1)
-	{
+	public IoBiomes setColor(int var1) {
 		return (IoBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

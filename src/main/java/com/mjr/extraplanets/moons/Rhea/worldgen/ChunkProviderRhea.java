@@ -27,11 +27,11 @@ import com.mjr.extraplanets.moons.Rhea.worldgen.village.MapGenVillageRhea;
 public class ChunkProviderRhea extends ChunkProviderSpace {
 
 	private final BiomeDecoratorRhea biomeDecorator = new BiomeDecoratorRhea();
-	
+
 	private final MapGenCaveRhea caveGenerator = new MapGenCaveRhea();
 
 	private final MapGenRavineRhea ravineGenerator = new MapGenRavineRhea();
-	
+
 	private final MapGenVillageRhea villageGenerator = new MapGenVillageRhea();
 
 	public ChunkProviderRhea(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -67,9 +67,9 @@ public class ChunkProviderRhea extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

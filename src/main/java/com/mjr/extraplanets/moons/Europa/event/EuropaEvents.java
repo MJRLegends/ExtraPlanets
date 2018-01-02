@@ -12,14 +12,12 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EuropaEvents {
 	@SubscribeEvent
-	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event){
-		if (event.entityLiving.worldObj.provider.dimensionId == Config.europaID)
-		{
-			if(event.entity instanceof EntityPlayer) {
+	public void GCCoreOxygenSuffocationEvent(GCCoreOxygenSuffocationEvent.Pre event) {
+		if (event.entityLiving.worldObj.provider.dimensionId == Config.europaID) {
+			if (event.entity instanceof EntityPlayer) {
 				event.setCanceled(false);
-			}
-			else{
-				if(Config.mobSuffocation)
+			} else {
+				if (Config.mobSuffocation)
 					event.setCanceled(false);
 				else
 					event.setCanceled(true);
@@ -28,13 +26,11 @@ public class EuropaEvents {
 	}
 
 	@SubscribeEvent
-	public void GCCoreEventWakePlayer(EventWakePlayer event){
-		if (event.entityLiving.worldObj.provider.dimensionId == Config.europaID)
-		{
+	public void GCCoreEventWakePlayer(EventWakePlayer event) {
+		if (event.entityLiving.worldObj.provider.dimensionId == Config.europaID) {
 			event.entityPlayer.heal(5.0F);
 
-			for (WorldServer worldServer : MinecraftServer.getServer().worldServers)
-			{
+			for (WorldServer worldServer : MinecraftServer.getServer().worldServers) {
 				worldServer.setWorldTime(0);
 			}
 		}

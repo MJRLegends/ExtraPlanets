@@ -11,8 +11,7 @@ public class PhobosBiomes extends BiomeGenBase {
 	public static final BiomeGenBase phobos = new BiomeGenPhobos(Config.phobosBiomeID).setBiomeName("phobos");
 
 	@SuppressWarnings("unchecked")
-	PhobosBiomes(int var1)
-	{
+	PhobosBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class PhobosBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public PhobosBiomes setColor(int var1)
-	{
+	public PhobosBiomes setColor(int var1) {
 		return (PhobosBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

@@ -11,8 +11,7 @@ public class RheaBiomes extends BiomeGenBase {
 	public static final BiomeGenBase rhea = new BiomeGenRhea(Config.rheaBiomeID).setBiomeName("rhea");
 
 	@SuppressWarnings("unchecked")
-	RheaBiomes(int var1)
-	{
+	RheaBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class RheaBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public RheaBiomes setColor(int var1)
-	{
+	public RheaBiomes setColor(int var1) {
 		return (RheaBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

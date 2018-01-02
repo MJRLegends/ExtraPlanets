@@ -7,8 +7,7 @@ import net.minecraft.util.MathHelper;
 
 import com.mjr.extraplanets.Constants;
 
-public class ModelEvolvedPowerSkeleton extends ModelBiped
-{
+public class ModelEvolvedPowerSkeleton extends ModelBiped {
 	ModelRenderer leftOxygenTank;
 	ModelRenderer rightOxygenTank;
 	ModelRenderer tubeRight2;
@@ -29,13 +28,11 @@ public class ModelEvolvedPowerSkeleton extends ModelBiped
 
 	public boolean aimedBow;
 
-	public ModelEvolvedPowerSkeleton()
-	{
+	public ModelEvolvedPowerSkeleton() {
 		this(0.0F);
 	}
 
-	public ModelEvolvedPowerSkeleton(float par1)
-	{
+	public ModelEvolvedPowerSkeleton(float par1) {
 		this.textureWidth = 128;
 		this.textureHeight = 64;
 		this.aimedBow = false;
@@ -172,8 +169,7 @@ public class ModelEvolvedPowerSkeleton extends ModelBiped
 	}
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
-	{
+	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		this.setRotationAngles(f, f1, f2, f3, f4, f5);
 		this.leftOxygenTank.render(f5);
 		this.rightOxygenTank.render(f5);
@@ -201,15 +197,13 @@ public class ModelEvolvedPowerSkeleton extends ModelBiped
 		this.bipedHeadwear.render(f5);
 	}
 
-	private void setRotation(ModelRenderer model, float x, float y, float z)
-	{
+	private void setRotation(ModelRenderer model, float x, float y, float z) {
 		model.rotateAngleX = x;
 		model.rotateAngleY = y;
 		model.rotateAngleZ = z;
 	}
 
-	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6)
-	{
+	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6) {
 		this.bipedHead.rotateAngleY = par4 / (180F / Constants.floatPI);
 		this.bipedHead.rotateAngleX = par5 / (180F / Constants.floatPI);
 		this.oxygenMask.rotateAngleY = par4 / (180F / Constants.floatPI);
@@ -225,8 +219,7 @@ public class ModelEvolvedPowerSkeleton extends ModelBiped
 		this.bipedRightLeg.rotateAngleY = 0.0F;
 		this.bipedLeftLeg.rotateAngleY = 0.0F;
 
-		if (this.isRiding)
-		{
+		if (this.isRiding) {
 			this.bipedRightArm.rotateAngleX += -(Constants.floatPI / 5F);
 			this.bipedLeftArm.rotateAngleX += -(Constants.floatPI / 5F);
 			this.bipedRightLeg.rotateAngleX = -(Constants.floatPI * 2F / 5F);
@@ -240,8 +233,7 @@ public class ModelEvolvedPowerSkeleton extends ModelBiped
 		float var7;
 		float var8;
 
-		if (this.onGround > -9990.0F)
-		{
+		if (this.onGround > -9990.0F) {
 			var7 = this.onGround;
 			this.bipedBody.rotateAngleY = MathHelper.sin(MathHelper.sqrt_float(var7) * Constants.twoPI) * 0.2F;
 			this.bipedRightArm.rotationPointZ = MathHelper.sin(this.bipedBody.rotateAngleY) * 5.0F;
@@ -279,8 +271,7 @@ public class ModelEvolvedPowerSkeleton extends ModelBiped
 
 		this.aimedBow = true;
 
-		if (this.aimedBow)
-		{
+		if (this.aimedBow) {
 			var7 = 0.0F;
 			var8 = 0.0F;
 			this.bipedRightArm.rotateAngleZ = 0.0F;

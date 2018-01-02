@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Europa.worldgen.village;
 
-
 public abstract class StructureComponentEuropaVillageRoadPiece extends StructureComponentEuropaVillage {
 	public StructureComponentEuropaVillageRoadPiece() {
 	}

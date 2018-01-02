@@ -27,7 +27,7 @@ import com.mjr.extraplanets.moons.Titania.worldgen.village.MapGenVillageTitania;
 public class ChunkProviderTitania extends ChunkProviderSpace {
 
 	private final BiomeDecoratorTitania biomeDecorator = new BiomeDecoratorTitania();
-	
+
 	private final MapGenCaveTitania caveGenerator = new MapGenCaveTitania();
 
 	private final MapGenRavineTitania ravineGenerator = new MapGenRavineTitania();
@@ -67,9 +67,9 @@ public class ChunkProviderTitania extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

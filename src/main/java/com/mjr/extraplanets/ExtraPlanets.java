@@ -184,7 +184,7 @@ public class ExtraPlanets {
 	public void preInit(FMLPreInitializationEvent event) {
 		if (FMLCommonHandler.instance().getSide() == Side.CLIENT)
 			GalacticraftVersionChecker.run();
-		
+
 		Config.init();
 
 		// Main Events

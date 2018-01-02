@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Io.worldgen;
 
 public class BiomeGenIo extends IoBiomes {
 
-	public BiomeGenIo(int par1)
-	{
+	public BiomeGenIo(int par1) {
 		super(par1);
 		this.setBiomeName("io");
 		this.setColor(16711680);

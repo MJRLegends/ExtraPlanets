@@ -340,7 +340,7 @@ public class SkyProviderIo extends IRenderHandler {
 
 		var2.draw();
 	}
-	
+
 	public float getSkyBrightness(float par1) {
 		final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
 		float var3 = 1.0F - (MathHelper.sin(var2 * Constants.twoPI) * 2.0F + 0.25F);

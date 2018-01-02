@@ -11,8 +11,7 @@ public class DeimosBiomes extends BiomeGenBase {
 	public static final BiomeGenBase deimos = new BiomeGenDeimos(Config.deimosBiomeID).setBiomeName("deimos");
 
 	@SuppressWarnings("unchecked")
-	DeimosBiomes(int var1)
-	{
+	DeimosBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class DeimosBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public DeimosBiomes setColor(int var1)
-	{
+	public DeimosBiomes setColor(int var1) {
 		return (DeimosBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

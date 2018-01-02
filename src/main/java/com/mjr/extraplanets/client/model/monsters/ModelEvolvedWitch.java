@@ -11,14 +11,12 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class ModelEvolvedWitch extends ModelVillager
-{
+public class ModelEvolvedWitch extends ModelVillager {
 	public boolean field_82900_g;
 	private ModelRenderer field_82901_h = (new ModelRenderer(this)).setTextureSize(64, 128);
 	private ModelRenderer witchHat;
 
-	public ModelEvolvedWitch(float p_i1166_1_)
-	{
+	public ModelEvolvedWitch(float p_i1166_1_) {
 		super(p_i1166_1_, 0.0F, 64, 128);
 		this.field_82901_h.setRotationPoint(0.0F, -2.0F, 0.0F);
 		this.field_82901_h.setTextureOffset(0, 0).addBox(0.0F, 3.0F, -6.75F, 1, 1, 1, -0.25F);
@@ -48,13 +46,11 @@ public class ModelEvolvedWitch extends ModelVillager
 	}
 
 	/**
-	 * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms
-	 * and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how
-	 * "far" arms and legs can swing at most.
+	 * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs
+	 * can swing at most.
 	 */
 	@Override
-	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_)
-	{
+	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_) {
 		super.setRotationAngles(p_78087_1_, p_78087_2_, p_78087_3_, p_78087_4_, p_78087_5_, p_78087_6_, p_78087_7_);
 		this.villagerNose.offsetX = this.villagerNose.offsetY = this.villagerNose.offsetZ = 0.0F;
 		float f6 = 0.01F * (p_78087_7_.getEntityId() % 10);
@@ -62,8 +58,7 @@ public class ModelEvolvedWitch extends ModelVillager
 		this.villagerNose.rotateAngleY = 0.0F;
 		this.villagerNose.rotateAngleZ = MathHelper.cos(p_78087_7_.ticksExisted * f6) * 2.5F * Constants.floatPI / 180.0F;
 
-		if (this.field_82900_g)
-		{
+		if (this.field_82900_g) {
 			this.villagerNose.rotateAngleX = -0.9F;
 			this.villagerNose.offsetZ = -0.09375F;
 			this.villagerNose.offsetY = 0.1875F;

@@ -43,7 +43,8 @@ public class StructureVillagePiecesMercury {
 		return var1 ? var2 : -1;
 	}
 
-	private static StructureComponentMercuryVillage func_75083_a(StructureComponentMercuryVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightMercury par1StructureVillagePieceWeight, List<StructureComponent> par2List, Random par3Random, int par4, int par5, int par6, int par7, int par8) {
+	private static StructureComponentMercuryVillage func_75083_a(StructureComponentMercuryVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightMercury par1StructureVillagePieceWeight, List<StructureComponent> par2List,
+			Random par3Random, int par4, int par5, int par6, int par7, int par8) {
 		final Class<?> var9 = par1StructureVillagePieceWeight.villagePieceClass;
 		Object var10 = null;
 
@@ -58,7 +59,8 @@ public class StructureVillagePiecesMercury {
 		return (StructureComponentMercuryVillage) var10;
 	}
 
-	private static StructureComponentMercuryVillage getNextVillageComponent(StructureComponentMercuryVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
+	private static StructureComponentMercuryVillage getNextVillageComponent(StructureComponentMercuryVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6,
+			int par7) {
 		final int var8 = StructureVillagePiecesMercury.func_75079_a(par0ComponentVillageStartPiece.structureVillageWeightedPieceList);
 
 		if (var8 <= 0) {

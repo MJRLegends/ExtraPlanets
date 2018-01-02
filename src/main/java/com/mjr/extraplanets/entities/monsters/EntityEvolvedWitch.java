@@ -38,9 +38,7 @@ public class EntityEvolvedWitch extends EntityMob implements IRangedAttackMob, I
 	/** List of items a witch should drop on death. */
 	private static final Item[] witchDrops = new Item[] { Items.glowstone_dust, Items.sugar, Items.redstone, Items.spider_eye, Items.glass_bottle, Items.gunpowder, Items.stick, Items.stick };
 	/**
-	 * Timer used as interval for a witch's attack, decremented every tick if
-	 * aggressive and when reaches zero the witch will throw a potion at the
-	 * target entity.
+	 * Timer used as interval for a witch's attack, decremented every tick if aggressive and when reaches zero the witch will throw a potion at the target entity.
 	 */
 	private int witchAttackTimer;
 
@@ -115,9 +113,7 @@ public class EntityEvolvedWitch extends EntityMob implements IRangedAttackMob, I
 	}
 
 	/**
-	 * Called frequently so the entity can update its state every tick as
-	 * required. For example, zombies and skeletons use this to react to
-	 * sunlight and start to burn.
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
 	@Override
 	public void onLivingUpdate() {
@@ -181,7 +177,8 @@ public class EntityEvolvedWitch extends EntityMob implements IRangedAttackMob, I
 	public void handleHealthUpdate(byte p_70103_1_) {
 		if (p_70103_1_ == 15) {
 			for (int i = 0; i < this.rand.nextInt(35) + 10; ++i) {
-				this.worldObj.spawnParticle("witchMagic", this.posX + this.rand.nextGaussian() * 0.12999999523162842D, this.boundingBox.maxY + 0.5D + this.rand.nextGaussian() * 0.12999999523162842D, this.posZ + this.rand.nextGaussian() * 0.12999999523162842D, 0.0D, 0.0D, 0.0D);
+				this.worldObj.spawnParticle("witchMagic", this.posX + this.rand.nextGaussian() * 0.12999999523162842D, this.boundingBox.maxY + 0.5D + this.rand.nextGaussian() * 0.12999999523162842D, this.posZ + this.rand.nextGaussian()
+						* 0.12999999523162842D, 0.0D, 0.0D, 0.0D);
 			}
 		} else {
 			super.handleHealthUpdate(p_70103_1_);
@@ -207,9 +204,7 @@ public class EntityEvolvedWitch extends EntityMob implements IRangedAttackMob, I
 	}
 
 	/**
-	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity
-	 * has recently been hit by a player. @param par2 - Level of Looting used to
-	 * kill this mob.
+	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
 	 */
 	@Override
 	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_) {

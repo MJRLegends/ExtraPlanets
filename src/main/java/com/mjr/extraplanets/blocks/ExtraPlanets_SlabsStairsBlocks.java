@@ -85,7 +85,7 @@ public class ExtraPlanets_SlabsStairsBlocks {
 	public static Block neptuneStoneBrickStairs;
 	public static Block plutoStoneBrickStairs;
 	public static Block erisStoneBrickStairs;
-	
+
 	public static Block venusDungeonBrickStoneStairs;
 	public static Block jupiterDungeonBrickStoneStairs;
 	public static Block saturnDungeonBrickStoneStairs;

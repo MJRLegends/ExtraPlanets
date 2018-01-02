@@ -13,16 +13,13 @@ import net.minecraft.entity.EntityLiving;
 
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 
-public class TileEntityDungeonSpawnerSaturn extends TileEntityDungeonSpawner
-{
-	public TileEntityDungeonSpawnerSaturn()
-	{
+public class TileEntityDungeonSpawnerSaturn extends TileEntityDungeonSpawner {
+	public TileEntityDungeonSpawnerSaturn() {
 		super(EntityEvolvedGhastBoss.class);
 	}
 
 	@Override
-	public List<Class<? extends EntityLiving>> getDisabledCreatures()
-	{
+	public List<Class<? extends EntityLiving>> getDisabledCreatures() {
 		List<Class<? extends EntityLiving>> list = new ArrayList<Class<? extends EntityLiving>>();
 		list.add(EntityEvolvedSkeleton.class);
 		list.add(EntityEvolvedZombie.class);
@@ -31,8 +28,7 @@ public class TileEntityDungeonSpawnerSaturn extends TileEntityDungeonSpawner
 	}
 
 	@Override
-	public void playSpawnSound(Entity entity)
-	{
+	public void playSpawnSound(Entity entity) {
 		this.worldObj.playSoundAtEntity(entity, GalacticraftCore.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
 	}
 }

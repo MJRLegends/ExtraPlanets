@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Ganymede.worldgen.village;
 
-
 public abstract class StructureComponentGanymedeVillageRoadPiece extends StructureComponentGanymedeVillage {
 	public StructureComponentGanymedeVillageRoadPiece() {
 	}

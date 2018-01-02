@@ -65,7 +65,7 @@ public class StructureComponentPlutoVillageHouse extends StructureComponentPluto
 
 		for (int i = 3; i <= 13; i++) {
 			for (int j = 3; j <= 13; j++) {
-				this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.plutoBlocks, 0 , i, 0, j, par3StructureBoundingBox);
+				this.placeBlockAtCurrentPosition(par1World, ExtraPlanets_Blocks.plutoBlocks, 0, i, 0, j, par3StructureBoundingBox);
 			}
 		}
 

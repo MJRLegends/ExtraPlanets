@@ -31,7 +31,7 @@ public class ExtraPlanets_Machines {
 
 	public static Block advancedOxygenCompressor;
 	public static Block ultimateOxygenCompressor;
-	
+
 	public static Block solarPanel;
 	public static Block chargingBlock;
 
@@ -89,11 +89,11 @@ public class ExtraPlanets_Machines {
 			GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
 		if (Config.ultimateFuelLoader)
 			GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
-		if (Config.advancedOxygenCompressor){
+		if (Config.advancedOxygenCompressor) {
 			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenCompressor.class, Constants.modName + "AdvancedOxygenCompressor");
 			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenDecompressor.class, Constants.modName + "AdvancedOxygenDecompressor");
 		}
-		if (Config.ultimateOxygenCompressor){
+		if (Config.ultimateOxygenCompressor) {
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "UltimateOxygenCompressor");
 			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "UltimateOxygenDecompressor");
 		}

@@ -28,15 +28,13 @@ import net.minecraftforge.common.ForgeHooks;
 
 import com.mjr.extraplanets.entities.ai.EntityAIRedCreeperSwell;
 
-public class EntityEvolvedRedCreeper extends EntityCustomRedCreeper implements IEntityBreathable
-{
+public class EntityEvolvedRedCreeper extends EntityCustomRedCreeper implements IEntityBreathable {
 	private float sizeXBase = -1.0F;
 	private float sizeYBase;
 	private static final UUID babySpeedBoostUUID = UUID.fromString("ef67a435-32a4-4efd-b218-e7431438b109");
 	private static final AttributeModifier babySpeedBoostModifier = new AttributeModifier(babySpeedBoostUUID, "Baby speed boost evolved creeper", 0.5D, 1);
 
-	public EntityEvolvedRedCreeper(World par1World)
-	{
+	public EntityEvolvedRedCreeper(World par1World) {
 		super(par1World);
 		this.tasks.taskEntries.clear();
 		this.tasks.addTask(1, new EntityAISwimming(this));
@@ -52,100 +50,83 @@ public class EntityEvolvedRedCreeper extends EntityCustomRedCreeper implements I
 	}
 
 	@Override
-	protected void entityInit()
-	{
+	protected void entityInit() {
 		super.entityInit();
 		this.getDataWatcher().addObject(12, Byte.valueOf((byte) 0));
 	}
 
 	@Override
-	protected void applyEntityAttributes()
-	{
+	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(25.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(1.0F);
 	}
 
 	@Override
-	public void writeEntityToNBT(NBTTagCompound nbt)
-	{
+	public void writeEntityToNBT(NBTTagCompound nbt) {
 		super.writeEntityToNBT(nbt);
 
-		if (this.isChild())
-		{
+		if (this.isChild()) {
 			nbt.setBoolean("IsBaby", true);
 		}
 	}
 
 	@Override
-	public void readEntityFromNBT(NBTTagCompound nbt)
-	{
+	public void readEntityFromNBT(NBTTagCompound nbt) {
 		super.readEntityFromNBT(nbt);
 
-		if (nbt.getBoolean("IsBaby"))
-		{
+		if (nbt.getBoolean("IsBaby")) {
 			this.setChild(true);
 		}
 	}
 
 	@Override
-	public boolean canBreath()
-	{
+	public boolean canBreath() {
 		return true;
 	}
 
-	public void setChildSize(boolean isChild)
-	{
+	public void setChildSize(boolean isChild) {
 		this.setCreeperScale(isChild ? 0.5F : 1.0F);
 	}
 
 	@Override
-	protected final void setSize(float sizeX, float sizeY)
-	{
+	protected final void setSize(float sizeX, float sizeY) {
 		boolean flag = this.sizeXBase > 0.0F && this.sizeYBase > 0.0F;
 		this.sizeXBase = sizeX;
 		this.sizeYBase = sizeY;
 
-		if (!flag)
-		{
+		if (!flag) {
 			this.setCreeperScale(1.0F);
 		}
 	}
 
-	protected final void setCreeperScale(float scale)
-	{
+	protected final void setCreeperScale(float scale) {
 		super.setSize(this.sizeXBase * scale, this.sizeYBase * scale);
-		//FMLLog.info("" + this.sizeYBase + " " + scale);
+		// FMLLog.info("" + this.sizeYBase + " " + scale);
 	}
 
 	@Override
-	public boolean isChild()
-	{
+	public boolean isChild() {
 		return this.getDataWatcher().getWatchableObjectByte(12) == 1;
 	}
 
 	@Override
-	protected int getExperiencePoints(EntityPlayer p_70693_1_)
-	{
-		if (this.isChild())
-		{
+	protected int getExperiencePoints(EntityPlayer p_70693_1_) {
+		if (this.isChild()) {
 			this.experienceValue = (this.experienceValue * 5) / 2;
 		}
 
 		return super.getExperiencePoints(p_70693_1_);
 	}
 
-	public void setChild(boolean isChild)
-	{
+	public void setChild(boolean isChild) {
 		this.getDataWatcher().updateObject(12, Byte.valueOf((byte) (isChild ? 1 : 0)));
 
-		if (this.worldObj != null && !this.worldObj.isRemote)
-		{
+		if (this.worldObj != null && !this.worldObj.isRemote) {
 			IAttributeInstance iattributeinstance = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed);
 			iattributeinstance.removeModifier(babySpeedBoostModifier);
 
-			if (isChild)
-			{
+			if (isChild) {
 				iattributeinstance.applyModifier(babySpeedBoostModifier);
 			}
 		}
@@ -154,18 +135,16 @@ public class EntityEvolvedRedCreeper extends EntityCustomRedCreeper implements I
 	}
 
 	@Override
-	protected void jump()
-	{
+	protected void jump() {
 		this.motionY = 0.45D / WorldUtil.getGravityFactor(this);
-		if (this.motionY < 0.22D) this.motionY = 0.22D;
+		if (this.motionY < 0.22D)
+			this.motionY = 0.22D;
 
-		if (this.isPotionActive(Potion.jump))
-		{
+		if (this.isPotionActive(Potion.jump)) {
 			this.motionY += (this.getActivePotionEffect(Potion.jump).getAmplifier() + 1) * 0.1F;
 		}
 
-		if (this.isSprinting())
-		{
+		if (this.isSprinting()) {
 			float f = this.rotationYaw * 0.017453292F;
 			this.motionX -= MathHelper.sin(f) * 0.2F;
 			this.motionZ += MathHelper.cos(f) * 0.2F;
@@ -176,10 +155,8 @@ public class EntityEvolvedRedCreeper extends EntityCustomRedCreeper implements I
 	}
 
 	@Override
-	protected void dropRareDrop(int p_70600_1_)
-	{
-		switch (this.rand.nextInt(10))
-		{
+	protected void dropRareDrop(int p_70600_1_) {
+		switch (this.rand.nextInt(10)) {
 		case 0:
 		case 1:
 		case 9:
@@ -191,7 +168,7 @@ public class EntityEvolvedRedCreeper extends EntityCustomRedCreeper implements I
 			this.entityDropItem(new ItemStack(Blocks.sand), 0.0F);
 			break;
 		case 6:
-			//Oxygen tank half empty or less
+			// Oxygen tank half empty or less
 			this.entityDropItem(new ItemStack(GCItems.oxTankMedium, 1, 901 + this.rand.nextInt(900)), 0.0F);
 			break;
 		case 7:

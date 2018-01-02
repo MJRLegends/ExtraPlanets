@@ -133,21 +133,21 @@ public class ModelEvolvedGiantSpider extends ModelBase {
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 		this.RearEndLeft.render(f5);
-	    this.RearEndTop.render(f5);
-	    this.Head.render(f5);
-	    this.Body.render(f5);
-	    this.RearEnd.render(f5);
-	    this.Leg8.render(f5);
-	    this.Leg6.render(f5);
-	    this.Leg4.render(f5);
-	    this.Leg2.render(f5);
-	    this.Leg7.render(f5);
-	    this.Leg5.render(f5);
-	    this.Leg3.render(f5);
-	    this.Leg1.render(f5);
-	    this.Leg9.render(f5);
-	    this.Leg10.render(f5);
-	    this.RearEndRight.render(f5);
+		this.RearEndTop.render(f5);
+		this.Head.render(f5);
+		this.Body.render(f5);
+		this.RearEnd.render(f5);
+		this.Leg8.render(f5);
+		this.Leg6.render(f5);
+		this.Leg4.render(f5);
+		this.Leg2.render(f5);
+		this.Leg7.render(f5);
+		this.Leg5.render(f5);
+		this.Leg3.render(f5);
+		this.Leg1.render(f5);
+		this.Leg9.render(f5);
+		this.Leg10.render(f5);
+		this.RearEndRight.render(f5);
 	}
 
 	private void setRotation(ModelRenderer model, float x, float y, float z) {
@@ -157,7 +157,7 @@ public class ModelEvolvedGiantSpider extends ModelBase {
 	}
 
 	@Override
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5,Entity entity) {
-	    super.setRotationAngles(f, f1, f2, f3, f4, f5,entity);
+	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity) {
+		super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 	}
 }

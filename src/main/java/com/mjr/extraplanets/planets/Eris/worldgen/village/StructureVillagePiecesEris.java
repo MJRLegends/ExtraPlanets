@@ -43,7 +43,8 @@ public class StructureVillagePiecesEris {
 		return var1 ? var2 : -1;
 	}
 
-	private static StructureComponentErisVillage func_75083_a(StructureComponentErisVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightEris par1StructureVillagePieceWeight, List<StructureComponent> par2List, Random par3Random, int par4, int par5, int par6, int par7, int par8) {
+	private static StructureComponentErisVillage func_75083_a(StructureComponentErisVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightEris par1StructureVillagePieceWeight, List<StructureComponent> par2List,
+			Random par3Random, int par4, int par5, int par6, int par7, int par8) {
 		final Class<?> var9 = par1StructureVillagePieceWeight.villagePieceClass;
 		Object var10 = null;
 

@@ -1,10 +1,8 @@
 package com.mjr.extraplanets.planets.Pluto.worldgen;
 
-
 public class BiomeGenPluto extends PlutoBiomes {
 
-	public BiomeGenPluto(int par1)
-	{
+	public BiomeGenPluto(int par1) {
 		super(par1);
 		this.setBiomeName("pluto");
 		this.setColor(16711680);

@@ -19,7 +19,7 @@ public class WorldGenSlimeTree extends WorldGenerator {
 		else {
 			if (Config.debugMode)
 				MessageUtilities.debugMessageToLog("Spawning Slime Tree at (x, y, z)" + x + " " + y + " " + z);
-			generateStructure(world, rand, x, y ,z);
+			generateStructure(world, rand, x, y, z);
 		}
 		return true;
 	}

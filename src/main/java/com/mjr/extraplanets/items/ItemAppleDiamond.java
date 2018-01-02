@@ -33,7 +33,7 @@ public class ItemAppleDiamond extends ItemFood {
 	public boolean hasEffect(ItemStack itemStack) {
 		return itemStack.getItemDamage() > 0;
 	}
-	
+
 	@Override
 	public EnumRarity getRarity(ItemStack itemStack) {
 		return itemStack.getItemDamage() == 0 ? EnumRarity.rare : EnumRarity.epic;

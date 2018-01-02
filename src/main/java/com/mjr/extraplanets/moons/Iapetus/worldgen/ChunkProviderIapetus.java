@@ -27,7 +27,7 @@ import com.mjr.extraplanets.moons.Iapetus.worldgen.village.MapGenVillageIapetus;
 public class ChunkProviderIapetus extends ChunkProviderSpace {
 
 	private final BiomeDecoratorIapetus biomeDecorator = new BiomeDecoratorIapetus();
-	
+
 	private final MapGenCaveIapetus caveGenerator = new MapGenCaveIapetus();
 
 	private final MapGenRavineIapetus ravineGenerator = new MapGenRavineIapetus();
@@ -67,9 +67,9 @@ public class ChunkProviderIapetus extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

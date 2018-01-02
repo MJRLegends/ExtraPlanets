@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockKepler22bMapleTreeLog extends BlockRotatedPillar {
 
-	private final static String[] logs = { "blue_maple", "red_maple", "purple_maple", "yellow_maple"};
+	private final static String[] logs = { "blue_maple", "red_maple", "purple_maple", "yellow_maple" };
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[] logsTextures;

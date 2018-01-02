@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Titan.worldgen.village;
 
-
 public abstract class StructureComponentTitanVillageRoadPiece extends StructureComponentTitanVillage {
 	public StructureComponentTitanVillageRoadPiece() {
 	}

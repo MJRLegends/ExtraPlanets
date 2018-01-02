@@ -21,34 +21,28 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderEvolvedEnderman extends RenderLiving
-{
+public class RenderEvolvedEnderman extends RenderLiving {
 	private static final ResourceLocation endermanEyesTexture = new ResourceLocation("textures/entity/enderman/enderman_eyes.png");
 	private static final ResourceLocation endermanTextures = new ResourceLocation("textures/entity/enderman/enderman.png");
 	/** The model of the enderman */
 	private ModelEvolvedEnderman endermanModel;
 	private Random rnd = new Random();
 
-	public RenderEvolvedEnderman()
-	{
+	public RenderEvolvedEnderman() {
 		super(new ModelEvolvedEnderman(), 0.5F);
-		this.endermanModel = (ModelEvolvedEnderman)super.mainModel;
+		this.endermanModel = (ModelEvolvedEnderman) super.mainModel;
 		this.setRenderPassModel(this.endermanModel);
 	}
 
 	/**
-	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
-	 * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
-	 * (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1,
-	 * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends
+	 * Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
 	 */
-	public void doRender(EntityEvolvedEnderman p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_)
-	{
+	public void doRender(EntityEvolvedEnderman p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
 		this.endermanModel.isCarrying = p_76986_1_.func_146080_bZ().getMaterial() != Material.air;
 		this.endermanModel.isAttacking = p_76986_1_.isScreaming();
 
-		if (p_76986_1_.isScreaming())
-		{
+		if (p_76986_1_.isScreaming()) {
 			double d3 = 0.02D;
 			p_76986_2_ += this.rnd.nextGaussian() * d3;
 			p_76986_6_ += this.rnd.nextGaussian() * d3;
@@ -60,17 +54,14 @@ public class RenderEvolvedEnderman extends RenderLiving
 	/**
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
-	protected ResourceLocation getEntityTexture(EntityEvolvedEnderman p_110775_1_)
-	{
+	protected ResourceLocation getEntityTexture(EntityEvolvedEnderman p_110775_1_) {
 		return endermanTextures;
 	}
 
-	protected void renderEquippedItems(EntityEvolvedEnderman p_77029_1_, float p_77029_2_)
-	{
+	protected void renderEquippedItems(EntityEvolvedEnderman p_77029_1_, float p_77029_2_) {
 		super.renderEquippedItems(p_77029_1_, p_77029_2_);
 
-		if (p_77029_1_.func_146080_bZ().getMaterial() != Material.air)
-		{
+		if (p_77029_1_.func_146080_bZ().getMaterial() != Material.air) {
 			GL11.glEnable(GL12.GL_RESCALE_NORMAL);
 			GL11.glPushMatrix();
 			float f1 = 0.5F;
@@ -94,14 +85,10 @@ public class RenderEvolvedEnderman extends RenderLiving
 	/**
 	 * Queries whether should render the specified pass or not.
 	 */
-	protected int shouldRenderPass(EntityEvolvedEnderman p_77032_1_, int p_77032_2_, float p_77032_3_)
-	{
-		if (p_77032_2_ != 0)
-		{
+	protected int shouldRenderPass(EntityEvolvedEnderman p_77032_1_, int p_77032_2_, float p_77032_3_) {
+		if (p_77032_2_ != 0) {
 			return -1;
-		}
-		else
-		{
+		} else {
 			this.bindTexture(endermanEyesTexture);
 			float f1 = 1.0F;
 			GL11.glEnable(GL11.GL_BLEND);
@@ -109,12 +96,9 @@ public class RenderEvolvedEnderman extends RenderLiving
 			GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 			GL11.glDisable(GL11.GL_LIGHTING);
 
-			if (p_77032_1_.isInvisible())
-			{
+			if (p_77032_1_.isInvisible()) {
 				GL11.glDepthMask(false);
-			}
-			else
-			{
+			} else {
 				GL11.glDepthMask(true);
 			}
 
@@ -129,62 +113,50 @@ public class RenderEvolvedEnderman extends RenderLiving
 	}
 
 	/**
-	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
-	 * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
-	 * (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1,
-	 * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends
+	 * Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
 	 */
 	@Override
-	public void doRender(EntityLiving p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_)
-	{
-		this.doRender((EntityEvolvedEnderman)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+	public void doRender(EntityLiving p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
+		this.doRender((EntityEvolvedEnderman) p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
 	}
 
 	/**
 	 * Queries whether should render the specified pass or not.
 	 */
 	@Override
-	protected int shouldRenderPass(EntityLivingBase p_77032_1_, int p_77032_2_, float p_77032_3_)
-	{
-		return this.shouldRenderPass((EntityEvolvedEnderman)p_77032_1_, p_77032_2_, p_77032_3_);
+	protected int shouldRenderPass(EntityLivingBase p_77032_1_, int p_77032_2_, float p_77032_3_) {
+		return this.shouldRenderPass((EntityEvolvedEnderman) p_77032_1_, p_77032_2_, p_77032_3_);
 	}
 
 	@Override
-	protected void renderEquippedItems(EntityLivingBase p_77029_1_, float p_77029_2_)
-	{
-		this.renderEquippedItems((EntityEvolvedEnderman)p_77029_1_, p_77029_2_);
+	protected void renderEquippedItems(EntityLivingBase p_77029_1_, float p_77029_2_) {
+		this.renderEquippedItems((EntityEvolvedEnderman) p_77029_1_, p_77029_2_);
 	}
 
 	/**
-	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
-	 * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
-	 * (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1,
-	 * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends
+	 * Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
 	 */
 	@Override
-	public void doRender(EntityLivingBase p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_)
-	{
-		this.doRender((EntityEvolvedEnderman)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+	public void doRender(EntityLivingBase p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
+		this.doRender((EntityEvolvedEnderman) p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
 	}
 
 	/**
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
 	@Override
-	protected ResourceLocation getEntityTexture(Entity p_110775_1_)
-	{
-		return this.getEntityTexture((EntityEvolvedEnderman)p_110775_1_);
+	protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
+		return this.getEntityTexture((EntityEvolvedEnderman) p_110775_1_);
 	}
 
 	/**
-	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
-	 * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
-	 * (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1,
-	 * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends
+	 * Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
 	 */
 	@Override
-	public void doRender(Entity p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_)
-	{
-		this.doRender((EntityEvolvedEnderman)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+	public void doRender(Entity p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
+		this.doRender((EntityEvolvedEnderman) p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
 	}
 }

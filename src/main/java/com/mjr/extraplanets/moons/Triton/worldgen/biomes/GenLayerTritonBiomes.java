@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.IntCache;
 import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 
 public class GenLayerTritonBiomes extends GenLayer {
-	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { TritonBiomes.triton, TritonBiomes.tritonMethaneSea, TritonBiomes.tritonMethaneHills  };
+	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { TritonBiomes.triton, TritonBiomes.tritonMethaneSea, TritonBiomes.tritonMethaneHills };
 
 	public GenLayerTritonBiomes(long l, GenLayer parent) {
 		super(l);

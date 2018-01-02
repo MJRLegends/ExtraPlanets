@@ -38,7 +38,7 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 	private final MapGenCavePluto caveGenerator = new MapGenCavePluto();
 
 	private final MapGenRavinePluto ravineGenerator = new MapGenRavinePluto();
-	
+
 	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeon(ExtraPlanets_Blocks.plutoDungeonBrick, 14, 8, 16, 3);
@@ -90,9 +90,9 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
-		if(Config.evolvedPowerSkeleton)
+		if (Config.evolvedPowerSkeleton)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedPowerSkeleton.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

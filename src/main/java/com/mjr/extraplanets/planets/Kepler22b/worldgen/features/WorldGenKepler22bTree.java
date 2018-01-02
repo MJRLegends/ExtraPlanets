@@ -181,8 +181,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 	}
 
 	/**
-	 * Grows vines downward from the given block for a given length. Args:
-	 * World, x, starty, z, vine-length
+	 * Grows vines downward from the given block for a given length. Args: World, x, starty, z, vine-length
 	 */
 	private void growVines(World par1World, int par2, int par3, int par4, int par5) {
 		this.setBlockAndNotifyAdequately(par1World, par2, par3, par4, Blocks.vine, par5);

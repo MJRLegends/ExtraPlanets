@@ -15,6 +15,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityPoweredChargingPad;
 public class EntityMarsRover extends EntityPoweredVehicleBase {
 	public float targetAngle;
 	public float currentAngle;
+
 	public EntityMarsRover(World var1) {
 		super(var1);
 	}

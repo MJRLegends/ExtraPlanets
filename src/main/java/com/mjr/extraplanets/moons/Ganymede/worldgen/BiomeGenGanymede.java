@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Ganymede.worldgen;
 
 public class BiomeGenGanymede extends GanymedeBiomes {
 
-	public BiomeGenGanymede(int par1)
-	{
+	public BiomeGenGanymede(int par1) {
 		super(par1);
 		this.setBiomeName("ganymede");
 		this.setColor(16711680);

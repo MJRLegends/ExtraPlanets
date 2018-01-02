@@ -141,10 +141,10 @@ public class ExtraPlanets_Armor {
 				palladiumBoots = new PalladiumArmor("palladium", palladium_ArmorMaterial, 3).setUnlocalizedName("palladium_boots");
 			}
 			if (Config.redGemItems) {
-				redGemHelmet = new RedGemArmor("red_gem",red_gem_ArmorMaterial, 0).setUnlocalizedName("red_gem_helmet");
-				redGemChest = new RedGemArmor("red_gem",red_gem_ArmorMaterial, 1).setUnlocalizedName("red_gem_chest");
-				redGemLegings = new RedGemArmor("red_gem",red_gem_ArmorMaterial, 2).setUnlocalizedName("red_gem_legings");
-				redGemBoots = new RedGemArmor("red_gem",red_gem_ArmorMaterial, 3).setUnlocalizedName("red_gem_boots");
+				redGemHelmet = new RedGemArmor("red_gem", red_gem_ArmorMaterial, 0).setUnlocalizedName("red_gem_helmet");
+				redGemChest = new RedGemArmor("red_gem", red_gem_ArmorMaterial, 1).setUnlocalizedName("red_gem_chest");
+				redGemLegings = new RedGemArmor("red_gem", red_gem_ArmorMaterial, 2).setUnlocalizedName("red_gem_legings");
+				redGemBoots = new RedGemArmor("red_gem", red_gem_ArmorMaterial, 3).setUnlocalizedName("red_gem_boots");
 			}
 		}
 		if (Config.magnesiumItems && Config.saturn) {
@@ -159,10 +159,10 @@ public class ExtraPlanets_Armor {
 			crystalLegings = new CrystalArmor("crystal", crystal_ArmorMaterial, 2).setUnlocalizedName("crystal_legings");
 			crystalBoots = new CrystalArmor("crystal", crystal_ArmorMaterial, 3).setUnlocalizedName("crystal_boots");
 			if (Config.whiteGemItems) {
-				whiteGemHelmet = new WhiteGemArmor("white_gem",white_gem_ArmorMaterial, 0).setUnlocalizedName("white_gem_helmet");
-				whiteGemChest = new WhiteGemArmor("white_gem",white_gem_ArmorMaterial, 1).setUnlocalizedName("white_gem_chest");
-				whiteGemLegings = new WhiteGemArmor("white_gem",white_gem_ArmorMaterial, 2).setUnlocalizedName("white_gem_legings");
-				whiteGemBoots = new WhiteGemArmor("white_gem",white_gem_ArmorMaterial, 3).setUnlocalizedName("white_gem_boots");
+				whiteGemHelmet = new WhiteGemArmor("white_gem", white_gem_ArmorMaterial, 0).setUnlocalizedName("white_gem_helmet");
+				whiteGemChest = new WhiteGemArmor("white_gem", white_gem_ArmorMaterial, 1).setUnlocalizedName("white_gem_chest");
+				whiteGemLegings = new WhiteGemArmor("white_gem", white_gem_ArmorMaterial, 2).setUnlocalizedName("white_gem_legings");
+				whiteGemBoots = new WhiteGemArmor("white_gem", white_gem_ArmorMaterial, 3).setUnlocalizedName("white_gem_boots");
 			}
 		}
 		if (Config.neptune) {
@@ -173,10 +173,10 @@ public class ExtraPlanets_Armor {
 				zincBoots = new ZincArmor("zinc", zinc_ArmorMaterial, 3).setUnlocalizedName("zinc_boots");
 			}
 			if (Config.blueGemItems) {
-				blueGemHelmet = new BlueGemArmor("blue_gem",blue_gem_ArmorMaterial, 0).setUnlocalizedName("blue_gem_helmet");
-				blueGemChest = new BlueGemArmor("blue_gem",blue_gem_ArmorMaterial, 1).setUnlocalizedName("blue_gem_chest");
-				blueGemLegings = new BlueGemArmor("blue_gem",blue_gem_ArmorMaterial, 2).setUnlocalizedName("blue_gem_legings");
-				blueGemBoots = new BlueGemArmor("blue_gem",blue_gem_ArmorMaterial, 3).setUnlocalizedName("blue_gem_boots");
+				blueGemHelmet = new BlueGemArmor("blue_gem", blue_gem_ArmorMaterial, 0).setUnlocalizedName("blue_gem_helmet");
+				blueGemChest = new BlueGemArmor("blue_gem", blue_gem_ArmorMaterial, 1).setUnlocalizedName("blue_gem_chest");
+				blueGemLegings = new BlueGemArmor("blue_gem", blue_gem_ArmorMaterial, 2).setUnlocalizedName("blue_gem_legings");
+				blueGemBoots = new BlueGemArmor("blue_gem", blue_gem_ArmorMaterial, 3).setUnlocalizedName("blue_gem_boots");
 			}
 		}
 		if (Config.tungstenItems && Config.pluto) {
@@ -186,30 +186,30 @@ public class ExtraPlanets_Armor {
 			tungstenBoots = new TungstenArmor("tungsten", tungsten_ArmorMaterial, 3).setUnlocalizedName("tungsten_boots");
 		}
 		if (Config.kepler22b && Config.kepler22bItems && Config.keplerSolarSystems) {
-			blueDiamondHelmet = new BlueDiamondArmor("blue_diamond",blue_diamond_ArmorMaterial, 0).setUnlocalizedName("blue_diamond_helmet");
-			blueDiamondChest = new BlueDiamondArmor("blue_diamond",blue_diamond_ArmorMaterial, 1).setUnlocalizedName("blue_diamond_chest");
-			blueDiamondLegings = new BlueDiamondArmor("blue_diamond",blue_diamond_ArmorMaterial, 2).setUnlocalizedName("blue_diamond_legings");
-			blueDiamondBoots = new BlueDiamondArmor("blue_diamond",blue_diamond_ArmorMaterial, 3).setUnlocalizedName("blue_diamond_boots");
+			blueDiamondHelmet = new BlueDiamondArmor("blue_diamond", blue_diamond_ArmorMaterial, 0).setUnlocalizedName("blue_diamond_helmet");
+			blueDiamondChest = new BlueDiamondArmor("blue_diamond", blue_diamond_ArmorMaterial, 1).setUnlocalizedName("blue_diamond_chest");
+			blueDiamondLegings = new BlueDiamondArmor("blue_diamond", blue_diamond_ArmorMaterial, 2).setUnlocalizedName("blue_diamond_legings");
+			blueDiamondBoots = new BlueDiamondArmor("blue_diamond", blue_diamond_ArmorMaterial, 3).setUnlocalizedName("blue_diamond_boots");
 
-			redDiamondHelmet = new RedDiamondArmor("red_diamond",red_diamond_ArmorMaterial, 0).setUnlocalizedName("red_diamond_helmet");
-			redDiamondChest = new RedDiamondArmor("red_diamond",red_diamond_ArmorMaterial, 1).setUnlocalizedName("red_diamond_chest");
-			redDiamondLegings = new RedDiamondArmor("red_diamond",red_diamond_ArmorMaterial, 2).setUnlocalizedName("red_diamond_legings");
-			redDiamondBoots = new RedDiamondArmor("red_diamond",red_diamond_ArmorMaterial, 3).setUnlocalizedName("red_diamond_boots");
+			redDiamondHelmet = new RedDiamondArmor("red_diamond", red_diamond_ArmorMaterial, 0).setUnlocalizedName("red_diamond_helmet");
+			redDiamondChest = new RedDiamondArmor("red_diamond", red_diamond_ArmorMaterial, 1).setUnlocalizedName("red_diamond_chest");
+			redDiamondLegings = new RedDiamondArmor("red_diamond", red_diamond_ArmorMaterial, 2).setUnlocalizedName("red_diamond_legings");
+			redDiamondBoots = new RedDiamondArmor("red_diamond", red_diamond_ArmorMaterial, 3).setUnlocalizedName("red_diamond_boots");
 
-			purpleDiamondHelmet = new PurpleDiamondArmor("purple_diamond",purple_diamond_ArmorMaterial, 0).setUnlocalizedName("purple_diamond_helmet");
-			purpleDiamondChest = new PurpleDiamondArmor("purple_diamond",purple_diamond_ArmorMaterial, 1).setUnlocalizedName("purple_diamond_chest");
-			purpleDiamondLegings = new PurpleDiamondArmor("purple_diamond",purple_diamond_ArmorMaterial, 2).setUnlocalizedName("purple_diamond_legings");
-			purpleDiamondBoots = new PurpleDiamondArmor("purple_diamond",purple_diamond_ArmorMaterial, 3).setUnlocalizedName("purple_diamond_boots");
+			purpleDiamondHelmet = new PurpleDiamondArmor("purple_diamond", purple_diamond_ArmorMaterial, 0).setUnlocalizedName("purple_diamond_helmet");
+			purpleDiamondChest = new PurpleDiamondArmor("purple_diamond", purple_diamond_ArmorMaterial, 1).setUnlocalizedName("purple_diamond_chest");
+			purpleDiamondLegings = new PurpleDiamondArmor("purple_diamond", purple_diamond_ArmorMaterial, 2).setUnlocalizedName("purple_diamond_legings");
+			purpleDiamondBoots = new PurpleDiamondArmor("purple_diamond", purple_diamond_ArmorMaterial, 3).setUnlocalizedName("purple_diamond_boots");
 
-			yellowDiamondHelmet = new YellowDiamondArmor("yellow_diamond",yellow_diamond_ArmorMaterial, 0).setUnlocalizedName("yellow_diamond_helmet");
-			yellowDiamondChest = new YellowDiamondArmor("yellow_diamond",yellow_diamond_ArmorMaterial, 1).setUnlocalizedName("yellow_diamond_chest");
-			yellowDiamondLegings = new YellowDiamondArmor("yellow_diamond",yellow_diamond_ArmorMaterial, 2).setUnlocalizedName("yellow_diamond_legings");
-			yellowDiamondBoots = new YellowDiamondArmor("yellow_diamond",yellow_diamond_ArmorMaterial, 3).setUnlocalizedName("yellow_diamond_boots");
+			yellowDiamondHelmet = new YellowDiamondArmor("yellow_diamond", yellow_diamond_ArmorMaterial, 0).setUnlocalizedName("yellow_diamond_helmet");
+			yellowDiamondChest = new YellowDiamondArmor("yellow_diamond", yellow_diamond_ArmorMaterial, 1).setUnlocalizedName("yellow_diamond_chest");
+			yellowDiamondLegings = new YellowDiamondArmor("yellow_diamond", yellow_diamond_ArmorMaterial, 2).setUnlocalizedName("yellow_diamond_legings");
+			yellowDiamondBoots = new YellowDiamondArmor("yellow_diamond", yellow_diamond_ArmorMaterial, 3).setUnlocalizedName("yellow_diamond_boots");
 
-			greenDiamondHelmet = new GreenDiamondArmor("green_diamond",green_diamond_ArmorMaterial, 0).setUnlocalizedName("green_diamond_helmet");
-			greenDiamondChest = new GreenDiamondArmor("green_diamond",green_diamond_ArmorMaterial, 1).setUnlocalizedName("green_diamond_chest");
-			greenDiamondLegings = new GreenDiamondArmor("green_diamond",green_diamond_ArmorMaterial, 2).setUnlocalizedName("green_diamond_legings");
-			greenDiamondBoots = new GreenDiamondArmor("green_diamond",green_diamond_ArmorMaterial, 3).setUnlocalizedName("green_diamond_boots");
+			greenDiamondHelmet = new GreenDiamondArmor("green_diamond", green_diamond_ArmorMaterial, 0).setUnlocalizedName("green_diamond_helmet");
+			greenDiamondChest = new GreenDiamondArmor("green_diamond", green_diamond_ArmorMaterial, 1).setUnlocalizedName("green_diamond_chest");
+			greenDiamondLegings = new GreenDiamondArmor("green_diamond", green_diamond_ArmorMaterial, 2).setUnlocalizedName("green_diamond_legings");
+			greenDiamondBoots = new GreenDiamondArmor("green_diamond", green_diamond_ArmorMaterial, 3).setUnlocalizedName("green_diamond_boots");
 		}
 	}
 

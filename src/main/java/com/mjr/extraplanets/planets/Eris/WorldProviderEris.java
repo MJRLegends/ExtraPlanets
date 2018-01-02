@@ -97,7 +97,7 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public float getGravity() {
-		if(Config.oldStyleGravity)
+		if (Config.oldStyleGravity)
 			return 0.058F;
 		else
 			return 0.065F;

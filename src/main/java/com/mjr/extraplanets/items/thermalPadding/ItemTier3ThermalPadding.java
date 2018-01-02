@@ -61,7 +61,7 @@ public class ItemTier3ThermalPadding extends Item implements IItemThermal {
 		int i = 0;
 
 		for (String name : ItemTier3ThermalPadding.names) {
-			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier4" + name.substring(5));		
+			this.icons[i++] = iconRegister.registerIcon(Constants.TEXTURE_PREFIX + "tier4" + name.substring(5));
 		}
 	}
 

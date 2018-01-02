@@ -27,7 +27,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IShearable {
 
-	private final static String[] leaves = { "blue_maple", "red_maple", "purple_maple", "yellow_maple"};
+	private final static String[] leaves = { "blue_maple", "red_maple", "purple_maple", "yellow_maple" };
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[][] leafTextures;
@@ -58,8 +58,8 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
-        setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
-        return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.leafTextures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.leafTextures[this.field_150127_b][2] : this.leafTextures[this.field_150127_b][0]));
+		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
+		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.leafTextures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.leafTextures[this.field_150127_b][2] : this.leafTextures[this.field_150127_b][0]));
 	}
 
 	@Override
@@ -230,8 +230,8 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 			int l = world.getBlockMetadata(x, y, z);
 
 			boolean test1 = (l & 8) != 0;
-			boolean test2 =(l & 4) == 0;
-			
+			boolean test2 = (l & 4) == 0;
+
 			if (test1 && test2) {
 				byte b0 = 4;
 				int i1 = b0 + 1;

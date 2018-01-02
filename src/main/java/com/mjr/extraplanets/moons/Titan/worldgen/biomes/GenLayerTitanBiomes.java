@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.IntCache;
 import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 
 public class GenLayerTitanBiomes extends GenLayer {
-	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { TitanBiomes.titan, TitanBiomes.titanMethaneSea, TitanBiomes.titanMethaneHills  };
+	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { TitanBiomes.titan, TitanBiomes.titanMethaneSea, TitanBiomes.titanMethaneHills };
 
 	public GenLayerTitanBiomes(long l, GenLayer parent) {
 		super(l);

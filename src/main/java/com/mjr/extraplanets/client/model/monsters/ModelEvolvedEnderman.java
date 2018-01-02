@@ -7,15 +7,13 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class ModelEvolvedEnderman extends ModelBiped
-{
+public class ModelEvolvedEnderman extends ModelBiped {
 	/** Is the enderman carrying a block? */
 	public boolean isCarrying;
 	/** Is the enderman attacking an entity? */
 	public boolean isAttacking;
 
-	public ModelEvolvedEnderman()
-	{
+	public ModelEvolvedEnderman() {
 		super(0.0F, -14.0F, 64, 32);
 		float f = -14.0F;
 		float f1 = 0.0F;
@@ -42,13 +40,11 @@ public class ModelEvolvedEnderman extends ModelBiped
 	}
 
 	/**
-	 * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms
-	 * and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how
-	 * "far" arms and legs can swing at most.
+	 * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs
+	 * can swing at most.
 	 */
 	@Override
-	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_)
-	{
+	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_) {
 		super.setRotationAngles(p_78087_1_, p_78087_2_, p_78087_3_, p_78087_4_, p_78087_5_, p_78087_6_, p_78087_7_);
 		this.bipedHead.showModel = true;
 		float f6 = -14.0F;
@@ -57,54 +53,45 @@ public class ModelEvolvedEnderman extends ModelBiped
 		this.bipedBody.rotationPointZ = -0.0F;
 		this.bipedRightLeg.rotateAngleX -= 0.0F;
 		this.bipedLeftLeg.rotateAngleX -= 0.0F;
-		this.bipedRightArm.rotateAngleX = (float)(this.bipedRightArm.rotateAngleX * 0.5D);
-		this.bipedLeftArm.rotateAngleX = (float)(this.bipedLeftArm.rotateAngleX * 0.5D);
-		this.bipedRightLeg.rotateAngleX = (float)(this.bipedRightLeg.rotateAngleX * 0.5D);
-		this.bipedLeftLeg.rotateAngleX = (float)(this.bipedLeftLeg.rotateAngleX * 0.5D);
+		this.bipedRightArm.rotateAngleX = (float) (this.bipedRightArm.rotateAngleX * 0.5D);
+		this.bipedLeftArm.rotateAngleX = (float) (this.bipedLeftArm.rotateAngleX * 0.5D);
+		this.bipedRightLeg.rotateAngleX = (float) (this.bipedRightLeg.rotateAngleX * 0.5D);
+		this.bipedLeftLeg.rotateAngleX = (float) (this.bipedLeftLeg.rotateAngleX * 0.5D);
 		float f7 = 0.4F;
 
-		if (this.bipedRightArm.rotateAngleX > f7)
-		{
+		if (this.bipedRightArm.rotateAngleX > f7) {
 			this.bipedRightArm.rotateAngleX = f7;
 		}
 
-		if (this.bipedLeftArm.rotateAngleX > f7)
-		{
+		if (this.bipedLeftArm.rotateAngleX > f7) {
 			this.bipedLeftArm.rotateAngleX = f7;
 		}
 
-		if (this.bipedRightArm.rotateAngleX < -f7)
-		{
+		if (this.bipedRightArm.rotateAngleX < -f7) {
 			this.bipedRightArm.rotateAngleX = -f7;
 		}
 
-		if (this.bipedLeftArm.rotateAngleX < -f7)
-		{
+		if (this.bipedLeftArm.rotateAngleX < -f7) {
 			this.bipedLeftArm.rotateAngleX = -f7;
 		}
 
-		if (this.bipedRightLeg.rotateAngleX > f7)
-		{
+		if (this.bipedRightLeg.rotateAngleX > f7) {
 			this.bipedRightLeg.rotateAngleX = f7;
 		}
 
-		if (this.bipedLeftLeg.rotateAngleX > f7)
-		{
+		if (this.bipedLeftLeg.rotateAngleX > f7) {
 			this.bipedLeftLeg.rotateAngleX = f7;
 		}
 
-		if (this.bipedRightLeg.rotateAngleX < -f7)
-		{
+		if (this.bipedRightLeg.rotateAngleX < -f7) {
 			this.bipedRightLeg.rotateAngleX = -f7;
 		}
 
-		if (this.bipedLeftLeg.rotateAngleX < -f7)
-		{
+		if (this.bipedLeftLeg.rotateAngleX < -f7) {
 			this.bipedLeftLeg.rotateAngleX = -f7;
 		}
 
-		if (this.isCarrying)
-		{
+		if (this.isCarrying) {
 			this.bipedRightArm.rotateAngleX = -0.5F;
 			this.bipedLeftArm.rotateAngleX = -0.5F;
 			this.bipedRightArm.rotateAngleZ = 0.05F;
@@ -126,8 +113,7 @@ public class ModelEvolvedEnderman extends ModelBiped
 		this.bipedHeadwear.rotateAngleY = this.bipedHead.rotateAngleY;
 		this.bipedHeadwear.rotateAngleZ = this.bipedHead.rotateAngleZ;
 
-		if (this.isAttacking)
-		{
+		if (this.isAttacking) {
 			float f8 = 1.0F;
 			this.bipedHead.rotationPointY -= f8 * 5.0F;
 		}

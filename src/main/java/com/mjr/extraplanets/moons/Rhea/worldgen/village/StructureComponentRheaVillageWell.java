@@ -49,10 +49,14 @@ public class StructureComponentRheaVillageWell extends StructureComponentRheaVil
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void buildComponent(StructureComponent par1StructureComponent, List par2List, Random par3Random) {
-		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 1, this.getComponentType());
-		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 3, this.getComponentType());
-		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ - 1, 2, this.getComponentType());
-		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.maxZ + 1, 0, this.getComponentType());
+		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 1,
+				this.getComponentType());
+		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 3,
+				this.getComponentType());
+		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ - 1, 2,
+				this.getComponentType());
+		StructureVillagePiecesRhea.getNextStructureComponentVillagePath((StructureComponentRheaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.maxZ + 1, 0,
+				this.getComponentType());
 	}
 
 	@Override

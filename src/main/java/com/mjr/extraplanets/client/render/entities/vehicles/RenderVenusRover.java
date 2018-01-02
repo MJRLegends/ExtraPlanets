@@ -134,11 +134,11 @@ public class RenderVenusRover extends Render {
 		this.modelRover.renderPart("RightWall");
 		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
-		
+
 		this.bindTexture(RenderVenusRover.buggyTextureBatteryBolt);
 		this.modelRover.renderPart("Lightning");
 		this.modelRover.renderPart("Lightning2");
-		
+
 		this.bindTexture(RenderVenusRover.buggyTextureStorage);
 
 		if (entity.roverType > 0) {

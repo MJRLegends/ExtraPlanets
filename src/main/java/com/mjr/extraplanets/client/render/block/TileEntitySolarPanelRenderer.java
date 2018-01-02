@@ -12,22 +12,17 @@ import org.lwjgl.opengl.GL12;
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
 import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 
-public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer
-{
+public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer {
 	private static final ResourceLocation solarPanelAdvTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/model/solarPanelAdvanced.png");
 	public ModelSolarPanel model = new ModelSolarPanel();
 
 	@Override
-	public void renderTileEntityAt(TileEntity var1, double par2, double par4, double par6, float var8)
-	{
+	public void renderTileEntityAt(TileEntity var1, double par2, double par4, double par6, float var8) {
 		TileEntitySolar panel = (TileEntitySolar) var1;
 
-		if (var1.getBlockMetadata() >= BlockSolar.ULTIMATE_METADATA)
-		{
+		if (var1.getBlockMetadata() >= BlockSolar.ULTIMATE_METADATA) {
 			this.bindTexture(TileEntitySolarPanelRenderer.solarPanelAdvTexture);
-		}
-		else
-		{
+		} else {
 			this.bindTexture(TileEntitySolarPanelRenderer.solarPanelAdvTexture);
 		}
 

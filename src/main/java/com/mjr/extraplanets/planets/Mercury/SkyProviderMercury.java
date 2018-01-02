@@ -221,7 +221,7 @@ public class SkyProviderMercury extends IRenderHandler {
 		tessellator1.addVertexWithUV(f10, 100.0D, f10, 1.0D, 1.0D);
 		tessellator1.addVertexWithUV(-f10, 100.0D, f10, 0.0D, 1.0D);
 		tessellator1.draw();
-		
+
 		GL11.glRotatef(360.0F, 1.0F, 0.0F, 0.0F);
 
 		// Render earth

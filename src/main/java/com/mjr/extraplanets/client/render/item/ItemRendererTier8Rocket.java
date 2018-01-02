@@ -1,4 +1,5 @@
 package com.mjr.extraplanets.client.render.item;
+
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.core.entities.EntityTier1Rocket;
 import net.minecraft.client.model.ModelChest;
@@ -17,8 +18,7 @@ import com.mjr.extraplanets.Constants;
 
 import cpw.mods.fml.client.FMLClientHandler;
 
-public class ItemRendererTier8Rocket implements IItemRenderer
-{
+public class ItemRendererTier8Rocket implements IItemRenderer {
 	protected static final ResourceLocation chestTexture = new ResourceLocation("textures/entity/chest/normal.png");
 
 	protected IModelCustom modelSpaceship;
@@ -30,14 +30,12 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 	protected ResourceLocation texture2 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png");
 	protected ResourceLocation texture3 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_grey.png");
 	protected ResourceLocation texture4 = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket_dark_grey.png");
-	
-	public ItemRendererTier8Rocket(IModelCustom model)
-	{
+
+	public ItemRendererTier8Rocket(IModelCustom model) {
 		this.modelSpaceship = model;
 	}
 
-	protected void renderSpaceship(ItemRenderType type, RenderBlocks render, ItemStack item, float translateX, float translateY, float translateZ)
-	{
+	protected void renderSpaceship(ItemRenderType type, RenderBlocks render, ItemStack item, float translateX, float translateY, float translateZ) {
 		GL11.glPushMatrix();
 
 		this.transform(item, type);
@@ -89,11 +87,9 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(texture);
 		GL11.glPopMatrix();
 
-		if (type == ItemRenderType.INVENTORY)
-		{
+		if (type == ItemRenderType.INVENTORY) {
 			int index = Math.min(Math.max(item.getItemDamage(), 0), EnumRocketType.values().length - 1);
-			if (EnumRocketType.values()[index].getInventorySpace() > 3)
-			{
+			if (EnumRocketType.values()[index].getInventorySpace() > 3) {
 				final ModelChest modelChest = this.chestModel;
 				FMLClientHandler.instance().getClient().renderEngine.bindTexture(ItemRendererTier8Rocket.chestTexture);
 
@@ -121,34 +117,29 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 		}
 	}
 
-	public void transform(ItemStack itemstack, ItemRenderType type)
-	{
+	public void transform(ItemStack itemstack, ItemRenderType type) {
 		final EntityPlayer player = FMLClientHandler.instance().getClient().thePlayer;
 
-		if (type == ItemRenderType.EQUIPPED)
-		{
+		if (type == ItemRenderType.EQUIPPED) {
 			GL11.glRotatef(70, 1.0F, 0, 0);
 			GL11.glRotatef(-10, 0.0F, 1, 0);
 			GL11.glRotatef(50, 0.0F, 1, 1);
 			GL11.glTranslatef(-2.2F, -7.5F, 2F);
 			GL11.glScalef(5.2F, 5.2F, 5.2F);
 
-			if (player != null && player.ridingEntity != null && player.ridingEntity instanceof EntityTier1Rocket)
-			{
+			if (player != null && player.ridingEntity != null && player.ridingEntity instanceof EntityTier1Rocket) {
 				GL11.glScalef(0.0F, 0.0F, 0.0F);
 			}
 		}
 
-		if (type == ItemRenderType.EQUIPPED_FIRST_PERSON)
-		{
+		if (type == ItemRenderType.EQUIPPED_FIRST_PERSON) {
 			GL11.glTranslatef(10.5F, 8.9F, 4F);
 			GL11.glRotatef(28, 0.0F, 0, 1);
 			GL11.glRotatef(50 + 180, 0.0F, 1, 0);
 			GL11.glRotatef(73, 1.0F, 0, 0);
 			GL11.glScalef(5.2F, 5.2F, 5.2F);
 
-			if (player != null && player.ridingEntity != null && player.ridingEntity instanceof EntityTier1Rocket)
-			{
+			if (player != null && player.ridingEntity != null && player.ridingEntity instanceof EntityTier1Rocket) {
 				GL11.glScalef(0.0F, 0.0F, 0.0F);
 			}
 		}
@@ -156,17 +147,13 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 		GL11.glTranslatef(0, 0.1F, 0);
 		GL11.glScalef(-0.4F, -0.4F, 0.4F);
 
-		if (type == ItemRenderType.INVENTORY || type == ItemRenderType.ENTITY)
-		{
-			if (type == ItemRenderType.INVENTORY)
-			{
+		if (type == ItemRenderType.INVENTORY || type == ItemRenderType.ENTITY) {
+			if (type == ItemRenderType.INVENTORY) {
 				GL11.glRotatef(85F, 1F, 0F, 1F);
 				GL11.glRotatef(20F, 1F, 0F, 0F);
 				GL11.glScalef(0.5F, 0.5F, 0.5F);
 				GL11.glTranslatef(1.4F, 2.8F, -0.4F);
-			}
-			else
-			{
+			} else {
 				GL11.glTranslatef(0, -0.9F, 0);
 				GL11.glScalef(0.5F, 0.5F, 0.5F);
 			}
@@ -184,10 +171,8 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 	 */
 
 	@Override
-	public boolean handleRenderType(ItemStack item, ItemRenderType type)
-	{
-		switch (type)
-		{
+	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
+		switch (type) {
 		case ENTITY:
 			return true;
 		case EQUIPPED:
@@ -202,16 +187,13 @@ public class ItemRendererTier8Rocket implements IItemRenderer
 	}
 
 	@Override
-	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper)
-	{
+	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper) {
 		return true;
 	}
 
 	@Override
-	public void renderItem(ItemRenderType type, ItemStack item, Object... data)
-	{
-		switch (type)
-		{
+	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+		switch (type) {
 		case EQUIPPED:
 			this.renderSpaceship(type, (RenderBlocks) data[0], item, -0.5f, -0.5f, -0.5f);
 			break;

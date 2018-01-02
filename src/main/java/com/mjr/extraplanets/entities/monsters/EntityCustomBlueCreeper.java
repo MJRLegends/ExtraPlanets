@@ -22,13 +22,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityCustomBlueCreeper extends EntityMob {
 	/**
-	 * Time when this creeper was last in an active state (Messed up code here,
-	 * probably causes creeper animation to go weird)
+	 * Time when this creeper was last in an active state (Messed up code here, probably causes creeper animation to go weird)
 	 */
 	private int lastActiveTime;
 	/**
-	 * The amount of time since the creeper was close enough to the player to
-	 * ignite
+	 * The amount of time since the creeper was close enough to the player to ignite
 	 */
 	private int timeSinceIgnited;
 	private int fuseTime = 30;
@@ -54,8 +52,7 @@ public class EntityCustomBlueCreeper extends EntityMob {
 	}
 
 	/**
-	 * The number of iterations PathFinder.getSafePoint will execute before
-	 * giving up.
+	 * The number of iterations PathFinder.getSafePoint will execute before giving up.
 	 */
 	@Override
 	public int getMaxSafePointTries() {
@@ -197,13 +194,11 @@ public class EntityCustomBlueCreeper extends EntityMob {
 	}
 
 	/**
-	 * Params: (Float)Render tick. Returns the intensity of the creeper's flash
-	 * when it is ignited.
+	 * Params: (Float)Render tick. Returns the intensity of the creeper's flash when it is ignited.
 	 */
 	@SideOnly(Side.CLIENT)
 	public float getCreeperFlashIntensity(float p_70831_1_) {
-		return (this.lastActiveTime + (this.timeSinceIgnited - this.lastActiveTime) * p_70831_1_)
-				/ (this.fuseTime - 2);
+		return (this.lastActiveTime + (this.timeSinceIgnited - this.lastActiveTime) * p_70831_1_) / (this.fuseTime - 2);
 	}
 
 	@Override
@@ -235,16 +230,14 @@ public class EntityCustomBlueCreeper extends EntityMob {
 	}
 
 	/**
-	 * Called when a player interacts with a mob. e.g. gets milk from a cow,
-	 * gets into the saddle on a pig.
+	 * Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
 	 */
 	@Override
 	protected boolean interact(EntityPlayer p_70085_1_) {
 		ItemStack itemstack = p_70085_1_.inventory.getCurrentItem();
 
 		if (itemstack != null && itemstack.getItem() == Items.flint_and_steel) {
-			this.worldObj.playSoundEffect(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D, "fire.ignite", 1.0F,
-					this.rand.nextFloat() * 0.4F + 0.8F);
+			this.worldObj.playSoundEffect(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D, "fire.ignite", 1.0F, this.rand.nextFloat() * 0.4F + 0.8F);
 			p_70085_1_.swingItem();
 
 			if (!this.worldObj.isRemote) {
@@ -267,10 +260,8 @@ public class EntityCustomBlueCreeper extends EntityMob {
 				this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, this.explosionRadius, flag);
 			}
 
-			if (this.worldObj.getClosestPlayer(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D,
-					10.0) != null) {
-				List<?> list = worldObj.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox((float) posX - 5, (float) posY-5,
-						(float) posZ - 5, (float) (posX + 10), (float) (posY+10), (float) (posZ + 10)));
+			if (this.worldObj.getClosestPlayer(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D, 10.0) != null) {
+				List<?> list = worldObj.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.getBoundingBox((float) posX - 5, (float) posY - 5, (float) posZ - 5, (float) (posX + 10), (float) (posY + 10), (float) (posZ + 10)));
 				if (list != null) {
 					System.out.println(list.size());
 					for (int i = 0; i < list.size(); i++) {

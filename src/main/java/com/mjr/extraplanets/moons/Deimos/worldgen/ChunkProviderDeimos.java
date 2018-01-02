@@ -27,11 +27,11 @@ import com.mjr.extraplanets.moons.Deimos.worldgen.village.MapGenVillageDeimos;
 public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	private final BiomeDecoratorDeimos biomeDecorator = new BiomeDecoratorDeimos();
-	
+
 	private final MapGenCaveDeimos caveGenerator = new MapGenCaveDeimos();
 
 	private final MapGenRavineDeimos ravineGenerator = new MapGenRavineDeimos();
-	
+
 	private final MapGenVillageDeimos villageGenerator = new MapGenVillageDeimos();
 
 	public ChunkProviderDeimos(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -67,9 +67,9 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}
@@ -81,17 +81,17 @@ public class ChunkProviderDeimos extends ChunkProviderSpace {
 
 	@Override
 	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks,(byte) 0);
+		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks, (byte) 0);
 	}
 
 	@Override
 	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks,(byte) 1);
+		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks, (byte) 1);
 	}
 
 	@Override
 	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks,(byte) 2);
+		return new BlockMetaPair(ExtraPlanets_Blocks.deimosBlocks, (byte) 2);
 	}
 
 	@Override

@@ -30,13 +30,12 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 	public Random randomGenerator;
 
 	private final MapGenCaveCeres caveGenerator = new MapGenCaveCeres();
-	
+
 	private final MapGenRavineCeres ravineGenerator = new MapGenRavineCeres();
 
 	private final MapGenVillageCeres villageGenerator = new MapGenVillageCeres();
 
-	public ChunkProviderCeres(World par1World, long seed,
-			boolean mapFeaturesEnabled) {
+	public ChunkProviderCeres(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 
 	}
@@ -70,9 +69,9 @@ public class ChunkProviderCeres extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

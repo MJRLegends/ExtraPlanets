@@ -49,10 +49,14 @@ public class StructureComponentPhobosVillageWell extends StructureComponentPhobo
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void buildComponent(StructureComponent par1StructureComponent, List par2List, Random par3Random) {
-		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 1, this.getComponentType());
-		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 3, this.getComponentType());
-		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ - 1, 2, this.getComponentType());
-		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.maxZ + 1, 0, this.getComponentType());
+		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 1,
+				this.getComponentType());
+		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 3,
+				this.getComponentType());
+		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ - 1, 2,
+				this.getComponentType());
+		StructureVillagePiecesPhobos.getNextStructureComponentVillagePath((StructureComponentPhobosVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.maxZ + 1, 0,
+				this.getComponentType());
 	}
 
 	@Override

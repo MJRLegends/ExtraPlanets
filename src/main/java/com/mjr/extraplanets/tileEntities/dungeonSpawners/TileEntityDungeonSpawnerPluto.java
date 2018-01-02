@@ -13,17 +13,13 @@ import net.minecraft.entity.EntityLiving;
 
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 
-
-public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner
-{
-	public TileEntityDungeonSpawnerPluto()
-	{
+public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner {
+	public TileEntityDungeonSpawnerPluto() {
 		super(EntityCreeperBossPluto.class);
 	}
 
 	@Override
-	public List<Class<? extends EntityLiving>> getDisabledCreatures()
-	{
+	public List<Class<? extends EntityLiving>> getDisabledCreatures() {
 		List<Class<? extends EntityLiving>> list = new ArrayList<Class<? extends EntityLiving>>();
 		list.add(EntityEvolvedSkeleton.class);
 		list.add(EntityEvolvedZombie.class);
@@ -32,8 +28,7 @@ public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner
 	}
 
 	@Override
-	public void playSpawnSound(Entity entity)
-	{
+	public void playSpawnSound(Entity entity) {
 		this.worldObj.playSoundAtEntity(entity, GalacticraftCore.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
 	}
 }

@@ -5,15 +5,12 @@ import net.minecraft.world.gen.layer.GenLayerRiver;
 import net.minecraft.world.gen.layer.GenLayerVoronoiZoom;
 import net.minecraft.world.gen.layer.GenLayerZoom;
 
-public class GenLayerNeptune extends GenLayer
-{
-	public GenLayerNeptune(long seed)
-	{
+public class GenLayerNeptune extends GenLayer {
+	public GenLayerNeptune(long seed) {
 		super(seed);
 	}
 
-	public static GenLayer[] makeTheWorld(long seed)
-	{
+	public static GenLayer[] makeTheWorld(long seed) {
 		GenLayer biomes = new GenLayerNeptuneBiomes(1L);
 		biomes = new GenLayerZoom(1000L, biomes);
 		biomes = new GenLayerZoom(1001L, biomes);
@@ -25,12 +22,11 @@ public class GenLayerNeptune extends GenLayer
 		GenLayerRiver genlayerriver = new GenLayerRiver(1000L, biomes);
 		biomes.initWorldGenSeed(seed);
 		genlayervoronoizoom.initWorldGenSeed(seed);
-		return new GenLayer[] {biomes, genlayervoronoizoom, genlayerriver};
+		return new GenLayer[] { biomes, genlayervoronoizoom, genlayerriver };
 	}
 
 	@Override
-	public int[] getInts(int x, int z, int width, int depth)
-	{
+	public int[] getInts(int x, int z, int width, int depth) {
 		return null;
 	}
 }

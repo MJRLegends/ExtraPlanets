@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Oberon.worldgen.village;
 
-
 public abstract class StructureComponentOberonVillageRoadPiece extends StructureComponentOberonVillage {
 	public StructureComponentOberonVillageRoadPiece() {
 	}

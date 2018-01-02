@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Rhea.worldgen;
 
 public class BiomeGenRhea extends RheaBiomes {
 
-	public BiomeGenRhea(int par1)
-	{
+	public BiomeGenRhea(int par1) {
 		super(par1);
 		this.setBiomeName("rhea");
 		this.setColor(16711680);

@@ -26,11 +26,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 
-public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathable
-{
+public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathable {
 	private static final UUID attackingSpeedBoostModifierUUID = UUID.fromString("020E0DFB-87AE-4653-9556-831010E291A0");
 	private static final AttributeModifier attackingSpeedBoostModifier = (new AttributeModifier(attackingSpeedBoostModifierUUID, "Attacking speed boost", 6.199999809265137D, 0)).setSaved(false);
-	@Deprecated //DO NOT TOUCH THIS EVER
+	@Deprecated
+	// DO NOT TOUCH THIS EVER
 	private static boolean[] carriableBlocks = new boolean[256];
 	/** Counter to delay the teleportation of an enderman towards the currently attacked target */
 	private int teleportDelay;
@@ -39,16 +39,14 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	private Entity lastEntityToAttack;
 	private boolean isAggressive;
 
-	public EntityEvolvedEnderman(World p_i1734_1_)
-	{
+	public EntityEvolvedEnderman(World p_i1734_1_) {
 		super(p_i1734_1_);
 		this.setSize(0.6F, 2.9F);
 		this.stepHeight = 1.0F;
 	}
 
 	@Override
-	protected void applyEntityAttributes()
-	{
+	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.30000001192092896D);
@@ -56,65 +54,54 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	}
 
 	@Override
-	protected void entityInit()
-	{
+	protected void entityInit() {
 		super.entityInit();
-		this.dataWatcher.addObject(16, new Byte((byte)0));
-		this.dataWatcher.addObject(17, new Byte((byte)0));
-		this.dataWatcher.addObject(18, new Byte((byte)0));
+		this.dataWatcher.addObject(16, new Byte((byte) 0));
+		this.dataWatcher.addObject(17, new Byte((byte) 0));
+		this.dataWatcher.addObject(18, new Byte((byte) 0));
 	}
 
 	/**
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
 	@Override
-	public void writeEntityToNBT(NBTTagCompound p_70014_1_)
-	{
+	public void writeEntityToNBT(NBTTagCompound p_70014_1_) {
 		super.writeEntityToNBT(p_70014_1_);
-		p_70014_1_.setShort("carried", (short)Block.getIdFromBlock(this.func_146080_bZ()));
-		p_70014_1_.setShort("carriedData", (short)this.getCarryingData());
+		p_70014_1_.setShort("carried", (short) Block.getIdFromBlock(this.func_146080_bZ()));
+		p_70014_1_.setShort("carriedData", (short) this.getCarryingData());
 	}
 
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
 	@Override
-	public void readEntityFromNBT(NBTTagCompound p_70037_1_)
-	{
+	public void readEntityFromNBT(NBTTagCompound p_70037_1_) {
 		super.readEntityFromNBT(p_70037_1_);
 		this.func_146081_a(Block.getBlockById(p_70037_1_.getShort("carried")));
 		this.setCarryingData(p_70037_1_.getShort("carriedData"));
 	}
 
 	/**
-	 * Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking
-	 * (Animals, Spiders at day, peaceful PigZombies).
+	 * Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).
 	 */
 	@Override
-	protected Entity findPlayerToAttack()
-	{
+	protected Entity findPlayerToAttack() {
 		EntityPlayer entityplayer = this.worldObj.getClosestVulnerablePlayerToEntity(this, 64.0D);
 
-		if (entityplayer != null)
-		{
-			if (this.shouldAttackPlayer(entityplayer))
-			{
+		if (entityplayer != null) {
+			if (this.shouldAttackPlayer(entityplayer)) {
 				this.isAggressive = true;
 
-				if (this.stareTimer == 0)
-				{
+				if (this.stareTimer == 0) {
 					this.worldObj.playSoundEffect(entityplayer.posX, entityplayer.posY, entityplayer.posZ, "mob.endermen.stare", 1.0F, 1.0F);
 				}
 
-				if (this.stareTimer++ == 5)
-				{
+				if (this.stareTimer++ == 5) {
 					this.stareTimer = 0;
 					this.setScreaming(true);
 					return entityplayer;
 				}
-			}
-			else
-			{
+			} else {
 				this.stareTimer = 0;
 			}
 		}
@@ -125,16 +112,12 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	/**
 	 * Checks to see if this enderman should be attacking this player
 	 */
-	private boolean shouldAttackPlayer(EntityPlayer p_70821_1_)
-	{
+	private boolean shouldAttackPlayer(EntityPlayer p_70821_1_) {
 		ItemStack itemstack = p_70821_1_.inventory.armorInventory[3];
 
-		if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(Blocks.pumpkin))
-		{
+		if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(Blocks.pumpkin)) {
 			return false;
-		}
-		else
-		{
+		} else {
 			Vec3 vec3 = p_70821_1_.getLook(1.0F).normalize();
 			Vec3 vec31 = Vec3.createVectorHelper(this.posX - p_70821_1_.posX, this.boundingBox.minY + this.height / 2.0F - (p_70821_1_.posY + p_70821_1_.getEyeHeight()), this.posZ - p_70821_1_.posZ);
 			double d0 = vec31.lengthVector();
@@ -145,24 +128,19 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	}
 
 	/**
-	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
-	 * use this to react to sunlight and start to burn.
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
 	@Override
-	public void onLivingUpdate()
-	{
-		if (this.isWet())
-		{
+	public void onLivingUpdate() {
+		if (this.isWet()) {
 			this.attackEntityFrom(DamageSource.drown, 1.0F);
 		}
 
-		if (this.lastEntityToAttack != this.entityToAttack)
-		{
+		if (this.lastEntityToAttack != this.entityToAttack) {
 			IAttributeInstance iattributeinstance = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed);
 			iattributeinstance.removeModifier(attackingSpeedBoostModifier);
 
-			if (this.entityToAttack != null)
-			{
+			if (this.entityToAttack != null) {
 				iattributeinstance.applyModifier(attackingSpeedBoostModifier);
 			}
 		}
@@ -170,56 +148,47 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 		this.lastEntityToAttack = this.entityToAttack;
 		int k;
 
-		if (!this.worldObj.isRemote && this.worldObj.getGameRules().getGameRuleBooleanValue("mobGriefing"))
-		{
+		if (!this.worldObj.isRemote && this.worldObj.getGameRules().getGameRuleBooleanValue("mobGriefing")) {
 			int i;
 			int j;
 			Block block;
 
-			if (this.func_146080_bZ().getMaterial() == Material.air)
-			{
-				if (this.rand.nextInt(20) == 0)
-				{
+			if (this.func_146080_bZ().getMaterial() == Material.air) {
+				if (this.rand.nextInt(20) == 0) {
 					k = MathHelper.floor_double(this.posX - 2.0D + this.rand.nextDouble() * 4.0D);
 					i = MathHelper.floor_double(this.posY + this.rand.nextDouble() * 3.0D);
 					j = MathHelper.floor_double(this.posZ - 2.0D + this.rand.nextDouble() * 4.0D);
 					block = this.worldObj.getBlock(k, i, j);
 
-					if (EntityEvolvedEnderman.getCarriable(block))
-					{
+					if (EntityEvolvedEnderman.getCarriable(block)) {
 						this.func_146081_a(block);
 						this.setCarryingData(this.worldObj.getBlockMetadata(k, i, j));
 						this.worldObj.setBlock(k, i, j, Blocks.air);
 					}
 				}
-			}
-			else if (this.rand.nextInt(2000) == 0)
-			{
+			} else if (this.rand.nextInt(2000) == 0) {
 				k = MathHelper.floor_double(this.posX - 1.0D + this.rand.nextDouble() * 2.0D);
 				i = MathHelper.floor_double(this.posY + this.rand.nextDouble() * 2.0D);
 				j = MathHelper.floor_double(this.posZ - 1.0D + this.rand.nextDouble() * 2.0D);
 				block = this.worldObj.getBlock(k, i, j);
 				Block block1 = this.worldObj.getBlock(k, i - 1, j);
 
-				if (block.getMaterial() == Material.air && block1.getMaterial() != Material.air && block1.renderAsNormalBlock())
-				{
+				if (block.getMaterial() == Material.air && block1.getMaterial() != Material.air && block1.renderAsNormalBlock()) {
 					this.worldObj.setBlock(k, i, j, this.func_146080_bZ(), this.getCarryingData(), 3);
 					this.func_146081_a(Blocks.air);
 				}
 			}
 		}
 
-		for (k = 0; k < 2; ++k)
-		{
-			this.worldObj.spawnParticle("portal", this.posX + (this.rand.nextDouble() - 0.5D) * this.width, this.posY + this.rand.nextDouble() * this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
+		for (k = 0; k < 2; ++k) {
+			this.worldObj.spawnParticle("portal", this.posX + (this.rand.nextDouble() - 0.5D) * this.width, this.posY + this.rand.nextDouble() * this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * this.width,
+					(this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
 		}
 
-		if (this.worldObj.isDaytime() && !this.worldObj.isRemote)
-		{
+		if (this.worldObj.isDaytime() && !this.worldObj.isRemote) {
 			float f = this.getBrightness(1.0F);
 
-			if (f > 0.5F && this.worldObj.canBlockSeeTheSky(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) && this.rand.nextFloat() * 30.0F < (f - 0.4F) * 2.0F)
-			{
+			if (f > 0.5F && this.worldObj.canBlockSeeTheSky(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posY), MathHelper.floor_double(this.posZ)) && this.rand.nextFloat() * 30.0F < (f - 0.4F) * 2.0F) {
 				this.entityToAttack = null;
 				this.setScreaming(false);
 				this.isAggressive = false;
@@ -227,46 +196,35 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 			}
 		}
 
-		if (this.isWet() || this.isBurning())
-		{
+		if (this.isWet() || this.isBurning()) {
 			this.entityToAttack = null;
 			this.setScreaming(false);
 			this.isAggressive = false;
 			this.teleportRandomly();
 		}
 
-		if (this.isScreaming() && !this.isAggressive && this.rand.nextInt(100) == 0)
-		{
+		if (this.isScreaming() && !this.isAggressive && this.rand.nextInt(100) == 0) {
 			this.setScreaming(false);
 		}
 
 		this.isJumping = false;
 
-		if (this.entityToAttack != null)
-		{
+		if (this.entityToAttack != null) {
 			this.faceEntity(this.entityToAttack, 100.0F, 100.0F);
 		}
 
-		if (!this.worldObj.isRemote && this.isEntityAlive())
-		{
-			if (this.entityToAttack != null)
-			{
-				if (this.entityToAttack instanceof EntityPlayer && this.shouldAttackPlayer((EntityPlayer)this.entityToAttack))
-				{
-					if (this.entityToAttack.getDistanceSqToEntity(this) < 16.0D)
-					{
+		if (!this.worldObj.isRemote && this.isEntityAlive()) {
+			if (this.entityToAttack != null) {
+				if (this.entityToAttack instanceof EntityPlayer && this.shouldAttackPlayer((EntityPlayer) this.entityToAttack)) {
+					if (this.entityToAttack.getDistanceSqToEntity(this) < 16.0D) {
 						this.teleportRandomly();
 					}
 
 					this.teleportDelay = 0;
-				}
-				else if (this.entityToAttack.getDistanceSqToEntity(this) > 256.0D && this.teleportDelay++ >= 30 && this.teleportToEntity(this.entityToAttack))
-				{
+				} else if (this.entityToAttack.getDistanceSqToEntity(this) > 256.0D && this.teleportDelay++ >= 30 && this.teleportToEntity(this.entityToAttack)) {
 					this.teleportDelay = 0;
 				}
-			}
-			else
-			{
+			} else {
 				this.setScreaming(false);
 				this.teleportDelay = 0;
 			}
@@ -278,8 +236,7 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	/**
 	 * Teleport the enderman to a random nearby position
 	 */
-	protected boolean teleportRandomly()
-	{
+	protected boolean teleportRandomly() {
 		double d0 = this.posX + (this.rand.nextDouble() - 0.5D) * 64.0D;
 		double d1 = this.posY + (this.rand.nextInt(64) - 32);
 		double d2 = this.posZ + (this.rand.nextDouble() - 0.5D) * 64.0D;
@@ -289,8 +246,7 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	/**
 	 * Teleport the enderman to another entity
 	 */
-	protected boolean teleportToEntity(Entity p_70816_1_)
-	{
+	protected boolean teleportToEntity(Entity p_70816_1_) {
 		Vec3 vec3 = Vec3.createVectorHelper(this.posX - p_70816_1_.posX, this.boundingBox.minY + this.height / 2.0F - p_70816_1_.posY + p_70816_1_.getEyeHeight(), this.posZ - p_70816_1_.posZ);
 		vec3 = vec3.normalize();
 		double d0 = 16.0D;
@@ -303,10 +259,9 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	/**
 	 * Teleport the enderman
 	 */
-	protected boolean teleportTo(double p_70825_1_, double p_70825_3_, double p_70825_5_)
-	{
+	protected boolean teleportTo(double p_70825_1_, double p_70825_3_, double p_70825_5_) {
 		EnderTeleportEvent event = new EnderTeleportEvent(this, p_70825_1_, p_70825_3_, p_70825_5_, 0);
-		if (MinecraftForge.EVENT_BUS.post(event)){
+		if (MinecraftForge.EVENT_BUS.post(event)) {
 			return false;
 		}
 		double d3 = this.posX;
@@ -320,47 +275,36 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 		int j = MathHelper.floor_double(this.posY);
 		int k = MathHelper.floor_double(this.posZ);
 
-		if (this.worldObj.blockExists(i, j, k))
-		{
+		if (this.worldObj.blockExists(i, j, k)) {
 			boolean flag1 = false;
 
-			while (!flag1 && j > 0)
-			{
+			while (!flag1 && j > 0) {
 				Block block = this.worldObj.getBlock(i, j - 1, k);
 
-				if (block.getMaterial().blocksMovement())
-				{
+				if (block.getMaterial().blocksMovement()) {
 					flag1 = true;
-				}
-				else
-				{
+				} else {
 					--this.posY;
 					--j;
 				}
 			}
 
-			if (flag1)
-			{
+			if (flag1) {
 				this.setPosition(this.posX, this.posY, this.posZ);
 
-				if (this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox).isEmpty() && !this.worldObj.isAnyLiquid(this.boundingBox))
-				{
+				if (this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox).isEmpty() && !this.worldObj.isAnyLiquid(this.boundingBox)) {
 					flag = true;
 				}
 			}
 		}
 
-		if (!flag)
-		{
+		if (!flag) {
 			this.setPosition(d3, d4, d5);
 			return false;
-		}
-		else
-		{
+		} else {
 			short short1 = 128;
 
-			for (int l = 0; l < short1; ++l)
-			{
+			for (int l = 0; l < short1; ++l) {
 				double d6 = l / (short1 - 1.0D);
 				float f = (this.rand.nextFloat() - 0.5F) * 0.2F;
 				float f1 = (this.rand.nextFloat() - 0.5F) * 0.2F;
@@ -381,8 +325,7 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	 * Returns the sound this mob makes while it's alive.
 	 */
 	@Override
-	protected String getLivingSound()
-	{
+	protected String getLivingSound() {
 		return this.isScreaming() ? "mob.endermen.scream" : "mob.endermen.idle";
 	}
 
@@ -390,8 +333,7 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	 * Returns the sound this mob makes when it is hurt.
 	 */
 	@Override
-	protected String getHurtSound()
-	{
+	protected String getHurtSound() {
 		return "mob.endermen.hit";
 	}
 
@@ -399,60 +341,50 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	 * Returns the sound this mob makes on death.
 	 */
 	@Override
-	protected String getDeathSound()
-	{
+	protected String getDeathSound() {
 		return "mob.endermen.death";
 	}
 
 	@Override
-	protected Item getDropItem()
-	{
+	protected Item getDropItem() {
 		return Items.ender_pearl;
 	}
 
 	/**
-	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param
-	 * par2 - Level of Looting used to kill this mob.
+	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
 	 */
 	@Override
-	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_)
-	{
+	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_) {
 		Item item = this.getDropItem();
 
-		if (item != null)
-		{
+		if (item != null) {
 			int j = this.rand.nextInt(2 + p_70628_2_);
 
-			for (int k = 0; k < j; ++k)
-			{
+			for (int k = 0; k < j; ++k) {
 				this.dropItem(item, 1);
 			}
 		}
 	}
 
-	public void func_146081_a(Block p_146081_1_)
-	{
-		this.dataWatcher.updateObject(16, Byte.valueOf((byte)(Block.getIdFromBlock(p_146081_1_) & 255)));
+	public void func_146081_a(Block p_146081_1_) {
+		this.dataWatcher.updateObject(16, Byte.valueOf((byte) (Block.getIdFromBlock(p_146081_1_) & 255)));
 	}
 
-	public Block func_146080_bZ()
-	{
+	public Block func_146080_bZ() {
 		return Block.getBlockById(this.dataWatcher.getWatchableObjectByte(16));
 	}
 
 	/**
 	 * Set the metadata of the block an enderman carries
 	 */
-	public void setCarryingData(int p_70817_1_)
-	{
-		this.dataWatcher.updateObject(17, Byte.valueOf((byte)(p_70817_1_ & 255)));
+	public void setCarryingData(int p_70817_1_) {
+		this.dataWatcher.updateObject(17, Byte.valueOf((byte) (p_70817_1_ & 255)));
 	}
 
 	/**
 	 * Get the metadata of the block an enderman carries
 	 */
-	public int getCarryingData()
-	{
+	public int getCarryingData() {
 		return this.dataWatcher.getWatchableObjectByte(17);
 	}
 
@@ -460,54 +392,41 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 	 * Called when the entity is attacked.
 	 */
 	@Override
-	public boolean attackEntityFrom(DamageSource p_70097_1_, float p_70097_2_)
-	{
-		if (this.isEntityInvulnerable())
-		{
+	public boolean attackEntityFrom(DamageSource p_70097_1_, float p_70097_2_) {
+		if (this.isEntityInvulnerable()) {
 			return false;
-		}
-		else
-		{
+		} else {
 			this.setScreaming(true);
 
-			if (p_70097_1_ instanceof EntityDamageSource && p_70097_1_.getEntity() instanceof EntityPlayer)
-			{
+			if (p_70097_1_ instanceof EntityDamageSource && p_70097_1_.getEntity() instanceof EntityPlayer) {
 				this.isAggressive = true;
 			}
 
-			if (p_70097_1_ instanceof EntityDamageSourceIndirect)
-			{
+			if (p_70097_1_ instanceof EntityDamageSourceIndirect) {
 				this.isAggressive = false;
 
-				for (int i = 0; i < 64; ++i)
-				{
-					if (this.teleportRandomly())
-					{
+				for (int i = 0; i < 64; ++i) {
+					if (this.teleportRandomly()) {
 						return true;
 					}
 				}
 
 				return super.attackEntityFrom(p_70097_1_, p_70097_2_);
-			}
-			else
-			{
+			} else {
 				return super.attackEntityFrom(p_70097_1_, p_70097_2_);
 			}
 		}
 	}
 
-	public boolean isScreaming()
-	{
+	public boolean isScreaming() {
 		return this.dataWatcher.getWatchableObjectByte(18) > 0;
 	}
 
-	public void setScreaming(boolean p_70819_1_)
-	{
-		this.dataWatcher.updateObject(18, Byte.valueOf((byte)(p_70819_1_ ? 1 : 0)));
+	public void setScreaming(boolean p_70819_1_) {
+		this.dataWatcher.updateObject(18, Byte.valueOf((byte) (p_70819_1_ ? 1 : 0)));
 	}
 
-	static
-	{
+	static {
 		carriableBlocks[Block.getIdFromBlock(Blocks.grass)] = true;
 		carriableBlocks[Block.getIdFromBlock(Blocks.dirt)] = true;
 		carriableBlocks[Block.getIdFromBlock(Blocks.sand)] = true;
@@ -522,25 +441,27 @@ public class EntityEvolvedEnderman extends EntityMob implements IEntityBreathabl
 		carriableBlocks[Block.getIdFromBlock(Blocks.pumpkin)] = true;
 		carriableBlocks[Block.getIdFromBlock(Blocks.melon_block)] = true;
 		carriableBlocks[Block.getIdFromBlock(Blocks.mycelium)] = true;
-		for (int x = 0; x < carriableBlocks.length; x++)
-		{
-			if (carriableBlocks[x]) setCarriable(Block.getBlockById(x), true);
+		for (int x = 0; x < carriableBlocks.length; x++) {
+			if (carriableBlocks[x])
+				setCarriable(Block.getBlockById(x), true);
 		}
 	}
 
-	/*===================================== Forge Start ==============================*/
+	/* ===================================== Forge Start ============================== */
 	private static IdentityHashMap<Block, Boolean> carriable;
-	public static void setCarriable(Block block, boolean canCarry)
-	{
-		if (carriable == null) carriable = new IdentityHashMap<Block, Boolean>(4096);
+
+	public static void setCarriable(Block block, boolean canCarry) {
+		if (carriable == null)
+			carriable = new IdentityHashMap<Block, Boolean>(4096);
 		carriable.put(block, canCarry);
 	}
-	public static boolean getCarriable(Block block)
-	{
+
+	public static boolean getCarriable(Block block) {
 		Boolean ret = carriable.get(block);
 		return ret != null ? ret : false;
 	}
-	/*===================================== Forge End ==============================*/
+
+	/* ===================================== Forge End ============================== */
 
 	@Override
 	public boolean canBreath() {

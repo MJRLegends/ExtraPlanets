@@ -11,8 +11,7 @@ public class EuropaBiomes extends BiomeGenBase {
 	public static final BiomeGenBase europa = new BiomeGenEuropa(Config.europaBiomeID).setBiomeName("europa");
 
 	@SuppressWarnings("unchecked")
-	EuropaBiomes(int var1)
-	{
+	EuropaBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class EuropaBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public EuropaBiomes setColor(int var1)
-	{
+	public EuropaBiomes setColor(int var1) {
 		return (EuropaBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

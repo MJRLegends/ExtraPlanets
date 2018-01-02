@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.village;
 
-
 public class StructureVillagePieceWeightJupiter {
 	public Class<? extends StructureComponentJupiterVillage> villagePieceClass;
 	public final int villagePieceWeight;

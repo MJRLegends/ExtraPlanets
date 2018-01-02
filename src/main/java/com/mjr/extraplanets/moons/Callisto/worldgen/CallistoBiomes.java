@@ -11,8 +11,7 @@ public class CallistoBiomes extends BiomeGenBase {
 	public static final BiomeGenBase callisto = new BiomeGenCallisto(Config.callistoBiomeID).setBiomeName("callisto");
 
 	@SuppressWarnings("unchecked")
-	CallistoBiomes(int var1)
-	{
+	CallistoBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class CallistoBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public CallistoBiomes setColor(int var1)
-	{
+	public CallistoBiomes setColor(int var1) {
 		return (CallistoBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

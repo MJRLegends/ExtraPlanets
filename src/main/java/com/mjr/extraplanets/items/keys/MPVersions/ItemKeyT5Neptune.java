@@ -17,13 +17,11 @@ import com.mjr.extraplanets.ExtraPlanets;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemKeyT5Neptune extends Item implements IKeyItem
-{
+public class ItemKeyT5Neptune extends Item implements IKeyItem {
 	public static String[] keyTypes = new String[] { "T5_neptune" };
 	public IIcon[] keyIcons = new IIcon[1];
 
-	public ItemKeyT5Neptune()
-	{
+	public ItemKeyT5Neptune() {
 		super();
 		this.setMaxStackSize(1);
 		this.setMaxDamage(0);
@@ -32,35 +30,29 @@ public class ItemKeyT5Neptune extends Item implements IKeyItem
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemStack)
-	{
+	public String getUnlocalizedName(ItemStack itemStack) {
 		return "item." + "key." + ItemKeyT5Neptune.keyTypes[itemStack.getItemDamage()];
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack)
-	{
+	public EnumRarity getRarity(ItemStack par1ItemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister iconRegister)
-	{
+	public void registerIcons(IIconRegister iconRegister) {
 		int i = 0;
 
-		for (final String name : ItemKeyT5Neptune.keyTypes)
-		{
+		for (final String name : ItemKeyT5Neptune.keyTypes) {
 			this.keyIcons[i++] = iconRegister.registerIcon(MarsModule.TEXTURE_PREFIX + "key_" + name);
 		}
 	}
 
 	@Override
-	public IIcon getIconFromDamage(int damage)
-	{
-		if (this.keyIcons.length > damage)
-		{
+	public IIcon getIconFromDamage(int damage) {
+		if (this.keyIcons.length > damage) {
 			return this.keyIcons[damage];
 		}
 
@@ -69,23 +61,19 @@ public class ItemKeyT5Neptune extends Item implements IKeyItem
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List)
-	{
-		for (int i = 0; i < ItemKeyT5Neptune.keyTypes.length; i++)
-		{
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+		for (int i = 0; i < ItemKeyT5Neptune.keyTypes.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
 
 	@Override
-	public int getMetadata(int par1)
-	{
+	public int getMetadata(int par1) {
 		return par1;
 	}
 
 	@Override
-	public int getTier(ItemStack keyStack)
-	{
+	public int getTier(ItemStack keyStack) {
 		return 5;
 	}
 }

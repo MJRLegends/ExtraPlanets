@@ -43,7 +43,8 @@ public class StructureVillagePiecesGanymede {
 		return var1 ? var2 : -1;
 	}
 
-	private static StructureComponentGanymedeVillage func_75083_a(StructureComponentGanymedeVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightGanymede par1StructureVillagePieceWeight, List<StructureComponent> par2List, Random par3Random, int par4, int par5, int par6, int par7, int par8) {
+	private static StructureComponentGanymedeVillage func_75083_a(StructureComponentGanymedeVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightGanymede par1StructureVillagePieceWeight, List<StructureComponent> par2List,
+			Random par3Random, int par4, int par5, int par6, int par7, int par8) {
 		final Class<?> var9 = par1StructureVillagePieceWeight.villagePieceClass;
 		Object var10 = null;
 
@@ -58,7 +59,8 @@ public class StructureVillagePiecesGanymede {
 		return (StructureComponentGanymedeVillage) var10;
 	}
 
-	private static StructureComponentGanymedeVillage getNextVillageComponent(StructureComponentGanymedeVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
+	private static StructureComponentGanymedeVillage getNextVillageComponent(StructureComponentGanymedeVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6,
+			int par7) {
 		final int var8 = StructureVillagePiecesGanymede.func_75079_a(par0ComponentVillageStartPiece.structureVillageWeightedPieceList);
 
 		if (var8 <= 0) {

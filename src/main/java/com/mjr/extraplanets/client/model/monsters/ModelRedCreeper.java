@@ -13,8 +13,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class ModelRedCreeper extends ModelBase
-{
+public class ModelRedCreeper extends ModelBase {
 	ModelRenderer leftOxygenTank;
 	ModelRenderer rightOxygenTank;
 	ModelRenderer tubeRight2;
@@ -41,13 +40,11 @@ public class ModelRedCreeper extends ModelBase
 	public ModelRenderer leg3;
 	public ModelRenderer leg4;
 
-	public ModelRedCreeper()
-	{
+	public ModelRedCreeper() {
 		this(0.0F);
 	}
 
-	public ModelRedCreeper(float par1)
-	{
+	public ModelRedCreeper(float par1) {
 		this.textureWidth = 128;
 		this.textureHeight = 64;
 		this.leftOxygenTank = new ModelRenderer(this, 40, 20);
@@ -190,20 +187,17 @@ public class ModelRedCreeper extends ModelBase
 		this.leg4.setTextureSize(128, 64);
 	}
 
-	private void setRotation(ModelRenderer model, float x, float y, float z)
-	{
+	private void setRotation(ModelRenderer model, float x, float y, float z) {
 		model.rotateAngleX = x;
 		model.rotateAngleY = y;
 		model.rotateAngleZ = z;
 	}
 
 	@Override
-	public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7)
-	{
+	public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7) {
 		this.setRotationAngles(par2, par3, par4, par5, par6, par7);
 
-		if (this.isChild)
-		{
+		if (this.isChild) {
 			float f6 = 2.0F;
 			GL11.glPushMatrix();
 			GL11.glScalef(1.5F / f6, 1.5F / f6, 1.5F / f6);
@@ -237,9 +231,7 @@ public class ModelRedCreeper extends ModelBase
 			this.leg3.render(par7);
 			this.leg4.render(par7);
 			GL11.glPopMatrix();
-		}
-		else
-		{
+		} else {
 			this.leftOxygenTank.render(par7);
 			this.rightOxygenTank.render(par7);
 			this.tubeRight2.render(par7);
@@ -267,8 +259,7 @@ public class ModelRedCreeper extends ModelBase
 		}
 	}
 
-	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6)
-	{
+	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6) {
 		this.oxygenMask.rotateAngleY = par4 / (180F / Constants.floatPI);
 		this.oxygenMask.rotateAngleX = par5 / (180F / Constants.floatPI);
 		this.head.rotateAngleY = par4 / (180F / Constants.floatPI);

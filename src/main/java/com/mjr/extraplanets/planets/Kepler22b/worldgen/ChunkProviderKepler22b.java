@@ -26,7 +26,7 @@ public class ChunkProviderKepler22b extends ChunkProviderSpaceNormal {
 		generators.add(this.caveGenerator);
 		return generators;
 	}
-	
+
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
 	}

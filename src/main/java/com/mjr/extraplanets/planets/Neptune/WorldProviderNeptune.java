@@ -97,7 +97,7 @@ public class WorldProviderNeptune extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public float getGravity() {
-		if(Config.oldStyleGravity)
+		if (Config.oldStyleGravity)
 			return 0.058F;
 		else
 			return 0.010F;
@@ -125,7 +125,7 @@ public class WorldProviderNeptune extends WorldProviderSpace implements IGalacti
 
 	@Override
 	public float getFallDamageModifier() {
-		if(Config.oldStyleGravity)
+		if (Config.oldStyleGravity)
 			return 0.38F;
 		else
 			return 3.2F;

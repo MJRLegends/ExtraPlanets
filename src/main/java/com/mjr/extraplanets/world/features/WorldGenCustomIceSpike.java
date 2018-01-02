@@ -11,10 +11,8 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenCustomIceSpike extends WorldGenerator {
 
-	public boolean generate(World p_76484_1_, Random p_76484_2_,
-			int p_76484_3_, int p_76484_4_, int p_76484_5_, Block surfaceblock) {
-		while (p_76484_1_.isAirBlock(p_76484_3_, p_76484_4_, p_76484_5_)
-				&& p_76484_4_ > 2) {
+	public boolean generate(World p_76484_1_, Random p_76484_2_, int p_76484_3_, int p_76484_4_, int p_76484_5_, Block surfaceblock) {
+		while (p_76484_1_.isAirBlock(p_76484_3_, p_76484_4_, p_76484_5_) && p_76484_4_ > 2) {
 			--p_76484_4_;
 		}
 
@@ -43,32 +41,18 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 					for (int i2 = -k1; i2 <= k1; ++i2) {
 						float f2 = MathHelper.abs_int(i2) - 0.25F;
 
-						if ((l1 == 0 && i2 == 0 || f1 * f1 + f2 * f2 <= f * f)
-								&& (l1 != -k1 && l1 != k1 && i2 != -k1
-								&& i2 != k1 || p_76484_2_.nextFloat() <= 0.75F)) {
-							Block block = p_76484_1_.getBlock(p_76484_3_ + l1,
-									p_76484_4_ + j1, p_76484_5_ + i2);
+						if ((l1 == 0 && i2 == 0 || f1 * f1 + f2 * f2 <= f * f) && (l1 != -k1 && l1 != k1 && i2 != -k1 && i2 != k1 || p_76484_2_.nextFloat() <= 0.75F)) {
+							Block block = p_76484_1_.getBlock(p_76484_3_ + l1, p_76484_4_ + j1, p_76484_5_ + i2);
 
-							if (block.getMaterial() == Material.air
-									|| block == Blocks.dirt
-									|| block == Blocks.snow
-									|| block == Blocks.ice) {
-								this.func_150515_a(p_76484_1_, p_76484_3_ + l1,
-										p_76484_4_ + j1, p_76484_5_ + i2,
-										Blocks.packed_ice);
+							if (block.getMaterial() == Material.air || block == Blocks.dirt || block == Blocks.snow || block == Blocks.ice) {
+								this.func_150515_a(p_76484_1_, p_76484_3_ + l1, p_76484_4_ + j1, p_76484_5_ + i2, Blocks.packed_ice);
 							}
 
 							if (j1 != 0 && k1 > 1) {
-								block = p_76484_1_.getBlock(p_76484_3_ + l1,
-										p_76484_4_ - j1, p_76484_5_ + i2);
+								block = p_76484_1_.getBlock(p_76484_3_ + l1, p_76484_4_ - j1, p_76484_5_ + i2);
 
-								if (block.getMaterial() == Material.air
-										|| block == Blocks.dirt
-										|| block == Blocks.snow
-										|| block == Blocks.ice) {
-									this.func_150515_a(p_76484_1_, p_76484_3_
-											+ l1, p_76484_4_ - j1, p_76484_5_
-											+ i2, Blocks.packed_ice);
+								if (block.getMaterial() == Material.air || block == Blocks.dirt || block == Blocks.snow || block == Blocks.ice) {
+									this.func_150515_a(p_76484_1_, p_76484_3_ + l1, p_76484_4_ - j1, p_76484_5_ + i2, Blocks.packed_ice);
 								}
 							}
 						}
@@ -97,16 +81,10 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 
 					while (true) {
 						if (l1 > 50) {
-							Block block1 = p_76484_1_.getBlock(p_76484_3_ + j2,
-									l1, p_76484_5_ + k1);
+							Block block1 = p_76484_1_.getBlock(p_76484_3_ + j2, l1, p_76484_5_ + k1);
 
-							if (block1.getMaterial() == Material.air
-									|| block1 == Blocks.dirt
-									|| block1 == Blocks.snow
-									|| block1 == Blocks.ice
-									|| block1 == Blocks.packed_ice) {
-								this.func_150515_a(p_76484_1_, p_76484_3_ + j2,
-										l1, p_76484_5_ + k1, Blocks.packed_ice);
+							if (block1.getMaterial() == Material.air || block1 == Blocks.dirt || block1 == Blocks.snow || block1 == Blocks.ice || block1 == Blocks.packed_ice) {
+								this.func_150515_a(p_76484_1_, p_76484_3_ + j2, l1, p_76484_5_ + k1, Blocks.packed_ice);
 								--l1;
 								--k2;
 
@@ -130,10 +108,8 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 	}
 
 	@Override
-	public boolean generate(World p_76484_1_, Random p_76484_2_,
-			int p_76484_3_, int p_76484_4_, int p_76484_5_) {
-		while (p_76484_1_.isAirBlock(p_76484_3_, p_76484_4_, p_76484_5_)
-				&& p_76484_4_ > 2) {
+	public boolean generate(World p_76484_1_, Random p_76484_2_, int p_76484_3_, int p_76484_4_, int p_76484_5_) {
+		while (p_76484_1_.isAirBlock(p_76484_3_, p_76484_4_, p_76484_5_) && p_76484_4_ > 2) {
 			--p_76484_4_;
 		}
 
@@ -162,32 +138,18 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 					for (int i2 = -k1; i2 <= k1; ++i2) {
 						float f2 = MathHelper.abs_int(i2) - 0.25F;
 
-						if ((l1 == 0 && i2 == 0 || f1 * f1 + f2 * f2 <= f * f)
-								&& (l1 != -k1 && l1 != k1 && i2 != -k1
-								&& i2 != k1 || p_76484_2_.nextFloat() <= 0.75F)) {
-							Block block = p_76484_1_.getBlock(p_76484_3_ + l1,
-									p_76484_4_ + j1, p_76484_5_ + i2);
+						if ((l1 == 0 && i2 == 0 || f1 * f1 + f2 * f2 <= f * f) && (l1 != -k1 && l1 != k1 && i2 != -k1 && i2 != k1 || p_76484_2_.nextFloat() <= 0.75F)) {
+							Block block = p_76484_1_.getBlock(p_76484_3_ + l1, p_76484_4_ + j1, p_76484_5_ + i2);
 
-							if (block.getMaterial() == Material.air
-									|| block == Blocks.dirt
-									|| block == Blocks.snow
-									|| block == Blocks.ice) {
-								this.func_150515_a(p_76484_1_, p_76484_3_ + l1,
-										p_76484_4_ + j1, p_76484_5_ + i2,
-										Blocks.packed_ice);
+							if (block.getMaterial() == Material.air || block == Blocks.dirt || block == Blocks.snow || block == Blocks.ice) {
+								this.func_150515_a(p_76484_1_, p_76484_3_ + l1, p_76484_4_ + j1, p_76484_5_ + i2, Blocks.packed_ice);
 							}
 
 							if (j1 != 0 && k1 > 1) {
-								block = p_76484_1_.getBlock(p_76484_3_ + l1,
-										p_76484_4_ - j1, p_76484_5_ + i2);
+								block = p_76484_1_.getBlock(p_76484_3_ + l1, p_76484_4_ - j1, p_76484_5_ + i2);
 
-								if (block.getMaterial() == Material.air
-										|| block == Blocks.dirt
-										|| block == Blocks.snow
-										|| block == Blocks.ice) {
-									this.func_150515_a(p_76484_1_, p_76484_3_
-											+ l1, p_76484_4_ - j1, p_76484_5_
-											+ i2, Blocks.packed_ice);
+								if (block.getMaterial() == Material.air || block == Blocks.dirt || block == Blocks.snow || block == Blocks.ice) {
+									this.func_150515_a(p_76484_1_, p_76484_3_ + l1, p_76484_4_ - j1, p_76484_5_ + i2, Blocks.packed_ice);
 								}
 							}
 						}
@@ -216,16 +178,10 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 
 					while (true) {
 						if (l1 > 50) {
-							Block block1 = p_76484_1_.getBlock(p_76484_3_ + j2,
-									l1, p_76484_5_ + k1);
+							Block block1 = p_76484_1_.getBlock(p_76484_3_ + j2, l1, p_76484_5_ + k1);
 
-							if (block1.getMaterial() == Material.air
-									|| block1 == Blocks.dirt
-									|| block1 == Blocks.snow
-									|| block1 == Blocks.ice
-									|| block1 == Blocks.packed_ice) {
-								this.func_150515_a(p_76484_1_, p_76484_3_ + j2,
-										l1, p_76484_5_ + k1, Blocks.packed_ice);
+							if (block1.getMaterial() == Material.air || block1 == Blocks.dirt || block1 == Blocks.snow || block1 == Blocks.ice || block1 == Blocks.packed_ice) {
+								this.func_150515_a(p_76484_1_, p_76484_3_ + j2, l1, p_76484_5_ + k1, Blocks.packed_ice);
 								--l1;
 								--k2;
 

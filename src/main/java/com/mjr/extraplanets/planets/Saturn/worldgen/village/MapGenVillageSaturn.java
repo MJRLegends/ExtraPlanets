@@ -71,7 +71,7 @@ public class MapGenVillageSaturn extends MapGenStructure {
 
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2) {
-		if(Config.debugMode)
+		if (Config.debugMode)
 			MessageUtilities.debugMessageToLog("Generating Village at x" + par1 * 16 + " z" + par2 * 16);
 		return new StructureVillageStartSaturn(this.worldObj, this.rand, par1, par2, this.terrainType);
 	}

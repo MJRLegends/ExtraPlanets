@@ -169,10 +169,10 @@ public class RenderMarsRover extends Render {
 		this.modelRover.renderPart("WindowFront2");
 		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
-		
+
 		this.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/solar_panel.png"));
 		this.modelRover.renderPart("SolarPlane");
-		
+
 		this.bindTexture(RenderMarsRover.buggyTextureBatteryBolt);
 		this.modelRover.renderPart("Lightning");
 		this.modelRover.renderPart("Lightning2");

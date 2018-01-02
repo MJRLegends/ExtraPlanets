@@ -20,65 +20,55 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class DungeonSpawnerEris extends Block{
-	public DungeonSpawnerEris()
-	{
+public class DungeonSpawnerEris extends Block {
+	public DungeonSpawnerEris() {
 		super(Material.rock);
 		this.setBlockTextureName(GalacticraftCore.TEXTURE_PREFIX + "blank");
 	}
 
 	@Override
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
-	{
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
 		return null;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z)
-	{
+	public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
 		return AxisAlignedBB.getBoundingBox(x + 0.0D, y + 0.0D, z + 0.0D, x + 0.0D, y + 0.0D, z + 0.0D);
 	}
 
 	@Override
-	public float getExplosionResistance(Entity par1Entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ)
-	{
+	public float getExplosionResistance(Entity par1Entity, World world, int x, int y, int z, double explosionX, double explosionY, double explosionZ) {
 		return 10000.0F;
 	}
 
 	@Override
-	public float getBlockHardness(World par1World, int par2, int par3, int par4)
-	{
+	public float getBlockHardness(World par1World, int par2, int par3, int par4) {
 		return -1.0F;
 	}
 
 	@Override
-	public TileEntity createTileEntity(World world, int metadata)
-	{
+	public TileEntity createTileEntity(World world, int metadata) {
 		return new TileEntityDungeonSpawnerEris();
 	}
 
 	@Override
-	public boolean canHarvestBlock(EntityPlayer player, int meta)
-	{
+	public boolean canHarvestBlock(EntityPlayer player, int meta) {
 		return false;
 	}
 
 	@Override
-	public Item getItemDropped(int meta, Random random, int par3)
-	{
+	public Item getItemDropped(int meta, Random random, int par3) {
 		return Item.getItemFromBlock(Blocks.air);
 	}
 
 	@Override
-	public int quantityDropped(int meta, int fortune, Random random)
-	{
+	public int quantityDropped(int meta, int fortune, Random random) {
 		return 0;
 	}
 
 	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)
-	{
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z) {
 		return null;
 	}
 }

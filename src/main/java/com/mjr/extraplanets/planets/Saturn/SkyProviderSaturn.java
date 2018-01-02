@@ -252,7 +252,7 @@ public class SkyProviderSaturn extends IRenderHandler {
 		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
 		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
 		tessellator1.draw();
-		
+
 		// Render earth
 		f10 = 3.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
@@ -266,7 +266,7 @@ public class SkyProviderSaturn extends IRenderHandler {
 		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
 		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
 		tessellator1.draw();
-		
+
 		// Render earth
 		f10 = 3.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
@@ -280,7 +280,7 @@ public class SkyProviderSaturn extends IRenderHandler {
 		tessellator1.addVertexWithUV(f10, -100.0D, -f10, 1, 0);
 		tessellator1.addVertexWithUV(-f10, -100.0D, -f10, 0, 0);
 		tessellator1.draw();
-		
+
 		// Render earth
 		f10 = 3.5F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
@@ -400,7 +400,7 @@ public class SkyProviderSaturn extends IRenderHandler {
 
 		var2.draw();
 	}
-	
+
 	public float getSkyBrightness(float par1) {
 		final float var2 = FMLClientHandler.instance().getClient().theWorld.getCelestialAngle(par1);
 		float var3 = 1.0F - (MathHelper.sin(var2 * Constants.twoPI) * 2.0F + 0.25F);

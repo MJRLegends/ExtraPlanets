@@ -109,7 +109,7 @@ public class ExtraPlanets_Achievements {
 		if (Config.ceres)
 			ceres_planet = new Achievement("achievement.ceres_planet", "ceres_planet", 7, 1, ExtraPlanets_Blocks.ceresBlocks, (Achievement) null).registerStat();
 
-		//Boss Killing Achievements
+		// Boss Killing Achievements
 		if (Config.venus)
 			venus_boss = new Achievement("achievement.venus_boss", "venus_boss", 3, 5, ExtraPlanets_Blocks.veunsDungeonBrick, venus_planet).registerStat();
 		if (Config.jupiter)

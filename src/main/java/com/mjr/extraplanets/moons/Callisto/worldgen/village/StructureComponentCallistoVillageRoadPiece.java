@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Callisto.worldgen.village;
 
-
 public abstract class StructureComponentCallistoVillageRoadPiece extends StructureComponentCallistoVillage {
 	public StructureComponentCallistoVillageRoadPiece() {
 	}

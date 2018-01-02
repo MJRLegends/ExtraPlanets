@@ -13,19 +13,16 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerPluto;
 
-public class RoomBossPluto extends DungeonRoom
-{
+public class RoomBossPluto extends DungeonRoom {
 	public int sizeX;
 	public int sizeY;
 	public int sizeZ;
 	Random rand;
 	ChunkCoordinates spawnerCoords;
 
-	public RoomBossPluto(MapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir)
-	{
+	public RoomBossPluto(MapGenDungeon dungeon, int posX, int posY, int posZ, ForgeDirection entranceDir) {
 		super(dungeon, posX, posY, posZ, entranceDir);
-		if (this.worldObj != null)
-		{
+		if (this.worldObj != null) {
 			this.rand = new Random(this.worldObj.getSeed() * posX * posY * 57 * posZ);
 			this.sizeX = 24;
 			this.sizeY = 11;
@@ -34,32 +31,23 @@ public class RoomBossPluto extends DungeonRoom
 	}
 
 	@Override
-	public void generate(Block[] chunk, byte[] meta, int cx, int cz)
-	{
-		for (int i = this.posX - 1; i <= this.posX + this.sizeX; i++)
-		{
-			for (int k = this.posZ - 1; k <= this.posZ + this.sizeZ; k++)
-			{
-				for (int j = this.posY - 1; j <= this.posY + this.sizeY; j++)
-				{
-					if (i == this.posX - 1 || i == this.posX + this.sizeX || j == this.posY - 1 || j == this.posY + this.sizeY || k == this.posZ - 1 || k == this.posZ + this.sizeZ)
-					{
+	public void generate(Block[] chunk, byte[] meta, int cx, int cz) {
+		for (int i = this.posX - 1; i <= this.posX + this.sizeX; i++) {
+			for (int k = this.posZ - 1; k <= this.posZ + this.sizeZ; k++) {
+				for (int j = this.posY - 1; j <= this.posY + this.sizeY; j++) {
+					if (i == this.posX - 1 || i == this.posX + this.sizeX || j == this.posY - 1 || j == this.posY + this.sizeY || k == this.posZ - 1 || k == this.posZ + this.sizeZ) {
 						this.placeBlock(chunk, meta, i, j, k, cx, cz, this.dungeonInstance.DUNGEON_WALL_ID, this.dungeonInstance.DUNGEON_WALL_META);
-					}
-					else if (i == this.posX && k == this.posZ || i == this.posX + this.sizeX - 1 && k == this.posZ || i == this.posX && k == this.posZ + this.sizeZ - 1 || i == this.posX + this.sizeX - 1 && k == this.posZ + this.sizeZ - 1)
-					{
+					} else if (i == this.posX && k == this.posZ || i == this.posX + this.sizeX - 1 && k == this.posZ || i == this.posX && k == this.posZ + this.sizeZ - 1 || i == this.posX + this.sizeX - 1 && k == this.posZ + this.sizeZ - 1) {
 						this.placeBlock(chunk, meta, i, j, k, cx, cz, Blocks.flowing_lava, 0);
-					}
-					else if (j % 3 == 0 && j >= this.posY + 2 && (i == this.posX || i == this.posX + this.sizeX - 1 || k == this.posZ || k == this.posZ + this.sizeZ - 1) || i == this.posX + 1 && k == this.posZ || i == this.posX && k == this.posZ + 1 || i == this.posX + this.sizeX - 2 && k == this.posZ || i == this.posX + this.sizeX - 1 && k == this.posZ + 1 || i == this.posX + 1 && k == this.posZ + this.sizeZ - 1 || i == this.posX && k == this.posZ + this.sizeZ - 2 || i == this.posX + this.sizeX - 2 && k == this.posZ + this.sizeZ - 1 || i == this.posX + this.sizeX - 1 && k == this.posZ + this.sizeZ - 2)
-					{
+					} else if (j % 3 == 0 && j >= this.posY + 2 && (i == this.posX || i == this.posX + this.sizeX - 1 || k == this.posZ || k == this.posZ + this.sizeZ - 1) || i == this.posX + 1 && k == this.posZ || i == this.posX
+							&& k == this.posZ + 1 || i == this.posX + this.sizeX - 2 && k == this.posZ || i == this.posX + this.sizeX - 1 && k == this.posZ + 1 || i == this.posX + 1 && k == this.posZ + this.sizeZ - 1 || i == this.posX
+							&& k == this.posZ + this.sizeZ - 2 || i == this.posX + this.sizeX - 2 && k == this.posZ + this.sizeZ - 1 || i == this.posX + this.sizeX - 1 && k == this.posZ + this.sizeZ - 2) {
 						this.placeBlock(chunk, meta, i, j, k, cx, cz, Blocks.iron_bars, 0);
-					}
-					else if ((i == this.posX + 1 && k == this.posZ + 1 || i == this.posX + this.sizeX - 2 && k == this.posZ + 1 || i == this.posX + 1 && k == this.posZ + this.sizeZ - 2 || i == this.posX + this.sizeX - 2 && k == this.posZ + this.sizeZ - 2) && j % 3 == 0)
-					{
+					} else if ((i == this.posX + 1 && k == this.posZ + 1 || i == this.posX + this.sizeX - 2 && k == this.posZ + 1 || i == this.posX + 1 && k == this.posZ + this.sizeZ - 2 || i == this.posX + this.sizeX - 2
+							&& k == this.posZ + this.sizeZ - 2)
+							&& j % 3 == 0) {
 						this.placeBlock(chunk, meta, i, j, k, cx, cz, Blocks.iron_bars, 0);
-					}
-					else
-					{
+					} else {
 						this.placeBlock(chunk, meta, i, j, k, cx, cz, Blocks.air, 0);
 					}
 				}
@@ -72,22 +60,18 @@ public class RoomBossPluto extends DungeonRoom
 	}
 
 	@Override
-	public DungeonBoundingBox getBoundingBox()
-	{
+	public DungeonBoundingBox getBoundingBox() {
 		return new DungeonBoundingBox(this.posX, this.posZ, this.posX + this.sizeX, this.posZ + this.sizeZ);
 	}
 
 	@Override
-	protected DungeonRoom makeRoom(MapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir)
-	{
+	protected DungeonRoom makeRoom(MapGenDungeon dungeon, int x, int y, int z, ForgeDirection dir) {
 		return new RoomBossPluto(dungeon, x, y, z, dir);
 	}
 
 	@Override
-	protected void handleTileEntities(Random rand)
-	{
-		if (this.spawnerCoords == null)
-		{
+	protected void handleTileEntities(Random rand) {
+		if (this.spawnerCoords == null) {
 			return;
 		}
 
@@ -95,14 +79,11 @@ public class RoomBossPluto extends DungeonRoom
 
 		final TileEntity tile = this.worldObj.getTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ);
 
-		if (tile == null || !(tile instanceof TileEntityDungeonSpawnerPluto))
-		{
+		if (tile == null || !(tile instanceof TileEntityDungeonSpawnerPluto)) {
 			TileEntityDungeonSpawnerPluto spawner = new TileEntityDungeonSpawnerPluto();
 			spawner.setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
 			this.worldObj.setTileEntity(this.spawnerCoords.posX, this.spawnerCoords.posY, this.spawnerCoords.posZ, spawner);
-		}
-		else if (tile instanceof TileEntityDungeonSpawner)
-		{
+		} else if (tile instanceof TileEntityDungeonSpawner) {
 			((TileEntityDungeonSpawner) tile).setRoom(new Vector3(this.posX, this.posY, this.posZ), new Vector3(this.sizeX, this.sizeY, this.sizeZ));
 		}
 	}

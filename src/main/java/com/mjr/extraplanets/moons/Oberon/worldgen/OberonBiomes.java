@@ -11,8 +11,7 @@ public class OberonBiomes extends BiomeGenBase {
 	public static final BiomeGenBase oberon = new BiomeGenOberon(Config.oberonBiomeID).setBiomeName("oberon");
 
 	@SuppressWarnings("unchecked")
-	OberonBiomes(int var1)
-	{
+	OberonBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class OberonBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public OberonBiomes setColor(int var1)
-	{
+	public OberonBiomes setColor(int var1) {
 		return (OberonBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

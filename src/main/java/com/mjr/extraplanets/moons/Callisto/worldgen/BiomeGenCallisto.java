@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Callisto.worldgen;
 
 public class BiomeGenCallisto extends CallistoBiomes {
 
-	public BiomeGenCallisto(int par1)
-	{
+	public BiomeGenCallisto(int par1) {
 		super(par1);
 		this.setBiomeName("callisto");
 		this.setColor(16711680);

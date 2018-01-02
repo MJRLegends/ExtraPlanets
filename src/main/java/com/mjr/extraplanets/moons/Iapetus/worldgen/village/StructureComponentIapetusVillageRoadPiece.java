@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Iapetus.worldgen.village;
 
-
 public abstract class StructureComponentIapetusVillageRoadPiece extends StructureComponentIapetusVillage {
 	public StructureComponentIapetusVillageRoadPiece() {
 	}

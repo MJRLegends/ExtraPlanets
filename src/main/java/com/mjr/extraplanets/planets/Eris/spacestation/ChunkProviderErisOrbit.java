@@ -20,46 +20,39 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 
-public class ChunkProviderErisOrbit extends ChunkProviderGenerate
-{
+public class ChunkProviderErisOrbit extends ChunkProviderGenerate {
 	private final Random rand;
 
 	private final World worldObj;
 
-	public ChunkProviderErisOrbit(World par1World, long par2, boolean par4)
-	{
+	public ChunkProviderErisOrbit(World par1World, long par2, boolean par4) {
 		super(par1World, par2, par4);
 		this.rand = new Random(par2);
 		this.worldObj = par1World;
 	}
 
 	@Override
-	public boolean unloadQueuedChunks()
-	{
+	public boolean unloadQueuedChunks() {
 		return false;
 	}
 
 	@Override
-	public int getLoadedChunkCount()
-	{
+	public int getLoadedChunkCount() {
 		return 0;
 	}
 
 	@Override
-	public boolean saveChunks(boolean var1, IProgressUpdate var2)
-	{
+	public boolean saveChunks(boolean var1, IProgressUpdate var2) {
 		return true;
 	}
 
 	@Override
-	public boolean canSave()
-	{
+	public boolean canSave() {
 		return true;
 	}
 
 	@Override
-	public Chunk provideChunk(int par1, int par2)
-	{
+	public Chunk provideChunk(int par1, int par2) {
 		this.rand.setSeed(par1 * 341873128712L + par2 * 132897987541L);
 		final Block[] ids = new Block[32768];
 		Arrays.fill(ids, Blocks.air);
@@ -68,25 +61,21 @@ public class ChunkProviderErisOrbit extends ChunkProviderGenerate
 		final Chunk var4 = new Chunk(this.worldObj, ids, meta, par1, par2);
 
 		final byte[] biomesArray = var4.getBiomeArray();
-		for (int i = 0; i < biomesArray.length; ++i)
-		{
+		for (int i = 0; i < biomesArray.length; ++i) {
 			biomesArray[i] = (byte) BiomeGenBaseOrbit.space.biomeID;
 		}
-
 
 		var4.generateSkylightMap();
 		return var4;
 	}
 
 	@Override
-	public boolean chunkExists(int par1, int par2)
-	{
+	public boolean chunkExists(int par1, int par2) {
 		return true;
 	}
 
 	@Override
-	public void populate(IChunkProvider par1IChunkProvider, int par2, int par3)
-	{
+	public void populate(IChunkProvider par1IChunkProvider, int par2, int par3) {
 		BlockFalling.fallInstantly = true;
 		final int k = par2 * 16;
 		final int l = par3 * 16;
@@ -94,14 +83,12 @@ public class ChunkProviderErisOrbit extends ChunkProviderGenerate
 		final long i1 = this.rand.nextLong() / 2L * 2L + 1L;
 		final long j1 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(par2 * i1 + par3 * j1 ^ this.worldObj.getSeed());
-		if (k == 0 && l == 0)
-		{
+		if (k == 0 && l == 0) {
 			this.worldObj.setBlock(k, 64, l, GCBlocks.spaceStationBase, 0, 3);
 
 			final TileEntity var8 = this.worldObj.getTileEntity(k, 64, l);
 
-			if (var8 instanceof IMultiBlock)
-			{
+			if (var8 instanceof IMultiBlock) {
 				((IMultiBlock) var8).onCreate(new BlockVec3(k, 64, l));
 			}
 
@@ -111,14 +98,12 @@ public class ChunkProviderErisOrbit extends ChunkProviderGenerate
 	}
 
 	@Override
-	public String makeString()
-	{
+	public String makeString() {
 		return "ErisOrbitLevelSource";
 	}
 
 	@Override
-	public List<?> getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int i, int j, int k)
-	{
+	public List<?> getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int i, int j, int k) {
 		return null;
 	}
 }

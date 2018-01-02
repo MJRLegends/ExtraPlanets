@@ -30,7 +30,7 @@ public class ItemRendererMarsRover implements IItemRenderer {
 	private final IModelCustom modelRover;
 	private final IModelCustom modelRoverWheelLeft = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover-Wheel.obj"));
 	private final IModelCustom modelRoverWheelRight = AdvancedModelLoader.loadModel(new ResourceLocation(Constants.ASSET_PREFIX, "models/MarsRover-Wheel.obj"));
-	
+
 	public ItemRendererMarsRover(IModelCustom modelRover) {
 		super();
 		this.modelRover = modelRover;

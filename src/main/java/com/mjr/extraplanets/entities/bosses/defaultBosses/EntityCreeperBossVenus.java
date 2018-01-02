@@ -163,8 +163,7 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 
 		if (!this.worldObj.isRemote) {
 			if (this.deathTicks >= 180 && this.deathTicks % 5 == 0) {
-				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_EXPLODE, new Object[] {}),
-						new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 40.0D));
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_EXPLODE, new Object[] {}), new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 40.0D));
 				// PacketDispatcher.sendPacketToAllAround(this.posX, this.posY,
 				// this.posZ, 40.0, this.worldObj.provider.dimensionId,
 				// PacketUtil.createPacket(GalacticraftCore.CHANNEL,
@@ -182,9 +181,7 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 			}
 
 			if (this.deathTicks == 1) {
-				GalacticraftCore.packetPipeline.sendToAllAround(
-						new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, new Object[] {}), new TargetPoint(
-								this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 40.0D));
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, new Object[] {}), new TargetPoint(this.worldObj.provider.dimensionId, this.posX, this.posY, this.posZ, 40.0D));
 				// PacketDispatcher.sendPacketToAllAround(this.posX, this.posY,
 				// this.posZ, 40.0, this.worldObj.provider.dimensionId,
 				// PacketUtil.createPacket(GalacticraftCore.CHANNEL,
@@ -225,12 +222,9 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 
 						// Generate three times, since it's an extra extra
 						// special chest
-						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest,
-								info.getCount(this.rand));
-						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest,
-								info.getCount(this.rand));
-						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest,
-								info.getCount(this.rand));
+						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
+						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
+						WeightedRandomChestContent.generateChestContents(this.rand, info.getItems(this.rand), chest, info.getCount(this.rand));
 
 						chest.setInventorySlotContents(this.rand.nextInt(chest.getSizeInventory()), this.getGuaranteedLoot(this.rand));
 
@@ -292,19 +286,17 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 
 		if (this.roomCoords != null && this.roomSize != null) {
 			@SuppressWarnings("unchecked")
-			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(
-					this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX()
-					+ this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(),
-					this.roomCoords.intZ() + this.roomSize.intZ()));
+			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(
+					EntityPlayer.class,
+					AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ()
+							+ this.roomSize.intZ()));
 
 			this.entitiesWithin = entitiesWithin.size();
 
 			if (this.entitiesWithin == 0 && this.entitiesWithinLast != 0) {
 				@SuppressWarnings("unchecked")
-				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(
-						this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX()
-						+ this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ()
-						+ this.roomSize.intZ() + 10));
+				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX()
+						+ this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
 
 				for (EntityPlayer p : entitiesWithin2) {
 					p.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.skeletonBoss.message")));
@@ -396,8 +388,7 @@ public class EntityCreeperBossVenus extends EntityMob implements IEntityBreathab
 	}
 
 	private void func_82216_a(int par1, EntityLivingBase par2EntityLivingBase) {
-		this.func_82209_a(par1, par2EntityLivingBase.posX, par2EntityLivingBase.posY + par2EntityLivingBase.getEyeHeight() * 0.5D,
-				par2EntityLivingBase.posZ);
+		this.func_82209_a(par1, par2EntityLivingBase.posX, par2EntityLivingBase.posY + par2EntityLivingBase.getEyeHeight() * 0.5D, par2EntityLivingBase.posZ);
 	}
 
 	private void func_82209_a(int par1, double par2, double par4, double par6) {

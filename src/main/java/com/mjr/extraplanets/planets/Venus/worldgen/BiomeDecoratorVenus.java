@@ -60,7 +60,7 @@ public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 		this.generateOre(20, this.carbonGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(30, this.volcanicRockGen, 0, 256);
-		
+
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, this.chunkX, this.chunkZ));

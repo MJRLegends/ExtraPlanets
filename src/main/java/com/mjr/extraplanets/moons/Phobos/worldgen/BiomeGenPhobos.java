@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Phobos.worldgen;
 
 public class BiomeGenPhobos extends PhobosBiomes {
 
-	public BiomeGenPhobos(int par1)
-	{
+	public BiomeGenPhobos(int par1) {
 		super(par1);
 		this.setBiomeName("phobos");
 		this.setColor(16711680);

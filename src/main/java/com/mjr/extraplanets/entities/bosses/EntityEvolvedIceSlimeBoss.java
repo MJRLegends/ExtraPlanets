@@ -129,8 +129,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	/**
-	 * Returns the name of a particle effect that may be randomly created by
-	 * EntitySlime.onUpdate()
+	 * Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
 	 */
 	protected String getSlimeParticle() {
 		return "slime";
@@ -235,46 +234,41 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	@Override
-	public void onLivingUpdate()
-	{
+	public void onLivingUpdate() {
 		final EntityPlayer player = this.worldObj.getClosestPlayer(this.posX, this.posY, this.posZ, 20.0);
 
-		if (player != null && !player.equals(this.targetEntity))
-		{
-			if (this.getDistanceSqToEntity(player) < 400.0D)
-			{
+		if (player != null && !player.equals(this.targetEntity)) {
+			if (this.getDistanceSqToEntity(player) < 400.0D) {
 				this.getNavigator().getPathToEntityLiving(player);
 				this.targetEntity = player;
 			}
-		}
-		else
-		{
+		} else {
 			this.targetEntity = null;
 		}
 
 		new Vector3(this);
 
-		if (this.roomCoords != null && this.roomSize != null)
-		{
+		if (this.roomCoords != null && this.roomSize != null) {
 			@SuppressWarnings("unchecked")
-			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ() + this.roomSize.intZ()));
+			List<Entity> entitiesWithin = this.worldObj.getEntitiesWithinAABB(
+					EntityPlayer.class,
+					AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 1, this.roomCoords.intY() - 1, this.roomCoords.intZ() - 1, this.roomCoords.intX() + this.roomSize.intX(), this.roomCoords.intY() + this.roomSize.intY(), this.roomCoords.intZ()
+							+ this.roomSize.intZ()));
 
 			this.entitiesWithin = entitiesWithin.size();
 
-			if (this.entitiesWithin == 0 && this.entitiesWithinLast != 0)
-			{
+			if (this.entitiesWithin == 0 && this.entitiesWithinLast != 0) {
 				@SuppressWarnings("unchecked")
-				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX() + this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
+				List<EntityPlayer> entitiesWithin2 = this.worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(this.roomCoords.intX() - 11, this.roomCoords.intY() - 11, this.roomCoords.intZ() - 11, this.roomCoords.intX()
+						+ this.roomSize.intX() + 10, this.roomCoords.intY() + this.roomSize.intY() + 10, this.roomCoords.intZ() + this.roomSize.intZ() + 10));
 
-				for (EntityPlayer p : entitiesWithin2)
-				{
+				for (EntityPlayer p : entitiesWithin2) {
 					p.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.skeletonBoss.message")));
 				}
 
 				this.setDead();
 
-				if (this.spawner != null)
-				{
+				if (this.spawner != null) {
 					this.spawner.playerCheated = true;
 				}
 
@@ -284,7 +278,6 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 
 		super.onLivingUpdate();
 	}
-
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -387,7 +380,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if(Config.morePlanetsCompatibilityAdv)
+		if (Config.morePlanetsCompatibilityAdv)
 			stackList = GalacticraftRegistry.getDungeonLoot(3);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(7);
@@ -422,16 +415,14 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	/**
-	 * Indicates weather the slime is able to damage the player (based upon the
-	 * slime's size)
+	 * Indicates weather the slime is able to damage the player (based upon the slime's size)
 	 */
 	protected boolean canDamagePlayer() {
 		return this.getSlimeSize() > 1;
 	}
 
 	/**
-	 * Gets the amount of damage dealt to the player when "attacked" by the
-	 * slime.
+	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
 	 */
 	protected int getAttackStrength() {
 		return this.getSlimeSize();
@@ -467,8 +458,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	/**
-	 * The speed it takes to move the entityliving's rotationPitch through the
-	 * faceEntity method. This is only currently use in wolves.
+	 * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	 */
 	@Override
 	public int getVerticalFaceSpeed() {
@@ -476,16 +466,14 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it jumps (based upon the
-	 * slime's size)
+	 * Returns true if the slime makes a sound when it jumps (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnJump() {
 		return this.getSlimeSize() > 0;
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it lands after a jump (based
-	 * upon the slime's size)
+	 * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
 	 */
 	protected boolean makesSoundOnLand() {
 		return this.getSlimeSize() > 2;
@@ -497,15 +485,13 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 	}
 
 	@Override
-	public void setRoom(Vector3 roomCoords, Vector3 roomSize)
-	{
+	public void setRoom(Vector3 roomCoords, Vector3 roomSize) {
 		this.roomCoords = roomCoords;
 		this.roomSize = roomSize;
 	}
 
 	@Override
-	public void onBossSpawned(TileEntityDungeonSpawner spawner)
-	{
+	public void onBossSpawned(TileEntityDungeonSpawner spawner) {
 		this.spawner = spawner;
 	}
 }

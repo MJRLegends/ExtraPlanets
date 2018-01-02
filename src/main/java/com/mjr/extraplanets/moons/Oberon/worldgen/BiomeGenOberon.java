@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Oberon.worldgen;
 
 public class BiomeGenOberon extends OberonBiomes {
 
-	public BiomeGenOberon(int par1)
-	{
+	public BiomeGenOberon(int par1) {
 		super(par1);
 		this.setBiomeName("oberon");
 		this.setColor(16711680);

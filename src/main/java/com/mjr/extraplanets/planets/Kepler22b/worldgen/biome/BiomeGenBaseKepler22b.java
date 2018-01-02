@@ -47,9 +47,9 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	public BiomeDecorator createBiomeDecorator() {
 		return new BiomeDecoratorKepler22b();
 	}
-	
+
 	protected BiomeDecoratorKepler22b getBiomeDecorator() {
-		return (BiomeDecoratorKepler22b)this.theBiomeDecorator;
+		return (BiomeDecoratorKepler22b) this.theBiomeDecorator;
 	}
 
 	@Override

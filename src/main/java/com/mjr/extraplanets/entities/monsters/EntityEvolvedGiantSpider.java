@@ -17,40 +17,33 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 
-public class EntityEvolvedGiantSpider extends EntitySpider implements IEntityBreathable
-{
-    public EntityEvolvedGiantSpider(World par1World)
-    {
-        super(par1World);
-        this.setSize(1.5F, 1.0F);
-    }
+public class EntityEvolvedGiantSpider extends EntitySpider implements IEntityBreathable {
+	public EntityEvolvedGiantSpider(World par1World) {
+		super(par1World);
+		this.setSize(1.5F, 1.0F);
+	}
 
-    @Override
-    protected void applyEntityAttributes()
-    {
-        super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(44.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(1.5F);
-        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(6.0D);
-    }
+	@Override
+	protected void applyEntityAttributes() {
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(44.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(1.5F);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(6.0D);
+	}
 
-    @Override
-    public boolean canBreath()
-    {
-        return true;
-    }
+	@Override
+	public boolean canBreath() {
+		return true;
+	}
 
-    @Override
-    protected boolean isAIEnabled()
-    {
-        return false;
-    }
-    
-    @Override
-	public IEntityLivingData onSpawnWithEgg(IEntityLivingData livingData)
-	{
-		if (this.worldObj.rand.nextInt(100) == 0)
-		{
+	@Override
+	protected boolean isAIEnabled() {
+		return false;
+	}
+
+	@Override
+	public IEntityLivingData onSpawnWithEgg(IEntityLivingData livingData) {
+		if (this.worldObj.rand.nextInt(100) == 0) {
 			EntityEvolvedSkeleton skeleton = new EntityEvolvedSkeleton(this.worldObj);
 			skeleton.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
 			skeleton.onSpawnWithEgg(null);
@@ -58,80 +51,73 @@ public class EntityEvolvedGiantSpider extends EntitySpider implements IEntityBre
 			skeleton.mountEntity(this);
 		}
 
-        if (livingData == null)
-        {
-            livingData = new EntityEvolvedGiantSpider.GroupData();
+		if (livingData == null) {
+			livingData = new EntityEvolvedGiantSpider.GroupData();
 
-            if (this.worldObj.difficultySetting == EnumDifficulty.HARD && this.worldObj.rand.nextFloat() < 0.1F * this.worldObj.func_147462_b(this.posX, this.posY, this.posZ))
-            {
-                ((EntityEvolvedGiantSpider.GroupData)livingData).func_111104_a(this.worldObj.rand);
-            }
-        }
+			if (this.worldObj.difficultySetting == EnumDifficulty.HARD && this.worldObj.rand.nextFloat() < 0.1F * this.worldObj.func_147462_b(this.posX, this.posY, this.posZ)) {
+				((EntityEvolvedGiantSpider.GroupData) livingData).func_111104_a(this.worldObj.rand);
+			}
+		}
 
-        if (livingData instanceof EntityEvolvedGiantSpider.GroupData)
-        {
-            int i = ((EntityEvolvedGiantSpider.GroupData)livingData).field_111105_a;
+		if (livingData instanceof EntityEvolvedGiantSpider.GroupData) {
+			int i = ((EntityEvolvedGiantSpider.GroupData) livingData).field_111105_a;
 
-            if (i > 0 && Potion.potionTypes[i] != null)
-            {
-                this.addPotionEffect(new PotionEffect(i, Integer.MAX_VALUE));
-            }
-        }
+			if (i > 0 && Potion.potionTypes[i] != null) {
+				this.addPotionEffect(new PotionEffect(i, Integer.MAX_VALUE));
+			}
+		}
 
 		return livingData;
 	}
-    
-    @Override
-    protected void jump()
-    {
-        this.motionY = 0.52D / WorldUtil.getGravityFactor(this);
-        if (this.motionY < 0.26D) this.motionY = 0.26D;
 
-        if (this.isPotionActive(Potion.jump))
-        {
-            this.motionY += (this.getActivePotionEffect(Potion.jump).getAmplifier() + 1) * 0.1F;
-        }
+	@Override
+	protected void jump() {
+		this.motionY = 0.52D / WorldUtil.getGravityFactor(this);
+		if (this.motionY < 0.26D)
+			this.motionY = 0.26D;
 
-        if (this.isSprinting())
-        {
-            float f = this.rotationYaw * 0.017453292F;
-            this.motionX -= MathHelper.sin(f) * 0.2F;
-            this.motionZ += MathHelper.cos(f) * 0.2F;
-        }
+		if (this.isPotionActive(Potion.jump)) {
+			this.motionY += (this.getActivePotionEffect(Potion.jump).getAmplifier() + 1) * 0.1F;
+		}
 
-        this.isAirBorne = true;
-        ForgeHooks.onLivingJump(this);
-    }
+		if (this.isSprinting()) {
+			float f = this.rotationYaw * 0.017453292F;
+			this.motionX -= MathHelper.sin(f) * 0.2F;
+			this.motionZ += MathHelper.cos(f) * 0.2F;
+		}
 
-    @Override
-    protected void dropRareDrop(int p_70600_1_)
-    {
-        switch (this.rand.nextInt(14))
-        {
-            case 0:
-            case 1:
-            case 2:
-            	this.dropItem(GCItems.cheeseCurd, 1);
-                break;
-            case 3:
-            case 4:
-            case 5:
-            	this.dropItem(Items.fermented_spider_eye, 1);
-                break;
-            case 6:
-            case 7:
-            	//Oxygen tank half empty or less
-                this.entityDropItem(new ItemStack(GCItems.oxTankMedium, 1, 901 + this.rand.nextInt(900)), 0.0F);
-                break;
-            case 8:
-                this.dropItem(GCItems.oxygenGear, 1);
-                break;
-            case 9:
-                this.dropItem(GCItems.oxygenConcentrator, 1);
-                break;
-            default:
-            	if (ConfigManagerCore.challengeMode) this.dropItem(Items.nether_wart, 1);
-            	break;
-        }
-    }
+		this.isAirBorne = true;
+		ForgeHooks.onLivingJump(this);
+	}
+
+	@Override
+	protected void dropRareDrop(int p_70600_1_) {
+		switch (this.rand.nextInt(14)) {
+		case 0:
+		case 1:
+		case 2:
+			this.dropItem(GCItems.cheeseCurd, 1);
+			break;
+		case 3:
+		case 4:
+		case 5:
+			this.dropItem(Items.fermented_spider_eye, 1);
+			break;
+		case 6:
+		case 7:
+			// Oxygen tank half empty or less
+			this.entityDropItem(new ItemStack(GCItems.oxTankMedium, 1, 901 + this.rand.nextInt(900)), 0.0F);
+			break;
+		case 8:
+			this.dropItem(GCItems.oxygenGear, 1);
+			break;
+		case 9:
+			this.dropItem(GCItems.oxygenConcentrator, 1);
+			break;
+		default:
+			if (ConfigManagerCore.challengeMode)
+				this.dropItem(Items.nether_wart, 1);
+			break;
+		}
+	}
 }

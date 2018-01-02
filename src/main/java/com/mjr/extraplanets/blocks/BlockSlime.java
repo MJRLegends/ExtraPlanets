@@ -24,23 +24,23 @@ public class BlockSlime extends BlockBreakable {
 		this.setBlockName(name);
 	}
 
-    @Override
+	@Override
 	@SideOnly(Side.CLIENT)
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_){
-        return this.blockIcon; 
-    }
-    
-    @Override
+	public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
+		return this.blockIcon;
+	}
+
+	@Override
 	@SideOnly(Side.CLIENT)
-    public int getRenderBlockPass(){
-        return 1;
-    }
-    
-    @Override
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world_, int x, int y, int z){
-        return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1 - 0.0625F, z + 1);
-   }
-    
+	public int getRenderBlockPass() {
+		return 1;
+	}
+
+	@Override
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world_, int x, int y, int z) {
+		return AxisAlignedBB.getBoundingBox(x, y, z, x + 1, y + 1 - 0.0625F, z + 1);
+	}
+
 	@Override
 	public void onFallenUpon(World world, int X, int Y, int Z, Entity entity, float entityFallDistance) {
 		if (entity.isSneaking()) {

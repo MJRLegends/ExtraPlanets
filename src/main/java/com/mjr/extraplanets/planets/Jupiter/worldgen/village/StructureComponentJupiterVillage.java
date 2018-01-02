@@ -79,16 +79,15 @@ public abstract class StructureComponentJupiterVillage extends StructureComponen
 
 		for (int var5 = this.boundingBox.minZ; var5 <= this.boundingBox.maxZ; ++var5) {
 			for (int var6 = this.boundingBox.minX; var6 <= this.boundingBox.maxX; ++var6) {
-				if(par1World.getTopSolidOrLiquidBlock(var5, var6) <= 100){
-					for(int n = 0; n < 20; n++){
-						if(par1World.getBlock(var5, 64 + n, var6) == Blocks.air)
+				if (par1World.getTopSolidOrLiquidBlock(var5, var6) <= 100) {
+					for (int n = 0; n < 20; n++) {
+						if (par1World.getBlock(var5, 64 + n, var6) == Blocks.air)
 							return 64 + n;
 					}
-				}
-				else{
+				} else {
 					return 100;
 				}
-				
+
 				if (par2StructureBoundingBox.isVecInside(var6, 64, var5)) {
 					var3 += Math.max(par1World.getTopSolidOrLiquidBlock(var6, var5), par1World.provider.getAverageGroundLevel());
 					++var4;

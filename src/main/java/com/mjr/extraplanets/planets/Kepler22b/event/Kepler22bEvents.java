@@ -10,13 +10,11 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class Kepler22bEvents {
 	@SubscribeEvent
-	public void GCCoreEventWakePlayer(EventWakePlayer event){
-		if (event.entityLiving.worldObj.provider.dimensionId == Config.kepler22bID)
-		{
+	public void GCCoreEventWakePlayer(EventWakePlayer event) {
+		if (event.entityLiving.worldObj.provider.dimensionId == Config.kepler22bID) {
 			event.entityPlayer.heal(5.0F);
 
-			for (WorldServer worldServer : MinecraftServer.getServer().worldServers)
-			{
+			for (WorldServer worldServer : MinecraftServer.getServer().worldServers) {
 				worldServer.setWorldTime(0);
 			}
 		}

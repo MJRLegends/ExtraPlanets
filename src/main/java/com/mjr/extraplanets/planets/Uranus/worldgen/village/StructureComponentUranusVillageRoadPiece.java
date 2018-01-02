@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.village;
 
-
 public abstract class StructureComponentUranusVillageRoadPiece extends StructureComponentUranusVillage {
 	public StructureComponentUranusVillageRoadPiece() {
 	}

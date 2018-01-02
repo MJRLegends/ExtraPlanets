@@ -27,7 +27,7 @@ import com.mjr.extraplanets.moons.Oberon.worldgen.village.MapGenVillageOberon;
 public class ChunkProviderOberon extends ChunkProviderSpace {
 
 	private final BiomeDecoratorOberon biomeDecorator = new BiomeDecoratorOberon();
-	
+
 	private final MapGenCaveOberon caveGenerator = new MapGenCaveOberon();
 
 	private final MapGenRavineOberon ravineGenerator = new MapGenRavineOberon();
@@ -67,9 +67,9 @@ public class ChunkProviderOberon extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

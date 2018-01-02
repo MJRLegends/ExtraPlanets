@@ -127,5 +127,5 @@ public class BlockKepler22bMapleTreeLog2 extends BlockRotatedPillar {
 			}
 		}
 	}
-	
+
 }

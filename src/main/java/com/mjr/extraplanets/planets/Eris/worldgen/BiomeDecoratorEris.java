@@ -19,8 +19,7 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 
 	private boolean isDecorating = false;
 
-	public BiomeDecoratorEris()
-	{
+	public BiomeDecoratorEris() {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisBlocks, 4, 5, true, ExtraPlanets_Blocks.erisBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisBlocks, 4, 4, true, ExtraPlanets_Blocks.erisBlocks, 2);
 		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisBlocks, 8, 3, true, ExtraPlanets_Blocks.erisBlocks, 2);
@@ -28,7 +27,7 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.erisBlocks, 2);
 		this.darkIronGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.erisBlocks, 5, 7, true, ExtraPlanets_Blocks.erisBlocks, 2);
 
-		//WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
+		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
 	@Override
@@ -43,7 +42,8 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		if (isDecorating) return;
+		if (isDecorating)
+			return;
 		isDecorating = true;
 		this.generateOre(26, this.copperGen, 0, 60);
 		this.generateOre(23, this.tinGen, 0, 60);
@@ -53,6 +53,6 @@ public class BiomeDecoratorEris extends BiomeDecoratorSpace {
 		this.generateOre(10, this.darkIronGen, 0, 40);
 
 		isDecorating = false;
-		//generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
+		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 	}
 }

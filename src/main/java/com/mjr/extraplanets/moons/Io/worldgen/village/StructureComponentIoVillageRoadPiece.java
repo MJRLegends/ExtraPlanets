@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Io.worldgen.village;
 
-
 public abstract class StructureComponentIoVillageRoadPiece extends StructureComponentIoVillage {
 	public StructureComponentIoVillageRoadPiece() {
 	}

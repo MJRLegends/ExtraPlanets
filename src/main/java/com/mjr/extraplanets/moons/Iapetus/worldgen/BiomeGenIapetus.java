@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Iapetus.worldgen;
 
 public class BiomeGenIapetus extends IapetusBiomes {
 
-	public BiomeGenIapetus(int par1)
-	{
+	public BiomeGenIapetus(int par1) {
 		super(par1);
 		this.setBiomeName("iapetus");
 		this.setColor(16711680);

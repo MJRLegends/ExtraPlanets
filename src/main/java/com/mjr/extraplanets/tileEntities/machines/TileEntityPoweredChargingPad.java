@@ -169,7 +169,7 @@ public class TileEntityPoweredChargingPad extends TileEntityMulti implements IMu
 
 	@Override
 	public float addPower(float amount, boolean doDrain) {
-		if(this.dockedEntity == null)
+		if (this.dockedEntity == null)
 			return 0;
 		return this.dockedEntity.addPower(amount, doDrain);
 	}

@@ -66,9 +66,9 @@ public class BiomeDecoratorKepler22bOres extends BiomeDecoratorSpace {
 		this.generateOre(4, this.greenDiamondOre, 0, 10);
 		this.generateOre(4, this.platinumOre, 0, 10);
 		this.generateOre(20, this.marbleGen, 0, 30);
-		
+
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
-		
+
 		isDecorating = false;
 	}
 }

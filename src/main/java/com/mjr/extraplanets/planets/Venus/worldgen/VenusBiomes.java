@@ -11,8 +11,7 @@ public class VenusBiomes extends BiomeGenBase {
 	public static final BiomeGenBase venus = new BiomeGenVenus(Config.venusBiomeID).setBiomeName("venus");
 
 	@SuppressWarnings("unchecked")
-	VenusBiomes(int var1)
-	{
+	VenusBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class VenusBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public VenusBiomes setColor(int var1)
-	{
+	public VenusBiomes setColor(int var1) {
 		return (VenusBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

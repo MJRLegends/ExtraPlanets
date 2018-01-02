@@ -15,37 +15,30 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.bosses.defaultBosses.ModelCreeperBossPluto;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 
-public class RenderCreeperBossPluto extends RenderLiving
-{
+public class RenderCreeperBossPluto extends RenderLiving {
 	private static final ResourceLocation creeperTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/creeper.png");
 	private static final ResourceLocation powerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/power.png");
 	private final ModelBase creeperModel = new ModelCreeperBossPluto(2.0F);
 
-	public RenderCreeperBossPluto()
-	{
+	public RenderCreeperBossPluto() {
 		super(new ModelCreeperBossPluto(), 1.0F);
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(Entity entity)
-	{
+	protected ResourceLocation getEntityTexture(Entity entity) {
 		return RenderCreeperBossPluto.creeperTexture;
 	}
 
 	@Override
-	public void doRender(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9)
-	{
+	public void doRender(EntityLiving par1EntityLiving, double par2, double par4, double par6, float par8, float par9) {
 		BossStatus.setBossStatus((IBossDisplayData) par1EntityLiving, false);
 
 		super.doRender(par1EntityLiving, par2, par4, par6, par8, par9);
 	}
 
-	protected int func_27006_a(EntityCreeperBossPluto par1EntityCreeper, int par2, float par3)
-	{
-		if (par1EntityCreeper.headsRemaining == 1)
-		{
-			if (par2 == 1)
-			{
+	protected int func_27006_a(EntityCreeperBossPluto par1EntityCreeper, int par2, float par3) {
+		if (par1EntityCreeper.headsRemaining == 1) {
+			if (par2 == 1) {
 				final float var4 = par1EntityCreeper.ticksExisted + par3;
 				this.bindTexture(RenderCreeperBossPluto.powerTexture);
 				GL11.glMatrixMode(GL11.GL_TEXTURE);
@@ -63,8 +56,7 @@ public class RenderCreeperBossPluto extends RenderLiving
 				return 1;
 			}
 
-			if (par2 == 2)
-			{
+			if (par2 == 2) {
 				GL11.glMatrixMode(GL11.GL_TEXTURE);
 				GL11.glLoadIdentity();
 				GL11.glMatrixMode(GL11.GL_MODELVIEW);
@@ -77,26 +69,22 @@ public class RenderCreeperBossPluto extends RenderLiving
 	}
 
 	@Override
-	protected void preRenderCallback(EntityLivingBase par1EntityLiving, float par2)
-	{
+	protected void preRenderCallback(EntityLivingBase par1EntityLiving, float par2) {
 		GL11.glScalef(4.0F, 4.0F, 4.0F);
 	}
 
 	@Override
-	protected int getColorMultiplier(EntityLivingBase par1EntityLivingBase, float par2, float par3)
-	{
+	protected int getColorMultiplier(EntityLivingBase par1EntityLivingBase, float par2, float par3) {
 		return super.getColorMultiplier(par1EntityLivingBase, par2, par3);
 	}
 
 	@Override
-	protected int shouldRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3)
-	{
+	protected int shouldRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3) {
 		return this.func_27006_a((EntityCreeperBossPluto) par1EntityLivingBase, par2, par3);
 	}
 
 	@Override
-	protected int inheritRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3)
-	{
+	protected int inheritRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3) {
 		return -1;
 	}
 }

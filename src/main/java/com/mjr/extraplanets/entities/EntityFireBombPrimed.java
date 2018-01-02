@@ -88,28 +88,28 @@ public class EntityFireBombPrimed extends Entity {
 	private void explode() {
 		float f = 5.0F;
 		this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
-		for(int i = 0; i < 9; i++){
-			for(int j = 0; j < 15; j++){
-				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlock((int)this.posX + i, this.worldObj.getHeightValue((int)this.posX + i, (int)this.posZ + j), (int)this.posZ + j, Blocks.fire);
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 15; j++) {
+				if (this.rand.nextInt(3) == 1)
+					this.worldObj.setBlock((int) this.posX + i, this.worldObj.getHeightValue((int) this.posX + i, (int) this.posZ + j), (int) this.posZ + j, Blocks.fire);
 			}
 		}
-		for(int i = 0; i < 9; i++){
-			for(int j = 0; j < 9; j++){
-				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlock((int)this.posX - i, this.worldObj.getHeightValue((int)this.posX + i, (int)this.posZ + j), (int)this.posZ - j, Blocks.fire);
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				if (this.rand.nextInt(3) == 1)
+					this.worldObj.setBlock((int) this.posX - i, this.worldObj.getHeightValue((int) this.posX + i, (int) this.posZ + j), (int) this.posZ - j, Blocks.fire);
 			}
 		}
-		for(int i = 0; i < 9; i++){
-			for(int j = 0; j < 9; j++){
-				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlock((int)this.posX + i, this.worldObj.getHeightValue((int)this.posX + i, (int)this.posZ + j), (int)this.posZ - j, Blocks.fire);
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				if (this.rand.nextInt(3) == 1)
+					this.worldObj.setBlock((int) this.posX + i, this.worldObj.getHeightValue((int) this.posX + i, (int) this.posZ + j), (int) this.posZ - j, Blocks.fire);
 			}
 		}
-		for(int i = 0; i < 9; i++){
-			for(int j = 0; j < 9; j++){
-				if(this.rand.nextInt(3) == 1)
-					this.worldObj.setBlock((int)this.posX - i, this.worldObj.getHeightValue((int)this.posX + i, (int)this.posZ + j), (int)this.posZ + j, Blocks.fire);
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				if (this.rand.nextInt(3) == 1)
+					this.worldObj.setBlock((int) this.posX - i, this.worldObj.getHeightValue((int) this.posX + i, (int) this.posZ + j), (int) this.posZ + j, Blocks.fire);
 			}
 		}
 	}

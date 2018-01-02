@@ -75,7 +75,7 @@ public class ItemWafers extends Item {
 	public int getMetadata(int par1) {
 		return par1;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {

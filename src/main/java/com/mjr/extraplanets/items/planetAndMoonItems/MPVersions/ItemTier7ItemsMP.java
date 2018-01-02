@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier7ItemsMP extends Item {
-	public static final String[] names = { "compressed_crystal", "ingot_crystal", "compressed_reinforced_crystal", "white_gem"  };
+	public static final String[] names = { "compressed_crystal", "ingot_crystal", "compressed_reinforced_crystal", "white_gem" };
 
 	protected IIcon[] icons = new IIcon[ItemTier7ItemsMP.names.length];
 

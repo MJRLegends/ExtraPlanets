@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Pluto.worldgen.village;
 
-
 public abstract class StructureComponentPlutoVillageRoadPiece extends StructureComponentPlutoVillage {
 	public StructureComponentPlutoVillageRoadPiece() {
 	}

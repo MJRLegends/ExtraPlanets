@@ -38,7 +38,7 @@ public class BiomeGenKepler22bRedMapleForest extends BiomeGenBaseKepler22b {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
-		
+
 		this.getBiomeDecorator().redTreesPerChunk = 5;
 		this.getBiomeDecorator().redShortGrassPerChunk = 90;
 		this.getBiomeDecorator().redMedGrassPerChunk = 90;

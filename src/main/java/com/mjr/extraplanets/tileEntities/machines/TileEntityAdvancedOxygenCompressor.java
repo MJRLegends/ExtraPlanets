@@ -17,283 +17,235 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.mjr.extraplanets.inventory.IInventoryDefaults;
 
-public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen implements IInventoryDefaults, ISidedInventory
-{
-    private ItemStack[] containingItems = new ItemStack[3];
+public class TileEntityAdvancedOxygenCompressor extends TileEntityOxygen implements IInventoryDefaults, ISidedInventory {
+	private ItemStack[] containingItems = new ItemStack[3];
 
-    public static final int TANK_TRANSFER_SPEED = 4;
-    private boolean usingEnergy = false;
+	public static final int TANK_TRANSFER_SPEED = 4;
+	private boolean usingEnergy = false;
 
-    public TileEntityAdvancedOxygenCompressor()
-    {
-        super(2400, 24);
-        this.storage.setMaxExtract(25);
-    }
+	public TileEntityAdvancedOxygenCompressor() {
+		super(2400, 24);
+		this.storage.setMaxExtract(25);
+	}
 
-    @Override
-    public void updateEntity()
-    {
-        if (!this.worldObj.isRemote)
-        {
-	    	ItemStack oxygenItemStack = this.getStackInSlot(2);
-	    	if (oxygenItemStack != null && oxygenItemStack.getItem() instanceof IItemOxygenSupply)
-	    	{
-	    		IItemOxygenSupply oxygenItem = (IItemOxygenSupply) oxygenItemStack.getItem();
-	    		float oxygenDraw = Math.min(this.oxygenPerTick * 2.5F, this.maxOxygen - this.storedOxygen);
-	    		this.storedOxygen += oxygenItem.discharge(oxygenItemStack, oxygenDraw);
-	    		if (this.storedOxygen > this.maxOxygen) this.storedOxygen = this.maxOxygen;
-	    	}
-        }
-    	
-        super.updateEntity();
+	@Override
+	public void updateEntity() {
+		if (!this.worldObj.isRemote) {
+			ItemStack oxygenItemStack = this.getStackInSlot(2);
+			if (oxygenItemStack != null && oxygenItemStack.getItem() instanceof IItemOxygenSupply) {
+				IItemOxygenSupply oxygenItem = (IItemOxygenSupply) oxygenItemStack.getItem();
+				float oxygenDraw = Math.min(this.oxygenPerTick * 2.5F, this.maxOxygen - this.storedOxygen);
+				this.storedOxygen += oxygenItem.discharge(oxygenItemStack, oxygenDraw);
+				if (this.storedOxygen > this.maxOxygen)
+					this.storedOxygen = this.maxOxygen;
+			}
+		}
 
-        if (!this.worldObj.isRemote)
-        {
-	    	this.usingEnergy = false;
-            if (this.storedOxygen > 0 && this.hasEnoughEnergyToRun)
-            {
-                ItemStack tank0 = this.containingItems[0];
+		super.updateEntity();
 
-                if (tank0 != null)
-                {
-                    if (tank0.getItem() instanceof ItemOxygenTank && tank0.getItemDamage() > 0)
-                    {
-                        tank0.setItemDamage(tank0.getItemDamage() - TileEntityAdvancedOxygenCompressor.TANK_TRANSFER_SPEED);
-                        this.storedOxygen -= TileEntityAdvancedOxygenCompressor.TANK_TRANSFER_SPEED;
-                        this.usingEnergy = true;
-                    }
-                }
-            }
-        }
-    }
+		if (!this.worldObj.isRemote) {
+			this.usingEnergy = false;
+			if (this.storedOxygen > 0 && this.hasEnoughEnergyToRun) {
+				ItemStack tank0 = this.containingItems[0];
 
-    @Override
-    public void readFromNBT(NBTTagCompound par1NBTTagCompound)
-    {
-        super.readFromNBT(par1NBTTagCompound);
+				if (tank0 != null) {
+					if (tank0.getItem() instanceof ItemOxygenTank && tank0.getItemDamage() > 0) {
+						tank0.setItemDamage(tank0.getItemDamage() - TileEntityAdvancedOxygenCompressor.TANK_TRANSFER_SPEED);
+						this.storedOxygen -= TileEntityAdvancedOxygenCompressor.TANK_TRANSFER_SPEED;
+						this.usingEnergy = true;
+					}
+				}
+			}
+		}
+	}
 
-        final NBTTagList var2 = par1NBTTagCompound.getTagList("Items", 10);
-        this.containingItems = new ItemStack[this.getSizeInventory()];
+	@Override
+	public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
+		super.readFromNBT(par1NBTTagCompound);
 
-        for (int var3 = 0; var3 < var2.tagCount(); ++var3)
-        {
-            final NBTTagCompound var4 = var2.getCompoundTagAt(var3);
-            final int var5 = var4.getByte("Slot") & 255;
+		final NBTTagList var2 = par1NBTTagCompound.getTagList("Items", 10);
+		this.containingItems = new ItemStack[this.getSizeInventory()];
 
-            if (var5 < this.containingItems.length)
-            {
-                this.containingItems[var5] = ItemStack.loadItemStackFromNBT(var4);
-            }
-        }
-    }
+		for (int var3 = 0; var3 < var2.tagCount(); ++var3) {
+			final NBTTagCompound var4 = var2.getCompoundTagAt(var3);
+			final int var5 = var4.getByte("Slot") & 255;
 
-    @Override
-    public void writeToNBT(NBTTagCompound par1NBTTagCompound)
-    {
-        super.writeToNBT(par1NBTTagCompound);
+			if (var5 < this.containingItems.length) {
+				this.containingItems[var5] = ItemStack.loadItemStackFromNBT(var4);
+			}
+		}
+	}
 
-        final NBTTagList list = new NBTTagList();
+	@Override
+	public void writeToNBT(NBTTagCompound par1NBTTagCompound) {
+		super.writeToNBT(par1NBTTagCompound);
 
-        for (int var3 = 0; var3 < this.containingItems.length; ++var3)
-        {
-            if (this.containingItems[var3] != null)
-            {
-                final NBTTagCompound var4 = new NBTTagCompound();
-                var4.setByte("Slot", (byte) var3);
-                this.containingItems[var3].writeToNBT(var4);
-                list.appendTag(var4);
-            }
-        }
+		final NBTTagList list = new NBTTagList();
 
-        par1NBTTagCompound.setTag("Items", list);
-    }
+		for (int var3 = 0; var3 < this.containingItems.length; ++var3) {
+			if (this.containingItems[var3] != null) {
+				final NBTTagCompound var4 = new NBTTagCompound();
+				var4.setByte("Slot", (byte) var3);
+				this.containingItems[var3].writeToNBT(var4);
+				list.appendTag(var4);
+			}
+		}
 
-    @Override
-    public int getSizeInventory()
-    {
-        return this.containingItems.length;
-    }
+		par1NBTTagCompound.setTag("Items", list);
+	}
 
-    @Override
-    public ItemStack getStackInSlot(int par1)
-    {
-        return this.containingItems[par1];
-    }
+	@Override
+	public int getSizeInventory() {
+		return this.containingItems.length;
+	}
 
-    @Override
-    public ItemStack decrStackSize(int par1, int par2)
-    {
-        if (this.containingItems[par1] != null)
-        {
-            ItemStack var3;
+	@Override
+	public ItemStack getStackInSlot(int par1) {
+		return this.containingItems[par1];
+	}
 
-            if (this.containingItems[par1].stackSize <= par2)
-            {
-                var3 = this.containingItems[par1];
-                this.containingItems[par1] = null;
-                return var3;
-            }
-            else
-            {
-                var3 = this.containingItems[par1].splitStack(par2);
+	@Override
+	public ItemStack decrStackSize(int par1, int par2) {
+		if (this.containingItems[par1] != null) {
+			ItemStack var3;
 
-                if (this.containingItems[par1].stackSize == 0)
-                {
-                    this.containingItems[par1] = null;
-                }
+			if (this.containingItems[par1].stackSize <= par2) {
+				var3 = this.containingItems[par1];
+				this.containingItems[par1] = null;
+				return var3;
+			} else {
+				var3 = this.containingItems[par1].splitStack(par2);
 
-                return var3;
-            }
-        }
-        else
-        {
-            return null;
-        }
-    }
+				if (this.containingItems[par1].stackSize == 0) {
+					this.containingItems[par1] = null;
+				}
 
-    @Override
-    public ItemStack getStackInSlotOnClosing(int par1)
-    {
-        if (this.containingItems[par1] != null)
-        {
-            final ItemStack var2 = this.containingItems[par1];
-            this.containingItems[par1] = null;
-            return var2;
-        }
-        else
-        {
-            return null;
-        }
-    }
+				return var3;
+			}
+		} else {
+			return null;
+		}
+	}
 
-    @Override
-    public void setInventorySlotContents(int par1, ItemStack par2ItemStack)
-    {
-        this.containingItems[par1] = par2ItemStack;
+	@Override
+	public ItemStack getStackInSlotOnClosing(int par1) {
+		if (this.containingItems[par1] != null) {
+			final ItemStack var2 = this.containingItems[par1];
+			this.containingItems[par1] = null;
+			return var2;
+		} else {
+			return null;
+		}
+	}
 
-        if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit())
-        {
-            par2ItemStack.stackSize = this.getInventoryStackLimit();
-        }
-    }
+	@Override
+	public void setInventorySlotContents(int par1, ItemStack par2ItemStack) {
+		this.containingItems[par1] = par2ItemStack;
 
-    @Override
-    public String getInventoryName()
-    {
-        return GCCoreUtil.translate("container.advancedoxygencompressor.name");
-    }
+		if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit()) {
+			par2ItemStack.stackSize = this.getInventoryStackLimit();
+		}
+	}
 
-    @Override
-    public int getInventoryStackLimit()
-    {
-        return 1;
-    }
+	@Override
+	public String getInventoryName() {
+		return GCCoreUtil.translate("container.advancedoxygencompressor.name");
+	}
 
-    @Override
-    public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
-    {
-        return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) == this && par1EntityPlayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
-    }
-    
-    // ISidedInventory Implementation:
+	@Override
+	public int getInventoryStackLimit() {
+		return 1;
+	}
 
-    @Override
-    public int[] getAccessibleSlotsFromSide(int side)
-    {
-        return new int[] { 0, 1, 2 };
-    }
+	@Override
+	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) == this && par1EntityPlayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
+	}
 
-    @Override
-    public boolean canInsertItem(int slotID, ItemStack itemstack, int side)
-    {
-        if (this.isItemValidForSlot(slotID, itemstack))
-        {
-            switch (slotID)
-            {
-            case 0:
-                return itemstack.getItemDamage() > 1;
-            case 1:
-                return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
-            case 2:
-            	return itemstack.getItemDamage() < itemstack.getItem().getMaxDamage();
-            default:
-                return false;
-            }
-        }
-        return false;
-    }
+	// ISidedInventory Implementation:
 
-    @Override
-    public boolean canExtractItem(int slotID, ItemStack itemstack, int side)
-    {
-    	switch (slotID)
-    	{
-    	case 0:
-    		return itemstack.getItem() instanceof ItemOxygenTank && itemstack.getItemDamage() == 0;
-    	case 1:
-    		return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0;
-    	case 2:
-    		return FluidUtil.isEmptyContainer(itemstack);
-    	default:
-    		return false;
-    	}
-    }
+	@Override
+	public int[] getAccessibleSlotsFromSide(int side) {
+		return new int[] { 0, 1, 2 };
+	}
 
-    @Override
-    public boolean isItemValidForSlot(int slotID, ItemStack itemstack)
-    {
-        switch (slotID)
-        {
-        case 0:
-            return itemstack.getItem() instanceof ItemOxygenTank;
-        case 1:
-            return ItemElectricBase.isElectricItem(itemstack.getItem());
-        case 2:
-        	return itemstack.getItem() instanceof IItemOxygenSupply;
-        }
+	@Override
+	public boolean canInsertItem(int slotID, ItemStack itemstack, int side) {
+		if (this.isItemValidForSlot(slotID, itemstack)) {
+			switch (slotID) {
+			case 0:
+				return itemstack.getItemDamage() > 1;
+			case 1:
+				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
+			case 2:
+				return itemstack.getItemDamage() < itemstack.getItem().getMaxDamage();
+			default:
+				return false;
+			}
+		}
+		return false;
+	}
 
-        return false;
-    }
+	@Override
+	public boolean canExtractItem(int slotID, ItemStack itemstack, int side) {
+		switch (slotID) {
+		case 0:
+			return itemstack.getItem() instanceof ItemOxygenTank && itemstack.getItemDamage() == 0;
+		case 1:
+			return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0;
+		case 2:
+			return FluidUtil.isEmptyContainer(itemstack);
+		default:
+			return false;
+		}
+	}
 
-    @Override
-    public boolean hasCustomInventoryName()
-    {
-        return true;
-    }
+	@Override
+	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+		switch (slotID) {
+		case 0:
+			return itemstack.getItem() instanceof ItemOxygenTank;
+		case 1:
+			return ItemElectricBase.isElectricItem(itemstack.getItem());
+		case 2:
+			return itemstack.getItem() instanceof IItemOxygenSupply;
+		}
 
-    @Override
-    public boolean shouldUseEnergy()
-    {
-        return this.usingEnergy;
-    }
+		return false;
+	}
 
-    @Override
-    public ForgeDirection getElectricInputDirection()
-    {
-        return ForgeDirection.getOrientation(this.getBlockMetadata() + 2);
-    }
+	@Override
+	public boolean hasCustomInventoryName() {
+		return true;
+	}
 
-    @Override
-    public ItemStack getBatteryInSlot()
-    {
-        return this.getStackInSlot(1);
-    }
+	@Override
+	public boolean shouldUseEnergy() {
+		return this.usingEnergy;
+	}
 
-    @Override
-    public boolean shouldUseOxygen()
-    {
-        return false;
-    }
+	@Override
+	public ForgeDirection getElectricInputDirection() {
+		return ForgeDirection.getOrientation(this.getBlockMetadata() + 2);
+	}
 
-    @Override
-    public EnumSet<ForgeDirection> getOxygenInputDirections()
-    {
-        return EnumSet.of(this.getElectricInputDirection().getOpposite());
-    }
+	@Override
+	public ItemStack getBatteryInSlot() {
+		return this.getStackInSlot(1);
+	}
 
-    @Override
-    public EnumSet<ForgeDirection> getOxygenOutputDirections()
-    {
-        return EnumSet.noneOf(ForgeDirection.class);
-    }
+	@Override
+	public boolean shouldUseOxygen() {
+		return false;
+	}
+
+	@Override
+	public EnumSet<ForgeDirection> getOxygenInputDirections() {
+		return EnumSet.of(this.getElectricInputDirection().getOpposite());
+	}
+
+	@Override
+	public EnumSet<ForgeDirection> getOxygenOutputDirections() {
+		return EnumSet.noneOf(ForgeDirection.class);
+	}
 }

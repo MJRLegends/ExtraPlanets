@@ -68,7 +68,8 @@ public class StructureComponentTitaniaVillageField2 extends StructureComponentTi
 	@SuppressWarnings("rawtypes")
 	public static StructureComponentTitaniaVillageField2 func_74900_a(StructureComponentTitaniaVillageStartPiece par0ComponentVillageStartPiece, List par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
 		final StructureBoundingBox structureboundingbox = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 13, 4, 9, par6);
-		return StructureComponentTitaniaVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null ? new StructureComponentTitaniaVillageField2(par0ComponentVillageStartPiece, par7, par2Random, structureboundingbox, par6) : null;
+		return StructureComponentTitaniaVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null ? new StructureComponentTitaniaVillageField2(par0ComponentVillageStartPiece,
+				par7, par2Random, structureboundingbox, par6) : null;
 	}
 
 	/**

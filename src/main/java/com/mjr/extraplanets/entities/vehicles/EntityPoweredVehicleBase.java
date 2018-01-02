@@ -531,13 +531,13 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 		switch (key) {
 		case 0: // Deccelerate
-			if(this.currentPowerCapacity < 10)
+			if (this.currentPowerCapacity < 10)
 				return false;
 			this.speed -= this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
 		case 1: // Accelerate
-			if(this.currentPowerCapacity < 10)
+			if (this.currentPowerCapacity < 10)
 				return false;
 			this.speed += this.accel / 20D;
 			this.shouldClimb = true;
@@ -700,7 +700,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public void setPowerMaxCapacity(float powerMaxCapacity) {
 		this.powerMaxCapacity = powerMaxCapacity;
 	}
-	
+
 	@Override
 	public float addPower(float amount, boolean doDrain) {
 		float beforePower = this.getCurrentPowerCapacity();
@@ -739,6 +739,6 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 
 	@Override
 	public abstract boolean isDockValid(IPowerDock dock);
-	
+
 	public abstract void featureUpdate();
 }

@@ -68,7 +68,8 @@ public class StructureComponentRheaVillageField2 extends StructureComponentRheaV
 	@SuppressWarnings("rawtypes")
 	public static StructureComponentRheaVillageField2 func_74900_a(StructureComponentRheaVillageStartPiece par0ComponentVillageStartPiece, List par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
 		final StructureBoundingBox structureboundingbox = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 13, 4, 9, par6);
-		return StructureComponentRheaVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null ? new StructureComponentRheaVillageField2(par0ComponentVillageStartPiece, par7, par2Random, structureboundingbox, par6) : null;
+		return StructureComponentRheaVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null ? new StructureComponentRheaVillageField2(par0ComponentVillageStartPiece, par7,
+				par2Random, structureboundingbox, par6) : null;
 	}
 
 	/**

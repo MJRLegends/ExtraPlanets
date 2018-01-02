@@ -11,8 +11,7 @@ public class TitaniaBiomes extends BiomeGenBase {
 	public static final BiomeGenBase titania = new BiomeGenTitania(Config.titaniaBiomeID).setBiomeName("titania");
 
 	@SuppressWarnings("unchecked")
-	TitaniaBiomes(int var1)
-	{
+	TitaniaBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class TitaniaBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public TitaniaBiomes setColor(int var1)
-	{
+	public TitaniaBiomes setColor(int var1) {
 		return (TitaniaBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

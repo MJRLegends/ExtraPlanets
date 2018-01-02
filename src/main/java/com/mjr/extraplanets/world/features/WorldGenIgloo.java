@@ -238,7 +238,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlock(x + 5, y + 4, z + 8, Blocks.snow, 0, 3);
 		world.setBlock(x + 6, y + 4, z + 8, Blocks.snow, 0, 3);
 		world.setBlock(x + 7, y + 4, z + 8, Blocks.snow, 0, 3);
-		
+
 		// Determined if loot should be generated using a 1/2 chance
 		int random = rand.nextInt(10) + 1;
 		if (random < 5) {

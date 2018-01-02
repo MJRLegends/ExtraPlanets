@@ -11,8 +11,7 @@ public class IapetusBiomes extends BiomeGenBase {
 	public static final BiomeGenBase iapetus = new BiomeGenIapetus(Config.iapetusBiomeID).setBiomeName("iapetus");
 
 	@SuppressWarnings("unchecked")
-	IapetusBiomes(int var1)
-	{
+	IapetusBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
@@ -23,14 +22,12 @@ public class IapetusBiomes extends BiomeGenBase {
 	}
 
 	@Override
-	public IapetusBiomes setColor(int var1)
-	{
+	public IapetusBiomes setColor(int var1) {
 		return (IapetusBiomes) super.setColor(var1);
 	}
 
 	@Override
-	public float getSpawningChance()
-	{
+	public float getSpawningChance() {
 		return 0.01F;
 	}
 }

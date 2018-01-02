@@ -24,19 +24,16 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 	}
 
 	/**
-	 * Checks if the entity's current position is a valid location to spawn this
-	 * entity.
+	 * Checks if the entity's current position is a valid location to spawn this entity.
 	 */
 	@Override
 	public boolean getCanSpawnHere() {
-		return this.worldObj.difficultySetting != EnumDifficulty.PEACEFUL && this.worldObj.checkNoEntityCollision(this.boundingBox)
-				&& this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox).isEmpty()
+		return this.worldObj.difficultySetting != EnumDifficulty.PEACEFUL && this.worldObj.checkNoEntityCollision(this.boundingBox) && this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox).isEmpty()
 				&& !this.worldObj.isAnyLiquid(this.boundingBox);
 	}
 
 	/**
-	 * Returns the current armor value as determined by a call to
-	 * InventoryPlayer.getTotalArmorValue
+	 * Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
 	 */
 	@Override
 	public int getTotalArmorValue() {
@@ -58,8 +55,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 	}
 
 	/**
-	 * Returns the name of a particle effect that may be randomly created by
-	 * EntitySlime.onUpdate()
+	 * Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
 	 */
 	@Override
 	protected String getSlimeParticle() {
@@ -77,9 +73,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 	}
 
 	/**
-	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity
-	 * has recently been hit by a player. @param par2 - Level of Looting used to
-	 * kill this mob.
+	 * Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
 	 */
 	@Override
 	protected void dropFewItems(boolean p_70628_1_, int p_70628_2_) {
@@ -99,8 +93,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 	}
 
 	/**
-	 * Returns true if the entity is on fire. Used by render to add the fire
-	 * effect on rendering.
+	 * Returns true if the entity is on fire. Used by render to add the fire effect on rendering.
 	 */
 	@Override
 	public boolean isBurning() {
@@ -138,8 +131,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 	}
 
 	/**
-	 * Indicates weather the slime is able to damage the player (based upon the
-	 * slime's size)
+	 * Indicates weather the slime is able to damage the player (based upon the slime's size)
 	 */
 	@Override
 	protected boolean canDamagePlayer() {
@@ -147,8 +139,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 	}
 
 	/**
-	 * Gets the amount of damage dealt to the player when "attacked" by the
-	 * slime.
+	 * Gets the amount of damage dealt to the player when "attacked" by the slime.
 	 */
 	@Override
 	protected int getAttackStrength() {
@@ -172,8 +163,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 	}
 
 	/**
-	 * Returns true if the slime makes a sound when it lands after a jump (based
-	 * upon the slime's size)
+	 * Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
 	 */
 	@Override
 	protected boolean makesSoundOnLand() {

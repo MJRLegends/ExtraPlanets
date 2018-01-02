@@ -279,7 +279,7 @@ public class ExtraPlanets_Items {
 
 		wafers = new ItemWafers("wafer");
 		ingotLead = new ItemBasicItem("ingot_lead");
-		
+
 		tier1EquipmentKit = new ItemBasicKit("tier1_kit", 1);
 		tier2EquipmentKit = new ItemBasicKit("tier2_kit", 2);
 		tier3EquipmentKit = new ItemBasicKit("tier3_kit", 3);
@@ -397,7 +397,7 @@ public class ExtraPlanets_Items {
 
 		GameRegistry.registerItem(wafers, wafers.getUnlocalizedName());
 		GameRegistry.registerItem(ingotLead, "item.ingotLead");
-		
+
 		GameRegistry.registerItem(tier1EquipmentKit, tier1EquipmentKit.getUnlocalizedName());
 		GameRegistry.registerItem(tier2EquipmentKit, tier2EquipmentKit.getUnlocalizedName());
 		GameRegistry.registerItem(tier3EquipmentKit, tier3EquipmentKit.getUnlocalizedName());

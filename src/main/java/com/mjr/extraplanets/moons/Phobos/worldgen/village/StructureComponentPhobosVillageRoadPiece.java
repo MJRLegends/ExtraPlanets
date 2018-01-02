@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Phobos.worldgen.village;
 
-
 public abstract class StructureComponentPhobosVillageRoadPiece extends StructureComponentPhobosVillage {
 	public StructureComponentPhobosVillageRoadPiece() {
 	}

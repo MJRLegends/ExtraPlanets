@@ -97,7 +97,7 @@ public class WorldProviderSaturn extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public float getGravity() {
-		if(Config.oldStyleGravity)
+		if (Config.oldStyleGravity)
 			return 0.058F;
 		else
 			return 0.015F;
@@ -125,7 +125,7 @@ public class WorldProviderSaturn extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public float getFallDamageModifier() {
-		if(Config.oldStyleGravity)
+		if (Config.oldStyleGravity)
 			return 0.38F;
 		else
 			return 2.1F;

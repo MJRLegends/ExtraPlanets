@@ -18,44 +18,37 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderEntitySmallSnowball extends Render
-{
+public class RenderEntitySmallSnowball extends Render {
 	private Item field_94151_a;
 	private int field_94150_f;
-	public RenderEntitySmallSnowball(Item p_i1259_1_, int p_i1259_2_)
-	{
+
+	public RenderEntitySmallSnowball(Item p_i1259_1_, int p_i1259_2_) {
 		this.field_94151_a = p_i1259_1_;
 		this.field_94150_f = p_i1259_2_;
 	}
 
-	public RenderEntitySmallSnowball(Item p_i1260_1_)
-	{
+	public RenderEntitySmallSnowball(Item p_i1260_1_) {
 		this(p_i1260_1_, 0);
 	}
 
 	/**
-	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then
-	 * handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic
-	 * (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1,
-	 * double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+	 * Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends
+	 * Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
 	 */
 	@Override
-	public void doRender(Entity p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_)
-	{
+	public void doRender(Entity p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
 		IIcon iicon = this.field_94151_a.getIconFromDamage(this.field_94150_f);
 
-		if (iicon != null)
-		{
+		if (iicon != null) {
 			GL11.glPushMatrix();
-			GL11.glTranslatef((float)p_76986_2_, (float)p_76986_4_, (float)p_76986_6_);
+			GL11.glTranslatef((float) p_76986_2_, (float) p_76986_4_, (float) p_76986_6_);
 			GL11.glEnable(GL12.GL_RESCALE_NORMAL);
 			GL11.glScalef(0.5F, 0.5F, 0.5F);
 			this.bindEntityTexture(p_76986_1_);
 			Tessellator tessellator = Tessellator.instance;
 
-			if (iicon == ItemPotion.func_94589_d("bottle_splash"))
-			{
-				int i = PotionHelper.func_77915_a(((EntityPotion)p_76986_1_).getPotionDamage(), false);
+			if (iicon == ItemPotion.func_94589_d("bottle_splash")) {
+				int i = PotionHelper.func_77915_a(((EntityPotion) p_76986_1_).getPotionDamage(), false);
 				float f2 = (i >> 16 & 255) / 255.0F;
 				float f3 = (i >> 8 & 255) / 255.0F;
 				float f4 = (i & 255) / 255.0F;
@@ -76,13 +69,11 @@ public class RenderEntitySmallSnowball extends Render
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
 	@Override
-	protected ResourceLocation getEntityTexture(Entity p_110775_1_)
-	{
+	protected ResourceLocation getEntityTexture(Entity p_110775_1_) {
 		return TextureMap.locationItemsTexture;
 	}
 
-	private void func_77026_a(Tessellator p_77026_1_, IIcon p_77026_2_)
-	{
+	private void func_77026_a(Tessellator p_77026_1_, IIcon p_77026_2_) {
 		float f = p_77026_2_.getMinU();
 		float f1 = p_77026_2_.getMaxU();
 		float f2 = p_77026_2_.getMinV();

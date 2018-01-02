@@ -195,19 +195,22 @@ public class ExtraPlanets_Planets {
 		if (Config.kuiperBelt) {
 			kuiperBelt = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (kuiperBelt != null)
-				kuiperBelt.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F + Config.kuiperBeltDistanceOffset, 4.0F + Config.kuiperBeltDistanceOffset)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				kuiperBelt.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F + Config.kuiperBeltDistanceOffset, 4.0F + Config.kuiperBeltDistanceOffset))
+						.setRelativeOrbitTime(164.84118291347207009857612267251F);
 			kuiperBelt.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kuiper_belt.png"));
 		}
 		if (Config.makemake) {
 			makemake = RegisterHelper.registerUnreachablePlanet("makemake", GalacticraftCore.solarSystemSol);
 			if (makemake != null)
-				makemake.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.50F + Config.makemakeDistanceOffset, 4.50F + Config.makemakeDistanceOffset)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				makemake.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.50F + Config.makemakeDistanceOffset, 4.50F + Config.makemakeDistanceOffset))
+						.setRelativeOrbitTime(164.84118291347207009857612267251F);
 			makemake.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/makemake.png"));
 		}
 		if (Config.haumea) {
 			haumea = RegisterHelper.registerUnreachablePlanet("haumea", GalacticraftCore.solarSystemSol);
 			if (haumea != null)
-				haumea.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F + Config.haumeaDistanceOffset, 3.50F + Config.haumeaDistanceOffset)).setRelativeOrbitTime(164.84118291347207009857612267251F);
+				haumea.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F + Config.haumeaDistanceOffset, 3.50F + Config.haumeaDistanceOffset))
+						.setRelativeOrbitTime(164.84118291347207009857612267251F);
 			haumea.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/haumea.png"));
 		}
 		if (Config.keplerSolarSystems) {

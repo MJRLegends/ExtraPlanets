@@ -25,7 +25,7 @@ public class BiomeDecoratorPhobos extends BiomeDecoratorSpace {
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.phobosGravel, 12, 0, true, ExtraPlanets_Blocks.phobosBlocks, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.fossil, 3, 0, true, ExtraPlanets_Blocks.phobosBlocks, 1);
 		this.leadGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.phobosBlocks, 3, 6, true, ExtraPlanets_Blocks.phobosBlocks, 2);
-		
+
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 

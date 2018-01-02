@@ -2,8 +2,7 @@ package com.mjr.extraplanets.moons.Europa.worldgen;
 
 public class BiomeGenEuropa extends EuropaBiomes {
 
-	public BiomeGenEuropa(int par1)
-	{
+	public BiomeGenEuropa(int par1) {
 		super(par1);
 		this.setBiomeName("europa");
 		this.setColor(16711680);

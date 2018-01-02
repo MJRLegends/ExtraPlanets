@@ -96,7 +96,7 @@ public class WorldProviderCeres extends WorldProviderSpace implements IGalacticr
 
 	@Override
 	public float getGravity() {
-		if(Config.oldStyleGravity)
+		if (Config.oldStyleGravity)
 			return 0.058F;
 		else
 			return 0.065F;

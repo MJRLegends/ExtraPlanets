@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.village;
 
-
 public abstract class StructureComponentKepler22bVillageRoadPiece extends StructureComponentKepler22bVillage {
 	public StructureComponentKepler22bVillageRoadPiece() {
 	}

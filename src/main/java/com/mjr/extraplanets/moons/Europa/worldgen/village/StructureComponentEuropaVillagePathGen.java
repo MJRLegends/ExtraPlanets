@@ -67,32 +67,40 @@ public class StructureComponentEuropaVillagePathGen extends StructureComponentEu
 		if (var4 && par3Random.nextInt(3) > 0) {
 			switch (this.coordBaseMode) {
 			case 0:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY, this.boundingBox.maxZ - 2, 1, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY, this.boundingBox.maxZ - 2,
+						1, this.getComponentType());
 				break;
 			case 1:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX, this.boundingBox.minY, this.boundingBox.minZ - 1, 2, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX, this.boundingBox.minY, this.boundingBox.minZ - 1, 2,
+						this.getComponentType());
 				break;
 			case 2:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY, this.boundingBox.minZ, 1, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY, this.boundingBox.minZ, 1,
+						this.getComponentType());
 				break;
 			case 3:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX - 2, this.boundingBox.minY, this.boundingBox.minZ - 1, 2, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX - 2, this.boundingBox.minY, this.boundingBox.minZ - 1,
+						2, this.getComponentType());
 			}
 		}
 
 		if (var4 && par3Random.nextInt(3) > 0) {
 			switch (this.coordBaseMode) {
 			case 0:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY, this.boundingBox.maxZ - 2, 3, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY, this.boundingBox.maxZ - 2,
+						3, this.getComponentType());
 				break;
 			case 1:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX, this.boundingBox.minY, this.boundingBox.maxZ + 1, 0, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX, this.boundingBox.minY, this.boundingBox.maxZ + 1, 0,
+						this.getComponentType());
 				break;
 			case 2:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY, this.boundingBox.minZ, 3, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY, this.boundingBox.minZ, 3,
+						this.getComponentType());
 				break;
 			case 3:
-				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX - 2, this.boundingBox.minY, this.boundingBox.maxZ + 1, 0, this.getComponentType());
+				StructureVillagePiecesEuropa.getNextStructureComponentVillagePath((StructureComponentEuropaVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX - 2, this.boundingBox.minY, this.boundingBox.maxZ + 1,
+						0, this.getComponentType());
 			}
 		}
 	}
@@ -119,7 +127,9 @@ public class StructureComponentEuropaVillagePathGen extends StructureComponentEu
 
 		for (int var5 = this.boundingBox.minX; var5 <= this.boundingBox.maxX; ++var5) {
 			for (int var6 = this.boundingBox.minZ; var6 <= this.boundingBox.maxZ; ++var6) {
-				if (par3StructureBoundingBox.isVecInside(var5, 64, var6) && (par1World.getBlock(var5, par1World.getTopSolidOrLiquidBlock(var5, var6) - 1, var6) == GCBlocks.blockMoon && par1World.getBlockMetadata(var5, par1World.getTopSolidOrLiquidBlock(var5, var6) - 1, var6) == 5 || Blocks.air == par1World.getBlock(var5, par1World.getTopSolidOrLiquidBlock(var5, var6) - 1, var6))) {
+				if (par3StructureBoundingBox.isVecInside(var5, 64, var6)
+						&& (par1World.getBlock(var5, par1World.getTopSolidOrLiquidBlock(var5, var6) - 1, var6) == GCBlocks.blockMoon && par1World.getBlockMetadata(var5, par1World.getTopSolidOrLiquidBlock(var5, var6) - 1, var6) == 5 || Blocks.air == par1World
+								.getBlock(var5, par1World.getTopSolidOrLiquidBlock(var5, var6) - 1, var6))) {
 					final int var7 = par1World.getTopSolidOrLiquidBlock(var5, var6) - 1;
 					par1World.setBlock(var5, var7, var6, var4, 1, 3);
 				}

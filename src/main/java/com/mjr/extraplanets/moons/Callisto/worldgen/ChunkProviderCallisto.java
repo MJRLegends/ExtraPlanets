@@ -27,7 +27,7 @@ import com.mjr.extraplanets.moons.Callisto.worldgen.village.MapGenVillageCallist
 public class ChunkProviderCallisto extends ChunkProviderSpace {
 
 	private final BiomeDecoratorCallisto biomeDecorator = new BiomeDecoratorCallisto();
-	
+
 	private final MapGenCaveCallisto caveGenerator = new MapGenCaveCallisto();
 
 	private final MapGenRavineCallisto ravineGenerator = new MapGenRavineCallisto();
@@ -67,9 +67,9 @@ public class ChunkProviderCallisto extends ChunkProviderSpace {
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		if(Config.evolvedWitch)
+		if (Config.evolvedWitch)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedWitch.class, 8, 2, 3));
-		if(Config.evolvedEnderman)
+		if (Config.evolvedEnderman)
 			monsters.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedEnderman.class, 8, 2, 3));
 		return monsters.toArray(new BiomeGenBase.SpawnListEntry[monsters.size()]);
 	}

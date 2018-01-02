@@ -43,7 +43,8 @@ public class StructureVillagePiecesDeimos {
 		return var1 ? var2 : -1;
 	}
 
-	private static StructureComponentDeimosVillage func_75083_a(StructureComponentDeimosVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightDeimos par1StructureVillagePieceWeight, List<StructureComponent> par2List, Random par3Random, int par4, int par5, int par6, int par7, int par8) {
+	private static StructureComponentDeimosVillage func_75083_a(StructureComponentDeimosVillageStartPiece par0ComponentVillageStartPiece, StructureVillagePieceWeightDeimos par1StructureVillagePieceWeight, List<StructureComponent> par2List,
+			Random par3Random, int par4, int par5, int par6, int par7, int par8) {
 		final Class<?> var9 = par1StructureVillagePieceWeight.villagePieceClass;
 		Object var10 = null;
 
@@ -58,7 +59,8 @@ public class StructureVillagePiecesDeimos {
 		return (StructureComponentDeimosVillage) var10;
 	}
 
-	private static StructureComponentDeimosVillage getNextVillageComponent(StructureComponentDeimosVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
+	private static StructureComponentDeimosVillage getNextVillageComponent(StructureComponentDeimosVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6,
+			int par7) {
 		final int var8 = StructureVillagePiecesDeimos.func_75079_a(par0ComponentVillageStartPiece.structureVillageWeightedPieceList);
 
 		if (var8 <= 0) {
