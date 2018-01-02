@@ -3,7 +3,6 @@ package com.mjr.extraplanets.inventory.machines;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -21,11 +20,6 @@ public class ContainerBasicDecontaminationUnit extends Container {
 		// Electric Input Slot
 		this.addSlotToContainer(new SlotSpecific(tileEntity, 0, 153, 7, IItemElectric.class));
 
-//		// Input Slot 1
-//		this.addSlotToContainer(new Slot(tileEntity, 1, 112, 35));
-//
-//		// Input Slot 2
-//		this.addSlotToContainer(new Slot(tileEntity, 2, 7, 7));
 		int var3;
 
 		for (var3 = 0; var3 < 3; ++var3) {
@@ -58,51 +52,43 @@ public class ContainerBasicDecontaminationUnit extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
 		ItemStack var2 = null;
-		final Slot slot = this.inventorySlots.get(par1);
+		final Slot slot = (Slot) this.inventorySlots.get(par1);
+		final int b = this.inventorySlots.size();
 
 		if (slot != null && slot.getHasStack()) {
-			final ItemStack var4 = slot.getStack();
-			var2 = var4.copy();
+			final ItemStack stack = slot.getStack();
+			var2 = stack.copy();
 
-			if (par1 < 3) {
-				if (!this.mergeItemStack(var4, 3, 39, true)) {
+			if (par1 == 0) {
+				if (!this.mergeItemStack(stack, b - 36, b, true)) {
 					return null;
 				}
-
-				if (par1 == 2) {
-					slot.onSlotChange(var4, var2);
-				}
 			} else {
-				if (EnergyUtil.isElectricItem(var4.getItem())) {
-					if (!this.mergeItemStack(var4, 0, 1, false)) {
-						return null;
-					}
-				} else if (FluidUtil.isValidContainer(var4)) {
-					if (!this.mergeItemStack(var4, 2, 3, false)) {
+				if (EnergyUtil.isElectricItem(stack.getItem())) {
+					if (!this.mergeItemStack(stack, 0, 1, false)) {
 						return null;
 					}
 				} else {
-					if (par1 < 30) {
-						if (!this.mergeItemStack(var4, 30, 39, false)) {
+					if (par1 < b - 9) {
+						if (!this.mergeItemStack(stack, b - 9, b, false)) {
 							return null;
 						}
-					} else if (!this.mergeItemStack(var4, 3, 30, false)) {
+					} else if (!this.mergeItemStack(stack, b - 36, b - 9, false)) {
 						return null;
 					}
 				}
 			}
-
-			if (var4.getCount() == 0) {
-                slot.putStack(ItemStack.EMPTY);
+			if (stack.getCount() == 0) {
+				slot.putStack(ItemStack.EMPTY);
 			} else {
 				slot.onSlotChanged();
 			}
 
-			if (var4.getCount() == var2.getCount()) {
+			if (stack.getCount() == var2.getCount()) {
                 return ItemStack.EMPTY;
 			}
 
-			slot.onTake(par1EntityPlayer, var4);
+			slot.onTake(par1EntityPlayer, stack);
 		}
 
 		return var2;
