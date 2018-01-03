@@ -1105,6 +1105,7 @@ public class ClientProxy extends CommonProxy {
 		if (Config.BATTERIES) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_ADVANCED);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_ULTIMATE);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_MASSIVE);
 		}
 		if (Config.THERMAL_PADDINGS) {
 			for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++) {
