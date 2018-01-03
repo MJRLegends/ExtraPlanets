@@ -857,7 +857,7 @@ public class ExtraPlanets_Recipes {
 
 		// Advanced & Ultimate Battery
 		if (Config.BATTERIES) {
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(AsteroidsItems.basicItem, 1, 6), 'R', GCItems.battery, 'C',
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(AsteroidsItems.basicItem, 1, 6), 'R', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C',
 					new ItemStack(MarsBlocks.marsBlock, 1, 8) });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ULTIMATE, 1, 0), new Object[] { "WRB", "CPM", "TAZ", 'W', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 7), 'R',
 					new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 11), 'B', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 10), 'C', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 11), 'P',
