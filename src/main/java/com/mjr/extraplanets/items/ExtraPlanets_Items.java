@@ -109,6 +109,7 @@ public class ExtraPlanets_Items {
 	public static Item BATTERY_MERCURY;
 	public static Item BATTERY_ADVANCED;
 	public static Item BATTERY_ULTIMATE;
+	public static Item BATTERY_MASSIVE;
 
 	public static Item OXYGEN_TANK_VERY_HEAVY;
 	public static Item OXYGEN_TANK_EXTREMELY_HEAVY;
@@ -333,6 +334,7 @@ public class ExtraPlanets_Items {
 		if (Config.BATTERIES) {
 			BATTERY_ADVANCED = new ItemBasicBattery("advanced_battery", 150000f, 2);
 			BATTERY_ULTIMATE = new ItemBasicBattery("ultimate_battery", 200000f, 2);
+			BATTERY_MASSIVE = new ItemBasicBattery("massive_battery", 500000f, 2);
 		}
 		if (Config.OXYGEN_TANKS) {
 			OXYGEN_TANK_VERY_HEAVY = new ItemCustomOxygenTank(8, "oxygen_tank_very_heavy_full");
@@ -543,6 +545,7 @@ public class ExtraPlanets_Items {
 		if (Config.BATTERIES) {
 			RegisterUtilities.registerItem(BATTERY_ADVANCED, BATTERY_ADVANCED.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(BATTERY_ULTIMATE, BATTERY_ULTIMATE.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(BATTERY_MASSIVE, BATTERY_MASSIVE.getUnlocalizedName().substring(5));
 		}
 		if (Config.OXYGEN_TANKS) {
 			RegisterUtilities.registerItem(OXYGEN_TANK_VERY_HEAVY, OXYGEN_TANK_VERY_HEAVY.getUnlocalizedName().substring(5));
