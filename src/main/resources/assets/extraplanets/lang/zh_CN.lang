@@ -499,6 +499,7 @@ gui.status.waiting.on.player.name=No Player in Machine ##NEEDS TRANSLATE##
 gui.message.finding.block=Can be found on ##NEEDS TRANSLATE##
 gui.message.finding.volcanic.rock=Jupiter & Io ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Reduces Radiation Level by 10% ##NEEDS TRANSLATE##
+gui.battery_slot.desc.custom=Recommended to use a Massive Battery ##NEEDS TRANSLATE##
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
@@ -897,6 +898,7 @@ item.nickel_battery.name=镍电池
 item.zinc_battery.name=锌电池
 item.advanced_battery.name=高级电池
 item.ultimate_battery.name=终极电池
+item.massive_battery.name=Massive Battery ##NEEDS TRANSLATE##
 
 #Armor
 item.carbon_helmet.name=碳头盔
