@@ -219,16 +219,16 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 		if (!this.world.isRemote) {
 			if (this.posY < 0.0D) {
-				this.kill();
+				this.setDead();
 			} else if (this.posY > (this.world.provider instanceof IExitHeight ? ((IExitHeight) this.world.provider).getYCoordinateToTeleport() : 1200) + 100) {
 				for (Entity e : this.getPassengers()) {
 					if (e instanceof EntityPlayerMP) {
 						GCPlayerStats stats = GCPlayerStats.get(e);
 						if (stats.isUsingPlanetSelectionGui()) {
-							this.kill();
+							this.setDead();
 						}
 					} else
-						this.kill();
+						this.setDead();
 				}
 
 				if (this.timeSinceLaunch > 50 && this.onGround) {
