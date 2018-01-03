@@ -595,7 +595,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
-					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isBreathable() : "Unknown"), xOffset + 10, yOffset + 80,
+					boolean breathable = false;
+					if (temp != null && !(this.selectedBody instanceof Satellite))
+						breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
+					if(this.selectedBody.getUnlocalizedName().contains("overworld"))
+						breathable = true;
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : "Unknown"), xOffset + 10, yOffset + 80,
 							14737632);
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_corrosive_atmosphere.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10,
 							yOffset + 90, 14737632);
