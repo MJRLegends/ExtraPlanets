@@ -864,7 +864,7 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7), 'T', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'A',
 					new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), 'Z', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MASSIVE, 1, 0), new Object[] { "PPP", "ASA", "NNN", 'P', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 4), 'N', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6),
-					'S', Items.NETHER_STAR, 'A', new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()) });
+					'S', Items.nether_star, 'A', new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()) });
 		}
 		// Cloth
 		RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CLOTH, 8, 0), new Object[] { new ItemStack(Blocks.wool), new ItemStack(Blocks.wool), new ItemStack(Blocks.wool), new ItemStack(Blocks.wool) });
