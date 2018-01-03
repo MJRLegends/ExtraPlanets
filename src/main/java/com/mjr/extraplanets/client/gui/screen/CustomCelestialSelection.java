@@ -333,6 +333,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					boolean breathable = false;
 					if (temp != null && !(this.selectedBody instanceof Satellite))
 						breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
+					if(this.selectedBody.getUnlocalizedName().contains("overworld"))
+						breathable = true;
 					this.drawString(this.fontRendererObj, "Breathable: " + (this.selectedBody.getReachable() ? breathable : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
 				} else if (this.selectedBody instanceof Star) {
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
