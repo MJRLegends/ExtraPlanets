@@ -47,7 +47,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	public TileEntityBasicDecontaminationUnit() {
 		super();
 		this.storage.setCapacity(1000000);
-		this.storage.setMaxExtract(500);
+		this.storage.setMaxExtract(1000);
 	}
 
 	@Override
@@ -55,24 +55,34 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 		if (!this.worldObj.isRemote) {
 			List containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
 					this.getPos().getZ() + 1));
-			if (this.storage.getEnergyStoredGC() >= 1000000 && containedEntities.size() == 1) {
+			if (containedEntities.size() == 1) {
 				EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(0));
-				IStatsCapability stats = null;
-				if (player != null) {
-					stats = (player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null));
+				if (this.storage.getEnergyStoredGC() >= 1000000) {
+					IStatsCapability stats = null;
+					if (player != null) {
+						stats = (player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null));
+					}
+					double temp = stats.getRadiationLevel();
+					double level = (temp * 10) / 100;
+					if (level <= 0) {
+						stats.setRadiationLevel(0);
+						if (this.ticks % 40 == 0)
+							player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have no radiation damage to take!"));
+					} else {
+						this.storage.setEnergyStored(0);
+						stats.setRadiationLevel(stats.getRadiationLevel() - level);
+						player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 10%"));
+						player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+								+ (int) stats.getRadiationLevel() + "%"));
+					}
+				} else if (this.ticks % 40 == 0)
+					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD
+							+ ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!"));
+			} else if (this.ticks % 40 == 0)
+				for (int i = 0; i < containedEntities.size(); i++) {
+					EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(i));
+					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have to many people within the machine! Only 1 Player is allowed!"));
 				}
-				double temp = stats.getRadiationLevel();
-				double level = (temp * 10) / 100;
-				if (level <= 0)
-					stats.setRadiationLevel(0);
-				else {
-					this.storage.setEnergyStored(0);
-					stats.setRadiationLevel(stats.getRadiationLevel() - level);
-					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 10%"));
-					player.addChatMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
-							+ (int) stats.getRadiationLevel() + "%"));
-				}
-			}
 		}
 		super.update();
 	}
