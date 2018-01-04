@@ -14,6 +14,10 @@
 
 
 ===========================================Released Updates===========================================
+v1.2.2
+*Fixed some compatibility issues with More Planets
+*Few fixes to Celestial Selection screen
+
 v1.2.1
 *Added guide message about using oxygen sealers to protection from radiation and pressure
 *Added has Dungeon information to the Celestial Selection screen
