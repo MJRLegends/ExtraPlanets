@@ -8,6 +8,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.3
+*Fixed Neptune Stonebricks stairs recipe/Fixed issue #188
+*Updated lang files to match 1.8+ changes
+*Clean up/Fix Formatting
+*Updated Celestial Selection screen to match 1.8+
+*Added has Dungeon information to the Celestial Selection screen
+*Updated lang files to match 1.8+ changes
+
 v1.9.2
 *Fixed issue #187
 *Fixed issue #186
