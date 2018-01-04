@@ -14,6 +14,11 @@
 
 
 ===========================================Released Updates===========================================
+v0.8.8
+*Added guide message about using oxygen sealers to protection from radiation and pressure
+*Added has Dungeon information to the Celestial Selection screen
+*Tweaks colours for the Landing chat message
+
 v0.8.7
 *Fixed crash when shifting battery out of the Basic Decontamination Unit machine
 *Clean up/Fix Formatting

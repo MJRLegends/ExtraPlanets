@@ -6,7 +6,7 @@ public class Constants {
 
 	public static final int LOCALMAJVERSION = 0;
 	public static final int LOCALMINVERSION = 8;
-	public static final int LOCALBUILDVERSION = 7;
+	public static final int LOCALBUILDVERSION = 8;
 
 	public static final String modVersion = LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
