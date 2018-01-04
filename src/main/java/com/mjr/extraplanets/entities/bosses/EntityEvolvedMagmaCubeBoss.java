@@ -189,7 +189,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 			this.renderYawOffset = this.rotationYawHead;
 
 			if (this.isInWater() && this.rand.nextInt(20) == 0) {
-				this.resetHeight();
+				this.doWaterSplashEffect();
 			}
 		}
 
@@ -243,7 +243,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	}
 
 	@Override
-	protected SoundEvent getHurtSound() {
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
 		return SoundEvents.ENTITY_SLIME_HURT;
 	}
 
@@ -358,7 +358,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 		 * Returns whether an in-progress EntityAIBase should continue executing
 		 */
 		@Override
-		public boolean continueExecuting() {
+		public boolean shouldContinueExecuting() {
 			EntityLivingBase entitylivingbase = this.slime.getAttackTarget();
 			return entitylivingbase == null ? false : (!entitylivingbase.isEntityAlive() ? false : (entitylivingbase instanceof EntityPlayer && ((EntityPlayer) entitylivingbase).capabilities.disableDamage ? false : --this.field_179465_b > 0));
 		}

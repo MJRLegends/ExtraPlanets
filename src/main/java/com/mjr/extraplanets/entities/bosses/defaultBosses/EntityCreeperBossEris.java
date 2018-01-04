@@ -103,7 +103,7 @@ public class EntityCreeperBossEris extends EntityBossBase implements IEntityBrea
 	}
 
 	@Override
-	protected SoundEvent getHurtSound() {
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
 		this.playSound(GCSounds.bossOuch, this.getSoundVolume(), this.getSoundPitch() - 0.15F);
 		return null;
 	}
@@ -242,5 +242,11 @@ public class EntityCreeperBossEris extends EntityBossBase implements IEntityBrea
 	@Override
 	public BossInfo.Color getHealthBarColor() {
 		return BossInfo.Color.YELLOW;
+	}
+
+	@Override
+	public void setSwingingArms(boolean swingingArms) {
+		// TODO Auto-generated method stub
+		// TODO 1.12.2
 	}
 }

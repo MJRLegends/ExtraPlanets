@@ -88,7 +88,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	}
 
 	@Override
-	protected SoundEvent getHurtSound() {
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
 		return SoundEvents.ENTITY_BAT_HURT;
 	}
 

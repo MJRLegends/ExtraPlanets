@@ -108,7 +108,6 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 			return false;
 		} else if ("fireball".equals(source.getDamageType()) && source.getTrueSource() instanceof EntityPlayer) {
 			super.attackEntityFrom(source, 10.0F);
-			((EntityPlayer) source.getTrueSource()).addStat(AchievementList.GHAST);
 			return true;
 		} else {
 			return super.attackEntityFrom(source, amount);
@@ -139,7 +138,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	}
 
 	@Override
-	protected SoundEvent getHurtSound() {
+	protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
 		return SoundEvents.ENTITY_GHAST_HURT;
 	}
 
@@ -334,7 +333,7 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		 * Returns whether an in-progress EntityAIBase should continue executing
 		 */
 		@Override
-		public boolean continueExecuting() {
+		public boolean shouldContinueExecuting() {
 			return false;
 		}
 

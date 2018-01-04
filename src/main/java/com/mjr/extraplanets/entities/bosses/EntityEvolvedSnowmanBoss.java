@@ -112,7 +112,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		double d0 = p_82196_1_.posX - this.posX;
 		double d1 = p_82196_1_.posY + p_82196_1_.getEyeHeight() - 1.100000023841858D - entitysnowball.posY;
 		double d2 = p_82196_1_.posZ - this.posZ;
-		entitysnowball.setThrowableHeading(d0, d1, d2, 1.6F, 1.0F);
+		entitysnowball.shoot(d0, d1, d2, 1.6F, 1.0F);
 		// this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
 		this.world.spawnEntity(entitysnowball);
 	}
@@ -154,5 +154,11 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 	@Override
 	public Color getHealthBarColor() {
 		return Color.BLUE;
+	}
+
+	@Override
+	public void setSwingingArms(boolean swingingArms) {
+		// TODO Auto-generated method stub
+		// TODO 1.12.2
 	}
 }
