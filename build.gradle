@@ -30,7 +30,7 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "1.1.9"
+version = "1.2.0"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -53,10 +53,10 @@ minecraft {
 dependencies {
     deobfCompile "mezz.jei:jei_${minecraft_version}:${jei_version}"
 	compile files (
-		"Galacticraft-API-1.8.9-4.0.0.119.jar",
-		"GalacticraftCore-Dev-1.8.9-4.0.0.119.jar",
-		"Galacticraft-Planets-Dev-1.8.9-4.0.0.119.jar",
-		"MicdoodleCore-Dev-1.8.9-4.0.0.119.jar",
+		"Galacticraft-API-1.8.9-4.0.0.120.jar",
+		"GalacticraftCore-Dev-1.8.9-4.0.0.120.jar",
+		"Galacticraft-Planets-Dev-1.8.9-4.0.0.120.jar",
+		"MicdoodleCore-Dev-1.8.9-4.0.0.120.jar",
 		"MJRLegendsLib-1.8.9-1.0.1-dev.jar"
 	)
     // you may put jars on which you depend on in ./libs
