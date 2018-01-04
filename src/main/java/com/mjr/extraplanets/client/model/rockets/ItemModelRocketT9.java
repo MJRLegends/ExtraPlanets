@@ -5,7 +5,6 @@ import javax.vecmath.Quat4f;
 import javax.vecmath.Vector3f;
 
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
-import micdoodle8.mods.galacticraft.core.wrappers.ModelTransformWrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -16,6 +15,7 @@ import net.minecraftforge.common.model.TRSRTransformation;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.client.model.ModelTransformWrapper;
 
 public class ItemModelRocketT9 extends ModelTransformWrapper {
 	public ItemModelRocketT9(IBakedModel modelToWrap) {
