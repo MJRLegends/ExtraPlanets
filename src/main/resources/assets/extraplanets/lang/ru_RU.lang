@@ -497,6 +497,8 @@ gui.status.waiting.on.player.name=No Player in Machine ##NEEDS TRANSLATE##
 gui.message.finding.block=Can be found on ##NEEDS TRANSLATE##
 gui.message.finding.volcanic.rock=Jupiter & Io ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Reduces Radiation Level by 10% ##NEEDS TRANSLATE##
+gui.battery_slot.desc.custom=Recommended to use a Massive Battery ##NEEDS TRANSLATE##
+gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure ##NEEDS TRANSLATE##
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
@@ -895,6 +897,7 @@ item.nickel_battery.name=Никелевый аккумулятор
 item.zinc_battery.name=Цинковый аккумулятор
 item.advanced_battery.name=Улучшенный аккумулятор
 item.ultimate_battery.name=Максимальный аккумулятор
+item.massive_battery.name=Massive Battery ##NEEDS TRANSLATE##
 
 #Armor
 item.carbon_helmet.name=Углеродный шлем

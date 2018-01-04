@@ -18,6 +18,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
@@ -274,7 +275,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						else
 							temp = WorldUtil.getProviderForDimensionServer(this.selectedBody.getDimensionID());
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.general_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					String type;
 					if (GalaxyRegistry.getRegisteredPlanets().containsValue(this.selectedBody))
@@ -286,28 +287,28 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					else
 						type = "Unknown";
 
-					this.drawString(this.fontRendererObj, "Type: " + type, xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_type.name") + ": " + type, xOffset + 10, yOffset + 23, 14737632);
 					if ((this.selectedBody instanceof Planet))
-						this.drawString(this.fontRendererObj, "Amount of Moons: " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
+						this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_amount_of_moons.name") + ": " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
 					yOffset = yOffset + 45;
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Celestaial Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Orbit Time: " + this.selectedBody.getRelativeOrbitTime() * 24 + " days", xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_orbit_time.name") + ": " + this.selectedBody.getRelativeOrbitTime() * 24 + " days", xOffset + 10, yOffset + 23, 14737632);
 					float gravity = 0;
-					long dayLengh = 0;
-					if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
+					long dayLength = 0;
+					if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
 						gravity = ((WorldProviderSpace) temp).getGravity();
-						dayLengh = ((WorldProviderSpace) temp).getDayLength() / 1000;
-					} else if (this.selectedBody.getUnlocalizedName().contains("overworld")) {
+						dayLength = ((WorldProviderSpace) temp).getDayLength() / 1000;
+					} else if (this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
 						gravity = 1;
-						dayLengh = 24;
+						dayLength = 24;
 					}
-					this.drawString(this.fontRendererObj, "Gravity: " + (this.selectedBody.getReachable() ? gravity : "Unknown"), xOffset + 10, yOffset + 33, 14737632);
-					this.drawString(this.fontRendererObj, "Day Lengh: " + (this.selectedBody.getReachable() ? dayLengh + " hours" : "Unknown"), xOffset + 10, yOffset + 43, 14737632);
-					yOffset = yOffset + 60;
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_gravity.name") + ": " + (this.selectedBody.getReachable() ? gravity : "Unknown"), xOffset + 10, yOffset + 33, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_day_lengh.name") + ": " + (this.selectedBody.getReachable() ? dayLength + " hours" : "Unknown"), xOffset + 10, yOffset + 43, 14737632);
+					yOffset = yOffset + 55;
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "General Feature Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.general_features_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					double meteorFrequency = 0;
 					if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
@@ -317,45 +318,53 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					} else {
 						meteorFrequency = 0;
 					}
-					this.drawString(this.fontRendererObj, "Meteor Frequency: " + (this.selectedBody.getReachable() ? meteorFrequency : "Unknown"), xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_meteor_frequency.name") + ": " + (this.selectedBody.getReachable() ? meteorFrequency : "Unknown"), xOffset + 10, yOffset + 23, 14737632);
 
+					String name = this.selectedBody.getUnlocalizedName().toLowerCase();
+					String hasDungeon = "Unknown";
+					if (name.contains("moon") || name.contains("venus") || name.contains("mars") || name.contains("asteroids") || name.contains("mercury") || name.contains("jupiter") || name.contains("saturn") || name.contains("uranus")
+							|| name.contains("neptune") || name.contains("pluto") || name.contains("eris"))
+						hasDungeon = "true";
+					if (name.contains("overworld") || name.contains("ceres") || name.contains("kepler22b") || name.contains("phobos") || name.contains("deimos") || name.contains("io") || name.contains("europa") || name.contains("ganymede")
+							|| name.contains("callisto") || name.contains("rhea") || name.contains("titan") || name.contains("iapetus") || name.contains("titania") || name.contains("oberon") || name.contains("triton"))
+						hasDungeon = "false";
+					this.drawString(this.fontRendererObj, "Has Dungeon: " + hasDungeon, xOffset + 10, yOffset + 32, 14737632);
+					yOffset = yOffset + 5;
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 39, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Atmosphere Details: ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 51, ColorUtil.to32BitColor(255, 0, 150, 255));
-					float windLevel = 0;
-					if (temp != null && !(this.selectedBody instanceof Satellite))
-						windLevel = ((WorldProviderSpace) temp).getWindLevel();
-					this.drawString(this.fontRendererObj, "Wind Level: " + (this.selectedBody.getReachable() ? windLevel * 10 + "%" : "Unknown"), xOffset + 10, yOffset + 60, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": " + (!this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") ? (this.selectedBody.getReachable() ? ((WorldProviderSpace) temp).getWindLevel() * 10 + "%" : "Unknown") : "0.0%"), xOffset + 10,
+							yOffset + 60, 14737632);
 					float temperature = 0;
-					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().contains("overworld") && !(this.selectedBody instanceof Satellite))
+					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
 						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
-					this.drawString(this.fontRendererObj, "Temperature: " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
 					boolean breathable = false;
 					if (temp != null && !(this.selectedBody instanceof Satellite))
 						breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
-					if(this.selectedBody.getUnlocalizedName().contains("overworld"))
+					if (this.selectedBody.getUnlocalizedName().contains("overworld"))
 						breathable = true;
-					this.drawString(this.fontRendererObj, "Breathable: " + (this.selectedBody.getReachable() ? breathable : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
 				} else if (this.selectedBody instanceof Star) {
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "General Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.general_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Type: " + "Star", xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_type.name") + ": " + "Star", xOffset + 10, yOffset + 23, 14737632);
 					List<CelestialBody> planets = this.getChildren(((Star) this.selectedBody).getParentSolarSystem());
 					int amountofPlanets = planets.size();
-					this.drawString(this.fontRendererObj, "Amount of Planets: " + amountofPlanets, xOffset + 10, yOffset + 33, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_amount_of_planets.name") + ": " + amountofPlanets, xOffset + 10, yOffset + 33, 14737632);
 
 					yOffset = yOffset + 50;
 
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, "Parent Solar System Details: ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.parent_solar_system_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 
 					int amountofMoons = 0;
 					for (int i = 0; i < amountofPlanets; i++) {
 						amountofMoons += this.getChildren(planets.get(i)).size();
 					}
-					this.drawString(this.fontRendererObj, "Amount of Moons: " + amountofMoons, xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_amount_of_moons.name") + ": " + amountofMoons, xOffset + 10, yOffset + 23, 14737632);
 				}
 			}
 		}
