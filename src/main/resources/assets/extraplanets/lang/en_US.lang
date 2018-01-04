@@ -500,6 +500,7 @@ gui.message.finding.block=Can be found on
 gui.message.finding.volcanic.rock=Jupiter & Io
 gui.message.decontamination.unit=Reduces Radiation Level by 10%
 gui.battery_slot.desc.custom=Recommended to use a Massive Battery
+gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details
