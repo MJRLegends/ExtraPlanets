@@ -236,7 +236,7 @@ public class Config {
 
 	public static boolean morePlanetsCompatibility;
 	public static boolean morePlanetsCompatibilityAdv;
-	// public static boolean amunRaCompatibility;
+	public static boolean amunRaCompatibility;
 	public static boolean galaxySpaceCompatibility;
 	public static boolean galaxySpaceCompatibilityAdv;
 	public static boolean extendedPlanetsCompatibility;
@@ -268,7 +268,7 @@ public class Config {
 
 	public static boolean oldStyleGravity;
 
-	public static boolean useCustomCelestaialSelection;
+	public static boolean useCustomCelestialSelection;
 	public static boolean debugMode;
 
 	public static void init() {
@@ -534,13 +534,13 @@ public class Config {
 		evolvedGiantSpider = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
-		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic More Planets Compatibility", false, "This option will disable conflicting planets/moons/spacestations/thermal paddings").getBoolean(false);
+		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic More Planets Compatibility", false, "This option will disable conflicting Planets/Moons/SpaceStations/Thermal Paddings, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
 		morePlanetsCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced More Planets Compatibility", false,
 				"This option will do the same as the basic one but will also fix the progression between addons (Note: Will disable blocks/items/entities/recipes)").getBoolean(false);
-		// amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "").getBoolean(false);
-		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "This option will disable conflicting planets/moons/spacestations/thermal paddings").getBoolean(false);
+		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "This option will disable the Custom Celestial Selection screen & Change Conflicting Dimension Ids, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Ceres, Eris, Kepler22b, Rhea TO -66 ,-67 -68, -69").getBoolean(false);
+		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "This option will disable conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen & Change Conflicting Dimension Ids").getBoolean(false);
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
-		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable conflicting planets/moons/spacestations/thermal paddings").getBoolean(
+		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable conflicting Planets/Moons/SpaceStations").getBoolean(
 				false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -570,8 +570,8 @@ public class Config {
 
 		oldStyleGravity = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Old Style Gravity", false, "").getBoolean(false);
 
-		useCustomCelestaialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true,
-				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestaial Selection Screen").getBoolean(true);
+		useCustomCelestialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true,
+				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestial Selection Screen").getBoolean(true);
 
 		config.save();
 	}
@@ -614,7 +614,7 @@ public class Config {
 				kepler47SystemYawOffset = 40.0F;
 			iapetusID = -44;
 			titaniaID = -45;
-			useCustomCelestaialSelection = false;
+			useCustomCelestialSelection = false;
 		}
 		if (extendedPlanetsCompatibility) {
 			neptune = false;
@@ -628,6 +628,14 @@ public class Config {
 			titania = false;
 			titan = false;
 		}
+		if(amunRaCompatibility){
+			ceresID = -66;
+			erisID = -67;
+			kepler22bID = -68;
+			rheaID = -69;
+			useCustomCelestialSelection = false;
+		}
+		
 	}
 
 }

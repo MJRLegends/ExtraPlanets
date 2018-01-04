@@ -78,7 +78,7 @@ public class MainHandler {
 	@SideOnly(Side.CLIENT)
 	public void onGuiOpenEvent(GuiOpenEvent event) {
 		if (((event.gui instanceof GuiCelestialSelection))) {
-			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.useCustomCelestaialSelection) {
+			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.useCustomCelestialSelection) {
 				event.gui = new CustomCelestialSelection(true, null);
 			} else {
 				event.gui = new CustomCelestialSelection(false, null);

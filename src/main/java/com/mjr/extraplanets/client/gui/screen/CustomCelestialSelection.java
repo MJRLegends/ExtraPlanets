@@ -322,18 +322,19 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 					String name = this.selectedBody.getUnlocalizedName().toLowerCase();
 					String hasDungeon = "Unknown";
-					if (name.contains("moon") || name.contains("venus") || name.contains("mars") || name.contains("asteroids") || name.contains("jupiter") || name.contains("saturn") || name.contains("uranus")
-							|| name.contains("neptune") || name.contains("pluto") || name.contains("eris"))
+					if (name.contains("moon") || name.contains("venus") || name.contains("mars") || name.contains("asteroids") || name.contains("jupiter") || name.contains("saturn") || name.contains("uranus") || name.contains("neptune")
+							|| name.contains("pluto") || name.contains("eris"))
 						hasDungeon = "true";
 					if (name.contains("overworld") || name.contains("ceres") || name.contains("kepler22b") || name.contains("phobos") || name.contains("deimos") || name.contains("io") || name.contains("europa") || name.contains("ganymede")
-							|| name.contains("callisto") || name.contains("rhea") || name.contains("titan") || name.contains("iapetus") || name.contains("titania") || name.contains("oberon") || name.contains("triton")|| name.contains("mercury") )
+							|| name.contains("callisto") || name.contains("rhea") || name.contains("titan") || name.contains("iapetus") || name.contains("titania") || name.contains("oberon") || name.contains("triton") || name.contains("mercury"))
 						hasDungeon = "false";
 					this.drawString(this.fontRendererObj, "Has Dungeon: " + hasDungeon, xOffset + 10, yOffset + 32, 14737632);
 					yOffset = yOffset + 5;
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 39, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 51, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": " + (!this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") ? (this.selectedBody.getReachable() ? ((WorldProviderSpace) temp).getWindLevel() * 10 + "%" : "Unknown") : "0.0%"), xOffset + 10,
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": "
+							+ (!this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") ? (this.selectedBody.getReachable() ? ((WorldProviderSpace) temp).getWindLevel() * 10 + "%" : "Unknown") : "0.0%"), xOffset + 10,
 							yOffset + 60, 14737632);
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
