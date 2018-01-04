@@ -31,7 +31,7 @@ repositories {
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "0.8.6"
+version = "0.8.7"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -58,10 +58,10 @@ dependencies {
     compile "codechicken:NotEnoughItems:${minecraft_version}-${NEI_version}:deobf"
 
 	compile files (
-		"Galacticraft-API-1.10.2-4.0.0.119.jar",
-		"GalacticraftCore-Dev-1.10.2-4.0.0.119.jar",
-		"Galacticraft-Planets-Dev-1.10.2-4.0.0.119.jar",
-		"MicdoodleCore-Dev-1.10.2-4.0.0.119.jar",
+		"Galacticraft-API-1.10.2-4.0.0.120.jar",
+		"GalacticraftCore-Dev-1.10.2-4.0.0.120.jar",
+		"Galacticraft-Planets-Dev-1.10.2-4.0.0.120.jar",
+		"MicdoodleCore-Dev-1.10.2-4.0.0.120.jar",
 		"MJRLegendsLib-1.10.2-1.0.1-dev.jar"
 	)
     // you may put jars on which you depend on in ./libs
