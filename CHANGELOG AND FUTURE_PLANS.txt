@@ -15,6 +15,21 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.1
+*Fixed crash when shifting battery out of the Basic Decontamination Unit machine
+*Clean up/Fix Formatting
+*Match Galacticraft's changes
+*Added guide messages to the Basic Decontamination Unit
+*Increased rate of power transfer from batteries
+*Added Massive Battery for use with Basic Decontamination Unit
+*Added a message to the battery slot in the Basic Decontamination Unit
+*Added Massive Battery lang entry, json file, texture
+*Fixed Advanced Battery recipe
+*Added recipe for Massive Battery
+*Fixes for Massive Battery texture
+*Fixed Ultimate Battery recipe
+*Fixed issue #194
+
 v0.5.0
 *Added Config option for Old Tier 9/10 Rocket models 
 *Added comments
