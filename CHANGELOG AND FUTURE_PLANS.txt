@@ -8,6 +8,18 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.4
+*Fixed some compatibility issues with other addons
+
+*Fixed missing comments in config
+
+*Fixed spelling error in config
+
+*Added AmunRa Compatibility
+
+*Updated comments on config options
+
+
 v1.9.3
 *Fixed Neptune Stonebricks stairs recipe/Fixed issue #188
 *Updated lang files to match 1.8+ changes
