@@ -33,6 +33,7 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 		this.ySize = 180;
 	}
 
+	@Override
 	public void initGui() {
 		super.initGui();
 		List<String> batterySlotDesc = new ArrayList<String>();

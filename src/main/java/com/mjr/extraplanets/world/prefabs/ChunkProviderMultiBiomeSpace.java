@@ -3,8 +3,6 @@ package com.mjr.extraplanets.world.prefabs;
 import java.util.List;
 import java.util.Random;
 
-import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
-
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
 import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import net.minecraft.block.BlockFalling;
@@ -20,6 +18,9 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.ChunkGeneratorOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
+
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+
 /*
  * Class from Galacticraft Core
  * Credit micdoodle8, radfast

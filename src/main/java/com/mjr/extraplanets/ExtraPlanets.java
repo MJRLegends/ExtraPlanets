@@ -306,8 +306,8 @@ public class ExtraPlanets {
 		// ExtraPlanets_Recipes.init();
 
 		// Initialize/Register Achievements
-//		if (Config.ACHIEVEMENTS)
-//			ExtraPlanets_Achievements.init();
+		// if (Config.ACHIEVEMENTS)
+		// ExtraPlanets_Achievements.init();
 
 		// Register GUI Handler
 		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());

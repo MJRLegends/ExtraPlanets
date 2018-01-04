@@ -17,10 +17,9 @@ public class ItemBlockBasicDecontaminationUnit extends ItemBlockDesc {
 		super(block);
 	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-    {
-        super.addInformation(par1ItemStack, worldIn, tooltip, flagIn);
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		super.addInformation(par1ItemStack, worldIn, tooltip, flagIn);
+	}
 }
