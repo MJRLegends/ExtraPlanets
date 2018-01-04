@@ -603,7 +603,10 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							yOffset + 60, 14737632);
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
+						try {
+							temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
+						} catch (Exception e) {
+						}
 					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
 					boolean breathable = false;
 					if (temp != null && !(this.selectedBody instanceof Satellite))
