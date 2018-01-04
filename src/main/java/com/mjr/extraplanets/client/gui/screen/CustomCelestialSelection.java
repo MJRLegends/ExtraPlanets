@@ -322,11 +322,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 					String name = this.selectedBody.getUnlocalizedName().toLowerCase();
 					String hasDungeon = "Unknown";
-					if (name.contains("moon") || name.contains("venus") || name.contains("mars") || name.contains("asteroids") || name.contains("mercury") || name.contains("jupiter") || name.contains("saturn") || name.contains("uranus")
+					if (name.contains("moon") || name.contains("venus") || name.contains("mars") || name.contains("asteroids") || name.contains("jupiter") || name.contains("saturn") || name.contains("uranus")
 							|| name.contains("neptune") || name.contains("pluto") || name.contains("eris"))
 						hasDungeon = "true";
 					if (name.contains("overworld") || name.contains("ceres") || name.contains("kepler22b") || name.contains("phobos") || name.contains("deimos") || name.contains("io") || name.contains("europa") || name.contains("ganymede")
-							|| name.contains("callisto") || name.contains("rhea") || name.contains("titan") || name.contains("iapetus") || name.contains("titania") || name.contains("oberon") || name.contains("triton"))
+							|| name.contains("callisto") || name.contains("rhea") || name.contains("titan") || name.contains("iapetus") || name.contains("titania") || name.contains("oberon") || name.contains("triton")|| name.contains("mercury") )
 						hasDungeon = "false";
 					this.drawString(this.fontRendererObj, "Has Dungeon: " + hasDungeon, xOffset + 10, yOffset + 32, 14737632);
 					yOffset = yOffset + 5;
