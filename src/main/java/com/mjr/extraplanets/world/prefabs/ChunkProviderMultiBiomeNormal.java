@@ -3,7 +3,6 @@ package com.mjr.extraplanets.world.prefabs;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureType;
@@ -14,10 +13,13 @@ import net.minecraft.world.WorldEntitySpawner;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.gen.ChunkGeneratorOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
-public abstract class ChunkProviderMultiBiomeNormal extends ChunkProviderOverworld {
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+
+public abstract class ChunkProviderMultiBiomeNormal extends ChunkGeneratorOverworld {
 	private Random rand;
 	protected World worldObj;
 	private double[] depthBuffer;

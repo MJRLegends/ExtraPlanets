@@ -40,7 +40,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 	}
 
 	@Override
-	public void renderTileEntityAt(TileEntityBasicDecontaminationUnit te, double x, double y, double z, float partialTicks, int destroyStage) {
+	public void render(TileEntityBasicDecontaminationUnit te, double x, double y, double z, float partialTickTime, int par9, float alpha) {
 		GlStateManager.disableRescaleNormal();
 		GL11.glPushMatrix();
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);

@@ -184,8 +184,8 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		if (this.isDead || var1.equals(DamageSource.CACTUS)) {
 			return true;
 		} else {
-			Entity e = var1.getEntity();
-			boolean flag = var1.getEntity() instanceof EntityPlayer && ((EntityPlayer) var1.getEntity()).capabilities.isCreativeMode;
+			Entity e = var1.getTrueSource();
+			boolean flag = var1.getTrueSource() instanceof EntityPlayer && ((EntityPlayer) var1.getTrueSource()).capabilities.isCreativeMode;
 
 			if (this.isEntityInvulnerable(var1) || (e instanceof EntityLivingBase && !(e instanceof EntityPlayer))) {
 				return false;
@@ -193,7 +193,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 				this.dataManager.set(ROCK_DIRECTION, -this.dataManager.get(ROCK_DIRECTION));
 				this.dataManager.set(TIME_SINCE_HIT, 10);
 				this.dataManager.set(CURRENT_DAMAGE, (int) (this.dataManager.get(CURRENT_DAMAGE) + var2 * 10));
-				this.setBeenAttacked();
+				this.markVelocityChanged();
 
 				if (e instanceof EntityPlayer && ((EntityPlayer) e).capabilities.isCreativeMode) {
 					this.dataManager.set(CURRENT_DAMAGE, 100);
@@ -231,7 +231,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			EntityItem entityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
+				entityItem.getItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}

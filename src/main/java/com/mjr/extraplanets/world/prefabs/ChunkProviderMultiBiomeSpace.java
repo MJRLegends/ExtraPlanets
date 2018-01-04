@@ -3,7 +3,8 @@ package com.mjr.extraplanets.world.prefabs;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
 import micdoodle8.mods.galacticraft.core.world.gen.EnumCraterSize;
 import net.minecraft.block.BlockFalling;
@@ -16,14 +17,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.gen.ChunkGeneratorOverworld;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
-
 /*
  * Class from Galacticraft Core
  * Credit micdoodle8, radfast
  */
-public abstract class ChunkProviderMultiBiomeSpace extends ChunkProviderOverworld {
+public abstract class ChunkProviderMultiBiomeSpace extends ChunkGeneratorOverworld {
 	protected Random rand;
 	protected World worldObj;
 	private double[] depthBuffer;
@@ -81,7 +82,7 @@ public abstract class ChunkProviderMultiBiomeSpace extends ChunkProviderOverworl
 	}
 
 	@Override
-    public Chunk provideChunk(int x, int z) {
+	public Chunk generateChunk(int chunkX, int chunkZ) {
 		this.rand.setSeed(chunkX * 341873128712L + chunkZ * 132897987541L);
 		ChunkPrimer chunkprimer = new ChunkPrimer();
 		this.setBlocksInChunk(chunkX, chunkZ, chunkprimer);
@@ -353,11 +354,6 @@ public abstract class ChunkProviderMultiBiomeSpace extends ChunkProviderOverworl
 	@Override
 	public boolean generateStructures(Chunk chunkIn, int x, int z) {
 		return false;
-	}
-
-	@Override
-	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position, boolean p_180513_4_) {
-		return null;
 	}
 
 	@Override

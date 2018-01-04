@@ -214,7 +214,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	protected void dealDamage(EntityLivingBase entityIn) {
 		int i = this.getSlimeSize();
 
-		if (this.canEntityBeSeen(entityIn) && this.getDistanceSqToEntity(entityIn) < 0.6D * i * 0.6D * i && entityIn.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength())) {
+		if (this.canEntityBeSeen(entityIn) && this.getDistanceSq(entityIn) < 0.6D * i * 0.6D * i && entityIn.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength())) {
 			this.playSound(SoundEvents.ENTITY_SLIME_ATTACK, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
 			this.applyEnchantments(this, entityIn);
 		}

@@ -188,8 +188,8 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		if (this.isDead || var1.equals(DamageSource.CACTUS)) {
 			return true;
 		} else {
-			Entity e = var1.getEntity();
-			boolean flag = var1.getEntity() instanceof EntityPlayer && ((EntityPlayer) var1.getEntity()).capabilities.isCreativeMode;
+			Entity e = var1.getTrueSource();
+			boolean flag = var1.getTrueSource() instanceof EntityPlayer && ((EntityPlayer) var1.getTrueSource()).capabilities.isCreativeMode;
 
 			if (this.isEntityInvulnerable(var1) || (e instanceof EntityLivingBase && !(e instanceof EntityPlayer))) {
 				return false;
@@ -197,7 +197,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 				this.dataManager.set(ROCK_DIRECTION, -this.dataManager.get(ROCK_DIRECTION));
 				this.dataManager.set(TIME_SINCE_HIT, 10);
 				this.dataManager.set(CURRENT_DAMAGE, (int) (this.dataManager.get(CURRENT_DAMAGE) + var2 * 10));
-				this.setBeenAttacked();
+				this.markVelocityChanged();
 
 				if (e instanceof EntityPlayer && ((EntityPlayer) e).capabilities.isCreativeMode) {
 					this.dataManager.set(CURRENT_DAMAGE, 100);
@@ -235,7 +235,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			EntityItem entityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
+				entityItem.getItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}
@@ -330,7 +330,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			this.speed = this.maxSpeed;
 		}
 
-		if (this.isCollidedHorizontally && this.shouldClimb) {
+		if (this.collidedHorizontally && this.shouldClimb) {
 			this.speed *= 0.9;
 			this.motionY = 0.15D * ((-Math.pow((this.timeClimbing) - 1, 2)) / 250.0F) + 0.15F;
 			this.motionY = Math.max(-0.15, this.motionY);
@@ -454,7 +454,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 
 	@Override
 	public boolean isUsableByPlayer(EntityPlayer var1) {
-		return !this.isDead && var1.getDistanceSqToEntity(this) <= 64.0D;
+		return !this.isDead && var1.getDistanceSq(this) <= 64.0D;
 	}
 
 	@Override

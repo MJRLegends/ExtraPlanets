@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.gen.ChunkGeneratorOverworld;
 
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
@@ -23,7 +24,7 @@ import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
  * Class from Galacticraft Core
  * Credit micdoodle8, radfast
  */
-public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderOverworld {
+public abstract class ChunkProviderSingleBiomeSpace extends ChunkGeneratorOverworld {
 	protected final Random rand;
 
 	private final Gradient noiseGen1;
@@ -197,27 +198,27 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderOverwor
 	}
 
 	@Override
-	public Chunk provideChunk(int x, int z) {
+	public Chunk generateChunk(int chunkX, int chunkZ) {
 		ChunkPrimer primer = new ChunkPrimer();
-		this.rand.setSeed(x * 341873128712L + z * 132897987541L);
+		this.rand.setSeed(chunkX * 341873128712L + chunkZ * 132897987541L);
 		// final Block[] ids = new Block[32768 * 2];
 		// final byte[] meta = new byte[32768 * 2];
-		this.generateTerrain(x, z, primer);
-		this.createCraters(x, z, primer);
-		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, x * 16, z * 16, 16, 16);
-		this.replaceBiomeBlocks(x, z, primer, this.biomesForGeneration);
+		this.generateTerrain(chunkX, chunkZ, primer);
+		this.createCraters(chunkX, chunkZ, primer);
+		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, chunkX * 16, chunkZ * 16, 16, 16);
+		this.replaceBiomeBlocks(chunkX, chunkZ, primer, this.biomesForGeneration);
 
 		if (this.worldGenerators == null) {
 			this.worldGenerators = this.getWorldGenerators();
 		}
 
 		for (MapGenBaseMeta generator : this.worldGenerators) {
-			generator.generate(this.world, x, z, primer);
+			generator.generate(this.world, chunkX, chunkZ, primer);
 		}
 
-		this.onChunkProvide(x, z, primer);
+		this.onChunkProvide(chunkX, chunkZ, primer);
 
-		final Chunk var4 = new Chunk(this.world, primer, x, z);
+		final Chunk var4 = new Chunk(this.world, primer, chunkX, chunkZ);
 		final byte[] var5 = var4.getBiomeArray();
 
 		for (int var6 = 0; var6 < var5.length; ++var6) {

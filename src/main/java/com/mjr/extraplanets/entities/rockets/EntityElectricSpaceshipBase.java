@@ -118,13 +118,13 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 	@Override
 	public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
 		if (!this.world.isRemote && !this.isDead) {
-			boolean flag = par1DamageSource.getEntity() instanceof EntityPlayer && ((EntityPlayer) par1DamageSource.getEntity()).capabilities.isCreativeMode;
-			Entity e = par1DamageSource.getEntity();
+			boolean flag = par1DamageSource.getTrueSource() instanceof EntityPlayer && ((EntityPlayer) par1DamageSource.getTrueSource()).capabilities.isCreativeMode;
+			Entity e = par1DamageSource.getTrueSource();
 			if (this.isEntityInvulnerable(par1DamageSource) || this.posY > 300 || (e instanceof EntityLivingBase && !(e instanceof EntityPlayer))) {
 				return false;
 			} else {
 				this.rollAmplitude = 10;
-				this.setBeenAttacked();
+				this.markVelocityChanged();
 				this.shipDamage += par2 * 10;
 
 				if (e instanceof EntityPlayer && ((EntityPlayer) e).capabilities.isCreativeMode) {
@@ -159,7 +159,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 			EntityItem entityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
+				entityItem.getItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}
@@ -609,7 +609,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public int getBrightnessForRender(float partialTicks) {
+	public int getBrightnessForRender() {
 		double height = this.posY + this.getEyeHeight();
 		if (height > 255D)
 			height = 255D;

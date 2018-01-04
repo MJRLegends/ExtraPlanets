@@ -93,7 +93,7 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 					final float var31 = var30.getCollisionBorderSize();
 					final AxisAlignedBB var32 = var30.getEntityBoundingBox().expand(var31, var31, var31);
 
-					if (var32.isVecInside(var13)) {
+					if (var32.contains(var13)) {
 						var26 = true;
 					}
 				}
