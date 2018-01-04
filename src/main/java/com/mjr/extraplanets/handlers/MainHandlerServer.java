@@ -332,6 +332,7 @@ public class MainHandlerServer {
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", " + GCCoreUtil.translate("gui.radiation.subject.message") + " "
 						+ ((WorldProviderRealisticSpace) event.player.world.provider).getSolarRadiationLevel() + "% " + GCCoreUtil.translate("gui.radiation.type.message") + ""));
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", " + GCCoreUtil.translate("gui.radiation.reverse.message") + "!"));
+				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", " + GCCoreUtil.translate("gui.radiation.cancel.message") + "!"));
 			}
 		}
 	}
