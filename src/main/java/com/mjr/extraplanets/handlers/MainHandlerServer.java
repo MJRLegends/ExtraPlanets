@@ -333,6 +333,7 @@ public class MainHandlerServer {
 				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + GCCoreUtil.translate("gui.radiation.subject.message") + " "
 						+ ((WorldProviderRealisticSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% " + GCCoreUtil.translate("gui.radiation.type.message") + ""));
 				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", " + GCCoreUtil.translate("gui.radiation.reverse.message") + "!"));
+				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", " + GCCoreUtil.translate("gui.radiation.cancel.message") + "!"));
 			}
 		}
 	}
