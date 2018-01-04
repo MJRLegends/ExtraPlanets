@@ -337,13 +337,19 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							yOffset + 60, 14737632);
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
+						try {
+							temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
+						} catch (Exception e) {
+						}
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
 					boolean breathable = false;
-					if (temp != null && !(this.selectedBody instanceof Satellite))
-						breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
-					if (this.selectedBody.getUnlocalizedName().contains("overworld"))
-						breathable = true;
+					try {
+						if (temp != null && !(this.selectedBody instanceof Satellite))
+							breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
+						if (this.selectedBody.getUnlocalizedName().contains("overworld"))
+							breathable = true;
+					} catch (Exception e) {
+					}
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
 				} else if (this.selectedBody instanceof Star) {
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
