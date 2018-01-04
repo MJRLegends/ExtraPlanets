@@ -450,32 +450,32 @@ public class Config {
 		kepler22bSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Dimension ID", -81).getInt();
 		kepler22bSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Static Dimension ID", -80).getInt();
 
-		mercuryBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Mercury Biome ID", 148).getInt();
-		venusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Venus Biome ID", 149).getInt();
-		ceresBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ceres Biome ID", 155).getInt();
-		jupiterBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Biome ID", 150).getInt();
-		saturnBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Biome ID", 147).getInt();
-		uranusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Biome ID", 152).getInt();
-		neptuneBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Biome ID", 153).getInt();
-		plutoBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Pluto Biome ID", 154).getInt();
-		erisBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Eris Biome ID", 184).getInt();
-		europaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Biome ID", 183).getInt();
-		ioBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Biome ID", 182).getInt();
-		deimosBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Deimos Biome ID", 159).getInt();
-		phobosBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Phobos Biome ID", 168).getInt();
-		tritonBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Biome ID", 169).getInt();
-		callistoBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Biome ID", 170).getInt();
-		ganymedeBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ganymede Biome ID", 171).getInt();
-		rheaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Rhea Biome ID", 172).getInt();
-		titanBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Biome ID", 173).getInt();
-		kepler22bPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Plains Biome ID", 174).getInt();
-		kepler22bBlueForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Blue Maple Forest Biome ID", 175).getInt();
-		kepler22bPurpleForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Purple Maple Forest Biome ID", 176).getInt();
-		kepler22bRedForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Blue Red Forest Biome ID", 177).getInt();
-		kepler22bYellowForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Yellow Maple Forest Biome ID", 178).getInt();
-		oberonBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Biome ID", 179).getInt();
-		titaniaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180).getInt();
-		iapetusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181).getInt();
+		mercuryBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Mercury Biome ID", 148, "[range: 0 ~ 255, default: 148]").getInt();
+		venusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Venus Biome ID", 149, "[range: 0 ~ 255, default: 149]").getInt();
+		ceresBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ceres Biome ID", 155, "[range: 0 ~ 255, default: 155]").getInt();
+		jupiterBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Biome ID", 150, "[range: 0 ~ 255, default: 150]").getInt();
+		saturnBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Biome ID", 147, "[range: 0 ~ 255, default: 147]").getInt();
+		uranusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Biome ID", 152, "[range: 0 ~ 255, default: 152]").getInt();
+		neptuneBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Biome ID", 153, "[range: 0 ~ 255, default: 153]").getInt();
+		plutoBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Pluto Biome ID", 154, "[range: 0 ~ 255, default: 154]").getInt();
+		erisBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Eris Biome ID", 184, "[range: 0 ~ 255, default: 184]").getInt();
+		europaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Biome ID", 183, "[range: 0 ~ 255, default: 183]").getInt();
+		ioBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Biome ID", 182, "[range: 0 ~ 255, default: 182]").getInt();
+		deimosBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Deimos Biome ID", 159, "[range: 0 ~ 255, default: 159]").getInt();
+		phobosBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Phobos Biome ID", 168, "[range: 0 ~ 255, default: 168]").getInt();
+		tritonBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Biome ID", 169, "[range: 0 ~ 255, default: 169]").getInt();
+		callistoBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Biome ID", 170, "[range: 0 ~ 255, default: 170]").getInt();
+		ganymedeBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ganymede Biome ID", 171, "[range: 0 ~ 255, default: 171]").getInt();
+		rheaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Rhea Biome ID", 172, "[range: 0 ~ 255, default: 172]").getInt();
+		titanBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Biome ID", 173, "[range: 0 ~ 255, default: 173]").getInt();
+		kepler22bPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Plains Biome ID", 174, "[range: 0 ~ 255, default: 174]").getInt();
+		kepler22bBlueForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Blue Maple Forest Biome ID", 175, "[range: 0 ~ 255, default: 175]").getInt();
+		kepler22bPurpleForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Purple Maple Forest Biome ID", 176, "[range: 0 ~ 255, default: 176]").getInt();
+		kepler22bRedForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Blue Red Forest Biome ID", 177, "[range: 0 ~ 255, default: 177]").getInt();
+		kepler22bYellowForestBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Yellow Maple Forest Biome ID", 178, "[range: 0 ~ 255, default: 178]").getInt();
+		oberonBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Biome ID", 179, "[range: 0 ~ 255, default: 179]").getInt();
+		titaniaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180, "[range: 0 ~ 255, default: 180]").getInt();
+		iapetusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181, "[range: 0 ~ 255, default: 181]").getInt();
 		kepler22bRedDesertBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 185, "[range: 0 ~ 255, default: 185]").getInt();
 		titanSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Sea Biome ID", 186, "[range: 0 ~ 255, default: 186]").getInt();
 		tritonIceLandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Lands Biome ID", 187, "[range: 0 ~ 255, default: 187]").getInt();
@@ -570,7 +570,7 @@ public class Config {
 
 		oldStyleGravity = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Old Style Gravity", false, "").getBoolean(false);
 
-		useCustomCelestaialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", true,
+		useCustomCelestaialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true,
 				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestaial Selection Screen").getBoolean(true);
 
 		config.save();
