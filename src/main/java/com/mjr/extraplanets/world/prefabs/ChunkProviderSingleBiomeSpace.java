@@ -16,7 +16,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.gen.ChunkProviderOverworld;
 
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 

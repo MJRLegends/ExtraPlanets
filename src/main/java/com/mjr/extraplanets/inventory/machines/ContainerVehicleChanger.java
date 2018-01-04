@@ -73,21 +73,17 @@ public class ContainerVehicleChanger extends Container {
 				}
 			}
 
-            if (var5.getCount() == 0)
-            {
-                slot.putStack(ItemStack.EMPTY);
-            }
-            else
-            {
-                slot.onSlotChanged();
-            }
+			if (var5.getCount() == 0) {
+				slot.putStack(ItemStack.EMPTY);
+			} else {
+				slot.onSlotChanged();
+			}
 
-            if (var5.getCount() == var3.getCount())
-            {
-                return ItemStack.EMPTY;
-            }
+			if (var5.getCount() == var3.getCount()) {
+				return ItemStack.EMPTY;
+			}
 
-            slot.onTake(par1EntityPlayer, var5);
+			slot.onTake(par1EntityPlayer, var5);
 		}
 
 		return var3;

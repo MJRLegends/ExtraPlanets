@@ -38,22 +38,19 @@ public class FluidBlockEP extends BlockFluidClassic {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.magma, 4.0F);
 				}
 			}
-		} 
-		else if (state.getBlock() == ExtraPlanets_Fluids.FROZEN_WATER || state == ExtraPlanets_Fluids.NITROGEN || state == ExtraPlanets_Fluids.NITROGEN_ICE) {
+		} else if (state.getBlock() == ExtraPlanets_Fluids.FROZEN_WATER || state == ExtraPlanets_Fluids.NITROGEN || state == ExtraPlanets_Fluids.NITROGEN_ICE) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.hypothermia, 2.5F);
 				}
 			}
-		} 
-		else if (state.getBlock() == ExtraPlanets_Fluids.RADIO_ACTIVE_WATER) {
+		} else if (state.getBlock() == ExtraPlanets_Fluids.RADIO_ACTIVE_WATER) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.radiationLiquid, 3.5F);
 				}
 			}
-		}
-		else if (state.getBlock() == ExtraPlanets_Fluids.INFECTED_WATER || state.getBlock() == ExtraPlanets_Fluids.METHANE) {
+		} else if (state.getBlock() == ExtraPlanets_Fluids.INFECTED_WATER || state.getBlock() == ExtraPlanets_Fluids.METHANE) {
 			if ((entityIn instanceof EntityLivingBase)) {
 				if (worldIn.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
 					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.infection, 1.0F);

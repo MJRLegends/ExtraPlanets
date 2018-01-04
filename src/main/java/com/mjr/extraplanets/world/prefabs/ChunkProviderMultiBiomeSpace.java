@@ -81,7 +81,7 @@ public abstract class ChunkProviderMultiBiomeSpace extends ChunkProviderOverworl
 	}
 
 	@Override
-	public Chunk generateChunk(int chunkX, int chunkZ) {
+    public Chunk provideChunk(int x, int z) {
 		this.rand.setSeed(chunkX * 341873128712L + chunkZ * 132897987541L);
 		ChunkPrimer chunkprimer = new ChunkPrimer();
 		this.setBlocksInChunk(chunkX, chunkZ, chunkprimer);

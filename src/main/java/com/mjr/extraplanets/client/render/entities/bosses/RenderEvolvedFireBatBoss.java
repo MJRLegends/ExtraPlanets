@@ -19,7 +19,7 @@ public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatB
 	public RenderEvolvedFireBatBoss(RenderManager renderManagerIn) {
 		super(renderManagerIn, new ModelEvolvedFireBatBoss(), 0.25F);
 	}
-	
+
 	@Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedFireBatBoss entity) {
 		return BAT_TEXTURES;

@@ -318,7 +318,8 @@ public class MainHandlerServer {
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
 				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 5%"));
-				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%"));
+				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+						+ (int) stats.getRadiationLevel() + "%"));
 			}
 		}
 	}

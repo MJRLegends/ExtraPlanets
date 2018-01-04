@@ -83,28 +83,22 @@ public class BlockNuclearBomb extends Block {
 
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        ItemStack itemstack = playerIn.getHeldItem(hand);
+		ItemStack itemstack = playerIn.getHeldItem(hand);
 
-        if (!itemstack.isEmpty() && (itemstack.getItem() == Items.FLINT_AND_STEEL || itemstack.getItem() == Items.FIRE_CHARGE))
-        {
-            this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
-            worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
+		if (!itemstack.isEmpty() && (itemstack.getItem() == Items.FLINT_AND_STEEL || itemstack.getItem() == Items.FIRE_CHARGE)) {
+			this.explode(worldIn, pos, state.withProperty(EXPLODE, Boolean.valueOf(true)), playerIn);
+			worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
 
-            if (itemstack.getItem() == Items.FLINT_AND_STEEL)
-            {
-                itemstack.damageItem(1, playerIn);
-            }
-            else if (!playerIn.capabilities.isCreativeMode)
-            {
-                itemstack.shrink(1);
-            }
+			if (itemstack.getItem() == Items.FLINT_AND_STEEL) {
+				itemstack.damageItem(1, playerIn);
+			} else if (!playerIn.capabilities.isCreativeMode) {
+				itemstack.shrink(1);
+			}
 
-            return true;
-        }
-        else
-        {
-            return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
-        }
+			return true;
+		} else {
+			return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
+		}
 	}
 
 	/**

@@ -18,7 +18,7 @@ import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
 public class ChunkProviderIapetus extends ChunkProviderSingleBiomeSpace {
 	private final BiomeDecoratorIapetus ceresBiomeDecorator = new BiomeDecoratorIapetus();
-	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.IAPETUS_BLOCKS, 0, 1, 2);	
+	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.IAPETUS_BLOCKS, 0, 1, 2);
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 
 	public ChunkProviderIapetus(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -43,7 +43,7 @@ public class ChunkProviderIapetus extends ChunkProviderSingleBiomeSpace {
 	@Override
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
-		 generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator);
 		return generators;
 	}
 

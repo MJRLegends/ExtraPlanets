@@ -31,7 +31,7 @@ public class TileEntityPoweredChargingPadSingle extends TileEntity implements IT
 				for (final TileEntity tile : attachedLaunchPads) {
 					this.world.markTileEntityForRemoval(tile);
 				}
-				
+
 				this.getPos().south(1);
 				this.getPos().east(1);
 

@@ -13,11 +13,11 @@ public class ExtraPlanets_SolarSystems {
 	public static SolarSystem kepler47;
 	public static SolarSystem kepler62;
 	public static SolarSystem kepler69;
-	
+
 	// Whirlpool
 	public static SolarSystem xenos157;
-	
-	//Andromeda
+
+	// Andromeda
 	public static SolarSystem deltiri10;
 
 	// Black Eye
@@ -38,7 +38,7 @@ public class ExtraPlanets_SolarSystems {
 			starSol.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler22.setMainStar(starSol);
 
-			kepler47 = new SolarSystem("kepler47", "milky_way").setMapPosition(new Vector3(-0.40F + Config.KEPLER47_SYSTEM_X_OFFSET, -0.8F + Config.KEPLER47_SYSTEM_Y_OFFSET, 0.0F+ Config.KEPLER47_SYSTEM_Z_OFFSET));
+			kepler47 = new SolarSystem("kepler47", "milky_way").setMapPosition(new Vector3(-0.40F + Config.KEPLER47_SYSTEM_X_OFFSET, -0.8F + Config.KEPLER47_SYSTEM_Y_OFFSET, 0.0F + Config.KEPLER47_SYSTEM_Z_OFFSET));
 			Star starSol2 = (Star) new Star("kepler47").setParentSolarSystem(kepler47).setTierRequired(-1);
 			starSol2.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler47.setMainStar(starSol2);
@@ -53,22 +53,22 @@ public class ExtraPlanets_SolarSystems {
 			starSol4.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			kepler69.setMainStar(starSol4);
 		}
-		if(Config.CUSTOM_GALAXIES){
+		if (Config.CUSTOM_GALAXIES) {
 			xenos157 = new SolarSystem("xenos157", "whirlpool").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
 			Star starSol5 = (Star) new Star("xenos157").setParentSolarSystem(xenos157).setTierRequired(-1);
 			starSol5.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			xenos157.setMainStar(starSol5);
-			
-//			deltiri10 = new SolarSystem("deltiri10", "andromeda").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
-//			Star starSol6 = (Star) new Star("deltiri10").setParentSolarSystem(deltiri10).setTierRequired(-1);
-//			starSol6.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
-//			deltiri10.setMainStar(starSol6);
-			
+
+			// deltiri10 = new SolarSystem("deltiri10", "andromeda").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
+			// Star starSol6 = (Star) new Star("deltiri10").setParentSolarSystem(deltiri10).setTierRequired(-1);
+			// starSol6.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
+			// deltiri10.setMainStar(starSol6);
+
 			vendrizi161 = new SolarSystem("vendrizi161", "black_eye").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
 			Star starSol7 = (Star) new Star("vendrizi161").setParentSolarSystem(vendrizi161).setTierRequired(-1);
 			starSol7.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
 			vendrizi161.setMainStar(starSol7);
-			
+
 			epsilonSolaria = new SolarSystem("epsilonSolaria", "proxima_centauri").setMapPosition(new Vector3(0F, 0.0F, 0.0F));
 			Star starSol8 = (Star) new Star("epsilonSolaria").setParentSolarSystem(epsilonSolaria).setTierRequired(-1);
 			starSol8.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/sun.png"));
@@ -83,9 +83,9 @@ public class ExtraPlanets_SolarSystems {
 			GalaxyRegistry.registerSolarSystem(kepler62);
 			GalaxyRegistry.registerSolarSystem(kepler69);
 		}
-		if(Config.CUSTOM_GALAXIES){
+		if (Config.CUSTOM_GALAXIES) {
 			GalaxyRegistry.registerSolarSystem(xenos157);
-			//GalaxyRegistry.registerSolarSystem(deltiri10);
+			// GalaxyRegistry.registerSolarSystem(deltiri10);
 			GalaxyRegistry.registerSolarSystem(vendrizi161);
 			GalaxyRegistry.registerSolarSystem(epsilonSolaria);
 		}

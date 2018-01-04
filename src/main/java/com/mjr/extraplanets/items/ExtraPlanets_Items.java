@@ -428,7 +428,7 @@ public class ExtraPlanets_Items {
 		LIGHT_OXYGEN_TANK_MAGENTA = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "magenta");
 		LIGHT_OXYGEN_TANK_ORANGE = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "orange");
 		LIGHT_OXYGEN_TANK_WHITE = new ItemCustomOxygenTank(1, "oxygen_tank_light_full_" + "white");
-		
+
 		MED_OXYGEN_TANK_BLACK = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "black");
 		MED_OXYGEN_TANK_RED = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "red");
 		MED_OXYGEN_TANK_GREEN = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "green");
@@ -444,7 +444,7 @@ public class ExtraPlanets_Items {
 		MED_OXYGEN_TANK_MAGENTA = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "magenta");
 		MED_OXYGEN_TANK_LIME = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "orange");
 		MED_OXYGEN_TANK_WHITE = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "white");
-		
+
 		HEAVY_OXYGEN_TANK_BLACK = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "black");
 		HEAVY_OXYGEN_TANK_LIME = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "lime");
 		HEAVY_OXYGEN_TANK_GREEN = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "green");
@@ -622,7 +622,7 @@ public class ExtraPlanets_Items {
 		RegisterUtilities.registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 		RegisterUtilities.registerItem(CHOCOLATE_BAR, CHOCOLATE_BAR.getUnlocalizedName().substring(5));
 		RegisterUtilities.registerItem(CARAMEL_BAR, CARAMEL_BAR.getUnlocalizedName().substring(5));
-		
+
 		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_BLACK, LIGHT_OXYGEN_TANK_BLACK.getUnlocalizedName().substring(5));
 		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_RED, LIGHT_OXYGEN_TANK_RED.getUnlocalizedName().substring(5));
 		RegisterUtilities.registerItem(LIGHT_OXYGEN_TANK_GREEN, LIGHT_OXYGEN_TANK_GREEN.getUnlocalizedName().substring(5));
@@ -728,7 +728,7 @@ public class ExtraPlanets_Items {
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.LEFT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_OXYGEN_TANK_EXTREMELY_HEAVY, EnumExtendedInventorySlot.RIGHT_TANK, OXYGEN_TANK_EXTREMELY_HEAVY);
 		}
-		
+
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_BLACK);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_RED, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_RED);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.LEFT_TANK, LIGHT_OXYGEN_TANK_GREEN);
@@ -776,7 +776,7 @@ public class ExtraPlanets_Items {
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_MAGENTA);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_ORANGE, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_ORANGE);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.LEFT_TANK, HEAVY_OXYGEN_TANK_WHITE);
-		
+
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_BLACK, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_BLACK);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_RED, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_RED);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_LIGHT_OXYGEN_TANK_GREEN, EnumExtendedInventorySlot.RIGHT_TANK, LIGHT_OXYGEN_TANK_GREEN);
@@ -824,7 +824,7 @@ public class ExtraPlanets_Items {
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_MAGENTA, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_MAGENTA);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_ORANGE, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_ORANGE);
 		GalacticraftRegistry.registerGear(Constants.GEAR_ID_HEAVY_OXYGEN_TANK_WHITE, EnumExtendedInventorySlot.RIGHT_TANK, HEAVY_OXYGEN_TANK_WHITE);
-		
+
 		if (Config.THERMAL_PADDINGS) {
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_HELMET, EnumExtendedInventorySlot.THERMAL_HELMET, new ItemStack(TIER_3_THERMAL_PADDING, 1, 0));
 			GalacticraftRegistry.registerGear(Constants.GEAR_ID_THERMAL_PADDING_T3_CHESTPLATE, EnumExtendedInventorySlot.THERMAL_CHESTPLATE, new ItemStack(TIER_3_THERMAL_PADDING, 1, 1));

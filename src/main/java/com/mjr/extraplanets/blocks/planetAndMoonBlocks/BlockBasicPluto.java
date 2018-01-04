@@ -150,22 +150,18 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-    @SideOnly(Side.CLIENT)
-    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
-    {
-        if (rand.nextInt(10) == 0)
-        {
-            if (state.getBlock() == this && state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK)
-            {
-                GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
+	@SideOnly(Side.CLIENT)
+	public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand) {
+		if (rand.nextInt(10) == 0) {
+			if (state.getBlock() == this && state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK) {
+				GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
 
-                if (rand.nextInt(100) == 0)
-                {
-                    worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), GCSounds.singleDrip, SoundCategory.AMBIENT, 1, 0.8F + rand.nextFloat() / 5.0F);
-                }
-            }
-        }
-    }
+				if (rand.nextInt(100) == 0) {
+					worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), GCSounds.singleDrip, SoundCategory.AMBIENT, 1, 0.8F + rand.nextFloat() / 5.0F);
+				}
+			}
+		}
+	}
 
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
@@ -180,13 +176,13 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	}
 
 	@Override
-	    public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
+	public boolean isReplaceableOreGen(IBlockState state, IBlockAccess world, BlockPos pos, Predicate<IBlockState> target) {
 		if (target != Blocks.STONE) {
 			return false;
 		}
 		return (state.getValue(BASIC_TYPE) == EnumBlockBasic.STONE);
 	}
-	
+
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.byMetadata(meta));

@@ -69,21 +69,17 @@ public class ContainerSolar extends Container {
 				}
 			}
 
-            if (stack.getCount() == 0)
-            {
-                slot.putStack(ItemStack.EMPTY);
-            }
-            else
-            {
-                slot.onSlotChanged();
-            }
+			if (stack.getCount() == 0) {
+				slot.putStack(ItemStack.EMPTY);
+			} else {
+				slot.onSlotChanged();
+			}
 
-            if (stack.getCount() == var2.getCount())
-            {
-                return ItemStack.EMPTY;
-            }
+			if (stack.getCount() == var2.getCount()) {
+				return ItemStack.EMPTY;
+			}
 
-            slot.onTake(par1EntityPlayer, stack);
+			slot.onTake(par1EntityPlayer, stack);
 		}
 
 		return var2;

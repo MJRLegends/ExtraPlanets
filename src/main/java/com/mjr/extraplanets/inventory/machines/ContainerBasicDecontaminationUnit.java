@@ -85,7 +85,7 @@ public class ContainerBasicDecontaminationUnit extends Container {
 			}
 
 			if (stack.getCount() == var2.getCount()) {
-                return ItemStack.EMPTY;
+				return ItemStack.EMPTY;
 			}
 
 			slot.onTake(par1EntityPlayer, stack);

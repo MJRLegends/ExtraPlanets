@@ -141,7 +141,7 @@ public class WorldProviderCallisto extends WorldProviderRealisticSpace implement
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide()==Side.SERVER && isDaytime()) {
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
 			return 100.0F;
 		}
 		return 90.0F;

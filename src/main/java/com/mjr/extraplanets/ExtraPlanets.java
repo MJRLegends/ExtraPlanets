@@ -17,7 +17,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.oredict.RecipeSorter;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -97,7 +96,6 @@ import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
 import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
-import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.recipes.MarsRoverRecipes;
 import com.mjr.extraplanets.recipes.Tier10ElectricRocketRecipes;
 import com.mjr.extraplanets.recipes.Tier10RocketRecipes;
@@ -118,7 +116,6 @@ import com.mjr.extraplanets.schematicPages.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier9Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTierElectricRocket;
 import com.mjr.extraplanets.schematicPages.SchematicVenusRover;
-import com.mjr.mjrlegendslib.recipe.ShapedNBTRecipe;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS)
@@ -306,7 +303,7 @@ public class ExtraPlanets {
 		addDungeonLoot();
 
 		// Register Recipes
-		ExtraPlanets_Recipes.init();
+		// ExtraPlanets_Recipes.init();
 
 		// Initialize/Register Achievements
 		if (Config.ACHIEVEMENTS)
@@ -328,7 +325,7 @@ public class ExtraPlanets {
 			MCMultiPartCompatibility.init();
 
 		// Register Custom Recipe Type
-		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
+		// RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);

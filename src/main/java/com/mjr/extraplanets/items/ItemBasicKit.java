@@ -47,7 +47,7 @@ public class ItemBasicKit extends Item {
 	}
 
 	@Override
-    public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
+	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
 		for (int i = 0; i < ItemBasicKit.names.length; i++) {
 			par3List.add(new ItemStack(this, 1, i));
 		}
@@ -59,8 +59,8 @@ public class ItemBasicKit extends Item {
 	}
 
 	@Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand){
-        ItemStack itemStackIn = player.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand) {
+		ItemStack itemStackIn = player.getHeldItem(hand);
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
 			// Oxygen Setup

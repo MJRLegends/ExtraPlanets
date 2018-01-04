@@ -324,22 +324,19 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 		return null;
 	}
 
-    @Override
-    public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing)
-    {
-        return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
-    }
+	@Override
+	public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing) {
+		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
+	}
 
-    @Nullable
-    @Override
-    public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
-    {
-        if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
-        {
-            return (T) new FluidHandlerWrapper(this, facing);
-        }
-        return super.getCapability(capability, facing);
-    }
+	@Nullable
+	@Override
+	public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing) {
+		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+			return (T) new FluidHandlerWrapper(this, facing);
+		}
+		return super.getCapability(capability, facing);
+	}
 
 	@Override
 	public boolean canConnect(EnumFacing direction, NetworkType type) {

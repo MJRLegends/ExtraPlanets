@@ -52,8 +52,8 @@ public class TileEntityTier3LandingPad extends TileEntityMulti implements IMulti
 
 		if (!this.world.isRemote) {
 			final List<Entity> list = this.world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 3.5D, this.getPos().getY(), this.getPos().getZ() - 3.5D, this.getPos().getX() + 3.5D, this.getPos().getY() + 10.0D, this
-					.getPos().getZ() +3.5D));
-			
+					.getPos().getZ() + 3.5D));
+
 			boolean docked = false;
 
 			for (final Object o : list) {
@@ -100,13 +100,12 @@ public class TileEntityTier3LandingPad extends TileEntityMulti implements IMulti
 		this.getPositions(placedPosition, positions);
 		((BlockCustomMulti) ExtraPlanets_Blocks.FAKE_BLOCK).makeFakeBlock(world, positions, placedPosition, EnumBlockMultiType.TIER_3_ROCKET_PAD);
 	}
-	
-    @Override
-    public BlockMulti.EnumBlockMultiType getMultiType()
-    {
-        return null;
-    }
-    
+
+	@Override
+	public BlockMulti.EnumBlockMultiType getMultiType() {
+		return null;
+	}
+
 	@Override
 	public void getPositions(BlockPos placedPosition, List<BlockPos> positions) {
 		int y = placedPosition.getY();

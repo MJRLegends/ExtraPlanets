@@ -20,7 +20,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier11Items extends Item {
-	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks", "green_sticks", "brown_sticks" };
+	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks", "green_sticks",
+			"brown_sticks" };
 
 	public ItemTier11Items(String assetName) {
 		super();
@@ -57,7 +58,7 @@ public class ItemTier11Items extends Item {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
-				list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
+			list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
 		}
 	}
 

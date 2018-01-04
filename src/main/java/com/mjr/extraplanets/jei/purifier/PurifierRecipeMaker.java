@@ -22,7 +22,7 @@ public class PurifierRecipeMaker {
 		outputs[1] = null;
 		PurifierRecipeWrapper wrapper = new PurifierRecipeWrapper(inputs, outputs);
 		recipes.add(wrapper);
-		
+
 		ItemStack[] inputs2 = new ItemStack[3];
 		inputs2[0] = null;
 		inputs2[1] = UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.INFECTED_WATER_FLUID);

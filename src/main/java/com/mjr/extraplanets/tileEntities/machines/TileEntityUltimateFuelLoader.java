@@ -234,30 +234,26 @@ public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public EnumFacing getFront() {
-        IBlockState state = this.world.getBlockState(getPos()); 
-        if (state.getBlock() instanceof UltimateFuelLoader)
-        {
-            return state.getValue(UltimateFuelLoader.FACING).rotateY();
-        }
-        return EnumFacing.NORTH;
+		IBlockState state = this.world.getBlockState(getPos());
+		if (state.getBlock() instanceof UltimateFuelLoader) {
+			return state.getValue(UltimateFuelLoader.FACING).rotateY();
+		}
+		return EnumFacing.NORTH;
 	}
 
-    @Override
-    public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing)
-    {
-        return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
-    }
+	@Override
+	public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing) {
+		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
+	}
 
-    @Nullable
-    @Override
-    public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing)
-    {
-        if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
-        {
-            return (T) new FluidHandlerWrapper(this, facing);
-        }
-        return super.getCapability(capability, facing);
-    }
+	@Nullable
+	@Override
+	public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing) {
+		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+			return (T) new FluidHandlerWrapper(this, facing);
+		}
+		return super.getCapability(capability, facing);
+	}
 
 	@Override
 	public boolean canConnect(EnumFacing direction, NetworkType type) {

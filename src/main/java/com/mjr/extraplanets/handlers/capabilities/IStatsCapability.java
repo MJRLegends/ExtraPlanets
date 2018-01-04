@@ -6,17 +6,18 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 
 public interface IStatsCapability {
-	
-    void saveNBTData(NBTTagCompound nbt);
 
-    void loadNBTData(NBTTagCompound nbt);
+	void saveNBTData(NBTTagCompound nbt);
 
-    void copyFrom(IStatsCapability oldData, boolean keepInv);
+	void loadNBTData(NBTTagCompound nbt);
 
-    WeakReference<EntityPlayerMP> getPlayer();
+	void copyFrom(IStatsCapability oldData, boolean keepInv);
 
-    void setPlayer(WeakReference<EntityPlayerMP> player);
-    
+	WeakReference<EntityPlayerMP> getPlayer();
+
+	void setPlayer(WeakReference<EntityPlayerMP> player);
+
 	double getRadiationLevel();
-    void setRadiationLevel(double d);
+
+	void setRadiationLevel(double d);
 }

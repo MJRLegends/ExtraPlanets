@@ -41,13 +41,12 @@ public class StructureComponentVillageHouse extends StructureComponentVillage {
 		nbt.setInteger("AvgGroundLevel", this.averageGroundLevel);
 	}
 
-    @Override
-    protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager)
-    {
-        super.readStructureFromNBT(nbt, manager);
+	@Override
+	protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager) {
+		super.readStructureFromNBT(nbt, manager);
 
-        this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
-    }
+		this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
+	}
 
 	/**
 	 * second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...

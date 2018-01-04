@@ -84,7 +84,7 @@ public class MapGenVillageSaturn extends MapGenStructure {
 		return oldi == randX && oldj == randZ;
 
 	}
-	
+
 	@Override
 	public BlockPos getClosestStrongholdPos(World worldIn, BlockPos pos, boolean p_180706_3_) {
 		this.world = worldIn;

@@ -42,7 +42,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 	public EntityTier10Rocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
 		super(par1World, x, y, z);
 		this.rocketType = rocketType;
-        this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
+		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 	}
 
 	@Override
@@ -197,14 +197,11 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 		if (playerBase != null) {
 			GCPlayerStats stats = playerBase.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);
 
-			if (this.stacks == null || this.stacks.isEmpty())
-            {
-                stats.setRocketStacks(NonNullList.withSize(2, ItemStack.EMPTY));
-            }
-            else
-            {
-                stats.setRocketStacks(this.stacks);
-            }
+			if (this.stacks == null || this.stacks.isEmpty()) {
+				stats.setRocketStacks(NonNullList.withSize(2, ItemStack.EMPTY));
+			} else {
+				stats.setRocketStacks(this.stacks);
+			}
 
 			stats.setRocketType(this.rocketType.getIndex());
 			stats.setRocketItem(ExtraPlanets_Items.TIER_10_ROCKET);
@@ -276,7 +273,7 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer){
+	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
 		return !this.isDead && par1EntityPlayer.getDistanceSqToEntity(this) <= 64.0D;
 	}
 

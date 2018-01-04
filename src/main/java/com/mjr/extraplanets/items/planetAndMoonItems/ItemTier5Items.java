@@ -20,7 +20,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTier5Items extends Item {
-	public static final String[] names = { "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash", "ash_shard", "volcanic_shard", "ingot_volcanic" };
+	public static final String[] names = { "tier5engine", "tier5booster", "tier5fin", "tier5heavy_duty_plate", "compressed_palladium", "ingot_palladium", "compressed_nickel", "ingot_nickel", "red_gem", "ash", "ash_shard", "volcanic_shard",
+			"ingot_volcanic" };
 
 	public ItemTier5Items(String assetName) {
 		super();

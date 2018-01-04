@@ -23,35 +23,32 @@ public class BucketHandler {
 
 	@SubscribeEvent
 	public void onBucketFill(FillBucketEvent event) {
-        RayTraceResult pos = event.getTarget();
-        if (pos == null)
-        {
-            return;
-        }
+		RayTraceResult pos = event.getTarget();
+		if (pos == null) {
+			return;
+		}
 
-        ItemStack ret = fillCustomBucket(event.getWorld(), pos);
+		ItemStack ret = fillCustomBucket(event.getWorld(), pos);
 
-        if (ret == null)
-        {
-            return;
-        }
+		if (ret == null) {
+			return;
+		}
 
-        event.setFilledBucket(ret);
-        event.setResult(Result.ALLOW);
+		event.setFilledBucket(ret);
+		event.setResult(Result.ALLOW);
 	}
 
 	private ItemStack fillCustomBucket(World world, RayTraceResult position) {
-        IBlockState state = world.getBlockState(position.getBlockPos());
-        Block block = state.getBlock();
+		IBlockState state = world.getBlockState(position.getBlockPos());
+		Block block = state.getBlock();
 
-        Item bucket = buckets.get(block);
+		Item bucket = buckets.get(block);
 
-        if (bucket != null && block.getMetaFromState(state) == 0)
-        {
-            world.setBlockToAir(position.getBlockPos());
-            return new ItemStack(bucket);
-        }
+		if (bucket != null && block.getMetaFromState(state) == 0) {
+			world.setBlockToAir(position.getBlockPos());
+			return new ItemStack(bucket);
+		}
 
-        return null;
+		return null;
 	}
 }

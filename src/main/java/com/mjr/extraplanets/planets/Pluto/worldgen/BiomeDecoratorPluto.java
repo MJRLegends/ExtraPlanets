@@ -53,7 +53,7 @@ public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 		this.generateOre(20, this.tungstenGen, 0, 32);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
-		
+
 		isDecorating = false;
 	}
 }

@@ -43,13 +43,12 @@ public class BiomeDecoratorTritonOther extends BiomeDecorator {
 
 	private void genStandardOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY) {
 		World currentWorld = this.worldObj;
-		for (int var5 = 0; var5 < amountPerChunk; ++var5)
-        {
-            final int var6 = this.chunkPos.getX() + this.randomGenerator.nextInt(16);
-            final int var7 = this.randomGenerator.nextInt(maxY - minY) + minY;
-            final int var8 = this.chunkPos.getZ() + this.randomGenerator.nextInt(16);
-            worldGenerator.generate(currentWorld, this.randomGenerator, new BlockPos(var6, var7, var8));
-        }
+		for (int var5 = 0; var5 < amountPerChunk; ++var5) {
+			final int var6 = this.chunkPos.getX() + this.randomGenerator.nextInt(16);
+			final int var7 = this.randomGenerator.nextInt(maxY - minY) + minY;
+			final int var8 = this.chunkPos.getZ() + this.randomGenerator.nextInt(16);
+			worldGenerator.generate(currentWorld, this.randomGenerator, new BlockPos(var6, var7, var8));
+		}
 	}
 
 	private void generate() {

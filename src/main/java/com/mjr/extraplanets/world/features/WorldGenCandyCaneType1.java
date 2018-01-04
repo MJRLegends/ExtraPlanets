@@ -13,7 +13,7 @@ import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenCandyCaneType1 extends WorldGenerator {
-	
+
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
 		if (WorldGenUtilities.checkValidSpawn(world, position, 1) == false)

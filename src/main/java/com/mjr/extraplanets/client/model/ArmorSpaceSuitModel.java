@@ -40,7 +40,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public static OBJModel.OBJBakedModel armourModelRightBoot;
 	public static OBJModel.OBJBakedModel armourModelLeftLegPipes;
 	public static OBJModel.OBJBakedModel armourModelRightLegPipes;
-	
+
 	private final EntityEquipmentSlot partType;
 
 	public ArmorSpaceSuitModel(EntityEquipmentSlot armorSlot) {
@@ -66,7 +66,8 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
 				armourModelHead = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("HelmetPart1", "HelmetPart2", "HelmetPart4", "HelmetPart5", "HelmetPart6", "HelmetPart7", "HelmetPart8", "HelmetPart9", "HelmetPart10", "HelmetPart11", "MainPartHelmet", "SpacerAntenna2"), false),
+						new OBJModel.OBJState(ImmutableList
+								.of("HelmetPart1", "HelmetPart2", "HelmetPart4", "HelmetPart5", "HelmetPart6", "HelmetPart7", "HelmetPart8", "HelmetPart9", "HelmetPart10", "HelmetPart11", "MainPartHelmet", "SpacerAntenna2"), false),
 						DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelTanks = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("HelmetOxygenCapsule1", "HelmetOxygenCapsule2"), false), DefaultVertexFormats.ITEM, spriteFunction);
@@ -74,15 +75,15 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 				armourModelHeadGlass = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("HelmetPart3"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelPipes = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("BodyPart1", "BodyPart10", "BodyPart11", "BodyPart12", "BodyPart13", "BodyPart14", "BodyPart15", "BodyPart16", "BodyPart17", "BodyPart18", "BodyPart3", "BodyPart4", "BodyPart5", "BodyPart6",
-								"BodyPart7", "BodyPart8", "BodyPart9"), false), DefaultVertexFormats.ITEM, spriteFunction);
+						new OBJModel.OBJState(ImmutableList.of("BodyPart1", "BodyPart10", "BodyPart11", "BodyPart12", "BodyPart13", "BodyPart14", "BodyPart15", "BodyPart16", "BodyPart17", "BodyPart18", "BodyPart3", "BodyPart4", "BodyPart5",
+								"BodyPart6", "BodyPart7", "BodyPart8", "BodyPart9"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelBody = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("BodyPart2"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelBodyTank1 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("NitrogenTank"), false), DefaultVertexFormats.ITEM, spriteFunction);
 				armourModelBodyTank2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("OxygenTank"), false), DefaultVertexFormats.ITEM, spriteFunction);
 				armourModelBodyTank3 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("HydrogenTank"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
+
 				armourModelLeftArm = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("LeftHandPart1"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelRightArm = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("RightHandPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
@@ -94,17 +95,13 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 
 				armourModelRightLeg = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("RightLegPart3"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
-				armourModelLeftLegPipes = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("LeftLegPart2", "LeftLegPart3"), false), DefaultVertexFormats.ITEM,
-						spriteFunction);
-	
-				armourModelRightLegPipes = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("RightLegPart2", "RightLegPart4"), false), DefaultVertexFormats.ITEM,
-						spriteFunction);
-				
-				armourModelLeftBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("left_boot"), false), DefaultVertexFormats.ITEM,
-						spriteFunction);
-				
-				armourModelRightBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("right_boot"), false), DefaultVertexFormats.ITEM,
-						spriteFunction);
+				armourModelLeftLegPipes = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("LeftLegPart2", "LeftLegPart3"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
+				armourModelRightLegPipes = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("RightLegPart2", "RightLegPart4"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
+				armourModelLeftBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("left_boot"), false), DefaultVertexFormats.ITEM, spriteFunction);
+
+				armourModelRightBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("right_boot"), false), DefaultVertexFormats.ITEM, spriteFunction);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -179,7 +176,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelLeftLeg);
 			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
-			ClientUtil.drawBakedModel(armourModelLeftLegPipes);			
+			ClientUtil.drawBakedModel(armourModelLeftLegPipes);
 			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
 			ClientUtil.drawBakedModel(armourModelLeftBoot);
 		}
@@ -193,7 +190,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelRightLeg);
 			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
-			ClientUtil.drawBakedModel(armourModelRightLegPipes);	
+			ClientUtil.drawBakedModel(armourModelRightLegPipes);
 			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
 			ClientUtil.drawBakedModel(armourModelRightBoot);
 

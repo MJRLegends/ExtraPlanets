@@ -18,7 +18,7 @@ import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenBasicHideout extends WorldGenerator {
-	
+
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
 		if (WorldGenUtilities.checkValidSpawn(world, position, 10) == false)

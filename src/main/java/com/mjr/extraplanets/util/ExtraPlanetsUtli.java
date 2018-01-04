@@ -20,7 +20,7 @@ public class ExtraPlanetsUtli {
 		player.openContainer.windowId = id;
 		player.openContainer.addListener(player);
 	}
-	
+
 	public static void openPowerVehicleInv(EntityPlayerMP player, IInventory buggyInv, int type) {
 		player.getNextWindowId();
 		player.closeContainer();

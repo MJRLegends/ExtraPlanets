@@ -57,7 +57,7 @@ public class ItemTier10Items extends Item {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
-				list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
+			list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
 		}
 	}
 

@@ -14,8 +14,8 @@ public class BiomeGenSaturn extends SaturnBiomes {
 	public BiomeGenSaturn(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.SATURN_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-        BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
-        this.topBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState();
-        this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE);
+		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		this.topBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE);
 	}
 }

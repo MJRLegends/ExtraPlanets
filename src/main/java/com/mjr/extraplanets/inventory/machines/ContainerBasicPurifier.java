@@ -108,7 +108,7 @@ public class ContainerBasicPurifier extends Container {
 				return null;
 			}
 
-            slot.onTake(par1EntityPlayer, var4);
+			slot.onTake(par1EntityPlayer, var4);
 		}
 
 		return var2;

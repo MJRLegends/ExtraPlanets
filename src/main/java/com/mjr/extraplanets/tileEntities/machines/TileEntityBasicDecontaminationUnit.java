@@ -53,8 +53,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	@Override
 	public void update() {
 		if (!this.world.isRemote) {
-			List containedEntities = world.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
-					this.getPos().getZ() + 1));
+			List containedEntities = world.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2, this.getPos().getZ() + 1));
 			if (containedEntities.size() == 1) {
 				EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(0));
 				if (this.storage.getEnergyStoredGC() >= 1000000) {

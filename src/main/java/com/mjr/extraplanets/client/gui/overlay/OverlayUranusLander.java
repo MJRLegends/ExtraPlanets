@@ -42,16 +42,16 @@ public class OverlayUranusLander extends Overlay {
 			final int alpha = (int) (255 * Math.sin(OverlayUranusLander.screenTicks / 20.0F));
 			final String press1 = GCCoreUtil.translate("gui.lander.warning2");
 			final String press2 = GCCoreUtil.translate("gui.lander.warning3");
-			OverlayUranusLander.minecraft.fontRenderer.drawString(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2,
-					width / 4 - OverlayUranusLander.minecraft.fontRenderer.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8,
-					ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
+			OverlayUranusLander.minecraft.fontRenderer
+					.drawString(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2,
+							width / 4 - OverlayUranusLander.minecraft.fontRenderer.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8,
+							ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
 		}
 
 		GL11.glPopMatrix();
 
 		if (OverlayUranusLander.minecraft.player.getRidingEntity().motionY != 0.0D) {
-			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityUranusLander) OverlayUranusLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " "
-					+ GCCoreUtil.translate("gui.lander.velocityu");
+			String string = GCCoreUtil.translate("gui.lander.velocity") + ": " + Math.round(((EntityUranusLander) OverlayUranusLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " " + GCCoreUtil.translate("gui.lander.velocityu");
 			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayUranusLander.minecraft.player.getRidingEntity().motionY) * 51.0D),
 					255 - (int) Math.floor(Math.abs(OverlayUranusLander.minecraft.player.getRidingEntity().motionY) * 51.0D), 0);
 			OverlayUranusLander.minecraft.fontRenderer.drawString(string, width / 2 - OverlayUranusLander.minecraft.fontRenderer.getStringWidth(string) / 2, height / 3, color);

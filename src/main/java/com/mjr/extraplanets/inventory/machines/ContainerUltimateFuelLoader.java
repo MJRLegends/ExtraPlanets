@@ -13,108 +13,81 @@ import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateFuelLoader;
 
-public class ContainerUltimateFuelLoader extends Container
-{
-    private TileBaseElectricBlock tileEntity;
+public class ContainerUltimateFuelLoader extends Container {
+	private TileBaseElectricBlock tileEntity;
 
-    public ContainerUltimateFuelLoader(InventoryPlayer par1InventoryPlayer, TileEntityUltimateFuelLoader fuelLoader)
-    {
-        this.tileEntity = fuelLoader;
-        this.addSlotToContainer(new SlotSpecific(fuelLoader, 0, 51, 55, IItemElectric.class));
-        this.addSlotToContainer(new Slot(fuelLoader, 1, 7, 12));
+	public ContainerUltimateFuelLoader(InventoryPlayer par1InventoryPlayer, TileEntityUltimateFuelLoader fuelLoader) {
+		this.tileEntity = fuelLoader;
+		this.addSlotToContainer(new SlotSpecific(fuelLoader, 0, 51, 55, IItemElectric.class));
+		this.addSlotToContainer(new Slot(fuelLoader, 1, 7, 12));
 
-        int var6;
-        int var7;
+		int var6;
+		int var7;
 
-        // Player inv:
+		// Player inv:
 
-        for (var6 = 0; var6 < 3; ++var6)
-        {
-            for (var7 = 0; var7 < 9; ++var7)
-            {
-                this.addSlotToContainer(new Slot(par1InventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 31 + 58 + var6 * 18));
-            }
-        }
+		for (var6 = 0; var6 < 3; ++var6) {
+			for (var7 = 0; var7 < 9; ++var7) {
+				this.addSlotToContainer(new Slot(par1InventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 31 + 58 + var6 * 18));
+			}
+		}
 
-        for (var6 = 0; var6 < 9; ++var6)
-        {
-            this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 31 + 116));
-        }
-    }
+		for (var6 = 0; var6 < 9; ++var6) {
+			this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 31 + 116));
+		}
+	}
 
-    @Override
-    public boolean canInteractWith(EntityPlayer var1)
-    {
-        return this.tileEntity.isUsableByPlayer(var1);
-    }
+	@Override
+	public boolean canInteractWith(EntityPlayer var1) {
+		return this.tileEntity.isUsableByPlayer(var1);
+	}
 
-    @Override
-    public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
-    {
-        ItemStack var3 = null;
-        final Slot slot = this.inventorySlots.get(par2);
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
+		ItemStack var3 = null;
+		final Slot slot = this.inventorySlots.get(par2);
 
-        if (slot != null && slot.getHasStack())
-        {
-            final ItemStack var5 = slot.getStack();
-            var3 = var5.copy();
+		if (slot != null && slot.getHasStack()) {
+			final ItemStack var5 = slot.getStack();
+			var3 = var5.copy();
 
-            if (par2 < 2)
-            {
-                if (!this.mergeItemStack(var5, 2, 38, true))
-                {
-                    return null;
-                }
-            }
-            else
-            {
-                if (EnergyUtil.isElectricItem(var5.getItem()))
-                {
-                    if (!this.mergeItemStack(var5, 0, 1, false))
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    if (FluidUtil.isFuelContainerAny(var5))
-                    {
-                        if (!this.mergeItemStack(var5, 1, 2, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (par2 < 29)
-                    {
-                        if (!this.mergeItemStack(var5, 29, 38, false))
-                        {
-                            return null;
-                        }
-                    }
-                    else if (!this.mergeItemStack(var5, 2, 29, false))
-                    {
-                        return null;
-                    }
-                }
-            }
+			if (par2 < 2) {
+				if (!this.mergeItemStack(var5, 2, 38, true)) {
+					return null;
+				}
+			} else {
+				if (EnergyUtil.isElectricItem(var5.getItem())) {
+					if (!this.mergeItemStack(var5, 0, 1, false)) {
+						return null;
+					}
+				} else {
+					if (FluidUtil.isFuelContainerAny(var5)) {
+						if (!this.mergeItemStack(var5, 1, 2, false)) {
+							return null;
+						}
+					} else if (par2 < 29) {
+						if (!this.mergeItemStack(var5, 29, 38, false)) {
+							return null;
+						}
+					} else if (!this.mergeItemStack(var5, 2, 29, false)) {
+						return null;
+					}
+				}
+			}
 
-            if (var5.getCount() == 0)
-            {
-                slot.putStack(ItemStack.EMPTY);
-            }
-            else
-            {
-                slot.onSlotChanged();
-            }
+			if (var5.getCount() == 0) {
+				slot.putStack(ItemStack.EMPTY);
+			} else {
+				slot.onSlotChanged();
+			}
 
-            if (var5.getCount() == var3.getCount())
-            {
-                return ItemStack.EMPTY;
-            }
+			if (var5.getCount() == var3.getCount()) {
+				return ItemStack.EMPTY;
+			}
 
-            slot.onTake(par1EntityPlayer, var5);
-        }
+			slot.onTake(par1EntityPlayer, var5);
+		}
 
-        return var3;
-    }
+		return var3;
+	}
 }

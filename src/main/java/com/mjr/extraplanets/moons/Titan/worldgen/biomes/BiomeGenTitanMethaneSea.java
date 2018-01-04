@@ -23,6 +23,6 @@ public class BiomeGenTitanMethaneSea extends Biome {
 
 	@Override
 	public List<Biome.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
-		return Lists.<Biome.SpawnListEntry>newArrayList();
+		return Lists.<Biome.SpawnListEntry> newArrayList();
 	}
 }

@@ -70,7 +70,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 						FluidUtil.tryFillContainer(tank, liquid, this.stacks, slot, ForgeModContainer.getInstance().universalBucket);
 					}
 				}
-			} 
+			}
 		}
 	}
 

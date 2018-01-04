@@ -10,25 +10,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 
 @SideOnly(Side.CLIENT)
-public class ModelEvolvedMagmaCubeBoss extends ModelBase
-{
+public class ModelEvolvedMagmaCubeBoss extends ModelBase {
 	ModelRenderer[] field_78109_a = new ModelRenderer[8];
 	ModelRenderer field_78108_b;
 
-	public ModelEvolvedMagmaCubeBoss()
-	{
-		for (int i = 0; i < this.field_78109_a.length; ++i)
-		{
+	public ModelEvolvedMagmaCubeBoss() {
+		for (int i = 0; i < this.field_78109_a.length; ++i) {
 			byte b0 = 0;
 			int j = i;
 
-			if (i == 2)
-			{
+			if (i == 2) {
 				b0 = 24;
 				j = 10;
-			}
-			else if (i == 3)
-			{
+			} else if (i == 3) {
 				b0 = 24;
 				j = 19;
 			}
@@ -42,22 +36,18 @@ public class ModelEvolvedMagmaCubeBoss extends ModelBase
 	}
 
 	/**
-	 * Used for easily adding entity-dependent animations. The second and third float params here are the same second
-	 * and third as in the setRotationAngles method.
+	 * Used for easily adding entity-dependent animations. The second and third float params here are the same second and third as in the setRotationAngles method.
 	 */
 	@Override
-	public void setLivingAnimations(EntityLivingBase p_78086_1_, float p_78086_2_, float p_78086_3_, float p_78086_4_)
-	{
-		EntityEvolvedMagmaCubeBoss entitymagmacube = (EntityEvolvedMagmaCubeBoss)p_78086_1_;
+	public void setLivingAnimations(EntityLivingBase p_78086_1_, float p_78086_2_, float p_78086_3_, float p_78086_4_) {
+		EntityEvolvedMagmaCubeBoss entitymagmacube = (EntityEvolvedMagmaCubeBoss) p_78086_1_;
 		float f3 = entitymagmacube.prevSquishFactor + (entitymagmacube.squishFactor - entitymagmacube.prevSquishFactor) * p_78086_4_;
 
-		if (f3 < 0.0F)
-		{
+		if (f3 < 0.0F) {
 			f3 = 0.0F;
 		}
 
-		for (int i = 0; i < this.field_78109_a.length; ++i)
-		{
+		for (int i = 0; i < this.field_78109_a.length; ++i) {
 			this.field_78109_a[i].rotationPointY = (-(4 - i)) * f3 * 1.7F;
 		}
 	}
@@ -66,13 +56,11 @@ public class ModelEvolvedMagmaCubeBoss extends ModelBase
 	 * Sets the models various rotation angles then renders the model.
 	 */
 	@Override
-	public void render(Entity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_)
-	{
+	public void render(Entity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
 		this.setRotationAngles(p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_, p_78088_1_);
 		this.field_78108_b.render(p_78088_7_);
 
-		for (int i = 0; i < this.field_78109_a.length; ++i)
-		{
+		for (int i = 0; i < this.field_78109_a.length; ++i) {
 			this.field_78109_a[i].render(p_78088_7_);
 		}
 	}

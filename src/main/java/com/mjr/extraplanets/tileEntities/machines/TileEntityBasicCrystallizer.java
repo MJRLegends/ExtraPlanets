@@ -106,28 +106,25 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	public boolean canCrystallize() {
-		if (this.producingStack.isEmpty())
-        {
-            return false;
-        }
-        if (this.stacks.get(1).isEmpty())
-        {
-            return true;
-        }
-        if (!this.stacks.get(1).isEmpty() && !this.stacks.get(1).isItemEqual(this.producingStack))
-        {
-            return false;
-        }
-        int result = this.stacks.get(1).isEmpty() ? 0 : this.stacks.get(1).getCount() + this.producingStack.getCount();
-        return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
+		if (this.producingStack.isEmpty()) {
+			return false;
+		}
+		if (this.stacks.get(1).isEmpty()) {
+			return true;
+		}
+		if (!this.stacks.get(1).isEmpty() && !this.stacks.get(1).isItemEqual(this.producingStack)) {
+			return false;
+		}
+		int result = this.stacks.get(1).isEmpty() ? 0 : this.stacks.get(1).getCount() + this.producingStack.getCount();
+		return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
 	}
 
-	public boolean hasInputs(){
-		if(this.inputTank.getFluidAmount() >= 50)
+	public boolean hasInputs() {
+		if (this.inputTank.getFluidAmount() >= 50)
 			return true;
 		return false;
 	}
-	
+
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canCrystallize()) {
