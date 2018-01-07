@@ -135,7 +135,7 @@ public class ExtraPlanets {
 	public static ExtraPlanets instance;
 
 	public static ExtraPlanetsChannelHandler packetPipeline;
-	
+
 	// Block/Item Events Registering
 
 	public static HashMap<String, ItemStack> itemList = new HashMap<>();
