@@ -48,8 +48,8 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 		int fuelCapacity = this.tileEntity.outputTank != null ? this.tileEntity.outputTank.getCapacity() : 0;
 		outputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.fuel.name") + ": " + fuelLevel + " / " + fuelCapacity);
 		this.outputTankRegion.tooltipStrings = outputTankDesc;
-		this.outputTankRegion.x = (this.width - this.xSize) / 2 + 153;
-		this.outputTankRegion.y = (this.height - this.ySize) / 2 + 28;
+		this.outputTankRegion.xPosition = (this.width - this.xSize) / 2 + 153;
+		this.outputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
 		this.outputTankRegion.parentWidth = this.width;
 		this.outputTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.outputTankRegion);
@@ -61,8 +61,8 @@ public class GuiBasicDecrystallizer extends GuiContainerGC {
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 62;
-		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 16;
+		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 62;
+		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 16;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);

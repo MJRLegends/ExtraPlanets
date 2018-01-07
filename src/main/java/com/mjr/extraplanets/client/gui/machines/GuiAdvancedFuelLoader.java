@@ -59,8 +59,8 @@ public class GuiAdvancedFuelLoader extends GuiContainerGC {
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.fuelLoader.getEnergyStoredGC()) + " / " + (int) Math.floor(this.fuelLoader.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 112;
-		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 65;
+		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
+		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 65;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);

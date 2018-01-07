@@ -48,8 +48,8 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 		oxygenDesc.add(GCCoreUtil.translate("gui.oxygen_storage.desc.0"));
 		oxygenDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.oxygen_storage.desc.1") + ": " + ((int) Math.floor(this.decompressor.getOxygenStored()) + " / " + (int) Math.floor(this.decompressor.getMaxOxygenStored())));
 		this.oxygenInfoRegion.tooltipStrings = oxygenDesc;
-		this.oxygenInfoRegion.x = (this.width - this.xSize) / 2 + 112;
-		this.oxygenInfoRegion.y = (this.height - this.ySize) / 2 + 24;
+		this.oxygenInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
+		this.oxygenInfoRegion.yPosition = (this.height - this.ySize) / 2 + 24;
 		this.oxygenInfoRegion.parentWidth = this.width;
 		this.oxygenInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.oxygenInfoRegion);
@@ -57,8 +57,8 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.decompressor.getEnergyStoredGC()) + " / " + (int) Math.floor(this.decompressor.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 112;
-		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 37;
+		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
+		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 37;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);

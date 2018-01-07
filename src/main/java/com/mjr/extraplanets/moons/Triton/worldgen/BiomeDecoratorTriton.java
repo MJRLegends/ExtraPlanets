@@ -50,13 +50,13 @@ public class BiomeDecoratorTriton extends BiomeDecoratorSpace {
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		for (int i = 0; i < this.LakesPerChunk; i++) {
 			if (this.rand.nextInt(10) == 0) {
-				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.NITROGEN_ICE, ExtraPlanets_Blocks.FROZEN_NITROGEN);
+				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.NITROGEN_ICE, ExtraPlanets_Blocks.FROZEN_NITROGEN);
 			}
 		}
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int
 		// minY, int maxY);
 	}

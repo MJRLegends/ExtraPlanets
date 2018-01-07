@@ -52,8 +52,8 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 		int oilCapacity = this.tileEntity.oilTank != null ? this.tileEntity.oilTank.getCapacity() : 0;
 		oilTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.oil.name") + ": " + oilLevel + " / " + oilCapacity);
 		this.oilTankRegion.tooltipStrings = oilTankDesc;
-		this.oilTankRegion.x = (this.width - this.xSize) / 2 + 7;
-		this.oilTankRegion.y = (this.height - this.ySize) / 2 + 28;
+		this.oilTankRegion.xPosition = (this.width - this.xSize) / 2 + 7;
+		this.oilTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
 		this.oilTankRegion.parentWidth = this.width;
 		this.oilTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.oilTankRegion);
@@ -67,8 +67,8 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 		int fuelCapacity = this.tileEntity.fuelTank != null ? this.tileEntity.fuelTank.getCapacity() : 0;
 		fuelTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.fuel.name") + ": " + fuelLevel + " / " + fuelCapacity);
 		this.fuelTankRegion.tooltipStrings = fuelTankDesc;
-		this.fuelTankRegion.x = (this.width - this.xSize) / 2 + 153;
-		this.fuelTankRegion.y = (this.height - this.ySize) / 2 + 28;
+		this.fuelTankRegion.xPosition = (this.width - this.xSize) / 2 + 153;
+		this.fuelTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
 		this.fuelTankRegion.parentWidth = this.width;
 		this.fuelTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.fuelTankRegion);
@@ -81,8 +81,8 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 62;
-		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 16;
+		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 62;
+		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 16;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);

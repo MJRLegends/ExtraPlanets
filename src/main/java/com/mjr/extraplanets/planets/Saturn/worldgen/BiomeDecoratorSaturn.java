@@ -69,31 +69,31 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 		this.generateOre(10, this.slimeGen, 60, 256);
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
-		if (this.getCurrentWorld().getBiome(new BlockPos(this.chunkX, 0, this.chunkZ)) instanceof BiomeGenSaturn)
+		if (this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenSaturn)
 			for (int i = 0; i < this.LakesPerChunk; i++) {
 				if (this.rand.nextInt(10) == 0) {
-					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.GLOWSTONE,
+					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.GLOWSTONE,
 							ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SURFACE));
 				}
 			}
 
-		if (this.getCurrentWorld().getBiome(new BlockPos(this.chunkX, 0, this.chunkZ)) instanceof BiomeGenSaturnNuclearLand) {
+		if (this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenSaturnNuclearLand) {
 			for (int i = 0; i < LakesPerChunk * 2; i++) {
 				if (this.rand.nextInt(10) == 0) {
-					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.METHANE,
+					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.METHANE,
 							ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.BROKEN_INFECTED_STONE));
 				}
 			}
 			if (this.rand.nextInt(5) == 1) {
-				WorldGenUtilities.generateStructure(new WorldGenNuclearPile(), this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ));
+				WorldGenUtilities.generateStructure(new WorldGenNuclearPile(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 			if (this.rand.nextInt(5) == 1) {
-				WorldGenUtilities.generateStructure(new WorldGenSlimeTree(), this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ));
+				WorldGenUtilities.generateStructure(new WorldGenSlimeTree(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
 		isDecorating = false;
 	}

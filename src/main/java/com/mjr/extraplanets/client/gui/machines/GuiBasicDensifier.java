@@ -48,8 +48,8 @@ public class GuiBasicDensifier extends GuiContainerGC {
 		int fuelCapacity = this.tileEntity.inputTank != null ? this.tileEntity.inputTank.getCapacity() : 0;
 		inputTankDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.message.general.tank.fluid.name") + ": " + fuelLevel + " / " + fuelCapacity);
 		this.inputTankRegion.tooltipStrings = inputTankDesc;
-		this.inputTankRegion.x = (this.width - this.xSize) / 2 + 7;
-		this.inputTankRegion.y = (this.height - this.ySize) / 2 + 28;
+		this.inputTankRegion.xPosition = (this.width - this.xSize) / 2 + 7;
+		this.inputTankRegion.yPosition = (this.height - this.ySize) / 2 + 28;
 		this.inputTankRegion.parentWidth = this.width;
 		this.inputTankRegion.parentHeight = this.height;
 		this.infoRegions.add(this.inputTankRegion);
@@ -65,8 +65,8 @@ public class GuiBasicDensifier extends GuiContainerGC {
 		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
 		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
-		this.electricInfoRegion.x = (this.width - this.xSize) / 2 + 62;
-		this.electricInfoRegion.y = (this.height - this.ySize) / 2 + 16;
+		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 62;
+		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 16;
 		this.electricInfoRegion.parentWidth = this.width;
 		this.electricInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.electricInfoRegion);

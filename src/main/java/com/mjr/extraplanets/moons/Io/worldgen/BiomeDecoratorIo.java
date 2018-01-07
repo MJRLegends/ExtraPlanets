@@ -61,20 +61,20 @@ public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
-		if (this.getCurrentWorld().getBiome(new BlockPos(this.chunkX, 0, this.chunkZ)) instanceof BiomeGenIOBurningPlains) {
+		if (this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenIOBurningPlains) {
 			for (int i = 0; i < LakesPerChunk * 2; i++) {
 				if (this.rand.nextInt(10) == 0) {
-					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState());
+					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState());
 				}
 			}
 			if (this.rand.nextInt(5) == 1) {
-				WorldGenUtilities.generateStructure(new WorldGenVolcano(), this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ));
+				WorldGenUtilities.generateStructure(new WorldGenVolcano(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}
 
-		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.chunkX, 0, this.chunkZ)));
+		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
 		isDecorating = false;
 
