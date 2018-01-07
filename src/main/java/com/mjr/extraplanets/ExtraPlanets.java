@@ -326,6 +326,13 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		// Register Ore Dict
+		if (Config.ORE_DICTIONARY_INGOTS)
+			ExtraPlanets_Items.OreDictionaryIngotsRegister();
+		ExtraPlanets_Items.OreDictionaryItemsRegister();
+		if (Config.ORE_DICTIONARY)
+			ExtraPlanets_Blocks.OreDictionaryRegister();
+
 		// Register Fluid Submerged Textures
 		registerFluidSubmergedTextures();
 

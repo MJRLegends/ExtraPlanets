@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.blocks;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
@@ -301,8 +300,6 @@ public class ExtraPlanets_Blocks {
 				registerStairs();
 			registerTileEntitys();
 			setHarvestLevels();
-			if (Config.ORE_DICTIONARY)
-				OreDictionaryRegister();
 			if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 				initializeTreeBlocks();
 				registerTreeBlocks();
@@ -312,31 +309,43 @@ public class ExtraPlanets_Blocks {
 		}
 	}
 
-	@SuppressWarnings("unused")
-	public static void registerBlock(String modID, Block block, Class<? extends ItemBlock> itemclass, String name) throws NoSuchMethodException {
-		Object[] itemCtorArgs = new Object[] {};
-		ItemBlock i = null;
+	public static void registerBlock(String modID, Block block, Class<? extends ItemBlock> itemclass, String name, Object... itemCtorArgs) throws NoSuchMethodException {
+		if (block.getRegistryName() == null) {
+			block.setRegistryName(name);
+		}
 		if (itemclass != null) {
+			ItemBlock item = null;
 			Class<?>[] ctorArgClasses = new Class<?>[itemCtorArgs.length + 1];
 			ctorArgClasses[0] = Block.class;
 			for (int idx = 1; idx < ctorArgClasses.length; idx++) {
 				ctorArgClasses[idx] = itemCtorArgs[idx - 1].getClass();
 			}
-			Constructor<? extends ItemBlock> itemCtor = itemclass.getConstructor(ctorArgClasses);
+
 			try {
-				i = itemCtor.newInstance(ObjectArrays.concat(block, itemCtorArgs));
-			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | SecurityException e) {
+				Constructor<? extends ItemBlock> constructor = itemclass.getConstructor(ctorArgClasses);
+				item = constructor.newInstance(ObjectArrays.concat(block, itemCtorArgs));
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			ItemStack result = ExtraPlanets.itemList.put(name, new ItemStack(item));
+            if (item.getRegistryName() == null)
+            {
+                item.setRegistryName(name);
+            }
+			if (result != null) {
+				System.out.println("ExtraPlanets: DUPLICATE ITEM NAME REGISTERED: " + name);
+				Thread.dumpStack();
+			}
 		}
-		block.setRegistryName(modID, name);
-		registerBlock(block, name);
 	}
 
 	public static void registerBlock(Block block, String name) {
+		if (block.getRegistryName() == null) {
+			block.setRegistryName(name);
+		}
 		Block result = ExtraPlanets.blocksList.put(name, block);
 		if (result != null) {
-			System.out.println("GC -------- DUPLICATE ITEM NAME REGISTERED: " + name);
+			System.out.println("ExtraPlanets: DUPLICATE BLOCK NAME REGISTERED: " + name);
 			Thread.dumpStack();
 		}
 	}

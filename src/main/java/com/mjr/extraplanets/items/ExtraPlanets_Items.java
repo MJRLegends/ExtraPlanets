@@ -246,16 +246,17 @@ public class ExtraPlanets_Items {
 	public static void init() {
 		initializeItems();
 		registerItems();
-		if (Config.ORE_DICTIONARY_INGOTS)
-			OreDictionaryIngotsRegister();
-		OreDictionaryItemsRegister();
 		registerGearItems();
 	}
 
 	public static void registerItem(Item item, String name) {
-		ItemStack result = ExtraPlanets.itemList.put(name, new ItemStack(item));
+        if (item.getRegistryName() == null)
+        {
+            item.setRegistryName(name);
+        }
+        ItemStack result = ExtraPlanets.itemList.put(name, new ItemStack(item));
 		if (result != null) {
-			System.out.println("GC -------- DUPLICATE ITEM NAME REGISTERED: " + name);
+			System.out.println("ExtraPlanets: DUPLICATE ITEM NAME REGISTERED: " + name);
 			Thread.dumpStack();
 		}
 	}
