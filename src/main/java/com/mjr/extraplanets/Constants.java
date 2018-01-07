@@ -10,7 +10,7 @@ public class Constants {
 	public static final String modVersion = LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
 	public static final String MCVERSION = "[1.11.2]";
-	public static final String DEPENDENCIES_FORGE = "required-after:forge@[13.20.1.2513,);";
+	public static final String DEPENDENCIES_FORGE = "required-after:forge@[14.23.1.2555,);";
 	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib; required-after:galacticraftcore; required-after:galacticraftplanets;";
 
 	public static final String ASSET_PREFIX = modID;
