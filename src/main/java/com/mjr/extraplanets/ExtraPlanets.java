@@ -1,14 +1,19 @@
 package com.mjr.extraplanets;
 
+import java.util.HashMap;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -16,7 +21,9 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -128,6 +135,31 @@ public class ExtraPlanets {
 	public static ExtraPlanets instance;
 
 	public static ExtraPlanetsChannelHandler packetPipeline;
+	
+	// Block/Item Events Registering
+
+	public static HashMap<String, ItemStack> itemList = new HashMap<>();
+	public static HashMap<String, ItemStack> blocksList = new HashMap<>();
+
+	@SubscribeEvent
+	public static void registerBlocksEvent(RegistryEvent.Register<Block> event) {
+		ExtraPlanets.registerBlocks(event.getRegistry());
+	}
+
+	public static void registerBlocks(IForgeRegistry<Block> registry) {
+		Block[] itemsArray = (Block[]) ExtraPlanets.blocksList.entrySet().toArray();
+		registry.registerAll(itemsArray);
+	}
+
+	@SubscribeEvent
+	public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
+		ExtraPlanets.registerItems(event.getRegistry());
+	}
+
+	public static void registerItems(IForgeRegistry<Item> registry) {
+		Item[] itemsArray = (Item[]) ExtraPlanets.itemList.entrySet().toArray();
+		registry.registerAll(itemsArray);
+	}
 
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {

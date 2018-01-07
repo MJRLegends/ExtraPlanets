@@ -10,7 +10,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.mjrlegendslib.util.RegisterUtilities;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class ExtraPlanets_Fluids {
 	public static Block GLOWSTONE;
@@ -154,18 +154,18 @@ public class ExtraPlanets_Fluids {
 	}
 
 	private static void registerFluidBlocks() throws NoSuchMethodException {
-		RegisterUtilities.registerBlock(Constants.modID, GLOWSTONE, ItemBlockGC.class, "glowstone");
-		RegisterUtilities.registerBlock(Constants.modID, MAGMA, ItemBlockGC.class, "magma");
-		RegisterUtilities.registerBlock(Constants.modID, NITROGEN, ItemBlockGC.class, "nitrogen");
-		RegisterUtilities.registerBlock(Constants.modID, FROZEN_WATER, ItemBlockGC.class, "frozen_water");
-		RegisterUtilities.registerBlock(Constants.modID, SALT, ItemBlockGC.class, "salt");
-		RegisterUtilities.registerBlock(Constants.modID, RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
-		RegisterUtilities.registerBlock(Constants.modID, CLEAN_WATER, ItemBlockGC.class, "clean_water");
-		RegisterUtilities.registerBlock(Constants.modID, INFECTED_WATER, ItemBlockGC.class, "infected_water");
-		RegisterUtilities.registerBlock(Constants.modID, METHANE, ItemBlockGC.class, "methane");
-		RegisterUtilities.registerBlock(Constants.modID, NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
-		RegisterUtilities.registerBlock(Constants.modID, LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
-		RegisterUtilities.registerBlock(Constants.modID, LIQUID_CHOCOLATE, ItemBlockGC.class, "liquid_chocolate");
-		RegisterUtilities.registerBlock(Constants.modID, LIQUID_CARAMEL, ItemBlockGC.class, "liquid_caramel");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, GLOWSTONE, ItemBlockGC.class, "glowstone");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, MAGMA, ItemBlockGC.class, "magma");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, NITROGEN, ItemBlockGC.class, "nitrogen");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, FROZEN_WATER, ItemBlockGC.class, "frozen_water");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, SALT, ItemBlockGC.class, "salt");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, CLEAN_WATER, ItemBlockGC.class, "clean_water");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, INFECTED_WATER, ItemBlockGC.class, "infected_water");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, METHANE, ItemBlockGC.class, "methane");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, LIQUID_CHOCOLATE, ItemBlockGC.class, "liquid_chocolate");
+		ExtraPlanets_Blocks.registerBlock(Constants.modID, LIQUID_CARAMEL, ItemBlockGC.class, "liquid_caramel");
 	}
 }

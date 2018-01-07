@@ -1,13 +1,18 @@
 package com.mjr.extraplanets.blocks;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.google.common.collect.ObjectArrays;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -305,7 +310,34 @@ public class ExtraPlanets_Blocks {
 		} catch (NoSuchMethodException e) {
 			e.printStackTrace();
 		}
+	}
 
+	public static void registerBlock(String modID, Block block, Class<? extends ItemBlock> itemclass, String name) throws NoSuchMethodException {
+		Object[] itemCtorArgs = new Object[] {};
+		ItemBlock i = null;
+		if (itemclass != null) {
+			Class<?>[] ctorArgClasses = new Class<?>[itemCtorArgs.length + 1];
+			ctorArgClasses[0] = Block.class;
+			for (int idx = 1; idx < ctorArgClasses.length; idx++) {
+				ctorArgClasses[idx] = itemCtorArgs[idx - 1].getClass();
+			}
+			Constructor<? extends ItemBlock> itemCtor = itemclass.getConstructor(ctorArgClasses);
+			try {
+				i = itemCtor.newInstance(ObjectArrays.concat(block, itemCtorArgs));
+			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | SecurityException e) {
+				e.printStackTrace();
+			}
+		}
+		block.setRegistryName(modID, name);
+		registerBlock(block, name);
+	}
+
+	public static void registerBlock(Block item, String name) {
+		ItemStack result = ExtraPlanets.blocksList.put(name, new ItemStack(item));
+		if (result != null) {
+			System.out.println("GC -------- DUPLICATE ITEM NAME REGISTERED, PLS FIX: " + name);
+			Thread.dumpStack();
+		}
 	}
 
 	private static void initializeBlocks() {
@@ -565,194 +597,194 @@ public class ExtraPlanets_Blocks {
 
 	private static void registerBlocks() throws NoSuchMethodException {
 		if (Config.MERCURY) {
-			RegisterUtilities.registerBlock(Constants.modID, MERCURY_BLOCKS, ItemBlockMercury.class, MERCURY_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, MERCURY_GRAVEL, MERCURY_GRAVEL.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, MERCURY_SPAWNER, ItemBlockGC.class, "mercury_spawner");
-			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_4, ItemBlockDesc.class, TREASURE_CHEST_TIER_4.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, MERCURY_BLOCKS, ItemBlockMercury.class, MERCURY_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(MERCURY_GRAVEL, MERCURY_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, MERCURY_SPAWNER, ItemBlockGC.class, "mercury_spawner");
+			registerBlock(Constants.modID, TREASURE_CHEST_TIER_4, ItemBlockDesc.class, TREASURE_CHEST_TIER_4.getUnlocalizedName().substring(5));
 		}
 		if (Config.CERES) {
-			RegisterUtilities.registerBlock(Constants.modID, CERES_BLOCKS, ItemBlockCeres.class, CERES_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, CERES_GRAVEL, CERES_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, CERES_BLOCKS, ItemBlockCeres.class, CERES_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(CERES_GRAVEL, CERES_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.JUPITER) {
-			RegisterUtilities.registerBlock(Constants.modID, JUPITER_BLOCKS, ItemBlockJupiter.class, JUPITER_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, JUPITER_GRAVEL, JUPITER_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, JUPITER_BLOCKS, ItemBlockJupiter.class, JUPITER_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(JUPITER_GRAVEL, JUPITER_GRAVEL.getUnlocalizedName().substring(5));
 
-			RegisterUtilities.registerBlock(Constants.modID, JUIPTER_SPAWNER, ItemBlockGC.class, "jupiter_spawner");
-			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, JUIPTER_SPAWNER, ItemBlockGC.class, "jupiter_spawner");
+			registerBlock(Constants.modID, TREASURE_CHEST_TIER_5, ItemBlockDesc.class, TREASURE_CHEST_TIER_5.getUnlocalizedName().substring(5));
 
-			RegisterUtilities.registerBlock(Constants.modID, VOLCANIC_ROCK, VOLCANIC_ROCK.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ASH_ROCK, ASH_ROCK.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ORANGE_SAND, ORANGE_SAND.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ORANGE_SANDSTONE, ORANGE_SANDSTONE.getUnlocalizedName().substring(5));
+			registerBlock(VOLCANIC_ROCK, VOLCANIC_ROCK.getUnlocalizedName().substring(5));
+			registerBlock(ASH_ROCK, ASH_ROCK.getUnlocalizedName().substring(5));
+			registerBlock(ORANGE_SAND, ORANGE_SAND.getUnlocalizedName().substring(5));
+			registerBlock(ORANGE_SANDSTONE, ORANGE_SANDSTONE.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
-			RegisterUtilities.registerBlock(Constants.modID, SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, SATURN_GRAVEL, SATURN_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, SATURN_BLOCKS, ItemBlockSaturn.class, SATURN_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(SATURN_GRAVEL, SATURN_GRAVEL.getUnlocalizedName().substring(5));
 
-			RegisterUtilities.registerBlock(Constants.modID, SATURN_SPAWNER, ItemBlockGC.class, "saturn_spawner");
-			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_6, ItemBlockDesc.class, TREASURE_CHEST_TIER_6.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, SATURN_SPAWNER, ItemBlockGC.class, "saturn_spawner");
+			registerBlock(Constants.modID, TREASURE_CHEST_TIER_6, ItemBlockDesc.class, TREASURE_CHEST_TIER_6.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
-			RegisterUtilities.registerBlock(Constants.modID, URANUS_BLOCKS, ItemBlockUranus.class, URANUS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, URANUS_SPAWNER, ItemBlockGC.class, "uranus_spawner");
-			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_7, ItemBlockDesc.class, TREASURE_CHEST_TIER_7.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, DENSE_ICE, DENSE_ICE.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, URANUS_BLOCKS, ItemBlockUranus.class, URANUS_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, URANUS_SPAWNER, ItemBlockGC.class, "uranus_spawner");
+			registerBlock(Constants.modID, TREASURE_CHEST_TIER_7, ItemBlockDesc.class, TREASURE_CHEST_TIER_7.getUnlocalizedName().substring(5));
+			registerBlock(DENSE_ICE, DENSE_ICE.getUnlocalizedName().substring(5));
 		}
 		if (Config.NEPTUNE) {
-			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_BLOCKS, ItemBlockNeptune.class, NEPTUNE_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_SPAWNER, ItemBlockGC.class, "neptune_spawner");
-			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_8, ItemBlockDesc.class, TREASURE_CHEST_TIER_8.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, FROZEN_NITROGEN, FROZEN_NITROGEN.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, NEPTUNE_BLOCKS, ItemBlockNeptune.class, NEPTUNE_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, NEPTUNE_SPAWNER, ItemBlockGC.class, "neptune_spawner");
+			registerBlock(Constants.modID, TREASURE_CHEST_TIER_8, ItemBlockDesc.class, TREASURE_CHEST_TIER_8.getUnlocalizedName().substring(5));
+			registerBlock(FROZEN_NITROGEN, FROZEN_NITROGEN.getUnlocalizedName().substring(5));
 		}
 		if (Config.PLUTO) {
-			RegisterUtilities.registerBlock(Constants.modID, PLUTO_BLOCKS, ItemBlockPluto.class, PLUTO_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, PLUTO_SPAWNER, ItemBlockGC.class, "pluto_spawner");
-			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_9, ItemBlockDesc.class, TREASURE_CHEST_TIER_9.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, PLUTO_GRAVEL, PLUTO_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, PLUTO_BLOCKS, ItemBlockPluto.class, PLUTO_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, PLUTO_SPAWNER, ItemBlockGC.class, "pluto_spawner");
+			registerBlock(Constants.modID, TREASURE_CHEST_TIER_9, ItemBlockDesc.class, TREASURE_CHEST_TIER_9.getUnlocalizedName().substring(5));
+			registerBlock(PLUTO_GRAVEL, PLUTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.ERIS) {
-			RegisterUtilities.registerBlock(Constants.modID, ERIS_BLOCKS, ItemBlockEris.class, ERIS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ERIS_SPAWNER, ItemBlockGC.class, "eris_spawner");
-			RegisterUtilities.registerBlock(Constants.modID, TREASURE_CHEST_TIER_10, ItemBlockDesc.class, TREASURE_CHEST_TIER_10.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ERIS_GRAVEL, ERIS_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, ERIS_BLOCKS, ItemBlockEris.class, ERIS_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, ERIS_SPAWNER, ItemBlockGC.class, "eris_spawner");
+			registerBlock(Constants.modID, TREASURE_CHEST_TIER_10, ItemBlockDesc.class, TREASURE_CHEST_TIER_10.getUnlocalizedName().substring(5));
+			registerBlock(ERIS_GRAVEL, ERIS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_BLOCKS, ItemBlockKepler22b.class, KEPLER22B_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_GREEN, KEPLER22B_GRASS_GREEN.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_BLUE, KEPLER22B_GRASS_BLUE.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_PURPLE, KEPLER22B_GRASS_PURPLE.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_GRASS_INFECTED, KEPLER22B_GRASS_INFECTED.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, KEPLER22B_BLOCKS, ItemBlockKepler22b.class, KEPLER22B_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(KEPLER22B_GRASS_GREEN, KEPLER22B_GRASS_GREEN.getUnlocalizedName().substring(5));
+			registerBlock(KEPLER22B_GRASS_BLUE, KEPLER22B_GRASS_BLUE.getUnlocalizedName().substring(5));
+			registerBlock(KEPLER22B_GRASS_PURPLE, KEPLER22B_GRASS_PURPLE.getUnlocalizedName().substring(5));
+			registerBlock(KEPLER22B_GRASS_RED, KEPLER22B_GRASS_RED.getUnlocalizedName().substring(5));
+			registerBlock(KEPLER22B_GRASS_YELLOW, KEPLER22B_GRASS_YELLOW.getUnlocalizedName().substring(5));
+			registerBlock(KEPLER22B_GRASS_INFECTED, KEPLER22B_GRASS_INFECTED.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, KEPLER22B_MAPLE_FLOWERS, ItemBlockKepler22bTallGrass.class, KEPLER22B_MAPLE_FLOWERS.getUnlocalizedName().substring(5));
 		}
 		if (Config.KEPLER22B || Config.JUPITER) {
-			RegisterUtilities.registerBlock(Constants.modID, RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
+			registerBlock(RED_SAND, RED_SAND.getUnlocalizedName().substring(5));
+			registerBlock(RED_SANDSTONE, RED_SANDSTONE.getUnlocalizedName().substring(5));
 		}
 
 		if (Config.EUROPA) {
-			RegisterUtilities.registerBlock(Constants.modID, EUROPA_BLOCKS, ItemBlockEuropa.class, EUROPA_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, EUROPA_GRAVEL, EUROPA_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, EUROPA_BLOCKS, ItemBlockEuropa.class, EUROPA_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(EUROPA_GRAVEL, EUROPA_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.IO) {
-			RegisterUtilities.registerBlock(Constants.modID, IO_BLOCKS, ItemBlockIo.class, IO_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, IO_GRAVEL, IO_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, IO_BLOCKS, ItemBlockIo.class, IO_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(IO_GRAVEL, IO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.DEIMOS) {
-			RegisterUtilities.registerBlock(Constants.modID, DEIMOS_BLOCKS, ItemBlockDeimos.class, DEIMOS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, DEIMOS_GRAVEL, DEIMOS_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, DEIMOS_BLOCKS, ItemBlockDeimos.class, DEIMOS_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(DEIMOS_GRAVEL, DEIMOS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.PHOBOS) {
-			RegisterUtilities.registerBlock(Constants.modID, PHOBOS_BLOCKS, ItemBlockPhobos.class, PHOBOS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, PHOBOS_GRAVEL, PHOBOS_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, PHOBOS_BLOCKS, ItemBlockPhobos.class, PHOBOS_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(PHOBOS_GRAVEL, PHOBOS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.TRITON) {
-			RegisterUtilities.registerBlock(Constants.modID, TRITON_BLOCKS, ItemBlockTriton.class, TRITON_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, TRITON_GRAVEL, TRITON_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, TRITON_BLOCKS, ItemBlockTriton.class, TRITON_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(TRITON_GRAVEL, TRITON_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.CALLISTO) {
-			RegisterUtilities.registerBlock(Constants.modID, CALLISTO_BLOCKS, ItemBlockCallisto.class, CALLISTO_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, CALLISTO_GRAVEL, CALLISTO_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, CALLISTO_BLOCKS, ItemBlockCallisto.class, CALLISTO_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(CALLISTO_GRAVEL, CALLISTO_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.GANYMEDE) {
-			RegisterUtilities.registerBlock(Constants.modID, GANYMEDE_BLOCKS, ItemBlockGanymede.class, GANYMEDE_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, GANYMEDE_GRAVEL, GANYMEDE_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, GANYMEDE_BLOCKS, ItemBlockGanymede.class, GANYMEDE_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(GANYMEDE_GRAVEL, GANYMEDE_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.RHEA) {
-			RegisterUtilities.registerBlock(Constants.modID, RHEA_BLOCKS, ItemBlockRhea.class, RHEA_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, RHEA_GRAVEL, RHEA_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, RHEA_BLOCKS, ItemBlockRhea.class, RHEA_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(RHEA_GRAVEL, RHEA_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.TITAN) {
-			RegisterUtilities.registerBlock(Constants.modID, TITAN_BLOCKS, ItemBlockTitan.class, TITAN_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, TITAN_GRAVEL, TITAN_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, TITAN_BLOCKS, ItemBlockTitan.class, TITAN_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(TITAN_GRAVEL, TITAN_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.OBERON) {
-			RegisterUtilities.registerBlock(Constants.modID, OBERON_BLOCKS, ItemBlockOberon.class, OBERON_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, OBERON_GRAVEL, OBERON_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, OBERON_BLOCKS, ItemBlockOberon.class, OBERON_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(OBERON_GRAVEL, OBERON_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.TITANIA) {
-			RegisterUtilities.registerBlock(Constants.modID, TITANIA_BLOCKS, ItemBlockTitania.class, TITANIA_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, TITANIA_GRAVEL, TITANIA_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, TITANIA_BLOCKS, ItemBlockTitania.class, TITANIA_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(TITANIA_GRAVEL, TITANIA_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.IAPETUS) {
-			RegisterUtilities.registerBlock(Constants.modID, IAPETUS_BLOCKS, ItemBlockIapetus.class, IAPETUS_BLOCKS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, IAPETUS_GRAVEL, IAPETUS_GRAVEL.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, IAPETUS_BLOCKS, ItemBlockIapetus.class, IAPETUS_BLOCKS.getUnlocalizedName().substring(5));
+			registerBlock(IAPETUS_GRAVEL, IAPETUS_GRAVEL.getUnlocalizedName().substring(5));
 		}
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
-			RegisterUtilities.registerBlock(Constants.modID, FOSSIL, FOSSIL.getUnlocalizedName().substring(5));
+			registerBlock(FOSSIL, FOSSIL.getUnlocalizedName().substring(5));
 		if (Config.CERES && Config.NUCLEAR_BOMB)
-			RegisterUtilities.registerBlock(Constants.modID, NUCLEAR_BOMB, NUCLEAR_BOMB.getUnlocalizedName().substring(5));
+			registerBlock(NUCLEAR_BOMB, NUCLEAR_BOMB.getUnlocalizedName().substring(5));
 		if (Config.SATURN && Config.FIRE_BOMB)
-			RegisterUtilities.registerBlock(Constants.modID, FIRE_BOMB, FIRE_BOMB.getUnlocalizedName().substring(5));
+			registerBlock(FIRE_BOMB, FIRE_BOMB.getUnlocalizedName().substring(5));
 		if (Config.ORE_LEAD_GENERATION)
-			RegisterUtilities.registerBlock(Constants.modID, ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
+			registerBlock(ORE_LEAD, ORE_LEAD.getUnlocalizedName().substring(5));
 		if (Config.RADIATION)
-			RegisterUtilities.registerBlock(Constants.modID, ORE_POTASH, "potash");
+			registerBlock(ORE_POTASH, "potash");
 
-		RegisterUtilities.registerBlock(Constants.modID, ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, ADVANCED_LAUCHPAD, ItemBlockCustomLandingPad.class, ADVANCED_LAUCHPAD.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, ADVANCED_LAUCHPAD_FULL, ItemBlockGC.class, ADVANCED_LAUCHPAD_FULL.getUnlocalizedName().substring(5));
 
-		RegisterUtilities.registerBlock(Constants.modID, FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, DECORATIVE_BLOCKS2, ItemBlockDecorativeBlocks2.class, DECORATIVE_BLOCKS2.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, CANDY_BLOCKS, ItemBlockCandyBlocks.class, CANDY_BLOCKS.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, CANDY_BLOCKS_HORIZONTAL, ItemBlockCandyBlocksHorizontal.class, CANDY_BLOCKS_HORIZONTAL.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, CAKE_BLOCKS, ItemBlockCakeBlocks.class, CAKE_BLOCKS.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, FAKE_BLOCK, ItemBlockDummy.class, FAKE_BLOCK.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, DECORATIVE_BLOCKS, ItemBlockDecorativeBlocks.class, DECORATIVE_BLOCKS.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, DECORATIVE_BLOCKS2, ItemBlockDecorativeBlocks2.class, DECORATIVE_BLOCKS2.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, CANDY_BLOCKS, ItemBlockCandyBlocks.class, CANDY_BLOCKS.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, CANDY_BLOCKS_HORIZONTAL, ItemBlockCandyBlocksHorizontal.class, CANDY_BLOCKS_HORIZONTAL.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, CAKE_BLOCKS, ItemBlockCakeBlocks.class, CAKE_BLOCKS.getUnlocalizedName().substring(5));
+		registerBlock(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
-			RegisterUtilities.registerBlock(Constants.modID, FAKE_BLOCK_DECONTAMINATION_UNIT, FAKE_BLOCK_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
+			registerBlock(FAKE_BLOCK_DECONTAMINATION_UNIT, FAKE_BLOCK_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerStairs() throws NoSuchMethodException {
 		if (Config.MERCURY) {
-			RegisterUtilities.registerBlock(Constants.modID, MERCURY_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, MERCURY_SUB_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, MERCURY_STONE_STAIRS, ItemBlockGC.class, MERCURY_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, MERCURY_STONE_BRICKS_STAIRS, ItemBlockGC.class, MERCURY_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, MERCURY_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, MERCURY_SUB_SURFACE_STAIRS, ItemBlockGC.class, MERCURY_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, MERCURY_STONE_STAIRS, ItemBlockGC.class, MERCURY_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, MERCURY_STONE_BRICKS_STAIRS, ItemBlockGC.class, MERCURY_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.CERES) {
-			RegisterUtilities.registerBlock(Constants.modID, CERES_SURFACE_STAIRS, ItemBlockGC.class, CERES_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, CERES_SUB_SURFACE_STAIRS, ItemBlockGC.class, CERES_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, CERES_STONE_STAIRS, ItemBlockGC.class, CERES_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, CERES_STONE_BRICKS_STAIRS, ItemBlockGC.class, CERES_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, CERES_SURFACE_STAIRS, ItemBlockGC.class, CERES_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, CERES_SUB_SURFACE_STAIRS, ItemBlockGC.class, CERES_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, CERES_STONE_STAIRS, ItemBlockGC.class, CERES_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, CERES_STONE_BRICKS_STAIRS, ItemBlockGC.class, CERES_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.JUPITER) {
-			RegisterUtilities.registerBlock(Constants.modID, JUPITER_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, JUPITER_SUB_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, JUPITER_STONE_STAIRS, ItemBlockGC.class, JUPITER_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, JUPITER_STONE_BRICKS_STAIRS, ItemBlockGC.class, JUPITER_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, JUPITER_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, JUPITER_SUB_SURFACE_STAIRS, ItemBlockGC.class, JUPITER_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, JUPITER_STONE_STAIRS, ItemBlockGC.class, JUPITER_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, JUPITER_STONE_BRICKS_STAIRS, ItemBlockGC.class, JUPITER_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.SATURN) {
-			RegisterUtilities.registerBlock(Constants.modID, SATURN_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, SATURN_SUB_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, SATURN_STONE_STAIRS, ItemBlockGC.class, SATURN_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, SATURN_STONE_BRICKS_STAIRS, ItemBlockGC.class, SATURN_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, SATURN_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, SATURN_SUB_SURFACE_STAIRS, ItemBlockGC.class, SATURN_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, SATURN_STONE_STAIRS, ItemBlockGC.class, SATURN_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, SATURN_STONE_BRICKS_STAIRS, ItemBlockGC.class, SATURN_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.URANUS) {
-			RegisterUtilities.registerBlock(Constants.modID, URANUS_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, URANUS_SUB_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, URANUS_STONE_STAIRS, ItemBlockGC.class, URANUS_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, URANUS_STONE_BRICKS_STAIRS, ItemBlockGC.class, URANUS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, URANUS_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, URANUS_SUB_SURFACE_STAIRS, ItemBlockGC.class, URANUS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, URANUS_STONE_STAIRS, ItemBlockGC.class, URANUS_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, URANUS_STONE_BRICKS_STAIRS, ItemBlockGC.class, URANUS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.NEPTUNE) {
-			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_SUB_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_STONE_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, NEPTUNE_STONE_BRICKS_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, NEPTUNE_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, NEPTUNE_SUB_SURFACE_STAIRS, ItemBlockGC.class, NEPTUNE_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, NEPTUNE_STONE_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, NEPTUNE_STONE_BRICKS_STAIRS, ItemBlockGC.class, NEPTUNE_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.PLUTO) {
-			RegisterUtilities.registerBlock(Constants.modID, PLUTO_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, PLUTO_SUB_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, PLUTO_STONE_STAIRS, ItemBlockGC.class, PLUTO_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, PLUTO_STONE_BRICKS_STAIRS, ItemBlockGC.class, PLUTO_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, PLUTO_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, PLUTO_SUB_SURFACE_STAIRS, ItemBlockGC.class, PLUTO_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, PLUTO_STONE_STAIRS, ItemBlockGC.class, PLUTO_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, PLUTO_STONE_BRICKS_STAIRS, ItemBlockGC.class, PLUTO_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 		if (Config.ERIS) {
-			RegisterUtilities.registerBlock(Constants.modID, ERIS_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ERIS_SUB_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ERIS_STONE_STAIRS, ItemBlockGC.class, ERIS_STONE_STAIRS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerBlock(Constants.modID, ERIS_STONE_BRICKS_STAIRS, ItemBlockGC.class, ERIS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, ERIS_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, ERIS_SUB_SURFACE_STAIRS, ItemBlockGC.class, ERIS_SUB_SURFACE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, ERIS_STONE_STAIRS, ItemBlockGC.class, ERIS_STONE_STAIRS.getUnlocalizedName().substring(5));
+			registerBlock(Constants.modID, ERIS_STONE_BRICKS_STAIRS, ItemBlockGC.class, ERIS_STONE_BRICKS_STAIRS.getUnlocalizedName().substring(5));
 		}
 	}
 
@@ -1178,11 +1210,11 @@ public class ExtraPlanets_Blocks {
 	}
 
 	private static void registerTreeBlocks() throws NoSuchMethodException {
-		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LOG, ItemBlockKepler22bMapleLog.class, KEPLER22B_MAPLE_LOG.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LOG_2, ItemBlockKepler22bMapleLog2.class, KEPLER22B_MAPLE_LOG_2.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_SAPLING, ItemBlockKepler22bMapleSapling.class, KEPLER22B_MAPLE_SAPLING.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LEAF, ItemBlockKepler22bMapleLeaf.class, KEPLER22B_MAPLE_LEAF.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_LEAF2, ItemBlockKepler22bMapleLeaf2.class, KEPLER22B_MAPLE_LEAF2.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, KEPLER22B_MAPLE_PLANKS, ItemBlockKepler22bPlanks.class, KEPLER22B_MAPLE_PLANKS.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, KEPLER22B_MAPLE_LOG, ItemBlockKepler22bMapleLog.class, KEPLER22B_MAPLE_LOG.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, KEPLER22B_MAPLE_LOG_2, ItemBlockKepler22bMapleLog2.class, KEPLER22B_MAPLE_LOG_2.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, KEPLER22B_MAPLE_SAPLING, ItemBlockKepler22bMapleSapling.class, KEPLER22B_MAPLE_SAPLING.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, KEPLER22B_MAPLE_LEAF, ItemBlockKepler22bMapleLeaf.class, KEPLER22B_MAPLE_LEAF.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, KEPLER22B_MAPLE_LEAF2, ItemBlockKepler22bMapleLeaf2.class, KEPLER22B_MAPLE_LEAF2.getUnlocalizedName().substring(5));
+		registerBlock(Constants.modID, KEPLER22B_MAPLE_PLANKS, ItemBlockKepler22bPlanks.class, KEPLER22B_MAPLE_PLANKS.getUnlocalizedName().substring(5));
 	}
 }
