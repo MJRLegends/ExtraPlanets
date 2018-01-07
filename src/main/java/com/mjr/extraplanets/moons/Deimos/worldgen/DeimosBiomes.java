@@ -6,7 +6,9 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
-public class DeimosBiomes extends Biome {
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
+
+public class DeimosBiomes extends BiomeGenBase {
 
 	public static final Biome deimos = new BiomeGenDeimos(new BiomeProperties("deimos").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 

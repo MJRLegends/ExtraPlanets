@@ -255,7 +255,7 @@ public class ExtraPlanets_Items {
 	public static void registerItem(Item item, String name) {
 		ItemStack result = ExtraPlanets.itemList.put(name, new ItemStack(item));
 		if (result != null) {
-			System.out.println("GC -------- DUPLICATE ITEM NAME REGISTERED, PLS FIX: " + name);
+			System.out.println("GC -------- DUPLICATE ITEM NAME REGISTERED: " + name);
 			Thread.dumpStack();
 		}
 	}

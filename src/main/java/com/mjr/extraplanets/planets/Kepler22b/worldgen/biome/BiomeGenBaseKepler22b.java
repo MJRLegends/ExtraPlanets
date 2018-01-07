@@ -21,10 +21,12 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 
-public class BiomeGenBaseKepler22b extends Biome {
+public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	public static final Biome kepler22bPlains = new BiomeGenKepler22bPlains(new BiomeProperties("Kepler22b Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest(new BiomeProperties("Kepler22b Blue Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest(new BiomeProperties("Kepler22b Purple Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
@@ -56,6 +58,7 @@ public class BiomeGenBaseKepler22b extends Biome {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
+		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
 	}
 
 	@Override

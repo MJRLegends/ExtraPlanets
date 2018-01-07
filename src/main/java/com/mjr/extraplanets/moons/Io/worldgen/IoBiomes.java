@@ -20,8 +20,9 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 
-public class IoBiomes extends Biome {
+public class IoBiomes extends BiomeGenBase {
 
 	public static final Biome io = new BiomeGenIo(new BiomeProperties("io").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome ioAshLands = new BiomeGenIoAshLands(new BiomeProperties("ioAshLands").setBaseHeight(2.0F).setHeightVariation(2.0F).setRainfall(0.0F).setRainDisabled());

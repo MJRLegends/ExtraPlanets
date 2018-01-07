@@ -19,8 +19,9 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonLargeMountain;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 
-public class OberonBiomes extends Biome {
+public class OberonBiomes extends BiomeGenBase {
 
 	public static final Biome oberon = new BiomeGenOberon(new BiomeProperties("oberon").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome oberonLargeMountain = new BiomeGenOberonLargeMountain(new BiomeProperties("oberonLargeIceMountain").setBaseHeight(3.0F).setHeightVariation(2.5F).setRainfall(0.0F).setRainDisabled().setSnowEnabled());

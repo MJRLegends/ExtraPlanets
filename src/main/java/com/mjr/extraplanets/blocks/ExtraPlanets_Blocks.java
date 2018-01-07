@@ -312,6 +312,7 @@ public class ExtraPlanets_Blocks {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	public static void registerBlock(String modID, Block block, Class<? extends ItemBlock> itemclass, String name) throws NoSuchMethodException {
 		Object[] itemCtorArgs = new Object[] {};
 		ItemBlock i = null;
@@ -332,10 +333,10 @@ public class ExtraPlanets_Blocks {
 		registerBlock(block, name);
 	}
 
-	public static void registerBlock(Block item, String name) {
-		ItemStack result = ExtraPlanets.blocksList.put(name, new ItemStack(item));
+	public static void registerBlock(Block block, String name) {
+		Block result = ExtraPlanets.blocksList.put(name, block);
 		if (result != null) {
-			System.out.println("GC -------- DUPLICATE ITEM NAME REGISTERED, PLS FIX: " + name);
+			System.out.println("GC -------- DUPLICATE ITEM NAME REGISTERED: " + name);
 			Thread.dumpStack();
 		}
 	}

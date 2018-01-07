@@ -6,7 +6,9 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
-public class TitaniaBiomes extends Biome {
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
+
+public class TitaniaBiomes extends BiomeGenBase {
 
 	public static final Biome titania = new BiomeGenTitania(new BiomeProperties("titania").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 

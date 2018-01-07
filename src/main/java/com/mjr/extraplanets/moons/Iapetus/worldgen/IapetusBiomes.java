@@ -6,7 +6,9 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
-public class IapetusBiomes extends Biome {
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
+
+public class IapetusBiomes extends BiomeGenBase {
 
 	public static final Biome iapetus = new BiomeGenIapetus(new BiomeProperties("iapetus").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 

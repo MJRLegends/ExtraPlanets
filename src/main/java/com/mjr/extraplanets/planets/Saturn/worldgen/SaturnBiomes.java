@@ -15,13 +15,15 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnHydroCarbonSea;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 
-public class SaturnBiomes extends Biome {
+public class SaturnBiomes extends BiomeGenBase {
 
 	public static final Biome saturn = new BiomeGenSaturn(new BiomeProperties("saturn").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome saturnHydroCarbonSea = new BiomeGenSaturnHydroCarbonSea(new BiomeProperties("saturnHydroCarbonSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
@@ -36,6 +38,7 @@ public class SaturnBiomes extends Biome {
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
 	}
 
 	@Override

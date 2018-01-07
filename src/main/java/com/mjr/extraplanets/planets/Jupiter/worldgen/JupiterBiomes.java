@@ -15,13 +15,15 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 
-public class JupiterBiomes extends Biome {
+public class JupiterBiomes extends BiomeGenBase {
 
 	public static final Biome jupiter = new BiomeGenJupiter(new BiomeProperties("jupiter").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome jupiterMagmaSea = new BiomeGenJupiterMagmaSea(new BiomeProperties("jupiterMagmaSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
@@ -36,6 +38,7 @@ public class JupiterBiomes extends Biome {
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
 	}
 
 	@Override

@@ -20,8 +20,9 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneHills;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 
-public class TitanBiomes extends Biome {
+public class TitanBiomes extends BiomeGenBase {
 
 	public static final Biome titan = new BiomeGenTitan(new BiomeProperties("titan").setBaseHeight(0.125F).setHeightVariation(0.25F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome titanMethaneSea = new BiomeGenTitanMethaneSea(new BiomeProperties("titanMethaneSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());

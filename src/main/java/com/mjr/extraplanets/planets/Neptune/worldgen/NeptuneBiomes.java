@@ -15,13 +15,15 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneLayeredHills;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadioActiveWaterSea;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 
-public class NeptuneBiomes extends Biome {
+public class NeptuneBiomes extends BiomeGenBase {
 
 	public static final Biome neptune = new BiomeGenNeptune(new BiomeProperties("neptune").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(new BiomeProperties("neptuneRadioActiveWaterSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
@@ -36,6 +38,7 @@ public class NeptuneBiomes extends Biome {
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
 	}
 
 	@Override

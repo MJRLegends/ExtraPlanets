@@ -1,19 +1,23 @@
 package com.mjr.extraplanets;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -23,6 +27,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -123,6 +128,7 @@ import com.mjr.extraplanets.schematicPages.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier9Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTierElectricRocket;
 import com.mjr.extraplanets.schematicPages.SchematicVenusRover;
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS)
@@ -136,29 +142,49 @@ public class ExtraPlanets {
 
 	public static ExtraPlanetsChannelHandler packetPipeline;
 
-	// Block/Item Events Registering
+	// Block/Item/Biome Events Registering
 
 	public static HashMap<String, ItemStack> itemList = new HashMap<>();
-	public static HashMap<String, ItemStack> blocksList = new HashMap<>();
+	public static HashMap<String, Block> blocksList = new HashMap<>();
+	public static LinkedList<BiomeGenBase> biomesList = new LinkedList<>();
 
-	@SubscribeEvent
-	public static void registerBlocksEvent(RegistryEvent.Register<Block> event) {
-		ExtraPlanets.registerBlocks(event.getRegistry());
-	}
+	@Mod.EventBusSubscriber(modid = Constants.modID)
+	public static class RegistrationHandler {
+		@SubscribeEvent
+		public static void registerBlocksEvent(RegistryEvent.Register<Block> event) {
+			ExtraPlanets.registerBlocks(event.getRegistry());
+		}
 
-	public static void registerBlocks(IForgeRegistry<Block> registry) {
-		Block[] itemsArray = (Block[]) ExtraPlanets.blocksList.entrySet().toArray();
-		registry.registerAll(itemsArray);
-	}
+		@SubscribeEvent
+		public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
+			ExtraPlanets.registerItems(event.getRegistry());
+			if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+				// Register Variants
+				proxy.registerVariants();
+			}
+		}
 
-	@SubscribeEvent
-	public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
-		ExtraPlanets.registerItems(event.getRegistry());
+		@SubscribeEvent
+		public static void registerBiomes(RegistryEvent.Register<Biome> event) {
+			for (BiomeGenBase biome : ExtraPlanets.biomesList) {
+				event.getRegistry().register(biome);
+				if (!ConfigManagerCore.disableBiomeTypeRegistrations) {
+					biome.registerTypes();
+				}
+			}
+		}
 	}
 
 	public static void registerItems(IForgeRegistry<Item> registry) {
-		Item[] itemsArray = (Item[]) ExtraPlanets.itemList.entrySet().toArray();
-		registry.registerAll(itemsArray);
+		for (ItemStack item : ExtraPlanets.itemList.values()) {
+			registry.register(item.getItem());
+		}
+	}
+
+	public static void registerBlocks(IForgeRegistry<Block> registry) {
+		for (Block block : ExtraPlanets.blocksList.values()) {
+			registry.register(block);
+		}
 	}
 
 	// Blocks Creative Tab

@@ -201,9 +201,6 @@ public class ClientProxy extends CommonProxy {
 		// Register OBJ Domain
 		OBJLoader.INSTANCE.addDomain(Constants.ASSET_PREFIX);
 
-		// Register Variants
-		registerVariants();
-
 		// Register Entity Renders
 		registerEntityRenders();
 
@@ -245,7 +242,8 @@ public class ClientProxy extends CommonProxy {
 		super.postInit(event);
 	}
 
-	private void registerVariants() {
+	@Override
+	public void registerVariants() {
 		if (Config.MERCURY)
 			ClientUtilities.addVariants(Constants.modID, "mercury", "mercury_surface", "mercury_sub_surface", "mercury_stone", "mercury_ore_iron", "mercury_ore_tin", "mercury_ore_copper", "mercury_ore_mercury", "mercury_mercury_block",
 					"mercury_stonebricks", "mercury_dungeon_brick", "mercury_ore_carbon", "mercury_carbon_block");

@@ -1,12 +1,14 @@
 package com.mjr.extraplanets.moons.Europa.worldgen;
 
+import com.mjr.extraplanets.world.biome.BiomeGenBase;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
-public class EuropaBiomes extends Biome {
+public class EuropaBiomes extends BiomeGenBase {
 
 	public static final Biome europa = new BiomeGenEuropa(new BiomeProperties("europa").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
