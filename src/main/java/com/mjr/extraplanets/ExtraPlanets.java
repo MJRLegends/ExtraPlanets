@@ -15,9 +15,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -27,7 +27,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -158,10 +157,27 @@ public class ExtraPlanets {
 		@SubscribeEvent
 		public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
 			ExtraPlanets.registerItems(event.getRegistry());
-			if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
-				// Register Variants
-				proxy.registerVariants();
-			}
+		}
+
+		@SubscribeEvent
+		public static void registerModels(ModelRegistryEvent event) {
+			// Register Variants
+			proxy.registerVariants();
+
+			// Register Custom Models
+			proxy.registerCustomModel();
+
+			// Register Fluid Variants/Renders
+			proxy.registerFluidVariants();
+
+			// Register TileEntity Special Renderers
+			proxy.renderBlocksTileEntitySpecialRenderers();
+
+			// Register Block Json Files
+			proxy.registerBlockJsons();
+
+			// Register Item Json Files
+			proxy.registerItemJsons();
 		}
 
 		@SubscribeEvent

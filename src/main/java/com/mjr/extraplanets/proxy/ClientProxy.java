@@ -204,11 +204,6 @@ public class ClientProxy extends CommonProxy {
 		// Register Entity Renders
 		registerEntityRenders();
 
-		// Register Custom Models
-		registerCustomModel();
-
-		// Register Fluid Variants/Renders
-		registerFluidVariants();
 		super.preInit(event);
 	}
 
@@ -221,14 +216,6 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new KeyHandlerClient());
 		ClientRegistry.registerKeyBinding(KeyHandlerClient.openFuelGui);
 
-		// Register TileEntity Special Renderers
-		renderBlocksTileEntitySpecialRenderers();
-
-		// Register Block Json Files
-		registerBlockJsons();
-
-		// Register Item Json Files
-		registerItemJsons();
 		super.init(event);
 	}
 
@@ -431,6 +418,7 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityGeneralLander.class, (RenderManager manager) -> new RenderGeneralLander(manager));
 	}
 
+	@Override
 	public void registerCustomModel() {
 		ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t4", "inventory");
 		if (Config.MERCURY) {
@@ -513,8 +501,9 @@ public class ClientProxy extends CommonProxy {
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
-	private static void renderBlocksTileEntitySpecialRenderers() {
+	public void renderBlocksTileEntitySpecialRenderers() {
 		if (Config.MERCURY)
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
 		if (Config.JUPITER)
@@ -535,7 +524,8 @@ public class ClientProxy extends CommonProxy {
 			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBasicDecontaminationUnit.class, new TileEntityBasicDecontaminationUnitRenderer());
 	}
 
-	private void registerBlockJsons() {
+	@Override
+	public void registerBlockJsons() {
 		// Planets
 		if (Config.MERCURY) {
 			for (BlockBasicMercury.EnumBlockBasic blockBasic : BlockBasicMercury.EnumBlockBasic.values()) {
@@ -835,7 +825,8 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.WHITE_SUGAR_CANE);
 	}
 
-	private void registerItemJsons() {
+	@Override
+	public void registerItemJsons() {
 		if (Config.MERCURY) {
 			if (Config.BATTERIES)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_MERCURY);
@@ -1414,7 +1405,8 @@ public class ClientProxy extends CommonProxy {
 		}
 	}
 
-	private void registerFluidVariants() {
+	@Override
+	public void registerFluidVariants() {
 		ModelResourceLocation nitrogenLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen", "fluid");
 		Item nitrogen = Item.getItemFromBlock(ExtraPlanets_Fluids.NITROGEN);
 		ModelBakery.registerItemVariants(nitrogen, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen"));

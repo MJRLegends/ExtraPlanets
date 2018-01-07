@@ -15,7 +15,21 @@ public class CommonProxy {
 	public void postInit(FMLPostInitializationEvent event) {
 	}
 
-	public void registerVariants() {
+	public void registerCustomModel() {
+	}
 
+	public void registerVariants() {
+	}
+
+	public void registerFluidVariants() {
+	}
+
+	public void renderBlocksTileEntitySpecialRenderers() {		
+	}
+
+	public void registerBlockJsons() {		
+	}
+
+	public void registerItemJsons() {		
 	}
 }
