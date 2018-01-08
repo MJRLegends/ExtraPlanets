@@ -78,6 +78,7 @@ import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class MainHandlerClient {
 

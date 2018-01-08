@@ -9,8 +9,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
@@ -19,6 +17,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Uranus.worldgen.BiomeProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.ChunkProviderUranus;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderUranus extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 

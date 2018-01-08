@@ -21,6 +21,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderJupiterLander extends Render<EntityJupiterLander> {

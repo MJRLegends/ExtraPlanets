@@ -13,7 +13,6 @@ import micdoodle8.mods.galacticraft.core.network.IPacket;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetHandler;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -22,6 +21,7 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Queues;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @Sharable
 public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPacket> {

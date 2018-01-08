@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.render.entities;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
@@ -13,6 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderFireBombPrimed extends Render<EntityFireBombPrimed> {

@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.model;
 
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
@@ -18,6 +17,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class ArmorSpaceSuitModel extends ArmorCustomModel {

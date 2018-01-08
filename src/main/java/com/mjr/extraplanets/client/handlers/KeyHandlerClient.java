@@ -18,6 +18,7 @@ import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openFuelGui;

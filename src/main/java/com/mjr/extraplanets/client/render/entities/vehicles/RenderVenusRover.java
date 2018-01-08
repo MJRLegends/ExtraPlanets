@@ -23,6 +23,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderVenusRover extends Render<EntityVenusRover> {

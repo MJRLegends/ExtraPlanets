@@ -10,7 +10,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -22,6 +21,7 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Iapetus.worldgen.BiomeProviderIapetus;
 import com.mjr.extraplanets.moons.Iapetus.worldgen.ChunkProviderIapetus;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderIapetus extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 	@Override

@@ -19,6 +19,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecialRenderer<TileEntityBasicDecontaminationUnit> {
 	private static OBJModel.OBJBakedModel mainModel;
