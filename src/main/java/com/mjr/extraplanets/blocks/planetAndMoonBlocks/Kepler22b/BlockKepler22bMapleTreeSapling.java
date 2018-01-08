@@ -185,6 +185,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	 */
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+		if(!(this.getCreativeTabToDisplayOn() == tab)) return;
 		for (BlockKepler22bMapleTreeSapling.EnumType blockplanks$enumtype : BlockKepler22bMapleTreeSapling.EnumType.values()) {
 			list.add(new ItemStack(itemIn, 1, blockplanks$enumtype.getMetadata()));
 		}

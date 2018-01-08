@@ -13,7 +13,7 @@ public class MagnesiumArmor extends ItemArmor {
 
 	public MagnesiumArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
 		super(material, 0, placement);
-		setCreativeTab(ExtraPlanets.ArmorTab);
+		setCreativeTab(ExtraPlanets.ItemsTab);
 		this.name = name;
 	}
 

@@ -94,6 +94,7 @@ public class BlockKepler22bMapleTreeLog extends BlockLog {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
+		if(!(this.getCreativeTabToDisplayOn() == tab)) return;
 		list.add(new ItemStack(this, 1, BlockKepler22bMapleTreeLog.EnumType.MAPLE_BLUE.getMetadata()));
 		list.add(new ItemStack(this, 1, BlockKepler22bMapleTreeLog.EnumType.MAPLE_RED.getMetadata()));
 		list.add(new ItemStack(this, 1, BlockKepler22bMapleTreeLog.EnumType.MAPLE_PURPLE.getMetadata()));

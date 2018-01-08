@@ -52,6 +52,7 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 
 	@Override
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
+		if(!this.isInCreativeTab(par2CreativeTabs)) return;
 		for (int i = 0; i < 4; i++) {
 			par3List.add(new ItemStack(this, 1, i));
 		}

@@ -85,6 +85,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	 */
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+		if(!(this.getCreativeTabToDisplayOn() == tab)) return;
 		for (int i = 0; i < 15; ++i) {
 			list.add(new ItemStack(itemIn, 1, i));
 		}

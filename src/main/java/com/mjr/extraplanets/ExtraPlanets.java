@@ -197,36 +197,6 @@ public class ExtraPlanets {
 			return new ItemStack(GCItems.rocketTier1);
 		}
 	};
-	// Tools Creative Tab
-	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
-		@Override
-		public ItemStack getTabIconItem() {
-			if (Config.MERCURY)
-				return new ItemStack(ExtraPlanets_Tools.CARBON_PICKAXE);
-			else if (Config.JUPITER)
-				return new ItemStack(ExtraPlanets_Tools.PALLADIUM_PICKAXE);
-			else if (Config.SATURN)
-				return new ItemStack(ExtraPlanets_Tools.MAGNESIUM_PICKAXE);
-			else if (Config.URANUS)
-				return new ItemStack(ExtraPlanets_Tools.CRYSTAL_PICKAXE);
-			return new ItemStack(GCItems.steelPickaxe);
-		}
-	};
-	// Armour Creative Tab
-	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
-		@Override
-		public ItemStack getTabIconItem() {
-			if (Config.MERCURY)
-				return new ItemStack(ExtraPlanets_Armor.CARBON_CHEST);
-			else if (Config.JUPITER)
-				return new ItemStack(ExtraPlanets_Armor.PALLASIUM_CHEST);
-			else if (Config.SATURN)
-				return new ItemStack(ExtraPlanets_Armor.MAGNESIUM_CHEST);
-			else if (Config.URANUS)
-				return new ItemStack(ExtraPlanets_Armor.CRYSTAL_CHEST);
-			return new ItemStack(GCItems.steelChestplate);
-		}
-	};
 
 	static {
 		ExtraPlanets_Fluids.initFluid();

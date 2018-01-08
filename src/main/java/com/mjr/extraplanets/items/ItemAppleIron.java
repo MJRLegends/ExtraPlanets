@@ -61,6 +61,7 @@ public class ItemAppleIron extends ItemFood {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+		if(!this.isInCreativeTab(tab)) return;
 		list.add(new ItemStack(this, 1, 0));
 		list.add(new ItemStack(this, 1, 1));
 	}

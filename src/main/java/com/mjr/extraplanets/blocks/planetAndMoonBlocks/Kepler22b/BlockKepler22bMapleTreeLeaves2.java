@@ -99,6 +99,7 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	 */
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+		if(!(this.getCreativeTabToDisplayOn() == tab)) return;
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_GREEN.getMetadata()));
 		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_BROWN.getMetadata()));
 	}
