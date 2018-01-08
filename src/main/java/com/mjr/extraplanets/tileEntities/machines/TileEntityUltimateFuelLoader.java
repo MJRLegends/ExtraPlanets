@@ -14,7 +14,6 @@ import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
 import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -38,6 +37,7 @@ import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.UltimateFuelLoader;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper, ILandingPadAttachable, IMachineSides {
 	private final int tankCapacity = 12000 * 3;
@@ -135,7 +135,7 @@ public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.ultimate.fuelloader.name");
+		return TranslateUtilities.translate("container.ultimate.fuelloader.name");
 	}
 
 	@Override

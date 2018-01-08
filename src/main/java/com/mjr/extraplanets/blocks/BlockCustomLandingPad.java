@@ -6,7 +6,6 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -32,6 +31,7 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPadSing
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPadSingle;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPadSingle;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPadSingle;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartialSealableBlock, IShiftDescription, ISortableBlock {
 	public static final PropertyEnum<EnumLandingPadType> PAD_TYPE = PropertyEnum.create("type", EnumLandingPadType.class);
@@ -153,13 +153,13 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	@Override
 	public String getShiftDescription(int meta) {
 		if (meta == 0)
-			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier2.desc");
+			return TranslateUtilities.translate(this.getUnlocalizedName() + ".tier2.desc");
 		else if (meta == 1)
-			return GCCoreUtil.translate(this.getUnlocalizedName() + ".tier3.desc");
+			return TranslateUtilities.translate(this.getUnlocalizedName() + ".tier3.desc");
 		else if (meta == 2)
-			return GCCoreUtil.translate(this.getUnlocalizedName() + ".powered.desc");
+			return TranslateUtilities.translate(this.getUnlocalizedName() + ".powered.desc");
 		else if (meta == 3)
-			return GCCoreUtil.translate(this.getUnlocalizedName() + ".powered.rocket.desc");
+			return TranslateUtilities.translate(this.getUnlocalizedName() + ".powered.rocket.desc");
 		else
 			return "";
 	}

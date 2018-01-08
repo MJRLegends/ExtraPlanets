@@ -3,7 +3,6 @@ package com.mjr.extraplanets.items;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -22,6 +21,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemBasicItem extends Item {
 	public ItemBasicItem(String assetName) {
@@ -37,15 +37,15 @@ public class ItemBasicItem extends Item {
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.world.isRemote) {
 			if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier1_armor_layer.desc"));
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier1_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier2_armor_layer.desc"));
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier2_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_3_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier3_armor_layer.desc"));
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier3_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("tier4_armor_layer.desc"));
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier4_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
-				list.add(EnumColor.YELLOW + GCCoreUtil.translate("anti_radiation.desc"));
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("anti_radiation.desc"));
 		}
 	}
 

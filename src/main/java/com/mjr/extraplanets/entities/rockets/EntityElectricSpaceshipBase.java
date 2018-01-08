@@ -20,7 +20,6 @@ import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityTelemetry;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.DamageSourceGC;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
@@ -46,6 +45,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 
 import com.google.common.base.Predicate;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityElectricSpaceshipBase extends Entity implements IPacketReceiver, IIgnoreShift, ITelemetry {
 	public static enum EnumLaunchPhase {
@@ -579,10 +579,10 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 		// data4 = pitch angle
 		int countdown = data[0];
 		str[0] = "";
-		str[1] = (countdown == 400) ? GCCoreUtil.translate("gui.rocket.on_launchpad") : ((countdown > 0) ? GCCoreUtil.translate("gui.rocket.countdown") + ": " + countdown / 20 : GCCoreUtil.translate("gui.rocket.launched"));
-		str[2] = GCCoreUtil.translate("gui.rocket.height") + ": " + data[1];
+		str[1] = (countdown == 400) ? TranslateUtilities.translate("gui.rocket.on_launchpad") : ((countdown > 0) ? TranslateUtilities.translate("gui.rocket.countdown") + ": " + countdown / 20 : TranslateUtilities.translate("gui.rocket.launched"));
+		str[2] = TranslateUtilities.translate("gui.rocket.height") + ": " + data[1];
 		str[3] = GameScreenText.makeSpeedString(data[2]);
-		str[4] = GCCoreUtil.translate("gui.message.fuel.name") + ": " + data[3] + "%";
+		str[4] = TranslateUtilities.translate("gui.message.fuel.name") + ": " + data[3] + "%";
 	}
 
 	@Override

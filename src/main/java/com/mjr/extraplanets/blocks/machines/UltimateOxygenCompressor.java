@@ -5,7 +5,6 @@ import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
@@ -28,6 +27,7 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final int OXYGEN_COMPRESSOR_METADATA = 0;
@@ -141,9 +141,9 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 	public String getShiftDescription(int meta) {
 		switch (meta) {
 		case OXYGEN_COMPRESSOR_METADATA:
-			return GCCoreUtil.translate("tile.oxygen_compressor.description");
+			return TranslateUtilities.translate("tile.oxygen_compressor.description");
 		case OXYGEN_DECOMPRESSOR_METADATA:
-			return GCCoreUtil.translate("tile.oxygen_decompressor.description");
+			return TranslateUtilities.translate("tile.oxygen_decompressor.description");
 		}
 		return "";
 	}

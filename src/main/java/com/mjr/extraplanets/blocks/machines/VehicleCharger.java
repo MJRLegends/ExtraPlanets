@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -29,6 +28,7 @@ import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class VehicleCharger extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
@@ -88,7 +88,7 @@ public class VehicleCharger extends BlockAdvancedTile implements IShiftDescripti
 
 	@Override
 	public String getShiftDescription(int meta) {
-		return GCCoreUtil.translate(this.getUnlocalizedName() + ".description");
+		return TranslateUtilities.translate(this.getUnlocalizedName() + ".description");
 	}
 
 	@Override

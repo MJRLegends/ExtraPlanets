@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -31,6 +30,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class Tier6Rocket extends Item implements IHoldableItem {
 	public Tier6Rocket(String assetName) {
@@ -137,15 +137,15 @@ public class Tier6Rocket extends Item implements IHoldableItem {
 		}
 
 		if (type.getPreFueled()) {
-			par2List.add(EnumColor.RED + "\u00a7o" + GCCoreUtil.translate("gui.creative_only.desc"));
+			par2List.add(EnumColor.RED + "\u00a7o" + TranslateUtilities.translate("gui.creative_only.desc"));
 		}
 
 		if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("RocketFuel")) {
 			EntityTier6Rocket rocket = new EntityTier6Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
-			par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.fuelTank.getCapacity());
+			par2List.add(TranslateUtilities.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.fuelTank.getCapacity());
 		}
 
-		par2List.add(EnumColor.AQUA + GCCoreUtil.translate("rocket_pad.tier2.desc"));
+		par2List.add(EnumColor.AQUA + TranslateUtilities.translate("rocket_pad.tier2.desc"));
 	}
 
 	@Override

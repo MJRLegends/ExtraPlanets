@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.render.entities.rockets;
 
-import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -19,6 +18,7 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT6;
 import com.mjr.extraplanets.entities.rockets.EntityTier6Rocket;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderTier6Rocket extends Render<EntityTier6Rocket> {
@@ -70,7 +70,7 @@ public class RenderTier6Rocket extends Render<EntityTier6Rocket> {
 		GlStateManager.scale(-1.0F, -1.0F, 1.0F);
 		GlStateManager.scale(0.9F, 0.9F, 0.9F);
 
-		ClientUtil.drawBakedModel(this.rocketModel);
+		ModelUtilities.drawBakedModel(this.rocketModel);
 		GlStateManager.popMatrix();
 
 		RenderHelper.enableStandardItemLighting();

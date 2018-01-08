@@ -3,7 +3,6 @@ package com.mjr.extraplanets.items;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumAction;
@@ -21,6 +20,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemGeigerCounter extends Item {
 	public ItemGeigerCounter(String assetName) {
@@ -36,8 +36,8 @@ public class ItemGeigerCounter extends Item {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.world.isRemote) {
-			list.add(EnumColor.YELLOW + GCCoreUtil.translate("geiger.counter.desc"));
-			list.add(EnumColor.AQUA + GCCoreUtil.translate("geiger.counter.location.desc"));
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("geiger.counter.desc"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("geiger.counter.location.desc"));
 		}
 	}
 
@@ -56,7 +56,7 @@ public class ItemGeigerCounter extends Item {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			playerMP.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+			playerMP.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
 					+ (int) stats.getRadiationLevel() + "%"));
 		}
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
