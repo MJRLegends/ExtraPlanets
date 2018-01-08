@@ -153,54 +153,6 @@ public class Config {
 	public static boolean ERIS_SPACE_STATION;
 	public static boolean KEPLER22B_SPACE_STATION;
 
-	public static int MERCURY_BIOME_ID;
-	public static int VENUS_BIOME_ID;
-	public static int CERES_BIOME_ID;
-	public static int JUPITER_BIOME_ID;
-	public static int JUPITER_SEA_BIOME_ID;
-	public static int JUPITER_SANDS_BIOME_ID;
-	public static int SATURN_BIOME_ID;
-	public static int SATURN_HYDROCARBON_SEA_BIOME_ID;
-	public static int SATURN_NUCLEAR_LAND_BIOME_ID;
-	public static int URANUS_BIOME_ID;
-	public static int URANUS_FROZEN_SEA_BIOME_ID;
-	public static int URANUS_SNOW_LANDS_BIOME_ID;
-	public static int NEPTUNE_BIOME_ID;
-	public static int NEPTUNE_RADIO_ACTIVE_WATER_SEA_BIOME_ID;
-	public static int NEPTUNE_LAYERED_HILLS_BIOME_ID;
-	public static int PLUTO_BIOME_ID;
-	public static int ERIS_BIOME_ID;
-
-	public static int TRITON_BIOME_ID;
-	public static int TRITON_ICE_LANDS_BIOME_ID;
-	public static int TRITON_ICE_SEA_BIOME_ID;
-	public static int EUROPA_BIOME_ID;
-	public static int IO_BIOME_ID;
-	public static int IO_ASH_LANDS_BIOME_ID;
-	public static int IO_BURNING_PLAINS_BIOME_ID;
-	public static int DEIMOS_BIOME_ID;
-	public static int PHOBOS_BIOME_ID;
-	public static int CALLISTO_BIOME_ID;
-	public static int GANYMEDE_BIOME_ID;
-	public static int RHEA_BIOME_ID;
-	public static int TITAN_BIOME_ID;
-	public static int TITAN_SEA_BIOME_ID;
-	public static int TITAN_METHANE_HILLS_BIOME_ID;
-	public static int OBERON_BIOME_ID;
-	public static int OBERON_LARGE_MOUNTAIN_BIOME_ID;
-	public static int OBERON_VALLEYS_BIOME_ID;
-	public static int TITANIA_BIOME_ID;
-	public static int IAPETUS_BIOME_ID;
-	public static int KEPLER22B_CANDY_LAND_BIOME_ID;
-
-	public static int KEPLER22B_PLAINS_BIOME_ID;
-	public static int KEPLER22B_BLUE_FOREST_BIOME_ID;
-	public static int KEPLER22B_PURPLE_FOREST_BIOME_ID;
-	public static int KEPLER22B_RED_FOREST_BIOME_ID;
-	public static int KEPLER22B_YELLOW_FOREST_BIOME_ID;
-	public static int KEPLER22B_RED_DESERT_BIOME_ID;
-	public static int KEPLER22B_WASTE_LANDS_BIOME_ID;
-
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
 
@@ -457,51 +409,6 @@ public class Config {
 
 		KEPLER22B_SPACE_STATION_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Dimension ID", -81, "[range: -2147483647 ~ 2147483647, default: -81]").getInt();
 		KEPLER22B_SPACE_STATION_STATIC_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Static Dimension ID", -80, "[range: -2147483647 ~ 2147483647, default: -80]").getInt();
-
-		MERCURY_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Mercury Biome ID", 148, "[range: 0 ~ 255, default: 148]").getInt();
-		CERES_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ceres Biome ID", 155, "[range: 0 ~ 255, default: 155]").getInt();
-		JUPITER_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Biome ID", 150, "[range: 0 ~ 255, default: 150]").getInt();
-		SATURN_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Biome ID", 147, "[range: 0 ~ 255, default: 147]").getInt();
-		URANUS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Biome ID", 152, "[range: 0 ~ 255, default: 152]").getInt();
-		NEPTUNE_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Biome ID", 153, "[range: 0 ~ 255, default: 153]").getInt();
-		PLUTO_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Pluto Biome ID", 154, "[range: 0 ~ 255, default: 154]").getInt();
-		ERIS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Eris Biome ID", 184, "[range: 0 ~ 255, default: 184]").getInt();
-		EUROPA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Biome ID", 183, "[range: 0 ~ 255, default: 183]").getInt();
-		IO_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Biome ID", 182, "[range: 0 ~ 255, default: 182]").getInt();
-		DEIMOS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Deimos Biome ID", 159, "[range: 0 ~ 255, default: 159]").getInt();
-		PHOBOS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Phobos Biome ID", 168, "[range: 0 ~ 255, default: 168]").getInt();
-		TRITON_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Biome ID", 169, "[range: 0 ~ 255, default: 169]").getInt();
-		CALLISTO_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Biome ID", 170, "[range: 0 ~ 255, default: 170]").getInt();
-		GANYMEDE_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ganymede Biome ID", 171, "[range: 0 ~ 255, default: 171]").getInt();
-		RHEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Rhea Biome ID", 172, "[range: 0 ~ 255, default: 172]").getInt();
-		TITAN_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Biome ID", 173, "[range: 0 ~ 255, default: 173]").getInt();
-		KEPLER22B_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Plains Biome ID", 174, "[range: 0 ~ 255, default: 174]").getInt();
-		KEPLER22B_BLUE_FOREST_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Blue Maple Forest Biome ID", 175, "[range: 0 ~ 255, default: 175]").getInt();
-		KEPLER22B_PURPLE_FOREST_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Purple Maple Forest Biome ID", 176, "[range: 0 ~ 255, default: 176]").getInt();
-		KEPLER22B_RED_FOREST_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Blue Red Forest Biome ID", 177, "[range: 0 ~ 255, default: 177]").getInt();
-		KEPLER22B_YELLOW_FOREST_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Yellow Maple Forest Biome ID", 178, "[range: 0 ~ 255, default: 178]").getInt();
-		OBERON_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Biome ID", 179, "[range: 0 ~ 255, default: 179]").getInt();
-		TITANIA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titania Biome ID", 180, "[range: 0 ~ 255, default: 180]").getInt();
-		IAPETUS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Iapetus Biome ID", 181, "[range: 0 ~ 255, default: 181]").getInt();
-		KEPLER22B_RED_DESERT_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Red Desert Biome ID", 185, "[range: 0 ~ 255, default: 185]").getInt();
-		TITAN_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Sea Biome ID", 186, "[range: 0 ~ 255, default: 186]").getInt();
-		TRITON_ICE_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Lands Biome ID", 187, "[range: 0 ~ 255, default: 187]").getInt();
-		TRITON_ICE_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Sea Biome ID", 188, "[range: 0 ~ 255, default: 188]").getInt();
-		JUPITER_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Sea Biome ID", 189, "[range: 0 ~ 255, default: 189]").getInt();
-		IO_ASH_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Ash Lands Biome ID", 190, "[range: 0 ~ 255, default: 190]").getInt();
-		URANUS_FROZEN_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Frozen Sea Biome ID", 191, "[range: 0 ~ 255, default: 191]").getInt();
-		URANUS_SNOW_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Snow Lands Biome ID", 192, "[range: 0 ~ 255, default: 192]").getInt();
-		OBERON_LARGE_MOUNTAIN_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Large Mountain Biome ID", 193, "[range: 0 ~ 255, default: 193]").getInt();
-		OBERON_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Valleys Biome ID", 194, "[range: 0 ~ 255, default: 194]").getInt();
-		KEPLER22B_WASTE_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Waste Lands Biome ID", 195, "[range: 0 ~ 255, default: 195]").getInt();
-		JUPITER_SANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Sands Biome ID", 196, "[range: 0 ~ 255, default: 196]").getInt();
-		KEPLER22B_CANDY_LAND_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Candy Land Biome ID", 197, "[range: 0 ~ 255, default: 197]").getInt();
-		SATURN_HYDROCARBON_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn HydroCarbon Sea Biome ID", 198, "[range: 0 ~ 255, default: 198]").getInt();
-		NEPTUNE_RADIO_ACTIVE_WATER_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Radio Active Water Sea Biome ID", 199, "[range: 0 ~ 255, default: 199]").getInt();
-		NEPTUNE_LAYERED_HILLS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Layered Hills Biome ID", 200, "[range: 0 ~ 255, default: 200]").getInt();
-		SATURN_NUCLEAR_LAND_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Nuclear Land Biome ID", 201, "[range: 0 ~ 255, default: 201]").getInt();
-		TITAN_METHANE_HILLS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
-		IO_BURNING_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
 
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
