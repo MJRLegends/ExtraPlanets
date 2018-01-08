@@ -5,7 +5,7 @@
   },
   "pattern": [
     "CCC",
-    "ORO",
+    "O O",
     "CCC"
   ],
   "type": "minecraft:crafting_shaped",
