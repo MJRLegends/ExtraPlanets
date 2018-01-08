@@ -154,18 +154,18 @@ public class ExtraPlanets_Fluids {
 	}
 
 	private static void registerFluidBlocks() throws NoSuchMethodException {
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, GLOWSTONE, ItemBlockGC.class, "glowstone");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, MAGMA, ItemBlockGC.class, "magma");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, NITROGEN, ItemBlockGC.class, "nitrogen");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, FROZEN_WATER, ItemBlockGC.class, "frozen_water");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, SALT, ItemBlockGC.class, "salt");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, CLEAN_WATER, ItemBlockGC.class, "clean_water");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, INFECTED_WATER, ItemBlockGC.class, "infected_water");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, METHANE, ItemBlockGC.class, "methane");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, LIQUID_CHOCOLATE, ItemBlockGC.class, "liquid_chocolate");
-		ExtraPlanets_Blocks.registerBlock(Constants.modID, LIQUID_CARAMEL, ItemBlockGC.class, "liquid_caramel");
+		ExtraPlanets_Blocks.registerBlock(GLOWSTONE, ItemBlockGC.class, "glowstone");
+		ExtraPlanets_Blocks.registerBlock(MAGMA, ItemBlockGC.class, "magma");
+		ExtraPlanets_Blocks.registerBlock(NITROGEN, ItemBlockGC.class, "nitrogen");
+		ExtraPlanets_Blocks.registerBlock(FROZEN_WATER, ItemBlockGC.class, "frozen_water");
+		ExtraPlanets_Blocks.registerBlock(SALT, ItemBlockGC.class, "salt");
+		ExtraPlanets_Blocks.registerBlock(RADIO_ACTIVE_WATER, ItemBlockGC.class, "radioactive_water");
+		ExtraPlanets_Blocks.registerBlock(CLEAN_WATER, ItemBlockGC.class, "clean_water");
+		ExtraPlanets_Blocks.registerBlock(INFECTED_WATER, ItemBlockGC.class, "infected_water");
+		ExtraPlanets_Blocks.registerBlock(METHANE, ItemBlockGC.class, "methane");
+		ExtraPlanets_Blocks.registerBlock(NITROGEN_ICE, ItemBlockGC.class, "nitrogen_ice");
+		ExtraPlanets_Blocks.registerBlock(LIQUID_HYDROCARBON, ItemBlockGC.class, "liquid_hydrocarbon");
+		ExtraPlanets_Blocks.registerBlock(LIQUID_CHOCOLATE, ItemBlockGC.class, "liquid_chocolate");
+		ExtraPlanets_Blocks.registerBlock(LIQUID_CARAMEL, ItemBlockGC.class, "liquid_caramel");
 	}
 }

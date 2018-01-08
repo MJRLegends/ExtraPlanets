@@ -106,11 +106,11 @@ public class ExtraPlanets_Machines {
 		if (Config.REFINERY_ULTIMATE)
 			ExtraPlanets_Blocks.registerBlock(REFINERY_ULTIMATE, "ultimate_refinery");
 		if (Config.SOLAR_PANELS)
-			ExtraPlanets_Blocks.registerBlock(Constants.modID, SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
-			ExtraPlanets_Blocks.registerBlock(Constants.modID, OXYGEN_COMPRESSOR_ADVANCED, ItemBlockAdvancedOxygenCompressor.class, OXYGEN_COMPRESSOR_ADVANCED.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(OXYGEN_COMPRESSOR_ADVANCED, ItemBlockAdvancedOxygenCompressor.class, OXYGEN_COMPRESSOR_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE)
-			ExtraPlanets_Blocks.registerBlock(Constants.modID, OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.RADIATION) {
 			if (Config.BASIC_DECRYSTALLIZER)
 				ExtraPlanets_Blocks.registerBlock(BASIC_DECRYSALLIZER, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
@@ -125,7 +125,7 @@ public class ExtraPlanets_Machines {
 			if (Config.BASIC_PURIFIER)
 				ExtraPlanets_Blocks.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_DECONTAMINATION_UNIT)
-				ExtraPlanets_Blocks.registerBlock(Constants.modID, BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
+				ExtraPlanets_Blocks.registerBlock(BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			ExtraPlanets_Blocks.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));

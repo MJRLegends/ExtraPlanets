@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -193,7 +194,7 @@ import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChes
 import com.mjr.mjrlegendslib.util.ClientUtilities;
 
 public class ClientProxy extends CommonProxy {
-
+	
 	// Event Methods
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -1559,5 +1560,27 @@ public class ClientProxy extends CommonProxy {
 		SchematicTier8.registerTextures();
 		SchematicTier9.registerTextures();
 		SchematicTier10.registerTextures();
+	}
+	
+
+	@SubscribeEvent
+	public void registerModels(ModelRegistryEvent event) {
+		// Register Variants
+		registerVariants();
+
+		// Register Custom Models
+		registerCustomModel();
+
+		// Register Fluid Variants/Renders
+		registerFluidVariants();
+
+		// Register TileEntity Special Renderers
+		renderBlocksTileEntitySpecialRenderers();
+
+		// Register Block Json Files
+		registerBlockJsons();
+
+		// Register Item Json Files
+		registerItemJsons();
 	}
 }

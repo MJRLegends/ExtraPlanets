@@ -15,7 +15,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
-import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -157,27 +156,6 @@ public class ExtraPlanets {
 		@SubscribeEvent
 		public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
 			ExtraPlanets.registerItems(event.getRegistry());
-		}
-
-		@SubscribeEvent
-		public static void registerModels(ModelRegistryEvent event) {
-			// Register Variants
-			proxy.registerVariants();
-
-			// Register Custom Models
-			proxy.registerCustomModel();
-
-			// Register Fluid Variants/Renders
-			proxy.registerFluidVariants();
-
-			// Register TileEntity Special Renderers
-			proxy.renderBlocksTileEntitySpecialRenderers();
-
-			// Register Block Json Files
-			proxy.registerBlockJsons();
-
-			// Register Item Json Files
-			proxy.registerItemJsons();
 		}
 
 		@SubscribeEvent
