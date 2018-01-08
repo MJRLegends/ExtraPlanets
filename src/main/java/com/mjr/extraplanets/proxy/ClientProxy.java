@@ -1406,7 +1406,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "glowstone", ExtraPlanets_Fluids.GLOWSTONE);
 		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "magma", ExtraPlanets_Fluids.MAGMA);
 		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "frozen_water", ExtraPlanets_Fluids.FROZEN_WATER);
-		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "salt", ExtraPlanets_Fluids.NITROGEN);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "salt", ExtraPlanets_Fluids.SALT);
 		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "radioactive_water", ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
 		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "clean_water", ExtraPlanets_Fluids.CLEAN_WATER);
 		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "infected_water", ExtraPlanets_Fluids.INFECTED_WATER);
