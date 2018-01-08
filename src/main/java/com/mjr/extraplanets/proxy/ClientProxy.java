@@ -1,10 +1,6 @@
 package com.mjr.extraplanets.proxy;
 
-import micdoodle8.mods.galacticraft.api.client.IItemMeshDefinitionCustom;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -12,10 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.model.TRSRTransformation;
-import net.minecraftforge.client.model.obj.OBJLoader;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -192,15 +185,16 @@ import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT7TreasureChes
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT8TreasureChest;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChest;
 import com.mjr.mjrlegendslib.util.ClientUtilities;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ClientProxy extends CommonProxy {
 
 	// Event Methods
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
-		MinecraftForge.EVENT_BUS.register(this);
+		RegisterUtilities.registerEventHandler(this);
 		// Register OBJ Domain
-		OBJLoader.instance.addDomain(Constants.ASSET_PREFIX);
+		ClientUtilities.registerOBJInstance(Constants.ASSET_PREFIX);
 
 		// Register Variants
 		registerVariants();
@@ -219,10 +213,10 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init(FMLInitializationEvent event) {
 		// Register Client Sky Provider Handler
-		MinecraftForge.EVENT_BUS.register(new SkyProviderHandler());
+		RegisterUtilities.registerEventHandler(new SkyProviderHandler());
 
 		// Register Client Key Handler
-		MinecraftForge.EVENT_BUS.register(new KeyHandlerClient());
+		RegisterUtilities.registerEventHandler(new KeyHandlerClient());
 		ClientRegistry.registerKeyBinding(KeyHandlerClient.openFuelGui);
 
 		// Register TileEntity Special Renderers
@@ -239,7 +233,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Client Main Handler
-		MinecraftForge.EVENT_BUS.register(new MainHandlerClient());
+		RegisterUtilities.registerEventHandler(new MainHandlerClient());
 
 		// Register Schematics Textures (For Handing Entities versions)
 		registerSchematicsTextures();
@@ -438,43 +432,43 @@ public class ClientProxy extends CommonProxy {
 		ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t4", "inventory");
 		if (Config.MERCURY) {
 			for (int i = 0; i < 5; ++i) {
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_4_ROCKET, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_4_ROCKET, i, modelResourceLocation);
 			}
 		}
 		if (Config.JUPITER) {
 			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t5", "inventory");
 			for (int i = 0; i < 5; ++i) {
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_5_ROCKET, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_5_ROCKET, i, modelResourceLocation);
 			}
 		}
 		if (Config.SATURN) {
 			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t6", "inventory");
 			for (int i = 0; i < 5; ++i) {
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_6_ROCKET, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_6_ROCKET, i, modelResourceLocation);
 			}
 		}
 		if (Config.URANUS) {
 			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t7", "inventory");
 			for (int i = 0; i < 5; ++i) {
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_7_ROCKET, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_7_ROCKET, i, modelResourceLocation);
 			}
 		}
 		if (Config.NEPTUNE) {
 			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t8", "inventory");
 			for (int i = 0; i < 5; ++i) {
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_8_ROCKET, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_8_ROCKET, i, modelResourceLocation);
 			}
 		}
 		if (Config.PLUTO) {
 			if (Config.OLD_ROCKET_MODELS) {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t9", "inventory");
 				for (int i = 0; i < 5; ++i) {
-					ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_9_ROCKET, i, modelResourceLocation);
+					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_9_ROCKET, i, modelResourceLocation);
 				}
 			} else {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t9_new", "inventory");
 				for (int i = 0; i < 5; ++i) {
-					ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_9_ROCKET, i, modelResourceLocation);
+					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_9_ROCKET, i, modelResourceLocation);
 				}
 			}
 		}
@@ -482,37 +476,37 @@ public class ClientProxy extends CommonProxy {
 			if (Config.OLD_ROCKET_MODELS) {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t10", "inventory");
 				for (int i = 0; i < 5; ++i) {
-					ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
+					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
 				}
 			} else {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t10_new", "inventory");
 				for (int i = 0; i < 5; ++i) {
-					ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
+					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
 				}
 			}
 		}
 		if (Config.ERIS && Config.KEPLER22B) {
 			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "electric_rocket", "inventory");
 			for (int i = 0; i < 5; ++i) {
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, i, modelResourceLocation);
 			}
 		}
 		if (Config.MARS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "mars_rover" + (i > 0 ? "_" + i : ""), "inventory");
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.MARS_ROVER, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.MARS_ROVER, i, modelResourceLocation);
 			}
 		}
 		if (Config.VENUS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
 				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "venus_rover" + (i > 0 ? "_" + i : ""), "inventory");
-				ModelLoader.setCustomModelResourceLocation(ExtraPlanets_Items.VENUS_ROVER, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.VENUS_ROVER, i, modelResourceLocation);
 			}
 		}
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT) {
 			Item unit = Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT);
 			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "basic_decontamination_unit", "inventory");
-			ModelLoader.setCustomModelResourceLocation(unit, 0, modelResourceLocation);
+			ClientUtilities.registerModel(unit, 0, modelResourceLocation);
 		}
 	}
 
@@ -1435,148 +1429,19 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	private void registerFluidVariants() {
-		ModelResourceLocation nitrogenLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen", "fluid");
-		Item nitrogen = Item.getItemFromBlock(ExtraPlanets_Fluids.NITROGEN);
-		ModelBakery.registerItemVariants(nitrogen, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen"));
-		ModelLoader.setCustomMeshDefinition(nitrogen, IItemMeshDefinitionCustom.create((ItemStack stack) -> nitrogenLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.NITROGEN, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return nitrogenLocation;
-			}
-		});
-
-		ModelResourceLocation glowstoneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "glowstone", "fluid");
-		Item glowstone = Item.getItemFromBlock(ExtraPlanets_Fluids.GLOWSTONE);
-		ModelBakery.registerItemVariants(glowstone, new ResourceLocation(Constants.TEXTURE_PREFIX + "glowstone"));
-		ModelLoader.setCustomMeshDefinition(glowstone, IItemMeshDefinitionCustom.create((ItemStack stack) -> glowstoneLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.GLOWSTONE, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return glowstoneLocation;
-			}
-		});
-
-		ModelResourceLocation magmaLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "magma", "fluid");
-		Item magma = Item.getItemFromBlock(ExtraPlanets_Fluids.MAGMA);
-		ModelBakery.registerItemVariants(magma, new ResourceLocation(Constants.TEXTURE_PREFIX + "magma"));
-		ModelLoader.setCustomMeshDefinition(magma, IItemMeshDefinitionCustom.create((ItemStack stack) -> magmaLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.MAGMA, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return magmaLocation;
-			}
-		});
-
-		ModelResourceLocation frozen_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water", "fluid");
-		Item frozen_water = Item.getItemFromBlock(ExtraPlanets_Fluids.FROZEN_WATER);
-		ModelBakery.registerItemVariants(frozen_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "frozen_water"));
-		ModelLoader.setCustomMeshDefinition(frozen_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> frozen_waterLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.FROZEN_WATER, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return frozen_waterLocation;
-			}
-		});
-
-		ModelResourceLocation saltLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "salt", "fluid");
-		Item salt = Item.getItemFromBlock(ExtraPlanets_Fluids.SALT);
-		ModelBakery.registerItemVariants(salt, new ResourceLocation(Constants.TEXTURE_PREFIX + "salt"));
-		ModelLoader.setCustomMeshDefinition(salt, IItemMeshDefinitionCustom.create((ItemStack stack) -> saltLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.SALT, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return saltLocation;
-			}
-		});
-
-		ModelResourceLocation radioactive_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water", "fluid");
-		Item radioactive_water = Item.getItemFromBlock(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
-		ModelBakery.registerItemVariants(radioactive_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "radioactive_water"));
-		ModelLoader.setCustomMeshDefinition(radioactive_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> radioactive_waterLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return radioactive_waterLocation;
-			}
-		});
-
-		ModelResourceLocation clean_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "clean_water", "fluid");
-		Item clean_water = Item.getItemFromBlock(ExtraPlanets_Fluids.CLEAN_WATER);
-		ModelBakery.registerItemVariants(clean_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "clean_water"));
-		ModelLoader.setCustomMeshDefinition(clean_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> clean_waterLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.CLEAN_WATER, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return clean_waterLocation;
-			}
-		});
-
-		ModelResourceLocation infected_waterLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "infected_water", "fluid");
-		Item infected_water = Item.getItemFromBlock(ExtraPlanets_Fluids.INFECTED_WATER);
-		ModelBakery.registerItemVariants(infected_water, new ResourceLocation(Constants.TEXTURE_PREFIX + "infected_water"));
-		ModelLoader.setCustomMeshDefinition(infected_water, IItemMeshDefinitionCustom.create((ItemStack stack) -> infected_waterLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.INFECTED_WATER, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return infected_waterLocation;
-			}
-		});
-
-		ModelResourceLocation methaneLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "methane", "fluid");
-		Item methane = Item.getItemFromBlock(ExtraPlanets_Fluids.METHANE);
-		ModelBakery.registerItemVariants(methane, new ResourceLocation(Constants.TEXTURE_PREFIX + "methane"));
-		ModelLoader.setCustomMeshDefinition(methane, IItemMeshDefinitionCustom.create((ItemStack stack) -> methaneLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.METHANE, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return methaneLocation;
-			}
-		});
-
-		ModelResourceLocation nitrogen_iceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice", "fluid");
-		Item nitrogen_ice = Item.getItemFromBlock(ExtraPlanets_Fluids.NITROGEN_ICE);
-		ModelBakery.registerItemVariants(nitrogen_ice, new ResourceLocation(Constants.TEXTURE_PREFIX + "nitrogen_ice"));
-		ModelLoader.setCustomMeshDefinition(nitrogen_ice, IItemMeshDefinitionCustom.create((ItemStack stack) -> nitrogen_iceLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.NITROGEN_ICE, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return nitrogen_iceLocation;
-			}
-		});
-
-		ModelResourceLocation liquid_hydrocarbonLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon", "fluid");
-		Item liquid_hydrocarbon = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
-		ModelBakery.registerItemVariants(liquid_hydrocarbon, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon"));
-		ModelLoader.setCustomMeshDefinition(liquid_hydrocarbon, IItemMeshDefinitionCustom.create((ItemStack stack) -> liquid_hydrocarbonLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.LIQUID_HYDROCARBON, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return liquid_hydrocarbonLocation;
-			}
-		});
-
-		ModelResourceLocation liquid_chocolateLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_chocolate", "fluid");
-		Item liquid_chocolate = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_CHOCOLATE);
-		ModelBakery.registerItemVariants(liquid_chocolate, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_chocolate"));
-		ModelLoader.setCustomMeshDefinition(liquid_chocolate, IItemMeshDefinitionCustom.create((ItemStack stack) -> liquid_chocolateLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.LIQUID_CHOCOLATE, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return liquid_chocolateLocation;
-			}
-		});
-
-		ModelResourceLocation liquid_caramelLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "liquid_caramel", "fluid");
-		Item liquid_caramel = Item.getItemFromBlock(ExtraPlanets_Fluids.LIQUID_CARAMEL);
-		ModelBakery.registerItemVariants(liquid_caramel, new ResourceLocation(Constants.TEXTURE_PREFIX + "liquid_caramel"));
-		ModelLoader.setCustomMeshDefinition(liquid_caramel, IItemMeshDefinitionCustom.create((ItemStack stack) -> liquid_caramelLocation));
-		ModelLoader.setCustomStateMapper(ExtraPlanets_Fluids.LIQUID_CARAMEL, new StateMapperBase() {
-			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-				return liquid_caramelLocation;
-			}
-		});
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "nitrogen", ExtraPlanets_Fluids.NITROGEN);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "glowstone", ExtraPlanets_Fluids.GLOWSTONE);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "magma", ExtraPlanets_Fluids.MAGMA);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "frozen_water", ExtraPlanets_Fluids.FROZEN_WATER);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "salt", ExtraPlanets_Fluids.SALT);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "radioactive_water", ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "clean_water", ExtraPlanets_Fluids.CLEAN_WATER);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "infected_water", ExtraPlanets_Fluids.INFECTED_WATER);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "methane", ExtraPlanets_Fluids.METHANE);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "nitrogen_ice", ExtraPlanets_Fluids.NITROGEN_ICE);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "liquid_hydrocarbon", ExtraPlanets_Fluids.LIQUID_HYDROCARBON);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "liquid_chocolate", ExtraPlanets_Fluids.LIQUID_CHOCOLATE);
+		ClientUtilities.registerFluidVariant(Constants.TEXTURE_PREFIX + "liquid_caramel", ExtraPlanets_Fluids.LIQUID_CARAMEL);
 	}
 
 	private void registerSchematicsTextures() {

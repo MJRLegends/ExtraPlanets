@@ -9,7 +9,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -203,55 +202,55 @@ public class ExtraPlanets {
 		Config.load();
 
 		// Main Events
-		MinecraftForge.EVENT_BUS.register(new MainHandlerServer());
+		RegisterUtilities.registerEventHandler(new MainHandlerServer());
 
 		// Planets Events
 		if (Config.MERCURY)
-			MinecraftForge.EVENT_BUS.register(new MercuryEvents());
+			RegisterUtilities.registerEventHandler(new MercuryEvents());
 		if (Config.CERES)
-			MinecraftForge.EVENT_BUS.register(new CeresEvents());
+			RegisterUtilities.registerEventHandler(new CeresEvents());
 		if (Config.JUPITER)
-			MinecraftForge.EVENT_BUS.register(new JupiterEvents());
+			RegisterUtilities.registerEventHandler(new JupiterEvents());
 		if (Config.SATURN)
-			MinecraftForge.EVENT_BUS.register(new SaturnEvents());
+			RegisterUtilities.registerEventHandler(new SaturnEvents());
 		if (Config.URANUS)
-			MinecraftForge.EVENT_BUS.register(new UranusEvents());
+			RegisterUtilities.registerEventHandler(new UranusEvents());
 		if (Config.NEPTUNE)
-			MinecraftForge.EVENT_BUS.register(new NeptuneEvents());
+			RegisterUtilities.registerEventHandler(new NeptuneEvents());
 		if (Config.PLUTO)
-			MinecraftForge.EVENT_BUS.register(new PlutoEvents());
+			RegisterUtilities.registerEventHandler(new PlutoEvents());
 		if (Config.ERIS)
-			MinecraftForge.EVENT_BUS.register(new ErisEvents());
+			RegisterUtilities.registerEventHandler(new ErisEvents());
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS)
-			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
+			RegisterUtilities.registerEventHandler(new Kepler22bEvents());
 
 		// Moons Events
 		if (Config.CALLISTO)
-			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
+			RegisterUtilities.registerEventHandler(new CallistoEvents());
 		if (Config.DEIMOS)
-			MinecraftForge.EVENT_BUS.register(new DeimosEvents());
+			RegisterUtilities.registerEventHandler(new DeimosEvents());
 		if (Config.EUROPA)
-			MinecraftForge.EVENT_BUS.register(new EuropaEvents());
+			RegisterUtilities.registerEventHandler(new EuropaEvents());
 		if (Config.GANYMEDE)
-			MinecraftForge.EVENT_BUS.register(new GanymedeEvents());
+			RegisterUtilities.registerEventHandler(new GanymedeEvents());
 		if (Config.IO)
-			MinecraftForge.EVENT_BUS.register(new IoEvents());
+			RegisterUtilities.registerEventHandler(new IoEvents());
 		if (Config.PHOBOS)
-			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
+			RegisterUtilities.registerEventHandler(new PhobosEvents());
 		if (Config.TRITON)
-			MinecraftForge.EVENT_BUS.register(new TritonEvents());
+			RegisterUtilities.registerEventHandler(new TritonEvents());
 		if (Config.RHEA)
-			MinecraftForge.EVENT_BUS.register(new RheaEvents());
+			RegisterUtilities.registerEventHandler(new RheaEvents());
 		if (Config.TITAN)
-			MinecraftForge.EVENT_BUS.register(new TitanEvents());
+			RegisterUtilities.registerEventHandler(new TitanEvents());
 		if (Config.OBERON)
-			MinecraftForge.EVENT_BUS.register(new OberonEvents());
+			RegisterUtilities.registerEventHandler(new OberonEvents());
 		if (Config.IAPETUS)
-			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
+			RegisterUtilities.registerEventHandler(new IapetusEvents());
 		if (Config.TITANIA)
-			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
+			RegisterUtilities.registerEventHandler(new TitaniaEvents());
 		if (Config.KUIPER_BELT)
-			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
+			RegisterUtilities.registerEventHandler(new KuiperBeltEvents());
 
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
@@ -262,7 +261,7 @@ public class ExtraPlanets {
 		ExtraPlanets_Items.init();
 
 		// Bone Meal Handler
-		MinecraftForge.EVENT_BUS.register(new BoneMealHandler());
+		RegisterUtilities.registerEventHandler(new BoneMealHandler());
 
 		// Proxy PreInit Method
 		ExtraPlanets.proxy.preInit(event);

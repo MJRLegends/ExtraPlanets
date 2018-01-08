@@ -6,7 +6,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemReed;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
@@ -677,49 +676,49 @@ public class ExtraPlanets_Items {
 
 	public static void OreDictionaryIngotsRegister() {
 		if (Config.MERCURY) {
-			OreDictionary.registerOre("ingotMercury", new ItemStack(INGOT_MERCURY));
-			OreDictionary.registerOre("ingotCarbon", new ItemStack(TIER_4_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("ingotMercury", new ItemStack(INGOT_MERCURY));
+			RegisterUtilities.registerOre("ingotCarbon", new ItemStack(TIER_4_ITEMS, 1, 5));
 		}
 		if (Config.CERES)
-			OreDictionary.registerOre("ingotUranium", new ItemStack(INGOT_URANIUM));
+			RegisterUtilities.registerOre("ingotUranium", new ItemStack(INGOT_URANIUM));
 		if (Config.JUPITER) {
-			OreDictionary.registerOre("ingotPalladium", new ItemStack(TIER_5_ITEMS, 1, 5));
-			OreDictionary.registerOre("ingotNickel", new ItemStack(TIER_5_ITEMS, 1, 7));
-			OreDictionary.registerOre("gemRedGem", new ItemStack(TIER_5_ITEMS, 1, 8));
+			RegisterUtilities.registerOre("ingotPalladium", new ItemStack(TIER_5_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("ingotNickel", new ItemStack(TIER_5_ITEMS, 1, 7));
+			RegisterUtilities.registerOre("gemRedGem", new ItemStack(TIER_5_ITEMS, 1, 8));
 		}
 		if (Config.SATURN)
-			OreDictionary.registerOre("ingotMagnesium", new ItemStack(TIER_6_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("ingotMagnesium", new ItemStack(TIER_6_ITEMS, 1, 5));
 		if (Config.URANUS) {
-			OreDictionary.registerOre("ingotCrystal", new ItemStack(TIER_7_ITEMS, 1, 5));
-			OreDictionary.registerOre("gemWhiteGem", new ItemStack(TIER_7_ITEMS, 1, 7));
+			RegisterUtilities.registerOre("ingotCrystal", new ItemStack(TIER_7_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("gemWhiteGem", new ItemStack(TIER_7_ITEMS, 1, 7));
 		}
 		if (Config.NEPTUNE) {
-			OreDictionary.registerOre("ingotZinc", new ItemStack(TIER_8_ITEMS, 1, 5));
-			OreDictionary.registerOre("gemBlueGem", new ItemStack(TIER_8_ITEMS, 1, 6));
+			RegisterUtilities.registerOre("ingotZinc", new ItemStack(TIER_8_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("gemBlueGem", new ItemStack(TIER_8_ITEMS, 1, 6));
 		}
 		if (Config.PLUTO)
-			OreDictionary.registerOre("ingotTungsten", new ItemStack(TIER_9_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("ingotTungsten", new ItemStack(TIER_9_ITEMS, 1, 5));
 		if (Config.ERIS)
-			OreDictionary.registerOre("ingotDarkIron", new ItemStack(TIER_10_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("ingotDarkIron", new ItemStack(TIER_10_ITEMS, 1, 5));
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			OreDictionary.registerOre("gemBlueDiamond", new ItemStack(TIER_11_ITEMS, 1, 0));
-			OreDictionary.registerOre("gemRedDiamond", new ItemStack(TIER_11_ITEMS, 1, 1));
-			OreDictionary.registerOre("gemPurpleDiamond", new ItemStack(TIER_11_ITEMS, 1, 2));
-			OreDictionary.registerOre("gemYellowDiamond", new ItemStack(TIER_11_ITEMS, 1, 3));
-			OreDictionary.registerOre("gemGreenDiamond", new ItemStack(TIER_11_ITEMS, 1, 4));
-			OreDictionary.registerOre("ingotPlatinum", new ItemStack(TIER_11_ITEMS, 1, 5));
+			RegisterUtilities.registerOre("gemBlueDiamond", new ItemStack(TIER_11_ITEMS, 1, 0));
+			RegisterUtilities.registerOre("gemRedDiamond", new ItemStack(TIER_11_ITEMS, 1, 1));
+			RegisterUtilities.registerOre("gemPurpleDiamond", new ItemStack(TIER_11_ITEMS, 1, 2));
+			RegisterUtilities.registerOre("gemYellowDiamond", new ItemStack(TIER_11_ITEMS, 1, 3));
+			RegisterUtilities.registerOre("gemGreenDiamond", new ItemStack(TIER_11_ITEMS, 1, 4));
+			RegisterUtilities.registerOre("ingotPlatinum", new ItemStack(TIER_11_ITEMS, 1, 5));
 		}
-		OreDictionary.registerOre("ingotLead", new ItemStack(INGOT_LEAD));
+		RegisterUtilities.registerOre("ingotLead", new ItemStack(INGOT_LEAD));
 	}
 
 	public static void OreDictionaryItemsRegister() {
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 7));
-			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 8));
-			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 9));
-			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 10));
-			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 11));
-			OreDictionary.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 12));
+			RegisterUtilities.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 7));
+			RegisterUtilities.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 8));
+			RegisterUtilities.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 9));
+			RegisterUtilities.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 10));
+			RegisterUtilities.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 11));
+			RegisterUtilities.registerOre("stickWood", new ItemStack(TIER_11_ITEMS, 1, 12));
 		}
 	}
 
