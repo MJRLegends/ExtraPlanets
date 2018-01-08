@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.render.entities.vehicles;
 
-import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -24,6 +23,7 @@ import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderVenusRover extends Render<EntityVenusRover> {
@@ -112,9 +112,9 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GlStateManager.translate(4.1F, 0.0F, 0.0F);
 		GL11.glScalef(1.5F, 1.9F, 1.9F);
-		ClientUtil.drawBakedModel(modelRoverWheelRight);
+		ModelUtilities.drawBakedModel(modelRoverWheelRight);
 		GlStateManager.translate(-5.3F, 0.0F, 0.0F);
-		ClientUtil.drawBakedModel(modelRoverWheelLeft);
+		ModelUtilities.drawBakedModel(modelRoverWheelLeft);
 		GL11.glPopMatrix();
 
 		// Back wheels
@@ -124,28 +124,28 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 		GL11.glRotatef(rotation, 1, 0, 0);
 		GlStateManager.translate(4.1F, 0.0F, 0.0F);
 		GL11.glScalef(1.5F, 1.9F, 1.9F);
-		ClientUtil.drawBakedModel(modelRoverWheelRight);
+		ModelUtilities.drawBakedModel(modelRoverWheelRight);
 		GlStateManager.translate(-5.3F, 0.0F, 0.0F);
-		ClientUtil.drawBakedModel(modelRoverWheelLeft);
+		ModelUtilities.drawBakedModel(modelRoverWheelLeft);
 		GL11.glPopMatrix();
 
 		GlStateManager.translate(0.0F, 0.7F, 0.0F);
-		ClientUtil.drawBakedModel(modelRover);
+		ModelUtilities.drawBakedModel(modelRover);
 
 		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
-		ClientUtil.drawBakedModel(modelRoverWindows);
+		ModelUtilities.drawBakedModel(modelRoverWindows);
 		GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ZERO);
 		GL11.glDisable(GL11.GL_BLEND);
 
 		if (entity.roverType > 0) {
-			ClientUtil.drawBakedModel(modelRoverCase1);
+			ModelUtilities.drawBakedModel(modelRoverCase1);
 
 			if (entity.roverType > 1) {
-				ClientUtil.drawBakedModel(modelRoverCase2);
+				ModelUtilities.drawBakedModel(modelRoverCase2);
 
 				if (entity.roverType > 2) {
-					ClientUtil.drawBakedModel(modelRoverCase3);
+					ModelUtilities.drawBakedModel(modelRoverCase3);
 				}
 			}
 		}

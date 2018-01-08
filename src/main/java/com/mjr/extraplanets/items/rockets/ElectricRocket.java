@@ -8,7 +8,6 @@ import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -32,6 +31,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ElectricRocket extends Item implements IHoldableItem {
 	public ElectricRocket(String assetName) {
@@ -131,15 +131,15 @@ public class ElectricRocket extends Item implements IHoldableItem {
 		}
 
 		if (type.getPreFueled()) {
-			par2List.add(EnumColor.RED + "\u00a7o" + GCCoreUtil.translate("gui.creative_only.desc"));
+			par2List.add(EnumColor.RED + "\u00a7o" + TranslateUtilities.translate("gui.creative_only.desc"));
 		}
 
 		if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("RocketFuel")) {
 			EntityElectricRocket rocket = new EntityElectricRocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
-			par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.getCurrentPowerCapacity());
+			par2List.add(TranslateUtilities.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.getCurrentPowerCapacity());
 		}
 
-		par2List.add(EnumColor.DARK_AQUA + GCCoreUtil.translate("rocket_pad.electric.desc"));
+		par2List.add(EnumColor.DARK_AQUA + TranslateUtilities.translate("rocket_pad.electric.desc"));
 	}
 
 	@Override

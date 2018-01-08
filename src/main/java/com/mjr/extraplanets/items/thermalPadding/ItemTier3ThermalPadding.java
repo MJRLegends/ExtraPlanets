@@ -9,7 +9,6 @@ import micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,6 +25,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier3ThermalPadding extends Item implements IItemThermal {
 	public static String[] names = { "tier3_thermal_helm", "tier3_thermal_chestplate", "tier3_thermal_leggings", "tier3_thermal_boots", "tier3_thermal_helm0", "tier3_thermal_chestplate0", "tier3_thermal_leggings0", "tier3_thermal_boots0" };
@@ -124,6 +124,6 @@ public class ItemTier3ThermalPadding extends Item implements IItemThermal {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add(EnumColor.AQUA + GCCoreUtil.translate("tier3.thermal.padding.information"));
+		list.add(EnumColor.AQUA + TranslateUtilities.translate("tier3.thermal.padding.information"));
 	}
 }

@@ -18,6 +18,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenDecompressor;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 	private static final ResourceLocation compressorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/decompressor.png");
@@ -37,16 +38,16 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 	public void initGui() {
 		super.initGui();
 		List<String> batterySlotDesc = new ArrayList<String>();
-		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
-		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.1"));
+		batterySlotDesc.add(TranslateUtilities.translate("gui.battery_slot.desc.0"));
+		batterySlotDesc.add(TranslateUtilities.translate("gui.battery_slot.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 31, (this.height - this.ySize) / 2 + 26, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> compressorSlotDesc = new ArrayList<String>();
-		compressorSlotDesc.add(GCCoreUtil.translate("gui.oxygen_decompressor.slot.desc.0"));
-		compressorSlotDesc.add(GCCoreUtil.translate("gui.oxygen_decompressor.slot.desc.1"));
+		compressorSlotDesc.add(TranslateUtilities.translate("gui.oxygen_decompressor.slot.desc.0"));
+		compressorSlotDesc.add(TranslateUtilities.translate("gui.oxygen_decompressor.slot.desc.1"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 132, (this.height - this.ySize) / 2 + 70, 18, 18, compressorSlotDesc, this.width, this.height, this));
 		List<String> oxygenDesc = new ArrayList<String>();
-		oxygenDesc.add(GCCoreUtil.translate("gui.oxygen_storage.desc.0"));
-		oxygenDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.oxygen_storage.desc.1") + ": " + ((int) Math.floor(this.decompressor.getOxygenStored()) + " / " + (int) Math.floor(this.decompressor.getMaxOxygenStored())));
+		oxygenDesc.add(TranslateUtilities.translate("gui.oxygen_storage.desc.0"));
+		oxygenDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.oxygen_storage.desc.1") + ": " + ((int) Math.floor(this.decompressor.getOxygenStored()) + " / " + (int) Math.floor(this.decompressor.getMaxOxygenStored())));
 		this.oxygenInfoRegion.tooltipStrings = oxygenDesc;
 		this.oxygenInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
 		this.oxygenInfoRegion.yPosition = (this.height - this.ySize) / 2 + 24;
@@ -54,8 +55,8 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 		this.oxygenInfoRegion.parentHeight = this.height;
 		this.infoRegions.add(this.oxygenInfoRegion);
 		List<String> electricityDesc = new ArrayList<String>();
-		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
-		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.decompressor.getEnergyStoredGC()) + " / " + (int) Math.floor(this.decompressor.getMaxEnergyStoredGC())));
+		electricityDesc.add(TranslateUtilities.translate("gui.energy_storage.desc.0"));
+		electricityDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.decompressor.getEnergyStoredGC()) + " / " + (int) Math.floor(this.decompressor.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
 		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
 		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 37;
@@ -67,26 +68,26 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 		this.fontRenderer.drawString(this.decompressor.getName(), 8, 10, 4210752);
-		GCCoreUtil.drawStringRightAligned(GCCoreUtil.translate("gui.message.in.name") + ":", 99, 26, 4210752, this.fontRenderer);
-		GCCoreUtil.drawStringRightAligned(GCCoreUtil.translate("gui.message.in.name") + ":", 99, 38, 4210752, this.fontRenderer);
-		String status = GCCoreUtil.translate("gui.message.status.name") + ": " + this.getStatus();
+		GCCoreUtil.drawStringRightAligned(TranslateUtilities.translate("gui.message.in.name") + ":", 99, 26, 4210752, this.fontRenderer);
+		GCCoreUtil.drawStringRightAligned(TranslateUtilities.translate("gui.message.in.name") + ":", 99, 38, 4210752, this.fontRenderer);
+		String status = TranslateUtilities.translate("gui.message.status.name") + ": " + this.getStatus();
 		this.fontRenderer.drawString(status, this.xSize / 2 - this.fontRenderer.getStringWidth(status) / 2, 50, 4210752);
-		status = GCCoreUtil.translate("gui.max_output.desc") + ": " + TileEntityAdvancedOxygenDecompressor.OUTPUT_PER_TICK * 20 + GCCoreUtil.translate("gui.per_second");
+		status = TranslateUtilities.translate("gui.max_output.desc") + ": " + TileEntityAdvancedOxygenDecompressor.OUTPUT_PER_TICK * 20 + TranslateUtilities.translate("gui.per_second");
 		this.fontRenderer.drawString(status, this.xSize / 2 - this.fontRenderer.getStringWidth(status) / 2, 60, 4210752);
 		// status = ElectricityDisplay.getDisplay(this.decompressor.ueWattsPerTick * 20, ElectricUnit.WATT);
 		// this.fontRenderer.drawString(status, this.xSize / 2 - this.fontRenderer.getStringWidth(status) / 2, 70, 4210752);
 		// status = ElectricityDisplay.getDisplay(this.decompressor.getVoltage(), ElectricUnit.VOLTAGE);
 		// this.fontRenderer.drawString(status, this.xSize / 2 - this.fontRenderer.getStringWidth(status) / 2, 80, 4210752);
-		this.fontRenderer.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 104 + 17, 4210752);
+		this.fontRenderer.drawString(TranslateUtilities.translate("container.inventory"), 8, this.ySize - 104 + 17, 4210752);
 	}
 
 	private String getStatus() {
 		if (this.decompressor.getStackInSlot(0) == null || !(this.decompressor.getStackInSlot(0).getItem() instanceof ItemOxygenTank)) {
-			return EnumColor.DARK_RED + GCCoreUtil.translate("gui.status.missingtank.name");
+			return EnumColor.DARK_RED + TranslateUtilities.translate("gui.status.missingtank.name");
 		}
 
 		if (this.decompressor.getStackInSlot(0) != null && this.decompressor.getStackInSlot(0).getItemDamage() == this.decompressor.getStackInSlot(0).getMaxDamage()) {
-			return EnumColor.DARK_RED + GCCoreUtil.translate("gui.status.tank_empty.name");
+			return EnumColor.DARK_RED + TranslateUtilities.translate("gui.status.tank_empty.name");
 		}
 
 		return this.decompressor.getGUIstatus();
@@ -115,14 +116,14 @@ public class GuiAdvancedOxygenDecompressor extends GuiContainerGC {
 			}
 
 			List<String> oxygenDesc = new ArrayList<String>();
-			oxygenDesc.add(GCCoreUtil.translate("gui.oxygen_storage.desc.0"));
-			oxygenDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.oxygen_storage.desc.1") + ": " + ((int) Math.floor(this.decompressor.getOxygenStored()) + " / " + (int) Math.floor(this.decompressor.getMaxOxygenStored())));
+			oxygenDesc.add(TranslateUtilities.translate("gui.oxygen_storage.desc.0"));
+			oxygenDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.oxygen_storage.desc.1") + ": " + ((int) Math.floor(this.decompressor.getOxygenStored()) + " / " + (int) Math.floor(this.decompressor.getMaxOxygenStored())));
 			this.oxygenInfoRegion.tooltipStrings = oxygenDesc;
 
 			List<String> electricityDesc = new ArrayList<String>();
-			electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
+			electricityDesc.add(TranslateUtilities.translate("gui.energy_storage.desc.0"));
 			EnergyDisplayHelper.getEnergyDisplayTooltip(this.decompressor.getEnergyStoredGC(), this.decompressor.getMaxEnergyStoredGC(), electricityDesc);
-			// electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.decompressor.getEnergyStoredGC()) + " / " + (int) Math.floor(this.decompressor.getMaxEnergyStoredGC())));
+			// electricityDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.decompressor.getEnergyStoredGC()) + " / " + (int) Math.floor(this.decompressor.getMaxEnergyStoredGC())));
 			this.electricInfoRegion.tooltipStrings = electricityDesc;
 		}
 	}

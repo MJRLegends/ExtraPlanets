@@ -44,6 +44,7 @@ import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
 	private List<String> galaxies = new ArrayList<String>();
@@ -540,7 +541,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						else
 							temp = WorldUtil.getProviderForDimensionServer(this.selectedBody.getDimensionID());
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.general_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.general_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					String type;
 					if (GalaxyRegistry.getRegisteredPlanets().containsValue(this.selectedBody))
@@ -552,14 +553,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					else
 						type = "Unknown";
 
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_type.name") + ": " + type, xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_type.name") + ": " + type, xOffset + 10, yOffset + 23, 14737632);
 					if ((this.selectedBody instanceof Planet))
-						this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_amount_of_moons.name") + ": " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
+						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_amount_of_moons.name") + ": " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
 					yOffset = yOffset + 45;
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_orbit_time.name") + ": " + this.selectedBody.getRelativeOrbitTime() * 24 + " days", xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_orbit_time.name") + ": " + this.selectedBody.getRelativeOrbitTime() * 24 + " days", xOffset + 10, yOffset + 23, 14737632);
 					float gravity = 0;
 					long dayLength = 0;
 					if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
@@ -569,11 +570,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						gravity = 1;
 						dayLength = 24;
 					}
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_gravity.name") + ": " + (this.selectedBody.getReachable() ? gravity : "Unknown"), xOffset + 10, yOffset + 33, 14737632);
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_day_lengh.name") + ": " + (this.selectedBody.getReachable() ? dayLength + " hours" : "Unknown"), xOffset + 10, yOffset + 43, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_gravity.name") + ": " + (this.selectedBody.getReachable() ? gravity : "Unknown"), xOffset + 10, yOffset + 33, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_day_lengh.name") + ": " + (this.selectedBody.getReachable() ? dayLength + " hours" : "Unknown"), xOffset + 10, yOffset + 43, 14737632);
 					yOffset = yOffset + 55;
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.general_features_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.general_features_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 					double meteorFrequency = 0;
 					if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
@@ -583,7 +584,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					} else {
 						meteorFrequency = 0;
 					}
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_meteor_frequency.name") + ": " + (this.selectedBody.getReachable() ? meteorFrequency : "Unknown"), xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_meteor_frequency.name") + ": " + (this.selectedBody.getReachable() ? meteorFrequency : "Unknown"), xOffset + 10, yOffset + 23, 14737632);
 
 					String name = this.selectedBody.getUnlocalizedName().toLowerCase();
 					String hasDungeon = "Unknown";
@@ -596,9 +597,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawString(this.fontRenderer, "Has Dungeon: " + hasDungeon, xOffset + 10, yOffset + 32, 14737632);
 					yOffset = yOffset + 5;
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 39, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 51, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : "Unknown"), xOffset + 10,
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_wind_level.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : "Unknown"), xOffset + 10,
 							yOffset + 60, 14737632);
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
@@ -606,14 +607,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
 						} catch (Exception e) {
 						}
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : "Unknown"), xOffset + 10, yOffset + 70, 14737632);
 					boolean breathable = false;
 					if (temp != null && !(this.selectedBody instanceof Satellite))
 						breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
 					if (this.selectedBody.getUnlocalizedName().contains("overworld"))
 						breathable = true;
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_corrosive_atmosphere.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10,
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : "Unknown"), xOffset + 10, yOffset + 80, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_corrosive_atmosphere.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : "Unknown"), xOffset + 10,
 							yOffset + 90, 14737632);
 					int radiationLevel = 0;
 					int pressureLevel = 0;
@@ -623,28 +624,28 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					} catch (Exception ex) {
 					}
 
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_radiation_level.name") + ": " + (this.selectedBody.getReachable() ? radiationLevel + "%" : "Unknown"), xOffset + 10, yOffset + 100, 14737632);
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_pressure_level.name") + ": " + (this.selectedBody.getReachable() ? pressureLevel + "%" : "Unknown"), xOffset + 10, yOffset + 110, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_radiation_level.name") + ": " + (this.selectedBody.getReachable() ? radiationLevel + "%" : "Unknown"), xOffset + 10, yOffset + 100, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_pressure_level.name") + ": " + (this.selectedBody.getReachable() ? pressureLevel + "%" : "Unknown"), xOffset + 10, yOffset + 110, 14737632);
 				} else if (this.selectedBody instanceof Star) {
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.general_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.general_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_type.name") + ": " + "Star", xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_type.name") + ": " + "Star", xOffset + 10, yOffset + 23, 14737632);
 					List<CelestialBody> planets = this.getChildren(((Star) this.selectedBody).getParentSolarSystem());
 					int amountofPlanets = planets.size();
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_amount_of_planets.name") + ": " + amountofPlanets, xOffset + 10, yOffset + 33, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_amount_of_planets.name") + ": " + amountofPlanets, xOffset + 10, yOffset + 33, 14737632);
 
 					yOffset = yOffset + 50;
 
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.parent_solar_system_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.parent_solar_system_details.name") + ": ", xOffset + 10, yOffset + 8, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, ColorUtil.to32BitColor(255, 0, 150, 255));
 
 					int amountofMoons = 0;
 					for (int i = 0; i < amountofPlanets; i++) {
 						amountofMoons += this.getChildren(planets.get(i)).size();
 					}
-					this.drawString(this.fontRenderer, GCCoreUtil.translate("gui.celestial_body_amount_of_moons.name") + ": " + amountofMoons, xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_amount_of_moons.name") + ": " + amountofMoons, xOffset + 10, yOffset + 23, 14737632);
 				}
 			}
 
@@ -654,7 +655,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (this.showGalaxies) {
 				this.drawString(this.fontRenderer, "-", GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 80, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 16, 8087790);
 				for (int i = 0; i < this.galaxies.size(); i++) {
-					String child = GCCoreUtil.translate(this.galaxies.get(i));
+					String child = TranslateUtilities.translate(this.galaxies.get(i));
 					int xOffset = 0;
 					int yOffset = 45;
 
@@ -694,7 +695,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 			GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 			this.drawTexturedModalRect(width / 2 - 43, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 86, 15, 266, 0, 172, 29, false, false);
-			String str = GCCoreUtil.translate("gui.message.catalog.name").toUpperCase();
+			String str = TranslateUtilities.translate("gui.message.catalog.name").toUpperCase();
 			this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + this.fontRenderer.FONT_HEIGHT / 2,
 					ColorUtil.to32BitColor(255, 255, 255, 255));
 
@@ -708,7 +709,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				}
 
 				this.drawTexturedModalRect(BORDER_SIZE + BORDER_EDGE_SIZE, BORDER_SIZE + BORDER_EDGE_SIZE, 88, 13, 0, 392, 148, 22, false, false);
-				str = GCCoreUtil.translate("gui.message.back.name").toUpperCase();
+				str = TranslateUtilities.translate("gui.message.back.name").toUpperCase();
 				this.fontRenderer.drawString(str, BORDER_SIZE + BORDER_EDGE_SIZE + 45 - this.fontRenderer.getStringWidth(str) / 2, BORDER_SIZE + BORDER_EDGE_SIZE + this.fontRenderer.FONT_HEIGHT / 2 - 2, ColorUtil.to32BitColor(255, 255, 255, 255));
 
 				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
@@ -732,47 +733,47 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				// str = this.selectedBody.getLocalizedName();
 				// this.fontRendererObj.drawString(str, posX + 20, fontPosY, GCCoreUtil.to32BitColor(255, 255, 255, 255));
 
-				str = GCCoreUtil.translate("gui.message.daynightcycle.name") + ":";
+				str = TranslateUtilities.translate("gui.message.daynightcycle.name") + ":";
 				this.fontRenderer.drawString(str, posX + 5, fontPosY + 14, ColorUtil.to32BitColor(255, 150, 200, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".daynightcycle.0.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".daynightcycle.0.name");
 				this.fontRenderer.drawString(str, posX + 10, fontPosY + 25, ColorUtil.to32BitColor(255, 255, 255, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".daynightcycle.1.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".daynightcycle.1.name");
 				if (!str.isEmpty()) {
 					this.fontRenderer.drawString(str, posX + 10, fontPosY + 36, ColorUtil.to32BitColor(255, 255, 255, 255));
 				}
 
-				str = GCCoreUtil.translate("gui.message.surfacegravity.name") + ":";
+				str = TranslateUtilities.translate("gui.message.surfacegravity.name") + ":";
 				this.fontRenderer.drawString(str, posX + 5, fontPosY + 50, ColorUtil.to32BitColor(255, 150, 200, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacegravity.0.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".surfacegravity.0.name");
 				this.fontRenderer.drawString(str, posX + 10, fontPosY + 61, ColorUtil.to32BitColor(255, 255, 255, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacegravity.1.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".surfacegravity.1.name");
 				if (!str.isEmpty()) {
 					this.fontRenderer.drawString(str, posX + 10, fontPosY + 72, ColorUtil.to32BitColor(255, 255, 255, 255));
 				}
 
-				str = GCCoreUtil.translate("gui.message.surfacecomposition.name") + ":";
+				str = TranslateUtilities.translate("gui.message.surfacecomposition.name") + ":";
 				this.fontRenderer.drawString(str, posX + 5, fontPosY + 88, ColorUtil.to32BitColor(255, 150, 200, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacecomposition.0.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".surfacecomposition.0.name");
 				this.fontRenderer.drawString(str, posX + 10, fontPosY + 99, ColorUtil.to32BitColor(255, 255, 255, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".surfacecomposition.1.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".surfacecomposition.1.name");
 				if (!str.isEmpty()) {
 					this.fontRenderer.drawString(str, posX + 10, fontPosY + 110, ColorUtil.to32BitColor(255, 255, 255, 255));
 				}
 
-				str = GCCoreUtil.translate("gui.message.atmosphere.name") + ":";
+				str = TranslateUtilities.translate("gui.message.atmosphere.name") + ":";
 				this.fontRenderer.drawString(str, posX + 5, fontPosY + 126, ColorUtil.to32BitColor(255, 150, 200, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".atmosphere.0.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".atmosphere.0.name");
 				this.fontRenderer.drawString(str, posX + 10, fontPosY + 137, ColorUtil.to32BitColor(255, 255, 255, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".atmosphere.1.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".atmosphere.1.name");
 				if (!str.isEmpty()) {
 					this.fontRenderer.drawString(str, posX + 10, fontPosY + 148, ColorUtil.to32BitColor(255, 255, 255, 255));
 				}
 
-				str = GCCoreUtil.translate("gui.message.meansurfacetemp.name") + ":";
+				str = TranslateUtilities.translate("gui.message.meansurfacetemp.name") + ":";
 				this.fontRenderer.drawString(str, posX + 5, fontPosY + 165, ColorUtil.to32BitColor(255, 150, 200, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".meansurfacetemp.0.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".meansurfacetemp.0.name");
 				this.fontRenderer.drawString(str, posX + 10, fontPosY + 176, ColorUtil.to32BitColor(255, 255, 255, 255));
-				str = GCCoreUtil.translate("gui.message." + this.selectedBody.getName() + ".meansurfacetemp.1.name");
+				str = TranslateUtilities.translate("gui.message." + this.selectedBody.getName() + ".meansurfacetemp.1.name");
 				if (!str.isEmpty()) {
 					this.fontRenderer.drawString(str, posX + 10, fontPosY + 187, ColorUtil.to32BitColor(255, 255, 255, 255));
 				}
@@ -788,7 +789,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 			GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 			this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, false, false);
-			str = GCCoreUtil.translate("gui.message.catalog.name").toUpperCase();
+			str = TranslateUtilities.translate("gui.message.catalog.name").toUpperCase();
 			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 			this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 1,
 					ColorUtil.to32BitColor(255, 255, 255, 255));
@@ -854,7 +855,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				GL11.glColor4f(1.0F, 0.0F, 0.0F, 1);
 				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 				this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 74, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, true, false);
-				str = GCCoreUtil.translate("gui.message.exit.name").toUpperCase();
+				str = TranslateUtilities.translate("gui.message.exit.name").toUpperCase();
 				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 				this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE
 						+ GuiCelestialSelection.BORDER_EDGE_SIZE + 1, ColorUtil.to32BitColor(255, 255, 255, 255));
@@ -890,11 +891,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 
 					if (this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(this.selectedStationOwner) == null) {
-						str = GCCoreUtil.translate("gui.message.select_ss.name");
+						str = TranslateUtilities.translate("gui.message.select_ss.name");
 						this.drawSplitString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 47, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 20, 91,
 								ColorUtil.to32BitColor(255, 255, 255, 255), false, false);
 					} else {
-						str = GCCoreUtil.translate("gui.message.ss_owner.name");
+						str = TranslateUtilities.translate("gui.message.ss_owner.name");
 						this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 85, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 18,
 								ColorUtil.to32BitColor(255, 255, 255, 255));
 						str = this.selectedStationOwner;
@@ -943,7 +944,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				if (this.canCreateSpaceStation(this.selectedBody) && (!(this.selectedBody instanceof Satellite))) {
 					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
-					int canCreateLength = Math.max(0, this.drawSplitString(GCCoreUtil.translate("gui.message.can_create_space_station.name"), 0, 0, 91, 0, true, true) - 2);
+					int canCreateLength = Math.max(0, this.drawSplitString(TranslateUtilities.translate("gui.message.can_create_space_station.name"), 0, 0, 91, 0, true, true) - 2);
 					canCreateOffset = canCreateLength * this.fontRenderer.FONT_HEIGHT;
 
 					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 95, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 134, 93, 4, 159, 102, 93, 4, false,
@@ -1122,15 +1123,15 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								0, 174, 93, 12, false, false);
 
 						int color = (int) ((Math.sin(this.ticksSinceMenuOpen / 5.0) * 0.5 + 0.5) * 255);
-						this.drawSplitString(GCCoreUtil.translate("gui.message.can_create_space_station.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
+						this.drawSplitString(TranslateUtilities.translate("gui.message.can_create_space_station.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
 								+ GuiCelestialSelection.BORDER_EDGE_SIZE + 137, 91, ColorUtil.to32BitColor(255, color, 255, color), true, false);
 
 						if (!mapMode) {
-							this.drawSplitString(GCCoreUtil.translate("gui.message.create_ss.name").toUpperCase(), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
+							this.drawSplitString(TranslateUtilities.translate("gui.message.create_ss.name").toUpperCase(), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
 									+ GuiCelestialSelection.BORDER_EDGE_SIZE + 185 + canCreateOffset, 91, ColorUtil.to32BitColor(255, 255, 255, 255), false, false);
 						}
 					} else {
-						this.drawSplitString(GCCoreUtil.translate("gui.message.cannot_create_space_station.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
+						this.drawSplitString(TranslateUtilities.translate("gui.message.cannot_create_space_station.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 48, GuiCelestialSelection.BORDER_SIZE
 								+ GuiCelestialSelection.BORDER_EDGE_SIZE + 138, 91, ColorUtil.to32BitColor(255, 255, 255, 255), true, false);
 					}
 				}
@@ -1139,7 +1140,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 				GL11.glColor4f(1.0F, 1.0F, 1.0F, 0.3F - Math.min(0.3F, this.ticksSinceSelection / 50.0F));
 				this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, false, false);
-				str = GCCoreUtil.translate("gui.message.catalog.name").toUpperCase();
+				str = TranslateUtilities.translate("gui.message.catalog.name").toUpperCase();
 				this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 1,
 						ColorUtil.to32BitColor(255, 255, 255, 255));
 
@@ -1175,7 +1176,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				str = this.selectedBody.getLocalizedName();
 
 				if (this.selectedBody instanceof Satellite) {
-					str = GCCoreUtil.translate("gui.message.rename.name").toUpperCase();
+					str = TranslateUtilities.translate("gui.message.rename.name").toUpperCase();
 				}
 
 				this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2, ColorUtil.to32BitColor(255, 255, 255, 255));
@@ -1194,7 +1195,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 					this.drawTexturedModalRect(width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 74, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE, 74, 11, 0, 392, 148, 22, true, false);
-					str = GCCoreUtil.translate("gui.message.launch.name").toUpperCase();
+					str = TranslateUtilities.translate("gui.message.launch.name").toUpperCase();
 					GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 					this.fontRenderer.drawString(str, width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 40 - fontRenderer.getStringWidth(str) / 2, GuiCelestialSelection.BORDER_SIZE
 							+ GuiCelestialSelection.BORDER_EDGE_SIZE + 2, ColorUtil.to32BitColor(255, 255, 255, 255));
@@ -1217,16 +1218,16 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					boolean flag0 = GalaxyRegistry.getSatellitesForCelestialBody(this.selectedBody).size() > 0;
 					boolean flag1 = this.selectedBody instanceof Planet && GalaxyRegistry.getMoonsForPlanet((Planet) this.selectedBody).size() > 0;
 					if (flag0 && flag1) {
-						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.0.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.0.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
 								- GuiCelestialSelection.BORDER_EDGE_SIZE + 2 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
 					} else if (!flag0 && flag1) {
-						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.1.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.1.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
 								- GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
 					} else if (flag0) {
-						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.2.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.2.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
 								- GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
 					} else {
-						this.drawSplitString(GCCoreUtil.translate("gui.message.click_again.3.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
+						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.3.name"), width - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE
 								- GuiCelestialSelection.BORDER_EDGE_SIZE + 11 - sliderPos, 79, ColorUtil.to32BitColor(255, 150, 150, 150), false, false);
 					}
 
@@ -1241,11 +1242,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawTexturedModalRect(width / 2 - 90 + 8, this.height / 2 - 38 + 18, 161, 13, 159, 67, 161, 13, false, false);
 					this.drawTexturedModalRect(width / 2 - 90 + 17, this.height / 2 - 38 + 59, 72, 12, 159, 80, 72, 12, true, false);
 					this.drawTexturedModalRect(width / 2, this.height / 2 - 38 + 59, 72, 12, 159, 80, 72, 12, false, false);
-					str = GCCoreUtil.translate("gui.message.assign_name.name");
+					str = TranslateUtilities.translate("gui.message.assign_name.name");
 					this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2, this.height / 2 - 35, ColorUtil.to32BitColor(255, 255, 255, 255));
-					str = GCCoreUtil.translate("gui.message.apply.name");
+					str = TranslateUtilities.translate("gui.message.apply.name");
 					this.fontRenderer.drawString(str, width / 2 - this.fontRenderer.getStringWidth(str) / 2 - 36, this.height / 2 + 23, ColorUtil.to32BitColor(255, 255, 255, 255));
-					str = GCCoreUtil.translate("gui.message.cancel.name");
+					str = TranslateUtilities.translate("gui.message.cancel.name");
 					this.fontRenderer.drawString(str, width / 2 + 36 - this.fontRenderer.getStringWidth(str) / 2, this.height / 2 + 23, ColorUtil.to32BitColor(255, 255, 255, 255));
 
 					if (this.renamingString == null) {

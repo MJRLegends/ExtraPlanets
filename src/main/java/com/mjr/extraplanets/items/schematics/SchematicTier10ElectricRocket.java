@@ -9,7 +9,6 @@ import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -19,6 +18,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class SchematicTier10ElectricRocket extends Item implements ISchematicItem, ISortableItem {
 	public SchematicTier10ElectricRocket(String assetName) {
@@ -44,7 +44,7 @@ public class SchematicTier10ElectricRocket extends Item implements ISchematicIte
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add(EnumColor.GREY + GCCoreUtil.translate("schematic.tier10.electric.rocket.name"));
+		list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier10.electric.rocket.name"));
 	}
 
 	@Override

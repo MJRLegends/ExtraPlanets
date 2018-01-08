@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.render.tile;
 
-import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -20,6 +19,7 @@ import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecialRenderer<TileEntityBasicDecontaminationUnit> {
 	private static OBJModel.OBJBakedModel mainModel;
@@ -56,7 +56,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 
 		GL11.glScalef(0.21F, 0.15F, 0.15F);
 
-		ClientUtil.drawBakedModel(mainModel);
+		ModelUtilities.drawBakedModel(mainModel);
 
 		GL11.glPopMatrix();
 		RenderHelper.enableStandardItemLighting();

@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -31,6 +30,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemVenusRover extends Item implements IHoldableItem {
 	public ItemVenusRover(String assetName) {
@@ -137,7 +137,7 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> par2List, ITooltipFlag flagIn) {
 		if (par1ItemStack.getItemDamage() != 0) {
-			par2List.add(GCCoreUtil.translate("gui.buggy.storage_space") + ": " + par1ItemStack.getItemDamage() * 18);
+			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + par1ItemStack.getItemDamage() * 18);
 		}
 	}
 

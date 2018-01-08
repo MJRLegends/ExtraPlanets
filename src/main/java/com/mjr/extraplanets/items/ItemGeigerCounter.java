@@ -5,7 +5,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -24,6 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemGeigerCounter extends Item {
 	public ItemGeigerCounter(String assetName) {
@@ -38,8 +38,8 @@ public class ItemGeigerCounter extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add(EnumColor.YELLOW + GCCoreUtil.translate("geiger.counter.desc"));
-		list.add(EnumColor.AQUA + GCCoreUtil.translate("geiger.counter.location.desc"));
+		list.add(EnumColor.YELLOW + TranslateUtilities.translate("geiger.counter.desc"));
+		list.add(EnumColor.AQUA + TranslateUtilities.translate("geiger.counter.location.desc"));
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class ItemGeigerCounter extends Item {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			playerMP.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+			playerMP.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
 					+ (int) stats.getRadiationLevel() + "%"));
 		}
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);

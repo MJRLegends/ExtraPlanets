@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class CallistoBiomes extends BiomeGenBase {

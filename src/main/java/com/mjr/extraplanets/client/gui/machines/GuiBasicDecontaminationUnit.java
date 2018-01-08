@@ -19,6 +19,7 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.machines.ContainerBasicDecontaminationUnit;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicDecontaminationUnit extends GuiContainerGC {
@@ -38,12 +39,12 @@ public class GuiBasicDecontaminationUnit extends GuiContainerGC {
 	public void initGui() {
 		super.initGui();
 		List<String> batterySlotDesc = new ArrayList<String>();
-		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.0"));
-		batterySlotDesc.add(GCCoreUtil.translate("gui.battery_slot.desc.custom"));
+		batterySlotDesc.add(TranslateUtilities.translate("gui.battery_slot.desc.0"));
+		batterySlotDesc.add(TranslateUtilities.translate("gui.battery_slot.desc.custom"));
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 152, (this.height - this.ySize) / 2 + 6, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
-		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
-		electricityDesc.add(EnumColor.YELLOW + GCCoreUtil.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
+		electricityDesc.add(TranslateUtilities.translate("gui.energy_storage.desc.0"));
+		electricityDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
 		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 62;
 		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 16;
@@ -59,13 +60,13 @@ public class GuiBasicDecontaminationUnit extends GuiContainerGC {
 		int yOffset = -10;
 
 		if (this.tileEntity.storage.getEnergyStoredGC() < 1000000) {
-			displayText = EnumColor.RED + GCCoreUtil.translate("gui.status.missing.power.name");
+			displayText = EnumColor.RED + TranslateUtilities.translate("gui.status.missing.power.name");
 		} else {
-			displayText = EnumColor.AQUA + GCCoreUtil.translate("gui.status.waiting.on.player.name");
+			displayText = EnumColor.AQUA + TranslateUtilities.translate("gui.status.waiting.on.player.name");
 		}
 
-		this.fontRenderer.drawString(GCCoreUtil.translate("gui.message.status.name") + ": " + displayText, 30 - ((displayText.length())), 45 + 10 + yOffset, 4210752);
-		this.fontRenderer.drawString(GCCoreUtil.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
+		this.fontRenderer.drawString(TranslateUtilities.translate("gui.message.status.name") + ": " + displayText, 30 - ((displayText.length())), 45 + 10 + yOffset, 4210752);
+		this.fontRenderer.drawString(TranslateUtilities.translate("container.inventory"), 8, this.ySize - 118 + 2 + 23, 4210752);
 	}
 
 	@Override
@@ -78,7 +79,7 @@ public class GuiBasicDecontaminationUnit extends GuiContainerGC {
 		this.drawTexturedModalRect(containerWidth, containerHeight, 0, 0, this.xSize, this.ySize);
 
 		List<String> electricityDesc = new ArrayList<String>();
-		electricityDesc.add(GCCoreUtil.translate("gui.energy_storage.desc.0"));
+		electricityDesc.add(TranslateUtilities.translate("gui.energy_storage.desc.0"));
 		EnergyDisplayHelper.getEnergyDisplayTooltip(this.tileEntity.getEnergyStoredGC(), this.tileEntity.getMaxEnergyStoredGC(), electricityDesc);
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
 

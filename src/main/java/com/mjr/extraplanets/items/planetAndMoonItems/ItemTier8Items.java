@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
@@ -18,6 +17,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier8Items extends Item {
 	public static final String[] names = { "tier8engine", "tier8booster", "tier8fin", "tier8heavy_duty_plate", "compressed_zinc", "ingot_zinc", "blue_gem" };
@@ -58,7 +58,7 @@ public class ItemTier8Items extends Item {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
-			list.add(EnumColor.GREY + GCCoreUtil.translate("tier8.heavy_duty_plate.name"));
+			list.add(EnumColor.GREY + TranslateUtilities.translate("tier8.heavy_duty_plate.name"));
 		}
 	}
 
