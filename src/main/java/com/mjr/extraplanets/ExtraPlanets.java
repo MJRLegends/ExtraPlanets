@@ -1,7 +1,6 @@
 package com.mjr.extraplanets;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
@@ -162,8 +161,8 @@ public class ExtraPlanets {
 	public static ExtraPlanetsChannelHandler packetPipeline;
 
 	// Block/Item/Biome Events Registering Lists
-	public static HashMap<String, ItemStack> itemList = new HashMap<>();
-	public static HashMap<String, Block> blocksList = new HashMap<>();
+	public static List<Item> itemList = new ArrayList<>();
+	public static List<Block> blocksList = new ArrayList<>();
 	public static List<BiomeGenBase> biomesList = new ArrayList<>();
 
 	// Blocks Creative Tab
@@ -619,15 +618,15 @@ public class ExtraPlanets {
 	public static class RegistrationHandler {
 		@SubscribeEvent
 		public static void registerBlocksEvent(RegistryEvent.Register<Block> event) {
-			for (Block block : ExtraPlanets.blocksList.values()) {
+			for (Block block : ExtraPlanets.blocksList) {
 				event.getRegistry().register(block);
 			}
 		}
 
 		@SubscribeEvent
 		public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
-			for (ItemStack item : ExtraPlanets.itemList.values()) {
-				event.getRegistry().register(item.getItem());
+			for (Item item : ExtraPlanets.itemList) {
+				event.getRegistry().register(item);
 			}
 		}
 

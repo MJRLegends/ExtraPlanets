@@ -253,11 +253,7 @@ public class ExtraPlanets_Items {
 		if (item.getRegistryName() == null) {
 			item.setRegistryName(name);
 		}
-		ItemStack result = ExtraPlanets.itemList.put(name, new ItemStack(item));
-		if (result != null) {
-			System.out.println("ExtraPlanets: DUPLICATE ITEM NAME REGISTERED: " + name);
-			Thread.dumpStack();
-		}
+		ExtraPlanets.itemList.add(item);
 	}
 
 	private static void initializeItems() {

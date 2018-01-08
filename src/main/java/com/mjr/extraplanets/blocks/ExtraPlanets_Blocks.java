@@ -312,7 +312,7 @@ public class ExtraPlanets_Blocks {
 		if (block.getRegistryName() == null) {
 			block.setRegistryName(name);
 		}
-		ExtraPlanets.blocksList.put(name, block);
+		ExtraPlanets.blocksList.add(block);
 		if (itemclass != null) {
 			ItemBlock item = null;
 			Class<?>[] ctorArgClasses = new Class<?>[itemCtorArgs.length + 1];
@@ -327,7 +327,7 @@ public class ExtraPlanets_Blocks {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			ExtraPlanets.itemList.put(name, new ItemStack(item));
+			ExtraPlanets.itemList.add(item);
 			if (item.getRegistryName() == null) {
 				item.setRegistryName(name);
 			}
