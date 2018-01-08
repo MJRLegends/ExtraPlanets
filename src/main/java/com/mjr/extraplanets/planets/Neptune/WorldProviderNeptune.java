@@ -9,8 +9,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
@@ -19,6 +17,7 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Neptune.worldgen.BiomeProviderNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderNeptune extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 
@@ -113,7 +112,7 @@ public class WorldProviderNeptune extends WorldProviderRealisticSpace implements
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.THERMAL_PADDINGS) {
-			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+			if (MCUtilities.isServer() && isDaytime()) {
 				return -140.0F;
 			}
 			return -130.0F;

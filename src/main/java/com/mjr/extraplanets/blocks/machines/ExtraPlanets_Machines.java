@@ -2,7 +2,6 @@ package com.mjr.extraplanets.blocks.machines;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import net.minecraft.block.Block;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
@@ -29,6 +28,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompre
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Machines {
 	// Machines
@@ -139,41 +139,41 @@ public class ExtraPlanets_Machines {
 
 	private static void registerMachineTileEntitys() {
 		if (Config.REFINERY_ADVANCED)
-			GameRegistry.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
+			RegisterUtilities.registerTileEntity(TileEntityAdvancedRefinery.class, Constants.modName + "AdvancedRefinery");
 		if (Config.REFINERY_ULTIMATE)
-			GameRegistry.registerTileEntity(TileEntityUltimateRefinery.class, Constants.modName + "UltimateRefinery");
+			RegisterUtilities.registerTileEntity(TileEntityUltimateRefinery.class, Constants.modName + "UltimateRefinery");
 		if (Config.SOLAR_PANELS)
-			GameRegistry.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
+			RegisterUtilities.registerTileEntity(TileEntitySolar.class, Constants.modName + "Solar Panel");
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED) {
-			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenCompressor.class, Constants.modName + "Advanced Oxygen Compressor");
-			GameRegistry.registerTileEntity(TileEntityAdvancedOxygenDecompressor.class, Constants.modName + "Advanced Oxygen Decompressor");
+			RegisterUtilities.registerTileEntity(TileEntityAdvancedOxygenCompressor.class, Constants.modName + "Advanced Oxygen Compressor");
+			RegisterUtilities.registerTileEntity(TileEntityAdvancedOxygenDecompressor.class, Constants.modName + "Advanced Oxygen Decompressor");
 		}
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE) {
-			GameRegistry.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
-			GameRegistry.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
+			RegisterUtilities.registerTileEntity(TileEntityUltimateOxygenCompressor.class, Constants.modName + "Ultimate Oxygen Compressor");
+			RegisterUtilities.registerTileEntity(TileEntityUltimateOxygenDecompressor.class, Constants.modName + "Ultimate Oxygen Decompressor");
 		}
 		if (Config.RADIATION) {
 			if (Config.BASIC_DECRYSTALLIZER)
-				GameRegistry.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
+				RegisterUtilities.registerTileEntity(TileEntityBasicDecrystallizer.class, Constants.modName + "Basic Decrystallizer");
 			if (Config.BASIC_CRYSTALLIZER)
-				GameRegistry.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
+				RegisterUtilities.registerTileEntity(TileEntityBasicCrystallizer.class, Constants.modName + "Basic Crystallizer");
 			if (Config.BASIC_SMASHER)
-				GameRegistry.registerTileEntity(TileEntityBasicSmasher.class, Constants.modName + "Basic Smasher");
+				RegisterUtilities.registerTileEntity(TileEntityBasicSmasher.class, Constants.modName + "Basic Smasher");
 			if (Config.BASIC_CHEMICAL_INJECTOR)
-				GameRegistry.registerTileEntity(TileEntityBasicChemicalInjector.class, Constants.modName + "Basic Chemical Injector");
+				RegisterUtilities.registerTileEntity(TileEntityBasicChemicalInjector.class, Constants.modName + "Basic Chemical Injector");
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
-				GameRegistry.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
+				RegisterUtilities.registerTileEntity(TileEntityBasicSolarEvaporationChamber.class, Constants.modName + "Basic Solar Evaporation Chamber");
 			if (Config.BASIC_PURIFIER)
-				GameRegistry.registerTileEntity(TileEntityBasicPurifier.class, Constants.modName + "Basic Purifier");
+				RegisterUtilities.registerTileEntity(TileEntityBasicPurifier.class, Constants.modName + "Basic Purifier");
 			if (Config.BASIC_DECONTAMINATION_UNIT)
-				GameRegistry.registerTileEntity(TileEntityBasicDecontaminationUnit.class, Constants.modName + "Basic Decontamination Unit");
+				RegisterUtilities.registerTileEntity(TileEntityBasicDecontaminationUnit.class, Constants.modName + "Basic Decontamination Unit");
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
-			GameRegistry.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
+			RegisterUtilities.registerTileEntity(TileEntityAdvancedFuelLoader.class, Constants.modName + "AdvancedFuelLoader");
 		if (Config.FUEL_LOADER_ULTIMATE)
-			GameRegistry.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
+			RegisterUtilities.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
 		if (Config.BASIC_DENSIFIER)
-			GameRegistry.registerTileEntity(TileEntityBasicDensifier.class, Constants.modName + "Basic Densifier");
-		GameRegistry.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
+			RegisterUtilities.registerTileEntity(TileEntityBasicDensifier.class, Constants.modName + "Basic Densifier");
+		RegisterUtilities.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
 	}
 }

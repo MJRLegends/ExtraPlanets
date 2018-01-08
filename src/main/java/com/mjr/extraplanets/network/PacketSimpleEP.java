@@ -23,7 +23,6 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -36,6 +35,7 @@ import com.mjr.extraplanets.entities.rockets.EntityElectricSpaceshipBase.EnumLau
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SuppressWarnings("rawtypes")
 public class PacketSimpleEP extends PacketBase implements Packet {
@@ -211,7 +211,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void processPacket(INetHandler var1) {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+		if (MCUtilities.isClient()) {
 			this.handleClientSide(FMLClientHandler.instance().getClientPlayerEntity());
 		}
 	}

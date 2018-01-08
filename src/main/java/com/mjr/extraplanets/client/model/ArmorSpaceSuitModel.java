@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.model;
 
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
@@ -18,6 +17,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class ArmorSpaceSuitModel extends ArmorCustomModel {
@@ -63,7 +63,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 			try {
 				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "space_suit.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
+				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
 				armourModelHead = (OBJModel.OBJBakedModel) model.bake(
 						new OBJModel.OBJState(ImmutableList
@@ -117,11 +117,11 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partHead() {
 		if (partType == EntityEquipmentSlot.HEAD) {
 			GL11.glTranslatef(0F, -1.525F, -0.005F);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelHead);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_red.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_red.png"));
 			ClientUtil.drawBakedModel(armourModelTanks);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_blue_textured.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_blue_textured.png"));
 			GL11.glBlendFunc(GL11.GL_ONE, GL11.GL_ONE);
 			ClientUtil.drawBakedModel(armourModelHeadGlass);
 			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
@@ -133,15 +133,15 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 		if (partType == EntityEquipmentSlot.CHEST) {
 			GL11.glScalef(1.0F, 1.0F, 1.0F);
 			GL11.glTranslatef(0F, -1.50F, 0F);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelBody);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
 			ClientUtil.drawBakedModel(armourModelPipes);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/solar_panel.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/solar_panel.png"));
 			ClientUtil.drawBakedModel(armourModelBodyTank1);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_red.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_red.png"));
 			ClientUtil.drawBakedModel(armourModelBodyTank2);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_blue_textured.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_blue_textured.png"));
 			ClientUtil.drawBakedModel(armourModelBodyTank3);
 		}
 	}
@@ -150,9 +150,9 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partRightArm() {
 		if (partType == EntityEquipmentSlot.CHEST) {
 			GL11.glTranslatef(-0.3525F, -1.375F, 0F);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelRightArm);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
 			ClientUtil.drawBakedModel(armourModelRightArmSpring);
 		}
 	}
@@ -161,9 +161,9 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partLeftArm() {
 		if (partType == EntityEquipmentSlot.CHEST) {
 			GL11.glTranslatef(0.3525F, -1.375F, 0F);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelLeftArm);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
 			ClientUtil.drawBakedModel(armourModelLeftArmSpring);
 		}
 	}
@@ -173,11 +173,11 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 		if (partType == EntityEquipmentSlot.LEGS) {
 			GL11.glScalef(1F, 1F, 1.4F);
 			GL11.glTranslatef(-0.125F, -0.7F, -0.01F);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelLeftLeg);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
 			ClientUtil.drawBakedModel(armourModelLeftLegPipes);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
 			ClientUtil.drawBakedModel(armourModelLeftBoot);
 		}
 	}
@@ -187,11 +187,11 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 		if (partType == EntityEquipmentSlot.LEGS) {
 			GL11.glScalef(1F, 1F, 1.4F);
 			GL11.glTranslatef(0.125F, -0.7F, -0.01F);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ClientUtil.drawBakedModel(armourModelRightLeg);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
 			ClientUtil.drawBakedModel(armourModelRightLegPipes);
-			Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
 			ClientUtil.drawBakedModel(armourModelRightBoot);
 
 		}

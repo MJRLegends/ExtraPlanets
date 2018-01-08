@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.render.entities.projectiles;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.renderer.entity.Render;
@@ -11,6 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderSmallSnowBall extends Render<Entity> {
@@ -33,7 +34,7 @@ public class RenderSmallSnowBall extends Render<Entity> {
 
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 
-		Minecraft.getMinecraft().getRenderItem().renderItem(this.itemStack, TransformType.GROUND);
+		MCUtilities.getMinecraft().getRenderItem().renderItem(this.itemStack, TransformType.GROUND);
 		GlStateManager.disableRescaleNormal();
 
 		GlStateManager.popMatrix();
