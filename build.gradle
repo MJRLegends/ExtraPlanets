@@ -48,9 +48,9 @@ dependencies {
     compile "mezz.jei:jei_${minecraft_version}:${jei_version}:api"
 	compile files (
 		"Galacticraft-API-1.12.2-dev.jar",
-		"GalacticraftCore-Dev-1.12.2-dev.jar",
-		"Galacticraft-Planets-Dev-1.12.2-dev.jar",
-		"MicdoodleCore-Dev-1.12.2-dev.jar",
+		"GalacticraftCore-Dev-1.12.2-4.0.1.0.jar",
+		"Galacticraft-Planets-Dev-1.12.2-4.0.1.0.jar",
+		"MicdoodleCore-Dev-1.12.2-4.0.1.0.jar",
 		"MJRLegendsLib-1.12.2-1.0.2-dev.jar"
 	)
     // you may put jars on which you depend on in ./libs
