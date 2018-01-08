@@ -1,5 +1,5 @@
-def minecraft_version="1.11.2"
-def jei_version="4.5.0.294"
+def minecraft_version="1.12.2"
+def jei_version="4.8.5.144"
 
 // For those who want the bleeding edge
 buildscript {
@@ -45,7 +45,7 @@ minecraft {
 }
 
 dependencies {
-    deobfCompile "mezz.jei:jei_${minecraft_version}:${jei_version}"
+    compile "mezz.jei:jei_${minecraft_version}:${jei_version}:api"
 	compile files (
 		"Galacticraft-API-1.11.2-4.0.0.119.jar",
 		"GalacticraftCore-Dev-1.11.2-4.0.0.119.jar",
