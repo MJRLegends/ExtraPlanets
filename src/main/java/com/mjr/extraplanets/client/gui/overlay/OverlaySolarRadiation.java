@@ -3,7 +3,6 @@ package com.mjr.extraplanets.client.gui.overlay;
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
@@ -18,6 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class OverlaySolarRadiation extends Overlay {
@@ -82,7 +82,7 @@ public class OverlaySolarRadiation extends Overlay {
 		tessellator.draw();
 
 		if (invalid) {
-			String value = GCCoreUtil.translate("gui.warning.high.radiation");
+			String value = TranslateUtilities.translate("gui.warning.high.radiation");
 			int addX = 0;
 			int addY = 0;
 			if (top) {

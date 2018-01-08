@@ -2,7 +2,6 @@ package com.mjr.extraplanets.client.gui.vehicles;
 
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -14,6 +13,7 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class GuiPoweredVehicleBase extends GuiContainerGC {
@@ -43,11 +43,11 @@ public class GuiPoweredVehicleBase extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.power.name"), 8, 2 + 3, 4210752);
-		this.fontRendererObj.drawString(GCCoreUtil.translate(this.upperChestInventory.getName()), 8, this.type == 0 ? 50 : 39, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.message.power.name"), 8, 2 + 3, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate(this.upperChestInventory.getName()), 8, this.type == 0 ? 50 : 39, 4210752);
 
 		if (this.mc.thePlayer != null && this.mc.thePlayer.getRidingEntity() != null && this.mc.thePlayer.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-			this.fontRendererObj.drawString(GCCoreUtil.translate("gui.message.power.message.name") + ":", 130, 15 + 3, 4210752);
+			this.fontRendererObj.drawString(TranslateUtilities.translate("gui.message.power.message.name") + ":", 130, 15 + 3, 4210752);
 			final int percentage = (int) (((EntityPoweredVehicleBase) this.mc.thePlayer.getRidingEntity()).getCurrentPowerCapacity() / 100);
 			final String color = percentage > 80.0D ? EnumColor.BRIGHT_GREEN.getCode() : percentage > 40.0D ? EnumColor.ORANGE.getCode() : EnumColor.RED.getCode();
 			final String str = percentage + "% ";

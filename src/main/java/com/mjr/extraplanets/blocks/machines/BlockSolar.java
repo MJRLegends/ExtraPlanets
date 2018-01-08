@@ -8,7 +8,6 @@ import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -32,6 +31,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class BlockSolar extends BlockTileGC implements IShiftDescription, IPartialSealableBlock, ISortableBlock {
 	public static final int HYBRID_METADATA = 0;
@@ -191,9 +191,9 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	public String getShiftDescription(int meta) {
 		switch (meta) {
 		case HYBRID_METADATA:
-			return GCCoreUtil.translate("tile.solar_hybrid.description");
+			return TranslateUtilities.translate("tile.solar_hybrid.description");
 		case ULTIMATE_METADATA:
-			return GCCoreUtil.translate("tile.solar_ultimate.description");
+			return TranslateUtilities.translate("tile.solar_ultimate.description");
 		}
 		return "";
 	}

@@ -11,11 +11,11 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.jei.RecipeCategories;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class Tier9RocketRecipeCategory extends BlankRecipeCategory {
 	private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GalacticraftPlanets.ASSET_PREFIX, "textures/gui/schematic_rocket_t3_recipe.png");
@@ -27,7 +27,7 @@ public class Tier9RocketRecipeCategory extends BlankRecipeCategory {
 
 	public Tier9RocketRecipeCategory(IGuiHelper guiHelper) {
 		this.background = guiHelper.createDrawable(rocketGuiTexture, 0, 0, 168, 126);
-		this.localizedName = GCCoreUtil.translate("tile.rocket_workbench.name");
+		this.localizedName = TranslateUtilities.translate("tile.rocket_workbench.name");
 
 	}
 

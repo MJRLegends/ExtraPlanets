@@ -12,7 +12,6 @@ import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.wrappers.FluidHandlerWrapper;
 import micdoodle8.mods.galacticraft.core.wrappers.IFluidHandlerWrapper;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -36,6 +35,7 @@ import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SuppressWarnings("deprecation")
 public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler, IFluidHandlerWrapper, ILandingPadAttachable, IMachineSides {
@@ -147,7 +147,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.advanced.fuelloader.name");
+		return TranslateUtilities.translate("container.advanced.fuelloader.name");
 	}
 
 	@Override

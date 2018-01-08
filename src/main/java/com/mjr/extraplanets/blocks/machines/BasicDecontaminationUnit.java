@@ -5,7 +5,6 @@ import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -29,6 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBlock {
 	protected static final AxisAlignedBB AABB_UNIT = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.45F, 1.0F);
@@ -98,7 +98,7 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 
 			if (placer instanceof EntityPlayer) {
 				if (!worldIn.isRemote) {
-					((EntityPlayer) placer).addChatMessage(new TextComponentString(EnumColor.RED + GCCoreUtil.translate("gui.warning.noroom")));
+					((EntityPlayer) placer).addChatMessage(new TextComponentString(EnumColor.RED + TranslateUtilities.translate("gui.warning.noroom")));
 				}
 				((EntityPlayer) placer).inventory.addItemStackToInventory(new ItemStack(Item.getItemFromBlock(this), 1, 0));
 			}

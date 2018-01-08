@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.render.entities.landers;
 
-import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
@@ -22,6 +21,7 @@ import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.landers.EntityUranusLander;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderUranusLander extends Render<EntityUranusLander> {
@@ -84,7 +84,7 @@ public class RenderUranusLander extends Render<EntityUranusLander> {
 			GlStateManager.shadeModel(GL11.GL_FLAT);
 		}
 
-		ClientUtil.drawBakedModel(this.landerModel);
+		ModelUtilities.drawBakedModel(this.landerModel);
 
 		GlStateManager.popMatrix();
 	}

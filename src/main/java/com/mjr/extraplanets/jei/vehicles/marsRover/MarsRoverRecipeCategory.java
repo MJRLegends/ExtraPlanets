@@ -11,11 +11,11 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class MarsRoverRecipeCategory extends BlankRecipeCategory {
 	private static final ResourceLocation buggyGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mars_roverbench.png");
@@ -27,7 +27,7 @@ public class MarsRoverRecipeCategory extends BlankRecipeCategory {
 
 	public MarsRoverRecipeCategory(IGuiHelper guiHelper) {
 		this.background = guiHelper.createDrawable(buggyGuiTexture, 3, 4, 168, 130);
-		this.localizedName = GCCoreUtil.translate("tile.rocket_workbench.name");
+		this.localizedName = TranslateUtilities.translate("tile.rocket_workbench.name");
 
 	}
 

@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
@@ -18,6 +17,7 @@ import codechicken.nei.recipe.TemplateRecipeHandler;
 import codechicken.nei.util.NEIServerUtils;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class VenusRoverRecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation venusRoverGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venusRoverbench.png");
@@ -117,7 +117,7 @@ public class VenusRoverRecipeHandler extends TemplateRecipeHandler {
 
 	@Override
 	public String getRecipeName() {
-		return GCCoreUtil.translate("tile.rocketWorkbench.name");
+		return TranslateUtilities.translate("tile.rocketWorkbench.name");
 	}
 
 	@Override

@@ -27,6 +27,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 public class EntityUranusLander extends EntityLanderBase implements IIgnoreShift, ICameraZoomEntity {
 	private double lastMotionY;
 
@@ -70,7 +72,7 @@ public class EntityUranusLander extends EntityLanderBase implements IIgnoreShift
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.lander.name");
+		return TranslateUtilities.translate("container.lander.name");
 	}
 
 	@Override
