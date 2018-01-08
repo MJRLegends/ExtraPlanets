@@ -21,7 +21,6 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;

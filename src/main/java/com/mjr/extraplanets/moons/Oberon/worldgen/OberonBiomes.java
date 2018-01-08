@@ -15,7 +15,6 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;

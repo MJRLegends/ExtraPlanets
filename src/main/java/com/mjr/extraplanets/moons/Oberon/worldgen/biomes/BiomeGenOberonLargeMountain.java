@@ -14,6 +14,7 @@ public class BiomeGenOberonLargeMountain extends OberonBiomes {
 		this.fillerBlock = ExtraPlanets_Blocks.DENSE_ICE.getDefaultState();
 	}
 
+	@Override
 	public void registerTypes() {
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}

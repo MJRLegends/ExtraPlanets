@@ -24,12 +24,12 @@ public class CommonProxy {
 	public void registerFluidVariants() {
 	}
 
-	public void renderBlocksTileEntitySpecialRenderers() {		
+	public void renderBlocksTileEntitySpecialRenderers() {
 	}
 
-	public void registerBlockJsons() {		
+	public void registerBlockJsons() {
 	}
 
-	public void registerItemJsons() {		
+	public void registerItemJsons() {
 	}
 }

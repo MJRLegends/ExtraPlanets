@@ -23,6 +23,7 @@ public class BiomeGenTitanMethaneSea extends TitanBiomes {
 		return Lists.<Biome.SpawnListEntry> newArrayList();
 	}
 
+	@Override
 	public void registerTypes() {
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
 	}

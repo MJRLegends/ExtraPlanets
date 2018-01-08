@@ -8,6 +8,7 @@ public class BiomeGenUranus extends UranusBiomes {
 		super(properties);
 	}
 
+	@Override
 	public void registerTypes() {
 		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
