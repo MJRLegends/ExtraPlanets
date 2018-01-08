@@ -18,6 +18,7 @@ import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openFuelGui;
@@ -34,7 +35,7 @@ public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding downKey;
 	public static KeyBinding spaceKey;
 	public static KeyBinding leftShiftKey;
-	private static Minecraft mc = Minecraft.getMinecraft();
+	private static Minecraft mc = MCUtilities.getMinecraft();
 
 	public KeyHandlerClient() {
 		super(new KeyBinding[] { KeyHandlerClient.openFuelGui }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });

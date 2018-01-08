@@ -75,6 +75,7 @@ import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class MainHandlerClient {
 
@@ -282,7 +283,7 @@ public class MainHandlerClient {
 
 	@SubscribeEvent
 	public void onRenderPlanetPost(CelestialBodyRenderEvent.Post event) {
-		Minecraft mc = Minecraft.getMinecraft();
+		Minecraft mc = MCUtilities.getMinecraft();
 		if (mc.currentScreen instanceof GuiCelestialSelection) {
 			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
