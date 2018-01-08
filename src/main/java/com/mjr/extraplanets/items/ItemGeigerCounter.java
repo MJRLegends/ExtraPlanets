@@ -18,6 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemGeigerCounter extends Item {
 	public ItemGeigerCounter(String assetName) {
@@ -33,8 +34,8 @@ public class ItemGeigerCounter extends Item {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.YELLOW + GCCoreUtil.translate("geiger.counter.desc"));
-			list.add(EnumColor.AQUA + GCCoreUtil.translate("geiger.counter.location.desc"));
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("geiger.counter.desc"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("geiger.counter.location.desc"));
 		}
 	}
 
@@ -51,7 +52,7 @@ public class ItemGeigerCounter extends Item {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			playerMP.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+			playerMP.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
 					+ (int) stats.getRadiationLevel() + "%"));
 		}
 		return itemStack;

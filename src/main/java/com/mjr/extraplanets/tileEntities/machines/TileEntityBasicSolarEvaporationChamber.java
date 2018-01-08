@@ -2,7 +2,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
@@ -15,6 +14,7 @@ import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.BasicSolarEvaporationChamber;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	public static final int BASE_PROCESS_TIME_REQUIRED = 50;
@@ -137,7 +137,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.basic.solar.evaporation.chamber.name");
+		return TranslateUtilities.translate("container.basic.solar.evaporation.chamber.name");
 	}
 
 	@Override

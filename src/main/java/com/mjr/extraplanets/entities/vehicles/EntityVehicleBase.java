@@ -42,6 +42,7 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IDockable, IControllableEntity, IEntityFullSync {
 	public final int tankCapacity = 1000;
@@ -497,10 +498,10 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		if (this.worldObj.isRemote) {
 			if (this.riddenByEntity == null) {
 				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
-						+ GCCoreUtil.translate("gui.buggy.turn.name")));
-				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.accel.name")));
-				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.decel.name")));
-				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.inv.name")));
+						+ TranslateUtilities.translate("gui.buggy.turn.name")));
+				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name")));
+				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name")));
+				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.inv.name")));
 			}
 
 			return true;

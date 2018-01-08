@@ -12,12 +12,12 @@ import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class PurifierRecipeCategory extends BlankRecipeCategory {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/purifier.png");
@@ -36,7 +36,7 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 	@Nonnull
 	public PurifierRecipeCategory(IGuiHelper guiHelper) {
 		this.background = guiHelper.createDrawable(guiTexture, 3, 4, 168, 80);
-		this.localizedName = GCCoreUtil.translate("container.basic.purifier.name");
+		this.localizedName = TranslateUtilities.translate("container.basic.purifier.name");
 		IDrawableStatic progressBarDrawableSalt = guiHelper.createDrawable(guiTexture, 192, 0, 16, 38);
 		this.saltBar = guiHelper.createAnimatedDrawable(progressBarDrawableSalt, 70, IDrawableAnimated.StartDirection.TOP, true);
 		IDrawableStatic progressBarDrawableSalt2 = guiHelper.createDrawable(guiTexture, 192, 0, 16, 38);

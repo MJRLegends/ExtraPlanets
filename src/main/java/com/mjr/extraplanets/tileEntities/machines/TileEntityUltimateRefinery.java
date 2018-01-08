@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.ISidedInventory;
@@ -24,6 +23,7 @@ import net.minecraftforge.fluids.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.UltimateRefinery;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 24000 * 4;
@@ -151,7 +151,7 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.ultimate.refinery.name");
+		return TranslateUtilities.translate("container.ultimate.refinery.name");
 	}
 
 	@Override

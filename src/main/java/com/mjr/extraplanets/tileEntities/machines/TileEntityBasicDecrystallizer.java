@@ -3,7 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
@@ -21,6 +20,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicDecrystallizer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	private final int tankCapacity = 20000;
@@ -135,7 +135,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.basic.decrystallizer.name");
+		return TranslateUtilities.translate("container.basic.decrystallizer.name");
 	}
 
 	@Override

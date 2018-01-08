@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -23,6 +22,7 @@ import net.minecraft.world.World;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class EntityTier9Rocket extends EntityTieredRocket {
 	public EntityTier9Rocket(World world) {
@@ -280,6 +280,6 @@ public class EntityTier9Rocket extends EntityTieredRocket {
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("entity.extraplanets.EntityTier9Rocket.name");
+		return TranslateUtilities.translate("entity.extraplanets.EntityTier9Rocket.name");
 	}
 }

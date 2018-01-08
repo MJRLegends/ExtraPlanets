@@ -12,7 +12,6 @@ import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -37,6 +36,7 @@ import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SuppressWarnings("rawtypes")
 public class PacketSimpleEP extends PacketBase implements Packet {
@@ -186,12 +186,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 							ship.igniteCheckingCooldown();
 							GCPlayerStats.get(playerBase).setLaunchAttempts(0);
 						} else if (stats.getChatCooldown() == 0 && GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
-							player.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.noparachute")));
+							player.addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.noparachute")));
 							stats.setChatCooldown(250);
 							GCPlayerStats.get(playerBase).setLaunchAttempts(1);
 						}
 					} else if (stats.getChatCooldown() == 0) {
-						player.addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.nofuel")));
+						player.addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.nofuel")));
 						stats.setChatCooldown(250);
 					}
 				}

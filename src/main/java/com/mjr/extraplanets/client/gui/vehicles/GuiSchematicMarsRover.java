@@ -3,7 +3,6 @@ package com.mjr.extraplanets.client.gui.vehicles;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.BlockPos;
@@ -13,6 +12,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicMarsRover;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicResultPage {
 	private static final ResourceLocation marsRoverBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mars_roverbench.png");
@@ -28,8 +28,8 @@ public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicR
 	public void initGui() {
 		super.initGui();
 		this.buttonList.clear();
-		this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 110, 40, 20, GCCoreUtil.translate("gui.button.back.name")));
-		this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 110 + 25, 40, 20, GCCoreUtil.translate("gui.button.next.name")));
+		this.buttonList.add(new GuiButton(0, this.width / 2 - 130, this.height / 2 - 110, 40, 20, TranslateUtilities.translate("gui.button.back.name")));
+		this.buttonList.add(new GuiButton(1, this.width / 2 - 130, this.height / 2 - 110 + 25, 40, 20, TranslateUtilities.translate("gui.button.next.name")));
 	}
 
 	@Override
@@ -48,8 +48,8 @@ public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicR
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(GCCoreUtil.translate("schematic.mars.rover.name"), 7, -20 + 27, 4210752);
-		this.fontRendererObj.drawString(GCCoreUtil.translate("container.inventory"), 8, 202 - 104 + 2 + 27, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("schematic.mars.rover.name"), 7, -20 + 27, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("container.inventory"), 8, 202 - 104 + 2 + 27, 4210752);
 	}
 
 	@Override

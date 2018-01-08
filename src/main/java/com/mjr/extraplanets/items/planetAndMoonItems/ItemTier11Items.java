@@ -4,7 +4,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -14,6 +13,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier11Items extends Item {
 	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks", "green_sticks",
@@ -56,7 +56,7 @@ public class ItemTier11Items extends Item {
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
 			if (player.worldObj.isRemote) {
-				list.add(EnumColor.GREY + GCCoreUtil.translate("tier10.heavy_duty_plate.name"));
+				list.add(EnumColor.GREY + TranslateUtilities.translate("tier10.heavy_duty_plate.name"));
 			}
 		}
 	}

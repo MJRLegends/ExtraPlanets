@@ -12,7 +12,6 @@ import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
 import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -37,6 +36,7 @@ import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock implements IMultiBlock, IInventoryDefaults, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[1];
@@ -70,8 +70,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 					} else {
 						this.storage.setEnergyStored(0);
 						stats.setRadiationLevel(stats.getRadiationLevel() - level);
-						player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + GCCoreUtil.translate("gui.radiation.reduced.message") + " 10%"));
-						player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + GCCoreUtil.translate("gui.radiation.current.message") + ": "
+						player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 10%"));
+						player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
 								+ (int) stats.getRadiationLevel() + "%"));
 					}
 				} else if (this.ticks % 40 == 0)
@@ -218,7 +218,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.basic.decontamination.unit.name");
+		return TranslateUtilities.translate("container.basic.decontamination.unit.name");
 	}
 
 	@Override

@@ -5,7 +5,6 @@ import java.util.List;
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
@@ -17,6 +16,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor {
 	public String name;
@@ -77,7 +77,7 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.AQUA + GCCoreUtil.translate("tier2.space.suit.information"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("tier2.space.suit.information"));
 		}
 	}
 }

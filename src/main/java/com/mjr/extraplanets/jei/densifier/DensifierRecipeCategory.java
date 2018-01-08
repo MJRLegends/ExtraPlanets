@@ -10,11 +10,11 @@ import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class DensifierRecipeCategory extends BlankRecipeCategory {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/densifier.png");
@@ -27,7 +27,7 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 	@Nonnull
 	public DensifierRecipeCategory(IGuiHelper guiHelper) {
 		this.background = guiHelper.createDrawable(guiTexture, 3, 4, 168, 80);
-		this.localizedName = GCCoreUtil.translate("container.basic.densifier.name");
+		this.localizedName = TranslateUtilities.translate("container.basic.densifier.name");
 	}
 
 	@Nonnull

@@ -19,7 +19,6 @@ import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import net.minecraft.block.Block;
 import net.minecraft.client.audio.ISound;
@@ -46,6 +45,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredLandable;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {
 	public BlockPos targetVec;
@@ -450,19 +450,19 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.setLaunchPhase(EnumLaunchPhase.UNIGNITED);
 		this.timeUntilLaunch = 0;
 		if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.nogyroscope")));
+			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.nogyroscope")));
 		}
 	}
 
 	public void failMessageLaunchController() {
 		if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.launchcontroller")));
+			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.launchcontroller")));
 		}
 	}
 
 	public void failMessageInsufficientFuel() {
 		if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(GCCoreUtil.translate("gui.rocket.warning.fuelinsufficient")));
+			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.fuelinsufficient")));
 		}
 	}
 
@@ -814,7 +814,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		}
 
 		public String getTitle() {
-			return GCCoreUtil.translate("gui.message." + this.title + ".name");
+			return TranslateUtilities.translate("gui.message." + this.title + ".name");
 		}
 	}
 

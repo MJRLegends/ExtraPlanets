@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockState;
@@ -29,6 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	private final Random refineryRand = new Random();
@@ -145,7 +145,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	@Override
 	public String getShiftDescription(int meta) {
-		return GCCoreUtil.translate(this.getUnlocalizedName() + ".description");
+		return TranslateUtilities.translate(this.getUnlocalizedName() + ".description");
 	}
 
 	@Override

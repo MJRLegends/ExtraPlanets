@@ -4,7 +4,6 @@ import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
@@ -25,6 +24,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicPurifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 20000;
@@ -216,7 +216,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.basic.purifier.name");
+		return TranslateUtilities.translate("container.basic.purifier.name");
 	}
 
 	@Override

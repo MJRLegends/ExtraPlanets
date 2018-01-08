@@ -18,7 +18,6 @@ import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectricalSource;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -41,6 +40,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IDisableableMachine, IInventory, ISidedInventory, IConnector {
 	@NetworkedField(targetSide = Side.CLIENT)
@@ -413,7 +413,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate(this.tierGC == 1 ? "container.solarhybrid.name" : "container.solarultimate.name");
+		return TranslateUtilities.translate(this.tierGC == 1 ? "container.solarhybrid.name" : "container.solarultimate.name");
 	}
 
 	@Override

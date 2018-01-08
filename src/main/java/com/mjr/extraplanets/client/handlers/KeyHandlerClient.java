@@ -2,7 +2,6 @@ package com.mjr.extraplanets.client.handlers;
 
 import micdoodle8.mods.galacticraft.core.client.KeyHandler;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -19,12 +18,13 @@ import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openFuelGui;
 
 	static {
-		openFuelGui = new KeyBinding(GCCoreUtil.translate("keybind.vehicleInv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
+		openFuelGui = new KeyBinding(TranslateUtilities.translate("keybind.vehicleInv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
 	}
 
 	public static KeyBinding accelerateKey;

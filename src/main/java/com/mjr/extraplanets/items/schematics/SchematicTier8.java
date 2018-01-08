@@ -9,7 +9,6 @@ import micdoodle8.mods.galacticraft.core.items.ISortableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemHangingEntity;
@@ -24,6 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class SchematicTier8 extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
@@ -52,7 +52,7 @@ public class SchematicTier8 extends ItemHangingEntity implements ISchematicItem,
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.GREY + GCCoreUtil.translate("schematic.tier8.rocket.name"));
+			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier8.rocket.name"));
 		}
 	}
 

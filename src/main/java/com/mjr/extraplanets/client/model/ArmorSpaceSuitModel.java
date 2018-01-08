@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.model;
 
-import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -19,6 +18,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class ArmorSpaceSuitModel extends ArmorCustomModel {
@@ -73,7 +73,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partHead() {
 		if (partType == 0) {
 			GL11.glTranslatef(0F, -1.5F, 0F);
-			ClientUtil.drawBakedModelColored(armourModelHead, ColorUtil.to32BitColor(255, 255, 255, 255));
+			ModelUtilities.drawBakedModelColored(armourModelHead, ColorUtil.to32BitColor(255, 255, 255, 255));
 		}
 	}
 
@@ -81,7 +81,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public void partBody() {
 		if (partType == 1) {
 			GL11.glTranslatef(0F, -1.5F, 0F);
-			ClientUtil.drawBakedModelColored(armourModelBody, ColorUtil.to32BitColor(255, 255, 255, 255));
+			ModelUtilities.drawBakedModelColored(armourModelBody, ColorUtil.to32BitColor(255, 255, 255, 255));
 		}
 	}
 

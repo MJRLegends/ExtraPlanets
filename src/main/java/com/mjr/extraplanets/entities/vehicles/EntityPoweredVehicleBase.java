@@ -37,6 +37,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredDockable;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityPoweredVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IPoweredDockable, IControllableEntity, IEntityFullSync {
 	protected long ticks = 0;
@@ -484,10 +485,10 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 		if (this.worldObj.isRemote) {
 			if (this.riddenByEntity == null) {
 				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
-						+ GCCoreUtil.translate("gui.buggy.turn.name")));
-				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.accel.name")));
-				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.buggy.decel.name")));
-				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name")));
+						+ TranslateUtilities.translate("gui.buggy.turn.name")));
+				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name")));
+				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name")));
+				var1.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.powered.inv.name")));
 			}
 
 			return true;

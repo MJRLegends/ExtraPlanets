@@ -4,7 +4,6 @@ import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
@@ -25,6 +24,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicCrystallizer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 20000;
@@ -171,7 +171,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.basic.crystallizer.name");
+		return TranslateUtilities.translate("container.basic.crystallizer.name");
 	}
 
 	@Override

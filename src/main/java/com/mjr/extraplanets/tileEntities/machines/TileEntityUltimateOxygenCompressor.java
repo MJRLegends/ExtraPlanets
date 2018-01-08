@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -19,6 +18,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
 
 import com.mjr.extraplanets.blocks.machines.UltimateOxygenCompressor;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen implements IInventory, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[3];
@@ -153,7 +153,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
 
 	@Override
 	public String getName() {
-		return GCCoreUtil.translate("container.ultimateoxygencompressor.name");
+		return TranslateUtilities.translate("container.ultimateoxygencompressor.name");
 	}
 
 	@Override
