@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
@@ -759,60 +758,60 @@ public class ExtraPlanets_Blocks {
 	private static void registerTileEntitys() {
 		if (Config.MERCURY) {
 			if (Config.USE_DEFAULT_BOSSES)
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerMercuryDefault.class, Constants.modName + "Mercury Dungeon Default Spawner");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerMercuryDefault.class, Constants.modName + "Mercury Dungeon Default Spawner");
 			else
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerMercury.class, Constants.modName + "Mercury Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerMercury.class, Constants.modName + "Mercury Dungeon Spawner");
+			RegisterUtilities.registerTileEntity(TileEntityT4TreasureChest.class, Constants.modName + "Tier 4 Treasure Chest");
 		}
 		if (Config.JUPITER) {
 			if (Config.USE_DEFAULT_BOSSES)
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiterDefault.class, Constants.modName + "Juptier Dungeon Default Spawner");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerJupiterDefault.class, Constants.modName + "Juptier Dungeon Default Spawner");
 			else
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT5TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerJupiter.class, Constants.modName + "Juptier Dungeon Spawner");
+			RegisterUtilities.registerTileEntity(TileEntityT5TreasureChest.class, Constants.modName + "Tier 5 Treasure Chest");
 		}
 		if (Config.SATURN) {
 			if (Config.USE_DEFAULT_BOSSES)
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturnDefault.class, Constants.modName + "Saturn Dungeon Default Spawner");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerSaturnDefault.class, Constants.modName + "Saturn Dungeon Default Spawner");
 			else
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
+			RegisterUtilities.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
 		}
 		if (Config.URANUS) {
 			if (Config.USE_DEFAULT_BOSSES)
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranusDefault.class, Constants.modName + "Uranus Dungeon Default Spawner");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerUranusDefault.class, Constants.modName + "Uranus Dungeon Default Spawner");
 			else
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
+			RegisterUtilities.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
 		}
 		if (Config.NEPTUNE) {
 			if (Config.USE_DEFAULT_BOSSES)
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptuneDefault.class, Constants.modName + "Neptune Dungeon Default Spawner");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerNeptuneDefault.class, Constants.modName + "Neptune Dungeon Default Spawner");
 			else
-				GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
+			RegisterUtilities.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.PLUTO) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
+			RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
+			RegisterUtilities.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
 		if (Config.ERIS) {
-			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
-			GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
+			RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
+			RegisterUtilities.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
-		GameRegistry.registerTileEntity(TileEntityTier2LandingPadSingle.class, "Tier 2 Landing Pad");
-		GameRegistry.registerTileEntity(TileEntityTier2LandingPad.class, "Tier 2 Landing Pad Full");
+		RegisterUtilities.registerTileEntity(TileEntityTier2LandingPadSingle.class, "Tier 2 Landing Pad");
+		RegisterUtilities.registerTileEntity(TileEntityTier2LandingPad.class, "Tier 2 Landing Pad Full");
 
-		GameRegistry.registerTileEntity(TileEntityTier3LandingPadSingle.class, "Tier 3 Landing Pad");
-		GameRegistry.registerTileEntity(TileEntityTier3LandingPad.class, "Tier 3 Landing Pad Full");
+		RegisterUtilities.registerTileEntity(TileEntityTier3LandingPadSingle.class, "Tier 3 Landing Pad");
+		RegisterUtilities.registerTileEntity(TileEntityTier3LandingPad.class, "Tier 3 Landing Pad Full");
 
-		GameRegistry.registerTileEntity(TileEntityPoweredChargingPadSingle.class, "Powered Charging Pad");
-		GameRegistry.registerTileEntity(TileEntityPoweredChargingPad.class, "Powered Charging Pad Full");
+		RegisterUtilities.registerTileEntity(TileEntityPoweredChargingPadSingle.class, "Powered Charging Pad");
+		RegisterUtilities.registerTileEntity(TileEntityPoweredChargingPad.class, "Powered Charging Pad Full");
 
-		GameRegistry.registerTileEntity(TileEntityRocketChargingPadSingle.class, "Rocket Charging Pad");
-		GameRegistry.registerTileEntity(TileEntityRocketChargingPad.class, "Rocket Charging Pad Full");
+		RegisterUtilities.registerTileEntity(TileEntityRocketChargingPadSingle.class, "Rocket Charging Pad");
+		RegisterUtilities.registerTileEntity(TileEntityRocketChargingPad.class, "Rocket Charging Pad Full");
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
-			GameRegistry.registerTileEntity(TileEntityBasicDecontaminationUnitFake.class, Constants.modName + "Basic Decontamination Unit Fake");
+			RegisterUtilities.registerTileEntity(TileEntityBasicDecontaminationUnitFake.class, Constants.modName + "Basic Decontamination Unit Fake");
 	}
 
 	private static void setHarvestLevels() {
@@ -1035,144 +1034,144 @@ public class ExtraPlanets_Blocks {
 
 	public static void OreDictionaryRegister() {
 		if (Config.MERCURY) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(MERCURY_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(MERCURY_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(MERCURY_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreMercury", new ItemStack(MERCURY_BLOCKS, 1, 6));
-			OreDictionary.registerOre("blockMercury", new ItemStack(MERCURY_BLOCKS, 1, 7));
-			OreDictionary.registerOre("oreCarbon", new ItemStack(MERCURY_BLOCKS, 1, 10));
-			OreDictionary.registerOre("blockCarbon", new ItemStack(MERCURY_BLOCKS, 1, 11));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(MERCURY_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(MERCURY_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(MERCURY_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreMercury", new ItemStack(MERCURY_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("blockMercury", new ItemStack(MERCURY_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("oreCarbon", new ItemStack(MERCURY_BLOCKS, 1, 10));
+			RegisterUtilities.registerOre("blockCarbon", new ItemStack(MERCURY_BLOCKS, 1, 11));
 		}
 		if (Config.CERES) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(CERES_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(CERES_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(CERES_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreUranium", new ItemStack(CERES_BLOCKS, 1, 6));
-			OreDictionary.registerOre("blockUranium", new ItemStack(CERES_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(CERES_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(CERES_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(CERES_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreUranium", new ItemStack(CERES_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("blockUranium", new ItemStack(CERES_BLOCKS, 1, 7));
 		}
 		if (Config.JUPITER) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(JUPITER_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(JUPITER_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(JUPITER_BLOCKS, 1, 3));
-			OreDictionary.registerOre("orePalladium", new ItemStack(JUPITER_BLOCKS, 1, 6));
-			OreDictionary.registerOre("oreNickel", new ItemStack(JUPITER_BLOCKS, 1, 7));
-			OreDictionary.registerOre("oreRedGem", new ItemStack(JUPITER_BLOCKS, 1, 11));
-			OreDictionary.registerOre("blockPalladium", new ItemStack(JUPITER_BLOCKS, 1, 8));
-			OreDictionary.registerOre("blockRedGem", new ItemStack(JUPITER_BLOCKS, 1, 12));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(JUPITER_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(JUPITER_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(JUPITER_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("orePalladium", new ItemStack(JUPITER_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("oreNickel", new ItemStack(JUPITER_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("oreRedGem", new ItemStack(JUPITER_BLOCKS, 1, 11));
+			RegisterUtilities.registerOre("blockPalladium", new ItemStack(JUPITER_BLOCKS, 1, 8));
+			RegisterUtilities.registerOre("blockRedGem", new ItemStack(JUPITER_BLOCKS, 1, 12));
 		}
 		if (Config.SATURN) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(SATURN_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(SATURN_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(SATURN_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreMagnesium", new ItemStack(SATURN_BLOCKS, 1, 6));
-			OreDictionary.registerOre("blockMagnesium", new ItemStack(SATURN_BLOCKS, 1, 7));
-			OreDictionary.registerOre("oreSlime", new ItemStack(SATURN_BLOCKS, 1, 12));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(SATURN_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(SATURN_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(SATURN_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreMagnesium", new ItemStack(SATURN_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("blockMagnesium", new ItemStack(SATURN_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("oreSlime", new ItemStack(SATURN_BLOCKS, 1, 12));
 		}
 		if (Config.URANUS) {
-			OreDictionary.registerOre("oreCrystal", new ItemStack(URANUS_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 6));
-			OreDictionary.registerOre("blockCrystal", new ItemStack(URANUS_BLOCKS, 1, 4));
-			OreDictionary.registerOre("blockWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("oreCrystal", new ItemStack(URANUS_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("blockCrystal", new ItemStack(URANUS_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("blockWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 7));
 		}
 		if (Config.NEPTUNE) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(NEPTUNE_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(NEPTUNE_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(NEPTUNE_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 6));
-			OreDictionary.registerOre("oreBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 10));
-			OreDictionary.registerOre("blockZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 7));
-			OreDictionary.registerOre("blockBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 11));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(NEPTUNE_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(NEPTUNE_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(NEPTUNE_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("oreBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 10));
+			RegisterUtilities.registerOre("blockZinc", new ItemStack(NEPTUNE_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("blockBlueGem", new ItemStack(NEPTUNE_BLOCKS, 1, 11));
 		}
 		if (Config.PLUTO) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(PLUTO_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(PLUTO_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(PLUTO_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreTungsten", new ItemStack(PLUTO_BLOCKS, 1, 6));
-			OreDictionary.registerOre("blockTungsten", new ItemStack(PLUTO_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(PLUTO_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(PLUTO_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(PLUTO_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreTungsten", new ItemStack(PLUTO_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("blockTungsten", new ItemStack(PLUTO_BLOCKS, 1, 7));
 		}
 		if (Config.ERIS) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(ERIS_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(ERIS_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(ERIS_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreDarkIron", new ItemStack(ERIS_BLOCKS, 1, 6));
-			OreDictionary.registerOre("blockDarkIron", new ItemStack(ERIS_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(ERIS_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(ERIS_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(ERIS_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreDarkIron", new ItemStack(ERIS_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("blockDarkIron", new ItemStack(ERIS_BLOCKS, 1, 7));
 		}
 		if (Config.CALLISTO) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(CALLISTO_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(CALLISTO_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(CALLISTO_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(CALLISTO_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(CALLISTO_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(CALLISTO_BLOCKS, 1, 3));
 		}
 		if (Config.DEIMOS) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(DEIMOS_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(DEIMOS_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(DEIMOS_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(DEIMOS_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(DEIMOS_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(DEIMOS_BLOCKS, 1, 3));
 		}
 		if (Config.EUROPA) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(EUROPA_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(EUROPA_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(EUROPA_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(EUROPA_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(EUROPA_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(EUROPA_BLOCKS, 1, 3));
 		}
 		if (Config.GANYMEDE) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(GANYMEDE_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(GANYMEDE_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(GANYMEDE_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(GANYMEDE_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(GANYMEDE_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(GANYMEDE_BLOCKS, 1, 3));
 		}
 		if (Config.IO) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(IO_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(IO_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(IO_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(IO_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(IO_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(IO_BLOCKS, 1, 3));
 		}
 		if (Config.PHOBOS) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(PHOBOS_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(PHOBOS_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(PHOBOS_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(PHOBOS_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(PHOBOS_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(PHOBOS_BLOCKS, 1, 3));
 		}
 		if (Config.RHEA) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(RHEA_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(RHEA_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(RHEA_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(RHEA_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(RHEA_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(RHEA_BLOCKS, 1, 3));
 		}
 		if (Config.TITAN) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(TITAN_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(TITAN_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(TITAN_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(TITAN_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(TITAN_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(TITAN_BLOCKS, 1, 3));
 		}
 		if (Config.TRITON) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(TRITON_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(TRITON_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(TRITON_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(TRITON_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(TRITON_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(TRITON_BLOCKS, 1, 3));
 		}
 		if (Config.OBERON) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(OBERON_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(OBERON_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(OBERON_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(OBERON_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(OBERON_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(OBERON_BLOCKS, 1, 3));
 		}
 		if (Config.IAPETUS) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(IAPETUS_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(IAPETUS_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(IAPETUS_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(IAPETUS_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(IAPETUS_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(IAPETUS_BLOCKS, 1, 3));
 		}
 		if (Config.TITANIA) {
-			OreDictionary.registerOre("oreCopper", new ItemStack(TITANIA_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreTin", new ItemStack(TITANIA_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreIron", new ItemStack(TITANIA_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(TITANIA_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(TITANIA_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(TITANIA_BLOCKS, 1, 3));
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			OreDictionary.registerOre("stone", new ItemStack(KEPLER22B_BLOCKS, 1, 1));
-			OreDictionary.registerOre("or	eIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
-			OreDictionary.registerOre("oreCopper", new ItemStack(KEPLER22B_BLOCKS, 1, 3));
-			OreDictionary.registerOre("oreTin", new ItemStack(KEPLER22B_BLOCKS, 1, 4));
-			OreDictionary.registerOre("oreDenseCoal", new ItemStack(KEPLER22B_BLOCKS, 1, 5));
-			OreDictionary.registerOre("oreBlueDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 6));
-			OreDictionary.registerOre("oreRedDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 7));
-			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 8));
-			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 9));
-			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 10));
-			OreDictionary.registerOre("cobblestone", new ItemStack(KEPLER22B_BLOCKS, 1, 12));
-			OreDictionary.registerOre("orePlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 13));
+			RegisterUtilities.registerOre("stone", new ItemStack(KEPLER22B_BLOCKS, 1, 1));
+			RegisterUtilities.registerOre("or	eIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(KEPLER22B_BLOCKS, 1, 3));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(KEPLER22B_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreDenseCoal", new ItemStack(KEPLER22B_BLOCKS, 1, 5));
+			RegisterUtilities.registerOre("oreBlueDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("oreRedDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("orePurpleDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 8));
+			RegisterUtilities.registerOre("oreYellowDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 9));
+			RegisterUtilities.registerOre("oreGreenDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 10));
+			RegisterUtilities.registerOre("cobblestone", new ItemStack(KEPLER22B_BLOCKS, 1, 12));
+			RegisterUtilities.registerOre("orePlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 13));
 		}
 		if (Config.ORE_LEAD_GENERATION) {
-			OreDictionary.registerOre("oreLead", new ItemStack(ORE_LEAD, 1, 0));
+			RegisterUtilities.registerOre("oreLead", new ItemStack(ORE_LEAD, 1, 0));
 			GameRegistry.registerWorldGenerator(new WorldGenerationOverworld(), 1);
 		}
 	}
