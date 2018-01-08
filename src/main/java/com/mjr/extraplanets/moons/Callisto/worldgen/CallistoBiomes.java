@@ -24,7 +24,6 @@ public class CallistoBiomes extends BiomeGenBase {
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
-		ExtraPlanets.biomesList.add(this);
 	}
 
 	@Override
