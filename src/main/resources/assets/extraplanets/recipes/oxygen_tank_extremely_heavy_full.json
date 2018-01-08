@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:oxygen_tank_extremely_heavy_full",
+    "data": 9000
+  },
+  "pattern": [
+    "ZZZ",
+    "XXX",
+    "YYY"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:oxygen_tank_very_heavy_full"
+    },
+    "Y": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    },
+    "Z": {
+      "item": "minecraft:wool",
+      "data": 4
+    }
+  }
+}

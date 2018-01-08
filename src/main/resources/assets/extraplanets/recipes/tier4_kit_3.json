@@ -1,0 +1,31 @@
+{
+  "result": {
+    "item": "extraplanets:tier4_kit",
+    "data": 3
+  },
+  "pattern": [
+    "MGF",
+    "T T",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "galacticraftplanets:basic_item_venus",
+      "data": 0
+    },
+    "T": {
+      "item": "extraplanets:oxygen_tank_very_heavy_full"
+    },
+    "F": {
+      "item": "galacticraftcore:basic_item",
+      "data": 19
+    },
+    "G": {
+      "item": "galacticraftcore:oxygen_gear"
+    },
+    "M": {
+      "item": "galacticraftcore:oxygen_mask"
+    }
+  }
+}

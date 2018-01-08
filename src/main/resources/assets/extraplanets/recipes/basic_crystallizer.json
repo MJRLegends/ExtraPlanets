@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "extraplanets:basic_crystallizer"
+  },
+  "pattern": [
+    "SBS",
+    "MMM",
+    "SBS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "extraplanets:mercury",
+      "data": 7
+    },
+    "S": {
+      "item": "minecraft:piston"
+    },
+    "M": {
+      "item": "extraplanets:tier4_items",
+      "data": 4
+    }
+  }
+}

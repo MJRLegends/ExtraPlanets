@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "extraplanets:advanced_launch_pad",
+    "data": 2,
+    "count": 5
+  },
+  "pattern": [
+    "   ",
+    "BBB",
+    "III"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "galacticraftplanets:mars",
+      "data": 8
+    },
+    "I": {
+      "item": "galacticraftplanets:item_basic_mars",
+      "data": 2
+    }
+  }
+}

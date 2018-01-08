@@ -1,0 +1,38 @@
+{
+  "result": {
+    "item": "extraplanets:tier3_kit",
+    "data": 2
+  },
+  "pattern": [
+    "F A",
+    "BCD",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "extraplanets:tier3_thermal_padding",
+      "data": 0
+    },
+    "B": {
+      "item": "extraplanets:tier3_thermal_padding",
+      "data": 1
+    },
+    "C": {
+      "item": "extraplanets:tier3_thermal_padding",
+      "data": 2
+    },
+    "S": {
+      "item": "galacticraftplanets:basic_item_venus",
+      "data": 0
+    },
+    "D": {
+      "item": "extraplanets:tier3_thermal_padding",
+      "data": 3
+    },
+    "F": {
+      "item": "galacticraftcore:basic_item",
+      "data": 19
+    }
+  }
+}

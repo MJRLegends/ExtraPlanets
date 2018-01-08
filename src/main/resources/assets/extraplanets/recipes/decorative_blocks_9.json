@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:decorative_blocks",
+    "data": 9
+  },
+  "pattern": [
+    "   ",
+    "FF ",
+    "FF "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "F": {
+      "item": "extraplanets:frozen_nitrogen"
+    }
+  }
+}

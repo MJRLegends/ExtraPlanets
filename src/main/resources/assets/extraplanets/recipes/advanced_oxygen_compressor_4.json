@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:advanced_oxygen_compressor",
+    "data": 4
+  },
+  "pattern": [
+    "ZYZ",
+    "YZY",
+    "ZYZ"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "Y": {
+      "item": "galacticraftcore:oxygen_compressor",
+      "data": 4
+    },
+    "Z": {
+      "item": "extraplanets:tier6_items",
+      "data": 5
+    }
+  }
+}

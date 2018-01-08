@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:decorative_blocks",
+    "data": 1
+  },
+  "pattern": [
+    "MMM",
+    "MMM",
+    "MMM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:decorative_blocks",
+      "data": 0
+    }
+  }
+}

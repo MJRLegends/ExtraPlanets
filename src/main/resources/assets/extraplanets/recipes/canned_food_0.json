@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "extraplanets:canned_food",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "galacticraftcore:canister",
+      "data": 0
+    },
+    {
+      "item": "minecraft:cooked_porkchop"
+    },
+    {
+      "item": "minecraft:cooked_porkchop"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

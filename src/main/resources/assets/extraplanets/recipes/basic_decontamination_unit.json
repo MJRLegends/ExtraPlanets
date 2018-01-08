@@ -1,0 +1,32 @@
+{
+  "result": {
+    "item": "extraplanets:basic_decontamination_unit"
+  },
+  "pattern": [
+    "EBV",
+    "SFS",
+    "VBE"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:lapis_block"
+    },
+    "S": {
+      "item": "extraplanets:iodide_salt",
+      "data": 0
+    },
+    "E": {
+      "item": "extraplanets:mercury_battery",
+      "data": 100
+    },
+    "F": {
+      "item": "extraplanets:tools",
+      "data": 3
+    },
+    "V": {
+      "item": "extraplanets:tier5_items",
+      "data": 12
+    }
+  }
+}

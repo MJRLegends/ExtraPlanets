@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:oxygen_tank_heavy_full_brown",
+    "data": 2700
+  },
+  "pattern": [
+    "ZZZ",
+    "XXX",
+    "YYY"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "X": {
+      "item": "galacticraftcore:canister",
+      "data": 0
+    },
+    "Y": {
+      "item": "#COMPRESSEDSTEEL"
+    },
+    "Z": {
+      "item": "minecraft:wool",
+      "data": 12
+    }
+  }
+}

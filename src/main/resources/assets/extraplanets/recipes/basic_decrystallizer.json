@@ -1,0 +1,28 @@
+{
+  "result": {
+    "item": "extraplanets:basic_decrystallizer"
+  },
+  "pattern": [
+    "SBS",
+    "MCM",
+    "SBS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "extraplanets:mercury",
+      "data": 11
+    },
+    "S": {
+      "item": "extraplanets:iodide_salt",
+      "data": 0
+    },
+    "C": {
+      "item": "extraplanets:basic_crystallizer"
+    },
+    "M": {
+      "item": "extraplanets:tier4_items",
+      "data": 4
+    }
+  }
+}

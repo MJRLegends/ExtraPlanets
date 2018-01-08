@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:yellow_diamond_hoe"
+  },
+  "pattern": [
+    "XX ",
+    " S ",
+    " S "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "#STICKWOOD"
+    },
+    "X": {
+      "item": "extraplanets:tier11_items",
+      "data": 3
+    }
+  }
+}

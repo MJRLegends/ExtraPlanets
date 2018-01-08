@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "extraplanets:fire_bomb"
+  },
+  "pattern": [
+    "GZG",
+    "SVS",
+    "GZG"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:sand",
+      "data": 0
+    },
+    "V": {
+      "item": "extraplanets:tier5_items",
+      "data": 11
+    },
+    "G": {
+      "item": "extraplanets:ingot_uranium",
+      "data": 0
+    },
+    "Z": {
+      "item": "extraplanets:tier5_items",
+      "data": 10
+    }
+  }
+}

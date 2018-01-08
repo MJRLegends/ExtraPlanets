@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:tier2_pressure_layer",
+    "data": 0
+  },
+  "pattern": [
+    "CCC",
+    "ORO",
+    "CCC"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "extraplanets:tier1_pressure_layer",
+      "data": 0
+    },
+    "C": {
+      "item": "extraplanets:cloth",
+      "data": 0
+    },
+    "O": {
+      "item": "galacticraftcore:oxygen_concentrator"
+    }
+  }
+}

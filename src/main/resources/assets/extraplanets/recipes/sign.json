@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "minecraft:sign",
+    "count": 6
+  },
+  "pattern": [
+    "DDD",
+    "DDD",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "extraplanets:tier3_space_suit_helmet"
+  },
+  "pattern": [
+    "RAC",
+    "RPC",
+    "RAC"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "extraplanets:tier3_un_prepared_space_suit_helmet",
+      "data": 0
+    },
+    "A": {
+      "item": "extraplanets:tier3_armor_layer",
+      "data": 0
+    },
+    "R": {
+      "item": "extraplanets:tier3_radiation_layer",
+      "data": 0
+    },
+    "C": {
+      "item": "extraplanets:tier3_pressure_layer",
+      "data": 0
+    }
+  }
+}

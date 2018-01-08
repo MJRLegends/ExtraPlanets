@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:tier1_radiation_layer",
+    "data": 0
+  },
+  "pattern": [
+    "LCL",
+    "LCL",
+    "LCL"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "extraplanets:cloth",
+      "data": 0
+    },
+    "L": {
+      "item": "extraplanets:ingot_lead",
+      "data": 0
+    }
+  }
+}

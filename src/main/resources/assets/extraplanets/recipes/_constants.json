@@ -1,0 +1,58 @@
+[
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "compressedCopper"
+    },
+    "name": "COMPRESSEDCOPPER"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "compressedSteel"
+    },
+    "name": "COMPRESSEDSTEEL"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "compressedTin"
+    },
+    "name": "COMPRESSEDTIN"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dyeBlack"
+    },
+    "name": "DYEBLACK"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "dyeWhite"
+    },
+    "name": "DYEWHITE"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotAluminum"
+    },
+    "name": "INGOTALUMINUM"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotDesh"
+    },
+    "name": "INGOTDESH"
+  },
+  {
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "name": "STICKWOOD"
+  }
+]

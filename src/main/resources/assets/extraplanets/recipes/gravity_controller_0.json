@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:gravity_controller",
+    "data": 0
+  },
+  "pattern": [
+    "RTR",
+    "TCT",
+    "RTR"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "galacticraftcore:battery"
+    },
+    "C": {
+      "item": "galacticraftcore:item_basic_moon",
+      "data": 0
+    },
+    "T": {
+      "item": "galacticraftcore:basic_item",
+      "data": 14
+    }
+  }
+}

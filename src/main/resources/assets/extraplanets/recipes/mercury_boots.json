@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:mercury_boots"
+  },
+  "pattern": [
+    "   ",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:ingot_mercury",
+      "data": 0
+    }
+  }
+}

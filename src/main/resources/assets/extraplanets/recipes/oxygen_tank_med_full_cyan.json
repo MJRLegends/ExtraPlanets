@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:oxygen_tank_med_full_cyan",
+    "data": 1800
+  },
+  "pattern": [
+    "ZZ",
+    "XX",
+    "YY"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "X": {
+      "item": "galacticraftcore:canister",
+      "data": 0
+    },
+    "Y": {
+      "item": "#COMPRESSEDTIN"
+    },
+    "Z": {
+      "item": "minecraft:wool",
+      "data": 9
+    }
+  }
+}

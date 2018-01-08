@@ -1,0 +1,14 @@
+{
+  "result": {
+    "item": "extraplanets:ingot_mercury",
+    "data": 0,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:mercury",
+      "data": 7
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

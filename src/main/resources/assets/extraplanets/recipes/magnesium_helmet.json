@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:magnesium_helmet"
+  },
+  "pattern": [
+    "   ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier6_items",
+      "data": 5
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:tier11_items",
+    "data": 12,
+    "count": 4
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 5
+    },
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 5
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

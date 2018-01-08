@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:tier4_thermal_padding",
+    "data": 2
+  },
+  "pattern": [
+    "XXX",
+    "XYX",
+    "X X"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:thermal_cloth",
+      "data": 1
+    },
+    "Y": {
+      "item": "extraplanets:tier4_items",
+      "data": 4
+    }
+  }
+}

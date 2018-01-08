@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "extraplanets:tier1_kit",
+    "data": 1
+  },
+  "pattern": [
+    "M G",
+    "T T",
+    "   "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "T": {
+      "item": "galacticraftcore:oxygen_tank_light_full"
+    },
+    "G": {
+      "item": "galacticraftcore:oxygen_gear"
+    },
+    "M": {
+      "item": "galacticraftcore:oxygen_mask"
+    }
+  }
+}

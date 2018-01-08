@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "minecraft:wooden_door",
+    "count": 4
+  },
+  "pattern": [
+    "DD ",
+    "DD ",
+    "DD "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 2
+    }
+  }
+}

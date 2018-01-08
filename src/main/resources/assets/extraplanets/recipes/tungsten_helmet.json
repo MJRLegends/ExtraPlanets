@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:tungsten_helmet"
+  },
+  "pattern": [
+    "   ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier9_items",
+      "data": 5
+    }
+  }
+}

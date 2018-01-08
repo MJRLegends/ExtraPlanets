@@ -1,0 +1,14 @@
+{
+  "result": {
+    "item": "extraplanets:tier10_items",
+    "data": 5,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:eris",
+      "data": 7
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:mercury_axe"
+  },
+  "pattern": [
+    "XX ",
+    "XS ",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "extraplanets:ingot_mercury",
+      "data": 0
+    }
+  }
+}

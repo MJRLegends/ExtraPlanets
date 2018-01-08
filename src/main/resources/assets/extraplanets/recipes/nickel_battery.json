@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "extraplanets:nickel_battery"
+  },
+  "pattern": [
+    " T ",
+    "TRT",
+    "TCT"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "minecraft:coal",
+      "data": 0
+    },
+    "T": {
+      "item": "extraplanets:tier5_items",
+      "data": 6
+    }
+  }
+}

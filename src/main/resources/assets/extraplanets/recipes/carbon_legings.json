@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:carbon_legings"
+  },
+  "pattern": [
+    "MMM",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier4_items",
+      "data": 5
+    }
+  }
+}

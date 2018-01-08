@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:basic_chemical_injector"
+  },
+  "pattern": [
+    "UUU",
+    "PPP",
+    "UUU"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "U": {
+      "item": "extraplanets:ingot_uranium",
+      "data": 0
+    }
+  }
+}

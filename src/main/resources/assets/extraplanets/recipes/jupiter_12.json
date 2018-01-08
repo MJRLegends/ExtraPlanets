@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:jupiter",
+    "data": 12
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:tier5_items",
+      "data": 8
+    }
+  }
+}

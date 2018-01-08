@@ -1,0 +1,33 @@
+{
+  "result": {
+    "item": "extraplanets:tier8_items",
+    "data": 1
+  },
+  "pattern": [
+    "ZYZ",
+    "ZWZ",
+    "XVX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "V": {
+      "item": "galacticraftcore:air_vent"
+    },
+    "W": {
+      "item": "galacticraftcore:fuel_canister_partial",
+      "data": 1
+    },
+    "X": {
+      "item": "extraplanets:tier8_items",
+      "data": 3
+    },
+    "Y": {
+      "item": "minecraft:wool",
+      "data": 14
+    },
+    "Z": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    }
+  }
+}

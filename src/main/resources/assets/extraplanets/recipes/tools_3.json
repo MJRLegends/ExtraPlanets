@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:tools",
+    "data": 3
+  },
+  "pattern": [
+    "CPC",
+    "MMM",
+    "CPC"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "C": {
+      "item": "extraplanets:cloth",
+      "data": 0
+    },
+    "M": {
+      "item": "extraplanets:tools",
+      "data": 2
+    }
+  }
+}

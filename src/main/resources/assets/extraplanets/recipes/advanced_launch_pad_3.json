@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "extraplanets:advanced_launch_pad",
+    "data": 3,
+    "count": 5
+  },
+  "pattern": [
+    "   ",
+    "BBB",
+    "III"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "extraplanets:tier11_items",
+      "data": 6
+    },
+    "I": {
+      "item": "extraplanets:tier11_items",
+      "data": 5
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:decorative_blocks",
+    "data": 8
+  },
+  "pattern": [
+    "   ",
+    "CC ",
+    "CC "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "extraplanets:tier5_items",
+      "data": 5
+    }
+  }
+}

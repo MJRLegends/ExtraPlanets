@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:tier4_un_prepared_space_suit_helmet",
+    "data": 0
+  },
+  "pattern": [
+    " R ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "extraplanets:tier3_un_prepared_space_suit_helmet",
+      "data": 0
+    },
+    "M": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    }
+  }
+}

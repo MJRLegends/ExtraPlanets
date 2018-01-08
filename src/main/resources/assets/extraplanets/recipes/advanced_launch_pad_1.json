@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "extraplanets:advanced_launch_pad",
+    "data": 1,
+    "count": 5
+  },
+  "pattern": [
+    "   ",
+    "BBB",
+    "III"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "extraplanets:pluto",
+      "data": 7
+    },
+    "I": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    }
+  }
+}

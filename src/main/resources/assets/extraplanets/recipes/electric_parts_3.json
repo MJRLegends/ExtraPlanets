@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "extraplanets:electric_parts",
+    "data": 3
+  },
+  "pattern": [
+    " W ",
+    "WXW",
+    " W "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "W": {
+      "item": "#INGOTDESH"
+    },
+    "X": {
+      "item": "extraplanets:electric_parts",
+      "data": 2
+    }
+  }
+}

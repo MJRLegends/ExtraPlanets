@@ -1,0 +1,26 @@
+{
+  "result": {
+    "item": "extraplanets:tools",
+    "data": 1
+  },
+  "pattern": [
+    "ZXZ",
+    "XHX",
+    "ZXZ"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:tier5_items",
+      "data": 10
+    },
+    "H": {
+      "item": "extraplanets:tools",
+      "data": 0
+    },
+    "Z": {
+      "item": "extraplanets:tier5_items",
+      "data": 12
+    }
+  }
+}

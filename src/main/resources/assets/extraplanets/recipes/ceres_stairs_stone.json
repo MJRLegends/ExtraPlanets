@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:ceres_stairs_stone",
+    "count": 4
+  },
+  "pattern": [
+    "M  ",
+    "MM ",
+    "MMM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:ceres",
+      "data": 2
+    }
+  }
+}

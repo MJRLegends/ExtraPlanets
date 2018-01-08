@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:tier3_un_prepared_space_suit_legings",
+    "data": 0
+  },
+  "pattern": [
+    "MMM",
+    "MRM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "extraplanets:tier2_un_prepared_space_suit_legings",
+      "data": 0
+    },
+    "M": {
+      "item": "extraplanets:tier5_items",
+      "data": 5
+    }
+  }
+}

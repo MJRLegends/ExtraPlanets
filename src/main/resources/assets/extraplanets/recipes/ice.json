@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "minecraft:ice",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:dense_ice"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,14 @@
+{
+  "result": {
+    "item": "extraplanets:tier8_items",
+    "data": 6,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:neptune",
+      "data": 11
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

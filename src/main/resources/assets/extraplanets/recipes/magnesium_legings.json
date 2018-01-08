@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:magnesium_legings"
+  },
+  "pattern": [
+    "MMM",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier6_items",
+      "data": 5
+    }
+  }
+}

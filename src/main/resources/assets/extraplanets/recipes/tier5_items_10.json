@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:tier5_items",
+    "data": 10,
+    "count": 2
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:tools",
+      "data": 0
+    },
+    {
+      "item": "extraplanets:ash_rock"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

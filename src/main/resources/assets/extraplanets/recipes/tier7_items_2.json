@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:tier7_items",
+    "data": 2
+  },
+  "pattern": [
+    " Y ",
+    "XYX",
+    "X X"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:tier7_items",
+      "data": 3
+    },
+    "Y": {
+      "item": "extraplanets:tier6_items",
+      "data": 3
+    }
+  }
+}

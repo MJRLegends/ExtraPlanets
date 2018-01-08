@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:uranus",
+    "data": 8
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:tier7_items",
+      "data": 7
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "result": {
+    "item": "extraplanets:massive_battery"
+  },
+  "pattern": [
+    "PPP",
+    "ASA",
+    "NNN"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "extraplanets:tier5_items",
+      "data": 4
+    },
+    "A": {
+      "item": "extraplanets:advanced_battery",
+      "data": 100
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "N": {
+      "item": "extraplanets:tier5_items",
+      "data": 6
+    }
+  }
+}

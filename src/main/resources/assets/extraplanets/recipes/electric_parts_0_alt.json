@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:electric_parts",
+    "data": 0
+  },
+  "pattern": [
+    "XWX",
+    "WXW",
+    "XWX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "galacticraftplanets:item_basic_mars",
+      "data": 3
+    },
+    "X": {
+      "item": "extraplanets:ingot_lead",
+      "data": 0
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:blue_gem_sword"
+  },
+  "pattern": [
+    " X ",
+    " X ",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "extraplanets:tier8_items",
+      "data": 6
+    }
+  }
+}

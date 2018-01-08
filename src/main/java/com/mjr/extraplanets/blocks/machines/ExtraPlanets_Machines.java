@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.blocks.machines;
 
+import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -102,9 +103,9 @@ public class ExtraPlanets_Machines {
 
 	private static void registerMachines() throws NoSuchMethodException {
 		if (Config.REFINERY_ADVANCED)
-			ExtraPlanets_Blocks.registerBlock(REFINERY_ADVANCED, "advanced_refinery");
+			ExtraPlanets_Blocks.registerBlock(REFINERY_ADVANCED, ItemBlockDesc.class, "advanced_refinery");
 		if (Config.REFINERY_ULTIMATE)
-			ExtraPlanets_Blocks.registerBlock(REFINERY_ULTIMATE, "ultimate_refinery");
+			ExtraPlanets_Blocks.registerBlock(REFINERY_ULTIMATE, ItemBlockDesc.class, "ultimate_refinery");
 		if (Config.SOLAR_PANELS)
 			ExtraPlanets_Blocks.registerBlock(SOLAR_PANEL, ItemBlockSolar.class, SOLAR_PANEL.getUnlocalizedName().substring(5));
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED)
@@ -113,27 +114,27 @@ public class ExtraPlanets_Machines {
 			ExtraPlanets_Blocks.registerBlock(OXYGEN_COMPRESSOR_ULTIMATE, ItemBlockUltimateOxygenCompressor.class, OXYGEN_COMPRESSOR_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.RADIATION) {
 			if (Config.BASIC_DECRYSTALLIZER)
-				ExtraPlanets_Blocks.registerBlock(BASIC_DECRYSALLIZER, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
+				ExtraPlanets_Blocks.registerBlock(BASIC_DECRYSALLIZER, ItemBlockDesc.class, BASIC_DECRYSALLIZER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_CRYSTALLIZER)
-				ExtraPlanets_Blocks.registerBlock(BASIC_CRYSALLIZER, BASIC_CRYSALLIZER.getUnlocalizedName().substring(5));
+				ExtraPlanets_Blocks.registerBlock(BASIC_CRYSALLIZER, ItemBlockDesc.class, BASIC_CRYSALLIZER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_SMASHER)
-				ExtraPlanets_Blocks.registerBlock(BASIC_SMASHER, BASIC_SMASHER.getUnlocalizedName().substring(5));
+				ExtraPlanets_Blocks.registerBlock(BASIC_SMASHER, ItemBlockDesc.class, BASIC_SMASHER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_CHEMICAL_INJECTOR)
-				ExtraPlanets_Blocks.registerBlock(BASIC_CHEMICAL_INJECTOR, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
+				ExtraPlanets_Blocks.registerBlock(BASIC_CHEMICAL_INJECTOR, ItemBlockDesc.class, BASIC_CHEMICAL_INJECTOR.getUnlocalizedName().substring(5));
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
-				ExtraPlanets_Blocks.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
+				ExtraPlanets_Blocks.registerBlock(BASIC_SOLAR_EVAPORTATION_CHAMBER, ItemBlockDesc.class, BASIC_SOLAR_EVAPORTATION_CHAMBER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_PURIFIER)
-				ExtraPlanets_Blocks.registerBlock(BASIC_PURIFIER, BASIC_PURIFIER.getUnlocalizedName().substring(5));
+				ExtraPlanets_Blocks.registerBlock(BASIC_PURIFIER, ItemBlockDesc.class, BASIC_PURIFIER.getUnlocalizedName().substring(5));
 			if (Config.BASIC_DECONTAMINATION_UNIT)
 				ExtraPlanets_Blocks.registerBlock(BASIC_DECONTAMINATION_UNIT, ItemBlockBasicDecontaminationUnit.class, BASIC_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
-			ExtraPlanets_Blocks.registerBlock(FUEL_LOADER_ADVANCED, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(FUEL_LOADER_ADVANCED, ItemBlockDesc.class, FUEL_LOADER_ADVANCED.getUnlocalizedName().substring(5));
 		if (Config.FUEL_LOADER_ULTIMATE)
-			ExtraPlanets_Blocks.registerBlock(FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(FUEL_LOADER_ULTIMATE, ItemBlockDesc.class, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.BASIC_DENSIFIER)
-			ExtraPlanets_Blocks.registerBlock(BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
-		ExtraPlanets_Blocks.registerBlock(VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(BASIC_DENSIFIER, ItemBlockDesc.class, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
+		ExtraPlanets_Blocks.registerBlock(VEHICLE_CHARGER, ItemBlockDesc.class, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {

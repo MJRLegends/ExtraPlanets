@@ -1,0 +1,49 @@
+{
+  "result": {
+    "item": "extraplanets:ultimate_battery"
+  },
+  "pattern": [
+    "WRB",
+    "CPM",
+    "TAZ"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "extraplanets:jupiter",
+      "data": 8
+    },
+    "A": {
+      "item": "extraplanets:advanced_battery",
+      "data": 100
+    },
+    "R": {
+      "item": "extraplanets:jupiter",
+      "data": 11
+    },
+    "B": {
+      "item": "extraplanets:neptune",
+      "data": 10
+    },
+    "C": {
+      "item": "extraplanets:mercury",
+      "data": 11
+    },
+    "T": {
+      "item": "extraplanets:tier9_items",
+      "data": 5
+    },
+    "W": {
+      "item": "extraplanets:uranus",
+      "data": 7
+    },
+    "Z": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    },
+    "M": {
+      "item": "extraplanets:saturn",
+      "data": 7
+    }
+  }
+}

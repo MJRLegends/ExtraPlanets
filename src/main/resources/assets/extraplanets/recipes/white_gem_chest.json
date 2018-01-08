@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:white_gem_chest"
+  },
+  "pattern": [
+    "M M",
+    "MMM",
+    "MMM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier7_items",
+      "data": 7
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:cake_blocks",
+    "data": 7
+  },
+  "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:cookie"
+    }
+  }
+}

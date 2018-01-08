@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:uranium_helmet"
+  },
+  "pattern": [
+    "   ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:ingot_uranium",
+      "data": 0
+    }
+  }
+}

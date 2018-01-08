@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:decorative_blocks2",
+    "data": 5
+  },
+  "pattern": [
+    " D ",
+    "DBD",
+    " D "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "extraplanets:decorative_blocks2",
+      "data": 0
+    },
+    "D": {
+      "item": "minecraft:dye",
+      "data": 2
+    }
+  }
+}

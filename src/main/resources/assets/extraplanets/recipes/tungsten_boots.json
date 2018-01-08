@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:tungsten_boots"
+  },
+  "pattern": [
+    "   ",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier9_items",
+      "data": 5
+    }
+  }
+}

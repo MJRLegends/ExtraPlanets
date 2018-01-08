@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:crystal_boots"
+  },
+  "pattern": [
+    "   ",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier7_items",
+      "data": 5
+    }
+  }
+}

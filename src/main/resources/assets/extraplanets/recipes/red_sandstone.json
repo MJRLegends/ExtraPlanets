@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:red_sandstone"
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:red_sand"
+    },
+    {
+      "item": "extraplanets:red_sand"
+    },
+    {
+      "item": "extraplanets:red_sand"
+    },
+    {
+      "item": "extraplanets:red_sand"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

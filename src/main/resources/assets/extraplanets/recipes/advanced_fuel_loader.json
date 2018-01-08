@@ -1,0 +1,28 @@
+{
+  "result": {
+    "item": "extraplanets:advanced_fuel_loader"
+  },
+  "pattern": [
+    "XXX",
+    "XZX",
+    "WYW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "extraplanets:tier5_items",
+      "data": 5
+    },
+    "X": {
+      "item": "extraplanets:tier5_items",
+      "data": 7
+    },
+    "Y": {
+      "item": "extraplanets:tier5_items",
+      "data": 8
+    },
+    "Z": {
+      "item": "galacticraftcore:fuel_loader"
+    }
+  }
+}

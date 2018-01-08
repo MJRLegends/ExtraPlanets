@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "extraplanets:nose_cone_tier5",
+    "data": 0
+  },
+  "pattern": [
+    " Y ",
+    " X ",
+    "X X"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:tier5_items",
+      "data": 3
+    },
+    "Y": {
+      "item": "minecraft:redstone_torch"
+    }
+  }
+}

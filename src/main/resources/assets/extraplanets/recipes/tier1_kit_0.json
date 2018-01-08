@@ -1,0 +1,43 @@
+{
+  "result": {
+    "item": "extraplanets:tier1_kit",
+    "data": 0
+  },
+  "pattern": [
+    "MGF",
+    "TTA",
+    "BCD"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 0
+    },
+    "B": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 1
+    },
+    "C": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 2
+    },
+    "T": {
+      "item": "galacticraftcore:oxygen_tank_light_full"
+    },
+    "D": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 3
+    },
+    "F": {
+      "item": "galacticraftcore:basic_item",
+      "data": 19
+    },
+    "G": {
+      "item": "galacticraftcore:oxygen_gear"
+    },
+    "M": {
+      "item": "galacticraftcore:oxygen_mask"
+    }
+  }
+}

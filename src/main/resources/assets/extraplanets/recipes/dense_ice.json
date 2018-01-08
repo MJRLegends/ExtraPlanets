@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "extraplanets:dense_ice"
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "minecraft:ice"
+    }
+  }
+}

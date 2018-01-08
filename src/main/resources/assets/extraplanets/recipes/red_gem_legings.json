@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:red_gem_legings"
+  },
+  "pattern": [
+    "MMM",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier5_items",
+      "data": 8
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:tier1_un_prepared_space_suit_legings",
+    "data": 0
+  },
+  "pattern": [
+    "MMM",
+    "M M",
+    "M M"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "M": {
+      "item": "#INGOTALUMINUM"
+    }
+  }
+}

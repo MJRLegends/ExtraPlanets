@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:basic_solar_evaporation_chamber"
+  },
+  "pattern": [
+    "SBS",
+    "MMM",
+    "SBS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "extraplanets:mercury",
+      "data": 7
+    },
+    "S": {
+      "item": "galacticraftcore:solar",
+      "data": 0
+    },
+    "M": {
+      "item": "extraplanets:compressed_mercury",
+      "data": 0
+    }
+  }
+}

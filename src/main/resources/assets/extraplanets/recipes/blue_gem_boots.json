@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:blue_gem_boots"
+  },
+  "pattern": [
+    "   ",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier8_items",
+      "data": 6
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "result": {
+    "item": "extraplanets:tier1_kit",
+    "data": 5
+  },
+  "pattern": [
+    "ABC",
+    " D ",
+    "   "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 0
+    },
+    "B": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 1
+    },
+    "C": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 2
+    },
+    "D": {
+      "item": "galacticraftplanets:thermal_padding",
+      "data": 3
+    }
+  }
+}

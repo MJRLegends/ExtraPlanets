@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "extraplanets:tools",
+    "data": 0
+  },
+  "pattern": [
+    "XXX",
+    "YSY",
+    " S "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "extraplanets:tier5_items",
+      "data": 12
+    },
+    "Y": {
+      "item": "galacticraftcore:item_basic_moon",
+      "data": 0
+    }
+  }
+}

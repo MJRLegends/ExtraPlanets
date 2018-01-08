@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:yellow_diamond_legings"
+  },
+  "pattern": [
+    "MMM",
+    "M M",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier11_items",
+      "data": 3
+    }
+  }
+}

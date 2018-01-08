@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:tier3_space_suit_gravity_boots"
+  },
+  "pattern": [
+    " G ",
+    "GRG",
+    " G "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "extraplanets:tier3_space_suit_boots"
+    },
+    "G": {
+      "item": "extraplanets:gravity_controller",
+      "data": 0
+    }
+  }
+}

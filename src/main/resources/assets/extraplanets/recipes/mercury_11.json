@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:mercury",
+    "data": 11
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:tier4_items",
+      "data": 5
+    }
+  }
+}

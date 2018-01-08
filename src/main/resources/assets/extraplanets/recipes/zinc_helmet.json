@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:zinc_helmet"
+  },
+  "pattern": [
+    "   ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    }
+  }
+}

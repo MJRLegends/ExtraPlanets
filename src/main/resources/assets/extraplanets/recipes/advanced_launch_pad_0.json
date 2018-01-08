@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "extraplanets:advanced_launch_pad",
+    "data": 0,
+    "count": 5
+  },
+  "pattern": [
+    "   ",
+    "BBB",
+    "III"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "galacticraftplanets:item_basic_asteroids",
+      "data": 6
+    },
+    "I": {
+      "item": "galacticraftplanets:item_basic_asteroids",
+      "data": 0
+    }
+  }
+}

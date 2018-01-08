@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:mercury_helmet"
+  },
+  "pattern": [
+    "   ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:ingot_mercury",
+      "data": 0
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "result": {
+    "item": "extraplanets:candy_blocks",
+    "data": 1
+  },
+  "pattern": [
+    " D ",
+    "DCD",
+    " D "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "extraplanets:candy_blocks",
+      "data": 0
+    },
+    "D": {
+      "item": "minecraft:dye",
+      "data": 2
+    }
+  }
+}

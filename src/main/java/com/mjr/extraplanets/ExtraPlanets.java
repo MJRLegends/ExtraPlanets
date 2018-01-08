@@ -106,6 +106,7 @@ import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
 import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.proxy.CommonProxy;
+import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.recipes.MarsRoverRecipes;
 import com.mjr.extraplanets.recipes.Tier10ElectricRocketRecipes;
 import com.mjr.extraplanets.recipes.Tier10RocketRecipes;
@@ -342,6 +343,9 @@ public class ExtraPlanets {
 
 		packetPipeline = ExtraPlanetsChannelHandler.init();
 
+		// Register Recipes
+		ExtraPlanets_Recipes.init();
+		
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 	}
@@ -360,9 +364,6 @@ public class ExtraPlanets {
 
 		// Register/Add Dungeon Loot
 		addDungeonLoot();
-
-		// Register Recipes
-		// ExtraPlanets_Recipes.init();
 
 		// Initialize/Register Achievements
 		// if (Config.ACHIEVEMENTS)

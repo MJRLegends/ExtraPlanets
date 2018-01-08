@@ -1,0 +1,21 @@
+{
+  "result": {
+    "item": "extraplanets:thermal_cloth",
+    "data": 2
+  },
+  "pattern": [
+    "XXX",
+    "XYX"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "galacticraftplanets:item_basic_asteroids",
+      "data": 7
+    },
+    "Y": {
+      "item": "extraplanets:tier6_items",
+      "data": 4
+    }
+  }
+}

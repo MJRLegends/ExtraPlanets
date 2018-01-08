@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:palladium_helmet"
+  },
+  "pattern": [
+    "   ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier5_items",
+      "data": 5
+    }
+  }
+}

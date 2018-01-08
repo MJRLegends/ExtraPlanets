@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "extraplanets:tier1_space_suit_chest"
+  },
+  "pattern": [
+    "RAC",
+    "RPC",
+    "RAC"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "extraplanets:tier1_un_prepared_space_suit_chest",
+      "data": 0
+    },
+    "A": {
+      "item": "extraplanets:tier1_armor_layer",
+      "data": 0
+    },
+    "R": {
+      "item": "extraplanets:tier1_radiation_layer",
+      "data": 0
+    },
+    "C": {
+      "item": "extraplanets:tier1_pressure_layer",
+      "data": 0
+    }
+  }
+}

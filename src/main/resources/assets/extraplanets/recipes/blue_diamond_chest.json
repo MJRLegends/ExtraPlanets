@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:blue_diamond_chest"
+  },
+  "pattern": [
+    "M M",
+    "MMM",
+    "MMM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier11_items",
+      "data": 0
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:apple_diamond",
+    "data": 0
+  },
+  "pattern": [
+    "DDD",
+    "DAD",
+    "DDD"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:apple"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  }
+}

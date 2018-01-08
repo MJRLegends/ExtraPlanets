@@ -1,0 +1,14 @@
+{
+  "result": {
+    "item": "extraplanets:tier4_items",
+    "data": 5,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:mercury",
+      "data": 11
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

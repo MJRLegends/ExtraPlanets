@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:tier1_un_prepared_space_suit_chest",
+    "data": 0
+  },
+  "pattern": [
+    "M M",
+    "MMM",
+    "MMM"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "M": {
+      "item": "#INGOTALUMINUM"
+    }
+  }
+}

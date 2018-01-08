@@ -1,0 +1,14 @@
+{
+  "result": {
+    "item": "extraplanets:tier7_items",
+    "data": 7,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:uranus",
+      "data": 8
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:purple_diamond_sword"
+  },
+  "pattern": [
+    " X ",
+    " X ",
+    " S "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "#STICKWOOD"
+    },
+    "X": {
+      "item": "extraplanets:tier11_items",
+      "data": 2
+    }
+  }
+}

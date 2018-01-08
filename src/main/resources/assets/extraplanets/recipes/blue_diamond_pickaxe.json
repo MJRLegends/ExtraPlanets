@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:blue_diamond_pickaxe"
+  },
+  "pattern": [
+    "XXX",
+    " S ",
+    " S "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "#STICKWOOD"
+    },
+    "X": {
+      "item": "extraplanets:tier11_items",
+      "data": 0
+    }
+  }
+}

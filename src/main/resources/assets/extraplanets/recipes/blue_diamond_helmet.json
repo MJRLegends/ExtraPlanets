@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:blue_diamond_helmet"
+  },
+  "pattern": [
+    "   ",
+    "MMM",
+    "M M"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:tier11_items",
+      "data": 0
+    }
+  }
+}

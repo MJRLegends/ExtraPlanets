@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "extraplanets:tools",
+    "data": 2
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:string"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:ultimate_refinery"
+  },
+  "pattern": [
+    "ZYZ",
+    "YZY",
+    "ZYZ"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "Y": {
+      "item": "extraplanets:advanced_refinery"
+    },
+    "Z": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:neptune_stairs_sub_surface",
+    "count": 4
+  },
+  "pattern": [
+    "M  ",
+    "MM ",
+    "MMM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:neptune",
+      "data": 1
+    }
+  }
+}

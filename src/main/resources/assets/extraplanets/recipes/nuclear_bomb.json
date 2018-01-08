@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "extraplanets:nuclear_bomb"
+  },
+  "pattern": [
+    "GSG",
+    "SUS",
+    "GSG"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:sand",
+      "data": 0
+    },
+    "U": {
+      "item": "extraplanets:ingot_uranium",
+      "data": 32767
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+  }
+}

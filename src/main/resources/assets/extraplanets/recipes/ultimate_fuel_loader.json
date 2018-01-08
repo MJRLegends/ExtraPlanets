@@ -1,0 +1,28 @@
+{
+  "result": {
+    "item": "extraplanets:ultimate_fuel_loader"
+  },
+  "pattern": [
+    "XXX",
+    "XZX",
+    "WYW"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "extraplanets:tier8_items",
+      "data": 5
+    },
+    "X": {
+      "item": "extraplanets:tier9_items",
+      "data": 5
+    },
+    "Y": {
+      "item": "extraplanets:tier8_items",
+      "data": 6
+    },
+    "Z": {
+      "item": "extraplanets:advanced_fuel_loader"
+    }
+  }
+}

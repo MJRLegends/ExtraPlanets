@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "extraplanets:jupiter_stairs_sub_surface",
+    "count": 4
+  },
+  "pattern": [
+    "M  ",
+    "MM ",
+    "MMM"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "extraplanets:jupiter",
+      "data": 1
+    }
+  }
+}
