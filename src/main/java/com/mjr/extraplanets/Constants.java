@@ -12,7 +12,7 @@ public class Constants {
 
 	public static final String MCVERSION = "[1.8.9]";
 	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[11.15.1.1764,);";
-	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib; required-after:GalacticraftCore; required-after:GalacticraftPlanets;";
+	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.8.9-1.0.2,); required-after:GalacticraftCore; required-after:GalacticraftPlanets;";
 
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
