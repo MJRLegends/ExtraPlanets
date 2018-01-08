@@ -8,7 +8,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -70,6 +69,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompre
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class GuiHandler implements IGuiHandler {
 	@Override
@@ -132,7 +132,7 @@ public class GuiHandler implements IGuiHandler {
 
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+		if (MCUtilities.isClient()) {
 			return this.getClientGuiElement(ID, player, world, new BlockPos(x, y, z));
 		}
 

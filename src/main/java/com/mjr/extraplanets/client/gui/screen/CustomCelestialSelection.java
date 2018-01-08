@@ -33,8 +33,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.relauncher.Side;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
@@ -45,6 +43,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
 	private List<String> galaxies = new ArrayList<String>();
@@ -536,7 +535,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
+						if (MCUtilities.isClient())
 							temp = WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
 						else
 							temp = WorldUtil.getProviderForDimensionServer(this.selectedBody.getDimensionID());

@@ -10,7 +10,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -22,6 +21,7 @@ import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Titan.worldgen.BiomeProviderTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderTitan extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
 	@Override
@@ -141,7 +141,7 @@ public class WorldProviderTitan extends WorldProviderRealisticSpace implements I
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+		if (MCUtilities.isServer() && isDaytime()) {
 			return 80.0F;
 		}
 		return 70.0F;
