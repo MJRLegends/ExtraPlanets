@@ -110,7 +110,7 @@ public class WorldProviderUranus extends WorldProviderRealisticSpace implements 
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.THERMAL_PADDINGS) {
-			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+			if (MCUtilities.isServer() && isDaytime()) {
 				return -120.0F;
 			}
 			return -115.0F;

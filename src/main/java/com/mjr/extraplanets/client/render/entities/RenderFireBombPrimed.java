@@ -23,7 +23,7 @@ public class RenderFireBombPrimed extends Render<EntityFireBombPrimed> {
 
 	@Override
 	public void doRender(EntityFireBombPrimed entity, double x, double y, double z, float entityYaw, float partialTicks) {
-		BlockRendererDispatcher blockrendererdispatcher = Minecraft.getMinecraft().getBlockRendererDispatcher();
+		BlockRendererDispatcher blockrendererdispatcher = MCUtilities.getMinecraft().getBlockRendererDispatcher();
 		GlStateManager.pushMatrix();
 		GlStateManager.translate((float) x, (float) y + 0.5F, (float) z);
 

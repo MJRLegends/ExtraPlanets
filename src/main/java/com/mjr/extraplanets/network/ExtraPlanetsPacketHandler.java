@@ -36,7 +36,7 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 		}
 
 		packetMap = ImmutableMap.copyOf(map);
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+		if (MCUtilities.isClient()) {
 			MainHandlerClient.addPacketHandler(this);
 		}
 		MainHandlerServer.addPacketHandler(this);

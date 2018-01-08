@@ -34,7 +34,7 @@ public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding downKey;
 	public static KeyBinding spaceKey;
 	public static KeyBinding leftShiftKey;
-	private static Minecraft mc = Minecraft.getMinecraft();
+	private static Minecraft mc = MCUtilities.getMinecraft();
 
 	public KeyHandlerClient() {
 		super(new KeyBinding[] { KeyHandlerClient.openFuelGui }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });

@@ -48,7 +48,7 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 			try {
 				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
+				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
 				modelRover = (OBJModel.OBJBakedModel) model.bake(
 						new OBJModel.OBJState(ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013",

@@ -30,7 +30,7 @@ public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecia
 				OBJModel model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "block/decontamination_unit.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
 
-				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
+				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 				mainModel = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"),
 						false), DefaultVertexFormats.ITEM, spriteFunction);
 			} catch (Exception e) {

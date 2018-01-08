@@ -211,7 +211,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void processPacket(INetHandler var1) {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+		if (MCUtilities.isClient()) {
 			this.handleClientSide(FMLClientHandler.instance().getClientPlayerEntity());
 		}
 	}

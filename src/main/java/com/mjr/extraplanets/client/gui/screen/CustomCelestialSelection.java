@@ -536,7 +536,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				if (!(this.selectedBody instanceof Star)) {
 					WorldProvider temp = null;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().contains("overworld") && !(this.selectedBody instanceof Satellite))
-						if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT)
+						if (MCUtilities.isClient())
 							temp = WorldUtil.getProviderForDimensionClient(this.selectedBody.getDimensionID());
 						else
 							temp = WorldUtil.getProviderForDimensionServer(this.selectedBody.getDimensionID());

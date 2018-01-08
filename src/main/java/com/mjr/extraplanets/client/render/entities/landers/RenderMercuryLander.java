@@ -38,7 +38,7 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 			try {
 				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "mercury_lander.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
+				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
 				landerModel = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("ChamferCyl001", "OneLeg", "TwoLeg", "ThreeLeg", "FourLeg"), false), DefaultVertexFormats.ITEM, spriteFunction);
 

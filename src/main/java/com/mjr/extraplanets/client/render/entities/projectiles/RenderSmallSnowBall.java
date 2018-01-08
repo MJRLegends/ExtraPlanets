@@ -33,7 +33,7 @@ public class RenderSmallSnowBall extends Render<Entity> {
 
 		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
 
-		Minecraft.getMinecraft().getRenderItem().renderItem(this.itemStack, TransformType.GROUND);
+		MCUtilities.getMinecraft().getRenderItem().renderItem(this.itemStack, TransformType.GROUND);
 		GlStateManager.disableRescaleNormal();
 
 		GlStateManager.popMatrix();

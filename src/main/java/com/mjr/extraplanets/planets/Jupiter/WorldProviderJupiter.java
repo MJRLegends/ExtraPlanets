@@ -113,7 +113,7 @@ public class WorldProviderJupiter extends WorldProviderRealisticSpace implements
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.THERMAL_PADDINGS) {
-			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+			if (MCUtilities.isServer() && isDaytime()) {
 				return 100.0F;
 			}
 			return 90.0F;

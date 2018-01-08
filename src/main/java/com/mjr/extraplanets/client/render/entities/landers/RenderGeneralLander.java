@@ -38,7 +38,7 @@ public class RenderGeneralLander extends Render<EntityGeneralLander> {
 			try {
 				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "general_lander.obj"));
 				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> Minecraft.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
+				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
 				landerModel = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("FourLeg", "Body", "TwoLeg", "ThreeLeg", "OneLeg", "Plane001"), false), DefaultVertexFormats.ITEM, spriteFunction);
 

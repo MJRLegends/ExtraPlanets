@@ -132,7 +132,7 @@ public class GuiHandler implements IGuiHandler {
 
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT) {
+		if (MCUtilities.isClient()) {
 			return this.getClientGuiElement(ID, player, world, new BlockPos(x, y, z));
 		}
 

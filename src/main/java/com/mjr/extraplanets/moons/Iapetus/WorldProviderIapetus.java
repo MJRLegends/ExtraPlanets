@@ -141,7 +141,7 @@ public class WorldProviderIapetus extends WorldProviderRealisticSpace implements
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+		if (MCUtilities.isServer() && isDaytime()) {
 			return 40.0F;
 		}
 		return 20.0F;

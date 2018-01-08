@@ -113,7 +113,7 @@ public class WorldProviderSaturn extends WorldProviderRealisticSpace implements 
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.THERMAL_PADDINGS) {
-			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+			if (MCUtilities.isServer() && isDaytime()) {
 				return 80.0F;
 			}
 			return 70.0F;

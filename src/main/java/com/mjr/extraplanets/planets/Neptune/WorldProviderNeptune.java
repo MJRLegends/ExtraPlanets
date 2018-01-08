@@ -113,7 +113,7 @@ public class WorldProviderNeptune extends WorldProviderRealisticSpace implements
 	@Override
 	public float getThermalLevelModifier() {
 		if (Config.THERMAL_PADDINGS) {
-			if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+			if (MCUtilities.isServer() && isDaytime()) {
 				return -140.0F;
 			}
 			return -130.0F;

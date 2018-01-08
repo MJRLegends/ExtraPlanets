@@ -254,9 +254,9 @@ public class MainHandlerClient {
 	public void onGuiOpenEvent(GuiOpenEvent event) {
 		if (((event.getGui() instanceof GuiCelestialSelection))) {
 			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
-				event.setGui(new CustomCelestialSelection(true, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
+				event.setGui(new CustomCelestialSelection(true, null, PermissionAPI.hasPermission(MCUtilities.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
 			} else {
-				event.setGui(new CustomCelestialSelection(false, null, PermissionAPI.hasPermission(Minecraft.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
+				event.setGui(new CustomCelestialSelection(false, null, PermissionAPI.hasPermission(MCUtilities.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
 			}
 		}
 	}
@@ -285,7 +285,7 @@ public class MainHandlerClient {
 
 	@SubscribeEvent
 	public void onRenderPlanetPost(CelestialBodyRenderEvent.Post event) {
-		Minecraft mc = Minecraft.getMinecraft();
+		Minecraft mc = MCUtilities.getMinecraft();
 		if (mc.currentScreen instanceof GuiCelestialSelection) {
 			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));

@@ -138,7 +138,7 @@ public class WorldProviderTitania extends WorldProviderRealisticSpace implements
 
 	@Override
 	public float getThermalLevelModifier() {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER && isDaytime()) {
+		if (MCUtilities.isServer() && isDaytime()) {
 			return -120.0F;
 		}
 		return -115.0F;
