@@ -21,13 +21,13 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnHydroCarbonSea;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class SaturnBiomes extends BiomeGenBase {
 
-	public static final Biome saturn = new BiomeGenSaturn(new BiomeProperties("saturn").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome saturnHydroCarbonSea = new BiomeGenSaturnHydroCarbonSea(new BiomeProperties("saturnHydroCarbonSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome saturnNuclearLand = new BiomeGenSaturnNuclearLand(new BiomeProperties("saturnNuclearLand").setBaseHeight(0.225F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase saturn = new BiomeGenSaturn(new BiomeProperties("saturn").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase saturnHydroCarbonSea = new BiomeGenSaturnHydroCarbonSea(new BiomeProperties("saturnHydroCarbonSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase saturnNuclearLand = new BiomeGenSaturnNuclearLand(new BiomeProperties("saturnNuclearLand").setBaseHeight(0.225F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
 
 	protected SaturnBiomes(BiomeProperties properties) {
 		super(properties);

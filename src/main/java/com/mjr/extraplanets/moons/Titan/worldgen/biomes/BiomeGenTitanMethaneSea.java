@@ -8,9 +8,10 @@ import net.minecraftforge.common.BiomeDictionary;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 
-public class BiomeGenTitanMethaneSea extends Biome {
-	public BiomeGenTitanMethaneSea(Biome.BiomeProperties properties) {
+public class BiomeGenTitanMethaneSea extends TitanBiomes {
+	public BiomeGenTitanMethaneSea(BiomeProperties properties) {
 		super(properties);
 		this.spawnableCreatureList.clear();
 		this.topBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();

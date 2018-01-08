@@ -1,7 +1,8 @@
 package com.mjr.extraplanets;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
@@ -15,7 +16,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -26,7 +26,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.registries.IForgeRegistry;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -81,30 +80,51 @@ import com.mjr.extraplanets.items.schematics.SchematicTier9;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
+import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
 import com.mjr.extraplanets.moons.Deimos.event.DeimosEvents;
+import com.mjr.extraplanets.moons.Deimos.worldgen.DeimosBiomes;
 import com.mjr.extraplanets.moons.Europa.event.EuropaEvents;
+import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
 import com.mjr.extraplanets.moons.Ganymede.event.GanymedeEvents;
+import com.mjr.extraplanets.moons.Ganymede.worldgen.GanymedeBiomes;
 import com.mjr.extraplanets.moons.Iapetus.event.IapetusEvents;
+import com.mjr.extraplanets.moons.Iapetus.worldgen.IapetusBiomes;
 import com.mjr.extraplanets.moons.Io.event.IoEvents;
+import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
 import com.mjr.extraplanets.moons.Oberon.event.OberonEvents;
+import com.mjr.extraplanets.moons.Oberon.worldgen.OberonBiomes;
 import com.mjr.extraplanets.moons.Phobos.event.PhobosEvents;
+import com.mjr.extraplanets.moons.Phobos.worldgen.PhobosBiomes;
 import com.mjr.extraplanets.moons.Rhea.event.RheaEvents;
+import com.mjr.extraplanets.moons.Rhea.worldgen.RheaBiomes;
 import com.mjr.extraplanets.moons.Titan.event.TitanEvents;
+import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 import com.mjr.extraplanets.moons.Titania.event.TitaniaEvents;
+import com.mjr.extraplanets.moons.Titania.worldgen.TitaniaBiomes;
 import com.mjr.extraplanets.moons.Triton.event.TritonEvents;
+import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
+import com.mjr.extraplanets.planets.Ceres.worldgen.CeresBiomes;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
+import com.mjr.extraplanets.planets.Eris.worldgen.ErisBiomes;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
+import com.mjr.extraplanets.planets.Mercury.worldgen.MercuryBiomes;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
+import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
 import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
+import com.mjr.extraplanets.planets.Pluto.worldgen.PlutoBiomes;
 import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
+import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
+import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.recipes.MarsRoverRecipes;
@@ -127,8 +147,8 @@ import com.mjr.extraplanets.schematicPages.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier9Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTierElectricRocket;
 import com.mjr.extraplanets.schematicPages.SchematicVenusRover;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS)
 public class ExtraPlanets {
@@ -141,46 +161,10 @@ public class ExtraPlanets {
 
 	public static ExtraPlanetsChannelHandler packetPipeline;
 
-	// Block/Item/Biome Events Registering
-
+	// Block/Item/Biome Events Registering Lists
 	public static HashMap<String, ItemStack> itemList = new HashMap<>();
 	public static HashMap<String, Block> blocksList = new HashMap<>();
-	public static LinkedList<BiomeGenBase> biomesList = new LinkedList<>();
-
-	@Mod.EventBusSubscriber(modid = Constants.modID)
-	public static class RegistrationHandler {
-		@SubscribeEvent
-		public static void registerBlocksEvent(RegistryEvent.Register<Block> event) {
-			ExtraPlanets.registerBlocks(event.getRegistry());
-		}
-
-		@SubscribeEvent
-		public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
-			ExtraPlanets.registerItems(event.getRegistry());
-		}
-
-		@SubscribeEvent
-		public static void registerBiomes(RegistryEvent.Register<Biome> event) {
-			for (BiomeGenBase biome : ExtraPlanets.biomesList) {
-				event.getRegistry().register(biome);
-				if (!ConfigManagerCore.disableBiomeTypeRegistrations) {
-					biome.registerTypes();
-				}
-			}
-		}
-	}
-
-	public static void registerItems(IForgeRegistry<Item> registry) {
-		for (ItemStack item : ExtraPlanets.itemList.values()) {
-			registry.register(item.getItem());
-		}
-	}
-
-	public static void registerBlocks(IForgeRegistry<Block> registry) {
-		for (Block block : ExtraPlanets.blocksList.values()) {
-			registry.register(block);
-		}
-	}
+	public static List<BiomeGenBase> biomesList = new ArrayList<>();
 
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
@@ -254,55 +238,55 @@ public class ExtraPlanets {
 		Config.load();
 
 		// Main Events
-		MinecraftForge.EVENT_BUS.register(new MainHandlerServer());
+		RegisterUtilities.registerEventHandler(new MainHandlerServer());
 
 		// Planets Events
 		if (Config.MERCURY)
-			MinecraftForge.EVENT_BUS.register(new MercuryEvents());
+			RegisterUtilities.registerEventHandler(new MercuryEvents());
 		if (Config.CERES)
-			MinecraftForge.EVENT_BUS.register(new CeresEvents());
+			RegisterUtilities.registerEventHandler(new CeresEvents());
 		if (Config.JUPITER)
-			MinecraftForge.EVENT_BUS.register(new JupiterEvents());
+			RegisterUtilities.registerEventHandler(new JupiterEvents());
 		if (Config.SATURN)
-			MinecraftForge.EVENT_BUS.register(new SaturnEvents());
+			RegisterUtilities.registerEventHandler(new SaturnEvents());
 		if (Config.URANUS)
-			MinecraftForge.EVENT_BUS.register(new UranusEvents());
+			RegisterUtilities.registerEventHandler(new UranusEvents());
 		if (Config.NEPTUNE)
-			MinecraftForge.EVENT_BUS.register(new NeptuneEvents());
+			RegisterUtilities.registerEventHandler(new NeptuneEvents());
 		if (Config.PLUTO)
-			MinecraftForge.EVENT_BUS.register(new PlutoEvents());
+			RegisterUtilities.registerEventHandler(new PlutoEvents());
 		if (Config.ERIS)
-			MinecraftForge.EVENT_BUS.register(new ErisEvents());
+			RegisterUtilities.registerEventHandler(new ErisEvents());
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS)
-			MinecraftForge.EVENT_BUS.register(new Kepler22bEvents());
+			RegisterUtilities.registerEventHandler(new Kepler22bEvents());
 
 		// Moons Events
 		if (Config.CALLISTO)
-			MinecraftForge.EVENT_BUS.register(new CallistoEvents());
+			RegisterUtilities.registerEventHandler(new CallistoEvents());
 		if (Config.DEIMOS)
-			MinecraftForge.EVENT_BUS.register(new DeimosEvents());
+			RegisterUtilities.registerEventHandler(new DeimosEvents());
 		if (Config.EUROPA)
-			MinecraftForge.EVENT_BUS.register(new EuropaEvents());
+			RegisterUtilities.registerEventHandler(new EuropaEvents());
 		if (Config.GANYMEDE)
-			MinecraftForge.EVENT_BUS.register(new GanymedeEvents());
+			RegisterUtilities.registerEventHandler(new GanymedeEvents());
 		if (Config.IO)
-			MinecraftForge.EVENT_BUS.register(new IoEvents());
+			RegisterUtilities.registerEventHandler(new IoEvents());
 		if (Config.PHOBOS)
-			MinecraftForge.EVENT_BUS.register(new PhobosEvents());
+			RegisterUtilities.registerEventHandler(new PhobosEvents());
 		if (Config.TRITON)
-			MinecraftForge.EVENT_BUS.register(new TritonEvents());
+			RegisterUtilities.registerEventHandler(new TritonEvents());
 		if (Config.RHEA)
-			MinecraftForge.EVENT_BUS.register(new RheaEvents());
+			RegisterUtilities.registerEventHandler(new RheaEvents());
 		if (Config.TITAN)
-			MinecraftForge.EVENT_BUS.register(new TitanEvents());
+			RegisterUtilities.registerEventHandler(new TitanEvents());
 		if (Config.OBERON)
-			MinecraftForge.EVENT_BUS.register(new OberonEvents());
+			RegisterUtilities.registerEventHandler(new OberonEvents());
 		if (Config.IAPETUS)
-			MinecraftForge.EVENT_BUS.register(new IapetusEvents());
+			RegisterUtilities.registerEventHandler(new IapetusEvents());
 		if (Config.TITANIA)
-			MinecraftForge.EVENT_BUS.register(new TitaniaEvents());
+			RegisterUtilities.registerEventHandler(new TitaniaEvents());
 		if (Config.KUIPER_BELT)
-			MinecraftForge.EVENT_BUS.register(new KuiperBeltEvents());
+			RegisterUtilities.registerEventHandler(new KuiperBeltEvents());
 
 		// Initialization/Registering Methods For Blocks/Items
 		ExtraPlanets_Blocks.init();
@@ -312,8 +296,11 @@ public class ExtraPlanets {
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
+		// Register RegistrationHandler
+		RegisterUtilities.registerEventHandler(new RegistrationHandler());
+
 		// Bone Meal Handler
-		MinecraftForge.EVENT_BUS.register(new BoneMealHandler());
+		RegisterUtilities.registerEventHandler(new BoneMealHandler());
 
 		// Proxy PreInit Method
 		ExtraPlanets.proxy.preInit(event);
@@ -345,7 +332,7 @@ public class ExtraPlanets {
 
 		// Register Recipes
 		ExtraPlanets_Recipes.init();
-		
+
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 	}
@@ -389,6 +376,85 @@ public class ExtraPlanets {
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
+	}
+
+	public static void registerBiomes() {
+		// Planets
+		if (Config.MERCURY)
+			ExtraPlanets.biomesList.add(MercuryBiomes.mercury);
+		if (Config.CERES)
+			ExtraPlanets.biomesList.add(CeresBiomes.ceres);
+		if (Config.JUPITER) {
+			ExtraPlanets.biomesList.add(JupiterBiomes.jupiter);
+			ExtraPlanets.biomesList.add(JupiterBiomes.jupiterMagmaSea);
+			ExtraPlanets.biomesList.add(JupiterBiomes.jupiterSands);
+		}
+		if (Config.SATURN) {
+			ExtraPlanets.biomesList.add(SaturnBiomes.saturn);
+			ExtraPlanets.biomesList.add(SaturnBiomes.saturnHydroCarbonSea);
+			ExtraPlanets.biomesList.add(SaturnBiomes.saturnNuclearLand);
+		}
+		if (Config.URANUS) {
+			ExtraPlanets.biomesList.add(UranusBiomes.uranus);
+			ExtraPlanets.biomesList.add(UranusBiomes.uranusFrozenWater);
+			ExtraPlanets.biomesList.add(UranusBiomes.uranusSnowLands);
+		}
+		if (Config.NEPTUNE) {
+			ExtraPlanets.biomesList.add(NeptuneBiomes.neptune);
+			ExtraPlanets.biomesList.add(NeptuneBiomes.neptuneRadioActiveWaterSea);
+			ExtraPlanets.biomesList.add(NeptuneBiomes.neptuneLayeredHills);
+		}
+		if (Config.PLUTO)
+			ExtraPlanets.biomesList.add(PlutoBiomes.pluto);
+		if (Config.ERIS)
+			ExtraPlanets.biomesList.add(ErisBiomes.eris);
+		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bPlains);
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bRedForest);
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bRedDesert);
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bWasteLands);
+			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bCandyLand);
+		}
+		// Moons
+		if (Config.CALLISTO)
+			ExtraPlanets.biomesList.add(CallistoBiomes.callisto);
+		if (Config.DEIMOS)
+			ExtraPlanets.biomesList.add(DeimosBiomes.deimos);
+		if (Config.EUROPA)
+			ExtraPlanets.biomesList.add(EuropaBiomes.europa);
+		if (Config.GANYMEDE)
+			ExtraPlanets.biomesList.add(GanymedeBiomes.ganymede);
+		if (Config.IAPETUS)
+			ExtraPlanets.biomesList.add(IapetusBiomes.iapetus);
+		if (Config.IO) {
+			ExtraPlanets.biomesList.add(IoBiomes.io);
+			ExtraPlanets.biomesList.add(IoBiomes.ioAshLands);
+			ExtraPlanets.biomesList.add(IoBiomes.ioBurningPlains);
+		}
+		if (Config.OBERON) {
+			ExtraPlanets.biomesList.add(OberonBiomes.oberon);
+			ExtraPlanets.biomesList.add(OberonBiomes.oberonLargeMountain);
+			ExtraPlanets.biomesList.add(OberonBiomes.oberonValleys);
+		}
+		if (Config.PHOBOS)
+			ExtraPlanets.biomesList.add(PhobosBiomes.phobos);
+		if (Config.RHEA)
+			ExtraPlanets.biomesList.add(RheaBiomes.rhea);
+		if (Config.TITAN) {
+			ExtraPlanets.biomesList.add(TitanBiomes.titan);
+			ExtraPlanets.biomesList.add(TitanBiomes.titanMethaneHills);
+			ExtraPlanets.biomesList.add(TitanBiomes.titanMethaneSea);
+		}
+		if (Config.TITANIA)
+			ExtraPlanets.biomesList.add(TitaniaBiomes.titania);
+		if (Config.TRITON) {
+			ExtraPlanets.biomesList.add(TritonBiomes.triton);
+			ExtraPlanets.biomesList.add(TritonBiomes.tritonIceLands);
+			ExtraPlanets.biomesList.add(TritonBiomes.tritonIceSea);
+		}
 	}
 
 	private void registerFluidSubmergedTextures() {
@@ -577,6 +643,35 @@ public class ExtraPlanets {
 		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 3));
 		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 4));
 		TileEntityDeconstructor.addSalvage(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6));
+	}
 
+	@Mod.EventBusSubscriber(modid = Constants.modID)
+	public static class RegistrationHandler {
+		@SubscribeEvent
+		public static void registerBlocksEvent(RegistryEvent.Register<Block> event) {
+			for (Block block : ExtraPlanets.blocksList.values()) {
+				event.getRegistry().register(block);
+			}
+		}
+
+		@SubscribeEvent
+		public static void registerItemsEvent(RegistryEvent.Register<Item> event) {
+			for (ItemStack item : ExtraPlanets.itemList.values()) {
+				event.getRegistry().register(item.getItem());
+			}
+		}
+
+		@SubscribeEvent
+		public static void registerBiomes(RegistryEvent.Register<Biome> event) {
+			// Register Biomes
+			ExtraPlanets.registerBiomes();
+
+			for (BiomeGenBase biome : ExtraPlanets.biomesList) {
+				event.getRegistry().register(biome);
+				if (!ConfigManagerCore.disableBiomeTypeRegistrations) {
+					biome.registerTypes();
+				}
+			}
+		}
 	}
 }

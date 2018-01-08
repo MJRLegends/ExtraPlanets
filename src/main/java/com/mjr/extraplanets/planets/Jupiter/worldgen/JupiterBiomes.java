@@ -21,13 +21,13 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class JupiterBiomes extends BiomeGenBase {
 
-	public static final Biome jupiter = new BiomeGenJupiter(new BiomeProperties("jupiter").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome jupiterMagmaSea = new BiomeGenJupiterMagmaSea(new BiomeProperties("jupiterMagmaSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome jupiterSands = new BiomeGenJupiterSands(new BiomeProperties("jupiterSands").setBaseHeight(1.0F).setHeightVariation(0.5F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase jupiter = new BiomeGenJupiter(new BiomeProperties("jupiter").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase jupiterMagmaSea = new BiomeGenJupiterMagmaSea(new BiomeProperties("jupiterMagmaSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase jupiterSands = new BiomeGenJupiterSands(new BiomeProperties("jupiterSands").setBaseHeight(1.0F).setHeightVariation(0.5F).setRainfall(0.0F).setRainDisabled());
 
 	protected JupiterBiomes(BiomeProperties properties) {
 		super(properties);

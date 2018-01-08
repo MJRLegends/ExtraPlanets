@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.moons.Callisto.worldgen;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenCallisto extends CallistoBiomes {

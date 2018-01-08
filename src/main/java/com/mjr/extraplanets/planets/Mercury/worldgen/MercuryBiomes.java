@@ -7,13 +7,13 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class MercuryBiomes extends BiomeGenBase {
 
-	public static final Biome mercury = new BiomeGenMercury(new BiomeProperties("mercury").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase mercury = new BiomeGenMercury(new BiomeProperties("mercury").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
-	MercuryBiomes(BiomeProperties properties) {
+	protected MercuryBiomes(BiomeProperties properties) {
 		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();

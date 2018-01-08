@@ -7,13 +7,13 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class PlutoBiomes extends BiomeGenBase {
 
-	public static final Biome pluto = new BiomeGenPluto(new BiomeProperties("pluto").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase pluto = new BiomeGenPluto(new BiomeProperties("pluto").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
-	PlutoBiomes(BiomeProperties properties) {
+	protected PlutoBiomes(BiomeProperties properties) {
 		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();

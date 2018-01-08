@@ -7,13 +7,13 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class CeresBiomes extends BiomeGenBase {
 
-	public static final Biome ceres = new BiomeGenCeres(new BiomeProperties("ceres").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase ceres = new BiomeGenCeres(new BiomeProperties("ceres").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
-	CeresBiomes(BiomeProperties properties) {
+	protected CeresBiomes(BiomeProperties properties) {
 		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();

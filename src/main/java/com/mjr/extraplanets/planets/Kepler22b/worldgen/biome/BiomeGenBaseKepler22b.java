@@ -17,24 +17,24 @@ import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class BiomeGenBaseKepler22b extends BiomeGenBase {
-	public static final Biome kepler22bPlains = new BiomeGenKepler22bPlains(new BiomeProperties("Kepler22b Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest(new BiomeProperties("Kepler22b Blue Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest(new BiomeProperties("Kepler22b Purple Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bRedForest = new BiomeGenKepler22bRedMapleForest(new BiomeProperties("Kepler22b Red Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest(new BiomeProperties("Kepler22b Yellow Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bRedDesert = new BiomeGenKepler22bRedDesert(new BiomeProperties("Kepler22b Red Desert").setBaseHeight(0.125F).setHeightVariation(0.1F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bWasteLands = new BiomeGenKepler22bWasteLands(new BiomeProperties("Kepler22b WasteLands").setBaseHeight(-0.2F).setHeightVariation(0.1F).setTemperature(0.8F).setRainfall(0.9F).setWaterColor(14745518));
-	public static final Biome kepler22bCandyLand = new BiomeGenKepler22bCandyLand(new BiomeProperties("Kepler22b Candy Land").setBaseHeight(0.225F).setHeightVariation(0.02F).setRainfall(0.9F).setSnowEnabled());
+	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains(new BiomeProperties("Kepler22b Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest(new BiomeProperties("Kepler22b Blue Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest(new BiomeProperties("Kepler22b Purple Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bRedForest = new BiomeGenKepler22bRedMapleForest(new BiomeProperties("Kepler22b Red Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest(new BiomeProperties("Kepler22b Yellow Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bRedDesert = new BiomeGenKepler22bRedDesert(new BiomeProperties("Kepler22b Red Desert").setBaseHeight(0.125F).setHeightVariation(0.1F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bWasteLands = new BiomeGenKepler22bWasteLands(new BiomeProperties("Kepler22b WasteLands").setBaseHeight(-0.2F).setHeightVariation(0.1F).setTemperature(0.8F).setRainfall(0.9F).setWaterColor(14745518));
+	public static final BiomeGenBase kepler22bCandyLand = new BiomeGenKepler22bCandyLand(new BiomeProperties("Kepler22b Candy Land").setBaseHeight(0.225F).setHeightVariation(0.02F).setRainfall(0.9F).setSnowEnabled());
 
 	protected byte topMeta;
 	protected byte fillerMeta;

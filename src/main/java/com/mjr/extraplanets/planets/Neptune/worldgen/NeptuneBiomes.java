@@ -21,13 +21,13 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneLayeredHills;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadioActiveWaterSea;
-import com.mjr.extraplanets.world.biome.BiomeGenBase;
+import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class NeptuneBiomes extends BiomeGenBase {
 
-	public static final Biome neptune = new BiomeGenNeptune(new BiomeProperties("neptune").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(new BiomeProperties("neptuneRadioActiveWaterSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(new BiomeProperties("neptuneLayeredHills").setBaseHeight(1.5F).setHeightVariation(0.025F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase neptune = new BiomeGenNeptune(new BiomeProperties("neptune").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(new BiomeProperties("neptuneRadioActiveWaterSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(new BiomeProperties("neptuneLayeredHills").setBaseHeight(1.5F).setHeightVariation(0.025F).setRainfall(0.0F).setRainDisabled());
 
 	protected NeptuneBiomes(BiomeProperties properties) {
 		super(properties);
