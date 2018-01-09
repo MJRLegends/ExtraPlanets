@@ -248,7 +248,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addVariants(Constants.modID, "ceres", "ceres_surface", "ceres_sub_surface", "ceres_stone", "ceres_ore_iron", "ceres_ore_tin", "ceres_ore_copper", "ceres_ore_uranium", "ceres_uranium_block", "ceres_stonebricks");
 		if (Config.JUPITER)
 			ClientUtilities.addVariants(Constants.modID, "jupiter", "jupiter_surface", "jupiter_sub_surface", "jupiter_stone", "jupiter_ore_iron", "jupiter_ore_tin", "jupiter_ore_copper", "jupiter_ore_palladium", "jupiter_ore_nickel",
-					"jupiter_palladium_block", "jupiter_stonebricks", "jupiter_dungeon_brick", "jupiter_ore_red_gem", "jupiter_red_gem_block");
+					"jupiter_palladium_block", "jupiter_stonebricks", "jupiter_dungeon_brick", "jupiter_ore_red_gem", "jupiter_red_gem_block", "jupiter_nickel_block");
 		if (Config.URANUS)
 			ClientUtilities.addVariants(Constants.modID, "uranus", "uranus_surface", "uranus_sub_surface", "uranus_stone", "uranus_ore_crystal", "uranus_crystal_block", "uranus_stonebricks", "uranus_dungeon_brick", "uranus_ore_white_gem",
 					"uranus_white_gem_block");
@@ -266,7 +266,7 @@ public class ClientProxy extends CommonProxy {
 					"eris_dungeon_brick");
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS)
 			ClientUtilities.addVariants(Constants.modID, "kepler22b", "kepler22b_dirt", "kepler22b_stone", "kepler22b_ore_iron", "kepler22b_ore_tin", "kepler22b_ore_copper", "kepler22b_ore_dense_coal", "kepler22b_ore_blue_diamond",
-					"kepler22b_ore_red_diamond", "kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone", "keler22b_ore_platinum");
+					"kepler22b_ore_red_diamond", "kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone", "kepler22b_ore_platinum", "kepler22b_platinum_block");
 		if (Config.CALLISTO)
 			ClientUtilities.addVariants(Constants.modID, "callisto", "callisto_surface", "callisto_sub_surface", "callisto_stone", "callisto_ore_iron", "callisto_ore_tin", "callisto_ore_copper");
 		if (Config.DEIMOS)

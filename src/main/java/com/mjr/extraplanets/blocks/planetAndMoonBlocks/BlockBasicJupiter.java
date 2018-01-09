@@ -43,7 +43,7 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	public enum EnumBlockBasic implements IStringSerializable {
 		SURFACE(0, "jupiter_surface"), SUB_SURFACE(1, "jupiter_sub_surface"), STONE(2, "jupiter_stone"), ORE_IRON(3, "jupiter_ore_iron"), ORE_TIN(4, "jupiter_ore_tin"), ORE_COPPER(5, "jupiter_ore_copper"), ORE_PALLADIUM(6, "jupiter_ore_palladium"), ORE_NICKEL(
 				7, "jupiter_ore_nickel"), PALLADIUM_BLOCK(8, "jupiter_palladium_block"), STONEBRICKS(9, "jupiter_stonebricks"), DUNGEON_BRICK(10, "jupiter_dungeon_brick"), ORE_RED_GEM(11, "jupiter_ore_red_gem"), RED_GEM_BLOCK(12,
-				"jupiter_red_gem_block");
+				"jupiter_red_gem_block"), NICKEL_BLOCK(13, "jupiter_nickel_block");
 
 		private final int meta;
 		private final String name;

@@ -77,6 +77,10 @@ public class ItemBlockKepler22b extends ItemBlock {
 			name = "ore_platinum";
 			break;
 		}
+		case 14: {
+			name = "platinum_block";
+			break;
+		}
 		default:
 			name = "null";
 		}

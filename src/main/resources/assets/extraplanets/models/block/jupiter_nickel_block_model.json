@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "extraplanets:blocks/keler22b_ore_platinum"
+        "all": "extraplanets:blocks/jupiter_nickel_block"
     }
 }
