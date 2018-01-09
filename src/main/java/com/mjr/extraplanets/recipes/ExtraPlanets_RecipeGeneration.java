@@ -615,8 +615,8 @@ public class ExtraPlanets_RecipeGeneration {
 				item2 = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
 			else
 				item2 = items2.get(k - 1);
-			RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', items2 });
-			RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', items2 });
+			RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', item2 });
+			RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', item2 });
 		}
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2) });
