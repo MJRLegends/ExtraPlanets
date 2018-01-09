@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/keler22b_ore_platinum_model",
+    "parent":"extraplanets:block/jupiter_nickel_block_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
@@ -7,4 +7,4 @@
             "scale": [ 0.375, 0.375, 0.375 ]
         }
     }
-} 
+}
