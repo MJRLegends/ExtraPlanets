@@ -18,6 +18,8 @@ public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 
 	private final MapGenCaveTitan caveGenerator = new MapGenCaveTitan();
 
+	private final MapGenRavineTitan ravineGenerator = new MapGenRavineTitan();
+
 	private final MapGenVillageTitan villageGenerator = new MapGenVillageTitan();
 
 	public ChunkProviderTitan(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -34,6 +36,7 @@ public class ChunkProviderTitan extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override

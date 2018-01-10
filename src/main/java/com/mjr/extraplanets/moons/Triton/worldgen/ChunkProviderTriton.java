@@ -18,6 +18,8 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 
 	private final MapGenCaveTriton caveGenerator = new MapGenCaveTriton();
 
+	private final MapGenRavineTriton ravineGenerator = new MapGenRavineTriton();
+
 	private final MapGenVillageTriton villageGenerator = new MapGenVillageTriton();
 
 	public ChunkProviderTriton(World par1World, long seed, boolean mapFeaturesEnabled) {
@@ -34,6 +36,7 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onChunkProvide(int cX, int cZ, Block[] blocks, byte[] metadata) {
+		this.ravineGenerator.func_151539_a(this, this.worldObj, cX, cZ, blocks);
 	}
 
 	@Override
