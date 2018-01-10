@@ -169,6 +169,12 @@ public class ExtraPlanets_RecipeGeneration {
 		// Block to Red Gem
 		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 9, 8), new Object[] { new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 12) });
 
+		// Block of Nickel
+		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 13), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 7) });
+
+		// Block to Nickel
+		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 9, 7), new Object[] { new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 13) });
+
 		// Orange Sand to Orange Sandstone
 		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.ORANGE_SANDSTONE, 1, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0),
 				new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0) });
@@ -453,6 +459,12 @@ public class ExtraPlanets_RecipeGeneration {
 
 		// Stone Bricks
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 4, 11), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 1) });
+
+		// Block of Nickel
+		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 14), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5) });
+
+		// Block to Nickel
+		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 14) });
 
 		// Maple Wooden Planks
 		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG, 1, 0) });
