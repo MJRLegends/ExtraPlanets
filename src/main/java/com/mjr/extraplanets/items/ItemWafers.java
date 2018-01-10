@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.items;
 
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,16 +30,16 @@ public class ItemWafers extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.worldObj.isRemote) {
-			if (itemStack != null){
-				if(itemStack.getItemDamage() == 0 || itemStack.getItemDamage() == 1)
+		if (player.world.isRemote) {
+			if (itemStack != null) {
+				if (itemStack.getItemDamage() == 0 || itemStack.getItemDamage() == 1)
 					list.add(EnumColor.YELLOW + TranslateUtilities.translate("currently.unused.name"));
 				else
 					list.add(EnumColor.AQUA + TranslateUtilities.translate("wafter.uses.information"));
 			}
 		}
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack) {
