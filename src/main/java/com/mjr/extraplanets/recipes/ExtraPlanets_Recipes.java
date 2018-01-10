@@ -351,6 +351,12 @@ public class ExtraPlanets_Recipes {
 			// Block to Red Gem
 			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 9, 8), new Object[] { new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 12) });
 
+			// Block of Nickel
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 13), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 7) });
+
+			// Block to Nickel
+			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 9, 7), new Object[] { new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 13) });
+
 			// Orange Sand to Orange Sandstone
 			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.ORANGE_SANDSTONE, 1, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0),
 					new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0) });
@@ -664,6 +670,12 @@ public class ExtraPlanets_Recipes {
 		}
 
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
+			// Block of Nickel
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 14), new Object[] { "XXX", "XXX", "XXX", 'X', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5) });
+
+			// Block to Nickel
+			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 14) });
+			
 			// Stone Bricks
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 4, 11), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 1) });
 
