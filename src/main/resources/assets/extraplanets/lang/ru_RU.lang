@@ -128,6 +128,7 @@ tile.jupiter.stone_bricks.name=Каменные кирпичи Юпитера
 tile.jupiter.palladium_block.name=Палладиевый блок
 tile.jupiter.red_gem_block.name=Блок красного драгоценного камня
 tile.jupiter.dungeon_brick.name=Кирпич сокровищницы Юпитера
+tile.jupiter.nickel_block.name=Block of Nickel ##NEEDS TRANSLATE##
 
 tile.saturn.surface.name=Поверхность Сатурна
 tile.saturn.sub_surface.name=Подповерхностный грунт Сатурна
@@ -247,6 +248,7 @@ tile.kepler22b_flowers.green_maple_med_grass.name=Средняя коричне�
 tile.kepler22b_flowers.green_maple_tall_grass.name=Высокая коричневая трава Кеплера 22b
 tile.kepler22b.cobblestone.name=Булыжник Кеплера 22b
 tile.kepler22b.ore_platinum.name=Платиновая руда Кеплера 22b
+tile.kepler22b.platinum_block.name=Block of Platinum ##NEEDS TRANSLATE##
 
 #Moon Blocks
 tile.callisto.surface.name=Поверхность Каллисто
@@ -499,6 +501,8 @@ gui.message.finding.volcanic.rock=Jupiter & Io ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Reduces Radiation Level by 10% ##NEEDS TRANSLATE##
 gui.battery_slot.desc.custom=Recommended to use a Massive Battery ##NEEDS TRANSLATE##
 gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure ##NEEDS TRANSLATE##
+currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
+wafter.uses.information=Used for Space Station Recipes ##NEEDS TRANSLATE##
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
@@ -1470,7 +1474,15 @@ item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
 
 #Messages
 currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
-currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
 tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
 tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.t4key.name=Ключ от подземелья 4-го уровня
+item.t5key.name=Ключ от подземелья 5-го уровня
+item.t6key.name=Ключ от подземелья 6-го уровня
+item.t7key.name=Ключ от подземелья 7-го уровня
+item.t8key.name=Ключ от подземелья 8-го уровня
+item.t9key.name=Ключ от подземелья 9-го уровня
+item.t10key.name=Ключ от подземелья 10-го уровня

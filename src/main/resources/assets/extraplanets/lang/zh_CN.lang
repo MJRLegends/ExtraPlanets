@@ -128,6 +128,7 @@ tile.jupiter.stone_bricks.name=木星方块砖
 tile.jupiter.palladium_block.name=钯块
 tile.jupiter.red_gem_block.name=红宝石块
 tile.jupiter.dungeon_brick.name=木星地牢砖
+tile.jupiter.nickel_block.name=Block of Nickel ##NEEDS TRANSLATE##
 
 tile.saturn.surface.name=土星地表方块
 tile.saturn.sub_surface.name=土星地底方块
@@ -247,6 +248,7 @@ tile.kepler22b_flowers.green_maple_med_grass.name=开普勒-22b绿色中草
 tile.kepler22b_flowers.green_maple_tall_grass.name=开普勒-22b绿色高草
 tile.kepler22b.cobblestone.name=开普勒-22b圆石
 tile.kepler22b.ore_platinum.name=开普勒-22b铂矿石
+tile.kepler22b.platinum_block.name=Block of Platinum ##NEEDS TRANSLATE##
 
 #Moon Blocks
 tile.callisto.surface.name=木卫四地表岩石
@@ -501,6 +503,8 @@ gui.message.finding.volcanic.rock=Jupiter & Io ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Reduces Radiation Level by 10% ##NEEDS TRANSLATE##
 gui.battery_slot.desc.custom=Recommended to use a Massive Battery ##NEEDS TRANSLATE##
 gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure ##NEEDS TRANSLATE##
+currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
+wafter.uses.information=Used for Space Station Recipes ##NEEDS TRANSLATE##
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
@@ -1471,8 +1475,15 @@ item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings ##NEEDS TRANSLA
 item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
 
 #Messages
-currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
-currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
 tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
 tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.t4key.name=4阶宝箱钥匙
+item.t5key.name=5阶宝箱钥匙
+item.t6key.name=6阶宝箱钥匙
+item.t7key.name=7阶宝箱钥匙
+item.t8key.name=8阶宝箱钥匙
+item.t9key.name=9阶宝箱钥匙
+item.t10key.name=10阶宝箱钥匙

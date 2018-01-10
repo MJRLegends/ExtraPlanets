@@ -128,6 +128,7 @@ tile.jupiter.stone_bricks.name=Jupiter Stone Bricks
 tile.jupiter.palladium_block.name=Block of Palladium
 tile.jupiter.red_gem_block.name=Block of Red Gem
 tile.jupiter.dungeon_brick.name=Jupiter Dungeon Brick
+tile.jupiter.nickel_block.name=Block of Nickel
 
 tile.saturn.surface.name=Saturn Surface Rock
 tile.saturn.sub_surface.name=Saturn Sub-Surface Rock
@@ -247,6 +248,7 @@ tile.kepler22b_flowers.green_maple_med_grass.name=Kepler 22b Green Medium Grass
 tile.kepler22b_flowers.green_maple_tall_grass.name=Kepler 22b Green Tall Grass
 tile.kepler22b.cobblestone.name=Kepler 22b Cobblestone
 tile.kepler22b.ore_platinum.name=Kepler 22b Platinum Ore
+tile.kepler22b.platinum_block.name=Block of Platinum
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Surface Rock
@@ -501,6 +503,8 @@ gui.message.finding.volcanic.rock=Jupiter & Io
 gui.message.decontamination.unit=Reduces Radiation Level by 10%
 gui.battery_slot.desc.custom=Recommended to use a Massive Battery
 gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure
+currently.unused.name=Currently Unused!
+wafter.uses.information=Used for Space Station Recipes
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details
@@ -1470,7 +1474,15 @@ item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings
 item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots
 
 #Messages
-currently.unused.name=Currently Unused!
 tier2.information=Required for Venus and Mercury
 tier3.information=Required for Jupiter and Saturn including their moons
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.T4key.name=Tier 4 Dungeon Key
+item.T5key.name=Tier 5 Dungeon Key
+item.T6key.name=Tier 6 Dungeon Key
+item.T7key.name=Tier 7 Dungeon Key
+item.T8key.name=Tier 8 Dungeon Key
+item.T9key.name=Tier 9 Dungeon Key
+item.T10key.name=Tier 10 Dungeon Key
