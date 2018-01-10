@@ -170,6 +170,8 @@ public class Config {
 	public static int tritonIceSeaBiomeID;
 	public static int europaBiomeID;
 	public static int ioBiomeID;
+	public static int ioAshLandsBiomeID;
+	public static int ioBurningPlainsBiomeID;
 	public static int deimosBiomeID;
 	public static int phobosBiomeID;
 	public static int callistoBiomeID;
@@ -481,7 +483,7 @@ public class Config {
 		tritonIceLandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Lands Biome ID", 187, "[range: 0 ~ 255, default: 187]").getInt();
 		tritonIceSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Triton Ice Sea Biome ID", 188, "[range: 0 ~ 255, default: 188]").getInt();
 		jupiterSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Sea Biome ID", 189, "[range: 0 ~ 255, default: 189]").getInt();
-		// IO_ASH_LANDS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Ash Lands Biome ID", 190, "[range: 0 ~ 255, default: 190]").getInt();
+		ioAshLandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Ash Lands Biome ID", 190, "[range: 0 ~ 255, default: 190]").getInt();
 		uranusFrozenSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Frozen Sea Biome ID", 191, "[range: 0 ~ 255, default: 191]").getInt();
 		uranusSnowLandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Snow Lands Biome ID", 192, "[range: 0 ~ 255, default: 192]").getInt();
 		// OBERON_LARGE_MOUNTAIN_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Large Mountain Biome ID", 193, "[range: 0 ~ 255, default: 193]").getInt();
@@ -494,6 +496,7 @@ public class Config {
 		neptuneLayeredHillsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Neptune Layered Hills Biome ID", 200, "[range: 0 ~ 255, default: 200]").getInt();
 		saturnNuclearLandBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Nuclear Land Biome ID", 201, "[range: 0 ~ 255, default: 201]").getInt();
 		titanMethaneHillsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
+		ioBurningPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
 
 		schematicTier4GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
 		schematicTier5GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();

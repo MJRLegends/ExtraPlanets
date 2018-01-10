@@ -10,7 +10,7 @@ import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.moons.Io.worldgen.BiomeGenIo;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
 import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageIo extends MapGenStructure {
