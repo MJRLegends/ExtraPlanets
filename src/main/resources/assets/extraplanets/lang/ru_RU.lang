@@ -1477,3 +1477,12 @@ currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
 tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
 tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.t4key.name=Ключ от подземелья 4-го уровня
+item.t5key.name=Ключ от подземелья 5-го уровня
+item.t6key.name=Ключ от подземелья 6-го уровня
+item.t7key.name=Ключ от подземелья 7-го уровня
+item.t8key.name=Ключ от подземелья 8-го уровня
+item.t9key.name=Ключ от подземелья 9-го уровня
+item.t10key.name=Ключ от подземелья 10-го уровня
