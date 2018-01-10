@@ -1477,3 +1477,12 @@ item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
 tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
 tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.t4key.name=Llave de mazmorra nivel 4
+item.t5key.name=Llave de mazmorra nivel 5
+item.t6key.name=Llave de mazmorra nivel 6
+item.t7key.name=Llave de mazmorra nivel 7
+item.t8key.name=Llave de mazmorra nivel 8
+item.t9key.name=Llave de mazmorra nivel 9
+item.t10key.name=Llave de mazmorra nivel 10

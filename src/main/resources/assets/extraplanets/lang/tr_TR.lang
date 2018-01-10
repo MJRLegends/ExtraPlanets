@@ -1478,3 +1478,12 @@ item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
 tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
 tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.t4key.name=Tier 4 Zindan Anahtarı
+item.t5key.name=Tier 5 Zindan Anahtarı
+item.t6key.name=Tier 6 Zindan Anahtarı
+item.t7key.name=Tier 7 Zindan Anahtarı
+item.t8key.name=Tier 8 Zindan Anahtarı
+item.t9key.name=Tier 9 Zindan Anahtarı
+item.t10key.name=Tier 10 Zindan Anahtarı
