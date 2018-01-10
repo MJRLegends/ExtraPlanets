@@ -1,13 +1,18 @@
 package com.mjr.extraplanets.items;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -27,17 +32,15 @@ public class ItemWafers extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.worldObj.isRemote) {
-			if (itemStack != null){
-				if(itemStack.getItemDamage() == 0 || itemStack.getItemDamage() == 1)
-					list.add(EnumColor.YELLOW + TranslateUtilities.translate("currently.unused.name"));
-				else
-					list.add(EnumColor.AQUA + TranslateUtilities.translate("wafter.uses.information"));
-			}
+	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+		if (itemStack != null) {
+			if (itemStack.getItemDamage() == 0 || itemStack.getItemDamage() == 1)
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("currently.unused.name"));
+			else
+				list.add(EnumColor.AQUA + TranslateUtilities.translate("wafter.uses.information"));
 		}
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack) {
@@ -51,7 +54,8 @@ public class ItemWafers extends Item {
 
 	@Override
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		if(!this.isInCreativeTab(par2CreativeTabs)) return;
+		if (!this.isInCreativeTab(par2CreativeTabs))
+			return;
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			par3List.add(new ItemStack(this, 1, i));
 		}
