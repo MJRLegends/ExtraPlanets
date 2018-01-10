@@ -1481,10 +1481,10 @@ tier3.information=Required for Jupiter and Saturn including their moons
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
 
 #------------------1.11.2 & 1.12.2 Only Section------------------
-item.T4key.name=Tier 4 Dungeon Key
-item.T5key.name=Tier 5 Dungeon Key
-item.T6key.name=Tier 6 Dungeon Key
-item.T7key.name=Tier 7 Dungeon Key
-item.T8key.name=Tier 8 Dungeon Key
-item.T9key.name=Tier 9 Dungeon Key
-item.T10key.name=Tier 10 Dungeon Key
+item.t4key.name=Tier 4 Dungeon Key
+item.t5key.name=Tier 5 Dungeon Key
+item.t6key.name=Tier 6 Dungeon Key
+item.t7key.name=Tier 7 Dungeon Key
+item.t8key.name=Tier 8 Dungeon Key
+item.t9key.name=Tier 9 Dungeon Key
+item.t10key.name=Tier 10 Dungeon Key
