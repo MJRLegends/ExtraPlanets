@@ -1412,3 +1412,12 @@ item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
 tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
 tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
 tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.t4key.name=Stufe 4 Dungeon Schlüssel
+item.t5key.name=Stufe 5 Dungeon Schlüssel
+item.t6key.name=Stufe 6 Dungeon Schlüssel
+item.t7key.name=Stufe 7 Dungeon Schlüssel
+item.t8key.name=Stufe 8 Dungeon Schlüssel
+item.t9key.name=Stufe 9 Dungeon Schlüssel
+item.t10key.name=Stufe 10 Dungeon Schlüssel
