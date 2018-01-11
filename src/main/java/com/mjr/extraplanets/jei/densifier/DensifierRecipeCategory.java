@@ -11,13 +11,14 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class DensifierRecipeCategory extends BlankRecipeCategory {
+public class DensifierRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/densifier.png");
 
 	@Nonnull
@@ -59,7 +60,7 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 
 		if (recipeWrapper instanceof DensifierRecipeWrapper) {
 			DensifierRecipeWrapper circuitFabricatorRecipeWrapper = (DensifierRecipeWrapper) recipeWrapper;
-			List inputs = circuitFabricatorRecipeWrapper.getInputs();
+			List<ItemStack> inputs = circuitFabricatorRecipeWrapper.getInputs();
 
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);

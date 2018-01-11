@@ -11,13 +11,14 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class VenusRoverRecipeCategory extends BlankRecipeCategory {
+public class VenusRoverRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation buggyGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venus_roverbench.png");
 
 	@Nonnull
@@ -87,7 +88,7 @@ public class VenusRoverRecipeCategory extends BlankRecipeCategory {
 
 		if (recipeWrapper instanceof VenusRoverRecipeWrapper) {
 			VenusRoverRecipeWrapper buggyRecipeWrapper = (VenusRoverRecipeWrapper) recipeWrapper;
-			List inputs = buggyRecipeWrapper.getInputs();
+			List<ItemStack> inputs = buggyRecipeWrapper.getInputs();
 
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
