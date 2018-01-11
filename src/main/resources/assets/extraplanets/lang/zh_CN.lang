@@ -5,10 +5,10 @@ itemGroup.SpaceToolsTab=额外行星|工具
 itemGroup.SpaceArmorTab=额外行星|装备
 
 #Galaxies
-galaxy.whirlpool=Whirlpool ##NEEDS TRANSLATE##
-galaxy.andromeda=Andromeda ##NEEDS TRANSLATE##
-galaxy.black_eye=Black Eye ##NEEDS TRANSLATE##
-galaxy.proxima_centauri=Proxima Centauri ##NEEDS TRANSLATE##
+galaxy.whirlpool=涡状星系
+galaxy.andromeda=仙女座星系
+galaxy.black_eye=黑眼星系
+galaxy.proxima_centauri=比邻星系
 
 #Solar Systems
 solarsystem.kepler22=开普勒-22星系
@@ -16,10 +16,10 @@ solarsystem.kepler47=开普勒-47星系
 solarsystem.kepler62=开普勒-62星系
 solarsystem.kepler69=开普勒-69星系
 
-solarsystem.xenos157=Xenos 157 ##NEEDS TRANSLATE##
-solarsystem.deltiri10=Deltiri 10 ##NEEDS TRANSLATE##
-solarsystem.vendrizi161=Vendrizi 161 ##NEEDS TRANSLATE##
-solarsystem.epsilonSolaria=Epsilon Solaria ##NEEDS TRANSLATE##
+solarsystem.xenos157=途人-157星系
+solarsystem.deltiri10=迪尔塔里-10星系 ##音译##
+solarsystem.vendrizi161=旺德里奇-161星系 ##音译##
+solarsystem.epsilonSolaria=日中天苑星系
 
 #Stars
 star.kepler22=开普勒-22
@@ -27,10 +27,10 @@ star.kepler47=开普勒-47
 star.kepler62=开普勒-62
 star.kepler69=开普勒-69
 
-star.xenos157=Xenos 157 Star ##NEEDS TRANSLATE##
-star.deltiri10=Deltiri 10 Star ##NEEDS TRANSLATE##
-star.vendrizi161=Vendrizi 161 Star ##NEEDS TRANSLATE##
-star.epsilonSolaria=Epsilon Solaria Star ##NEEDS TRANSLATE##
+star.xenos157=途人-157星
+star.deltiri10=迪尔塔里-10星 ##音译##
+star.vendrizi161=旺德里奇-161星 ##音译##
+star.epsilonSolaria=日中天苑星
 
 #Planets
 planet.Mercury=水星
@@ -56,22 +56,22 @@ planet.kepler47c=开普勒-47c
 planet.kepler69b=开普勒-69b
 planet.kepler69c=开普勒-69c
 
-planet.tatooine=Tatooine ##NEEDS TRANSLATE##
-planet.crait=Crait ##NEEDS TRANSLATE##
-planet.hoth=Hoth ##NEEDS TRANSLATE##
-planet.aqua=Aqua ##NEEDS TRANSLATE##
+planet.tatooine=塔图因星
+planet.crait=克赖特
+planet.hoth=霍斯星
+planet.aqua=水色星
 
-planet.qustroithea=Qustroithea ##NEEDS TRANSLATE##
-planet.jetraruta=Jetraruta ##NEEDS TRANSLATE##
-planet.moswion=Moswion ##NEEDS TRANSLATE##
-planet.ketherth=Ketherth ##NEEDS TRANSLATE##
-planet.xovis=Xovis ##NEEDS TRANSLATE##
+planet.qustroithea=奎斯特瑞希亚星 ##音译##
+planet.jetraruta=杰特拉鲁塔星 ##音译##
+planet.moswion=摩斯威星 ##音译##
+planet.ketherth=凯瑟斯星 ##音译##
+planet.xovis=何维斯星 ##音译##
 
-planet.oarilia=Oarilia ##NEEDS TRANSLATE##
-planet.struronides=Struronides ##NEEDS TRANSLATE##
-planet.brajutov=Brajutov ##NEEDS TRANSLATE##
-planet.speshani16=Speshani 16 ##NEEDS TRANSLATE##
-planet.trars9=Trars 9 ##NEEDS TRANSLATE##
+planet.oarilia=欧普瑞利亚星 ##音译##
+planet.struronides=斯特鲁罗尼兹星 ##音译##
+planet.brajutov=伯仲星
+planet.speshani16=萃土-16
+planet.trars9=特拉尔斯-9 ##音译##
 
 #Moons
 moon.triton=海卫一
@@ -140,9 +140,9 @@ tile.saturn.ore_magnesium.name=土星镁矿石
 tile.saturn.stone_bricks.name=土星方块砖
 tile.saturn.magnesium_block.name=镁块
 tile.saturn.dungeon_brick.name=土星地牢砖
-tile.saturn.broken_infected_stone.name=Saturn Broken Infected Stone ##NEEDS TRANSLATE##
-tile.saturn.infected_stone.name=Saturn Infected Stone ##NEEDS TRANSLATE##
-tile.saturn.ore_slime.name=Saturn Slime Ore ##NEEDS TRANSLATE##
+tile.saturn.broken_infected_stone.name=土星被污染的破损石头
+tile.saturn.infected_stone.name=土星被污染的石头
+tile.saturn.ore_slime.name=土星史莱姆矿石
 
 tile.uranus.surface.name=天王星地表方块
 tile.uranus.sub_surface.name=天王星地底方块
@@ -313,9 +313,9 @@ tile.titan.stone.name=土卫一石头
 tile.titan.ore_iron.name=土卫一铁矿石
 tile.titan.ore_tin.name=土卫一锡矿石
 tile.titan.ore_copper.name=土卫一铜矿石
-tile.titan.titan_methane_surface.name=Titan Methane Surface ##NEEDS TRANSLATE##
-tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface ##NEEDS TRANSLATE##
-tile.titan.titan_rocks.name=Titan Rocks ##NEEDS TRANSLATE##
+tile.titan.titan_methane_surface.name=土卫一地表甲烷
+tile.titan.titan_methane_sub_surface.name=土卫一地底甲烷
+tile.titan.titan_rocks.name=土卫一岩石
 
 tile.oberon.surface.name=天卫四地表岩石
 tile.oberon.sub_surface.name=天卫四地底岩石
@@ -407,8 +407,8 @@ tile.advanced_launch_pad.powered.rocket.desc=将其摆成5x5的形状，用以�
 tile.advanced_fuel_loader.name=高级燃料装载机
 tile.ultimate_fuel_loader.name=终极燃料装载机
 tile.vehicle_charger.name=漫游车充能器(WIP)
-tile.basic_purifier.name=Basic Purifier ##NEEDS TRANSLATE##
-tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+tile.basic_purifier.name=基础净化器
+tile.basic_densifier.name=基础浓缩机
 tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
@@ -429,18 +429,18 @@ container.advanced.fuelloader.name=高级燃料装载机
 container.ultimate.fuelloader.name=终极燃料装载机
 container.basic.solar.evaporation.chamber.name=基础太阳能蒸发室
 container.vehicle.charger.name=漫游车充能器
-container.basic.purifier.name=Purifier ##NEEDS TRANSLATE##
-container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+container.basic.purifier.name=基础净化器
+container.basic.densifier.name=基础浓缩机
 container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
 #GUI Components/Messages
-gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank ##NEEDS TRANSLATE##
-gui.message.salt_water.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
-gui.salt_water_input.desc.0=Place Liquid Crystallized Water bucket into ##NEEDS TRANSLATE##
-gui.salt_water_input.desc.1=this slot to fill the tank. ##NEEDS TRANSLATE##
-gui.salt_water_input.desc.2=Each Liquid Crystallized Water Bucket will give 1000 ##NEEDS TRANSLATE##
-gui.salt_water_output.desc.0=Place empty vanilla bucket into ##NEEDS TRANSLATE##
-gui.salt_water_output.desc.1=this slot to fill them from the tank ##NEEDS TRANSLATE##
+gui.salt_water_tank.desc.4=盐水箱
+gui.message.salt_water.name=盐水水
+gui.salt_water_input.desc.0=将盐水桶放置在
+gui.salt_water_input.desc.1=这个插槽来装满盐水箱
+gui.salt_water_input.desc.2=每桶盐水都有1000mb的容量
+gui.salt_water_output.desc.0=将空的香草精桶放置在
+gui.salt_water_output.desc.1=这个插槽以用水箱中的水装满
 gui.status.injecting.name=注入中
 gui.status.smasher.name=粉碎中
 gui.status.crystallizing.name=结晶中
@@ -451,46 +451,46 @@ gui.message.power.rocket.name=电力火箭
 gui.message.power.message.name=能量
 gui.button.loadpower.name=充能
 gui.powered.inv.name=物品栏/能量
-gui.status.purifiering.name=Purifiering ##NEEDS TRANSLATE##
-gui.radioactive_water_tank.desc.4=Radioactive Water Tank ##NEEDS TRANSLATE##
-gui.message.radioactive_water.name=Radioactive Water  ##NEEDS TRANSLATE##
-gui.infected_water_tank.desc.4=Infected Water Tank ##NEEDS TRANSLATE##
-gui.message.infected_water.name=Infected Water ##NEEDS TRANSLATE##
-gui.clean_water_tank.desc.4=Clean Water Tank ##NEEDS TRANSLATE##
-gui.message.clean_water.name=Clean Water ##NEEDS TRANSLATE##
-gui.radioactive_water_input.desc.0=Place Radioactive Water bucket into ##NEEDS TRANSLATE##
-gui.radioactive_water_input.desc.1=this slot to fill the tank. ##NEEDS TRANSLATE##
-gui.radioactive_water_input.desc.2=Each Radioactive Water Bucket will give 1000mB ##NEEDS TRANSLATE##
-gui.infected_water_input.desc.0=Place Infected Water bucket into ##NEEDS TRANSLATE##
-gui.infected_water_input.desc.1=this slot to fill the tank. ##NEEDS TRANSLATE##
-gui.infected_water_input.desc.2=Each Infected Water Bucket will give 1000mB ##NEEDS TRANSLATE##
-gui.clean_water_output.desc.0=Place empty vanilla bucket into ##NEEDS TRANSLATE##
-gui.clean_water_output.desc.1=this slot to fill them from the tank ##NEEDS TRANSLATE##
-gui.bucket.message.finding=You can obtain this Fluid ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.infected_water_fluid=on Mercury ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.radioactive_water_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.nitrogen_fluid=on Neptune ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.glowstone_fluid=on Saturn ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.magma_fluid=on Jupiter & IO ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_caramel_fluid=on Kepler22b ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_chocolate_fluid=on Kepler22b ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=on Saturn ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.salt_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.methane_fluid=on Titan ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.frozen_water_fluid=on Uranus & Triton ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.nitrogen_ice_fluid=on Triton ##NEEDS TRANSLATE##
-gui.bucket.message.crafting=Press R to See How to Obtain ##NEEDS TRANSLATE##
-gui.status.missing.inputs.name=Missing Items/Fluids ##NEEDS TRANSLATE##
-gui.status.missing.power.name=Missing Power ##NEEDS TRANSLATE##
-gui.densifier_input.desc.0=You can place the following  ##NEEDS TRANSLATE##
-gui.densifier_input.desc.1=buckets in this slot: ##NEEDS TRANSLATE##
-gui.densifier_input.desc.2=Liquid Caramel ##NEEDS TRANSLATE##
-gui.densifier_input.desc.3=Liquid Chocolate ##NEEDS TRANSLATE##
-gui.densifier_input.desc.4=Nitrogen Ice ##NEEDS TRANSLATE##
-gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb ##NEEDS TRANSLATE##
-gui.message.general.tank.name=Fluid Tank ##NEEDS TRANSLATE##
-gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
-gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
+gui.status.purifiering.name=净化器
+gui.radioactive_water_tank.desc.4=放射性水罐
+gui.message.radioactive_water.name=放射性水
+gui.infected_water_tank.desc.4=污染水罐
+gui.message.infected_water.name=污染水
+gui.clean_water_tank.desc.4=清水罐
+gui.message.clean_water.name=清水
+gui.radioactive_water_input.desc.0=将放射性水桶放置在
+gui.radioactive_water_input.desc.1=这个插槽装满水箱
+gui.radioactive_water_input.desc.2=每桶污染水桶有1000mb的容量
+gui.infected_water_input.desc.0=将污染水桶放置在
+gui.infected_water_input.desc.1=这个插槽装满水箱
+gui.infected_water_input.desc.2=每桶放射性水桶有1000mb的容量
+gui.clean_water_output.desc.0=将清水桶放置在
+gui.clean_water_output.desc.1=这个插槽装满水箱
+gui.bucket.message.finding=你可以
+gui.bucket.message.finding.2.infected_water_fluid=在水星获得它们
+gui.bucket.message.finding.2.radioactive_water_fluid=在谷神星或木卫二获得它们
+gui.bucket.message.finding.2.nitrogen_fluid=在海王星获得它们
+gui.bucket.message.finding.2.glowstone_fluid=在土星获得它们
+gui.bucket.message.finding.2.magma_fluid=在木星获得它们
+gui.bucket.message.finding.2.liquid_caramel_fluid=在开普勒22b获得它们
+gui.bucket.message.finding.2.liquid_chocolate_fluid=在开普勒22b获得它们
+gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=在土星获得它们
+gui.bucket.message.finding.2.salt_fluid=在谷神星或木卫二获得它们
+gui.bucket.message.finding.2.methane_fluid=在金星获得它们
+gui.bucket.message.finding.2.frozen_water_fluid=在天王星或海卫一获得它们
+gui.bucket.message.finding.2.nitrogen_ice_fluid=在海卫一获得它们
+gui.bucket.message.crafting=按R来查看如何获得
+gui.status.missing.inputs.name=丢失液体\物品
+gui.status.missing.power.name=能量不足
+gui.densifier_input.desc.0=教程
+gui.densifier_input.desc.1=这个插槽放桶:
+gui.densifier_input.desc.2=液化焦糖
+gui.densifier_input.desc.3=液化巧克力
+gui.densifier_input.desc.4=氮冰
+gui.densifier_input.desc.5=一桶流体=1000mb
+gui.message.general.tank.name=流体水箱
+gui.message.general.tank.fluid.name=流体
+gui.status.densifier.name=浓缩中
 gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility ##NEEDS TRANSLATE##
 gui.radiation.reduced.message=Your Radiation Level has been reduced by ##NEEDS TRANSLATE##
 gui.radiation.current.message=Your Current Radiation Level is ##NEEDS TRANSLATE##
@@ -507,25 +507,25 @@ currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
 wafter.uses.information=Used for Space Station Recipes ##NEEDS TRANSLATE##
 
 #Celestial Selection Screen GUI Components
-gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
-gui.general_features_details.name=General Feature Details ##NEEDS TRANSLATE##
-gui.atmosphere_details.name=Atmosphere Details ##NEEDS TRANSLATE##
-gui.general_details.name=General Details ##NEEDS TRANSLATE##
-gui.parent_solar_system_details.name=Parent Solar System Details ##NEEDS TRANSLATE##
+gui.celestial_details.name=天体细节
+gui.general_features_details.name=总体特征
+gui.atmosphere_details.name=大气层
+gui.general_details.name=总体
+gui.parent_solar_system_details.name=所处星系
 
-gui.celestial_body_type.name=Type ##NEEDS TRANSLATE##
-gui.celestial_body_amount_of_moons.name=Amount of Moons ##NEEDS TRANSLATE##
-gui.celestial_body_orbit_time.name=Orbit Time ##NEEDS TRANSLATE##
-gui.celestial_body_gravity.name=Gravity ##NEEDS TRANSLATE##
-gui.celestial_body_day_lengh.name=Day Length ##NEEDS TRANSLATE##
-gui.celestial_body_meteor_frequency.name=Meteor Frequency ##NEEDS TRANSLATE##
-gui.celestial_body_wind_level.name=Wind Level ##NEEDS TRANSLATE##
-gui.celestial_body_temperature.name=Temperature ##NEEDS TRANSLATE##
-gui.celestial_body_breathable.name=Breathable ##NEEDS TRANSLATE##
-gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere ##NEEDS TRANSLATE##
-gui.celestial_body_radiation_level.name=Radiation Level ##NEEDS TRANSLATE##
-gui.celestial_body_pressure_level.name=Pressure Level ##NEEDS TRANSLATE##
-gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
+gui.celestial_body_type.name=种类
+gui.celestial_body_amount_of_moons.name=卫星的数量
+gui.celestial_body_orbit_time.name=公转时间
+gui.celestial_body_gravity.name=重力
+gui.celestial_body_day_lengh.name=昼长
+gui.celestial_body_meteor_frequency.name=流星频率
+gui.celestial_body_wind_level.name=风力
+gui.celestial_body_temperature.name=温度
+gui.celestial_body_breathable.name=可呼吸性
+gui.celestial_body_corrosive_atmosphere.name=腐蚀性气体
+gui.celestial_body_radiation_level.name=放射性等级
+gui.celestial_body_pressure_level.name=压强等级
+gui.celestial_body_amount_of_planets.name=行星的数量
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=打开电力漫游车的物品栏
@@ -546,38 +546,38 @@ tile.orange_sand.name=橘沙
 tile.orange_sandstone.name=橘沙石
 
 #CandyCane/Cake/Icing Blocks
-tile.candy_blocks.candy_cane_red.name=Red Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_green.name=Green Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_blue.name=Blue Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_orange.name=Orange Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_magenta.name=Magenta Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_pink.name=Pink Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_lime.name=Lime Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_purple.name=Purple Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_brown.name=Brown Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_black.name=Black Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_red.name=红色蔗糖
+tile.candy_blocks.candy_cane_green.name=绿色蔗糖
+tile.candy_blocks.candy_cane_blue.name=蓝色蔗糖
+tile.candy_blocks.candy_cane_orange.name=橙色蔗糖
+tile.candy_blocks.candy_cane_magenta.name=品红色蔗糖
+tile.candy_blocks.candy_cane_pink.name=粉红色蔗糖
+tile.candy_blocks.candy_cane_lime.name=黄绿色蔗糖
+tile.candy_blocks.candy_cane_purple.name=紫色蔗糖
+tile.candy_blocks.candy_cane_brown.name=棕色蔗糖
+tile.candy_blocks.candy_cane_black.name=黑色蔗糖
 
-tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=Red Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=Green Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=Blue Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=Orange Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=Magenta Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=Pink Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Lime Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Purple Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Brown Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Black Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=红色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=绿色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=蓝色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=橙色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=品红色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=粉红色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=黄绿色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=紫色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=棕色蔗糖(水平)
+tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=黑色蔗糖(水平)
 
-tile.cake_blocks.cake_block.name=Cake Block ##NEEDS TRANSLATE##
-tile.cake_blocks.cake_block_red_velvet.name=Red Velvet Cake Block ##NEEDS TRANSLATE##
-tile.cake_blocks.cake_block_chocolate.name=Chocolate Cake Block ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_red_dots.name=White Icing with Red Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_green_dots.name=White Icing with Green Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.cookie_rocks.name=Cookie Rocks ##NEEDS TRANSLATE##
+tile.cake_blocks.cake_block.name=蛋糕块
+tile.cake_blocks.cake_block_red_velvet.name=红色天鹅绒蛋糕块
+tile.cake_blocks.cake_block_chocolate.name=巧克力蛋糕块
+tile.cake_blocks.white_icing_red_dots.name=红点装饰的白色糖衣
+tile.cake_blocks.white_icing_green_dots.name=绿点装饰的白色糖衣
+tile.cake_blocks.white_icing_pink_dots.name=粉红点装饰的白色糖衣
+tile.cake_blocks.white_icing_orange_dots.name=橙点装饰的白色糖衣
+tile.cake_blocks.cookie_rocks.name=曲奇岩石
 
-tile.white_sugar_cane.name=White Sugar Cane Block ##NEEDS TRANSLATE##
+tile.white_sugar_cane.name=白色甘蔗块
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=大理石
@@ -598,10 +598,10 @@ tile.decorative_blocks.magnesium_broken_titled_floor.name=破损的镁瓷砖地�
 tile.decorative_blocks.ash_bricks.name=灰烬砖
 tile.decorative_blocks2.white_block.name=白色方块
 tile.decorative_blocks2.red_block.name=红色方块
-tile.decorative_blocks2.blue_block.name=Blue Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.light_blue_block.name=Light Blue Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.yellow_block.name=Yellow Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.green_block.name=Green Block ##NEEDS TRANSLATE##
+tile.decorative_blocks2.blue_block.name=蓝色方块
+tile.decorative_blocks2.light_blue_block.name=亮蓝色方块
+tile.decorative_blocks2.yellow_block.name=黄色方块
+tile.decorative_blocks2.green_block.name=绿色方块
 
 #Stairs
 tile.mercury_stairs_surface.name=水星地表岩石楼梯
@@ -653,9 +653,9 @@ item.item_tier8_rocket.t8Rocket.name=8阶火箭
 item.item_tier9_rocket.t9Rocket.name=9阶火箭
 item.item_tier10_rocket.t10Rocket.name=10阶火箭
 item.item_tier10_electric_rocket.t10Rocket.name=10阶电力火箭
-rocket_pad.tier2.desc=Needs to be placed on a Tier 2 Launch Pad ##NEEDS TRANSLATE##
-rocket_pad.tier3.desc=Needs to be placed on a Tier 3 Launch Pad ##NEEDS TRANSLATE##
-rocket_pad.electric.desc=Needs to be placed on a Powered Rocket Launch Pad ##NEEDS TRANSLATE##
+rocket_pad.tier2.desc=需要在2阶火箭发射平台上面发射
+rocket_pad.tier3.desc=需要在3阶火箭发射平台上面发射
+rocket_pad.electric.desc=需要在电力火箭发射平台上面发射
 
 #Vehicles
 item.mars_rover.name=火星漫游车
@@ -761,7 +761,7 @@ item.wafer.white_gem_wafer.name=白宝石晶圆
 
 #Buckets
 item.bucket_glowstone.name=萤石水桶
-item.bucket_salt.name=Liquid Crystallized Water Bucket ##NEEDS TRANSLATE##
+item.bucket_salt.name=盐水桶
 item.bucket_magma.name=岩浆水桶
 item.bucket_frozen_water.name=冰水桶
 item.bucket_nitrogen.name=液氮桶
@@ -1062,53 +1062,53 @@ item.tier4_un_prepared_space_suit_boots.name=4阶未完成太空服靴子
 item.oxygen_tank_very_heavy_full.name=超重型氧气罐
 item.oxygen_tank_extremely_heavy_full.name=极重型氧气罐
 
-item.oxygen_tank_light_full_black.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_red.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_green.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_brown.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_purple.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_pink.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_orange.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_white.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_black.name=轻型氧气罐
+item.oxygen_tank_light_full_red.name=轻型氧气罐
+item.oxygen_tank_light_full_green.name=轻型氧气罐
+item.oxygen_tank_light_full_brown.name=轻型氧气罐
+item.oxygen_tank_light_full_blue.name=轻型氧气罐
+item.oxygen_tank_light_full_purple.name=轻型氧气罐
+item.oxygen_tank_light_full_cyan.name=轻型氧气罐
+item.oxygen_tank_light_full_light_gray.name=轻型氧气罐
+item.oxygen_tank_light_full_gray.name=轻型氧气罐
+item.oxygen_tank_light_full_pink.name=轻型氧气罐
+item.oxygen_tank_light_full_yellow.name=轻型氧气罐
+item.oxygen_tank_light_full_light_blue.name=轻型氧气罐
+item.oxygen_tank_light_full_magenta.name=轻型氧气罐
+item.oxygen_tank_light_full_orange.name=轻型氧气罐
+item.oxygen_tank_light_full_white.name=轻型氧气罐
 
-item.oxygen_tank_med_full_black.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_red.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_green.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_black.name=中型氧气罐
+item.oxygen_tank_med_full_red.name=中型氧气罐
+item.oxygen_tank_med_full_green.name=中型氧气罐
+item.oxygen_tank_med_full_brown.name=中型氧气罐
+item.oxygen_tank_med_full_blue.name=中型氧气罐
+item.oxygen_tank_med_full_purple.name=中型氧气罐
+item.oxygen_tank_med_full_cyan.name=中型氧气罐
+item.oxygen_tank_med_full_light_gray.name=中型氧气罐
+item.oxygen_tank_med_full_gray.name=中型氧气罐
+item.oxygen_tank_med_full_pink.name=中型氧气罐
+item.oxygen_tank_med_full_yellow.name=中型氧气罐
+item.oxygen_tank_med_full_light_blue.name=中型氧气罐
+item.oxygen_tank_med_full_magenta.name=中型氧气罐
+item.oxygen_tank_med_full_orange.name=中型氧气罐
+item.oxygen_tank_med_full_white.name=中型氧气罐
 
-item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_black.name=重型氧气罐
+item.oxygen_tank_heavy_full_lime.name=重型氧气罐
+item.oxygen_tank_heavy_full_green.name=重型氧气罐
+item.oxygen_tank_heavy_full_brown.name=重型氧气罐
+item.oxygen_tank_heavy_full_blue.name=重型氧气罐
+item.oxygen_tank_heavy_full_purple.name=重型氧气罐
+item.oxygen_tank_heavy_full_cyan.name=重型氧气罐
+item.oxygen_tank_heavy_full_light_gray.name=重型氧气罐
+item.oxygen_tank_heavy_full_gray.name=重型氧气罐
+item.oxygen_tank_heavy_full_pink.name=重型氧气罐
+item.oxygen_tank_heavy_full_yellow.name=重型氧气罐
+item.oxygen_tank_heavy_full_light_blue.name=重型氧气罐
+item.oxygen_tank_heavy_full_magenta.name=重型氧气罐
+item.oxygen_tank_heavy_full_orange.name=重型氧气罐
+item.oxygen_tank_heavy_full_white.name=重型氧气罐
 
 #Radiation Items
 item.iodide_salt.name=碘盐
@@ -1165,11 +1165,11 @@ item.tier11_items.brown_sticks.name=棕色木棍
 #Tools
 item.tools.sledge_hammer.name=巨锤
 item.tools.grinding_wheel.name=砂轮
-item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
-item.tools.filter.name=Filter ##NEEDS TRANSLATE##
+item.tools.mesh.name=线网
+item.tools.filter.name=过滤器
 
 #Other Blocks
-tile.slime_block.name=Slime Block
+tile.slime_block.name=史莱姆块
 
 #Other Blocks
 tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
@@ -1188,11 +1188,11 @@ item.thermal_cloth.tier4_thermal_cloth.name=4阶热防护布料
 item.thermal_cloth.tier5_thermal_cloth.name=5阶热防护布料
 item.tier5_items.ash.name=粉尘
 item.geiger_counter.name=盖氏计量器
-item.white_sugar_cane_item.name=White Sugar Cane ##NEEDS TRANSLATE##
+item.white_sugar_cane_item.name=白色甘蔗
 geiger.counter.desc=右键以查看你当前的辐射等级！
 geiger.counter.location.desc=可在水星地牢中获得！
-item.chocolate_bar.name=Chocolate Bar ##NEEDS TRANSLATE##
-item.caramel_bar.name=Caramel Bar ##NEEDS TRANSLATE##
+item.chocolate_bar.name=巧克力棒
+item.caramel_bar.name=蔗糖棒
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=脱水猪排
@@ -1245,8 +1245,8 @@ entity.extraplanets.EvolvedBlaze.name=烈焰人（进化体）
 entity.extraplanets.EvolvedBlueCreeper.name=蓝色爬行者（进化体）
 entity.extraplanets.EvolvedRedCreeper.name=红色爬行者（进化体）
 entity.extraplanets.EvolvedPowerSkeleton.name=骷髅（进化体）
-entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider ##NEEDS TRANSLATE##
-entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantSpider.name=蜘蛛女王（进化体）
+entity.extraplanets.EvolvedMiniEnderman.name=迷你末影人（进化体）
 
 #Achievements
 achievement.mercury_planet=登陆水星！
@@ -1308,39 +1308,39 @@ tile.glowstone.name=萤石水
 tile.magma.name=岩浆水
 tile.nitrogen.name=液氮
 tile.frozen_water.name=冰水
-tile.salt.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
+tile.salt.name=盐水
 tile.radioactive_water.name=放射性水
 tile.clean_water.name=清水
 tile.infected_water.name=污染水
 tile.methane.name=液态甲烷
 tile.nitrogen_ice.name=液氮冰
 tile.liquid_hydrocarbon.name=液态烃
-tile.liquid_chocolate.name=Liquid Chocolate ##NEEDS TRANSLATE##
-tile.liquid_caramel.name=Liquid Caramel ##NEEDS TRANSLATE##
+tile.liquid_chocolate.name=液态巧克力
+tile.liquid_caramel.name=液态蔗糖
 
 fluid.glowstone_fluid=萤石水
 fluid.magma_fluid=岩浆水
 fluid.nitrogen_fluid=液氮
 fluid.frozen_water_fluid=冰水
-fluid.salt_fluid=Liquid Crystallized Water ##NEEDS TRANSLATE##
+fluid.salt_fluid=盐水
 fluid.radioactive_water_fluid=放射性水
 fluid.clean_water_fluid=清水
 fluid.infected_water_fluid=污染水
 fluid.methane_fluid=液态甲烷
 fluid.nitrogen_ice_fluid=液氮冰
 fluid.liquid_hydrocarbon_fluid=液态烃
-fluid.liquid_chocolate_fluid=Liquid Chocolate ##NEEDS TRANSLATE##
-fluid.liquid_caramel_fluid=Liquid Caramel ##NEEDS TRANSLATE##
+fluid.liquid_chocolate_fluid=液态巧克力
+fluid.liquid_caramel_fluid=液态蔗糖
 
 #Gui/Damage Sources
 gui.warning.high.pressure=高压警告
 gui.warning.high.radiation=高辐射警告
-death.attack.radiation=%1$s忘记了防辐射
-death.attack.pressure=%1$s忘记了抗高压
-death.attack.hypothermia=%1$s died from hypothermia ##NEEDS TRANSLATE##
-death.attack.magma=%1$s burned to death from magma ##NEEDS TRANSLATE##
-death.attack.radiationLiquid=%1$s forgot that radiation will kill you ##NEEDS TRANSLATE##
-death.attack.infection=%1$s got taken over by an infection ##NEEDS TRANSLATE##
+death.attack.radiation=%1$s 变异了 ##死于辐射##
+death.attack.pressure=%1$s 被压成了金刚石 ##死于高压##
+death.attack.hypothermia=%1$s 梦想成为卖火柴的小女孩 ##死于体温过低##
+death.attack.magma=%1$s被岩浆烧死
+death.attack.radiationLiquid=%1$s试图在辐射液体里游泳 ##死于辐射液体##
+death.attack.infection=%1$s被感染了
 
 #CheckList GUI Messages
 checklist.tier_3_thermal_padding.key=需要3阶热防护服
@@ -1366,118 +1366,118 @@ satellite.space_station.kepler22b=开普勒-22b空间站
 
 #------------------1.7.10 Only Section------------------
 #Venus Blocks
-tile.venus.surface.name=Venus Surface Rock ##NEEDS TRANSLATE##
-tile.venus.sub_surface.name=Venus Sub-Surface Rock ##NEEDS TRANSLATE##
-tile.venus.stone.name=Venus Stone ##NEEDS TRANSLATE##
-tile.venus.ore_iron.name=Venus Iron Ore ##NEEDS TRANSLATE##
-tile.venus.ore_tin.name=Venus Tin Ore ##NEEDS TRANSLATE##
-tile.venus.ore_copper.name=Venus Copper Ore ##NEEDS TRANSLATE##
-tile.venus.ore_carbon.name=Carbon Ore ##NEEDS TRANSLATE##
-tile.venus.stone_bricks.name=Venus Stone Bricks ##NEEDS TRANSLATE##
-tile.venus.carbon_block.name=Block of Carbon ##NEEDS TRANSLATE##
-tile.venus.titanium_block.name=Block of Titanium ##NEEDS TRANSLATE##
-tile.veuns.dungeon_brick.name=Venus Dungeon Brick ##NEEDS TRANSLATE##
+tile.venus.surface.name=金星地表岩石
+tile.venus.sub_surface.name=金星地底岩石
+tile.venus.stone.name=金星石头
+tile.venus.ore_iron.name=金星铁矿石
+tile.venus.ore_tin.name=金星锡矿石
+tile.venus.ore_copper.name=金星铜矿石
+tile.venus.ore_carbon.name=金星碳矿石
+tile.venus.stone_bricks.name=金星方块砖
+tile.venus.carbon_block.name=金星碳块
+tile.venus.titanium_block.name=金星锡块
+tile.veuns.dungeon_brick.name=金星地牢砖
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
-tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
-tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
-tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
-tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
-tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
-tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
-tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
-tile.radioactive_water_fluid.name=Radioactive Water ##NEEDS TRANSLATE##
-tile.infected_water_fluid.name=Infected Water ##NEEDS TRANSLATE##
-tile.methane_fluid.name=Liquid Methane ##NEEDS TRANSLATE##
-tile.nitrogen_ice_fluid.name=Liquid Nitrogen Ice ##NEEDS TRANSLATE##
-tile.liquid_hydrocarbon_fluid.name=Liquid Hydrocarbon ##NEEDS TRANSLATE##
-tile.liquid_chocolate_fluid.name=Liquid Chocolate ##NEEDS TRANSLATE##
-tile.liquid_caramel_fluid.name=Liquid Caramel ##NEEDS TRANSLATE##
+tile.glowstone_fluid.name=液态萤石
+tile.magma_fluid.name=岩浆水
+tile.nitrogen_fluid.name=液氮
+tile.frozen_water_fluid.name=冰
+tile.salt_fluid.name=盐水
+tile.glowstone_fluid.name=液态萤石
+tile.magma_fluid.name=岩浆水
+tile.nitrogen_fluid.name=液氮
+tile.frozen_water_fluid.name=冰
+tile.salt_fluid.name=盐水
+tile.radioactive_water_fluid.name=放射性水
+tile.infected_water_fluid.name=污染水
+tile.methane_fluid.name=液态甲烷
+tile.nitrogen_ice_fluid.name=液态氮冰
+tile.liquid_hydrocarbon_fluid.name=液态烃
+tile.liquid_chocolate_fluid.name=液态巧克力
+tile.liquid_caramel_fluid.name=液态焦糖
 
 #Planet Blocks Slabs
-tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=Venus Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Ceres Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Jupiter Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Saturn Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Uranus Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Neptune Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星石板
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=金星石板
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=谷神星石板
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=木星石板
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=土星石板
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=天王星石板
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=海王星石板
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星石板
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=阋神星石板
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Mercury Stone Stairs ##NEEDS TRANSLATE##
-tile.venusStoneStairs.name=Venus Stone Stairs ##NEEDS TRANSLATE##
-tile.ceresStoneStairs.name=Ceres Stone Stairs ##NEEDS TRANSLATE##
-tile.jupiterStoneStairs.name=Jupiter Stone Stairs ##NEEDS TRANSLATE##
-tile.saturnStoneStairs.name=Saturn Stone Stairs ##NEEDS TRANSLATE##
-tile.uranusStoneStairs.name=Uranus Stone Stairs ##NEEDS TRANSLATE##
-tile.neptuneStoneStairs.name=Neptune Stone Stairs ##NEEDS TRANSLATE##
-tile.plutoStoneStairs.name=Pluto Stone Stairs ##NEEDS TRANSLATE##
-tile.erisStoneStairs.name=Eris Stone Stairs ##NEEDS TRANSLATE##
+tile.mercuryStoneStairs.name=水星石阶
+tile.venusStoneStairs.name=金星石阶
+tile.ceresStoneStairs.name=谷神星石阶
+tile.jupiterStoneStairs.name=木星石阶
+tile.saturnStoneStairs.name=土星石阶
+tile.uranusStoneStairs.name=天王星石阶
+tile.neptuneStoneStairs.name=海王星石阶
+tile.plutoStoneStairs.name=冥王星石阶
+tile.erisStoneStairs.name=阋神星石阶
 
-tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.mercuryStoneBrickStairs.name=水星石砖台阶
+tile.venusStoneBrickStairs.name=金星石砖台阶
+tile.ceresStoneBrickStairs.name=谷神星石砖台阶
+tile.jupiterStoneBrickStairs.name=木星石砖台阶
+tile.saturnStoneBrickStairs.name=土星石砖台阶
+tile.uranusStoneBrickStairs.name=天王星石砖台阶
+tile.neptuneStoneBrickStairs.name=海王星石砖台阶
+tile.plutoStoneBrickStairs.name=冥王星石砖台阶
+tile.erisStoneBrickStairs.name=阋神星石砖台阶
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeon Brick Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星地牢砖板
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=木星地牢砖板
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=土星地牢砖板
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=天王星地牢砖板
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=海王星地牢砖板
 
 #Dungeon Bricks Stairs
-tile.venusDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TRANSLATE##
+tile.venusDungeonBrickStoneStairs.name=金星地牢砖台阶
+tile.jupiterDungeonBrickStoneStairs.name=木星地牢砖台阶
+tile.saturnDungeonBrickStoneStairs.name=土星地牢砖台阶
+tile.uranusDungeonBrickStoneStairs.name=天王星地牢砖台阶
+tile.neptuneDungeonBrickStoneStairs.name=海王星地牢砖台阶
 
 #Planets
-planet.Venus=Venus ##NEEDS TRANSLATE##
+planet.Venus=金星
 
 #Other Items
-item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##
-item.tier4_items.volcanic_shard.name=Volcanic Shard ##NEEDS TRANSLATE##
-item.tier4_items.ingot_volcanic.name=Volcanic Ingot ##NEEDS TRANSLATE##
-item.tier6_items.magnesium_shard.name=Magnesium Shard ##NEEDS TRANSLATE##
-item.tier4_items.ash.name=Ash ##NEEDS TRANSLATE##
-item.tier4_items.sledge_hammer.name=Sledge Hammer ##NEEDS TRANSLATE##
-item.tier4_items.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
-item.thermal_cloth.tier2_thermal_cloth.name=Tier 2 Thermal Cloth ##NEEDS TRANSLATE##
+item.tier4_items.ash_shard.name=余烬碎片
+item.tier4_items.volcanic_shard.name=火山岩碎片
+item.tier4_items.ingot_volcanic.name=火山岩锭
+item.tier6_items.magnesium_shard.name=镁碎片
+item.tier4_items.ash.name=余烬
+item.tier4_items.sledge_hammer.name=雪橇锤
+item.tier4_items.grinding_wheel.name=砂轮
+item.thermal_cloth.tier2_thermal_cloth.name=二阶热防护布料
 
 #MorePlanetsCompactBlocks&Items
-tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t4_saturn.name=四阶土星宝箱
+tile.treasure_chest_t4_uranus.name=四阶天王星宝箱
+tile.treasure_chest_t5_neptune.name=五阶海王星宝箱
+tile.treasure_chest_t6_eris.name=六阶阋神星宝箱
 
 #Keys
-item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_saturn.name=四阶土星地牢钥匙
+item.key.T4_uranus.name=四阶天王星地牢钥匙
+item.key.T5_neptune.name=五阶海王星钥匙
+item.key.T6_eris.name=六阶阋神星地牢钥匙
 
 #Thermal Paddings
-item.tier2_thermal_helm.name=Tier 2 Thermal Padding Helm ##NEEDS TRANSLATE##
-item.tier2_thermal_chestplate.name=Tier 2 Thermal Padding Chestpiece ##NEEDS TRANSLATE##
-item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings ##NEEDS TRANSLATE##
-item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
+item.tier2_thermal_helm.name=二阶热防护头盔
+item.tier2_thermal_chestplate.name=二阶热防护胸甲
+item.tier2_thermal_leggings.name=二阶热防护护腿
+item.tier2_thermal_boots.name=二阶热防护靴子
 
 #Messages
-tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
-tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+tier2.information=需要水星与金星！
+tier3.information=需要土星木星以及它们的卫星！
+tier4.information=需要天王星、海王星、冥王星、阋神星以及他们的卫星！
 
 #------------------1.11.2 & 1.12.2 Only Section------------------
 item.t4key.name=4阶宝箱钥匙
