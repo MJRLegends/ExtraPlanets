@@ -6,8 +6,8 @@ import java.util.List;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.ForgeModContainer;
-import net.minecraftforge.fluids.UniversalBucket;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidUtil;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -17,37 +17,37 @@ public class DensifierRecipeMaker {
 	public static List<DensifierRecipeWrapper> getRecipesList() {
 		List<DensifierRecipeWrapper> recipes = new ArrayList<>();
 		List<ItemStack> inputs = new ArrayList<>();
-		inputs.add(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID));
+		inputs.add(FluidUtil.getFilledBucket(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0)));
 		DensifierRecipeWrapper wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(ExtraPlanets_Items.CARAMEL_BAR, 6, 0));
 		recipes.add(wrapper);
 
 		inputs = new ArrayList<>();
-		inputs.add(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID));
+		inputs.add(FluidUtil.getFilledBucket(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0)));
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(ExtraPlanets_Items.CHOCOLATE_BAR, 6, 0));
 		recipes.add(wrapper);
 
 		inputs = new ArrayList<>();
-		inputs.add(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.NITROGEN_ICE_FLUID));
+		inputs.add(FluidUtil.getFilledBucket(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)));
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.ICE, 6, 0));
 		recipes.add(wrapper);
 
 		inputs = new ArrayList<>();
-		inputs.add(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.GLOWSTONE_FLUID));
+		inputs.add(FluidUtil.getFilledBucket(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0)));
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.GLOWSTONE, 1, 0));
 		recipes.add(wrapper);
 
 		inputs = new ArrayList<>();
-		inputs.add(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.NITROGEN_FLUID));
+		inputs.add(FluidUtil.getFilledBucket(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0)));
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(ExtraPlanets_Blocks.FROZEN_NITROGEN, 2, 0));
 		recipes.add(wrapper);
 
 		inputs = new ArrayList<>();
-		inputs.add(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.FROZEN_WATER_FLUID));
+		inputs.add(FluidUtil.getFilledBucket(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0)));
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Blocks.ICE, 3, 0));
 		recipes.add(wrapper);
 
 		inputs = new ArrayList<>();
-		inputs.add(UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID));
+		inputs.add(FluidUtil.getFilledBucket(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0)));
 		wrapper = new DensifierRecipeWrapper(inputs, new ItemStack(Items.COAL, 3, 0));
 		recipes.add(wrapper);
 		return recipes;
