@@ -21,7 +21,7 @@ public class Tier5RocketRecipeWrapper extends BlankRecipeWrapper implements ICra
 
 	@Nonnull
 	@Override
-	public List getInputs() {
+	public List<ItemStack> getInputs() {
 		List<ItemStack> list = new ArrayList<>();
 		list.addAll(recipe.getRecipeInput().values());
 		return list;

@@ -13,6 +13,7 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.client.Minecraft;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Constants;
@@ -69,7 +70,7 @@ public class CrystallizerRecipeCategory extends BlankRecipeCategory {
 
 		if (recipeWrapper instanceof CrystallizerRecipeWrapper) {
 			CrystallizerRecipeWrapper circuitFabricatorRecipeWrapper = (CrystallizerRecipeWrapper) recipeWrapper;
-			List inputs = circuitFabricatorRecipeWrapper.getInputs();
+			List<ItemStack> inputs = circuitFabricatorRecipeWrapper.getInputs();
 
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);

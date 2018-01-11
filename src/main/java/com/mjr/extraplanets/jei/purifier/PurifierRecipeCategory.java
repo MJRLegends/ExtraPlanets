@@ -13,6 +13,7 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.client.Minecraft;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.Constants;
@@ -82,7 +83,7 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 
 		if (recipeWrapper instanceof PurifierRecipeWrapper) {
 			PurifierRecipeWrapper circuitFabricatorRecipeWrapper = (PurifierRecipeWrapper) recipeWrapper;
-			List inputs = circuitFabricatorRecipeWrapper.getInputs();
+			List<ItemStack> inputs = circuitFabricatorRecipeWrapper.getInputs();
 
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
@@ -91,7 +92,7 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 				}
 			}
 
-			List outputs = circuitFabricatorRecipeWrapper.getOutputs();
+			List<ItemStack> outputs = circuitFabricatorRecipeWrapper.getOutputs();
 
 			for (int i = 0; i < outputs.size(); ++i) {
 				Object o = outputs.get(i);

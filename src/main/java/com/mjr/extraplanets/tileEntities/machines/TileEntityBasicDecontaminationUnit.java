@@ -52,7 +52,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	@Override
 	public void update() {
 		if (!this.worldObj.isRemote) {
-			List containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
+			List<EntityPlayerMP> containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
 					this.getPos().getZ() + 1));
 			if (containedEntities.size() == 1) {
 				EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(0));
@@ -131,7 +131,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 
 	@Override
 	public void onCreate(World world, BlockPos placedPosition) {
-		List<BlockPos> positions = new LinkedList();
+		List<BlockPos> positions = new LinkedList<BlockPos>();
 		this.getPositions(placedPosition, positions);
 		for (BlockPos vecToAdd : positions)
 			((BlockDecontaminationUnitFake) ExtraPlanets_Blocks.FAKE_BLOCK_DECONTAMINATION_UNIT).makeFakeBlock(world, vecToAdd, placedPosition,
@@ -188,7 +188,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	@Override
 	public void onDestroy(TileEntity callingBlock) {
 		final BlockPos thisBlock = getPos();
-		List<BlockPos> positions = new LinkedList();
+		List<BlockPos> positions = new LinkedList<BlockPos>();
 		this.getPositions(thisBlock, positions);
 
 		for (BlockPos pos : positions) {

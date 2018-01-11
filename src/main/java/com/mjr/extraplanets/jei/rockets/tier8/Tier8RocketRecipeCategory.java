@@ -11,6 +11,7 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import com.mjr.extraplanets.jei.RecipeCategories;
@@ -77,7 +78,7 @@ public class Tier8RocketRecipeCategory extends BlankRecipeCategory {
 
 		if (recipeWrapper instanceof Tier8RocketRecipeWrapper) {
 			Tier8RocketRecipeWrapper rocketRecipeWrapper = (Tier8RocketRecipeWrapper) recipeWrapper;
-			List inputs = rocketRecipeWrapper.getInputs();
+			List<ItemStack> inputs = rocketRecipeWrapper.getInputs();
 
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
