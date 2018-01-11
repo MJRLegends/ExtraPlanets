@@ -15,7 +15,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class MarsRoverRecipeCategory extends BlankRecipeCategory {
+public class MarsRoverRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation buggyGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mars_roverbench.png");
 
 	@Nonnull

@@ -15,7 +15,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class DensifierRecipeCategory extends BlankRecipeCategory {
+public class DensifierRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/densifier.png");
 
 	@Nonnull

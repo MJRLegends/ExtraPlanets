@@ -16,7 +16,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class Tier8RocketRecipeCategory extends BlankRecipeCategory {
+public class Tier8RocketRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation rocketGuiTexture = new ResourceLocation(GalacticraftPlanets.ASSET_PREFIX, "textures/gui/schematic_rocket_t3_recipe.png");
 
 	@Nonnull

@@ -15,7 +15,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class SolarEvaporationChamberRecipeCategory extends BlankRecipeCategory {
+public class SolarEvaporationChamberRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/solar_evaporation_chamber.png");
 
 	@Nonnull

@@ -6,11 +6,10 @@ import javax.annotation.Nonnull;
 
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
-import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
+import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
 
-@SuppressWarnings("deprecation")
-public class CrystallizerRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
+public class CrystallizerRecipeWrapper extends BlankRecipeWrapper implements IRecipeWrapper {
 	@Nonnull
 	private final List<ItemStack> input;
 	@Nonnull

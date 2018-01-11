@@ -15,7 +15,7 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.jei.RecipeCategories;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class ChemicalInjectorRecipeCategory extends BlankRecipeCategory {
+public class ChemicalInjectorRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/chemical_injector.png");
 
 	@Nonnull
